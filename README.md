@@ -16,7 +16,8 @@ sudo npm install -g vuepress
 
 sudo vuepress dev
 
-# Publish changes by pushing to the repository
+# Publish changes
+./deploy.sh
 ```
 
 ## Tips and Conventions
