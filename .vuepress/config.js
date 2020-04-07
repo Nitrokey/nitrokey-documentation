@@ -30,7 +30,7 @@ module.exports = {
       ],
 
       '/fido2/mac/': [
-        ['', 'Nitrokey FIDO2, Mac'],
+        ['', 'Nitrokey FIDO2, macOS'],
       ],
 
       '/fido2/linux/': [
@@ -45,7 +45,7 @@ module.exports = {
       ],
 
       '/hsm/mac/': [
-        ['', 'Nitrokey HSM, Mac'],
+        ['', 'Nitrokey HSM, macOS'],
       ],
 
       '/hsm/linux/': [
@@ -60,7 +60,7 @@ module.exports = {
       ],
 
       '/pro/mac/': [
-        ['', 'Nitrokey Pro 2, Mac'],
+        ['', 'Nitrokey Pro 2, macOS'],
       ],
 
       '/pro/linux/': [
@@ -73,7 +73,7 @@ module.exports = {
       ],
 
       '/start/mac/': [
-        ['', 'Nitrokey Start, Mac'],
+        ['', 'Nitrokey Start, macOS'],
       ],
 
       '/start/linux/': [
@@ -86,7 +86,7 @@ module.exports = {
       ],
 
       '/storage/mac/': [
-        ['', 'Nitrokey Storage, Mac'],
+        ['', 'Nitrokey Storage, macOS'],
       ],
 
       '/storage/linux/': [
@@ -99,7 +99,7 @@ module.exports = {
       ],
 
       '/u2f/mac/': [
-        ['', 'Nitrokey FIDO U2F, Mac'],
+        ['', 'Nitrokey FIDO U2F, macOS'],
       ],
 
       '/u2f/linux/': [
@@ -125,7 +125,7 @@ module.exports = {
           path: '/fido2/', 
           children: [
             ['/fido2/windows/', 'Windows'],
-            ['/fido2/mac/', 'Mac'],
+            ['/fido2/mac/', 'macOS'],
             ['/fido2/linux/', 'Linux'],
           ]
         },
@@ -133,7 +133,7 @@ module.exports = {
           title: 'Nitrokey FIDO U2F',
           children: [
             ['/u2f/windows/', 'Windows'],
-            ['/u2f/mac/', 'Mac'],
+            ['/u2f/mac/', 'macOS'],
             ['/u2f/linux/', 'Linux'],
           ]
         },
@@ -141,7 +141,7 @@ module.exports = {
           title: 'Nitrokey HSM 2',
           children: [
             ['/hsm/windows/', 'Windows'],
-            ['/hsm/mac/', 'Mac'],
+            ['/hsm/mac/', 'macOS'],
             ['/hsm/linux/', 'Linux'],
           ]
         },
@@ -149,7 +149,7 @@ module.exports = {
           title: 'Nitrokey Pro 2',
           children: [
             ['/pro/windows/', 'Windows'],
-            ['/pro/mac/', 'Mac'],
+            ['/pro/mac/', 'macOS'],
             ['/pro/linux/', 'Linux'],
           ]
         },
@@ -157,7 +157,7 @@ module.exports = {
           title: 'Nitrokey Start',
           children: [
             ['/start/windows/', 'Windows'],
-            ['/start/mac/', 'Mac'],
+            ['/start/mac/', 'macOS'],
             ['/start/linux/', 'Linux'],
           ]
         },
@@ -165,7 +165,7 @@ module.exports = {
           title: 'Nitrokey Storage 2',
           children: [
             ['/storage/windows/', 'Windows'],
-            ['/storage/mac/', 'Mac'],
+            ['/storage/mac/', 'macOS'],
             ['/storage/linux/', 'Linux'],
           ]
         },
