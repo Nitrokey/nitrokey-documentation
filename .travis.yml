@@ -1,7 +1,12 @@
 language: node_js # don't install any environment
+node_js:
+  - lts/*
+
+install:
+  - yarn install
+
 script:
-- npm install -D vuepress
-- npm run docs:build
+  - yarn docs:build
 
 branches:
   only:
@@ -15,6 +20,7 @@ deploy:
   skip_cleanup: true
   local_dir: .vuepress/dist
   deploy_key: deploy_key
+  keep_history: true
   edge:
     branch: master
 
