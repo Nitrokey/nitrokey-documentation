@@ -1,0 +1,24 @@
+language: node_js # don't install any environment
+script:
+- npm run build
+- echo 'doc.nitrokey.com' > .vuepress/dist/CNAME
+
+branches:
+  only:
+  - master
+
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_76cafa646b8f_key -iv $encrypted_76cafa646b8f_iv -in nk-docu-deploykey.enc -out nk-docu-deploykey -d
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: .vuepress/dist
+  deploy_key: deploy_key
+  edge:
+    branch: master
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always

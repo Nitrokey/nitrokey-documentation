@@ -1,4 +1,9 @@
-# README
+Nitrokey Documentation
+======================
+
+[![Build Status](https://travis-ci.org/Nitrokey/dongleauth.svg)](https://travis-ci.org/Nitrokey/dongleauth)
+
+Nitrokey's User Documentation
 
 ## Setup
 
