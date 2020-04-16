@@ -1,7 +1,7 @@
 Nitrokey Documentation
 ======================
 
-[![Build Status](https://travis-ci.org/Nitrokey/dongleauth.svg)](https://travis-ci.org/Nitrokey/dongleauth)
+[![Build Status](https://travis-ci.org/Nitrokey/nitrokey-documentation.svg)](https://travis-ci.org/Nitrokey/nitrokey-documentation)
 
 Nitrokey's User Documentation
 
