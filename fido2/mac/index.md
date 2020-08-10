@@ -6,7 +6,7 @@ The Nitrokey FIDO2 supports two-factor authentication (2FA) and passwordless aut
 
 The Nitrokey FIDO2 can be used with any current browser.
 
-::: warning IMPORTANT
+::: tip IMPORTANT
 The Nitrokey App can not be used for the Nitrokey FIDO2.
 :::
 
