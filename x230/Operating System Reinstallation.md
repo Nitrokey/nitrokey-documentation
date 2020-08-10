@@ -4,9 +4,9 @@
 This will entirely erase all data on the hard disk or SSD of the NitroPad without further warning. Don't boot this USB drive on any other computer.
 :::
 
-1. Download one of the operating system images: [Ubuntu Linux](https://www.nitrokey.com/files/ubuntu/latest), [Qubes OS](https://www.nitrokey.com/files/qubes/latest), [Linux Mint](https://www.nitrokey.com/files/linuxmint/latest)
+1. Download one of the operating system images: [Ubuntu Linux](https://www.nitrokey.com/files/ubuntu/latest.iso), [Qubes OS](https://www.nitrokey.com/files/qubes/latest.iso), [Linux Mint](https://www.nitrokey.com/files/linuxmint/latest.iso)
 
-2. Optional: Download hash sum and verify the downloaded operating system image: [Ubuntu Linux](https://www.nitrokey.com/files/ubuntu/latest.sha256sum), [Qubes OS](https://www.nitrokey.com/files/qubes/latest.sha256sum), [Linux Mint](https://www.nitrokey.com/files/linuxmint/latest.sha256sum)
+2. Optional: Download hash sum and verify the downloaded operating system image: [Ubuntu Linux](https://www.nitrokey.com/files/ubuntu/latest.iso.sha256sum), [Qubes OS](https://www.nitrokey.com/files/qubes/latest.iso.sha256sum), [Linux Mint](https://www.nitrokey.com/files/linuxmint/latest.iso.sha256sum)
 
 3. Write the operating system image to any USB drive. On Windows you could use [Rufus](https://rufus.ie/) and on Linux you could use `dd` or [balenaEtcher](https://www.balena.io/etcher/).
 
