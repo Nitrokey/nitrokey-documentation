@@ -18,6 +18,6 @@ The Nitrokey FIDO U2F can be used with any current browser.
 Google only accepts the Chrome browser for registering the Nitrokey FIDO U2F. Logging in works fine with Firefox though.
 :::
 
-::: warning IMPORTANT
+::: tip IMPORTANT
 The Nitrokey App can not be used for the Nitrokey FIDO U2F.
 :::
