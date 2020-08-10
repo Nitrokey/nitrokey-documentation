@@ -26,7 +26,8 @@ module.exports = {
       // NK FIDO2 menu
       '/fido2/windows/': [
         ['', 'Nitrokey FIDO2, Windows'],
-        'b',
+        '1',
+        '2',
       ],
 
       '/fido2/mac/': [
@@ -36,7 +37,7 @@ module.exports = {
       '/fido2/linux/': [
         ['', 'Nitrokey FIDO2, Linux'],
         '1',
-        '2',
+        '3',
       ],
 
       // NK HSM menu
