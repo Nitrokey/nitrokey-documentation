@@ -1,1 +1,1 @@
-../ubuntu/factory-reset.md
+../factory-reset.md

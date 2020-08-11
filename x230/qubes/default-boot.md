@@ -1,1 +1,1 @@
-../ubuntu/default-boot.md
+../default-boot.md
