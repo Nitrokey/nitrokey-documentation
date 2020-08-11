@@ -115,12 +115,14 @@ module.exports = {
         ['operating-system-update', 'Operating System Update'],
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
         'factory-settings',
+        'firmware-update',
       ],
 
       '/x230/ubuntu/': [
         ['', 'NitroPad X230, Ubuntu Linux'],
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
         'factory-settings',
+        'firmware-update',
       ],
 
       // Main overview and fallback menu
