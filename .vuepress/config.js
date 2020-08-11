@@ -114,12 +114,13 @@ module.exports = {
         ['verify-sealed-hardware', 'Verify Sealed Hardware'],
         ['operating-system-update', 'Operating System Update'],
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
+        'factory-settings',
       ],
 
       '/x230/ubuntu/': [
         ['', 'NitroPad X230, Ubuntu Linux'],
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
-        'a',
+        'factory-settings',
       ],
 
       // Main overview and fallback menu
