@@ -72,5 +72,4 @@ This confirms the content of the file is as expected.
 Now you have updated your firmware.
 
 ### Further steps
-In case `ERROR: TOTP Generation Failed!` screen will show up, please follow the [guide for Factory Reset starting from step 11](./factory-reset.html).
-
+In case `ERROR: TOTP Generation Failed!` screen will show up, please follow the instructions for Factory Reset (on the left side menu), starting from step 11.
