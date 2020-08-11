@@ -1,25 +1,20 @@
 # Firmware Update
 
-### This guide describes how to update the Heads firmware of the NitroPad.
+This guide describes how to update the Heads firmware of the NitroPad.
 
-### These instructions are relevant for the following cases:
+These instructions are relevant in the following cases:
 
-- You want to perform a firmware update.
+- You want to update the Heads firmware.
 - You have already performed an OEM factory reset, but the TPM  counter has not been reset.
 
 
-### Needed:
+### Preparation
 
-- NitroPad, with battery loaded over 70%, connected to power
-- USB-drive with firmware file (.rom file) and SHA256 hash sum for for verification
-
-
-#### Firmware download location
-The firmware file can be downloaded from the releases page:
-- https://github.com/Nitrokey/heads/releases
+- Connect your NitroPad to a power plug and load its battery loaded to over 70%
+- Download the [latest firmware](https://github.com/Nitrokey/heads/releases) and store it on a USB drive. Optional: For hash sum verification, store the appropriate .sha256sum file at the USB drive.
 
 #### Firmware verification
-1. After copying firmware to the USB-drive please make sure the latter is properly unmounted/ejected to avoid write issues.
+1. After copying firmware to the USB drive make sure the latter is properly unmounted/ejected to avoid write issues.
 2. Start Nitropad and open recovery console from `Options -> Recovery console`
 3. Execute the following to verify the firmware:
 ```
@@ -62,7 +57,7 @@ This confirms the content of the file is as expected.
 
 ![img6](./images/firmware-update/6.jpg)
 
-7. Select the desired .rom- file.
+7. Select the desired .rom file.
 
 ![img7](./images/firmware-update/7.jpg)
 
@@ -77,6 +72,5 @@ This confirms the content of the file is as expected.
 Now you have updated your firmware.
 
 ### Further steps
-In case `ERROR: TOTP Generation Failed!` screen will show up, please follow the guide for Factory Reset starting from step 11. Direct link:
-- https://docs.nitrokey.com/x230/ubuntu/factory-settings.html
+In case `ERROR: TOTP Generation Failed!` screen will show up, please follow the [guide for Factory Reset starting from step 11](./factory-reset.html).
 
