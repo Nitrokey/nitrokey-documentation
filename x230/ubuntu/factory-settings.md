@@ -12,6 +12,7 @@
 2. Connect your Nitrokey to the NitroPad.
 
 ![img1](./images/factory-settings/1.jpg)
+
 3. Turn on the NitroPad.
 4. Select "Options".
 

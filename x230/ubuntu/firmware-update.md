@@ -1,6 +1,6 @@
 # Firmware Update
 
-## This guide describes how to update the Heads firmware of the NitroPad.
+### This guide describes how to update the Heads firmware of the NitroPad.
 
 ### These instructions are relevant for the following cases:
 
