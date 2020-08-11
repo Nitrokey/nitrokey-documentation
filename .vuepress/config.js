@@ -79,6 +79,7 @@ module.exports = {
 
       '/start/linux/': [
         ['', 'Nitrokey Start, Linux'],
+        'Nitrokey-Start-Firmware-Update-(Linux)',
       ],
 
       // NK Storage menu
