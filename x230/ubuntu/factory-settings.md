@@ -11,6 +11,8 @@
 1. Connect any USB flash drive to the NitroPad. (You need that USB flash drive for saving your security key)
 2. Connect your Nitrokey to the NitroPad.
 
+<img src="./images/factory-settings/1.png" width="400" height="400">
+
 ![img1](./images/factory-settings/1.jpg)
 3. Turn on the NitroPad.
 4. Select "Options".

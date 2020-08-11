@@ -116,6 +116,7 @@ module.exports = {
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
         'factory-settings',
         'firmware-update',
+        'default-boot',
       ],
 
       '/x230/ubuntu/': [
@@ -123,6 +124,7 @@ module.exports = {
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
         'factory-settings',
         'firmware-update',
+        'default-boot',
       ],
 
       // Main overview and fallback menu
