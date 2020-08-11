@@ -1,0 +1,1 @@
+../ubuntu/factory-reset.md

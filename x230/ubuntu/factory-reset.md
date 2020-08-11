@@ -1,4 +1,4 @@
-# Factory Settings
+# Factory Reset
 
 ### Reasons for resetting to factory settings
 
@@ -55,7 +55,7 @@ Resetting TPM...
 
 Resetting GPG Key... 
 (this will take a minute or two)
-```                                                                    
+```
 9. If you are using Nitrokey storage, you must then select the drive. If the drives /dev/sdb1, /dev/sdc, /dev/sdd1 are displayed, select /dev/sdd1. If the drives /dev/sdb1, /dev/sdc1, /dev/sdd are displayed, select /dev/sdb1.
 
 ![img5](./images/factory-settings/5.jpg)
