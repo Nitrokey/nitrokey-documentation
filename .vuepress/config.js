@@ -26,7 +26,7 @@ module.exports = {
       // NK FIDO2 menu
       '/fido2/windows/': [
         ['', 'Nitrokey FIDO2, Windows'],
-        'Passwordless-Authentication-(Microsoft)',
+        'Passwordless-Authentication-with-Microsoft',
         '2',
       ],
 
