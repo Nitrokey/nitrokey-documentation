@@ -9,25 +9,25 @@ Nitrokey's User Documentation
 
 This documentation is based on [VuePress](https://vuepress.vuejs.org/). It's a static page generator so that for testing purposes you need to [install VuePress on your local system](https://v1.vuepress.vuejs.org/guide/getting-started.html#global-installation):
 
-```bash
-# Install
+1. Install
 
+```
 sudo apt install npm
 sudo npm install -g vuepress
-
-# Start editing content
-
-# Test your content locally
-
-sudo vuepress dev
-
-# Publish changes
-./deploy.sh
 ```
+2. Start editing content
+
+3. Test your content locally
+
+```
+sudo vuepress dev
+```
+
+4. Publish changes by pushing to git
 
 ## Tips and Conventions
 
 * Menus and other settings are defined in `.vuepress/config.js`.
 * Write filenames in lower case and use dashes ("-") instead of spaces.
 * For content which is identical for different models or operating systems, use symbolic links to avoid duplication of files.
-* Add a subfolder with the numbered image files for each required guide.
+* Add a subfolder with the numbered image files for each guide.

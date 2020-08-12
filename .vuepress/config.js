@@ -26,7 +26,7 @@ module.exports = {
       // NK FIDO2 menu
       '/fido2/windows/': [
         ['', 'Nitrokey FIDO2, Windows'],
-        'Passwordless-Authentication-(Microsoft)',
+        'Passwordless-Authentication-with-Microsoft',
         '2',
       ],
 
@@ -116,7 +116,7 @@ module.exports = {
         ['verify-sealed-hardware', 'Verify Sealed Hardware'],
         ['operating-system-update', 'Operating System Update'],
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
-        'factory-settings',
+        'factory-reset',
         'firmware-update',
         'default-boot',
       ],
@@ -126,7 +126,7 @@ module.exports = {
         ['verify-sealed-hardware', 'Verify Sealed Hardware'],
         ['operating-system-update', 'Operating System Update'],
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
-        'factory-settings',
+        'factory-reset',
         'firmware-update',
         'default-boot',
       ],

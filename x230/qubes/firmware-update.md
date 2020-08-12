@@ -1,1 +1,1 @@
-../ubuntu/firmware-update.md
+../firmware-update.md
