@@ -1,1 +1,0 @@
-/home/niklas/nitrokey-documentation/pro/windows/two-factor-authentication-microsoft.md

@@ -58,7 +58,6 @@ module.exports = {
         ['', 'Nitrokey Pro 2, Windows'],
         'OpenPGP Email Encryption',
         'SMIME Email Encryption',
-        'two-factor-authentication-microsoft',
       ],
 
       '/pro/mac/': [
@@ -86,7 +85,6 @@ module.exports = {
       // NK Storage menu
       '/storage/windows/': [
         ['', 'Nitrokey Storage, Windows'],
-        'two-factor-authentication-microsoft',
       ],
 
       '/storage/mac/': [
@@ -123,8 +121,6 @@ module.exports = {
 
       '/x230/ubuntu/': [
         ['', 'NitroPad X230, Ubuntu Linux'],
-        ['verify-sealed-hardware', 'Verify Sealed Hardware'],
-        ['operating-system-update', 'Operating System Update'],
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
         'factory-reset',
         'firmware-update',
