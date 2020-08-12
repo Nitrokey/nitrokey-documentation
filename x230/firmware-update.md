@@ -10,16 +10,23 @@ These instructions are relevant in the following cases:
 
 ### Preparation
 
-- Connect your NitroPad to a power plug and load its battery loaded to over 70%
-- Download the [latest firmware](https://github.com/Nitrokey/heads/releases) and store it on a USB drive. Optional: For hash sum verification, store the appropriate .sha256sum file at the USB drive.
-
-#### Firmware verification
-1. After copying firmware to the USB drive make sure the latter is properly unmounted/ejected to avoid write issues.
-2. Start Nitropad and open recovery console from `Options -> Recovery console`
-3. Execute the following to verify the firmware:
+- Connect your NitroPad to a power plug and load its battery to over 70%
+- Download the [latest firmware](https://github.com/Nitrokey/heads/releases) and store it on a USB drive. For hash sum verification, store the appropriate .sha256sum file at the USB drive. E.g. for `v1.1-rc3` firmware and hashsum files on the USB drive the following should be located:
 ```
-$ mount-usb
-# select USB device
+/nitropad_x230_v1.1-rc3.rom
+/SHA256SUM.txt
+```
+
+#### Firmware file verification
+
+It is mandatory to run a firmware file consistency check before writing it to the device. 
+After copying the firmware file to the USB drive make sure the latter is properly unmounted/ejected to avoid write issues. The consistency check should be run on NitroPad, so the data verified will be exact same as the later read by the update application.
+
+
+1. Start Nitropad and open recovery console from `Options -> Exit to recovery shell`
+2. Execute the following to verify the firmware:
+```
+$ mount-usb              # select USB device
 $ cd /media
 $ sha256sum -c SHA256SUM.txt
 ```
@@ -31,6 +38,8 @@ nitropad_x230_v1.1-rc3.rom: OK
 This confirms the content of the file is as expected.
 
 ### Procedure
+
+This is the actual update procedure. Usually the first two screens will not be shown - in that case please start from step 3.
 
 
 1. (Optional screen) Select "Ignore error and continue to default boot menu".
