@@ -61,30 +61,36 @@ module.exports = {
         'two-factor-authentication-microsoft',
         'windows-logon-and-smime-email-encryption-with-active-directory',
         '2fa-nextcloud',
+        'use-with-thunderbird',
       ],
 
       '/pro/mac/': [
         ['', 'Nitrokey Pro 2, macOS'],
         '2fa-nextcloud',
+        'use-with-thunderbird',
       ],
 
       '/pro/linux/': [
         ['', 'Nitrokey Pro 2, Linux'],
         '2fa-nextcloud',
+        'use-with-thunderbird',
       ],
 
       // NK Start menu
       '/start/windows/': [
         ['', 'Nitrokey Start, Windows'],
+        'use-with-thunderbird',
       ],
 
       '/start/mac/': [
         ['', 'Nitrokey Start, macOS'],
+        'use-with-thunderbird',
       ],
 
       '/start/linux/': [
         ['', 'Nitrokey Start, Linux'],
         'Nitrokey-Start-Firmware-Update-(Linux)',
+        'use-with-thunderbird',
       ],
 
       // NK Storage menu
@@ -93,16 +99,19 @@ module.exports = {
         'two-factor-authentication-microsoft',
         'windows-logon-and-smime-email-encryption-with-active-directory',
         '2fa-nextcloud',
+        'use-with-thunderbird',
       ],
 
       '/storage/mac/': [
         ['', 'Nitrokey Storage, macOS'],
         '2fa-nextcloud',
+        'use-with-thunderbird',
       ],
 
       '/storage/linux/': [
         ['', 'Nitrokey Storage, Linux'],
         '2fa-nextcloud',
+        'use-with-thunderbird',
       ],
 
       // NK FIDO U2F menu
