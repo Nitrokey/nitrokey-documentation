@@ -1,4 +1,4 @@
-# Use with Thunderbird
+# OpenPGP Email Encryption With Thunderbird
 
 ## Installation
 
@@ -44,7 +44,7 @@ After receiving the Nitrokey, you should immediately change the User PIN = "1234
 
 You have now changed the PINs and should continue to generate your personal keys.
 
- 
+
 ## Generation of Keys
 
 To encrypt data and e-mails, a key pair consisting of a public key and a private key, must first be generated. The so-called public key is used to **en**crypt the data or e-mails. You can distribute this to all those with whom you want to communicate securely (for example, publish it publicly on your site). The so-called private key is used to **de**crypt the data or messages. This key should **NEVER** be made known! Usually, you also do not have direct access to it (see below), since this is stored securely on the Nitrokey. Use the Nitrokey to create both keys using the following procedure:

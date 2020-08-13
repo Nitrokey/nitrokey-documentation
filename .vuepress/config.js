@@ -27,7 +27,6 @@ module.exports = {
       '/fido2/windows/': [
         ['', 'Nitrokey FIDO2, Windows'],
         'Passwordless-Authentication-with-Microsoft',
-        '2',
       ],
 
       '/fido2/mac/': [
@@ -36,8 +35,6 @@ module.exports = {
 
       '/fido2/linux/': [
         ['', 'Nitrokey FIDO2, Linux'],
-        '1',
-        '3',
       ],
 
       // NK HSM menu
@@ -61,7 +58,7 @@ module.exports = {
         'two-factor-authentication-microsoft',
         'windows-logon-and-smime-email-encryption-with-active-directory',
         '2fa-nextcloud',
-        'use-with-thunderbird',
+        'openpgp-email-encryption-with-thunderbird',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
@@ -70,7 +67,7 @@ module.exports = {
       '/pro/mac/': [
         ['', 'Nitrokey Pro 2, macOS'],
         '2fa-nextcloud',
-        'use-with-thunderbird',
+        'openpgp-email-encryption-with-thunderbird',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
@@ -79,7 +76,7 @@ module.exports = {
       '/pro/linux/': [
         ['', 'Nitrokey Pro 2, Linux'],
         '2fa-nextcloud',
-        'use-with-thunderbird',
+        'openpgp-email-encryption-with-thunderbird',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
@@ -88,18 +85,18 @@ module.exports = {
       // NK Start menu
       '/start/windows/': [
         ['', 'Nitrokey Start, Windows'],
-        'use-with-thunderbird',
+        'openpgp-email-encryption-with-thunderbird',
       ],
 
       '/start/mac/': [
         ['', 'Nitrokey Start, macOS'],
-        'use-with-thunderbird',
+        'openpgp-email-encryption-with-thunderbird',
       ],
 
       '/start/linux/': [
         ['', 'Nitrokey Start, Linux'],
-        'Nitrokey-Start-Firmware-Update-(Linux)',
-        'use-with-thunderbird',
+        'firmware-update',
+        'openpgp-email-encryption-with-thunderbird',
       ],
 
       // NK Storage menu
@@ -108,21 +105,21 @@ module.exports = {
         'two-factor-authentication-microsoft',
         'windows-logon-and-smime-email-encryption-with-active-directory',
         '2fa-nextcloud',
-        'use-with-thunderbird',
+        'openpgp-email-encryption-with-thunderbird',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
       '/storage/mac/': [
         ['', 'Nitrokey Storage, macOS'],
         '2fa-nextcloud',
-        'use-with-thunderbird',
+        'openpgp-email-encryption-with-thunderbird',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
       '/storage/linux/': [
         ['', 'Nitrokey Storage, Linux'],
         '2fa-nextcloud',
-        'use-with-thunderbird',
+        'openpgp-email-encryption-with-thunderbird',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 

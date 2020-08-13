@@ -1,1 +1,0 @@
-../windows/use-with-thunderbird.md

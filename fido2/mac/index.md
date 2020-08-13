@@ -1,4 +1,4 @@
-# FIDO2 with MacOS
+# FIDO2 with macOS
 
 The Nitrokey FIDO2 supports two-factor authentication (2FA) and passwordless authentication:
 - With **passwordless authentication**, entering a password is replaced by logging in with the Nitrokey FIDO2 and a PIN.
