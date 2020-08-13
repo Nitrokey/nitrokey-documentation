@@ -63,6 +63,7 @@ module.exports = {
         '2fa-nextcloud',
         'use-with-thunderbird',
         'smime-email-encryption-with-thunderbird',
+        'smime-email-encryption-with-outlook',
       ],
 
       '/pro/mac/': [
@@ -70,6 +71,7 @@ module.exports = {
         '2fa-nextcloud',
         'use-with-thunderbird',
         'smime-email-encryption-with-thunderbird',
+        'smime-email-encryption-with-outlook',
       ],
 
       '/pro/linux/': [
@@ -77,6 +79,7 @@ module.exports = {
         '2fa-nextcloud',
         'use-with-thunderbird',
         'smime-email-encryption-with-thunderbird',
+        'smime-email-encryption-with-outlook',
       ],
 
       // NK Start menu
