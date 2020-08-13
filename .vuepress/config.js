@@ -64,6 +64,7 @@ module.exports = {
         'use-with-thunderbird',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
+        'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
       '/pro/mac/': [
@@ -72,6 +73,7 @@ module.exports = {
         'use-with-thunderbird',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
+        'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
       '/pro/linux/': [
@@ -80,6 +82,7 @@ module.exports = {
         'use-with-thunderbird',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
+        'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
       // NK Start menu
@@ -106,18 +109,21 @@ module.exports = {
         'windows-logon-and-smime-email-encryption-with-active-directory',
         '2fa-nextcloud',
         'use-with-thunderbird',
+        'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
       '/storage/mac/': [
         ['', 'Nitrokey Storage, macOS'],
         '2fa-nextcloud',
         'use-with-thunderbird',
+        'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
       '/storage/linux/': [
         ['', 'Nitrokey Storage, Linux'],
         '2fa-nextcloud',
         'use-with-thunderbird',
+        'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
       // NK FIDO U2F menu
