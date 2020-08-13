@@ -146,7 +146,6 @@ module.exports = {
         'firmware-update',
         'default-boot',
         'change-user-and-admin-pin',
-        'change-passphrase',
       ],
 
       '/x230/ubuntu/': [
@@ -156,7 +155,7 @@ module.exports = {
         'firmware-update',
         'default-boot',
         'change-user-and-admin-pin',
-        'change-passphrase',
+        'change-disk-encryption-passphrase',
       ],
 
       // Main overview and fallback menu
