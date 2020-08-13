@@ -118,6 +118,7 @@ module.exports = {
         'factory-reset',
         'firmware-update',
         'default-boot',
+        'change_user_and_admin-pin',
       ],
 
       '/x230/ubuntu/': [
@@ -126,6 +127,7 @@ module.exports = {
         'factory-reset',
         'firmware-update',
         'default-boot',
+        'change_user_and_admin-pin',
       ],
 
       // Main overview and fallback menu
