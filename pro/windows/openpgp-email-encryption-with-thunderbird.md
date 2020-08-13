@@ -24,23 +24,23 @@ After receiving the Nitrokey, you should immediately change the User PIN = "1234
 
 3. In Thunderbird, select as shown in the following picture. "OpenPGP" → "Manage smart card"
 
-![img1](./images/use-with-thunderbird/1.png)       
+![img1](./images/openpgp-email-encryption-with-thunderbird/1.png)       
 
 4. In the "SmartCard Details" window, select "SmartCard → Change PIN"
 
-![img2](./images/use-with-thunderbird/2.png)
+![img2](./images/openpgp-email-encryption-with-thunderbird/2.png)
 
 5. Select "Change PIN". This is your User PIN you need for daily work. Enter the current PIN ( "123456" for delivery) and twice your new PIN. For this PIN you can use the characters: a-z A-Z 0-9 / .;;:- !? () [] {}% +. The PIN should be at least 6 characters long. Click "OK".
 
-![img3](./images/use-with-thunderbird/3.png)
+![img3](./images/openpgp-email-encryption-with-thunderbird/3.png)
 
 6. Repeat the procedure for the Admin PIN. "SmartCard → Change PIN"
 
-![img4](./images/use-with-thunderbird/4.png)     
+![img4](./images/openpgp-email-encryption-with-thunderbird/4.png)     
 
 7. Select Change Admin PIN. This is your Admin PIN that you only rarely need. Enter the current PIN ( "12345678" for delivery) and the new PIN twice. For this PIN, you can use the characters: a-z A-Z 0-9 / .;;:- !? () [] {}% +. The PIN should be at least 8 characters long. Click "OK".
 
-![img5](./images/use-with-thunderbird/5.png)
+![img5](./images/openpgp-email-encryption-with-thunderbird/5.png)
 
 You have now changed the PINs and should continue to generate your personal keys.
 
@@ -59,11 +59,11 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
 
 4. In the following window, select your e-mail address for which you want to generate keys. Verify that the e-mail address specified in "User ID" is correct. You can also specify whether a private key backup copy should be stored on your computer.
 
-![img6](./images/use-with-thunderbird/6.png)
+![img6](./images/openpgp-email-encryption-with-thunderbird/6.png)
 
 5. If you do not create a backup copy, you have no chance to get your encrypted data if the Nitrokey is lost or damaged!
 
-![img7](./images/use-with-thunderbird/7.png)
+![img7](./images/openpgp-email-encryption-with-thunderbird/7.png)
 
 6. It is recommended to store this safety device. Select "Save key copy of the key outside the Smard Card". Then enter your personal password for the backup copy under "Passphrase". This password should not be less than 8 characters, and should contain both uppercase and lowercase letters and numbers. You can also use a long sentence, but avoid known prose or lyric. Also, no name or known term should be used.
 
@@ -79,15 +79,15 @@ You can also specify whether and when the key should be automatically invalid. T
 
 1. Finally, click on "Generate key pair".
 
-![img8](./images/use-with-thunderbird/8.png)   
+![img8](./images/openpgp-email-encryption-with-thunderbird/8.png)   
 
 2. You are now asked if the key should be generated. Confirm with "Yes".
 
-![img9](./images/use-with-thunderbird/9.png)     
+![img9](./images/openpgp-email-encryption-with-thunderbird/9.png)     
 
 3. In order for the program to write your keys to the stick, you must enter the admin PIN and the user PIN (changed above).
 
-![img10](./images/use-with-thunderbird/10.png)
+![img10](./images/openpgp-email-encryption-with-thunderbird/10.png)
 
 The key generation can take a few minutes. Do not terminate the program prematurely!
 
@@ -97,22 +97,22 @@ Click "Yes"
 You can now select the directory in which the backup copy is stored. This copy is encrypted with your password entered above. This means that no one can read or use the keys without your password. Do not give your password to anyone. This file with the name of your e-mail address and the suffix ".asc" should be backed up on another medium.
 After selecting the directory, click "Save".
 
-![img11](./images/use-with-thunderbird/11.png)     
+![img11](./images/openpgp-email-encryption-with-thunderbird/11.png)     
 
 5. Here you must again specify your user PIN or passphrase.
 Then click "OK"
 
-![img12](./images/use-with-thunderbird/12.png)
+![img12](./images/openpgp-email-encryption-with-thunderbird/12.png)
      
 
 7. You will now see the message that the certificate was created and saved.
 Click "OK"
 
-![img13](./images/use-with-thunderbird/13.png)
+![img13](./images/openpgp-email-encryption-with-thunderbird/13.png)
      
 
 8. Key generation is now complete. You can now exit the program (File - Close).
 
-![img14](./images/use-with-thunderbird/14.png)
+![img14](./images/openpgp-email-encryption-with-thunderbird/14.png)
 
 Your Nitrokey is personalized and ready to use. **Have fun with the secure email encryption!**
