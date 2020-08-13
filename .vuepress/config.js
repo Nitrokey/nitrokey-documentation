@@ -58,6 +58,7 @@ module.exports = {
         ['', 'Nitrokey Pro 2, Windows'],
         'OpenPGP Email Encryption',
         'SMIME Email Encryption',
+        'two-factor-authentication-microsoft',
       ],
 
       '/pro/mac/': [
