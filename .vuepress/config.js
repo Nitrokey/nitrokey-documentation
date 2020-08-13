@@ -59,6 +59,7 @@ module.exports = {
         'OpenPGP Email Encryption',
         'SMIME Email Encryption',
         'two-factor-authentication-microsoft',
+        'windows-logon-and-smime-email-encryption-with-active-directory',
       ],
 
       '/pro/mac/': [
