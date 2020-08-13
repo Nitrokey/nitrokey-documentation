@@ -62,18 +62,21 @@ module.exports = {
         'windows-logon-and-smime-email-encryption-with-active-directory',
         '2fa-nextcloud',
         'use-with-thunderbird',
+        'smime-email-encryption-with-thunderbird',
       ],
 
       '/pro/mac/': [
         ['', 'Nitrokey Pro 2, macOS'],
         '2fa-nextcloud',
         'use-with-thunderbird',
+        'smime-email-encryption-with-thunderbird',
       ],
 
       '/pro/linux/': [
         ['', 'Nitrokey Pro 2, Linux'],
         '2fa-nextcloud',
         'use-with-thunderbird',
+        'smime-email-encryption-with-thunderbird',
       ],
 
       // NK Start menu
