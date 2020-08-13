@@ -60,14 +60,17 @@ module.exports = {
         'SMIME Email Encryption',
         'two-factor-authentication-microsoft',
         'windows-logon-and-smime-email-encryption-with-active-directory',
+        '2fa-nextcloud',
       ],
 
       '/pro/mac/': [
         ['', 'Nitrokey Pro 2, macOS'],
+        '2fa-nextcloud',
       ],
 
       '/pro/linux/': [
         ['', 'Nitrokey Pro 2, Linux'],
+        '2fa-nextcloud',
       ],
 
       // NK Start menu
@@ -87,14 +90,19 @@ module.exports = {
       // NK Storage menu
       '/storage/windows/': [
         ['', 'Nitrokey Storage, Windows'],
+        'two-factor-authentication-microsoft',
+        'windows-logon-and-smime-email-encryption-with-active-directory',
+        '2fa-nextcloud',
       ],
 
       '/storage/mac/': [
         ['', 'Nitrokey Storage, macOS'],
+        '2fa-nextcloud',
       ],
 
       '/storage/linux/': [
         ['', 'Nitrokey Storage, Linux'],
+        '2fa-nextcloud',
       ],
 
       // NK FIDO U2F menu
