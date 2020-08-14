@@ -1,1 +1,0 @@
-../windows/login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory.md

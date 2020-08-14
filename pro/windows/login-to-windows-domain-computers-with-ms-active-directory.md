@@ -1,4 +1,4 @@
-# Login With Nitrokey on Windows Domain Computers Using MS Active Directory
+# Login to Windows Domain Computers With MS Active Directory
 
 
 1. Download and install the latest [OpenSC](https://github.com/OpenSC/OpenSC/wiki).
@@ -29,24 +29,24 @@ card_atr 3B:FE:18:00:00:81:31:FE:45:80:31:81:54:48:53:4D:31:73:80:21:40:81:07:FA
 5. [Download](http://download.mysmartlogon.com/SmartPolicyv2/SmartPolicy%20-%20Stage%203.exe) and install Smart Policy.
 6. Select "Read a smart card"
 
-![img1](./images/login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory/1.png)
+![img1](./images/login-to-windows-domain-computers-with-ms-active-directory/1.png)
 
 7. Select the certificate, mapping, and user.
 
-![img2](./images/login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory/2.png)
+![img2](./images/login-to-windows-domain-computers-with-ms-active-directory/2.png)
 
 8. Verify the device status via CRL.
 
-![img3](./images/login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory/3.png)
+![img3](./images/login-to-windows-domain-computers-with-ms-active-directory/3.png)
 
 9. Choose a Group Policy Object (GPO).
 
-![img4](./images/login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory/4.png)
+![img4](./images/login-to-windows-domain-computers-with-ms-active-directory/4.png)
 
 10. Confirm applying the mapping.
 
-![img5](./images/login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory/5.png)
+![img5](./images/login-to-windows-domain-computers-with-ms-active-directory/5.png)
 
 From now on, when logging on to your Windows computer you need to connect the Nitrokey and enter your PIN.
 
-![img6](./images/login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory/6.png)
+![img6](./images/login-to-windows-domain-computers-with-ms-active-directory/6.png)

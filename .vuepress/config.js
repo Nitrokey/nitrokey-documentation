@@ -50,19 +50,19 @@ module.exports = {
       '/hsm/windows/': [
         ['', 'Nitrokey HSM, Windows'],
         'programming-the-nitrokey',
-        'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'login-to-windows-domain-computers-with-ms-active-directory',
       ],
 
       '/hsm/mac/': [
         ['', 'Nitrokey HSM, macOS'],
         'programming-the-nitrokey',
-        'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'login-to-windows-domain-computers-with-ms-active-directory',
       ],
 
       '/hsm/linux/': [
         ['', 'Nitrokey HSM, Linux'],
         'programming-the-nitrokey',
-        'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'login-to-windows-domain-computers-with-ms-active-directory',
       ],
 
       // NK Pro menu
@@ -82,7 +82,7 @@ module.exports = {
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'programming-the-nitrokey',
-        'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'login-to-windows-domain-computers-with-ms-active-directory',
       ],
 
       '/pro/mac/': [
@@ -97,7 +97,7 @@ module.exports = {
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'programming-the-nitrokey',
-        'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'login-to-windows-domain-computers-with-ms-active-directory',
       ],
 
       '/pro/linux/': [
@@ -112,7 +112,7 @@ module.exports = {
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'programming-the-nitrokey',
-        'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'login-to-windows-domain-computers-with-ms-active-directory',
       ],
 
       // NK Start menu
@@ -145,7 +145,7 @@ module.exports = {
         'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'update-firmware-of-nitrokey-storage',
-        'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'login-to-windows-domain-computers-with-ms-active-directory',
         'replacing-nitrokey-storage-pcb',
       ],
 
@@ -156,7 +156,7 @@ module.exports = {
         'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'update-firmware-of-nitrokey-storage',
-        'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'login-to-windows-domain-computers-with-ms-active-directory',
         'replacing-nitrokey-storage-pcb',
       ],
 
@@ -167,7 +167,7 @@ module.exports = {
         'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'update-firmware-of-nitrokey-storage',
-        'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'login-to-windows-domain-computers-with-ms-active-directory',
         'replacing-nitrokey-storage-pcb',
       ],
 
