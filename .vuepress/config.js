@@ -120,6 +120,7 @@ module.exports = {
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
+        'update-firmware-of-nitrokey-storage',
       ],
 
       '/storage/mac/': [
@@ -128,6 +129,7 @@ module.exports = {
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
+        'update-firmware-of-nitrokey-storage',
       ],
 
       '/storage/linux/': [
@@ -136,6 +138,7 @@ module.exports = {
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
+        'update-firmware-of-nitrokey-storage',
       ],
 
       // NK FIDO U2F menu

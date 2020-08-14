@@ -1,0 +1,1 @@
+../windows/update-firmware-of-nitrokey-storage.md
