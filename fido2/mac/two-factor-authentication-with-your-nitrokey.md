@@ -1,1 +1,0 @@
-../windows/two-factor-authentication-with-your-nitrokey.md
