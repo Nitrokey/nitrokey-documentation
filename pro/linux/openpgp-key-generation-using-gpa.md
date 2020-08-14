@@ -1,0 +1,1 @@
+../windows/openpgp-key-generation-using-gpa.md
