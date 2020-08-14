@@ -49,14 +49,17 @@ module.exports = {
       // NK HSM menu
       '/hsm/windows/': [
         ['', 'Nitrokey HSM, Windows'],
+        'programming-the-nitrokey',
       ],
 
       '/hsm/mac/': [
         ['', 'Nitrokey HSM, macOS'],
+        'programming-the-nitrokey',
       ],
 
       '/hsm/linux/': [
         ['', 'Nitrokey HSM, Linux'],
+        'programming-the-nitrokey',
       ],
 
       // NK Pro menu
@@ -75,6 +78,7 @@ module.exports = {
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
+        'programming-the-nitrokey',
       ],
 
       '/pro/mac/': [
@@ -88,6 +92,7 @@ module.exports = {
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
+        'programming-the-nitrokey',
       ],
 
       '/pro/linux/': [
@@ -101,23 +106,27 @@ module.exports = {
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
+        'programming-the-nitrokey',
       ],
 
       // NK Start menu
       '/start/windows/': [
         ['', 'Nitrokey Start, Windows'],
         'openpgp-email-encryption-with-thunderbird',
+        'programming-the-nitrokey',
       ],
 
       '/start/mac/': [
         ['', 'Nitrokey Start, macOS'],
         'openpgp-email-encryption-with-thunderbird',
+        'programming-the-nitrokey',
       ],
 
       '/start/linux/': [
         ['', 'Nitrokey Start, Linux'],
         'firmware-update',
         'openpgp-email-encryption-with-thunderbird',
+        'programming-the-nitrokey',
       ],
 
       // NK Storage menu
