@@ -146,6 +146,7 @@ module.exports = {
         'firmware-update',
         'default-boot',
         'change-user-and-admin-pin',
+        'nitropad-system-update',
       ],
 
       '/x230/ubuntu/': [
@@ -156,6 +157,7 @@ module.exports = {
         'default-boot',
         'change-user-and-admin-pin',
         'change-disk-encryption-passphrase',
+        'nitropad-system-update',
       ],
 
       // Main overview and fallback menu
