@@ -59,6 +59,7 @@ module.exports = {
         'windows-logon-and-smime-email-encryption-with-active-directory',
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
+        'openpgp-email-encryption-with-outlook',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
@@ -68,6 +69,7 @@ module.exports = {
         ['', 'Nitrokey Pro 2, macOS'],
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
+        'openpgp-email-encryption-with-outlook',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
@@ -77,6 +79,7 @@ module.exports = {
         ['', 'Nitrokey Pro 2, Linux'],
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
+        'openpgp-email-encryption-with-outlook',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
@@ -106,6 +109,7 @@ module.exports = {
         'windows-logon-and-smime-email-encryption-with-active-directory',
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
+        'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
@@ -113,6 +117,7 @@ module.exports = {
         ['', 'Nitrokey Storage, macOS'],
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
+        'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
@@ -120,6 +125,7 @@ module.exports = {
         ['', 'Nitrokey Storage, Linux'],
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
+        'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
       ],
 
