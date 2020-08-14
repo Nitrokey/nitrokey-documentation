@@ -66,3 +66,37 @@ Now the NitroPad marks the files that changed by the update as verified.
     PIN:
 ```
 9. Your system will then boot.
+
+
+## Changing default kernel
+This is a workaround for Heads v1.1 bug, which does not allow to change the kernel to the one later (lower) in the list.
+
+Usual way would be to go to `Options -> Boot Options -> Show OS boot menu`, selecting the kernel and making it default, however the latter is not working at the moment. Instead please use the following workaround:
+
+
+1. Start recovery console and remove the default boot files. Please make sure the correct files are removed. Here 2 default files were available:
+```
+$ cd /
+$ mount -o remount,rw /boot
+$ ls /boot/kexec_default.*.txt
+kexec_default.1.txt kexec_default.2.txt
+$ rm /boot/kexec_default.*.txt -v
+removed '/boot/kexec_default.1.txt'
+removed '/boot/kexec_default.2.txt'
+$ reboot
+```
+2. Sign all current boot files with:
+`Options --> Update checksums and sign all files in /boot`
+3. Return to main menu and select default boot
+`Main Menu --> Default boot`
+3. Agree to select default kernel (screen: `No Default Boot Option Configured` )
+4. Select the desired kernel to work as the default
+4. Select 2nd option: `Make <kernel version> the default` 
+5. Save the kernel with accepting default options (proceed, do not agree for TPM encryption, confirm GPG card):
+```
+Saving... Proceed (Y/n): Y
+Do you wish... to the TPM (y/N): N
+Please confirm... inserted (Y/n): Y
+```
+6. Enter PIN for the Nitrokey Pro/Storage device to execute signing process
+7. The selected kernel will boot and it will be the default one the next time when selecting `Default Boot` option from the menu.
