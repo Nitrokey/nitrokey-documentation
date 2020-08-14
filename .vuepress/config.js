@@ -29,21 +29,18 @@ module.exports = {
         'Passwordless-Authentication-with-Microsoft',
         'enabling-u2f-on-firefox',
         'two-factor-authentication-for-google',
-        'two-factor-authentication-with-your-nitrokey',
       ],
 
       '/fido2/mac/': [
         ['', 'Nitrokey FIDO2, macOS'],
         'enabling-u2f-on-firefox',
         'two-factor-authentication-for-google',
-        'two-factor-authentication-with-your-nitrokey',
       ],
 
       '/fido2/linux/': [
         ['', 'Nitrokey FIDO2, Linux'],
         'enabling-u2f-on-firefox',
         'two-factor-authentication-for-google',
-        'two-factor-authentication-with-your-nitrokey',
       ],
 
       // NK HSM menu
@@ -83,6 +80,7 @@ module.exports = {
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
+        'two-factor-authentication-with-otp',
       ],
 
       '/pro/mac/': [
@@ -98,6 +96,7 @@ module.exports = {
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
+        'two-factor-authentication-with-otp',
       ],
 
       '/pro/linux/': [
@@ -113,6 +112,7 @@ module.exports = {
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
+        'two-factor-authentication-with-otp',
       ],
 
       // NK Start menu
@@ -147,6 +147,7 @@ module.exports = {
         'update-firmware-of-nitrokey-storage',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'replacing-nitrokey-storage-pcb',
+        'two-factor-authentication-with-otp',
       ],
 
       '/storage/mac/': [
@@ -158,6 +159,7 @@ module.exports = {
         'update-firmware-of-nitrokey-storage',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'replacing-nitrokey-storage-pcb',
+        'two-factor-authentication-with-otp',
       ],
 
       '/storage/linux/': [
@@ -169,6 +171,7 @@ module.exports = {
         'update-firmware-of-nitrokey-storage',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'replacing-nitrokey-storage-pcb',
+        'two-factor-authentication-with-otp',
       ],
 
       // NK FIDO U2F menu
