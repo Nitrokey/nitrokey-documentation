@@ -146,6 +146,7 @@ module.exports = {
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'update-firmware-of-nitrokey-storage',
         'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'replacing-nitrokey-storage-pcb',
       ],
 
       '/storage/mac/': [
@@ -156,6 +157,7 @@ module.exports = {
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'update-firmware-of-nitrokey-storage',
         'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'replacing-nitrokey-storage-pcb',
       ],
 
       '/storage/linux/': [
@@ -166,6 +168,7 @@ module.exports = {
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'update-firmware-of-nitrokey-storage',
         'login-with-nitrokey-on-windows-domain-computers-using-ms-active-directory',
+        'replacing-nitrokey-storage-pcb',
       ],
 
       // NK FIDO U2F menu

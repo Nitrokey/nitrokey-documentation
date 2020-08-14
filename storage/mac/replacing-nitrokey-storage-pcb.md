@@ -1,0 +1,1 @@
+../windows/replacing-nitrokey-storage-pcb.md
