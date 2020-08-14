@@ -28,16 +28,19 @@ module.exports = {
         ['', 'Nitrokey FIDO2, Windows'],
         'Passwordless-Authentication-with-Microsoft',
         'enabling-u2f-on-firefox',
+        'two-factor-authentication-for-google',
       ],
 
       '/fido2/mac/': [
         ['', 'Nitrokey FIDO2, macOS'],
         'enabling-u2f-on-firefox',
+        'two-factor-authentication-for-google',
       ],
 
       '/fido2/linux/': [
         ['', 'Nitrokey FIDO2, Linux'],
         'enabling-u2f-on-firefox',
+        'two-factor-authentication-for-google',
       ],
 
       // NK HSM menu
@@ -136,16 +139,19 @@ module.exports = {
       '/u2f/windows/': [
         ['', 'Nitrokey FIDO U2F, Windows'],
         'enabling-u2f-on-firefox',
+        'two-factor-authentication-for-google',
       ],
 
       '/u2f/mac/': [
         ['', 'Nitrokey FIDO U2F, macOS'],
         'enabling-u2f-on-firefox',
+        'two-factor-authentication-for-google',
       ],
 
       '/u2f/linux/': [
         ['', 'Nitrokey FIDO U2F, Linux'],
         'enabling-u2f-on-firefox',
+        'two-factor-authentication-for-google',
       ],
 
       // NitroPad X230
