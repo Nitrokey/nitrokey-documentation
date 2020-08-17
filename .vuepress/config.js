@@ -131,6 +131,7 @@ module.exports = {
       '/start/linux/': [
         ['', 'Nitrokey Start, Linux'],
         'firmware-update',
+        'multiple-identities',
         'openpgp-email-encryption-with-thunderbird',
         'programming-the-nitrokey',
       ],
