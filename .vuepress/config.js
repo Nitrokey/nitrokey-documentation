@@ -119,20 +119,22 @@ module.exports = {
       '/start/windows/': [
         ['', 'Nitrokey Start, Windows'],
         'openpgp-email-encryption-with-thunderbird',
+        'multiple-identities',
         'programming-the-nitrokey',
       ],
 
       '/start/mac/': [
         ['', 'Nitrokey Start, macOS'],
         'openpgp-email-encryption-with-thunderbird',
+        'multiple-identities',
         'programming-the-nitrokey',
       ],
 
       '/start/linux/': [
         ['', 'Nitrokey Start, Linux'],
-        'firmware-update',
-        'multiple-identities',
         'openpgp-email-encryption-with-thunderbird',
+        'multiple-identities',
+        'firmware-update',
         'programming-the-nitrokey',
       ],
 
