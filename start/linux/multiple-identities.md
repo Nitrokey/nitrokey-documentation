@@ -6,10 +6,6 @@ All of the smart cards have separate data objects, meaning they all could have d
 
 The virtual smart cards are identifyable by the first digit of the serial number, which is replaced by identity number for second ("1") and third one ("2"). Serial number is not changed for the first identity.
 
-## Limitations
-
-As of the RTM.10 release there is only one limitation - the third identity can store a certificate not longer than 1024 bytes. The other two identities have standard limit of 2048 bytes per certificate.
-
 ## Usage
 
 To change the identity it suffices to send a custom CCID command. This could be achieved with `pynitrokey` tool:
@@ -38,3 +34,6 @@ $ nitropy start set-identity 1
     device has reset, and should now have the new identity
 ```
 
+## Limitations
+
+As of the RTM.10 release there is only one limitation - the third identity can store a certificate not longer than 1024 bytes. The other two identities have st>
