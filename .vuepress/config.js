@@ -48,18 +48,21 @@ module.exports = {
         ['', 'Nitrokey HSM, Windows'],
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
+        'creating-certificate-authority',
       ],
 
       '/hsm/mac/': [
         ['', 'Nitrokey HSM, macOS'],
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
+        'creating-certificate-authority',
       ],
 
       '/hsm/linux/': [
         ['', 'Nitrokey HSM, Linux'],
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
+        'creating-certificate-authority',
       ],
 
       // NK Pro menu
