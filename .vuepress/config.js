@@ -185,19 +185,16 @@ module.exports = {
       '/u2f/windows/': [
         ['', 'Nitrokey FIDO U2F, Windows'],
         'enabling-u2f-on-firefox',
-        'two-factor-authentication-for-google',
       ],
 
       '/u2f/mac/': [
         ['', 'Nitrokey FIDO U2F, macOS'],
         'enabling-u2f-on-firefox',
-        'two-factor-authentication-for-google',
       ],
 
       '/u2f/linux/': [
         ['', 'Nitrokey FIDO U2F, Linux'],
         'enabling-u2f-on-firefox',
-        'two-factor-authentication-for-google',
       ],
 
       // NitroPad X230
