@@ -28,19 +28,16 @@ module.exports = {
         ['', 'Nitrokey FIDO2, Windows'],
         'passwordless-authentication-with-microsoft',
         'enabling-u2f-on-firefox',
-        'two-factor-authentication-for-google',
       ],
 
       '/fido2/mac/': [
         ['', 'Nitrokey FIDO2, macOS'],
         'enabling-u2f-on-firefox',
-        'two-factor-authentication-for-google',
       ],
 
       '/fido2/linux/': [
         ['', 'Nitrokey FIDO2, Linux'],
         'enabling-u2f-on-firefox',
-        'two-factor-authentication-for-google',
       ],
 
       // NK HSM menu
@@ -84,13 +81,13 @@ module.exports = {
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'two-factor-authentication-with-otp',
+        'two-factor-authentication-for-google',
       ],
 
       '/pro/mac/': [
         ['', 'Nitrokey Pro 2, macOS'],
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
-        'openpgp-email-encryption-with-outlook',
         'openpgp-key-generation-on-device',
         'openpgp-key-generation-with-backup',
         'openpgp-key-generation-using-gpa',
@@ -100,13 +97,13 @@ module.exports = {
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'two-factor-authentication-with-otp',
+        'two-factor-authentication-for-google',
       ],
 
       '/pro/linux/': [
         ['', 'Nitrokey Pro 2, Linux'],
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
-        'openpgp-email-encryption-with-outlook',
         'openpgp-key-generation-on-device',
         'openpgp-key-generation-with-backup',
         'openpgp-key-generation-using-gpa',
@@ -116,6 +113,7 @@ module.exports = {
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'two-factor-authentication-with-otp',
+        'two-factor-authentication-for-google',
       ],
 
       // NK Start menu
@@ -150,10 +148,11 @@ module.exports = {
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
-        'update-firmware-of-nitrokey-storage',
+        'firmware-update',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'replacing-nitrokey-storage-pcb',
         'two-factor-authentication-with-otp',
+        'two-factor-authentication-for-google',
       ],
 
       '/storage/mac/': [
@@ -162,10 +161,11 @@ module.exports = {
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
-        'update-firmware-of-nitrokey-storage',
+        'firmware-update',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'replacing-nitrokey-storage-pcb',
         'two-factor-authentication-with-otp',
+        'two-factor-authentication-for-google',
       ],
 
       '/storage/linux/': [
@@ -174,10 +174,11 @@ module.exports = {
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
-        'update-firmware-of-nitrokey-storage',
+        'firmware-update',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'replacing-nitrokey-storage-pcb',
         'two-factor-authentication-with-otp',
+        'two-factor-authentication-for-google',
       ],
 
       // NK FIDO U2F menu

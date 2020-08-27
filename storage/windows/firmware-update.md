@@ -1,4 +1,4 @@
-# Update Firmware of Nitrokey Storage
+# Firmware Update
 
 ::: danger Warning
 You should backup all data from the device before upgrading, as firmware upgrades may destroy all data on the device (especially coming from firmware version <0.45)!
@@ -30,18 +30,3 @@ The Nitrokey is not detected by App anymore once update mode got activated. You 
 Now start the previously download Nitrokey Update Tool. After clicking left on "Select firmware file" you can choose the previously downloaded .hex file. Please left click on "Update firmware" to start the update process. Your device should get detected by the Nitrokey App again as soon as the update is finished.
 
 ![img2](./images/update-firmware-of-nitrokey-storage/2.png)
-
-## Update the Firmware on GNU/Linux
-
-As the Update Tool is currently only readily build for macOS and Windows, GNU/Linux users should use the following instructions.
-
-Basically you need both, the Nitrokey App and the program "dfu-programmer". The Nitrokey App can be found here, dfu-programmer should be available through your package-manager, e.g. `apt-get update && apt-get install dfu-programmer` on Debian-based systems.
-
-Please enable Firmware Update mode as described above through the Nitrokey App. Afterwards, open a terminal and type in the following three commands:
-
-```
-sudo dfu-programmer at32uc3a3256s erase
-sudo dfu-programmer at32uc3a3256s flash --suppress-bootloader-mem firmware.hex
-sudo dfu-programmer at32uc3a3256s launch # versions <0.7 of dfu-programmer use "start" instead of "launch"
-```
-whereas "firmware.hex" is the file you have downloaded before as described above. "at32uc3a3256s" is the name of the controller in the Nitrokey that dfu-programmer should use.
