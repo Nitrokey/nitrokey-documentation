@@ -119,6 +119,7 @@ module.exports = {
         'multiple-identities',
         'programming-the-nitrokey',
         'openpgp-key-generation-using-gpa',
+        'nitrokey-start-supports-elliptic-curves-ecc',
       ],
 
       '/start/mac/': [
@@ -126,6 +127,7 @@ module.exports = {
         'openpgp-email-encryption-with-thunderbird',
         'multiple-identities',
         'programming-the-nitrokey',
+        'nitrokey-start-supports-elliptic-curves-ecc',
       ],
 
       '/start/linux/': [
@@ -135,6 +137,7 @@ module.exports = {
         'firmware-update',
         'programming-the-nitrokey',
         'openpgp-key-generation-using-gpa',
+        'nitrokey-start-supports-elliptic-curves-ecc',
       ],
 
       // NK Storage menu
