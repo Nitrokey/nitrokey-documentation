@@ -1,1 +1,0 @@
-../../fido2/windows/enabling-u2f-on-firefox.md
