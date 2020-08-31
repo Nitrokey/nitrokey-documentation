@@ -4,9 +4,6 @@ The following instructions explain the generation of OpenPGP keys directly on th
 
 You need to have GnuPG and GPA installed on your system. The newest version for Windows can be found [here](https://www.gpg4win.org/) (make sure to check "GPA" during the installation!). Users of Linux systems please install GnuPG and GPA with help of the package manager (e.g. using `sudo apt install gnupg gpa` on Ubuntu).
 
-::: tip Note
-GPA does not exist for macOS. Therefore, please use [these instructions](https://www.nitrokey.com/documentation/openpgp-create-on-device) on macOS instead.
-:::
 
 ## Key Generation
 

@@ -90,7 +90,6 @@ module.exports = {
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-key-generation-on-device',
         'openpgp-key-generation-with-backup',
-        'openpgp-key-generation-using-gpa',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
@@ -122,6 +121,7 @@ module.exports = {
         'openpgp-email-encryption-with-thunderbird',
         'multiple-identities',
         'programming-the-nitrokey',
+        'openpgp-key-generation-using-gpa',
       ],
 
       '/start/mac/': [
@@ -137,6 +137,7 @@ module.exports = {
         'multiple-identities',
         'firmware-update',
         'programming-the-nitrokey',
+        'openpgp-key-generation-using-gpa',
       ],
 
       // NK Storage menu
@@ -153,6 +154,7 @@ module.exports = {
         'replacing-nitrokey-storage-pcb',
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
+        'openpgp-key-generation-using-gpa',
       ],
 
       '/storage/mac/': [
@@ -179,6 +181,7 @@ module.exports = {
         'replacing-nitrokey-storage-pcb',
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
+        'openpgp-key-generation-using-gpa',
       ],
 
       // NK FIDO U2F menu
