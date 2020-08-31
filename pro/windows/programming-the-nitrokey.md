@@ -10,7 +10,7 @@ If you use it with original Nitrokey hardware, you would need to cut it to Micro
 If you use a development board, you may solder the OpenPGP Card to the board directly by using some wires or you get yourself a smart card jack which you solder to the dev board instead.
 - To compile the firmware we recommend [ARM's official GNU tools](https://launchpad.net/gcc-arm-embedded/).
 - The microprocessor can be flashed with two different approaches:
-    1. SWD is a STM-specific protocol and similar to JTAG allowing programming and debugging. Working adapters are Versaloon or any of the [ST-Link V2 (clones)](http://www.ebay.com/sch/i.html?_odkw=st-link&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR0.TRC0.H0.Xst-link+v2&_nkw=st-link+v2&_sacat=0). Under Linux you could give a patched [OpenOCD](https://github.com/snowcap-electronics/OpenOCD) a try but in the past it has been very troublesome. This approach requires to solder wires to the contact pads or to use an [adapter with pogo pins](https://github.com/Nitrokey/nitrokey-pro-hardware/tree/master/cs_pogo_adapter) and some kind of mounting (recommended).
+    1. SWD is a STM-specific protocol and similar to JTAG allowing programming and debugging. Working adapters are Versaloon or any of the [ST-Link V2 (clones)](http://www.ebay.com/sch/i.html?_odkw=st-link&_osacat=0&_from=R40&_trksid=p2045573.m570.l1313.TR0.TRC0.H0.Xst-link+v2&_nkw=st-link+v2&_sacat=0). Under Linux you could use OpenOCD or official STM32 flashing tool (commands below). This approach requires to solder wires to the contact pads or to use an [adapter with pogo pins](https://github.com/Nitrokey/nitrokey-pro-hardware/tree/master/cs_pogo_adapter) and some kind of mounting (recommended).
 
     ![img1](./images/programming-the-nitrokey/1.png)
 
@@ -19,3 +19,34 @@ If you use a development board, you may solder the OpenPGP Card to the board dir
 ## Flashing the Nitrokey Pro
 
 Further information about flashing the device can be found at the [Github repository of the Nitrokey Pro](https://github.com/Nitrokey/nitrokey-pro-firmware).
+
+### Flashing commands cheatsheet
+
+You can use either OpenOCD package native to your OS, or STM's `STM32_Programmer_CLI` tool from the [STM32CubeProgrammer] package. No need to build the OpenOCD by hand with the latest Linux distributions.
+
+STM32 programmer:
+```bash
+FW=firmware.bin
+# erase
+STM32_Programmer_CLI -c port=SWD -halt -e all --readunprotect
+# flash
+STM32_Programmer_CLI -c port=SWD -halt  -d ${FW} -rst
+# STM32 programmer cannot set read protection; alternatively can be set with 
+# running the update through bootloader, or using OpenOCD
+```
+
+OpenOCD:
+```bash
+FW=firmware.bin
+# erase
+openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg -c "init" -c "reset halt" -c "stm32f1x mass_erase 0" -c "exit"
+# flash
+openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg -c "init" -c "reset halt" -c "stm32f1x unlock 0" -c "reset halt" -c "flash write_image erase ${FW}" -c "reset run" -c "exit"
+# set read-protection 
+openocd -f interface/stlink-v2.cfg -f target/stm32f1x.cfg -c "init" -c "reset halt" -c "stm32f1x lock 0" -c "reset run" -c "exit"
+```
+Latest firmware (only `gnuk.hex` is needed - please use it for flashing):
+- https://github.com/Nitrokey/nitrokey-start-firmware/tree/gnuk1.2-regnual-fix/prebuilt/RTM.10
+
+
+[STM32CubeProgrammer]: https://www.st.com/en/development-tools/stm32cubeprog.html
