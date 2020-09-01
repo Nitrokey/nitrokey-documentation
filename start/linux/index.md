@@ -1,7 +1,7 @@
 # Nitrokey Start, Linux
 
-1. Install scdaemon and GnuPG 2.1 or higher by using your package manager (e. g. *apt update && apt install scdaemon gpg2* on Ubuntu).
-2. Connect your Nitrokey to your computer and confirm all dialogs so that the USB smart card device driver gets installed almost automatically.
+1. Install `scdaemon` and GnuPG 2.1 or higher by using your package manager (e.g. `apt update && apt install scdaemon gpg2` on Ubuntu).
+2. Connect your Nitrokey to your computer.
 3. Use GnuPG to [generate new keys or import existing ones](https://www.nitrokey.com/documentation/openpgp-email-encryption).
 
     ::: tip Note
@@ -12,7 +12,8 @@
     - The longer the PIN the better. It is possible to use 6 randomly selected words instead as well for the same or better security than random character string.
     - Use 'gpg --card-edit' -> 'admin' -> 'passwd' to achieve this (for Admin PIN case). 
     - Please be careful to change Admin PIN first and User PIN second! Otherwise the admin-less mode got activated, see [this instructions](https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#) for further information.
-5. KDF-DO allows for a shorter PIN of 8 characters minimum. Please use greater length for the increased security.
+    - Optionally Reset code can be set up ([guide](http://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#set-up-pw1-pw3-and-reset-code)). The minimum length accepted is 8 characters, however it should be as long as User PIN.
+5. KDF-DO allows for a shorter PIN of 8 characters minimum, by executing part of the calculations on the PC. Please use greater length for the increased security.
 
 **Firmware version 1.2.5 or below: In case you forget a PIN or enter it wrongly three times you need the reset code to unblock the PIN. Otherwise the device wouldn't be usable anymore! Therefore please [set the reset code](http://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#set-up-pw1-pw3-and-reset-code) as well when initialising the key!**
 
