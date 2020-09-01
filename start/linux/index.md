@@ -1,7 +1,6 @@
 # Nitrokey Start, Linux
 
 1. Install scdaemon and GnuPG 2.1 or higher by using your package manager (e. g. *apt update && apt install scdaemon gpg2* on Ubuntu).
-1. Install [Gpg4win](https://www.gpg4win.org/) on your Computer.
 2. Connect your Nitrokey to your computer and confirm all dialogs so that the USB smart card device driver gets installed almost automatically.
 3. Use GnuPG to [generate new keys or import existing ones](https://www.nitrokey.com/documentation/openpgp-email-encryption).
 
@@ -29,12 +28,12 @@ Please note that the Nitrokey App can not be used for this device!
 
 ## Troubleshooting
 On some GNU/Linux systems it is necessary to insert the UDEV rules for the Nitrokey device manually. If you followed the above instructions and get the message:
-
-*gpg: OpenPGP card not available: No such device*
-
+```
+gpg: OpenPGP card not available: No such device
+```
 please install the [Nitrokey App](https://www.nitrokey.com/download) or type the following commands in the terminal to download and install the UDEV rules:
 
-*wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules*
-
-*sudo mv 41-nitrokey.rules /etc/udev/rules.d/*
-
+```bash
+wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
+sudo mv 41-nitrokey.rules /etc/udev/rules.d/
+```
