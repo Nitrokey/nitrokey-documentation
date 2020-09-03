@@ -10,13 +10,13 @@ These instructions are relevant in the following cases:
 
 ### Preparation
 
-- Connect your NitroPad to a power plug and load its battery to over 70%
-- Download the [latest firmware](https://github.com/Nitrokey/heads/releases) and store it on a USB drive. The files are in the "Assets" dropdown box at the end of the release information.
-- For hash sum verification, store the appropriate .sha256sum file at the USB drive. 
+1. Connect your NitroPad to a power plug and load its battery to over 70%
+2. Download the [latest firmware](https://github.com/Nitrokey/heads/releases) and store it on a USB drive. The files are in the "Assets" dropdown box at the end of the release information.
+3. For hash sum verification, store `SHA256SUM.txt` file at the USB drive. 
 
 E.g. for `v1.1-rc3` version:
 1. Firmware should be downloaded from  [here](https://github.com/Nitrokey/heads/releases/tag/v1.1-rc3)
-2. Firmware and hashsum files should be located on the USB drive at the following locations:
+2. Firmware and hashsum files should be located on the USB drive in the main directory:
 ```
 /nitropad_x230_v1.1-rc3.rom
 /SHA256SUM.txt
