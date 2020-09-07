@@ -79,6 +79,7 @@ module.exports = {
         'login-to-windows-domain-computers-with-ms-active-directory',
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
+        'elliptic-curves-ecc-support-for-nitrokey-storage-and-pro',
       ],
 
       '/pro/mac/': [
@@ -94,6 +95,7 @@ module.exports = {
         'login-to-windows-domain-computers-with-ms-active-directory',
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
+        'elliptic-curves-ecc-support-for-nitrokey-storage-and-pro',
       ],
 
       '/pro/linux/': [
@@ -110,6 +112,7 @@ module.exports = {
         'login-to-windows-domain-computers-with-ms-active-directory',
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
+        'elliptic-curves-ecc-support-for-nitrokey-storage-and-pro',
       ],
 
       // NK Start menu
@@ -155,6 +158,7 @@ module.exports = {
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
         'openpgp-key-generation-using-gpa',
+        'elliptic-curves-ecc-support-for-nitrokey-storage-and-pro',
       ],
 
       '/storage/mac/': [
@@ -168,6 +172,7 @@ module.exports = {
         'replacing-nitrokey-storage-pcb',
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
+        'elliptic-curves-ecc-support-for-nitrokey-storage-and-pro',
       ],
 
       '/storage/linux/': [
@@ -182,6 +187,7 @@ module.exports = {
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
         'openpgp-key-generation-using-gpa',
+        'elliptic-curves-ecc-support-for-nitrokey-storage-and-pro',
       ],
 
       // NK FIDO U2F menu
