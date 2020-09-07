@@ -1,4 +1,4 @@
-# Elliptic Curves (ECC) Support for Nitrokey Storage 2 and Pro 2
+# Elliptic Curves (ECC) Support
 
 **RSA-2048 Becomes Increasingly Insecure**
 
