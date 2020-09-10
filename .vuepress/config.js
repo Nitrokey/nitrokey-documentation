@@ -80,6 +80,7 @@ module.exports = {
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
+        'PuTTY',
       ],
 
       '/pro/mac/': [
@@ -96,6 +97,7 @@ module.exports = {
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
+        'PuTTY',
       ],
 
       '/pro/linux/': [
@@ -112,6 +114,7 @@ module.exports = {
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
+        'PuTTY',
       ],
 
       // NK Start menu
@@ -122,6 +125,7 @@ module.exports = {
         'programming-the-nitrokey',
         'openpgp-key-generation-using-gpa',
         'nitrokey-start-supports-elliptic-curves-ecc',
+        'PuTTY',
       ],
 
       '/start/mac/': [
@@ -130,6 +134,7 @@ module.exports = {
         'multiple-identities',
         'programming-the-nitrokey',
         'nitrokey-start-supports-elliptic-curves-ecc',
+        'PuTTY',
       ],
 
       '/start/linux/': [
@@ -140,6 +145,7 @@ module.exports = {
         'programming-the-nitrokey',
         'openpgp-key-generation-using-gpa',
         'nitrokey-start-supports-elliptic-curves-ecc',
+        'PuTTY',
       ],
 
       // NK Storage menu
@@ -159,6 +165,7 @@ module.exports = {
         'openpgp-key-generation-using-gpa',
         'elliptic-curves-ecc-support',
         'activate-update-mode-manually',
+        'PuTTY',
       ],
 
       '/storage/mac/': [
@@ -174,6 +181,7 @@ module.exports = {
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
         'activate-update-mode-manually',
+        'PuTTY',
       ],
 
       '/storage/linux/': [
@@ -190,6 +198,7 @@ module.exports = {
         'openpgp-key-generation-using-gpa',
         'elliptic-curves-ecc-support',
         'activate-update-mode-manually',
+        'PuTTY',
       ],
 
       // NK FIDO U2F menu
