@@ -1,1 +1,1 @@
-../windows/programming-the-nitrokey.md
+../programming-the-nitrokey.md

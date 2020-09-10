@@ -1,1 +1,1 @@
-../windows/openpgp-key-generation-with-backup.md
+../openpgp-key-generation-with-backup.md

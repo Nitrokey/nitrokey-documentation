@@ -1,1 +1,1 @@
-../windows/2fa-nextcloud.md
+../2fa-nextcloud.md

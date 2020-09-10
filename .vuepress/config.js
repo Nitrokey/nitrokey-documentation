@@ -106,7 +106,6 @@ module.exports = {
         'openpgp-key-generation-with-backup',
         'openpgp-key-generation-using-gpa',
         'smime-email-encryption-with-thunderbird',
-        'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',

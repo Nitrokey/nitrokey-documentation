@@ -1,1 +1,1 @@
-../windows/login-to-windows-domain-computers-with-ms-active-directory.md
+../login-to-windows-domain-computers-with-ms-active-directory.md

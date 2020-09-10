@@ -1,1 +1,1 @@
-../windows/openpgp-email-encryption-with-thunderbird.md
+../openpgp-email-encryption-with-thunderbird.md

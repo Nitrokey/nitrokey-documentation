@@ -1,1 +1,1 @@
-../windows/login-with-eidauthenticate-on-stand-alone-windows-computers.md
+../login-with-eidauthenticate-on-stand-alone-windows-computers.md

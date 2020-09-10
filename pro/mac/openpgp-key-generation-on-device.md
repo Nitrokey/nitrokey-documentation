@@ -1,1 +1,1 @@
-../windows/openpgp-key-generation-on-device.md
+../openpgp-key-generation-on-device.md

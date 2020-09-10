@@ -1,1 +1,1 @@
-../..//pro/two-factor-authentication-for-google.md
+../two-factor-authentication-for-google.md
