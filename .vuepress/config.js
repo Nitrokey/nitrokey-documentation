@@ -81,6 +81,7 @@ module.exports = {
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
         'PuTTY',
+        'two-factor-authentication-for-erp-software-odoo',
       ],
 
       '/pro/mac/': [
@@ -98,6 +99,7 @@ module.exports = {
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
         'PuTTY',
+        'two-factor-authentication-for-erp-software-odoo',
       ],
 
       '/pro/linux/': [
@@ -115,6 +117,7 @@ module.exports = {
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
         'PuTTY',
+        'two-factor-authentication-for-erp-software-odoo',
       ],
 
       // NK Start menu
