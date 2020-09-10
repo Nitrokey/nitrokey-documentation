@@ -1,4 +1,4 @@
-# NitroPad System update
+# System update
 
 The NitroPad watches for changes to important system files to detect third-party tampering. This means that special steps are sometimes necessary when updating the system. This can often be recognized by the fact that the system prompts you to reboot.
 ## Procedure After a System Update
@@ -18,7 +18,8 @@ The NitroPad watches for changes to important system files to detect third-party
 ![img3](./images/nitropad-system-update/3.jpeg)
 
 4. Now insert the Nitrokey if this is not already the case and confirm with Enter. Then you must enter the User PIN of the Nitrokey (default: 123456). You will not see the characters you typed in on the screen.
-Important: Heads expects an English keyboard layout, on which e.g. "y" and "z" are swapped in comparison to the German keyboard layout. If you agree with the default selection (which is written in capital letter) you can also simply confirm by pressing Enter.
+
+  **Important**: Heads expects an English keyboard layout, on which e.g. "y" and "z" are swapped in comparison to the German keyboard layout. If you agree with the default selection (which is written in capital letter) you can also simply confirm by pressing Enter.
 
 ```
 Please confirm that your GPG card is inserted [Y/n]:
@@ -51,9 +52,7 @@ Now the NitroPad marks the files changed by the update as verified.
 
 8. Now the Nitrokey has to be plugged in, if this is not yet the case. Confirm the next three questions with Enter and enter the User PIN of the Nitrokey if prompted (default: 123456).
 
-::: warning Important
- Heads expects an English keyboard layout, on which e.g. "y" and "z" are swapped in comparison to the German keyboard layout.
-:::
+   **Important**: Heads expects an English keyboard layout, on which e.g. "y" and "z" are swapped in comparison to the German keyboard layout.
 
 ```
 Saving a default will modify the disk. Proceed? [Y/n]:

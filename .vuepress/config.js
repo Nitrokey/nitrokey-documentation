@@ -207,24 +207,24 @@ module.exports = {
       '/x230/qubes/': [
         ['', 'NitroPad X230, Qubes OS'],
         ['verify-sealed-hardware', 'Verify Sealed Hardware'],
-        ['operating-system-update', 'Operating System Update'],
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
         'factory-reset',
         'firmware-update',
         'default-boot',
         'change-user-and-admin-pin',
-        'nitropad-system-update',
+        'system-update',
       ],
 
       '/x230/ubuntu/': [
         ['', 'NitroPad X230, Ubuntu Linux'],
+        ['verify-sealed-hardware', 'Verify Sealed Hardware'],
         ['operating-system-reinstallation', 'Operating System Reinstallation'],
         'factory-reset',
         'firmware-update',
         'default-boot',
         'change-user-and-admin-pin',
         'change-disk-encryption-passphrase',
-        'nitropad-system-update',
+        'system-update',
       ],
 
       // Main overview and fallback menu

@@ -44,7 +44,7 @@ Now the NitroPad marks the files that changed by the update as verified.
 7. To save this value as default, select "Make Ubuntu the default" for Ubuntu or "Make Qubes the default" for Qubes OS.
     Confirm Boot Details
 
-![img6](./images/NitroPad-boot-options.jpeg)
+![img6](./images/NitroPad-confirm-boot-details.jpeg)
 
 8. Confirm the next three questions with Enter and enter the PIN of the Nitrokey if you are prompted to do so.
 
