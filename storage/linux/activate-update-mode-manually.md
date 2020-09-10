@@ -1,0 +1,1 @@
+../activate-update-mode-manually.md

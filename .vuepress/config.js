@@ -158,6 +158,7 @@ module.exports = {
         'two-factor-authentication-for-google',
         'openpgp-key-generation-using-gpa',
         'elliptic-curves-ecc-support',
+        'activate-update-mode-manually',
       ],
 
       '/storage/mac/': [
@@ -172,6 +173,7 @@ module.exports = {
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
+        'activate-update-mode-manually',
       ],
 
       '/storage/linux/': [
@@ -187,6 +189,7 @@ module.exports = {
         'two-factor-authentication-for-google',
         'openpgp-key-generation-using-gpa',
         'elliptic-curves-ecc-support',
+        'activate-update-mode-manually',
       ],
 
       // NK FIDO U2F menu
