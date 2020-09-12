@@ -86,7 +86,7 @@ Once IP forwarding is done, we will need to download the latest release of Openv
 $ sudo -s 
 # wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
 ```
-5. ##### Add the URL of the adequate OpenVPN packages to the `sources.list` file 
+5. ###### Add the URL of the adequate OpenVPN packages to the `sources.list` file 
 
 ```bash
 # echo "deb http://build.openvpn.net/debian/openvpn/release/2.5 buster main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
