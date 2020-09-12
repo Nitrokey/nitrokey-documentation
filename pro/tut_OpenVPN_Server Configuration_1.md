@@ -388,7 +388,7 @@ To transfer the `client.req` file to the CA machine, we will use the same method
 Once transferred, on the CA machine we sign the certificate signing request file with this command
 
 ```bash
-$ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in client.req -out /home/user/pki/issued/server.crt 
+$ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in client.req -out /home/user/pki/issued/client.crt 
 ```
 
 #### 5. Import `client.crt` on the Nitrokey Pro 2 from the CA machine
