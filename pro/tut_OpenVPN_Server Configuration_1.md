@@ -394,7 +394,7 @@ $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 3
 #### 5. Import `client.crt` on the Nitrokey Pro 2 from the CA machine
 /// Some documentation says that we can use the ./pkitool script available with Easy RSA, to directly initialize a key pair on the Nitrokey Pro, however the pkitool utility seems to be deprecated ///
 
-After creating the `client.crt` file, we plug the Nitrokey Pro 2 device in the CA machine, import it the `.crt` to the Pro 2 using this command:
+After creating the `client.crt` file, we plug the Nitrokey Pro 2 device in the CA machine, and import the `.crt` to the Pro 2 device using this command:
 
 ```bash
 $ pkcs15-init --store-certificate client.crt --id 3
@@ -411,11 +411,11 @@ Or alternatively
 $ pkcs11-tool --list-objects 
 ```
 
-Fore more commands you shall refer to the [OpenSC wiki](https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card). 
+Fore more commands you can refer to the [OpenSC wiki](https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card). 
 
 #### 6. Retrieve the `chain.crt` file from the CA machine 
 
-While we keep the `client.crt`stored on the nitrokey Pro 2 device, we must retrieve the `chain.crt` file on the client machine, and store it in the adequate director. We may use `scp` as in the method explained in the server section of this guide. 
+While we keep the `client.crt`stored on the nitrokey Pro 2 device, we must retrieve the `chain.crt` file on the client machine, and store it in the adequate directory. We may use `scp` as in the method explained in the server section of this guide. 
 
 #### 7. Configure the client to interact with the Nitrokey Pro 2
 
@@ -504,6 +504,7 @@ pkcs11-cert-private 1 # Prompt for PIN
 ###### Optional step
 
 If you need to test the configuration, with and without the token on the Nitrokey Pro 2, you may add lines to the same `client.conf` and comment/uncomment the relevant lines according to your needs:
+::: details Click to view the code
 ```bash
 # non_nitrokey login
 
@@ -511,7 +512,7 @@ If you need to test the configuration, with and without the token on the Nitroke
 # key client.key
 # tls-auth ta.key 1
 ```
-
+:::
 
 ##### 3. Configure the OpenVPN client
 
