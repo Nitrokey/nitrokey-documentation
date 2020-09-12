@@ -198,7 +198,7 @@ After completing these steps, you have successfully created a private  key for y
 
 ::: tip File extensions for certificate signing requests
 
-The file extension that is adopted by the CA and HSM tutorial, indicates the creation of a `.csr` file, however Easy RSA creates certificate signing requests with a `.req` extension. 
+The file extension that is adopted by the CA and HSM tutorial indicates the creation of a `.csr` file, however Easy RSA creates certificate signing requests with a `.req` extension. 
 
 We will use interchangeably both extensions, while making sure that we transfer the right files to the Certificate Authority, and generate a final certificate with a `.crt` extension.
 
