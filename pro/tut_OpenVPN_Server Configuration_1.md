@@ -66,27 +66,27 @@ As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you may follo
 
 #### 1. install OpenVPN :
 
-1. ###### First we need to enable IP Forwarding by editing `/etc/sysctl.conf` file
+1. ##### First we need to enable IP Forwarding by editing `/etc/sysctl.conf` file
 ```bash
 $ vim /etc/sysctl.conf
 ```
-2. ###### Uncomment or edit accordingly the following line:
+2. ##### Uncomment or edit accordingly the following line:
 ```bash
 net.ipv4.ip_forward=1
 ```
-3. ###### Close after saving it, and enter this command
+3. ##### Close after saving it, and enter this command
 ```bash
 $ sysctl -p
 ```
 Once IP forwarding is done, we will need to download the latest release of OpenvPN for our Debian 10 server, according to [these instructions](https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos?__cf_chl_jschl_tk__=62f18d28588ed33f3c599052099bf7e46feb1378-1599355462-0-AXDsohY5kUawZr5f8zhAXWpKu5VPhIRdq9_e91od4P57mQ1ark9iUC72WozqlGT7OJpJBp5Dn9nxKCPxW7eOU6gqq8s7GY02YXtfSWjsfVRsilbZszJwK-_HtzZrDMx6g1REseNP9NUwj402W70xcVAiQrRJBuYqOal9Q3JIEywbW_XRrEIWEMsklfKgq5Dq6N_UAb14YgR__-G0VoNiH6cGvhzZgZ_puEjIy2yF4gm0RUrO7exX5SX3jUwf3xT9htaH1DHoYqe8cxOngl7NyY8JG4zjhhxCe4beGOi0FHlimW2TqtGoeN85-aoGMSp9gA): 
 
-4. ###### Change to root and download the GPG key that signed the package
+4. ##### Change to root and download the GPG key that signed the package
 
 ```bash
 $ sudo -s 
 # wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
 ```
-5. ###### Add the URL of the adequate OpenVPN packages to the `sources.list` file 
+5. ##### Add the URL of the adequate OpenVPN packages to the `sources.list` file 
 
 ```bash
 # echo "deb http://build.openvpn.net/debian/openvpn/release/2.5 buster main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
@@ -95,7 +95,7 @@ $ sudo -s
 
 We downloaded OpenVPN 2.5 as "password prompt" requires at least OpenVPN [version 2.4.8](https://community.openvpn.net/openvpn/ticket/1215?__cf_chl_jschl_tk__=92b2a9776b54ce71b2f15e4d3f62dbdb5ee68f5f-1599568561-0-AY906nmSrFwe8EfT2PKawtrgl2NF72nwMrG9mp57SgIAqFmzxHiqod7ED0oVbimJlDD2xzLNLbQU6iUlVImbo8Q25qpDJVJ56YHbE4JKQSusHiwS8GLMm8Di9Gk6k63_qN5SDot-ABpgFoNcaRUHGZQ0fVYKYXZDf5E_0ZAOjPWsD2FXLfc7atx53t9scbdGF1p7xl2VRFcBoy2l7KgvvZU589YNs1wsRG62neISVpM-9E-s9CuccSAX8y3ZQfZUq7et9QIdgaSK9g-PhFqKWJhZLFkmTwR0wmYbKXjhxQ6j) to login.
 
-6. ###### Next we download OpenVPN
+6. ##### Next we download OpenVPN
 
 ```bash
 $ sudo apt install openvpn
