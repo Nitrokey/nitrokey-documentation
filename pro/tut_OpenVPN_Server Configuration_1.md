@@ -184,7 +184,7 @@ Navigate to the `~/easy-rsa` directory on your OpenVPN Server as your non-root u
 $ cd EasyRSA-3.0.7/
 $ ./easyrsa gen-req server nopass
 ```
-This will create a private key for the server and a certificate request file called `server.csr`. 
+This will create a private key for the server and a certificate request file called `server.req`. 
 
 Once  you have a signed certificate, you’ll transfer it back to the OpenVPN  server.
 
