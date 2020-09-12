@@ -131,7 +131,7 @@ Before you can create your OpenVPN server’s private key and  certificate, you 
 
 To build a PKI directory on your OpenVPN server, you’ll need to populate a file called vars with some default values. 
 
-##### 1. Create a "vars" file:
+##### 1. Create a "vars" file
 
 ```bash
 $ touch ~/EasyRSA-3.0.7/vars
@@ -139,7 +139,7 @@ $ cd EasyRSA-3.0.7/
 $ sudo vim vars
 ```
 
-##### 2. Once the file is opened, paste in the following two lines:
+##### 2. Once the file is opened, paste in the following two lines
 
 ```bash
 set_var EASYRSA_ALGO "ec"
@@ -323,7 +323,7 @@ To test if the configuration functions properly, we can use this command:
 $ sudo openvpn --server --config server.conf
 ```
 
-#### 7. Start the OpenVPN service on the server:
+#### 7. Start the OpenVPN service on the server
 
 Enable the OpenVPN service by adding it to systemctl, and start it using these commands: 
 
@@ -513,7 +513,7 @@ If you need to test the configuration, with and without the token on the Nitroke
 ```
 
 
-##### 3. Configure the OpenVPN client:
+##### 3. Configure the OpenVPN client
 
 The final configuration file `client.conf` should look like this one:
 ```bash
@@ -561,7 +561,7 @@ pkcs11-cert-private 1 # Prompt for PIN
 
 There are some known issues related to OpenVPN login with OpenSC. Please consult these issues [here](https://github.com/Nitrokey/wiki/wiki/3rd-Party-Issues).
 
-#### 8. Start the OpenVPN client:
+#### 8. Start the OpenVPN client
 
 ##### 1 Start the OpenVPN service on the client
 
