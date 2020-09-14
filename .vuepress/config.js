@@ -80,7 +80,7 @@ module.exports = {
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
-        'PuTTY',
+        'putty',
         'two-factor-authentication-for-erp-software-odoo',
       ],
 
@@ -98,7 +98,7 @@ module.exports = {
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
-        'PuTTY',
+        'putty',
         'two-factor-authentication-for-erp-software-odoo',
       ],
 
@@ -116,7 +116,7 @@ module.exports = {
         'two-factor-authentication-with-otp',
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
-        'PuTTY',
+        'putty',
         'two-factor-authentication-for-erp-software-odoo',
       ],
 
@@ -128,7 +128,7 @@ module.exports = {
         'programming-the-nitrokey',
         'openpgp-key-generation-using-gpa',
         'nitrokey-start-supports-elliptic-curves-ecc',
-        'PuTTY',
+        'putty',
       ],
 
       '/start/mac/': [
@@ -137,7 +137,7 @@ module.exports = {
         'multiple-identities',
         'programming-the-nitrokey',
         'nitrokey-start-supports-elliptic-curves-ecc',
-        'PuTTY',
+        'putty',
       ],
 
       '/start/linux/': [
@@ -148,7 +148,7 @@ module.exports = {
         'programming-the-nitrokey',
         'openpgp-key-generation-using-gpa',
         'nitrokey-start-supports-elliptic-curves-ecc',
-        'PuTTY',
+        'putty',
       ],
 
       // NK Storage menu
@@ -168,7 +168,8 @@ module.exports = {
         'openpgp-key-generation-using-gpa',
         'elliptic-curves-ecc-support',
         'activate-update-mode-manually',
-        'PuTTY',
+        'putty',
+        'two-factor-authentication-for-erp-software-odoo',
       ],
 
       '/storage/mac/': [
@@ -184,7 +185,8 @@ module.exports = {
         'two-factor-authentication-for-google',
         'elliptic-curves-ecc-support',
         'activate-update-mode-manually',
-        'PuTTY',
+        'putty',
+        'two-factor-authentication-for-erp-software-odoo',
       ],
 
       '/storage/linux/': [
@@ -201,20 +203,24 @@ module.exports = {
         'openpgp-key-generation-using-gpa',
         'elliptic-curves-ecc-support',
         'activate-update-mode-manually',
-        'PuTTY',
+        'putty',
+        'two-factor-authentication-for-erp-software-odoo',
       ],
 
       // NK FIDO U2F menu
       '/u2f/windows/': [
         ['', 'Nitrokey FIDO U2F, Windows'],
+        'two-factor-authentication-for-erp-software-odoo',
       ],
 
       '/u2f/mac/': [
         ['', 'Nitrokey FIDO U2F, macOS'],
+        'two-factor-authentication-for-erp-software-odoo',
       ],
 
       '/u2f/linux/': [
         ['', 'Nitrokey FIDO U2F, Linux'],
+        'two-factor-authentication-for-erp-software-odoo',
       ],
 
       // NitroPad X230

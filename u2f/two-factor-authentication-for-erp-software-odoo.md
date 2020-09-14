@@ -10,6 +10,9 @@ This solution was developed together with our partner [initOS](https://www.inito
 
 [Contakt](https://www.nitrokey.com/de/kontakt)
 
-## Video: Zwei-Faktor-Authentifizierung mit dem Nitrokey Pro und Nitrokey Storage in Odoo   
+## Video: Two-Factor-Authentication with the Nitrokey FIDO U2F in Odoo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_C-FNa3IcGU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4dlJF_5MMPY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
+
