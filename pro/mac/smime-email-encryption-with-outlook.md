@@ -1,1 +1,1 @@
-../windows/smime-email-encryption-with-outlook.md
+../smime-email-encryption-with-outlook.md

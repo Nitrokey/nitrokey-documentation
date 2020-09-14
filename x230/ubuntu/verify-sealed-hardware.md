@@ -1,1 +1,1 @@
-../Verify Sealed Hardware.md
+../verify-sealed-hardware.md

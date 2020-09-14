@@ -1,1 +1,1 @@
-../windows/smime-email-encryption-with-thunderbird.md
+../smime-email-encryption-with-thunderbird.md
