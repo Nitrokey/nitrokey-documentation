@@ -37,7 +37,7 @@ $ pkcs15-init --delete-objects privkey,pubkey --id 2 --store-private-key mypriva
 
 The two commands copy the key-certificate pair to the slot 2 (needed  for decrypting emails) and slot 3 (needed for signing). The output looks on both systems something like this:
 
-![img](https://www.nitrokey.com/sites/default/files/pictures/OpenSC-SMIME-output.png)
+![img1](./images/smime-email-encryption/1.png)
 
 Please note that there will be error messages that can be safely ignored (see output example above).
  You now have the key-certificate pair loaded on the Nitrokey.

@@ -43,6 +43,8 @@ module.exports = {
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'creating-certificate-authority',
+        'smime-email-encryption',
+        'openpgp-email-encryption',
       ],
 
       '/hsm/mac/': [
@@ -50,6 +52,9 @@ module.exports = {
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'creating-certificate-authority',
+        'smime-email-encryption',
+        'openpgp-email-encryption',
+        
       ],
 
       '/hsm/linux/': [
@@ -57,13 +62,15 @@ module.exports = {
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
         'creating-certificate-authority',
+        'smime-email-encryption',
+        'openpgp-email-encryption',
       ],
 
       // NK Pro menu
       '/pro/windows/': [
         ['', 'Nitrokey Pro 2, Windows'],
-        'OpenPGP Email Encryption',
-        'SMIME Email Encryption',
+        'smime-email-encryption',
+        'openpgp-email-encryption',
         'two-factor-authentication-microsoft',
         'windows-logon-and-smime-email-encryption-with-active-directory',
         '2fa-nextcloud',
@@ -86,6 +93,8 @@ module.exports = {
 
       '/pro/mac/': [
         ['', 'Nitrokey Pro 2, macOS'],
+        'smime-email-encryption',
+        'openpgp-email-encryption',
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-key-generation-on-device',
@@ -104,6 +113,8 @@ module.exports = {
 
       '/pro/linux/': [
         ['', 'Nitrokey Pro 2, Linux'],
+        'smime-email-encryption',
+        'openpgp-email-encryption',
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-key-generation-on-device',
@@ -123,6 +134,8 @@ module.exports = {
       // NK Start menu
       '/start/windows/': [
         ['', 'Nitrokey Start, Windows'],
+        'smime-email-encryption',
+        'openpgp-email-encryption',
         'openpgp-email-encryption-with-thunderbird',
         'multiple-identities',
         'programming-the-nitrokey',
@@ -133,6 +146,8 @@ module.exports = {
 
       '/start/mac/': [
         ['', 'Nitrokey Start, macOS'],
+        'smime-email-encryption',
+        'openpgp-email-encryption',
         'openpgp-email-encryption-with-thunderbird',
         'multiple-identities',
         'programming-the-nitrokey',
@@ -142,6 +157,8 @@ module.exports = {
 
       '/start/linux/': [
         ['', 'Nitrokey Start, Linux'],
+        'smime-email-encryption',
+        'openpgp-email-encryption',
         'openpgp-email-encryption-with-thunderbird',
         'multiple-identities',
         'firmware-update',
@@ -154,6 +171,8 @@ module.exports = {
       // NK Storage menu
       '/storage/windows/': [
         ['', 'Nitrokey Storage, Windows'],
+        'smime-email-encryption',
+        'openpgp-email-encryption',
         'two-factor-authentication-microsoft',
         'windows-logon-and-smime-email-encryption-with-active-directory',
         '2fa-nextcloud',
@@ -174,6 +193,8 @@ module.exports = {
 
       '/storage/mac/': [
         ['', 'Nitrokey Storage, macOS'],
+        'smime-email-encryption',
+        'openpgp-email-encryption',
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-email-encryption-with-outlook',
@@ -191,6 +212,8 @@ module.exports = {
 
       '/storage/linux/': [
         ['', 'Nitrokey Storage, Linux'],
+        'smime-email-encryption',
+        'openpgp-email-encryption',
         '2fa-nextcloud',
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-email-encryption-with-outlook',
