@@ -1,1 +1,1 @@
-../Operating System Reinstallation.md
+../operating-system-reinstallation.md
