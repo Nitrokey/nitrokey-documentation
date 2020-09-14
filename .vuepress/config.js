@@ -118,6 +118,7 @@ module.exports = {
         'elliptic-curves-ecc-support',
         'PuTTY',
         'two-factor-authentication-for-erp-software-odoo',
+        'openvpn-client-configuration-with-easyrsa-pro-hsm',
       ],
 
       // NK Start menu
