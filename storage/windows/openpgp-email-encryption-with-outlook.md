@@ -1,1 +1,1 @@
-../../pro/openpgp-email-encryption-with-outlook.md
+../../pro/windows/openpgp-email-encryption-with-outlook.md

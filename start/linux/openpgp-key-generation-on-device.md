@@ -1,1 +1,1 @@
-../../pro/openpgp-key-generation-with-backup.md
+../../pro/openpgp-key-generation-on-device.md

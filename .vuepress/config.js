@@ -55,6 +55,7 @@ module.exports = {
         'creating-certificate-authority',
         'smime-email-encryption',
         'smime-email-encryption-with-thunderbird',
+        'smime-email-encryption-with-outlook',
         
       ],
 
@@ -101,6 +102,7 @@ module.exports = {
         'openpgp-key-generation-on-device',
         'openpgp-key-generation-with-backup',
         'smime-email-encryption-with-thunderbird',
+        'smime-email-encryption-with-outlook',
         'login-with-eidauthenticate-on-stand-alone-windows-computers',
         'programming-the-nitrokey',
         'login-to-windows-domain-computers-with-ms-active-directory',
@@ -153,6 +155,7 @@ module.exports = {
         ['', 'Nitrokey Start, macOS'],
         'smime-email-encryption',
         'smime-email-encryption-with-thunderbird',
+        'smime-email-encryption-with-outlook',
         'openpgp-email-encryption',
         'openpgp-email-encryption-with-thunderbird',
         'openpgp-key-generation-on-device',
@@ -210,6 +213,7 @@ module.exports = {
         ['', 'Nitrokey Storage, macOS'],
         'smime-email-encryption',
         'smime-email-encryption-with-thunderbird',
+        'smime-email-encryption-with-outlook',
         'openpgp-email-encryption',
         'openpgp-key-generation-on-device',
         'openpgp-key-generation-with-backup',
