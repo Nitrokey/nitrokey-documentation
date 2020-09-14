@@ -1,0 +1,1 @@
+../../pro/openpgp-key-generation-with-backup.md
