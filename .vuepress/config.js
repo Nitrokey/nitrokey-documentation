@@ -126,6 +126,7 @@ module.exports = {
         'putty',
         'two-factor-authentication-for-erp-software-odoo',
         'openvpn-client-configuration-with-easyrsa-pro-hsm',
+        'hard-disk-encryption',
       ],
 
       // NK Start menu
