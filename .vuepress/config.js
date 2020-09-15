@@ -125,7 +125,7 @@ module.exports = {
         'elliptic-curves-ecc-support',
         'putty',
         'two-factor-authentication-for-erp-software-odoo',
-        'openvpn-client-configuration-with-easyrsa-pro-hsm',
+        'openvpn-client-configuration-with-easyrsa',
         'hard-disk-encryption',
       ],
 
@@ -241,7 +241,7 @@ module.exports = {
         'activate-update-mode-manually',
         'putty',
         'two-factor-authentication-for-erp-software-odoo',
-        'openvpn-client-configuration-with-easyrsa-storage-hsm',
+        'openvpn-client-configuration-with-easyrsa',
         'hard-disk-encryption',
       ],
 
