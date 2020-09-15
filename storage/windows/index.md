@@ -7,7 +7,9 @@
     :::
 2. Download and start the [Nitrokey App](https://www.nitrokey.com/download). Perhaps you want to store it on the unencrypted partition of your Nitrokey Storage. There won't open a window, but an icon appears in the system tray (see screenshot below). Please right-click on this icon to use all the options of the App.
 
+<p align="center">
 ![img](./images/Windows10-Systemtray.png)
+</p>    
 
 3. Open the About window from Nitrokey App's menu and check if you have the [latest firmware](https://github.com/Nitrokey/nitrokey-storage-firmware/releases) installed. If it's not the latest, please [update](https://www.nitrokey.com/en/documentation/firmware-update-storage).
 4. Use the Nitrokey App to change the default User PIN (default: 123456) and Admin PIN (default: 12345678) to your own choices.
