@@ -6,6 +6,7 @@
     Windows Vista, 7, 8 and 10 may fail to install an additional device driver for the smart card. Its safe to ignore this warning.
     :::
 2. Download and start the [Nitrokey App](https://www.nitrokey.com/download). Perhaps you want to store it on the unencrypted partition of your Nitrokey Storage. There won't open a window, but an icon appears in the system tray (see screenshot below). Please right-click on this icon to use all the options of the App.
+
 ![img](./images/Windows10-Systemtray.png)
 
 3. Open the About window from Nitrokey App's menu and check if you have the [latest firmware](https://github.com/Nitrokey/nitrokey-storage-firmware/releases) installed. If it's not the latest, please [update](https://www.nitrokey.com/en/documentation/firmware-update-storage).
