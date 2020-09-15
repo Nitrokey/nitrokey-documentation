@@ -1,4 +1,4 @@
-# Nitrokey FIDO2, Windows
+# Nitrokey Storage, Windows
 
 1. Connect your Nitrokey to your computer and confirm all dialogs so that the USB smart card device driver gets installed almost automatically.
 
