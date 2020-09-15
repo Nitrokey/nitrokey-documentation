@@ -1,4 +1,4 @@
-# Hard disk Encryption
+# Hard Disk Encryption
 
 ## VeraCrypt (formerly TrueCrypt)
 
