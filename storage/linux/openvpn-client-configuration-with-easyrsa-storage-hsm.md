@@ -1,4 +1,4 @@
-# OpenVPN client Configuration
+# OpenVPN Client Configuration
 
 This guide shows how to configure OpenVPN clients to login using a [Nitrokey Storage 2](https://shop.nitrokey.com/de_DE/shop/product/nitrokey-storage-2-56). For key management we will be using [Easy/RSA](https://github.com/OpenVPN/easy-rsa), a utility that has been evolving alongside OpenVPN. 
 
@@ -20,7 +20,7 @@ We can decompose the instructions of the guide as following:
 	
 	Client side 
 	
-		1. Install OpeVnPN and Easy-RSA
+		1. Install OpenVPN and Easy-RSA
 		2. Create a Public Key Infrastructure (PKI) for the OpenVPN client
 		3. Create the client's certificate signing request and the client's key
 		4. Sign and issue the client's certificate
@@ -49,7 +49,7 @@ To download the dependencies on Fedora machines we can this instruction:
 
 For Debian Linux, more recent OpenSC packages are available [here](https://github.com/Nitrokey/opensc-build).
 
-We will use the following nitrokeys for physical key management:
+We will use the following Nitrokeys for physical key management:
 
 - An authentication key using the [Nitrokey storage 2 (pdf)](https://www.nitrokey.com/files/doc/Nitrokey_Storage_factsheet.pdf)
 
@@ -217,7 +217,7 @@ In order to go through these steps, I will extensively rely on [these instructio
 
 On the local machine dedicated to access the HSM, we will use the tools provided by Opensc 0.20 in order to sign the `.req` file, and send it back to the OpenVPN server. We assume we have transferred the file from the server machine to the CA machine. 
 
-First we start by plugging the HSM nitrokey, and enter this instruction for listing the keysF available.
+First we start by plugging the HSM Nitrokey, and enter this instruction for listing the keys available.
 
 1. Query the list of available devices
 
