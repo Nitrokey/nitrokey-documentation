@@ -241,6 +241,8 @@ module.exports = {
         'activate-update-mode-manually',
         'putty',
         'two-factor-authentication-for-erp-software-odoo',
+        'openvpn-client-configuration-with-easyrsa-storage-hsm',
+        'hard-disk-encryption',
       ],
 
       // NK FIDO U2F menu
