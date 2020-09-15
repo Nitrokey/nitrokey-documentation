@@ -1,4 +1,4 @@
-# Hard disk Encryption with Nitrokey Pro 2
+# Hard disk Encryption
 
 ## VeraCrypt (formerly TrueCrypt)
 
