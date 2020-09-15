@@ -21,7 +21,7 @@ Please note that VeraCrypt doesn't make use of the full security which Nitrokey 
 
 Note: [Aloaha Crypt](http://www.aloaha.com/aloaha-crypt-disk/) is based on TrueCrypt/VeraCrypt but without the described security limitation.
 
-## Hard Disk Encryption on Linux with LUKS/dm-crypt and Nitrokey Pro 2 
+## Hard Disk Encryption on Linux with LUKS/dm-crypt 
 
 Here are [excellent instructions](http://blog.kumina.nl/2010/07/two-factor-luks-using-ubuntu/) how to use Nitrokey to encrypt your hard disk under Linux with LUKS/dm-crypt. [Other instructions](https://wiki.ubuntu.com/SmartCardLUKSDiskEncryption).
 
@@ -31,7 +31,7 @@ Purism has created a [simple script](https://docs.puri.sm/PureBoot/LibremKeyLUKS
 
 For Arch Linux, see [initramfs-scencrypt](https://github.com/fuhry/initramfs-scencrypt).
 
-## Storage Encryption on Linux with EncFS and Nitrokey Pro 2 
+## Storage Encryption on Linux with EncFS
 
 ::: tip Prerequisite
 
@@ -83,7 +83,7 @@ $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir
 $ fusermount -u ~/cryptdir
 ```
 
-## Storage Encryption on Linux with ECryptFS and Nitrokey Pro 2
+## Storage Encryption on Linux with ECryptFS
 
 [eCryptfs](https://www.ecryptfs.org/) is a file based transparent encryption file system for Linux which can be used with Nitrokey through a PKCS#11 driver. 
 
