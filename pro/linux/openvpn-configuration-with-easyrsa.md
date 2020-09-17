@@ -191,7 +191,7 @@ Once you have a signed certificate, you’ll transfer it back to the OpenVPN ser
 ##### 2. Copy the key to the OpenVPN server directory
 
 ```bash
-$ sudo cp /home/admin/EasyRSA-3.0.7/pki/private/server.key /etc/openvpn/server/
+$ sudo cp /home/admin/EasyRSA/pki/private/server.key /etc/openvpn/server/
 ```
 
 After completing these steps, you have successfully created a private key for your OpenVPN server. You have also generated a Certificate Signing Request for the OpenVPN server. 
