@@ -1,4 +1,4 @@
-# OpenVPN Client Configuration
+# OpenVPN Configuration with Easy-RSA
 
 This guide shows how to configure OpenVPN clients to login using a [Nitrokey Pro 2](https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3). For key management we will be using [Easy-RSA](https://github.com/OpenVPN/easy-rsa), a utility that has been evolving alongside OpenVPN. 
 
