@@ -44,7 +44,7 @@ To interact with the devices we will require [OpenSC 0.20](https://github.com/Op
 To download the dependencies on Fedora machines we can this instruction:
 
 ```bash
-`su -c 'dnf install readline-devel openssl-devel libxslt docbook-style-xsl pcsc-lite-devel automake autoconf libtool gcc zlib-devel'
+su -c 'dnf install readline-devel openssl-devel libxslt docbook-style-xsl pcsc-lite-devel automake autoconf libtool gcc zlib-devel'
 ```
 
 For Debian Linux, more recent OpenSC packages are available [here](https://github.com/Nitrokey/opensc-build).
