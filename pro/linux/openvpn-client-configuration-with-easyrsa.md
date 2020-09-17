@@ -162,7 +162,7 @@ After you’ve initialized your PKI on the OpenVPN server, you are ready to move
 
 #### 4. Create `server.req` and `server.key`
 
-Now that your OpenVPN server has all the prerequisites installed, the next step is to generate a key pair composed of a private key (to keep secret), and a Certificate Signing Request https://support.nitrokey.com/t/nitrokey-pro-openvpn-application-openssl-cnf-extensions-usr-client/2240/2(`.csr`) on your OpenVPN server. 
+Now that your OpenVPN server has all the prerequisites installed, the next step is to generate a key pair composed of a private key (to keep secret), and a Certificate Signing Request (`.csr`) on your OpenVPN server. 
 
 In general terms, on systems where we generate a key and request, these files are left unencrypted by using the `nopass` argument, since servers usually need to start up without any password input. This generates an *unencrypted key*, so mind *protect its access and file permissions* carefully.
 
