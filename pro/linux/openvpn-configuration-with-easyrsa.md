@@ -1,6 +1,6 @@
 # OpenVPN Configuration with Easy-RSA
 
-This guide shows how to configure OpenVPN clients to login using a [Nitrokey Pro 2](https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3) or a [Nitrokey Storage 2](https://shop.nitrokey.com/de_DE/shop/product/nitrokey-storage-2-56).For software key management we will be using [Easy-RSA](https://github.com/OpenVPN/easy-rsa), a utility that has been evolving alongside OpenVPN.  
+This guide shows how to configure OpenVPN clients to login using a [Nitrokey Pro 2](https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3) or a [Nitrokey Storage 2](https://shop.nitrokey.com/de_DE/shop/product/nitrokey-storage-2-56). For software key management we will be using [Easy-RSA](https://github.com/OpenVPN/easy-rsa), a utility that has been evolving alongside OpenVPN.  
 
 To sign the certificates, we will use a [Nitrokey HSM 2](https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3) set up as [Certificate Authority](https://docs.nitrokey.com/hsm/linux/creating-certificate-authority.html#creating-the-intermediate-certificate-authority), however this guide does not cover the set up of the CA itself (it is clear and [well documented here](https://docs.nitrokey.com/hsm/linux/creating-certificate-authority.html#sign-a-server-certificate)).
 
@@ -124,7 +124,7 @@ wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-
 ```bash
 $ cd ~
 $ tar xvf EasyRSA-3.0.7.tgz
-$ mv EasyRSA-3.0.7/ Easy-RSA/ # rename folder
+$ mv EasyRSA-3.0.7/ easyrsa/ # rename folder
 ```
 #### 3. Create a PKI for OpenVPN server
 
@@ -135,8 +135,8 @@ To build a PKI directory on your OpenVPN server, you’ll need to populate a fil
 ##### 1. Create a `vars` file
 
 ```bash
-$ touch ~/Easy-RSA/vars
-$ cd Easy-RSA/
+$ touch ~/easyrsa/vars
+$ cd easyrsa/
 $ editor vars
 ```
 
@@ -144,7 +144,7 @@ $ editor vars
 
 ```bash
 set_var EASYRSA_ALGO "ec"
-set_var EASYRSA_DIGEST "sha512
+set_var EASYRSA_DIGEST "sha512"
 ```
 
 These are the only two lines that you need in this `vars` file on your OpenVPN server since it will not be used as a Certificate Authority. They will ensure that your private keys and certificate requests are configured to use Elliptic Curve Cryptography (ECC) to generate keys, and secure signatures for your clients and OpenVPN server. 
@@ -178,10 +178,10 @@ In general terms, on systems where we generate a key and request, these files ar
 
 ##### 1. Create the signing request for the server
 
-Navigate to the `~/Easy-RSA` directory on your OpenVPN Server as your non-root user, and enter the following commands:
+Navigate to the `~/easyrsa` directory on your OpenVPN Server as your non-root user, and enter the following commands:
 
 ```bash
-$ cd Easy-RSA/
+$ cd easyrsa/
 $ ./easyrsa gen-req server nopass
 ```
 This will create a private key for the server and a certificate request file called `server.req`. 
@@ -274,7 +274,7 @@ A connection that uses TLS requires multiple [certificates and keys for authenti
 
 	OpenVPN server 
 	
-		- The root certificate file (`CA.crt` or `chain.crt` in our setup)
+		- The root certificate file (CA.crt or chain.crt in our setup)
 		- Server certificate
 		- Server key
 		- Diffie Hellman Parameters (optional)
@@ -356,7 +356,7 @@ The OpenVPN should be running at this point.
 #### 1. Install OpenVPN and Easy-RSA
 ##### 1. Install the software 
 
-We can use directly `dnf install`to install OpenVPN 2.4.9 and Easy-RSA 3.0.7
+We can use directly `dnf install` to install OpenVPN 2.4.9 and Easy-RSA 3.0.7
 
 ```bash
 $ sudo dnf install openvpn easy-rsa
@@ -365,12 +365,12 @@ $ sudo dnf install openvpn easy-rsa
 ##### 2. Then we create as non-root a directory for Easy RSA called `Easy-RSA` 
 
 ```bash
-$ mkdir ~/Easy-RSA
+$ mkdir ~/easyrsa
 ```
 ##### 3. And link it to the Easy RSA package we just installed
 
 ```bash
-$ ln -s /usr/share/easy-rsa/3/* ~/Easy-RSA/
+$ ln -s /usr/share/easy-rsa/3/* ~/easyrsa/
 ```
 
 ##### 2. Create a PKI for the OpenVPN client
