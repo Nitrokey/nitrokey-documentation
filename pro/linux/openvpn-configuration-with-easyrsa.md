@@ -403,7 +403,7 @@ $ pkcs15-init --store-certificate client.crt --id 3
 You can see if the key is effectively stored on the Nitrokey using this command:
 
 ```bash
-$ pkcs15-tool --c
+$ pkcs15-tool -c
 
 ```
 Or alternatively
