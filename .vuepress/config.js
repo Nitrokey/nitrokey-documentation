@@ -68,6 +68,7 @@ module.exports = {
       // NK Pro menu
       '/pro/windows/': [
         ['', 'Nitrokey Pro 2, Windows'],
+        'change-user-and-admin-pin',
         'smime-email-encryption',
         'openpgp-email-encryption',
         'two-factor-authentication-microsoft',
@@ -91,6 +92,7 @@ module.exports = {
 
       '/pro/mac/': [
         ['', 'Nitrokey Pro 2, macOS'],
+        'change-user-and-admin-pin',
         'smime-email-encryption',
         'openpgp-email-encryption',
         '2fa-nextcloud',
@@ -110,6 +112,7 @@ module.exports = {
 
       '/pro/linux/': [
         ['', 'Nitrokey Pro 2, Linux'],
+        'change-user-and-admin-pin',
         'smime-email-encryption',
         'openpgp-email-encryption',
         '2fa-nextcloud',
@@ -176,6 +179,7 @@ module.exports = {
       // NK Storage menu
       '/storage/windows/': [
         ['', 'Nitrokey Storage, Windows'],
+        'change-user-and-admin-pin',
         'smime-email-encryption',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
@@ -201,6 +205,7 @@ module.exports = {
 
       '/storage/mac/': [
         ['', 'Nitrokey Storage, macOS'],
+        'change-user-and-admin-pin',
         'smime-email-encryption',
         'smime-email-encryption-with-thunderbird',
         'smime-email-encryption-with-outlook',
@@ -222,6 +227,7 @@ module.exports = {
 
       '/storage/linux/': [
         ['', 'Nitrokey Storage, Linux'],
+        'change-user-and-admin-pin',
         'smime-email-encryption',
         'smime-email-encryption-with-thunderbird',
         'openpgp-email-encryption',
@@ -265,7 +271,6 @@ module.exports = {
         'factory-reset',
         'firmware-update',
         'default-boot',
-        'change-user-and-admin-pin',
         'system-update',
       ],
 
@@ -276,7 +281,6 @@ module.exports = {
         'factory-reset',
         'firmware-update',
         'default-boot',
-        'change-user-and-admin-pin',
         'change-disk-encryption-passphrase',
         'system-update',
       ],
