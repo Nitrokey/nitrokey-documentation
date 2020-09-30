@@ -33,7 +33,7 @@ Google only accepts the Chrome browser for registering the Nitrokey FIDO2 Loggin
 :::
 
 
-### Touch Button and LED Behavior
+## Touch Button and LED Behavior
 
 For convenience, the first FIDO operation is automatically accepted within two seconds after connecting Nitrokey FIDO2. In this case touching the touch button is not required.
 
