@@ -35,5 +35,7 @@ Google only accepts the Chrome browser for registering the Nitrokey FIDO2 Loggin
 
 ## Troubleshooting
 
-- If the Nitrokey is not accepted immediately, you may need to copy this file [41-nitrokey.rules](https://www.nitrokey.com/sites/default/files/41-nitrokey.rules) to ``` etc/udev/rules.d/```. In very rare cases, the system will need the [older version](https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules) of this file.
-- After copying the file, restart udev via ``` sudo service udev restart```.
+If the Nitrokey is not detected, proceed the following:
+
+1. Copy this file [41-nitrokey.rules](https://www.nitrokey.com/sites/default/files/41-nitrokey.rules) to ```/etc/udev/rules.d/```. In very rare cases, the system will need the [older version](https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules) of this file.
+2. Restart udev via ```sudo service udev restart```.
