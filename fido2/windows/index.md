@@ -35,13 +35,11 @@ Google only accepts the Chrome browser for registering the Nitrokey FIDO2 Loggin
 
 ## Touch Button and LED Behavior
 
-For convenience, the first FIDO operation is automatically accepted within two seconds after connecting Nitrokey FIDO2. In this case touching the touch button is not required.
+The first FIDO operation is automatically accepted within two seconds after connecting Nitrokey FIDO2. In this case touching the touch button is not required.
 
-To avoid accidental and malicious reset of the Nitrokey, the required touch confirmation time for the FIDO2 reset operation is longer and with a distinct LED behavior (red LED light) than normal operations.
+Multiple operations can be accepted by a single touch. For this, keep the touch button touched for up to 10 seconds.
 
-For convenience, multiple operations can be accepted with a single touch. For this, keep the touch button touched for up to 10 seconds.
-
-
+To avoid accidental and malicious reset of the Nitrokey, the required touch confirmation time for the FIDO2 reset operation is longer and with a distinct LED behavior (red LED light) than normal operations. To reset the Nitrokey FIDO2, confirm by touching the touch button for at least 5 seconds until the green or blue LED lights up.
 
 | LED Color                    | Event                                                                   | Time Period                                                               | Comments                                                                                                                                                                                                                                          |
 |------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -93,7 +91,7 @@ The first operation should be automatically accepted upon insertion, and user sh
 5. UI reports failure
 
 
-#### VM notes
+### VM notes
 In case where the Nitrokey is attached through a Virtual Machine instance to Windows 10 OS, the powering up and enumeration times might be different, which could result in the very first FIDO operation not being accepted automatically. In such case it has to be confirmed by hand.
 
 Similarly, the reset operation could fail, if the OS will send the reset operation request after passing the first 10 seconds of Nitrokey being powered up.
