@@ -55,43 +55,23 @@ To avoid accidental and malicious reset of the Nitrokey, the required touch conf
 | - \(no LED signal\)            | Auto\-accept single FIDO registration or authentication operation                              | Within first 2 seconds after powering up                                        | Nitrokey is automatically accepting any single FIDO registration or authentication operation upon insertion event \- the latter is treated as an equivalent of the touch button registration signal \(user presence\); the configuration/reset operations are not accepted |
 | All colors                   | Nitrokey is in Firmware Update mode                                       | Active until firmware update operation is successful, or until reinsertion | If the firmware update fails, the Nitrokey will stay in the this mode until the firmware is written correctly                                                                                           |
 
+## Nitrokey Reset
+To avoid accidental and malicious reset of the Nitrokey, the required touch confirmation time for the FIDO2 reset operation is longer and with a distinct LED behavior (red LED light) than normal operations. To reset the Nitrokey FIDO2, confirm by touching the touch button for at least 5 seconds until the green or blue LED lights up.
 
-## Nitrokey FIDO2 Reset with Windows 10
-To avoid accidental and malicious reset of the Nitrokey, the required touch confirmation time for the FIDO2 reset operation is longer and with a distinct LED behavior (red LED light) than normal operations.
+### Windows 10
+Make sure you use Windows 10 at least at version 2004. Please follow the reset wizard.
 
-If the total taken time for execution will be more than 10 seconds, the Windows OS' user interface will report failure. Reset operation is executed on the Nitrokey even after the latter is reported, as long as the user's touch will be registered before the Nitrokey's internal operation timeout (touch confirmation is shown with the blue color).
+If the total taken time for execution will be more than 10 seconds, the Windows OS' user interface will report failure. Reset operation is executed on the Nitrokey even after the latter is reported failing, as long as the user's touch will be registered before the Nitrokey's internal operation timeout (touch confirmation is shown with the blue color).
 
-<details>
-<summary>Technical details</summary>
+### Windows 10 (Older Versions)
+For Windows 10 1909 please:
+ 1. Reinsert the Nitrokey right before executing reset operation
+ 2. Execute reset operation in the user interface
+ 2. Confirm operation with white light (at least 1 second press, until turns green)
+ 3. Release the touch
+ 4. Confirm operation with red light (at least 5 seconds press, until turns blue)
 
-The FIDO2 reset operation under Windows consist of two operations:
-1. single FIDO2 operation
-2. actual FIDO2 reset operation
+### Windows 10 on a Virtual Machine
+Please keep in mind Nitrokey has internal timeout for accepting the FIDO reset operation of 10 seconds since powering up.
+If the Nitrokey will connect to Virtual Machine later than that, device will return error and the operation will be aborted.
 
-The first operation should be automatically accepted upon insertion, and user should be required to only confirm the second operation. See "VM notes" below for additional information.
-</details>
-
-### Example scenarios
-#### Successful
-1. User activates FIDO2 reset in the Windows 10 user interface
-1. User is asked to remove and insert the Nitrokey once again
-2. User is asked to touch the Nitrokey
-5. Nitrokey starts blinking red
-6. User is asked to single touch the Nitrokey
-7. User touches the Nitrokey for 5 seconds
-8. Nitrokey flashes blue LED, user releases the touch
-9. UI reports success
-
-#### Timeout failure
-1. User activates FIDO2 reset in the Windows 10 user interface
-1. User is asked to remove and insert the Nitrokey once again
-2. User is asked to touch the Nitrokey
-3. Nitrokey starts blinking red
-4. User is not confirming the operation within 10 seconds
-5. UI reports failure
-
-
-### VM notes
-In case where the Nitrokey is attached through a Virtual Machine instance to Windows 10 OS, the powering up and enumeration times might be different, which could result in the very first FIDO operation not being accepted automatically. In such case it has to be confirmed by hand.
-
-Similarly, the reset operation could fail, if the OS will send the reset operation request after passing the first 10 seconds of Nitrokey being powered up.
