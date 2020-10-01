@@ -64,7 +64,9 @@ Make sure you use Windows 10 at least at version 2004. Please follow the reset w
 If the total taken time for execution will be more than 10 seconds, the Windows OS' user interface will report failure. Reset operation is executed on the Nitrokey even after the latter is reported failing, as long as the user's touch will be registered before the Nitrokey's internal operation timeout (touch confirmation is shown with the blue color).
 
 ### Windows 10 (Older Versions)
-For Windows 10 1909 please:
+In Windows 10 1909 the device has to be reinserted before the reset operation is executed. Additional white colored operation needs to be confirmed (until green light is shown, then touch has to be released).
+
+Detailed scenario:
  1. Reinsert the Nitrokey right before executing reset operation
  2. Execute reset operation in the user interface
  2. Confirm operation with white light (at least 1 second press, until turns green)
