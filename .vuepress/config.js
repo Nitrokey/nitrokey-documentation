@@ -128,6 +128,8 @@ module.exports = {
         'elliptic-curves-ecc-support',
         'putty',
         'two-factor-authentication-for-erp-software-odoo',
+        'openvpn-configuration-with-easyrsa',
+        'hard-disk-encryption',
       ],
 
       // NK Start menu
@@ -245,6 +247,8 @@ module.exports = {
         'activate-update-mode-manually',
         'putty',
         'two-factor-authentication-for-erp-software-odoo',
+        'openvpn-configuration-with-easyrsa',
+        'hard-disk-encryption',
       ],
 
       // NK FIDO U2F menu
