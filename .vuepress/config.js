@@ -130,6 +130,7 @@ module.exports = {
         'two-factor-authentication-for-erp-software-odoo',
         'openvpn-configuration-with-easyrsa',
         'hard-disk-encryption',
+	'full-disk-encryption-with-cryptsetup-luks.md',      
       ],
 
       // NK Start menu
@@ -203,6 +204,7 @@ module.exports = {
         'activate-update-mode-manually',
         'putty',
         'two-factor-authentication-for-erp-software-odoo',
+        'full-disk-encryption-with-cryptsetup-luks.md',       
       ],
 
       '/storage/mac/': [
