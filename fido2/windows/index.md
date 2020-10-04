@@ -31,3 +31,47 @@ Checkout the [various use cases and supported applications](https://www.nitrokey
 ::: tip NOTE
 Google only accepts the Chrome browser for registering the Nitrokey FIDO2 Logging in works fine with Firefox though.
 :::
+
+
+## Touch Button and LED Behavior
+
+The first FIDO operation is automatically accepted within two seconds after connecting Nitrokey FIDO2. In this case touching the touch button is not required.
+
+Multiple operations can be accepted by a single touch. For this, keep the touch button touched for up to 10 seconds.
+
+To avoid accidental and malicious reset of the Nitrokey, the required touch confirmation time for the FIDO2 reset operation is longer and with a distinct LED behavior (red LED light) than normal operations. To reset the Nitrokey FIDO2, confirm by touching the touch button for at least 5 seconds until the green or blue LED lights up.
+
+| LED Color                    | Event                                                                   | Time Period                                                               | Comments                                                                                                                                                                                                                                          |
+|------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Any \(blinking\)             | Awaiting for touch                                                      | Until touch is confirmed or timed out                                     |                                                                                                                                                                                                                                                   |
+| Any \(blinking faster\)      | Touch detected, counting seconds                                        | Until touch is confirmed or timed out                                     |                                                                                                                                                                                                                                                   |
+| White \(blinks\)              | Touch request for FIDO registration or authentication operation      |                                                                           | Requires 1 second touch to complete; timeout is usually about 30 seconds                                                                                                                                                                                                               |
+|  Yellow \(blinks\)            | Touch request for configuration operation                             |                                                                           | Requires 5 seconds touch to complete; e.g. used for activating firmware update mode                                                                                                                                                                                                              |
+| Red \(blinks\)                | Touch request for reset operation                                     | Available only during the very first 10 seconds after Nitrokey is powered | Requires 5 seconds touch to complete; e.g. used for FIDO2 reset operation                                                                                                                                                                                                              |
+| Green \(constant\)           | Touch accepted, Nitrokey is active and accepting further FIDO2 operations | After touch was registered, 10 seconds timeout                            | For the FIDO registration or authentication operations after a confirmation Nitrokey enters into "activation" mode, auto\-accepting any following mentioned operations until touch button is released, but not longer than 10 seconds                               |
+| Blue \(constant\)            | Touch consumed \- accepted and used up by the operation                 | Until touch is released                                                   | Touch consumption here means, that without releasing the touch button, and touching again the Nitrokey will not confirm any new operations                                                                                                          |
+| White <br/> \(single blink\) | Nitrokey ready to work                                                    | 0\.5 seconds after powering up                                            |                                                                                                                                                                                                                                                   |
+| - \(no LED signal\)            | Nitrokey is idle                              |  |  |
+| - \(no LED signal\)            | Auto\-accept single FIDO registration or authentication operation                              | Within first 2 seconds after powering up                                        | Nitrokey is automatically accepting any single FIDO registration or authentication operation upon insertion event \- the latter is treated as an equivalent of the touch button registration signal \(user presence\); the configuration/reset operations are not accepted |
+| All colors                   | Nitrokey is in Firmware Update mode                                       | Active until firmware update operation is successful, or until reinsertion | If the firmware update fails, the Nitrokey will stay in the this mode until the firmware is written correctly                                                                                           |
+
+## Nitrokey Reset
+To avoid accidental and malicious reset of the Nitrokey, the required touch confirmation time for the FIDO2 reset operation is longer and with a distinct LED behavior (red LED light) than normal operations. To reset the Nitrokey FIDO2, confirm by touching the touch button for at least 5 seconds until the green or blue LED lights up.
+
+### Windows 10
+Make sure you use Windows 10 at least version 2004. Please follow Windows' reset wizard.
+
+If the total taken time for execution will be more than 10 seconds, the Windows OS' user interface will report failure. Reset operation is executed on the Nitrokey even after the latter is reported failing, as long as the user's touch will be registered before the Nitrokey's internal operation timeout (touch confirmation is shown with the blue color).
+
+### Older Versions of Windows 10
+In Windows 10 version 1909 or older the Nitrokey has to be reinserted right before the reset operation is executed. The reset operation has to be confirmed by touching the touch button twice.
+
+Detailed scenario:
+ 1. Reinsert the Nitrokey right before executing reset operation
+ 2. Start the reset operation in the user interface
+ 2. When the LED blinks white, touch the touch button for 1 second until it turns green.
+ 3. Release the touch
+ 4. When the LED blinks red, touch the touch button for 5 seconds until it turns blue.
+
+### Windows 10 on a Virtual Machine
+Please keep in mind Nitrokey has internal timeout for accepting the FIDO reset operation of 10 seconds since powering up. If the Nitrokey will connect to a virtual machine later than that, it will return error and the operation will be aborted.

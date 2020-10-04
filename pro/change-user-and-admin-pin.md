@@ -1,4 +1,4 @@
-# Change User and Amin PIN
+# Change User and Admin PIN
 
 ## User PIN
 
