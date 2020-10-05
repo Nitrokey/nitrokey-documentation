@@ -58,15 +58,9 @@ If you already have uploaded a public key to a keyserver (or have it stored some
 
 Optional: To generate another OpenPGP keypair on-device, you can refer to the documentation mentioned above and [here](https://www.nitrokey.com/documentation/openpgp-create-on-device), as we will not cover these instructions in this guide.
 
-4. Add the public key to your list of trusted keys
-
-```bash
-
-$ gpg --import pubkey.asc
-
 ```
 
-5. Execute the script with the pubkey.asc argument
+4. Execute the script with the pubkey.asc argument
 
 ```bash
 
@@ -85,7 +79,7 @@ Once you unlock the Nitrokey, you will be prompted for your OLD passphrase
 
 Notice: This is a fall-back alternative in case you lose your Nitrokey, or if it's unavailable. So far, it was not tested, and users must be aware of these risk of getting locked out of their computer, if the fall-back method does not work.
 
-Once you enter the passphrase, the script finishes the setup
+Once you enter the passphrase, the script finishes the setup. It took less than a minute of computation on the test setup before it is done, so be aware of not interrupting the script, or you might get locked out of your computer after reboot.  
 
 ![](./images/luks_3.png)
 
