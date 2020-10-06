@@ -204,7 +204,7 @@ module.exports = {
         'activate-update-mode-manually',
         'putty',
         'two-factor-authentication-for-erp-software-odoo',
-        'full-disk-encryption-with-cryptsetup-luks.md',       
+        'full-disk-encryption-with-cryptsetup-luks',       
       ],
 
       '/storage/mac/': [
