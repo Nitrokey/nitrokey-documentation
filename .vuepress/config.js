@@ -250,7 +250,6 @@ module.exports = {
         'two-factor-authentication-for-erp-software-odoo',
         'openvpn-configuration-with-easyrsa',
         'hard-disk-encryption',
-	'full-disk-encryption-with-cryptsetup-luks',
       ],
 
       // NK FIDO U2F menu
