@@ -1,1 +1,1 @@
-nitrokey-documentation/pro/linux/full-disk-encryption-with-cryptsetup-luks.md
+../../pro/linux/full-disk-encryption-with-cryptsetup-luks.md
