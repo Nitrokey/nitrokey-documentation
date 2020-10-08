@@ -88,6 +88,7 @@ module.exports = {
         'elliptic-curves-ecc-support',
         'putty',
         'two-factor-authentication-for-erp-software-odoo',
+        'viscosity-configuration-with-openvpn',
       ],
 
       '/pro/mac/': [
