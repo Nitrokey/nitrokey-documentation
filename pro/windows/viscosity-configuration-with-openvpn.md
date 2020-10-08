@@ -1,4 +1,4 @@
-# OpenVPN Configuration With Viscosity Client
+# Viscosity Client Configuration with OpenVPN
 
 This guide will show to configure Viscosity client to connect to an OpenVPN instance, using a [Nitrokey Pro 2](https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3) (or [Nitrokey Storage 2](https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56)), and [PKCS#11 authentication](https://openvpn.net/community-resources/how-to/#what-is-pkcs11).
 
@@ -18,16 +18,16 @@ To know how to configure OpenVPN to authenticate with Nitrokey Pro, you might co
 
 1. Start Viscosity and create a new connection "openVPN" (you can name as you wish)
 
-![](./images/viscosity-1.jpg)
+![](./images/viscosity/viscosity-1.jpg)
 
 2. Right click on the connection and click edit
 
-![](./images/viscosity-2.jpg)
+![](./images/viscosity/viscosity-2.jpg)
 
 3. Add your server's IP address and configure the port according to your configuration.
 4. Under authentication, In Type scroll down to `SSL/TLS Client (PKCS11)`
 
-![](./images/viscosity-3.jpg)
+![](./images/viscosity/viscosity-3.jpg)
 
 5 .  Locate your ca.crt file.
 
@@ -39,7 +39,7 @@ On Windows, the most common location for libraries is either in `C:\Program File
 
 7. Click the Save button and connect from your the main interface
 
-![](./images/viscosity-4.jpg)
+![](./images/viscosity/viscosity-4.jpg)
 
 If `"Prompt for certificate name"` was selected, Viscosity will automatically detect any connected tokens/smartcards using the specified PKCS#11 module/s. The user will then be prompted to select from any of the found devices, or enter the name to use manually. Again, the user should be prompted for a password/PIN if required.
 
