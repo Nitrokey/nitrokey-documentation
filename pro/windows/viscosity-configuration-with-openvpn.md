@@ -29,9 +29,9 @@ To know how to configure OpenVPN to authenticate with Nitrokey Pro, you might co
 
 ![](./images/viscosity/viscosity-3.jpg)
 
-5 .  Locate your ca.crt file.
+5.  Locate your ca.crt file.
 
-6. Click the Add button next to the Providers field and select the PKCS#11 module for your token/smartcard. Multiple providers can be specified. 
+6.  Click the Add button next to the Providers field and select the PKCS#11 module for your token/smartcard. Multiple providers can be specified. 
 
 On macOS, the most common location for modules to be found is in the /usr/lib directory. Please refer to the documentation included with your driver software for the location to use. OpenSC's module can be found at `/Library/OpenSC/lib/opensc-pkcs11.so`
 
