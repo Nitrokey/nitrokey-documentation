@@ -22,9 +22,9 @@ See the section below to detremine which method is compatible with this guide.
 
 ## Known Issues
 
-The script seems to work only with manually-partitioned volumes, that are composed of an unencrypted /boot partition, and an encrypted root / volume.
+So far, the script works only with manually-partitioned volumes, that are composed of an unencrypted `/boot` partition, and an encrypted root `/` partition.
 
-There are some errors that are recurrent when the partitioning is done automatically using the installation interface on Ubuntu and Debian.
+Please do not select the automatic full-disk encryption provided by the operating system you are using for this guide. You will face recurrent errors when the partitioning is done automatically, using the installation interface on Ubuntu and Debian. 
 
 ## Instructions
 
@@ -44,7 +44,7 @@ The pre-packaged version will install OpenSC version 0.19.0-1. If you wish to in
 $ mkdir smartcard-luks && cd smartcard-luks
 
 ```
-You might use sudo if required.
+You might use `sudo` if required.
 
 3. Download the smartcard-luks-script
 
@@ -56,7 +56,7 @@ You might use sudo if required.
 
 If you already have uploaded a public key to a keyserver (or have it stored somewhere else), you should retrieve it in the way you are most comfortable with, and proceed to step 5.
 
-Optional: To generate another OpenPGP keypair on-device, you can refer to the documentation mentioned above and [here](./openpgp-key-generation-on-device.html), as we will not cover these instructions in this guide.
+Optional: To generate another OpenPGP keypair on-device (Nitrokey), you can refer to the documentation mentioned above and [here](./openpgp-key-generation-on-device.html), as we will not cover these instructions in this guide.
 
 To export your public key use the following command.
 
@@ -74,7 +74,7 @@ $ gpg2 --armor --export KeyID > pubkey.asc
 $ sudo ./smartcard-luks-script pubkey.asc
 
 ```
-Once, you run the script with the GPG public key, it automatically sets up a new LUKS secret, encrypts it against that public key, and sets up crypttab, LUKS, initramfs, and GRUB.
+Once, you run the script with the GPG public key as argument, it automatically sets up a new LUKS secret, encrypts it against that public key, and sets up crypttab, LUKS, initramfs, and GRUB.
 
 First you will be prompted for the `User PIN`
 
