@@ -14,9 +14,11 @@ The following guide can potentially lock you out of your computer. You should be
 
 ## Requirements
 
-- An Ubuntu (or Debian) computer with at least one LUKS-encrypted volume. See the section below to detremine whioch method is compatible with this guide.
+- An Ubuntu (or Debian) computer with at least one LUKS-encrypted volume. 
 
-- A Nitrokey Pro (or Nitrokey Storage) [initialized](https://www.nitrokey.com/documentation/openpgp-email-encryption) with keys. 
+See the section below to detremine which method is compatible with this guide.
+
+- A Nitrokey Pro 2 (or Nitrokey Storage) [initialized](https://www.nitrokey.com/documentation/openpgp-email-encryption) with keys. 
 
 ## Known Issues
 
