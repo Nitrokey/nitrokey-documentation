@@ -31,11 +31,11 @@ For more informeation on this topic please consult OpenVPN's [documentation.](ht
 
 4. Under authentication, In Type scroll down to `SSL/TLS Client (PKCS11)`
 
-![](./images/viscosity/viscosity-3.jpg)
-
 5.  Select the CA file for your connection  
 
 Optional: Select the `ta.key` in the `TLS-Auth` section
+
+![](./images/viscosity/viscosity-3.jpg)
 
 6.  Click the Add button next to the Providers field and select the PKCS#11 module for your Nitrokey. Multiple providers can be specified. 
 
