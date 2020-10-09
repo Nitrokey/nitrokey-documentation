@@ -4,15 +4,18 @@ This guide will show to configure Viscosity client to connect to an OpenVPN inst
 
 ## Prerequisites
 
-For this guide, you will need an OpenVPN remote server installed and configured for clients. For the purpose of this document we have used OpenVPN 2.49 installed on a Debian 10 server, hosted by AWS. 
+For this guide, you will need an OpenVPN remote server installed and configured for clients. For the purpose of this document, we have used OpenVPN 2.49 installed on a Debian 10 server, hosted by AWS. 
 
-You will also need the following files:
+To read about how to configure OpenVPN to authenticate with Nitrokey Pro, you might consult the following [documentation](https://docs.nitrokey.com/storage/linux/openvpn-configuration-with-easyrsa.html), as we will just cover the way to configure the [Viscosity client](https://www.sparklabs.com/viscosity/) in this guide. 
 
-- Client's certificate or `client.crt`
-- Share secret key or `ta.key` 
-- Nitrokey Pro 2 (or Storage 2) loaded with the required files, according to [the documentation](https://openvpn.net/community-resources/how-to/)
+You will also need the following:
 
-To know how to configure OpenVPN to authenticate with Nitrokey Pro, you might consult the following [documentation](https://docs.nitrokey.com/storage/linux/openvpn-configuration-with-easyrsa.html), as we will just cover the way to configure the [Viscosity client](https://www.sparklabs.com/viscosity/) in this guide. 
+- A Nitrokey Pro 2 (or Storage 2)
+- Client's private key `client.key` loaded on the Nitrokey
+- The Certificate Authority file, i.e. `CA.crt` file used for your OpenVPN setup
+- Shared secret key file, i.e. `ta.key` 
+
+For more informeation on this topic please consult OpenVPN's [documentation.](https://openvpn.net/community-resources/how-to/)
 
 ## Usage
 
@@ -25,11 +28,14 @@ To know how to configure OpenVPN to authenticate with Nitrokey Pro, you might co
 ![](./images/viscosity/viscosity-2.jpg)
 
 3. Add your server's IP address and configure the port according to your configuration.
+
 4. Under authentication, In Type scroll down to `SSL/TLS Client (PKCS11)`
 
 ![](./images/viscosity/viscosity-3.jpg)
 
-5.  Locate your ca.crt file.
+5.  Select the CA file for your connection  
+
+Optional: Select the `ta.key` in the `TLS-Auth` section
 
 6.  Click the Add button next to the Providers field and select the PKCS#11 module for your Nitrokey. Multiple providers can be specified. 
 
@@ -37,11 +43,17 @@ On macOS, the most common location for modules to be found is in the /usr/lib di
 
 On Windows, the most common location for libraries is either in `C:\Program Files` or `C:\Windows\System32`. OpenSC libraries are generally located at `C:\Program Files\OpenSC Project\OpenSC\pkcs11`. There may be more than one library available here, you can try each one or simply add both.
 
-7. Click the Save button and connect from your the main interface
+7.  Choose a retrieval method from the Retrieval drop down menu
 
 ![](./images/viscosity/viscosity-4.jpg)
 
+  a. If only one Nitrokey will ever be used on this computer, select `Use certificate name below`. If the Nitrokey is currently connected to the computer, click the Detect button for Viscosity to automatically fill in the Name field. Otherwise this field can be completed manually.
+
+  b. If in doubt, or if more than one Nitrokey may be used (i.e. multiple users), then select `Prompt for certificate name`. Viscosity will automatically detect any connected tokens/smartcards and prompt the user to select one when connecting.
+
 If `"Prompt for certificate name"` was selected, Viscosity will automatically detect the required certificate on the Nitrokey, using the specified PKCS#11 module/s. Select from any of the found devices, or enter the name of the `serialized id` to use manually. Again, the user should be prompted for a password/PIN if required.
+
+8. Click the Save button and connect from your the main interface
 
 ## References
 
