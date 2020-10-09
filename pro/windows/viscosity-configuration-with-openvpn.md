@@ -49,9 +49,9 @@ On Windows, the most common location for libraries is either in `C:\Program File
 
   a. If only one Nitrokey will ever be used on this computer, select `Use certificate name below`. If the Nitrokey is currently connected to the computer, click the Detect button for Viscosity to automatically fill in the Name field. Otherwise this field can be completed manually.
 
-  b. If in doubt, or if more than one Nitrokey may be used (i.e. multiple users), then select `Prompt for certificate name`. Viscosity will automatically detect any connected tokens/smartcards and prompt the user to select one when connecting.
+  b. If in doubt, or if more than one Nitrokey may be used (i.e. multiple users), then select `Prompt for certificate name`. 
 
-If `"Prompt for certificate name"` was selected, Viscosity will automatically detect the required certificate on the Nitrokey, using the specified PKCS#11 module/s. Select from any of the found devices, or enter the name of the `serialized id` to use manually. Again, the user should be prompted for a password/PIN if required.
+If `Prompt for certificate name` was selected, Viscosity will automatically detect the required key on the Nitrokey, using the specified PKCS#11 module/s. Select from any of the found devices, or enter the name of the `serialized id` to use manually. Again, the user should be prompted for a password/PIN if required.
 
 8. Click the Save button and connect from your the main interface
 
