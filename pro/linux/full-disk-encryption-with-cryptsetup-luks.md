@@ -44,13 +44,13 @@ $ mkdir smartcard-luks && cd smartcard-luks
 ```
 You might use sudo if required.
 
-2. Download the smartcard-luks-script
+3. Download the smartcard-luks-script
 
 //// Place the link to the script
 
 //// Requires raw format to use wget otherwise install and use git clone
 
-3. Export the public key
+4. Export the public key
 
 To export your public key use the following command
 
@@ -63,9 +63,7 @@ If you already have uploaded a public key to a keyserver (or have it stored some
 
 Optional: To generate another OpenPGP keypair on-device, you can refer to the documentation mentioned above and [here](./openpgp-key-generation-on-device.html), as we will not cover these instructions in this guide.
 
-```
-
-4. Execute the script with the pubkey.asc argument
+5. Execute the script with the pubkey.asc argument
 
 ```bash
 
