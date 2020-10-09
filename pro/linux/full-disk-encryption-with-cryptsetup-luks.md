@@ -14,9 +14,17 @@ The following guide can potentially lock you out of your computer. You should be
 
 ## Requirements
 
-- An Ubuntu (or Debian) computer with at least one LUKS-encrypted volume
+- An Ubuntu (or Debian) computer with at least one LUKS-encrypted volume. See the section below to detremine whioch method is compatible with this guide.
 
 - A Nitrokey Pro (or Nitrokey Storage) [initialized](https://www.nitrokey.com/documentation/openpgp-email-encryption) with keys. 
+
+## Known Issues
+
+The script seems to work only with manually-partitioned volumes, that are composed of an unencrypted /boot partition, and an encrypted root / volume.
+
+There are some errors that are recurrent when the partitioning is done automatically using the installation interface on Ubuntu and Debian.
+
+The pre-packaged version will install OpenSC version 0.19.0-1. If you wish to install and use the latest release, i.e. OpenSC 0.20, you can follow these [instructions](https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors).
 
 ## Instructions
 
@@ -27,8 +35,6 @@ The following guide can potentially lock you out of your computer. You should be
 $ sudo apt install scdaemon opensc gnupg2
 
 ```
-
-The pre-packaged version will install OpenSC version 0.19.0-1. If you wish to install and use the latest release, i.e. OpenSC 0.20, you can follow these [instructions](https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors).
 
 2. Create smartcard-luks directory
 
@@ -97,8 +103,4 @@ Enter your User PIN to unlock the drive
 
 ![](./images/luks_6.png)
 
-## Known Issues
 
-The script seems to work only with manually-partitioned volumes, that are composed of an unencrypted /boot partition, and an encrypted root / volume.
-
-There are some errors that are recurrent when the partitioning is done automatically using the installation interface on Ubuntu and Debian.
