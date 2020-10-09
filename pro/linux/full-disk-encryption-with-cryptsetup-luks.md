@@ -59,9 +59,9 @@ To export your public key use the following command
 $ gpg2 --armor --export KeyID > pubkey.asc
 
 ```
-If you already have uploaded a public key to a keyserver (or have it stored somewhere else), you shoulod retrieve it in the way you are most comfortable with, and proceed to step 4.
+If you already have uploaded a public key to a keyserver (or have it stored somewhere else), you should retrieve it in the way you are most comfortable with, and proceed to step 4.
 
-Optional: To generate another OpenPGP keypair on-device, you can refer to the documentation mentioned above and [here](https://www.nitrokey.com/documentation/openpgp-create-on-device), as we will not cover these instructions in this guide.
+Optional: To generate another OpenPGP keypair on-device, you can refer to the documentation mentioned above and [here](./openpgp-key-generation-on-device.html), as we will not cover these instructions in this guide.
 
 ```
 
@@ -78,13 +78,13 @@ First you will be prompted for the User PIN
 
 ![](./images/luks_1.png)
 
-Once you unlock the Nitrokey, you will be prompted for your OLD passphrase
+Once you unlock the Nitrokey, you will be prompted for your `OLD passphrase`. It is the passphrase you entered to encrypt your volume at intallation. 
 
 ![](./images/luks_2.png)
 
-Notice: This is a fall-back alternative in case you lose your Nitrokey, or if it's unavailable. So far, it was not tested, and users must be aware of these risk of getting locked out of their computer, if the fall-back method does not work.
+Notice: This is a fall-back alternative in case you lose your Nitrokey, or if it's unavailable. So far, it was not tested, and users must be aware of the risk of getting locked out of their computer, if the fall-back method does not work.
 
-Once you enter the passphrase, the script finishes the setup. It took less than a minute of computation on the test setup before it is done, so be aware of not interrupting the script, or you might get locked out of your computer after reboot.  
+Once you enter the passphrase, the script finishes the setup. It took less than a minute of computation on our setup before it was done, so be aware of not interrupting the script, or you might get locked out of your computer after reboot.  
 
 ![](./images/luks_3.png)
 
