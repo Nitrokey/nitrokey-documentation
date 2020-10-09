@@ -8,7 +8,7 @@ For this guide, you will need an OpenVPN remote server installed and configured 
 
 You will also need the following files:
 
-- Client's certificate or `ca.crt`
+- Client's certificate or `client.crt`
 - Share secret key or `ta.key` 
 - Nitrokey Pro 2 (or Storage 2) loaded with the required files, according to [the documentation](https://openvpn.net/community-resources/how-to/)
 
@@ -31,7 +31,7 @@ To know how to configure OpenVPN to authenticate with Nitrokey Pro, you might co
 
 5.  Locate your ca.crt file.
 
-6.  Click the Add button next to the Providers field and select the PKCS#11 module for your token/smartcard. Multiple providers can be specified. 
+6.  Click the Add button next to the Providers field and select the PKCS#11 module for your Nitrokey. Multiple providers can be specified. 
 
 On macOS, the most common location for modules to be found is in the /usr/lib directory. Please refer to the documentation included with your driver software for the location to use. OpenSC's module can be found at `/Library/OpenSC/lib/opensc-pkcs11.so`
 
@@ -41,7 +41,7 @@ On Windows, the most common location for libraries is either in `C:\Program File
 
 ![](./images/viscosity/viscosity-4.jpg)
 
-If `"Prompt for certificate name"` was selected, Viscosity will automatically detect any connected tokens/smartcards using the specified PKCS#11 module/s. The user will then be prompted to select from any of the found devices, or enter the name to use manually. Again, the user should be prompted for a password/PIN if required.
+If `"Prompt for certificate name"` was selected, Viscosity will automatically detect the required certificate on the Nitrokey, using the specified PKCS#11 module/s. Select from any of the found devices, or enter the name of the `serialized id` to use manually. Again, the user should be prompted for a password/PIN if required.
 
 ## References
 
