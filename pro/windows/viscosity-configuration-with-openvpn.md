@@ -12,14 +12,15 @@ You will also need the following:
 
 - A Nitrokey Pro 2 (or Storage 2)
 - Client's private key `client.key` loaded on the Nitrokey
+- Client's certificate `client.crt` loaded on the Nitrokey
 - The Certificate Authority file, i.e. `CA.crt` file used for your OpenVPN setup
-- Shared secret key file, i.e. `ta.key` 
+- Optional: The shared secret key file, i.e. `ta.key` 
 
-For more informeation on this topic please consult OpenVPN's [documentation.](https://openvpn.net/community-resources/how-to/)
+For more information on `PKCS#11` key management with OpenVPN, please consult OpenVPN's [documentation.](https://openvpn.net/community-resources/how-to/)
 
 ## Usage
 
-1. Start Viscosity and create a new connection "openVPN" (you can name as you wish)
+1. Start Viscosity and create a new connection "openVPN" (you can name it as you wish)
 
 ![](./images/viscosity/viscosity-1.jpg)
 
@@ -29,7 +30,7 @@ For more informeation on this topic please consult OpenVPN's [documentation.](ht
 
 3. Add your server's IP address and configure the port according to your configuration.
 
-4. Under authentication, In Type scroll down to `SSL/TLS Client (PKCS11)`
+4. Under authentication, In `Type` scroll down to `SSL/TLS Client (PKCS11)`
 
 5.  Select the CA file for your connection  
 
@@ -37,7 +38,7 @@ Optional: Select the `ta.key` in the `TLS-Auth` section
 
 ![](./images/viscosity/viscosity-3.jpg)
 
-6.  Click the Add button next to the Providers field and select the PKCS#11 module for your Nitrokey. Multiple providers can be specified. 
+6.  Click the Add button next to the Providers field and select the `PKCS#11` module for your Nitrokey. Multiple providers can be specified, and for instance we will use `OpenSC`. 
 
 On macOS, the most common location for modules to be found is in the /usr/lib directory. Please refer to the documentation included with your driver software for the location to use. OpenSC's module can be found at `/Library/OpenSC/lib/opensc-pkcs11.so`
 
@@ -47,9 +48,9 @@ On Windows, the most common location for libraries is either in `C:\Program File
 
 ![](./images/viscosity/viscosity-4.jpg)
 
-  a. If only one Nitrokey will ever be used on this computer, select `Use certificate name below`. If the Nitrokey is currently connected to the computer, click the Detect button for Viscosity to automatically fill in the Name field. Otherwise this field can be completed manually.
+  - If only one Nitrokey will ever be used on this computer, select `Use certificate name below`. If the Nitrokey is currently connected to the computer, click the `Detect` button for Viscosity to automatically fill in the Name field. Otherwise this field can be completed manually.
 
-  b. If in doubt, or if more than one Nitrokey may be used (i.e. multiple users), then select `Prompt for certificate name`. 
+  - If in doubt, or if more than one Nitrokey may be used (i.e. multiple users), then select `Prompt for certificate name`. 
 
 If `Prompt for certificate name` was selected, Viscosity will automatically detect the required key on the Nitrokey, using the specified PKCS#11 module/s. Select from any of the found devices, or enter the name of the `serialized id` to use manually. Again, the user should be prompted for a password/PIN if required.
 
