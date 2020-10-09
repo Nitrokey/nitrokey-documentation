@@ -52,16 +52,18 @@ You might use sudo if required.
 
 4. Export the public key
 
-To export your public key use the following command
+If you already have uploaded a public key to a keyserver (or have it stored somewhere else), you should retrieve it in the way you are most comfortable with, and proceed to step 5.
+
+Optional: To generate another OpenPGP keypair on-device, you can refer to the documentation mentioned above and [here](./openpgp-key-generation-on-device.html), as we will not cover these instructions in this guide.
+
+To export your public key use the following command.
 
 ```bash
 
 $ gpg2 --armor --export KeyID > pubkey.asc
 
 ```
-If you already have uploaded a public key to a keyserver (or have it stored somewhere else), you should retrieve it in the way you are most comfortable with, and proceed to step 4.
-
-Optional: To generate another OpenPGP keypair on-device, you can refer to the documentation mentioned above and [here](./openpgp-key-generation-on-device.html), as we will not cover these instructions in this guide.
+ Note that this instruction only works if you generated a new OpenPGP key on the Nitrokey, and on the same computer. See this [ticket](https://support.nitrokey.com/t/import-public-key-to-nitrokey-hsm/2021/5) for more information on the public key export. 
 
 5. Execute the script with the pubkey.asc argument
 
@@ -72,7 +74,7 @@ $ sudo ./smartcard-luks-script pubkey.asc
 ```
 Once, you run the script with the GPG public key, it automatically sets up a new LUKS secret, encrypts it against that public key, and sets up crypttab, LUKS, initramfs, and GRUB.
 
-First you will be prompted for the User PIN
+First you will be prompted for the `User PIN`
 
 ![](./images/luks_1.png)
 
