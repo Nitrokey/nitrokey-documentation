@@ -24,8 +24,6 @@ The script seems to work only with manually-partitioned volumes, that are compos
 
 There are some errors that are recurrent when the partitioning is done automatically using the installation interface on Ubuntu and Debian.
 
-The pre-packaged version will install OpenSC version 0.19.0-1. If you wish to install and use the latest release, i.e. OpenSC 0.20, you can follow these [instructions](https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors).
-
 ## Instructions
 
 1. Install dependencies
@@ -35,6 +33,7 @@ The pre-packaged version will install OpenSC version 0.19.0-1. If you wish to in
 $ sudo apt install scdaemon opensc gnupg2
 
 ```
+The pre-packaged version will install OpenSC version 0.19.0-1. If you wish to install and use the latest release, i.e. OpenSC 0.20, you can follow these [instructions](https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors).
 
 2. Create smartcard-luks directory
 
