@@ -56,9 +56,9 @@ You might use `sudo` if required.
 
 If you already have uploaded a public key to a keyserver (or have it stored somewhere else), you should retrieve it in the way you are most comfortable with, and proceed to step 5.
 
-Optional: To generate another OpenPGP keypair on-device (Nitrokey), you can refer to the documentation mentioned above and [here](./openpgp-key-generation-on-device.html), as we will not cover these instructions in this guide.
+Optional: To generate another OpenPGP keypair on-device (Nitrokey), you can refer to the documentation mentioned above and [here](./openpgp-key-generation-on-device.html), as we will not cover these instructions in this guide. 
 
-To export your public key use the following command.
+If you chose this method you can directly export your public keyby using the following command
 
 ```bash
 
