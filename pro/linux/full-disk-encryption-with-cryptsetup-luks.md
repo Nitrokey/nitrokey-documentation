@@ -35,7 +35,7 @@ Please do not select the automatic full-disk encryption provided by the operatin
 $ sudo apt install scdaemon opensc gnupg2
 
 ```
-The pre-packaged version will install OpenSC version 0.19.0-1. If you wish to install and use the latest release, i.e. OpenSC 0.20, you can follow these [instructions](https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors).
+The pre-packaged version will install OpenSC version 0.19.0-1.
 
 2. Create smartcard-luks directory
 
