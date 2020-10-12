@@ -48,9 +48,13 @@ You might use `sudo` if required.
 
 3. Download the smartcard-luks-script
 
-//// Place the link to the script
+```bash
 
-//// Requires raw format to use wget otherwise install and use git clone
+$ sudo mkdir smartcard-luks && cd smatcard-luks
+$ wget https://source.puri.sm/pureos/packages/smartcard-key-luks/-/raw/master/smartcard-key-luks
+$ sudo chmod +x smatcard-key-luks
+
+```
 
 4. Export the public key
 
@@ -71,7 +75,7 @@ $ gpg2 --armor --export KeyID > pubkey.asc
 
 ```bash
 
-$ sudo ./smartcard-luks-script pubkey.asc
+$ sudo ./smartcard-key-luks pubkey.asc
 
 ```
 Once, you run the script with the GPG public key as argument, it automatically sets up a new LUKS secret, encrypts it against that public key, and sets up crypttab, LUKS, initramfs, and GRUB.
