@@ -1,12 +1,12 @@
 # Viscosity Client Configuration with OpenVPN
 
-This guide will show to configure Viscosity client to connect to an OpenVPN instance, using a [Nitrokey Pro 2](https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3) (or [Nitrokey Storage 2](https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56)), and [PKCS#11 authentication](https://openvpn.net/community-resources/how-to/#what-is-pkcs11).
+This guide will show to configure [Viscosity client](https://www.sparklabs.com/viscosity/) to connect to an OpenVPN instance, using a [Nitrokey Pro 2](https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3) (or [Nitrokey Storage 2](https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56)), and [PKCS#11 authentication](https://openvpn.net/community-resources/how-to/#what-is-pkcs11).
 
 ## Prerequisites
 
 For this guide, you will need an OpenVPN remote server installed and configured for clients. For the purpose of this document, we have used OpenVPN 2.49 installed on a Debian 10 server. 
 
-To read about how to configure OpenVPN to authenticate with Nitrokey Pro, you might consult the following [documentation](https://docs.nitrokey.com/storage/linux/openvpn-configuration-with-easyrsa.html), as we will just cover the way to configure the [Viscosity client](https://www.sparklabs.com/viscosity/) in this guide. 
+To read about how to configure OpenVPN to authenticate with Nitrokey Pro, you might consult the following [documentation](https://docs.nitrokey.com/storage/linux/openvpn-configuration-with-easyrsa.html), as we will just cover the way to configure the Viscosity client in this guide. 
 
 You will also need the following:
 
