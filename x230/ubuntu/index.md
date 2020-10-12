@@ -66,3 +66,16 @@ New value of PCR[4]: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
    ![](../images/options.jpg)
 
 3. After that, please follow [these instructions from step 3 onwards](operating-system-update).
+
+## Invalid Code
+
+Each boot the code is generated on the Nitropad and the Nitrokey, if its connected. It is allowed to run 10 boots without loosing the synchronization between the devices, after which the bad code signal is shown, regardless of the rest of the system being in a correct state. 
+If you are sure the system was not beign tampered with (e.g. the Nitropad was booted more than 10 times without the Nitrokey), you can safely reset the system's warning.
+
+Please connect the Nitrokey and execute the following from the main boot screen:
+
+1. Options 
+2. TPM/TOTP/HOTP Options 
+3. Generate new TOTP/HOTP secret
+
+and follow the on-screen guide. After that the secret and counter should be both reset to a new value.
