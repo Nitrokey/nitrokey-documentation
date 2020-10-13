@@ -1,4 +1,11 @@
-# OpenPGP Email Encryption With Thunderbird
+# OpenPGP Email Encryption With Thunderbird 78.3.2
+
+At the moment Thunderbird's 78 support for the OpenPGP emails is not easy to set up. See Thunderbird's documentation for details:
+- https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards
+
+Please use Kleopatra or GPA software to handle the smart card.
+
+# OpenPGP Email Encryption With Thunderbird 77 and older
 
 ## Installation
 
