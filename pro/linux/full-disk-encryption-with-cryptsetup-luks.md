@@ -50,9 +50,9 @@ You might use `sudo` if required.
 
 ```bash
 
-$ sudo mkdir smartcard-luks && cd smatcard-luks
+$ sudo mkdir smartcard-luks && cd smartcard-luks
 $ wget https://source.puri.sm/pureos/packages/smartcard-key-luks/-/raw/master/smartcard-key-luks
-$ sudo chmod +x smatcard-key-luks
+$ sudo chmod +x smartcard-key-luks
 
 ```
 
