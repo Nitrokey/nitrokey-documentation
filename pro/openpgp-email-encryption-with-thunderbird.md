@@ -1,8 +1,6 @@
 # OpenPGP Email Encryption With Thunderbird 78.3.2
 
-At the moment Thunderbird's 78 support for the OpenPGP emails is not easy to set up. See Thunderbird's documentation for details:
-- [https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards](https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards)
-
+At the moment Thunderbird's 78 support for the OpenPGP emails is not easy to set up. See [Thunderbird's documentation](https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards) for details.
 ## Troubleshooting
 1. Error message: `The configured key ID '4BA0183FCBA844A7' cannot be found on your keyring` - make sure that:
     - public key is imported to the Thunderbird's manager
