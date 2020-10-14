@@ -88,6 +88,7 @@ module.exports = {
         'elliptic-curves-ecc-support',
         'putty',
         'two-factor-authentication-for-erp-software-odoo',
+        'viscosity-configuration-with-openvpn',
       ],
 
       '/pro/mac/': [
@@ -130,6 +131,7 @@ module.exports = {
         'two-factor-authentication-for-erp-software-odoo',
         'openvpn-configuration-with-easyrsa',
         'hard-disk-encryption',
+	'full-disk-encryption-with-cryptsetup-luks',      
       ],
 
       // NK Start menu
@@ -202,7 +204,7 @@ module.exports = {
         'elliptic-curves-ecc-support',
         'activate-update-mode-manually',
         'putty',
-        'two-factor-authentication-for-erp-software-odoo',
+        'two-factor-authentication-for-erp-software-odoo',    
       ],
 
       '/storage/mac/': [
@@ -249,6 +251,7 @@ module.exports = {
         'two-factor-authentication-for-erp-software-odoo',
         'openvpn-configuration-with-easyrsa',
         'hard-disk-encryption',
+        'full-disk-encryption-with-cryptsetup-luks',
       ],
 
       // NK FIDO U2F menu
