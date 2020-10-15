@@ -31,3 +31,4 @@ sudo vuepress dev
 * Write filenames in lower case and use dashes ("-") instead of spaces.
 * For content which is identical for different models or operating systems, use symbolic links to avoid duplication of files. Locate those instructions not in but next to the operating system folders.
 * Add a subfolder with the numbered image files for each guide.
+* Avoid plain URLs in text but use hyperlinks instead.

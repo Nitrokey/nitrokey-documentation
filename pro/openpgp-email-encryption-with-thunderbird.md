@@ -1,4 +1,18 @@
-# OpenPGP Email Encryption With Thunderbird
+# OpenPGP Email Encryption With Thunderbird 78.3.2
+
+At the moment Thunderbird's 78 support for the OpenPGP emails is not easy to set up. See [Thunderbird's documentation](https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards) for details.
+## Troubleshooting
+1. Error message: `The configured key ID '4BA0183FCBA844A7' cannot be found on your keyring` - make sure that:
+    - public key is imported to the Thunderbird's manager
+    - the key ID does not contain any whitespace, and consists of 16 characters from range 0-9 A-F
+    - you have GPA or Kleopatra software installed
+
+Please use Kleopatra or [GPA] software to handle the smart card.
+
+
+[GPA]: https://docs.nitrokey.com/start/windows/openpgp-key-generation-using-gpa.html
+
+# OpenPGP Email Encryption With Thunderbird 77 and older
 
 ## Installation
 
