@@ -133,10 +133,7 @@ module.exports = {
         'openvpn-configuration-with-easyrsa',
         'hard-disk-encryption',
 	'full-disk-encryption-with-cryptsetup-luks',      
-<<<<<<< HEAD
 	'automatic-screen-lock',      
-=======
->>>>>>> a4ee2c799b92c7711ba6c7af1c0625db8dd80288
       ],
 
       // NK Start menu
@@ -257,10 +254,7 @@ module.exports = {
         'openvpn-configuration-with-easyrsa',
         'hard-disk-encryption',
         'full-disk-encryption-with-cryptsetup-luks',
-<<<<<<< HEAD
         'automatic-screen-lock',
-=======
->>>>>>> a4ee2c799b92c7711ba6c7af1c0625db8dd80288
       ],
 
       // NK FIDO U2F menu
