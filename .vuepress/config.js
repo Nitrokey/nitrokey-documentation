@@ -63,6 +63,7 @@ module.exports = {
         'creating-certificate-authority',
         'smime-email-encryption',
         'smime-email-encryption-with-thunderbird',
+        'automatic-screen-lock',
       ],
 
       // NK Pro menu
@@ -132,6 +133,7 @@ module.exports = {
         'openvpn-configuration-with-easyrsa',
         'hard-disk-encryption',
 	'full-disk-encryption-with-cryptsetup-luks',      
+	'automatic-screen-lock',      
       ],
 
       // NK Start menu
@@ -252,6 +254,7 @@ module.exports = {
         'openvpn-configuration-with-easyrsa',
         'hard-disk-encryption',
         'full-disk-encryption-with-cryptsetup-luks',
+        'automatic-screen-lock',
       ],
 
       // NK FIDO U2F menu

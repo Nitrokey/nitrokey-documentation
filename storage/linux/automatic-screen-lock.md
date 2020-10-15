@@ -1,0 +1,1 @@
+../../pro/linux/automatic-screen-lock.md
