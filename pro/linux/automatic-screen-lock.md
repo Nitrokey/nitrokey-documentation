@@ -6,8 +6,10 @@ The configuration requires the creation of two files, under two different direct
 
 ### Requirements
 
-- Debian 10 (Buster) with [Gnome Display Manager](https://wiki.gnome.org/Projects/GDM) installed
+- Debian 10 (Buster) with [Gnome Display Manager](https://wiki.gnome.org/Projects/GDM) installed. 
 - Nitrokey Pro 2
+
+Alternatively, you can set up this confuguration on Ubuntu 20.04, with Gnome Display Manager. It is also possible to use [Nitrokey HSM](https://shop.nitrokey.com/shop/product/nk-hsm-2-nitrokey-hsm-2-7) or [Nitrokey Storage](https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56) for the same usage, with similar instructions.
 
 ## Configuration
 
@@ -20,7 +22,7 @@ $ cd /etc/udev/rules.d
 With your favorite text editor create a file called `85-nitrokey.rules`
 
 ```bash
-$ sudo nano 85-nitrokey.rules
+$ sudo $editor 85-nitrokey.rules
 ```
 Add the following line to the file
 
@@ -46,9 +48,9 @@ $ cd /usr/local/bin
 ```
 With your favorite text editor create a file called `gnome-screensaver-lock`
 ```bash
-$ sudo nano gnome-screensaver-lock
+$ sudo $editor gnome-screensaver-lock
 ```
-Add the following the file
+Add the following file
 ```bash
 user=`ps axo user:30,comm | egrep "gdm-(wayland|x)" | awk '{print $1}'`
 
@@ -58,30 +60,15 @@ fi
 ```
 In the first step, this script looks for the user-name of the gnome session, i.e. `user`.
 
-When it is called at key removal, the script queries `user`, switches to its session, and locks the screen by prompting the screen-saver screen.         
+When it is called at Nitrokey removal, the script queries `user`, switches to its session, and locks the screen by prompting the screen-saver screen.         
 
 #### Execute the script
 
-Once all set up, Execute the script once and it will lock the screen. It does not matter if the Nitrokey is plugged or not for this first execution.
+Once all set up, execute the script once, and it will lock the screen. It does not matter if the Nitrokey is plugged or not for this first execution.
 
 ## Usage 
 
-After the first execution, you can log back to your session with the normal method, i.e. by entering your password, and then plug you Nitrokey. 
+By now you can log back to your session by entering your password, and (re)plug you Nitrokey Pro if you did not do it before
 
-The next time you unplug your Nitrokey Pro (or Storage or HSM) from the computer, it will automatically lock the screen. 
-
-#### Tests 
-
-This setup was tested successfully with
-
-- Debian 10 with Gnome Display Manager installed
-- Ubuntu 20.04 with Gnome Display Manager installed
-
-And 
-
-- Nitrokey Pro 2
-- Nitrokey Storage 2
-- Nitrokey HSM 2
-
-The guide was tested with the Nitrokeys mentioned above. However, the configuration of multiple Nitrokey devices, at the same time, was not tested.
+The next time(s) you unplug your Nitrokey Pro (or Nitrokey Storage or Nitrokey HSM) from the computer, it will automatically lock the screen. 
 
