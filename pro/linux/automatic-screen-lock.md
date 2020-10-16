@@ -1,15 +1,13 @@
 # Automatic Screen Lock at Removal 
 
-This guide will walk you through the configuration of your computer, to automatically lock your session when you remove  the [Nitrokey Pro](https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3). 
+This guide will walk you through the configuration of your computer, to automatically lock your session when you remove the Nitrokey.
 
-The configuration requires the creation of two files, under two different directories. 
+The configuration requires the creation of two files under two different directories. 
 
 ### Requirements
 
-- Debian 10 (Buster) with [Gnome Display Manager](https://wiki.gnome.org/Projects/GDM) installed. 
-- Nitrokey Pro 2
-
-Alternatively, you can set up this confuguration on Ubuntu 20.04, with Gnome Display Manager. It is also possible to use [Nitrokey HSM](https://shop.nitrokey.com/shop/product/nk-hsm-2-nitrokey-hsm-2-7) or [Nitrokey Storage](https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56) for the same usage, with similar instructions.
+- Ubuntu 20.04 or Debian 10 (Buster), both with [Gnome Display Manager](https://wiki.gnome.org/Projects/GDM) installed. 
+- Nitrokey Pro 2, Nitrokey Storage 2, or Nitrokey HSM 2
 
 ## Configuration
 
@@ -22,7 +20,7 @@ $ cd /etc/udev/rules.d
 With your favorite text editor create a file called `85-nitrokey.rules`
 
 ```bash
-$ sudo $editor 85-nitrokey.rules
+$ sudo editor 85-nitrokey.rules
 ```
 Add the following line to the file
 
@@ -48,7 +46,7 @@ $ cd /usr/local/bin
 ```
 With your favorite text editor create a file called `gnome-screensaver-lock`
 ```bash
-$ sudo $editor gnome-screensaver-lock
+$ sudo editor gnome-screensaver-lock
 ```
 Add the following file
 ```bash
@@ -68,7 +66,7 @@ Once all set up, execute the script once, and it will lock the screen. It does n
 
 ## Usage 
 
-By now you can log back to your session by entering your password, and (re)plug you Nitrokey Pro if you did not do it before
+By now you can log back to your session by entering your password, and (re)plug you Nitrokey if you did not do it before.
 
-The next time(s) you unplug your Nitrokey Pro (or Nitrokey Storage or Nitrokey HSM) from the computer, it will automatically lock the screen. 
+The next time(s) you unplug your Nitrokey from the computer, it will automatically lock the screen. 
 
