@@ -3,9 +3,9 @@
 The following instructions explain the generation of OpenPGP keys directly on the Nitrokey. This is done by using the command line interface of GnuPG. Thus, you need to have GnuPG installed on your system. The newest GnuPG version for Windows can be found [here](https://www.gpg4win.org/) and the newest version for MacOS can be found [here](https://gpgtools.org/). Users of Linux systems please install GnuPG with help of the package manager.
 
 ::: tip Note
-These instructions are based on GnuPG version 2.2.6 or higher. Some Linux Distributions have an older version installed. In this case please choose a different method as listed [here](https://www.nitrokey.com/documentation/openpgp-email-encryption) or install a newer version if possible.
+These instructions are based on GnuPG version 2.2.6 or higher. Some Linux Distributions have an older version installed. In this case please choose a different method as listed [here](https://docs.nitrokey.com/pro/openpgp-email-encryption.html) or install a newer version if possible.
 :::
- 
+
 ## Key Generation
 
 The following descriptions explain the basic key generation on-device via GnuPG's command line interface. The default behaviour is to generate RSA keys of 2048 bit size. If you want to change the key algorithm and length, have a look at the next section first.
@@ -82,7 +82,7 @@ gpg/card>
 </jane@doe.com></n></n></n></n>
 ```
 
-**Please do not create the suggested off-card backup.** This "backup" does only save the encryption key, but not the signature and authentication keys. In case of a loss of the device, you will not be able to restore the whole key set. So on the one hand it is no full backup (use [these instructions](https://www.nitrokey.com/documentation/openpgp-create-backup) instead, if you need one) and on the other hand you risk that someone else can get in possession of your encryption key. The advantage of generating keys on-device is to make sure that keys are stored securely. Therefore, we recommend to skip this half-backup.
+**Please do not create the suggested off-card backup.** This "backup" does only save the encryption key, but not the signature and authentication keys. In case of a loss of the device, you will not be able to restore the whole key set. So on the one hand it is no full backup (use [these instructions](https://docs.nitrokey.com/pro/openpgp-key-generation-with-backup.html) instead, if you need one) and on the other hand you risk that someone else can get in possession of your encryption key. The advantage of generating keys on-device is to make sure that keys are stored securely. Therefore, we recommend to skip this half-backup.
 
 Now you have a complete key set on your device which can be used for the [various applications](https://www.nitrokey.com/documentation/applications) listed on our site. Type `quit` and hit enter to exit.
 

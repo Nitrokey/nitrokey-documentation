@@ -33,9 +33,9 @@ After purchase, the passwords are set to a default value and must be changed by 
     ![](./images/UbuntuDiskPassword.png)
 3. The system will then guide you through the process of creating a user account. After that you should have successfully booted the system and could already use it normally.
 4. Click on the Nitrokey icon on the left side of the screen to open the pre-installed Nitrokey App.
-5. Change the PINs of your Nitrokey as [described here](https://www.nitrokey.com/documentation/change-user-and-admin-pin).
+5. Change the PINs of your Nitrokey as [described here](https://docs.nitrokey.com/pro/change-user-and-admin-pin.html).
 
-6. Change the passphrase for disk encryption as [described here](https://www.nitrokey.com/documentation/changing-passphrase-disk-encryption).
+6. Change the passphrase for disk encryption as [described here](https://docs.nitrokey.com/x230/ubuntu/change-disk-encryption-passphrase.html).
 
 ## Behavior After a System Update
 

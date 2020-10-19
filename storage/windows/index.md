@@ -11,7 +11,7 @@
     <img src="./images/Windows10-Systemtray.png">
 </p>    
 
-3. Open the About window from Nitrokey App's menu and check if you have the [latest firmware](https://github.com/Nitrokey/nitrokey-storage-firmware/releases) installed. If it's not the latest, please [update](https://www.nitrokey.com/en/documentation/firmware-update-storage).
+3. Open the About window from Nitrokey App's menu and check if you have the [latest firmware](https://github.com/Nitrokey/nitrokey-storage-firmware/releases) installed. If it's not the latest, please [update](https://docs.nitrokey.com/storage/windows/firmware-update.html).
 4. Use the Nitrokey App to change the default User PIN (default: 123456) and Admin PIN (default: 12345678) to your own choices.
 
 Your Nitrokey is now ready to use. [Checkout](https://www.nitrokey.com/documentation/applications) the various use cases and supported applications.
@@ -23,6 +23,6 @@ OpenPGP or S/MIME keys installed on the device (see below).
 ## Key Creation with OpenPGP or S/MIME
 There are two widely used standards for email encryption. While OpenPGP/GnuPG is popular among individuals, S/MIME/x.509 is mostly used by enterprises. If you are in doubt which one to choose, you should use OpenPGP.
 
-- [instructions](https://www.nitrokey.com/documentation/openpgp-email-encryption) for using the OpenPGP standard with the Nitrokey
-- [instructions](https://www.nitrokey.com/documentation/smime-email-encryption) for using S/MIME with the Nitrokey
+- [instructions](https://docs.nitrokey.com/storage/windows/openpgp-email-encryption.html) for using the OpenPGP standard with the Nitrokey
+- [instructions](https://docs.nitrokey.com/storage/windows/smime-email-encryption.html) for using S/MIME with the Nitrokey
 
