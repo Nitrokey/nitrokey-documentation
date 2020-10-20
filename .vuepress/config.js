@@ -35,6 +35,7 @@ module.exports = {
 
       '/fido2/linux/': [
         ['', 'Nitrokey FIDO2, Linux'],
+        'confirguration-with-pam-and-linux',
       ],
 
       // NK HSM menu
