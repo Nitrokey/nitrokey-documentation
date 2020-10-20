@@ -17,7 +17,7 @@ Download the latest firmware.hex file from [here](https://github.com/Nitrokey/ni
 
 ## Enable Firmware Update
 
-**If you are using Microsoft Windows Build 1809 and Nitrokey Storage Firmware 0.52 or lower, you need to use another system or if this is not feasible use [these instructions](https://www.nitrokey.com/documentation/nitrokey-storage-update-manual-activate) to enable the Firmware Update mode.**
+**If you are using Microsoft Windows Build 1809 and Nitrokey Storage Firmware 0.52 or lower, you need to use another system or if this is not feasible use [these instructions](https://docs.nitrokey.com/storage/activate-update-mode-manually.html) to enable the Firmware Update mode.**
 
 Set Nitrokey Storage into upgrade mode using the [Nitrokey App](https://www.nitrokey.com/download). This may looks different on your system (see picture below). Generally right click on the icon of the Nitrokey App and go to "Configure" -> "Enable Firmware Update". The default firmware password is '12345678'.
 

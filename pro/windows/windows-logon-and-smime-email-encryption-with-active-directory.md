@@ -52,6 +52,6 @@ If you did not enforce the usage of OpenPGP-CSP you have to choose it here now.
 
 Next you choose the Authentication slot for the certificate.
 
-You are now ready to logon on the computer with the Nitrokey instead of your password and you can use [S/MIME email encryption/signing](https://www.nitrokey.com/documentation/smime-email-encryption) with the Nitrokey. The driver has to be installed on every computer you want to use the certificate on.
+You are now ready to logon on the computer with the Nitrokey instead of your password and you can use [S/MIME email encryption/signing](https://docs.nitrokey.com/pro/smime-email-encryption.html) with the Nitrokey. The driver has to be installed on every computer you want to use the certificate on.
 
 ![img11](./images/windows-logon-and-smime-email-encryption-with-active-directory/11.png)

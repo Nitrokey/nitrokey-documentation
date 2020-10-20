@@ -17,7 +17,7 @@ Booting this USB drive entirely erases all data on the hard disk or SSD of the N
 
 5. Depending on the operating system you may need to confirm its reinstallation.
 
-6. [Sign the boot partition.](https://www.nitrokey.com/documentation/nitropad-system-update)
+6. [Sign the boot partition.](https://docs.nitrokey.com/x230/system-update.html)
 
 To avoid accidential overwriting of valuable data, format the USB drive afterwards.
 

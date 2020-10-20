@@ -5,7 +5,7 @@ On Debian/Ubuntu based Distributions type in terminal: *sudo apt-get update && s
 
     If your distribution has a rather old version of libccid (<1.4.21) you have to add the device information by yourself (for example if you are using Ubuntu 14.04 or older). In this case please follow these [instructions](https://www.nitrokey.com/documentation/frequently-asked-questions-faq#latest-device-driver-missing-on-older-linux-distribution).  
 
-2. Download and start the [Nitrokey App](https://www.nitrokey.com/download). Follow the [instructions](https://www.nitrokey.com/documentation/change-user-and-admin-pin) to change the default User PIN (default: 123456) and Admin PIN (default: 12345678) to your own choices.
+2. Download and start the [Nitrokey App](https://www.nitrokey.com/download). Follow the [instructions](https://docs.nitrokey.com/pro/change-user-and-admin-pin.html) to change the default User PIN (default: 123456) and Admin PIN (default: 12345678) to your own choices.
 
 ![img](./images/App-change-pin.png)
 
@@ -17,5 +17,5 @@ Your Nitrokey is now ready to use. [Checkout](https://www.nitrokey.com/documenta
 
 ## Key Creation with OpenPGP or S/MIME
 There are two widely used standards for email encryption. While OpenPGP/GnuPG is popular among individuals, S/MIME/x.509 is mostly used by enterprises. If you are in doubt which one to choose, you should use OpenPGP.
-- [instructions](https://www.nitrokey.com/documentation/openpgp-email-encryption) for using the OpenPGP standard with the Nitrokey
-- [instructions](https://www.nitrokey.com/documentation/smime-email-encryption) for using S/MIME with the Nitrokey
+- [instructions](https://docs.nitrokey.com/pro/openpgp-email-encryption.html) for using the OpenPGP standard with the Nitrokey
+- [instructions](https://docs.nitrokey.com/pro/smime-email-encryption.html) for using S/MIME with the Nitrokey

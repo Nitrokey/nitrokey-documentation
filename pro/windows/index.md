@@ -16,6 +16,6 @@ Your Nitrokey is now ready to use. [Checkout](https://www.nitrokey.com/en/applic
 
 There are two widely used standards for email encryption. While  OpenPGP/GnuPG is popular among individuals, S/MIME/x.509 is mostly used  by enterprises. If you are in doubt which one to choose, you should use  OpenPGP.
 
-- [instructions](https://www.nitrokey.com/documentation/openpgp-email-encryption) for using the OpenPGP standard with the Nitrokey
-- [instructions](https://www.nitrokey.com/documentation/smime-email-encryption) for using S/MIME with the Nitrokey
+- [instructions](https://docs.nitrokey.com/pro/openpgp-email-encryption.html) for using the OpenPGP standard with the Nitrokey
+- [instructions](https://docs.nitrokey.com/pro/smime-email-encryption.html) for using S/MIME with the Nitrokey
 

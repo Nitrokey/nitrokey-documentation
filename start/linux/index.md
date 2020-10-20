@@ -2,7 +2,7 @@
 
 1. Install `scdaemon` and GnuPG 2.1 or higher by using your package manager (e.g. `apt update && apt install scdaemon gpg2` on Ubuntu).
 2. Connect your Nitrokey to your computer.
-3. Use GnuPG to [generate new keys or import existing ones](https://www.nitrokey.com/documentation/openpgp-email-encryption).
+3. Use GnuPG to [generate new keys or import existing ones](https://docs.nitrokey.com/start/linux/openpgp-email-encryption.html).
 
     ::: tip Note
     It is indeed necessary to first import or create new keys and change the PINs afterwards. Otherwise changing User PIN will fail! Furthermore overriding keys results in PIN reset (default values), please keep this in mind!
@@ -21,8 +21,8 @@ Your Nitrokey is now ready to use. [Checkout](https://www.nitrokey.com/documenta
 ## Key Creation with OpenPGP or S/MIME
 There are two widely used standards for email encryption. While OpenPGP/GnuPG is popular among individuals, S/MIME/x.509 is mostly used by enterprises. If you are in doubt which one to choose, you should use OpenPGP.
 
-- [instructions](https://www.nitrokey.com/documentation/openpgp-email-encryption) for using the OpenPGP standard with the Nitrokey
-- [instructions](https://www.nitrokey.com/documentation/smime-email-encryption) for using S/MIME with the Nitrokey
+- [instructions](https://docs.nitrokey.com/start/linux/openpgp-email-encryption.html) for using the OpenPGP standard with the Nitrokey
+- [instructions](https://docs.nitrokey.com/start/linux/smime-email-encryption.html) for using S/MIME with the Nitrokey
 
 Please note that the Nitrokey App can not be used for this device!
 

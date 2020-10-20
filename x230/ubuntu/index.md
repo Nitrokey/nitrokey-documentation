@@ -1,4 +1,5 @@
 # NitroPad X230 with Ubuntu Linux
+With the NitroPad X230, malicious changes to the BIOS, operating system, and software can be easily detected. For example, if you left your NitroPad in a hotel room, you can use your Nitrokey to check if it has been tampered with while you were away. If an attacker modifies the NitroPad's firmware or operating system, the Nitrokey will detect this (instructions below).
 
 ## Verification of Sealed Hardware
 
@@ -33,9 +34,9 @@ After purchase, the passwords are set to a default value and must be changed by 
     ![](./images/UbuntuDiskPassword.png)
 3. The system will then guide you through the process of creating a user account. After that you should have successfully booted the system and could already use it normally.
 4. Click on the Nitrokey icon on the left side of the screen to open the pre-installed Nitrokey App.
-5. Change the PINs of your Nitrokey as [described here](https://www.nitrokey.com/documentation/change-user-and-admin-pin).
+5. Change the PINs of your Nitrokey as [described here](https://docs.nitrokey.com/pro/change-user-and-admin-pin.html).
 
-6. Change the passphrase for disk encryption as [described here](https://www.nitrokey.com/documentation/changing-passphrase-disk-encryption).
+6. Change the passphrase for disk encryption as [described here](https://docs.nitrokey.com/x230/ubuntu/change-disk-encryption-passphrase.html).
 
 ## Behavior After a System Update
 
@@ -43,7 +44,7 @@ The NitroPad firmware checks certain system files for changes. If your operating
 
 ![](../images/NitroPad-error-mismatch.jpeg)
 
-That's why it's important to restart your NitroPad under controlled conditions after a system update. Only when the new status has been confirmed can you leave the device unattended again. Otherwise, you will not be able to distinguish a possible attack from a system update. Detailed instructions for a system update can be [found here](Operating System Update).
+That's why it's important to restart your NitroPad under controlled conditions after a system update. Only when the new status has been confirmed can you leave the device unattended again. Otherwise, you will not be able to distinguish a possible attack from a system update. Detailed instructions for a system update can be [found here](https://docs.nitrokey.com/x230/ubuntu/system-update.html).
 
 ## Troubleshooting
 

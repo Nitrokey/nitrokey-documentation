@@ -18,7 +18,7 @@ The following guide can potentially lock you out of your computer. You should be
 
 See the section below to determine which method is compatible with this guide.
 
-- A Nitrokey Pro 2 or Nitrokey Storage 2 [initialized](https://www.nitrokey.com/documentation/openpgp-email-encryption) with keys. 
+- A Nitrokey Pro 2 or Nitrokey Storage 2 [initialized](https://docs.nitrokey.com/pro/openpgp-email-encryption.html) with keys. 
 
 ## Known Issues
 
