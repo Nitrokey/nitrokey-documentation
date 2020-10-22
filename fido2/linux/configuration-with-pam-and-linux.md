@@ -1,4 +1,4 @@
-# Desktop with PAM and Linux
+# Desktop Login with PAM and Linux
 ## Introduction
 This guide will walk you through the configuration of Linux to use FIDO Universal 2nd Factor, i.e. FIDO U2F with `libpam-u2f` and [Nitrokey FIDO 2](https://shop.nitrokey.com/shop/product/nk-fi2-nitrokey-fido2-55) .
 
