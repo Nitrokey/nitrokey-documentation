@@ -1,6 +1,6 @@
-# Configuration with PAM and Linux
+# Desktop with PAM and Linux
 ## Introduction
-This guide will walk you through the configuration of Linux to use Universal 2nd Factor, i.e. U2F with `libpam-u2f` and [Nitrokey FIDO 2](https://shop.nitrokey.com/shop/product/nk-fi2-nitrokey-fido2-55) .
+This guide will walk you through the configuration of Linux to use FIDO Universal 2nd Factor, i.e. FIDO U2F with `libpam-u2f` and [Nitrokey FIDO 2](https://shop.nitrokey.com/shop/product/nk-fi2-nitrokey-fido2-55) .
 
 If you want to login to you computer using [Nitrokey Pro 2,](https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3) [Nitrokey Storage 2](https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56) and [Nitrokey Start](https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6) you can visit the instructions for Windows available [here](https://www.nitrokey.com/documentation/applications#computer-login), and for Linux [here](https://www.nitrokey.com/documentation/applications#computer-login) .
 ### Requirements
@@ -39,7 +39,13 @@ On Ubuntu 20.04 it is possible to download directly `ibpam-u2f` from the officia
 ```bash
 $ sudo apt install libpam-u2f
 ```
-To verify that the library is properly installed enter the following command:
+::: details Click for more options
+- If the repo is not set by default, and/or if you are using an older version of Ubuntu you can add it with the following instruction:
+```bash
+$ sudo add-apt-repository ppa:yubico/stable
+```
+- Alternatively you can build `libpam-u2f` from [Git](https://github.com/phoeagon/pam-u2f).
+- To verify that the library is properly installed enter the following command:
 ```bash
 $ file /lib/x86_64-linux-gnu/security/pam_u2f.so
 ```
@@ -47,12 +53,6 @@ The Output should be something like the following:
 ```bash
 /lib/x86_64-linux-gnu/security/pam_u2f.so: \ ELF 64-bit LSB shared object, x86-64, version 1 (SYSV),\ dynamically linked, BuildID[sha1]=1d55e1b11a97be2038c6a139579f6c0d91caedb1, stripped
 ```
-::: details Click for more options
-If the repo is not set by default, and/or if you are using an older version of Ubuntu you can add it with the following instruction:
-```bash
-$ sudo add-apt-repository ppa:yubico/stable
-```
-Alternatively you can build `libpam-u2f` from [Git](https://github.com/phoeagon/pam-u2f).
 :::
 #### 4. Prepare the Directory
 Create `.config/Nitrokey/` under your home directory
@@ -94,9 +94,9 @@ This will omit the `<username>` field, and the output can be appended to the lin
 ```
 <username>:Zx...mw,04...0a:xB...fw,04...3f
 ```
-#### 7. Patch the Pluggable Authentication Module `PAM`
+#### 7. Modify the Pluggable Authentication Module `PAM`
 The final step is configure the PAM module files under `/etc/pam.d/`. 
-In this guide we will patch the `common-auth` file as it handles the authentication settings which are common to all services, but other options are possible.
+In this guide we will modify the `common-auth` file as it handles the authentication settings which are common to all services, but other options are possible.
 You can modify the file with the following command:
 ```bash
 $ cd /etc/pam.d
@@ -109,30 +109,39 @@ auth	sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue prompt
 ```
 ::: tip 
 - Since we are using Central Authentication Mapping, we need to tell `pam_u2f` the location of the file to use with the `authfile` option.
-- If you often forget to insert the key, `prompt` option make `pam_u2f` print `Insert your U2F device, then press ENTER.` and give you a chance to insert the key.
+- If you often forget to insert the key, `prompt` option make `pam_u2f` print `Insert your U2F device, then press ENTER.` and give you a chance to insert the Nitrokey.
 - If you would like to be prompted to touch the Nitrokey, `cue` option will make `pam_u2f` print `Please touch the device.` message.
 :::
-## Usage
-After the PAM module configuration, you will be able to test your configuration right away, but it is recommended to reboot your computer, and unplug/replug the Nitrokey FIDO.
-#### PAM modules
-There are several PAM modules files that can be patched according to your needs:
-- By patching `/etc/pam.d/common-auth` file, you will be able to use you Nitrokey FIDO for 2nd factor authentication for graphic login and `sudo`. 
-Note: `common-auth` should be patched by adding the additional configuration line at the end of the file.
-- If you wish to use 2nd factor authentication solely for Gnome's graphic login, you might prefer to patch the`/etc/pam.d/gdm-password` 
-- Alternatively you can just modify the `/etc/pam.d/sudo` file if you wish to use U2F when using the `sudo` command. Once `sudo` configured the usage would be as following:
+
+Once we modified the `common-auth`, we can save and exit the file. To test the configuration we can do it with `sudo ls` and be prompted the mesage `Please touch the device.`. The output should be similar to the following:
+
 ```bash nitrouser@nitrouser:~$ sudo ls
 $ sudo ls
 [sudo] password for <username>: 
 Please touch the device.
 ```
+You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed
+![](./images/u2f-fido-pam-2.png)
+
+## Usage
+After the PAM module configuration, you will be able to test your configuration right away, but it is recommended to reboot your computer, and unplug/replug the Nitrokey FIDO2.
+
+Once you have properly tested the instructions in this guide (and set up a backup), it is recommended to use either the `required` or the `requisite` instead of `sufficient`.
+
+The flags `reuquired` and `requisite`  provide a tighter access control. With these flags the Nitrokey FIDO will be necessary to login, and/or use the configured service. 
+#### PAM modules
+There are several PAM modules files that can be modified according to your needs:
+- By modifying `/etc/pam.d/common-auth` file, you will be able to use you Nitrokey FIDO for 2nd factor authentication for graphic login and `sudo`. 
+Note: `common-auth` should be modified by adding the additional configuration line at the end of the file.
+- If you wish to use 2nd factor authentication solely for Gnome's graphic login, you might prefer to modify the`/etc/pam.d/gdm-password` 
+- Alternatively you can just modify the `/etc/pam.d/sudo` file if you wish to use U2F when using the `sudo` command.
 #### Control flags
 In step 7 we have used the `sufficient` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
 - `required`: This is the most critical flag. The module result must be successful for authentication to continue. This flag can lock you out of your computer if you do not have access to the Nitrokey.
 - ` requisite`: Similar to `required` however, in the case where a specific module returns a failure, control is directly returned to the application, or to the superior PAM stack. This flag can also lock you out of your computer if you do not have access to the Nitrokey.
 - `sufficient`: The module result is ignored if it fails. The `sufficient` flag considered to be safe for testing purposes. 
 - `optional`: The success or failure of this module is only important if it is the only module in the stack associated with this service+type. The `optional` flag is considered to be safe to use for testing purposes. 
-
-Once you have properly tested the instructions in this guide (and set up a backup), it is recommended to use either the `required` or the `requisite` as they provide a tighter access control. With these flags the Nitrokey FIDO will be necessary to login, and/or use the configured service.   
+  
 ::: warning
 
 - If `required`  or `requisite` is set, the failure of U2F authentication will cause a failure of the overall authentication. Failure will occur when the configured Nitrokey FIDO is not plugged, lost or destroyed.
