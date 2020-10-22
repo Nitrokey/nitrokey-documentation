@@ -110,7 +110,7 @@ auth	sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue prompt
 ::: tip 
 - Since we are using Central Authentication Mapping, we need to tell `pam_u2f` the location of the file to use with the `authfile` option.
 - If you often forget to insert the key, `prompt` option make `pam_u2f` print `Insert your U2F device, then press ENTER.` and give you a chance to insert the key.
-- If you would like to be prompted to touch the device, `cue` option will make `pam_u2f` print `Please touch the device.` message.
+- If you would like to be prompted to touch the Nitrokey, `cue` option will make `pam_u2f` print `Please touch the device.` message.
 :::
 ## Usage
 After the PAM module configuration, you will be able to test your configuration right away, but it is recommended to reboot your computer, and unplug/replug the Nitrokey FIDO.
