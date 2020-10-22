@@ -129,13 +129,13 @@ You can also test your configuration by logging out of the user session and logg
 ![](./images/u2f-fido-pam-2.png)
 
 ## Usage
-After the PAM module configuration, you will be able to test your configuration right away, but it is recommended to reboot your computer, and unplug/replug the Nitrokey FIDO2.
+After the PAM module modification, you will be able to test your configuration right away, but it is recommended to reboot your computer, and unplug/replug the Nitrokey FIDO2.
 
-Once you have properly tested the instructions in this guide (and set up a backup), it is recommended to use either the `required` or the `requisite` instead of `sufficient`. 
+Once you have properly tested the instructions in this guide (and set up a backup), it is recommended to use either the `required` or the `requisite` control flag instead of `sufficient`. 
 
-The flags `required` and `requisite` provide a tighter access control. With these flags the Nitrokey FIDO 2 will be necessary to login, and/or use the configured service. 
+The flags `required` and `requisite` provide a tighter access control, and will make the Nitrokey FIDO 2 necessary to login, and/or use the configured service. 
 
-If you need more information about the Control Flags, you may see the last section of this guide to understand the difference, and the implications of using each of the control flags. 
+If you need more information about Control Flags in the `PAM` configuration line, you may see the last section of this guide to understand the difference, and the implications of using each of them. 
 #### PAM modules
 There are several PAM modules files that can be modified according to your needs:
 - By modifying `/etc/pam.d/common-auth` file, you will be able to use you Nitrokey FIDO for 2nd factor authentication for graphic login and `sudo`. 
