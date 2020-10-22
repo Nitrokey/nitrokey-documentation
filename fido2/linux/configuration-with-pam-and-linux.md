@@ -116,28 +116,32 @@ auth	sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue prompt
 - If you would like to be prompted to touch the Nitrokey, `cue` option will make `pam_u2f` print `Please touch the device.` message.
 :::
 
-Once we modified the `common-auth`, we can save and exit the file. To test the configuration we can do it with `sudo ls` and be prompted the mesage `Please touch the device.`. The output should be similar to the following:
+Once we modified the `common-auth`, we can save and exit the file. 
+
+To test the configuration we can do it with `sudo ls` and be prompted the mesage `Please touch the device.`. The output should be similar to the following:
 
 ```bash nitrouser@nitrouser:~$ sudo ls
 $ sudo ls
 [sudo] password for <username>: 
 Please touch the device.
 ```
-You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed
+You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you plug yout Nitrokey FIDO 2 and type your password:
 ![](./images/u2f-fido-pam-2.png)
 
 ## Usage
 After the PAM module configuration, you will be able to test your configuration right away, but it is recommended to reboot your computer, and unplug/replug the Nitrokey FIDO2.
 
-Once you have properly tested the instructions in this guide (and set up a backup), it is recommended to use either the `required` or the `requisite` instead of `sufficient`.
+Once you have properly tested the instructions in this guide (and set up a backup), it is recommended to use either the `required` or the `requisite` instead of `sufficient`. 
 
-The flags `reuquired` and `requisite`  provide a tighter access control. With these flags the Nitrokey FIDO will be necessary to login, and/or use the configured service. 
+The flags `reuquired` and `requisite`  provide a tighter access control. With these flags the Nitrokey FIDO 2 will be necessary to login, and/or use the configured service. 
+
+If you need more information about the Control Falgs, you may see the last section of this guide to understand the difference, and the implications of using each of the control flags. 
 #### PAM modules
 There are several PAM modules files that can be modified according to your needs:
 - By modifying `/etc/pam.d/common-auth` file, you will be able to use you Nitrokey FIDO for 2nd factor authentication for graphic login and `sudo`. 
 Note: `common-auth` should be modified by adding the additional configuration line at the end of the file.
-- If you wish to use 2nd factor authentication solely for Gnome's graphic login, you might prefer to modify the`/etc/pam.d/gdm-password` 
-- Alternatively you can just modify the `/etc/pam.d/sudo` file if you wish to use U2F when using the `sudo` command.
+- If you wish to use FIDO 2nd factor authentication solely for Gnome's graphic login, you might prefer to modify the`/etc/pam.d/gdm-password` 
+- Alternatively you can just modify the `/etc/pam.d/sudo` file if you wish to use FIDO U2F when using the `sudo` command.
 #### Control flags
 In step 7 we have used the `sufficient` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
 - `required`: This is the most critical flag. The module result must be successful for authentication to continue. This flag can lock you out of your computer if you do not have access to the Nitrokey.
