@@ -18,10 +18,12 @@ $ sudo adduser <backup_user>
 $ sudo usermod -aG sudo <backup_user>
 ```
 In case you did the setup for a single user, and are locked out of your computer, you would still be able to login with the `<backup_user>`, and proceed with the maintenance. 
+
 ::: warning
 The following guide can potentially lock you out of your computer. You should be aware of these risks, as it is recommended to first use the instructions below on a secondary computer, or after a full backup. 
 
 You might lose access to your data after configuring [PAM modules](http://www.linux-pam.org/Linux-PAM-html/). 
+
 :::
 #### 2. Set up the `rules` to recognize the Nitrokey FIDO 2
 Under `/etc/udev/rules.d` download `41-nitrokey.rules`
@@ -62,7 +64,7 @@ $ mkdir .config/Nitrokey
 ```
 And plug your Nitrokey FIDO 2.
 ### Configuration
-Once done with the preparation, we can start to configure the computer to login with the Nitrokey FIDO 2.
+Once done with the preparation, we can start to configure the computer to use the Nitrokey FIDO 2 for authentication at login and `sudo`.
 #### 5. Generate the U2F config file
 To generate the configuration file we will use the `pamu2fcfg` utility that comes with the `libpam-u2f`.
 For convenience, we will directly write the output of the utility to the `u2f_keys` file under `.config/Nitrokey`.
