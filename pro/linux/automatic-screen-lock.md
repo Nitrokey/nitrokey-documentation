@@ -13,14 +13,10 @@ The configuration requires the creation of two files under two different directo
 
 #### Create the `.rules` file
 
-Go to `/etc/udev/rules.d` 
-```bash
-$ cd /etc/udev/rules.d
-```
 With your favorite text editor create a file called `85-nitrokey.rules`
 
 ```bash
-$ sudo editor 85-nitrokey.rules
+$ sudo editor /etc/udev/rules.d/85-nitrokey.rules
 ```
 Add the following line to the file
 
@@ -33,22 +29,17 @@ This file sets up a new hardware rule that executes the `gnome-screensaver-lock`
 
 You should change the configuration according to the device you are using as following:
 
-```
-Nitrokey Pro: `ENV{PRODUCT}=="20a0/4108/101"`
-Nitrokey HSM: `ENV{PRODUCT}=="20a0/4230/101"`
-Nitrokey Storage: `ENV{PRODUCT}=="20a0/4109/101"`
-```
+* Nitrokey Pro: `ENV{PRODUCT}=="20a0/4108/101"`
+* Nitrokey HSM: `ENV{PRODUCT}=="20a0/4230/101"`
+* Nitrokey Storage: `ENV{PRODUCT}=="20a0/4109/101"`
+
 #### Create the `gnome-screensaver-lock` script
 
-Go to `/usr/local/bin`
-```bash
-$ cd /usr/local/bin
-```
 With your favorite text editor create a file called `gnome-screensaver-lock`
 ```bash
-$ sudo editor gnome-screensaver-lock
+$ sudo editor /usr/local/bin/gnome-screensaver-lock
 ```
-Add the following file
+Add the following text
 ```bash
 user=`ps axo user:30,comm | egrep "gdm-(wayland|x)" | awk '{print $1}'`
 
