@@ -73,4 +73,4 @@ New value of PCR[4]: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 2. Select "Update Checksums and sign all files on /boot".
    ![](../images/options.jpg)
 
-3. After that, please follow [these instructions from step 3 onwards](operating-system-update).
+3. After that, please follow [these instructions from step 3 onwards](system-update).
