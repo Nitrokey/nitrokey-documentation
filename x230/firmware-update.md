@@ -25,7 +25,7 @@ E.g. for `v1.1-rc3` version:
 #### Firmware file verification
 
 It is mandatory to run a firmware file consistency check before writing it to the device. 
-After copying the firmware file to the USB drive make sure the latter is properly unmounted/ejected to avoid write issues. The consistency check should be run on NitroPad, so the data verified will be exact same as the later read by the update application.
+After copying the firmware file to the USB drive make sure the latter is properly unmounted/ejected to avoid write issues. The consistency check should be run on NitroPad, so the data verified will be exact same as the later read by the update application. This action will not be required in the further firmware updates.
 
 
 1. Start Nitropad and open recovery console from `Options -> Exit to recovery shell`
@@ -40,7 +40,7 @@ For `v1.1-rc3` version this should result in:
 $ sha256sum -c SHA256SUM.txt
 nitropad_x230_v1.1-rc3.rom: OK
 ```
-This confirms the content of the file is as expected.
+This confirms the content of the file is as expected. Please reboot the Nitropad to continue (either by switching off and powering on again, or hitting CTRL+ALT+DELETE).
 
 ### Procedure
 
