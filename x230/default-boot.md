@@ -36,7 +36,7 @@ Now the NitroPad marks the files that changed by the update as verified.
 
 ![img4](./images/default-boot/4.jpg)
 
-6. You will then see a list of all possible boat entries - choose the first one here by simply pressing Enter.
+6. You will then see a list of all possible boot entries - choose the first one here by simply pressing Enter.
     Boot Options
 
 ![img5](./images/NitroPad-boot-options.jpeg)
