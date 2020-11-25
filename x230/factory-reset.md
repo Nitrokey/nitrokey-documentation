@@ -31,8 +31,8 @@
 8. You will then be asked if manual user information should be added. You confirm with 'y' and enter your name and then the email address.
 
 ```
-Would you like to set a costum password?[y/N]: 
-Would you like to set costum user Information for the GnPG key?[y/N]: y 
+Would you like to set a custom password?[y/N]: 
+Would you like to set custom user Information for the GnPG key?[y/N]: y 
 Please enter the following Information... 
 
 Real name: "your name" 
