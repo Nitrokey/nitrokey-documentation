@@ -655,5 +655,6 @@ I used the following resources to help in compiling this document.
 * [How to ensure the serial numbers of your intermediate CA and server certs are up to spec](https://www.phildev.net/ssl/creating_ca.html)
 * [How to generate ECC private keys](https://dev.to/benjaminblack/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc)
 * [How to find the PCKS11 URI from your HSM](https://www.infradead.org/openconnect/pkcs11.html)
+* [Troubleshooting (forum)](https://support.nitrokey.com/t/pki-ca-nitrokey-hsm-does-not-support-signing/2598/14)
 
 This document was originally [written by lyntux](https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623).
