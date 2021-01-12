@@ -35,6 +35,7 @@ module.exports = {
 
       '/fido2/linux/': [
         ['', 'Nitrokey FIDO2, Linux'],
+        'desktop-login-and-linux-user',
       ],
 
       // NK HSM menu
@@ -271,6 +272,7 @@ module.exports = {
       '/u2f/linux/': [
         ['', 'Nitrokey FIDO U2F, Linux'],
         'two-factor-authentication-for-erp-software-odoo',
+        'desktop-login-and-linux-user',
       ],
 
       // NitroPad X230
