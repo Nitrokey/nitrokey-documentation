@@ -1,1 +1,0 @@
-../../pro/linux/hard-disk-encryption.md

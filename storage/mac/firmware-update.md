@@ -1,1 +1,0 @@
-../..//storage/windows/firmware-update.md

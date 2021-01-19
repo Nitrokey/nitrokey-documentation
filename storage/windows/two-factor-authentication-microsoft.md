@@ -1,1 +1,0 @@
-../../pro/windows/two-factor-authentication-microsoft.md

@@ -1,1 +1,0 @@
-../../pro/linux/openvpn-configuration-with-easyrsa.md

@@ -1,1 +1,0 @@
-../nitrokey-start-supports-elliptic-curves-ecc.md

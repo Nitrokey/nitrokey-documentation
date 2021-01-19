@@ -1,1 +1,0 @@
-../verify-sealed-hardware.md

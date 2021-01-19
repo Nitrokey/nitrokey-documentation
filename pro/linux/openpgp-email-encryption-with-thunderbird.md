@@ -1,1 +1,0 @@
-../windows/openpgp-email-encryption-with-thunderbird.md
