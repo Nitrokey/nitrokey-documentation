@@ -1,1 +1,1 @@
-.. include:: ../../pro/windows/openpgp-email-encryption-with-thunderbird.rst 
+.. include:: ../../pro/openpgp-email-encryption-with-thunderbird.rst 

@@ -1,1 +1,1 @@
-.. include:: ../windows/login-to-windows-domain-computers-with-ms-active-directory.rst 
+.. include:: ../login-to-windows-domain-computers-with-ms-active-directory.rst 

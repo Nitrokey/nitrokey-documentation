@@ -1,1 +1,1 @@
-.. include:: ../../pro/windows/openpgp-email-encryption-with-outlook.rst 
+.. include:: /pro/windows/openpgp-email-encryption-with-outlook.rst 

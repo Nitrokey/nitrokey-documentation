@@ -18,7 +18,7 @@ version for Windows can be found `here <https://www.gpg4win.org>`__. You
 need to make sure to have “GpgOL” checked during installation process
 (see below).
 
-.. figure:: ./images/openpgp-email-encryption-with-outlook/1.png
+.. figure:: /pro/windows/images/openpgp-email-encryption-with-outlook/1.png
    :alt: img1
 
 
@@ -30,7 +30,7 @@ After installing GPG4Win along with GpgOL, you will see a new icon
 labeled “Secure” in the composing window. To encrypt and sign a mail you
 just click on the sign like seen below.
 
-.. figure:: ./images/openpgp-email-encryption-with-outlook/2.png
+.. figure:: /pro/windows/images/openpgp-email-encryption-with-outlook/2.png
    :alt: img2
 
 
@@ -39,7 +39,7 @@ GnuPG will start signing and encrypting the mail as soon as you click on
 ‘send’. You are requested to choose the identity you want to sign with
 and encrypt for.
 
-.. figure:: ./images/openpgp-email-encryption-with-outlook/3.png
+.. figure:: /pro/windows/images/openpgp-email-encryption-with-outlook/3.png
    :alt: img3
 
 
@@ -47,7 +47,7 @@ and encrypt for.
 Furthermore, you are asked for typing in the User PIN of the Nitrokey
 for signing the mail.
 
-.. figure:: ./images/openpgp-email-encryption-with-outlook/4.png
+.. figure:: /pro/windows/images/openpgp-email-encryption-with-outlook/4.png
    :alt: img4
 
 

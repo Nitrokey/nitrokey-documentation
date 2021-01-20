@@ -1,1 +1,1 @@
-.. include:: ../../pro/windows/login-with-eidauthenticate-on-stand-alone-windows-computers.rst 
+.. include:: ../../pro/login-with-eidauthenticate-on-stand-alone-windows-computers.rst 

@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Nitrokey
+# This file is distributed under the same license as the Nitrokey package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nitrokey \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-20 13:10+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../pro/linux/hard-disk-encryption.rst:2
+msgid "Hard Disk Encryption"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:5
+msgid "VeraCrypt (formerly TrueCrypt)"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:7
+msgid "`VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__ is a free and Open Source disk encryption software for Windows, macOS, and GNU/Linux. It is the successor of TrueCrypt and thus recommended, although the following instructions should apply to TrueCrypt as well."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:12
+msgid "Follow these steps to use the program with `Nitrokey Storage 2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ or `Nitrokey Pro 2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:17
+msgid "Install the latest release of `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__, or download the `PKCS#11 library <http://smartcard-auth.de/download-en.html>`__."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:20
+msgid "Choose the library in VeraCrypt under Settings>Preferences>Security Token (location depends on system, e.g. ``/usr/lib/opensc``)."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:22
+msgid "Generate a 64 Byte key file via Tools>Keyfile Generator."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:23
+msgid "Now you should be able to import the generated key file via Tools>Manage Security Token Keyfiles. You should choose the first Slot (``[0] User PIN``). The keyfile is then stored on the Nitrokey as ‘Private Data Object 1’ (``PrivDO1``)."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:27
+msgid "After this you should wipe the original keyfile on your Computer securely!"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:29
+msgid "Now you can use VeraCrypt with the Nitrokey: Create a container, choose the keyfile on the device as an alternative to a password."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:34
+msgid "Security Consideration"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:36
+msgid "Please note that VeraCrypt doesn’t make use of the full security which Nitrokey (and smart cards in general) offer. Instead it stores a keyfile on the Nitrokey which theoretically could be stolen by a computer virus after the user enters the PIN."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:41
+msgid "Note: `Aloaha Crypt <http://www.aloaha.com/aloaha-crypt-disk/>`__ is based on TrueCrypt/VeraCrypt but without the described security limitation."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:46
+msgid "Hard Disk Encryption on Linux with LUKS/dm-crypt"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:48
+msgid "Here are `excellent instructions <http://blog.kumina.nl/2010/07/two-factor-luks-using-ubuntu/>`__ how to use Nitrokey to encrypt your hard disk under Linux with LUKS/dm-crypt. `Other instructions <https://wiki.ubuntu.com/SmartCardLUKSDiskEncryption>`__."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:54
+msgid "Purism has created a `simple script <https://docs.puri.sm/PureBoot/LibremKeyLUKS.html>`__ to add the Nitrokey/LibremKey as a way to unlock LUKS partitions (not tested by Nitrokey yet)."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:59
+msgid "`This project <https://github.com/artosan/nitroluks/>`__ aims to ease the use of LUKS with the Nitrokey Pro or Storage based on the Password Safe (not tested by Nitrokey yet). A description on how to use it on Gentoo can be found `here <https://amedeos.github.io/gentoo/nitrokey/2019/01/21/gentoo-nitrokey-luks.html>`__."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:65
+msgid "For Arch Linux, see `initramfs-scencrypt <https://github.com/fuhry/initramfs-scencrypt>`__."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:69
+msgid "Storage Encryption on Linux with EncFS"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:73
+msgid "Prerequisite"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:75
+msgid "Please ensure that you `installed the device driver, changed the default PINs and generated or imported keys with GnuPG <https://www.nitrokey.com/start>`__."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:79
+msgid "`EncFS <http://www.arg0.net/encfs>`__ is an easy to utlity for encrypted file systems and it is based on `FUSE <http://de.wikipedia.org/wiki/Filesystem_in_Userspace>`__. You may follow these steps to use it with very long passwords and Nitrokey Pro 2:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:86
+msgid "Initialization"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:88
+msgid "Create a key file with random data:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:95
+msgid "Encrypt the key file and use the User-ID of your Nitrokey"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:102
+msgid "Remove the key file in clear text:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:109
+msgid "Create mount point:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:116
+msgid "Create the actual encryption folder"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:125
+msgid "Unmount the new file system:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:133
+msgid "Usage"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:135
+msgid "Mount encrypted file system and enter PIN of Nitrokey:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:142
+msgid "After usage, unmount the file system:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:150
+msgid "Storage Encryption on Linux with ECryptFS"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:152
+msgid "`eCryptfs <https://www.ecryptfs.org/>`__ is a file based transparent encryption file system for Linux which can be used with Nitrokey through a PKCS#11 driver."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:156
+msgid "See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:158
+msgid "Import the certificate and key to the Nitrokey"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:166
+msgid "Create the file ~/.ecryptfsrc.pkcs11:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:173
+msgid "Enter this content:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:185
+msgid "Copy the serialized id for later usage:"
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:195
+msgid "Alternatively, try `ESOSI <http://sourceforge.net/projects/esosi/>`__ or follow these steps using OpenSC and OpenVPN."
+msgstr ""
+
+#: ../pro/linux/hard-disk-encryption.rst:198
+msgid "Source of the guide: https://www.nitrokey.com/documentation/applications#hard-disk-encryption"
+msgstr ""
+

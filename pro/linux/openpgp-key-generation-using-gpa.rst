@@ -1,1 +1,1 @@
-.. include:: ../windows/openpgp-key-generation-using-gpa.rst 
+.. include:: ../openpgp-key-generation-using-gpa.rst 

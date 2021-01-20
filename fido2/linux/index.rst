@@ -143,6 +143,7 @@ seconds until the green or blue LED lights up.
 +-----------------+-----------------+-----------------+-----------------+
 | - (no LED       | Nitrokey is     |                 |                 |
 | signal)         | idle            |                 |                 |
+|                 |                 |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | - (no LED       | Auto-accept     | Within first 2  | Nitrokey is     |
 | signal)         | single FIDO     | seconds after   | automatically   |
