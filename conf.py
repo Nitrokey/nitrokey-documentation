@@ -83,16 +83,26 @@ pygments_style = None
 html_theme = "divio_docs_theme"
 
 html_theme_options = {
+        # Options of read the docs theme
 	'logo_only': False,
 	'display_version': False,
 	'prev_next_buttons_location': 'bottom',
 	'style_external_links': True,
 	# Toc options
-	'collapse_navigation': False,
+	'collapse_navigation': True,
 	'sticky_navigation': False,
 	'navigation_depth': 3,
 	'includehidden': True,
-	'titles_only': False}
+	'titles_only': False,
+        'canonical_url': "https://docs.nitrokey.com/",
+        # Options of Divio (divio bases on read the docs theme)
+        'analytics_id' : '',
+        'vcs_pageview_mode' : '',
+        'show_cloud_banner' : False, #False makes the divio box disappear
+        'cloud_banner_url' : '',
+        'cloud_banner_markup' : '',
+        'segment_id' : ''
+        }
 
 html_title = "Nitrokey Documentation"
 html_logo = "logo.png"
