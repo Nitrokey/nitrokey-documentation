@@ -1,6 +1,13 @@
 Nitrokey Pro, Windows
 =====================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 Getting Started
 ---------------
 

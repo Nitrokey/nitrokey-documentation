@@ -1,6 +1,13 @@
 Nitrokey Start, Mac
 ===================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 1. Install `GnuPG 2.1 <https://gpgtools.org/>`__ or higher.
 2. Connect your Nitrokey to your computer and confirm all dialogs so
    that the USB smart card device driver gets installed almost

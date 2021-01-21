@@ -1,11 +1,10 @@
-Nitrokey Documentation
-======================
+.. figure:: logo.png
+   :alt: Nitrokey - Secure your digital life
 
-Secure your digital life
-------------------------
+Choose your product
+====================
 
 .. toctree::
-   :caption: Nitrokey
    :maxdepth: 1
 
    fido2/index
@@ -15,5 +14,4 @@ Secure your digital life
    start/index
    storage/index
    x230/index
-
 

@@ -3,5 +3,10 @@ NitroPad X230
 
 Choose your operating system:
 
--  `Qubes OS </x230/qubes/>`__
--  `Ubuntu Linux </x230/ubuntu/>`__
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Qubes OS <qubes/index>
+   Ubuntu Linux <ubuntu/index>
+

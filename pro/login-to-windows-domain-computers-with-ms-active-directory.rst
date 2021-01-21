@@ -4,7 +4,7 @@ Login to Windows Domain Computers With MS Active Directory
 1. Download and install the latest
    `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
 2. Use a text editor to add the following settings to
-   *C::raw-latex:`\Program `Files:raw-latex:`\OpenSC `Project:raw-latex:`\OpenSC`:raw-latex:`\opensc`.conf*.
+   *C:\Program Files:\OpenSC Project\OpenSC\opensc.conf*.
 
 ::
 

@@ -1,6 +1,13 @@
 Nitrokey FIDO U2F with Linux
 ============================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 The Nitrokey FIDO U2F supports **two-factor authentication (2FA)**. With
 two-factor authentication (2FA), the Nitrokey FIDO U2F is checked in
 addition to the password.

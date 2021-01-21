@@ -1,6 +1,13 @@
 Nitrokey HSM with macOS
 =======================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 1. Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
    Alternatively, install
    `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__

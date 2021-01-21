@@ -19,7 +19,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Nitrokey'
+project = 'Nitrokey Documentation'
 copyright = 'Nitrokey'
 author = 'Nitrokey'
 
@@ -79,15 +79,12 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_theme = 'alabaster'
-
-#html_theme = "sphinx_rtd_theme"
 
 html_theme = "divio_docs_theme"
 
 html_theme_options = {
 	'logo_only': False,
-	'display_version': True,
+	'display_version': False,
 	'prev_next_buttons_location': 'bottom',
 	'style_external_links': True,
 	# Toc options

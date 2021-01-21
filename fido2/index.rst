@@ -3,6 +3,11 @@ Nitrokey FIDO2
 
 Choose your operating system:
 
--  `Windows <./windows/>`__
--  `Mac <./mac/>`__
--  `Linux <./linux/>`__
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Windows <windows/index>
+   macOS <mac/index>
+   Linux <linux/index>
+

@@ -45,7 +45,7 @@ below).
 
 
 On Windows the right file lays under
-“C::raw-latex:`\Windows`:raw-latex:`\System32`:raw-latex:`\opensc`-pkcs11.dll”.
+“C:\Windows\System32\opensc-pkcs11.dll”.
 On macOS and GNU/Linux the file should be in
 “/lib/pkcs11/opensc-pkcs11.so” or “/usr/lib/pkcs11/opensc-pkcs11.so” or
 alike. Press “OK” twice and you are back in security section of the

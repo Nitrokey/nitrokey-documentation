@@ -1,6 +1,13 @@
 Nitrokey Storage, Windows
 =========================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 1. Connect your Nitrokey to your computer and confirm all dialogs so
    that the USB smart card device driver gets installed almost
    automatically.

@@ -1,6 +1,13 @@
 Nitrokey Storage, Mac
 =====================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 1. Important: Once you plug in the Nitrokey, your computer will start
    the Keyboard Setup Assistant. **Don’t run through this assistant but
    exit it right away.**

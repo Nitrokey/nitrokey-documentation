@@ -1,6 +1,13 @@
 Nitrokey HSM with GNU/Linux
 ===========================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 1. Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. You need
    at least version 0.19. You can find recent builds for debian-based
    systems like Ubuntu

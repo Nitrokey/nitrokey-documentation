@@ -16,7 +16,6 @@ project <https://github.com/OpenSC/OpenSC/wiki>`__.
 ::: note Windows users with 64-bit system (standard) need to install
 both, the 32-bit and the 64-bit version of OpenSC! :::
 
-.. _section-1:
 
 Settings in Outlook
 -------------------
@@ -31,7 +30,6 @@ already be recognized by Outlook.
 
 |img2|
 
-.. _section-2:
 
 Usage
 -----

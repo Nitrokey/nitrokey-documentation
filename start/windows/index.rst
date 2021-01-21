@@ -1,6 +1,13 @@
 Nitrokey Start, Windows
 =======================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 1. Install `Gpg4win <https://www.gpg4win.org/>`__ on your Computer.
 2. Connect your Nitrokey to your computer and confirm all dialogs so
    that the USB smart card device driver gets installed almost

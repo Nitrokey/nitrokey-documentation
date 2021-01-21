@@ -1,6 +1,13 @@
 Nitrokey FIDO2 with Windows
 ===========================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 The Nitrokey FIDO2 supports two-factor authentication (2FA) and
 passwordless authentication:
 
@@ -143,6 +150,7 @@ seconds until the green or blue LED lights up.
 +-----------------+-----------------+-----------------+-----------------+
 | - (no LED       | Nitrokey is     |                 |                 |
 | signal)         | idle            |                 |                 |
+|                 |                 |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | - (no LED       | Auto-accept     | Within first 2  | Nitrokey is     |
 | signal)         | single FIDO     | seconds after   | automatically   |

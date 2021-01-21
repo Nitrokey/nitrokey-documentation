@@ -1,6 +1,13 @@
 Nitrokey Start, Linux
 =====================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 1. Install ``scdaemon`` and GnuPG 2.1 or higher by using your package
    manager (e.g. ``apt update && apt install scdaemon gpg2`` on Ubuntu).
 2. Connect your Nitrokey to your computer.

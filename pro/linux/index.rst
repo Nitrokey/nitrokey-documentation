@@ -1,6 +1,13 @@
 Nitrokey Pro, Linux
 ===================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 1. To access the OpenPGP smart card of the Nitrokey, install the package
    libccid. On Debian/Ubuntu based Distributions type in terminal: *sudo
    apt-get update && sudo apt-get install libccid*

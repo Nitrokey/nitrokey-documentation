@@ -1,6 +1,13 @@
 NitroPad X230 with Ubuntu Linux
 ===============================
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
+
 With the NitroPad X230, malicious changes to the BIOS, operating system,
 and software can be easily detected. For example, if you left your
 NitroPad in a hotel room, you can use your Nitrokey to check if it has

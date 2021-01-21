@@ -41,7 +41,7 @@ on macOS).
 
 To make these commands as simple as possible, the .p12 file needs to be
 in your home folder. On Windows this is usually
-‘C::raw-latex:`\Users`:raw-latex:`\yourusername`’ and on macOS and
+‘C:\Users\yourusername’ and on macOS and
 GNU/Linux system it will be ‘/home/yourusername’. If you do not store
 the .p12 file there, you have to adapt the path in the commands below.
 Please plug in the Nitrokey before submitting the commands.
