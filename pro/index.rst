@@ -1,5 +1,5 @@
-Nitrokey Pro
-============
+Nitrokey Pro 2
+==============
 
 Choose your operating system:
 

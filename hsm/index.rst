@@ -1,5 +1,5 @@
-Nitrokey HSM
-============
+Nitrokey HSM 2
+==============
 
 Choose your operating system:
 

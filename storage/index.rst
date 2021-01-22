@@ -1,5 +1,5 @@
-Nitrokey Storage
-================
+Nitrokey Storage 2
+==================
 
 Choose your operating system:
 
