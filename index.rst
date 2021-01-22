@@ -6,6 +6,8 @@ Choose your product
 
 .. toctree::
    :maxdepth: 1
+   :titlesonly:
+
 
    fido2/index
    u2f/index

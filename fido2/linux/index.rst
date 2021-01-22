@@ -2,7 +2,7 @@ FIDO2 with Linux
 ================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 0
    :glob:
    :hidden:
 
