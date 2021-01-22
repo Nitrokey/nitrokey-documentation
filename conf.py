@@ -84,7 +84,7 @@ html_theme = "divio_docs_theme"
 
 html_theme_options = {
         # Options of read the docs theme
-	'logo_only': False,
+	'logo_only': True,
 	'display_version': False,
 	'prev_next_buttons_location': 'bottom',
 	'style_external_links': True,
@@ -92,7 +92,7 @@ html_theme_options = {
 	'collapse_navigation': True,
 	'sticky_navigation': False,
 	'navigation_depth': 3,
-	'includehidden': True,
+	'includehidden': True, # to show also hidden TOCs in the menu bar
 	'titles_only': False,
         'canonical_url': "https://docs.nitrokey.com/",
         # Options of Divio (divio bases on read the docs theme)
@@ -118,6 +118,12 @@ html_favicon = "favicon.ico"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_css_files = [
+        'css/custom.css',
+        'css/divio.css'
+        ]
+
+html_style = 'css/custom.css'
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.

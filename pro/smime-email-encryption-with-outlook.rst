@@ -13,8 +13,9 @@ You need to have OpenSC installed on your System. Please have a look at
 the `wiki page of the OpenSC
 project <https://github.com/OpenSC/OpenSC/wiki>`__.
 
-::: note Windows users with 64-bit system (standard) need to install
-both, the 32-bit and the 64-bit version of OpenSC! :::
+.. note::
+    
+  Windows users with 64-bit system (standard) need to install both, the 32-bit and the 64-bit version of OpenSC!
 
 
 Settings in Outlook
@@ -39,11 +40,9 @@ in the ‘Options’ ribbon of the compose window.
 
 |img3|
 
-::: note Outlook will only encrypt message to mail addresses which are
-saved in your address book. So make sure, that the persons you want to
-write an encrypted mail to have an entry in Outlook’s contacts. You can
-ask the person to write you a signed mail, so that you can import the
-certificate information. :::
+.. note::
+
+ Outlook will only encrypt message to mail addresses which are saved in your address book. So make sure, that the persons you want to write an encrypted mail to have an entry in Outlook’s contacts. You can ask the person to write you a signed mail, so that you can import the certificate information.
 
 Depending on your certificate or the certificate of your partners you
 may have to import a so-called root certificate. This is the certificate

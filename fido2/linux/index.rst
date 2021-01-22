@@ -148,12 +148,12 @@ seconds until the green or blue LED lights up.
 | blink)          | to work         | after powering  |                 |
 |                 |                 | up              |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| - (no LED       | Nitrokey is     |                 |                 |
-| signal)         | idle            |                 |                 |
+| (no LED signal) | Nitrokey is     |                 |                 |
+|                 | idle            |                 |                 |
 |                 |                 |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| - (no LED       | Auto-accept     | Within first 2  | Nitrokey is     |
-| signal)         | single FIDO     | seconds after   | automatically   |
+| (no LED signal) | Auto-accept     | Within first 2  | Nitrokey is     |
+|                 | single FIDO     | seconds after   | automatically   |
 |                 | registration or | powering up     | accepting any   |
 |                 | authentication  |                 | single FIDO     |
 |                 | operation       |                 | registration or |

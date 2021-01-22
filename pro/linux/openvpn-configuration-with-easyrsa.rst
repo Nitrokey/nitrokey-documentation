@@ -1,8 +1,9 @@
 OpenVPN Configuration with Easy-RSA
 ===================================
 
-**Notice:** This guide is work-in-progress, and will be updated
-accordinlgy. Please take this status into consideration.
+.. note::
+
+  This guide is work-in-progress, and will be updated accordinlgy. Please take this status into consideration.
 
 This guide shows how to configure OpenVPN clients to login using a
 `Nitrokey Pro
@@ -110,21 +111,18 @@ Server side
 
 1. .. rubric:: First we need to enable IP Forwarding by editing
       ``/etc/sysctl.conf`` file
-      :name: first-we-need-to-enable-ip-forwarding-by-editing-etcsysctl.conf-file
 
 .. code:: bash
 
    $ editor /etc/sysctl.conf
 
 2. .. rubric:: Uncomment or edit accordingly the following line
-      :name: uncomment-or-edit-accordingly-the-following-line
 
 .. code:: bash
 
    net.ipv4.ip_forward=1
 
 3. .. rubric:: Close after saving it, and enter this command
-      :name: close-after-saving-it-and-enter-this-command
 
 .. code:: bash
 
@@ -136,7 +134,6 @@ instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos?__
 
 4. .. rubric:: Change to root and download the GPG key that signed the
       package
-      :name: change-to-root-and-download-the-gpg-key-that-signed-the-package
 
 .. code:: bash
 
@@ -145,7 +142,6 @@ instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos?__
 
 5. .. rubric:: Add the URL of the adequate OpenVPN packages to the
       ``sources.list`` file
-      :name: add-the-url-of-the-adequate-openvpn-packages-to-the-sources.list-file
 
 .. code:: bash
 
@@ -158,7 +154,6 @@ We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN
 to login.
 
 6. .. rubric:: Next we download OpenVPN
-      :name: next-we-download-openvpn
 
 .. code:: bash
 
