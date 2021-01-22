@@ -1,1 +1,0 @@
-../windows/openpgp-key-generation-on-device.md

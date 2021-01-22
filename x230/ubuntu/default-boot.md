@@ -1,1 +1,0 @@
-../default-boot.md

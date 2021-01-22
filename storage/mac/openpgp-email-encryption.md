@@ -1,1 +1,0 @@
-../../pro/openpgp-email-encryption.md

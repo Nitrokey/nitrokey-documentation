@@ -1,1 +1,0 @@
-../two-factor-authentication-for-erp-software-odoo.md

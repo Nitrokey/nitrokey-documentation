@@ -1,1 +1,0 @@
-../factory-reset.md

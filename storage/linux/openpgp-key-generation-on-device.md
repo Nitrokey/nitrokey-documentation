@@ -1,1 +1,0 @@
-../../pro/openpgp-key-generation-on-device.md

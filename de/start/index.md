@@ -1,3 +1,0 @@
-# Nitrokey Start
-
-Bla

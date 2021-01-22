@@ -1,1 +1,0 @@
-../two-factor-authentication-with-otp.md
