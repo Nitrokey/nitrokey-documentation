@@ -1,12 +1,9 @@
 Activate Update Mode Manually
 =============================
 
-**Note: The following steps are only necessary if you are using Windows
-10 Build 1809 (or higher) and Nitrokey Storage with firmware 0.52 or
-older. In all other cases, or if you have access to another system, the
-regular update as
-described**\ `here <https://docs.nitrokey.com/storage/windows/firmware-update.html>`__\ **is
-sufficient and easier.**
+.. note::
+
+  The following steps are only necessary if you are using Windows 10 Build 1809 (or higher) and Nitrokey Storage with firmware 0.52 or older. In all other cases, or if you have access to another system, the regular update as described **\ `here <https://docs.nitrokey.com/storage/windows/firmware-update.html>`__\ ** is sufficient and easier.**
 
 What is needed
 --------------
