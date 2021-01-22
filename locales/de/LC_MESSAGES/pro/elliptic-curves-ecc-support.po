@@ -1,0 +1,190 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Nitrokey
+# This file is distributed under the same license as the Nitrokey package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nitrokey \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-20 13:10+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../pro/elliptic-curves-ecc-support.rst:2
+msgid "Elliptic Curves (ECC) Support"
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:5
+msgid "RSA-2048 Becomes Increasingly Insecure"
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:7
+msgid ""
+"For security reasons, the German Federal Office for Information Security "
+"(Bundesamt für Sicherheit in der Informationstechnik, BSI) no longer "
+"recommends RSA keys with a length of 2048 bit `to be used after 2022 "
+"<https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102"
+"/BSI-"
+"TR-02102-1.pdf;jsessionid=064DAA7AD3195C1C87B1C71B2760DB4E.1_cid360?__blob=publicationFile&v=7>`__."
+" This means that longer keys will need to come into use in the "
+"foreseeable future. Assuming a usage period of five years, is is already "
+"necessary to generate longer keys. However, longer RSA keys with 3072 bit"
+" or 4096 bit are significantly slower. For this reason the new Nitrokey "
+"Storage 2 and Pro 2 (resp. the integrated OpenPGP Card version 3.3) "
+"supports encryption by means of `elliptic-curve cryptography (ECC) "
+"<https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__. This "
+"method is considered to be just as secure with smaller ECC keys as longer"
+" RSA keys and is also considerably faster."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:22
+msgid "Basics of Elliptic-Curve Cryptography"
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:24
+msgid ""
+"In contrast to RSA, there are many different forms (so-called curves) of "
+"elliptic-curve cryptography. Notably, the `NSA was involved "
+"<https://www.schneier.com/essays/archives/2007/11/did_nsa_put_a_secret.html>`__"
+" in the development of the NIST curves. Even if there is no evidence of "
+"back doors in the curves, using a certain curve can pose a question of "
+"trust. Fortunately the new Nitrokey Storage 2 and Pro 2 support two kind "
+"of curves, namely NIST and Brainpool. In what follows we will use "
+"Brainpool curves. `This article <https://arstechnica.com/information-"
+"technology/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-"
+"curve-cryptography/>`__ provides a good entry point for gaining a general"
+" understanding of elliptic-curve cryptography."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:37
+msgid "System Requirements"
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:39
+msgid ""
+"In order to create keys based on elliptic curves a Nitrokey Storage 2 / "
+"Pro 2 and GnuPG version 2.1.17 or higher are required."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:42
+msgid "You can read Nitrokey’s OpenPGP Card version via ``gpg2 —card-status``:"
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:52
+msgid ""
+"The ‘Version’ field represents the version of the OpenPGP Card integrated"
+" in the Nitrokey — in this case it is 3.3 as needed for Elliptic-curve "
+"cryptography. OpenPGP Card version 2.2 doesn’t support ECC."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:57
+msgid ""
+"You can learn about the installed version of GnuPG via ``gpg2  "
+"--version``. At least version 2.1.16 is required. The newest GnuPG "
+"version for Windows can be found `here <https://www.gpg4win.org/>`__ and "
+"the newest version for MacOS can be found `here "
+"<https://gpgtools.org/>`__. A suitable version of GnuPG is included in "
+"the GNU/Linux distributions Ubuntu (since 18.04), Debian (from Stretch "
+"onwards), Arch Linux, Fedora (from Release 26 onwards) and openSUSE "
+"Tumbleweed. At the end of this articles are instructions how to manually "
+"update GnuPG on older Ubuntu versions."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:69
+msgid ""
+"GnuPG 2.0 is still being used, but support for it has been discontinuied "
+"in 2017. All communication partners must use GnuPG 2.1 or newer for email"
+" encryption by means of ECC, otherwise incompatibility issues might "
+"arise. Therefore you should only use ECC if you are sure you will be able"
+" to circumvent this problem."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:76
+msgid "Key Generation on the Nitrokey Storage 2 / Pro 2"
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:78
+msgid ""
+"Once these requirements are fulfilled, you can get started. (Warning: "
+"existing keys will be overwritten in the process!) You now have two "
+"options. The first option is to create the key directly on the Nitrokey "
+"Storage 2 / Pro 2. The benefit here is that the key will never be outside"
+" the device and as such can never be read out. The second option is to "
+"import a previously locally generated key. The advantage in this case is "
+"that you can securely store a backup of the key, which can then be "
+"restored in case the Nitrokey is lost. Only the first option is described"
+" below. In order to create a key with backup, you can access `the "
+"following instructions "
+"<https://www.gniibe.org/memo/software/gpg/keygen-25519.html>`__ and use "
+"this `general information "
+"<https://wiki.fsfe.org/TechDocs/CardHowtos/CardWithSubkeysUsingBackups>`__"
+" to transfer the key to the Nitrokey."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:93
+msgid ""
+"Within GnuPG there is already a “generate” command, which can be used to "
+"easily create keys on the device. However it is not as yet possible to "
+"select the type of key directly, so the key must first be prepared. We "
+"use the following commands for this:"
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:104
+msgid ""
+"Alternatively, other curves could be selected, as described in the next "
+"section."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:107
+msgid ""
+"Now we enter ``gpg2 --card-edit`` and see that brainpoolP256r1 is under "
+"“key attributes” instead of rsa2048."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:133
+msgid "Then we create the key."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:165
+msgid ""
+"The Nitrokey now incorporates elliptic-curve cryptography instead of RSA "
+"keys and can be used as usual."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:169
+msgid "Available Curves"
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:171
+msgid ""
+"In the above procedure we chose the Brainpool curves. Alternatively, NIST"
+" curves can be used. The configuration is carried out as follows:"
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:181
+msgid "Update of GnuPG on Ubuntu"
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:183
+msgid ""
+"The following steps are needed only if you are running a Ubuntu version "
+"older than 18.04. You can install GnuPG 2.1.18 on such system with the "
+"commands below. This involves newer Debian packages, which is the easiest"
+" option. This approach has been tested successfully on Ubuntu 17.10 and "
+"propbably works on 16.04 as well. However, the occurence of problems "
+"during usage can‘t be excluded."
+msgstr ""
+
+#: ../pro/elliptic-curves-ecc-support.rst:202
+msgid ""
+"In case you want to undo the installation, you have to execute the "
+"following commands:"
+msgstr ""
+
