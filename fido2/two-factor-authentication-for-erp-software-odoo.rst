@@ -25,7 +25,7 @@ This solution was developed together with our partner
 development and customization of Odoo. If you are interested, please
 contact us.
 
-`Contakt <https://www.nitrokey.com/de/kontakt>`__
+`Contact <https://www.nitrokey.com/contact>`__
 
 Video: Two-Factor-Authentication with the Nitrokey FIDO U2F in Odoo
 -------------------------------------------------------------------
