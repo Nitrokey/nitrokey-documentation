@@ -9,12 +9,16 @@ easy to set up. See `Thunderbird’s
 documentation <https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`__
 for details. Here is a `comprehensive German
 guide <https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-nitrokey-storage/>`__.
-## Troubleshooting 1. Error message:
+
+Troubleshooting
+###############
+
+1. Error message:
 ``The configured key ID '4BA0183FCBA844A7' cannot be found on your keyring``
-- make sure that: - public key is imported to the Thunderbird’s manager
-- the key ID does not contain any whitespace, and consists of 16
-characters from range 0-9 A-F - you have GPA or Kleopatra software
-installed
+
+- Make sure that the public key is imported to the Thunderbird’s manager and
+- The key ID does not contain any whitespace, and consists of 16 characters from range 0-9 A-F
+- you have GPA or Kleopatra software installed.
 
 Please use Kleopatra or
 `GPA <https://docs.nitrokey.com/start/windows/openpgp-key-generation-using-gpa.html>`__

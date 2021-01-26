@@ -213,11 +213,13 @@ In Windows 10 version 1909 or older the Nitrokey has to be reinserted
 right before the reset operation is executed. The reset operation has to
 be confirmed by touching the touch button twice.
 
-Detailed scenario: 1. Reinsert the Nitrokey right before executing reset
-operation 2. Start the reset operation in the user interface 2. When the
-LED blinks white, touch the touch button for 1 second until it turns
-green. 3. Release the touch 4. When the LED blinks red, touch the touch
-button for 5 seconds until it turns blue.
+Detailed scenario:
+
+1. Reinsert the Nitrokey right before executing reset operation
+3. Start the reset operation in the user interface
+4. When the LED blinks white, touch the touch button for 1 second until it turns green.
+5. Release the touch
+6. When the LED blinks red, touch the touch button for 5 seconds until it turns blue.
 
 Windows 10 on a Virtual Machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
