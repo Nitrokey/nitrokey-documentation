@@ -3,15 +3,16 @@ Setting KDF-DO
 
 At the moment it is only possible to set the KDF-DO, when the Nitrokey Start is empty (just after a factory reset).
 
+Overview:
 
 1.    Run factory reset
-2.    Set up KDF
+2.    Set up KDF-DO using GnuPG
 3.    Change Admin PIN (optional; without keys only Admin PIN change is possible)
 4.    Import / generate keys
 5.    Change User and Admin PIN
 
 
-Setting KDF:
+Setting KDF-DO using GnuPG:
 
 1.      Run `gpg2 --card-edit`
 2.      `$ admin`
