@@ -13,16 +13,15 @@ Nitrokey Start, Windows
    that the USB smart card device driver gets installed almost
    automatically.
 
-::: note Windows may fail to install an additional device driver for the
-smart card. Its safe to ignore this warning. ::: 3. Use GnuPG to
-`generate new keys or import existing
-ones <https://www.nitrokey.com/documentation/openpgp-email-encryption>`__.
+.. note::
+   Windows may fail to install an additional device driver for the smart card. Its safe to ignore this warning.
 
-| ::: note It is indeed necessary to first import or create new keys and
-  change the PINs afterwards. Otherwise changing User PIN will fail!
-  Furthermore overriding keys results in PIN reset (default values),
-  please keep this in mind! :::
-| 4. Change the Admin PIN (default: ``12345678``) and then the User PIN
+3. Use GnuPG to `generate new keys or import existing ones <https://www.nitrokey.com/documentation/openpgp-email-encryption>`__.
+
+.. note::
+   It is indeed necessary to first import or create new keys and change the PINs afterwards. Otherwise changing User PIN will fail! Furthermore overriding keys results in PIN reset (default values),  please keep this in mind!
+
+4. Change the Admin PIN (default: ``12345678``) and then the User PIN
   (default: ``123456``) to your own choices. - The PIN must consist of
   at least 14 characters (starting from RTM.8), can contain any
   character (not only numbers). Do not select only numbers. If your
@@ -34,7 +33,9 @@ ones <https://www.nitrokey.com/documentation/openpgp-email-encryption>`__.
   PIN first and User PIN second! Otherwise the admin-less mode got
   activated, see `this
   instructions <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#>`__
-  for further information. 5. KDF-DO allows for a shorter PIN of 8
+  for further information.
+
+5. KDF-DO allows for a shorter PIN of 8
   characters minimum. Please use greater length for the increased
   security.
 
