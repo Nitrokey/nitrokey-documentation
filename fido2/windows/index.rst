@@ -79,6 +79,8 @@ a distinct LED behavior (red LED light) than normal operations. To reset
 the Nitrokey FIDO2, confirm by touching the touch button for at least 5
 seconds until the green or blue LED lights up.
 
+.. tabularcolumns:: |l|c|p{5cm}|p{5cm}|
+
 +-----------------+-----------------+-----------------+-----------------+
 | LED Color       | Event           | Time Period     | Comments        |
 +=================+=================+=================+=================+
@@ -216,10 +218,10 @@ be confirmed by touching the touch button twice.
 Detailed scenario:
 
 1. Reinsert the Nitrokey right before executing reset operation
-3. Start the reset operation in the user interface
-4. When the LED blinks white, touch the touch button for 1 second until it turns green.
-5. Release the touch
-6. When the LED blinks red, touch the touch button for 5 seconds until it turns blue.
+2. Start the reset operation in the user interface
+3. When the LED blinks white, touch the touch button for 1 second until it turns green.
+4. Release the touch
+5. When the LED blinks red, touch the touch button for 5 seconds until it turns blue.
 
 Windows 10 on a Virtual Machine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
