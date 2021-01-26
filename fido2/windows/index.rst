@@ -226,3 +226,16 @@ Please keep in mind Nitrokey has internal timeout for accepting the FIDO
 reset operation of 10 seconds since powering up. If the Nitrokey will
 connect to a virtual machine later than that, it will return error and
 the operation will be aborted.
+
+Other Ways To Reset
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Nitrokey FIDO2 could be reset by:
+
+* pynitrokey tool: `nitropy fido2 reset` (requires Administrator rights to execute)
+* Google Chrome (not available on Windows): `Manage security keys` - direct link (Chrome only): chrome://settings/securityKeys
+
+What Does Reset Do
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Factory Reset operation regenerates the secret material stored on the Nitrokey FIDO U2F / Nitrokey FIDO2, which makes it a completely new key logic-side. New owner cannot use it to login to account of the previous one. In case of the FIDO2 Resident Keys the material is erased removed.
