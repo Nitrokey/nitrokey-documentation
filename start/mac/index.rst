@@ -28,14 +28,18 @@ Nitrokey Start, Mac
 **Firmware version 1.2.5 or below: In case you forget a PIN or enter it
 wrongly three times you need the reset code to unblock the PIN.
 Otherwise the device wouldn’t be usable anymore! Therefore
-please `set the reset
-code <http://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`__ as
+please** `set the reset
+code <http://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`__ **as
 well when initialising the key!**
 
 Your Nitrokey is now ready to use.
 `Checkout <https://www.nitrokey.com/documentation/applications>`__ the
-various use cases and supported applications. ## Key Creation with
-OpenPGP or S/MIME There are two widely used standards for email
+various use cases and supported applications. 
+
+Key Creation with OpenPGP or S/MIME
+###################################
+
+There are two widely used standards for email
 encryption. While OpenPGP/GnuPG is popular among individuals,
 S/MIME/x.509 is mostly used by enterprises. If you are in doubt which
 one to choose, you should use OpenPGP.
