@@ -9,12 +9,7 @@ Nitrokey yet or if you did not installed OpenSC, please look at `this
 page <https://docs.nitrokey.com/pro/smime-email-encryption.html>`__
 first.
 
-You need to have OpenSC installed on your System. Please have a look at
-the `wiki page of the OpenSC
-project <https://github.com/OpenSC/OpenSC/wiki>`__. While GNU/Linux
-users usually can install OpenSC over the package manager (e.g. sudo apt
-update && sudo apt install opensc on Ubuntu), macOS and Windows users
-can download the installation files from the wiki page.
+You need to have `OpenSC installed <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt update && sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from OpenSC directly.
 
 .. note::
 
