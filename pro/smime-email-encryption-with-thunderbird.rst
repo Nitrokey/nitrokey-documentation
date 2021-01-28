@@ -29,10 +29,8 @@ clicking on ‘Security’ in the account settings window.
 
 
 
-Click on “Security Devices” to import the right PCKS11 module. Click on
-“Load” on the right-hand side. Now give the Module a name (like “OpenSC
-Module”) and click on “Browse” to choose the location of the Module (see
-below).
+Click on “Security Devices” to import the right PCKS11 module. Click on “Load” on the right-hand side. Now give the Module a name (like “OpenSC
+Module”) and click on “Browse” to choose the location of the Module (see below).
 
 .. figure:: /pro/images/smime-email-encryption-with-thunderbird/2.png
    :alt: img2
