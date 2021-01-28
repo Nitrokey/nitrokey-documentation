@@ -20,8 +20,7 @@ Settings in Thunderbird
 -----------------------
 
 Before you can use the Nitrokey in Thunderbird you have to activate S/MIME encryption in the account settings. You can achieve this by
-clicking on the menu and go to ‘Preferences’ -> ‘Account Settings’ and
-clicking on ‘Security’ in the account settings window.
+clicking on the menu and go to ‘Preferences’ -> ‘Account Settings’ and clicking on ‘Security’ in the account settings window.
 
 .. figure:: /pro/images/smime-email-encryption-with-thunderbird/1.png
    :alt: img1
