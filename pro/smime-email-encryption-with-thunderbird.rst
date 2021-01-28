@@ -4,8 +4,7 @@ S/MIME Email Encryption with Thunderbird
 Prerequisites
 -------------
 
-If you do not have a S/MIME key-certificate pair installed on your
-Nitrokey yet or if you did not installed OpenSC, please look at `this
+If you do not have a S/MIME key-certificate pair installed on your Nitrokey yet or if you did not installed OpenSC, please look at `this
 page <https://docs.nitrokey.com/pro/smime-email-encryption.html>`__
 first.
 
