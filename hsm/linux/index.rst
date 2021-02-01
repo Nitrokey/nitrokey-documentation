@@ -15,8 +15,7 @@ Nitrokey HSM with GNU/Linux
    does not have the newest version of OpenSC. Alternatively, install
    `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__
    driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__).
-2. If you didn’t do so already, change the default SO-PIN
-   (“3537363231383830”) to your own choices. See `these
+2. Define SO-PIN and PIN of your own choices. See `these
    instructions <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`__.
    Afterwards you can begin to `generate new
    keys <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#generate-key-pair>`__.
