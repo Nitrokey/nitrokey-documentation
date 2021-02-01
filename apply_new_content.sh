@@ -1,3 +1,5 @@
+echo "$(date) webhook Content change triggered." >> /var/www/sphinx/logs/webhook.log
+
 cd /var/www/sphinx/sphinx/nitrokey-documentation
 
 # pull new content
