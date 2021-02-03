@@ -16,10 +16,10 @@ Requirements
 -  Nitrokey Pro 2, Nitrokey Storage 2, or Nitrokey HSM 2
 
 Configuration
--------------
+~~~~~~~~~~~~~
 
 Create the ``.rules`` file
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------
 
 With your favorite text editor create a file called
 ``85-nitrokey.rules``
@@ -47,7 +47,7 @@ using as following:
 -  Nitrokey Storage: ``ENV{PRODUCT}=="20a0/4109/101"``
 
 Create the ``gnome-screensaver-lock`` script
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------
 
 With your favorite text editor create a file called
 ``gnome-screensaver-lock``
@@ -74,14 +74,14 @@ switches to its session, and locks the screen by prompting the
 screen-saver screen.
 
 Execute the script
-^^^^^^^^^^^^^^^^^^
+------------------
 
 Once all set up, execute the script once, and it will lock the screen.
 It does not matter if the Nitrokey is plugged or not for this first
 execution.
 
 Usage
------
+~~~~~
 
 By now you can log back to your session by entering your password, and
 (re)plug you Nitrokey if you did not do it before.
