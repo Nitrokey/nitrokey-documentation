@@ -81,6 +81,17 @@ pygments_style = None
 # a list of builtin themes.
 #
 
+# Show "Edit on Github
+# "theme_vcs_pageview_mode" must be blob to have the right URL!
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_user": "Nitrokey", # Username
+    "github_repo": "nitrokey-documentation",
+    "github_version": "", # Version
+    "conf_py_path": "master/", # Path in the checkout to the docs root
+    "suffix": ".rst",
+}
+
 html_theme = "divio_docs_theme"
 
 html_theme_options = {
@@ -98,16 +109,17 @@ html_theme_options = {
         'canonical_url': "https://docs.nitrokey.com/",
         # Options of Divio (divio bases on read the docs theme)
         'analytics_id' : '',
-        'vcs_pageview_mode' : '',
+        'vcs_pageview_mode' : 'edit',
         'show_cloud_banner' : False, #False makes the divio box disappear
-        'cloud_banner_url' : '',
-        'cloud_banner_markup' : '',
-        'segment_id' : ''
+        #'cloud_banner_url' : '',
+        #'cloud_banner_markup' : '',
+        #'segment_id' : ''
         }
 
 html_title = "Nitrokey Documentation"
 html_logo = "logo.png"
 html_favicon = "favicon.ico"
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
