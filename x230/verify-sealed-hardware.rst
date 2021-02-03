@@ -16,7 +16,6 @@ The orientation of the photos is such that the battery is on top.
    .. figure:: /x230/images/Schraubenmarkierung.jpg
       :alt: img
 
-      img
 
    This example shows a sealed screw whose glitter represents an
    individual pattern.
@@ -24,7 +23,6 @@ The orientation of the photos is such that the battery is on top.
    .. figure:: /x230/images/Schraube.jpg
       :alt: img
 
-      img
 
 2. If the bag or the screws do not match the photos sent, an
    unauthorized opening of your NitroPad cannot be excluded. In this
