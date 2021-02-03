@@ -8,6 +8,8 @@ Nitrokey FIDO2 with Windows
 
    *
 
+
+
 The Nitrokey FIDO2 supports two-factor authentication (2FA) and
 passwordless authentication:
 
