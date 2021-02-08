@@ -1,6 +1,10 @@
 Windows Logon and S/MIME Email Encryption with Active Directory
 ===============================================================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 Please note that this driver is still in development/testing. Please
 tell us your experiences! See our `contact
 page <https://www.nitrokey.com/contact>`__.

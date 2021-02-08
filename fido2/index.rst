@@ -1,6 +1,8 @@
 Nitrokey FIDO2
 ==============
 
+.. contents:: :local:
+
 Choose your operating system:
 
 .. toctree::

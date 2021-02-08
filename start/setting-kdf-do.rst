@@ -1,6 +1,10 @@
 Setting KDF-DO
 ===================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 At the moment it is only possible to set the KDF-DO, when the Nitrokey Start is empty (just after a factory reset).
 
 Overview:

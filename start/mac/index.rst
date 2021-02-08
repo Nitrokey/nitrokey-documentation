@@ -1,6 +1,8 @@
 Nitrokey Start, Mac
 ===================
 
+.. contents:: :local:
+
 .. toctree::
    :maxdepth: 1
    :glob:

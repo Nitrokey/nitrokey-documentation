@@ -1,6 +1,8 @@
 FIDO2 with Linux
 ================
 
+.. contents:: :local:
+
 .. toctree::
    :maxdepth: 0
    :glob:

@@ -1,6 +1,8 @@
 Nitrokey Start, Linux
 =====================
 
+.. contents:: :local:
+
 .. toctree::
    :maxdepth: 1
    :glob:

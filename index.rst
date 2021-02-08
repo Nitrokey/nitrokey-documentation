@@ -4,6 +4,8 @@
 Choose your product
 ====================
 
+.. contents:: :local:
+
 .. toctree::
    :maxdepth: 1
    :titlesonly:

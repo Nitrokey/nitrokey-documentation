@@ -1,6 +1,8 @@
 Nitrokey FIDO2 with Windows
 ===========================
 
+.. contents:: :local:
+
 .. toctree::
    :maxdepth: 1
    :glob:

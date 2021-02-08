@@ -1,6 +1,10 @@
 Factory Reset
 =============
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 Reasons for resetting to factory settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

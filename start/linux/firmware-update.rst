@@ -1,6 +1,10 @@
 Firmware Update
 ===============
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 To update the firmware of your Nitrokey Start, proceed as follows.
 
 1. Install pip3.

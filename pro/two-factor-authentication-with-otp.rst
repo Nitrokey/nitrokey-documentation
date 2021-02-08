@@ -1,6 +1,10 @@
 Two-factor Authentication with One-Time Passwords (OTP)
 =======================================================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 The use of One-time Passwords (OTP) is called very differently on the
 various services supporting it. Sometimes it is referred to as
 Multi-factor Authentication (MFA), sometimes it is Two-factor

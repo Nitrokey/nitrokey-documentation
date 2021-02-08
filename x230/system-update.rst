@@ -1,6 +1,10 @@
 System update
 =============
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 The NitroPad watches for changes to important system files to detect
 third-party tampering. This means that special steps are sometimes
 necessary when updating the system. This can often be recognized by the

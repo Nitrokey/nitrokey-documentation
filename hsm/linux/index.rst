@@ -1,6 +1,8 @@
 Nitrokey HSM with GNU/Linux
 ===========================
 
+.. contents:: :local:
+
 .. toctree::
    :maxdepth: 1
    :glob:

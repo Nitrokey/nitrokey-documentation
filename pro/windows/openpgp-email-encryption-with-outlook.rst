@@ -1,6 +1,10 @@
 OpenPGP Email Encryption with Outlook
 =====================================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 .. note::
 
    Unfortunately, there is no solution to use OpenPGP in Outlook for

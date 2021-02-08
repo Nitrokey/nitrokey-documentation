@@ -1,6 +1,10 @@
 Replacing Nitrokey Storage PCB
 ==============================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 You can replace your Nitrokey Storage hardware (PCB) within a few
 minutes by following these steps:
 

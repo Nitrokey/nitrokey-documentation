@@ -1,6 +1,10 @@
 OpenPGP Email Encryption
 ========================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 There are two widely used standards for email encryption.
 
 -  OpenPGP/GnuPG is popular among individuals,

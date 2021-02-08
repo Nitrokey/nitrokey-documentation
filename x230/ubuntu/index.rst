@@ -1,6 +1,8 @@
 NitroPad X230 with Ubuntu Linux
 ===============================
 
+.. contents:: :local:
+
 .. toctree::
    :maxdepth: 1
    :glob:

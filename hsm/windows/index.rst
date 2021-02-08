@@ -1,6 +1,8 @@
 Nitrokey HSM with Windows
 =========================
 
+.. contents:: :local:
+
 .. toctree::
    :maxdepth: 1
    :glob:

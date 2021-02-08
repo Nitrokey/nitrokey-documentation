@@ -1,6 +1,10 @@
 Operating System Reinstallation
 ===============================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 .. danger::
 
    Booting this USB drive entirely erases all data on the hard disk or

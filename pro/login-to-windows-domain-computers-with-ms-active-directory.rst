@@ -1,6 +1,10 @@
 Login to Windows Domain Computers With MS Active Directory
 ==========================================================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 1. Download and install the latest
    `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
 2. Use a text editor to add the following settings to

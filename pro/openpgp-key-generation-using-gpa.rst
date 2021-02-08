@@ -1,6 +1,10 @@
 OpenPGP Key Generation Using GPA
 ================================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 The following instructions explain the generation of OpenPGP keys
 directly on the Nitrokey with help of the GNU Privacy Assistant (GPA).
 You won’t be able to create a backup of these keys. Thus, if you lose

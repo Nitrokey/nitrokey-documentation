@@ -1,6 +1,10 @@
 Firmware Update
 ===============
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 This guide describes how to update the Heads firmware of the NitroPad.
 
 These instructions are relevant in the following cases:

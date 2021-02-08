@@ -1,6 +1,8 @@
 Nitrokey Start
 ==============
 
+.. contents:: :local:
+
 Choose your operating system:
 
 .. toctree::

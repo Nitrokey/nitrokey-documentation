@@ -1,6 +1,10 @@
 Two-factor Authentication for Microsoft Account
 ===============================================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 These are the basic steps for registering the Nitrokey Pro or Nitrokey
 Storage as a second factor of a Microsoft account.
 

@@ -1,6 +1,10 @@
 Change User and Admin PIN
 =========================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 User PIN
 --------
 

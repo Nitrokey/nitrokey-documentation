@@ -1,6 +1,10 @@
 Two-factor Authentication for ERP Software Odoo
 ===============================================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 `Odoo <https://www.odoo.com/>`__ is a powerful ERP (Enterprise Resource
 Planning) software for companies of all sizes. Odoo is available as open
 source and contains modules for CRM, website, e-commerce, accounting,

@@ -1,6 +1,8 @@
 Nitrokey Start, Windows
 =======================
 
+.. contents:: :local:
+
 .. toctree::
    :maxdepth: 1
    :glob:

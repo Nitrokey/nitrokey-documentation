@@ -1,6 +1,8 @@
 NitroPad X230
 =============
 
+.. contents:: :local:
+
 Choose your operating system:
 
 .. toctree::

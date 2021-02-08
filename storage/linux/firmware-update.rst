@@ -1,6 +1,10 @@
 Firmware Update
 ===============
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 .. danger::
 
    You should backup all data from the device before upgrading, as

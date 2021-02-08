@@ -1,6 +1,10 @@
 OpenPGP Key Generation With Backup
 ==================================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 The following instructions explain the generation of OpenPGP keys and
 how to copy them to the Nitrokey. This method has the advantage of
 providing a backup of the keys in case of losing or breaking the

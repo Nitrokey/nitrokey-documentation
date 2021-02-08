@@ -1,6 +1,8 @@
 Nitrokey HSM 2
 ==============
 
+.. contents:: :local:
+
 Choose your operating system:
 
 .. toctree::

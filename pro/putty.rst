@@ -1,6 +1,10 @@
 PuTTY
 =====
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 This mini-howto assumes that the Nitrokey has been initialized and
 contains cryptographic keys.
 

@@ -1,6 +1,10 @@
 Desktop Login and Linux User Authentication
 ===========================================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 Introduction
 ------------
 

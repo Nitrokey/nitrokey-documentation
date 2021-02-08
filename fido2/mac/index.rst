@@ -1,6 +1,8 @@
 FIDO2 with macOS
 ================
 
+.. contents:: :local:
+
 .. toctree::
    :maxdepth: 1
    :glob:

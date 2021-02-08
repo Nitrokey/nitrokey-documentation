@@ -1,6 +1,10 @@
 OpenVPN Configuration with Easy-RSA
 ===================================
 
+.. include:: ./product_platform_heading.rst
+
+.. contents:: :local:
+
 .. note::
 
   This guide is work-in-progress, and will be updated accordinlgy. Please take this status into consideration.
