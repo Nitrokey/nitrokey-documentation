@@ -48,7 +48,7 @@ Install the necessary tools:
    # Arch Linux
    pacman -S community/opensc community/libp11
 
-   # Ubunutu
+   # Ubuntu
    sudo apt-get install opensc gnutls_bin
 
 Creating the Root Certificate Authority
