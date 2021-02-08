@@ -24,6 +24,7 @@ Nitrokey Start, Windows
    It is indeed necessary to first import or create new keys and change the PINs afterwards. Otherwise changing User PIN will fail! Furthermore overriding keys results in PIN reset (default values),  please keep this in mind!
 
 4. Change the Admin PIN (default: ``12345678``) and then the User PIN (default: ``123456``) to your own choices.
+
    * The PIN must consist of at least 14 characters (starting from RTM.8), can contain any character (not only numbers). Do not select only numbers. If your environment allows that, use emoticons or national characters.
    * The longer the PIN the better. It is possible to use 6 randomly selected words instead as well for the same or better security than random character string.
    * Use ‘gpg –card-edit’ -> ‘admin’ -> ‘passwd’ to achieve this (for Admin PIN case). - Please be careful to change Admin PIN first and User PIN second! Otherwise the admin-less mode got activated, see `this instructions <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#>`__ for further information.
