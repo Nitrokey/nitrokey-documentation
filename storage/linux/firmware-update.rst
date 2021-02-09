@@ -21,7 +21,7 @@ Please enable Firmware Update mode as described above through the
 Nitrokey App. Afterwards, open a terminal and type in the following
 three commands:
 
-::
+.. code-block:: bash
 
    sudo dfu-programmer at32uc3a3256s erase
    sudo dfu-programmer at32uc3a3256s flash --suppress-bootloader-mem firmware.hex

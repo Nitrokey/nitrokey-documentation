@@ -16,14 +16,14 @@ Choose Cryptographic Algorithms
 I’m going to assume that you’re as paranoid as I am, so I will be using
 the following command for generating private keys:
 
-.. code:: bash
+.. code-block:: bash
 
    pkcs11-tool -l --keypairgen --key-type EC:secp384r1 --label root
 
 But, if you’re less paranoid that I am, you can safely choose the
 following options:
 
-.. code:: bash
+.. code-block:: bash
 
    pkcs11-tool -l --keypairgen --key-type EC:secp256r1 --label root
    pkcs11-tool -l --keypairgen --key-type rsa:4096 --label root
@@ -36,7 +36,7 @@ Preparing to Start
 
 To start with, you need to pick a directory to store your CA.
 
-.. code:: bash
+.. code-block:: bash
 
    pki_dir=/opt/certificate-authority
    mkdir $pki_dir
@@ -47,7 +47,7 @@ To start with, you need to pick a directory to store your CA.
 
 Install the necessary tools:
 
-.. code:: bash
+.. code-block:: bash
 
    # Arch Linux
    pacman -S community/opensc community/libp11
@@ -62,7 +62,7 @@ We start by generating the private key for the certificate authority
 directly on the Nitrokey HSM. This allows us to use the private key in
 the future, but not access it.
 
-.. code:: bash
+.. code-block:: bash
 
    # Generate private key on HSM
    $ pkcs11-tool -l --keypairgen --key-type EC:secp384r1 --label root
@@ -89,21 +89,21 @@ need it later.
 If you need the ID in the future, you can list the keys on the Nitrokey
 HSM:
 
-.. code:: bash
+.. code-block:: bash
 
    pkcs11-tool -O
 
 We need to create a config file to generate a self-signed public
 certificate.
 
-.. code:: bash
+.. code-block:: bash
 
    vim create_root_cert.ini
 
 Fill out the request information in <angle brackets> with information
 for your CA.
 
-.. code:: ini
+.. code-block:: ini
 
    [ ca ]
    # `man ca`
@@ -164,7 +164,7 @@ for your CA.
 Generate the self-signed public certificate from the private key. Use
 the private key id value from earlier.
 
-.. code:: bash
+.. code-block:: bash
 
    $ openssl req -config create_root_cert.ini -engine pkcs11 -keyform engine -key e0161cc8b6f5d66ac6835ecdecb623fc0506a675 -new -x509 -days 3650 -sha512 -extensions v3_ca -out ../certs/root.crt
    engine "pkcs11" set.
@@ -175,7 +175,7 @@ Signature-Algorithm matches above and below. Verify that Issuer and
 Subject match, all root certificates are self signed. Verify that Key
 Usage matches what was in the v3_ca information in our config file.
 
-.. code:: bash
+.. code-block:: bash
 
    $ openssl x509 -noout -text -in ../certs/root.crt
    Certificate:
@@ -227,7 +227,7 @@ We continue by generating the private key for the intermediate
 certificate authority directly on the Nitrokey HSM. This allows us to
 use the private key in the future, but not access it.
 
-.. code:: bash
+.. code-block:: bash
 
    # Generate private key on HSM
    $ pkcs11-tool -l --keypairgen --key-type EC:secp384r1 --label intermediate
@@ -254,21 +254,21 @@ need it later.
 If you need the ID in the future, you can list the keys on the Nitrokey
 HSM:
 
-.. code:: bash
+.. code-block:: bash
 
    pkcs11-tool -O
 
 We need to create a config file to generate a self-signed public
 certificate.
 
-.. code:: bash
+.. code-block:: bash
 
    vim create_intermediate_csr.ini
 
 Fill out the request information in <angle brackets> with information
 for your CA.
 
-.. code:: ini
+.. code-block:: ini
 
    [ req ]
    # Options for the `req` tool (`man req`).
@@ -297,7 +297,7 @@ Generate the certificate signing request for the intermediate CA from
 the intermediate CA’s private key. Use the private key ID value from
 earlier.
 
-.. code:: bash
+.. code-block:: bash
 
    $ openssl req -config create_intermediate_csr.ini -engine pkcs11 -keyform engine -key bcb48fe9b566ae61891aabbfde6a23d4ff3ab639 -new -sha512 -out ../intermediate/csr/intermediate.csr
    engine "pkcs11" set.
@@ -307,7 +307,7 @@ Verify that the CSR was created correctly. Verify that your Subject is
 correct. Verify that your Public Key and Signature Algorithm are
 correct.
 
-.. code:: bash
+.. code-block:: bash
 
    $ openssl req -text -noout -verify -in ../intermediate/csr/intermediate.csr
    verify OK
@@ -341,7 +341,7 @@ correct.
 We need to find out the fully qualified PKCS#11 URI for your private
 key:
 
-.. code:: bash
+.. code-block:: bash
 
    $ p11tool --list-all
    warning: no token URL was provided for this operation; the available tokens are:
@@ -383,11 +383,11 @@ In this instance, the fully qualified PKCS#11 URI is
 Now, we need to create a config file to use the private key of the root
 certificate to sign the csr of the intermediate certificate.
 
-.. code:: bash
+.. code-block:: bash
 
    vim sign_intermediate_csr.ini
 
-.. code:: ini
+.. code-block:: ini
 
    [ ca ]
    # `man ca`
@@ -435,7 +435,7 @@ certificate to sign the csr of the intermediate certificate.
 
 Then sign the intermediate certificate with the root certificate.
 
-.. code:: bash
+.. code-block:: bash
 
    $ openssl ca -config sign_intermediate_csr.ini -engine pkcs11 -keyform engine -extensions v3_intermediate_ca -days 1825 -notext -md sha512 -create_serial -in ../intermediate/csr/intermediate.csr -out ../intermediate/certs/intermediate.crt
    engine "pkcs11" set.
@@ -478,7 +478,7 @@ the Issuer and Subject are different, and correct. Verify that the Key
 Usage matches the config file. Verify that the signature algorithm are
 correct above and below.
 
-.. code:: bash
+.. code-block:: bash
 
    $ openssl x509 -noout -text -in ../intermediate/certs/intermediate.crt
    Certificate:
@@ -526,14 +526,14 @@ correct above and below.
 Verify that the intermediate certificate verifies against the root
 certificate.
 
-.. code:: bash
+.. code-block:: bash
 
    $ openssl verify -CAfile ../certs/root.crt ../intermediate/certs/intermediate.crt
    ../intermediate/certs/intermediate.crt: OK
 
 Create a certificate chain file:
 
-.. code:: bash
+.. code-block:: bash
 
    cat ../intermediate/certs/intermediate.crt ../certs/root.crt > ../intermediate/certs/chain.crt
 
@@ -552,7 +552,7 @@ outside the scope of this document.
 We need to find out the fully qualified PKCS#11 URI for your private
 key:
 
-.. code:: bash
+.. code-block:: bash
 
    $ p11tool --list-all
    warning: no token URL was provided for this operation; the available tokens are:
@@ -594,11 +594,11 @@ In this instance, the fully qualified PKCS#11 URI is
 Create a config file to use the private key of the intermediate
 certificate to sign the CSRs of your servers.
 
-.. code:: bash
+.. code-block:: bash
 
    vim sign_server_csrs.ini
 
-.. code:: ini
+.. code-block:: ini
 
    [ ca ]
    # `man ca`
@@ -649,7 +649,7 @@ certificate to sign the CSRs of your servers.
 
 Then run openssl to sign the server’s CSR.
 
-.. code:: bash
+.. code-block:: bash
 
    $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -extensions server_cert -days 375 -notext -md sha512 -create_serial -in server_cert.csr -out server_cert.crt
    engine "pkcs11" set.

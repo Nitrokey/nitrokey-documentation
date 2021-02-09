@@ -28,13 +28,13 @@ Create the ``.rules`` file
 With your favorite text editor create a file called
 ``85-nitrokey.rules``
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo editor /etc/udev/rules.d/85-nitrokey.rules
 
 Add the following line to the file
 
-.. code:: bash
+.. code-block:: bash
 
    ACTION=="remove", ENV{PRODUCT}=="20a0/4108/101" RUN+="/usr/local/bin/gnome-screensaver-lock"
 
@@ -56,13 +56,13 @@ Create the ``gnome-screensaver-lock`` script
 With your favorite text editor create a file called
 ``gnome-screensaver-lock``
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo editor /usr/local/bin/gnome-screensaver-lock
 
 Add the following text
 
-.. code:: bash
+.. code-block:: bash
 
    user=`ps axo user:30,comm | egrep "gdm-(wayland|x)" | awk '{print $1}'`
 

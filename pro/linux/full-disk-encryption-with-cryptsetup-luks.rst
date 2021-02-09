@@ -55,14 +55,14 @@ Instructions
 
 1. Install dependencies
 
-.. code:: bash
+.. code-block:: bash
 
 
    $ sudo apt install scdaemon opensc gnupg2
 
 2. Create smartcard-luks directory
 
-.. code:: bash
+.. code-block:: bash
 
 
    $ mkdir smartcard-luks && cd smartcard-luks
@@ -71,7 +71,7 @@ You might use ``sudo`` if required.
 
 3. Download the smartcard-luks-script
 
-.. code:: bash
+.. code-block:: bash
 
 
    $ sudo mkdir smartcard-luks && cd smartcard-luks
@@ -82,7 +82,7 @@ You might use ``sudo`` if required.
 
 To export your public key from GnuPG’s keyring:
 
-.. code:: bash
+.. code-block:: bash
 
 
    $ gpg2 --armor --export KeyID > pubkey.asc
@@ -93,7 +93,7 @@ comfortable with, and proceed to step 5.
 
 5. Execute the script with the pubkey.asc argument
 
-.. code:: bash
+.. code-block:: bash
 
 
    $ sudo ./smartcard-key-luks pubkey.asc

@@ -45,7 +45,7 @@ Pro 2 and GnuPG version 2.1.17 or higher are required.
 
 You can read Nitrokey’s OpenPGP Card version via ``gpg2 —card-status``:
 
-::
+.. code-block:: bash
 
    > gpg2 --card-status
    Reader ...........: 20A0:...
@@ -99,7 +99,7 @@ easily create keys on the device. However it is not as yet possible to
 select the type of key directly, so the key must first be prepared. We
 use the following commands for this:
 
-::
+.. code-block:: bash
 
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 1 19 brainpoolP256r1" /bye
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 2 18 brainpoolP256r1" /bye
@@ -111,7 +111,7 @@ section.
 Now we enter ``gpg2 --card-edit`` and see that brainpoolP256r1 is under
 “key attributes” instead of rsa2048.
 
-::
+.. code-block:: bash
 
    > gpg2 --card-edit
    Reader ...........: 20A0:4109:0000000000000:0
@@ -136,7 +136,7 @@ Now we enter ``gpg2 --card-edit`` and see that brainpoolP256r1 is under
 
 Then we create the key.
 
-::
+.. code-block:: bash
 
    gpg/card> admin
    Admin commands are allowed
@@ -175,7 +175,7 @@ Available Curves
 In the above procedure we chose the Brainpool curves. Alternatively,
 NIST curves can be used. The configuration is carried out as follows:
 
-::
+.. code-block:: bash
 
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 1 19 nistp256" /bye
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 2 18 nistp256" /bye
@@ -191,7 +191,7 @@ easiest option. This approach has been tested successfully on Ubuntu
 17.10 and propbably works on 16.04 as well. However, the occurence of
 problems during usage can‘t be excluded.
 
-::
+.. code-block:: bash
 
    $ mkdir gnupg_tmp
    $ cd gnupg_tmp
@@ -206,7 +206,7 @@ problems during usage can‘t be excluded.
 In case you want to undo the installation, you have to execute the
 following commands:
 
-::
+.. code-block:: bash
 
    $ sudo dpkg --remove --force-depends gnupg dirmngr gnupg-agent scdaemon
      # (removes manually installed packages)

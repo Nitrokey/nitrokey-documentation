@@ -51,7 +51,7 @@ e.g. “y” and “z” are swapped in comparison to the German keyboard
 layout. If you agree with the default selection (which is written in
 capital letter) you can also simply confirm by pressing Enter.
 
-::
+.. code-block:: bash
 
    Please confirm that your GPG card is inserted [Y/n]:
     
@@ -105,7 +105,7 @@ Boot Entry Has Changed
    e.g. “y” and “z” are swapped in comparison to the German keyboard
    layout.
 
-::
+.. code-block:: bash
 
    Saving a default will modify the disk. Proceed? [Y/n]:
     

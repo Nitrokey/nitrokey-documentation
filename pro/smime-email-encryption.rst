@@ -53,14 +53,14 @@ Please plug in the Nitrokey before submitting the commands.
 Assuming that your key-certificate file reads ‘myprivate.p12’ the
 commands for Windows looks like this:
 
-::
+.. code-block:: bash
 
    "C:\Program Files\OpenSC Project\OpenSC\tools\pkcs15-init" --delete-objects privkey,pubkey --id 3 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3 --verify-pin
    "C:\Program Files\OpenSC Project\OpenSC\tools\pkcs15-init" --delete-objects privkey,pubkey --id 2 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3 --verify-pin
 
 and on macOS and GNU/Linux it will be
 
-::
+.. code-block:: bash
 
    $ pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3 --verify-pin
    $ pkcs15-init --delete-objects privkey,pubkey --id 2 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3 --verify-pin

@@ -31,7 +31,7 @@ type (usually RSA (1) or ECC (9)), the length of the key and other
 attributes. The following output is just a simple example, you may
 choose other values.
 
-::
+.. code-block:: bash
 
    > gpg --full-generate-key --expert
    gpg (GnuPG) 2.2.10; Copyright (C) 2018 Free Software Foundation, Inc.
@@ -119,7 +119,7 @@ This subkey is generated in the next step. Type in
 is either the id of the key or the email address used during key
 generation.
 
-::
+.. code-block:: bash
 
    > gpg --edit-key --expert jane@example.com
    gpg (GnuPG) 2.2.10; Copyright (C) 2018 Free Software Foundation, Inc.
@@ -144,7 +144,7 @@ have the “authenticate” capability which is not available otherwise. We
 toggle sign and encrypt by typing ``s`` and ``e`` and we activate
 authenticate by typing ``a``.
 
-::
+.. code-block:: bash
 
    gpg> addkey
    Please select what kind of key you want:
@@ -204,7 +204,7 @@ We quit with ``q``. Afterwards we need to answer the same questions as
 before. Finally, we have a ready-to-go key set which we can import to
 our device.
 
-::
+.. code-block:: bash
 
    RSA keys may be between 1024 and 4096 bits long.
    What keysize do you want? (2048)
@@ -241,7 +241,7 @@ secure. It is best practice to never have this key on a regular computer
 which has connection to the internet, so that the key never gets
 compromised. You can create a backup with something like:
 
-::
+.. code-block:: bash
 
    > gpg --export-secret-keys jane@example.com > sec-key.asc
 
@@ -258,7 +258,7 @@ again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is
 either the id of the key or the email address used during key
 generation.
 
-::
+.. code-block:: bash
 
    > gpg --edit-key --expert jane@example.com
    gpg (GnuPG) 2.2.10; Copyright (C) 2018 Free Software Foundation, Inc.
@@ -296,7 +296,7 @@ We just imported the main key to the card. Now we proceed with the two
 subkeys. We type ``key 1`` to select the encryption subkey and type in
 ``keytocard`` again and select the slot to use.
 
-::
+.. code-block:: bash
 
    gpg> key 1
     
@@ -327,7 +327,7 @@ Now we deselect the first key with ``key 1`` and select the second
 subkey with ``key 2`` and move it as well with ``keytocard``. Afterwards
 we quit and save the changes.
 
-::
+.. code-block:: bash
 
    gpg> key 1
     

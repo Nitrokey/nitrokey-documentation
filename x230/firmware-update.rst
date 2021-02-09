@@ -31,7 +31,7 @@ E.g. for ``v1.1-rc3`` version: 1. Firmware should be downloaded from
 Firmware and hashsum files should be located on the USB drive in the
 main directory:
 
-::
+.. code-block:: bash
 
    /nitropad_x230_v1.1-rc3.rom
    /SHA256SUM.txt
@@ -50,7 +50,7 @@ will not be required in the further firmware updates.
    ``Options -> Exit to recovery shell``
 2. Execute the following to verify the firmware:
 
-::
+.. code-block:: bash
 
    $ mount-usb              # select USB device
    $ cd /media
@@ -58,7 +58,7 @@ will not be required in the further firmware updates.
 
 For ``v1.1-rc3`` version this should result in:
 
-::
+.. code-block:: bash
 
    $ sha256sum -c SHA256SUM.txt
    nitropad_x230_v1.1-rc3.rom: OK

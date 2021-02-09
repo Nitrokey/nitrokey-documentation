@@ -34,7 +34,7 @@ Nitorkey HSM, and re-transmitted to the server and the client.
 
 We can decompose the instructions of the guide as following:
 
-::
+.. code-block:: bash
 
    Server Side
 
@@ -80,7 +80,7 @@ set it up in `this link
 
 To download the dependencies on Fedora machines we can this instruction:
 
-.. code:: bash
+.. code-block:: bash
 
    su -c 'dnf install readline-devel openssl-devel libxslt docbook-style-xsl pcsc-lite-devel automake autoconf libtool gcc zlib-devel'
 
@@ -116,19 +116,19 @@ Server side
 1. .. rubric:: First we need to enable IP Forwarding by editing
       ``/etc/sysctl.conf`` file
 
-.. code:: bash
+.. code-block:: bash
 
    $ editor /etc/sysctl.conf
 
 2. .. rubric:: Uncomment or edit accordingly the following line
 
-.. code:: bash
+.. code-block:: bash
 
    net.ipv4.ip_forward=1
 
 3. .. rubric:: Close after saving it, and enter this command
 
-.. code:: bash
+.. code-block:: bash
 
    $ sysctl -p
 
@@ -139,7 +139,7 @@ instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos?__
 4. .. rubric:: Change to root and download the GPG key that signed the
       package
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo -s 
    # wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
@@ -147,7 +147,7 @@ instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos?__
 5. .. rubric:: Add the URL of the adequate OpenVPN packages to the
       ``sources.list`` file
 
-.. code:: bash
+.. code-block:: bash
 
    # echo "deb http://build.openvpn.net/debian/openvpn/release/2.5 buster main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
    # exit
@@ -159,14 +159,14 @@ to login.
 
 6. .. rubric:: Next we download OpenVPN
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo apt install openvpn
 
 If you want to check the version, it possible by calling ``--version``
 and print the following:
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo openvpn --version
    OpenVPN 2.5_beta3 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Sep  1 2020
@@ -188,7 +188,7 @@ the following command:
 1. Download the latest release
 ''''''''''''''''''''''''''''''
 
-.. code:: bash
+.. code-block:: bash
 
    $ cd ~
    wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-3.0.7.tgz
@@ -196,7 +196,7 @@ the following command:
 2. Extract the tarball
 ''''''''''''''''''''''
 
-.. code:: bash
+.. code-block:: bash
 
    $ cd ~
    $ tar xvf EasyRSA-3.0.7.tgz
@@ -217,7 +217,7 @@ a file called ``vars`` with some default values.
 1. Create a ``vars`` file
 '''''''''''''''''''''''''
 
-.. code:: bash
+.. code-block:: bash
 
    $ touch ~/easyrsa/vars
    $ cd easyrsa/
@@ -226,7 +226,7 @@ a file called ``vars`` with some default values.
 2. Once the file is opened, paste in the following two lines
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-.. code:: bash
+.. code-block:: bash
 
    set_var EASYRSA_ALGO "ec"
    set_var EASYRSA_DIGEST "sha512"
@@ -249,7 +249,7 @@ Once you have populated the ``vars`` file you can proceed with creating
 the PKI directory. To do so, run the easyrsa script with the init-pki
 option:
 
-.. code:: bash
+.. code-block:: bash
 
    $ ./easyrsa init-pki
 
@@ -289,7 +289,7 @@ permissions* carefully.
 Navigate to the ``~/easyrsa`` directory on your OpenVPN Server as your
 non-root user, and enter the following commands:
 
-.. code:: bash
+.. code-block:: bash
 
    $ cd easyrsa/
    $ ./easyrsa gen-req server nopass
@@ -303,7 +303,7 @@ OpenVPN server.
 2. Copy the key to the OpenVPN server directory
 '''''''''''''''''''''''''''''''''''''''''''''''
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo cp /home/admin/EasyRSA/pki/private/server.key /etc/openvpn/server/
 
@@ -355,7 +355,7 @@ for listing the keys available.
 
 1. Query the list of available devices
 
-.. code:: bash
+.. code-block:: bash
 
    $ p11tool --list-all
 
@@ -365,20 +365,20 @@ from the HSM, and include it in the config file.
 
 -  The key’s URI should be in this format:
 
-.. code:: bash
+.. code-block:: bash
 
    pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private
 
 2. Create ``openvpn/`` directory under ``certificate-authority/``
 
-.. code:: bash
+.. code-block:: bash
 
    $ mkdir/opt/certificate-authority/
    $ cd /opt/certificate-authority/
 
 3. Sign the ``server.req``
 
-.. code:: bash
+.. code-block:: bash
 
    $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in server.req -out /home/user/pki/issued/server.crt 
 
@@ -391,13 +391,13 @@ From the CA machine, copy the files ``server.crt`` and ``chain.crt`` to
 the OpenVPN server. In this example we will use the ``scp`` command as
 following:
 
-.. code:: bash
+.. code-block:: bash
 
    $ scp openvpn/{server.crt,chain.crt} admin@your_openvpnserver_ip:/tmp
 
 2. Place the certificates on the server’s directory
 
-.. code:: bash
+.. code-block:: bash
 
    $ mv /tmp/{server.crt,chain.crt} /etc/openvpn/server
 
@@ -424,7 +424,7 @@ Now that we issued and signed those, we can place them in the right
 directories. The breakdown of the certificates and keys that must be
 located at the root directory are the following:
 
-::
+.. code-block:: bash
 
    OpenVPN server 
 
@@ -439,7 +439,7 @@ configured according to your needs, while we make sure to change the
 server certificate and key sections according the names you chose for
 the your the files we signed:
 
-.. code:: bash
+.. code-block:: bash
 
    # OpenVPN Server Certificate - CA, server key and certificate
    ca chain.crt
@@ -449,7 +449,7 @@ the your the files we signed:
 Here is the configuration file we can use for testing these
 instructions:
 
-.. code:: bash
+.. code-block:: bash
 
    port 1194
    proto udp
@@ -480,7 +480,7 @@ instructions:
 To test if the configuration functions properly, we can use this
 command:
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo openvpn --server --config server.conf
 
@@ -490,14 +490,14 @@ command:
 Enable the OpenVPN service by adding it to systemctl, and start it using
 these commands:
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo systemctl -f enable openvpn@server
    $ sudo systemctl start openvpn@server
 
 To Double check if the OpenVPN service is active use this command:
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo systemctl status openvpn@server
 
@@ -508,7 +508,7 @@ The OpenVPN should be running at this point.
 Client side configuration
 -------------------------
 
-::
+.. code-block:: bash
 
        1. Install OpenVPN and Easy-RSA
        2. Create a Public Key Infrastructure (PKI) for the OpenVPN client
@@ -528,21 +528,21 @@ Client side configuration
 We can use directly ``dnf install`` to install OpenVPN 2.4.9 and
 Easy-RSA 3.0.7
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo dnf install openvpn easy-rsa
 
 2. Then we create as non-root a directory for Easy RSA called ``Easy-RSA``
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-.. code:: bash
+.. code-block:: bash
 
    $ mkdir ~/easyrsa
 
 3. And link it to the Easy RSA package we just installed
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-.. code:: bash
+.. code-block:: bash
 
    $ ln -s /usr/share/easy-rsa/3/* ~/easyrsa/
 
@@ -569,7 +569,7 @@ same method as we did for the ``server.req`` file.
 Once transferred, on the CA machine we sign the certificate signing
 request file with this command
 
-.. code:: bash
+.. code-block:: bash
 
    $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in client.req -out /home/user/pki/issued/client.crt 
 
@@ -584,20 +584,20 @@ After creating the ``client.crt`` file, we plug the Nitrokey Pro 2
 device in the CA machine, and import the ``.crt`` to the Pro 2 device
 using this command:
 
-.. code:: bash
+.. code-block:: bash
 
    $ pkcs15-init --store-certificate client.crt --id 3
 
 You can see if the key is effectively stored on the Nitrokey using this
 command:
 
-.. code:: bash
+.. code-block:: bash
 
    $ pkcs15-tool -c
 
 Or alternatively
 
-.. code:: bash
+.. code-block:: bash
 
    $ pkcs11-tool --list-objects 
 
@@ -620,7 +620,7 @@ to establish the VPN connection with the server. In general terms, a
 connection that uses TLS requires multiple certificates and keys for
 authentication:
 
-::
+.. code-block:: bash
 
    OpenVPN client 
        - The root certificate file (`chain.crt`)
@@ -630,7 +630,7 @@ authentication:
 For this guide we can the following ``client.conf`` file, and add the
 required options to it accordingly:
 
-.. code:: bash
+.. code-block:: bash
 
    client
    dev tun
@@ -656,7 +656,7 @@ required options to it accordingly:
 Each PKCS#11 provider can support multiple devices. In order to view the
 available object list you can use the following command:
 
-::
+.. code-block:: bash
 
    $ openvpn --show-pkcs11-ids /usr/lib64/pkcs11/opensc-pkcs11.so 
 
@@ -675,7 +675,7 @@ The serialized id string of the requested certificate should be
 specified, in the configuration file. We can do this by adding the
 ``pkcs11-id`` option using single quote marks.
 
-.. code:: bash
+.. code-block:: bash
 
    pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
 
@@ -685,7 +685,7 @@ specified, in the configuration file. We can do this by adding the
 Using your favorite text editor, open the server.conf file, and add the
 following lines, while taking care to insert your own ``Serialized id``:
 
-.. code:: bash
+.. code-block:: bash
 
    pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
    pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
@@ -699,7 +699,7 @@ although it is optional.
 
    Click to view the code
 
-   .. code:: bash
+   .. code-block:: bash
 
       # nitrokey config
           
@@ -725,7 +725,7 @@ comment/uncomment the relevant lines according to your needs:
 
    Click to view the code
 
-   .. code:: bash
+   .. code-block:: bash
 
       # non_nitrokey login
 
@@ -738,7 +738,7 @@ comment/uncomment the relevant lines according to your needs:
 
 The final configuration file ``client.conf`` should look like this one:
 
-.. code:: bash
+.. code-block:: bash
 
    client
    dev tun
@@ -794,14 +794,14 @@ consult these issues
 
 Enable the OpenVPN service, and start it using these commands:
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo systemctl -f enable openvpn-server@server.service
    $ sudo systemctl start openvpn-server@server.service
 
 To double check if the OpenVPN service is active use this command:
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo systemctl status openvpn-server@server.service
 
@@ -810,7 +810,7 @@ To double check if the OpenVPN service is active use this command:
 
 When executing OpenVPN client, Nitrokey’s PIN needs to be entered:
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo openvpn --client --config client.conf 
    Fri Sep 11 17:42:01 2020 OpenVPN 2.4.9 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Apr 24 2020
@@ -856,7 +856,7 @@ and
 In some reported cases it does not prompt for a PIN on the terminal. One
 workaround would be to use to use this command to login with the PIN:
 
-.. code:: bash
+.. code-block:: bash
 
    $ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>
 

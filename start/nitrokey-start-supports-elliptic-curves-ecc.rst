@@ -48,7 +48,7 @@ firmware 1.2 and GnuPG version 2.1.16 or higher must be installed.
 
 You can read Nitrokey Start’s firmware version via ‘gpg2 —card-status’:
 
-::
+.. code-block:: bash
 
    > gpg --card-status
    Reader ...........: 20A0:4211:FSIJ-1.2.4-67083322:0
@@ -101,7 +101,7 @@ to select Curve25519. In this case you can skip the following lines.)**
 However it is not as yet possible to select the type of key directly, so
 the key must first be prepared. We use the following commands for this:
 
-::
+.. code-block:: bash
 
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 1 22 ed25519" /bye
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 2 18 cv25519" /bye
@@ -113,7 +113,7 @@ section.
 Now we enter ‘gpg2 –card-edit’ and see that ed25519 or cv25519 is under
 ‘key attributes’ instead of rsa2048.
 
-::
+.. code-block:: bash
 
    > gpg2 --card-edit
    Reader ...........: 20A0:4211:FSIJ-1.2.4-67083322:0
@@ -138,13 +138,13 @@ Now we enter ‘gpg2 –card-edit’ and see that ed25519 or cv25519 is under
 
 Then we create the key.
 
-::
+.. code-block:: bash
 
    gpg/card> admin
 
 Admin commands are allowed
 
-::
+.. code-block:: bash
 
    gpg/card> generate
    Make off-card backup of encryption key? (Y/n) n
@@ -183,7 +183,7 @@ configuration is carried out as follows:
 
 Option NIST curves:
 
-::
+.. code-block:: bash
 
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 1 19 nistp256" /bye
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 2 18 nistp256" /bye
@@ -192,7 +192,7 @@ Option NIST curves:
 Option SECG curves: **Warning: This curve is not recommended for email
 encryption but for Bitcoin-related use cases only!**
 
-::
+.. code-block:: bash
 
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 1 19 secp256k1" /bye
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 2 18 secp256k1" /bye
@@ -200,7 +200,7 @@ encryption but for Bitcoin-related use cases only!**
 
 Option Curve25519:
 
-::
+.. code-block:: bash
 
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 1 22 ed25519" /bye
    > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 2 18 cv25519" /bye
@@ -216,7 +216,7 @@ easiest option. This approach has been tested successfully on Ubuntu
 17.10. However, the occurence of problems during usage can‘t be
 excluded.
 
-::
+.. code-block:: bash
 
    $ mkdir gnupg_tmp
    $ cd gnupg_tmp
@@ -231,13 +231,13 @@ excluded.
 In case you want to undo the installation, you have to execute the
 following commands:
 
-::
+.. code-block:: bash
 
    $ sudo dpkg --remove --force-depends gnupg dirmngr gnupg-agent scdaemon
 
 (removes manually installed packages)
 
-::
+.. code-block:: bash
 
    $ sudo apt-get install gnupg dirmngr gnupg-agent scdaemon
 

@@ -24,7 +24,7 @@ Setting KDF-DO using GnuPG:
 4.      Enter Admin PIN
 5.      Verify current state state by looking at the card details (`gpg2 --card-status`), where `KDF setting ......: on` should be visible, e.g.:
 
-::
+.. code-block:: bash
 
     Max. PIN lengths .: 127 127 127
     PIN retry counter : 3 3 3

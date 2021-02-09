@@ -29,7 +29,7 @@ could be achieved with ``pynitrokey`` tool:
 
 2. Connect your Nitrokey Start and verify that it got recognized.
 
-::
+.. code-block:: bash
 
    $ nitropy start list
        *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
@@ -39,7 +39,7 @@ could be achieved with ``pynitrokey`` tool:
 3. Change the identity, by replacing ``<ID>`` with ``0``, ``1``, or
    ``2``.
 
-::
+.. code-block:: bash
 
    $ nitropy start set-identity <ID>
        *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start

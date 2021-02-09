@@ -9,19 +9,19 @@ To update the firmware of your Nitrokey Start, proceed as follows.
 
 1. Install pip3.
 
-::
+.. code-block:: bash
 
    $ sudo apt install python3-pip 
 
 2. Install pynitrokey. For this you need an Internet connection.
 
-::
+.. code-block:: bash
 
    $ pip3 install --user pynitrokey 
 
 3. Connect your Nitrokey Start and verify its recognition.
 
-::
+.. code-block:: bash
 
    $ nitropy start list
          *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
@@ -30,14 +30,14 @@ To update the firmware of your Nitrokey Start, proceed as follows.
 
 4. Start the update process. For this you need an Internet connection.
 
-::
+.. code-block:: bash
 
    $ nitropy start update 
 
 5. You will then be asked to enter the Admin PIN of your Nitrokey Start.
    (Default PIN: 12345678)
 
-::
+.. code-block:: bash
 
    *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
    Nitrokey Start firmware update tool
@@ -52,7 +52,7 @@ To update the firmware of your Nitrokey Start, proceed as follows.
    see the latest firmware version available. Now you have to confirm
    the update with “yes”.
 
-::
+.. code-block:: bash
 
    Firmware data to be used:
 
@@ -82,7 +82,7 @@ To update the firmware of your Nitrokey Start, proceed as follows.
 7. You can check the firmware version after the upgrade process has
    completed.
 
-::
+.. code-block:: bash
 
    $ nitropy start list 
      *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start

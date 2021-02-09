@@ -114,7 +114,7 @@ Troubleshooting
 If Ubuntu doesn’t boot as shown below, please execute the following
 steps:
 
-::
+.. code-block:: bash
 
    +++ Found verified kexec boot params 
    gpg: verify signatures failed: Unknown system error 

@@ -92,35 +92,35 @@ Initialization
 1. Create a key file with random data:
                                       
 
-.. code:: bash
+.. code-block:: bash
 
    $ dd bs=64 count=1 if=/dev/urandom of=keyfile
 
 2. Encrypt the key file and use the User-ID of your Nitrokey
                                                             
 
-.. code:: bash
+.. code-block:: bash
 
    $ gpg --encrypt keyfile
 
 3. Remove the key file in clear text:
                                      
 
-.. code:: bash
+.. code-block:: bash
 
    $ rm keyfile # you may want to use 'wipe' or 'shred' to securely delete the keyfile
 
 4. Create mount point:
                       
 
-.. code:: bash
+.. code-block:: bash
 
    $ mkdir ~/.cryptdir ~/cryptdir 
 
 5. Create the actual encryption folder
                                       
 
-.. code:: bash
+.. code-block:: bash
 
    $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir
    # There may appears an error message about missing permission of fusermount
@@ -129,7 +129,7 @@ Initialization
 6. Unmount the new file system:
                                
 
-.. code:: bash
+.. code-block:: bash
 
    $ fusermount -u ~/cryptdir
 
@@ -139,14 +139,14 @@ Usage
 1. Mount encrypted file system and enter PIN of Nitrokey:
                                                          
 
-.. code:: bash
+.. code-block:: bash
 
    $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir 
 
 2. After usage, unmount the file system:
                                         
 
-.. code:: bash
+.. code-block:: bash
 
    $ fusermount -u ~/cryptdir
 
@@ -162,7 +162,7 @@ See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
 1. Import the certificate and key to the Nitrokey
                                                  
 
-.. code:: bash
+.. code-block:: bash
 
    # Warning: This will delete existing keys on your Nitrokey!
    $ pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 --format pkcs12 --auth-id 3 --verify-pin
@@ -170,14 +170,14 @@ See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
 2. Create the file ~/.ecryptfsrc.pkcs11:
                                         
 
-.. code:: bash
+.. code-block:: bash
 
    $ editor ~/.ecryptfsrc.pkcs11
 
 3. Enter this content:
                       
 
-.. code:: bash
+.. code-block:: bash
 
    $ pkcs11-log-level=5 pkcs11-provider1,name=name,library=/usr/lib/opensc-pkcs11.so,cert-private=true
    $ openvpn --show-pkcs11-ids path to opensc-pkcs11 module
@@ -189,7 +189,7 @@ See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
 4. Copy the serialized id for later usage:
                                           
 
-.. code:: bash
+.. code-block:: bash
 
    $ ecryptfs-manager
    # This will show list option. Choose option "Add public key to keyring" 

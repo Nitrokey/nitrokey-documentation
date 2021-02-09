@@ -59,7 +59,7 @@ CLI method
 
 Create a backup user, and give it root privileges with these commands:
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo adduser <backup_user>
    $ sudo usermod -aG sudo <backup_user>
@@ -83,14 +83,14 @@ your user session, you would still be able to login with the
 
 Under ``/etc/udev/rules.d`` download ``41-nitrokey.rules``
 
-.. code:: bash
+.. code-block:: bash
 
    $ cd /etc/udev/rules.d/
    $ sudo wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
 
 And restart ``udev`` service
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo systemctl restart udev
 
@@ -100,7 +100,7 @@ And restart ``udev`` service
 On Ubuntu 20.04 it is possible to download directly ``ibpam-u2f`` from
 the official repos
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo apt install libpam-u2f
 
@@ -114,13 +114,13 @@ the official repos
    -  To verify that the library is properly installed enter the
       following command:
 
-   .. code:: bash
+   .. code-block:: bash
 
       $ file /lib/x86_64-linux-gnu/security/pam_u2f.so
 
    The Output should be something like the following:
 
-   .. code:: bash
+   .. code-block:: bash
 
       /lib/x86_64-linux-gnu/security/pam_u2f.so: \ ELF 64-bit LSB shared object, x86-64, version 1 (SYSV),\ dynamically linked, BuildID[sha1]=1d55e1b11a97be2038c6a139579f6c0d91caedb1, stripped
 
@@ -129,7 +129,7 @@ the official repos
 
 Create ``.config/Nitrokey/`` under your home directory
 
-.. code:: bash
+.. code-block:: bash
 
    $ mkdir ~/.config/Nitrokey
 
@@ -142,7 +142,7 @@ convenience, we will directly write the output of the utility to the
 ``u2f_keys`` file under ``.config/Nitrokey``. First plug your Nitrokey
 FIDO2 (if you did not already), and enter the following command:
 
-.. code:: bash
+.. code-block:: bash
 
    $ pamu2fcfg > ~/.config/Nitrokey/u2f_keys
 
@@ -150,7 +150,7 @@ Once you run the command above, you will need to touch the key while it
 flashes. Once done, ``pamu2fcfg`` will append its output the
 ``u2f_keys`` in the following format:
 
-.. code:: bash
+.. code-block:: bash
 
    <username>:Zx...mw,04...0a
 
@@ -159,7 +159,7 @@ removed here. For better security, and once the config file generated,
 we will move the ``.config/Nitrokey`` directory under the ``etc/``
 directory with this command:
 
-.. code:: bash
+.. code-block:: bash
 
    $ sudo mv ~/.config/Nitrokey /etc   
 
@@ -171,7 +171,7 @@ directory with this command:
       user. For this purpose the previous command takes the ``-u``
       option, to specify a user, like in the example below:
 
-   .. code:: bash
+   .. code-block:: bash
 
       $ pamu2fcfg -u <username> > ~/.config/Nitrokey/u2f_keys
 
@@ -189,7 +189,7 @@ To set up a backup key, repeat the procedure above, and use
 ``pamu2fcfg -n``. This will omit the ``<username>`` field, and the
 output can be appended to the line with your ``<username>`` like this:
 
-::
+.. code-block:: bash
 
    <username>:Zx...mw,04...0a:xB...fw,04...3f
 
@@ -202,14 +202,14 @@ authentication settings which are common to all services, but other
 options are possible. You can modify the file with the following
 command:
 
-.. code:: bash
+.. code-block:: bash
 
    $ cd /etc/pam.d
    $ sudo $editor common-auth
 
 And add the following lines:
 
-.. code:: bash
+.. code-block:: bash
 
    #Nitrokey FIDO2 config 
    auth    sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue prompt 

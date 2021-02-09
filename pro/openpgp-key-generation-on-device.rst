@@ -36,7 +36,7 @@ Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal
 on macOS or GNU/Linux please use the application search (e.g. spotlight
 on macOS).
 
-::
+.. code-block:: bash
 
    > gpg2 --card-edit
     
@@ -66,7 +66,7 @@ Now you are in the interactive interface of GnuPG. Activate the admin
 commands with ``admin`` and use ``generate`` afterwards to start the
 generation of keys.
 
-::
+.. code-block:: bash
 
    gpg/card> admin                                                                                          
    Admin commands are allowed                                                                               
@@ -130,7 +130,7 @@ the default values, you can proceed with the next section.
 
 Open a command line and type ``gpg2 --card-edit --expert``.
 
-::
+.. code-block:: bash
 
    > gpg2 --card-edit --expert
     
@@ -159,7 +159,7 @@ Now you are in the interactive interface of GnuPG. As you can see in the
 change them, activate the admin commands with ``admin`` and use
 ``key-attr`` afterwards to change the attributes of the keys.
 
-::
+.. code-block:: bash
 
    gpg/card> admin
    Admin commands are allowed
@@ -192,7 +192,7 @@ encryption and authentication key). Most people will use the same
 attributes for every key. Type ``list`` to see the results (have look at
 the “Key attributes” field, which now reads rsa4096).
 
-::
+.. code-block:: bash
 
    gpg/card> list
     

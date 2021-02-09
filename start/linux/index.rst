@@ -65,7 +65,7 @@ On some GNU/Linux systems it is necessary to insert the UDEV rules for
 the Nitrokey device manually. If you followed the above instructions and
 get the message:
 
-::
+.. code-block:: bash
 
    gpg: OpenPGP card not available: No such device
 
@@ -73,7 +73,7 @@ please install the `Nitrokey App <https://www.nitrokey.com/download>`__
 or type the following commands in the terminal to download and install
 the UDEV rules:
 
-.. code:: bash
+.. code-block:: bash
 
    wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
    sudo mv 41-nitrokey.rules /etc/udev/rules.d/

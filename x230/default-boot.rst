@@ -34,7 +34,7 @@ described below.
 4. Now insert the Nitrokey if this is not already the case and confirm
    with Enter. Then you have to enter the User PIN of the Nitrokey.
 
-::
+.. code-block:: bash
 
        Please confirm that your GPG card is inserted [Y/n]:
 
@@ -76,7 +76,7 @@ Now the NitroPad marks the files that changed by the update as verified.
 8. Confirm the next three questions with Enter and enter the PIN of the
    Nitrokey if you are prompted to do so.
 
-::
+.. code-block:: bash
 
        Saving a default will modify the disk. Proceed? [Y/n]:
 
@@ -111,7 +111,7 @@ Instead please use the following workaround:
    sure the correct files are removed. Here 2 default files were
    available:
 
-::
+.. code-block:: bash
 
    $ cd /
    $ mount -o remount,rw /boot
@@ -133,7 +133,7 @@ Instead please use the following workaround:
 7. Save the kernel with accepting default options (proceed, do not agree
    for TPM encryption, confirm GPG card):
 
-::
+.. code-block:: bash
 
    Saving... Proceed (Y/n): Y
    Do you wish... to the TPM (y/N): N
