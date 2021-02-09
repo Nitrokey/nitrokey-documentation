@@ -32,32 +32,6 @@ issue the signing request, and repeat the same process on the client.
 The Certificate Signing Requests will be signed by the CA on the
 Nitorkey HSM, and re-transmitted to the server and the client.
 
-We can decompose the instructions of the guide as following:
-
-.. code-block:: bash
-
-   Server Side
-
-       1. Install OpenVPN
-       2. Install Easy-RSA
-       3. Create a Public Key Infrastructure (PKI) for the OpenVPN server
-       4. Create the server's Certificate Signing Request and the server's key
-       5. Sign and retrieve the server's Certificate `
-       6. Configure the OpenVPN Server 
-       7. Start the OpenVPN Server
-
-   Client side 
-
-       1. Install OpenVPN and Easy-RSA
-       2. Create a Public Key Infrastructure (PKI) for the OpenVPN client
-       3. Create the client's Certificate Signing Request and the client's Key
-       4. Sign and issue the client's certificate
-       5. Import the client certificate on the Nitrokey from the CA machine
-       6. Retrieve the chain certificate from the CA machine 
-       7. Configure the client to interact with the Nitrokey 
-       8. Start the OpenVPN client
-
---------------
 
 Prerequisites
 -------------
