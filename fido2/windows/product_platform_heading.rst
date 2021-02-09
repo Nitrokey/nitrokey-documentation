@@ -1,1 +1,3 @@
-(Nitrokey FIDO2 - Windows)
+.. container:: product_platform_heading
+
+  (Nitrokey FIDO2 - Windows)

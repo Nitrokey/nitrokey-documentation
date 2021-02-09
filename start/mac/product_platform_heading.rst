@@ -1,1 +1,3 @@
-(Nitrokey Start - macOS)
+.. container:: product_platform_heading
+
+  (Nitrokey Start - macOS)
