@@ -11,22 +11,31 @@ Firmware Update
    firmware upgrades may destroy all data on the device (especially
    coming from firmware version <0.45)!
 
-Basically you need both, the Nitrokey App and the program
-“dfu-programmer”. The Nitrokey App can be found here, dfu-programmer
-should be available through your package-manager,
-e.g. ``apt-get update && apt-get install dfu-programmer`` on
-Debian-based systems.
+1. Download the `Nitrokey App <https://www.nitrokey.com/download>`_ and the program “dfu-programmer” which should be available through your package-manager, e.g. ``apt-get update && apt-get install dfu-programmer`` on Debian-based systems.
 
-Please enable Firmware Update mode as described above through the
-Nitrokey App. Afterwards, open a terminal and type in the following
-three commands:
+2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/download/V0.54/storage-firmware-V0.54-0-g0b1ed2d.hex>`__.
+Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__.
+
+3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The
+default firmware password is ‘12345678’.
+
+.. figure:: /storage/images/enable-firmware-update.png.png
+   :alt: Enable firmware update
+
+.. note::
+
+   The Nitrokey Storage is not detected by Nitrokey App anymore once update mode got
+   activated. You have to proceed with the instructions described below
+   to make it work again.
+
+
+4. Open a terminal and execute:
 
 .. code-block:: bash
 
    sudo dfu-programmer at32uc3a3256s erase
    sudo dfu-programmer at32uc3a3256s flash --suppress-bootloader-mem firmware.hex
-   sudo dfu-programmer at32uc3a3256s launch # versions <0.7 of dfu-programmer use "start" instead of "launch"
+   sudo dfu-programmer at32uc3a3256s launch
+   # versions <0.7 of dfu-programmer use "start" instead of "launch"
 
-whereas “firmware.hex” is the file you have downloaded before as
-described above. “at32uc3a3256s” is the name of the controller in the
-Nitrokey that dfu-programmer should use.
+whereas “firmware.hex” is the file you have downloaded in step 2.
