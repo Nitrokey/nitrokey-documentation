@@ -13,7 +13,7 @@ Firmware Update
 
 1. Download the `Nitrokey App <https://www.nitrokey.com/download>`_ and the program “dfu-programmer” which should be available through your package-manager, e.g. ``apt-get update && apt-get install dfu-programmer`` on Debian-based systems.
 
-2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/download/V0.54/storage-firmware-V0.54-0-g0b1ed2d.hex>`__.
+2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/download/V0.54/storage-firmware-V0.54-0-g0b1ed2d.hex>`__ and store it as "firmware.hex" in your home folder.
 Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__.
 
 3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The
@@ -38,4 +38,4 @@ default firmware password is ‘12345678’.
    sudo dfu-programmer at32uc3a3256s launch
    # versions <0.7 of dfu-programmer use "start" instead of "launch"
 
-whereas “firmware.hex” is the file you have downloaded in step 2.
+whereas “firmware.hex” needs to be the path and file name of the firmware which you downloaded in step 2.
