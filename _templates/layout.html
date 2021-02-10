@@ -132,7 +132,6 @@
                         <ul class="divio-cloud-features">
                             <li>Powerful <b>FREE</b> instance</li>
                             <li>Local development environment</li>
-                            <li><b>Preconfigured django CMS</b></li>
                         </ul>
                         <a class="btn-neutral divio-cloud-btn" target="_blank" href="{{ theme_cloud_banner_url or "https://goo.gl/nHv16j" }}">Get your free account</a>
                     </div>
@@ -152,6 +151,27 @@
         <div class="header-title-wrap">
             <a class="header-title" href="{{ pathto(master_doc) }}">{{ project }}</a>
         </div>
+
+<!--
+	<ul class="language-switcher">
+		<li><a href="/{{ pagename }}.html">EN</a></li>
+		<li><a href="/es/{{ pagename }}.html">ES</a></li>
+		<li><a href="/de/{{ pagename }}.html">DE</a></li>
+		<li><a href="/fr/{{ pagename }}.html">FR</a></li>
+	</ul>
+-->	
+
+
+
+	<select onchange="location = this.options[this.selectedIndex].value;">
+		<option>{{ lang_attr }}</option>
+		<option value="/{{ pagename }}.html">EN</option>
+		<option value="/es/{{ pagename }}.html">ES</option>
+		<option value="/de/{{ pagename }}.html">DE</option>
+		<option value="/fr/{{ pagename }}.html">FR</option>
+	</select>
+
+
         <a class="logo-link" target="_blank" href="https://nitrokey.com"><img src="{{ pathto('_static/logo.png', 1) }}" class="logo" alt="Nitrokey"/></a>
     </div>
 
