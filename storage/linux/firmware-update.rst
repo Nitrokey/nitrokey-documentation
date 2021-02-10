@@ -19,7 +19,7 @@ Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/
 3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The
 default firmware password is ‘12345678’.
 
-.. figure:: /storage/images/enable-firmware-update.png.png
+.. figure:: /storage/images/enable-firmware-update.png
    :alt: Enable firmware update
 
 .. note::
