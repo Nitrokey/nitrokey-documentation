@@ -14,7 +14,7 @@
 
 - add the subheading below the first heading with `.. contents:: :local:`
 
-- add the ToC for local headings in `/$product/$platform/*.rst` with `.. include:: .\/product_platform_heading.rst` 
+- add the ToC for local headings in `/$product/$platform/*.rst` with `.. include:: ./product_platform_heading.rst` 
 
 - More information about RST:
 
