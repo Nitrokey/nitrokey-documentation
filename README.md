@@ -12,6 +12,10 @@
 
 - Relative paths (also included and double included) are always evaluated from the path of the final including page. Images within pages that are included elsewhere must therefore always be specified with an absolute path starting with `/` which stands for the root directory of the document.
 
+- add the subheading below the first heading with `.. contents:: :local:`
+
+- add the ToC for local headings in `/$product/$platform/*.rst` with `.. include:: .\/product_platform_heading.rst` 
+
 - More information about RST:
 
   https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
