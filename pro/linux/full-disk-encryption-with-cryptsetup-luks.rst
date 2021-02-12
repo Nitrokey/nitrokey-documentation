@@ -5,17 +5,9 @@ Full-Disk Encryption With cryptsetup/LUKS
 
 .. contents:: :local:
 
-This guide shows how to configure LUKS-encrypted volumes, to
-authenticate at boot with `Nitrokey
-Pro <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__
-or `Nitrokey
-Storage <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__.
+This guide shows how to configure LUKS-encrypted volumes, to authenticate at boot with `Nitrokey Pro <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ or `Nitrokey Storage <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__.
 
-To provide some background, cryptsetup-initramfs now has support for
-using OpenPGP smart cards like the Nitrokey Pro and Nitrokey Storage to
-unlock LUKS-encrypted volumes. Once you finish the setup, you will just
-need to insert your Nitrokey at boot and enter your User PIN, instead of
-typing in your regular disk encryption passphrase.
+To provide some background, cryptsetup-initramfs now has support for using OpenPGP smart cards like the Nitrokey Pro and Nitrokey Storage to unlock LUKS-encrypted volumes. Once you finish the setup, you will just need to insert your Nitrokey at boot and enter your User PIN, instead of typing in your regular disk encryption passphrase.
 
 These instructions have been tested on Ubuntu 20.04 and Debian 10.
 
@@ -31,8 +23,7 @@ Requirements
 
 -  An Ubuntu or Debian computer with at least one LUKS-encrypted volume.
 
-See the section below to determine which method is compatible with this
-guide.
+See the section below to determine which method is compatible with this guide.
 
 -  A Nitrokey Pro 2 or Nitrokey Storage 2
    `initialized <https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__
@@ -41,14 +32,9 @@ guide.
 Known Issues
 ------------
 
-So far, the script works only with manually-partitioned volumes, that
-are composed of an unencrypted ``/boot`` partition, and an encrypted
-root ``/`` partition.
+So far, the script works only with manually-partitioned volumes, that are composed of an unencrypted ``/boot`` partition, and an encrypted root ``/`` partition.
 
-Please do not select the automatic full-disk encryption provided by the
-operating system you are using for this guide. You will face recurrent
-errors when the partitioning is done automatically, using the
-installation interface on Ubuntu and Debian.
+Please do not select the automatic full-disk encryption provided by the operating system you are using for this guide. You will face recurrent errors when the partitioning is done automatically, using the installation interface on Ubuntu and Debian.
 
 Instructions
 ------------
@@ -87,9 +73,7 @@ To export your public key from GnuPG’s keyring:
 
    $ gpg2 --armor --export KeyID > pubkey.asc
 
-If you already have uploaded a public key to a keyserver (or have it
-stored somewhere else), you should retrieve it in the way you are most
-comfortable with, and proceed to step 5.
+If you already have uploaded a public key to a keyserver (or have it stored somewhere else), you should retrieve it in the way you are most comfortable with, and proceed to step 5.
 
 5. Execute the script with the pubkey.asc argument
 
@@ -98,35 +82,25 @@ comfortable with, and proceed to step 5.
 
    $ sudo ./smartcard-key-luks pubkey.asc
 
-Once, you run the script with the OpenPGP public key as argument, it
-automatically sets up a new LUKS secret, encrypts it against that public
-key, and sets up crypttab, LUKS, initramfs, and GRUB.
+Once, you run the script with the OpenPGP public key as argument, it automatically sets up a new LUKS secret, encrypts it against that public key, and sets up crypttab, LUKS, initramfs, and GRUB.
 
 First you will be prompted for the ``User PIN``
 
 |image1|
 
-Once you unlock the Nitrokey, you will be prompted for your
-``OLD passphrase``. It is the passphrase you entered to encrypt your
-volume at intallation.
+Once you unlock the Nitrokey, you will be prompted for your ``OLD passphrase``. It is the passphrase you entered to encrypt your volume at intallation.
 
 |image2|
 
-Notice: This is a fall-back alternative in case you lose your Nitrokey,
-or if it’s unavailable. So far, it was not tested, and users must be
-aware of the risk of getting locked out of their computer, if the
-fall-back method does not work.
+Notice: This is a fall-back alternative in case you lose your Nitrokey, or if it’s unavailable. So far, it was not tested, and users must be aware of the risk of getting locked out of their computer, if the fall-back method does not work.
 
-Once you enter the passphrase, the script finishes the setup in about
-one minute. Do not interrupt the script, or you might get locked out of
-your computer after reboot.
+Once you enter the passphrase, the script finishes the setup in about one minute. Do not interrupt the script, or you might get locked out of your computer after reboot.
 
 |image3|
 
 Done!
 
-By now you must reboot, and you should be able to use your Nitrokey to
-unlock your encrypted drive.
+By now you must reboot, and you should be able to use your Nitrokey to unlock your encrypted drive.
 
 Usage
 -----

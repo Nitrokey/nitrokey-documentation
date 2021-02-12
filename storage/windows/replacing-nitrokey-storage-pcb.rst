@@ -5,8 +5,7 @@ Replacing Nitrokey Storage PCB
 
 .. contents:: :local:
 
-You can replace your Nitrokey Storage hardware (PCB) within a few
-minutes by following these steps:
+You can replace your Nitrokey Storage hardware (PCB) within a few minutes by following these steps:
 
 1. Backup all your data from the Nitrokey. Understand that the RSA keys
    will be replaced and all data be destroyed!
@@ -24,5 +23,4 @@ minutes by following these steps:
    select “Destroy Encrypted Data” from “Configuration” sub-menu. Note
    that this will destroy all existing RSA keys and encrypted data.
 
-Your Nitrokey is now ready to use. In case of any problems, please send
-us an email.
+Your Nitrokey is now ready to use. In case of any problems, please send us an email.

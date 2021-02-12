@@ -5,8 +5,7 @@ Passwordless Authentication with Microsoft
 
 .. contents:: :local:
 
-The Nitrokey FIDO2 supports password-less authentication, where entering
-a password is replaced by logging in with the Nitrokey FIDO2 and a PIN.
+The Nitrokey FIDO2 supports password-less authentication, where entering a password is replaced by logging in with the Nitrokey FIDO2 and a PIN.
 
 Sample login to Microsoft with the Nitrokey FIDO2
 -------------------------------------------------
@@ -37,8 +36,7 @@ Sample login to Microsoft with the Nitrokey FIDO2
 Setting up Passwordless Authentication
 --------------------------------------
 
-Here we offer you a guide on how to set up passwordless authentication
-for your Microsoft account with the Nitrokey FIDO2.
+Here we offer you a guide on how to set up passwordless authentication for your Microsoft account with the Nitrokey FIDO2.
 
 1. You need Windows 10 (update October 2018 or later) and the Microsoft
    Edge or Google Chrome browser.

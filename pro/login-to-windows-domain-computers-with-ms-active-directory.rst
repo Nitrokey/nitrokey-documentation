@@ -76,8 +76,7 @@ Login to Windows Domain Computers With MS Active Directory
 
 
 
-From now on, when logging on to your Windows computer you need to
-connect the Nitrokey and enter your PIN.
+From now on, when logging on to your Windows computer you need to connect the Nitrokey and enter your PIN.
 
 .. figure:: /pro/images/login-to-windows-domain-computers-with-ms-active-directory/6.png
    :alt: img6

@@ -8,11 +8,7 @@ OpenPGP Email Encryption With Thunderbird
 Thunderbird 78.3 and newer
 --------------------------
 
-At the moment Thunderbird’s 78 support for the OpenPGP emails is not
-easy to set up. See `Thunderbird’s
-documentation <https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`__
-for details. Here is a `comprehensive German
-guide <https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-nitrokey-storage/>`__.
+At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy to set up. See `Thunderbird’s documentation <https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`__ for details. Here is a `comprehensive German guide <https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-nitrokey-storage/>`__.
 
 Troubleshooting
 ###############
@@ -24,9 +20,7 @@ Troubleshooting
 - The key ID does not contain any whitespace, and consists of 16 characters from range 0-9 A-F
 - you have GPA or Kleopatra software installed.
 
-Please use Kleopatra or
-`GPA <https://docs.nitrokey.com/start/windows/openpgp-key-generation-using-gpa.html>`__
-software to handle the smart card.
+Please use Kleopatra or `GPA <https://docs.nitrokey.com/start/windows/openpgp-key-generation-using-gpa.html>`__ software to handle the smart card.
 
 Thunderbird 77 and older
 ------------------------
@@ -105,21 +99,13 @@ Procedure
 
 
 
-You have now changed the PINs and should continue to generate your
-personal keys.
+You have now changed the PINs and should continue to generate your personal keys.
 
 Generation of Keys
 ------------------
 
-To encrypt data and e-mails, a key pair consisting of a public key and a
-private key, must first be generated. The so-called public key is used
-to **en**\ crypt the data or e-mails. You can distribute this to all
-those with whom you want to communicate securely (for example, publish
-it publicly on your site). The so-called private key is used to
-**de**\ crypt the data or messages. This key should **NEVER** be made
-known! Usually, you also do not have direct access to it (see below),
-since this is stored securely on the Nitrokey. Use the Nitrokey to
-create both keys using the following procedure:
+To encrypt data and e-mails, a key pair consisting of a public key and a private key, must first be generated. The so-called public key is used to **en**\ crypt the data or e-mails. You can distribute this to all those with whom you want to communicate securely (for example, publish it publicly on your site). The so-called private key is used to
+**de**\ crypt the data or messages. This key should **NEVER** be made known! Usually, you also do not have direct access to it (see below), since this is stored securely on the Nitrokey. Use the Nitrokey to create both keys using the following procedure:
 
 1. Insert the Nitrokey into a USB port on your computer.
    StartThunderbird
@@ -156,22 +142,15 @@ create both keys using the following procedure:
    avoid known prose or lyric. Also, no name or known term should be
    used.
 
-**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (keine Umlaute
-ä,ü,ö,Ä,Ü,Ö oder ß)
+**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (keine Umlaute ä,ü,ö,Ä,Ü,Ö oder ß)
 
-**Poor Password**: qwertz123, IchliebeSusi3, Password, If you can dream
-it, you can do it.
+**Poor Password**: qwertz123, IchliebeSusi3, Password, If you can dream it, you can do it.
 
-**Strong Password**: g(Ak?2Pn7Yn oder Ki.stg2bLqzp%d or A dog with
-greeen Earz and fife legs (spelling errors increase security)
+**Strong Password**: g(Ak?2Pn7Yn oder Ki.stg2bLqzp%d or A dog with greeen Earz and fife legs (spelling errors increase security)
 
-You do **not** need this password for daily work. It is only necessary
-for the restoration of the secret key, e.g. if you have lost the
-Nitrokey. Therefore, keep the password in a safe place.
+You do **not** need this password for daily work. It is only necessary for the restoration of the secret key, e.g. if you have lost the Nitrokey. Therefore, keep the password in a safe place.
 
-You can also specify whether and when the key should be automatically
-invalid. This means, from this point onwards, no more e-mails can be
-encrypted with this key and you have to create a new key pair.
+You can also specify whether and when the key should be automatically invalid. This means, from this point onwards, no more e-mails can be encrypted with this key and you have to create a new key pair.
 
 1. Finally, click on “Generate key pair”.
 
@@ -195,8 +174,7 @@ encrypted with this key and you have to create a new key pair.
 
 
 
-The key generation can take a few minutes. Do not terminate the program
-prematurely!
+The key generation can take a few minutes. Do not terminate the program prematurely!
 
 4. When the key generation is complete, you receive the following
    message. A certificate is now created that allows you to invalidate
@@ -205,12 +183,7 @@ prematurely!
    least one other external medium so that you can revoke the validity
    of the keys if your keys and backups are lost. Click “Yes”
 
-You can now select the directory in which the backup copy is stored.
-This copy is encrypted with your password entered above. This means that
-no one can read or use the keys without your password. Do not give your
-password to anyone. This file with the name of your e-mail address and
-the suffix “.asc” should be backed up on another medium. After selecting
-the directory, click “Save”.
+You can now select the directory in which the backup copy is stored. This copy is encrypted with your password entered above. This means that no one can read or use the keys without your password. Do not give your password to anyone. This file with the name of your e-mail address and the suffix “.asc” should be backed up on another medium. After selecting the directory, click “Save”.
 
 .. figure:: /pro/images/openpgp-email-encryption-with-thunderbird/11.png
    :alt: img11
@@ -241,5 +214,4 @@ the directory, click “Save”.
 
 
 
-Your Nitrokey is personalized and ready to use. **Have fun with the
-secure email encryption!**
+Your Nitrokey is personalized and ready to use. **Have fun with the secure email encryption!**

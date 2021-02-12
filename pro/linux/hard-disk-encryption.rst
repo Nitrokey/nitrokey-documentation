@@ -8,14 +8,10 @@ Hard Disk Encryption
 VeraCrypt (formerly TrueCrypt)
 ------------------------------
 
-`VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__ is a free and Open
-Source disk encryption software for Windows, macOS, and GNU/Linux. It is
-the successor of TrueCrypt and thus recommended, although the following
-instructions should apply to TrueCrypt as well.
+`VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__ is a free and Open Source disk encryption software for Windows, macOS, and GNU/Linux. It is the successor of TrueCrypt and thus recommended, although the following instructions should apply to TrueCrypt as well.
 
 Follow these steps to use the program with `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ or
-`Nitrokey Pro
+2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ or `Nitrokey Pro
 2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__:
 
 1. Install the latest release of
@@ -42,32 +38,18 @@ Follow these steps to use the program with `Nitrokey Storage
    a keyfile on the Nitrokey which theoretically could be stolen by a
    computer virus after the user enters the PIN.
 
-Note: `Aloaha Crypt <http://www.aloaha.com/aloaha-crypt-disk/>`__ is
-based on TrueCrypt/VeraCrypt but without the described security
-limitation.
+Note: `Aloaha Crypt <http://www.aloaha.com/aloaha-crypt-disk/>`__ is based on TrueCrypt/VeraCrypt but without the described security limitation.
 
 Hard Disk Encryption on Linux with LUKS/dm-crypt
 ------------------------------------------------
 
-Here are `excellent
-instructions <http://blog.kumina.nl/2010/07/two-factor-luks-using-ubuntu/>`__
-how to use Nitrokey to encrypt your hard disk under Linux with
-LUKS/dm-crypt. `Other
-instructions <https://wiki.ubuntu.com/SmartCardLUKSDiskEncryption>`__.
+Here are `excellent instructions <http://blog.kumina.nl/2010/07/two-factor-luks-using-ubuntu/>`__ how to use Nitrokey to encrypt your hard disk under Linux with LUKS/dm-crypt. `Other instructions <https://wiki.ubuntu.com/SmartCardLUKSDiskEncryption>`__.
 
-Purism has created a `simple
-script <https://docs.puri.sm/PureBoot/LibremKeyLUKS.html>`__ to add the
-Nitrokey/LibremKey as a way to unlock LUKS partitions (not tested by
-Nitrokey yet).
+Purism has created a `simple script <https://docs.puri.sm/PureBoot/LibremKeyLUKS.html>`__ to add the Nitrokey/LibremKey as a way to unlock LUKS partitions (not tested by Nitrokey yet).
 
-`This project <https://github.com/artosan/nitroluks/>`__ aims to ease
-the use of LUKS with the Nitrokey Pro or Storage based on the Password
-Safe (not tested by Nitrokey yet). A description on how to use it on
-Gentoo can be found
-`here <https://amedeos.github.io/gentoo/nitrokey/2019/01/21/gentoo-nitrokey-luks.html>`__.
+`This project <https://github.com/artosan/nitroluks/>`__ aims to ease the use of LUKS with the Nitrokey Pro or Storage based on the Password Safe (not tested by Nitrokey yet). A description on how to use it on Gentoo can be found `here <https://amedeos.github.io/gentoo/nitrokey/2019/01/21/gentoo-nitrokey-luks.html>`__.
 
-For Arch Linux, see
-`initramfs-scencrypt <https://github.com/fuhry/initramfs-scencrypt>`__.
+For Arch Linux, see `initramfs-scencrypt <https://github.com/fuhry/initramfs-scencrypt>`__.
 
 Storage Encryption on Linux with EncFS
 --------------------------------------
@@ -80,10 +62,7 @@ Storage Encryption on Linux with EncFS
    default PINs and generated or imported keys with
    GnuPG <https://www.nitrokey.com/start>`__.
 
-`EncFS <http://www.arg0.net/encfs>`__ is an easy to utlity for encrypted
-file systems and it is based on
-`FUSE <http://de.wikipedia.org/wiki/Filesystem_in_Userspace>`__. You may
-follow these steps to use it with very long passwords and Nitrokey Pro
+`EncFS <http://www.arg0.net/encfs>`__ is an easy to utlity for encrypted file systems and it is based on `FUSE <http://de.wikipedia.org/wiki/Filesystem_in_Userspace>`__. You may follow these steps to use it with very long passwords and Nitrokey Pro
 2:
 
 Initialization
@@ -153,9 +132,7 @@ Usage
 Storage Encryption on Linux with ECryptFS
 -----------------------------------------
 
-`eCryptfs <https://www.ecryptfs.org/>`__ is a file based transparent
-encryption file system for Linux which can be used with Nitrokey through
-a PKCS#11 driver.
+`eCryptfs <https://www.ecryptfs.org/>`__ is a file based transparent encryption file system for Linux which can be used with Nitrokey through a PKCS#11 driver.
 
 See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
 
@@ -196,8 +173,7 @@ See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
    # Choose pkcs11-helper
    # Enter the serialized ID of step 3 to PKCS#11 ID.
 
-Alternatively, try `ESOSI <http://sourceforge.net/projects/esosi/>`__ or
-follow these steps using OpenSC and OpenVPN.
+Alternatively, try `ESOSI <http://sourceforge.net/projects/esosi/>`__ or follow these steps using OpenSC and OpenVPN.
 
 Source of the guide:
 https://www.nitrokey.com/documentation/applications#hard-disk-encryption

@@ -76,12 +76,9 @@ Login With EIDAuthenticate on Stand Alone Windows Computers
 
 
 
-You may perform further configurations such as activate the force smart
-card policy or automatically lock the computer when removing the
-Nitrokey (by using EIDConfigurationWizardElevated.exe).
+You may perform further configurations such as activate the force smart card policy or automatically lock the computer when removing the Nitrokey (by using EIDConfigurationWizardElevated.exe).
 
-From now on, when logging on to your Windows computer you need to
-connect the Nitrokey and enter your PIN.
+From now on, when logging on to your Windows computer you need to connect the Nitrokey and enter your PIN.
 
 .. figure:: /pro/images/login-with-eidauthenticate-on-stand-alone-windows-computers/9.png
    :alt: img9

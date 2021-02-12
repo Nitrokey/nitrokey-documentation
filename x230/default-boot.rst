@@ -5,9 +5,7 @@ Default Boot
 
 .. contents:: :local:
 
-If you have installed a new operating system, it may be that default
-boot is not yet assigned. If this is the case, please proceed as
-described below.
+If you have installed a new operating system, it may be that default boot is not yet assigned. If this is the case, please proceed as described below.
 
 1. Select “Default boot”.
 
@@ -99,13 +97,9 @@ Now the NitroPad marks the files that changed by the update as verified.
 Changing default kernel
 -----------------------
 
-This is a workaround for Heads v1.1 bug, which does not allow to change
-the kernel to the one later (lower) in the list.
+This is a workaround for Heads v1.1 bug, which does not allow to change the kernel to the one later (lower) in the list.
 
-Usual way would be to go to
-``Options -> Boot Options -> Show OS boot menu``, selecting the kernel
-and making it default, however the latter is not working at the moment.
-Instead please use the following workaround:
+Usual way would be to go to ``Options -> Boot Options -> Show OS boot menu``, selecting the kernel and making it default, however the latter is not working at the moment. Instead please use the following workaround:
 
 1. Start recovery console and remove the default boot files. Please make
    sure the correct files are removed. Here 2 default files were

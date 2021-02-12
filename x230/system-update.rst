@@ -5,10 +5,7 @@ System update
 
 .. contents:: :local:
 
-The NitroPad watches for changes to important system files to detect
-third-party tampering. This means that special steps are sometimes
-necessary when updating the system. This can often be recognized by the
-fact that the system prompts you to reboot.
+The NitroPad watches for changes to important system files to detect third-party tampering. This means that special steps are sometimes necessary when updating the system. This can often be recognized by the fact that the system prompts you to reboot.
 
 Procedure After a System Update
 ###############################
@@ -46,10 +43,7 @@ Boot Hash Mismatch
    (default: 123456). You will not see the characters you typed in on
    the screen.
 
-**Important**: Heads expects an English keyboard layout, on which
-e.g. “y” and “z” are swapped in comparison to the German keyboard
-layout. If you agree with the default selection (which is written in
-capital letter) you can also simply confirm by pressing Enter.
+**Important**: Heads expects an English keyboard layout, on which e.g. “y” and “z” are swapped in comparison to the German keyboard layout. If you agree with the default selection (which is written in capital letter) you can also simply confirm by pressing Enter.
 
 .. code-block:: bash
 

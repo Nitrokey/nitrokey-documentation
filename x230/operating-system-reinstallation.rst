@@ -45,8 +45,7 @@ Operating System Reinstallation
 6. `Sign the boot
    partition. <https://docs.nitrokey.com/x230/system-update.html>`__
 
-To avoid accidential overwriting of valuable data, format the USB drive
-afterwards.
+To avoid accidential overwriting of valuable data, format the USB drive afterwards.
 
 .. danger::
 

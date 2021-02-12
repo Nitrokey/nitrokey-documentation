@@ -11,14 +11,9 @@ There are two widely used standards for email encryption.
 
 -  S/MIME/X.509 is mostly used by enterprises.
 
-If you are in doubt which one to choose, you should use OpenPGP. While
-this page describes the usage of OpenPGP, S/MIME is described
-`here <https://docs.nitrokey.com/pro/smime-email-encryption.html>`__.
+If you are in doubt which one to choose, you should use OpenPGP. While this page describes the usage of OpenPGP, S/MIME is described `here <https://docs.nitrokey.com/pro/smime-email-encryption.html>`__.
 
-Please familiarize yourself with the general concept behind the OpenPGP
-standard first, for example by reading `this info
-graphic <https://emailselfdefense.fsf.org/en/infographic.html>`__ of the
-Free Software Foundation.
+Please familiarize yourself with the general concept behind the OpenPGP standard first, for example by reading `this info graphic <https://emailselfdefense.fsf.org/en/infographic.html>`__ of the Free Software Foundation.
 
 Key Generation
 --------------
@@ -48,16 +43,7 @@ If you do not have OpenPGP keys yet, you need to generate them first.
 Importing Existing Keys
 -----------------------
 
-If you already have OpenPGP keys you may want to use them with your
-Nitrokey, instead of generating new ones. Importing exsiting keys works
-basically the same as generating keys locally first and copy them to the
-Nitrokey (see above). Therefore, please have a look at the
-`corresponding
-instructions <https://docs.nitrokey.com/pro/openpgp-key-generation-with-backup.html#key-import>`__.
-Note that you probably want to generate another subkey for
-authentication to your existing key. See at the same instructions for
-`subkey
-generation <https://docs.nitrokey.com/pro/openpgp-key-generation-with-backup.html#subkey-for-authentication>`__.
+If you already have OpenPGP keys you may want to use them with your Nitrokey, instead of generating new ones. Importing exsiting keys works basically the same as generating keys locally first and copy them to the Nitrokey (see above). Therefore, please have a look at the `corresponding instructions <https://docs.nitrokey.com/pro/openpgp-key-generation-with-backup.html#key-import>`__. Note that you probably want to generate another subkey for authentication to your existing key. See at the same instructions for `subkey generation <https://docs.nitrokey.com/pro/openpgp-key-generation-with-backup.html#subkey-for-authentication>`__.
 
 Usage
 -----

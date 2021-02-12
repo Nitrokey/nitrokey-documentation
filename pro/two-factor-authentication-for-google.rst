@@ -5,8 +5,7 @@ Two-factor Authentication for Google
 
 .. contents:: :local:
 
-These are the basic steps for registering the Nitrokey Pro or Nitrokey
-Storage as a second factor of a Google account:
+These are the basic steps for registering the Nitrokey Pro or Nitrokey Storage as a second factor of a Google account:
 
 -  Go to
    `https://myaccount.google.com/security#signin <https://myaccount.google.com/security?pli=1#signin>`__
@@ -30,8 +29,4 @@ Storage as a second factor of a Google account:
 -  Click “Next” and follow the instructions (but you use the Nitrokey
    App instead of the Google Authenticator app to generate the keys)
 
-It is possible to use the same secret key for the Google Autenticator
-app and the Nitrokey App as well. Just make sure to follow the above
-procedure and use the qrcode for the Authenticator app afterwards before
-clicking “Next”. Now you can use either the Google Authenticator app or
-the Nitrokey App.
+It is possible to use the same secret key for the Google Autenticator app and the Nitrokey App as well. Just make sure to follow the above procedure and use the qrcode for the Authenticator app afterwards before clicking “Next”. Now you can use either the Google Authenticator app or the Nitrokey App.

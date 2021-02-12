@@ -5,11 +5,9 @@ Two-factor Authentication for Microsoft Account
 
 .. contents:: :local:
 
-These are the basic steps for registering the Nitrokey Pro or Nitrokey
-Storage as a second factor of a Microsoft account.
+These are the basic steps for registering the Nitrokey Pro or Nitrokey Storage as a second factor of a Microsoft account.
 
-Visit https://account.live.com/proofs/Manage/additional and log in to
-your Microsoft account if prompted.
+Visit https://account.live.com/proofs/Manage/additional and log in to your Microsoft account if prompted.
 
 .. figure:: /pro/windows/images/two-factor-authentication-microsoft/1.png
    :alt: img1
@@ -90,8 +88,7 @@ Click “Next” and then “Finish”.
 
 
 
-From now on, when signing in you need an OTP additionally to your
-password.
+From now on, when signing in you need an OTP additionally to your password.
 
 .. figure:: /pro/windows/images/two-factor-authentication-microsoft/14.png
    :alt: img14

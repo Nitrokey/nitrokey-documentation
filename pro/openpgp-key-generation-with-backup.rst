@@ -5,31 +5,17 @@ OpenPGP Key Generation With Backup
 
 .. contents:: :local:
 
-The following instructions explain the generation of OpenPGP keys and
-how to copy them to the Nitrokey. This method has the advantage of
-providing a backup of the keys in case of losing or breaking the
-Nitrokey. The instructions are based on the command line interface of
-GnuPG. Thus, you need to have GnuPG installed on your system. The newest
-GnuPG version for Windows can be found
-`here <https://www.gpg4win.org/>`__ and the newest version for MacOS can
-be found `here <https://gpgtools.org/>`__. Users of Linux systems please
-install GnuPG with help of the package manager.
+The following instructions explain the generation of OpenPGP keys and how to copy them to the Nitrokey. This method has the advantage of providing a backup of the keys in case of losing or breaking the Nitrokey. The instructions are based on the command line interface of GnuPG. Thus, you need to have GnuPG installed on your system. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org/>`__ and the newest version for MacOS can be found `here <https://gpgtools.org/>`__. Users of Linux systems please install GnuPG with help of the package manager.
 
 Key Generation
 --------------
 
-At first, you need to generate a key locally. You can decide, which key
-attributes to use and - most importantly - you can export the key and
-keep it somewhere save in case you need to restore the key.
+At first, you need to generate a key locally. You can decide, which key attributes to use and - most importantly - you can export the key and keep it somewhere save in case you need to restore the key.
 
 Main Key and Encryption Subkey
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We can use the command ``gpg --full-generate-key --expert`` to start a
-guided key generation with all possible options. You can choose the key
-type (usually RSA (1) or ECC (9)), the length of the key and other
-attributes. The following output is just a simple example, you may
-choose other values.
+We can use the command ``gpg --full-generate-key --expert`` to start a guided key generation with all possible options. You can choose the key type (usually RSA (1) or ECC (9)), the length of the key and other attributes. The following output is just a simple example, you may choose other values.
 
 .. code-block:: bash
 
@@ -92,8 +78,7 @@ choose other values.
    uid                      Jane Doe 
    sub   rsa2048 2018-09-17 [E]
 
-The following table illustrates which algorithm can be used on which
-device, in case you want to use different key attributes.
+The following table illustrates which algorithm can be used on which device, in case you want to use different key attributes.
 
 ================ ===== ============= =================
 \                Start Pro + Storage Pro 2 + Storage 2
@@ -111,13 +96,8 @@ secp256k1        ✓
 Subkey for Authentication
 -------------------------
 
-You now have a main key with the capability to sign and certify (marked
-as [SC]) and a subkey for encryption (marked as [E]). It is necessary to
-have another subkey for use cases in which authentication is needed.
-This subkey is generated in the next step. Type in
-``gpg --edit-key --expert keyID`` to start the process, whereas “keyID”
-is either the id of the key or the email address used during key
-generation.
+You now have a main key with the capability to sign and certify (marked as [SC]) and a subkey for encryption (marked as [E]). It is necessary to have another subkey for use cases in which authentication is needed. This subkey is generated in the next step. Type in ``gpg --edit-key --expert keyID`` to start the process, whereas “keyID”
+is either the id of the key or the email address used during key generation.
 
 .. code-block:: bash
 
@@ -137,12 +117,7 @@ generation.
     
    gpg>
 
-Now you are in the interactive mode of GnuPG and you can add a key by
-simply typing ``addkey``. You need to choose the key you want to use. It
-is crucial to choose “set your own capabilities”, because we want to
-have the “authenticate” capability which is not available otherwise. We
-toggle sign and encrypt by typing ``s`` and ``e`` and we activate
-authenticate by typing ``a``.
+Now you are in the interactive mode of GnuPG and you can add a key by simply typing ``addkey``. You need to choose the key you want to use. It is crucial to choose “set your own capabilities”, because we want to have the “authenticate” capability which is not available otherwise. We toggle sign and encrypt by typing ``s`` and ``e`` and we activate authenticate by typing ``a``.
 
 .. code-block:: bash
 
@@ -200,9 +175,7 @@ authenticate by typing ``a``.
     
    Your selection? q
 
-We quit with ``q``. Afterwards we need to answer the same questions as
-before. Finally, we have a ready-to-go key set which we can import to
-our device.
+We quit with ``q``. Afterwards we need to answer the same questions as before. Finally, we have a ready-to-go key set which we can import to our device.
 
 .. code-block:: bash
 
@@ -236,10 +209,7 @@ our device.
    gpg> quit
    Save changes? (y/N) y
 
-Now is good time to backup your key. Please keep this backup very
-secure. It is best practice to never have this key on a regular computer
-which has connection to the internet, so that the key never gets
-compromised. You can create a backup with something like:
+Now is good time to backup your key. Please keep this backup very secure. It is best practice to never have this key on a regular computer which has connection to the internet, so that the key never gets compromised. You can create a backup with something like:
 
 .. code-block:: bash
 
@@ -248,15 +218,9 @@ compromised. You can create a backup with something like:
 Key Import
 ----------
 
-You have a main key and two subkeys which can be imported to your
-Nitrokey. Before proceeding please make sure that you really have a
-backup of the key, if you need one. The ``keytocard`` command used in
-the next steps will **delete** your key from your disk!
+You have a main key and two subkeys which can be imported to your Nitrokey. Before proceeding please make sure that you really have a backup of the key, if you need one. The ``keytocard`` command used in the next steps will **delete** your key from your disk!
 
-We start the process by accessing the interactive interface of GnuPG
-again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is
-either the id of the key or the email address used during key
-generation.
+We start the process by accessing the interactive interface of GnuPG again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is either the id of the key or the email address used during key generation.
 
 .. code-block:: bash
 
@@ -292,9 +256,7 @@ generation.
         created: 2018-09-17  expires: never       usage: A
    [ultimate] (1). Jane Doe 
 
-We just imported the main key to the card. Now we proceed with the two
-subkeys. We type ``key 1`` to select the encryption subkey and type in
-``keytocard`` again and select the slot to use.
+We just imported the main key to the card. Now we proceed with the two subkeys. We type ``key 1`` to select the encryption subkey and type in ``keytocard`` again and select the slot to use.
 
 .. code-block:: bash
 
@@ -323,9 +285,7 @@ subkeys. We type ``key 1`` to select the encryption subkey and type in
         created: 2018-09-17  expires: never       usage: A
    [ultimate] (1). Jane Doe 
 
-Now we deselect the first key with ``key 1`` and select the second
-subkey with ``key 2`` and move it as well with ``keytocard``. Afterwards
-we quit and save the changes.
+Now we deselect the first key with ``key 1`` and select the second subkey with ``key 2`` and move it as well with ``keytocard``. Afterwards we quit and save the changes.
 
 .. code-block:: bash
 
@@ -368,43 +328,25 @@ we quit and save the changes.
    gpg> quit
    Save changes? (y/N) y
 
-Your keys are now moved to the Nitrokey and thus secured in hardware.
-Congratulations!
+Your keys are now moved to the Nitrokey and thus secured in hardware. Congratulations!
 
 Exporting Public Key and Keyserver Usage
 ----------------------------------------
 
-Although you can start to use your Nitrokey right away after generating
-the keys on your system, you need to import your public key on every
-system, you want to use the Nitrokey on. So to be prepared you have two
-options: You either save the public key anywhere you like and use it on
-another system or you save the public key on a webpage/keyserver.
+Although you can start to use your Nitrokey right away after generating the keys on your system, you need to import your public key on every system, you want to use the Nitrokey on. So to be prepared you have two options: You either save the public key anywhere you like and use it on another system or you save the public key on a webpage/keyserver.
 
 Generating a Public Key File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To get a simple file of your public key, you can just use
-``gpg --armor --export keyID > pubkey.asc``. Use either the fingerprint
-as “keyID” (look at ``gpg -K`` to get it) or just use your email address
-as an identifier.
+To get a simple file of your public key, you can just use ``gpg --armor --export keyID > pubkey.asc``. Use either the fingerprint as “keyID” (look at ``gpg -K`` to get it) or just use your email address as an identifier.
 
-You can carry this file with you or send it to anyone who you like. This
-file is not secret at all. If you want to use the Nitrokey on another
-system, you first import this public key via ``gpg --import pubkey.asc``
-and then types ``gpg --card-status`` so that the system knows where to
-look for this key. That’s all.
+You can carry this file with you or send it to anyone who you like. This file is not secret at all. If you want to use the Nitrokey on another system, you first import this public key via ``gpg --import pubkey.asc``
+and then types ``gpg --card-status`` so that the system knows where to look for this key. That’s all.
 
 Uploading the Public Key
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you do not want to carry a public keyfile with you, you can upload it
-to keyserver. You can do this by typing
-``gpg --keyserver search.keyserver.net --send-key keyID``. If you are
-using another machine you can just import it by using
-``gpg --keyserver search.keyserver.net --recv-key keyID``.
+If you do not want to carry a public keyfile with you, you can upload it to keyserver. You can do this by typing ``gpg --keyserver search.keyserver.net --send-key keyID``. If you are using another machine you can just import it by using ``gpg --keyserver search.keyserver.net --recv-key keyID``.
 
-Another possibility is to change the URL setting on your card. Start
-``gpg --card-edit`` again and first set the URL where the key is
-situated (e.g. on the keyserver or on your webpage etc.) via the ``url``
-command. From now on you can import the key on another system by just
-using the ``fetch`` command within the ``gpg --card-edit environment``.
+Another possibility is to change the URL setting on your card. Start ``gpg --card-edit`` again and first set the URL where the key is situated (e.g. on the keyserver or on your webpage etc.) via the ``url``
+command. From now on you can import the key on another system by just using the ``fetch`` command within the ``gpg --card-edit environment``.

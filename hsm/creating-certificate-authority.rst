@@ -5,31 +5,25 @@ Creating a Certificate Authority
 
 .. contents:: :local:
 
-This article shows you how to setup your own private certificate
-authority backed by a Nitrokey HSM. This certificate authority has no
-automation and does not really scale. Other open source projects can be
-referenced for automation and scalability.
+This article shows you how to setup your own private certificate authority backed by a Nitrokey HSM. This certificate authority has no automation and does not really scale. Other open source projects can be referenced for automation and scalability.
 
 Choose Cryptographic Algorithms
 -------------------------------
 
-I’m going to assume that you’re as paranoid as I am, so I will be using
-the following command for generating private keys:
+I’m going to assume that you’re as paranoid as I am, so I will be using the following command for generating private keys:
 
 .. code-block:: bash
 
    pkcs11-tool -l --keypairgen --key-type EC:secp384r1 --label root
 
-But, if you’re less paranoid that I am, you can safely choose the
-following options:
+But, if you’re less paranoid that I am, you can safely choose the following options:
 
 .. code-block:: bash
 
    pkcs11-tool -l --keypairgen --key-type EC:secp256r1 --label root
    pkcs11-tool -l --keypairgen --key-type rsa:4096 --label root
 
-Likewise, I will be using the sha512 algorithm throughout this article,
-but sha256 can safely be used.
+Likewise, I will be using the sha512 algorithm throughout this article, but sha256 can safely be used.
 
 Preparing to Start
 ------------------
@@ -58,9 +52,7 @@ Install the necessary tools:
 Creating the Root Certificate Authority
 ---------------------------------------
 
-We start by generating the private key for the certificate authority
-directly on the Nitrokey HSM. This allows us to use the private key in
-the future, but not access it.
+We start by generating the private key for the certificate authority directly on the Nitrokey HSM. This allows us to use the private key in the future, but not access it.
 
 .. code-block:: bash
 
@@ -83,25 +75,21 @@ the future, but not access it.
      Usage:      verify, derive
      Access:     none
 
-Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll
-need it later.
+Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need it later.
 
-If you need the ID in the future, you can list the keys on the Nitrokey
-HSM:
+If you need the ID in the future, you can list the keys on the Nitrokey HSM:
 
 .. code-block:: bash
 
    pkcs11-tool -O
 
-We need to create a config file to generate a self-signed public
-certificate.
+We need to create a config file to generate a self-signed public certificate.
 
 .. code-block:: bash
 
    vim create_root_cert.ini
 
-Fill out the request information in <angle brackets> with information
-for your CA.
+Fill out the request information in <angle brackets> with information for your CA.
 
 .. code-block:: ini
 
@@ -161,8 +149,7 @@ for your CA.
    basicConstraints = critical, CA:true
    keyUsage = critical, digitalSignature, cRLSign, keyCertSign
 
-Generate the self-signed public certificate from the private key. Use
-the private key id value from earlier.
+Generate the self-signed public certificate from the private key. Use the private key id value from earlier.
 
 .. code-block:: bash
 
@@ -170,10 +157,7 @@ the private key id value from earlier.
    engine "pkcs11" set.
    Enter PKCS#11 token PIN for SmartCard-HSM (UserPIN):
 
-Verify that the root certificate was generated correctly. Verify that
-Signature-Algorithm matches above and below. Verify that Issuer and
-Subject match, all root certificates are self signed. Verify that Key
-Usage matches what was in the v3_ca information in our config file.
+Verify that the root certificate was generated correctly. Verify that Signature-Algorithm matches above and below. Verify that Issuer and Subject match, all root certificates are self signed. Verify that Key Usage matches what was in the v3_ca information in our config file.
 
 .. code-block:: bash
 
@@ -223,9 +207,7 @@ Usage matches what was in the v3_ca information in our config file.
 Creating the Intermediate Certificate Authority
 -----------------------------------------------
 
-We continue by generating the private key for the intermediate
-certificate authority directly on the Nitrokey HSM. This allows us to
-use the private key in the future, but not access it.
+We continue by generating the private key for the intermediate certificate authority directly on the Nitrokey HSM. This allows us to use the private key in the future, but not access it.
 
 .. code-block:: bash
 
@@ -248,25 +230,21 @@ use the private key in the future, but not access it.
      Usage:      verify, derive
      Access:     none
 
-Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll
-need it later.
+Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need it later.
 
-If you need the ID in the future, you can list the keys on the Nitrokey
-HSM:
+If you need the ID in the future, you can list the keys on the Nitrokey HSM:
 
 .. code-block:: bash
 
    pkcs11-tool -O
 
-We need to create a config file to generate a self-signed public
-certificate.
+We need to create a config file to generate a self-signed public certificate.
 
 .. code-block:: bash
 
    vim create_intermediate_csr.ini
 
-Fill out the request information in <angle brackets> with information
-for your CA.
+Fill out the request information in <angle brackets> with information for your CA.
 
 .. code-block:: ini
 
@@ -293,9 +271,7 @@ for your CA.
    OU                  = <your company> Certificate Authority
    CN                  = <your company> Intermediate CA
 
-Generate the certificate signing request for the intermediate CA from
-the intermediate CA’s private key. Use the private key ID value from
-earlier.
+Generate the certificate signing request for the intermediate CA from the intermediate CA’s private key. Use the private key ID value from earlier.
 
 .. code-block:: bash
 
@@ -303,9 +279,7 @@ earlier.
    engine "pkcs11" set.
    Enter PKCS#11 token PIN for SmartCard-HSM (UserPIN):
 
-Verify that the CSR was created correctly. Verify that your Subject is
-correct. Verify that your Public Key and Signature Algorithm are
-correct.
+Verify that the CSR was created correctly. Verify that your Subject is correct. Verify that your Public Key and Signature Algorithm are correct.
 
 .. code-block:: bash
 
@@ -338,8 +312,7 @@ correct.
             50:5f:e9:1f:be:18:ac:14:ba:65:3f:b0:2a:f4:0f:d0:56:ab:
             d0:8c:bf:d0:92:9e:f6:e5:f6:8a:af:a5
 
-We need to find out the fully qualified PKCS#11 URI for your private
-key:
+We need to find out the fully qualified PKCS#11 URI for your private key:
 
 .. code-block:: bash
 
@@ -377,11 +350,9 @@ key:
            Label: intermediate
            ID: bc:b4:8f:e9:b5:66:ae:61:89:1a:ab:bf:de:6a:23:d4:ff:3a:b6:39
 
-In this instance, the fully qualified PKCS#11 URI is
-``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private``.
+In this instance, the fully qualified PKCS#11 URI is ``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private``.
 
-Now, we need to create a config file to use the private key of the root
-certificate to sign the csr of the intermediate certificate.
+Now, we need to create a config file to use the private key of the root certificate to sign the csr of the intermediate certificate.
 
 .. code-block:: bash
 
@@ -473,10 +444,7 @@ Then sign the intermediate certificate with the root certificate.
    Write out database with 1 new entries
    Data Base Updated
 
-Verify that the root certificate was generated correctly. Verify that
-the Issuer and Subject are different, and correct. Verify that the Key
-Usage matches the config file. Verify that the signature algorithm are
-correct above and below.
+Verify that the root certificate was generated correctly. Verify that the Issuer and Subject are different, and correct. Verify that the Key Usage matches the config file. Verify that the signature algorithm are correct above and below.
 
 .. code-block:: bash
 
@@ -523,8 +491,7 @@ correct above and below.
             1d:eb:17:ad:32:10:67:97:37:6f:7f:3c:ce:3e:12:3c:e9:7c:
             fa:43:3e:34:5d:5e:f4:f3:2f:fd:6a:2f:14:da
 
-Verify that the intermediate certificate verifies against the root
-certificate.
+Verify that the intermediate certificate verifies against the root certificate.
 
 .. code-block:: bash
 
@@ -542,15 +509,11 @@ You now have a certificate authority backed by an HSM.
 Sign a Server Certificate
 -------------------------
 
-Now that you have a certificate authority, you’d probably like to know
-how to use it.
+Now that you have a certificate authority, you’d probably like to know how to use it.
 
-Create a CSR in the normal method for your application. Proper creation
-of your certificate, including SAN, for your particular application is
-outside the scope of this document.
+Create a CSR in the normal method for your application. Proper creation of your certificate, including SAN, for your particular application is outside the scope of this document.
 
-We need to find out the fully qualified PKCS#11 URI for your private
-key:
+We need to find out the fully qualified PKCS#11 URI for your private key:
 
 .. code-block:: bash
 
@@ -588,11 +551,9 @@ key:
            Label: intermediate
            ID: bc:b4:8f:e9:b5:66:ae:61:89:1a:ab:bf:de:6a:23:d4:ff:3a:b6:39
 
-In this instance, the fully qualified PKCS#11 URI is
-``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%BC%B4%8F%E9%B5%66%AE%61%89%1A%AB%BF%DE%6A%23%D4%FF%3A%B6%39;object=intermediate;type=private``.
+In this instance, the fully qualified PKCS#11 URI is ``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%BC%B4%8F%E9%B5%66%AE%61%89%1A%AB%BF%DE%6A%23%D4%FF%3A%B6%39;object=intermediate;type=private``.
 
-Create a config file to use the private key of the intermediate
-certificate to sign the CSRs of your servers.
+Create a config file to use the private key of the intermediate certificate to sign the CSRs of your servers.
 
 .. code-block:: bash
 
@@ -714,5 +675,4 @@ I used the following resources to help in compiling this document.
 -  `Troubleshooting
    (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-hsm-does-not-support-signing/2598/14>`__
 
-This document was originally `written by
-lyntux <https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__.
+This document was originally `written by lyntux <https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__.

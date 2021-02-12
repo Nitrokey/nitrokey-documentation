@@ -5,13 +5,7 @@ OpenPGP Key Generation On-Device
 
 .. contents:: :local:
 
-The following instructions explain the generation of OpenPGP keys
-directly on the Nitrokey. This is done by using the command line
-interface of GnuPG. Thus, you need to have GnuPG installed on your
-system. The newest GnuPG version for Windows can be found
-`here <https://www.gpg4win.org/>`__ and the newest version for MacOS can
-be found `here <https://gpgtools.org/>`__. Users of Linux systems please
-install GnuPG with help of the package manager.
+The following instructions explain the generation of OpenPGP keys directly on the Nitrokey. This is done by using the command line interface of GnuPG. Thus, you need to have GnuPG installed on your system. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org/>`__ and the newest version for MacOS can be found `here <https://gpgtools.org/>`__. Users of Linux systems please install GnuPG with help of the package manager.
 
 .. note::
 
@@ -24,17 +18,11 @@ install GnuPG with help of the package manager.
 Key Generation
 --------------
 
-The following descriptions explain the basic key generation on-device
-via GnuPG’s command line interface. The default behaviour is to generate
-RSA keys of 2048 bit size. If you want to change the key algorithm and
-length, have a look at the next section first.
+The following descriptions explain the basic key generation on-device via GnuPG’s command line interface. The default behaviour is to generate RSA keys of 2048 bit size. If you want to change the key algorithm and length, have a look at the next section first.
 
 Open a command line and type ``gpg2 --card-edit``.
 
-To open the Windows command line please push the Windows-key and R-key.
-Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal
-on macOS or GNU/Linux please use the application search (e.g. spotlight
-on macOS).
+To open the Windows command line please push the Windows-key and R-key. Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
 
 .. code-block:: bash
 
@@ -62,9 +50,7 @@ on macOS).
     
    gpg/card>
 
-Now you are in the interactive interface of GnuPG. Activate the admin
-commands with ``admin`` and use ``generate`` afterwards to start the
-generation of keys.
+Now you are in the interactive interface of GnuPG. Activate the admin commands with ``admin`` and use ``generate`` afterwards to start the generation of keys.
 
 .. code-block:: bash
 
@@ -107,26 +93,14 @@ generation of keys.
    </jane@doe.com></n></n></n></n>
 
 **Please do not create the suggested off-card backup.** This “backup”
-does only save the encryption key, but not the signature and
-authentication keys. In case of a loss of the device, you will not be
-able to restore the whole key set. So on the one hand it is no full
-backup (use `these
-instructions <https://docs.nitrokey.com/pro/openpgp-key-generation-with-backup.html>`__
-instead, if you need one) and on the other hand you risk that someone
-else can get in possession of your encryption key. The advantage of
-generating keys on-device is to make sure that keys are stored securely.
-Therefore, we recommend to skip this half-backup.
+does only save the encryption key, but not the signature and authentication keys. In case of a loss of the device, you will not be able to restore the whole key set. So on the one hand it is no full backup (use `these instructions <https://docs.nitrokey.com/pro/openpgp-key-generation-with-backup.html>`__ instead, if you need one) and on the other hand you risk that someone else can get in possession of your encryption key. The advantage of generating keys on-device is to make sure that keys are stored securely. Therefore, we recommend to skip this half-backup.
 
-Now you have a complete key set on your device which can be used for the
-`various
-applications <https://www.nitrokey.com/documentation/applications>`__
-listed on our site. Type ``quit`` and hit enter to exit.
+Now you have a complete key set on your device which can be used for the `various applications <https://www.nitrokey.com/documentation/applications>`__ listed on our site. Type ``quit`` and hit enter to exit.
 
 Change Key Attributes
 ---------------------
 
-This section is about changing the key attributes. If you want to use
-the default values, you can proceed with the next section.
+This section is about changing the key attributes. If you want to use the default values, you can proceed with the next section.
 
 Open a command line and type ``gpg2 --card-edit --expert``.
 
@@ -155,9 +129,7 @@ Open a command line and type ``gpg2 --card-edit --expert``.
    General key info..: [none]
 
 Now you are in the interactive interface of GnuPG. As you can see in the
-“Key attributes” field above, the default value rsa2048 is set. To
-change them, activate the admin commands with ``admin`` and use
-``key-attr`` afterwards to change the attributes of the keys.
+“Key attributes” field above, the default value rsa2048 is set. To change them, activate the admin commands with ``admin`` and use ``key-attr`` afterwards to change the attributes of the keys.
 
 .. code-block:: bash
 
@@ -187,10 +159,7 @@ change them, activate the admin commands with ``admin`` and use
    What keysize do you want? (2048) 4096
    The card will now be re-configured to generate a key of 4096 bits
 
-You can choose the attribute for each key (that is, signature,
-encryption and authentication key). Most people will use the same
-attributes for every key. Type ``list`` to see the results (have look at
-the “Key attributes” field, which now reads rsa4096).
+You can choose the attribute for each key (that is, signature, encryption and authentication key). Most people will use the same attributes for every key. Type ``list`` to see the results (have look at the “Key attributes” field, which now reads rsa4096).
 
 .. code-block:: bash
 
@@ -216,12 +185,9 @@ the “Key attributes” field, which now reads rsa4096).
    Authentication key: [none]
    General key info..: [none]
 
-Type ``quit`` and hit enter to exit or proceed directly with the
-previous section to actually generate the keys with the key attributes
-you just set.
+Type ``quit`` and hit enter to exit or proceed directly with the previous section to actually generate the keys with the key attributes you just set.
 
-The following table illustrates which algorithm can be used on which
-device.
+The following table illustrates which algorithm can be used on which device.
 
 ================ ===== ============= =================
 \                Start Pro + Storage Pro 2 + Storage 2
@@ -239,37 +205,20 @@ secp256k1        ✓
 Exporting Public Key and Keyserver Usage
 ----------------------------------------
 
-Although you can start to use your Nitrokey right away after generating
-the keys on your system, you need to import your public key on every
-system, you want to use the Nitrokey on. So to be prepared you have two
-options: You either save the public key anywhere you like and use it on
-another system or you save the public key on a webpage/keyserver.
+Although you can start to use your Nitrokey right away after generating the keys on your system, you need to import your public key on every system, you want to use the Nitrokey on. So to be prepared you have two options: You either save the public key anywhere you like and use it on another system or you save the public key on a webpage/keyserver.
 
 Generating a Public Key File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To get a simple file of your public key, you can just use
-``gpg2 --armor --export keyID > pubkey.asc``. Use either the fingerprint
-as “keyID” (look at ``gpg -K`` to get it) or just use your email address
-as an identifier.
+To get a simple file of your public key, you can just use ``gpg2 --armor --export keyID > pubkey.asc``. Use either the fingerprint as “keyID” (look at ``gpg -K`` to get it) or just use your email address as an identifier.
 
-You can carry this file with you or send it to anyone who you like. This
-file is not secret at all. If you want to use the Nitrokey on another
-system, you first import this public key via
-``gpg2 --import pubkey.asc`` and then types ``gpg2 --card-status`` so
-that the system knows where to look for this key. That’s all.
+You can carry this file with you or send it to anyone who you like. This file is not secret at all. If you want to use the Nitrokey on another system, you first import this public key via ``gpg2 --import pubkey.asc`` and then types ``gpg2 --card-status`` so that the system knows where to look for this key. That’s all.
 
 Uploading the Public Key
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you do not want to carry a public keyfile with you, you can upload it
-to keyserver. You can do this by typing
-``gpg --keyserver search.keyserver.net --send-key keyID``. If you are
-using another machine you can just import it by using
-``gpg --keyserver search.keyserver.net --recv-key keyID``.
+If you do not want to carry a public keyfile with you, you can upload it to keyserver. You can do this by typing ``gpg --keyserver search.keyserver.net --send-key keyID``. If you are using another machine you can just import it by using ``gpg --keyserver search.keyserver.net --recv-key keyID``.
 
 Another possibility is to change the URL setting on your card. Start gpg
 –card-edit again and first set the URL where the key is situated
-(e.g. on the keyserver or on your webpage etc.) via the ``url`` command.
-From now on you can import the key on another system by just using the
-``fetch`` command within the ``gpg --card-edit`` environment.
+(e.g. on the keyserver or on your webpage etc.) via the ``url`` command. From now on you can import the key on another system by just using the ``fetch`` command within the ``gpg --card-edit`` environment.
