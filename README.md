@@ -20,4 +20,4 @@
 
   https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 
-  https://docutils.sourceforge.io/rst.html
+  https://docutils.sourceforge.io/rst/directives.html
