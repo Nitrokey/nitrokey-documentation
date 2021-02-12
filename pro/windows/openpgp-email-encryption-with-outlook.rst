@@ -15,8 +15,7 @@ Prerequisites
 
 If you do not have PGP-Keys on your Nitrokey yet, please look at `this page <https://www.nitrokey.com/documentation/openpgp-email-encryption>`__ first.
 
-You need to have GnuPG installed on your System. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org>`__. You need to make sure to have “GpgOL” checked during installation process
-(see below).
+You need to have GnuPG installed on your System. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org>`__. You need to make sure to have “GpgOL” checked during installation process (see below).
 
 .. figure:: /pro/windows/images/openpgp-email-encryption-with-outlook/1.png
    :alt: img1
@@ -33,8 +32,7 @@ After installing GPG4Win along with GpgOL, you will see a new icon labeled “Se
 
 
 
-GnuPG will start signing and encrypting the mail as soon as you click on
-‘send’. You are requested to choose the identity you want to sign with and encrypt for.
+GnuPG will start signing and encrypting the mail as soon as you click on ‘send’. You are requested to choose the identity you want to sign with and encrypt for.
 
 .. figure:: /pro/windows/images/openpgp-email-encryption-with-outlook/3.png
    :alt: img3

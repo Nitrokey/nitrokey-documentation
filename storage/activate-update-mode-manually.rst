@@ -65,8 +65,7 @@ Booting from the USB stick
 
 Now the system must be restarted. The USB stick must remain in the USB port so that the system can be started on the USB stick. Some devices are configured to start automatically from USB stick if it contains a system. If Windows instead of the USB image is booting right after the restart, you have to set your BIOS to boot from USB. On many systems this can be done with the Escape key, the F10, F11 or F12 key. Often, when starting the device there is also a hint which key to use the so-called “boot menu”.
 
-After the system has started, please choose the language by typing 1
-(English) and hit Enter.
+After the system has started, please choose the language by typing 1 (English) and hit Enter.
 
 .. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/10.png
    :alt: img10

@@ -33,8 +33,7 @@ In the following documentation we will require 3 different machines as following
    machine with Fedora 30 (local machine)
 
 To interact with the devices we will require `OpenSC
-0.20 <https://github.com/OpenSC/OpenSC/wiki>`__ installed on the client and CA machine (the local machines). You can follow the instructions to set it up in `this link
-(*Unix) <https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors>`__.
+0.20 <https://github.com/OpenSC/OpenSC/wiki>`__ installed on the client and CA machine (the local machines). You can follow the instructions to set it up in `this link (*Unix) <https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors>`__.
 
 To download the dependencies on Fedora machines we can this instruction:
 

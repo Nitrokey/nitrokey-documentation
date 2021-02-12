@@ -15,8 +15,7 @@ This guide assumes that an Active Directory server with role ‘Active Directory
 Installing OpenPGP-CSP
 ----------------------
 
-This step is needed for clients to use the OpenPGP-CSP driver. Download and install the `latest version <https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3>`__ of the installer file ‘SetupOpenPGPCsp’ for your system architecture, for
-‘SetupOpenPGPCsp_x64.msi’ for 64-bit systems.
+This step is needed for clients to use the OpenPGP-CSP driver. Download and install the `latest version <https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3>`__ of the installer file ‘SetupOpenPGPCsp’ for your system architecture, for ‘SetupOpenPGPCsp_x64.msi’ for 64-bit systems.
 
 You may want to install the driver on the server as well for being able to enforce the use of this driver in the template (see below).
 

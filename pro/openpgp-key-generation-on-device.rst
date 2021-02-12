@@ -220,5 +220,4 @@ Uploading the Public Key
 If you do not want to carry a public keyfile with you, you can upload it to keyserver. You can do this by typing ``gpg --keyserver search.keyserver.net --send-key keyID``. If you are using another machine you can just import it by using ``gpg --keyserver search.keyserver.net --recv-key keyID``.
 
 Another possibility is to change the URL setting on your card. Start gpg
-–card-edit again and first set the URL where the key is situated
-(e.g. on the keyserver or on your webpage etc.) via the ``url`` command. From now on you can import the key on another system by just using the ``fetch`` command within the ``gpg --card-edit`` environment.
+–card-edit again and first set the URL where the key is situated (e.g. on the keyserver or on your webpage etc.) via the ``url`` command. From now on you can import the key on another system by just using the ``fetch`` command within the ``gpg --card-edit`` environment.

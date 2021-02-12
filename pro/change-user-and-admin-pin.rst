@@ -8,8 +8,7 @@ Change User and Admin PIN
 User PIN
 --------
 
-The user PIN is at least 6-digits long and is used to get access to the contect of the Nitrokey. This is the PIN you will use a lot in every day use e.g. for decrypting messages, for unlocking your encrypted storage
-(NK Storage only) etc.
+The user PIN is at least 6-digits long and is used to get access to the contect of the Nitrokey. This is the PIN you will use a lot in every day use e.g. for decrypting messages, for unlocking your encrypted storage (NK Storage only) etc.
 
 You can change the user PIN with the Nitrokey App if using a Nitrokey Pro or Nitrokey Storage. In the `Nitrokey <https://www.nitrokey.com/download>`__ App open ‘Menu ->
 Configure -> Change User PIN’ to open the dialog to change the PIN.
@@ -21,8 +20,7 @@ Configure -> Change User PIN’ to open the dialog to change the PIN.
 
 You can change the User PIN in the dialog window now.
 
-The user PIN can have up to 20 digits and other characters
-(e.g. alphabetic and special characters). But as the user PIN is blocked as soon three wrong PIN attempts were done, it is sufficiently secure to only have a 6 digits PIN. The default PIN is 123456.
+The user PIN can have up to 20 digits and other characters (e.g. alphabetic and special characters). But as the user PIN is blocked as soon three wrong PIN attempts were done, it is sufficiently secure to only have a 6 digits PIN. The default PIN is 123456.
 
 .. figure:: /pro/images/change-user-and-admin-pin/2.png
    :alt: img2
@@ -44,8 +42,7 @@ Change Admin PIN’ to open the dialog to change the PIN.
 
 You can change the admin PIN in the dialog window now.
 
-The admin PIN can have up to 20 digits and other characters
-(e.g. alphabetic and special characters). But as the admin PIN is blocked as soon three wrong PIN attempts were done, it is sufficiently secure to only have 8 digits PIN. The default PIN is 12345678.
+The admin PIN can have up to 20 digits and other characters (e.g. alphabetic and special characters). But as the admin PIN is blocked as soon three wrong PIN attempts were done, it is sufficiently secure to only have 8 digits PIN. The default PIN is 12345678.
 
 .. figure:: /pro/images/change-user-and-admin-pin/4.png
    :alt: img4

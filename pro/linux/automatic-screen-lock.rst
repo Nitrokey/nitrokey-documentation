@@ -76,7 +76,6 @@ Once all set up, execute the script once, and it will lock the screen. It does n
 Usage
 ~~~~~
 
-By now you can log back to your session by entering your password, and
-(re)plug you Nitrokey if you did not do it before.
+By now you can log back to your session by entering your password, and (re)plug you Nitrokey if you did not do it before.
 
 The next time(s) you unplug your Nitrokey from the computer, it will automatically lock the screen.

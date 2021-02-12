@@ -8,11 +8,9 @@ Elliptic Curves (ECC) Support
 RSA-2048 Becomes Increasingly Insecure
 --------------------------------------
 
-For security reasons, the German Federal Office for Information Security
-(Bundesamt für Sicherheit in der Informationstechnik, BSI) no longer recommends RSA keys with a length of 2048 bit `to be used after
+For security reasons, the German Federal Office for Information Security (Bundesamt für Sicherheit in der Informationstechnik, BSI) no longer recommends RSA keys with a length of 2048 bit `to be used after
 2022 <https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf;jsessionid=064DAA7AD3195C1C87B1C71B2760DB4E.1_cid360?__blob=publicationFile&v=7>`__. This means that longer keys will need to come into use in the foreseeable future. Assuming a usage period of five years, is is already necessary to generate longer keys. However, longer RSA keys with 3072 bit or 4096 bit are significantly slower. For this reason the new Nitrokey Storage 2 and Pro 2 (resp. the integrated OpenPGP Card version
-3.3) supports encryption by means of `elliptic-curve cryptography
-(ECC) <https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__. This method is considered to be just as secure with smaller ECC keys as longer RSA keys and is also considerably faster.
+3.3) supports encryption by means of `elliptic-curve cryptography (ECC) <https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__. This method is considered to be just as secure with smaller ECC keys as longer RSA keys and is also considerably faster.
 
 Basics of Elliptic-Curve Cryptography
 -------------------------------------
@@ -37,8 +35,7 @@ You can read Nitrokey’s OpenPGP Card version via ``gpg2 —card-status``:
 
 The ‘Version’ field represents the version of the OpenPGP Card integrated in the Nitrokey — in this case it is 3.3 as needed for Elliptic-curve cryptography. OpenPGP Card version 2.2 doesn’t support ECC.
 
-You can learn about the installed version of GnuPG via ``gpg2  --version``. At least version 2.1.16 is required. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org/>`__ and the newest version for MacOS can be found `here <https://gpgtools.org/>`__. A suitable version of GnuPG is included in the GNU/Linux distributions Ubuntu (since 18.04), Debian
-(from Stretch onwards), Arch Linux, Fedora (from Release 26 onwards) and openSUSE Tumbleweed. At the end of this articles are instructions how to manually update GnuPG on older Ubuntu versions.
+You can learn about the installed version of GnuPG via ``gpg2  --version``. At least version 2.1.16 is required. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org/>`__ and the newest version for MacOS can be found `here <https://gpgtools.org/>`__. A suitable version of GnuPG is included in the GNU/Linux distributions Ubuntu (since 18.04), Debian (from Stretch onwards), Arch Linux, Fedora (from Release 26 onwards) and openSUSE Tumbleweed. At the end of this articles are instructions how to manually update GnuPG on older Ubuntu versions.
 
 .. important::
 

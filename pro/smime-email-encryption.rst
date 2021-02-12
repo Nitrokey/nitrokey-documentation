@@ -16,8 +16,7 @@ There are two widely used standards for email encryption.
 
 If you are in doubt which one to choose, you should use OpenPGP, see `here <https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__. This page describes the usage of S/MIME email encryption.
 
-You need to purchase a S/MIME certificate or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager
-(e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ page.
+You need to purchase a S/MIME certificate or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ page.
 
 **Note: Windows users with 64-bit system (standard) need to install both, the 32-bit and the 64-bit version of OpenSC!**
 
@@ -28,8 +27,7 @@ The following instructions are based on the `wiki of OpenSC <https://github.com/
 
 To open the Windows command line please push the Windows-key and R-key. Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
 
-To make these commands as simple as possible, the .p12 file needs to be in your home folder. On Windows this is usually
-‘C:\Users\yourusername’ and on macOS and GNU/Linux system it will be ‘/home/yourusername’. If you do not store the .p12 file there, you have to adapt the path in the commands below. Please plug in the Nitrokey before submitting the commands.
+To make these commands as simple as possible, the .p12 file needs to be in your home folder. On Windows this is usually ‘C:\Users\yourusername’ and on macOS and GNU/Linux system it will be ‘/home/yourusername’. If you do not store the .p12 file there, you have to adapt the path in the commands below. Please plug in the Nitrokey before submitting the commands.
 
 Assuming that your key-certificate file reads ‘myprivate.p12’ the commands for Windows looks like this:
 
@@ -52,8 +50,7 @@ The two commands copy the key-certificate pair to the slot 2 (needed for decrypt
 
 
 
-Please note that there will be error messages that can be safely ignored
-(see output example above). You now have the key-certificate pair loaded on the Nitrokey.
+Please note that there will be error messages that can be safely ignored (see output example above). You now have the key-certificate pair loaded on the Nitrokey.
 
 Usage
 -----

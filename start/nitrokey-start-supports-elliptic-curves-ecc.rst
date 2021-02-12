@@ -8,11 +8,8 @@ Nitrokey Start Supports Elliptic Curves (ECC)
 RSA-2048 Becomes Increasingly Insecure
 --------------------------------------
 
-For security reasons, the German Federal Office for Information Security
-(Bundesamt für Sicherheit in der Informationstechnik or BSI) no longer recommends RSA keys with a length of 2048 `bit be used after
-2022 <https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf;jsessionid=064DAA7AD3195C1C87B1C71B2760DB4E.1_cid360?__blob=publicationFile&v=7>`__. This means that longer keys will need to come into use in the foreseeable future. Assuming a period of use of five years, safer keys should already be being generated. However, longer RSA keys with 3072 bit or 4096 bit are significantly slower. For this reason `Nitrokey Start <https://shop.nitrokey.com/shop/product/nitrokey-start-6>`__
-(resp. the underlying firmware `Gnuk <https://www.fsij.org/category/gnuk.html>`__) has been supporting encryption by means of `elliptic-curve cryptography
-(ECC) <https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__ for some time. This method is considered to be just as secure for smaller key systems as longer RSA keys and is also considerably faster.
+For security reasons, the German Federal Office for Information Security (Bundesamt für Sicherheit in der Informationstechnik or BSI) no longer recommends RSA keys with a length of 2048 `bit be used after
+2022 <https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf;jsessionid=064DAA7AD3195C1C87B1C71B2760DB4E.1_cid360?__blob=publicationFile&v=7>`__. This means that longer keys will need to come into use in the foreseeable future. Assuming a period of use of five years, safer keys should already be being generated. However, longer RSA keys with 3072 bit or 4096 bit are significantly slower. For this reason `Nitrokey Start <https://shop.nitrokey.com/shop/product/nitrokey-start-6>`__ (resp. the underlying firmware `Gnuk <https://www.fsij.org/category/gnuk.html>`__) has been supporting encryption by means of `elliptic-curve cryptography (ECC) <https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__ for some time. This method is considered to be just as secure for smaller key systems as longer RSA keys and is also considerably faster.
 
 Basics of Elliptic-Curve Cryptography
 -------------------------------------
@@ -57,8 +54,7 @@ However it is not as yet possible to select the type of key directly, so the key
 
 Alternatively, other curves could be selected, as described in the next section.
 
-Now we enter ‘gpg2 –card-edit’ and see that ed25519 or cv25519 is under
-‘key attributes’ instead of rsa2048.
+Now we enter ‘gpg2 –card-edit’ and see that ed25519 or cv25519 is under ‘key attributes’ instead of rsa2048.
 
 .. code-block:: bash
 

@@ -6,8 +6,7 @@ Viscosity Client Configuration with OpenVPN
 .. contents:: :local:
 
 This guide will show to configure `Viscosity client <https://www.sparklabs.com/viscosity/>`__ to connect to an OpenVPN instance, using a `Nitrokey Pro
-2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__
-(or `Nitrokey Storage
+2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ (or `Nitrokey Storage
 2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__), and `PKCS#11 authentication <https://openvpn.net/community-resources/how-to/#what-is-pkcs11>`__.
 
 Prerequisites
