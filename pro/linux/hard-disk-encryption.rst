@@ -175,5 +175,4 @@ See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
 
 Alternatively, try `ESOSI <http://sourceforge.net/projects/esosi/>`__ or follow these steps using OpenSC and OpenVPN.
 
-Source of the guide:
-https://www.nitrokey.com/documentation/applications#hard-disk-encryption
+Source of the guide: https://www.nitrokey.com/documentation/applications#hard-disk-encryption

@@ -13,8 +13,7 @@ At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy to s
 Troubleshooting
 ###############
 
-1. Error message:
-``The configured key ID '4BA0183FCBA844A7' cannot be found on your keyring``
+1. Error message: ``The configured key ID '4BA0183FCBA844A7' cannot be found on your keyring``
 
 - Make sure that the public key is imported to the Thunderbird’s manager and
 - The key ID does not contain any whitespace, and consists of 16 characters from range 0-9 A-F
