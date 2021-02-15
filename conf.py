@@ -95,7 +95,7 @@ html_context = {
     "languages" : {
         #'de' : 'Deutsch',
         'en' : 'English',
-        #'fr' : 'Francais',
+        #'fr' : 'français',
         #'es': 'español',
         },
 }
