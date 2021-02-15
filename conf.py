@@ -115,13 +115,12 @@ html_theme_options = {
         'show_cloud_banner' : False, #False makes the divio box disappear
         #'cloud_banner_url' : '',
         #'cloud_banner_markup' : '',
-        #'segment_id' : ''
+        #'segment_id' : '',
         }
 
 html_title = "Nitrokey Documentation"
 html_logo = "logo.png"
 html_favicon = "favicon.ico"
-
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

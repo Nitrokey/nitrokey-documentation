@@ -48,10 +48,10 @@
   <link rel="apple-touch-icon" href="{{ pathto('_static/favicon.png', 1) }}">
   <link rel="icon" type="image/png" href="{{ pathto('_static/favicon.png', 1) }}">
 
-  <!--<link rel="alternate" hreflang="de" href="https://docs.nitrokey.com/de/{{ pagename }}.html" />-->
-  <link rel="alternate" hreflang="en" href="https://docs.nitrokey.com/{{ pagename }}.html" />
-  <!--<link rel="alternate" hreflang="es" href="https://docs.nitrokey.com/es/{{ pagename }}.html" />-->
-  <!--<link rel="alternate" hreflang="fr" href="https://docs.nitrokey.com/fr/{{ pagename }}.html" />-->
+  {% if language != "de" %}<!--<link rel="alternate" hreflang="de" href="https://docs.nitrokey.com/de/{{ pagename }}.html" />-->{% endif %}
+  {% if language != "en" %}<link rel="alternate" hreflang="en" href="https://docs.nitrokey.com/{{ pagename }}.html" />{% endif %}
+  {% if language != "es" %}<!--<link rel="alternate" hreflang="es" href="https://docs.nitrokey.com/es/{{ pagename }}.html" />-->{% endif %}
+  {% if language != "fr" %}<!--<link rel="alternate" hreflang="fr" href="https://docs.nitrokey.com/fr/{{ pagename }}.html" />-->{% endif %}
   
   <!--[if IE]><link rel="shortcut icon" href="{{ pathto('_static/favicon.png', 1) }}"><![endif]-->
   {%- for cssfile in extra_css_files %}
@@ -153,10 +153,10 @@
 	<div class="language-switcher">
 	<select onchange="location = this.options[this.selectedIndex].value;">
 		<option selected disabled hidden>{{ lang_attr }}</option>
-		<!--<option value="/de/{{ pagename }}.html">Deutsch (de)</option>-->
-		<option value="/{{ pagename }}.html">English (en)</option>
-		<!--<option value="/es/{{ pagename }}.html">español (es)</option>-->
-		<!--<option value="/fr/{{ pagename }}.html">français (fr)</option>-->
+		{% if language != "de" %}<!--<option value="/de/{{ pagename }}.html">Deutsch (de)</option>-->{% endif %}
+		{% if language != "en" %}<option value="/{{ pagename }}.html">English (en)</option>{% endif %}
+		{% if language != "es" %}<!--<option value="/es/{{ pagename }}.html">español (es)</option>-->{% endif %}
+		{% if language != "fr" %}<!--<option value="/fr/{{ pagename }}.html">français (fr)</option>-->{% endif %}
 	</select>
 	</div>
 
