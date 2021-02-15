@@ -92,6 +92,12 @@ html_context = {
     "github_version": "", # Version
     "conf_py_path": "master/", # Path in the checkout to the docs root
     "suffix": ".rst",
+    "languages" : {
+        #'de' : 'Deutsch',
+        'en' : 'English',
+        #'fr' : 'Francais',
+        #'es': 'español',
+        },
 }
 
 html_theme = "divio_docs_theme"
