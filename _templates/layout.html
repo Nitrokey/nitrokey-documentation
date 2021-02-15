@@ -48,12 +48,10 @@
   <link rel="apple-touch-icon" href="{{ pathto('_static/favicon.png', 1) }}">
   <link rel="icon" type="image/png" href="{{ pathto('_static/favicon.png', 1) }}">
 
-  <!--
-  <link rel="alternate" hreflang="de" href="https://docs.nitrokey.com/de/{{ pagename }}.html" />
+  <!--<link rel="alternate" hreflang="de" href="https://docs.nitrokey.com/de/{{ pagename }}.html" />-->
   <link rel="alternate" hreflang="en" href="https://docs.nitrokey.com/{{ pagename }}.html" />
-  <link rel="alternate" hreflang="es" href="https://docs.nitrokey.com/es/{{ pagename }}.html" />
-  <link rel="alternate" hreflang="fr" href="https://docs.nitrokey.com/fr/{{ pagename }}.html" />
-  -->
+  <!--<link rel="alternate" hreflang="es" href="https://docs.nitrokey.com/es/{{ pagename }}.html" />-->
+  <!--<link rel="alternate" hreflang="fr" href="https://docs.nitrokey.com/fr/{{ pagename }}.html" />-->
   
   <!--[if IE]><link rel="shortcut icon" href="{{ pathto('_static/favicon.png', 1) }}"><![endif]-->
   {%- for cssfile in extra_css_files %}
@@ -152,24 +150,15 @@
             <a class="header-title" href="{{ pathto(master_doc) }}">{{ project }}</a>
         </div>
 
-<!--
-	<ul class="language-switcher">
-		<li><a href="/{{ pagename }}.html">EN</a></li>
-		<li><a href="/es/{{ pagename }}.html">ES</a></li>
-		<li><a href="/de/{{ pagename }}.html">DE</a></li>
-		<li><a href="/fr/{{ pagename }}.html">FR</a></li>
-	</ul>
--->	
-
-
-
+	<div class="language-switcher">
 	<select onchange="location = this.options[this.selectedIndex].value;">
-		<option>{{ lang_attr }}</option>
-		<option value="/{{ pagename }}.html">EN</option>
-		<option value="/es/{{ pagename }}.html">ES</option>
-		<option value="/de/{{ pagename }}.html">DE</option>
-		<option value="/fr/{{ pagename }}.html">FR</option>
+		<option selected disabled hidden>{{ lang_attr }}</option>
+		<!--<option value="/de/{{ pagename }}.html">Deutsch (de)</option>-->
+		<option value="/{{ pagename }}.html">English (en)</option>
+		<!--<option value="/es/{{ pagename }}.html">español (es)</option>-->
+		<!--<option value="/fr/{{ pagename }}.html">français (fr)</option>-->
 	</select>
+	</div>
 
 
         <a class="logo-link" target="_blank" href="https://nitrokey.com"><img src="{{ pathto('_static/logo.png', 1) }}" class="logo" alt="Nitrokey"/></a>
