@@ -129,7 +129,7 @@ steps:
 2. Select “Update Checksums and sign all files on /boot”. |image6|
 
 3. After that, please follow `these instructions from step 3
-   onwards <system-update>`__.
+   onwards `system update <https://docs.nitrokey.com/x230/ubuntu/system-update.html>`__.
 
 Invalid Code
 ------------
