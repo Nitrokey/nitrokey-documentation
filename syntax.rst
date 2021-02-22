@@ -45,10 +45,6 @@ H3 Heading
 
    Warning text.
 
-.. tip::
-
-   Hint text.
-
 .. danger::
 
    Danger text.
@@ -69,4 +65,9 @@ H3 Heading
 .. code-block:: bash
 
    echo "code";
+
+.. hint::
+
+   Hint should not be used in Nitrokey Documentation but tipp.
+
 
