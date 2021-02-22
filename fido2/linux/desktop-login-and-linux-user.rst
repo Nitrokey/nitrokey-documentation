@@ -184,7 +184,7 @@ And add the following lines:
    #Nitrokey FIDO2 config 
    auth    sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue prompt 
 
-.. hint::
+.. tip::
 
    -  Since we are using Central Authentication Mapping, we need to tell
       ``pam_u2f`` the location of the file to use with the ``authfile``

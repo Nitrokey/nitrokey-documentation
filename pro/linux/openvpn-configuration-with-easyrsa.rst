@@ -189,7 +189,7 @@ Now that your OpenVPN server has all the prerequisites installed, the next step 
 
 In general terms, on systems where we generate a key and request, these files are left unencrypted by using the ``nopass`` argument, since servers usually need to start up without any password input. This generates an *unencrypted key*, so mind *protect its access and file permissions* carefully.
 
-.. hint::
+.. tip::
 
    Configuration notes from OpenVPN:
 
@@ -224,7 +224,7 @@ Once you have a signed certificate, you’ll transfer it back to the OpenVPN ser
 
 After completing these steps, you have successfully created a private key for your OpenVPN server. You have also generated a Certificate Signing Request for the OpenVPN server.
 
-.. hint::
+.. tip::
 
    File extensions for certificate signing requests
 

@@ -54,7 +54,7 @@ For Arch Linux, see `initramfs-scencrypt <https://github.com/fuhry/initramfs-sce
 Storage Encryption on Linux with EncFS
 --------------------------------------
 
-.. hint::
+.. tip::
 
    Prerequisite
 
