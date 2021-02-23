@@ -45,7 +45,7 @@ H3 Heading
 
    Warning text.
 
-.. danger::
+.. warning::
 
    Danger text.
 

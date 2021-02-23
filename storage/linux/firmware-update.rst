@@ -5,7 +5,7 @@ Firmware Update
 
 .. contents:: :local:
 
-.. danger::
+.. warning::
 
    You should backup all data from the device before upgrading, as
    firmware upgrades may destroy all data on the device (especially
