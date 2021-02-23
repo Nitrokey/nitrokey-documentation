@@ -2,6 +2,8 @@
 
 ## Tips and Conventions
 
+- See syntax examples in `syntax.rst` and live at https://docs.nitrokey.com/syntax.html 
+
 - Write filenames in lower case and use dashes ("-") instead of spaces.
 
 - For content which is identical for different models or operating  systems, use `include` to avoid duplication of files. Locate those  instructions not in but next to the operating system folders.

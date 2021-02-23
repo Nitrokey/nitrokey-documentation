@@ -41,13 +41,11 @@ H3 Heading
 ^^^^^^^^^^
 
 
+Only the following message boxes should be used:
+
 .. warning::
 
    Warning text.
-
-.. warning::
-
-   Danger text.
 
 .. note::
 
@@ -66,9 +64,6 @@ H3 Heading
 
    echo "code";
 
-.. hint::
-
-   Hint should not be used in Nitrokey Documentation but tipp.
 
 Grid Table
 ----------
