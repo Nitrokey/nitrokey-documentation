@@ -92,6 +92,7 @@ html_context = {
     "github_version": "", # Version
     "conf_py_path": "master/", # Path in the checkout to the docs root
     "suffix": ".rst",
+    "copyrightlink" : "https://nitrokey.com",
     "languages" : {
         #'de' : 'Deutsch',
         'en' : 'English',
