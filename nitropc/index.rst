@@ -10,4 +10,9 @@ Choose your operating system:
    :glob:
 
    Debian <debian/index>
+   Qubes <qubes/index>
 
+
+Booting from USB drive
+----------------------
+Connect the USB drive to a black USB 2.0 socket (blue USB 3.0 don't work!), start the PC and keep pressing DEL until you see the firmware menu. Choose Boot Menu and select your USB drive.
