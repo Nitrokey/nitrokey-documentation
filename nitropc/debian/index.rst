@@ -1,5 +1,5 @@
 NitroPC with Debian
-===========================
+===================
 
 .. contents:: :local:
 
@@ -11,7 +11,7 @@ NitroPC with Debian
    *
 
 Using WIFI
--------------------------------
+----------
 
 .. code-block:: bash
 

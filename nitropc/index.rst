@@ -1,5 +1,5 @@
-NitroPad X230
-=============
+NitroPC
+=======
 
 .. contents:: :local:
 
