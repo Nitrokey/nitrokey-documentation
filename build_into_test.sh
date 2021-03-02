@@ -1,1 +1,1 @@
-sphinx-build -D language='en' -b html . ~/www/static/testcontent/
+sphinx-build -a -D language='en' -b html . ~/www/static/testcontent/

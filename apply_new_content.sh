@@ -6,7 +6,7 @@ cd /var/www/sphinx/sphinx/nitrokey-documentation
 git pull
 
 # build english version
-sphinx-build -D language='en' -b html . /var/www/sphinx/www/static/ 
+sphinx-build -a -D language='en' -b html . /var/www/sphinx/www/static/ 
 
 # generate language files and push
 sphinx-build -b gettext . ./locales/
