@@ -11,11 +11,7 @@ Choose your operating system:
 
    Debian <debian/index>
    Qubes <qubes/index>
-
-
-Default Password
-----------------
-The default password for full-disk encryption (and the default account in case of Debian) is `PleaseChangeMe`.
+   Ubuntu <ubuntu/index>
 
 
 Booting from USB drive
