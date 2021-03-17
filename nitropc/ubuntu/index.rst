@@ -19,7 +19,7 @@ Getting Started
    account. After that you should have successfully booted the system
    and could already use it normally.
 
-2. Change the passphrase for disk encryption by opening a terminal and excute:
+2. Change the passphrase for disk encryption by opening a terminal and execute:
 
 .. code-block:: bash
 
