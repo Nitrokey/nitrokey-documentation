@@ -15,7 +15,7 @@ Operating System Reinstallation
 1. Download one of the operating system images: `Ubuntu
    Linux <https://www.nitrokey.com/files/ubuntu/latest.iso>`__, Qubes OS
    (`English <https://www.nitrokey.com/files/qubes/latest-en.iso>`__,
-   `German <https://www.nitrokey.com/files/qubes/latest-de.iso>`__),
+   `German <https://www.nitrokey.com/files/qubes/latest-de.iso>`__), `Debian <https://www.nitrokey.com/files/debian/latest.iso>`__,
    `Linux Mint <https://www.nitrokey.com/files/linuxmint/latest.iso>`__
 
 2. Optional: Download hash sum and
@@ -24,7 +24,7 @@ Operating System Reinstallation
    Linux <https://www.nitrokey.com/files/ubuntu/latest.iso.sha256sum>`__,
    Qubes OS
    (`English <https://www.nitrokey.com/files/qubes/latest-en.iso.sha256sum>`__,
-   `German <https://www.nitrokey.com/files/qubes/latest-de.iso.sha256sum>`__),
+   `German <https://www.nitrokey.com/files/qubes/latest-de.iso.sha256sum>`__), `Debian <https://www.nitrokey.com/files/debian/latest.iso.sha256sum>`__,
    `Linux
    Mint <https://www.nitrokey.com/files/linuxmint/latest.iso.sha256sum>`__
 
