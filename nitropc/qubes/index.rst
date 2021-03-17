@@ -19,7 +19,11 @@ Getting Started
    account. After that you should have successfully booted the system
    and could already use it normally.
 
-2. Change the passphrase for disk encryption by opening a terminal and excute: `sudo cryptsetup luksChangeKey /dev/nvme0n1p3`
+2. Change the passphrase for disk encryption by opening a terminal and excute:
+
+.. code-block:: bash
+
+   sudo cryptsetup luksChangeKey /dev/nvme0n1p3
 
 
 Failed to start Load Kernel Modules
