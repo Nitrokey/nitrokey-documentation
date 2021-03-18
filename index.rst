@@ -18,4 +18,5 @@ Choose your product
    start/index
    storage/index
    x230/index
+   t430/index
    nitropc/index
