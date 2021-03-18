@@ -13,10 +13,12 @@ The bag and all screws on the bottom of the device have been sealed. For the bag
    matches the photo. It is best to use a magnifying glass or macro lens
    for this purpose. The screws are numbered as follows.
 
-   .. figure:: /t430/images/SchraubenmarkierungT430.jpg
-      :alt: img
+   .. figure:: /nitropad/images/SchraubenmarkierungX230.jpg
+      :alt: X230
 
-      img
+   .. figure:: /nitropad/images/SchraubenmarkierungT430.jpg
+      :alt: T430
+
 
    This example shows a sealed screw whose glitter represents an
    individual pattern.
@@ -24,7 +26,6 @@ The bag and all screws on the bottom of the device have been sealed. For the bag
    .. figure:: /nitropad/images/Schraube.jpg
       :alt: img
 
-      img
 
 2. If the bag or the screws do not match the photos sent, an
    unauthorized opening of your NitroPad cannot be excluded. In this
