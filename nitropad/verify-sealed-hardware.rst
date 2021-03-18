@@ -13,9 +13,11 @@ The bag and all screws on the bottom of the device have been sealed. For the bag
    matches the photo. It is best to use a magnifying glass or macro lens
    for this purpose. The screws are numbered as follows.
 
+   NitroPad X230:
    .. figure:: /nitropad/images/SchraubenmarkierungX230.jpg
       :alt: X230
 
+   NitroPad T430:
    .. figure:: /nitropad/images/SchraubenmarkierungT430.jpg
       :alt: T430
 
