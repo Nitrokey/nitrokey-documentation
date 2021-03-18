@@ -10,7 +10,7 @@ NitroPad with Qubes OS
 
    *
 
-With the NitroPad X230, malicious changes to the BIOS, operating system,
+With the NitroPad, malicious changes to the BIOS, operating system,
 and software can be easily detected. For example, if you left your
 NitroPad in a hotel room, you can use your Nitrokey to check if it has
 been tampered with while you were away. If an attacker modifies the
@@ -21,13 +21,13 @@ Verification of Sealed Hardware
 -------------------------------
 
 If you have ordered the unit with the option “sealed screws and sealed
-bag”, please `verify the sealing <verify-sealed-hardware.html>`__ before
+bag”, please verify the sealing (`X230 <verify-sealed-hardware-x230.html>`__, `T430 <verify-sealed-hardware-t430.html>`__) before
 unpacking. If you do not know what this means, skip this section.
 
 Secure Starting Procedure
 -------------------------
 
-With the NitroPad X230, malicious changes to the BIOS, operating system,
+With the NitroPad, malicious changes to the BIOS, operating system,
 and software can be easily detected. For example, if you left your
 NitroPad in a hotel room, you can use your Nitrokey to check if it has
 been tampered with while you were away. If an attacker modifies the
@@ -61,7 +61,7 @@ described further below.
 
 .. tip::
 
-   The NitroPad X230 can also be started without the Nitrokey. If you
+   The NitroPad can also be started without the Nitrokey. If you
    don’t have the Nitrokey with you, but are sure that the hardware has
    not been manipulated, you can boot your system without checking.
 

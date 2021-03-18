@@ -26,7 +26,10 @@ Preparation
 3. For hash sum verification, store ``SHA256SUM.txt`` file at the USB
    drive.
 
-E.g. for ``v1.1-rc3`` version: 1. Firmware should be downloaded from `here <https://github.com/Nitrokey/heads/releases/tag/v1.1-rc3>`__ 2. Firmware and hashsum files should be located on the USB drive in the main directory:
+E.g. for ``v1.1-rc3`` version:
+
+1. Firmware should be downloaded from `here <https://github.com/Nitrokey/heads/releases/latest>`__
+2. 2. Firmware and hashsum files should be located on the USB drive in the main directory:
 
 .. code-block:: bash
 
