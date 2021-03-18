@@ -1,4 +1,4 @@
-NitroPad X230
+NitroPad T430
 =============
 
 .. contents:: :local:
