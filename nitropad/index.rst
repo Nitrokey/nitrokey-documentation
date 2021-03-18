@@ -1,5 +1,5 @@
-NitroPad T430
-=============
+NitroPad
+========
 
 .. contents:: :local:
 

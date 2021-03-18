@@ -17,6 +17,5 @@ Choose your product
    pro/index
    start/index
    storage/index
-   x230/index
-   t430/index
+   nitropad/index
    nitropc/index

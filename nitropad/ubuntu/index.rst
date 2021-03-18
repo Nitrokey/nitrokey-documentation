@@ -1,5 +1,5 @@
-NitroPad X230 with Qubes OS
-===========================
+NitroPad with Ubuntu Linux
+==========================
 
 .. contents:: :local:
 
@@ -74,25 +74,22 @@ changed by you:
 1. Press Enter (“Default Boot”) after booting the system, provided the
    NitroPad has not shown any errors and the Nitrokey is lit green (see
    above).
+
 2. Next, the system will prompt you to enter the passphrase to decrypt
    the hard disk. The passphrase is initially “PleaseChangeMe”. |image3|
+
 3. The system will then guide you through the process of creating a user
    account. After that you should have successfully booted the system
    and could already use it normally.
-4. Open the pre-installed Nitrokey App and change the PINs of your
-   Nitrokey as described here.
-5. Change the passphrase for the hard disk encryption by running “sudo
-   cryptsetup luksChangeKey /dev/sda2” in a terminal.
 
-In case the Network Manager icon is not shown and when starting a VM an
-error like “Domain sys-net has failed to start: PCI device dom0:03_00.0
-does not exist” is shown, proceed as follows:
+4. Click on the Nitrokey icon on the left side of the screen to open the
+   pre-installed Nitrokey App.
 
-1. Open menu -> Service: sys-net -> sys-net: Qube Settings
-2. Go to Devices tab
-3. Remove “Unknown device” from the right side
-4. Add “Network controler” device
-5. Click “OK” and restart the system.
+5. Change the PINs of your Nitrokey as `described
+   here </pro/change-user-and-admin-pin.html>`__.
+
+6. Change the passphrase for disk encryption as `described
+   here <change-disk-encryption-passphrase.html>`__.
 
 Behavior After a System Update
 ------------------------------
@@ -109,12 +106,12 @@ conditions after a system update. Only when the new status has been
 confirmed can you leave the device unattended again. Otherwise, you will
 not be able to distinguish a possible attack from a system update.
 Detailed instructions for a system update can be `found
-here <https://docs.nitrokey.com/x230/qubes/system-update.html>`__.
+here <system-update.html>`__.
 
 Troubleshooting
 ---------------
 
-If Qubes doesn’t boot as shown below, please execute the following
+If Ubuntu doesn’t boot as shown below, please execute the following
 steps:
 
 .. code-block:: bash
@@ -132,11 +129,32 @@ steps:
 2. Select “Update Checksums and sign all files on /boot”. |image6|
 
 3. After that, please follow `these instructions from step 3
-   onwards `system update <https://docs.nitrokey.com/x230/ubuntu/system-update.html>`__.
+   onwards `system update <system-update.html>`__.
+
+Invalid Code
+------------
+
+Each boot the code is generated on the Nitropad and the Nitrokey, if its
+connected. It is allowed to run 10 boots without loosing the
+synchronization between the devices, after which the bad code signal is
+shown, regardless of the rest of the system being in a correct state. If
+you are sure the system was not beign tampered with (e.g. the Nitropad
+was booted more than 10 times without the Nitrokey), you can safely
+reset the system’s warning.
+
+Please connect the Nitrokey and execute the following from the main boot
+screen:
+
+1. Options
+2. TPM/TOTP/HOTP Options
+3. Generate new TOTP/HOTP secret
+
+and follow the on-screen guide. After that the secret and counter should
+be both reset to a new value.
 
 .. |image1| image:: ../images/NitroPad-boot-process_0.jpeg
 .. |image2| image:: ../images/NitroPad-boot-process-bad.jpeg
-.. |image3| image:: ./images/QubesDiskPassword.jpg
+.. |image3| image:: ./images/UbuntuDiskPassword.png
 .. |image4| image:: ../images/NitroPad-error-mismatch.jpeg
 .. |image5| image:: ../images/boot-menu.jpg
 .. |image6| image:: ../images/options.jpg

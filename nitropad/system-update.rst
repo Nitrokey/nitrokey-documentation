@@ -16,7 +16,7 @@ Boot Hash Mismatch
 1. If you restart the NitroPad after an update, the startup screen
    should initially appear as usual without an error message.
 
-.. figure:: /x230/images/nitropad-system-update/1.jpeg
+.. figure:: /nitropad/images/nitropad-system-update/1.jpeg
    :alt: img1
 
 
@@ -24,7 +24,7 @@ Boot Hash Mismatch
 2. If you press Enter afterwards, you will get an error message that
    looks like this or similar:
 
-.. figure:: /x230/images/nitropad-system-update/2.jpeg
+.. figure:: /nitropad/images/nitropad-system-update/2.jpeg
    :alt: img2
 
 
@@ -33,7 +33,7 @@ Boot Hash Mismatch
    system update verified. Afterwards you will be asked again for a
    confirmation.
 
-.. figure:: /x230/images/nitropad-system-update/3.jpeg
+.. figure:: /nitropad/images/nitropad-system-update/3.jpeg
    :alt: img3
 
 
@@ -68,7 +68,7 @@ Boot Entry Has Changed
    starts. This depends on the system update. If the following error
    message appears, proceeds as described below:
 
-.. figure:: /x230/images/nitropad-system-update/4.jpeg
+.. figure:: /nitropad/images/nitropad-system-update/4.jpeg
    :alt: img4
 
 
@@ -77,7 +77,7 @@ Boot Entry Has Changed
    all possible boat entries - choose the first one by simply pressing
    Enter.
 
-.. figure:: /x230/images/nitropad-system-update/5.jpeg
+.. figure:: /nitropad/images/nitropad-system-update/5.jpeg
    :alt: img5
 
 
@@ -86,7 +86,7 @@ Boot Entry Has Changed
    default” for Ubuntu or “Make Qubes the default” for Qubes OS in the
    next window.
 
-.. figure:: /x230/images/nitropad-system-update/6.jpeg
+.. figure:: /nitropad/images/nitropad-system-update/6.jpeg
    :alt: img6
 
 

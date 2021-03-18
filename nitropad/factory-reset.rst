@@ -22,7 +22,7 @@ Procedure
    drive for saving your security key)
 2. Connect your Nitrokey to the NitroPad.
 
-.. figure:: /x230/images/factory-settings/1.jpg
+.. figure:: /nitropad/images/factory-settings/1.jpg
    :alt: img1
 
 
@@ -30,21 +30,21 @@ Procedure
 3. Turn on the NitroPad.
 4. Select “Options”.
 
-.. figure:: /x230/images/factory-settings/2.jpg
+.. figure:: /nitropad/images/factory-settings/2.jpg
    :alt: img2
 
 
 
 5. Select “OEM-Factory Reset”.
 
-.. figure:: /x230/images/factory-settings/3.jpg
+.. figure:: /nitropad/images/factory-settings/3.jpg
    :alt: img3
 
 
 
 6. Confirm the “OEM Factory Reset” with “Continue”.
 
-.. figure:: /x230/images/factory-settings/4.jpg
+.. figure:: /nitropad/images/factory-settings/4.jpg
    :alt: img4
 
 
@@ -87,7 +87,7 @@ Procedure
    /dev/sdd1. If the drives /dev/sdb1, /dev/sdc1, /dev/sdd are
    displayed, select /dev/sdb1.
 
-.. figure:: /x230/images/factory-settings/5.jpg
+.. figure:: /nitropad/images/factory-settings/5.jpg
    :alt: img5
 
 
@@ -95,7 +95,7 @@ Procedure
 10. The rest of the configuration will be done automatically. You
     confirm the subsequent restart.
 
-.. figure:: /x230/images/factory-settings/6.jpg
+.. figure:: /nitropad/images/factory-settings/6.jpg
    :alt: img6
 
 
@@ -103,14 +103,14 @@ Procedure
 11. After the restart the OTP secret must be created. Confirm the
     process with Enter.
 
-.. figure:: /x230/images/factory-settings/7.jpg
+.. figure:: /nitropad/images/factory-settings/7.jpg
    :alt: img7
 
 
 
 12. Confirm that new OTP Secrets should be created.
 
-.. figure:: /x230/images/factory-settings/8.jpg
+.. figure:: /nitropad/images/factory-settings/8.jpg
    :alt: img8
 
 
@@ -118,14 +118,14 @@ Procedure
 13. When prompted, enter the Admin PIN and TPM password. Both are by
     default: “12345678”.
 
-.. figure:: /x230/images/factory-settings/9.jpg
+.. figure:: /nitropad/images/factory-settings/9.jpg
    :alt: img9
 
 
 
 14. You should then reach the Start menu.
 
-.. figure:: /x230/images/factory-settings/10.jpg
+.. figure:: /nitropad/images/factory-settings/10.jpg
    :alt: img10
 
 
@@ -140,7 +140,7 @@ Procedure
 16. Once the operating system starts until the encryption password is
     requested, you are done.
 
-.. figure:: /x230/images/factory-settings/11.jpg
+.. figure:: /nitropad/images/factory-settings/11.jpg
    :alt: img11
 
 
