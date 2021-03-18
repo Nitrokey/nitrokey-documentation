@@ -21,7 +21,7 @@ Verification of Sealed Hardware
 -------------------------------
 
 If you have ordered the unit with the option “sealed screws and sealed
-bag”, please verify the sealing (`X230 <verify-sealed-hardware-x230.html>`__, `T430 <verify-sealed-hardware-t430.html>`__) before
+bag”, please `verify the sealing <verify-sealed-hardware.html>`__ before
 unpacking. If you do not know what this means, skip this section.
 
 Secure Starting Procedure
