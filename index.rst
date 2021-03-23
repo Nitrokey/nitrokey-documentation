@@ -19,3 +19,4 @@ Choose your product
    storage/index
    nitropad/index
    nitropc/index
+   nextbox/index
