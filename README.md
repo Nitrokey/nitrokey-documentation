@@ -18,6 +18,8 @@
 
 - add the ToC for local headings in `/$product/$platform/*.rst` with `.. include:: ./product_platform_heading.rst` 
 
+- After each commit, the CI pushes translations automatically. Therefore always do `git pull` before `git commit ...`
+
 - More information about RST:
 
   https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
