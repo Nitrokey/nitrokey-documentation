@@ -94,7 +94,7 @@ html_context = {
     "suffix": ".rst",
     "copyrightlink" : "https://www.nitrokey.com",
     "languages" : {
-        #'de' : 'Deutsch',
+        'de' : 'Deutsch',
         'en' : 'English',
         #'fr' : 'français',
         #'es': 'español',
