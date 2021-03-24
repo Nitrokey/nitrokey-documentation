@@ -11,6 +11,7 @@ Choose your operating system:
 
    Debian <debian/index>
    Qubes <qubes/index>
+   Ubuntu <ubuntu/index>
 
 
 Booting from USB drive

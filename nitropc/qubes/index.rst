@@ -10,6 +10,21 @@ NitroPC with Qubes OS
 
    *
 
+Getting Started
+---------------
+
+1. During boot, the system will prompt you to enter the passphrase to decrypt
+   the hard disk. Enter the default passphrase “PleaseChangeMe”.
+   The system will then guide you through the process of creating a user
+   account. After that you should have successfully booted the system
+   and could already use it normally.
+
+2. Change the passphrase for disk encryption by opening a terminal and execute:
+
+.. code-block:: bash
+
+   sudo cryptsetup luksChangeKey /dev/nvme0n1p3
+
 
 Failed to start Load Kernel Modules
 -----------------------------------

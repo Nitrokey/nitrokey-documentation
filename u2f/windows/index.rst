@@ -36,11 +36,6 @@ Two-Factor Authentication (2FA)
 `Checkout <https://www.nitrokey.com/documentation/applications#p:nitrokey-fido2-u2f&os:all>`__
 the various use cases and supported applications.
 
-.. note::
-
-   Google only accepts the Chrome browser for registering the Nitrokey
-   FIDO U2F. Logging in works fine with Firefox though.
-
 .. important::
 
    The Nitrokey App can not be used for the Nitrokey FIDO U2F.
