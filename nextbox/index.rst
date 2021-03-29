@@ -50,7 +50,7 @@ Activating the Nextbox app
    
 2. click on "enable".
    
-3. you will now reach the nextbox app in the menu bar shown above.
+3. you will now reach the NextBox app in the menu bar shown above.
 
 .. figure:: /nextbox/images/nextbox_getting_started/4.png
    :alt: img4
@@ -61,12 +61,12 @@ Create Backup/ Restore
 Enable Remote Access
 --------------------
 
-There are several ways to enable remote access to the Nextbox. The easiest way is to use the "Quickstart Configuration".
+There are several ways to enable remote access to the NextBox. The easiest way is to use the "Quickstart Configuration".
 
 Quickstart Configuration (recommended)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. go to "Remote Access" in the Nextbox app.
+1. go to "Remote Access" in the NextBox app.
 
 .. figure:: /nextbox/images/nextbox_getting_started/5.png
    :alt: img5
@@ -78,12 +78,12 @@ Quickstart Configuration (recommended)
    
 3. enter your desired domain name consisting of at least 4 characters and ending with ".nextbox.link".
 
-4. specify your token received with nextbox.
+4. specify your token received with the NextBox.
 
 .. figure:: /nextbox/images/nextbox_getting_started/7.png
    :alt: img7  
 
-5. click on "Activate Quickstart Remote Access". The process may take a few seconds.
+5. click on "Activate Quickstart Remote Access". This process may take a few seconds.
 
 .. figure:: /nextbox/images/nextbox_getting_started/9.png
    :alt: img9
@@ -93,12 +93,12 @@ Quickstart Configuration (recommended)
 .. figure:: /nextbox/images/nextbox_getting_started/9.5.png
    :alt: img9.5
    
-7. Now your Nexbox is reachable via the selected address!
+7. Now your NextBox is reachable via the selected address!
 
 .. figure:: /nextbox/images/nextbox_getting_started/10.png
    :alt: img10
 
-Connect Nextbox with your smartphone
+Connect the NextBox with your smartphone
 ------------------------------------
 
 1. download the Nextcloud app from the app store.
@@ -119,13 +119,13 @@ Connect Nextbox with your smartphone
    :alt: imgsp3
    :scale: 30 % 
 
-4. enter your username and password and then click Log in.
+4. enter your username and password and click "Log in".
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_4.jpg
    :alt: imgsp4
    :scale: 30 %
 
-5. now you have access to your nextbox with your smartphone! 
+5. now you have access to your NextBox with your smartphone! 
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_5.jpg
    :alt: imgsp5
