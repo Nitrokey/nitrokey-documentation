@@ -1,5 +1,10 @@
 echo "$(date) [apply_translated_content.sh] webhook Weblate triggered. Building language versions." >> /var/www/sphinx/logs/webhook.log
 
+cd /var/www/sphinx/sphinx/nitrokey-documentation
+
+# pull new content
+git pull
+
 
 # building German version
 sphinx-build -a -D language='de' -b html /var/www/sphinx/sphinx/nitrokey-documentation/ /var/www/sphinx/www/static/de/
