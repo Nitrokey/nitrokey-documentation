@@ -95,3 +95,7 @@ True   True   True
 =====  =====  ======
 
 This is a text that needs to be translated automatically.
+This is another Line to be translated.
+
+* This is a test if an automatic translation ist added as translation of a message.
+
