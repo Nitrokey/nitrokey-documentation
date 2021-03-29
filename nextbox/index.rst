@@ -16,7 +16,7 @@ Getting Started
 1. Connect NextBox to the Internet router via network cable.
 2. Connect the power cable to the NextBox.
 3. Start the NextBox.
-3. Wait approx. 5 minutes and open "nextbox.local" in your web browser. If error is displayed, wait one minute and try again.
+4. Wait approx. 5 minutes and open "nextbox.local" in your web browser. If error is displayed, wait one minute and try again.
 
 .. Warning::
 
