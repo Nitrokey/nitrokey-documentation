@@ -43,14 +43,14 @@ Create Admin Account
 Activating the Nextbox app
 --------------------------
 
-1. type "nextbox" in the search bar.
+1. Type "nextbox" in the search bar.
 
 .. figure:: /nextbox/images/nextbox_getting_started/3.png
    :alt: img3
    
-2. click on "enable".
+2. Click on "enable".
    
-3. you will now reach the NextBox app in the menu bar shown above.
+3. You will now reach the NextBox app in the menu bar shown above.
 
 .. figure:: /nextbox/images/nextbox_getting_started/4.png
    :alt: img4
@@ -66,29 +66,29 @@ There are several ways to enable remote access to the NextBox. The easiest way i
 Quickstart Configuration (recommended)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. go to "Remote Access" in the NextBox app.
+1. Go to "Remote Access" in the NextBox app.
 
 .. figure:: /nextbox/images/nextbox_getting_started/5.png
    :alt: img5
    
-2. click on "Quickstart Configuration (recommended)".
+2. Click on "Quickstart Configuration (recommended)".
 
 .. figure:: /nextbox/images/nextbox_getting_started/6.png
    :alt: img6
    
-3. enter your desired domain name consisting of at least 4 characters and ending with ".nextbox.link".
+3. Enter your desired domain name consisting of at least 4 characters and ending with ".nextbox.link".
 
-4. specify your token received with the NextBox.
+4. Specify your token received with the NextBox.
 
 .. figure:: /nextbox/images/nextbox_getting_started/7.png
    :alt: img7  
 
-5. click on "Activate Quickstart Remote Access". This process may take a few seconds.
+5. Click on "Activate Quickstart Remote Access". This process may take a few seconds.
 
 .. figure:: /nextbox/images/nextbox_getting_started/9.png
    :alt: img9
    
-6. go back to Remote Access to check the status about the accessibility of the address.
+6. Go back to Remote Access to check the status about the accessibility of the address.
 
 .. figure:: /nextbox/images/nextbox_getting_started/9.5.png
    :alt: img9.5
@@ -101,13 +101,13 @@ Quickstart Configuration (recommended)
 Connect the NextBox with your smartphone
 ------------------------------------
 
-1. download the Nextcloud app from the app store.
+1. Download the Nextcloud app from the app store.
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_1.jpg
    :alt: imgsp1
    :scale: 30 %
 
-2. click on "Sign in".
+2. Cick on "Sign in".
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_2.jpg
    :alt: imgsp2
@@ -119,13 +119,13 @@ Connect the NextBox with your smartphone
    :alt: imgsp3
    :scale: 30 % 
 
-4. enter your username and password and click "Log in".
+4. Enter your username and password and click "Log in".
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_4.jpg
    :alt: imgsp4
    :scale: 30 %
 
-5. now you have access to your NextBox with your smartphone! 
+5. Now you have access to your NextBox with your smartphone! 
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_5.jpg
    :alt: imgsp5
