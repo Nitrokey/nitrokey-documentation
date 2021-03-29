@@ -105,25 +105,29 @@ Connect Nextbox with your smartphone
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_1.jpg
    :alt: imgsp1
-   
+   :scale: 50 %
+
 2. click on "Sign in".
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_2.jpg
    :alt: imgsp2
-   
+   :scale: 50 %
+
 3. Enter your domain.
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_3.jpg
    :alt: imgsp3
-   
+   :scale: 50 % 
+
 4. enter your username and password and then click Log in.
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_4.jpg
    :alt: imgsp4
-
+   :scale: 50 %
+   
 5. now you have access to your nextbox with your smartphone! 
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_5.jpg
    :alt: imgsp5
-
+   :scale: 50 %
 
