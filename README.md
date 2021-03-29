@@ -25,3 +25,26 @@
   https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 
   https://docutils.sourceforge.io/docs/ref/rst/directives.html
+  
+## Locale Preview
+
+Setup Sphinx and components:
+
+```
+apt install python3-sphinx
+python3.7 -m pip install divio-docs-theme
+python3.7 -m pip install sphinx-rtd-theme
+python3.7 -m pip install sphinx-intl
+python3.7 -m pip install PyStemmer
+mkdir -p ~/temp/sphinx_preview
+```
+
+For each preview:
+
+```
+sphinx-build -a -D language='en' -b html . ~/temp/sphinx_preview
+```
+
+Errors about non-existing files in includes can be ignored. Syntax errors and RST files not contained in the TOC are listed.
+
+Open ~/temp/sphinx_preview/index.html In the browser.
