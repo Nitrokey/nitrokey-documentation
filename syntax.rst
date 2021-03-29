@@ -97,5 +97,5 @@ True   True   True
 This is a text that needs to be translated automatically.
 This is another Line to be translated.
 
-* This is one more test if an automatic translation ist added as a translation of a message in the new weblate version.
+* This line is one of the tests for the automated translation workflow with weblate.
 
