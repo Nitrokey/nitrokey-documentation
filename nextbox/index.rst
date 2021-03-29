@@ -20,24 +20,24 @@ Getting Started
 
 .. Warning::
 
-No external storage drives without an external power supply may be connected to the USB 3.0 socket (recognizable by the blue plastic inside). Otherwise, this can lead to data loss on the internal hard disk.
-Please always use external storage drives with additional power supply at the NextBox.
+   No external storage drives without an external power supply may be connected to the USB 3.0 socket (recognizable by the blue plastic inside). Otherwise, this can lead to data loss on the internal hard disk.
+   Please always use external storage drives with additional power supply at the NextBox.
 
 Create Admin Account
 --------------------
 
 1. Enter your desired username and password.
 
-.. figure:: /nextbox/images/nextbox_getting_started/1.jpg
+.. figure:: /nextbox/images/nextbox_getting_started/1.png
    :alt: img1
    
 .. Note:: 
 
-An occurring warning can be ignored since you are on your local network.
+   An occurring warning can be ignored since you are on your local network.
 
 2. Press "Finish Setup". This process may take a few minutes.
 
-.. figure:: /nextbox/images/nextbox_getting_started/2.jpg
+.. figure:: /nextbox/images/nextbox_getting_started/2.png
    :alt: img2
    
 Activating the Nextbox app
@@ -45,13 +45,14 @@ Activating the Nextbox app
 
 1. type "nextbox" in the search bar.
 
-.. figure:: /nextbox/images/nextbox_getting_started/3.jpg
+.. figure:: /nextbox/images/nextbox_getting_started/3.png
    :alt: img3
    
 2. click on "enable".
    
 3. you will now reach the nextbox app in the menu bar shown above.
-.. figure:: /nextbox/images/nextbox_getting_started/4.jpg
+
+.. figure:: /nextbox/images/nextbox_getting_started/4.png
    :alt: img4
 
 Create Backup/ Restore
@@ -67,34 +68,34 @@ Quickstart Configuration (recommended)
 
 1. go to "Remote Access" in the Nextbox app.
 
-.. figure:: /nextbox/images/nextbox_getting_started/5.jpg
+.. figure:: /nextbox/images/nextbox_getting_started/5.png
    :alt: img5
    
 2. click on "Quickstart Configuration (recommended)".
 
-.. figure:: /nextbox/images/nextbox_getting_started/6.jpg
+.. figure:: /nextbox/images/nextbox_getting_started/6.png
    :alt: img6
    
 3. enter your desired domain name consisting of at least 4 characters and ending with ".nextbox.link".
 
 4. specify your token received with nextbox.
 
-.. figure:: /nextbox/images/nextbox_getting_started/7.jpg
+.. figure:: /nextbox/images/nextbox_getting_started/7.png
    :alt: img7  
 
 5. click on "Activate Quickstart Remote Access". The process may take a few seconds.
 
-.. figure:: /nextbox/images/nextbox_getting_started/9.jpg
+.. figure:: /nextbox/images/nextbox_getting_started/9.png
    :alt: img9
    
 6. go back to Remote Access to check the status about the accessibility of the address.
 
-.. figure:: /nextbox/images/nextbox_getting_started/9.5.jpg
+.. figure:: /nextbox/images/nextbox_getting_started/9.5.png
    :alt: img9.5
    
 7. Now your Nexbox is reachable via the selected address!
 
-.. figure:: /nextbox/images/nextbox_getting_started/10.jpg
+.. figure:: /nextbox/images/nextbox_getting_started/10.png
    :alt: img10
 
 Connect Nextbox with your smartphone
