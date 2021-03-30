@@ -35,7 +35,6 @@ apt install python3-sphinx
 python3.7 -m pip install divio-docs-theme
 python3.7 -m pip install sphinx-rtd-theme
 python3.7 -m pip install sphinx-intl
-python3.7 -m pip install PyStemmer
 mkdir -p ~/temp/sphinx_preview
 ```
 
