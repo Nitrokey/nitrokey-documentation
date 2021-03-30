@@ -98,4 +98,5 @@ This is a text that needs to be translated automatically.
 This is another Line to be translated.
 
 * This line is one of the tests for the automated translation workflow with weblate.
+* Adding this text should trigger the conmplete workflow of translation.
 
