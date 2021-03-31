@@ -1,4 +1,4 @@
-NitroPC with Debian
+NitroPC with Ubuntu
 ===================
 
 .. contents:: :local:
