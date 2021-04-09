@@ -73,7 +73,7 @@ gettext_compact = "string"
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-#pygments_style = "solarizeddark" 
+#pygments_style = "solarizeddark"
 pygments_style = "cheerfully_dark"
 
 
@@ -96,9 +96,28 @@ html_context = {
     "languages" : {
         'de' : 'Deutsch',
         'en' : 'English',
-        #'fr' : 'français',
-        #'es': 'español',
+        # 'fr' : 'français',
+        # 'es': 'español',
         },
+    "lang_switch_info": {
+        'de' : 'Diese Seite ist auf Deutsch verfügbar.',
+        'en' : 'This page is available in English.',
+        # 'fr' : 'Cette page est disponible en français',
+        # 'es': 'Esta página está disponible en español.',
+    },
+    "lang_switch_label": {
+        'de' : 'Auf Deutsch ansehen',
+        'en' : 'Switch to English',
+        # 'fr' : 'Passer au français',
+        # 'es': 'Cambiar al español',
+    },
+    "dismiss_label": {
+        'de' : 'Ausblenden',
+        'en' : 'Dismiss',
+        # 'fr' : 'Cacher',
+        # 'es': 'Esconder',
+    }
+
 }
 
 html_theme = "divio_docs_theme"
