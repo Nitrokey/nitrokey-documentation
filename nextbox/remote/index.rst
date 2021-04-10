@@ -14,5 +14,5 @@ The ...
 
    Backwards Proxy <proxy>
    Guided Dynamic DNS <guided>
-   Custom Dynamic DNS <custom>
+   Custom Dynamic DNS <ddclient>
    Static Domain <static>

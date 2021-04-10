@@ -1,5 +1,5 @@
-Backwards Proxy Remote Access
-=============================
+Static DNS Configuration for e.g., static IPs
+=============================================
 
 
 
