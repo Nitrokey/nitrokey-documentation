@@ -4,7 +4,7 @@ NextBox
 .. contents:: :local:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
    :hidden:
 
@@ -13,25 +13,29 @@ NextBox
 Getting Started
 ---------------
 
-1. Connect NextBox to the Internet router via network cable.
-2. Connect the power cable to the NextBox.
-3. Start the NextBox.
-4. Wait approx. 5 minutes and open "nextbox.local" in your web browser. If error is displayed, wait one minute and try again.
+1. Connect NextBox to your Internet router via network cable.
+2. Connect the power cable to the NextBox, you can use any of the two USB-C ports.
+3. Once powered the the NextBox will start
+4. Wait approx. 5 minutes and open "http://nextbox.local" in your web browser - this duration may 
+   vary.
+   
 
 .. Warning::
 
-   No external storage drives without an external power supply may be connected to the USB 3.0 socket (recognizable by the blue plastic inside). Otherwise, this can lead to data loss on the internal hard disk.
-   Please always use external storage drives with additional power supply at the NextBox.
+   External storage drives without an external power supply must NOT be connected
+   to the USB 3.0 socket (recognizable by the blue plastic inside). Otherwise,
+   this can lead to data loss on the internal hard disk. Please always use
+   external storage drives with a seperate power supply together with the NextBox.
 
 Create Admin Account
 --------------------
 
-1. Enter your desired username and password.
+1. Enter your desired username and password. Choose a strong password for your admin account.
 
 .. figure:: /nextbox/images/nextbox_getting_started/1.png
    :alt: img1
    
-.. Note:: 
+.. .. Note:: 
 
    An occurring warning can be ignored since you are on your local network.
 
@@ -39,95 +43,46 @@ Create Admin Account
 
 .. figure:: /nextbox/images/nextbox_getting_started/2.png
    :alt: img2
-   
-Activating the Nextbox app
---------------------------
+  
+Ready To Go
+-----------
 
-1. Type "nextbox" in the search bar.
+This is all it takes to get started with your NextBox. From this point you are
+free to choose how you would like to make the best use of your personal
+Nextcloud-powered cloud. To get you started, here is a collection of ideas to
+continue on:
 
-.. figure:: /nextbox/images/nextbox_getting_started/3.png
-   :alt: img3
-   
-2. Click on "enable".
-   
-3. You will now reach the NextBox app in the menu bar shown above.
+* **Set up remote access for your NextBox <remote>** to allow access to your
+  private cloud from the internet
 
-.. figure:: /nextbox/images/nextbox_getting_started/4.png
-   :alt: img4
+* **Connect your devices to your NextBox.** For smartphones the offical
+  `Android App`_ and `iOS App`_ are both great additions for your personal
+  cloud. Apart from these there are also `Windows, macOS, Linux clients`_
+  available, which integrate seamlessly into the OS of your choice. For Android
+  smartphones you can might want to read our pictured <clients> guide.
 
-Create Backup/ Restore
-----------------------
+* **Browse the vast amount of apps** for your Nextcloud at the `official
+  store`_ for Nextcloud apps. Alternatively, just browse, find and install
+  directly from within your NextBox via the built-in app management.
 
-Enable Remote Access
---------------------
+* **Extend your Dashboard** using the various `Dashboard Integrations`_ to
+  create your personal information hub.
 
-There are several ways to enable remote access to the NextBox. The easiest way is to use the "Quickstart Configuration".
+* **Share photos, documents, any files, booksmarks and much more with your
+  family and friends**, or become part of a `Federation`_ and share,
+  communicate and collaborate with other Nextcloud users.
 
-Quickstart Configuration (recommended)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Make use of Nextcloud's powerful `groupware apps`_ like *Mail*, *Contacts*,
+  *Calendar* or even *Deck* to have all your personal data under your control
+  or to organize and work together with others. 
 
-1. Go to "Remote Access" in the NextBox app.
 
-.. figure:: /nextbox/images/nextbox_getting_started/5.png
-   :alt: img5
-   
-2. Click on "Quickstart Configuration (recommended)".
+.. _Android App: https://play.google.com/store/apps/details?id=com.nextcloud.client
+.. _iOS App: https://apps.apple.com/us/app/nextcloud/id1125420102
+.. _Windows, macOS, Linux clients: https://nextcloud.com/install/#install-clients
+.. _official store: https://apps.nextcloud.com/
+.. _Dashboard Integrations: https://apps.nextcloud.com/categories/dashboard
+.. _Federations: https://nextcloud.com/federation/
+.. _groupware apps: https://nextcloud.com/groupware/
 
-.. figure:: /nextbox/images/nextbox_getting_started/6.png
-   :alt: img6
-   
-3. Enter your desired domain name consisting of at least 4 characters and ending with ".nextbox.link".
-
-4. Specify your token received with the NextBox.
-
-.. figure:: /nextbox/images/nextbox_getting_started/7.png
-   :alt: img7  
-
-5. Click on "Activate Quickstart Remote Access". This process may take a few seconds.
-
-.. figure:: /nextbox/images/nextbox_getting_started/9.png
-   :alt: img9
-   
-6. Go back to Remote Access to check the status about the accessibility of the address.
-
-.. figure:: /nextbox/images/nextbox_getting_started/9.5.png
-   :alt: img9.5
-   
-7. Now your NextBox is reachable via the selected address!
-
-.. figure:: /nextbox/images/nextbox_getting_started/10.png
-   :alt: img10
-
-Connect the NextBox with your smartphone
-------------------------------------
-
-1. Download the Nextcloud app from the app store.
-
-.. figure:: /nextbox/images/nextbox_getting_started/sp_1.jpg
-   :alt: imgsp1
-   :scale: 30 %
-
-2. Cick on "Sign in".
-
-.. figure:: /nextbox/images/nextbox_getting_started/sp_2.jpg
-   :alt: imgsp2
-   :scale: 30 %
-
-3. Enter your domain.
-
-.. figure:: /nextbox/images/nextbox_getting_started/sp_3.jpg
-   :alt: imgsp3
-   :scale: 30 % 
-
-4. Enter your username and password and click "Log in".
-
-.. figure:: /nextbox/images/nextbox_getting_started/sp_4.jpg
-   :alt: imgsp4
-   :scale: 30 %
-
-5. Now you have access to your NextBox with your smartphone! 
-
-.. figure:: /nextbox/images/nextbox_getting_started/sp_5.jpg
-   :alt: imgsp5
-   :scale: 30 %
 
