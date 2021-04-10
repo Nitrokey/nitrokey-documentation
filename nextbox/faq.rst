@@ -1,8 +1,9 @@
 Frequently Asked Questions
 ==========================
 
-|**Q:** *How can I factory-reset my NextBox?*
-|**A:**
+**Q:** *How can I factory-reset my NextBox?*
+
+**A:** Like so!
 
 |**Q:** What do the different LED colors mean?
 |**A:** The detailed document can be found here: <technical/led>

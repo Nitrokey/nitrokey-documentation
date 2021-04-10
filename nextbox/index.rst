@@ -1,4 +1,4 @@
-NextBox - Private Cloud
+NextBox
 ============================
 
 .. toctree::
@@ -6,9 +6,10 @@ NextBox - Private Cloud
    :glob:
 
    gettingstarted
-   clients
-   remote
-   backup
+   clients/index
+   remote/index
+   backup/index
+   technical/index
    faq 
    troubleshooting
 
