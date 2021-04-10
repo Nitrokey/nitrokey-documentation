@@ -1,15 +1,11 @@
-NextBox
-=======
-
-.. contents::
+NextBox - Private Cloud
+============================
 
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   *
-   
-..   gettingstarted
+   gettingstarted
    clients
    remote
    backup
