@@ -9,21 +9,21 @@ Linux host with /dev/kvm available. Execute this command:
 
    $ sudo docker run --rm -ti --device=/dev/kvm:/dev/kvm --device=/dev/net/tun:/dev/net/tun --cap-add=NET_ADMIN -p8443:8443 nitrokey/nethsm:testing
 
-Es l?sst sich eine Client-Library f?r die Schnittstelle in beliebigen
-Programmiersprachen erzeugen. Hier ein Beispiel f?r Python:
+You can generate client libraries for the API in many programming
+languages using the `OpenAPI Generator
+<https://github.com/OpenAPITools/openapi-generator>`__, for example in Python:
 
 ::
 
-   docker run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate -i=https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json -g=python -o=/out/python
+   $ docker run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate -i=https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json -g=python -o=/out/python
 
 API Tutorial
 ------------
 
-Die Schnittstellenspezifikation steht als
-`RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`__ und
-als `OpenAPI
-(Swagger) <https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`__
-zur Verfügung.
+The interface specification is available as
+`RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`__ and as
+`OpenAPI (Swagger)
+<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`__.
 
 First, let’s see what we have here:
 
@@ -59,7 +59,7 @@ Initialization
 ~~~~~~~~~~~~~~
 
 A new NetHSM needs to be provisioned first with passphrases and the
-current time. The *Admin Passphrase* is the *Administrator*\ ’s
+current time. The *Admin Passphrase* is the *Administrator*’s
 passphrase, which is the super user of the NetHSM. The *Unlock
 Passphrase* is used to encrypt NetHSM’s confidential data store.
 
