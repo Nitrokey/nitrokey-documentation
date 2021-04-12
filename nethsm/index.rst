@@ -1,9 +1,21 @@
 NetHSM
 ======
 
-NetHSM container requires nested virtualization for strong separation
-with other containers. Thus, to start a NetHSM container you need a
-Linux host with /dev/kvm available. Execute this command:
+This guide explains three different methods of accessing a NetHSM instance:
+accessing the REST API directly, using the `nitropy` application and using the
+PKCS#11 driver.
+
+Demo Instances
+--------------
+
+A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com
+<https://nethsmdemo.nitrokey.com>`__.  You can also run a demo instance using
+the `nitrokey/nethsm Docker image
+<https://hub.docker.com/r/nitrokey/nethsm>`__.
+
+The NetHSM container requires nested virtualization for strong separation with
+other containers. Thus, to start a NetHSM container you need a Linux host with
+/dev/kvm available. Execute this command:
 
 ::
 
@@ -25,6 +37,10 @@ The interface specification is available as
 `OpenAPI (Swagger)
 <https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`__.
 
+You can either access the API directly, or you can use the `nitropy
+<https://github.com/nitrokey/pynitrokey>`__ CLI application.  This tutorial
+demonstrates both approaches.
+
 First, let’s see what we have here:
 
 ::
@@ -40,6 +56,20 @@ First, let’s see what we have here:
 
    {"vendor":"Nitrokey GmbH","product":"NetHSM"}
 
+::
+
+    $ nitropy nethsm --host localhost:8443 info
+    Host:    localhost:8443
+    Vendor:  Nitrokey GmbH
+    Product: NetHSM
+
+.. tip::
+
+   If you use a self-signed certificate for the NetHSM demo instance,
+   you have to set the ``--no-verify-ssl`` option for `nitropy`, for example::
+
+       $ nitropy nethsm --host localhost:8443 --no-verify-ssl info
+
 See what the device’s status is:
 
 ::
@@ -54,6 +84,11 @@ See what the device’s status is:
    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
    {"state":"Unprovisioned"}
+
+::
+
+    $ nitropy nethsm --host localhost:8443 state
+    NetHSM localhost:8443 is Unprovisioned
 
 Initialization
 ~~~~~~~~~~~~~~
@@ -73,6 +108,12 @@ Passphrase* is used to encrypt NetHSM’s confidential data store.
    date: Wed, 11 Nov 2020 16:35:44 GMT
    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
+::
+
+   $ nitropy nethsm --host localhost:8443 provision \
+       --admin-passphrase adminPassphrase --unlock-passphrase unlockPassphrase
+   NetHSM localhost:8443 provisioned
+
 NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
 
 -  In *Attended Boot* mode the *Unlock Passphrase* needs to be entered
@@ -89,17 +130,36 @@ Retrieve the current mode:
 
    $ curl -k -i -w '\n' https://localhost:8443/api/v1/config/unattended-boot"
 
+::
+
+   $ nitropy nethsm --host localhost:8443 --username admin --password adminPassphrase \
+       get-config --unattended-boot
+    Configuration for NetHSM localhost:8443:
+        Unattended boot: off
+
 Switch to *Unattended Boot* mode:
 
 ::
 
    $ curl -k -i -w '\n' -X PUT https://localhost:8443/api/v1/config/unattended-boot" -d "{ status: \"on\"}"
 
+::
+
+   $ nitropy nethsm --host localhost:8443 --username admin --password adminPassphrase \
+       set-unattended-boot on
+   Updated the unattended boot configuration for NetHSM localhost:8443
+
 Switch to *Attended Boot* mode:
 
 ::
 
    $ curl -k -i -w '\n' -X PUT https://localhost:8443/api/v1/config/unattended-boot" -d "{ status: \"off\"}"
+
+::
+
+   $ nitropy nethsm --host localhost:8443 --username admin --password adminPassphrase \
+       set-unattended-boot on
+   Updated the unattended boot configuration for NetHSM localhost:8443
 
 Roles
 ~~~~~
@@ -131,10 +191,17 @@ Create a User
 
 ::
 
-   $ curl -i -w '\n' -u admin:adminadmin \
-    "https://nethsmdemo.nitrokey.com/api/v1/users/operator" -X PUT \
+   $ curl -i -w '\n' -u admin:adminPassphrase \
+    "https://localhost:8443/api/v1/users/operator" -X PUT \
     -H "content-type: application/json" -d "{\"realName\": \"Jane User\", \
     \"role\": \"Operator\", \"passphrase\": \"opPassphrase\"}"
+
+::
+
+   $ nitropy nethsm --host localhost:8443 --username admin --password adminPassphrase \
+       add-user --user-id operator --real-name "Jane User" --role operator \
+       --passphrase opPassphrase
+   User operator added to NetHSM nethsmdemo.nitrokey.com
 
 Create Keys
 ~~~~~~~~~~~
@@ -150,6 +217,13 @@ Create Keys
    date: Tue, 26 Jan 2021 05:54:09 GMT
    location: /api/v1/keys/0ead0d9dd849cecf845c
    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+
+::
+
+   $ nitropy nethsm --host localhost:8443 --username admin --password adminPassphrase \
+       generate-key --algorithm RSA --mechanism RSA_Signature_PSS_SHA256 \
+       --length 2048 --key-id myFirstKey
+   Key myFirstKey generated on NetHSM localhost:8443
 
 List Keys
 ~~~~~~~~~
@@ -167,6 +241,16 @@ List Keys
 
    [{"key":"myFirstKey"}]
 
+::
+
+   $ nitropy nethsm --host localhost:8443 --username operator --password opPassphrase \
+       list-keys
+   Keys on NetHSM localhost:8443:
+
+   Key ID          Algorithm       Mechanisms                      Operations
+   ----------      ---------       ------------------------        ----------
+   myFirstKey      RSA             RSA_Signature_PSS_SHA256        0         
+
 Show Key Details
 ~~~~~~~~~~~~~~~~
 
@@ -175,6 +259,18 @@ Show Key Details
    $ curl -s -k -w '\n' -u admin:adminPassphrase https://localhost:8443/api/v1/keys/myFirstKey
 
    {"mechanisms":["RSA_Signature_PSS_SHA256"],"algorithm":"RSA","modulus":"td583uBYRfO7qtvPoQF7liUh8gq3zckCk9LpCfblx2S0HdOvButfD4TyH4EMiZj3NhEoq18BZhqhxTL22UyNJwYJd2tCF4EbgTaj/Z3LeCPoGN5LjadFCsYriPeHsdnuLmTK6KsmTAP/CWJ+u3LesU5bCGWbDnPjv2WaLTeiMuNw1347gj1drft8jFA9SmOFjZxM9pq2Hk1nQSYpeAPCnigC7hLwAWgzKqVQv/J7VVWat3ke/jOrxFiRDFIeC3qxtBs6T7GYwqmsxkxgqKDljTAH4qMrC9vgVbbFPffe8UgmtDfvQ0ghP57b3HYZDON90MJ2qrU944E74g+ua6unTw==","publicExponent":"AQAB","operations":0}
+
+::
+
+   $ nitropy nethsm --host localhost:8443 --username operator --password opPassphrase \
+       get-key myFirstKey
+   Key myFirstKey on NetHSM localhost:8443:
+   Algorithm:       RSA
+   Mechanisms:      RSA_Signature_PSS_SHA256
+   Operations:      0
+   Modulus:         xYDMGEK3CO5vK0ge0pJQEJHBPA/5M42F/kyN7BV+03HEH23NLXWyszYn7MWvxG4uebZfz+6n7auOYePb0FADVvxQvdX4VPcNzBOEgMqfpplEzf5RzmMmFDBgAcGMS5XkbyVS3XR+7bqej5L6qZtGmFn4hG22Ziu5ZdQxyyqos8Go1ogFBz+vQ4WzmDOGEU82quQSxiPT3K71KKVSS4zTL6oz9izuHzOqnLhuGnbtAe5AFBXE2fJIuXMzw36d0OyJ+rdmkh65EXXLo7Qt3VyP7JPIW+JIM2iU26v6suwUCbjFfrDURS8xEftKAe1hkBWJpNHLZhUse7dpvmtlmRyhxw==
+   Public exponent: AQAB
+
 
 API Documentation
 -----------------
