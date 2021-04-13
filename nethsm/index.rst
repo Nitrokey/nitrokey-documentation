@@ -284,6 +284,23 @@ Show Key Details
    Modulus:         xYDMGEK3CO5vK0ge0pJQEJHBPA/5M42F/kyN7BV+03HEH23NLXWyszYn7MWvxG4uebZfz+6n7auOYePb0FADVvxQvdX4VPcNzBOEgMqfpplEzf5RzmMmFDBgAcGMS5XkbyVS3XR+7bqej5L6qZtGmFn4hG22Ziu5ZdQxyyqos8Go1ogFBz+vQ4WzmDOGEU82quQSxiPT3K71KKVSS4zTL6oz9izuHzOqnLhuGnbtAe5AFBXE2fJIuXMzw36d0OyJ+rdmkh65EXXLo7Qt3VyP7JPIW+JIM2iU26v6suwUCbjFfrDURS8xEftKAe1hkBWJpNHLZhUse7dpvmtlmRyhxw==
    Public exponent: AQAB
 
+Decryption
+~~~~~~~~~~
+
+::
+
+    $ nitropy nethsm --host localhost:8443 --username admin --password adminadmin \
+        generate-key -a RSA -m RSA_Decryption_PKCS1 -l 2048 -k testkey
+    $ curl --insecure -u operator:operatoroperator -X GET \
+        https://localhost:8443/api/v1/keys/testkey3/public.pem -o _public.pem
+    $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey _public.pem -pubin \
+        -out _data.crypt
+    $ base64 _data.crypt > _data.crypt.base64
+    $ nitropy nethsm -h localhost:8443 -u operator -p operatoroperator \
+        decrypt -k testkey3 -d "$(cat _data.crypt.base64)" -m PKCS1 > _data.decrypt.base64
+    $ base64 -d _data.decrypt.base64
+    NetHSM rulez!
+
 
 API Documentation
 -----------------
