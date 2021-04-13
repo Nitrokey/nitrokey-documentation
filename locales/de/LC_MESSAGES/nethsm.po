@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-13 15:06+0200\n"
+"POT-Creation-Date: 2021-04-13 15:31+0200\n"
 "PO-Revision-Date: 2021-04-12 16:39+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: de\n"
@@ -27,15 +27,16 @@ msgstr "NetHSM"
 #: ../nethsm/index.rst:4
 msgid ""
 "This guide explains three different methods of accessing a NetHSM "
-"instance: accessing the REST API directly, using the `nitropy` "
-"application and using the PKCS#11 driver."
+"instance: accessing the REST API directly, using the `nitropy "
+"<https://github.com/Nitrokey/pynitrokey>`__ application and using the "
+"`PKCS#11 <https://github.com/Nitrokey/nethsm-pkcs11>`__ driver."
 msgstr ""
 
-#: ../nethsm/index.rst:9
+#: ../nethsm/index.rst:10
 msgid "Demo Instances"
 msgstr ""
 
-#: ../nethsm/index.rst:11
+#: ../nethsm/index.rst:12
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com>`__.  You can also run a demo instance "
@@ -43,7 +44,7 @@ msgid ""
 "<https://hub.docker.com/r/nitrokey/nethsm>`__."
 msgstr ""
 
-#: ../nethsm/index.rst:16
+#: ../nethsm/index.rst:17
 #, fuzzy
 msgid ""
 "The NetHSM container requires nested virtualization for strong separation"
@@ -55,7 +56,7 @@ msgstr ""
 " starten, benötigen Sie also einen Linux-Host mit verfügbarem /dev/kvm. "
 "Führen Sie diesen Befehl aus:"
 
-#: ../nethsm/index.rst:26
+#: ../nethsm/index.rst:27
 msgid ""
 "You can generate client libraries for the API in many programming "
 "languages using the `OpenAPI Generator <https://github.com/OpenAPITools"
@@ -65,11 +66,11 @@ msgstr ""
 "generator>`__ können Sie in vielen Programmiersprachen Client-"
 "Bibliotheken für die API generieren, zum Beispiel in Python:"
 
-#: ../nethsm/index.rst:37
+#: ../nethsm/index.rst:38
 msgid "API Tutorial"
 msgstr "API-Tutorial"
 
-#: ../nethsm/index.rst:39
+#: ../nethsm/index.rst:40
 msgid ""
 "The interface specification is available as `RAML "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`__ and as "
@@ -82,32 +83,32 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`__ "
 "verfügbar."
 
-#: ../nethsm/index.rst:44
+#: ../nethsm/index.rst:45
 msgid ""
 "You can either access the API directly, or you can use the `nitropy "
 "<https://github.com/nitrokey/pynitrokey>`__ CLI application.  This "
 "tutorial demonstrates both approaches."
 msgstr ""
 
-#: ../nethsm/index.rst:48
+#: ../nethsm/index.rst:49
 msgid "First, let’s see what we have here:"
 msgstr "Schauen wir uns zunächst an, was wir hier haben:"
 
-#: ../nethsm/index.rst:72
+#: ../nethsm/index.rst:73
 msgid ""
 "If you use a self-signed certificate for the NetHSM demo instance, you "
 "have to set the ``--no-verify-ssl`` option for `nitropy`, for example::"
 msgstr ""
 
-#: ../nethsm/index.rst:77
+#: ../nethsm/index.rst:78
 msgid "See what the device’s status is:"
 msgstr "Sehen Sie nach, welchen Status das Gerät hat:"
 
-#: ../nethsm/index.rst:98
+#: ../nethsm/index.rst:99
 msgid "Initialization"
 msgstr "Initialisierung"
 
-#: ../nethsm/index.rst:100
+#: ../nethsm/index.rst:101
 msgid ""
 "A new NetHSM needs to be provisioned first with passphrases and the "
 "current time. The *Admin Passphrase* is the *Administrator*’s passphrase,"
@@ -120,13 +121,13 @@ msgstr ""
 "Passphrase* wird verwendet, um den vertraulichen Datenspeicher des NetHSM"
 " zu verschlüsseln."
 
-#: ../nethsm/index.rst:124
+#: ../nethsm/index.rst:125
 msgid "NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode."
 msgstr ""
 "NetHSM kann im *Attended Boot*-Modus und im *Unattended Boot*-Modus "
 "verwendet werden."
 
-#: ../nethsm/index.rst:126
+#: ../nethsm/index.rst:127
 msgid ""
 "In *Attended Boot* mode the *Unlock Passphrase* needs to be entered "
 "during each start which is used to encrypt the data store. For security "
@@ -136,7 +137,7 @@ msgstr ""
 "eingegeben werden, die zur Verschlüsselung des Datenspeichers verwendet "
 "wird. Aus Sicherheitsgründen wird dieser Modus empfohlen."
 
-#: ../nethsm/index.rst:129
+#: ../nethsm/index.rst:130
 msgid ""
 "In *Unattended Boot* mode no Unlock Passphrase is required, therefore the"
 " NetHSM can start unattended and the data store is stored unencrypted. "
@@ -149,23 +150,23 @@ msgstr ""
 "Verfügbarkeitsanforderungen mit dem *Attended Boot*-Modus nicht erfüllt "
 "werden können."
 
-#: ../nethsm/index.rst:134
+#: ../nethsm/index.rst:135
 msgid "Retrieve the current mode:"
 msgstr "Ruft den aktuellen Modus ab:"
 
-#: ../nethsm/index.rst:147
+#: ../nethsm/index.rst:148
 msgid "Switch to *Unattended Boot* mode:"
 msgstr "Wechseln Sie in den Modus *Unattended Boot*:"
 
-#: ../nethsm/index.rst:160
+#: ../nethsm/index.rst:161
 msgid "Switch to *Attended Boot* mode:"
 msgstr "Wechseln Sie in den Modus *Attended Boot*:"
 
-#: ../nethsm/index.rst:174
+#: ../nethsm/index.rst:175
 msgid "Roles"
 msgstr "Rollen"
 
-#: ../nethsm/index.rst:176
+#: ../nethsm/index.rst:177
 msgid ""
 "Separation of duties can be implemented by using the available Roles. "
 "Each user account configured on the NetHSM has one of the following Roles"
@@ -180,7 +181,7 @@ msgstr ""
 "Operationen; endpunktspezifische Details entnehmen Sie bitte der REST-"
 "API-Dokumentation."
 
-#: ../nethsm/index.rst:182
+#: ../nethsm/index.rst:183
 msgid ""
 "*R-Administrator* A user account with this Role has access to all "
 "operations provided by the REST API, with the exception of key usage "
@@ -191,7 +192,7 @@ msgstr ""
 "der Schlüsselverwendungsoperationen, d. h. der Signierung und "
 "Entschlüsselung von Nachrichten."
 
-#: ../nethsm/index.rst:185
+#: ../nethsm/index.rst:186
 msgid ""
 "*R-Operator* A user account with this Role has access to all key usage "
 "op- erations, a read-only subset of key management operations and user "
@@ -202,7 +203,7 @@ msgstr ""
 "Schlüsselverwaltungsoperationen und Benutzerverwaltungsoperationen, die "
 "nur Änderungen für das eigene Konto zulassen."
 
-#: ../nethsm/index.rst:189
+#: ../nethsm/index.rst:190
 msgid ""
 "*R-Metrics* A user account with this Role has access to read-only metrics"
 " operations only."
@@ -210,7 +211,7 @@ msgstr ""
 "*R-Metrics* Ein Benutzerkonto mit dieser Rolle hat nur Zugriff auf "
 "schreibgeschützte Metrikoperationen."
 
-#: ../nethsm/index.rst:191
+#: ../nethsm/index.rst:192
 msgid ""
 "*R-Backup* A user account with this Role has access to the operations "
 "required to initiate a system backup only."
@@ -218,7 +219,7 @@ msgstr ""
 "*R-Backup* Ein Benutzerkonto mit dieser Rolle hat nur Zugriff auf die "
 "Vorgänge, die zum Initiieren einer Systemsicherung erforderlich sind."
 
-#: ../nethsm/index.rst:193
+#: ../nethsm/index.rst:194
 msgid ""
 "Note: Another Role will be implemented which is allowed to /keys/ POST, "
 "/keys/generate POST, /keys/{KeyID} PUT & DELETE, /keys/{KeyID}/cert PUT &"
@@ -228,27 +229,27 @@ msgstr ""
 "/keys/generate POST, /keys/{KeyID} PUT & DELETE, /keys/{KeyID}/cert PUT &"
 " DELETE zusätzlich zu dem, was R-Operator erlaubt ist."
 
-#: ../nethsm/index.rst:199
+#: ../nethsm/index.rst:200
 msgid "Create a User"
 msgstr "Erstellen eines Benutzers"
 
-#: ../nethsm/index.rst:216
+#: ../nethsm/index.rst:217
 msgid "Create Keys"
 msgstr "Tasten erstellen"
 
-#: ../nethsm/index.rst:241
+#: ../nethsm/index.rst:242
 msgid "List Keys"
 msgstr "Tasten auflisten"
 
-#: ../nethsm/index.rst:267
+#: ../nethsm/index.rst:268
 msgid "Show Key Details"
 msgstr "Tastendetails anzeigen"
 
-#: ../nethsm/index.rst:288
+#: ../nethsm/index.rst:289
 msgid "API Documentation"
 msgstr "API-Dokumentation"
 
-#: ../nethsm/index.rst:290
+#: ../nethsm/index.rst:291
 msgid ""
 "The entire API is described `here "
 "<https://www.nitrokey.com/files/nethsmapi/>`__."
@@ -256,15 +257,15 @@ msgstr ""
 "Die gesamte API ist `hier <https://www.nitrokey.com/files/nethsmapi/>`__ "
 "beschrieben."
 
-#: ../nethsm/index.rst:294
+#: ../nethsm/index.rst:295
 msgid "PKCS#11"
 msgstr "PKCS#11"
 
-#: ../nethsm/index.rst:296
+#: ../nethsm/index.rst:297
 msgid "Download the PKCS#11 driver for NetHSM."
 msgstr "Laden Sie den PKCS#11-Treiber für NetHSM herunter."
 
-#: ../nethsm/index.rst:297
+#: ../nethsm/index.rst:298
 msgid ""
 "Modify the configuration file ``p11nethsm-config.yaml`` according to your"
 " setup and store it in ``$HOME/.nitrokey``, ``/etc/nitrokey/``, or in the"
@@ -275,11 +276,11 @@ msgstr ""
 "``/etc/nitrokey/`` oder in dem Ordner, in dem Ihre Anwendung ausgeführt "
 "wird."
 
-#: ../nethsm/index.rst:302
+#: ../nethsm/index.rst:303
 msgid "Decrypting"
 msgstr "Entschlüsseln"
 
-#: ../nethsm/index.rst:304 ../nethsm/index.rst:324
+#: ../nethsm/index.rst:305 ../nethsm/index.rst:325
 msgid ""
 "Before, create the key with the according mechanism before, and configure"
 " NetHSM’s address and operator username in the p11nethsm config file."
@@ -288,15 +289,15 @@ msgstr ""
 "konfigurieren Sie die Adresse von NetHSM und den Benutzernamen des "
 "Bedieners in der Konfigurationsdatei p11nethsm."
 
-#: ../nethsm/index.rst:322
+#: ../nethsm/index.rst:323
 msgid "Signing"
 msgstr "Unterschrift"
 
-#: ../nethsm/index.rst:340
+#: ../nethsm/index.rst:341
 msgid "Integrating into own custom application"
 msgstr "Einbindung in eigene Anwendung"
 
-#: ../nethsm/index.rst:342
+#: ../nethsm/index.rst:343
 msgid ""
 "To integrate the NetHSM into own custom applications we recommend using "
 "NetHSM’s REST API. To generate a client library for many different "
@@ -314,11 +315,11 @@ msgstr ""
 " sehr einfach ist. Um alle verfügbaren Sprachen aufzulisten, geben Sie "
 "ein"
 
-#: ../nethsm/index.rst:353
+#: ../nethsm/index.rst:354
 msgid "Then you can generate the NetHSM client like this:"
 msgstr "Dann können Sie den NetHSM-Client wie folgt generieren:"
 
-#: ../nethsm/index.rst:359
+#: ../nethsm/index.rst:360
 msgid ""
 "The generated client code, in this case JavaScript, will be created in "
 "the ``./out/`` directory. There is documentation inside as well, how to "
@@ -328,15 +329,15 @@ msgstr ""
 "Verzeichnis ``./out/`` erstellt. Darin befindet sich auch die "
 "Dokumentation, wie Sie ihn verwenden können."
 
-#: ../nethsm/index.rst:364
+#: ../nethsm/index.rst:365
 msgid "Old description, needs to be converted to current API"
 msgstr "Alte Beschreibung, muss auf aktuelle API umgestellt werden"
 
-#: ../nethsm/index.rst:366
+#: ../nethsm/index.rst:367
 msgid "Does it has some keys on it?"
 msgstr "Gibt es Tasten auf dem Gerät?"
 
-#: ../nethsm/index.rst:378
+#: ../nethsm/index.rst:379
 msgid ""
 "Ohh, NetHSM seems to have access control. In fact is has an Admin "
 "password and a User password. The Admin password is used to authenticate "
@@ -350,7 +351,7 @@ msgstr ""
 "der Schlüssel zu authentifizieren. Das Benutzerkennwort wird benötigt, um"
 " die Verwendung von Keyfender ohne Änderungen zu authentifizieren."
 
-#: ../nethsm/index.rst:384
+#: ../nethsm/index.rst:385
 msgid ""
 "Before you can do anything with the system, the Admin password needs to "
 "be defined first. It doesn’t has a default value."
@@ -358,21 +359,21 @@ msgstr ""
 "Bevor Sie irgendetwas mit dem System tun können, muss zuerst das Admin-"
 "Kennwort festgelegt werden. Es hat keinen Standardwert."
 
-#: ../nethsm/index.rst:394
+#: ../nethsm/index.rst:395
 msgid "If you want to change the Admin password again, you need to authenticate:"
 msgstr ""
 "Wenn Sie das Admin-Kennwort erneut ändern möchten, müssen Sie sich "
 "authentifizieren:"
 
-#: ../nethsm/index.rst:404
+#: ../nethsm/index.rst:405
 msgid "Define a User password:"
 msgstr "Definieren Sie ein Benutzerpasswort:"
 
-#: ../nethsm/index.rst:413
+#: ../nethsm/index.rst:414
 msgid "You can generate RSA keys:"
 msgstr "Sie können RSA-Schlüssel erzeugen:"
 
-#: ../nethsm/index.rst:427
+#: ../nethsm/index.rst:428
 msgid ""
 "Here you got the location of the newly generated key. The last part of "
 "the URL is the key ID: Im4bPvqXM8w4SZxEvxvi"
@@ -380,7 +381,7 @@ msgstr ""
 "Hier erhalten Sie den Speicherort des neu erzeugten Schlüssels. Der "
 "letzte Teil der URL ist die Schlüssel-ID: Im4bPvqXM8w4SZxEvxvi"
 
-#: ../nethsm/index.rst:430
+#: ../nethsm/index.rst:431
 msgid ""
 "Instead of dealing with generated key IDs, you can specify the key ID "
 "yourself:"
@@ -388,17 +389,17 @@ msgstr ""
 "Anstatt sich mit generierten Schlüssel-IDs zu beschäftigen, können Sie "
 "die Schlüssel-ID selbst angeben:"
 
-#: ../nethsm/index.rst:445
+#: ../nethsm/index.rst:446
 msgid "You can also import existing keys:"
 msgstr "Sie können auch vorhandene Schlüssel importieren:"
 
-#: ../nethsm/index.rst:459
+#: ../nethsm/index.rst:460
 msgid "You can overwrite an existing key with PUT or delete with DELETE."
 msgstr ""
 "Sie können einen vorhandenen Schlüssel mit PUT überschreiben oder mit "
 "DELETE löschen."
 
-#: ../nethsm/index.rst:461
+#: ../nethsm/index.rst:462
 msgid ""
 "Now we are going to perform key operations. For this we don’t need the "
 "Admin password anymore but can use the User password instead. What we "
@@ -408,15 +409,15 @@ msgstr ""
 "nicht mehr das Admin-Kennwort, sondern können stattdessen das Benutzer-"
 "Kennwort verwenden. Was haben wir nun?"
 
-#: ../nethsm/index.rst:483
+#: ../nethsm/index.rst:484
 msgid "Here is how you get a public key:"
 msgstr "So erhalten Sie einen öffentlichen Schlüssel:"
 
-#: ../nethsm/index.rst:507
+#: ../nethsm/index.rst:508
 msgid "You can get it also in PEM format:"
 msgstr "Sie können es auch im PEM-Format erhalten:"
 
-#: ../nethsm/index.rst:528
+#: ../nethsm/index.rst:529
 msgid ""
 "With each key you can execute decrypt and signing operations (Technical "
 "restriction to the designated key purpose is not enforced yet.) Signing "
@@ -427,67 +428,67 @@ msgstr ""
 "Verwendungszweck des Schlüssels ist noch nicht vorgesehen). Das Signieren"
 " kann Hashing aufrufen, oder Sie senden stattdessen einen Hash."
 
-#: ../nethsm/index.rst:536
+#: ../nethsm/index.rst:537
 msgid "Decrypting data is similarly easy:"
 msgstr "Das Entschlüsseln von Daten ist ähnlich einfach:"
 
-#: ../nethsm/index.rst:542
+#: ../nethsm/index.rst:543
 msgid "Available key actions:"
 msgstr "Verfügbare Tastenaktionen:"
 
-#: ../nethsm/index.rst:544
+#: ../nethsm/index.rst:545
 msgid "decrypt"
 msgstr "entschlüsseln"
 
-#: ../nethsm/index.rst:545
+#: ../nethsm/index.rst:546
 msgid "pkcs1/decrypt"
 msgstr "pkcs1/decrypt"
 
-#: ../nethsm/index.rst:546
+#: ../nethsm/index.rst:547
 msgid "oaep/md5/decrypt"
 msgstr "oaep/md5/decrypt"
 
-#: ../nethsm/index.rst:547
+#: ../nethsm/index.rst:548
 msgid "oaep/sha1/decrypt"
 msgstr "oaep/sha1/decrypt"
 
-#: ../nethsm/index.rst:548
+#: ../nethsm/index.rst:549
 msgid "oaep/sha224/decrypt"
 msgstr "oaep/sha224/decrypt"
 
-#: ../nethsm/index.rst:549
+#: ../nethsm/index.rst:550
 msgid "oaep/sha256/decrypt"
 msgstr "oaep/sha256/decrypt"
 
-#: ../nethsm/index.rst:550
+#: ../nethsm/index.rst:551
 msgid "oaep/sha384/decrypt"
 msgstr "oaep/sha384/decrypt"
 
-#: ../nethsm/index.rst:551
+#: ../nethsm/index.rst:552
 msgid "oaep/sha512/decrypt"
 msgstr "oaep/sha512/decrypt"
 
-#: ../nethsm/index.rst:552
+#: ../nethsm/index.rst:553
 msgid "pkcs1/sign"
 msgstr "pkcs1/Zeichen"
 
-#: ../nethsm/index.rst:553
+#: ../nethsm/index.rst:554
 msgid "pss/sha1/sign"
 msgstr "pss/sha1/sign"
 
-#: ../nethsm/index.rst:554
+#: ../nethsm/index.rst:555
 msgid "pss/sha224/sign"
 msgstr "pss/sha224/sign"
 
-#: ../nethsm/index.rst:555
+#: ../nethsm/index.rst:556
 msgid "pss/sha256/sign"
 msgstr "pss/sha256/sign"
 
-#: ../nethsm/index.rst:556
+#: ../nethsm/index.rst:557
 msgid "pss/sha384/sign"
 msgstr "pss/sha384/sign"
 
-#: ../nethsm/index.rst:557
+#: ../nethsm/index.rst:558
 msgid "pss/sha512/sign"
 msgstr "pss/sha512/sign"
 
@@ -1109,4 +1110,12 @@ msgstr "pss/sha512/sign"
 #~ " "
 #~ "http://user:usersecret@localhost:8443/api/v0/keys/myKey/actions/decrypt"
 #~ " ```"
+
+#~ msgid ""
+#~ "This guide explains three different "
+#~ "methods of accessing a NetHSM instance:"
+#~ " accessing the REST API directly, "
+#~ "using the `nitropy` application and "
+#~ "using the PKCS#11 driver."
+#~ msgstr ""
 
