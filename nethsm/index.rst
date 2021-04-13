@@ -19,7 +19,9 @@ other containers. Thus, to start a NetHSM container you need a Linux host with
 
 ::
 
-   $ sudo docker run --rm -ti --device=/dev/kvm:/dev/kvm --device=/dev/net/tun:/dev/net/tun --cap-add=NET_ADMIN -p8443:8443 nitrokey/nethsm:testing
+   $ sudo docker run --rm -ti \
+       --device=/dev/kvm:/dev/kvm --device=/dev/net/tun:/dev/net/tun \
+       --cap-add=NET_ADMIN -p8443:8443 nitrokey/nethsm:testing
 
 You can generate client libraries for the API in many programming
 languages using the `OpenAPI Generator
@@ -27,7 +29,9 @@ languages using the `OpenAPI Generator
 
 ::
 
-   $ docker run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate -i=https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json -g=python -o=/out/python
+   $ docker run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate \
+       -i=https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json \
+       -g=python -o=/out/python
 
 API Tutorial
 ------------
@@ -100,7 +104,10 @@ Passphrase* is used to encrypt NetHSM’s confidential data store.
 
 ::
 
-   $ curl -k -i -w '\n' -X POST https://localhost:8443/api/v1/provision -H "content-type: application/json" -d "{ adminPassphrase: \"adminPassphrase\", unlockPassphrase: \"unlockPassphrase\", systemTime: \"$(date --utc -Iseconds)\"}"
+   $ curl -k -i -w '\n' -X POST https://localhost:8443/api/v1/provision \
+       -H "content-type: application/json" \
+       -d "{ adminPassphrase: \"adminPassphrase\", unlockPassphrase: \"unlockPassphrase\", \
+       systemTime: \"$(date --utc -Iseconds)\"}"
 
    HTTP/1.1 204 No Content
    cache-control: no-cache
@@ -141,7 +148,8 @@ Switch to *Unattended Boot* mode:
 
 ::
 
-   $ curl -k -i -w '\n' -X PUT https://localhost:8443/api/v1/config/unattended-boot" -d "{ status: \"on\"}"
+   $ curl -k -i -w '\n' -X PUT https://localhost:8443/api/v1/config/unattended-boot" \
+       -d "{ status: \"on\"}"
 
 ::
 
@@ -153,7 +161,8 @@ Switch to *Attended Boot* mode:
 
 ::
 
-   $ curl -k -i -w '\n' -X PUT https://localhost:8443/api/v1/config/unattended-boot" -d "{ status: \"off\"}"
+   $ curl -k -i -w '\n' -X PUT https://localhost:8443/api/v1/config/unattended-boot" \
+       -d "{ status: \"off\"}"
 
 ::
 
@@ -192,9 +201,9 @@ Create a User
 ::
 
    $ curl -i -w '\n' -u admin:adminPassphrase \
-    "https://localhost:8443/api/v1/users/operator" -X PUT \
-    -H "content-type: application/json" -d "{\"realName\": \"Jane User\", \
-    \"role\": \"Operator\", \"passphrase\": \"opPassphrase\"}"
+       "https://localhost:8443/api/v1/users/operator" -X PUT \
+       -H "content-type: application/json" -d "{\"realName\": \"Jane User\", \
+       \"role\": \"Operator\", \"passphrase\": \"opPassphrase\"}"
 
 ::
 
@@ -208,7 +217,10 @@ Create Keys
 
 ::
 
-   $ curl -k -i -w '\n' -u admin:adminPassphrase -X POST https://localhost:8443/api/v1/keys/generate -H "content-type: application/json" -d "{ \"mechanisms\": [  \"RSA_Signature_PSS_SHA256\"  ],  \"algorithm\": \"RSA\",  \"length\": 2048,  \"id\": \"myFirstKey\"}"
+   $ curl -k -i -w '\n' -u admin:adminPassphrase -X POST \
+       https://localhost:8443/api/v1/keys/generate -H "content-type: application/json" \
+       -d "{ \"mechanisms\": [  \"RSA_Signature_PSS_SHA256\"  ],  \"algorithm\": \"RSA\",  \
+       \"length\": 2048,  \"id\": \"myFirstKey\"}"
 
    HTTP/1.1 201 Created
    cache-control: no-cache
