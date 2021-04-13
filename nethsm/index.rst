@@ -2,8 +2,9 @@ NetHSM
 ======
 
 This guide explains three different methods of accessing a NetHSM instance:
-accessing the REST API directly, using the `nitropy` application and using the
-PKCS#11 driver.
+accessing the REST API directly, using the `nitropy
+<https://github.com/Nitrokey/pynitrokey>`__ application and using the `PKCS#11
+<https://github.com/Nitrokey/nethsm-pkcs11>`__ driver.
 
 Demo Instances
 --------------
