@@ -99,7 +99,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        generate-key --algorithm RSA --mechanism RSA_Signature_PSS_SHA256 \
-       --length 2048 --key-id myFirstKey
+       --mechanism RSA_Decryption_PKCS1 --length 2048 --key-id myFirstKey
    Key myFirstKey generated on NetHSM localhost:8443
 
 .. include:: _tutorial.rst
@@ -112,9 +112,9 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
        list-keys
    Keys on NetHSM localhost:8443:
 
-   Key ID          Algorithm       Mechanisms                      Operations
-   ----------      ---------       ------------------------        ----------
-   myFirstKey      RSA             RSA_Signature_PSS_SHA256        0         
+   Key ID          Algorithm       Mechanisms                                      Operations
+   ----------      ---------       ----------------------------------------------  ----------
+   myFirstKey      RSA             RSA_Decryption_PKCS1, RSA_Signature_PSS_SHA256  0         
 
 .. include:: _tutorial.rst
    :start-after: .. start:: get-key
@@ -137,14 +137,14 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminadmin \
+    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
         generate-key -a RSA -m RSA_Decryption_PKCS1 -l 2048 -k testkey
-    $ curl -u operator:operatoroperator -X GET \
+    $ curl -u operator:opPassphrase -X GET \
         https://$NETHSM_HOST/api/v1/keys/testkey3/public.pem -o _public.pem
     $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey _public.pem -pubin \
         -out _data.crypt
     $ base64 _data.crypt > _data.crypt.base64
-    $ nitropy nethsm -h $NETHSM_HOST -u operator -p operatoroperator \
+    $ nitropy nethsm -h $NETHSM_HOST -u operator -p opPassphrase \
         decrypt -k testkey3 -d "$(cat _data.crypt.base64)" -m PKCS1 > _data.decrypt.base64
     $ base64 -d _data.decrypt.base64
     NetHSM rulez!
