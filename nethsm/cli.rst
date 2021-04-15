@@ -139,7 +139,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
     $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminadmin \
         generate-key -a RSA -m RSA_Decryption_PKCS1 -l 2048 -k testkey
-    $ curl --insecure -u operator:operatoroperator -X GET \
+    $ curl -u operator:operatoroperator -X GET \
         https://$NETHSM_HOST/api/v1/keys/testkey3/public.pem -o _public.pem
     $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey _public.pem -pubin \
         -out _data.crypt
