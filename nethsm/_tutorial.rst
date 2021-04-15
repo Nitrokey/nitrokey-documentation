@@ -108,4 +108,4 @@ Decryption
 ----------
 .. end
 
-POST /decrypt
+POST /keys/myFirstKey/decrypt

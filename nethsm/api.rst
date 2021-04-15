@@ -109,8 +109,8 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
    $ curl -k -i -w '\n' -u admin:adminPassphrase -X POST \
        https://localhost:8443/api/v1/keys/generate -H "content-type: application/json" \
-       -d "{ \"mechanisms\": [  \"RSA_Signature_PSS_SHA256\"  ],  \"algorithm\": \"RSA\",  \
-       \"length\": 2048,  \"id\": \"myFirstKey\"}"
+       -d "{ \"mechanisms\": [ \"RSA_Signature_PSS_SHA256\", \"RSA_Decryption_PKCS1\" ], \
+       \"algorithm\": \"RSA\",  \"length\": 2048,  \"id\": \"myFirstKey\"}"
 
    HTTP/1.1 201 Created
    cache-control: no-cache
@@ -145,10 +145,29 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
    $ curl -s -k -w '\n' -u admin:adminPassphrase https://localhost:8443/api/v1/keys/myFirstKey
 
-   {"mechanisms":["RSA_Signature_PSS_SHA256"],"algorithm":"RSA","modulus":"td583uBYRfO7qtvPoQF7liUh8gq3zckCk9LpCfblx2S0HdOvButfD4TyH4EMiZj3NhEoq18BZhqhxTL22UyNJwYJd2tCF4EbgTaj/Z3LeCPoGN5LjadFCsYriPeHsdnuLmTK6KsmTAP/CWJ+u3LesU5bCGWbDnPjv2WaLTeiMuNw1347gj1drft8jFA9SmOFjZxM9pq2Hk1nQSYpeAPCnigC7hLwAWgzKqVQv/J7VVWat3ke/jOrxFiRDFIeC3qxtBs6T7GYwqmsxkxgqKDljTAH4qMrC9vgVbbFPffe8UgmtDfvQ0ghP57b3HYZDON90MJ2qrU944E74g+ua6unTw==","publicExponent":"AQAB","operations":0}
+   {"mechanisms":["RSA_Decryption_PKCS1","RSA_Signature_PSS_SHA256"],"algorithm":"RSA","modulus":"td583uBYRfO7qtvPoQF7liUh8gq3zckCk9LpCfblx2S0HdOvButfD4TyH4EMiZj3NhEoq18BZhqhxTL22UyNJwYJd2tCF4EbgTaj/Z3LeCPoGN5LjadFCsYriPeHsdnuLmTK6KsmTAP/CWJ+u3LesU5bCGWbDnPjv2WaLTeiMuNw1347gj1drft8jFA9SmOFjZxM9pq2Hk1nQSYpeAPCnigC7hLwAWgzKqVQv/J7VVWat3ke/jOrxFiRDFIeC3qxtBs6T7GYwqmsxkxgqKDljTAH4qMrC9vgVbbFPffe8UgmtDfvQ0ghP57b3HYZDON90MJ2qrU944E74g+ua6unTw==","publicExponent":"AQAB","operations":0}
 
 .. include:: _tutorial.rst
    :start-after: .. start:: decrypt
    :end-before: .. end
 
-TODO
+::
+
+    $ curl --insecure -u operator:opPassphrase -X GET \
+        https://localhost:8443/api/v1/keys/myFirstKey/public.pem -o _public.pem
+    $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey _public.pem -pubin \
+        -out _data.crypt
+    $ base64 _data.crypt > _data.crypt.base64
+    $ curl -k -i -w '\n' -u operator:opPassphrase -X POST \
+        https://localhost:8443/api/v1/keys/myFirstKey/decrypt -H "content-type: application/json" \
+        -d "{ \"mode\": \"PKCS1\", \"encrypted\": \"$(cat _data.crypt.base64)\"}"
+    HTTP/1.1 200 OK
+    cache-control: no-cache
+    content-length: 36
+    content-type: application/json
+    date: Thu, 15 Apr 2021 10:44:39 GMT
+    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+
+    {"decrypted":"TmV0SFNNIHJ1bGV6IQo="}
+    $ echo TmV0SFNNIHJ1bGV6IQo= | base64 -d
+    NetHSM rulez!
