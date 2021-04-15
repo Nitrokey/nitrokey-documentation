@@ -32,11 +32,7 @@ Setup Sphinx and components:
 
 ```
 apt install python3-sphinx
-python3 -m pip install divio-docs-theme
-python3 -m pip install sphinx-rtd-theme
-python3 -m pip install sphinx-intl
-python3 -m pip install sphinxprettysearchresults
-python3 -m pip install pygments-style-cheerfully-dark
+python3 -m pip install divio-docs-theme install sphinx-rtd-theme sphinx-intl sphinxprettysearchresults pygments-style-cheerfully-dark
 mkdir -p ~/temp/sphinx_preview
 ```
 
