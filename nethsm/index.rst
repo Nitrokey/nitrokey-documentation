@@ -12,9 +12,9 @@ NetHSM
 
 This guide explains three different methods of accessing a NetHSM instance:
 
+-  nitropy command line tool
 -  REST API
--  `nitropy <https://github.com/Nitrokey/pynitrokey>`__ command line tool
--  `PKCS#11 <https://github.com/Nitrokey/nethsm-pkcs11>`__ driver
+-  PKCS#11 driver
 
 Development and Testing
 -----------------------
@@ -33,7 +33,7 @@ Alternatively you can run the `NetHSM Docker container <https://hub.docker.com/r
 CLI Tutorial
 ------------
 
-This tutorial demonstrates how to access the NetHMS via command line tool.
+This tutorial demonstrates how to access the NetHMS via `nitropy <https://github.com/Nitrokey/pynitrokey>`__ command line tool, which you need to download and install.
 
 First, let’s see what we have here:
 
@@ -369,7 +369,7 @@ TODO
 PKCS#11
 -------
 
-1. Download the PKCS#11 driver for NetHSM.
+1. Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-pkcs11>`__ for NetHSM.
 2. Modify the configuration file ``p11nethsm-config.yaml`` according to
    your setup (e.g. address, operator name) and store it in ``$HOME/.nitrokey``, ``/etc/nitrokey/``,
    or in the folder where your application is executed.
