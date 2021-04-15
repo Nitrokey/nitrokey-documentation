@@ -45,18 +45,12 @@ Then you can generate the NetHSM client for your programming language like this:
 
 ::
 
-   $ docker run --pull --rm -ti -v "${PWD}:/local" openapitools/openapi-generator-cli generate -i "https://app.swaggerhub.com/apiproxy/schema/file/apis/nitrokey/nethsm/v1?format=json" -o /local/out -g javascript
+   $ docker run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate \
+       -i=https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json \
+       -o /out -g javascript
 
 The generated client code, in this example JavaScript, will be created in
 the ``./out/`` directory. This folder also contains the necessary documentation how to use it.
-
-Example in Python:
-
-::
-
-   $ docker run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate \
-       -i=https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json \
-       -g=python -o=/out/python
 
 
 Old description, needs to be converted to current API
