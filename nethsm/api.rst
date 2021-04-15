@@ -35,6 +35,12 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
    {"vendor":"Nitrokey GmbH","product":"NetHSM"}
 
+.. note::
+
+   The ``-i``/``--include`` option causes ``curl`` to print the HTTP status
+   code and the response headers.  The ``-w '\n'``/``--write-out '\n'`` option
+   adds a newline after the response body.
+
 .. include:: _tutorial.rst
    :start-after: .. start:: state
    :end-before: .. end
