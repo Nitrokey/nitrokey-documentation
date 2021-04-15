@@ -5,7 +5,9 @@ Accessing a NetHSM with the nitropy command line tool
 
 This tutorial demonstrates how to access the NetHMS via `nitropy <https://github.com/Nitrokey/pynitrokey>`__ command line tool, which you need to download and install.
 
-First, let’s see what we have here:
+.. include:: _tutorial.rst
+   :start-after: .. start:: info
+   :end-before: .. end
 
 ::
 
@@ -21,20 +23,18 @@ First, let’s see what we have here:
 
        $ nitropy nethsm --host localhost:8443 --no-verify-tls info
 
-See what the device’s status is:
+.. include:: _tutorial.rst
+   :start-after: .. start:: state
+   :end-before: .. end
 
 ::
 
     $ nitropy nethsm --host localhost:8443 state
     NetHSM localhost:8443 is Unprovisioned
 
-Initialization
---------------
-
-A new NetHSM needs to be provisioned first with passphrases and the
-current time. The *Admin Passphrase* is the *Administrator*’s
-passphrase, which is the super user of the NetHSM. The *Unlock
-Passphrase* is used to encrypt NetHSM’s confidential data store.
+.. include:: _tutorial.rst
+   :start-after: .. start:: provision
+   :end-before: .. end
 
 ::
 
@@ -42,17 +42,9 @@ Passphrase* is used to encrypt NetHSM’s confidential data store.
        --admin-passphrase adminPassphrase --unlock-passphrase unlockPassphrase
    NetHSM localhost:8443 provisioned
 
-NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
-
--  In *Attended Boot* mode the *Unlock Passphrase* needs to be entered
-   during each start which is used to encrypt the data store. For
-   security reasons this mode is recommended.
--  In *Unattended Boot* mode no Unlock Passphrase is required, therefore
-   the NetHSM can start unattended and the data store is stored
-   unencrypted. Use this mode if your availability requirements can’t be
-   fulfilled with *Attended Boot* mode.
-
-Retrieve the current mode:
+.. include:: _tutorial.rst
+   :start-after: .. start:: boot-mode
+   :end-before: .. end
 
 ::
 
@@ -61,7 +53,9 @@ Retrieve the current mode:
     Configuration for NetHSM localhost:8443:
         Unattended boot: off
 
-Switch to *Unattended Boot* mode:
+.. include:: _tutorial.rst
+   :start-after: .. start:: unattended-boot-on
+   :end-before: .. end
 
 ::
 
@@ -69,7 +63,9 @@ Switch to *Unattended Boot* mode:
        set-unattended-boot on
    Updated the unattended boot configuration for NetHSM localhost:8443
 
-Or switch back to *Attended Boot* mode:
+.. include:: _tutorial.rst
+   :start-after: .. start:: unattended-boot-off
+   :end-before: .. end
 
 ::
 
@@ -77,31 +73,13 @@ Or switch back to *Attended Boot* mode:
        set-unattended-boot on
    Updated the unattended boot configuration for NetHSM localhost:8443
 
-Roles
------
+.. include:: _tutorial.rst
+   :start-after: .. start:: roles
+   :end-before: .. end
 
-Separation of duties can be implemented by using the available Roles.
-Each user account configured on the NetHSM has one of the following
-Roles assigned to it. Following is a high-level description of the
-operations allowed by individual Roles, for endpoint-specific details
-please refer to the REST API documentation.
-
--  *R-Administrator* A user account with this Role has access to all
-   operations provided by the REST API, with the exception of key usage
-   operations, i.e. message signing and decryption.
--  *R-Operator* A user account with this Role has access to all key
-   usage op- erations, a read-only subset of key management operations
-   and user management operations allowing changes to their own account
-   only.
--  *R-Metrics* A user account with this Role has access to read-only
-   metrics operations only.
--  *R-Backup* A user account with this Role has access to the operations
-   required to initiate a system backup only.
-
-Note: In a future release another Role will be implemented which is allowed to /keys/ POST, /keys/generate POST, /keys/{KeyID} PUT & DELETE, /keys/{KeyID}/cert PUT & DELETE in addition to what R-Operator is allowed to do.
-
-Create a User
--------------
+.. include:: _tutorial.rst
+   :start-after: .. start:: add-user
+   :end-before: .. end
 
 ::
 
@@ -110,8 +88,9 @@ Create a User
        --passphrase opPassphrase
    User operator added to NetHSM nethsmdemo.nitrokey.com
 
-Generate Keys
--------------
+.. include:: _tutorial.rst
+   :start-after: .. start:: generate-key
+   :end-before: .. end
 
 ::
 
@@ -120,8 +99,9 @@ Generate Keys
        --length 2048 --key-id myFirstKey
    Key myFirstKey generated on NetHSM localhost:8443
 
-List Keys
----------
+.. include:: _tutorial.rst
+   :start-after: .. start:: list-keys
+   :end-before: .. end
 
 ::
 
@@ -133,8 +113,9 @@ List Keys
    ----------      ---------       ------------------------        ----------
    myFirstKey      RSA             RSA_Signature_PSS_SHA256        0         
 
-Show Key Details
-----------------
+.. include:: _tutorial.rst
+   :start-after: .. start:: get-key
+   :end-before: .. end
 
 ::
 
@@ -147,8 +128,9 @@ Show Key Details
    Modulus:         xYDMGEK3CO5vK0ge0pJQEJHBPA/5M42F/kyN7BV+03HEH23NLXWyszYn7MWvxG4uebZfz+6n7auOYePb0FADVvxQvdX4VPcNzBOEgMqfpplEzf5RzmMmFDBgAcGMS5XkbyVS3XR+7bqej5L6qZtGmFn4hG22Ziu5ZdQxyyqos8Go1ogFBz+vQ4WzmDOGEU82quQSxiPT3K71KKVSS4zTL6oz9izuHzOqnLhuGnbtAe5AFBXE2fJIuXMzw36d0OyJ+rdmkh65EXXLo7Qt3VyP7JPIW+JIM2iU26v6suwUCbjFfrDURS8xEftKAe1hkBWJpNHLZhUse7dpvmtlmRyhxw==
    Public exponent: AQAB
 
-Decryption
-----------
+.. include:: _tutorial.rst
+   :start-after: .. start:: decrypt
+   :end-before: .. end
 
 ::
 

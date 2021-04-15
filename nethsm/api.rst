@@ -8,7 +8,9 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 `OpenAPI (Swagger)
 <https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`__.
 
-First, let’s see what we have here:
+.. include:: _tutorial.rst
+   :start-after: .. start:: info
+   :end-before: .. end
 
 ::
 
@@ -23,7 +25,9 @@ First, let’s see what we have here:
 
    {"vendor":"Nitrokey GmbH","product":"NetHSM"}
 
-See what the device’s status is:
+.. include:: _tutorial.rst
+   :start-after: .. start:: state
+   :end-before: .. end
 
 ::
 
@@ -38,13 +42,10 @@ See what the device’s status is:
 
    {"state":"Unprovisioned"}
 
-Initialization
---------------
 
-A new NetHSM needs to be provisioned first with passphrases and the
-current time. The *Admin Passphrase* is the *Administrator*’s
-passphrase, which is the super user of the NetHSM. The *Unlock
-Passphrase* is used to encrypt NetHSM’s confidential data store.
+.. include:: _tutorial.rst
+   :start-after: .. start:: provision
+   :end-before: .. end
 
 ::
 
@@ -59,61 +60,39 @@ Passphrase* is used to encrypt NetHSM’s confidential data store.
    date: Wed, 11 Nov 2020 16:35:44 GMT
    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
-NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
-
--  In *Attended Boot* mode the *Unlock Passphrase* needs to be entered
-   during each start which is used to encrypt the data store. For
-   security reasons this mode is recommended.
--  In *Unattended Boot* mode no Unlock Passphrase is required, therefore
-   the NetHSM can start unattended and the data store is stored
-   unencrypted. Use this mode if your availability requirements can’t be
-   fulfilled with *Attended Boot* mode.
-
-Retrieve the current mode:
+.. include:: _tutorial.rst
+   :start-after: .. start:: boot-mode
+   :end-before: .. end
 
 ::
 
    $ curl -k -i -w '\n' https://localhost:8443/api/v1/config/unattended-boot"
 
-Switch to *Unattended Boot* mode:
+.. include:: _tutorial.rst
+   :start-after: .. start:: unattended-boot-on
+   :end-before: .. end
 
 ::
 
    $ curl -k -i -w '\n' -X PUT https://localhost:8443/api/v1/config/unattended-boot" \
        -d "{ status: \"on\"}"
 
-Or switch back to *Attended Boot* mode:
+.. include:: _tutorial.rst
+   :start-after: .. start:: unattended-boot-off
+   :end-before: .. end
 
 ::
 
    $ curl -k -i -w '\n' -X PUT https://localhost:8443/api/v1/config/unattended-boot" \
        -d "{ status: \"off\"}"
 
-Roles
------
+.. include:: _tutorial.rst
+   :start-after: .. start:: roles
+   :end-before: .. end
 
-Separation of duties can be implemented by using the available Roles.
-Each user account configured on the NetHSM has one of the following
-Roles assigned to it. Following is a high-level description of the
-operations allowed by individual Roles, for endpoint-specific details
-please refer to the REST API documentation.
-
--  *R-Administrator* A user account with this Role has access to all
-   operations provided by the REST API, with the exception of key usage
-   operations, i.e. message signing and decryption.
--  *R-Operator* A user account with this Role has access to all key
-   usage op- erations, a read-only subset of key management operations
-   and user management operations allowing changes to their own account
-   only.
--  *R-Metrics* A user account with this Role has access to read-only
-   metrics operations only.
--  *R-Backup* A user account with this Role has access to the operations
-   required to initiate a system backup only.
-
-Note: In a future release another Role will be implemented which is allowed to /keys/ POST, /keys/generate POST, /keys/{KeyID} PUT & DELETE, /keys/{KeyID}/cert PUT & DELETE in addition to what R-Operator is allowed to do.
-
-Create a User
--------------
+.. include:: _tutorial.rst
+   :start-after: .. start:: add-user
+   :end-before: .. end
 
 ::
 
@@ -122,8 +101,9 @@ Create a User
        -H "content-type: application/json" -d "{\"realName\": \"Jane User\", \
        \"role\": \"Operator\", \"passphrase\": \"opPassphrase\"}"
 
-Generate Keys
--------------
+.. include:: _tutorial.rst
+   :start-after: .. start:: generate-key
+   :end-before: .. end
 
 ::
 
@@ -140,8 +120,9 @@ Generate Keys
    location: /api/v1/keys/0ead0d9dd849cecf845c
    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
-List Keys
----------
+.. include:: _tutorial.rst
+   :start-after: .. start:: list-keys
+   :end-before: .. end
 
 ::
 
@@ -156,8 +137,9 @@ List Keys
 
    [{"key":"myFirstKey"}]
 
-Show Key Details
-----------------
+.. include:: _tutorial.rst
+   :start-after: .. start:: get-key
+   :end-before: .. end
 
 ::
 
@@ -165,8 +147,8 @@ Show Key Details
 
    {"mechanisms":["RSA_Signature_PSS_SHA256"],"algorithm":"RSA","modulus":"td583uBYRfO7qtvPoQF7liUh8gq3zckCk9LpCfblx2S0HdOvButfD4TyH4EMiZj3NhEoq18BZhqhxTL22UyNJwYJd2tCF4EbgTaj/Z3LeCPoGN5LjadFCsYriPeHsdnuLmTK6KsmTAP/CWJ+u3LesU5bCGWbDnPjv2WaLTeiMuNw1347gj1drft8jFA9SmOFjZxM9pq2Hk1nQSYpeAPCnigC7hLwAWgzKqVQv/J7VVWat3ke/jOrxFiRDFIeC3qxtBs6T7GYwqmsxkxgqKDljTAH4qMrC9vgVbbFPffe8UgmtDfvQ0ghP57b3HYZDON90MJ2qrU944E74g+ua6unTw==","publicExponent":"AQAB","operations":0}
 
-
-Decryption
-----------
+.. include:: _tutorial.rst
+   :start-after: .. start:: decrypt
+   :end-before: .. end
 
 TODO
