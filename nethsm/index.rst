@@ -47,9 +47,9 @@ First, let’s see what we have here:
 .. tip::
 
    If you use a self-signed certificate for the NetHSM demo instance,
-   you have to set the ``--no-verify-ssl`` option for `nitropy`, for example::
+   you have to set the ``--no-verify-tls`` option for `nitropy`, for example::
 
-       $ nitropy nethsm --host localhost:8443 --no-verify-ssl info
+       $ nitropy nethsm --host localhost:8443 --no-verify-tls info
 
 See what the device’s status is:
 
