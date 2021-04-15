@@ -1,3 +1,18 @@
+.. start:: setup
+Before we start, we store the host name of the NetHSM instance in the
+``NETHSM_HOST`` environment variable.  You can use the public NetHSM demo
+instance ``nethsmdemo.nitrokey.com`` or run a local demo instance using the
+NetHSM docker image, see the `Development and Testing
+</index.html#development-and-testing>`_ section of the NetHSM documentation.
+
+::
+
+    $ export NETHSM_HOST="localhost:8443"
+
+.. end
+
+info about self-signed certificates
+
 .. start:: info
 First, let’s see what we have here:
 .. end
@@ -18,6 +33,11 @@ A new NetHSM needs to be provisioned first with passphrases and the
 current time. The *Admin Passphrase* is the *Administrator*’s
 passphrase, which is the super user of the NetHSM. The *Unlock
 Passphrase* is used to encrypt NetHSM’s confidential data store.
+
+.. note::
+
+   The NetHSM demo instance at ``nethsmdemo.nitrokey.com`` is already
+   provisioned.
 .. end
 
 GET /provision

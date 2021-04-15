@@ -6,22 +6,25 @@ Accessing a NetHSM with the nitropy command line tool
 This tutorial demonstrates how to access the NetHMS via `nitropy <https://github.com/Nitrokey/pynitrokey>`__ command line tool, which you need to download and install.
 
 .. include:: _tutorial.rst
+   :start-after: .. start:: setup
+   :end-before: .. end
+
+.. note::
+
+   If you use a NetHSM demo instance with a self-signed certificate, for
+   example using the Docker image, you will have to use the ``--no-verify-tls``
+   option for ``nitropy`` to skip the certificate check.
+
+.. include:: _tutorial.rst
    :start-after: .. start:: info
    :end-before: .. end
 
 ::
 
-    $ nitropy nethsm --host localhost:8443 info
+    $ nitropy nethsm --host $NETHSM_HOST info
     Host:    localhost:8443
     Vendor:  Nitrokey GmbH
     Product: NetHSM
-
-.. tip::
-
-   If you use a self-signed certificate for the NetHSM demo instance,
-   you have to set the ``--no-verify-tls`` option for `nitropy`, for example::
-
-       $ nitropy nethsm --host localhost:8443 --no-verify-tls info
 
 .. include:: _tutorial.rst
    :start-after: .. start:: state
@@ -29,7 +32,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-    $ nitropy nethsm --host localhost:8443 state
+    $ nitropy nethsm --host $NETHSM_HOST state
     NetHSM localhost:8443 is Unprovisioned
 
 .. include:: _tutorial.rst
@@ -38,7 +41,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-   $ nitropy nethsm --host localhost:8443 provision \
+   $ nitropy nethsm --host $NETHSM_HOST provision \
        --admin-passphrase adminPassphrase --unlock-passphrase unlockPassphrase
    NetHSM localhost:8443 provisioned
 
@@ -48,7 +51,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-   $ nitropy nethsm --host localhost:8443 --username admin --password adminPassphrase \
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        get-config --unattended-boot
     Configuration for NetHSM localhost:8443:
         Unattended boot: off
@@ -59,7 +62,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-   $ nitropy nethsm --host localhost:8443 --username admin --password adminPassphrase \
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        set-unattended-boot on
    Updated the unattended boot configuration for NetHSM localhost:8443
 
@@ -69,7 +72,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-   $ nitropy nethsm --host localhost:8443 --username admin --password adminPassphrase \
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        set-unattended-boot on
    Updated the unattended boot configuration for NetHSM localhost:8443
 
@@ -83,7 +86,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-   $ nitropy nethsm --host localhost:8443 --username admin --password adminPassphrase \
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        add-user --user-id operator --real-name "Jane User" --role operator \
        --passphrase opPassphrase
    User operator added to NetHSM nethsmdemo.nitrokey.com
@@ -94,7 +97,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-   $ nitropy nethsm --host localhost:8443 --username admin --password adminPassphrase \
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        generate-key --algorithm RSA --mechanism RSA_Signature_PSS_SHA256 \
        --length 2048 --key-id myFirstKey
    Key myFirstKey generated on NetHSM localhost:8443
@@ -105,7 +108,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-   $ nitropy nethsm --host localhost:8443 --username operator --password opPassphrase \
+   $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
        list-keys
    Keys on NetHSM localhost:8443:
 
@@ -119,7 +122,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-   $ nitropy nethsm --host localhost:8443 --username operator --password opPassphrase \
+   $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
        get-key myFirstKey
    Key myFirstKey on NetHSM localhost:8443:
    Algorithm:       RSA
@@ -134,14 +137,14 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-    $ nitropy nethsm --host localhost:8443 --username admin --password adminadmin \
+    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminadmin \
         generate-key -a RSA -m RSA_Decryption_PKCS1 -l 2048 -k testkey
     $ curl --insecure -u operator:operatoroperator -X GET \
-        https://localhost:8443/api/v1/keys/testkey3/public.pem -o _public.pem
+        https://$NETHSM_HOST/api/v1/keys/testkey3/public.pem -o _public.pem
     $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey _public.pem -pubin \
         -out _data.crypt
     $ base64 _data.crypt > _data.crypt.base64
-    $ nitropy nethsm -h localhost:8443 -u operator -p operatoroperator \
+    $ nitropy nethsm -h $NETHSM_HOST -u operator -p operatoroperator \
         decrypt -k testkey3 -d "$(cat _data.crypt.base64)" -m PKCS1 > _data.decrypt.base64
     $ base64 -d _data.decrypt.base64
     NetHSM rulez!
