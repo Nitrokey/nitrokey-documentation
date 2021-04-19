@@ -72,7 +72,7 @@ continue on:
   all your personal data under your control or to organize and work together
   with others. 
 
-More interested in the technical details? Or in Open-Source in general? Then
+More interested in :doc:`technical details <technical/index>`? Or in Open-Source in general? Then
 head over to the NextBox `repositories`_ at GitHub, leave a star, contribute or
 discuss latest ideas and plans with us. 
 

@@ -1,4 +1,4 @@
-Technical Details and Documentation
+Technical Documentation
 ===================================
 
 
@@ -6,8 +6,6 @@ Technical Details and Documentation
    :maxdepth: 1
    :glob:
 
-   LED Colors and Patterns <led>
-..   Guided Dynamic DNS <guided>
-   Custom Dynamic DNS <custom>
-   Static Domain <static>   
-   
+   led-colors
+   factory-reset
+
