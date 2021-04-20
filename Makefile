@@ -1,7 +1,7 @@
 
 
 all: __preview
-	sphinx-build -a -D language='en' -b html . ___preview
+	sphinx-build -a -D language='en' -b html . __preview
 
 watch:
 	while true; do inotifywait -e MODIFY `find . -name '*.rst'`; make; sleep 1; done
