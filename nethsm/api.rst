@@ -118,6 +118,10 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
        \"role\": \"Operator\", \"passphrase\": \"opPassphrase\"}"
 
 .. include:: _tutorial.rst
+   :start-after: .. start:: key-management
+   :end-before: .. end
+
+.. include:: _tutorial.rst
    :start-after: .. start:: generate-key
    :end-before: .. end
 
@@ -164,14 +168,29 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    {"mechanisms":["RSA_Decryption_PKCS1","RSA_Signature_PSS_SHA256"],"algorithm":"RSA","modulus":"td583uBYRfO7qtvPoQF7liUh8gq3zckCk9LpCfblx2S0HdOvButfD4TyH4EMiZj3NhEoq18BZhqhxTL22UyNJwYJd2tCF4EbgTaj/Z3LeCPoGN5LjadFCsYriPeHsdnuLmTK6KsmTAP/CWJ+u3LesU5bCGWbDnPjv2WaLTeiMuNw1347gj1drft8jFA9SmOFjZxM9pq2Hk1nQSYpeAPCnigC7hLwAWgzKqVQv/J7VVWat3ke/jOrxFiRDFIeC3qxtBs6T7GYwqmsxkxgqKDljTAH4qMrC9vgVbbFPffe8UgmtDfvQ0ghP57b3HYZDON90MJ2qrU944E74g+ua6unTw==","publicExponent":"AQAB","operations":0}
 
 .. include:: _tutorial.rst
-   :start-after: .. start:: decrypt
+   :start-after: .. start:: get-key-file
    :end-before: .. end
 
 ::
 
     $ curl -u operator:opPassphrase -X GET \
-        https://$NETHSM_HOST/api/v1/keys/myFirstKey/public.pem -o _public.pem
-    $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey _public.pem -pubin \
+        https://$NETHSM_HOST/api/v1/keys/myFirstKey/public.pem -o public.pem
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: inspect-key
+   :end-before: .. end
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: key-operations
+   :end-before: .. end
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: decrypt
+   :end-before: .. end
+
+::
+
+    $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey public.pem -pubin \
         -out _data.crypt
     $ base64 _data.crypt > _data.crypt.base64
     $ curl -i -w '\n' -u operator:opPassphrase -X POST \
@@ -187,3 +206,9 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
     {"decrypted":"TmV0SFNNIHJ1bGV6IQo="}
     $ echo TmV0SFNNIHJ1bGV6IQo= | base64 -d
     NetHSM rulez!
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: sign
+   :end-before: .. end
+
+TODO: write example

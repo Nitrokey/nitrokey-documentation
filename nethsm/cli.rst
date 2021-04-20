@@ -92,6 +92,10 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    User operator added to NetHSM nethsmdemo.nitrokey.com
 
 .. include:: _tutorial.rst
+   :start-after: .. start:: key-management
+   :end-before: .. end
+
+.. include:: _tutorial.rst
    :start-after: .. start:: generate-key
    :end-before: .. end
 
@@ -132,19 +136,49 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    Public exponent: AQAB
 
 .. include:: _tutorial.rst
+   :start-after: .. start:: get-key-file
+   :end-before: .. end
+
+TODO: use nitrocli to query the public key
+
+::
+
+    $ curl -u operator:opPassphrase -X GET \
+        https://$NETHSM_HOST/api/v1/keys/myFirstKey/public.pem -o public.pem
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: inspect-key
+   :end-before: .. end
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: key-operations
+   :end-before: .. end
+
+.. include:: _tutorial.rst
    :start-after: .. start:: decrypt
    :end-before: .. end
 
 ::
 
-    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
-        generate-key -a RSA -m RSA_Decryption_PKCS1 -l 2048 -k testkey
-    $ curl -u operator:opPassphrase -X GET \
-        https://$NETHSM_HOST/api/v1/keys/testkey3/public.pem -o _public.pem
-    $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey _public.pem -pubin \
-        -out _data.crypt
+    $ echo 'NetHSM rulez!' | \
+        openssl rsautl -encrypt -inkey public.pem -pubin -out _data.crypt
     $ base64 _data.crypt > _data.crypt.base64
     $ nitropy nethsm -h $NETHSM_HOST -u operator -p opPassphrase \
-        decrypt -k testkey3 -d "$(cat _data.crypt.base64)" -m PKCS1 > _data.decrypt.base64
+        decrypt -k myFirstKey -d "$(cat _data.crypt.base64)" -m PKCS1 \
+        > _data.decrypt.base64
     $ base64 -d _data.decrypt.base64
     NetHSM rulez!
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: sign
+   :end-before: .. end
+
+TODO: fix example
+
+::
+
+    $ echo 'NetHSM rulez!' > data
+    $ openssl dgst -sha256 -binary data | base64 > data.digest
+    $ nitropy nethsm -h $NETHSM_HOST -u operator -p opPassphrase \
+        sign -k myFirstKey -m PSS_SHA256
+    $ openssl dgst -sha256 -verify public.pem -signature data.sig data
