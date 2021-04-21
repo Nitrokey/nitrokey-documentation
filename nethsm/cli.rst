@@ -153,12 +153,10 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    :start-after: .. start:: get-key-file
    :end-before: .. end
 
-TODO: use nitrocli to query the public key
-
 ::
 
-    $ curl -u operator:opPassphrase -X GET \
-        https://$NETHSM_HOST/api/v1/keys/myFirstKey/public.pem -o public.pem
+    $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
+        get-key myFirstKey --public-key > public.pem
 
 .. include:: _tutorial.rst
    :start-after: .. start:: inspect-key
