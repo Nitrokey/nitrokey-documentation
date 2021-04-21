@@ -139,7 +139,15 @@ key.
 
 POST /keys/generate
 
-TODO: import existing key
+.. start:: import-key
+Import Keys
+~~~~~~~~~~~
+
+Instead of generating a key on the NetHSM, you can also import existing private
+keys into the NetHSM:
+.. end
+
+PUT /keys/mySecondKey
 
 .. start:: list-keys
 List Keys

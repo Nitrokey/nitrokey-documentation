@@ -82,7 +82,15 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
 ::
 
-   $ curl -i -w '\n' https://$NETHSM_HOST/api/v1/config/unattended-boot"
+   $ curl -i -w '\n' -u admin:adminPassphrase \
+       https://$NETHSM_HOST/api/v1/config/unattended-boot
+   HTTP/1.1 200 OK
+   content-length: 16
+   content-type: application/json
+   date: Wed, 21 Apr 2021 10:20:55 GMT
+   vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+
+   {"status":"off"}
 
 .. include:: _tutorial.rst
    :start-after: .. start:: unattended-boot-on
@@ -90,8 +98,12 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
 ::
 
-   $ curl -i -w '\n' -X PUT https://$NETHSM_HOST/api/v1/config/unattended-boot" \
-       -d "{ status: \"on\"}"
+   $ curl -i -w '\n' -u admin:adminPassphrase -X PUT -H "content-type: application/json" \
+       https://$NETHSM_HOST/api/v1/config/unattended-boot -d "{ status: \"on\"}"
+   HTTP/1.1 204 No Content
+   content-type: application/json
+   date: Wed, 21 Apr 2021 10:24:25 GMT
+   vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
 .. include:: _tutorial.rst
    :start-after: .. start:: unattended-boot-off
@@ -99,8 +111,12 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
 ::
 
-   $ curl -i -w '\n' -X PUT https://$NETHSM_HOST/api/v1/config/unattended-boot" \
-       -d "{ status: \"off\"}"
+   $ curl -i -w '\n' -u admin:adminPassphrase -X PUT -H "content-type: application/json" \
+       https://$NETHSM_HOST/api/v1/config/unattended-boot -d "{ status: \"off\"}"
+   HTTP/1.1 204 No Content
+   content-type: application/json
+   date: Wed, 21 Apr 2021 10:24:53 GMT
+   vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
 .. include:: _tutorial.rst
    :start-after: .. start:: roles
@@ -116,6 +132,12 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
        "https://$NETHSM_HOST/api/v1/users/operator" -X PUT \
        -H "content-type: application/json" -d "{\"realName\": \"Jane User\", \
        \"role\": \"Operator\", \"passphrase\": \"opPassphrase\"}"
+   HTTP/1.1 201 Created
+   content-length: 0
+   content-type: application/json
+   date: Wed, 21 Apr 2021 10:25:27 GMT
+   location: /api/v1/users/operator
+   vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
 .. include:: _tutorial.rst
    :start-after: .. start:: key-management
@@ -141,6 +163,22 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
 .. include:: _tutorial.rst
+   :start-after: .. start:: import-key
+   :end-before: .. end
+
+::
+
+   $ curl -i -w '\n' -u admin:adminPassphrase -X PUT \
+       https://$NETHSM_HOST/api/v1/keys/mySecondKey -H "content-type: application/json" \
+       -d "{ \"mechanisms\": [ \"RSA_Signature_PSS_SHA256\", \"RSA_Decryption_PKCS1\" ], \
+       \"algorithm\": \"RSA\",  \"key\": {\"primeP\": \"AOnWFZ+JrI/xOXJU04uYCZOiPVUWd6CSbVseEYrYQYxc7dVroePshz29tc+VEOUP5T0O8lXMEkjFAwjW6C9QTAsPyl6jwyOQluMRIkdN4/7BAg3HAMuGd7VmkGyYrnZWW54sLWp1JD6XJG33kF+9OSar9ETPoVyBgK5punfiUFEL\", \"primeQ\": \"ANT1kWDdP9hZoFKT49dwdM/S+3ZDnxQa7kZk9p+JKU5RaU9e8pS2GOJljHwkES1FH6CUGeIaUi81tRKe2XZhe/163sEyMcxkaaRbBbTc1v6ZDKILFKKt4eX7LAQfhL/iFlgi6pcyUM8QDrm1QeFgGz11ChM0JuQw1WwkX06lg8iv\", \"publicExponent\": \"AQAB\"}}"
+
+   HTTP/1.1 204 No Content
+   content-type: application/json
+   date: Wed, 21 Apr 2021 10:37:23 GMT
+   vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+
+.. include:: _tutorial.rst
    :start-after: .. start:: list-keys
    :end-before: .. end
 
@@ -155,7 +193,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    etag: "34353234366432333063663739313939346635316666343937333564653434333937613237626139"
    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
-   [{"key":"myFirstKey"}]
+   [{"key":"myFirstKey"},{"key":"mySecondKey"}]
 
 .. include:: _tutorial.rst
    :start-after: .. start:: get-key
@@ -190,25 +228,27 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
 ::
 
-    $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey public.pem -pubin \
-        -out _data.crypt
-    $ base64 _data.crypt > _data.crypt.base64
-    $ curl -i -w '\n' -u operator:opPassphrase -X POST \
+    $ echo 'NetHSM rulez!' | \
+        openssl rsautl -encrypt -inkey public.pem -pubin | \
+        base64 > data.crypt
+    $ curl -s -u operator:opPassphrase -X POST \
         https://$NETHSM_HOST/api/v1/keys/myFirstKey/decrypt -H "content-type: application/json" \
-        -d "{ \"mode\": \"PKCS1\", \"encrypted\": \"$(cat _data.crypt.base64)\"}"
-    HTTP/1.1 200 OK
-    cache-control: no-cache
-    content-length: 36
-    content-type: application/json
-    date: Thu, 15 Apr 2021 10:44:39 GMT
-    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
-
-    {"decrypted":"TmV0SFNNIHJ1bGV6IQo="}
-    $ echo TmV0SFNNIHJ1bGV6IQo= | base64 -d
+        -d "{ \"mode\": \"PKCS1\", \"encrypted\": \"$(cat data.crypt)\"}" | \
+        jq -r .decrypted | base64 -d
     NetHSM rulez!
 
 .. include:: _tutorial.rst
    :start-after: .. start:: sign
    :end-before: .. end
 
-TODO: write example
+TODO: fix example
+
+::
+
+    $ echo 'NetHSM rulez!' > data
+    $ openssl dgst -sha256 -binary data | base64 > data.digest
+    $ curl -s -u operator:opPassphrase -X POST \
+        https://$NETHSM_HOST/api/v1/keys/myFirstKey/sign -H "content-type: application/json" \
+        -d "{ \"mode\": \"PSS_SHA256\", \"message\": \"$(cat data.digest)\"}" | \
+        jq -r .signature > data.sig
+    $ openssl dgst -sha256 -verify public.pem -signature data.sig data

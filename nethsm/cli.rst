@@ -107,8 +107,16 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    Key myFirstKey generated on NetHSM localhost:8443
 
 .. include:: _tutorial.rst
+   :start-after: .. start:: import-key
+   :end-before: .. end
+
+TODO: add example
+
+.. include:: _tutorial.rst
    :start-after: .. start:: list-keys
    :end-before: .. end
+
+TODO: update output
 
 ::
 
@@ -161,12 +169,12 @@ TODO: use nitrocli to query the public key
 ::
 
     $ echo 'NetHSM rulez!' | \
-        openssl rsautl -encrypt -inkey public.pem -pubin -out _data.crypt
-    $ base64 _data.crypt > _data.crypt.base64
+        openssl rsautl -encrypt -inkey public.pem -pubin | \
+        base64 > data.crypt
     $ nitropy nethsm -h $NETHSM_HOST -u operator -p opPassphrase \
-        decrypt -k myFirstKey -d "$(cat _data.crypt.base64)" -m PKCS1 \
-        > _data.decrypt.base64
-    $ base64 -d _data.decrypt.base64
+        decrypt -k myFirstKey -d "$(cat data.crypt)" -m PKCS1 \
+        > data.decrypt.base64
+    $ base64 -d data.decrypt.base64
     NetHSM rulez!
 
 .. include:: _tutorial.rst
