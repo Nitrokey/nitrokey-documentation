@@ -172,13 +172,9 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 ::
 
-    $ echo 'NetHSM rulez!' | \
-        openssl rsautl -encrypt -inkey public.pem -pubin | \
-        base64 > data.crypt
     $ nitropy nethsm -h $NETHSM_HOST -u operator -p opPassphrase \
-        decrypt -k myFirstKey -d "$(cat data.crypt)" -m PKCS1 \
-        > data.decrypt.base64
-    $ base64 -d data.decrypt.base64
+        decrypt -k myFirstKey -d "$(cat data.crypt)" -m PKCS1 | \
+        base64 -d
     NetHSM rulez!
 
 .. include:: _tutorial.rst
@@ -189,8 +185,10 @@ TODO: fix example
 
 ::
 
-    $ echo 'NetHSM rulez!' > data
-    $ openssl dgst -sha256 -binary data | base64 > data.digest
     $ nitropy nethsm -h $NETHSM_HOST -u operator -p opPassphrase \
-        sign -k myFirstKey -m PSS_SHA256
-    $ openssl dgst -sha256 -verify public.pem -signature data.sig data
+        sign -k myFirstKey -m PSS_SHA256 -d "$(cat data.digest)" | \
+        base64 -d > data.sig
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: sign-verify
+   :end-before: .. end

@@ -228,9 +228,6 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
 ::
 
-    $ echo 'NetHSM rulez!' | \
-        openssl rsautl -encrypt -inkey public.pem -pubin | \
-        base64 > data.crypt
     $ curl -s -u operator:opPassphrase -X POST \
         https://$NETHSM_HOST/api/v1/keys/myFirstKey/decrypt -H "content-type: application/json" \
         -d "{ \"mode\": \"PKCS1\", \"encrypted\": \"$(cat data.crypt)\"}" | \
@@ -245,10 +242,11 @@ TODO: fix example
 
 ::
 
-    $ echo 'NetHSM rulez!' > data
-    $ openssl dgst -sha256 -binary data | base64 > data.digest
     $ curl -s -u operator:opPassphrase -X POST \
         https://$NETHSM_HOST/api/v1/keys/myFirstKey/sign -H "content-type: application/json" \
         -d "{ \"mode\": \"PSS_SHA256\", \"message\": \"$(cat data.digest)\"}" | \
-        jq -r .signature > data.sig
-    $ openssl dgst -sha256 -verify public.pem -signature data.sig data
+        jq -r .signature | base64 -d > data.sig
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: sign-verify
+   :end-before: .. end

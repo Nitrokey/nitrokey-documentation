@@ -227,8 +227,17 @@ Key Operations
 Decryption
 ~~~~~~~~~~
 
+We can encrypt data for the key stored on the NetHSM using ``openssl``.
 (``public.pem`` is the public key file that we created in the `Show Key
 Details`_ section.)
+
+::
+
+    $ echo 'NetHSM rulez!' | \
+        openssl rsautl -encrypt -inkey public.pem -pubin | \
+        base64 > data.crypt
+
+Now we can use the NetHSM to decrypt the data:
 .. end
 
 POST /keys/myFirstKey/decrypt
@@ -236,6 +245,26 @@ POST /keys/myFirstKey/decrypt
 .. start:: sign
 Signing
 ~~~~~~~
+
+Similarily, we can sign data using the key on the NetHSM.  For RSA and ECDSA,
+we have to calculate a digest first:
+
+::
+
+    $ echo 'NetHSM rulez!' > data
+    $ openssl dgst -sha256 -binary data | base64 > data.digest
+
+Then we can create a signature from this digest using the NetHSM:
 .. end
 
 POST /keys/myFirstKey/sign
+
+.. start:: sign-verify
+And then use ``openssl`` to verify the signature:
+
+::
+
+    $ openssl dgst -sha256 -verify public.pem -signature data.sig \
+        -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
+    Verified OK
+.. end
