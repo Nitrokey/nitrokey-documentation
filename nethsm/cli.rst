@@ -110,13 +110,18 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    :start-after: .. start:: import-key
    :end-before: .. end
 
-TODO: add example
+::
+   
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       add-key --algorithm RSA --mechanism RSA_Signature_PSS_SHA256 \
+       --mechanism RSA_Decryption_PKCS1 --key-id mySecondKey --public-exponent AQAB \
+       --prime-p "AOnWFZ+JrI/xOXJU04uYCZOiPVUWd6CSbVseEYrYQYxc7dVroePshz29tc+VEOUP5T0O8lXMEkjFAwjW6C9QTAsPyl6jwyOQluMRIkdN4/7BAg3HAMuGd7VmkGyYrnZWW54sLWp1JD6XJG33kF+9OSar9ETPoVyBgK5punfiUFEL" \
+       --prime-q "ANT1kWDdP9hZoFKT49dwdM/S+3ZDnxQa7kZk9p+JKU5RaU9e8pS2GOJljHwkES1FH6CUGeIaUi81tRKe2XZhe/163sEyMcxkaaRbBbTc1v6ZDKILFKKt4eX7LAQfhL/iFlgi6pcyUM8QDrm1QeFgGz11ChM0JuQw1WwkX06lg8iv"
+   Key mySecondKey added to NetHSM localhost:8443
 
 .. include:: _tutorial.rst
    :start-after: .. start:: list-keys
    :end-before: .. end
-
-TODO: update output
 
 ::
 
@@ -127,6 +132,7 @@ TODO: update output
    Key ID          Algorithm       Mechanisms                                      Operations
    ----------      ---------       ----------------------------------------------  ----------
    myFirstKey      RSA             RSA_Decryption_PKCS1, RSA_Signature_PSS_SHA256  0         
+   mySecondKey     RSA             RSA_Decryption_PKCS1, RSA_Signature_PSS_SHA256  0
 
 .. include:: _tutorial.rst
    :start-after: .. start:: get-key
