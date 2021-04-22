@@ -26,8 +26,8 @@ Getting Started
    sudo cryptsetup luksChangeKey /dev/nvme0n1p3
 
 
-Using WIFI
-----------
+Using WIFI (with RTL8821ce chipset)
+-----------------------------------
 
 .. code-block:: bash
 
