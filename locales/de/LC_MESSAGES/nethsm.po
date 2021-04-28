@@ -9,23 +9,23 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-21 17:23+0200\n"
-"PO-Revision-Date: 2021-04-14 11:39+0000\n"
+"PO-Revision-Date: 2021-04-28 13:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: German <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-nethsm/de/>\n"
 "Language: de\n"
-"Language-Team: German <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-nethsm/de/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../nethsm/api.rst:2
 msgid "Accessing a NetHSM using the REST API"
-msgstr ""
+msgstr "Zugriff auf ein NetHSM über die REST-API"
 
 #: ../nethsm/api.rst:6
-#, fuzzy
 msgid ""
 "This tutorial demonstrates how to access the NetHMS via REST API. The "
 "interface is `documented here "
@@ -35,11 +35,12 @@ msgid ""
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`__."
 msgstr ""
-"Die Schnittstellenspezifikation ist als `RAML "
-"<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`__ und als "
-"`OpenAPI (Swagger) "
-"<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`__ "
-"verfügbar."
+"Dieses Tutorial demonstriert den Zugriff auf das NetHMS über die REST-API. "
+"Die Schnittstelle ist `hier dokumentiert <https://nethsmdemo.nitrokey.com/"
+"api_docs/index.html#docs/summary/summary>`__ und ihre Spezifikation ist als `"
+"RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`__ und als `"
+"OpenAPI (Swagger) <https://nethsmdemo.nitrokey.com/api_docs/"
+"gen_nethsm_api_oas20.json>`__ verfügbar."
 
 #: ../nethsm/_tutorial.rst:2
 msgid ""
@@ -49,6 +50,11 @@ msgid ""
 "the NetHSM docker image, see the `Development and Testing </index.html"
 "#development-and-testing>`_ section of the NetHSM documentation."
 msgstr ""
+"Bevor wir beginnen, speichern wir den Hostnamen der NetHSM-Instanz in der "
+"Umgebungsvariablen ``NETHSM_HOST``.  Sie können die öffentliche NetHSM-Demo-"
+"Instanz ``nethsmdemo.nitrokey.com`` verwenden oder eine lokale Demo-Instanz "
+"mit dem NetHSM-Docker-Image ausführen, siehe den Abschnitt `Entwicklung und "
+"Test </index.html#Entwicklung und Test>`_ der NetHSM-Dokumentation."
 
 #: ../nethsm/api.rst:17
 msgid ""
@@ -56,6 +62,10 @@ msgid ""
 "example using the Docker image, you will have to use the "
 "``--insecure``/``-k`` option for ``curl`` to skip the certificate check."
 msgstr ""
+"Wenn Sie eine NetHSM-Demo-Instanz mit einem selbstsignierten Zertifikat "
+"verwenden, zum Beispiel mit dem Docker-Image, müssen Sie die Option "
+"``--insecure``/``-k`` für ``curl`` verwenden, um die Zertifikatsprüfung zu "
+"überspringen."
 
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
@@ -67,6 +77,10 @@ msgid ""
 "code and the response headers.  The ``-w '\\n'``/``--write-out '\\n'`` "
 "option adds a newline after the response body."
 msgstr ""
+"Die Option ``-i``/``--include`` veranlasst ``curl``, den HTTP-Statuscode und "
+"die Antwort-Header auszugeben.  Die Option ``-w '\\n"
+"'``/``--write-out '\\n"
+"'`` fügt einen Zeilenumbruch nach dem Antwortkörper ein."
 
 #: ../nethsm/_tutorial.rst:2
 msgid "See what the device’s status is:"
@@ -94,6 +108,8 @@ msgid ""
 "The NetHSM demo instance at ``nethsmdemo.nitrokey.com`` is already "
 "provisioned."
 msgstr ""
+"Die NetHSM-Demo-Instanz unter ``nethsmdemo.nitrokey.com`` ist bereits "
+"provisioniert."
 
 #: ../nethsm/_tutorial.rst:2
 msgid "NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode."
@@ -133,9 +149,8 @@ msgid "Switch to *Unattended Boot* mode:"
 msgstr "Wechseln Sie in den Modus *Unattended Boot*:"
 
 #: ../nethsm/_tutorial.rst:2
-#, fuzzy
 msgid "Or switch back to *Attended Boot* mode:"
-msgstr "Wechseln Sie in den Modus *Unattended Boot*:"
+msgstr "Oder wechseln Sie zurück in den *Attended Boot*-Modus:"
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Roles"
@@ -157,58 +172,53 @@ msgstr ""
 "API-Dokumentation."
 
 #: ../nethsm/_tutorial.rst:11
-#, fuzzy
 msgid ""
 "*R-Administrator*: A user account with this Role has access to all "
 "operations provided by the REST API, with the exception of key usage "
 "operations, i.e. message signing and decryption."
 msgstr ""
-"*R-Administrator* Ein Benutzerkonto mit dieser Rolle hat Zugriff auf alle"
-" Operationen, die von der REST-API bereitgestellt werden, mit Ausnahme "
-"der Schlüsselverwendungsoperationen, d. h. der Signierung und "
-"Entschlüsselung von Nachrichten."
+"*R-Administrator*: Ein Benutzerkonto mit dieser Rolle hat Zugriff auf alle "
+"Operationen, die von der REST-API bereitgestellt werden, mit Ausnahme der "
+"Schlüsselverwendungsoperationen, d. h. der Signierung und Entschlüsselung "
+"von Nachrichten."
 
 #: ../nethsm/_tutorial.rst:14
-#, fuzzy
 msgid ""
 "*R-Operator*: A user account with this Role has access to all key usage "
 "operations, a read-only subset of key management operations and user "
 "management operations allowing changes to their own account only."
 msgstr ""
-"*R-Operator* Ein Benutzerkonto mit dieser Rolle hat Zugriff auf alle "
-"Schlüsselnutzungsoperationen, eine schreibgeschützte Teilmenge von "
-"Schlüsselverwaltungsoperationen und Benutzerverwaltungsoperationen, die "
-"nur Änderungen für das eigene Konto zulassen."
+"*R-Operator*: Ein Benutzerkonto mit dieser Rolle hat Zugriff auf alle "
+"Schlüsselverwendungsvorgänge, eine schreibgeschützte Teilmenge der "
+"Schlüsselverwaltungsvorgänge und Benutzerverwaltungsvorgänge, die nur "
+"Änderungen am eigenen Konto zulassen."
 
 #: ../nethsm/_tutorial.rst:18
-#, fuzzy
 msgid ""
 "*R-Metrics*: A user account with this Role has access to read-only "
 "metrics operations only."
 msgstr ""
-"*R-Metrics* Ein Benutzerkonto mit dieser Rolle hat nur Zugriff auf "
+"*R-Metrics*: Ein Benutzerkonto mit dieser Rolle hat nur Zugriff auf "
 "schreibgeschützte Metrikoperationen."
 
 #: ../nethsm/_tutorial.rst:20
-#, fuzzy
 msgid ""
 "*R-Backup*: A user account with this Role has access to the operations "
 "required to initiate a system backup only."
 msgstr ""
-"*R-Backup* Ein Benutzerkonto mit dieser Rolle hat nur Zugriff auf die "
-"Vorgänge, die zum Initiieren einer Systemsicherung erforderlich sind."
+"*R-Backup*: Ein Benutzerkonto mit dieser Rolle hat nur Zugriff auf die "
+"Vorgänge, die zum Einleiten einer Systemsicherung erforderlich sind."
 
 #: ../nethsm/_tutorial.rst:23
-#, fuzzy
 msgid ""
 "Note: In a future release another Role will be implemented which is "
 "allowed to /keys/ POST, /keys/generate POST, /keys/{KeyID} PUT & DELETE, "
 "/keys/{KeyID}/cert PUT & DELETE in addition to what R-Operator is allowed"
 " to do."
 msgstr ""
-"Hinweis: Es wird eine weitere Rolle implementiert, die /keys/ POST, "
-"/keys/generate POST, /keys/{KeyID} PUT & DELETE, /keys/{KeyID}/cert PUT &"
-" DELETE zusätzlich zu dem, was R-Operator erlaubt ist."
+"Hinweis: In einer zukünftigen Version wird eine weitere Rolle implementiert, "
+"die /keys/ POST, /keys/generate POST, /keys/{KeyID} PUT & DELETE, /keys/"
+"{KeyID}/cert PUT & DELETE zusätzlich zu dem, was R-Operator tun darf."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -220,10 +230,14 @@ msgid ""
 " decrypt data.  Note that the NetHSM assigns a random user ID if we don’t"
 " specify it."
 msgstr ""
+"Erstellen Sie nun einen neuen Benutzer mit der Operator-Rolle, der zum "
+"Signieren und Entschlüsseln von Daten verwendet werden kann.  Beachten Sie, "
+"dass der NetHSM eine zufällige Benutzer-ID vergibt, wenn wir diese nicht "
+"angeben."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Key Management"
-msgstr ""
+msgstr "Tastenverwaltung"
 
 #: ../nethsm/_tutorial.rst:5
 msgid ""
@@ -234,17 +248,26 @@ msgid ""
 " (with the modes PKCS #1 and PSS with MD5, SHA1, SHA224, SHA256, SHA384 "
 "or SHA512).  The other algorithms only support the signature mechanism."
 msgstr ""
+"Der NetHSM unterstützt RSA-, ED25519- und ECDSA-Schlüssel.  Beim Erstellen "
+"eines Schlüssels müssen Sie sowohl den Schlüsselalgorithmus als auch die zu "
+"verwendenden Schlüsselmechanismen auswählen.  RSA-Schlüssel können zur "
+"Entschlüsselung (mit den Modi raw, PKCS #1 und OAEP mit MD5, SHA1, SHA224, "
+"SHA256, SHA384 oder SHA512) und für Signaturen (mit den Modi PKCS #1 und PSS "
+"mit MD5, SHA1, SHA224, SHA256, SHA384 oder SHA512) verwendet werden.  Die "
+"anderen Algorithmen unterstützen nur den Signaturmechanismus."
 
 #: ../nethsm/_tutorial.rst:12
 msgid ""
 "For a complete list of available key algorithms and key mechanisms, see "
 "the API documentation for the KeyAlgorithm_ and KeyMechanism_ types."
 msgstr ""
+"Eine vollständige Liste der verfügbaren Schlüsselalgorithmen und "
+"Schlüsselmechanismen finden Sie in der API-Dokumentation für die Typen "
+"KeyAlgorithm_ und KeyMechanism_."
 
 #: ../nethsm/_tutorial.rst:3
-#, fuzzy
 msgid "Generate Keys"
-msgstr "Sie können RSA-Schlüssel erzeugen:"
+msgstr "Schlüssel generieren"
 
 #: ../nethsm/_tutorial.rst:5
 msgid ""
@@ -255,17 +278,25 @@ msgid ""
 "  If you don’t specify a key ID, the NetHSM will generate a random ID for"
 " the new key."
 msgstr ""
+"In dieser Anleitung wollen wir einen RSA-Schlüssel zum Entschlüsseln von "
+"Daten mit PKCS #1 und zum Signieren von Daten mit PSS mit SHA256 verwenden.  "
+"Lassen Sie uns also einen neuen Schlüssel auf dem NetHSM erzeugen. Stellen "
+"Sie sicher, dass Sie den ``RSA``-Algorithmus verwenden und die "
+"Schlüsselmechanismen ``RSA_Signature_PSS_SHA256`` und "
+"``RSA_Decryption_PKCS1`` auswählen.  Wenn Sie keine Schlüssel-ID angeben, "
+"generiert der NetHSM eine zufällige ID für den neuen Schlüssel."
 
 #: ../nethsm/_tutorial.rst:3
-#, fuzzy
 msgid "Import Keys"
-msgstr "Tasten auflisten"
+msgstr "Tasten importieren"
 
 #: ../nethsm/_tutorial.rst:5
 msgid ""
 "Instead of generating a key on the NetHSM, you can also import existing "
 "private keys into the NetHSM:"
 msgstr ""
+"Anstatt einen Schlüssel auf dem NetHSM zu generieren, können Sie auch "
+"vorhandene private Schlüssel in den NetHSM importieren:"
 
 #: ../nethsm/_tutorial.rst:3
 msgid "List Keys"
@@ -276,6 +307,9 @@ msgid ""
 "To make sure that the key has been created and has the correct algorithm "
 "and mechanism settings, we can query all keys on the NetHSM:"
 msgstr ""
+"Um sicherzustellen, dass der Schlüssel erstellt wurde und die richtigen "
+"Algorithmus- und Mechanismuseinstellungen hat, können wir alle Schlüssel auf "
+"dem NetHSM abfragen:"
 
 #: ../nethsm/_tutorial.rst:5
 msgid "Show Key Details"
@@ -284,22 +318,29 @@ msgstr "Tastendetails anzeigen"
 #: ../nethsm/_tutorial.rst:7
 msgid "We can also query the public key of the generated key pair:"
 msgstr ""
+"Wir können auch den öffentlichen Schlüssel des erzeugten Schlüsselpaares "
+"abfragen:"
 
 #: ../nethsm/_tutorial.rst:2
 msgid ""
 "To be able to use the key with ``openssl``, we export it as a PEM file "
 "and store it as ``public.pem``:"
 msgstr ""
+"Um den Schlüssel mit ``openssl`` verwenden zu können, exportieren wir ihn "
+"als PEM-Datei und speichern ihn als ``public.pem``:"
 
 #: ../nethsm/_tutorial.rst:2
 msgid ""
 "We can inspect the key with ``openssl`` and use it for encryption or "
 "signature verification (as described in the next section):"
 msgstr ""
+"Wir können den Schlüssel mit ``openssl`` inspizieren und ihn zur "
+"Verschlüsselung oder Signaturprüfung verwenden (wie im nächsten Abschnitt "
+"beschrieben):"
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Key Operations"
-msgstr ""
+msgstr "Wichtige Vorgänge"
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Decryption"
@@ -311,10 +352,14 @@ msgid ""
 "(``public.pem`` is the public key file that we created in the `Show Key "
 "Details`_ section.)"
 msgstr ""
+"Wir können Daten für den auf dem NetHSM gespeicherten Schlüssel mit "
+"``openssl`` verschlüsseln. (``public.pem`` ist die Datei des öffentlichen "
+"Schlüssels, die wir im Abschnitt ``Schlüsseldetails anzeigen`` erstellt "
+"haben)."
 
 #: ../nethsm/_tutorial.rst:15
 msgid "Now we can use the NetHSM to decrypt the data:"
-msgstr ""
+msgstr "Jetzt können wir den NetHSM zum Entschlüsseln der Daten verwenden:"
 
 #: ../nethsm/_tutorial.rst:3 ../nethsm/pkcs11.rst:30
 msgid "Signing"
@@ -325,22 +370,25 @@ msgid ""
 "Similarily, we can sign data using the key on the NetHSM.  For RSA and "
 "ECDSA, we have to calculate a digest first:"
 msgstr ""
+"Auf ähnliche Weise können wir Daten mit dem Schlüssel auf dem NetHSM "
+"signieren.  Für RSA und ECDSA müssen wir zuerst einen Digest berechnen:"
 
 #: ../nethsm/_tutorial.rst:13
 msgid "Then we can create a signature from this digest using the NetHSM:"
 msgstr ""
+"Dann können wir mit dem NetHSM eine Signatur aus diesem Digest erstellen:"
 
 #: ../nethsm/api.rst:241 ../nethsm/cli.rst:184
 msgid "TODO: fix example"
-msgstr ""
+msgstr "TODO: Beispiel korrigieren"
 
 #: ../nethsm/_tutorial.rst:2
 msgid "And then use ``openssl`` to verify the signature:"
-msgstr ""
+msgstr "Und verwenden Sie dann ``openssl``, um die Signatur zu überprüfen:"
 
 #: ../nethsm/cli.rst:2
 msgid "Accessing a NetHSM with the nitropy command line tool"
-msgstr ""
+msgstr "Zugriff auf ein NetHSM mit dem Befehlszeilenwerkzeug nitropy"
 
 #: ../nethsm/cli.rst:6
 msgid ""
@@ -348,6 +396,9 @@ msgid ""
 "<https://github.com/Nitrokey/pynitrokey>`__ command line tool, which you "
 "need to download and install."
 msgstr ""
+"Dieses Tutorial demonstriert, wie Sie über das Kommandozeilen-Tool `nitropy "
+"<https://github.com/Nitrokey/pynitrokey>`__ auf das NetHMS zugreifen, das "
+"Sie herunterladen und installieren müssen."
 
 #: ../nethsm/cli.rst:14
 msgid ""
@@ -355,6 +406,10 @@ msgid ""
 "example using the Docker image, you will have to use the ``--no-verify-"
 "tls`` option for ``nitropy`` to skip the certificate check."
 msgstr ""
+"Wenn Sie eine NetHSM-Demo-Instanz mit einem selbstsignierten Zertifikat "
+"verwenden, zum Beispiel mit dem Docker-Image, müssen Sie die Option ``--no-"
+"verify-tls`` für ``nitropy`` verwenden, um die Zertifikatsprüfung zu "
+"überspringen."
 
 #: ../nethsm/index.rst:2
 msgid "NetHSM"
@@ -362,31 +417,29 @@ msgstr "NetHSM"
 
 #: ../nethsm/index.rst:7
 msgid "Accessing a NetHSM instance"
-msgstr ""
+msgstr "Zugriff auf eine NetHSM-Instanz"
 
 #: ../nethsm/index.rst:9
 msgid ""
 "These guides explain how to access a NetHSM using three three different "
 "methods:"
 msgstr ""
+"In diesen Anleitungen wird erklärt, wie Sie mit drei verschiedenen Methoden "
+"auf ein NetHSM zugreifen können:"
 
 #: ../nethsm/index.rst:20
 msgid "Development and Testing"
-msgstr ""
+msgstr "Entwicklung und Prüfung"
 
 #: ../nethsm/index.rst:22
-#, fuzzy
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com>`__."
 msgstr ""
 "Eine öffentliche NetHSM-Demoinstanz ist unter `nethsmdemo.nitrokey.com "
-"<https://nethsmdemo.nitrokey.com>`__ verfügbar.  Sie können eine Demo-"
-"Instanz auch mit dem `nitrokey/nethsm Docker-Image "
-"<https://hub.docker.com/r/nitrokey/nethsm>`__ ausführen."
+"<https://nethsmdemo.nitrokey.com>`__ verfügbar."
 
 #: ../nethsm/index.rst:24
-#, fuzzy
 msgid ""
 "Alternatively you can run the `NetHSM Docker container "
 "<https://hub.docker.com/r/nitrokey/nethsm>`__ locally. The NetHSM "
@@ -394,15 +447,15 @@ msgid ""
 " containers. Thus, to start a NetHSM container you need a Linux host with"
 " /dev/kvm available. Execute this command:"
 msgstr ""
-"Der NetHSM-Container benötigt eine verschachtelte Virtualisierung für "
-"eine starke Trennung mit anderen Containern. Um einen NetHSM-Container zu"
-" starten, benötigen Sie also einen Linux-Host mit verfügbarem /dev/kvm. "
-"Führen Sie diesen Befehl aus:"
+"Alternativ können Sie den `NetHSM-Docker-Container <https://hub.docker.com/r/"
+"nitrokey/nethsm>`__ auch lokal ausführen. Der NetHSM-Container erfordert "
+"eine verschachtelte Virtualisierung für eine starke Trennung mit anderen "
+"Containern. Um einen NetHSM-Container zu starten, benötigen Sie also einen "
+"Linux-Host mit /dev/kvm verfügbar. Führen Sie diesen Befehl aus:"
 
 #: ../nethsm/index.rst:34
-#, fuzzy
 msgid "Integration to Custom Application"
-msgstr "Einbindung in eigene Anwendung"
+msgstr "Integration in benutzerdefinierte Anwendung"
 
 #: ../nethsm/index.rst:36
 msgid ""
@@ -411,50 +464,55 @@ msgid ""
 "C++ and Python for example. Therefore we recommend using `OpenAPI "
 "Generator <https://github.com/OpenAPITools/openapi-generator>`__."
 msgstr ""
+"Um den NetHSM in eigene Anwendungen zu integrieren, stehen Client-"
+"Bibliotheken für fast alle Programmiersprachen zur Verfügung, darunter zum "
+"Beispiel JavaScript, C++ und Python. Wir empfehlen daher die Verwendung des `"
+"OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`__."
 
 #: ../nethsm/index.rst:38
 msgid "To list all the available languages, you enter"
-msgstr ""
+msgstr "Um alle verfügbaren Sprachen aufzulisten, geben Sie ein"
 
 #: ../nethsm/index.rst:44
-#, fuzzy
 msgid ""
 "Then you can generate the NetHSM client for your programming language "
 "like this:"
-msgstr "Dann können Sie den NetHSM-Client wie folgt generieren:"
+msgstr ""
+"Dann können Sie den NetHSM-Client für Ihre Programmiersprache wie folgt "
+"generieren:"
 
 #: ../nethsm/index.rst:52
-#, fuzzy
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
 "documentation how to use it."
 msgstr ""
-"Der generierte Client-Code, in diesem Fall JavaScript, wird im "
-"Verzeichnis ``./out/`` erstellt. Darin befindet sich auch die "
-"Dokumentation, wie Sie ihn verwenden können."
+"Der generierte Client-Code, in diesem Beispiel JavaScript, wird im "
+"Verzeichnis ``./out/`` erstellt. Dieser Ordner enthält auch die notwendige "
+"Dokumentation, wie er zu verwenden ist."
 
 #: ../nethsm/pkcs11.rst:2
 msgid "Accessing a NetHSM using the PKCS#11 driver"
-msgstr ""
+msgstr "Zugriff auf einen NetHSM über den PKCS#11-Treiber"
 
 #: ../nethsm/pkcs11.rst:6
 msgid ""
 "Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ for NetHSM."
 msgstr ""
+"Laden Sie den `PKCS#11-Treiber <https://github.com/Nitrokey/nethsm-pkcs11>`"
+"__ für NetHSM herunter."
 
 #: ../nethsm/pkcs11.rst:7
-#, fuzzy
 msgid ""
 "Modify the configuration file ``p11nethsm-config.yaml`` according to your"
 " setup (e.g. address, operator name) and store it in ``$HOME/.nitrokey``,"
 " ``/etc/nitrokey/``, or in the folder where your application is executed."
 msgstr ""
-"Ändern Sie die Konfigurationsdatei ``p11nethsm-config.yaml`` entsprechend"
-" Ihrer Einrichtung und speichern Sie sie in ``$HOME/.nitrokey``, "
-"``/etc/nitrokey/`` oder in dem Ordner, in dem Ihre Anwendung ausgeführt "
-"wird."
+"Ändern Sie die Konfigurationsdatei ``p11nethsm-config.yaml`` entsprechend "
+"Ihrer Einrichtung (z.B. Adresse, Betreibername) und speichern Sie sie in ``$"
+"HOME/.nitrokey``, ``/etc/nitrokey/`` oder in dem Ordner, in dem Ihre "
+"Anwendung ausgeführt wird."
 
 #: ../nethsm/pkcs11.rst:12
 msgid "Decrypting"
@@ -465,12 +523,16 @@ msgid ""
 "After creating a key (here: ID 42) with the according mechanism, you can "
 "use it for decryption:"
 msgstr ""
+"Nachdem Sie einen Schlüssel (hier: ID 42) mit dem entsprechenden Mechanismus "
+"erzeugt haben, können Sie diesen zur Entschlüsselung verwenden:"
 
 #: ../nethsm/pkcs11.rst:32
 msgid ""
 "After creating a key (here: ID 23) with the according mechanism, you can "
 "use it for decryption:"
 msgstr ""
+"Nachdem Sie einen Schlüssel (hier: ID 23) mit dem entsprechenden Mechanismus "
+"erzeugt haben, können Sie diesen zur Entschlüsselung verwenden:"
 
 #~ msgid "# NetHSM"
 #~ msgstr "# NetHSM"
@@ -1534,4 +1596,3 @@ msgstr ""
 #~ " that we created in the `Show "
 #~ "Key Details`_ section.)"
 #~ msgstr ""
-
