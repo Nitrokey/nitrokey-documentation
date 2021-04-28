@@ -5,10 +5,18 @@ cd /var/www/sphinx/sphinx/nitrokey-documentation
 # pull new content
 git pull
 
+# clean excluded files
+#git clean -f -d
+
 # build english version
 echo "$(date) [apply_new_content.sh] Repo pulled. Building englisch Versions..." >> /var/www/sphinx/logs_sphinx/webhook.log
 
-sphinx-build -a -D language='en' -b html . /var/www/sphinx/www/static/ 
+sphinx-build -a -D language='en' -b html . /var/www/sphinx/www/docs.nitrokey.com_en_temp
+mv /var/www/sphinx/www/static/?? /var/www/sphinx/www/docs.nitrokey.com_en_temp/
+rm /var/www/sphinx/www/static -r
+mv /var/www/sphinx/www/docs.nitrokey.com_en_temp /var/www/sphinx/www/static
+
+
 echo "$(date) [apply_new_content.sh] DONE. Building /locales/ and pushing upstream..." >> /var/www/sphinx/logs_sphinx/webhook.log
 
 # generate language files and push
