@@ -96,25 +96,25 @@ html_context = {
     "languages" : {
         'de' : 'Deutsch',
         'en' : 'English',
-        # 'fr' : 'français',
+        'fr' : 'français',
         # 'es': 'español',
         },
     "lang_switch_info": {
         'de' : 'Diese Seite ist auf Deutsch verfügbar.',
         'en' : 'This page is available in English.',
-        # 'fr' : 'Cette page est disponible en français',
+        'fr' : 'Cette page est disponible en français',
         # 'es': 'Esta página está disponible en español.',
     },
     "lang_switch_label": {
         'de' : 'Auf Deutsch ansehen',
         'en' : 'Switch to English',
-        # 'fr' : 'Passer au français',
+        'fr' : 'Passer au français',
         # 'es': 'Cambiar al español',
     },
     "dismiss_label": {
         'de' : 'Ausblenden',
         'en' : 'Dismiss',
-        # 'fr' : 'Cacher',
+        'fr' : 'Cacher',
         # 'es': 'Esconder',
     }
 
