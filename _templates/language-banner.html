@@ -22,7 +22,7 @@
             {% else %}
                 <div class="switch hidden" data-language="{{ lang }}"><a href="/{{lang}}/{{ pagename }}.html" onclick="setLanguage('{{ lang }}')">{{ lang_switch_label[lang] }}</a></div>
             {% endif %}
-            <div class="dismiss"><a href="#" onclick="dismissLanguageBanner()">{{ dismiss_label[lang] }}</a></div>
+            <div class="dismiss hidden" data-language="{{ lang }}"><a href="#" onclick="dismissLanguageBanner()">{{ dismiss_label[lang] }}</a></div>
         {% endif %}
         {% endfor %}
     </div>
@@ -72,12 +72,14 @@
             if (availableLanguages.indexOf(targetLanguage) !== -1) {
               var languageInfo = document.querySelector('#language-banner .language[data-language="'+targetLanguage+'"]');
               var languageSwitchButton = document.querySelector('#language-banner .switch[data-language="'+targetLanguage+'"]');
+              var dismissButton = document.querySelector('#language-banner .dismiss[data-language="'+targetLanguage+'"]');
               if (!languageInfo) {
                   // console.error("Cannot find language switch banner for \"" + targetLanguage + "\"");
                   return;
               }
               languageInfo.classList.remove('hidden');
               languageSwitchButton.classList.remove('hidden');
+              dismissButton.classList.remove('hidden');
               setTimeout(function() {
                   document.querySelector('#language-banner').classList.add('show');
               }, 500);
