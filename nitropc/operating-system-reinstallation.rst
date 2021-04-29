@@ -13,18 +13,18 @@ Operating System Reinstallation
    to format the USB drive after the intended use.
 
 1. Download one of the operating system images: `Ubuntu
-   Linux <https://www.nitrokey.com/files/ubuntu/latest-nitropad.iso>`__, Qubes OS
-   (`English <https://www.nitrokey.com/files/qubes/latest-nitropad-en.iso>`__,
-   `German <https://www.nitrokey.com/files/qubes/latest-nitropad-de.iso>`__), `Debian <https://www.nitrokey.com/files/debian/latest-nitropad.iso>`__,
+   Linux <https://www.nitrokey.com/files/ubuntu/latest-nitropc.iso>`__, Qubes OS
+   (`English <https://www.nitrokey.com/files/qubes/latest-nitropc-en.iso>`__,
+   `German <https://www.nitrokey.com/files/qubes/latest-nitropc-de.iso>`__), `Debian <https://www.nitrokey.com/files/debian/latest-nitropc.iso>`__,
    `Linux Mint <https://www.nitrokey.com/files/linuxmint/latest.iso>`__
 
 2. Optional: Download hash sum and
    `verify <https://proprivacy.com/guides/how-why-and-when-you-should-hash-check#how-to-hash-check>`__
    the downloaded operating system image: `Ubuntu
-   Linux <https://www.nitrokey.com/files/ubuntu/latest-nitropad.iso.sha256sum>`__,
+   Linux <https://www.nitrokey.com/files/ubuntu/latest-nitropc.iso.sha256sum>`__,
    Qubes OS
-   (`English <https://www.nitrokey.com/files/qubes/latest-nitropad-en.iso.sha256sum>`__,
-   `German <https://www.nitrokey.com/files/qubes/latest-nitropad-de.iso.sha256sum>`__), `Debian <https://www.nitrokey.com/files/debian/latest-nitropad.iso.sha256sum>`__,
+   (`English <https://www.nitrokey.com/files/qubes/latest-nitropc-en.iso.sha256sum>`__,
+   `German <https://www.nitrokey.com/files/qubes/latest-nitropc-de.iso.sha256sum>`__), `Debian <https://www.nitrokey.com/files/debian/latest-nitropc.iso.sha256sum>`__,
    `Linux
    Mint <https://www.nitrokey.com/files/linuxmint/latest.iso.sha256sum>`__
 
