@@ -18,12 +18,24 @@ Frequently Asked Questions
   The state of these Nextcloud apps is not yet mature (for ARM platforms). Although it is (partly)
   possible to install them we do not recommend doing so currently.
 
- 
+**Q:** Why does updating Nextcloud from inside Nextcloud not work?
+  The Nextcloud version is rolled out by us. Thus the option to update from inside Nextcloud
+  is not working. 
+
+**Q:** Why does my harddrive not show up after plugging it in?
+  Please make sure that you are using one of the supported filesystems (e.g., ext, xfs) and you
+  have mounted your hard-drive within *Storage Management*.
+
+**Q:** What kind of public key is expected for SSH access?
+  An openssh style (public) key is expected. Depending on your operating system there are different
+  ways to determine your public key. One might be ``ssh-add -L``, another might be 
+  ``cat ~/.ssh/id_rsa.pub``. If you are using Putty, please see the `Putty documentation`_.
 
 
 
 
 .. _RPi Power Supply: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
+.. _Putty Documentation: https://www.ssh.com/academy/ssh/putty/public-key-authentication
 
 
 
