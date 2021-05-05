@@ -8,7 +8,7 @@ Change User and Admin PIN
 User PIN
 --------
 
-The user PIN is at least 6-digits long and is used to get access to the contect of the Nitrokey. This is the PIN you will use a lot in every day use e.g. for decrypting messages, for unlocking your encrypted storage (NK Storage only) etc.
+The user PIN is at least 6-digits long and is used to get access to the content of the Nitrokey. This is the PIN you will use a lot in every day use e.g. for decrypting messages, for unlocking your encrypted storage (NK Storage only) etc.
 
 You can change the user PIN with the Nitrokey App if using a Nitrokey Pro or Nitrokey Storage. In the `Nitrokey <https://www.nitrokey.com/download>`__ App open ‘Menu ->
 Configure -> Change User PIN’ to open the dialog to change the PIN.
