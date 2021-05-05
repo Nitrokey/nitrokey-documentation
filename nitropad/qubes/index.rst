@@ -80,7 +80,7 @@ changed by you:
    account. After that you should have successfully booted the system
    and could already use it normally.
 4. Open the pre-installed Nitrokey App and change the PINs of your
-   Nitrokey as described here.
+   Nitrokey as `described here </pro/change-user-and-admin-pin.html>`__.
 5. Change the passphrase for the hard disk encryption by running “sudo
    cryptsetup luksChangeKey /dev/sda2” in a terminal.
 
