@@ -297,3 +297,27 @@ This backup file can be restored on an unprovisioned NetHSM instance:
 .. end
 
 POST /system/restore
+
+.. start:: update
+Updates
+-------
+
+Updates for the NetHSM can be installed in a two-step process.  First you have
+to upload the update image to the NetHSM.  The image is then checked and
+validated.  If the validation is successful, the release notes for the update
+are returned by the NetHSM:
+.. end
+
+POST /system/update
+
+.. start:: commit-update
+If you want to continue with the installation, you can now commit the update:
+.. end
+
+POST /system/commit-update
+
+.. start:: cancel-update
+Alternatively, you can cancel the update:
+.. end
+
+POST /system/cancel-update

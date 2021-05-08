@@ -308,7 +308,7 @@ TODO: fix example
 
 ::
 
-   $ curl -k -i -X POST \
+   $ curl -i -X POST \
       "https://$NETHSM_HOST/api/v1/system/restore?backupPassphrase=backupencryptionkey&systemTime=$(date --utc +"%Y-%m-%dT%H:%M:%SZ")" \
       --data-binary @/tmp/nethsm-backup
    HTTP/1.1 204 No Content
@@ -316,3 +316,30 @@ TODO: fix example
    content-type: application/json
    date: Sat, 08 May 2021 10:59:19 GMT
    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: update
+   :end-before: .. end
+
+::
+
+   $ curl -i -w '\n' -u admin:adminPassphrase -X POST  \
+       https://$NETHSM_HOST/api/v1/system/update --data-binary "@/tmp/nethsm-update.img.cpio"
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: commit-update
+   :end-before: .. end
+
+::
+
+   $ curl -i -w '\n' -u admin:adminPassphrase -X POST  \
+       https://$NETHSM_HOST/api/v1/system/commit-update
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: cancel-update
+   :end-before: .. end
+
+::
+
+   $ curl -i -w '\n' -u admin:adminPassphrase -X POST  \
+       https://$NETHSM_HOST/api/v1/system/cancel-update

@@ -233,3 +233,33 @@ TODO: fix example
    $ nitropy nethsm -h $NETHSM_HOST \
        restore --backup-passphrase backupencryptionkey /tmp/nethsm-backup
    Backup restored on NetHSM localhost:8443
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: update
+   :end-before: .. end
+
+::
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       update /tmp/nethsm-update.img.cpio
+   Image /tmp/nethsm-update.img.cpio uploaded to NetHSM localhost:8443
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: commit-update
+   :end-before: .. end
+
+::
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       commit-update
+   Update successfully committed on NetHSM localhost:8443
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: cancel-update
+   :end-before: .. end
+
+::
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       cancel-update
+   Update successfully cancelled on NetHSM localhost:8443
