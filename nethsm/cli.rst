@@ -89,7 +89,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        add-user --user-id operator --real-name "Jane User" --role operator \
        --passphrase opPassphrase
-   User operator added to NetHSM nethsmdemo.nitrokey.com
+   User operator added to NetHSM localhost:8443
 
 .. include:: _tutorial.rst
    :start-after: .. start:: key-management
@@ -192,3 +192,44 @@ TODO: fix example
 .. include:: _tutorial.rst
    :start-after: .. start:: sign-verify
    :end-before: .. end
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: backup-passphrase
+   :end-before: .. end
+
+::
+
+   $ nitropy nethsm -h $NETHSM_HOST -u admin -p adminPassphrase \
+       set-backup-passphrase --passphrase backupencryptionkey
+   Updated the backup passphrase for NetHSM localhost:8443
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: backup-user
+   :end-before: .. end
+
+::
+
+   $ nitropy nethsm -h $NETHSM_HOST -u admin -p adminPassphrase \
+       add-user --user-id backup --real-name "Backup User" --role backup \
+       --passphrase backupPassphrase
+   User backup added to NetHSM localhost:8443
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: backup_
+   :end-before: .. end
+
+::
+
+   $ nitropy nethsm -h $NETHSM_HOST -u backup -p backupPassphrase \
+       backup /tmp/nethsm-backup
+   Backup for localhost:8443 written to /tmp/backup
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: restore
+   :end-before: .. end
+
+::
+
+   $ nitropy nethsm -h $NETHSM_HOST \
+       restore --backup-passphrase backupencryptionkey /tmp/nethsm-backup
+   Backup restored on NetHSM localhost:8443

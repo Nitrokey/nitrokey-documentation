@@ -268,3 +268,32 @@ And then use ``openssl`` to verify the signature:
         -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
     Verified OK
 .. end
+
+.. start:: backup-passphrase
+Backups
+-------
+
+It is possible to crate a backup of the NetHSM that captures both the
+configuration and the stored keys.  In order to create a backup, you first have
+to set a backup passphrase that is used to encrypt the backup file:
+.. end
+
+PUT /config/backup-passphrase
+
+.. start:: backup-user
+Now you have to create a user with the *R-Backup* role:
+.. end
+
+PUT /users/backup
+
+.. start:: backup_
+Then can you generate the backup and write it to a file:
+.. end
+
+POST /system/backup
+
+.. start:: restore
+This backup file can be restored on an unprovisioned NetHSM instance:
+.. end
+
+POST /system/restore

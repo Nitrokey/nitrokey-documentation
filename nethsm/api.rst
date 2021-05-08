@@ -58,7 +58,6 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
    {"state":"Unprovisioned"}
 
-
 .. include:: _tutorial.rst
    :start-after: .. start:: provision
    :end-before: .. end
@@ -250,3 +249,70 @@ TODO: fix example
 .. include:: _tutorial.rst
    :start-after: .. start:: sign-verify
    :end-before: .. end
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: backup-passphrase
+   :end-before: .. end
+
+::
+
+   $ curl -i -w '\n' -u admin:adminPassphrase -X PUT \
+       https://$NETHSM_HOST/api/v1/config/backup-passphrase -H "content-type: application/json" \
+       -d "{\"passphrase\": \"backupencryptionkey\"}"
+   HTTP/2 204 
+   server: nginx/1.14.2
+   date: Sat, 08 May 2021 10:26:36 GMT
+   cache-control: no-cache
+   vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+   strict-transport-security: max-age=63072000; includeSubDomains; preload
+   x-frame-options: DENY
+   x-content-type-options: nosniff
+   x-xss-protection: 1; mode=block
+   x-permitted-cross-domain-policies: none
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: backup-user
+   :end-before: .. end
+
+::
+
+   $ curl -i -w '\n' -u admin:adminPassphrase -X PUT \
+       https://$NETHSM_HOST/api/v1/users/backup -H "content-type: application/json" \
+       -d "{\"realName\": \"Backup User\", \"role\": \"Backup\", \
+       \"passphrase\": \"backupPassphrase\"}"
+   HTTP/2 201 
+   server: nginx/1.14.2
+   date: Sat, 08 May 2021 10:30:45 GMT
+   content-type: application/json
+   content-length: 0
+   location: /api/v1/users/backup
+   vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+   strict-transport-security: max-age=63072000; includeSubDomains; preload
+   x-frame-options: DENY
+   x-content-type-options: nosniff
+   x-xss-protection: 1; mode=block
+   x-permitted-cross-domain-policies: none
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: backup_
+   :end-before: .. end
+
+::
+
+   $ curl -s -u backup:backupPassphrase -X POST \
+       https://$NETHSM_HOST/api/v1/system/backup > /tmp/nethsm-backup
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: restore
+   :end-before: .. end
+
+::
+
+   $ curl -k -i -X POST \
+      "https://$NETHSM_HOST/api/v1/system/restore?backupPassphrase=backupencryptionkey&systemTime=$(date --utc +"%Y-%m-%dT%H:%M:%SZ")" \
+      --data-binary @/tmp/nethsm-backup
+   HTTP/1.1 204 No Content
+   cache-control: no-cache
+   content-type: application/json
+   date: Sat, 08 May 2021 10:59:19 GMT
+   vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
