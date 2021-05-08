@@ -77,6 +77,10 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    Updated the unattended boot configuration for NetHSM localhost:8443
 
 .. include:: _tutorial.rst
+   :start-after: .. start:: user-management
+   :end-before: .. end
+
+.. include:: _tutorial.rst
    :start-after: .. start:: roles
    :end-before: .. end
 

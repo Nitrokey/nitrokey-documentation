@@ -70,9 +70,14 @@ Or switch back to *Attended Boot* mode:
 
 POST /config/unattended-boot off
 
+.. start:: user-management
+User Management
+---------------
+.. end
+
 .. start:: roles
 Roles
------
+~~~~~
 
 Separation of duties can be implemented by using the available Roles.
 Each user account configured on the NetHSM has one of the following
@@ -97,7 +102,7 @@ Note: In a future release another Role will be implemented which is allowed to /
 
 .. start:: add-user
 Create a User
--------------
+~~~~~~~~~~~~~
 
 Now create a new user with the operator role that can be used to sign and
 decrypt data.  Note that the NetHSM assigns a random user ID if we don’t

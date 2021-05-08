@@ -118,6 +118,10 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
 .. include:: _tutorial.rst
+   :start-after: .. start:: user-management
+   :end-before: .. end
+
+.. include:: _tutorial.rst
    :start-after: .. start:: roles
    :end-before: .. end
 
