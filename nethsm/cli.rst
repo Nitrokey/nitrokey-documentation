@@ -185,8 +185,6 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    :start-after: .. start:: sign
    :end-before: .. end
 
-TODO: fix example
-
 ::
 
     $ nitropy nethsm -h $NETHSM_HOST -u operator -p opPassphrase \

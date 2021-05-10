@@ -241,8 +241,6 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    :start-after: .. start:: sign
    :end-before: .. end
 
-TODO: fix example
-
 ::
 
     $ curl -s -u operator:opPassphrase -X POST \
