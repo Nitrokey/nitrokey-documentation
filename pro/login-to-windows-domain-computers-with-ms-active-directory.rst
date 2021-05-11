@@ -20,12 +20,28 @@ Login to Windows Domain Computers With MS Active Directory
        md_read_only = false;
        md_supports_X509_enrollment = true;
    }
-        
+
+   # Nitrokey Pro 2, OpenPGP Card, Nitrokey Storage 2
+   card_atr 3b:da:18:ff:81:b1:fe:75:1f:03:00:31:f5:73:c0:01:60:00:90:00:1c  {
+       type = 9002;
+       driver = "openpgp";
+       # name = "Nitrokey Pro 2";
+       md_read_only = false;
+       md_supports_X509_enrollment = true;
+   }     
    # Nitrokey HSM, SmartCard-HSM
    card_atr 3B:FE:18:00:00:81:31:FE:45:80:31:81:54:48:53:4D:31:73:80:21:40:81:07:FA {
        type = 26000;
        driver = "sc-hsm";
        # name = "Nitrokey HSM";
+       md_read_only = false;
+       md_supports_X509_enrollment = true;
+   }
+   # Nitrokey HSM 2, SmartCard-HSM
+   card_atr 3b:de:18:ff:81:91:fe:1f:c3:80:31:81:54:48:53:4d:31:73:80:21:40:81:07:1c {
+       type = 26000;
+       driver = "sc-hsm";
+       # name = "Nitrokey HSM 2";
        md_read_only = false;
        md_supports_X509_enrollment = true;
    }
