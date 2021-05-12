@@ -12,15 +12,6 @@ Login to Windows Domain Computers With MS Active Directory
 
 .. code-block:: bash
 
-   # Nitrokey Pro, OpenPGP Card
-   card_atr 3B:DA:18:FF:81:B1:FE:75:1F:03:00:31:C5:73:C0:01:40:00:90:00:0C {
-       type = 9002;
-       driver = "openpgp";
-       # name = "Nitrokey Pro";
-       md_read_only = false;
-       md_supports_X509_enrollment = true;
-   }
-
    # Nitrokey Pro 2, OpenPGP Card, Nitrokey Storage 2
    card_atr 3b:da:18:ff:81:b1:fe:75:1f:03:00:31:f5:73:c0:01:60:00:90:00:1c  {
        type = 9002;
@@ -29,11 +20,11 @@ Login to Windows Domain Computers With MS Active Directory
        md_read_only = false;
        md_supports_X509_enrollment = true;
    }     
-   # Nitrokey HSM, SmartCard-HSM
-   card_atr 3B:FE:18:00:00:81:31:FE:45:80:31:81:54:48:53:4D:31:73:80:21:40:81:07:FA {
-       type = 26000;
-       driver = "sc-hsm";
-       # name = "Nitrokey HSM";
+   # Nitrokey Pro, OpenPGP Card
+   card_atr 3B:DA:18:FF:81:B1:FE:75:1F:03:00:31:C5:73:C0:01:40:00:90:00:0C {
+       type = 9002;
+       driver = "openpgp";
+       # name = "Nitrokey Pro";
        md_read_only = false;
        md_supports_X509_enrollment = true;
    }
@@ -45,6 +36,15 @@ Login to Windows Domain Computers With MS Active Directory
        md_read_only = false;
        md_supports_X509_enrollment = true;
    }
+   # Nitrokey HSM, SmartCard-HSM
+   card_atr 3B:FE:18:00:00:81:31:FE:45:80:31:81:54:48:53:4D:31:73:80:21:40:81:07:FA {
+       type = 26000;
+       driver = "sc-hsm";
+       # name = "Nitrokey HSM";
+       md_read_only = false;
+       md_supports_X509_enrollment = true;
+   }
+
 
 3. Open a command terminal and enter “regedit”. Use regedit to import
    `this
