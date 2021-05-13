@@ -1,44 +1,36 @@
-DNS Rebind Protection
-=============================
+Port Forwarding & Firewall Configuration
+========================================
 
-The Issue
+Issue
 ---------
 
-You have your dynamic DNS correctly set up, but IPv6 resolving does not work for your domain.
+You have your dynamic DNS correctly set up, but your NextBox is not reachable using the domain. 
+
+Before looking into this topic, make sure your domain correctly resolves to your IP.
 
 
-The Why
+Details
 -------
 
-In general DNS Rebinding protection is a safety mechanism to avoid attacks based
-on `DNS-Rebinding`_. Home routers include a protection mechanism for this attack
-by never returning a local IP (v4 & v6) address. 
+For both IPv4 and IPv6 you need to properly configure your internet router to allow access to your 
+NextBox. While most internet routers will refer to this configuration as *port forwarding*, in fact
+IPv4 based (dynamic) DNS will resolve to your router's IP. But IPv6 in contrast will resolve to a
+(globally) unique IP, which refers to your NextBox. 
 
-In the context of the NextBox this means that, if you are using IPv6, the IPv6 address
-of your NextBox is considered local by your router and thus wiull not be returned 
-during DNS resolving of your designated domain.
-
-.. info:: For IPv4 this is actually also happening, but not a problem. In the IPv4 
-   world you (dynamic) DNS refers to the router itself and the router will forward
-   the traffic to your NextBox. In contrast IPv6 will not resolve to your router but
-   to the IPv6 address of your NextBox directly and the router just has to open its
-   firewall for the traffic to pass.
+Therefore in technical terms IPv4 needs port forwarding to be enabled and for IPv6 you need to open
+the firewall to allow access to your NextBox. But in reality most routers do not differentiate 
+between those and just name it *port sharing* for either IPv4 or IPv6.
 
 
-The Solution
+Solution
 ------------
 
-Most routers, which implement this DNS-Rebind protection also allow you to whitelist certain
-domains from this protection.
+**The port-forwarding and/or firewall rules have to be configured to allow traffic on 
+ports 80 (HTTP-Server) and 443 (HTTPS-Server).**
 
-For instance the setting inside *FritzBoxes* is to be found in: 
-Network -> Network-Settings -> Show More. You need to ensure that you have the "extended/expert view"
-activated.
+On a recent *Fritz!Box* you will find this configuration inside: "Internet -> Permit Access -> Port Sharing"
 
 
-
-
-.. _DNS-Rebinding: https://en.wikipedia.org/wiki/DNS_rebinding
 
 
 

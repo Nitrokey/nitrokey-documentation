@@ -17,4 +17,4 @@ The ...
    Custom Dynamic DNS <ddclient>
    Static Domain <static>
    DNS Rebind <dns-rebind>
-   Portforwarding <port-forwarding-firewall>
+   Port Forwarding <port-forwarding-firewall>
