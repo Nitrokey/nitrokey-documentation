@@ -21,7 +21,7 @@ recommended, please be aware that this method also comes with some drawbacks:
 
 
 In order to not be affected by these drawbacks you can set up a :doc:`dynamic
-DNS provider <dynamic-dns>`.
+DNS provider <dynamic-dns>` or a :doc:`static domain <static>`.
 
 IPv6 to IPv4 Translation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
