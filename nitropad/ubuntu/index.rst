@@ -89,7 +89,7 @@ changed by you:
    here </pro/change-user-and-admin-pin.html>`__.
 
 6. Change the passphrase for disk encryption as `described
-   here <change-disk-encryption-passphrase.html>`__.
+   here <change-disk-encryption-passphrase.html>`__. This passphrase is different from your user acount's passphrase.
 
 Behavior After a System Update
 ------------------------------

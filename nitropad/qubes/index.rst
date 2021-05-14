@@ -82,7 +82,7 @@ changed by you:
 4. Open the pre-installed Nitrokey App and change the PINs of your
    Nitrokey as `described here </pro/change-user-and-admin-pin.html>`__.
 5. Change the passphrase for the hard disk encryption by running “sudo
-   cryptsetup luksChangeKey /dev/sda2” in a terminal.
+   cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is different from your user acount's passphrase.
 
 In case the Network Manager icon is not shown and when starting a VM an
 error like “Domain sys-net has failed to start: PCI device dom0:03_00.0
