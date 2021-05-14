@@ -31,9 +31,15 @@ Frequently Asked Questions
   ways to determine your public key. One might be ``ssh-add -L``, another might be 
   ``cat ~/.ssh/id_rsa.pub``. If you are using Putty, please see the `Putty documentation`_.
 
+**Q:** Can I generally extend the NextBox using an USB hard-drive?
+  Yes, this is possible, please make sure you are using a hard-drive, which has an external
+  power supply. Once connected you can mount the hard-drive using the NextBox *Storage Management* 
+  and include it into Nextcloud file-management using the `External storage support`_ app.
 
 
 
+
+.. _External storage support: https://docs.nextcloud.com/server/20/admin_manual/configuration_files/external_storage_configuration_gui.html
 .. _RPi Power Supply: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
 .. _Putty Documentation: https://www.ssh.com/academy/ssh/putty/public-key-authentication
 
