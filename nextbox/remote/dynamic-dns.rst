@@ -1,4 +1,4 @@
-Guided Dynamic DNS Setup
+Dynamic DNS Setup
 ========================
 
 

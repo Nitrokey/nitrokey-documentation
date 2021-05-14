@@ -29,7 +29,7 @@ Solution
 ------------
 
 Most routers, which implement this DNS-Rebind protection also allow you to whitelist certain
-domains from this protection. **Generally, to solve this issue you just have to insert your
+domains from this protection. **Generally, to solve this issue you have to insert your
 (full) domain to the DNS-Rebind Exceptions (or whitelist) of your router.**
 
 For instance, the setting inside a *Fritz!Box* is to be found in: 

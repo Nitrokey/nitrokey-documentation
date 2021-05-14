@@ -1,6 +1,35 @@
 Backwards Proxy Remote Access
 =============================
 
+**This is the fastest and easiest way to make your NextBox available for remote
+access.**
+
+The only information to provide is the (sub)domain your NextBox should be
+available at.  There is also no need for a port forwarding configuration or any
+other setting to be done at your internet router. Although this method is
+recommended, please be aware that this method also comes with some drawbacks:
+
+* All traffic is passed through our (backwards) proxy server, thus is not
+  end-to-end encrypted.  *In particular, if this server is compromised, your
+  traffic might be readable.*
+
+* The same reason also introduces a bandwith bottleneck, if you are connecting
+  to your NextBox from within your local area network (LAN). As all traffic has
+  to be send to our proxy server and from there to your NextBox, the available
+  bandwidth is limited to roughly 50% of your upload or download bandwidth
+  (whichever is smaller).
+
+
+In order to not be affected by these drawbacks you can set up a :doc:`dynamic
+DNS provider <dynamic-dns>`.
+
+IPv6 to IPv4 Translation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If your NextBox is only available through IPv6 (e.g., DS-Lite internet
+connection) the backwards proxy might be the only way to access your NextBox
+using a non-IPv6 enabled device. As of today e.g., various mobile network
+providers do not support IPv6 yet.
 
 
 
