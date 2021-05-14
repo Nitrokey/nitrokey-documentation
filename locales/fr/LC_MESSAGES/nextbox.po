@@ -8,16 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-14 14:42+0200\n"
-"PO-Revision-Date: 2021-05-02 11:40+0000\n"
+"POT-Creation-Date: 2021-05-14 13:49+0200\n"
+"PO-Revision-Date: 2021-05-14 12:42+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: French <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-nextbox/fr/>\n"
 "Language: fr\n"
-"Language-Team: French <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-nextbox/fr/>\n"
-"Plural-Forms: nplurals=2; plural=n > 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../nextbox/backup/backup.rst:2
@@ -371,23 +372,25 @@ msgstr "NextBox"
 
 #: ../nextbox/remote/dns-rebind.rst:2
 msgid "DNS Rebind Protection"
-msgstr ""
+msgstr "Protection contre le rebindage des DNS"
 
 #: ../nextbox/remote/dns-rebind.rst:5
 #: ../nextbox/remote/port-forwarding-firewall.rst:5
 msgid "Issue"
-msgstr ""
+msgstr "Numéro"
 
 #: ../nextbox/remote/dns-rebind.rst:7
 msgid ""
 "You have your dynamic DNS correctly set up, but IPv6 resolving does not "
 "work for your domain."
 msgstr ""
+"Vous avez correctement configuré votre DNS dynamique, mais la résolution "
+"IPv6 ne fonctionne pas pour votre domaine."
 
 #: ../nextbox/remote/dns-rebind.rst:11
 #: ../nextbox/remote/port-forwarding-firewall.rst:13
 msgid "Details"
-msgstr ""
+msgstr "Détails"
 
 #: ../nextbox/remote/dns-rebind.rst:13
 msgid ""
@@ -396,6 +399,10 @@ msgid ""
 "mechanism for this attack by never returning a local IP (v4 & v6) "
 "address."
 msgstr ""
+"En général, la protection DNS Rebinding est un mécanisme de sécurité pour "
+"éviter les attaques basées sur le `DNS-Rebinding`_. Les routeurs domestiques "
+"incluent un mécanisme de protection contre cette attaque en ne renvoyant "
+"jamais une adresse IP locale (v4 & v6)."
 
 #: ../nextbox/remote/dns-rebind.rst:17
 msgid ""
@@ -403,6 +410,10 @@ msgid ""
 " IPv6 address of your NextBox is considered local by your router and thus"
 " wiull not be returned during DNS resolving of your designated domain."
 msgstr ""
+"Dans le contexte de la NextBox, cela signifie que, si vous utilisez IPv6, "
+"l'adresse IPv6 de votre NextBox est considérée comme locale par votre "
+"routeur et ne sera donc pas retournée pendant la résolution DNS de votre "
+"domaine désigné."
 
 #: ../nextbox/remote/dns-rebind.rst:21
 msgid ""
@@ -412,11 +423,17 @@ msgid ""
 " your router but to the IPv6 address of your NextBox directly and the "
 "router just has to open its firewall for the traffic to pass."
 msgstr ""
+"Pour IPv4 c'est aussi le cas, mais ce n'est pas un problème. Dans le monde "
+"IPv4, le DNS (dynamique) se résout au routeur (WAN-IP) lui-même et le "
+"routeur transmettra le trafic à votre NextBox. En revanche, IPv6 ne se "
+"résoudra pas à votre routeur mais à l'adresse IPv6 de votre NextBox "
+"directement et le routeur doit juste ouvrir son pare-feu pour que le trafic "
+"passe."
 
 #: ../nextbox/remote/dns-rebind.rst:29
 #: ../nextbox/remote/port-forwarding-firewall.rst:26
 msgid "Solution"
-msgstr ""
+msgstr "Solution"
 
 #: ../nextbox/remote/dns-rebind.rst:31
 msgid ""
@@ -425,6 +442,11 @@ msgid ""
 "this issue you have to insert your (full) domain to the DNS-Rebind "
 "Exceptions (or whitelist) of your router.**"
 msgstr ""
+"La plupart des routeurs qui mettent en œuvre cette protection DNS-Rebind "
+"vous permettent également d'ajouter certains domaines à la liste blanche de "
+"cette protection. **En général, pour résoudre ce problème, vous devez "
+"insérer votre domaine (complet) dans la liste des exceptions (ou liste "
+"blanche) de votre routeur."
 
 #: ../nextbox/remote/dns-rebind.rst:35
 msgid ""
@@ -433,17 +455,22 @@ msgid ""
 "Protection\". You need to ensure that you have the \"extended/expert "
 "view\" activated."
 msgstr ""
+"Par exemple, le paramètre dans une *Fritz!Box* se trouve dans : \"Réseau "
+"domestique -> Réseau -> Paramètres réseau -> Autres paramètres -> Protection "
+"contre le rebond DNS\". Vous devez vous assurer que la \"vue étendue/expert\""
+" est activée."
 
 #: ../nextbox/remote/dynamic-dns.rst:2
-#, fuzzy
 msgid "Dynamic DNS Setup"
-msgstr "Configuration guidée du DNS dynamique"
+msgstr "Configuration du DNS dynamique"
 
 #: ../nextbox/remote/dynamic-dns.rst:4
 msgid ""
 "**There are two ways to configure a dynamic DNS provider to be used and "
 "updated by your NextBox instance.**"
 msgstr ""
+"**Il y a deux façons de configurer un fournisseur de DNS dynamique qui sera "
+"utilisé et mis à jour par votre instance NextBox."
 
 #: ../nextbox/remote/dynamic-dns.rst:7 ../nextbox/remote/static.rst:7
 msgid ""
@@ -451,11 +478,13 @@ msgid ""
 "this approach will ensure full end-to-end encryption using your very own "
 "TLS certificate acquired from `Let's Encrypt`_."
 msgstr ""
+"Contrairement à la méthode d'accès à distance :doc:`backwards proxy <proxy>`"
+", cette approche garantit un cryptage complet de bout en bout à l'aide de "
+"votre propre certificat TLS acquis auprès de `Let's Encrypt`_."
 
 #: ../nextbox/remote/dynamic-dns.rst:13
-#, fuzzy
 msgid "Guided Dynamic DNS"
-msgstr "Configuration guidée du DNS dynamique"
+msgstr "DNS dynamique guidé"
 
 #: ../nextbox/remote/dynamic-dns.rst:15
 msgid ""
@@ -463,6 +492,9 @@ msgid ""
 "follow these steps to configure your NextBox using the Guided Dynamic DNS"
 " method:"
 msgstr ""
+"La configuration guidée enregistrera un compte à `desec.io`_ pour vous. "
+"Veuillez suivre ces étapes pour configurer votre NextBox en utilisant la "
+"méthode Guided Dynamic DNS :"
 
 #: ../nextbox/remote/dynamic-dns.rst:18
 msgid ""
@@ -472,6 +504,11 @@ msgid ""
 "to the next step by registering at `desec.io`_ or without (e.g., if you "
 "have already registered this domain before)*"
 msgstr ""
+"Dans la première étape, vous devez fournir une adresse e-mail et le domaine "
+"que vous souhaitez enregistrer.  Veuillez vous assurer que vous avez accès à "
+"ce compte e-mail et que le domaine se termine par **.dedyn.io**. *Vous "
+"pouvez passer à l'étape suivante en vous enregistrant sur `desec.io`_ ou "
+"sans (par exemple, si vous avez déjà enregistré ce domaine auparavant)*."
 
 #: ../nextbox/remote/dynamic-dns.rst:24
 msgid ""
@@ -480,6 +517,10 @@ msgid ""
 "`desec.io`_. Once completed you will be presented with a secret token, "
 "which is needed in step two."
 msgstr ""
+"Après l'inscription à `desec.io`_, vous recevrez un e-mail de vérification, "
+"qui vous guidera tout au long du processus d'inscription à `desec.io`_. Une "
+"fois l'inscription terminée, vous recevrez un jeton secret, nécessaire pour "
+"l'étape 2."
 
 #: ../nextbox/remote/dynamic-dns.rst:29
 msgid ""
@@ -487,12 +528,19 @@ msgid ""
 "the same e-mail address) at `desec.io`_ to set a password, which will "
 "allow you to login into your account."
 msgstr ""
+"Si vous ne recevez pas d'e-mail de vérification, essayez de réinitialiser "
+"votre mot de passe (en utilisant la même adresse e-mail) sur le site `desec."
+"io`_ pour définir un mot de passe qui vous permettra de vous connecter à "
+"votre compte."
 
 #: ../nextbox/remote/dynamic-dns.rst:33
 msgid ""
 "In step two the just acquired secret token shall be inserted into the "
 "input field to complete your guided dynamic dns configuration."
 msgstr ""
+"Dans la deuxième étape, le jeton secret qui vient d'être acquis doit être "
+"inséré dans le champ de saisie pour achever la configuration dynamique "
+"guidée du DNS."
 
 #: ../nextbox/remote/dynamic-dns.rst:36
 msgid ""
@@ -500,16 +548,22 @@ msgid ""
 "process).  If you need a new token, you need to create a new one inside "
 "the `token management`_ inside your `desec.io`_ account settings."
 msgstr ""
+"Votre jeton ne vous sera présenté qu'une seule fois (après le processus de "
+"vérification).  Si vous avez besoin d'un nouveau jeton, vous devez en créer "
+"un nouveau dans la section \"gestion des jetons\" des paramètres de votre "
+"compte `desec.io`_."
 
 #: ../nextbox/remote/dynamic-dns.rst:40
 msgid ""
 "Once the 2nd step is completed you can *Continue to TLS activation* - see"
 " below..."
 msgstr ""
+"Une fois la 2ème étape terminée, vous pouvez *Continuer l'activation TLS* - "
+"voir ci-dessous..."
 
 #: ../nextbox/remote/dynamic-dns.rst:43
 msgid "Custom Dynamic DNS"
-msgstr ""
+msgstr "DNS dynamique personnalisé"
 
 #: ../nextbox/remote/dynamic-dns.rst:45
 msgid ""
@@ -517,6 +571,10 @@ msgid ""
 "NextBox is using `ddclient`_, which can be directly configured here or "
 "via the *Guided DNS* method described before."
 msgstr ""
+"Pour mettre à jour votre fournisseur de DNS dynamique avec votre/vos IP(s) "
+"actuellement utilisé(s), NextBox utilise `ddclient`_, qui peut être "
+"configuré directement ici ou via la méthode *Guided DNS* décrite "
+"précédemment."
 
 #: ../nextbox/remote/dynamic-dns.rst:49
 msgid ""
@@ -526,16 +584,23 @@ msgid ""
 "documentation`_, the one used for the guided DNS configuration uses the "
 "following template:"
 msgstr ""
+"Dans cette configuration, vous devez fournir le *domaine* que cette "
+"configuration active et le contenu du fichier `ddclient.conf` utilisé par "
+"`ddclient`_. Plusieurs exemples peuvent être trouvés dans la `documentation "
+"officielle`_, celui utilisé pour la configuration DNS guidée utilise le "
+"modèle suivant :"
 
 #: ../nextbox/remote/dynamic-dns.rst:65
 msgid ""
 "Once you actiavted this configuration, you can *Continue to TLS "
 "activation* - see below"
 msgstr ""
+"Une fois que vous avez activé cette configuration, vous pouvez *Continuer "
+"l'activation TLS* - voir ci-dessous"
 
 #: ../nextbox/remote/dynamic-dns.rst:71
 msgid "Enable TLS"
-msgstr ""
+msgstr "Activer TLS"
 
 #: ../nextbox/remote/dynamic-dns.rst:72
 msgid ""
@@ -543,12 +608,18 @@ msgid ""
 "that *reachability* of your NextBox is tested successfully. If this is "
 "the case, just click **Enable TLS** to acquire your TLS certificate."
 msgstr ""
+"Sur cette page, attendez d'abord que les barres d'état s'installent et "
+"assurez-vous principalement que la *reachabilité* de votre NextBox est "
+"testée avec succès. Si c'est le cas, cliquez simplement sur **Enable TLS** "
+"pour acquérir votre certificat TLS."
 
 #: ../nextbox/remote/dynamic-dns.rst:76
 msgid ""
 "If the reachibility test fails, make sure your :doc:`port forwarding "
 "<port-forwarding-firewall>` is configured properly."
 msgstr ""
+"Si le test d'accessibilité échoue, vérifiez que votre :doc:`transfert de "
+"port <port-forwarding-firewall>` est correctement configuré."
 
 #: ../nextbox/remote/index.rst:2
 msgid "Managing Remote Access"
@@ -567,28 +638,36 @@ msgstr ""
 #: ../nextbox/remote/index.rst:8
 msgid "There are different ways to make your NextBox available for remote access."
 msgstr ""
+"Il existe différentes façons de rendre votre NextBox disponible pour un "
+"accès à distance."
 
 #: ../nextbox/remote/index.rst:20
 msgid ""
 "The following topics might be of interest for you, depending on your "
 "internet service provider and the type of your internet connection:"
 msgstr ""
+"Les sujets suivants peuvent vous intéresser, en fonction de votre "
+"fournisseur d'accès à Internet et du type de votre connexion Internet :"
 
 #: ../nextbox/remote/port-forwarding-firewall.rst:2
 msgid "Port Forwarding & Firewall Configuration"
-msgstr ""
+msgstr "Transfert de port et configuration du pare-feu"
 
 #: ../nextbox/remote/port-forwarding-firewall.rst:7
 msgid ""
 "You have your dynamic DNS correctly set up, but your NextBox is not "
 "reachable using the domain."
 msgstr ""
+"Vous avez correctement configuré votre DNS dynamique, mais votre NextBox "
+"n'est pas joignable en utilisant le domaine."
 
 #: ../nextbox/remote/port-forwarding-firewall.rst:9
 msgid ""
 "Before looking into this topic, make sure your domain correctly resolves "
 "to your IP."
 msgstr ""
+"Avant d'aborder ce sujet, assurez-vous que votre domaine se résout "
+"correctement à votre IP."
 
 #: ../nextbox/remote/port-forwarding-firewall.rst:15
 msgid ""
@@ -598,6 +677,12 @@ msgid ""
 "(dynamic) DNS will resolve to your router's IP. But IPv6 in contrast will"
 " resolve to a (globally) unique IP, which refers to your NextBox."
 msgstr ""
+"Pour IPv4 et IPv6, vous devez configurer correctement votre routeur Internet "
+"pour permettre l'accès à votre NextBox. Bien que la plupart des routeurs "
+"Internet se réfèrent à cette configuration comme *transfert de port*, en "
+"fait, le DNS (dynamique) basé sur IPv4 se résoudra à l'IP de votre routeur. "
+"Mais IPv6 en revanche se résoudra à une IP (globalement) unique, qui se "
+"réfère à votre NextBox."
 
 #: ../nextbox/remote/port-forwarding-firewall.rst:20
 msgid ""
@@ -606,18 +691,28 @@ msgid ""
 "But in reality most routers do not differentiate between those and just "
 "name it *port sharing* for either IPv4 or IPv6."
 msgstr ""
+"Par conséquent, en termes techniques, l'IPv4 nécessite que la redirection de "
+"port soit activée et pour l'IPv6, vous devez ouvrir le pare-feu pour "
+"permettre l'accès à votre NextBox. Mais en réalité, la plupart des routeurs "
+"ne font pas la différence entre les deux et se contentent de l'appeler *"
+"partage de port* pour IPv4 ou IPv6."
 
 #: ../nextbox/remote/port-forwarding-firewall.rst:28
 msgid ""
 "**The port-forwarding and/or firewall rules have to be configured to "
 "allow traffic on ports 80 (HTTP-Server) and 443 (HTTPS-Server).**"
 msgstr ""
+"**La redirection de port et/ou les règles du pare-feu doivent être "
+"configurées pour autoriser le trafic sur les ports 80 (serveur HTTP) et 443 ("
+"serveur HTTPS)."
 
 #: ../nextbox/remote/port-forwarding-firewall.rst:31
 msgid ""
 "On a recent *Fritz!Box* you will find this configuration inside: "
 "\"Internet -> Permit Access -> Port Sharing\""
 msgstr ""
+"Sur une *Fritz!Box* récente, vous trouverez cette configuration à "
+"l'intérieur : \"Internet -> Autoriser l'accès -> Partage de port\"."
 
 #: ../nextbox/remote/proxy.rst:2
 msgid "Backwards Proxy Remote Access"
@@ -628,6 +723,8 @@ msgid ""
 "**This is the fastest and easiest way to make your NextBox available for "
 "remote access.**"
 msgstr ""
+"**C'est le moyen le plus rapide et le plus facile de rendre votre NextBox "
+"disponible pour un accès à distance."
 
 #: ../nextbox/remote/proxy.rst:7
 msgid ""
@@ -637,6 +734,11 @@ msgid ""
 "method is recommended, please be aware that this method also comes with "
 "some drawbacks:"
 msgstr ""
+"La seule information à fournir est le (sous-)domaine auquel votre NextBox "
+"doit être disponible.  Il n'est pas non plus nécessaire de configurer une "
+"redirection de port ou tout autre paramètre à effectuer sur votre routeur "
+"Internet. Bien que cette méthode soit recommandée, sachez qu'elle présente "
+"également quelques inconvénients :"
 
 #: ../nextbox/remote/proxy.rst:12
 msgid ""
@@ -644,6 +746,9 @@ msgid ""
 "end-to-end encrypted.  *In particular, if this server is compromised, "
 "your traffic might be readable.*"
 msgstr ""
+"Tout le trafic passe par notre serveur proxy (en arrière) et n'est donc pas "
+"crypté de bout en bout.  *En particulier, si ce serveur est compromis, votre "
+"trafic pourrait être lisible.*"
 
 #: ../nextbox/remote/proxy.rst:16
 #, python-format
@@ -654,6 +759,11 @@ msgid ""
 "NextBox, the available bandwidth is limited to roughly 50% of your upload"
 " or download bandwidth (whichever is smaller)."
 msgstr ""
+"La même raison introduit également un goulot d'étranglement de la bande "
+"passante, si vous vous connectez à votre NextBox à partir de votre réseau "
+"local (LAN). Comme tout le trafic doit être envoyé à notre serveur proxy et "
+"de là à votre NextBox, la bande passante disponible est limitée à environ "
+"50% of de votre bande passante en amont ou en aval (la plus petite des deux)."
 
 #: ../nextbox/remote/proxy.rst:23
 msgid ""
@@ -661,10 +771,13 @@ msgid ""
 ":doc:`dynamic DNS provider <dynamic-dns>` or a :doc:`static domain "
 "<static>`."
 msgstr ""
+"Pour ne pas être affecté par ces inconvénients, vous pouvez mettre en place "
+"un :doc:`fournisseur DNS dynamique <dynamic-dns>` ou un :doc:`domaine "
+"statique <static>`."
 
 #: ../nextbox/remote/proxy.rst:27
 msgid "IPv6 to IPv4 Translation"
-msgstr ""
+msgstr "Traduction d'IPv6 en IPv4"
 
 #: ../nextbox/remote/proxy.rst:29
 msgid ""
@@ -673,16 +786,23 @@ msgid ""
 "NextBox using a non-IPv6 enabled device. As of today e.g., various mobile"
 " network providers do not support IPv6 yet."
 msgstr ""
+"Si votre NextBox n'est disponible que par le biais d'IPv6 (par exemple, une "
+"connexion Internet DS-Lite), le proxy en amont pourrait être la seule façon "
+"d'accéder à votre NextBox en utilisant un appareil non compatible IPv6. A ce "
+"jour, par exemple, plusieurs fournisseurs de réseaux mobiles ne supportent "
+"pas encore IPv6."
 
 #: ../nextbox/remote/static.rst:2
 msgid "Static DNS Configuration"
-msgstr ""
+msgstr "Configuration du DNS statique"
 
 #: ../nextbox/remote/static.rst:4
 msgid ""
 "This configuration shall be used, if you configured DNS and thus a domain"
 " for your NextBox in e.g., your internet router."
 msgstr ""
+"Cette configuration sera utilisée, si vous avez configuré le DNS et donc un "
+"domaine pour votre NextBox dans votre routeur internet par exemple."
 
 #: ../nextbox/remote/static.rst:11
 msgid ""
@@ -690,6 +810,9 @@ msgid ""
 " instance you must provide the full domain here to trust this domain "
 "inside your Nextcloud instance."
 msgstr ""
+"Afin d'utiliser le domaine configuré avec votre NextBox et son instance "
+"Nextcloud, vous devez fournir le domaine complet ici pour faire confiance à "
+"ce domaine dans votre instance Nextcloud."
 
 #: ../nextbox/remote/static.rst:15
 msgid ""
@@ -697,6 +820,9 @@ msgid ""
 "\"Internet -> Permit Access -> DynDNS\" and configuring a dynamic DNS "
 "provider of your choice."
 msgstr ""
+"Par exemple, à l'intérieur d'une \"Fritz!Box\", cela peut être fait en "
+"naviguant vers : \"Internet -> Accès autorisé -> DynDNS\" et en configurant "
+"un fournisseur de DNS dynamique de votre choix."
 
 #: ../nextbox/technical/factory-reset.rst:2
 msgid "Factory Reset"
@@ -812,4 +938,3 @@ msgstr "Dépannage"
 
 #~ msgid "Static DNS Configuration for e.g., static IPs"
 #~ msgstr "Configuration DNS statique pour, par exemple, les IP statiques"
-
