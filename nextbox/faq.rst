@@ -22,6 +22,7 @@ Frequently Asked Questions
   The Nextcloud version is rolled out by us. Thus the option to update from inside Nextcloud
   is not working. 
 
+
 **Q:** Why does my harddrive not show up after plugging it in?
   Please make sure that you are using one of the supported filesystems (e.g., ext, xfs) and you
   have mounted your hard-drive within *Storage Management*.
@@ -37,10 +38,21 @@ Frequently Asked Questions
   and include it into Nextcloud file-management using the `External storage support`_ app.
 
 
+**Q:** What is the typical/idle/max power consumption?
+  The Raspberry Pi 4 Model B comes with a `typical bare-board power consumption`_ of ~3W.
+  Depending on hard-drive type the idle (minimal) power consumption of the NextBox can reach less
+  than 5W. With typical work loads leading to roughly 7W - 10W and maximum power consumption being
+  limited by the power supply to ~15W.
+
+
+
+
+
 
 
 .. _External storage support: https://docs.nextcloud.com/server/20/admin_manual/configuration_files/external_storage_configuration_gui.html
 .. _RPi Power Supply: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
+.. _typical bare-board power consumption: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
 .. _Putty Documentation: https://www.ssh.com/academy/ssh/putty/public-key-authentication
 
 
