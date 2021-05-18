@@ -29,7 +29,7 @@ Hardware
   Please make sure that you are using one of the supported filesystems (e.g., ext, xfs) and you
   have mounted your hard-drive within *Storage Management*.
 
-**Q:** Can I generally extend the NextBox using an USB hard-drive?
+**Q:** Can I generally extend the NextBox using a USB hard-drive?
   Yes, this is possible, please make sure you are using a hard-drive, which has an external
   power supply. Once connected you can mount the hard-drive using the NextBox *Storage Management* 
   and include it into Nextcloud file-management using the `External storage support`_ app.
