@@ -78,3 +78,7 @@ git add --all
 git commit -m "resolve merge conflict"
 git push
 ```
+
+## Manually build language versions when only a file name was changed (weblate did'n trigger the webhook)
+
+```sphinx@translate: $ sh ~/sphinx/nitrokey-documentation/apply_translated_content.sh```
