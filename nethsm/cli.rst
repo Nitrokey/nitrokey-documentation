@@ -167,6 +167,35 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    :end-before: .. end
 
 .. include:: _tutorial.rst
+   :start-after: .. start:: key-certificates
+   :end-before: .. end
+
+::
+
+    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+        set-certificate myFirstKey --mime-type application/x-pem-file /tmp/cert.pem
+    Updated the certificate for key myFirstKey on NetHSM localhost:8443
+
+    $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
+        get-certificate myFirstKey > /tmp/cert.pem
+
+    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+        delete-certificate myFirstKey
+    Deleted certificate for key myFirstKey on NetHSM localhost:8443
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: key-csr
+   :end-before: .. end
+
+::
+   
+   $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
+       csr --key-id myFirstKey --country DE --state-or-province BE --locality Berlin \
+       --organization ACME --organizational-unit IT --common-name example.com \
+       --email-address it@example.com
+
+
+.. include:: _tutorial.rst
    :start-after: .. start:: key-operations
    :end-before: .. end
 

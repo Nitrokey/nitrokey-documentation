@@ -223,6 +223,28 @@ verification (as described in the next section):
 
 .. end
 
+.. start:: key-certificates
+Key Certificates
+~~~~~~~~~~~~~~~~
+
+It is possible to set and query certificates for the keys stored on a NetHSM
+instance:
+.. end
+
+PUT /keys/myFirstKey/cert
+GET /keys/myFirstKey/cert
+DELETE /keys/myFirstKey/cert
+
+.. start:: key-csr
+Key Certificate Signing Requests
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The NetHSM supports generating Certificate Signing Requests (CSR) for the
+stored keys:
+.. end
+
+POST /keys/myFirstKey/csr.pem
+
 .. start:: key-operations
 Key Operations
 --------------

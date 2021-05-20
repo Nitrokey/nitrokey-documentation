@@ -222,6 +222,44 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    :end-before: .. end
 
 .. include:: _tutorial.rst
+   :start-after: .. start:: key-certificates
+   :end-before: .. end
+
+::
+
+   $ curl -i -w '\n' -u admin:adminPassphrase -X PUT \
+       https://$NETHSM_HOST/api/v1/keys/myFirstKey/cert -H "content-type: application/x-pem-file" \
+       --data-binary @/tmp/cert.pem
+   HTTP/1.1 201 Created
+   content-length: 0
+   content-type: text/html
+   date: Thu, 20 May 2021 19:15:39 GMT
+   vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+
+   $ curl -s -w '\n' -u operator:opPassphrase -X GET \
+       https://$NETHSM_HOST/api/v1/keys/myFirstKey/cert > /tmp/cert.pem
+
+   $ curl -i -w '\n' -u admin:adminPassphrase -X DELETE \
+       https://$NETHSM_HOST/api/v1/keys/myFirstKey/cert
+   HTTP/1.1 204 No Content
+   content-type: text/html
+   date: Thu, 20 May 2021 19:14:45 GMT
+   vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+
+.. include:: _tutorial.rst
+   :start-after: .. start:: key-csr
+   :end-before: .. end
+
+::
+
+   $ curl -s -w '\n' -u operator:opPassphrase -X POST \
+       https://$NETHSM_HOST/api/v1/keys/myFirstKey/csr.pem -H "content-type: application/json" \
+       -d "{ \"countryName\": \"DE\", \"stateOrProvinceName\": \"BE\", \
+       \"localityName\": \"Berlin\", \"organizationName\": \"ACME\", \
+       \"organizationalUnitName\": \"IT\", \"commonName\": \"example.com\", \
+       \"emailAddress\": \"it@example.com\" }" > /tmp/cert.pem
+
+.. include:: _tutorial.rst
    :start-after: .. start:: key-operations
    :end-before: .. end
 
