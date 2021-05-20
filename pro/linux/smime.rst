@@ -1,1 +1,1 @@
-.. include:: ../smime-email-encryption.rst 
+.. include:: ../smime.rst
