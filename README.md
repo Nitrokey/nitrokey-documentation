@@ -6,6 +6,10 @@
 
 - Write filenames in lower case and use dashes ("-") instead of spaces.
 
+- If an image is to be used for all languages do not use the Substitution Syntax `|image1|` but directly include the picture with an `image::` directive.
+
+- If different Image are to be used for different languages use the substitution syntax and translate the substitution names in Weblate e.g. translate |Picture1| with |Bild1| |tableau1| etc. and define all substitutions with files pathes at the end of the document.
+
 - For content which is identical for different models or operating  systems, use `include` to avoid duplication of files. Locate those  instructions not in but next to the operating system folders.
 
 - Add a subfolder with the numbered image files for each guide.
