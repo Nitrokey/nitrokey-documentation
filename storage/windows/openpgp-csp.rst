@@ -1,1 +1,2 @@
-.. include:: ../../pro/windows/windows-logon-and-smime-email-encryption-with-active-directory.rst 
+.. include:: ../../pro/windows/openpgp-csp.rst
+
