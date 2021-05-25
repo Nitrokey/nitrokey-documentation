@@ -71,12 +71,16 @@ Software
   NextBox using ssh and you can do with the system whatever you want. Obviously we will only provide
   support for the NextBox stock configuration.
 
+**Q:** Can I access my Nextcloud instance using WebDAV?
+  Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for 
+  unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` 
+  while making sure that the ``davfs2`` package is installed.
 
 .. _nextbox.local: http://nextbox.local
 .. _External storage support: https://docs.nextcloud.com/server/20/admin_manual/configuration_files/external_storage_configuration_gui.html
 .. _RPi Power Supply: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
 .. _typical bare-board power consumption: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
 .. _Putty Documentation: https://www.ssh.com/academy/ssh/putty/public-key-authentication
-
+.. _Nextcloud WebDAV documentation: https://docs.nextcloud.com/server/20/user_manual/en/files/access_webdav.html
 
 
