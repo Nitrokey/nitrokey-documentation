@@ -1,0 +1,1 @@
+.. include:: ../ssmime-thunderbird.rst
