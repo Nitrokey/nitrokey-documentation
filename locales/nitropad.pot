@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-14 08:43+0200\n"
+"POT-Creation-Date: 2021-05-27 17:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -608,11 +608,6 @@ msgstr ""
 msgid "Each time you start the NitroPad, you should - if possible - connect your Nitrokey. If the Nitrokey is plugged in and the system has not been modified, the following screen will appear when the NitroPad is turned on."
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:42
-#: ../nitropad/ubuntu/index.rst:42
-msgid "|image1|"
-msgstr ""
-
 #: ../nitropad/qubes/index.rst:44
 #: ../nitropad/ubuntu/index.rst:44
 msgid "The box marked in red contains the information that the BIOS has not been changed and that the shared secret of the NitroPad and the Nitrokey match. But this information is not sufficient, because an attacker could have faked it. If at the same time the Nitrokey also flashes green, everything is fine. An attacker would have to have had access to the NitroPad and Nitrokey to achieve this result. It is therefore important that you do not leave both devices unattended."
@@ -621,11 +616,6 @@ msgstr ""
 #: ../nitropad/qubes/index.rst:52
 #: ../nitropad/ubuntu/index.rst:52
 msgid "If the information on the NitroPad does not match the information on the Nitrokey, the background would turn red and the message “Invalid Code” would appear. This could indicate that manipulation has taken place."
-msgstr ""
-
-#: ../nitropad/qubes/index.rst:56
-#: ../nitropad/ubuntu/index.rst:56
-msgid "|image2|"
 msgstr ""
 
 #: ../nitropad/qubes/index.rst:58
@@ -654,89 +644,131 @@ msgid "Press Enter (“Default Boot”) after booting the system, provided the N
 msgstr ""
 
 #: ../nitropad/qubes/index.rst:77
-#: ../nitropad/ubuntu/index.rst:78
-msgid "Next, the system will prompt you to enter the passphrase to decrypt the hard disk. The passphrase is initially “PleaseChangeMe”. |image3|"
+msgid "Next, the system will prompt you to enter the passphrase to decrypt the hard disk. The passphrase is initially “PleaseChangeMe”. .. image:: ./images/QubesDiskPassword.jpg"
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:79
-#: ../nitropad/ubuntu/index.rst:81
+#: ../nitropad/qubes/index.rst:80
+#: ../nitropad/ubuntu/index.rst:82
 msgid "The system will then guide you through the process of creating a user account. After that you should have successfully booted the system and could already use it normally."
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:82
+#: ../nitropad/qubes/index.rst:83
 msgid "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey as `described here </pro/change-user-and-admin-pin.html>`__."
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:84
+#: ../nitropad/qubes/index.rst:85
 msgid "Change the passphrase for the hard disk encryption by running “sudo cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is different from your user acount's passphrase."
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:87
+#: ../nitropad/qubes/index.rst:88
 msgid "In case the Network Manager icon is not shown and when starting a VM an error like “Domain sys-net has failed to start: PCI device dom0:03_00.0 does not exist” is shown, proceed as follows:"
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:91
+#: ../nitropad/qubes/index.rst:92
 msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:92
+#: ../nitropad/qubes/index.rst:93
 msgid "Go to Devices tab"
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:93
+#: ../nitropad/qubes/index.rst:94
 msgid "Remove “Unknown device” from the right side"
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:94
+#: ../nitropad/qubes/index.rst:95
 msgid "Add “Network controler” device"
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:95
+#: ../nitropad/qubes/index.rst:96
 msgid "Click “OK” and restart the system."
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:98
-#: ../nitropad/ubuntu/index.rst:95
+#: ../nitropad/qubes/index.rst:99
+#: ../nitropad/ubuntu/index.rst:96
 msgid "Behavior After a System Update"
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:100
-#: ../nitropad/ubuntu/index.rst:97
+#: ../nitropad/qubes/index.rst:101
+#: ../nitropad/ubuntu/index.rst:98
 msgid "The NitroPad firmware checks certain system files for changes. If your operating system has updated important components, you will be warned the next time you boot the NitroPad. This could look like this, for example:"
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:105
-#: ../nitropad/ubuntu/index.rst:102
-msgid "|image4|"
-msgstr ""
-
-#: ../nitropad/qubes/index.rst:107
-#: ../nitropad/ubuntu/index.rst:104
+#: ../nitropad/qubes/index.rst:108
+#: ../nitropad/ubuntu/index.rst:105
 msgid "That’s why it’s important to restart your NitroPad under controlled conditions after a system update. Only when the new status has been confirmed can you leave the device unattended again. Otherwise, you will not be able to distinguish a possible attack from a system update. Detailed instructions for a system update can be `found here <system-update.html>`__."
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:115
-#: ../nitropad/ubuntu/index.rst:112
+#: ../nitropad/qubes/index.rst:116
+#: ../nitropad/ubuntu/index.rst:113
 msgid "Troubleshooting"
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:117
+#: ../nitropad/qubes/index.rst:118
 msgid "If Qubes doesn’t boot as shown below, please execute the following steps:"
 msgstr ""
 
-#: ../nitropad/qubes/index.rst:130
-#: ../nitropad/ubuntu/index.rst:127
-msgid "Restart your Laptop and go to Options. |image5|"
-msgstr ""
-
-#: ../nitropad/qubes/index.rst:132
-#: ../nitropad/ubuntu/index.rst:129
-msgid "Select “Update Checksums and sign all files on /boot”. |image6|"
+#: ../nitropad/qubes/index.rst:131
+#: ../nitropad/ubuntu/index.rst:128
+msgid "Restart your Laptop and go to Options. .. image:: ../images/boot-menu.jpg"
 msgstr ""
 
 #: ../nitropad/qubes/index.rst:134
 #: ../nitropad/ubuntu/index.rst:131
+msgid "Select “Update Checksums and sign all files on /boot”. .. image:: ../images/options.jpg"
+msgstr ""
+
+#: ../nitropad/qubes/index.rst:137
+#: ../nitropad/ubuntu/index.rst:134
 msgid "After that, please follow `these instructions from step 3 onwards `system update <system-update.html>`__."
+msgstr ""
+
+#: ../nitropad/sealed-hardware.rst:2
+#: ../nitropad/sealed-hardware.rst:2
+#: ../nitropad/sealed-hardware.rst:2
+msgid "Verify Sealed Hardware"
+msgstr ""
+
+#: ../nitropad/sealed-hardware.rst:8
+#: ../nitropad/sealed-hardware.rst:8
+#: ../nitropad/sealed-hardware.rst:8
+msgid "If you ordered your NitroPad with sealed screws and in a sealed bag, it allows you to check if the NitroPad has been tampered with during shipping."
+msgstr ""
+
+#: ../nitropad/sealed-hardware.rst:10
+#: ../nitropad/sealed-hardware.rst:10
+#: ../nitropad/sealed-hardware.rst:10
+msgid "The bag and all screws on the bottom of the device have been sealed. For the bag and each of these screws you have received a photo by e-mail. The orientation of the photos is such that the battery is on top."
+msgstr ""
+
+#: ../nitropad/sealed-hardware.rst:12
+#: ../nitropad/sealed-hardware.rst:12
+#: ../nitropad/sealed-hardware.rst:12
+msgid "Check each screw individually to see if its individual appearance matches the photo. It is best to use a magnifying glass or macro lens for this purpose. The screws are numbered as follows."
+msgstr ""
+
+#: ../nitropad/sealed-hardware.rst:16
+#: ../nitropad/sealed-hardware.rst:16
+#: ../nitropad/sealed-hardware.rst:16
+msgid "NitroPad X230:"
+msgstr ""
+
+#: ../nitropad/sealed-hardware.rst:21
+#: ../nitropad/sealed-hardware.rst:21
+#: ../nitropad/sealed-hardware.rst:21
+msgid "NitroPad T430:"
+msgstr ""
+
+#: ../nitropad/sealed-hardware.rst:27
+#: ../nitropad/sealed-hardware.rst:27
+#: ../nitropad/sealed-hardware.rst:27
+msgid "This example shows a sealed screw whose glitter represents an individual pattern."
+msgstr ""
+
+#: ../nitropad/sealed-hardware.rst:34
+#: ../nitropad/sealed-hardware.rst:34
+#: ../nitropad/sealed-hardware.rst:34
+msgid "If the bag or the screws do not match the photos sent, an unauthorized opening of your NitroPad cannot be excluded. In this case please contact us to arrange further action."
 msgstr ""
 
 #: ../nitropad/system-update.rst:2
@@ -835,54 +867,6 @@ msgstr ""
 msgid "**Important**: Heads expects an English keyboard layout, on which e.g. “y” and “z” are swapped in comparison to the German keyboard layout."
 msgstr ""
 
-#: ../nitropad/verify-sealed-hardware.rst:2
-#: ../nitropad/verify-sealed-hardware.rst:2
-#: ../nitropad/verify-sealed-hardware.rst:2
-msgid "Verify Sealed Hardware"
-msgstr ""
-
-#: ../nitropad/verify-sealed-hardware.rst:8
-#: ../nitropad/verify-sealed-hardware.rst:8
-#: ../nitropad/verify-sealed-hardware.rst:8
-msgid "If you ordered your NitroPad with sealed screws and in a sealed bag, it allows you to check if the NitroPad has been tampered with during shipping."
-msgstr ""
-
-#: ../nitropad/verify-sealed-hardware.rst:10
-#: ../nitropad/verify-sealed-hardware.rst:10
-#: ../nitropad/verify-sealed-hardware.rst:10
-msgid "The bag and all screws on the bottom of the device have been sealed. For the bag and each of these screws you have received a photo by e-mail. The orientation of the photos is such that the battery is on top."
-msgstr ""
-
-#: ../nitropad/verify-sealed-hardware.rst:12
-#: ../nitropad/verify-sealed-hardware.rst:12
-#: ../nitropad/verify-sealed-hardware.rst:12
-msgid "Check each screw individually to see if its individual appearance matches the photo. It is best to use a magnifying glass or macro lens for this purpose. The screws are numbered as follows."
-msgstr ""
-
-#: ../nitropad/verify-sealed-hardware.rst:16
-#: ../nitropad/verify-sealed-hardware.rst:16
-#: ../nitropad/verify-sealed-hardware.rst:16
-msgid "NitroPad X230:"
-msgstr ""
-
-#: ../nitropad/verify-sealed-hardware.rst:21
-#: ../nitropad/verify-sealed-hardware.rst:21
-#: ../nitropad/verify-sealed-hardware.rst:21
-msgid "NitroPad T430:"
-msgstr ""
-
-#: ../nitropad/verify-sealed-hardware.rst:27
-#: ../nitropad/verify-sealed-hardware.rst:27
-#: ../nitropad/verify-sealed-hardware.rst:27
-msgid "This example shows a sealed screw whose glitter represents an individual pattern."
-msgstr ""
-
-#: ../nitropad/verify-sealed-hardware.rst:34
-#: ../nitropad/verify-sealed-hardware.rst:34
-#: ../nitropad/verify-sealed-hardware.rst:34
-msgid "If the bag or the screws do not match the photos sent, an unauthorized opening of your NitroPad cannot be excluded. In this case please contact us to arrange further action."
-msgstr ""
-
 #: ../nitropad/ubuntu/change-disk-encryption-passphrase.rst:2
 msgid "Change Disk Encryption Passphrase"
 msgstr ""
@@ -922,47 +906,51 @@ msgstr ""
 msgid "NitroPad with Ubuntu Linux"
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:85
+#: ../nitropad/ubuntu/index.rst:78
+msgid "Next, the system will prompt you to enter the passphrase to decrypt the hard disk. The passphrase is initially “PleaseChangeMe”. .. image:: ./images/UbuntuDiskPassword.png"
+msgstr ""
+
+#: ../nitropad/ubuntu/index.rst:86
 msgid "Click on the Nitrokey icon on the left side of the screen to open the pre-installed Nitrokey App."
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:88
+#: ../nitropad/ubuntu/index.rst:89
 msgid "Change the PINs of your Nitrokey as `described here </pro/change-user-and-admin-pin.html>`__."
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:91
+#: ../nitropad/ubuntu/index.rst:92
 msgid "Change the passphrase for disk encryption as `described here <change-disk-encryption-passphrase.html>`__. This passphrase is different from your user acount's passphrase."
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:114
+#: ../nitropad/ubuntu/index.rst:115
 msgid "If Ubuntu doesn’t boot as shown below, please execute the following steps:"
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:135
+#: ../nitropad/ubuntu/index.rst:138
 msgid "Invalid Code"
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:137
+#: ../nitropad/ubuntu/index.rst:140
 msgid "Each boot the code is generated on the Nitropad and the Nitrokey, if its connected. It is allowed to run 10 boots without loosing the synchronization between the devices, after which the bad code signal is shown, regardless of the rest of the system being in a correct state. If you are sure the system was not beign tampered with (e.g. the Nitropad was booted more than 10 times without the Nitrokey), you can safely reset the system’s warning."
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:145
+#: ../nitropad/ubuntu/index.rst:148
 msgid "Please connect the Nitrokey and execute the following from the main boot screen:"
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:148
+#: ../nitropad/ubuntu/index.rst:151
 msgid "Options"
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:149
+#: ../nitropad/ubuntu/index.rst:152
 msgid "TPM/TOTP/HOTP Options"
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:150
+#: ../nitropad/ubuntu/index.rst:153
 msgid "Generate new TOTP/HOTP secret"
 msgstr ""
 
-#: ../nitropad/ubuntu/index.rst:152
+#: ../nitropad/ubuntu/index.rst:155
 msgid "and follow the on-screen guide. After that the secret and counter should be both reset to a new value."
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-18 23:23+0200\n"
+"POT-Creation-Date: 2021-05-27 17:23+0200\n"
 "PO-Revision-Date: 2021-03-31 21:14+0000\n"
 "Last-Translator: Jan Suhr <jan@nitrokey.com>\n"
 "Language: de\n"
@@ -518,8 +518,8 @@ msgstr ""
 "sperrt den Bildschirm. Es spielt keine Rolle, ob der Nitrokey bei dieser "
 "ersten Ausführung eingesteckt ist oder nicht."
 
-#: ../pro/linux/automatic-screen-lock.rst:77
-#: ../pro/smime-email-encryption.rst:56
+#: ../pro/linux/automatic-screen-lock.rst:77 ../pro/smime-outlook.rst:34
+#: ../pro/smime-thunderbird.rst:45 ../pro/smime.rst:56
 msgid "Usage"
 msgstr "Verwendung"
 
@@ -587,27 +587,27 @@ msgstr ""
 "<https://www.nitrokey.com/documentation/applications>`__ die "
 "verschiedenen Anwendungsfälle und unterstützten Anwendungen an."
 
-#: ../pro/smime-email-encryption.rst:2
+#: ../pro/smime.rst:2
 msgid "S/MIME Email Encryption"
 msgstr "S/MIME-E-Mail-Verschlüsselung"
 
-#: ../pro/smime-email-encryption.rst:9
+#: ../pro/smime-outlook.rst:9 ../pro/smime-thunderbird.rst:9 ../pro/smime.rst:9
 msgid "Prerequisites"
 msgstr "Voraussetzungen"
 
-#: ../pro/smime-email-encryption.rst:11
+#: ../pro/smime.rst:11
 msgid "There are two widely used standards for email encryption."
 msgstr "Es gibt zwei weit verbreitete Standards für die E-Mail-Verschlüsselung."
 
-#: ../pro/smime-email-encryption.rst:13
+#: ../pro/smime.rst:13
 msgid "OpenPGP/GnuPG is popular among individuals,"
 msgstr "OpenPGP/GnuPG ist bei Privatpersonen sehr beliebt,"
 
-#: ../pro/smime-email-encryption.rst:15
+#: ../pro/smime.rst:15
 msgid "S/MIME/X.509 is mostly used by enterprises."
 msgstr "S/MIME/X.509 wird meist von Unternehmen verwendet."
 
-#: ../pro/smime-email-encryption.rst:17
+#: ../pro/smime.rst:17
 msgid ""
 "If you are in doubt which one to choose, you should use OpenPGP, see "
 "`here <https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__. "
@@ -618,7 +618,7 @@ msgstr ""
 "encryption.html>`__. Diese Seite beschreibt die Verwendung der S/MIME-E"
 "-Mail-Verschlüsselung."
 
-#: ../pro/smime-email-encryption.rst:19
+#: ../pro/smime.rst:19
 msgid ""
 "You need to purchase a S/MIME certificate or may already got one by your "
 "company. Furthermore, you need to install `OpenSC "
@@ -636,7 +636,7 @@ msgstr ""
 "können macOS- und Windows-Benutzer die Installationsdateien von der Seite"
 " `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ herunterladen."
 
-#: ../pro/smime-email-encryption.rst:21
+#: ../pro/smime.rst:21
 msgid ""
 "**Note: Windows users with 64-bit system (standard) need to install both,"
 " the 32-bit and the 64-bit version of OpenSC!**"
@@ -644,11 +644,11 @@ msgstr ""
 "**Hinweis: Windows-Benutzer mit 64-Bit-System (Standard) müssen sowohl "
 "die 32-Bit- als auch die 64-Bit-Version von OpenSC installieren!**"
 
-#: ../pro/smime-email-encryption.rst:24
+#: ../pro/smime.rst:24
 msgid "Import Existing Key and Certificate"
 msgstr "Vorhandenen Schlüssel und Zertifikat importieren"
 
-#: ../pro/smime-email-encryption.rst:26
+#: ../pro/smime.rst:26
 msgid ""
 "The following instructions are based on the `wiki of OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__. We will assume, "
@@ -661,7 +661,7 @@ msgstr ""
 "erhalten haben. Bitte schauen Sie auf der Wiki-Seite nach, ob Sie eine "
 "separate Schlüssel- und Zertifikatsdatei erhalten haben."
 
-#: ../pro/smime-email-encryption.rst:28
+#: ../pro/smime.rst:28
 msgid ""
 "To open the Windows command line please push the Windows-key and R-key. "
 "Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on"
@@ -674,7 +674,7 @@ msgstr ""
 " GNU/Linux verwenden Sie bitte die Anwendungssuche (z. B. spotlight unter"
 " macOS)."
 
-#: ../pro/smime-email-encryption.rst:30
+#: ../pro/smime.rst:30
 msgid ""
 "To make these commands as simple as possible, the .p12 file needs to be "
 "in your home folder. On Windows this is usually ‘C:\\Users\\yourusername’"
@@ -690,7 +690,7 @@ msgstr ""
 "speichern, müssen Sie den Pfad in den folgenden Befehlen anpassen. Bitte "
 "schließen Sie den Nitrokey an, bevor Sie die Befehle absenden."
 
-#: ../pro/smime-email-encryption.rst:32
+#: ../pro/smime.rst:32
 msgid ""
 "Assuming that your key-certificate file reads ‘myprivate.p12’ the "
 "commands for Windows looks like this:"
@@ -698,11 +698,11 @@ msgstr ""
 "Unter der Annahme, dass Ihre Schlüssel-Zertifikat-Datei \"myprivate.p12\""
 " lautet, sehen die Befehle für Windows wie folgt aus:"
 
-#: ../pro/smime-email-encryption.rst:39
+#: ../pro/smime.rst:39
 msgid "and on macOS and GNU/Linux it will be"
 msgstr "und unter macOS und GNU/Linux wird es"
 
-#: ../pro/smime-email-encryption.rst:46
+#: ../pro/smime.rst:46
 msgid ""
 "The two commands copy the key-certificate pair to the slot 2 (needed for "
 "decrypting emails) and slot 3 (needed for signing). The output looks on "
@@ -712,7 +712,7 @@ msgstr ""
 "(wird zum Entschlüsseln von E-Mails benötigt) und Slot 3 (wird zum "
 "Signieren benötigt). Die Ausgabe sieht auf beiden Systemen etwa so aus:"
 
-#: ../pro/smime-email-encryption.rst:53
+#: ../pro/smime.rst:53
 msgid ""
 "Please note that there will be error messages that can be safely ignored "
 "(see output example above). You now have the key-certificate pair loaded "
@@ -722,11 +722,11 @@ msgstr ""
 "ignorieren können (siehe Ausgabebeispiel oben). Sie haben nun das "
 "Schlüssel-Zertifikat-Paar auf den Nitrokey geladen."
 
-#: ../pro/smime-email-encryption.rst:58
+#: ../pro/smime.rst:58
 msgid "You can find further information about the usage on these pages:"
 msgstr "Weitere Informationen zur Verwendung finden Sie auf diesen Seiten:"
 
-#: ../pro/smime-email-encryption.rst:60
+#: ../pro/smime.rst:60
 msgid ""
 "for using `S/MIME encryption on Thunderbird "
 "<https://docs.nitrokey.com/pro/smime-email-encryption-with-"
@@ -736,7 +736,7 @@ msgstr ""
 "<https://docs.nitrokey.com/pro/smime-email-encryption-with-"
 "thunderbird.html>`__"
 
-#: ../pro/smime-email-encryption.rst:63
+#: ../pro/smime.rst:63
 msgid ""
 "for using `S/MIME encryption on Outlook <https://docs.nitrokey.com/pro"
 "/smime-email-encryption-with-outlook.html>`__"
@@ -745,7 +745,7 @@ msgstr ""
 "<https://docs.nitrokey.com/pro/smime-email-encryption-with-"
 "outlook.html>`__"
 
-#: ../pro/smime-email-encryption.rst:66
+#: ../pro/smime.rst:66
 msgid ""
 "for using `Evolution <https://help.gnome.org/users/evolution/stable/mail-"
 "encryption.html.en>`__, an email client for the Gnome Desktop on Linux "
@@ -756,11 +756,11 @@ msgstr ""
 "encryption.html.en>`__, einem E-Mail-Client für den Gnome Desktop auf "
 "Linux-Systemen"
 
-#: ../pro/smime-email-encryption.rst:71
+#: ../pro/smime.rst:71
 msgid "Troubleshooting"
 msgstr "Fehlersuche"
 
-#: ../pro/smime-email-encryption.rst:73
+#: ../pro/smime.rst:73
 msgid ""
 "On Windows: Did you install **both**, the 32-bit and the 64-bit version "
 "of OpenSC?"
@@ -768,7 +768,7 @@ msgstr ""
 "Unter Windows: Haben Sie **beide**, die 32-Bit und die 64-Bit Version von"
 " OpenSC installiert?"
 
-#: ../pro/smime-email-encryption.rst:76
+#: ../pro/smime.rst:76
 msgid ""
 "Nitrokey Storage 2: You need to install OpenSC in version 0.18 or higher."
 " You can find the files on the `OpenSC website "
@@ -781,6 +781,73 @@ msgstr ""
 "<https://github.com/OpenSC/OpenSC/releases>`__ für Windows- und macOS-"
 "Benutzer oder `hier <https://github.com/Nitrokey/opensc-build>`__ für "
 "Debian/Ubuntu-Benutzer."
+
+#: ../pro/smime-thunderbird.rst:2
+msgid "S/MIME Email Encryption with Thunderbird"
+msgstr ""
+
+#: ../pro/smime-thunderbird.rst:11
+msgid ""
+"If you do not have a S/MIME key-certificate pair installed on your "
+"Nitrokey yet or if you did not installed OpenSC, please look at `this "
+"page <https://docs.nitrokey.com/pro/smime-email-encryption.html>`__ "
+"first."
+msgstr ""
+
+#: ../pro/smime-thunderbird.rst:13
+msgid ""
+"You need to have `OpenSC installed "
+"<https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While "
+"GNU/Linux users usually can install OpenSC over the package manager (e.g."
+" ``sudo apt update && sudo apt install opensc`` on Ubuntu), macOS and "
+"Windows users can download the installation files from OpenSC directly."
+msgstr ""
+
+#: ../pro/smime-outlook.rst:17 ../pro/smime-thunderbird.rst:17
+#, fuzzy
+msgid ""
+"Windows users with 64-bit system (standard) need to install both, the "
+"32-bit and the 64-bit version of OpenSC!"
+msgstr ""
+"**Hinweis: Windows-Benutzer mit 64-Bit-System (Standard) müssen sowohl "
+"die 32-Bit- als auch die 64-Bit-Version von OpenSC installieren!**"
+
+#: ../pro/smime-thunderbird.rst:21
+msgid "Settings in Thunderbird"
+msgstr ""
+
+#: ../pro/smime-thunderbird.rst:23
+msgid ""
+"Before you can use the Nitrokey in Thunderbird you have to activate "
+"S/MIME encryption in the account settings. You can achieve this by "
+"clicking on the menu and go to ‘Preferences’ -> ‘Account Settings’ and "
+"clicking on ‘Security’ in the account settings window."
+msgstr ""
+
+#: ../pro/smime-thunderbird.rst:30
+msgid ""
+"Click on “Security Devices” to import the right PCKS11 module. Click on "
+"“Load” on the right-hand side. Now give the Module a name (like “OpenSC "
+"Module”) and click on “Browse” to choose the location of the Module (see "
+"below)."
+msgstr ""
+
+#: ../pro/smime-thunderbird.rst:37
+msgid ""
+"On Windows the right file lays under “C:\\Windows\\System32\\opensc-"
+"pkcs11.dll”. On macOS and GNU/Linux the file should be in “/lib/pkcs11"
+"/opensc-pkcs11.so” or “/usr/lib/pkcs11/opensc-pkcs11.so” or alike. Press "
+"“OK” twice and you are back in security section of the account settings. "
+"Now you can actually choose a certificate on the upper part of the "
+"window. You should get asked for a PIN to unlock your Nitrokey. Please "
+"type in your User PIN."
+msgstr ""
+
+#: ../pro/smime-thunderbird.rst:47
+msgid ""
+"When composing an email you can now choose to encrypt and sign the "
+"message."
+msgstr ""
 
 #: ../hsm/mac/product_platform_heading.rst:3
 msgid "(Nitrokey HSM 2 - macOS)"
@@ -802,6 +869,60 @@ msgstr ""
 "/sc-hsm-starterkit.zip>`__ Treiber (`Quelle "
 "<https://github.com/CardContact/sc-hsm-embedded>`__)."
 
+#: ../pro/smime-outlook.rst:2
+msgid "S/MIME Email Encryption with Outlook"
+msgstr ""
+
+#: ../pro/smime-outlook.rst:11
+msgid ""
+"If you do not have a S/MIME key-certificate pair installed on your "
+"Nitrokey yet, please look at `this page <https://docs.nitrokey.com/pro"
+"/smime-email-encryption.html>`__ first."
+msgstr ""
+
+#: ../pro/smime-outlook.rst:13
+msgid ""
+"You need to have OpenSC installed on your System. Please have a look at "
+"the `wiki page of the OpenSC project "
+"<https://github.com/OpenSC/OpenSC/wiki>`__."
+msgstr ""
+
+#: ../pro/smime-outlook.rst:21
+msgid "Settings in Outlook"
+msgstr ""
+
+#: ../pro/smime-outlook.rst:23
+msgid ""
+"Before you can use the Nitrokey in Outlook you have to activate S/MIME "
+"encryption. You can achieve this by clicking on to ‘Start’ -> ‘Options’ "
+"and clicking on ‘Trust Center’ in the options window. In section ‘Email "
+"Security’ you can choose your S/MIME identity. Your certificate should "
+"already be recognized by Outlook."
+msgstr ""
+
+#: ../pro/smime-outlook.rst:36
+msgid ""
+"When composing a mail you can now choose to encrypt and sign the message "
+"in the ‘Options’ ribbon of the compose window."
+msgstr ""
+
+#: ../pro/smime-outlook.rst:43
+msgid ""
+"Outlook will only encrypt message to mail addresses which are saved in "
+"your address book. So make sure, that the persons you want to write an "
+"encrypted mail to have an entry in Outlook’s contacts. You can ask the "
+"person to write you a signed mail, so that you can import the certificate"
+" information."
+msgstr ""
+
+#: ../pro/smime-outlook.rst:45
+msgid ""
+"Depending on your certificate or the certificate of your partners you may"
+" have to import a so-called root certificate. This is the certificate of "
+"the party which issued the certificate you or your partner uses. You "
+"should usually got informed if this is necessary."
+msgstr ""
+
 #: ../hsm/windows/product_platform_heading.rst:3
 msgid "(Nitrokey HSM 2 - Windows)"
 msgstr "(Nitrokey HSM 2 - Windows)"
@@ -810,11 +931,11 @@ msgstr "(Nitrokey HSM 2 - Windows)"
 msgid "Nitrokey HSM with Windows"
 msgstr "Nitrokey HSM mit Windows"
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:2
+#: ../pro/smart-policy.rst:2
 msgid "Login to Windows Domain Computers With MS Active Directory"
 msgstr "Anmeldung an Windows-Domänencomputern mit MS Active Directory"
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:8
+#: ../pro/smart-policy.rst:8
 msgid ""
 "Download and install the latest `OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki>`__."
@@ -822,7 +943,7 @@ msgstr ""
 "Laden Sie das neueste `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ "
 "herunter und installieren Sie es."
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:10
+#: ../pro/smart-policy.rst:10
 msgid ""
 "Use a text editor to add the following settings to *C:\\Program "
 "Files:\\OpenSC Project\\OpenSC\\opensc.conf*."
@@ -830,7 +951,7 @@ msgstr ""
 "Verwenden Sie einen Texteditor, um die folgenden Einstellungen zu "
 "*C:\\Programme:\\OpenSC-Projekt\\OpenSC\\opensc.conf* hinzuzufügen."
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:49
+#: ../pro/smart-policy.rst:49
 msgid ""
 "Open a command terminal and enter “regedit”. Use regedit to import `this "
 "file <https://www.nitrokey.com/sites/default/files/nk-hsm.reg>`__."
@@ -840,7 +961,7 @@ msgstr ""
 "<https://www.nitrokey.com/sites/default/files/nk-hsm.reg>`__ zu "
 "importieren."
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:52
+#: ../pro/smart-policy.rst:52
 msgid ""
 "Now you can enroll Nitrokeys for your users managed in Microsoft Active "
 "Directory. You may either use Microsoft PKI, `gpgsm "
@@ -856,7 +977,7 @@ msgstr ""
 "<http://www.mysmartlogon.com/products/smart-policy.html>`__ verwenden. "
 "Die folgenden Schritte beschreiben die Verwendung von Smart Policy."
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:58
+#: ../pro/smart-policy.rst:58
 msgid ""
 "`Download "
 "<http://download.mysmartlogon.com/SmartPolicyv2/SmartPolicy%20-%20Stage%203.exe>`__"
@@ -865,27 +986,27 @@ msgstr ""
 "<http://download.mysmartlogon.com/SmartPolicyv2/SmartPolicy%20-%20Stage%203.exe>`__"
 " herunterladen und Smart Policy installieren."
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:60
+#: ../pro/smart-policy.rst:60
 msgid "Select “Read a smart card”"
 msgstr "Wählen Sie \"Smartcard einlesen\""
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:67
+#: ../pro/smart-policy.rst:67
 msgid "Select the certificate, mapping, and user."
 msgstr "Wählen Sie das Zertifikat, das Mapping und den Benutzer aus."
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:74
+#: ../pro/smart-policy.rst:74
 msgid "Verify the device status via CRL."
 msgstr "Überprüfen Sie den Gerätestatus über CRL."
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:81
+#: ../pro/smart-policy.rst:81
 msgid "Choose a Group Policy Object (GPO)."
 msgstr "Wählen Sie ein Gruppenrichtlinienobjekt (GPO)."
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:88
+#: ../pro/smart-policy.rst:88
 msgid "Confirm applying the mapping."
 msgstr "Bestätigen Sie die Anwendung des Mappings."
 
-#: ../pro/login-to-windows-domain-computers-with-ms-active-directory.rst:95
+#: ../pro/smart-policy.rst:95
 msgid ""
 "From now on, when logging on to your Windows computer you need to connect"
 " the Nitrokey and enter your PIN."
