@@ -37,11 +37,11 @@ Usage
 1. Start Viscosity and create a new connection “openVPN” (you can name
    it as you wish)
 
-|image1|
+.. image:: ./images/viscosity/viscosity-1.jpg
 
 2. Right click on the connection and click edit
 
-|image2|
+.. image:: ./images/viscosity/viscosity-2.jpg
 
 3. Add your server’s IP address and configure the port according to your
    configuration.
@@ -53,7 +53,7 @@ Usage
 
 Optional: Select the ``ta.key`` in the ``TLS-Auth`` section
 
-|image3|
+.. image:: ./images/viscosity/viscosity-3.jpg
 
 6. Click the Add button next to the Providers field and select the
    ``PKCS#11`` module for your Nitrokey. Multiple providers can be
@@ -66,7 +66,7 @@ On Windows, the most common location for libraries is either in ``C:\Program Fil
 
 7. Choose a retrieval method from the Retrieval drop down menu
 
-|image4|
+.. image:: ./images/viscosity/viscosity-4.jpg
 
 -  If only one Nitrokey will ever be used on this computer, select
    ``Use certificate name below``. If the Nitrokey is currently
@@ -98,8 +98,3 @@ Notes
 -  We are considering the usage of
    `Pritunl <https://client.pritunl.com/>`__ as a free and open
    alternative.
-
-.. |image1| image:: ./images/viscosity/viscosity-1.jpg
-.. |image2| image:: ./images/viscosity/viscosity-2.jpg
-.. |image3| image:: ./images/viscosity/viscosity-3.jpg
-.. |image4| image:: ./images/viscosity/viscosity-4.jpg
