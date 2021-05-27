@@ -28,22 +28,22 @@ If you want to login to you computer using `Nitrokey Pro
 1. In the lower left corner click on ``Show Applications`` and type
    settings in the search bar as following:
 
-|image1|
+.. image:: /fido2/linux/images/fidou2f-1.png
 
 2. Scroll down in the right bar to ``Users``
 
-|image2|
+.. image:: /fido2/linux/images/fidou2f-2.png
 
 3. In the left corner click on ``Unlock`` and that would prompt for your
    password
 4. Select ``Administrator`` and enter the user name and password of your
    choice
 
-|image3|
+.. image:: /fido2/linux/images/fidou2f-4.png
 
 5. Once you finish Step 4 you should be done
 
-|image4|
+.. image:: /fido2/linux/images/fidou2f-5.png
 
 CLI method
 ''''''''''
@@ -205,7 +205,7 @@ You can test the configuration by typing ``sudo ls`` in the terminal. You should
 ``bash nitrouser@nitrouser:~$ sudo ls $ sudo ls [sudo] password for <username>:  Please touch the device.``
 You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/replug yout Nitrokey FIDO2 and type your password:
 
-|image5|
+.. image:: /fido2/linux/images/u2f-fido-pam-2.png
 
 Usage
 -----
@@ -266,9 +266,3 @@ configuration line, you may see the last section of this guide to understand the
    -  You will also lose the ability to use ``sudo`` if you set up
       Central Authentication Mapping *and* used the ``required`` or
       ``requisite`` flags.
-
-.. |image1| image:: /fido2/linux/images/fidou2f-1.png
-.. |image2| image:: /fido2/linux/images/fidou2f-2.png
-.. |image3| image:: /fido2/linux/images/fidou2f-4.png
-.. |image4| image:: /fido2/linux/images/fidou2f-5.png
-.. |image5| image:: /fido2/linux/images/u2f-fido-pam-2.png

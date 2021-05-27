@@ -86,17 +86,17 @@ Once, you run the script with the OpenPGP public key as argument, it automatical
 
 First you will be prompted for the ``User PIN``
 
-|image1|
+.. image:: /pro/linux/images/luks_1.png
 
 Once you unlock the Nitrokey, you will be prompted for your ``OLD passphrase``. It is the passphrase you entered to encrypt your volume at intallation.
 
-|image2|
+.. image:: /pro/linux/images/luks_2.png
 
 Notice: This is a fall-back alternative in case you lose your Nitrokey, or if it’s unavailable. So far, it was not tested, and users must be aware of the risk of getting locked out of their computer, if the fall-back method does not work.
 
 Once you enter the passphrase, the script finishes the setup in about one minute. Do not interrupt the script, or you might get locked out of your computer after reboot.
 
-|image3|
+.. image:: /pro/linux/images/luks_3.png
 
 Done!
 
@@ -107,14 +107,9 @@ Usage
 
 After reboot you should be prompted for your User PIN
 
-|image4|
+.. image:: /pro/linux/images/luks_5.png
 
 Enter your User PIN to unlock the drive
 
-|image5|
+.. image:: /pro/linux/images/luks_6.png
 
-.. |image1| image:: /pro/linux/images/luks_1.png
-.. |image2| image:: /pro/linux/images/luks_2.png
-.. |image3| image:: /pro/linux/images/luks_3.png
-.. |image4| image:: /pro/linux/images/luks_5.png
-.. |image5| image:: /pro/linux/images/luks_6.png

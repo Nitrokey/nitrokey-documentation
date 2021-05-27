@@ -39,7 +39,7 @@ your Nitrokey. If the Nitrokey is plugged in and the system has not been
 modified, the following screen will appear when the NitroPad is turned
 on.
 
-|image1|
+.. image:: ../images/NitroPad-boot-process_0.jpeg
 
 The box marked in red contains the information that the BIOS has not
 been changed and that the shared secret of the NitroPad and the Nitrokey
@@ -53,7 +53,7 @@ If the information on the NitroPad does not match the information on the
 Nitrokey, the background would turn red and the message “Invalid Code”
 would appear. This could indicate that manipulation has taken place.
 
-|image2|
+.. image:: ../images/NitroPad-boot-process-bad.jpeg
 
 How the boot process may look like if the system has been changed (for
 example after an update) and what error messages may otherwise occur is
@@ -76,8 +76,9 @@ changed by you:
    above).
 
 2. Next, the system will prompt you to enter the passphrase to decrypt
-   the hard disk. The passphrase is initially “PleaseChangeMe”. |image3|
-
+   the hard disk. The passphrase is initially “PleaseChangeMe”. 
+   .. image:: ./images/UbuntuDiskPassword.png
+   
 3. The system will then guide you through the process of creating a user
    account. After that you should have successfully booted the system
    and could already use it normally.
@@ -99,7 +100,7 @@ operating system has updated important components, you will be warned
 the next time you boot the NitroPad. This could look like this, for
 example:
 
-|image4|
+.. image:: ../images/NitroPad-error-mismatch.jpeg
 
 That’s why it’s important to restart your NitroPad under controlled
 conditions after a system update. Only when the new status has been
@@ -124,9 +125,11 @@ steps:
    !!!!!Starting recovery shell 
    /boot # 
 
-1. Restart your Laptop and go to Options. |image5|
+1. Restart your Laptop and go to Options. 
+   .. image:: ../images/boot-menu.jpg
 
-2. Select “Update Checksums and sign all files on /boot”. |image6|
+2. Select “Update Checksums and sign all files on /boot”. 
+   .. image:: ../images/options.jpg
 
 3. After that, please follow `these instructions from step 3
    onwards `system update <system-update.html>`__.
@@ -151,10 +154,3 @@ screen:
 
 and follow the on-screen guide. After that the secret and counter should
 be both reset to a new value.
-
-.. |image1| image:: ../images/NitroPad-boot-process_0.jpeg
-.. |image2| image:: ../images/NitroPad-boot-process-bad.jpeg
-.. |image3| image:: ./images/UbuntuDiskPassword.png
-.. |image4| image:: ../images/NitroPad-error-mismatch.jpeg
-.. |image5| image:: ../images/boot-menu.jpg
-.. |image6| image:: ../images/options.jpg
