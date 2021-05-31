@@ -1,0 +1,1 @@
+.. include:: ../../pro/gpa.rst
