@@ -20,12 +20,12 @@ Hardware
 --------
 **Q:** Why must I not connect external hard-drives without an external power-supply to my NextBox?
   The Raspberry Pi 4 Model B can only supply 1.2A of power through USB (see
-  `RPi Power Supply`_). The internal harddrive is already connected and powered
-  via USB and pulls ~1.0A. Thus connecting another harddrive without an
+  `RPi Power Supply`_). The internal hard-drive is already connected and powered
+  via USB and pulls ~1.0A. Thus connecting another hard-drive without an
   external power supply can lead to an unreliable power supply for the internal
-  harddrive, thus potential data loss.
+  hard-drive, thus potential data loss.
 
-**Q:** Why does my harddrive not show up after plugging it in?
+**Q:** Why does my hard-drive not show up after plugging it in?
   Please make sure that you are using one of the supported filesystems (e.g., ext, xfs) and you
   have mounted your hard-drive within *Storage Management*.
 
@@ -38,12 +38,17 @@ Hardware
 **Q:** What functions does the additional "shield" provide?
   As of now the shield does provide a :doc:`status LED <technical/led-colors>`, a hardware button
   to :doc:`factory reset <technical/factory-reset>` and an additional USB Type-C connector on the 
-  same side as the ethernet port for power supply exclusively.
+  same side as the Ethernet port for power supply exclusively.
 
 **Q:** Is the NextBox hardware extendable/replaceable?
   Yes, all NextBox components can be easily replaced. None of the components are glued or somehow
-  permanently assembled. Using a crosshead/Phillips screwdriver you can disassemble and re-assemble
+  permanently assembled. Using a Phillips screwdriver you can disassemble and re-assemble
   the NextBox easily. Keep in mind that you are doing this at your own risk.
+
+**Q:** What are the two USB Type-C ports used for?
+  Both USB Type-C ports are exclusively for power supply and can not be used for data transfer. 
+  Do not connect two power supplies, please just use one of both to power your NextBox.
+
 
 
 Software
