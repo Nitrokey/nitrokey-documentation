@@ -11,6 +11,5 @@ NextBox
    backup/index
    technical/index
    faq 
-   troubleshooting
 
 
