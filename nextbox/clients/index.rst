@@ -9,8 +9,7 @@ Choose your operating system:
    :maxdepth: 1
    :glob:
 
-   Android <android>
-   iOS <ios>
+   Android/iOS <android>
    Windows <windows>
    macos <macos>
    Linux <linux>

@@ -1,12 +1,11 @@
-Connect Your Android Smartphone 
-===============================
-
+Connect Your Android or iOS Smartphone 
+======================================
 
 
 Connect the NextBox with your smartphone
 ----------------------------------------
 
-1. Download the Nextcloud app from the app store.
+1. Download the Nextcloud app from the app store or play store.
 
 .. figure:: /nextbox/images/nextbox_getting_started/sp_1.jpg
    :alt: imgsp1
