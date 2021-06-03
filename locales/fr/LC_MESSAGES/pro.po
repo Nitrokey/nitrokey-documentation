@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-02 14:30+0200\n"
+"POT-Creation-Date: 2021-06-03 16:11+0200\n"
 "PO-Revision-Date: 2021-06-02 13:02+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: French <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-pro/fr/>\n"
 "Language: fr\n"
+"Language-Team: French <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-pro/fr/>\n"
+"Plural-Forms: nplurals=2; plural=n > 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../pro/2fa-google.rst:2
@@ -1229,10 +1228,10 @@ msgid ""
 "UUID referred inside `/etc/crypttab` is the designated partition by "
 "checking the symbolic link inside `/dev/disks/by-uuid/`."
 msgstr ""
-"En général, cela devrait être quelque chose comme `nvme0n1p3_crypt` (pour "
-"NitroPC) ou `sda3_crypt` (pour NitroPads).  Vous pouvez et devriez vérifier "
-"que l'UUID mentionné dans `/etc/crypttab` est la partition désignée en "
-"vérifiant le lien symbolique dans `/dev/disks/by-uuid/`."
+"En général, cela devrait être quelque chose comme `nvme0n1p3_crypt` (pour"
+" NitroPC) ou `sda3_crypt` (pour NitroPads).  Vous pouvez et devriez "
+"vérifier que l'UUID mentionné dans `/etc/crypttab` est la partition "
+"désignée en vérifiant le lien symbolique dans `/dev/disks/by-uuid/`."
 
 #: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:99
 msgid ""
@@ -1264,8 +1263,9 @@ msgid ""
 "installation."
 msgstr ""
 "Une fois que vous avez déverrouillé la Nitrokey, il vous sera demandé de "
-"saisir votre \"ancienne phrase de passe\". Il s'agit de la phrase de passe "
-"que vous avez entrée pour crypter votre volume lors de l'installation."
+"saisir votre \"ancienne phrase de passe\". Il s'agit de la phrase de "
+"passe que vous avez entrée pour crypter votre volume lors de "
+"l'installation."
 
 #: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:120
 msgid ""
@@ -1274,10 +1274,11 @@ msgid ""
 "the risk of getting locked out of their computer, if the fall-back method"
 " does not work."
 msgstr ""
-"Il s'agit d'une solution de repli au cas où vous perdriez votre Nitrokey ou "
-"si elle n'était pas disponible. Jusqu'à présent, elle n'a pas été testée, et "
-"les utilisateurs doivent être conscients du risque d'être bloqués hors de "
-"leur ordinateur, si la méthode de repli ne fonctionne pas."
+"Il s'agit d'une solution de repli au cas où vous perdriez votre Nitrokey "
+"ou si elle n'était pas disponible. Jusqu'à présent, elle n'a pas été "
+"testée, et les utilisateurs doivent être conscients du risque d'être "
+"bloqués hors de leur ordinateur, si la méthode de repli ne fonctionne "
+"pas."
 
 #: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:125
 msgid ""
@@ -1324,15 +1325,15 @@ msgid ""
 " to call *cryptsetup* directly like this:"
 msgstr ""
 "Une fois cette configuration effectuée, vous ne devez plus utiliser "
-"l'utilitaire *disques* (gnome) pour changer la phrase de passe (de secours). "
-"La manière correcte de le faire est d'appeler directement *cryptsetup* comme "
-"ceci :"
+"l'utilitaire *disques* (gnome) pour changer la phrase de passe (de "
+"secours). La manière correcte de le faire est d'appeler directement "
+"*cryptsetup* comme ceci :"
 
 #: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:162
 msgid "With `nvme0n1p3` being the partition you set up the keys for."
 msgstr ""
-"Avec `nvme0n1p3` étant la partition pour laquelle vous avez configuré les "
-"clés."
+"Avec `nvme0n1p3` étant la partition pour laquelle vous avez configuré les"
+" clés."
 
 #: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:165
 msgid "Use Multiple Keys"
@@ -1344,38 +1345,51 @@ msgid ""
 "is able to unlock the LUKS drive independently. Just export multiple "
 "public keys and also *pass multiple keys* to the setup script like this:"
 msgstr ""
-"Il est facile d'utiliser plusieurs clés de sécurité (matérielles) de sorte "
-"que chacune d'entre elles soit capable de déverrouiller le lecteur LUKS "
-"indépendamment. Il suffit d'exporter plusieurs clés publiques et de *passer "
-"plusieurs clés* au script de configuration comme ceci :"
+"Il est facile d'utiliser plusieurs clés de sécurité (matérielles) de "
+"sorte que chacune d'entre elles soit capable de déverrouiller le lecteur "
+"LUKS indépendamment. Il suffit d'exporter plusieurs clés publiques et de "
+"*passer plusieurs clés* au script de configuration comme ceci :"
 
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:176
+#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:177
+msgid "Set Cardholder Name"
+msgstr ""
+
+#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:179
+msgid ""
+"During the PIN entry on boot for decryption of the LUKS root partition a "
+"cardholder is presented to the user, to set this please use ``$ gpg "
+"--edit-card`` and inside the prompt type ``admin`` and ``name`` to set "
+"the cardholder for the OpenPGP Card (Nitrokey Storage 2 or Nitrokey Pro "
+"2)."
+msgstr ""
+
+#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:185
 msgid "Replace/Delete Keys"
 msgstr "Remplacer/supprimer des touches"
 
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:178
+#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:187
 msgid ""
 "It is not possible to add/remove keys directly. Therefore you need to "
 "delete/remove the old setup and re-run the setup with the designated "
 "key(s):"
 msgstr ""
-"Il n'est pas possible d'ajouter/supprimer des clés directement. Vous devez "
-"donc supprimer/supprimer l'ancienne configuration et relancer la "
+"Il n'est pas possible d'ajouter/supprimer des clés directement. Vous "
+"devez donc supprimer/supprimer l'ancienne configuration et relancer la "
 "configuration avec la ou les clés désignées :"
 
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:182
+#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:191
 msgid ""
 "Remove the keyfile (path, if you used the script above) from luks-device "
 "(*nvme0n1p3*):"
 msgstr ""
-"Supprimez le fichier clé (chemin, si vous avez utilisé le script ci-dessus) "
-"de luks-device (*nvme0n1p3*) :"
+"Supprimez le fichier clé (chemin, si vous avez utilisé le script ci-"
+"dessus) de luks-device (*nvme0n1p3*) :"
 
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:188
+#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:197
 msgid "Remove the keyfile itself:"
 msgstr "Supprime le fichier clé lui-même :"
 
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:194
+#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:203
 msgid "Re-run setup above."
 msgstr "Ré-exécutez la configuration ci-dessus."
 
@@ -5484,3 +5498,4 @@ msgstr ""
 
 #~ msgid "You might use ``sudo`` if required."
 #~ msgstr "Vous pouvez utiliser ``sudo`` si nécessaire."
+
