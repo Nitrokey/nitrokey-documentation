@@ -172,6 +172,15 @@ setup script like this:
 
    $ sudo ./smartcard-key-luks nvme0n1p3_crypt pubkey-1.asc pubkey-2.asc 
 
+
+Set Cardholder Name
+^^^^^^^^^^^^^^^^^^^
+
+During the PIN entry on boot for decryption of the LUKS root partition a cardholder is presented
+to the user, to set this please use ``$ gpg --edit-card`` and inside the prompt type ``admin`` and
+``name`` to set the cardholder for the OpenPGP Card (Nitrokey Storage 2 or Nitrokey Pro 2).
+
+
 Replace/Delete Keys
 ^^^^^^^^^^^^^^^^^^^
 
