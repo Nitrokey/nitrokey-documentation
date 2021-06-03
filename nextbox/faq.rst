@@ -76,10 +76,16 @@ Software
   NextBox using ssh and you can do with the system whatever you want. Obviously we will only provide
   support for the NextBox stock configuration.
 
+**Q:** What is the correct WebDAV URL?
+  The full URL to use for WebDAV is: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path``
+
 **Q:** Can I access my Nextcloud instance using WebDAV?
   Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for 
   unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` 
   while making sure that the ``davfs2`` package is installed.
+
+
+
 
 .. _nextbox.local: http://nextbox.local
 .. _External storage support: https://docs.nextcloud.com/server/20/admin_manual/configuration_files/external_storage_configuration_gui.html
