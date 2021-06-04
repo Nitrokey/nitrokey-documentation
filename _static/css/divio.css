@@ -269,13 +269,95 @@ a:visited {
 	background-color: #ecf1f8;
 }
 
+.wy-plain-list-decimal:first-of-type,
+.rst-content .section ol:first-of-type,
+.rst-content ol.arabic:first-of-type,
+article ol:first-of-type {
+    counter-reset: li;
+}
+
+.wy-plain-list-decimal,
+.rst-content .section ol,
+.rst-content ol.arabic,
+article ol {
+    list-style: none !important;
+}
+
+.wy-plain-list-decimal ul,
+.rst-content .section ol ul,
+.rst-content ol.arabic ul,
+article ol ul {
+    list-style: disc;
+}
+.wy-plain-list-decimal ul li,
+.rst-content .section ol ul li,
+.rst-content ol.arabic ul li,
+article ol ul li {
+    padding: 0;
+}
+
+.wy-plain-list-decimal li ol,
+.rst-content .section ol li ol,
+.rst-content ol.arabic li ol,
+article ol li ol {
+    counter-reset: sub-li;
+}
+
 .wy-plain-list-decimal li,
 .rst-content .section ol li,
 .rst-content ol.arabic li,
 article ol li {
-    list-style: decimal;
-    margin-left: 1.3em;
-    margin-bottom: .6em;
+    margin-left: 0;
+    margin-bottom: 1em;
+    position: relative;
+    padding: 0 0 0 30px;
+    font-size: 1em;
+}
+
+.wy-plain-list-decimal > li::marker ,
+.rst-content .section ol > li::marker ,
+.rst-content ol.arabic > li::marker ,
+article ol > li::marker {
+    content: '';
+}
+
+.wy-plain-list-decimal li:before,
+.rst-content .section ol li:before,
+.rst-content ol.arabic li:before,
+article ol li:before {
+    content: counter(li) ".";
+    counter-increment: li;
+    position: absolute;
+    left: 0;
+    height: 1em;
+    width: 1.5em;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: right;
+    line-height: 1.7em;
+    text-align: left;
+}
+
+.wy-plain-list-decimal li ul li:before,
+.rst-content .section ol li ul li:before,
+.rst-content ol.arabic li ul li:before,
+article ol li ul li:before {
+    display: none;
+}
+
+.wy-plain-list-decimal li ol li,
+.rst-content .section ol li ol li,
+.rst-content ol.arabic li ol li,
+article ol li ol li {
+    padding: 0 0 0 40px;
+}
+
+.wy-plain-list-decimal li ol li:before ,
+.rst-content .section ol li ol li:before ,
+.rst-content ol.arabic li ol li:before ,
+article ol li ol li:before {
+    content: counter(li) ".";
 }
 
 .wy-plain-list-disc li,
