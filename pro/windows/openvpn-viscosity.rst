@@ -14,7 +14,7 @@ Prerequisites
 
 For this guide, you will need an OpenVPN remote server installed and configured for clients. For the purpose of this document, we have used OpenVPN 2.49 installed on a Debian 10 server.
 
-To read about how to configure OpenVPN to authenticate with Nitrokey Pro, you might consult the following `documentation <https://docs.nitrokey.com/storage/linux/openvpn-configuration-with-easyrsa.html>`__, as we will just cover the way to configure the Viscosity client in this guide.
+To read about how to configure OpenVPN to authenticate with Nitrokey Pro, you might consult the following `documentation <https://docs.nitrokey.com/storage/linux/openvpn-easyrsa.html>`__, as we will just cover the way to configure the Viscosity client in this guide.
 
 You will also need the following:
 
