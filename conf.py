@@ -261,3 +261,7 @@ epub_exclude_files = ['search.html']
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
+
+
+# Extra Path
+html_extra_path = ['_root_dir_static_files/.htaccess']
