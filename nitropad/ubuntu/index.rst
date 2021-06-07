@@ -77,6 +77,7 @@ changed by you:
 
 2. Next, the system will prompt you to enter the passphrase to decrypt
    the hard disk. The passphrase is initially “PleaseChangeMe”. 
+   
    .. image:: ./images/UbuntuDiskPassword.png
    
 3. The system will then guide you through the process of creating a user
@@ -126,9 +127,11 @@ steps:
    /boot # 
 
 1. Restart your Laptop and go to Options. 
+
    .. image:: ../images/boot-menu.jpg
 
 2. Select “Update Checksums and sign all files on /boot”. 
+
    .. image:: ../images/options.jpg
 
 3. After that, please follow `these instructions from step 3

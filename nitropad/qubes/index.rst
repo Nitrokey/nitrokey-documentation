@@ -74,14 +74,19 @@ changed by you:
 1. Press Enter (“Default Boot”) after booting the system, provided the
    NitroPad has not shown any errors and the Nitrokey is lit green (see
    above).
+   
 2. Next, the system will prompt you to enter the passphrase to decrypt
    the hard disk. The passphrase is initially “PleaseChangeMe”. 
+   
    .. image:: ./images/QubesDiskPassword.jpg
+   
 3. The system will then guide you through the process of creating a user
    account. After that you should have successfully booted the system
    and could already use it normally.
+
 4. Open the pre-installed Nitrokey App and change the PINs of your
    Nitrokey as `described here </pro/change-user-and-admin-pin.html>`__.
+
 5. Change the passphrase for the hard disk encryption by running “sudo
    cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is different from your user acount's passphrase.
 
@@ -129,9 +134,11 @@ steps:
    /boot # 
 
 1. Restart your Laptop and go to Options. 
+
    .. image:: ../images/boot-menu.jpg
 
 2. Select “Update Checksums and sign all files on /boot”. 
+
    .. image:: ../images/options.jpg
 
 3. After that, please follow `these instructions from step 3
