@@ -6,6 +6,7 @@ NextBox
    :glob:
 
    gettingstarted
+   hardware-overview
    clients/index
    remote/index
    backup/index
