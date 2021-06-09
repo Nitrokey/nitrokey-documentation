@@ -1,4 +1,4 @@
-Enable Wifi (sys-net Settings)
+Enable Network Settings, e.g. Wifi
 ======================
 
 To be able to use Wifi, Bluetooth and other functionalities, "Settings" must be activated in "sys-net".
@@ -21,16 +21,16 @@ Fix sys-net Settings
 ~~~~~~~~~~~~~~~~~~~~
 
 1. Go to the sys-net Terminal.
-2. Open the bashrc-file with "sudo vim ~/bashrc".
+2. Open the bashrc-file with ``sudo vim ~/.bashrc``.
 
 .. figure:: ../images/qubes_settings/settings_1.png
    :alt: img2
 
-3. Press "i" to enable the editing and add "export XDG_CURRENT_DESKTOP=GNOME" to the file.
+3. Press "i" to enable the editing and add ``export XDG_CURRENT_DESKTOP=GNOME`` to the file.
 
 .. figure:: ../images/qubes_settings/settings_2.png
    :alt: img3
 
-4. Save the changes with ":wq".
+4. Save the changes with ``:wq``.
 5. Restart your NitroPad.
 6. Now Settings should be visible.
