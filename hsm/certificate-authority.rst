@@ -352,7 +352,7 @@ We need to find out the fully qualified PKCS#11 URI for your private key:
 
 In this instance, the fully qualified PKCS#11 URI is:
 
-.. code-block:: uri
+.. code-block:: bash
 
    pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private
 
@@ -557,7 +557,7 @@ We need to find out the fully qualified PKCS#11 URI for your private key:
 
 In this instance, the fully qualified PKCS#11 URI is:
 
-.. code-block:: uri
+.. code-block:: bash
 
    pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%BC%B4%8F%E9%B5%66%AE%61%89%1A%AB%BF%DE%6A%23%D4%FF%3A%B6%39;object=intermediate;type=private
 
