@@ -25,13 +25,6 @@ Requirements
 Instructions
 ------------
 
-### Preparation 
-
-1. Set up ``<backup_user>``
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-   This step is not necessary for the setup, however it is recommended as fall-back if you are testing user-specific instructions.
-
 GUI method
 ''''''''''
 
@@ -58,7 +51,10 @@ GUI method
 CLI method
 ''''''''''
 
-Create a backup user, and give it root privileges with these commands:
+1. Create a backup user and give it root privileges
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can do so by using these commands:
 
 .. code-block:: bash
 
@@ -133,9 +129,12 @@ Create ``.config/Nitrokey/`` under your home directory
 
 And plug your Nitrokey FIDO2. 
 
-### Configuration
+Once done with the preparation, we can start to configure the computer to use the Nitrokey FIDO2 for 2nd factor authentication at login and ``sudo``.
 
-Once done with the preparation, we can start to configure the computer to use the Nitrokey FIDO2 for 2nd factor authentication at login and ``sudo``. #### 5. Generate the U2F config file To generate the configuration file we will use the ``pamu2fcfg`` utility that comes with the ``libpam-u2f``. For convenience, we will directly write the output of the utility to the ``u2f_keys`` file under ``.config/Nitrokey``. First plug your Nitrokey FIDO2 (if you did not already), and enter the following command:
+5. Generate the U2F config file 
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+To generate the configuration file we will use the ``pamu2fcfg`` utility that comes with the ``libpam-u2f``. For convenience, we will directly write the output of the utility to the ``u2f_keys`` file under ``.config/Nitrokey``. First plug your Nitrokey FIDO2 (if you did not already), and enter the following command:
 
 .. code-block:: bash
 
@@ -233,7 +232,8 @@ The flags ``required`` and ``requisite`` provide a tighter access control, and w
 If you need more information about Control Flags in the ``PAM``
 configuration line, you may see the last section of this guide to understand the difference, and the implications of using each of them.
 
-#### PAM modules
+PAM modules
+''''''''''''''''''''''''
 
 There are several PAM modules files that can be modified according to your needs:
 
@@ -246,11 +246,12 @@ There are several PAM modules files that can be modified according to your needs
    login, you might prefer to modify the\ ``/etc/pam.d/gdm-password``
 
 -  Alternatively you can just modify the ``/etc/pam.d/sudo`` file if you
-   wish to use FIDO U2F when using the ``sudo`` command. #### Control
-   flags In step 7 we have used the ``sufficient`` control flag to
-   determine the behavior of the PAM module when the Nitrokey is plugged
-   or not. However it is possible to change this behavior by using the
-   following control flags:
+   wish to use FIDO U2F when using the ``sudo`` command. 
+
+Control flags
+''''''''''''''''''''''
+
+In step 7 we have used the ``sufficient`` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
 
 -  ``required``: This is the most critical flag. The module result must
    be successful for authentication to continue. This flag can lock you
