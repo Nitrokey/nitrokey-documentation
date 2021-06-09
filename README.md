@@ -14,7 +14,7 @@
 
 - Add a subfolder with the numbered image files for each guide.
 
-- Avoid plain URLs in text but use hyperlinks instead.
+- Avoid plain URLs in text but use hyperlink syntax instead. (see: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks )
 
 - Relative paths (also included and double included) are always evaluated from the path of the final including page. Images within pages that are included elsewhere must therefore always be specified with an absolute path starting with `/` which stands for the root directory of the document.
 
