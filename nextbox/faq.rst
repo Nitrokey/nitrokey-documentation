@@ -18,6 +18,8 @@ Generic
 
 Hardware
 --------
+.. _usb-power-supply:
+
 **Q:** Why must I not connect external hard-drives without an external power-supply to my NextBox?
   The Raspberry Pi 4 Model B can only supply 1.2A of power through USB (see
   `RPi Power Supply`_). The internal hard-drive is already connected and powered
