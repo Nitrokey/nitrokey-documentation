@@ -21,7 +21,7 @@ Verification of Sealed Hardware
 -------------------------------
 
 If you have ordered the unit with the option “sealed screws and sealed
-bag”, please `verify the sealing <verify-sealed-hardware.html>`__ before
+bag”, please `verify the sealing <sealed-hardware.html>`__ before
 unpacking. If you do not know what this means, skip this section.
 
 Secure Starting Procedure
@@ -141,5 +141,4 @@ steps:
 
    .. image:: ../images/options.jpg
 
-3. After that, please follow `these instructions from step 3
-   onwards `system update <system-update.html>`__.
+3. After that, please follow `these instructions <system-update.html>`__ from step 3 onwards.

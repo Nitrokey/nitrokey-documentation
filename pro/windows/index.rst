@@ -31,8 +31,8 @@ Your Nitrokey is now ready to use.
 `Checkout <https://www.nitrokey.com/en/applications>`__ the various use
 cases and supported applications.
 
-**Note:** For many use cases described, it is necessary to have either
-OpenPGP or S/MIME keys installed on the device (see below).
+.. note::
+   For many use cases described, it is necessary to have either OpenPGP or S/MIME keys installed on the device (see below).
 
 Key Creation with OpenPGP or S/MIME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

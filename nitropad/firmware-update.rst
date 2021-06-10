@@ -26,16 +26,6 @@ Preparation
 3. For hash sum verification, store ``SHA256SUM.txt`` file at the USB
    drive.
 
-E.g. for ``v1.1-rc3`` version:
-
-1. Firmware should be downloaded from `here <https://github.com/Nitrokey/heads/releases/latest>`__
-2. 2. Firmware and hashsum files should be located on the USB drive in the main directory:
-
-.. code-block:: bash
-
-   /nitropad_x230_v1.1-rc3.rom
-   /SHA256SUM.txt
-
 Firmware file verification
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -130,7 +120,7 @@ This is the actual update procedure. Usually the first two screens will not be s
 
 
 
-Now you have updated your firmware.
+You have successfully updated your firmware!
 
 Further steps
 ~~~~~~~~~~~~~

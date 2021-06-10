@@ -5,16 +5,12 @@ Login With EIDAuthenticate on Stand Alone Windows Computers
 
 .. contents:: :local:
 
-1. Download and install the latest version of
-   `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. Please install
-   the
-   `OpenPGP-CSP <https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3>`__
-   driver **instead** if using Nitrokey Storage **2** or Nitrokey Pro
-   **2**.
-2. Download and install
-   `EIDAuthenticate <https://www.mysmartlogon.com/eidauthenticate/>`__.
-   Note: The free community edition is disabled. You may test the
-   enterprise edition instead.
+1. Download and install the latest version of `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. Please install the `OpenPGP-CSP <https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3>`__ driver **instead** if using Nitrokey Storage 2 or Nitrokey Pro 2.
+2. Download and install `EIDAuthenticate <https://www.mysmartlogon.com/eidauthenticate/>`__.
+
+   .. note:: 
+      The free community edition is disabled. You may test the enterprise edition instead.
+
 3. Start EIDConfigurationWizard.exe
 4. Select “Associate a new certificate”
 
@@ -82,5 +78,4 @@ From now on, when logging on to your Windows computer you need to connect the Ni
 
 .. figure:: /pro/images/login-with-eidauthenticate-on-stand-alone-windows-computers/9.png
    :alt: img9
-
 

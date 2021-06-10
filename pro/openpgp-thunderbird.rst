@@ -11,9 +11,9 @@ Thunderbird 78.3 and newer
 At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy to set up. See `Thunderbird’s documentation <https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`__ for details. Here is a `comprehensive German guide <https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-nitrokey-storage/>`__.
 
 Troubleshooting
-###############
+############
 
-1. Error message: ``The configured key ID '4BA0183FCBA844A7' cannot be found on your keyring``
+Error message: ``The configured key ID '4BA0183FCBA844A7' cannot be found on your keyring``
 
 - Make sure that the public key is imported to the Thunderbird’s manager and
 - The key ID does not contain any whitespace, and consists of 16 characters from range 0-9 A-F
@@ -25,7 +25,7 @@ Thunderbird 77 and older
 ------------------------
 
 Installation
-------------
+########
 
 1. Install the device driver as described
    `here <https://www.nitrokey.com/documentation/installation>`__.
@@ -34,7 +34,7 @@ Installation
    Add-on `Enigmail <https://www.enigmail.net/index.php/en/>`__.
 
 Changing PINs
--------------
+##########
 
 There are two PINs for the Nitrokey:
 
@@ -48,7 +48,7 @@ After receiving the Nitrokey, you should immediately change the User PIN
 = “123456” and Admin PIN = “12345678”.
 
 Procedure
----------
+#######
 
 1. Insert the Nitrokey into a USB port on your computer.
 
@@ -101,7 +101,7 @@ Procedure
 You have now changed the PINs and should continue to generate your personal keys.
 
 Generation of Keys
-------------------
+#############
 
 To encrypt data and e-mails, a key pair consisting of a public key and a private key, must first be generated. The so-called public key is used to **en**\ crypt the data or e-mails. You can distribute this to all those with whom you want to communicate securely (for example, publish it publicly on your site). The so-called private key is used to
 **de**\ crypt the data or messages. This key should **NEVER** be made known! Usually, you also do not have direct access to it (see below), since this is stored securely on the Nitrokey. Use the Nitrokey to create both keys using the following procedure:
@@ -141,11 +141,11 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
    avoid known prose or lyric. Also, no name or known term should be
    used.
 
-**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (keine Umlaute ä,ü,ö,Ä,Ü,Ö oder ß)
+**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö or ß)
 
-**Poor Password**: qwertz123, IchliebeSusi3, Password, If you can dream it, you can do it.
+**Poor Password**: qwerty123, ILoveSusi3, Password, If you can dream it, you can do it.
 
-**Strong Password**: g(Ak?2Pn7Yn oder Ki.stg2bLqzp%d or A dog with greeen Earz and fife legs (spelling errors increase security)
+**Strong Password**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen Earz and fife legs (spelling errors increase security)
 
 You do **not** need this password for daily work. It is only necessary for the restoration of the secret key, e.g. if you have lost the Nitrokey. Therefore, keep the password in a safe place.
 
