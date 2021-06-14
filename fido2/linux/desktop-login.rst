@@ -31,22 +31,30 @@ GUI method
 1. In the lower left corner click on ``Show Applications`` and type
    settings in the search bar as following:
 
-.. image:: /fido2/linux/images/fidou2f-1.png
+.. figure:: /fido2/linux/images/fidou2f-1.png
+   :alt: img1
 
 2. Scroll down in the right bar to ``Users``
 
-.. image:: /fido2/linux/images/fidou2f-2.png
+.. figure:: /fido2/linux/images/fidou2f-2.png
+   :alt: img2
 
 3. In the left corner click on ``Unlock`` and that would prompt for your
    password
+
+.. figure:: /fido2/linux/images/fidou2f-3.png
+   :alt: img3
+
 4. Select ``Administrator`` and enter the user name and password of your
    choice
 
-.. image:: /fido2/linux/images/fidou2f-4.png
+.. figure:: /fido2/linux/images/fidou2f-4.png
+   :alt: img4
 
 5. Once you finish Step 4 you should be done
 
-.. image:: /fido2/linux/images/fidou2f-5.png
+.. figure:: /fido2/linux/images/fidou2f-5.png
+   :alt: img5
 
 CLI method
 ''''''''''
@@ -218,7 +226,8 @@ You can test the configuration by typing ``sudo ls`` in the terminal. You should
 ``bash nitrouser@nitrouser:~$ sudo ls $ sudo ls [sudo] password for <username>:  Please touch the device.``
 You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/replug yout Nitrokey FIDO2 and type your password:
 
-.. image:: /fido2/linux/images/u2f-fido-pam-2.png
+.. figure:: /fido2/linux/images/u2f-fido-pam-2.png
+   :alt: img6
 
 Usage
 -----

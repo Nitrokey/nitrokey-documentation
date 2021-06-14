@@ -8,7 +8,7 @@ S/MIME Email Encryption with Thunderbird
 Prerequisites
 -------------
 
-If you do not have a S/MIME key-certificate pair installed on your Nitrokey yet or if you did not installed OpenSC, please look at `this page <https://docs.nitrokey.com/pro/smime-email-encryption.html>`__ first.
+If you do not have a S/MIME key-certificate pair installed on your Nitrokey yet or if you did not installed OpenSC, please look at `this page <https://docs.nitrokey.com/pro/smime.html>`__ first.
 
 You need to have `OpenSC installed <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt update && sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from OpenSC directly.
 
@@ -48,5 +48,4 @@ When composing an email you can now choose to encrypt and sign the message.
 
 .. figure:: /pro/images/smime-email-encryption-with-thunderbird/4.png
    :alt: img4
-
 

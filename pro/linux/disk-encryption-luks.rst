@@ -110,12 +110,14 @@ and sets up crypttab, LUKS, initramfs, and GRUB.
 
 First you will be prompted for the ``User PIN``
 
-.. image:: /pro/linux/images/luks_1.png
+.. figure:: /pro/linux/images/luks_1.png
+   :alt: img1
 
 Once you unlock the Nitrokey, you will be prompted for your ``OLD passphrase``.
 It is the passphrase you entered to encrypt your volume at installation.
 
-.. image:: /pro/linux/images/luks_2.png
+.. figure:: /pro/linux/images/luks_2.png
+   :alt: img2
 
 .. note:: This is a fall-back alternative in case you lose your Nitrokey, or if
   it’s unavailable. So far, it was not tested, and users must be aware of the
@@ -126,7 +128,8 @@ Once you enter the passphrase, the script finishes the setup in about one
 minute. Do not interrupt the script, or you might get locked out of your
 computer after reboot.
 
-.. image:: /pro/linux/images/luks_3.png
+.. figure:: /pro/linux/images/luks_3.png
+   :alt: img3
 
 Done!
 
@@ -138,11 +141,13 @@ Usage
 
 After reboot you should be prompted for your User PIN
 
-.. image:: /pro/linux/images/luks_5.png
+.. figure:: /pro/linux/images/luks_5.png
+   :alt: img5
 
 Enter your User PIN to unlock the drive
 
-.. image:: /pro/linux/images/luks_6.png
+.. figure:: /pro/linux/images/luks_6.png
+   :alt: img6
 
 
 Further Hints
@@ -154,9 +159,9 @@ Change Passphrase
 Once this setup is done, you should not use the (gnome) *disks* utility anymore
 to change the (fallback) passphrase. The proper way to do this is to call *cryptsetup*
 directly like this:
-  
+
 .. code-block:: bash
-  
+
   $ sudo cryptsetup luksChangeKey /dev/nvme0n1p3
 
 With `nvme0n1p3` being the partition you set up the keys for. 
@@ -193,7 +198,7 @@ Remove the keyfile (path, if you used the script above) from luks-device (*nvme0
 .. code-block:: bash
 
    $ sudo cryptsetup luksRemoveKey /dev/nvme0n1p3 /etc/cryptsetup-initramfs/cryptkey.gpg
-   
+
 Remove the keyfile itself:
 
 .. code-block:: bash
@@ -201,7 +206,6 @@ Remove the keyfile itself:
    $ sudo rm /etc/cryptsetup-initramfs/cryptkey.gpg
 
 Re-run setup above.
-
 
 
 
