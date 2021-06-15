@@ -9,7 +9,7 @@ RSA-2048 Becomes Increasingly Insecure
 --------------------------------------
 
 For security reasons, the German Federal Office for Information Security (Bundesamt für Sicherheit in der Informationstechnik, BSI) no longer recommends RSA keys with a length of 2048 bit `to be used after
-2022 <https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf;jsessionid=064DAA7AD3195C1C87B1C71B2760DB4E.1_cid360?__blob=publicationFile&v=7>`__. This means that longer keys will need to come into use in the foreseeable future. Assuming a usage period of five years, is is already necessary to generate longer keys. However, longer RSA keys with 3072 bit or 4096 bit are significantly slower. For this reason the new Nitrokey Storage 2 and Pro 2 (resp. the integrated OpenPGP Card version
+2022 <https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102/BSI-TR-02102-1.pdf?__blob=publicationFile&v=10>`__. This means that longer keys will need to come into use in the foreseeable future. Assuming a usage period of five years, is is already necessary to generate longer keys. However, longer RSA keys with 3072 bit or 4096 bit are significantly slower. For this reason the new Nitrokey Storage 2 and Pro 2 (resp. the integrated OpenPGP Card version
 3.3) supports encryption by means of `elliptic-curve cryptography (ECC) <https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__. This method is considered to be just as secure with smaller ECC keys as longer RSA keys and is also considerably faster.
 
 Basics of Elliptic-Curve Cryptography
