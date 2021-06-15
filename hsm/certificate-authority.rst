@@ -350,7 +350,11 @@ We need to find out the fully qualified PKCS#11 URI for your private key:
            Label: intermediate
            ID: bc:b4:8f:e9:b5:66:ae:61:89:1a:ab:bf:de:6a:23:d4:ff:3a:b6:39
 
-In this instance, the fully qualified PKCS#11 URI is ``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private``.
+In this instance, the fully qualified PKCS#11 URI is:
+
+.. code-block:: bash
+
+   pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private
 
 Now, we need to create a config file to use the private key of the root certificate to sign the csr of the intermediate certificate.
 
@@ -551,7 +555,11 @@ We need to find out the fully qualified PKCS#11 URI for your private key:
            Label: intermediate
            ID: bc:b4:8f:e9:b5:66:ae:61:89:1a:ab:bf:de:6a:23:d4:ff:3a:b6:39
 
-In this instance, the fully qualified PKCS#11 URI is ``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%BC%B4%8F%E9%B5%66%AE%61%89%1A%AB%BF%DE%6A%23%D4%FF%3A%B6%39;object=intermediate;type=private``.
+In this instance, the fully qualified PKCS#11 URI is:
+
+.. code-block:: bash
+
+   pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%BC%B4%8F%E9%B5%66%AE%61%89%1A%AB%BF%DE%6A%23%D4%FF%3A%B6%39;object=intermediate;type=private
 
 Create a config file to use the private key of the intermediate certificate to sign the CSRs of your servers.
 

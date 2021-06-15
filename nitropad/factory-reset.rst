@@ -10,10 +10,15 @@ Reasons for resetting to factory settings
 
 -  Your Nitrokey is locked (e.g. due to multiple incorrect PIN entries)
 
+-  You have lost your Nitrokey (in which case you will first need a new one)
+
 -  You have installed an operating system yourself (e.g. after changing
    the hard disk)
 
 -  Your operating system does not start
+
+.. warning::
+   All your data will be lost if you reset your device. Therefore please backup your data before performing the reset.
 
 Procedure
 ~~~~~~~~~
@@ -41,6 +46,8 @@ Procedure
    :alt: img3
 
 
+.. warning::
+   All your data will be lost if you reset your device. Therefore please backup your data before performing the reset.
 
 6. Confirm the “OEM Factory Reset” with “Continue”.
 

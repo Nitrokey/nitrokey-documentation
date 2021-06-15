@@ -33,7 +33,7 @@ Two-Factor Authentication (2FA)
    successfully configured the device, you must activate the Nitrokey
    FIDO U2F this way each time you log in.
 
-`Checkout <https://www.nitrokey.com/documentation/applications#p:nitrokey-fido2-u2f&os:all>`__
+`Checkout <https://www.nitrokey.com/documentation/applications#p:nitrokey-fido-u2f&os:all>`__
 the various use cases and supported applications.
 
 .. important::

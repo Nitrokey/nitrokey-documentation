@@ -12,7 +12,7 @@ This guide will walk you through the configuration of Linux to use FIDO Universa
 
 If you want to login to you computer using `Nitrokey Pro
 2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`__ you can visit the instructions for Windows available `here <https://www.nitrokey.com/documentation/applications#computer-login>`__, and for Linux `here <https://www.nitrokey.com/documentation/applications#computer-login>`__. 
+2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`__ you can visit the instructions for Windows available `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:windows>`__, and for Linux `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:linux>`__. 
 
 Requirements
 ------------
@@ -25,40 +25,44 @@ Requirements
 Instructions
 ------------
 
-### Preparation 
-
-1. Set up ``<backup_user>``
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-   This step is not necessary for the setup, however it is recommended as fall-back if you are testing user-specific instructions.
-
 GUI method
 ''''''''''
 
 1. In the lower left corner click on ``Show Applications`` and type
    settings in the search bar as following:
 
-.. image:: /fido2/linux/images/fidou2f-1.png
+.. figure:: /fido2/linux/images/fidou2f-1.png
+   :alt: img1
 
 2. Scroll down in the right bar to ``Users``
 
-.. image:: /fido2/linux/images/fidou2f-2.png
+.. figure:: /fido2/linux/images/fidou2f-2.png
+   :alt: img2
 
 3. In the left corner click on ``Unlock`` and that would prompt for your
    password
+
+.. figure:: /fido2/linux/images/fidou2f-3.png
+   :alt: img3
+
 4. Select ``Administrator`` and enter the user name and password of your
    choice
 
-.. image:: /fido2/linux/images/fidou2f-4.png
+.. figure:: /fido2/linux/images/fidou2f-4.png
+   :alt: img4
 
 5. Once you finish Step 4 you should be done
 
-.. image:: /fido2/linux/images/fidou2f-5.png
+.. figure:: /fido2/linux/images/fidou2f-5.png
+   :alt: img5
 
 CLI method
 ''''''''''
 
-Create a backup user, and give it root privileges with these commands:
+1. Create a backup user and give it root privileges
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can do so by using these commands:
 
 .. code-block:: bash
 
@@ -133,9 +137,12 @@ Create ``.config/Nitrokey/`` under your home directory
 
 And plug your Nitrokey FIDO2. 
 
-### Configuration
+Once done with the preparation, we can start to configure the computer to use the Nitrokey FIDO2 for 2nd factor authentication at login and ``sudo``.
 
-Once done with the preparation, we can start to configure the computer to use the Nitrokey FIDO2 for 2nd factor authentication at login and ``sudo``. #### 5. Generate the U2F config file To generate the configuration file we will use the ``pamu2fcfg`` utility that comes with the ``libpam-u2f``. For convenience, we will directly write the output of the utility to the ``u2f_keys`` file under ``.config/Nitrokey``. First plug your Nitrokey FIDO2 (if you did not already), and enter the following command:
+5. Generate the U2F config file 
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+To generate the configuration file we will use the ``pamu2fcfg`` utility that comes with the ``libpam-u2f``. For convenience, we will directly write the output of the utility to the ``u2f_keys`` file under ``.config/Nitrokey``. First plug your Nitrokey FIDO2 (if you did not already), and enter the following command:
 
 .. code-block:: bash
 
@@ -219,7 +226,8 @@ You can test the configuration by typing ``sudo ls`` in the terminal. You should
 ``bash nitrouser@nitrouser:~$ sudo ls $ sudo ls [sudo] password for <username>:  Please touch the device.``
 You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/replug yout Nitrokey FIDO2 and type your password:
 
-.. image:: /fido2/linux/images/u2f-fido-pam-2.png
+.. figure:: /fido2/linux/images/u2f-fido-pam-2.png
+   :alt: img6
 
 Usage
 -----
@@ -233,7 +241,8 @@ The flags ``required`` and ``requisite`` provide a tighter access control, and w
 If you need more information about Control Flags in the ``PAM``
 configuration line, you may see the last section of this guide to understand the difference, and the implications of using each of them.
 
-#### PAM modules
+PAM modules
+''''''''''''''''''''''''
 
 There are several PAM modules files that can be modified according to your needs:
 
@@ -246,11 +255,12 @@ There are several PAM modules files that can be modified according to your needs
    login, you might prefer to modify the\ ``/etc/pam.d/gdm-password``
 
 -  Alternatively you can just modify the ``/etc/pam.d/sudo`` file if you
-   wish to use FIDO U2F when using the ``sudo`` command. #### Control
-   flags In step 7 we have used the ``sufficient`` control flag to
-   determine the behavior of the PAM module when the Nitrokey is plugged
-   or not. However it is possible to change this behavior by using the
-   following control flags:
+   wish to use FIDO U2F when using the ``sudo`` command. 
+
+Control flags
+''''''''''''''''''''''
+
+In step 7 we have used the ``sufficient`` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
 
 -  ``required``: This is the most critical flag. The module result must
    be successful for authentication to continue. This flag can lock you

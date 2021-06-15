@@ -58,7 +58,7 @@ Two-Factor Authentication (2FA)
    each time you log in.
 
 Checkout the `various use cases and supported
-applications <https://www.nitrokey.com/documentation/applications#p:nitrokey-fido2-u2f&os:all>`__.
+applications <https://www.nitrokey.com/documentation/applications#p:nitrokey-fido-u2f&os:all>`__.
 
 
 Touch Button and LED Behavior
