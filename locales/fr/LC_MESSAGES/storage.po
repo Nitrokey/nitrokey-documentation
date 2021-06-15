@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 16:11+0200\n"
+"POT-Creation-Date: 2021-06-15 17:00+0200\n"
 "PO-Revision-Date: 2021-06-03 15:40+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: French <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-storage/fr/>\n"
 "Language: fr\n"
+"Language-Team: French <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-storage/fr/>\n"
+"Plural-Forms: nplurals=2; plural=n > 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../storage/factory-reset.rst:2
@@ -345,9 +344,10 @@ msgstr ""
 "Storage comme second facteur d'un compte Google :"
 
 #: ../pro/2fa-google.rst:10
+#, fuzzy
 msgid ""
 "Go to `https://myaccount.google.com/security#signin "
-"<https://myaccount.google.com/security?pli=1#signin>`__"
+"<https://myaccount.google.com/intro/security>`__"
 msgstr ""
 "Allez sur `https://myaccount.google.com/security#signin "
 "<https://myaccount.google.com/security?pli=1#signin>`__."
@@ -547,7 +547,7 @@ msgstr ""
 "répertoires différents."
 
 #: ../pro/linux/automatic-screen-lock.rst:13
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:26
+#: ../pro/linux/disk-encryption-luks.rst:26
 msgid "Requirements"
 msgstr "Exigences"
 
@@ -662,10 +662,10 @@ msgstr ""
 " pour cette première exécution."
 
 #: ../pro/linux/automatic-screen-lock.rst:77
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:137
+#: ../pro/linux/disk-encryption-luks.rst:140
 #: ../pro/linux/hard-disk-encryption.rst:116 ../pro/openpgp.rst:49
-#: ../pro/smime-outlook.rst:34 ../pro/smime-thunderbird.rst:45
-#: ../pro/smime.rst:56 ../pro/windows/openpgp-outlook.rst:26
+#: ../pro/smime-outlook.rst:36 ../pro/smime-thunderbird.rst:45
+#: ../pro/smime.rst:57 ../pro/windows/openpgp-outlook.rst:26
 msgid "Usage"
 msgstr "Utilisation"
 
@@ -789,6 +789,321 @@ msgstr ""
 "erroné ont été effectuées, il est suffisamment sûr de n'avoir qu'un PIN à"
 " 8 chiffres. Le PIN par défaut est 12345678."
 
+#: ../pro/linux/disk-encryption-luks.rst:2
+msgid "Full-Disk Encryption With cryptsetup/LUKS"
+msgstr "Cryptage complet du disque avec cryptsetup/LUKS"
+
+#: ../pro/linux/disk-encryption-luks.rst:8
+msgid ""
+"This guide shows how to configure LUKS-encrypted volumes, to authenticate"
+" at boot with `Nitrokey Pro <https://shop.nitrokey.com/shop/product/nk-"
+"pro-2-nitrokey-pro-2-3>`__ or `Nitrokey Storage "
+"<https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__."
+msgstr ""
+"Ce guide montre comment configurer des volumes chiffrés en LUKS, pour "
+"s'authentifier au démarrage avec `Nitrokey Pro "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ ou "
+"`Nitrokey Storage <https://shop.nitrokey.com/shop/product/nitrokey-"
+"storage-2-56>`__."
+
+#: ../pro/linux/disk-encryption-luks.rst:10
+msgid ""
+"To provide some background, cryptsetup-initramfs now has support for "
+"using OpenPGP smart cards like the Nitrokey Pro and Nitrokey Storage to "
+"unlock LUKS-encrypted volumes. Once you finish the setup, you will just "
+"need to insert your Nitrokey at boot and enter your User PIN, instead of "
+"typing in your regular disk encryption passphrase."
+msgstr ""
+"Pour situer le contexte, cryptsetup-initramfs prend désormais en charge "
+"l'utilisation de cartes à puce OpenPGP comme Nitrokey Pro et Nitrokey "
+"Storage pour déverrouiller les volumes chiffrés en LUKS. Une fois la "
+"configuration terminée, il vous suffira d'insérer votre Nitrokey au "
+"démarrage et d'entrer votre PIN utilisateur, au lieu de taper votre "
+"phrase de passe de chiffrement de disque habituelle."
+
+#: ../pro/linux/disk-encryption-luks.rst:16
+msgid "These instructions have been tested on Ubuntu 20.04 and Debian 10."
+msgstr "Ces instructions ont été testées sur Ubuntu 20.04 et Debian 10."
+
+#: ../pro/linux/disk-encryption-luks.rst:20
+msgid ""
+"The following guide can potentially lock you out of your computer. You "
+"should be aware of these risks, and we recommend you use the script below"
+" on a secondary computer, or after a full backup as you might lose your "
+"data."
+msgstr ""
+"Le guide suivant peut potentiellement vous bloquer l'accès à votre "
+"ordinateur. Vous devez être conscient de ces risques, et nous vous "
+"recommandons d'utiliser le script ci-dessous sur un ordinateur "
+"secondaire, ou après une sauvegarde complète car vous pourriez perdre vos"
+" données."
+
+#: ../pro/linux/disk-encryption-luks.rst:28
+msgid "An Ubuntu or Debian computer with at least one LUKS-encrypted volume."
+msgstr "Un ordinateur Ubuntu ou Debian avec au moins un volume crypté par LUKS."
+
+#: ../pro/linux/disk-encryption-luks.rst:30
+msgid ""
+"See the section below to determine which method is compatible with this "
+"guide."
+msgstr ""
+"Consultez la section ci-dessous pour déterminer quelle méthode est "
+"compatible avec ce guide."
+
+#: ../pro/linux/disk-encryption-luks.rst:32
+msgid ""
+"A Nitrokey Pro 2 or Nitrokey Storage 2 `initialized "
+"<https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__ with "
+"keys."
+msgstr ""
+"Une Nitrokey Pro 2 ou Nitrokey Storage 2 `initialisée "
+"<https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__ avec des"
+" clés."
+
+#: ../pro/linux/disk-encryption-luks.rst:37
+msgid "Known Issues"
+msgstr "Problèmes connus"
+
+#: ../pro/linux/disk-encryption-luks.rst:39
+msgid ""
+"So far, the script works only with manually-partitioned volumes, that are"
+" composed of an unencrypted ``/boot`` partition, and an encrypted root "
+"``/`` partition."
+msgstr ""
+"Jusqu'à présent, le script ne fonctionne qu'avec des volumes partitionnés"
+" manuellement, qui sont composés d'une partition ``/boot`` non chiffrée, "
+"et d'une partition ``/`` racine chiffrée."
+
+#: ../pro/linux/disk-encryption-luks.rst:43
+msgid ""
+"Please do not select the automatic full-disk encryption provided by the "
+"operating system you are using for this guide. You will face recurrent "
+"errors when the partitioning is done automatically, using the "
+"installation interface on Ubuntu and Debian."
+msgstr ""
+"Veuillez ne pas sélectionner le chiffrement automatique du disque complet"
+" fourni par le système d'exploitation que vous utilisez pour ce guide. "
+"Vous serez confronté à des erreurs récurrentes lorsque le partitionnement"
+" est effectué automatiquement, en utilisant l'interface d'installation "
+"sur Ubuntu et Debian."
+
+#: ../pro/linux/disk-encryption-luks.rst:49
+msgid "Instructions"
+msgstr "Instructions"
+
+#: ../pro/linux/disk-encryption-luks.rst:51
+msgid "Install dependencies"
+msgstr "Installer les dépendances"
+
+#: ../pro/linux/disk-encryption-luks.rst:58
+msgid "Create smartcard-luks directory"
+msgstr "Créer le répertoire smartcard-luks"
+
+#: ../pro/linux/disk-encryption-luks.rst:65
+msgid "Download the smartcard-luks-script"
+msgstr "Télécharger le script smartcard-luks"
+
+#: ../pro/linux/disk-encryption-luks.rst:73
+msgid "Export the public key"
+msgstr "Exporter la clé publique"
+
+#: ../pro/linux/disk-encryption-luks.rst:75
+msgid "To export your public key from GnuPG’s keyring:"
+msgstr "Pour exporter votre clé publique depuis le trousseau de GnuPG :"
+
+#: ../pro/linux/disk-encryption-luks.rst:82
+msgid ""
+"If you already have uploaded a public key to a keyserver (or have it "
+"stored somewhere else), you should retrieve it in the way you are most "
+"comfortable with, and proceed to step 5."
+msgstr ""
+"Si vous avez déjà téléchargé une clé publique sur un serveur de clés (ou "
+"si elle est stockée ailleurs), vous devez la récupérer de la manière qui "
+"vous convient le mieux et passer à l'étape 5."
+
+#: ../pro/linux/disk-encryption-luks.rst:86
+msgid "Determine and verify the correct LUKS device name for your root-partition:"
+msgstr ""
+"Déterminez et vérifiez le nom correct du dispositif LUKS pour votre "
+"partition racine :"
+
+#: ../pro/linux/disk-encryption-luks.rst:94
+msgid ""
+"Usually this should be something like `nvme0n1p3_crypt` (for NitroPC) or "
+"`sda3_crypt` (for NitroPads).  You can and should crosscheck that the "
+"UUID referred inside `/etc/crypttab` is the designated partition by "
+"checking the symbolic link inside `/dev/disks/by-uuid/`."
+msgstr ""
+"En général, cela devrait être quelque chose comme `nvme0n1p3_crypt` (pour"
+" NitroPC) ou `sda3_crypt` (pour NitroPads).  Vous pouvez et devriez "
+"vérifier que l'UUID mentionné dans `/etc/crypttab` est la partition "
+"désignée en vérifiant le lien symbolique dans `/dev/disks/by-uuid/`."
+
+#: ../pro/linux/disk-encryption-luks.rst:99
+msgid ""
+"Execute the script with the luks device name (e.g., `nvme0n1p3_crypt`) "
+"and `pubkey.asc` as arguments."
+msgstr ""
+"Exécutez le script avec le nom du périphérique luks (par exemple, "
+"`nvme0n1p3_crypt`) et `pubkey.asc` comme arguments."
+
+#: ../pro/linux/disk-encryption-luks.rst:107
+msgid ""
+"Once, you run the script with the OpenPGP public key as argument, it "
+"automatically sets up a new LUKS secret, encrypts it against that public "
+"key, and sets up crypttab, LUKS, initramfs, and GRUB."
+msgstr ""
+"Une fois que vous exécutez le script avec la clé publique OpenPGP comme "
+"argument, il configure automatiquement un nouveau secret LUKS, le crypte "
+"contre cette clé publique, et configure crypttab, LUKS, initramfs, et "
+"GRUB."
+
+#: ../pro/linux/disk-encryption-luks.rst:111
+msgid "First you will be prompted for the ``User PIN``"
+msgstr "On vous demandera d'abord le \"PIN de l'utilisateur\"."
+
+#: ../pro/linux/disk-encryption-luks.rst:116
+msgid ""
+"Once you unlock the Nitrokey, you will be prompted for your ``OLD "
+"passphrase``. It is the passphrase you entered to encrypt your volume at "
+"installation."
+msgstr ""
+"Une fois que vous avez déverrouillé la Nitrokey, il vous sera demandé de "
+"saisir votre \"ancienne phrase de passe\". Il s'agit de la phrase de "
+"passe que vous avez entrée pour crypter votre volume lors de "
+"l'installation."
+
+#: ../pro/linux/disk-encryption-luks.rst:122
+msgid ""
+"This is a fall-back alternative in case you lose your Nitrokey, or if "
+"it’s unavailable. So far, it was not tested, and users must be aware of "
+"the risk of getting locked out of their computer, if the fall-back method"
+" does not work."
+msgstr ""
+"Il s'agit d'une solution de repli au cas où vous perdriez votre Nitrokey "
+"ou si elle n'était pas disponible. Jusqu'à présent, elle n'a pas été "
+"testée, et les utilisateurs doivent être conscients du risque d'être "
+"bloqués hors de leur ordinateur, si la méthode de repli ne fonctionne "
+"pas."
+
+#: ../pro/linux/disk-encryption-luks.rst:127
+msgid ""
+"Once you enter the passphrase, the script finishes the setup in about one"
+" minute. Do not interrupt the script, or you might get locked out of your"
+" computer after reboot."
+msgstr ""
+"Une fois que vous avez saisi la phrase de passe, le script termine "
+"l'installation en une minute environ. N'interrompez pas le script, sinon "
+"vous risquez d'être bloqué sur votre ordinateur après le redémarrage."
+
+#: ../pro/linux/disk-encryption-luks.rst:134
+msgid "Done!"
+msgstr "C'est fait !"
+
+#: ../pro/linux/disk-encryption-luks.rst:136
+msgid ""
+"By now you must reboot, and you should be able to use your Nitrokey to "
+"unlock your encrypted drive."
+msgstr ""
+"Vous devez maintenant redémarrer, et vous devriez pouvoir utiliser votre "
+"Nitrokey pour déverrouiller votre disque crypté."
+
+#: ../pro/linux/disk-encryption-luks.rst:142
+msgid "After reboot you should be prompted for your User PIN"
+msgstr "Après le redémarrage, le système vous demande de saisir votre code PIN."
+
+#: ../pro/linux/disk-encryption-luks.rst:147
+msgid "Enter your User PIN to unlock the drive"
+msgstr "Saisissez votre code PIN utilisateur pour déverrouiller le lecteur"
+
+#: ../pro/linux/disk-encryption-luks.rst:154
+msgid "Further Hints"
+msgstr "Autres conseils"
+
+#: ../pro/linux/disk-encryption-luks.rst:157
+msgid "Change Passphrase"
+msgstr "Modifier la phrase d'authentification"
+
+#: ../pro/linux/disk-encryption-luks.rst:159
+msgid ""
+"Once this setup is done, you should not use the (gnome) *disks* utility "
+"anymore to change the (fallback) passphrase. The proper way to do this is"
+" to call *cryptsetup* directly like this:"
+msgstr ""
+"Une fois cette configuration effectuée, vous ne devez plus utiliser "
+"l'utilitaire *disques* (gnome) pour changer la phrase de passe (de "
+"secours). La manière correcte de le faire est d'appeler directement "
+"*cryptsetup* comme ceci :"
+
+#: ../pro/linux/disk-encryption-luks.rst:167
+msgid "With `nvme0n1p3` being the partition you set up the keys for."
+msgstr ""
+"Avec `nvme0n1p3` étant la partition pour laquelle vous avez configuré les"
+" clés."
+
+#: ../pro/linux/disk-encryption-luks.rst:170
+msgid "Use Multiple Keys"
+msgstr "Utiliser des touches multiples"
+
+#: ../pro/linux/disk-encryption-luks.rst:172
+msgid ""
+"It is easy to use multiple (hardware) security keys so that each of them "
+"is able to unlock the LUKS drive independently. Just export multiple "
+"public keys and also *pass multiple keys* to the setup script like this:"
+msgstr ""
+"Il est facile d'utiliser plusieurs clés de sécurité (matérielles) de "
+"sorte que chacune d'entre elles soit capable de déverrouiller le lecteur "
+"LUKS indépendamment. Il suffit d'exporter plusieurs clés publiques et de "
+"*passer plusieurs clés* au script de configuration comme ceci :"
+
+#: ../pro/linux/disk-encryption-luks.rst:182
+msgid "Set Cardholder Name"
+msgstr "Définir le nom du titulaire de la carte"
+
+#: ../pro/linux/disk-encryption-luks.rst:184
+msgid ""
+"During the PIN entry on boot for decryption of the LUKS root partition a "
+"cardholder is presented to the user, to set this please use ``$ gpg "
+"--edit-card`` and inside the prompt type ``admin`` and ``name`` to set "
+"the cardholder for the OpenPGP Card (Nitrokey Storage 2 or Nitrokey Pro "
+"2)."
+msgstr ""
+"Pendant la saisie du code PIN au démarrage pour le décryptage de la "
+"partition racine LUKS, un titulaire de carte est présenté à "
+"l'utilisateur, pour le définir, utilisez ``$ gpg --edit-card`` et dans "
+"l'invite tapez ``admin`` et ``name`` pour définir le titulaire de la "
+"carte OpenPGP (Nitrokey Storage 2 ou Nitrokey Pro 2)."
+
+#: ../pro/linux/disk-encryption-luks.rst:190
+msgid "Replace/Delete Keys"
+msgstr "Remplacer/supprimer des touches"
+
+#: ../pro/linux/disk-encryption-luks.rst:192
+msgid ""
+"It is not possible to add/remove keys directly. Therefore you need to "
+"delete/remove the old setup and re-run the setup with the designated "
+"key(s):"
+msgstr ""
+"Il n'est pas possible d'ajouter/supprimer des clés directement. Vous "
+"devez donc supprimer/supprimer l'ancienne configuration et relancer la "
+"configuration avec la ou les clés désignées :"
+
+#: ../pro/linux/disk-encryption-luks.rst:196
+msgid ""
+"Remove the keyfile (path, if you used the script above) from luks-device "
+"(*nvme0n1p3*):"
+msgstr ""
+"Supprimez le fichier clé (chemin, si vous avez utilisé le script ci-"
+"dessus) de luks-device (*nvme0n1p3*) :"
+
+#: ../pro/linux/disk-encryption-luks.rst:202
+msgid "Remove the keyfile itself:"
+msgstr "Supprime le fichier clé lui-même :"
+
+#: ../pro/linux/disk-encryption-luks.rst:208
+msgid "Re-run setup above."
+msgstr "Ré-exécutez la configuration ci-dessus."
+
 #: ../pro/ecc.rst:2
 msgid "Elliptic Curves (ECC) Support"
 msgstr "Support des courbes elliptiques (ECC)"
@@ -798,19 +1113,19 @@ msgid "RSA-2048 Becomes Increasingly Insecure"
 msgstr "RSA-2048 devient de plus en plus insécure"
 
 #: ../pro/ecc.rst:11
+#, fuzzy
 msgid ""
 "For security reasons, the German Federal Office for Information Security "
 "(Bundesamt für Sicherheit in der Informationstechnik, BSI) no longer "
 "recommends RSA keys with a length of 2048 bit `to be used after 2022 "
 "<https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/TechGuidelines/TG02102"
-"/BSI-"
-"TR-02102-1.pdf;jsessionid=064DAA7AD3195C1C87B1C71B2760DB4E.1_cid360?__blob=publicationFile&v=7>`__."
-" This means that longer keys will need to come into use in the "
-"foreseeable future. Assuming a usage period of five years, is is already "
-"necessary to generate longer keys. However, longer RSA keys with 3072 bit"
-" or 4096 bit are significantly slower. For this reason the new Nitrokey "
-"Storage 2 and Pro 2 (resp. the integrated OpenPGP Card version 3.3) "
-"supports encryption by means of `elliptic-curve cryptography (ECC) "
+"/BSI-TR-02102-1.pdf?__blob=publicationFile&v=10>`__. This means that "
+"longer keys will need to come into use in the foreseeable future. "
+"Assuming a usage period of five years, is is already necessary to "
+"generate longer keys. However, longer RSA keys with 3072 bit or 4096 bit "
+"are significantly slower. For this reason the new Nitrokey Storage 2 and "
+"Pro 2 (resp. the integrated OpenPGP Card version 3.3) supports encryption"
+" by means of `elliptic-curve cryptography (ECC) "
 "<https://en.wikipedia.org/wiki/Elliptic-curve_cryptography>`__. This "
 "method is considered to be just as secure with smaller ECC keys as longer"
 " RSA keys and is also considerably faster."
@@ -1132,321 +1447,6 @@ msgstr ""
 "tandis que \"firmware.hex\" doit être le chemin et le nom du fichier du "
 "firmware que vous avez téléchargé à l'étape 2."
 
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:2
-msgid "Full-Disk Encryption With cryptsetup/LUKS"
-msgstr "Cryptage complet du disque avec cryptsetup/LUKS"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:8
-msgid ""
-"This guide shows how to configure LUKS-encrypted volumes, to authenticate"
-" at boot with `Nitrokey Pro <https://shop.nitrokey.com/shop/product/nk-"
-"pro-2-nitrokey-pro-2-3>`__ or `Nitrokey Storage "
-"<https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__."
-msgstr ""
-"Ce guide montre comment configurer des volumes chiffrés en LUKS, pour "
-"s'authentifier au démarrage avec `Nitrokey Pro "
-"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ ou "
-"`Nitrokey Storage <https://shop.nitrokey.com/shop/product/nitrokey-"
-"storage-2-56>`__."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:10
-msgid ""
-"To provide some background, cryptsetup-initramfs now has support for "
-"using OpenPGP smart cards like the Nitrokey Pro and Nitrokey Storage to "
-"unlock LUKS-encrypted volumes. Once you finish the setup, you will just "
-"need to insert your Nitrokey at boot and enter your User PIN, instead of "
-"typing in your regular disk encryption passphrase."
-msgstr ""
-"Pour situer le contexte, cryptsetup-initramfs prend désormais en charge "
-"l'utilisation de cartes à puce OpenPGP comme Nitrokey Pro et Nitrokey "
-"Storage pour déverrouiller les volumes chiffrés en LUKS. Une fois la "
-"configuration terminée, il vous suffira d'insérer votre Nitrokey au "
-"démarrage et d'entrer votre PIN utilisateur, au lieu de taper votre "
-"phrase de passe de chiffrement de disque habituelle."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:16
-msgid "These instructions have been tested on Ubuntu 20.04 and Debian 10."
-msgstr "Ces instructions ont été testées sur Ubuntu 20.04 et Debian 10."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:20
-msgid ""
-"The following guide can potentially lock you out of your computer. You "
-"should be aware of these risks, and we recommend you use the script below"
-" on a secondary computer, or after a full backup as you might lose your "
-"data."
-msgstr ""
-"Le guide suivant peut potentiellement vous bloquer l'accès à votre "
-"ordinateur. Vous devez être conscient de ces risques, et nous vous "
-"recommandons d'utiliser le script ci-dessous sur un ordinateur "
-"secondaire, ou après une sauvegarde complète car vous pourriez perdre vos"
-" données."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:28
-msgid "An Ubuntu or Debian computer with at least one LUKS-encrypted volume."
-msgstr "Un ordinateur Ubuntu ou Debian avec au moins un volume crypté par LUKS."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:30
-msgid ""
-"See the section below to determine which method is compatible with this "
-"guide."
-msgstr ""
-"Consultez la section ci-dessous pour déterminer quelle méthode est "
-"compatible avec ce guide."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:32
-msgid ""
-"A Nitrokey Pro 2 or Nitrokey Storage 2 `initialized "
-"<https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__ with "
-"keys."
-msgstr ""
-"Une Nitrokey Pro 2 ou Nitrokey Storage 2 `initialisée "
-"<https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__ avec des"
-" clés."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:37
-msgid "Known Issues"
-msgstr "Problèmes connus"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:39
-msgid ""
-"So far, the script works only with manually-partitioned volumes, that are"
-" composed of an unencrypted ``/boot`` partition, and an encrypted root "
-"``/`` partition."
-msgstr ""
-"Jusqu'à présent, le script ne fonctionne qu'avec des volumes partitionnés"
-" manuellement, qui sont composés d'une partition ``/boot`` non chiffrée, "
-"et d'une partition ``/`` racine chiffrée."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:43
-msgid ""
-"Please do not select the automatic full-disk encryption provided by the "
-"operating system you are using for this guide. You will face recurrent "
-"errors when the partitioning is done automatically, using the "
-"installation interface on Ubuntu and Debian."
-msgstr ""
-"Veuillez ne pas sélectionner le chiffrement automatique du disque complet"
-" fourni par le système d'exploitation que vous utilisez pour ce guide. "
-"Vous serez confronté à des erreurs récurrentes lorsque le partitionnement"
-" est effectué automatiquement, en utilisant l'interface d'installation "
-"sur Ubuntu et Debian."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:49
-msgid "Instructions"
-msgstr "Instructions"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:51
-msgid "Install dependencies"
-msgstr "Installer les dépendances"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:58
-msgid "Create smartcard-luks directory"
-msgstr "Créer le répertoire smartcard-luks"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:65
-msgid "Download the smartcard-luks-script"
-msgstr "Télécharger le script smartcard-luks"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:73
-msgid "Export the public key"
-msgstr "Exporter la clé publique"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:75
-msgid "To export your public key from GnuPG’s keyring:"
-msgstr "Pour exporter votre clé publique depuis le trousseau de GnuPG :"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:82
-msgid ""
-"If you already have uploaded a public key to a keyserver (or have it "
-"stored somewhere else), you should retrieve it in the way you are most "
-"comfortable with, and proceed to step 5."
-msgstr ""
-"Si vous avez déjà téléchargé une clé publique sur un serveur de clés (ou "
-"si elle est stockée ailleurs), vous devez la récupérer de la manière qui "
-"vous convient le mieux et passer à l'étape 5."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:86
-msgid "Determine and verify the correct LUKS device name for your root-partition:"
-msgstr ""
-"Déterminez et vérifiez le nom correct du dispositif LUKS pour votre "
-"partition racine :"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:94
-msgid ""
-"Usually this should be something like `nvme0n1p3_crypt` (for NitroPC) or "
-"`sda3_crypt` (for NitroPads).  You can and should crosscheck that the "
-"UUID referred inside `/etc/crypttab` is the designated partition by "
-"checking the symbolic link inside `/dev/disks/by-uuid/`."
-msgstr ""
-"En général, cela devrait être quelque chose comme `nvme0n1p3_crypt` (pour"
-" NitroPC) ou `sda3_crypt` (pour NitroPads).  Vous pouvez et devriez "
-"vérifier que l'UUID mentionné dans `/etc/crypttab` est la partition "
-"désignée en vérifiant le lien symbolique dans `/dev/disks/by-uuid/`."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:99
-msgid ""
-"Execute the script with the luks device name (e.g., `nvme0n1p3_crypt`) "
-"and `pubkey.asc` as arguments."
-msgstr ""
-"Exécutez le script avec le nom du périphérique luks (par exemple, "
-"`nvme0n1p3_crypt`) et `pubkey.asc` comme arguments."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:107
-msgid ""
-"Once, you run the script with the OpenPGP public key as argument, it "
-"automatically sets up a new LUKS secret, encrypts it against that public "
-"key, and sets up crypttab, LUKS, initramfs, and GRUB."
-msgstr ""
-"Une fois que vous exécutez le script avec la clé publique OpenPGP comme "
-"argument, il configure automatiquement un nouveau secret LUKS, le crypte "
-"contre cette clé publique, et configure crypttab, LUKS, initramfs, et "
-"GRUB."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:111
-msgid "First you will be prompted for the ``User PIN``"
-msgstr "On vous demandera d'abord le \"PIN de l'utilisateur\"."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:115
-msgid ""
-"Once you unlock the Nitrokey, you will be prompted for your ``OLD "
-"passphrase``. It is the passphrase you entered to encrypt your volume at "
-"installation."
-msgstr ""
-"Une fois que vous avez déverrouillé la Nitrokey, il vous sera demandé de "
-"saisir votre \"ancienne phrase de passe\". Il s'agit de la phrase de "
-"passe que vous avez entrée pour crypter votre volume lors de "
-"l'installation."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:120
-msgid ""
-"This is a fall-back alternative in case you lose your Nitrokey, or if "
-"it’s unavailable. So far, it was not tested, and users must be aware of "
-"the risk of getting locked out of their computer, if the fall-back method"
-" does not work."
-msgstr ""
-"Il s'agit d'une solution de repli au cas où vous perdriez votre Nitrokey "
-"ou si elle n'était pas disponible. Jusqu'à présent, elle n'a pas été "
-"testée, et les utilisateurs doivent être conscients du risque d'être "
-"bloqués hors de leur ordinateur, si la méthode de repli ne fonctionne "
-"pas."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:125
-msgid ""
-"Once you enter the passphrase, the script finishes the setup in about one"
-" minute. Do not interrupt the script, or you might get locked out of your"
-" computer after reboot."
-msgstr ""
-"Une fois que vous avez saisi la phrase de passe, le script termine "
-"l'installation en une minute environ. N'interrompez pas le script, sinon "
-"vous risquez d'être bloqué sur votre ordinateur après le redémarrage."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:131
-msgid "Done!"
-msgstr "C'est fait !"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:133
-msgid ""
-"By now you must reboot, and you should be able to use your Nitrokey to "
-"unlock your encrypted drive."
-msgstr ""
-"Vous devez maintenant redémarrer, et vous devriez pouvoir utiliser votre "
-"Nitrokey pour déverrouiller votre disque crypté."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:139
-msgid "After reboot you should be prompted for your User PIN"
-msgstr "Après le redémarrage, le système vous demande de saisir votre code PIN."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:143
-msgid "Enter your User PIN to unlock the drive"
-msgstr "Saisissez votre code PIN utilisateur pour déverrouiller le lecteur"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:149
-msgid "Further Hints"
-msgstr "Autres conseils"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:152
-msgid "Change Passphrase"
-msgstr "Modifier la phrase d'authentification"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:154
-msgid ""
-"Once this setup is done, you should not use the (gnome) *disks* utility "
-"anymore to change the (fallback) passphrase. The proper way to do this is"
-" to call *cryptsetup* directly like this:"
-msgstr ""
-"Une fois cette configuration effectuée, vous ne devez plus utiliser "
-"l'utilitaire *disques* (gnome) pour changer la phrase de passe (de "
-"secours). La manière correcte de le faire est d'appeler directement "
-"*cryptsetup* comme ceci :"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:162
-msgid "With `nvme0n1p3` being the partition you set up the keys for."
-msgstr ""
-"Avec `nvme0n1p3` étant la partition pour laquelle vous avez configuré les"
-" clés."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:165
-msgid "Use Multiple Keys"
-msgstr "Utiliser des touches multiples"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:167
-msgid ""
-"It is easy to use multiple (hardware) security keys so that each of them "
-"is able to unlock the LUKS drive independently. Just export multiple "
-"public keys and also *pass multiple keys* to the setup script like this:"
-msgstr ""
-"Il est facile d'utiliser plusieurs clés de sécurité (matérielles) de "
-"sorte que chacune d'entre elles soit capable de déverrouiller le lecteur "
-"LUKS indépendamment. Il suffit d'exporter plusieurs clés publiques et de "
-"*passer plusieurs clés* au script de configuration comme ceci :"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:177
-msgid "Set Cardholder Name"
-msgstr "Définir le nom du titulaire de la carte"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:179
-msgid ""
-"During the PIN entry on boot for decryption of the LUKS root partition a "
-"cardholder is presented to the user, to set this please use ``$ gpg "
-"--edit-card`` and inside the prompt type ``admin`` and ``name`` to set "
-"the cardholder for the OpenPGP Card (Nitrokey Storage 2 or Nitrokey Pro "
-"2)."
-msgstr ""
-"Pendant la saisie du code PIN au démarrage pour le décryptage de la "
-"partition racine LUKS, un titulaire de carte est présenté à l'utilisateur, "
-"pour le définir, utilisez ``$ gpg --edit-card`` et dans l'invite tapez "
-"``admin`` et ``name`` pour définir le titulaire de la carte OpenPGP ("
-"Nitrokey Storage 2 ou Nitrokey Pro 2)."
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:185
-msgid "Replace/Delete Keys"
-msgstr "Remplacer/supprimer des touches"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:187
-msgid ""
-"It is not possible to add/remove keys directly. Therefore you need to "
-"delete/remove the old setup and re-run the setup with the designated "
-"key(s):"
-msgstr ""
-"Il n'est pas possible d'ajouter/supprimer des clés directement. Vous "
-"devez donc supprimer/supprimer l'ancienne configuration et relancer la "
-"configuration avec la ou les clés désignées :"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:191
-msgid ""
-"Remove the keyfile (path, if you used the script above) from luks-device "
-"(*nvme0n1p3*):"
-msgstr ""
-"Supprimez le fichier clé (chemin, si vous avez utilisé le script ci-"
-"dessus) de luks-device (*nvme0n1p3*) :"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:197
-msgid "Remove the keyfile itself:"
-msgstr "Supprime le fichier clé lui-même :"
-
-#: ../pro/linux/full-disk-encryption-with-cryptsetup-luks.rst:203
-msgid "Re-run setup above."
-msgstr "Ré-exécutez la configuration ci-dessus."
-
 #: ../pro/gpa.rst:2
 msgid "Setup with Gnu Privacy Assistant (GPA)"
 msgstr "Configuration avec Gnu Privacy Assistant (GPA)"
@@ -1569,10 +1569,11 @@ msgstr ""
 "distinct (par exemple un CD-ROM) et dans un endroit sûr."
 
 #: ../pro/gpa.rst:55
+#, fuzzy
 msgid ""
 "Congratulations, your Nitrokey is now ready to use. Please see the "
-"`applications <https://www.nitrokey.com/en/applications>`_ section for "
-"further information of its usage."
+"`applications <https://www.nitrokey.com/documentation/applications>`_ "
+"section for further information of its usage."
 msgstr ""
 "Félicitations, votre Nitrokey est maintenant prêt à être utilisé. "
 "Veuillez consulter la section `applications "
@@ -1988,10 +1989,11 @@ msgid "S/MIME/X.509 is mostly used by enterprises."
 msgstr "S/MIME/X.509 est surtout utilisé par les entreprises."
 
 #: ../pro/openpgp.rst:14
+#, fuzzy
 msgid ""
 "If you are in doubt which one to choose, you should use OpenPGP. While "
 "this page describes the usage of OpenPGP, S/MIME is described `here "
-"<https://docs.nitrokey.com/pro/smime-email-encryption.html>`__."
+"<https://docs.nitrokey.com/pro/smime.html>`__."
 msgstr ""
 "Si vous avez un doute sur le choix à faire, vous devriez utiliser "
 "OpenPGP. Alors que cette page décrit l'utilisation d'OpenPGP, S/MIME est "
@@ -2020,11 +2022,12 @@ msgid "If you do not have OpenPGP keys yet, you need to generate them first."
 msgstr "Si vous n'avez pas encore de clés OpenPGP, vous devez d'abord les générer."
 
 #: ../pro/openpgp.rst:23
+#, fuzzy
 msgid ""
-"`Generate keys on Nitrokey <https://docs.nitrokey.com/pro/openpgp-key-"
-"generation-using-gpa.html>`__ - this is the best option if you are "
-"unexperienced, but you won’t have a backup of your keys and therefore "
-"won’t be able to mitigate the loss of the Nitrokey"
+"`Generate keys on Nitrokey <https://docs.nitrokey.com/pro/openpgp-keygen-"
+"gpa.html>`__ - this is the best option if you are unexperienced, but you "
+"won’t have a backup of your keys and therefore won’t be able to mitigate "
+"the loss of the Nitrokey"
 msgstr ""
 "`Générer des clés sur Nitrokey <https://docs.nitrokey.com/pro/openpgp-"
 "key-generation-using-gpa.html>`__ - c'est la meilleure option si vous "
@@ -2032,12 +2035,13 @@ msgstr ""
 "et ne pourrez donc pas atténuer la perte de la Nitrokey."
 
 #: ../pro/openpgp.rst:29
+#, fuzzy
 msgid ""
 "`Generate keys on Nitrokey with different algorithm or key size "
-"<https://docs.nitrokey.com/pro/openpgp-key-generation-on-device.html>`__ "
-"- this is as secure as the previous option and thus you won’t have a "
-"backup as well, but you can change the key attributes (that is the "
-"algorithm and key size)"
+"<https://docs.nitrokey.com/pro/openpgp-keygen-on-device.html>`__ - this "
+"is as secure as the previous option and thus you won’t have a backup as "
+"well, but you can change the key attributes (that is the algorithm and "
+"key size)"
 msgstr ""
 "`Générer des clés sur Nitrokey avec un algorithme ou une taille de clé "
 "différents <https://docs.nitrokey.com/pro/openpgp-key-generation-on-"
@@ -2046,13 +2050,14 @@ msgstr ""
 "attributs de la clé (c'est-à-dire l'algorithme et la taille de la clé)."
 
 #: ../pro/openpgp.rst:35
+#, fuzzy
 msgid ""
-"`Generate keys locally <https://docs.nitrokey.com/pro/openpgp-key-"
-"generation-with-backup.html>`__ and copy them to Nitrokey - this is the "
-"most flexible, expert option, but only secure if your system is not "
-"compromised, because you can create a backup key outside your Nitrokey A "
-"similar description in french can be found `here <https://xieme-"
-"art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-pro/>`__."
+"`Generate keys locally <https://docs.nitrokey.com/pro/openpgp-keygen-"
+"backup.html>`__ and copy them to Nitrokey - this is the most flexible, "
+"expert option, but only secure if your system is not compromised, because"
+" you can create a backup key outside your Nitrokey A similar description "
+"in french can be found `here <https://xieme-art.org/post/importer-des-"
+"clefs-gnupg-dans-sa-nitrokey-pro/>`__."
 msgstr ""
 "`Générer des clés localement <https://docs.nitrokey.com/pro/openpgp-key-"
 "generation-with-backup.html>`__ et les copier sur Nitrokey - c'est "
@@ -2067,16 +2072,17 @@ msgid "Importing Existing Keys"
 msgstr "Importation de clés existantes"
 
 #: ../pro/openpgp.rst:46
+#, fuzzy
 msgid ""
 "If you already have OpenPGP keys you may want to use them with your "
 "Nitrokey, instead of generating new ones. Importing exsiting keys works "
 "basically the same as generating keys locally first and copy them to the "
 "Nitrokey (see above). Therefore, please have a look at the `corresponding"
-" instructions <https://docs.nitrokey.com/pro/openpgp-key-generation-with-"
-"backup.html#key-import>`__. Note that you probably want to generate "
-"another subkey for authentication to your existing key. See at the same "
-"instructions for `subkey generation <https://docs.nitrokey.com/pro"
-"/openpgp-key-generation-with-backup.html#subkey-for-authentication>`__."
+" instructions <https://docs.nitrokey.com/pro/openpgp-keygen-backup.html"
+"#key-import>`__. Note that you probably want to generate another subkey "
+"for authentication to your existing key. See at the same instructions for"
+" `subkey generation <https://docs.nitrokey.com/pro/openpgp-keygen-"
+"backup.html#subkey-for-authentication>`__."
 msgstr ""
 "Si vous avez déjà des clés OpenPGP, vous pouvez les utiliser avec votre "
 "Nitrokey, au lieu d'en générer de nouvelles. L'importation de clés "
@@ -2090,27 +2096,27 @@ msgstr ""
 "<https://docs.nitrokey.com/pro/openpgp-key-generation-with-backup.html"
 "#subkey-for-authentication>`__."
 
-#: ../pro/openpgp.rst:51 ../pro/smime.rst:58
+#: ../pro/openpgp.rst:51 ../pro/smime.rst:59
 msgid "You can find further information about the usage on these pages:"
 msgstr ""
 "Vous trouverez de plus amples informations sur l'utilisation de ces pages"
 " :"
 
 #: ../pro/openpgp.rst:53
+#, fuzzy
 msgid ""
 "for using `OpenPGP encryption with Thunderbird "
-"<https://docs.nitrokey.com/pro/openpgp-email-encryption-with-"
-"thunderbird.html>`__"
+"<https://docs.nitrokey.com/pro/openpgp-thunderbird.html>`__"
 msgstr ""
 "pour l'utilisation du cryptage `OpenPGP avec Thunderbird "
 "<https://docs.nitrokey.com/pro/openpgp-email-encryption-with-"
 "thunderbird.html>`___."
 
 #: ../pro/openpgp.rst:56
+#, fuzzy
 msgid ""
 "for using `OpenPGP encryption with Outlook "
-"<https://docs.nitrokey.com/pro/windows/openpgp-email-encryption-with-"
-"outlook.html>`__"
+"<https://docs.nitrokey.com/pro/windows/openpgp-outlook.html>`__"
 msgstr ""
 "pour utiliser le cryptage `OpenPGP avec Outlook "
 "<https://docs.nitrokey.com/pro/windows/openpgp-email-encryption-with-"
@@ -2126,7 +2132,7 @@ msgstr ""
 "mail.org/plugin.php?plugin=gpg>`__, un client de messagerie (et lecteur "
 "de nouvelles) pour Linux et Windows"
 
-#: ../pro/openpgp.rst:63 ../pro/smime.rst:66
+#: ../pro/openpgp.rst:63 ../pro/smime.rst:67
 msgid ""
 "for using `Evolution <https://help.gnome.org/users/evolution/stable/mail-"
 "encryption.html.en>`__, an email client for the Gnome Desktop on Linux "
@@ -2693,7 +2699,7 @@ msgstr ""
 msgid "Open a command line and type ``gpg2 --card-edit``."
 msgstr "Ouvrez une ligne de commande et tapez ``gpg2 --card-edit``."
 
-#: ../pro/openpgp-keygen-on-device.rst:25 ../pro/smime.rst:28
+#: ../pro/openpgp-keygen-on-device.rst:25 ../pro/smime.rst:29
 msgid ""
 "To open the Windows command line please push the Windows-key and R-key. "
 "Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on"
@@ -2880,7 +2886,7 @@ msgstr ""
 "<https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-"
 "nitrokey-storage/>`__."
 
-#: ../pro/openpgp-thunderbird.rst:14 ../pro/smime.rst:71
+#: ../pro/openpgp-thunderbird.rst:14 ../pro/smime.rst:72
 msgid "Troubleshooting"
 msgstr "Dépannage"
 
@@ -3131,26 +3137,28 @@ msgstr ""
 "aucun nom ou terme connu ne doit être utilisé."
 
 #: ../pro/openpgp-thunderbird.rst:144
+#, fuzzy
 msgid ""
-"**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (keine Umlaute "
-"ä,ü,ö,Ä,Ü,Ö oder ß)"
+"**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö"
+" or ß)"
 msgstr ""
 "**Caractères autorisés** : a-z A-Z 0-9 /.,;:- !?( )%+ (ne pas utiliser "
 "les caractères ä,ü,ö,Ä,Ü,Ö oder ß)"
 
 #: ../pro/openpgp-thunderbird.rst:146
+#, fuzzy
 msgid ""
-"**Poor Password**: qwertz123, IchliebeSusi3, Password, If you can dream "
-"it, you can do it."
+"**Poor Password**: qwerty123, ILoveSusi3, Password, If you can dream it, "
+"you can do it."
 msgstr ""
 "**Mauvais mot de passe** : qwertz123, IchliebeSusi3, Mot de passe, Si "
 "vous pouvez le rêver, vous pouvez le faire."
 
 #: ../pro/openpgp-thunderbird.rst:148
-#, python-format
+#, fuzzy, python-format
 msgid ""
-"**Strong Password**: g(Ak?2Pn7Yn oder Ki.stg2bLqzp%d or A dog with greeen"
-" Earz and fife legs (spelling errors increase security)"
+"**Strong Password**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen "
+"Earz and fife legs (spelling errors increase security)"
 msgstr ""
 "**Mot de passe fort** : g(Ak?2Pn7Yn oder Ki.stg2bLqzp%d ou Un chien aux "
 "oreilles et aux pattes de fifre (les fautes d'orthographe augmentent la "
@@ -3269,11 +3277,11 @@ msgstr ""
 "Votre Nitrokey est personnalisée et prête à être utilisée. **S'amuser "
 "avec le cryptage sécurisé des emails!**"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:2
+#: ../pro/linux/openvpn-easyrsa.rst:2
 msgid "OpenVPN Configuration with Easy-RSA"
 msgstr "Configuration d'OpenVPN avec Easy-RSA"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:11
+#: ../pro/linux/openvpn-easyrsa.rst:11
 msgid ""
 "This guide is work-in-progress, and will be updated accordinlgy. Please "
 "take this status into consideration."
@@ -3281,7 +3289,7 @@ msgstr ""
 "Ce guide est en cours de réalisation et sera mis à jour régulièrement. "
 "Veuillez prendre ce statut en considération."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:13
+#: ../pro/linux/openvpn-easyrsa.rst:13
 msgid ""
 "This guide shows how to configure OpenVPN clients to login using a "
 "`Nitrokey Pro 2 <https://shop.nitrokey.com/shop/product/nk-pro-2"
@@ -3299,27 +3307,19 @@ msgstr ""
 "<https://github.com/OpenVPN/easy-rsa>`__, un utilitaire qui a évolué "
 "parallèlement à OpenVPN."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:17
+#: ../pro/linux/openvpn-easyrsa.rst:17
 msgid ""
 "To sign the certificates, we will use a `Nitrokey HSM 2 "
 "<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ set"
 " up as `Certificate Authority <https://docs.nitrokey.com/hsm/linux"
-"/creating-certificate-authority.html#creating-the-intermediate-"
-"certificate-authority>`__, however this guide does not cover the set up "
-"of the CA itself (it is clear and `well documented here "
-"<https://docs.nitrokey.com/hsm/linux/creating-certificate-"
-"authority.html#sign-a-server-certificate>`__)."
+"/certificate-authority.html#creating-the-intermediate-certificate-"
+"authority>`__, however this guide does not cover the set up of the CA "
+"itself (it is clear and `well documented here "
+"<https://docs.nitrokey.com/hsm/linux/certificate-authority.html#sign-a"
+"-server-certificate>`__)."
 msgstr ""
-"Pour signer les certificats, nous utiliserons un `Nitrokey HSM 2 "
-"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ "
-"configuré comme `Autorité de Certification "
-"<https://docs.nitrokey.com/hsm/linux/creating-certificate-authority.html"
-"#creating-the-intermediate-certificate-authority>`__, cependant ce guide "
-"ne couvre pas la mise en place de l'AC elle-même (elle est claire et "
-"`bien documentée ici <https://docs.nitrokey.com/hsm/linux/creating-"
-"certificate-authority.html#sign-a-server-certificate>`__)."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:20
+#: ../pro/linux/openvpn-easyrsa.rst:20
 msgid ""
 "We will use Easy-RSA, because it seems to provide some flexibility, and "
 "allows key management via external PKIs. We will use it on the server to "
@@ -3334,13 +3334,13 @@ msgstr ""
 "seront signées par l'autorité de certification sur le Nitorkey HSM, et "
 "retransmises au serveur et au client."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:24
-#: ../pro/smime-outlook.rst:9 ../pro/smime-thunderbird.rst:9 ../pro/smime.rst:9
+#: ../pro/linux/openvpn-easyrsa.rst:24 ../pro/smime-outlook.rst:9
+#: ../pro/smime-thunderbird.rst:9 ../pro/smime.rst:9
 #: ../pro/windows/openpgp-csp.rst:11 ../pro/windows/openpgp-outlook.rst:14
 msgid "Prerequisites"
 msgstr "Conditions préalables"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:26
+#: ../pro/linux/openvpn-easyrsa.rst:26
 msgid ""
 "In the following documentation we will require 3 different machines as "
 "following:"
@@ -3348,15 +3348,15 @@ msgstr ""
 "Dans la documentation suivante, nous aurons besoin de 3 machines "
 "différentes comme suit :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:28
+#: ../pro/linux/openvpn-easyrsa.rst:28
 msgid "OpenVPN server (v. 2.5) on Debian 10 (EC2 virtual machine - AWS)"
 msgstr "Serveur OpenVPN (v. 2.5) sur Debian 10 (machine virtuelle EC2 - AWS)"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:30
+#: ../pro/linux/openvpn-easyrsa.rst:30
 msgid "OpenVPN client (v. 2.4.9) on Fedora 30 (local machine)"
 msgstr "Client OpenVPN (v. 2.4.9) sur Fedora 30 (machine locale)"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:32
+#: ../pro/linux/openvpn-easyrsa.rst:32
 msgid ""
 "The Certificate Authority will be accessible from a standalone machine "
 "with Fedora 30 (local machine)"
@@ -3364,7 +3364,7 @@ msgstr ""
 "L'autorité de certification sera accessible depuis une machine autonome "
 "équipée de Fedora 30 (machine locale)."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:35
+#: ../pro/linux/openvpn-easyrsa.rst:35
 msgid ""
 "To interact with the devices we will require `OpenSC 0.20 "
 "<https://github.com/OpenSC/OpenSC/wiki>`__ installed on the client and CA"
@@ -3379,13 +3379,13 @@ msgstr ""
 "<https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-"
 "flavors>`__."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:38
+#: ../pro/linux/openvpn-easyrsa.rst:38
 msgid "To download the dependencies on Fedora machines we can this instruction:"
 msgstr ""
 "Pour télécharger les dépendances sur les machines Fedora, nous pouvons "
 "suivre cette instruction :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:44
+#: ../pro/linux/openvpn-easyrsa.rst:44
 msgid ""
 "For Debian Linux, more recent OpenSC packages are available `here "
 "<https://github.com/Nitrokey/opensc-build>`__."
@@ -3393,13 +3393,13 @@ msgstr ""
 "Pour Debian Linux, des paquets OpenSC plus récents sont disponibles `ici "
 "<https://github.com/Nitrokey/opensc-build>`__."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:46
+#: ../pro/linux/openvpn-easyrsa.rst:46
 msgid "We will use the following Nitrokeys for physical key management:"
 msgstr ""
 "Nous utiliserons les Nitrokeys suivants pour la gestion des clés "
 "physiques :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:48
+#: ../pro/linux/openvpn-easyrsa.rst:48
 msgid ""
 "An authentication key using the `Nitrokey Pro 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf>`__"
@@ -3407,7 +3407,7 @@ msgstr ""
 "Une clé d'authentification utilisant la `Nitrokey Pro 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf>`__"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:51
+#: ../pro/linux/openvpn-easyrsa.rst:51
 msgid ""
 "A Certificate Authority (CA) using the `Nitrokey HSM 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`__"
@@ -3415,18 +3415,19 @@ msgstr ""
 "Une autorité de certification (CA) utilisant le `Nitrokey HSM 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`__"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:54
+#: ../pro/linux/openvpn-easyrsa.rst:54
+#, fuzzy
 msgid ""
 "As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you "
 "may follow the instructions available `in the documentation </hsm/linux"
-"/creating-certificate-authority.html#sign-a-server-certificate>`__."
+"/certificate-authority.html#sign-a-server-certificate>`__."
 msgstr ""
 "Pour rappel, pour construire une Autorité de Certification sur Nitrokey "
 "HSM 2, vous pouvez suivre les instructions disponibles `dans la "
 "documentation </hsm/linux/creating-certificate-authority.html#sign-a"
 "-server-certificate>`__."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:56
+#: ../pro/linux/openvpn-easyrsa.rst:56
 msgid ""
 "Alternatively you may set up your own CA on a `on a separate machine "
 "<https://www.digitalocean.com/community/tutorials/how-to-set-up-and-"
@@ -3443,29 +3444,29 @@ msgstr ""
 "authority-ca/>`__. Les 2 dernières options s'appuient sur des solutions "
 "logicielles pour la gestion des clés."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:61
+#: ../pro/linux/openvpn-easyrsa.rst:61
 msgid "Server side"
 msgstr "Côté serveur"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:64
+#: ../pro/linux/openvpn-easyrsa.rst:64
 msgid "1. Install OpenVPN"
 msgstr "1. Installer OpenVPN"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst
+#: ../pro/linux/openvpn-easyrsa.rst:66
 msgid "First we need to enable IP Forwarding by editing ``/etc/sysctl.conf`` file"
 msgstr ""
 "D'abord, nous devons activer le transfert d'IP en éditant le fichier "
 "``/etc/sysctl.conf``."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst
+#: ../pro/linux/openvpn-easyrsa.rst:72
 msgid "Uncomment or edit accordingly the following line"
 msgstr "Décommentez ou modifiez en conséquence la ligne suivante"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst
+#: ../pro/linux/openvpn-easyrsa.rst:78
 msgid "Close after saving it, and enter this command"
 msgstr "Fermez après l'avoir sauvegardé, et entrez cette commande"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:85
+#: ../pro/linux/openvpn-easyrsa.rst:84
 msgid ""
 "Once IP forwarding is done, we will need to download the latest release "
 "of OpenvPN for our Debian 10 server, according to `these instructions "
@@ -3481,17 +3482,17 @@ msgstr ""
 "_HtzZrDMx6g1REseNP9NUwj402W70xcVAiQrRJBuYqOal9Q3JIEywbW_XRrEIWEMsklfKgq5Dq6N_UAb14YgR__-G0VoNiH6cGvhzZgZ_puEjIy2yF4gm0RUrO7exX5SX3jUwf3xT9htaH1DHoYqe8cxOngl7NyY8JG4zjhhxCe4beGOi0FHlimW2TqtGoeN85-aoGMSp9gA>`__"
 " :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst
+#: ../pro/linux/openvpn-easyrsa.rst:86
 msgid "Change to root and download the GPG key that signed the package"
 msgstr ""
 "Passez à l'utilisateur root et téléchargez la clé GPG qui a signé le "
 "paquet."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst
+#: ../pro/linux/openvpn-easyrsa.rst:93
 msgid "Add the URL of the adequate OpenVPN packages to the ``sources.list`` file"
 msgstr "Ajoutez l'URL des paquets OpenVPN adéquats au fichier ``sources.list``."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:103
+#: ../pro/linux/openvpn-easyrsa.rst:100
 msgid ""
 "We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN "
 "`version 2.4.8 "
@@ -3511,11 +3512,11 @@ msgstr ""
 "9E-s9CuccSAX8y3ZQfZUq7et9QIdgaSK9g-PhFqKWJhZLFkmTwR0wmYbKXjhxQ6j>`__ pour"
 " se connecter."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst
+#: ../pro/linux/openvpn-easyrsa.rst:103
 msgid "Next we download OpenVPN"
 msgstr "Ensuite, nous téléchargeons OpenVPN"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:112
+#: ../pro/linux/openvpn-easyrsa.rst:109
 msgid ""
 "If you want to check the version, it possible by calling ``--version`` "
 "and print the following:"
@@ -3523,11 +3524,11 @@ msgstr ""
 "Si vous voulez vérifier la version, c'est possible en appelant "
 "``--version`` et en imprimant ce qui suit :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:125
+#: ../pro/linux/openvpn-easyrsa.rst:122
 msgid "2. Install Easy-RSA"
 msgstr "2. Installer Easy-RSA"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:127
+#: ../pro/linux/openvpn-easyrsa.rst:124
 msgid ""
 "To build the PKI, we will download the latest version of Easy-RSA on the "
 "server and client machines. To get the latest release, go to the "
@@ -3543,19 +3544,21 @@ msgstr ""
 "de téléchargement du fichier se terminant par ``.tgz``, puis collez-le "
 "dans la commande suivante :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:130
-msgid "1. Download the latest release"
+#: ../pro/linux/openvpn-easyrsa.rst:126
+#, fuzzy
+msgid "Download the latest release"
 msgstr "1. Téléchargez la dernière version"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:138
-msgid "2. Extract the tarball"
+#: ../pro/linux/openvpn-easyrsa.rst:133
+#, fuzzy
+msgid "Extract the tarball"
 msgstr "2. Extraire l'archive tarball"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:147
+#: ../pro/linux/openvpn-easyrsa.rst:142
 msgid "3. Create a PKI for OpenVPN server"
 msgstr "3. Créer une PKI pour le serveur OpenVPN"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:149
+#: ../pro/linux/openvpn-easyrsa.rst:144
 msgid ""
 "Before you can create your OpenVPN server’s private key and certificate, "
 "you need to create a local Public Key Infrastructure directory on your "
@@ -3569,7 +3572,7 @@ msgstr ""
 "demandes de certificats du serveur et des clients, au lieu de les faire "
 "directement sur votre serveur CA."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:151
+#: ../pro/linux/openvpn-easyrsa.rst:146
 msgid ""
 "To build a PKI directory on your OpenVPN server, you’ll need to populate "
 "a file called ``vars`` with some default values."
@@ -3578,15 +3581,17 @@ msgstr ""
 "besoin de remplir un fichier appelé ``vars`` avec quelques valeurs par "
 "défaut."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:154
-msgid "1. Create a ``vars`` file"
+#: ../pro/linux/openvpn-easyrsa.rst:148
+#, fuzzy
+msgid "Create a ``vars`` file"
 msgstr "1. Créez un fichier ``vars`''."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:163
-msgid "2. Once the file is opened, paste in the following two lines"
+#: ../pro/linux/openvpn-easyrsa.rst:156
+#, fuzzy
+msgid "Once the file is opened, paste in the following two lines"
 msgstr "2. Une fois le fichier ouvert, collez les deux lignes suivantes"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:170
+#: ../pro/linux/openvpn-easyrsa.rst:163
 msgid ""
 "These are the only two lines that you need in this ``vars`` file on your "
 "OpenVPN server since it will not be used as a Certificate Authority. They"
@@ -3601,7 +3606,7 @@ msgstr ""
 " courbe elliptique (ECC) pour générer des clés et des signatures "
 "sécurisées pour vos clients et votre serveur OpenVPN."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:172
+#: ../pro/linux/openvpn-easyrsa.rst:165
 msgid ""
 "In regards to the choice of the cryptographic algorithms, I follow the "
 "model in `this tutorial <https://www.digitalocean.com/community/tutorials"
@@ -3614,11 +3619,12 @@ msgstr ""
 "configure-an-openvpn-server-on-centos-8>`__, et vous pouvez les "
 "personnaliser en fonction de vos besoins spécifiques."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:175
-msgid "3. Initialize the PKI"
+#: ../pro/linux/openvpn-easyrsa.rst:167
+#, fuzzy
+msgid "Initialize the PKI"
 msgstr "3. Initialiser l'ICP"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:177
+#: ../pro/linux/openvpn-easyrsa.rst:169
 msgid ""
 "Once you have populated the ``vars`` file you can proceed with creating "
 "the PKI directory. To do so, run the easyrsa script with the init-pki "
@@ -3628,7 +3634,7 @@ msgstr ""
 " la création du répertoire PKI. Pour ce faire, exécutez le script easyrsa"
 " avec l'option init-pki :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:183
+#: ../pro/linux/openvpn-easyrsa.rst:175
 msgid ""
 "After you’ve initialized your PKI on the OpenVPN server, you are ready to"
 " move on to the next step, which is creating an OpenVPN server "
@@ -3638,11 +3644,11 @@ msgstr ""
 " passer à l'étape suivante, qui consiste à créer une demande de "
 "certificat et une clé privée pour le serveur OpenVPN."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:186
+#: ../pro/linux/openvpn-easyrsa.rst:178
 msgid "4. Create ``server.req`` and ``server.key``"
 msgstr "4. Créez ``server.req`` et ``server.key``."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:188
+#: ../pro/linux/openvpn-easyrsa.rst:180
 msgid ""
 "Now that your OpenVPN server has all the prerequisites installed, the "
 "next step is to generate a key pair composed of a private key (to keep "
@@ -3654,7 +3660,7 @@ msgstr ""
 "privée (à garder secrète), et d'un Certificate Signing Request (``.csr``)"
 " sur votre serveur OpenVPN."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:190
+#: ../pro/linux/openvpn-easyrsa.rst:182
 msgid ""
 "In general terms, on systems where we generate a key and request, these "
 "files are left unencrypted by using the ``nopass`` argument, since "
@@ -3669,11 +3675,11 @@ msgstr ""
 "faut donc faire attention à *protéger son accès et ses permissions de "
 "fichiers*."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:194
+#: ../pro/linux/openvpn-easyrsa.rst:186
 msgid "Configuration notes from OpenVPN:"
 msgstr "Notes de configuration d'OpenVPN :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:196
+#: ../pro/linux/openvpn-easyrsa.rst:188
 msgid ""
 "The server, and each client, must have their own cert and key file. The "
 "server and all clients will use the same CA file."
@@ -3681,23 +3687,24 @@ msgstr ""
 "Le serveur, et chaque client, doit avoir son propre fichier de cert et de"
 " clé. Le serveur et tous les clients utiliseront le même fichier CA."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:198
+#: ../pro/linux/openvpn-easyrsa.rst:190
 msgid "Server certificate should have the following:"
 msgstr "Le certificat du serveur doit avoir les éléments suivants :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:200
+#: ../pro/linux/openvpn-easyrsa.rst:192
 msgid "``keyUsage:  digitalSignature, keyEncipherment``"
 msgstr "``Utilisation de la clé : signature numérique, chiffrement de la clé``"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:202
+#: ../pro/linux/openvpn-easyrsa.rst:194
 msgid "``extendedKeyUsage: serverAuth``"
 msgstr "``extendedKeyUsage : serverAuth``"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:205
-msgid "1. Create the signing request for the server"
+#: ../pro/linux/openvpn-easyrsa.rst:196
+#, fuzzy
+msgid "Create the signing request for the server"
 msgstr "1. Créez la demande de signature pour le serveur"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:207
+#: ../pro/linux/openvpn-easyrsa.rst:198
 msgid ""
 "Navigate to the ``~/easyrsa`` directory on your OpenVPN Server as your "
 "non-root user, and enter the following commands:"
@@ -3705,7 +3712,7 @@ msgstr ""
 "Naviguez dans le répertoire ``~/easyrsa`` sur votre serveur OpenVPN en "
 "tant qu'utilisateur non-root, et entrez les commandes suivantes :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:214
+#: ../pro/linux/openvpn-easyrsa.rst:205
 msgid ""
 "This will create a private key for the server and a certificate request "
 "file called ``server.req``."
@@ -3713,7 +3720,7 @@ msgstr ""
 "Cela va créer une clé privée pour le serveur et un fichier de demande de "
 "certificat appelé ``server.req``."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:216
+#: ../pro/linux/openvpn-easyrsa.rst:207
 msgid ""
 "Once you have a signed certificate, you’ll transfer it back to the "
 "OpenVPN server."
@@ -3721,11 +3728,12 @@ msgstr ""
 "Une fois que vous avez un certificat signé, vous allez le transférer au "
 "serveur OpenVPN."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:219
-msgid "2. Copy the key to the OpenVPN server directory"
+#: ../pro/linux/openvpn-easyrsa.rst:209
+#, fuzzy
+msgid "Copy the key to the OpenVPN server directory"
 msgstr "2. Copiez la clé dans le répertoire du serveur OpenVPN"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:225
+#: ../pro/linux/openvpn-easyrsa.rst:215
 msgid ""
 "After completing these steps, you have successfully created a private key"
 " for your OpenVPN server. You have also generated a Certificate Signing "
@@ -3735,11 +3743,11 @@ msgstr ""
 "pour votre serveur OpenVPN. Vous avez également généré un Certificate "
 "Signing Request pour le serveur OpenVPN."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:229
+#: ../pro/linux/openvpn-easyrsa.rst:219
 msgid "File extensions for certificate signing requests"
 msgstr "Extensions de fichiers pour les demandes de signature de certificats"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:231
+#: ../pro/linux/openvpn-easyrsa.rst:221
 msgid ""
 "The file extension that is adopted by the CA and HSM tutorial indicates "
 "the creation of a ``.csr`` file, however Easy-RSA creates certificate "
@@ -3749,7 +3757,7 @@ msgstr ""
 "création d'un fichier ``.csr``, cependant Easy-RSA crée des demandes de "
 "signature de certificat avec une extension ``.req``."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:235
+#: ../pro/linux/openvpn-easyrsa.rst:225
 msgid ""
 "We will use interchangeably both extensions, while making sure that we "
 "transfer the right files to the Certificate Authority, and generate a "
@@ -3760,7 +3768,7 @@ msgstr ""
 "Certification, et que nous générons un certificat final avec une "
 "extension ``.crt``."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:239
+#: ../pro/linux/openvpn-easyrsa.rst:229
 msgid ""
 "In the next section of this guide, we will sign a ``.req`` file with our "
 "CA on deployed on the HSM 2 device. For this purpose, I will use a "
@@ -3770,11 +3778,11 @@ msgstr ""
 "``.req`` avec notre CA sur déployé sur le dispositif HSM 2. Pour cela, je"
 " vais utiliser une machine dédiée pour signer les requêtes."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:242
+#: ../pro/linux/openvpn-easyrsa.rst:232
 msgid "5. Sign and retrieve ``server.crt``"
 msgstr "5. Signer et récupérer ``server.crt``"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:244
+#: ../pro/linux/openvpn-easyrsa.rst:234
 msgid ""
 "The following instructions require the transfer of the ``server.req`` (or"
 " ``server.csr``) file to the CA system."
@@ -3782,7 +3790,7 @@ msgstr ""
 "Les instructions suivantes nécessitent le transfert du fichier "
 "``server.req`` (ou ``server.csr``) vers le système CA."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:247
+#: ../pro/linux/openvpn-easyrsa.rst:237
 msgid ""
 "The transfer itself is not security sensitive, though it is wise to "
 "verify if the received file matches the sender’s copy, if the transport "
@@ -3792,12 +3800,13 @@ msgstr ""
 "de vérifier si le fichier reçu correspond à la copie de l'expéditeur, si "
 "le transport n'est pas fiable."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:249
+#: ../pro/linux/openvpn-easyrsa.rst:239
+#, fuzzy
 msgid ""
 "In order to go through these steps, I will extensively rely on `these "
-"instructions </hsm/linux/creating-certificate-authority.html#creating-"
-"the-intermediate-certificate-authority>`__, to sign the certificate "
-"signing requests, once we generated them with Easy-RSA."
+"instructions </hsm/linux/certificate-authority.html#creating-the-"
+"intermediate-certificate-authority>`__, to sign the certificate signing "
+"requests, once we generated them with Easy-RSA."
 msgstr ""
 "Afin de suivre ces étapes, je m'appuierai largement sur `ces instructions"
 " </hsm/linux/creating-certificate-authority.html#creating-the-"
@@ -3805,11 +3814,12 @@ msgstr ""
 "signature de certificat, une fois que nous les avons générées avec Easy-"
 "RSA."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:252
-msgid "1. Sign the ``server.req`` file"
+#: ../pro/linux/openvpn-easyrsa.rst:242
+#, fuzzy
+msgid "5.1. Sign the ``server.req`` file"
 msgstr "1. Signez le fichier ``server.req``."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:254
+#: ../pro/linux/openvpn-easyrsa.rst:244
 msgid ""
 "On the local machine dedicated to access the HSM, we will use the tools "
 "provided by Opensc 0.20 in order to sign the ``.req`` file, and send it "
@@ -3821,7 +3831,7 @@ msgstr ""
 "le renvoyer au serveur OpenVPN. Nous supposons que nous avons transféré "
 "le fichier de la machine serveur à la machine de l'AC."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:256
+#: ../pro/linux/openvpn-easyrsa.rst:246
 msgid ""
 "First we start by plugging the HSM Nitrokey, and enter this instruction "
 "for listing the keys available."
@@ -3829,42 +3839,32 @@ msgstr ""
 "Commençons par brancher le HSM Nitrokey, et entrons dans cette "
 "instruction pour lister les touches disponibles."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:258
+#: ../pro/linux/openvpn-easyrsa.rst:248
 msgid "Query the list of available devices"
 msgstr "Interroger la liste des dispositifs disponibles"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:264
-msgid ""
-"​ **(Required step)** If this is the first time you sign a certificate "
-"with the CA, you might want to retrieve the URI of the CA’s private key "
-"from the HSM, and include it in the config file."
-msgstr ""
-"**(Étape obligatoire)** Si c'est la première fois que vous signez un "
-"certificat avec l'autorité de certification, vous pouvez récupérer l'URI "
-"de la clé privée de l'autorité de certification à partir du HSM et "
-"l'inclure dans le fichier de configuration."
-
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:266
+#: ../pro/linux/openvpn-easyrsa.rst:256
 msgid "The key’s URI should be in this format:"
 msgstr "L'URI de la clé doit être dans ce format :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:272
+#: ../pro/linux/openvpn-easyrsa.rst:262
 msgid "Create ``openvpn/`` directory under ``certificate-authority/``"
 msgstr "Créer le répertoire ``openvpn/`` sous ``certificate-authority/``"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:279
+#: ../pro/linux/openvpn-easyrsa.rst:269
 msgid "Sign the ``server.req``"
 msgstr "Signer le fichier ``server.req``."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:286
-msgid "2. Retrieve the ``server.crt`` file to the server machine"
+#: ../pro/linux/openvpn-easyrsa.rst:276
+#, fuzzy
+msgid "5.2. Retrieve the ``server.crt`` file to the server machine"
 msgstr "2. Récupérez le fichier ``server.crt`` sur la machine serveur"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:288
+#: ../pro/linux/openvpn-easyrsa.rst:278
 msgid "Transfer the signed certificates to the server"
 msgstr "Transférez les certificats signés vers le serveur"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:290
+#: ../pro/linux/openvpn-easyrsa.rst:280
 msgid ""
 "From the CA machine, copy the files ``server.crt`` and ``chain.crt`` to "
 "the OpenVPN server. In this example we will use the ``scp`` command as "
@@ -3874,15 +3874,15 @@ msgstr ""
 " sur le serveur OpenVPN. Dans cet exemple, nous allons utiliser la "
 "commande ``scp`` comme suit :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:296
+#: ../pro/linux/openvpn-easyrsa.rst:286
 msgid "Place the certificates on the server’s directory"
 msgstr "Placez les certificats dans le répertoire du serveur"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:304
+#: ../pro/linux/openvpn-easyrsa.rst:294
 msgid "CA Certificate and ``chain.crt``"
 msgstr "Certificat de l'AC et ``chain.crt``"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:306
+#: ../pro/linux/openvpn-easyrsa.rst:296
 msgid ""
 "In the above, the CA returns the signed sever certificate, and includes "
 "the CA certificate ``CA.crt`` which is the ``chain.crt`` file. This can "
@@ -3896,7 +3896,7 @@ msgstr ""
 "encouragé à confirmer si la chaîne reçue est valide, si le transport "
 "n'est pas fiable."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:312
+#: ../pro/linux/openvpn-easyrsa.rst:302
 msgid ""
 "It is possible to rename the file ``chain.crt`` file to ``CA.crt`` on the"
 " target machine, however we will use ``chain.crt`` in the next "
@@ -3906,11 +3906,11 @@ msgstr ""
 " machine cible, cependant nous utiliserons ``chain.crt`' dans les "
 "prochaines instructions."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:317
+#: ../pro/linux/openvpn-easyrsa.rst:307
 msgid "6. Configure the OpenVPN server"
 msgstr "6. Configurer le serveur OpenVPN"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:319
+#: ../pro/linux/openvpn-easyrsa.rst:309
 msgid ""
 "A connection that uses TLS requires multiple `certificates and keys for "
 "authentication <https://wiki.teltonika-"
@@ -3926,7 +3926,7 @@ msgstr ""
 "répertoires. La répartition des certificats et des clés qui doivent se "
 "trouver dans le répertoire racine sont les suivants :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:330
+#: ../pro/linux/openvpn-easyrsa.rst:320
 msgid ""
 "On your OpenVPN server, now you can create the configuration file "
 "``server.conf`` with your favorite text editor. The file can be "
@@ -3941,23 +3941,23 @@ msgstr ""
 "selon les noms que vous avez choisis pour les fichiers que nous avons "
 "signés :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:339
+#: ../pro/linux/openvpn-easyrsa.rst:329
 msgid "Here is the configuration file we can use for testing these instructions:"
 msgstr ""
 "Voici le fichier de configuration que nous pouvons utiliser pour tester "
 "ces instructions :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:369
+#: ../pro/linux/openvpn-easyrsa.rst:359
 msgid "To test if the configuration functions properly, we can use this command:"
 msgstr ""
 "Pour tester si la configuration fonctionne correctement, nous pouvons "
 "utiliser cette commande :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:376
+#: ../pro/linux/openvpn-easyrsa.rst:366
 msgid "7. Start the OpenVPN service on the server"
 msgstr "7. Démarrer le service OpenVPN sur le serveur"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:378
+#: ../pro/linux/openvpn-easyrsa.rst:368
 msgid ""
 "Enable the OpenVPN service by adding it to systemctl, and start it using "
 "these commands:"
@@ -3965,29 +3965,30 @@ msgstr ""
 "Activez le service OpenVPN en l'ajoutant à systemctl, et démarrez-le en "
 "utilisant ces commandes :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:385
+#: ../pro/linux/openvpn-easyrsa.rst:375
 msgid "To Double check if the OpenVPN service is active use this command:"
 msgstr ""
 "Pour vérifier doublement si le service OpenVPN est actif, utilisez cette "
 "commande :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:391
+#: ../pro/linux/openvpn-easyrsa.rst:381
 msgid "The OpenVPN should be running at this point."
 msgstr "L'OpenVPN devrait fonctionner à ce stade."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:396
+#: ../pro/linux/openvpn-easyrsa.rst:386
 msgid "Client side configuration"
 msgstr "Configuration côté client"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:410
+#: ../pro/linux/openvpn-easyrsa.rst:400
 msgid "1. Install OpenVPN and Easy-RSA"
 msgstr "1. Installer OpenVPN et Easy-RSA"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:413
-msgid "1. Install the software"
+#: ../pro/linux/openvpn-easyrsa.rst:402
+#, fuzzy
+msgid "Install the software"
 msgstr "1. Installez le logiciel"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:415
+#: ../pro/linux/openvpn-easyrsa.rst:404
 msgid ""
 "We can use directly ``dnf install`` to install OpenVPN 2.4.9 and Easy-RSA"
 " 3.0.7"
@@ -3995,21 +3996,23 @@ msgstr ""
 "Nous pouvons utiliser directement ``dnf install`` pour installer OpenVPN "
 "2.4.9 et Easy-RSA 3.0.7"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:422
-msgid "2. Then we create as non-root a directory for Easy RSA called ``Easy-RSA``"
+#: ../pro/linux/openvpn-easyrsa.rst:410
+#, fuzzy
+msgid "Then we create as non-root a directory for Easy RSA called ``Easy-RSA``"
 msgstr ""
 "2. Ensuite, nous créons en tant que non-root un répertoire pour Easy RSA "
 "appelé ``Easy-RSA`''."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:429
-msgid "3. And link it to the Easy RSA package we just installed"
+#: ../pro/linux/openvpn-easyrsa.rst:416
+#, fuzzy
+msgid "And link it to the Easy RSA package we just installed"
 msgstr "3. Et liez-le au paquet Easy RSA que nous venons d'installer"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:436
+#: ../pro/linux/openvpn-easyrsa.rst:423
 msgid "2. Create a PKI for the OpenVPN client"
 msgstr "2. Créer une PKI pour le client OpenVPN"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:438
+#: ../pro/linux/openvpn-easyrsa.rst:425
 msgid ""
 "In the same manner we created a PKI on the OpenVPN server, we will create"
 " a PKI using Easy-RSA on the client side."
@@ -4017,11 +4020,11 @@ msgstr ""
 "De la même manière que nous avons créé une PKI sur le serveur OpenVPN, "
 "nous allons créer une PKI utilisant Easy-RSA du côté client."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:441
+#: ../pro/linux/openvpn-easyrsa.rst:428
 msgid "3. Create a ``client.req`` and ``client.key``"
 msgstr "3. Créez un ``client.req`` et un ``client.key``."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:443
+#: ../pro/linux/openvpn-easyrsa.rst:430
 msgid ""
 "In the same manner we issued the key pair on the sever, we generate a key"
 " pair for the client which will be composed of the ``client.req`` file "
@@ -4033,11 +4036,11 @@ msgstr ""
 "fichier ``client.req`` et du fichier ``client.key``. Ce dernier doit être"
 " gardé secret sur la machine du client."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:447
+#: ../pro/linux/openvpn-easyrsa.rst:434
 msgid "4. Sign ``client.req`` and issue the ``client.crt`` file"
 msgstr "4. Signer le fichier ``client.req`` et émettre le fichier ``client.crt`'."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:449
+#: ../pro/linux/openvpn-easyrsa.rst:436
 msgid ""
 "To transfer the ``client.req`` file to the CA machine, we will use the "
 "same method as we did for the ``server.req`` file."
@@ -4045,7 +4048,7 @@ msgstr ""
 "Pour transférer le fichier ``client.req`` vers la machine de l'AC, nous "
 "allons utiliser la même méthode que pour le fichier ``server.req``."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:451
+#: ../pro/linux/openvpn-easyrsa.rst:438
 msgid ""
 "Once transferred, on the CA machine we sign the certificate signing "
 "request file with this command"
@@ -4053,22 +4056,11 @@ msgstr ""
 "Une fois transféré, sur la machine de l'AC, nous signons le fichier de "
 "demande de signature de certificat avec cette commande"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:458
+#: ../pro/linux/openvpn-easyrsa.rst:445
 msgid "5. Import ``client.crt`` on the Nitrokey from the CA machine"
 msgstr "5. Importez ``client.crt`` sur la Nitrokey depuis la machine CA"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:460
-msgid ""
-"/// Some documentation says that we can use the ./pkitool script "
-"available with Easy-RSA, to directly initialize a key pair on the "
-"Nitrokey, however the pkitool utility seems to be deprecated ///"
-msgstr ""
-"/// Certains documents indiquent que nous pouvons utiliser le script "
-"./pkitool disponible avec Easy-RSA, pour initialiser directement une "
-"paire de clés sur la Nitrokey, cependant l'utilitaire pkitool semble être"
-" déprécié ///"
-
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:462
+#: ../pro/linux/openvpn-easyrsa.rst:447
 msgid ""
 "After creating the ``client.crt`` file, we plug the Nitrokey Pro 2 device"
 " in the CA machine, and import the ``.crt`` to the Pro 2 device using "
@@ -4078,7 +4070,7 @@ msgstr ""
 "Nitrokey Pro 2 sur la machine CA, et importons le ``.crt`` sur le "
 "dispositif Pro 2 en utilisant cette commande :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:468
+#: ../pro/linux/openvpn-easyrsa.rst:453
 msgid ""
 "You can see if the key is effectively stored on the Nitrokey using this "
 "command:"
@@ -4086,11 +4078,11 @@ msgstr ""
 "Vous pouvez voir si la clé est effectivement stockée sur la Nitrokey en "
 "utilisant cette commande :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:474
+#: ../pro/linux/openvpn-easyrsa.rst:459
 msgid "Or alternatively"
 msgstr "Ou alternativement"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:480
+#: ../pro/linux/openvpn-easyrsa.rst:465
 msgid ""
 "Fore more commands you can refer to the `OpenSC wiki "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__."
@@ -4098,11 +4090,11 @@ msgstr ""
 "Pour plus de commandes, vous pouvez vous référer au wiki `OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:483
+#: ../pro/linux/openvpn-easyrsa.rst:468
 msgid "6. Retrieve the ``chain.crt`` file from the CA machine"
 msgstr "6. Récupérez le fichier ``chain.crt`` de la machine CA"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:485
+#: ../pro/linux/openvpn-easyrsa.rst:470
 msgid ""
 "While we keep the ``client.crt``\\ stored on the nitrokey Pro 2 device, "
 "we must retrieve the ``chain.crt`` file on the client machine, and store "
@@ -4115,11 +4107,11 @@ msgstr ""
 "adéquat. Nous pouvons utiliser ``scp`` comme dans la méthode expliquée "
 "dans la section serveur de ce guide."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:488
+#: ../pro/linux/openvpn-easyrsa.rst:473
 msgid "7. Configure the client to interact with the Nitrokey"
 msgstr "7. Configurez le client pour qu'il interagisse avec la Nitrokey"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:490
+#: ../pro/linux/openvpn-easyrsa.rst:475
 msgid ""
 "Now back on the client machine, we will plug the Nitrokey Pro and use it "
 "to establish the VPN connection with the server. In general terms, a "
@@ -4131,7 +4123,7 @@ msgstr ""
 "généraux, une connexion qui utilise TLS nécessite plusieurs certificats "
 "et clés pour l'authentification :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:499
+#: ../pro/linux/openvpn-easyrsa.rst:484
 msgid ""
 "For this guide we can the following ``client.conf`` file, and add the "
 "required options to it accordingly:"
@@ -4139,11 +4131,12 @@ msgstr ""
 "Pour ce guide, nous pouvons utiliser le fichier ``client.conf`` suivant, "
 "et y ajouter les options requises en conséquence :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:522
-msgid "1. Determine the correct object"
+#: ../pro/linux/openvpn-easyrsa.rst:506
+#, fuzzy
+msgid "Determine the correct object"
 msgstr "1. Déterminez le bon objet"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:524
+#: ../pro/linux/openvpn-easyrsa.rst:508
 msgid ""
 "Each PKCS#11 provider can support multiple devices. In order to view the "
 "available object list you can use the following command:"
@@ -4152,7 +4145,7 @@ msgstr ""
 "Afin d'afficher la liste des objets disponibles, vous pouvez utiliser la "
 "commande suivante :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:540
+#: ../pro/linux/openvpn-easyrsa.rst:524
 msgid ""
 "Each certificate/private key pair have unique ``Serialized id`` string. "
 "The serialized id string of the requested certificate should be "
@@ -4165,11 +4158,12 @@ msgstr ""
 "pouvons le faire en ajoutant l'option ``pkcs11-id`` en utilisant des "
 "guillemets simples."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:547
-msgid "2. Add retrieved Serialized ID to the configuration file"
+#: ../pro/linux/openvpn-easyrsa.rst:530
+#, fuzzy
+msgid "Add retrieved Serialized ID to the configuration file"
 msgstr "2. Ajouter l'ID sérialisé récupéré au fichier de configuration"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:549
+#: ../pro/linux/openvpn-easyrsa.rst:532
 msgid ""
 "Using your favorite text editor, open the server.conf file, and add the "
 "following lines, while taking care to insert your own ``Serialized id``:"
@@ -4178,7 +4172,7 @@ msgstr ""
 "server.conf, et ajoutez les lignes suivantes, en prenant soin d'insérer "
 "votre propre ``Identifiant sérialisé`` :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:556
+#: ../pro/linux/openvpn-easyrsa.rst:539
 msgid ""
 "For additional `settings related to OpenVPN <https://openvpn.net"
 "/community-resources/how-to/>`__ authentication, you may also add few "
@@ -4189,16 +4183,15 @@ msgstr ""
 "également ajouter quelques lignes pour gérer la gestion des clés, bien "
 "que ce soit optionnel."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:560
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:584
+#: ../pro/linux/openvpn-easyrsa.rst:543 ../pro/linux/openvpn-easyrsa.rst:567
 msgid "Click to view the code"
 msgstr "Cliquez pour voir le code"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:577
+#: ../pro/linux/openvpn-easyrsa.rst:560
 msgid "Optional step"
 msgstr "Étape facultative"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:580
+#: ../pro/linux/openvpn-easyrsa.rst:563
 msgid ""
 "If you need to test the configuration, with and without the token on the "
 "Nitrokey, you may add lines to the same ``client.conf`` and "
@@ -4208,21 +4201,23 @@ msgstr ""
 " la Nitrokey, vous pouvez ajouter des lignes au même ``client.conf`` et "
 "commenter/décommenter les lignes pertinentes en fonction de vos besoins :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:595
-msgid "3. Configure the OpenVPN client"
+#: ../pro/linux/openvpn-easyrsa.rst:577
+#, fuzzy
+msgid "Configure the OpenVPN client"
 msgstr "3. Configurer le client OpenVPN"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:597
+#: ../pro/linux/openvpn-easyrsa.rst:579
 msgid "The final configuration file ``client.conf`` should look like this one:"
 msgstr ""
 "Le fichier de configuration final ``client.conf`` devrait ressembler à "
 "celui-ci :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:641
-msgid "4. Known issues"
-msgstr "4. Problèmes connus"
+#: ../pro/linux/openvpn-easyrsa.rst:622
+#, fuzzy
+msgid "Known issues"
+msgstr "Problèmes connus"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:643
+#: ../pro/linux/openvpn-easyrsa.rst:624
 msgid ""
 "There are some known issues related to OpenVPN login with OpenSC. Please "
 "consult these issues `here <https://github.com/Nitrokey/wiki/wiki/3rd-"
@@ -4232,33 +4227,35 @@ msgstr ""
 " Veuillez consulter ces problèmes `ici "
 "<https://github.com/Nitrokey/wiki/wiki/3rd-Party-Issues>`__."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:646
+#: ../pro/linux/openvpn-easyrsa.rst:627
 msgid "8. Start the OpenVPN client"
 msgstr "8. Démarrez le client OpenVPN"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:649
-msgid "1 Start the OpenVPN service on the client"
+#: ../pro/linux/openvpn-easyrsa.rst:629
+#, fuzzy
+msgid "Start the OpenVPN service on the client"
 msgstr "1 Démarrer le service OpenVPN sur le client"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:651
+#: ../pro/linux/openvpn-easyrsa.rst:631
 msgid "Enable the OpenVPN service, and start it using these commands:"
 msgstr "Activez le service OpenVPN, et démarrez-le en utilisant ces commandes :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:658
+#: ../pro/linux/openvpn-easyrsa.rst:638
 msgid "To double check if the OpenVPN service is active use this command:"
 msgstr "Pour vérifier si le service OpenVPN est actif, utilisez cette commande :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:665
-msgid "2 Enter your User PIN"
+#: ../pro/linux/openvpn-easyrsa.rst:644
+#, fuzzy
+msgid "Enter your User PIN"
 msgstr "2 Saisissez votre code PIN utilisateur"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:667
+#: ../pro/linux/openvpn-easyrsa.rst:646
 msgid "When executing OpenVPN client, Nitrokey’s PIN needs to be entered:"
 msgstr ""
 "Lors de l'exécution du client OpenVPN, le PIN de Nitrokey doit être saisi"
 " :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:677
+#: ../pro/linux/openvpn-easyrsa.rst:656
 msgid ""
 "Unfortunately OpenVPN doesn’t seem to be able to establish a handshake "
 "and stops at an error as reported `here <https://support.nitrokey.com/t"
@@ -4283,11 +4280,11 @@ msgstr ""
 "ABpgFoNcaRUHGZQ0fVYKYXZDf5E_0ZAOjPWsD2FXLfc7atx53t9scbdGF1p7xl2VRFcBoy2l7KgvvZU589YNs1wsRG62neISVpM-"
 "9E-s9CuccSAX8y3ZQfZUq7et9QIdgaSK9g-PhFqKWJhZLFkmTwR0wmYbKXjhxQ6j>`__."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:681
+#: ../pro/linux/openvpn-easyrsa.rst:660
 msgid "error output"
 msgstr "sortie d'erreur"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:683
+#: ../pro/linux/openvpn-easyrsa.rst:662
 msgid ""
 "``$ sudo openvpn --client --config client.conf`` ``Fri Sep 11 17:42:01 "
 "2020 OpenVPN 2.4.9 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] "
@@ -4346,7 +4343,7 @@ msgstr ""
 "``Fri Sep 11 17:42:12 2020 SIGUSR1 [soft,tls-error] received, process "
 "restarting`` ``Fri Sep 11 17:42:12 2020 Restart pause, 5 second(s)``"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:707
+#: ../pro/linux/openvpn-easyrsa.rst:686
 msgid ""
 "In some reported cases it does not prompt for a PIN on the terminal. One "
 "workaround would be to use to use this command to login with the PIN:"
@@ -4355,7 +4352,7 @@ msgstr ""
 "solution de contournement serait d'utiliser cette commande pour se "
 "connecter avec le code PIN :"
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:713
+#: ../pro/linux/openvpn-easyrsa.rst:692
 msgid ""
 "Alternatively, you could `recompile OpenVPN "
 "<https://forums.openvpn.net/viewtopic.php?t=23318>`__ client with systemd"
@@ -4365,7 +4362,7 @@ msgstr ""
 "<https://forums.openvpn.net/viewtopic.php?t=23318>`__ avec le support "
 "systemd désactivé, et il vous demandera le PIN comme prévu."
 
-#: ../pro/linux/openvpn-configuration-with-easyrsa.rst:715
+#: ../pro/linux/openvpn-easyrsa.rst:694
 msgid ""
 "Another option, would be to login to your OpenVPN instance with the "
 "Viscosity client which provides a better user experience especially for "
@@ -4650,10 +4647,11 @@ msgid "S/MIME Email Encryption"
 msgstr "Chiffrement du courrier électronique S/MIME"
 
 #: ../pro/smime.rst:17
+#, fuzzy
 msgid ""
 "If you are in doubt which one to choose, you should use OpenPGP, see "
-"`here <https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__. "
-"This page describes the usage of S/MIME email encryption."
+"`here <https://docs.nitrokey.com/pro/openpgp.html>`__. This page "
+"describes the usage of S/MIME email encryption."
 msgstr ""
 "Si vous avez un doute sur celui à choisir, vous devriez utiliser OpenPGP,"
 " voir `here <https://docs.nitrokey.com/pro/openpgp-email-"
@@ -4679,20 +4677,20 @@ msgstr ""
 "fichiers d'installation depuis la page `OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki>`__."
 
-#: ../pro/smime.rst:21
+#: ../pro/smime-outlook.rst:17 ../pro/smime-thunderbird.rst:17
+#: ../pro/smime.rst:22
 msgid ""
-"**Note: Windows users with 64-bit system (standard) need to install both,"
-" the 32-bit and the 64-bit version of OpenSC!**"
+"Windows users with 64-bit system (standard) need to install both, the "
+"32-bit and the 64-bit version of OpenSC!"
 msgstr ""
-"**Remarque : les utilisateurs de Windows avec un système 64 bits "
-"(standard) doivent installer à la fois la version 32 bits et la version "
-"64 bits d'OpenSC!**."
+"Les utilisateurs de Windows avec un système 64 bits (standard) doivent "
+"installer à la fois la version 32 bits et la version 64 bits d'OpenSC !"
 
-#: ../pro/smime.rst:24
+#: ../pro/smime.rst:25
 msgid "Import Existing Key and Certificate"
 msgstr "Importer une clé et un certificat existants"
 
-#: ../pro/smime.rst:26
+#: ../pro/smime.rst:27
 msgid ""
 "The following instructions are based on the `wiki of OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__. We will assume, "
@@ -4705,7 +4703,7 @@ msgstr ""
 " .p12. Veuillez jeter un coup d'œil à la page du wiki, si vous avez "
 "obtenu un fichier de clé et de certificat séparé."
 
-#: ../pro/smime.rst:30
+#: ../pro/smime.rst:31
 msgid ""
 "To make these commands as simple as possible, the .p12 file needs to be "
 "in your home folder. On Windows this is usually ‘C:\\Users\\yourusername’"
@@ -4722,7 +4720,7 @@ msgstr ""
 "ci-dessous. Veuillez brancher la Nitrokey avant de soumettre les "
 "commandes."
 
-#: ../pro/smime.rst:32
+#: ../pro/smime.rst:33
 msgid ""
 "Assuming that your key-certificate file reads ‘myprivate.p12’ the "
 "commands for Windows looks like this:"
@@ -4730,11 +4728,11 @@ msgstr ""
 "En supposant que votre fichier de certificat de clé soit 'myprivate.p12',"
 " les commandes pour Windows ressemblent à ceci :"
 
-#: ../pro/smime.rst:39
+#: ../pro/smime.rst:40
 msgid "and on macOS and GNU/Linux it will be"
 msgstr "et sur macOS et GNU/Linux, ce sera"
 
-#: ../pro/smime.rst:46
+#: ../pro/smime.rst:47
 msgid ""
 "The two commands copy the key-certificate pair to the slot 2 (needed for "
 "decrypting emails) and slot 3 (needed for signing). The output looks on "
@@ -4744,7 +4742,7 @@ msgstr ""
 "(nécessaire au décryptage des emails) et le slot 3 (nécessaire à la "
 "signature). Le résultat ressemble à ceci sur les deux systèmes :"
 
-#: ../pro/smime.rst:53
+#: ../pro/smime.rst:54
 msgid ""
 "Please note that there will be error messages that can be safely ignored "
 "(see output example above). You now have the key-certificate pair loaded "
@@ -4754,26 +4752,27 @@ msgstr ""
 "ignorés (voir l'exemple ci-dessus). Vous avez maintenant la paire "
 "clé-certificat chargée sur la Nitrokey."
 
-#: ../pro/smime.rst:60
+#: ../pro/smime.rst:61
+#, fuzzy
 msgid ""
 "for using `S/MIME encryption on Thunderbird "
-"<https://docs.nitrokey.com/pro/smime-email-encryption-with-"
-"thunderbird.html>`__"
+"<https://docs.nitrokey.com/pro/smime-thunderbird.html>`__"
 msgstr ""
 "pour utiliser le cryptage `S/MIME sur Thunderbird "
 "<https://docs.nitrokey.com/pro/smime-email-encryption-with-"
 "thunderbird.html>`___."
 
-#: ../pro/smime.rst:63
+#: ../pro/smime.rst:64
+#, fuzzy
 msgid ""
 "for using `S/MIME encryption on Outlook <https://docs.nitrokey.com/pro"
-"/smime-email-encryption-with-outlook.html>`__"
+"/smime-outlook.html>`__"
 msgstr ""
 "pour utiliser le cryptage `S/MIME sur Outlook "
 "<https://docs.nitrokey.com/pro/smime-email-encryption-with-"
 "outlook.html>`___."
 
-#: ../pro/smime.rst:73
+#: ../pro/smime.rst:74
 msgid ""
 "On Windows: Did you install **both**, the 32-bit and the 64-bit version "
 "of OpenSC?"
@@ -4781,7 +4780,7 @@ msgstr ""
 "Sous Windows : Avez-vous installé **les deux**, la version 32-bit et la "
 "version 64-bit d'OpenSC ?"
 
-#: ../pro/smime.rst:76
+#: ../pro/smime.rst:77
 msgid ""
 "Nitrokey Storage 2: You need to install OpenSC in version 0.18 or higher."
 " You can find the files on the `OpenSC website "
@@ -4800,11 +4799,11 @@ msgid "S/MIME Email Encryption with Thunderbird"
 msgstr "Cryptage des e-mails S/MIME avec Thunderbird"
 
 #: ../pro/smime-thunderbird.rst:11
+#, fuzzy
 msgid ""
 "If you do not have a S/MIME key-certificate pair installed on your "
 "Nitrokey yet or if you did not installed OpenSC, please look at `this "
-"page <https://docs.nitrokey.com/pro/smime-email-encryption.html>`__ "
-"first."
+"page <https://docs.nitrokey.com/pro/smime.html>`__ first."
 msgstr ""
 "Si vous n'avez pas encore de paire clé-certificat S/MIME installée sur "
 "votre Nitrokey ou si vous n'avez pas installé OpenSC, regardez d'abord "
@@ -4826,14 +4825,6 @@ msgstr ""
 "install opensc`` sur Ubuntu), les utilisateurs de macOS et Windows "
 "peuvent télécharger les fichiers d'installation directement depuis "
 "OpenSC."
-
-#: ../pro/smime-outlook.rst:17 ../pro/smime-thunderbird.rst:17
-msgid ""
-"Windows users with 64-bit system (standard) need to install both, the "
-"32-bit and the 64-bit version of OpenSC!"
-msgstr ""
-"Les utilisateurs de Windows avec un système 64 bits (standard) doivent "
-"installer à la fois la version 32 bits et la version 64 bits d'OpenSC !"
 
 #: ../pro/smime-thunderbird.rst:21
 msgid "Settings in Thunderbird"
@@ -4899,11 +4890,12 @@ msgid "Login With EIDAuthenticate on Stand Alone Windows Computers"
 msgstr "Connexion avec EIDAuthenticate sur des ordinateurs Windows autonomes"
 
 #: ../pro/eidauthenticate.rst:8
+#, fuzzy
 msgid ""
 "Download and install the latest version of `OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki>`__. Please install the `OpenPGP-"
 "CSP <https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3>`__ driver "
-"**instead** if using Nitrokey Storage **2** or Nitrokey Pro **2**."
+"**instead** if using Nitrokey Storage 2 or Nitrokey Pro 2."
 msgstr ""
 "Téléchargez et installez la dernière version de `OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki>`__. Veuillez installer le pilote "
@@ -4911,27 +4903,37 @@ msgstr ""
 " **à la place** si vous utilisez Nitrokey Storage **2** ou Nitrokey Pro "
 "**2**."
 
-#: ../pro/eidauthenticate.rst:14
+#: ../pro/eidauthenticate.rst:9
+#, fuzzy
 msgid ""
 "Download and install `EIDAuthenticate "
-"<https://www.mysmartlogon.com/eidauthenticate/>`__. Note: The free "
-"community edition is disabled. You may test the enterprise edition "
-"instead."
+"<https://www.mysmartlogon.com/eidauthenticate/>`__."
 msgstr ""
 "Téléchargez et installez `EIDAuthenticate "
 "<https://www.mysmartlogon.com/eidauthenticate/>`__. Remarque : L'édition "
 "communautaire gratuite est désactivée. Vous pouvez tester l'édition "
 "entreprise à la place."
 
-#: ../pro/eidauthenticate.rst:18
+#: ../pro/eidauthenticate.rst:12
+#, fuzzy
+msgid ""
+"The free community edition is disabled. You may test the enterprise "
+"edition instead."
+msgstr ""
+"Téléchargez et installez `EIDAuthenticate "
+"<https://www.mysmartlogon.com/eidauthenticate/>`__. Remarque : L'édition "
+"communautaire gratuite est désactivée. Vous pouvez tester l'édition "
+"entreprise à la place."
+
+#: ../pro/eidauthenticate.rst:14
 msgid "Start EIDConfigurationWizard.exe"
 msgstr "Démarrer EIDConfigurationWizard.exe"
 
-#: ../pro/eidauthenticate.rst:19
+#: ../pro/eidauthenticate.rst:15
 msgid "Select “Associate a new certificate”"
 msgstr "Sélectionnez \"Associer un nouveau certificat\"."
 
-#: ../pro/eidauthenticate.rst:26
+#: ../pro/eidauthenticate.rst:22
 msgid ""
 "Select or generate a Certificate Authority which should issue the user’s "
 "certificate on the Nitrokey."
@@ -4939,7 +4941,7 @@ msgstr ""
 "Sélectionnez ou générez une autorité de certification qui doit émettre le"
 " certificat de l'utilisateur sur la Nitrokey."
 
-#: ../pro/eidauthenticate.rst:34
+#: ../pro/eidauthenticate.rst:30
 msgid ""
 "Enter the user PIN which you defined previously in step 4. Wait a moment "
 "until a new keypair and certificate are generated. In case your Nitrokey "
@@ -4951,29 +4953,29 @@ msgstr ""
 " certificat soient générés. Si votre Nitrokey n'est pas détectée, vous "
 "pouvez exécuter \"certutil -scinfo\" pour résoudre le problème."
 
-#: ../pro/eidauthenticate.rst:44
+#: ../pro/eidauthenticate.rst:40
 msgid "Select the newly generated certificate and press continue."
 msgstr "Sélectionnez le certificat nouvellement généré et appuyez sur continuer."
 
-#: ../pro/eidauthenticate.rst:51
+#: ../pro/eidauthenticate.rst:47
 msgid "All checks should succeed. Press continue."
 msgstr "Toutes les vérifications devraient réussir. Appuyez sur continuer."
 
-#: ../pro/eidauthenticate.rst:58
+#: ../pro/eidauthenticate.rst:54
 msgid "Enter the password of your user account."
 msgstr "Saisissez le mot de passe de votre compte utilisateur."
 
-#: ../pro/eidauthenticate.rst:65
+#: ../pro/eidauthenticate.rst:61
 msgid "Enter the user PIN which you defined previously in step 4."
 msgstr ""
 "Saisissez le code PIN utilisateur que vous avez défini précédemment à "
 "l'étape 4."
 
-#: ../pro/eidauthenticate.rst:72
+#: ../pro/eidauthenticate.rst:68
 msgid "The final screen may look like this."
 msgstr "L'écran final peut ressembler à ceci."
 
-#: ../pro/eidauthenticate.rst:79
+#: ../pro/eidauthenticate.rst:75
 msgid ""
 "You may perform further configurations such as activate the force smart "
 "card policy or automatically lock the computer when removing the Nitrokey"
@@ -4984,7 +4986,7 @@ msgstr ""
 "l'ordinateur lors du retrait de la Nitrokey (en utilisant "
 "EIDConfigurationWizardElevated.exe)."
 
-#: ../pro/eidauthenticate.rst:81 ../pro/smart-policy.rst:95
+#: ../pro/eidauthenticate.rst:77 ../pro/smart-policy.rst:95
 msgid ""
 "From now on, when logging on to your Windows computer you need to connect"
 " the Nitrokey and enter your PIN."
@@ -5193,10 +5195,11 @@ msgid "S/MIME Email Encryption with Outlook"
 msgstr "Cryptage des e-mails S/MIME avec Outlook"
 
 #: ../pro/smime-outlook.rst:11
+#, fuzzy
 msgid ""
 "If you do not have a S/MIME key-certificate pair installed on your "
-"Nitrokey yet, please look at `this page <https://docs.nitrokey.com/pro"
-"/smime-email-encryption.html>`__ first."
+"Nitrokey yet, please look at `this page "
+"<https://docs.nitrokey.com/pro/smime.html>`__ first."
 msgstr ""
 "Si tu n'as pas encore de paire clé-certificat S/MIME installée sur ta "
 "Nitrokey, regarde d'abord `cette page <https://docs.nitrokey.com/pro"
@@ -5229,7 +5232,7 @@ msgstr ""
 "section 'Email Security' vous pouvez choisir votre identité S/MIME. Votre"
 " certificat devrait déjà être reconnu par Outlook."
 
-#: ../pro/smime-outlook.rst:36
+#: ../pro/smime-outlook.rst:38
 msgid ""
 "When composing a mail you can now choose to encrypt and sign the message "
 "in the ‘Options’ ribbon of the compose window."
@@ -5238,7 +5241,7 @@ msgstr ""
 "chiffrer et de le signer dans le ruban \"Options\" de la fenêtre de "
 "composition."
 
-#: ../pro/smime-outlook.rst:43
+#: ../pro/smime-outlook.rst:45
 msgid ""
 "Outlook will only encrypt message to mail addresses which are saved in "
 "your address book. So make sure, that the persons you want to write an "
@@ -5253,7 +5256,7 @@ msgstr ""
 " un courrier signé, afin que vous puissiez importer les informations du "
 "certificat."
 
-#: ../pro/smime-outlook.rst:45
+#: ../pro/smime-outlook.rst:47
 msgid ""
 "Depending on your certificate or the certificate of your partners you may"
 " have to import a so-called root certificate. This is the certificate of "
@@ -5536,12 +5539,13 @@ msgstr ""
 "certificat."
 
 #: ../pro/windows/openpgp-csp.rst:95
+#, fuzzy
 msgid ""
 "You are now ready to logon on the computer with the Nitrokey instead of "
 "your password and you can use `S/MIME email encryption/signing "
-"<https://docs.nitrokey.com/pro/smime-email-encryption.html>`__ with the "
-"Nitrokey. The driver has to be installed on every computer you want to "
-"use the certificate on."
+"<https://docs.nitrokey.com/pro/smime.html>`__ with the Nitrokey. The "
+"driver has to be installed on every computer you want to use the "
+"certificate on."
 msgstr ""
 "Vous êtes maintenant prêt à vous connecter sur l'ordinateur avec la "
 "Nitrokey au lieu de votre mot de passe et vous pouvez utiliser `S/MIME "
@@ -5796,3 +5800,79 @@ msgstr ""
 
 #~ msgid "You might use ``sudo`` if required."
 #~ msgstr "Vous pouvez utiliser ``sudo`` si nécessaire."
+
+#~ msgid ""
+#~ "To sign the certificates, we will "
+#~ "use a `Nitrokey HSM 2 "
+#~ "<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-"
+#~ "pro-2-3>`__ set up as `Certificate "
+#~ "Authority <https://docs.nitrokey.com/hsm/linux/creating-"
+#~ "certificate-authority.html#creating-the-"
+#~ "intermediate-certificate-authority>`__, however "
+#~ "this guide does not cover the set"
+#~ " up of the CA itself (it is "
+#~ "clear and `well documented here "
+#~ "<https://docs.nitrokey.com/hsm/linux/creating-certificate-"
+#~ "authority.html#sign-a-server-certificate>`__)."
+#~ msgstr ""
+#~ "Pour signer les certificats, nous "
+#~ "utiliserons un `Nitrokey HSM 2 "
+#~ "<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-"
+#~ "pro-2-3>`__ configuré comme `Autorité de "
+#~ "Certification <https://docs.nitrokey.com/hsm/linux/creating-"
+#~ "certificate-authority.html#creating-the-"
+#~ "intermediate-certificate-authority>`__, cependant "
+#~ "ce guide ne couvre pas la mise "
+#~ "en place de l'AC elle-même (elle"
+#~ " est claire et `bien documentée ici"
+#~ " <https://docs.nitrokey.com/hsm/linux/creating-"
+#~ "certificate-authority.html#sign-a-server-certificate>`__)."
+
+#~ msgid ""
+#~ "​ **(Required step)** If this is "
+#~ "the first time you sign a "
+#~ "certificate with the CA, you might "
+#~ "want to retrieve the URI of the"
+#~ " CA’s private key from the HSM, "
+#~ "and include it in the config file."
+#~ msgstr ""
+#~ "**(Étape obligatoire)** Si c'est la "
+#~ "première fois que vous signez un "
+#~ "certificat avec l'autorité de certification,"
+#~ " vous pouvez récupérer l'URI de la"
+#~ " clé privée de l'autorité de "
+#~ "certification à partir du HSM et "
+#~ "l'inclure dans le fichier de "
+#~ "configuration."
+
+#~ msgid ""
+#~ "/// Some documentation says that we "
+#~ "can use the ./pkitool script available"
+#~ " with Easy-RSA, to directly "
+#~ "initialize a key pair on the "
+#~ "Nitrokey, however the pkitool utility "
+#~ "seems to be deprecated ///"
+#~ msgstr ""
+#~ "/// Certains documents indiquent que "
+#~ "nous pouvons utiliser le script "
+#~ "./pkitool disponible avec Easy-RSA, pour"
+#~ " initialiser directement une paire de "
+#~ "clés sur la Nitrokey, cependant "
+#~ "l'utilitaire pkitool semble être déprécié "
+#~ "///"
+
+#~ msgid "4. Known issues"
+#~ msgstr "4. Problèmes connus"
+
+#~ msgid ""
+#~ "**Note: Windows users with 64-bit system"
+#~ " (standard) need to install both, the"
+#~ " 32-bit and the 64-bit version of "
+#~ "OpenSC!**"
+#~ msgstr ""
+#~ "**Remarque : les utilisateurs de Windows"
+#~ " avec un système 64 bits (standard)"
+#~ " doivent installer à la fois la "
+#~ "version 32 bits et la version 64"
+#~ " bits d'OpenSC!**."
+

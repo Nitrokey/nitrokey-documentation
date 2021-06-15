@@ -8,24 +8,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-02 12:41+0200\n"
+"POT-Creation-Date: 2021-06-15 17:00+0200\n"
 "PO-Revision-Date: 2021-06-02 11:56+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: German <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-hsm/de/>\n"
 "Language: de\n"
+"Language-Team: German <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-hsm/de/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: ../hsm/creating-certificate-authority.rst:2
+#: ../hsm/certificate-authority.rst:2
 msgid "Creating a Certificate Authority"
 msgstr "Erstellen einer Zertifizierungsstelle"
 
-#: ../hsm/creating-certificate-authority.rst:8
+#: ../hsm/certificate-authority.rst:8
 msgid ""
 "This article shows you how to setup your own private certificate "
 "authority backed by a Nitrokey HSM. This certificate authority has no "
@@ -38,11 +37,11 @@ msgstr ""
 "wirklich skalierbar. Andere Open-Source-Projekte können für die "
 "Automatisierung und Skalierbarkeit referenziert werden."
 
-#: ../hsm/creating-certificate-authority.rst:11
+#: ../hsm/certificate-authority.rst:11
 msgid "Choose Cryptographic Algorithms"
 msgstr "Kryptographische Algorithmen auswählen"
 
-#: ../hsm/creating-certificate-authority.rst:13
+#: ../hsm/certificate-authority.rst:13
 msgid ""
 "I’m going to assume that you’re as paranoid as I am, so I will be using "
 "the following command for generating private keys:"
@@ -50,7 +49,7 @@ msgstr ""
 "Ich gehe davon aus, dass Sie genauso paranoid sind wie ich, daher werde "
 "ich den folgenden Befehl zum Erzeugen privater Schlüssel verwenden:"
 
-#: ../hsm/creating-certificate-authority.rst:19
+#: ../hsm/certificate-authority.rst:19
 msgid ""
 "But, if you’re less paranoid that I am, you can safely choose the "
 "following options:"
@@ -58,7 +57,7 @@ msgstr ""
 "Wenn Sie aber weniger paranoid sind als ich, können Sie getrost die "
 "folgenden Optionen wählen:"
 
-#: ../hsm/creating-certificate-authority.rst:26
+#: ../hsm/certificate-authority.rst:26
 msgid ""
 "Likewise, I will be using the sha512 algorithm throughout this article, "
 "but sha256 can safely be used."
@@ -66,25 +65,25 @@ msgstr ""
 "Ebenso werde ich in diesem Artikel den Algorithmus sha512 verwenden, aber"
 " sha256 kann sicher auch verwendet werden."
 
-#: ../hsm/creating-certificate-authority.rst:29
+#: ../hsm/certificate-authority.rst:29
 msgid "Preparing to Start"
 msgstr "Vorbereiten des Starts"
 
-#: ../hsm/creating-certificate-authority.rst:31
+#: ../hsm/certificate-authority.rst:31
 msgid "To start with, you need to pick a directory to store your CA."
 msgstr ""
 "Zunächst müssen Sie ein Verzeichnis auswählen, in dem Ihre CA gespeichert"
 " werden soll."
 
-#: ../hsm/creating-certificate-authority.rst:42
+#: ../hsm/certificate-authority.rst:42
 msgid "Install the necessary tools:"
 msgstr "Installieren Sie die erforderlichen Werkzeuge:"
 
-#: ../hsm/creating-certificate-authority.rst:53
+#: ../hsm/certificate-authority.rst:53
 msgid "Creating the Root Certificate Authority"
 msgstr "Erstellen der Root-Zertifizierungsstelle"
 
-#: ../hsm/creating-certificate-authority.rst:55
+#: ../hsm/certificate-authority.rst:55
 msgid ""
 "We start by generating the private key for the certificate authority "
 "directly on the Nitrokey HSM. This allows us to use the private key in "
@@ -94,7 +93,7 @@ msgstr ""
 "Zertifizierungsstelle direkt auf dem Nitrokey HSM. Dadurch können wir den"
 " privaten Schlüssel in Zukunft verwenden, aber nicht darauf zugreifen."
 
-#: ../hsm/creating-certificate-authority.rst:78
+#: ../hsm/certificate-authority.rst:78
 msgid ""
 "Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need"
 " it later."
@@ -102,8 +101,7 @@ msgstr ""
 "Notieren Sie die ID-Nummer (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), "
 "wir benötigen sie später."
 
-#: ../hsm/creating-certificate-authority.rst:80
-#: ../hsm/creating-certificate-authority.rst:235
+#: ../hsm/certificate-authority.rst:80 ../hsm/certificate-authority.rst:235
 msgid ""
 "If you need the ID in the future, you can list the keys on the Nitrokey "
 "HSM:"
@@ -111,8 +109,7 @@ msgstr ""
 "Wenn Sie die ID in Zukunft benötigen, können Sie die Tasten auf dem "
 "Nitrokey HSM auflisten:"
 
-#: ../hsm/creating-certificate-authority.rst:86
-#: ../hsm/creating-certificate-authority.rst:241
+#: ../hsm/certificate-authority.rst:86 ../hsm/certificate-authority.rst:241
 msgid ""
 "We need to create a config file to generate a self-signed public "
 "certificate."
@@ -120,8 +117,7 @@ msgstr ""
 "Wir müssen eine Konfigurationsdatei erstellen, um ein selbstsigniertes "
 "öffentliches Zertifikat zu erzeugen."
 
-#: ../hsm/creating-certificate-authority.rst:92
-#: ../hsm/creating-certificate-authority.rst:247
+#: ../hsm/certificate-authority.rst:92 ../hsm/certificate-authority.rst:247
 msgid ""
 "Fill out the request information in <angle brackets> with information for"
 " your CA."
@@ -129,7 +125,7 @@ msgstr ""
 "Füllen Sie die Anforderungsinformationen in <eckigen Klammern> mit "
 "Informationen für Ihre CA aus."
 
-#: ../hsm/creating-certificate-authority.rst:152
+#: ../hsm/certificate-authority.rst:152
 msgid ""
 "Generate the self-signed public certificate from the private key. Use the"
 " private key id value from earlier."
@@ -137,7 +133,7 @@ msgstr ""
 "Erzeugen Sie das selbstsignierte öffentliche Zertifikat aus dem privaten "
 "Schlüssel. Verwenden Sie den Wert der privaten Schlüssel-ID von vorhin."
 
-#: ../hsm/creating-certificate-authority.rst:160
+#: ../hsm/certificate-authority.rst:160
 msgid ""
 "Verify that the root certificate was generated correctly. Verify that "
 "Signature-Algorithm matches above and below. Verify that Issuer and "
@@ -150,11 +146,11 @@ msgstr ""
 "selbstsigniert. Überprüfen Sie, dass Key Usage mit den v3_ca-"
 "Informationen in unserer Konfigurationsdatei übereinstimmt."
 
-#: ../hsm/creating-certificate-authority.rst:208
+#: ../hsm/certificate-authority.rst:208
 msgid "Creating the Intermediate Certificate Authority"
 msgstr "Erstellen der Zwischenzertifizierungsstelle"
 
-#: ../hsm/creating-certificate-authority.rst:210
+#: ../hsm/certificate-authority.rst:210
 msgid ""
 "We continue by generating the private key for the intermediate "
 "certificate authority directly on the Nitrokey HSM. This allows us to use"
@@ -165,7 +161,7 @@ msgstr ""
 "Dadurch können wir den privaten Schlüssel in Zukunft verwenden, aber "
 "nicht darauf zugreifen."
 
-#: ../hsm/creating-certificate-authority.rst:233
+#: ../hsm/certificate-authority.rst:233
 msgid ""
 "Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need"
 " it later."
@@ -173,7 +169,7 @@ msgstr ""
 "Notieren Sie die ID-Nummer (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), "
 "wir benötigen sie später."
 
-#: ../hsm/creating-certificate-authority.rst:274
+#: ../hsm/certificate-authority.rst:274
 msgid ""
 "Generate the certificate signing request for the intermediate CA from the"
 " intermediate CA’s private key. Use the private key ID value from "
@@ -183,7 +179,7 @@ msgstr ""
 "aus dem privaten Schlüssel der Zwischen-CA. Verwenden Sie den ID-Wert des"
 " privaten Schlüssels von vorhin."
 
-#: ../hsm/creating-certificate-authority.rst:282
+#: ../hsm/certificate-authority.rst:282
 msgid ""
 "Verify that the CSR was created correctly. Verify that your Subject is "
 "correct. Verify that your Public Key and Signature Algorithm are correct."
@@ -192,27 +188,17 @@ msgstr ""
 "Betreff korrekt ist. Prüfen Sie, ob Ihr öffentlicher Schlüssel und Ihr "
 "Signaturalgorithmus korrekt sind."
 
-#: ../hsm/creating-certificate-authority.rst:315
-#: ../hsm/creating-certificate-authority.rst:516
+#: ../hsm/certificate-authority.rst:315 ../hsm/certificate-authority.rst:520
 msgid "We need to find out the fully qualified PKCS#11 URI for your private key:"
 msgstr ""
 "Wir müssen die voll qualifizierte PKCS#11-URI für Ihren privaten "
 "Schlüssel herausfinden:"
 
-#: ../hsm/creating-certificate-authority.rst:353
-#, python-format
-msgid ""
-"In this instance, the fully qualified PKCS#11 URI is "
-"``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token"
-"=SmartCard-"
-"HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private``."
+#: ../hsm/certificate-authority.rst:353 ../hsm/certificate-authority.rst:558
+msgid "In this instance, the fully qualified PKCS#11 URI is:"
 msgstr ""
-"In diesem Fall lautet der vollständig qualifizierte PKCS#11-URI "
-"``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token"
-"=SmartCard-"
-"HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private``."
 
-#: ../hsm/creating-certificate-authority.rst:355
+#: ../hsm/certificate-authority.rst:359
 msgid ""
 "Now, we need to create a config file to use the private key of the root "
 "certificate to sign the csr of the intermediate certificate."
@@ -221,11 +207,11 @@ msgstr ""
 "Schlüssel des Root-Zertifikats zu verwenden, um die csr des "
 "Zwischenzertifikats zu signieren."
 
-#: ../hsm/creating-certificate-authority.rst:407
+#: ../hsm/certificate-authority.rst:411
 msgid "Then sign the intermediate certificate with the root certificate."
 msgstr "Signieren Sie dann das Zwischenzertifikat mit dem Stammzertifikat."
 
-#: ../hsm/creating-certificate-authority.rst:447
+#: ../hsm/certificate-authority.rst:451
 msgid ""
 "Verify that the root certificate was generated correctly. Verify that the"
 " Issuer and Subject are different, and correct. Verify that the Key Usage"
@@ -238,7 +224,7 @@ msgstr ""
 "übereinstimmt. Prüfen Sie, ob die Signaturalgorithmen oben und unten "
 "korrekt sind."
 
-#: ../hsm/creating-certificate-authority.rst:494
+#: ../hsm/certificate-authority.rst:498
 msgid ""
 "Verify that the intermediate certificate verifies against the root "
 "certificate."
@@ -246,21 +232,21 @@ msgstr ""
 "Überprüfen Sie, ob das Zwischenzertifikat mit dem Stammzertifikat "
 "übereinstimmt."
 
-#: ../hsm/creating-certificate-authority.rst:501
+#: ../hsm/certificate-authority.rst:505
 msgid "Create a certificate chain file:"
 msgstr "Erstellen Sie eine Zertifikatskettendatei:"
 
-#: ../hsm/creating-certificate-authority.rst:507
+#: ../hsm/certificate-authority.rst:511
 msgid "You now have a certificate authority backed by an HSM."
 msgstr ""
 "Sie haben nun eine Zertifizierungsstelle, die durch ein HSM unterstützt "
 "wird."
 
-#: ../hsm/creating-certificate-authority.rst:510
+#: ../hsm/certificate-authority.rst:514
 msgid "Sign a Server Certificate"
 msgstr "Signieren eines Server-Zertifikats"
 
-#: ../hsm/creating-certificate-authority.rst:512
+#: ../hsm/certificate-authority.rst:516
 msgid ""
 "Now that you have a certificate authority, you’d probably like to know "
 "how to use it."
@@ -268,7 +254,7 @@ msgstr ""
 "Jetzt, wo Sie eine Zertifizierungsstelle haben, möchten Sie "
 "wahrscheinlich wissen, wie Sie diese verwenden können."
 
-#: ../hsm/creating-certificate-authority.rst:514
+#: ../hsm/certificate-authority.rst:518
 msgid ""
 "Create a CSR in the normal method for your application. Proper creation "
 "of your certificate, including SAN, for your particular application is "
@@ -278,20 +264,7 @@ msgstr ""
 "korrekte Erstellung Ihres Zertifikats, einschließlich SAN, für Ihre "
 "spezielle Anwendung liegt außerhalb des Rahmens dieses Dokuments."
 
-#: ../hsm/creating-certificate-authority.rst:554
-#, python-format
-msgid ""
-"In this instance, the fully qualified PKCS#11 URI is "
-"``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token"
-"=SmartCard-"
-"HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%BC%B4%8F%E9%B5%66%AE%61%89%1A%AB%BF%DE%6A%23%D4%FF%3A%B6%39;object=intermediate;type=private``."
-msgstr ""
-"In diesem Fall lautet der vollständig qualifizierte PKCS#11-URI "
-"``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token"
-"=SmartCard-"
-"HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%BC%B4%8F%E9%B5%66%AE%61%89%1A%AB%BF%DE%6A%23%D4%FF%3A%B6%39;object=intermediate;type=private``."
-
-#: ../hsm/creating-certificate-authority.rst:556
+#: ../hsm/certificate-authority.rst:564
 msgid ""
 "Create a config file to use the private key of the intermediate "
 "certificate to sign the CSRs of your servers."
@@ -299,21 +272,21 @@ msgstr ""
 "Erstellen Sie eine Konfigurationsdatei, um den privaten Schlüssel des "
 "Zwischenzertifikats zum Signieren der CSRs Ihrer Server zu verwenden."
 
-#: ../hsm/creating-certificate-authority.rst:611
+#: ../hsm/certificate-authority.rst:619
 msgid "Then run openssl to sign the server’s CSR."
 msgstr "Führen Sie dann openssl aus, um die CSR des Servers zu signieren."
 
-#: ../hsm/creating-certificate-authority.rst:660
+#: ../hsm/certificate-authority.rst:668
 msgid "References"
 msgstr "Referenzen"
 
-#: ../hsm/creating-certificate-authority.rst:662
+#: ../hsm/certificate-authority.rst:670
 msgid "I used the following resources to help in compiling this document."
 msgstr ""
 "Bei der Zusammenstellung dieses Dokuments habe ich die folgenden "
 "Ressourcen verwendet."
 
-#: ../hsm/creating-certificate-authority.rst:664
+#: ../hsm/certificate-authority.rst:672
 msgid ""
 "`How to initialize your Nitrokey HSM "
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
@@ -323,7 +296,7 @@ msgstr ""
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
 "device>`__"
 
-#: ../hsm/creating-certificate-authority.rst:666
+#: ../hsm/certificate-authority.rst:674
 msgid ""
 "`How to create a root and intermediate CA <https://jamielinux.com/docs"
 "/openssl-certificate-authority/create-the-root-pair.html>`__"
@@ -331,7 +304,7 @@ msgstr ""
 "So erstellen Sie eine Stamm- und Zwischen-CA <https://jamielinux.com/docs"
 "/openssl-certificate-authority/create-the-root-pair.html>`__"
 
-#: ../hsm/creating-certificate-authority.rst:668
+#: ../hsm/certificate-authority.rst:676
 msgid ""
 "`How to ensure the serial numbers of your intermediate CA and server "
 "certs are up to spec <https://www.phildev.net/ssl/creating_ca.html>`__"
@@ -340,7 +313,7 @@ msgstr ""
 "CA- und Server-Zertifikate der Spezifikation entsprechen "
 "<https://www.phildev.net/ssl/creating_ca.html>`__"
 
-#: ../hsm/creating-certificate-authority.rst:671
+#: ../hsm/certificate-authority.rst:679
 msgid ""
 "`How to generate ECC private keys <https://dev.to/benjaminblack"
 "/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
@@ -348,7 +321,7 @@ msgstr ""
 "Wie man ECC-Privatschlüssel erzeugt <https://dev.to/benjaminblack"
 "/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
 
-#: ../hsm/creating-certificate-authority.rst:673
+#: ../hsm/certificate-authority.rst:681
 msgid ""
 "`How to find the PCKS11 URI from your HSM "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__"
@@ -356,7 +329,7 @@ msgstr ""
 "So finden Sie den PCKS11 URI von Ihrem HSM "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__"
 
-#: ../hsm/creating-certificate-authority.rst:675
+#: ../hsm/certificate-authority.rst:683
 msgid ""
 "`Troubleshooting (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-"
 "hsm-does-not-support-signing/2598/14>`__"
@@ -364,7 +337,7 @@ msgstr ""
 "`Fehlersuche (Forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-hsm-"
 "does-not-support-signing/2598/14>`__"
 
-#: ../hsm/creating-certificate-authority.rst:678
+#: ../hsm/certificate-authority.rst:686
 msgid ""
 "This document was originally `written by lyntux "
 "<https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__."
@@ -519,8 +492,8 @@ msgstr ""
 "sperrt den Bildschirm. Es spielt keine Rolle, ob der Nitrokey bei dieser "
 "ersten Ausführung eingesteckt ist oder nicht."
 
-#: ../pro/linux/automatic-screen-lock.rst:77 ../pro/smime-outlook.rst:34
-#: ../pro/smime-thunderbird.rst:45 ../pro/smime.rst:56
+#: ../pro/linux/automatic-screen-lock.rst:77 ../pro/smime-outlook.rst:36
+#: ../pro/smime-thunderbird.rst:45 ../pro/smime.rst:57
 msgid "Usage"
 msgstr "Verwendung"
 
@@ -560,18 +533,20 @@ msgid ""
 "which contains GPA. For Linux you should install the GPA package of your "
 "distribution (e.g. on Ubuntu: sudo apt-get install gpa )."
 msgstr ""
-"Zuerst müssen Sie den Gnu Privacy Assistant (GPA) installieren. Für Windows "
-"sollten Sie das Paket `GPG4Win <http://gpg4win.org/>`_ herunterladen und "
-"installieren, das GPA enthält. Für Linux sollten Sie das GPA-Paket Ihrer "
-"Distribution installieren (z. B. unter Ubuntu: sudo apt-get install gpa )."
+"Zuerst müssen Sie den Gnu Privacy Assistant (GPA) installieren. Für "
+"Windows sollten Sie das Paket `GPG4Win <http://gpg4win.org/>`_ "
+"herunterladen und installieren, das GPA enthält. Für Linux sollten Sie "
+"das GPA-Paket Ihrer Distribution installieren (z. B. unter Ubuntu: sudo "
+"apt-get install gpa )."
 
 #: ../pro/gpa.rst:8
 msgid ""
 "Start GPA and select the Card Manager; either by pressing the icon at the"
 " top or by choosing Card Manager in the Windows menu."
 msgstr ""
-"Starten Sie den GPA und wählen Sie den Kartenmanager; entweder durch Drücken "
-"des Symbols oben oder durch Auswahl von Kartenmanager im Windows-Menü."
+"Starten Sie den GPA und wählen Sie den Kartenmanager; entweder durch "
+"Drücken des Symbols oben oder durch Auswahl von Kartenmanager im Windows-"
+"Menü."
 
 #: ../pro/gpa.rst:13
 msgid ""
@@ -579,15 +554,15 @@ msgid ""
 "and optional other information. While doing so you might be asked to "
 "enter the admin PIN."
 msgstr ""
-"Das Fenster des Kartenmanagers wird angezeigt. Geben Sie Ihre Anrede, Ihren "
-"Namen und optional weitere Informationen ein. Dabei werden Sie eventuell "
-"aufgefordert, die Admin-PIN einzugeben."
+"Das Fenster des Kartenmanagers wird angezeigt. Geben Sie Ihre Anrede, "
+"Ihren Namen und optional weitere Informationen ein. Dabei werden Sie "
+"eventuell aufgefordert, die Admin-PIN einzugeben."
 
 #: ../pro/gpa.rst:18
 msgid "Confirm this window and enter the admin PIN in the next window."
 msgstr ""
-"Bestätigen Sie dieses Fenster und geben Sie im nächsten Fenster die Admin-"
-"PIN ein."
+"Bestätigen Sie dieses Fenster und geben Sie im nächsten Fenster die "
+"Admin-PIN ein."
 
 #: ../pro/gpa.rst:23
 msgid ""
@@ -596,11 +571,11 @@ msgid ""
 " \"password\". Press the first button \"Change PIN\" in order to change "
 "the user password. Read and confirm the following information window."
 msgstr ""
-"Im Kartenmanager-Fenster müssen Sie eventuell nach unten blättern, bis Sie "
-"die Schaltflächen zum Ändern der PINs sehen. Der Begriff PIN wird "
-"austauschbar mit \"Passwort\" verwendet. Drücken Sie die erste Schaltfläche "
-"\"PIN ändern\", um das Benutzerpasswort zu ändern. Lesen und bestätigen Sie "
-"das folgende Informationsfenster."
+"Im Kartenmanager-Fenster müssen Sie eventuell nach unten blättern, bis "
+"Sie die Schaltflächen zum Ändern der PINs sehen. Der Begriff PIN wird "
+"austauschbar mit \"Passwort\" verwendet. Drücken Sie die erste "
+"Schaltfläche \"PIN ändern\", um das Benutzerpasswort zu ändern. Lesen und"
+" bestätigen Sie das folgende Informationsfenster."
 
 #: ../pro/gpa.rst:28
 msgid ""
@@ -618,11 +593,11 @@ msgid ""
 "PIN is required to change the information on the Nitrokey and to change "
 "the cryptographic keys. Proceed as described in steps four and five."
 msgstr ""
-"Gehen Sie zurück zum Fenster Card Manager in Schritt drei. Diesmal wählen "
-"Sie die dritte Schaltfläche Change PIN, um die Admin-PIN zu ändern. Die "
-"Admin-PIN wird benötigt, um die Informationen auf dem Nitrokey zu ändern und "
-"um die kryptografischen Schlüssel zu ändern. Fahren Sie fort wie in Schritt "
-"vier und fünf beschrieben."
+"Gehen Sie zurück zum Fenster Card Manager in Schritt drei. Diesmal wählen"
+" Sie die dritte Schaltfläche Change PIN, um die Admin-PIN zu ändern. Die "
+"Admin-PIN wird benötigt, um die Informationen auf dem Nitrokey zu ändern "
+"und um die kryptografischen Schlüssel zu ändern. Fahren Sie fort wie in "
+"Schritt vier und fünf beschrieben."
 
 #: ../pro/gpa.rst:35
 msgid ""
@@ -639,10 +614,10 @@ msgid ""
 " order to create a backup file of your cryptographic keys. Optionally you"
 " might select an expiration date for your cryptographic keys."
 msgstr ""
-"Geben Sie Ihren Namen und Ihre E-Mail-Adresse ein. Sie sollten \"Backup\" "
-"aktiviert lassen, um eine Backup-Datei Ihrer kryptografischen Schlüssel zu "
-"erstellen. Optional können Sie ein Verfallsdatum für Ihre kryptografischen "
-"Schlüssel wählen."
+"Geben Sie Ihren Namen und Ihre E-Mail-Adresse ein. Sie sollten \"Backup\""
+" aktiviert lassen, um eine Backup-Datei Ihrer kryptografischen Schlüssel "
+"zu erstellen. Optional können Sie ein Verfallsdatum für Ihre "
+"kryptografischen Schlüssel wählen."
 
 #: ../pro/gpa.rst:45
 msgid "Wait until the keys are generated successfully."
@@ -655,14 +630,15 @@ msgid ""
 "location."
 msgstr ""
 "Geben Sie eine starke Passphrase für Ihre Sicherungsschlüssel ein. Wir "
-"empfehlen dringend, die Sicherungsdatei auf einem separaten Datenträger (z. "
-"B. CD-ROM) und an einem sicheren Ort zu speichern."
+"empfehlen dringend, die Sicherungsdatei auf einem separaten Datenträger "
+"(z. B. CD-ROM) und an einem sicheren Ort zu speichern."
 
 #: ../pro/gpa.rst:55
+#, fuzzy
 msgid ""
 "Congratulations, your Nitrokey is now ready to use. Please see the "
-"`applications <https://www.nitrokey.com/en/applications>`_ section for "
-"further information of its usage."
+"`applications <https://www.nitrokey.com/documentation/applications>`_ "
+"section for further information of its usage."
 msgstr ""
 "Herzlichen Glückwunsch, Ihr Nitrokey ist nun einsatzbereit. Weitere "
 "Informationen zur Verwendung finden Sie im Abschnitt `Anwendungen "
@@ -736,10 +712,11 @@ msgid "S/MIME/X.509 is mostly used by enterprises."
 msgstr "S/MIME/X.509 wird meist von Unternehmen verwendet."
 
 #: ../pro/smime.rst:17
+#, fuzzy
 msgid ""
 "If you are in doubt which one to choose, you should use OpenPGP, see "
-"`here <https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__. "
-"This page describes the usage of S/MIME email encryption."
+"`here <https://docs.nitrokey.com/pro/openpgp.html>`__. This page "
+"describes the usage of S/MIME email encryption."
 msgstr ""
 "Wenn Sie im Zweifel sind, welche Sie wählen sollen, sollten Sie OpenPGP "
 "verwenden, siehe `hier <https://docs.nitrokey.com/pro/openpgp-email-"
@@ -764,19 +741,20 @@ msgstr ""
 "können macOS- und Windows-Benutzer die Installationsdateien von der Seite"
 " `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ herunterladen."
 
-#: ../pro/smime.rst:21
+#: ../pro/smime-outlook.rst:17 ../pro/smime-thunderbird.rst:17
+#: ../pro/smime.rst:22
 msgid ""
-"**Note: Windows users with 64-bit system (standard) need to install both,"
-" the 32-bit and the 64-bit version of OpenSC!**"
+"Windows users with 64-bit system (standard) need to install both, the "
+"32-bit and the 64-bit version of OpenSC!"
 msgstr ""
 "**Hinweis: Windows-Benutzer mit 64-Bit-System (Standard) müssen sowohl "
 "die 32-Bit- als auch die 64-Bit-Version von OpenSC installieren!**"
 
-#: ../pro/smime.rst:24
+#: ../pro/smime.rst:25
 msgid "Import Existing Key and Certificate"
 msgstr "Vorhandenen Schlüssel und Zertifikat importieren"
 
-#: ../pro/smime.rst:26
+#: ../pro/smime.rst:27
 msgid ""
 "The following instructions are based on the `wiki of OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__. We will assume, "
@@ -789,7 +767,7 @@ msgstr ""
 "erhalten haben. Bitte schauen Sie auf der Wiki-Seite nach, ob Sie eine "
 "separate Schlüssel- und Zertifikatsdatei erhalten haben."
 
-#: ../pro/smime.rst:28
+#: ../pro/smime.rst:29
 msgid ""
 "To open the Windows command line please push the Windows-key and R-key. "
 "Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on"
@@ -802,7 +780,7 @@ msgstr ""
 " GNU/Linux verwenden Sie bitte die Anwendungssuche (z. B. spotlight unter"
 " macOS)."
 
-#: ../pro/smime.rst:30
+#: ../pro/smime.rst:31
 msgid ""
 "To make these commands as simple as possible, the .p12 file needs to be "
 "in your home folder. On Windows this is usually ‘C:\\Users\\yourusername’"
@@ -818,7 +796,7 @@ msgstr ""
 "speichern, müssen Sie den Pfad in den folgenden Befehlen anpassen. Bitte "
 "schließen Sie den Nitrokey an, bevor Sie die Befehle absenden."
 
-#: ../pro/smime.rst:32
+#: ../pro/smime.rst:33
 msgid ""
 "Assuming that your key-certificate file reads ‘myprivate.p12’ the "
 "commands for Windows looks like this:"
@@ -826,11 +804,11 @@ msgstr ""
 "Unter der Annahme, dass Ihre Schlüssel-Zertifikat-Datei \"myprivate.p12\""
 " lautet, sehen die Befehle für Windows wie folgt aus:"
 
-#: ../pro/smime.rst:39
+#: ../pro/smime.rst:40
 msgid "and on macOS and GNU/Linux it will be"
 msgstr "und unter macOS und GNU/Linux wird es"
 
-#: ../pro/smime.rst:46
+#: ../pro/smime.rst:47
 msgid ""
 "The two commands copy the key-certificate pair to the slot 2 (needed for "
 "decrypting emails) and slot 3 (needed for signing). The output looks on "
@@ -840,7 +818,7 @@ msgstr ""
 "(wird zum Entschlüsseln von E-Mails benötigt) und Slot 3 (wird zum "
 "Signieren benötigt). Die Ausgabe sieht auf beiden Systemen etwa so aus:"
 
-#: ../pro/smime.rst:53
+#: ../pro/smime.rst:54
 msgid ""
 "Please note that there will be error messages that can be safely ignored "
 "(see output example above). You now have the key-certificate pair loaded "
@@ -850,30 +828,31 @@ msgstr ""
 "ignorieren können (siehe Ausgabebeispiel oben). Sie haben nun das "
 "Schlüssel-Zertifikat-Paar auf den Nitrokey geladen."
 
-#: ../pro/smime.rst:58
+#: ../pro/smime.rst:59
 msgid "You can find further information about the usage on these pages:"
 msgstr "Weitere Informationen zur Verwendung finden Sie auf diesen Seiten:"
 
-#: ../pro/smime.rst:60
+#: ../pro/smime.rst:61
+#, fuzzy
 msgid ""
 "for using `S/MIME encryption on Thunderbird "
-"<https://docs.nitrokey.com/pro/smime-email-encryption-with-"
-"thunderbird.html>`__"
+"<https://docs.nitrokey.com/pro/smime-thunderbird.html>`__"
 msgstr ""
 "für die Verwendung von `S/MIME-Verschlüsselung auf Thunderbird "
 "<https://docs.nitrokey.com/pro/smime-email-encryption-with-"
 "thunderbird.html>`__"
 
-#: ../pro/smime.rst:63
+#: ../pro/smime.rst:64
+#, fuzzy
 msgid ""
 "for using `S/MIME encryption on Outlook <https://docs.nitrokey.com/pro"
-"/smime-email-encryption-with-outlook.html>`__"
+"/smime-outlook.html>`__"
 msgstr ""
 "für die Verwendung von `S/MIME-Verschlüsselung auf Outlook "
 "<https://docs.nitrokey.com/pro/smime-email-encryption-with-"
 "outlook.html>`__"
 
-#: ../pro/smime.rst:66
+#: ../pro/smime.rst:67
 msgid ""
 "for using `Evolution <https://help.gnome.org/users/evolution/stable/mail-"
 "encryption.html.en>`__, an email client for the Gnome Desktop on Linux "
@@ -884,11 +863,11 @@ msgstr ""
 "encryption.html.en>`__, einem E-Mail-Client für den Gnome Desktop auf "
 "Linux-Systemen"
 
-#: ../pro/smime.rst:71
+#: ../pro/smime.rst:72
 msgid "Troubleshooting"
 msgstr "Fehlersuche"
 
-#: ../pro/smime.rst:73
+#: ../pro/smime.rst:74
 msgid ""
 "On Windows: Did you install **both**, the 32-bit and the 64-bit version "
 "of OpenSC?"
@@ -896,7 +875,7 @@ msgstr ""
 "Unter Windows: Haben Sie **beide**, die 32-Bit und die 64-Bit Version von"
 " OpenSC installiert?"
 
-#: ../pro/smime.rst:76
+#: ../pro/smime.rst:77
 msgid ""
 "Nitrokey Storage 2: You need to install OpenSC in version 0.18 or higher."
 " You can find the files on the `OpenSC website "
@@ -915,11 +894,11 @@ msgid "S/MIME Email Encryption with Thunderbird"
 msgstr "S/MIME-E-Mail-Verschlüsselung mit Thunderbird"
 
 #: ../pro/smime-thunderbird.rst:11
+#, fuzzy
 msgid ""
 "If you do not have a S/MIME key-certificate pair installed on your "
 "Nitrokey yet or if you did not installed OpenSC, please look at `this "
-"page <https://docs.nitrokey.com/pro/smime-email-encryption.html>`__ "
-"first."
+"page <https://docs.nitrokey.com/pro/smime.html>`__ first."
 msgstr ""
 "Wenn Sie noch kein S/MIME-Schlüssel-Zertifikat-Paar auf Ihrem Nitrokey "
 "installiert haben oder wenn Sie OpenSC nicht installiert haben, schauen "
@@ -939,14 +918,6 @@ msgstr ""
 "über den Paketmanager installieren können (z. B. ``sudo apt update && "
 "sudo apt install opensc`` auf Ubuntu), können macOS- und Windows-Benutzer"
 " die Installationsdateien direkt von OpenSC herunterladen."
-
-#: ../pro/smime-outlook.rst:17 ../pro/smime-thunderbird.rst:17
-msgid ""
-"Windows users with 64-bit system (standard) need to install both, the "
-"32-bit and the 64-bit version of OpenSC!"
-msgstr ""
-"**Hinweis: Windows-Benutzer mit 64-Bit-System (Standard) müssen sowohl "
-"die 32-Bit- als auch die 64-Bit-Version von OpenSC installieren!**"
 
 #: ../pro/smime-thunderbird.rst:21
 msgid "Settings in Thunderbird"
@@ -1028,10 +999,11 @@ msgid "S/MIME Email Encryption with Outlook"
 msgstr "S/MIME-E-Mail-Verschlüsselung mit Outlook"
 
 #: ../pro/smime-outlook.rst:11
+#, fuzzy
 msgid ""
 "If you do not have a S/MIME key-certificate pair installed on your "
-"Nitrokey yet, please look at `this page <https://docs.nitrokey.com/pro"
-"/smime-email-encryption.html>`__ first."
+"Nitrokey yet, please look at `this page "
+"<https://docs.nitrokey.com/pro/smime.html>`__ first."
 msgstr ""
 "Wenn Sie noch kein S/MIME-Schlüssel-Zertifikat-Paar auf Ihrem Nitrokey "
 "installiert haben, schauen Sie bitte zuerst auf `dieser Seite "
@@ -1066,7 +1038,7 @@ msgstr ""
 "Identität auswählen. Ihr Zertifikat sollte bereits von Outlook erkannt "
 "werden."
 
-#: ../pro/smime-outlook.rst:36
+#: ../pro/smime-outlook.rst:38
 msgid ""
 "When composing a mail you can now choose to encrypt and sign the message "
 "in the ‘Options’ ribbon of the compose window."
@@ -1075,7 +1047,7 @@ msgstr ""
 " Erstellungsfensters auswählen, ob die Nachricht verschlüsselt und "
 "signiert werden soll."
 
-#: ../pro/smime-outlook.rst:43
+#: ../pro/smime-outlook.rst:45
 msgid ""
 "Outlook will only encrypt message to mail addresses which are saved in "
 "your address book. So make sure, that the persons you want to write an "
@@ -1090,7 +1062,7 @@ msgstr ""
 "signierte Mail zu schreiben, so dass Sie die Zertifikatsinformationen "
 "importieren können."
 
-#: ../pro/smime-outlook.rst:45
+#: ../pro/smime-outlook.rst:47
 msgid ""
 "Depending on your certificate or the certificate of your partners you may"
 " have to import a so-called root certificate. This is the certificate of "
@@ -1464,3 +1436,41 @@ msgstr ""
 #~ "ausgestellt hat. In der Regel sollten"
 #~ " Sie informiert werden, wenn dies "
 #~ "notwendig ist."
+
+#~ msgid ""
+#~ "In this instance, the fully qualified"
+#~ " PKCS#11 URI is "
+#~ "``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token"
+#~ "=SmartCard-"
+#~ "HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private``."
+#~ msgstr ""
+#~ "In diesem Fall lautet der vollständig"
+#~ " qualifizierte PKCS#11-URI "
+#~ "``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token"
+#~ "=SmartCard-"
+#~ "HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private``."
+
+#~ msgid ""
+#~ "In this instance, the fully qualified"
+#~ " PKCS#11 URI is "
+#~ "``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token"
+#~ "=SmartCard-"
+#~ "HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%BC%B4%8F%E9%B5%66%AE%61%89%1A%AB%BF%DE%6A%23%D4%FF%3A%B6%39;object=intermediate;type=private``."
+#~ msgstr ""
+#~ "In diesem Fall lautet der vollständig"
+#~ " qualifizierte PKCS#11-URI "
+#~ "``pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token"
+#~ "=SmartCard-"
+#~ "HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%BC%B4%8F%E9%B5%66%AE%61%89%1A%AB%BF%DE%6A%23%D4%FF%3A%B6%39;object=intermediate;type=private``."
+
+#~ msgid ""
+#~ "**Note: Windows users with 64-bit system"
+#~ " (standard) need to install both, the"
+#~ " 32-bit and the 64-bit version of "
+#~ "OpenSC!**"
+#~ msgstr ""
+#~ "**Hinweis: Windows-Benutzer mit 64-Bit-"
+#~ "System (Standard) müssen sowohl die "
+#~ "32-Bit- als auch die 64-Bit-Version "
+#~ "von OpenSC installieren!**"
+
