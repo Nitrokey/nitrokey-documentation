@@ -25,4 +25,4 @@ provider and the type of your internet connection:
    :glob: 
 
    DNS Rebind <dns-rebind>
-   Port Forwarding <port-forwarding-firewall>
+   Port Forwarding <port-forwarding>
