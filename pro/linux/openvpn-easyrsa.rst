@@ -81,7 +81,7 @@ Server side
 
    $ sysctl -p
 
-Once IP forwarding is done, we will need to download the latest release of OpenvPN for our Debian 10 server, according to `these instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos?__cf_chl_jschl_tk__=62f18d28588ed33f3c599052099bf7e46feb1378-1599355462-0-AXDsohY5kUawZr5f8zhAXWpKu5VPhIRdq9_e91od4P57mQ1ark9iUC72WozqlGT7OJpJBp5Dn9nxKCPxW7eOU6gqq8s7GY02YXtfSWjsfVRsilbZszJwK-_HtzZrDMx6g1REseNP9NUwj402W70xcVAiQrRJBuYqOal9Q3JIEywbW_XRrEIWEMsklfKgq5Dq6N_UAb14YgR__-G0VoNiH6cGvhzZgZ_puEjIy2yF4gm0RUrO7exX5SX3jUwf3xT9htaH1DHoYqe8cxOngl7NyY8JG4zjhhxCe4beGOi0FHlimW2TqtGoeN85-aoGMSp9gA>`__:
+Once IP forwarding is done, we will need to download the latest release of OpenvPN for our Debian 10 server, according to `these instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`__:
 
 4. Change to root and download the GPG key that signed the package
 
@@ -98,7 +98,7 @@ Once IP forwarding is done, we will need to download the latest release of Openv
    # exit
 
 We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN `version
-2.4.8 <https://community.openvpn.net/openvpn/ticket/1215?__cf_chl_jschl_tk__=92b2a9776b54ce71b2f15e4d3f62dbdb5ee68f5f-1599568561-0-AY906nmSrFwe8EfT2PKawtrgl2NF72nwMrG9mp57SgIAqFmzxHiqod7ED0oVbimJlDD2xzLNLbQU6iUlVImbo8Q25qpDJVJ56YHbE4JKQSusHiwS8GLMm8Di9Gk6k63_qN5SDot-ABpgFoNcaRUHGZQ0fVYKYXZDf5E_0ZAOjPWsD2FXLfc7atx53t9scbdGF1p7xl2VRFcBoy2l7KgvvZU589YNs1wsRG62neISVpM-9E-s9CuccSAX8y3ZQfZUq7et9QIdgaSK9g-PhFqKWJhZLFkmTwR0wmYbKXjhxQ6j>`__ to login.
+2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`__ to login.
 
 6. Next we download OpenVPN
 
@@ -653,7 +653,7 @@ When executing OpenVPN client, Nitrokey’s PIN needs to be entered:
    Fri Sep 11 17:42:01 2020 PKCS#11: Adding PKCS#11 provider '/usr/lib64/pkcs11/opensc-pkcs11.so'
    Enter User PIN (OpenPGP card) token Password: ******
 
-Unfortunately OpenVPN doesn’t seem to be able to establish a handshake and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215?__cf_chl_jschl_tk__=92b2a9776b54ce71b2f15e4d3f62dbdb5ee68f5f-1599568561-0-AY906nmSrFwe8EfT2PKawtrgl2NF72nwMrG9mp57SgIAqFmzxHiqod7ED0oVbimJlDD2xzLNLbQU6iUlVImbo8Q25qpDJVJ56YHbE4JKQSusHiwS8GLMm8Di9Gk6k63_qN5SDot-ABpgFoNcaRUHGZQ0fVYKYXZDf5E_0ZAOjPWsD2FXLfc7atx53t9scbdGF1p7xl2VRFcBoy2l7KgvvZU589YNs1wsRG62neISVpM-9E-s9CuccSAX8y3ZQfZUq7et9QIdgaSK9g-PhFqKWJhZLFkmTwR0wmYbKXjhxQ6j>`__
+Unfortunately OpenVPN doesn’t seem to be able to establish a handshake and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
 
 .. warning::
 
@@ -689,6 +689,6 @@ In some reported cases it does not prompt for a PIN on the terminal. One workaro
 
    $ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>
 
-Alternatively, you could `recompile OpenVPN <https://forums.openvpn.net/viewtopic.php?t=23318>`__ client with systemd support disabled, and it will prompt you for the PIN as expected.
+Alternatively, you could `recompile OpenVPN <https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`__ client with systemd support disabled, and it will prompt you for the PIN as expected.
 
 Another option, would be to login to your OpenVPN instance with the Viscosity client which provides a better user experience especially for entering the PIN.

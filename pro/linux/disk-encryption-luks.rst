@@ -30,7 +30,7 @@ Requirements
 See the section below to determine which method is compatible with this guide.
 
 -  A Nitrokey Pro 2 or Nitrokey Storage 2
-   `initialized <https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__
+   `initialized <https://docs.nitrokey.com/pro/openpgp.html>`__
    with keys.
 
 Known Issues
