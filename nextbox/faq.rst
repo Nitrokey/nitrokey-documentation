@@ -16,6 +16,11 @@ Generic
   No, this is not possible as the regular login is disabled on delivery. Please connect the
   the NextBox to a network and access the NextBox using `nextbox.local`_ or the IP directly.
 
+**Q:** What is the typical power consumption?
+  The minimum of 0,6A (3W) is rarely reached, in idle mostly around 1A (5W) and more than 
+  2A (10W) under higher loads. 
+
+
 Hardware
 --------
 .. _usb-power-supply:
