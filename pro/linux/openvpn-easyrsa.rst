@@ -51,7 +51,7 @@ We will use the following Nitrokeys for physical key management:
 -  A Certificate Authority (CA) using the `Nitrokey HSM 2
    (pdf) <https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`__
 
-As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you may follow the instructions available `in the documentation </hsm/linux/certificate-authority.html#sign-a-server-certificate>`__.
+As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you may follow the instructions available `in the documentation <https://docs.nitrokey.com/hsm/linux/certificate-authority.html#sign-a-server-certificate>`__.
 
 Alternatively you may set up your own CA on a `on a separate machine <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-a-certificate-authority-ca-on-ubuntu-20-04>`__, or use the OpenVPN tutorial which also relies on `Easy-RSA <https://openvpn.net/community-resources/setting-up-your-own-certificate-authority-ca/>`__. The last 2 options rely on software solutions for key management.
 
@@ -236,7 +236,7 @@ The following instructions require the transfer of the ``server.req``
 
 The transfer itself is not security sensitive, though it is wise to verify if the received file matches the sender’s copy, if the transport is untrusted.
 
-In order to go through these steps, I will extensively rely on `these instructions </hsm/linux/certificate-authority.html#creating-the-intermediate-certificate-authority>`__, to sign the certificate signing requests, once we generated them with Easy-RSA.
+In order to go through these steps, I will extensively rely on `these instructions <https://docs.nitrokey.com/hsm/linux/certificate-authority.html#creating-the-intermediate-certificate-authority>`__, to sign the certificate signing requests, once we generated them with Easy-RSA.
 
 5.1. Sign the ``server.req`` file
 '''''''''''''''''''''''''''''''
