@@ -120,31 +120,3 @@ confirmed can you leave the device unattended again. Otherwise, you will
 not be able to distinguish a possible attack from a system update.
 Detailed instructions for a system update can be `found
 here <system-update.html>`__.
-
-Troubleshooting
----------------
-
-If Qubes doesn’t boot as shown below, please execute the following
-steps:
-
-.. code-block:: bash
-
-   +++ Found verified kexec boot params 
-   gpg: verify signatures failed: Unknown system error 
-   Invalid signature on kexec boot params 
-   !!!!! Failed default boot 
-   New value of PCR[4]: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
-   !!!!!Starting recovery shell 
-   /boot # 
-
-1. Restart your Laptop and go to Options. 
-
-   .. figure:: ../images/boot-menu.jpg
-      :alt: img5
-
-2. Select “Update Checksums and sign all files on /boot”. 
-
-   .. figure:: ../images/options.jpg
-      :alt: img6
-
-3. After that, please follow `these instructions <system-update.html>`__ from step 3 onwards.
