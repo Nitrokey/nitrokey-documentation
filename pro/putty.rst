@@ -9,15 +9,15 @@ This mini-howto assumes that the Nitrokey has been initialized and contains cryp
 
 **Required on the client side:**
 
--  `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`__
+-  `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`__
    or a variant of it
 
 -  `GPG4Win <https://gpg4win.org/>`__ or
-   `pageant.exe <http://smartcard-auth.de/download-de.html>`__ with
+   `pageant.exe <https://smartcard-auth.de/download-de.html>`__ with
    Smartcard support from Dr. Peter Koch
 
 -  Optional: `OpenPGP
-   Minidriver <http://wald.intevation.org/frs/?group_id=49&release_id=353>`__
+   Minidriver <https://wald.intevation.org/frs/?group_id=49&release_id=353>`__
 
 **1) Pageant**
 
@@ -77,5 +77,4 @@ If you are annoyed that Windows reports every time you plug in the stick that no
 
 .. figure:: /pro/images/putty/7.png
    :alt: img7
-
 

@@ -53,7 +53,7 @@ Login to Windows Domain Computers With MS Active Directory
    Active Directory. You may either use Microsoft PKI,
    `gpgsm <https://www.gnupg.org/documentation/manuals/gnupg/Howto-Create-a-Server-Cert.html>`__,
    or `Smart
-   Policy <http://www.mysmartlogon.com/products/smart-policy.html>`__.
+   Policy <https://www.mysmartlogon.com/products/smart-policy.html>`__.
    The following steps describe the usage of Smart Policy.
 5. `Download <http://download.mysmartlogon.com/SmartPolicyv2/SmartPolicy%20-%20Stage%203.exe>`__
    and install Smart Policy.

@@ -12,7 +12,7 @@ You need to have the `Nitrokey App <https://www.nitrokey.com/download>`__ instal
 Configure a Website/Application to Use OTP
 ------------------------------------------
 
-Login to the website which supports OTP (in this example, the `support forum <support.nitrokey.com/>`__). Usually you find the option to enable two-factor-authentication under your profile or in the settings.
+Login to the website which supports OTP (in this example, the `support forum <https://support.nitrokey.com/>`__). Usually you find the option to enable two-factor-authentication under your profile or in the settings.
 
 .. figure:: /pro/images/two-factor-authentication-with-otp/1.png
    :alt: img1
@@ -72,5 +72,4 @@ YourSlotName again to get the one-time password.
 
 .. figure:: /pro/images/two-factor-authentication-with-otp/8.png
    :alt: img8
-
 

@@ -5,7 +5,7 @@ OpenPGP Key Generation Using GPA
 
 .. contents:: :local:
 
-The following instructions explain the generation of OpenPGP keys directly on the Nitrokey with help of the GNU Privacy Assistant (GPA). You won’t be able to create a backup of these keys. Thus, if you lose the Nitrokey or it breaks you can not decrypt mails or use these keys anymore. Please see `here <https://docs.nitrokey.com/pro/windows/openpgp-email-encryption-with-outlook.html>`__ for a comparison of the different methods to generate OpenPGP keys.
+The following instructions explain the generation of OpenPGP keys directly on the Nitrokey with help of the GNU Privacy Assistant (GPA). You won’t be able to create a backup of these keys. Thus, if you lose the Nitrokey or it breaks you can not decrypt mails or use these keys anymore. Please see `here <https://docs.nitrokey.com/pro/windows/openpgp-outlook.html>`__ for a comparison of the different methods to generate OpenPGP keys.
 
 You need to have GnuPG and GPA installed on your system. The newest version for Windows can be found `here <https://www.gpg4win.org/>`__ (make sure to check “GPA” during the installation!). Users of Linux systems please install GnuPG and GPA with help of the package manager (e.g. using ``sudo apt install gnupg gpa`` on Ubuntu).
 
@@ -28,7 +28,7 @@ Another windows opens. Please go to “Card” -> “Generate key” to start th
 
 Now you can put in your name and the email address you want to use for the key that will be generated next. You may choose an expiration date for your key, but you don’t have to.
 
-**Please do not use the backup checkbox**. This “backup” does only save the encryption key. In case of a loss of the device, you will not be able to restore the whole key set. So on the one hand it is no full backup (use `these instructions <https://docs.nitrokey.com/pro/openpgp-key-generation-with-backup.html>`__ instead, if you need one) and on the other hand you risk that someone else can get in possession of your encryption key. The advantage of generating keys on-device is to make sure that keys are stored securely. Therefore, we recommend to skip this half-backup.
+**Please do not use the backup checkbox**. This “backup” does only save the encryption key. In case of a loss of the device, you will not be able to restore the whole key set. So on the one hand it is no full backup (use `these instructions <https://docs.nitrokey.com/pro/openpgp-keygen-backup.html>`__ instead, if you need one) and on the other hand you risk that someone else can get in possession of your encryption key. The advantage of generating keys on-device is to make sure that keys are stored securely. Therefore, we recommend to skip this half-backup.
 
 .. figure:: /pro/images/openpgp-key-generation-using-gpa/3.png
    :alt: img3
@@ -70,5 +70,4 @@ Another possibility is to change the URL setting on your card. Open the card man
 
 .. figure:: /pro/images/openpgp-key-generation-using-gpa/7.png
    :alt: img7
-
 
