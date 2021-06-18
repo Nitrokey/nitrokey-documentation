@@ -46,7 +46,7 @@ and on macOS and GNU/Linux it will be
 
 The two commands copy the key-certificate pair to the slot 2 (needed for decrypting emails) and slot 3 (needed for signing). The output looks on both systems something like this:
 
-.. figure:: /pro/images/smime-email-encryption/1.png
+.. figure:: /pro/images/smime/1.png
    :alt: img1
 
 
