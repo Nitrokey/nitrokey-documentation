@@ -92,6 +92,9 @@ Software
   while making sure that the ``davfs2`` package is installed.
 
 
+**Q:** My Nextcloud instance is stuck in "Maintenance Mode", how can I switch it off?
+  To *force exit* the Nextcloud "Maintenance Mode", you can push the hardware button **shortly, once**. The
+  NextBox will then switch-off the maintenance mode. Please avoid this, if possible.
 
 
 .. _nextbox.local: http://nextbox.local
