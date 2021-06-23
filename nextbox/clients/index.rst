@@ -11,6 +11,6 @@ Choose your operating system:
 
    Android/iOS <android>
    Windows <windows>
-   macos <macos>
+   Mac OS X <macosx>
    Linux <linux>
 
