@@ -56,6 +56,13 @@ Hardware
   Both USB Type-C ports are exclusively for power supply and can not be used for data transfer. 
   Do not connect two power supplies, please just use one of both to power your NextBox.
 
+**Q:** Which fan should I install?
+  **There is absolutely no need for a fan, the NextBox is designed to work without an active 
+  cooling**. Although if the NextBox is used for additional tasks (it's still a Linux), we have
+  prepared a fan mount for a 30mm x 12mm fan at 5V connected to the shield. More details (connector,
+  used pins) can be taken from `NextBox' GitHub`_. Currently we *do not* recommend adding a fan as
+  the outputs are not controlled yet by the NextBox daemon, so this is also something you would have
+  to do by yourself.
 
 
 Software
@@ -97,6 +104,8 @@ Software
   NextBox will then switch-off the maintenance mode. Please avoid this, if possible.
 
 
+
+.. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
 .. _nextbox.local: http://nextbox.local
 .. _External storage support: https://docs.nextcloud.com/server/20/admin_manual/configuration_files/external_storage_configuration_gui.html
 .. _RPi Power Supply: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
