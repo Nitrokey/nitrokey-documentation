@@ -1,6 +1,12 @@
 Getting Started
 ===============
 
+.. contents:: :local:
+
+Quickstart
+----------
+
+
 1. Connect NextBox to your Internet router via network cable.
 2. Connect the power cable to the NextBox, you can use any of the two USB-C ports.
 3. Once powered the NextBox will start
