@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-24 13:04+0200\n"
+"POT-Creation-Date: 2021-06-24 13:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,9 @@ msgid "Connect Your Linux Computer"
 msgstr ""
 
 #: ../nextbox/clients/linux.rst:7
-msgid "Use the Nextcloud App"
+#: ../nextbox/clients/macosx.rst:7
+#: ../nextbox/clients/windows.rst:7
+msgid "Connect using the Nextcloud App"
 msgstr ""
 
 #: ../nextbox/clients/linux.rst:9
@@ -81,7 +83,9 @@ msgid "Add an account using your public server url, username and password. Furth
 msgstr ""
 
 #: ../nextbox/clients/linux.rst:23
-msgid "Mount WebDAV directly"
+#: ../nextbox/clients/macosx.rst:48
+#: ../nextbox/clients/windows.rst:48
+msgid "Connect using WebDAV"
 msgstr ""
 
 #: ../nextbox/clients/linux.rst:25
@@ -101,11 +105,6 @@ msgstr ""
 msgid "Connect your Mac Commputer"
 msgstr ""
 
-#: ../nextbox/clients/macosx.rst:7
-#: ../nextbox/clients/windows.rst:7
-msgid "Connect using the Nextcloud App"
-msgstr ""
-
 #: ../nextbox/clients/macosx.rst:10
 #: ../nextbox/clients/windows.rst:10
 msgid "Download the Nextcloud client application: https://nextcloud.com/install/"
@@ -117,7 +116,7 @@ msgid "After installation, click \"Log in to your Nextcloud\". Afterwards please
 msgstr ""
 
 #: ../nextbox/clients/macosx.rst:25
-#: ../nextbox/clients/windows.rst:25
+#: ../nextbox/clients/windows.rst:26
 msgid "Provide your username and password and click \"Log in\"."
 msgstr ""
 
@@ -127,11 +126,6 @@ msgstr ""
 
 #: ../nextbox/clients/macosx.rst:40
 msgid "Inside *Finder* below \"favorites\" you will find a \"Nextcloud\" directory with the user's files."
-msgstr ""
-
-#: ../nextbox/clients/macosx.rst:48
-#: ../nextbox/clients/windows.rst:47
-msgid "Connect using WebDAV"
 msgstr ""
 
 #: ../nextbox/clients/macosx.rst:50
@@ -150,16 +144,32 @@ msgstr ""
 msgid "Once finished you can find your Nextcloud files in *Locations*."
 msgstr ""
 
-#: ../nextbox/clients/windows.rst:32
+#: ../nextbox/clients/windows.rst:33
 msgid "Inside the tray there will be a Nextcloud icon to open the Nextcloud application settings."
 msgstr ""
 
-#: ../nextbox/clients/windows.rst:39
+#: ../nextbox/clients/windows.rst:40
 msgid "Inside the file-explorer you can now find your Nextcloud instance files."
 msgstr ""
 
-#: ../nextbox/clients/windows.rst:49
-msgid "available shortly"
+#: ../nextbox/clients/windows.rst:52
+msgid "There have been reports that the native WebDAV support in Windows is not performing well. We recommend using the Nextcloud App (as described above) for the best user experience. Additionally please read `Nextcloud's Windows WebDAV Known Problems`_."
+msgstr ""
+
+#: ../nextbox/clients/windows.rst:56
+msgid "Add a WebDAV drive using the file explorer's \"Add a network location\" icon. (You can also use \"Map network drive\" to bind your Nextcloud to a drive, like *Z:*)."
+msgstr ""
+
+#: ../nextbox/clients/windows.rst:63
+msgid "In the following dialog please enter the full WebDAV address of your NextBox: ``https://my.domain.tld/remote.php/dav/files/USERNAME``. Replace *my.domain.tld* with your NextBox's public domain and *USERNAME* with the username you would like to connect."
+msgstr ""
+
+#: ../nextbox/clients/windows.rst:67
+msgid "In the following window insert your full Nextcloud credentials, means your username and password you use to login into your Nextcloud."
+msgstr ""
+
+#: ../nextbox/clients/windows.rst:74
+msgid "Now your files from your Nextcloud instance are accessible via the file-explorer."
 msgstr ""
 
 #: ../nextbox/faq.rst:2
@@ -306,27 +316,27 @@ msgstr ""
 msgid "Yes, you can set up ssh access through the NextBox Nextcloud app. Afterwards you can access your NextBox using ssh and you can do with the system whatever you want. Obviously we will only provide support for the NextBox stock configuration."
 msgstr ""
 
-#: ../nextbox/faq.rst:94
+#: ../nextbox/faq.rst:98
 msgid "**Q:** What is the correct WebDAV URL?"
 msgstr ""
 
 #: ../nextbox/faq.rst:94
-msgid "The full URL to use for WebDAV is: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path``"
-msgstr ""
-
-#: ../nextbox/faq.rst:100
-msgid "**Q:** Can I access my Nextcloud instance using WebDAV?"
-msgstr ""
-
-#: ../nextbox/faq.rst:97
-msgid "Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure that the ``davfs2`` package is installed."
+msgid "The full URL to use for WebDAV is: ``https://my.domain.tld/remote.php/webdav/``, there have been reports that for native Windows WebDAV you might need: ``https://my.domain.tld/remote.php/dav/files/USERNAME`` with *USERNAME* being the username you would like to use."
 msgstr ""
 
 #: ../nextbox/faq.rst:106
+msgid "**Q:** Can I access my Nextcloud instance using WebDAV?"
+msgstr ""
+
+#: ../nextbox/faq.rst:101
+msgid "Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure that the ``davfs2`` package is installed. For Windows please additionally read these :doc:`docs <clients/windows>`."
+msgstr ""
+
+#: ../nextbox/faq.rst:112
 msgid "**Q:** My Nextcloud instance is stuck in \"Maintenance Mode\", how can I switch it off?"
 msgstr ""
 
-#: ../nextbox/faq.rst:103
+#: ../nextbox/faq.rst:109
 msgid "To *force exit* the Nextcloud \"Maintenance Mode\", you can push the hardware button **shortly, once**. The NextBox will then switch-off the maintenance mode. Please avoid this, if possible."
 msgstr ""
 
