@@ -91,12 +91,18 @@ Software
   support for the NextBox stock configuration.
 
 **Q:** What is the correct WebDAV URL?
-  The full URL to use for WebDAV is: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path``
+  The full URL to use for WebDAV is:
+  ``https://my.domain.tld/remote.php/webdav/``, there have been reports that
+  for native Windows WebDAV you might need:
+  ``https://my.domain.tld/remote.php/dav/files/USERNAME`` with *USERNAME* being
+  the username you would like to use.
 
 **Q:** Can I access my Nextcloud instance using WebDAV?
-  Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for 
-  unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` 
-  while making sure that the ``davfs2`` package is installed.
+  Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A
+  simple mount for unix-like systems might look like this: ``mount -t davfs
+  https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure
+  that the ``davfs2`` package is installed. For Windows please additionally
+  read these :doc:`docs <clients/windows>`.
 
 
 **Q:** My Nextcloud instance is stuck in "Maintenance Mode", how can I switch it off?
