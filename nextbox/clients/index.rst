@@ -3,7 +3,7 @@ Connect Devices
 
 .. contents:: :local:
 
-Choose your operating system:
+Choose your operating system or device:
 
 .. toctree::
    :maxdepth: 1
