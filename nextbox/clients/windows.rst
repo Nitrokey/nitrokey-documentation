@@ -69,7 +69,7 @@ Connect using WebDAV
 
 .. figure:: /nextbox/images/win_webdav/8.png
    :alt: imgsp1
-   :scale: 30 %
+   :scale: 50 %
 
 Now your files from your Nextcloud instance are accessible via the file-explorer.
 
