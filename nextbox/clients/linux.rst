@@ -3,8 +3,8 @@ Connect Your Linux Computer
 
 .. contents:: :local:
 
-Use the Nextcloud App
-^^^^^^^^^^^^^^^^^^^^^
+Connect using the Nextcloud App
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Download the client application from: https://nextcloud.com/install/ 
 
@@ -19,7 +19,7 @@ Use the Nextcloud App
    to.
 
 
-Mount WebDAV directly
+Connect using WebDAV
 ^^^^^^^^^^^^^^^^^^^^^
 
 * Mounting Nextcloud using WebDAV can be done directly via most file 
