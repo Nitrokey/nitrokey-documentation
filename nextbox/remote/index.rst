@@ -5,9 +5,14 @@ Your NextBox comes with different options on how to enable access to your
 NextBox from any remote location as long as you have an internet connection
 available.
 
+.. hint:: Even though the *Backwards Proxy* remote access method is a quick
+   way to realize remote access, we **strongly recommend** to use a 
+   :doc:`dynamic DNS setup<dynamic-dns>` or :doc:`static DNS setup<static>` 
+   to maintain the best security level for your NextBox. *In most usage
+   scenarios the latter will also provide a better data bandwidth and user 
+   experience*
+   
 There are different ways to make your NextBox available for remote access.
-
-
 
 .. toctree::
    :maxdepth: 1
