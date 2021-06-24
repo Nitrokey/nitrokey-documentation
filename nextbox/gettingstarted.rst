@@ -10,10 +10,10 @@ Getting Started
 
 .. Warning::
 
-   External storage drives without an external power supply must NOT be connected
-   to the USB 3.0 socket (recognizable by the blue plastic inside). Otherwise,
-   this can lead to data loss on the internal hard disk. **Always use
-   external storage drives with a seperate power supply together with the NextBox.**
+   External storage drives without an external power supply must NOT be
+   connected to the USB sockets. Otherwise, this can lead to data loss on the
+   internal hard disk. **Always use external storage drives with a seperate
+   power supply together with the NextBox.**
 
 Create Admin Account
 --------------------
