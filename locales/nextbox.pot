@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-24 12:48+0200\n"
+"POT-Creation-Date: 2021-06-24 13:04+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -246,7 +246,7 @@ msgstr ""
 msgid "Yes, all NextBox components can be easily replaced. None of the components are glued or somehow permanently assembled. Using a Phillips screwdriver you can disassemble and re-assemble the NextBox easily. Keep in mind that you are doing this at your own risk."
 msgstr ""
 
-#: ../nextbox/faq.rst:59
+#: ../nextbox/faq.rst:57
 msgid "**Q:** What are the two USB Type-C ports used for?"
 msgstr ""
 
@@ -254,71 +254,79 @@ msgstr ""
 msgid "Both USB Type-C ports are exclusively for power supply and can not be used for data transfer. Do not connect two power supplies, please just use one of both to power your NextBox."
 msgstr ""
 
-#: ../nextbox/faq.rst:62
-msgid "Software"
-msgstr ""
-
 #: ../nextbox/faq.rst:66
-msgid "**Q:** Why does Nitrokey currently not recommend to use OnlyOffice or Collabora Office on the NextBox?"
+msgid "**Q:** Which fan should I install?"
 msgstr ""
 
-#: ../nextbox/faq.rst:65
-msgid "The state of these Nextcloud apps is not yet mature (for ARM platforms). Although it is (partly) possible to install them we do not recommend doing so currently."
-msgstr ""
-
-#: ../nextbox/faq.rst:70
-msgid "**Q:** Why does updating Nextcloud from inside Nextcloud not work?"
+#: ../nextbox/faq.rst:60
+msgid "**There is absolutely no need for a fan, the NextBox is designed to work without an active cooling**. Although if the NextBox is used for additional tasks (it's still a Linux), we have prepared a fan mount for a 30mm x 12mm fan at 5V connected to the shield. More details (connector, used pins) can be taken from `NextBox' GitHub`_. Currently we *do not* recommend adding a fan as the outputs are not controlled yet by the NextBox daemon, so this is also something you would have to do by yourself."
 msgstr ""
 
 #: ../nextbox/faq.rst:69
-msgid "The Nextcloud version is rolled out by us. Thus the option to update from inside Nextcloud is not working."
-msgstr ""
-
-#: ../nextbox/faq.rst:75
-msgid "**Q:** What kind of public key is expected for SSH access?"
+msgid "Software"
 msgstr ""
 
 #: ../nextbox/faq.rst:73
-msgid "An openssh style (public) key is expected. Depending on your operating system there are different ways to determine your public key. One might be ``ssh-add -L``, another might be ``cat ~/.ssh/id_rsa.pub``. If you are using Putty, please see the `Putty documentation`_."
+msgid "**Q:** Why does Nitrokey currently not recommend to use OnlyOffice or Collabora Office on the NextBox?"
 msgstr ""
 
-#: ../nextbox/faq.rst:79
-msgid "**Q:** Can I add apps to the Nextcloud instance?"
+#: ../nextbox/faq.rst:72
+msgid "The state of these Nextcloud apps is not yet mature (for ARM platforms). Although it is (partly) possible to install them we do not recommend doing so currently."
 msgstr ""
 
-#: ../nextbox/faq.rst:78
-msgid "Yes, the Nextcloud app store is available and any app available there can be installed through the Nextcloud web frontend."
+#: ../nextbox/faq.rst:77
+msgid "**Q:** Why does updating Nextcloud from inside Nextcloud not work?"
 msgstr ""
 
-#: ../nextbox/faq.rst:84
-msgid "**Q:** Can the operating system be extended or configured manually?"
+#: ../nextbox/faq.rst:76
+msgid "The Nextcloud version is rolled out by us. Thus the option to update from inside Nextcloud is not working."
 msgstr ""
 
 #: ../nextbox/faq.rst:82
+msgid "**Q:** What kind of public key is expected for SSH access?"
+msgstr ""
+
+#: ../nextbox/faq.rst:80
+msgid "An openssh style (public) key is expected. Depending on your operating system there are different ways to determine your public key. One might be ``ssh-add -L``, another might be ``cat ~/.ssh/id_rsa.pub``. If you are using Putty, please see the `Putty documentation`_."
+msgstr ""
+
+#: ../nextbox/faq.rst:86
+msgid "**Q:** Can I add apps to the Nextcloud instance?"
+msgstr ""
+
+#: ../nextbox/faq.rst:85
+msgid "Yes, the Nextcloud app store is available and any app available there can be installed through the Nextcloud web frontend."
+msgstr ""
+
+#: ../nextbox/faq.rst:91
+msgid "**Q:** Can the operating system be extended or configured manually?"
+msgstr ""
+
+#: ../nextbox/faq.rst:89
 msgid "Yes, you can set up ssh access through the NextBox Nextcloud app. Afterwards you can access your NextBox using ssh and you can do with the system whatever you want. Obviously we will only provide support for the NextBox stock configuration."
 msgstr ""
 
-#: ../nextbox/faq.rst:87
+#: ../nextbox/faq.rst:94
 msgid "**Q:** What is the correct WebDAV URL?"
 msgstr ""
 
-#: ../nextbox/faq.rst:87
+#: ../nextbox/faq.rst:94
 msgid "The full URL to use for WebDAV is: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path``"
 msgstr ""
 
-#: ../nextbox/faq.rst:93
+#: ../nextbox/faq.rst:100
 msgid "**Q:** Can I access my Nextcloud instance using WebDAV?"
 msgstr ""
 
-#: ../nextbox/faq.rst:90
+#: ../nextbox/faq.rst:97
 msgid "Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure that the ``davfs2`` package is installed."
 msgstr ""
 
-#: ../nextbox/faq.rst:98
+#: ../nextbox/faq.rst:106
 msgid "**Q:** My Nextcloud instance is stuck in \"Maintenance Mode\", how can I switch it off?"
 msgstr ""
 
-#: ../nextbox/faq.rst:96
+#: ../nextbox/faq.rst:103
 msgid "To *force exit* the Nextcloud \"Maintenance Mode\", you can push the hardware button **shortly, once**. The NextBox will then switch-off the maintenance mode. Please avoid this, if possible."
 msgstr ""
 
@@ -343,7 +351,7 @@ msgid "Wait approx. 5 minutes and open \"http://nextbox.local\" in your web brow
 msgstr ""
 
 #: ../nextbox/gettingstarted.rst:13
-msgid "External storage drives without an external power supply must NOT be connected to the USB 3.0 socket (recognizable by the blue plastic inside). Otherwise, this can lead to data loss on the internal hard disk. **Always use external storage drives with a seperate power supply together with the NextBox.**"
+msgid "External storage drives without an external power supply must NOT be connected to the USB sockets. Otherwise, this can lead to data loss on the internal hard disk. **Always use external storage drives with a seperate power supply together with the NextBox.**"
 msgstr ""
 
 #: ../nextbox/gettingstarted.rst:19
