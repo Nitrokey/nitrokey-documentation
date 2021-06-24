@@ -14,7 +14,8 @@ Connect using the Nextcloud App
    :scale: 30 %
 
 
-2. After installation, click "Log in to your Nextcloud". Afterwards please provide your Nextcloud's domain.
+2. After installation, click "Log in to your Nextcloud". Afterwards please
+   provide your Nextcloud's domain.
 
 
 .. figure:: /nextbox/images/win_app/2.png
@@ -46,4 +47,33 @@ Connect using the Nextcloud App
 Connect using WebDAV
 ^^^^^^^^^^^^^^^^^^^^
 
-available shortly
+.. Warning::
+
+   There have been reports that the native WebDAV support in Windows is not performing well. We 
+   recommend using the Nextcloud App (as described above) for the best user experience. Additionally
+   please read `Nextcloud's Windows WebDAV Known Problems`_.
+
+1. Add a WebDAV drive using the file explorer's "Add a network location" icon. (You can also use 
+   "Map network drive" to bind your Nextcloud to a drive, like *Z:*).
+
+.. figure:: /nextbox/images/win_webdav/6.png
+   :alt: imgsp1
+   :scale: 50 %
+
+2. In the following dialog please enter the full WebDAV address of your
+   NextBox: ``https://my.domain.tld/remote.php/dav/files/USERNAME``. Replace *my.domain.tld* with
+   your NextBox's public domain and *USERNAME* with the username you would like to connect.
+
+3. In the following window insert your full Nextcloud credentials, means your username and password
+   you use to login into your Nextcloud.
+
+.. figure:: /nextbox/images/win_webdav/8.png
+   :alt: imgsp1
+   :scale: 30 %
+
+Now your files from your Nextcloud instance are accessible via the file-explorer.
+
+
+.. _Nextcloud's Windows WebDAV Known Problems: https://docs.nextcloud.com/server/21/user_manual/en/files/access_webdav.html#known-problems
+
+
