@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-25 23:42+0200\n"
-"PO-Revision-Date: 2021-06-25 19:40+0000\n"
+"PO-Revision-Date: 2021-06-25 23:40+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: French <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-nextbox/fr/>\n"
 "Language: fr\n"
-"Language-Team: French <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-nextbox/fr/>\n"
-"Plural-Forms: nplurals=2; plural=n > 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../nextbox/backup-restore.rst:2
@@ -1402,17 +1403,19 @@ msgstr ""
 
 #: ../nextbox/remote/index.rst:36
 msgid "Comparing Methods For (Remote) Access"
-msgstr ""
+msgstr "Comparaison des méthodes d'accès (à distance)"
 
 #: ../nextbox/remote/index.rst:39
 msgid "Non-encrypted"
-msgstr ""
+msgstr "Non crypté"
 
 #: ../nextbox/remote/index.rst:40
 msgid ""
 "simple (``http``) using either ``nextbox.local`` or your local IP (e.g.: "
 "``192.168.178.123``)"
 msgstr ""
+"simple (``http``) en utilisant soit ``nextbox.local`` soit votre IP locale ("
+"par exemple : ``192.168.178.123``)"
 
 #: ../nextbox/remote/index.rst:41
 msgid ""
@@ -1421,22 +1424,29 @@ msgid ""
 "your NextBox (having non-encrypted traffic inside your LAN might be no "
 "problem, as long as you know what you are doing)"
 msgstr ""
+"C'est généralement une mauvaise idée, cela ne crypte en aucun cas les "
+"données transportées et n'est utile que dans une configuration où vous ne "
+"voulez pas d'accès à distance à votre NextBox (avoir un trafic non crypté à "
+"l'intérieur de votre LAN ne pose pas de problème, tant que vous savez ce que "
+"vous faites)."
 
 #: ../nextbox/remote/index.rst:44 ../nextbox/remote/index.rst:72
 msgid "Data path: [NextBox] ⟷   [Router] ⟷  [Client]"
-msgstr ""
+msgstr "Chemin des données : [NextBox] ⟷ [Router] ⟷ [Client]"
 
 #: ../nextbox/remote/index.rst:45
 msgid "**Pro:** fast, no configuration"
-msgstr ""
+msgstr "**Pro:** rapide, pas de configuration"
 
 #: ../nextbox/remote/index.rst:46
 msgid "**Contra:** no transport security, no remote access (or only unencrypted)"
 msgstr ""
+"**Contra:** pas de sécurité de transport, pas d'accès à distance (ou "
+"seulement non crypté)"
 
 #: ../nextbox/remote/index.rst:49
 msgid "Nitrokey's Reverse Proxy"
-msgstr ""
+msgstr "Le mandataire inversé de Nitrokey"
 
 #: ../nextbox/remote/index.rst:51
 msgid ""
@@ -1446,6 +1456,11 @@ msgid ""
 "another encryption. Thus a compromised proxy server might allow access to"
 " your traffic to the potential attacker."
 msgstr ""
+"Fournit un cryptage de transport entre vos clients et votre NextBox.  Mais "
+"l'inconvénient est qu'il n'est pas crypté de bout en bout, ce qui signifie "
+"que le trafic sera décrypté au niveau du serveur proxy Nitrokey et transmis "
+"avec un autre cryptage. Ainsi, un serveur proxy compromis pourrait permettre "
+"à un attaquant potentiel d'accéder à votre trafic."
 
 #: ../nextbox/remote/index.rst:56
 msgid ""
@@ -1453,38 +1468,49 @@ msgid ""
 "proxy server, even if you are in a local network together with the "
 "NextBox the traffic has to go through the proxy server."
 msgstr ""
+"Le serveur proxy est un goulot d'étranglement et tout le trafic doit passer "
+"par le serveur proxy, même si vous êtes dans un réseau local avec la "
+"NextBox, le trafic doit passer par le serveur proxy."
 
 #: ../nextbox/remote/index.rst:59
 msgid ""
 "Data path (local client): [NextBox] ⟷  [Router]⟷  [Proxy Server] ⟷   "
 "[Router] ⟷   [Client]"
 msgstr ""
+"Chemin des données (client local) : [NextBox] ⟷ [Routeur]⟷ [Serveur proxy] ⟷ "
+"[Routeur] ⟷ [Client]."
 
 #: ../nextbox/remote/index.rst:60
 msgid ""
 "Data path (remote client): [NextBox] ⟷  [Router]⟷  [Proxy Server] ⟷   "
 "[Client]"
 msgstr ""
+"Chemin des données (client distant) : [NextBox] ⟷ [Routeur]⟷ [Serveur Proxy] "
+"⟷ [Client]."
 
 #: ../nextbox/remote/index.rst:61
 msgid "**Pro:** easy to setup, good transport security"
-msgstr ""
+msgstr "**Pro:** facile à installer, bonne sécurité de transport"
 
 #: ../nextbox/remote/index.rst:62
 msgid ""
 "**Contra:** not strictly end-to-end encrypted, potentially slow (all "
 "traffic through the proxy)"
 msgstr ""
+"**Contra:** pas strictement crypté de bout en bout, potentiellement lent ("
+"tout le trafic passe par le proxy)"
 
 #: ../nextbox/remote/index.rst:65
 msgid "DNS-based"
-msgstr ""
+msgstr "Basé sur le DNS"
 
 #: ../nextbox/remote/index.rst:67
 msgid ""
 "Clearly the *best* method, but also the one requiring some configuration "
 "work on your internet router."
 msgstr ""
+"Il s'agit clairement de la meilleure méthode, mais aussi de celle qui "
+"nécessite une certaine configuration de votre routeur Internet."
 
 #: ../nextbox/remote/index.rst:69
 msgid ""
@@ -1492,22 +1518,31 @@ msgid ""
 "traffic will always be end-to-end encrypted and you maintain the highest "
 "level of security for your traffic."
 msgstr ""
+"Vous obtenez votre *propre* (sous-)domaine et un certificat TLS. Ainsi, tout "
+"votre trafic sera toujours crypté de bout en bout et vous conservez le plus "
+"haut niveau de sécurité pour votre trafic."
 
 #: ../nextbox/remote/index.rst:71
 msgid ""
 "Opening the right ports on your internet router is necessary, see "
 ":doc:`here<remote/port-forwarding>`"
 msgstr ""
+"Il faut ouvrir les bons ports sur votre routeur internet, voir :doc:`ici<"
+"remote/port-forwarding>`."
 
 #: ../nextbox/remote/index.rst:73
 msgid "**Pro:** best performance, highest security, full end-to-end encryption"
 msgstr ""
+"**Pro:** meilleures performances, sécurité maximale, cryptage complet de "
+"bout en bout."
 
 #: ../nextbox/remote/index.rst:74
 msgid ""
 "**Contra:** needs (dynamic) DNS, needs configuration on your internet "
 "router"
 msgstr ""
+"**Contra:** a besoin d'un DNS (dynamique) et d'une configuration sur votre "
+"routeur Internet."
 
 #: ../nextbox/remote/port-forwarding.rst:2
 msgid "Port Forwarding & Firewall Configuration"
@@ -1994,4 +2029,3 @@ msgstr "Dépannage"
 #~ "Access configuration is not identical to"
 #~ " the current one."
 #~ msgstr ""
-
