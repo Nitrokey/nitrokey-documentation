@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 18:57+0200\n"
+"POT-Creation-Date: 2021-06-25 23:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -738,6 +738,87 @@ msgstr ""
 
 #: ../nextbox/remote/index.rst:25
 msgid "The following topics might be of interest for you, depending on your internet service provider and the type of your internet connection:"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:36
+msgid "Comparing Methods For (Remote) Access"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:39
+msgid "Non-encrypted"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:40
+msgid "simple (``http``) using either ``nextbox.local`` or your local IP (e.g.: ``192.168.178.123``)"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:41
+msgid "Generally a bad idea, this will not encrypt the transported data in any way and is only useful in a setup where you do not want remote access to your NextBox (having non-encrypted traffic inside your LAN might be no problem, as long as you know what you are doing)"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:44
+#: ../nextbox/remote/index.rst:72
+msgid "Data path: [NextBox] ⟷   [Router] ⟷  [Client]"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:45
+msgid "**Pro:** fast, no configuration"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:46
+msgid "**Contra:** no transport security, no remote access (or only unencrypted)"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:49
+msgid "Nitrokey's Reverse Proxy"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:51
+msgid "Provides transport encryption between your clients and your NextBox.  But with the drawback that it is not End-To-End encrypted, means the traffic will be decrypted at the Nitrokey Proxy Server and passed onward with another encryption. Thus a compromised proxy server might allow access to your traffic to the potential attacker."
+msgstr ""
+
+#: ../nextbox/remote/index.rst:56
+msgid "The proxy server is a bottleneck and all traffic has to go through the proxy server, even if you are in a local network together with the NextBox the traffic has to go through the proxy server."
+msgstr ""
+
+#: ../nextbox/remote/index.rst:59
+msgid "Data path (local client): [NextBox] ⟷  [Router]⟷  [Proxy Server] ⟷   [Router] ⟷   [Client]"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:60
+msgid "Data path (remote client): [NextBox] ⟷  [Router]⟷  [Proxy Server] ⟷   [Client]"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:61
+msgid "**Pro:** easy to setup, good transport security"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:62
+msgid "**Contra:** not strictly end-to-end encrypted, potentially slow (all traffic through the proxy)"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:65
+msgid "DNS-based"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:67
+msgid "Clearly the *best* method, but also the one requiring some configuration work on your internet router."
+msgstr ""
+
+#: ../nextbox/remote/index.rst:69
+msgid "You get your *own* (sub)domain and a TLS certificate, thus all your traffic will always be end-to-end encrypted and you maintain the highest level of security for your traffic."
+msgstr ""
+
+#: ../nextbox/remote/index.rst:71
+msgid "Opening the right ports on your internet router is necessary, see :doc:`here<remote/port-forwarding>`"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:73
+msgid "**Pro:** best performance, highest security, full end-to-end encryption"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:74
+msgid "**Contra:** needs (dynamic) DNS, needs configuration on your internet router"
 msgstr ""
 
 #: ../nextbox/remote/port-forwarding.rst:2
