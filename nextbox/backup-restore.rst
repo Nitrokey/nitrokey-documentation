@@ -61,7 +61,7 @@ the upgrade process for Nextcloud.
 
 .. hint::
    All configurations and settings of the NextBox and the Nextcloud instance will be restored, thus
-   there might be changes on how you access your NextBox, if the current Remote Access configuration 
+   there might be changes on how you access your NextBox, if the restored Remote Access configuration 
    is not identical to the current one.
 
 
