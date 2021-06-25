@@ -61,9 +61,8 @@ the upgrade process for Nextcloud.
 
 .. hint::
    All configurations and settings of the NextBox and the Nextcloud instance will be restored, thus
-   there might be changes on how you access your NextBox if the Remote Access configuration is 
-   not equal.
-
+   there might be changes on how you access your NextBox, if the current Remote Access configuration 
+   is not identical to the current one.
 
 
 .. _Nextcloud WebDAV documentation: https://docs.nextcloud.com/server/20/user_manual/en/files/access_webdav.html
