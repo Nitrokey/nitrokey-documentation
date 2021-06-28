@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-25 23:42+0200\n"
+"POT-Creation-Date: 2021-06-28 17:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -733,92 +733,120 @@ msgid "Even though the *Backwards Proxy* remote access method is a quick way to 
 msgstr ""
 
 #: ../nextbox/remote/index.rst:15
+msgid "Before you set up a remote access method you might want to read the :doc:`comparison<method-comparison>` in order to understand the trade-offs and capabilities of the different approaches:"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:26
 msgid "There are different ways to make your NextBox available for remote access."
 msgstr ""
 
-#: ../nextbox/remote/index.rst:25
+#: ../nextbox/remote/index.rst:36
 msgid "The following topics might be of interest for you, depending on your internet service provider and the type of your internet connection:"
 msgstr ""
 
-#: ../nextbox/remote/index.rst:36
+#: ../nextbox/remote/method-comparison.rst:2
 msgid "Comparing Methods For (Remote) Access"
 msgstr ""
 
-#: ../nextbox/remote/index.rst:39
-msgid "Non-encrypted"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:40
-msgid "simple (``http``) using either ``nextbox.local`` or your local IP (e.g.: ``192.168.178.123``)"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:41
-msgid "Generally a bad idea, this will not encrypt the transported data in any way and is only useful in a setup where you do not want remote access to your NextBox (having non-encrypted traffic inside your LAN might be no problem, as long as you know what you are doing)"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:44
-#: ../nextbox/remote/index.rst:72
-msgid "Data path: [NextBox] ⟷   [Router] ⟷  [Client]"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:45
-msgid "**Pro:** fast, no configuration"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:46
-msgid "**Contra:** no transport security, no remote access (or only unencrypted)"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:49
-msgid "Nitrokey's Reverse Proxy"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:51
-msgid "Provides transport encryption between your clients and your NextBox.  But with the drawback that it is not End-To-End encrypted, means the traffic will be decrypted at the Nitrokey Proxy Server and passed onward with another encryption. Thus a compromised proxy server might allow access to your traffic to the potential attacker."
-msgstr ""
-
-#: ../nextbox/remote/index.rst:56
-msgid "The proxy server is a bottleneck and all traffic has to go through the proxy server, even if you are in a local network together with the NextBox the traffic has to go through the proxy server."
-msgstr ""
-
-#: ../nextbox/remote/index.rst:59
-msgid "Data path (local client): [NextBox] ⟷  [Router]⟷  [Proxy Server] ⟷   [Router] ⟷   [Client]"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:60
-msgid "Data path (remote client): [NextBox] ⟷  [Router]⟷  [Proxy Server] ⟷   [Client]"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:61
-msgid "**Pro:** easy to setup, good transport security"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:62
-msgid "**Contra:** not strictly end-to-end encrypted, potentially slow (all traffic through the proxy)"
-msgstr ""
-
-#: ../nextbox/remote/index.rst:65
+#: ../nextbox/remote/method-comparison.rst:5
 msgid "DNS-based"
 msgstr ""
 
-#: ../nextbox/remote/index.rst:67
+#: ../nextbox/remote/method-comparison.rst:7
+msgid "This is clearly the best and most secure approach and we recommend using a DNS-based remote-access method including your own TLS certificate for the best security"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:11
+msgid "This denotes the :doc:`dynamic-dns` and the :doc:`static` approach."
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:13
 msgid "Clearly the *best* method, but also the one requiring some configuration work on your internet router."
 msgstr ""
 
-#: ../nextbox/remote/index.rst:69
+#: ../nextbox/remote/method-comparison.rst:15
 msgid "You get your *own* (sub)domain and a TLS certificate, thus all your traffic will always be end-to-end encrypted and you maintain the highest level of security for your traffic."
 msgstr ""
 
-#: ../nextbox/remote/index.rst:71
-msgid "Opening the right ports on your internet router is necessary, see :doc:`here<remote/port-forwarding>`"
+#: ../nextbox/remote/method-comparison.rst:17
+msgid "Opening the right ports on your internet router is necessary, see :doc:`here<port-forwarding>`"
 msgstr ""
 
-#: ../nextbox/remote/index.rst:73
+#: ../nextbox/remote/method-comparison.rst:18
+#: ../nextbox/remote/method-comparison.rst:34
+msgid "Data path: [NextBox] ⟷   [Router] ⟷  [Client]"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:19
 msgid "**Pro:** best performance, highest security, full end-to-end encryption"
 msgstr ""
 
-#: ../nextbox/remote/index.rst:74
+#: ../nextbox/remote/method-comparison.rst:20
 msgid "**Contra:** needs (dynamic) DNS, needs configuration on your internet router"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:25
+msgid "Non-encrypted"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:27
+msgid "We strongly recommend to not use the non-encrypted setup, if you plan to make your NextBox available outside of your local area network."
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:30
+msgid "simple (``http``) using either ``nextbox.local`` or your local IP (e.g.: ``192.168.178.123``)"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:31
+msgid "Generally a bad idea, this will not encrypt the transported data in any way and is only useful in a setup where you do not want remote access to your NextBox (having non-encrypted traffic inside your LAN might be no problem, as long as you know what you are doing)"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:35
+msgid "**Pro:** fast, no configuration"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:36
+msgid "**Contra:** no transport security, no remote access (or only unencrypted)"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:39
+msgid "Further, once you set up TLS and thus a DNS-based method, the unencrypted connection for your NextBox will be disabled, this is not the case for the Reverse Proxy as a problem with the proxy would then lock you out of your NextBox."
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:46
+msgid "Nitrokey's Reverse Proxy"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:48
+msgid "This refers to the :doc:`proxy` method."
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:51
+msgid "Provides transport encryption between your clients and your NextBox.  But with the drawback that it is not End-To-End encrypted, means the traffic will be decrypted at the Nitrokey Proxy Server and passed onward with another encryption. Thus a compromised proxy server might allow access to your traffic to the potential attacker."
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:56
+msgid "The proxy server is a bottleneck and all traffic has to go through the proxy server, even if you are in a local network together with the NextBox the traffic has to go through the proxy server."
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:59
+msgid "Data path (local client): [NextBox] ⟷  [Router]⟷  [Proxy Server] ⟷   [Router] ⟷   [Client]"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:60
+msgid "Data path (remote client): [NextBox] ⟷  [Router]⟷  [Proxy Server] ⟷   [Client]"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:61
+msgid "**Pro:** easy to setup, good transport security"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:62
+msgid "**Contra:** not strictly end-to-end encrypted, potentially slow (all traffic through the proxy)"
+msgstr ""
+
+#: ../nextbox/remote/method-comparison.rst:65
+msgid "Non end-to-end encrypted does still mean all your traffic is indeed encrypted, but within the proxy server, in order to be forwarded the traffic will be decrypted once and encrypted again before being passed to the client or NextBox"
 msgstr ""
 
 #: ../nextbox/remote/port-forwarding.rst:2
