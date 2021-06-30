@@ -1,7 +1,15 @@
-RewriteEngine On
+# Redirects of deprecated articles to existing ones
+# =================================================
 
-# static redireects
-RewriteRule ^/foo/deprecated_slug$ /foo/othersite [R=301,L]
+# Usage:
+#	1) Copy the RedirectMatch Line
+#	2) Put the deprecated path between ? and $
+#	3) Put the final path between $1 and "
+#
+#	Use 301 for final redirects and 302 for temporary redirects
+#
 
-# Temporary redirects
-RewriteRule ^/foo/another_deprecated_slug$ /foo/anothersite [R=302,L]
+#Rule Set:
+
+RedirectMatch 302 "(/[a-z][a-z])?/path/to/old_article.html$" "$1/path/to/new_article.html"
+
