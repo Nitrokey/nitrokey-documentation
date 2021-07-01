@@ -124,11 +124,15 @@ Software
   that the ``davfs2`` package is installed. For Windows please additionally
   read these :doc:`docs <clients/windows>`.
 
-
 **Q:** My Nextcloud instance is stuck in "Maintenance Mode", how can I switch it off?
   To *force exit* the Nextcloud "Maintenance Mode", you can push the hardware button **shortly, once**. The
   NextBox will then switch-off the maintenance mode. Please avoid this, if possible.
 
+**Q:** Why am I getting a permission warning for ``/var/www/html/custom_apps/nextbox`` inside the Nextcloud settings overview?
+  This is a "feature". The NextBox Nextcloud App is installed on the system
+  with the Debian nextbox package. To avoid an accidental deletion of the NextBox 
+  Nextcloud App from within the Nextcloud app management, the stated directory 
+  can not be written by Nextcloud, this is what Nextcloud is complaining about here.
 
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
