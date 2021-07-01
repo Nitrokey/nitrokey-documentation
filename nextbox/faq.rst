@@ -38,6 +38,20 @@ Hardware
   external power supply can lead to an unreliable power supply for the internal
   hard-drive, thus potential data loss.
 
+**Q:** Where can I find an external hard-drive with its own power supply?
+  The smaller form factors (2.5'' and smaller) for external hard-drives mostly
+  come without an additional power supply. For these, *a USB Hub with an
+  additional power supply can be considered the "external power-supply"* for the
+  hard-drive. Although the latter is it not 100% sure for powered USB hubs,
+  thus we recommend external 3.5'' hard-drives, which are nearly always
+  externally powered.
+
+**Q:** Why does my USB device / hub not work, if connected to the NextBox?
+  There are some devices and especially USB3 hubs that are known to not work properly
+  with the Raspberry PI 4B, please see this `USB Documentation`_ from Raspberry.
+  On top of that also make sure the USB device is working in general by connecting it 
+  to another computer (best case: Linux) and verify that it works.
+
 **Q:** Why does my hard-drive not show up after plugging it in?
   Please make sure that you are using one of the supported filesystems (e.g., ext, xfs) and you
   have mounted your hard-drive within *Storage Management*.
@@ -116,7 +130,7 @@ Software
   NextBox will then switch-off the maintenance mode. Please avoid this, if possible.
 
 
-
+.. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
 .. _nextbox.local: http://nextbox.local
 .. _External storage support: https://docs.nextcloud.com/server/20/admin_manual/configuration_files/external_storage_configuration_gui.html
