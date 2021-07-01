@@ -20,6 +20,12 @@ Generic
   The minimum of 0,6A (3W) is rarely reached, in idle mostly around 1A (5W) and more than 
   2A (10W) under higher loads. 
 
+**Q:** Can I mirror my NextBox onto another NextBox?
+  This translates to a cluster setup, which is considered an (paid) enterprise solution 
+  by Nextcloud. The details, especially data consistency and collision handling, are far 
+  from trivial to realize. Nevertheless, we also see demand for more sophisticated backup
+  solutions and will address this issue.
+
 
 Hardware
 --------
