@@ -39,7 +39,18 @@ Create Admin Account
 
 .. figure:: /nextbox/images/nextbox_getting_started/2.png
    :alt: img2
-  
+
+Configure NextBox Related Features
+----------------------------------
+
+The NextBox comes with Nextcloud App to realize various configurations (e.g., :doc:`backup-restore` 
+or :doc:`Remote Access<remote/index>`) and operations for your NextBox.
+
+Your can find the NextBox-App in Nextcloud's top level navigation, as shown in this figure:
+
+.. figure:: /nextbox/images/nextbox_getting_started/nextbox-app.png
+   :alt: nextbox-app
+
 Ready To Go
 -----------
 
