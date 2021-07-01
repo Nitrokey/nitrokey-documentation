@@ -43,27 +43,49 @@ Once the SCSH3 Tool is open, you should see your Nitrokey HSM 2 inside the tree
 view. Please follow these steps to import:
 
 * Start key-manager (File -> Keymanager)
+
 * Right-click "Smartcard-HSM" -> create DKEK share
+
   * Choose file location 
+
   * Choose DKEK share password
+
 * Right-click "Smartcard-HSM" -> Initialize device
+
   * Enter SO-PIN
+
   * (optional) Enter label and enter URL/Host
+
   * Select authentication method: "User PIN"
+
   * Allow RESET RETRY COUNTER: "Resetting and unblocking PIN with SO-PIN not allowed"
+
   * Enter and confirm User PIN
+
   * "Select Device Key Encryption scheme" -> "DKEK shares"
+
   * Enter number of DKEK shares: 1
+
 * Right-click DKEK set-up in progress -> "Import DKEK share"
+
   * Choose DKEK share file location
+
   * Password for DKEK share
+
 * Right-click "SmartCard-HSM" -> "Import from PKCS#12"
+
   * Enter number of shares -> 1
+
   * Enter file location of DKEK share 
+
   * Enter Password for DKEK share
+
   * Select PKCS#12 container for import (Enter password, if set)
+  
   * Select Key
+  
   * Select Name to be used (This is the Label used for the key on the device)
+  
   * Import more keys, if needed
 
 Once this is done, you can check that the keys have been successfully imported using:
