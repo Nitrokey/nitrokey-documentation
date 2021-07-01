@@ -9,20 +9,21 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-01 15:11+0200\n"
-"PO-Revision-Date: 2021-06-25 19:40+0000\n"
+"PO-Revision-Date: 2021-07-01 14:40+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: German <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-hsm/de/>\n"
 "Language: de\n"
-"Language-Team: German <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-hsm/de/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../hsm/apache2-tls.rst:2
 msgid "TLS Setup with Apache2"
-msgstr ""
+msgstr "TLS-Einrichtung mit Apache2"
 
 #: ../hsm/apache2-tls.rst:10
 msgid ""
@@ -31,31 +32,41 @@ msgid ""
 "replace (secret) key-file with PKCS#11 URL referencing a key on a "
 "security token (Nitrokey)"
 msgstr ""
+"Das gleiche Konzept, wie hier beschrieben, kann für viele Anwendungen "
+"verwendet werden, die openssl als Krypto-Backend verwenden. Das Konzept "
+"läuft im Wesentlichen auf Folgendes hinaus: Ersetzen Sie die (geheime) "
+"Schlüsseldatei durch eine PKCS#11-URL, die einen Schlüssel auf einem "
+"Sicherheits-Token (Nitrokey) referenziert."
 
 #: ../hsm/apache2-tls.rst:17 ../hsm/import-keys-certs.rst:26
 #: ../hsm/pkcs11-url.rst:14
 msgid "Preparation"
-msgstr ""
+msgstr "Vorbereitung"
 
 #: ../hsm/apache2-tls.rst:19
 msgid ""
 "ensure that the `apache2` version is at least 2.4.42 for proper "
 "``mod_ssl`` support"
 msgstr ""
+"Stellen Sie sicher, dass die `apache2`-Version mindestens 2.4.42 ist, um "
+"``mod_ssl`` zu unterstützen"
 
 #: ../hsm/apache2-tls.rst:21
 msgid "activate ``mod_ssl`` using ``a2enmod ssl``, if not already done"
 msgstr ""
+"Aktivieren Sie ``mod_ssl`` mit ``a2enmod ssl``, falls noch nicht geschehen"
 
 #: ../hsm/apache2-tls.rst:23
 msgid ""
 "additionally ``openssl`` is needed and ``libengine-pkcs11-openssl`` see "
 ":doc:`PKCS#11 URL<pkcs11-url>`"
 msgstr ""
+"zusätzlich wird ``openssl`` benötigt und ``libengine-pkcs11-openssl`` siehe "
+":doc:`PKCS#11 URL<pkcs11-url>`"
 
 #: ../hsm/apache2-tls.rst:29
 msgid "Configure Apache2 to Use a Security Key"
-msgstr ""
+msgstr "Konfigurieren des Apache2 zur Verwendung eines Sicherheitsschlüssels"
 
 #: ../hsm/apache2-tls.rst:31
 msgid ""
@@ -63,24 +74,31 @@ msgid ""
 " proper PKCS#11 URL and delete any other references to keys or "
 "certificates. E.g., ``SSLCertificateKeyFile`` is not needed anymore."
 msgstr ""
+"Im Grunde müssen Sie nur ``SSLCertificateFile`` durch die richtige PKCS#11-"
+"URL ersetzen und alle anderen Verweise auf Schlüssel oder Zertifikate "
+"löschen. Z. B. wird ``SSLCertificateKeyFile`` nicht mehr benötigt."
 
 #: ../hsm/apache2-tls.rst:35
 msgid "An example directive might look like this:"
-msgstr ""
+msgstr "Eine Beispiel-Direktive könnte wie folgt aussehen:"
 
 #: ../hsm/apache2-tls.rst:41
 msgid ""
 "The proper PKCS#11 URL can be extracted as documented in :doc:`PKCS#11 "
 "URL Generation<pkcs11-url>`"
 msgstr ""
+"Die richtige PKCS#11-URL kann wie in :doc:`PKCS#11-URL-"
+"Generierung<pkcs11-url>` dokumentiert extrahiert werden"
 
 #: ../hsm/apache2-tls.rst:43
 msgid "Be sure to place the directive inside a `VirtualHost` configuration."
 msgstr ""
+"Achten Sie darauf, die Direktive innerhalb einer `VirtualHost`-Konfiguration "
+"zu platzieren."
 
 #: ../hsm/apache2-tls.rst:46
 msgid "Provide PIN During Apache2 Startup"
-msgstr ""
+msgstr "PIN beim Start von Apache2 bereitstellen"
 
 #: ../hsm/apache2-tls.rst:48
 msgid ""
@@ -88,6 +106,9 @@ msgid ""
 "for the User-PIN, thus basically declining batch startup. Apache2 "
 "provides another directive to provide the PIN during startup."
 msgstr ""
+"Mit der zuvor beschriebenen Methode fragt der Apache2 bei jedem Start nach "
+"der User-PIN und lehnt damit grundsätzlich einen Batch-Start ab. Der Apache2 "
+"bietet eine weitere Direktive, um die PIN beim Start bereitzustellen."
 
 #: ../hsm/apache2-tls.rst:56
 msgid ""
@@ -97,30 +118,44 @@ msgid ""
 " using this approach. Although here a trivial example has been chosen to "
 "just ``echo`` the PIN during startup."
 msgstr ""
+"Apache2 erwartet nach ``|`` eine ausführbare Datei, die beim Start "
+"ausgeführt wird und deren Ausgabe (nachfolgender Zeilenumbruch wird erwartet)"
+" als PIN verwendet wird. Offensichtlich lassen sich mit diesem Ansatz "
+"beliebig komplexe Methoden zur PIN-Abfrage implementieren. Obwohl hier ein "
+"triviales Beispiel gewählt wurde, um die PIN während des Starts einfach "
+"``echo`` zu geben."
 
 #: ../hsm/apache2-tls.rst:61
 msgid ""
 "Further ``SSLPassPhraseDialog`` is a global directive, thus has to be "
 "placed in the global configuration scope in Apache2."
 msgstr ""
+"Weiterhin ist ``SSLPassPhraseDialog`` eine globale Direktive, muss also im "
+"Apache2 in den globalen Konfigurationsbereich gelegt werden."
 
 #: ../hsm/apache2-tls.rst:66
 msgid ""
 "This shown example is not a secure mechanism to pass your PIN, as it will"
 " be written in plain-text inside your configuration"
 msgstr ""
+"Das gezeigte Beispiel ist kein sicherer Mechanismus zur Übergabe der PIN, da "
+"sie im Klartext in der Konfiguration geschrieben wird"
 
 #: ../hsm/apache2-tls.rst:69
 msgid "See the `Apache2 mod_ssl documentation`_ for more details on this feature."
 msgstr ""
+"Weitere Einzelheiten zu dieser Funktion finden Sie in der `Apache2 mod_ssl-"
+"Dokumentation`_."
 
 #: ../hsm/apache2-tls.rst:72
 msgid "Complete Apache2 Config Example"
-msgstr ""
+msgstr "Vollständiges Apache2-Konfigurationsbeispiel"
 
 #: ../hsm/apache2-tls.rst:73
 msgid "A complete Apache2 (``VirtualHost``) config snippet might look like this:"
 msgstr ""
+"Ein kompletter Apache2 (``VirtualHost``) Konfigurationsausschnitt könnte wie "
+"folgt aussehen:"
 
 #: ../hsm/certificate-authority.rst:2
 msgid "Creating a Certificate Authority"
@@ -449,31 +484,33 @@ msgstr ""
 "geschrieben."
 
 #: ../hsm/import-keys-certs.rst:2
-#, fuzzy
 msgid "Importing Keys and Certificates"
-msgstr "Vorhandenen Schlüssel und Zertifikat importieren"
+msgstr "Importieren von Schlüsseln und Zertifikaten"
 
 #: ../hsm/import-keys-certs.rst:8
 msgid ""
 "Generally the concept to import key-pairs and/or certificates is the "
 "following:"
 msgstr ""
+"Generell ist das Konzept zum Importieren von Schlüsselpaaren und/oder "
+"Zertifikaten wie folgt:"
 
 #: ../hsm/import-keys-certs.rst:11
 msgid "Create a DKEK (Device Key Encryption Key) share"
-msgstr ""
+msgstr "Erstellen Sie eine DKEK-Freigabe (Device Key Encryption Key)"
 
 #: ../hsm/import-keys-certs.rst:12
 msgid "Initialize device and enable DKEK as \"Device Encryption Scheme\""
 msgstr ""
+"Gerät initialisieren und DKEK als \"Device Encryption Scheme\" aktivieren"
 
 #: ../hsm/import-keys-certs.rst:13
 msgid "Import DKEK share into device"
-msgstr ""
+msgstr "DKEK-Freigabe in Gerät importieren"
 
 #: ../hsm/import-keys-certs.rst:14
 msgid "Import PKCS#12 container(s) into DKEK"
-msgstr ""
+msgstr "Importieren von PKCS#12-Container(n) in DKEK"
 
 #: ../hsm/import-keys-certs.rst:16
 msgid ""
@@ -481,34 +518,46 @@ msgid ""
 "an example for the overall workflow. For further information please read "
 "`this thread`_ and `this blog post`_."
 msgstr ""
+"Diese Dokumentation deckt nur einen speziellen Anwendungsfall ab und soll "
+"als Beispiel für den gesamten Arbeitsablauf dienen. Für weitere "
+"Informationen lesen Sie bitte `diesen Thread`_ und `diesen Blogbeitrag`_."
 
 #: ../hsm/import-keys-certs.rst:22
 msgid ""
 "This procedure will reset your Nitrokey HSM 2 device and all data on it "
 "will be deleted!"
 msgstr ""
+"Durch diesen Vorgang wird Ihr Nitrokey HSM 2 Gerät zurückgesetzt und alle "
+"darauf befindlichen Daten werden gelöscht!"
 
 #: ../hsm/import-keys-certs.rst:28
 msgid ""
 "make sure all the keys you would like to import are available as PKCS#12 "
 "containers (`.p12`) and you know the password, if needed"
 msgstr ""
+"Stellen Sie sicher, dass alle Schlüssel, die Sie importieren möchten, als "
+"PKCS#12-Container (`.p12`) vorliegen und Sie das Passwort kennen, falls "
+"erforderlich"
 
 #: ../hsm/import-keys-certs.rst:31
 msgid ""
 "be sure that nothing on the used Nitrokey HSM 2 is needed, it will be "
 "deleted during this procedure"
 msgstr ""
+"stellen Sie sicher, dass nichts auf dem verwendeten Nitrokey HSM 2 benötigt "
+"wird, es wird bei diesem Vorgang gelöscht"
 
 #: ../hsm/import-keys-certs.rst:34
 msgid ""
 "download the latest `Smart Card Shell`_ and unpack it into your work-"
 "directory"
 msgstr ""
+"Laden Sie die neueste `Smart Card Shell`_ herunter und entpacken Sie sie in "
+"Ihr Arbeitsverzeichnis"
 
 #: ../hsm/import-keys-certs.rst:37
 msgid "Importing via the SCSH3 GUI"
-msgstr ""
+msgstr "Importieren über die SCSH3-GUI"
 
 #: ../hsm/import-keys-certs.rst:39
 msgid ""
@@ -516,118 +565,132 @@ msgid ""
 "started using ``bash scsh3gui`` (for windows double-click on: "
 "``scsh3gui.cmd``)."
 msgstr ""
+"Im entpackten Verzeichnis finden Sie ``scsh3gui``, das mit ``bash scsh3gui`` "
+"gestartet werden kann (für Windows Doppelklick auf: ``scsh3gui.cmd``)."
 
 #: ../hsm/import-keys-certs.rst:42
 msgid ""
 "Once the SCSH3 Tool is open, you should see your Nitrokey HSM 2 inside "
 "the tree view. Please follow these steps to import:"
 msgstr ""
+"Sobald das SCSH3-Tool geöffnet ist, sollten Sie Ihr Nitrokey HSM 2 in der "
+"Baumansicht sehen. Bitte folgen Sie diesen Schritten zum Importieren:"
 
 #: ../hsm/import-keys-certs.rst:45
 msgid "Start key-manager (File -> Keymanager)"
-msgstr ""
+msgstr "Key-Manager starten (Datei -> Keymanager)"
 
 #: ../hsm/import-keys-certs.rst:47
 msgid "Right-click \"Smartcard-HSM\" -> create DKEK share"
-msgstr ""
+msgstr "Rechtsklick auf \"Smartcard-HSM\" -> DKEK-Freigabe erstellen"
 
 #: ../hsm/import-keys-certs.rst:49
 msgid "Choose file location"
-msgstr ""
+msgstr "Speicherort der Datei wählen"
 
 #: ../hsm/import-keys-certs.rst:51
 msgid "Choose DKEK share password"
-msgstr ""
+msgstr "DKEK-Freigabepasswort wählen"
 
 #: ../hsm/import-keys-certs.rst:53
 msgid "Right-click \"Smartcard-HSM\" -> Initialize device"
-msgstr ""
+msgstr "Rechtsklick auf \"Smartcard-HSM\" -> Gerät initialisieren"
 
 #: ../hsm/import-keys-certs.rst:55
 msgid "Enter SO-PIN"
-msgstr ""
+msgstr "SO-PIN eingeben"
 
 #: ../hsm/import-keys-certs.rst:57
 msgid "(optional) Enter label and enter URL/Host"
-msgstr ""
+msgstr "(optional) Beschriftung eingeben und URL/Host eingeben"
 
 #: ../hsm/import-keys-certs.rst:59
 msgid "Select authentication method: \"User PIN\""
-msgstr ""
+msgstr "Authentifizierungsmethode auswählen: \"Benutzer-PIN\""
 
 #: ../hsm/import-keys-certs.rst:61
 msgid ""
 "Allow RESET RETRY COUNTER: \"Resetting and unblocking PIN with SO-PIN not"
 " allowed\""
 msgstr ""
+"RESET RETRY COUNTER zulassen: \"Rücksetzen und Entsperren der PIN mit SO-PIN "
+"nicht erlaubt\""
 
 #: ../hsm/import-keys-certs.rst:63
 msgid "Enter and confirm User PIN"
-msgstr ""
+msgstr "Benutzer-PIN eingeben und bestätigen"
 
 #: ../hsm/import-keys-certs.rst:65
 msgid "\"Select Device Key Encryption scheme\" -> \"DKEK shares\""
-msgstr ""
+msgstr "\"Geräteschlüssel-Verschlüsselungsschema wählen\" -> \"DKEK-Aktien\""
 
 #: ../hsm/import-keys-certs.rst:67
 msgid "Enter number of DKEK shares: 1"
-msgstr ""
+msgstr "Anzahl der DKEK-Aktien eingeben: 1"
 
 #: ../hsm/import-keys-certs.rst:69
 msgid "Right-click DKEK set-up in progress -> \"Import DKEK share\""
 msgstr ""
+"Rechtsklick auf laufende DKEK-Einrichtung -> \"DKEK-Freigabe importieren\""
 
 #: ../hsm/import-keys-certs.rst:71
 msgid "Choose DKEK share file location"
-msgstr ""
+msgstr "Speicherort der DKEK-Freigabedatei wählen"
 
 #: ../hsm/import-keys-certs.rst:73
 msgid "Password for DKEK share"
-msgstr ""
+msgstr "Passwort für DKEK-Freigabe"
 
 #: ../hsm/import-keys-certs.rst:75
 msgid "Right-click \"SmartCard-HSM\" -> \"Import from PKCS#12\""
-msgstr ""
+msgstr "Rechtsklick auf \"SmartCard-HSM\" -> \"Import aus PKCS#12\""
 
 #: ../hsm/import-keys-certs.rst:77
 msgid "Enter number of shares -> 1"
-msgstr ""
+msgstr "Anzahl der Anteile eingeben -> 1"
 
 #: ../hsm/import-keys-certs.rst:79
 msgid "Enter file location of DKEK share"
-msgstr ""
+msgstr "Dateispeicherort der DKEK-Freigabe eingeben"
 
 #: ../hsm/import-keys-certs.rst:81
 msgid "Enter Password for DKEK share"
-msgstr ""
+msgstr "Passwort für DKEK-Freigabe eingeben"
 
 #: ../hsm/import-keys-certs.rst:83
 msgid "Select PKCS#12 container for import (Enter password, if set)"
 msgstr ""
+"PKCS#12-Container für den Import auswählen (Passwort eingeben, falls gesetzt)"
 
 #: ../hsm/import-keys-certs.rst:85
 msgid "Select Key"
-msgstr ""
+msgstr "Taste wählen"
 
 #: ../hsm/import-keys-certs.rst:87
 msgid "Select Name to be used (This is the Label used for the key on the device)"
 msgstr ""
+"Wählen Sie den zu verwendenden Namen (Dies ist die Bezeichnung, die für die "
+"Taste auf dem Gerät verwendet wird)"
 
 #: ../hsm/import-keys-certs.rst:89
 msgid "Import more keys, if needed"
-msgstr ""
+msgstr "Weitere Tasten importieren, falls erforderlich"
 
 #: ../hsm/import-keys-certs.rst:91
 msgid ""
 "Once this is done, you can check that the keys have been successfully "
 "imported using:"
 msgstr ""
+"Sobald dies geschehen ist, können Sie mit überprüfen, ob die Schlüssel "
+"erfolgreich importiert wurden:"
 
 #: ../hsm/import-keys-certs.rst:98
 msgid ""
 "In the resulting output you will find the imported keys labeled by the "
 "name you chose previously."
 msgstr ""
+"In der resultierenden Ausgabe finden Sie die importierten Schlüssel mit dem "
+"Namen beschriftet, den Sie zuvor gewählt haben."
 
 #: ../hsm/index.rst:2
 msgid "Nitrokey HSM 2"
@@ -975,7 +1038,7 @@ msgstr ""
 
 #: ../hsm/pkcs11-url.rst:2
 msgid "PKCS#11 URL Generation"
-msgstr ""
+msgstr "PKCS#11-URL-Generierung"
 
 #: ../hsm/pkcs11-url.rst:9
 msgid ""
@@ -983,46 +1046,61 @@ msgid ""
 "concept mostly allows simply replacing a file-path (for the secret) with "
 "a so-called **PKCS#11 URL** to use a secret from a e.g., Nitrokey."
 msgstr ""
+"Verschiedene Anwendungen verwenden openssl, um z. B. TLS-Zertifikate zu "
+"handhaben. Dieses Konzept erlaubt es meist, einfach einen Dateipfad (für das "
+"Geheimnis) durch eine sogenannte **PKCS#11-URL** zu ersetzen, um ein "
+"Geheimnis aus einem z. B. Nitrokey zu verwenden."
 
 #: ../hsm/pkcs11-url.rst:16
 msgid "ensure ``openssl`` is installed"
-msgstr ""
+msgstr "sicherstellen, dass ``openssl`` installiert ist"
 
 #: ../hsm/pkcs11-url.rst:18
 msgid ""
 "ensure ``openssl`` can use the PKCS#11 engine by installing ``libengine-"
 "pkcs11-openssl``"
 msgstr ""
+"stellen Sie sicher, daß ``openssl`` die PKCS#11-Engine benutzen kann, indem "
+"Sie ``libengine-pkcs11-openssl`` installieren"
 
 #: ../hsm/pkcs11-url.rst:27
 msgid "install ``opensc`` and ``gnutls-bin`` for necessary tools"
-msgstr ""
+msgstr "Installieren Sie ``opensc`` und ``gnutls-bin`` für notwendige Werkzeuge"
 
 #: ../hsm/pkcs11-url.rst:29
 msgid ""
 "verify that your needed keys and/or certificates are available on your "
 "Nitrokey using ``pkcs15-tool -D``"
 msgstr ""
+"Überprüfen Sie mit ``pkcs15-tool -D``, ob die benötigten Schlüssel und/oder "
+"Zertifikate auf Ihrem Nitrokey vorhanden sind"
 
 #: ../hsm/pkcs11-url.rst:31
 msgid ""
 "if you want to use ECC keys/mechanisms through ``libengine-"
 "pkcs11-openssl``, you'll have to ensure its version is at least 0.4.10"
 msgstr ""
+"wenn Sie ECC-Schlüssel/-Mechanismen durch ``libengine-pkcs11-openssl`` "
+"verwenden wollen, müssen Sie sicherstellen, dass dessen Version mindestens "
+"0.4.10 ist"
 
 #: ../hsm/pkcs11-url.rst:35
 msgid "List and Generate PKCS#11 URLs"
-msgstr ""
+msgstr "Auflisten und Erzeugen von PKCS#11-URLs"
 
 #: ../hsm/pkcs11-url.rst:37
 msgid "Use the following command to get a list of available tokens (Nitrokeys):"
 msgstr ""
+"Verwenden Sie den folgenden Befehl, um eine Liste der verfügbaren Token "
+"(Nitrokeys) zu erhalten:"
 
 #: ../hsm/pkcs11-url.rst:44
 msgid ""
 "Choose the token (Nitrokey) URL you want to generate URL tokens for and "
 "use it like this:"
 msgstr ""
+"Wählen Sie die Token-(Nitrokey-)URL, für die Sie URL-Token generieren "
+"möchten, und verwenden Sie sie wie folgt:"
 
 #: ../hsm/pkcs11-url.rst:53
 msgid ""
@@ -1031,6 +1109,11 @@ msgid ""
 "can be uniquely identified using the resulting URL, see :doc:`TLS Apache2"
 " Configuration<apache2-tls>` for an example using ``id`` only."
 msgstr ""
+"Wenn Sie den Schwanz der URL inspizieren, werden Sie erkennen: ``label``, "
+"``id`` und mehr, diese können teilweise entfernt werden, solange die "
+"notwendigen Objekte über die resultierende URL eindeutig identifiziert "
+"werden können, siehe :doc:`TLS Apache2 Configuration<apache2-tls>` für ein "
+"Beispiel, das nur ``id`` verwendet."
 
 #: ../pro/smime-thunderbird.rst:2
 msgid "S/MIME Email Encryption with Thunderbird"
@@ -1850,4 +1933,3 @@ msgstr ""
 #~ "Windows- und macOS-Benutzer oder `hier"
 #~ " <https://github.com/Nitrokey/opensc-build>`__ für "
 #~ "Debian/Ubuntu-Benutzer."
-
