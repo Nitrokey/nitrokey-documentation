@@ -20,6 +20,12 @@ Generic
   The minimum of 0,6A (3W) is rarely reached, in idle mostly around 1A (5W) and more than 
   2A (10W) under higher loads. 
 
+**Q:** Can I mirror my NextBox onto another NextBox?
+  This translates to a cluster setup, which is considered an (paid) enterprise solution 
+  by Nextcloud. The details, especially data consistency and collision handling, are far 
+  from trivial to realize. Nevertheless, we also see demand for more sophisticated backup
+  solutions and will address this issue.
+
 
 Hardware
 --------
@@ -31,6 +37,20 @@ Hardware
   via USB and pulls ~1.0A. Thus connecting another hard-drive without an
   external power supply can lead to an unreliable power supply for the internal
   hard-drive, thus potential data loss.
+
+**Q:** Where can I find an external hard-drive with its own power supply?
+  The smaller form factors (2.5'' and smaller) for external hard-drives mostly
+  come without an additional power supply. For these, *a USB Hub with an
+  additional power supply can be considered the "external power-supply"* for the
+  hard-drive. Although the latter is it not 100% sure for powered USB hubs,
+  thus we recommend external 3.5'' hard-drives, which are nearly always
+  externally powered.
+
+**Q:** Why does my USB device / hub not work, if connected to the NextBox?
+  There are some devices and especially USB3 hubs that are known to not work properly
+  with the Raspberry PI 4B, please see this `USB Documentation`_ from Raspberry.
+  On top of that also make sure the USB device is working in general by connecting it 
+  to another computer (best case: Linux) and verify that it works.
 
 **Q:** Why does my hard-drive not show up after plugging it in?
   Please make sure that you are using one of the supported filesystems (e.g., ext, xfs) and you
@@ -56,6 +76,13 @@ Hardware
   Both USB Type-C ports are exclusively for power supply and can not be used for data transfer. 
   Do not connect two power supplies, please just use one of both to power your NextBox.
 
+**Q:** Which fan should I install?
+  **There is absolutely no need for a fan, the NextBox is designed to work without an active 
+  cooling**. Although if the NextBox is used for additional tasks (it's still a Linux), we have
+  prepared a fan mount for a 30mm x 12mm fan at 5V connected to the shield. More details (connector,
+  used pins) can be taken from `NextBox' GitHub`_. Currently we *do not* recommend adding a fan as
+  the outputs are not controlled yet by the NextBox daemon, so this is also something you would have
+  to do by yourself.
 
 
 Software
@@ -84,16 +111,31 @@ Software
   support for the NextBox stock configuration.
 
 **Q:** What is the correct WebDAV URL?
-  The full URL to use for WebDAV is: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path``
+  The full URL to use for WebDAV is:
+  ``https://my.domain.tld/remote.php/webdav/``, there have been reports that
+  for native Windows WebDAV you might need:
+  ``https://my.domain.tld/remote.php/dav/files/USERNAME`` with *USERNAME* being
+  the username you would like to use.
 
 **Q:** Can I access my Nextcloud instance using WebDAV?
-  Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for 
-  unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` 
-  while making sure that the ``davfs2`` package is installed.
+  Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A
+  simple mount for unix-like systems might look like this: ``mount -t davfs
+  https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure
+  that the ``davfs2`` package is installed. For Windows please additionally
+  read these :doc:`docs <clients/windows>`.
 
+**Q:** My Nextcloud instance is stuck in "Maintenance Mode", how can I switch it off?
+  To *force exit* the Nextcloud "Maintenance Mode", you can push the hardware button **shortly, once**. The
+  NextBox will then switch-off the maintenance mode. Please avoid this, if possible.
 
+**Q:** Why am I getting a permission warning for ``/var/www/html/custom_apps/nextbox`` inside the Nextcloud settings overview?
+  This is a "feature". The NextBox Nextcloud App is installed on the system
+  with the Debian nextbox package. To avoid an accidental deletion of the NextBox 
+  Nextcloud App from within the Nextcloud app management, the stated directory 
+  can not be written by Nextcloud, this is what Nextcloud is complaining about here.
 
-
+.. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
+.. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
 .. _nextbox.local: http://nextbox.local
 .. _External storage support: https://docs.nextcloud.com/server/20/admin_manual/configuration_files/external_storage_configuration_gui.html
 .. _RPi Power Supply: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
