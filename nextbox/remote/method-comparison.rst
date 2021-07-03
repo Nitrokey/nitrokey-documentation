@@ -1,6 +1,8 @@
 Comparing Methods For (Remote) Access 
 ========================================
 
+.. contents:: :local:
+
 DNS-based
 ^^^^^^^^^
 

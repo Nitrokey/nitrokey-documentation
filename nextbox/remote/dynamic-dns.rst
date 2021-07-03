@@ -1,6 +1,8 @@
 Dynamic DNS Setup
 ========================
 
+.. contents:: :local:
+
 **There are two ways to configure a dynamic DNS provider to be used and updated
 by your NextBox instance.**
 
