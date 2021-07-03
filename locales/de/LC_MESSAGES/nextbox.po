@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-03 03:08+0200\n"
-"PO-Revision-Date: 2021-07-03 01:10+0000\n"
+"PO-Revision-Date: 2021-07-03 02:40+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-nextbox/de/>\n"
@@ -1894,7 +1894,7 @@ msgstr ""
 
 #: ../nextbox/remote/walkthrough.rst:2
 msgid "Remote Access Walkthrough"
-msgstr ""
+msgstr "Fernzugriff-Walkthrough"
 
 #: ../nextbox/remote/walkthrough.rst:6
 msgid ""
@@ -1903,16 +1903,22 @@ msgid ""
 "particular method**. If you are familiar with this topic you might want "
 "to jump directly to :doc:`method-comparison`."
 msgstr ""
+"Diese Dokumentation soll Ihnen eine gründliche Einführung in das Thema "
+"Remote Access geben, einschließlich einer Entscheidungshilfe **warum eine "
+"bestimmte Methode zu wählen ist**. Wenn Sie mit diesem Thema vertraut sind, "
+"sollten Sie direkt zu :doc:`Methodenvergleich` springen."
 
 #: ../nextbox/remote/walkthrough.rst:12
 msgid "What? Why?"
-msgstr ""
+msgstr "Was? Warum?"
 
 #: ../nextbox/remote/walkthrough.rst:14
 msgid ""
 "You want to access your NextBox from everywhere, this means you want to "
 "access your NextBox from the internet through your internet router."
 msgstr ""
+"Sie wollen von überall auf Ihre NextBox zugreifen, das heißt, Sie wollen "
+"über Ihren Internet-Router auf Ihre NextBox zugreifen."
 
 #: ../nextbox/remote/walkthrough.rst:17
 msgid ""
@@ -1920,6 +1926,9 @@ msgid ""
 "readable by anyone else despite you. Nowadays this is accomplished by "
 "using `HTTPS`_, which is driven by `TLS`_."
 msgstr ""
+"Außerdem wollen Sie sicherstellen, dass Ihre Daten (der Datenverkehr) außer "
+"für Sie selbst für niemanden lesbar sind. Heutzutage wird dies durch die "
+"Verwendung von `HTTPS`_ erreicht, welches durch `TLS`_ gesteuert wird."
 
 #: ../nextbox/remote/walkthrough.rst:24
 msgid ""
@@ -1928,12 +1937,18 @@ msgid ""
 " traffic is not readable by anyone between your browser (client) and the "
 "Nitrokey server."
 msgstr ""
+"Direkt neben der URL (*nitrokey.com*) sehen Sie dieses kleine "
+"Vorhängeschloss, was übersetzt so viel bedeutet wie: Diese Website bietet "
+"eine verschlüsselte Verbindung und Ihr gesamter Datenverkehr zwischen Ihrem "
+"Browser (Client) und dem Nitrokey-Server ist für niemanden lesbar."
 
 #: ../nextbox/remote/walkthrough.rst:28
 msgid ""
 "Once your NextBox is set up properly and you see the dashboard the first "
 "time your URL bar in your browser might look like this:"
 msgstr ""
+"Sobald Ihre NextBox richtig eingerichtet ist und Sie das Dashboard das erste "
+"Mal sehen, könnte Ihre URL-Leiste in Ihrem Browser so aussehen:"
 
 #: ../nextbox/remote/walkthrough.rst:34
 msgid ""
@@ -1943,6 +1958,11 @@ msgid ""
 "connection is **not encrypted**, thus using *http* instead of *https*. "
 "For more you can read: `HTTP vs. HTTPS`_."
 msgstr ""
+"In diesem Fall wurde die lokale IP verwendet (``192.168.10.50``), diese ist "
+"spezifisch für Ihr lokales Netzwerk und gleich ``nextbox.local``. Das *not "
+"secure* und das Warnzeichen transportieren die Information, dass Ihre "
+"Verbindung **nicht verschlüsselt** ist, also *http* anstelle von *https* "
+"verwendet wird. Für mehr können Sie lesen: `HTTP vs. HTTPS`_."
 
 #: ../nextbox/remote/walkthrough.rst:39
 msgid ""
@@ -1950,10 +1970,13 @@ msgid ""
 "*https*. This guide covers the different approaches to reach this goal, "
 "depending on your specific needs."
 msgstr ""
+"Natürlich soll der Zugriff auf die NextBox sicher sein, also verschlüsselt "
+"mit *https*. Diese Anleitung behandelt die verschiedenen Ansätze, um dieses "
+"Ziel zu erreichen, je nach Ihren spezifischen Anforderungen."
 
 #: ../nextbox/remote/walkthrough.rst:44
 msgid "Use The Nitrokey Backwards Proxy"
-msgstr ""
+msgstr "Verwenden Sie den Nitrokey-Rückwärtsproxy"
 
 #: ../nextbox/remote/walkthrough.rst:46
 msgid ""
@@ -1963,22 +1986,32 @@ msgid ""
 "domain you want to use and click *Enable Quickstart Remote Access*. From "
 "now on you can access your NextBox using a URL like this:"
 msgstr ""
+"Diese Methode ist bei weitem am einfachsten einzurichten und zu verwenden, "
+"um von überall aus verschlüsselt auf Ihre NextBox zuzugreifen. Sie müssen "
+"nur innerhalb der NextBox-App auf *Remote Access* und *Backwards Proxy* "
+"gehen, eine Sub-Domain einfügen, die Sie verwenden möchten und auf *Enable "
+"Quickstart Remote Access* klicken. Von nun an können Sie auf Ihre NextBox "
+"mit einer URL wie dieser zugreifen:"
 
 #: ../nextbox/remote/walkthrough.rst:55
 msgid ""
 "The padlock is there---your data (if you are using your "
 "``[subdomain].nextbox.link`` URL) is now encrypted!"
 msgstr ""
+"Das Vorhängeschloss ist da - Ihre Daten (wenn Sie die URL ``[subdomain]."
+"nextbox.link`` verwenden) sind jetzt verschlüsselt!"
 
 #: ../nextbox/remote/walkthrough.rst:58
 msgid ""
 "So far so good, but wait, this works, but has two major drawbacks: "
 "Performance and a chained end-to-end encryption."
 msgstr ""
+"So weit so gut, aber halt, das funktioniert zwar, hat aber zwei große "
+"Nachteile: Performance und eine verkettete Ende-zu-Ende-Verschlüsselung."
 
 #: ../nextbox/remote/walkthrough.rst:62
 msgid "Performance"
-msgstr ""
+msgstr "Leistung"
 
 #: ../nextbox/remote/walkthrough.rst:64
 msgid ""
@@ -1988,6 +2021,11 @@ msgid ""
 "goes all the way from your computer, into the internet, to the Nitrokey "
 "server and all the way back to your NextBox."
 msgstr ""
+"Der Rückwärts-Proxy funktioniert wie folgt: Ihre NextBox verbindet sich mit "
+"dem Nitrokey Proxy-Server und öffnet einen (Rückwärts-)Kanal. Obwohl Ihre "
+"NextBox also vielleicht direkt neben Ihrem Computer steht, geht der Verkehr "
+"den ganzen Weg von Ihrem Computer, ins Internet, zum Nitrokey-Server und den "
+"ganzen Weg zurück zu Ihrer NextBox."
 
 #: ../nextbox/remote/walkthrough.rst:70
 msgid ""
@@ -1996,10 +2034,15 @@ msgid ""
 "essentially is a drawback of all proxies. The effect for you as a user is"
 " that data transfers will be slower, than a direct connection."
 msgstr ""
+"Vereinfacht könnte man sagen, dass der gesamte Datenverkehr einen langen Weg "
+"zur NextBox zurücklegen muss, anstatt direkt mit der NextBox zu sprechen. "
+"Dies ist grundsätzlich ein Nachteil aller Proxys. Der Effekt für Sie als "
+"Benutzer ist, dass die Datenübertragung langsamer ist, als bei einer "
+"direkten Verbindung."
 
 #: ../nextbox/remote/walkthrough.rst:76
 msgid "Chained End-to-End Encryption"
-msgstr ""
+msgstr "Verkettete Ende-zu-Ende-Verschlüsselung"
 
 #: ../nextbox/remote/walkthrough.rst:78
 msgid ""
@@ -2008,6 +2051,11 @@ msgid ""
 " client (browser) to the Nitrokey server, there the data will be "
 "decrypted and encrypted again to be sent to the NextBox."
 msgstr ""
+"Ein weiterer Nachteil ist, dass Ihr Datenverkehr nicht vollständig Ende-zu-"
+"Ende-verschlüsselt ist. Im Klartext: Ihre Daten sind immer noch "
+"verschlüsselt, aber nur auf dem Weg von Ihrem Client (Browser) zum Nitrokey-"
+"Server, dort werden die Daten entschlüsselt und erneut verschlüsselt, um an "
+"die NextBox gesendet zu werden."
 
 #: ../nextbox/remote/walkthrough.rst:83
 msgid ""
@@ -2017,16 +2065,23 @@ msgid ""
 "there is a certain remaining risk that someone could compromise this "
 "server and read your traffic."
 msgstr ""
+"Im Wesentlichen bedeutet dies, dass Sie Nitrokey vertrauen müssen, denn "
+"technisch gesehen könnte derjenige, der diesen Server kontrolliert, den "
+"Verkehr mitlesen, der über diesen Proxy läuft.  Nitrokey würde so etwas nie "
+"tun, aber es besteht ein gewisses Restrisiko, dass jemand diesen Server "
+"kompromittieren und Ihren Datenverkehr mitlesen könnte."
 
 #: ../nextbox/remote/walkthrough.rst:88
 msgid ""
 "Obviously this can be done in a better way, but still this might be "
 "enough depending on your personal usage scenario."
 msgstr ""
+"Natürlich kann dies auf eine bessere Art und Weise geschehen, aber je nach "
+"Ihrem persönlichen Nutzungsszenario könnte dies dennoch ausreichend sein."
 
 #: ../nextbox/remote/walkthrough.rst:92
 msgid "Acquire Your Own Certificate"
-msgstr ""
+msgstr "Erwerben Sie Ihr eigenes Zertifikat"
 
 #: ../nextbox/remote/walkthrough.rst:94
 msgid ""
@@ -2036,10 +2091,16 @@ msgid ""
 "start first with a very quick introduction what encryption with an own "
 "certificate means and what is needed."
 msgstr ""
+"Dies ist eindeutig die beste und sicherste Methode für den Fernzugriff auf "
+"Ihre NextBox, da Sie damit die beste Leistung und eine echte Ende-zu-Ende-"
+"Verschlüsselung erhalten, aber sie ist mit einigen zusätzlichen "
+"Konfigurationsanforderungen verbunden. Wir beginnen zunächst mit einer sehr "
+"kurzen Einführung, was Verschlüsselung mit einem eigenen Zertifikat bedeutet "
+"und was benötigt wird."
 
 #: ../nextbox/remote/walkthrough.rst:101
 msgid "The Certificate Authority"
-msgstr ""
+msgstr "Die Zertifizierungsstelle"
 
 #: ../nextbox/remote/walkthrough.rst:103
 msgid ""
@@ -2047,6 +2108,9 @@ msgid ""
 "with a digital certificate, which will allow you to use `TLS`_, thus "
 "encrypt the your traffic, enabling you to use *https*."
 msgstr ""
+"Ein `CA`_ ist, wie der Name schon sagt, *jemand*, der Ihnen ein digitales "
+"Zertifikat ausstellen kann, das es Ihnen erlaubt, `TLS`_ zu verwenden, also "
+"Ihren Datenverkehr zu verschlüsseln, wodurch Sie *https* verwenden können."
 
 #: ../nextbox/remote/walkthrough.rst:107
 msgid ""
@@ -2058,6 +2122,14 @@ msgid ""
 " (sub)domain and no man-in-the-middle has injected some data, which could"
 " compromise your client."
 msgstr ""
+"Per Definition darf eine \"CA\" nur dann ein Zertifikat ausstellen, wenn sie "
+"nachweisen kann, dass Sie der **Besitzer einer öffentlichen "
+"Internet-(Sub-)Domain** sind. Diese Inhaberschaft ist eine sehr wichtige "
+"Eigenschaft, da dies, trotz der Verschlüsselung, dem Client (Browser) "
+"zusätzlich ermöglicht, zu überprüfen, dass der Verkehr, der von einer "
+"bestimmten Website gesendet wird, wirklich von dieser (Sub-)Domain stammt "
+"und kein Man-in-the-Middle einige Daten injiziert hat, die Ihren Client "
+"kompromittieren könnten."
 
 #: ../nextbox/remote/walkthrough.rst:115
 msgid ""
@@ -2065,10 +2137,13 @@ msgid ""
 "for *nextbox.local* or even a local IP, as these are neither public nor "
 "unique."
 msgstr ""
+"Davon abgesehen ist es natürlich nicht möglich, ein Zertifikat für *nextbox."
+"local* oder gar eine lokale IP zu erwerben, da diese weder öffentlich noch "
+"eindeutig sind."
 
 #: ../nextbox/remote/walkthrough.rst:119
 msgid "Acquire a public (sub)domain for your NextBox"
-msgstr ""
+msgstr "Erwerben Sie eine öffentliche (Sub-)Domain für Ihre NextBox"
 
 #: ../nextbox/remote/walkthrough.rst:121
 msgid ""
@@ -2077,6 +2152,11 @@ msgid ""
 " *dynamic DNS provider*, here namely `deSEC`_. This particular service is"
 " totally free and a non-profit organization."
 msgstr ""
+"Die NextBox wird mit einer Funktion (:doc:`dynamic-dns`) ausgeliefert, die "
+"es Ihnen ermöglicht, auf einfache Weise eine öffentliche Sub-Domain für Ihre "
+"NextBox zu registrieren, indem Sie einen sogenannten *dynamischen DNS-"
+"Anbieter* nutzen, hier namentlich `deSEC`_. Dieser spezielle Dienst ist "
+"völlig kostenlos und eine nicht gewinnorientierte Organisation."
 
 #: ../nextbox/remote/walkthrough.rst:126
 msgid ""
@@ -2084,30 +2164,38 @@ msgid ""
 "sub-domain registered through `deSEC`_ will be public and unique, whose "
 "as we learned are needed to acquire a certificate."
 msgstr ""
+"Dies ist ein sehr wichtiger Schritt vor dem Erwerb eines Zertifikats, da "
+"diese über `deSEC`_ registrierte Subdomain öffentlich und eindeutig sein "
+"wird, was, wie wir gelernt haben, für den Erwerb eines Zertifikats "
+"erforderlich ist."
 
 #: ../nextbox/remote/walkthrough.rst:131
 msgid "Step-by-Step DNS & TLS"
-msgstr ""
+msgstr "Schritt-für-Schritt DNS & TLS"
 
 #: ../nextbox/remote/walkthrough.rst:133
 msgid ""
 "This may sound complex, but the NextBox comes with all you need to get "
 "through this process:"
 msgstr ""
+"Das mag kompliziert klingen, aber die NextBox bringt alles mit, was Sie "
+"brauchen, um diesen Prozess zu bewältigen:"
 
 #: ../nextbox/remote/walkthrough.rst:136 ../nextbox/remote/walkthrough.rst:160
 msgid "Navigate to the Nextcloud NextBox-App"
-msgstr ""
+msgstr "Navigieren Sie zur Nextcloud NextBox-App"
 
 #: ../nextbox/remote/walkthrough.rst:137
 msgid "Click on \"Guided Dynamic DNS\""
-msgstr ""
+msgstr "Klicken Sie auf \"Geführter dynamischer DNS\"."
 
 #: ../nextbox/remote/walkthrough.rst:138
 msgid ""
 "Insert a valid e-mail address you have access to into the first input "
 "field"
 msgstr ""
+"Geben Sie eine gültige E-Mail-Adresse, auf die Sie Zugriff haben, in das "
+"erste Eingabefeld ein"
 
 #: ../nextbox/remote/walkthrough.rst:139
 msgid ""
@@ -2115,6 +2203,9 @@ msgid ""
 "`deSEC`_ is used here, your sub-domain always has to end with *dedyn.io*,"
 " so something like: ``mynextbox.dedyn.io``"
 msgstr ""
+"Fügen Sie die vollständige Sub-Domain ein, über die Ihre NextBox erreichbar "
+"sein soll. Da hier `deSEC`_ verwendet wird, muss Ihre Sub-Domain immer mit "
+"*dedyn.io* enden, also etwas wie: ``meineNextbox.dedyn.io``"
 
 #: ../nextbox/remote/walkthrough.rst:142
 msgid ""
@@ -2122,18 +2213,27 @@ msgid ""
 "domain and e-mail at `deSEC`_. This may fail, if the sub-domain you chose"
 " is already taken, please choose another one in this case."
 msgstr ""
+"Klicken Sie auf \"Registrieren bei deSEC\" und die NextBox wird versuchen, "
+"Ihre Domain und E-Mail bei `deSEC`_ zu registrieren. Dies kann fehlschlagen, "
+"wenn die von Ihnen gewählte Sub-Domain bereits belegt ist, bitte wählen Sie "
+"in diesem Fall eine andere."
 
 #: ../nextbox/remote/walkthrough.rst:145
 msgid ""
 "You will receive an e-mail in which you should verify that this is your "
 "e-mail by clicking on the provided link"
 msgstr ""
+"Sie erhalten eine E-Mail, in der Sie bestätigen sollten, dass dies Ihre E-"
+"Mail ist, indem Sie auf den angegebenen Link klicken"
 
 #: ../nextbox/remote/walkthrough.rst:147
 msgid ""
 "In step two, you will have to input a *token*, which you received after "
 "you clicked the verification link and completed the captcha."
 msgstr ""
+"Im zweiten Schritt müssen Sie ein *Token* eingeben, das Sie erhalten haben, "
+"nachdem Sie auf den Verifizierungslink geklickt und das Captcha ausgefüllt "
+"haben."
 
 #: ../nextbox/remote/walkthrough.rst:150
 msgid ""
@@ -2145,40 +2245,54 @@ msgid ""
 "your internet router now, once this is done, visiting your registered "
 "sub-domain in the browser will show you your NextBox' Nextcloud instance."
 msgstr ""
+"Jetzt sind Sie der Besitzer Ihrer eigenen Subdomain. Sie können jetzt "
+"versuchen, diese Subdomain zu besuchen, aber Sie werden sehen, dass sie nur ("
+"im besten Fall) auf Ihrem Internet-Router landet. Das liegt daran, dass Ihr "
+"Router Ihre Tür zum Internet ist und ihm mitgeteilt werden muss, dass Sie "
+"möchten, dass bestimmter Datenverkehr an Ihre NextBox weitergeleitet wird. "
+"Bitte richten Sie jetzt :doc:`port-forwarding` auf Ihrem Internet-Router "
+"ein. Sobald dies geschehen ist, wird Ihnen beim Besuch Ihrer registrierten "
+"Subdomain im Browser Ihre NextBox' Nextcloud-Instanz angezeigt."
 
 #: ../nextbox/remote/walkthrough.rst:158
 msgid "Great from here there is just one step remaining:"
-msgstr ""
+msgstr "Von hier aus ist es nur noch ein Schritt:"
 
 #: ../nextbox/remote/walkthrough.rst:161
 msgid "Click on \"HTTPS / TLS\""
-msgstr ""
+msgstr "Klicken Sie auf \"HTTPS / TLS\""
 
 #: ../nextbox/remote/walkthrough.rst:162
 msgid "Click the button \"Enable TLS\""
-msgstr ""
+msgstr "Klicken Sie auf die Schaltfläche \"TLS aktivieren\"."
 
 #: ../nextbox/remote/walkthrough.rst:163
 msgid "Please wait some moments to acquire your certificate"
-msgstr ""
+msgstr "Bitte warten Sie einige Augenblicke, um Ihr Zertifikat zu erhalten"
 
 #: ../nextbox/remote/walkthrough.rst:165
 msgid ""
 "Shortly after you will be automatically redirected to your now encrypted "
 "NextBox sub-domain, which might look similar to this:"
 msgstr ""
+"Kurz darauf werden Sie automatisch zu Ihrer nun verschlüsselten NextBox-"
+"Subdomain weitergeleitet, die ähnlich wie diese aussehen könnte:"
 
 #: ../nextbox/remote/walkthrough.rst:171
 msgid ""
 "There we are, your very own sub-domain, certificate and fully end-to-end "
 "encrypted Nextcloud."
 msgstr ""
+"Fertig ist Ihre eigene Subdomain, Ihr Zertifikat und die vollständig Ende-zu-"
+"Ende-verschlüsselte Nextcloud."
 
 #: ../nextbox/remote/walkthrough.rst:174
 msgid ""
 "If you encounter problems, please read the other articles inside the "
 ":doc:`Remote Access Section<index>`."
 msgstr ""
+"Wenn Sie auf Probleme stoßen, lesen Sie bitte die anderen Artikel innerhalb "
+"des :doc:`Remote Access Section<index>`."
 
 #: ../nextbox/technical/factory-reset.rst:2
 msgid "Factory Reset"
