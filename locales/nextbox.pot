@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-01 21:57+0200\n"
+"POT-Creation-Date: 2021-07-07 18:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -420,36 +420,48 @@ msgstr ""
 msgid "Yes, you can set up ssh access through the NextBox Nextcloud app. Afterwards you can access your NextBox using ssh and you can do with the system whatever you want. Obviously we will only provide support for the NextBox stock configuration."
 msgstr ""
 
-#: ../nextbox/faq.rst:118
-msgid "**Q:** What is the correct WebDAV URL?"
-msgstr ""
-
-#: ../nextbox/faq.rst:114
-msgid "The full URL to use for WebDAV is: ``https://my.domain.tld/remote.php/webdav/``, there have been reports that for native Windows WebDAV you might need: ``https://my.domain.tld/remote.php/dav/files/USERNAME`` with *USERNAME* being the username you would like to use."
-msgstr ""
-
-#: ../nextbox/faq.rst:125
-msgid "**Q:** Can I access my Nextcloud instance using WebDAV?"
-msgstr ""
-
-#: ../nextbox/faq.rst:121
-msgid "Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure that the ``davfs2`` package is installed. For Windows please additionally read these :doc:`docs <clients/windows>`."
-msgstr ""
-
-#: ../nextbox/faq.rst:129
+#: ../nextbox/faq.rst:115
 msgid "**Q:** My Nextcloud instance is stuck in \"Maintenance Mode\", how can I switch it off?"
 msgstr ""
 
-#: ../nextbox/faq.rst:128
+#: ../nextbox/faq.rst:114
 msgid "To *force exit* the Nextcloud \"Maintenance Mode\", you can push the hardware button **shortly, once**. The NextBox will then switch-off the maintenance mode. Please avoid this, if possible."
 msgstr ""
 
-#: ../nextbox/faq.rst:135
+#: ../nextbox/faq.rst:121
 msgid "**Q:** Why am I getting a permission warning for ``/var/www/html/custom_apps/nextbox`` inside the Nextcloud settings overview?"
 msgstr ""
 
-#: ../nextbox/faq.rst:132
+#: ../nextbox/faq.rst:118
 msgid "This is a \"feature\". The NextBox Nextcloud App is installed on the system with the Debian nextbox package. To avoid an accidental deletion of the NextBox Nextcloud App from within the Nextcloud app management, the stated directory can not be written by Nextcloud, this is what Nextcloud is complaining about here."
+msgstr ""
+
+#: ../nextbox/faq.rst:124
+msgid "Remote Access"
+msgstr ""
+
+#: ../nextbox/faq.rst:131
+msgid "**Q:** What is the correct WebDAV URL?"
+msgstr ""
+
+#: ../nextbox/faq.rst:127
+msgid "The full URL to use for WebDAV is: ``https://my.domain.tld/remote.php/webdav/``, there have been reports that for native Windows WebDAV you might need: ``https://my.domain.tld/remote.php/dav/files/USERNAME`` with *USERNAME* being the username you would like to use."
+msgstr ""
+
+#: ../nextbox/faq.rst:138
+msgid "**Q:** Can I access my Nextcloud instance using WebDAV?"
+msgstr ""
+
+#: ../nextbox/faq.rst:134
+msgid "Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure that the ``davfs2`` package is installed. For Windows please additionally read these :doc:`docs <clients/windows>`."
+msgstr ""
+
+#: ../nextbox/faq.rst:143
+msgid "**Q:**: Why does my Android smartphone's browser not open: ``http://nextbox.local``"
+msgstr ""
+
+#: ../nextbox/faq.rst:141
+msgid "As of today the technology needed to use ``.local`` URLs is not supported by various (stock) Android browser(s). The mechanism is based on ``mDNS``. One possible workaround is to use a 3rd party app like BonjourBrowser to discover all mDNS services in your network."
 msgstr ""
 
 #: ../nextbox/gettingstarted.rst:2
@@ -695,72 +707,72 @@ msgstr ""
 msgid "Dynamic DNS Setup"
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:4
+#: ../nextbox/remote/dynamic-dns.rst:6
 msgid "**There are two ways to configure a dynamic DNS provider to be used and updated by your NextBox instance.**"
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:7
+#: ../nextbox/remote/dynamic-dns.rst:9
 #: ../nextbox/remote/static.rst:7
 msgid "In contrast to the :doc:`backwards proxy <proxy>` remote access method, this approach will ensure full end-to-end encryption using your very own TLS certificate acquired from `Let's Encrypt`_."
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:13
+#: ../nextbox/remote/dynamic-dns.rst:15
 msgid "Guided Dynamic DNS"
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:15
+#: ../nextbox/remote/dynamic-dns.rst:17
 msgid "The guided setup will register an account at `desec.io`_ for you. Please follow these steps to configure your NextBox using the Guided Dynamic DNS method:"
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:18
+#: ../nextbox/remote/dynamic-dns.rst:20
 msgid "In step one you need to provide an e-mail address and the domain you would like to register.  Please make sure that you have access to this e-mail account and the domain ends with **.dedyn.io**. *You can continue to the next step by registering at `desec.io`_ or without (e.g., if you have already registered this domain before)*"
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:24
+#: ../nextbox/remote/dynamic-dns.rst:26
 msgid "After the registration at `desec.io`_ you will receive a verification e-mail, which will guide you through the registration process at `desec.io`_. Once completed you will be presented with a secret token, which is needed in step two."
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:29
+#: ../nextbox/remote/dynamic-dns.rst:31
 msgid "If you do not receive a verification e-mail try `reset password`_ (using the same e-mail address) at `desec.io`_ to set a password, which will allow you to login into your account."
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:33
+#: ../nextbox/remote/dynamic-dns.rst:35
 msgid "In step two the just acquired secret token shall be inserted into the input field to complete your guided dynamic dns configuration."
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:36
+#: ../nextbox/remote/dynamic-dns.rst:38
 msgid "Your token will only be presented once to you (after the verification process).  If you need a new token, you need to create a new one inside the `token management`_ inside your `desec.io`_ account settings."
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:40
+#: ../nextbox/remote/dynamic-dns.rst:42
 msgid "Once the 2nd step is completed you can *Continue to TLS activation* - see below..."
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:43
+#: ../nextbox/remote/dynamic-dns.rst:45
 msgid "Custom Dynamic DNS"
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:45
+#: ../nextbox/remote/dynamic-dns.rst:47
 msgid "To update your dynamic DNS provider with your currently used IP(s), NextBox is using `ddclient`_, which can be directly configured here or via the *Guided DNS* method described before."
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:49
+#: ../nextbox/remote/dynamic-dns.rst:51
 msgid "In this configuration you need the provide the *domain* this configuration is enabling and the contents of the `ddclient.conf` used by `ddclient`_. Various examples can be found at the `official documentation`_, the one used for the guided DNS configuration uses the following template:"
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:65
+#: ../nextbox/remote/dynamic-dns.rst:67
 msgid "Once you actiavted this configuration, you can *Continue to TLS activation* - see below"
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:71
+#: ../nextbox/remote/dynamic-dns.rst:73
 msgid "Enable TLS"
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:72
+#: ../nextbox/remote/dynamic-dns.rst:74
 msgid "On this page first wait for the status-bars to settle and mainly ensure that *reachability* of your NextBox is tested successfully. If this is the case, just click **Enable TLS** to acquire your TLS certificate."
 msgstr ""
 
-#: ../nextbox/remote/dynamic-dns.rst:76
+#: ../nextbox/remote/dynamic-dns.rst:78
 msgid "If the reachibility test fails, make sure your :doc:`port forwarding <port-forwarding>` is configured properly."
 msgstr ""
 
@@ -773,18 +785,22 @@ msgid "Your NextBox comes with different options on how to enable access to your
 msgstr ""
 
 #: ../nextbox/remote/index.rst:8
+msgid "If you struggle with the overall topic, please read:"
+msgstr ""
+
+#: ../nextbox/remote/index.rst:16
 msgid "Even though the *Backwards Proxy* remote access method is a quick way to realize remote access, we **strongly recommend** to use a :doc:`dynamic DNS setup<dynamic-dns>` or :doc:`static DNS setup<static>` to maintain the best security level for your NextBox. *In most usage scenarios the latter will also provide a better data bandwidth and user experience*"
 msgstr ""
 
-#: ../nextbox/remote/index.rst:15
+#: ../nextbox/remote/index.rst:23
 msgid "Before you set up a remote access method you might want to read the :doc:`comparison<method-comparison>` in order to understand the trade-offs and capabilities of the different approaches:"
 msgstr ""
 
-#: ../nextbox/remote/index.rst:26
+#: ../nextbox/remote/index.rst:34
 msgid "There are different ways to make your NextBox available for remote access."
 msgstr ""
 
-#: ../nextbox/remote/index.rst:36
+#: ../nextbox/remote/index.rst:44
 msgid "The following topics might be of interest for you, depending on your internet service provider and the type of your internet connection:"
 msgstr ""
 
@@ -792,104 +808,104 @@ msgstr ""
 msgid "Comparing Methods For (Remote) Access"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:5
+#: ../nextbox/remote/method-comparison.rst:7
 msgid "DNS-based"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:7
+#: ../nextbox/remote/method-comparison.rst:9
 msgid "This is clearly the best and most secure approach and we recommend using a DNS-based remote-access method including your own TLS certificate for the best security"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:11
+#: ../nextbox/remote/method-comparison.rst:13
 msgid "This denotes the :doc:`dynamic-dns` and the :doc:`static` approach."
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:13
+#: ../nextbox/remote/method-comparison.rst:15
 msgid "Clearly the *best* method, but also the one requiring some configuration work on your internet router."
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:15
+#: ../nextbox/remote/method-comparison.rst:17
 msgid "You get your *own* (sub)domain and a TLS certificate, thus all your traffic will always be end-to-end encrypted and you maintain the highest level of security for your traffic."
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:17
+#: ../nextbox/remote/method-comparison.rst:19
 msgid "Opening the right ports on your internet router is necessary, see :doc:`here<port-forwarding>`"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:18
-#: ../nextbox/remote/method-comparison.rst:34
+#: ../nextbox/remote/method-comparison.rst:20
+#: ../nextbox/remote/method-comparison.rst:36
 msgid "Data path: [NextBox] ⟷   [Router] ⟷  [Client]"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:19
+#: ../nextbox/remote/method-comparison.rst:21
 msgid "**Pro:** best performance, highest security, full end-to-end encryption"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:20
+#: ../nextbox/remote/method-comparison.rst:22
 msgid "**Contra:** needs (dynamic) DNS, needs configuration on your internet router"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:25
+#: ../nextbox/remote/method-comparison.rst:27
 msgid "Non-encrypted"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:27
+#: ../nextbox/remote/method-comparison.rst:29
 msgid "We strongly recommend to not use the non-encrypted setup, if you plan to make your NextBox available outside of your local area network."
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:30
+#: ../nextbox/remote/method-comparison.rst:32
 msgid "simple (``http``) using either ``nextbox.local`` or your local IP (e.g.: ``192.168.178.123``)"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:31
+#: ../nextbox/remote/method-comparison.rst:33
 msgid "Generally a bad idea, this will not encrypt the transported data in any way and is only useful in a setup where you do not want remote access to your NextBox (having non-encrypted traffic inside your LAN might be no problem, as long as you know what you are doing)"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:35
+#: ../nextbox/remote/method-comparison.rst:37
 msgid "**Pro:** fast, no configuration"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:36
+#: ../nextbox/remote/method-comparison.rst:38
 msgid "**Contra:** no transport security, no remote access (or only unencrypted)"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:39
+#: ../nextbox/remote/method-comparison.rst:41
 msgid "Further, once you set up TLS and thus a DNS-based method, the unencrypted connection for your NextBox will be disabled, this is not the case for the Reverse Proxy as a problem with the proxy would then lock you out of your NextBox."
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:46
+#: ../nextbox/remote/method-comparison.rst:48
 msgid "Nitrokey's Reverse Proxy"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:48
+#: ../nextbox/remote/method-comparison.rst:50
 msgid "This refers to the :doc:`proxy` method."
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:51
+#: ../nextbox/remote/method-comparison.rst:53
 msgid "Provides transport encryption between your clients and your NextBox.  But with the drawback that it is not End-To-End encrypted, means the traffic will be decrypted at the Nitrokey Proxy Server and passed onward with another encryption. Thus a compromised proxy server might allow access to your traffic to the potential attacker."
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:56
+#: ../nextbox/remote/method-comparison.rst:58
 msgid "The proxy server is a bottleneck and all traffic has to go through the proxy server, even if you are in a local network together with the NextBox the traffic has to go through the proxy server."
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:59
+#: ../nextbox/remote/method-comparison.rst:61
 msgid "Data path (local client): [NextBox] ⟷  [Router]⟷  [Proxy Server] ⟷   [Router] ⟷   [Client]"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:60
+#: ../nextbox/remote/method-comparison.rst:62
 msgid "Data path (remote client): [NextBox] ⟷  [Router]⟷  [Proxy Server] ⟷   [Client]"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:61
+#: ../nextbox/remote/method-comparison.rst:63
 msgid "**Pro:** easy to setup, good transport security"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:62
+#: ../nextbox/remote/method-comparison.rst:64
 msgid "**Contra:** not strictly end-to-end encrypted, potentially slow (all traffic through the proxy)"
 msgstr ""
 
-#: ../nextbox/remote/method-comparison.rst:65
+#: ../nextbox/remote/method-comparison.rst:67
 msgid "Non end-to-end encrypted does still mean all your traffic is indeed encrypted, but within the proxy server, in order to be forwarded the traffic will be decrypted once and encrypted again before being passed to the client or NextBox"
 msgstr ""
 
@@ -967,6 +983,191 @@ msgstr ""
 
 #: ../nextbox/remote/static.rst:15
 msgid "For instance inside a \"Fritz!Box\" this can be done by navigating to: \"Internet -> Permit Access -> DynDNS\" and configuring a dynamic DNS provider of your choice."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:2
+msgid "Remote Access Walkthrough"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:6
+msgid "This documentation aims to give you a thorough introduction into the Remote Access topic, including a decision helper **why to choose a particular method**. If you are familiar with this topic you might want to jump directly to :doc:`method-comparison`."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:12
+msgid "What? Why?"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:14
+msgid "You want to access your NextBox from everywhere, this means you want to access your NextBox from the internet through your internet router."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:17
+msgid "On top of that you want to make sure that your data (traffic) is not readable by anyone else despite you. Nowadays this is accomplished by using `HTTPS`_, which is driven by `TLS`_."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:24
+msgid "Right next to the URL (*nitrokey.com*) you see this small padlock, which translates to: This website provides an encrypted connection and all your traffic is not readable by anyone between your browser (client) and the Nitrokey server."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:28
+msgid "Once your NextBox is set up properly and you see the dashboard the first time your URL bar in your browser might look like this:"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:34
+msgid "In this case the local IP has been used (``192.168.10.50``), this is specific to your local network and equal to ``nextbox.local``. The *not secure* and the warning sign transports the information that your connection is **not encrypted**, thus using *http* instead of *https*. For more you can read: `HTTP vs. HTTPS`_."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:39
+msgid "Obviously, access to the NextBox should be secure, thus encrypted using *https*. This guide covers the different approaches to reach this goal, depending on your specific needs."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:44
+msgid "Use The Nitrokey Backwards Proxy"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:46
+msgid "This method is by far the easiest to set up and use to get an encrypted to your NextBox from everywhere, the only think to do is to go to *Remote Access* and *Backwards Proxy* inside the NextBox-App, insert a sub-domain you want to use and click *Enable Quickstart Remote Access*. From now on you can access your NextBox using a URL like this:"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:55
+msgid "The padlock is there---your data (if you are using your ``[subdomain].nextbox.link`` URL) is now encrypted!"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:58
+msgid "So far so good, but wait, this works, but has two major drawbacks: Performance and a chained end-to-end encryption."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:62
+msgid "Performance"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:64
+msgid "The backwards proxy works like this: Your NextBox connects to the Nitrokey Proxy server and opens up a (backwards) channel. So even though your NextBox is maybe standing right next to your computer, the traffic goes all the way from your computer, into the internet, to the Nitrokey server and all the way back to your NextBox."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:70
+msgid "Simplified, one could say all the traffic has to travel a long way towards the NextBox instead of talking directly to the NextBox. This essentially is a drawback of all proxies. The effect for you as a user is that data transfers will be slower, than a direct connection."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:76
+msgid "Chained End-to-End Encryption"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:78
+msgid "Another drawback is that your traffic is not fully end-to-end encrypted. To be clear: Your data is still encrypted, but only on the path from your client (browser) to the Nitrokey server, there the data will be decrypted and encrypted again to be sent to the NextBox."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:83
+msgid "Essentially this means you have to trust Nitrokey, because technically whoever is controlling this server might read the traffic that goes through it using this proxy.  Nitrokey would never do such a thing, but there is a certain remaining risk that someone could compromise this server and read your traffic."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:88
+msgid "Obviously this can be done in a better way, but still this might be enough depending on your personal usage scenario."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:92
+msgid "Acquire Your Own Certificate"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:94
+msgid "This is clearly the best and most secure method to remote access your NextBox as it will give your the best performance and true end-to-end encryption, but it comes with some additional configuration needs. We start first with a very quick introduction what encryption with an own certificate means and what is needed."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:101
+msgid "The Certificate Authority"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:103
+msgid "A `CA`_, as the name suggests, is *someone* who is able to provide you with a digital certificate, which will allow you to use `TLS`_, thus encrypt the your traffic, enabling you to use *https*."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:107
+msgid "By definition, a `CA`_ is only allowed to issue a certificate, if they can verify that your are the **owner of a public internet (sub)domain**. This ownership is a very important property as this, despite the encryption, additionally allows the client (browser) to verify that the traffic that is sent by a certain website is really originating from this (sub)domain and no man-in-the-middle has injected some data, which could compromise your client."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:115
+msgid "This being said, obviously it is not possible to acquire an certificate for *nextbox.local* or even a local IP, as these are neither public nor unique."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:119
+msgid "Acquire a public (sub)domain for your NextBox"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:121
+msgid "The NextBox comes with a feature (:doc:`dynamic-dns`), which allows you to easily register a public sub-domain for your NextBox using a so-called *dynamic DNS provider*, here namely `deSEC`_. This particular service is totally free and a non-profit organization."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:126
+msgid "This is a very important step prior to acquiring a certificate, as this sub-domain registered through `deSEC`_ will be public and unique, whose as we learned are needed to acquire a certificate."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:131
+msgid "Step-by-Step DNS & TLS"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:133
+msgid "This may sound complex, but the NextBox comes with all you need to get through this process:"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:136
+#: ../nextbox/remote/walkthrough.rst:160
+msgid "Navigate to the Nextcloud NextBox-App"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:137
+msgid "Click on \"Guided Dynamic DNS\""
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:138
+msgid "Insert a valid e-mail address you have access to into the first input field"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:139
+msgid "Insert the full sub-domain your NextBox shall be available through. As `deSEC`_ is used here, your sub-domain always has to end with *dedyn.io*, so something like: ``mynextbox.dedyn.io``"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:142
+msgid "Click \"Register at deSEC\" and the NextBox will try to register your domain and e-mail at `deSEC`_. This may fail, if the sub-domain you chose is already taken, please choose another one in this case."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:145
+msgid "You will receive an e-mail in which you should verify that this is your e-mail by clicking on the provided link"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:147
+msgid "In step two, you will have to input a *token*, which you received after you clicked the verification link and completed the captcha."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:150
+msgid "Now you are the owner of your very own sub-domain. You can try and visit this subdomain now, but you will see that it will only (best case) end up on your internet router. This is because your router is your door to the internet and it has to be made aware that you want specific traffic to be forwarded to your NextBox. Please set up :doc:`port-forwarding` on your internet router now, once this is done, visiting your registered sub-domain in the browser will show you your NextBox' Nextcloud instance."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:158
+msgid "Great from here there is just one step remaining:"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:161
+msgid "Click on \"HTTPS / TLS\""
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:162
+msgid "Click the button \"Enable TLS\""
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:163
+msgid "Please wait some moments to acquire your certificate"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:165
+msgid "Shortly after you will be automatically redirected to your now encrypted NextBox sub-domain, which might look similar to this:"
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:171
+msgid "There we are, your very own sub-domain, certificate and fully end-to-end encrypted Nextcloud."
+msgstr ""
+
+#: ../nextbox/remote/walkthrough.rst:174
+msgid "If you encounter problems, please read the other articles inside the :doc:`Remote Access Section<index>`."
 msgstr ""
 
 #: ../nextbox/technical/factory-reset.rst:2

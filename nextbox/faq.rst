@@ -110,6 +110,19 @@ Software
   NextBox using ssh and you can do with the system whatever you want. Obviously we will only provide
   support for the NextBox stock configuration.
 
+**Q:** My Nextcloud instance is stuck in "Maintenance Mode", how can I switch it off?
+  To *force exit* the Nextcloud "Maintenance Mode", you can push the hardware button **shortly, once**. The
+  NextBox will then switch-off the maintenance mode. Please avoid this, if possible.
+
+**Q:** Why am I getting a permission warning for ``/var/www/html/custom_apps/nextbox`` inside the Nextcloud settings overview?
+  This is a "feature". The NextBox Nextcloud App is installed on the system
+  with the Debian nextbox package. To avoid an accidental deletion of the NextBox 
+  Nextcloud App from within the Nextcloud app management, the stated directory 
+  can not be written by Nextcloud, this is what Nextcloud is complaining about here.
+
+Remote Access
+-------------
+
 **Q:** What is the correct WebDAV URL?
   The full URL to use for WebDAV is:
   ``https://my.domain.tld/remote.php/webdav/``, there have been reports that
@@ -124,15 +137,10 @@ Software
   that the ``davfs2`` package is installed. For Windows please additionally
   read these :doc:`docs <clients/windows>`.
 
-**Q:** My Nextcloud instance is stuck in "Maintenance Mode", how can I switch it off?
-  To *force exit* the Nextcloud "Maintenance Mode", you can push the hardware button **shortly, once**. The
-  NextBox will then switch-off the maintenance mode. Please avoid this, if possible.
-
-**Q:** Why am I getting a permission warning for ``/var/www/html/custom_apps/nextbox`` inside the Nextcloud settings overview?
-  This is a "feature". The NextBox Nextcloud App is installed on the system
-  with the Debian nextbox package. To avoid an accidental deletion of the NextBox 
-  Nextcloud App from within the Nextcloud app management, the stated directory 
-  can not be written by Nextcloud, this is what Nextcloud is complaining about here.
+**Q:**: Why does my Android smartphone's browser not open: ``http://nextbox.local`` 
+  As of today the technology needed to use ``.local`` URLs is not supported by various (stock)
+  Android browser(s). The mechanism is based on ``mDNS``. One possible workaround is to use a
+  3rd party app like BonjourBrowser to discover all mDNS services in your network.
 
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
