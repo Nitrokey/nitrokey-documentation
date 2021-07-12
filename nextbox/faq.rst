@@ -26,6 +26,13 @@ Generic
   from trivial to realize. Nevertheless, we also see demand for more sophisticated backup
   solutions and will address this issue.
 
+**Q:** What to do to run/install/fix Nextcloud App "XYZ"? Why does Nextcloud feature XYZ not work?
+  Generally we cannot help in detail for these topics. Nextcloud internals and apps are 
+  out-of-scope for the NextBox development as we use the stock Docker images provided by Nextcloud.
+  Ultimately, if some NextBox/OS configuration is blocking an app to run properly we for sure will
+  look into fixing it.
+
+
 
 Hardware
 --------
