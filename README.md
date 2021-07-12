@@ -14,7 +14,7 @@
 
 - Add a subfolder with the numbered image files for each guide.
 
-- Avoid plain URLs in text but use hyperlinks instead.
+- Avoid plain URLs in text but use hyperlink syntax instead. (see: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks )
 
 - Relative paths (also included and double included) are always evaluated from the path of the final including page. Images within pages that are included elsewhere must therefore always be specified with an absolute path starting with `/` which stands for the root directory of the document.
 
@@ -29,6 +29,10 @@
   https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
 
   https://docutils.sourceforge.io/docs/ref/rst/directives.html
+
+## Redirect old articles to existing articles
+
+- Add a line to the redirect list in ./_redirects/.htaccess
 
 ## Commits (preventing merge conflicts)
 Before pushing your changes to the Github repository, commit often and test the result locally by building a preview with Sphinx (see below). Only push your changes upstream when you are sure you will not touch it for the next hour. If content is pushed twice within an hour, merge conflicts may occur on the Weblate server that need to be solved manually (see below). If it's necessary to edit and push content within an hour, you have to wait until Weblate translated the new content. Then push the commit button in Weblate's web interface (https://translate.nitrokey.com/projects/nitrokey-documentation/#repository) and pull locally on your device. Only then you can push upstream again and avoid merge conflict.

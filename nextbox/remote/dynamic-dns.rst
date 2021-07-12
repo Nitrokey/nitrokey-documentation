@@ -1,6 +1,8 @@
 Dynamic DNS Setup
 ========================
 
+.. contents:: :local:
+
 **There are two ways to configure a dynamic DNS provider to be used and updated
 by your NextBox instance.**
 
@@ -73,7 +75,7 @@ On this page first wait for the status-bars to settle and mainly ensure that
 *reachability* of your NextBox is tested successfully. If this is the case,
 just click **Enable TLS** to acquire your TLS certificate.
 
-.. note:: If the reachibility test fails, make sure your :doc:`port forwarding <port-forwarding-firewall>` is configured properly.
+.. note:: If the reachibility test fails, make sure your :doc:`port forwarding <port-forwarding>` is configured properly.
 
 
 

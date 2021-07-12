@@ -52,4 +52,4 @@ This document describes how to use Gnu Privacy Assistant (GPA) to set up the Nit
 .. figure:: /pro/images/gpa/9.png
    :alt: img9
 
-12. Congratulations, your Nitrokey is now ready to use. Please see the `applications <https://www.nitrokey.com/en/applications>`_ section for further information of its usage.
+Congratulations, your Nitrokey is now ready to use. Please see the `applications <https://www.nitrokey.com/documentation/applications>`_ section for further information of its usage.

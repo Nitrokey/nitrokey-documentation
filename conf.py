@@ -263,5 +263,5 @@ epub_exclude_files = ['search.html']
 todo_include_todos = True
 
 
-# Extra Path
-html_extra_path = ['_root_dir_static_files/.htaccess']
+# Extra Path for Redirects
+html_extra_path = ['_redirects/.htaccess']

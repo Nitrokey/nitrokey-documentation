@@ -3,7 +3,7 @@ Connect Devices
 
 .. contents:: :local:
 
-Choose your operating system:
+Choose your operating system or device:
 
 .. toctree::
    :maxdepth: 1
@@ -11,6 +11,6 @@ Choose your operating system:
 
    Android/iOS <android>
    Windows <windows>
-   macos <macos>
+   Mac OS X <macosx>
    Linux <linux>
 

@@ -31,8 +31,8 @@ Your Nitrokey is now ready to use.
 `Checkout <https://www.nitrokey.com/en/applications>`__ the various use
 cases and supported applications.
 
-**Note:** For many use cases described, it is necessary to have either
-OpenPGP or S/MIME keys installed on the device (see below).
+.. note::
+   For many use cases described, it is necessary to have either OpenPGP or S/MIME keys installed on the device (see below).
 
 Key Creation with OpenPGP or S/MIME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -42,8 +42,8 @@ OpenPGP/GnuPG is popular among individuals, S/MIME/x.509 is mostly used
 by enterprises. If you are in doubt which one to choose, you should use
 OpenPGP.
 
--  `instructions <https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__
+-  `instructions <https://docs.nitrokey.com/pro/openpgp.html>`__
    for using the OpenPGP standard with the Nitrokey
 
--  `instructions <https://docs.nitrokey.com/pro/smime-email-encryption.html>`__
+-  `instructions <https://docs.nitrokey.com/pro/smime.html>`__
    for using S/MIME with the Nitrokey

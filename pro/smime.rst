@@ -14,11 +14,12 @@ There are two widely used standards for email encryption.
 
 -  S/MIME/X.509 is mostly used by enterprises.
 
-If you are in doubt which one to choose, you should use OpenPGP, see `here <https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__. This page describes the usage of S/MIME email encryption.
+If you are in doubt which one to choose, you should use OpenPGP, see `here <https://docs.nitrokey.com/pro/openpgp.html>`__. This page describes the usage of S/MIME email encryption.
 
 You need to purchase a S/MIME certificate or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ page.
 
-**Note: Windows users with 64-bit system (standard) need to install both, the 32-bit and the 64-bit version of OpenSC!**
+.. note::
+   Windows users with 64-bit system (standard) need to install both, the 32-bit and the 64-bit version of OpenSC!
 
 Import Existing Key and Certificate
 -----------------------------------
@@ -58,10 +59,10 @@ Usage
 You can find further information about the usage on these pages:
 
 -  for using `S/MIME encryption on
-   Thunderbird <https://docs.nitrokey.com/pro/smime-email-encryption-with-thunderbird.html>`__
+   Thunderbird <https://docs.nitrokey.com/pro/smime-thunderbird.html>`__
 
 -  for using `S/MIME encryption on
-   Outlook <https://docs.nitrokey.com/pro/smime-email-encryption-with-outlook.html>`__
+   Outlook <https://docs.nitrokey.com/pro/smime-outlook.html>`__
 
 -  for using
    `Evolution <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>`__,

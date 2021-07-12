@@ -8,7 +8,7 @@ S/MIME Email Encryption with Outlook
 Prerequisites
 -------------
 
-If you do not have a S/MIME key-certificate pair installed on your Nitrokey yet, please look at `this page <https://docs.nitrokey.com/pro/smime-email-encryption.html>`__ first.
+If you do not have a S/MIME key-certificate pair installed on your Nitrokey yet, please look at `this page <https://docs.nitrokey.com/pro/smime.html>`__ first.
 
 You need to have OpenSC installed on your System. Please have a look at the `wiki page of the OpenSC project <https://github.com/OpenSC/OpenSC/wiki>`__.
 
@@ -23,11 +23,13 @@ Settings in Outlook
 Before you can use the Nitrokey in Outlook you have to activate S/MIME encryption. You can achieve this by clicking on to ‘Start’ -> ‘Options’
 and clicking on ‘Trust Center’ in the options window. In section ‘Email Security’ you can choose your S/MIME identity. Your certificate should already be recognized by Outlook.
 
-.. image:: /pro/images/smime-email-encryption-with-outlook/1.png
-   :target: https://github.com/Nitrokey/nitrokey-documentation/blob/master/pro/windows/images/smime-email-encryption-with-outlook/1.png
+.. figure:: /pro/images/smime-email-encryption-with-outlook/1.png
+   :alt: img1
 
-.. image:: /pro/images/smime-email-encryption-with-outlook/2.png
-   :target: ./images/smime-email-encryption-with-outlook/2.png
+
+
+.. figure:: /pro/images/smime-email-encryption-with-outlook/2.png
+   :alt: img2
 
 
 Usage
@@ -35,8 +37,8 @@ Usage
 
 When composing a mail you can now choose to encrypt and sign the message in the ‘Options’ ribbon of the compose window.
 
-.. image:: /pro/images/smime-email-encryption-with-outlook/3.png
-   :target: ./images/smime-email-encryption-with-outlook/3.png
+.. figure:: /pro/images/smime-email-encryption-with-outlook/3.png
+   :alt: img3
 
 .. note::
 

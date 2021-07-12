@@ -1,24 +1,31 @@
 Getting Started
 ===============
 
+.. contents:: :local:
+
+Quickstart
+----------
+
+
 1. Connect NextBox to your Internet router via network cable.
 2. Connect the power cable to the NextBox, you can use any of the two USB-C ports.
-3. Once powered the the NextBox will start
-4. Wait approx. 5 minutes and open "http://nextbox.local" in your web browser - this duration may 
-   vary.
+3. Once powered the NextBox will start
+4. Wait approx. 5 minutes and open "http://nextbox.local" in your web browser -
+   this duration may vary. The NextBox is ready once the LED is constantly
+   green (see :doc:`LEDs <technical/led-colors>`).
    
 
 .. Warning::
 
-   External storage drives without an external power supply must NOT be connected
-   to the USB 3.0 socket (recognizable by the blue plastic inside). Otherwise,
-   this can lead to data loss on the internal hard disk. **Always use
-   external storage drives with a seperate power supply together with the NextBox.**
+   External storage drives without an external power supply must NOT be
+   connected to the USB sockets. Otherwise, this can lead to data loss on the
+   internal hard disk. **Always use external storage drives with a seperate
+   power supply together with the NextBox.**
 
 Create Admin Account
 --------------------
 
-1. Enter your desired username and password. Remeber to choose a strong
+1. Enter your desired username and password. Remember to choose a strong
    password for your admin account.
 
 .. figure:: /nextbox/images/nextbox_getting_started/1.png
@@ -32,7 +39,18 @@ Create Admin Account
 
 .. figure:: /nextbox/images/nextbox_getting_started/2.png
    :alt: img2
-  
+
+Configure NextBox Related Features
+----------------------------------
+
+The NextBox comes with Nextcloud App to realize various configurations (e.g., :doc:`backup-restore` 
+or :doc:`Remote Access<remote/index>`) and operations for your NextBox.
+
+Your can find the NextBox-App in Nextcloud's top level navigation, as shown in this figure:
+
+.. figure:: /nextbox/images/nextbox_getting_started/nextbox-app.png
+   :alt: nextbox-app
+
 Ready To Go
 -----------
 
@@ -50,7 +68,7 @@ continue on:
    
 
 
-* **Connect your devices to your NextBox.** For smartphones the offical
+* **Connect your devices to your NextBox.** For smartphones the official
   `Android App`_ and `iOS App`_ are both great additions for your personal
   cloud. Apart from these there are also `Windows, macOS, Linux clients`_
   available, which integrate seamlessly into the OS of your choice. For Android

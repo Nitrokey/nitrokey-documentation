@@ -21,7 +21,7 @@ Verification of Sealed Hardware
 -------------------------------
 
 If you have ordered the unit with the option “sealed screws and sealed
-bag”, please `verify the sealing <verify-sealed-hardware.html>`__ before
+bag”, please `verify the sealing <sealed-hardware.html>`__ before
 unpacking. If you do not know what this means, skip this section.
 
 Secure Starting Procedure
@@ -39,7 +39,8 @@ your Nitrokey. If the Nitrokey is plugged in and the system has not been
 modified, the following screen will appear when the NitroPad is turned
 on.
 
-.. image:: ../images/NitroPad-boot-process_0.jpeg
+.. figure:: ../images/NitroPad-boot-process_0.jpeg
+   :alt: img1
 
 The box marked in red contains the information that the BIOS has not
 been changed and that the shared secret of the NitroPad and the Nitrokey
@@ -53,7 +54,8 @@ If the information on the NitroPad does not match the information on the
 Nitrokey, the background would turn red and the message “Invalid Code”
 would appear. This could indicate that manipulation has taken place.
 
-.. image:: ../images/NitroPad-boot-process-bad.jpeg
+.. figure:: ../images/NitroPad-boot-process-bad.jpeg
+   :alt: img2
 
 How the boot process may look like if the system has been changed (for
 example after an update) and what error messages may otherwise occur is
@@ -78,7 +80,8 @@ changed by you:
 2. Next, the system will prompt you to enter the passphrase to decrypt
    the hard disk. The passphrase is initially “PleaseChangeMe”. 
    
-   .. image:: ./images/QubesDiskPassword.jpg
+   .. figure:: ./images/QubesDiskPassword.jpg
+      :alt: img3
    
 3. The system will then guide you through the process of creating a user
    account. After that you should have successfully booted the system
@@ -108,7 +111,8 @@ operating system has updated important components, you will be warned
 the next time you boot the NitroPad. This could look like this, for
 example:
 
-.. image:: ../images/NitroPad-error-mismatch.jpeg
+.. figure:: ../images/NitroPad-error-mismatch.jpeg
+   :alt: img4
 
 That’s why it’s important to restart your NitroPad under controlled
 conditions after a system update. Only when the new status has been
@@ -116,30 +120,3 @@ confirmed can you leave the device unattended again. Otherwise, you will
 not be able to distinguish a possible attack from a system update.
 Detailed instructions for a system update can be `found
 here <system-update.html>`__.
-
-Troubleshooting
----------------
-
-If Qubes doesn’t boot as shown below, please execute the following
-steps:
-
-.. code-block:: bash
-
-   +++ Found verified kexec boot params 
-   gpg: verify signatures failed: Unknown system error 
-   Invalid signature on kexec boot params 
-   !!!!! Failed default boot 
-   New value of PCR[4]: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX 
-   !!!!!Starting recovery shell 
-   /boot # 
-
-1. Restart your Laptop and go to Options. 
-
-   .. image:: ../images/boot-menu.jpg
-
-2. Select “Update Checksums and sign all files on /boot”. 
-
-   .. image:: ../images/options.jpg
-
-3. After that, please follow `these instructions from step 3
-   onwards `system update <system-update.html>`__.

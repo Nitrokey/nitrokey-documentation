@@ -6,9 +6,10 @@ NextBox
    :glob:
 
    gettingstarted
+   hardware-overview
    clients/index
+   backup-restore
    remote/index
-   backup/index
    technical/index
    faq 
 
