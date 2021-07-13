@@ -29,6 +29,11 @@ Nextcloud FAQ
   Nextcloud App from within the Nextcloud app management, the stated directory 
   can not be written by Nextcloud, this is what Nextcloud is complaining about here.
 
+**Q:** How can I run Nextcloud's `occ`?
+  As Nextcloud is running inside a Docker container, you need to be root and execute the following:
+  ``docker exec -it -u www-data nextbox-compose_app_1 /var/www/html/occ``
+
+
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
 .. _nextbox.local: http://nextbox.local
