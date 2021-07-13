@@ -11,6 +11,11 @@ Software FAQ
   NextBox using ssh and you can do with the system whatever you want. Obviously we will only provide
   support for the NextBox stock configuration.
 
+**Q:** Where can I see a changelog for the NextBox versions?
+  Currently only here: `Launchpad NextBox`_ 
+
+
+.. _Launchpad NextBox: https://launchpad.net/~nitrokey/+archive/ubuntu/nextbox/+packages
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
 .. _nextbox.local: http://nextbox.local
