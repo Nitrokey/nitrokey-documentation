@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-10 14:58+0200\n"
+"POT-Creation-Date: 2021-07-13 13:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -292,7 +292,7 @@ msgstr ""
 msgid "The minimum of 0,6A (3W) is rarely reached, in idle mostly around 1A (5W) and more than 2A (10W) under higher loads."
 msgstr ""
 
-#: ../nextbox/faq.rst:28
+#: ../nextbox/faq.rst:27
 msgid "**Q:** Can I mirror my NextBox onto another NextBox?"
 msgstr ""
 
@@ -300,167 +300,175 @@ msgstr ""
 msgid "This translates to a cluster setup, which is considered an (paid) enterprise solution by Nextcloud. The details, especially data consistency and collision handling, are far from trivial to realize. Nevertheless, we also see demand for more sophisticated backup solutions and will address this issue."
 msgstr ""
 
-#: ../nextbox/faq.rst:31
+#: ../nextbox/faq.rst:35
+msgid "**Q:** What to do to run/install/fix Nextcloud App \"XYZ\"? Why does Nextcloud feature XYZ not work?"
+msgstr ""
+
+#: ../nextbox/faq.rst:30
+msgid "Generally we cannot help in detail for these topics. Nextcloud internals and apps are out-of-scope for the NextBox development as we use the stock Docker images provided by Nextcloud. Ultimately, if some NextBox/OS configuration is blocking an app to run properly we for sure will look into fixing it."
+msgstr ""
+
+#: ../nextbox/faq.rst:38
 msgid "Hardware"
 msgstr ""
 
-#: ../nextbox/faq.rst:39
+#: ../nextbox/faq.rst:46
 msgid "**Q:** Why must I not connect external hard-drives without an external power-supply to my NextBox?"
 msgstr ""
 
-#: ../nextbox/faq.rst:35
+#: ../nextbox/faq.rst:42
 msgid "The Raspberry Pi 4 Model B can only supply 1.2A of power through USB (see `RPi Power Supply`_). The internal hard-drive is already connected and powered via USB and pulls ~1.0A. Thus connecting another hard-drive without an external power supply can lead to an unreliable power supply for the internal hard-drive, thus potential data loss."
 msgstr ""
 
-#: ../nextbox/faq.rst:47
+#: ../nextbox/faq.rst:54
 msgid "**Q:** Where can I find an external hard-drive with its own power supply?"
 msgstr ""
 
-#: ../nextbox/faq.rst:42
+#: ../nextbox/faq.rst:49
 msgid "The smaller form factors (2.5'' and smaller) for external hard-drives mostly come without an additional power supply. For these, *a USB Hub with an additional power supply can be considered the \"external power-supply\"* for the hard-drive. Although the latter is it not 100% sure for powered USB hubs, thus we recommend external 3.5'' hard-drives, which are nearly always externally powered."
 msgstr ""
 
-#: ../nextbox/faq.rst:53
+#: ../nextbox/faq.rst:60
 msgid "**Q:** Why does my USB device / hub not work, if connected to the NextBox?"
 msgstr ""
 
-#: ../nextbox/faq.rst:50
+#: ../nextbox/faq.rst:57
 msgid "There are some devices and especially USB3 hubs that are known to not work properly with the Raspberry PI 4B, please see this `USB Documentation`_ from Raspberry. On top of that also make sure the USB device is working in general by connecting it to another computer (best case: Linux) and verify that it works."
 msgstr ""
 
-#: ../nextbox/faq.rst:57
+#: ../nextbox/faq.rst:64
 msgid "**Q:** Why does my hard-drive not show up after plugging it in?"
 msgstr ""
 
-#: ../nextbox/faq.rst:56
+#: ../nextbox/faq.rst:63
 msgid "Please make sure that you are using one of the supported filesystems (e.g., ext, xfs) and you have mounted your hard-drive within *Storage Management*."
 msgstr ""
 
-#: ../nextbox/faq.rst:63
+#: ../nextbox/faq.rst:70
 msgid "**Q:** Can I generally extend the NextBox using a USB hard-drive?"
 msgstr ""
 
-#: ../nextbox/faq.rst:60
+#: ../nextbox/faq.rst:67
 msgid "Yes, this is possible, please make sure you are using a hard-drive, which has an external power supply. Once connected you can mount the hard-drive using the NextBox *Storage Management* and include it into Nextcloud file-management using the `External storage support`_ app."
 msgstr ""
 
-#: ../nextbox/faq.rst:68
+#: ../nextbox/faq.rst:75
 msgid "**Q:** What functions does the additional \"shield\" provide?"
 msgstr ""
 
-#: ../nextbox/faq.rst:66
+#: ../nextbox/faq.rst:73
 msgid "As of now the shield does provide a :doc:`status LED <technical/led-colors>`, a hardware button to :doc:`factory reset <technical/factory-reset>` and an additional USB Type-C connector on the same side as the Ethernet port for power supply exclusively."
 msgstr ""
 
-#: ../nextbox/faq.rst:73
+#: ../nextbox/faq.rst:80
 msgid "**Q:** Is the NextBox hardware extendable/replaceable?"
 msgstr ""
 
-#: ../nextbox/faq.rst:71
+#: ../nextbox/faq.rst:78
 msgid "Yes, all NextBox components can be easily replaced. None of the components are glued or somehow permanently assembled. Using a Phillips screwdriver you can disassemble and re-assemble the NextBox easily. Keep in mind that you are doing this at your own risk."
 msgstr ""
 
-#: ../nextbox/faq.rst:77
+#: ../nextbox/faq.rst:84
 msgid "**Q:** What are the two USB Type-C ports used for?"
 msgstr ""
 
-#: ../nextbox/faq.rst:76
+#: ../nextbox/faq.rst:83
 msgid "Both USB Type-C ports are exclusively for power supply and can not be used for data transfer. Do not connect two power supplies, please just use one of both to power your NextBox."
 msgstr ""
 
-#: ../nextbox/faq.rst:86
+#: ../nextbox/faq.rst:93
 msgid "**Q:** Which fan should I install?"
 msgstr ""
 
-#: ../nextbox/faq.rst:80
+#: ../nextbox/faq.rst:87
 msgid "**There is absolutely no need for a fan, the NextBox is designed to work without an active cooling**. Although if the NextBox is used for additional tasks (it's still a Linux), we have prepared a fan mount for a 30mm x 12mm fan at 5V connected to the shield. More details (connector, used pins) can be taken from `NextBox' GitHub`_. Currently we *do not* recommend adding a fan as the outputs are not controlled yet by the NextBox daemon, so this is also something you would have to do by yourself."
 msgstr ""
 
-#: ../nextbox/faq.rst:89
+#: ../nextbox/faq.rst:96
 msgid "Software"
 msgstr ""
 
-#: ../nextbox/faq.rst:93
+#: ../nextbox/faq.rst:100
 msgid "**Q:** Why does Nitrokey currently not recommend to use OnlyOffice or Collabora Office on the NextBox?"
 msgstr ""
 
-#: ../nextbox/faq.rst:92
+#: ../nextbox/faq.rst:99
 msgid "The state of these Nextcloud apps is not yet mature (for ARM platforms). Although it is (partly) possible to install them we do not recommend doing so currently."
 msgstr ""
 
-#: ../nextbox/faq.rst:97
+#: ../nextbox/faq.rst:104
 msgid "**Q:** Why does updating Nextcloud from inside Nextcloud not work?"
 msgstr ""
 
-#: ../nextbox/faq.rst:96
+#: ../nextbox/faq.rst:103
 msgid "The Nextcloud version is rolled out by us. Thus the option to update from inside Nextcloud is not working."
 msgstr ""
 
-#: ../nextbox/faq.rst:102
+#: ../nextbox/faq.rst:109
 msgid "**Q:** What kind of public key is expected for SSH access?"
 msgstr ""
 
-#: ../nextbox/faq.rst:100
+#: ../nextbox/faq.rst:107
 msgid "An openssh style (public) key is expected. Depending on your operating system there are different ways to determine your public key. One might be ``ssh-add -L``, another might be ``cat ~/.ssh/id_rsa.pub``. If you are using Putty, please see the `Putty documentation`_."
 msgstr ""
 
-#: ../nextbox/faq.rst:106
+#: ../nextbox/faq.rst:113
 msgid "**Q:** Can I add apps to the Nextcloud instance?"
 msgstr ""
 
-#: ../nextbox/faq.rst:105
+#: ../nextbox/faq.rst:112
 msgid "Yes, the Nextcloud app store is available and any app available there can be installed through the Nextcloud web frontend."
 msgstr ""
 
-#: ../nextbox/faq.rst:111
+#: ../nextbox/faq.rst:118
 msgid "**Q:** Can the operating system be extended or configured manually?"
 msgstr ""
 
-#: ../nextbox/faq.rst:109
+#: ../nextbox/faq.rst:116
 msgid "Yes, you can set up ssh access through the NextBox Nextcloud app. Afterwards you can access your NextBox using ssh and you can do with the system whatever you want. Obviously we will only provide support for the NextBox stock configuration."
 msgstr ""
 
-#: ../nextbox/faq.rst:115
+#: ../nextbox/faq.rst:122
 msgid "**Q:** My Nextcloud instance is stuck in \"Maintenance Mode\", how can I switch it off?"
 msgstr ""
 
-#: ../nextbox/faq.rst:114
+#: ../nextbox/faq.rst:121
 msgid "To *force exit* the Nextcloud \"Maintenance Mode\", you can push the hardware button **shortly, once**. The NextBox will then switch-off the maintenance mode. Please avoid this, if possible."
 msgstr ""
 
-#: ../nextbox/faq.rst:121
+#: ../nextbox/faq.rst:128
 msgid "**Q:** Why am I getting a permission warning for ``/var/www/html/custom_apps/nextbox`` inside the Nextcloud settings overview?"
 msgstr ""
 
-#: ../nextbox/faq.rst:118
+#: ../nextbox/faq.rst:125
 msgid "This is a \"feature\". The NextBox Nextcloud App is installed on the system with the Debian nextbox package. To avoid an accidental deletion of the NextBox Nextcloud App from within the Nextcloud app management, the stated directory can not be written by Nextcloud, this is what Nextcloud is complaining about here."
 msgstr ""
 
-#: ../nextbox/faq.rst:124
+#: ../nextbox/faq.rst:131
 msgid "Remote Access"
 msgstr ""
 
-#: ../nextbox/faq.rst:131
+#: ../nextbox/faq.rst:138
 msgid "**Q:** What is the correct WebDAV URL?"
 msgstr ""
 
-#: ../nextbox/faq.rst:127
+#: ../nextbox/faq.rst:134
 msgid "The full URL to use for WebDAV is: ``https://my.domain.tld/remote.php/webdav/``, there have been reports that for native Windows WebDAV you might need: ``https://my.domain.tld/remote.php/dav/files/USERNAME`` with *USERNAME* being the username you would like to use."
 msgstr ""
 
-#: ../nextbox/faq.rst:138
+#: ../nextbox/faq.rst:145
 msgid "**Q:** Can I access my Nextcloud instance using WebDAV?"
 msgstr ""
 
-#: ../nextbox/faq.rst:134
+#: ../nextbox/faq.rst:141
 msgid "Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure that the ``davfs2`` package is installed. For Windows please additionally read these :doc:`docs <clients/windows>`."
 msgstr ""
 
-#: ../nextbox/faq.rst:143
+#: ../nextbox/faq.rst:150
 msgid "**Q:**: Why does my Android smartphone's browser not open: ``http://nextbox.local``"
 msgstr ""
 
-#: ../nextbox/faq.rst:141
+#: ../nextbox/faq.rst:148
 msgid "As of today the technology needed to use ``.local`` URLs is not supported by various (stock) Android browser(s). The mechanism is based on ``mDNS``. One possible workaround is to use a 3rd party app like BonjourBrowser to discover all mDNS services in your network."
 msgstr ""
 
