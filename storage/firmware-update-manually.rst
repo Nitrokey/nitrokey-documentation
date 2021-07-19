@@ -48,10 +48,21 @@ The program usually opens immediately after installation. If not, you will find 
    :alt: img3
 
 
+.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/4.png
+   :alt: img4
 
-|img4| You must allow the application to make changes.
 
-|img5| |img6| |img7| |img8|
+You must allow the application to make changes.
+
+.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/5.png
+   :alt: img5
+
+.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/7.png
+   :alt: img7
+
+.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/8.png
+   :alt: img8
+
 
 After the image has been successfully transferred, Windows may ask if the device should be formatted. It is important that you click “Cancel”, otherwise the USB stick will be overwritten by Windows.
 
@@ -81,7 +92,10 @@ Please insert the Nitrokey Storage when asked to.
 
 The Firmware Update Mode will be started automatically if the standard password is set. Otherwise you need to input your password and hit enter.
 
-!\ |img12|
+
+.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/12.png
+   :alt: img12
+
 
 After the system has activated the firmware update on the Nitrokey Storage, a restart is issued after 60 seconds. Please remove the USB Stick. Afterwards you can use the Nitrokey Update Tool in Windows as described `here <https://docs.nitrokey.com/storage/windows/firmware-update.html>`__.
 
@@ -93,11 +107,3 @@ Windows should automatically ask to format your USB Stick as soon as you insert 
 .. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/13.png
    :alt: img13
 
-
-
-.. |img4| image:: /storage/images/nitrokey-storage-activate-update-mode-manually/4.png
-.. |img5| image:: /storage/images/nitrokey-storage-activate-update-mode-manually/5.png
-.. |img6| image:: /storage/images/nitrokey-storage-activate-update-mode-manually/6.png
-.. |img7| image:: /storage/images/nitrokey-storage-activate-update-mode-manually/7.png
-.. |img8| image:: /storage/images/nitrokey-storage-activate-update-mode-manually/8.png
-.. |img12| image:: /storage/images/nitrokey-storage-activate-update-mode-manually/12.png

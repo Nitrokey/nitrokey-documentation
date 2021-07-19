@@ -12,21 +12,21 @@ Sample login to Microsoft with the Nitrokey FIDO2
 
 1. Click on “Sign in with security key”.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/1.png
+.. figure:: ./images/passwordless-microsoft/1.png
    :alt: img0
 
 
 
 2. Enter your PIN for the Nitrokey FIDO2.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/2.png
+.. figure:: ./images/passwordless-microsoft/2.png
    :alt: img1
 
 
 
 3. Touch your Nitrokey FIDO2 at the indicated spot.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/3.png
+.. figure:: ./images/passwordless-microsoft/3.png
    :alt: img2
 
 
@@ -45,28 +45,28 @@ Here we offer you a guide on how to set up passwordless authentication for your 
 
 3. Select “Security”.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/4.png
+.. figure:: ./images/passwordless-microsoft/4.png
    :alt: img3
 
 
 
 4. Select “More security options”
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/5.png
+.. figure:: ./images/passwordless-microsoft/5.png
    :alt: img4
 
 
 
 5. Select “Set up a security key”.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/6.png
+.. figure:: ./images/passwordless-microsoft/6.png
    :alt: img5
 
 
 
 6. Confirm with “Next” under “USB device”.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/7.png
+.. figure:: ./images/passwordless-microsoft/7.png
    :alt: img6
 
 
@@ -74,28 +74,28 @@ Here we offer you a guide on how to set up passwordless authentication for your 
 7. Enter a PIN that you want to use for your Nitrokey FIDO2 and then
    select “Next”.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/8.png
+.. figure:: ./images/passwordless-microsoft/8.png
    :alt: img7
 
 
 
 8. Now tap on the marked position of the Nitrokey FIDO2.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/9.png
+.. figure:: ./images/passwordless-microsoft/9.png
    :alt: img8
 
 
 
 9. Confirm with “Allow”.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/10.png
+.. figure:: ./images/passwordless-microsoft/10.png
    :alt: img9
 
 
 
 10. Name your Nitrokey FIDO2 and then select “Next”.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/11.png
+.. figure:: ./images/passwordless-microsoft/11.png
    :alt: img10
 
 
@@ -103,7 +103,7 @@ Here we offer you a guide on how to set up passwordless authentication for your 
 11. Now you have successfully set up password-free authentication for
     your Microsoft account! Confirm with “Got it”.
 
-.. figure:: ./images/passwordless-authentication-with-microsoft/12.png
+.. figure:: ./images/passwordless-microsoft/12.png
    :alt: img11
 
 
