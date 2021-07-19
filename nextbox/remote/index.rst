@@ -50,5 +50,6 @@ provider and the type of your internet connection:
 
    DNS Rebind <dns-rebind>
    Port Forwarding <port-forwarding>
+   IPv6 Settings <ipv6-settings>
 
 

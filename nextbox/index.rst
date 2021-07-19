@@ -11,6 +11,6 @@ NextBox
    backup-restore
    remote/index
    technical/index
-   faq 
+   faq/index
 
 
