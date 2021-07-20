@@ -29,12 +29,12 @@ Install Balena Etcher
 
 Balena Etcher helps us to install the USB image on the USB stick. Please double click on the `previously downloaded installation file <https://www.balena.io/etcher/>`__ and follow the instructions.
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/1.png
+.. figure:: /storage/images/firmware-update-manually/1.png
    :alt: img1
 
 
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/2.png
+.. figure:: /storage/images/firmware-update-manually/2.png
    :alt: img2
 
 
@@ -44,29 +44,29 @@ Installing the USB image with Balena Etcher
 
 The program usually opens immediately after installation. If not, you will find a shortcut on the desktop. Using the application, select the `previously downloaded image file <https://github.com/Nitrokey/nitrokey-storage-update-boot/releases>`__, which ends with “.img.zip”. Now insert the USB stick. It should be recognized automatically. Press “Flash!” to proceed.
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/3.png
+.. figure:: /storage/images/firmware-update-manually/3.png
    :alt: img3
 
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/4.png
+.. figure:: /storage/images/firmware-update-manually/4.png
    :alt: img4
 
 
 You must allow the application to make changes.
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/5.png
+.. figure:: /storage/images/firmware-update-manually/5.png
    :alt: img5
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/7.png
+.. figure:: /storage/images/firmware-update-manually/7.png
    :alt: img7
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/8.png
+.. figure:: /storage/images/firmware-update-manually/8.png
    :alt: img8
 
 
 After the image has been successfully transferred, Windows may ask if the device should be formatted. It is important that you click “Cancel”, otherwise the USB stick will be overwritten by Windows.
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/9.png
+.. figure:: /storage/images/firmware-update-manually/9.png
    :alt: img9
 
 
@@ -78,14 +78,14 @@ Now the system must be restarted. The USB stick must remain in the USB port so t
 
 After the system has started, please choose the language by typing 1 (English) and hit Enter.
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/10.png
+.. figure:: /storage/images/firmware-update-manually/10.png
    :alt: img10
 
 
 
 Please insert the Nitrokey Storage when asked to.
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/11.png
+.. figure:: /storage/images/firmware-update-manually/11.png
    :alt: img11
 
 
@@ -93,7 +93,7 @@ Please insert the Nitrokey Storage when asked to.
 The Firmware Update Mode will be started automatically if the standard password is set. Otherwise you need to input your password and hit enter.
 
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/12.png
+.. figure:: /storage/images/firmware-update-manually/12.png
    :alt: img12
 
 
@@ -104,6 +104,6 @@ Restoring the USB Stick
 
 Windows should automatically ask to format your USB Stick as soon as you insert the USB Stick the first time again in Windows. Just accept the request for being able to use the USB Stick as previously.
 
-.. figure:: /storage/images/nitrokey-storage-activate-update-mode-manually/13.png
+.. figure:: /storage/images/firmware-update-manually/13.png
    :alt: img13
 
