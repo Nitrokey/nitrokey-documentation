@@ -5,7 +5,7 @@ Two-factor Authentication with One-Time Passwords (OTP)
 
 .. contents:: :local:
 
-The use of One-time Passwords (OTP) is called very differently on the various services supporting it. Sometimes it is referred to as Multi-factor Authentication (MFA), sometimes it is Two-factor Authentication (2FA) or just “authentication via authenticator app” like Google Authenticator. Most of these services are compatible for usage with the Nitrokey Pro and Nitrokey Storage. The following instructions show how to enable OTP on our `support forum <https://support.nitrokey.com/>`__. The procedure is quite similar on most services. For a list of websites supporting OTP have a look at `dongleauth.info <https://www.dongleauth.info/>`__.
+The use of One-time Passwords (OTP) is called very differently on the various services supporting it. Sometimes it is referred to as Multi-factor Authentication (MFA), sometimes it is Two-factor Authentication (2FA) or just “authentication via authenticator app” like Google Authenticator. Most of these services are compatible for usage with the Nitrokey Pro and Nitrokey Storage. The following instructions show how to enable OTP on our `support forum <https://support.nitrokey.com/>`__. The procedure is quite similar on most services. For a list of websites supporting OTP have a look at `dongleauth.com <https://www.dongleauth.com/>`__.
 
 You need to have the `Nitrokey App <https://www.nitrokey.com/download>`__ installed to use the OTP feature of the Nitrokey Pro and Nitrokey Storage.
 
