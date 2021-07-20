@@ -1,3 +1,7 @@
+
+
+
+
 Viscosity Client Configuration with OpenVPN
 ===========================================
 
@@ -37,13 +41,13 @@ Usage
 1. Start Viscosity and create a new connection “openVPN” (you can name
    it as you wish)
 
-.. figure:: ./images/viscosity/viscosity-1.jpg
+.. figure:: ./images/openvpn-viscosity/viscosity-1.jpg
    :alt: img1
    :scale: 75
 
 2. Right click on the connection and click edit
 
-.. figure:: ./images/viscosity/viscosity-2.jpg
+.. figure:: ./images/openvpn-viscosity/viscosity-2.jpg
    :alt: img2
    :scale: 75
 
@@ -57,7 +61,7 @@ Usage
 
 Optional: Select the ``ta.key`` in the ``TLS-Auth`` section
 
-.. figure:: ./images/viscosity/viscosity-3.jpg
+.. figure:: ./images/openvpn-viscosity/viscosity-3.jpg
    :alt: img3
    :scale: 75
 
@@ -72,7 +76,7 @@ On Windows, the most common location for libraries is either in ``C:\Program Fil
 
 7. Choose a retrieval method from the Retrieval drop down menu
 
-.. figure:: ./images/viscosity/viscosity-4.jpg
+.. figure:: ./images/openvpn-viscosity/viscosity-4.jpg
    :alt: img4
 
 -  If only one Nitrokey will ever be used on this computer, select
