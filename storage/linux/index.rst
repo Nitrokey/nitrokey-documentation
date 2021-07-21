@@ -27,7 +27,7 @@ Nitrokey Storage, Linux
    the `latest
    firmware <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__
    installed. If it’s not the latest, please
-   `update <https://docs.nitrokey.com/storage/linux/firmware-update.html>`__.
+   `update <firmware-update.html>`__.
 
 4. Use the Nitrokey App to change the default User PIN (default: 123456)
    and Admin PIN (default: 12345678) to your own choices.
@@ -49,8 +49,8 @@ OpenPGP/GnuPG is popular among individuals, S/MIME/x.509 is mostly used
 by enterprises. If you are in doubt which one to choose, you should use
 OpenPGP.
 
--  `instructions <https://docs.nitrokey.com/storage/linux/openpgp.html>`__
+-  `instructions <openpgp.html>`__
    for using the OpenPGP standard with the Nitrokey
 
--  `instructions <https://docs.nitrokey.com/storage/linux/smime.html>`__
+-  `instructions <smime.html>`__
    for using S/MIME with the Nitrokey

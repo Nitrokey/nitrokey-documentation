@@ -12,7 +12,7 @@ The following instructions explain the generation of OpenPGP keys directly on th
    These instructions are based on GnuPG version 2.2.6 or higher. Some
    Linux Distributions have an older version installed. In this case
    please choose a different method as listed
-   `here <https://docs.nitrokey.com/pro/openpgp.html>`__
+   `here <openpgp.html>`__
    or install a newer version if possible.
 
 Key Generation
@@ -93,7 +93,7 @@ Now you are in the interactive interface of GnuPG. Activate the admin commands w
    </jane@doe.com></n></n></n></n>
 
 **Please do not create the suggested off-card backup.** This “backup”
-does only save the encryption key, but not the signature and authentication keys. In case of a loss of the device, you will not be able to restore the whole key set. So on the one hand it is no full backup (use `these instructions <https://docs.nitrokey.com/pro/openpgp-keygen-backup.html>`__ instead, if you need one) and on the other hand you risk that someone else can get in possession of your encryption key. The advantage of generating keys on-device is to make sure that keys are stored securely. Therefore, we recommend to skip this half-backup.
+does only save the encryption key, but not the signature and authentication keys. In case of a loss of the device, you will not be able to restore the whole key set. So on the one hand it is no full backup (use `these instructions <openpgp-keygen-backup.html>`__ instead, if you need one) and on the other hand you risk that someone else can get in possession of your encryption key. The advantage of generating keys on-device is to make sure that keys are stored securely. Therefore, we recommend to skip this half-backup.
 
 Now you have a complete key set on your device which can be used for the `various applications <https://www.nitrokey.com/documentation/applications>`__ listed on our site. Type ``quit`` and hit enter to exit.
 

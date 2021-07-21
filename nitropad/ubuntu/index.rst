@@ -91,7 +91,7 @@ changed by you:
    pre-installed Nitrokey App.
 
 5. Change the PINs of your Nitrokey as `described
-   here <https://docs.nitrokey.com/pro/change-pins.html>`__.
+   here <change-pins.html>`__.
 
 6. Change the passphrase for disk encryption as `described
    here <change-disk-encryption-passphrase.html>`__. This passphrase is different from your user acount's passphrase.

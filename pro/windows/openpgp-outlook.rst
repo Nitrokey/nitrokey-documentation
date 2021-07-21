@@ -13,7 +13,7 @@ OpenPGP Email Encryption with Outlook
 Prerequisites
 -------------
 
-If you do not have PGP-Keys on your Nitrokey yet, please look at `this page <https://docs.nitrokey.com/pro/openpgp.html>`__ first.
+If you do not have PGP-Keys on your Nitrokey yet, please look at `this page <openpgp.html>`__ first.
 
 You need to have GnuPG installed on your System. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org>`__. You need to make sure to have “GpgOL” checked during installation process (see below).
 

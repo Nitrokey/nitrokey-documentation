@@ -22,7 +22,7 @@ Nitrokey Pro, Linux
 
 2. Download and start the `Nitrokey
    App <https://www.nitrokey.com/download>`__. Follow the
-   `instructions <https://docs.nitrokey.com/pro/change-pins.html>`__
+   `instructions <change-pins.html>`__
    to change the default User PIN (default: 123456) and Admin PIN
    (default: 12345678) to your own choices.
 
@@ -48,8 +48,8 @@ OpenPGP/GnuPG is popular among individuals, S/MIME/x.509 is mostly used
 by enterprises. If you are in doubt which one to choose, you should use
 OpenPGP.
 
--  `instructions <https://docs.nitrokey.com/pro/openpgp.html>`__
+-  `instructions <openpgp.html>`__
    for using the OpenPGP standard with the Nitrokey
 
--  `instructions <https://docs.nitrokey.com/pro/smime.html>`__
+-  `instructions <smime.html>`__
    for using S/MIME with the Nitrokey

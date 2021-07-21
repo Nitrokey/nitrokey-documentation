@@ -8,7 +8,7 @@ S/MIME Email Encryption with Outlook
 Prerequisites
 -------------
 
-If you do not have a S/MIME key-certificate pair installed on your Nitrokey yet, please look at `this page <https://docs.nitrokey.com/pro/smime.html>`__ first.
+If you do not have a S/MIME key-certificate pair installed on your Nitrokey yet, please look at `this page <smime.html>`__ first.
 
 You need to have OpenSC installed on your System. Please have a look at the `wiki page of the OpenSC project <https://github.com/OpenSC/OpenSC/wiki>`__.
 

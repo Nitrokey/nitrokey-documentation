@@ -19,7 +19,7 @@ Error message: ``The configured key ID '4BA0183FCBA844A7' cannot be found on you
 - The key ID does not contain any whitespace, and consists of 16 characters from range 0-9 A-F
 - you have GPA or Kleopatra software installed.
 
-Please use Kleopatra or `GPA <https://docs.nitrokey.com/start/windows/openpgp-keygen-gpa.html>`__ software to handle the smart card.
+Please use Kleopatra or `GPA <openpgp-keygen-gpa.html>`__ software to handle the smart card.
 
 Thunderbird 77 and older
 ------------------------

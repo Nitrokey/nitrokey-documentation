@@ -18,7 +18,7 @@ Nitrokey Start, Windows
 .. note::
    Windows may fail to install an additional device driver for the smart card. Its safe to ignore this warning.
 
-3. Use GnuPG to `generate new keys or import existing ones <https://www.nitrokey.com/documentation/openpgp-email-encryption>`__.
+3. Use GnuPG to `generate new keys or import existing ones <openpgp.html>`__.
 
 .. note::
    It is indeed necessary to first import or create new keys and change the PINs afterwards. Otherwise changing User PIN will fail! Furthermore overriding keys results in PIN reset (default values),  please keep this in mind!
@@ -50,10 +50,10 @@ encryption. While OpenPGP/GnuPG is popular among individuals,
 S/MIME/x.509 is mostly used by enterprises. If you are in doubt which
 one to choose, you should use OpenPGP.
 
--  `instructions <https://docs.nitrokey.com/pro/openpgp.html>`__
+-  `instructions <openpgp.html>`__
    for using the OpenPGP standard with the Nitrokey
 
--  `instructions <https://docs.nitrokey.com/pro/smime.html>`__
+-  `instructions <smime.html>`__
    for using S/MIME with the Nitrokey
 
 Please note that the Nitrokey App can not be used for this device!

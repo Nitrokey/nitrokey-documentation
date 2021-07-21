@@ -31,7 +31,7 @@ Firmware Update
    If you are using Microsoft Windows Build 1809 and Nitrokey Storage
    Firmware 0.52 or lower, you need to use another system or if this is not
    feasible use `these
-   instructions <https://docs.nitrokey.com/storage/firmware-update-manually.html>`__ to
+   instructions <firmware-update-manually.html>`__ to
    enable the Firmware Update mode.
 
 4. Start the Nitrokey Update Tool and click “Select firmware file”. Select the previously downloaded firmware ".hex" file. Click on “Update firmware” to start the update process. Your device should get detected by the Nitrokey App again as soon as the update is finished.

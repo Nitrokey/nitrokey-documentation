@@ -15,7 +15,7 @@ Nitrokey Start, Mac
    that the USB smart card device driver gets installed almost
    automatically.
 3. Use GnuPG to `generate new keys or import existing
-   ones <https://docs.nitrokey.com/start/mac/openpgp.html>`__.
+   ones <openpgp.html>`__.
 
 .. note::
   It is indeed necessary to first import or create new keys and
@@ -51,10 +51,10 @@ encryption. While OpenPGP/GnuPG is popular among individuals,
 S/MIME/x.509 is mostly used by enterprises. If you are in doubt which
 one to choose, you should use OpenPGP.
 
--  `instructions <https://docs.nitrokey.com/start/mac/openpgp.html>`__
+-  `instructions <openpgp.html>`__
    for using the OpenPGP standard with the Nitrokey
 
--  `instructions <https://docs.nitrokey.com/start/mac/smime.html>`__
+-  `instructions <smime.html>`__
    for using S/MIME with the Nitrokey
 
 Please note that the Nitrokey App can not be used for this device!
