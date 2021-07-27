@@ -6,15 +6,17 @@
 
 - Write filenames in lower case and use dashes ("-") instead of spaces.
 
-- If an image is to be used for all languages do not use the Substitution Syntax `|image1|` but directly include the picture with an `image::` directive.
+- If an image is to be used for all languages do not use the Substitution Syntax `|image1|` but directly include the picture with a `figure::` directive.
 
 - If different Image are to be used for different languages use the substitution syntax and translate the substitution names in Weblate e.g. translate |Picture1| with |Bild1| |tableau1| etc. and define all substitutions with files pathes at the end of the document.
 
 - For content which is identical for different models or operating  systems, use `include` to avoid duplication of files. Locate those  instructions not in but next to the operating system folders.
 
-- Add a subfolder with the numbered image files for each guide.
+- Add a subfolder named the same way as the RST with the numbered image files for each guide.
 
 - Avoid plain URLs in text but use hyperlink syntax instead. (see: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks )
+
+- For internal hyperlinks to a different docs.nitrokey.com product create a duplicate rst using `include` for the content and link this document relatively
 
 - Relative paths (also included and double included) are always evaluated from the path of the final including page. Images within pages that are included elsewhere must therefore always be specified with an absolute path starting with `/` which stands for the root directory of the document.
 
@@ -36,8 +38,8 @@
 
 ## Commits (preventing merge conflicts)
 Before pushing your changes to the Github repository, commit often and test the result locally by building a preview with Sphinx (see below). Only push your changes upstream when you are sure you will not touch it for the next hour. If content is pushed twice within an hour, merge conflicts may occur on the Weblate server that need to be solved manually (see below). If it's necessary to edit and push content within an hour, you have to wait until Weblate translated the new content. Then push the commit button in Weblate's web interface (https://translate.nitrokey.com/projects/nitrokey-documentation/#repository) and pull locally on your device. Only then you can push upstream again and avoid merge conflict.
- 
- 
+
+
 ## Local Preview
 
 Setup Sphinx and components:
