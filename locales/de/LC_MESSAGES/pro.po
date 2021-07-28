@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-29 01:09+0200\n"
-"PO-Revision-Date: 2021-07-20 18:40+0000\n"
+"PO-Revision-Date: 2021-07-29 00:40+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: German <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-pro/de/>\n"
 "Language: de\n"
-"Language-Team: German <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-pro/de/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../pro/2fa-google.rst:2
@@ -1071,9 +1072,8 @@ msgstr ""
 "Bildschirm automatisch gesperrt."
 
 #: ../hsm/certificate-authority.rst:2
-#, fuzzy
 msgid "Creating a Certificate Authority"
-msgstr "Zertifikatsvorlage auf der Serverseite erstellen"
+msgstr "Erstellen einer Zertifizierungsstelle"
 
 #: ../hsm/certificate-authority.rst:8
 msgid ""
@@ -1082,44 +1082,57 @@ msgid ""
 "automation and does not really scale. Other open source projects can be "
 "referenced for automation and scalability."
 msgstr ""
+"Dieser Artikel zeigt Ihnen, wie Sie Ihre eigene private "
+"Zertifizierungsstelle einrichten, die von einem Nitrokey HSM unterstützt "
+"wird. Diese Zertifizierungsstelle ist nicht automatisiert und nicht wirklich "
+"skalierbar. Für die Automatisierung und Skalierbarkeit kann auf andere Open-"
+"Source-Projekte verwiesen werden."
 
 #: ../hsm/certificate-authority.rst:11
 msgid "Choose Cryptographic Algorithms"
-msgstr ""
+msgstr "Kryptographische Algorithmen auswählen"
 
 #: ../hsm/certificate-authority.rst:13
 msgid ""
 "I’m going to assume that you’re as paranoid as I am, so I will be using "
 "the following command for generating private keys:"
 msgstr ""
+"Da ich davon ausgehe, dass Sie genauso paranoid sind wie ich, werde ich den "
+"folgenden Befehl zur Erzeugung privater Schlüssel verwenden:"
 
 #: ../hsm/certificate-authority.rst:19
 msgid ""
 "But, if you’re less paranoid that I am, you can safely choose the "
 "following options:"
 msgstr ""
+"Wenn Sie aber weniger paranoid sind als ich, können Sie die folgenden "
+"Optionen wählen:"
 
 #: ../hsm/certificate-authority.rst:26
 msgid ""
 "Likewise, I will be using the sha512 algorithm throughout this article, "
 "but sha256 can safely be used."
 msgstr ""
+"Ebenso werde ich in diesem Artikel den sha512-Algorithmus verwenden, aber "
+"sha256 kann sicher verwendet werden."
 
 #: ../hsm/certificate-authority.rst:29
 msgid "Preparing to Start"
-msgstr ""
+msgstr "Vorbereitungen für den Start"
 
 #: ../hsm/certificate-authority.rst:31
 msgid "To start with, you need to pick a directory to store your CA."
 msgstr ""
+"Zunächst müssen Sie ein Verzeichnis auswählen, in dem Ihre CA gespeichert "
+"werden soll."
 
 #: ../hsm/certificate-authority.rst:42
 msgid "Install the necessary tools:"
-msgstr ""
+msgstr "Installieren Sie die erforderlichen Werkzeuge:"
 
 #: ../hsm/certificate-authority.rst:53
 msgid "Creating the Root Certificate Authority"
-msgstr ""
+msgstr "Erstellen der Root-Zertifizierungsstelle"
 
 #: ../hsm/certificate-authority.rst:55
 msgid ""
@@ -1127,36 +1140,49 @@ msgid ""
 "directly on the Nitrokey HSM. This allows us to use the private key in "
 "the future, but not access it."
 msgstr ""
+"Wir beginnen mit der Erzeugung des privaten Schlüssels für die "
+"Zertifizierungsstelle direkt auf dem Nitrokey HSM. Dadurch können wir den "
+"privaten Schlüssel in Zukunft verwenden, aber nicht darauf zugreifen."
 
 #: ../hsm/certificate-authority.rst:78
 msgid ""
 "Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need"
 " it later."
 msgstr ""
+"Notieren Sie sich die ID-Nummer (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), "
+"wir brauchen sie später noch."
 
 #: ../hsm/certificate-authority.rst:80 ../hsm/certificate-authority.rst:235
 msgid ""
 "If you need the ID in the future, you can list the keys on the Nitrokey "
 "HSM:"
 msgstr ""
+"Wenn Sie die ID in Zukunft benötigen, können Sie die Schlüssel auf dem "
+"Nitrokey HSM auflisten:"
 
 #: ../hsm/certificate-authority.rst:86 ../hsm/certificate-authority.rst:241
 msgid ""
 "We need to create a config file to generate a self-signed public "
 "certificate."
 msgstr ""
+"Wir müssen eine Konfigurationsdatei erstellen, um ein selbstsigniertes "
+"öffentliches Zertifikat zu erzeugen."
 
 #: ../hsm/certificate-authority.rst:92 ../hsm/certificate-authority.rst:247
 msgid ""
 "Fill out the request information in <angle brackets> with information for"
 " your CA."
 msgstr ""
+"Füllen Sie das Anfrageformular in <eckigen Klammern> mit den Angaben zu "
+"Ihrer CA aus."
 
 #: ../hsm/certificate-authority.rst:152
 msgid ""
 "Generate the self-signed public certificate from the private key. Use the"
 " private key id value from earlier."
 msgstr ""
+"Erzeugen Sie das selbstsignierte öffentliche Zertifikat aus dem privaten "
+"Schlüssel. Verwenden Sie den Wert der privaten Schlüssel-ID von vorhin."
 
 #: ../hsm/certificate-authority.rst:160
 msgid ""
@@ -1165,11 +1191,15 @@ msgid ""
 "Subject match, all root certificates are self signed. Verify that Key "
 "Usage matches what was in the v3_ca information in our config file."
 msgstr ""
+"Überprüfen Sie, ob das Stammzertifikat korrekt generiert wurde. Überprüfen "
+"Sie, ob der Signatur-Algorithmus oben und unten übereinstimmt. Prüfen Sie, "
+"ob Aussteller und Betreff übereinstimmen, alle Stammzertifikate sind "
+"selbstsigniert. Überprüfen Sie, ob Key Usage mit den v3_ca-Informationen in "
+"unserer Konfigurationsdatei übereinstimmt."
 
 #: ../hsm/certificate-authority.rst:208
-#, fuzzy
 msgid "Creating the Intermediate Certificate Authority"
-msgstr "Übertragen Sie die signierten Zertifikate auf den Server"
+msgstr "Erstellen der Zwischenzertifizierungsstelle"
 
 #: ../hsm/certificate-authority.rst:210
 msgid ""
@@ -1177,12 +1207,18 @@ msgid ""
 "certificate authority directly on the Nitrokey HSM. This allows us to use"
 " the private key in the future, but not access it."
 msgstr ""
+"Wir fahren fort, indem wir den privaten Schlüssel für die "
+"Zwischenzertifizierungsstelle direkt auf dem Nitrokey HSM erzeugen. Dadurch "
+"können wir den privaten Schlüssel in Zukunft verwenden, aber nicht darauf "
+"zugreifen."
 
 #: ../hsm/certificate-authority.rst:233
 msgid ""
 "Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need"
 " it later."
 msgstr ""
+"Notieren Sie sich die ID-Nummer (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), "
+"wir brauchen sie später noch."
 
 #: ../hsm/certificate-authority.rst:274
 msgid ""
@@ -1190,30 +1226,41 @@ msgid ""
 " intermediate CA’s private key. Use the private key ID value from "
 "earlier."
 msgstr ""
+"Erzeugen Sie die Zertifikatsignierungsanforderung für die Zwischen-CA anhand "
+"des privaten Schlüssels der Zwischen-CA. Verwenden Sie den ID-Wert des "
+"privaten Schlüssels von vorhin."
 
 #: ../hsm/certificate-authority.rst:282
 msgid ""
 "Verify that the CSR was created correctly. Verify that your Subject is "
 "correct. Verify that your Public Key and Signature Algorithm are correct."
 msgstr ""
+"Überprüfen Sie, ob der CSR korrekt erstellt wurde. Überprüfen Sie, ob Ihr "
+"Betreff korrekt ist. Prüfen Sie, ob Ihr öffentlicher Schlüssel und Ihr "
+"Signaturalgorithmus korrekt sind."
 
 #: ../hsm/certificate-authority.rst:315 ../hsm/certificate-authority.rst:520
 msgid "We need to find out the fully qualified PKCS#11 URI for your private key:"
 msgstr ""
+"Wir müssen den vollständig qualifizierten PKCS#11-URI für Ihren privaten "
+"Schlüssel herausfinden:"
 
 #: ../hsm/certificate-authority.rst:353 ../hsm/certificate-authority.rst:558
 msgid "In this instance, the fully qualified PKCS#11 URI is:"
-msgstr ""
+msgstr "In diesem Fall lautet der vollständig qualifizierte PKCS#11-URI:"
 
 #: ../hsm/certificate-authority.rst:359
 msgid ""
 "Now, we need to create a config file to use the private key of the root "
 "certificate to sign the csr of the intermediate certificate."
 msgstr ""
+"Nun müssen wir eine Konfigurationsdatei erstellen, um den privaten Schlüssel "
+"des Stammzertifikats zum Signieren des csr des Zwischenzertifikats zu "
+"verwenden."
 
 #: ../hsm/certificate-authority.rst:411
 msgid "Then sign the intermediate certificate with the root certificate."
-msgstr ""
+msgstr "Signieren Sie dann das Zwischenzertifikat mit dem Stammzertifikat."
 
 #: ../hsm/certificate-authority.rst:451
 msgid ""
@@ -1222,30 +1269,40 @@ msgid ""
 " matches the config file. Verify that the signature algorithm are correct"
 " above and below."
 msgstr ""
+"Überprüfen Sie, ob das Stammzertifikat korrekt erstellt wurde. Überprüfen "
+"Sie, ob der Aussteller und der Betreff unterschiedlich und korrekt sind. "
+"Prüfen Sie, ob die Schlüsselverwendung mit der Konfigurationsdatei "
+"übereinstimmt. Überprüfen Sie, ob die Signaturalgorithmen oben und unten "
+"korrekt sind."
 
 #: ../hsm/certificate-authority.rst:498
 msgid ""
 "Verify that the intermediate certificate verifies against the root "
 "certificate."
 msgstr ""
+"Überprüfen Sie, ob das Zwischenzertifikat mit dem Stammzertifikat "
+"übereinstimmt."
 
 #: ../hsm/certificate-authority.rst:505
 msgid "Create a certificate chain file:"
-msgstr ""
+msgstr "Erstellen Sie eine Zertifikatskettendatei:"
 
 #: ../hsm/certificate-authority.rst:511
 msgid "You now have a certificate authority backed by an HSM."
 msgstr ""
+"Sie haben nun eine Zertifizierungsstelle, die durch ein HSM unterstützt wird."
 
 #: ../hsm/certificate-authority.rst:514
 msgid "Sign a Server Certificate"
-msgstr ""
+msgstr "Ein Server-Zertifikat signieren"
 
 #: ../hsm/certificate-authority.rst:516
 msgid ""
 "Now that you have a certificate authority, you’d probably like to know "
 "how to use it."
 msgstr ""
+"Jetzt, da Sie eine Zertifizierungsstelle haben, möchten Sie wahrscheinlich "
+"wissen, wie Sie diese nutzen können."
 
 #: ../hsm/certificate-authority.rst:518
 msgid ""
@@ -1253,16 +1310,21 @@ msgid ""
 "of your certificate, including SAN, for your particular application is "
 "outside the scope of this document."
 msgstr ""
+"Erstellen Sie eine CSR nach der für Ihre Anwendung üblichen Methode. Die "
+"korrekte Erstellung Ihres Zertifikats, einschließlich SAN, für Ihre "
+"spezielle Anwendung liegt außerhalb des Rahmens dieses Dokuments."
 
 #: ../hsm/certificate-authority.rst:564
 msgid ""
 "Create a config file to use the private key of the intermediate "
 "certificate to sign the CSRs of your servers."
 msgstr ""
+"Erstellen Sie eine Konfigurationsdatei, um den privaten Schlüssel des "
+"Zwischenzertifikats zum Signieren der CSRs Ihrer Server zu verwenden."
 
 #: ../hsm/certificate-authority.rst:619
 msgid "Then run openssl to sign the server’s CSR."
-msgstr ""
+msgstr "Führen Sie dann openssl aus, um die CSR des Servers zu signieren."
 
 #: ../hsm/certificate-authority.rst:668 ../pro/windows/openvpn-viscosity.rst:96
 msgid "References"
@@ -1271,6 +1333,8 @@ msgstr "Referenzen"
 #: ../hsm/certificate-authority.rst:670
 msgid "I used the following resources to help in compiling this document."
 msgstr ""
+"Bei der Zusammenstellung dieses Dokuments habe ich die folgenden Quellen "
+"verwendet."
 
 #: ../hsm/certificate-authority.rst:672
 msgid ""
@@ -1278,42 +1342,57 @@ msgid ""
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
 "device>`__"
 msgstr ""
+"So initialisieren Sie Ihr Nitrokey HSM <https://github.com/OpenSC/OpenSC/"
+"wiki/SmartCardHSM#initialize-the-device>`__"
 
 #: ../hsm/certificate-authority.rst:674
 msgid ""
 "`How to create a root and intermediate CA <https://jamielinux.com/docs"
 "/openssl-certificate-authority/create-the-root-pair.html>`__"
 msgstr ""
+"Wie erstellt man eine Stamm- und Zwischen-CA <https://jamielinux.com/docs/"
+"openssl-certificate-authority/create-the-root-pair.html>`__"
 
 #: ../hsm/certificate-authority.rst:676
 msgid ""
 "`How to ensure the serial numbers of your intermediate CA and server "
 "certs are up to spec <https://www.phildev.net/ssl/creating_ca.html>`__"
 msgstr ""
+"So stellen Sie sicher, dass die Seriennummern Ihrer zwischengeschalteten CA- "
+"und Server-Zertifikate den Spezifikationen entsprechen <https://www.phildev."
+"net/ssl/creating_ca.html>`__"
 
 #: ../hsm/certificate-authority.rst:679
 msgid ""
 "`How to generate ECC private keys <https://dev.to/benjaminblack"
 "/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
 msgstr ""
+"Wie man private ECC-Schlüssel erzeugt <https://dev.to/benjaminblack/"
+"obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
 
 #: ../hsm/certificate-authority.rst:681
 msgid ""
 "`How to find the PCKS11 URI from your HSM "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__"
 msgstr ""
+"So finden Sie den PCKS11 URI von Ihrem HSM <https://www.infradead.org/"
+"openconnect/pkcs11.html>`__"
 
 #: ../hsm/certificate-authority.rst:683
 msgid ""
 "`Troubleshooting (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-"
 "hsm-does-not-support-signing/2598/14>`__"
 msgstr ""
+"`Fehlerbehebung (Forum) <https://support.nitrokey.com/t/"
+"pki-ca-nitrokey-hsm-does-not-support-signing/2598/14>`__"
 
 #: ../hsm/certificate-authority.rst:686
 msgid ""
 "This document was originally `written by lyntux "
 "<https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__."
 msgstr ""
+"Dieses Dokument wurde ursprünglich `von lyntux <https://gist.github.com/"
+"lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__ geschrieben."
 
 #: ../pro/linux/disk-encryption-luks.rst:2
 msgid "Full-Disk Encryption With cryptsetup/LUKS"
@@ -1379,14 +1458,12 @@ msgstr ""
 " Anleitung kompatibel ist."
 
 #: ../pro/linux/disk-encryption-luks.rst:32
-#, fuzzy
 msgid ""
 "A Nitrokey Pro 2 or Nitrokey Storage 2 `initialized <openpgp.html>`__ "
 "with keys."
 msgstr ""
-"Ein Nitrokey Pro 2 oder Nitrokey Storage 2 `initialisiert "
-"<https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__ mit "
-"Tasten."
+"Ein Nitrokey Pro 2 oder Nitrokey Storage 2 `initialisiertes <openpgp.html>`"
+"__ mit Schlüsseln."
 
 #: ../pro/linux/disk-encryption-luks.rst:37
 msgid "Known Issues"
@@ -1911,14 +1988,13 @@ msgstr ""
 "ausprobieren oder diese Schritte mit OpenSC und OpenVPN durchführen."
 
 #: ../pro/linux/hard-disk-encryption.rst:178
-#, fuzzy
 msgid ""
 "Source of the guide: "
 "https://www.nitrokey.com/documentation/applications#a:hard-disk-"
 "encryption"
 msgstr ""
-"Quelle der Anleitung: https://www.nitrokey.com/documentation/applications"
-"#hard-disk-encryption"
+"Quelle des Leitfadens: https://www.nitrokey.com/documentation/applications#a"
+":hard-disk-encryption"
 
 #: ../pro/linux/index.rst:2
 msgid "Nitrokey Pro, Linux"
@@ -1951,18 +2027,16 @@ msgstr ""
 "distribution>`__."
 
 #: ../pro/linux/index.rst:23 ../pro/mac/index.rst:16
-#, fuzzy
 msgid ""
 "Download and start the `Nitrokey App "
 "<https://www.nitrokey.com/download>`__. Follow the `instructions <change-"
 "pins.html>`__ to change the default User PIN (default: 123456) and Admin "
 "PIN (default: 12345678) to your own choices."
 msgstr ""
-"Laden Sie die `Nitrokey App <https://www.nitrokey.com/download>`__ "
-"herunter und starten Sie sie. Folgen Sie den `Anweisungen "
-"<https://docs.nitrokey.com/pro/change-user-and-admin-pin.html>`__, um die"
-" Standard-Benutzer-PIN (Standard: 123456) und Admin-PIN (Standard: "
-"12345678) auf Ihre eigenen Einstellungen zu ändern."
+"Laden Sie die `Nitrokey App <https://www.nitrokey.com/download>`__ herunter "
+"und starten Sie sie. Folgen Sie den \"Anleitungen <change-pins.html>\", um "
+"die Standard-Benutzer-PIN (Standard: 123456) und die Admin-PIN (Standard: "
+"12345678) nach Ihren Wünschen zu ändern."
 
 #: ../pro/linux/index.rst:34 ../pro/mac/index.rst:27
 msgid ""
@@ -2003,21 +2077,17 @@ msgstr ""
 
 #: ../pro/linux/index.rst:51 ../pro/mac/index.rst:50
 #: ../pro/windows/index.rst:45
-#, fuzzy
 msgid ""
 "`instructions <openpgp.html>`__ for using the OpenPGP standard with the "
 "Nitrokey"
 msgstr ""
-"Anleitungen <https://docs.nitrokey.com/pro/openpgp.html>`__ zur "
-"Verwendung des OpenPGP-Standards mit dem Nitrokey"
+"Anleitungen <openpgp.html>`__ zur Verwendung des OpenPGP-Standards mit dem "
+"Nitrokey"
 
 #: ../pro/linux/index.rst:54 ../pro/mac/index.rst:53
 #: ../pro/windows/index.rst:48
-#, fuzzy
 msgid "`instructions <smime.html>`__ for using S/MIME with the Nitrokey"
-msgstr ""
-"Anleitungen <https://docs.nitrokey.com/pro/smime.html>`__ zur Verwendung "
-"von S/MIME mit dem Nitrokey"
+msgstr "Anleitungen <smime.html>`__ zur Verwendung von S/MIME mit dem Nitrokey"
 
 #: ../pro/openpgp.rst:2
 msgid "OpenPGP Email Encryption"
@@ -2036,16 +2106,14 @@ msgid "S/MIME/X.509 is mostly used by enterprises."
 msgstr "S/MIME/X.509 wird meist von Unternehmen verwendet."
 
 #: ../pro/openpgp.rst:14
-#, fuzzy
 msgid ""
 "If you are in doubt which one to choose, you should use OpenPGP. While "
 "this page describes the usage of OpenPGP, S/MIME is described `here "
 "<smime.html>`__."
 msgstr ""
-"Wenn Sie im Zweifel sind, welche Sie wählen sollen, sollten Sie OpenPGP "
-"verwenden. Während diese Seite die Verwendung von OpenPGP beschreibt, "
-"wird S/MIME `hier <https://docs.nitrokey.com/pro/smime.html>`__ "
-"beschrieben."
+"Wenn Sie sich nicht sicher sind, welches Verfahren Sie wählen sollen, "
+"sollten Sie OpenPGP verwenden. Während auf dieser Seite die Verwendung von "
+"OpenPGP beschrieben wird, wird S/MIME hier <smime.html>`__ beschrieben."
 
 #: ../pro/openpgp.rst:16
 msgid ""
@@ -2071,33 +2139,29 @@ msgstr ""
 "erzeugen."
 
 #: ../pro/openpgp.rst:23
-#, fuzzy
 msgid ""
 "`Generate keys on Nitrokey <openpgp-keygen-gpa.html>`__ - this is the "
 "best option if you are unexperienced, but you won’t have a backup of your"
 " keys and therefore won’t be able to mitigate the loss of the Nitrokey"
 msgstr ""
-"`Schlüssel auf Nitrokey <https://docs.nitrokey.com/pro/openpgp-keygen-"
-"gpa.html>`__ generieren - dies ist die beste Option, wenn Sie unerfahren "
-"sind, aber Sie werden keine Sicherungskopie Ihrer Schlüssel haben und "
-"daher nicht in der Lage sein, den Verlust des Nitrokeys abzumildern"
+"`Schlüssel auf Nitrokey <openpgp-keygen-gpa.html>`__ generieren - dies ist "
+"die beste Option, wenn Sie unerfahren sind, aber Sie werden keine "
+"Sicherungskopie Ihrer Schlüssel haben und daher nicht in der Lage sein, den "
+"Verlust des Nitrokeys zu mildern"
 
 #: ../pro/openpgp.rst:29
-#, fuzzy
 msgid ""
 "`Generate keys on Nitrokey with different algorithm or key size <openpgp-"
 "keygen-on-device.html>`__ - this is as secure as the previous option and "
 "thus you won’t have a backup as well, but you can change the key "
 "attributes (that is the algorithm and key size)"
 msgstr ""
-"`Schlüssel auf Nitrokey mit anderem Algorithmus oder anderer "
-"Schlüsselgröße erzeugen <https://docs.nitrokey.com/pro/openpgp-keygen-on-"
-"device.html>`__ - dies ist genauso sicher wie die vorherige Option und "
-"somit haben Sie auch kein Backup, aber Sie können die Schlüsselattribute "
-"(d.h. den Algorithmus und die Schlüsselgröße) ändern"
+"`Schlüssel auf Nitrokey mit anderem Algorithmus oder anderer Schlüsselgröße "
+"erzeugen <openpgp-keygen-on-device.html>`__ - dies ist genauso sicher wie "
+"die vorige Option und daher haben Sie auch kein Backup, aber Sie können die "
+"Schlüsselattribute (d.h. den Algorithmus und die Schlüsselgröße) ändern"
 
 #: ../pro/openpgp.rst:35
-#, fuzzy
 msgid ""
 "`Generate keys locally <openpgp-keygen-backup.html>`__ and copy them to "
 "Nitrokey - this is the most flexible, expert option, but only secure if "
@@ -2106,20 +2170,18 @@ msgid ""
 "<https://xieme-art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-"
 "pro/>`__."
 msgstr ""
-"Schlüssel lokal <https://docs.nitrokey.com/pro/openpgp-keygen-"
-"backup.html>`__ erzeugen und auf Nitrokey kopieren - das ist die "
-"flexibelste, fachkundigste Option, aber nur sicher, wenn Ihr System nicht"
-" kompromittiert ist, denn Sie können einen Backup-Schlüssel außerhalb "
-"Ihres Nitrokeys erzeugen Eine ähnliche Beschreibung in französischer "
-"Sprache finden Sie `hier <https://xieme-art.org/post/importer-des-clefs-"
-"gnupg-dans-sa-nitrokey-pro/>`__."
+"Schlüssel lokal erzeugen <openpgp-keygen-backup.html>`__ und auf Nitrokey "
+"kopieren - das ist die flexibelste, fachkundigste Option, aber nur sicher, "
+"wenn Ihr System nicht kompromittiert ist, denn Sie können einen Backup-"
+"Schlüssel außerhalb Ihres Nitrokeys erzeugen. Eine ähnliche Beschreibung in "
+"französischer Sprache finden Sie `hier <https://xieme-art.org/post/"
+"importer-des-clefs-gnupg-dans-sa-nitrokey-pro/>`__."
 
 #: ../pro/openpgp.rst:44
 msgid "Importing Existing Keys"
 msgstr "Vorhandene Schlüssel importieren"
 
 #: ../pro/openpgp.rst:46
-#, fuzzy
 msgid ""
 "If you already have OpenPGP keys you may want to use them with your "
 "Nitrokey, instead of generating new ones. Importing exsiting keys works "
@@ -2131,15 +2193,14 @@ msgid ""
 "<openpgp-keygen-backup.html#subkey-for-authentication>`__."
 msgstr ""
 "Wenn Sie bereits OpenPGP-Schlüssel haben, können Sie diese mit Ihrem "
-"Nitrokey verwenden, anstatt neue zu erzeugen. Das Importieren vorhandener"
-" Schlüssel funktioniert im Prinzip genauso, wie wenn Sie die Schlüssel "
+"Nitrokey verwenden, anstatt neue zu erzeugen. Das Importieren vorhandener "
+"Schlüssel funktioniert im Prinzip genauso, wie wenn Sie die Schlüssel "
 "zunächst lokal erzeugen und dann auf den Nitrokey kopieren (siehe oben). "
-"Schauen Sie sich daher bitte die entsprechende Anleitung "
-"<https://docs.nitrokey.com/pro/openpgp-keygen-backup.html#key-import>`__ "
-"an. Beachten Sie, dass Sie wahrscheinlich einen weiteren Unterschlüssel "
-"für die Authentifizierung zu Ihrem bestehenden Schlüssel erzeugen wollen."
-" Schauen Sie dazu in die gleiche Anleitung zur `Unterschlüsselerzeugung "
-"<https://docs.nitrokey.com/pro/openpgp-keygen-backup.html#subkey-for-"
+"Schauen Sie sich daher bitte die entsprechende Anleitung <openpgp-keygen-"
+"backup.html#key-import>`__ an. Beachten Sie, dass Sie wahrscheinlich einen "
+"weiteren Unterschlüssel für die Authentifizierung zu Ihrem bestehenden "
+"Schlüssel erzeugen wollen. Siehe dazu die Anleitung zur `"
+"Unterschlüsselerzeugung <openpgp-keygen-backup.html#subkey-for-"
 "authentication>`__."
 
 #: ../pro/openpgp.rst:51 ../pro/smime.rst:59
@@ -2147,20 +2208,18 @@ msgid "You can find further information about the usage on these pages:"
 msgstr "Weitere Informationen zur Verwendung finden Sie auf diesen Seiten:"
 
 #: ../pro/openpgp.rst:53
-#, fuzzy
 msgid ""
 "for using `OpenPGP encryption with Thunderbird <openpgp-"
 "thunderbird.html>`__"
 msgstr ""
-"zur Verwendung der `OpenPGP-Verschlüsselung mit Thunderbird "
-"<https://docs.nitrokey.com/pro/openpgp-thunderbird.html>`__"
+"für die Verwendung der \"OpenPGP-Verschlüsselung mit Thunderbird <openpgp-"
+"thunderbird.html>\"."
 
 #: ../pro/openpgp.rst:56
-#, fuzzy
 msgid "for using `OpenPGP encryption with Outlook <openpgp-outlook.html>`__"
 msgstr ""
-"zur Verwendung der `OpenPGP-Verschlüsselung mit Outlook "
-"<https://docs.nitrokey.com/pro/windows/openpgp-outlook.html>`__"
+"für die Verwendung der \"OpenPGP-Verschlüsselung mit Outlook <openpgp-outlook"
+".html>\"."
 
 #: ../pro/openpgp.rst:59
 msgid ""
@@ -2527,7 +2586,6 @@ msgid "OpenPGP Key Generation Using GPA"
 msgstr "OpenPGP-Schlüsselerzeugung mit GPA"
 
 #: ../pro/openpgp-keygen-gpa.rst:8
-#, fuzzy
 msgid ""
 "The following instructions explain the generation of OpenPGP keys "
 "directly on the Nitrokey with help of the GNU Privacy Assistant (GPA). "
@@ -2536,14 +2594,13 @@ msgid ""
 "anymore. Please see `here <openpgp-outlook.html>`__ for a comparison of "
 "the different methods to generate OpenPGP keys."
 msgstr ""
-"Die folgende Anleitung erklärt die Erzeugung von OpenPGP-Schlüsseln "
-"direkt auf dem Nitrokey mit Hilfe des GNU Privacy Assistant (GPA). Sie "
-"können von diesen Schlüsseln keine Sicherungskopie erstellen. Wenn Sie "
-"also den Nitrokey verlieren oder er kaputt geht, können Sie keine Mails "
-"mehr entschlüsseln oder diese Schlüssel verwenden. Einen Vergleich der "
-"verschiedenen Methoden zur Erzeugung von OpenPGP-Schlüsseln finden Sie "
-"`hier <https://docs.nitrokey.com/pro/windows/openpgp-email-encryption-"
-"with-outlook.html>`__."
+"Die folgende Anleitung erklärt die Erzeugung von OpenPGP-Schlüsseln direkt "
+"auf dem Nitrokey mit Hilfe des GNU Privacy Assistant (GPA). Sie werden nicht "
+"in der Lage sein, ein Backup dieser Schlüssel zu erstellen. Wenn Sie also "
+"den Nitrokey verlieren oder er kaputt geht, können Sie keine Mails mehr "
+"entschlüsseln oder diese Schlüssel verwenden. Einen Vergleich der "
+"verschiedenen Methoden zur Erzeugung von OpenPGP-Schlüsseln finden Sie `hier "
+"<openpgp-outlook.html>`__."
 
 #: ../pro/openpgp-keygen-gpa.rst:10
 msgid ""
@@ -2590,7 +2647,6 @@ msgstr ""
 "nicht."
 
 #: ../pro/openpgp-keygen-gpa.rst:31
-#, fuzzy
 msgid ""
 "**Please do not use the backup checkbox**. This “backup” does only save "
 "the encryption key. In case of a loss of the device, you will not be able"
@@ -2602,16 +2658,15 @@ msgid ""
 "recommend to skip this half-backup."
 msgstr ""
 "**Bitte verwenden Sie nicht das Kontrollkästchen \"Backup \"**. Dieses "
-"\"Backup\" speichert nur den Chiffrierschlüssel. Im Falle eines "
-"Geräteverlustes können Sie nicht den gesamten Schlüsselsatz "
-"wiederherstellen. Es ist also zum einen kein vollständiges Backup "
-"(verwenden Sie stattdessen `diese Anleitung "
-"<https://docs.nitrokey.com/pro/openpgp-key-generation-with-"
-"backup.html>`__, wenn Sie eines benötigen) und zum anderen riskieren Sie,"
-" dass jemand anderes in den Besitz Ihres Schlüssels kommen kann. Der "
-"Vorteil der Schlüsselerzeugung auf dem Gerät besteht darin, dass die "
-"Schlüssel sicher gespeichert werden. Daher empfehlen wir, diese "
-"Halbsicherung zu überspringen."
+"\"Backup\" speichert nur den Verschlüsselungsschlüssel. Im Falle eines "
+"Verlustes des Gerätes können Sie nicht den gesamten Schlüsselsatz "
+"wiederherstellen. Es handelt sich also einerseits um kein vollständiges "
+"Backup (verwenden Sie stattdessen `diese Anleitung <openpgp-keygen-backup."
+"html>`__, wenn Sie eines benötigen) und andererseits riskieren Sie, dass "
+"jemand anderes in den Besitz Ihres Schlüssels kommt. Der Vorteil der "
+"Schlüsselerzeugung auf dem Gerät besteht darin, dass die Schlüssel sicher "
+"gespeichert werden. Wir empfehlen daher, diese halbe Sicherung zu "
+"überspringen."
 
 #: ../pro/openpgp-keygen-gpa.rst:38
 msgid ""
@@ -2714,7 +2769,6 @@ msgstr ""
 " installieren GnuPG bitte mit Hilfe des Paketmanagers."
 
 #: ../pro/openpgp-keygen-on-device.rst:12
-#, fuzzy
 msgid ""
 "These instructions are based on GnuPG version 2.2.6 or higher. Some Linux"
 " Distributions have an older version installed. In this case please "
@@ -2722,11 +2776,9 @@ msgid ""
 "newer version if possible."
 msgstr ""
 "Diese Anleitung basiert auf GnuPG Version 2.2.6 oder höher. Einige Linux-"
-"Distributionen haben eine ältere Version installiert. In diesem Fall "
-"wählen Sie bitte eine andere Methode, wie sie `hier "
-"<https://docs.nitrokey.com/pro/openpgp-email-encryption.html>`__ "
-"aufgeführt ist, oder installieren Sie nach Möglichkeit eine neuere "
-"Version."
+"Distributionen haben eine ältere Version installiert. In diesem Fall wählen "
+"Sie bitte eine andere Methode wie `hier <openpgp.html>`__ aufgeführt oder "
+"installieren Sie eine neuere Version, wenn möglich."
 
 #: ../pro/openpgp-keygen-on-device.rst:21
 msgid ""
@@ -2769,7 +2821,6 @@ msgstr ""
 "anschließend ``generate``, um die Erzeugung der Schlüssel zu starten."
 
 #: ../pro/openpgp-keygen-on-device.rst:95
-#, fuzzy
 msgid ""
 "**Please do not create the suggested off-card backup.** This “backup” "
 "does only save the encryption key, but not the signature and "
@@ -2782,16 +2833,15 @@ msgid ""
 "recommend to skip this half-backup."
 msgstr ""
 "**Bitte erstellen Sie nicht das vorgeschlagene Off-Card-Backup.** Dieses "
-"\"Backup\" sichert nur den Chiffrierschlüssel, nicht aber die Signatur- "
-"und Authentifizierungsschlüssel. Im Falle eines Geräteverlustes können "
-"Sie nicht den gesamten Schlüsselsatz wiederherstellen. Es ist also zum "
-"einen kein vollständiges Backup (verwenden Sie stattdessen `diese "
-"Anleitung <https://docs.nitrokey.com/pro/openpgp-key-generation-with-"
-"backup.html>`__, wenn Sie eines benötigen) und zum anderen riskieren Sie,"
-" dass jemand anderes in den Besitz Ihres Chiffrierschlüssels kommen kann."
-" Der Vorteil der Schlüsselerzeugung auf dem Gerät besteht darin, dass die"
-" Schlüssel sicher gespeichert werden. Daher empfehlen wir, diese "
-"Halbsicherung zu überspringen."
+"\"Backup\" speichert nur den Verschlüsselungsschlüssel, nicht aber die "
+"Signatur- und Authentifizierungsschlüssel. Im Falle eines Geräteverlustes "
+"können Sie nicht den gesamten Schlüsselsatz wiederherstellen. Es handelt "
+"sich also einerseits um keine vollständige Sicherung (verwenden Sie "
+"stattdessen `diese Anleitung <openpgp-keygen-backup.html>`__, wenn Sie eine "
+"benötigen) und andererseits riskieren Sie, dass jemand anderes in den Besitz "
+"Ihres Schlüssels kommt. Der Vorteil der Schlüsselerzeugung auf dem Gerät "
+"besteht darin, dass die Schlüssel sicher gespeichert werden. Wir empfehlen "
+"daher, diese halbe Sicherung zu überspringen."
 
 #: ../pro/openpgp-keygen-on-device.rst:98
 msgid ""
@@ -2970,14 +3020,12 @@ msgid "you have GPA or Kleopatra software installed."
 msgstr "Sie haben die Software GPA oder Kleopatra installiert."
 
 #: ../pro/openpgp-thunderbird.rst:22
-#, fuzzy
 msgid ""
 "Please use Kleopatra or `GPA <openpgp-keygen-gpa.html>`__ software to "
 "handle the smart card."
 msgstr ""
-"Bitte verwenden Sie Kleopatra oder `GPA "
-"<https://docs.nitrokey.com/start/windows/openpgp-key-generation-using-"
-"gpa.html>`__ Software, um die Chipkarte zu handhaben."
+"Bitte verwenden Sie Kleopatra oder `GPA <openpgp-keygen-gpa.html>`__ "
+"Software, um die Chipkarte zu verwalten."
 
 #: ../pro/openpgp-thunderbird.rst:25
 msgid "Thunderbird 77 and older"
@@ -3353,7 +3401,6 @@ msgstr ""
 "sich parallel zu OpenVPN weiterentwickelt hat."
 
 #: ../pro/linux/openvpn-easyrsa.rst:17
-#, fuzzy
 msgid ""
 "To sign the certificates, we will use a `Nitrokey HSM 2 "
 "<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ set"
@@ -3362,14 +3409,13 @@ msgid ""
 " the set up of the CA itself (it is clear and `well documented here "
 "<certificate-authority.html#sign-a-server-certificate>`__)."
 msgstr ""
-"Um die Zertifikate zu signieren, verwenden wir ein `Nitrokey HSM 2 "
-"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__, "
-"das als `Certificate Authority <https://docs.nitrokey.com/hsm/linux"
-"/certificate-authority.html#creating-the-intermediate-certificate-"
-"authority>`__ eingerichtet ist, allerdings behandelt diese Anleitung "
-"nicht die Einrichtung der CA selbst (sie ist übersichtlich und `gut "
-"dokumentiert hier <https://docs.nitrokey.com/hsm/linux/certificate-"
-"authority.html#sign-a-server-certificate>`__)."
+"Um die Zertifikate zu signieren, werden wir einen `Nitrokey HSM 2 "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ "
+"verwenden, der als `Zertifizierungsstelle <certificate-authority.html"
+"#creating-the-intermediate-certificate-authority>`__ eingerichtet wird, "
+"allerdings behandelt dieser Leitfaden nicht die Einrichtung der "
+"Zertifizierungsstelle selbst (sie ist klar und `gut dokumentiert hier "
+"<certificate-authority.html#sign-a-server-certificate>`__)."
 
 #: ../pro/linux/openvpn-easyrsa.rst:20
 msgid ""
@@ -3469,15 +3515,14 @@ msgstr ""
 "<https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`__"
 
 #: ../pro/linux/openvpn-easyrsa.rst:54
-#, fuzzy
 msgid ""
 "As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you "
 "may follow the instructions available `in the documentation <certificate-"
 "authority.html#sign-a-server-certificate>`__."
 msgstr ""
 "Zur Erinnerung: Um eine Zertifizierungsstelle auf Nitrokey HSM 2 zu "
-"erstellen, können Sie den Anweisungen in der Dokumentation </hsm/linux"
-"/certificate-authority.html#sign-a-server-certificate>`__ folgen."
+"erstellen, können Sie den Anweisungen in der Dokumentation <certificate-"
+"authority.html#sign-a-server-certificate> folgen."
 
 #: ../pro/linux/openvpn-easyrsa.rst:56
 msgid ""
@@ -3524,6 +3569,9 @@ msgid ""
 "of OpenvPN for our Debian 10 server, according to `these instructions "
 "<https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`__:"
 msgstr ""
+"Sobald die IP-Weiterleitung eingerichtet ist, müssen wir die neueste Version "
+"von OpenvPN für unseren Debian 10-Server herunterladen, gemäß dieser "
+"Anleitung <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>:"
 
 #: ../pro/linux/openvpn-easyrsa.rst:86
 msgid "Change to root and download the GPG key that signed the package"
@@ -3543,6 +3591,9 @@ msgid ""
 "`version 2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`__ to "
 "login."
 msgstr ""
+"Wir haben OpenVPN 2.5 heruntergeladen, da \"password prompt\" mindestens "
+"OpenVPN `Version 2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`"
+"__ zur Anmeldung benötigt."
 
 #: ../pro/linux/openvpn-easyrsa.rst:103
 msgid "Next we download OpenVPN"
@@ -3829,18 +3880,16 @@ msgstr ""
 "übereinstimmt, wenn der Transport nicht vertrauenswürdig ist."
 
 #: ../pro/linux/openvpn-easyrsa.rst:239
-#, fuzzy
 msgid ""
 "In order to go through these steps, I will extensively rely on `these "
 "instructions <certificate-authority.html#creating-the-intermediate-"
 "certificate-authority>`__, to sign the certificate signing requests, once"
 " we generated them with Easy-RSA."
 msgstr ""
-"Um diese Schritte durchzugehen, werde ich mich ausgiebig auf `diese "
-"Anleitung </hsm/linux/certificate-authority.html#creating-the-"
-"intermediate-certificate-authority>` stützen, um die "
-"Zertifikatsignierungsanfragen zu signieren, nachdem wir sie mit Easy-RSA "
-"erzeugt haben."
+"Um diese Schritte durchzugehen, werde ich mich weitgehend auf \"diese "
+"Anweisungen <certificate-authority.html#creating-the-intermediate-"
+"certificate-authority>\" stützen, um die Zertifikatsignierungsanforderungen "
+"zu signieren, nachdem wir sie mit Easy-RSA erstellt haben."
 
 #: ../pro/linux/openvpn-easyrsa.rst:242
 msgid "5.1. Sign the ``server.req`` file"
@@ -4283,7 +4332,6 @@ msgstr ""
 "werden:"
 
 #: ../pro/linux/openvpn-easyrsa.rst:656
-#, fuzzy
 msgid ""
 "Unfortunately OpenVPN doesn’t seem to be able to establish a handshake "
 "and stops at an error as reported `here <https://support.nitrokey.com/t"
@@ -4292,17 +4340,11 @@ msgid ""
 "openssl-error-141f0006/2637>`__ and `here "
 "<https://community.openvpn.net/openvpn/ticket/1215>`__"
 msgstr ""
-"Leider scheint OpenVPN nicht in der Lage zu sein, einen Handshake "
-"aufzubauen und bleibt bei einem Fehler stehen, wie `hier "
-"<https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3"
-"-and-rsa-based-certificates/2180/2>`__, `hier "
-"<https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ "
-"und `hier "
-"<https://community.openvpn.net/openvpn/ticket/1215?__cf_chl_jschl_tk__=92b2a9776b54ce71b2f15e4d3f62dbdb5ee68f5f-1599568561-0"
-"-AY906nmSrFwe8EfT2PKawtrgl2NF72nwMrG9mp57SgIAqFmzxHiqod7ED0oVbimJlDD2xzLNLbQU6iUlVImbo8Q25qpDJVJ56YHbE4JKQSusHiwS8GLMm8Di9Gk6k63_qN5SDot-"
-""
-"ABpgFoNcaRUHGZQ0fVYKYXZDf5E_0ZAOjPWsD2FXLfc7atx53t9scbdGF1p7xl2VRFcBoy2l7KgvvZU589YNs1wsRG62neISVpM-"
-"9E-s9CuccSAX8y3ZQfZUq7et9QIdgaSK9g-PhFqKWJhZLFkmTwR0wmYbKXjhxQ6j>`__ "
+"Leider scheint OpenVPN nicht in der Lage zu sein, einen Handshake aufzubauen "
+"und bricht mit einem Fehler ab, wie `hier <https://support.nitrokey.com/t/"
+"nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`"
+"__, `hier <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/"
+"2637>`__ und `hier <https://community.openvpn.net/openvpn/ticket/1215>`__ "
 "berichtet"
 
 #: ../pro/linux/openvpn-easyrsa.rst:660
@@ -4378,16 +4420,14 @@ msgstr ""
 "PIN anzumelden:"
 
 #: ../pro/linux/openvpn-easyrsa.rst:692
-#, fuzzy
 msgid ""
 "Alternatively, you could `recompile OpenVPN "
 "<https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`__ client with "
 "systemd support disabled, and it will prompt you for the PIN as expected."
 msgstr ""
-"Alternativ können Sie den OpenVPN "
-"<https://forums.openvpn.net/viewtopic.php?t=23318>`__-Client mit "
-"deaktivierter systemd-Unterstützung neu kompilieren, und er wird Sie wie "
-"erwartet zur Eingabe der PIN auffordern."
+"Alternativ können Sie den OpenVPN <https://forums.openvpn.net/viewtopic."
+"php?f=4&t=23318>`__-Client mit deaktivierter systemd-Unterstützung neu "
+"kompilieren, und er wird Sie wie erwartet zur Eingabe der PIN auffordern."
 
 #: ../pro/linux/openvpn-easyrsa.rst:694
 msgid ""
@@ -4444,16 +4484,15 @@ msgid "Configure a Website/Application to Use OTP"
 msgstr "Konfigurieren einer Website/Anwendung zur Verwendung von OTP"
 
 #: ../pro/otp.rst:15
-#, fuzzy
 msgid ""
 "Login to the website which supports OTP (in this example, the `support "
 "forum <https://support.nitrokey.com/>`__). Usually you find the option to"
 " enable two-factor-authentication under your profile or in the settings."
 msgstr ""
-"Melden Sie sich auf der Website an, die OTP unterstützt (in diesem "
-"Beispiel das `Supportforum <support.nitrokey.com/>`__). Normalerweise "
-"finden Sie die Option zur Aktivierung der Zwei-Faktor-Authentifizierung "
-"unter Ihrem Profil oder in den Einstellungen."
+"Melden Sie sich auf der Website an, die OTP unterstützt (in diesem Beispiel "
+"das `Support-Forum <https://support.nitrokey.com/>`__). Normalerweise finden "
+"Sie die Option zur Aktivierung der Zwei-Faktor-Authentifizierung unter Ihrem "
+"Profil oder in den Einstellungen."
 
 #: ../pro/otp.rst:22
 msgid ""
@@ -4552,34 +4591,29 @@ msgid "**Required on the client side:**"
 msgstr "**Erforderlich auf der Client-Seite:**"
 
 #: ../pro/putty.rst:12
-#, fuzzy
 msgid ""
 "`PuTTY "
 "<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`__ or a "
 "variant of it"
 msgstr ""
-"`PuTTY "
-"<http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>`__ oder"
-" eine Variante davon"
+"PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`__ "
+"oder eine Variante davon"
 
 #: ../pro/putty.rst:15
-#, fuzzy
 msgid ""
 "`GPG4Win <https://gpg4win.org/>`__ or `pageant.exe <https://smartcard-"
 "auth.de/download-de.html>`__ with Smartcard support from Dr. Peter Koch"
 msgstr ""
-"`GPG4Win <https://gpg4win.org/>`__ oder `pageant.exe <http://smartcard-"
-"auth.de/download-de.html>`__ mit Smartcard-Unterstützung von Dr. Peter "
-"Koch"
+"`GPG4Win <https://gpg4win.org/>`__ oder `pageant.exe <https://smartcard-auth."
+"de/download-de.html>`__ mit Smartcard-Unterstützung von Dr. Peter Koch"
 
 #: ../pro/putty.rst:19
-#, fuzzy
 msgid ""
 "Optional: `OpenPGP Minidriver "
 "<https://wald.intevation.org/frs/?group_id=49&release_id=353>`__"
 msgstr ""
-"Optional: `OpenPGP Minidriver "
-"<http://wald.intevation.org/frs/?group_id=49&release_id=353>`__"
+"Optional: `OpenPGP-Minitreiber <https://wald.intevation.org/frs/"
+"?group_id=49&release_id=353>`__"
 
 #: ../pro/putty.rst:22
 msgid "**1) Pageant**"
@@ -4676,15 +4710,14 @@ msgid "S/MIME Email Encryption"
 msgstr "S/MIME-E-Mail-Verschlüsselung"
 
 #: ../pro/smime.rst:17
-#, fuzzy
 msgid ""
 "If you are in doubt which one to choose, you should use OpenPGP, see "
 "`here <openpgp.html>`__. This page describes the usage of S/MIME email "
 "encryption."
 msgstr ""
-"Wenn Sie im Zweifel sind, welche Sie wählen sollen, sollten Sie OpenPGP "
-"verwenden, siehe `hier <https://docs.nitrokey.com/pro/openpgp.html>`__. "
-"Diese Seite beschreibt die Verwendung der S/MIME-E-Mail-Verschlüsselung."
+"Wenn Sie sich nicht sicher sind, welche Verschlüsselung Sie wählen sollen, "
+"sollten Sie OpenPGP verwenden, siehe `hier <openpgp.html>`__. Diese Seite "
+"beschreibt die Verwendung der S/MIME-E-Mail-Verschlüsselung."
 
 #: ../pro/smime.rst:19
 msgid ""
@@ -4779,18 +4812,16 @@ msgstr ""
 "Schlüssel-Zertifikat-Paar auf den Nitrokey geladen."
 
 #: ../pro/smime.rst:61
-#, fuzzy
 msgid "for using `S/MIME encryption on Thunderbird <smime-thunderbird.html>`__"
 msgstr ""
-"für die Verwendung von `S/MIME-Verschlüsselung auf Thunderbird "
-"<https://docs.nitrokey.com/pro/smime-thunderbird.html>`__"
+"für die Verwendung der S/MIME-Verschlüsselung in Thunderbird <smime-"
+"thunderbird.html>\"."
 
 #: ../pro/smime.rst:64
-#, fuzzy
 msgid "for using `S/MIME encryption on Outlook <smime-outlook.html>`__"
 msgstr ""
-"für die Verwendung von `S/MIME-Verschlüsselung auf Outlook "
-"<https://docs.nitrokey.com/pro/smime-outlook.html>`__"
+"für die Verwendung der S/MIME-Verschlüsselung in Outlook <smime-outlook."
+"html>`__"
 
 #: ../pro/smime.rst:74
 msgid ""
@@ -4819,16 +4850,14 @@ msgid "S/MIME Email Encryption with Thunderbird"
 msgstr "S/MIME-E-Mail-Verschlüsselung mit Thunderbird"
 
 #: ../pro/smime-thunderbird.rst:11
-#, fuzzy
 msgid ""
 "If you do not have a S/MIME key-certificate pair installed on your "
 "Nitrokey yet or if you did not installed OpenSC, please look at `this "
 "page <smime.html>`__ first."
 msgstr ""
 "Wenn Sie noch kein S/MIME-Schlüssel-Zertifikat-Paar auf Ihrem Nitrokey "
-"installiert haben oder wenn Sie OpenSC nicht installiert haben, schauen "
-"Sie bitte zuerst auf `dieser Seite "
-"<https://docs.nitrokey.com/pro/smime.html>`__."
+"installiert haben oder wenn Sie OpenSC nicht installiert haben, sehen Sie "
+"sich bitte zuerst `diese Seite <smime.html>`__ an."
 
 #: ../pro/smime-thunderbird.rst:13
 msgid ""
@@ -4946,14 +4975,13 @@ msgid "S/MIME Email Encryption with Outlook"
 msgstr "S/MIME-E-Mail-Verschlüsselung mit Outlook"
 
 #: ../pro/smime-outlook.rst:11
-#, fuzzy
 msgid ""
 "If you do not have a S/MIME key-certificate pair installed on your "
 "Nitrokey yet, please look at `this page <smime.html>`__ first."
 msgstr ""
-"Wenn Sie noch kein S/MIME-Schlüssel-Zertifikat-Paar auf Ihrem Nitrokey "
-"installiert haben, schauen Sie bitte zuerst auf `dieser Seite "
-"<https://docs.nitrokey.com/pro/smime.html>`__."
+"Wenn Sie noch kein S/MIME-Schlüssel-Zertifikatspaar auf Ihrem Nitrokey "
+"installiert haben, sehen Sie sich bitte zuerst `diese Seite <smime.html>`__ "
+"an."
 
 #: ../pro/smime-outlook.rst:13
 msgid ""
@@ -5052,7 +5080,6 @@ msgstr ""
 "importieren."
 
 #: ../pro/smart-policy.rst:52
-#, fuzzy
 msgid ""
 "Now you can enroll Nitrokeys for your users managed in Microsoft Active "
 "Directory. You may either use Microsoft PKI, `gpgsm "
@@ -5062,11 +5089,11 @@ msgid ""
 "Policy."
 msgstr ""
 "Jetzt können Sie Nitrokeys für Ihre in Microsoft Active Directory "
-"verwalteten Benutzer registrieren. Sie können entweder Microsoft PKI, "
-"`gpgsm <https://www.gnupg.org/documentation/manuals/gnupg/Howto-Create-a"
-"-Server-Cert.html>`__, oder `Smart Policy "
-"<http://www.mysmartlogon.com/products/smart-policy.html>`__ verwenden. "
-"Die folgenden Schritte beschreiben die Verwendung von Smart Policy."
+"verwalteten Benutzer registrieren. Sie können entweder Microsoft PKI, `gpgsm "
+"<https://www.gnupg.org/documentation/manuals/gnupg/Howto-Create-a-Server-Cert"
+".html>`__, oder `Smart Policy <https://www.mysmartlogon.com/products/smart-"
+"policy.html>`__ verwenden. Die folgenden Schritte beschreiben die Verwendung "
+"von Smart Policy."
 
 #: ../pro/smart-policy.rst:58
 msgid ""
@@ -5349,17 +5376,15 @@ msgid "Next you choose the Authentication slot for the certificate."
 msgstr "Als nächstes wählen Sie den Authentifizierungsschlitz für das Zertifikat."
 
 #: ../pro/windows/openpgp-csp.rst:95
-#, fuzzy
 msgid ""
 "You are now ready to logon on the computer with the Nitrokey instead of "
 "your password and you can use `S/MIME email encryption/signing "
 "<smime.html>`__ with the Nitrokey. The driver has to be installed on "
 "every computer you want to use the certificate on."
 msgstr ""
-"Sie sind nun bereit, sich mit dem Nitrokey anstelle Ihres Passworts am "
-"Computer anzumelden, und Sie können `S/MIME-E-Mail-"
-"Verschlüsselung/Signierung <https://docs.nitrokey.com/pro/smime.html>`__ "
-"mit dem Nitrokey verwenden. Der Treiber muss auf jedem Computer "
+"Sie können sich nun mit dem Nitrokey anstelle Ihres Passworts am Computer "
+"anmelden und Sie können mit dem Nitrokey `S/MIME E-Mail-Verschlüsselung/"
+"Signierung <smime.html>`__ verwenden. Der Treiber muss auf jedem Computer "
 "installiert werden, auf dem Sie das Zertifikat verwenden möchten."
 
 #: ../pro/windows/openpgp-outlook.rst:2
@@ -5375,14 +5400,12 @@ msgstr ""
 "nutzen."
 
 #: ../pro/windows/openpgp-outlook.rst:16
-#, fuzzy
 msgid ""
 "If you do not have PGP-Keys on your Nitrokey yet, please look at `this "
 "page <openpgp.html>`__ first."
 msgstr ""
-"Wenn Sie noch keine PGP-Schlüssel auf Ihrem Nitrokey haben, schauen Sie "
-"sich bitte zuerst `diese Seite <https://www.nitrokey.com/documentation"
-"/openpgp-email-encryption>`__ an."
+"Wenn Sie noch keine PGP-Schlüssel auf Ihrem Nitrokey haben, sehen Sie sich "
+"bitte zuerst `diese Seite <openpgp.html>`__ an."
 
 #: ../pro/windows/openpgp-outlook.rst:18
 msgid ""
@@ -5468,18 +5491,16 @@ msgstr ""
 "installiert ist."
 
 #: ../pro/windows/openvpn-viscosity.rst:21
-#, fuzzy
 msgid ""
 "To read about how to configure OpenVPN to authenticate with Nitrokey Pro,"
 " you might consult the following `documentation <openvpn-"
 "easyrsa.html>`__, as we will just cover the way to configure the "
 "Viscosity client in this guide."
 msgstr ""
-"Um nachzulesen, wie Sie OpenVPN für die Authentifizierung mit Nitrokey "
-"Pro konfigurieren, können Sie die folgende `Dokumentation "
-"<https://docs.nitrokey.com/storage/linux/openvpn-easyrsa.html>`__ zu Rate"
-" ziehen, da wir in dieser Anleitung nur die Konfiguration des Viscosity-"
-"Clients behandeln werden."
+"Wenn Sie wissen möchten, wie Sie OpenVPN für die Authentifizierung mit "
+"Nitrokey Pro konfigurieren, lesen Sie bitte die folgende Dokumentation "
+"<openvpn-easyrsa.html>, da wir in dieser Anleitung nur die Konfiguration des "
+"Viscosity-Clients behandeln."
 
 #: ../pro/windows/openvpn-viscosity.rst:23
 msgid "You will also need the following:"
@@ -5888,4 +5909,3 @@ msgstr ""
 #~ "9E-s9CuccSAX8y3ZQfZUq7et9QIdgaSK9g-"
 #~ "PhFqKWJhZLFkmTwR0wmYbKXjhxQ6j>`__ zur Anmeldung "
 #~ "benötigt."
-
