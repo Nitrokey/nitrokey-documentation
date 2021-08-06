@@ -13,7 +13,7 @@ Firmware Update
 
 1. Download the `Nitrokey App <https://www.nitrokey.com/download>`__ and the `Nitrokey Update Tool <https://github.com/Nitrokey/nitrokey-update-tool/releases/latest>`__. The Nitrokey Update Tool is currently available for macOS and Windows only.
 
-2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/download/V0.54/storage-firmware-V0.54-0-g0b1ed2d.hex>`__. Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__.
+2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/latest>`__. Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__.
 
 3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ‘12345678’.
 
