@@ -15,5 +15,3 @@ If the Nitrokey is not detected, proceed the following:
    version <https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__
    of this file.
 2. Restart udev via ``sudo service udev restart``.
-
-.. include:: ../shared/index-content2.rst
