@@ -20,10 +20,9 @@ Preparation
 1. Connect your NitroPad to a power plug and load its battery to over
    70%
 2. Download the `latest
-   firmware <https://github.com/Nitrokey/heads/releases>`__ and store it
-   on a USB drive. The files are in the “Assets” dropdown box at the end
-   of the release information.
-3. For hash sum verification, store ``SHA256SUM.txt`` file at the USB
+   firmware <https://www.nitrokey.com/files/ci/nitropad/heads>`__ and store it
+   on a USB drive. For the NitroPad T430 use heads-t430-[version].rom and for the NitroPad X230 heads-x230-hotp-verification-[version].rom.
+3. For hash sum verification, store ``sha256sum`` file at the USB
    drive.
 
 Firmware file verification
@@ -39,13 +38,13 @@ It is mandatory to run a firmware file consistency check before writing it to th
 
    $ mount-usb              # select USB device
    $ cd /media
-   $ sha256sum -c SHA256SUM.txt
+   $ sha256sum -c sha256sum
 
 For ``v1.1-rc3`` version this should result in:
 
 .. code-block:: bash
 
-   $ sha256sum -c SHA256SUM.txt
+   $ sha256sum -c sha256sum
    nitropad_x230_v1.1-rc3.rom: OK
 
 This confirms the content of the file is as expected. Please reboot the Nitropad to continue (either by switching off and powering on again, or hitting CTRL+ALT+DELETE).
