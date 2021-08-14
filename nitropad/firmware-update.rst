@@ -21,7 +21,7 @@ Preparation
    70%
 2. Download the `latest
    firmware <https://www.nitrokey.com/files/ci/nitropad/heads>`__ and store it
-   on a USB drive. For the NitroPad T430 use heads-t430-[version].rom and for the NitroPad X230 heads-x230-hotp-verification-[version].rom.
+   on a USB drive. For the NitroPad T430 use ``heads-t430-[version].rom`` and for the NitroPad X230 use ``heads-x230-hotp-verification-[version].rom``.
 3. For hash sum verification, store ``sha256sum`` file at the USB
    drive.
 
