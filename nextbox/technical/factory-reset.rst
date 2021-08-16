@@ -18,6 +18,12 @@ described in :doc:`Getting Started <../gettingstarted>`
    :alt: img1
    :align: center
 
-
+.. hint::
+   The hardware button is a pinhole-style button similar to other embedded
+   devices. In order to press it, it is recommended to use a thin (~1mm)
+   needle-like pin. E.g., the pin to remove a sim-card from a smartphone is
+   working great. **Further take care to not press the button too hard, 
+   be careful, there should be a recognizable haptic feedback (button click) 
+   with minimal applied force.**
 
 
