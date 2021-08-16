@@ -20,6 +20,16 @@ Remote Access FAQ
   Android browser(s). The mechanism is based on ``mDNS``. One possible workaround is to use a
   3rd party app like BonjourBrowser to discover all mDNS services in your network.
 
+**Q:**: I followed all guides and still cannot acquire the TLS certificate, what can I do? 
+  The reason a TLS certificate cannot be acquired is nearly always the fact that your NextBox is
+  not reachable from the internet. Make sure you have followed the :doc:`../remote/walkthrough`.
+  If you followed the step-by-step instructions and it still does not work, very likely something
+  is blocking the connection, typical candidates are router web administration features like: 
+  ``MyFritz!``, ``Fritz Web Services`` or similar services, which are running on your router
+  and thus blocking the traffic on port(s) 80 and/or 443. Switch them off and retry acquiring your
+  TLS certificate.
+
+
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
 .. _nextbox.local: http://nextbox.local

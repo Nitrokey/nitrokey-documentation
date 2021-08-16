@@ -36,8 +36,8 @@ Hardware FAQ
 
 
 **Q:** What functions does the additional "shield" provide?
-  As of now the shield does provide a :doc:`status LED <technical/led-colors>`, a hardware button
-  to :doc:`factory reset <technical/factory-reset>` and an additional USB Type-C connector on the 
+  As of now the shield does provide a :doc:`status LED <../technical/led-colors>`, a hardware button
+  to :doc:`factory reset <../technical/factory-reset>` and an additional USB Type-C connector on the 
   same side as the Ethernet port for power supply exclusively.
 
 **Q:** Is the NextBox hardware extendable/replaceable?

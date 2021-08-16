@@ -2,10 +2,11 @@ Generic FAQ
 ===========
 
 **Q:** How can I factory-reset my NextBox?
-  Press the hardware button for 5 seconds, see :doc:`technical/factory-reset`
+  Press the hardware button for 5 seconds, see :doc:`../technical/factory-reset`. To press
+  the button use a thin (~1mm) pin like a smartphone sim-card tray removal device.
 
 **Q:** What do the different LED colors mean?
-  The detailed document can be found here: :doc:`technical/led-colors`
+  The detailed document can be found here: :doc:`../technical/led-colors`
 
 **Q:** Can the inital setup be done using a monitor & keyboard?
   No, this is not possible as the regular login is disabled on delivery. Please connect the
