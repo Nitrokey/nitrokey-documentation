@@ -14,6 +14,12 @@ Software FAQ
 **Q:** Where can I see a changelog for the NextBox versions?
   Currently only here: `Launchpad NextBox`_ 
 
+**Q:** How can I update the Operating System?
+  There is no need to update the NextBox OS by hand. This is done using ``unattended-upgrades`` and
+  on top the *nextbox-daemon* will check for upgrades manually (as a redundant fallback solution) 
+  on every start. You are free to update your OS by hand using ``apt``, if you know what you are 
+  doing.
+
 
 .. _Launchpad NextBox: https://launchpad.net/~nitrokey/+archive/ubuntu/nextbox/+packages
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
