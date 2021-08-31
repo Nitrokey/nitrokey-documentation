@@ -33,6 +33,11 @@ Nextcloud FAQ
   As Nextcloud is running inside a Docker container, you need to be root and execute the following:
   ``docker exec -it -u www-data nextbox-compose_app_1 /var/www/html/occ``
 
+**Q:** What to do about missing php-modules like `imagemagick`?
+  Similar to Apache, PHP is also provided by the Nextcloud container, therefore as we are using
+  the stock Nextcloud container this will also only be resolved once this is resolved by
+  the Nextcloud Team.
+
 
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
