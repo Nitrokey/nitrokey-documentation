@@ -19,4 +19,5 @@ Choose your product
    storage/index
    nitropad/index
    nitropc/index
+   nitrophone/index
    nextbox/index
