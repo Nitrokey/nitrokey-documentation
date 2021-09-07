@@ -100,3 +100,10 @@ This is another Line to be translated.
 * This line is one of the tests for the automated translation workflow with weblate.
 * Adding this text should trigger the conmplete workflow of translation.
 
+This is a paragraph that contains `a link`_ with an url below.
+
+.. _a link: https://domain.invalid/
+
+This is `another link <https://f-droid.org/F-Droid.apk>`__ with the definition of the url inline.
+
+This is `yet another link <https://f-droid.org/F-Droid.apk>`_ with the definition of the url inline.
