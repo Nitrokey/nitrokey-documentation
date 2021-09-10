@@ -8,9 +8,8 @@ Factory Reset
 There are two types of factory resets for Nitrokey Pro devices:
 
 - a factory reset of the OpenPGP smart card, for example using ``gpg
-  --card-edit`` and then ``factory-reset``, or
-- a factory reset of the entire Nitrokey device, for example using Nitrokey
-  App.
+  --card-edit``, followed by ``admin`` and finally: ``factory-reset``
+- a factory reset of the entire Nitrokey device using the Nitrokey App.
 
 Also, it is possible to generate a new AES key that is used to encrypt the
 Password Safe without performing a factory reset.
