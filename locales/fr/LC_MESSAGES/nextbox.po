@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-11 18:21+0200\n"
-"PO-Revision-Date: 2021-08-31 16:40+0000\n"
+"PO-Revision-Date: 2021-09-11 17:41+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: French <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-nextbox/fr/>\n"
 "Language: fr\n"
-"Language-Team: French <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-nextbox/fr/>\n"
-"Plural-Forms: nplurals=2; plural=n > 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../nextbox/backup-restore.rst:2
@@ -2671,9 +2672,8 @@ msgstr ""
 "alors désactiver le mode de maintenance."
 
 #: ../nextbox/technical/replace-drive.rst:2
-#, fuzzy
 msgid "Replace Internal Hard-Drive"
-msgstr "Disque dur interne (SSD ou HDD)"
+msgstr "Remplacer le disque dur interne"
 
 #: ../nextbox/technical/replace-drive.rst:7
 msgid ""
@@ -2682,42 +2682,52 @@ msgid ""
 "These steps are generally not covered by the support, you are modifying "
 "your NextBox at your own risk!"
 msgstr ""
+"Veuillez faire ceci seulement, si vous savez ce que vous faites. En "
+"modifiant la NextBox vous annulez votre garantie pour au moins le matériel "
+"de la NextBox. Ces étapes ne sont généralement pas couvertes par le support, "
+"vous modifiez votre NextBox à vos propres risques !"
 
 #: ../nextbox/technical/replace-drive.rst:12
 msgid "Prerequisites"
-msgstr ""
+msgstr "Conditions préalables"
 
 #: ../nextbox/technical/replace-drive.rst:14
 msgid "Linux(-like) operating system"
-msgstr ""
+msgstr "Système d'exploitation Linux(-like)"
 
 #: ../nextbox/technical/replace-drive.rst:15
 msgid "2.5'' hard-drive with a max height of 15mm, most are 7mm"
 msgstr ""
+"Disque dur de 2,5'' d'une hauteur maximale de 15mm, la plupart sont de 7mm"
 
 #: ../nextbox/technical/replace-drive.rst:16
 msgid "A user which can acquire root-rights using ``sudo``"
 msgstr ""
+"Un utilisateur qui peut acquérir les droits de racine en utilisant ``sudo``."
 
 #: ../nextbox/technical/replace-drive.rst:17
 msgid ""
 "The following commands must be available: ``sudo``, ``parted``, "
 "``mkfs.ext4``, ``bash``"
 msgstr ""
+"Les commandes suivantes doivent être disponibles : ``sudo``, ``parted``, "
+"``mkfs.ext4``, ``bash`''."
 
 #: ../nextbox/technical/replace-drive.rst:18
 msgid ""
 "At least a basic understanding about mounting / unmounting and shell-"
 "scripts (execution)"
 msgstr ""
+"Au moins une compréhension de base du montage/démontage et des scripts shell "
+"(exécution)."
 
 #: ../nextbox/technical/replace-drive.rst:19
 msgid "Phillips Screwdriver"
-msgstr ""
+msgstr "Tournevis Phillips"
 
 #: ../nextbox/technical/replace-drive.rst:20
 msgid "Set up the ssh-access on your NextBox"
-msgstr ""
+msgstr "Configurer l'accès ssh sur votre NextBox"
 
 #: ../nextbox/technical/replace-drive.rst:23
 msgid ""
@@ -2727,6 +2737,11 @@ msgid ""
 "destroy your runnning OS!** Any data on the passed hard-drive will "
 "inevitably be deleted!"
 msgstr ""
+"Le script utilisé obtiendra les droits root pour effacer le disque dur que "
+"vous lui aurez transmis. **Faites très attention à passer le bon "
+"périphérique au script, si vous passez votre partition système, ce script "
+"détruira votre système d'exploitation en cours d'exécution!** Toutes les "
+"données sur le disque dur passé seront inévitablement supprimées !"
 
 #: ../nextbox/technical/replace-drive.rst:30
 msgid ""
@@ -2734,41 +2749,50 @@ msgid ""
 "them**, if you do not understand what a certain step means this might be "
 "an indication that you should not do this by yourself."
 msgstr ""
+"Lisez complètement et attentivement les étapes suivantes **avant de les "
+"exécuter**, si vous ne comprenez pas la signification d'une certaine étape, "
+"cela peut être une indication que vous ne devriez pas le faire vous-même."
 
 #: ../nextbox/technical/replace-drive.rst:35
 msgid "Prepare New Hard-Disk"
-msgstr ""
+msgstr "Préparer le nouveau disque dur"
 
 #: ../nextbox/technical/replace-drive.rst:37
 msgid ""
 "Get your ``nextbox.conf`` file from your original hard-disk using ssh, it"
 " is located on your NextBox inside the ``/srv/nextbox`` directory"
 msgstr ""
+"Récupérez votre fichier ``nextbox.conf`` depuis votre disque dur d'origine "
+"en utilisant ssh, il est situé sur votre NextBox dans le répertoire ``/srv/"
+"nextbox``."
 
 #: ../nextbox/technical/replace-drive.rst:39
 msgid "Save your ``nextbox.conf`` on your computer"
-msgstr ""
+msgstr "Sauvegardez votre ``nextbox.conf`` sur votre ordinateur."
 
 #: ../nextbox/technical/replace-drive.rst:40
 msgid ""
 "Get the following script: "
 "https://raw.githubusercontent.com/Nitrokey/nextbox/master/simple_prepare_harddrive.sh"
 msgstr ""
+"Obtenez le script suivant : https://raw.githubusercontent.com/Nitrokey/"
+"nextbox/master/simple_prepare_harddrive.sh"
 
 #: ../nextbox/technical/replace-drive.rst:41
 msgid "Make the script executable: ``chmod +x simple_prepare_harddrive.sh``"
-msgstr ""
+msgstr "Rendez le script exécutable : ``chmod +x simple_prepare_harddrive.sh``"
 
 #: ../nextbox/technical/replace-drive.rst:42
-#, fuzzy
 msgid "Connect your new hard-disk to your computer"
-msgstr "Connectez votre ordinateur Mac"
+msgstr "Connectez votre nouveau disque dur à votre ordinateur"
 
 #: ../nextbox/technical/replace-drive.rst:43
 msgid ""
 "Determine your hard-disk's device name (e.g., ``/dev/sdb``) and make sure"
 " none of its partitions are mounted"
 msgstr ""
+"Déterminez le nom du périphérique de votre disque dur (par exemple, ``/dev/"
+"sdb``) et assurez-vous qu'aucune de ses partitions n'est montée."
 
 #: ../nextbox/technical/replace-drive.rst:47
 msgid ""
@@ -2779,6 +2803,10 @@ msgid ""
 "hard-disk, if you really need this you can comment out lines 23-26 inside"
 " the script."
 msgstr ""
+"**Encore une fois : pensez au moins deux fois à l'étape suivante. Le script "
+"refusera d'effectuer l'opération sur ``/dev/sda`` car il y a de fortes "
+"chances que ce soit le disque dur de votre système, si vous en avez vraiment "
+"besoin, vous pouvez commenter les lignes 23-26 dans le script."
 
 #: ../nextbox/technical/replace-drive.rst:52
 msgid ""
@@ -2786,10 +2814,15 @@ msgid ""
 "for your sudo-password please provide it to allow r/w access to the hard-"
 "drive:"
 msgstr ""
+"Exécutez le script en utilisant le nom du périphérique que vous avez "
+"déterminé. Lorsque le système vous demande votre mot de passe sudo, veuillez "
+"le fournir pour permettre l'accès au disque dur :"
 
 #: ../nextbox/technical/replace-drive.rst:62
 msgid "Watch the script's output for any errors, there should be none"
 msgstr ""
+"Regardez la sortie du script pour d'éventuelles erreurs, il ne devrait pas y "
+"en avoir."
 
 #: ../nextbox/technical/replace-drive.rst:63
 msgid ""
@@ -2798,36 +2831,49 @@ msgid ""
 "1. and 2., unmount the partition and you have successfully prepared your "
 "new hard-drive."
 msgstr ""
+"A la fin du script, il vous sera demandé de monter la partition créée et de "
+"copier le fichier ``nextbox.conf`` (dans ``/nextbox``) que vous avez copié "
+"aux étapes 1 et 2, de démonter la partition et vous aurez préparé avec "
+"succès votre nouveau disque dur."
 
 #: ../nextbox/technical/replace-drive.rst:70
 msgid "Replacement Guide"
-msgstr ""
+msgstr "Guide de remplacement"
 
 #: ../nextbox/technical/replace-drive.rst:72
 msgid ""
 "Inside the NextBox Nextcloud App go to \"System Settings\" and switch it "
 "off your NextBox using the \"Poweroff\" button"
 msgstr ""
+"Dans l'application NextBox Nextcloud, allez dans \"System Settings\" et "
+"éteignez votre NextBox en utilisant le bouton \"Poweroff\"."
 
 #: ../nextbox/technical/replace-drive.rst:74
 msgid ""
 "Once the Status LED is shortly off (not entirely, thus very dark) and the"
 " Ethernet port LEDs are off you can unplug all cables from your NextBox"
 msgstr ""
+"Une fois que le voyant d'état est presque éteint (pas entièrement, donc très "
+"sombre) et que les voyants du port Ethernet sont éteints, vous pouvez "
+"débrancher tous les câbles de votre NextBox."
 
 #: ../nextbox/technical/replace-drive.rst:76
 msgid "Unscrew all 8 Phillips screws"
-msgstr ""
+msgstr "Dévisser les 8 vis Phillips"
 
 #: ../nextbox/technical/replace-drive.rst:77
 msgid "Carefully remove the top-cover (as vertical as possible) first"
 msgstr ""
+"Retirez d'abord avec précaution le couvercle supérieur (aussi vertical que "
+"possible)."
 
 #: ../nextbox/technical/replace-drive.rst:78
 msgid ""
 "Again carefully, vertically remove the bottom cover, now you see the so-"
 "called bridge"
 msgstr ""
+"Encore une fois, avec précaution, retirez verticalement le couvercle "
+"inférieur, vous voyez maintenant ce qu'on appelle le pont."
 
 #: ../nextbox/technical/replace-drive.rst:79
 msgid ""
@@ -2835,6 +2881,9 @@ msgid ""
 "a electronics friendly surface like a desk as shown in the following "
 "image"
 msgstr ""
+"Déployez le câble USB à SATA et placez le pont NextBox à l'envers sur une "
+"surface adaptée à l'électronique, comme un bureau, comme le montre l'image "
+"ci-dessous."
 
 #: ../nextbox/technical/replace-drive.rst:86
 msgid ""
@@ -2842,6 +2891,9 @@ msgid ""
 " of screws may differ, depending on your hard-disk type) shown in the "
 "following image:"
 msgstr ""
+"Dévissez les vis Phillips qui maintiennent le disque dur en position (le "
+"nombre de vis peut varier selon le type de disque dur), comme le montre "
+"l'image suivante :"
 
 #: ../nextbox/technical/replace-drive.rst:93
 msgid ""
@@ -2849,10 +2901,13 @@ msgid ""
 "direction shown in the image above. Do not push it towards the other "
 "direction, you might damage the USB cable."
 msgstr ""
+"Une fois les vis retirées, poussez le disque dur avec précaution dans la "
+"direction indiquée sur l'image ci-dessus. Ne le poussez pas dans l'autre "
+"sens, vous pourriez endommager le câble USB."
 
 #: ../nextbox/technical/replace-drive.rst:95
 msgid "Remove the USB-to-SATA cable from the hard-drive"
-msgstr ""
+msgstr "Retirez le câble USB-SATA du disque dur."
 
 #: ../nextbox/technical/replace-drive.rst:98
 msgid ""
@@ -2860,26 +2915,36 @@ msgid ""
 "position and bending of the cable. If you have to: be careful to keep the"
 " force as small as possible onto the 90° part of the USB extension cable."
 msgstr ""
+"Évitez de débrancher le connecteur USB mâle-femelle pour ne pas modifier la "
+"position et la courbure du câble. Si vous devez le faire : veillez à exercer "
+"une force aussi faible que possible sur la partie à 90° du câble d'extension "
+"USB."
 
 #: ../nextbox/technical/replace-drive.rst:102
 msgid "Connect your previously prepared new hard-drive"
-msgstr ""
+msgstr "Connectez votre nouveau disque dur préalablement préparé"
 
 #: ../nextbox/technical/replace-drive.rst:103
 msgid ""
 "Carefully slide your new hard-drive into the bridge and fix it into the "
 "right position using the previously removed screws"
 msgstr ""
+"Glissez délicatement votre nouveau disque dur dans le pont et fixez-le dans "
+"la bonne position à l'aide des vis retirées précédemment."
 
 #: ../nextbox/technical/replace-drive.rst:105
 msgid ""
 "Fold the USB-to-SATA cable (in circles) into the open space behind the "
 "hard-disk."
 msgstr ""
+"Pliez le câble USB-SATA (en cercle) dans l'espace ouvert derrière le disque "
+"dur."
 
 #: ../nextbox/technical/replace-drive.rst:106
 msgid "Finally assemble your NextBox again in reverse order using steps 5. to 3."
 msgstr ""
+"Enfin, assemblez de nouveau votre NextBox dans l'ordre inverse en suivant "
+"les étapes 5. à 3."
 
 #: ../nextbox/technical/replace-drive.rst:108
 msgid ""
@@ -2890,6 +2955,13 @@ msgid ""
 "not change at all, it is likely that there is something wrong with your "
 "hard-drive wiring or contents."
 msgstr ""
+"Au premier démarrage après l'assemblage, donnez à la NextBox suffisamment de "
+"temps pour démarrer et obtenir tous les paquets nécessaires à partir "
+"d'Internet. **Assurez-vous que vous avez une connexion Ethernet**. Vous "
+"devez vous attendre à ce que la LED d'état change (la jaune sera la première)"
+" assez rapidement (moins de 2 minutes). Si la LED d'état ne change pas du "
+"tout, il est probable qu'il y ait un problème avec le câblage ou le contenu "
+"de votre disque dur."
 
 #: ../nextbox/troubleshooting.rst:2
 msgid "Troubleshooting"
@@ -3061,4 +3133,3 @@ msgstr "Dépannage"
 #~ "Access configuration is not identical to"
 #~ " the current one."
 #~ msgstr ""
-
