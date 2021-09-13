@@ -1,6 +1,15 @@
 NitroPhone
 **********
 
+.. contents:: :local:
+
+.. toctree::
+   :maxdepth: 0
+   :glob:
+   :hidden:
+
+   *
+
 Getting Started
 ###############
 
@@ -75,10 +84,26 @@ Kill Switches, which erase all the phone's data when triggered, are very risky i
 Warning "Your device is loading a different operating system"
 #############################################################
 
-Shortly after the phone is turned on, the warning "Your device is loading a different operating system" is displayed. This warning indicates that no ordinary Google Android is running and can be ignored. 
+Shortly after the phone is turned on, the warning "Your device is loading a different operating system" is displayed. This warning indicates that no ordinary Google Android is running and can be ignored.
 
 If you want to check the integrity of the operating system, you can use `remote verification <https://attestation.app/about>`__.
 
 .. figure:: /nitrophone/images/boot-screen.jpg
    :alt: Boot screen
-   
+
+Background Images
+#################
+
+You can use these nice background images.
+
+.. figure:: https://www.nitrokey.com/files/nitrophone/backgrounds/bg_logo_1.jpg
+   :width: 200px
+   :alt: Background image 1
+
+.. figure:: https://www.nitrokey.com/files/nitrophone/backgrounds/bg_logo_2.jpg
+   :width: 200px
+   :alt: Background image 2
+
+.. figure:: https://www.nitrokey.com/files/nitrophone/backgrounds/bg_logo_3.jpg
+   :width: 200px
+   :alt: Background image 3
