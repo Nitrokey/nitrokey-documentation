@@ -51,9 +51,9 @@ Recommended Apps
 * Browser: The pre-installed browser Vanadium is hardened and therefore recommended for high security. For better ad blocking, `Bromite <https://github.com/bromite/bromite/releases/latest>`__ browser is recommended instead.
 * Email: K9-mail and OpenKeyChain (for OpenPGP encryption) or FairEmail.
 * VPN: Orbot uses the free TOR network. Mullvad VPN and IVPN are paid VPN services.
-* Backup: The integrated backup (Seedvault) and Nextcloud.
+* Backup: The integrated backup (Seedvault) and Nextcloud. Choose Settings -> System -> Backup.
 * Messenger:
-   * `Signal <https://signal.org/download/>`__ is secure and now widely used. It can also be downloaded without an app store.
+   * `Signal <https://signal.org/android/apk/>`__ is secure and now widely used. It can also be downloaded without an app store.
    * `Element <https://element.io/>`__ does not require a central infrastructure and allows the use of own servers. An own account can be registered for free at `NitroChat <https://nitro.chat>`__ for example.
    * `Briar <https://briarproject.org/>`__ is a peer-to-peer messenger without any server at all, which can be used without internet with contacts nearby.
 * Contacts and calendar synchronization: DAVx5 supports CalDAV, CardDAV and WebCAL.
