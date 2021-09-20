@@ -14,14 +14,11 @@ Operating System Reinstallation
 
 1. Download one of the operating system images: `Ubuntu
    Linux <https://www.nitrokey.com/files/ci/nitropad/ubuntu-oem/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/nitropad/qubes-oem/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropad/debian-oem/>`__,
-   `Linux Mint <https://www.nitrokey.com/files/linuxmint/latest.iso>`__
+   `Linux Mint <https://linuxmint.com/download.php>`__
 
 2. Optional: Download hash sum and
    `verify <https://proprivacy.com/guides/how-why-and-when-you-should-hash-check#how-to-hash-check>`__
-   the downloaded operating system image: `Ubuntu
-   Linux <https://www.nitrokey.com/files/ci/nitropad/ubuntu-oem/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/nitropad/qubes-oem/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropad/debian-oem/>`__,
-   `Linux
-   Mint <https://www.nitrokey.com/files/linuxmint/latest.iso.sha256sum>`__
+   the downloaded operating system image.
 
 3. Write the operating system image to any USB drive. Possible
    applications:
