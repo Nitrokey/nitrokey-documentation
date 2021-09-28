@@ -11,6 +11,8 @@ Choose your product
    :titlesonly:
 
 
+   faq/index
+
    fido2/index
    u2f/index
    hsm/index
