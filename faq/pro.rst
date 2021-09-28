@@ -1,5 +1,5 @@
-Generic FAQ
-===========
+Nitrokey Pro 2 FAQ
+==================
 
 **Q:** Which drivers can be used?
 
