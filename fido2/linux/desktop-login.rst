@@ -100,7 +100,7 @@ And restart ``udev`` service
 3. Install ``libpam-u2f``
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-On Ubuntu 20.04 it is possible to download directly ``ibpam-u2f`` from the official repos
+On Ubuntu 20.04 it is possible to download directly ``libpam-u2f`` from the official repos
 
 .. code-block:: bash
 
