@@ -1,12 +1,39 @@
 Nitrokey HSM FAQ
 ===========
 
+
+**Q:** How many data objects (DF, EF) can be stored?
+  **Nitrokey HSM 2:** 76 KB EEPROM total, max. 150 x ECC-521 keys, max. 300 x
+  ECC/AES-256 keys, max. 19 x RSA-4096 keys, max. 38 x RSA-2048 keys
+
+  **Nitrokey HSM:** 124 dataobjects (DF, EF) can be created. Each EF can have a
+  size of up to 256 byte. The total storage capacity of ca. 32 KByte is shared
+  dynamically among keys and data objects.
+
+**Q:** How fast is encryption and signing?
+  * Key generation on-card: RSA 2048: 2 per minute
+  * Key generation on-card: ECC 256: 10 per minute.
+  * Signature creation with off-card hash: RSA 2048; 100 per minute
+  * Signature creation with off-card hash: ECDSA 256: 360 per minute
+  * Signature creation with on-card SHA-256 and 1 kb data: RSA 2048; 68 per minute
+  * Signature creation with on-card SHA-256 and 1 kb data: ECDSA 256: 125 per minute
+
+**Q:** How good is the Random Number Generator (RNG)?
+  Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2
+  (according to AIS 31 of the BSI).
+
 **Q:** Which API can I use?
-    OpenSC: Comprehensive instructions exist for OpenSC framework. There is nitrotool as a more comfortable frontend to OpenSC.
-    GPGSM (from GnuPG): Nitrokey HSM is supported since GnuPG 2.1.
-    Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11 module is provided by the sc-hsm-embedded project.
-    This PKCS#11 module is useful for deployments where key generation at the user's workplace is not required. The PKCS#11 module also supports major electronic signature cards available in the German market.
-    OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open smart card development platform. See the public support scripts for details. To import existing keys you can use its SCSH or NitroKeyWrapper.
+  OpenSC: Comprehensive instructions exist for OpenSC framework. There is
+  nitrotool as a more comfortable frontend to OpenSC.  GPGSM (from GnuPG):
+  Nitrokey HSM is supported since GnuPG 2.1.  Embedded Systems: For systems
+  with minimal memory footprint a read/only PKCS#11 module is provided by the
+  sc-hsm-embedded project.  This PKCS#11 module is useful for deployments
+  where key generation at the user's workplace is not required. The PKCS#11
+  module also supports major electronic signature cards available in the
+  German market.  OpenSCDP: The SmartCard-HSM is fully integrated with
+  OpenSCDP, the open smart card development platform. See the public support
+  scripts for details. To import existing keys you can use its SCSH or
+  NitroKeyWrapper.
 
 
 **Q:** How to use the HSM for Login
