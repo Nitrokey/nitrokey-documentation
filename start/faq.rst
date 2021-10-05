@@ -32,7 +32,6 @@ Nitrokey Start FAQ
 **Q:** Does the Nitrokey Start contain a secure chip or just a normal microcontroller?
    Nitrokey Start is implemented in the microprocessor.
 
-
 **Q:** How large is the storage capacity?
    The Nitrokey Start doesn't contain storage capability for ordinary data (it can
    only store cryptographic keys and certificates).
