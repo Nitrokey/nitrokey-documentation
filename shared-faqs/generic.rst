@@ -94,6 +94,7 @@ Generic Nitrokeys FAQ
 
 **Q:** Which algorithms and maximum key length are supported?
   See the following table:
+
 +-------------------+-------+---------------+-------------------+-----+-------+
 |                   | Start | Pro + Storage | Pro 2 + Storage 2 | HSM | HSM2  |
 +-------------------+-------+---------------+-------------------+-----+-------+

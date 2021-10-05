@@ -1,5 +1,16 @@
 Nitrokey FIDO2 FAQ
-===========
+==================
+
+**Q:** Which Operating Systems are supported?
+   Windows, Linux, and Mac OS X. Also some support (FIDO2) for Android.
+
+
+**Q:** What can I use the Nitrokey for?
+   See the `frontpage`_ for an overview of supported use cases.
+
+
+**Q:** What is the default PINs?
+   **PIN:** "1234"
 
 **Q:** What happens if I lose my FIDO device?
    When securing accounts using FIDO (two-factor authentication and
@@ -11,3 +22,5 @@ Nitrokey FIDO2 FAQ
 
 
 
+
+.. include:: ../shared-faqs/hyperlinks.rst 
