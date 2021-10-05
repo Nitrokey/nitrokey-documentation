@@ -11,4 +11,5 @@ Choose your operating system:
 
    Qubes OS <qubes/index>
    Ubuntu Linux <ubuntu/index>
+   Frequently Asked Questions <faq>
 

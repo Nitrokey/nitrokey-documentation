@@ -12,4 +12,4 @@ Choose your operating system:
    Windows <windows/index>
    macOS <mac/index>
    Linux <linux/index>
-
+   Frequently Asked Questions <faq>

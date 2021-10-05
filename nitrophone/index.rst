@@ -8,7 +8,7 @@ NitroPhone
    :glob:
    :hidden:
 
-   *
+   
 
 Getting Started
 ###############
@@ -90,6 +90,10 @@ If you want to check the integrity of the operating system, you can use `remote 
 
 .. figure:: /nitrophone/images/boot-screen.jpg
    :alt: Boot screen
+
+Further informations on GrapheneOs
+#################
+Here <https://grapheneos.org/faq> you can find further informations on GrapheneOs
 
 Background Images
 #################
