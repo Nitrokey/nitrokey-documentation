@@ -25,6 +25,9 @@ Nitrokey HSM FAQ
     76 KB EEPROM total, max. 150 x ECC-521 keys, max. 300 x
     ECC/AES-256 keys, max. 19 x RSA-4096 keys, max. 38 x RSA-2048 keys
 
+**Q:** How many keys can I store? 
+    Nitrokey HSM can store 20 RSA-2048 and 31 ECC-256 key pairs.
+
 **Q:** How fast is encryption and signing?
     * Key generation on-card: RSA 2048: 2 per minute
     * Key generation on-card: ECC 256: 10 per minute.
@@ -43,18 +46,26 @@ Nitrokey HSM FAQ
 
 **Q:** Which API can I use?
     OpenSC: Comprehensive instructions exist for OpenSC framework. There is
-    nitrotool as a more comfortable frontend to OpenSC.  GPGSM (from GnuPG):
-    Nitrokey HSM is supported since GnuPG 2.1.  Embedded Systems: For systems
-    with minimal memory footprint a read/only PKCS#11 module is provided by the
-    sc-hsm-embedded project.  This PKCS#11 module is useful for deployments
-    where key generation at the user's workplace is not required. The PKCS#11
-    module also supports major electronic signature cards available in the
-    German market.  OpenSCDP: The SmartCard-HSM is fully integrated with
+    nitrotool as a more comfortable frontend to OpenSC.  
+    
+    GPGSM (from GnuPG): Nitrokey HSM is supported since GnuPG 2.1.  Embedded
+    Systems: For systems with minimal memory footprint a read/only PKCS#11
+    module is provided by the sc-hsm-embedded project.  This PKCS#11 module is
+    useful for deployments where key generation at the user's workplace is not
+    required. The PKCS#11 module also supports major electronic signature cards
+    available in the German market.  
+    
+    OpenSCDP: The SmartCard-HSM is fully integrated with
     OpenSCDP, the open smart card development platform. See the public support
     scripts for details. To import existing keys you can use its SCSH or
     NitroKeyWrapper.
 
 
+**Q:** Is the Nitrokey Pro Common Criteria or FIPS certified?
+    The security controler's hardware and operating system are
+    Common Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_,
+    click "ICs, Smart Cards and Smart Card-Related Devices and Systems" and
+    search for "NXP JCOP 3 P60").
 
 
 .. include:: ../shared-faqs/hyperlinks.rst 

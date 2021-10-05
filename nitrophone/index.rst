@@ -8,7 +8,7 @@ NitroPhone
    :glob:
    :hidden:
 
-   *
+   
 
 Getting Started
 ###############

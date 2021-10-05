@@ -20,6 +20,9 @@ Nitrokey FIDO2 FAQ
    can still log in with the second Nitrokey FIDO2 (or with another second
    factor).
 
+**Q:** How large is the storage capacity?
+   The Nitrokey FIDO2 doesn't contain storage capability for ordinary data (it can
+   only store cryptographic keys and certificates).
 
 
 

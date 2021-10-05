@@ -9,19 +9,6 @@ Choose your product
 .. toctree::
    :maxdepth: 1
    :titlesonly:
-
-
-.. _ref-section3:
-.. toctree::
-   :maxdepth: 1
-   :titlesonly:
-
-   faq/index
-
-.. _ref-section4:
-.. toctree::
-   :maxdepth: 1
-   :titlesonly:
    
    fido2/index
    u2f/index
