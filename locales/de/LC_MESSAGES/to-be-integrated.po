@@ -4,27 +4,30 @@
 # Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Nitrokey Documentation \n"
+"Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-06 01:52+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-10-06 01:41+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: German <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-to-be-integrated/de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../to-be-integrated.rst:1
 msgid "# storage"
-msgstr ""
+msgstr "# Lagerung"
 
 #: ../to-be-integrated.rst:4
 msgid "Configure Hidden Volumes:"
-msgstr ""
+msgstr "Versteckte Volumes konfigurieren:"
 
 #: ../to-be-integrated.rst:6
 msgid ""
@@ -32,6 +35,10 @@ msgid ""
 " volume\". Now you need to enter a new password twice to protect your "
 "hidden volume. The password strength is indicated below."
 msgstr ""
+"Entsperren Sie den verschlüsselten Datenträger über das Menü der Nitrokey-"
+"App. Wählen Sie \"Verstecktes Volumen einrichten\". Nun müssen Sie zweimal "
+"ein neues Passwort eingeben, um Ihr verstecktes Volume zu schützen. Die "
+"Passwortstärke wird unten angezeigt."
 
 #: ../to-be-integrated.rst:10
 msgid ""
@@ -39,6 +46,10 @@ msgid ""
 "short. Passwords like used for hidden devices can potentially be attacked"
 " unlimited which is why they need to be sufficiently strong."
 msgstr ""
+"Hinweis: PINs können nur dreimal ausprobiert werden, weshalb sie kurz sein "
+"können. Passwörter, wie sie für versteckte Geräte verwendet werden, können "
+"potenziell unbegrenzt angegriffen werden, weshalb sie ausreichend stark sein "
+"müssen."
 
 #: ../to-be-integrated.rst:17
 msgid ""
@@ -47,6 +58,11 @@ msgid ""
 "choice because it could destroy data on the (not-hidden) encrypted volume"
 " and reveal the existience of the hidden volume."
 msgstr ""
+"Als nächstes müssen Sie den zu verwendenden Speicherbereich festlegen. "
+"Versteckte Volumes werden im leeren Bereich des verschlüsselten Volumes "
+"gespeichert. Dies ist eine kritische Entscheidung, da sie Daten auf dem ("
+"nicht versteckten) verschlüsselten Volume zerstören und die Existenz des "
+"versteckten Volumes aufdecken könnte."
 
 #: ../to-be-integrated.rst:13
 #, python-format
@@ -61,6 +77,16 @@ msgid ""
 "buffer = 20% The hidden volume should end in a distance before the end of"
 " the storage. For example: 90%"
 msgstr ""
+"Sie sollten eine FAT32-Partition auf Ihrem verschlüsselten Volume verwenden, "
+"da Journaling-Dateisysteme, insbesondere NTFS, die verschlüsselten Daten "
+"zerstören können. Kopieren Sie einige Dateien auf das verschlüsselte Volume, "
+"bevor Sie das versteckte Volume erstellen. Sobald Sie ein verstecktes Volume "
+"konfiguriert haben, sollten Sie keine Dateien mehr auf dem verschlüsselten "
+"Volume hinzufügen oder ändern. Ermitteln Sie den Speicherplatz, den Ihre "
+"Dateien auf dem verschlüsselten Volume verbrauchen. Beispiel: 10% Tas "
+"versteckte Volume sollte nach Ihren Dateien auf dem verschlüsselten Volume "
+"beginnen. Zum Beispiel: 10% files + 10% buffer = 20% Tas versteckte Volume "
+"sollte in einem Abstand vor dem Ende des Speichers enden. Zum Beispiel: 90%"
 
 #: ../to-be-integrated.rst:19
 msgid ""
@@ -68,10 +94,14 @@ msgid ""
 "must not overlap. Otherwise they would override and destroy each other's "
 "data. Each hidden volume would require a different password."
 msgstr ""
+"Falls Sie zwei oder mehr versteckte Volumes verwenden, beachten Sie, dass "
+"sich deren Speicherbereiche nicht überschneiden dürfen. Andernfalls würden "
+"sie die Daten des jeweils anderen überschreiben und zerstören. Für jedes "
+"versteckte Volume wird ein anderes Kennwort benötigt."
 
 #: ../to-be-integrated.rst:21
 msgid "Usage of Hidden Volumes:"
-msgstr ""
+msgstr "Verwendung von versteckten Volumes:"
 
 #: ../to-be-integrated.rst:23
 msgid ""
@@ -85,18 +115,29 @@ msgid ""
 "various operating systems. Make sure to unmount/eject all partitions on "
 "the hidden volumes before locking or disconnecting the Nitrokey."
 msgstr ""
+"Wählen Sie \"Verschlüsseltes Volume freischalten\" und geben Sie Ihre "
+"Benutzer-PIN ein. Wählen Sie \"Verstecktes Volume freischalten\" und geben "
+"Sie eines der Passwörter des versteckten Volumes ein. Wenn dies das erste "
+"Mal ist, müssen Sie möglicherweise eine Partition auf dem versteckten "
+"Datenträger erstellen. Windows öffnet ein entsprechendes Fenster und fordert "
+"Sie auf, dies zu tun. Unter Linux und Mac OS müssen Sie möglicherweise einen "
+"Partitionsmanager öffnen und eine Partition manuell erstellen. Sie können so "
+"viele Partitionen erstellen, wie Sie möchten. Wir empfehlen FAT(32), wenn "
+"Sie von verschiedenen Betriebssystemen aus auf die Partition zugreifen "
+"möchten. Stellen Sie sicher, dass Sie alle Partitionen auf den versteckten "
+"Volumes aushängen/auswerfen, bevor Sie den Nitrokey sperren oder abziehen."
 
 #: ../to-be-integrated.rst:28
 msgid "Also see older but comprehensive Nitrokey Storage manual."
-msgstr ""
+msgstr "Siehe auch das ältere, aber umfassende Nitrokey Storage Handbuch."
 
 #: ../to-be-integrated.rst:32
 msgid "# pro"
-msgstr ""
+msgstr "# pro"
 
 #: ../to-be-integrated.rst:36
 msgid "PKCS#11 Driver"
-msgstr ""
+msgstr "PKCS#11-Treiber"
 
 #: ../to-be-integrated.rst:38
 msgid ""
@@ -105,6 +146,10 @@ msgid ""
 "PuTTY/KiTTY, OpenSSH, OpenSSL, or any other PKCS#11 compatible software, "
 "you should install OpenSC."
 msgstr ""
+"Wenn Sie S/MIME-E-Mail-Verschlüsselung mit Thunderbird, TrueCrypt/VeraCrypt, "
+"zertifikatsbasierte SSL-Authentifizierung mit Firefox, PuTTY/KiTTY, OpenSSH, "
+"OpenSSL oder jede andere PKCS#11-kompatible Software verwenden möchten, "
+"sollten Sie OpenSC installieren."
 
 #: ../to-be-integrated.rst:40
 msgid ""
@@ -112,6 +157,10 @@ msgid ""
 "GnuPG/OpenPGP. But the other way around works fine. If you want to use "
 "Nitrokey with both GnuPG and PKCS#11, generate the keys with GnuPG."
 msgstr ""
+"Beachten Sie, dass ein Nitrokey, der mit OpenSC initialisiert wurde, nicht "
+"mit GnuPG/OpenPGP funktioniert. Der umgekehrte Weg funktioniert jedoch "
+"problemlos. Wenn Sie Nitrokey sowohl mit GnuPG als auch mit PKCS#11 "
+"verwenden möchten, erzeugen Sie die Schlüssel mit GnuPG."
 
 #: ../to-be-integrated.rst:42
 msgid ""
@@ -121,6 +170,11 @@ msgid ""
 "Currently it's limit to the authentication certificate and not widely "
 "tested yet.)"
 msgstr ""
+"Verwenden Sie PKCS#11 nicht parallel zu GnuPG, da beide sich gegenseitig "
+"behindern und unerwartete Probleme entstehen können. (Es gibt ein weiteres "
+"vielversprechendes Projekt scd-pkcs11 in Entwicklung, das diese "
+"Einschränkung möglicherweise überwindet. Derzeit ist es auf das "
+"Authentifizierungszertifikat beschränkt und noch nicht umfassend getestet)."
 
 #: ../to-be-integrated.rst:44
 msgid ""
@@ -128,14 +182,17 @@ msgid ""
 "2, 3). These are general instructions how to use X.509 certificates. "
 "Alternative PKCS#11 Driver:"
 msgstr ""
+"Anleitungen, wie man ein gültiges X.509-Zertifikat mit Nitrokey erstellt (1, "
+"2, 3). Dies sind allgemeine Anweisungen zur Verwendung von X.509-"
+"Zertifikaten. Alternativer PKCS#11-Treiber:"
 
 #: ../to-be-integrated.rst:47
 msgid "The recommended PKCS#11 driver is OpenSC."
-msgstr ""
+msgstr "Der empfohlene PKCS#11-Treiber ist OpenSC."
 
 #: ../to-be-integrated.rst:49
 msgid "Windows Mini Driver"
-msgstr ""
+msgstr "Windows Mini-Treiber"
 
 #: ../to-be-integrated.rst:51
 msgid ""
@@ -145,6 +202,12 @@ msgid ""
 "browser, Windows Login). To install the driver, you may need to allow the"
 " installation of unsigned drivers first. Aloaha"
 msgstr ""
+"Dieser Mini-Treiber ermöglicht die Integration von Nitrokey in den "
+"Zertifikatspeicher von Windows. Anschließend können alle Anwendungen, die "
+"diesen Zertifikatsspeicher nutzen, mit Nitrokey verwendet werden (z.B. "
+"Internet Explorer, Google Chrome Webbrowser, Windows Login). Um den Treiber "
+"zu installieren, müssen Sie eventuell zuerst die Installation von "
+"unsignierten Treibern erlauben. Aloaha"
 
 #: ../to-be-integrated.rst:54
 msgid ""
@@ -153,16 +216,23 @@ msgid ""
 "and with Windows as well as applications to encrypt and sign PDFs and the"
 " hard disk."
 msgstr ""
+"Alle Anwendungen von Aloaha arbeiten mit dem Nitrokey zusammen. Dazu gehört "
+"eine Middleware zur Integration von Nitrokey mit anderen PKCS#11-basierten "
+"Anwendungen und mit Windows sowie Anwendungen zum Verschlüsseln und "
+"Signieren von PDFs und der Festplatte."
 
 #: ../to-be-integrated.rst:56
 msgid "Alternative PKCS#11 Driver:"
-msgstr ""
+msgstr "Alternativer PKCS#11-Treiber:"
 
 #: ../to-be-integrated.rst:58
 msgid ""
 "The recommended PKCS#11 driver is OpenSC. Alternatively, you could use "
 "Peter Koch's PKCS#11 driver which has the following limitations:"
 msgstr ""
+"Der empfohlene PKCS#11-Treiber ist OpenSC. Alternativ können Sie auch den "
+"PKCS#11-Treiber von Peter Koch verwenden, der jedoch die folgenden "
+"Einschränkungen aufweist:"
 
 #: ../to-be-integrated.rst:60
 msgid ""
@@ -170,16 +240,22 @@ msgid ""
 "generated on the Nitrokey) The Linux version does not allow to generate "
 "keys. Modification of the password/PIN under Linux is not possible."
 msgstr ""
+"Kein Import von bestehenden X.509-Zertifikaten. (Stattdessen müssen "
+"Schlüssel auf dem Nitrokey generiert werden) Die Linux-Version erlaubt es "
+"nicht, Schlüssel zu generieren. Eine Änderung des Passworts/PINs unter Linux "
+"ist nicht möglich."
 
 #: ../to-be-integrated.rst:64
 msgid "p11-glue"
-msgstr ""
+msgstr "p11-Kleber"
 
 #: ../to-be-integrated.rst:66
 msgid ""
 "P11-glue uses PKCS#11 as glue between crypto libraries and security "
 "applications on the open source desktop. Articles in German"
 msgstr ""
+"P11-glue verwendet PKCS#11 als Klebstoff zwischen Krypto-Bibliotheken und "
+"Sicherheitsanwendungen auf dem Open-Source-Desktop. Artikel auf Deutsch"
 
 #: ../to-be-integrated.rst:69
 msgid ""
@@ -188,10 +264,13 @@ msgid ""
 "gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter "
 "CentOS."
 msgstr ""
+"Eine allgemeine und gut verständliche Einführung bietet der Artikel "
+"Magisches Leuchten im Linux Magazin 2010/12. Eine umfangreiche Anleitung "
+"gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter CentOS."
 
 #: ../to-be-integrated.rst:75
 msgid "**Q:** How can I login into Windows?"
-msgstr ""
+msgstr "**Q:** Wie kann ich mich bei Windows anmelden?"
 
 #: ../to-be-integrated.rst:75
 msgid ""
@@ -201,10 +280,18 @@ msgid ""
 "Note that the Mini Driver for Nitrokey Pro may not work yet for write "
 "mode."
 msgstr ""
+"Um auf Nitrokey-Geräte schreibgeschützt zuzugreifen, laden Sie diesen Mini-"
+"Treiber (CSP) herunter und installieren Sie ihn. Wenn Sie Windows Server "
+"verwenden, müssen Sie möglicherweise die Überprüfung der Treibersignatur "
+"deaktivieren, bevor Sie den Treiber installieren können. Beachten Sie, dass "
+"der Mini-Treiber für Nitrokey Pro möglicherweise noch nicht im Schreibmodus "
+"funktioniert."
 
 #: ../to-be-integrated.rst:77
 msgid "There exist different ways to use a Nitrokey to logon on Windows:"
 msgstr ""
+"Es gibt verschiedene Möglichkeiten, einen Nitrokey für die Anmeldung unter "
+"Windows zu verwenden:"
 
 #: ../to-be-integrated.rst:79
 msgid ""
@@ -215,14 +302,21 @@ msgid ""
 "on Windows domain computers using MS Active Directory based on Smart "
 "Policy for other Nitrokey devices."
 msgstr ""
+"Anmeldung auf eigenständigen Windows-Computern basierend auf "
+"EIDAuthenticate. Alternativ können Sie auch OpenSC installieren und die PKCS#"
+"11 Credentials von Aloaha Smart Login verwenden. Anmeldung auf Windows-"
+"Domänencomputern mit MS Active Directory basierend auf OpenPGP-CSP "
+"Minidriver für Nitrokey Storage 2 Nitrokey Pro 2 Anmeldung auf Windows-"
+"Domänencomputern mit MS Active Directory basierend auf Smart Policy für "
+"andere Nitrokey-Geräte."
 
 #: ../to-be-integrated.rst:84
 msgid "**Q:** How can I login into Linux? Linux Login with PAM"
-msgstr ""
+msgstr "**Q:** Wie kann ich mich in Linux einloggen? Linux-Anmeldung mit PAM"
 
 #: ../to-be-integrated.rst:87
 msgid "You have two options: pam_p11 or Poldi."
-msgstr ""
+msgstr "Sie haben zwei Möglichkeiten: pam_p11 oder Poldi."
 
 #: ../to-be-integrated.rst:89
 msgid ""
@@ -230,6 +324,9 @@ msgid ""
 "S/MIME certificates. Please have a look at the documentation for more "
 "information."
 msgstr ""
+"Die Lösung mit pam_p11 ist schwieriger zu erreichen und basiert auf S/MIME-"
+"Zertifikaten. Bitte schauen Sie in die Dokumentation für weitere "
+"Informationen."
 
 #: ../to-be-integrated.rst:91
 msgid ""
@@ -238,12 +335,19 @@ msgid ""
 "installation of poldi (e.g. 'sudo apt-get install libpam-poldi' on "
 "Ubuntu) the following steps are needed to get it working."
 msgstr ""
+"Poldi 0.4.1 funktioniert einwandfrei mit Nitrokey für die PAM-"
+"Authentifizierung mit RSA-Schlüsseln (siehe Fehlerbehebung für Informationen "
+"zu ECC-Schlüsseln). Neben der Installation von Poldi (z.B. 'sudo apt-get "
+"install libpam-poldi' unter Ubuntu) sind folgende Schritte erforderlich, "
+"damit es funktioniert."
 
 #: ../to-be-integrated.rst:93
 msgid ""
 "It is necessary to already have keys generated on the Nitrokey, as the "
 "authentication key is used by PAM."
 msgstr ""
+"Es ist notwendig, dass die Schlüssel bereits auf dem Nitrokey erzeugt "
+"wurden, da der Authentifizierungsschlüssel von PAM verwendet wird."
 
 #: ../to-be-integrated.rst:95
 msgid ""
@@ -253,16 +357,24 @@ msgid ""
 "you have to add a line to /etc/poldi/localdb/users which contains the "
 "following information"
 msgstr ""
+"Zunächst müssen Sie die \"Application ID\" Ihres Nitrokeys herausfinden. Sie "
+"können \"gpg --card-status | grep Application\" verwenden, um "
+"herauszufinden, welche Ihre ist. Sie sieht aus wie "
+"'D00600012401020000000000xxxxxxxx' oder ähnlich. Nun müssen Sie eine Zeile "
+"in /etc/poldi/localdb/users einfügen, die folgende Informationen enthält"
 
 #: ../to-be-integrated.rst:97
 msgid "<YourApplicationID> <YourUsername>"
-msgstr ""
+msgstr "<IhreAnwendungsID> <IhrBenutzername>"
 
 #: ../to-be-integrated.rst:99
 msgid ""
 "This could look like 'D00600012401020000000000xxxxxxxx nitrokeyuser'. Now"
 " dump the public key from the Nitrokey into poldi local db:"
 msgstr ""
+"Dies könnte wie 'D00600012401020000000000xxxxxxxx nitrokeyuser' aussehen. "
+"Geben Sie nun den öffentlichen Schlüssel von Nitrokey in die lokale "
+"Datenbank von poldi ein:"
 
 #: ../to-be-integrated.rst:101
 msgid ""
@@ -270,18 +382,25 @@ msgid ""
 "/etc/poldi/localdb/keys/<YourApplicationID>\" \"SCD READKEY --advanced "
 "OPENPGP.3\" /bye'"
 msgstr ""
+"sudo sh -c 'gpg-connect-agent \"/datafile /etc/poldi/localdb/keys/"
+"<IhreAnwendungsID>\" \"SCD READKEY --advanced OPENPGP.3\" /bye'"
 
 #: ../to-be-integrated.rst:103
 msgid ""
 "Please be aware that you have to insert your Application ID in the line "
 "above with the one of your stick!"
 msgstr ""
+"Bitte beachten Sie, dass Sie in der oberen Zeile Ihre Application ID mit der "
+"Ihres Sticks eintragen müssen!"
 
 #: ../to-be-integrated.rst:105
 msgid ""
 "Then you have to configure PAM. Just add \"auth sufficient pam_poldi.so\""
 " to pam configuration files according to your needs:"
 msgstr ""
+"Dann müssen Sie PAM konfigurieren. Fügen Sie einfach \"auth sufficient "
+"pam_poldi.so\" zu den PAM-Konfigurationsdateien entsprechend Ihren "
+"Bedürfnissen hinzu:"
 
 #: ../to-be-integrated.rst:107
 msgid ""
@@ -289,6 +408,10 @@ msgid ""
 "console login /etc/pam.d/sudo for sudo authentication /etc/pam.d/gnome-"
 "screensaver for login back from a locked screen etc."
 msgstr ""
+"/etc/pam.d/common-auth für die grafische Benutzeranmeldung /etc/pam.d/login "
+"für die Konsolenanmeldung /etc/pam.d/sudo für die sudo-Authentifizierung /"
+"etc/pam.d/gnome-screensaver für die Rückmeldung von einem gesperrten "
+"Bildschirm usw."
 
 #: ../to-be-integrated.rst:113
 msgid ""
@@ -297,24 +420,35 @@ msgid ""
 " that booting into rescue mode from Grub requires a root password, so "
 "keep that or a live CD which can read your filesystems to hand."
 msgstr ""
+"Hinweis: Es ist gefährlich, mit Pam herumzuspielen, also stellen Sie sicher, "
+"dass Sie eine Möglichkeit haben, auf den Rechner zuzugreifen, wenn Sie die "
+"Authentifizierung komplett abbrechen. Denken Sie daran, dass das Booten in "
+"den Rettungsmodus von Grub ein Root-Passwort erfordert, also halten Sie "
+"dieses oder eine Live-CD, die Ihre Dateisysteme lesen kann, bereit."
 
 #: ../to-be-integrated.rst:115
 msgid ""
 "Here you find further instructions (in German, partially outdated). "
 "Troubleshooting"
 msgstr ""
+"Hier finden Sie weitere Anleitungen (auf Deutsch, teilweise veraltet). "
+"Fehlersuche"
 
 #: ../to-be-integrated.rst:118
 msgid ""
 "If you get an error similar to 'ERR 100663414 Invalid ID <SCD>' you "
 "should try instead"
 msgstr ""
+"Wenn Sie eine ähnliche Fehlermeldung wie 'ERR 100663414 Ungültige ID <SCD>' "
+"erhalten, sollten Sie stattdessen versuchen"
 
 #: ../to-be-integrated.rst:120
 msgid ""
 "poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> "
 "/etc/poldi/localdb/keys"
 msgstr ""
+"poldi-ctrl -k > <IhreAnwendungsID>; sudo mv <IhreAnwendungsID> /etc/poldi/"
+"localdb/keys"
 
 #: ../to-be-integrated.rst:122
 msgid ""
@@ -326,20 +460,29 @@ msgid ""
 " eventually. In the meantime the only option is to build poldi from "
 "source."
 msgstr ""
+"Bitte beachten Sie, dass Sie in der obigen Zeile Ihre Application ID mit der "
+"Ihres Sticks einfügen müssen! ECC Keys Leider hat poldi noch keine "
+"Unterstützung für ECC Keys. Es gibt aber einen Patch für ECC-Schlüssel, die "
+"mit Nitrokey Start verwendet werden. Dieser ist bereits im Master-Zweig des "
+"poldi-Entwicklungs-Repositorys enthalten und wird daher irgendwann in einer "
+"neueren Version veröffentlicht werden. In der Zwischenzeit besteht die "
+"einzige Möglichkeit darin, poldi aus den Quellen zu bauen."
 
 #: ../to-be-integrated.rst:128
 msgid "**Q:** How can I login with One Time Passwords?"
-msgstr ""
+msgstr "**Q:** Wie kann ich mich mit einmaligen Passwörtern anmelden?"
 
 #: ../to-be-integrated.rst:128
 msgid ""
 "One-Time-Passwords (OTP) are used for secure login to websites and local "
 "applications."
 msgstr ""
+"One-Time-Passwörter (OTP) werden für die sichere Anmeldung bei Websites und "
+"lokalen Anwendungen verwendet."
 
 #: ../to-be-integrated.rst:130
 msgid "Two OTP modes exist:"
-msgstr ""
+msgstr "Es gibt zwei OTP-Modi:"
 
 #: ../to-be-integrated.rst:132
 msgid ""
@@ -347,6 +490,10 @@ msgid ""
 "unsure, assume you are using this mode. HMAC-based One-time Passwords "
 "(HOTP) is used for local applications and computer logins."
 msgstr ""
+"Zeitbasierte Einmal-Passwörter (TOTP) werden häufig für Websites verwendet. "
+"Wenn Sie unsicher sind, gehen Sie davon aus, dass Sie diesen Modus "
+"verwenden. HMAC-basierte One-Time-Passwörter (HOTP) werden für lokale "
+"Anwendungen und Computeranmeldungen verwendet."
 
 #: ../to-be-integrated.rst:135
 msgid ""
@@ -354,6 +501,9 @@ msgid ""
 " need to download and install the latest Nitrokey App. Time-based One-"
 "time Passwords - TOTP"
 msgstr ""
+"Um One-Time-Passwörter mit Ihrem Nitrokey Pro oder Nitrokey Storage zu "
+"verwenden, müssen Sie die neueste Nitrokey App herunterladen und "
+"installieren. Zeitbasierte Einmal-Passwörter - TOTP"
 
 #: ../to-be-integrated.rst:138
 msgid ""
@@ -361,10 +511,13 @@ msgid ""
 "login to a Nextcloud account. Generic instructions for all other "
 "services."
 msgstr ""
+"Für die Anmeldung bei einem Google-Konto. Für die Anmeldung bei einem "
+"Microsoft-Konto. Für die Anmeldung bei einem Nextcloud-Konto. Allgemeine "
+"Anweisungen für alle anderen Dienste."
 
 #: ../to-be-integrated.rst:143
 msgid "**Q:** How can I use the Nitrokey Pro with Android?"
-msgstr ""
+msgstr "**Q:** Wie kann ich den Nitrokey Pro mit Android verwenden?"
 
 #: ../to-be-integrated.rst:145
 msgid ""
@@ -372,6 +525,9 @@ msgid ""
 "with OpenKeychain. This enables one to encrypt/decrypt E-Mails or files "
 "via OpenPGP."
 msgstr ""
+"Es ist möglich, den Nitrokey auf einem Android-Gerät in Kombination mit "
+"OpenKeychain zu verwenden. Dies ermöglicht es, E-Mails oder Dateien über "
+"OpenPGP zu verschlüsseln/entschlüsseln."
 
 #: ../to-be-integrated.rst:147
 msgid ""
@@ -379,12 +535,17 @@ msgid ""
 "look there, if you like. The following instructions are based on "
 "OpenKeychain."
 msgstr ""
+"Cotech bietet Android-Software mit kommerziellem Support an. Bitte schauen "
+"Sie sich dort um, wenn Sie möchten. Die folgende Anleitung basiert auf "
+"OpenKeychain."
 
 #: ../to-be-integrated.rst:149
 msgid ""
 "Tested with Nitrokey Start, Pro and Storage in combination with Android "
 "7.1, OpenKeychain 4.5 and K9Mail 5.207. Prerequisites"
 msgstr ""
+"Getestet mit Nitrokey Start, Pro und Storage in Kombination mit Android 7.1, "
+"OpenKeychain 4.5 und K9Mail 5.207. Voraussetzungen"
 
 #: ../to-be-integrated.rst:152
 msgid ""
@@ -392,10 +553,13 @@ msgid ""
 "Nitrokey with your phone OpenKeychain installed on Device Public key "
 "saved on the device or uploaded on a keyserver"
 msgstr ""
+"USB-OTG-fähiges Android-Telefon USB-OTG-Kabel zum Verbinden des Nitrokey mit "
+"Ihrem Telefon OpenKeychain auf dem Gerät installiert Öffentlicher Schlüssel "
+"auf dem Gerät gespeichert oder auf einen Keyserver hochgeladen"
 
 #: ../to-be-integrated.rst:157
 msgid "First steps"
-msgstr ""
+msgstr "Erste Schritte"
 
 #: ../to-be-integrated.rst:159
 msgid ""
@@ -408,12 +572,24 @@ msgid ""
 "key' to import a reference to the private key of the Nitrokey. That’s "
 "basically it."
 msgstr ""
+"Um die Schlüssel des Nitrokey zu importieren, sollten Sie zunächst die "
+"OpenKeychain-App starten. Stecken Sie dann den Nitrokey mit dem USB-OTG-"
+"Kabel ein. OpenKeychain startet einen Dialog zur Verwendung des Nitrokeys ("
+"ggf. müssen Sie die Verwendung des Schlüssels mit OpenKeychain erst "
+"akzeptieren). Nun kann man wählen, ob man den öffentlichen Schlüssel auf "
+"einem Keyserver sucht oder den öffentlichen Schlüssel aus dem Speicher "
+"wählt. Nachdem der öffentliche Schlüssel importiert wurde, tippen Sie auf "
+"'Schlüssel verbinden', um eine Referenz auf den privaten Schlüssel des "
+"Nitrokeys zu importieren. Das war's eigentlich schon."
 
 #: ../to-be-integrated.rst:161
 msgid ""
 "In the case that no there are no keys on the Nitrokey yet, OpenKeychain "
 "will help with the creation of a new key pair instead. Usage"
 msgstr ""
+"Für den Fall, dass noch keine Schlüssel auf dem Nitrokey vorhanden sind, "
+"hilft OpenKeychain stattdessen bei der Erstellung eines neuen "
+"Schlüsselpaares. Verwendung"
 
 #: ../to-be-integrated.rst:164
 msgid ""
@@ -423,6 +599,11 @@ msgid ""
 "OpenKeychain to decrypt your mails automatically. It is important to "
 "choose the right key in the K9Mail account settings first."
 msgstr ""
+"Sie können alle Funktionen von OpenKeychain und Apps, die OpenKeychain "
+"nutzen, verwenden. Sie können also Nachrichten oder Dateien direkt mit der "
+"App verschlüsseln/entschlüsseln oder z.B. K9Mail mit OpenKeychain "
+"kombinieren, um Ihre Mails automatisch zu entschlüsseln. Es ist wichtig, den "
+"richtigen Schlüssel in den K9Mail-Kontoeinstellungen zu wählen."
 
 #: ../to-be-integrated.rst:166
 msgid ""
@@ -432,24 +613,32 @@ msgid ""
 "to 'Language and Input' > 'Current Keyboard' > 'Hardware show input "
 "method'."
 msgstr ""
+"Beachten Sie, dass Sie möglicherweise die Bildschirmtastatur in den Android-"
+"Einstellungen aktivieren müssen, um die PIN einzugeben, da das System den "
+"Nitrokey als physische Tastatur erkennt und daher versucht, die "
+"Bildschirmtastatur auszublenden. Gehen Sie zu \"Sprache und Eingabe\" > "
+"\"Aktuelle Tastatur\" > \"Hardware-Eingabemethode anzeigen\"."
 
 #: ../to-be-integrated.rst:169
 msgid "**Q:** How can I use the Nitrokey Pro with Iphone?"
-msgstr ""
+msgstr "**Q:** Wie kann ich den Nitrokey Pro mit dem Iphone verwenden?"
 
 #: ../to-be-integrated.rst:170
 msgid "Currently it is not possible"
-msgstr ""
+msgstr "Derzeit ist es nicht möglich"
 
 #: ../to-be-integrated.rst:172
 msgid "**Q:** How can I use the Nitrokey Pro with Ubuntu Phone?"
-msgstr ""
+msgstr "**Q:** Wie kann ich den Nitrokey Pro mit Ubuntu Phone verwenden?"
 
 #: ../to-be-integrated.rst:172
 msgid ""
 "There are instructions on gnupg.org about how to use a OpenPGP Card on a "
 "UbuntuPhone which should work for the Nitrokey Start, Pro and Storage."
 msgstr ""
+"Auf gnupg.org gibt es eine Anleitung, wie man eine OpenPGP-Karte auf einem "
+"UbuntuPhone verwendet, die für Nitrokey Start, Pro und Storage funktionieren "
+"sollte."
 
 #: ../to-be-integrated.rst:174
 msgid ""
@@ -458,6 +647,11 @@ msgid ""
 "S/MIME/X.509 is mostly used by enterprises. If you are in doubt which one"
 " to choose, you should use OpenPGP."
 msgstr ""
+"**Q:** Wie kann ich meine E-Mails verschlüsseln? Es gibt zwei weit "
+"verbreitete Standards für die E-Mail-Verschlüsselung. Während OpenPGP/GnuPG "
+"bei Privatpersonen beliebt ist, wird S/MIME/X.509 hauptsächlich von "
+"Unternehmen verwendet. Wenn Sie sich nicht sicher sind, welchen Standard Sie "
+"wählen sollen, sollten Sie OpenPGP verwenden."
 
 #: ../to-be-integrated.rst:177
 msgid ""
@@ -465,26 +659,35 @@ msgid ""
 "instructions for using S/MIME with the Nitrokey. Note: SMIME certificates"
 " can be purchased cheaply from CERTUM and SSLTrust."
 msgstr ""
+"Anweisungen zur Verwendung des OpenPGP-Standards mit dem Nitrokey "
+"Anweisungen zur Verwendung von S/MIME mit dem Nitrokey. Hinweis: SMIME-"
+"Zertifikate können kostengünstig bei CERTUM und SSLTrust erworben werden."
 
 #: ../to-be-integrated.rst:180
 msgid ""
 "Please note, that it is currently advised to use either OpenPGP or S/MIME"
 " encryption, but not both with the Nitrokey."
 msgstr ""
+"Bitte beachten Sie, dass derzeit empfohlen wird, entweder OpenPGP- oder S/"
+"MIME-Verschlüsselung zu verwenden, aber nicht beides mit dem Nitrokey."
 
 #: ../to-be-integrated.rst:182
 msgid "To use a Nitrokey Storage with Thunderbird 78+, you can try this tutorial."
 msgstr ""
+"Um einen Nitrokey-Speicher mit Thunderbird 78+ zu verwenden, können Sie "
+"diese Anleitung ausprobieren."
 
 #: ../to-be-integrated.rst:184
 msgid "**Q:** How can I do Hard Disk Encryption?"
-msgstr ""
+msgstr "**Q:** Wie kann ich Festplatten verschlüsseln?"
 
 #: ../to-be-integrated.rst:187
 msgid ""
 "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (formerly "
 "TrueCrypt)"
 msgstr ""
+"Für: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (früher "
+"TrueCrypt)"
 
 #: ../to-be-integrated.rst:190
 msgid ""
@@ -494,6 +697,11 @@ msgid ""
 "TrueCrypt as well. Follow these steps to use the program with Nitrokey "
 "Storage or Pro:"
 msgstr ""
+"VeraCrypt ist eine freie und quelloffene Festplattenverschlüsselungssoftware "
+"für Windows, macOS und GNU/Linux. Es ist der Nachfolger von TrueCrypt und "
+"daher empfehlenswert, obwohl die folgenden Anweisungen auch für TrueCrypt "
+"gelten sollten. Folgen Sie diesen Schritten, um das Programm mit Nitrokey "
+"Storage oder Pro zu verwenden:"
 
 #: ../to-be-integrated.rst:192 ../to-be-integrated.rst:704
 msgid ""
@@ -508,6 +716,17 @@ msgid ""
 "Create a container, choose the keyfile on the device as an alternative to"
 " a password."
 msgstr ""
+"Installieren Sie OpenSC Wählen Sie die Bibliothek in VeraCrypt unter "
+"Einstellungen>Einstellungen>Sicherheitstoken (Speicherort hängt vom System "
+"ab, z.B. /usr/lib/opensc). Erzeugen Sie eine 64-Byte-Schlüsseldatei über "
+"Tools>Keyfile Generator. Nun sollten Sie in der Lage sein, die erzeugte "
+"Schlüsseldatei über Extras>Sicherheitstoken-Schlüsseldateien verwalten zu "
+"importieren. Wählen Sie den ersten Slot ([0] User PIN). Die Schlüsseldatei "
+"wird dann auf dem Nitrokey als 'Private Data Object 1' (PrivDO1) "
+"gespeichert. Danach sollten Sie die ursprüngliche Schlüsseldatei auf Ihrem "
+"Computer sicher löschen! Nun können Sie VeraCrypt mit dem Nitrokey verwenden:"
+" Erstellen Sie einen Container, wählen Sie die Schlüsseldatei auf dem Gerät "
+"als Alternative zum Passwort."
 
 #: ../to-be-integrated.rst:199
 msgid ""
@@ -516,12 +735,19 @@ msgid ""
 "Instead it stores a keyfile on the Nitrokey which theoretically could be "
 "stolen by a computer virus after the user enters the PIN."
 msgstr ""
+"Sicherheitsüberlegungen: Bitte beachten Sie, dass VeraCrypt nicht die volle "
+"Sicherheit nutzt, die Nitrokey (und Smartcards im Allgemeinen) bieten. "
+"Stattdessen speichert es eine Schlüsseldatei auf dem Nitrokey, die "
+"theoretisch von einem Computervirus gestohlen werden könnte, nachdem der "
+"Benutzer die PIN eingegeben hat."
 
 #: ../to-be-integrated.rst:201
 msgid ""
 "Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
 "described security limitation."
 msgstr ""
+"Hinweis: Aloaha Crypt basiert auf TrueCrypt/VeraCrypt, jedoch ohne die "
+"beschriebenen Sicherheitseinschränkungen."
 
 #: ../to-be-integrated.rst:204
 msgid ""
@@ -529,12 +755,19 @@ msgid ""
 "instructions how to use Nitrokey to encrypt your hard disk under Linux "
 "with LUKS/dm-crypt. Other instruction."
 msgstr ""
+"Festplattenverschlüsselung unter Linux, basierend auf LUKS/dm-crypt Hier "
+"finden Sie eine ausgezeichnete Anleitung, wie Sie Nitrokey verwenden, um "
+"Ihre Festplatte unter Linux mit LUKS/dm-crypt zu verschlüsseln. Andere "
+"Anleitung."
 
 #: ../to-be-integrated.rst:207
 msgid ""
 "Purism has created a simple script to add the Nitrokey/LibremKey as a way"
 " to unlock LUKS partitions (not tested by Nitrokey yet)."
 msgstr ""
+"Purism hat ein einfaches Skript erstellt, um den Nitrokey/LibremKey als "
+"Möglichkeit zum Entsperren von LUKS-Partitionen hinzuzufügen (noch nicht von "
+"Nitrokey getestet)."
 
 #: ../to-be-integrated.rst:209
 msgid ""
@@ -542,18 +775,27 @@ msgid ""
 "Storage based on the Password Safe (not tested by Nitrokey yet). A "
 "description on how to use it on Gentoo can be found here."
 msgstr ""
+"Dieses Projekt zielt darauf ab, die Verwendung von LUKS mit dem Nitrokey Pro "
+"oder Storage basierend auf dem Password Safe (noch nicht von Nitrokey "
+"getestet) zu vereinfachen. Eine Beschreibung, wie man es auf Gentoo benutzt, "
+"findet man hier."
 
 #: ../to-be-integrated.rst:211
 msgid ""
 "For Arch Linux, see initramfs-scencrypt. Storage Encryption on Linux, "
 "Based on EncFS"
 msgstr ""
+"Für Arch Linux, siehe initramfs-scencrypt. Speicherverschlüsselung unter "
+"Linux, basierend auf EncFS"
 
 #: ../to-be-integrated.rst:214
 msgid ""
 "Prerequisite: Please ensure that you installed the device driver, changed"
 " the default PINs and generated or imported keys with GnuPG."
 msgstr ""
+"Voraussetzung ist: Bitte stellen Sie sicher, dass Sie den Gerätetreiber "
+"installiert, die Standard-PINs geändert und Schlüssel mit GnuPG erzeugt oder "
+"importiert haben."
 
 #: ../to-be-integrated.rst:216
 msgid ""
@@ -561,66 +803,82 @@ msgid ""
 "You may follow these steps to use it with very long passwords and "
 "Nitrokey:"
 msgstr ""
+"Ein einfach zu verwendendes verschlüsseltes Dateisystem ist EncFS, das auf "
+"FUSE basiert. Sie können diese Schritte befolgen, um es mit sehr langen "
+"Passwörtern und Nitrokey zu verwenden:"
 
 #: ../to-be-integrated.rst:218
 msgid "Initialization"
-msgstr ""
+msgstr "Initialisierung"
 
 #: ../to-be-integrated.rst:220
 msgid ""
 "# Create a key file with random data: $ dd bs=64 count=1 if=/dev/urandom "
 "of=keyfile"
 msgstr ""
+"# Erstellen einer Schlüsseldatei mit Zufallsdaten: $ dd bs=64 count=1 if=/"
+"dev/urandom of=keyfile"
 
 #: ../to-be-integrated.rst:223
 msgid ""
 "# Encrypt the key file and use the User-ID of your Nitrokey $ gpg "
 "--encrypt keyfile"
 msgstr ""
+"# Verschlüsseln Sie die Schlüsseldatei und verwenden Sie die User-ID Ihres "
+"Nitrokeys $ gpg --encrypt keyfile"
 
 #: ../to-be-integrated.rst:226
 msgid ""
 "# Remove the key file in clear text: $ rm keyfile # you may want to use "
 "'wipe' or 'shred' to securely delete the keyfile"
 msgstr ""
+"# Entfernen Sie die Schlüsseldatei im Klartext: $ rm keyfile # Sie können "
+"'wipe' oder 'shred' verwenden, um die Schlüsseldatei sicher zu löschen"
 
 #: ../to-be-integrated.rst:229
 msgid "# Create mount point: $ mkdir ~/.cryptdir ~/cryptdir"
-msgstr ""
+msgstr "# Einhängepunkt erstellen: $ mkdir ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:232
 msgid ""
 "# Create the actual encryption folder $ gpg -d keyfile.gpg | encfs -S "
 "~/.cryptdir ~/cryptdir"
 msgstr ""
+"# Erstellen des eigentlichen Verschlüsselungsordners $ gpg -d keyfile.gpg | "
+"encfs -S ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:235
 msgid ""
 "# There may appears an error message about missing permission of "
 "fusermount # This message can be ignored"
 msgstr ""
+"# Es kann eine Fehlermeldung über fehlende Berechtigung von fusermount "
+"erscheinen # Diese Meldung kann ignoriert werden"
 
 #: ../to-be-integrated.rst:238
 msgid "# Unmount the new file system: $ fusermount -u ~/cryptdir"
-msgstr ""
+msgstr "# Hängen Sie das neue Dateisystem aus: $ fusermount -u ~/cryptdir"
 
 #: ../to-be-integrated.rst:241
 msgid "Usage"
-msgstr ""
+msgstr "Verwendung"
 
 #: ../to-be-integrated.rst:243
 msgid ""
 "# Mount encrypted file system and enter PIN of Nitrokey: $ gpg -d "
 "keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
 msgstr ""
+"# Verschlüsseltes Dateisystem einhängen und PIN von Nitrokey eingeben: $ gpg "
+"-d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:246
 msgid "# After usage, unmount the file system: $ fusermount -u ~/cryptdir"
 msgstr ""
+"# Nach der Benutzung das Dateisystem aushängen: $ fusermount -u ~/cryptdir"
 
 #: ../to-be-integrated.rst:250
 msgid "Storage Encryption on Linux, Based on ECryptFS"
-msgstr ""
+msgstr "Speicherverschlüsselung unter Linux, basierend auf ECryptFS"
 
 #: ../to-be-integrated.rst:252
 msgid ""
@@ -629,10 +887,15 @@ msgid ""
 "instructions. Alternatively, try ESOSI or follow these steps using OpenSC"
 " and OpenVPN:"
 msgstr ""
+"eCryptfs ist ein dateibasiertes transparentes Verschlüsselungs-Dateisystem "
+"für Linux, das mit Nitrokey über einen PKCS#11-Treiber verwendet werden "
+"kann. Siehe diese Anweisungen. Alternativ können Sie ESOSI ausprobieren oder "
+"diese Schritte mit OpenSC und OpenVPN durchführen:"
 
 #: ../to-be-integrated.rst:254
 msgid "Warning: This will delete existing keys on your Nitrokey!"
 msgstr ""
+"Warnung: Dadurch werden vorhandene Schlüssel auf Ihrem Nitrokey gelöscht!"
 
 #: ../to-be-integrated.rst:256
 msgid ""
@@ -640,10 +903,14 @@ msgid ""
 "objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 "
 "--format pkcs12 --auth-id 3 --verify-pin"
 msgstr ""
+"# Importiere das Zertifikat und den Schlüssel in den Nitrokey $ pkcs15-init "
+"--delete-objects privkey,pubkey --id 3 --store-private-key user@"
+"example.com.p12 --format pkcs12 --auth-id 3 --verify-pin"
 
 #: ../to-be-integrated.rst:259
 msgid "# Create the file ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
 msgstr ""
+"# Erstellen Sie die Datei ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
 
 #: ../to-be-integrated.rst:262
 msgid ""
@@ -652,6 +919,10 @@ msgid ""
 "private=true $ openvpn --show-pkcs11-ids path to opensc-pkcs11 module "
 "Certificate"
 msgstr ""
+"# Diesen Inhalt eingeben: $ pkcs11-log-level=5 "
+"pkcs11-provider1,name=name,library=/usr/lib/opensc-pkcs11.so,cert-"
+"private=true $ openvpn --show-pkcs11-ids Pfad zum opensc-pkcs11-Modul "
+"Zertifikat"
 
 #: ../to-be-integrated.rst:266
 msgid ""
@@ -660,10 +931,15 @@ msgid ""
 " Serial: 066E04 Serialized id: "
 "ZeitControl/PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
 msgstr ""
+"DN: /description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@"
+"example.com Seriennummer: 066E04 Serialized id: ZeitControl/PKCS\\x2315"
+"\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
 
 #: ../to-be-integrated.rst:270
 msgid "# Copy the serialized id for later usage: $ ecryptfs-manager"
 msgstr ""
+"# Kopieren Sie die serialisierte ID für die spätere Verwendung: $ ecryptfs-"
+"manager"
 
 #: ../to-be-integrated.rst:273
 msgid ""
@@ -671,10 +947,13 @@ msgid ""
 " # Choose pkcs11-helper # Enter the serialized ID of step 3 to PKCS#11 "
 "ID."
 msgstr ""
+"# Es wird eine Liste mit Optionen angezeigt. Wählen Sie die Option \"Add "
+"public key to keyring\" # Wählen Sie pkcs11-helper # Geben Sie die "
+"serialisierte ID aus Schritt 3 als PKCS#11 ID ein."
 
 #: ../to-be-integrated.rst:281
 msgid "**Q:** How can I sign and encrypt Files and PDFs? GnuPG"
-msgstr ""
+msgstr "**Q:** Wie kann ich Dateien und PDFs signieren und verschlüsseln? GnuPG"
 
 #: ../to-be-integrated.rst:284
 msgid ""
@@ -683,10 +962,15 @@ msgid ""
 "Office / Libre Office or any other PDF reader supporting electronic "
 "signatures."
 msgstr ""
+"Verwenden Sie das gpgsm-Tool zum Signieren, Überprüfen, Verschlüsseln und "
+"Entschlüsseln von Dateien. Verwenden Sie einen Signaturschlüssel auf einem "
+"Nitrokey, um Dokumente mit Acrobat Reader, Open Office / Libre Office oder "
+"jedem anderen PDF-Reader, der elektronische Signaturen unterstützt, zu "
+"signieren."
 
 #: ../to-be-integrated.rst:287
 msgid "GPA - GNU Privacy Assistant"
-msgstr ""
+msgstr "GPA - GNU-Datenschutz-Assistent"
 
 #: ../to-be-integrated.rst:289
 msgid ""
@@ -694,20 +978,27 @@ msgid ""
 "various features to manage keys and cards. It also allows file operations"
 " such as file encryption, decryption, signing."
 msgstr ""
+"Der Gnu Privacy Assistant (GPA) erkennt Nitrokey sofort und verfügt über "
+"verschiedene Funktionen zur Verwaltung von Schlüsseln und Karten. Er "
+"ermöglicht auch Dateivorgänge wie Verschlüsselung, Entschlüsselung und "
+"Signierung von Dateien."
 
 #: ../to-be-integrated.rst:292
 msgid "SOPS - Secrect OPerationS"
-msgstr ""
+msgstr "SOPS - Secrect OPerationS"
 
 #: ../to-be-integrated.rst:294
 msgid ""
 "SOPS is an editor of encrypted files that supports YAML, JSON and BINARY "
 "formats and encrypts with AWS KMS and PGP. You can find it on github."
 msgstr ""
+"SOPS ist ein Editor für verschlüsselte Dateien, der die Formate YAML, JSON "
+"und BINARY unterstützt und mit AWS KMS und PGP verschlüsselt. Sie können es "
+"auf Github finden."
 
 #: ../to-be-integrated.rst:297
 msgid "Aloaha"
-msgstr ""
+msgstr "Aloaha"
 
 #: ../to-be-integrated.rst:299
 msgid ""
@@ -717,16 +1008,25 @@ msgid ""
 "appropriate variant. After this Windows recognize your certificate and "
 "you can sign the document as it is shown in the screencast below."
 msgstr ""
+"Aloaha bietet mehrere Anwendungen zum Verschlüsseln und Signieren von PDFs. "
+"Alle von ihnen, die eine Smartcard-Integration ermöglichen, arbeiten mit "
+"Nitrokey. Sie können zum Beispiel Schlüssel und Zertifikat mit OpenSC oder "
+"einer anderen geeigneten Variante importieren. Danach erkennt Windows Ihr "
+"Zertifikat und Sie können das Dokument signieren, wie es im folgenden "
+"Screencast gezeigt wird."
 
 #: ../to-be-integrated.rst:301
 msgid "GpgEx for Windows Explorer"
-msgstr ""
+msgstr "GpgEx für den Windows-Explorer"
 
 #: ../to-be-integrated.rst:303
 msgid ""
 "GpgEx integrates smoothly into Windows Explorer to allow encryption and "
 "decryption of files. Install it as part of the GPG4Win package."
 msgstr ""
+"GpgEx integriert sich nahtlos in den Windows-Explorer und ermöglicht die Ver-"
+" und Entschlüsselung von Dateien. Installieren Sie es als Teil des GPG4Win-"
+"Pakets."
 
 #: ../to-be-integrated.rst:306
 msgid ""
@@ -734,6 +1034,9 @@ msgid ""
 "please ensure that you installed the device driver and initialized the "
 "device (e.g. generated keys)."
 msgstr ""
+"Bevor Sie eine dieser Anwendungen mit Ihrem Nitrokey verwenden, stellen Sie "
+"bitte sicher, dass Sie den Gerätetreiber installiert und das Gerät "
+"initialisiert haben (z.B. Schlüssel erzeugt)."
 
 #: ../to-be-integrated.rst:308
 msgid ""
@@ -741,6 +1044,10 @@ msgid ""
 "authentication method but it is only used rarely. If you are unsure what "
 "this means, this approach is most likely not relevant for you."
 msgstr ""
+"Die zertifikatsbasierte Anmeldung mit TLS und Webbrowser ist eine sehr "
+"sichere Authentifizierungsmethode, wird aber nur selten verwendet. Wenn Sie "
+"sich nicht sicher sind, was dies bedeutet, ist dieser Ansatz wahrscheinlich "
+"nicht für Sie relevant."
 
 #: ../to-be-integrated.rst:310
 msgid ""
@@ -750,10 +1057,16 @@ msgid ""
 " Certificate authentication can be used easily with the Nitrokey and also"
 " with any other certificate storages. Mozilla Firefox"
 msgstr ""
+"Diese Seite bezieht sich auf Websites und Anwendungen, die eine "
+"Zertifikatsauthentifizierung unterstützen, so dass die Benutzer bei der "
+"Anmeldung keinen Benutzernamen und kein Passwort eingeben müssen. WebID ist "
+"zum Beispiel ein großartiges Protokoll, das davon Gebrauch macht. Die "
+"Zertifikatsauthentifizierung kann problemlos mit dem Nitrokey und auch mit "
+"anderen Zertifikatspeichern verwendet werden. Mozilla Firefox"
 
 #: ../to-be-integrated.rst:313
 msgid "You need to install the PKCS#11 driver:"
-msgstr ""
+msgstr "Sie müssen den PKCS#11-Treiber installieren:"
 
 #: ../to-be-integrated.rst:315
 msgid ""
@@ -764,18 +1077,30 @@ msgid ""
 "the Browse button to select the previously downloaded PKCS11 driver file."
 " Confirm and close all dialogs."
 msgstr ""
+"Laden Sie den PKCS11-Treiber herunter und speichern Sie ihn auf Ihrer "
+"lokalen Festplatte oder installieren Sie OpenSC. Öffnen Sie die "
+"Einstellungen in Firefox und gehen Sie zu Datenschutz & Sicherheit -> "
+"Sicherheit (nur eine Überschrift) -> Schaltfläche 'Sicherheitsgeräte...'. "
+"Drücken Sie die Schaltfläche Laden. Geben Sie \"Nitrokey\" als Modulname ein "
+"und drücken Sie die Schaltfläche Durchsuchen, um die zuvor heruntergeladene "
+"PKCS11-Treiberdatei auszuwählen. Bestätigen und schließen Sie alle Dialoge."
 
 #: ../to-be-integrated.rst:319
 msgid ""
 "Now you are ready to access websites which provide certificate "
 "authentication. Internet Explorer"
 msgstr ""
+"Jetzt können Sie auf Websites zugreifen, die eine "
+"Zertifikatsauthentifizierung anbieten. Internet Explorer"
 
 #: ../to-be-integrated.rst:322
 msgid ""
 "Install this Mini Driver for Windows. Now you are ready to access "
 "websites which provide certificate authentication. Google Chrome"
 msgstr ""
+"Installieren Sie diesen Mini-Treiber für Windows. Jetzt können Sie auf "
+"Websites zugreifen, die eine Zertifikatsauthentifizierung anbieten. Google "
+"Chrome"
 
 #: ../to-be-integrated.rst:325
 msgid ""
@@ -783,6 +1108,9 @@ msgid ""
 "instructions. Now you are ready to access websites which provide "
 "certificate authentication. WebID"
 msgstr ""
+"Unter Windows installieren Sie diesen Mini-Treiber. Unter Linux folgen Sie "
+"bitte diesen Anweisungen. Jetzt können Sie auf Websites zugreifen, die eine "
+"Zertifikatsauthentifizierung anbieten. WebID"
 
 #: ../to-be-integrated.rst:328
 msgid ""
@@ -803,6 +1131,20 @@ msgid ""
 "Liferay         Blog FusionForge     web-based project-management and "
 "collaboration software"
 msgstr ""
+"WebID ist eine Technologie, die sichere und föderierte soziale Websites "
+"ermöglicht. Hier ist ein Video (WebM, Ogg-Video, H.264), das zeigt, wie man "
+"mit Nitrokey ein WebID-Profil erstellt und es anschließend in einem "
+"Internetcafé in Singapur benutzt. Nitrokey schützt vor Computerviren, die "
+"sonst den Benutzernamen und das Passwort stehlen könnten. Websites Website-"
+"Kategorie CAcert gemeinschaftsbasierte Zertifizierungsstelle PrivaSphere "
+"Secure messaging HM Revenue & Customs UK's tax administration Software "
+"Application Category Roundcube (plugin) Webmail Drupal (WebID, Certificate "
+"login) Content management system Media Wiki (plugin) Wiki Joomla!         "
+"Inhaltsverwaltungssystem Apache + mod_ssl Webserver OpenSSH SSH (Remote "
+"Secure Shell) Client und Server Wordpress (Plugin) Blog und CMS Tivoli "
+"Systemmanagement-Framework Globalscape EFT Managed File Transfer (MFT) "
+"Oracle Identity Manager I&AM Fuse Source Middleware Liferay Blog FusionForge "
+"webbasierte Software für Projektmanagement und Zusammenarbeit"
 
 #: ../to-be-integrated.rst:350
 msgid ""
@@ -810,16 +1152,22 @@ msgid ""
 "client certificate authentication isn't popular and better alternatives "
 "at the horizon."
 msgstr ""
+"Diese Website ist eine gute Lektüre über starke "
+"Authentifizierungsmechanismen, warum die Client-Zertifikat-Authentifizierung "
+"nicht beliebt ist und bessere Alternativen in Aussicht stehen."
 
 #: ../to-be-integrated.rst:352
 msgid "**Q:** How can I use Enterprise Authentication?"
-msgstr ""
+msgstr "**Q:** Wie kann ich die Unternehmensauthentifizierung verwenden?"
 
 #: ../to-be-integrated.rst:354
 msgid ""
 "LinOTP privacyIDEA RCDevs OpenOTP Usage of Nitrokey HSM as a secure key "
 "store for the Forgerock OpenDJ server and Forgerock Identity Gateway"
 msgstr ""
+"LinOTP privacyIDEA RCDevs OpenOTP Verwendung von Nitrokey HSM als sicherer "
+"Schlüsselspeicher für den Forgerock OpenDJ Server und Forgerock Identity "
+"Gateway"
 
 #: ../to-be-integrated.rst:360
 msgid ""
@@ -829,16 +1177,24 @@ msgid ""
 "installed on the system (only the core application GnuPG is needed). "
 "Furthermore you should install PuTTY. Preparation on client"
 msgstr ""
+"**Q:** Wie kann ich SSH für die Serververwaltung unter Windows nutzen? Der "
+"Nitrokey sollte bereits PGP-Schlüssel installiert haben und der lokale GnuPG-"
+"Schlüsselbund sollte die Schlüssel kennen, d.h. GPG4Win sollte auf dem "
+"System installiert sein (nur die Kernanwendung GnuPG wird benötigt). "
+"Außerdem sollten Sie PuTTY installieren. Vorbereitung auf dem Client"
 
 #: ../to-be-integrated.rst:364 ../to-be-integrated.rst:736
 msgid ""
 "There are two steps needed to make PuTTY work. At first we need to enable"
 " PuTTY support of GnuPG. To achieve this we use the following command:"
 msgstr ""
+"Um PuTTY zum Laufen zu bringen, sind zwei Schritte erforderlich. Zuerst "
+"müssen wir die GnuPG-Unterstützung von PuTTY aktivieren. Um dies zu "
+"erreichen, verwenden wir den folgenden Befehl:"
 
 #: ../to-be-integrated.rst:366 ../to-be-integrated.rst:738
 msgid "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
-msgstr ""
+msgstr "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
 
 #: ../to-be-integrated.rst:368 ../to-be-integrated.rst:740
 msgid ""
@@ -850,10 +1206,18 @@ msgid ""
 "click on an empty space and choose \"New\" -> \"Shortcut\". Now you "
 "should insert the actual command and proceed:"
 msgstr ""
+"Nun wollen wir sicherstellen, dass der gpg-agent automatisch im Hintergrund "
+"gestartet wird (Sie können ihn auch manuell mit dem unten stehenden Befehl "
+"starten). Wir erstellen eine Verknüpfung zu gpg-connect-agent.exe. Halten "
+"Sie die Windows-Taste gedrückt und drücken Sie 'R'. Geben Sie \"shell:"
+"startup\" in das sich öffnende Textfeld ein (siehe Bild unten). Der Windows-"
+"Explorer öffnet sich und Sie klicken mit der rechten Maustaste auf eine "
+"leere Stelle und wählen \"Neu\" -> \"Verknüpfung\". Nun sollten Sie den "
+"eigentlichen Befehl einfügen und fortfahren:"
 
 #: ../to-be-integrated.rst:370 ../to-be-integrated.rst:742
 msgid "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
-msgstr ""
+msgstr "\"C:\\Programme (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
 
 #: ../to-be-integrated.rst:374 ../to-be-integrated.rst:746
 msgid ""
@@ -861,16 +1225,22 @@ msgid ""
 "alright you now can use PuTTY as usual and PuTTY will make use of the "
 "Nitrokey automatically. Preparation for the server"
 msgstr ""
+"Starten Sie Ihr System neu, um sicherzustellen, dass die Verknüpfung "
+"funktioniert. Wenn alles in Ordnung ist, können Sie PuTTY wie gewohnt "
+"verwenden und PuTTY wird den Nitrokey automatisch verwenden. Vorbereitung "
+"für den Server"
 
 #: ../to-be-integrated.rst:377 ../to-be-integrated.rst:749
 msgid "You can generate an authorized_keys file by running"
-msgstr ""
+msgstr "Sie können eine authorized_keys-Datei erzeugen, indem Sie"
 
 #: ../to-be-integrated.rst:379 ../to-be-integrated.rst:751
 msgid ""
 "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID "
 ">> authorized_keys"
 msgstr ""
+"\"C:\\Programme (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID >> "
+"authorized_keys"
 
 #: ../to-be-integrated.rst:381 ../to-be-integrated.rst:753
 msgid ""
@@ -880,16 +1250,25 @@ msgid ""
 "authorized_keys and when you ssh to the server you'll be asked for a pin "
 "rather than a passphrase."
 msgstr ""
+"wobei 'keyID' entweder der Fingerabdruck Ihres Schlüssels oder nur die an "
+"Ihren Schlüssel gebundene E-Mail Adresse ist. Der Nitrokey muss dem lokalen "
+"GnuPG-Schlüsselbund bereits bekannt sein. Sie können diese Datei nun an die "
+"authorized_keys eines entfernten Servers anhängen, und wenn Sie per ssh auf "
+"den Server zugreifen, werden Sie nach einer Pin statt einer Passphrase "
+"gefragt."
 
 #: ../to-be-integrated.rst:388
 msgid "**Q:** How can I do SSH for Server Administration on Linux?"
 msgstr ""
+"**Q:** Wie kann ich SSH für die Server-Administration unter Linux nutzen?"
 
 #: ../to-be-integrated.rst:390 ../to-be-integrated.rst:757
 msgid ""
 "The Nitrokey should already have PGP keys installed and the local GnuPG "
 "keyring should know the keys. Preparation on client"
 msgstr ""
+"Der Nitrokey sollte bereits PGP-Schlüssel installiert haben und der lokale "
+"GnuPG-Schlüsselbund sollte die Schlüssel kennen. Vorbereitung auf dem Client"
 
 #: ../to-be-integrated.rst:393 ../to-be-integrated.rst:760
 msgid ""
@@ -898,12 +1277,19 @@ msgid ""
 "the file does not exist yet, you can just create it. Add the following "
 "code somewhere into your ~/.bashrc (for fish shell, look here)"
 msgstr ""
+"Vergewissern Sie sich, dass ~/.gnupg/gpg.conf 'use-agent' enthält. Fügen Sie "
+"die SSH-Unterstützung zu gnupg-agent hinzu, indem Sie 'enable-ssh-support' "
+"zu ~/.gnupg/gpg-agent.conf hinzufügen Falls die Datei noch nicht existiert, "
+"können Sie sie einfach erstellen. Fügen Sie den folgenden Code irgendwo in "
+"Ihre ~/.bashrc ein (für die Fish-Shell, siehe hier)"
 
 #: ../to-be-integrated.rst:398 ../to-be-integrated.rst:765
 msgid ""
 "unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
 "export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
 msgstr ""
+"unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
+"export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
 
 #: ../to-be-integrated.rst:403 ../to-be-integrated.rst:770
 msgid ""
@@ -912,14 +1298,18 @@ msgid ""
 "try gpg2 --card-status on first usage to make sure the gpg-agent gets "
 "started"
 msgstr ""
+"Starten Sie einfach Ihr System neu oder versuchen Sie pkill gpg-agent und "
+"öffnen Sie eine neue Kommandozeile, um sicherzustellen, dass alles "
+"eingestellt ist Bei Problemen versuchen Sie bitte gpg2 --card-status bei der "
+"ersten Verwendung, um sicherzustellen, dass der gpg-agent gestartet wird"
 
 #: ../to-be-integrated.rst:406 ../to-be-integrated.rst:773
 msgid "Preparation for the server"
-msgstr ""
+msgstr "Vorbereitung für den Server"
 
 #: ../to-be-integrated.rst:408 ../to-be-integrated.rst:775
 msgid "You can generate an authorized_keys file by running either"
-msgstr ""
+msgstr "Sie können eine authorized_keys-Datei erzeugen, indem Sie entweder"
 
 #: ../to-be-integrated.rst:410 ../to-be-integrated.rst:777
 msgid ""
@@ -927,14 +1317,17 @@ msgid ""
 "gpg2 --export-ssh-key keyID >> ~/authorized_keys #(for newer GnuPG "
 "versions)"
 msgstr ""
+"gpgkey2ssh keyID >> ~/authorized_keys #(für GnuPG Version <= 2.1.11) oder "
+"gpg2 --export-ssh-key keyID >> ~/authorized_keys #(für neuere GnuPG "
+"Versionen)"
 
 #: ../to-be-integrated.rst:413 ../to-be-integrated.rst:780
 msgid "where"
-msgstr ""
+msgstr "wobei"
 
 #: ../to-be-integrated.rst:415 ../to-be-integrated.rst:782
 msgid "keyID"
-msgstr ""
+msgstr "keyID"
 
 #: ../to-be-integrated.rst:417 ../to-be-integrated.rst:784
 msgid ""
@@ -943,18 +1336,25 @@ msgid ""
 "append that file to a remote server's authorized_keys and when you ssh to"
 " the server you'll be asked for a pin rather than a passphrase."
 msgstr ""
+"ist die Unterschlüssel-ID, die für die Authentifizierung auf Ihrem Nitrokey "
+"verwendet wird. Der Nitrokey muss dem lokalen GnuPG-Schlüsselbund bereits "
+"bekannt sein. Sie können diese Datei nun an die authorized_keys eines "
+"entfernten Servers anhängen, und wenn Sie per ssh auf den Server zugreifen, "
+"werden Sie nach einer PIN und nicht nach einer Passphrase gefragt."
 
 #: ../to-be-integrated.rst:420 ../to-be-integrated.rst:787
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Fehlersuche"
 
 #: ../to-be-integrated.rst:422 ../to-be-integrated.rst:789
 msgid "If you are still asked for a password please make sure that"
 msgstr ""
+"Wenn Sie trotzdem nach einem Passwort gefragt werden, stellen Sie sicher, "
+"dass"
 
 #: ../to-be-integrated.rst:424 ../to-be-integrated.rst:791
 msgid "echo $SSH_AUTH_SOCK"
-msgstr ""
+msgstr "echo $SSH_AUTH_SOCK"
 
 #: ../to-be-integrated.rst:426 ../to-be-integrated.rst:793
 msgid ""
@@ -966,14 +1366,22 @@ msgid ""
 "given code in .bashrc so that the variable SSH_AUTH_SOCK is correct. In "
 "doubt look for 'SSH_AUTH_SOCK' in"
 msgstr ""
+"gibt etwas Vernünftiges wie '/run/user/1000/gnupg/S.gpg-agent.ssh' oder '/"
+"home/username/.gnupg/.S.gpg-agent.ssh' zurück. Leider gab es in der "
+"Vergangenheit einige Änderungen in GnuPG, so dass der tatsächliche Inhalt je "
+"nach System und GnuPG-Version unterschiedlich sein kann. Auf manchen "
+"Systemen können sogar mehrere Ordner in dieser Variable gespeichert sein. "
+"Sie müssen den oben angegebenen Code in .bashrc so anpassen, dass die "
+"Variable SSH_AUTH_SOCK korrekt ist. Im Zweifel suchen Sie nach "
+"'SSH_AUTH_SOCK' in"
 
 #: ../to-be-integrated.rst:428 ../to-be-integrated.rst:795
 msgid "man gpg-agent"
-msgstr ""
+msgstr "man gpg-agent"
 
 #: ../to-be-integrated.rst:430 ../to-be-integrated.rst:797
 msgid "to find the actual code for your version/system."
-msgstr ""
+msgstr "um den aktuellen Code für Ihre Version/Ihr System zu finden."
 
 #: ../to-be-integrated.rst:432 ../to-be-integrated.rst:799
 msgid ""
@@ -981,79 +1389,95 @@ msgid ""
 " manager. You may need to set it in the gpg-agent.conf as well. You may "
 "need to point gpg-agent to the correct TTY."
 msgstr ""
+"Überprüfen Sie, ob Sie das Programm \"pinentry\" über Ihren Paketmanager "
+"installiert haben. Eventuell müssen Sie es auch in der gpg-agent.conf "
+"einstellen. Eventuell müssen Sie gpg-agent auf die richtige TTY verweisen."
 
 #: ../to-be-integrated.rst:446
 msgid "**Q:** How can I use the Nitrokey for VPN access?"
-msgstr ""
+msgstr "**Q:** Wie kann ich den Nitrokey für den VPN-Zugang verwenden?"
 
 #: ../to-be-integrated.rst:449 ../to-be-integrated.rst:820
 msgid "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
 msgstr ""
+"Für: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
 
 #: ../to-be-integrated.rst:452 ../to-be-integrated.rst:823
 msgid "Generate a key on Nitrokey via pkcs11-tool."
-msgstr ""
+msgstr "Erzeugen Sie einen Schlüssel auf Nitrokey mit pkcs11-tool."
 
 #: ../to-be-integrated.rst:454 ../to-be-integrated.rst:825
 msgid "Generate a certificate signing request via openssl + pkcs11 module:"
 msgstr ""
+"Erzeugen Sie eine Zertifikatsignierungsanforderung über das openssl + "
+"pkcs11-Modul:"
 
 #: ../to-be-integrated.rst:456 ../to-be-integrated.rst:827
 msgid ""
 "$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
 "<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
+"$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
+"<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
 
 #: ../to-be-integrated.rst:458 ../to-be-integrated.rst:829
 msgid "Sign the certificate with our certificate authority"
-msgstr ""
+msgstr "Signieren Sie das Zertifikat mit unserer Zertifizierungsstelle"
 
 #: ../to-be-integrated.rst:460 ../to-be-integrated.rst:831
 msgid ""
 "$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out "
 "<FILE.CRT> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
+"$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out <FILE.CRT> "
+"-config <OPENSSL.CNF> -extensions usr_client"
 
 #: ../to-be-integrated.rst:462 ../to-be-integrated.rst:509
 #: ../to-be-integrated.rst:833 ../to-be-integrated.rst:880
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
-msgstr ""
+msgstr "Importieren Sie das Zertifikat in den Nitrokey über pkcs11-tool"
 
 #: ../to-be-integrated.rst:464 ../to-be-integrated.rst:835
 msgid "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
-msgstr ""
+msgstr "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
 
 #: ../to-be-integrated.rst:466 ../to-be-integrated.rst:837
 msgid "Read the certificate's ID required for openvpn configuration:"
 msgstr ""
+"Lesen Sie die ID des Zertifikats, die für die openvpn-Konfiguration "
+"erforderlich ist:"
 
 #: ../to-be-integrated.rst:468 ../to-be-integrated.rst:839
 msgid "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
-msgstr ""
+msgstr "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
 
 #: ../to-be-integrated.rst:470 ../to-be-integrated.rst:841
 msgid ""
 "Modify your openvpn configuration. Add the certificate ID which you "
 "gathered in the previous step: E.g."
 msgstr ""
+"Ändern Sie Ihre openvpn-Konfiguration. Fügen Sie die Zertifikats-ID hinzu, "
+"die Sie im vorherigen Schritt ermittelt haben: z.B."
 
 #: ../to-be-integrated.rst:472 ../to-be-integrated.rst:843
 msgid ""
 "$ pkcs11-id "
 "'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
 msgstr ""
+"$ pkcs11-id 'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/"
+"User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
 
 #: ../to-be-integrated.rst:474 ../to-be-integrated.rst:845
 msgid "Add the PKCS#11 driver to the configuration too, e.g.:"
-msgstr ""
+msgstr "Fügen Sie auch den PKCS#11-Treiber zur Konfiguration hinzu, z. B.:"
 
 #: ../to-be-integrated.rst:476 ../to-be-integrated.rst:847
 msgid "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
-msgstr ""
+msgstr "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
 
 #: ../to-be-integrated.rst:478 ../to-be-integrated.rst:849
 msgid "See this link for further information."
-msgstr ""
+msgstr "Unter diesem Link finden Sie weitere Informationen."
 
 #: ../to-be-integrated.rst:482 ../to-be-integrated.rst:853
 msgid ""
@@ -1061,10 +1485,14 @@ msgid ""
 "Nitrokey's PIN needs to be entered. Unfortunately OpenVPN doesn't prompt "
 "to enter the PIN and it has to be entered in the following way:"
 msgstr ""
+"Nun sind alle Konfigurationen abgeschlossen. Beim Ausführen des OpenVPN-"
+"Clients muss die PIN von Nitrokey eingegeben werden. Leider fordert OpenVPN "
+"nicht zur Eingabe der PIN auf, so dass sie auf folgende Weise eingegeben "
+"werden muss:"
 
 #: ../to-be-integrated.rst:484 ../to-be-integrated.rst:855
 msgid "$ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>"
-msgstr ""
+msgstr "$ telnet 8888 Passwort 'Benutzer-PIN (OpenPGP-Karte) Token' <PIN>"
 
 #: ../to-be-integrated.rst:486 ../to-be-integrated.rst:857
 msgid ""
@@ -1073,30 +1501,43 @@ msgid ""
 " the OpenVPN client you could use the Viscosity client which provides a "
 "better user experience especially for entering the PIN."
 msgstr ""
+"Alternativ können Sie den OpenVPN-Client mit deaktivierter systemd-"
+"Unterstützung neu kompilieren und er wird Sie wie erwartet zur Eingabe der "
+"PIN auffordern. Alternativ zum OpenVPN-Client können Sie auch den Viscosity-"
+"Client verwenden, der eine bessere Benutzererfahrung bietet, insbesondere "
+"bei der Eingabe der PIN."
 
 #: ../to-be-integrated.rst:489 ../to-be-integrated.rst:860
 msgid "IPsec"
-msgstr ""
+msgstr "IPsec"
 
 #: ../to-be-integrated.rst:491 ../to-be-integrated.rst:862
 msgid "Strong Swan works using the PKCS#11 driver. Basically follow these steps:"
 msgstr ""
+"Strong Swan arbeitet mit dem PKCS#11-Treiber. Folgen Sie im Wesentlichen "
+"diesen Schritten:"
 
 #: ../to-be-integrated.rst:493 ../to-be-integrated.rst:864
 msgid ""
 "Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 "
 "bit RSA key."
 msgstr ""
+"Erzeugen Sie einen Schlüssel auf Nitrokey mit pkcs11-tool. In diesem "
+"Beispiel handelt es sich um einen 4096-Bit-RSA-Schlüssel."
 
 #: ../to-be-integrated.rst:495 ../to-be-integrated.rst:866
 msgid ""
 "$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
 "-l -k --key-type rsa:4096 --id 10 --label 'Staging Access'"
 msgstr ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -"
+"k --key-type rsa:4096 --id 10 --label 'Staging Access'"
 
 #: ../to-be-integrated.rst:497 ../to-be-integrated.rst:868
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr ""
+"Erzeugen einer Zertifikatssignierungsanforderung über das openssl + pkcs11 "
+"Modul"
 
 #: ../to-be-integrated.rst:499 ../to-be-integrated.rst:870
 msgid ""
@@ -1108,20 +1549,28 @@ msgid ""
 "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
 "Access/CN=user@email.com/emailAddress=user@email.com'"
 msgstr ""
+"$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/"
+"engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
+"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.also OpenSSL> req "
+"-engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-"
+"staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organisation/OU=Staging Access/"
+"CN=user@email.com/emailAddress=user@email.com'"
 
 #: ../to-be-integrated.rst:503 ../to-be-integrated.rst:874
 msgid "Sign the certificate with your certificate authority"
-msgstr ""
+msgstr "Signieren Sie das Zertifikat mit Ihrer Zertifizierungsstelle"
 
 #: ../to-be-integrated.rst:505 ../to-be-integrated.rst:876
 msgid "Convert the certificate to DER"
-msgstr ""
+msgstr "Das Zertifikat in DER umwandeln"
 
 #: ../to-be-integrated.rst:507 ../to-be-integrated.rst:878
 msgid ""
 "$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
 "staging-cert.der -outform DER"
 msgstr ""
+"$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
+"staging-cert.der -outform DER"
 
 #: ../to-be-integrated.rst:511 ../to-be-integrated.rst:882
 msgid ""
@@ -1129,6 +1578,8 @@ msgid ""
 "-l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
 "Access'"
 msgstr ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -"
+"y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging Access'"
 
 #: ../to-be-integrated.rst:513 ../to-be-integrated.rst:884
 msgid ""
@@ -1136,33 +1587,38 @@ msgid ""
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
 "add the following module:"
 msgstr ""
+"Konfigurieren Sie Strongswan so, dass er das Modul opensc-pkcs11 lädt und "
+"dann das Zertifikat auf Nitrokey lädt. Bearbeiten Sie /etc/strongswan.d/"
+"charon/pkcs11.conf und fügen Sie das folgende Modul hinzu:"
 
 #: ../to-be-integrated.rst:517 ../to-be-integrated.rst:888
 msgid "modules {"
-msgstr ""
+msgstr "Module {"
 
 #: ../to-be-integrated.rst:516 ../to-be-integrated.rst:887
 msgid "Nitrokey {"
-msgstr ""
+msgstr "Nitrokey {"
 
 #: ../to-be-integrated.rst:517 ../to-be-integrated.rst:888
 msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr ""
+msgstr "Pfad = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
 
 #: ../to-be-integrated.rst:518 ../to-be-integrated.rst:519
 #: ../to-be-integrated.rst:889 ../to-be-integrated.rst:890
 msgid "}"
-msgstr ""
+msgstr "}"
 
 #: ../to-be-integrated.rst:521 ../to-be-integrated.rst:892
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
 msgstr ""
+"Initiieren der VPN-Verbindung über IPSec/Strongswan, dann Aufforderung zur "
+"Eingabe der Nitrokey-PIN"
 
 #: ../to-be-integrated.rst:523 ../to-be-integrated.rst:894
 msgid "8. VPN is now connected Stunnel"
-msgstr ""
+msgstr "8. VPN ist jetzt verbunden Stunnel"
 
 #: ../to-be-integrated.rst:526 ../to-be-integrated.rst:897
 msgid ""
@@ -1171,10 +1627,17 @@ msgid ""
 "functionality to commonly used inetd daemons like POP2, POP3, and IMAP "
 "servers without any changes in the programs' code."
 msgstr ""
+"Stunnel arbeitet als SSL-Verschlüsselungs-Wrapper zwischen Remote-Client und "
+"lokalem (inetd-startbarem) oder Remote-Server. Es kann verwendet werden, um "
+"SSL-Funktionalität zu häufig verwendeten inetd-Daemons wie POP2-, POP3- und "
+"IMAP-Servern hinzuzufügen, ohne dass der Code der Programme geändert werden "
+"muss."
 
 #: ../to-be-integrated.rst:528 ../to-be-integrated.rst:899
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr ""
+"Mit dieser Konfiguration ist Stunnel in der Lage, die OpenSC PKCS#11-Engine "
+"zu laden:"
 
 #: ../to-be-integrated.rst:530 ../to-be-integrated.rst:901
 msgid ""
@@ -1182,22 +1645,27 @@ msgid ""
 "engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
 "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
 msgstr ""
+"engine=dynamisch engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so "
+"engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
+"engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
 
 #: ../to-be-integrated.rst:538 ../to-be-integrated.rst:909
 msgid "[service] engineNum=1 key=id_45"
-msgstr ""
+msgstr "[service] engineNum=1 key=id_45"
 
 #: ../to-be-integrated.rst:556
 msgid "**Q:** How can I do PKI / Certificate Authority (CA)?"
-msgstr ""
+msgstr "**Q:** Wie kann ich PKI / Zertifizierungsstelle (CA) betreiben?"
 
 #: ../to-be-integrated.rst:558
 msgid "CA keys are very sensitive and must not be compromised or lost. GnuPG"
 msgstr ""
+"CA-Schlüssel sind sehr empfindlich und dürfen nicht kompromittiert werden "
+"oder verloren gehen. GnuPG"
 
 #: ../to-be-integrated.rst:561
 msgid "Instructions OpenSSL"
-msgstr ""
+msgstr "Anweisungen OpenSSL"
 
 #: ../to-be-integrated.rst:564
 msgid ""
@@ -1208,16 +1676,24 @@ msgid ""
 "slot ID, e.g. \"... -key "
 "slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" Test"
 msgstr ""
+"Installieren Sie OpenSC'S engine_pkcs11 Führen Sie den Befehl \"pkcs11-tool "
+"--list-slots\" aus, um die verfügbaren Slots aufzulisten. Führen Sie den "
+"Befehl \"openssl> req -engine pkcs11 -new -key slot_X-id_XXXX -keyform "
+"engine -x509 -out cert.pem -text\" aus, wobei X die entsprechende Slotnummer "
+"und XXXX die Slot-ID ist, z. B. \"... -key slot_5-"
+"id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" Test"
 
 #: ../to-be-integrated.rst:569
 msgid "Other"
-msgstr ""
+msgstr "Andere"
 
 #: ../to-be-integrated.rst:571
 msgid ""
 "Please see this PDF (p. 30) from heinlein-support.de for summarized "
 "instructions in German."
 msgstr ""
+"In diesem PDF (S. 30) von heinlein-support.de finden Sie eine "
+"zusammenfassende Anleitung in deutscher Sprache."
 
 #: ../to-be-integrated.rst:573
 msgid ""
@@ -1225,14 +1701,17 @@ msgid ""
 "perform basic tasks of a CA. It works with Nitrokey Pro and Nitrokey "
 "Storage."
 msgstr ""
+"µ-CA-tool ist ein Skript, das auf GnuPG, OpenSC und OpenSSL basiert und "
+"dabei hilft, grundlegende Aufgaben einer CA durchzuführen. Es funktioniert "
+"mit Nitrokey Pro und Nitrokey Storage."
 
 #: ../to-be-integrated.rst:581
 msgid "**Q:** How can I use the password manager?"
-msgstr ""
+msgstr "**Q:** Wie kann ich den Passwort-Manager verwenden?"
 
 #: ../to-be-integrated.rst:583
 msgid "You have the following options:"
-msgstr ""
+msgstr "Sie haben die folgenden Möglichkeiten:"
 
 #: ../to-be-integrated.rst:585
 msgid ""
@@ -1241,16 +1720,23 @@ msgid ""
 "(simple commandline password manager for Unix systems, mainly for "
 "experts). Use KeePass as described below."
 msgstr ""
+"Verwenden Sie den in Nitrokey integrierten Passwort-Safe, um Passwörter "
+"sicher zu speichern. Hierfür benötigen Sie die Nitrokey App. Es können "
+"maximal 16 Passwörter gespeichert werden. Verwenden Sie Pass (einfacher "
+"Kommandozeilen-Passwortmanager für Unix-Systeme, hauptsächlich für Experten)"
+". Verwenden Sie KeePass wie unten beschrieben."
 
 #: ../to-be-integrated.rst:589
 msgid "Protecting KeePass with Nitrokey's One-Time Passwords"
-msgstr ""
+msgstr "KeePass mit Nitrokeys Einmal-Passwörtern schützen"
 
 #: ../to-be-integrated.rst:591
 msgid ""
 "You can also follow this video (It contains a mistake around time 4:22 "
 "which is described later below). Keepass Installation"
 msgstr ""
+"Sie können auch diesem Video folgen (es enthält einen Fehler bei Zeit 4:22, "
+"der weiter unten beschrieben wird). Keepass-Installation"
 
 #: ../to-be-integrated.rst:594
 msgid ""
@@ -1258,12 +1744,17 @@ msgid ""
 "the older 2.3.4, you have to use some other source like this private PPA "
 "(please run these commands in terminal):"
 msgstr ""
+"Installieren Sie Keepass 2.3.5. Für Ubuntu: Da das Haupt-Repository die "
+"ältere Version 2.3.4 enthält, müssen Sie eine andere Quelle wie dieses "
+"private PPA verwenden (bitte führen Sie diese Befehle im Terminal aus):"
 
 #: ../to-be-integrated.rst:597
 msgid ""
 "sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-"
 "get install keepass2"
 msgstr ""
+"sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-get "
+"install keepass2"
 
 #: ../to-be-integrated.rst:601
 msgid ""
@@ -1273,14 +1764,20 @@ msgid ""
 "mono-complete package if plugin is not detected when running Keepass2 "
 "(you can check that in Tools/Plugins):"
 msgstr ""
+"Installieren Sie das OtpKeyProv-Plugin, indem Sie das Archiv herunterladen, "
+"entpacken und den Inhalt in das Plugin-Verzeichnis von Keypass kopieren. "
+"Unter Linux: sudo cp OtpKeyProv.plgx /usr/lib/keepass2/Plugins/ Für Linux, "
+"optional: Installieren Sie das mono-complete-Paket, falls das Plugin bei der "
+"Ausführung von Keepass2 nicht erkannt wird (Sie können dies unter Tools/"
+"Plugins überprüfen):"
 
 #: ../to-be-integrated.rst:605
 msgid "sudo apt-get install mono-complete"
-msgstr ""
+msgstr "sudo apt-get install mono-complete"
 
 #: ../to-be-integrated.rst:607
 msgid "Keepass OTP Configuration Existing Database"
-msgstr ""
+msgstr "Keepass OTP-Konfiguration Vorhandene Datenbank"
 
 #: ../to-be-integrated.rst:610
 msgid ""
@@ -1289,18 +1786,23 @@ msgid ""
 " your passwords are lost! Open database as usual Select File/Change "
 "Master Key..."
 msgstr ""
+"Erstellen Sie eine Sicherungskopie Ihrer Datenbank und bewahren Sie diese "
+"auf, bis Sie wirklich sicher sind, dass alles einwandfrei funktioniert! "
+"Vergewissern Sie sich, dass Sie wirklich ein Backup gemacht haben. Wenn Sie "
+"es vermasseln, sind Ihre Passwörter verloren! Öffnen Sie die Datenbank wie "
+"gewohnt Wählen Sie Datei/Hauptschlüssel ändern..."
 
 #: ../to-be-integrated.rst:615
 msgid "New Database"
-msgstr ""
+msgstr "Neue Datenbank"
 
 #: ../to-be-integrated.rst:617
 msgid "Create new database as usual"
-msgstr ""
+msgstr "Erstellen Sie wie gewohnt eine neue Datenbank"
 
 #: ../to-be-integrated.rst:619
 msgid "Common"
-msgstr ""
+msgstr "Gemeinsame"
 
 #: ../to-be-integrated.rst:621
 msgid ""
@@ -1319,10 +1821,27 @@ msgid ""
 " device and in Keepass would be out of sync and OTP codes will not be the"
 " same with expected."
 msgstr ""
+"Master-Passwort einfügen (optional) Schlüsseldatei / Anbieter einstellen: "
+"auf Einmalpasswörter (OATH HOTP) OK klicken Mit Nitrokey App: HOTP-Slot "
+"auswählen und HOTP-Geheimnis generieren (es wird automatisch in die "
+"Zwischenablage kopiert). Hinweis: Sie sollten dieses Geheimnis aufschreiben "
+"und an einem sicheren Ort aufbewahren. Wenn Sie Ihren Nitrokey verlieren "
+"oder er kaputt geht, ist auch Ihre Passwortdatenbank verloren!!! Fügen Sie "
+"das Geheimnis in das Keepass OTP Plugin Fenster ein. Stellen Sie sicher, "
+"dass das Zählerfeld und die Anzahl der Ziffern in beiden Fenstern gleich "
+"eingestellt sind. Klicken Sie in der Nitrokey-App auf OK, um den Slot zu "
+"speichern. Wählen Sie den Geheimnistyp: Base32 Legen Sie die anderen "
+"Einstellungen nach Belieben fest. Bitte lesen Sie das Handbuch des Plugins ("
+"sollte im gleichen heruntergeladenen Archiv enthalten sein). Ich würde "
+"empfehlen, den Look-Ahead-Wert auf einen Wert ungleich Null zu setzen, um zu "
+"verhindern, dass die Datenbank nach einer versehentlichen Code-Anfrage von "
+"einem verwendeten HOTP-Slot gesperrt wird. In diesem Fall wären die Zähler "
+"auf dem Gerät und in Keepass nicht mehr synchron und die OTP-Codes würden "
+"nicht mit den erwarteten übereinstimmen."
 
 #: ../to-be-integrated.rst:630
 msgid "Unlocking Database"
-msgstr ""
+msgstr "Datenbank entriegeln"
 
 #: ../to-be-integrated.rst:632
 msgid ""
@@ -1331,10 +1850,15 @@ msgid ""
 "choosing proper HOTP slot from the Nitrokey App and pasting the clipboard"
 " content to proper field (the order of the codes is important). Press OK"
 msgstr ""
+"Datenbank öffnen Master-Passwort einfügen (falls gesetzt) Schlüsseldatei / "
+"Anbieter: zu One-Time Passwords (OATH HOTP) OK drücken HOTP-Codes einfügen "
+"durch wiederholtes Auswählen des richtigen HOTP-Slots in der Nitrokey App "
+"und Einfügen des Inhalts der Zwischenablage in das richtige Feld (die "
+"Reihenfolge der Codes ist wichtig). Drücken Sie OK"
 
 #: ../to-be-integrated.rst:639
 msgid "Issues"
-msgstr ""
+msgstr "Ausgaben"
 
 #: ../to-be-integrated.rst:641
 msgid ""
@@ -1350,30 +1874,48 @@ msgid ""
 "database and how it is now configured. I have not noticed until I have "
 "watched the movie."
 msgstr ""
+"Aufgrund der Natur der HOTP-Lösung ist es möglich, dass die Zähler "
+"desynchronisiert werden (durch die Auswahl des falschen OTP-Slots während "
+"des täglichen Gebrauchs). Die Verwendung der Vorausschau-Plugin-Einstellung "
+"sollte dies verhindern (Wert 10 oder so sollte ausreichen - abhängig von den "
+"gewünschten Sicherheitsanforderungen - dies würde bis zu 10 versehentliche "
+"Anfragen erlauben). TOTP hat dieses Problem nicht. Die Einstellung des OTP-"
+"Schutzes könnte fehleranfällig sein. Es gibt keine geheime Validierung auf "
+"der OtpKeyProv-Seite. Im Testfilm bei 4:22 habe ich es geschafft, das Base32-"
+"codierte Geheimnis als Hex zu setzen (was kein richtiger Hex-Wert war), und "
+"es hat sich nicht darüber beschwert. Es gibt keine Informationen darüber, "
+"was mit der Datenbank passiert ist und wie sie jetzt konfiguriert ist. Ich "
+"habe es nicht bemerkt, bis ich den Film gesehen habe."
 
 #: ../to-be-integrated.rst:644
 msgid "Tested under Ubuntu 16.10, Nitrokey App v0.6.3 and Nitrokey Storage v0.45."
 msgstr ""
+"Getestet unter Ubuntu 16.10, Nitrokey App v0.6.3 und Nitrokey Storage v0.45."
 
 #: ../to-be-integrated.rst:653
 msgid "**Q:** How can I use the True Random Number Generator?"
-msgstr ""
+msgstr "**Q:** Wie kann ich den echten Zufallszahlengenerator verwenden?"
 
 #: ../to-be-integrated.rst:655
 msgid ""
 "Both devices are compatible to the OpenPGP Card, so that scdrand should "
 "work. This script may be useful. The TRNG provides about 40 kbit/s."
 msgstr ""
+"Beide Geräte sind mit der OpenPGP-Karte kompatibel, so dass scdrand "
+"funktionieren sollte. Dieses Skript kann nützlich sein. Der TRNG bietet etwa "
+"40 kbit/s."
 
 #: ../to-be-integrated.rst:657
 msgid ""
 "The user comio created a systemd file to use scdrand and thus the TRNG "
 "more generally. He created a ebuild for Gentoo, too."
 msgstr ""
+"Der Benutzer comio hat eine systemd-Datei erstellt, um scdrand und damit den "
+"TRNG allgemeiner zu nutzen. Er hat auch ein ebuild für Gentoo erstellt."
 
 #: ../to-be-integrated.rst:663
 msgid "**Q:** Do you have resources for development and integration?"
-msgstr ""
+msgstr "**Q:** Haben Sie Ressourcen für Entwicklung und Integration?"
 
 #: ../to-be-integrated.rst:666
 msgid ""
@@ -1390,10 +1932,24 @@ msgid ""
 "Safe and OTP entries. A libnitrokey wrapper for Rust providing access to "
 "Nitrokey devices."
 msgstr ""
+"Verwenden Sie die Nitrokey-Bibliothek zur Verwaltung von Einmal-Passwörtern "
+"und Passwort-Safe-Funktionen. Die Projekte nitrokey-get-totp und nitrokey-"
+"get-password sind schöne Beispiele für die Verwendung der Python-Bindungen "
+"der Nitrokey-Bibliothek, um eine benutzerdefinierte Schnittstelle zu "
+"erhalten. Um auf die integrierte Smartcard zuzugreifen, können Sie die "
+"Kommandozeilen-Tools von OpenSC verwenden. Wenn Ihre Anwendung eine PKCS#11-"
+"Schnittstelle hat, verwenden Sie den PKCS#11-Treiber von OpenSC. Um mit der "
+"Smartcard auf niedriger Ebene zu arbeiten, lesen Sie die OpenPGP Card "
+"Spezifikation. Der Quellcode der Firmware und das Hardware-Layout sind "
+"ebenfalls verfügbar. Zur Entwicklung spezieller Anwendungen oder für den "
+"Kommandozeilenzugriff kann man das von d-e-s-o erstellte nitrocli verwenden. "
+"Gkey ist ein go-basiertes Kommandozeilentool für den Zugriff auf den "
+"Passwort-Safe und die OTP-Einträge. Ein libnitrokey-Wrapper für Rust, der "
+"den Zugriff auf Nitrokey-Geräte ermöglicht."
 
 #: ../to-be-integrated.rst:677
 msgid "# HSM 2"
-msgstr ""
+msgstr "# HSM 2"
 
 #: ../to-be-integrated.rst:679
 msgid ""
@@ -1401,14 +1957,18 @@ msgid ""
 "have a size of up to 256 byte. The total storage capacity of ca. 32 KByte"
 " is shared dynamically among keys and data objects."
 msgstr ""
+"**Nitrokey HSM:** Es können 124 Datenobjekte (DF, EF) erstellt werden. Jedes "
+"EF kann eine Größe von bis zu 256 Byte haben. Die gesamte Speicherkapazität "
+"von ca. 32 KByte wird dynamisch zwischen Schlüsseln und Datenobjekten "
+"aufgeteilt."
 
 #: ../to-be-integrated.rst:683
 msgid "**Q:** How to use the HSM for Login For: Nitrokey HSM"
-msgstr ""
+msgstr "**Q:** Wie verwende ich den HSM für die Anmeldung bei: Nitrokey HSM"
 
 #: ../to-be-integrated.rst:686
 msgid "Select your use case:"
-msgstr ""
+msgstr "Wählen Sie Ihren Anwendungsfall:"
 
 #: ../to-be-integrated.rst:688
 msgid ""
@@ -1416,16 +1976,21 @@ msgid ""
 "Nitrokey HSM on Windows Domain Computers Using MS Active Directory For "
 "Unix environments an integration with PAM and OpenSSH is available."
 msgstr ""
+"Anmeldung mit Nitrokey HSM auf eigenständigen Windows-Computern Anmeldung "
+"mit Nitrokey HSM auf Windows-Domänencomputern mit MS Active Directory Für "
+"Unix-Umgebungen ist eine Integration mit PAM und OpenSSH verfügbar."
 
 #: ../to-be-integrated.rst:692
 msgid "**Q:**  How to use the HSM for Email Encryption"
-msgstr ""
+msgstr "**Q:** Wie wird das HSM für die E-Mail-Verschlüsselung verwendet?"
 
 #: ../to-be-integrated.rst:694
 msgid ""
 "Encrypt your email using the S/MIME industry standard available in all "
 "major e-mail clients."
 msgstr ""
+"Verschlüsseln Sie Ihre E-Mails mit dem S/MIME-Industriestandard, der in "
+"allen wichtigen E-Mail-Clients verfügbar ist."
 
 #: ../to-be-integrated.rst:696
 msgid ""
@@ -1433,14 +1998,19 @@ msgid ""
 "Microsoft Outlook. Other email clients with support for PKCS#11 or "
 "Microsoft CSP should work as well."
 msgstr ""
+"Der Nitrokey HSM wurde für die Verwendung mit Mozilla Thunderbird und "
+"Microsoft Outlook getestet. Andere E-Mail-Clients mit Unterstützung für PKCS#"
+"11 oder Microsoft CSP sollten ebenfalls funktionieren."
 
 #: ../to-be-integrated.rst:698
 msgid "Note: A certificate can be purchased cheaply from CERTUM."
-msgstr ""
+msgstr "Hinweis: Ein Zertifikat kann kostengünstig bei CERTUM erworben werden."
 
 #: ../to-be-integrated.rst:700
 msgid "**Q:**   How to use the Nitrokey for Hard Disk Encryption with VeraCrpt?"
 msgstr ""
+"**Q:** Wie verwende ich den Nitrokey für die Festplattenverschlüsselung mit "
+"VeraCrpt?"
 
 #: ../to-be-integrated.rst:702
 msgid ""
@@ -1449,6 +2019,11 @@ msgid ""
 "recommended, although the following instructions should apply to "
 "TrueCrypt as well. Follow these steps to use the program with Nitrokey:"
 msgstr ""
+"VeraCrypt ist eine freie und quelloffene Festplattenverschlüsselungssoftware "
+"für Windows, macOS und GNU/Linux. Es ist der Nachfolger von TrueCrypt und "
+"daher empfehlenswert, obwohl die folgenden Anweisungen auch für TrueCrypt "
+"gelten sollten. Befolgen Sie diese Schritte, um das Programm mit Nitrokey zu "
+"verwenden:"
 
 #: ../to-be-integrated.rst:711
 msgid ""
@@ -1457,20 +2032,27 @@ msgid ""
 "Instead it stores a keyfile on the Nitrokey which theoretically could be "
 "stolen by a computer virus after the user enters the password."
 msgstr ""
+"Sicherheitsüberlegungen: Bitte beachten Sie, dass VeraCrypt nicht die volle "
+"Sicherheit nutzt, die Nitrokey (und Smartcards im Allgemeinen) bieten. "
+"Stattdessen speichert es eine Schlüsseldatei auf dem Nitrokey, die "
+"theoretisch von einem Computervirus gestohlen werden könnte, nachdem der "
+"Benutzer das Passwort eingegeben hat."
 
 #: ../to-be-integrated.rst:713
 msgid ""
 "Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
 "described security limitation. (Not tested with Nitrokey HSM!)"
 msgstr ""
+"Hinweis: Aloaha Crypt basiert auf TrueCrypt/VeraCrypt, jedoch ohne die "
+"beschriebenen Sicherheitseinschränkungen. (Nicht mit Nitrokey HSM getestet!)"
 
 #: ../to-be-integrated.rst:716
 msgid "**Q:** How to sign and encrypt files and pdfs?"
-msgstr ""
+msgstr "**Q:** Wie kann man Dateien und PDFs signieren und verschlüsseln?"
 
 #: ../to-be-integrated.rst:718
 msgid "GnuPG"
-msgstr ""
+msgstr "GnuPG"
 
 #: ../to-be-integrated.rst:720
 msgid ""
@@ -1481,18 +2063,30 @@ msgid ""
 "Libre Office or any other PDF reader supporting electronic signatures. "
 "ECC HSM Encryptor"
 msgstr ""
+"Ab Version 2.1 hat GnuPG eine eingebaute, aber begrenzte Unterstützung für "
+"das Nitrokey HSM. Verwenden Sie das gpgsm-Tool zum Signieren, Verifizieren, "
+"Ver- und Entschlüsseln von Dateien oder S/MIME-Nachrichten mit Ihrem "
+"Nitrokey HSM. Verwenden Sie einen Signaturschlüssel auf einem Nitrokey HSM, "
+"um Dokumente mit Acrobat Reader, Open Office / Libre Office oder einem "
+"anderen PDF-Reader, der elektronische Signaturen unterstützt, zu signieren. "
+"ECC HSM Verschlüsseler"
 
 #: ../to-be-integrated.rst:723
 msgid ""
 "ECC HSM Encryptor is a small application to encrypt and decrypt files "
 "with a Nitrokey HSM."
 msgstr ""
+"ECC HSM Encryptor ist eine kleine Anwendung zum Ver- und Entschlüsseln von "
+"Dateien mit einem Nitrokey HSM."
 
 #: ../to-be-integrated.rst:725
 msgid ""
 "**Q:** How to do certificat-based Web login Protect access to sensitive "
 "information on your website with 2nd factor authentication."
 msgstr ""
+"**Q:** Wie kann man ein zertifikatsbasiertes Web-Login durchführen? Schützen "
+"Sie den Zugang zu sensiblen Informationen auf Ihrer Website mit einer 2"
+"-Faktor-Authentifizierung."
 
 #: ../to-be-integrated.rst:728
 msgid ""
@@ -1500,12 +2094,17 @@ msgid ""
 "authentication PKI or use keys and certificates on a Nitrokey HSM for "
 "TLS/SSL client authentication."
 msgstr ""
+"Verwenden Sie ein Nitrokey HSM als Authentifizierungs-Token über die "
+"eingebaute Geräteauthentifizierungs-PKI oder verwenden Sie Schlüssel und "
+"Zertifikate auf einem Nitrokey HSM für die TLS/SSL-Client-Authentifizierung."
 
 #: ../to-be-integrated.rst:730
 msgid ""
 "**Q:** SSH for Server Administration with windows For: Nitrokey Pro, "
 "Nitrokey Storage, Nitrokey Start, Nitrokey HSM"
 msgstr ""
+"**Q:** SSH für die Serververwaltung mit Windows Für: Nitrokey Pro, Nitrokey "
+"Storage, Nitrokey Start, Nitrokey HSM"
 
 #: ../to-be-integrated.rst:733
 msgid ""
@@ -1514,18 +2113,22 @@ msgid ""
 "installed on the system (only the core application GnuPG is needed). "
 "Furthermore you should install PuTTY. Preparation on client"
 msgstr ""
+"Der Nitrokey sollte bereits PGP-Schlüssel installiert haben und der lokale "
+"GnuPG-Schlüsselbund sollte die Schlüssel kennen, d.h. GPG4Win sollte auf dem "
+"System installiert sein (nur die Kernanwendung GnuPG wird benötigt). "
+"Außerdem sollten Sie PuTTY installieren. Vorbereitung auf dem Client"
 
 #: ../to-be-integrated.rst:755
 msgid "**Q:** SSH Server administration on linux"
-msgstr ""
+msgstr "**Q:** SSH Server Verwaltung unter Linux"
 
 #: ../to-be-integrated.rst:802
 msgid "**Q:** DNSSEC"
-msgstr ""
+msgstr "**Q:** DNSSEC"
 
 #: ../to-be-integrated.rst:805
 msgid "For: Nitrokey HSM"
-msgstr ""
+msgstr "Für: Nitrokey HSM"
 
 #: ../to-be-integrated.rst:807
 msgid ""
@@ -1533,6 +2136,9 @@ msgid ""
 "secure key store. It's based on Smartcard-HSM which is why the following "
 "resource apply:"
 msgstr ""
+"Schützen Sie Ihre Domainnamenauflösung mit DNSSEC und einem Nitrokey HSM als "
+"sicheren Schlüsselspeicher. Es basiert auf Smartcard-HSM, weshalb die "
+"folgenden Ressourcen gelten:"
 
 #: ../to-be-integrated.rst:809
 msgid ""
@@ -1543,6 +2149,12 @@ msgid ""
 " Mens wrote a nice article about integrating the SmartCard-HSM with "
 "PowerDNS."
 msgstr ""
+"Signieren von NSD DNSSEC-Zonen mit Nitrokey HSM von Vadim Penzin. Die "
+"Integration mit OpenDNSSEC wurde in einer Demo von Richard Lamb erfolgreich "
+"getestet. Luis D Espinoza Sanchez & Eberhard W Lisse hielten eine Sitzung "
+"über die Verwendung des SmartCard-HSM für DNSSEC auf dem ICAAN-Treffen 2015 "
+"in Singapur. Jan-Piet Mens schrieb einen schönen Artikel über die "
+"Integration der SmartCard-HSM mit PowerDNS."
 
 #: ../to-be-integrated.rst:815
 msgid ""
@@ -1553,28 +2165,37 @@ msgid ""
 "device, create a secure communication channel and perform offline PIN "
 "verification. The coolPACS project has all the details."
 msgstr ""
+"**Q:** Physische Zugangskontrolle Mit der einzigartigen integrierten "
+"Geräteauthentifizierung PKI verfügt ein Nitrokey HSM über eine "
+"kryptografisch geschützte, eindeutige Identität, die in einem schnellen "
+"Authentifizierungsprotokoll überprüft werden kann. Ein "
+"Zugangskontrollterminal kann die Authentizität und Identität des Geräts "
+"überprüfen, einen sicheren Kommunikationskanal aufbauen und eine Offline-PIN-"
+"Verifizierung durchführen. Das coolPACS-Projekt enthält alle Einzelheiten."
 
 #: ../to-be-integrated.rst:818 ../to-be-integrated.rst:914
 msgid "**Q:**"
-msgstr ""
+msgstr "**Q:**"
 
 #: ../to-be-integrated.rst:916
 msgid "PKI / Certificate Authority (CA)"
-msgstr ""
+msgstr "PKI / Zertifizierungsstelle (CA)"
 
 #: ../to-be-integrated.rst:918
 msgid "**Q:** Secret Management and Cloud Infrastructure"
-msgstr ""
+msgstr "**Q:** Geheimhaltungsmanagement und Cloud-Infrastruktur"
 
 #: ../to-be-integrated.rst:920
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at banzaicloud.com."
 msgstr ""
+"Einen Ansatz zur Sicherung von Schlüsseln für Hashicorp Vault/Bank-Vault auf "
+"einem Nitrokey HSM finden Sie unter banzaicloud.com."
 
 #: ../to-be-integrated.rst:922
 msgid "**Q:** How to do N-of-m Schemes"
-msgstr ""
+msgstr "**Q:** Wie macht man N-of-m-Schemata?"
 
 #: ../to-be-integrated.rst:924
 msgid ""
@@ -1583,28 +2204,36 @@ msgid ""
 "to control the access to the device. Please see this blog post for more "
 "detailed information. N-of-m for DKEK Shares"
 msgstr ""
+"Der Nitrokey HSM 2 unterstützt zwei verschiedene n-of-m-Schemata - eines für "
+"die sichere Freigabe von Schlüsselmaterial/Passwörtern und eines für die "
+"Authentifizierung mit öffentlichem Schlüssel zur Kontrolle des "
+"Gerätezugangs. Weitere Informationen finden Sie in diesem Blogbeitrag. N-of-"
+"m für DKEK-Freigaben"
 
 #: ../to-be-integrated.rst:927
 msgid ""
 "This feature can be used with OpenSC as described here. The general "
 "approach is seen in the videos below (external links)."
 msgstr ""
+"Diese Funktion kann mit OpenSC wie hier beschrieben verwendet werden. Die "
+"allgemeine Vorgehensweise ist in den folgenden Videos zu sehen (externe "
+"Links)."
 
 #: ../to-be-integrated.rst:929
 msgid "Nitrokey HSM's Secure Key Backup and Restore:"
-msgstr ""
+msgstr "Nitrokey HSM's Secure Key Backup und Wiederherstellung:"
 
 #: ../to-be-integrated.rst:931
 msgid "Screencast"
-msgstr ""
+msgstr "Screencast"
 
 #: ../to-be-integrated.rst:933
 msgid "Nitrokey HSM's M-of-N Threshold Scheme:"
-msgstr ""
+msgstr "Nitrokey HSM's M-of-N Schwellenwertschema:"
 
 #: ../to-be-integrated.rst:935
 msgid "screencast N-of-m for public key authentication"
-msgstr ""
+msgstr "Screencast N-of-m für die Authentifizierung mit öffentlichem Schlüssel"
 
 #: ../to-be-integrated.rst:938
 msgid ""
@@ -1613,6 +2242,10 @@ msgid ""
 "process step by step in the Smart Card Shell. For OpenSC there is a "
 "ticket to get that integrated."
 msgstr ""
+"Bislang wird die n-of-m-Authentifizierung nur in OpenSCDP unterstützt. Der "
+"Blog-Beitrag gibt einen Überblick und ein How-to hier (CDN-Zugang "
+"erforderlich) zeigt den Prozess Schritt für Schritt in der Smart Card Shell. "
+"Für OpenSC gibt es ein Ticket, um dies zu integrieren."
 
 #: ../to-be-integrated.rst:940
 msgid ""
@@ -1620,10 +2253,13 @@ msgid ""
 "for locally and remote connected HSMs. The PKI-as-a-Service Portal is "
 "based on OpenSCDP."
 msgstr ""
+"Die n-of-m-Authentifizierung wird auch im PKI-as-a-Service-Portal für lokal "
+"und entfernt angeschlossene HSMs unterstützt. Das PKI-as-a-Service-Portal "
+"basiert auf OpenSCDP."
 
 #: ../to-be-integrated.rst:942
 msgid "**Q:** How to safe Cryptocurrences in the Nitrokey HSM"
-msgstr ""
+msgstr "**Q:** Wie kann man Cryptocurrences im Nitrokey HSM sichern?"
 
 #: ../to-be-integrated.rst:945
 msgid ""
@@ -1632,22 +2268,31 @@ msgid ""
 "the HSM in an Ethereum PoA Chain. Tezos has been reported to work with "
 "Nitrokey HSM."
 msgstr ""
+"J.v.d.Bosch hat ein einfaches, kostenloses Python-Programm geschrieben, um "
+"den privaten Schlüssel einer Bitcoin-Wallet in einem HSM zu sichern. Siehe "
+"hier für weitere Informationen. Verwendung des HSM in einer Ethereum PoA-"
+"Kette. Es wurde berichtet, dass Tezos mit dem Nitrokey HSM funktioniert."
 
 #: ../to-be-integrated.rst:949
 msgid ""
 "**Q:** How to use the True Random Number Generator? Nitrokey HSM can be "
 "used with Botan and TokenTools by using OpenSC as a PKCS#11 driver."
 msgstr ""
+"**Q:** Wie wird der True Random Number Generator verwendet? Nitrokey HSM "
+"kann mit Botan und TokenTools unter Verwendung von OpenSC als PKCS#11-"
+"Treiber verwendet werden."
 
 #: ../to-be-integrated.rst:952
 msgid ""
 "OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
 "doesn't contain a mapping for OpenSSL to C_GenerateRandom."
 msgstr ""
+"OpenSSL kann den RNG von Nitrokey HSM nicht direkt verwenden, da engine-"
+"pkcs11 kein Mapping für OpenSSL auf C_GenerateRandom enthält."
 
 #: ../to-be-integrated.rst:954
 msgid "**Q:** What can I use for development and integration?"
-msgstr ""
+msgstr "**Q:** Was kann ich für die Entwicklung und Integration verwenden?"
 
 #: ../to-be-integrated.rst:956
 msgid ""
@@ -1656,12 +2301,18 @@ msgid ""
 "distribution, the PKCS driver may may be located at /usr/lib/x86_64"
 "-linux-gnu/opensc-pkcs11.so for example."
 msgstr ""
+"se OpenSC's commandline tools Wenn Ihre Anwendung über eine PKCS#11-"
+"Schnittstelle verfügt, verwenden Sie den PKCS#11-Treiber von OpenSC. Je nach "
+"Linux-Distribution befindet sich der PKCS-Treiber zum Beispiel unter /usr/"
+"lib/x86_64-linux-gnu/opensc-pkcs11.so."
 
 #: ../to-be-integrated.rst:958
 msgid ""
 "Alternatively to OpenSC, you might use sc-hsm-embedded PKCS#11 and CSP-"
 "Minidriver Module."
 msgstr ""
+"Alternativ zu OpenSC können Sie auch sc-hsm-embedded PKCS#11 und CSP-"
+"Minidriver Module verwenden."
 
 #: ../to-be-integrated.rst:959
 msgid ""
@@ -1674,10 +2325,20 @@ msgid ""
 " frontend to OpenSCs toolset - nitrotool A forum post describes the "
 "procedure to sign executables with a key stored on HSM on Windows."
 msgstr ""
+"Falls Sie Java verwenden, finden Sie einen JCE Provider als Teil der Smart "
+"Card Shell. Informationen über das m-of-n-Schema finden Sie hier. Secure "
+"Messaging kann mit dem JCE Provider genutzt werden. Bitte registrieren Sie "
+"sich im CardContact Developer Network, um Zugang zum Benutzerhandbuch und "
+"weiteren Tools zu erhalten. Sie können das Handbuch auch bei uns anfordern. "
+"Weiterleitung von Chipkarten mit Fedora Ein von einem Benutzer erstelltes "
+"Tool auf GitHub, um ein einfaches Frontend zu OpenSCs Toolset "
+"bereitzustellen - nitrotool Ein Forenbeitrag beschreibt die Prozedur zum "
+"Signieren von ausführbaren Dateien mit einem auf HSM gespeicherten Schlüssel "
+"unter Windows."
 
 #: ../to-be-integrated.rst:967
 msgid "Key Use Counter"
-msgstr ""
+msgstr "Taste Verwendungszähler"
 
 #: ../to-be-integrated.rst:969
 msgid ""
@@ -1686,6 +2347,10 @@ msgid ""
 "(SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter in the class "
 "scsh/sc-hsm/SmartCardHSM.js)."
 msgstr ""
+"Der Key Use Counter wird im Key Manager der Smart Card Shell angezeigt. "
+"Momentan können Sie ihn nur mit einem Skript setzen ("
+"SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter in der Klasse scsh/"
+"sc-hsm/SmartCardHSM.js)."
 
 #: ../to-be-integrated.rst:971
 msgid ""
@@ -1694,6 +2359,10 @@ msgid ""
 "counter can be set. The attribute can then also be set for a key can be "
 "queried."
 msgstr ""
+"In unserem PKCS#11 Modul gibt es ein proprietäres Attribut "
+"CKA_SC_HSM_KEY_USE_COUNTER mit dem die Schlüsselverwendung des "
+"C_GenerateKeyPair Zählers gesetzt werden kann. Das Attribut kann dann auch "
+"für einen Schlüssel gesetzt werden, der abgefragt werden kann."
 
 #: ../to-be-integrated.rst:973
 msgid ""
@@ -1701,4 +2370,6 @@ msgid ""
 "SmartCardHSMKey.getUseCounter() and confirm with "
 "SmartCardHSMKeySpec.setKeyUseCounter() can be set."
 msgstr ""
-
+"In OCF und dem JCE Provider kann der Key Use Counter mit SmartCardHSMKey."
+"getUseCounter() abgefragt und mit SmartCardHSMKeySpec.setKeyUseCounter() "
+"gesetzt werden."
