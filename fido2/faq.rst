@@ -8,10 +8,6 @@ Nitrokey FIDO2 FAQ
 **Q:** What can I use the Nitrokey for?
    See the `frontpage`_ for an overview of supported use cases.
 
-
-**Q:** What is the default PINs?
-   **PIN:** "1234"
-
 **Q:** What happens if I lose my FIDO device?
    When securing accounts using FIDO (two-factor authentication and
    passwordless login), you should configure another factor in your account as
