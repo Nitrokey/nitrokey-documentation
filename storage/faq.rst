@@ -22,6 +22,12 @@ FAQ<../pro/faq.rst>`** also partly applies.
 
 .. include:: ../shared-faqs/pins.rst 
 
+
+**Q:** Why does my Nitrokey Storage hang when switching between nitrokey-app and GnuPG?
+  GnuPG and nitrokey-app sometimes tend to hand each other. This is a known problem
+  and it can be fixed by re-inserting the Nitrokey into the USB slot.
+
+
 **Q:** What is the firmware PIN for?
     The firmware password should meet general password
     recommandations (e.g. use alphabetic characters, digits and special

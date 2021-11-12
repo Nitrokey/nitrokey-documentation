@@ -13,6 +13,11 @@ Nitrokey Pro 2 FAQ
 
 .. include:: ../shared-faqs/pins.rst 
 
+**Q:** Why does my Nitrokey Pro hang when switching between nitrokey-app and GnuPG?
+  GnuPG and nitrokey-app sometimes tend to hand each other. This is a known problem
+  and it can be fixed by re-inserting the Nitrokey into the USB slot.
+
+
 **Q:** Which drivers/tools can be used?
   GnuPG is required for many use cases. It is a command line tool but usually
   you don't need to invoke it directly but use another application with user
