@@ -49,6 +49,11 @@ Install the necessary tools:
    # Ubuntu
    sudo apt-get install opensc gnutls_bin
 
+For Windows download the official `OpenSC releases <https://github.com/OpenSC/OpenSC/releases>`__  
+and make sure you install `p11tool as described <https://github.com/thales-e-security/p11tool>`__.
+Using the PowerShell most commands should be identical as long as both tools and their binaries
+are within your ``PATH``.
+
 Creating the Root Certificate Authority
 ---------------------------------------
 
@@ -682,5 +687,6 @@ I used the following resources to help in compiling this document.
    HSM <https://www.infradead.org/openconnect/pkcs11.html>`__
 -  `Troubleshooting
    (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-hsm-does-not-support-signing/2598/14>`__
+
 
 This document was originally `written by lyntux <https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__.
