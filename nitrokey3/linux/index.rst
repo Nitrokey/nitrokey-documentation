@@ -1,7 +1,7 @@
 Nitrokey 3 with Linux
 ================
 
-.. include:: ../../fido2/shared/index-content1.rst
+.. include:: ../shared/main.rst
 
 Troubleshooting
 ---------------
