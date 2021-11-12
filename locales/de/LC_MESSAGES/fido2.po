@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-06 11:32+0200\n"
+"POT-Creation-Date: 2021-11-12 16:28+0100\n"
 "PO-Revision-Date: 2021-10-06 01:41+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: de\n"
@@ -281,7 +281,7 @@ msgstr ""
 "trotzdem mit dem ``<backup_user>`` anmelden und mit der Wartung "
 "fortfahren."
 
-#: ../fido2/linux/desktop-login.rst:76
+#: ../fido2/linux/desktop-login.rst:78
 msgid ""
 "The following guide can potentially lock you out of your computer. You "
 "should be aware of these risks, as it is recommended to first use the "
@@ -292,7 +292,7 @@ msgstr ""
 "empfohlen, die folgenden Anweisungen zuerst auf einem zweiten Computer "
 "oder nach einer vollständigen Sicherung anzuwenden."
 
-#: ../fido2/linux/desktop-login.rst:81
+#: ../fido2/linux/desktop-login.rst:83
 msgid ""
 "You might lose access to your data after configuring `PAM modules "
 "<http://www.linux-pam.org/Linux-PAM-html/>`__."
@@ -300,23 +300,23 @@ msgstr ""
 "Nach der Konfiguration von `PAM-Modulen <http://www.linux-pam.org/Linux-"
 "PAM-html/>`__ Sie möglicherweise den Zugriff auf Ihre Daten verlieren."
 
-#: ../fido2/linux/desktop-login.rst:85
+#: ../fido2/linux/desktop-login.rst:88
 msgid "2. Set up the ``rules`` to recognize the Nitrokey FIDO2"
 msgstr "2. Richten Sie die ``Regeln`` zur Erkennung des Nitrokey FIDO2 ein"
 
-#: ../fido2/linux/desktop-login.rst:87
+#: ../fido2/linux/desktop-login.rst:90
 msgid "Under ``/etc/udev/rules.d`` download ``41-nitrokey.rules``"
 msgstr "Unter ``/etc/udev/rules.d`` laden Sie ``41-nitrokey.rules`` herunter"
 
-#: ../fido2/linux/desktop-login.rst:94
+#: ../fido2/linux/desktop-login.rst:97
 msgid "And restart ``udev`` service"
 msgstr "Und starten Sie den ``udev``-Dienst neu"
 
-#: ../fido2/linux/desktop-login.rst:101
+#: ../fido2/linux/desktop-login.rst:104
 msgid "3. Install ``libpam-u2f``"
 msgstr "3. Installieren Sie ``libpam-u2f``"
 
-#: ../fido2/linux/desktop-login.rst:103
+#: ../fido2/linux/desktop-login.rst:106
 msgid ""
 "On Ubuntu 20.04 it is possible to download directly ``libpam-u2f`` from "
 "the official repos"
@@ -324,11 +324,11 @@ msgstr ""
 "Unter Ubuntu 20.04 ist es möglich, ``libpam-u2f`` direkt aus den "
 "offiziellen Repos herunterzuladen"
 
-#: ../fido2/linux/desktop-login.rst:111
+#: ../fido2/linux/desktop-login.rst:114
 msgid "Click for more options"
 msgstr "Klicken Sie für weitere Optionen"
 
-#: ../fido2/linux/desktop-login.rst:113
+#: ../fido2/linux/desktop-login.rst:116
 msgid ""
 "Alternatively you can build ``libpam-u2f`` from `Git "
 "<https://github.com/phoeagon/pam-u2f>`__."
@@ -336,7 +336,7 @@ msgstr ""
 "Alternativ können Sie ``libpam-u2f`` von `Git "
 "<https://github.com/phoeagon/pam-u2f>`__ übersetzen."
 
-#: ../fido2/linux/desktop-login.rst:116
+#: ../fido2/linux/desktop-login.rst:119
 msgid ""
 "To verify that the library is properly installed enter the following "
 "command:"
@@ -344,23 +344,23 @@ msgstr ""
 "Um zu überprüfen, ob die Bibliothek richtig installiert ist, geben Sie "
 "den folgenden Befehl ein:"
 
-#: ../fido2/linux/desktop-login.rst:123
+#: ../fido2/linux/desktop-login.rst:126
 msgid "The Output should be something like the following:"
 msgstr "Die Ausgabe sollte in etwa wie folgt aussehen:"
 
-#: ../fido2/linux/desktop-login.rst:130
+#: ../fido2/linux/desktop-login.rst:133
 msgid "4. Prepare the Directory"
 msgstr "4. Bereiten Sie das Verzeichnis vor"
 
-#: ../fido2/linux/desktop-login.rst:132
+#: ../fido2/linux/desktop-login.rst:135
 msgid "Create ``.config/Nitrokey/`` under your home directory"
 msgstr "Erstellen Sie ``.config/Nitrokey/`` unter Ihrem Home-Verzeichnis"
 
-#: ../fido2/linux/desktop-login.rst:138
+#: ../fido2/linux/desktop-login.rst:141
 msgid "And plug your Nitrokey FIDO2."
 msgstr "Und schließen Sie Ihren Nitrokey FIDO2 an."
 
-#: ../fido2/linux/desktop-login.rst:140
+#: ../fido2/linux/desktop-login.rst:143
 msgid ""
 "Once done with the preparation, we can start to configure the computer to"
 " use the Nitrokey FIDO2 for 2nd factor authentication at login and "
@@ -370,11 +370,11 @@ msgstr ""
 " den Computer so zu konfigurieren, dass er Nitrokey FIDO2 für die 2nd-"
 "Factor-Authentifizierung beim Login und ``sudo`` verwendet."
 
-#: ../fido2/linux/desktop-login.rst:143
+#: ../fido2/linux/desktop-login.rst:146
 msgid "5. Generate the U2F config file"
 msgstr "5. Generieren Sie die U2F-Konfigurationsdatei"
 
-#: ../fido2/linux/desktop-login.rst:145
+#: ../fido2/linux/desktop-login.rst:148
 msgid ""
 "To generate the configuration file we will use the ``pamu2fcfg`` utility "
 "that comes with the ``libpam-u2f``. For convenience, we will directly "
@@ -389,7 +389,7 @@ msgstr ""
 "Schließen Sie zunächst Ihren Nitrokey FIDO2 an (falls noch nicht "
 "geschehen), und geben Sie den folgenden Befehl ein:"
 
-#: ../fido2/linux/desktop-login.rst:151
+#: ../fido2/linux/desktop-login.rst:154
 msgid ""
 "Once you run the command above, you will need to touch the key while it "
 "flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys``"
@@ -399,7 +399,7 @@ msgstr ""
 "während sie blinkt. Sobald dies geschehen ist, wird ``pamu2fcfg`` seine "
 "Ausgabe an die ``u2f_keys`` im folgenden Format anhängen:"
 
-#: ../fido2/linux/desktop-login.rst:157
+#: ../fido2/linux/desktop-login.rst:160
 msgid ""
 "Note, the output will be much longer, but sensitive parts have been "
 "removed here. For better security, and once the config file generated, we"
@@ -411,11 +411,11 @@ msgstr ""
 "Konfigurationsdatei erzeugt wurde, verschieben wir mit diesem Befehl das "
 "Verzeichnis ``.config/Nitrokey`` unter das Verzeichnis ``etc/``:"
 
-#: ../fido2/linux/desktop-login.rst:166
+#: ../fido2/linux/desktop-login.rst:169
 msgid "The file under ``.config/Nitrokey`` must be named ``u2f_keys``"
 msgstr "Die Datei unter ``.config/Nitrokey`` muß den Namen ``u2f_keys`` tragen"
 
-#: ../fido2/linux/desktop-login.rst:168
+#: ../fido2/linux/desktop-login.rst:171
 msgid ""
 "It is recommended to first test the instructions with a single user. For "
 "this purpose the previous command takes the ``-u`` option, to specify a "
@@ -425,7 +425,7 @@ msgstr ""
 "zu testen. Zu diesem Zweck nimmt der vorherige Befehl die Option ``-u``, "
 "um einen Benutzer anzugeben, wie im folgenden Beispiel:"
 
-#: ../fido2/linux/desktop-login.rst:176
+#: ../fido2/linux/desktop-login.rst:179
 msgid ""
 "For individual user configuration you should point to the home directory "
 "in the next step, or not include the ``authfile`` option in the PAM "
@@ -435,11 +435,11 @@ msgstr ""
 "Schritt auf das Home-Verzeichnis verweisen, oder die Option ``authfile`` "
 "nicht in die PAM-Konfiguration aufnehmen."
 
-#: ../fido2/linux/desktop-login.rst:181
+#: ../fido2/linux/desktop-login.rst:184
 msgid "6. Backup"
 msgstr "6. Sicherung"
 
-#: ../fido2/linux/desktop-login.rst:183
+#: ../fido2/linux/desktop-login.rst:186
 msgid ""
 "This step is optional, however it is advised to have a backup Nitrokey in"
 " the case of loss, theft or destruction of your Nitrokey FIDO."
@@ -448,7 +448,7 @@ msgstr ""
 "Nitrokey für den Fall des Verlusts, Diebstahls oder der Zerstörung Ihres "
 "Nitrokey FIDO zu haben."
 
-#: ../fido2/linux/desktop-login.rst:185
+#: ../fido2/linux/desktop-login.rst:188
 msgid ""
 "To set up a backup key, repeat the procedure above, and use ``pamu2fcfg "
 "-n``. This will omit the ``<username>`` field, and the output can be "
@@ -459,11 +459,11 @@ msgstr ""
 "``<Benutzername>`` weggelassen, und die Ausgabe kann wie folgt an die "
 "Zeile mit Ihrem ``<Benutzername>`` angehängt werden:"
 
-#: ../fido2/linux/desktop-login.rst:192
+#: ../fido2/linux/desktop-login.rst:195
 msgid "7. Modify the Pluggable Authentication Module ``PAM``"
 msgstr "7. Modifizieren Sie das Pluggable Authentication Module ``PAM``"
 
-#: ../fido2/linux/desktop-login.rst:194
+#: ../fido2/linux/desktop-login.rst:197
 msgid ""
 "The final step is configure the PAM module files under ``/etc/pam.d/``. "
 "In this guide we will modify the ``common-auth`` file as it handles the "
@@ -476,11 +476,11 @@ msgstr ""
 "für alle Dienste gleich sind, aber andere Optionen sind möglich. Sie "
 "können die Datei mit dem folgenden Befehl ändern:"
 
-#: ../fido2/linux/desktop-login.rst:201
+#: ../fido2/linux/desktop-login.rst:204
 msgid "And add the following lines:"
 msgstr "Und fügen Sie die folgenden Zeilen hinzu:"
 
-#: ../fido2/linux/desktop-login.rst:210
+#: ../fido2/linux/desktop-login.rst:213
 msgid ""
 "Since we are using Central Authentication Mapping, we need to tell "
 "``pam_u2f`` the location of the file to use with the ``authfile`` option."
@@ -489,7 +489,7 @@ msgstr ""
 "``pam_u2f`` den Ort der zu verwendenden Datei mit der Option ``authfile``"
 " mitteilen."
 
-#: ../fido2/linux/desktop-login.rst:214
+#: ../fido2/linux/desktop-login.rst:217
 msgid ""
 "If you often forget to insert the key, ``prompt`` option make ``pam_u2f``"
 " print ``Insert your U2F device, then press ENTER.`` and give you a "
@@ -500,7 +500,7 @@ msgstr ""
 "ENTER`` verwenden, um Ihnen die Möglichkeit zu geben, den Nitrokey "
 "einzulegen."
 
-#: ../fido2/linux/desktop-login.rst:218
+#: ../fido2/linux/desktop-login.rst:221
 msgid ""
 "If you would like to be prompted to touch the Nitrokey, ``cue`` option "
 "will make ``pam_u2f`` print ``Please touch the device.`` message."
@@ -509,13 +509,20 @@ msgstr ""
 "bewirkt die Option ``cue``, daß ``pam_u2f`` die Meldung ``Bitte berühren "
 "Sie das Gerät`` ausgibt."
 
-#: ../fido2/linux/desktop-login.rst:222
+#: ../fido2/linux/desktop-login.rst:225
+msgid ""
+"`nouserok` will ensure that you can still login using the username and "
+"password, you might want to remove this at some point once the setup is "
+"working and you don't want regular username & password based logins."
+msgstr ""
+
+#: ../fido2/linux/desktop-login.rst:229
 msgid "Once we modified the ``common-auth``, we can save and exit the file."
 msgstr ""
 "Nachdem wir die ``common-auth`` modifiziert haben, können wir die Datei "
 "speichern und beenden."
 
-#: ../fido2/linux/desktop-login.rst:224
+#: ../fido2/linux/desktop-login.rst:231
 msgid ""
 "You can test the configuration by typing ``sudo ls`` in the terminal. You"
 " should be prompted the message ``Please touch the device.`` and have a "
@@ -525,7 +532,7 @@ msgstr ""
 "eingeben. Sie sollten die Meldung ``Bitte berühren Sie das Gerät.`` "
 "erhalten und eine ähnliche Ausgabe im Terminal haben:"
 
-#: ../fido2/linux/desktop-login.rst:226
+#: ../fido2/linux/desktop-login.rst:233
 msgid ""
 "``bash nitrouser@nitrouser:~$ sudo ls $ sudo ls [sudo] password for "
 "<username>:  Please touch the device.`` You can also test your "
@@ -539,11 +546,11 @@ msgstr ""
 "anmelden. Ein ähnlicher Bildschirm sollte angezeigt werden, wenn Sie "
 "Ihren Nitrokey FIDO2 ab- bzw. wieder anstecken und Ihr Passwort eingeben:"
 
-#: ../fido2/linux/desktop-login.rst:233
+#: ../fido2/linux/desktop-login.rst:240
 msgid "Usage"
 msgstr "Verwendung"
 
-#: ../fido2/linux/desktop-login.rst:235
+#: ../fido2/linux/desktop-login.rst:242
 msgid ""
 "After the PAM module modification, you will be able to test your "
 "configuration right away, but it is recommended to reboot your computer, "
@@ -553,7 +560,7 @@ msgstr ""
 "testen, es wird jedoch empfohlen, den Computer neu zu starten und den "
 "Nitrokey FIDO2 auszustecken/anzustecken."
 
-#: ../fido2/linux/desktop-login.rst:237
+#: ../fido2/linux/desktop-login.rst:244
 msgid ""
 "Once you have properly tested the instructions in this guide (and set up "
 "a backup), it is recommended to use either the ``required`` or the "
@@ -564,7 +571,7 @@ msgstr ""
 "``required`` oder das Steuerflag ``requisite`` anstelle von "
 "``sufficient`` zu verwenden."
 
-#: ../fido2/linux/desktop-login.rst:239
+#: ../fido2/linux/desktop-login.rst:246
 msgid ""
 "The flags ``required`` and ``requisite`` provide a tighter access "
 "control, and will make the Nitrokey FIDO2 necessary to login, and/or use "
@@ -574,7 +581,7 @@ msgstr ""
 "Zugriffskontrolle und machen den Nitrokey FIDO2 notwendig, um sich "
 "anzumelden und/oder den konfigurierten Dienst zu nutzen."
 
-#: ../fido2/linux/desktop-login.rst:241
+#: ../fido2/linux/desktop-login.rst:248
 msgid ""
 "If you need more information about Control Flags in the ``PAM`` "
 "configuration line, you may see the last section of this guide to "
@@ -585,11 +592,11 @@ msgstr ""
 "dieses Handbuchs lesen, um den Unterschied und die Auswirkungen der "
 "Verwendung der einzelnen Flags zu verstehen."
 
-#: ../fido2/linux/desktop-login.rst:245
+#: ../fido2/linux/desktop-login.rst:252
 msgid "PAM modules"
 msgstr "PAM-Module"
 
-#: ../fido2/linux/desktop-login.rst:247
+#: ../fido2/linux/desktop-login.rst:254
 msgid ""
 "There are several PAM modules files that can be modified according to "
 "your needs:"
@@ -597,7 +604,7 @@ msgstr ""
 "Es gibt mehrere PAM-Modul-Dateien, die Sie nach Ihren Bedürfnissen "
 "anpassen können:"
 
-#: ../fido2/linux/desktop-login.rst:249
+#: ../fido2/linux/desktop-login.rst:256
 msgid ""
 "By modifying ``/etc/pam.d/common-auth`` file, you will be able to use you"
 " Nitrokey FIDO for 2nd factor authentication for graphic login and "
@@ -610,7 +617,7 @@ msgstr ""
 "modifiziert werden, indem die zusätzliche Konfigurationszeile am Ende der"
 " Datei hinzugefügt wird."
 
-#: ../fido2/linux/desktop-login.rst:254
+#: ../fido2/linux/desktop-login.rst:261
 msgid ""
 "If you wish to use FIDO U2F authentication solely for Gnome’s graphic "
 "login, you might prefer to modify the\\ ``/etc/pam.d/gdm-password``"
@@ -619,7 +626,7 @@ msgstr ""
 "Anmeldung von Gnome verwenden möchten, sollten Sie die Datei ``/etc/pam.d"
 "/gdm-password`` anpassen"
 
-#: ../fido2/linux/desktop-login.rst:257
+#: ../fido2/linux/desktop-login.rst:264
 msgid ""
 "Alternatively you can just modify the ``/etc/pam.d/sudo`` file if you "
 "wish to use FIDO U2F when using the ``sudo`` command."
@@ -628,11 +635,11 @@ msgstr ""
 "modifizieren, wenn Sie FIDO U2F bei der Verwendung des ``sudo``-Befehls "
 "verwenden möchten."
 
-#: ../fido2/linux/desktop-login.rst:261
+#: ../fido2/linux/desktop-login.rst:268
 msgid "Control flags"
 msgstr "Steuermerker"
 
-#: ../fido2/linux/desktop-login.rst:263
+#: ../fido2/linux/desktop-login.rst:270
 msgid ""
 "In step 7 we have used the ``sufficient`` control flag to determine the "
 "behavior of the PAM module when the Nitrokey is plugged or not. However "
@@ -644,7 +651,7 @@ msgstr ""
 "oder nicht. Es ist jedoch möglich, dieses Verhalten mit den folgenden "
 "Steuerflags zu ändern:"
 
-#: ../fido2/linux/desktop-login.rst:265
+#: ../fido2/linux/desktop-login.rst:272
 msgid ""
 "``required``: This is the most critical flag. The module result must be "
 "successful for authentication to continue. This flag can lock you out of "
@@ -655,7 +662,7 @@ msgstr ""
 "Dieses Flag kann Sie von Ihrem Computer aussperren, wenn Sie keinen "
 "Zugriff auf den Nitrokey haben."
 
-#: ../fido2/linux/desktop-login.rst:269
+#: ../fido2/linux/desktop-login.rst:276
 msgid ""
 "``requisite``: Similar to ``required`` however, in the case where a "
 "specific module returns a failure, control is directly returned to the "
@@ -668,7 +675,7 @@ msgstr ""
 " kann Sie auch aus Ihrem Computer aussperren, wenn Sie keinen Zugriff auf"
 " den Nitrokey haben."
 
-#: ../fido2/linux/desktop-login.rst:275
+#: ../fido2/linux/desktop-login.rst:282
 msgid ""
 "``sufficient``: The module result is ignored if it fails. The "
 "``sufficient`` flag considered to be safe for testing purposes."
@@ -676,7 +683,7 @@ msgstr ""
 "``ausreichend``: Das Modulergebnis wird ignoriert, wenn es fehlschlägt. "
 "Das ``sufficient``-Flag gilt als sicher für Testzwecke."
 
-#: ../fido2/linux/desktop-login.rst:278
+#: ../fido2/linux/desktop-login.rst:285
 msgid ""
 "``optional``: The success or failure of this module is only important if "
 "it is the only module in the stack associated with this service+type. The"
@@ -687,7 +694,7 @@ msgstr ""
 "Service+Typ verbunden ist. Das ``optional``-Flag wird als sicher für "
 "Testzwecke angesehen."
 
-#: ../fido2/linux/desktop-login.rst:285
+#: ../fido2/linux/desktop-login.rst:292
 msgid ""
 "If ``required`` or ``requisite`` is set, the failure of U2F "
 "authentication will cause a failure of the overall authentication. "
@@ -699,7 +706,7 @@ msgstr ""
 " Der Fehler tritt auf, wenn der konfigurierte Nitrokey FIDO nicht "
 "eingesteckt, verloren oder zerstört ist."
 
-#: ../fido2/linux/desktop-login.rst:290
+#: ../fido2/linux/desktop-login.rst:297
 msgid ""
 "You will lose access to your computer if you mis-configured the PAM "
 "module *and* used the ``required`` or ``requisite`` flags."
@@ -708,7 +715,7 @@ msgstr ""
 "Modul falsch konfiguriert *und* die Flags ``required`` oder ``requisite``"
 " verwendet haben."
 
-#: ../fido2/linux/desktop-login.rst:293
+#: ../fido2/linux/desktop-login.rst:300
 msgid ""
 "You will also lose the ability to use ``sudo`` if you set up Central "
 "Authentication Mapping *and* used the ``required`` or ``requisite`` "

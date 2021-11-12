@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-12 14:30+0100\n"
+"POT-Creation-Date: 2021-11-12 16:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -220,268 +220,275 @@ msgstr ""
 msgid "Install the necessary tools:"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:53
-#: ../hsm/certificate-authority.rst:53
-#: ../hsm/certificate-authority.rst:53
-#: ../hsm/certificate-authority.rst:53
+#: ../hsm/certificate-authority.rst:52
+#: ../hsm/certificate-authority.rst:52
+#: ../hsm/certificate-authority.rst:52
+#: ../hsm/certificate-authority.rst:52
+msgid "For Windows download the official `OpenSC releases <https://github.com/OpenSC/OpenSC/releases>`__ and make sure you install `p11tool as described <https://github.com/thales-e-security/p11tool>`__. Using the PowerShell most commands should be identical as long as both tools and their binaries are within your ``PATH``."
+msgstr ""
+
+#: ../hsm/certificate-authority.rst:58
+#: ../hsm/certificate-authority.rst:58
+#: ../hsm/certificate-authority.rst:58
+#: ../hsm/certificate-authority.rst:58
 msgid "Creating the Root Certificate Authority"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:55
-#: ../hsm/certificate-authority.rst:55
-#: ../hsm/certificate-authority.rst:55
-#: ../hsm/certificate-authority.rst:55
+#: ../hsm/certificate-authority.rst:60
+#: ../hsm/certificate-authority.rst:60
+#: ../hsm/certificate-authority.rst:60
+#: ../hsm/certificate-authority.rst:60
 msgid "We start by generating the private key for the certificate authority directly on the Nitrokey HSM. This allows us to use the private key in the future, but not access it."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:78
-#: ../hsm/certificate-authority.rst:78
-#: ../hsm/certificate-authority.rst:78
-#: ../hsm/certificate-authority.rst:78
+#: ../hsm/certificate-authority.rst:83
+#: ../hsm/certificate-authority.rst:83
+#: ../hsm/certificate-authority.rst:83
+#: ../hsm/certificate-authority.rst:83
 msgid "Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need it later."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:80
-#: ../hsm/certificate-authority.rst:235
-#: ../hsm/certificate-authority.rst:80
-#: ../hsm/certificate-authority.rst:235
-#: ../hsm/certificate-authority.rst:80
-#: ../hsm/certificate-authority.rst:235
-#: ../hsm/certificate-authority.rst:80
-#: ../hsm/certificate-authority.rst:235
+#: ../hsm/certificate-authority.rst:85
+#: ../hsm/certificate-authority.rst:240
+#: ../hsm/certificate-authority.rst:85
+#: ../hsm/certificate-authority.rst:240
+#: ../hsm/certificate-authority.rst:85
+#: ../hsm/certificate-authority.rst:240
+#: ../hsm/certificate-authority.rst:85
+#: ../hsm/certificate-authority.rst:240
 msgid "If you need the ID in the future, you can list the keys on the Nitrokey HSM:"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:86
-#: ../hsm/certificate-authority.rst:241
-#: ../hsm/certificate-authority.rst:86
-#: ../hsm/certificate-authority.rst:241
-#: ../hsm/certificate-authority.rst:86
-#: ../hsm/certificate-authority.rst:241
-#: ../hsm/certificate-authority.rst:86
-#: ../hsm/certificate-authority.rst:241
+#: ../hsm/certificate-authority.rst:91
+#: ../hsm/certificate-authority.rst:246
+#: ../hsm/certificate-authority.rst:91
+#: ../hsm/certificate-authority.rst:246
+#: ../hsm/certificate-authority.rst:91
+#: ../hsm/certificate-authority.rst:246
+#: ../hsm/certificate-authority.rst:91
+#: ../hsm/certificate-authority.rst:246
 msgid "We need to create a config file to generate a self-signed public certificate."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:92
-#: ../hsm/certificate-authority.rst:247
-#: ../hsm/certificate-authority.rst:92
-#: ../hsm/certificate-authority.rst:247
-#: ../hsm/certificate-authority.rst:92
-#: ../hsm/certificate-authority.rst:247
-#: ../hsm/certificate-authority.rst:92
-#: ../hsm/certificate-authority.rst:247
+#: ../hsm/certificate-authority.rst:97
+#: ../hsm/certificate-authority.rst:252
+#: ../hsm/certificate-authority.rst:97
+#: ../hsm/certificate-authority.rst:252
+#: ../hsm/certificate-authority.rst:97
+#: ../hsm/certificate-authority.rst:252
+#: ../hsm/certificate-authority.rst:97
+#: ../hsm/certificate-authority.rst:252
 msgid "Fill out the request information in <angle brackets> with information for your CA."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:152
-#: ../hsm/certificate-authority.rst:152
-#: ../hsm/certificate-authority.rst:152
-#: ../hsm/certificate-authority.rst:152
+#: ../hsm/certificate-authority.rst:157
+#: ../hsm/certificate-authority.rst:157
+#: ../hsm/certificate-authority.rst:157
+#: ../hsm/certificate-authority.rst:157
 msgid "Generate the self-signed public certificate from the private key. Use the private key id value from earlier."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:160
-#: ../hsm/certificate-authority.rst:160
-#: ../hsm/certificate-authority.rst:160
-#: ../hsm/certificate-authority.rst:160
+#: ../hsm/certificate-authority.rst:165
+#: ../hsm/certificate-authority.rst:165
+#: ../hsm/certificate-authority.rst:165
+#: ../hsm/certificate-authority.rst:165
 msgid "Verify that the root certificate was generated correctly. Verify that Signature-Algorithm matches above and below. Verify that Issuer and Subject match, all root certificates are self signed. Verify that Key Usage matches what was in the v3_ca information in our config file."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:208
-#: ../hsm/certificate-authority.rst:208
-#: ../hsm/certificate-authority.rst:208
-#: ../hsm/certificate-authority.rst:208
+#: ../hsm/certificate-authority.rst:213
+#: ../hsm/certificate-authority.rst:213
+#: ../hsm/certificate-authority.rst:213
+#: ../hsm/certificate-authority.rst:213
 msgid "Creating the Intermediate Certificate Authority"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:210
-#: ../hsm/certificate-authority.rst:210
-#: ../hsm/certificate-authority.rst:210
-#: ../hsm/certificate-authority.rst:210
+#: ../hsm/certificate-authority.rst:215
+#: ../hsm/certificate-authority.rst:215
+#: ../hsm/certificate-authority.rst:215
+#: ../hsm/certificate-authority.rst:215
 msgid "We continue by generating the private key for the intermediate certificate authority directly on the Nitrokey HSM. This allows us to use the private key in the future, but not access it."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:233
-#: ../hsm/certificate-authority.rst:233
-#: ../hsm/certificate-authority.rst:233
-#: ../hsm/certificate-authority.rst:233
+#: ../hsm/certificate-authority.rst:238
+#: ../hsm/certificate-authority.rst:238
+#: ../hsm/certificate-authority.rst:238
+#: ../hsm/certificate-authority.rst:238
 msgid "Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need it later."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:274
-#: ../hsm/certificate-authority.rst:274
-#: ../hsm/certificate-authority.rst:274
-#: ../hsm/certificate-authority.rst:274
+#: ../hsm/certificate-authority.rst:279
+#: ../hsm/certificate-authority.rst:279
+#: ../hsm/certificate-authority.rst:279
+#: ../hsm/certificate-authority.rst:279
 msgid "Generate the certificate signing request for the intermediate CA from the intermediate CA’s private key. Use the private key ID value from earlier."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:282
-#: ../hsm/certificate-authority.rst:282
-#: ../hsm/certificate-authority.rst:282
-#: ../hsm/certificate-authority.rst:282
+#: ../hsm/certificate-authority.rst:287
+#: ../hsm/certificate-authority.rst:287
+#: ../hsm/certificate-authority.rst:287
+#: ../hsm/certificate-authority.rst:287
 msgid "Verify that the CSR was created correctly. Verify that your Subject is correct. Verify that your Public Key and Signature Algorithm are correct."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:315
-#: ../hsm/certificate-authority.rst:520
-#: ../hsm/certificate-authority.rst:315
-#: ../hsm/certificate-authority.rst:520
-#: ../hsm/certificate-authority.rst:315
-#: ../hsm/certificate-authority.rst:520
-#: ../hsm/certificate-authority.rst:315
-#: ../hsm/certificate-authority.rst:520
+#: ../hsm/certificate-authority.rst:320
+#: ../hsm/certificate-authority.rst:525
+#: ../hsm/certificate-authority.rst:320
+#: ../hsm/certificate-authority.rst:525
+#: ../hsm/certificate-authority.rst:320
+#: ../hsm/certificate-authority.rst:525
+#: ../hsm/certificate-authority.rst:320
+#: ../hsm/certificate-authority.rst:525
 msgid "We need to find out the fully qualified PKCS#11 URI for your private key:"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:353
-#: ../hsm/certificate-authority.rst:558
-#: ../hsm/certificate-authority.rst:353
-#: ../hsm/certificate-authority.rst:558
-#: ../hsm/certificate-authority.rst:353
-#: ../hsm/certificate-authority.rst:558
-#: ../hsm/certificate-authority.rst:353
-#: ../hsm/certificate-authority.rst:558
+#: ../hsm/certificate-authority.rst:358
+#: ../hsm/certificate-authority.rst:563
+#: ../hsm/certificate-authority.rst:358
+#: ../hsm/certificate-authority.rst:563
+#: ../hsm/certificate-authority.rst:358
+#: ../hsm/certificate-authority.rst:563
+#: ../hsm/certificate-authority.rst:358
+#: ../hsm/certificate-authority.rst:563
 msgid "In this instance, the fully qualified PKCS#11 URI is:"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:359
-#: ../hsm/certificate-authority.rst:359
-#: ../hsm/certificate-authority.rst:359
-#: ../hsm/certificate-authority.rst:359
+#: ../hsm/certificate-authority.rst:364
+#: ../hsm/certificate-authority.rst:364
+#: ../hsm/certificate-authority.rst:364
+#: ../hsm/certificate-authority.rst:364
 msgid "Now, we need to create a config file to use the private key of the root certificate to sign the csr of the intermediate certificate."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:411
-#: ../hsm/certificate-authority.rst:411
-#: ../hsm/certificate-authority.rst:411
-#: ../hsm/certificate-authority.rst:411
+#: ../hsm/certificate-authority.rst:416
+#: ../hsm/certificate-authority.rst:416
+#: ../hsm/certificate-authority.rst:416
+#: ../hsm/certificate-authority.rst:416
 msgid "Then sign the intermediate certificate with the root certificate."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:451
-#: ../hsm/certificate-authority.rst:451
-#: ../hsm/certificate-authority.rst:451
-#: ../hsm/certificate-authority.rst:451
+#: ../hsm/certificate-authority.rst:456
+#: ../hsm/certificate-authority.rst:456
+#: ../hsm/certificate-authority.rst:456
+#: ../hsm/certificate-authority.rst:456
 msgid "Verify that the root certificate was generated correctly. Verify that the Issuer and Subject are different, and correct. Verify that the Key Usage matches the config file. Verify that the signature algorithm are correct above and below."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:498
-#: ../hsm/certificate-authority.rst:498
-#: ../hsm/certificate-authority.rst:498
-#: ../hsm/certificate-authority.rst:498
+#: ../hsm/certificate-authority.rst:503
+#: ../hsm/certificate-authority.rst:503
+#: ../hsm/certificate-authority.rst:503
+#: ../hsm/certificate-authority.rst:503
 msgid "Verify that the intermediate certificate verifies against the root certificate."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:505
-#: ../hsm/certificate-authority.rst:505
-#: ../hsm/certificate-authority.rst:505
-#: ../hsm/certificate-authority.rst:505
+#: ../hsm/certificate-authority.rst:510
+#: ../hsm/certificate-authority.rst:510
+#: ../hsm/certificate-authority.rst:510
+#: ../hsm/certificate-authority.rst:510
 msgid "Create a certificate chain file:"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:511
-#: ../hsm/certificate-authority.rst:511
-#: ../hsm/certificate-authority.rst:511
-#: ../hsm/certificate-authority.rst:511
+#: ../hsm/certificate-authority.rst:516
+#: ../hsm/certificate-authority.rst:516
+#: ../hsm/certificate-authority.rst:516
+#: ../hsm/certificate-authority.rst:516
 msgid "You now have a certificate authority backed by an HSM."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:514
-#: ../hsm/certificate-authority.rst:514
-#: ../hsm/certificate-authority.rst:514
-#: ../hsm/certificate-authority.rst:514
+#: ../hsm/certificate-authority.rst:519
+#: ../hsm/certificate-authority.rst:519
+#: ../hsm/certificate-authority.rst:519
+#: ../hsm/certificate-authority.rst:519
 msgid "Sign a Server Certificate"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:516
-#: ../hsm/certificate-authority.rst:516
-#: ../hsm/certificate-authority.rst:516
-#: ../hsm/certificate-authority.rst:516
+#: ../hsm/certificate-authority.rst:521
+#: ../hsm/certificate-authority.rst:521
+#: ../hsm/certificate-authority.rst:521
+#: ../hsm/certificate-authority.rst:521
 msgid "Now that you have a certificate authority, you’d probably like to know how to use it."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:518
-#: ../hsm/certificate-authority.rst:518
-#: ../hsm/certificate-authority.rst:518
-#: ../hsm/certificate-authority.rst:518
+#: ../hsm/certificate-authority.rst:523
+#: ../hsm/certificate-authority.rst:523
+#: ../hsm/certificate-authority.rst:523
+#: ../hsm/certificate-authority.rst:523
 msgid "Create a CSR in the normal method for your application. Proper creation of your certificate, including SAN, for your particular application is outside the scope of this document."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:564
-#: ../hsm/certificate-authority.rst:564
-#: ../hsm/certificate-authority.rst:564
-#: ../hsm/certificate-authority.rst:564
+#: ../hsm/certificate-authority.rst:569
+#: ../hsm/certificate-authority.rst:569
+#: ../hsm/certificate-authority.rst:569
+#: ../hsm/certificate-authority.rst:569
 msgid "Create a config file to use the private key of the intermediate certificate to sign the CSRs of your servers."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:619
-#: ../hsm/certificate-authority.rst:619
-#: ../hsm/certificate-authority.rst:619
-#: ../hsm/certificate-authority.rst:619
+#: ../hsm/certificate-authority.rst:624
+#: ../hsm/certificate-authority.rst:624
+#: ../hsm/certificate-authority.rst:624
+#: ../hsm/certificate-authority.rst:624
 msgid "Then run openssl to sign the server’s CSR."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:668
-#: ../hsm/certificate-authority.rst:668
-#: ../hsm/certificate-authority.rst:668
-#: ../hsm/certificate-authority.rst:668
+#: ../hsm/certificate-authority.rst:673
+#: ../hsm/certificate-authority.rst:673
+#: ../hsm/certificate-authority.rst:673
+#: ../hsm/certificate-authority.rst:673
 msgid "References"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:670
-#: ../hsm/certificate-authority.rst:670
-#: ../hsm/certificate-authority.rst:670
-#: ../hsm/certificate-authority.rst:670
+#: ../hsm/certificate-authority.rst:675
+#: ../hsm/certificate-authority.rst:675
+#: ../hsm/certificate-authority.rst:675
+#: ../hsm/certificate-authority.rst:675
 msgid "I used the following resources to help in compiling this document."
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:672
-#: ../hsm/certificate-authority.rst:672
-#: ../hsm/certificate-authority.rst:672
-#: ../hsm/certificate-authority.rst:672
+#: ../hsm/certificate-authority.rst:677
+#: ../hsm/certificate-authority.rst:677
+#: ../hsm/certificate-authority.rst:677
+#: ../hsm/certificate-authority.rst:677
 msgid "`How to initialize your Nitrokey HSM <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`__"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:674
-#: ../hsm/certificate-authority.rst:674
-#: ../hsm/certificate-authority.rst:674
-#: ../hsm/certificate-authority.rst:674
+#: ../hsm/certificate-authority.rst:679
+#: ../hsm/certificate-authority.rst:679
+#: ../hsm/certificate-authority.rst:679
+#: ../hsm/certificate-authority.rst:679
 msgid "`How to create a root and intermediate CA <https://jamielinux.com/docs/openssl-certificate-authority/create-the-root-pair.html>`__"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:676
-#: ../hsm/certificate-authority.rst:676
-#: ../hsm/certificate-authority.rst:676
-#: ../hsm/certificate-authority.rst:676
+#: ../hsm/certificate-authority.rst:681
+#: ../hsm/certificate-authority.rst:681
+#: ../hsm/certificate-authority.rst:681
+#: ../hsm/certificate-authority.rst:681
 msgid "`How to ensure the serial numbers of your intermediate CA and server certs are up to spec <https://www.phildev.net/ssl/creating_ca.html>`__"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:679
-#: ../hsm/certificate-authority.rst:679
-#: ../hsm/certificate-authority.rst:679
-#: ../hsm/certificate-authority.rst:679
+#: ../hsm/certificate-authority.rst:684
+#: ../hsm/certificate-authority.rst:684
+#: ../hsm/certificate-authority.rst:684
+#: ../hsm/certificate-authority.rst:684
 msgid "`How to generate ECC private keys <https://dev.to/benjaminblack/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:681
-#: ../hsm/certificate-authority.rst:681
-#: ../hsm/certificate-authority.rst:681
-#: ../hsm/certificate-authority.rst:681
+#: ../hsm/certificate-authority.rst:686
+#: ../hsm/certificate-authority.rst:686
+#: ../hsm/certificate-authority.rst:686
+#: ../hsm/certificate-authority.rst:686
 msgid "`How to find the PCKS11 URI from your HSM <https://www.infradead.org/openconnect/pkcs11.html>`__"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:683
-#: ../hsm/certificate-authority.rst:683
-#: ../hsm/certificate-authority.rst:683
-#: ../hsm/certificate-authority.rst:683
+#: ../hsm/certificate-authority.rst:688
+#: ../hsm/certificate-authority.rst:688
+#: ../hsm/certificate-authority.rst:688
+#: ../hsm/certificate-authority.rst:688
 msgid "`Troubleshooting (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-hsm-does-not-support-signing/2598/14>`__"
 msgstr ""
 
-#: ../hsm/certificate-authority.rst:686
-#: ../hsm/certificate-authority.rst:686
-#: ../hsm/certificate-authority.rst:686
-#: ../hsm/certificate-authority.rst:686
+#: ../hsm/certificate-authority.rst:692
+#: ../hsm/certificate-authority.rst:692
+#: ../hsm/certificate-authority.rst:692
+#: ../hsm/certificate-authority.rst:692
 msgid "This document was originally `written by lyntux <https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__."
 msgstr ""
 
@@ -557,7 +564,7 @@ msgstr ""
 msgid "Nitrokey HSM can store 20 RSA-2048 and 31 ECC-256 key pairs."
 msgstr ""
 
-#: ../hsm/faq.rst:50
+#: ../hsm/faq.rst:49
 msgid "**Q:** How fast is encryption and signing?"
 msgstr ""
 
@@ -583,6 +590,14 @@ msgstr ""
 
 #: ../hsm/faq.rst:49
 msgid "Signature creation with on-card SHA-256 and 1 kb data: ECDSA 256: 125 per minute"
+msgstr ""
+
+#: ../hsm/faq.rst:53
+msgid "**Q:** How can I distinguish a Nitrokey HSM1 from an Nitrokey HSM2?"
+msgstr ""
+
+#: ../hsm/faq.rst:52
+msgid "Use ``opensc-tool --list-algorithms`` and compare with the table below. Please also see `this thread`_ for the factsheets and more details."
 msgstr ""
 
 #: ../shared-faqs/algos.rst:3
@@ -707,35 +722,35 @@ msgstr ""
 msgid "secp521"
 msgstr ""
 
-#: ../hsm/faq.rst:57
+#: ../hsm/faq.rst:60
 msgid "**Q:** How good is the Random Number Generator (RNG)?"
 msgstr ""
 
-#: ../hsm/faq.rst:56
+#: ../hsm/faq.rst:59
 msgid "Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 (according to AIS 31 of the BSI)."
 msgstr ""
 
-#: ../hsm/faq.rst:74
+#: ../hsm/faq.rst:76
 msgid "**Q:** Which API can I use?"
 msgstr ""
 
-#: ../hsm/faq.rst:60
+#: ../hsm/faq.rst:63
 msgid "OpenSC: Comprehensive instructions exist for OpenSC framework. There is nitrotool as a more comfortable frontend to OpenSC."
 msgstr ""
 
-#: ../hsm/faq.rst:63
-msgid "GPGSM (from GnuPG): Nitrokey HSM is supported since GnuPG 2.1.  Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 module is useful for deployments where key generation at the user's workplace is not required. The PKCS#11 module also supports major electronic signature cards available in the German market."
+#: ../hsm/faq.rst:66
+msgid "Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 module is useful for deployments where key generation at the user's workplace is not required. The PKCS#11 module also supports major electronic signature cards available in the German market."
 msgstr ""
 
-#: ../hsm/faq.rst:70
+#: ../hsm/faq.rst:72
 msgid "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open smart card development platform. See the public support scripts for details. To import existing keys you can use its SCSH or NitroKeyWrapper."
 msgstr ""
 
-#: ../hsm/faq.rst:81
+#: ../hsm/faq.rst:82
 msgid "**Q:** Is the Nitrokey Pro Common Criteria or FIPS certified?"
 msgstr ""
 
-#: ../hsm/faq.rst:77
+#: ../hsm/faq.rst:79
 msgid "The security controler's hardware and operating system are Common Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_, click \"ICs, Smart Cards and Smart Card-Related Devices and Systems\" and search for \"NXP JCOP 3 P60\")."
 msgstr ""
 

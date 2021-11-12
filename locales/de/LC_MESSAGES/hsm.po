@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-12 14:30+0100\n"
+"POT-Creation-Date: 2021-11-12 16:28+0100\n"
 "PO-Revision-Date: 2021-11-12 14:41+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: German <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-hsm/de/>\n"
 "Language: de\n"
+"Language-Team: German <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-hsm/de/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../hsm/apache2-tls.rst:2
@@ -217,11 +216,20 @@ msgstr ""
 msgid "Install the necessary tools:"
 msgstr "Installieren Sie die erforderlichen Werkzeuge:"
 
-#: ../hsm/certificate-authority.rst:53
+#: ../hsm/certificate-authority.rst:52
+msgid ""
+"For Windows download the official `OpenSC releases "
+"<https://github.com/OpenSC/OpenSC/releases>`__ and make sure you install "
+"`p11tool as described <https://github.com/thales-e-security/p11tool>`__. "
+"Using the PowerShell most commands should be identical as long as both "
+"tools and their binaries are within your ``PATH``."
+msgstr ""
+
+#: ../hsm/certificate-authority.rst:58
 msgid "Creating the Root Certificate Authority"
 msgstr "Erstellen der Root-Zertifizierungsstelle"
 
-#: ../hsm/certificate-authority.rst:55
+#: ../hsm/certificate-authority.rst:60
 msgid ""
 "We start by generating the private key for the certificate authority "
 "directly on the Nitrokey HSM. This allows us to use the private key in "
@@ -231,7 +239,7 @@ msgstr ""
 "Zertifizierungsstelle direkt auf dem Nitrokey HSM. Dadurch können wir den"
 " privaten Schlüssel in Zukunft verwenden, aber nicht darauf zugreifen."
 
-#: ../hsm/certificate-authority.rst:78
+#: ../hsm/certificate-authority.rst:83
 msgid ""
 "Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need"
 " it later."
@@ -239,7 +247,7 @@ msgstr ""
 "Notieren Sie die ID-Nummer (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), "
 "wir benötigen sie später."
 
-#: ../hsm/certificate-authority.rst:80 ../hsm/certificate-authority.rst:235
+#: ../hsm/certificate-authority.rst:85 ../hsm/certificate-authority.rst:240
 msgid ""
 "If you need the ID in the future, you can list the keys on the Nitrokey "
 "HSM:"
@@ -247,7 +255,7 @@ msgstr ""
 "Wenn Sie die ID in Zukunft benötigen, können Sie die Tasten auf dem "
 "Nitrokey HSM auflisten:"
 
-#: ../hsm/certificate-authority.rst:86 ../hsm/certificate-authority.rst:241
+#: ../hsm/certificate-authority.rst:91 ../hsm/certificate-authority.rst:246
 msgid ""
 "We need to create a config file to generate a self-signed public "
 "certificate."
@@ -255,7 +263,7 @@ msgstr ""
 "Wir müssen eine Konfigurationsdatei erstellen, um ein selbstsigniertes "
 "öffentliches Zertifikat zu erzeugen."
 
-#: ../hsm/certificate-authority.rst:92 ../hsm/certificate-authority.rst:247
+#: ../hsm/certificate-authority.rst:97 ../hsm/certificate-authority.rst:252
 msgid ""
 "Fill out the request information in <angle brackets> with information for"
 " your CA."
@@ -263,7 +271,7 @@ msgstr ""
 "Füllen Sie die Anforderungsinformationen in <eckigen Klammern> mit "
 "Informationen für Ihre CA aus."
 
-#: ../hsm/certificate-authority.rst:152
+#: ../hsm/certificate-authority.rst:157
 msgid ""
 "Generate the self-signed public certificate from the private key. Use the"
 " private key id value from earlier."
@@ -271,7 +279,7 @@ msgstr ""
 "Erzeugen Sie das selbstsignierte öffentliche Zertifikat aus dem privaten "
 "Schlüssel. Verwenden Sie den Wert der privaten Schlüssel-ID von vorhin."
 
-#: ../hsm/certificate-authority.rst:160
+#: ../hsm/certificate-authority.rst:165
 msgid ""
 "Verify that the root certificate was generated correctly. Verify that "
 "Signature-Algorithm matches above and below. Verify that Issuer and "
@@ -284,11 +292,11 @@ msgstr ""
 "selbstsigniert. Überprüfen Sie, dass Key Usage mit den v3_ca-"
 "Informationen in unserer Konfigurationsdatei übereinstimmt."
 
-#: ../hsm/certificate-authority.rst:208
+#: ../hsm/certificate-authority.rst:213
 msgid "Creating the Intermediate Certificate Authority"
 msgstr "Erstellen der Zwischenzertifizierungsstelle"
 
-#: ../hsm/certificate-authority.rst:210
+#: ../hsm/certificate-authority.rst:215
 msgid ""
 "We continue by generating the private key for the intermediate "
 "certificate authority directly on the Nitrokey HSM. This allows us to use"
@@ -299,7 +307,7 @@ msgstr ""
 "Dadurch können wir den privaten Schlüssel in Zukunft verwenden, aber "
 "nicht darauf zugreifen."
 
-#: ../hsm/certificate-authority.rst:233
+#: ../hsm/certificate-authority.rst:238
 msgid ""
 "Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need"
 " it later."
@@ -307,7 +315,7 @@ msgstr ""
 "Notieren Sie die ID-Nummer (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), "
 "wir benötigen sie später."
 
-#: ../hsm/certificate-authority.rst:274
+#: ../hsm/certificate-authority.rst:279
 msgid ""
 "Generate the certificate signing request for the intermediate CA from the"
 " intermediate CA’s private key. Use the private key ID value from "
@@ -317,7 +325,7 @@ msgstr ""
 "aus dem privaten Schlüssel der Zwischen-CA. Verwenden Sie den ID-Wert des"
 " privaten Schlüssels von vorhin."
 
-#: ../hsm/certificate-authority.rst:282
+#: ../hsm/certificate-authority.rst:287
 msgid ""
 "Verify that the CSR was created correctly. Verify that your Subject is "
 "correct. Verify that your Public Key and Signature Algorithm are correct."
@@ -326,17 +334,17 @@ msgstr ""
 "Betreff korrekt ist. Prüfen Sie, ob Ihr öffentlicher Schlüssel und Ihr "
 "Signaturalgorithmus korrekt sind."
 
-#: ../hsm/certificate-authority.rst:315 ../hsm/certificate-authority.rst:520
+#: ../hsm/certificate-authority.rst:320 ../hsm/certificate-authority.rst:525
 msgid "We need to find out the fully qualified PKCS#11 URI for your private key:"
 msgstr ""
 "Wir müssen die voll qualifizierte PKCS#11-URI für Ihren privaten "
 "Schlüssel herausfinden:"
 
-#: ../hsm/certificate-authority.rst:353 ../hsm/certificate-authority.rst:558
+#: ../hsm/certificate-authority.rst:358 ../hsm/certificate-authority.rst:563
 msgid "In this instance, the fully qualified PKCS#11 URI is:"
 msgstr "In diesem Fall lautet der vollständig qualifizierte PKCS#11-URI:"
 
-#: ../hsm/certificate-authority.rst:359
+#: ../hsm/certificate-authority.rst:364
 msgid ""
 "Now, we need to create a config file to use the private key of the root "
 "certificate to sign the csr of the intermediate certificate."
@@ -345,11 +353,11 @@ msgstr ""
 "Schlüssel des Root-Zertifikats zu verwenden, um die csr des "
 "Zwischenzertifikats zu signieren."
 
-#: ../hsm/certificate-authority.rst:411
+#: ../hsm/certificate-authority.rst:416
 msgid "Then sign the intermediate certificate with the root certificate."
 msgstr "Signieren Sie dann das Zwischenzertifikat mit dem Stammzertifikat."
 
-#: ../hsm/certificate-authority.rst:451
+#: ../hsm/certificate-authority.rst:456
 msgid ""
 "Verify that the root certificate was generated correctly. Verify that the"
 " Issuer and Subject are different, and correct. Verify that the Key Usage"
@@ -362,7 +370,7 @@ msgstr ""
 "übereinstimmt. Prüfen Sie, ob die Signaturalgorithmen oben und unten "
 "korrekt sind."
 
-#: ../hsm/certificate-authority.rst:498
+#: ../hsm/certificate-authority.rst:503
 msgid ""
 "Verify that the intermediate certificate verifies against the root "
 "certificate."
@@ -370,21 +378,21 @@ msgstr ""
 "Überprüfen Sie, ob das Zwischenzertifikat mit dem Stammzertifikat "
 "übereinstimmt."
 
-#: ../hsm/certificate-authority.rst:505
+#: ../hsm/certificate-authority.rst:510
 msgid "Create a certificate chain file:"
 msgstr "Erstellen Sie eine Zertifikatskettendatei:"
 
-#: ../hsm/certificate-authority.rst:511
+#: ../hsm/certificate-authority.rst:516
 msgid "You now have a certificate authority backed by an HSM."
 msgstr ""
 "Sie haben nun eine Zertifizierungsstelle, die durch ein HSM unterstützt "
 "wird."
 
-#: ../hsm/certificate-authority.rst:514
+#: ../hsm/certificate-authority.rst:519
 msgid "Sign a Server Certificate"
 msgstr "Signieren eines Server-Zertifikats"
 
-#: ../hsm/certificate-authority.rst:516
+#: ../hsm/certificate-authority.rst:521
 msgid ""
 "Now that you have a certificate authority, you’d probably like to know "
 "how to use it."
@@ -392,7 +400,7 @@ msgstr ""
 "Jetzt, wo Sie eine Zertifizierungsstelle haben, möchten Sie "
 "wahrscheinlich wissen, wie Sie diese verwenden können."
 
-#: ../hsm/certificate-authority.rst:518
+#: ../hsm/certificate-authority.rst:523
 msgid ""
 "Create a CSR in the normal method for your application. Proper creation "
 "of your certificate, including SAN, for your particular application is "
@@ -402,7 +410,7 @@ msgstr ""
 "korrekte Erstellung Ihres Zertifikats, einschließlich SAN, für Ihre "
 "spezielle Anwendung liegt außerhalb des Rahmens dieses Dokuments."
 
-#: ../hsm/certificate-authority.rst:564
+#: ../hsm/certificate-authority.rst:569
 msgid ""
 "Create a config file to use the private key of the intermediate "
 "certificate to sign the CSRs of your servers."
@@ -410,21 +418,21 @@ msgstr ""
 "Erstellen Sie eine Konfigurationsdatei, um den privaten Schlüssel des "
 "Zwischenzertifikats zum Signieren der CSRs Ihrer Server zu verwenden."
 
-#: ../hsm/certificate-authority.rst:619
+#: ../hsm/certificate-authority.rst:624
 msgid "Then run openssl to sign the server’s CSR."
 msgstr "Führen Sie dann openssl aus, um die CSR des Servers zu signieren."
 
-#: ../hsm/certificate-authority.rst:668
+#: ../hsm/certificate-authority.rst:673
 msgid "References"
 msgstr "Referenzen"
 
-#: ../hsm/certificate-authority.rst:670
+#: ../hsm/certificate-authority.rst:675
 msgid "I used the following resources to help in compiling this document."
 msgstr ""
 "Bei der Zusammenstellung dieses Dokuments habe ich die folgenden "
 "Ressourcen verwendet."
 
-#: ../hsm/certificate-authority.rst:672
+#: ../hsm/certificate-authority.rst:677
 msgid ""
 "`How to initialize your Nitrokey HSM "
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
@@ -434,7 +442,7 @@ msgstr ""
 "<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-"
 "device>`__"
 
-#: ../hsm/certificate-authority.rst:674
+#: ../hsm/certificate-authority.rst:679
 msgid ""
 "`How to create a root and intermediate CA <https://jamielinux.com/docs"
 "/openssl-certificate-authority/create-the-root-pair.html>`__"
@@ -442,7 +450,7 @@ msgstr ""
 "So erstellen Sie eine Stamm- und Zwischen-CA <https://jamielinux.com/docs"
 "/openssl-certificate-authority/create-the-root-pair.html>`__"
 
-#: ../hsm/certificate-authority.rst:676
+#: ../hsm/certificate-authority.rst:681
 msgid ""
 "`How to ensure the serial numbers of your intermediate CA and server "
 "certs are up to spec <https://www.phildev.net/ssl/creating_ca.html>`__"
@@ -451,7 +459,7 @@ msgstr ""
 "CA- und Server-Zertifikate der Spezifikation entsprechen "
 "<https://www.phildev.net/ssl/creating_ca.html>`__"
 
-#: ../hsm/certificate-authority.rst:679
+#: ../hsm/certificate-authority.rst:684
 msgid ""
 "`How to generate ECC private keys <https://dev.to/benjaminblack"
 "/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
@@ -459,7 +467,7 @@ msgstr ""
 "Wie man ECC-Privatschlüssel erzeugt <https://dev.to/benjaminblack"
 "/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
 
-#: ../hsm/certificate-authority.rst:681
+#: ../hsm/certificate-authority.rst:686
 msgid ""
 "`How to find the PCKS11 URI from your HSM "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__"
@@ -467,7 +475,7 @@ msgstr ""
 "So finden Sie den PCKS11 URI von Ihrem HSM "
 "<https://www.infradead.org/openconnect/pkcs11.html>`__"
 
-#: ../hsm/certificate-authority.rst:683
+#: ../hsm/certificate-authority.rst:688
 msgid ""
 "`Troubleshooting (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-"
 "hsm-does-not-support-signing/2598/14>`__"
@@ -475,7 +483,7 @@ msgstr ""
 "`Fehlersuche (Forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-hsm-"
 "does-not-support-signing/2598/14>`__"
 
-#: ../hsm/certificate-authority.rst:686
+#: ../hsm/certificate-authority.rst:692
 msgid ""
 "This document was originally `written by lyntux "
 "<https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__."
@@ -529,10 +537,10 @@ msgid ""
 "characters and special characters. Note: When using GnuPG or OpenSC, 32 "
 "character long PINs can be used but aren't supported by Nitrokey App."
 msgstr ""
-"Nitrokey-PINs können bis zu 16 Ziffern lang sein und aus Zahlen, Buchstaben "
-"und Sonderzeichen bestehen. Hinweis: Bei Verwendung von GnuPG oder OpenSC "
-"können 32 Zeichen lange PINs verwendet werden, die jedoch von der Nitrokey-"
-"App nicht unterstützt werden."
+"Nitrokey-PINs können bis zu 16 Ziffern lang sein und aus Zahlen, "
+"Buchstaben und Sonderzeichen bestehen. Hinweis: Bei Verwendung von GnuPG "
+"oder OpenSC können 32 Zeichen lange PINs verwendet werden, die jedoch von"
+" der Nitrokey-App nicht unterstützt werden."
 
 #: ../hsm/faq.rst:27
 msgid "**Q:** What is the User PIN for?"
@@ -544,9 +552,9 @@ msgid ""
 "contect of the Nitrokey. This is the PIN you will use a lot in every day "
 "use"
 msgstr ""
-"Die PIN ist mindestens 6-stellig und wird verwendet, um Zugang zum Inhalt "
-"des Nitrokeys zu erhalten. Dies ist die PIN, die Sie im täglichen Gebrauch "
-"häufig verwenden werden"
+"Die PIN ist mindestens 6-stellig und wird verwendet, um Zugang zum Inhalt"
+" des Nitrokeys zu erhalten. Dies ist die PIN, die Sie im täglichen "
+"Gebrauch häufig verwenden werden"
 
 #: ../hsm/faq.rst:24
 msgid ""
@@ -557,8 +565,8 @@ msgid ""
 msgstr ""
 "Die PIN kann bis zu 16 Ziffern und weitere Zeichen (z. B. Buchstaben und "
 "Sonderzeichen) enthalten. Da die PIN jedoch gesperrt wird, sobald drei "
-"falsche PIN-Versuche unternommen wurden, ist es ausreichend sicher, nur eine "
-"6-stellige PIN zu verwenden."
+"falsche PIN-Versuche unternommen wurden, ist es ausreichend sicher, nur "
+"eine 6-stellige PIN zu verwenden."
 
 #: ../hsm/faq.rst:34
 msgid "**Q:** What is the SO PIN for?"
@@ -599,7 +607,7 @@ msgstr "**Q:** Wie viele Schlüssel kann ich speichern?"
 msgid "Nitrokey HSM can store 20 RSA-2048 and 31 ECC-256 key pairs."
 msgstr "Nitrokey HSM kann 20 RSA-2048 und 31 ECC-256 Schlüsselpaare speichern."
 
-#: ../hsm/faq.rst:50
+#: ../hsm/faq.rst:49
 msgid "**Q:** How fast is encryption and signing?"
 msgstr "**Q:** Wie schnell sind Verschlüsselung und Signierung?"
 
@@ -634,6 +642,16 @@ msgid ""
 msgstr ""
 "Signaturerstellung mit karteneigenem SHA-256 und 1 kb Daten: ECDSA 256: "
 "125 pro Minute"
+
+#: ../hsm/faq.rst:53
+msgid "**Q:** How can I distinguish a Nitrokey HSM1 from an Nitrokey HSM2?"
+msgstr ""
+
+#: ../hsm/faq.rst:52
+msgid ""
+"Use ``opensc-tool --list-algorithms`` and compare with the table below. "
+"Please also see `this thread`_ for the factsheets and more details."
+msgstr ""
 
 #: ../shared-faqs/algos.rst:3
 msgid "**Q:** Which algorithms and maximum key length are supported?"
@@ -729,11 +747,11 @@ msgstr "secp256"
 msgid "secp521"
 msgstr "secp521"
 
-#: ../hsm/faq.rst:57
+#: ../hsm/faq.rst:60
 msgid "**Q:** How good is the Random Number Generator (RNG)?"
 msgstr "**Q:** Wie gut ist der Zufallszahlengenerator (RNG)?"
 
-#: ../hsm/faq.rst:56
+#: ../hsm/faq.rst:59
 msgid ""
 "Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 "
 "(according to AIS 31 of the BSI)."
@@ -741,11 +759,11 @@ msgstr ""
 "Nitrokey HSM verwendet das TRNG von JCOP 2.4.1r3, das eine Qualität von "
 "DRNG.2 hat (gemäß AIS 31 des BSI)."
 
-#: ../hsm/faq.rst:74
+#: ../hsm/faq.rst:76
 msgid "**Q:** Which API can I use?"
 msgstr "**Q:** Welche API kann ich verwenden?"
 
-#: ../hsm/faq.rst:60
+#: ../hsm/faq.rst:63
 msgid ""
 "OpenSC: Comprehensive instructions exist for OpenSC framework. There is "
 "nitrotool as a more comfortable frontend to OpenSC."
@@ -753,24 +771,16 @@ msgstr ""
 "OpenSC: Für das OpenSC-Framework gibt es eine ausführliche Anleitung. Als"
 " komfortableres Frontend zu OpenSC gibt es nitrotool."
 
-#: ../hsm/faq.rst:63
+#: ../hsm/faq.rst:66
 msgid ""
-"GPGSM (from GnuPG): Nitrokey HSM is supported since GnuPG 2.1.  Embedded "
-"Systems: For systems with minimal memory footprint a read/only PKCS#11 "
-"module is provided by the sc-hsm-embedded project.  This PKCS#11 module "
-"is useful for deployments where key generation at the user's workplace is"
-" not required. The PKCS#11 module also supports major electronic "
-"signature cards available in the German market."
+"Embedded Systems: For systems with minimal memory footprint a read/only "
+"PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 "
+"module is useful for deployments where key generation at the user's "
+"workplace is not required. The PKCS#11 module also supports major "
+"electronic signature cards available in the German market."
 msgstr ""
-"GPGSM (von GnuPG): Nitrokey HSM wird seit GnuPG 2.1 unterstützt.  "
-"Eingebettete Systeme: Für Systeme mit minimalem Speicherbedarf bietet das"
-" sc-hsm-embedded-Projekt ein PKCS#11-Modul, das nur gelesen werden kann."
-"  Dieses PKCS#11-Modul ist nützlich für Einsätze, bei denen die "
-"Schlüsselerzeugung am Arbeitsplatz des Benutzers nicht erforderlich ist. "
-"Das PKCS#11-Modul unterstützt auch die wichtigsten elektronischen "
-"Signaturkarten, die auf dem deutschen Markt erhältlich sind."
 
-#: ../hsm/faq.rst:70
+#: ../hsm/faq.rst:72
 msgid ""
 "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open "
 "smart card development platform. See the public support scripts for "
@@ -781,11 +791,11 @@ msgstr ""
 "Support-Skripte für Details. Um vorhandene Schlüssel zu importieren, "
 "können Sie den SCSH oder NitroKeyWrapper verwenden."
 
-#: ../hsm/faq.rst:81
+#: ../hsm/faq.rst:82
 msgid "**Q:** Is the Nitrokey Pro Common Criteria or FIPS certified?"
 msgstr "**Q:** Ist der Nitrokey Pro nach Common Criteria oder FIPS zertifiziert?"
 
-#: ../hsm/faq.rst:77
+#: ../hsm/faq.rst:79
 msgid ""
 "The security controler's hardware and operating system are Common "
 "Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_, "
@@ -2486,3 +2496,30 @@ msgstr ""
 #~ "Wir empfehlen dringend, diese PINs/Passwörter"
 #~ " vor der Verwendung des Nitrokeys in"
 #~ " benutzerdefinierte Werte zu ändern."
+
+#~ msgid ""
+#~ "GPGSM (from GnuPG): Nitrokey HSM is "
+#~ "supported since GnuPG 2.1.  Embedded "
+#~ "Systems: For systems with minimal memory"
+#~ " footprint a read/only PKCS#11 module "
+#~ "is provided by the sc-hsm-embedded"
+#~ " project.  This PKCS#11 module is "
+#~ "useful for deployments where key "
+#~ "generation at the user's workplace is"
+#~ " not required. The PKCS#11 module "
+#~ "also supports major electronic signature "
+#~ "cards available in the German market."
+#~ msgstr ""
+#~ "GPGSM (von GnuPG): Nitrokey HSM wird "
+#~ "seit GnuPG 2.1 unterstützt.  Eingebettete "
+#~ "Systeme: Für Systeme mit minimalem "
+#~ "Speicherbedarf bietet das sc-hsm-"
+#~ "embedded-Projekt ein PKCS#11-Modul, das nur"
+#~ " gelesen werden kann.  Dieses PKCS#11-Modul"
+#~ " ist nützlich für Einsätze, bei denen"
+#~ " die Schlüsselerzeugung am Arbeitsplatz des"
+#~ " Benutzers nicht erforderlich ist. Das "
+#~ "PKCS#11-Modul unterstützt auch die wichtigsten"
+#~ " elektronischen Signaturkarten, die auf dem"
+#~ " deutschen Markt erhältlich sind."
+
