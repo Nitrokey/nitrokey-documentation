@@ -3,13 +3,20 @@ NitroPad
 
 .. contents:: :local:
 
-Choose your operating system:
+First check the:
 
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Qubes OS <qubes/index>
-   Ubuntu Linux <ubuntu/index>
    Frequently Asked Questions <faq>
 
+or choose your operating system:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Qubes <qubes/index>
+   Ubuntu <ubuntu/index>
+   

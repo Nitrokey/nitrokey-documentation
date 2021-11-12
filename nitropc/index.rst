@@ -3,7 +3,16 @@ NitroPC
 
 .. contents:: :local:
 
-Choose your operating system:
+
+First check the:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Frequently Asked Questions <faq>
+
+or choose your operating system:
 
 .. toctree::
    :maxdepth: 1
@@ -12,8 +21,7 @@ Choose your operating system:
    Debian <debian/index>
    Qubes <qubes/index>
    Ubuntu <ubuntu/index>
-   Frequently Asked Questions <faq>
-
+   
 
 Booting from USB drive
 ----------------------

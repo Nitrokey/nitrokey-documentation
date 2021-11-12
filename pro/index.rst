@@ -3,7 +3,16 @@ Nitrokey Pro 2
 
 .. contents:: :local:
 
-Choose your operating system:
+
+First check the:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Frequently Asked Questions <faq>
+
+or choose your operating system:
 
 .. toctree::
    :maxdepth: 1
@@ -12,4 +21,4 @@ Choose your operating system:
    Windows <windows/index>
    macOS <mac/index>
    Linux <linux/index>
-   Frequently Asked Questions <faq>
+   

@@ -10,7 +10,15 @@ The Nitrokey 3A and 3C additionally support NFC, while the Nitrokey 3 Mini does 
 Future firmware updates will enable additional functionality and will be documented here accordingly.
 
 
-Choose your operating system:
+First check the:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Frequently Asked Questions <faq>
+
+or choose your operating system:
 
 .. toctree::
    :maxdepth: 1
@@ -19,4 +27,4 @@ Choose your operating system:
    Windows <windows/index>
    macOS <mac/index>
    Linux <linux/index>
-   Frequently Asked Questions <faq>
+   
