@@ -2,8 +2,7 @@ Nitrokey Storage FAQ
 ====================
 
 As the Nitrokey Storage 2 is essentially a Nitrokey Pro 2 including a
-non-volatile (encrypted) storage, the **:doc:`Nitrokey Pro 2
-FAQ<../pro/faq.rst>`** also partly applies.
+non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` also partly applies.
 
 .. include:: ../shared-faqs/nitrokeys.rst 
 
