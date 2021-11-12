@@ -23,10 +23,10 @@ NitroPhone FAQ
    Shortly after the phone is turned on, the warning "Your device is loading a different operating system" 
    is displayed. This warning indicates that no ordinary Google Android is running and can be ignored.
 
-**Q:**: How can I check, if my NitroPhone has been hacked/compromised?
+**Q:** How can I check, if my NitroPhone has been hacked/compromised?
    If you want to check the integrity of the operating system, you can use `remote verification <https://attestation.app/about>`__.
 
-**Q:**: Where can I get further information about GrapheneOS?
+**Q:** Where can I get further information about GrapheneOS?
    `Here <https://grapheneos.org/faq>`__ you can find further information on GrapheneOS.
 
 
