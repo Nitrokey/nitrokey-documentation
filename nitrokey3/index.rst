@@ -1,0 +1,22 @@
+Nitrokey 3
+==========
+
+.. contents:: :local:
+
+
+As of this writing the Nitrokey 3 is roughly identical with the Nitrokey FIDO2, from functionality point of view.
+The Nitrokey 3A and 3C additionally support NFC, while the Nitrokey 3 Mini does not support NFC.
+
+Future firmware updates will enable additional functionality and will be documented here accordingly.
+
+
+Choose your operating system:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Windows <windows/index>
+   macOS <mac/index>
+   Linux <linux/index>
+   Frequently Asked Questions <faq>

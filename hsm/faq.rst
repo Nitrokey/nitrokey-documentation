@@ -4,14 +4,6 @@ Nitrokey HSM FAQ
 
 .. include:: ../shared-faqs/nitrokeys.rst 
 
-**Q:** What are the default PINs?
-   * **User PIN:** "123456"
-   * **Administrator PIN:** "12345678"
-   * **SO-PIN** (Nitrokey HSM only): "3537363231383830"
-   
-   We strongly recommend to change these PINs/password to user-chosen values
-   before using the Nitrokey.
-  
 
 **Q:** What is the maximum length of the PIN?
    Nitrokey uses PINs instead of passwords. The main difference is that the
@@ -19,26 +11,27 @@ Nitrokey HSM FAQ
    passwords. Because of this, a short PIN is still secure and there is not need
    to choose a long and complex PIN.
 
-   Nitrokey Storage's PINs can be up to 20 digits long and can consist
+   Nitrokey PINs can be up to 16 digits long and can consist
    of numbers, characters and special characters. Note: When using GnuPG or
    OpenSC, 32 character long PINs can be used but aren't supported by Nitrokey
    App.
 
 **Q:** What is the User PIN for?
-   The user PIN is at least 6-digits long and is used to get
+   The PIN is at least 6-digits long and is used to get
    access to the contect of the Nitrokey. This is the PIN you will use a lot in
-   every day use e.g. for decrypting messages, for unlocking your encrypted
-   storage (NK Storage only) etc.
+   every day use
  
-   The user PIN can have up to 20 digits and other characters (e.g. alphabetic
-   and special characters). But as the user PIN is blocked as soon three wrong
+   The PIN can have up to 16 digits and other characters (e.g. alphabetic
+   and special characters). But as the PIN is blocked as soon three wrong
    PIN attempts were done, it is sufficiently secure to only have a 6 digits
-   PIN. The default PIN is 123456.
+   PIN. 
 
 **Q:** What is the SO PIN for?
   The SO PIN is used in the Nitrokey HSM only and is something like a
   "master" PIN with special properties. Please read this instructions carefully
   to understand the SO PIN of the Nitrokey HSM.
+
+  The SO PIN has to be exactly 16 digits long.
    
 **Q:** How many data objects (DF, EF) can be stored?
     76 KB EEPROM total, max. 150 x ECC-521 keys, max. 300 x

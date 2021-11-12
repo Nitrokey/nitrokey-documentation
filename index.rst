@@ -9,7 +9,8 @@ Choose your product
 .. toctree::
    :maxdepth: 1
    :titlesonly:
-   
+ 
+   nitrokey3/index
    fido2/index
    u2f/index
    hsm/index
