@@ -48,6 +48,9 @@ Nitrokey HSM FAQ
     * Signature creation with on-card SHA-256 and 1 kb data: RSA 2048; 68 per minute
     * Signature creation with on-card SHA-256 and 1 kb data: ECDSA 256: 125 per minute
 
+**Q:** How can I distinguish a Nitrokey HSM1 from an Nitrokey HSM2?
+  Use ``opensc-tool --list-algorithms`` and compare with the table below. Please 
+  also see `this thread`_ for the factsheets and more details.
 
 .. include:: ../shared-faqs/algos.rst 
 
@@ -77,6 +80,8 @@ Nitrokey HSM FAQ
     Common Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_,
     click "ICs, Smart Cards and Smart Card-Related Devices and Systems" and
     search for "NXP JCOP 3 P60").
+
+.. _this thread: https://support.nitrokey.com/t/comparison-between-nitrokey-hsm-2-and-hsm-1/2977
 
 
 .. include:: ../shared-faqs/hyperlinks.rst 
