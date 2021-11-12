@@ -69,7 +69,9 @@ You can do so by using these commands:
    $ sudo adduser <backup_user>
    $ sudo usermod -aG sudo <backup_user>
 
-In case you prefer to setup U2F for a single user, and are locked out of your user session, you would still be able to login with the ``<backup_user>``, and proceed with the maintenance.
+In case you prefer to setup U2F for a single user, and are locked out of your
+user session, you would still be able to login with the ``<backup_user>``, and
+proceed with the maintenance.
 
 .. warning::
 
@@ -80,6 +82,7 @@ In case you prefer to setup U2F for a single user, and are locked out of your us
 
    You might lose access to your data after configuring `PAM
    modules <http://www.linux-pam.org/Linux-PAM-html/>`__.
+
 
 2. Set up the ``rules`` to recognize the Nitrokey FIDO2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -203,7 +206,7 @@ And add the following lines:
 .. code-block:: bash
 
    #Nitrokey FIDO2 config 
-   auth    sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue prompt 
+   auth    sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue prompt nouserok
 
 .. tip::
 
@@ -218,6 +221,10 @@ And add the following lines:
    -  If you would like to be prompted to touch the Nitrokey, ``cue``
       option will make ``pam_u2f`` print ``Please touch the device.``
       message.
+
+   -  `nouserok` will ensure that you can still login using the username and
+      password, you might want to remove this at some point once the setup
+      is working and you don't want regular username & password based logins.
 
 Once we modified the ``common-auth``, we can save and exit the file.
 
