@@ -1,5 +1,13 @@
-.. figure:: logo.png
+.. image:: logo.png
    :alt: Nitrokey - Secure your digital life
+
+
+
+How to use this documentation
+=============================
+1) **Browse** through the products and its subcategories and articles, start below
+2) **Search** for a buzzword, error, message or tool using the top left search field
+
 
 Choose your product
 ====================
