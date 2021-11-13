@@ -17,7 +17,7 @@ Preparation
 
 * ensure ``openssl`` can use the PKCS#11 engine by installing ``libengine-pkcs11-openssl``
 
-.. code-block::
+.. code-block:
    openssl engine pkcs11 -t
    # expected good output:
    #
