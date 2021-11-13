@@ -38,6 +38,15 @@ Nextcloud FAQ
   the stock Nextcloud container this will also only be resolved once this is resolved by
   the Nextcloud Team.
 
+**Q:** Why is my Nextcloud not loading properly, instead I get a white page and a `.htaccess` error?
+  This usually is an indication that the OS has unmounted/detached the internal
+  hard-drive due to an low-power-incident. Please make sure you read and
+  understood :ref:`USB power<faq-nextbox-hardware-usb-power-supply>`. In most
+  cases doing a power-cycle (unplug the USB-C connector, wait 5secs and plug it
+  in again) should resolve this. **Make sure no additional USB devices are
+  connected during this procedure.**
+
+
 
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
