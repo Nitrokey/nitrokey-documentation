@@ -20,6 +20,10 @@ Software FAQ
   on every start. You are free to update your OS by hand using ``apt``, if you know what you are 
   doing.
 
+**Q:** Is the NextBox running a 32bit or 64bit operating system?
+  The used OS is a 64bit system. The `arch` output: `aarch64`.
+
+
 
 .. _Launchpad NextBox: https://launchpad.net/~nitrokey/+archive/ubuntu/nextbox/+packages
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
