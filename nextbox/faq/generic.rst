@@ -52,7 +52,7 @@ Generic FAQ
 **Q:** Is the WiFi on the Raspberry PI 4B physically available and working?
   Yes, physically the WiFi is available and working, but not used/managed by the
   NextBox App. If you know what you are doing you can configure and use it, if
-  works although being inside the NextBox casing. Nevertheless, please 
+  works although being inside the NextBox casing. 
 
 
 
