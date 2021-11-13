@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-25 13:43+0200\n"
+"POT-Creation-Date: 2021-11-13 21:21+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -256,7 +256,7 @@ msgstr ""
 msgid "Generic FAQ"
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:6
+#: ../nextbox/faq/generic.rst:7
 msgid "**Q:** How can I factory-reset my NextBox?"
 msgstr ""
 
@@ -264,122 +264,162 @@ msgstr ""
 msgid "Press the hardware button for 5 seconds, see :doc:`../technical/factory-reset`. To press the button use a thin (~1mm) pin like a smartphone sim-card tray removal device."
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:9
+#: ../nextbox/faq/generic.rst:10
 msgid "**Q:** What do the different LED colors mean?"
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:9
+#: ../nextbox/faq/generic.rst:10
 msgid "The detailed document can be found here: :doc:`../technical/led-colors`"
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:13
+#: ../nextbox/faq/generic.rst:15
 msgid "**Q:** Can the inital setup be done using a monitor & keyboard?"
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:12
+#: ../nextbox/faq/generic.rst:13
 msgid "No, this is not possible as the regular login is disabled on delivery. Please connect the the NextBox to a network and access the NextBox using `nextbox.local`_ or the IP directly."
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:17
+#: ../nextbox/faq/generic.rst:19
 msgid "**Q:** What is the typical power consumption?"
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:16
+#: ../nextbox/faq/generic.rst:18
 msgid "The minimum of 0,6A (3W) is rarely reached, in idle mostly around 1A (5W) and more than 2A (10W) under higher loads."
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:23
+#: ../nextbox/faq/generic.rst:26
+msgid "**Q:** How secure is the NextBox?"
+msgstr ""
+
+#: ../nextbox/faq/generic.rst:22
+msgid "Debian with frequent `unattended-upgrades` based security updates, a minimal attack surface by ensuring that not a single unneccessary port is open are the main contributors to system security. **Make sure your Nextcloud users and passwords are on a high level, either with long-random passwords or a 2-Factor-Authentification supported login method with e.g., a Nitrokey FIDO2.**"
+msgstr ""
+
+#: ../nextbox/faq/generic.rst:34
+msgid "**Q:** What do all the ssh-related \"warnings\" mean?"
+msgstr ""
+
+#: ../nextbox/faq/generic.rst:31
+msgid "Once you set up your ssh-access, you make yourself technically responsible for your NextBox. We do provide help as good as we can as goodwill, but under the line we cannot provide generic Linux-administration support outside of the intended NextBox use-cases."
+msgstr ""
+
+#: ../nextbox/faq/generic.rst:40
 msgid "**Q:** Can I mirror my NextBox onto another NextBox?"
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:20
+#: ../nextbox/faq/generic.rst:37
 msgid "This translates to a cluster setup, which is considered an (paid) enterprise solution by Nextcloud. The details, especially data consistency and collision handling, are far from trivial to realize. Nevertheless, we also see demand for more sophisticated backup solutions and will address this issue."
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:30
+#: ../nextbox/faq/generic.rst:46
 #: ../nextbox/faq/nextcloud.rst:8
 msgid "**Q:** What to do to run/install/fix Nextcloud App \"XYZ\"? Why does Nextcloud feature XYZ not work?"
 msgstr ""
 
-#: ../nextbox/faq/generic.rst:26
+#: ../nextbox/faq/generic.rst:43
 #: ../nextbox/faq/nextcloud.rst:5
 msgid "Generally we cannot help in detail for these topics. Nextcloud internals and apps are out-of-scope for the NextBox development as we use the stock Docker images provided by Nextcloud. Ultimately, if some NextBox/OS configuration is blocking an app to run properly we for sure will look into fixing it."
+msgstr ""
+
+#: ../nextbox/faq/generic.rst:50
+msgid "**Q:** Can I connect/use the NextBox using WiFi?"
+msgstr ""
+
+#: ../nextbox/faq/generic.rst:49
+msgid "No, currently this is not (easily) possible, only wired ethernet using RJ-45 is available."
+msgstr ""
+
+#: ../nextbox/faq/generic.rst:57
+msgid "**Q:** Is the WiFi on the Raspberry PI 4B physically available and working?"
+msgstr ""
+
+#: ../nextbox/faq/generic.rst:53
+msgid "Yes, physically the WiFi is available and working, but not used/managed by the NextBox App. If you know what you are doing you can configure and use it, if works although being inside the NextBox casing. Nevertheless, please"
 msgstr ""
 
 #: ../nextbox/faq/hardware.rst:2
 msgid "Hardware FAQ"
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:12
+#: ../nextbox/faq/hardware.rst:13
 msgid "**Q:** Why must I not connect external hard-drives without an external power-supply to my NextBox?"
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:8
+#: ../nextbox/faq/hardware.rst:9
 msgid "The Raspberry Pi 4 Model B can only supply 1.2A of power through USB (see `RPi Power Supply`_). The internal hard-drive is already connected and powered via USB and pulls ~1.0A. Thus connecting another hard-drive without an external power supply can lead to an unreliable power supply for the internal hard-drive, thus potential data loss."
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:20
+#: ../nextbox/faq/hardware.rst:21
 msgid "**Q:** Where can I find an external hard-drive with its own power supply?"
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:15
+#: ../nextbox/faq/hardware.rst:16
 msgid "The smaller form factors (2.5'' and smaller) for external hard-drives mostly come without an additional power supply. For these, *a USB Hub with an additional power supply can be considered the \"external power-supply\"* for the hard-drive. Although the latter is it not 100% sure for powered USB hubs, thus we recommend external 3.5'' hard-drives, which are nearly always externally powered."
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:26
+#: ../nextbox/faq/hardware.rst:27
 msgid "**Q:** Why does my USB device / hub not work, if connected to the NextBox?"
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:23
+#: ../nextbox/faq/hardware.rst:24
 msgid "There are some devices and especially USB3 hubs that are known to not work properly with the Raspberry PI 4B, please see this `USB Documentation`_ from Raspberry. On top of that also make sure the USB device is working in general by connecting it to another computer (best case: Linux) and verify that it works."
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:30
+#: ../nextbox/faq/hardware.rst:31
 msgid "**Q:** Why does my hard-drive not show up after plugging it in?"
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:29
+#: ../nextbox/faq/hardware.rst:30
 msgid "Please make sure that you are using one of the supported filesystems (e.g., ext, xfs) and you have mounted your hard-drive within *Storage Management*."
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:36
+#: ../nextbox/faq/hardware.rst:37
 msgid "**Q:** Can I generally extend the NextBox using a USB hard-drive?"
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:33
+#: ../nextbox/faq/hardware.rst:34
 msgid "Yes, this is possible, please make sure you are using a hard-drive, which has an external power supply. Once connected you can mount the hard-drive using the NextBox *Storage Management* and include it into Nextcloud file-management using the `External storage support`_ app."
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:41
+#: ../nextbox/faq/hardware.rst:42
 msgid "**Q:** What functions does the additional \"shield\" provide?"
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:39
+#: ../nextbox/faq/hardware.rst:40
 msgid "As of now the shield does provide a :doc:`status LED <../technical/led-colors>`, a hardware button to :doc:`factory reset <../technical/factory-reset>` and an additional USB Type-C connector on the same side as the Ethernet port for power supply exclusively."
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:46
+#: ../nextbox/faq/hardware.rst:47
 msgid "**Q:** Is the NextBox hardware extendable/replaceable?"
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:44
+#: ../nextbox/faq/hardware.rst:45
 msgid "Yes, all NextBox components can be easily replaced. None of the components are glued or somehow permanently assembled. Using a Phillips screwdriver you can disassemble and re-assemble the NextBox easily. Keep in mind that you are doing this at your own risk."
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:50
+#: ../nextbox/faq/hardware.rst:51
 msgid "**Q:** What are the two USB Type-C ports used for?"
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:49
+#: ../nextbox/faq/hardware.rst:50
 msgid "Both USB Type-C ports are exclusively for power supply and can not be used for data transfer. Do not connect two power supplies, please just use one of both to power your NextBox."
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:58
+#: ../nextbox/faq/hardware.rst:59
 msgid "**Q:** Which fan should I install?"
 msgstr ""
 
-#: ../nextbox/faq/hardware.rst:53
+#: ../nextbox/faq/hardware.rst:54
 msgid "**There is absolutely no need for a fan, the NextBox is designed to work without an active cooling**. Although if the NextBox is used for additional tasks (it's still a Linux), we have prepared a fan mount for a 30mm x 12mm fan at 5V connected to the shield. More details (connector, used pins) can be taken from `NextBox' GitHub`_. Currently we *do not* recommend adding a fan as the outputs are not controlled yet by the NextBox daemon, so this is also something you would have to do by yourself."
+msgstr ""
+
+#: ../nextbox/faq/hardware.rst:63
+msgid "**Q:**: Can I upgrade the NextBox' RAM size?"
+msgstr ""
+
+#: ../nextbox/faq/hardware.rst:62
+msgid "No, the Raspberry PI 4B has the RAM component soldered onto the mainboard, thus it cannot be replaced/extended."
 msgstr ""
 
 #: ../nextbox/faq/index.rst:2
@@ -438,12 +478,20 @@ msgstr ""
 msgid "As Nextcloud is running inside a Docker container, you need to be root and execute the following: ``docker exec -it -u www-data nextbox-compose_app_1 /var/www/html/occ``"
 msgstr ""
 
-#: ../nextbox/faq/nextcloud.rst:40
+#: ../nextbox/faq/nextcloud.rst:39
 msgid "**Q:** What to do about missing php-modules like `imagemagick`?"
 msgstr ""
 
 #: ../nextbox/faq/nextcloud.rst:37
 msgid "Similar to Apache, PHP is also provided by the Nextcloud container, therefore as we are using the stock Nextcloud container this will also only be resolved once this is resolved by the Nextcloud Team."
+msgstr ""
+
+#: ../nextbox/faq/nextcloud.rst:49
+msgid "**Q:** Why is my Nextcloud not loading properly, instead I get a white page and a `.htaccess` error?"
+msgstr ""
+
+#: ../nextbox/faq/nextcloud.rst:42
+msgid "This usually is an indication that the OS has unmounted/detached the internal hard-drive due to an low-power-incident. Please make sure you read and understood :ref:`USB power<faq-nextbox-hardware-usb-power-supply>`. In most cases doing a power-cycle (unplug the USB-C connector, wait 5secs and plug it in again) should resolve this. **Make sure no additional USB devices are connected during this procedure.**"
 msgstr ""
 
 #: ../nextbox/faq/remote-access.rst:2
@@ -463,7 +511,7 @@ msgid "**Q:** Can I access my Nextcloud instance using WebDAV?"
 msgstr ""
 
 #: ../nextbox/faq/remote-access.rst:12
-msgid "Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure that the ``davfs2`` package is installed. For Windows please additionally read these :doc:`docs <clients/windows>`."
+msgid "Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A simple mount for unix-like systems might look like this: ``mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure that the ``davfs2`` package is installed. For Windows please additionally read these :doc:`docs <../clients/windows>`."
 msgstr ""
 
 #: ../nextbox/faq/remote-access.rst:21
@@ -474,12 +522,40 @@ msgstr ""
 msgid "As of today the technology needed to use ``.local`` URLs is not supported by various (stock) Android browser(s). The mechanism is based on ``mDNS``. One possible workaround is to use a 3rd party app like BonjourBrowser to discover all mDNS services in your network."
 msgstr ""
 
-#: ../nextbox/faq/remote-access.rst:31
-msgid "**Q:**: I followed all guides and still cannot acquire the TLS certificate, what can I do?"
+#: ../nextbox/faq/remote-access.rst:28
+msgid "**Q:**: Why does accessing my NextBox using: ``http://nextbox.local`` not work?"
 msgstr ""
 
 #: ../nextbox/faq/remote-access.rst:24
+msgid "There are several other reasons why the access using ``http://nextbox.local`` may not work, further known scenarios are:"
+msgstr ""
+
+#: ../nextbox/faq/remote-access.rst:27
+msgid "Using a Fritz!Box with the NextBox being connected via a LAN port and the client/browser is connected to the network via WiFI (WLAN), the Fritz!Box will block mDNS."
+msgstr ""
+
+#: ../nextbox/faq/remote-access.rst:38
+msgid "**Q:**: I followed all guides and still cannot acquire the TLS certificate, what can I do?"
+msgstr ""
+
+#: ../nextbox/faq/remote-access.rst:31
 msgid "The reason a TLS certificate cannot be acquired is nearly always the fact that your NextBox is not reachable from the internet. Make sure you have followed the :doc:`../remote/walkthrough`. If you followed the step-by-step instructions and it still does not work, very likely something is blocking the connection, typical candidates are router web administration features like: ``MyFritz!``, ``Fritz Web Services`` or similar services, which are running on your router and thus blocking the traffic on port(s) 80 and/or 443. Switch them off and retry acquiring your TLS certificate."
+msgstr ""
+
+#: ../nextbox/faq/remote-access.rst:51
+msgid "**Q:** Why is my reachability with IPv4 not working?"
+msgstr ""
+
+#: ../nextbox/faq/remote-access.rst:41
+msgid "If you have properly set up :doc:`port forwarding <../remote/port-forwarding>` and IPv4 connections (reachability test) are still not working there are good chances that your Internet-Service-Provider (ISP) does not provide a proper (public) IPv4 address to you. There are several (end-customer) internet technologies, which do not allow incoming traffic for the IPv4, which was assigned to you. An incomplete list is: *private IPv4 address*, *DS-Lite connection* or *CarrierGrade-NAT (CG-NAT)*. All these essentially share one IPv4 address accross multiple users, thus block (incoming) traffic from the internet to you. Some ISPs allow upgrading to so-called **full-stack connections**, which should enable full bi-directional traffic for IPv4 and IPv6."
+msgstr ""
+
+#: ../nextbox/faq/remote-access.rst:62
+msgid "**Q:** Why do some devices fail to connect for my IPv6 configured NextBox?"
+msgstr ""
+
+#: ../nextbox/faq/remote-access.rst:54
+msgid "Sadly, still not all ISPs and mobile-network providers (smartphones) do have full IPv6 support activated. This means, if your NextBox is configured for IPv6 only access, devices inside these networks will not be able to connect. The **backwards-proxy does work as a workaround here**, as it provides an IPv4 entrypoint to your NextBox independant of your other remote access configuration."
 msgstr ""
 
 #: ../nextbox/faq/software.rst:2
@@ -510,12 +586,28 @@ msgstr ""
 msgid "Currently only here: `Launchpad NextBox`_"
 msgstr ""
 
-#: ../nextbox/faq/software.rst:22
+#: ../nextbox/faq/software.rst:21
 msgid "**Q:** How can I update the Operating System?"
 msgstr ""
 
 #: ../nextbox/faq/software.rst:18
 msgid "There is no need to update the NextBox OS by hand. This is done using ``unattended-upgrades`` and on top the *nextbox-daemon* will check for upgrades manually (as a redundant fallback solution) on every start. You are free to update your OS by hand using ``apt``, if you know what you are doing."
+msgstr ""
+
+#: ../nextbox/faq/software.rst:24
+msgid "**Q:** Is the NextBox running a 32bit or 64bit operating system?"
+msgstr ""
+
+#: ../nextbox/faq/software.rst:24
+msgid "The used OS is a 64bit system. The `arch` output: `aarch64`."
+msgstr ""
+
+#: ../nextbox/faq/software.rst:30
+msgid "**Q:** Which users and default passwords are created by default on the NextBox's operating system?"
+msgstr ""
+
+#: ../nextbox/faq/software.rst:27
+msgid "There is not one single default password set on any (system) user. The only non-system user created is named ``nextuser``, without a default password. The only way to access the NextBox is using ``ssh`` with a public key, which can be set via the NextBox App."
 msgstr ""
 
 #: ../nextbox/gettingstarted.rst:2
