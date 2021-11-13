@@ -23,6 +23,10 @@ Software FAQ
 **Q:** Is the NextBox running a 32bit or 64bit operating system?
   The used OS is a 64bit system. The `arch` output: `aarch64`.
 
+**Q:** Which users and default passwords are created by default on the NextBox's operating system?
+  There is not one single default password set on any (system) user. The only non-system user created
+  is named ``nextuser``, without a default password. The only way to access the NextBox is using ``ssh``
+  with a public key, which can be set via the NextBox App.
 
 
 .. _Launchpad NextBox: https://launchpad.net/~nitrokey/+archive/ubuntu/nextbox/+packages
