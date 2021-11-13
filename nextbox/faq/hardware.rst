@@ -3,6 +3,7 @@ Hardware FAQ
 
 
 .. _usb-power-supply:
+.. _faq-nextbox-hardware-usb-power-supply:
 
 **Q:** Why must I not connect external hard-drives without an external power-supply to my NextBox?
   The Raspberry Pi 4 Model B can only supply 1.2A of power through USB (see
@@ -56,6 +57,10 @@ Hardware FAQ
   used pins) can be taken from `NextBox' GitHub`_. Currently we *do not* recommend adding a fan as
   the outputs are not controlled yet by the NextBox daemon, so this is also something you would have
   to do by yourself.
+
+**Q:**: Can I upgrade the NextBox' RAM size?
+  No, the Raspberry PI 4B has the RAM component soldered onto the mainboard, thus it cannot be replaced/extended.
+
 
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
