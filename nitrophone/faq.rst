@@ -1,6 +1,12 @@
 NitroPhone FAQ
 ===============
 
+**Q:** Does the Nitrophone work with my carrier network?
+   Google claims `all major carriers`_ should work with the Pixel phones. Nevertheless
+   there might be exceptions, obviously we cannot check `all` carriers around the world.
+   Best practice, is to check if you find some tests/experience stories about the Pixel 4a
+   together with your planned carrier network.
+
 **Q:** What is and how to activate *PIN Layout Scrambling*
    To make it difficult for strangers to read the PIN when typing it in, you can
    display the PIN layout in a random order. Additionally, we recommend a
