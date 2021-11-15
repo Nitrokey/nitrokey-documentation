@@ -26,7 +26,7 @@ Nitrokey 3 FAQ
 
 **Q:** When will the OpenPGPCard firmware be available?
    This is very hard to predict at this point. We are aiming for mid of 2022,
-   but this is a very rough estimation with lots of uncertainities.
+   but this is a very rough estimation with lots of uncertainties.
 
 **Q:** Why does the Nitrokey 3 not show up in gnupg/Nitrokey App/nitropy ?
    We are currently working on integrating the Nitrokey 3 within at least 
