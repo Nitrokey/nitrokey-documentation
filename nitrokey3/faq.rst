@@ -7,6 +7,11 @@ Nitrokey 3 FAQ
 **Q:** What can I use the Nitrokey for?
    See the `frontpage`_ for an overview of supported use cases.
 
+**Q:** How can I check if my Nitrokey 3 is working?
+   On `WebAuthn.io`_ you can check various high-level functionalities, while
+   `webautn.bin.coffee`_ provides good developer level details (technical)
+   details. 
+
 **Q:** What happens if I lose my device?
    When securing accounts using FIDO (two-factor authentication and
    passwordless login), you should configure another factor in your account as
@@ -19,7 +24,14 @@ Nitrokey 3 FAQ
    The Nitrokey 3 doesn't contain storage capability for ordinary data (it can
    only store cryptographic keys and certificates).
 
+**Q:** When will the OpenPGPCard firmware be available?
+   This is very hard to predict at this point. We are aiming for mid of 2022,
+   but this is a very rough estimation with lots of uncertainities.
 
+**Q:** Why does the Nitrokey 3 not show up in gnupg/Nitrokey App/nitropy ?
+   We are currently working on integrating the Nitrokey 3 within at least 
+   ``nitropy``, Nitrokey App and GnuPG will likely be only available once
+   the OpenPGPCard firmware update is available.
 
 
 .. include:: ../shared-faqs/hyperlinks.rst 

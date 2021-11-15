@@ -7,3 +7,6 @@
 .. _HSM Report: https://www.commoncriteriaportal.org/files/epfiles/0515a.pdf
 .. _HSM2 Report: https://www.commoncriteriaportal.org/files/epfiles/[CR]%20NSCIB-CC-98209-CR3.pdf
 .. _Security Target: https://www.commoncriteriaportal.org/files/epfiles/[ST-Lite]%20ST-Lite_JCOP3_P60_v3.8.pdf
+
+.. _WebAuthn.io: https://webauthn.io/
+.. _webautn.bin.coffee: https://webauthn.bin.coffee/
