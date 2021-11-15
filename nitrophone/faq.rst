@@ -36,3 +36,4 @@ NitroPhone FAQ
    `Here <https://grapheneos.org/faq>`__ you can find further information on GrapheneOS.
 
 
+.. _all major carriers: https://support.google.com/pixelphone/answer/7107188?hl=en
