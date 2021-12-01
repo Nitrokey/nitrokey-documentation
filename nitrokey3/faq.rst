@@ -33,6 +33,12 @@ Nitrokey 3 FAQ
    ``nitropy``, Nitrokey App and GnuPG will likely be only available once
    the OpenPGPCard firmware update is available.
 
+**Q:** How can I set the PIN for my Nitrokey 3 ?
+   You can configure and do basic settings for your Nitrokey 3 using Chrome(ium)
+   just visit: `chrome://settings/securityKeys`_ (clicking the link will not work
+   for security reasons, please copy&paste it)
+
+
 
 .. include:: ../shared-faqs/hyperlinks.rst 
 
