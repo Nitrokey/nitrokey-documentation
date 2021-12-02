@@ -21,5 +21,9 @@ If the LED is *purple*, the Nextcloud instance is in maintenance mode, you can f
 exit the maintenance mode by pushing the hardware button **shortly, once**. The NextBox
 will then switch-off the maintenance mode.
 
+.. hint::
+   As of today if the maintenance mode is switched using the button press, the "mail"
+   app will in addition be disabled as the version 1.11.0 together with Nextcloud
+   version 21.0.0.x will never exit the maintenance mode.
 
 
