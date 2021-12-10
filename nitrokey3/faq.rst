@@ -29,7 +29,7 @@ Nitrokey 3 FAQ
    but this is a very rough estimation with lots of uncertainties.
 
 **Q:** Why does the Nitrokey 3 not show up in gnupg/Nitrokey App/nitropy ?
-   We are currently working on integrating the Nitrokey 3 within at least 
+   Currently the Nitrokey 3 does only show up and can be managed in
    ``nitropy``, Nitrokey App and GnuPG will likely be only available once
    the OpenPGPCard firmware update is available.
 
