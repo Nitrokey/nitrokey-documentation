@@ -12,3 +12,4 @@
 .. _webautn.bin.coffee: https://webauthn.bin.coffee/
 .. _chrome://settings/securityKeys: chrome://settings/securityKeys
 
+.. _nfc.fail: https://nfc.fail/

@@ -12,6 +12,9 @@ Nitrokey 3 FAQ
    `webautn.bin.coffee`_ provides good developer level details (technical)
    details. 
 
+**Q:** Where is the right spot for NFC on my smartphone?
+   Use `nfc.fail`_ to find the right spot!
+
 **Q:** What happens if I lose my device?
    When securing accounts using FIDO (two-factor authentication and
    passwordless login), you should configure another factor in your account as
