@@ -12,11 +12,13 @@ Troubleshooting
 
 Here you will find a collection of common issues. 
 
-**Google and Microsoft Services:**
+Google and Microsoft Services
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Currently there seems to be a bug we hope to fix soon which affects the Nitrokey 3 working with some Google and Microsoft Services per FIDO2.
 
-**Browser specific issues:**
+Browser specific issues
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Currently not all Browsers work with the Nitrokey 3 FIDO2 capabilities. 
 Different sources of the same browser configure it differently and thats why we decided to make a list of browser which work well in our experience:
@@ -45,11 +47,20 @@ Different sources of the same browser configure it differently and thats why we 
 
 We are currently testing more browsers to complete the table.
 
-**NFC is not working:**
+NFC is not working
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Please make sure FIDO2 is working correctly. Otherwise NFC won't work either.
 
-**update.nitrokey.com does not work:**
+Also check if you are using the right spot on your smartphone. 
+Find the right spot using: `nfc.fail`_
+
+
+
+
+update.nitrokey.com does not work:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Currently there are no updates available.
 
+.. _nfc.fail: https://nfc.fail/
