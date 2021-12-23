@@ -47,7 +47,7 @@ Install the necessary tools:
    pacman -S community/opensc community/libp11
 
    # Ubuntu
-   sudo apt-get install opensc gnutls_bin
+   sudo apt-get install opensc gnutls-bin
 
 For Windows download the official `OpenSC releases <https://github.com/OpenSC/OpenSC/releases>`__  
 and make sure you install `p11tool as described <https://github.com/thales-e-security/p11tool>`__.
