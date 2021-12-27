@@ -3,18 +3,15 @@ NetHSM
 
 .. contents:: :local:
 
-Accessing a NetHSM instance
----------------------------
+Getting Started
+---------------
 
-These guides explain how to access a NetHSM using three three different methods:
+Connect the NetHSM's ETH3 port with the network. Don't use the ETH0 port because it allows wider system access.
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
+   .. figure:: ./images/io-shield.png
+      :alt: IO Shield
 
-   nitropy command line tool <cli>
-   REST API <api>
-   PKCS#11 driver <pkcs11>
+Access and initialize the NetHSM using nitropy command line tool <cli>. Alternatively, the REST API <api> and PKCS#11 driver <pkcs11> can be used.
 
 Development and Testing
 -----------------------
