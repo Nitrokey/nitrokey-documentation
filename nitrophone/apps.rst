@@ -48,7 +48,9 @@ everyday smartphone with more apps we recommend:
 Compatible Apps
 ###############
 
-`Here <https://github.com/Peter-Easton/GrapheneOS-Knowledge/tree/master/App%20Compatibilty%20List>`__ you can check the compatibility of some popular apps.
+Earlier there was a list, but as the Play Service implementation progresses, most of the apps
+should work, although there are still some not working, a list will be available 
+`here <https://github.com/Peter-Easton/GrapheneOS-Knowledge/tree/master/App%20Incompatibility%20List>`__.
 
 Recommended Apps
 ################
