@@ -4,7 +4,7 @@ Accessing a NetHSM using the PKCS#11 driver
 .. contents:: :local:
 
 1. Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-pkcs11>`__ for NetHSM.
-2. Modify the configuration file ``p11nethsm-config.yaml`` according to
+2. Modify the configuration file ``p11nethsm.conf`` according to
    your setup (e.g. address, operator name) and store it in ``$HOME/.nitrokey``, ``/etc/nitrokey/``,
    or in the folder where your application is executed.
 
