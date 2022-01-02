@@ -20,8 +20,8 @@ Preparation
 1. Connect your NitroPad to a power plug and load its battery to over
    70%
 2. Download the `latest
-   firmware <https://www.nitrokey.com/files/ci/nitropad/heads>`__ and store it
-   on a USB drive. For the NitroPad T430 use ``heads-t430-[version].rom`` and for the NitroPad X230 use ``heads-x230-hotp-verification-[version].rom``.
+   firmware <https://github.com/Nitrokey/heads/releases/latest>`__ and store it
+   on a USB drive. For the NitroPad T430 use ``nitropad-t430-[version].npf`` and for the NitroPad X230 use ``nitropad-x230-[version].npf``.
 3. For hash sum verification, store ``sha256sum`` file at the USB
    drive.
 
@@ -98,7 +98,7 @@ This is the actual update procedure. Usually the first two screens will not be s
 
 
 
-7. Select the desired .rom file.
+7. Select the desired .npf file.
 
 .. figure:: /nitropad/images/firmware-update/7.jpg
    :alt: img7
