@@ -107,3 +107,9 @@ This is a paragraph that contains `a link`_ with an url below.
 This is `another link <https://f-droid.org/F-Droid.apk>`__ with the definition of the url inline.
 
 This is `yet another link <https://f-droid.org/F-Droid.apk>`_ with the definition of the url inline.
+
+This is a plain link https://foobar.bas/slug1/slug2
+
+-  `This should be the text of the
+   URL <https://www.nitrokey.com/de/loesungen/phishing>`__
+
