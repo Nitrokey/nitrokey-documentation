@@ -104,13 +104,13 @@ This is a new paragraph that contains `a new link`_ with a new url below.
 
 .. _a new link: https://domain.invalid/newlink
 
-This is `another link <https://f-droid.org/F-Droid.apk>`__ with the definition of the url inline.
+This is `a new  <https://f-droid.org/F-Droid.apk>`_ with the definition of the url inline.
 
-This is `yet another link <https://f-droid.org/F-Droid.apk>`_ with the definition of the url inline.
+This is `yet again another link <https://f-droid.org/F-Droid.apk>`_ with the definition of the url inline.
 
 This is a plain link https://foobar.bas/slug1/slug2
 
 
-This is a text with a `Link example with only one dash as rst defines it <https://domain.invalid/>`_ within a sentence.
+This is a brand new text with a `Link example with really only one dash as it is defines in sphinx <https://domain.invalid/>`_ within a sentence.
 
-
+ 
