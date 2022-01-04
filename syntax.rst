@@ -102,7 +102,7 @@ This is another Line to be translated.
 
 This is a new paragraph that contains `a new link`_ with a new url below.
 
-.. _a link: https://domain.invalid/newlink
+.. _a new link: https://domain.invalid/newlink
 
 This is `another link <https://f-droid.org/F-Droid.apk>`__ with the definition of the url inline.
 
