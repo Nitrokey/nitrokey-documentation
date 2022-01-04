@@ -100,9 +100,9 @@ This is another Line to be translated.
 * This line is one of the tests for the automated translation workflow with weblate.
 * Adding this text should trigger the conmplete workflow of translation.
 
-This is a paragraph that contains `a link`_ with an url below.
+This is a new paragraph that contains `a new link`_ with a new url below.
 
-.. _a link: https://domain.invalid/
+.. _a link: https://domain.invalid/newlink
 
 This is `another link <https://f-droid.org/F-Droid.apk>`__ with the definition of the url inline.
 
@@ -110,6 +110,7 @@ This is `yet another link <https://f-droid.org/F-Droid.apk>`_ with the definitio
 
 This is a plain link https://foobar.bas/slug1/slug2
 
--  `This should be the text of the
-   URL <https://www.nitrokey.com/de/loesungen/phishing>`__
+
+This is a text with a `Link example with only one dash as rst defines it <https://domain.invalid/>`_ within a sentence.
+
 
