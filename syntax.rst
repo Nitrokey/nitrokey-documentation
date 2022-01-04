@@ -100,6 +100,6 @@ This is another Line to be translated.
 * This line is one of the tests for the automated translation workflow with weblate.
 * Adding this text should trigger the conmplete workflow of translation.
 
-This is `a Link  <https://f-droid.org/F-Droid.apk>`_ with the definition of the url inline.
+This is `a Link  <https://f-droid.org/F-Droid.apk>`___ with the definition of the url inline.
 
 This is a plain link https://foobar.bas/slug1/slug2
