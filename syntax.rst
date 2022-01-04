@@ -102,4 +102,7 @@ This is another Line to be translated.
 
 This is `a Link  <https://f-droid.org/F-Droid.apk>`___ with the definition of the url inline.
 
+This is another thest for `a URL  <https://f-droid.org/F-Droid.apk>`_ to test translation.
+
+
 This is a plain link https://foobar.bas/slug1/slug2
