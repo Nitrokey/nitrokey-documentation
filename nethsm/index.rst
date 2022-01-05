@@ -11,14 +11,14 @@ Connect the NetHSM's ETH3 port with the network. Don't use the ETH0 port because
    .. figure:: ./images/io-shield.png
       :alt: IO Shield
 
-The NetHSM appliance is available at address 192.168.1.1. Access and initialize the NetHSM using `nitropy command line tool <cli.html>`__. Alternatively, the `REST API <api.html>`__ and `PKCS#11 driver <pkcs11.html>`__ can be used.
+The NetHSM appliance is available at address 192.168.1.1. Access and initialize the NetHSM using `nitropy command line tool <cli.html>`_. Alternatively, the `REST API <api.html>`_ and `PKCS#11 driver <pkcs11.html>`_ can be used.
 
 Development and Testing
 -----------------------
 
-A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com>`__.
+A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com>`_.
 
-Alternatively you can run the `NetHSM Docker container <https://hub.docker.com/r/nitrokey/nethsm>`__ locally. The NetHSM container requires nested virtualization for strong separation with other containers. Thus, to start a NetHSM container you need a Linux host with
+Alternatively you can run the `NetHSM Docker container <https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The NetHSM container requires nested virtualization for strong separation with other containers. Thus, to start a NetHSM container you need a Linux host with
 /dev/kvm available. Execute this command:
 
 ::
@@ -30,7 +30,7 @@ Alternatively you can run the `NetHSM Docker container <https://hub.docker.com/r
 Integration to Custom Application
 ---------------------------------
 
-To integrate the NetHSM into own custom applications client libraries are available for almost all programming languages, including JavaScript, C++ and Python for example. Therefore we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`__.
+To integrate the NetHSM into own custom applications client libraries are available for almost all programming languages, including JavaScript, C++ and Python for example. Therefore we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_.
 
 To list all the available languages, you enter
 

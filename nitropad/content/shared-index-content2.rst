@@ -14,4 +14,4 @@ conditions after a system update. Only when the new status has been
 confirmed can you leave the device unattended again. Otherwise, you will
 not be able to distinguish a possible attack from a system update.
 Detailed instructions for a system update can be `found
-here <system-update.html>`__.
+here <system-update.html>`_.

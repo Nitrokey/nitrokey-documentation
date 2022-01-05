@@ -13,20 +13,20 @@ Operating System Reinstallation
    to format the USB drive after the intended use.
 
 1. Download one of the operating system images: `Ubuntu
-   Linux <https://www.nitrokey.com/files/ci/nitropc/ubuntu-oem/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/nitropc/qubes-oem/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropc/debian-oem/>`__,
-   `Linux Mint <https://linuxmint.com/download.php>`__
+   Linux <https://www.nitrokey.com/files/ci/nitropc/ubuntu-oem/>`_, `Qubes OS <https://www.nitrokey.com/files/ci/nitropc/qubes-oem/>`_, `Debian <https://www.nitrokey.com/files/ci/nitropc/debian-oem/>`_,
+   `Linux Mint <https://linuxmint.com/download.php>`_
 
 2. Optional: Download hash sum and
-   `verify <https://proprivacy.com/guides/how-why-and-when-you-should-hash-check#how-to-hash-check>`__
+   `verify <https://proprivacy.com/guides/how-why-and-when-you-should-hash-check#how-to-hash-check>`_
    the downloaded operating system image.
 
 3. Write the operating system image to any USB drive. Possible
    applications:
 
-   -  Windows: `Rufus <https://rufus.ie/>`__,
-      `balenaEtcher <https://www.balena.io/etcher/>`__;
-   -  Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;
-   -  macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__.
+   -  Windows: `Rufus <https://rufus.ie/>`_,
+      `balenaEtcher <https://www.balena.io/etcher/>`_;
+   -  Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`_;
+   -  macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`_.
 
 4. Connect the USB drive to your NitroPad and start it. In Heads menu
    select Boot Options -> USB Boot.
@@ -35,7 +35,7 @@ Operating System Reinstallation
    reinstallation.
 
 6. `Sign the boot
-   partition. <system-update.html>`__
+   partition. <system-update.html>`_
 
 To avoid accidential overwriting of valuable data, format the USB drive afterwards.
 

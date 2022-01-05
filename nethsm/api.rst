@@ -3,10 +3,10 @@ Accessing a NetHSM using the REST API
 
 .. contents:: :local:
 
-This tutorial demonstrates how to access the NetHMS via REST API. The interface is `documented here <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`__ and it's specification is available as
-`RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`__ and as
+This tutorial demonstrates how to access the NetHMS via REST API. The interface is `documented here <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_ and it's specification is available as
+`RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ and as
 `OpenAPI (Swagger)
-<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`__.
+<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_.
 
 .. include:: _tutorial.rst
    :start-after: .. start:: setup

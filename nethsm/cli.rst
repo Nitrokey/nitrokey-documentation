@@ -3,7 +3,7 @@ Accessing a NetHSM with the nitropy command line tool
 
 .. contents:: :local:
 
-This tutorial demonstrates how to access the NetHMS via `nitropy <https://github.com/Nitrokey/pynitrokey>`__ command line tool, which you need to download and install.
+This tutorial demonstrates how to access the NetHMS via `nitropy <https://github.com/Nitrokey/pynitrokey>`_ command line tool, which you need to download and install.
 
 .. include:: _tutorial.rst
    :start-after: .. start:: setup

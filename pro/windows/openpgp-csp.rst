@@ -5,7 +5,7 @@ Windows Logon and S/MIME Email Encryption with Active Directory
 
 .. contents:: :local:
 
-Please note that this driver is still in development/testing. Please tell us your experiences! See our `contact page <https://www.nitrokey.com/contact>`__.
+Please note that this driver is still in development/testing. Please tell us your experiences! See our `contact page <https://www.nitrokey.com/contact>`_.
 
 Prerequisites
 -------------
@@ -15,7 +15,7 @@ This guide assumes that an Active Directory server with role ‘Active Directory
 Installing OpenPGP-CSP
 ----------------------
 
-This step is needed for clients to use the OpenPGP-CSP driver. Download and install the `latest version <https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3>`__ of the installer file ‘SetupOpenPGPCsp’ for your system architecture, for ‘SetupOpenPGPCsp_x64.msi’ for 64-bit systems.
+This step is needed for clients to use the OpenPGP-CSP driver. Download and install the `latest version <https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3>`_ of the installer file ‘SetupOpenPGPCsp’ for your system architecture, for ‘SetupOpenPGPCsp_x64.msi’ for 64-bit systems.
 
 You may want to install the driver on the server as well for being able to enforce the use of this driver in the template (see below).
 
@@ -92,7 +92,7 @@ If you did not enforce the usage of OpenPGP-CSP you have to choose it here now.
 
 Next you choose the Authentication slot for the certificate.
 
-You are now ready to logon on the computer with the Nitrokey instead of your password and you can use `S/MIME email encryption/signing <smime.html>`__ with the Nitrokey. The driver has to be installed on every computer you want to use the certificate on.
+You are now ready to logon on the computer with the Nitrokey instead of your password and you can use `S/MIME email encryption/signing <smime.html>`_ with the Nitrokey. The driver has to be installed on every computer you want to use the certificate on.
 
 .. figure:: /pro/windows/images/openpgp-csp/11.png
    :alt: img11

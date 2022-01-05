@@ -23,17 +23,17 @@ Two-Factor Authentication (2FA)
 -------------------------------
 
 1. Open one of the `websites that support FIDO
-   U2F <https://www.dongleauth.com/>`__.
+   U2F <https://www.dongleauth.com/>`_.
 2. Log in to the website and enable two-factor authentication in your
    account settings. (In most cases you will find a link to the
    documentation of the supported web service at
-   `dongleauth.com <https://www.dongleauth.com/>`__)
+   `dongleauth.com <https://www.dongleauth.com/>`_)
 3. Register your Nitrokey FIDO U2F in the account settings by touching
    the button to activate the Nitrokey FIDO U2F. After you have
    successfully configured the device, you must activate the Nitrokey
    FIDO U2F this way each time you log in.
 
-`Checkout <https://www.nitrokey.com/documentation/applications#p:nitrokey-fido-u2f&os:all>`__
+`Checkout <https://www.nitrokey.com/documentation/applications#p:nitrokey-fido-u2f&os:all>`_
 the various use cases and supported applications.
 
 .. important::

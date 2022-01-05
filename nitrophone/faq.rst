@@ -10,7 +10,7 @@ NitroPhone FAQ
 **Q:** What is and how to activate *PIN Layout Scrambling*
    To make it difficult for strangers to read the PIN when typing it in, you can
    display the PIN layout in a random order. Additionally, we recommend a
-   `privacy screen <https://shop.nitrokey.com/shop/product/privacyscreen-for-nitrophone-1-194>`__.
+   `privacy screen <https://shop.nitrokey.com/shop/product/privacyscreen-for-nitrophone-1-194>`_.
    To enable, select: *Settings -> Security -> PIN scrambling -> Scramble PIN*
 
 **Q:** What is a *Kill Switch* and how to activate it?
@@ -30,10 +30,10 @@ NitroPhone FAQ
    is displayed. This warning indicates that no ordinary Google Android is running and can be ignored.
 
 **Q:** How can I check, if my NitroPhone has been hacked/compromised?
-   If you want to check the integrity of the operating system, you can use `remote verification <https://attestation.app/about>`__.
+   If you want to check the integrity of the operating system, you can use `remote verification <https://attestation.app/about>`_.
 
 **Q:** Where can I get further information about GrapheneOS?
-   `Here <https://grapheneos.org/faq>`__ you can find further information on GrapheneOS.
+   `Here <https://grapheneos.org/faq>`_ you can find further information on GrapheneOS.
 
 
 .. _all major carriers: https://support.google.com/pixelphone/answer/7107188?hl=en

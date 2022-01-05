@@ -9,16 +9,16 @@ Viscosity Client Configuration with OpenVPN
 
 .. contents:: :local:
 
-This guide will show to configure `Viscosity client <https://www.sparklabs.com/viscosity/>`__ to connect to an OpenVPN instance, using a `Nitrokey Pro
-2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ (or `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__), and `PKCS#11 authentication <https://openvpn.net/community-resources/how-to/#what-is-pkcs11>`__.
+This guide will show to configure `Viscosity client <https://www.sparklabs.com/viscosity/>`_ to connect to an OpenVPN instance, using a `Nitrokey Pro
+2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ (or `Nitrokey Storage
+2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_), and `PKCS#11 authentication <https://openvpn.net/community-resources/how-to/#what-is-pkcs11>`_.
 
 Prerequisites
 -------------
 
 For this guide, you will need an OpenVPN remote server installed and configured for clients. For the purpose of this document, we have used OpenVPN 2.49 installed on a Debian 10 server.
 
-To read about how to configure OpenVPN to authenticate with Nitrokey Pro, you might consult the following `documentation <openvpn-easyrsa.html>`__, as we will just cover the way to configure the Viscosity client in this guide.
+To read about how to configure OpenVPN to authenticate with Nitrokey Pro, you might consult the following `documentation <openvpn-easyrsa.html>`_, as we will just cover the way to configure the Viscosity client in this guide.
 
 You will also need the following:
 
@@ -33,7 +33,7 @@ You will also need the following:
 
 -  Optional: The shared secret key file, i.e. ``ta.key``
 
-For more information on ``PKCS#11`` key management with OpenVPN, please consult OpenVPN’s `documentation. <https://openvpn.net/community-resources/how-to/>`__
+For more information on ``PKCS#11`` key management with OpenVPN, please consult OpenVPN’s `documentation. <https://openvpn.net/community-resources/how-to/>`_
 
 Usage
 -----
@@ -96,9 +96,9 @@ References
 ----------
 
 -  `Using Tokens/Smartcards
-   (PKCS#11) <https://www.sparklabs.com/support/kb/article/using-tokens-smartcards-pkcs-11/>`__
+   (PKCS#11) <https://www.sparklabs.com/support/kb/article/using-tokens-smartcards-pkcs-11/>`_
 
--  `OpenVPN HOWTO <https://openvpn.net/community-resources/how-to/>`__
+-  `OpenVPN HOWTO <https://openvpn.net/community-resources/how-to/>`_
 
 Notes
 -----
@@ -107,5 +107,5 @@ Notes
    the free version.
 
 -  We are considering the usage of
-   `Pritunl <https://client.pritunl.com/>`__ as a free and open
+   `Pritunl <https://client.pritunl.com/>`_ as a free and open
    alternative.

@@ -5,7 +5,7 @@ Full-Disk Encryption With cryptsetup/LUKS
 
 .. contents:: :local:
 
-This guide shows how to configure LUKS-encrypted volumes, to authenticate at boot with `Nitrokey Pro <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ or `Nitrokey Storage <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__.
+This guide shows how to configure LUKS-encrypted volumes, to authenticate at boot with `Nitrokey Pro <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ or `Nitrokey Storage <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_.
 
 To provide some background, cryptsetup-initramfs now has support for using
 OpenPGP smart cards like the Nitrokey Pro and Nitrokey Storage to unlock
@@ -30,7 +30,7 @@ Requirements
 See the section below to determine which method is compatible with this guide.
 
 -  A Nitrokey Pro 2 or Nitrokey Storage 2
-   `initialized <openpgp.html>`__
+   `initialized <openpgp.html>`_
    with keys.
 
 Known Issues

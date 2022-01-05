@@ -49,8 +49,8 @@ Install the necessary tools:
    # Ubuntu
    sudo apt-get install opensc gnutls-bin
 
-For Windows download the official `OpenSC releases <https://github.com/OpenSC/OpenSC/releases>`__  
-and make sure you install `p11tool as described <https://github.com/thales-e-security/p11tool>`__.
+For Windows download the official `OpenSC releases <https://github.com/OpenSC/OpenSC/releases>`_  
+and make sure you install `p11tool as described <https://github.com/thales-e-security/p11tool>`_.
 Using the PowerShell most commands should be identical as long as both tools and their binaries
 are within your ``PATH``.
 
@@ -674,12 +674,12 @@ References
 
 I used the following resources to help in compiling this document.
 
--  `How to initialize your Nitrokey HSM <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`__
--  `How to create a root and intermediate CA <https://jamielinux.com/docs/openssl-certificate-authority/create-the-root-pair.html>`__
--  `How to ensure the serial numbers of your intermediate CA and server certs are up to spec <https://www.phildev.net/ssl/creating_ca.html>`__
--  `How to generate ECC private keys <https://dev.to/benjaminblack/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__
--  `How to find the PCKS11 URI from your HSM <https://www.infradead.org/openconnect/pkcs11.html>`__
--  `Troubleshooting (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-hsm-does-not-support-signing/2598/14>`__
+-  `How to initialize your Nitrokey HSM <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`_
+-  `How to create a root and intermediate CA <https://jamielinux.com/docs/openssl-certificate-authority/create-the-root-pair.html>`_
+-  `How to ensure the serial numbers of your intermediate CA and server certs are up to spec <https://www.phildev.net/ssl/creating_ca.html>`_
+-  `How to generate ECC private keys <https://dev.to/benjaminblack/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`_
+-  `How to find the PCKS11 URI from your HSM <https://www.infradead.org/openconnect/pkcs11.html>`_
+-  `Troubleshooting (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-hsm-does-not-support-signing/2598/14>`_
 
 
-This document was originally `written by lyntux <https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__
+This document was originally `written by lyntux <https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`_

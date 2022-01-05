@@ -10,18 +10,18 @@ Nitrokey HSM with GNU/Linux
 
    *
 
-1. Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. You need
+1. Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`_. You need
    at least version 0.19. You can find recent builds for debian-based
    systems like Ubuntu
-   `here <https://github.com/Nitrokey/opensc-build>`__ if your system
+   `here <https://github.com/Nitrokey/opensc-build>`_ if your system
    does not have the newest version of OpenSC. Alternatively, install
-   `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__
-   driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__).
+   `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`_
+   driver (`source <https://github.com/CardContact/sc-hsm-embedded>`_).
 2. Define SO-PIN and PIN of your own choices. See `these
-   instructions <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`__.
+   instructions <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`_.
    Afterwards you can begin to `generate new
-   keys <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#generate-key-pair>`__.
+   keys <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#generate-key-pair>`_.
 
 Your Nitrokey is now ready to use.
-`Checkout <https://www.nitrokey.com/documentation/applications>`__ the
+`Checkout <https://www.nitrokey.com/documentation/applications>`_ the
 various use cases and supported applications.

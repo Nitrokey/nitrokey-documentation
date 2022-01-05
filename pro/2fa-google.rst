@@ -8,7 +8,7 @@ Two-factor Authentication for Google
 These are the basic steps for registering the Nitrokey Pro or Nitrokey Storage as a second factor of a Google account:
 
 -  Go to
-   `https://myaccount.google.com/security#signin <https://myaccount.google.com/intro/security>`__
+   `https://myaccount.google.com/security#signin <https://myaccount.google.com/intro/security>`_
 
 -  Click “2-Step Verification” on the right side
 

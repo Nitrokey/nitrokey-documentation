@@ -8,11 +8,11 @@ Desktop Login and Linux User Authentication
 Introduction
 ------------
 
-This guide will walk you through the configuration of Linux to use FIDO Universal 2nd Factor, i.e. FIDO U2F with ``libpam-u2f`` and `Nitrokey FIDO2 <https://shop.nitrokey.com/shop/product/nk-fi2-nitrokey-fido2-55>`__.
+This guide will walk you through the configuration of Linux to use FIDO Universal 2nd Factor, i.e. FIDO U2F with ``libpam-u2f`` and `Nitrokey FIDO2 <https://shop.nitrokey.com/shop/product/nk-fi2-nitrokey-fido2-55>`_.
 
 If you want to login to you computer using `Nitrokey Pro
-2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`__ you can visit the instructions for Windows available `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:windows>`__, and for Linux `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:linux>`__. 
+2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ `Nitrokey Storage
+2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`_ you can visit the instructions for Windows available `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:windows>`_, and for Linux `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:linux>`_. 
 
 Requirements
 ------------
@@ -20,7 +20,7 @@ Requirements
 -  Ubuntu 20.04 with Gnome Display Manager.
 
 -  Nitrokey FIDO2 configured following `these
-   instructions <https://www.nitrokey.com/documentation/installation#p:nitrokey-fido-u2f&os:linux>`__.
+   instructions <https://www.nitrokey.com/documentation/installation#p:nitrokey-fido-u2f&os:linux>`_.
 
 Instructions
 ------------
@@ -81,7 +81,7 @@ proceed with the maintenance.
    backup.
 
    You might lose access to your data after configuring `PAM
-   modules <http://www.linux-pam.org/Linux-PAM-html/>`__.
+   modules <http://www.linux-pam.org/Linux-PAM-html/>`_.
 
 
 2. Set up the ``rules`` to recognize the Nitrokey FIDO2
@@ -114,7 +114,7 @@ On Ubuntu 20.04 it is possible to download directly ``libpam-u2f`` from the offi
    Click for more options
 
    -  Alternatively you can build ``libpam-u2f`` from
-      `Git <https://github.com/phoeagon/pam-u2f>`__.
+      `Git <https://github.com/phoeagon/pam-u2f>`_.
 
    -  To verify that the library is properly installed enter the
       following command:

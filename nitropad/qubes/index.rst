@@ -24,7 +24,7 @@ changed by you:
    and could already use it normally.
 
 4. Open the pre-installed Nitrokey App and change the PINs of your
-   Nitrokey as `described here <change-pins.html>`__.
+   Nitrokey as `described here <change-pins.html>`_.
 
 5. Change the passphrase for the hard disk encryption by running “sudo cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is different from your user acount's passphrase.
 

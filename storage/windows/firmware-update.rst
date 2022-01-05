@@ -11,9 +11,9 @@ Firmware Update
    firmware upgrades may destroy all data on the device (especially
    coming from firmware version <0.45)!
 
-1. Download the `Nitrokey App <https://www.nitrokey.com/download>`__ and the `Nitrokey Update Tool <https://github.com/Nitrokey/nitrokey-update-tool/releases/latest>`__. The Nitrokey Update Tool is currently available for macOS and Windows only.
+1. Download the `Nitrokey App <https://www.nitrokey.com/download>`_ and the `Nitrokey Update Tool <https://github.com/Nitrokey/nitrokey-update-tool/releases/latest>`_. The Nitrokey Update Tool is currently available for macOS and Windows only.
 
-2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/latest>`__. Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__.
+2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/latest>`_. Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`_.
 
 3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ‘12345678’.
 
@@ -31,7 +31,7 @@ Firmware Update
    If you are using Microsoft Windows Build 1809 and Nitrokey Storage
    Firmware 0.52 or lower, you need to use another system or if this is not
    feasible use `these
-   instructions <firmware-update-manually.html>`__ to
+   instructions <firmware-update-manually.html>`_ to
    enable the Firmware Update mode.
 
 4. Start the Nitrokey Update Tool and click “Select firmware file”. Select the previously downloaded firmware ".hex" file. Click on “Update firmware” to start the update process. Your device should get detected by the Nitrokey App again as soon as the update is finished.

@@ -8,7 +8,7 @@ OpenPGP Email Encryption With Thunderbird
 Thunderbird 78.3 and newer
 --------------------------
 
-At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy to set up. See `Thunderbird’s documentation <https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`__ for details. Here is a `comprehensive German guide <https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-nitrokey-storage/>`__.
+At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy to set up. See `Thunderbird’s documentation <https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`_ for details. Here is a `comprehensive German guide <https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-nitrokey-storage/>`_.
 
 Troubleshooting
 ############
@@ -19,7 +19,7 @@ Error message: ``The configured key ID '4BA0183FCBA844A7' cannot be found on you
 - The key ID does not contain any whitespace, and consists of 16 characters from range 0-9 A-F
 - you have GPA or Kleopatra software installed.
 
-Please use Kleopatra or `GPA <openpgp-keygen-gpa.html>`__ software to handle the smart card.
+Please use Kleopatra or `GPA <openpgp-keygen-gpa.html>`_ software to handle the smart card.
 
 Thunderbird 77 and older
 ------------------------
@@ -28,10 +28,10 @@ Installation
 ########
 
 1. Install the device driver as described
-   `here <https://www.nitrokey.com/documentation/installation>`__.
+   `here <https://www.nitrokey.com/documentation/installation>`_.
 
-2. Install `Thunderbird <https://www.thunderbird.net/en-US/>`__ and the
-   Add-on `Enigmail <https://www.enigmail.net/index.php/en/>`__.
+2. Install `Thunderbird <https://www.thunderbird.net/en-US/>`_ and the
+   Add-on `Enigmail <https://www.enigmail.net/index.php/en/>`_.
 
 Changing PINs
 ##########
