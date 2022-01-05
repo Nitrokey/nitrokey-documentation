@@ -29,3 +29,4 @@ Choose your product
    nitropc/index
    nitrophone/index
    nextbox/index
+   nethsm/index
