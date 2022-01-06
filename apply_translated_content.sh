@@ -63,3 +63,7 @@ rm -r  /var/www/sphinx/www/static/el
 mv /var/www/sphinx/www/docs.nitrokey.com_el_temp /var/www/sphinx/www/static/el
 echo "$(date) [apply_translated_content.sh] Greek DONE." >> /var/www/sphinx/logs_sphinx/webhook.log
 
+
+
+echo "$(date) [apply_translated_content.sh] All Languages DONE." >> /var/www/sphinx/logs_sphinx/webhook.log
+

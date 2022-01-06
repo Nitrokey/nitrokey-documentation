@@ -102,7 +102,7 @@ html_context = {
         'it' : 'Italiano',
         'ja' : 'やまと',
         'ru' : 'Русский',
-        'zh_CN' : '中国',
+#        'zh_CN' : '中国',
         'el' : 'Ελληνική',
         },
     "lang_switch_info": {
@@ -114,7 +114,7 @@ html_context = {
         'it' : 'Questa pagina è disponibile in italiano.',
         'ja' : 'このページは日本語でご覧いただけます。',
         'ru' : 'Эта страница доступна на русском языке.',
-        'zh_CN' : '本页有中文版本。',
+#        'zh_CN' : '本页有中文版本。',
         'el' : 'Αυτή η σελίδα είναι διαθέσιμη στα ελληνικά.',
     },
     "lang_switch_label": {
@@ -126,7 +126,7 @@ html_context = {
         'it' : 'Passa all`italiano.',
         'ja' : '日本語に切り替えます。',
         'ru' : 'Переключитесь на русский язык.',
-        'zh_CN' : '换成中文。',
+#        'zh_CN' : '换成中文。',
         'el' : 'Αλλαγή σε ελληνικά.',
     },
     "dismiss_label": {
@@ -138,7 +138,7 @@ html_context = {
         'it' : 'Nascondi',
         'ja' : '隠す',
         'ru' : 'Скрыть',
-        'zh_CN' : '隐藏',
+#        'zh_CN' : '隐藏',
         'el' : 'Απόκρυψη',
     }
 
