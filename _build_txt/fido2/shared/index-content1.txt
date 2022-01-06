@@ -1,0 +1,115 @@
+Autenticazione senza password
+
+Autenticazione a due fattori (2FA)
+
+Pulsante touch e comportamento del LED
+
+
+Nitrokey FIDO2 supporta l'autenticazione a due fattori (2FA) e
+l'autenticazione senza password:
+
+Con autenticazione senza password, l'inserimento di una password è
+sostituito dall'accesso con Nitrokey FIDO2 e un PIN.
+
+Con autenticazione a due fattori (2FA), la Nitrokey FIDO2 viene
+controllata in aggiunta alla password.
+
+Nitrokey FIDO2 può essere utilizzato con qualsiasi browser attuale.
+
+Importante: L'App Nitrokey non può essere utilizzata per Nitrokey
+  FIDO2.
+
+Suggerimento: ` Controlla online <
+
+  https://update.nitrokey.com/
+
+  >`_ se il tuo Nitrokey FIDO2 ha l'ultimo firmware installato.
+
+Autenticazione senza password
+
+Apri una pagina web che supporti FIDO2 (attualmente solo Microsoft).
+
+Accedi al sito web e vai su "Set up security key" nelle impostazioni
+di sicurezza del tuo account.
+
+Ora devi impostare un PIN per la tua Nitrokey FIDO2.
+
+Tocca il pulsante del tuo Nitrokey FIDO2 quando richiesto.
+
+Una volta configurato con successo il dispositivo, dovrai attivare il
+tuo Nitrokey FIDO2 in questo modo ogni volta che accedi, dopo aver
+inserito il PIN.
+
+Autenticazione a due fattori (2FA)
+
+Aprire uno dei ` siti web che supportano FIDO U2F
+<https://www.dongleauth.com/>`_.
+
+Accedi al sito web e abilita l'autenticazione a due fattori nelle
+impostazioni del tuo account. (Nella maggior parte dei casi troverete
+un link alla documentazione del servizio web supportato su
+dongleauth.com)
+
+Registra il tuo Nitrokey FIDO2 nelle impostazioni dell'account
+toccando il pulsante per attivare il Nitrokey FIDO2. Dopo aver
+configurato con successo il dispositivo, devi attivare Nitrokey FIDO2
+in questo modo ogni volta che accedi.
+
+Controlla i
+
+vari casi d'uso e le applicazioni supportate
+
+.
+
+Pulsante touch e comportamento del LED
+
+La prima operazione FIDO viene accettata automaticamente entro due
+secondi dalla connessione di Nitrokey FIDO2. In questo caso non è
+necessario toccare il pulsante touch.
+
+Più operazioni possono essere accettate con un solo tocco. Per questo,
+tenete il pulsante a sfioramento toccato per un massimo di 10 secondi.
+
+Per evitare il reset accidentale e malevolo della Nitrokey, il tempo
+di conferma del tocco richiesto per l'operazione di reset di FIDO2 è
+più lungo e con un comportamento del LED distinto (luce rossa del LED)
+rispetto alle normali operazioni. Per resettare la Nitrokey FIDO2,
+conferma toccando il pulsante a sfioramento per almeno 5 secondi fino
+all'accensione del LED verde o blu.
+
+        Colore del LED  Evento  Periodo di tempo  Commenti  Qualsiasi
+(lampeggiante)  In attesa del tocco  Finché il tocco non è confermato
+o scaduto    Qualsiasi (lampeggia più velocemente)  Tocco rilevato,
+conteggio dei secondi  Finché il tocco non è confermato o scaduto
+Bianco (lampeggia)  Richiesta di tocco per la registrazione o
+l'autenticazione FIDO    Richiede un tocco di 1 secondo per essere
+completato; il timeout è solitamente di circa 30 secondi  Giallo
+(lampeggia)  Richiesta di tocco per l'operazione di configurazione
+Richiede un tocco di 5 secondi per essere completato; ad esempio usato
+per attivare la modalità di aggiornamento del firmware  Rosso
+(lampeggia)  Richiesta di tocco per l'operazione di reset  Disponibile
+solo durante i primissimi 10 secondi dopo l'accensione di Nitrokey
+Richiede un tocco di 5 secondi per essere completato; ad esempio usato
+per l'operazione di reset di FIDO2  Verde (costante)  Tocco accettato,
+Nitrokey è attivo e accetta ulteriori operazioni FIDO2  Dopo che il
+tocco è stato registrato, 10 secondi di timeout  Per le operazioni di
+registrazione o autenticazione FIDO, dopo una conferma Nitrokey entra
+in modalità "attivazione", accettando automaticamente le seguenti
+operazioni fino al rilascio del pulsante a sfioramento, ma non più di
+10 secondi  Blu (costante)  Tocco consumato - accettato e consumato
+dall'operazione  Finché il tocco non viene rilasciato  Il consumo del
+tocco qui significa che senza rilasciare il pulsante a sfioramento, e
+toccando di nuovo il Nitrokey non confermerà nessuna nuova operazione
+Bianco (lampeggio singolo)  Nitrokey pronto a lavorare  0,5 secondi
+dopo l'accensione    (nessun segnale LED)  Nitrokey è inattivo
+(nessun segnale LED)  Accettare automaticamente una singola
+registrazione o autenticazione FIDO  Entro i primi 2 secondi dopo
+l'accensione  Nitrokey accetta automaticamente ogni singola operazione
+di registrazione o autenticazione FIDO all'evento di inserimento -
+quest'ultimo è trattato come un equivalente del segnale di
+registrazione del pulsante touch (presenza utente); le operazioni di
+conf igurazione/reset non sono accettate  Tutti i colori  Nitrokey è
+in modalità aggiornamento firmware  Attivo fino a quando l'operazione
+di aggiornamento del firmware ha successo, o fino al reinserimento  Se
+l'aggiornamento del firmware fallisce, la Nitrokey rimarrà in questa
+modalità fino a quando il firmware non sarà scritto correttamente

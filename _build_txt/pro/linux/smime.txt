@@ -1,0 +1,107 @@
+Crittografia e-mail S/MIME
+
+(Nitrokey Pro 2 - Linux)
+
+Prerequisiti
+
+Importare la chiave e il certificato esistenti
+
+Uso
+
+Risoluzione dei problemi
+
+Prerequisiti
+
+Ci sono due standard ampiamente utilizzati per la crittografia delle
+e-mail.
+
+OpenPGP/GnuPG è popolare tra gli individui,
+
+S/MIME/X.509 è usato soprattutto dalle imprese.
+
+Se sei in dubbio su quale scegliere, dovresti usare OpenPGP, vedi `
+qui <openpgp.html>`_. Questa pagina descrive l'uso della crittografia
+e-mail S/MIME.
+
+Dovete acquistare un certificato S/MIME o potreste già averne uno
+dalla vostra azienda. Inoltre, è necessario installare ` OpenSC <
+
+https://github.com/OpenSC/OpenSC/wiki
+
+>`_ sul vostro sistema. Mentre gli utenti GNU/Linux di solito possono
+installare OpenSC tramite il gestore dei pacchetti (ad esempio "sudo
+apt install opensc" su Ubuntu), gli utenti macOS e Windows possono
+scaricare i file di installazione dalla pagina
+
+OpenSC
+
+.
+
+Nota: Gli utenti di Windows con sistema a 64 bit (standard) devono
+  installare entrambe le versioni, quella a 32 bit e quella a 64 bit
+  di OpenSC!
+
+Importare la chiave e il certificato esistenti
+
+Le seguenti istruzioni sono basate sul
+
+wiki di OpenSC
+
+. Assumiamo che abbiate già una coppia chiave-certificato come file
+.p12. Per favore date un'occhiata alla pagina del wiki, se avete un
+file chiave e certificato separati.
+
+Per aprire la riga di comando di Windows premete il tasto Windows e il
+tasto R. Ora scrivi 'cmd.exe' nel campo di testo e premi invio. Per
+aprire un terminale su macOS o GNU/Linux usa la ricerca delle
+applicazioni (ad esempio Spotlight su macOS).
+
+Per rendere questi comandi il più semplice possibile, il file .p12
+deve essere nella tua cartella home. Su Windows questa è di solito
+'C:Usersyourusername' e su macOS e GNU/Linux sarà
+'/home/yourusername'. Se non memorizzi il file .p12 lì, devi adattare
+il percorso nei comandi qui sotto. Inserisci la Nitrokey prima di
+inviare i comandi.
+
+Supponendo che il vostro file di certificato-chiave sia
+'myprivate.p12', i comandi per Windows sono questi:
+
+   "C:\Program Files\OpenSC Project\OpenSC\tools\pkcs15-init" --delete-objects privkey,pubkey --id 3 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3 --verify-pin
+   "C:\Program Files\OpenSC Project\OpenSC\tools\pkcs15-init" --delete-objects privkey,pubkey --id 2 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3 --verify-pin
+
+e su macOS e GNU/Linux sarà
+
+   $ pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3 --verify-pin
+   $ pkcs15-init --delete-objects privkey,pubkey --id 2 --store-private-key myprivate.p12 --format pkcs12 --auth-id 3 --verify-pin
+
+I due comandi copiano la coppia chiave-certificato nello slot 2
+(necessario per decifrare le email) e nello slot 3 (necessario per la
+firma). L'output appare su entrambi i sistemi qualcosa di simile a
+questo:
+
+
+Notate che ci saranno dei messaggi di errore che possono essere
+tranquillamente ignorati (vedi l'esempio di output qui sopra). Ora
+avete la coppia chiave-certificato caricata sulla Nitrokey.
+
+Uso
+
+Potete trovare ulteriori informazioni sull'uso in queste pagine:
+
+per usare la crittografia S/MIME su Thunderbird
+
+per usare la crittografia S/MIME su Outlook
+
+per l'utilizzo di Evolution, un client di posta elettronica per il
+desktop Gnome su sistemi Linux
+
+Risoluzione dei problemi
+
+Su Windows: Avete installato entrambi, la versione a 32-bit e quella a
+64-bit di OpenSC?
+
+Nitrokey Storage 2: è necessario installare OpenSC nella versione 0.18
+o superiore. Potete trovare i file sul ` sito web di OpenSC
+<https://github.com/OpenSC/OpenSC/releases>`_ per utenti Windows e
+macOS o ` qui <https://github.com/Nitrokey/opensc-build>`_ per utenti
+Debian/Ubuntu.

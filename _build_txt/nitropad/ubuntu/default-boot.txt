@@ -1,0 +1,118 @@
+Avvio predefinito
+
+(NitroPad - Ubuntu Linux)
+
+Cambiare il kernel di default
+
+Se avete installato un nuovo sistema operativo, è possibile che
+l'avvio di default non sia ancora assegnato. Se questo è il caso,
+procedete come descritto di seguito.
+
+Selezionate "Default boot" (avvio predefinito).
+
+
+Heads vi informa che non conosce ancora nessun default. Prima
+accettate l'aggiornamento delle checksum.
+
+
+Confermate il processo con Invio.
+
+
+Ora inserite la Nitrokey se non è già così e confermate con Enter. Poi
+dovete inserire il PIN utente della Nitrokey.
+
+   Please confirm that your GPG card is inserted [Y/n]:
+
+   Verifying presence of GPG card...
+
+   XXXXXXX: XXXXXXXXXX
+   Please unlock the card
+
+   Number: XXXX XXXXXX
+   Holder:
+   Counter: X
+   PIN:
+
+Ora NitroPad segna i file cambiati dall'aggiornamento come verificati.
+
+Confermate il processo con Invio.
+
+
+Vedrete quindi una lista di tutte le possibili voci di avvio -
+scegliete la prima qui premendo semplicemente Invio. Opzioni di avvio
+
+
+Per salvare questo valore come predefinito, selezionate "Make Ubuntu
+the default" per Ubuntu o "Make Qubes the default" per Qubes OS.
+Confermare i dettagli di avvio
+
+
+Confermate le prossime tre domande con Invio e inserite il PIN della
+Nitrokey se vi viene richiesto.
+
+   Saving a default will modify the disk. Proceed? [Y/n]:
+
+   Do you wish to add a disk encryption to the TPM [Y/n]:
+
+   Please confirm that your GPG card is inserted [Y/n]:
+
+   Verifying presence of GPG card...
+
+   XXXXXXX: XXXXXXXXXX
+   Please unlock the card
+
+   Number: XXXX XXXXXX
+   Holder:
+   Counter: X
+   PIN:
+
+Il sistema si avvierà quindi.
+
+Cambiare il kernel di default
+
+Questo è un workaround per il bug di Heads v1.1, che non permette di
+cambiare il kernel a quello successivo (inferiore) nella lista.
+
+Il modo usuale sarebbe andare su "Options -> Boot Options -> Show OS
+boot menu", selezionare il kernel e renderlo predefinito, tuttavia
+quest'ultimo non funziona al momento. Si prega invece di utilizzare il
+seguente workaround:
+
+Avviare la console di recupero e rimuovere i file di avvio
+predefiniti. Assicuratevi che vengano rimossi i file corretti. Qui
+erano disponibili 2 file di default:
+
+   $ cd /
+   $ mount -o remount,rw /boot
+   $ ls /boot/kexec_default.*.txt
+   kexec_default.1.txt kexec_default.2.txt
+   $ rm /boot/kexec_default.*.txt -v
+   removed '/boot/kexec_default.1.txt'
+   removed '/boot/kexec_default.2.txt'
+   $ reboot
+
+Firma tutti i file di avvio correnti con: Options --> Update checksums
+and sign all files in /boot
+
+Torna al menu principale e seleziona l'avvio predefinito Main Menu -->
+Default boot
+
+Accettare di selezionare il kernel predefinito (schermata: No Default
+Boot Option Configured )
+
+Selezionare il kernel desiderato per lavorare come predefinito
+
+Selezionare la seconda opzione: Make <kernel version> the default
+
+Salvare il kernel accettando le opzioni predefinite (procedere, non
+accettare la crittografia TPM, confermare la scheda GPG):
+
+   Saving... Proceed (Y/n): Y
+   Do you wish... to the TPM (y/N): N
+   Please confirm... inserted (Y/n): Y
+
+Inserire il PIN del dispositivo Nitrokey Pro/Storage per eseguire il
+processo di firma
+
+Il kernel selezionato si avvierà e sarà quello predefinito la volta
+successiva quando si seleziona l'opzione Default Boot dal menu.

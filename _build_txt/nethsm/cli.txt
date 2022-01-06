@@ -1,0 +1,409 @@
+Accedere a un NetHSM con lo strumento a riga di comando nitropy
+
+Inizializzazione
+
+Gestione degli utenti  Ruoli  Creare un utente
+
+Gestione delle chiavi  Generare le chiavi  Importazione di chiavi
+Chiavi dell'elenco  Mostra dettagli chiave  Certificati chiave
+Richieste di firma di certificati chiave
+
+Operazioni chiave  Decrittazione  Firma
+
+Backups
+
+Aggiornamenti
+
+Questo tutorial dimostra come accedere al NetHMS tramite
+
+nitropia
+
+ strumento a riga di comando, che è necessario scaricare e installare.
+
+Prima di iniziare, memorizziamo il nome dell'host dell'istanza di
+NetHSM nella variabile d'ambiente "NETHSM_HOST".  È possibile
+utilizzare l'istanza demo pubblica di NetHSM "nethsmdemo.nitrokey.com"
+o eseguire un'istanza demo locale utilizzando l'immagine docker di
+NetHSM, vedere la sezione ` Sviluppo e test </index.html#development-
+and-testing>`_ della documentazione di NetHSM.
+
+   $ export NETHSM_HOST="localhost:8443"
+
+Nota: Se usate un'istanza demo di NetHSM con un certificato
+  autofirmato, per esempio usando l'immagine Docker, dovrete usare
+  l'opzione "--no- verify-tls" per "nitropy" per saltare il controllo
+  del certificato.
+
+Per prima cosa, vediamo cosa abbiamo qui:
+
+   $ nitropy nethsm --host $NETHSM_HOST info
+   Host:    localhost:8443
+   Vendor:  Nitrokey GmbH
+   Product: NetHSM
+
+Vedere qual è lo stato del dispositivo:
+
+   $ nitropy nethsm --host $NETHSM_HOST state
+   NetHSM localhost:8443 is Unprovisioned
+
+Inizializzazione
+
+Un nuovo NetHSM deve essere prima approvvigionato con le passphrase e
+l'ora corrente. La
+
+Admin Passphrase
+
+ è la passphrase dell'
+
+Administrator
+
+, che è il super utente del NetHSM. La
+
+Passphrase di sblocco
+
+ è usata per criptare l'archivio di dati riservati del NetHSM.
+
+Nota: L'istanza demo di NetHSM a "nethsmdemo.nitrokey.com" è già
+  fornita.
+
+   $ nitropy nethsm --host $NETHSM_HOST provision \
+       --admin-passphrase adminPassphrase --unlock-passphrase unlockPassphrase
+   NetHSM localhost:8443 provisioned
+
+NetHSM può essere usato in modalità
+
+Attended Boot
+
+ e
+
+Unattended Boot
+
+.
+
+In modalità Attended Boot è necessario inserire la Unlock Passphrase
+durante ogni avvio, che è usata per crittografare l'archivio dati. Per
+ragioni di sicurezza questa modalità è raccomandata.
+
+Nella modalità Unattended Boot non è richiesta alcuna Passphrase di
+sblocco, quindi il NetHSM può avviarsi senza sorveglianza e l'archivio
+dati è memorizzato in modo non criptato. Usa questa modalità se i tuoi
+requisiti di disponibilità non possono essere soddisfatti con la
+modalità Attended Boot.
+
+Recupera la modalità corrente:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       get-config --unattended-boot
+    Configuration for NetHSM localhost:8443:
+        Unattended boot: off
+
+Passare alla modalità
+
+Avvio non assistito
+
+:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       set-unattended-boot on
+   Updated the unattended boot configuration for NetHSM localhost:8443
+
+Oppure tornare alla modalità
+
+Attended Boot
+
+:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       set-unattended-boot on
+   Updated the unattended boot configuration for NetHSM localhost:8443
+
+Gestione degli utenti
+
+Ruoli
+
+La separazione dei compiti può essere implementata utilizzando i Ruoli
+disponibili. Ogni account utente configurato sul NetHSM ha uno dei
+seguenti Ruoli assegnati ad esso. Di seguito è riportata una
+descrizione di alto livello delle operazioni consentite dai singoli
+Ruoli, per i dettagli specifici dell'endpoint si rimanda alla
+documentazione REST API.
+
+R-Administrator: Un account utente con questo ruolo ha accesso a tutte
+le operazioni fornite dall'API REST, ad eccezione delle operazioni di
+utilizzo delle chiavi, cioè la firma e la decrittazione dei messaggi.
+
+R-Operatore: Un account utente con questo ruolo ha accesso a tutte le
+operazioni di utilizzo delle chiavi, a un sottoinsieme di operazioni
+di gestione delle chiavi in sola lettura e alle operazioni di gestione
+degli utenti che consentono modifiche solo al proprio account.
+
+R-Metriche: Un account utente con questo ruolo ha accesso solo alle
+operazioni di metrica in sola lettura.
+
+R-Backup: Un account utente con questo ruolo ha accesso solo alle
+operazioni necessarie per avviare un backup del sistema.
+
+Nota: in una versione futura sarà implementato un altro ruolo che è
+autorizzato a /keys/ POST, /keys/generate POST, /keys/{KeyID} PUT &
+DELETE, /keys/{KeyID}/cert PUT & DELETE in aggiunta a ciò che
+R-Operator è autorizzato a fare.
+
+Creare un utente
+
+Ora create un nuovo utente con il ruolo di operatore che può essere
+usato per firmare e decifrare i dati.  Notate che il NetHSM assegna un
+ID utente casuale se non lo specifichiamo.
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       add-user --user-id operator --real-name "Jane User" --role operator \
+       --passphrase opPassphrase
+   User operator added to NetHSM localhost:8443
+
+Gestione delle chiavi
+
+Il NetHSM supporta le chiavi RSA, ED25519 e ECDSA.  Quando si crea una
+chiave, è necessario selezionare sia l'algoritmo di chiave che i
+meccanismi di chiave da utilizzare.  Le chiavi RSA possono essere
+usate per la decrittazione (con le modalità raw, PKCS #1 e OAEP con
+MD5, SHA1, SHA224, SHA256, SHA384 o SHA512) e per la firma (con le
+modalità PKCS #1 e PSS con MD5, SHA1, SHA224, SHA256, SHA384 o
+SHA512).  Gli altri algoritmi supportano solo il meccanismo di firma.
+
+Per una lista completa di algoritmi e meccanismi di chiavi
+disponibili, vedere la documentazione API per i tipi
+
+KeyAlgorithm
+
+ e
+
+KeyMechanism
+
+.
+
+Generare le chiavi
+
+In questa guida, vogliamo usare una chiave RSA per decifrare i dati
+usando PKCS #1 e per firmare i dati con PSS usando SHA256.  Quindi
+generiamo una nuova chiave sul NetHSM. Assicuratevi di usare
+l'algoritmo "RSA" e di selezionare i meccanismi di chiave
+"RSA_Signature_PSS_SHA256" e "RSA_Decryption_PKCS1".  Se non si
+specifica un ID chiave, NetHSM genererà un ID casuale per la nuova
+chiave.
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       generate-key --algorithm RSA --mechanism RSA_Signature_PSS_SHA256 \
+       --mechanism RSA_Decryption_PKCS1 --length 2048 --key-id myFirstKey
+   Key myFirstKey generated on NetHSM localhost:8443
+
+Importazione di chiavi
+
+Invece di generare una chiave sul NetHSM, potete anche importare
+chiavi private esistenti nel NetHSM:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       add-key --algorithm RSA --mechanism RSA_Signature_PSS_SHA256 \
+       --mechanism RSA_Decryption_PKCS1 --key-id mySecondKey --public-exponent AQAB \
+       --prime-p "AOnWFZ+JrI/xOXJU04uYCZOiPVUWd6CSbVseEYrYQYxc7dVroePshz29tc+VEOUP5T0O8lXMEkjFAwjW6C9QTAsPyl6jwyOQluMRIkdN4/7BAg3HAMuGd7VmkGyYrnZWW54sLWp1JD6XJG33kF+9OSar9ETPoVyBgK5punfiUFEL" \
+       --prime-q "ANT1kWDdP9hZoFKT49dwdM/S+3ZDnxQa7kZk9p+JKU5RaU9e8pS2GOJljHwkES1FH6CUGeIaUi81tRKe2XZhe/163sEyMcxkaaRbBbTc1v6ZDKILFKKt4eX7LAQfhL/iFlgi6pcyUM8QDrm1QeFgGz11ChM0JuQw1WwkX06lg8iv"
+   Key mySecondKey added to NetHSM localhost:8443
+
+Chiavi dell'elenco
+
+Per assicurarsi che la chiave sia stata creata e che abbia le
+impostazioni corrette dell'algoritmo e del meccanismo, possiamo
+interrogare tutte le chiavi sul NetHSM:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
+       list-keys
+   Keys on NetHSM localhost:8443:
+
+   Key ID          Algorithm       Mechanisms                                      Operations
+   ----------      ---------       ----------------------------------------------  ----------
+   myFirstKey      RSA             RSA_Decryption_PKCS1, RSA_Signature_PSS_SHA256  0
+   mySecondKey     RSA             RSA_Decryption_PKCS1, RSA_Signature_PSS_SHA256  0
+
+Mostra dettagli chiave
+
+Possiamo anche interrogare la chiave pubblica della coppia di chiavi
+generata:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
+       get-key myFirstKey
+   Key myFirstKey on NetHSM localhost:8443:
+   Algorithm:       RSA
+   Mechanisms:      RSA_Signature_PSS_SHA256
+   Operations:      0
+   Modulus:         xYDMGEK3CO5vK0ge0pJQEJHBPA/5M42F/kyN7BV+03HEH23NLXWyszYn7MWvxG4uebZfz+6n7auOYePb0FADVvxQvdX4VPcNzBOEgMqfpplEzf5RzmMmFDBgAcGMS5XkbyVS3XR+7bqej5L6qZtGmFn4hG22Ziu5ZdQxyyqos8Go1ogFBz+vQ4WzmDOGEU82quQSxiPT3K71KKVSS4zTL6oz9izuHzOqnLhuGnbtAe5AFBXE2fJIuXMzw36d0OyJ+rdmkh65EXXLo7Qt3VyP7JPIW+JIM2iU26v6suwUCbjFfrDURS8xEftKAe1hkBWJpNHLZhUse7dpvmtlmRyhxw==
+   Public exponent: AQAB
+
+Per poter utilizzare la chiave con "openssl", la esportiamo come file
+PEM e la memorizziamo come "public.pem":
+
+   $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
+       get-key myFirstKey --public-key > public.pem
+
+Possiamo ispezionare la chiave con "openssl" e usarla per la
+crittografia o la verifica della firma (come descritto nella prossima
+sezione):
+
+   $ openssl rsa -in public.pem -pubin -text
+   RSA Public-Key: (2048 bit)
+   Modulus:
+       00:c3:56:f5:09:cc:a9:3e:ca:16:2e:fb:d2:8b:9d:
+       a9:33:5a:87:8f:3f:7a:bb:8a:3d:62:9b:5d:56:84:
+       95:97:bb:97:f0:77:e2:c8:59:f2:b5:c6:b7:f5:b3:
+       76:69:a3:e8:f6:b7:35:f4:3c:52:6d:3c:a0:b6:a1:
+       e4:1a:32:05:1d:51:68:21:7d:fc:53:69:ec:bc:0b:
+       a0:db:63:b2:0e:47:00:03:4d:98:1f:ab:c0:7b:2e:
+       3c:8f:b6:36:ff:f0:db:80:26:f0:a6:af:30:2f:7b:
+       16:fd:5c:db:0f:2c:54:8a:26:2b:db:3d:78:49:4b:
+       7b:d1:60:ea:a7:f0:b4:5e:fc:33:ff:57:f8:83:fd:
+       12:64:8f:29:d1:94:96:9a:15:18:5d:04:ca:1c:29:
+       44:ad:42:31:c5:80:38:4c:eb:3b:b8:7e:17:27:5c:
+       69:a8:88:44:ea:d1:82:64:fe:51:31:47:97:a7:a9:
+       87:c3:13:c9:00:7a:b9:fb:6f:cc:66:4c:07:d7:68:
+       fa:78:68:9a:e7:87:1e:94:c6:27:92:5f:f2:7d:11:
+       44:11:b5:39:35:59:2c:cd:f9:4f:59:e3:56:93:1f:
+       94:20:fd:6b:23:0d:15:e6:4e:bb:84:a8:a5:0d:9f:
+       1c:90:ab:a8:10:04:50:12:c1:80:02:94:85:78:df:
+       d6:b3
+   Exponent: 65537 (0x10001)
+   writing RSA key
+   -----BEGIN PUBLIC KEY-----
+   MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw1b1CcypPsoWLvvSi52p
+   M1qHjz96u4o9YptdVoSVl7uX8HfiyFnytca39bN2aaPo9rc19DxSbTygtqHkGjIF
+   HVFoIX38U2nsvAug22OyDkcAA02YH6vAey48j7Y2//DbgCbwpq8wL3sW/VzbDyxU
+   iiYr2z14SUt70WDqp/C0Xvwz/1f4g/0SZI8p0ZSWmhUYXQTKHClErUIxxYA4TOs7
+   uH4XJ1xpqIhE6tGCZP5RMUeXp6mHwxPJAHq5+2/MZkwH12j6eGia54celMYnkl/y
+   fRFEEbU5NVkszflPWeNWkx+UIP1rIw0V5k67hKilDZ8ckKuoEARQEsGAApSFeN/W
+   swIDAQAB
+   -----END PUBLIC KEY-----
+
+Certificati chiave
+
+È possibile impostare e interrogare i certificati per le chiavi
+memorizzate su un'istanza di NetHSM:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       set-certificate myFirstKey --mime-type application/x-pem-file /tmp/cert.pem
+   Updated the certificate for key myFirstKey on NetHSM localhost:8443
+
+   $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
+       get-certificate myFirstKey > /tmp/cert.pem
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       delete-certificate myFirstKey
+   Deleted certificate for key myFirstKey on NetHSM localhost:8443
+
+Richieste di firma di certificati chiave
+
+Il NetHSM supporta la generazione di Certificate Signing Requests
+(CSR) per le chiavi memorizzate:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
+       csr --key-id myFirstKey --country DE --state-or-province BE --locality Berlin \
+       --organization ACME --organizational-unit IT --common-name example.com \
+       --email-address it@example.com
+
+Operazioni chiave
+
+Decrittazione
+
+Possiamo criptare i dati per la chiave memorizzata sul NetHSM usando
+"openssl". ("public.pem" è il file della chiave pubblica che abbiamo
+creato nella sezione
+
+Show Key Details
+
+).
+
+   $ echo 'NetHSM rulez!' | \
+       openssl rsautl -encrypt -inkey public.pem -pubin | \
+       base64 > data.crypt
+
+Ora possiamo usare il NetHSM per decifrare i dati:
+
+   $ nitropy nethsm -h $NETHSM_HOST -u operator -p opPassphrase \
+       decrypt -k myFirstKey -d "$(cat data.crypt)" -m PKCS1 | \
+       base64 -d
+   NetHSM rulez!
+
+Firma
+
+Allo stesso modo, possiamo firmare i dati usando la chiave sul NetHSM.
+Per RSA e ECDSA, dobbiamo prima calcolare un digest:
+
+   $ echo 'NetHSM rulez!' > data
+   $ openssl dgst -sha256 -binary data | base64 > data.digest
+
+Poi possiamo creare una firma da questo digest usando il NetHSM:
+
+   $ nitropy nethsm -h $NETHSM_HOST -u operator -p opPassphrase \
+       sign -k myFirstKey -m PSS_SHA256 -d "$(cat data.digest)" | \
+       base64 -d > data.sig
+
+E poi usare "openssl" per verificare la firma:
+
+   $ openssl dgst -sha256 -verify public.pem -signature data.sig \
+       -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
+   Verified OK
+
+Backups
+
+È possibile creare un backup del NetHSM che cattura sia la
+configurazione che le chiavi memorizzate.  Per creare un backup, devi
+prima impostare una passphrase di backup che viene utilizzata per
+crittografare il file di backup:
+
+   $ nitropy nethsm -h $NETHSM_HOST -u admin -p adminPassphrase \
+       set-backup-passphrase --passphrase backupencryptionkey
+   Updated the backup passphrase for NetHSM localhost:8443
+
+Ora dovete creare un utente con il ruolo
+
+R-Backup
+
+:
+
+   $ nitropy nethsm -h $NETHSM_HOST -u admin -p adminPassphrase \
+       add-user --user-id backup --real-name "Backup User" --role backup \
+       --passphrase backupPassphrase
+   User backup added to NetHSM localhost:8443
+
+Poi può generare il backup e scriverlo su un file:
+
+   $ nitropy nethsm -h $NETHSM_HOST -u backup -p backupPassphrase \
+       backup /tmp/nethsm-backup
+   Backup for localhost:8443 written to /tmp/backup
+
+Questo file di backup può essere ripristinato su un'istanza NetHSM non
+provvista:
+
+   $ nitropy nethsm -h $NETHSM_HOST \
+       restore --backup-passphrase backupencryptionkey /tmp/nethsm-backup
+   Backup restored on NetHSM localhost:8443
+
+Aggiornamenti
+
+Gli aggiornamenti per il NetHSM possono essere installati in un
+processo in due fasi.  Prima devi caricare l'immagine di aggiornamento
+sul NetHSM.  L'immagine viene poi controllata e convalidata.  Se la
+convalida ha successo, le note di rilascio per l'aggiornamento sono
+restituite dal NetHSM:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       update /tmp/nethsm-update.img.cpio
+   Image /tmp/nethsm-update.img.cpio uploaded to NetHSM localhost:8443
+
+Se volete continuare con l'installazione, potete ora impegnare
+l'aggiornamento:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       commit-update
+   Update successfully committed on NetHSM localhost:8443
+
+In alternativa, è possibile annullare l'aggiornamento:
+
+   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
+       cancel-update
+   Update successfully cancelled on NetHSM localhost:8443

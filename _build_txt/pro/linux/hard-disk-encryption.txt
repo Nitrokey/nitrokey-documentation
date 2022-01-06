@@ -1,0 +1,205 @@
+Crittografia del disco rigido
+
+(Nitrokey Pro 2 - Linux)
+
+VeraCrypt (ex TrueCrypt)
+
+Crittografia del disco rigido su Linux con LUKS/dm-crypt
+
+Crittografia dello storage su Linux con EncFS  Inizializzazione  Uso
+
+Crittografia dello storage su Linux con ECryptFS
+
+VeraCrypt (ex TrueCrypt)
+
+VeraCrypt
+
+ è un software di crittografia del disco gratuito e Open Source per
+Windows, macOS e GNU/Linux. È il successore di TrueCrypt e quindi
+raccomandato, anche se le seguenti istruzioni dovrebbero applicarsi
+anche a TrueCrypt.
+
+Seguite questi passi per usare il programma con
+
+Nitrokey Storage 2
+
+ o
+
+Nitrokey Pro 2
+
+:
+
+Installare l'ultima versione di ` OpenSC
+<https://github.com/OpenSC/OpenSC/wiki>`_, o scaricare la ` libreria
+<http://smartcard-auth.de/download-en.html>`_ PKCS#11.
+
+Scegli la libreria in VeraCrypt sotto Settings>Preferences>Security
+Token (la posizione dipende dal sistema, per esempio /usr/lib/opensc).
+
+Genera un file chiave di 64 byte tramite Tools>Keyfile Generator.
+
+Ora dovresti essere in grado di importare il file chiave generato
+tramite Tools>Manage Security Token Keyfiles. Dovresti scegliere il
+primo Slot ([0] User PIN). Il keyfile viene poi memorizzato sulla
+Nitrokey come 'Private Data Object 1' (PrivDO1).
+
+Dopo questo dovreste cancellare il file chiave originale sul vostro
+computer in modo sicuro!
+
+Ora puoi usare VeraCrypt con la Nitrokey: crea un contenitore, scegli
+il keyfile sul dispositivo come alternativa alla password.
+
+Avvertimento: Considerazioni sulla sicurezzaSi prega di notare che
+  VeraCrypt non fa uso di tutta la sicurezza che Nitrokey (e le smart
+  card in generale) offrono. Invece memorizza un file chiave sulla
+  Nitrokey che teoricamente potrebbe essere rubato da un virus
+  informatico dopo che l'utente ha inserito il PIN.
+
+Nota:
+
+Aloaha Crypt
+
+ è basato su TrueCrypt/VeraCrypt ma senza la limitazione di sicurezza
+descritta.
+
+Crittografia del disco rigido su Linux con LUKS/dm-crypt
+
+Ecco ` ottime istruzioni <
+
+http://blog.kumina.nl/2010/07/two-factor-luks-using-ubuntu/
+
+>`_ su come usare Nitrokey per criptare il vostro disco fisso sotto
+Linux con LUKS/dm-crypt. ` altre istruzioni <
+
+https://wiki.ubuntu.com/SmartCardLUKSDiskEncryption
+
+>`_.
+
+Purism ha creato un
+
+semplice script
+
+ per aggiungere la Nitrokey/LibremKey come un modo per sbloccare le
+partizioni LUKS (non ancora testato da Nitrokey).
+
+Questo progetto
+
+ mira a facilitare l'uso di LUKS con Nitrokey Pro o Storage basato su
+Password Safe (non ancora testato da Nitrokey). Una descrizione su
+come usarlo su Gentoo può essere trovata ` qui <
+
+https://amedeos.github.io/gentoo/nitrokey/2019/01/21/gentoo-nitrokey-
+luks.html
+
+>`_.
+
+Per Arch Linux, vedere
+
+initramfs-scencrypt
+
+.
+
+Crittografia dello storage su Linux con EncFS
+
+Suggerimento: PrerequisitoAssicuratevi di aver
+
+  installato il driver del dispositivo, cambiato i PIN di default e
+  generato o importato le chiavi con GnuPG
+
+  .
+
+EncFS
+
+ è un'utilità semplice per i file system criptati ed è basata su
+
+FUSE
+
+. Potete seguire questi passi per usarlo con password molto lunghe e
+Nitrokey Pro 2:
+
+Inizializzazione
+
+Creare un file chiave con dati casuali:
+
+   $ dd bs=64 count=1 if=/dev/urandom of=keyfile
+
+Crittografa il file della chiave e usa lo User-ID della tua Nitrokey
+
+   $ gpg --encrypt keyfile
+
+Rimuovere il file chiave in chiaro:
+
+   $ rm keyfile # you may want to use 'wipe' or 'shred' to securely delete the keyfile
+
+Creare il punto di montaggio:
+
+   $ mkdir ~/.cryptdir ~/cryptdir
+
+Creare la cartella di crittografia vera e propria
+
+   $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir
+   # There may appears an error message about missing permission of fusermount
+   # This message can be ignored
+
+Smontare il nuovo file system:
+
+   $ fusermount -u ~/cryptdir
+
+Uso
+
+Monta il file system criptato e inserisci il PIN di Nitrokey:
+
+   $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir
+
+Dopo l'uso, smontate il file system:
+
+   $ fusermount -u ~/cryptdir
+
+Crittografia dello storage su Linux con ECryptFS
+
+eCryptfs
+
+ è un file system di crittografia trasparente per Linux che può essere
+usato con Nitrokey attraverso un driver PKCS#11.
+
+Vedi ` queste <
+
+http://tkxuyen.com/blog/?p=293
+
+>`_ istruzioni:
+
+Importare il certificato e la chiave in Nitrokey
+
+   # Warning: This will delete existing keys on your Nitrokey!
+   $ pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 --format pkcs12 --auth-id 3 --verify-pin
+
+Create il file ~/.ecryptfsrc.pkcs11:
+
+   $ editor ~/.ecryptfsrc.pkcs11
+
+Inserisci questo contenuto:
+
+   $ pkcs11-log-level=5 pkcs11-provider1,name=name,library=/usr/lib/opensc-pkcs11.so,cert-private=true
+   $ openvpn --show-pkcs11-ids path to opensc-pkcs11 module
+   Certificate
+       DN: /description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@example.com
+       Serial: 066E04
+       Serialized id: ZeitControl/PKCS\x2315\x20emulated/000500000c7f/OpenPGP\x20card\x20\x28User\x20PIN\x29/03
+
+Copia l'id serializzato per un uso successivo:
+
+   $ ecryptfs-manager
+   # This will show list option. Choose option "Add public key to keyring"
+   # Choose pkcs11-helper
+   # Enter the serialized ID of step 3 to PKCS#11 ID.
+
+In alternativa, provate
+
+ESOSI
+
+ o seguite questi passi usando OpenSC e OpenVPN.
+
+Fonte della guida:
+
+https://www.nitrokey.com/documentation/applications#a:hard-disk-
+encryption

@@ -1,0 +1,70 @@
+Risoluzione dei problemi
+
+(NitroPad - Qubes OS)
+
+Iniziare nel guscio di recupero
+
+NitroPad non si avvia
+
+Codice non valido
+
+
+Qui troverete una raccolta di problemi comuni.
+
+Iniziare nel guscio di recupero
+
+Se il vostro sistema operativo non si avvia come mostrato di seguito,
+eseguite i seguenti passi:
+
+   +++ Found verified kexec boot params
+   gpg: verify signatures failed: Unknown system error
+   Invalid signature on kexec boot params
+   !!!!! Failed default boot
+   New value of PCR[4]: XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   !!!!!Starting recovery shell
+   /boot #
+
+Riavvia il tuo portatile e vai su Opzioni.  img1
+
+Selezionate "Aggiorna le checksum e firma tutti i file su /boot".
+img2
+
+Dopo di che, seguite ` queste istruzioni <system-update.html>`_ dal
+passo 3 in poi.
+
+NitroPad non si avvia
+
+Se il portatile non si avvia e lampeggia solo brevemente
+all'accensione, provate i seguenti passi:
+
+Provate un riavvio difficile: Rimuovere l'alimentatore e la batteria e
+tenere premuto il pulsante di accensione per 20 secondi. Poi
+ricollegate l'alimentatore e la batteria e avviate.
+
+Se questo non funziona: Rimuovere la batteria o avviare solo con
+l'alimentazione collegata.
+
+Potresti anche provare a rimuovere le RAM e reinserirle.
+
+Codice non valido
+
+Ad ogni avvio il codice viene generato sul Nitropad e sulla Nitrokey,
+se è collegata. E' permesso eseguire 10 boot senza perdere la
+sincronizzazione tra i dispositivi, dopo di che viene mostrato il
+segnale di cattivo codice, indipendentemente dal fatto che il resto
+del sistema sia in uno stato corretto. Se siete sicuri che il sistema
+non sia stato manomesso (ad esempio il Nitropad è stato avviato più di
+10 volte senza la Nitrokey), potete tranquillamente resettare l'avviso
+del sistema.
+
+Collegate la Nitrokey ed eseguite quanto segue dalla schermata di
+avvio principale:
+
+Opzioni
+
+Opzioni TPM/TOTP/HOTP
+
+Generare un nuovo segreto TOTP/HOTP
+
+e seguite la guida sullo schermo. Dopo di che il segreto e il
+contatore dovrebbero essere entrambi resettati ad un nuovo valore.

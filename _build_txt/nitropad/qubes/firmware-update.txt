@@ -1,0 +1,105 @@
+Aggiornamento del firmware
+
+(NitroPad - Qubes OS)
+
+Preparazione  Verifica del file del firmware
+
+Procedura
+
+Ulteriori passi
+
+Questa guida descrive come aggiornare il firmware degli Heads del
+NitroPad.
+
+Queste istruzioni sono rilevanti nei seguenti casi:
+
+Vuoi aggiornare il firmware delle teste.
+
+Avete già eseguito un reset di fabbrica OEM, ma il contatore TPM non è
+stato resettato.
+
+Preparazione
+
+Collega il tuo NitroPad a una presa di corrente e carica la sua
+batteria oltre il 70%.
+
+Scaricare il ` firmware più recente
+<https://github.com/Nitrokey/heads/releases/latest>`_ e salvarlo su
+una chiavetta USB. Per il NitroPad T430 usare
+nitropad-t430-[version].npf e per il NitroPad X230 usare
+nitropad-x230-[version].npf.
+
+Per la verifica della somma hash, memorizzare il file sha256sum sul
+drive USB.
+
+Verifica del file del firmware
+
+È obbligatorio eseguire un controllo di coerenza del file del firmware
+prima di scriverlo sul dispositivo. Dopo aver copiato il file del
+firmware sul drive USB, assicuratevi che quest'ultimo sia
+smontato/espulso correttamente per evitare problemi di scrittura. Il
+controllo di consistenza dovrebbe essere eseguito su NitroPad, in modo
+che i dati verificati siano esattamente gli stessi che verranno poi
+letti dall'applicazione di aggiornamento. Questa azione non sarà
+richiesta nei successivi aggiornamenti del firmware.
+
+Avviare Nitropad e aprire la console di recupero da Options -> Exit to
+recovery shell
+
+Eseguite quanto segue per verificare il firmware:
+
+   $ mount-usb              # select USB device
+   $ cd /media
+   $ sha256sum -c sha256sum
+
+Per la versione "v1.1-rc3" questo dovrebbe risultare:
+
+   $ sha256sum -c sha256sum
+   nitropad_x230_v1.1-rc3.rom: OK
+
+Questo conferma che il contenuto del file è quello previsto. Riavvia
+il Nitropad per continuare (o spegnendo e riaccendendo, o premendo
+CTRL+ALT+CANC).
+
+Procedura
+
+Questa è la procedura di aggiornamento vera e propria. Di solito le
+prime due schermate non vengono mostrate - in tal caso si prega di
+iniziare dal passo 3.
+
+(Schermo opzionale) Selezionare "Ignora l'errore e continua al menu di
+avvio predefinito".
+
+
+(Schermo opzionale) Selezionare "Ignora l'errore e continua al menu di
+avvio predefinito".
+
+
+Vai a "Opzioni".
+
+
+Selezionate "Flash/Update the BIOS".
+
+
+Si prega di confermare la prima opzione.
+
+
+Confermate il processo con Invio.
+
+
+Selezionate il file .npf desiderato.
+
+
+Confermate il processo con Invio.
+
+
+Confermate il riavvio con Enter.
+
+
+Hai aggiornato con successo il tuo firmware!
+
+Ulteriori passi
+
+Nel caso in cui venga visualizzata la schermata "ERROR: TOTP
+Generation Failed!", si prega di seguire le istruzioni per il Factory
+Reset (nel menu a sinistra), partendo dal passo 11.

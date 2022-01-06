@@ -1,0 +1,101 @@
+Generazione di chiavi OpenPGP usando GPA
+
+(Nitrokey Pro 2 - Linux)
+
+Generazione di chiavi
+
+Esportazione della chiave pubblica e uso del Keyserver
+
+Le seguenti istruzioni spiegano la generazione di chiavi OpenPGP
+direttamente su Nitrokey con l'aiuto del GNU Privacy Assistant (GPA).
+Non sarete in grado di creare un backup di queste chiavi. Quindi, se
+perdete la Nitrokey o si rompe, non potrete più decifrare le mail o
+usare queste chiavi. Vedi
+
+qui
+
+ per un confronto dei diversi metodi per generare chiavi OpenPGP.
+
+Dovete avere GnuPG e GPA installati sul vostro sistema. La versione
+più recente per Windows può essere trovata ` qui <
+
+https://www.gpg4win.org/
+
+>`_ (assicuratevi di controllare "GPA" durante l'installazione!) Gli
+utenti di sistemi Linux sono pregati di installare GnuPG e GPA con
+l'aiuto del gestore di pacchetti (ad esempio usando "sudo apt install
+gnupg gpa" su Ubuntu).
+
+Generazione di chiavi
+
+All'inizio, aprite il GNU Privacy Assistant (GPA). Potrebbe esserti
+chiesto di generare una chiave, puoi saltare questo passaggio per ora
+cliccando su "Fallo dopo". Nella finestra principale, clicca su "Card"
+o "Card Manager".
+
+
+Si apre un'altra finestra. Vai su "Card" -> "Generate key" per
+iniziare il processo di generazione della chiave.
+
+
+Ora puoi inserire il tuo nome e l'indirizzo email che vuoi usare per
+la chiave che verrà generata successivamente. Puoi scegliere una data
+di scadenza per la tua chiave, ma non è obbligatorio.
+
+Si prega di non usare la casella di controllo del backup
+
+. Questo "backup" salva solo la chiave di crittografia. In caso di
+perdita del dispositivo, non sarà possibile ripristinare l'intero set
+di chiavi. Quindi da un lato non è un backup completo (usa ` queste
+istruzioni <openpgp-keygen-backup.html>`_ invece, se ne hai bisogno) e
+dall'altro rischi che qualcun altro possa entrare in possesso della
+tua chiave di cifratura. Il vantaggio di generare le chiavi sul
+dispositivo è quello di assicurarsi che le chiavi siano memorizzate in
+modo sicuro. Pertanto, si consiglia di saltare questo mezzo backup.
+
+
+Ti verrà chiesto il PIN amministratore (predefinito: 12345678) e il
+PIN utente (predefinito: 123456). Quando la generazione della chiave è
+finita, puoi vedere le impronte delle chiavi nella parte inferiore
+della finestra. Potete riempire i campi mostrati sopra, che vengono
+salvati anche sulla vostra Nitrokey.
+
+
+Ora puoi chiudere la finestra e tornare alla finestra principale. La
+vostra chiave sarà visibile nel gestore delle chiavi dopo il refresh.
+Ogni applicazione che fa uso di GnuPG funzionerà anche con la vostra
+Nitrokey, perché GnuPG è pienamente consapevole del fatto che le
+chiavi sono memorizzate sulla vostra Nitrokey.
+
+
+Esportazione della chiave pubblica e uso del Keyserver
+
+Anche se puoi iniziare a usare la tua Nitrokey subito dopo aver
+generato le chiavi sul tuo sistema, devi importare la tua chiave
+pubblica su ogni sistema su cui vuoi usare la Nitrokey. Quindi per
+essere preparati avete due opzioni: O salvi la chiave pubblica dove
+vuoi e la usi su un altro sistema o salvi la chiave pubblica su una
+pagina web/keyserver.
+
+
+Clicca con il tasto destro del mouse sulla voce della tua chiave nel
+key manager e clicca su "Esporta chiavi..." per esportare la chiave
+pubblica in un file e/o "Invia chiavi..." per caricare la chiave su un
+keyserver.
+
+Potete portare il file chiave con voi o inviarlo a chiunque vogliate.
+Questo file non è affatto segreto. Se vuoi usare la Nitrokey su un
+altro sistema, devi prima importare questa chiave pubblica cliccando
+su "Keys" -> "Importing Keys..." e scegliendo il file.
+
+Se non vuoi portare con te un keyfile pubblico, puoi caricarlo su
+keyserver. Se stai usando un'altra macchina puoi semplicemente
+importarlo usando "Server" -> "Retrieve Keys..." e inserendo il tuo
+nome o l'id della chiave.
+
+Un'altra possibilità è quella di cambiare l'impostazione dell'URL
+sulla tua scheda. Apri di nuovo il card manager e inserisci l'URL dove
+si trova la chiave (per esempio sul keyserver o sulla tua pagina web
+ecc.). D'ora in poi puoi importare la chiave su un altro sistema
+cliccando con il tasto destro sull'URL e cliccando su "Fetch Key".
+

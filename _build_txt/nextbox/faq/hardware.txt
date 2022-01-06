@@ -1,0 +1,126 @@
+FAQ sull'hardware
+
+Q:
+
+ Perché non devo collegare al mio NextBox degli hard-drive esterni
+senza un'alimentazione esterna?
+   Il Raspberry Pi 4 Model B può fornire solo 1.2A di potenza tramite
+   USB (vedi
+
+   RPi Power Supply
+
+   ). L'hard-drive interno è già collegato e alimentato via USB e tira
+   ~1.0A. Quindi collegare un altro hard-drive senza un'alimentazione
+   esterna può portare ad un'alimentazione inaffidabile per l'hard-
+   drive interno, quindi ad una potenziale perdita di dati.
+
+Q:
+
+ Dove posso trovare un hard-drive esterno con un proprio alimentatore?
+   I fattori di forma più piccoli (2.5'' e più piccoli) per gli hard-
+   drive esterni vengono per lo più senza un'alimentazione
+   addizionale. Per questi,
+
+   un hub USB con un'alimentazione addizionale può essere considerato
+   l'"alimentazione esterna"
+
+    per l'hard-drive. Anche se quest'ultimo non è sicuro al 100% per
+   gli hub USB alimentati, quindi raccomandiamo gli hard-drive esterni
+   da 3.5'', che sono quasi sempre alimentati esternamente.
+
+Q:
+
+ Perché il mio dispositivo/ hub USB non funziona, se collegato a
+NextBox?
+   Ci sono alcuni dispositivi e soprattutto hub USB3 che sono noti per
+   non funzionare correttamente con il Raspberry PI 4B, si prega di
+   vedere questa
+
+   Documentazione USB
+
+    di Raspberry. Oltre a questo assicuratevi anche che il dispositivo
+   USB stia funzionando in generale collegandolo ad un altro computer
+   (caso migliore: Linux) e verificate che funzioni.
+
+Q:
+
+ Perché il mio hard-drive non appare dopo averlo collegato?
+   Assicurati di usare uno dei filesystem supportati (per esempio,
+   ext, xfs) e di aver montato il tuo hard-drive in
+
+   Storage Management
+
+   .
+
+Q:
+
+ Posso generalmente estendere il NextBox usando un hard-drive USB?
+   Sì, questo è possibile, assicurati di usare un hard-drive che abbia
+   un'alimentazione esterna. Una volta collegato, è possibile montare
+   l'hard-drive usando il NextBox
+
+   Storage Management
+
+    e includerlo nel Nextcloud file-management usando l'applicazione
+
+   External storage support
+
+   .
+
+Q:
+
+ Quali funzioni fornisce lo "scudo"aggiuntivo?
+   Per ora lo shield fornisce un
+
+   LED di stato
+
+   , un pulsante hardware per
+
+   ripristino di fabbrica
+
+    e un ulteriore connettore USB Type-C sullo stesso lato della porta
+   Ethernet per l'alimentazione esclusivamente.
+
+Q:
+
+ L'hardware di NextBox è estendibile/sostituibile?
+   Sì, tutti i componenti di NextBox possono essere facilmente
+   sostituiti. Nessuno dei componenti è incollato o in qualche modo
+   assemblato in modo permanente. Usando un cacciavite Phillips è
+   possibile smontare e rimontare NextBox facilmente. Tieni presente
+   che lo stai facendo a tuo rischio e pericolo.
+
+Q:
+
+ A cosa servono le due porte USB Type-C?
+   Entrambe le porte USB Type-C sono esclusivamente per
+   l'alimentazione e non possono essere utilizzate per il
+   trasferimento dei dati. Non collegare due alimentatori, si prega di
+   utilizzare solo uno dei due per alimentare il NextBox.
+
+Q:
+
+ Quale ventilatore dovrei installare?
+   Non c'è assolutamente bisogno di una ventola, il NextBox è
+   progettato per funzionare senza un raffreddamento attivo
+
+   . Anche se se il NextBox viene utilizzato per compiti aggiuntivi (è
+   ancora un Linux), abbiamo preparato un supporto per una ventola
+   30mm x 12mm a 5V collegata allo scudo. Maggiori dettagli
+   (connettore, pin utilizzati) possono essere presi da
+
+   NextBox' GitHub
+
+   . Attualmente
+
+   non
+
+    raccomandiamo di aggiungere una ventola poiché le uscite non sono
+   ancora controllate dal demone di NextBox, quindi anche questo è
+   qualcosa che dovreste fare da soli.
+
+Q:
+
+: Posso aggiornare la dimensione della RAM di NextBox?
+   No, il Raspberry PI 4B ha il componente RAM saldato sulla scheda
+   madre, quindi non può essere sostituito/esteso.

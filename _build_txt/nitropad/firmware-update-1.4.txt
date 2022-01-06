@@ -1,0 +1,113 @@
+Aggiornamento firmware v1.4+
+
+Devo aggiornare il mio NitroPad?
+
+Come posso aggiornare il mio NitroPad?
+
+Come posso aggiornare a -massimizzato?
+
+Informazioni di base
+
+A partire dalla v1.4 a causa di cambiamenti elementari all'interno di
+Heads e del layout del firmware, l'aggiornamento richiede alcune
+considerazioni aggiuntive. Questo vale per entrambi i NitroPad X230 e
+T430.
+
+Devo aggiornare il mio NitroPad?
+
+Quando si aggiorna il firmware alla 1.4 (senza usare un dispositivo
+esterno di flasher) i dialoghi grafici HEADS saranno sostituiti da una
+versione meno comoda di solo testo.
+
+Se usi Ubuntu, Debian, LinuxMint, o Qubes 4.0 aggiornare il firmware
+oltre la v1.3.1 non è (ad oggi) necessario. Se usi Qubes 4.1
+
+senza
+
+ la porta Ethernet integrata, non hai nemmeno bisogno di aggiornare il
+firmware.
+
+Se vuoi usare Qubes 4.1 o più recente
+
+e
+
+ la porta Ethernet integrata devi aggiornare il firmware alla 1.4.
+
+Come posso aggiornare il mio NitroPad?
+
+L'aggiornamento da "v1.3.1" in poi ha due modi diversi:
+
+   Aggiornamento legacy usando o nitropad-t430-v1.4.npf o
+   nitropad-x230-v1.4.npf dal menu Heads, vedi: Aggiornamento del
+   firmware
+
+   Quando si usa un dispositivo flasher esterno si possono usare le
+   immagini -maximized. Questo mantiene i dialoghi grafici HEADS
+   funzionanti. Leggi di seguito il flashing esterno.
+
+Avvertimento: Non provi mai ad aggiornare il vostro NitroPad usando
+  l'immagine *-massimizzata*, se non sapete esattamente che cosa state
+  facendo! Mattonerete il vostro NitroPad e può essere riparato
+  soltanto usando un flasher esterno!
+
+Come posso aggiornare a -massimizzato?
+
+Suggerimento: Raccomandiamo vivamente di NON FARE QUESTO DA SOLI,
+  finché non si sa esattamente cosa si sta facendo!Abbiamo un servizio
+  per fare questo aggiornamento sul tuo NitroPad, scrivi una e-mail a
+  "shop at nitrokey.com" insieme al tuo numero di ordine di vendita
+  (SOxxxxxx).
+
+La seguente procedura descrive approssimativamente come flashare il
+vostro NitroPad usando un flasher esterno - è intenzionalmente ad alto
+livello in quanto non raccomandiamo di fare questo processo da soli.
+Ma per il bene della completezza documentiamo questo qui per i
+curiosi.
+
+Assicurati di avere un (flashrom) flasher compatibile come ch341a_spi
+con un morsetto SOIC-8.
+
+Aprite il dispositivo (` vedi coreboot docs
+<https://doc.coreboot.org/mainboard/lenovo/Ivy_Bridge_series.html>`_)
+e assicuratevi di poter accedere a entrambi i chip flash.
+
+Usando flashrom leggete la flash bottom (l'immagine da 8MB)
+
+Usando ifdtool (coreboot ifdtool docs) estrarre la GbE flashregion
+dall'immagine e sostituire la GbE-all'interno della vostra -maximized
+immagine.
+
+Dividere l'immagine del firmware modificato usando dd (come descritto
+nella documentazione di coreboot) in -top e -bottom
+
+Flashate le immagini sui chip flash corrispondenti usando il vostro
+lampeggiatore e il morsetto
+
+Riavvia il tuo sistema (dovresti vedere -maximized dentro il menu
+Heads)
+
+Informazioni di base
+
+La nuova
+
+classe
+
+ di firmware delle immagini "-maximized" cambia il layout del firmware
+in un modo che è incompatibile con Heads' funzione interna di
+aggiornamento del firmware sui NitroPad.
+
+Questo cambiamento deriva principalmente da una riduzione delle
+dimensioni del
+
+Management Engine
+
+ all'interno dell'immagine del firmware. Inoltre le immagini
+"-maximized" contengono tutte le regioni flash all'interno del
+firmware, questo include anche "GbE", che contiene il MAC address
+Ethernet.
+
+Le immagini non "-maximized" non hanno differenze
+
+funzionali
+
+ rispetto alle immagini "-maximized" tranne la GUI ridotta di Heads.

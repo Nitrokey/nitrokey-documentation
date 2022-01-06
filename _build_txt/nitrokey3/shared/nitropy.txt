@@ -1,0 +1,106 @@
+Usare la Nitrokey 3 con la nitropia
+
+Installazione
+
+Elenco dei dispositivi Nitrokey 3
+
+Interrogazione delle informazioni sul dispositivo
+
+Lavorare con più dispositivi
+
+Risoluzione dei problemi
+
+"nitropy" può essere usato per elencare e gestire i dispositivi
+Nitrokey 3.
+
+Installazione
+
+Si prega di vedere il
+
+pynitrokey readme
+
+ per le istruzioni di installazione.
+
+Elenco dei dispositivi Nitrokey 3
+
+Usa "nitropy ls" o "nitropy nk3 list" per elencare tutti i dispositivi
+collegati:
+
+   $ nitropy ls
+   Nitrokey tool for Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 & NetHSM
+   :: 'Nitrokey FIDO2' keys
+   :: 'Nitrokey Start' keys:
+   :: 'Nitrokey 3' keys
+   /dev/hidraw3: Nitrokey 3
+
+   $ nitropy nk3 list
+   Nitrokey tool for Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 & NetHSM
+   :: 'Nitrokey 3' keys
+   /dev/hidraw3: Nitrokey 3
+
+Interrogazione delle informazioni sul dispositivo
+
+I seguenti comandi sono attualmente disponibili per interrogare le
+informazioni sul dispositivo:
+
+nitropy nk3 version: interroga la versione del firmware del
+dispositivo  $ nitropy nk3 version Nitrokey tool for Nitrokey FIDO2,
+Nitrokey Start, Nitrokey 3 & NetHSM v1.0.0
+
+Lavorare con più dispositivi
+
+Se sono collegati più dispositivi Nitrokey 3, potete usare l'opzione "
+--path" per selezionarne uno.  Per determinare il percorso di un
+dispositivo, usa il comando "nitropy ls" o "nitropy nk3 list".
+
+   $ nitropy nk3 version
+   Nitrokey tool for Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 & NetHSM
+   Error: Multiple Nitrokey 3 devices found -- use the --path option to select one
+
+   $ nitropy nk3 list
+   Nitrokey tool for Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 & NetHSM
+   :: 'Nitrokey 3' keys
+   /dev/hidraw4: Nitrokey 3 DD59A7F00CCB715DB515F83C346CA8AD
+   /dev/hidraw3: Nitrokey 3
+
+   $ nitropy nk3 --path /dev/hidraw3 version
+   Nitrokey tool for Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 & NetHSM
+   v1.0.0
+
+   $ nitropy nk3 --path /dev/hidraw4 version
+   Nitrokey tool for Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 & NetHSM
+   v1.0.1
+
+Risoluzione dei problemi
+
+Per diagnosticare problemi con il vostro dispositivo Nitrokey 3,
+potete usare il comando "nitropy nk3 test".  Esegue una serie di test
+per determinare lo stato del vostro dispositivo.
+
+Se i test hanno successo, viene stampato un riassunto dei passaggi:
+
+   $ nitropy nk3 test
+   Nitrokey tool for Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 & NetHSM
+   Found 1 Nitrokey 3 device(s):
+   - Nitrokey 3 at /dev/hidraw3
+
+   Running tests for Nitrokey 3 at /dev/hidraw3
+
+   [1/3]   UUID query                      SUCCESS         [not supported]
+   [2/3]   Firmware version query          SUCCESS         v1.0.0
+   Please press the touch button on the device ...
+   Please press the touch button on the device ...
+   [3/3]   FIDO2                           SUCCESS
+
+   3 tests, 3 successful, 0 skipped, 0 failed
+
+   Summary: 1 device(s) tested, 1 successful, 0 failed
+
+Se un test fallisce, il messaggio di errore contiene il percorso di un
+file di log con informazioni dettagliate.  Si prega di includere
+questo file di log nelle richieste di supporto.
+
+Se hai impostato un pin FIDO2 per il tuo dispositivo, devi usare
+l'opzione "--pin":
+
+   $ nitropy nk3 test --pin 1234

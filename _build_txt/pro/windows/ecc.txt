@@ -1,0 +1,228 @@
+Supporto per le curve ellittiche (ECC)
+
+(Nitrokey Pro 2 - Windows)
+
+RSA-2048 diventa sempre più insicuro
+
+Fondamenti di crittografia a curva ellittica
+
+Requisiti di sistema
+
+Generazione di chiavi su Nitrokey Storage 2 / Pro 2
+
+Curve disponibili
+
+Aggiornamento di GnuPG su Ubuntu
+
+RSA-2048 diventa sempre più insicuro
+
+Per ragioni di sicurezza, l'ufficio federale tedesco per la sicurezza
+delle informazioni (Bundesamt für Sicherheit in der
+Informationstechnik, BSI) non raccomanda più l'uso di chiavi RSA con
+una lunghezza di 2048 bit ` dopo il 2022 <
+
+https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/Tech
+Guidelines/TG02102/BSI-TR-02102-1.pdf?_blob=publicationFile&v=10
+
+>`_. Questo significa che chiavi più lunghe dovranno entrare in uso
+nel prossimo futuro. Assumendo un periodo di utilizzo di cinque anni,
+è già necessario generare chiavi più lunghe. Tuttavia, le chiavi RSA
+più lunghe con 3072 bit o 4096 bit sono significativamente più lente.
+Per questo motivo i nuovi Nitrokey Storage 2 e Pro 2 (ovvero la scheda
+OpenPGP integrata versione 3.3) supportano la crittografia tramite `
+crittografia a curva ellittica (ECC) <
+
+https://en.wikipedia.org/wiki/Elliptic-curve_cryptography
+
+>`_. Questo metodo è considerato altrettanto sicuro con chiavi ECC più
+piccole che con chiavi RSA più lunghe ed è anche considerevolmente più
+veloce.
+
+Fondamenti di crittografia a curva ellittica
+
+In contrasto con RSA, ci sono molte forme diverse (le cosiddette
+curve) di crittografia a curve ellittiche. In particolare, la
+
+NSA è stata coinvolta
+
+ nello sviluppo delle curve NIST. Anche se non ci sono prove di back
+doors nelle curve, usare una certa curva può porre una questione di
+fiducia. Fortunatamente i nuovi Nitrokey Storage 2 e Pro 2 supportano
+due tipi di curve, cioè NIST e Brainpool. In quello che segue useremo
+le curve Brainpool.
+
+Questo articolo
+
+ fornisce un buon punto di partenza per ottenere una comprensione
+generale della crittografia a curve ellittiche.
+
+Requisiti di sistema
+
+Per creare chiavi basate su curve ellittiche sono necessari Nitrokey
+Storage 2 / Pro 2 e GnuPG versione 2.1.17 o superiore.
+
+Potete leggere la versione della scheda OpenPGP di Nitrokey tramite
+"gpg2 —card-status":
+
+   > gpg2 --card-status
+   Reader ...........: 20A0:...
+   Application ID ...: D276...
+   Version ..........: 3.3
+   ...
+
+Il campo 'Version' rappresenta la versione della OpenPGP Card
+integrata nella Nitrokey - in questo caso è la 3.3, necessaria per la
+crittografia Elliptic-curve. La scheda OpenPGP versione 2.2 non
+supporta ECC.
+
+You can learn about the installed version of GnuPG via "gpg2
+--version". At least version 2.1.16 is required. The newest GnuPG
+version for Windows can be found
+
+here
+
+ and the newest version for MacOS can be found
+
+here
+
+. A suitable version of GnuPG is included in the GNU/Linux
+distributions Ubuntu (since 18.04), Debian (from Stretch onwards),
+Arch Linux, Fedora (from Release 26 onwards) and openSUSE Tumbleweed.
+At the end of this articles are instructions how to manually update
+GnuPG on older Ubuntu versions.
+
+Importante: GnuPG 2.0 è ancora in uso, ma il suo supporto è stato
+  interrotto nel 2017. Tutti i partner di comunicazione devono usare
+  GnuPG 2.1 o più recente per la crittografia delle email tramite ECC,
+  altrimenti potrebbero sorgere problemi di incompatibilità. Pertanto
+  dovreste usare ECC solo se siete sicuri di essere in grado di
+  aggirare questo problema.
+
+Generazione di chiavi su Nitrokey Storage 2 / Pro 2
+
+Una volta che questi requisiti sono soddisfatti, puoi iniziare.
+(Attenzione: le chiavi esistenti saranno sovrascritte durante il
+processo!) Ora hai due opzioni. La prima opzione è quella di creare la
+chiave direttamente sul Nitrokey Storage 2 / Pro 2. Il vantaggio è che
+la chiave non sarà mai fuori dal dispositivo e quindi non potrà mai
+essere letta. La seconda opzione è quella di importare una chiave
+precedentemente generata localmente. Il vantaggio in questo caso è che
+puoi memorizzare in modo sicuro un backup della chiave, che può poi
+essere ripristinato in caso di perdita della Nitrokey. Di seguito
+viene descritta solo la prima opzione. Per creare una chiave con
+backup, potete accedere alle
+
+seguenti istruzioni
+
+ e utilizzare queste ` informazioni generali <
+
+https://wiki.fsfe.org/TechDocs/CardHowtos/CardWithSubkeysUsingBackups
+
+>`_ per trasferire la chiave alla Nitrokey.
+
+In GnuPG c'è già un comando "genera", che può essere usato per creare
+facilmente chiavi sul dispositivo. Tuttavia non è ancora possibile
+selezionare direttamente il tipo di chiave, quindi la chiave deve
+essere prima preparata. Per questo si usano i seguenti comandi:
+
+   > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 1 19 brainpoolP256r1" /bye
+   > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 2 18 brainpoolP256r1" /bye
+   > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 3 19 brainpoolP256r1" /bye
+
+In alternativa, si potrebbero selezionare altre curve, come descritto
+nella prossima sezione.
+
+Ora inseriamo "gpg2 --card-edit" e vediamo che brainpoolP256r1 è sotto
+"key attributes" invece di rsa2048.
+
+   > gpg2 --card-edit
+   Reader ...........: 20A0:4109:0000000000000:0
+   Application ID ...: D276000124010303000500005F100000
+   Version ..........: 3.3
+   Manufacturer .....: ZeitControl
+   Serial number ....: 00005F10
+   Name of cardholder: [not set]
+   Language prefs ...: [not set]
+   Sex ..............: unspecified
+   URL of public key : [not set]
+   Login data .......: [not set]
+   Signature PIN ....: forced
+   Key attributes ...: brainpoolP256r1 brainpoolP256r1 brainpoolP256r1
+   Max. PIN lengths .: 64 64 64
+   PIN retry counter : 3 0 3
+   Signature counter : 0
+   Signature key ....: [none]
+   Encryption key....: [none]
+   Authentication key: [none]
+   General key info..: [none]
+
+Poi creiamo la chiave.
+
+   gpg/card> admin
+   Admin commands are allowed
+
+   gpg/card> generate
+   Make off-card backup of encryption key? (Y/n) n
+   Please note that the factory settings of the PINs are
+   PIN = '123456' Admin PIN = '12345678'
+   You should change them using the command --change-pin
+   Please specify how long the key should be valid.
+   0 = key does not expire
+   <n> = key expires in n days
+   <n>w = key expires in n weeks
+   <n>m = key expires in n months
+   <n>y = key expires in n years
+   Key is valid for? (0)
+   Key does not expire at all
+   Is this correct? (y/N) y
+   GnuPG needs to construct a user ID to identify your key.
+   Real name: Jane Doe
+   Email address: jane.doe@example.org
+   Comment:
+   You selected this USER-ID:
+   "Jane Doe <jane.doe@example.org>"
+   Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+   gpg: key 7F8C68E1B084E169 marked as ultimately trusted
+   gpg: revocation certificate stored as '/home/jane/.gnupg/openpgp-revocs.d/F8C00BC1636A7D7604A31A877F8C68E1B084E169.rev'
+   public and secret key created and signed.
+
+La Nitrokey ora incorpora la crittografia a curva ellittica invece
+delle chiavi RSA e può essere usata come al solito.
+
+Curve disponibili
+
+Nella procedura di cui sopra abbiamo scelto le curve Brainpool. In
+alternativa, si possono usare le curve NIST. La configurazione viene
+effettuata come segue:
+
+   > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 1 19 nistp256" /bye
+   > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 2 18 nistp256" /bye
+   > gpg-connect-agent "SCD SETATTR KEY-ATTR --force 3 19 nistp256" /bye
+
+Aggiornamento di GnuPG su Ubuntu
+
+I seguenti passi sono necessari solo se state usando una versione di
+Ubuntu precedente alla 18.04. Potete installare GnuPG 2.1.18 su tale
+sistema con i comandi che seguono. Questo comporta l'uso di pacchetti
+Debian più recenti, che è l'opzione più semplice. Questo approccio è
+stato testato con successo su Ubuntu 17.10 e probabilmente funziona
+anche su 16.04. Tuttavia, l'occorrenza di problemi durante l'uso non
+può essere esclusa.
+
+   $ mkdir gnupg_tmp
+   $ cd gnupg_tmp
+   $ wget http://ftp.debian.org/debian/pool/main/g/gnupg2/gnupg_2.1.18-8~deb9u1_amd64.deb
+   $ wget http://ftp.debian.org/debian/pool/main/g/gnupg2/dirmngr_2.1.18-8~deb9u1_amd64.deb
+   $ wget http://ftp.debian.org/debian/pool/main/g/gnupg2/gnupg-agent_2.1.18-8~deb9u1_amd64.deb
+   $ wget http://ftp.debian.org/debian/pool/main/g/gnupg2/scdaemon_2.1.18-8~deb9u1_amd64.deb
+   $ sudo dpkg -i *
+   $ cd ..
+   $ rm -rf gnupg_tmp
+
+Se volete annullare l'installazione, dovete eseguire i seguenti
+comandi:
+
+   $ sudo dpkg --remove --force-depends gnupg dirmngr gnupg-agent scdaemon
+     # (removes manually installed packages)
+   $ sudo apt-get install gnupg dirmngr gnupg-agent scdaemon
+     # (installs the appropriate packages from regular package repositories)

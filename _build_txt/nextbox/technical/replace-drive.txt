@@ -1,0 +1,150 @@
+Sostituire il disco rigido interno
+
+Prerequisiti
+
+Preparare il nuovo disco fisso
+
+Guida alla sostituzione
+
+Avvertimento: Si prega di farlo solo se si sa cosa si sta facendo.
+  Modificando il NextBox si annulla la garanzia almeno per l'hardware
+  del NextBox. Questi passaggi non sono generalmente coperti dal
+  supporto, si sta modificando il NextBox a proprio rischio e
+  pericolo!
+
+Prerequisiti
+
+Sistema operativo Linux(-like)
+
+2.5'' hard-drive con un'altezza massima di 15mm, la maggior parte sono
+7mm
+
+Un utente che può acquisire i diritti di root usando sudo
+
+I seguenti comandi devono essere disponibili: sudo, parted, mkfs.ext4,
+bash
+
+Almeno una comprensione di base su montaggio/smontaggio e shell-
+scripts (esecuzione)
+
+Cacciavite a croce
+
+Impostare l'accesso ssh sul tuo NextBox
+
+Avvertimento: Lo script che viene utilizzato acquisirà i diritti di
+  root per cancellare l'hard disk che gli passerete. >>**<<Fate molta
+  attenzione a passare il dispositivo corretto allo script, se passate
+  la vostra partizione di sistema, questo script distruggerà il vostro
+  sistema operativo in esecuzione!
+
+Suggerimento: Leggete i seguenti passi completamente e accuratamente
+
+  prima di eseguirli
+
+  , se non capite cosa significa un certo passo potrebbe essere
+  un'indicazione che non dovreste farlo da soli.
+
+Preparare il nuovo disco fisso
+
+Prendi il tuo nextbox.conf file dal tuo hard-disk originale usando
+ssh, si trova sul tuo NextBox dentro la /srv/nextbox directory
+
+Salva il tuo nextbox.conf sul tuo computer
+
+Prendi il seguente script: https://raw.githubusercontent.com/Nitrokey
+/nextbox/master/simple_prepare_harddrive.sh
+
+Rendere lo script eseguibile: chmod +x simple_prepare_harddrive.sh
+
+Collegare il nuovo hard-disk al computer
+
+Determinate il nome del vostro hard-disk (ad esempio, /dev/sdb) e
+assicuratevi che nessuna delle sue partizioni sia montata
+
+Avvertimento: Di nuovo: pensate almeno due volte al passo seguente.
+  Assicuratevi che vi state riferendo al dispositivo hard-drive
+  corretto (e NON ad una partizione, significa
+
+   "/dev/sdb1"
+
+  è sbagliato).
+
+   Lo script rifiuterà di fare l'operazione su "/dev/sda" poiché ci
+  sono buone probabilità che questo possa essere il vostro hard-disk
+  di sistema, se ne avete davvero bisogno potete commentare le linee
+  23-26 all'interno dello script.
+
+Eseguite lo script usando il nome del dispositivo che avete
+determinato. Una volta richiesta la tua password sudo, forniscila per
+permettere l'accesso r/w al disco rigido:
+
+   $ ./simple_prepare_harddrive.sh <device-name>
+
+   # example: ./simple_prepare_harddrive.sh /dev/sdb
+
+Guarda l'output dello script per eventuali errori, non ce ne
+dovrebbero essere
+
+Alla fine dello script ti verrà chiesto di montare la partizione
+creata e copiare il nextbox.conf (a /nextbox) che hai copiato nei
+passi 1. e 2., smonta la partizione e hai preparato con successo il
+tuo nuovo hard-drive.
+
+Guida alla sostituzione
+
+All'interno dell'App NextBox Nextcloud vai a "Impostazioni di sistema"
+e spegni il tuo NextBox usando il pulsante "Poweroff".
+
+Una volta che il LED di stato è brevemente spento (non completamente,
+quindi molto scuro) e i LED della porta Ethernet sono spenti, è
+possibile scollegare tutti i cavi dal NextBox
+
+Svitare tutte le 8 viti a croce
+
+Rimuovere con attenzione la copertura superiore (il più verticale
+possibile) prima
+
+Di nuovo con attenzione, rimuovere verticalmente il coperchio
+inferiore, ora si vede il cosiddetto ponte
+
+Dispiegare il cavo USB-SATA e mettere il ponte NextBox a testa in giù
+su una superficie adatta all'elettronica come una scrivania, come
+mostrato nella seguente immagine
+
+
+Svita le viti Phillips che tengono l'hard-disk in posizione (la
+quantità di viti può essere diversa, a seconda del tipo di hard-disk)
+mostrate nell'immagine seguente:
+
+
+Una volta rimosse le viti, spingete l'hard-disk con attenzione verso
+la direzione mostrata nell'immagine qui sopra. Non spingerlo verso
+l'altra direzione, potresti danneggiare il cavo USB.
+
+Rimuovere il cavo USB-SATA dal disco rigido
+
+Avvertimento: Evitare di scollegare il connettore USB maschio-
+  femmina per non cambiare la posizione e la piegatura del cavo. Se è
+  necessario: fate attenzione a mantenere la forza più piccola
+  possibile sulla parte a 90° del cavo di prolunga USB.
+
+Collegate il vostro nuovo hard-drive precedentemente preparato
+
+Fate scivolare con attenzione il vostro nuovo hard-drive nel ponte e
+fissatelo nella giusta posizione usando le viti rimosse in precedenza
+
+Piegare il cavo USB-SATA (in cerchio) nello spazio aperto dietro l
+'hard-disk.
+
+Infine, assemblate di nuovo il vostro NextBox in ordine inverso
+seguendo i passi da 5. a 3.
+
+Al primo avvio dopo l'assemblaggio, dare al NextBox abbastanza tempo
+per avviarsi e ottenere tutti i pacchetti necessari da internet.
+
+Assicurarsi di avere la connessione ethernet
+
+. Ci si dovrebbe aspettare un LED di stato che cambia (il giallo deve
+essere il primo) abbastanza velocemente (meno di 2 minuti). Se il LED
+di stato non cambia affatto, è probabile che ci sia qualcosa di
+sbagliato nel cablaggio o nel contenuto dell'hard disk.

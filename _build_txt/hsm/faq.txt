@@ -1,0 +1,143 @@
+Nitrokey HSM FAQ
+
+Q:
+
+ Quali sistemi operativi sono supportati?
+   Windows, Linux e Mac OS X.
+
+Q:
+
+ Per cosa posso usare la Nitrokey?
+   Vedere la
+
+   frontpage
+
+    per una panoramica dei casi d'uso supportati.
+
+Q:
+
+ Qual è la lunghezza massima del PIN?
+   Nitrokey usa i PIN invece delle password. La differenza principale
+   è che l'hardware limita la quantità di tentativi a tre mentre un
+   limite non esiste per le password. Per questo motivo, un PIN breve
+   è ancora sicuro e non è necessario scegliere un PIN lungo e
+   complesso.
+
+   I PIN di Nitrokey possono essere lunghi fino a 16 cifre e possono
+   essere composti da numeri, caratteri e caratteri speciali. Nota:
+   Quando si usa GnuPG o OpenSC, si possono usare PIN lunghi 32
+   caratteri ma non sono supportati da Nitrokey App.
+
+Q:
+
+ A cosa serve il PIN utente?
+   Il PIN è lungo almeno 6 cifre e serve per accedere al contenuto
+   della Nitrokey. Questo è il PIN che userete molto nell'uso
+   quotidiano
+
+   Il PIN può avere fino a 16 cifre e altri caratteri (per esempio
+   alfabetici e speciali). Ma siccome il PIN viene bloccato non appena
+   vengono fatti tre tentativi di PIN sbagliati, è sufficientemente
+   sicuro avere solo un PIN di 6 cifre.
+
+Q:
+
+ A cosa serve il PIN SO?
+   Il SO PIN è usato solo nel Nitrokey HSM ed è qualcosa come un
+   "master" PIN con proprietà speciali. Leggi attentamente queste
+   istruzioni per capire il SO PIN di Nitrokey HSM.
+
+   Il PIN SO deve essere esattamente di 16 cifre.
+
+Q:
+
+ Quanti oggetti di dati (DF, EF) possono essere memorizzati?
+   76 KB EEPROM totale, max. 150 x chiavi ECC-521, max. 300 x chiavi
+   ECC/AES-256, max. 19 chiavi RSA-4096, max. 38 x RSA-2048 chiavi
+
+Q:
+
+ Quante chiavi posso memorizzare?
+   Nitrokey HSM può memorizzare 20 coppie di chiavi RSA-2048 e 31
+   ECC-256.
+
+Q:
+
+ Quanto è veloce la crittografia e la firma?
+   Generazione di chiavi sulla scheda: RSA 2048: 2 al minuto
+
+   Generazione della chiave sulla scheda: ECC 256: 10 al minuto.
+
+   Creazione della firma con hash fuori scheda: RSA 2048; 100 al
+   minuto
+
+   Creazione della firma con hash fuori scheda: ECDSA 256: 360 al
+   minuto
+
+   Creazione della firma con on-card SHA-256 e 1 kb di dati: RSA 2048;
+   68 al minuto
+
+   Creazione della firma con SHA-256 sulla scheda e 1 kb di dati:
+   ECDSA 256: 125 al minuto
+
+Q:
+
+ Come posso distinguere un Nitrokey HSM1 da un Nitrokey HSM2?
+   Usate "opensc-tool --list-algorithms" e confrontate con la tabella
+   sottostante. Vedi anche ` questo thread`_ per le schede informative
+   e maggiori dettagli.
+
+Q:
+
+ Quali algoritmi e la lunghezza massima della chiave sono supportati?
+   Vedere la seguente tabella:
+
+              Iniziare  Pro + Storage  Pro 2 + Storage 2  HSM  HSM2
+rsa1024  ✓  ✓    ✓  ✓  rsa2048  ✓  ✓  ✓  ✓  ✓  rsa3072    ✓  ✓    ✓
+rsa4096    ✓  ✓    ✓  curva25519  ✓          NIST-P 192          ✓
+NIST-P 256  ✓    ✓    ✓  NIST-P 384-521      ✓    ✓  Brainpool 192
+✓  ✓  Brainpool 256-320      ✓  ✓  ✓  Brainpool 384-521      ✓    ✓
+secp192        ✓  ✓  secp256  ✓      ✓  ✓  secp521          ✓
+
+Q:
+
+ Quanto è buono il generatore di numeri casuali (RNG)?
+   Nitrokey HSM usa il TRNG di JCOP 2.4.1r3 che ha una qualità di
+   DRNG.2 (secondo AIS 31 del BSI).
+
+Q:
+
+ Quale API posso usare?
+   OpenSC: esistono istruzioni complete per il framework OpenSC. C'è
+   nitrotool come frontend più comodo per OpenSC.
+
+   Sistemi embedded: Per sistemi con un minimo ingombro di memoria, il
+   progetto sc-hsm-embedded fornisce un modulo PKCS#11 in sola
+   lettura.  Questo modulo PKCS#11 è utile per implementazioni in cui
+   non è richiesta la generazione di chiavi sul posto di lavoro
+   dell'utente. Il modulo PKCS#11 supporta anche le principali carte
+   di firma elettronica disponibili sul mercato tedesco.
+
+   OpenSCDP: La SmartCard-HSM è completamente integrata con OpenSCDP,
+   la piattaforma aperta di sviluppo di smart card. Vedi gli script di
+   supporto pubblici per i dettagli. Per importare chiavi esistenti
+   puoi usare il suo SCSH o NitroKeyWrapper.
+
+Q:
+
+ Nitrokey Pro è certificato Common Criteria o FIPS?
+   L'hardware e il sistema operativo del controllore di sicurezza sono
+   certificati Common Criteria (
+
+   Security Target
+
+   ;
+
+   HSM2 Report
+
+   ; Vedi
+
+   qui
+
+   , clicca "ICs, Smart Cards and Smart Card-Related Devices and
+   Systems" e cerca "NXP JCOP 3 P60").

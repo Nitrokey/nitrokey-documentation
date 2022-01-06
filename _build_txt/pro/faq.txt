@@ -1,0 +1,156 @@
+Nitrokey Pro 2 FAQ
+
+Q:
+
+ Quali sistemi operativi sono supportati?
+   Windows, Linux e Mac OS X.
+
+Q:
+
+ Per cosa posso usare la Nitrokey?
+   Vedere la
+
+   frontpage
+
+    per una panoramica dei casi d'uso supportati.
+
+Q:
+
+ Quali sono i PIN di default?
+   PIN utente: "123456"
+
+   PIN dell'amministratore: "12345678"
+
+   Raccomandiamo vivamente di cambiare questi PIN/password con valori
+   scelti dall'utente prima di usare la Nitrokey.
+
+Q:
+
+ Qual è la lunghezza massima del PIN?
+   Nitrokey usa i PIN invece delle password. La differenza principale
+   è che l'hardware limita la quantità di tentativi a tre mentre un
+   limite non esiste per le password. Per questo motivo, un PIN breve
+   è ancora sicuro e non è necessario scegliere un PIN lungo e
+   complesso.
+
+   I PIN di Nitrokey Storage possono essere lunghi fino a 20 cifre e
+   possono essere composti da numeri, caratteri e caratteri speciali.
+   Nota: Quando si usa GnuPG o OpenSC, si possono usare PIN lunghi 32
+   caratteri ma non sono supportati da Nitrokey App.
+
+Q:
+
+ A cosa serve il PIN utente?
+   Il PIN utente è lungo almeno 6 cifre e viene usato per accedere al
+   contenuto della Nitrokey. Questo è il PIN che userai molto nell'uso
+   quotidiano, ad esempio per decriptare i messaggi, per sbloccare il
+   tuo storage criptato (solo NK Storage) ecc.
+
+   Il PIN utente può avere fino a 20 cifre e altri caratteri (per
+   esempio alfabetici e speciali). Ma dato che il PIN utente viene
+   bloccato non appena vengono fatti tre tentativi di PIN errati, è
+   sufficientemente sicuro avere solo un PIN di 6 cifre. Il PIN di
+   default è 123456.
+
+Q:
+
+ A cosa serve il PIN dell'amministratore?
+   Il PIN di amministrazione è lungo almeno 8 cifre e serve per
+   cambiare i contenuti/impostazioni di Nitrokey. Questo significa che
+   dopo aver inizializzato la Nitrokey probabilmente non avrete
+   bisogno di questo PIN troppo spesso (ad esempio se volete
+   aggiungere un'altra password alla cassaforte di Nitrokey Pro o
+   Nitrokey Storage).
+
+   Il PIN amministrativo può avere fino a 20 cifre e altri caratteri
+   (per esempio alfabetici e speciali). Ma dato che il PIN
+   amministrativo viene bloccato non appena vengono fatti tre
+   tentativi di PIN errati, è sufficientemente sicuro avere solo 8
+   cifre di PIN. Il PIN di default è 12345678.
+
+Q:
+
+ Perché il mio Nitrokey Pro si blocca quando si passa da nitrokey-app
+a GnuPG?
+   GnuPG e nitrokey-app a volte tendono a darsi la mano. Questo è un
+   problema noto e può essere risolto reinserendo la Nitrokey nello
+   slot USB.
+
+Q:
+
+ Quali driver/strumenti possono essere utilizzati?
+   GnuPG è necessario per molti casi d'uso. È uno strumento a riga di
+   comando, ma di solito non è necessario invocarlo direttamente, ma
+   utilizzare un'altra applicazione con interfaccia utente.
+
+   Non usate GnuPG in parallelo con OpenSC o un altro driver PKCS#11
+   perché entrambi potrebbero interferire e potrebbero verificarsi
+   problemi inaspettati.
+
+   Installare GPG4Win che contiene Gnu Privacy Assistant (GPA) e GnuPG
+   (GPG). Avviate Gnu Privacy Assistant (GPA) o un'altra applicazione
+   come il vostro client di posta elettronica per usare GnuPG. Gli
+   utenti avanzati possono usare GnuPG direttamente (linea di
+   comando). Nota: la smart card Fellowship è simile alla Nitrokey
+   Pro, quindi queste istruzioni funzionano anche con Nitrokey. In
+   generale si raccomanda la documentazione ufficiale.
+
+Q:
+
+ Quanto è veloce la crittografia e la firma?
+   Crittografia di 50kiB di dati: * 256 bit AES, 2048 byte per comando
+   -> 880 byte al secondo * 128 bit AES, 2048 byte per comando -> 893
+   byte al secondo * 256 bit AES, 240 byte per comando -> 910 byte al
+   secondo * 128 bit AES, 240 byte per comando -> 930 byte al secondo
+
+Q:
+
+ Quali algoritmi e la lunghezza massima della chiave sono supportati?
+   Vedere la seguente tabella:
+
+              Iniziare  Pro + Storage  Pro 2 + Storage 2  HSM  HSM2
+rsa1024  ✓  ✓    ✓  ✓  rsa2048  ✓  ✓  ✓  ✓  ✓  rsa3072    ✓  ✓    ✓
+rsa4096    ✓  ✓    ✓  curva25519  ✓          NIST-P 192          ✓
+NIST-P 256  ✓    ✓    ✓  NIST-P 384-521      ✓    ✓  Brainpool 192
+✓  ✓  Brainpool 256-320      ✓  ✓  ✓  Brainpool 384-521      ✓    ✓
+secp192        ✓  ✓  secp256  ✓      ✓  ✓  secp521          ✓
+
+Q:
+
+ La Nitrokey Pro contiene un chip sicuro o solo un normale
+microcontrollore?
+   Nitrokey Pro contiene una smart card resistente alle manomissioni.
+
+Q:
+
+ Nitrokey Pro è certificato Common Criteria o FIPS?
+   L'hardware del controllore di sicurezza è certificato Common
+   Criteria (
+
+   Report
+
+   ; Vedere
+
+   qui
+
+   , cliccare "ICs, Smart Cards and Smart Card-Related Devices and
+   Systems" e cercare "NXP Smart Card Controller P5CD081V1A e le sue
+   principali configurazioni P5CC081V1A, P5CN081V1A, P5CD041V1A,
+   P5CD021V1A e P5CD016V1A ciascuna con IC dedicato Software").
+
+Q:
+
+ Quanto è buono il generatore di numeri casuali (RNG)?
+   Nitrokey Pro e Nitrokey Storage utilizzano un True Random Number
+   Generator (TRNG) per generare le chiavi sul dispositivo. L'entropia
+   generata dal TRNG viene utilizzata per l'intera lunghezza della
+   chiave. Pertanto il TRNG è conforme a BSI TR-03116.
+
+   Il TRNG fornisce circa 40 kbit/s.
+
+Q:
+
+ Quanto è grande la capacità di stoccaggio?
+   Nitrokey Pro non contiene capacità di memorizzazione di dati
+   ordinari (può solo memorizzare chiavi crittografiche e
+   certificati).

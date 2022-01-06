@@ -1,0 +1,76 @@
+Nitrokey Reset
+
+(Nitrokey FIDO2 - Windows)
+
+Windows 10
+
+Vecchie versioni di Windows 10
+
+Windows 10 su una macchina virtuale
+
+Altri modi per resettare
+
+L'operazione di reset di fabbrica rigenera il materiale segreto
+memorizzato sulla Nitrokey FIDO U2F / Nitrokey FIDO2, il che la rende
+una chiave logica completamente nuova. Il nuovo proprietario non può
+usarla per accedere all'account del precedente. Nel caso delle FIDO2
+Resident Keys il materiale viene cancellato.
+
+Per evitare il reset accidentale e malevolo della Nitrokey, il tempo
+di conferma del tocco richiesto per l'operazione di reset di FIDO2 è
+più lungo e con un comportamento del LED distinto (luce rossa del LED)
+rispetto alle normali operazioni. Per resettare la Nitrokey FIDO2,
+conferma toccando il pulsante a sfioramento per almeno 5 secondi fino
+all'accensione del LED verde o blu.
+
+Windows 10
+
+Assicurati di usare Windows 10 almeno la versione 2004. Segui la
+procedura guidata di ripristino di Windows.
+
+Se il tempo totale impiegato per l'esecuzione sarà superiore a 10
+secondi, l'interfaccia utente del sistema operativo Windows segnalerà
+il fallimento. L'operazione di reset viene eseguita sulla Nitrokey
+anche dopo che quest'ultima è stata segnalata come fallita, a patto
+che il tocco dell'utente venga registrato prima del timeout
+dell'operazione interna della Nitrokey (la conferma del tocco viene
+mostrata con il colore blu).
+
+Vecchie versioni di Windows 10
+
+In Windows 10 versione 1909 o precedente, la Nitrokey deve essere
+reinserita prima di eseguire l'operazione di reset. L'operazione di
+reset deve essere confermata toccando due volte il pulsante a
+sfioramento.
+
+Scenario dettagliato:
+
+Reinserire la Nitrokey prima di eseguire l'operazione di reset
+
+Avviare l'operazione di reset nell'interfaccia utente
+
+Quando il LED lampeggia in bianco, toccare il pulsante a sfioramento
+per 1 secondo finché non diventa verde.
+
+Rilasciare il tocco
+
+Quando il LED lampeggia in rosso, toccare il pulsante a sfioramento
+per 5 secondi finché non diventa blu.
+
+Windows 10 su una macchina virtuale
+
+Tenete presente che Nitrokey ha un timeout interno per accettare
+l'operazione di reset FIDO di 10 secondi dall'accensione. Se la
+Nitrokey si connetterà ad una macchina virtuale più tardi di questo,
+restituirà un errore e l'operazione sarà interrotta.
+
+Altri modi per resettare
+
+Nitrokey FIDO2 potrebbe essere resettato da:
+
+strumento pynitrokey: nitropy fido2 reset (richiede diritti di
+amministratore per essere eseguito)
+
+Google Chrome (non disponibile su Windows): Gestisci chiavi di
+sicurezza - link diretto (solo per Chrome):
+chrome://settings/securityKeys.

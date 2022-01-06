@@ -1,0 +1,25 @@
+Nitrokey Reset
+
+(Nitrokey 3 - macOS)
+
+L'operazione di reset di fabbrica rigenera il materiale segreto
+memorizzato sulla Nitrokey FIDO U2F / Nitrokey FIDO2, il che la rende
+una chiave logica completamente nuova. Il nuovo proprietario non può
+usarla per accedere all'account del precedente. Nel caso delle FIDO2
+Resident Keys il materiale viene cancellato.
+
+Per evitare il reset accidentale e malevolo della Nitrokey, il tempo
+di conferma del tocco richiesto per l'operazione di reset di FIDO2 è
+più lungo e con un comportamento del LED distinto (luce rossa del LED)
+rispetto alle normali operazioni. Per resettare la Nitrokey FIDO2,
+conferma toccando il pulsante a sfioramento per almeno 5 secondi fino
+all'accensione del LED verde o blu.
+
+Nitrokey FIDO2 potrebbe essere resettato da:
+
+strumento pynitrokey: nitropy fido2 reset (richiede diritti di
+amministratore per essere eseguito)
+
+Google Chrome (non disponibile su Windows): Gestisci chiavi di
+sicurezza - link diretto (solo per Chrome):
+chrome://settings/securityKeys.

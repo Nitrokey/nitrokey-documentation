@@ -1,0 +1,133 @@
+Impostazione DNS dinamico
+
+DNS dinamico guidato
+
+DNS dinamico personalizzato
+
+Abilita TLS
+
+>>**<<Ci sono due modi per configurare un provider DNS dinamico da
+utilizzare e aggiornare dalla sua istanza NextBox.
+
+In contrasto con il metodo di accesso remoto
+
+backwards proxy
+
+, questo approccio assicurerà una crittografia completa end-to-end
+utilizzando il proprio certificato TLS acquistato da
+
+Let's Encrypt
+
+.
+
+DNS dinamico guidato
+
+La configurazione guidata registrerà per te un account su
+
+desec.io
+
+. Seguire questi passi per configurare il NextBox utilizzando il
+metodo Dynamic DNS guidato:
+
+Nel primo passo è necessario fornire un indirizzo e-mail e il dominio
+che si desidera registrare.  Assicurati di avere accesso a questo
+account e-mail e che il dominio finisca con .dedyn.io. Puoi continuare
+al passo successivo registrandoti a `desec.io`_ o senza (per esempio,
+se hai già registrato questo dominio prima).
+
+Dopo la registrazione a desec.io riceverai una e-mail di verifica, che
+ti guiderà attraverso il processo di registrazione a desec.io. Una
+volta completato, ti verrà presentato un token segreto, che è
+necessario nella fase due.
+
+Suggerimento: Se non ricevi un'e-mail di verifica prova
+
+  reset password
+
+   (usando lo stesso indirizzo e-mail) su
+
+  desec.io
+
+   per impostare una password, che ti permetterà di accedere al tuo
+  account.
+
+Nel secondo passo il token segreto appena acquisito deve essere
+inserito nel campo di input per completare la configurazione dinamica
+guidata dei dns.
+
+Suggerimento: Il tuo token ti sarà presentato solo una volta (dopo
+  il processo di verifica).  Se hai bisogno di un nuovo token, devi
+  crearne uno nuovo all'interno del
+
+  token management
+
+   all'interno delle impostazioni del tuo
+
+  desec.io
+
+   account.
+
+Una volta che il 2° passo è completato potete continuare
+all'attivazione di TLS - vedi sotto...
+
+DNS dinamico personalizzato
+
+Per aggiornare il tuo provider DNS dinamico con i tuoi IP attualmente
+utilizzati, NextBox utilizza
+
+ddclient
+
+, che può essere configurato direttamente qui o tramite il metodo
+
+Guided DNS
+
+ descritto prima.
+
+In questa configurazione è necessario fornire il
+
+dominio
+
+ che questa configurazione sta abilitando e il contenuto del
+*ddclient.conf* usato da
+
+ddclient
+
+. Vari esempi possono essere trovati nella
+
+documentazione ufficiale
+
+, quello usato per la configurazione guidata del DNS usa il seguente
+modello:
+
+   daemon=300
+   protocol=dyndns2
+   use=cmd, cmd='curl https://checkipv4.dedyn.io'
+   ssl=yes
+   server=update.dedyn.io
+   login=[domain]
+   password='[token]'
+   [domain]
+
+Una volta che hai agito questa configurazione, puoi Continuare
+l'attivazione di TLS - vedi sotto
+
+Abilita TLS
+
+In questa pagina, attendere prima che le barre di stato si assestino e
+soprattutto assicurarsi che la
+
+raggiungibilità
+
+ del proprio NextBox sia testata con successo. Se questo è il caso,
+basta cliccare su
+
+Enable TLS
+
+ per acquisire il tuo certificato TLS.
+
+Nota: Se il test di raggiungibilità fallisce, assicuratevi che il
+  vostro
+
+  port forwarding
+
+   sia configurato correttamente.

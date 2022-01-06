@@ -1,0 +1,115 @@
+FAQ sull'accesso remoto
+
+Q:
+
+ Qual è l'URL corretto di WebDAV?
+   L'URL completo da usare per WebDAV è:
+   "https://my.domain.tld/remote.php/webdav/", ci sono stati rapporti
+   che per il WebDAV nativo di Windows potrebbe essere necessario:
+   "https://my.domain.tld/remote.php/dav/files/USERNAME" con
+
+   USERNAME
+
+    che è il nome utente che vorresti usare.
+
+Q:
+
+ Posso accedere alla mia istanza Nextcloud usando WebDAV?
+   Sì, si prega di vedere ` la documentazione WebDAV di Nextcloud`_
+   per una panoramica completa. Un semplice montaggio per sistemi
+   unix-like potrebbe assomigliare a questo: "mount -t davfs
+   https://my.domain.tld/remote.php/webdav/ /mnt/target/path"
+   assicurandosi che il pacchetto "davfs2" sia installato. Per Windows
+   leggete anche questi
+
+   docs
+
+   .
+
+Q:
+
+: Perché il browser del mio smartphone Android non si apre:
+"http://nextbox.local"
+   Ad oggi la tecnologia necessaria per utilizzare gli URL ".local"
+   non è supportata da vari browser (stock) Android. Il meccanismo è
+   basato su "mDNS". Un possibile workaround è quello di utilizzare
+   un'applicazione di terze parti come BonjourBrowser per scoprire
+   tutti i servizi mDNS nella vostra rete.
+
+Q:
+
+: Perché l'accesso al mio NextBox usando: "http://nextbox.local" non
+funziona?
+   Ci sono diverse altre ragioni per cui l'accesso usando
+   "http://nextbox.local" potrebbe non funzionare, altri scenari
+   conosciuti sono:
+
+   Utilizzando un Fritz!Box con il NextBox collegato tramite una porta
+   LAN e il client/browser collegato alla rete tramite WiFI (WLAN), il
+   Fritz!Box bloccherà mDNS.
+
+Q:
+
+: Ho seguito tutte le guide e ancora non riesco ad acquisire il
+certificato TLS, cosa posso fare?
+   La ragione per cui un certificato TLS non può essere acquisito è
+   quasi sempre il fatto che il tuo NextBox non è raggiungibile da
+   internet. Assicurati di aver seguito il
+
+   Guida all'accesso remoto
+
+   . Se hai seguito le istruzioni passo dopo passo e ancora non
+   funziona, molto probabilmente qualcosa sta bloccando la
+   connessione, i candidati tipici sono le funzioni di amministrazione
+   web del router come: "MyFritz!", "Fritz Web Services" o servizi
+   simili, che sono in esecuzione sul vostro router e quindi bloccano
+   il traffico sulle porte 80 e/o 443. Spegneteli e riprovate ad
+   acquisire il vostro certificato TLS.
+
+Q:
+
+ Perché la mia raggiungibilità con IPv4 non funziona?
+   Se avete impostato correttamente
+
+   port forwarding
+
+    e le connessioni IPv4 (test di raggiungibilità) non funzionano
+   ancora ci sono buone possibilità che il vostro Internet-Service-
+   Provider (ISP) non vi fornisca un indirizzo IPv4 adeguato
+   (pubblico). Ci sono diverse tecnologie internet (clienti finali)
+   che non permettono il traffico in entrata per l'IPv4 che ti è stato
+   assegnato. Una lista incompleta è:
+
+   indirizzo IPv4 privato
+
+   ,
+
+   connessione DS-Lite
+
+    o
+
+   CarrierGrade-NAT (CG-NAT)
+
+   . Tutti questi essenzialmente condividono un indirizzo IPv4 tra più
+   utenti, bloccando così il traffico (in entrata) da internet verso
+   di te. Alcuni ISP permettono di passare alle cosiddette
+
+   connessioni full-stack
+
+   , che dovrebbero permettere un traffico bidirezionale completo per
+   IPv4 e IPv6.
+
+Q:
+
+ Perché alcuni dispositivi non riescono a connettersi al mio NextBox
+configurato con IPv6?
+   Purtroppo, non tutti gli ISP e i fornitori di reti mobili
+   (smartphone) hanno ancora il pieno supporto IPv6 attivato. Ciò
+   significa che se il tuo NextBox è configurato per l'accesso solo
+   IPv6, i dispositivi all'interno di queste reti non saranno in grado
+   di connettersi. Il
+
+   backwards-proxy funziona come un workaround qui
+
+   , in quanto fornisce un entrypoint IPv4 al tuo NextBox
+   indipendentemente dalla tua altra configurazione di accesso remoto.

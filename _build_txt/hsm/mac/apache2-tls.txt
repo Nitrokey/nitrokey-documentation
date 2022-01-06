@@ -1,0 +1,102 @@
+Impostazione TLS con Apache2
+
+(Nitrokey HSM 2 - macOS)
+
+Preparazione
+
+Configurare Apache2 per utilizzare una chiave di sicurezza
+
+Fornire il PIN durante l'avvio di Apache2
+
+Esempio di configurazione completa di Apache2
+
+Suggerimento: Lo stesso concetto descritto qui può essere usato per
+  molte applicazioni che usano openssl come crypto-backend. Il
+  concetto si riduce principalmente a: sostituire il file chiave
+  (segreto) con un URL PKCS#11 che fa riferimento a una chiave su un
+  token di sicurezza (Nitrokey)
+
+Preparazione
+
+assicurarsi che la versione di apache2 sia almeno 2.4.42 per un
+corretto mod_ssl supporto
+
+attivare mod_ssl usando a2enmod ssl, se non è già stato fatto
+
+inoltre openssl è necessario e libengine-pkcs11-openssl vedi PKCS#11
+URL
+
+Configurare Apache2 per utilizzare una chiave di sicurezza
+
+Fondamentalmente l'unica cosa da fare è sostituire
+"SSLCertificateFile" con il corretto URL PKCS#11 ed eliminare
+qualsiasi altro riferimento a chiavi o certificati. Per esempio,
+"SSLCertificateKeyFile" non è più necessario.
+
+Una direttiva di esempio potrebbe essere come questa:
+
+   SSLCertificateFile   "pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0123123;token=UserPIN%20%28SmartCard-HSM%29;id%01"
+
+Il corretto URL PKCS#11 può essere estratto come documentato in
+
+PKCS#11 URL Generation
+
+Assicuratevi di mettere la direttiva all'interno di una configurazione
+*VirtualHost*.
+
+Fornire il PIN durante l'avvio di Apache2
+
+Usando il metodo precedentemente descritto Apache2 chiederà ad ogni
+avvio il PIN utente, quindi in pratica rifiutando l'avvio in batch.
+Apache2 fornisce un'altra direttiva per fornire il PIN durante
+l'avvio.
+
+   SSLPassPhraseDialog     "|/bin/echo 123456"
+
+Apache2 si aspetta un eseguibile dopo "|", che sarà eseguito durante
+l'avvio e il suo output (la newline finale è attesa) sarà usato come
+PIN. Ovviamente possono essere implementati metodi arbitrari e
+complessi per il recupero del PIN usando questo approccio. Anche se
+qui è stato scelto un esempio banale per ottenere solo "echo" il PIN
+durante l'avvio.
+
+Inoltre "SSLPassPhraseDialog" è una direttiva globale, quindi deve
+essere messa nello scope di configurazione globale in Apache2.
+
+Avvertimento: Questo esempio mostrato non è un meccanismo sicuro per
+  passare il tuo PIN, poiché sarà scritto in chiaro all'interno della
+  tua configurazione
+
+Vedere la ` documentazione di Apache2 mod_ssl`_ per maggiori dettagli
+su questa caratteristica.
+
+Esempio di configurazione completa di Apache2
+
+Un frammento completo di configurazione di Apache2 ("VirtualHost")
+potrebbe essere come questo:
+
+   <IfModule mod_ssl.c>
+     SSLPassPhraseDialog     "|/bin/echo 123456"
+     <VirtualHost _default_:443>
+        ServerAdmin webmaster@localhost
+
+        DocumentRoot /var/www/html
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        SSLEngine on
+
+        SSLCertificateFile      "pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0105076;token=UserPIN%20%28SmartCard-HSM%29"
+
+        #SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+
+        <FilesMatch "\.(cgi|shtml|phtml|php)$">
+                        SSLOptions +StdEnvVars
+        </FilesMatch>
+        <Directory /usr/lib/cgi-bin>
+                        SSLOptions +StdEnvVars
+        </Directory>
+
+     </VirtualHost>
+   </IfModule>

@@ -1,0 +1,89 @@
+Windows Logon e crittografia e-mail S/MIME con Active Directory
+
+(Nitrokey Pro 2 - Windows)
+
+Prerequisiti
+
+Installazione di OpenPGP-CSP
+
+Creare un modello di certificato sul lato server
+
+Richiesta di certificato sul client (membro del dominio)
+
+Si prega di notare che questo driver è ancora in fase di
+sviluppo/testing. Per favore, diteci le vostre esperienze! Vedi la
+nostra ` pagina dei contatti <
+
+https://www.nitrokey.com/contact
+
+>`_.
+
+Prerequisiti
+
+Questa guida presuppone che un server Active Directory con il ruolo
+'Active Directory Certificate Services' sia installato e funzionante
+su un server. Queste istruzioni sono basate solo su Nitrokey Storage 2
+e Nitrokey Pro 2.
+
+Installazione di OpenPGP-CSP
+
+Questo passo è necessario affinché i client utilizzino il driver
+OpenPGP-CSP. Scaricare e installare la versione ` più recente <
+
+https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3
+
+>`_ del file di installazione 'SetupOpenPGPCsp' per la vostra
+architettura di sistema, per 'SetupOpenPGPCsp_x64.msi' per sistemi a
+64 bit.
+
+Potresti voler installare il driver anche sul server per essere in
+grado di imporre l'uso di questo driver nel modello (vedi sotto).
+
+Creare un modello di certificato sul lato server
+
+Su Active Directory Server aprite certsrv.msc per gestire i vostri
+modelli di certificato. Clicca con il tasto destro del mouse su
+"Certificate Templates" e scegli "Manage".
+
+
+Ora cliccate con il tasto destro sul modello 'Smartcard Logon' e
+cliccate su 'Duplica', per creare un nuovo modello sulla base di
+questo modello standard. Rinominare il modello in 'OpenPGP Card Logon
+and Email' o simile.
+
+
+Sotto 'Request Handling', puoi scegliere OpenPGP-CSP come unico
+Cryptography Service Provider (clicca sul pulsante etichettato
+'CSPs...'). Perché questo funzioni, devi installare il driver anche
+sul server e devi prima inserire una Nitrokey. Questo è opzionale.
+Puoi lasciare che l'utente scelga quale CSP usare.
+
+
+Per abilitare la crittografia e-mail S/MIME vai a 'Nome dell'oggetto'.
+Spunta la casella di controllo 'Nome e-mail' (nota: devi salvare gli
+indirizzi e-mail dei tuoi utenti nel campo corrispondente di Active
+Directory!)
+
+
+Poi vai a 'Estensioni', lì modifichi la linea guida delle applicazioni
+e aggiungi 'Secure Email'.
+
+
+Richiesta di certificato sul client (membro del dominio)
+
+Per richiedere un certificato per un membro del dominio, dovete aprire
+certmgr.msc. Fai clic destro sulla cartella 'Personal->Certificates' e
+clicca su 'All Tasks->Request New Certificate' e scegli il modello che
+hai creato sull'AD.
+
+
+Se non avete imposto l'uso di OpenPGP-CSP dovete sceglierlo qui ora.
+
+
+Poi scegliete lo slot di autenticazione per il certificato.
+
+Ora siete pronti ad accedere al computer con la Nitrokey al posto
+della vostra password e potete usare ` la crittografia/firma delle
+e-mail S/MIME <smime.html>`_ con la Nitrokey. Il driver deve essere
+installato su ogni computer su cui si vuole usare il certificato.
+

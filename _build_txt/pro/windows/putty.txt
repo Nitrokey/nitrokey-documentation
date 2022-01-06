@@ -1,0 +1,60 @@
+PuTTY
+
+(Nitrokey Pro 2 - Windows)
+
+Questo mini-howto presuppone che Nitrokey sia stato inizializzato e
+che contenga chiavi crittografiche.
+
+Richiesto sul lato client:
+
+PuTTY o una sua variante
+
+GPG4Win o pageant.exe con supporto Smartcard dal Dr. Peter Koch
+
+Opzionale: OpenPGP Minidriver
+
+1) Concorso
+
+avviare pageant.exe. Che questo è in esecuzione viene mostrato
+nell'area di notifica della barra delle applicazioni.
+
+
+Un doppio clic apre la vista delle chiavi correnti.
+
+
+Dopo aver inserito la chiave appare così.
+
+
+Se non viene visualizzato nulla qui, Pageant potrebbe dover essere
+riavviato o un'altra applicazione sta già usando la chiavetta. Un
+eventuale pgp-agent in esecuzione deve essere terminato! Ora abbiamo
+solo bisogno della chiave pubblica che vogliamo memorizzare nella
+configurazione ssh del server. Quindi premiamo CTRL mentre inseriamo
+la chiavetta…
+
+
+e poi visualizzare il Pageant-PublicKeys.txt.
+
+
+Ho cercato la voce ssh-rsa della chiave auth e ho aggiunto la linea
+sul server alle authorized_keys.
+
+2) PuTTY
+
+C'è sorprendentemente poco da dire su PuTTY stesso.
+
+
+"Attempt authentication using Pageant" deve essere impostato, che è
+comunque il default.
+
+Questo è tutto, appena ti connetti al server mentre il concorso è in
+corso e hai le chiavi, ti verrà chiesta la password della Crypto-Stick
+e potrai accedere.
+
+3) openpgp-minidriver (opzionale)
+
+Se siete infastiditi dal fatto che Windows segnala ogni volta che
+inserite la chiavetta che non è stato trovato alcun driver per
+"Smartcard", potete liberarvene. Basta installare la versione x86 o
+x64 del suddetto driver e la smartcard si presenta così:
+

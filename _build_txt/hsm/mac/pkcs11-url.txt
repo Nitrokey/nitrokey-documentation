@@ -1,0 +1,55 @@
+Generazione di URL PKCS#11
+
+(Nitrokey HSM 2 - macOS)
+
+Preparazione
+
+Elencare e generare URL PKCS#11
+
+Varie applicazioni usano openssl per gestire, ad esempio, i
+certificati TLS. Questo concetto permette per lo più di sostituire
+semplicemente un file-path (per il segreto) con un cosiddetto
+
+PKCS#11 URL
+
+ per usare un segreto da un, ad esempio, Nitrokey.
+
+Preparazione
+
+assicurarsi che openssl sia installato
+
+assicurarsi che openssl possa usare il motore PKCS#11 installando
+libengine-pkcs11-openssl
+
+installare opensc e gnutls-bin per gli strumenti necessari
+
+verifica che le chiavi e/o i certificati necessari siano disponibili
+sulla tua Nitrokey usando pkcs15-tool -D
+
+se volete usare chiavi/meccanismi ECC attraverso libengine-
+pkcs11-openssl, dovrete assicurarvi che la sua versione sia almeno
+0.4.10
+
+Elencare e generare URL PKCS#11
+
+Usate il seguente comando per ottenere una lista di token disponibili
+(Nitrokeys):
+
+   p11tool --list-tokens
+
+Scegliete l'URL token (Nitrokey) per cui volete generare token URL e
+usatelo in questo modo:
+
+   p11tool --list-all <token-url>
+
+   # example:
+   # p11tool --list-all "pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0123123;token=UserPIN%20%28SmartCard-HSM%29"
+
+Se si ispeziona la coda dell'URL si riconosce: "label", "id" e altri,
+questi possono essere parzialmente rimossi a patto che gli oggetti
+necessari possano essere identificati in modo univoco usando l'URL
+risultante, vedi
+
+TLS Apache2 Configuration
+
+ per un esempio usando solo "id".

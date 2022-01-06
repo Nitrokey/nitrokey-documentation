@@ -1,0 +1,30 @@
+NitroPC con Debian
+
+Come iniziare
+
+Utilizzo del WIFI (con chipset RTL8821ce)
+
+
+Come iniziare
+
+Durante l'avvio, il sistema vi chiederà di inserire la passphrase per
+decriptare il disco rigido. Inserisci la passphrase predefinita
+"PleaseChangeMe".
+
+Il sistema ha già un account utente impostato. Sceglietelo ed
+effettuate il login con la passphrase di default "PleaseChangeMe".
+Puoi continuare ad usare l'account utente esistente o crearne uno
+nuovo, come preferisci.
+
+Cambia la passphrase per la crittografia del disco aprendo un
+terminale ed esegui:
+
+   sudo cryptsetup luksChangeKey /dev/nvme0n1p3
+
+Utilizzo del WIFI (con chipset RTL8821ce)
+
+   sudo apt install bc module-assistant build-essential dkms git
+   sudo m-a prepare
+   git clone https://github.com/tomaspinho/rtl8821ce.git /tmp/rtl8821ce
+   cd /tmp/rtl8821ce
+   sudo ./dkms-install.sh

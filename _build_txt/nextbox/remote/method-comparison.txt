@@ -1,0 +1,103 @@
+Metodi a confronto per l'accesso (remoto)
+
+DNS-based
+
+Non criptato
+
+Nitrokey's Reverse Proxy
+
+DNS-based
+
+Suggerimento: Questo è chiaramente l'approccio migliore e più sicuro
+  e raccomandiamo di usare un metodo di accesso remoto basato su DNS
+  che includa il proprio certificato TLS per la migliore sicurezza.
+
+Questo denota l'approccio
+
+Impostazione DNS dinamico
+
+ e
+
+Configurazione statica del DNS
+
+.
+
+Chiaramente il metodo migliore, ma anche quello che richiede un po' di
+lavoro di configurazione sul vostro router internet.
+
+Ottieni il tuo proprio (sotto)dominio e un certificato TLS, quindi
+tutto il tuo traffico sarà sempre criptato end-to-end e manterrai il
+massimo livello di sicurezza per il tuo traffico.
+
+È necessario aprire le porte giuste sul tuo router internet, vedi qui
+
+Percorso dei dati: [NextBox] ⟷ [Router] ⟷ [Client]
+
+Pro: migliori prestazioni, massima sicurezza, crittografia completa
+end-to-end
+
+Contra: ha bisogno di DNS (dinamico), ha bisogno di configurazione sul
+tuo router internet
+
+Non criptato
+
+Avvertimento: Si consiglia vivamente di non utilizzare la
+  configurazione non criptata, se si prevede di rendere disponibile il
+  NextBox al di fuori della propria rete locale.
+
+semplice (http) usando o nextbox.local o il tuo IP locale (es:
+192.168.178.123)
+
+Generalmente una cattiva idea, questo non cifrerà i dati trasportati
+in alcun modo ed è utile solo in una configurazione in cui non si
+desidera l'accesso remoto al NextBox (avere traffico non cifrato
+all'interno della propria LAN potrebbe non essere un problema, a patto
+che si sappia cosa si sta facendo)
+
+Percorso dei dati: [NextBox] ⟷ [Router] ⟷ [Client]
+
+Pro: veloce, nessuna configurazione
+
+Contra: nessuna sicurezza del trasporto, nessun accesso remoto (o solo
+in chiaro)
+
+Inoltre, una volta impostato TLS e quindi un metodo basato su DNS, la
+connessione non criptata per il tuo NextBox sarà disabilitata, questo
+non è il caso del Reverse Proxy in quanto un problema con il proxy ti
+bloccherebbe dal tuo NextBox.
+
+Nitrokey's Reverse Proxy
+
+Questo si riferisce al metodo
+
+Accesso remoto con proxy all'indietro
+
+.
+
+Fornisce la crittografia di trasporto tra i tuoi clienti e il tuo
+NextBox.  Ma con l'inconveniente che non è crittografato End-To-End,
+significa che il traffico sarà decifrato al Proxy Server Nitrokey e
+passato avanti con un'altra crittografia. Così un server proxy
+compromesso potrebbe permettere l'accesso al vostro traffico al
+potenziale attaccante.
+
+Il server proxy è un collo di bottiglia e tutto il traffico deve
+passare attraverso il server proxy, anche se sei in una rete locale
+insieme al NextBox il traffico deve passare attraverso il server
+proxy.
+
+Percorso dati (client locale): [NextBox] ⟷ [Router]⟷ [Proxy Server] ⟷
+[Router] ⟷ [Client]
+
+Percorso dati (client remoto): [NextBox] ⟷ [Router]⟷ [Proxy Server] ⟷
+[Client]
+
+Pro: facile da configurare, buona sicurezza nel trasporto
+
+Contra: non strettamente crittografato end-to-end, potenzialmente
+lento (tutto il traffico attraverso il proxy)
+
+Suggerimento: Non end-to-end encrypted significa ancora che tutto il
+  tuo traffico è effettivamente criptato, ma all'interno del server
+  proxy, per essere inoltrato il traffico sarà decriptato una volta e
+  criptato di nuovo prima di essere passato al client o a NextBox

@@ -1,0 +1,212 @@
+Crittografia e-mail OpenPGP con Thunderbird
+
+(Nitrokey Pro 2 - macOS)
+
+Thunderbird 78.3 e più recente  Risoluzione dei problemi
+
+Thunderbird 77 e più vecchio  Installazione  Cambiare i PIN  Procedura
+Generazione di chiavi
+
+Thunderbird 78.3 e più recente
+
+Al momento il supporto 78 di Thunderbird per le email OpenPGP non è
+facile da configurare. Vedere ` la documentazione di Thunderbird <
+
+https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards
+
+>`_ per i dettagli. Qui c'è una
+
+guida tedesca completa
+
+.
+
+Risoluzione dei problemi
+
+Messaggio di errore: "The configured key ID '4BA0183FCBA844A7' cannot
+be found on your keyring"
+
+Assicurati che la chiave pubblica sia importata nel gestore di
+Thunderbird e
+
+L'ID della chiave non contiene spazi bianchi e consiste di 16
+caratteri dall'intervallo 0-9 A-F
+
+avete installato il software GPA o Kleopatra.
+
+Si prega di utilizzare Kleopatra o ` GPA <openpgp-keygen-gpa.html>`_
+software per gestire la smart card.
+
+Thunderbird 77 e più vecchio
+
+Installazione
+
+Installare il driver del dispositivo come descritto ` qui
+<https://www.nitrokey.com/documentation/installation>`_.
+
+Installare Thunderbird e l'add-on Enigmail.
+
+Cambiare i PIN
+
+Ci sono due PIN per la Nitrokey:
+
+Il PIN utente necessario per il lavoro quotidiano
+
+Il PIN amministratore è necessario per cambiare i tasti o altre
+impostazioni del dispositivo. Inoltre, la Nitrokey può essere
+sbloccata (per esempio, dopo 3 volte l'inserimento errato del PIN
+utente) per mezzo del PIN amministratore.
+
+Dopo aver ricevuto la Nitrokey, dovete immediatamente cambiare il PIN
+utente = "123456" e il PIN amministratore = "12345678".
+
+Procedura
+
+Inserisci la Nitrokey in una porta USB del tuo computer.
+
+Avviare Thunderbird.
+
+In Thunderbird, selezionare come mostrato nell'immagine seguente.
+"OpenPGP" → "Gestisci smart card"
+
+
+Nella finestra "Dettagli della SmartCard", seleziona "SmartCard →
+Modifica PIN"
+
+
+Seleziona "Cambia PIN". Questo è il tuo PIN utente che ti serve per il
+lavoro quotidiano. Inserisci il PIN attuale ("123456" per la consegna)
+e due volte il tuo nuovo PIN. Per questo PIN puoi usare i caratteri:
+a-z A-Z 0-9 / .;;:- !? () [] {}% +. Il PIN deve essere lungo almeno 6
+caratteri. Clicca su "OK".
+
+
+Ripetere la procedura per il PIN dell'amministratore. "SmartCard →
+Modifica PIN"
+
+
+Seleziona Change Admin PIN. Questo è il tuo PIN amministratore che ti
+serve solo raramente. Inserisci il PIN attuale ("12345678" per la
+consegna) e il nuovo PIN due volte. Per questo PIN, puoi usare i
+caratteri: a-z A-Z 0-9 / .;;:- !? () [] {}% +. Il PIN deve essere
+lungo almeno 8 caratteri. Clicca su "OK".
+
+
+Ora hai cambiato i PIN e dovresti continuare a generare le tue chiavi
+personali.
+
+Generazione di chiavi
+
+Per criptare i dati e le e-mail, si deve prima generare una coppia di
+chiavi composta da una chiave pubblica e una chiave privata. La
+cosiddetta chiave pubblica viene utilizzata per criptare i dati o le
+e-mail. Puoi distribuirla a tutti coloro con cui vuoi comunicare in
+modo sicuro (per esempio, pubblicandola pubblicamente sul tuo sito).
+La cosiddetta chiave privata serve a
+
+criptare i dati o i messaggi. Questa chiave non deve **mai
+
+ essere resa nota! Di solito, non hai nemmeno accesso diretto ad essa
+(vedi sotto), poiché è memorizzata in modo sicuro sulla Nitrokey.
+Usate la Nitrokey per creare entrambe le chiavi usando la seguente
+procedura:
+
+Inserisci la Nitrokey in una porta USB del tuo computer.
+AvviareThunderbird
+
+In Thunderbird, selezionare come mostrato nell'immagine seguente
+"OpenPGP" → "Manage Smart Card"
+
+Nella finestra "Dettagli SmartCard", seleziona "SmartCard" → "Genera
+chiave"
+
+Nella seguente finestra, seleziona il tuo indirizzo e-mail per il
+quale vuoi generare le chiavi. Verifica che l'indirizzo e-mail
+specificato in "User ID" sia corretto. Puoi anche specificare se una
+copia di backup della chiave privata deve essere memorizzata sul tuo
+computer.
+
+
+Se non crei una copia di backup, non hai alcuna possibilità di
+recuperare i tuoi dati criptati se la Nitrokey viene persa o
+danneggiata!
+
+
+Si raccomanda di conservare questo dispositivo di sicurezza. Selezioni
+"Salva la copia della chiave fuori dalla Smard Card". Poi inserisci la
+tua password personale per la copia di sicurezza sotto "Passphrase".
+Questa password non dovrebbe essere inferiore a 8 caratteri e dovrebbe
+contenere sia lettere maiuscole che minuscole e numeri. Puoi anche
+usare una frase lunga, ma evita la prosa o i testi noti. Inoltre,
+nessun nome o termine noto dovrebbe essere usato.
+
+Caratteri consentiti
+
+: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlaut ä,ü,ö,Ä,Ü,Ö o ß)
+
+Poor Password
+
+: qwerty123, ILoveSusi3, Password, Se puoi sognarlo, puoi farlo.
+
+Password forte
+
+: g(Ak?2Pn7Yn o Ki.stg2bLqzp%d o A dog with greeen Earz and fife legs
+(gli errori di ortografia aumentano la sicurezza)
+
+Non avete
+
+non
+
+ bisogno di questa password per il lavoro quotidiano. È necessaria
+solo per il ripristino della chiave segreta, ad esempio se hai perso
+la Nitrokey. Pertanto, conserva la password in un luogo sicuro.
+
+Potete anche specificare se e quando la chiave deve essere
+automaticamente invalidata. Ciò significa che, da questo punto in poi,
+non si possono più criptare e-mail con questa chiave e si deve creare
+una nuova coppia di chiavi.
+
+Infine, clicca su "Genera coppia di chiavi".
+
+
+Ora ti viene chiesto se la chiave deve essere generata. Confermate con
+"Sì".
+
+
+Affinché il programma scriva le tue chiavi sulla chiavetta, devi
+inserire il PIN amministratore e il PIN utente (modificato sopra).
+
+
+La generazione della chiave può durare alcuni minuti. Non terminate
+prematuramente il programma!
+
+Quando la generazione della chiave è completa, si riceve il seguente
+messaggio. Ora viene creato un certificato che ti permette di
+invalidare la tua chiave in caso di emergenza. Questo certificato
+viene automaticamente salvato con la vostra chiave privata. Questo
+dovrebbe essere stampato o fatto un backup su almeno un altro supporto
+esterno in modo da poter revocare la validità delle chiavi se le
+chiavi e i backup vengono persi. Fare clic su "Sì".
+
+Ora puoi selezionare la directory in cui viene memorizzata la copia di
+backup. Questa copia è criptata con la tua password inserita sopra.
+Questo significa che nessuno può leggere o usare le chiavi senza la
+tua password. Non date la vostra password a nessuno. Questo file con
+il nome del tuo indirizzo e-mail e il suffisso ".asc" deve essere
+salvato su un altro supporto. Dopo aver selezionato la directory,
+clicca su "Salva".
+
+
+Qui devi di nuovo specificare il tuo PIN utente o la tua passphrase.
+Poi clicca su "OK".
+
+
+Ora vedrai il messaggio che il certificato è stato creato e salvato.
+Clicca su "OK".
+
+
+La generazione della chiave è ora completa. Ora puoi uscire dal
+programma (File - Close).
+
+
+La tua Nitrokey è personalizzata e pronta all'uso. >>**<<Divertiti con
+la crittografia sicura delle e-mail!

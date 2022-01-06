@@ -1,0 +1,133 @@
+Configurazione del client Viscosity con OpenVPN
+
+(Nitrokey Pro 2 - Windows)
+
+Prerequisiti
+
+Uso
+
+Riferimenti
+
+Note
+
+Questa guida mostra come configurare il ` client Viscosity <
+
+https://www.sparklabs.com/viscosity/
+
+>`_ per connettersi a un'istanza OpenVPN, utilizzando una
+
+Nitrokey Pro 2
+
+ (o
+
+Nitrokey Storage 2
+
+), e ` autenticazione PKCS#11 <
+
+https://openvpn.net/community-resources/how-to/#what-is-pkcs11
+
+>`_.
+
+Prerequisiti
+
+Per questa guida, avrete bisogno di un server remoto OpenVPN
+installato e configurato per i client. Per lo scopo di questo
+documento, abbiamo usato OpenVPN 2.49 installato su un server Debian
+10.
+
+Per leggere come configurare OpenVPN per autenticarsi con Nitrokey
+Pro, potresti consultare la seguente
+
+documentazione
+
+, poiché in questa guida tratteremo solo il modo di configurare il
+client Viscosity.
+
+Avrete anche bisogno di quanto segue:
+
+Un Nitrokey Pro 2 o Nitrokey Storage 2
+
+Chiave privata del cliente client.key caricata sulla Nitrokey
+
+Certificato del cliente client.crt caricato sulla Nitrokey
+
+Il file dell'Autorità di Certificazione, cioè CA.crt utilizzato per la
+tua configurazione OpenVPN
+
+Opzionale: Il file della chiave segreta condivisa, cioè ta.key
+
+Per maggiori informazioni sulla "PKCS#11" gestione delle chiavi con
+OpenVPN, consultare la
+
+documentazione di OpenVPN.
+
+Uso
+
+Avviate Viscosity e create una nuova connessione "openVPN" (potete
+chiamarla come volete)
+
+
+Clicca con il tasto destro del mouse sulla connessione e clicca su
+modifica
+
+
+Aggiungete l'indirizzo IP del vostro server e configurate la porta
+secondo la vostra configurazione.
+
+Sotto l'autenticazione, in Type scorrere fino a SSL/TLS Client
+(PKCS11)
+
+Seleziona il file CA per la tua connessione
+
+Opzionale: Selezionate il "ta.key" nella sezione >>``<<TLS-Auth`
+
+
+Cliccate il pulsante Add accanto al campo Providers e selezionate il
+modulo PKCS#11 per la vostra Nitrokey. Si possono specificare più
+provider, e per esempio noi useremo OpenSC.
+
+Su macOS, la posizione più comune per i moduli da trovare è nella
+directory /usr/lib. Si prega di fare riferimento alla documentazione
+inclusa nel software del driver per la posizione da utilizzare. Il
+modulo di OpenSC può essere trovato in "/Library/OpenSC/lib/opensc-
+pkcs11.so"
+
+Su Windows, la posizione più comune per le librerie è o in "C:\Program
+Files" o "C:\Windows\System32". Le librerie OpenSC si trovano
+generalmente a "C:\Program Files\OpenSC Project\OpenSC\pkcs11". Ci può
+essere più di una libreria disponibile qui, puoi provare ognuna di
+esse o semplicemente aggiungerle entrambe.
+
+Scegli un metodo di recupero dal menu a discesa Recupero
+
+
+Se solo una Nitrokey sarà usata su questo computer, selezionate Use
+certificate name below. Se la Nitrokey è attualmente connessa al
+computer, clicca sul pulsante Detect per Viscosità per riempire
+automaticamente il campo Nome. Altrimenti questo campo può essere
+completato manualmente.
+
+In caso di dubbio, o se più di una Nitrokey può essere usata (cioè più
+utenti), allora seleziona Prompt for certificate name.
+
+Se è stato selezionato "Prompt for certificate name", Viscosity
+rileverà automaticamente la chiave richiesta sulla Nitrokey,
+utilizzando il modulo/i PKCS#11 specificato/i. Selezionate uno dei
+dispositivi trovati, o inserite il nome del "serialized id" da usare
+manualmente. Di nuovo, all'utente dovrebbe essere richiesta una
+password/PIN se necessario.
+
+Fare clic sul pulsante Salva e connettersi dall'interfaccia principale
+
+Riferimenti
+
+Utilizzare token/smartcard (PKCS#11)
+
+OpenVPN HOWTO
+
+Note
+
+Viscosity non è gratuito, e quindi potreste incorrere in problemi
+nell'utilizzo della versione gratuita.
+
+Stiamo considerando l'uso di Pritunl come alternativa libera e aperta.
