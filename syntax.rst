@@ -1,5 +1,5 @@
-Nitrokey Key Documentation - Syntax
-===================================
+Nitrokey Documentation - Syntax
+===============================
 .. container:: product_platform_heading
 
   (Nitrokey Product - Platform)
