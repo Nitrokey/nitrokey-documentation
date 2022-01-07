@@ -108,3 +108,5 @@ This is another thest for `a URL  <https://f-droid.org/F-Droid.apk>`_ to test tr
 This is a plain link https://foobar.bas/slug1/slug2
 
 A new text that should be translated be deepl.
+
+The Product Term Nitrokey 3 should not be translated to japanese Kanji.
