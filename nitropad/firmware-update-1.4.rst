@@ -5,17 +5,29 @@ Firmware Update v1.4+
 
 .. contents:: :local:
 
-Starting with v1.4 due to elementary changes inside Heads and the firmware layout, the update requires some additional 
-considerations. This applies for both NitroPads X230 and T430.
+Starting with v1.4 due to elementary changes inside Heads and the firmware
+layout, the update requires some additional considerations. This applies for
+both NitroPads X230 and T430.
 
 Should I update my NitroPad?
 ----------------------------
 
-When updating your firmware to 1.4 (without using an external flasher device) the graphical HEADS dialogues will be replaced with a less convenient text-only version.
+When updating your firmware to 1.4 (without using an external flasher device)
+the graphical HEADS dialogues will be replaced with a less convenient text-only
+version.
 
-If you use Ubuntu, Debian, LinuxMint, or Qubes 4.0 updating the firmware beyond v1.3.1 is (as of today) not needed. If you use Qubes 4.1 *without* the integrated Ethernet port, you don't need to update the firmware either.
+If you use Ubuntu, Debian, LinuxMint, or Qubes 4.0 updating the firmware beyond
+v1.3.1 is (as of today) not needed. If you use Qubes 4.1 *without* the
+integrated Ethernet port, you don't need to update the firmware either.
 
-If you want to use Qubes 4.1 or newer *and* the integrated Ethernet port you need to update the firmware to 1.4.
+If you want to use Qubes 4.1 or newer *and* the integrated Ethernet port you
+need to update the firmware to 1.4.
+
+.. hint::
+   If the `.npf` file is not accepted by HEADS, likely you do not run the latest HEADS version. 
+   So either 1st update to version 1.3.1 or `unzip` the `.npf` file and use the resulting `.rom`
+   file instead.    
+
 
 How can I update my NitroPad?
 -----------------------------
