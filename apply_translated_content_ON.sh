@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# deactivate
-echo "$(date) [apply_translated_content.sh] DEACTIVATED.." >> /var/www/sphinx/logs_sphinx/webhook.log & exit
-
-
-
 languages=("de" "fr" "es" "nl" "it" "ja" "ru" "el" "bg" "da" "et" "fi" "lv" "lt" "pl" "pt" "ro" "sv" "sk" "sl" "cs" "hu")
 admin_mail_address="sphinx_admin@nitrokey.com"
 
