@@ -1,4 +1,4 @@
-admin_mail_address="ben@dotplex.com"
+admin_mail_address="sphinx_admin@nitrokey.com"
 
 echo "$(date) [apply_new_content.sh] Content change triggered." >> /var/www/sphinx/logs_sphinx/webhook.log
 
@@ -40,7 +40,7 @@ echo -n "$(date) [apply_new_content.sh] Building /locales/ ..." >> /var/www/sphi
 
 # generate language files and push
 sphinx-build -b gettext . ./locales/
-sphinx-intl update -p ./locales/ -l de -l fr -l es -l nl -l it -l ja -l ru -l zh_CN -l el
+sphinx-intl update -p ./locales/ -l de -l fr -l es -l nl -l it -l ja -l ru -l zh_CN -l el -l bg -l da -l et -l fi -l lv -l lt -l pl -l pt -l ro -l sv -l sk -l sl -l cs -l hu
 if [ $? -eq 0 ]
 then
 	echo "DONE" >> /var/www/sphinx/logs_sphinx/webhook.log

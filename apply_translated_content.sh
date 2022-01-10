@@ -1,7 +1,7 @@
 #!/bin/bash
 
-languages=("de" "fr" "es" "nl" "it" "ja" "ru" "el" "zh_CN")
-admin_mail_address="ben@dotplex.com"
+languages=("de" "fr" "es" "nl" "it" "ja" "ru" "el" "bg" "da" "et" "fi" "lv" "lt" "pl" "pt" "ro" "sv" "sk" "sl" "cs" "hu")
+admin_mail_address="sphinx_admin@nitrokey.com"
 
 echo "$(date) [apply_translated_content.sh] Pulling Repo..." >> /var/www/sphinx/logs_sphinx/webhook.log
 
@@ -27,7 +27,7 @@ for lang in "${languages[@]}"
 do
 	echo "$(date) [apply_translated_content.sh] (SPHINX) Building Language Version $lang..." >> /var/www/sphinx/logs_sphinx/webhook.log
 
-	sphinx-build -a -D language='$lang' -b html /var/www/sphinx/sphinx/nitrokey-documentation/ /var/www/sphinx/www/docs.nitrokey.com_$lang-temp
+	sphinx-build -a -D language="$lang" -b html /var/www/sphinx/sphinx/nitrokey-documentation/ /var/www/sphinx/www/docs.nitrokey.com_$lang-temp
 	status=$?
 
 	if [ $status -eq 0 ]
