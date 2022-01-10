@@ -40,7 +40,7 @@ echo -n "$(date) [apply_new_content.sh] Building /locales/ ..." >> /var/www/sphi
 
 # generate language files and push
 sphinx-build -b gettext . ./locales/
-sphinx-intl update -p ./locales/ -l de -l fr es -l nl -l it -l ja -l ru -l zh_CN -l el
+sphinx-intl update -p ./locales/ -l de -l fr -l es -l nl -l it -l ja -l ru -l zh_CN -l el
 if [ $? -eq 0 ]
 then
 	echo "DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
