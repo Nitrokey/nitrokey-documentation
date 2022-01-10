@@ -4,41 +4,44 @@
 # Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Nitrokey Documentation \n"
+"Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-06 01:52+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-01-10 14:11+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-to-be-integrated/zh_Hans/>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../to-be-integrated.rst:1
 msgid "# storage"
-msgstr ""
+msgstr "# 储存"
 
 #: ../to-be-integrated.rst:4
 msgid "Configure Hidden Volumes:"
-msgstr ""
+msgstr "配置隐藏卷。"
 
 #: ../to-be-integrated.rst:6
 msgid ""
 "Unlock encrypted volume from the Nitrokey App menu. Select \"setup hidden"
 " volume\". Now you need to enter a new password twice to protect your "
 "hidden volume. The password strength is indicated below."
-msgstr ""
+msgstr "从Nitrokey应用程序菜单中解锁加密的卷。选择\"设置隐藏音量\"。现在你需要输入两次新密码来保护你的隐藏卷。密码的强度如下所示。"
 
 #: ../to-be-integrated.rst:10
 msgid ""
 "Note: PINs can only be tried three times only which is why they can be "
 "short. Passwords like used for hidden devices can potentially be attacked"
 " unlimited which is why they need to be sufficiently strong."
-msgstr ""
+msgstr "注意：密码只能被尝试三次，这就是为什么它们可以很短。像用于隐藏设备的密码有可能被无限攻击，这就是为什么它们需要足够强大。"
 
 #: ../to-be-integrated.rst:17
 msgid ""
@@ -47,6 +50,7 @@ msgid ""
 "choice because it could destroy data on the (not-hidden) encrypted volume"
 " and reveal the existience of the hidden volume."
 msgstr ""
+"接下来你需要定义被使用的存储区域。隐藏卷被存储在加密卷的空位上。这是一个关键的选择，因为它可能会破坏（非隐藏的）加密卷上的数据，并暴露出隐藏卷的存在。"
 
 #: ../to-be-integrated.rst:13
 #, python-format
@@ -61,17 +65,20 @@ msgid ""
 "buffer = 20% The hidden volume should end in a distance before the end of"
 " the storage. For example: 90%"
 msgstr ""
+"你应该在加密卷上使用一个FAT32分区，因为日记文件系统，特别是NTFS，可能会破坏加密数据。在创建隐藏卷之前，将一些文件复制到加密卷上。一旦你配置了一个"
+"隐藏卷，你就不应该再在加密卷上添加或改变文件。确定您的文件在加密卷上所消耗的存储空间。例如：10% T隐藏卷应该在您的文件在加密卷上开始。例如：10% "
+"files + 10% buffer = 20% T他的隐藏卷应该在存储结束前一段距离结束。例如：90%个%。"
 
 #: ../to-be-integrated.rst:19
 msgid ""
 "In case you use two or more hidden volumes, note that their storage area "
 "must not overlap. Otherwise they would override and destroy each other's "
 "data. Each hidden volume would require a different password."
-msgstr ""
+msgstr "如果您使用两个或更多的隐藏卷，请注意它们的存储区域不能重叠。否则它们会覆盖并破坏彼此的数据。每个隐藏卷都需要一个不同的密码。"
 
 #: ../to-be-integrated.rst:21
 msgid "Usage of Hidden Volumes:"
-msgstr ""
+msgstr "隐藏卷的使用。"
 
 #: ../to-be-integrated.rst:23
 msgid ""
@@ -85,18 +92,22 @@ msgid ""
 "various operating systems. Make sure to unmount/eject all partitions on "
 "the hidden volumes before locking or disconnecting the Nitrokey."
 msgstr ""
+"选择\"解锁加密卷\"并输入您的用户密码。选择\"解锁隐藏卷\"并输入隐藏卷的任何密码"
+"。如果这是第一次，您可能需要在隐藏卷上创建一个分区。Windows会打开一个适当的窗口并要求您这样做。在Linux和Mac OS上，您可能需要打开一个分区"
+"管理器并手动创建一个分区。你可以根据自己的需要创建任意多的分区。如果你想从不同的操作系统访问该分区，我们推荐使用FAT(32)。在锁定或断开Nitroke"
+"y之前，请确保卸载/弹出隐藏卷上的所有分区。"
 
 #: ../to-be-integrated.rst:28
 msgid "Also see older but comprehensive Nitrokey Storage manual."
-msgstr ""
+msgstr "也可参见较早但全面的Nitrokey存储手册。"
 
 #: ../to-be-integrated.rst:32
 msgid "# pro"
-msgstr ""
+msgstr "# ＃亲"
 
 #: ../to-be-integrated.rst:36
 msgid "PKCS#11 Driver"
-msgstr ""
+msgstr "PKCS#11驱动程序"
 
 #: ../to-be-integrated.rst:38
 msgid ""
@@ -105,6 +116,8 @@ msgid ""
 "PuTTY/KiTTY, OpenSSH, OpenSSL, or any other PKCS#11 compatible software, "
 "you should install OpenSC."
 msgstr ""
+"如果你想用Thunderbird使用S/MIME电子邮件加密，使用TrueCrypt/VeraCrypt，用Firefox、PuTTY/"
+"KiTTY、OpenSSH、OpenSSL或任何其他PKCS#11兼容软件进行基于证书的SSL认证，你应该安装OpenSC。"
 
 #: ../to-be-integrated.rst:40
 msgid ""
@@ -112,6 +125,8 @@ msgid ""
 "GnuPG/OpenPGP. But the other way around works fine. If you want to use "
 "Nitrokey with both GnuPG and PKCS#11, generate the keys with GnuPG."
 msgstr ""
+"请注意，用OpenSC初始化的Nitrokey在GnuPG/"
+"OpenPGP中无法使用。但另一种方式可以正常工作。如果你想在GnuPG和PKCS#11中使用Nitrokey，请用GnuPG生成密钥。"
 
 #: ../to-be-integrated.rst:42
 msgid ""
@@ -121,21 +136,23 @@ msgid ""
 "Currently it's limit to the authentication certificate and not widely "
 "tested yet.)"
 msgstr ""
+"不要将PKCS#11与GnuPG并行使用，因为两者可能会相互干扰，并可能产生意想不到的问题。(有一个很有前途的项目scd-"
+"pkcs11正在开发中，最终可能会克服这个限制。目前它只限于认证证书，还没有经过广泛测试）。"
 
 #: ../to-be-integrated.rst:44
 msgid ""
 "Instructions, how to create a valid X.509 certificate with Nitrokey (1, "
 "2, 3). These are general instructions how to use X.509 certificates. "
 "Alternative PKCS#11 Driver:"
-msgstr ""
+msgstr "说明，如何用Nitrokey创建一个有效的X.509证书（1，2，3）。这些是如何使用X.509证书的一般说明。替代的PKCS#11驱动程序。"
 
 #: ../to-be-integrated.rst:47
 msgid "The recommended PKCS#11 driver is OpenSC."
-msgstr ""
+msgstr "推荐的PKCS#11驱动是OpenSC。"
 
 #: ../to-be-integrated.rst:49
 msgid "Windows Mini Driver"
-msgstr ""
+msgstr "Windows 迷你版驱动程序"
 
 #: ../to-be-integrated.rst:51
 msgid ""
@@ -145,6 +162,8 @@ msgid ""
 "browser, Windows Login). To install the driver, you may need to allow the"
 " installation of unsigned drivers first. Aloaha"
 msgstr ""
+"这个迷你驱动允许将Nitrokey与Window的证书存储集成。随后，所有使用该证书存储的应用程序都可以与Nitrokey一起使用（如Internet "
+"Explorer、Google Chrome网络浏览器、Windows登录）。要安装该驱动程序，你可能需要先允许安装未签署的驱动程序。阿罗哈"
 
 #: ../to-be-integrated.rst:54
 msgid ""
@@ -153,16 +172,18 @@ msgid ""
 "and with Windows as well as applications to encrypt and sign PDFs and the"
 " hard disk."
 msgstr ""
+"Aloaha的所有应用程序都与Nitrokey一起工作。这包括将Nitrokey与其他基于PKCS#11的应用程序和Windows以及用于加密和签署PDF"
+"和硬盘的应用程序集成的中间件。"
 
 #: ../to-be-integrated.rst:56
 msgid "Alternative PKCS#11 Driver:"
-msgstr ""
+msgstr "替代的PKCS#11驱动程序。"
 
 #: ../to-be-integrated.rst:58
 msgid ""
 "The recommended PKCS#11 driver is OpenSC. Alternatively, you could use "
 "Peter Koch's PKCS#11 driver which has the following limitations:"
-msgstr ""
+msgstr "推荐的PKCS#11驱动程序是OpenSC。另外，你也可以使用Peter Koch'的PKCS#11驱动，它有以下限制。"
 
 #: ../to-be-integrated.rst:60
 msgid ""
@@ -170,16 +191,17 @@ msgid ""
 "generated on the Nitrokey) The Linux version does not allow to generate "
 "keys. Modification of the password/PIN under Linux is not possible."
 msgstr ""
+"不能导入现有的X.509证书。(相反，必须在Nitrokey上生成密钥）Linux版本不允许生成密钥。在Linux下修改密码/PIN是不可能的。"
 
 #: ../to-be-integrated.rst:64
 msgid "p11-glue"
-msgstr ""
+msgstr "p11-胶水"
 
 #: ../to-be-integrated.rst:66
 msgid ""
 "P11-glue uses PKCS#11 as glue between crypto libraries and security "
 "applications on the open source desktop. Articles in German"
-msgstr ""
+msgstr "P11-glue使用PKCS#11作为开源桌面上的加密库和安全应用程序之间的胶水。德文版文章"
 
 #: ../to-be-integrated.rst:69
 msgid ""
@@ -188,10 +210,12 @@ msgid ""
 "gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter "
 "CentOS."
 msgstr ""
+"在Linux杂志2010/12期中，《Magisches Leuchten》一书提供了一个全面和完整的介绍。在Pro-"
+"Linux上可以找到一份详尽的指南。关于CentOS的经验之谈。"
 
 #: ../to-be-integrated.rst:75
 msgid "**Q:** How can I login into Windows?"
-msgstr ""
+msgstr "**问：**我怎样才能登录到Windows？"
 
 #: ../to-be-integrated.rst:75
 msgid ""
@@ -201,10 +225,12 @@ msgid ""
 "Note that the Mini Driver for Nitrokey Pro may not work yet for write "
 "mode."
 msgstr ""
+"要访问Nitrokey设备的只读性，请下载并安装这个迷你驱动程序（CSP）。如果你使用的是Windows "
+"Server，你可能需要在安装驱动前禁用驱动签名验证。请注意，Nitrokey Pro的迷你驱动程序可能还不能用于写模式。"
 
 #: ../to-be-integrated.rst:77
 msgid "There exist different ways to use a Nitrokey to logon on Windows:"
-msgstr ""
+msgstr "在Windows上使用Nitrokey登录存在不同的方式。"
 
 #: ../to-be-integrated.rst:79
 msgid ""
@@ -215,21 +241,24 @@ msgid ""
 "on Windows domain computers using MS Active Directory based on Smart "
 "Policy for other Nitrokey devices."
 msgstr ""
+"基于EIDAuthenticate在独立的Windows电脑上登录。或者安装OpenSC并使用Aloaha Smart Login'的PKCS#11凭证。"
+"在Windows域计算机上使用基于MS Active Directory的OpenPGP-CSP迷你驱动程序登录Nitrokey Storage 2 "
+"Nitrokey Pro 2 在Windows域计算机上使用基于智能策略的MS Active Directory登录其他Nitrokey设备。"
 
 #: ../to-be-integrated.rst:84
 msgid "**Q:** How can I login into Linux? Linux Login with PAM"
-msgstr ""
+msgstr "**问：**我怎样才能登录到Linux？用PAM登录Linux"
 
 #: ../to-be-integrated.rst:87
 msgid "You have two options: pam_p11 or Poldi."
-msgstr ""
+msgstr "你有两个选择：pam_p11或Poldi。"
 
 #: ../to-be-integrated.rst:89
 msgid ""
 "The solution with pam_p11 is more difficult to achieve and is based on "
 "S/MIME certificates. Please have a look at the documentation for more "
 "information."
-msgstr ""
+msgstr "使用pam_p11的解决方案更难实现，它是基于S/MIME证书的。请看一下文件以了解更多信息。"
 
 #: ../to-be-integrated.rst:91
 msgid ""
@@ -238,12 +267,14 @@ msgid ""
 "installation of poldi (e.g. 'sudo apt-get install libpam-poldi' on "
 "Ubuntu) the following steps are needed to get it working."
 msgstr ""
+"Poldi 0.4.1与Nitrokey配合使用RSA密钥进行PAM认证，效果完美无缺（关于ECC密钥的信息，请参见故障排除）。除了安装Poldi（"
+"例如在Ubuntu上的'sudo apt-get install libpam-poldi'），还需要以下步骤来使其工作。"
 
 #: ../to-be-integrated.rst:93
 msgid ""
 "It is necessary to already have keys generated on the Nitrokey, as the "
 "authentication key is used by PAM."
-msgstr ""
+msgstr "有必要在Nitrokey上已经生成密钥，因为认证密钥是由PAM使用的。"
 
 #: ../to-be-integrated.rst:95
 msgid ""
@@ -253,16 +284,21 @@ msgid ""
 "you have to add a line to /etc/poldi/localdb/users which contains the "
 "following information"
 msgstr ""
+"首先，你需要找出你的Nitrokey的\"应用ID\"。你可以使用\"gpg --card-status | grep "
+"Application\"来找出你的ID。它看起来像'D00600012401020000000000xxxxxxxx'或类似的。现在你必须在/etc/"
+"poldi/localdb/users中添加一行，其中包含以下信息"
 
 #: ../to-be-integrated.rst:97
 msgid "<YourApplicationID> <YourUsername>"
-msgstr ""
+msgstr "<YourApplicationID> <YourUsername>"
 
 #: ../to-be-integrated.rst:99
 msgid ""
 "This could look like 'D00600012401020000000000xxxxxxxx nitrokeyuser'. Now"
 " dump the public key from the Nitrokey into poldi local db:"
 msgstr ""
+"这可能看起来像'D00600012401020000000000xxxxxxxx "
+"nitrokeyuser'。现在把公钥从Nitrokey转储到Poldi本地数据库中。"
 
 #: ../to-be-integrated.rst:101
 msgid ""
@@ -270,18 +306,20 @@ msgid ""
 "/etc/poldi/localdb/keys/<YourApplicationID>\" \"SCD READKEY --advanced "
 "OPENPGP.3\" /bye'"
 msgstr ""
+"sudo sh -c 'gpg-connect-agent \"/datafile /etc/poldi/localdb/keys/"
+"<YourApplicationID>\" \"SCD READKEY --advanced OPENPGP.3\" /bye'。"
 
 #: ../to-be-integrated.rst:103
 msgid ""
 "Please be aware that you have to insert your Application ID in the line "
 "above with the one of your stick!"
-msgstr ""
+msgstr "请注意，你必须在上面的一行中插入你的申请ID和你的棍子的ID!"
 
 #: ../to-be-integrated.rst:105
 msgid ""
 "Then you have to configure PAM. Just add \"auth sufficient pam_poldi.so\""
 " to pam configuration files according to your needs:"
-msgstr ""
+msgstr "然后你必须配置PAM。只要根据你的需要在pam配置文件中加入\"auth sufficient pam_poldi.so\"即可。"
 
 #: ../to-be-integrated.rst:107
 msgid ""
@@ -289,6 +327,8 @@ msgid ""
 "console login /etc/pam.d/sudo for sudo authentication /etc/pam.d/gnome-"
 "screensaver for login back from a locked screen etc."
 msgstr ""
+"/etc/pam.d/common-auth用于图形用户登录/etc/pam.d/login用于控制台登录/etc/pam.d/sudo用于sudo认证/"
+"etc/pam.d/gnome-screensaver用于从锁定的屏幕返回登录等等。"
 
 #: ../to-be-integrated.rst:113
 msgid ""
@@ -297,24 +337,28 @@ msgid ""
 " that booting into rescue mode from Grub requires a root password, so "
 "keep that or a live CD which can read your filesystems to hand."
 msgstr ""
+"注意：玩Pam是很危险的，所以要确保你有办法在完全破坏认证的情况下访问机器。请记住，从Grub启动到救援模式需要一个root密码，"
+"所以请保留这个密码或一张可以读取文件系统的Live CD。"
 
 #: ../to-be-integrated.rst:115
 msgid ""
 "Here you find further instructions (in German, partially outdated). "
 "Troubleshooting"
-msgstr ""
+msgstr "在这里你可以找到进一步的说明（德语，部分已过时）。疑难解答"
 
 #: ../to-be-integrated.rst:118
 msgid ""
 "If you get an error similar to 'ERR 100663414 Invalid ID <SCD>' you "
 "should try instead"
-msgstr ""
+msgstr "如果你得到一个类似于'ERR 100663414 Invalid ID <SCD>'的错误，你应该尝试一下。"
 
 #: ../to-be-integrated.rst:120
 msgid ""
 "poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> "
 "/etc/poldi/localdb/keys"
 msgstr ""
+"poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> /etc/poldi/"
+"localdb/keys"
 
 #: ../to-be-integrated.rst:122
 msgid ""
@@ -326,20 +370,22 @@ msgid ""
 " eventually. In the meantime the only option is to build poldi from "
 "source."
 msgstr ""
+"请注意，你必须在上面的一行中插入你的应用ID和你的棍子的ID!不幸的是，poldi还不支持ECC钥匙。但有一个用于Nitrokey "
+"Start的ECC钥匙的补丁。这已经包含在poldi开发库的主分支中，因此最终会在一个较新的版本中发布。在这期间，唯一的选择是从源码构建poldi。"
 
 #: ../to-be-integrated.rst:128
 msgid "**Q:** How can I login with One Time Passwords?"
-msgstr ""
+msgstr "**问：**我如何用一次性密码登录？"
 
 #: ../to-be-integrated.rst:128
 msgid ""
 "One-Time-Passwords (OTP) are used for secure login to websites and local "
 "applications."
-msgstr ""
+msgstr "一次性密码（OTP）用于安全登录网站和本地应用程序。"
 
 #: ../to-be-integrated.rst:130
 msgid "Two OTP modes exist:"
-msgstr ""
+msgstr "存在两种OTP模式。"
 
 #: ../to-be-integrated.rst:132
 msgid ""
@@ -347,6 +393,7 @@ msgid ""
 "unsure, assume you are using this mode. HMAC-based One-time Passwords "
 "(HOTP) is used for local applications and computer logins."
 msgstr ""
+"基于时间的一次性密码（TOTP）被广泛用于网站。如果不确定，请假设您正在使用这种模式。基于HMAC的一次性密码（HOTP）用于本地应用程序和计算机登录。"
 
 #: ../to-be-integrated.rst:135
 msgid ""
@@ -354,37 +401,41 @@ msgid ""
 " need to download and install the latest Nitrokey App. Time-based One-"
 "time Passwords - TOTP"
 msgstr ""
+"要在你的Nitrokey Pro或Nitrokey Storage中使用一次性密码，你需要下载并安装最新的Nitrokey应用程序。基于时间的一次性密码 "
+"- TOTP"
 
 #: ../to-be-integrated.rst:138
 msgid ""
 "For login to a Google account. For login to a Microsoft account. For "
 "login to a Nextcloud account. Generic instructions for all other "
 "services."
-msgstr ""
+msgstr "用于登录到谷歌账户。用于登录微软账户。用于登录Nextcloud账户。所有其他服务的通用说明。"
 
 #: ../to-be-integrated.rst:143
 msgid "**Q:** How can I use the Nitrokey Pro with Android?"
-msgstr ""
+msgstr "**问：**我如何在安卓系统中使用Nitrokey Pro？"
 
 #: ../to-be-integrated.rst:145
 msgid ""
 "It is possible to use the Nitrokey on an Android devices in combination "
 "with OpenKeychain. This enables one to encrypt/decrypt E-Mails or files "
 "via OpenPGP."
-msgstr ""
+msgstr "可以在安卓设备上使用Nitrokey与OpenKeychain相结合。这使得人们能够通过OpenPGP对电子邮件或文件进行加密/解密。"
 
 #: ../to-be-integrated.rst:147
 msgid ""
 "Cotech provides Android software with commercial support. Please have a "
 "look there, if you like. The following instructions are based on "
 "OpenKeychain."
-msgstr ""
+msgstr "Cotech提供具有商业支持的Android软件。如果你喜欢，请去那里看看。下面的说明是基于OpenKeychain的。"
 
 #: ../to-be-integrated.rst:149
 msgid ""
 "Tested with Nitrokey Start, Pro and Storage in combination with Android "
 "7.1, OpenKeychain 4.5 and K9Mail 5.207. Prerequisites"
 msgstr ""
+"使用Nitrokey Start、Pro和Storage与Android 7.1、OpenKeychain 4.5和K9Mail 5."
+"207相结合进行了测试。前提条件"
 
 #: ../to-be-integrated.rst:152
 msgid ""
@@ -392,10 +443,12 @@ msgid ""
 "Nitrokey with your phone OpenKeychain installed on Device Public key "
 "saved on the device or uploaded on a keyserver"
 msgstr ""
+"能够使用USB OTG的安卓手机 用USB OTG线将Nitrokey与你的手机连接起来 设备上安装的OpenKeychain "
+"公钥保存在设备上或上传到钥匙服务器。"
 
 #: ../to-be-integrated.rst:157
 msgid "First steps"
-msgstr ""
+msgstr "第一个步骤"
 
 #: ../to-be-integrated.rst:159
 msgid ""
@@ -408,12 +461,15 @@ msgid ""
 "key' to import a reference to the private key of the Nitrokey. That’s "
 "basically it."
 msgstr ""
+"要导入Nitrokey的钥匙，你首先要启动OpenKeychain应用程序。然后用USB OTG线插入Nitrokey。OpenKeychain会启动一个"
+"使用Nitrokey的对话框（你可能需要先接受OpenKeychain对钥匙的使用）。现在你可以选择在钥匙服务器上寻找公钥或从存储器中选择公钥。导入公钥后"
+"，你必须点击'连接密钥'来导入Nitrokey的私钥参考。这基本上就是了。"
 
 #: ../to-be-integrated.rst:161
 msgid ""
 "In the case that no there are no keys on the Nitrokey yet, OpenKeychain "
 "will help with the creation of a new key pair instead. Usage"
-msgstr ""
+msgstr "如果Nitrokey上还没有钥匙，OpenKeychain将帮助创建一个新的钥匙对。使用方法"
 
 #: ../to-be-integrated.rst:164
 msgid ""
@@ -423,6 +479,8 @@ msgid ""
 "OpenKeychain to decrypt your mails automatically. It is important to "
 "choose the right key in the K9Mail account settings first."
 msgstr ""
+"你可以使用OpenKeychain的所有功能和使用OpenKeychain的应用程序。因此，你可以直接使用应用程序手动加密/解密邮件或文件，或者例如你将K"
+"9Mail与OpenKeychain结合起来，自动解密你的邮件。首先在K9Mail账户设置中选择正确的密钥是很重要的。"
 
 #: ../to-be-integrated.rst:166
 msgid ""
@@ -432,24 +490,27 @@ msgid ""
 "to 'Language and Input' > 'Current Keyboard' > 'Hardware show input "
 "method'."
 msgstr ""
+"请注意，你可能必须在安卓设置中启用屏幕键盘来输入密码，因为系统将Nitrokey识别为物理键盘，因此会试图隐藏屏幕键盘。进入'语言和输入'>'当前键盘'>"
+"'硬件显示输入法'。"
 
 #: ../to-be-integrated.rst:169
 msgid "**Q:** How can I use the Nitrokey Pro with Iphone?"
-msgstr ""
+msgstr "**问：**我如何用Iphone使用Nitrokey Pro？"
 
 #: ../to-be-integrated.rst:170
 msgid "Currently it is not possible"
-msgstr ""
+msgstr "目前，它不可能"
 
 #: ../to-be-integrated.rst:172
 msgid "**Q:** How can I use the Nitrokey Pro with Ubuntu Phone?"
-msgstr ""
+msgstr "**问：**我如何在Ubuntu手机上使用Nitrokey Pro？"
 
 #: ../to-be-integrated.rst:172
 msgid ""
 "There are instructions on gnupg.org about how to use a OpenPGP Card on a "
 "UbuntuPhone which should work for the Nitrokey Start, Pro and Storage."
 msgstr ""
+"gnupg.org上有关于如何在UbuntuPhone上使用OpenPGP卡的说明，它应该适用于Nitrokey Start、Pro和Storage。"
 
 #: ../to-be-integrated.rst:174
 msgid ""
@@ -458,6 +519,8 @@ msgid ""
 "S/MIME/X.509 is mostly used by enterprises. If you are in doubt which one"
 " to choose, you should use OpenPGP."
 msgstr ""
+"**问：**我如何进行电子邮件加密？目前有两种广泛使用的电子邮件加密标准。OpenPGP/GnuPG在个人中很受欢迎，而S/MIME/X."
+"509则大多被企业使用。如果你对选择哪一个有疑问，你应该使用OpenPGP。"
 
 #: ../to-be-integrated.rst:177
 msgid ""
@@ -465,26 +528,30 @@ msgid ""
 "instructions for using S/MIME with the Nitrokey. Note: SMIME certificates"
 " can be purchased cheaply from CERTUM and SSLTrust."
 msgstr ""
+"使用Nitrokey的OpenPGP标准的说明 使用Nitrokey的S/"
+"MIME的说明。注意：SMIME证书可以从CERTUM和SSLTrust那里廉价购买。"
 
 #: ../to-be-integrated.rst:180
 msgid ""
 "Please note, that it is currently advised to use either OpenPGP or S/MIME"
 " encryption, but not both with the Nitrokey."
-msgstr ""
+msgstr "请注意，目前建议使用OpenPGP或S/MIME加密，但不能同时使用Nitrokey。"
 
 #: ../to-be-integrated.rst:182
 msgid "To use a Nitrokey Storage with Thunderbird 78+, you can try this tutorial."
-msgstr ""
+msgstr "要在Thunderbird 78+中使用Nitrokey存储，你可以试试这个教程。"
 
 #: ../to-be-integrated.rst:184
 msgid "**Q:** How can I do Hard Disk Encryption?"
-msgstr ""
+msgstr "**问：**我如何进行硬盘加密？"
 
 #: ../to-be-integrated.rst:187
 msgid ""
 "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (formerly "
 "TrueCrypt)"
 msgstr ""
+"用于。Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (formerly "
+"TrueCrypt)"
 
 #: ../to-be-integrated.rst:190
 msgid ""
@@ -494,6 +561,9 @@ msgid ""
 "TrueCrypt as well. Follow these steps to use the program with Nitrokey "
 "Storage or Pro:"
 msgstr ""
+"VeraCrypt是一款免费的开源磁盘加密软件，适用于Windows、macOS和GNU/"
+"Linux。它是TrueCrypt的后继者，因此被推荐使用，尽管以下说明也应适用于TrueCrypt。按照这些步骤，将该程序与Nitrokey "
+"Storage或Pro一起使用。"
 
 #: ../to-be-integrated.rst:192 ../to-be-integrated.rst:704
 msgid ""
@@ -508,6 +578,11 @@ msgid ""
 "Create a container, choose the keyfile on the device as an alternative to"
 " a password."
 msgstr ""
+"安装OpenSC 在VeraCrypt的Settings>Preferences>Security Token下选择该库（位置取决于系统，例如/usr/"
+"lib/opensc）。通过Tools>Keyfile Generator生成一个64字节的密钥文件。现在你应该能够通过Tools>Manage "
+"Security Token Keyfiles导入生成的密钥文件。你应该选择第一个插槽（[0] 用户密码）。然后，该密钥文件将作为'私人数据对象1'（Pr"
+"ivDO1）储存在Nitrokey上。在这之后，你应该安全地擦除你电脑上的原始密钥文件!现在你可以用Nitrokey使用VeraCrypt：创建一个容器，"
+"选择设备上的密钥文件作为密码的替代品。"
 
 #: ../to-be-integrated.rst:199
 msgid ""
@@ -516,12 +591,14 @@ msgid ""
 "Instead it stores a keyfile on the Nitrokey which theoretically could be "
 "stolen by a computer virus after the user enters the PIN."
 msgstr ""
+"安全方面的考虑。请注意，VeraCrypt并没有利用Nitrokey（以及一般的智能卡）提供的全部安全性。相反，它在Nitrokey上存储了一个密钥文件，"
+"理论上，在用户输入PIN后，该文件可能被计算机病毒窃取。"
 
 #: ../to-be-integrated.rst:201
 msgid ""
 "Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
 "described security limitation."
-msgstr ""
+msgstr "注意：Aloaha Crypt是基于TrueCrypt/VeraCrypt的，但没有所述的安全限制。"
 
 #: ../to-be-integrated.rst:204
 msgid ""
@@ -529,12 +606,14 @@ msgid ""
 "instructions how to use Nitrokey to encrypt your hard disk under Linux "
 "with LUKS/dm-crypt. Other instruction."
 msgstr ""
+"Linux上的硬盘加密，基于LUKS/dm-crypt 这里是如何使用Nitrokey在Linux下用LUKS/dm-"
+"crypt加密硬盘的出色说明。其他指示。"
 
 #: ../to-be-integrated.rst:207
 msgid ""
 "Purism has created a simple script to add the Nitrokey/LibremKey as a way"
 " to unlock LUKS partitions (not tested by Nitrokey yet)."
-msgstr ""
+msgstr "Purism创建了一个简单的脚本，将Nitrokey/LibremKey作为解锁LUKS分区的一种方式（尚未经过Nitrokey的测试）。"
 
 #: ../to-be-integrated.rst:209
 msgid ""
@@ -542,85 +621,89 @@ msgid ""
 "Storage based on the Password Safe (not tested by Nitrokey yet). A "
 "description on how to use it on Gentoo can be found here."
 msgstr ""
+"这个项目旨在简化LUKS与Nitrokey Pro或基于Password "
+"Safe（尚未被Nitrokey测试）的存储的使用。关于如何在Gentoo上使用它的描述可以在这里找到。"
 
 #: ../to-be-integrated.rst:211
 msgid ""
 "For Arch Linux, see initramfs-scencrypt. Storage Encryption on Linux, "
 "Based on EncFS"
-msgstr ""
+msgstr "对于Arch Linux，见initramfs-scencrypt。Linux上的存储加密，基于EncFS"
 
 #: ../to-be-integrated.rst:214
 msgid ""
 "Prerequisite: Please ensure that you installed the device driver, changed"
 " the default PINs and generated or imported keys with GnuPG."
-msgstr ""
+msgstr "前提是。请确保你安装了设备驱动程序，改变了默认的PIN码，并使用GnuPG生成或导入了密钥。"
 
 #: ../to-be-integrated.rst:216
 msgid ""
 "An easy to use encrypted file system is EncFS, which is based on FUSE. "
 "You may follow these steps to use it with very long passwords and "
 "Nitrokey:"
-msgstr ""
+msgstr "一个易于使用的加密文件系统是EncFS，它是基于FUSE的。你可以按照这些步骤来使用它的很长的密码和Nitrokey。"
 
 #: ../to-be-integrated.rst:218
 msgid "Initialization"
-msgstr ""
+msgstr "初始化"
 
 #: ../to-be-integrated.rst:220
 msgid ""
 "# Create a key file with random data: $ dd bs=64 count=1 if=/dev/urandom "
 "of=keyfile"
-msgstr ""
+msgstr "# 用随机数据创建一个密钥文件： $ dd bs=64 count=1 if=/dev/urandom of=keyfile"
 
 #: ../to-be-integrated.rst:223
 msgid ""
 "# Encrypt the key file and use the User-ID of your Nitrokey $ gpg "
 "--encrypt keyfile"
-msgstr ""
+msgstr "# 对钥匙文件进行加密，并使用你的Nitrokey的用户ID $ gpg --encrypt keyfile"
 
 #: ../to-be-integrated.rst:226
 msgid ""
 "# Remove the key file in clear text: $ rm keyfile # you may want to use "
 "'wipe' or 'shred' to securely delete the keyfile"
-msgstr ""
+msgstr "# 以明文方式删除钥匙文件：$ rm keyfile # 你可能想用'wipe'或'shred'来安全地删除钥匙文件。"
 
 #: ../to-be-integrated.rst:229
 msgid "# Create mount point: $ mkdir ~/.cryptdir ~/cryptdir"
-msgstr ""
+msgstr "# 创建装载点： $ mkdir ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:232
 msgid ""
 "# Create the actual encryption folder $ gpg -d keyfile.gpg | encfs -S "
 "~/.cryptdir ~/cryptdir"
-msgstr ""
+msgstr "# 创建实际的加密文件夹 $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:235
 msgid ""
 "# There may appears an error message about missing permission of "
 "fusermount # This message can be ignored"
-msgstr ""
+msgstr "# 可能会出现一条错误信息，说缺少fusermount的权限 # 这个信息可以忽略不计"
 
 #: ../to-be-integrated.rst:238
 msgid "# Unmount the new file system: $ fusermount -u ~/cryptdir"
-msgstr ""
+msgstr "# 卸载新的文件系统： $ fusermount -u ~/cryptdir"
 
 #: ../to-be-integrated.rst:241
 msgid "Usage"
-msgstr ""
+msgstr "使用方法"
 
 #: ../to-be-integrated.rst:243
 msgid ""
 "# Mount encrypted file system and enter PIN of Nitrokey: $ gpg -d "
 "keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
 msgstr ""
+"# 挂载加密的文件系统并输入Nitrokey的PIN码： $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir "
+"~/cryptdir"
 
 #: ../to-be-integrated.rst:246
 msgid "# After usage, unmount the file system: $ fusermount -u ~/cryptdir"
-msgstr ""
+msgstr "# 使用后，卸载文件系统： $ fusermount -u ~/cryptdir"
 
 #: ../to-be-integrated.rst:250
 msgid "Storage Encryption on Linux, Based on ECryptFS"
-msgstr ""
+msgstr "基于ECryptFS的Linux上的存储加密"
 
 #: ../to-be-integrated.rst:252
 msgid ""
@@ -629,10 +712,12 @@ msgid ""
 "instructions. Alternatively, try ESOSI or follow these steps using OpenSC"
 " and OpenVPN:"
 msgstr ""
+"eCryptfs是一个基于文件的Linux透明加密文件系统，可以通过PKCS#11驱动与Nitrokey一起使用。请看这些说明。另外，也可以尝试ESOSI"
+"或按照这些步骤使用OpenSC和OpenVPN。"
 
 #: ../to-be-integrated.rst:254
 msgid "Warning: This will delete existing keys on your Nitrokey!"
-msgstr ""
+msgstr "警告。这将会删除你的Nitrokey上的现有钥匙!"
 
 #: ../to-be-integrated.rst:256
 msgid ""
@@ -640,10 +725,13 @@ msgid ""
 "objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 "
 "--format pkcs12 --auth-id 3 --verify-pin"
 msgstr ""
+"# 向Nitrokey导入证书和密钥 $ pkcs15-init --delete-objects privkey,pubkey --id 3 "
+"--store-private key user@example.com.p12 --format pkcs12 --auth-id 3 "
+"--verify-pin"
 
 #: ../to-be-integrated.rst:259
 msgid "# Create the file ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
-msgstr ""
+msgstr "# 创建文件 ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
 
 #: ../to-be-integrated.rst:262
 msgid ""
@@ -652,6 +740,9 @@ msgid ""
 "private=true $ openvpn --show-pkcs11-ids path to opensc-pkcs11 module "
 "Certificate"
 msgstr ""
+"# 输入这些内容： $ pkcs11-log-level=5 pkcs11-provider1,name=name,library=/usr/lib/"
+"opensc-pkcs11.so,cert-private=true $ openvpn --show-pkcs11-ids opensc-"
+"pkcs11模块的路径 证书"
 
 #: ../to-be-integrated.rst:266
 msgid ""
@@ -660,21 +751,24 @@ msgid ""
 " Serial: 066E04 Serialized id: "
 "ZeitControl/PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
 msgstr ""
+"DN: /description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@"
+"example.com Serial:066E04 序列化的ID。ZeitControl/PKCS\\x2315\\x20emulated/"
+"000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
 
 #: ../to-be-integrated.rst:270
 msgid "# Copy the serialized id for later usage: $ ecryptfs-manager"
-msgstr ""
+msgstr "# 复制序列化的ID供以后使用。$ ecryptfs-manager"
 
 #: ../to-be-integrated.rst:273
 msgid ""
 "# This will show list option. Choose option \"Add public key to keyring\""
 " # Choose pkcs11-helper # Enter the serialized ID of step 3 to PKCS#11 "
 "ID."
-msgstr ""
+msgstr "# 这将显示列表选项。选择选项\"添加公钥到钥匙圈\" # 选择pkcs11-helper # 输入步骤3的序列化ID到PKCS#11 ID。"
 
 #: ../to-be-integrated.rst:281
 msgid "**Q:** How can I sign and encrypt Files and PDFs? GnuPG"
-msgstr ""
+msgstr "**问：**我如何签署和加密文件和PDF？GnuPG"
 
 #: ../to-be-integrated.rst:284
 msgid ""
@@ -683,31 +777,33 @@ msgid ""
 "Office / Libre Office or any other PDF reader supporting electronic "
 "signatures."
 msgstr ""
+"使用gpgsm工具来签署、验证、加密和解密文件。使用Nitrokey上的签名密钥，使用Acrobat Reader、Open Office / "
+"Libre Office或任何其他支持电子签名的PDF阅读器签署文件。"
 
 #: ../to-be-integrated.rst:287
 msgid "GPA - GNU Privacy Assistant"
-msgstr ""
+msgstr "GPA - GNU隐私助理"
 
 #: ../to-be-integrated.rst:289
 msgid ""
 "The Gnu Privacy Assistant (GPA) recognizes Nitrokey out-of-the-box, has "
 "various features to manage keys and cards. It also allows file operations"
 " such as file encryption, decryption, signing."
-msgstr ""
+msgstr "Gnu隐私助理（GPA）能够识别Nitrokey，具有管理密钥和卡片的各种功能。它还允许文件操作，如文件加密、解密、签名。"
 
 #: ../to-be-integrated.rst:292
 msgid "SOPS - Secrect OPerationS"
-msgstr ""
+msgstr "SOPS - 正确的操作"
 
 #: ../to-be-integrated.rst:294
 msgid ""
 "SOPS is an editor of encrypted files that supports YAML, JSON and BINARY "
 "formats and encrypts with AWS KMS and PGP. You can find it on github."
-msgstr ""
+msgstr "SOPS是一个加密文件的编辑器，支持YAML、JSON和BINARY格式，用AWS KMS和PGP加密。你可以在github上找到它。"
 
 #: ../to-be-integrated.rst:297
 msgid "Aloaha"
-msgstr ""
+msgstr "Aloaha"
 
 #: ../to-be-integrated.rst:299
 msgid ""
@@ -717,30 +813,32 @@ msgid ""
 "appropriate variant. After this Windows recognize your certificate and "
 "you can sign the document as it is shown in the screencast below."
 msgstr ""
+"Aloaha提供了几个应用程序来加密和签署PDF文件。所有这些允许智能卡集成的应用程序都与Nitrokey一起工作。例如，你可以通过使用OpenSC或任何"
+"其他适当的变体来导入密钥和证书。在这之后，Windows会识别你的证书，你就可以像下面的截屏一样签署文件。"
 
 #: ../to-be-integrated.rst:301
 msgid "GpgEx for Windows Explorer"
-msgstr ""
+msgstr "用于Windows Explorer的GpgEx"
 
 #: ../to-be-integrated.rst:303
 msgid ""
 "GpgEx integrates smoothly into Windows Explorer to allow encryption and "
 "decryption of files. Install it as part of the GPG4Win package."
-msgstr ""
+msgstr "GpgEx顺利地集成到Windows Explorer中，允许对文件进行加密和解密。把它作为GPG4Win软件包的一部分来安装。"
 
 #: ../to-be-integrated.rst:306
 msgid ""
 "Before you start to use any of these applications with your Nitrokey, "
 "please ensure that you installed the device driver and initialized the "
 "device (e.g. generated keys)."
-msgstr ""
+msgstr "在你开始用你的Nitrokey使用这些应用程序之前，请确保你已经安装了设备驱动程序并初始化了设备（如生成了钥匙）。"
 
 #: ../to-be-integrated.rst:308
 msgid ""
 "Certificate-based login with TLS and web browser is a very secure "
 "authentication method but it is only used rarely. If you are unsure what "
 "this means, this approach is most likely not relevant for you."
-msgstr ""
+msgstr "使用TLS和网络浏览器的基于证书的登录是一种非常安全的认证方法，但它只是很少使用。如果你不确定这意味着什么，这种方法很可能与你无关。"
 
 #: ../to-be-integrated.rst:310
 msgid ""
@@ -750,10 +848,12 @@ msgid ""
 " Certificate authentication can be used easily with the Nitrokey and also"
 " with any other certificate storages. Mozilla Firefox"
 msgstr ""
+"本页指的是支持证书认证的网站和应用程序，这样用户在登录时就不需要输入用户名和密码。例如，WebID是一个伟大的协议，它利用了这一点。证书认证可以很容易地用"
+"于Nitrokey，也可以用于任何其他的证书储存器。火狐浏览器"
 
 #: ../to-be-integrated.rst:313
 msgid "You need to install the PKCS#11 driver:"
-msgstr ""
+msgstr "你需要安装PKCS#11驱动。"
 
 #: ../to-be-integrated.rst:315
 msgid ""
@@ -764,25 +864,27 @@ msgid ""
 "the Browse button to select the previously downloaded PKCS11 driver file."
 " Confirm and close all dialogs."
 msgstr ""
+"下载PKCS11驱动程序并将其存储在你的本地硬盘上，或者安装OpenSC。打开火狐浏览器的首选项，进入隐私& 安全 -> 安全（只是一个标题） -> "
+"按钮 '安全设备...' 按下加载按钮。输入\"Nitrokey\"作为模块名称，并按浏览按钮，选择先前下载的PKCS11驱动文件。确认并关闭所有对话框。"
 
 #: ../to-be-integrated.rst:319
 msgid ""
 "Now you are ready to access websites which provide certificate "
 "authentication. Internet Explorer"
-msgstr ""
+msgstr "现在你已经准备好访问提供证书认证的网站了。互联网浏览器"
 
 #: ../to-be-integrated.rst:322
 msgid ""
 "Install this Mini Driver for Windows. Now you are ready to access "
 "websites which provide certificate authentication. Google Chrome"
-msgstr ""
+msgstr "安装这个Mini Driver for Windows。现在你已经准备好访问提供证书认证的网站了。谷歌浏览器"
 
 #: ../to-be-integrated.rst:325
 msgid ""
 "Under Windows, install this Mini Driver. Under Linux, follow these "
 "instructions. Now you are ready to access websites which provide "
 "certificate authentication. WebID"
-msgstr ""
+msgstr "在Windows下，安装这个迷你驱动程序。在Linux下，请遵循这些指示。现在你已经准备好访问提供证书认证的网站了。网络身份认证"
 
 #: ../to-be-integrated.rst:328
 msgid ""
@@ -803,23 +905,32 @@ msgid ""
 "Liferay         Blog FusionForge     web-based project-management and "
 "collaboration software"
 msgstr ""
+"WebID是一项实现安全和联合社会网站的技术。这里有一段视频（WebM，Ogg视频，H.264），演示了如何使用Nitrokey创建一个WebID配置文件"
+"，并随后在新加坡的一家网吧使用。Nitrokey可以防止计算机病毒的入侵，否则这些病毒可能会将用户名和密码钢化。网站 网站类别 CAcert "
+"基于社区的证书颁发机构 PrivaSphere 安全消息 HM Revenue & Customs UK's tax administration "
+"软件应用类别 Roundcube（插件） Webmail Drupal（WebID，证书登录） 内容管理系统 Media Wiki（插件） Wiki "
+"Joomla!         内容管理系统 Apache + mod_ssl 网络服务器 OpenSSH SSH（远程安全外壳）客户端和服务器 "
+"Wordpress（插件） 博客和CMS Tivoli 系统管理框架 Globalscape EFT 管理文件传输（MFT） Oracle "
+"Identity Manager I&AM Fuse 源码中间件 Liferay 博客 FusionForge 基于网络的项目管理和协作软件"
 
 #: ../to-be-integrated.rst:350
 msgid ""
 "This website is a good read about strong authentication mechanisms, why "
 "client certificate authentication isn't popular and better alternatives "
 "at the horizon."
-msgstr ""
+msgstr "这个网站是一个关于强认证机制的好读物，为什么客户证书认证不流行，以及更好的替代方案在地平线上。"
 
 #: ../to-be-integrated.rst:352
 msgid "**Q:** How can I use Enterprise Authentication?"
-msgstr ""
+msgstr "**问：**我怎样才能使用企业认证？"
 
 #: ../to-be-integrated.rst:354
 msgid ""
 "LinOTP privacyIDEA RCDevs OpenOTP Usage of Nitrokey HSM as a secure key "
 "store for the Forgerock OpenDJ server and Forgerock Identity Gateway"
 msgstr ""
+"LinOTP privacyIDEA RCDevs OpenOTP 使用Nitrokey HSM作为Forgerock "
+"OpenDJ服务器和Forgerock身份网关的安全密钥存储。"
 
 #: ../to-be-integrated.rst:360
 msgid ""
@@ -829,16 +940,18 @@ msgid ""
 "installed on the system (only the core application GnuPG is needed). "
 "Furthermore you should install PuTTY. Preparation on client"
 msgstr ""
+"**问：**如何在Windows上进行服务器管理的SSH？Nitrokey应该已经安装了PGP密钥，本地的GnuPG钥匙圈应该知道这些密钥，也就是说GPG"
+"4Win应该安装在系统上（只需要核心程序GnuPG）。此外，你应该安装PuTTY。在客户端的准备工作"
 
 #: ../to-be-integrated.rst:364 ../to-be-integrated.rst:736
 msgid ""
 "There are two steps needed to make PuTTY work. At first we need to enable"
 " PuTTY support of GnuPG. To achieve this we use the following command:"
-msgstr ""
+msgstr "要使PuTTY工作，需要两个步骤。首先，我们需要启用PuTTY对GnuPG的支持。为了实现这一点，我们使用以下命令。"
 
 #: ../to-be-integrated.rst:366 ../to-be-integrated.rst:738
 msgid "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
-msgstr ""
+msgstr "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
 
 #: ../to-be-integrated.rst:368 ../to-be-integrated.rst:740
 msgid ""
@@ -850,27 +963,32 @@ msgid ""
 "click on an empty space and choose \"New\" -> \"Shortcut\". Now you "
 "should insert the actual command and proceed:"
 msgstr ""
+"现在我们要确保 gpg-agent 在后台自动启动（如果你愿意，你可以用下面的命令手动启动它）。我们创建一个 gpg-connect-agent.exe "
+"的快捷方式。按住 Windows-键，然后按 'R'。在打开的文本字段中输入\"shell:startup\"（见下图）。Windows-"
+"Explorer打开了，你在一个空位上点击右键，选择\"新建\"->\"快捷方式\"。现在你应该插入实际的命令并继续。"
 
 #: ../to-be-integrated.rst:370 ../to-be-integrated.rst:742
 msgid "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
-msgstr ""
+msgstr "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
 
 #: ../to-be-integrated.rst:374 ../to-be-integrated.rst:746
 msgid ""
 "Reboot your system to make sure the shortcut works. If everything is "
 "alright you now can use PuTTY as usual and PuTTY will make use of the "
 "Nitrokey automatically. Preparation for the server"
-msgstr ""
+msgstr "重新启动你的系统，以确保该快捷方式有效。如果一切正常，你现在可以像往常一样使用PuTTY，PuTTY会自动使用Nitrokey。为服务器做准备"
 
 #: ../to-be-integrated.rst:377 ../to-be-integrated.rst:749
 msgid "You can generate an authorized_keys file by running"
-msgstr ""
+msgstr "你可以通过运行以下程序生成一个authorized_keys文件"
 
 #: ../to-be-integrated.rst:379 ../to-be-integrated.rst:751
 msgid ""
 "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID "
 ">> authorized_keys"
 msgstr ""
+"\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID >> "
+"authorized_keys"
 
 #: ../to-be-integrated.rst:381 ../to-be-integrated.rst:753
 msgid ""
@@ -880,16 +998,18 @@ msgid ""
 "authorized_keys and when you ssh to the server you'll be asked for a pin "
 "rather than a passphrase."
 msgstr ""
+"其中'keyID'是你的钥匙的指纹或只是与你的钥匙绑定的电子邮件地址。Nitrokey必须已经为本地GnuPG钥匙圈所知。你现在可以将该文件添加到远程服务"
+"器的authorized_keys中，当你ssh到服务器时，就会要求你输入密码而不是口令。"
 
 #: ../to-be-integrated.rst:388
 msgid "**Q:** How can I do SSH for Server Administration on Linux?"
-msgstr ""
+msgstr "**问：**我如何在Linux上进行服务器管理的SSH？"
 
 #: ../to-be-integrated.rst:390 ../to-be-integrated.rst:757
 msgid ""
 "The Nitrokey should already have PGP keys installed and the local GnuPG "
 "keyring should know the keys. Preparation on client"
-msgstr ""
+msgstr "Nitrokey应该已经安装了PGP密钥，本地的GnuPG钥匙圈应该知道这些密钥。在客户端的准备工作"
 
 #: ../to-be-integrated.rst:393 ../to-be-integrated.rst:760
 msgid ""
@@ -898,12 +1018,17 @@ msgid ""
 "the file does not exist yet, you can just create it. Add the following "
 "code somewhere into your ~/.bashrc (for fish shell, look here)"
 msgstr ""
+"确保 ~/.gnupg/gpg.conf 包含 'use-agent' 在 ~/.gnupg/gpg-agent.conf 中添加 'enable-"
+"ssh-support'，为 gnupg-agent 添加 ssh 支持 如果该文件尚不存在，你可以直接创建它。在你的 ~/.bashrc "
+"中添加以下代码（对于 fish shell，请看这里）。"
 
 #: ../to-be-integrated.rst:398 ../to-be-integrated.rst:765
 msgid ""
 "unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
 "export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
 msgstr ""
+"unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
+"export SSH_AUTH_SOCK=\"$（gpgconf -list-dirs agent-ssh-socket）\" fi"
 
 #: ../to-be-integrated.rst:403 ../to-be-integrated.rst:770
 msgid ""
@@ -911,15 +1036,15 @@ msgid ""
 "commandline to make sure everything is set In case of problems, please "
 "try gpg2 --card-status on first usage to make sure the gpg-agent gets "
 "started"
-msgstr ""
+msgstr "如果出现问题，请在第一次使用时尝试 gpg2 --card-status，以确保 gpg-agent 被启动。"
 
 #: ../to-be-integrated.rst:406 ../to-be-integrated.rst:773
 msgid "Preparation for the server"
-msgstr ""
+msgstr "为服务器做准备"
 
 #: ../to-be-integrated.rst:408 ../to-be-integrated.rst:775
 msgid "You can generate an authorized_keys file by running either"
-msgstr ""
+msgstr "你可以通过运行以下命令之一来生成一个authorized_keys文件"
 
 #: ../to-be-integrated.rst:410 ../to-be-integrated.rst:777
 msgid ""
@@ -927,14 +1052,16 @@ msgid ""
 "gpg2 --export-ssh-key keyID >> ~/authorized_keys #(for newer GnuPG "
 "versions)"
 msgstr ""
+"gpgkey2ssh keyID >> ~/authorized_keys #(for GnuPG version <= 2.1.11) or gpg2 "
+"--export-ssh-key keyID >> ~/authorized_keys #(for newer GnuPG version)"
 
 #: ../to-be-integrated.rst:413 ../to-be-integrated.rst:780
 msgid "where"
-msgstr ""
+msgstr "其中"
 
 #: ../to-be-integrated.rst:415 ../to-be-integrated.rst:782
 msgid "keyID"
-msgstr ""
+msgstr "keyID"
 
 #: ../to-be-integrated.rst:417 ../to-be-integrated.rst:784
 msgid ""
@@ -943,18 +1070,20 @@ msgid ""
 "append that file to a remote server's authorized_keys and when you ssh to"
 " the server you'll be asked for a pin rather than a passphrase."
 msgstr ""
+"是在你的Nitrokey上用于认证的子键ID。Nitrokey必须已经被本地的GnuPG钥匙圈所知。你现在可以将该文件添加到远程服务器的authorize"
+"d_keys中，当你ssh到该服务器时，就会要求你输入密码而不是口令。"
 
 #: ../to-be-integrated.rst:420 ../to-be-integrated.rst:787
 msgid "Troubleshooting"
-msgstr ""
+msgstr "故障排除"
 
 #: ../to-be-integrated.rst:422 ../to-be-integrated.rst:789
 msgid "If you are still asked for a password please make sure that"
-msgstr ""
+msgstr "如果你仍然被要求提供密码，请确保"
 
 #: ../to-be-integrated.rst:424 ../to-be-integrated.rst:791
 msgid "echo $SSH_AUTH_SOCK"
-msgstr ""
+msgstr "echo $SSH_AUTH_SOCK"
 
 #: ../to-be-integrated.rst:426 ../to-be-integrated.rst:793
 msgid ""
@@ -966,14 +1095,17 @@ msgid ""
 "given code in .bashrc so that the variable SSH_AUTH_SOCK is correct. In "
 "doubt look for 'SSH_AUTH_SOCK' in"
 msgstr ""
+"返回一些合理的信息，如'/run/user/1000/gnupg/S.gpg-agent.ssh'或'/home/username/.gnupg/.S."
+"gpg-agent.ssh'。不幸的是，GnuPG在过去有一些变化，所以实际内容可能因系统和GnuPG版本而异。在一些系统中，这个变量中甚至可能保存有多个"
+"文件夹。你必须调整上述.bashrc中的代码，使SSH_AUTH_SOCK这个变量正确。如有疑问，请在.bashrc中查找'SSH_AUTH_SOCK'。"
 
 #: ../to-be-integrated.rst:428 ../to-be-integrated.rst:795
 msgid "man gpg-agent"
-msgstr ""
+msgstr "man gpg-agent"
 
 #: ../to-be-integrated.rst:430 ../to-be-integrated.rst:797
 msgid "to find the actual code for your version/system."
-msgstr ""
+msgstr "来找到你的版本/系统的实际代码。"
 
 #: ../to-be-integrated.rst:432 ../to-be-integrated.rst:799
 msgid ""
@@ -981,79 +1113,87 @@ msgid ""
 " manager. You may need to set it in the gpg-agent.conf as well. You may "
 "need to point gpg-agent to the correct TTY."
 msgstr ""
+"你可以通过你的软件包管理器检查你是否安装了'pinentry'程序。你可能也需要在 gpg-agent.conf 中进行设置。你可能需要将 gpg-"
+"agent 指向正确的 TTY。"
 
 #: ../to-be-integrated.rst:446
 msgid "**Q:** How can I use the Nitrokey for VPN access?"
-msgstr ""
+msgstr "**问：**我如何使用Nitrokey进行VPN访问？"
 
 #: ../to-be-integrated.rst:449 ../to-be-integrated.rst:820
 msgid "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
-msgstr ""
+msgstr "对于。Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
 
 #: ../to-be-integrated.rst:452 ../to-be-integrated.rst:823
 msgid "Generate a key on Nitrokey via pkcs11-tool."
-msgstr ""
+msgstr "通过pkcs11-tool在Nitrokey上生成一个密钥。"
 
 #: ../to-be-integrated.rst:454 ../to-be-integrated.rst:825
 msgid "Generate a certificate signing request via openssl + pkcs11 module:"
-msgstr ""
+msgstr "通过openssl + pkcs11模块生成一个证书签名请求。"
 
 #: ../to-be-integrated.rst:456 ../to-be-integrated.rst:827
 msgid ""
 "$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
 "<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
+"$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
+"<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
 
 #: ../to-be-integrated.rst:458 ../to-be-integrated.rst:829
 msgid "Sign the certificate with our certificate authority"
-msgstr ""
+msgstr "用我们的证书颁发机构签署证书"
 
 #: ../to-be-integrated.rst:460 ../to-be-integrated.rst:831
 msgid ""
 "$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out "
 "<FILE.CRT> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
+"$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out <FILE.CRT> "
+"-config <OPENSSL.CNF> -extensions usr_client"
 
 #: ../to-be-integrated.rst:462 ../to-be-integrated.rst:509
 #: ../to-be-integrated.rst:833 ../to-be-integrated.rst:880
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
-msgstr ""
+msgstr "通过pkcs11工具将证书导入到Nitrokey。"
 
 #: ../to-be-integrated.rst:464 ../to-be-integrated.rst:835
 msgid "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
-msgstr ""
+msgstr "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
 
 #: ../to-be-integrated.rst:466 ../to-be-integrated.rst:837
 msgid "Read the certificate's ID required for openvpn configuration:"
-msgstr ""
+msgstr "读取openvpn配置所需的证书'的ID。"
 
 #: ../to-be-integrated.rst:468 ../to-be-integrated.rst:839
 msgid "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
-msgstr ""
+msgstr "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
 
 #: ../to-be-integrated.rst:470 ../to-be-integrated.rst:841
 msgid ""
 "Modify your openvpn configuration. Add the certificate ID which you "
 "gathered in the previous step: E.g."
-msgstr ""
+msgstr "修改你的openvpn配置。添加你在上一步骤中收集的证书ID。例如"
 
 #: ../to-be-integrated.rst:472 ../to-be-integrated.rst:843
 msgid ""
 "$ pkcs11-id "
 "'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
 msgstr ""
+"$ pkcs11-id 'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/"
+"User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
 
 #: ../to-be-integrated.rst:474 ../to-be-integrated.rst:845
 msgid "Add the PKCS#11 driver to the configuration too, e.g.:"
-msgstr ""
+msgstr "把PKCS#11驱动也添加到配置中，例如。"
 
 #: ../to-be-integrated.rst:476 ../to-be-integrated.rst:847
 msgid "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
-msgstr ""
+msgstr "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'。"
 
 #: ../to-be-integrated.rst:478 ../to-be-integrated.rst:849
 msgid "See this link for further information."
-msgstr ""
+msgstr "更多信息见此链接。"
 
 #: ../to-be-integrated.rst:482 ../to-be-integrated.rst:853
 msgid ""
@@ -1061,10 +1201,12 @@ msgid ""
 "Nitrokey's PIN needs to be entered. Unfortunately OpenVPN doesn't prompt "
 "to enter the PIN and it has to be entered in the following way:"
 msgstr ""
+"现在所有的配置都完成了。在执行OpenVPN客户端时，需要输入Nitrokey'的PIN。不幸的是，OpenVPN没有提示输入PIN码，必须按以下方式输入"
+"。"
 
 #: ../to-be-integrated.rst:484 ../to-be-integrated.rst:855
 msgid "$ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>"
-msgstr ""
+msgstr "$ telnet 8888 password 'User PIN (OpenPGP card) token' < PIN>"
 
 #: ../to-be-integrated.rst:486 ../to-be-integrated.rst:857
 msgid ""
@@ -1073,30 +1215,34 @@ msgid ""
 " the OpenVPN client you could use the Viscosity client which provides a "
 "better user experience especially for entering the PIN."
 msgstr ""
+"另外，你可以在禁用systemd支持的情况下重新编译OpenVPN客户端，它就会如期提示你输入PIN。除了OpenVPN客户端，你还可以使用Viscosi"
+"ty客户端，它提供了更好的用户体验，特别是在输入PIN时。"
 
 #: ../to-be-integrated.rst:489 ../to-be-integrated.rst:860
 msgid "IPsec"
-msgstr ""
+msgstr "IPsec"
 
 #: ../to-be-integrated.rst:491 ../to-be-integrated.rst:862
 msgid "Strong Swan works using the PKCS#11 driver. Basically follow these steps:"
-msgstr ""
+msgstr "Strong Swan使用PKCS#11驱动工作。基本上遵循这些步骤。"
 
 #: ../to-be-integrated.rst:493 ../to-be-integrated.rst:864
 msgid ""
 "Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 "
 "bit RSA key."
-msgstr ""
+msgstr "通过pkcs11工具在Nitrokey上生成一个密钥。在这个例子中，它是一个4096位的RSA密钥。"
 
 #: ../to-be-integrated.rst:495 ../to-be-integrated.rst:866
 msgid ""
 "$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
 "-l -k --key-type rsa:4096 --id 10 --label 'Staging Access'"
 msgstr ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -"
+"k -key-type rsa:4096 --id 10 --label 'Staging Access'。"
 
 #: ../to-be-integrated.rst:497 ../to-be-integrated.rst:868
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
-msgstr ""
+msgstr "通过openssl + pkcs11模块生成一个证书签名请求"
 
 #: ../to-be-integrated.rst:499 ../to-be-integrated.rst:870
 msgid ""
@@ -1108,20 +1254,28 @@ msgid ""
 "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
 "Access/CN=user@email.com/emailAddress=user@email.com'"
 msgstr ""
+"$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/"
+"engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
+"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11。so OpenSSL> req -"
+"engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-"
+"staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/"
+"CN=user@email.com/emailAddress=user@email.com'"
 
 #: ../to-be-integrated.rst:503 ../to-be-integrated.rst:874
 msgid "Sign the certificate with your certificate authority"
-msgstr ""
+msgstr "用你的证书颁发机构签署证书"
 
 #: ../to-be-integrated.rst:505 ../to-be-integrated.rst:876
 msgid "Convert the certificate to DER"
-msgstr ""
+msgstr "将证书转换为DER"
 
 #: ../to-be-integrated.rst:507 ../to-be-integrated.rst:878
 msgid ""
 "$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
 "staging-cert.der -outform DER"
 msgstr ""
+"$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
+"staging-cert.der -out form DER"
 
 #: ../to-be-integrated.rst:511 ../to-be-integrated.rst:882
 msgid ""
@@ -1129,6 +1283,8 @@ msgid ""
 "-l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
 "Access'"
 msgstr ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -"
+"y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging Access'。"
 
 #: ../to-be-integrated.rst:513 ../to-be-integrated.rst:884
 msgid ""
@@ -1136,33 +1292,35 @@ msgid ""
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
 "add the following module:"
 msgstr ""
+"配置Strongswan以加载opensc-pkcs11模块，然后在Nitrokey上加载证书。编辑/etc/strongswan.d/charon/"
+"pkcs11.conf并添加以下模块。"
 
 #: ../to-be-integrated.rst:517 ../to-be-integrated.rst:888
 msgid "modules {"
-msgstr ""
+msgstr "模块 {"
 
 #: ../to-be-integrated.rst:516 ../to-be-integrated.rst:887
 msgid "Nitrokey {"
-msgstr ""
+msgstr "Nitrokey {"
 
 #: ../to-be-integrated.rst:517 ../to-be-integrated.rst:888
 msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr ""
+msgstr "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
 
 #: ../to-be-integrated.rst:518 ../to-be-integrated.rst:519
 #: ../to-be-integrated.rst:889 ../to-be-integrated.rst:890
 msgid "}"
-msgstr ""
+msgstr "}"
 
 #: ../to-be-integrated.rst:521 ../to-be-integrated.rst:892
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
-msgstr ""
+msgstr "通过IPSec/Strongswan启动VPN连接，然后提示输入Nitrokey PIN。"
 
 #: ../to-be-integrated.rst:523 ../to-be-integrated.rst:894
 msgid "8. VPN is now connected Stunnel"
-msgstr ""
+msgstr "8.VPN现在已经连接上了Stunnel"
 
 #: ../to-be-integrated.rst:526 ../to-be-integrated.rst:897
 msgid ""
@@ -1171,10 +1329,12 @@ msgid ""
 "functionality to commonly used inetd daemons like POP2, POP3, and IMAP "
 "servers without any changes in the programs' code."
 msgstr ""
+"Stunnel在远程客户端和本地（可启动的inetd）或远程服务器之间作为一个SSL加密包装器工作。它可以用来将SSL功能添加到常用的inetd守护程序中"
+"，如POP2、POP3和IMAP服务器，而无需对程序的代码进行任何修改。"
 
 #: ../to-be-integrated.rst:528 ../to-be-integrated.rst:899
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
-msgstr ""
+msgstr "Stunnel能够使用这种配置加载OpenSC PKCS#11引擎。"
 
 #: ../to-be-integrated.rst:530 ../to-be-integrated.rst:901
 msgid ""
@@ -1182,22 +1342,25 @@ msgid ""
 "engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
 "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
 msgstr ""
+"engine=dynamic engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so "
+"engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
+"engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
 
 #: ../to-be-integrated.rst:538 ../to-be-integrated.rst:909
 msgid "[service] engineNum=1 key=id_45"
-msgstr ""
+msgstr "[服务] engineNum=1 key=id_45"
 
 #: ../to-be-integrated.rst:556
 msgid "**Q:** How can I do PKI / Certificate Authority (CA)?"
-msgstr ""
+msgstr "**问：**如何进行PKI/证书授权（CA）？"
 
 #: ../to-be-integrated.rst:558
 msgid "CA keys are very sensitive and must not be compromised or lost. GnuPG"
-msgstr ""
+msgstr "CA密钥是非常敏感的，决不能被破坏或丢失。GnuPG"
 
 #: ../to-be-integrated.rst:561
 msgid "Instructions OpenSSL"
-msgstr ""
+msgstr "说明OpenSSL"
 
 #: ../to-be-integrated.rst:564
 msgid ""
@@ -1208,16 +1371,20 @@ msgid ""
 "slot ID, e.g. \"... -key "
 "slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" Test"
 msgstr ""
+"安装OpenSC'S引擎_pkcs11 运行命令\"pkcs11-tool --list-slots\" 列出可用的插槽。运行命令 \"openssl> "
+"req -engine pkcs11 -new -key slot_X-id_XXXX -keyform engine -x509 -out "
+"cert.pem -text\" 其中 X 是适当的插槽编号，XXXX 是插槽 ID，例如：\"...-key slot_5-"
+"id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" 测试"
 
 #: ../to-be-integrated.rst:569
 msgid "Other"
-msgstr ""
+msgstr "其他"
 
 #: ../to-be-integrated.rst:571
 msgid ""
 "Please see this PDF (p. 30) from heinlein-support.de for summarized "
 "instructions in German."
-msgstr ""
+msgstr "请参阅heinlein-support.de的PDF文件（第30页），了解德文的简要说明。"
 
 #: ../to-be-integrated.rst:573
 msgid ""
@@ -1225,14 +1392,16 @@ msgid ""
 "perform basic tasks of a CA. It works with Nitrokey Pro and Nitrokey "
 "Storage."
 msgstr ""
+"µ-CA-tool是一个基于GnuPG、OpenSC和OpenSSL的脚本，有助于执行CA的基本任务。它与Nitrokey Pro和Nitrokey "
+"Storage一起工作。"
 
 #: ../to-be-integrated.rst:581
 msgid "**Q:** How can I use the password manager?"
-msgstr ""
+msgstr "**问：**我怎样才能使用密码管理器？"
 
 #: ../to-be-integrated.rst:583
 msgid "You have the following options:"
-msgstr ""
+msgstr "你有以下选择。"
 
 #: ../to-be-integrated.rst:585
 msgid ""
@@ -1241,16 +1410,18 @@ msgid ""
 "(simple commandline password manager for Unix systems, mainly for "
 "experts). Use KeePass as described below."
 msgstr ""
+"使用Nitrokey'内置的密码保险箱来安全存储密码。为此，你需要使用Nitrokey应用程序。最多有16个密码。使用Pass（Unix系统的简单命令行密"
+"码管理器，主要针对专家）。使用KeePass，如下所述。"
 
 #: ../to-be-integrated.rst:589
 msgid "Protecting KeePass with Nitrokey's One-Time Passwords"
-msgstr ""
+msgstr "用Nitrokey'的一次性密码保护KeePass"
 
 #: ../to-be-integrated.rst:591
 msgid ""
 "You can also follow this video (It contains a mistake around time 4:22 "
 "which is described later below). Keepass Installation"
-msgstr ""
+msgstr "你也可以关注这个视频（它在4:22左右包含了一个错误，下面会介绍）。Keepass的安装"
 
 #: ../to-be-integrated.rst:594
 msgid ""
@@ -1258,12 +1429,15 @@ msgid ""
 "the older 2.3.4, you have to use some other source like this private PPA "
 "(please run these commands in terminal):"
 msgstr ""
+"安装Keepass 2.3.5。对于Ubuntu。因为主仓库包含较旧的2.3.4，你必须使用一些其他来源，如这个私人PPA（请在终端运行这些命令）。"
 
 #: ../to-be-integrated.rst:597
 msgid ""
 "sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-"
 "get install keepass2"
 msgstr ""
+"sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-get "
+"install keepass2"
 
 #: ../to-be-integrated.rst:601
 msgid ""
@@ -1273,14 +1447,17 @@ msgid ""
 "mono-complete package if plugin is not detected when running Keepass2 "
 "(you can check that in Tools/Plugins):"
 msgstr ""
+"安装OtpKeyProv插件，方法是下载档案，解压并复制内容到Keypass'插件目录。在Linux上：sudo cp OtpKeyProv.plgx /"
+"usr/lib/keepass2/Plugins/ 对于Linux，可选：如果运行Keepass2时未检测到插件，则安装mono-"
+"complete软件包（你可以在Tools/Plugins中检查）。"
 
 #: ../to-be-integrated.rst:605
 msgid "sudo apt-get install mono-complete"
-msgstr ""
+msgstr "sudo apt-get安装mono-complete"
 
 #: ../to-be-integrated.rst:607
 msgid "Keepass OTP Configuration Existing Database"
-msgstr ""
+msgstr "Keepass OTP配置现有数据库"
 
 #: ../to-be-integrated.rst:610
 msgid ""
@@ -1289,18 +1466,20 @@ msgid ""
 " your passwords are lost! Open database as usual Select File/Change "
 "Master Key..."
 msgstr ""
+"对你的数据库做一个备份，并保留它，直到你真正确定一切工作正常为止!请确保你真的做了备份。如果你搞砸了，你的密码就会丢失!像往常一样打开数据库 "
+"选择文件/更改主密钥..."
 
 #: ../to-be-integrated.rst:615
 msgid "New Database"
-msgstr ""
+msgstr "新数据库"
 
 #: ../to-be-integrated.rst:617
 msgid "Create new database as usual"
-msgstr ""
+msgstr "像往常一样创建新的数据库"
 
 #: ../to-be-integrated.rst:619
 msgid "Common"
-msgstr ""
+msgstr "普通"
 
 #: ../to-be-integrated.rst:621
 msgid ""
@@ -1319,10 +1498,15 @@ msgid ""
 " device and in Keepass would be out of sync and OTP codes will not be the"
 " same with expected."
 msgstr ""
+"插入主密码（可选） 设置密钥文件/供应商：为一次性密码（OATH HOTP） 点击确定 使用Nitrokey应用程序：选择HOTP插槽并生成HOTP密码（"
+"会自动复制到剪贴板）。注意：您可能需要写下这个秘密，并将其保存在安全的地方。否则，如果您的Nitrokey丢失或被破坏，您的密码数据库也会丢失！！。"
+"将秘密粘贴到Keepass OTP插件窗口，确保两个窗口中的计数器字段和数字计数设置相同。在Nitrokey应用程序中点击 \"确定 \"来保存这个槽"
+"。选择秘密类型。Base32 按照你的意愿设置其他设置。请参考插件手册（应该在同一个下载文件中）。我建议将前瞻值设置为非零，以防止在使用HOTP插槽意外请"
+"求代码后锁定数据库。在这种情况下，设备上的计数器和Keepass中的计数器将不同步，OTP代码将与预期的不一致。"
 
 #: ../to-be-integrated.rst:630
 msgid "Unlocking Database"
-msgstr ""
+msgstr "解锁数据库"
 
 #: ../to-be-integrated.rst:632
 msgid ""
@@ -1331,10 +1515,12 @@ msgid ""
 "choosing proper HOTP slot from the Nitrokey App and pasting the clipboard"
 " content to proper field (the order of the codes is important). Press OK"
 msgstr ""
+"打开数据库 插入主密码（如果设置了） 密钥文件/供应商：到一次性密码（OATH HOTP） 按确定 "
+"从Nitrokey应用程序中反复选择适当的HOTP插槽，将剪贴板内容粘贴到适当的区域，插入HOTP代码（代码的顺序很重要）。按OK键"
 
 #: ../to-be-integrated.rst:639
 msgid "Issues"
-msgstr ""
+msgstr "问题"
 
 #: ../to-be-integrated.rst:641
 msgid ""
@@ -1350,30 +1536,35 @@ msgid ""
 "database and how it is now configured. I have not noticed until I have "
 "watched the movie."
 msgstr ""
+"由于HOTP解决方案的性质，有可能出现计数器不同步的情况（在日常使用中选择错误的OTP插槽）。使用前瞻插件的设置应该可以防止这种情况（数值10左右就足够了"
+"--取决于所需的安全要求--这将允许10个意外的请求）。TOTP没有这个问题。设置OTP保护可能容易出错。在OtpKeyProv方面没有秘密验证。在4:2"
+"2的测试影片中，我设法将Base32编码的秘密设置为Hex（这不是一个正确的Hex值），它没有抱怨。没有任何信息表明数据库发生了什么以及它现在是如何配置的"
+"。我是在看了电影后才注意到的。"
 
 #: ../to-be-integrated.rst:644
 msgid "Tested under Ubuntu 16.10, Nitrokey App v0.6.3 and Nitrokey Storage v0.45."
-msgstr ""
+msgstr "在Ubuntu 16.10下测试，Nitrokey App v0.6.3和Nitrokey Storage v0.45。"
 
 #: ../to-be-integrated.rst:653
 msgid "**Q:** How can I use the True Random Number Generator?"
-msgstr ""
+msgstr "**问：**我如何使用真实随机数发生器？"
 
 #: ../to-be-integrated.rst:655
 msgid ""
 "Both devices are compatible to the OpenPGP Card, so that scdrand should "
 "work. This script may be useful. The TRNG provides about 40 kbit/s."
-msgstr ""
+msgstr "这两种设备都与OpenPGP卡兼容，所以scdrand应该可以工作。这个脚本可能是有用的。TRNG提供大约40 kbit/s。"
 
 #: ../to-be-integrated.rst:657
 msgid ""
 "The user comio created a systemd file to use scdrand and thus the TRNG "
 "more generally. He created a ebuild for Gentoo, too."
 msgstr ""
+"用户 comio 创建了一个 systemd 文件来使用 scdrand，从而更广泛地使用 TRNG。他还为 Gentoo 创建了一个 ebuild。"
 
 #: ../to-be-integrated.rst:663
 msgid "**Q:** Do you have resources for development and integration?"
-msgstr ""
+msgstr "**问：**你们有开发和整合的资源吗？"
 
 #: ../to-be-integrated.rst:666
 msgid ""
@@ -1390,10 +1581,15 @@ msgid ""
 "Safe and OTP entries. A libnitrokey wrapper for Rust providing access to "
 "Nitrokey devices."
 msgstr ""
+"使用Nitrokey库来管理一次性密码和密码安全功能。项目nitrokey-get-totp和nitrokey-get-password是使用Nitrok"
+"ey库的python绑定来获得自定义界面的好例子。为了访问集成智能卡，你可以使用OpenSC'的命令行工具。如果你的应用程序有一个PKCS#11接口，请使"
+"用OpenSC'的PKCS#11驱动程序。要与智能卡低级别的工作，请参阅OpenPGP卡规范。固件的源代码和硬件布局也是可用的。要开发特殊的应用程序或用于"
+"命令行访问，可以使用由d-e-s-o创建的nitrocli。Gkey是一个基于Go的命令行工具，用于访问密码保险箱和OTP条目。一个用于Rust的libn"
+"itrokey包装器，提供对Nitrokey设备的访问。"
 
 #: ../to-be-integrated.rst:677
 msgid "# HSM 2"
-msgstr ""
+msgstr "# HSM 2"
 
 #: ../to-be-integrated.rst:679
 msgid ""
@@ -1401,14 +1597,16 @@ msgid ""
 "have a size of up to 256 byte. The total storage capacity of ca. 32 KByte"
 " is shared dynamically among keys and data objects."
 msgstr ""
+"**硝基钥匙HSM：**可以创建124个数据对象（DF，EF）。每个EF的大小可以达到256字节。总存储容量约为32 "
+"KByte，在钥匙和数据对象之间动态共享。"
 
 #: ../to-be-integrated.rst:683
 msgid "**Q:** How to use the HSM for Login For: Nitrokey HSM"
-msgstr ""
+msgstr "**问：**如何使用HSM进行登录 对于。Nitrokey HSM"
 
 #: ../to-be-integrated.rst:686
 msgid "Select your use case:"
-msgstr ""
+msgstr "选择你的用例。"
 
 #: ../to-be-integrated.rst:688
 msgid ""
@@ -1416,16 +1614,18 @@ msgid ""
 "Nitrokey HSM on Windows Domain Computers Using MS Active Directory For "
 "Unix environments an integration with PAM and OpenSSH is available."
 msgstr ""
+"在独立的Windows计算机上用Nitrokey HSM登录 使用MS Active Directory在Windows域计算机上用Nitrokey "
+"HSM登录 对于Unix环境，可以与PAM和OpenSSH集成。"
 
 #: ../to-be-integrated.rst:692
 msgid "**Q:**  How to use the HSM for Email Encryption"
-msgstr ""
+msgstr "**问：**如何使用HSM进行电子邮件加密？"
 
 #: ../to-be-integrated.rst:694
 msgid ""
 "Encrypt your email using the S/MIME industry standard available in all "
 "major e-mail clients."
-msgstr ""
+msgstr "使用所有主要电子邮件客户端中的S/MIME行业标准对您的电子邮件进行加密。"
 
 #: ../to-be-integrated.rst:696
 msgid ""
@@ -1433,14 +1633,16 @@ msgid ""
 "Microsoft Outlook. Other email clients with support for PKCS#11 or "
 "Microsoft CSP should work as well."
 msgstr ""
+"经测试，Nitrokey HSM可以在Mozilla Thunderbird和Microsoft "
+"Outlook中使用。其他支持PKCS#11或微软CSP的电子邮件客户端应该也可以使用。"
 
 #: ../to-be-integrated.rst:698
 msgid "Note: A certificate can be purchased cheaply from CERTUM."
-msgstr ""
+msgstr "注：可以从CERTUM便宜地购买证书。"
 
 #: ../to-be-integrated.rst:700
 msgid "**Q:**   How to use the Nitrokey for Hard Disk Encryption with VeraCrpt?"
-msgstr ""
+msgstr "**问：**如何用VeraCrpt进行硬盘加密的Nitrokey？"
 
 #: ../to-be-integrated.rst:702
 msgid ""
@@ -1449,6 +1651,8 @@ msgid ""
 "recommended, although the following instructions should apply to "
 "TrueCrypt as well. Follow these steps to use the program with Nitrokey:"
 msgstr ""
+"VeraCrypt是一款免费的开源磁盘加密软件，适用于Windows、macOS和GNU/"
+"Linux。它是TrueCrypt的后继者，因此被推荐使用，尽管以下说明也应适用于TrueCrypt。按照这些步骤来使用该程序和Nitrokey。"
 
 #: ../to-be-integrated.rst:711
 msgid ""
@@ -1457,20 +1661,22 @@ msgid ""
 "Instead it stores a keyfile on the Nitrokey which theoretically could be "
 "stolen by a computer virus after the user enters the password."
 msgstr ""
+"安全方面的考虑。请注意，VeraCrypt并没有利用Nitrokey（以及一般的智能卡）提供的全部安全性。相反，它在Nitrokey上存储了一个密钥文件，"
+"理论上在用户输入密码后，该文件可能被计算机病毒窃取。"
 
 #: ../to-be-integrated.rst:713
 msgid ""
 "Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
 "described security limitation. (Not tested with Nitrokey HSM!)"
-msgstr ""
+msgstr "注意：Aloaha Crypt是基于TrueCrypt/VeraCrypt的，但没有所述的安全限制。(未用Nitrokey HSM测试！)"
 
 #: ../to-be-integrated.rst:716
 msgid "**Q:** How to sign and encrypt files and pdfs?"
-msgstr ""
+msgstr "**问：**如何对文件和pdf进行签名和加密？"
 
 #: ../to-be-integrated.rst:718
 msgid "GnuPG"
-msgstr ""
+msgstr "GnuPG"
 
 #: ../to-be-integrated.rst:720
 msgid ""
@@ -1481,31 +1687,36 @@ msgid ""
 "Libre Office or any other PDF reader supporting electronic signatures. "
 "ECC HSM Encryptor"
 msgstr ""
+"从2.1版开始，GnuPG已经内置了对Nitrokey HSM的有限支持。使用gpgsm工具来签署、验证、加密和解密文件或使用Nitrokey HSM的"
+"S/MIME消息。使用Nitrokey HSM上的签名密钥，使用Acrobat Reader、Open Office / Libre "
+"Office或任何其他支持电子签名的PDF阅读器来签署文件。ECC HSM加密器"
 
 #: ../to-be-integrated.rst:723
 msgid ""
 "ECC HSM Encryptor is a small application to encrypt and decrypt files "
 "with a Nitrokey HSM."
-msgstr ""
+msgstr "ECC HSM Encryptor是一个用Nitrokey HSM加密和解密文件的小程序。"
 
 #: ../to-be-integrated.rst:725
 msgid ""
 "**Q:** How to do certificat-based Web login Protect access to sensitive "
 "information on your website with 2nd factor authentication."
-msgstr ""
+msgstr "**问：**如何进行基于证书的网络登录 用第二因素认证来保护对你网站上敏感信息的访问。"
 
 #: ../to-be-integrated.rst:728
 msgid ""
 "Use a Nitrokey HSM as authentication token via the build-in device "
 "authentication PKI or use keys and certificates on a Nitrokey HSM for "
 "TLS/SSL client authentication."
-msgstr ""
+msgstr "通过内置的设备认证PKI使用Nitrokey HSM作为认证令牌，或者使用Nitrokey HSM上的密钥和证书进行TLS/SSL客户端认证。"
 
 #: ../to-be-integrated.rst:730
 msgid ""
 "**Q:** SSH for Server Administration with windows For: Nitrokey Pro, "
 "Nitrokey Storage, Nitrokey Start, Nitrokey HSM"
 msgstr ""
+"**问：**用windows进行服务器管理的SSH 对于。Nitrokey Pro, Nitrokey Storage, Nitrokey Start, "
+"Nitrokey HSM"
 
 #: ../to-be-integrated.rst:733
 msgid ""
@@ -1514,25 +1725,27 @@ msgid ""
 "installed on the system (only the core application GnuPG is needed). "
 "Furthermore you should install PuTTY. Preparation on client"
 msgstr ""
+"Nitrokey应该已经安装了PGP密钥，本地的GnuPG钥匙圈应该知道这些密钥，也就是说GPG4Win应该安装在系统上（只需要核心程序GnuPG）。此外"
+"，你应该安装PuTTY。在客户端的准备工作"
 
 #: ../to-be-integrated.rst:755
 msgid "**Q:** SSH Server administration on linux"
-msgstr ""
+msgstr "**问：**Linux上的SSH服务器管理"
 
 #: ../to-be-integrated.rst:802
 msgid "**Q:** DNSSEC"
-msgstr ""
+msgstr "**Q:** DNSSEC"
 
 #: ../to-be-integrated.rst:805
 msgid "For: Nitrokey HSM"
-msgstr ""
+msgstr "对于。Nitrokey HSM"
 
 #: ../to-be-integrated.rst:807
 msgid ""
 "Protect your domain name resolution using DNSSEC and a Nitrokey HSM as "
 "secure key store. It's based on Smartcard-HSM which is why the following "
 "resource apply:"
-msgstr ""
+msgstr "使用DNSSEC和Nitrokey HSM作为安全密钥存储，保护你的域名解析。它是基于智能卡-HSM的，这就是为什么以下资源适用。"
 
 #: ../to-be-integrated.rst:809
 msgid ""
@@ -1543,6 +1756,10 @@ msgid ""
 " Mens wrote a nice article about integrating the SmartCard-HSM with "
 "PowerDNS."
 msgstr ""
+"Vadim Penzin用Nitrokey HSM签署NSD DNSSEC区域。Richard "
+"Lamb在一个演示中成功地测试了与OpenDNSSEC的整合。Luis D Espinoza Sanchez & Eberhard W "
+"Lisse在新加坡举行的2015年ICAAN会议上举行了关于使用SmartCard-HSM进行DNSSEC的会议。Jan-Piet "
+"Mens写了一篇关于SmartCard-HSM与PowerDNS整合的好文章。"
 
 #: ../to-be-integrated.rst:815
 msgid ""
@@ -1553,28 +1770,30 @@ msgid ""
 "device, create a secure communication channel and perform offline PIN "
 "verification. The coolPACS project has all the details."
 msgstr ""
+"**问：**物理访问控制 凭借其独特的内置设备认证PKI，Nitrokey HSM有一个加密保护的唯一身份，可以在快速认证协议中进行验证。一个访问控制终端"
+"可以验证设备的真实性和身份，创建一个安全的通信通道，并执行离线PIN验证。coolPACS项目有所有的细节。"
 
 #: ../to-be-integrated.rst:818 ../to-be-integrated.rst:914
 msgid "**Q:**"
-msgstr ""
+msgstr "**Q:**"
 
 #: ../to-be-integrated.rst:916
 msgid "PKI / Certificate Authority (CA)"
-msgstr ""
+msgstr "公钥基础设施/证书机构（CA）"
 
 #: ../to-be-integrated.rst:918
 msgid "**Q:** Secret Management and Cloud Infrastructure"
-msgstr ""
+msgstr "**问：**秘密管理和云基础设施"
 
 #: ../to-be-integrated.rst:920
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at banzaicloud.com."
-msgstr ""
+msgstr "在Nitrokey HSM上为Hashicorp Vault/Bank-Vault提供安全钥匙的方法可以在banzaicloud.com找到。"
 
 #: ../to-be-integrated.rst:922
 msgid "**Q:** How to do N-of-m Schemes"
-msgstr ""
+msgstr "**问：**如何进行N-of-m计划"
 
 #: ../to-be-integrated.rst:924
 msgid ""
@@ -1583,28 +1802,30 @@ msgid ""
 "to control the access to the device. Please see this blog post for more "
 "detailed information. N-of-m for DKEK Shares"
 msgstr ""
+"Nitrokey HSM 2支持两种不同的n-of-m方案--"
+"一种用于安全共享密钥材料/密码，另一种用于公共密钥认证，以控制对设备的访问。更详细的信息请参见这篇博文。DKEK共享的N-of-m"
 
 #: ../to-be-integrated.rst:927
 msgid ""
 "This feature can be used with OpenSC as described here. The general "
 "approach is seen in the videos below (external links)."
-msgstr ""
+msgstr "这个功能可以与OpenSC一起使用，如这里所述。在下面的视频中可以看到一般的方法（外部链接）。"
 
 #: ../to-be-integrated.rst:929
 msgid "Nitrokey HSM's Secure Key Backup and Restore:"
-msgstr ""
+msgstr "Nitrokey HSM'的安全密钥备份和恢复。"
 
 #: ../to-be-integrated.rst:931
 msgid "Screencast"
-msgstr ""
+msgstr "录像带"
 
 #: ../to-be-integrated.rst:933
 msgid "Nitrokey HSM's M-of-N Threshold Scheme:"
-msgstr ""
+msgstr "Nitrokey HSM'的M-of-N阈值方案。"
 
 #: ../to-be-integrated.rst:935
 msgid "screencast N-of-m for public key authentication"
-msgstr ""
+msgstr "公钥认证的截屏N-of-m"
 
 #: ../to-be-integrated.rst:938
 msgid ""
@@ -1613,6 +1834,8 @@ msgid ""
 "process step by step in the Smart Card Shell. For OpenSC there is a "
 "ticket to get that integrated."
 msgstr ""
+"到目前为止，只有OpenSCDP支持n-"
+"of-m认证。这篇博文给出了一个概述，这里的方法（需要CDN访问）显示了在智能卡外壳中一步一步的过程。对于OpenSC来说，有一个票据可以将其整合。"
 
 #: ../to-be-integrated.rst:940
 msgid ""
@@ -1620,10 +1843,11 @@ msgid ""
 "for locally and remote connected HSMs. The PKI-as-a-Service Portal is "
 "based on OpenSCDP."
 msgstr ""
+"PKI-as-a-Service门户网站也支持本地和远程连接HSM的n-of-m认证。PKI-as-a-Service门户网站是基于OpenSCDP的。"
 
 #: ../to-be-integrated.rst:942
 msgid "**Q:** How to safe Cryptocurrences in the Nitrokey HSM"
-msgstr ""
+msgstr "**问：**如何在Nitrokey HSM中确保加密货币的安全。"
 
 #: ../to-be-integrated.rst:945
 msgid ""
@@ -1632,22 +1856,26 @@ msgid ""
 "the HSM in an Ethereum PoA Chain. Tezos has been reported to work with "
 "Nitrokey HSM."
 msgstr ""
+"J.v.d.Bosch写了一个简单的、免费的python程序来保护HSM中比特币钱包的私钥。更多信息请看这里。在Ethereum "
+"PoA链中使用HSM。据报道，Tezos已经与Nitrokey HSM一起工作。"
 
 #: ../to-be-integrated.rst:949
 msgid ""
 "**Q:** How to use the True Random Number Generator? Nitrokey HSM can be "
 "used with Botan and TokenTools by using OpenSC as a PKCS#11 driver."
 msgstr ""
+"**问：**如何使用真实随机数发生器？Nitrokey HSM可以通过使用OpenSC作为PKCS#11驱动，与Botan和TokenTools一起使用。"
 
 #: ../to-be-integrated.rst:952
 msgid ""
 "OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
 "doesn't contain a mapping for OpenSSL to C_GenerateRandom."
 msgstr ""
+"OpenSSL不能直接使用Nitrokey HSM的RNG，因为engine-pkcs11不包含OpenSSL对C_GenerateRandom的映射。"
 
 #: ../to-be-integrated.rst:954
 msgid "**Q:** What can I use for development and integration?"
-msgstr ""
+msgstr "**问：**我可以用什么来开发和整合？"
 
 #: ../to-be-integrated.rst:956
 msgid ""
@@ -1656,12 +1884,15 @@ msgid ""
 "distribution, the PKCS driver may may be located at /usr/lib/x86_64"
 "-linux-gnu/opensc-pkcs11.so for example."
 msgstr ""
+"使用OpenSC'的命令行工具 "
+"如果你的应用程序有一个PKCS#11接口，请使用OpenSC'的PKCS#11驱动程序。根据你的Linux发行版，PKCS驱动程序可能位于/usr/"
+"lib/x86_64-linux-gnu/opensc-pkcs11.so，例如。"
 
 #: ../to-be-integrated.rst:958
 msgid ""
 "Alternatively to OpenSC, you might use sc-hsm-embedded PKCS#11 and CSP-"
 "Minidriver Module."
-msgstr ""
+msgstr "除了OpenSC，你还可以使用sc-hsm-embedded PKCS#11和CSP-Minidriver模块。"
 
 #: ../to-be-integrated.rst:959
 msgid ""
@@ -1674,10 +1905,13 @@ msgid ""
 " frontend to OpenSCs toolset - nitrotool A forum post describes the "
 "procedure to sign executables with a key stored on HSM on Windows."
 msgstr ""
+"如果你使用Java，你会发现JCE提供者是智能卡外壳的一部分。你可以在这里找到关于m-of-n方案的信息。安全信息传递可以与JCE提供者一起使用。请在Ca"
+"rdContact开发者网络中注册，以获得用户手册和其他工具。您也可以向我们索取该手册。使用Fedora的智能卡转发 GitHub上的一个用户生成的工具，"
+"为OpenSCs工具集提供了一个简单的前端 - nitrotool 一个论坛帖子描述了在Windows上用存储在HSM上的密钥签署可执行文件的程序。"
 
 #: ../to-be-integrated.rst:967
 msgid "Key Use Counter"
-msgstr ""
+msgstr "关键使用计数器"
 
 #: ../to-be-integrated.rst:969
 msgid ""
@@ -1686,6 +1920,8 @@ msgid ""
 "(SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter in the class "
 "scsh/sc-hsm/SmartCardHSM.js)."
 msgstr ""
+"密钥使用计数器显示在智能卡外壳的密钥管理器中。目前你只能用脚本来设置它（SmartCardHSMKeySpecGenerator.prototype."
+"setKeyUseCounter在scsh/sc-sm/SmartCardHSM.js类中）。"
 
 #: ../to-be-integrated.rst:971
 msgid ""
@@ -1694,6 +1930,8 @@ msgid ""
 "counter can be set. The attribute can then also be set for a key can be "
 "queried."
 msgstr ""
+"在我们的PKCS#11模块中，有一个专有属性CKA_SC_HSM_KEY_USE_COUNTER，可以设置钥匙使用的C_GenerateKeyPair计数"
+"器。然后，该属性也可以被设置为一个密钥可以被查询到。"
 
 #: ../to-be-integrated.rst:973
 msgid ""
@@ -1701,4 +1939,5 @@ msgid ""
 "SmartCardHSMKey.getUseCounter() and confirm with "
 "SmartCardHSMKeySpec.setKeyUseCounter() can be set."
 msgstr ""
-
+"在OCF和JCE Provider中，可以用SmartCardHSMKey."
+"getUseCounter()来查询密钥使用计数器，用SmartCardHSMKeySpec.setKeyUseCounter()来确认可以设置。"
