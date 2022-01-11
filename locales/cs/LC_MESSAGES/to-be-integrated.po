@@ -4,27 +4,30 @@
 # Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Nitrokey Documentation \n"
+"Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-06 01:52+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-01-11 11:10+0000\n"
+"Last-Translator: Ben (Weblate Admin) <ben@dotplex.com>\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-to-be-integrated/cs/>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../to-be-integrated.rst:1
 msgid "# storage"
-msgstr ""
+msgstr "# storage"
 
 #: ../to-be-integrated.rst:4
 msgid "Configure Hidden Volumes:"
-msgstr ""
+msgstr "Konfigurace skrytých svazků:"
 
 #: ../to-be-integrated.rst:6
 msgid ""
@@ -32,6 +35,9 @@ msgid ""
 " volume\". Now you need to enter a new password twice to protect your "
 "hidden volume. The password strength is indicated below."
 msgstr ""
+"Odemknutí zašifrovaného svazku z nabídky aplikace Nitrokey. Vyberte možnost "
+"\"setup hidden volume\". Nyní je třeba dvakrát zadat nové heslo pro ochranu "
+"skrytého svazku. Síla hesla je uvedena níže."
 
 #: ../to-be-integrated.rst:10
 msgid ""
@@ -39,6 +45,9 @@ msgid ""
 "short. Passwords like used for hidden devices can potentially be attacked"
 " unlimited which is why they need to be sufficiently strong."
 msgstr ""
+"Poznámka: PIN lze vyzkoušet pouze třikrát, proto mohou být krátké. Hesla, "
+"jaká se používají pro skrytá zařízení, mohou být potenciálně napadena "
+"neomezeně, a proto musí být dostatečně silná."
 
 #: ../to-be-integrated.rst:17
 msgid ""
@@ -47,6 +56,10 @@ msgid ""
 "choice because it could destroy data on the (not-hidden) encrypted volume"
 " and reveal the existience of the hidden volume."
 msgstr ""
+"Dále je třeba definovat používanou oblast úložiště. Skryté svazky se "
+"ukládají do prázdného prostoru šifrovaného svazku. Tato volba je kritická, "
+"protože by mohla zničit data na (neskrytém) šifrovaném svazku a odhalit "
+"existenci skrytého svazku."
 
 #: ../to-be-integrated.rst:13
 #, python-format
@@ -61,6 +74,15 @@ msgid ""
 "buffer = 20% The hidden volume should end in a distance before the end of"
 " the storage. For example: 90%"
 msgstr ""
+"Na zašifrovaném svazku byste měli použít jeden oddíl FAT32, protože "
+"žurnálovací souborové systémy, zejména NTFS, mohou zašifrovaná data zničit. "
+"Před vytvořením skrytého svazku zkopírujte některé soubory na šifrovaný "
+"svazek. Po konfiguraci skrytého svazku byste již neměli'přidávat ani měnit "
+"soubory na šifrovaný svazek. Zjistěte, kolik úložného prostoru vaše soubory "
+"na šifrovaném svazku spotřebovávají. Například: 10% Tskrytý svazek by měl "
+"začít po vašich souborech na šifrovaném svazku. Například: 10% fsouborů + "
+"10% bskrytý svazek = 20% Tskrytý svazek by měl končit ve vzdálenosti před "
+"koncem úložiště. Například: 90%"
 
 #: ../to-be-integrated.rst:19
 msgid ""
@@ -68,10 +90,13 @@ msgid ""
 "must not overlap. Otherwise they would override and destroy each other's "
 "data. Each hidden volume would require a different password."
 msgstr ""
+"Pokud používáte dva nebo více skrytých svazků, pamatujte, že se jejich "
+"úložná oblast nesmí překrývat. V opačném případě by se vzájemně přepsaly a "
+"zničily data. Každý skrytý svazek by vyžadoval jiné heslo."
 
 #: ../to-be-integrated.rst:21
 msgid "Usage of Hidden Volumes:"
-msgstr ""
+msgstr "Používání skrytých svazků:"
 
 #: ../to-be-integrated.rst:23
 msgid ""
@@ -85,18 +110,27 @@ msgid ""
 "various operating systems. Make sure to unmount/eject all partitions on "
 "the hidden volumes before locking or disconnecting the Nitrokey."
 msgstr ""
+"Vyberte možnost \"odemknout zašifrovaný svazek\" a zadejte svůj uživatelský "
+"kód PIN. Vyberte možnost \"odemknout skrytý svazek\" a zadejte libovolné "
+"heslo skrytého svazku'. Pokud je to poprvé, může být nutné vytvořit oddíl na "
+"skrytém svazku. Systém Windows otevře příslušné okno a vyzve vás k tomu. V "
+"systémech Linux a Mac OS bude možná nutné otevřít správce oddílů a vytvořit "
+"oddíl ručně. Můžete vytvořit libovolný počet oddílů. Pokud chcete mít k "
+"oddílu přístup z různých operačních systémů, doporučujeme použít formát "
+"FAT(32). Před uzamčením nebo odpojením klíče Nitrokey se ujistěte, že jste "
+"všechny oddíly na skrytých svazcích odmontovali/odpojili."
 
 #: ../to-be-integrated.rst:28
 msgid "Also see older but comprehensive Nitrokey Storage manual."
-msgstr ""
+msgstr "Podívejte se také na starší, ale obsáhlou příručku k úložišti Nitrokey."
 
 #: ../to-be-integrated.rst:32
 msgid "# pro"
-msgstr ""
+msgstr "# pro"
 
 #: ../to-be-integrated.rst:36
 msgid "PKCS#11 Driver"
-msgstr ""
+msgstr "Ovladač PKCS#11"
 
 #: ../to-be-integrated.rst:38
 msgid ""
@@ -105,6 +139,10 @@ msgid ""
 "PuTTY/KiTTY, OpenSSH, OpenSSL, or any other PKCS#11 compatible software, "
 "you should install OpenSC."
 msgstr ""
+"Pokud chcete používat šifrování e-mailů S/MIME v Thunderbirdu, TrueCrypt/"
+"VeraCrypt, ověřování SSL pomocí certifikátů ve Firefoxu, PuTTY/KiTTY, "
+"OpenSSH, OpenSSL nebo jiném softwaru kompatibilním s PKCS#11, měli byste si "
+"nainstalovat OpenSC."
 
 #: ../to-be-integrated.rst:40
 msgid ""
@@ -112,6 +150,9 @@ msgid ""
 "GnuPG/OpenPGP. But the other way around works fine. If you want to use "
 "Nitrokey with both GnuPG and PKCS#11, generate the keys with GnuPG."
 msgstr ""
+"Všimněte si, že klíč Nitrokey inicializovaný pomocí OpenSC nefunguje s GnuPG/"
+"OpenPGP. Opačný způsob však funguje bez problémů. Pokud chcete Nitrokey "
+"používat s GnuPG i PKCS#11, generujte klíče pomocí GnuPG."
 
 #: ../to-be-integrated.rst:42
 msgid ""
@@ -121,6 +162,10 @@ msgid ""
 "Currently it's limit to the authentication certificate and not widely "
 "tested yet.)"
 msgstr ""
+"Nepoužívejte PKCS#11 souběžně s GnuPG, protože oba systémy se mohou vzájemně "
+"ovlivňovat a může dojít k neočekávaným problémům. (Ve vývoji je další slibný "
+"projekt scd-pkcs11, který by toto omezení mohl nakonec překonat. V současné "
+"době je omezen na autentizační certifikát a zatím není široce testován.)"
 
 #: ../to-be-integrated.rst:44
 msgid ""
@@ -128,14 +173,17 @@ msgid ""
 "2, 3). These are general instructions how to use X.509 certificates. "
 "Alternative PKCS#11 Driver:"
 msgstr ""
+"Návod, jak vytvořit platný certifikát X.509 pomocí nástroje Nitrokey (1, 2, "
+"3). Toto jsou obecné pokyny, jak používat certifikáty X.509. Alternativní "
+"ovladač PKCS#11:"
 
 #: ../to-be-integrated.rst:47
 msgid "The recommended PKCS#11 driver is OpenSC."
-msgstr ""
+msgstr "Doporučeným ovladačem PKCS#11 je OpenSC."
 
 #: ../to-be-integrated.rst:49
 msgid "Windows Mini Driver"
-msgstr ""
+msgstr "Ovladač systému Windows Mini"
 
 #: ../to-be-integrated.rst:51
 msgid ""
@@ -145,6 +193,11 @@ msgid ""
 "browser, Windows Login). To install the driver, you may need to allow the"
 " installation of unsigned drivers first. Aloaha"
 msgstr ""
+"Tento mini ovladač umožňuje integrovat Nitrokey s úložištěm certifikátů "
+"systému Window's. Následně lze s Nitrokey používat všechny aplikace, které "
+"toto úložiště certifikátů používají (např. Internet Explorer, webový "
+"prohlížeč Google Chrome, Windows Login). Pro instalaci ovladače může být "
+"nutné nejprve povolit instalaci nepodepsaných ovladačů. Aloaha"
 
 #: ../to-be-integrated.rst:54
 msgid ""
@@ -153,16 +206,22 @@ msgid ""
 "and with Windows as well as applications to encrypt and sign PDFs and the"
 " hard disk."
 msgstr ""
+"Všechny aplikace Aloaha pracují s klíčem Nitrokey. Patří sem middleware pro "
+"integraci Nitrokey s ostatními aplikacemi založenými na PKCS#11 a se "
+"systémem Windows a také aplikace pro šifrování a podepisování PDF a pevného "
+"disku."
 
 #: ../to-be-integrated.rst:56
 msgid "Alternative PKCS#11 Driver:"
-msgstr ""
+msgstr "Alternativní ovladač PKCS#11:"
 
 #: ../to-be-integrated.rst:58
 msgid ""
 "The recommended PKCS#11 driver is OpenSC. Alternatively, you could use "
 "Peter Koch's PKCS#11 driver which has the following limitations:"
 msgstr ""
+"Doporučeným ovladačem PKCS#11 je OpenSC. Alternativně můžete použít ovladač "
+"PKCS#11 od Petera Kocha, který má následující omezení:"
 
 #: ../to-be-integrated.rst:60
 msgid ""
@@ -170,16 +229,22 @@ msgid ""
 "generated on the Nitrokey) The Linux version does not allow to generate "
 "keys. Modification of the password/PIN under Linux is not possible."
 msgstr ""
+"Žádný import stávajících certifikátů X.509. (Místo toho je třeba klíče "
+"vygenerovat v Nitrokey) Verze pro Linux neumožňuje generování klíčů. Změna "
+"hesla/PIN pod Linuxem není možná."
 
 #: ../to-be-integrated.rst:64
 msgid "p11-glue"
-msgstr ""
+msgstr "p11-glue"
 
 #: ../to-be-integrated.rst:66
 msgid ""
 "P11-glue uses PKCS#11 as glue between crypto libraries and security "
 "applications on the open source desktop. Articles in German"
 msgstr ""
+"P11-glue používá PKCS#11 jako spojovací článek mezi kryptografickými "
+"knihovnami a bezpečnostními aplikacemi na desktopu s otevřeným zdrojovým "
+"kódem. Články v němčině"
 
 #: ../to-be-integrated.rst:69
 msgid ""
@@ -188,10 +253,13 @@ msgid ""
 "gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter "
 "CentOS."
 msgstr ""
+"Eine allgemeine und gut verständliche Einführung bietet der Artikel "
+"Magisches Leuchten im Linux Magazin 2010/12. Eine umfangreiche Anleitung "
+"gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter CentOS."
 
 #: ../to-be-integrated.rst:75
 msgid "**Q:** How can I login into Windows?"
-msgstr ""
+msgstr "**Q:** Jak se mohu přihlásit do systému Windows?"
 
 #: ../to-be-integrated.rst:75
 msgid ""
@@ -201,10 +269,17 @@ msgid ""
 "Note that the Mini Driver for Nitrokey Pro may not work yet for write "
 "mode."
 msgstr ""
+"Chcete-li k zařízením Nitrokey přistupovat pouze pro čtení, stáhněte si a "
+"nainstalujte tento mini ovladač (CSP). Pokud používáte systém Windows "
+"Server, může být nutné před instalací ovladače vypnout ověřování podpisu "
+"ovladače. Upozorňujeme, že Mini ovladač pro Nitrokey Pro nemusí ještě "
+"fungovat pro režim zápisu."
 
 #: ../to-be-integrated.rst:77
 msgid "There exist different ways to use a Nitrokey to logon on Windows:"
 msgstr ""
+"Existují různé způsoby, jak se v systému Windows přihlásit pomocí klíče "
+"Nitrokey:"
 
 #: ../to-be-integrated.rst:79
 msgid ""
@@ -215,14 +290,23 @@ msgid ""
 "on Windows domain computers using MS Active Directory based on Smart "
 "Policy for other Nitrokey devices."
 msgstr ""
+"Přihlašování na samostatných počítačích se systémem Windows na základě "
+"ověřování EIDAuthenticate. Případně nainstalujte OpenSC a použijte Aloaha "
+"Smart Login's PKCS#11 Credentials. Přihlašování na počítačích s doménou "
+"Windows pomocí MS Active Directory založené na minidriveru OpenPGP-CSP pro "
+"Nitrokey Storage 2 Nitrokey Pro 2 Přihlašování na počítačích s doménou "
+"Windows pomocí MS Active Directory založené na Smart Policy pro ostatní "
+"zařízení Nitrokey."
 
 #: ../to-be-integrated.rst:84
 msgid "**Q:** How can I login into Linux? Linux Login with PAM"
 msgstr ""
+"**Q:** Jak se mohu přihlásit do systému Linux? Přihlášení do Linuxu pomocí "
+"PAM"
 
 #: ../to-be-integrated.rst:87
 msgid "You have two options: pam_p11 or Poldi."
-msgstr ""
+msgstr "Máte dvě možnosti: pam_p11 nebo Poldi."
 
 #: ../to-be-integrated.rst:89
 msgid ""
@@ -230,6 +314,8 @@ msgid ""
 "S/MIME certificates. Please have a look at the documentation for more "
 "information."
 msgstr ""
+"Řešení s pam_p11 je obtížnější a je založeno na certifikátech S/MIME. Více "
+"informací naleznete v dokumentaci."
 
 #: ../to-be-integrated.rst:91
 msgid ""
@@ -238,12 +324,18 @@ msgid ""
 "installation of poldi (e.g. 'sudo apt-get install libpam-poldi' on "
 "Ubuntu) the following steps are needed to get it working."
 msgstr ""
+"Poldi 0.4.1 funguje bezchybně s Nitrokey pro ověřování PAM s klíči RSA ("
+"informace o klíčích ECC najdete v části Řešení problémů). Kromě instalace "
+"poldi (např. 'sudo apt-get install libpam-poldi' v Ubuntu) je pro "
+"zprovoznění potřeba provést následující kroky."
 
 #: ../to-be-integrated.rst:93
 msgid ""
 "It is necessary to already have keys generated on the Nitrokey, as the "
 "authentication key is used by PAM."
 msgstr ""
+"Je nutné mít již vygenerované klíče na Nitrokey, protože autentizační klíč "
+"používá PAM."
 
 #: ../to-be-integrated.rst:95
 msgid ""
@@ -253,16 +345,23 @@ msgid ""
 "you have to add a line to /etc/poldi/localdb/users which contains the "
 "following information"
 msgstr ""
+"Nejprve je třeba zjistit \"ID aplikace\" vašeho klíče Nitrokey. Můžete "
+"použít \"gpg --card-status | grep Application\" a zjistit, jaký je váš. "
+"Vypadá to jako 'D00600012401020000000000xxxxxxxx' nebo podobně. Nyní musíte "
+"do souboru /etc/poldi/localdb/users přidat řádek, který obsahuje následující "
+"informace"
 
 #: ../to-be-integrated.rst:97
 msgid "<YourApplicationID> <YourUsername>"
-msgstr ""
+msgstr "<YourApplicationID> <YourUsername>"
 
 #: ../to-be-integrated.rst:99
 msgid ""
 "This could look like 'D00600012401020000000000xxxxxxxx nitrokeyuser'. Now"
 " dump the public key from the Nitrokey into poldi local db:"
 msgstr ""
+"Mohlo by to vypadat jako 'D00600012401020000000000xxxxxxxx nitrokeyuser'. "
+"Nyní vypište veřejný klíč z Nitrokey do lokální db poldi:"
 
 #: ../to-be-integrated.rst:101
 msgid ""
@@ -270,18 +369,23 @@ msgid ""
 "/etc/poldi/localdb/keys/<YourApplicationID>\" \"SCD READKEY --advanced "
 "OPENPGP.3\" /bye'"
 msgstr ""
+"sudo sh -c 'gpg-connect-agent \"/datafile /etc/poldi/localdb/keys/"
+"<YourApplicationID>\" \"SCD READKEY --advanced OPENPGP.3\" /bye'"
 
 #: ../to-be-integrated.rst:103
 msgid ""
 "Please be aware that you have to insert your Application ID in the line "
 "above with the one of your stick!"
 msgstr ""
+"Uvědomte si, že do řádku výše musíte vložit své ID žádosti s ID vaší hole!"
 
 #: ../to-be-integrated.rst:105
 msgid ""
 "Then you have to configure PAM. Just add \"auth sufficient pam_poldi.so\""
 " to pam configuration files according to your needs:"
 msgstr ""
+"Pak je třeba nakonfigurovat PAM. Stačí přidat \"auth sufficient pam_poldi."
+"so\" do konfiguračních souborů pam podle vašich potřeb:"
 
 #: ../to-be-integrated.rst:107
 msgid ""
@@ -289,6 +393,9 @@ msgid ""
 "console login /etc/pam.d/sudo for sudo authentication /etc/pam.d/gnome-"
 "screensaver for login back from a locked screen etc."
 msgstr ""
+"/etc/pam.d/common-auth pro grafické přihlašování uživatelů /etc/pam.d/login "
+"pro konzolové přihlašování /etc/pam.d/sudo pro sudo autentizaci /etc/pam.d/"
+"gnome-screensaver pro přihlášení ze zamčené obrazovky atd."
 
 #: ../to-be-integrated.rst:113
 msgid ""
@@ -297,24 +404,33 @@ msgid ""
 " that booting into rescue mode from Grub requires a root password, so "
 "keep that or a live CD which can read your filesystems to hand."
 msgstr ""
+"Poznámka: Pam je nebezpečný, proto se ujistěte, že máte možnost se k němu "
+"dostat, pokud autentizaci zcela porušíte. Nezapomeňte, že spuštění do "
+"záchranného režimu z Grubu vyžaduje heslo roota, takže jej nebo live CD, "
+"které umí číst souborové systémy, mějte po ruce."
 
 #: ../to-be-integrated.rst:115
 msgid ""
 "Here you find further instructions (in German, partially outdated). "
 "Troubleshooting"
 msgstr ""
+"Zde najdete další pokyny (v němčině, částečně zastaralé). Řešení problémů"
 
 #: ../to-be-integrated.rst:118
 msgid ""
 "If you get an error similar to 'ERR 100663414 Invalid ID <SCD>' you "
 "should try instead"
 msgstr ""
+"Pokud se zobrazí chyba podobná chybě 'ERR 100663414 Invalid ID <SCD>', měli "
+"byste zkusit místo toho."
 
 #: ../to-be-integrated.rst:120
 msgid ""
 "poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> "
 "/etc/poldi/localdb/keys"
 msgstr ""
+"poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> /etc/poldi/"
+"localdb/keys"
 
 #: ../to-be-integrated.rst:122
 msgid ""
@@ -326,20 +442,27 @@ msgid ""
 " eventually. In the meantime the only option is to build poldi from "
 "source."
 msgstr ""
+"Uvědomte si, že do řádku výše musíte vložit své ID žádosti s ID vaší hole! "
+"Klíče ECC Bohužel poldi zatím nepodporuje klíče ECC. Existuje však patch pro "
+"ECC klíče používané s Nitrokey Start. Ten je již obsažen v hlavní větvi "
+"vývojového repozitáře poldi, a proto bude časem vydán v novější verzi. Do té "
+"doby je jedinou možností sestavit poldi ze zdrojových kódů."
 
 #: ../to-be-integrated.rst:128
 msgid "**Q:** How can I login with One Time Passwords?"
-msgstr ""
+msgstr "**Q:** Jak se mohu přihlásit pomocí jednorázových hesel?"
 
 #: ../to-be-integrated.rst:128
 msgid ""
 "One-Time-Passwords (OTP) are used for secure login to websites and local "
 "applications."
 msgstr ""
+"Jednorázová hesla (OTP) se používají pro bezpečné přihlašování k webovým "
+"stránkám a místním aplikacím."
 
 #: ../to-be-integrated.rst:130
 msgid "Two OTP modes exist:"
-msgstr ""
+msgstr "Existují dva režimy OTP:"
 
 #: ../to-be-integrated.rst:132
 msgid ""
@@ -347,6 +470,10 @@ msgid ""
 "unsure, assume you are using this mode. HMAC-based One-time Passwords "
 "(HOTP) is used for local applications and computer logins."
 msgstr ""
+"Jednorázová hesla založená na čase (TOTP) se hojně používají na webových "
+"stránkách. Pokud si nejste jisti, předpokládejte, že používáte tento režim. "
+"Jednorázová hesla založená na HMAC (HOTP) se používají pro místní aplikace a "
+"přihlašování k počítači."
 
 #: ../to-be-integrated.rst:135
 msgid ""
@@ -354,6 +481,9 @@ msgid ""
 " need to download and install the latest Nitrokey App. Time-based One-"
 "time Passwords - TOTP"
 msgstr ""
+"Chcete-li používat jednorázová hesla s aplikací Nitrokey Pro nebo Nitrokey "
+"Storage, musíte si stáhnout a nainstalovat nejnovější aplikaci Nitrokey. "
+"Časová jednorázová hesla - TOTP"
 
 #: ../to-be-integrated.rst:138
 msgid ""
@@ -361,10 +491,12 @@ msgid ""
 "login to a Nextcloud account. Generic instructions for all other "
 "services."
 msgstr ""
+"Pro přihlášení k účtu Google. Pro přihlášení k účtu Microsoft. Pro "
+"přihlášení k účtu Nextcloud. Obecné pokyny pro všechny ostatní služby."
 
 #: ../to-be-integrated.rst:143
 msgid "**Q:** How can I use the Nitrokey Pro with Android?"
-msgstr ""
+msgstr "**Q:** Jak mohu používat Nitrokey Pro se systémem Android?"
 
 #: ../to-be-integrated.rst:145
 msgid ""
@@ -372,6 +504,9 @@ msgid ""
 "with OpenKeychain. This enables one to encrypt/decrypt E-Mails or files "
 "via OpenPGP."
 msgstr ""
+"Nitrokey je možné používat na zařízeních se systémem Android v kombinaci s "
+"OpenKeychain. To umožňuje šifrovat/dešifrovat e-maily nebo soubory "
+"prostřednictvím OpenPGP."
 
 #: ../to-be-integrated.rst:147
 msgid ""
@@ -379,12 +514,16 @@ msgid ""
 "look there, if you like. The following instructions are based on "
 "OpenKeychain."
 msgstr ""
+"Společnost Cotech poskytuje software pro Android s komerční podporou. Pokud "
+"chcete, podívejte se tam. Následující pokyny jsou založeny na OpenKeychain."
 
 #: ../to-be-integrated.rst:149
 msgid ""
 "Tested with Nitrokey Start, Pro and Storage in combination with Android "
 "7.1, OpenKeychain 4.5 and K9Mail 5.207. Prerequisites"
 msgstr ""
+"Testováno s aplikacemi Nitrokey Start, Pro a Storage v kombinaci s Androidem "
+"7.1, OpenKeychain 4.5 a K9Mail 5.207. Předpoklady"
 
 #: ../to-be-integrated.rst:152
 msgid ""
@@ -392,10 +531,13 @@ msgid ""
 "Nitrokey with your phone OpenKeychain installed on Device Public key "
 "saved on the device or uploaded on a keyserver"
 msgstr ""
+"Telefon se systémem Android, který umí USB OTG Kabel USB OTG k propojení "
+"Nitrokey s telefonem OpenKeychain nainstalovaný v zařízení Veřejný klíč "
+"uložený v zařízení nebo nahraný na keyserveru."
 
 #: ../to-be-integrated.rst:157
 msgid "First steps"
-msgstr ""
+msgstr "První kroky"
 
 #: ../to-be-integrated.rst:159
 msgid ""
@@ -408,12 +550,22 @@ msgid ""
 "key' to import a reference to the private key of the Nitrokey. That’s "
 "basically it."
 msgstr ""
+"Chcete-li importovat klíče Nitrokey, měli byste nejprve spustit aplikaci "
+"OpenKeychain. Poté vložte klíč Nitrokey pomocí kabelu USB OTG. Aplikace "
+"OpenKeychain spustí dialogové okno pro použití klíče Nitrokey (je možné, že "
+"budete muset nejprve přijmout použití klíče pomocí aplikace OpenKeychain). "
+"Nyní si můžete vybrat mezi vyhledáním veřejného klíče na serveru klíčů nebo "
+"výběrem veřejného klíče z úložiště. Po importu veřejného klíče musíte "
+"klepnout na 'připojit klíč' pro import odkazu na soukromý klíč Nitrokey. To "
+"je v podstatě vše."
 
 #: ../to-be-integrated.rst:161
 msgid ""
 "In the case that no there are no keys on the Nitrokey yet, OpenKeychain "
 "will help with the creation of a new key pair instead. Usage"
 msgstr ""
+"V případě, že na Nitrokey ještě nejsou žádné klíče, pomůže vám OpenKeychain "
+"s vytvořením nového páru klíčů. Použití"
 
 #: ../to-be-integrated.rst:164
 msgid ""
@@ -423,6 +575,11 @@ msgid ""
 "OpenKeychain to decrypt your mails automatically. It is important to "
 "choose the right key in the K9Mail account settings first."
 msgstr ""
+"Můžete používat všechny funkce OpenKeychain a aplikace, které OpenKeychain "
+"využívají. Můžete tedy zprávy nebo soubory šifrovat/dešifrovat jen ručně "
+"přímo pomocí aplikace nebo například kombinovat K9Mail s OpenKeychain a "
+"dešifrovat poštu automaticky. Důležité je nejprve zvolit správný klíč v "
+"nastavení účtu K9Mail."
 
 #: ../to-be-integrated.rst:166
 msgid ""
@@ -432,24 +589,31 @@ msgid ""
 "to 'Language and Input' > 'Current Keyboard' > 'Hardware show input "
 "method'."
 msgstr ""
+"Všimněte si, že pro zadání kódu PIN bude možná nutné v nastavení systému "
+"Android povolit klávesnici na obrazovce, protože systém rozpoznává Nitrokey "
+"jako fyzickou klávesnici, a proto se snaží klávesnici na obrazovce skrýt. "
+"Přejděte na 'Language and Input' > 'Current Keyboard' > 'Hardware show input "
+"method'."
 
 #: ../to-be-integrated.rst:169
 msgid "**Q:** How can I use the Nitrokey Pro with Iphone?"
-msgstr ""
+msgstr "**Q:** Jak mohu používat Nitrokey Pro s Iphone?"
 
 #: ../to-be-integrated.rst:170
 msgid "Currently it is not possible"
-msgstr ""
+msgstr "V současné době není možné"
 
 #: ../to-be-integrated.rst:172
 msgid "**Q:** How can I use the Nitrokey Pro with Ubuntu Phone?"
-msgstr ""
+msgstr "**Q:** Jak mohu používat Nitrokey Pro s Ubuntu Phone?"
 
 #: ../to-be-integrated.rst:172
 msgid ""
 "There are instructions on gnupg.org about how to use a OpenPGP Card on a "
 "UbuntuPhone which should work for the Nitrokey Start, Pro and Storage."
 msgstr ""
+"Na stránkách gnupg.org jsou pokyny, jak používat kartu OpenPGP na telefonu "
+"UbuntuPhone, která by měla fungovat pro Nitrokey Start, Pro a Storage."
 
 #: ../to-be-integrated.rst:174
 msgid ""
@@ -458,6 +622,10 @@ msgid ""
 "S/MIME/X.509 is mostly used by enterprises. If you are in doubt which one"
 " to choose, you should use OpenPGP."
 msgstr ""
+"**Q:** Jak mohu šifrovat e-mail? Pro šifrování e-mailů existují dva široce "
+"používané standardy. Zatímco OpenPGP/GnuPG je oblíbený mezi jednotlivci, S/"
+"MIME/X.509 používají především podniky. Pokud váháte, který z nich zvolit, "
+"měli byste použít OpenPGP."
 
 #: ../to-be-integrated.rst:177
 msgid ""
@@ -465,26 +633,35 @@ msgid ""
 "instructions for using S/MIME with the Nitrokey. Note: SMIME certificates"
 " can be purchased cheaply from CERTUM and SSLTrust."
 msgstr ""
+"pokyny pro použití standardu OpenPGP s Nitrokey pokyny pro použití S/MIME s "
+"Nitrokey. Poznámka: Certifikáty SMIME lze levně zakoupit u společností "
+"CERTUM a SSLTrust."
 
 #: ../to-be-integrated.rst:180
 msgid ""
 "Please note, that it is currently advised to use either OpenPGP or S/MIME"
 " encryption, but not both with the Nitrokey."
 msgstr ""
+"Vezměte prosím na vědomí, že v současné době se doporučuje používat buď "
+"šifrování OpenPGP, nebo S/MIME, ale ne obojí s klíčem Nitrokey."
 
 #: ../to-be-integrated.rst:182
 msgid "To use a Nitrokey Storage with Thunderbird 78+, you can try this tutorial."
 msgstr ""
+"Chcete-li použít úložiště Nitrokey s aplikací Thunderbird 78+, můžete "
+"vyzkoušet tento návod."
 
 #: ../to-be-integrated.rst:184
 msgid "**Q:** How can I do Hard Disk Encryption?"
-msgstr ""
+msgstr "**Q:** Jak mohu provést šifrování pevného disku?"
 
 #: ../to-be-integrated.rst:187
 msgid ""
 "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (formerly "
 "TrueCrypt)"
 msgstr ""
+"Pro: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (dříve "
+"TrueCrypt)"
 
 #: ../to-be-integrated.rst:190
 msgid ""
@@ -494,6 +671,11 @@ msgid ""
 "TrueCrypt as well. Follow these steps to use the program with Nitrokey "
 "Storage or Pro:"
 msgstr ""
+"VeraCrypt je bezplatný software s otevřeným zdrojovým kódem pro šifrování "
+"disků v systémech Windows, MacOS a GNU/Linux. Je nástupcem TrueCryptu, a "
+"proto je doporučován, i když následující pokyny by měly platit i pro "
+"TrueCrypt. Při používání programu s aplikací Nitrokey Storage nebo Pro "
+"postupujte podle těchto pokynů:"
 
 #: ../to-be-integrated.rst:192 ../to-be-integrated.rst:704
 msgid ""
@@ -508,6 +690,16 @@ msgid ""
 "Create a container, choose the keyfile on the device as an alternative to"
 " a password."
 msgstr ""
+"Instalace OpenSC Knihovnu vyberte ve VeraCryptu v části "
+"Settings>Preferences>Security Token (umístění závisí na systému, např. /usr/"
+"lib/opensc). Vygenerujte 64bajtový soubor s klíčem prostřednictvím "
+"Tools>Keyfile Generator. Nyní byste měli být schopni vygenerovaný soubor s "
+"klíčem importovat prostřednictvím Tools>Manage Security Token Keyfiles. Měli "
+"byste vybrat první slot ([0] User PIN). Soubor s klíčem se pak uloží na klíč "
+"Nitrokey jako 'Private Data Object 1' (PrivDO1). Poté byste měli původní "
+"soubor s klíčem v počítači bezpečně vymazat! Nyní můžete používat VeraCrypt "
+"s Nitrokey: Vytvořte kontejner, zvolte soubor s klíčem v zařízení jako "
+"alternativu k heslu."
 
 #: ../to-be-integrated.rst:199
 msgid ""
@@ -516,12 +708,18 @@ msgid ""
 "Instead it stores a keyfile on the Nitrokey which theoretically could be "
 "stolen by a computer virus after the user enters the PIN."
 msgstr ""
+"Bezpečnostní hledisko: Vezměte prosím na vědomí, že VeraCrypt nevyužívá "
+"plného zabezpečení, které nabízí Nitrokey (a čipové karty obecně). Místo "
+"toho ukládá na Nitrokey soubor s klíčem, který by teoreticky mohl být "
+"odcizen počítačovým virem poté, co uživatel zadá PIN."
 
 #: ../to-be-integrated.rst:201
 msgid ""
 "Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
 "described security limitation."
 msgstr ""
+"Poznámka: Aloaha Crypt je založen na TrueCryptu/VeraCryptu, ale bez "
+"popsaného bezpečnostního omezení."
 
 #: ../to-be-integrated.rst:204
 msgid ""
@@ -529,12 +727,17 @@ msgid ""
 "instructions how to use Nitrokey to encrypt your hard disk under Linux "
 "with LUKS/dm-crypt. Other instruction."
 msgstr ""
+"Šifrování pevného disku v Linuxu na základě LUKS/dm-crypt Zde najdete "
+"vynikající návod, jak pomocí Nitrokey zašifrovat pevný disk v Linuxu pomocí "
+"LUKS/dm-crypt. Další návod."
 
 #: ../to-be-integrated.rst:207
 msgid ""
 "Purism has created a simple script to add the Nitrokey/LibremKey as a way"
 " to unlock LUKS partitions (not tested by Nitrokey yet)."
 msgstr ""
+"Purism vytvořil jednoduchý skript pro přidání klíče Nitrokey/LibremKey jako "
+"způsobu odemykání oddílů LUKS (zatím není testován systémem Nitrokey)."
 
 #: ../to-be-integrated.rst:209
 msgid ""
@@ -542,18 +745,26 @@ msgid ""
 "Storage based on the Password Safe (not tested by Nitrokey yet). A "
 "description on how to use it on Gentoo can be found here."
 msgstr ""
+"Cílem tohoto projektu je usnadnit používání systému LUKS se systémem "
+"Nitrokey Pro nebo úložištěm založeným na systému Password Safe (zatím není "
+"testován systémem Nitrokey). Popis jeho použití v systému Gentoo naleznete "
+"zde."
 
 #: ../to-be-integrated.rst:211
 msgid ""
 "For Arch Linux, see initramfs-scencrypt. Storage Encryption on Linux, "
 "Based on EncFS"
 msgstr ""
+"Pro Arch Linux viz initramfs-scencrypt. Šifrování úložiště v Linuxu založené "
+"na systému EncFS"
 
 #: ../to-be-integrated.rst:214
 msgid ""
 "Prerequisite: Please ensure that you installed the device driver, changed"
 " the default PINs and generated or imported keys with GnuPG."
 msgstr ""
+"Předpoklad: Ujistěte se, že jste nainstalovali ovladač zařízení, změnili "
+"výchozí PINy a vygenerovali nebo importovali klíče pomocí GnuPG."
 
 #: ../to-be-integrated.rst:216
 msgid ""
@@ -561,66 +772,81 @@ msgid ""
 "You may follow these steps to use it with very long passwords and "
 "Nitrokey:"
 msgstr ""
+"Snadno použitelný šifrovaný souborový systém je EncFS, který je založen na "
+"systému FUSE. Můžete jej používat podle následujících kroků s velmi dlouhými "
+"hesly a klíčem Nitrokey:"
 
 #: ../to-be-integrated.rst:218
 msgid "Initialization"
-msgstr ""
+msgstr "Inicializace"
 
 #: ../to-be-integrated.rst:220
 msgid ""
 "# Create a key file with random data: $ dd bs=64 count=1 if=/dev/urandom "
 "of=keyfile"
 msgstr ""
+"# Vytvoření souboru s náhodnými daty: $ dd bs=64 count=1 if=/dev/urandom "
+"of=keyfile"
 
 #: ../to-be-integrated.rst:223
 msgid ""
 "# Encrypt the key file and use the User-ID of your Nitrokey $ gpg "
 "--encrypt keyfile"
 msgstr ""
+"# Zašifrujte soubor s klíčem a použijte ID uživatele vašeho klíče Nitrokey $ "
+"gpg --encrypt keyfile"
 
 #: ../to-be-integrated.rst:226
 msgid ""
 "# Remove the key file in clear text: $ rm keyfile # you may want to use "
 "'wipe' or 'shred' to securely delete the keyfile"
 msgstr ""
+"# Odstranění souboru s klíčem v čistém textu: $ rm keyfile # pro bezpečné "
+"odstranění souboru s klíčem můžete použít 'wipe' nebo 'shred'."
 
 #: ../to-be-integrated.rst:229
 msgid "# Create mount point: $ mkdir ~/.cryptdir ~/cryptdir"
-msgstr ""
+msgstr "# Vytvoření přípojného bodu: $ mkdir ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:232
 msgid ""
 "# Create the actual encryption folder $ gpg -d keyfile.gpg | encfs -S "
 "~/.cryptdir ~/cryptdir"
 msgstr ""
+"# Vytvoření skutečné šifrovací složky $ gpg -d keyfile.gpg | encfs -S ~/."
+"cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:235
 msgid ""
 "# There may appears an error message about missing permission of "
 "fusermount # This message can be ignored"
 msgstr ""
+"# Může se objevit chybová zpráva o chybějícím oprávnění fusermount # Tuto "
+"zprávu lze ignorovat."
 
 #: ../to-be-integrated.rst:238
 msgid "# Unmount the new file system: $ fusermount -u ~/cryptdir"
-msgstr ""
+msgstr "# Odpojení nového souborového systému: $ fusermount -u ~/cryptdir"
 
 #: ../to-be-integrated.rst:241
 msgid "Usage"
-msgstr ""
+msgstr "Použití"
 
 #: ../to-be-integrated.rst:243
 msgid ""
 "# Mount encrypted file system and enter PIN of Nitrokey: $ gpg -d "
 "keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
 msgstr ""
+"# Připojte zašifrovaný souborový systém a zadejte PIN kódu Nitrokey: $ gpg -"
+"d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:246
 msgid "# After usage, unmount the file system: $ fusermount -u ~/cryptdir"
-msgstr ""
+msgstr "# Po použití odmontujte souborový systém: $ fusermount -u ~/cryptdir"
 
 #: ../to-be-integrated.rst:250
 msgid "Storage Encryption on Linux, Based on ECryptFS"
-msgstr ""
+msgstr "Šifrování úložiště v systému Linux založené na systému ECryptFS"
 
 #: ../to-be-integrated.rst:252
 msgid ""
@@ -629,10 +855,14 @@ msgid ""
 "instructions. Alternatively, try ESOSI or follow these steps using OpenSC"
 " and OpenVPN:"
 msgstr ""
+"eCryptfs je transparentní souborový systém pro Linux založený na šifrování "
+"souborů, který lze používat s Nitrokey prostřednictvím ovladače PKCS#11. Viz "
+"tyto pokyny. Případně vyzkoušejte ESOSI nebo postupujte podle těchto kroků s "
+"použitím OpenSC a OpenVPN:"
 
 #: ../to-be-integrated.rst:254
 msgid "Warning: This will delete existing keys on your Nitrokey!"
-msgstr ""
+msgstr "Varování: Tím se odstraní stávající klíče na vašem Nitrokey!"
 
 #: ../to-be-integrated.rst:256
 msgid ""
@@ -640,10 +870,13 @@ msgid ""
 "objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 "
 "--format pkcs12 --auth-id 3 --verify-pin"
 msgstr ""
+"# Import certifikátu a klíče do Nitrokey $ pkcs15-init --delete-objects "
+"privkey,pubkey --id 3 --store-private-key user@example.com.p12 --format "
+"pkcs12 --auth-id 3 --verify-pin"
 
 #: ../to-be-integrated.rst:259
 msgid "# Create the file ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
-msgstr ""
+msgstr "# Vytvoření souboru ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
 
 #: ../to-be-integrated.rst:262
 msgid ""
@@ -652,6 +885,10 @@ msgid ""
 "private=true $ openvpn --show-pkcs11-ids path to opensc-pkcs11 module "
 "Certificate"
 msgstr ""
+"# Zadejte tento obsah: $ pkcs11-log-level=5 "
+"pkcs11-provider1,name=name,library=/usr/lib/opensc-pkcs11.so,cert-"
+"private=true $ openvpn --show-pkcs11-ids cesta k modulu opensc-pkcs11 "
+"Certifikát"
 
 #: ../to-be-integrated.rst:266
 msgid ""
@@ -660,10 +897,13 @@ msgid ""
 " Serial: 066E04 Serialized id: "
 "ZeitControl/PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
 msgstr ""
+"DN: /description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@"
+"example.com Sériové číslo: 066E04 Serializované id: ZeitControl/PKCS\\x2315"
+"\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
 
 #: ../to-be-integrated.rst:270
 msgid "# Copy the serialized id for later usage: $ ecryptfs-manager"
-msgstr ""
+msgstr "# Zkopírujte serializované id pro pozdější použití: $ ecryptfs-manager"
 
 #: ../to-be-integrated.rst:273
 msgid ""
@@ -671,10 +911,12 @@ msgid ""
 " # Choose pkcs11-helper # Enter the serialized ID of step 3 to PKCS#11 "
 "ID."
 msgstr ""
+"# Zobrazí se možnost seznamu. Zvolte možnost \"Add public key to keyring\" # "
+"Zvolte pkcs11-helper # Zadejte serializované ID z kroku 3 do PKCS#11 ID."
 
 #: ../to-be-integrated.rst:281
 msgid "**Q:** How can I sign and encrypt Files and PDFs? GnuPG"
-msgstr ""
+msgstr "**Q:** Jak mohu podepisovat a šifrovat soubory a PDF? GnuPG"
 
 #: ../to-be-integrated.rst:284
 msgid ""
@@ -683,10 +925,14 @@ msgid ""
 "Office / Libre Office or any other PDF reader supporting electronic "
 "signatures."
 msgstr ""
+"Nástroj gpgsm slouží k podepisování, ověřování, šifrování a dešifrování "
+"souborů. Podpisový klíč na Nitrokey použijte k podepisování dokumentů pomocí "
+"aplikací Acrobat Reader, Open Office / Libre Office nebo jiných čteček PDF "
+"podporujících elektronické podpisy."
 
 #: ../to-be-integrated.rst:287
 msgid "GPA - GNU Privacy Assistant"
-msgstr ""
+msgstr "GPA - GNU Privacy Assistant"
 
 #: ../to-be-integrated.rst:289
 msgid ""
@@ -694,20 +940,25 @@ msgid ""
 "various features to manage keys and cards. It also allows file operations"
 " such as file encryption, decryption, signing."
 msgstr ""
+"Gnu Privacy Assistant (GPA) rozpozná Nitrokey hned po instalaci a má různé "
+"funkce pro správu klíčů a karet. Umožňuje také operace se soubory, jako je "
+"šifrování, dešifrování a podepisování."
 
 #: ../to-be-integrated.rst:292
 msgid "SOPS - Secrect OPerationS"
-msgstr ""
+msgstr "SOPS - Secrect OPerationS"
 
 #: ../to-be-integrated.rst:294
 msgid ""
 "SOPS is an editor of encrypted files that supports YAML, JSON and BINARY "
 "formats and encrypts with AWS KMS and PGP. You can find it on github."
 msgstr ""
+"SOPS je editor šifrovaných souborů, který podporuje formáty YAML, JSON a "
+"BINARY a šifruje pomocí AWS KMS a PGP. Najdete ho na githubu."
 
 #: ../to-be-integrated.rst:297
 msgid "Aloaha"
-msgstr ""
+msgstr "Aloaha"
 
 #: ../to-be-integrated.rst:299
 msgid ""
@@ -717,16 +968,23 @@ msgid ""
 "appropriate variant. After this Windows recognize your certificate and "
 "you can sign the document as it is shown in the screencast below."
 msgstr ""
+"Aloaha poskytuje několik aplikací pro šifrování a podepisování souborů PDF. "
+"Všechny z nich, které umožňují integraci čipových karet, pracují s Nitrokey. "
+"Můžete například importovat klíč a certifikát pomocí OpenSC nebo jiné vhodné "
+"varianty. Poté systém Windows rozpozná váš certifikát a vy můžete podepsat "
+"dokument tak, jak je znázorněno na následujícím obrázku."
 
 #: ../to-be-integrated.rst:301
 msgid "GpgEx for Windows Explorer"
-msgstr ""
+msgstr "GpgEx pro Průzkumníka Windows"
 
 #: ../to-be-integrated.rst:303
 msgid ""
 "GpgEx integrates smoothly into Windows Explorer to allow encryption and "
 "decryption of files. Install it as part of the GPG4Win package."
 msgstr ""
+"GpgEx se hladce integruje do Průzkumníka Windows a umožňuje šifrování a "
+"dešifrování souborů. Nainstalujte jej jako součást balíčku GPG4Win."
 
 #: ../to-be-integrated.rst:306
 msgid ""
@@ -734,6 +992,9 @@ msgid ""
 "please ensure that you installed the device driver and initialized the "
 "device (e.g. generated keys)."
 msgstr ""
+"Než začnete některou z těchto aplikací s klíčem Nitrokey používat, ujistěte "
+"se, že jste nainstalovali ovladač zařízení a inicializovali zařízení (např. "
+"vygenerovali klíče)."
 
 #: ../to-be-integrated.rst:308
 msgid ""
@@ -741,6 +1002,9 @@ msgid ""
 "authentication method but it is only used rarely. If you are unsure what "
 "this means, this approach is most likely not relevant for you."
 msgstr ""
+"Přihlašování pomocí certifikátu TLS a webového prohlížeče je velmi bezpečná "
+"metoda ověřování, ale používá se jen zřídka. Pokud si nejste jisti, co to "
+"znamená, tento přístup pro vás s největší pravděpodobností není relevantní."
 
 #: ../to-be-integrated.rst:310
 msgid ""
@@ -750,10 +1014,15 @@ msgid ""
 " Certificate authentication can be used easily with the Nitrokey and also"
 " with any other certificate storages. Mozilla Firefox"
 msgstr ""
+"Tato stránka odkazuje na webové stránky a aplikace, které podporují "
+"ověřování pomocí certifikátů, takže uživatelé nemusí při přihlašování "
+"zadávat uživatelské jméno a heslo. Skvělým protokolem, který toho využívá, "
+"je například WebID. Ověřování certifikátů lze snadno použít s Nitrokey a "
+"také s jakýmikoli jinými úložišti certifikátů. Mozilla Firefox"
 
 #: ../to-be-integrated.rst:313
 msgid "You need to install the PKCS#11 driver:"
-msgstr ""
+msgstr "Je třeba nainstalovat ovladač PKCS#11:"
 
 #: ../to-be-integrated.rst:315
 msgid ""
@@ -764,18 +1033,29 @@ msgid ""
 "the Browse button to select the previously downloaded PKCS11 driver file."
 " Confirm and close all dialogs."
 msgstr ""
+"Stáhněte si ovladač PKCS11 a uložte jej na místní pevný disk nebo "
+"nainstalujte OpenSC. Otevřete předvolby ve Firefoxu a přejděte na Soukromí & "
+"Zabezpečení -> Zabezpečení (jen nadpis) -> Tlačítko 'Bezpečnostní "
+"zařízení...' Stiskněte tlačítko Načíst. Jako Název modulu zadejte \"Nitrokey"
+"\" a stisknutím tlačítka Procházet vyberte dříve stažený soubor ovladače "
+"PKCS11. Potvrďte a zavřete všechna dialogová okna."
 
 #: ../to-be-integrated.rst:319
 msgid ""
 "Now you are ready to access websites which provide certificate "
 "authentication. Internet Explorer"
 msgstr ""
+"Nyní jste připraveni přistupovat k webovým stránkám, které poskytují "
+"ověřování certifikátem. Internet Explorer"
 
 #: ../to-be-integrated.rst:322
 msgid ""
 "Install this Mini Driver for Windows. Now you are ready to access "
 "websites which provide certificate authentication. Google Chrome"
 msgstr ""
+"Nainstalujte si tento mini ovladač pro systém Windows. Nyní můžete "
+"přistupovat k webovým stránkám, které poskytují ověřování pomocí "
+"certifikátů. Google Chrome"
 
 #: ../to-be-integrated.rst:325
 msgid ""
@@ -783,6 +1063,9 @@ msgid ""
 "instructions. Now you are ready to access websites which provide "
 "certificate authentication. WebID"
 msgstr ""
+"V systému Windows nainstalujte tento mini ovladač. Pod Linuxem postupujte "
+"podle těchto pokynů. Nyní můžete přistupovat k webovým stránkám, které "
+"poskytují ověřování pomocí certifikátů. WebID"
 
 #: ../to-be-integrated.rst:328
 msgid ""
@@ -803,6 +1086,20 @@ msgid ""
 "Liferay         Blog FusionForge     web-based project-management and "
 "collaboration software"
 msgstr ""
+"WebID je technologie umožňující bezpečné a sdružené sociální webové stránky. "
+"Zde je video (WebM, Ogg video, H.264), které ukazuje, jak pomocí Nitrokey "
+"vytvořit profil WebID a následně jej používat v internetové kavárně v "
+"Singapuru. Nitrokey chrání před počítačovými viry, které by jinak mohly "
+"uživatelské jméno a heslo ověřit. Webové stránky Kategorie webových stránek "
+"Komunitní certifikační autorita CAcert PrivaSphere Bezpečné zasílání zpráv "
+"Daňová správa HM Revenue & Customs UK's Software Kategorie aplikací "
+"Roundcube (plugin) Webmail Drupal (WebID, přihlášení pomocí certifikátu) "
+"Systém pro správu obsahu Media Wiki (plugin) Wiki Joomla!         Systém "
+"správy obsahu Apache + mod_ssl Webový server OpenSSH SSH (vzdálený "
+"zabezpečený shell) klient a server Wordpress (plugin) Blog a CMS Tivoli "
+"Framework pro správu systému Globalscape EFT managed file transfer (MFT) "
+"Oracle Identity Manager I&AM Fuse Source Middleware Liferay Blog FusionForge "
+"webový software pro správu projektů a spolupráci"
 
 #: ../to-be-integrated.rst:350
 msgid ""
@@ -810,16 +1107,21 @@ msgid ""
 "client certificate authentication isn't popular and better alternatives "
 "at the horizon."
 msgstr ""
+"Na této webové stránce si můžete přečíst o silných ověřovacích mechanismech, "
+"o tom, proč není ověřování pomocí klientských certifikátů populární, a o "
+"lepších alternativách, které jsou na obzoru."
 
 #: ../to-be-integrated.rst:352
 msgid "**Q:** How can I use Enterprise Authentication?"
-msgstr ""
+msgstr "**Otázka:** Jak mohu používat ověřování Enterprise Authentication?"
 
 #: ../to-be-integrated.rst:354
 msgid ""
 "LinOTP privacyIDEA RCDevs OpenOTP Usage of Nitrokey HSM as a secure key "
 "store for the Forgerock OpenDJ server and Forgerock Identity Gateway"
 msgstr ""
+"LinOTP privacyIDEA RCDevs OpenOTP Použití Nitrokey HSM jako bezpečného "
+"úložiště klíčů pro server Forgerock OpenDJ a bránu Forgerock Identity Gateway"
 
 #: ../to-be-integrated.rst:360
 msgid ""
@@ -829,16 +1131,23 @@ msgid ""
 "installed on the system (only the core application GnuPG is needed). "
 "Furthermore you should install PuTTY. Preparation on client"
 msgstr ""
+"**Q:** Jak mohu provést SSH pro správu serveru v systému Windows? V Nitrokey "
+"by již měly být nainstalovány klíče PGP a místní klíčová sada GnuPG by měla "
+"o klíčích vědět, tj. v systému by měl být nainstalován GPG4Win (potřebná je "
+"pouze základní aplikace GnuPG). Dále byste měli nainstalovat PuTTY. Příprava "
+"na klientovi"
 
 #: ../to-be-integrated.rst:364 ../to-be-integrated.rst:736
 msgid ""
 "There are two steps needed to make PuTTY work. At first we need to enable"
 " PuTTY support of GnuPG. To achieve this we use the following command:"
 msgstr ""
+"Pro zprovoznění PuTTY je třeba provést dva kroky. Nejprve musíme povolit "
+"podporu GnuPG v PuTTY. Toho dosáhneme pomocí následujícího příkazu:"
 
 #: ../to-be-integrated.rst:366 ../to-be-integrated.rst:738
 msgid "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
-msgstr ""
+msgstr "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
 
 #: ../to-be-integrated.rst:368 ../to-be-integrated.rst:740
 msgid ""
@@ -850,10 +1159,17 @@ msgid ""
 "click on an empty space and choose \"New\" -> \"Shortcut\". Now you "
 "should insert the actual command and proceed:"
 msgstr ""
+"Nyní se chceme ujistit, že se gpg-agent spouští automaticky na pozadí (pokud "
+"chcete, můžete jej spustit ručně pomocí níže uvedeného příkazu). Vytvoříme "
+"zástupce souboru gpg-connect-agent.exe. Stiskněte a podržte klávesu Windows "
+"a stiskněte 'R'. Do úvodního textového pole zadejte \"shell:startup\" (viz "
+"obrázek níže). Otevře se okno Průzkumník Windows a vy klepněte pravým "
+"tlačítkem myši na prázdné místo a zvolte \"Nový\" -> \"Zástupce\". Nyní "
+"byste měli vložit skutečný příkaz a pokračovat:"
 
 #: ../to-be-integrated.rst:370 ../to-be-integrated.rst:742
 msgid "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
-msgstr ""
+msgstr "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
 
 #: ../to-be-integrated.rst:374 ../to-be-integrated.rst:746
 msgid ""
@@ -861,16 +1177,21 @@ msgid ""
 "alright you now can use PuTTY as usual and PuTTY will make use of the "
 "Nitrokey automatically. Preparation for the server"
 msgstr ""
+"Restartujte systém a ujistěte se, že zástupce funguje. Pokud je vše v "
+"pořádku, můžete nyní používat PuTTY jako obvykle a PuTTY automaticky použije "
+"Nitrokey. Příprava na server"
 
 #: ../to-be-integrated.rst:377 ../to-be-integrated.rst:749
 msgid "You can generate an authorized_keys file by running"
-msgstr ""
+msgstr "Soubor authorized_keys můžete vygenerovat spuštěním příkazu"
 
 #: ../to-be-integrated.rst:379 ../to-be-integrated.rst:751
 msgid ""
 "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID "
 ">> authorized_keys"
 msgstr ""
+"\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID >> "
+"authorized_keys"
 
 #: ../to-be-integrated.rst:381 ../to-be-integrated.rst:753
 msgid ""
@@ -880,16 +1201,22 @@ msgid ""
 "authorized_keys and when you ssh to the server you'll be asked for a pin "
 "rather than a passphrase."
 msgstr ""
+"kde 'keyID' je buď otisk vašeho klíče, nebo pouze e-mailová adresa vázaná na "
+"váš klíč. Klíč Nitrokey musí být již známý v místním svazku klíčů GnuPG. "
+"Nyní můžete tento soubor připojit ke vzdálenému serveru'authorized_keys a "
+"při ssh na serveru budete'požádáni o PIN místo heslové fráze."
 
 #: ../to-be-integrated.rst:388
 msgid "**Q:** How can I do SSH for Server Administration on Linux?"
-msgstr ""
+msgstr "**Otázka:** Jak mohu provést SSH pro správu serveru v Linuxu?"
 
 #: ../to-be-integrated.rst:390 ../to-be-integrated.rst:757
 msgid ""
 "The Nitrokey should already have PGP keys installed and the local GnuPG "
 "keyring should know the keys. Preparation on client"
 msgstr ""
+"Nitrokey by již měl mít nainstalované klíče PGP a místní svazek klíčů GnuPG "
+"by měl klíče znát. Příprava na klientovi"
 
 #: ../to-be-integrated.rst:393 ../to-be-integrated.rst:760
 msgid ""
@@ -898,12 +1225,18 @@ msgid ""
 "the file does not exist yet, you can just create it. Add the following "
 "code somewhere into your ~/.bashrc (for fish shell, look here)"
 msgstr ""
+"Ujistěte se, že ~/.gnupg/gpg.conf obsahuje 'use-agent' Přidejte podporu ssh "
+"do gnupg-agent přidáním 'enable-ssh-support' do ~/.gnupg/gpg-agent.conf "
+"Pokud soubor ještě neexistuje, můžete jej vytvořit. Někam do svého souboru ~/"
+".bashrc přidejte následující kód (pro shell fish se podívejte sem)"
 
 #: ../to-be-integrated.rst:398 ../to-be-integrated.rst:765
 msgid ""
 "unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
 "export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
 msgstr ""
+"unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
+"export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
 
 #: ../to-be-integrated.rst:403 ../to-be-integrated.rst:770
 msgid ""
@@ -912,14 +1245,18 @@ msgid ""
 "try gpg2 --card-status on first usage to make sure the gpg-agent gets "
 "started"
 msgstr ""
+"Jednoduše restartujte systém nebo zkuste pkill gpg-agent a otevřete nový "
+"příkazový řádek, abyste se ujistili, že je vše nastaveno V případě problémů "
+"zkuste při prvním použití gpg2 --card-status, abyste se ujistili, že se gpg-"
+"agent spustí."
 
 #: ../to-be-integrated.rst:406 ../to-be-integrated.rst:773
 msgid "Preparation for the server"
-msgstr ""
+msgstr "Příprava serveru"
 
 #: ../to-be-integrated.rst:408 ../to-be-integrated.rst:775
 msgid "You can generate an authorized_keys file by running either"
-msgstr ""
+msgstr "Soubor authorized_keys můžete vygenerovat spuštěním příkazu"
 
 #: ../to-be-integrated.rst:410 ../to-be-integrated.rst:777
 msgid ""
@@ -927,14 +1264,16 @@ msgid ""
 "gpg2 --export-ssh-key keyID >> ~/authorized_keys #(for newer GnuPG "
 "versions)"
 msgstr ""
+"gpgkey2ssh keyID >> ~/authorized_keys #(pro verzi GnuPG <= 2.1.11) nebo gpg2 "
+"--export-ssh-key keyID >> ~/authorized_keys #(pro novější verze GnuPG)"
 
 #: ../to-be-integrated.rst:413 ../to-be-integrated.rst:780
 msgid "where"
-msgstr ""
+msgstr "kde"
 
 #: ../to-be-integrated.rst:415 ../to-be-integrated.rst:782
 msgid "keyID"
-msgstr ""
+msgstr "keyID"
 
 #: ../to-be-integrated.rst:417 ../to-be-integrated.rst:784
 msgid ""
@@ -943,18 +1282,22 @@ msgid ""
 "append that file to a remote server's authorized_keys and when you ssh to"
 " the server you'll be asked for a pin rather than a passphrase."
 msgstr ""
+"je id dílčího klíče, který se používá pro ověřování na vašem klíči Nitrokey. "
+"Klíč Nitrokey musí být již znám v místní sbírce klíčů GnuPG. Nyní můžete "
+"tento soubor připojit ke vzdálenému serveru's authorized_keys a při ssh na "
+"serveru budete'požádáni o PIN místo přístupové fráze."
 
 #: ../to-be-integrated.rst:420 ../to-be-integrated.rst:787
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Řešení problémů"
 
 #: ../to-be-integrated.rst:422 ../to-be-integrated.rst:789
 msgid "If you are still asked for a password please make sure that"
-msgstr ""
+msgstr "Pokud jste přesto požádáni o zadání hesla, ujistěte se, že."
 
 #: ../to-be-integrated.rst:424 ../to-be-integrated.rst:791
 msgid "echo $SSH_AUTH_SOCK"
-msgstr ""
+msgstr "echo $SSH_AUTH_SOCK"
 
 #: ../to-be-integrated.rst:426 ../to-be-integrated.rst:793
 msgid ""
@@ -966,14 +1309,20 @@ msgid ""
 "given code in .bashrc so that the variable SSH_AUTH_SOCK is correct. In "
 "doubt look for 'SSH_AUTH_SOCK' in"
 msgstr ""
+"vrátí něco rozumného jako '/run/user/1000/gnupg/S.gpg-agent.ssh' nebo '/home/"
+"username/.gnupg/.S.gpg-agent.ssh'. Bohužel v minulosti došlo v GnuPG k "
+"některým změnám, takže skutečný obsah se může lišit podle verze systému a "
+"GnuPG. V některých systémech může být v této proměnné uloženo i více složek. "
+"Výše uvedený kód v .bashrc musíte upravit tak, aby proměnná SSH_AUTH_SOCK "
+"byla správně. V případě pochybností vyhledejte 'SSH_AUTH_SOCK' v položce"
 
 #: ../to-be-integrated.rst:428 ../to-be-integrated.rst:795
 msgid "man gpg-agent"
-msgstr ""
+msgstr "man gpg-agent"
 
 #: ../to-be-integrated.rst:430 ../to-be-integrated.rst:797
 msgid "to find the actual code for your version/system."
-msgstr ""
+msgstr "najít skutečný kód pro vaši verzi/systém."
 
 #: ../to-be-integrated.rst:432 ../to-be-integrated.rst:799
 msgid ""
@@ -981,79 +1330,92 @@ msgid ""
 " manager. You may need to set it in the gpg-agent.conf as well. You may "
 "need to point gpg-agent to the correct TTY."
 msgstr ""
+"Prostřednictvím správce balíčků můžete zkontrolovat, zda máte nainstalovaný "
+"program 'pinentry'. Možná jej budete muset nastavit také v souboru gpg-"
+"agent.conf. Možná budete muset nasměrovat gpg-agent na správné TTY."
 
 #: ../to-be-integrated.rst:446
 msgid "**Q:** How can I use the Nitrokey for VPN access?"
-msgstr ""
+msgstr "**Q:** Jak mohu použít Nitrokey pro přístup do sítě VPN?"
 
 #: ../to-be-integrated.rst:449 ../to-be-integrated.rst:820
 msgid "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
 msgstr ""
+"Pro: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
 
 #: ../to-be-integrated.rst:452 ../to-be-integrated.rst:823
 msgid "Generate a key on Nitrokey via pkcs11-tool."
-msgstr ""
+msgstr "Vygenerujte klíč na Nitrokey pomocí nástroje pkcs11-tool."
 
 #: ../to-be-integrated.rst:454 ../to-be-integrated.rst:825
 msgid "Generate a certificate signing request via openssl + pkcs11 module:"
 msgstr ""
+"Generování žádosti o podepsání certifikátu pomocí modulu openssl + pkcs11:"
 
 #: ../to-be-integrated.rst:456 ../to-be-integrated.rst:827
 msgid ""
 "$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
 "<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
+"$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
+"<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
 
 #: ../to-be-integrated.rst:458 ../to-be-integrated.rst:829
 msgid "Sign the certificate with our certificate authority"
-msgstr ""
+msgstr "Podepsání certifikátu pomocí naší certifikační autority"
 
 #: ../to-be-integrated.rst:460 ../to-be-integrated.rst:831
 msgid ""
 "$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out "
 "<FILE.CRT> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
+"$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out <FILE.CRT> "
+"-config <OPENSSL.CNF> -extensions usr_client"
 
 #: ../to-be-integrated.rst:462 ../to-be-integrated.rst:509
 #: ../to-be-integrated.rst:833 ../to-be-integrated.rst:880
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
-msgstr ""
+msgstr "Import certifikátu do Nitrokey pomocí nástroje pkcs11-tool"
 
 #: ../to-be-integrated.rst:464 ../to-be-integrated.rst:835
 msgid "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
-msgstr ""
+msgstr "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
 
 #: ../to-be-integrated.rst:466 ../to-be-integrated.rst:837
 msgid "Read the certificate's ID required for openvpn configuration:"
-msgstr ""
+msgstr "Přečtěte si ID certifikátu'potřebného pro konfiguraci openvpn:"
 
 #: ../to-be-integrated.rst:468 ../to-be-integrated.rst:839
 msgid "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
-msgstr ""
+msgstr "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
 
 #: ../to-be-integrated.rst:470 ../to-be-integrated.rst:841
 msgid ""
 "Modify your openvpn configuration. Add the certificate ID which you "
 "gathered in the previous step: E.g."
 msgstr ""
+"Upravte konfiguraci openvpn. Přidejte ID certifikátu, které jste získali v "
+"předchozím kroku: Např."
 
 #: ../to-be-integrated.rst:472 ../to-be-integrated.rst:843
 msgid ""
 "$ pkcs11-id "
 "'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
 msgstr ""
+"$ pkcs11-id 'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/"
+"User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
 
 #: ../to-be-integrated.rst:474 ../to-be-integrated.rst:845
 msgid "Add the PKCS#11 driver to the configuration too, e.g.:"
-msgstr ""
+msgstr "Do konfigurace přidejte také ovladač PKCS#11, např.:"
 
 #: ../to-be-integrated.rst:476 ../to-be-integrated.rst:847
 msgid "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
-msgstr ""
+msgstr "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
 
 #: ../to-be-integrated.rst:478 ../to-be-integrated.rst:849
 msgid "See this link for further information."
-msgstr ""
+msgstr "Další informace najdete na tomto odkazu."
 
 #: ../to-be-integrated.rst:482 ../to-be-integrated.rst:853
 msgid ""
@@ -1061,10 +1423,13 @@ msgid ""
 "Nitrokey's PIN needs to be entered. Unfortunately OpenVPN doesn't prompt "
 "to enter the PIN and it has to be entered in the following way:"
 msgstr ""
+"Nyní jsou všechny konfigurace hotové. Při spuštění klienta OpenVPN je třeba "
+"zadat PIN kód Nitrokey'. Bohužel OpenVPN k zadání PINu nevyzývá a je nutné "
+"jej zadat následujícím způsobem:"
 
 #: ../to-be-integrated.rst:484 ../to-be-integrated.rst:855
 msgid "$ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>"
-msgstr ""
+msgstr "$ telnet 8888 heslo 'PIN uživatele (OpenPGP karta) token' <PIN>"
 
 #: ../to-be-integrated.rst:486 ../to-be-integrated.rst:857
 msgid ""
@@ -1073,30 +1438,41 @@ msgid ""
 " the OpenVPN client you could use the Viscosity client which provides a "
 "better user experience especially for entering the PIN."
 msgstr ""
+"Případně můžete klienta OpenVPN překompilovat s vypnutou podporou systemd a "
+"ten se vás podle očekávání zeptá na PIN. Jako alternativu ke klientovi "
+"OpenVPN můžete použít klienta Viscosity, který poskytuje lepší uživatelské "
+"prostředí, zejména pro zadávání PIN."
 
 #: ../to-be-integrated.rst:489 ../to-be-integrated.rst:860
 msgid "IPsec"
-msgstr ""
+msgstr "IPsec"
 
 #: ../to-be-integrated.rst:491 ../to-be-integrated.rst:862
 msgid "Strong Swan works using the PKCS#11 driver. Basically follow these steps:"
 msgstr ""
+"Strong Swan funguje pomocí ovladače PKCS#11. V zásadě postupujte podle "
+"následujících kroků:"
 
 #: ../to-be-integrated.rst:493 ../to-be-integrated.rst:864
 msgid ""
 "Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 "
 "bit RSA key."
 msgstr ""
+"Vygenerujte klíč na Nitrokey pomocí nástroje pkcs11-tool. V tomto příkladu "
+"je to 4096bitový klíč RSA."
 
 #: ../to-be-integrated.rst:495 ../to-be-integrated.rst:866
 msgid ""
 "$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
 "-l -k --key-type rsa:4096 --id 10 --label 'Staging Access'"
 msgstr ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -"
+"k --key-type rsa:4096 --id 10 --label 'Staging Access'"
 
 #: ../to-be-integrated.rst:497 ../to-be-integrated.rst:868
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr ""
+"Generování žádosti o podepsání certifikátu pomocí openssl + modulu pkcs11"
 
 #: ../to-be-integrated.rst:499 ../to-be-integrated.rst:870
 msgid ""
@@ -1108,20 +1484,28 @@ msgid ""
 "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
 "Access/CN=user@email.com/emailAddress=user@email.com'"
 msgstr ""
+"$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/"
+"engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
+"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> req -"
+"engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-"
+"staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/"
+"CN=user@email.com/emailAddress=user@email.com'"
 
 #: ../to-be-integrated.rst:503 ../to-be-integrated.rst:874
 msgid "Sign the certificate with your certificate authority"
-msgstr ""
+msgstr "Podepište certifikát pomocí své certifikační autority"
 
 #: ../to-be-integrated.rst:505 ../to-be-integrated.rst:876
 msgid "Convert the certificate to DER"
-msgstr ""
+msgstr "Převod certifikátu na DER"
 
 #: ../to-be-integrated.rst:507 ../to-be-integrated.rst:878
 msgid ""
 "$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
 "staging-cert.der -outform DER"
 msgstr ""
+"$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
+"staging-cert.der -outform DER"
 
 #: ../to-be-integrated.rst:511 ../to-be-integrated.rst:882
 msgid ""
@@ -1129,6 +1513,8 @@ msgid ""
 "-l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
 "Access'"
 msgstr ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -"
+"y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging Access'"
 
 #: ../to-be-integrated.rst:513 ../to-be-integrated.rst:884
 msgid ""
@@ -1136,33 +1522,38 @@ msgid ""
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
 "add the following module:"
 msgstr ""
+"Nakonfigurujte Strongswan tak, aby načetl modul opensc-pkcs11 a poté načetl "
+"certifikát na Nitrokey. Upravte soubor /etc/strongswan.d/charon/pkcs11.conf "
+"a přidejte následující modul:"
 
 #: ../to-be-integrated.rst:517 ../to-be-integrated.rst:888
 msgid "modules {"
-msgstr ""
+msgstr "moduly {"
 
 #: ../to-be-integrated.rst:516 ../to-be-integrated.rst:887
 msgid "Nitrokey {"
-msgstr ""
+msgstr "Nitrokey {"
 
 #: ../to-be-integrated.rst:517 ../to-be-integrated.rst:888
 msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr ""
+msgstr "cesta = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
 
 #: ../to-be-integrated.rst:518 ../to-be-integrated.rst:519
 #: ../to-be-integrated.rst:889 ../to-be-integrated.rst:890
 msgid "}"
-msgstr ""
+msgstr "}"
 
 #: ../to-be-integrated.rst:521 ../to-be-integrated.rst:892
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
 msgstr ""
+"Inicializujte připojení VPN prostřednictvím IPSec/Strongswan a poté "
+"požádejte o zadání PIN kódu Nitrokey."
 
 #: ../to-be-integrated.rst:523 ../to-be-integrated.rst:894
 msgid "8. VPN is now connected Stunnel"
-msgstr ""
+msgstr "8. VPN je nyní připojena Stunnel"
 
 #: ../to-be-integrated.rst:526 ../to-be-integrated.rst:897
 msgid ""
@@ -1171,10 +1562,15 @@ msgid ""
 "functionality to commonly used inetd daemons like POP2, POP3, and IMAP "
 "servers without any changes in the programs' code."
 msgstr ""
+"Stunnel funguje jako šifrovací obal SSL mezi vzdáleným klientem a místním "
+"(inetd-startable) nebo vzdáleným serverem. Lze jej použít k přidání funkce "
+"SSL do běžně používaných démonů inetd, jako jsou servery POP2, POP3 a IMAP, "
+"aniž by bylo nutné měnit kód programů."
 
 #: ../to-be-integrated.rst:528 ../to-be-integrated.rst:899
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr ""
+"Stunnel je schopen načíst engine OpenSC PKCS#11 pomocí této konfigurace:"
 
 #: ../to-be-integrated.rst:530 ../to-be-integrated.rst:901
 msgid ""
@@ -1182,22 +1578,27 @@ msgid ""
 "engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
 "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
 msgstr ""
+"engine=dynamic engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so "
+"engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
+"engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
 
 #: ../to-be-integrated.rst:538 ../to-be-integrated.rst:909
 msgid "[service] engineNum=1 key=id_45"
-msgstr ""
+msgstr "[service] engineNum=1 key=id_45"
 
 #: ../to-be-integrated.rst:556
 msgid "**Q:** How can I do PKI / Certificate Authority (CA)?"
-msgstr ""
+msgstr "**Q:** Jak mohu provést PKI / certifikační autoritu (CA)?"
 
 #: ../to-be-integrated.rst:558
 msgid "CA keys are very sensitive and must not be compromised or lost. GnuPG"
 msgstr ""
+"Klíče certifikační autority jsou velmi citlivé a nesmí dojít k jejich "
+"zneužití nebo ztrátě. GnuPG"
 
 #: ../to-be-integrated.rst:561
 msgid "Instructions OpenSSL"
-msgstr ""
+msgstr "Pokyny OpenSSL"
 
 #: ../to-be-integrated.rst:564
 msgid ""
@@ -1208,16 +1609,23 @@ msgid ""
 "slot ID, e.g. \"... -key "
 "slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" Test"
 msgstr ""
+"Instalace OpenSC'S engine_pkcs11 Spusťte příkaz \"pkcs11-tool --list-slots\" "
+"pro zobrazení seznamu dostupných slotů. Spusťte příkaz \"openssl> req -"
+"engine pkcs11 -new -key slot_X-id_XXXX -keyform engine -x509 -out cert.pem -"
+"text\" kde X je příslušné číslo slotu a XXXX je ID slotu, např. \".... -key "
+"slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" Test"
 
 #: ../to-be-integrated.rst:569
 msgid "Other"
-msgstr ""
+msgstr "Další"
 
 #: ../to-be-integrated.rst:571
 msgid ""
 "Please see this PDF (p. 30) from heinlein-support.de for summarized "
 "instructions in German."
 msgstr ""
+"Souhrnný návod v němčině naleznete v tomto PDF souboru (str. 30) na "
+"stránkách heinlein-support.de."
 
 #: ../to-be-integrated.rst:573
 msgid ""
@@ -1225,14 +1633,17 @@ msgid ""
 "perform basic tasks of a CA. It works with Nitrokey Pro and Nitrokey "
 "Storage."
 msgstr ""
+"µ-CA-tool je skript založený na GnuPG, OpenSC a OpenSSL, který pomáhá "
+"provádět základní úlohy certifikační autority. Pracuje s aplikacemi Nitrokey "
+"Pro a Nitrokey Storage."
 
 #: ../to-be-integrated.rst:581
 msgid "**Q:** How can I use the password manager?"
-msgstr ""
+msgstr "**Q:** Jak mohu používat správce hesel?"
 
 #: ../to-be-integrated.rst:583
 msgid "You have the following options:"
-msgstr ""
+msgstr "Máte následující možnosti:"
 
 #: ../to-be-integrated.rst:585
 msgid ""
@@ -1241,16 +1652,22 @@ msgid ""
 "(simple commandline password manager for Unix systems, mainly for "
 "experts). Use KeePass as described below."
 msgstr ""
+"K bezpečnému uložení hesel použijte integrovaný trezor hesel Nitrokey'. K "
+"tomu potřebujete aplikaci Nitrokey. Maximální počet je 16 hesel. Použijte "
+"Pass (jednoduchý správce hesel v příkazovém řádku pro unixové systémy, "
+"určený především pro experty). Použijte KeePass, jak je popsáno níže."
 
 #: ../to-be-integrated.rst:589
 msgid "Protecting KeePass with Nitrokey's One-Time Passwords"
-msgstr ""
+msgstr "Ochrana KeePass pomocí jednorázových hesel Nitrokey's"
 
 #: ../to-be-integrated.rst:591
 msgid ""
 "You can also follow this video (It contains a mistake around time 4:22 "
 "which is described later below). Keepass Installation"
 msgstr ""
+"Můžete také sledovat toto video (obsahuje chybu v čase 4:22, která je "
+"popsána níže). Instalace Keepass"
 
 #: ../to-be-integrated.rst:594
 msgid ""
@@ -1258,12 +1675,17 @@ msgid ""
 "the older 2.3.4, you have to use some other source like this private PPA "
 "(please run these commands in terminal):"
 msgstr ""
+"Nainstalujte Keepass 2.3.5. Pro Ubuntu: Protože hlavní repozitář obsahuje "
+"starší verzi 2.3.4, musíte použít jiný zdroj, například tento soukromý PPA ("
+"tyto příkazy spusťte v terminálu):"
 
 #: ../to-be-integrated.rst:597
 msgid ""
 "sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-"
 "get install keepass2"
 msgstr ""
+"sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-get "
+"install keepass2"
 
 #: ../to-be-integrated.rst:601
 msgid ""
@@ -1273,14 +1695,19 @@ msgid ""
 "mono-complete package if plugin is not detected when running Keepass2 "
 "(you can check that in Tools/Plugins):"
 msgstr ""
+"Zásuvný modul OtpKeyProv nainstalujete stažením archivu, rozbalením a "
+"zkopírováním obsahu do adresáře Keypass' Plugin. V Linuxu: sudo cp "
+"OtpKeyProv.plgx /usr/lib/keepass2/Plugins/ Pro Linux nepovinné: Nainstalujte "
+"balíček mono-complete, pokud není zásuvný modul detekován při spuštění "
+"Keepass2 (můžete to zkontrolovat v Tools/Plugins):"
 
 #: ../to-be-integrated.rst:605
 msgid "sudo apt-get install mono-complete"
-msgstr ""
+msgstr "sudo apt-get install mono-complete"
 
 #: ../to-be-integrated.rst:607
 msgid "Keepass OTP Configuration Existing Database"
-msgstr ""
+msgstr "Konfigurace Keepass OTP Stávající databáze"
 
 #: ../to-be-integrated.rst:610
 msgid ""
@@ -1289,18 +1716,22 @@ msgid ""
 " your passwords are lost! Open database as usual Select File/Change "
 "Master Key..."
 msgstr ""
+"Vytvořte si zálohu databáze a uchovávejte ji, dokud si nebudete opravdu "
+"jisti, že vše funguje správně! Ujistěte se, že jste opravdu provedli zálohu. "
+"Pokud něco pokazíte, vaše hesla jsou ztracena! Otevřete databázi jako "
+"obvykle Zvolte Soubor/Změnit hlavní klíč...."
 
 #: ../to-be-integrated.rst:615
 msgid "New Database"
-msgstr ""
+msgstr "Nová databáze"
 
 #: ../to-be-integrated.rst:617
 msgid "Create new database as usual"
-msgstr ""
+msgstr "Vytvoření nové databáze jako obvykle"
 
 #: ../to-be-integrated.rst:619
 msgid "Common"
-msgstr ""
+msgstr "Společné"
 
 #: ../to-be-integrated.rst:621
 msgid ""
@@ -1319,10 +1750,24 @@ msgid ""
 " device and in Keepass would be out of sync and OTP codes will not be the"
 " same with expected."
 msgstr ""
+"Vložte hlavní heslo (volitelné) Nastavte soubor klíče / poskytovatele: na "
+"jednorázová hesla (OATH HOTP) Klikněte na OK Pomocí aplikace Nitrokey: "
+"vyberte slot HOTP a vygenerujte tajemství HOTP (automaticky se zkopíruje do "
+"schránky). Poznámka: Tento tajný klíč si můžete zapsat a uložit na bezpečném "
+"místě. V opačném případě, pokud ztratíte svůj Nitrokey nebo se rozbije, je "
+"ztracena i vaše databáze hesel!!! Vložte tajenku do okna Keepass OTP Plugin "
+"Ujistěte se, že pole Počítadlo a počet číslic jsou v obou oknech nastaveny "
+"stejně. Klepnutím na tlačítko OK v aplikaci Nitrokey slot uložte. Vyberte "
+"typ tajemství: Nastavte další nastavení podle svých představ. Podívejte se "
+"do příručky pluginu'(měla by být ve stejném staženém archivu). Doporučuji "
+"nastavit hodnotu look-ahead na nenulovou, aby nedošlo k zablokování databáze "
+"po náhodném požadavku na kód z použitého slotu HOTP. V takovém případě by se "
+"čítače na zařízení a v Keepassu nesynchronizovaly a OTP kódy by se "
+"neshodovaly s očekávanými."
 
 #: ../to-be-integrated.rst:630
 msgid "Unlocking Database"
-msgstr ""
+msgstr "Odemknutí databáze"
 
 #: ../to-be-integrated.rst:632
 msgid ""
@@ -1331,10 +1776,15 @@ msgid ""
 "choosing proper HOTP slot from the Nitrokey App and pasting the clipboard"
 " content to proper field (the order of the codes is important). Press OK"
 msgstr ""
+"Otevřete databázi Vložte hlavní heslo (je-li nastaveno) Soubor s klíčem / "
+"poskytovatel: na jednorázová hesla (OATH HOTP) Stiskněte OK Vložte kódy HOTP "
+"opakovaným výběrem správného slotu HOTP z aplikace Nitrokey a vložením "
+"obsahu schránky do správného pole (důležité je pořadí kódů). Stiskněte "
+"tlačítko OK"
 
 #: ../to-be-integrated.rst:639
 msgid "Issues"
-msgstr ""
+msgstr "Problémy"
 
 #: ../to-be-integrated.rst:641
 msgid ""
@@ -1350,30 +1800,49 @@ msgid ""
 "database and how it is now configured. I have not noticed until I have "
 "watched the movie."
 msgstr ""
+"Vzhledem k povaze řešení HOTP může dojít k desynchronizaci čítačů (výběrem "
+"nesprávného slotu OTP během každodenního používání). Použití nastavení "
+"pluginu look-ahead'by tomu mělo zabránit (hodnota 10 nebo tak nějak by měla "
+"stačit - záleží na požadovaných bezpečnostních požadavcích - to by umožnilo "
+"10 náhodných požadavků). TOTP tento problém nemá. Nastavení ochrany OTP by "
+"mohlo být náchylné k chybám. Na straně OtpKeyProv není žádná tajná validace. "
+"V testovacím filmu v čase 4:22 se mi podařilo nastavit tajenku s kódem "
+"Base32 jako Hex (což nebyla správná hexadecimální hodnota) a nestěžovalo si "
+"to. Není tam žádná informace o tom, co se stalo s databází a jak je nyní "
+"nastavena. Všiml jsem si toho až po shlédnutí filmu."
 
 #: ../to-be-integrated.rst:644
 msgid "Tested under Ubuntu 16.10, Nitrokey App v0.6.3 and Nitrokey Storage v0.45."
 msgstr ""
+"Testováno pod Ubuntu 16.10, aplikací Nitrokey v0.6.3 a úložištěm Nitrokey v0."
+"45."
 
 #: ../to-be-integrated.rst:653
 msgid "**Q:** How can I use the True Random Number Generator?"
 msgstr ""
+"**Q:** Jak mohu použít generátor náhodných čísel True Random Number "
+"Generator?"
 
 #: ../to-be-integrated.rst:655
 msgid ""
 "Both devices are compatible to the OpenPGP Card, so that scdrand should "
 "work. This script may be useful. The TRNG provides about 40 kbit/s."
 msgstr ""
+"Obě zařízení jsou kompatibilní s kartou OpenPGP, takže scdrand by měl "
+"fungovat. Tento skript může být užitečný. TRNG poskytuje rychlost přibližně "
+"40 kbit/s."
 
 #: ../to-be-integrated.rst:657
 msgid ""
 "The user comio created a systemd file to use scdrand and thus the TRNG "
 "more generally. He created a ebuild for Gentoo, too."
 msgstr ""
+"Uživatel comio vytvořil soubor systemd pro použití scdrand a tím i TRNG "
+"obecněji. Vytvořil také ebuild pro Gentoo."
 
 #: ../to-be-integrated.rst:663
 msgid "**Q:** Do you have resources for development and integration?"
-msgstr ""
+msgstr "**Q:** Máte k dispozici zdroje pro vývoj a integraci?"
 
 #: ../to-be-integrated.rst:666
 msgid ""
@@ -1390,10 +1859,21 @@ msgid ""
 "Safe and OTP entries. A libnitrokey wrapper for Rust providing access to "
 "Nitrokey devices."
 msgstr ""
+"Ke správě jednorázových hesel a funkcí zabezpečení heslem použijte knihovnu "
+"Nitrokey. Projekty nitrokey-get-totp a nitrokey-get-password jsou pěknými "
+"příklady použití pythonovských vazeb knihovny Nitrokey pro získání vlastního "
+"rozhraní. Pro přístup k integrované čipové kartě můžete použít nástroje "
+"příkazového řádku OpenSC'. Pokud má vaše aplikace rozhraní PKCS#11, použijte "
+"ovladač OpenSC'PKCS#11. Pro práci s čipovou kartou na nízké úrovni viz "
+"specifikace karty OpenPGP. K dispozici je také zdrojový kód firmwaru a "
+"hardwarové uspořádání. Pro vývoj speciálních aplikací nebo pro přístup z "
+"příkazového řádku lze použít nitrocli vytvořené d-e-s-o. Gkey je nástroj pro "
+"přístup k heslovému trezoru a záznamům OTP založený na příkazovém řádku go. "
+"Obal libnitrokey pro Rust poskytující přístup k zařízením Nitrokey."
 
 #: ../to-be-integrated.rst:677
 msgid "# HSM 2"
-msgstr ""
+msgstr "# HSM 2"
 
 #: ../to-be-integrated.rst:679
 msgid ""
@@ -1401,14 +1881,17 @@ msgid ""
 "have a size of up to 256 byte. The total storage capacity of ca. 32 KByte"
 " is shared dynamically among keys and data objects."
 msgstr ""
+"**Nitrokey HSM:** Lze vytvořit 124 datových objektů (DF, EF). Každý EF může "
+"mít velikost až 256 bajtů. Celková úložná kapacita cca 32 KByte je dynamicky "
+"sdílena mezi klíči a datovými objekty."
 
 #: ../to-be-integrated.rst:683
 msgid "**Q:** How to use the HSM for Login For: Nitrokey HSM"
-msgstr ""
+msgstr "**Q:** Jak používat HSM pro přihlášení Pro: Nitrokey HSM"
 
 #: ../to-be-integrated.rst:686
 msgid "Select your use case:"
-msgstr ""
+msgstr "Vyberte případ použití:"
 
 #: ../to-be-integrated.rst:688
 msgid ""
@@ -1416,16 +1899,22 @@ msgid ""
 "Nitrokey HSM on Windows Domain Computers Using MS Active Directory For "
 "Unix environments an integration with PAM and OpenSSH is available."
 msgstr ""
+"Přihlášení pomocí Nitrokey HSM na samostatných počítačích se systémem "
+"Windows Přihlášení pomocí Nitrokey HSM na počítačích s doménou Windows "
+"pomocí MS Active Directory Pro prostředí Unix je k dispozici integrace s PAM "
+"a OpenSSH."
 
 #: ../to-be-integrated.rst:692
 msgid "**Q:**  How to use the HSM for Email Encryption"
-msgstr ""
+msgstr "**Q:** Jak používat HSM pro šifrování e-mailů"
 
 #: ../to-be-integrated.rst:694
 msgid ""
 "Encrypt your email using the S/MIME industry standard available in all "
 "major e-mail clients."
 msgstr ""
+"Šifrování e-mailů pomocí průmyslového standardu S/MIME, který je k dispozici "
+"ve všech hlavních e-mailových klientech."
 
 #: ../to-be-integrated.rst:696
 msgid ""
@@ -1433,14 +1922,18 @@ msgid ""
 "Microsoft Outlook. Other email clients with support for PKCS#11 or "
 "Microsoft CSP should work as well."
 msgstr ""
+"Nitrokey HSM byl testován pro práci s Mozilla Thunderbird a Microsoft "
+"Outlook. Ostatní e-mailoví klienti s podporou PKCS#11 nebo Microsoft CSP by "
+"měli fungovat také."
 
 #: ../to-be-integrated.rst:698
 msgid "Note: A certificate can be purchased cheaply from CERTUM."
-msgstr ""
+msgstr "Poznámka: Certifikát lze levně zakoupit u společnosti CERTUM."
 
 #: ../to-be-integrated.rst:700
 msgid "**Q:**   How to use the Nitrokey for Hard Disk Encryption with VeraCrpt?"
 msgstr ""
+"**Q:** Jak používat Nitrokey pro šifrování pevného disku pomocí VeraCrpt?"
 
 #: ../to-be-integrated.rst:702
 msgid ""
@@ -1449,6 +1942,11 @@ msgid ""
 "recommended, although the following instructions should apply to "
 "TrueCrypt as well. Follow these steps to use the program with Nitrokey:"
 msgstr ""
+"VeraCrypt je bezplatný software s otevřeným zdrojovým kódem pro šifrování "
+"disků v systémech Windows, MacOS a GNU/Linux. Je nástupcem TrueCryptu, a "
+"proto je doporučován, i když následující pokyny by měly platit i pro "
+"TrueCrypt. Při používání programu Nitrokey postupujte podle následujících "
+"kroků:"
 
 #: ../to-be-integrated.rst:711
 msgid ""
@@ -1457,20 +1955,26 @@ msgid ""
 "Instead it stores a keyfile on the Nitrokey which theoretically could be "
 "stolen by a computer virus after the user enters the password."
 msgstr ""
+"Bezpečnostní hledisko: Vezměte prosím na vědomí, že VeraCrypt nevyužívá "
+"plného zabezpečení, které nabízí Nitrokey (a čipové karty obecně). Místo "
+"toho ukládá na Nitrokey soubor s klíčem, který by teoreticky mohl být po "
+"zadání hesla uživatelem odcizen počítačovým virem."
 
 #: ../to-be-integrated.rst:713
 msgid ""
 "Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
 "described security limitation. (Not tested with Nitrokey HSM!)"
 msgstr ""
+"Poznámka: Aloaha Crypt je založen na TrueCryptu/VeraCryptu, ale bez "
+"popsaného bezpečnostního omezení. (Není testováno s Nitrokey HSM!)"
 
 #: ../to-be-integrated.rst:716
 msgid "**Q:** How to sign and encrypt files and pdfs?"
-msgstr ""
+msgstr "**Q:** Jak podepisovat a šifrovat soubory a pdf?"
 
 #: ../to-be-integrated.rst:718
 msgid "GnuPG"
-msgstr ""
+msgstr "GnuPG"
 
 #: ../to-be-integrated.rst:720
 msgid ""
@@ -1481,18 +1985,29 @@ msgid ""
 "Libre Office or any other PDF reader supporting electronic signatures. "
 "ECC HSM Encryptor"
 msgstr ""
+"Počínaje verzí 2.1 má GnuPG zabudovanou, ale omezenou podporu pro Nitrokey "
+"HSM. Pomocí nástroje gpgsm můžete podepisovat, ověřovat, šifrovat a "
+"dešifrovat soubory nebo zprávy S/MIME pomocí vašeho HSM Nitrokey. Podpisový "
+"klíč na Nitrokey HSM použijte k podepisování dokumentů pomocí Acrobat "
+"Reader, Open Office / Libre Office nebo jiné čtečky PDF podporující "
+"elektronické podpisy. Šifrátor ECC HSM"
 
 #: ../to-be-integrated.rst:723
 msgid ""
 "ECC HSM Encryptor is a small application to encrypt and decrypt files "
 "with a Nitrokey HSM."
 msgstr ""
+"ECC HSM Encryptor je malá aplikace pro šifrování a dešifrování souborů "
+"pomocí Nitrokey HSM."
 
 #: ../to-be-integrated.rst:725
 msgid ""
 "**Q:** How to do certificat-based Web login Protect access to sensitive "
 "information on your website with 2nd factor authentication."
 msgstr ""
+"**Q:** Jak provést webové přihlášení založené na certifikátech Chraňte "
+"přístup k citlivým informacím na svých webových stránkách pomocí ověřování "
+"2. faktorem."
 
 #: ../to-be-integrated.rst:728
 msgid ""
@@ -1500,12 +2015,17 @@ msgid ""
 "authentication PKI or use keys and certificates on a Nitrokey HSM for "
 "TLS/SSL client authentication."
 msgstr ""
+"Použijte Nitrokey HSM jako ověřovací token prostřednictvím vestavěného "
+"ověřovacího PKI zařízení nebo použijte klíče a certifikáty na Nitrokey HSM "
+"pro ověření klienta TLS/SSL."
 
 #: ../to-be-integrated.rst:730
 msgid ""
 "**Q:** SSH for Server Administration with windows For: Nitrokey Pro, "
 "Nitrokey Storage, Nitrokey Start, Nitrokey HSM"
 msgstr ""
+"**Q:** SSH pro správu serveru s Windows Pro: Nitrokey Pro, Nitrokey Storage, "
+"Nitrokey Start, Nitrokey HSM"
 
 #: ../to-be-integrated.rst:733
 msgid ""
@@ -1514,18 +2034,22 @@ msgid ""
 "installed on the system (only the core application GnuPG is needed). "
 "Furthermore you should install PuTTY. Preparation on client"
 msgstr ""
+"Nitrokey by již měl mít nainstalované klíče PGP a místní klíčová sada GnuPG "
+"by měla o těchto klíčích vědět, tj. v systému by měl být nainstalován "
+"program GPG4Win (potřebná je pouze základní aplikace GnuPG). Dále byste měli "
+"nainstalovat PuTTY. Příprava na klientovi"
 
 #: ../to-be-integrated.rst:755
 msgid "**Q:** SSH Server administration on linux"
-msgstr ""
+msgstr "**Q:** Správa serveru SSH v Linuxu"
 
 #: ../to-be-integrated.rst:802
 msgid "**Q:** DNSSEC"
-msgstr ""
+msgstr "**Q:** DNSSEC"
 
 #: ../to-be-integrated.rst:805
 msgid "For: Nitrokey HSM"
-msgstr ""
+msgstr "Pro: Nitrokey HSM"
 
 #: ../to-be-integrated.rst:807
 msgid ""
@@ -1533,6 +2057,9 @@ msgid ""
 "secure key store. It's based on Smartcard-HSM which is why the following "
 "resource apply:"
 msgstr ""
+"Chraňte překlad doménových jmen pomocí technologie DNSSEC a bezpečného "
+"úložiště klíčů Nitrokey HSM. Je založen na Smartcard-HSM, proto se na něj "
+"vztahují následující zdroje:"
 
 #: ../to-be-integrated.rst:809
 msgid ""
@@ -1543,6 +2070,11 @@ msgid ""
 " Mens wrote a nice article about integrating the SmartCard-HSM with "
 "PowerDNS."
 msgstr ""
+"Podepisování zón NSD DNSSEC pomocí Nitrokey HSM od Vadima Penzina. Integraci "
+"s OpenDNSSEC úspěšně otestoval v ukázce Richard Lamb. Luis D Espinoza "
+"Sanchez & Eberhard W Lisse uspořádali na zasedání ICAAN 2015 v Singapuru "
+"zasedání o použití SmartCard-HSM pro DNSSEC. Jan-Piet Mens napsal pěkný "
+"článek o integraci SmartCard-HSM s PowerDNS."
 
 #: ../to-be-integrated.rst:815
 msgid ""
@@ -1553,28 +2085,36 @@ msgid ""
 "device, create a secure communication channel and perform offline PIN "
 "verification. The coolPACS project has all the details."
 msgstr ""
+"**Q:** Řízení fyzického přístupu Díky jedinečné vestavěné autentizaci "
+"zařízení PKI má Nitrokey HSM kryptograficky chráněnou jedinečnou identitu, "
+"kterou lze ověřit v rychlém autentizačním protokolu. Terminál pro kontrolu "
+"přístupu může ověřit pravost a identitu zařízení, vytvořit zabezpečený "
+"komunikační kanál a provést offline ověření kódu PIN. Všechny podrobnosti "
+"jsou uvedeny v projektu coolPACS."
 
 #: ../to-be-integrated.rst:818 ../to-be-integrated.rst:914
 msgid "**Q:**"
-msgstr ""
+msgstr "**Q:**"
 
 #: ../to-be-integrated.rst:916
 msgid "PKI / Certificate Authority (CA)"
-msgstr ""
+msgstr "PKI / certifikační autorita (CA)"
 
 #: ../to-be-integrated.rst:918
 msgid "**Q:** Secret Management and Cloud Infrastructure"
-msgstr ""
+msgstr "**Q:** Správa tajemství a cloudová infrastruktura"
 
 #: ../to-be-integrated.rst:920
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at banzaicloud.com."
 msgstr ""
+"Přístup k zabezpečení klíčů pro Hashicorp Vault/Bank-Vault na Nitrokey HSM "
+"naleznete na banzaicloud.com."
 
 #: ../to-be-integrated.rst:922
 msgid "**Q:** How to do N-of-m Schemes"
-msgstr ""
+msgstr "**Q:** Jak provést schémata N-of-m"
 
 #: ../to-be-integrated.rst:924
 msgid ""
@@ -1583,28 +2123,34 @@ msgid ""
 "to control the access to the device. Please see this blog post for more "
 "detailed information. N-of-m for DKEK Shares"
 msgstr ""
+"Nitrokey HSM 2 podporuje dvě různá schémata n-of-m - jedno pro bezpečné "
+"sdílení klíčového materiálu/hesel a druhé pro ověřování veřejným klíčem pro "
+"kontrolu přístupu k zařízení. Podrobnější informace naleznete v tomto "
+"příspěvku na blogu. N-of-m pro sdílení DKEK"
 
 #: ../to-be-integrated.rst:927
 msgid ""
 "This feature can be used with OpenSC as described here. The general "
 "approach is seen in the videos below (external links)."
 msgstr ""
+"Tuto funkci lze použít s OpenSC, jak je popsáno zde. Obecný postup je vidět "
+"na níže uvedených videích (externí odkazy)."
 
 #: ../to-be-integrated.rst:929
 msgid "Nitrokey HSM's Secure Key Backup and Restore:"
-msgstr ""
+msgstr "Bezpečné zálohování a obnovení klíčů Nitrokey HSM's:"
 
 #: ../to-be-integrated.rst:931
 msgid "Screencast"
-msgstr ""
+msgstr "Screencast"
 
 #: ../to-be-integrated.rst:933
 msgid "Nitrokey HSM's M-of-N Threshold Scheme:"
-msgstr ""
+msgstr "Nitrokey HSM's M-of-N Threshold Scheme:"
 
 #: ../to-be-integrated.rst:935
 msgid "screencast N-of-m for public key authentication"
-msgstr ""
+msgstr "screencast N-of-m pro ověřování pomocí veřejného klíče"
 
 #: ../to-be-integrated.rst:938
 msgid ""
@@ -1613,6 +2159,10 @@ msgid ""
 "process step by step in the Smart Card Shell. For OpenSC there is a "
 "ticket to get that integrated."
 msgstr ""
+"Ověřování n-of-m je zatím podporováno pouze v OpenSCDP. V příspěvku na blogu "
+"je uveden přehled a návod, jak postupovat (vyžadován přístup přes CDN), je "
+"zobrazen krok za krokem v prostředí Smart Card Shell. Pro OpenSC je k "
+"dispozici ticket pro jeho integraci."
 
 #: ../to-be-integrated.rst:940
 msgid ""
@@ -1620,10 +2170,12 @@ msgid ""
 "for locally and remote connected HSMs. The PKI-as-a-Service Portal is "
 "based on OpenSCDP."
 msgstr ""
+"Ověřování n-of-m je podporováno také v portálu PKI-as-a-Service pro lokálně "
+"i vzdáleně připojené HSM. Portál PKI jako služba je založen na OpenSCDP."
 
 #: ../to-be-integrated.rst:942
 msgid "**Q:** How to safe Cryptocurrences in the Nitrokey HSM"
-msgstr ""
+msgstr "**Q:** Jak zabezpečit kryptokurzy v Nitrokey HSM"
 
 #: ../to-be-integrated.rst:945
 msgid ""
@@ -1632,22 +2184,31 @@ msgid ""
 "the HSM in an Ethereum PoA Chain. Tezos has been reported to work with "
 "Nitrokey HSM."
 msgstr ""
+"J.v.d.Bosch napsal jednoduchý bezplatný program v Pythonu, který slouží k "
+"zabezpečení soukromého klíče peněženky Bitcoin v HSM. Další informace "
+"naleznete zde. Použití HSM v řetězci Ethereum PoA. Bylo hlášeno, že Tezos "
+"funguje s HSM Nitrokey."
 
 #: ../to-be-integrated.rst:949
 msgid ""
 "**Q:** How to use the True Random Number Generator? Nitrokey HSM can be "
 "used with Botan and TokenTools by using OpenSC as a PKCS#11 driver."
 msgstr ""
+"**Q:** Jak používat generátor náhodných čísel True Random Number Generator? "
+"Nitrokey HSM lze používat s nástroji Botan a TokenTools pomocí OpenSC jako "
+"ovladače PKCS#11."
 
 #: ../to-be-integrated.rst:952
 msgid ""
 "OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
 "doesn't contain a mapping for OpenSSL to C_GenerateRandom."
 msgstr ""
+"OpenSSL nemůže použít RNG Nitrokey HSM přímo, protože engine-pkcs11 "
+"neobsahuje mapování pro OpenSSL na C_GenerateRandom."
 
 #: ../to-be-integrated.rst:954
 msgid "**Q:** What can I use for development and integration?"
-msgstr ""
+msgstr "**Q:** Co mohu použít pro vývoj a integraci?"
 
 #: ../to-be-integrated.rst:956
 msgid ""
@@ -1656,12 +2217,18 @@ msgid ""
 "distribution, the PKCS driver may may be located at /usr/lib/x86_64"
 "-linux-gnu/opensc-pkcs11.so for example."
 msgstr ""
+"se OpenSC's commandline tools Pokud má vaše aplikace rozhraní PKCS#11, "
+"použijte OpenSC's PKCS#11 driver. V závislosti na vaší distribuci Linuxu "
+"může být ovladač PKCS umístěn například na adrese /usr/lib/x86_64-linux-gnu/"
+"opensc-pkcs11.so."
 
 #: ../to-be-integrated.rst:958
 msgid ""
 "Alternatively to OpenSC, you might use sc-hsm-embedded PKCS#11 and CSP-"
 "Minidriver Module."
 msgstr ""
+"Jako alternativu k OpenSC můžete použít sc-hsm-embedded PKCS#11 a CSP-"
+"Minidriver Module."
 
 #: ../to-be-integrated.rst:959
 msgid ""
@@ -1674,10 +2241,19 @@ msgid ""
 " frontend to OpenSCs toolset - nitrotool A forum post describes the "
 "procedure to sign executables with a key stored on HSM on Windows."
 msgstr ""
+"V případě, že používáte Javu, najdete zprostředkovatele JCE jako součást "
+"prostředí Smart Card Shell. Informace o schématu m-of-n najdete zde. S "
+"poskytovatelem JCE lze používat zabezpečené zasílání zpráv. Pro přístup k "
+"uživatelské příručce a dalším nástrojům se zaregistrujte v síti CardContact "
+"Developer Network. Příručku si můžete vyžádat také u nás. Předávání čipových "
+"karet s Fedorou Uživatelem vytvořený nástroj na GitHubu, který poskytuje "
+"snadný frontend k sadě nástrojů OpenSC - nitrotool Příspěvek na fóru "
+"popisuje postup podepisování spustitelných souborů pomocí klíče uloženého v "
+"HSM v systému Windows."
 
 #: ../to-be-integrated.rst:967
 msgid "Key Use Counter"
-msgstr ""
+msgstr "Počítadlo použití klíče"
 
 #: ../to-be-integrated.rst:969
 msgid ""
@@ -1686,6 +2262,10 @@ msgid ""
 "(SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter in the class "
 "scsh/sc-hsm/SmartCardHSM.js)."
 msgstr ""
+"Počítadlo použití klíčů se zobrazuje ve Správci klíčů v prostředí Smart Card "
+"Shell. V současné době jej lze nastavit pouze pomocí skriptu ("
+"SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter ve třídě scsh/sc-hsm/"
+"SmartCardHSM.js)."
 
 #: ../to-be-integrated.rst:971
 msgid ""
@@ -1694,6 +2274,10 @@ msgid ""
 "counter can be set. The attribute can then also be set for a key can be "
 "queried."
 msgstr ""
+"V našem modulu PKCS#11 existuje proprietární atribut "
+"CKA_SC_HSM_KEY_USE_COUNTER, u kterého lze nastavit použití klíče v čítači "
+"C_GenerateKeyPair. Tento atribut lze pak nastavit i pro klíč, na který se "
+"lze dotazovat."
 
 #: ../to-be-integrated.rst:973
 msgid ""
@@ -1701,4 +2285,6 @@ msgid ""
 "SmartCardHSMKey.getUseCounter() and confirm with "
 "SmartCardHSMKeySpec.setKeyUseCounter() can be set."
 msgstr ""
-
+"V OCF a JCE Provideru lze čítač použití klíčů zjistit pomocí funkce "
+"SmartCardHSMKey.getUseCounter() a potvrdit pomocí funkce SmartCardHSMKeySpec."
+"setKeyUseCounter()."
