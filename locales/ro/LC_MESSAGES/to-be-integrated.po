@@ -4,27 +4,31 @@
 # Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Nitrokey Documentation \n"
+"Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-06 01:52+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-01-13 15:11+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-to-be-integrated/ro/>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../to-be-integrated.rst:1
 msgid "# storage"
-msgstr ""
+msgstr "# depozitare"
 
 #: ../to-be-integrated.rst:4
 msgid "Configure Hidden Volumes:"
-msgstr ""
+msgstr "Configurați volumele ascunse:"
 
 #: ../to-be-integrated.rst:6
 msgid ""
@@ -32,6 +36,9 @@ msgid ""
 " volume\". Now you need to enter a new password twice to protect your "
 "hidden volume. The password strength is indicated below."
 msgstr ""
+"Deblocați volumul criptat din meniul aplicației Nitrokey. Selectați \"setup "
+"hidden volume\". Acum trebuie să introduceți o nouă parolă de două ori "
+"pentru a vă proteja volumul ascuns. Puterea parolei este indicată mai jos."
 
 #: ../to-be-integrated.rst:10
 msgid ""
@@ -39,6 +46,10 @@ msgid ""
 "short. Passwords like used for hidden devices can potentially be attacked"
 " unlimited which is why they need to be sufficiently strong."
 msgstr ""
+"Notă: PIN-urile pot fi încercate doar de trei ori, motiv pentru care pot fi "
+"scurte. Parolele, cum ar fi cele utilizate pentru dispozitivele ascunse, pot "
+"fi atacate nelimitat, motiv pentru care trebuie să fie suficient de "
+"puternice."
 
 #: ../to-be-integrated.rst:17
 msgid ""
@@ -47,6 +58,10 @@ msgid ""
 "choice because it could destroy data on the (not-hidden) encrypted volume"
 " and reveal the existience of the hidden volume."
 msgstr ""
+"În continuare, trebuie să definiți zona de stocare utilizată. Volumele "
+"ascunse sunt stocate în spațiul gol al volumului criptat. Aceasta este o "
+"alegere critică, deoarece ar putea distruge datele din volumul criptat (care "
+"nu este ascuns) și ar putea dezvălui existența volumului ascuns."
 
 #: ../to-be-integrated.rst:13
 #, python-format
@@ -61,6 +76,16 @@ msgid ""
 "buffer = 20% The hidden volume should end in a distance before the end of"
 " the storage. For example: 90%"
 msgstr ""
+"Ar trebui să folosiți o partiție FAT32 pe volumul criptat, deoarece "
+"sistemele de fișiere de jurnalizare, în special NTFS, pot distruge datele "
+"criptate. Copiați unele fișiere pe volumul criptat înainte de a crea volumul "
+"ascuns. După ce ați configurat un volum ascuns, nu ar trebui săă mai "
+"adăugați sau să modificați fișiere pe volumul criptat. Identificați spațiul "
+"de stocare pe care îl consumă fișierele dumneavoastră pe volumul criptat. De "
+"exemplu: 10% Tvolumul ascuns ar trebui să înceapă după fișierele dvs. de pe "
+"volumul criptat. De exemplu: 10% ffișiere + 10% buffer = 20% Tvolumul ascuns "
+"ar trebui să se termine la o distanță înainte de sfârșitul stocării. De "
+"exemplu: 90%."
 
 #: ../to-be-integrated.rst:19
 msgid ""
@@ -68,10 +93,14 @@ msgid ""
 "must not overlap. Otherwise they would override and destroy each other's "
 "data. Each hidden volume would require a different password."
 msgstr ""
+"În cazul în care utilizați două sau mai multe volume ascunse, rețineți că "
+"zona de stocare a acestora nu trebuie să se suprapună. În caz contrar, "
+"acestea s-ar suprascrie și ar distruge datele celuilalt. Fiecare volum "
+"ascuns ar necesita o parolă diferită."
 
 #: ../to-be-integrated.rst:21
 msgid "Usage of Hidden Volumes:"
-msgstr ""
+msgstr "Utilizarea volumelor ascunse:"
 
 #: ../to-be-integrated.rst:23
 msgid ""
@@ -85,18 +114,28 @@ msgid ""
 "various operating systems. Make sure to unmount/eject all partitions on "
 "the hidden volumes before locking or disconnecting the Nitrokey."
 msgstr ""
+"Selectați \"unlock encrypted volume\" și introduceți PIN-ul de utilizator. "
+"Selectați \"unlock hidden volume\" și introduceți oricare dintre parolele "
+"volumului ascuns's. Dacă aceasta este prima dată, este posibil să fie nevoie "
+"să creați o partiție pe volumul ascuns. Windows va deschide o fereastră "
+"corespunzătoare și vă va cere să faceți acest lucru. Pe Linux și Mac OS s-ar "
+"putea să fie nevoie să deschideți un manager de partiții și să creați manual "
+"o partiție. Puteți crea oricâte partiții doriți. Vă recomandăm FAT(32) dacă "
+"doriți să accesați partiția din diverse sisteme de operare. Asigurați-vă că "
+"ați demontat/ejectat toate partițiile de pe volumele ascunse înainte de a "
+"bloca sau deconecta Nitrokey."
 
 #: ../to-be-integrated.rst:28
 msgid "Also see older but comprehensive Nitrokey Storage manual."
-msgstr ""
+msgstr "Consultați și manualul mai vechi, dar cuprinzător, Nitrokey Storage."
 
 #: ../to-be-integrated.rst:32
 msgid "# pro"
-msgstr ""
+msgstr "# pro"
 
 #: ../to-be-integrated.rst:36
 msgid "PKCS#11 Driver"
-msgstr ""
+msgstr "Driver PKCS#11"
 
 #: ../to-be-integrated.rst:38
 msgid ""
@@ -105,6 +144,10 @@ msgid ""
 "PuTTY/KiTTY, OpenSSH, OpenSSL, or any other PKCS#11 compatible software, "
 "you should install OpenSC."
 msgstr ""
+"Dacă doriți să folosiți criptarea S/MIME pentru e-mail cu Thunderbird, să "
+"utilizați TrueCrypt/VeraCrypt, autentificarea SSL bazată pe certificat cu "
+"Firefox, PuTTY/KiTTY, OpenSSH, OpenSSL sau orice alt software compatibil cu "
+"PKCS#11, trebuie să instalați OpenSC."
 
 #: ../to-be-integrated.rst:40
 msgid ""
@@ -112,6 +155,9 @@ msgid ""
 "GnuPG/OpenPGP. But the other way around works fine. If you want to use "
 "Nitrokey with both GnuPG and PKCS#11, generate the keys with GnuPG."
 msgstr ""
+"Rețineți că o Nitrokey inițializată cu OpenSC nu funcționează cu GnuPG/"
+"OpenPGP. Dar și invers funcționează bine. Dacă doriți să utilizați Nitrokey "
+"atât cu GnuPG, cât și cu PKCS#11, generați cheile cu GnuPG."
 
 #: ../to-be-integrated.rst:42
 msgid ""
@@ -121,6 +167,11 @@ msgid ""
 "Currently it's limit to the authentication certificate and not widely "
 "tested yet.)"
 msgstr ""
+"Nu utilizați PKCS#11 în paralel cu GnuPG, deoarece ambele pot interfera și "
+"pot apărea probleme neașteptate. (Există un alt proiect promițător, scd-"
+"pkcs11, în curs de dezvoltare, care ar putea depăși această limitare în cele "
+"din urmă. În prezent, este limitat la certificatul de autentificare și nu a "
+"fost încă testat pe scară largă)."
 
 #: ../to-be-integrated.rst:44
 msgid ""
@@ -128,14 +179,17 @@ msgid ""
 "2, 3). These are general instructions how to use X.509 certificates. "
 "Alternative PKCS#11 Driver:"
 msgstr ""
+"Instrucțiuni privind crearea unui certificat X.509 valid cu Nitrokey (1, 2, "
+"3). Acestea sunt instrucțiuni generale privind modul de utilizare a "
+"certificatelor X.509. Driver PKCS#11 alternativ:"
 
 #: ../to-be-integrated.rst:47
 msgid "The recommended PKCS#11 driver is OpenSC."
-msgstr ""
+msgstr "Driverul PKCS#11 recomandat este OpenSC."
 
 #: ../to-be-integrated.rst:49
 msgid "Windows Mini Driver"
-msgstr ""
+msgstr "Driver pentru Windows Mini"
 
 #: ../to-be-integrated.rst:51
 msgid ""
@@ -145,6 +199,12 @@ msgid ""
 "browser, Windows Login). To install the driver, you may need to allow the"
 " installation of unsigned drivers first. Aloaha"
 msgstr ""
+"Acest Mini Driver permite integrarea Nitrokey cu magazinul de certificate "
+"Window's. Ulterior, toate aplicațiile care utilizează acest depozit de "
+"certificate pot fi utilizate cu Nitrokey (de exemplu, Internet Explorer, "
+"browserul web Google Chrome, Windows Login). Pentru a instala driverul, este "
+"posibil să fie necesar să permiteți mai întâi instalarea de drivere "
+"nesemnate. Aloaha"
 
 #: ../to-be-integrated.rst:54
 msgid ""
@@ -153,16 +213,22 @@ msgid ""
 "and with Windows as well as applications to encrypt and sign PDFs and the"
 " hard disk."
 msgstr ""
+"Toate aplicațiile Aloaha funcționează cu Nitrokey. Aceasta include un "
+"middleware pentru a integra Nitrokey cu alte aplicații bazate pe PKCS#11 și "
+"cu Windows, precum și aplicații de criptare și semnare a PDF-urilor și a "
+"discului dur."
 
 #: ../to-be-integrated.rst:56
 msgid "Alternative PKCS#11 Driver:"
-msgstr ""
+msgstr "Driver PKCS#11 alternativ:"
 
 #: ../to-be-integrated.rst:58
 msgid ""
 "The recommended PKCS#11 driver is OpenSC. Alternatively, you could use "
 "Peter Koch's PKCS#11 driver which has the following limitations:"
 msgstr ""
+"Driverul PKCS#11 recomandat este OpenSC. Alternativ, puteți utiliza driverul "
+"PKCS#11 al lui Peter Koch's, care are următoarele limitări:"
 
 #: ../to-be-integrated.rst:60
 msgid ""
@@ -170,16 +236,22 @@ msgid ""
 "generated on the Nitrokey) The Linux version does not allow to generate "
 "keys. Modification of the password/PIN under Linux is not possible."
 msgstr ""
+"Nu este posibilă importarea certificatelor X.509 existente. (În schimb, "
+"cheile trebuie să fie generate pe Nitrokey) Versiunea Linux nu permite "
+"generarea de chei. Modificarea parolei/PIN sub Linux nu este posibilă."
 
 #: ../to-be-integrated.rst:64
 msgid "p11-glue"
-msgstr ""
+msgstr "p11-glue"
 
 #: ../to-be-integrated.rst:66
 msgid ""
 "P11-glue uses PKCS#11 as glue between crypto libraries and security "
 "applications on the open source desktop. Articles in German"
 msgstr ""
+"P11-glue utilizează PKCS#11 ca liant între bibliotecile criptografice și "
+"aplicațiile de securitate de pe desktop-ul open source. Articole în limba "
+"germană"
 
 #: ../to-be-integrated.rst:69
 msgid ""
@@ -188,10 +260,13 @@ msgid ""
 "gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter "
 "CentOS."
 msgstr ""
+"Eine allgemeine und gut verständliche Einführung bietet der Artikel "
+"Magisches Leuchten im Linux Magazin 2010/12. Eine umfangreiche Anleitung "
+"gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter CentOS."
 
 #: ../to-be-integrated.rst:75
 msgid "**Q:** How can I login into Windows?"
-msgstr ""
+msgstr "**Întrebare:** Cum mă pot conecta la Windows?"
 
 #: ../to-be-integrated.rst:75
 msgid ""
@@ -201,10 +276,17 @@ msgid ""
 "Note that the Mini Driver for Nitrokey Pro may not work yet for write "
 "mode."
 msgstr ""
+"Pentru a accesa dispozitivele Nitrokey doar în regim de citire, descărcați "
+"și instalați acest Mini Driver (CSP). Dacă utilizați Windows Server, este "
+"posibil să fie necesar să dezactivați verificarea semnăturii driverului "
+"înainte de a putea instala driverul. Rețineți că este posibil ca Mini Driver "
+"pentru Nitrokey Pro să nu funcționeze încă pentru modul de scriere."
 
 #: ../to-be-integrated.rst:77
 msgid "There exist different ways to use a Nitrokey to logon on Windows:"
 msgstr ""
+"Există diferite moduri de a utiliza o Nitrokey pentru a vă conecta la "
+"Windows:"
 
 #: ../to-be-integrated.rst:79
 msgid ""
@@ -215,14 +297,20 @@ msgid ""
 "on Windows domain computers using MS Active Directory based on Smart "
 "Policy for other Nitrokey devices."
 msgstr ""
+"Autentificare pe computere Windows autonome pe baza EIDAuthenticate. "
+"Alternativ, instalați OpenSC și utilizați acreditările PKCS#11 ale Aloaha "
+"Smart Login's. Autentificare pe computere de domeniu Windows folosind MS "
+"Active Directory bazat pe minidriver OpenPGP-CSP pentru Nitrokey Storage 2 "
+"Nitrokey Pro 2 Autentificare pe computere de domeniu Windows folosind MS "
+"Active Directory bazat pe Smart Policy pentru alte dispozitive Nitrokey."
 
 #: ../to-be-integrated.rst:84
 msgid "**Q:** How can I login into Linux? Linux Login with PAM"
-msgstr ""
+msgstr "**Întrebare:** Cum mă pot conecta la Linux? Autentificare Linux cu PAM"
 
 #: ../to-be-integrated.rst:87
 msgid "You have two options: pam_p11 or Poldi."
-msgstr ""
+msgstr "Aveți două opțiuni: pam_p11 sau Poldi."
 
 #: ../to-be-integrated.rst:89
 msgid ""
@@ -230,6 +318,8 @@ msgid ""
 "S/MIME certificates. Please have a look at the documentation for more "
 "information."
 msgstr ""
+"Soluția cu pam_p11 este mai dificil de realizat și se bazează pe certificate "
+"S/MIME. Vă rugăm să consultați documentația pentru mai multe informații."
 
 #: ../to-be-integrated.rst:91
 msgid ""
@@ -238,12 +328,19 @@ msgid ""
 "installation of poldi (e.g. 'sudo apt-get install libpam-poldi' on "
 "Ubuntu) the following steps are needed to get it working."
 msgstr ""
+"Poldi 0.4.1 funcționează fără probleme cu Nitrokey pentru autentificarea PAM "
+"cu chei RSA (consultați Rezolvarea problemelor pentru informații despre "
+"cheile ECC). În afară de instalarea lui poldi (de exemplu 'sudo apt-get "
+"install libpam-poldi' pe Ubuntu) sunt necesari următorii pași pentru a-l "
+"face să funcționeze."
 
 #: ../to-be-integrated.rst:93
 msgid ""
 "It is necessary to already have keys generated on the Nitrokey, as the "
 "authentication key is used by PAM."
 msgstr ""
+"Este necesar să aveți deja chei generate pe Nitrokey, deoarece cheia de "
+"autentificare este utilizată de PAM."
 
 #: ../to-be-integrated.rst:95
 msgid ""
@@ -253,16 +350,24 @@ msgid ""
 "you have to add a line to /etc/poldi/localdb/users which contains the "
 "following information"
 msgstr ""
+"La început trebuie să aflați \"Application ID\" al Nitrokey. Puteți folosi "
+"\"gpg --card-status | grep Application\" pentru a afla care'este al "
+"dumneavoastră. Seamănă cu 'D006000124010200000000000000xxxxxxxx' sau ceva "
+"asemănător. Acum trebuie să adăugați o linie în /etc/poldi/localdb/users "
+"care să conțină următoarele informații"
 
 #: ../to-be-integrated.rst:97
 msgid "<YourApplicationID> <YourUsername>"
-msgstr ""
+msgstr "<YourApplicationID> <YourUsername>"
 
 #: ../to-be-integrated.rst:99
 msgid ""
 "This could look like 'D00600012401020000000000xxxxxxxx nitrokeyuser'. Now"
 " dump the public key from the Nitrokey into poldi local db:"
 msgstr ""
+"Acest lucru ar putea arăta ca 'D006000124010200000000000000xxxxxxxx "
+"nitrokeyuser'. Acum, aruncați cheia publică din Nitrokey în baza de date "
+"locală poldi:"
 
 #: ../to-be-integrated.rst:101
 msgid ""
@@ -270,18 +375,25 @@ msgid ""
 "/etc/poldi/localdb/keys/<YourApplicationID>\" \"SCD READKEY --advanced "
 "OPENPGP.3\" /bye'"
 msgstr ""
+"sudo sh -c 'gpg-connect-agent \"/datafile /etc/poldi/localdb/keys/"
+"<YourApplicationID>\" \"SCD READKEY --advanced OPENPGP.3\" /bye'"
 
 #: ../to-be-integrated.rst:103
 msgid ""
 "Please be aware that you have to insert your Application ID in the line "
 "above with the one of your stick!"
 msgstr ""
+"Vă rugăm să aveți în vedere că trebuie să introduceți ID-ul aplicației în "
+"rândul de mai sus cu cel al stick-ului dumneavoastră!"
 
 #: ../to-be-integrated.rst:105
 msgid ""
 "Then you have to configure PAM. Just add \"auth sufficient pam_poldi.so\""
 " to pam configuration files according to your needs:"
 msgstr ""
+"Apoi trebuie să configurați PAM. Trebuie doar să adăugați \"auth sufficient "
+"pam_poldi.so\" la fișierele de configurare pam în funcție de nevoile "
+"dumneavoastră:"
 
 #: ../to-be-integrated.rst:107
 msgid ""
@@ -289,6 +401,10 @@ msgid ""
 "console login /etc/pam.d/sudo for sudo authentication /etc/pam.d/gnome-"
 "screensaver for login back from a locked screen etc."
 msgstr ""
+"/etc/pam.d/common-auth pentru autentificarea grafică a utilizatorului /etc/"
+"pam.d/login pentru autentificarea pe consolă /etc/pam.d/sudo pentru "
+"autentificarea sudo /etc/pam.d/gnome-screensaver pentru autentificarea de pe "
+"un ecran blocat etc."
 
 #: ../to-be-integrated.rst:113
 msgid ""
@@ -297,24 +413,34 @@ msgid ""
 " that booting into rescue mode from Grub requires a root password, so "
 "keep that or a live CD which can read your filesystems to hand."
 msgstr ""
+"Notă: este periculos să te joci cu Pam, așa că asigură-te că ai o modalitate "
+"de a accesa mașina dacă întrerupi complet autentificarea. Nu uitați că "
+"pornirea în modul de salvare din Grub necesită o parolă de root, așa că "
+"păstrați-o la îndemână sau un CD live care poate citi sistemele de fișiere."
 
 #: ../to-be-integrated.rst:115
 msgid ""
 "Here you find further instructions (in German, partially outdated). "
 "Troubleshooting"
 msgstr ""
+"Aici găsiți instrucțiuni suplimentare (în germană, parțial depășite). "
+"Depanare"
 
 #: ../to-be-integrated.rst:118
 msgid ""
 "If you get an error similar to 'ERR 100663414 Invalid ID <SCD>' you "
 "should try instead"
 msgstr ""
+"Dacă primiți o eroare similară cu 'ERR 100663414 Invalid ID <SCD>' ar trebui "
+"să încercați în schimb"
 
 #: ../to-be-integrated.rst:120
 msgid ""
 "poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> "
 "/etc/poldi/localdb/keys"
 msgstr ""
+"poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> /etc/poldi/"
+"localdb/keys"
 
 #: ../to-be-integrated.rst:122
 msgid ""
@@ -326,20 +452,29 @@ msgid ""
 " eventually. In the meantime the only option is to build poldi from "
 "source."
 msgstr ""
+"Vă rugăm să aveți în vedere că trebuie să introduceți ID-ul aplicației în "
+"rândul de mai sus cu cel al stick-ului dumneavoastră! Chei ECC Din păcate, "
+"poldi nu are încă suport pentru chei ECC. Dar există un patch pentru cheile "
+"ECC utilizate cu Nitrokey Start. Acesta este deja inclus în ramura "
+"principală a depozitului de dezvoltare poldi și, prin urmare, va fi lansat "
+"într-o versiune mai nouă în cele din urmă. Între timp, singura opțiune este "
+"să construiți poldi din sursă."
 
 #: ../to-be-integrated.rst:128
 msgid "**Q:** How can I login with One Time Passwords?"
-msgstr ""
+msgstr "**Întrebare:** Cum mă pot autentifica cu parole unice?"
 
 #: ../to-be-integrated.rst:128
 msgid ""
 "One-Time-Passwords (OTP) are used for secure login to websites and local "
 "applications."
 msgstr ""
+"Parolele unice (OTP) sunt utilizate pentru conectarea securizată la site-uri "
+"web și aplicații locale."
 
 #: ../to-be-integrated.rst:130
 msgid "Two OTP modes exist:"
-msgstr ""
+msgstr "Există două moduri OTP:"
 
 #: ../to-be-integrated.rst:132
 msgid ""
@@ -347,6 +482,10 @@ msgid ""
 "unsure, assume you are using this mode. HMAC-based One-time Passwords "
 "(HOTP) is used for local applications and computer logins."
 msgstr ""
+"Parolele unice bazate pe timp (TOTP) sunt utilizate pe scară largă pentru "
+"site-urile web. Dacă nu sunteți sigur, presupuneți că folosiți acest mod. "
+"Parola unică bazată pe HMAC (HMAC-based One-time Passwords - HOTP) este "
+"utilizată pentru aplicațiile locale și pentru autentificarea pe calculator."
 
 #: ../to-be-integrated.rst:135
 msgid ""
@@ -354,6 +493,9 @@ msgid ""
 " need to download and install the latest Nitrokey App. Time-based One-"
 "time Passwords - TOTP"
 msgstr ""
+"Pentru a utiliza parole unice cu Nitrokey Pro sau Nitrokey Storage, trebuie "
+"să descărcați și să instalați cea mai recentă aplicație Nitrokey. Parole "
+"unice bazate pe timp - TOTP (Time-based One-time Passwords)"
 
 #: ../to-be-integrated.rst:138
 msgid ""
@@ -361,10 +503,13 @@ msgid ""
 "login to a Nextcloud account. Generic instructions for all other "
 "services."
 msgstr ""
+"Pentru conectarea la un cont Google. Pentru conectarea la un cont Microsoft. "
+"Pentru conectarea la un cont Nextcloud. Instrucțiuni generice pentru toate "
+"celelalte servicii."
 
 #: ../to-be-integrated.rst:143
 msgid "**Q:** How can I use the Nitrokey Pro with Android?"
-msgstr ""
+msgstr "**Întrebare: ** Cum pot utiliza Nitrokey Pro cu Android?"
 
 #: ../to-be-integrated.rst:145
 msgid ""
@@ -372,6 +517,9 @@ msgid ""
 "with OpenKeychain. This enables one to encrypt/decrypt E-Mails or files "
 "via OpenPGP."
 msgstr ""
+"Este posibil să utilizați Nitrokey pe un dispozitiv Android în combinație cu "
+"OpenKeychain. Acest lucru permite criptarea/decriptarea e-mailurilor sau a "
+"fișierelor prin OpenPGP."
 
 #: ../to-be-integrated.rst:147
 msgid ""
@@ -379,12 +527,17 @@ msgid ""
 "look there, if you like. The following instructions are based on "
 "OpenKeychain."
 msgstr ""
+"Cotech oferă software Android cu suport comercial. Vă rugăm să aruncați o "
+"privire acolo, dacă doriți. Următoarele instrucțiuni se bazează pe "
+"OpenKeychain."
 
 #: ../to-be-integrated.rst:149
 msgid ""
 "Tested with Nitrokey Start, Pro and Storage in combination with Android "
 "7.1, OpenKeychain 4.5 and K9Mail 5.207. Prerequisites"
 msgstr ""
+"Testat cu Nitrokey Start, Pro și Storage în combinație cu Android 7.1, "
+"OpenKeychain 4.5 și K9Mail 5.207. Condiții prealabile"
 
 #: ../to-be-integrated.rst:152
 msgid ""
@@ -392,10 +545,13 @@ msgid ""
 "Nitrokey with your phone OpenKeychain installed on Device Public key "
 "saved on the device or uploaded on a keyserver"
 msgstr ""
+"Telefon Android capabil de USB OTG Cablu USB OTG pentru a conecta Nitrokey "
+"la telefon OpenKeychain instalat pe dispozitiv Cheia publică salvată pe "
+"dispozitiv sau încărcată pe un server de chei"
 
 #: ../to-be-integrated.rst:157
 msgid "First steps"
-msgstr ""
+msgstr "Primii pași"
 
 #: ../to-be-integrated.rst:159
 msgid ""
@@ -408,12 +564,22 @@ msgid ""
 "key' to import a reference to the private key of the Nitrokey. That’s "
 "basically it."
 msgstr ""
+"Pentru a importa cheile de pe Nitrokey, trebuie să porniți mai întâi "
+"aplicația OpenKeychain. Apoi introduceți Nitrokey cu ajutorul cablului USB "
+"OTG. OpenKeychain pornește o fereastră de dialog pentru a utiliza Nitrokey ("
+"este posibil să trebuiască să acceptați mai întâi utilizarea cheii cu "
+"OpenKeychain). Acum puteți alege între a căuta cheia publică pe un server de "
+"chei sau a alege cheia publică din memorie. După ce cheia publică a fost "
+"importată, trebuie să apăsați pe 'connect key' pentru a importa o referință "
+"la cheia privată a Nitrokey. În principiu, asta este tot."
 
 #: ../to-be-integrated.rst:161
 msgid ""
 "In the case that no there are no keys on the Nitrokey yet, OpenKeychain "
 "will help with the creation of a new key pair instead. Usage"
 msgstr ""
+"În cazul în care nu există încă chei pe Nitrokey, OpenKeychain vă va ajuta "
+"să creați o nouă pereche de chei. Utilizare"
 
 #: ../to-be-integrated.rst:164
 msgid ""
@@ -423,6 +589,11 @@ msgid ""
 "OpenKeychain to decrypt your mails automatically. It is important to "
 "choose the right key in the K9Mail account settings first."
 msgstr ""
+"Puteți utiliza toate funcțiile OpenKeychain și aplicațiile care utilizează "
+"OpenKeychain. Prin urmare, puteți doar să criptați/decriptați mesajele sau "
+"fișierele manual folosind direct aplicația sau, de exemplu, puteți combina "
+"K9Mail cu OpenKeychain pentru a vă decripta automat mesajele. Este important "
+"să alegeți mai întâi cheia corectă în setările contului K9Mail."
 
 #: ../to-be-integrated.rst:166
 msgid ""
@@ -432,24 +603,32 @@ msgid ""
 "to 'Language and Input' > 'Current Keyboard' > 'Hardware show input "
 "method'."
 msgstr ""
+"Rețineți că este posibil să trebuiască să activați tastatura de pe ecran în "
+"setările Android pentru a introduce PIN-ul, deoarece sistemul recunoaște "
+"Nitrokey ca fiind o tastatură fizică și, prin urmare, încearcă să ascundă "
+"tastatura de pe ecran. Mergeți la 'Language and Input' > 'Current Keyboard' "
+"> 'Hardware show input method'."
 
 #: ../to-be-integrated.rst:169
 msgid "**Q:** How can I use the Nitrokey Pro with Iphone?"
-msgstr ""
+msgstr "**Q:** Cum pot folosi Nitrokey Pro cu Iphone?"
 
 #: ../to-be-integrated.rst:170
 msgid "Currently it is not possible"
-msgstr ""
+msgstr "În prezent, nu este posibil"
 
 #: ../to-be-integrated.rst:172
 msgid "**Q:** How can I use the Nitrokey Pro with Ubuntu Phone?"
-msgstr ""
+msgstr "**Întrebare:** Cum pot folosi Nitrokey Pro cu Ubuntu Phone?"
 
 #: ../to-be-integrated.rst:172
 msgid ""
 "There are instructions on gnupg.org about how to use a OpenPGP Card on a "
 "UbuntuPhone which should work for the Nitrokey Start, Pro and Storage."
 msgstr ""
+"Există instrucțiuni pe gnupg.org despre cum să folosiți o cartelă OpenPGP pe "
+"un UbuntuPhone, care ar trebui să funcționeze pentru Nitrokey Start, Pro și "
+"Storage."
 
 #: ../to-be-integrated.rst:174
 msgid ""
@@ -458,6 +637,11 @@ msgid ""
 "S/MIME/X.509 is mostly used by enterprises. If you are in doubt which one"
 " to choose, you should use OpenPGP."
 msgstr ""
+"**Întrebare:** Cum pot face criptarea e-mailurilor? Există două standarde "
+"utilizate pe scară largă pentru criptarea e-mailurilor. În timp ce OpenPGP/"
+"GnuPG este popular în rândul persoanelor fizice, S/MIME/X.509 este utilizat "
+"în principal de întreprinderi. Dacă aveți dubii cu privire la care să "
+"alegeți, ar trebui să folosiți OpenPGP."
 
 #: ../to-be-integrated.rst:177
 msgid ""
@@ -465,26 +649,35 @@ msgid ""
 "instructions for using S/MIME with the Nitrokey. Note: SMIME certificates"
 " can be purchased cheaply from CERTUM and SSLTrust."
 msgstr ""
+"instrucțiuni pentru utilizarea standardului OpenPGP cu Nitrokey instrucțiuni "
+"pentru utilizarea S/MIME cu Nitrokey. Notă: Certificatele SMIME pot fi "
+"achiziționate la prețuri reduse de la CERTUM și SSLTrust."
 
 #: ../to-be-integrated.rst:180
 msgid ""
 "Please note, that it is currently advised to use either OpenPGP or S/MIME"
 " encryption, but not both with the Nitrokey."
 msgstr ""
+"Vă rugăm să rețineți că, în prezent, se recomandă să folosiți fie criptarea "
+"OpenPGP, fie S/MIME, dar nu ambele cu Nitrokey."
 
 #: ../to-be-integrated.rst:182
 msgid "To use a Nitrokey Storage with Thunderbird 78+, you can try this tutorial."
 msgstr ""
+"Pentru a utiliza un Nitrokey Storage cu Thunderbird 78+, puteți încerca "
+"acest tutorial."
 
 #: ../to-be-integrated.rst:184
 msgid "**Q:** How can I do Hard Disk Encryption?"
-msgstr ""
+msgstr "**Întrebare:** Cum pot face criptarea hard disk-ului?"
 
 #: ../to-be-integrated.rst:187
 msgid ""
 "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (formerly "
 "TrueCrypt)"
 msgstr ""
+"Pentru: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (fostul "
+"TrueCrypt)"
 
 #: ../to-be-integrated.rst:190
 msgid ""
@@ -494,6 +687,11 @@ msgid ""
 "TrueCrypt as well. Follow these steps to use the program with Nitrokey "
 "Storage or Pro:"
 msgstr ""
+"VeraCrypt este un software gratuit și cu sursă deschisă de criptare a "
+"discurilor pentru Windows, macOS și GNU/Linux. Este succesorul lui TrueCrypt "
+"și, prin urmare, este recomandat, deși următoarele instrucțiuni ar trebui să "
+"se aplice și la TrueCrypt. Urmați acești pași pentru a utiliza programul cu "
+"Nitrokey Storage sau Pro:"
 
 #: ../to-be-integrated.rst:192 ../to-be-integrated.rst:704
 msgid ""
@@ -508,6 +706,16 @@ msgid ""
 "Create a container, choose the keyfile on the device as an alternative to"
 " a password."
 msgstr ""
+"Instalați OpenSC Alegeți biblioteca în VeraCrypt în "
+"Settings>Preferences>Security Token (locația depinde de sistem, de exemplu /"
+"usr/lib/opensc). Generați un fișier cheie de 64 de octeți prin Tools>Keyfile "
+"Generator. Acum ar trebui să puteți importa fișierul cheie generat prin "
+"Tools>Manage Security Token Keyfiles. Ar trebui să alegeți primul Slot ([0] "
+"User PIN). Fișierul cheie este apoi stocat pe Nitrokey ca 'Private Data "
+"Object 1' (PrivDO1). După aceasta, ar trebui să ștergeți fișierul cheie "
+"original de pe computerul dumneavoastră în siguranță! Acum puteți utiliza "
+"VeraCrypt cu Nitrokey: Creați un container, alegeți fișierul cheie de pe "
+"dispozitiv ca alternativă la o parolă."
 
 #: ../to-be-integrated.rst:199
 msgid ""
@@ -516,12 +724,19 @@ msgid ""
 "Instead it stores a keyfile on the Nitrokey which theoretically could be "
 "stolen by a computer virus after the user enters the PIN."
 msgstr ""
+"Considerații privind securitatea: Vă rugăm să rețineți că VeraCrypt nu "
+"utilizează întreaga securitate pe care o oferă Nitrokey (și cardurile "
+"inteligente în general). În schimb, stochează un fișier cheie pe Nitrokey "
+"care, teoretic, ar putea fi furat de un virus informatic după ce "
+"utilizatorul introduce PIN-ul."
 
 #: ../to-be-integrated.rst:201
 msgid ""
 "Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
 "described security limitation."
 msgstr ""
+"Notă: Aloaha Crypt se bazează pe TrueCrypt/VeraCrypt, dar fără limitările de "
+"securitate descrise."
 
 #: ../to-be-integrated.rst:204
 msgid ""
@@ -529,12 +744,18 @@ msgid ""
 "instructions how to use Nitrokey to encrypt your hard disk under Linux "
 "with LUKS/dm-crypt. Other instruction."
 msgstr ""
+"Criptarea hard disk-ului pe Linux, pe baza LUKS/dm-crypt Iată instrucțiuni "
+"excelente pentru a folosi Nitrokey pentru a vă cripta hard disk-ul sub Linux "
+"cu LUKS/dm-crypt. Alte instrucțiuni."
 
 #: ../to-be-integrated.rst:207
 msgid ""
 "Purism has created a simple script to add the Nitrokey/LibremKey as a way"
 " to unlock LUKS partitions (not tested by Nitrokey yet)."
 msgstr ""
+"Purism a creat un script simplu pentru a adăuga Nitrokey/LibremKey ca "
+"modalitate de deblocare a partițiilor LUKS (nu a fost încă testat de "
+"Nitrokey)."
 
 #: ../to-be-integrated.rst:209
 msgid ""
@@ -542,18 +763,26 @@ msgid ""
 "Storage based on the Password Safe (not tested by Nitrokey yet). A "
 "description on how to use it on Gentoo can be found here."
 msgstr ""
+"Acest proiect urmărește să faciliteze utilizarea LUKS cu Nitrokey Pro sau "
+"Storage bazat pe Password Safe (care nu a fost încă testat de Nitrokey). O "
+"descriere a modului de utilizare pe Gentoo poate fi găsită aici."
 
 #: ../to-be-integrated.rst:211
 msgid ""
 "For Arch Linux, see initramfs-scencrypt. Storage Encryption on Linux, "
 "Based on EncFS"
 msgstr ""
+"Pentru Arch Linux, consultați initramfs-scencrypt. Criptarea stocării pe "
+"Linux, bazată pe EncFS"
 
 #: ../to-be-integrated.rst:214
 msgid ""
 "Prerequisite: Please ensure that you installed the device driver, changed"
 " the default PINs and generated or imported keys with GnuPG."
 msgstr ""
+"Precondiții: Vă rugăm să vă asigurați că ați instalat driverul de "
+"dispozitiv, că ați modificat PIN-urile implicite și că ați generat sau "
+"importat chei cu GnuPG."
 
 #: ../to-be-integrated.rst:216
 msgid ""
@@ -561,66 +790,83 @@ msgid ""
 "You may follow these steps to use it with very long passwords and "
 "Nitrokey:"
 msgstr ""
+"Un sistem de fișiere criptate ușor de utilizat este EncFS, care se bazează "
+"pe FUSE. Puteți urma acești pași pentru a-l utiliza cu parole foarte lungi "
+"și Nitrokey:"
 
 #: ../to-be-integrated.rst:218
 msgid "Initialization"
-msgstr ""
+msgstr "Inițializare"
 
 #: ../to-be-integrated.rst:220
 msgid ""
 "# Create a key file with random data: $ dd bs=64 count=1 if=/dev/urandom "
 "of=keyfile"
 msgstr ""
+"# Creați un fișier cheie cu date aleatorii: $ dd bs=64 count=1 if=/dev/"
+"urandom of=keyfile"
 
 #: ../to-be-integrated.rst:223
 msgid ""
 "# Encrypt the key file and use the User-ID of your Nitrokey $ gpg "
 "--encrypt keyfile"
 msgstr ""
+"# Criptați fișierul cheie și folosiți ID-ul de utilizator al Nitrokey $ gpg "
+"--encrypt keyfile"
 
 #: ../to-be-integrated.rst:226
 msgid ""
 "# Remove the key file in clear text: $ rm keyfile # you may want to use "
 "'wipe' or 'shred' to securely delete the keyfile"
 msgstr ""
+"# Eliminați fișierul cheie în text clar: $ rm keyfile # este posibil să "
+"doriți să utilizați 'wipe' sau 'shred' pentru a șterge în siguranță fișierul "
+"cheie."
 
 #: ../to-be-integrated.rst:229
 msgid "# Create mount point: $ mkdir ~/.cryptdir ~/cryptdir"
-msgstr ""
+msgstr "# Creați punctul de montare: $ mkdir ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:232
 msgid ""
 "# Create the actual encryption folder $ gpg -d keyfile.gpg | encfs -S "
 "~/.cryptdir ~/cryptdir"
 msgstr ""
+"# Creați dosarul de criptare real $ gpg -d keyfile.gpg | encfs -S ~/."
+"cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:235
 msgid ""
 "# There may appears an error message about missing permission of "
 "fusermount # This message can be ignored"
 msgstr ""
+"# Este posibil să apară un mesaj de eroare privind lipsa permisiunii "
+"fusermount # Acest mesaj poate fi ignorat."
 
 #: ../to-be-integrated.rst:238
 msgid "# Unmount the new file system: $ fusermount -u ~/cryptdir"
-msgstr ""
+msgstr "# Demontați noul sistem de fișiere: $ fusermount -u ~/cryptdir"
 
 #: ../to-be-integrated.rst:241
 msgid "Usage"
-msgstr ""
+msgstr "Utilizare"
 
 #: ../to-be-integrated.rst:243
 msgid ""
 "# Mount encrypted file system and enter PIN of Nitrokey: $ gpg -d "
 "keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
 msgstr ""
+"# Montați sistemul de fișiere criptate și introduceți PIN-ul Nitrokey: $ gpg "
+"-d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:246
 msgid "# After usage, unmount the file system: $ fusermount -u ~/cryptdir"
 msgstr ""
+"# După utilizare, demontați sistemul de fișiere: $ fusermount -u ~/cryptdir"
 
 #: ../to-be-integrated.rst:250
 msgid "Storage Encryption on Linux, Based on ECryptFS"
-msgstr ""
+msgstr "Criptarea stocării pe Linux, bazată pe ECryptFS"
 
 #: ../to-be-integrated.rst:252
 msgid ""
@@ -629,10 +875,14 @@ msgid ""
 "instructions. Alternatively, try ESOSI or follow these steps using OpenSC"
 " and OpenVPN:"
 msgstr ""
+"eCryptfs este un sistem de fișiere cu criptare transparentă bazat pe fișiere "
+"pentru Linux, care poate fi utilizat cu Nitrokey prin intermediul unui "
+"driver PKCS#11. Consultați aceste instrucțiuni. Alternativ, încercați ESOSI "
+"sau urmați acești pași folosind OpenSC și OpenVPN:"
 
 #: ../to-be-integrated.rst:254
 msgid "Warning: This will delete existing keys on your Nitrokey!"
-msgstr ""
+msgstr "Avertisment: Acest lucru va șterge cheile existente pe Nitrokey!"
 
 #: ../to-be-integrated.rst:256
 msgid ""
@@ -640,10 +890,13 @@ msgid ""
 "objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 "
 "--format pkcs12 --auth-id 3 --verify-pin"
 msgstr ""
+"# Importați certificatul și cheia în Nitrokey $ pkcs15-init --delete-objects "
+"privkey,pubkey --id 3 --store-private-key user@example.com.p12 --format "
+"pkcs12 --auth-id 3 --verify-pin"
 
 #: ../to-be-integrated.rst:259
 msgid "# Create the file ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
-msgstr ""
+msgstr "# Creați fișierul ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
 
 #: ../to-be-integrated.rst:262
 msgid ""
@@ -652,6 +905,10 @@ msgid ""
 "private=true $ openvpn --show-pkcs11-ids path to opensc-pkcs11 module "
 "Certificate"
 msgstr ""
+"# Introduceți acest conținut: $ pkcs11-log-level=5 "
+"pkcs11-provider1,name=name,library=/usr/lib/opensc-pkcs11.so,cert-"
+"private=true $ openvpn --show-pkcs11-ids path to opensc-pkcs11 module "
+"Certificate"
 
 #: ../to-be-integrated.rst:266
 msgid ""
@@ -660,10 +917,14 @@ msgid ""
 " Serial: 066E04 Serialized id: "
 "ZeitControl/PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
 msgstr ""
+"DN: /description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@"
+"example.com Serial: 066E04 Identificare serializată: ZeitControl/PKCS\\x2315"
+"\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
 
 #: ../to-be-integrated.rst:270
 msgid "# Copy the serialized id for later usage: $ ecryptfs-manager"
 msgstr ""
+"# Copiază id-ul serializat pentru utilizare ulterioară: $ ecryptfs-manager"
 
 #: ../to-be-integrated.rst:273
 msgid ""
@@ -671,10 +932,13 @@ msgid ""
 " # Choose pkcs11-helper # Enter the serialized ID of step 3 to PKCS#11 "
 "ID."
 msgstr ""
+"# Aceasta va afișa opțiunea de listă. Alegeți opțiunea \"Add public key to "
+"keyring\" # Alegeți pkcs11-helper # Introduceți ID-ul serializat de la pasul "
+"3 în PKCS#11 ID."
 
 #: ../to-be-integrated.rst:281
 msgid "**Q:** How can I sign and encrypt Files and PDFs? GnuPG"
-msgstr ""
+msgstr "**Întrebare:** Cum pot semna și cripta fișiere și PDF-uri? GnuPG"
 
 #: ../to-be-integrated.rst:284
 msgid ""
@@ -683,10 +947,14 @@ msgid ""
 "Office / Libre Office or any other PDF reader supporting electronic "
 "signatures."
 msgstr ""
+"Utilizați instrumentul gpgsm pentru a semna, verifica, cripta și decripta "
+"fișiere. Utilizați o cheie de semnătură pe o Nitrokey pentru a semna "
+"documente utilizând Acrobat Reader, Open Office / Libre Office sau orice alt "
+"cititor de PDF care acceptă semnături electronice."
 
 #: ../to-be-integrated.rst:287
 msgid "GPA - GNU Privacy Assistant"
-msgstr ""
+msgstr "GPA - Asistentul de confidențialitate GNU"
 
 #: ../to-be-integrated.rst:289
 msgid ""
@@ -694,20 +962,26 @@ msgid ""
 "various features to manage keys and cards. It also allows file operations"
 " such as file encryption, decryption, signing."
 msgstr ""
+"Gnu Privacy Assistant (GPA) recunoaște Nitrokey din start și dispune de "
+"diverse funcții de gestionare a cheilor și cardurilor. De asemenea, permite "
+"operațiuni cu fișiere, cum ar fi criptarea, decriptarea și semnarea "
+"fișierelor."
 
 #: ../to-be-integrated.rst:292
 msgid "SOPS - Secrect OPerationS"
-msgstr ""
+msgstr "SOPS - Secrect OPerationS"
 
 #: ../to-be-integrated.rst:294
 msgid ""
 "SOPS is an editor of encrypted files that supports YAML, JSON and BINARY "
 "formats and encrypts with AWS KMS and PGP. You can find it on github."
 msgstr ""
+"SOPS este un editor de fișiere criptate care acceptă formatele YAML, JSON și "
+"BINARY și criptează cu AWS KMS și PGP. Îl puteți găsi pe github."
 
 #: ../to-be-integrated.rst:297
 msgid "Aloaha"
-msgstr ""
+msgstr "Aloaha"
 
 #: ../to-be-integrated.rst:299
 msgid ""
@@ -717,16 +991,24 @@ msgid ""
 "appropriate variant. After this Windows recognize your certificate and "
 "you can sign the document as it is shown in the screencast below."
 msgstr ""
+"Aloaha oferă mai multe aplicații pentru criptarea și semnarea PDF-urilor. "
+"Toate acestea, care permit integrarea cardului inteligent, funcționează cu "
+"Nitrokey. Puteți, de exemplu, să importați cheia și certificatul folosind "
+"OpenSC sau orice altă variantă adecvată. După aceasta, Windows vă recunoaște "
+"certificatul și puteți semna documentul, așa cum se arată în screencastul de "
+"mai jos."
 
 #: ../to-be-integrated.rst:301
 msgid "GpgEx for Windows Explorer"
-msgstr ""
+msgstr "GpgEx pentru Windows Explorer"
 
 #: ../to-be-integrated.rst:303
 msgid ""
 "GpgEx integrates smoothly into Windows Explorer to allow encryption and "
 "decryption of files. Install it as part of the GPG4Win package."
 msgstr ""
+"GpgEx se integrează perfect în Windows Explorer pentru a permite criptarea "
+"și decriptarea fișierelor. Instalați-l ca parte a pachetului GPG4Win."
 
 #: ../to-be-integrated.rst:306
 msgid ""
@@ -734,6 +1016,9 @@ msgid ""
 "please ensure that you installed the device driver and initialized the "
 "device (e.g. generated keys)."
 msgstr ""
+"Înainte de a începe să utilizați oricare dintre aceste aplicații cu "
+"Nitrokey, asigurați-vă că ați instalat driverul dispozitivului și ați "
+"inițializat dispozitivul (de exemplu, ați generat chei)."
 
 #: ../to-be-integrated.rst:308
 msgid ""
@@ -741,6 +1026,10 @@ msgid ""
 "authentication method but it is only used rarely. If you are unsure what "
 "this means, this approach is most likely not relevant for you."
 msgstr ""
+"Conectarea pe bază de certificat cu TLS și browserul web este o metodă de "
+"autentificare foarte sigură, dar este folosită foarte rar. Dacă nu sunteți "
+"sigur ce înseamnă acest lucru, cel mai probabil această abordare nu este "
+"relevantă pentru dumneavoastră."
 
 #: ../to-be-integrated.rst:310
 msgid ""
@@ -750,10 +1039,16 @@ msgid ""
 " Certificate authentication can be used easily with the Nitrokey and also"
 " with any other certificate storages. Mozilla Firefox"
 msgstr ""
+"Această pagină se referă la site-urile și aplicațiile care acceptă "
+"autentificarea prin certificat, astfel încât utilizatorii nu trebuie să "
+"introducă numele de utilizator și parola la autentificare. De exemplu, WebID "
+"este un protocol grozav care îl folosește. Autentificarea prin certificat "
+"poate fi utilizată cu ușurință cu Nitrokey și, de asemenea, cu orice alte "
+"stocuri de certificate. Mozilla Firefox"
 
 #: ../to-be-integrated.rst:313
 msgid "You need to install the PKCS#11 driver:"
-msgstr ""
+msgstr "Trebuie să instalați driverul PKCS#11:"
 
 #: ../to-be-integrated.rst:315
 msgid ""
@@ -764,18 +1059,28 @@ msgid ""
 "the Browse button to select the previously downloaded PKCS11 driver file."
 " Confirm and close all dialogs."
 msgstr ""
+"Descărcați driverul PKCS11 și stocați-l pe hard disk-ul local sau instalați "
+"OpenSC. Deschideți Preferințe în Firefox și mergeți la Confidențialitate & "
+"Securitate -> Securitate (doar un titlu) -> Butonul 'Dispozitive de "
+"securitate...' Apăsați butonul Încărcați. Introduceți \"Nitrokey\" ca nume "
+"de modul și apăsați butonul Browse pentru a selecta fișierul driver PKCS11 "
+"descărcat anterior. Confirmați și închideți toate dialogurile."
 
 #: ../to-be-integrated.rst:319
 msgid ""
 "Now you are ready to access websites which provide certificate "
 "authentication. Internet Explorer"
 msgstr ""
+"Acum sunteți gata să accesați site-uri web care oferă autentificare prin "
+"certificat. Internet Explorer"
 
 #: ../to-be-integrated.rst:322
 msgid ""
 "Install this Mini Driver for Windows. Now you are ready to access "
 "websites which provide certificate authentication. Google Chrome"
 msgstr ""
+"Instalați acest Mini Driver pentru Windows. Acum sunteți gata să accesați "
+"site-uri web care oferă autentificare prin certificat. Google Chrome"
 
 #: ../to-be-integrated.rst:325
 msgid ""
@@ -783,6 +1088,9 @@ msgid ""
 "instructions. Now you are ready to access websites which provide "
 "certificate authentication. WebID"
 msgstr ""
+"În Windows, instalați acest Mini Driver. În Linux, urmați aceste "
+"instrucțiuni. Acum sunteți gata să accesați site-uri web care oferă "
+"autentificare prin certificat. WebID"
 
 #: ../to-be-integrated.rst:328
 msgid ""
@@ -803,6 +1111,22 @@ msgid ""
 "Liferay         Blog FusionForge     web-based project-management and "
 "collaboration software"
 msgstr ""
+"WebID este o tehnologie care permite crearea de site-uri web sociale "
+"securizate și federate. Iată un filmuleț (WebM, Ogg video, H.264) care "
+"demonstrează cum se utilizează Nitrokey pentru a crea un profil WebID și cum "
+"se utilizează ulterior acesta într-un Internet cafe din Singapore. Nitrokey "
+"protejează împotriva virușilor de calculator care, în caz contrar, ar putea "
+"să fure numele de utilizator și parola. Site-uri web Categoria Site web "
+"CAcert autoritate de certificare bazată pe comunitate PrivaSphere Mesagerie "
+"securizată HM Revenue &; Customs Administrația fiscală din Marea Britanie's "
+"Software Application Categorie Roundcube (plugin) Webmail Drupal (WebID, "
+"Certificate login) Sistem de gestionare a conținutului Media Wiki (plugin) "
+"Wiki Joomla!         Sistem de gestionare a conținutului Apache + mod_ssl "
+"Server web OpenSSH SSH (remote secure shell) client și server Wordpress "
+"(plugin) Blog și CMS Tivoli Cadru de gestionare a sistemului Globalscape EFT "
+"managed file transfer (MFT) Oracle Identity Manager I&AM Fuse Source "
+"Middleware Liferay Blog FusionForge software de colaborare și gestionare a "
+"proiectelor bazat pe web"
 
 #: ../to-be-integrated.rst:350
 msgid ""
@@ -810,16 +1134,22 @@ msgid ""
 "client certificate authentication isn't popular and better alternatives "
 "at the horizon."
 msgstr ""
+"Acest site este o lectură bună despre mecanismele de autentificare "
+"puternică, de ce autentificarea prin certificat de client nu este populară "
+"și ce alternative mai bune se întrevăd la orizont."
 
 #: ../to-be-integrated.rst:352
 msgid "**Q:** How can I use Enterprise Authentication?"
-msgstr ""
+msgstr "**Întrebare:** Cum pot utiliza Enterprise Authentication?"
 
 #: ../to-be-integrated.rst:354
 msgid ""
 "LinOTP privacyIDEA RCDevs OpenOTP Usage of Nitrokey HSM as a secure key "
 "store for the Forgerock OpenDJ server and Forgerock Identity Gateway"
 msgstr ""
+"LinOTP privacyIDEA RCDevs OpenOTP Utilizarea Nitrokey HSM ca un magazin de "
+"chei securizat pentru serverul Forgerock OpenDJ și pentru Forgerock Identity "
+"Gateway."
 
 #: ../to-be-integrated.rst:360
 msgid ""
@@ -829,16 +1159,24 @@ msgid ""
 "installed on the system (only the core application GnuPG is needed). "
 "Furthermore you should install PuTTY. Preparation on client"
 msgstr ""
+"**Întrebare:** Cum pot utiliza SSH pentru administrarea serverului pe "
+"Windows? Nitrokey ar trebui să aibă deja chei PGP instalate, iar brelocul de "
+"chei GnuPG local ar trebui să cunoască cheile, adică GPG4Win ar trebui să "
+"fie instalat pe sistem (este necesară doar aplicația de bază GnuPG). În "
+"plus, ar trebui să instalați PuTTY. Pregătiri pe client"
 
 #: ../to-be-integrated.rst:364 ../to-be-integrated.rst:736
 msgid ""
 "There are two steps needed to make PuTTY work. At first we need to enable"
 " PuTTY support of GnuPG. To achieve this we use the following command:"
 msgstr ""
+"Sunt doi pași necesari pentru a face PuTTY să funcționeze. În primul rând, "
+"trebuie să activăm suportul PuTTY pentru GnuPG. Pentru a realiza acest "
+"lucru, folosim următoarea comandă:"
 
 #: ../to-be-integrated.rst:366 ../to-be-integrated.rst:738
 msgid "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
-msgstr ""
+msgstr "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
 
 #: ../to-be-integrated.rst:368 ../to-be-integrated.rst:740
 msgid ""
@@ -850,10 +1188,17 @@ msgid ""
 "click on an empty space and choose \"New\" -> \"Shortcut\". Now you "
 "should insert the actual command and proceed:"
 msgstr ""
+"Acum vrem să ne asigurăm că gpg-agent pornește automat în fundal (dacă "
+"preferați, îl puteți porni manual cu comanda de mai jos). Creăm o scurtătură "
+"către gpg-connect-agent.exe. Țineți apăsată tasta Windows și apăsați 'R'. "
+"Tastați \"shell:startup\" în câmpul de text care se deschide (vezi imaginea "
+"de mai jos). Se deschide Windows-Explorer și faceți clic dreapta pe un "
+"spațiu gol și alegeți \"New\" -> \"Shortcut\". Acum ar trebui să inserați "
+"comanda propriu-zisă și să continuați:"
 
 #: ../to-be-integrated.rst:370 ../to-be-integrated.rst:742
 msgid "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
-msgstr ""
+msgstr "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
 
 #: ../to-be-integrated.rst:374 ../to-be-integrated.rst:746
 msgid ""
@@ -861,16 +1206,21 @@ msgid ""
 "alright you now can use PuTTY as usual and PuTTY will make use of the "
 "Nitrokey automatically. Preparation for the server"
 msgstr ""
+"Reporniți sistemul pentru a vă asigura că această comandă rapidă "
+"funcționează. Dacă totul este în regulă, puteți utiliza PuTTY ca de obicei, "
+"iar PuTTY va utiliza automat Nitrokey. Pregătirea pentru server"
 
 #: ../to-be-integrated.rst:377 ../to-be-integrated.rst:749
 msgid "You can generate an authorized_keys file by running"
-msgstr ""
+msgstr "Puteți genera un fișier authorized_keys rulând"
 
 #: ../to-be-integrated.rst:379 ../to-be-integrated.rst:751
 msgid ""
 "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID "
 ">> authorized_keys"
 msgstr ""
+"\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID >> "
+"authorized_keys"
 
 #: ../to-be-integrated.rst:381 ../to-be-integrated.rst:753
 msgid ""
@@ -880,16 +1230,24 @@ msgid ""
 "authorized_keys and when you ssh to the server you'll be asked for a pin "
 "rather than a passphrase."
 msgstr ""
+"unde 'keyID' este fie amprenta digitală a cheii dumneavoastră, fie doar "
+"adresa de e-mail asociată cheii dumneavoastră. Nitrokey trebuie să fie deja "
+"cunoscută de către cheița GnuPG locală. Acum puteți adăuga acest fișier la "
+"authorized_keys al unui server de la distanță, iar atunci când vă conectați "
+"prin ssh la server vi se va cere un pin în loc de o frază de acces."
 
 #: ../to-be-integrated.rst:388
 msgid "**Q:** How can I do SSH for Server Administration on Linux?"
 msgstr ""
+"**Întrebare:** Cum pot utiliza SSH pentru administrarea serverului pe Linux?"
 
 #: ../to-be-integrated.rst:390 ../to-be-integrated.rst:757
 msgid ""
 "The Nitrokey should already have PGP keys installed and the local GnuPG "
 "keyring should know the keys. Preparation on client"
 msgstr ""
+"Nitrokey ar trebui să aibă deja instalate cheile PGP, iar brelocul local "
+"GnuPG ar trebui să cunoască cheile. Pregătiri pe client"
 
 #: ../to-be-integrated.rst:393 ../to-be-integrated.rst:760
 msgid ""
@@ -898,12 +1256,18 @@ msgid ""
 "the file does not exist yet, you can just create it. Add the following "
 "code somewhere into your ~/.bashrc (for fish shell, look here)"
 msgstr ""
+"Asigurați-vă că ~/.gnupg/gpg.conf conține 'use-agent' Adăugați suportul ssh "
+"la gnupg-agent adăugând 'enable-ssh-support' la ~/.gnupg/gpg-agent.conf Dacă "
+"fișierul nu există încă, îl puteți crea. Adăugați următorul cod undeva în ~/."
+"bashrc (pentru fish shell, uitați-vă aici)"
 
 #: ../to-be-integrated.rst:398 ../to-be-integrated.rst:765
 msgid ""
 "unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
 "export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
 msgstr ""
+"unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
+"export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
 
 #: ../to-be-integrated.rst:403 ../to-be-integrated.rst:770
 msgid ""
@@ -912,14 +1276,18 @@ msgid ""
 "try gpg2 --card-status on first usage to make sure the gpg-agent gets "
 "started"
 msgstr ""
+"Pur și simplu reporniți sistemul sau încercați pkill gpg-agent și deschideți "
+"o nouă linie de comandă pentru a vă asigura că totul este setat În caz de "
+"probleme, încercați gpg2 --card-status la prima utilizare pentru a vă "
+"asigura că gpg-agent este pornit."
 
 #: ../to-be-integrated.rst:406 ../to-be-integrated.rst:773
 msgid "Preparation for the server"
-msgstr ""
+msgstr "Pregătirea pentru server"
 
 #: ../to-be-integrated.rst:408 ../to-be-integrated.rst:775
 msgid "You can generate an authorized_keys file by running either"
-msgstr ""
+msgstr "Puteți genera un fișier authorized_keys rulând fie"
 
 #: ../to-be-integrated.rst:410 ../to-be-integrated.rst:777
 msgid ""
@@ -927,14 +1295,17 @@ msgid ""
 "gpg2 --export-ssh-key keyID >> ~/authorized_keys #(for newer GnuPG "
 "versions)"
 msgstr ""
+"gpgkey2ssh keyID >> ~/authorized_keys #(pentru versiunea GnuPG <= 2.1.11) "
+"sau gpg2 --export-ssh-key keyID >> ~/authorized_keys #(pentru versiuni GnuPG "
+"mai noi)"
 
 #: ../to-be-integrated.rst:413 ../to-be-integrated.rst:780
 msgid "where"
-msgstr ""
+msgstr "unde"
 
 #: ../to-be-integrated.rst:415 ../to-be-integrated.rst:782
 msgid "keyID"
-msgstr ""
+msgstr "keyID"
 
 #: ../to-be-integrated.rst:417 ../to-be-integrated.rst:784
 msgid ""
@@ -943,18 +1314,23 @@ msgid ""
 "append that file to a remote server's authorized_keys and when you ssh to"
 " the server you'll be asked for a pin rather than a passphrase."
 msgstr ""
+"este ID-ul de subcheie utilizat pentru autentificare pe Nitrokey. Nitrokey "
+"trebuie să fie deja cunoscută de brelocul de chei GnuPG local. Acum puteți "
+"adăuga acest fișier la authorized_keys al unui server de la distanță, iar "
+"atunci când vă conectați prin ssh la server vi se va cere un pin în loc de o "
+"frază de acces."
 
 #: ../to-be-integrated.rst:420 ../to-be-integrated.rst:787
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Depanare"
 
 #: ../to-be-integrated.rst:422 ../to-be-integrated.rst:789
 msgid "If you are still asked for a password please make sure that"
-msgstr ""
+msgstr "Dacă vi se cere în continuare o parolă, asigurați-vă că"
 
 #: ../to-be-integrated.rst:424 ../to-be-integrated.rst:791
 msgid "echo $SSH_AUTH_SOCK"
-msgstr ""
+msgstr "echo $SSH_AUTH_SOCK"
 
 #: ../to-be-integrated.rst:426 ../to-be-integrated.rst:793
 msgid ""
@@ -966,14 +1342,21 @@ msgid ""
 "given code in .bashrc so that the variable SSH_AUTH_SOCK is correct. In "
 "doubt look for 'SSH_AUTH_SOCK' in"
 msgstr ""
+"returnează ceva rezonabil, cum ar fi '/run/user/1000/gnupg/S.gpg-agent.ssh' "
+"sau '/home/nume utilizator/.gnupg/.S.gpg-agent.ssh'. Din păcate, au existat "
+"unele modificări în GnuPG în trecut, astfel încât conținutul real poate "
+"diferi în funcție de sistem și de versiunea GnuPG. Pe unele sisteme pot "
+"exista chiar mai multe dosare în această variabilă salvată. Trebuie să "
+"adaptați codul dat mai sus în .bashrc astfel încât variabila SSH_AUTH_SOCK "
+"să fie corectă. În caz de îndoială, căutați 'SSH_AUTH_SOCK' în"
 
 #: ../to-be-integrated.rst:428 ../to-be-integrated.rst:795
 msgid "man gpg-agent"
-msgstr ""
+msgstr "man gpg-agent"
 
 #: ../to-be-integrated.rst:430 ../to-be-integrated.rst:797
 msgid "to find the actual code for your version/system."
-msgstr ""
+msgstr "pentru a găsi codul real pentru versiunea/sistemul dumneavoastră."
 
 #: ../to-be-integrated.rst:432 ../to-be-integrated.rst:799
 msgid ""
@@ -981,79 +1364,94 @@ msgid ""
 " manager. You may need to set it in the gpg-agent.conf as well. You may "
 "need to point gpg-agent to the correct TTY."
 msgstr ""
+"Puteți verifica dacă aveți un program 'pinentry' instalat prin intermediul "
+"managerului de pachete. Este posibil să fie nevoie să îl setați și în gpg-"
+"agent.conf. Este posibil să fie nevoie să indicați gpg-agent către TTY-ul "
+"corect."
 
 #: ../to-be-integrated.rst:446
 msgid "**Q:** How can I use the Nitrokey for VPN access?"
-msgstr ""
+msgstr "**Q:** Cum pot utiliza Nitrokey pentru accesul la VPN?"
 
 #: ../to-be-integrated.rst:449 ../to-be-integrated.rst:820
 msgid "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
 msgstr ""
+"Pentru: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
 
 #: ../to-be-integrated.rst:452 ../to-be-integrated.rst:823
 msgid "Generate a key on Nitrokey via pkcs11-tool."
-msgstr ""
+msgstr "Generați o cheie pe Nitrokey prin intermediul pkcs11-tool."
 
 #: ../to-be-integrated.rst:454 ../to-be-integrated.rst:825
 msgid "Generate a certificate signing request via openssl + pkcs11 module:"
 msgstr ""
+"Generarea unei cereri de semnare a unui certificat prin intermediul "
+"modulului openssl + pkcs11:"
 
 #: ../to-be-integrated.rst:456 ../to-be-integrated.rst:827
 msgid ""
 "$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
 "<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
+"$ openslsl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
+"<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
 
 #: ../to-be-integrated.rst:458 ../to-be-integrated.rst:829
 msgid "Sign the certificate with our certificate authority"
-msgstr ""
+msgstr "Semnați certificatul cu autoritatea noastră de certificare"
 
 #: ../to-be-integrated.rst:460 ../to-be-integrated.rst:831
 msgid ""
 "$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out "
 "<FILE.CRT> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
+"$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out <FILE.CRT> "
+"-config <OPENSSL.CNF> -extensions usr_client"
 
 #: ../to-be-integrated.rst:462 ../to-be-integrated.rst:509
 #: ../to-be-integrated.rst:833 ../to-be-integrated.rst:880
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
-msgstr ""
+msgstr "Importați certificatul în Nitrokey prin intermediul pkcs11-tool"
 
 #: ../to-be-integrated.rst:464 ../to-be-integrated.rst:835
 msgid "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
-msgstr ""
+msgstr "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
 
 #: ../to-be-integrated.rst:466 ../to-be-integrated.rst:837
 msgid "Read the certificate's ID required for openvpn configuration:"
-msgstr ""
+msgstr "Citiți ID-ul certificatului's necesar pentru configurarea openvpn:"
 
 #: ../to-be-integrated.rst:468 ../to-be-integrated.rst:839
 msgid "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
-msgstr ""
+msgstr "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
 
 #: ../to-be-integrated.rst:470 ../to-be-integrated.rst:841
 msgid ""
 "Modify your openvpn configuration. Add the certificate ID which you "
 "gathered in the previous step: E.g."
 msgstr ""
+"Modificați configurația openvpn. Adăugați ID-ul certificatului pe care l-ați "
+"adunat în pasul anterior: De ex."
 
 #: ../to-be-integrated.rst:472 ../to-be-integrated.rst:843
 msgid ""
 "$ pkcs11-id "
 "'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
 msgstr ""
+"$ pkcs11-id 'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/"
+"User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
 
 #: ../to-be-integrated.rst:474 ../to-be-integrated.rst:845
 msgid "Add the PKCS#11 driver to the configuration too, e.g.:"
-msgstr ""
+msgstr "Adăugați și driverul PKCS#11 la configurare, de exemplu:"
 
 #: ../to-be-integrated.rst:476 ../to-be-integrated.rst:847
 msgid "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
-msgstr ""
+msgstr "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
 
 #: ../to-be-integrated.rst:478 ../to-be-integrated.rst:849
 msgid "See this link for further information."
-msgstr ""
+msgstr "Pentru mai multe informații, consultați acest link."
 
 #: ../to-be-integrated.rst:482 ../to-be-integrated.rst:853
 msgid ""
@@ -1061,10 +1459,13 @@ msgid ""
 "Nitrokey's PIN needs to be entered. Unfortunately OpenVPN doesn't prompt "
 "to enter the PIN and it has to be entered in the following way:"
 msgstr ""
+"Acum toate configurațiile sunt gata. Când executați clientul OpenVPN, "
+"trebuie introdus PIN-ul Nitrokey's. Din păcate, OpenVPN nu solicită "
+"introducerea PIN-ului și acesta trebuie introdus în felul următor:"
 
 #: ../to-be-integrated.rst:484 ../to-be-integrated.rst:855
 msgid "$ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>"
-msgstr ""
+msgstr "$ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>"
 
 #: ../to-be-integrated.rst:486 ../to-be-integrated.rst:857
 msgid ""
@@ -1073,30 +1474,43 @@ msgid ""
 " the OpenVPN client you could use the Viscosity client which provides a "
 "better user experience especially for entering the PIN."
 msgstr ""
+"Alternativ, puteți recompila clientul OpenVPN cu suportul systemd "
+"dezactivat, iar acesta vă va solicita PIN-ul așa cum era de așteptat. Ca "
+"alternativă la clientul OpenVPN, puteți utiliza clientul Viscosity, care "
+"oferă o experiență de utilizare mai bună, în special pentru introducerea PIN-"
+"ului."
 
 #: ../to-be-integrated.rst:489 ../to-be-integrated.rst:860
 msgid "IPsec"
-msgstr ""
+msgstr "IPsec"
 
 #: ../to-be-integrated.rst:491 ../to-be-integrated.rst:862
 msgid "Strong Swan works using the PKCS#11 driver. Basically follow these steps:"
 msgstr ""
+"Strong Swan funcționează cu ajutorul driverului PKCS#11. În principiu, "
+"urmați acești pași:"
 
 #: ../to-be-integrated.rst:493 ../to-be-integrated.rst:864
 msgid ""
 "Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 "
 "bit RSA key."
 msgstr ""
+"Generați o cheie pe Nitrokey prin intermediul pkcs11-tool. În acest exemplu, "
+"este o cheie RSA de 4096 biți."
 
 #: ../to-be-integrated.rst:495 ../to-be-integrated.rst:866
 msgid ""
 "$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
 "-l -k --key-type rsa:4096 --id 10 --label 'Staging Access'"
 msgstr ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -"
+"k --key-type rsa:4096 --id 10 --label 'Staging Access'"
 
 #: ../to-be-integrated.rst:497 ../to-be-integrated.rst:868
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr ""
+"Generarea unei cereri de semnare a unui certificat prin intermediul "
+"modulului openssl + pkcs11"
 
 #: ../to-be-integrated.rst:499 ../to-be-integrated.rst:870
 msgid ""
@@ -1108,20 +1522,28 @@ msgid ""
 "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
 "Access/CN=user@email.com/emailAddress=user@email.com'"
 msgstr ""
+"$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/"
+"engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
+"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> req -"
+"engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-"
+"staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/"
+"CN=user@email.com/emailAddress=user@email.com'"
 
 #: ../to-be-integrated.rst:503 ../to-be-integrated.rst:874
 msgid "Sign the certificate with your certificate authority"
-msgstr ""
+msgstr "Semnați certificatul cu autoritatea dumneavoastră de certificare"
 
 #: ../to-be-integrated.rst:505 ../to-be-integrated.rst:876
 msgid "Convert the certificate to DER"
-msgstr ""
+msgstr "Conversia certificatului în DER"
 
 #: ../to-be-integrated.rst:507 ../to-be-integrated.rst:878
 msgid ""
 "$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
 "staging-cert.der -outform DER"
 msgstr ""
+"$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
+"staging-cert.der -outform DER"
 
 #: ../to-be-integrated.rst:511 ../to-be-integrated.rst:882
 msgid ""
@@ -1129,6 +1551,8 @@ msgid ""
 "-l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
 "Access'"
 msgstr ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -"
+"y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging Access'"
 
 #: ../to-be-integrated.rst:513 ../to-be-integrated.rst:884
 msgid ""
@@ -1136,33 +1560,38 @@ msgid ""
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
 "add the following module:"
 msgstr ""
+"Configurați Strongswan pentru a încărca modulul opensc-pkcs11 și apoi pentru "
+"a încărca certificatul pe Nitrokey. Modificați /etc/strongswan.d/charon/"
+"pkcs11.conf și adăugați următorul modul:"
 
 #: ../to-be-integrated.rst:517 ../to-be-integrated.rst:888
 msgid "modules {"
-msgstr ""
+msgstr "module {"
 
 #: ../to-be-integrated.rst:516 ../to-be-integrated.rst:887
 msgid "Nitrokey {"
-msgstr ""
+msgstr "Nitrokey {"
 
 #: ../to-be-integrated.rst:517 ../to-be-integrated.rst:888
 msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr ""
+msgstr "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
 
 #: ../to-be-integrated.rst:518 ../to-be-integrated.rst:519
 #: ../to-be-integrated.rst:889 ../to-be-integrated.rst:890
 msgid "}"
-msgstr ""
+msgstr "}"
 
 #: ../to-be-integrated.rst:521 ../to-be-integrated.rst:892
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
 msgstr ""
+"Inițiați conexiunea VPN prin IPSec/Strongswan, apoi solicitați PIN-ul "
+"Nitrokey."
 
 #: ../to-be-integrated.rst:523 ../to-be-integrated.rst:894
 msgid "8. VPN is now connected Stunnel"
-msgstr ""
+msgstr "8. VPN este acum conectat Stunnel"
 
 #: ../to-be-integrated.rst:526 ../to-be-integrated.rst:897
 msgid ""
@@ -1171,10 +1600,17 @@ msgid ""
 "functionality to commonly used inetd daemons like POP2, POP3, and IMAP "
 "servers without any changes in the programs' code."
 msgstr ""
+"Stunnel funcționează ca un înveliș de criptare SSL între clientul la "
+"distanță și serverul local (inetd-startable) sau la distanță. Acesta poate "
+"fi folosit pentru a adăuga funcționalitate SSL la daemoni inetd utilizați în "
+"mod obișnuit, cum ar fi serverele POP2, POP3 și IMAP, fără nicio modificare "
+"în programele' cod."
 
 #: ../to-be-integrated.rst:528 ../to-be-integrated.rst:899
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr ""
+"Stunnel este capabil să încarce motorul OpenSC PKCS#11 folosind această "
+"configurație:"
 
 #: ../to-be-integrated.rst:530 ../to-be-integrated.rst:901
 msgid ""
@@ -1182,22 +1618,27 @@ msgid ""
 "engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
 "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
 msgstr ""
+"engine=dynamic engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so "
+"engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
+"engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
 
 #: ../to-be-integrated.rst:538 ../to-be-integrated.rst:909
 msgid "[service] engineNum=1 key=id_45"
-msgstr ""
+msgstr "[service] engineNum=1 key=id_45"
 
 #: ../to-be-integrated.rst:556
 msgid "**Q:** How can I do PKI / Certificate Authority (CA)?"
-msgstr ""
+msgstr "**Întrebare:** Cum pot face PKI / Autoritatea de Certificare (CA)?"
 
 #: ../to-be-integrated.rst:558
 msgid "CA keys are very sensitive and must not be compromised or lost. GnuPG"
 msgstr ""
+"Cheile CA sunt foarte sensibile și nu trebuie să fie compromise sau "
+"pierdute. GnuPG"
 
 #: ../to-be-integrated.rst:561
 msgid "Instructions OpenSSL"
-msgstr ""
+msgstr "Instrucțiuni OpenSSL"
 
 #: ../to-be-integrated.rst:564
 msgid ""
@@ -1208,16 +1649,24 @@ msgid ""
 "slot ID, e.g. \"... -key "
 "slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" Test"
 msgstr ""
+"Instalați OpenSC'S engine_pkcs11 Rulați comanda \"pkcs11-tool --list-slots\" "
+"pentru a lista sloturile disponibile. Rulați comanda \"openssl> req -engine "
+"pkcs11 -new -key slot_X-id_XXXX -keyform engine -x509 -out cert.pem -text\" "
+"unde X este numărul de slot corespunzător și XXXX este ID-ul slotului, de "
+"exemplu \"... -key slot_5-id_c6f280080fb0ed1ebff0480a01a01d00a98a1b3b89a ..."
+"\" Testul"
 
 #: ../to-be-integrated.rst:569
 msgid "Other"
-msgstr ""
+msgstr "Altele"
 
 #: ../to-be-integrated.rst:571
 msgid ""
 "Please see this PDF (p. 30) from heinlein-support.de for summarized "
 "instructions in German."
 msgstr ""
+"Vă rugăm să consultați acest PDF (p. 30) de pe heinlein-support.de pentru "
+"instrucțiuni rezumate în limba germană."
 
 #: ../to-be-integrated.rst:573
 msgid ""
@@ -1225,14 +1674,17 @@ msgid ""
 "perform basic tasks of a CA. It works with Nitrokey Pro and Nitrokey "
 "Storage."
 msgstr ""
+"µ-CA-tool este un script bazat pe GnuPG, OpenSC și OpenSSL care ajută la "
+"îndeplinirea sarcinilor de bază ale unei AC. Funcționează cu Nitrokey Pro și "
+"Nitrokey Storage."
 
 #: ../to-be-integrated.rst:581
 msgid "**Q:** How can I use the password manager?"
-msgstr ""
+msgstr "**Întrebare:** Cum pot utiliza managerul de parole?"
 
 #: ../to-be-integrated.rst:583
 msgid "You have the following options:"
-msgstr ""
+msgstr "Aveți la dispoziție următoarele opțiuni:"
 
 #: ../to-be-integrated.rst:585
 msgid ""
@@ -1241,16 +1693,23 @@ msgid ""
 "(simple commandline password manager for Unix systems, mainly for "
 "experts). Use KeePass as described below."
 msgstr ""
+"Folosiți seiful de parole încorporat în Nitrokey's pentru a stoca parolele "
+"în siguranță. Pentru aceasta aveți nevoie de aplicația Nitrokey. Maximum "
+"sunt 16 parole. Utilizați Pass (manager de parole simplu în linie de comandă "
+"pentru sistemele Unix, în principal pentru experți). Folosiți KeePass așa "
+"cum este descris mai jos."
 
 #: ../to-be-integrated.rst:589
 msgid "Protecting KeePass with Nitrokey's One-Time Passwords"
-msgstr ""
+msgstr "Protejarea KeePass cu Nitrokey's One-Time Passwords"
 
 #: ../to-be-integrated.rst:591
 msgid ""
 "You can also follow this video (It contains a mistake around time 4:22 "
 "which is described later below). Keepass Installation"
 msgstr ""
+"Puteți urmări și acest videoclip (conține o greșeală în jurul orei 4:22, "
+"care este descrisă mai jos). Instalarea Keepass"
 
 #: ../to-be-integrated.rst:594
 msgid ""
@@ -1258,12 +1717,17 @@ msgid ""
 "the older 2.3.4, you have to use some other source like this private PPA "
 "(please run these commands in terminal):"
 msgstr ""
+"Instalați Keepass 2.3.5. Pentru Ubuntu: Deoarece depozitul principal conține "
+"versiunea mai veche 2.3.4, trebuie să utilizați o altă sursă, cum ar fi "
+"acest PPA privat (vă rugăm să rulați aceste comenzi în terminal):"
 
 #: ../to-be-integrated.rst:597
 msgid ""
 "sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-"
 "get install keepass2"
 msgstr ""
+"sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-get "
+"install keepass2"
 
 #: ../to-be-integrated.rst:601
 msgid ""
@@ -1273,14 +1737,19 @@ msgid ""
 "mono-complete package if plugin is not detected when running Keepass2 "
 "(you can check that in Tools/Plugins):"
 msgstr ""
+"Instalați plugin-ul OtpKeyProv descărcând arhiva, dezarhivând și copiind "
+"conținutul în directorul Keypass' Plugin. Pe Linux: sudo cp OtpKeyProv.plgx /"
+"usr/lib/keepass2/Plugins/ Pentru Linux, opțional: Instalați pachetul mono-"
+"complet dacă pluginul nu este detectat la rularea Keepass2 (puteți verifica "
+"acest lucru în Tools/Plugins):"
 
 #: ../to-be-integrated.rst:605
 msgid "sudo apt-get install mono-complete"
-msgstr ""
+msgstr "sudo apt-get install mono-complete"
 
 #: ../to-be-integrated.rst:607
 msgid "Keepass OTP Configuration Existing Database"
-msgstr ""
+msgstr "Keepass OTP Configurație Keepass OTP Baza de date existentă"
 
 #: ../to-be-integrated.rst:610
 msgid ""
@@ -1289,18 +1758,22 @@ msgid ""
 " your passwords are lost! Open database as usual Select File/Change "
 "Master Key..."
 msgstr ""
+"Faceți o copie de siguranță a bazei de date și păstrați-o până când sunteți "
+"sigur că totul funcționează bine! Asigurați-vă că ați făcut cu adevărat o "
+"copie de rezervă. Dacă greșești, parolele tale sunt pierdute! Deschideți "
+"baza de date ca de obicei Selectați File/Change Master Key..."
 
 #: ../to-be-integrated.rst:615
 msgid "New Database"
-msgstr ""
+msgstr "Noua bază de date"
 
 #: ../to-be-integrated.rst:617
 msgid "Create new database as usual"
-msgstr ""
+msgstr "Creați o nouă bază de date ca de obicei"
 
 #: ../to-be-integrated.rst:619
 msgid "Common"
-msgstr ""
+msgstr "Comună"
 
 #: ../to-be-integrated.rst:621
 msgid ""
@@ -1319,10 +1792,25 @@ msgid ""
 " device and in Keepass would be out of sync and OTP codes will not be the"
 " same with expected."
 msgstr ""
+"Introduceți parola principală (opțional) Setați fișierul cheie / furnizorul: "
+"la One-Time Passwords (OATH HOTP) Faceți clic pe OK Cu aplicația Nitrokey: "
+"selectați slotul HOTP și generați secretul HOTP (acesta va fi copiat automat "
+"în clipboard). Notă: Este posibil să doriți să notați acest secret și să îl "
+"stocați într-un loc sigur. În caz contrar, dacă vă pierdeți Nitrokey sau "
+"dacă se strică, se pierde și baza de date cu parole!!! Lipiți secretul în "
+"fereastra Keepass OTP Plugin Asigurați-vă că câmpul Counter și numărul de "
+"cifre sunt setate la fel în ambele ferestre. Faceți clic pe OK în Nitrokey "
+"App pentru a salva slotul. Selectați tipul de secret: Base32 Setați "
+"celelalte setări după cum doriți. Vă rugăm să consultați manualul "
+"plugin'ului (ar trebui să fie în aceeași arhivă descărcată). V-aș recomanda "
+"să setați valoarea look-ahead la non-zero pentru a preveni blocarea bazei de "
+"date după solicitarea accidentală a codului de la slotul HOTP utilizat. În "
+"acest caz, contoarele de pe dispozitiv și din Keepass nu ar fi sincronizate, "
+"iar codurile OTP nu vor fi aceleași cu cele așteptate."
 
 #: ../to-be-integrated.rst:630
 msgid "Unlocking Database"
-msgstr ""
+msgstr "Deblocarea bazei de date"
 
 #: ../to-be-integrated.rst:632
 msgid ""
@@ -1331,10 +1819,15 @@ msgid ""
 "choosing proper HOTP slot from the Nitrokey App and pasting the clipboard"
 " content to proper field (the order of the codes is important). Press OK"
 msgstr ""
+"Deschideți baza de date Introduceți parola principală (dacă este setată) "
+"Fișier cheie / furnizor: la One-Time Passwords (OATH HOTP) Apăsați OK "
+"Introduceți codurile HOTP alegând în mod repetat slotul HOTP corespunzător "
+"din aplicația Nitrokey și lipind conținutul din clipboard în câmpul "
+"corespunzător (ordinea codurilor este importantă). Apăsați OK"
 
 #: ../to-be-integrated.rst:639
 msgid "Issues"
-msgstr ""
+msgstr "Probleme"
 
 #: ../to-be-integrated.rst:641
 msgid ""
@@ -1350,30 +1843,49 @@ msgid ""
 "database and how it is now configured. I have not noticed until I have "
 "watched the movie."
 msgstr ""
+"Datorită naturii soluției HOTP, este posibil să se producă o desincronizare "
+"a contoarelor (prin selectarea unui slot OTP greșit în timpul utilizării de "
+"zi cu zi). Utilizarea setării plugin-ului \"look-ahead\" ar trebui să "
+"împiedice acest lucru (valoarea 10 sau cam așa ceva ar trebui să fie "
+"suficientă - depinde de cerințele de securitate dorite - aceasta ar permite "
+"10 cereri accidentale). TOTP nu are această problemă. Setarea protecției OTP "
+"ar putea fi predispusă la erori. Nu există o validare secretă pe partea "
+"OtpKeyProv. În filmul de test de la 4:22 am reușit să setez secretul codat "
+"Base32 ca Hex (care nu era o valoare hexagonală corespunzătoare) și nu s-a "
+"plâns de acest lucru. Nu există nicio informație despre ce s-a întâmplat cu "
+"baza de date și cum este configurată acum. Nu am observat până nu am "
+"vizionat filmul."
 
 #: ../to-be-integrated.rst:644
 msgid "Tested under Ubuntu 16.10, Nitrokey App v0.6.3 and Nitrokey Storage v0.45."
-msgstr ""
+msgstr "Testat sub Ubuntu 16.10, Nitrokey App v0.6.3 și Nitrokey Storage v0.45."
 
 #: ../to-be-integrated.rst:653
 msgid "**Q:** How can I use the True Random Number Generator?"
 msgstr ""
+"**Întrebare:** Cum pot folosi generatorul de numere aleatorii True Random "
+"Number Generator?"
 
 #: ../to-be-integrated.rst:655
 msgid ""
 "Both devices are compatible to the OpenPGP Card, so that scdrand should "
 "work. This script may be useful. The TRNG provides about 40 kbit/s."
 msgstr ""
+"Ambele dispozitive sunt compatibile cu OpenPGP Card, astfel încât scdrand ar "
+"trebui să funcționeze. Acest script poate fi util. TRNG oferă aproximativ 40 "
+"kbit/s."
 
 #: ../to-be-integrated.rst:657
 msgid ""
 "The user comio created a systemd file to use scdrand and thus the TRNG "
 "more generally. He created a ebuild for Gentoo, too."
 msgstr ""
+"Utilizatorul comio a creat un fișier systemd pentru a utiliza scdrand și, "
+"astfel, TRNG în general. El a creat un ebuild și pentru Gentoo."
 
 #: ../to-be-integrated.rst:663
 msgid "**Q:** Do you have resources for development and integration?"
-msgstr ""
+msgstr "**Q:** Aveți resurse pentru dezvoltare și integrare?"
 
 #: ../to-be-integrated.rst:666
 msgid ""
@@ -1390,10 +1902,24 @@ msgid ""
 "Safe and OTP entries. A libnitrokey wrapper for Rust providing access to "
 "Nitrokey devices."
 msgstr ""
+"Utilizați biblioteca Nitrokey pentru a gestiona parolele unice și "
+"funcționalitatea de siguranță a parolelor. Proiectele nitrokey-get-totp și "
+"nitrokey-get-password sunt exemple frumoase de utilizare a legăturilor "
+"python ale bibliotecii Nitrokey pentru a obține o interfață personalizată. "
+"Pentru a accesa cardul inteligent integrat, puteți utiliza instrumentele de "
+"linie de comandă ale OpenSC's. Dacă aplicația dumneavoastră are o interfață "
+"PKCS#11, utilizați driverul PKCS#11 al OpenSC's. Pentru a lucra cu cardul "
+"inteligent la nivel scăzut, consultați specificația OpenPGP Card. De "
+"asemenea, sunt disponibile codul sursă al firmware-ului și aspectul "
+"hardware. Pentru a dezvolta aplicații speciale sau pentru accesarea liniei "
+"de comandă se poate utiliza nitrocli creat de d-e-s-o. Gkey este un "
+"instrument de linie de comandă bazat pe go pentru accesarea Password Safe și "
+"a intrărilor OTP. Un wrapper libnitrokey pentru Rust care oferă acces la "
+"dispozitivele Nitrokey."
 
 #: ../to-be-integrated.rst:677
 msgid "# HSM 2"
-msgstr ""
+msgstr "# HSM 2"
 
 #: ../to-be-integrated.rst:679
 msgid ""
@@ -1401,14 +1927,18 @@ msgid ""
 "have a size of up to 256 byte. The total storage capacity of ca. 32 KByte"
 " is shared dynamically among keys and data objects."
 msgstr ""
+"**Nitrokey HSM:** Pot fi create 124 de obiecte de date (DF, EF). Fiecare EF "
+"poate avea o dimensiune de până la 256 de octeți. Capacitatea totală de "
+"stocare de aproximativ 32 KByte este împărțită în mod dinamic între chei și "
+"obiecte de date."
 
 #: ../to-be-integrated.rst:683
 msgid "**Q:** How to use the HSM for Login For: Nitrokey HSM"
-msgstr ""
+msgstr "**Q:** Cum se utilizează HSM pentru autentificare pentru: Nitrokey HSM"
 
 #: ../to-be-integrated.rst:686
 msgid "Select your use case:"
-msgstr ""
+msgstr "Selectați cazul de utilizare:"
 
 #: ../to-be-integrated.rst:688
 msgid ""
@@ -1416,16 +1946,22 @@ msgid ""
 "Nitrokey HSM on Windows Domain Computers Using MS Active Directory For "
 "Unix environments an integration with PAM and OpenSSH is available."
 msgstr ""
+"Autentificare cu Nitrokey HSM pe computere Windows independente "
+"Autentificare cu Nitrokey HSM pe computere de domeniu Windows utilizând MS "
+"Active Directory Pentru mediile Unix este disponibilă o integrare cu PAM și "
+"OpenSSH."
 
 #: ../to-be-integrated.rst:692
 msgid "**Q:**  How to use the HSM for Email Encryption"
-msgstr ""
+msgstr "**Q:** Cum se utilizează HSM pentru criptarea e-mailurilor"
 
 #: ../to-be-integrated.rst:694
 msgid ""
 "Encrypt your email using the S/MIME industry standard available in all "
 "major e-mail clients."
 msgstr ""
+"Criptați-vă e-mailurile folosind standardul industrial S/MIME disponibil în "
+"toți clienții de e-mail importanți."
 
 #: ../to-be-integrated.rst:696
 msgid ""
@@ -1433,14 +1969,17 @@ msgid ""
 "Microsoft Outlook. Other email clients with support for PKCS#11 or "
 "Microsoft CSP should work as well."
 msgstr ""
+"Nitrokey HSM a fost testat pentru a funcționa cu Mozilla Thunderbird și "
+"Microsoft Outlook. Ar trebui să funcționeze și alți clienți de e-mail cu "
+"suport pentru PKCS#11 sau Microsoft CSP."
 
 #: ../to-be-integrated.rst:698
 msgid "Note: A certificate can be purchased cheaply from CERTUM."
-msgstr ""
+msgstr "Notă: Un certificat poate fi achiziționat la preț redus de la CERTUM."
 
 #: ../to-be-integrated.rst:700
 msgid "**Q:**   How to use the Nitrokey for Hard Disk Encryption with VeraCrpt?"
-msgstr ""
+msgstr "**Q:** Cum se utilizează Nitrokey for Hard Disk Encryption cu VeraCrpt?"
 
 #: ../to-be-integrated.rst:702
 msgid ""
@@ -1449,6 +1988,11 @@ msgid ""
 "recommended, although the following instructions should apply to "
 "TrueCrypt as well. Follow these steps to use the program with Nitrokey:"
 msgstr ""
+"VeraCrypt este un software gratuit și cu sursă deschisă de criptare a "
+"discurilor pentru Windows, macOS și GNU/Linux. Este succesorul lui TrueCrypt "
+"și, prin urmare, este recomandat, deși următoarele instrucțiuni ar trebui să "
+"se aplice și la TrueCrypt. Urmați acești pași pentru a utiliza programul cu "
+"Nitrokey:"
 
 #: ../to-be-integrated.rst:711
 msgid ""
@@ -1457,20 +2001,27 @@ msgid ""
 "Instead it stores a keyfile on the Nitrokey which theoretically could be "
 "stolen by a computer virus after the user enters the password."
 msgstr ""
+"Considerații privind securitatea: Vă rugăm să rețineți că VeraCrypt nu "
+"utilizează întreaga securitate pe care o oferă Nitrokey (și cardurile "
+"inteligente în general). În schimb, stochează un fișier cheie pe Nitrokey "
+"care, teoretic, ar putea fi furat de un virus de calculator după ce "
+"utilizatorul introduce parola."
 
 #: ../to-be-integrated.rst:713
 msgid ""
 "Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
 "described security limitation. (Not tested with Nitrokey HSM!)"
 msgstr ""
+"Notă: Aloaha Crypt se bazează pe TrueCrypt/VeraCrypt, dar fără limitările de "
+"securitate descrise. (Nu a fost testat cu Nitrokey HSM!)"
 
 #: ../to-be-integrated.rst:716
 msgid "**Q:** How to sign and encrypt files and pdfs?"
-msgstr ""
+msgstr "**Întrebare:** Cum să semnez și să criptez fișiere și pdf-uri?"
 
 #: ../to-be-integrated.rst:718
 msgid "GnuPG"
-msgstr ""
+msgstr "GnuPG"
 
 #: ../to-be-integrated.rst:720
 msgid ""
@@ -1481,18 +2032,29 @@ msgid ""
 "Libre Office or any other PDF reader supporting electronic signatures. "
 "ECC HSM Encryptor"
 msgstr ""
+"Începând cu versiunea 2.1, GnuPG are un suport integrat, dar limitat, pentru "
+"Nitrokey HSM. Folosiți instrumentul gpgsm pentru a semna, verifica, cripta "
+"și decripta fișiere sau mesaje S/MIME utilizând HSM-ul Nitrokey. Utilizați o "
+"cheie de semnătură de pe un Nitrokey HSM pentru a semna documente folosind "
+"Acrobat Reader, Open Office / Libre Office sau orice alt cititor de PDF care "
+"acceptă semnături electronice. ECC HSM Encryptor"
 
 #: ../to-be-integrated.rst:723
 msgid ""
 "ECC HSM Encryptor is a small application to encrypt and decrypt files "
 "with a Nitrokey HSM."
 msgstr ""
+"ECC HSM Encryptor este o mică aplicație pentru criptarea și decriptarea "
+"fișierelor cu un HSM Nitrokey."
 
 #: ../to-be-integrated.rst:725
 msgid ""
 "**Q:** How to do certificat-based Web login Protect access to sensitive "
 "information on your website with 2nd factor authentication."
 msgstr ""
+"**Întrebare:** Cum se face autentificarea Web bazată pe certificat Protejați "
+"accesul la informații sensibile pe site-ul dvs. web cu autentificarea cu al "
+"doilea factor."
 
 #: ../to-be-integrated.rst:728
 msgid ""
@@ -1500,12 +2062,17 @@ msgid ""
 "authentication PKI or use keys and certificates on a Nitrokey HSM for "
 "TLS/SSL client authentication."
 msgstr ""
+"Utilizați un HSM Nitrokey ca token de autentificare prin intermediul PKI de "
+"autentificare a dispozitivului încorporat sau utilizați chei și certificate "
+"pe un HSM Nitrokey pentru autentificarea clientului TLS/SSL."
 
 #: ../to-be-integrated.rst:730
 msgid ""
 "**Q:** SSH for Server Administration with windows For: Nitrokey Pro, "
 "Nitrokey Storage, Nitrokey Start, Nitrokey HSM"
 msgstr ""
+"**Q:** SSH pentru administrarea serverului cu Windows For: Nitrokey Pro, "
+"Nitrokey Storage, Nitrokey Start, Nitrokey HSM"
 
 #: ../to-be-integrated.rst:733
 msgid ""
@@ -1514,18 +2081,22 @@ msgid ""
 "installed on the system (only the core application GnuPG is needed). "
 "Furthermore you should install PuTTY. Preparation on client"
 msgstr ""
+"Nitrokey ar trebui să aibă deja instalate chei PGP, iar brelocul de chei "
+"GnuPG local ar trebui să cunoască cheile, adică GPG4Win ar trebui să fie "
+"instalat pe sistem (este necesară doar aplicația de bază GnuPG). În plus, ar "
+"trebui să instalați PuTTY. Pregătiri pe client"
 
 #: ../to-be-integrated.rst:755
 msgid "**Q:** SSH Server administration on linux"
-msgstr ""
+msgstr "**Q:** Administrarea serverului SSH pe linux"
 
 #: ../to-be-integrated.rst:802
 msgid "**Q:** DNSSEC"
-msgstr ""
+msgstr "**Q:** DNSSEC"
 
 #: ../to-be-integrated.rst:805
 msgid "For: Nitrokey HSM"
-msgstr ""
+msgstr "Pentru: Nitrokey HSM"
 
 #: ../to-be-integrated.rst:807
 msgid ""
@@ -1533,6 +2104,9 @@ msgid ""
 "secure key store. It's based on Smartcard-HSM which is why the following "
 "resource apply:"
 msgstr ""
+"Protejați-vă rezoluția numelui de domeniu utilizând DNSSEC și un HSM "
+"Nitrokey ca depozit de chei securizat. Acesta se bazează pe Smartcard-HSM, "
+"motiv pentru care se aplică următoarea resursă:"
 
 #: ../to-be-integrated.rst:809
 msgid ""
@@ -1543,6 +2117,12 @@ msgid ""
 " Mens wrote a nice article about integrating the SmartCard-HSM with "
 "PowerDNS."
 msgstr ""
+"Semnarea zonelor NSD DNSSEC cu Nitrokey HSM de Vadim Penzin. Integrarea cu "
+"OpenDNSSEC a fost testată cu succes într-o demonstrație de către Richard "
+"Lamb. Luis D Espinoza Sanchez & Eberhard W Lisse a susținut o sesiune "
+"privind utilizarea SmartCard-HSM pentru DNSSEC la reuniunea ICAAN 2015 din "
+"Singapore. Jan-Piet Mens a scris un articol frumos despre integrarea "
+"SmartCard-HSM cu PowerDNS."
 
 #: ../to-be-integrated.rst:815
 msgid ""
@@ -1553,28 +2133,37 @@ msgid ""
 "device, create a secure communication channel and perform offline PIN "
 "verification. The coolPACS project has all the details."
 msgstr ""
+"**Q:** Control al accesului fizic Cu PKI-ul unic de autentificare a "
+"dispozitivului încorporat, un HSM Nitrokey are o identitate unică protejată "
+"criptografic, care poate fi verificată printr-un protocol de autentificare "
+"rapidă. Un terminal de control al accesului poate verifica autenticitatea și "
+"identitatea dispozitivului, poate crea un canal de comunicare securizat și "
+"poate efectua verificarea offline a PIN-ului. Proiectul coolPACS are toate "
+"detaliile."
 
 #: ../to-be-integrated.rst:818 ../to-be-integrated.rst:914
 msgid "**Q:**"
-msgstr ""
+msgstr "**Q:**"
 
 #: ../to-be-integrated.rst:916
 msgid "PKI / Certificate Authority (CA)"
-msgstr ""
+msgstr "PKI / Autoritatea de certificare (CA)"
 
 #: ../to-be-integrated.rst:918
 msgid "**Q:** Secret Management and Cloud Infrastructure"
-msgstr ""
+msgstr "**Q:** Managementul secret și infrastructura cloud"
 
 #: ../to-be-integrated.rst:920
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at banzaicloud.com."
 msgstr ""
+"O abordare pentru a securiza cheile pentru Hashicorp Vault/Bank-Vault pe un "
+"HSM Nitrokey poate fi găsită la banzaicloud.com."
 
 #: ../to-be-integrated.rst:922
 msgid "**Q:** How to do N-of-m Schemes"
-msgstr ""
+msgstr "**Întrebare:** Cum se fac schemele N-of-m"
 
 #: ../to-be-integrated.rst:924
 msgid ""
@@ -1583,28 +2172,36 @@ msgid ""
 "to control the access to the device. Please see this blog post for more "
 "detailed information. N-of-m for DKEK Shares"
 msgstr ""
+"Nitrokey HSM 2 suportă două scheme n-of-m diferite - una pentru partajarea "
+"securizată a materialului cheie/parolelor și una pentru autentificarea cu "
+"cheie publică pentru a controla accesul la dispozitiv. Vă rugăm să "
+"consultați această postare pe blog pentru informații mai detaliate. N-of-m "
+"pentru partajări DKEK"
 
 #: ../to-be-integrated.rst:927
 msgid ""
 "This feature can be used with OpenSC as described here. The general "
 "approach is seen in the videos below (external links)."
 msgstr ""
+"Această funcție poate fi utilizată cu OpenSC, așa cum este descris aici. "
+"Abordarea generală este prezentată în videoclipurile de mai jos (linkuri "
+"externe)."
 
 #: ../to-be-integrated.rst:929
 msgid "Nitrokey HSM's Secure Key Backup and Restore:"
-msgstr ""
+msgstr "Nitrokey HSM's Secure Key Backup and Restore:"
 
 #: ../to-be-integrated.rst:931
 msgid "Screencast"
-msgstr ""
+msgstr "Screencast"
 
 #: ../to-be-integrated.rst:933
 msgid "Nitrokey HSM's M-of-N Threshold Scheme:"
-msgstr ""
+msgstr "Nitrokey HSM's M-of-N Threshold Scheme:"
 
 #: ../to-be-integrated.rst:935
 msgid "screencast N-of-m for public key authentication"
-msgstr ""
+msgstr "screencast N-of-m pentru autentificarea cu cheie publică"
 
 #: ../to-be-integrated.rst:938
 msgid ""
@@ -1613,6 +2210,10 @@ msgid ""
 "process step by step in the Smart Card Shell. For OpenSC there is a "
 "ticket to get that integrated."
 msgstr ""
+"Până în prezent, autentificarea n-of-m este acceptată numai în OpenSCDP. "
+"Postarea de pe blog oferă o imagine de ansamblu, iar aici (este necesar "
+"accesul CDN) este prezentat procesul pas cu pas în Smart Card Shell. Pentru "
+"OpenSC există un bilet pentru a obține această integrare."
 
 #: ../to-be-integrated.rst:940
 msgid ""
@@ -1620,10 +2221,13 @@ msgid ""
 "for locally and remote connected HSMs. The PKI-as-a-Service Portal is "
 "based on OpenSCDP."
 msgstr ""
+"Autentificarea n-of-m este, de asemenea, acceptată în portalul PKI-as-a-"
+"Service pentru HSM-urile conectate local și la distanță. Portalul PKI-as-a-"
+"Service se bazează pe OpenSCDP."
 
 #: ../to-be-integrated.rst:942
 msgid "**Q:** How to safe Cryptocurrences in the Nitrokey HSM"
-msgstr ""
+msgstr "**Întrebare:** Cum se pot securiza criptomonedele în Nitrokey HSM"
 
 #: ../to-be-integrated.rst:945
 msgid ""
@@ -1632,22 +2236,31 @@ msgid ""
 "the HSM in an Ethereum PoA Chain. Tezos has been reported to work with "
 "Nitrokey HSM."
 msgstr ""
+"J.v.d.Bosch a scris un program python simplu și gratuit pentru a securiza "
+"cheia privată a unui portofel Bitcoin într-un HSM. Pentru mai multe "
+"informații, consultați aici. Utilizarea HSM într-un lanț PoA Ethereum. S-a "
+"raportat că Tezos funcționează cu Nitrokey HSM."
 
 #: ../to-be-integrated.rst:949
 msgid ""
 "**Q:** How to use the True Random Number Generator? Nitrokey HSM can be "
 "used with Botan and TokenTools by using OpenSC as a PKCS#11 driver."
 msgstr ""
+"**Întrebare:** Cum se utilizează generatorul de numere aleatorii adevărate? "
+"Nitrokey HSM poate fi utilizat cu Botan și TokenTools prin utilizarea OpenSC "
+"ca driver PKCS#11."
 
 #: ../to-be-integrated.rst:952
 msgid ""
 "OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
 "doesn't contain a mapping for OpenSSL to C_GenerateRandom."
 msgstr ""
+"OpenSSL nu poate folosi direct RNG-ul lui Nitrokey HSM's pentru că engine-"
+"pkcs11 nu conține o corespondență pentru OpenSSL către C_GenerateRandom."
 
 #: ../to-be-integrated.rst:954
 msgid "**Q:** What can I use for development and integration?"
-msgstr ""
+msgstr "**Q:** Ce pot folosi pentru dezvoltare și integrare?"
 
 #: ../to-be-integrated.rst:956
 msgid ""
@@ -1656,12 +2269,17 @@ msgid ""
 "distribution, the PKCS driver may may be located at /usr/lib/x86_64"
 "-linux-gnu/opensc-pkcs11.so for example."
 msgstr ""
+"Dacă aplicația dvs. are o interfață PKCS#11, utilizați driverul PKCS#11 al "
+"OpenSC's PKCS#11 al OpenSC's. În funcție de distribuția Linux, driverul PKCS "
+"poate fi localizat la /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so, de exemplu."
 
 #: ../to-be-integrated.rst:958
 msgid ""
 "Alternatively to OpenSC, you might use sc-hsm-embedded PKCS#11 and CSP-"
 "Minidriver Module."
 msgstr ""
+"Ca alternativă la OpenSC, puteți utiliza sc-hsm-embedded PKCS#11 și CSP-"
+"Minidriver Module."
 
 #: ../to-be-integrated.rst:959
 msgid ""
@@ -1674,10 +2292,19 @@ msgid ""
 " frontend to OpenSCs toolset - nitrotool A forum post describes the "
 "procedure to sign executables with a key stored on HSM on Windows."
 msgstr ""
+"În cazul în care utilizați Java, veți găsi un furnizor JCE ca parte a Smart "
+"Card Shell. Puteți găsi informații despre schema m-of-n aici. Mesageria "
+"securizată poate fi utilizată cu furnizorul JCE. Vă rugăm să vă înregistrați "
+"la CardContact Developer Network pentru a avea acces la manualul de "
+"utilizare și la alte instrumente. De asemenea, puteți solicita manualul de "
+"la noi. Smart card forwarding with Fedora Un instrument generat de un "
+"utilizator pe GitHub pentru a oferi un frontend ușor pentru setul de "
+"instrumente OpenSCs - nitrotool O postare pe forum descrie procedura de "
+"semnare a executabilelor cu o cheie stocată pe HSM pe Windows."
 
 #: ../to-be-integrated.rst:967
 msgid "Key Use Counter"
-msgstr ""
+msgstr "Contor de utilizare cheie"
 
 #: ../to-be-integrated.rst:969
 msgid ""
@@ -1686,6 +2313,10 @@ msgid ""
 "(SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter in the class "
 "scsh/sc-hsm/SmartCardHSM.js)."
 msgstr ""
+"Contorul de utilizare a cheilor este afișat în Key Manager din Smart Card "
+"Shell. În prezent, îl puteți seta numai cu ajutorul unui script ("
+"SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter din clasa scsh/"
+"sc-hsm/SmartCardHSM.js)."
 
 #: ../to-be-integrated.rst:971
 msgid ""
@@ -1694,6 +2325,10 @@ msgid ""
 "counter can be set. The attribute can then also be set for a key can be "
 "queried."
 msgstr ""
+"În modulul nostru PKCS#11 există un atribut proprietar "
+"CKA_SC_HSM_KEY_USE_COUNTER, cu ajutorul căruia poate fi setat contorul de "
+"utilizare a cheii C_GenerateKeyPair. Atributul poate fi apoi setat și pentru "
+"o cheie poate fi interogat."
 
 #: ../to-be-integrated.rst:973
 msgid ""
@@ -1701,4 +2336,6 @@ msgid ""
 "SmartCardHSMKey.getUseCounter() and confirm with "
 "SmartCardHSMKeySpec.setKeyUseCounter() can be set."
 msgstr ""
-
+"În OCF și în furnizorul JCE, contorul de utilizare a cheilor poate fi "
+"interogat cu SmartCardHSMKey.getUseCounter() și poate fi confirmat cu "
+"SmartCardHSMKeySpec.setKeyUseCounter()."
