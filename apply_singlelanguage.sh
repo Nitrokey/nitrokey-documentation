@@ -13,6 +13,5 @@ lang=$1
 		mv /var/www/sphinx/www/docs.nitrokey.com_$lang-temp /var/www/sphinx/www/static/$lang
 	else
 		echo echo "FAILED" >> /var/www/sphinx/logs_sphinx/webhook.log
-		echo "Building Docs.nitrokey.com Language $lang FAILED. The online version was as not altered." | mail -s "[Sphinx] Building Language $lang FAILED." $admin_mail_address
 	fi
 
