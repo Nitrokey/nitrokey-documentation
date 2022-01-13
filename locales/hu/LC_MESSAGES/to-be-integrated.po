@@ -4,27 +4,30 @@
 # Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Nitrokey Documentation \n"
+"Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-06 01:52+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2022-01-13 15:11+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-to-be-integrated/hu/>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../to-be-integrated.rst:1
 msgid "# storage"
-msgstr ""
+msgstr "# storage"
 
 #: ../to-be-integrated.rst:4
 msgid "Configure Hidden Volumes:"
-msgstr ""
+msgstr "Rejtett kötetek konfigurálása:"
 
 #: ../to-be-integrated.rst:6
 msgid ""
@@ -32,6 +35,9 @@ msgid ""
 " volume\". Now you need to enter a new password twice to protect your "
 "hidden volume. The password strength is indicated below."
 msgstr ""
+"A titkosított kötet feloldása a Nitrokey App menüből. Válassza a \"rejtett "
+"kötet beállítása\" lehetőséget. Most kétszer kell megadni egy új jelszót a "
+"rejtett kötet védelméhez. A jelszó erősségét az alábbiakban jelezzük."
 
 #: ../to-be-integrated.rst:10
 msgid ""
@@ -39,6 +45,9 @@ msgid ""
 "short. Passwords like used for hidden devices can potentially be attacked"
 " unlimited which is why they need to be sufficiently strong."
 msgstr ""
+"Megjegyzés: A PIN-kódokat csak háromszor lehet megpróbálni, ezért lehetnek "
+"rövidek. A rejtett eszközökhöz hasonló jelszavak potenciálisan korlátlanul "
+"támadhatók, ezért kellően erősnek kell lenniük."
 
 #: ../to-be-integrated.rst:17
 msgid ""
@@ -47,6 +56,10 @@ msgid ""
 "choice because it could destroy data on the (not-hidden) encrypted volume"
 " and reveal the existience of the hidden volume."
 msgstr ""
+"Ezután meg kell határoznia a használt tárolási területet. A rejtett kötetek "
+"a titkosított kötet üres helyére kerülnek. Ez egy kritikus választás, mert "
+"ez megsemmisítheti a (nem rejtett) titkosított köteten lévő adatokat, és "
+"felfedheti a rejtett kötet létezését."
 
 #: ../to-be-integrated.rst:13
 #, python-format
@@ -61,6 +74,15 @@ msgid ""
 "buffer = 20% The hidden volume should end in a distance before the end of"
 " the storage. For example: 90%"
 msgstr ""
+"Egy FAT32 partíciót kell használnia a titkosított kötetén, mivel a naplózó "
+"fájlrendszerek, különösen az NTFS, megsemmisíthetik a titkosított adatokat. "
+"A rejtett kötet létrehozása előtt másoljon néhány fájlt a titkosított "
+"kötetre. Miután beállította a rejtett kötetet, többé nem szabad'hozzáadni "
+"vagy megváltoztatni a titkosított kötetben lévő fájlokat. Határozza meg a "
+"fájlok által a titkosított köteten elfoglalt tárhelyet. Például: 10% Ta "
+"rejtett kötetnek a titkosított köteten lévő fájljai után kell kezdődnie. "
+"Például: 10% filek + 10% bpuffer = 20% Ta rejtett kötetnek a tárhely vége "
+"előtti távolságban kell végződnie. Például: 90%"
 
 #: ../to-be-integrated.rst:19
 msgid ""
@@ -68,10 +90,13 @@ msgid ""
 "must not overlap. Otherwise they would override and destroy each other's "
 "data. Each hidden volume would require a different password."
 msgstr ""
+"Ha két vagy több rejtett kötetet használ, vegye figyelembe, hogy azok "
+"tárolási területe nem fedheti egymást. Ellenkező esetben felülírnák és "
+"megsemmisítenék egymás adatait. Minden rejtett kötethez más jelszó szükséges."
 
 #: ../to-be-integrated.rst:21
 msgid "Usage of Hidden Volumes:"
-msgstr ""
+msgstr "Rejtett kötetek használata:"
 
 #: ../to-be-integrated.rst:23
 msgid ""
@@ -85,18 +110,29 @@ msgid ""
 "various operating systems. Make sure to unmount/eject all partitions on "
 "the hidden volumes before locking or disconnecting the Nitrokey."
 msgstr ""
+"Válassza a \"titkosított kötet feloldása\" lehetőséget, és adja meg a "
+"felhasználói PIN-kódot. Válassza a \"rejtett kötet feloldása\" lehetőséget, "
+"és adja meg a rejtett kötet bármelyik jelszavát. Ha ez az első alkalom, "
+"előfordulhat, hogy partíciót kell létrehoznia a rejtett köteten. A Windows "
+"megnyit egy megfelelő ablakot, és megkéri erre. Linuxon és Mac OS-en "
+"előfordulhat, hogy meg kell nyitnia egy partíciókezelőt, és kézzel kell "
+"létrehoznia egy partíciót. Annyi partíciót hozhat létre, amennyit csak akar. "
+"A FAT(32) formátumot ajánljuk, ha a partíciót különböző operációs "
+"rendszerekből szeretné elérni. Győződjön meg róla, hogy a Nitrokey lezárása "
+"vagy leválasztása előtt minden partíciót lecsatlakoztat/kiold a rejtett "
+"köteteken."
 
 #: ../to-be-integrated.rst:28
 msgid "Also see older but comprehensive Nitrokey Storage manual."
-msgstr ""
+msgstr "Lásd még a régebbi, de átfogó Nitrokey Storage kézikönyvet."
 
 #: ../to-be-integrated.rst:32
 msgid "# pro"
-msgstr ""
+msgstr "# pro"
 
 #: ../to-be-integrated.rst:36
 msgid "PKCS#11 Driver"
-msgstr ""
+msgstr "PKCS#11 illesztőprogram"
 
 #: ../to-be-integrated.rst:38
 msgid ""
@@ -105,6 +141,10 @@ msgid ""
 "PuTTY/KiTTY, OpenSSH, OpenSSL, or any other PKCS#11 compatible software, "
 "you should install OpenSC."
 msgstr ""
+"Ha S/MIME e-mail titkosítást szeretne használni a Thunderbirddel, TrueCrypt/"
+"VeraCrypt, tanúsítvány alapú SSL-hitelesítést a Firefox, PuTTY/KiTTY, "
+"OpenSSH, OpenSSL vagy bármely más PKCS#11 kompatibilis szoftverrel, akkor "
+"telepítenie kell az OpenSC-t."
 
 #: ../to-be-integrated.rst:40
 msgid ""
@@ -112,6 +152,9 @@ msgid ""
 "GnuPG/OpenPGP. But the other way around works fine. If you want to use "
 "Nitrokey with both GnuPG and PKCS#11, generate the keys with GnuPG."
 msgstr ""
+"Vegye figyelembe, hogy az OpenSC-vel inicializált Nitrokey nem működik a "
+"GnuPG/OpenPGP-vel. De fordítva is jól működik. Ha a Nitrokey-t a GnuPG-vel "
+"és a PKCS#11-gyel is használni szeretné, a kulcsokat a GnuPG-vel generálja."
 
 #: ../to-be-integrated.rst:42
 msgid ""
@@ -121,6 +164,11 @@ msgid ""
 "Currently it's limit to the authentication certificate and not widely "
 "tested yet.)"
 msgstr ""
+"Ne használja a PKCS#11-et párhuzamosan a GnuPG-vel, mert mindkettő "
+"zavarhatja egymást, és váratlan problémák adódhatnak. (Van egy másik "
+"ígéretes projekt, az scd-pkcs11 fejlesztés alatt, amely végül talán leküzdi "
+"ezt a korlátozást. Jelenleg a hitelesítési tanúsítványra korlátozódik, és "
+"még nem tesztelték széles körben)."
 
 #: ../to-be-integrated.rst:44
 msgid ""
@@ -128,14 +176,17 @@ msgid ""
 "2, 3). These are general instructions how to use X.509 certificates. "
 "Alternative PKCS#11 Driver:"
 msgstr ""
+"Utasítások, hogyan hozzon létre érvényes X.509 tanúsítványt a Nitrokey "
+"segítségével (1, 2, 3). Ezek általános utasítások az X.509 tanúsítványok "
+"használatához. Alternatív PKCS#11 illesztőprogram:"
 
 #: ../to-be-integrated.rst:47
 msgid "The recommended PKCS#11 driver is OpenSC."
-msgstr ""
+msgstr "Az ajánlott PKCS#11 illesztőprogram az OpenSC."
 
 #: ../to-be-integrated.rst:49
 msgid "Windows Mini Driver"
-msgstr ""
+msgstr "Windows Mini illesztőprogram"
 
 #: ../to-be-integrated.rst:51
 msgid ""
@@ -145,6 +196,12 @@ msgid ""
 "browser, Windows Login). To install the driver, you may need to allow the"
 " installation of unsigned drivers first. Aloaha"
 msgstr ""
+"Ez a Mini Driver lehetővé teszi a Nitrokey integrálását a Window's "
+"tanúsítványtárolóval. Ezt követően minden olyan alkalmazás, amely ezt a "
+"tanúsítványtárolót használja, használható a Nitrokey-vel (pl. Internet "
+"Explorer, Google Chrome webböngésző, Windows Login). Az illesztőprogram "
+"telepítéséhez először engedélyeznie kell az aláírás nélküli "
+"illesztőprogramok telepítését. Aloaha"
 
 #: ../to-be-integrated.rst:54
 msgid ""
@@ -153,16 +210,23 @@ msgid ""
 "and with Windows as well as applications to encrypt and sign PDFs and the"
 " hard disk."
 msgstr ""
+"Az Aloaha minden alkalmazása a Nitrokey-vel működik. Ez magában foglalja a "
+"Nitrokey más PKCS#11 alapú alkalmazásokkal és a Windows-szal való "
+"integrálására szolgáló middleware-t, valamint a PDF-ek és a merevlemez "
+"titkosítására és aláírására szolgáló alkalmazásokat."
 
 #: ../to-be-integrated.rst:56
 msgid "Alternative PKCS#11 Driver:"
-msgstr ""
+msgstr "Alternatív PKCS#11 illesztőprogram:"
 
 #: ../to-be-integrated.rst:58
 msgid ""
 "The recommended PKCS#11 driver is OpenSC. Alternatively, you could use "
 "Peter Koch's PKCS#11 driver which has the following limitations:"
 msgstr ""
+"Az ajánlott PKCS#11 illesztőprogram az OpenSC. Alternatívaként használhatja "
+"Peter Koch's PKCS#11 illesztőprogramját, amely a következő korlátozásokkal "
+"rendelkezik:"
 
 #: ../to-be-integrated.rst:60
 msgid ""
@@ -170,16 +234,21 @@ msgid ""
 "generated on the Nitrokey) The Linux version does not allow to generate "
 "keys. Modification of the password/PIN under Linux is not possible."
 msgstr ""
+"A meglévő X.509 tanúsítványok importálása nem lehetséges. (Ehelyett a "
+"kulcsokat a Nitrokey-n kell generálni) A Linux verzió nem teszi lehetővé a "
+"kulcsok generálását. A jelszó/PIN módosítása Linux alatt nem lehetséges."
 
 #: ../to-be-integrated.rst:64
 msgid "p11-glue"
-msgstr ""
+msgstr "p11-ragasztó"
 
 #: ../to-be-integrated.rst:66
 msgid ""
 "P11-glue uses PKCS#11 as glue between crypto libraries and security "
 "applications on the open source desktop. Articles in German"
 msgstr ""
+"A P11-glue a PKCS#11-et használja a nyílt forráskódú asztali számítógépek "
+"kriptokönyvtárai és biztonsági alkalmazásai között. Német nyelvű cikkek"
 
 #: ../to-be-integrated.rst:69
 msgid ""
@@ -188,10 +257,13 @@ msgid ""
 "gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter "
 "CentOS."
 msgstr ""
+"Eine allgemeine und gut verständliche Einführung bietet der Artikel "
+"Magisches Leuchten im Linux Magazin 2010/12. Eine umfangreiche Anleitung "
+"gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter CentOS."
 
 #: ../to-be-integrated.rst:75
 msgid "**Q:** How can I login into Windows?"
-msgstr ""
+msgstr "**K:** Hogyan tudok bejelentkezni a Windowsba?"
 
 #: ../to-be-integrated.rst:75
 msgid ""
@@ -201,10 +273,17 @@ msgid ""
 "Note that the Mini Driver for Nitrokey Pro may not work yet for write "
 "mode."
 msgstr ""
+"A Nitrokey-eszközökhöz való hozzáféréshez töltse le és telepítse ezt a Mini "
+"illesztőprogramot (CSP). Ha Windows Servert használ, akkor az "
+"illesztőprogram aláírásának ellenőrzését le kell tiltania, mielőtt "
+"telepíteni tudná az illesztőprogramot. Vegye figyelembe, hogy a Nitrokey Pro "
+"Mini Driver for Nitrokey Pro még nem feltétlenül működik írási módban."
 
 #: ../to-be-integrated.rst:77
 msgid "There exist different ways to use a Nitrokey to logon on Windows:"
 msgstr ""
+"A Nitrokey különböző módjai léteznek a Windows rendszerbe való "
+"bejelentkezéshez:"
 
 #: ../to-be-integrated.rst:79
 msgid ""
@@ -215,14 +294,22 @@ msgid ""
 "on Windows domain computers using MS Active Directory based on Smart "
 "Policy for other Nitrokey devices."
 msgstr ""
+"Bejelentkezés önálló Windows számítógépeken az EIDAuthenticate alapján. "
+"Alternatívaként telepítse az OpenSC-t és használja az Aloaha Smart Login's "
+"PKCS#11 hitelesítő adatokat. Bejelentkezés Windows tartományi számítógépeken "
+"MS Active Directory alapú OpenPGP-CSP minidriverrel a Nitrokey Storage 2 "
+"Nitrokey Pro 2 Bejelentkezés Windows tartományi számítógépeken MS Active "
+"Directory alapú Smart Policy alapján más Nitrokey eszközökhöz."
 
 #: ../to-be-integrated.rst:84
 msgid "**Q:** How can I login into Linux? Linux Login with PAM"
 msgstr ""
+"**K:** Hogyan tudok bejelentkezni a Linuxra? Linux bejelentkezés PAM "
+"segítségével"
 
 #: ../to-be-integrated.rst:87
 msgid "You have two options: pam_p11 or Poldi."
-msgstr ""
+msgstr "Két lehetőséged van: pam_p11 vagy Poldi."
 
 #: ../to-be-integrated.rst:89
 msgid ""
@@ -230,6 +317,8 @@ msgid ""
 "S/MIME certificates. Please have a look at the documentation for more "
 "information."
 msgstr ""
+"A pam_p11 megoldása nehezebben megvalósítható, és az S/MIME tanúsítványokon "
+"alapul. Kérjük, nézze meg a dokumentációt további információkért."
 
 #: ../to-be-integrated.rst:91
 msgid ""
@@ -238,12 +327,18 @@ msgid ""
 "installation of poldi (e.g. 'sudo apt-get install libpam-poldi' on "
 "Ubuntu) the following steps are needed to get it working."
 msgstr ""
+"A Poldi 0.4.1 hibátlanul működik a Nitrokey-vel a PAM hitelesítéshez RSA "
+"kulcsokkal (az ECC kulcsokkal kapcsolatos információkért lásd a "
+"Hibaelhárítás című részt). A poldi telepítése mellett (pl. 'sudo apt-get "
+"install libpam-poldi' Ubuntun) a következő lépések szükségesek a működéshez."
 
 #: ../to-be-integrated.rst:93
 msgid ""
 "It is necessary to already have keys generated on the Nitrokey, as the "
 "authentication key is used by PAM."
 msgstr ""
+"Szükséges, hogy a Nitrokey-n már generált kulcsok legyenek, mivel a PAM a "
+"hitelesítési kulcsot használja."
 
 #: ../to-be-integrated.rst:95
 msgid ""
@@ -253,16 +348,23 @@ msgid ""
 "you have to add a line to /etc/poldi/localdb/users which contains the "
 "following information"
 msgstr ""
+"Először is meg kell tudnia a Nitrokey \"Application ID\" azonosítóját. A "
+"\"gpg --card-status | grep Application\" segítségével megtudhatja, hogy mi "
+"az Öné. Úgy néz ki, mint a 'D006000124010200000000000000xxxxxxxxxxxx' vagy "
+"hasonló. Most hozzá kell adnod egy sort az /etc/poldi/localdb/users "
+"állományhoz, amely a következő információt tartalmazza"
 
 #: ../to-be-integrated.rst:97
 msgid "<YourApplicationID> <YourUsername>"
-msgstr ""
+msgstr "<YourApplicationID> <YourUsername>"
 
 #: ../to-be-integrated.rst:99
 msgid ""
 "This could look like 'D00600012401020000000000xxxxxxxx nitrokeyuser'. Now"
 " dump the public key from the Nitrokey into poldi local db:"
 msgstr ""
+"Ez így nézhet ki: 'D006000124010200000000000000xxxxxxxx nitrokeyuser'. Most "
+"a nyilvános kulcsot a Nitrokey-ből a poldi local db-ba dumpoljuk:"
 
 #: ../to-be-integrated.rst:101
 msgid ""
@@ -270,18 +372,24 @@ msgid ""
 "/etc/poldi/localdb/keys/<YourApplicationID>\" \"SCD READKEY --advanced "
 "OPENPGP.3\" /bye'"
 msgstr ""
+"sudo sh -c 'gpg-connect-agent \"/datafile /etc/poldi/localdb/keys/"
+"<YourApplicationID>\" \"SCD READKEY --advanced OPENPGP.3\" /bye'"
 
 #: ../to-be-integrated.rst:103
 msgid ""
 "Please be aware that you have to insert your Application ID in the line "
 "above with the one of your stick!"
 msgstr ""
+"Felhívjuk figyelmét, hogy a fenti sorba a Pályázati azonosítóját kell "
+"beírnia a pálcája azonosítójával együtt!"
 
 #: ../to-be-integrated.rst:105
 msgid ""
 "Then you have to configure PAM. Just add \"auth sufficient pam_poldi.so\""
 " to pam configuration files according to your needs:"
 msgstr ""
+"Ezután konfigurálnia kell a PAM-ot. Csak add hozzá a \"auth sufficient "
+"pam_poldi.so\" -t a pam konfigurációs fájlokhoz az igényeidnek megfelelően:"
 
 #: ../to-be-integrated.rst:107
 msgid ""
@@ -289,6 +397,9 @@ msgid ""
 "console login /etc/pam.d/sudo for sudo authentication /etc/pam.d/gnome-"
 "screensaver for login back from a locked screen etc."
 msgstr ""
+"/etc/pam.d/common-auth a grafikus felhasználói bejelentkezéshez /etc/pam.d/"
+"login a konzolos bejelentkezéshez /etc/pam.d/sudo a sudo hitelesítéshez /etc/"
+"pam.d/gnome-screensaver a zárolt képernyőről való visszalépéshez stb."
 
 #: ../to-be-integrated.rst:113
 msgid ""
@@ -297,24 +408,34 @@ msgid ""
 " that booting into rescue mode from Grub requires a root password, so "
 "keep that or a live CD which can read your filesystems to hand."
 msgstr ""
+"Megjegyzés: A Pammel veszélyes játszani, ezért győződj meg róla, hogy van-e "
+"módod a géphez való hozzáférésre, ha teljesen megszakad a hitelesítés. Ne "
+"feledd, hogy a Grubból mentési módba való bootoláshoz root jelszóra van "
+"szükség, ezért tartsd kéznél azt vagy egy élő CD-t, ami képes olvasni a "
+"fájlrendszereket."
 
 #: ../to-be-integrated.rst:115
 msgid ""
 "Here you find further instructions (in German, partially outdated). "
 "Troubleshooting"
 msgstr ""
+"Itt talál további utasításokat (németül, részben elavult). Hibaelhárítás"
 
 #: ../to-be-integrated.rst:118
 msgid ""
 "If you get an error similar to 'ERR 100663414 Invalid ID <SCD>' you "
 "should try instead"
 msgstr ""
+"Ha a 'ERR 100663414 Érvénytelen azonosító <SCD>'-hez hasonló hibaüzenetet "
+"kap, akkor próbálja meg a következőt."
 
 #: ../to-be-integrated.rst:120
 msgid ""
 "poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> "
 "/etc/poldi/localdb/keys"
 msgstr ""
+"poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> /etc/poldi/"
+"localdb/keys"
 
 #: ../to-be-integrated.rst:122
 msgid ""
@@ -326,20 +447,28 @@ msgid ""
 " eventually. In the meantime the only option is to build poldi from "
 "source."
 msgstr ""
+"Felhívjuk figyelmét, hogy a fenti sorba a Pályázati azonosítóját kell "
+"beírnia a pálcája azonosítójával együtt! ECC kulcsok Sajnos a poldi még nem "
+"támogatja az ECC kulcsokat. De van egy javítás a Nitrokey Starttal használt "
+"ECC kulcsokhoz. Ez már szerepel a poldi fejlesztői tárolójának master "
+"ágában, és így előbb-utóbb egy újabb verzióban fog megjelenni. Addig is az "
+"egyetlen lehetőség a poldi forrásból történő összeállítása."
 
 #: ../to-be-integrated.rst:128
 msgid "**Q:** How can I login with One Time Passwords?"
-msgstr ""
+msgstr "**K:** Hogyan tudok bejelentkezni egyszeri jelszavakkal?"
 
 #: ../to-be-integrated.rst:128
 msgid ""
 "One-Time-Passwords (OTP) are used for secure login to websites and local "
 "applications."
 msgstr ""
+"Az egyszer használatos jelszavakat (OTP) a weboldalakra és helyi "
+"alkalmazásokba való biztonságos bejelentkezéshez használják."
 
 #: ../to-be-integrated.rst:130
 msgid "Two OTP modes exist:"
-msgstr ""
+msgstr "Két OTP üzemmód létezik:"
 
 #: ../to-be-integrated.rst:132
 msgid ""
@@ -347,6 +476,10 @@ msgid ""
 "unsure, assume you are using this mode. HMAC-based One-time Passwords "
 "(HOTP) is used for local applications and computer logins."
 msgstr ""
+"Az időalapú egyszer használatos jelszavakat (TOTP) széles körben használják "
+"a weboldalakon. Ha bizonytalan, feltételezzük, hogy ezt a módot használja. A "
+"HMAC-alapú egyszeri jelszavakat (HOTP) helyi alkalmazásokhoz és számítógépes "
+"bejelentkezésekhez használják."
 
 #: ../to-be-integrated.rst:135
 msgid ""
@@ -354,6 +487,9 @@ msgid ""
 " need to download and install the latest Nitrokey App. Time-based One-"
 "time Passwords - TOTP"
 msgstr ""
+"Az egyszeri jelszavak használatához a Nitrokey Pro vagy Nitrokey Storage "
+"alkalmazással, le kell töltenie és telepítenie a legújabb Nitrokey "
+"alkalmazást. Időalapú egyszer használatos jelszavak - TOTP"
 
 #: ../to-be-integrated.rst:138
 msgid ""
@@ -361,10 +497,13 @@ msgid ""
 "login to a Nextcloud account. Generic instructions for all other "
 "services."
 msgstr ""
+"A Google-fiókba való bejelentkezéshez. Bejelentkezés egy Microsoft-fiókba. "
+"Nextcloud-fiókba való bejelentkezéshez. Általános utasítások az összes többi "
+"szolgáltatáshoz."
 
 #: ../to-be-integrated.rst:143
 msgid "**Q:** How can I use the Nitrokey Pro with Android?"
-msgstr ""
+msgstr "**K:** Hogyan használhatom a Nitrokey Pro-t Androiddal?"
 
 #: ../to-be-integrated.rst:145
 msgid ""
@@ -372,6 +511,9 @@ msgid ""
 "with OpenKeychain. This enables one to encrypt/decrypt E-Mails or files "
 "via OpenPGP."
 msgstr ""
+"Lehetőség van a Nitrokey használatára Android eszközökön az OpenKeychainnel "
+"együtt. Ez lehetővé teszi az e-mailek vagy fájlok titkosítását/fejtését az "
+"OpenPGP-n keresztül."
 
 #: ../to-be-integrated.rst:147
 msgid ""
@@ -379,12 +521,17 @@ msgid ""
 "look there, if you like. The following instructions are based on "
 "OpenKeychain."
 msgstr ""
+"A Cotech kereskedelmi támogatással ellátott Android-szoftvereket kínál. "
+"Kérjük, nézzen be oda, ha szeretné. A következő utasítások az OpenKeychain-"
+"en alapulnak."
 
 #: ../to-be-integrated.rst:149
 msgid ""
 "Tested with Nitrokey Start, Pro and Storage in combination with Android "
 "7.1, OpenKeychain 4.5 and K9Mail 5.207. Prerequisites"
 msgstr ""
+"Teszteltük a Nitrokey Start, Pro és Storage rendszerrel Android 7.1, "
+"OpenKeychain 4.5 és K9Mail 5.207 rendszerrel. Előfeltételek"
 
 #: ../to-be-integrated.rst:152
 msgid ""
@@ -392,10 +539,13 @@ msgid ""
 "Nitrokey with your phone OpenKeychain installed on Device Public key "
 "saved on the device or uploaded on a keyserver"
 msgstr ""
+"USB OTG-képes Android telefon USB OTG kábel a Nitrokey és a telefon "
+"összekapcsolásához OpenKeychain telepítve az eszközön Az eszközre mentett "
+"vagy egy kulcsszerverre feltöltött nyilvános kulcs."
 
 #: ../to-be-integrated.rst:157
 msgid "First steps"
-msgstr ""
+msgstr "Első lépések"
 
 #: ../to-be-integrated.rst:159
 msgid ""
@@ -408,12 +558,23 @@ msgid ""
 "key' to import a reference to the private key of the Nitrokey. That’s "
 "basically it."
 msgstr ""
+"A Nitrokey kulcsok importálásához először is el kell indítania az "
+"OpenKeychain alkalmazást. Ezután helyezze be a Nitrokey-t az USB OTG "
+"kábellel. Az OpenKeychain elindít egy párbeszédpanelt a Nitrokey "
+"használatához (előfordulhat, hogy először el kell fogadnia a kulcs "
+"használatát az OpenKeychainnel). Most választhat, hogy nyilvános kulcsot "
+"keres egy kulcsszerveren, vagy kiválasztja a nyilvános kulcsot a tárolóból. "
+"Miután a nyilvános kulcsot importáltuk, a 'kulcs csatlakoztatása' gombra "
+"kell koppintanunk, hogy importáljuk a Nitrokey magánkulcsára való "
+"hivatkozást. Lényegében ennyi."
 
 #: ../to-be-integrated.rst:161
 msgid ""
 "In the case that no there are no keys on the Nitrokey yet, OpenKeychain "
 "will help with the creation of a new key pair instead. Usage"
 msgstr ""
+"Abban az esetben, ha még nincsenek kulcsok a Nitrokey-n, az OpenKeychain "
+"segít egy új kulcspár létrehozásában. Használat"
 
 #: ../to-be-integrated.rst:164
 msgid ""
@@ -423,6 +584,12 @@ msgid ""
 "OpenKeychain to decrypt your mails automatically. It is important to "
 "choose the right key in the K9Mail account settings first."
 msgstr ""
+"Használhatja az OpenKeychain és az OpenKeychain-t használó alkalmazások "
+"összes funkcióját. Ezért az üzeneteket vagy fájlokat közvetlenül az "
+"alkalmazással kézzel titkosíthatja/dekódolhatja, vagy például a K9Mail-t "
+"kombinálhatja az OpenKeychain-nel, hogy automatikusan dekódolja a leveleit. "
+"Fontos, hogy először válassza ki a megfelelő kulcsot a K9Mail fiók "
+"beállításaiban."
 
 #: ../to-be-integrated.rst:166
 msgid ""
@@ -432,24 +599,32 @@ msgid ""
 "to 'Language and Input' > 'Current Keyboard' > 'Hardware show input "
 "method'."
 msgstr ""
+"Ne feledje, hogy a PIN-kód beírásához az android beállításaiban "
+"engedélyeznie kell a képernyőbillentyűzetet, mivel a rendszer a Nitrokey-t "
+"fizikai billentyűzetként ismeri fel, és ezért megpróbálja elrejteni a "
+"képernyőbillentyűzetet. Menjen a 'Nyelv és bevitel' > 'Jelenlegi "
+"billentyűzet' > 'Hardveres beviteli módszer megjelenítése' menüpontba."
 
 #: ../to-be-integrated.rst:169
 msgid "**Q:** How can I use the Nitrokey Pro with Iphone?"
-msgstr ""
+msgstr "**K:** Hogyan használhatom a Nitrokey Pro-t Iphone-nal?"
 
 #: ../to-be-integrated.rst:170
 msgid "Currently it is not possible"
-msgstr ""
+msgstr "Jelenleg nem lehetséges"
 
 #: ../to-be-integrated.rst:172
 msgid "**Q:** How can I use the Nitrokey Pro with Ubuntu Phone?"
-msgstr ""
+msgstr "**K:** Hogyan használhatom a Nitrokey Pro-t Ubuntu Phone-on?"
 
 #: ../to-be-integrated.rst:172
 msgid ""
 "There are instructions on gnupg.org about how to use a OpenPGP Card on a "
 "UbuntuPhone which should work for the Nitrokey Start, Pro and Storage."
 msgstr ""
+"A gnupg.org oldalon találsz utasításokat arról, hogyan használhatsz OpenPGP "
+"kártyát egy UbuntuPhone-on, aminek működnie kell a Nitrokey Start, Pro és "
+"Storage esetében."
 
 #: ../to-be-integrated.rst:174
 msgid ""
@@ -458,6 +633,11 @@ msgid ""
 "S/MIME/X.509 is mostly used by enterprises. If you are in doubt which one"
 " to choose, you should use OpenPGP."
 msgstr ""
+"**K:** Hogyan tudom az e-maileket titkosítani? Két széles körben használt "
+"szabvány létezik az e-mail titkosítására. Míg az OpenPGP/GnuPG a "
+"magánszemélyek körében népszerű, addig az S/MIME/X.509-et leginkább a "
+"vállalatok használják. Ha kétségei vannak, hogy melyiket válassza, akkor az "
+"OpenPGP-t érdemes használni."
 
 #: ../to-be-integrated.rst:177
 msgid ""
@@ -465,26 +645,35 @@ msgid ""
 "instructions for using S/MIME with the Nitrokey. Note: SMIME certificates"
 " can be purchased cheaply from CERTUM and SSLTrust."
 msgstr ""
+"az OpenPGP szabvány és a Nitrokey használatára vonatkozó utasítások az S/"
+"MIME és a Nitrokey használatára vonatkozó utasítások. Megjegyzés: SMIME "
+"tanúsítványok olcsón megvásárolhatók a CERTUM-tól és az SSLTrusttól."
 
 #: ../to-be-integrated.rst:180
 msgid ""
 "Please note, that it is currently advised to use either OpenPGP or S/MIME"
 " encryption, but not both with the Nitrokey."
 msgstr ""
+"Kérjük, vegye figyelembe, hogy jelenleg az OpenPGP vagy az S/MIME titkosítás "
+"használata javasolt, de nem mindkettő a Nitrokey-vel."
 
 #: ../to-be-integrated.rst:182
 msgid "To use a Nitrokey Storage with Thunderbird 78+, you can try this tutorial."
 msgstr ""
+"A Nitrokey tároló Thunderbird 78+ alkalmazással való használatához próbálja "
+"ki ezt a bemutatót."
 
 #: ../to-be-integrated.rst:184
 msgid "**Q:** How can I do Hard Disk Encryption?"
-msgstr ""
+msgstr "**K:** Hogyan tudom a merevlemezt titkosítani?"
 
 #: ../to-be-integrated.rst:187
 msgid ""
 "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (formerly "
 "TrueCrypt)"
 msgstr ""
+"A következőkért: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt ("
+"korábbi TrueCrypt)"
 
 #: ../to-be-integrated.rst:190
 msgid ""
@@ -494,6 +683,11 @@ msgid ""
 "TrueCrypt as well. Follow these steps to use the program with Nitrokey "
 "Storage or Pro:"
 msgstr ""
+"A VeraCrypt egy ingyenes és nyílt forráskódú lemez titkosító szoftver "
+"Windows, macOS és GNU/Linux rendszerekre. Ez a TrueCrypt utódja, ezért "
+"ajánlott, bár a következő utasítások a TrueCryptre is vonatkoznak. Kövesse "
+"az alábbi lépéseket a program használatához a Nitrokey Storage vagy Pro "
+"programmal:"
 
 #: ../to-be-integrated.rst:192 ../to-be-integrated.rst:704
 msgid ""
@@ -508,6 +702,16 @@ msgid ""
 "Create a container, choose the keyfile on the device as an alternative to"
 " a password."
 msgstr ""
+"OpenSC telepítése Válassza ki a könyvtárat a VeraCryptben a "
+"Beállítások>Beállítások>Biztonsági token alatt (a hely a rendszertől függ, "
+"pl. /usr/lib/opensc). Generáljon egy 64 bájtos kulcsfájlt az Tools>Keyfile "
+"Generator segítségével. Most már képesnek kell lennie a generált kulcsfájl "
+"importálására az Tools>Manage Security Token Keyfiles menüponton keresztül. "
+"Válassza ki az első Slotot ([0] User PIN). A kulcsfájl ezután 'Private Data "
+"Object 1' (PrivDO1) néven kerül tárolásra a Nitrokey-n. Ezt követően az "
+"eredeti kulcsfájlt biztonságosan törölje le a Számítógépéről! Most már "
+"használhatja a VeraCrypt-et a Nitrokey-vel: Hozzon létre egy tárolót, "
+"válassza a kulcsfájlt az eszközön a jelszó alternatívájaként."
 
 #: ../to-be-integrated.rst:199
 msgid ""
@@ -516,12 +720,18 @@ msgid ""
 "Instead it stores a keyfile on the Nitrokey which theoretically could be "
 "stolen by a computer virus after the user enters the PIN."
 msgstr ""
+"Biztonsági megfontolások: A VeraCrypt nem használja ki a Nitrokey (és "
+"általában az intelligens kártyák) által nyújtott teljes biztonságot. "
+"Ehelyett egy kulcsfájlt tárol a Nitrokey-n, amelyet elméletileg ellophat egy "
+"számítógépes vírus, miután a felhasználó beírta a PIN-kódot."
 
 #: ../to-be-integrated.rst:201
 msgid ""
 "Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
 "described security limitation."
 msgstr ""
+"Megjegyzés: Az Aloaha Crypt a TrueCrypt/VeraCrypt-en alapul, de a leírt "
+"biztonsági korlátozások nélkül."
 
 #: ../to-be-integrated.rst:204
 msgid ""
@@ -529,12 +739,18 @@ msgid ""
 "instructions how to use Nitrokey to encrypt your hard disk under Linux "
 "with LUKS/dm-crypt. Other instruction."
 msgstr ""
+"Merevlemez titkosítás Linuxon, LUKS/dm-crypt alapján Itt találja a kiváló "
+"utasításokat, hogyan használja a Nitrokey-t a merevlemez titkosítására Linux "
+"alatt a LUKS/dm-crypt segítségével. Egyéb utasítás."
 
 #: ../to-be-integrated.rst:207
 msgid ""
 "Purism has created a simple script to add the Nitrokey/LibremKey as a way"
 " to unlock LUKS partitions (not tested by Nitrokey yet)."
 msgstr ""
+"A Purism létrehozott egy egyszerű szkriptet a Nitrokey/LibremKey "
+"hozzáadásához, mint a LUKS partíciók feloldásának módjához (a Nitrokey még "
+"nem tesztelte)."
 
 #: ../to-be-integrated.rst:209
 msgid ""
@@ -542,18 +758,26 @@ msgid ""
 "Storage based on the Password Safe (not tested by Nitrokey yet). A "
 "description on how to use it on Gentoo can be found here."
 msgstr ""
+"A projekt célja, hogy megkönnyítse a LUKS használatát a Nitrokey Pro-val "
+"vagy a Password Safe-on alapuló tárolóval (a Nitrokey még nem tesztelte). A "
+"Gentoo-n való használatának leírása itt található."
 
 #: ../to-be-integrated.rst:211
 msgid ""
 "For Arch Linux, see initramfs-scencrypt. Storage Encryption on Linux, "
 "Based on EncFS"
 msgstr ""
+"Arch Linux esetén lásd: initramfs-scencrypt. Tárolók titkosítása Linuxon, az "
+"EncFS alapján"
 
 #: ../to-be-integrated.rst:214
 msgid ""
 "Prerequisite: Please ensure that you installed the device driver, changed"
 " the default PINs and generated or imported keys with GnuPG."
 msgstr ""
+"Előfeltétel: GnuPG-vel generált vagy importált kulcsok: Győződjön meg róla, "
+"hogy telepítette az eszközillesztőt, módosította az alapértelmezett PIN-"
+"kódokat és generálta vagy importálta a kulcsokat a GnuPG-vel."
 
 #: ../to-be-integrated.rst:216
 msgid ""
@@ -561,66 +785,82 @@ msgid ""
 "You may follow these steps to use it with very long passwords and "
 "Nitrokey:"
 msgstr ""
+"Egy könnyen használható titkosított fájlrendszer az EncFS, amely a FUSE-n "
+"alapul. A következő lépéseket követve használhatja nagyon hosszú "
+"jelszavakkal és Nitrokey-vel:"
 
 #: ../to-be-integrated.rst:218
 msgid "Initialization"
-msgstr ""
+msgstr "Inicializálás"
 
 #: ../to-be-integrated.rst:220
 msgid ""
 "# Create a key file with random data: $ dd bs=64 count=1 if=/dev/urandom "
 "of=keyfile"
 msgstr ""
+"# Hozzon létre egy kulcsfájlt véletlenszerű adatokkal: $ dd bs=64 count=1 "
+"if=/dev/urandom of=keyfile"
 
 #: ../to-be-integrated.rst:223
 msgid ""
 "# Encrypt the key file and use the User-ID of your Nitrokey $ gpg "
 "--encrypt keyfile"
 msgstr ""
+"# Titkosítja a kulcsfájlt és használja a Nitrokey felhasználói azonosítóját $"
+" gpg --encrypt keyfile"
 
 #: ../to-be-integrated.rst:226
 msgid ""
 "# Remove the key file in clear text: $ rm keyfile # you may want to use "
 "'wipe' or 'shred' to securely delete the keyfile"
 msgstr ""
+"# Távolítsa el a kulcsfájlt tiszta szövegben: $ rm keyfile # a kulcsfájl "
+"biztonságos törléséhez használhatja a 'wipe' vagy 'shred' parancsot."
 
 #: ../to-be-integrated.rst:229
 msgid "# Create mount point: $ mkdir ~/.cryptdir ~/cryptdir"
-msgstr ""
+msgstr "# Hozzon létre csatlakozási pontot: $ mkdir ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:232
 msgid ""
 "# Create the actual encryption folder $ gpg -d keyfile.gpg | encfs -S "
 "~/.cryptdir ~/cryptdir"
 msgstr ""
+"# Hozzuk létre a tényleges titkosítási mappát $ gpg -d keyfile.gpg | encfs -"
+"S ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:235
 msgid ""
 "# There may appears an error message about missing permission of "
 "fusermount # This message can be ignored"
 msgstr ""
+"# Lehet, hogy hibaüzenet jelenik meg a fusermount hiányzó engedélyéről # Ezt "
+"az üzenetet figyelmen kívül lehet hagyni."
 
 #: ../to-be-integrated.rst:238
 msgid "# Unmount the new file system: $ fusermount -u ~/cryptdir"
-msgstr ""
+msgstr "# Leszereljük az új fájlrendszert: $ fusermount -u ~/cryptdir"
 
 #: ../to-be-integrated.rst:241
 msgid "Usage"
-msgstr ""
+msgstr "Használat"
 
 #: ../to-be-integrated.rst:243
 msgid ""
 "# Mount encrypted file system and enter PIN of Nitrokey: $ gpg -d "
 "keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
 msgstr ""
+"# Csatlakoztassuk a titkosított fájlrendszert és adjuk meg a Nitrokey PIN-"
+"kódját: $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
 
 #: ../to-be-integrated.rst:246
 msgid "# After usage, unmount the file system: $ fusermount -u ~/cryptdir"
 msgstr ""
+"# Használat után bontsuk az állományrendszert: $ fusermount -u ~/cryptdir"
 
 #: ../to-be-integrated.rst:250
 msgid "Storage Encryption on Linux, Based on ECryptFS"
-msgstr ""
+msgstr "Tárolási titkosítás Linuxon, az ECryptFS alapján"
 
 #: ../to-be-integrated.rst:252
 msgid ""
@@ -629,10 +869,14 @@ msgid ""
 "instructions. Alternatively, try ESOSI or follow these steps using OpenSC"
 " and OpenVPN:"
 msgstr ""
+"Az eCryptfs egy fájlalapú, átlátható titkosítású fájlrendszer Linuxhoz, "
+"amely PKCS#11 meghajtón keresztül használható a Nitrokey-vel. Lásd ezeket az "
+"utasításokat. Alternatívaként próbálja ki az ESOSI-t, vagy kövesse ezeket a "
+"lépéseket az OpenSC és az OpenVPN használatával:"
 
 #: ../to-be-integrated.rst:254
 msgid "Warning: This will delete existing keys on your Nitrokey!"
-msgstr ""
+msgstr "Figyelmeztetés: Ez törli a Nitrokey meglévő kulcsokat!"
 
 #: ../to-be-integrated.rst:256
 msgid ""
@@ -640,10 +884,14 @@ msgid ""
 "objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 "
 "--format pkcs12 --auth-id 3 --verify-pin"
 msgstr ""
+"# Importálja a tanúsítványt és a kulcsot a Nitrokey-be $ pkcs15-init "
+"--delete-objects privkey,pubkey --id 3 --store-private-key user@"
+"example.com.p12 --format pkcs12 --auth-id 3 --verify-pin"
 
 #: ../to-be-integrated.rst:259
 msgid "# Create the file ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
 msgstr ""
+"# Létrehozza a ~/.ecryptfsrc.pkcs11 fájlt: $ editor ~/.ecryptfsrc.pkcs11"
 
 #: ../to-be-integrated.rst:262
 msgid ""
@@ -652,6 +900,10 @@ msgid ""
 "private=true $ openvpn --show-pkcs11-ids path to opensc-pkcs11 module "
 "Certificate"
 msgstr ""
+"# Adja meg ezt a tartalmat: $ pkcs11-log-level=5 "
+"pkcs11-provider1,name=név,library=/usr/lib/opensc-pkcs11.so,cert-"
+"private=true $ openvpn --show-pkcs11-ids útvonal az opensc-pkcs11 modulhoz "
+"Tanúsítványok"
 
 #: ../to-be-integrated.rst:266
 msgid ""
@@ -660,10 +912,15 @@ msgid ""
 " Serial: 066E04 Serialized id: "
 "ZeitControl/PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
 msgstr ""
+"DN: /description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@"
+"example.com Sorozatszám: 066E04 Serializált azonosító: 066E04 ZeitControl/"
+"PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN"
+"\\x29/03"
 
 #: ../to-be-integrated.rst:270
 msgid "# Copy the serialized id for later usage: $ ecryptfs-manager"
 msgstr ""
+"# Másolja a serializált azonosítót későbbi használatra: $ ecryptfs-manager"
 
 #: ../to-be-integrated.rst:273
 msgid ""
@@ -671,10 +928,14 @@ msgid ""
 " # Choose pkcs11-helper # Enter the serialized ID of step 3 to PKCS#11 "
 "ID."
 msgstr ""
+"# This will show list option. Válassza a \"Add public key to keyring\" # "
+"Válassza a pkcs11-helper opciót # Adja meg a 3. lépés sorszámozott "
+"azonosítóját a PKCS#11 azonosítóhoz."
 
 #: ../to-be-integrated.rst:281
 msgid "**Q:** How can I sign and encrypt Files and PDFs? GnuPG"
 msgstr ""
+"**K:** Hogyan tudom aláírni és titkosítani a fájlokat és PDF-eket? GnuPG"
 
 #: ../to-be-integrated.rst:284
 msgid ""
@@ -683,10 +944,14 @@ msgid ""
 "Office / Libre Office or any other PDF reader supporting electronic "
 "signatures."
 msgstr ""
+"A gpgsm eszközzel aláírhatja, ellenőrizheti, titkosíthatja és visszafejtheti "
+"a fájlokat. A Nitrokey aláíráskulcsával aláírhatja a dokumentumokat az "
+"Acrobat Reader, az Open Office / Libre Office vagy bármely más, elektronikus "
+"aláírást támogató PDF-olvasó segítségével."
 
 #: ../to-be-integrated.rst:287
 msgid "GPA - GNU Privacy Assistant"
-msgstr ""
+msgstr "GPA - GNU adatvédelmi asszisztens"
 
 #: ../to-be-integrated.rst:289
 msgid ""
@@ -694,20 +959,27 @@ msgid ""
 "various features to manage keys and cards. It also allows file operations"
 " such as file encryption, decryption, signing."
 msgstr ""
+"A Gnu Privacy Assistant (GPA) azonnal felismeri a Nitrokey-t, és különböző "
+"funkciókkal rendelkezik a kulcsok és kártyák kezeléséhez. Olyan "
+"fájlműveleteket is lehetővé tesz, mint a fájlok titkosítása, visszafejtése, "
+"aláírása."
 
 #: ../to-be-integrated.rst:292
 msgid "SOPS - Secrect OPerationS"
-msgstr ""
+msgstr "SOPS - Helyes OPerációK"
 
 #: ../to-be-integrated.rst:294
 msgid ""
 "SOPS is an editor of encrypted files that supports YAML, JSON and BINARY "
 "formats and encrypts with AWS KMS and PGP. You can find it on github."
 msgstr ""
+"A SOPS a titkosított fájlok szerkesztője, amely támogatja a YAML, JSON és "
+"BINARY formátumokat, és az AWS KMS és PGP segítségével titkosít. "
+"Megtalálható a githubon."
 
 #: ../to-be-integrated.rst:297
 msgid "Aloaha"
-msgstr ""
+msgstr "Aloaha"
 
 #: ../to-be-integrated.rst:299
 msgid ""
@@ -717,16 +989,25 @@ msgid ""
 "appropriate variant. After this Windows recognize your certificate and "
 "you can sign the document as it is shown in the screencast below."
 msgstr ""
+"Az Aloaha számos alkalmazást kínál a PDF-ek titkosítására és aláírására. "
+"Ezek mindegyike, amelyek lehetővé teszik az intelligens kártya integrációt, "
+"együttműködik a Nitrokey-vel. A kulcsot és a tanúsítványt például az OpenSC "
+"vagy bármely más megfelelő változat segítségével importálhatja. Ezt követően "
+"a Windows felismeri a tanúsítványt, és aláírhatja a dokumentumot, ahogy az "
+"az alábbi képernyőképen látható."
 
 #: ../to-be-integrated.rst:301
 msgid "GpgEx for Windows Explorer"
-msgstr ""
+msgstr "GpgEx a Windows Explorerhez"
 
 #: ../to-be-integrated.rst:303
 msgid ""
 "GpgEx integrates smoothly into Windows Explorer to allow encryption and "
 "decryption of files. Install it as part of the GPG4Win package."
 msgstr ""
+"A GpgEx zökkenőmentesen integrálódik a Windows Intézőbe, hogy lehetővé tegye "
+"a fájlok titkosítását és visszafejtését. Telepítse a GPG4Win csomag "
+"részeként."
 
 #: ../to-be-integrated.rst:306
 msgid ""
@@ -734,6 +1015,9 @@ msgid ""
 "please ensure that you installed the device driver and initialized the "
 "device (e.g. generated keys)."
 msgstr ""
+"Mielőtt elkezdené használni ezen alkalmazások bármelyikét a Nitrokey-vel, "
+"kérjük, győződjön meg róla, hogy telepítette az eszközillesztőprogramot és "
+"inicializálta az eszközt (pl. kulcsokat generált)."
 
 #: ../to-be-integrated.rst:308
 msgid ""
@@ -741,6 +1025,10 @@ msgid ""
 "authentication method but it is only used rarely. If you are unsure what "
 "this means, this approach is most likely not relevant for you."
 msgstr ""
+"A tanúsítványalapú bejelentkezés TLS-szel és webböngészővel nagyon "
+"biztonságos hitelesítési módszer, de csak ritkán használják. Ha nem tudja, "
+"hogy ez mit jelent, akkor ez a megközelítés valószínűleg nem releváns az Ön "
+"számára."
 
 #: ../to-be-integrated.rst:310
 msgid ""
@@ -750,10 +1038,16 @@ msgid ""
 " Certificate authentication can be used easily with the Nitrokey and also"
 " with any other certificate storages. Mozilla Firefox"
 msgstr ""
+"Ez az oldal olyan webhelyekre és alkalmazásokra vonatkozik, amelyek "
+"támogatják a tanúsítvány-hitelesítést, így a felhasználóknak "
+"bejelentkezéskor nem kell felhasználónevet és jelszót megadniuk. A WebID "
+"például egy nagyszerű protokoll, amely ezt használja. A tanúsítvány-"
+"hitelesítés könnyen használható a Nitrokey-vel és bármely más "
+"tanúsítványtárolóval is. Mozilla Firefox"
 
 #: ../to-be-integrated.rst:313
 msgid "You need to install the PKCS#11 driver:"
-msgstr ""
+msgstr "Telepítenie kell a PKCS#11 illesztőprogramot:"
 
 #: ../to-be-integrated.rst:315
 msgid ""
@@ -764,18 +1058,29 @@ msgid ""
 "the Browse button to select the previously downloaded PKCS11 driver file."
 " Confirm and close all dialogs."
 msgstr ""
+"Töltse le a PKCS11 illesztőprogramot, és tárolja a helyi merevlemezen, vagy "
+"telepítse az OpenSC-t. Nyissa meg a Firefox beállításait, és menjen az "
+"Adatvédelem & Biztonság -> Biztonság (csak egy címszó) -> Gomb 'Biztonsági "
+"eszközök...' Nyomja meg a gombot Betöltés. Adja meg a \"Nitrokey\" mint a "
+"Modul neve, és nyomja meg a Tallózás gombot a korábban letöltött PKCS11 "
+"illesztőprogram fájl kiválasztásához. Erősítse meg és zárja be az összes "
+"párbeszédpanelt."
 
 #: ../to-be-integrated.rst:319
 msgid ""
 "Now you are ready to access websites which provide certificate "
 "authentication. Internet Explorer"
 msgstr ""
+"Most már készen áll a tanúsítvány-hitelesítést biztosító webhelyek "
+"elérésére. Internet Explorer"
 
 #: ../to-be-integrated.rst:322
 msgid ""
 "Install this Mini Driver for Windows. Now you are ready to access "
 "websites which provide certificate authentication. Google Chrome"
 msgstr ""
+"Telepítse ezt a Mini illesztőprogramot Windowshoz. Most már készen áll a "
+"tanúsítvány-hitelesítést biztosító webhelyek elérésére. Google Chrome"
 
 #: ../to-be-integrated.rst:325
 msgid ""
@@ -783,6 +1088,9 @@ msgid ""
 "instructions. Now you are ready to access websites which provide "
 "certificate authentication. WebID"
 msgstr ""
+"Windows alatt telepítse ezt a Mini illesztőprogramot. Linux alatt kövesse az "
+"alábbi utasításokat. Most már készen áll a tanúsítvány-hitelesítést "
+"biztosító webhelyek elérésére. WebID"
 
 #: ../to-be-integrated.rst:328
 msgid ""
@@ -803,6 +1111,21 @@ msgid ""
 "Liferay         Blog FusionForge     web-based project-management and "
 "collaboration software"
 msgstr ""
+"A WebID egy olyan technológia, amely lehetővé teszi a biztonságos és "
+"szövetségi közösségi weboldalakat. Itt egy videó (WebM, Ogg video, H.264), "
+"amely bemutatja, hogyan lehet a Nitrokey segítségével létrehozni egy WebID-"
+"profilt, majd használni azt egy szingapúri internetkávézóban. A Nitrokey "
+"védelmet nyújt a számítógépes vírusok ellen, amelyek egyébként ellophatják a "
+"felhasználónevet és a jelszót. Weboldalak Webhely kategória CAcert közösségi "
+"alapú tanúsítvány hatóság PrivaSphere Secure messaging HM Revenue & Customs "
+"UK's adóigazgatás Szoftver Alkalmazás kategória Roundcube (plugin) Webmail "
+"Drupal (WebID, tanúsítvány bejelentkezés) Tartalomkezelő rendszer Media Wiki "
+"(plugin) Wiki Joomla!         Tartalomkezelő rendszer Apache + mod_ssl "
+"Webszerver OpenSSH SSH (távoli biztonságos shell) kliens és szerver "
+"Wordpress (plugin) Blog és CMS Tivoli Rendszerirányítási keretrendszer "
+"Globalscape EFT menedzselt fájlátvitel (MFT) Oracle Identity Manager I&AM "
+"Fuse Source Middleware Liferay Blog FusionForge webalapú projektkezelő és "
+"együttműködési szoftverek"
 
 #: ../to-be-integrated.rst:350
 msgid ""
@@ -810,16 +1133,21 @@ msgid ""
 "client certificate authentication isn't popular and better alternatives "
 "at the horizon."
 msgstr ""
+"Ez a weboldal jó olvasmány az erős hitelesítési mechanizmusokról, arról, "
+"hogy miért nem népszerű az ügyféltanúsítvány-hitelesítés, és miért vannak "
+"jobb alternatívák a láthatáron."
 
 #: ../to-be-integrated.rst:352
 msgid "**Q:** How can I use Enterprise Authentication?"
-msgstr ""
+msgstr "**K:** Hogyan használhatom a vállalati hitelesítést?"
 
 #: ../to-be-integrated.rst:354
 msgid ""
 "LinOTP privacyIDEA RCDevs OpenOTP Usage of Nitrokey HSM as a secure key "
 "store for the Forgerock OpenDJ server and Forgerock Identity Gateway"
 msgstr ""
+"LinOTP privacyIDEA RCDevs OpenOTP A Nitrokey HSM használata a Forgerock "
+"OpenDJ szerver és a Forgerock Identity Gateway biztonságos kulcstárolójaként."
 
 #: ../to-be-integrated.rst:360
 msgid ""
@@ -829,16 +1157,23 @@ msgid ""
 "installed on the system (only the core application GnuPG is needed). "
 "Furthermore you should install PuTTY. Preparation on client"
 msgstr ""
+"**K:** Hogyan tudok SSH-t használni a Windows szerveradminisztrációhoz? A "
+"Nitrokey-nek már telepített PGP kulcsoknak kell lennie, és a helyi GnuPG "
+"kulcstárnak ismernie kell a kulcsokat, azaz a GPG4Win-t kell telepíteni a "
+"rendszerre (csak a GnuPG alapalkalmazás szükséges). Továbbá telepíteni kell "
+"a PuTTY-t is. Előkészületek a kliensen"
 
 #: ../to-be-integrated.rst:364 ../to-be-integrated.rst:736
 msgid ""
 "There are two steps needed to make PuTTY work. At first we need to enable"
 " PuTTY support of GnuPG. To achieve this we use the following command:"
 msgstr ""
+"A PuTTY működéséhez két lépés szükséges. Először is engedélyeznünk kell a "
+"GnuPG PuTTY támogatását. Ehhez a következő parancsot használjuk:"
 
 #: ../to-be-integrated.rst:366 ../to-be-integrated.rst:738
 msgid "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
-msgstr ""
+msgstr "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
 
 #: ../to-be-integrated.rst:368 ../to-be-integrated.rst:740
 msgid ""
@@ -850,10 +1185,18 @@ msgid ""
 "click on an empty space and choose \"New\" -> \"Shortcut\". Now you "
 "should insert the actual command and proceed:"
 msgstr ""
+"Most szeretnénk megbizonyosodni arról, hogy a gpg-agent automatikusan "
+"elindul a háttérben (ha szeretné, manuálisan is elindíthatja az alábbi "
+"paranccsal). Létrehozunk egy parancsikont a gpg-connect-agent.exe fájlhoz. "
+"Tartsuk lenyomva a Windows-billentyűt, majd nyomjuk meg a 'R' gombot. A "
+"megnyíló szövegmezőbe írjuk be a \"shell:startup\" parancsot (lásd az alábbi "
+"képet). Megnyílik a Windows-Explorer, és jobb egérgombbal kattintsunk egy "
+"üres helyre, majd válasszuk a \"Új\" -> \"parancsikon\" lehetőséget. Most "
+"már be kell illesztenie a tényleges parancsot, és folytathatja:"
 
 #: ../to-be-integrated.rst:370 ../to-be-integrated.rst:742
 msgid "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
-msgstr ""
+msgstr "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
 
 #: ../to-be-integrated.rst:374 ../to-be-integrated.rst:746
 msgid ""
@@ -861,16 +1204,22 @@ msgid ""
 "alright you now can use PuTTY as usual and PuTTY will make use of the "
 "Nitrokey automatically. Preparation for the server"
 msgstr ""
+"Indítsa újra a rendszert, hogy megbizonyosodjon arról, hogy a parancsikon "
+"működik. Ha minden rendben van, akkor most már használhatja a PuTTY-t a "
+"szokásos módon, és a PuTTY automatikusan használni fogja a Nitrokey-t. A "
+"szerver előkészítése"
 
 #: ../to-be-integrated.rst:377 ../to-be-integrated.rst:749
 msgid "You can generate an authorized_keys file by running"
-msgstr ""
+msgstr "Az authorized_keys fájlt a következő futtatással hozhatja létre"
 
 #: ../to-be-integrated.rst:379 ../to-be-integrated.rst:751
 msgid ""
 "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID "
 ">> authorized_keys"
 msgstr ""
+"\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID >> "
+"authorized_keys"
 
 #: ../to-be-integrated.rst:381 ../to-be-integrated.rst:753
 msgid ""
@@ -880,16 +1229,23 @@ msgid ""
 "authorized_keys and when you ssh to the server you'll be asked for a pin "
 "rather than a passphrase."
 msgstr ""
+"ahol 'keyID' vagy a kulcsod ujjlenyomata, vagy csak a kulcsodhoz kötött e-"
+"mail cím. A Nitrokey-nek már ismertnek kell lennie a helyi GnuPG "
+"kulcstárban. Most már hozzáadhatod ezt a fájlt egy távoli szerver's "
+"authorized_keys-éhez, és amikor ssh-t használsz a szerverhez, akkor a jelszó "
+"helyett egy pin-t fogsz kérni."
 
 #: ../to-be-integrated.rst:388
 msgid "**Q:** How can I do SSH for Server Administration on Linux?"
-msgstr ""
+msgstr "**K:** Hogyan tudok SSH-t használni Linuxon a szerveradminisztrációhoz?"
 
 #: ../to-be-integrated.rst:390 ../to-be-integrated.rst:757
 msgid ""
 "The Nitrokey should already have PGP keys installed and the local GnuPG "
 "keyring should know the keys. Preparation on client"
 msgstr ""
+"A Nitrokey-nek már telepített PGP-kulcsokkal kell rendelkeznie, és a helyi "
+"GnuPG kulcstárnak ismernie kell a kulcsokat. Előkészítés a kliensen"
 
 #: ../to-be-integrated.rst:393 ../to-be-integrated.rst:760
 msgid ""
@@ -898,12 +1254,19 @@ msgid ""
 "the file does not exist yet, you can just create it. Add the following "
 "code somewhere into your ~/.bashrc (for fish shell, look here)"
 msgstr ""
+"Győződjön meg róla, hogy a ~/.gnupg/gpg.conf tartalmazza a 'use-agent' Adja "
+"hozzá az ssh támogatást a gnupg-agenthez a 'enable-ssh-support' "
+"hozzáadásával a ~/.gnupg/gpg-agent.conf fájlhoz Ha a fájl még nem létezik, "
+"akkor egyszerűen létrehozhatja. Add hozzá a következő kódot valahol a ~/."
+"bashrc fájlodhoz (fish shell esetén nézd meg itt)"
 
 #: ../to-be-integrated.rst:398 ../to-be-integrated.rst:765
 msgid ""
 "unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
 "export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
 msgstr ""
+"unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
+"export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
 
 #: ../to-be-integrated.rst:403 ../to-be-integrated.rst:770
 msgid ""
@@ -912,14 +1275,18 @@ msgid ""
 "try gpg2 --card-status on first usage to make sure the gpg-agent gets "
 "started"
 msgstr ""
+"Egyszerűen indítsa újra a rendszert, vagy próbálja meg a pkill gpg-agent-et, "
+"és nyisson egy új parancssort, hogy megbizonyosodjon arról, hogy minden be "
+"van állítva Problémák esetén próbálja meg a gpg2 --card-status-t az első "
+"használatnál, hogy megbizonyosodjon arról, hogy a gpg-agent elindul."
 
 #: ../to-be-integrated.rst:406 ../to-be-integrated.rst:773
 msgid "Preparation for the server"
-msgstr ""
+msgstr "A szerver előkészítése"
 
 #: ../to-be-integrated.rst:408 ../to-be-integrated.rst:775
 msgid "You can generate an authorized_keys file by running either"
-msgstr ""
+msgstr "Az authorized_keys fájlt a következő futtatással hozhatja létre"
 
 #: ../to-be-integrated.rst:410 ../to-be-integrated.rst:777
 msgid ""
@@ -927,14 +1294,16 @@ msgid ""
 "gpg2 --export-ssh-key keyID >> ~/authorized_keys #(for newer GnuPG "
 "versions)"
 msgstr ""
+"gpgkey2ssh keyID >> ~/authorized_keys #(GnuPG verzióhoz <= 2.1.11) vagy gpg2 "
+"--export-ssh-key keyID >> ~/authorized_keys #(újabb GnuPG verziókhoz)"
 
 #: ../to-be-integrated.rst:413 ../to-be-integrated.rst:780
 msgid "where"
-msgstr ""
+msgstr "ahol"
 
 #: ../to-be-integrated.rst:415 ../to-be-integrated.rst:782
 msgid "keyID"
-msgstr ""
+msgstr "keyID"
 
 #: ../to-be-integrated.rst:417 ../to-be-integrated.rst:784
 msgid ""
@@ -943,18 +1312,22 @@ msgid ""
 "append that file to a remote server's authorized_keys and when you ssh to"
 " the server you'll be asked for a pin rather than a passphrase."
 msgstr ""
+"a Nitrokey hitelesítésére használt alkulcs azonosítója. A Nitrokey-nek már "
+"ismertnek kell lennie a helyi GnuPG kulcstárban. Most már hozzáadhatod ezt a "
+"fájlt egy távoli szerverhez's authorized_keys és amikor ssh-t használsz a "
+"szerverhez, akkor a jelszó helyett egy pin-t fogsz kérni."
 
 #: ../to-be-integrated.rst:420 ../to-be-integrated.rst:787
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Hibaelhárítás"
 
 #: ../to-be-integrated.rst:422 ../to-be-integrated.rst:789
 msgid "If you are still asked for a password please make sure that"
-msgstr ""
+msgstr "Ha továbbra is jelszót kérnek Öntől, kérjük, győződjön meg arról, hogy"
 
 #: ../to-be-integrated.rst:424 ../to-be-integrated.rst:791
 msgid "echo $SSH_AUTH_SOCK"
-msgstr ""
+msgstr "echo $SSH_AUTH_SOCK"
 
 #: ../to-be-integrated.rst:426 ../to-be-integrated.rst:793
 msgid ""
@@ -966,14 +1339,21 @@ msgid ""
 "given code in .bashrc so that the variable SSH_AUTH_SOCK is correct. In "
 "doubt look for 'SSH_AUTH_SOCK' in"
 msgstr ""
+"valami ésszerűt ad vissza, például '/run/user/1000/gnupg/S.gpg-agent.ssh' "
+"vagy '/home/felhasználónév/.gnupg/.S.gpg-agent.ssh'. Sajnos a GnuPG-ben a "
+"múltban volt néhány változás, így a tényleges tartalom eltérhet a "
+"rendszertől és a GnuPG verziójától függően. Egyes rendszereken akár több "
+"mappa is lehet ebben a változóban elmentve. A fenti kódot a .bashrc-ben úgy "
+"kell módosítani, hogy az SSH_AUTH_SOCK változó helyes legyen. Kétség esetén "
+"keresse meg a 'SSH_AUTH_SOCK' -t az alábbiakban."
 
 #: ../to-be-integrated.rst:428 ../to-be-integrated.rst:795
 msgid "man gpg-agent"
-msgstr ""
+msgstr "man gpg-agent"
 
 #: ../to-be-integrated.rst:430 ../to-be-integrated.rst:797
 msgid "to find the actual code for your version/system."
-msgstr ""
+msgstr "hogy megtalálja a verziójához/rendszeréhez tartozó tényleges kódot."
 
 #: ../to-be-integrated.rst:432 ../to-be-integrated.rst:799
 msgid ""
@@ -981,79 +1361,94 @@ msgid ""
 " manager. You may need to set it in the gpg-agent.conf as well. You may "
 "need to point gpg-agent to the correct TTY."
 msgstr ""
+"A csomagkezelőn keresztül ellenőrizheti, hogy telepítve van-e a 'pinentry' "
+"program. Lehet, hogy a gpg-agent.conf állományban is be kell állítanod. "
+"Lehet, hogy a gpg-agentet a megfelelő TTY-re kell irányítanod."
 
 #: ../to-be-integrated.rst:446
 msgid "**Q:** How can I use the Nitrokey for VPN access?"
-msgstr ""
+msgstr "**K:** Hogyan használhatom a Nitrokey-t VPN-hozzáféréshez?"
 
 #: ../to-be-integrated.rst:449 ../to-be-integrated.rst:820
 msgid "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
 msgstr ""
+"A következőkért: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey "
+"HSM OpenVPN"
 
 #: ../to-be-integrated.rst:452 ../to-be-integrated.rst:823
 msgid "Generate a key on Nitrokey via pkcs11-tool."
-msgstr ""
+msgstr "Generáljon kulcsot a Nitrokey-n a pkcs11-tool segítségével."
 
 #: ../to-be-integrated.rst:454 ../to-be-integrated.rst:825
 msgid "Generate a certificate signing request via openssl + pkcs11 module:"
 msgstr ""
+"Tanúsítvány aláírási kérelem generálása openssl + pkcs11 modul segítségével:"
 
 #: ../to-be-integrated.rst:456 ../to-be-integrated.rst:827
 msgid ""
 "$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
 "<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
+"$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
+"<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
 
 #: ../to-be-integrated.rst:458 ../to-be-integrated.rst:829
 msgid "Sign the certificate with our certificate authority"
-msgstr ""
+msgstr "Írja alá a tanúsítványt a tanúsítványkiadó hatóságunkkal"
 
 #: ../to-be-integrated.rst:460 ../to-be-integrated.rst:831
 msgid ""
 "$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out "
 "<FILE.CRT> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
+"$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out <FILE.CRT> "
+"-config <OPENSSL.CNF> -extensions usr_client"
 
 #: ../to-be-integrated.rst:462 ../to-be-integrated.rst:509
 #: ../to-be-integrated.rst:833 ../to-be-integrated.rst:880
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
-msgstr ""
+msgstr "Importálja a tanúsítványt a Nitrokey-be a pkcs11-tool segítségével"
 
 #: ../to-be-integrated.rst:464 ../to-be-integrated.rst:835
 msgid "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
-msgstr ""
+msgstr "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
 
 #: ../to-be-integrated.rst:466 ../to-be-integrated.rst:837
 msgid "Read the certificate's ID required for openvpn configuration:"
 msgstr ""
+"Olvassa el az openvpn konfigurációhoz szükséges tanúsítvány's azonosítót:"
 
 #: ../to-be-integrated.rst:468 ../to-be-integrated.rst:839
 msgid "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
-msgstr ""
+msgstr "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
 
 #: ../to-be-integrated.rst:470 ../to-be-integrated.rst:841
 msgid ""
 "Modify your openvpn configuration. Add the certificate ID which you "
 "gathered in the previous step: E.g."
 msgstr ""
+"Módosítsa az openvpn konfigurációját. Adja hozzá az előző lépésben "
+"összegyűjtött tanúsítványazonosítót: Pl."
 
 #: ../to-be-integrated.rst:472 ../to-be-integrated.rst:843
 msgid ""
 "$ pkcs11-id "
 "'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
 msgstr ""
+"$ pkcs11-id 'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/"
+"User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
 
 #: ../to-be-integrated.rst:474 ../to-be-integrated.rst:845
 msgid "Add the PKCS#11 driver to the configuration too, e.g.:"
-msgstr ""
+msgstr "Adja hozzá a PKCS#11 illesztőprogramot is a konfigurációhoz, pl.:"
 
 #: ../to-be-integrated.rst:476 ../to-be-integrated.rst:847
 msgid "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
-msgstr ""
+msgstr "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
 
 #: ../to-be-integrated.rst:478 ../to-be-integrated.rst:849
 msgid "See this link for further information."
-msgstr ""
+msgstr "További információkért lásd ezt a linket."
 
 #: ../to-be-integrated.rst:482 ../to-be-integrated.rst:853
 msgid ""
@@ -1061,10 +1456,13 @@ msgid ""
 "Nitrokey's PIN needs to be entered. Unfortunately OpenVPN doesn't prompt "
 "to enter the PIN and it has to be entered in the following way:"
 msgstr ""
+"Most már minden konfiguráció elkészült. Az OpenVPN kliens futtatásakor a "
+"Nitrokey's PIN-kódot kell megadni. Sajnos az OpenVPN nem kéri a PIN-kód "
+"megadására, ezért azt a következő módon kell megadni:"
 
 #: ../to-be-integrated.rst:484 ../to-be-integrated.rst:855
 msgid "$ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>"
-msgstr ""
+msgstr "$ telnet 8888 jelszó 'Felhasználói PIN (OpenPGP kártya) token' <PIN>"
 
 #: ../to-be-integrated.rst:486 ../to-be-integrated.rst:857
 msgid ""
@@ -1073,30 +1471,41 @@ msgid ""
 " the OpenVPN client you could use the Viscosity client which provides a "
 "better user experience especially for entering the PIN."
 msgstr ""
+"Alternatívaként újrafordíthatja az OpenVPN klienst a systemd támogatás "
+"letiltásával, és a várakozásoknak megfelelően kérni fogja a PIN-kódot. Az "
+"OpenVPN kliens helyett használhatja a Viscosity klienst is, amely jobb "
+"felhasználói élményt nyújt, különösen a PIN-kód megadásához."
 
 #: ../to-be-integrated.rst:489 ../to-be-integrated.rst:860
 msgid "IPsec"
-msgstr ""
+msgstr "IPsec"
 
 #: ../to-be-integrated.rst:491 ../to-be-integrated.rst:862
 msgid "Strong Swan works using the PKCS#11 driver. Basically follow these steps:"
 msgstr ""
+"A Strong Swan a PKCS#11 illesztőprogrammal működik. Alapvetően kövesse a "
+"következő lépéseket:"
 
 #: ../to-be-integrated.rst:493 ../to-be-integrated.rst:864
 msgid ""
 "Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 "
 "bit RSA key."
 msgstr ""
+"Generáljon kulcsot a Nitrokey-n a pkcs11-tool segítségével. Ebben a példában "
+"ez egy 4096 bites RSA kulcs."
 
 #: ../to-be-integrated.rst:495 ../to-be-integrated.rst:866
 msgid ""
 "$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
 "-l -k --key-type rsa:4096 --id 10 --label 'Staging Access'"
 msgstr ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -"
+"k --key-type rsa:4096 --id 10 --label 'Staging Access'"
 
 #: ../to-be-integrated.rst:497 ../to-be-integrated.rst:868
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr ""
+"Tanúsítvány aláírási kérelem generálása openssl + pkcs11 modul segítségével"
 
 #: ../to-be-integrated.rst:499 ../to-be-integrated.rst:870
 msgid ""
@@ -1108,20 +1517,28 @@ msgid ""
 "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
 "Access/CN=user@email.com/emailAddress=user@email.com'"
 msgstr ""
+"$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/"
+"engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
+"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> req -"
+"engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-"
+"staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/"
+"CN=user@email.com/emailAddress=user@email.com'"
 
 #: ../to-be-integrated.rst:503 ../to-be-integrated.rst:874
 msgid "Sign the certificate with your certificate authority"
-msgstr ""
+msgstr "Írja alá a tanúsítványt a hitelesítésszolgáltatóval"
 
 #: ../to-be-integrated.rst:505 ../to-be-integrated.rst:876
 msgid "Convert the certificate to DER"
-msgstr ""
+msgstr "A tanúsítványt DER-be konvertálja"
 
 #: ../to-be-integrated.rst:507 ../to-be-integrated.rst:878
 msgid ""
 "$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
 "staging-cert.der -outform DER"
 msgstr ""
+"$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
+"staging-cert.der -outform DER"
 
 #: ../to-be-integrated.rst:511 ../to-be-integrated.rst:882
 msgid ""
@@ -1129,6 +1546,8 @@ msgid ""
 "-l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
 "Access'"
 msgstr ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -"
+"y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging Access'"
 
 #: ../to-be-integrated.rst:513 ../to-be-integrated.rst:884
 msgid ""
@@ -1136,33 +1555,38 @@ msgid ""
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
 "add the following module:"
 msgstr ""
+"Állítsa be a Strongswant úgy, hogy betöltse az opensc-pkcs11 modult, majd "
+"töltse be a tanúsítványt a Nitrokey-be. Szerkesszük az /etc/strongswan.d/"
+"charon/pkcs11.conf állományt, és adjuk hozzá a következő modult:"
 
 #: ../to-be-integrated.rst:517 ../to-be-integrated.rst:888
 msgid "modules {"
-msgstr ""
+msgstr "modulok {"
 
 #: ../to-be-integrated.rst:516 ../to-be-integrated.rst:887
 msgid "Nitrokey {"
-msgstr ""
+msgstr "Nitrokey {"
 
 #: ../to-be-integrated.rst:517 ../to-be-integrated.rst:888
 msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr ""
+msgstr "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
 
 #: ../to-be-integrated.rst:518 ../to-be-integrated.rst:519
 #: ../to-be-integrated.rst:889 ../to-be-integrated.rst:890
 msgid "}"
-msgstr ""
+msgstr "}"
 
 #: ../to-be-integrated.rst:521 ../to-be-integrated.rst:892
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
 msgstr ""
+"Kezdeményezze a VPN-kapcsolatot IPSec/Strongswan-on keresztül, majd kérje a "
+"Nitrokey PIN-kódot."
 
 #: ../to-be-integrated.rst:523 ../to-be-integrated.rst:894
 msgid "8. VPN is now connected Stunnel"
-msgstr ""
+msgstr "8. A VPN most már csatlakozik Stunnel"
 
 #: ../to-be-integrated.rst:526 ../to-be-integrated.rst:897
 msgid ""
@@ -1171,10 +1595,16 @@ msgid ""
 "functionality to commonly used inetd daemons like POP2, POP3, and IMAP "
 "servers without any changes in the programs' code."
 msgstr ""
+"A Stunnel SSL-titkosítási csomagként működik a távoli ügyfél és a helyi "
+"(inetd-indítható) vagy távoli kiszolgáló között. Használható az SSL-"
+"funkcionalitás hozzáadására az általánosan használt inetd démonokhoz, mint "
+"például a POP2, POP3 és IMAP szerverekhez, a programok' kódjának módosítása "
+"nélkül."
 
 #: ../to-be-integrated.rst:528 ../to-be-integrated.rst:899
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr ""
+"A Stunnel ezzel a konfigurációval képes betölteni az OpenSC PKCS#11 motort:"
 
 #: ../to-be-integrated.rst:530 ../to-be-integrated.rst:901
 msgid ""
@@ -1182,22 +1612,27 @@ msgid ""
 "engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
 "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
 msgstr ""
+"engine=dynamic engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so "
+"engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
+"engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
 
 #: ../to-be-integrated.rst:538 ../to-be-integrated.rst:909
 msgid "[service] engineNum=1 key=id_45"
-msgstr ""
+msgstr "[service] engineNum=1 kulcs=id_45"
 
 #: ../to-be-integrated.rst:556
 msgid "**Q:** How can I do PKI / Certificate Authority (CA)?"
-msgstr ""
+msgstr "**K:** Hogyan tudok PKI-t / Tanúsítvány-hatóságot (CA) létrehozni?"
 
 #: ../to-be-integrated.rst:558
 msgid "CA keys are very sensitive and must not be compromised or lost. GnuPG"
 msgstr ""
+"A hitelesítésszolgáltatói kulcsok nagyon érzékenyek, és nem szabad, hogy "
+"veszélybe kerüljenek vagy elveszítsék őket. GnuPG"
 
 #: ../to-be-integrated.rst:561
 msgid "Instructions OpenSSL"
-msgstr ""
+msgstr "Utasítások OpenSSL"
 
 #: ../to-be-integrated.rst:564
 msgid ""
@@ -1208,16 +1643,24 @@ msgid ""
 "slot ID, e.g. \"... -key "
 "slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" Test"
 msgstr ""
+"Az OpenSC'S engine_pkcs11 telepítése Futtassa a \"pkcs11-tool --list-slots\" "
+"parancsot a rendelkezésre álló slotok listázásához. Futtassa a \"openssl> "
+"req -engine pkcs11 -new -key slot_X-id_XXXXXX -keyform engine -x509 -out "
+"cert.pem -text\" parancsot, ahol X a megfelelő slot száma és XXXX a slot "
+"azonosítója, pl. \".... -key slot_5-"
+"id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" Test"
 
 #: ../to-be-integrated.rst:569
 msgid "Other"
-msgstr ""
+msgstr "Egyéb"
 
 #: ../to-be-integrated.rst:571
 msgid ""
 "Please see this PDF (p. 30) from heinlein-support.de for summarized "
 "instructions in German."
 msgstr ""
+"A heinlein-support.de oldalon található PDF (30. oldal) összefoglaló német "
+"nyelvű utasításokat talál."
 
 #: ../to-be-integrated.rst:573
 msgid ""
@@ -1225,14 +1668,17 @@ msgid ""
 "perform basic tasks of a CA. It works with Nitrokey Pro and Nitrokey "
 "Storage."
 msgstr ""
+"A µ-CA-tool egy GnuPG, OpenSC és OpenSSL alapú szkript, amely segít a "
+"hitelesítésszolgáltató alapvető feladatainak elvégzésében. A Nitrokey Pro és "
+"a Nitrokey Storage programmal működik."
 
 #: ../to-be-integrated.rst:581
 msgid "**Q:** How can I use the password manager?"
-msgstr ""
+msgstr "**K:** Hogyan használhatom a jelszókezelőt?"
 
 #: ../to-be-integrated.rst:583
 msgid "You have the following options:"
-msgstr ""
+msgstr "A következő lehetőségek állnak rendelkezésére:"
 
 #: ../to-be-integrated.rst:585
 msgid ""
@@ -1241,16 +1687,23 @@ msgid ""
 "(simple commandline password manager for Unix systems, mainly for "
 "experts). Use KeePass as described below."
 msgstr ""
+"Használja a Nitrokey'-t a beépített Jelszószéfet a jelszavak biztonságos "
+"tárolásához. Ehhez a Nitrokey App-ra van szüksége. Maximálisan 16 jelszó "
+"tárolható. Használja a Pass-t (egyszerű parancssori jelszókezelő Unix "
+"rendszerekhez, elsősorban szakértők számára). Használja a KeePass-t az "
+"alábbiakban leírtak szerint."
 
 #: ../to-be-integrated.rst:589
 msgid "Protecting KeePass with Nitrokey's One-Time Passwords"
-msgstr ""
+msgstr "A KeePass védelme a Nitrokey's egyszeri jelszavakkal"
 
 #: ../to-be-integrated.rst:591
 msgid ""
 "You can also follow this video (It contains a mistake around time 4:22 "
 "which is described later below). Keepass Installation"
 msgstr ""
+"Ezt a videót is követheti (4:22 körül hibát tartalmaz, amelyet később "
+"ismertetünk). Keepass telepítése"
 
 #: ../to-be-integrated.rst:594
 msgid ""
@@ -1258,12 +1711,17 @@ msgid ""
 "the older 2.3.4, you have to use some other source like this private PPA "
 "(please run these commands in terminal):"
 msgstr ""
+"Telepítse a Keepass 2.3.5-öt. Ubuntu esetén: Mivel a fő tároló a régebbi 2.3."
+"4-et tartalmazza, más forrást kell használnod, például ezt a privát PPA-t ("
+"futtasd ezeket a parancsokat terminálban):"
 
 #: ../to-be-integrated.rst:597
 msgid ""
 "sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-"
 "get install keepass2"
 msgstr ""
+"sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-get "
+"install keepass2"
 
 #: ../to-be-integrated.rst:601
 msgid ""
@@ -1273,14 +1731,19 @@ msgid ""
 "mono-complete package if plugin is not detected when running Keepass2 "
 "(you can check that in Tools/Plugins):"
 msgstr ""
+"Telepítse az OtpKeyProv plugint az archívum letöltésével, kicsomagolásával "
+"és tartalmának a Keypass' Plugin könyvtárba történő másolásával. Linuxon: "
+"sudo cp OtpKeyProv.plgx /usr/lib/keepass2/Plugins/ Linuxon, opcionális: "
+"Telepítse a mono-complete csomagot, ha a Keepass2 futtatásakor nem észleli a "
+"plugint (ezt ellenőrizheti a Tools/Plugins menüpontban):"
 
 #: ../to-be-integrated.rst:605
 msgid "sudo apt-get install mono-complete"
-msgstr ""
+msgstr "sudo apt-get install mono-complete"
 
 #: ../to-be-integrated.rst:607
 msgid "Keepass OTP Configuration Existing Database"
-msgstr ""
+msgstr "Keepass OTP konfiguráció Meglévő adatbázis"
 
 #: ../to-be-integrated.rst:610
 msgid ""
@@ -1289,18 +1752,23 @@ msgid ""
 " your passwords are lost! Open database as usual Select File/Change "
 "Master Key..."
 msgstr ""
+"Készítsen biztonsági másolatot az adatbázisáról, és tartsa meg, amíg tényleg "
+"biztos nem lesz benne, hogy minden rendben működik! Győződjön meg róla, hogy "
+"valóban készített biztonsági mentést. Ha elrontod, a jelszavaid elvesznek! "
+"Nyissa meg az adatbázist a szokásos módon Válassza a Fájl/Mesterkulcs "
+"módosítása... menüpontot."
 
 #: ../to-be-integrated.rst:615
 msgid "New Database"
-msgstr ""
+msgstr "Új adatbázis"
 
 #: ../to-be-integrated.rst:617
 msgid "Create new database as usual"
-msgstr ""
+msgstr "Új adatbázis létrehozása a szokásos módon"
 
 #: ../to-be-integrated.rst:619
 msgid "Common"
-msgstr ""
+msgstr "Közös"
 
 #: ../to-be-integrated.rst:621
 msgid ""
@@ -1319,10 +1787,25 @@ msgid ""
 " device and in Keepass would be out of sync and OTP codes will not be the"
 " same with expected."
 msgstr ""
+"Mesterjelszó beillesztése (opcionális) Kulcsfájl / szolgáltató beállítása: "
+"Egyszeri jelszavakra (OATH HOTP) Kattintson az OK gombra A Nitrokey "
+"alkalmazással: válassza ki a HOTP nyílást és generálja a HOTP titkot ("
+"automatikusan a vágólapra másolódik). Megjegyzés: Érdemes leírni ezt a "
+"titkot, és biztonságos helyen tárolni. Ellenkező esetben, ha elveszíted a "
+"Nitrokey-t, vagy elromlik a jelszóadatbázisod is elveszik!!! Illessze be a "
+"titkot a Keepass OTP Plugin ablakba Győződjön meg róla, hogy a számláló mező "
+"és a számjegyek száma mindkét ablakban azonos. Kattintson az OK gombra a "
+"Nitrokey alkalmazásban a nyílás mentéséhez. Válassza ki a titok típusát: "
+"Base32 Állítsa be a többi beállítást tetszése szerint. Kérjük, olvassa el a "
+"plugin's kézikönyvét (ugyanabban a letöltött archívumban kell lennie). "
+"Javasolnám, hogy a look-ahead értéket nem nullára állítsa be, hogy "
+"megakadályozza az adatbázis blokkolását a használt HOTP slotból történő "
+"véletlen kódkérés után. Ebben az esetben a készülék és a Keepass számlálói "
+"nem lesznek szinkronban, és az OTP-kódok nem lesznek azonosak a vártakkal."
 
 #: ../to-be-integrated.rst:630
 msgid "Unlocking Database"
-msgstr ""
+msgstr "Adatbázis feloldása"
 
 #: ../to-be-integrated.rst:632
 msgid ""
@@ -1331,10 +1814,15 @@ msgid ""
 "choosing proper HOTP slot from the Nitrokey App and pasting the clipboard"
 " content to proper field (the order of the codes is important). Press OK"
 msgstr ""
+"Adatbázis megnyitása Fő jelszó beillesztése (ha be van állítva) Kulcsfájl / "
+"szolgáltató: az Egyszeri jelszavakhoz (OATH HOTP) Nyomja meg az OK gombot "
+"HOTP kódok beillesztése a megfelelő HOTP slot ismételt kiválasztásával a "
+"Nitrokey alkalmazásból és a vágólap tartalmának beillesztésével a megfelelő "
+"mezőbe (a kódok sorrendje fontos). Nyomja meg az OK gombot"
 
 #: ../to-be-integrated.rst:639
 msgid "Issues"
-msgstr ""
+msgstr "Kérdések"
 
 #: ../to-be-integrated.rst:641
 msgid ""
@@ -1350,30 +1838,47 @@ msgid ""
 "database and how it is now configured. I have not noticed until I have "
 "watched the movie."
 msgstr ""
+"A HOTP megoldás természetéből adódóan lehetséges, hogy a számlálók "
+"deszinkronizálódnak (rossz OTP slot kiválasztásával a mindennapi használat "
+"során). A look-ahead plugin's beállítás használatával ez megakadályozható (a "
+"10-es értéknek elegendőnek kell lennie - a kívánt biztonsági "
+"követelményektől függ - ez 10 véletlen kérést tesz lehetővé). A TOTP-nál "
+"nincs ilyen probléma. Az OTP-védelem beállítása hibás lehet. Az OtpKeyProv "
+"oldalán nincs titokérvényesítés. A 4:22-nél lévő tesztfilmben sikerült a "
+"Base32 kódú titkot Hex-ként beállítanom (ami nem volt megfelelő hex érték), "
+"és nem panaszkodott rá. Arról nincs információ, hogy mi történt az "
+"adatbázissal és hogyan van most beállítva. Addig nem vettem észre, amíg meg "
+"nem néztem a filmet."
 
 #: ../to-be-integrated.rst:644
 msgid "Tested under Ubuntu 16.10, Nitrokey App v0.6.3 and Nitrokey Storage v0.45."
 msgstr ""
+"Tesztelve Ubuntu 16.10, Nitrokey App v0.6.3 és Nitrokey Storage v0.45 alatt."
 
 #: ../to-be-integrated.rst:653
 msgid "**Q:** How can I use the True Random Number Generator?"
-msgstr ""
+msgstr "**K:** Hogyan használhatom a True Random Number Generator-t?"
 
 #: ../to-be-integrated.rst:655
 msgid ""
 "Both devices are compatible to the OpenPGP Card, so that scdrand should "
 "work. This script may be useful. The TRNG provides about 40 kbit/s."
 msgstr ""
+"Mindkét eszköz kompatibilis az OpenPGP kártyával, így az scdrandnak működnie "
+"kell. Ez a szkript hasznos lehet. A TRNG körülbelül 40 kbit/s sebességet "
+"biztosít."
 
 #: ../to-be-integrated.rst:657
 msgid ""
 "The user comio created a systemd file to use scdrand and thus the TRNG "
 "more generally. He created a ebuild for Gentoo, too."
 msgstr ""
+"A comio felhasználó létrehozott egy systemd fájlt az scdrand és így a TRNG "
+"általánosabb használatához. Létrehozott egy ebuildot a Gentoo-hoz is."
 
 #: ../to-be-integrated.rst:663
 msgid "**Q:** Do you have resources for development and integration?"
-msgstr ""
+msgstr "**K:** Rendelkezik erőforrásokkal a fejlesztéshez és az integrációhoz?"
 
 #: ../to-be-integrated.rst:666
 msgid ""
@@ -1390,10 +1895,23 @@ msgid ""
 "Safe and OTP entries. A libnitrokey wrapper for Rust providing access to "
 "Nitrokey devices."
 msgstr ""
+"Használja a Nitrokey könyvtárat az egyszer használatos jelszavak és a "
+"jelszóbiztonsági funkciók kezeléséhez. A nitrokey-get-totp és a nitrokey-get-"
+"password projekt szép példák a Nitrokey könyvtár python kötéseinek "
+"használatára, hogy egyéni felületet kapjunk. A beépített intelligens "
+"kártyához való hozzáféréshez használhatja az OpenSC's parancssori eszközeit. "
+"Ha az alkalmazásod PKCS#11 interfésszel rendelkezik, használd az OpenSC's "
+"PKCS#11 illesztőprogramot. Az intelligens kártyával való alacsony szintű "
+"munkához lásd az OpenPGP Card specifikációt. A firmware forráskódja és a "
+"hardveres elrendezés is elérhető. Speciális alkalmazások fejlesztéséhez vagy "
+"parancssori eléréshez használhatjuk a d-e-s-o által készített nitrocli-t. A "
+"Gkey egy go alapú parancssori eszköz a Password Safe és az OTP bejegyzések "
+"eléréséhez. Egy libnitrokey wrapper a Rusthoz, amely hozzáférést biztosít a "
+"Nitrokey eszközökhöz."
 
 #: ../to-be-integrated.rst:677
 msgid "# HSM 2"
-msgstr ""
+msgstr "# HSM 2"
 
 #: ../to-be-integrated.rst:679
 msgid ""
@@ -1401,14 +1919,17 @@ msgid ""
 "have a size of up to 256 byte. The total storage capacity of ca. 32 KByte"
 " is shared dynamically among keys and data objects."
 msgstr ""
+"**Nitrokey HSM:** 124 adatobjektum (DF, EF) hozható létre. Minden EF mérete "
+"legfeljebb 256 byte lehet. A kb. 32 KByte-os teljes tárolókapacitás "
+"dinamikusan oszlik meg a kulcsok és az adatobjektumok között."
 
 #: ../to-be-integrated.rst:683
 msgid "**Q:** How to use the HSM for Login For: Nitrokey HSM"
-msgstr ""
+msgstr "**K:** Hogyan kell használni a HSM-et a bejelentkezéshez? Nitrokey HSM"
 
 #: ../to-be-integrated.rst:686
 msgid "Select your use case:"
-msgstr ""
+msgstr "Válassza ki a felhasználási esetet:"
 
 #: ../to-be-integrated.rst:688
 msgid ""
@@ -1416,16 +1937,21 @@ msgid ""
 "Nitrokey HSM on Windows Domain Computers Using MS Active Directory For "
 "Unix environments an integration with PAM and OpenSSH is available."
 msgstr ""
+"Bejelentkezés a Nitrokey HSM-mel önálló Windows-számítógépeken Bejelentkezés "
+"a Nitrokey HSM-mel Windows tartományi számítógépeken az MS Active Directory "
+"használatával Unix-környezetekben elérhető a PAM és az OpenSSH integrációja."
 
 #: ../to-be-integrated.rst:692
 msgid "**Q:**  How to use the HSM for Email Encryption"
-msgstr ""
+msgstr "**K:** Hogyan használjuk a HSM-et az e-mail titkosításhoz?"
 
 #: ../to-be-integrated.rst:694
 msgid ""
 "Encrypt your email using the S/MIME industry standard available in all "
 "major e-mail clients."
 msgstr ""
+"Titkosíthatja e-mailjeit a minden nagyobb e-mail kliensben elérhető S/MIME "
+"ipari szabvány segítségével."
 
 #: ../to-be-integrated.rst:696
 msgid ""
@@ -1433,14 +1959,19 @@ msgid ""
 "Microsoft Outlook. Other email clients with support for PKCS#11 or "
 "Microsoft CSP should work as well."
 msgstr ""
+"A Nitrokey HSM tesztelésre került, hogy működik a Mozilla Thunderbird és a "
+"Microsoft Outlook programmal. Más, PKCS#11 vagy Microsoft CSP támogatással "
+"rendelkező e-mail klienseknek is működniük kell."
 
 #: ../to-be-integrated.rst:698
 msgid "Note: A certificate can be purchased cheaply from CERTUM."
-msgstr ""
+msgstr "Megjegyzés: A tanúsítvány olcsón megvásárolható a CERTUM-tól."
 
 #: ../to-be-integrated.rst:700
 msgid "**Q:**   How to use the Nitrokey for Hard Disk Encryption with VeraCrpt?"
 msgstr ""
+"**K:** Hogyan használhatom a Nitrokey for Hard Disk Encryptiont a VeraCrpt-"
+"tel?"
 
 #: ../to-be-integrated.rst:702
 msgid ""
@@ -1449,6 +1980,10 @@ msgid ""
 "recommended, although the following instructions should apply to "
 "TrueCrypt as well. Follow these steps to use the program with Nitrokey:"
 msgstr ""
+"A VeraCrypt egy ingyenes és nyílt forráskódú lemez titkosító szoftver "
+"Windows, macOS és GNU/Linux rendszerekre. Ez a TrueCrypt utódja, ezért "
+"ajánlott, bár a következő utasítások a TrueCryptre is vonatkoznak. Kövesse "
+"az alábbi lépéseket a program Nitrokey-vel való használatához:"
 
 #: ../to-be-integrated.rst:711
 msgid ""
@@ -1457,20 +1992,26 @@ msgid ""
 "Instead it stores a keyfile on the Nitrokey which theoretically could be "
 "stolen by a computer virus after the user enters the password."
 msgstr ""
+"Biztonsági megfontolások: A VeraCrypt nem használja ki a Nitrokey (és "
+"általában az intelligens kártyák) által nyújtott teljes biztonságot. "
+"Ehelyett egy kulcsfájlt tárol a Nitrokey-n, amelyet elméletileg ellophat egy "
+"számítógépes vírus, miután a felhasználó beírta a jelszót."
 
 #: ../to-be-integrated.rst:713
 msgid ""
 "Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
 "described security limitation. (Not tested with Nitrokey HSM!)"
 msgstr ""
+"Megjegyzés: Az Aloaha Crypt a TrueCrypt/VeraCrypt-en alapul, de a leírt "
+"biztonsági korlátozások nélkül. (Nitrokey HSM-mel nem teszteltük!)"
 
 #: ../to-be-integrated.rst:716
 msgid "**Q:** How to sign and encrypt files and pdfs?"
-msgstr ""
+msgstr "**K:** Hogyan lehet aláírni és titkosítani a fájlokat és pdf-eket?"
 
 #: ../to-be-integrated.rst:718
 msgid "GnuPG"
-msgstr ""
+msgstr "GnuPG"
 
 #: ../to-be-integrated.rst:720
 msgid ""
@@ -1481,18 +2022,30 @@ msgid ""
 "Libre Office or any other PDF reader supporting electronic signatures. "
 "ECC HSM Encryptor"
 msgstr ""
+"A 2.1-es verzióval kezdődően a GnuPG beépített, de korlátozott támogatással "
+"rendelkezik a Nitrokey HSM-hez. A gpgsm eszközzel aláírhat, ellenőrizhet, "
+"titkosíthat és dekódolhat fájlokat vagy S/MIME üzeneteket a Nitrokey HSM "
+"segítségével. Használja a Nitrokey HSM-en lévő aláírási kulcsot dokumentumok "
+"aláírására az Acrobat Reader, az Open Office / Libre Office vagy bármely "
+"más, elektronikus aláírást támogató PDF-olvasó segítségével. ECC HSM "
+"titkosító"
 
 #: ../to-be-integrated.rst:723
 msgid ""
 "ECC HSM Encryptor is a small application to encrypt and decrypt files "
 "with a Nitrokey HSM."
 msgstr ""
+"Az ECC HSM Encryptor egy kis alkalmazás a fájlok titkosítására és "
+"visszafejtésére egy Nitrokey HSM segítségével."
 
 #: ../to-be-integrated.rst:725
 msgid ""
 "**Q:** How to do certificat-based Web login Protect access to sensitive "
 "information on your website with 2nd factor authentication."
 msgstr ""
+"**Q:** Hogyan lehet tanúsítványalapú webes bejelentkezést végezni Védje a "
+"weboldalán található érzékeny információkhoz való hozzáférést a 2. faktoros "
+"hitelesítéssel."
 
 #: ../to-be-integrated.rst:728
 msgid ""
@@ -1500,12 +2053,17 @@ msgid ""
 "authentication PKI or use keys and certificates on a Nitrokey HSM for "
 "TLS/SSL client authentication."
 msgstr ""
+"Használjon Nitrokey HSM-et hitelesítési tokenként a beépített "
+"eszközhitelesítési PKI-n keresztül, vagy használjon kulcsokat és "
+"tanúsítványokat a Nitrokey HSM-en a TLS/SSL ügyfél-hitelesítéshez."
 
 #: ../to-be-integrated.rst:730
 msgid ""
 "**Q:** SSH for Server Administration with windows For: Nitrokey Pro, "
 "Nitrokey Storage, Nitrokey Start, Nitrokey HSM"
 msgstr ""
+"**Q:** SSH szerveradminisztrációhoz Windows For: Nitrokey Pro, Nitrokey "
+"Storage, Nitrokey Start, Nitrokey HSM"
 
 #: ../to-be-integrated.rst:733
 msgid ""
@@ -1514,18 +2072,22 @@ msgid ""
 "installed on the system (only the core application GnuPG is needed). "
 "Furthermore you should install PuTTY. Preparation on client"
 msgstr ""
+"A Nitrokey-nek már telepített PGP-kulcsokkal kell rendelkeznie, és a helyi "
+"GnuPG kulcstárnak ismernie kell a kulcsokat, azaz a GPG4Win-t telepíteni "
+"kell a rendszerre (csak a GnuPG alapalkalmazás szükséges). Továbbá "
+"telepíteni kell a PuTTY-t is. Előkészületek a kliensen"
 
 #: ../to-be-integrated.rst:755
 msgid "**Q:** SSH Server administration on linux"
-msgstr ""
+msgstr "**Q:** SSH szerver adminisztráció linuxon"
 
 #: ../to-be-integrated.rst:802
 msgid "**Q:** DNSSEC"
-msgstr ""
+msgstr "**Q:** DNSSEC"
 
 #: ../to-be-integrated.rst:805
 msgid "For: Nitrokey HSM"
-msgstr ""
+msgstr "A következőkért: Nitrokey HSM"
 
 #: ../to-be-integrated.rst:807
 msgid ""
@@ -1533,6 +2095,9 @@ msgid ""
 "secure key store. It's based on Smartcard-HSM which is why the following "
 "resource apply:"
 msgstr ""
+"Védje a domain név feloldását a DNSSEC és a Nitrokey HSM biztonságos "
+"kulcstároló használatával. Ez a Smartcard-HSM-en alapul, ezért a következő "
+"erőforrás alkalmazandó:"
 
 #: ../to-be-integrated.rst:809
 msgid ""
@@ -1543,6 +2108,11 @@ msgid ""
 " Mens wrote a nice article about integrating the SmartCard-HSM with "
 "PowerDNS."
 msgstr ""
+"NSD DNSSEC zónák aláírása Nitrokey HSM-mel Vadim Penzin által. Az OpenDNSSEC-"
+"kel való integrációt Richard Lamb sikeresen tesztelte egy demóban. Luis D "
+"Espinoza Sanchez & Eberhard W Lisse a 2015-ös szingapúri ICAAN találkozón a "
+"SmartCard-HSM DNSSEC használatáról tartott előadást. Jan-Piet Mens írt egy "
+"szép cikket a SmartCard-HSM és a PowerDNS integrálásáról."
 
 #: ../to-be-integrated.rst:815
 msgid ""
@@ -1553,28 +2123,36 @@ msgid ""
 "device, create a secure communication channel and perform offline PIN "
 "verification. The coolPACS project has all the details."
 msgstr ""
+"**Q:** Fizikai hozzáférés-ellenőrzés A Nitrokey HSM egyedülálló beépített "
+"eszközhitelesítési PKI-jával a Nitrokey HSM kriptográfiailag védett egyedi "
+"identitással rendelkezik, amely egy gyors hitelesítési protokollban "
+"ellenőrizhető. A beléptető terminál ellenőrizheti az eszköz hitelességét és "
+"azonosságát, biztonságos kommunikációs csatornát hozhat létre, és offline "
+"PIN-ellenőrzést végezhet. A coolPACS projekt minden részletet tartalmaz."
 
 #: ../to-be-integrated.rst:818 ../to-be-integrated.rst:914
 msgid "**Q:**"
-msgstr ""
+msgstr "**Q:**"
 
 #: ../to-be-integrated.rst:916
 msgid "PKI / Certificate Authority (CA)"
-msgstr ""
+msgstr "PKI / Tanúsítványkezelő (CA)"
 
 #: ../to-be-integrated.rst:918
 msgid "**Q:** Secret Management and Cloud Infrastructure"
-msgstr ""
+msgstr "**Q:** Titokkezelés és felhőinfrastruktúra"
 
 #: ../to-be-integrated.rst:920
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at banzaicloud.com."
 msgstr ""
+"A Hashicorp Vault/Bank-Vault biztonságos kulcsok Nitrokey HSM-en történő "
+"megközelítéséről a banzaicloud.com oldalon olvashat."
 
 #: ../to-be-integrated.rst:922
 msgid "**Q:** How to do N-of-m Schemes"
-msgstr ""
+msgstr "**Q:** Hogyan kell N-of-m sémákat csinálni?"
 
 #: ../to-be-integrated.rst:924
 msgid ""
@@ -1583,28 +2161,35 @@ msgid ""
 "to control the access to the device. Please see this blog post for more "
 "detailed information. N-of-m for DKEK Shares"
 msgstr ""
+"A Nitrokey HSM 2 két különböző n-of-m sémát támogat - az egyik a "
+"kulcsanyagok/jelszavak biztonságos megosztására, a másik pedig a nyilvános "
+"kulcsú hitelesítésre szolgál az eszközhöz való hozzáférés ellenőrzésére. "
+"Részletesebb információkért tekintse meg ezt a blogbejegyzést. N-of-m a DKEK "
+"megosztásokhoz"
 
 #: ../to-be-integrated.rst:927
 msgid ""
 "This feature can be used with OpenSC as described here. The general "
 "approach is seen in the videos below (external links)."
 msgstr ""
+"Ez a funkció az OpenSC-vel együtt használható az itt leírtak szerint. Az "
+"általános megközelítés az alábbi videókon látható (külső linkek)."
 
 #: ../to-be-integrated.rst:929
 msgid "Nitrokey HSM's Secure Key Backup and Restore:"
-msgstr ""
+msgstr "Nitrokey HSM's Biztonságos kulcsmentés és visszaállítás:"
 
 #: ../to-be-integrated.rst:931
 msgid "Screencast"
-msgstr ""
+msgstr "Screencast"
 
 #: ../to-be-integrated.rst:933
 msgid "Nitrokey HSM's M-of-N Threshold Scheme:"
-msgstr ""
+msgstr "Nitrokey HSM's M-of-N küszöbértékrendszer:"
 
 #: ../to-be-integrated.rst:935
 msgid "screencast N-of-m for public key authentication"
-msgstr ""
+msgstr "screencast N-of-m nyilvános kulcsú hitelesítéshez"
 
 #: ../to-be-integrated.rst:938
 msgid ""
@@ -1613,6 +2198,10 @@ msgid ""
 "process step by step in the Smart Card Shell. For OpenSC there is a "
 "ticket to get that integrated."
 msgstr ""
+"Az n-of-m hitelesítést eddig csak az OpenSCDP támogatta. A blogbejegyzés "
+"áttekintést ad, és a how-to itt (CDN hozzáférés szükséges) mutatja a "
+"folyamatot lépésről lépésre a Smart Card Shellben. Az OpenSC-hez van egy "
+"jegy, hogy ezt integráljuk."
 
 #: ../to-be-integrated.rst:940
 msgid ""
@@ -1620,10 +2209,15 @@ msgid ""
 "for locally and remote connected HSMs. The PKI-as-a-Service Portal is "
 "based on OpenSCDP."
 msgstr ""
+"Az n-of-m hitelesítés a PKI-as-a-Service portálon is támogatott a helyileg "
+"és távolról csatlakoztatott HSM-ek számára. A PKI-as-a-Service Portal az "
+"OpenSCDP-n alapul."
 
 #: ../to-be-integrated.rst:942
 msgid "**Q:** How to safe Cryptocurrences in the Nitrokey HSM"
 msgstr ""
+"**Q:** Hogyan lehet biztonságban tartani a Nitrokey HSM-ben a "
+"kriptokurrenciákat?"
 
 #: ../to-be-integrated.rst:945
 msgid ""
@@ -1632,22 +2226,31 @@ msgid ""
 "the HSM in an Ethereum PoA Chain. Tezos has been reported to work with "
 "Nitrokey HSM."
 msgstr ""
+"J.v.d.Bosch írt egy egyszerű, ingyenes python programot a Bitcoin tárca "
+"privát kulcsának biztosítására egy HSM-ben. További információkért lásd itt. "
+"A HSM használata egy Ethereum PoA láncban. A Tezos a jelentések szerint "
+"működik a Nitrokey HSM-mel."
 
 #: ../to-be-integrated.rst:949
 msgid ""
 "**Q:** How to use the True Random Number Generator? Nitrokey HSM can be "
 "used with Botan and TokenTools by using OpenSC as a PKCS#11 driver."
 msgstr ""
+"**K:** Hogyan kell használni a True Random Number Generator-t? A Nitrokey "
+"HSM használható a Botan és a TokenTools programokkal az OpenSC PKCS#11 "
+"illesztőprogrammal."
 
 #: ../to-be-integrated.rst:952
 msgid ""
 "OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
 "doesn't contain a mapping for OpenSSL to C_GenerateRandom."
 msgstr ""
+"Az OpenSSL nem tudja közvetlenül használni a Nitrokey HSM-et, mert a engine-"
+"pkcs11 nem tartalmaz leképezést az OpenSSL-nek a C_GenerateRandomhoz."
 
 #: ../to-be-integrated.rst:954
 msgid "**Q:** What can I use for development and integration?"
-msgstr ""
+msgstr "**K:** Mit használhatok fejlesztésre és integrációra?"
 
 #: ../to-be-integrated.rst:956
 msgid ""
@@ -1656,12 +2259,18 @@ msgid ""
 "distribution, the PKCS driver may may be located at /usr/lib/x86_64"
 "-linux-gnu/opensc-pkcs11.so for example."
 msgstr ""
+"se OpenSC's parancssori eszközök Ha az alkalmazás PKCS#11 interfésszel "
+"rendelkezik, használja az OpenSC's PKCS#11 illesztőprogramot. A Linux-"
+"disztribúciótól függően a PKCS-illesztőprogram például a /usr/lib/"
+"x86_64-linux-gnu/opensc-pkcs11.so címen található."
 
 #: ../to-be-integrated.rst:958
 msgid ""
 "Alternatively to OpenSC, you might use sc-hsm-embedded PKCS#11 and CSP-"
 "Minidriver Module."
 msgstr ""
+"Az OpenSC helyett használhatja az sc-hsm-embedded PKCS#11 és a CSP-"
+"Minidriver modulokat is."
 
 #: ../to-be-integrated.rst:959
 msgid ""
@@ -1674,10 +2283,19 @@ msgid ""
 " frontend to OpenSCs toolset - nitrotool A forum post describes the "
 "procedure to sign executables with a key stored on HSM on Windows."
 msgstr ""
+"Java használata esetén a JCE Provider a Smart Card Shell részeként "
+"található. Az m-of-n sémáról itt talál információt. A biztonságos "
+"üzenetküldés a JCE szolgáltatóval használható. Kérjük, regisztráljon a "
+"CardContact fejlesztői hálózaton, hogy hozzáférjen a felhasználói "
+"kézikönyvhöz és további eszközökhöz. A kézikönyvet tőlünk is kérheti. Smart "
+"card forwarding with Fedora Egy felhasználó által generált eszköz a "
+"GitHubon, amely egy egyszerű frontendet biztosít az OpenSCs eszközkészlethez "
+"- nitrotool Egy fórumbejegyzés leírja a futtatható fájlok aláírásának "
+"eljárását HSM-en tárolt kulccsal Windowson."
 
 #: ../to-be-integrated.rst:967
 msgid "Key Use Counter"
-msgstr ""
+msgstr "Kulcshasználat számláló"
 
 #: ../to-be-integrated.rst:969
 msgid ""
@@ -1686,6 +2304,10 @@ msgid ""
 "(SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter in the class "
 "scsh/sc-hsm/SmartCardHSM.js)."
 msgstr ""
+"A Kulcshasználati számláló az intelligens kártyaház Kulcskezelőjében jelenik "
+"meg. Jelenleg csak egy szkript segítségével állítható be ("
+"SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter a scsh/sc-hsm/"
+"SmartCardHSM.js osztályban)."
 
 #: ../to-be-integrated.rst:971
 msgid ""
@@ -1694,6 +2316,10 @@ msgid ""
 "counter can be set. The attribute can then also be set for a key can be "
 "queried."
 msgstr ""
+"A PKCS#11 modulunkban van egy saját attribútum, a "
+"CKA_SC_HSM_KEY_USE_COUNTER, amellyel a C_GenerateKeyPair kulcshasználat "
+"számlálója állítható be. Az attribútumot ezután egy kulcsra is be lehet "
+"állítani, le lehet kérdezni."
 
 #: ../to-be-integrated.rst:973
 msgid ""
@@ -1701,4 +2327,6 @@ msgid ""
 "SmartCardHSMKey.getUseCounter() and confirm with "
 "SmartCardHSMKeySpec.setKeyUseCounter() can be set."
 msgstr ""
-
+"Az OCF-ben és a JCE szolgáltatóban a kulcshasználati számláló a "
+"SmartCardHSMKey.getUseCounter() funkcióval lekérdezhető, és a "
+"SmartCardHSMKeySpec.setKeyUseCounter() funkcióval megerősíthető."
