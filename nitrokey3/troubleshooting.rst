@@ -22,16 +22,20 @@ Timeout Bug
 
 There is a bug  with the Key being recognized by the System but a Timeout occurs before the connection succeed. 
 
-NFC is not working
+NFC is Not Working
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Please make sure FIDO2 is working correctly. Otherwise NFC won't work either.
 
 Also check if you are using the right spot on your smartphone. 
 Find the right spot using: `nfc.fail`_ 
 
-The backside of the Nitrokey has to be held against the smartphone. For the USB-A Version it might be helpful to lift the side with the USB-Connector slightly to reduce the distance of the end part of the stick. The search of the optimal spot sometimes took up to 20-30 sec.
+The backside of the Nitrokey has to be held against the smartphone. For the USB-A Version it might be helpful to lift the side with the USB-Connector slightly to reduce the distance of the end part of the stick. 
 
-If you still encounter issues please write a mail at our support. For optimal help please include the shipping/order number and your smartphone model. 
+Try to find the right spot without a phone cover first. Retry afterwards with the cover 
+
+
+
+The search of the optimal spot sometimes took up to 20-30 sec. In our experience holding the Nitrokey in an horizontal orientation yields better results.If you still encounter issues please write a mail at our support. For optimal help please include the shipping/order number and your smartphone model. 
 
 
 
