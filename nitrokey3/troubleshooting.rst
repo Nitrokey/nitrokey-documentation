@@ -17,43 +17,22 @@ Google and Microsoft Services
 
 Currently there seems to be a bug we hope to fix soon which affects the Nitrokey 3 working with some Google and Microsoft Services per FIDO2.
 
-Browser specific issues
+Timeout Bug
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently not all Browsers work with the Nitrokey 3 FIDO2 capabilities. 
-Different sources of the same browser configure it differently and thats why we decided to make a list of browser which work well in our experience:
-
-+-------------------+-----------------+-----------------+--------------------------+
-| Operating System  | Browser         | Package Source  | Note                     |   
-+===================+=================+=================+==========================+
-| Fedora 33         | Chromium 94.0+  | Fedora Packages |                          |   
-+-------------------+-----------------+-----------------+--------------------------+
-|                   | Firefox 94.0+   | Fedora Packages | Does not work sometimes  |   
-+-------------------+-----------------+-----------------+--------------------------+
-|                   | Chromium 96+    | Snap            |                          |   
-+-------------------+-----------------+-----------------+--------------------------+
-| Ubuntu 20.04      | Firefox 94+     | Debian Packages | Does not work sometimes  |   
-+-------------------+-----------------+-----------------+--------------------------+
-| Debian 11 & 10    | Firefox 78+ ESR | Debian Packages |                          |   
-+-------------------+-----------------+-----------------+--------------------------+
-|                   | Chromium 90+    | Debian Packages |                          |   
-+-------------------+-----------------+-----------------+--------------------------+
-| Arch Linux        | Firefox 88+     | Arch Packages   |                          |   
-+-------------------+-----------------+-----------------+--------------------------+
-|                   | Chromium 90+    | Arch Packages   |                          |   
-+-------------------+-----------------+-----------------+--------------------------+
-| Mac Os 12         | Firefox 94+     | Firefox.com     |                          |   
-+-------------------+-----------------+-----------------+--------------------------+
-
-We are currently testing more browsers to complete the table.
+There is a bug  with the Key being recognized by the System but a Timeout occurs before the connection succeed. 
 
 NFC is not working
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 Please make sure FIDO2 is working correctly. Otherwise NFC won't work either.
 
 Also check if you are using the right spot on your smartphone. 
-Find the right spot using: `nfc.fail`_
+Find the right spot using: `nfc.fail`_ 
+
+The backside of the Nitrokey has to be held against the smartphone. For the USB-A Version it might be helpful to lift the side with the USB-Connector slightly to reduce the distance of the end part of the stick. The search of the optimal spot sometimes took up to 20-30 sec.
+
+If you still encounter issues please write a mail at our support. For optimal help please include the shipping/order number and your smartphone model. 
+
 
 
 
@@ -61,6 +40,6 @@ Find the right spot using: `nfc.fail`_
 update.nitrokey.com does not work:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently there are no updates available.
+Currently there are no updates available. The first firmware updates will address bug fixes.
 
 .. _nfc.fail: https://nfc.fail/
