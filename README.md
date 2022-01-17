@@ -91,7 +91,7 @@ git push
 
 ## Manually build language versions when only a file name was changed (weblate did'n trigger the webhook)
 
-```sphinx@translate: $ sh ~/sphinx/nitrokey-documentation/apply_translated_content.sh```
+```sphinx@translate: $ bash ~/sphinx/nitrokey-documentation/apply_translated_content.sh```
 
 
 ## Manually trigger deepl Translations for all languages and components

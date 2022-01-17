@@ -61,7 +61,8 @@ echo "$(date) [apply_new_content.sh] Pushing upstream ...DONE" >> /var/www/sphin
 echo "Waiting 60 seconds for weblate to pull ne content before triggering deepl"
 sleep 60
 
+source ../trigger_deepl_apikey.sh
 echo "$(date) [apply_new_content.sh] Trigger deepl translation..." >> /var/www/sphinx/logs_sphinx/webhook.log
-bash trigger_deepl.sh wlu_yNzMepL4jsShmM6o9sW3Xa53NWYIOVbxCjBP >> /var/www/sphinx/logs_sphinx/trigger_deepl.log
+bash trigger_deepl.sh $apikey >> /var/www/sphinx/logs_sphinx/trigger_deepl.log
 echo "$(date) [apply_new_content.sh] Trigger deepl translation...done" >> /var/www/sphinx/logs_sphinx/webhook.log
 
