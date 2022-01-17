@@ -12,7 +12,7 @@ This guide will walk you through the configuration of Linux to use FIDO Universa
 
 If you want to login to you computer using `Nitrokey Pro
 2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`_ you can visit the instructions for Windows available `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:windows>`_, and for Linux `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:linux>`_. 
+2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`_ you can visit the instructions for Windows available `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:windows>`_, and for Linux `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:linux>`_.
 
 Requirements
 ------------
@@ -138,11 +138,11 @@ Create ``.config/Nitrokey/`` under your home directory
 
    $ mkdir ~/.config/Nitrokey
 
-And plug your Nitrokey FIDO2. 
+And plug your Nitrokey FIDO2.
 
 Once done with the preparation, we can start to configure the computer to use the Nitrokey FIDO2 for 2nd factor authentication at login and ``sudo``.
 
-5. Generate the U2F config file 
+5. Generate the U2F config file
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 To generate the configuration file we will use the ``pamu2fcfg`` utility that comes with the ``libpam-u2f``. For convenience, we will directly write the output of the utility to the ``u2f_keys`` file under ``.config/Nitrokey``. First plug your Nitrokey FIDO2 (if you did not already), and enter the following command:
@@ -162,7 +162,7 @@ directory with this command:
 
 .. code-block:: bash
 
-   $ sudo mv ~/.config/Nitrokey /etc   
+   $ sudo mv ~/.config/Nitrokey /etc
 
 .. tip::
 
@@ -205,7 +205,7 @@ And add the following lines:
 
 .. code-block:: bash
 
-   #Nitrokey FIDO2 config 
+   #Nitrokey FIDO2 config
    auth    sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue prompt nouserok
 
 .. tip::
@@ -230,7 +230,11 @@ Once we modified the ``common-auth``, we can save and exit the file.
 
 You can test the configuration by typing ``sudo ls`` in the terminal. You should be prompted the message ``Please touch the device.`` and have a similar output on the terminal:
 
-``bash nitrouser@nitrouser:~$ sudo ls $ sudo ls [sudo] password for <username>:  Please touch the device.``
+.. code-block:: bash
+
+   nitrouser@nitrouser:~$ sudo ls
+   [sudo] password for nitrouser:  Please touch the device.
+
 You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/replug yout Nitrokey FIDO2 and type your password:
 
 .. figure:: /fido2/linux/images/u2f-fido-pam-2.png
@@ -262,7 +266,7 @@ There are several PAM modules files that can be modified according to your needs
    login, you might prefer to modify the\ ``/etc/pam.d/gdm-password``
 
 -  Alternatively you can just modify the ``/etc/pam.d/sudo`` file if you
-   wish to use FIDO U2F when using the ``sudo`` command. 
+   wish to use FIDO U2F when using the ``sudo`` command.
 
 Control flags
 ''''''''''''''''''''''
