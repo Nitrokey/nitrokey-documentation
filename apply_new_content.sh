@@ -61,6 +61,6 @@ echo "$(date) [apply_new_content.sh] Pushing upstream ...DONE" >> /var/www/sphin
 sleep 60
 
 echo "$(date) [apply_new_content.sh] Trigger deepl translation..." >> /var/www/sphinx/logs_sphinx/webhook.log
-bash trigger_deepl.sh >> /var/www/sphinx/logs_sphinx/trigger_deepl.log
+bash trigger_deepl.sh wlu_yNzMepL4jsShmM6o9sW3Xa53NWYIOVbxCjBP >> /var/www/sphinx/logs_sphinx/trigger_deepl.log
 echo "$(date) [apply_new_content.sh] Trigger deepl translation...done" >> /var/www/sphinx/logs_sphinx/webhook.log
 
