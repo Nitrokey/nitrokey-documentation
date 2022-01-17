@@ -9,8 +9,21 @@ Troubleshooting
    :maxdepth: 1
    :glob:
 
+Here you will find a collection of common issues.
 
-Here you will find a collection of common issues. 
+
+
+Nitrokey is not detected on Linux
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the Nitrokey is not detected, proceed the following:
+
+1. Copy this file
+   `41-nitrokey.rules <https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`_
+   to ``/etc/udev/rules.d/``.
+2. Restart udev via ``sudo service udev restart``.
+
+ 
 
 Google and Microsoft Services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
