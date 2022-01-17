@@ -58,6 +58,7 @@ git push
 
 echo "$(date) [apply_new_content.sh] Pushing upstream ...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
 
+echo "Waiting 60 seconds for weblate to pull ne content before triggering deepl"
 sleep 60
 
 echo "$(date) [apply_new_content.sh] Trigger deepl translation..." >> /var/www/sphinx/logs_sphinx/webhook.log
