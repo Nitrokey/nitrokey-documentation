@@ -17,10 +17,10 @@ fi
 for lang in "${languages[@]}"
 
 do
-	echo -e "\nStarting deepl Translation for language $lang..."
+	echo -e "\n $(date) Starting deepl Translation for language $lang..."
 	for component in "${components[@]}"
 	do
-		echo -e "Starting to translate $lang for component $component"
+		echo -e "$(date) Starting to translate $lang for component $component"
 		curl \
 		--data-binary '{
 			"mode":"translate",
@@ -32,9 +32,9 @@ do
 		-H "Content-Type: application/json" \
 		-H "Authorization: Token $token" \
 		https://translate.nitrokey.com/api/translations/nitrokey-documentation/$component/$lang/autotranslate/
-		echo -e "\ndone"
+		echo -e "\n$(date) done"
 	done
-	echo -e "\nLanguage $lang passed"
+	echo -e "\n$(date) Language $lang passed"
 done
 
 
