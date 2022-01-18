@@ -107,7 +107,7 @@ html_context = {
         'da' : 'Dansk',
         'bg' : 'Български',
         'et' : 'Eesti',
-        'fi' : 'Suomalainen',
+        'fi' : 'Suomi',
         'lv' : 'Latviešu',
         'lt' : 'Lietuvių kalba',
         'pl' : 'Polski',
