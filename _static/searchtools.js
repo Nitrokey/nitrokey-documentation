@@ -235,6 +235,7 @@ var Search = {
       if (results.length) {
         var item = results.pop();
         var listItem = $('<li style="display:none"></li>');
+        listItem.append('<span class="result-breadcrumb">' + Search.makeSearchResultBreadcrumb(item[0]) + '</span>');
         if (DOCUMENTATION_OPTIONS.FILE_SUFFIX === '') {
           // dirhtml builder
           var dirname = item[0] + '/';
@@ -447,6 +448,19 @@ var Search = {
       }
     }
     return results;
+  },
+
+  /**
+   * helper function to return a breadcrumb based on the result item's path
+   */
+  makeSearchResultBreadcrumb : function(item) {
+    var breadcrumbParts = [];
+    var items = item.split('/');
+    items.pop();
+    items.forEach(element => {
+      breadcrumbParts.push(element.charAt(0).toUpperCase() + element.slice(1));
+    });
+    return breadcrumbParts.join(' › ');
   },
 
   /**
