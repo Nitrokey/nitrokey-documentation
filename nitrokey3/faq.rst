@@ -41,7 +41,10 @@ Nitrokey 3 FAQ
    just visit: `chrome://settings/securityKeys`_ (clicking the link will not work
    for security reasons, please copy&paste it)
 
-
+**Q:** Is the Nitrokey 3 Common Criteria or FIPS certified?
+   The secure element is Common Criteria EAL 6+ security certification up to OS 
+   level (See `here`_, click “ICs, Smart Cards and Smart Card-Related Devices and 
+   Systems” and search for: "NXP JCOP 4 SE050M”).
 
 .. include:: ../shared-faqs/hyperlinks.rst 
 
