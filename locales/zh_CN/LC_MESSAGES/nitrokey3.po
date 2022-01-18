@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-18 12:17+0100\n"
+"POT-Creation-Date: 2022-01-18 16:23+0100\n"
 "PO-Revision-Date: 2022-01-18 15:10+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-nitrokey3/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-nitrokey3/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../nitrokey3/faq.rst:2
@@ -132,8 +132,83 @@ msgid ""
 " OS level (See `here`_, click “ICs, Smart Cards and Smart Card-Related "
 "Devices and Systems” and search for: \"NXP JCOP 4 SE050M”)."
 msgstr ""
-"安全要素是Common Criteria EAL 6+安全认证，直至操作系统级别（见`这里`_，点击 \"IC、智能卡和智能卡相关设备和系统\"，搜索："
-"\"NXP JCOP 4 SE050M\"）。"
+"安全要素是Common Criteria EAL 6+安全认证，直至操作系统级别（见`这里`_，点击 "
+"\"IC、智能卡和智能卡相关设备和系统\"，搜索：\"NXP JCOP 4 SE050M\"）。"
+
+#: ../nitrokey3/firmware-update.rst:2
+msgid "Firmware Update"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:8
+msgid "This guide describes how to update the firmware on the Nitrokey 3."
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:11
+msgid ""
+"**Currently updating the firmware will delete all user data!** Make sure "
+"you have proper backup login methods enabled and/or ensure that the "
+"Nitrokey 3 is not the only way to authenticate/2FA for your "
+"applications/services."
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:17
+msgid ""
+"For Windows the firmware update is still **experimental**, because it "
+"takes a very long time > 12mins. We recommend to wait for the next "
+"release(s) until this issue is fixed."
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:22
+msgid "How to update"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:24
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, this"
+" will likely render your device useless!"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:27
+msgid "Make sure you have the latest ``pynitrokey`` version installed"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:28
+msgid "Download a ``.sb2`` image from `Nitrokey 3 Firmware - GitHub Releases`_"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:29
+msgid ""
+"Use ``nitropy nk3 update <SB2_IMAGE>`` (for Windows use of the "
+"``--experimental`` switch is required)"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:31
+msgid "Touch device to activate bootloader (once instructed by ``nitropy``)"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:32
+msgid "*macOS only:* Run update command again (once instructed by ``nitropy``)"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:33
+msgid "Wait 3-10mins on macOS/Linux, 12-25mins on Windows"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:34
+msgid "The update is finished"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:35
+msgid ""
+"*Optional*: run ``nitropy nk3 test`` to check if device is working "
+"properly after flashing"
+msgstr ""
+
+#: ../nitrokey3/firmware-update.rst:37
+msgid ""
+"In case of any errors please take the logs from ``/tmp`` directory "
+"(``/tmp/nitropy.log.*``)."
+msgstr ""
 
 #: ../nitrokey3/index.rst:2
 msgid "Nitrokey 3"
@@ -665,6 +740,26 @@ msgid ""
 "flags."
 msgstr "如果你设置了中央认证映射，你也将失去使用``sudo``的能力。*并*使用``required``或``requisite``标志。"
 
+#: ../nitrokey3/linux/firmware-update.rst:4
+#, fuzzy
+msgid "Troubleshooting:"
+msgstr "故障排除"
+
+#: ../nitrokey3/linux/firmware-update.rst:14
+msgid "**Issue:** I get ``permission denied for /dev/hidrawX`` during update."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update.rst:7
+msgid ""
+"This likely means your user has not the needed permissions to read-write "
+"the device. Please make sure you have set up the correct `udev-rules`_. "
+"Download this `udev-rules`_ set and place it in your udev rules directory"
+" (e.g., ``/etc/udev/rules.d``). Then remove your Nitrokey 3 from the USB "
+"slot and run: ``udevadm control --reload-rules && udevadm trigger`` or "
+"reboot your machine. Afterwards the update should work without the "
+"permission issue."
+msgstr ""
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 with Linux"
 msgstr "使用Linux的Nitrokey 3"
@@ -971,9 +1066,7 @@ msgid ""
 "better results.If you still encounter issues please write a mail at our "
 "support. For optimal help please include the shipping/order number and "
 "your smartphone model."
-msgstr ""
-"寻找最佳位置有时需要20-30秒。根据我们的经验，将Nitrokey水平放置会产生更好的效果。如果你仍然遇到问题，请给我们的支持部门写信。如果您仍然遇到问"
-"题，请给我们的支持部门写信，为了获得最佳帮助，请注明发货/订单号和您的智能手机型号。"
+msgstr "寻找最佳位置有时需要20-30秒。根据我们的经验，将Nitrokey水平放置会产生更好的效果。如果你仍然遇到问题，请给我们的支持部门写信。如果您仍然遇到问题，请给我们的支持部门写信，为了获得最佳帮助，请注明发货/订单号和您的智能手机型号。"
 
 #: ../nitrokey3/troubleshooting.rst:58
 msgid "update.nitrokey.com does not work:"
@@ -1249,3 +1342,4 @@ msgstr "重置的其他方法"
 
 #~ msgid "We are currently testing more browsers to complete the table."
 #~ msgstr "我们目前正在测试更多的浏览器以完成该表。"
+
