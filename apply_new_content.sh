@@ -11,11 +11,11 @@ git pull
 
 if [ $? -eq 0 ]
 then
-	echo "DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
+	echo "$(date) [apply_new_content.sh] Pulling Repo...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
 else
-	echo "FAILED" >> /var/www/sphinx/logs_sphinx/webhook.log
-	echo "Building Docs.nitrokey.com – pulling repo FAILED." | mail -s "[Sphinx] Pulling Repo FAILED." $admin_mail_address
-
+	echo "$(date) [apply_new_content.sh] Pulling Repo...FAILED" >> /var/www/sphinx/logs_sphinx/webhook.log
+	echo "$(date) [apply_new_content.sh] Pulling Repo...FAILED." | mail -s "[Sphinx] Pulling Repo FAILED." $admin_mail_address
+	exit
 fi
 
 
@@ -26,12 +26,12 @@ sphinx-build -a -D language='en' -b html . /var/www/sphinx/www/docs.nitrokey.com
 
 if [ $? -eq 0 ]
 then
-	echo "DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
+	echo "$(date) [apply_new_content.sh] Building englisch Versions...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
 	mv /var/www/sphinx/www/static/?? /var/www/sphinx/www/docs.nitrokey.com_en_temp/
 	rm /var/www/sphinx/www/static -r
 	mv /var/www/sphinx/www/docs.nitrokey.com_en_temp /var/www/sphinx/www/static
 else
-	echo echo "FAILED" >> /var/www/sphinx/logs_sphinx/webhook.log
+	echo echo "$(date) [apply_new_content.sh] Building englisch Versions...FAILED" >> /var/www/sphinx/logs_sphinx/webhook.log
 	echo "Building Docs.nitrokey.com Language EN FAILED. " | mail -s "[Sphinx] Building Language EN FAILED." $admin_mail_address
 fi
 
@@ -43,9 +43,9 @@ sphinx-build -b gettext . ./locales/
 sphinx-intl update -p ./locales/ -l de -l fr -l es -l nl -l it -l ja -l ru -l zh_CN -l el -l bg -l da -l et -l fi -l lv -l lt -l pl -l pt -l ro -l sv -l sk -l sl -l cs -l hu
 if [ $? -eq 0 ]
 then
-	echo "DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
+	echo "$(date) [apply_new_content.sh] Building /locales/ ...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
 else
-	echo "FAILED" >> /var/www/sphinx/logs_sphinx/webhook.log
+	echo "$(date) [apply_new_content.sh] Building /locales/ ...FAILED" >> /var/www/sphinx/logs_sphinx/webhook.log
 	echo "Building  /locales/ FAILED." | mail -s "[Sphinx] Building Locales FAILED." $admin_mail_address
 
 fi
@@ -58,7 +58,7 @@ git push
 
 echo "$(date) [apply_new_content.sh] Pushing upstream ...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
 
-echo "Waiting 60 seconds for weblate to pull ne content before triggering deepl"
+echo "Waiting 60 seconds for weblate to pull new content before triggering deepl"
 sleep 60
 
 source ../trigger_deepl_apikey.sh
