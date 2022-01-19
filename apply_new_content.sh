@@ -2,7 +2,7 @@ admin_mail_address="sphinx_admin@nitrokey.com"
 
 echo "$(date) [apply_new_content.sh] Content change triggered." >> /var/www/sphinx/logs_sphinx/webhook.log
 
-echo -n "$(date) [apply_new_content.sh] Pulling Repo..." >> /var/www/sphinx/logs_sphinx/webhook.log
+echo "$(date) [apply_new_content.sh] Pulling Repo..." >> /var/www/sphinx/logs_sphinx/webhook.log
 
 cd /var/www/sphinx/sphinx/nitrokey-documentation
 
