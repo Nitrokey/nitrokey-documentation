@@ -29,36 +29,46 @@ echo "$(date) [apply_translated_content.sh] ($BASHPID) Building language version
 
 for lang in "${languages[@]}"
 do
-	if [ -d "/var/www/sphinx/www/docs.nitrokey.com_$lang-temp" ]; then
-		echo "$(date) [apply_translated_content.sh] ($BASHPID) (SPHINX) Building Language Version $lang SKIPPED. (Directory not empty. Another build process may be running)"
-		echo "Building was skipped, as the temporary directory /var/www/sphinx/www/docs.nitrokey.com_$lang-temp already existed. Something may have gone wrong earlier or another build process was running at the same time. The directory should be deleted before the next build." | mail -s "[Sphinx] ($BASHPID) Warning - Building Language $lang." $admin_mail_address
+	echo "$(date) [apply_translated_content.sh] ($BASHPID) (SPHINX) Building Language Version $lang..." >> /var/www/sphinx/logs_sphinx/webhook.log
+	if [ $build_mode == "full" ]
+	then
+		if [ -d "/var/www/sphinx/www/docs.nitrokey.com_$lang-temp" ]
+		then
+			echo "$(date) [apply_translated_content.sh] ($BASHPID) (SPHINX) Building Language Version $lang SKIPPED. (Directory not empty. Another build process may be running)"  >> /var/www/sphinx/logs_sphinx/webhook.log
+			echo "Building was skipped, as the temporary directory /var/www/sphinx/www/docs.nitrokey.com_$lang-temp already existed. Something may have gone wrong earlier or another build process was running at the same time. The directory should be deleted before the next build." | mail -s "[Sphinx] ($BASHPID) Warning - Building Language $lang." $admin_mail_address
 
+		else
+			sphinx-build -a -D language="$lang" -b html /var/www/sphinx/sphinx/nitrokey-documentation/ /var/www/sphinx/sphinx/sphinx_build_temp/$lang-temp
+			status=$?
+		fi
+	elif [ $build_mode == "incremental" ]
+	then
+		sphinx-build -D language="$lang" -b html /var/www/sphinx/sphinx/nitrokey-documentation/ /var/www/sphinx/sphinx/sphinx_build_temp/$lang-temp
+		status=$?
 	else
-		echo "$(date) [apply_translated_content.sh] ($BASHPID) (SPHINX) Building Language Version $lang..." >> /var/www/sphinx/logs_sphinx/webhook.log
+		echo "Building Docs.nitrokey.com Language $lang FAILED. Sphinx build mode in config.sh unkown." | mail -s "[Sphinx] ($BASHPID) Building Language $lang FAILED." $admin_mail_address
+		fi
+		
+
+	if [ $status -eq 0 ]
+	then
+		echo "$(date) [apply_translated_content.sh] ($BASHPID) (SPHINX) Building Language Version $lang...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
 		
 		if [ $build_mode == "full" ]
 		then
-			sphinx-build -a -D language="$lang" -b html /var/www/sphinx/sphinx/nitrokey-documentation/ /var/www/sphinx/www/docs.nitrokey.com_$lang-temp
-			status=$?
+			rm /var/www/sphinx/www/static/$lang
+			mv /var/www/sphinx/sphinx/sphinx_build_temp/$lang-temp /var/www/sphinx/www/static/$lang
 		elif [ $build_mode == "incremental" ]
 		then
-			sphinx-build -D language="$lang" -b html /var/www/sphinx/sphinx/nitrokey-documentation/ /var/www/sphinx/www/docs.nitrokey.com_$lang-temp
-			status=$?
-		else
-			echo "Building Docs.nitrokey.com Language $lang FAILED. Sphinx build mode in config.sh unkown." | mail -s "[Sphinx] ($BASHPID) Building Language $lang FAILED." $admin_mail_address
-
-		fi
-			
-	
-		if [ $status -eq 0 ]
-		then
-			echo "$(date) [apply_translated_content.sh] ($BASHPID) (SPHINX) Building Language Version $lang...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
+			# small downtime
+			cp /var/www/sphinx/sphinx/sphinx_build_temp/$lang-temp /var/www/sphinx/www/static/ -r
 			rm -r  /var/www/sphinx/www/static/$lang
-			mv /var/www/sphinx/www/docs.nitrokey.com_$lang-temp /var/www/sphinx/www/static/$lang
-		else
-			echo echo "FAILED" >> /var/www/sphinx/logs_sphinx/webhook.log
-			echo "Building Docs.nitrokey.com Language $lang FAILED. The online version was not altered." | mail -s "[Sphinx] ($BASHPID) Building Language $lang FAILED." $admin_mail_address
+			mv /var/www/sphinx/www/static/$lang-temp  /var/www/sphinx/www/static/$lang
 		fi
+
+	else
+		echo "$(date) [apply_translated_content.sh] ($BASHPID) (SPHINX) Building Language Version $lang...FAILED" >> /var/www/sphinx/logs_sphinx/webhook.log
+		echo "Building Docs.nitrokey.com Language $lang FAILED. The online version was not altered." | mail -s "[Sphinx] ($BASHPID) Building Language $lang FAILED." $admin_mail_address
 	fi
 done
 
