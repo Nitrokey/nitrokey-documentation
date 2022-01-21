@@ -25,7 +25,7 @@ fi
 
 
 # build all language versions
-echo "$(date) [apply_translated_content.sh] ($BASHPID) Building language versions." >> /var/www/sphinx/logs_sphinx/webhook.log
+echo "$(date) [apply_translated_content.sh] ($BASHPID) Building language versions (mode $build_mode)." >> /var/www/sphinx/logs_sphinx/webhook.log
 
 for lang in "${languages[@]}"
 do
@@ -36,11 +36,11 @@ do
 	else
 		echo "$(date) [apply_translated_content.sh] ($BASHPID) (SPHINX) Building Language Version $lang..." >> /var/www/sphinx/logs_sphinx/webhook.log
 		
-		if [ build_mode == "full" ]
+		if [ $build_mode == "full" ]
 		then
 			sphinx-build -a -D language="$lang" -b html /var/www/sphinx/sphinx/nitrokey-documentation/ /var/www/sphinx/www/docs.nitrokey.com_$lang-temp
 			status=$?
-		elif [ build_mode == "incremental" ]
+		elif [ $build_mode == "incremental" ]
 		then
 			sphinx-build -D language="$lang" -b html /var/www/sphinx/sphinx/nitrokey-documentation/ /var/www/sphinx/www/docs.nitrokey.com_$lang-temp
 			status=$?
