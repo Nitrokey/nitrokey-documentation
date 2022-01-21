@@ -1,4 +1,4 @@
-admin_mail_address="sphinx_admin@nitrokey.com"
+source config.sh
 
 echo "$(date) [apply_new_content.sh] Content change triggered." >> /var/www/sphinx/logs_sphinx/webhook.log
 
@@ -27,7 +27,11 @@ sphinx-build -a -D language='en' -b html . /var/www/sphinx/www/docs.nitrokey.com
 if [ $? -eq 0 ]
 then
 	echo "$(date) [apply_new_content.sh] Building englisch Versions...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
-	mv /var/www/sphinx/www/static/?? /var/www/sphinx/www/docs.nitrokey.com_en_temp/
+
+	for lang in "${languages[@]}"
+	do
+		mv /var/www/sphinx/www/static/$lang /var/www/sphinx/www/docs.nitrokey.com_en_temp/
+	done
 	rm /var/www/sphinx/www/static -r
 	mv /var/www/sphinx/www/docs.nitrokey.com_en_temp /var/www/sphinx/www/static
 else

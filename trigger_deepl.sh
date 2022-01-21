@@ -1,6 +1,7 @@
-languages=("de" "fr" "es" "nl" "it" "ja" "ru" "el" "bg" "da" "et" "fi" "lv" "lt" "pl" "pt" "ro" "sv" "sk" "sl" "cs" "hu")
-components=("documentation-fido2" "documentation-hsm" "documentation-nethsm" "documentation-netbox" "documentation-nitrokey3" "documentation-nitropad" "documentation-nitropc" "documentation-nitrophone" "documentation-pro" "documentation-shared-faq" "documentation-sphinx" "documentation-start" "documentation-storage" "documentation-syntax" "documentation-t430" "documentation-u2f" "documentation-x230" "glossary" "index")
+#!/bin/bash
 
+# Load Variables
+source config.sh
 
 # provide access token from https://translate.nitrokey.com/accounts/profile/#api
 token=$1
@@ -36,5 +37,3 @@ do
 	done
 	echo -e "\n$(date) Language $lang passed"
 done
-
-
