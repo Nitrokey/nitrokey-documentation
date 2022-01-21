@@ -1,3 +1,4 @@
+#!/bin/bash
 source config.sh
 
 echo "$(date) [apply_new_content.sh] Content change triggered." >> /var/www/sphinx/logs_sphinx/webhook.log
@@ -24,7 +25,20 @@ echo -n "$(date) [apply_new_content.sh] Building englisch Versions..." >> /var/w
 
 sphinx-build -a -D language='en' -b html . /var/www/sphinx/www/docs.nitrokey.com_en_temp
 
-if [ $? -eq 0 ]
+		if [ build_mode == "full" ]
+		then
+			sphinx-build -a -D language='en' -b html . /var/www/sphinx/www/docs.nitrokey.com_en_temp
+			status=$?
+		elif [ build_mode == "incremental" ]
+		then
+			sphinx-build -D language='en' -b html . /var/www/sphinx/www/docs.nitrokey.com_en_temp
+			status=$?
+		else
+			echo "Building Docs.nitrokey.com Language $lang FAILED. Sphinx build mode in config.sh unkown." | mail -s "[Sphinx] ($BASHPID) Building Language $lang FAILED." $admin_mail_address
+
+		fi
+
+if [ $status -eq 0 ]
 then
 	echo "$(date) [apply_new_content.sh] Building englisch Versions...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
 
