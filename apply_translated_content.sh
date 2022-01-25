@@ -4,7 +4,12 @@
 #echo "$(date) [apply_translated_content.sh] DEACTIVATED.." >> /var/www/sphinx/logs_sphinx/webhook.log & exit
 
 # Load Variables and Language Codes
-source config.sh
+source /var/www/sphinx/sphinx/nitrokey-documentation/config.sh
+
+if [ $? -eq 0]
+then
+	echo "Building Docs.nitrokey.com – config.sh not loaded correctly." | mail -s "[Sphinx] ($BASHPID) Error Loading Config File." $admin_mail_address
+fi
 
 
 echo "$(date) [apply_translated_content.sh] ($BASHPID) Pulling Repo..." >> /var/www/sphinx/logs_sphinx/webhook.log
@@ -47,7 +52,7 @@ do
 		status=$?
 	else
 		echo "Building Docs.nitrokey.com Language $lang FAILED. Sphinx build mode in config.sh unkown." | mail -s "[Sphinx] ($BASHPID) Building Language $lang FAILED." $admin_mail_address
-		fi
+	fi
 		
 
 	if [ $status -eq 0 ]

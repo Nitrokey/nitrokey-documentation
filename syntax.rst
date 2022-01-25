@@ -110,3 +110,5 @@ This is a plain link https://foobar.bas/slug1/slug2
 A new text that should be translated be deepl.
 
 The Product Term Nitrokey 3 should not be translated to japanese Kanji.
+
+This line should be translated also into chinese and Nitrokey Start should not be translated.

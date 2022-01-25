@@ -1,5 +1,5 @@
 #!/bin/bash
-source config.sh
+source /var/www/sphinx/sphinx/nitrokey-documentation/config.sh
 
 echo "$(date) [apply_new_content.sh] ($BASHPID) Content change triggered." >> /var/www/sphinx/logs_sphinx/webhook.log
 
