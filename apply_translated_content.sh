@@ -6,7 +6,7 @@
 # Load Variables and Language Codes
 source /var/www/sphinx/sphinx/nitrokey-documentation/config.sh
 
-if [ $? -eq 0 ]
+if [ $? -ne 0 ]
 then
 	echo "Building Docs.nitrokey.com – config.sh not loaded correctly." | mail -s "[Sphinx] ($BASHPID) Error Loading Config File." $admin_mail_address
 fi

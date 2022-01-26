@@ -88,5 +88,13 @@ sleep 60
 source ../trigger_deepl_apikey.sh
 echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger deepl translation..." >> /var/www/sphinx/logs_sphinx/webhook.log
 bash trigger_deepl.sh $apikey >> /var/www/sphinx/logs_sphinx/trigger_deepl.log
-echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger deepl translation...done" >> /var/www/sphinx/logs_sphinx/webhook.log
+echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger deepl translation...passed" >> /var/www/sphinx/logs_sphinx/webhook.log
+
+echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger weblate commit..." >> /var/www/sphinx/logs_sphinx/webhook.log
+bash trigger_weblatecommit.sh $apikey >> /var/www/sphinx/logs_sphinx/trigger_weblate_repository.log
+echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger weblate commit...passed" >> /var/www/sphinx/logs_sphinx/webhook.log
+
+echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger weblate push..." >> /var/www/sphinx/logs_sphinx/webhook.log
+bash trigger_weblatepush.sh $apikey >> /var/www/sphinx/logs_sphinx/trigger_weblate_repository.log
+echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger weblate push...passed" >> /var/www/sphinx/logs_sphinx/webhook.log
 
