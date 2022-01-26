@@ -79,9 +79,3 @@ done
 
 
 echo "$(date) [apply_translated_content.sh] ($BASHPID) Atempts to buil all languages DONE." >> /var/www/sphinx/logs_sphinx/webhook.log
-
-for lang in "${languages[@]}"
-do
-	[[ -d "/var/www/sphinx/www/docs.nitrokey.com_$lang-temp" ]] && 	echo "After translated content was build, the temporary directory /var/www/sphinx/www/docs.nitrokey.com_$lang-temp still exists. Something may have gone wrong. The directory should be deleted before the next build with command rm /var/www/sphinx/www/docs.nitrokey.com*-temp -r" | mail -s "[Sphinx] ($BASHPID) Warning - Building Language $lang." $admin_mail_address
-
-done
