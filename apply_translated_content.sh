@@ -8,7 +8,9 @@ source /var/www/sphinx/sphinx/nitrokey-documentation/config.sh
 
 if [ $? -ne 0 ]
 then
-	echo "Building Docs.nitrokey.com – config.sh not loaded correctly." | mail -s "[Sphinx] ($BASHPID) Error Loading Config File." $admin_mail_address
+	echo "Building Docs.nitrokey.com – [apply_translated_content.sh] config.sh not loaded correctly." | mail -s "[Sphinx] ($BASHPID) Error Loading Config File." $admin_mail_address
+	echo "$(date) [apply_translated_content.sh] ($BASHPID) Error loading config.sh" >> /var/www/sphinx/logs_sphinx/webhook.log
+	exit
 fi
 
 
