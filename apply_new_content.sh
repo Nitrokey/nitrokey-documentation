@@ -21,7 +21,7 @@ fi
 
 
 # build english version
-echo -n "$(date) [apply_new_content.sh] ($BASHPID) Building englisch Versions..." >> /var/www/sphinx/logs_sphinx/webhook.log
+echo "$(date) [apply_new_content.sh] ($BASHPID) Building englisch Version..." >> /var/www/sphinx/logs_sphinx/webhook.log
 
 
 if [ $build_mode == "full" ]
