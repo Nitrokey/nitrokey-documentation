@@ -15,10 +15,10 @@ fi
 
 
 
-	echo -e "\n $(date) Starting weblate repository push..."
+	echo -e "\n $(date) Starting weblate repository pull..."
 		curl \
 		--data-binary '{
-			"operation":"push"
+			"operation":"pull"
 		}' \
 		-H "Content-Type: application/json" \
 		-H "Authorization: Token $token" \

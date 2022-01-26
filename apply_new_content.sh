@@ -89,10 +89,15 @@ git push
 
 echo "$(date) [apply_new_content.sh] ($BASHPID) Pushing upstream ...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
 
-echo "Waiting 60 seconds for weblate to pull new content before triggering deepl"
-sleep 60
+
 
 source ../trigger_deepl_apikey.sh
+
+echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger weblate pull..." >> /var/www/sphinx/logs_sphinx/webhook.log
+bash trigger_weblatepull.sh $apikey >> /var/www/sphinx/logs_sphinx/trigger_weblate_repository.log
+echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger weblate pull...passed" >> /var/www/sphinx/logs_sphinx/webhook.log
+
+
 echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger deepl translation..." >> /var/www/sphinx/logs_sphinx/webhook.log
 bash trigger_deepl.sh $apikey >> /var/www/sphinx/logs_sphinx/trigger_deepl.log
 echo "$(date) [apply_new_content.sh] ($BASHPID) Trigger deepl translation...passed" >> /var/www/sphinx/logs_sphinx/webhook.log
