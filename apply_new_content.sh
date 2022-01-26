@@ -54,9 +54,17 @@ fi
 
 echo -n "$(date) [apply_new_content.sh] ($BASHPID) Building /locales/ ..." >> /var/www/sphinx/logs_sphinx/webhook.log
 
+# generate Sphinx Language Args 
+
+sphinx_args=""
+for lang in "${languages[@]}"
+do
+	sphinx_args=$sphinx_args" -l $lang"
+done
+
 # generate language files and push
 sphinx-build -b gettext . ./locales/
-sphinx-intl update -p ./locales/ -l de -l fr -l es -l nl -l it -l ja -l ru -l zh_CN -l el -l bg -l da -l et -l fi -l lv -l lt -l pl -l pt -l ro -l sv -l sk -l sl -l cs -l hu
+eval sphinx-intl update -p ./locales/ $sphinx_args 
 if [ $? -eq 0 ]
 then
 	echo "$(date) [apply_new_content.sh] ($BASHPID) Building /locales/ ...DONE" >> /var/www/sphinx/logs_sphinx/webhook.log
