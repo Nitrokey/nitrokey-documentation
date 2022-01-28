@@ -15,6 +15,9 @@ You can configure up to four hidden volumes. Once unlocked, hidden volumes behav
    There are no mechanisms to prevent accidental overwritting of hidden data, as they would reveal the existence of hidden volumes.
    Data written to the encrypted volume before the creation of the hidden volume can still be read.
 
+.. figure:: ../images/hidden-schema.svg
+   :alt: Hidden storage description. The hidden storage are within the free space of the encrypted storage.
+
 
 Configuring hidden volumes
 --------------------------
