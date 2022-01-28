@@ -40,7 +40,7 @@ Using hidden volumes
 
 1. Unlock the encrypted volume.
 2. Select "unlock hidden volume" and enter any of the hidden volume's passwords.
-3. *If this is the first time you may need to create a partition on the hidden volume. Windows will open an appropriate window and ask you to do so. On Linux and Mac OS you may need to open a partition manager and create a partition manually. You can create as many partitions as you want. We recommend FAT(32) if you want to access the partition from various operating systems.*
 
+.. include:: ./hidden-os-specific-partitioning.rst
 
 4. Make sure to unmount/eject all partitions on the hidden volumes before locking or disconnecting the Nitrokey.
