@@ -26,14 +26,14 @@ Configuring hidden volumes
 1. Unlock the encrypted storage using the Nitrokey App.
 2. In the menu, select "setup hidden volume".
 
-   .. image:: ../images/setup_hidden_volume.png
-      :alt: menu containing the hidden volume setup utility.
+.. image:: ../images/setup_hidden_volume.png
+   :alt: menu containing the hidden volume setup utility.
 
 3. Enter a strong passphrase twice. Unlike the encrypted storage PIN, there are no limit to the number of attempts at opening hidden storage, so the strength of the passphrase is extremely important.
 4. Define the storage area to be used. Hidden volumes are stored in the free areas of the encrypted volume. When creating multiple hidden volume, you need to allocate part of the free area for each volume, making sure they do not overlap.
 
-   .. image:: ../images/hidden-storage-passphrase.png
-      :alt: Hidden storage dialog box
+.. image:: ../images/hidden-storage-passphrase.png
+  :alt: Hidden storage dialog box
 
 Using hidden volumes
 --------------------
@@ -41,4 +41,6 @@ Using hidden volumes
 1. Unlock the encrypted volume.
 2. Select "unlock hidden volume" and enter any of the hidden volume's passwords.
 3. *If this is the first time you may need to create a partition on the hidden volume. Windows will open an appropriate window and ask you to do so. On Linux and Mac OS you may need to open a partition manager and create a partition manually. You can create as many partitions as you want. We recommend FAT(32) if you want to access the partition from various operating systems.*
+
+
 4. Make sure to unmount/eject all partitions on the hidden volumes before locking or disconnecting the Nitrokey.
