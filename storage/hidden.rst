@@ -8,7 +8,9 @@ The concept is similar to `VeraCrypt's/TrueCrypt's hidden volume <https://veracr
 You can configure up to four hidden volumes. Once unlocked, hidden volumes behave like ordinary storage where you can create various partitions, filesystems and store files as you like.
 
 .. warning::
-   If you chose to use hidden volumes, you must not write any data to the simple storage, or you risk loosingdata in the hidden volume. 
+   If you chose to use hidden volumes, you must not write any data to the encrypted storage, or you risk loosing data in the hidden volume. 
+
+.. note::
    Hidden volumes are hidden within the free space of the encrypted storage, which will be overwritten when writing data to the encrypted volume.
    There are no mechanisms to prevent accidental overwritting of hidden data, as they would reveal the existence of hidden volumes.
    The data that was written to the encrypted volume before the creation of the hidden volume can still be read.
