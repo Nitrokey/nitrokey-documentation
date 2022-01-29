@@ -1,34 +1,3 @@
-# storage
-
-
-Configure Hidden Volumes:
-
-    Unlock encrypted volume from the Nitrokey App menu.
-    Select "setup hidden volume".
-    Now you need to enter a new password twice to protect your hidden volume. The password strength is indicated below.
-
-    Note: PINs can only be tried three times only which is why they can be short. Passwords like used for hidden devices can potentially be attacked unlimited which is why they need to be sufficiently strong.
-     
-    Next you need to define the storage area being used. Hidden volumes are stored in the empty space of the encrypted volume. This is a critical choice because it could destroy data on the (not-hidden) encrypted volume and reveal the existience of the hidden volume.
-        You should use one FAT32 partition on your encrypted volume as journaling filesystems, especially NTFS, may destroy the encrypted data.
-        Copy some files to the encrypted volume prior to creating the hidden volume. Once you configured a hidden volume you shouldn't add or change files on the encrypted volume anymore.
-        Identify the storage space your files consume on the encrypted volume. For example: 10%
-        The hiden volume should start after your files on the encrypted volume. For example: 10% files + 10% buffer = 20%
-        The hidden volume should end in a distance before the end of the storage. For example: 90%
-
-In case you use two or more hidden volumes, note that their storage area must not overlap. Otherwise they would override and destroy each other's data. Each hidden volume would require a different password.
-
-Usage of Hidden Volumes:
-
-    Select "unlock encrypted volume" and enter your User PIN.
-    Select "unlock hidden volume" and enter any of the hidden volume's passwords.
-    If this is the first time you may need to create a partition on the hidden volume. Windows will open an appropriate window and ask you to do so. On Linux and Mac OS you may need to open a partition manager and create a partition manually. You can create as many partitions as you want. We recommend FAT(32) if you want to access the partition from various operating systems.
-    Make sure to unmount/eject all partitions on the hidden volumes before locking or disconnecting the Nitrokey.
-
-Also see older but comprehensive Nitrokey Storage manual.
-
-
-
 # pro
 
 
