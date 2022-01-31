@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-31 15:35+0100\n"
-"PO-Revision-Date: 2022-01-06 19:25+0000\n"
+"PO-Revision-Date: 2022-01-31 16:11+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: French <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-storage/fr/>\n"
 "Language: fr\n"
-"Language-Team: French <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-storage/fr/>\n"
-"Plural-Forms: nplurals=2; plural=n > 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../storage/factory-reset.rst:2
@@ -906,7 +907,7 @@ msgstr ""
 
 #: ../storage/hidden.rst:2
 msgid "Hidden Storage"
-msgstr ""
+msgstr "Stockage caché"
 
 #: ../storage/hidden.rst:4
 msgid ""
@@ -919,12 +920,24 @@ msgid ""
 "<https://veracrypt.eu/en/docs/hidden-volume/>`_ but with Nitrokey Storage"
 " the entire functionality of hidden volumes is implemented in hardware."
 msgstr ""
+"Les volumes cachés permettent de cacher des données à l'intérieur du volume "
+"crypté. Ces données sont protégées par une phrase de passe supplémentaire. "
+"Sans la phrase de passe, il est impossible de savoir si les volumes cachés "
+"sont présents. Ils ne sont pas configurés avec un mot de passe par défaut "
+"afin que leur existence puisse être `déniée de manière plausible <https://en."
+"wikipedia.org/wiki/Plausible_deniability>`_. Le concept est similaire au `"
+"volume caché de <https://veracrypt.eu/en/docs/hidden-volume/>`_VeraCrypt's/"
+"TrueCrypt's, mais avec Nitrokey Storage, toute la fonctionnalité des volumes "
+"cachés est implémentée dans le matériel."
 
 #: ../storage/hidden.rst:11
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted storage, or you risk loosing data in the hidden volume."
 msgstr ""
+"Si vous choisissez d'utiliser des volumes cachés, vous ne devez pas écrire "
+"de données sur le stockage crypté, ou vous risquez de perdre des données "
+"dans le volume caché."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -935,16 +948,23 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Les volumes cachés sont dissimulés dans l'espace libre du stockage crypté, "
+"qui sera écrasé lors de l'écriture de données sur le volume crypté. Il "
+"n'existe aucun mécanisme pour empêcher l'écrasement accidentel des données "
+"cachées, car cela révélerait l'existence des volumes cachés. Les données "
+"écrites sur le volume crypté avant la création du volume caché peuvent "
+"toujours être lues."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
-msgstr ""
+msgstr "Configuration des volumes cachés"
 
 #: ../storage/hidden.rst:26
 msgid ""
 "Copy some files to the encrypted volume prior to creating the hidden "
 "volume."
 msgstr ""
+"Copiez certains fichiers sur le volume crypté avant de créer le volume caché."
 
 #: ../storage/hidden.rst:29
 msgid ""
@@ -952,14 +972,18 @@ msgid ""
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using the hidden storage."
 msgstr ""
+"L'utilisation d'un système de fichiers de journalisation peut entraîner un "
+"risque d'écrasement des données cachées. Le système de fichiers crypté est "
+"formaté en FAT32 par défaut, et il est recommandé de le laisser ainsi "
+"lorsque vous utilisez le stockage caché."
 
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted storage using the Nitrokey App."
-msgstr ""
+msgstr "Déverrouillez le stockage crypté en utilisant l'application Nitrokey."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
-msgstr ""
+msgstr "Dans le menu, sélectionnez \"setup hidden volume\" ;."
 
 #: ../storage/hidden.rst:38
 msgid ""
@@ -967,6 +991,9 @@ msgid ""
 "are no limit to the number of attempts at opening hidden storage, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
+"Saisissez deux fois une phrase de passe forte. Contrairement au code PIN du "
+"stockage crypté, le nombre de tentatives d'ouverture du stockage caché n'est "
+"pas limité. La force de la phrase de passe est donc extrêmement importante."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -975,27 +1002,34 @@ msgid ""
 " need to allocate a part of the free area for each volume, making sure "
 "they do not overlap."
 msgstr ""
+"Définissez la zone de stockage à utiliser. Les volumes cachés sont stockés "
+"dans les zones libres du volume crypté. Lorsque vous créez plusieurs volumes "
+"cachés, vous devez allouer une partie de la zone libre pour chaque volume, "
+"en veillant à ce qu'ils ne se chevauchent pas."
 
 #: ../storage/hidden.rst:45
 msgid "Using hidden volumes"
-msgstr ""
+msgstr "Utilisation de volumes cachés"
 
 #: ../storage/hidden.rst:47
-#, fuzzy
 msgid "Unlock the encrypted volume."
-msgstr "Détruit le volume crypté"
+msgstr "Déverrouillez le volume crypté."
 
 #: ../storage/hidden.rst:48
 msgid ""
 "Select \"unlock hidden volume\" and enter any of the hidden volume's "
 "passwords."
 msgstr ""
+"Sélectionnez \"unlock hidden volume\" ; et entrez n'importe quel mot de "
+"passe du volume caché' ;."
 
 #: ../storage/hidden.rst:52
 msgid ""
 "Make sure to unmount/eject all partitions on the hidden volumes before "
 "locking or disconnecting the Nitrokey."
 msgstr ""
+"Veillez à démonter/éjecter toutes les partitions sur les volumes cachés "
+"avant de verrouiller ou de déconnecter la Nitrokey."
 
 #: ../storage/index.rst:2
 msgid "Nitrokey Storage 2"
@@ -2552,6 +2586,12 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*Si c'est la première fois que vous déverrouillez le stockage caché, vous "
+"devrez peut-être créer une partition sur le volume caché. Vous devrez ouvrir "
+"un gestionnaire de partition tel que* `GParted <https://gparted.org/>`_ *et "
+"créer une ou plusieurs partitions manuellement. Veillez à créer les "
+"partitions sur le périphérique qui est apparu lors du déverrouillage du "
+"volume caché*."
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5751,6 +5791,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*Si c'est la première fois que vous déverrouillez le stockage caché, vous "
+"devrez peut-être créer une partition sur le volume caché. Vous devrez "
+"utiliser* `Disk Utility <https://support.apple.com/en-gb/guide/disk-utility/"
+"dskutl14027/mac>`_. *Veillez à créer les partitions sur le périphérique qui "
+"est apparu lors du déverrouillage du volume caché.*"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5935,6 +5980,11 @@ msgid ""
 "prompt you to do so. You can then format the hidden storage using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Si c'est la première fois que vous déverrouillez le stockage caché, vous "
+"devrez peut-être créer une partition sur le volume caché. Dans ce cas, "
+"Windows vous invitera à le faire. Vous pouvez ensuite formater le stockage "
+"caché en utilisant FAT32, pour une compatibilité avec la plupart des "
+"systèmes d'exploitation.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
@@ -6654,4 +6704,3 @@ msgstr ""
 #~ "de mise à jour Nitrokey est "
 #~ "actuellement disponible pour macOS et "
 #~ "Windows uniquement."
-
