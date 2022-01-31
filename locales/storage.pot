@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-06 15:59+0100\n"
+"POT-Creation-Date: 2022-01-31 15:35+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -667,6 +667,10 @@ msgid "Hidden volumes allow to hide data in the encrypted volume. The data is pr
 msgstr ""
 
 #: ../storage/faq.rst:88
+#: ../storage/hidden.rst:8
+#: ../storage/hidden.rst:8
+#: ../storage/hidden.rst:8
+#: ../storage/hidden.rst:8
 msgid "You can configure up to four hidden volumes. Once unlocked, hidden volumes behave like ordinary storage where you can create various partitions, filesystems and store files as you like."
 msgstr ""
 
@@ -859,6 +863,111 @@ msgstr ""
 #: ../storage/firmware-update-manually.rst:105
 #: ../storage/firmware-update-manually.rst:105
 msgid "Windows should automatically ask to format your USB Stick as soon as you insert the USB Stick the first time again in Windows. Just accept the request for being able to use the USB Stick as previously."
+msgstr ""
+
+#: ../storage/hidden.rst:2
+#: ../storage/hidden.rst:2
+#: ../storage/hidden.rst:2
+#: ../storage/hidden.rst:2
+msgid "Hidden Storage"
+msgstr ""
+
+#: ../storage/hidden.rst:4
+#: ../storage/hidden.rst:4
+#: ../storage/hidden.rst:4
+#: ../storage/hidden.rst:4
+msgid "Hidden volumes allow hiding data inside of the encrypted volume. This data is protected by an additional passphrase. Without the passphrase, it is impossible to know whether hidden volumes are present. They are not configured with a default password so that their existence can be `denied plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`_. The concept is similar to `VeraCrypt's/TrueCrypt's hidden volume <https://veracrypt.eu/en/docs/hidden-volume/>`_ but with Nitrokey Storage the entire functionality of hidden volumes is implemented in hardware."
+msgstr ""
+
+#: ../storage/hidden.rst:11
+#: ../storage/hidden.rst:11
+#: ../storage/hidden.rst:11
+#: ../storage/hidden.rst:11
+msgid "If you chose to use hidden volumes, you must not write any data to the encrypted storage, or you risk loosing data in the hidden volume."
+msgstr ""
+
+#: ../storage/hidden.rst:14
+#: ../storage/hidden.rst:14
+#: ../storage/hidden.rst:14
+#: ../storage/hidden.rst:14
+msgid "Hidden volumes are hidden within the free space of the encrypted storage, which will be overwritten when writing data to the encrypted volume. There are no mechanisms to prevent accidental overwritting of hidden data, as they would reveal the existence of hidden volumes. Data written to the encrypted volume before the creation of the hidden volume can still be read."
+msgstr ""
+
+#: ../storage/hidden.rst:23
+#: ../storage/hidden.rst:23
+#: ../storage/hidden.rst:23
+#: ../storage/hidden.rst:23
+msgid "Configuring hidden volumes"
+msgstr ""
+
+#: ../storage/hidden.rst:26
+#: ../storage/hidden.rst:26
+#: ../storage/hidden.rst:26
+#: ../storage/hidden.rst:26
+msgid "Copy some files to the encrypted volume prior to creating the hidden volume."
+msgstr ""
+
+#: ../storage/hidden.rst:29
+#: ../storage/hidden.rst:29
+#: ../storage/hidden.rst:29
+#: ../storage/hidden.rst:29
+msgid "Using a journaling filesystem may risk overwriting the hidden data. The encrypted filesystem is formated to FAT32 by default, and it is recommended to leave it that way when using the hidden storage."
+msgstr ""
+
+#: ../storage/hidden.rst:32
+#: ../storage/hidden.rst:32
+#: ../storage/hidden.rst:32
+#: ../storage/hidden.rst:32
+msgid "Unlock the encrypted storage using the Nitrokey App."
+msgstr ""
+
+#: ../storage/hidden.rst:33
+#: ../storage/hidden.rst:33
+#: ../storage/hidden.rst:33
+#: ../storage/hidden.rst:33
+msgid "In the menu, select \"setup hidden volume\"."
+msgstr ""
+
+#: ../storage/hidden.rst:38
+#: ../storage/hidden.rst:38
+#: ../storage/hidden.rst:38
+#: ../storage/hidden.rst:38
+msgid "Enter a strong passphrase twice. Unlike the encrypted storage PIN, there are no limit to the number of attempts at opening hidden storage, so the strength of the passphrase is extremely important."
+msgstr ""
+
+#: ../storage/hidden.rst:39
+#: ../storage/hidden.rst:39
+#: ../storage/hidden.rst:39
+#: ../storage/hidden.rst:39
+msgid "Define the storage area to be used. Hidden volumes are stored in the free areas of the encrypted volume. When creating multiple hidden volume, you need to allocate a part of the free area for each volume, making sure they do not overlap."
+msgstr ""
+
+#: ../storage/hidden.rst:45
+#: ../storage/hidden.rst:45
+#: ../storage/hidden.rst:45
+#: ../storage/hidden.rst:45
+msgid "Using hidden volumes"
+msgstr ""
+
+#: ../storage/hidden.rst:47
+#: ../storage/hidden.rst:47
+#: ../storage/hidden.rst:47
+#: ../storage/hidden.rst:47
+msgid "Unlock the encrypted volume."
+msgstr ""
+
+#: ../storage/hidden.rst:48
+#: ../storage/hidden.rst:48
+#: ../storage/hidden.rst:48
+#: ../storage/hidden.rst:48
+msgid "Select \"unlock hidden volume\" and enter any of the hidden volume's passwords."
+msgstr ""
+
+#: ../storage/hidden.rst:52
+#: ../storage/hidden.rst:52
+#: ../storage/hidden.rst:52
+#: ../storage/hidden.rst:52
+msgid "Make sure to unmount/eject all partitions on the hidden volumes before locking or disconnecting the Nitrokey."
 msgstr ""
 
 #: ../storage/index.rst:2
@@ -1826,6 +1935,11 @@ msgstr ""
 
 #: ../pro/linux/hard-disk-encryption.rst:178
 msgid "Source of the guide: https://www.nitrokey.com/documentation/applications#a:hard-disk-encryption"
+msgstr ""
+
+#: ../storage/linux/hidden-os-specific-partitioning.rst:1
+#: ../storage/linux/hidden-os-specific-partitioning.rst:1
+msgid "*If this is the first time you unlock the hidden storage, you may need to create a partition on the hidden volume. You will need to open a partition manager such as* `GParted <https://gparted.org/>`_ *and create one or more partitions manually. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.*"
 msgstr ""
 
 #: ../storage/linux/index.rst:2
@@ -3860,6 +3974,11 @@ msgstr ""
 msgid "Start the Nitrokey Update Tool and click “Select firmware file”. Select the previously downloaded firmware \".hex\" file. Click on “Update firmware” to start the update process. Your device should get detected by the Nitrokey App again as soon as the update is finished."
 msgstr ""
 
+#: ../storage/mac/hidden-os-specific-partitioning.rst:1
+#: ../storage/mac/hidden-os-specific-partitioning.rst:1
+msgid "*If this is the first time you unlock the hidden storage, you may need to create a partition on the hidden volume. You will need to use* `Disk Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`_. *Make sure to create the partitions on the device that appeared when unlocking the hidden volume.*"
+msgstr ""
+
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
 msgstr ""
@@ -4000,6 +4119,11 @@ msgstr ""
 
 #: ../pro/windows/2fa-microsoft.rst:91
 msgid "From now on, when signing in you need an OTP additionally to your password."
+msgstr ""
+
+#: ../storage/windows/hidden-os-specific-partitioning.rst:1
+#: ../storage/windows/hidden-os-specific-partitioning.rst:1
+msgid "*If this is the first time you unlock the hidden storage, you may need to create a partition on the hidden volume. In this case, Windows will prompt you to do so. You can then format the hidden storage using FAT32, for compatibility with most operating systems.*"
 msgstr ""
 
 #: ../storage/windows/index.rst:2
