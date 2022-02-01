@@ -30,3 +30,4 @@ Choose your product
    nitrophone/index
    nextbox/index
    nethsm/index
+   software/index
