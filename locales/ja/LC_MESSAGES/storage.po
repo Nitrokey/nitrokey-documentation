@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-31 15:35+0100\n"
-"PO-Revision-Date: 2022-01-26 11:44+0000\n"
-"Last-Translator: Ben (Weblate Admin) <ben@dotplex.com>\n"
+"PO-Revision-Date: 2022-02-03 15:11+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-storage/ja/>\n"
 "Language: ja\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-storage/ja/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../storage/factory-reset.rst:2
@@ -760,7 +761,7 @@ msgstr "Windowsで初めてUSBスティックを挿入すると、Windowsは自�
 
 #: ../storage/hidden.rst:2
 msgid "Hidden Storage"
-msgstr ""
+msgstr "隠しストレージ"
 
 #: ../storage/hidden.rst:4
 msgid ""
@@ -773,12 +774,18 @@ msgid ""
 "<https://veracrypt.eu/en/docs/hidden-volume/>`_ but with Nitrokey Storage"
 " the entire functionality of hidden volumes is implemented in hardware."
 msgstr ""
+"隠しボリュームでは、暗号化されたボリュームの中にデータを隠すことができます。このデータは、追加のパスフレーズで保護されます。パスフレーズがないと、隠しボリ"
+"ュームが存在するかどうかを知ることができません。隠しボリュームにはデフォルトのパスワードが設定されていないため、`その存在をもっともらしく<https:/"
+"/en.wikipedia.org/wiki/"
+"Plausible_deniability>`_否定することができます。このコンセプトは、`VeraCrypt's/"
+"TrueCrypt'sの隠しボリューム<https://veracrypt.eu/en/docs/hidden-volume/>`_と似ていますが、"
+"Nitrokey Storageでは、隠しボリュームの機能全体がハードウェアで実装されています。"
 
 #: ../storage/hidden.rst:11
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted storage, or you risk loosing data in the hidden volume."
-msgstr ""
+msgstr "隠しボリュームを使用する場合、暗号化されたストレージにデータを書き込まないようにしないと、隠しボリュームのデータが失われる危険性があります。"
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -789,16 +796,19 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"隠しボリュームは、暗号化されたストレージの空き領域の中に隠されており、暗号化されたボリュームにデータを書き込むと上書きされてしまいます。隠しボリュームの存"
+"在が明らかになってしまうため、隠しデータを誤って上書きしてしまうことを防ぐ仕組みはありません。隠しボリュームの作成前に暗号化ボリュームに書き込まれたデータ"
+"は、まだ読むことができます。"
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
-msgstr ""
+msgstr "隠しボリュームの設定"
 
 #: ../storage/hidden.rst:26
 msgid ""
 "Copy some files to the encrypted volume prior to creating the hidden "
 "volume."
-msgstr ""
+msgstr "隠しボリュームを作成する前に、いくつかのファイルを暗号化ボリュームにコピーします。"
 
 #: ../storage/hidden.rst:29
 msgid ""
@@ -806,14 +816,16 @@ msgid ""
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using the hidden storage."
 msgstr ""
+"ジャーナリングファイルシステムを使用すると、隠しデータを上書きする危険性があります。暗号化されたファイルシステムはデフォルトでFAT32にフォーマットされ"
+"ており、隠しストレージを使用する際はそのままにしておくことをお勧めします。"
 
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted storage using the Nitrokey App."
-msgstr ""
+msgstr "暗号化されたストレージをNitrokeyアプリで解除します。"
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
-msgstr ""
+msgstr "メニューから「隠しボリュームの設定」を選択します。"
 
 #: ../storage/hidden.rst:38
 msgid ""
@@ -821,6 +833,8 @@ msgid ""
 "are no limit to the number of attempts at opening hidden storage, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
+"強力なパスフレーズを2回入力します。暗号化されたストレージのPINとは異なり、隠しストレージを開くための試行回数に制限はありませんので、パスフレーズの強度"
+"は非常に重要です。"
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -829,27 +843,28 @@ msgid ""
 " need to allocate a part of the free area for each volume, making sure "
 "they do not overlap."
 msgstr ""
+"使用する記憶領域を定義します。隠しボリュームは、暗号化されたボリュームの空き領域に保存されます。複数の隠しボリュームを作成する場合は、各ボリュームに空き領"
+"域の一部を割り当てて、重ならないようにする必要があります。"
 
 #: ../storage/hidden.rst:45
 msgid "Using hidden volumes"
-msgstr ""
+msgstr "隠しボリュームの使用"
 
 #: ../storage/hidden.rst:47
-#, fuzzy
 msgid "Unlock the encrypted volume."
-msgstr "暗号化されたボリュームを破壊する"
+msgstr "暗号化されたボリュームのロックを解除します。"
 
 #: ../storage/hidden.rst:48
 msgid ""
 "Select \"unlock hidden volume\" and enter any of the hidden volume's "
 "passwords."
-msgstr ""
+msgstr "隠しボリュームのロック解除」を選択し、任意の隠しボリューム'のパスワードを入力します。"
 
 #: ../storage/hidden.rst:52
 msgid ""
 "Make sure to unmount/eject all partitions on the hidden volumes before "
 "locking or disconnecting the Nitrokey."
-msgstr ""
+msgstr "Nitrokeyをロックまたは切断する前に、必ず隠しボリューム上のすべてのパーティションをアンマウント/イジェクトしてください。"
 
 #: ../storage/index.rst:2
 msgid "Nitrokey Storage 2"
@@ -2136,6 +2151,9 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*今回初めて隠しストレージのロックを解除する場合は、隠しボリュームにパーティションを作成する必要があるかもしれません。`GParted "
+"<https://gparted.org/>`_などのパーティションマネージャーを開いて、1つまたは複数のパーティションを手動で作成する必要があります。パ"
+"ーティションの作成は、隠しボリュームのロック解除時に表示されたデバイス上で行うようにしてください。"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -4732,6 +4750,9 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*隠しストレージのロックを初めて解除する場合は、隠しボリュームにパーティションを作成する必要があるかもしれません。その際には、* `"
+"ディスクユーティリティ <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/"
+"mac>`_を使用する必要があります。*隠しボリュームのロック解除時に表示されたデバイスに、必ずパーティションを作成してください*。"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -4904,6 +4925,8 @@ msgid ""
 "prompt you to do so. You can then format the hidden storage using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*今回初めて隠しストレージのロックを解除する場合は、隠しボリュームにパーティションを作成する必要があるかもしれません。この場合、Windowsはそのための"
+"プロンプトを表示します。その後、ほとんどのオペレーティングシステムとの互換性のために、FAT32を使用して隠しストレージをフォーマットすることができます。"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
@@ -5067,4 +5090,3 @@ msgid ""
 "<smime.html>`_ with the Nitrokey. The driver has to be installed on every"
 " computer you want to use the certificate on."
 msgstr "これで、パスワードの代わりにNitrokeyを使ってコンピュータにログオンする準備が整い、Nitrokeyを使って`S/MIMEメールの暗号化/署名<smime.html>`_ができるようになります。ドライバは、証明書を使用したいすべてのコンピュータにインストールする必要があります。"
-
