@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-31 15:35+0100\n"
-"PO-Revision-Date: 2022-01-15 15:12+0000\n"
+"PO-Revision-Date: 2022-02-03 15:11+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Finnish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-storage/fi/>\n"
 "Language: fi\n"
-"Language-Team: Finnish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-storage/fi/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../storage/factory-reset.rst:2
@@ -874,7 +875,7 @@ msgstr ""
 
 #: ../storage/hidden.rst:2
 msgid "Hidden Storage"
-msgstr ""
+msgstr "Piilotettu varastointi"
 
 #: ../storage/hidden.rst:4
 msgid ""
@@ -887,12 +888,24 @@ msgid ""
 "<https://veracrypt.eu/en/docs/hidden-volume/>`_ but with Nitrokey Storage"
 " the entire functionality of hidden volumes is implemented in hardware."
 msgstr ""
+"Piilotetut tiedostot mahdollistavat tietojen piilottamisen salatun tiedoston "
+"sisälle. Nämä tiedot suojataan ylimääräisellä salasanalla. Ilman salasanaa "
+"on mahdotonta tietää, onko piilotettuja tietueita olemassa. Niitä ei ole "
+"määritetty oletussalasanalla, joten niiden olemassaolo voidaan ` kieltää "
+"uskottavasti <https://en.wikipedia.org/wiki/Plausible_deniability>`_. "
+"Konsepti on samankaltainen kuin `VeraCrypt's/TrueCrypt's Piilotetut "
+"tilavuudet <https://veracrypt.eu/en/docs/hidden-volume/>`_, mutta Nitrokey "
+"Storagen kohdalla koko piilotettujen tilavuuksien toiminnallisuus on "
+"toteutettu laitteistossa."
 
 #: ../storage/hidden.rst:11
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted storage, or you risk loosing data in the hidden volume."
 msgstr ""
+"Jos päätät käyttää piilotettuja tietovälineitä, et saa kirjoittaa mitään "
+"tietoja salattuun tallennustilaan, tai vaarana on, että piilotetussa "
+"tietovälineessä olevat tiedot menetetään."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -903,16 +916,23 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Piilotetut volyymit on piilotettu salatun tallennustilan vapaaseen tilaan, "
+"joka ylikirjoitetaan, kun tietoja kirjoitetaan salattuun volyymiin. "
+"Piilotettujen tietojen vahingossa tapahtuvan ylikirjoittamisen estämiseksi "
+"ei ole olemassa mekanismeja, koska ne paljastaisivat piilotettujen volyymien "
+"olemassaolon. Salattuun tietueeseen ennen piilotetun tietueen luomista "
+"kirjoitetut tiedot voidaan edelleen lukea."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
-msgstr ""
+msgstr "Piilotettujen volyymien määrittäminen"
 
 #: ../storage/hidden.rst:26
 msgid ""
 "Copy some files to the encrypted volume prior to creating the hidden "
 "volume."
 msgstr ""
+"Kopioi joitain tiedostoja salattuun asemaan ennen piilotetun aseman luomista."
 
 #: ../storage/hidden.rst:29
 msgid ""
@@ -920,14 +940,18 @@ msgid ""
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using the hidden storage."
 msgstr ""
+"Journalisoivan tiedostojärjestelmän käyttäminen saattaa aiheuttaa riskin "
+"piilotettujen tietojen ylikirjoittamisesta. Salattu tiedostojärjestelmä on "
+"oletusarvoisesti alustettu FAT32-tiedostojärjestelmäksi, ja on suositeltavaa "
+"jättää se sellaiseksi, kun käytät piilotettua tallennustilaa."
 
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted storage using the Nitrokey App."
-msgstr ""
+msgstr "Avaa salatun tallennustilan lukitus Nitrokey-sovelluksella."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
-msgstr ""
+msgstr "Valitse valikosta \"setup hidden volume\"."
 
 #: ../storage/hidden.rst:38
 msgid ""
@@ -935,6 +959,9 @@ msgid ""
 "are no limit to the number of attempts at opening hidden storage, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
+"Kirjoita vahva salasana kahdesti. Toisin kuin salatun tallennustilan PIN-"
+"koodi, piilotetun tallennustilan avausyrityksiä ei ole rajoitettu, joten "
+"salasanan vahvuus on erittäin tärkeää."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -943,27 +970,34 @@ msgid ""
 " need to allocate a part of the free area for each volume, making sure "
 "they do not overlap."
 msgstr ""
+"Määrittele käytettävä tallennusalue. Piilotetut volyymit tallennetaan "
+"salatun volyymin vapaille alueille. Kun luot useita piilotettuja tietueita, "
+"sinun on varattava osa vapaasta alueesta kullekin tietueelle ja "
+"varmistettava, että ne eivät ole päällekkäisiä."
 
 #: ../storage/hidden.rst:45
 msgid "Using hidden volumes"
-msgstr ""
+msgstr "Piilotettujen volyymien käyttäminen"
 
 #: ../storage/hidden.rst:47
-#, fuzzy
 msgid "Unlock the encrypted volume."
-msgstr "Tuhoaa salatun niteen"
+msgstr "Avaa salatun tietueen lukitus."
 
 #: ../storage/hidden.rst:48
 msgid ""
 "Select \"unlock hidden volume\" and enter any of the hidden volume's "
 "passwords."
 msgstr ""
+"Valitse \"Unlock hidden volume\" ja syötä mikä tahansa piilotetun "
+"äänenvoimakkuuden salasana."
 
 #: ../storage/hidden.rst:52
 msgid ""
 "Make sure to unmount/eject all partitions on the hidden volumes before "
 "locking or disconnecting the Nitrokey."
 msgstr ""
+"Varmista, että poistat/poistat kaikki piilotettujen volyymien osiot ennen "
+"Nitrokey-avaimen lukitsemista tai irrottamista."
 
 #: ../storage/index.rst:2
 msgid "Nitrokey Storage 2"
@@ -2467,6 +2501,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*Jos tämä on ensimmäinen kerta, kun avaat piilotetun tallennustilan "
+"lukituksen, sinun on ehkä luotava osio piilotetulle asemalle. Sinun on "
+"avattava osiohallintaohjelma, kuten* `GParted <https://gparted.org/>`_ *ja "
+"luotava yksi tai useampi osio manuaalisesti. Varmista, että luot osiot sille "
+"laitteelle, joka ilmestyi näkyviin, kun piilotetun aseman lukitus avattiin.*"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5571,6 +5610,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*Jos tämä on ensimmäinen kerta, kun avaat piilotetun tallennustilan "
+"lukituksen, sinun on ehkä luotava osio piilotetulle asemalle. Sinun on "
+"käytettävä* `Disk Utility <https://support.apple.com/en-gb/guide/"
+"disk-utility/dskutl14027/mac>`_. *Varmista, että luot osiot laitteeseen, "
+"joka ilmestyi näkyviin, kun piilotetun aseman lukitus avattiin*."
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5749,6 +5793,11 @@ msgid ""
 "prompt you to do so. You can then format the hidden storage using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Jos tämä on ensimmäinen kerta, kun avaat piilotetun tallennustilan "
+"lukituksen, sinun on ehkä luotava osio piilotetulle asemalle. Tällöin "
+"Windows kehottaa sinua tekemään niin. Tämän jälkeen voit alustaa piilotetun "
+"tallennustilan FAT32-formaatilla, joka on yhteensopiva useimpien "
+"käyttöjärjestelmien kanssa.*."
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
@@ -5942,4 +5991,3 @@ msgstr ""
 " sijasta, ja voit käyttää `S/MIME-sähköpostin salausta/allekirjoitusta "
 "<smime.html>`_ Nitrokey-avaimen kanssa. Ajuri on asennettava jokaiseen "
 "tietokoneeseen, jossa haluat käyttää varmenteen."
-
