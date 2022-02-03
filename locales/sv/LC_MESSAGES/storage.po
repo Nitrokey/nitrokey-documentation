@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-31 15:35+0100\n"
-"PO-Revision-Date: 2022-01-15 15:11+0000\n"
+"PO-Revision-Date: 2022-02-03 15:11+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Swedish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-storage/sv/>\n"
 "Language: sv\n"
-"Language-Team: Swedish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-storage/sv/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../storage/factory-reset.rst:2
@@ -873,7 +874,7 @@ msgstr ""
 
 #: ../storage/hidden.rst:2
 msgid "Hidden Storage"
-msgstr ""
+msgstr "Dold förvaring"
 
 #: ../storage/hidden.rst:4
 msgid ""
@@ -886,12 +887,23 @@ msgid ""
 "<https://veracrypt.eu/en/docs/hidden-volume/>`_ but with Nitrokey Storage"
 " the entire functionality of hidden volumes is implemented in hardware."
 msgstr ""
+"Dolda volymer gör det möjligt att gömma data i den krypterade volymen. Dessa "
+"data skyddas av en extra lösenfras. Utan lösenfrasen är det omöjligt att "
+"veta om det finns dolda volymer. De är inte konfigurerade med ett "
+"standardlösenord så att deras existens kan `förnekas på ett trovärdigt sätt "
+"<https://en.wikipedia.org/wiki/Plausible_deniability>`_. Konceptet liknar "
+"`VeraCrypt's/TrueCrypt's dolda volym <https://veracrypt.eu/en/docs/"
+"hidden-volume/>`_ men med Nitrokey Storage genomförs hela funktionen för "
+"dolda volymer i hårdvara."
 
 #: ../storage/hidden.rst:11
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted storage, or you risk loosing data in the hidden volume."
 msgstr ""
+"Om du väljer att använda dolda volymer får du inte skriva några data till "
+"den krypterade lagringen, annars riskerar du att förlora data i den dolda "
+"volymen."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -902,16 +914,24 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Dolda volymer är dolda i det fria utrymmet i den krypterade lagringsvolymen, "
+"som kommer att skrivas över när data skrivs till den krypterade volymen. Det "
+"finns inga mekanismer för att förhindra oavsiktlig överskrivning av dolda "
+"data, eftersom detta skulle avslöja att det finns dolda volymer. Data som "
+"skrivits till den krypterade volymen innan den dolda volymen skapades kan "
+"fortfarande läsas."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
-msgstr ""
+msgstr "Konfigurera dolda volymer"
 
 #: ../storage/hidden.rst:26
 msgid ""
 "Copy some files to the encrypted volume prior to creating the hidden "
 "volume."
 msgstr ""
+"Kopiera några filer till den krypterade volymen innan du skapar den dolda "
+"volymen."
 
 #: ../storage/hidden.rst:29
 msgid ""
@@ -919,14 +939,18 @@ msgid ""
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using the hidden storage."
 msgstr ""
+"Om du använder ett journaliserande filsystem kan det finnas risk för att de "
+"dolda uppgifterna skrivs över. Det krypterade filsystemet är som standard "
+"formaterat till FAT32, och det rekommenderas att låta det vara så när du "
+"använder den dolda lagringen."
 
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted storage using the Nitrokey App."
-msgstr ""
+msgstr "Lås upp den krypterade lagringen med hjälp av Nitrokey-appen."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
-msgstr ""
+msgstr "I menyn väljer du \"setup hidden volume\"."
 
 #: ../storage/hidden.rst:38
 msgid ""
@@ -934,6 +958,9 @@ msgid ""
 "are no limit to the number of attempts at opening hidden storage, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
+"Ange en stark lösenfras två gånger. Till skillnad från PIN-koden för "
+"krypterad lagring finns det ingen begränsning för antalet försök att öppna "
+"den dolda lagringen, så lösenfrasens styrka är extremt viktig."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -942,27 +969,34 @@ msgid ""
 " need to allocate a part of the free area for each volume, making sure "
 "they do not overlap."
 msgstr ""
+"Definiera det lagringsområde som ska användas. Dolda volymer lagras i den "
+"krypterade volymens fria områden. När du skapar flera dolda volymer måste du "
+"allokera en del av det fria området för varje volym och se till att de inte "
+"överlappar varandra."
 
 #: ../storage/hidden.rst:45
 msgid "Using hidden volumes"
-msgstr ""
+msgstr "Använda dolda volymer"
 
 #: ../storage/hidden.rst:47
-#, fuzzy
 msgid "Unlock the encrypted volume."
-msgstr "Förstör krypterad volym"
+msgstr "Lås upp den krypterade volymen."
 
 #: ../storage/hidden.rst:48
 msgid ""
 "Select \"unlock hidden volume\" and enter any of the hidden volume's "
 "passwords."
 msgstr ""
+"Välj \"unlock hidden volume\" (Lås upp dold volym\") och ange något av de "
+"dolda volymernas lösenord."
 
 #: ../storage/hidden.rst:52
 msgid ""
 "Make sure to unmount/eject all partitions on the hidden volumes before "
 "locking or disconnecting the Nitrokey."
 msgstr ""
+"Se till att du avmonterar/skjuter ut alla partitioner på de dolda volymerna "
+"innan du låser eller kopplar bort Nitrokey."
 
 #: ../storage/index.rst:2
 msgid "Nitrokey Storage 2"
@@ -2457,6 +2491,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*Om det är första gången du låser upp den dolda lagringsvolymen kan du "
+"behöva skapa en partition på den dolda volymen. Du måste öppna en "
+"partitionshanterare som* `GParted <https://gparted.org/>`_ *och skapa en "
+"eller flera partitioner manuellt. Se till att du skapar partitionerna på den "
+"enhet som visades när du låste upp den dolda volymen.*"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5550,6 +5589,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*Om det är första gången du låser upp den dolda lagringsvolymen kan du "
+"behöva skapa en partition på den dolda volymen. Du måste använda* `Disk "
+"Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`"
+"_. *Se till att skapa partitioner på den enhet som dök upp när du låste upp "
+"den dolda volymen.*"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5734,6 +5778,10 @@ msgid ""
 "prompt you to do so. You can then format the hidden storage using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Om det är första gången du låser upp den dolda lagringsvolymen kan du "
+"behöva skapa en partition på den dolda volymen. I det här fallet kommer "
+"Windows att uppmana dig att göra det. Du kan sedan formatera den dolda "
+"lagringsvolymen med FAT32, för kompatibilitet med de flesta operativsystem.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
@@ -5926,4 +5974,3 @@ msgstr ""
 "lösenord och du kan använda `S/MIME-kryptering/signering av e-post "
 "<smime.html>`_ med Nitrokey. Drivrutinen måste installeras på varje dator"
 " som du vill använda certifikatet på."
-
