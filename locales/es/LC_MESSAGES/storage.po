@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-31 15:35+0100\n"
-"PO-Revision-Date: 2022-01-06 21:19+0000\n"
+"PO-Revision-Date: 2022-02-03 15:11+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-storage/es/>\n"
 "Language: es\n"
-"Language-Team: Spanish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-storage/es/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../storage/factory-reset.rst:2
@@ -898,7 +899,7 @@ msgstr ""
 
 #: ../storage/hidden.rst:2
 msgid "Hidden Storage"
-msgstr ""
+msgstr "Almacenamiento oculto"
 
 #: ../storage/hidden.rst:4
 msgid ""
@@ -911,12 +912,24 @@ msgid ""
 "<https://veracrypt.eu/en/docs/hidden-volume/>`_ but with Nitrokey Storage"
 " the entire functionality of hidden volumes is implemented in hardware."
 msgstr ""
+"Los volúmenes ocultos permiten ocultar datos dentro del volumen cifrado. "
+"Estos datos están protegidos por una frase de contraseña adicional. Sin la "
+"frase de contraseña, es imposible saber si los volúmenes ocultos están "
+"presentes. No están configurados con una contraseña por defecto para que su "
+"existencia pueda ser `denegada de forma plausible <https://en.wikipedia.org/"
+"wiki/Plausible_deniability>`_. El concepto es similar al de `VeraCrypt's/"
+"TrueCrypt's volumen oculto <https://veracrypt.eu/en/docs/hidden-volume/>`_ "
+"pero con Nitrokey Storage toda la funcionalidad de los volúmenes ocultos se "
+"implementa en hardware."
 
 #: ../storage/hidden.rst:11
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted storage, or you risk loosing data in the hidden volume."
 msgstr ""
+"Si eliges utilizar volúmenes ocultos, no debes escribir ningún dato en el "
+"almacenamiento encriptado, o te arriesgas a perder los datos del volumen "
+"oculto."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -927,16 +940,24 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Los volúmenes ocultos se esconden en el espacio libre del almacenamiento "
+"cifrado, que se sobrescribirá al escribir datos en el volumen cifrado. No "
+"existen mecanismos para evitar la sobreescritura accidental de los datos "
+"ocultos, ya que revelarían la existencia de los volúmenes ocultos. Los datos "
+"escritos en el volumen encriptado antes de la creación del volumen oculto "
+"pueden seguir siendo leídos."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
-msgstr ""
+msgstr "Configuración de volúmenes ocultos"
 
 #: ../storage/hidden.rst:26
 msgid ""
 "Copy some files to the encrypted volume prior to creating the hidden "
 "volume."
 msgstr ""
+"Copiar algunos archivos en el volumen cifrado antes de crear el volumen "
+"oculto."
 
 #: ../storage/hidden.rst:29
 msgid ""
@@ -944,14 +965,19 @@ msgid ""
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using the hidden storage."
 msgstr ""
+"El uso de un sistema de archivos con registro en el diario puede suponer el "
+"riesgo de sobrescribir los datos ocultos. El sistema de archivos encriptado "
+"está formateado en FAT32 por defecto, y se recomienda dejarlo así cuando se "
+"utilice el almacenamiento oculto."
 
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted storage using the Nitrokey App."
 msgstr ""
+"Desbloquea el almacenamiento encriptado utilizando la aplicación Nitrokey."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
-msgstr ""
+msgstr "En el menú, seleccione \"configurar el volumen oculto\"."
 
 #: ../storage/hidden.rst:38
 msgid ""
@@ -959,6 +985,10 @@ msgid ""
 "are no limit to the number of attempts at opening hidden storage, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
+"Introduzca una frase de contraseña fuerte dos veces. A diferencia del PIN de "
+"almacenamiento encriptado, no hay límite en el número de intentos para abrir "
+"el almacenamiento oculto, por lo que la fuerza de la frase de contraseña es "
+"extremadamente importante."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -967,27 +997,34 @@ msgid ""
 " need to allocate a part of the free area for each volume, making sure "
 "they do not overlap."
 msgstr ""
+"Defina el área de almacenamiento que se utilizará. Los volúmenes ocultos se "
+"almacenan en las áreas libres del volumen cifrado. Cuando se crean varios "
+"volúmenes ocultos, es necesario asignar una parte del área libre para cada "
+"volumen, asegurándose de que no se superpongan."
 
 #: ../storage/hidden.rst:45
 msgid "Using hidden volumes"
-msgstr ""
+msgstr "Uso de volúmenes ocultos"
 
 #: ../storage/hidden.rst:47
-#, fuzzy
 msgid "Unlock the encrypted volume."
-msgstr "Destruye el volumen encriptado"
+msgstr "Desbloquea el volumen encriptado."
 
 #: ../storage/hidden.rst:48
 msgid ""
 "Select \"unlock hidden volume\" and enter any of the hidden volume's "
 "passwords."
 msgstr ""
+"Seleccione \"desbloquear volumen oculto\" e introduzca cualquiera de las "
+"contraseñas del volumen oculto'."
 
 #: ../storage/hidden.rst:52
 msgid ""
 "Make sure to unmount/eject all partitions on the hidden volumes before "
 "locking or disconnecting the Nitrokey."
 msgstr ""
+"Asegúrese de desmontar/expulsar todas las particiones de los volúmenes "
+"ocultos antes de bloquear o desconectar la Nitrokey."
 
 #: ../storage/index.rst:2
 msgid "Nitrokey Storage 2"
@@ -2516,6 +2553,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*Si es la primera vez que desbloquea el almacenamiento oculto, es posible "
+"que tenga que crear una partición en el volumen oculto. Deberá abrir un "
+"gestor de particiones como* `GParted <https://gparted.org/>`_ *y crear una o "
+"más particiones manualmente. Asegúrese de crear las particiones en el "
+"dispositivo que apareció al desbloquear el volumen oculto.*"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5667,6 +5709,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*Si es la primera vez que desbloquea el almacenamiento oculto, es posible "
+"que tenga que crear una partición en el volumen oculto. Tendrá que utilizar* "
+"`Utilidad de discos <https://support.apple.com/en-gb/guide/disk-utility/"
+"dskutl14027/mac>`_. *Asegúrese de crear las particiones en el dispositivo "
+"que apareció al desbloquear el volumen oculto.*"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5851,6 +5898,11 @@ msgid ""
 "prompt you to do so. You can then format the hidden storage using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Si es la primera vez que desbloquea el almacenamiento oculto, es posible "
+"que tenga que crear una partición en el volumen oculto. En este caso, "
+"Windows le pedirá que lo haga. A continuación, puede formatear el "
+"almacenamiento oculto utilizando FAT32, para que sea compatible con la "
+"mayoría de los sistemas operativos.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
@@ -6049,4 +6101,3 @@ msgstr ""
 "correo electrónico <smime.html>`_ con el Nitrokey. Hay que instalar el "
 "controlador en cada ordenador en el que se quiera utilizar el "
 "certificado."
-
