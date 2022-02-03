@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-31 15:35+0100\n"
-"PO-Revision-Date: 2022-01-15 15:11+0000\n"
+"PO-Revision-Date: 2022-02-03 15:11+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Polish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-storage/pl/>\n"
 "Language: pl\n"
-"Language-Team: Polish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-storage/pl/>\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
-"(n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../storage/factory-reset.rst:2
@@ -887,7 +888,7 @@ msgstr ""
 
 #: ../storage/hidden.rst:2
 msgid "Hidden Storage"
-msgstr ""
+msgstr "Ukryte składowanie"
 
 #: ../storage/hidden.rst:4
 msgid ""
@@ -900,12 +901,23 @@ msgid ""
 "<https://veracrypt.eu/en/docs/hidden-volume/>`_ but with Nitrokey Storage"
 " the entire functionality of hidden volumes is implemented in hardware."
 msgstr ""
+"Woluminy ukryte umożliwiają ukrycie danych wewnątrz zaszyfrowanego woluminu. "
+"Dane te są chronione przez dodatkowe hasło. Bez hasła nie można stwierdzić, "
+"czy woluminy ukryte są obecne. Nie są one skonfigurowane z domyślnym hasłem, "
+"więc ich istnienie można `zaprzeczyć w sposób wiarygodny <https://en."
+"wikipedia.org/wiki/Plausible_deniability>`_. Koncepcja jest podobna do "
+"`VeraCrypt's/TrueCrypt's hidden volume <https://veracrypt.eu/en/docs/"
+"hidden-volume/>`_, ale w Nitrokey Storage cała funkcjonalność ukrytych "
+"woluminów jest zaimplementowana sprzętowo."
 
 #: ../storage/hidden.rst:11
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted storage, or you risk loosing data in the hidden volume."
 msgstr ""
+"Jeśli zdecydujesz się na użycie woluminów ukrytych, nie wolno zapisywać "
+"żadnych danych na zaszyfrowanym magazynie, w przeciwnym razie ryzykujesz "
+"utratę danych w woluminie ukrytym."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -916,16 +928,24 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Wolumeny ukryte są ukryte w wolnej przestrzeni zaszyfrowanej pamięci "
+"masowej, która zostanie nadpisana podczas zapisu danych na zaszyfrowanym "
+"wolumenie. Nie ma mechanizmów zapobiegających przypadkowemu nadpisaniu "
+"ukrytych danych, ponieważ ujawniłyby one istnienie woluminów ukrytych. Dane "
+"zapisane na woluminie zaszyfrowanym przed utworzeniem woluminu ukrytego mogą "
+"być nadal odczytywane."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
-msgstr ""
+msgstr "Konfigurowanie woluminów ukrytych"
 
 #: ../storage/hidden.rst:26
 msgid ""
 "Copy some files to the encrypted volume prior to creating the hidden "
 "volume."
 msgstr ""
+"Skopiuj niektóre pliki na wolumin zaszyfrowany przed utworzeniem woluminu "
+"ukrytego."
 
 #: ../storage/hidden.rst:29
 msgid ""
@@ -933,14 +953,18 @@ msgid ""
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using the hidden storage."
 msgstr ""
+"Używanie systemu plików z journalingiem może spowodować ryzyko nadpisania "
+"ukrytych danych. Zaszyfrowany system plików jest domyślnie sformatowany na "
+"FAT32 i zaleca się pozostawienie go w ten sposób podczas korzystania z "
+"ukrytej pamięci masowej."
 
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted storage using the Nitrokey App."
-msgstr ""
+msgstr "Odblokuj zaszyfrowaną pamięć masową za pomocą aplikacji Nitrokey."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
-msgstr ""
+msgstr "W menu wybierz \"setup hidden volume\"."
 
 #: ../storage/hidden.rst:38
 msgid ""
@@ -948,6 +972,9 @@ msgid ""
 "are no limit to the number of attempts at opening hidden storage, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
+"Wprowadź dwukrotnie silne hasło. W przeciwieństwie do kodu PIN do "
+"zaszyfrowanej pamięci masowej nie ma ograniczeń co do liczby prób otwarcia "
+"ukrytej pamięci masowej, dlatego siła hasła jest niezwykle ważna."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -956,27 +983,34 @@ msgid ""
 " need to allocate a part of the free area for each volume, making sure "
 "they do not overlap."
 msgstr ""
+"Określ obszar przechowywania danych, który ma być użyty. Woluminy ukryte są "
+"przechowywane w wolnych obszarach woluminu zaszyfrowanego. Podczas tworzenia "
+"wielu woluminów ukrytych, musisz przydzielić część wolnego obszaru dla "
+"każdego woluminu, upewniając się, że nie nakładają się one na siebie."
 
 #: ../storage/hidden.rst:45
 msgid "Using hidden volumes"
-msgstr ""
+msgstr "Używanie woluminów ukrytych"
 
 #: ../storage/hidden.rst:47
-#, fuzzy
 msgid "Unlock the encrypted volume."
-msgstr "Niszczy zaszyfrowany wolumin"
+msgstr "Odblokuj zaszyfrowany wolumin."
 
 #: ../storage/hidden.rst:48
 msgid ""
 "Select \"unlock hidden volume\" and enter any of the hidden volume's "
 "passwords."
 msgstr ""
+"Wybierz \"Odblokuj ukryty wolumin\" i wprowadź dowolne z haseł ukrytego "
+"woluminu's."
 
 #: ../storage/hidden.rst:52
 msgid ""
 "Make sure to unmount/eject all partitions on the hidden volumes before "
 "locking or disconnecting the Nitrokey."
 msgstr ""
+"Upewnij się, że przed zablokowaniem lub odłączeniem Nitrokey odmontujesz/"
+"odrzucisz wszystkie partycje na ukrytych woluminach."
 
 #: ../storage/index.rst:2
 msgid "Nitrokey Storage 2"
@@ -2486,6 +2520,12 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*Jeśli po raz pierwszy odblokowujesz ukrytą pamięć masową, może być "
+"konieczne utworzenie partycji na ukrytym woluminie. Konieczne będzie "
+"otwarcie menedżera partycji, takiego jak* `GParted <https://gparted.org/>`_ *"
+"i ręczne utworzenie jednej lub więcej partycji. Upewnij się, że utworzysz "
+"partycje na urządzeniu, które pojawiło się podczas odblokowywania ukrytego "
+"woluminu."
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5608,6 +5648,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
+"*Jeśli po raz pierwszy odblokowujesz ukryty magazyn, może być konieczne "
+"utworzenie partycji na ukrytym woluminie. Będziesz musiał użyć* `Disk "
+"Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`"
+"_. *Upewnij się, że utworzysz partycje na urządzeniu, które pojawiło się "
+"podczas odblokowywania woluminu ukrytego."
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5788,6 +5833,11 @@ msgid ""
 "prompt you to do so. You can then format the hidden storage using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Jeśli po raz pierwszy odblokowujesz ukryty magazyn, może być konieczne "
+"utworzenie partycji na ukrytym woluminie. W takim przypadku system Windows "
+"wyświetli stosowny monit. Następnie można sformatować ukryty magazyn przy "
+"użyciu formatu FAT32, który zapewnia zgodność z większością systemów "
+"operacyjnych."
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
@@ -5981,4 +6031,3 @@ msgstr ""
 "zamiast hasła i możesz użyć ` szyfrowania/podpisywania emaili S/MIME "
 "<smime.html>`_ z Nitrokey. Sterownik musi być zainstalowany na każdym "
 "komputerze, na którym chcesz używać certyfikatu."
-
