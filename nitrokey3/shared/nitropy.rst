@@ -13,11 +13,11 @@ Please see the `pynitrokey readme <https://github.com/Nitrokey/pynitrokey#instal
 Listing Nitrokey 3 devices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use ``nitropy ls`` or ``nitropy nk3 list`` to list all connected devices:
+Use ``nitropy list`` or ``nitropy nk3 list`` to list all connected devices:
 
 ::
 
-    $ nitropy ls
+    $ nitropy list
     Nitrokey tool for Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 & NetHSM
     :: 'Nitrokey FIDO2' keys
     :: 'Nitrokey Start' keys:
@@ -45,7 +45,7 @@ The following commands are currently available for querying device information:
 Working with multiple devices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If multiple Nitrokey 3 devices are connected, you can use the ``--path`` option to select one of them.  To determine the path of a device, use the ``nitropy ls`` or ``nitropy nk3 list`` command.
+If multiple Nitrokey 3 devices are connected, you can use the ``--path`` option to select one of them.  To determine the path of a device, use the ``nitropy list`` or ``nitropy nk3 list`` command.
 
 ::
 
