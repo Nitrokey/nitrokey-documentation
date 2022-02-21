@@ -19,6 +19,12 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
     Nitrokey Storage can store and encrypt 8, 32, or 64 GB of data (depending on
     particular model).
 
+
+**Q:** Why can't I access the encrypted storage on a new Nitrokey Storage?
+   On a new Nitrokey Storage device, before you can access the encrypted volume
+   make sure you first "Destroy encrypted data" inside the Nitrokey App.
+
+
 .. include:: ../shared-faqs/pins.rst 
 
 
