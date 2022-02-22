@@ -212,7 +212,7 @@ html_theme_options = {
 	# Toc options
 	'collapse_navigation': True,
 	'sticky_navigation': False,
-	'navigation_depth': 3,
+	'navigation_depth': -1,
 	'includehidden': True, # to show also hidden TOCs in the menu bar
 	'titles_only': False,
         'canonical_url': "https://docs.nitrokey.com/",
