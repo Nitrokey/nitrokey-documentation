@@ -210,7 +210,7 @@ html_theme_options = {
 	'prev_next_buttons_location': 'bottom',
 	'style_external_links': True,
 	# Toc options
-	'collapse_navigation': True,
+	'collapse_navigation': False,
 	'sticky_navigation': False,
 	'navigation_depth': -1,
 	'includehidden': True, # to show also hidden TOCs in the menu bar
