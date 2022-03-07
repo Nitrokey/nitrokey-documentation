@@ -17,17 +17,12 @@ everyday smartphone with more apps we recommend:
    Aurora Store. In Aurora Store, you can install all apps from Google Play Store.
 
 3. Many apps work without Google Play Services. However, if you want to use apps
-   that require Google Play Services, you can install `Google Play Services in a sandbox <https://grapheneos.org/usage#sandboxed-play-services>`_ as follows.
-   In the future, an installer will be provided to simplify the installation
-   process. 
+   that require Google Play Services, you can install `Google Play Services in a sandbox <https://grapheneos.org/usage#sandboxed-google-play>`_as follows.
    
-   1. Install `com.google.android.gsf <https://apps.grapheneos.org/packages/com.google.android.gsf/>`_.
-   2. Install `com.google.android.gms <https://apps.grapheneos.org/packages/com.google.android.gms/>`_.
-   3. Download all 5 files from `com.android.vending <https://apps.grapheneos.org/packages/com.android.vending/>`_.
-   4. Open F-Droid and install Split APKs Installer (SAI). (Also available from the Aurora Store)
-   5. Open Split APKs Installer and install all five files you downloaded in step 3. 
-      **Note:** The correct base file has probably been renamed to ``base (2).apk``.
-   6. From the home screen, select: *Settings -> Apps -> Google Play services and disable battery optimization*
+   1. Open Graphenes app repository client: *Home screen -> Apps*
+   2. Install the 3 core Google Play Apps ("Google Services Framework", "Google Play store", "Google Play Services").
+   4. Disable batterie optimization for Google Play Services (for Push to work properly). 
+      From the home screen, select: *Settings -> Apps -> Google Play services > Battery > Unrestricted*
    7. Open the Google Play Store once and press "Sign in" to start the
       initialization. You don't have to finish the sign in and a real login is not
       necessary. This is solely to initialize the software.
