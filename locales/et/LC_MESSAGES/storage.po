@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:39+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Estonian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/et/>\n"
@@ -904,14 +904,12 @@ msgstr ""
 "puhul on kogu peidetud mahtude funktsionaalsus rakendatud riistvaras."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
-"Kui te otsustate kasutada varjatud mahtu, ei tohi te krüpteeritud "
-"salvestusruumi andmeid kirjutada, sest muidu on oht, et varjatud mahu "
-"andmed lähevad kaduma."
+"Kui te otsustate kasutada varjatud mahtu, ei tohi te krüpteeritud mahtu "
+"andmeid kirjutada, sest muidu on oht, et varjatud mahu andmed lähevad kaduma."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -922,6 +920,11 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Varjatud mahud on peidetud krüpteeritud mahu vabasse ruumi, mis kirjutatakse "
+"üle, kui andmeid krüpteeritud mahule kirjutatakse. Puuduvad mehhanismid, mis "
+"takistaksid varjatud andmete juhuslikku ülekirjutamist, kuna need "
+"paljastaksid varjatud mahtude olemasolu. Enne varjatud mahu loomist "
+"krüpteeritud mahule kirjutatud andmeid saab endiselt lugeda."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -936,36 +939,32 @@ msgstr ""
 "andmekandja loomist."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
 msgstr ""
 "Journalisatsioonifailisüsteemi kasutamine võib ohustada peidetud andmete "
-"ülekirjutamist. Krüpteeritud failisüsteem on vaikimisi vormindatud "
-"FAT32-süsteemiks ja soovitatav on jätta see nii, kui kasutate peidetud "
-"salvestusruumi."
+"ülekirjutamist. Krüpteeritud failisüsteem on vaikimisi vormindatud FAT32-"
+"süsteemiks ja soovitatakse seda varjatud mahtude kasutamisel nii jätta."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Avage krüpteeritud salvestusruumi lukustus Nitrokey rakenduse abil."
+msgstr "Avage krüpteeritud maht Nitrokey rakenduse abil."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "Valige menüüst \"peidetud helitugevuse seadistamine\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
-"Sisestage kaks korda tugev salasõna. Erinevalt krüpteeritud "
-"salvestusruumi PIN-koodist ei ole varjatud salvestusruumi avamise katsete"
-" arv piiratud, seega on paroolfraasi tugevus äärmiselt oluline."
+"Sisestage kaks korda tugev salasõna. Erinevalt krüpteeritud mahu PIN-koodist "
+"ei ole varjatud mahtude avamise katsete arv piiratud, seega on paroolfraasi "
+"tugevus äärmiselt oluline."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2478,7 +2477,6 @@ msgstr ""
 ":hard-disk-encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2486,11 +2484,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Kui see on esimene kord, kui avate peidetud mälu, peate võib-olla looma "
-"peidetud mahule partitsiooni. Teil tuleb avada partitsioonihaldur, "
-"näiteks* `GParted <https://gparted.org/>`_ *ja luua üks või mitu "
-"partitsiooni käsitsi. Veenduge, et loote partitsioonid sellele seadmele, "
-"mis ilmus peidetud mahu avamisel *."
+"*Kui see on esimene kord, kui avate peidetud andmekogu, peate võib-olla "
+"looma peidetud andmekogule partitsiooni. Teil tuleb avada "
+"partitsioonihaldur, näiteks* `GParted <https://gparted.org/>`_ *ja luua üks "
+"või mitu partitsiooni käsitsi. Veenduge, et loote partitsioonid sellele "
+"seadmele, mis ilmus peidetud mahu avamisel *."
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5541,7 +5539,6 @@ msgstr ""
 "värskendus on lõpetatud."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5549,10 +5546,10 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Kui see on esimene kord, kui avate peidetud mälu, peate võib-olla looma "
-"peidetud mahule partitsiooni. Selleks peate kasutama* `Disk Utility "
-"<https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`_. "
-"*Vältige, et loote seadmesse partitsioonid, mis ilmusid peidetud mahu "
+"*Kui see on esimene kord, kui avate peidetud andmekogu, peate võib-olla "
+"looma peidetud andmekogule partitsiooni. Selleks peate kasutama* `Disk "
+"Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`"
+"_. *Vältige, et loote seadmesse partitsioonid, mis ilmusid peidetud mahu "
 "avamisel."
 
 #: ../storage/mac/index.rst:2
@@ -5735,6 +5732,10 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Kui see on esimene kord, kui avate peidetud andmekogu, peate võib-olla "
+"looma peidetud andmekogule partitsiooni. Sellisel juhul palub Windows seda "
+"teha. Seejärel võid sa varjatud mahu vormindada, kasutades FAT32, et see "
+"oleks ühilduv enamiku operatsioonisüsteemidega *."
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
