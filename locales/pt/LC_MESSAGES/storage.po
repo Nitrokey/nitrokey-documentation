@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:38+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/pt/>\n"
@@ -927,14 +927,12 @@ msgstr ""
 "toda a funcionalidade dos volumes ocultos é implementada no hardware."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
 "Se você optar por usar volumes ocultos, não deve escrever nenhum dado no "
-"armazenamento criptografado, ou corre o risco de perder dados no volume "
-"oculto."
+"volume criptografado, ou corre o risco de perder dados no volume oculto."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -945,6 +943,12 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Os volumes ocultos estão escondidos dentro do espaço livre do volume "
+"criptografado, que será sobrescrito ao escrever os dados no volume "
+"criptografado. Não existem mecanismos para evitar a sobregravação acidental "
+"de dados ocultos, pois eles revelariam a existência de volumes ocultos. Os "
+"dados escritos no volume criptografado antes da criação do volume oculto "
+"ainda podem ser lidos."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -959,7 +963,6 @@ msgstr ""
 " oculto."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
@@ -968,28 +971,25 @@ msgstr ""
 "A utilização de um sistema de ficheiros de diário pode correr o risco de "
 "sobrescrever os dados ocultos. O sistema de arquivos criptografado é "
 "formatado para FAT32 por padrão, e é recomendado deixá-lo dessa forma ao "
-"usar o armazenamento oculto."
+"usar volumes ocultos."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Desbloqueie o armazenamento encriptado utilizando a aplicação Nitrokey."
+msgstr "Desbloqueie o volume encriptado utilizando a aplicação Nitrokey."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "No menu, selecione \"setup hidden volume\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
-"Digite uma senha forte duas vezes. Ao contrário do PIN de armazenamento "
-"encriptado, não há limite para o número de tentativas de abertura de "
-"armazenamento oculto, por isso a força da frase-chave é extremamente "
-"importante."
+"Digite uma senha forte duas vezes. Ao contrário do PIN do volume encriptado, "
+"não há limite para o número de tentativas de abertura de volumes escondidos, "
+"por isso a força da frase-chave é extremamente importante."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2542,7 +2542,6 @@ msgstr ""
 ":hard-disk-encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2550,11 +2549,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Se esta for a primeira vez que você desbloqueia o armazenamento oculto, "
-"pode ser necessário criar uma partição no volume oculto. Você precisará "
-"abrir um gerenciador de partições como* `GParted <https://gparted.org/>`_"
-" *e criar uma ou mais partições manualmente. Certifique-se de criar as "
-"partições no dispositivo que apareceram ao desbloquear o volume oculto.*"
+"*Se esta é a primeira vez que você desbloqueia o volume oculto, você pode "
+"precisar criar uma partição no volume oculto. Você precisará abrir um "
+"gerenciador de partições como* `GParted <https://gparted.org/>`_ *e criar "
+"uma ou mais partições manualmente. Certifique-se de criar as partições no "
+"dispositivo que apareceram ao desbloquear o volume oculto.*"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5658,7 +5657,6 @@ msgstr ""
 "pela Nitrokey App novamente assim que a actualização estiver concluída."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5666,11 +5664,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Se esta for a primeira vez que você desbloqueia o armazenamento oculto, "
-"pode ser necessário criar uma partição no volume oculto. Você precisará "
-"usar* `Disk Utility <https://support.apple.com/en-gb/guide/disk-"
-"utility/dskutl14027/mac>`_. *Crie as partições no dispositivo que "
-"apareceram ao desbloquear o volume oculto.*"
+"*Se esta é a primeira vez que você desbloqueia o volume oculto, você pode "
+"precisar criar uma partição no volume oculto. Você precisará usar* `Disk "
+"Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`"
+"_. *Crie as partições no dispositivo que apareceram ao desbloquear o volume "
+"oculto.*"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5854,6 +5852,10 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Se esta é a primeira vez que você desbloqueia o volume oculto, você pode "
+"precisar criar uma partição no volume oculto. Neste caso, o Windows irá "
+"solicitar que você o faça. Você pode então formatar o volume oculto usando "
+"FAT32, para compatibilidade com a maioria dos sistemas operacionais.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
