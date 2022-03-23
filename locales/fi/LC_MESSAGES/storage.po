@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:39+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Finnish <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/fi/>\n"
@@ -916,13 +916,12 @@ msgstr ""
 "laitteistossa."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
 "Jos päätät käyttää piilotettuja tietovälineitä, et saa kirjoittaa mitään "
-"tietoja salattuun tallennustilaan, tai vaarana on, että piilotetussa "
+"tietoja salattuun tietovälineeseen, tai vaarana on, että piilotetussa "
 "tietovälineessä olevat tiedot menetetään."
 
 #: ../storage/hidden.rst:14
@@ -934,6 +933,12 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Piilotetut niteet on piilotettu salatun niteen vapaaseen tilaan, joka "
+"ylikirjoitetaan, kun tietoja kirjoitetaan salattuun niteeseen. Piilotettujen "
+"tietojen vahingossa tapahtuvan ylikirjoittamisen estämiseksi ei ole olemassa "
+"mekanismeja, sillä ne paljastaisivat piilotettujen volyymien olemassaolon. "
+"Salattuun tietueeseen ennen piilotetun tietueen luomista kirjoitetut tiedot "
+"voidaan edelleen lukea."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -948,37 +953,33 @@ msgstr ""
 "luomista."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
 msgstr ""
 "Journalisoivan tiedostojärjestelmän käyttäminen saattaa aiheuttaa riskin "
-"piilotettujen tietojen ylikirjoittamisesta. Salattu tiedostojärjestelmä "
-"on oletusarvoisesti alustettu FAT32-tiedostojärjestelmäksi, ja on "
-"suositeltavaa jättää se sellaiseksi, kun käytät piilotettua "
-"tallennustilaa."
+"piilotettujen tietojen ylikirjoittamisesta. Salattu tiedostojärjestelmä on "
+"oletusarvoisesti alustettu FAT32-tiedostojärjestelmäksi, ja on suositeltavaa "
+"jättää se sellaiseksi, kun käytetään piilotettuja tietueita."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Avaa salatun tallennustilan lukitus Nitrokey-sovelluksella."
+msgstr "Avaa salatun tietueen lukitus Nitrokey-sovelluksella."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "Valitse valikosta \"setup hidden volume\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
-"Kirjoita vahva salasana kahdesti. Toisin kuin salatun tallennustilan PIN-"
-"koodi, piilotetun tallennustilan avausyrityksiä ei ole rajoitettu, joten "
-"salasanan vahvuus on erittäin tärkeää."
+"Kirjoita vahva salasana kahdesti. Toisin kuin salatun tietueen PIN-koodi, "
+"piilotettujen tietueiden avausyrityksiä ei ole rajoitettu, joten "
+"tunnuslauseen vahvuus on erittäin tärkeä."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2511,7 +2512,6 @@ msgstr ""
 "disk-encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2519,12 +2519,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Jos tämä on ensimmäinen kerta, kun avaat piilotetun tallennustilan "
-"lukituksen, sinun on ehkä luotava osio piilotetulle asemalle. Sinun on "
-"avattava osiohallintaohjelma, kuten* `GParted <https://gparted.org/>`_ "
-"*ja luotava yksi tai useampi osio manuaalisesti. Varmista, että luot "
-"osiot sille laitteelle, joka ilmestyi näkyviin, kun piilotetun aseman "
-"lukitus avattiin.*"
+"*Jos tämä on ensimmäinen kerta, kun avaat piilotetun aseman lukituksen, "
+"sinun on ehkä luotava osio piilotetulle asemalle. Sinun on avattava "
+"osiohallintaohjelma, kuten* `GParted <https://gparted.org/>`_ *ja luotava "
+"yksi tai useampi osio manuaalisesti. Varmista, että luot osiot sille "
+"laitteelle, joka ilmestyi näkyviin, kun piilotetun aseman lukitus avattiin*."
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5622,7 +5621,6 @@ msgstr ""
 "uudelleen heti, kun päivitys on valmis."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5630,11 +5628,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Jos tämä on ensimmäinen kerta, kun avaat piilotetun tallennustilan "
-"lukituksen, sinun on ehkä luotava osio piilotetulle asemalle. Sinun on "
-"käytettävä* `Disk Utility <https://support.apple.com/en-gb/guide/disk-"
-"utility/dskutl14027/mac>`_. *Varmista, että luot osiot laitteeseen, joka "
-"ilmestyi näkyviin, kun piilotetun aseman lukitus avattiin*."
+"*Jos tämä on ensimmäinen kerta, kun avaat piilotetun aseman lukituksen, "
+"sinun on ehkä luotava osio piilotetulle asemalle. Sinun on käytettävä* `Disk "
+"Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`"
+"_. *Varmista, että luot osiot laitteeseen, joka ilmestyi näkyviin piilotetun "
+"aseman lukituksen avaamisen yhteydessä*."
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5813,6 +5811,11 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Jos tämä on ensimmäinen kerta, kun avaat piilotetun aseman lukituksen, "
+"sinun on ehkä luotava osio piilotetulle asemalle. Tässä tapauksessa Windows "
+"kehottaa sinua tekemään niin. Tämän jälkeen voit alustaa piilotetun aseman "
+"FAT32-formaatilla, joka on yhteensopiva useimpien käyttöjärjestelmien "
+"kanssa.*."
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
