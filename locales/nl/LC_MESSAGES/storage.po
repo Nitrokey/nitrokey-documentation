@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:37+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Dutch <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/nl/>\n"
@@ -927,14 +927,13 @@ msgstr ""
 "geïmplementeerd."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
-"Als u ervoor kiest verborgen volumes te gebruiken, mag u geen gegevens "
-"naar de versleutelde opslag schrijven, anders loopt u het risico gegevens"
-" in het verborgen volume te verliezen."
+"Indien u ervoor kiest verborgen volumes te gebruiken, mag u geen gegevens "
+"naar het versleutelde volume schrijven, anders riskeert u gegevens in het "
+"verborgen volume te verliezen."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -945,6 +944,13 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Verborgen volumes zijn verborgen in de vrije ruimte van het gecodeerde "
+"volume, die worden overschreven wanneer gegevens naar het gecodeerde volume "
+"worden geschreven. Er zijn geen mechanismen om te voorkomen dat verborgen "
+"gegevens per ongeluk worden overschreven, omdat daardoor het bestaan van "
+"verborgen volumes zou worden onthuld. Gegevens die naar het gecodeerde "
+"volume zijn geschreven voordat het verborgen volume is gecreëerd, kunnen nog "
+"steeds worden gelezen."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -959,37 +965,34 @@ msgstr ""
 "verborgen volume aanmaakt."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
 msgstr ""
-"Het gebruik van een journaling bestandssysteem kan het risico inhouden "
-"dat de verborgen gegevens worden overschreven. Het versleutelde "
-"bestandssysteem is standaard geformatteerd op FAT32, en het wordt "
-"aanbevolen dit zo te laten bij gebruik van de verborgen opslag."
+"Het gebruik van een journaling bestandssysteem kan het risico inhouden dat "
+"de verborgen gegevens worden overschreven. Het versleutelde bestandssysteem "
+"is standaard geformatteerd op FAT32, en het wordt aanbevolen om dit zo te "
+"laten bij gebruik van verborgen volumes."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Ontgrendel de versleutelde opslag met de Nitrokey App."
+msgstr "Ontgrendel het versleutelde volume met de Nitrokey App."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "In het menu, selecteer \"setup hidden volume\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
-"Voer tweemaal een sterke wachtwoordzin in. In tegenstelling tot de PIN-"
-"code voor versleutelde opslag, is er geen limiet aan het aantal pogingen "
-"om verborgen opslag te openen, dus de sterkte van de wachtwoordzin is "
-"uiterst belangrijk."
+"Voer tweemaal een sterke passphrase in. In tegenstelling tot de PIN-code "
+"voor versleutelde volumes, is er geen limiet op het aantal pogingen om "
+"verborgen volumes te openen, dus de sterkte van de wachtwoordzin is uiterst "
+"belangrijk."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2535,7 +2538,6 @@ msgstr ""
 ":hard-disk-encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2543,12 +2545,12 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Als dit de eerste keer is dat u de verborgen opslag ontgrendelt, moet u "
+"*Als dit de eerste keer is dat u het verborgen volume ontgrendelt, moet u "
 "mogelijk een partitie maken op het verborgen volume. U moet een "
 "partitiebeheerder openen, zoals* `GParted <https://gparted.org/>`_ *en "
-"handmatig een of meer partities maken. Zorg ervoor dat u de partities "
-"maakt op het apparaat dat werd weergegeven bij het ontgrendelen van het "
-"verborgen volume.*"
+"handmatig een of meer partities maken. Zorg ervoor dat u de partities maakt "
+"op het apparaat dat werd weergegeven bij het ontgrendelen van het verborgen "
+"volume.*"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5699,7 +5701,6 @@ msgstr ""
 "voltooid is."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5707,12 +5708,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Als dit de eerste keer is dat u de verborgen opslag ontgrendelt, moet u "
-"wellicht een partitie aanmaken op het verborgen volume. U zult* "
-"`Schijfhulpprogramma <https://support.apple.com/en-gb/guide/disk-"
-"utility/dskutl14027/mac>`_ moeten gebruiken. *Zorg ervoor dat u de "
-"partities maakt op het apparaat dat verscheen bij het ontgrendelen van "
-"het verborgen volume.*"
+"*Als dit de eerste keer is dat u het verborgen volume ontgrendelt, moet u "
+"wellicht een partitie maken op het verborgen volume. U moet hiervoor* `"
+"Schijfhulpprogramma <https://support.apple.com/en-gb/guide/disk-utility/"
+"dskutl14027/mac>`_ gebruiken. *Zorg ervoor dat u de partities maakt op het "
+"apparaat dat verscheen bij het ontgrendelen van het verborgen volume.*"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5895,6 +5895,11 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Als dit de eerste keer is dat u het verborgen volume ontgrendelt, moet u "
+"wellicht een partitie maken op het verborgen volume. In dat geval zal "
+"Windows u vragen dit te doen. Vervolgens kunt u het verborgen volume "
+"formatteren met FAT32, voor compatibiliteit met de meeste "
+"besturingssystemen.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
