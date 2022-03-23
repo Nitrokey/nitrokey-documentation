@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:38+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Romanian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/ro/>\n"
@@ -934,13 +934,12 @@ msgstr ""
 "hardware."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
-"Dacă ați ales să utilizați volume ascunse, nu trebuie să scrieți date în "
-"memoria criptată, altfel riscați să pierdeți datele din volumul ascuns."
+"Dacă alegeți să utilizați volume ascunse, nu trebuie să scrieți date pe "
+"volumul criptat, altfel riscați să pierdeți datele din volumul ascuns."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -951,6 +950,12 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Volumele ascunse sunt ascunse în spațiul liber al volumului criptat, care va "
+"fi suprascris atunci când se scriu date în volumul criptat. Nu există "
+"mecanisme care să împiedice suprascrierea accidentală a datelor ascunse, "
+"deoarece acestea ar dezvălui existența volumelor ascunse. Datele scrise pe "
+"volumul criptat înainte de crearea volumului ascuns pot fi în continuare "
+"citite."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -963,37 +968,34 @@ msgid ""
 msgstr "Copiați unele fișiere pe volumul criptat înainte de a crea volumul ascuns."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
 msgstr ""
 "Utilizarea unui sistem de fișiere cu jurnal poate risca să suprascrieți "
-"datele ascunse. Sistemul de fișiere criptat este format în mod implicit "
-"în FAT32 și se recomandă să fie lăsat așa atunci când se utilizează "
-"stocarea ascunsă."
+"datele ascunse. Sistemul de fișiere criptate este format în mod implicit în "
+"FAT32 și se recomandă să fie lăsat așa atunci când se utilizează volume "
+"ascunse."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Deblocați spațiul de stocare criptat cu ajutorul aplicației Nitrokey."
+msgstr "Deblocați volumul criptat cu ajutorul aplicației Nitrokey."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "În meniu, selectați \"setup hidden volume\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
-"Introduceți de două ori o frază de acces puternică. Spre deosebire de "
-"PIN-ul de stocare criptată, nu există o limită a numărului de încercări "
-"de deschidere a memoriei ascunse, astfel încât puterea frazei de acces "
-"este extrem de importantă."
+"Introduceți de două ori o frază de acces puternică. Spre deosebire de PIN-ul "
+"volumului criptat, nu există o limită a numărului de încercări de deschidere "
+"a volumelor ascunse, astfel încât puterea frazei de acces este extrem de "
+"importantă."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2551,7 +2553,6 @@ msgstr ""
 ":hard-disk-encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2559,12 +2560,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Dacă este prima dată când deblocați spațiul de stocare ascuns, este "
-"posibil să fie nevoie să creați o partiție pe volumul ascuns. Va trebui "
-"să deschideți un manager de partiții, cum ar fi* `GParted "
-"<https://gparted.org/>`_ *și să creați manual una sau mai multe partiții."
-" Asigurați-vă că creați partițiile pe dispozitivul care a apărut la "
-"deblocarea volumului ascuns*."
+"*Dacă este prima dată când deblocați volumul ascuns, este posibil să fie "
+"nevoie să creați o partiție pe volumul ascuns. Va trebui să deschideți un "
+"manager de partiții, cum ar fi* `GParted <https://gparted.org/>`_ *și să "
+"creați manual una sau mai multe partiții. Asigurați-vă că creați partițiile "
+"pe dispozitivul care a apărut la deblocarea volumului ascuns*."
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5710,7 +5710,6 @@ msgstr ""
 " aplicația Nitrokey App de îndată ce actualizarea este finalizată."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5718,11 +5717,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Dacă este prima dată când deblocați spațiul de stocare ascuns, este "
-"posibil să fie nevoie să creați o partiție pe volumul ascuns. Va trebui "
-"să utilizați* `Disk Utility <https://support.apple.com/en-gb/guide/disk-"
-"utility/dskutl14027/mac>`_. *Asigurați-vă că creați partițiile pe "
-"dispozitivul care a apărut la deblocarea volumului ascuns.*"
+"*Dacă este prima dată când deblocați volumul ascuns, este posibil să fie "
+"nevoie să creați o partiție pe volumul ascuns. Va trebui să utilizați* `Disk "
+"Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`"
+"_. *Asigurați-vă că creați partițiile pe dispozitivul care a apărut la "
+"deblocarea volumului ascuns.*"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5909,6 +5908,10 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Dacă este prima dată când deblocați volumul ascuns, este posibil să fie "
+"nevoie să creați o partiție pe volumul ascuns. În acest caz, Windows vă va "
+"solicita să faceți acest lucru. Apoi puteți formata volumul ascuns folosind "
+"FAT32, pentru compatibilitate cu majoritatea sistemelor de operare.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
