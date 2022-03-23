@@ -9,17 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:37+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Japanese <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/ja/>\n"
 "Language: ja\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-storage/ja/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../storage/factory-reset.rst:2
@@ -793,11 +792,11 @@ msgstr ""
 "Storageでは、隠しボリュームの機能全体がハードウェアで実装されています。"
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
-msgstr "隠しボリュームを使用する場合、暗号化されたストレージにデータを書き込まないようにしないと、隠しボリュームのデータが失われる危険性があります。"
+msgstr ""
+"隠しボリュームの使用を選択した場合、暗号化されたボリュームにデータを書き込まないようにしなければ、隠しボリュームのデータが失われる危険性があります。"
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -808,6 +807,8 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"隠しボリュームは、暗号化ボリュームの空き領域内に隠されており、暗号化ボリュームにデータを書き込むと上書きされます。隠しボリュームの存在を明らかにしてしまう"
+"ため、誤って上書きされることを防ぐ仕組みはありません。隠しボリュームが作成される前に暗号化ボリュームに書き込まれたデータは、まだ読み取ることができます。"
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -820,29 +821,30 @@ msgid ""
 msgstr "隠しボリュームを作成する前に、いくつかのファイルを暗号化ボリュームにコピーします。"
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
-msgstr "ジャーナリングファイルシステムを使用すると、隠しデータを上書きする危険性があります。暗号化されたファイルシステムはデフォルトでFAT32にフォーマットされており、隠しストレージを使用する際はそのままにしておくことをお勧めします。"
+msgstr ""
+"ジャーナリングファイルシステムを使用すると、隠しデータを上書きしてしまう危険性があります。暗号化されたファイルシステムはデフォルトで FAT32 "
+"にフォーマットされており、隠しボリュームを使用する場合はその ままにしておくことをお勧めします。"
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "暗号化されたストレージをNitrokeyアプリで解除します。"
+msgstr "Nitrokeyアプリを使用して暗号化されたボリュームのロックを解除します。"
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "メニューから「隠しボリュームの設定」を選択します。"
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
-msgstr "強力なパスフレーズを2回入力します。暗号化されたストレージのPINとは異なり、隠しストレージを開くための試行回数に制限はありませんので、パスフレーズの強度は非常に重要です。"
+msgstr ""
+"強力なパスフレーズを2回入力する。暗号化ボリュームの暗証番号と異なり、隠しボリュームを開く際の試行回数に制限がないため、パスフレーズの強度が非常に重要です"
+"。"
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2150,7 +2152,6 @@ msgstr ""
 "encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2158,8 +2159,9 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*今回初めて隠しストレージのロックを解除する場合は、隠しボリュームにパーティションを作成する必要があるかもしれません。`GParted "
-"<https://gparted.org/>`_などのパーティションマネージャーを開いて、1つまたは複数のパーティションを手動で作成する必要があります。パーティションの作成は、隠しボリュームのロック解除時に表示されたデバイス上で行うようにしてください。"
+"*隠しボリュームのロックを初めて解除する場合、隠しボリュームにパーティションを作成する必要がある場合があります。`GParted "
+"<https://gparted.org/>`_ などのパーティション マネージャーを開き、1 つまたは複数のパーティションを手動で作成する必要があります"
+"。隠しボリュームのロックを解除したときに表示されたデバイス上にパーティションを作成することを確認してください。"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -4749,7 +4751,6 @@ msgstr ""
 "firmware」をクリックして、アップデートを開始します。アップデートが完了すると、再びNitrokeyアプリでデバイスが検出されるようになります。"
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -4757,9 +4758,9 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*隠しストレージのロックを初めて解除する場合は、隠しボリュームにパーティションを作成する必要があるかもしれません。その際には、* "
-"`ディスクユーティリティ <https://support.apple.com/en-gb/guide/disk-"
-"utility/dskutl14027/mac>`_を使用する必要があります。*隠しボリュームのロック解除時に表示されたデバイスに、必ずパーティションを作成してください*。"
+"*隠しボリュームのロックを初めて解除する場合、隠しボリュームにパーティションを作成する必要がある場合があります。その場合は、* `Disk "
+"Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`"
+"_ を使用する必要があります。*隠しボリュームのロックを解除するときに表示されたデバイスにパーティションを作成することを確認してください。"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -4932,6 +4933,8 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*隠しボリュームのロックを初めて解除する場合、隠しボリュームにパーティションを作成する必要がある場合があります。この場合、Windowsはそのようにするよ"
+"う促します。その後、ほとんどのオペレーティングシステムとの互換性のために、FAT32を使用して隠しボリュームをフォーマットすることができます*。"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
@@ -5120,4 +5123,3 @@ msgstr "これで、パスワードの代わりにNitrokeyを使ってコンピ�
 #~ " using FAT32, for compatibility with "
 #~ "most operating systems.*"
 #~ msgstr "*今回初めて隠しストレージのロックを解除する場合は、隠しボリュームにパーティションを作成する必要があるかもしれません。この場合、Windowsはそのためのプロンプトを表示します。その後、ほとんどのオペレーティングシステムとの互換性のために、FAT32を使用して隠しストレージをフォーマットすることができます。"
-
