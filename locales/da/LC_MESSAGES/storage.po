@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:39+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Danish <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/da/>\n"
@@ -921,14 +921,13 @@ msgstr ""
 " er hele funktionaliteten af skjulte volumener implementeret i hardware."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
-"Hvis du vælger at bruge skjulte volumener, må du ikke skrive data til det"
-" krypterede lager, da du ellers risikerer at miste data på den skjulte "
-"volumen."
+"Hvis du vælger at bruge skjulte diskenheder, må du ikke skrive data til den "
+"krypterede diskenhed, da du ellers risikerer at miste data på den skjulte "
+"diskenhed."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -939,6 +938,12 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Skjulte volumener er skjult i det frie rum på den krypterede volumen, som "
+"vil blive overskrevet, når der skrives data til den krypterede volumen. Der "
+"findes ingen mekanismer til at forhindre utilsigtet overskrivning af skjulte "
+"data, da de ville afsløre eksistensen af skjulte volumener. Data, der er "
+"skrevet til den krypterede volumen før oprettelsen af den skjulte volumen, "
+"kan stadig læses."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -953,36 +958,33 @@ msgstr ""
 "skjulte diskette."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
 msgstr ""
-"Hvis du bruger et journaliserende filsystem, kan du risikere at "
-"overskrive de skjulte data. Det krypterede filsystem er som standard "
-"formateret til FAT32, og det anbefales at lade det være sådan, når du "
-"bruger den skjulte lagring."
+"Hvis du bruger et journaliserende filsystem, kan du risikere at overskrive "
+"de skjulte data. Det krypterede filsystem er som standard formateret til "
+"FAT32, og det anbefales at lade det forblive sådan, når du bruger skjulte "
+"volumener."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Lås det krypterede lager op ved hjælp af Nitrokey-appen."
+msgstr "Lås den krypterede volumen op ved hjælp af Nitrokey-appen."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "I menuen skal du vælge \"opsætning af skjult lydstyrke\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
 "Indtast en stærk adgangsfrase to gange. I modsætning til PIN-koden til "
-"krypteret lager er der ingen begrænsning på antallet af forsøg på at åbne"
-" skjult lager, så det er ekstremt vigtigt, at adgangsfrasen er stærk."
+"krypterede volumener er der ingen begrænsning på antallet af forsøg på at "
+"åbne skjulte volumener, så det er ekstremt vigtigt, at passphrasen er stærk."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2513,7 +2515,6 @@ msgstr ""
 "encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2521,11 +2522,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Hvis det er første gang, du låser det skjulte lager op, skal du muligvis"
-" oprette en partition på det skjulte volumen. Du skal åbne en "
-"partitionshåndtering som* `GParted <https://gparted.org/>`_ *og oprette "
-"en eller flere partitioner manuelt. Sørg for at oprette partitioner på "
-"den enhed, der blev vist, da du låste den skjulte volumen op.*"
+"*Hvis det er første gang, du låser den skjulte diskette op, skal du muligvis "
+"oprette en partition på den skjulte diskette. Du skal åbne en "
+"partitionshåndtering som* `GParted <https://gparted.org/>`_ *og oprette en "
+"eller flere partitioner manuelt. Sørg for at oprette partitioner på den "
+"enhed, der blev vist, da du låste den skjulte volumen op.*"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5617,7 +5618,6 @@ msgstr ""
 "færdig."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5625,11 +5625,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Hvis det er første gang, du låser det skjulte lager op, skal du muligvis"
-" oprette en partition på det skjulte volumen. Du skal bruge* `Disk "
-"Utility <https://support.apple.com/en-gb/guide/disk-"
-"utility/dskutl14027/mac>`_. *Sørg for at oprette de partitioner på den "
-"enhed, der blev vist, da du låste den skjulte volumen op.*"
+"*Hvis det er første gang, du låser den skjulte diskette op, skal du muligvis "
+"oprette en partition på den skjulte diskette. Du skal bruge* `Disk Utility "
+"<https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`_. *"
+"Sørg for at oprette partitioner på den enhed, der blev vist, da du låste den "
+"skjulte volumen op.*"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5808,6 +5808,10 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Hvis det er første gang, du låser den skjulte diskette op, skal du muligvis "
+"oprette en partition på den skjulte diskette. I dette tilfælde vil Windows "
+"bede dig om at gøre det. Du kan derefter formatere den skjulte volumen ved "
+"hjælp af FAT32 for at sikre kompatibilitet med de fleste operativsystemer.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
