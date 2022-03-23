@@ -9,18 +9,17 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:37+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/ru/>\n"
 "Language: ru\n"
-"Language-Team: Russian <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-storage/ru/>\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../storage/factory-reset.rst:2
@@ -920,14 +919,12 @@ msgstr ""
 "скрытых томов реализована аппаратно."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
-"Если вы решили использовать скрытые тома, вы не должны записывать данные "
-"в зашифрованное хранилище, иначе вы рискуете потерять данные в скрытом "
-"томе."
+"Если вы решили использовать скрытые тома, вы не должны записывать данные на "
+"зашифрованный том, иначе вы рискуете потерять данные на скрытом томе."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -938,6 +935,11 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Скрытые тома скрыты в свободном пространстве зашифрованного тома, которые "
+"будут перезаписаны при записи данных на зашифрованный том. Механизмов, "
+"предотвращающих случайную перезапись скрытых данных, не существует, "
+"поскольку они раскрыли бы существование скрытых томов. Данные, записанные на "
+"зашифрованный том до создания скрытого тома, все еще могут быть прочитаны."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -952,36 +954,33 @@ msgstr ""
 "тома."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
 msgstr ""
 "Использование журналируемой файловой системы может привести к риску "
-"перезаписи скрытых данных. Зашифрованная файловая система по умолчанию "
-"отформатирована в FAT32, и рекомендуется оставить ее в таком виде при "
-"использовании скрытого хранилища."
+"перезаписи скрытых данных. Зашифрованная файловая система по умолчанию имеет "
+"формат FAT32, и рекомендуется оставить его таким при использовании скрытых "
+"томов."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Разблокируйте зашифрованное хранилище с помощью приложения Nitrokey."
+msgstr "Разблокируйте зашифрованный том с помощью приложения Nitrokey."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "В меню выберите \"настроить скрытый том\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
 "Дважды введите надежную парольную фразу. В отличие от PIN-кода "
-"зашифрованного хранилища, количество попыток открытия скрытого хранилища "
-"не ограничено, поэтому надежность парольной фразы чрезвычайно важна."
+"зашифрованного тома, количество попыток открытия скрытых томов не "
+"ограничено, поэтому надежность парольной фразы чрезвычайно важна."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2527,7 +2526,6 @@ msgstr ""
 "encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2535,11 +2533,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Если вы впервые разблокируете скрытое хранилище, вам может понадобиться "
-"создать раздел на скрытом томе. Вам нужно будет открыть менеджер "
-"разделов, например* `GParted <https://gparted.org/>`_ *и создать один или"
-" несколько разделов вручную. Обязательно создайте разделы на устройстве, "
-"которое появилось при разблокировке скрытого тома*."
+"*Если вы впервые разблокируете скрытый том, вам может понадобиться создать "
+"раздел на скрытом томе. Вам нужно будет открыть менеджер разделов, например* "
+"`GParted <https://gparted.org/>`_ *и создать один или несколько разделов "
+"вручную. Обязательно создайте разделы на устройстве, которое появилось при "
+"разблокировке скрытого тома*."
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5662,7 +5660,6 @@ msgstr ""
 "приложением Nitrokey."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5670,11 +5667,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Если вы впервые разблокируете скрытое хранилище, вам может понадобиться "
-"создать раздел на скрытом томе. Для этого необходимо использовать* `Disk "
-"Utility <https://support.apple.com/en-gb/guide/disk-"
-"utility/dskutl14027/mac>`_. *Убедитесь, что создаете разделы на "
-"устройстве, которое появилось при разблокировке скрытого тома*."
+"*Если вы впервые разблокируете скрытый том, вам может понадобиться создать "
+"раздел на скрытом томе. Для этого необходимо использовать* `Disk Utility "
+"<https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`_. *"
+"Убедитесь, что создаете разделы на устройстве, которое появилось при "
+"разблокировке скрытого тома*."
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5854,6 +5851,10 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Если вы впервые разблокируете скрытый том, вам может потребоваться создать "
+"раздел на скрытом томе. В этом случае Windows предложит вам сделать это. "
+"Затем вы можете отформатировать скрытый том с помощью FAT32 для "
+"совместимости с большинством операционных систем.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
@@ -6091,4 +6092,3 @@ msgstr ""
 #~ "скрытое хранилище с помощью FAT32 для"
 #~ " совместимости с большинством операционных "
 #~ "систем.*"
-
