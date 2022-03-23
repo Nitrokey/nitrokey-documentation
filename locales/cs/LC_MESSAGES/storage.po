@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:38+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Czech <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/cs/>\n"
@@ -902,13 +902,12 @@ msgstr ""
 "celá funkce skrytých svazků implementována hardwarově."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
-"Pokud se rozhodnete použít skryté svazky, nesmíte do šifrovaného úložiště"
-" zapisovat žádná data, jinak hrozí, že o data ve skrytém svazku přijdete."
+"Pokud se rozhodnete použít skryté svazky, nesmíte na šifrovaný svazek "
+"zapisovat žádná data, jinak hrozí, že data ve skrytém svazku ztratíte."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -919,6 +918,11 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Skryté svazky jsou ukryty ve volném prostoru šifrovaného svazku, který bude "
+"při zápisu dat na šifrovaný svazek přepsán. Neexistují žádné mechanismy, "
+"které by zabránily náhodnému přepsání skrytých dat, protože by odhalily "
+"existenci skrytých svazků. Data zapsaná do šifrovaného svazku před "
+"vytvořením skrytého svazku lze stále číst."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -933,7 +937,6 @@ msgstr ""
 " svazku."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
@@ -941,28 +944,26 @@ msgid ""
 msgstr ""
 "Použití žurnálovacího souborového systému může znamenat riziko přepsání "
 "skrytých dat. Šifrovaný souborový systém je ve výchozím nastavení "
-"naformátován na FAT32 a doporučujeme jej tak při používání skrytého "
-"úložiště ponechat."
+"naformátován na FAT32 a doporučujeme jej tak při používání skrytých svazků "
+"ponechat."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Odemkněte zašifrované úložiště pomocí aplikace Nitrokey."
+msgstr "Odemkněte zašifrovaný svazek pomocí aplikace Nitrokey."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "V nabídce vyberte možnost \"nastavení skryté hlasitosti\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
-"Dvakrát zadejte silnou přístupovou frázi. Na rozdíl od zašifrovaného PIN "
-"kódu úložiště není počet pokusů o otevření skrytého úložiště omezen, "
-"proto je síla přístupové fráze mimořádně důležitá."
+"Dvakrát zadejte silnou přístupovou frázi. Na rozdíl od zašifrovaného svazku "
+"PIN není počet pokusů o otevření skrytých svazků omezen, takže síla hesla je "
+"nesmírně důležitá."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2479,7 +2480,6 @@ msgstr ""
 ":hard-disk-encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2487,11 +2487,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Pokud odemykáte skryté úložiště poprvé, může být nutné vytvořit oddíl na"
-" skrytém svazku. Budete muset otevřít správce diskových oddílů, "
-"například* `GParted <https://gparted.org/>`_ *a vytvořit jeden nebo více "
-"oddílů ručně. Ujistěte se, že jste vytvořili oddíly na zařízení, které se"
-" objevilo při odemykání skrytého svazku.*"
+"*Pokud skrytý svazek odemykáte poprvé, může být nutné vytvořit na skrytém "
+"svazku oddíl. Budete muset otevřít správce diskových oddílů, například* `"
+"GParted <https://gparted.org/>`_ *a vytvořit jeden nebo více oddílů ručně. "
+"Ujistěte se, že jste vytvořili oddíly na zařízení, které se objevilo při "
+"odemykání skrytého svazku.*"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5559,7 +5559,6 @@ msgstr ""
 "zařízení opět detekovat."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5567,11 +5566,10 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Pokud odemykáte skryté úložiště poprvé, může být nutné vytvořit oddíl na"
-" skrytém svazku. Budete muset použít* `Disk Utility "
-"<https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`_. "
-"*Ujistěte se, že jste vytvořili oddíly na zařízení, které se objevilo při"
-" odemykání skrytého svazku."
+"*Pokud skrytý svazek odemykáte poprvé, může být nutné vytvořit na skrytém "
+"svazku oddíl. Budete muset použít* `Disk Utility <https://support.apple.com/"
+"en-gb/guide/disk-utility/dskutl14027/mac>`_. *Ujistěte se, že jste vytvořili "
+"oddíly na zařízení, které se objevilo při odemykání skrytého svazku."
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5754,6 +5752,10 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Pokud skrytý svazek odemykáte poprvé, může být nutné vytvořit na skrytém "
+"svazku oddíl. V takovém případě vás k tomu systém Windows vyzve. Poté můžete "
+"skrytý svazek naformátovat pomocí formátu FAT32, aby byl kompatibilní s "
+"většinou operačních systémů.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
