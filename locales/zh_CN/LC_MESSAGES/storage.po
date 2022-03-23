@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:37+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/zh_Hans/>\n"
@@ -768,11 +768,10 @@ msgstr ""
 "/hidden-volume/>`_，但在Nitrokey Storage中，隐藏卷的整个功能是通过硬件实现的。"
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
-msgstr "如果你选择使用隐藏卷，你必须不向加密的存储空间写入任何数据，否则你有可能丢失隐藏卷中的数据。"
+msgstr "如果您选择使用隐藏卷，您必须不向加密卷写入任何数据，否则您有可能丢失隐藏卷中的数据。"
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -783,6 +782,8 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"隐藏卷隐藏在加密卷的自由空间内，当向加密卷写入数据时，会被覆盖。没有任何机制可以防止隐藏数据被意外覆盖，因为它们会暴露隐藏卷的存在。在创建隐藏卷之前写入加"
+"密卷的数据仍然可以被读取。"
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -795,29 +796,26 @@ msgid ""
 msgstr "在创建隐藏卷之前，将一些文件复制到加密卷中。"
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
-msgstr "使用日记文件系统可能有覆盖隐藏数据的风险。加密的文件系统默认为FAT32格式，建议在使用隐藏存储时保持这种格式。"
+msgstr "使用日记文件系统可能有覆盖隐藏数据的风险。加密文件系统的格式默认为FAT32，建议在使用隐藏卷时保持这种格式。"
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "使用Nitrokey应用程序解锁加密的存储。"
+msgstr "使用Nitrokey应用程序解锁加密的卷。"
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "在菜单中，选择\"设置隐藏音量\"。"
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
-msgstr "输入两次强大的口令。与加密存储密码不同，打开隐藏存储的尝试次数没有限制，所以口令的强度极其重要。"
+msgstr "输入两次强大的口令。与加密卷的PIN码不同，打开隐藏卷的尝试次数是没有限制的，所以口令的强度是非常重要的。"
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2082,7 +2080,6 @@ msgstr ""
 "encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2090,8 +2087,8 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*如果这是你第一次解锁隐藏存储，你可能需要在隐藏卷上创建一个分区。您需要打开一个分区管理器，如* `GParted "
-"<https://gparted.org/>`_ *并手动创建一个或多个分区。请确保在解锁隐藏卷时出现的设备上创建分区*。"
+"*如果这是您第一次解锁隐藏卷，您可能需要在隐藏卷上创建一个分区。您需要打开一个分区管理器，如* `GParted <https://gparted."
+"org/>`_ *并手动创建一个或多个分区。请确保在解锁隐藏卷时出现的设备上创建分区*。"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -4626,7 +4623,6 @@ msgstr ""
 "\"更新固件\"，开始更新过程。更新完成后，你的设备应该会被Nitrokey应用程序再次检测到。"
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -4634,9 +4630,8 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*如果这是你第一次解锁隐藏存储，你可能需要在隐藏卷上创建一个分区。你将需要使用* `Disk Utility "
-"<https://support.apple.com/en-gb/guide/disk-"
-"utility/dskutl14027/mac>`_。*请确保在解锁隐藏卷时出现的设备上创建分区*。"
+"*如果这是您第一次解锁隐藏卷，您可能需要在隐藏卷上创建一个分区。您将需要使用* `Disk Utility <https://support.apple."
+"com/en-gb/guide/disk-utility/dskutl14027/mac>`_。*请确保在解锁隐藏卷时出现的设备上创建分区*。"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -4797,6 +4792,8 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*如果这是您第一次解锁隐藏卷，您可能需要在隐藏卷上创建一个分区。在这种情况下，Windows会提示您这样做。然后您可以使用FAT32格式化隐藏卷，以便与大"
+"多数操作系统兼容。"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
