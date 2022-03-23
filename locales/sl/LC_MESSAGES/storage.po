@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:38+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/sl/>\n"
@@ -912,13 +912,12 @@ msgstr ""
 " funkcionalnost skritih volumnov izvedena v strojni opremi."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
-"Če se odločite za uporabo skritih zvezkov, v šifrirani pomnilnik ne smete"
-" zapisovati podatkov, sicer tvegate izgubo podatkov v skritem zvezku."
+"Če se odločite za uporabo skritih zvezkov, v šifrirani zvezek ne smete "
+"zapisati nobenih podatkov, sicer tvegate izgubo podatkov v skritem zvezku."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -929,6 +928,11 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Skriti zvezki so skriti v prostem prostoru šifriranega zvezka, ki bo pri "
+"zapisovanju podatkov v šifrirani zvezek prepisan. Mehanizmov za "
+"preprečevanje naključnega prepisovanja skritih podatkov ni, saj bi ti "
+"razkrili obstoj skritih zvezkov. Podatke, ki so bili v šifrirani zvezek "
+"zapisani pred ustvarjanjem skritega zvezka, je še vedno mogoče prebrati."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -943,35 +947,31 @@ msgstr ""
 "šifrirani volumen."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
 msgstr ""
-"Če uporabljate datotečni sistem z dnevnikom, lahko tvegate prepisovanje "
+"Pri uporabi datotečnega sistema z dnevnikom lahko pride do prepisovanja "
 "skritih podatkov. Šifrirani datotečni sistem je privzeto oblikovan kot "
-"FAT32, zato je priporočljivo, da ga pri uporabi skrite shrambe pustite "
-"tako."
+"FAT32, zato je priporočljivo, da ga pri uporabi skritih zvezkov pustite tako."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Z aplikacijo Nitrokey odklepajte šifrirani pomnilnik."
+msgstr "Z aplikacijo Nitrokey odklenite šifrirani zvezek."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "V meniju izberite možnost \"nastavitev skritega volumna\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
-"Dvakrat vnesite močno geslo. Za razliko od šifrirane shrambe PIN število "
-"poskusov odpiranja skrite shrambe ni omejeno, zato je moč gesla izjemno "
+"Dvakrat vnesite močno geslo. Za razliko od šifriranega volumna PIN število "
+"poskusov odpiranja skritih volumnov ni omejeno, zato je moč gesla izjemno "
 "pomembna."
 
 #: ../storage/hidden.rst:39
@@ -2491,7 +2491,6 @@ msgstr ""
 "disk-encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2499,11 +2498,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Če prvič odklepate skriti pomnilnik, boste morda morali ustvariti "
-"particijo na skritem volumnu. Odpreti boste morali upravitelja razdelkov,"
-" kot je* `GParted <https://gparted.org/>`_ *in ročno ustvariti enega ali "
-"več razdelkov. Prepričajte se, da ste particije ustvarili v napravi, ki "
-"se je pojavila ob odklepanju skritega volumna.*"
+"*Če prvič odklepate skriti zvezek, boste morda morali ustvariti particijo na "
+"skritem zvezku. Odpreti boste morali upravitelja razdelkov, kot je* `GParted "
+"<https://gparted.org/>`_ *in ročno ustvariti enega ali več razdelkov. "
+"Prepričajte se, da ste particije ustvarili v napravi, ki se je pojavila ob "
+"odklepanju skritega volumna.*"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5569,7 +5568,6 @@ msgstr ""
 "znova zaznati takoj, ko je posodobitev končana."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5577,11 +5575,10 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Če prvič odklepate skriti pomnilnik, boste morda morali ustvariti "
-"particijo na skritem volumnu. Uporabiti boste morali* `Uporabo za diske "
-"<https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`_. "
-"*Prepriča se, da ustvarite particije na napravi, ki se je pojavila ob "
-"odklepanju skritega volumna.*"
+"*Če prvič odklepate skriti zvezek, boste morda morali ustvariti particijo na "
+"skritem zvezku. Uporabiti boste morali* `Disk Utility <https://support.apple."
+"com/en-gb/guide/disk-utility/dskutl14027/mac>`_. *Pripomnite, da ustvarite "
+"particije na napravi, ki se je pojavila ob odklepanju skritega volumna.*"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5764,6 +5761,10 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Če prvič odklepate skriti zvezek, boste morda morali ustvariti particijo na "
+"skritem zvezku. V tem primeru vas bo sistem Windows pozval, da to storite. "
+"Skriti volumen lahko nato zaradi združljivosti z večino operacijskih "
+"sistemov formatirate s FAT32.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
