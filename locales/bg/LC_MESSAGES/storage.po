@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:38+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/bg/>\n"
@@ -923,14 +923,13 @@ msgstr ""
 "цялата функционалност на скритите томове е реализирана хардуерно."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
-"Ако сте избрали да използвате скрити томове, не трябва да записвате "
-"никакви данни в криптираното хранилище, в противен случай рискувате да "
-"загубите данните в скрития том."
+"Ако сте избрали да използвате скрити томове, не трябва да записвате никакви "
+"данни в криптирания том, в противен случай рискувате да загубите данните в "
+"скрития том."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -941,6 +940,12 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Скритите томове са скрити в свободното пространство на криптирания том, "
+"което ще бъде презаписано при запис на данни в криптирания том. Няма "
+"механизми за предотвратяване на случайно презаписване на скрити данни, тъй "
+"като те биха разкрили съществуването на скрити томове. Данните, записани в "
+"криптирания том преди създаването на скрития том, все още могат да бъдат "
+"прочетени."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -953,36 +958,33 @@ msgid ""
 msgstr "Копирайте някои файлове в криптирания том, преди да създадете скрития том."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
 msgstr ""
-"Използването на файлова система за водене на дневник може да доведе до "
-"риск от презаписване на скритите данни. Криптираната файлова система по "
-"подразбиране е форматирана като FAT32 и се препоръчва да я оставите така,"
-" когато използвате скритата памет."
+"Използването на файлова система за водене на дневник може да доведе до риск "
+"от презаписване на скритите данни. Криптираната файлова система по "
+"подразбиране е форматирана като FAT32 и се препоръчва да я оставите така, "
+"когато използвате скрити томове."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Отключете криптираното хранилище с помощта на приложението Nitrokey."
+msgstr "Отключете криптирания том с помощта на приложението Nitrokey."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "В менюто изберете \"setup hidden volume\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
-"Въведете два пъти силна парола. За разлика от ПИН кода на криптираното "
-"хранилище, броят на опитите за отваряне на скритото хранилище не е "
-"ограничен, така че силата на паролата е изключително важна."
+"Въведете два пъти силна парола. За разлика от ПИН кода на криптиран том, при "
+"скритите томове няма ограничение на броя на опитите за отваряне, така че "
+"силата на паролата е изключително важна."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2534,7 +2536,6 @@ msgstr ""
 "encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2542,11 +2543,11 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Ако отключвате скритата памет за първи път, може да се наложи да "
-"създадете дял в скрития том. Ще трябва да отворите мениджър на дялове, "
-"като например* `GParted <https://gparted.org/>`_ *и да създадете един или"
-" повече дялове ръчно. Уверете се, че сте създали дяловете на "
-"устройството, което се е появило при отключването на скрития том.*"
+"*Ако отключвате скрития том за първи път, може да се наложи да създадете дял "
+"на скрития том. Ще трябва да отворите мениджър на дялове, като например* `"
+"GParted <https://gparted.org/>`_ *и да създадете един или повече дялове "
+"ръчно. Уверете се, че сте създали дяловете на устройството, което се е "
+"появило при отключването на скрития том.*"
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5696,7 +5697,6 @@ msgstr ""
 "като актуализацията приключи."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5704,11 +5704,11 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Ако отключвате скритата памет за първи път, може да се наложи да "
-"създадете дял в скрития том. Ще трябва да използвате* `Disk Utility "
-"<https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`_. "
-"*Не забравяйте да създадете дяловете на устройството, което се е появило "
-"при отключването на скрития том.*"
+"*Ако отключвате скрития том за първи път, може да се наложи да създадете дял "
+"на скрития том. Ще трябва да използвате* `Disk Utility <https://support.apple"
+".com/en-gb/guide/disk-utility/dskutl14027/mac>`_. *Не забравяйте да "
+"създадете дяловете на устройството, което се е появило при отключването на "
+"скрития том.*"
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -5890,6 +5890,10 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Ако отключвате скрития том за първи път, може да се наложи да създадете дял "
+"на скрития том. В този случай Windows ще ви подкани да го направите. След "
+"това можете да форматирате скрития том, като използвате FAT32 за "
+"съвместимост с повечето операционни системи.*"
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
