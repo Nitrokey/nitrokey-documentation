@@ -9,17 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-21 14:14+0100\n"
-"PO-Revision-Date: 2022-03-12 11:37+0000\n"
+"PO-Revision-Date: 2022-03-23 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-storage/de/>\n"
 "Language: de\n"
-"Language-Team: German <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-storage/de/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../storage/factory-reset.rst:2
@@ -947,15 +946,13 @@ msgstr ""
 "implementiert."
 
 #: ../storage/hidden.rst:11
-#, fuzzy
 msgid ""
 "If you chose to use hidden volumes, you must not write any data to the "
 "encrypted volume, or you risk loosing data in the hidden volume."
 msgstr ""
-"Wenn Sie sich für die Verwendung von versteckten Volumes entscheiden, "
-"dürfen Sie keine Daten auf den verschlüsselten Speicher schreiben, da "
-"sonst die Gefahr besteht, dass Sie Daten auf dem versteckten Volume "
-"verlieren."
+"Wenn Sie sich für die Verwendung von versteckten Volumes entscheiden, dürfen "
+"Sie keine Daten auf das verschlüsselte Volume schreiben, da sonst die Gefahr "
+"besteht, dass Daten auf dem versteckten Volume verloren gehen."
 
 #: ../storage/hidden.rst:14
 msgid ""
@@ -966,6 +963,13 @@ msgid ""
 "to the encrypted volume before the creation of the hidden volume can "
 "still be read."
 msgstr ""
+"Versteckte Datenträger sind im freien Speicher des verschlüsselten "
+"Datenträgers verborgen, der beim Schreiben von Daten auf den verschlüsselten "
+"Datenträger überschrieben wird. Es gibt keine Mechanismen, die ein "
+"versehentliches Überschreiben von versteckten Daten verhindern, da sie die "
+"Existenz von versteckten Volumes aufdecken würden. Daten, die vor der "
+"Erstellung des versteckten Datenträgers auf den verschlüsselten Datenträger "
+"geschrieben wurden, können weiterhin gelesen werden."
 
 #: ../storage/hidden.rst:23
 msgid "Configuring hidden volumes"
@@ -980,37 +984,34 @@ msgstr ""
 "versteckte Volume erstellen."
 
 #: ../storage/hidden.rst:29
-#, fuzzy
 msgid ""
 "Using a journaling filesystem may risk overwriting the hidden data. The "
 "encrypted filesystem is formated to FAT32 by default, and it is "
 "recommended to leave it that way when using hidden volumes."
 msgstr ""
-"Bei Verwendung eines Journaling-Dateisystems besteht die Gefahr, dass die"
-" versteckten Daten überschrieben werden. Das verschlüsselte Dateisystem "
-"ist standardmäßig auf FAT32 formatiert, und es wird empfohlen, es so zu "
-"belassen, wenn Sie den versteckten Speicher verwenden."
+"Bei Verwendung eines Journaling-Dateisystems besteht die Gefahr, dass die "
+"versteckten Daten überschrieben werden. Das verschlüsselte Dateisystem ist "
+"standardmäßig auf FAT32 formatiert, und es wird empfohlen, es so zu "
+"belassen, wenn Sie versteckte Volumes verwenden."
 
 #: ../storage/hidden.rst:32
-#, fuzzy
 msgid "Unlock the encrypted volume using the Nitrokey App."
-msgstr "Entsperren Sie den verschlüsselten Speicher mit der Nitrokey-App."
+msgstr "Entsperren Sie das verschlüsselte Volume mit der Nitrokey-App."
 
 #: ../storage/hidden.rst:33
 msgid "In the menu, select \"setup hidden volume\"."
 msgstr "Wählen Sie im Menü \"Versteckte Lautstärke einrichten\"."
 
 #: ../storage/hidden.rst:38
-#, fuzzy
 msgid ""
 "Enter a strong passphrase twice. Unlike the encrypted volume PIN, there "
 "are no limit to the number of attempts at opening hidden volumes, so the "
 "strength of the passphrase is extremely important."
 msgstr ""
-"Geben Sie zweimal eine starke Passphrase ein. Anders als bei der "
-"verschlüsselten Speicher-PIN gibt es keine Begrenzung für die Anzahl der "
-"Versuche, den versteckten Speicher zu öffnen, daher ist die Stärke der "
-"Passphrase extrem wichtig."
+"Geben Sie zweimal eine starke Passphrase ein. Anders als bei der PIN für "
+"verschlüsselte Volumes gibt es keine Begrenzung für die Anzahl der Versuche, "
+"versteckte Volumes zu öffnen, daher ist die Stärke der Passphrase extrem "
+"wichtig."
 
 #: ../storage/hidden.rst:39
 msgid ""
@@ -2591,7 +2592,6 @@ msgstr ""
 "encryption"
 
 #: ../storage/linux/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to open a "
@@ -2599,13 +2599,12 @@ msgid ""
 "one or more partitions manually. Make sure to create the partitions on "
 "the device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Wenn dies das erste Mal ist, dass Sie den versteckten Speicher "
-"freigeben, müssen Sie möglicherweise eine Partition auf dem versteckten "
-"Volume erstellen. Dazu müssen Sie einen Partitionsmanager wie* `GParted "
-"<https://gparted.org/>`_ *öffnen und eine oder mehrere Partitionen "
-"manuell erstellen. Stellen Sie sicher, dass Sie die Partitionen auf dem "
-"Gerät erstellen, das beim Entsperren des versteckten Volumes angezeigt "
-"wurde."
+"*Wenn Sie das versteckte Volume zum ersten Mal entsperren, müssen Sie "
+"möglicherweise eine Partition auf dem versteckten Volume erstellen. Dazu "
+"müssen Sie einen Partitionsmanager wie* `GParted <https://gparted.org/>`_ *"
+"öffnen und eine oder mehrere Partitionen manuell erstellen. Stellen Sie "
+"sicher, dass Sie die Partitionen auf dem Gerät erstellen, das beim "
+"Entsperren des versteckten Volumes angezeigt wurde."
 
 #: ../storage/linux/index.rst:2
 msgid "Nitrokey Storage, Linux"
@@ -5824,7 +5823,6 @@ msgstr ""
 "erkannt werden, sobald das Update abgeschlossen ist."
 
 #: ../storage/mac/hidden-os-specific-partitioning.rst:1
-#, fuzzy
 msgid ""
 "*If this is the first time you unlock the hidden volume, you may need to "
 "create a partition on the hidden volume. You will need to use* `Disk "
@@ -5832,12 +5830,12 @@ msgid ""
 "utility/dskutl14027/mac>`_. *Make sure to create the partitions on the "
 "device that appeared when unlocking the hidden volume.*"
 msgstr ""
-"*Wenn Sie den versteckten Speicher zum ersten Mal freischalten, müssen "
-"Sie möglicherweise eine Partition auf dem versteckten Volume erstellen. "
-"Dazu müssen Sie* `Disk Utility <https://support.apple.com/en-gb/guide"
-"/disk-utility/dskutl14027/mac>`_ verwenden. *Stellen Sie sicher, dass Sie"
-" die Partitionen auf dem Gerät erstellen, das beim Entsperren des "
-"versteckten Volumes angezeigt wurde."
+"*Wenn Sie das versteckte Volume zum ersten Mal entsperren, müssen Sie "
+"möglicherweise eine Partition auf dem versteckten Volume erstellen. Dazu "
+"müssen Sie* `Disk Utility <https://support.apple.com/en-gb/guide/"
+"disk-utility/dskutl14027/mac>`_ verwenden. *Stellen Sie sicher, dass Sie die "
+"Partitionen auf dem Gerät erstellen, das beim Entsperren des versteckten "
+"Volumes angezeigt wurde."
 
 #: ../storage/mac/index.rst:2
 msgid "Nitrokey Storage, Mac"
@@ -6024,6 +6022,11 @@ msgid ""
 "prompt you to do so. You can then format the hidden volume using FAT32, "
 "for compatibility with most operating systems.*"
 msgstr ""
+"*Wenn Sie das versteckte Volume zum ersten Mal entsperren, müssen Sie "
+"möglicherweise eine Partition auf dem versteckten Volume erstellen. In "
+"diesem Fall werden Sie von Windows aufgefordert, dies zu tun. Anschließend "
+"können Sie das versteckte Volume mit FAT32 formatieren, damit es mit den "
+"meisten Betriebssystemen kompatibel ist."
 
 #: ../storage/windows/index.rst:2
 msgid "Nitrokey Storage, Windows"
@@ -6990,4 +6993,3 @@ msgstr ""
 #~ "können Sie den versteckten Speicher mit"
 #~ " FAT32 formatieren, damit er mit den"
 #~ " meisten Betriebssystemen kompatibel ist."
-
