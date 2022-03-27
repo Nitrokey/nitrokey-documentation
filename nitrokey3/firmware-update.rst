@@ -13,11 +13,6 @@ This guide describes how to update the firmware on the Nitrokey 3.
    the Nitrokey 3 is not the only way to authenticate/2FA for your 
    applications/services.
 
-.. warning::
-   For Windows the firmware update is still **experimental**, because it 
-   takes a very long time > 12mins. We recommend to wait for the next
-   release(s) until this issue is fixed.
-
 How to update
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. important::
@@ -25,7 +20,7 @@ How to update
    this will likely render your device useless!
 
 1. Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions`_ for your OS
-2. Run ``nitropy nk3 update`` (for Windows use of the ``--experimental`` switch is required)
+2. Run ``nitropy nk3 update`` 
 3. Touch device to activate bootloader (once instructed by ``nitropy``)
 4. *macOS only:* Run update command again (once instructed by ``nitropy``)
 5. Wait 3-10mins on macOS/Linux, 12-25mins on Windows
