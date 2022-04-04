@@ -1,4 +1,4 @@
-NextHSM
+NetHSM
 ============================
 
 .. toctree::
@@ -8,5 +8,7 @@ NextHSM
    gettingstarted
    development-and-testing
    integration-to-custom-application
+   working-with-tags
+   cli.rst
 
 

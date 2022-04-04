@@ -1,0 +1,49 @@
+Working with Tags
+---------------
+
+Tags can be used to put access restrictions on specific keys. For example: 
+
+User *JaneUser*::
+
+	{
+	  "realName": "Jane User",
+	  "role": "Operator"
+	  "tags": [ "berlin" , "frankfurt" ]
+	}
+
+Key *mykey*::
+
+		{
+	  "mechanisms": [
+	    "RSA_Signature_PSS_SHA256"
+	  ],
+	  "restrictions": {
+	      "userTag": "berlin"
+	  }
+	  "type": "RSA",
+	  "key": {
+	    "modulus": "FhJQl11CiY0ifRHXeAqFh4rdSl6",
+	    "publicExponent": "FhJQl11CiY0ifRHXeAqFh4rdSl6"
+	  },
+	  "operations": 242
+	}
+
+
+Tags are managed by Administrator users:
+
+- Keys can be subject to a restriction list: a set of Tags in which one of them need to be matched for the key to be used.
+- Operator users get assigned a set of Tags enabling them the use of the corresponding keys. It can be read but not modified by the user.
+
+- Restrictions are validated when using a key, in which case the defined userTag has to match one of the calling user's tags.
+- Only Administators can set tags in user profiles.
+- Tags are simply strings and all Administators can set tags without restrictions.
+- Every Operator can see all keys, also those with foreign tags (but they can't use it).
+- Tags are optional.
+- (In the future, restrictions could be extended with more condition types, e.g allowed time frame.)
+
+
+   .. figure:: ./images/io-shield.png
+      :alt: IO Shield
+
+The NetHSM appliance is available at address 192.168.1.1. Access and initialize the NetHSM using `nitropy command line tool <cli.html>`_. Alternatively, the `REST API <api.html>`_ and `PKCS#11 driver <pkcs11.html>`_ can be used.
+
