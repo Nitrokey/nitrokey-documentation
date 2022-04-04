@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-04 10:52+0200\n"
+"POT-Creation-Date: 2022-04-04 14:40+0200\n"
 "PO-Revision-Date: 2022-04-04 10:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Dutch <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/nl/>\n"
 "Language: nl\n"
+"Language-Team: Dutch <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/nl/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-odoo.rst:2
@@ -3848,15 +3847,15 @@ msgstr ""
 "andere containers. Om een NetHSM container te starten heb je dus een "
 "Linux host nodig met /dev/kvm beschikbaar. Voer dit commando uit:"
 
-#: ../nethsm/gettingstarted.rst:2 ../nextbox/gettingstarted.rst:2
-#: ../nitropad/qubes/index.rst:7 ../nitropad/ubuntu/index.rst:7
-#: ../nitropc/debian/index.rst:14 ../nitropc/qubes/index.rst:14
-#: ../nitropc/ubuntu/index.rst:14 ../nitrophone/index.rst:7
-#: ../pro/windows/index.rst:14
+#: ../nethsm/gettingstarted.rst:2 ../nethsm/tags.rst:2
+#: ../nextbox/gettingstarted.rst:2 ../nitropad/qubes/index.rst:7
+#: ../nitropad/ubuntu/index.rst:7 ../nitropc/debian/index.rst:14
+#: ../nitropc/qubes/index.rst:14 ../nitropc/ubuntu/index.rst:14
+#: ../nitrophone/index.rst:7 ../pro/windows/index.rst:14
 msgid "Getting Started"
 msgstr "Aan de slag"
 
-#: ../nethsm/gettingstarted.rst:4
+#: ../nethsm/gettingstarted.rst:4 ../nethsm/tags.rst:4
 msgid ""
 "Connect the NetHSM's ETH3 port with the network. Don't use the ETH0 port "
 "because it allows wider system access."
@@ -3864,11 +3863,13 @@ msgstr ""
 "Verbind de ETH3-poort van de NetHSM's met het netwerk. Gebruik niet de "
 "ETH0-poort omdat die bredere systeemtoegang mogelijk maakt."
 
-#: ../nethsm/gettingstarted.rst
+#: ../nethsm/gettingstarted.rst ../nethsm/tags.rst
+#: ../nethsm/working-with-tags.rst
 msgid "IO Shield"
 msgstr "IO schild"
 
-#: ../nethsm/gettingstarted.rst:9
+#: ../nethsm/gettingstarted.rst:9 ../nethsm/tags.rst:9
+#: ../nethsm/working-with-tags.rst:48
 msgid ""
 "The NetHSM appliance is available at address 192.168.1.1. Access and "
 "initialize the NetHSM using `nitropy command line tool <cli.html>`_. "
@@ -3881,8 +3882,8 @@ msgstr ""
 "<pkcs11.html>`_ worden gebruikt."
 
 #: ../nethsm/index.rst:2
-msgid "NextHSM"
-msgstr "NextHSM"
+msgid "NetHSM"
+msgstr ""
 
 #: ../nethsm/integration-to-custom-application.rst:2
 msgid "Integration to Custom Application"
@@ -3971,6 +3972,71 @@ msgid ""
 msgstr ""
 "Nadat u een sleutel (hier: ID 23) hebt aangemaakt met het overeenkomstige"
 " mechanisme, kunt u die gebruiken voor ontcijfering:"
+
+#: ../nethsm/working-with-tags.rst:2
+#, fuzzy
+msgid "Working with Tags"
+msgstr "Werken met meerdere apparaten"
+
+#: ../nethsm/working-with-tags.rst:4
+msgid "Tags can be used to put access restrictions on specific keys. For example:"
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:6
+msgid "User *JaneUser*::"
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:14
+msgid "Key *mykey*::"
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:32
+msgid "Tags are managed by Administrator users:"
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:34
+msgid ""
+"Keys can be subject to a restriction list: a set of Tags in which one of "
+"them need to be matched for the key to be used."
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:35
+msgid ""
+"Operator users get assigned a set of Tags enabling them the use of the "
+"corresponding keys. It can be read but not modified by the user."
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:37
+msgid ""
+"Restrictions are validated when using a key, in which case the defined "
+"userTag has to match one of the calling user's tags."
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:38
+msgid "Only Administators can set tags in user profiles."
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:39
+msgid ""
+"Tags are simply strings and all Administators can set tags without "
+"restrictions."
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:40
+msgid ""
+"Every Operator can see all keys, also those with foreign tags (but they "
+"can't use it)."
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:41
+msgid "Tags are optional."
+msgstr ""
+
+#: ../nethsm/working-with-tags.rst:42
+msgid ""
+"(In the future, restrictions could be extended with more condition types,"
+" e.g allowed time frame.)"
+msgstr ""
 
 #: ../nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
@@ -19379,3 +19445,7 @@ msgstr ""
 
 #~ msgid "NetHSM"
 #~ msgstr "NetHSM"
+
+#~ msgid "NextHSM"
+#~ msgstr "NextHSM"
+
