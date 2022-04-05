@@ -6,9 +6,9 @@ NetHSM
    :glob:
 
    gettingstarted
-   development-and-testing
+   working-with-tags-and-roles
    integration-to-custom-application
-   working-with-tags
+   development-and-testing
    cli.rst
 
 

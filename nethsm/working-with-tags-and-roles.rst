@@ -33,7 +33,6 @@ Tags are managed by Administrator users:
 
 - Keys can be subject to a restriction list: a set of Tags in which one of them need to be matched for the key to be used.
 - Operator users get assigned a set of Tags enabling them the use of the corresponding keys. It can be read but not modified by the user.
-
 - Restrictions are validated when using a key, in which case the defined userTag has to match one of the calling user's tags.
 - Only Administators can set tags in user profiles.
 - Tags are simply strings and all Administators can set tags without restrictions.
@@ -41,9 +40,12 @@ Tags are managed by Administrator users:
 - Tags are optional.
 - (In the future, restrictions could be extended with more condition types, e.g allowed time frame.)
 
+Tags are the necessary precondition to enable the following rules:
+ 
+the  
+    R-Administrator: A user account with this Role has access to all operations provided by the REST API, with the exception of key usage operations, i.e. message signing and decryption.
+    R-Operator: A user account with this Role has access to all key usage operations, a read-only subset of key management operations and user management operations allowing changes to their own account only.
+    R-Metrics: A user account with this Role has access to read-only metrics operations only.
+    R-Backup: A user account with this Role has access to the operations required to initiate a system backup only.
 
-   .. figure:: ./images/io-shield.png
-      :alt: IO Shield
-
-The NetHSM appliance is available at address 192.168.1.1. Access and initialize the NetHSM using `nitropy command line tool <cli.html>`_. Alternatively, the `REST API <api.html>`_ and `PKCS#11 driver <pkcs11.html>`_ can be used.
 
