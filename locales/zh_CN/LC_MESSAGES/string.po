@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-06 11:53+0200\n"
+"POT-Creation-Date: 2022-04-06 13:09+0200\n"
 "PO-Revision-Date: 2022-04-04 14:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: zh_CN\n"
@@ -124,10 +124,10 @@ msgid ""
 "(it can only store cryptographic keys and certificates)."
 msgstr "Nitrokey FIDO2不包含普通数据的存储能力（它只能存储加密密钥和证书）。"
 
-#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nitrokey3/index.rst:15
-#: ../nitropad/index.rst:8 ../nitropc/index.rst:9 ../nitrophone/index.rst:19
-#: ../pro/index.rst:9 ../shared-faqs/index.rst:2 ../start/index.rst:8
-#: ../storage/index.rst:8
+#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nethsm/faq.rst:2
+#: ../nitrokey3/index.rst:15 ../nitropad/index.rst:8 ../nitropc/index.rst:9
+#: ../nitrophone/index.rst:19 ../pro/index.rst:9 ../shared-faqs/index.rst:2
+#: ../start/index.rst:8 ../storage/index.rst:8
 msgid "Frequently Asked Questions"
 msgstr "常见问题"
 
@@ -3182,7 +3182,8 @@ msgid ""
 msgstr "如果你使用带有自签名证书的NetHSM演示实例，例如使用Docker镜像，你将不得不使用``--no-verify-tls``选项来跳过证书检查。"
 
 #: ../nethsm/dev-and-test.rst:2
-msgid "Development and Testing"
+#, fuzzy
+msgid "Development and testing"
 msgstr "开发和测试"
 
 #: ../nethsm/dev-and-test.rst:4
@@ -3202,7 +3203,7 @@ msgstr ""
 "另外，你可以在本地运行`NetHSM "
 "Docker容器<https://hub.docker.com/r/nitrokey/nethsm>`_。NetHSM容器需要嵌套的虚拟化，以便与其他容器进行强分离。因此，要启动一个NetHSM容器，你需要一个有/dev/kvm的Linux主机。执行这个命令。"
 
-#: ../nethsm/gettingstarted.rst:2 ../nethsm/index.rst:6
+#: ../nethsm/gettingstarted.rst:2 ../nethsm/index.rst:5
 #: ../nextbox/gettingstarted.rst:2 ../nitropad/qubes/index.rst:7
 #: ../nitropad/ubuntu/index.rst:7 ../nitropc/debian/index.rst:14
 #: ../nitropc/qubes/index.rst:14 ../nitropc/ubuntu/index.rst:14
@@ -3210,7 +3211,7 @@ msgstr ""
 msgid "Getting Started"
 msgstr "入门"
 
-#: ../nethsm/gettingstarted.rst:4 ../nethsm/index.rst:8
+#: ../nethsm/gettingstarted.rst:4 ../nethsm/index.rst:7
 #, fuzzy
 msgid ""
 "Connect the NetHSM's ETH port with the network. Don't use the BMC ETH "
@@ -3221,7 +3222,7 @@ msgstr "将NetHSM的ETH3端口与网络连接。不要使用ETH0端口，因为�
 msgid "IO Shield"
 msgstr "IO盾牌"
 
-#: ../nethsm/gettingstarted.rst:9 ../nethsm/index.rst:13
+#: ../nethsm/gettingstarted.rst:9 ../nethsm/index.rst:12
 msgid ""
 "The NetHSM appliance is available at address 192.168.1.1. Access and "
 "initialize the NetHSM using `nitropy command line tool <cli.html>`_. "
@@ -3231,24 +3232,20 @@ msgstr ""
 "NetHSM设备的地址是192.168.1.1。使用`nitropy命令行工具<cli.html>`_访问并初始化NetHSM。另外，也可以使用`REST"
 " API <api.html>`_和`PKCS#11驱动 <pkcs11.html>`_。"
 
-#: ../nethsm/gettingstarted/index.rst:8
+#: ../nethsm/gettingstarted/index.rst:6
 msgid "nitropy cmd"
 msgstr ""
 
-#: ../nethsm/gettingstarted/index.rst:8
+#: ../nethsm/gettingstarted/index.rst:6
 msgid "REST API"
 msgstr ""
 
-#: ../nethsm/gettingstarted/index.rst:8
+#: ../nethsm/gettingstarted/index.rst:6
 msgid "PKCS#11"
 msgstr ""
 
 #: ../nethsm/gettingstarted/index.rst:2
-msgid "Choose Access Method"
-msgstr ""
-
-#: ../nethsm/gettingstarted/index.rst:6
-msgid "Choose your prefered acces method:"
+msgid "Choose access method"
 msgstr ""
 
 #: ../nethsm/gettingstarted/pkcs11.rst:2 ../nethsm/pkcs11.rst:2
@@ -3296,7 +3293,8 @@ msgid "NetHSM"
 msgstr "NetHSM"
 
 #: ../nethsm/integration.rst:2
-msgid "Integration to Custom Application"
+#, fuzzy
+msgid "Integration into custom application"
 msgstr "集成到自定义应用程序"
 
 #: ../nethsm/integration.rst:4
@@ -3326,8 +3324,9 @@ msgid ""
 "documentation how to use it."
 msgstr "生成的客户端代码，在本例中为JavaScript，将在``./out/``目录下创建。这个文件夹也包含了如何使用它的必要文档。"
 
-#: ../nethsm/tags.rst:2 ../nethsm/working-with-tags-and-roles.rst:2
-msgid "Working with Tags"
+#: ../nethsm/tags.rst:2
+#, fuzzy
+msgid "Working with tags"
 msgstr "使用标签工作"
 
 #: ../nethsm/tags.rst:4 ../nethsm/working-with-tags-and-roles.rst:4
@@ -3346,37 +3345,43 @@ msgstr "钥匙*我的钥匙*:。"
 msgid "Tags are managed by Administrator users:"
 msgstr "标签是由管理员用户管理的。"
 
-#: ../nethsm/tags.rst:34 ../nethsm/working-with-tags-and-roles.rst:34
+#: ../nethsm/tags.rst:34
+#, fuzzy
 msgid ""
-"Keys can be subject to a restriction list: a set of Tags in which one of "
+"Keys can be subject to a restriction list: a set of tags in which one of "
 "them need to be matched for the key to be used."
 msgstr "钥匙可以受制于一个限制列表：一组标签，其中有一个标签需要匹配才能使用钥匙。"
 
-#: ../nethsm/tags.rst:35 ../nethsm/working-with-tags-and-roles.rst:35
+#: ../nethsm/tags.rst:35
+#, fuzzy
 msgid ""
-"Operator users get assigned a set of Tags enabling them the use of the "
+"Operator users get assigned a set of tags enabling them the use of the "
 "corresponding keys. It can be read but not modified by the user."
 msgstr "操作员用户会被分配一套标签，使他们能够使用相应的键。用户可以阅读但不能修改。"
 
-#: ../nethsm/tags.rst:36 ../nethsm/working-with-tags-and-roles.rst:36
+#: ../nethsm/tags.rst:36
+#, fuzzy
 msgid ""
 "Restrictions are validated when using a key, in which case the defined "
-"userTag has to match one of the calling user's tags."
+"usertag has to match one of the calling user's tags."
 msgstr "当使用一个键时，限制会被验证，在这种情况下，定义的userTag必须与调用用户的一个标签相匹配。"
 
-#: ../nethsm/tags.rst:37 ../nethsm/working-with-tags-and-roles.rst:37
-msgid "Only Administators can set tags in user profiles."
+#: ../nethsm/tags.rst:37
+#, fuzzy
+msgid "Only administators can set tags in user profiles."
 msgstr "只有管理员可以在用户档案中设置标签。"
 
-#: ../nethsm/tags.rst:38 ../nethsm/working-with-tags-and-roles.rst:38
+#: ../nethsm/tags.rst:38
+#, fuzzy
 msgid ""
-"Tags are simply strings and all Administators can set tags without "
+"Tags are simple strings and all administators can set tags without "
 "restrictions."
 msgstr "标签是简单的字符串，所有管理员可以无限制地设置标签。"
 
-#: ../nethsm/tags.rst:39 ../nethsm/working-with-tags-and-roles.rst:39
+#: ../nethsm/tags.rst:39
+#, fuzzy
 msgid ""
-"Every Operator can see all keys, also those with foreign tags (but they "
+"Every operator can see all keys, also those with foreign tags (but they "
 "can't use it)."
 msgstr "每个操作员都可以看到所有的键，也包括那些有外来标记的键（但他们不能使用）。"
 
@@ -3389,6 +3394,44 @@ msgid ""
 "(In the future, restrictions could be extended with more condition types,"
 " e.g allowed time frame.)"
 msgstr "(在未来，可以用更多的条件类型来扩展限制，例如允许的时间框架）。"
+
+#: ../nethsm/working-with-tags-and-roles.rst:2
+msgid "Working with Tags"
+msgstr "使用标签工作"
+
+#: ../nethsm/working-with-tags-and-roles.rst:34
+msgid ""
+"Keys can be subject to a restriction list: a set of Tags in which one of "
+"them need to be matched for the key to be used."
+msgstr "钥匙可以受制于一个限制列表：一组标签，其中有一个标签需要匹配才能使用钥匙。"
+
+#: ../nethsm/working-with-tags-and-roles.rst:35
+msgid ""
+"Operator users get assigned a set of Tags enabling them the use of the "
+"corresponding keys. It can be read but not modified by the user."
+msgstr "操作员用户会被分配一套标签，使他们能够使用相应的键。用户可以阅读但不能修改。"
+
+#: ../nethsm/working-with-tags-and-roles.rst:36
+msgid ""
+"Restrictions are validated when using a key, in which case the defined "
+"userTag has to match one of the calling user's tags."
+msgstr "当使用一个键时，限制会被验证，在这种情况下，定义的userTag必须与调用用户的一个标签相匹配。"
+
+#: ../nethsm/working-with-tags-and-roles.rst:37
+msgid "Only Administators can set tags in user profiles."
+msgstr "只有管理员可以在用户档案中设置标签。"
+
+#: ../nethsm/working-with-tags-and-roles.rst:38
+msgid ""
+"Tags are simply strings and all Administators can set tags without "
+"restrictions."
+msgstr "标签是简单的字符串，所有管理员可以无限制地设置标签。"
+
+#: ../nethsm/working-with-tags-and-roles.rst:39
+msgid ""
+"Every Operator can see all keys, also those with foreign tags (but they "
+"can't use it)."
+msgstr "每个操作员都可以看到所有的键，也包括那些有外来标记的键（但他们不能使用）。"
 
 #: ../nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
@@ -15846,4 +15889,10 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "NextHSM"
 #~ msgstr "下一个HSM"
+
+#~ msgid "Choose Access Method"
+#~ msgstr ""
+
+#~ msgid "Choose your prefered acces method:"
+#~ msgstr ""
 
