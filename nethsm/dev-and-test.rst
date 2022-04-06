@@ -1,4 +1,4 @@
-Development and Testing
+Development and testing
 -----------------------
 
 A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com>`_.

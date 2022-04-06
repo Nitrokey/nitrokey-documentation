@@ -1,7 +1,6 @@
 NetHSM
 ============================
 
-
 Getting Started
 ---------------
 
@@ -17,7 +16,8 @@ The NetHSM appliance is available at address 192.168.1.1. Access and initialize 
    :maxdepth: 1
    :glob:
 
-   
+   faq.rst
+   gettingstarted/index.rst 
    tags.rst
    integration.rst
    dev-and-test.rst

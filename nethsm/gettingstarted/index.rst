@@ -1,9 +1,7 @@
-Choose Access Method
+Choose access method
 ====================
 
 .. contents:: :local:
-
-Choose your prefered acces method:
 
 .. toctree::
    :maxdepth: 1
