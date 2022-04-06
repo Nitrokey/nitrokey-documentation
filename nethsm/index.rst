@@ -1,14 +1,25 @@
 NetHSM
 ============================
 
+
+Getting Started
+---------------
+
+Connect the NetHSM's ETH port with the network. Don't use the BMC ETH port because it allows wider system access.
+
+   .. figure:: ./images/frame.png
+      :alt: IO Shield
+
+The NetHSM appliance is available at address 192.168.1.1. Access and initialize the NetHSM using `nitropy command line tool <cli.html>`_. Alternatively, the `REST API <api.html>`_ and `PKCS#11 driver <pkcs11.html>`_ can be used.
+
+
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   gettingstarted
-   working-with-tags-and-roles
-   integration-to-custom-application
-   development-and-testing
-   cli.rst
-
+   
+   tags.rst
+   integration.rst
+   dev-and-test.rst
+   
 

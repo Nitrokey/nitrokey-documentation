@@ -40,6 +40,3 @@ Tags are managed by Administrator users:
 - Tags are optional.
 - (In the future, restrictions could be extended with more condition types, e.g allowed time frame.)
 
-
-
-
