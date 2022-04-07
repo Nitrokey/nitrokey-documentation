@@ -1,4 +1,4 @@
-Choose access method
+Choose an access method
 ====================
 
 .. contents:: :local:
