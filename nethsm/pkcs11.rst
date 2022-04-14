@@ -33,7 +33,7 @@ After creating a key (here: ID 42) with the according mechanism, you can use it 
 Signing
 -------
 
-After creating a key (here: ID 23) with the according mechanism, you can use it for decryption:
+After creating a key (here: ID 23) with the according mechanism, you can use it for signing:
 
 ::
 
