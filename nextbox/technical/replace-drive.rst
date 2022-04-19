@@ -37,7 +37,7 @@ Prepare New Hard-Disk
 1. Get your ``nextbox.conf`` file from your original hard-disk using ssh, it is located on your
    NextBox inside the ``/srv/nextbox`` directory
 2. Save your ``nextbox.conf`` on your computer
-3. Get the following script: https://raw.githubusercontent.com/Nitrokey/nextbox/master/simple_prepare_harddrive.sh
+3. Get the following script: https://raw.githubusercontent.com/Nitrokey/nextbox/master/assembly/simple_prepare_harddrive.sh 
 4. Make the script executable: ``chmod +x simple_prepare_harddrive.sh``
 5. Connect your new hard-disk to your computer
 6. Determine your hard-disk's device name (e.g., ``/dev/sdb``) and make sure

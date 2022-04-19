@@ -143,9 +143,9 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
 
 **Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö or ß)
 
-**Poor Password**: qwerty123, ILoveSusi3, Password, If you can dream it, you can do it.
+**Poor Passwords**: qwerty123, ILoveSusi3, Password, If you can dream it, you can do it.
 
-**Strong Password**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen Earz and fife legs (spelling errors increase security)
+**Strong Passwords**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen Earz and fife legs (spelling errors increase security)
 
 You do **not** need this password for daily work. It is only necessary for the restoration of the secret key, e.g. if you have lost the Nitrokey. Therefore, keep the password in a safe place.
 
