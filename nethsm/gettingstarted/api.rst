@@ -22,6 +22,10 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    :start-after: .. start:: info
    :end-before: .. end
 
+.. note::
+
+   Set $NETHSM_HOST to your NetHSM IP first.
+
 ::
 
    $ curl -i -w '\n' https://$NETHSM_HOST/api/v1/info
@@ -83,6 +87,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
    $ curl -i -w '\n' -u admin:adminPassphrase \
        https://$NETHSM_HOST/api/v1/config/unattended-boot
+   
    HTTP/1.1 200 OK
    content-length: 16
    content-type: application/json
@@ -99,6 +104,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
    $ curl -i -w '\n' -u admin:adminPassphrase -X PUT -H "content-type: application/json" \
        https://$NETHSM_HOST/api/v1/config/unattended-boot -d "{ status: \"on\"}"
+   
    HTTP/1.1 204 No Content
    content-type: application/json
    date: Wed, 21 Apr 2021 10:24:25 GMT
@@ -112,6 +118,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
    $ curl -i -w '\n' -u admin:adminPassphrase -X PUT -H "content-type: application/json" \
        https://$NETHSM_HOST/api/v1/config/unattended-boot -d "{ status: \"off\"}"
+   
    HTTP/1.1 204 No Content
    content-type: application/json
    date: Wed, 21 Apr 2021 10:24:53 GMT
@@ -121,13 +128,16 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    :start-after: .. start:: user-management
    :end-before: .. end
 
-.. include:: _tutorial.rst
-   :start-after: .. start:: roles
-   :end-before: .. end
 
-.. include:: _tutorial.rst
-   :start-after: .. start:: add-user
-   :end-before: .. end
+
+#.. include:: _tutorial.rst
+#   :start-after: .. start:: roles
+#   :end-before: .. end
+
+
+#.. include:: _tutorial.rst
+#   :start-after: .. start:: add-user
+#   :end-before: .. end
 
 ::
 
@@ -135,6 +145,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
        "https://$NETHSM_HOST/api/v1/users/operator" -X PUT \
        -H "content-type: application/json" -d "{\"realName\": \"Jane User\", \
        \"role\": \"Operator\", \"passphrase\": \"opPassphrase\"}"
+   
    HTTP/1.1 201 Created
    content-length: 0
    content-type: application/json
@@ -230,17 +241,23 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    $ curl -i -w '\n' -u admin:adminPassphrase -X PUT \
        https://$NETHSM_HOST/api/v1/keys/myFirstKey/cert -H "content-type: application/x-pem-file" \
        --data-binary @/tmp/cert.pem
+   
    HTTP/1.1 201 Created
    content-length: 0
    content-type: text/html
    date: Thu, 20 May 2021 19:15:39 GMT
    vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
 
+::
+
    $ curl -s -w '\n' -u operator:opPassphrase -X GET \
        https://$NETHSM_HOST/api/v1/keys/myFirstKey/cert > /tmp/cert.pem
 
+::
+
    $ curl -i -w '\n' -u admin:adminPassphrase -X DELETE \
        https://$NETHSM_HOST/api/v1/keys/myFirstKey/cert
+   
    HTTP/1.1 204 No Content
    content-type: text/html
    date: Thu, 20 May 2021 19:14:45 GMT
@@ -273,6 +290,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
         https://$NETHSM_HOST/api/v1/keys/myFirstKey/decrypt -H "content-type: application/json" \
         -d "{ \"mode\": \"PKCS1\", \"encrypted\": \"$(cat data.crypt)\"}" | \
         jq -r .decrypted | base64 -d
+    
     NetHSM rulez!
 
 .. include:: _tutorial.rst
@@ -299,6 +317,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    $ curl -i -w '\n' -u admin:adminPassphrase -X PUT \
        https://$NETHSM_HOST/api/v1/config/backup-passphrase -H "content-type: application/json" \
        -d "{\"passphrase\": \"backupencryptionkey\"}"
+   
    HTTP/2 204 
    server: nginx/1.14.2
    date: Sat, 08 May 2021 10:26:36 GMT
@@ -320,6 +339,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
        https://$NETHSM_HOST/api/v1/users/backup -H "content-type: application/json" \
        -d "{\"realName\": \"Backup User\", \"role\": \"Backup\", \
        \"passphrase\": \"backupPassphrase\"}"
+   
    HTTP/2 201 
    server: nginx/1.14.2
    date: Sat, 08 May 2021 10:30:45 GMT
@@ -351,6 +371,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    $ curl -i -X POST \
       "https://$NETHSM_HOST/api/v1/system/restore?backupPassphrase=backupencryptionkey&systemTime=$(date --utc +"%Y-%m-%dT%H:%M:%SZ")" \
       --data-binary @/tmp/nethsm-backup
+   
    HTTP/1.1 204 No Content
    cache-control: no-cache
    content-type: application/json
@@ -373,7 +394,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 ::
 
    $ curl -i -w '\n' -u admin:adminPassphrase -X POST  \
-       https://$NETHSM_HOST/api/v1/system/commit-update
+   https://$NETHSM_HOST/api/v1/system/commit-update
 
 .. include:: _tutorial.rst
    :start-after: .. start:: cancel-update

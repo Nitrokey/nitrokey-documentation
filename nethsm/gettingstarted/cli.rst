@@ -19,9 +19,18 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    :start-after: .. start:: info
    :end-before: .. end
 
+.. note::
+
+   Set $NETHSM_HOST to your NetHSM IP first.
+
+Request Device Information
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 ::
 
+
     $ nitropy nethsm --host $NETHSM_HOST info
+    
     Host:    localhost:8443
     Vendor:  Nitrokey GmbH
     Product: NetHSM
@@ -33,16 +42,21 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 ::
 
     $ nitropy nethsm --host $NETHSM_HOST state
+    
     NetHSM localhost:8443 is Unprovisioned
 
 .. include:: _tutorial.rst
    :start-after: .. start:: provision
    :end-before: .. end
 
+Provision
+^^^^^^^^^
+
 ::
 
    $ nitropy nethsm --host $NETHSM_HOST provision \
        --admin-passphrase adminPassphrase --unlock-passphrase unlockPassphrase
+   
    NetHSM localhost:8443 provisioned
 
 .. include:: _tutorial.rst
@@ -53,8 +67,9 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        get-config --unattended-boot
-    Configuration for NetHSM localhost:8443:
-        Unattended boot: off
+   
+   Configuration for NetHSM localhost:8443:
+   Unattended boot: off
 
 .. include:: _tutorial.rst
    :start-after: .. start:: unattended-boot-on
@@ -64,35 +79,18 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        set-unattended-boot on
+   
    Updated the unattended boot configuration for NetHSM localhost:8443
 
 .. include:: _tutorial.rst
    :start-after: .. start:: unattended-boot-off
    :end-before: .. end
 
-::
-
-   $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
-       set-unattended-boot on
-   Updated the unattended boot configuration for NetHSM localhost:8443
-
-.. include:: _tutorial.rst
-   :start-after: .. start:: user-management
-   :end-before: .. end
-
-.. include:: _tutorial.rst
-   :start-after: .. start:: roles
-   :end-before: .. end
-
-.. include:: _tutorial.rst
-   :start-after: .. start:: add-user
-   :end-before: .. end
-
-::
 
    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        add-user --user-id operator --real-name "Jane User" --role operator \
        --passphrase opPassphrase
+   
    User operator added to NetHSM localhost:8443
 
 .. include:: _tutorial.rst
@@ -103,11 +101,15 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    :start-after: .. start:: generate-key
    :end-before: .. end
 
+Create Keys
+^^^^^^^^^^^
+
 ::
 
    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        generate-key --algorithm RSA --mechanism RSA_Signature_PSS_SHA256 \
        --mechanism RSA_Decryption_PKCS1 --length 2048 --key-id myFirstKey
+   
    Key myFirstKey generated on NetHSM localhost:8443
 
 .. include:: _tutorial.rst
@@ -121,6 +123,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
        --mechanism RSA_Decryption_PKCS1 --key-id mySecondKey --public-exponent AQAB \
        --prime-p "AOnWFZ+JrI/xOXJU04uYCZOiPVUWd6CSbVseEYrYQYxc7dVroePshz29tc+VEOUP5T0O8lXMEkjFAwjW6C9QTAsPyl6jwyOQluMRIkdN4/7BAg3HAMuGd7VmkGyYrnZWW54sLWp1JD6XJG33kF+9OSar9ETPoVyBgK5punfiUFEL" \
        --prime-q "ANT1kWDdP9hZoFKT49dwdM/S+3ZDnxQa7kZk9p+JKU5RaU9e8pS2GOJljHwkES1FH6CUGeIaUi81tRKe2XZhe/163sEyMcxkaaRbBbTc1v6ZDKILFKKt4eX7LAQfhL/iFlgi6pcyUM8QDrm1QeFgGz11ChM0JuQw1WwkX06lg8iv"
+   
    Key mySecondKey added to NetHSM localhost:8443
 
 .. include:: _tutorial.rst
@@ -131,6 +134,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
    $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
        list-keys
+   
    Keys on NetHSM localhost:8443:
 
    Key ID          Algorithm       Mechanisms                                      Operations
@@ -146,6 +150,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
    $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
        get-key myFirstKey
+   
    Key myFirstKey on NetHSM localhost:8443:
    Algorithm:       RSA
    Mechanisms:      RSA_Signature_PSS_SHA256
@@ -174,13 +179,19 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
     $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
         set-certificate myFirstKey --mime-type application/x-pem-file /tmp/cert.pem
+    
     Updated the certificate for key myFirstKey on NetHSM localhost:8443
+
+::
 
     $ nitropy nethsm --host $NETHSM_HOST --username operator --password opPassphrase \
         get-certificate myFirstKey > /tmp/cert.pem
 
+::
+
     $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
         delete-certificate myFirstKey
+    
     Deleted certificate for key myFirstKey on NetHSM localhost:8443
 
 .. include:: _tutorial.rst
@@ -208,6 +219,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
     $ nitropy nethsm -h $NETHSM_HOST -u operator -p opPassphrase \
         decrypt -k myFirstKey -d "$(cat data.crypt)" -m PKCS1 | \
         base64 -d
+    
     NetHSM rulez!
 
 .. include:: _tutorial.rst
@@ -228,10 +240,14 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    :start-after: .. start:: backup-passphrase
    :end-before: .. end
 
+Prepare Backup
+^^^^^^^^^^^^^^
+
 ::
 
    $ nitropy nethsm -h $NETHSM_HOST -u admin -p adminPassphrase \
        set-backup-passphrase --passphrase backupencryptionkey
+   
    Updated the backup passphrase for NetHSM localhost:8443
 
 .. include:: _tutorial.rst
@@ -243,6 +259,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
    $ nitropy nethsm -h $NETHSM_HOST -u admin -p adminPassphrase \
        add-user --user-id backup --real-name "Backup User" --role backup \
        --passphrase backupPassphrase
+   
    User backup added to NetHSM localhost:8443
 
 .. include:: _tutorial.rst
@@ -253,6 +270,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
    $ nitropy nethsm -h $NETHSM_HOST -u backup -p backupPassphrase \
        backup /tmp/nethsm-backup
+   
    Backup for localhost:8443 written to /tmp/backup
 
 .. include:: _tutorial.rst
@@ -263,16 +281,21 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
    $ nitropy nethsm -h $NETHSM_HOST \
        restore --backup-passphrase backupencryptionkey /tmp/nethsm-backup
+   
    Backup restored on NetHSM localhost:8443
 
 .. include:: _tutorial.rst
    :start-after: .. start:: update
    :end-before: .. end
 
+Update NetHSM
+^^^^^^^^^^^^^
+
 ::
 
    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        update /tmp/nethsm-update.img.cpio
+   
    Image /tmp/nethsm-update.img.cpio uploaded to NetHSM localhost:8443
 
 .. include:: _tutorial.rst
@@ -283,6 +306,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        commit-update
+   
    Update successfully committed on NetHSM localhost:8443
 
 .. include:: _tutorial.rst
@@ -293,4 +317,5 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
    $ nitropy nethsm --host $NETHSM_HOST --username admin --password adminPassphrase \
        cancel-update
+   
    Update successfully cancelled on NetHSM localhost:8443

@@ -17,7 +17,10 @@ The NetHSM appliance is available at address 192.168.1.1. Access and initialize 
    :glob:
 
    #faq.rst
-   gettingstarted/index.rst 
+   #gettingstarted/index.rst 
+   cli.rst
+   api.rst
+   pkcs11.rst
    tags.rst
    integration.rst
    dev-and-test.rst
