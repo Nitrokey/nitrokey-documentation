@@ -4,11 +4,12 @@ NitroWall
 Getting Started
 ---------------
 
-1. Connect the NitroWalls LAN1 port by a patch cable with the ethernet port of your Laptop or PC
-2. Connect the NitroWall by power supply
+1. Connect the NitroWalls LAN1 port by a patch cable with the Ethernet port of your laptop or PC
+2. Connect the NitroWall with power supply
 3. Turn on the NitroWall by I/O switch on the front side 
 4. After booting (The NitroWall beeps accordingly) it is available via https://192.168.1.1/. 
-   You'll get an IP address from the DHCP-Server automatically
+   You'll get an IP address from NitroWalls DHCP-Server automatically
+5. Confirm browser security warning
 
 - Login: root
 - Password: opnsense
