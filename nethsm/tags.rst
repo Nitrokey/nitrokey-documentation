@@ -1,4 +1,4 @@
-Working with tags
+Working with Tags
 ---------------
 
 Tags can be used to put access restrictions on specific keys. For example: 

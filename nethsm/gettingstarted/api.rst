@@ -383,3 +383,6 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
    $ curl -i -w '\n' -u admin:adminPassphrase -X POST  \
        https://$NETHSM_HOST/api/v1/system/cancel-update
+
+
+Further information regarding the API operations can be found on the `REST API Index <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_
