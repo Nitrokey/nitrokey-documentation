@@ -1,4 +1,4 @@
-Working with Tags
+Tags & Roles
 ---------------
 
 Tags can be used to put access restrictions on specific keys. For example: 
@@ -40,3 +40,24 @@ Tags are managed by Administrator users:
 - Tags are optional.
 - (In the future, restrictions could be extended with more condition types, e.g allowed time frame.)
 
+Roles
+^^^^^
+
+Each user account configured on the NetHSM has one of the following Roles
+assigned to it. Following is a high-level description of the operations allowed
+by individual Roles, for endpoint-specific details please refer to the REST API
+documentation.
+
+**R-Administrator**     A user account with this Role has access to all operations
+provided by the REST API, with the exception of “key usage” operations,
+i.e. message signing and decryption.
+
+**R-Operator**  A user account with this Role has access to all “key usage” op-
+erations, a read-only subset of “key management” operations and “user
+management” operations allowing changes to their own account only.
+
+**R-Metrics**   A user account with this Role has access to read-only metrics
+operations only.
+
+**R-Backup**    A user account with this Role has access to the operations required
+to initiate a system backup only.
