@@ -3,6 +3,7 @@ Tags & Roles
 
 Tags can be used to put access restrictions on specific keys. For example: 
 
+
 User *JaneUser*::
 
 	{
@@ -10,6 +11,8 @@ User *JaneUser*::
 	  "role": "Operator"
 	  "tags": [ "berlin" , "frankfurt" ]
 	}
+
+
 
 Key *mykey*::
 
@@ -52,8 +55,7 @@ documentation.
 provided by the REST API, with the exception of “key usage” operations,
 i.e. message signing and decryption.
 
-**R-Operator**  A user account with this Role has access to all “key usage” op-
-erations, a read-only subset of “key management” operations and “user
+**R-Operator**  A user account with this Role has access to all “key usage” operations, a read-only subset of “key management” operations and “user
 management” operations allowing changes to their own account only.
 
 **R-Metrics**   A user account with this Role has access to read-only metrics
