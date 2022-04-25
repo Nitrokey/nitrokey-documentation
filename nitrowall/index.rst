@@ -47,4 +47,8 @@ Getting Started
 8. After configuring your NitroWall reload it to make the changes persistent. As soon as the process terminates you are back again at the dashboard.
 9. After the installation is complete, install the necessary updates. To do this, go to System → Firmware → Updates.
 
-
+.. toctree::
+   :maxdepth: 1
+   :glob:	
+   
+   dhcp.rst
