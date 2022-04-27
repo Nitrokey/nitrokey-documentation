@@ -1,4 +1,4 @@
-Verifiy Sealed Hardware
+Verify Sealed Hardware
 =======================
 
 If you ordered your NetHSM with in a sealed bag, it allows you to check if the NetHSM has been tampered with during shipping.
@@ -11,19 +11,18 @@ If you notice any changes or have an uneasy feeling, please contact us to arrang
 
 Here are some pictures of how we wrap up a NetHSM:
 
-a Sealing
+Hardware Sealing
 
 .. figure:: ./images/sealing.jpg
  :scale: 20
  :alt: seal
  
  Front Side
- 
+
  .. figure:: ./images/front-side.jpg
   :scale: 20
   :alt: front side
  
-
  Back Side
 
  .. figure:: ./images/back-side.jpg
@@ -48,10 +47,10 @@ a Sealing
   :alt: left side
   :scale: 20
  
- Back Side
+ Angular View
  
- .. figure:: ./images/back-side.jpg
-  :alt: back side
+ .. figure:: ./images/angular-side.jpg
+  :alt: angular side
   :scale: 20
 
  
