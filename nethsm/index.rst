@@ -7,7 +7,7 @@ Verification of Sealed Hardware
 Your NetHSM has been delivered in a sealed bag. Please `verify the sealing <sealed-hardware.html>`_ before unpacking. If you do not know what this means, skip this section.
 
 Getting Started
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^
 
 Connect the NetHSM's ETH port with the network. Don't use the BMC ETH port because it allows wider system access. Then set the password for the BMC.
 
