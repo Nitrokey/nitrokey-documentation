@@ -4,7 +4,7 @@ NetHSM
 Verification of Sealed Hardware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Your NetHSM has been delivered in a sealed bag. Please `verify the sealing <sealed-hardware.html>`_ before unpacking. If you do not know what this means, skip this section.
+Your NetHSM has been delivered in a sealed packaging. Please `verify the sealing <sealed-hardware.html>`_ before unpacking. If you do not know what this means, skip this section.
 
 Getting Started
 ^^^^^^^^^^^^^^^
