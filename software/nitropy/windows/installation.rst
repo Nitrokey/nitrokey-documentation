@@ -7,7 +7,7 @@ Installing nitropy on Windows
 .. note::
    If you already use Python on your system and are familiar with the command prompt, you can also install nitropy with pipx, see :doc:`../all-platforms/installation`.
 
-How to install
+How to Install
 --------------
 
 - Download the latest ``.msi`` installer from `releases <https://github.com/Nitrokey/pynitrokey/releases/>`_.

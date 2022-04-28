@@ -1,4 +1,4 @@
-nitropy documentation for all platforms
+nitropy Documentation For All Platforms
 =======================================
 
 .. toctree::

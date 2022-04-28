@@ -1,4 +1,4 @@
-nitropy documentation for Linux
+nitropy Documentation For Linux
 ===============================
 
 .. toctree::

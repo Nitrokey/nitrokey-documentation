@@ -1,4 +1,4 @@
-Setting up the udev rules for nitropy
+Setting up The udev Rules For nitropy
 =====================================
 
 To be able to access your devices without root privileges, nitropy requires the Nitrokey udev rules.  These rules are shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_.  If you don’t have libnitrokey or if you need a newer version, you can install the rules manually::

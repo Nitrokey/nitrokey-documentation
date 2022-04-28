@@ -1,4 +1,4 @@
-Installing nitropy with pipx
+Installing nitropy With pipx
 ============================
 
 .. contents:: :local:

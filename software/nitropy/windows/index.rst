@@ -1,4 +1,4 @@
-nitropy documentation for Windows
+nitropy Documentation For Windows
 =================================
 
 .. toctree::
