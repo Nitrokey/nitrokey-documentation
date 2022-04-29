@@ -5,12 +5,12 @@ Nitrokey Reset
 
 .. contents:: :local:
 
-Factory Reset operation regenerates the secret material stored on the Nitrokey FIDO U2F / Nitrokey FIDO2, which makes it a completely new key logic-side. New owner cannot use it to login to account of the previous one. In case of the FIDO2 Resident Keys the material is erased.
+The Factory Reset operation deletes the FIDO secret keys stored on the Nitrokey and generates new ones. Afterwards the Nitrokey behaves like a new device.
 
 To avoid accidental and malicious reset of the Nitrokey, the required
 touch confirmation time for the FIDO2 reset operation is longer and with
 a distinct LED behavior (red LED light) than normal operations. To reset
-the Nitrokey FIDO2, confirm by touching the touch button for at least 5
+the Nitrokey, confirm by touching the touch button for at least 5
 seconds until the green or blue LED lights up.
 
 Windows 10
