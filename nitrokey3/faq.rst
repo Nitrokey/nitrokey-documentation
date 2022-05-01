@@ -2,7 +2,7 @@ Nitrokey 3 FAQ
 ==================
 
 **Q:** Which Operating Systems are supported?
-   Windows, Linux, and macOS. Also some support for Android and iOS.
+   Windows, Linux and macOS. Also some support for Android and iOS.
 
 **Q:** What can I use the Nitrokey for?
    See the `frontpage`_ for an overview of supported use cases.
