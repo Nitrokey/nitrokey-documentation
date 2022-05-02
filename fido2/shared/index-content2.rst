@@ -16,4 +16,4 @@ seconds until the green or blue LED lights up.
 Nitrokey FIDO2 could be reset by:
 
 * pynitrokey tool: ``nitropy fido2 reset`` (requires Administrator rights to execute)
-* Google Chrome (not available on Windows): `Manage security keys` - direct link (Chrome only): `chrome://settings/securityKeys`
+* Google Chrome: `Manage security keys` via the direct link: `chrome://settings/securityKeys`
