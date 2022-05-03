@@ -23,7 +23,7 @@ System Requirements
 In order to create keys based on elliptic curves a Nitrokey Storage 2 /
 Pro 2 and GnuPG version 2.1.17 or higher are required.
 
-You can read Nitrokey’s OpenPGP Card version via ``gpg2 —card-status``:
+You can read Nitrokey’s OpenPGP Card version via ``gpg2 --card-status``:
 
 .. code-block:: bash
 
