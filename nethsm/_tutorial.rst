@@ -189,6 +189,9 @@ verification (as described in the next section):
 ::
 
     $ openssl rsa -in public.pem -pubin -text
+    
+::    
+    
     RSA Public-Key: (2048 bit)
     Modulus:
         00:c3:56:f5:09:cc:a9:3e:ca:16:2e:fb:d2:8b:9d:
@@ -260,9 +263,7 @@ Details`_ section.)
 
 ::
 
-    $ echo 'NetHSM rulez!' | \
-        openssl rsautl -encrypt -inkey public.pem -pubin | \
-        base64 > data.crypt
+    $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey public.pem -pubin | base64 > data.crypt
 
 Now we can use the NetHSM to decrypt the data:
 .. end
@@ -279,6 +280,9 @@ we have to calculate a digest first:
 ::
 
     $ echo 'NetHSM rulez!' > data
+    
+::
+
     $ openssl dgst -sha256 -binary data | base64 > data.digest
 
 Then we can create a signature from this digest using the NetHSM:
@@ -292,7 +296,10 @@ And then use ``openssl`` to verify the signature:
 ::
 
     $ openssl dgst -sha256 -verify public.pem -signature data.sig \
-        -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
+    -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
+
+::
+        
     Verified OK
 .. end
 
