@@ -6,6 +6,15 @@ Nitrokey Documentation - Syntax
 
 .. contents:: :local:
 
+Code Blocks Syntax Highlighting
+-------------------------------
+
+Syntax Highlighting is disabled by default.
+To enable it for a specific code snippet use the following:
+
+.. code-block:: bash
+
+   $ echo 'NetHSM rulez!' > data
 
 H2 Heading
 ----------
@@ -31,7 +40,7 @@ Normal text again.
   * with a nested list
   * and some subitems
 
-* and here the parent list continues 
+* and here the parent list continues
 
 | These lines are
 | broken exactly like in

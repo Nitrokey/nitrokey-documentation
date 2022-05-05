@@ -1,5 +1,5 @@
-Two-factor Authentication for Nextcloud accounts
-================================================
+Two-factor Authentication and Passwordless Login for Nextcloud accounts
+=======================================================================
 
 These are the basic steps for registering the Nitrokey FIDO2 as a second factor or setting up passwordless login of a Nextcloud account.
 
