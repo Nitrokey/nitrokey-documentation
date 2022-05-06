@@ -12,7 +12,7 @@ Troubleshooting
 Here you will find a collection of common issues.
 
 
-Nitrokey Is Not Detected On Linux
+Nitrokey is not detected on Linux
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the Nitrokey is not detected, proceed as follows:
@@ -34,7 +34,7 @@ Timeout Bug
 
 There is a bug with the Nitrokey being recognized by the system, where a timeout occurs before the connection succeeds. 
 
-NFC Is Not Working
+NFC is not Working
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Please make sure FIDO2 is working correctly. Otherwise NFC won't work either.
 
