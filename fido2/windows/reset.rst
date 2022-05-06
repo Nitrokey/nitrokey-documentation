@@ -35,10 +35,10 @@ be confirmed by touching the touch button twice.
 
 Detailed scenario:
 
-1. Reinsert the Nitrokey right before executing reset operation
-2. Start the reset operation in the user interface
+1. Reinsert the Nitrokey right before executing reset operation.
+2. Start the reset operation in the user interface.
 3. When the LED blinks white, touch the touch button for 1 second until it turns green.
-4. Release the touch
+4. Release the touch.
 5. When the LED blinks red, touch the touch button for 5 seconds until it turns blue.
 
 Windows 10 on a Virtual Machine
