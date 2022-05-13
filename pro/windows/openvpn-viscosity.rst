@@ -98,7 +98,7 @@ References
 -  `Using Tokens/Smartcards
    (PKCS#11) <https://www.sparklabs.com/support/kb/article/using-tokens-smartcards-pkcs-11/>`_
 
--  `OpenVPN HOWTO <https://openvpn.net/community-resources/how-to/>`_
+-  `OpenVPN How-To <https://openvpn.net/community-resources/how-to/>`_
 
 Notes
 -----
