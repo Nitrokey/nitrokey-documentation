@@ -25,8 +25,7 @@ The Nitrokey 3 can be used with any current browser.
 Passwordless authentication
 ---------------------------
 
-1. Open a web page that supports FIDO2 (currently only
-   `Microsoft <https://www.microsoft.com>`_).
+1. Open a web page that supports FIDO2.
 2. Log in to the website and go to “Set up security key” in the security
    settings of your account.
 3. Now you need to set a PIN for your Nitrokey 3.
