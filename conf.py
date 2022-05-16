@@ -76,6 +76,12 @@ exclude_patterns = ['nethsm/_*.rst']
 #pygments_style = "solarizeddark"
 pygments_style = "cheerfully_dark"
 
+highlight_language = "none"
+
+highlight_options = {
+  'default': {'stripall': True},
+  'bash': {'startinline': True},
+}
 
 # -- Options for HTML output -------------------------------------------------
 

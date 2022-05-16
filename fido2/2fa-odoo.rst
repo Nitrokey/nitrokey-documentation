@@ -1,4 +1,4 @@
-Two-factor authentication for ERP software Odoo
+Two-factor Authentication for ERP software Odoo
 ===============================================
 
 .. include:: ./product_platform_heading.rst

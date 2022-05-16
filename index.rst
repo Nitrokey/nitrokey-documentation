@@ -1,6 +1,5 @@
 Nitrokey Documentation
-==========
-
+======================
 
 .. toctree::
    :maxdepth: 1

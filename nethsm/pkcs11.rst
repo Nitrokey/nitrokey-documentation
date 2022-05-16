@@ -20,15 +20,23 @@ After creating a key (here: ID 42) with the according mechanism, you can use it 
 ::
 
    $ KEYID=42
+   
+::
+
    $ HEXID=$(echo ${KEYID}'\c' | xxd -ps)
-   $ curl -s -u operator:opPassphrase -X GET \
-     https://nethsmdemo.nitrokey.com/api/v1/keys/$KEYID/public.pem -o public.pem
-   $ echo 'NetHSM rulez!' | openssl pkeyutl -encrypt -pubin -inkey public.pem \
-     -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha512 \
-     -pkeyopt rsa_mgf1_md:sha512 -out encrypted.data
-   $ pkcs11-tool --module p11nethsm.so -v -p opPassphrase --decrypt \
-     --mechanism RSA-PKCS-OAEP --input-file encrypted.data --id $HEXID \
-     --hash-algorithm SHA512
+
+::
+
+   $ curl -s -u operator:opPassphrase -X GET https://nethsmdemo.nitrokey.com/api/v1/keys/$KEYID/public.pem -o public.pem
+   
+::   
+
+   $ echo 'NetHSM rulez!' | openssl pkeyutl -encrypt -pubin -inkey public.pem -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha512 -pkeyopt rsa_mgf1_md:sha512 -out encrypted.data
+   
+     
+::     
+     
+   $ pkcs11-tool --module p11nethsm.so -v -p opPassphrase --decrypt --mechanism RSA-PKCS-OAEP --input-file encrypted.data --id $HEXID --hash-algorithm SHA512
 
 Signing
 -------
@@ -38,11 +46,20 @@ After creating a key (here: ID 23) with the according mechanism, you can use it 
 ::
 
    $ KEYID=23
+   
+::
+
    $ HEXID=$(echo ${KEYID}'\c' | xxd -ps)
-   $ curl -s -u operator:opPassphrase -X GET \
-     https://nethsmdemo.nitrokey.com/api/v1/keys/$KEYID/public.pem -o public.pem
-   $ echo 'NetHSM rulez!' | pkcs11-tool --module p11nethsm.so -v -p opPassphrase \
-     --sign --mechanism SHA512-RSA-PKCS-PSS --output-file sig.data --id $HEXID
-   $ echo 'NetHSM rulez!' | openssl dgst -keyform PEM -verify public.pem -sha512 \
-     -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 -signature sig.data
+   
+::
+
+   $ curl -s -u operator:opPassphrase -X GET https://nethsmdemo.nitrokey.com/api/v1/keys/$KEYID/public.pem -o public.pem
+     
+::
+
+   $ echo 'NetHSM rulez!' | pkcs11-tool --module p11nethsm.so -v -p opPassphrase --sign --mechanism SHA512-RSA-PKCS-PSS --output-file sig.data --id $HEXID
+   
+::
+
+   $ echo 'NetHSM rulez!' | openssl dgst -keyform PEM -verify public.pem -sha512 -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 -signature sig.data
 
