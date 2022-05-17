@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-17 16:51+0200\n"
-"PO-Revision-Date: 2022-05-16 14:37+0000\n"
+"PO-Revision-Date: 2022-05-17 16:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified) "
-"<https://translate.nitrokey.com/projects/nitrokey-documentation"
-"/documentation-string/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -2811,6 +2811,9 @@ msgid ""
 "NetHSM docker image, see the `Development and Testing </index.html"
 "#development-and-testing>`_ section of the NetHSM documentation."
 msgstr ""
+"在开始之前，我们将NetHSM实例的主机名存储在NETHSM_HOST环境变量中。  你可以使用公共的NetHSM演示实例nethsmdemo."
+"nitrokey.com，或者使用NetHSM docker镜像运行本地演示实例，参见NetHSM文档的`开发和测试</index.html"
+"#development-and-testing>`_部分。"
 
 #: ../nethsm/api.rst:19 ../nethsm/gettingstarted/api.rst:17
 msgid ""
@@ -2935,7 +2938,7 @@ msgstr "*R-Backup*:拥有此角色的用户账户只能访问启动系统备份�
 
 #: ../nethsm/_tutorial.rst:23
 msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr ""
+msgstr "注意：在未来的版本中，可能会引入额外的角色。"
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -2953,7 +2956,6 @@ msgid "Key Management"
 msgstr "关键管理"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "The NetHSM supports RSA, ED25519 and ECDSA keys.  When creating a key, "
 "you have to select both the key algorithm and the key mechanisms to use."
@@ -2962,10 +2964,9 @@ msgid ""
 " (with the modes PKCS#11 and PSS with MD5, SHA1, SHA224, SHA256, SHA384 "
 "or SHA512).  The other algorithms only support the signature mechanism."
 msgstr ""
-"NetHSM支持RSA、ED25519和ECDSA密钥。  当创建一个密钥时，你必须选择密钥算法和使用的密钥机制。  "
-"RSA密钥可用于解密（模式为原始、PKCS "
-"#1和OAEP，采用MD5、SHA1、SHA224、SHA256、SHA384或SHA512）和签名（模式为PKCS "
-"#1和PSS，采用MD5、SHA1、SHA224、SHA256、SHA384或SHA512）。  其他算法只支持签名机制。"
+"NetHSM支持RSA、ED25519和ECDSA密钥。  当创建一个密钥时，你必须选择密钥算法和使用的密钥机制。  RSA密钥可用于解密（模式为原始、P"
+"KCS#11和OAEP，采用MD5、SHA1、SHA224、SHA256、SHA384或SHA512）和签名（模式为PKCS#11和PSS，采用MD5、S"
+"HA1、SHA224、SHA256、SHA384或SHA512）。  其他算法只支持签名机制。"
 
 #: ../nethsm/_tutorial.rst:12
 msgid ""
@@ -2986,6 +2987,9 @@ msgid ""
 " don’t specify a key ID, the NetHSM will generate a random ID for the new"
 " key."
 msgstr ""
+"在这一节中，我们想用RSA密钥来解密使用PKCS#11的数据，并使用SHA256来签署PSS的数据。  因此，让我们在NetHSM上生成一个新的密钥。确保"
+"使用RSA算法并选择RSA_Signature_PSS_SHA256和RSA_Decryption_PKCS1密钥机制。  "
+"如果你没有指定一个密钥ID，NetHSM将为新的密钥生成一个随机的ID。"
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Import Keys"
@@ -3016,11 +3020,10 @@ msgid "We can also query the public key of the generated key pair:"
 msgstr "我们还可以查询生成的密钥对的公钥。"
 
 #: ../nethsm/_tutorial.rst:2
-#, fuzzy
 msgid ""
 "To be able to use the key with openssl, we export it as a PEM file and "
 "store it as public.pem:"
-msgstr "为了能够用``openssl``使用密钥，我们将其导出为PEM文件，并存储为``public.pem``。"
+msgstr "为了能够使用openssl的密钥，我们把它导出为一个PEM文件，并存储为public.pem。"
 
 #: ../nethsm/_tutorial.rst:2
 msgid ""
@@ -3057,12 +3060,11 @@ msgid "Decryption"
 msgstr "解密"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using openssl. "
 "(public.pem is the public key file that we created in the `Show Key "
 "Details`_ section.)"
-msgstr "我们可以用openssl对存储在NetHSM上的密钥进行数据加密。(public.pem是我们在显示密钥细节部分创建的公钥文件。)"
+msgstr "我们可以使用openssl对存储在NetHSM上的密钥进行数据加密。(public.pem是我们在`显示密钥细节`_部分创建的公钥文件。)"
 
 #: ../nethsm/_tutorial.rst:13
 msgid "Now we can use the NetHSM to decrypt the data:"
@@ -3136,9 +3138,8 @@ msgid "Alternatively, you can cancel the update:"
 msgstr "或者，你也可以取消更新。"
 
 #: ../nethsm/cli.rst:2
-#, fuzzy
 msgid "Nitropy command line tool"
-msgstr "用nitropy命令行工具访问NetHSM"
+msgstr "Nitropy命令行工具"
 
 #: ../nethsm/cli.rst:6 ../nethsm/gettingstarted/cli.rst:6
 msgid ""
@@ -3191,19 +3192,17 @@ msgid ""
 msgstr "现在创建一个具有操作员角色的新用户，可以用来签署和解密数据。注意，如果我们不指定，NetHSM会随机分配一个用户ID。"
 
 #: ../nethsm/cli.rst:198 ../nethsm/cli.rst:244
-#, fuzzy
 msgid ""
 "We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
-msgstr "我们可以用openssl检查该密钥，并将其用于加密或签名验证（如下一节所述）。"
+msgstr "我们可以用OpenSSL检查该密钥，并将其用于加密或签名验证（如下一节所述）。"
 
 #: ../nethsm/cli.rst:317
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
 "Details section.)"
-msgstr "我们可以用openssl对存储在NetHSM上的密钥进行数据加密。(public.pem是我们在显示密钥细节部分创建的公钥文件。)"
+msgstr "我们可以使用OpenSSL对存储在NetHSM上的密钥进行数据加密。(public.pem是我们在显示密钥细节部分创建的公钥文件。)"
 
 #: ../nethsm/cli.rst:333
 msgid ""
@@ -3212,9 +3211,8 @@ msgid ""
 msgstr "同样地，我们可以使用NetHSM上的密钥来签署数据。对于RSA和ECDSA，我们必须先计算出一个摘要。"
 
 #: ../nethsm/cli.rst:353
-#, fuzzy
 msgid "And then use OpenSSL to verify the signature:"
-msgstr "然后用openssl来验证签名。"
+msgstr "然后用OpenSSL来验证签名。"
 
 #: ../nethsm/cli.rst:366
 msgid "Creating Backups"
@@ -3241,7 +3239,7 @@ msgstr "更新NetHSM"
 
 #: ../nethsm/cli.rst:424
 msgid "CAUTION! Data loss may occur due to the installation of a beta update!"
-msgstr ""
+msgstr "注意!由于安装了测试版更新，可能会发生数据丢失!"
 
 #: ../nethsm/dev-and-test.rst:2
 msgid "Development and Testing"
@@ -7967,61 +7965,57 @@ msgid ""
 msgstr "并按照屏幕上的提示操作。之后，秘密和计数器应该都被重置为一个新的值。"
 
 #: ../nitropad/qubes/user-password-reset.rst:2
-#, fuzzy
 msgid "User Password Reset"
-msgstr "运行工厂重置"
+msgstr "用户密码重置"
 
 #: ../nitropad/qubes/user-password-reset.rst:4
 msgid "Follow the next five steps to boot from the installation media"
-msgstr ""
+msgstr "按照接下来的五个步骤，从安装介质启动"
 
-#, fuzzy
 msgid "Step 1"
-msgstr "secp521"
+msgstr "步骤1"
 
-#, fuzzy
 msgid "Step 2"
-msgstr "secp521"
+msgstr "第2步"
 
 msgid "Step 3"
-msgstr ""
+msgstr "步骤3"
 
 msgid "Step 4"
-msgstr ""
+msgstr "第四步"
 
-#, fuzzy
 msgid "Step 5"
-msgstr "secp521"
+msgstr "第5步"
 
 #: ../nitropad/qubes/user-password-reset.rst:21
 msgid ""
 "In the rescue shell, type: `cryptsetup open /dev/sda3 qubes` to unlock "
 "the encrypted root drive"
-msgstr ""
+msgstr "在救援壳中，键入。`cryptsetup open /dev/sda3 qubes`以解锁加密的根驱动器"
 
 #: ../nitropad/qubes/user-password-reset.rst:23
 msgid "Mount the root drive `mount /dev/mapper/qubes_dom0-root /mnt`"
-msgstr ""
+msgstr "挂载根驱动器 `mount /dev/mapper/qubes_dom0-root /mnt`。"
 
 #: ../nitropad/qubes/user-password-reset.rst:25
 msgid "Change root to it `chroot /mnt`"
-msgstr ""
+msgstr "将根目录改为`chroot /mnt`。"
 
 #: ../nitropad/qubes/user-password-reset.rst:27
 msgid "Change the password `passwd user` (where \"user\" is your Qubes login)"
-msgstr ""
+msgstr "修改密码`passwd user`（其中\"user\"是你的Qubes登录名）。"
 
 #: ../nitropad/qubes/user-password-reset.rst:28
 msgid "Type in a new password and confirm"
-msgstr ""
+msgstr "输入一个新的密码并确认"
 
 #: ../nitropad/qubes/user-password-reset.rst:29
 msgid "Type `exit` to exit the chroot"
-msgstr ""
+msgstr "输入`exit`退出chroot。"
 
 #: ../nitropad/qubes/user-password-reset.rst:30
 msgid "Type `reboot` and then boot as usal without the installation medium"
-msgstr ""
+msgstr "输入 \"reboot\"，然后在没有安装介质的情况下以普通方式启动。"
 
 #: ../nitropad/ubuntu/change-disk-encryption-passphrase.rst:2
 msgid "Change Disk Encryption Passphrase"
@@ -16557,4 +16551,3 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "Accessing a NetHSM using the nitropy command line tool"
 #~ msgstr "使用nitropy命令行工具访问NetHSM"
-
