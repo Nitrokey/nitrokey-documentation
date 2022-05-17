@@ -1,7 +1,7 @@
 .. start:: setup
 Before we start, we store the host name of the NetHSM instance in the
-``NETHSM_HOST`` environment variable.  You can use the public NetHSM demo
-instance ``nethsmdemo.nitrokey.com`` or run a local demo instance using the
+NETHSM_HOST environment variable.  You can use the public NetHSM demo
+instance nethsmdemo.nitrokey.com or run a local demo instance using the
 NetHSM docker image, see the `Development and Testing
 </index.html#development-and-testing>`_ section of the NetHSM documentation.
 
@@ -36,7 +36,7 @@ Passphrase* is used to encrypt NetHSM’s confidential data store.
 
 .. note::
 
-   The NetHSM demo instance at ``nethsmdemo.nitrokey.com`` is already
+   The NetHSM demo instance at nethsmdemo.nitrokey.com is already
    provisioned.
 .. end
 
@@ -97,7 +97,7 @@ please refer to the REST API documentation.
 -  *R-Backup*: A user account with this Role has access to the operations
    required to initiate a system backup only.
 
-Note: In a future release another Role will be implemented which is allowed to /keys/ POST, /keys/generate POST, /keys/{KeyID} PUT & DELETE, /keys/{KeyID}/cert PUT & DELETE in addition to what R-Operator is allowed to do.
+Note: In a future releases, additional Roles may be introduced.
 .. end
 
 .. start:: add-user
@@ -117,8 +117,8 @@ Key Management
 
 The NetHSM supports RSA, ED25519 and ECDSA keys.  When creating a key, you have
 to select both the key algorithm and the key mechanisms to use.  RSA keys can
-be used for decryption (with the modes raw, PKCS #1 and OAEP with MD5, SHA1,
-SHA224, SHA256, SHA384 or SHA512) and for signatures (with the modes PKCS #1
+be used for decryption (with the modes raw, PKCS#11 and OAEP with MD5, SHA1,
+SHA224, SHA256, SHA384 or SHA512) and for signatures (with the modes PKCS#11
 and PSS with MD5, SHA1, SHA224, SHA256, SHA384 or SHA512).  The other
 algorithms only support the signature mechanism.
 
@@ -134,10 +134,10 @@ documentation for the KeyAlgorithm_ and KeyMechanism_ types.
 Generate Keys
 ~~~~~~~~~~~~~
 
-In this guide, we want to use an RSA key to decrypt data using PKCS #1 and to
+In this section, we want to use an RSA key to decrypt data using PKCS#11 and to
 sign data with PSS using SHA256.  So let’s generate a new key on the NetHSM.
-Make sure to use the ``RSA`` algorithm and to select the
-``RSA_Signature_PSS_SHA256`` and ``RSA_Decryption_PKCS1`` key mechanisms.  If
+Make sure to use the RSA algorithm and to select the
+RSA_Signature_PSS_SHA256 and RSA_Decryption_PKCS1 key mechanisms.  If
 you don’t specify a key ID, the NetHSM will generate a random ID for the new
 key.
 .. end
@@ -176,22 +176,22 @@ We can also query the public key of the generated key pair:
 GET /keys/myFirstKey
 
 .. start:: get-key-file
-To be able to use the key with ``openssl``, we export it as a PEM file and
-store it as ``public.pem``:
+To be able to use the key with openssl, we export it as a PEM file and
+store it as public.pem:
 .. end
 
 GET /keys/myFirstKey/public.pem
 
 .. start:: inspect-key
-We can inspect the key with ``openssl`` and use it for encryption or signature
+We can inspect the key with openssl and use it for encryption or signature
 verification (as described in the next section):
 
 ::
 
     $ openssl rsa -in public.pem -pubin -text
-    
-::    
-    
+
+::
+
     RSA Public-Key: (2048 bit)
     Modulus:
         00:c3:56:f5:09:cc:a9:3e:ca:16:2e:fb:d2:8b:9d:
@@ -257,8 +257,8 @@ Key Operations
 Decryption
 ~~~~~~~~~~
 
-We can encrypt data for the key stored on the NetHSM using ``openssl``.
-(``public.pem`` is the public key file that we created in the `Show Key
+We can encrypt data for the key stored on the NetHSM using openssl.
+(public.pem is the public key file that we created in the `Show Key
 Details`_ section.)
 
 ::
@@ -280,7 +280,7 @@ we have to calculate a digest first:
 ::
 
     $ echo 'NetHSM rulez!' > data
-    
+
 ::
 
     $ openssl dgst -sha256 -binary data | base64 > data.digest
@@ -291,7 +291,7 @@ Then we can create a signature from this digest using the NetHSM:
 POST /keys/myFirstKey/sign
 
 .. start:: sign-verify
-And then use ``openssl`` to verify the signature:
+And then use openssl to verify the signature:
 
 ::
 
@@ -299,7 +299,7 @@ And then use ``openssl`` to verify the signature:
     -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
 
 ::
-        
+
     Verified OK
 .. end
 
