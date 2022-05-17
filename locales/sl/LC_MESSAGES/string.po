@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-17 16:51+0200\n"
-"PO-Revision-Date: 2022-05-16 14:38+0000\n"
+"PO-Revision-Date: 2022-05-17 16:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/sl/>\n"
 "Language: sl\n"
-"Language-Team: Slovenian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/sl/>\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
-"|| n%100==4 ? 2 : 3\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -3308,6 +3309,11 @@ msgid ""
 "NetHSM docker image, see the `Development and Testing </index.html"
 "#development-and-testing>`_ section of the NetHSM documentation."
 msgstr ""
+"Preden začnemo, shranimo ime gostitelja instance NetHSM v okoljsko "
+"spremenljivko NETHSM_HOST.  Uporabite lahko javno demo instanco NetHSM "
+"nethsmdemo.nitrokey.com ali zaženete lokalno demo instanco s pomočjo slike "
+"NetHSM docker, glejte `Razvoj in testiranje </index.html#development-and-"
+"testing>`_ razdelek dokumentacije NetHSM."
 
 #: ../nethsm/api.rst:19 ../nethsm/gettingstarted/api.rst:17
 msgid ""
@@ -3459,7 +3465,7 @@ msgstr ""
 
 #: ../nethsm/_tutorial.rst:23
 msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr ""
+msgstr "Opomba: V prihodnjih izdajah bodo morda uvedene dodatne vloge."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3480,7 +3486,6 @@ msgid "Key Management"
 msgstr "Upravljanje ključev"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "The NetHSM supports RSA, ED25519 and ECDSA keys.  When creating a key, "
 "you have to select both the key algorithm and the key mechanisms to use."
@@ -3489,13 +3494,12 @@ msgid ""
 " (with the modes PKCS#11 and PSS with MD5, SHA1, SHA224, SHA256, SHA384 "
 "or SHA512).  The other algorithms only support the signature mechanism."
 msgstr ""
-"NetHSM podpira ključe RSA, ED25519 in ECDSA.  Pri ustvarjanju ključa "
-"morate izbrati algoritem ključa in mehanizme ključa, ki jih želite "
-"uporabiti.  Ključe RSA lahko uporabite za dešifriranje (v načinih raw, "
-"PKCS #1 in OAEP z MD5, SHA1, SHA224, SHA256, SHA384 ali SHA512) in "
-"podpisovanje (v načinih PKCS #1 in PSS z MD5, SHA1, SHA224, SHA256, "
-"SHA384 ali SHA512).  Drugi algoritmi podpirajo samo mehanizem "
-"podpisovanja."
+"NetHSM podpira ključe RSA, ED25519 in ECDSA.  Pri ustvarjanju ključa morate "
+"izbrati algoritem ključa in mehanizme ključa, ki jih želite uporabiti.  "
+"Ključe RSA lahko uporabite za dešifriranje (v načinih raw, PKCS#11 in OAEP z "
+"MD5, SHA1, SHA224, SHA256, SHA384 ali SHA512) in podpisovanje (v načinih "
+"PKCS#11 in PSS z MD5, SHA1, SHA224, SHA256, SHA384 ali SHA512).  Drugi "
+"algoritmi podpirajo samo mehanizem podpisovanja."
 
 #: ../nethsm/_tutorial.rst:12
 msgid ""
@@ -3518,6 +3522,12 @@ msgid ""
 " don’t specify a key ID, the NetHSM will generate a random ID for the new"
 " key."
 msgstr ""
+"V tem razdelku želimo uporabiti ključ RSA za dešifriranje podatkov z uporabo "
+"PKCS#11 in podpisovanje podatkov s PSS z uporabo SHA256.  Zato ustvarimo nov "
+"ključ v napravi NetHSM. Prepričajte se, da uporabljate algoritem RSA in "
+"izberete mehanizma ključev RSA_Signature_PSS_SHA256 in "
+"RSA_Decryption_PKCS1.  Če ne določite ID ključa, bo NetHSM za novi ključ "
+"ustvaril naključni ID."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Import Keys"
@@ -3553,13 +3563,12 @@ msgid "We can also query the public key of the generated key pair:"
 msgstr "Poizvedujemo lahko tudi po javnem ključu ustvarjenega para ključev:"
 
 #: ../nethsm/_tutorial.rst:2
-#, fuzzy
 msgid ""
 "To be able to use the key with openssl, we export it as a PEM file and "
 "store it as public.pem:"
 msgstr ""
-"Da bi lahko ključ uporabili s ``openssl``, ga izvozimo kot datoteko PEM "
-"in shranimo kot ``public.pem``:"
+"Da bi lahko ključ uporabili z openssl, ga izvozimo kot datoteko PEM in "
+"shranimo kot public.pem:"
 
 #: ../nethsm/_tutorial.rst:2
 msgid ""
@@ -3602,15 +3611,14 @@ msgid "Decryption"
 msgstr "Dešifriranje"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using openssl. "
 "(public.pem is the public key file that we created in the `Show Key "
 "Details`_ section.)"
 msgstr ""
-"Podatke za ključ, shranjen v NetHSM, lahko šifriramo z openssl. "
-"(public.pem je datoteka z javnim ključem, ki smo jo ustvarili v razdelku "
-"Prikaži podrobnosti o ključu.)"
+"Podatke za ključ, shranjen v NetHSM, lahko šifriramo z openssl. (public.pem "
+"je datoteka z javnim ključem, ki smo jo ustvarili v razdelku `Pokaži "
+"podrobnosti o ključu`_.)"
 
 #: ../nethsm/_tutorial.rst:13
 msgid "Now we can use the NetHSM to decrypt the data:"
@@ -3692,9 +3700,8 @@ msgid "Alternatively, you can cancel the update:"
 msgstr "Posodobitev lahko tudi prekličete:"
 
 #: ../nethsm/cli.rst:2
-#, fuzzy
 msgid "Nitropy command line tool"
-msgstr "Dostop do sistema NetHSM z orodjem ukazne vrstice nitropy"
+msgstr "Orodje ukazne vrstice Nitropy"
 
 #: ../nethsm/cli.rst:6 ../nethsm/gettingstarted/cli.rst:6
 msgid ""
@@ -3761,23 +3768,21 @@ msgstr ""
 "naključno uporabniško ime, če ga ne določimo."
 
 #: ../nethsm/cli.rst:198 ../nethsm/cli.rst:244
-#, fuzzy
 msgid ""
 "We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
 msgstr ""
-"Ključ lahko pregledamo s programom openssl in ga uporabimo za šifriranje "
-"ali preverjanje podpisa (kot je opisano v naslednjem razdelku):"
+"Ključ lahko pregledamo s programom OpenSSL in ga uporabimo za šifriranje ali "
+"preverjanje podpisa (kot je opisano v naslednjem razdelku):"
 
 #: ../nethsm/cli.rst:317
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
 "Details section.)"
 msgstr ""
-"Podatke za ključ, shranjen v NetHSM, lahko šifriramo z openssl. "
-"(public.pem je datoteka z javnim ključem, ki smo jo ustvarili v razdelku "
+"Podatke za ključ, shranjen v NetHSM, lahko šifriramo z uporabo OpenSSL. ("
+"public.pem je datoteka z javnim ključem, ki smo jo ustvarili v razdelku "
 "Prikaži podrobnosti o ključu.)"
 
 #: ../nethsm/cli.rst:333
@@ -3789,9 +3794,8 @@ msgstr ""
 "ECDSA moramo najprej izračunati prebavo:"
 
 #: ../nethsm/cli.rst:353
-#, fuzzy
 msgid "And then use OpenSSL to verify the signature:"
-msgstr "Za preverjanje podpisa uporabite openssl:"
+msgstr "Za preverjanje podpisa uporabite OpenSSL:"
 
 #: ../nethsm/cli.rst:366
 msgid "Creating Backups"
@@ -3823,6 +3827,7 @@ msgstr "Posodabljanje NetHSM"
 #: ../nethsm/cli.rst:424
 msgid "CAUTION! Data loss may occur due to the installation of a beta update!"
 msgstr ""
+"POZOR! Zaradi namestitve beta posodobitve lahko pride do izgube podatkov!"
 
 #: ../nethsm/dev-and-test.rst:2
 msgid "Development and Testing"
@@ -9607,61 +9612,62 @@ msgstr ""
 "na novo vrednost."
 
 #: ../nitropad/qubes/user-password-reset.rst:2
-#, fuzzy
 msgid "User Password Reset"
-msgstr "Izvedite tovarniško ponastavitev"
+msgstr "Ponastavitev uporabniškega gesla"
 
 #: ../nitropad/qubes/user-password-reset.rst:4
 msgid "Follow the next five steps to boot from the installation media"
-msgstr ""
+msgstr "Za zagon z namestitvenega medija sledite naslednjim petim korakom"
 
-#, fuzzy
 msgid "Step 1"
-msgstr "secp521"
+msgstr "Korak 1"
 
-#, fuzzy
 msgid "Step 2"
-msgstr "secp521"
+msgstr "Korak 2"
 
 msgid "Step 3"
-msgstr ""
+msgstr "Korak 3"
 
 msgid "Step 4"
-msgstr ""
+msgstr "Korak 4"
 
-#, fuzzy
 msgid "Step 5"
-msgstr "secp521"
+msgstr "Korak 5"
 
 #: ../nitropad/qubes/user-password-reset.rst:21
 msgid ""
 "In the rescue shell, type: `cryptsetup open /dev/sda3 qubes` to unlock "
 "the encrypted root drive"
 msgstr ""
+"V reševalni lupini vnesite: `cryptsetup open /dev/sda3 qubes` za odklepanje "
+"šifriranega korenskega pogona"
 
 #: ../nitropad/qubes/user-password-reset.rst:23
 msgid "Mount the root drive `mount /dev/mapper/qubes_dom0-root /mnt`"
-msgstr ""
+msgstr "Namestitev korenskega pogona `mount /dev/mapper/qubes_dom0-root /mnt`"
 
 #: ../nitropad/qubes/user-password-reset.rst:25
 msgid "Change root to it `chroot /mnt`"
-msgstr ""
+msgstr "Spremenite koren na `chroot /mnt`"
 
 #: ../nitropad/qubes/user-password-reset.rst:27
 msgid "Change the password `passwd user` (where \"user\" is your Qubes login)"
 msgstr ""
+"Spremenite geslo `passwd user` (kjer je \"user\" vaše uporabniško ime za "
+"Qubes)."
 
 #: ../nitropad/qubes/user-password-reset.rst:28
 msgid "Type in a new password and confirm"
-msgstr ""
+msgstr "Vnesite novo geslo in ga potrdite."
 
 #: ../nitropad/qubes/user-password-reset.rst:29
 msgid "Type `exit` to exit the chroot"
-msgstr ""
+msgstr "Vnesite `exit` za izhod iz chroota"
 
 #: ../nitropad/qubes/user-password-reset.rst:30
 msgid "Type `reboot` and then boot as usal without the installation medium"
 msgstr ""
+"Vnesite `reboot` in nato zagon kot uporabniški brez namestitvenega medija"
 
 #: ../nitropad/ubuntu/change-disk-encryption-passphrase.rst:2
 msgid "Change Disk Encryption Passphrase"
@@ -19950,4 +19956,3 @@ msgstr ""
 
 #~ msgid "Accessing a NetHSM using the nitropy command line tool"
 #~ msgstr "Dostop do sistema NetHSM z orodjem ukazne vrstice nitropy"
-
