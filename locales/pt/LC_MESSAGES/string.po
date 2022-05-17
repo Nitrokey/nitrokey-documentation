@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-17 16:51+0200\n"
-"PO-Revision-Date: 2022-05-16 14:38+0000\n"
+"PO-Revision-Date: 2022-05-17 16:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Portuguese <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/pt/>\n"
 "Language: pt\n"
-"Language-Team: Portuguese <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/pt/>\n"
-"Plural-Forms: nplurals=2; plural=n > 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -3356,6 +3357,12 @@ msgid ""
 "NetHSM docker image, see the `Development and Testing </index.html"
 "#development-and-testing>`_ section of the NetHSM documentation."
 msgstr ""
+"Antes de começarmos, armazenamos o nome do anfitrião da instância NetHSM na "
+"variável de ambiente NETHSM_HOST.  Pode utilizar a instância pública de "
+"demonstração NetHSM nethsmdemo.nitrokey.com ou executar uma instância de "
+"demonstração local utilizando a imagem de encaixe NetHSM, ver a secção `"
+"Desenvolvimento e Teste </index.html#development-and-testing>>x id=\"303\"></"
+"x> da documentação do NetHSM."
 
 #: ../nethsm/api.rst:19 ../nethsm/gettingstarted/api.rst:17
 msgid ""
@@ -3514,6 +3521,7 @@ msgstr ""
 #: ../nethsm/_tutorial.rst:23
 msgid "Note: In a future releases, additional Roles may be introduced."
 msgstr ""
+"Nota: Em futuros lançamentos, poderão ser introduzidas funções adicionais."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3534,7 +3542,6 @@ msgid "Key Management"
 msgstr "Gestão de chaves"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "The NetHSM supports RSA, ED25519 and ECDSA keys.  When creating a key, "
 "you have to select both the key algorithm and the key mechanisms to use."
@@ -3543,13 +3550,13 @@ msgid ""
 " (with the modes PKCS#11 and PSS with MD5, SHA1, SHA224, SHA256, SHA384 "
 "or SHA512).  The other algorithms only support the signature mechanism."
 msgstr ""
-"O NetHSM suporta as teclas RSA, ED25519 e ECDSA.  Ao criar uma chave, "
-"você tem que selecionar tanto o algoritmo de chave quanto os mecanismos "
-"de chave a serem usados.  As chaves RSA podem ser usadas para decifração "
-"(com os modos raw, PKCS #1 e OAEP com MD5, SHA1, SHA224, SHA256, SHA384 "
-"ou SHA512) e para assinaturas (com os modos PKCS #1 e PSS com MD5, SHA1, "
-"SHA224, SHA256, SHA384 ou SHA512).  Os outros algoritmos suportam apenas "
-"o mecanismo de assinatura."
+"O NetHSM suporta chaves RSA, ED25519 e ECDSA.  Ao criar uma chave, é "
+"necessário seleccionar tanto o algoritmo de chave como os mecanismos de "
+"chave a utilizar.  As chaves RSA podem ser utilizadas para descodificação ("
+"com os modos raw, PKCS#11 e OAEP com MD5, SHA1, SHA224, SHA256, SHA384 ou "
+"SHA512) e para assinaturas (com os modos PKCS#11 e PSS com MD5, SHA1, "
+"SHA224, SHA256, SHA384 ou SHA512).  Os outros algoritmos suportam apenas o "
+"mecanismo de assinatura."
 
 #: ../nethsm/_tutorial.rst:12
 msgid ""
@@ -3573,6 +3580,12 @@ msgid ""
 " don’t specify a key ID, the NetHSM will generate a random ID for the new"
 " key."
 msgstr ""
+"Nesta secção, queremos usar uma chave RSA para decifrar dados usando PKCS#11 "
+"e para assinar dados com PSS usando SHA256.  Assim, vamos gerar uma nova "
+"chave no NetHSM. Certifique-se de usar o algoritmo RSA e de seleccionar os "
+"mecanismos de chave RSA_Signature_PSS_SHA256 e RSA_Decryption_PKCS1.  Se não "
+"especificar um ID de chave, o NetHSM irá gerar um ID aleatório para a nova "
+"chave."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Import Keys"
@@ -3608,13 +3621,12 @@ msgid "We can also query the public key of the generated key pair:"
 msgstr "Também podemos consultar a chave pública do par de chaves gerado:"
 
 #: ../nethsm/_tutorial.rst:2
-#, fuzzy
 msgid ""
 "To be able to use the key with openssl, we export it as a PEM file and "
 "store it as public.pem:"
 msgstr ""
-"Para poder usar a chave com ``openssl``, exportamo-la como ficheiro PEM e"
-" armazenamo-la como ``public.pem```:"
+"Para poder utilizar a chave com openssl, exportamo-la como ficheiro PEM e "
+"armazenamo-la como public.pem:"
 
 #: ../nethsm/_tutorial.rst:2
 msgid ""
@@ -3657,15 +3669,14 @@ msgid "Decryption"
 msgstr "Decodificação"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using openssl. "
 "(public.pem is the public key file that we created in the `Show Key "
 "Details`_ section.)"
 msgstr ""
-"Podemos encriptar dados para a chave armazenada no NetHSM usando o "
-"openssl. (public.pem é o ficheiro de chave pública que criámos na secção "
-"Mostrar Detalhes da Chave)."
+"Podemos encriptar dados para a chave armazenada no NetHSM usando o openssl. ("
+"public.pem é o ficheiro da chave pública que criámos na secção `Show Key "
+"Details`_)."
 
 #: ../nethsm/_tutorial.rst:13
 msgid "Now we can use the NetHSM to decrypt the data:"
@@ -3752,9 +3763,8 @@ msgid "Alternatively, you can cancel the update:"
 msgstr "Alternativamente, você pode cancelar a atualização:"
 
 #: ../nethsm/cli.rst:2
-#, fuzzy
 msgid "Nitropy command line tool"
-msgstr "Acessando um NetHSM com a ferramenta de linha de comando de nitropia"
+msgstr "Ferramenta de linha de comando Nitropy"
 
 #: ../nethsm/cli.rst:6 ../nethsm/gettingstarted/cli.rst:6
 msgid ""
@@ -3822,23 +3832,21 @@ msgstr ""
 " ID de utilizador aleatório, se não o especificarmos."
 
 #: ../nethsm/cli.rst:198 ../nethsm/cli.rst:244
-#, fuzzy
 msgid ""
 "We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
 msgstr ""
-"Podemos inspeccionar a chave com openssl e utilizá-la para encriptação ou"
-" verificação de assinatura (como descrito na secção seguinte):"
+"Podemos inspeccionar a chave com OpenSSL e utilizá-la para encriptação ou "
+"verificação de assinatura (como descrito na secção seguinte):"
 
 #: ../nethsm/cli.rst:317
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
 "Details section.)"
 msgstr ""
-"Podemos encriptar dados para a chave armazenada no NetHSM usando o "
-"openssl. (public.pem é o ficheiro de chave pública que criámos na secção "
+"Podemos encriptar dados para a chave armazenada no NetHSM utilizando o "
+"OpenSSL. (public.pem é o ficheiro de chave pública que criámos na secção "
 "Mostrar Detalhes da Chave)."
 
 #: ../nethsm/cli.rst:333
@@ -3850,9 +3858,8 @@ msgstr ""
 " a RSA e ECDSA, temos de calcular primeiro uma digestão:"
 
 #: ../nethsm/cli.rst:353
-#, fuzzy
 msgid "And then use OpenSSL to verify the signature:"
-msgstr "E depois utilizar openssl para verificar a assinatura:"
+msgstr "E depois utilizar o OpenSSL para verificar a assinatura:"
 
 #: ../nethsm/cli.rst:366
 msgid "Creating Backups"
@@ -3885,6 +3892,8 @@ msgstr "Actualização do NetHSM"
 #: ../nethsm/cli.rst:424
 msgid "CAUTION! Data loss may occur due to the installation of a beta update!"
 msgstr ""
+"CUIDADO! A perda de dados pode ocorrer devido à instalação de uma "
+"actualização beta!"
 
 #: ../nethsm/dev-and-test.rst:2
 msgid "Development and Testing"
@@ -9785,61 +9794,61 @@ msgstr ""
 "ambos redefinidos para um novo valor."
 
 #: ../nitropad/qubes/user-password-reset.rst:2
-#, fuzzy
 msgid "User Password Reset"
-msgstr "Executar reset de fábrica"
+msgstr "Reinicialização da palavra-passe do utilizador"
 
 #: ../nitropad/qubes/user-password-reset.rst:4
 msgid "Follow the next five steps to boot from the installation media"
 msgstr ""
+"Siga os cinco passos seguintes para arrancar a partir dos meios de instalação"
 
-#, fuzzy
 msgid "Step 1"
-msgstr "secp521"
+msgstr "Passo 1"
 
-#, fuzzy
 msgid "Step 2"
-msgstr "secp521"
+msgstr "Passo 2"
 
 msgid "Step 3"
-msgstr ""
+msgstr "Etapa 3"
 
 msgid "Step 4"
-msgstr ""
+msgstr "Passo 4"
 
-#, fuzzy
 msgid "Step 5"
-msgstr "secp521"
+msgstr "Passo 5"
 
 #: ../nitropad/qubes/user-password-reset.rst:21
 msgid ""
 "In the rescue shell, type: `cryptsetup open /dev/sda3 qubes` to unlock "
 "the encrypted root drive"
 msgstr ""
+"Na concha de salvamento, digite: \"crytsetup open /dev/sda3 qubes\" para "
+"desbloquear a unidade raiz encriptada"
 
 #: ../nitropad/qubes/user-password-reset.rst:23
 msgid "Mount the root drive `mount /dev/mapper/qubes_dom0-root /mnt`"
-msgstr ""
+msgstr "Montar a unidade raiz `mount /dev/mapper/qubes_dom0-root /mnt`"
 
 #: ../nitropad/qubes/user-password-reset.rst:25
 msgid "Change root to it `chroot /mnt`"
-msgstr ""
+msgstr "Mudar raiz para `chroot /mnt`"
 
 #: ../nitropad/qubes/user-password-reset.rst:27
 msgid "Change the password `passwd user` (where \"user\" is your Qubes login)"
 msgstr ""
+"Alterar a palavra-passe `passwd user` (onde \"user\" é o seu login Qubes)"
 
 #: ../nitropad/qubes/user-password-reset.rst:28
 msgid "Type in a new password and confirm"
-msgstr ""
+msgstr "Introduzir uma nova palavra-passe e confirmar"
 
 #: ../nitropad/qubes/user-password-reset.rst:29
 msgid "Type `exit` to exit the chroot"
-msgstr ""
+msgstr "Tipo `saída` para sair da chroot"
 
 #: ../nitropad/qubes/user-password-reset.rst:30
 msgid "Type `reboot` and then boot as usal without the installation medium"
-msgstr ""
+msgstr "Tipo `reboot` e depois boot como usal sem o meio de instalação"
 
 #: ../nitropad/ubuntu/change-disk-encryption-passphrase.rst:2
 msgid "Change Disk Encryption Passphrase"
@@ -20287,4 +20296,3 @@ msgstr ""
 
 #~ msgid "Accessing a NetHSM using the nitropy command line tool"
 #~ msgstr "Acesso a um NetHSM usando a ferramenta de linha de comando de nitropia"
-
