@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-17 16:51+0200\n"
-"PO-Revision-Date: 2022-05-16 14:37+0000\n"
+"PO-Revision-Date: 2022-05-17 16:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/ja/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -2905,6 +2906,10 @@ msgid ""
 "NetHSM docker image, see the `Development and Testing </index.html"
 "#development-and-testing>`_ section of the NetHSM documentation."
 msgstr ""
+"開始する前に、NetHSMインスタンスのホスト名をNETHSM_HOST環境変数に格納します。  公開されている NetHSM デモインスタンス "
+"nethsmdemo.nitrokey.com を使用するか、NetHSM docker "
+"イメージを使用してローカルのデモインスタンスを実行することができます。NetHSM ドキュメントの `Development and Testing "
+"</index.html#development-and-testing>`_ セクションを参照してください。"
 
 #: ../nethsm/api.rst:19 ../nethsm/gettingstarted/api.rst:17
 msgid ""
@@ -3038,7 +3043,7 @@ msgstr "*R-Backup*。この役割を持つユーザーアカウントは、シ�
 
 #: ../nethsm/_tutorial.rst:23
 msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr ""
+msgstr "注：将来のリリースでは、追加のロールが導入される可能性があります。"
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3058,7 +3063,6 @@ msgid "Key Management"
 msgstr "キーマネージメント"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "The NetHSM supports RSA, ED25519 and ECDSA keys.  When creating a key, "
 "you have to select both the key algorithm and the key mechanisms to use."
@@ -3067,11 +3071,10 @@ msgid ""
 " (with the modes PKCS#11 and PSS with MD5, SHA1, SHA224, SHA256, SHA384 "
 "or SHA512).  The other algorithms only support the signature mechanism."
 msgstr ""
-"NetHSMはRSA、ED25519、ECDSAの鍵をサポートしています。  "
-"鍵を作成する際には、使用する鍵アルゴリズムと鍵の仕組みの両方を選択する必要があります。  RSA 鍵は、復号（モードが raw、PKCS #1 "
-"および OAEP で MD5、SHA1、SHA224、SHA256、SHA384 または SHA512）および署名（モードが PKCS #1 "
-"および PSS で MD5、SHA1、SHA224、SHA256、SHA384 または SHA512）に使用できます。  "
-"その他のアルゴリズムは、署名メカニズムのみをサポートしています。"
+"NetHSMは、RSA、ED25519、ECDSAの鍵に対応しています。  "
+"鍵を作成する際、鍵のアルゴリズムと使用する鍵のメカニズムの両方を選択する必要があります。  RSAキーは、復号化（モードraw、PKCS#11、OAEP、"
+"MD5、SHA1、SHA224、SHA256、SHA384、SHA512）および署名（モードPKCS#11、PSS、MD5、SHA1、SHA224、SHA"
+"256、SHA384、SHA512）に使用可能です。  その他のアルゴリズムは、署名機構のみをサポートしています。"
 
 #: ../nethsm/_tutorial.rst:12
 msgid ""
@@ -3092,6 +3095,9 @@ msgid ""
 " don’t specify a key ID, the NetHSM will generate a random ID for the new"
 " key."
 msgstr ""
+"ここでは、PKCS#11を使ったデータの復号化と、SHA256を使ったPSSでの署名にRSAキーを使いたいと思います。  そこで、NetHSMで新しい鍵を"
+"生成してみましょう。必ずRSAアルゴリズムを使用し、RSA_Signature_PSS_SHA256とRSA_Decryption_PKCS1キーメカニズ"
+"ムを選択してください。  キーIDを指定しない場合、NetHSMは新しいキーのためにランダムなIDを生成します。"
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Import Keys"
@@ -3122,11 +3128,10 @@ msgid "We can also query the public key of the generated key pair:"
 msgstr "また、生成されたキーペアの公開鍵を照会することもできます。"
 
 #: ../nethsm/_tutorial.rst:2
-#, fuzzy
 msgid ""
 "To be able to use the key with openssl, we export it as a PEM file and "
 "store it as public.pem:"
-msgstr "この鍵を``openssl``で使えるようにするために、PEMファイルとしてエクスポートし、``public.pem``として保存します。"
+msgstr "opensslで使えるようにするために、鍵をPEMファイルとしてエクスポートし、public.pemとして保存しています。"
 
 #: ../nethsm/_tutorial.rst:2
 msgid ""
@@ -3163,12 +3168,13 @@ msgid "Decryption"
 msgstr "復号化"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using openssl. "
 "(public.pem is the public key file that we created in the `Show Key "
 "Details`_ section.)"
-msgstr "NetHSMに保存されている鍵のデータをopensslで暗号化することができます。(public.pemは、「鍵の詳細を表示する」で作成した公開鍵ファイルです)。"
+msgstr ""
+"NetHSMに保存されている鍵のデータをopensslで暗号化することができます。(public.pemは`Show Key "
+"Details`_の項目で作成した公開鍵ファイルです)。"
 
 #: ../nethsm/_tutorial.rst:13
 msgid "Now we can use the NetHSM to decrypt the data:"
@@ -3245,9 +3251,8 @@ msgid "Alternatively, you can cancel the update:"
 msgstr "また、アップデートをキャンセルすることもできます。"
 
 #: ../nethsm/cli.rst:2
-#, fuzzy
 msgid "Nitropy command line tool"
-msgstr "コマンドラインツール「nitropy」によるNetHSMへのアクセス"
+msgstr "Nitropyコマンドラインツール"
 
 #: ../nethsm/cli.rst:6 ../nethsm/gettingstarted/cli.rst:6
 msgid ""
@@ -3307,19 +3312,19 @@ msgid ""
 msgstr "ここで、データの署名と復号に使用できるオペレーターの役割を持つ新しいユーザーを作成します。NetHSMは、指定しない場合、ランダムなユーザーIDを割り当てることに注意してください。"
 
 #: ../nethsm/cli.rst:198 ../nethsm/cli.rst:244
-#, fuzzy
 msgid ""
 "We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
-msgstr "この鍵をopensslで検査し、暗号化や署名検証（次のセクションで説明します）に利用することができます。"
+msgstr "この鍵をOpenSSLで検査し、暗号化や署名検証（次節で説明）に利用することができるのです。"
 
 #: ../nethsm/cli.rst:317
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
 "Details section.)"
-msgstr "NetHSMに保存されている鍵のデータをopensslで暗号化することができます。(public.pemは、「鍵の詳細を表示する」で作成した公開鍵ファイルです)。"
+msgstr ""
+"NetHSMに保存されている鍵のデータをOpenSSLを使用して暗号化することができます。(public."
+"pemは、「鍵の詳細を表示する」で作成した公開鍵ファイルです)。"
 
 #: ../nethsm/cli.rst:333
 msgid ""
@@ -3328,9 +3333,8 @@ msgid ""
 msgstr "同様に、NetHSM上のキーを使ってデータに署名することもできます。RSAとECDSAの場合、最初にダイジェストを計算する必要があります。"
 
 #: ../nethsm/cli.rst:353
-#, fuzzy
 msgid "And then use OpenSSL to verify the signature:"
-msgstr "そして、opensslで署名を検証する。"
+msgstr "そして、OpenSSLで署名を検証する。"
 
 #: ../nethsm/cli.rst:366
 msgid "Creating Backups"
@@ -3357,7 +3361,7 @@ msgstr "NetHSMのアップデート"
 
 #: ../nethsm/cli.rst:424
 msgid "CAUTION! Data loss may occur due to the installation of a beta update!"
-msgstr ""
+msgstr "注意!ベータ版アップデートのインストールにより、データ損失が発生する可能性があります!"
 
 #: ../nethsm/dev-and-test.rst:2
 msgid "Development and Testing"
@@ -8218,61 +8222,59 @@ msgid ""
 msgstr "をクリックして、画面のガイドに従ってください。その後、シークレットとカウンターの両方が新しい値にリセットされるはずです。"
 
 #: ../nitropad/qubes/user-password-reset.rst:2
-#, fuzzy
 msgid "User Password Reset"
-msgstr "ファクトリーリセットの実行"
+msgstr "ユーザーパスワードリセット"
 
 #: ../nitropad/qubes/user-password-reset.rst:4
 msgid "Follow the next five steps to boot from the installation media"
-msgstr ""
+msgstr "次の5つのステップを踏んで、インストールメディアから起動します。"
 
-#, fuzzy
 msgid "Step 1"
-msgstr "secp521"
+msgstr "ステップ1"
 
-#, fuzzy
 msgid "Step 2"
-msgstr "secp521"
+msgstr "ステップ2"
 
 msgid "Step 3"
-msgstr ""
+msgstr "ステップ3"
 
 msgid "Step 4"
-msgstr ""
+msgstr "ステップ4"
 
-#, fuzzy
 msgid "Step 5"
-msgstr "secp521"
+msgstr "ステップ5"
 
 #: ../nitropad/qubes/user-password-reset.rst:21
 msgid ""
 "In the rescue shell, type: `cryptsetup open /dev/sda3 qubes` to unlock "
 "the encrypted root drive"
 msgstr ""
+"レスキューシェルで、次のように入力します。暗号化されたルートドライブのロックを解除するには、`cryptsetup open /dev/sda3 "
+"qubes` と入力してください。"
 
 #: ../nitropad/qubes/user-password-reset.rst:23
 msgid "Mount the root drive `mount /dev/mapper/qubes_dom0-root /mnt`"
-msgstr ""
+msgstr "ルートドライブのマウント `mount /dev/mapper/qubes_dom0-root /mnt`"
 
 #: ../nitropad/qubes/user-password-reset.rst:25
 msgid "Change root to it `chroot /mnt`"
-msgstr ""
+msgstr "ルートを `chroot /mnt` に変更します。"
 
 #: ../nitropad/qubes/user-password-reset.rst:27
 msgid "Change the password `passwd user` (where \"user\" is your Qubes login)"
-msgstr ""
+msgstr "パスワード `passwd user` を変更する (ここで \"user\" は Qubes のログイン名です)"
 
 #: ../nitropad/qubes/user-password-reset.rst:28
 msgid "Type in a new password and confirm"
-msgstr ""
+msgstr "新しいパスワードを入力し、確認する"
 
 #: ../nitropad/qubes/user-password-reset.rst:29
 msgid "Type `exit` to exit the chroot"
-msgstr ""
+msgstr "chroot を終了するには `exit` と入力します。"
 
 #: ../nitropad/qubes/user-password-reset.rst:30
 msgid "Type `reboot` and then boot as usal without the installation medium"
-msgstr ""
+msgstr "reboot`と入力し、インストールメディアなしで通常通り起動します。"
 
 #: ../nitropad/ubuntu/change-disk-encryption-passphrase.rst:2
 msgid "Change Disk Encryption Passphrase"
@@ -17121,4 +17123,3 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 
 #~ msgid "Accessing a NetHSM using the nitropy command line tool"
 #~ msgstr "コマンドラインツールnitropyを使用してNetHSMにアクセスする"
-
