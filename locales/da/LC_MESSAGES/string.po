@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-17 16:51+0200\n"
-"PO-Revision-Date: 2022-05-16 14:37+0000\n"
+"PO-Revision-Date: 2022-05-17 16:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Danish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/da/>\n"
 "Language: da\n"
-"Language-Team: Danish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/da/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -3338,6 +3339,11 @@ msgid ""
 "NetHSM docker image, see the `Development and Testing </index.html"
 "#development-and-testing>`_ section of the NetHSM documentation."
 msgstr ""
+"Før vi starter, gemmer vi værtsnavnet for NetHSM-instansen i miljøvariablen "
+"``NETHSM_HOST``.  Du kan bruge den offentlige NetHSM-demoinstans ``nethsmdemo"
+".nitrokey.com`` eller køre en lokal demoinstans ved hjælp af NetHSM docker-"
+"image, se afsnittet `Udvikling og afprøvning </index.html#development-and-"
+"testing>`_ i NetHSM-dokumentationen."
 
 #: ../nethsm/api.rst:19 ../nethsm/gettingstarted/api.rst:17
 msgid ""
@@ -3496,6 +3502,7 @@ msgstr ""
 #: ../nethsm/_tutorial.rst:23
 msgid "Note: In a future releases, additional Roles may be introduced."
 msgstr ""
+"Bemærk: I fremtidige udgivelser vil der muligvis blive indført flere roller."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3516,7 +3523,6 @@ msgid "Key Management"
 msgstr "Nøglehåndtering"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "The NetHSM supports RSA, ED25519 and ECDSA keys.  When creating a key, "
 "you have to select both the key algorithm and the key mechanisms to use."
@@ -3526,11 +3532,11 @@ msgid ""
 "or SHA512).  The other algorithms only support the signature mechanism."
 msgstr ""
 "NetHSM understøtter RSA-, ED25519- og ECDSA-nøgler.  Når du opretter en "
-"nøgle, skal du vælge både den nøglealgoritme og de nøglemekanismer, der "
-"skal anvendes.  RSA-nøgler kan anvendes til dekryptering (med tilstanden "
-"raw, PKCS #1 og OAEP med MD5, SHA1, SHA224, SHA256, SHA384 eller SHA512) "
-"og til signaturer (med tilstanden PKCS #1 og PSS med MD5, SHA1, SHA224, "
-"SHA256, SHA384 eller SHA512).  De andre algoritmer understøtter kun "
+"nøgle, skal du vælge både den nøglealgoritme og de nøglemekanismer, der skal "
+"anvendes.  RSA-nøgler kan anvendes til dekryptering (med tilstanden raw, "
+"PKCS #1 og OAEP med MD5, SHA1, SHA224, SHA256, SHA384 eller SHA512) og til "
+"signaturer (med tilstanden PKCS #1 og PSS med MD5, SHA1, SHA224, SHA256, "
+"SHA384 eller SHA512).  De andre algoritmer understøtter kun "
 "signaturmekanismen."
 
 #: ../nethsm/_tutorial.rst:12
@@ -3555,6 +3561,12 @@ msgid ""
 " don’t specify a key ID, the NetHSM will generate a random ID for the new"
 " key."
 msgstr ""
+"I denne vejledning ønsker vi at bruge en RSA-nøgle til at dekryptere data "
+"ved hjælp af PKCS #1 og til at signere data med PSS ved hjælp af SHA256.  Så "
+"lad os generere en ny nøgle på NetHSM. Sørg for at bruge ``RSA``-algoritmen "
+"og for at vælge ``RSA_Signature_PSS_SHA256`` og ``RSA_Decryption_PKCS1``-"
+"nøgleordningerne.  Hvis du ikke angiver et nøgle-id, genererer NetHSM et "
+"tilfældigt id til den nye nøgle."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Import Keys"
@@ -3590,13 +3602,12 @@ msgid "We can also query the public key of the generated key pair:"
 msgstr "Vi kan også forespørge den offentlige nøgle for det genererede nøglepar:"
 
 #: ../nethsm/_tutorial.rst:2
-#, fuzzy
 msgid ""
 "To be able to use the key with openssl, we export it as a PEM file and "
 "store it as public.pem:"
 msgstr ""
-"For at kunne bruge nøglen med ``openssl`` eksporterer vi den som en PEM-"
-"fil og gemmer den som ``public.pem``:"
+"For at kunne bruge nøglen med ``openssl`` eksporterer vi den som en PEM-fil "
+"og gemmer den som ``public.pem``:"
 
 #: ../nethsm/_tutorial.rst:2
 msgid ""
@@ -3639,15 +3650,14 @@ msgid "Decryption"
 msgstr "Dekryptering"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using openssl. "
 "(public.pem is the public key file that we created in the `Show Key "
 "Details`_ section.)"
 msgstr ""
 "Vi kan kryptere data for den nøgle, der er gemt på NetHSM, ved hjælp af "
-"``openssl``. (``public.pem`` er den offentlige nøglefil, som vi oprettede"
-" i afsnittet `Show Key Details`_)."
+"``openssl``. (``public.pem`` er den offentlige nøglefil, som vi oprettede i "
+"afsnittet `Show Key Details`_)."
 
 #: ../nethsm/_tutorial.rst:13
 msgid "Now we can use the NetHSM to decrypt the data:"
@@ -3733,9 +3743,8 @@ msgid "Alternatively, you can cancel the update:"
 msgstr "Alternativt kan du annullere opdateringen:"
 
 #: ../nethsm/cli.rst:2
-#, fuzzy
 msgid "Nitropy command line tool"
-msgstr "Adgang til en NetHSM med kommandolinjeværktøjet nitropy"
+msgstr "Nitropy-kommandolinjeværktøj"
 
 #: ../nethsm/cli.rst:6 ../nethsm/gettingstarted/cli.rst:6
 msgid ""
@@ -3802,24 +3811,22 @@ msgstr ""
 "hvis vi ikke angiver det."
 
 #: ../nethsm/cli.rst:198 ../nethsm/cli.rst:244
-#, fuzzy
 msgid ""
 "We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
 msgstr ""
-"Vi kan inspicere nøglen med ``openssl`` og bruge den til kryptering eller"
-" signaturverifikation (som beskrevet i næste afsnit):"
+"Vi kan inspicere nøglen med ``openssl`` og bruge den til kryptering eller "
+"signaturverifikation (som beskrevet i næste afsnit):"
 
 #: ../nethsm/cli.rst:317
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
 "Details section.)"
 msgstr ""
 "Vi kan kryptere data for den nøgle, der er gemt på NetHSM, ved hjælp af "
-"``openssl``. (``public.pem`` er den offentlige nøglefil, som vi oprettede"
-" i afsnittet `Show Key Details`_)."
+"OpenSSL. (public.pem er den offentlige nøglefil, som vi oprettede i "
+"afsnittet Vis nøgledetaljer.)"
 
 #: ../nethsm/cli.rst:333
 msgid ""
@@ -3830,9 +3837,8 @@ msgstr ""
 " og ECDSA skal vi først beregne en digest:"
 
 #: ../nethsm/cli.rst:353
-#, fuzzy
 msgid "And then use OpenSSL to verify the signature:"
-msgstr "Og brug derefter ``openssl`` til at verificere signaturen:"
+msgstr "Brug derefter OpenSSL til at verificere signaturen:"
 
 #: ../nethsm/cli.rst:366
 msgid "Creating Backups"
@@ -3864,6 +3870,8 @@ msgstr "Opdatering af NetHSM"
 #: ../nethsm/cli.rst:424
 msgid "CAUTION! Data loss may occur due to the installation of a beta update!"
 msgstr ""
+"FORSIGTIG! Der kan opstå datatab som følge af installationen af en "
+"betaopdatering!"
 
 #: ../nethsm/dev-and-test.rst:2
 msgid "Development and Testing"
@@ -9670,61 +9678,58 @@ msgstr ""
 "tælleren nulstilles til en ny værdi."
 
 #: ../nitropad/qubes/user-password-reset.rst:2
-#, fuzzy
 msgid "User Password Reset"
-msgstr "Kør fabriksnulstilling"
+msgstr "Nulstilling af brugeradgangskode"
 
 #: ../nitropad/qubes/user-password-reset.rst:4
 msgid "Follow the next five steps to boot from the installation media"
-msgstr ""
+msgstr "Følg de næste fem trin for at starte op fra installationsmediet"
 
-#, fuzzy
 msgid "Step 1"
-msgstr "secp521"
+msgstr "Trin 1"
 
-#, fuzzy
 msgid "Step 2"
-msgstr "secp521"
+msgstr "Trin 2"
 
 msgid "Step 3"
-msgstr ""
+msgstr "Trin 3"
 
 msgid "Step 4"
-msgstr ""
+msgstr "Trin 4"
 
-#, fuzzy
 msgid "Step 5"
-msgstr "secp521"
+msgstr "Trin 5"
 
 #: ../nitropad/qubes/user-password-reset.rst:21
 msgid ""
 "In the rescue shell, type: `cryptsetup open /dev/sda3 qubes` to unlock "
 "the encrypted root drive"
-msgstr ""
+msgstr "Skriv i rescue shell: for at låse det krypterede roddrev op"
 
 #: ../nitropad/qubes/user-password-reset.rst:23
 msgid "Mount the root drive `mount /dev/mapper/qubes_dom0-root /mnt`"
-msgstr ""
+msgstr "Monter roddrevet `mount /dev/mapper/qubes_dom0-root /mnt`"
 
 #: ../nitropad/qubes/user-password-reset.rst:25
 msgid "Change root to it `chroot /mnt`"
-msgstr ""
+msgstr "Skift root til den `chroot /mnt`"
 
 #: ../nitropad/qubes/user-password-reset.rst:27
 msgid "Change the password `passwd user` (where \"user\" is your Qubes login)"
-msgstr ""
+msgstr "Ændr adgangskoden `passwd user` (hvor \"user\" er dit Qubes-login)"
 
 #: ../nitropad/qubes/user-password-reset.rst:28
 msgid "Type in a new password and confirm"
-msgstr ""
+msgstr "Indtast en ny adgangskode, og bekræft den"
 
 #: ../nitropad/qubes/user-password-reset.rst:29
 msgid "Type `exit` to exit the chroot"
-msgstr ""
+msgstr "Skriv `exit` for at afslutte chroot"
 
 #: ../nitropad/qubes/user-password-reset.rst:30
 msgid "Type `reboot` and then boot as usal without the installation medium"
 msgstr ""
+"Skriv `reboot` og start derefter op som normalt uden installationsmediet"
 
 #: ../nitropad/ubuntu/change-disk-encryption-passphrase.rst:2
 msgid "Change Disk Encryption Passphrase"
@@ -20083,4 +20088,3 @@ msgstr ""
 
 #~ msgid "Accessing a NetHSM using the nitropy command line tool"
 #~ msgstr "Adgang til en NetHSM med kommandolinjeværktøjet nitropy"
-
