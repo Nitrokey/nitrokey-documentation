@@ -17,7 +17,7 @@ everyday smartphone with more apps we recommend:
    Aurora Store. In Aurora Store, you can install all apps from Google Play Store.
 
 3. Many apps work without Google Play Services. However, if you want to use apps
-   that require Google Play Services, you can install `Google Play Services in a sandbox <https://grapheneos.org/usage#sandboxed-google-play>`_as follows.
+   that require Google Play Services, you can install `Google Play Services in a sandbox <https://grapheneos.org/usage#sandboxed-google-play>`_ as follows.
    
    1. Open Graphenes app repository client: *Home screen -> Apps*
    2. Install the 3 core Google Play Apps ("Google Services Framework", "Google Play store", "Google Play Services").

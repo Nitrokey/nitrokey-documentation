@@ -18,8 +18,8 @@ Nitrokey HSM FAQ
 
 **Q:** What is the User PIN for?
    The PIN is at least 6-digits long and is used to get
-   access to the contect of the Nitrokey. This is the PIN you will use a lot in
-   every day use
+   access to the content of the Nitrokey. This is the PIN you will use a lot in
+   every day use.
  
    The PIN can have up to 16 digits and other characters (e.g. alphabetic
    and special characters). But as the PIN is blocked as soon three wrong
@@ -75,12 +75,18 @@ Nitrokey HSM FAQ
     NitroKeyWrapper.
 
 
-**Q:** Is the Nitrokey Pro Common Criteria or FIPS certified?
+**Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?
     The security controler's hardware and operating system are
     Common Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_,
     click "ICs, Smart Cards and Smart Card-Related Devices and Systems" and
     search for "NXP JCOP 3 P60").
 
+**Q:** How to import an existing key into the Nitrokey HSM?
+    First, `set up`_ your Nitrokey HSM to use key backup and restore. Then use Smart Card Shell for importing. If your key is stored in a Java key store you can use `NitroKeyWrapper`_  instead.
+
+.. _set up: https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#using-key-backup-and-restore
+.. _Smart Card Shell: https://www.openscdp.org/scsh3/
+.. _NitroKeyWrapper: https://git.bubu1.eu/Bubu/nitrokeywrapper
 .. _this thread: https://support.nitrokey.com/t/comparison-between-nitrokey-hsm-2-and-hsm-1/2977
 
 
