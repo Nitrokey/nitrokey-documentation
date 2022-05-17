@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-05-17 16:51+0200\n"
-"PO-Revision-Date: 2022-05-16 14:37+0000\n"
+"PO-Revision-Date: 2022-05-17 16:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Estonian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/et/>\n"
 "Language: et\n"
-"Language-Team: Estonian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/et/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -3293,6 +3294,11 @@ msgid ""
 "NetHSM docker image, see the `Development and Testing </index.html"
 "#development-and-testing>`_ section of the NetHSM documentation."
 msgstr ""
+"Enne alustamist salvestame NetHSMi instantsi hostinime keskkonnamuutujasse "
+"NETHSM_HOST.  Võite kasutada avalikku NetHSM-i demoinstantsi "
+"nethsmdemo.nitrokey.com või käivitada lokaalset demoinstantsi, kasutades "
+"NetHSM-i dokker-kujutist, vt NetHSM-i dokumentatsiooni jaotist `Development "
+"and Testing </index.html#development-and-testing>`_."
 
 #: ../nethsm/api.rst:19 ../nethsm/gettingstarted/api.rst:17
 msgid ""
@@ -3447,6 +3453,7 @@ msgstr ""
 #: ../nethsm/_tutorial.rst:23
 msgid "Note: In a future releases, additional Roles may be introduced."
 msgstr ""
+"Märkus: tulevastes versioonides võidakse kasutusele võtta täiendavaid rolle."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3467,7 +3474,6 @@ msgid "Key Management"
 msgstr "Võtmehaldus"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "The NetHSM supports RSA, ED25519 and ECDSA keys.  When creating a key, "
 "you have to select both the key algorithm and the key mechanisms to use."
@@ -3476,12 +3482,12 @@ msgid ""
 " (with the modes PKCS#11 and PSS with MD5, SHA1, SHA224, SHA256, SHA384 "
 "or SHA512).  The other algorithms only support the signature mechanism."
 msgstr ""
-"NetHSM toetab RSA, ED25519 ja ECDSA võtmeid.  Võtme loomisel tuleb valida"
-" nii võtmealgoritm kui ka kasutatavad võtmemehhanismid.  RSA võtmeid saab"
-" kasutada dekrüpteerimiseks (režiimidega raw, PKCS #1 ja OAEP koos MD5, "
-"SHA1, SHA224, SHA256, SHA384 või SHA512) ja allkirjastamiseks "
-"(režiimidega PKCS #1 ja PSS koos MD5, SHA1, SHA224, SHA256, SHA384 või "
-"SHA512).  Teised algoritmid toetavad ainult allkirjastamise mehhanismi."
+"NetHSM toetab RSA, ED25519 ja ECDSA võtmeid.  Võtme loomisel tuleb valida "
+"nii võtmealgoritm kui ka kasutatavad võtmemehhanismid.  RSA võtmeid saab "
+"kasutada dekrüpteerimiseks (režiimidega raw, PKCS#11 ja OAEP koos MD5, SHA1, "
+"SHA224, SHA256, SHA384 või SHA512) ja allkirjastamiseks (režiimidega PKCS#11 "
+"ja PSS koos MD5, SHA1, SHA224, SHA256, SHA384 või SHA512).  Teised "
+"algoritmid toetavad ainult allkirjastamise mehhanismi."
 
 #: ../nethsm/_tutorial.rst:12
 msgid ""
@@ -3504,6 +3510,11 @@ msgid ""
 " don’t specify a key ID, the NetHSM will generate a random ID for the new"
 " key."
 msgstr ""
+"Selles jaotises tahame kasutada RSA-võtit andmete dekrüpteerimiseks PKCS#11 "
+"abil ja andmete allkirjastamiseks PSSiga, kasutades SHA256.  Seega "
+"genereerime NetHSMis uue võtme. Veenduge, et kasutate RSA algoritmi ja "
+"valite võtmemehhanismid RSA_Signature_PSS_SHA256 ja RSA_Decryption_PKCS1.  "
+"Kui te ei määra võtme ID-d, genereerib NetHSM uue võtme jaoks juhusliku ID."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Import Keys"
@@ -3538,13 +3549,12 @@ msgid "We can also query the public key of the generated key pair:"
 msgstr "Samuti saame küsida genereeritud võtmepaari avalikku võtit:"
 
 #: ../nethsm/_tutorial.rst:2
-#, fuzzy
 msgid ""
 "To be able to use the key with openssl, we export it as a PEM file and "
 "store it as public.pem:"
 msgstr ""
-"Et saaksime kasutada võtit ``openssl``, ekspordime selle PEM-failina ja "
-"salvestame selle kui ``public.pem``:"
+"Selleks, et saaksime võtit kasutada openssliga, ekspordime selle PEM-failina "
+"ja salvestame selle public.pem:"
 
 #: ../nethsm/_tutorial.rst:2
 msgid ""
@@ -3587,15 +3597,14 @@ msgid "Decryption"
 msgstr "Dekrüpteerimine"
 
 #: ../nethsm/_tutorial.rst:5
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using openssl. "
 "(public.pem is the public key file that we created in the `Show Key "
 "Details`_ section.)"
 msgstr ""
 "Me saame krüpteerida andmeid NetHSM-i salvestatud võtme jaoks, kasutades "
-"openssl-i. (public.pem on avaliku võtme fail, mille me lõime jaotises "
-"Show Key Details)."
+"openssl-i. (public.pem on avaliku võtme fail, mille me lõime jaotises `Show "
+"Key Details`_)."
 
 #: ../nethsm/_tutorial.rst:13
 msgid "Now we can use the NetHSM to decrypt the data:"
@@ -3676,9 +3685,8 @@ msgid "Alternatively, you can cancel the update:"
 msgstr "Teise võimalusena saate uuenduse tühistada:"
 
 #: ../nethsm/cli.rst:2
-#, fuzzy
 msgid "Nitropy command line tool"
-msgstr "Juurdepääs NetHSMile käsurea nitropy abil"
+msgstr "Nitropy käsurea tööriist"
 
 #: ../nethsm/cli.rst:6 ../nethsm/gettingstarted/cli.rst:6
 msgid ""
@@ -3744,24 +3752,22 @@ msgstr ""
 "juhusliku kasutajatunnuse, kui me seda ei määra."
 
 #: ../nethsm/cli.rst:198 ../nethsm/cli.rst:244
-#, fuzzy
 msgid ""
 "We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
 msgstr ""
-"Me võime openssl abil kontrollida võtit ja kasutada seda krüpteerimiseks "
+"Me võime OpenSSL-i abil kontrollida võtit ja kasutada seda krüpteerimiseks "
 "või allkirja kontrollimiseks (nagu on kirjeldatud järgmises jaotises):"
 
 #: ../nethsm/cli.rst:317
-#, fuzzy
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
 "Details section.)"
 msgstr ""
-"Me saame krüpteerida andmeid NetHSM-i salvestatud võtme jaoks, kasutades "
-"openssl-i. (public.pem on avaliku võtme fail, mille me lõime jaotises "
-"Show Key Details)."
+"NetHSM-i salvestatud võtme jaoks saame andmeid krüpteerida, kasutades "
+"OpenSSL-i. (public.pem on avaliku võtme fail, mille me lõime jaotises Show "
+"Key Details)."
 
 #: ../nethsm/cli.rst:333
 msgid ""
@@ -3772,9 +3778,8 @@ msgstr ""
 "puhul peame kõigepealt arvutama digesti:"
 
 #: ../nethsm/cli.rst:353
-#, fuzzy
 msgid "And then use OpenSSL to verify the signature:"
-msgstr "Ja seejärel kasutage openssl'i allkirja kontrollimiseks:"
+msgstr "Ja seejärel kasutage OpenSSL-i allkirja kontrollimiseks:"
 
 #: ../nethsm/cli.rst:366
 msgid "Creating Backups"
@@ -3804,7 +3809,7 @@ msgstr "NetHSMi ajakohastamine"
 
 #: ../nethsm/cli.rst:424
 msgid "CAUTION! Data loss may occur due to the installation of a beta update!"
-msgstr ""
+msgstr "ETTEVAATUST! Beeta-uuenduse paigaldamise tõttu võib tekkida andmekadu!"
 
 #: ../nethsm/dev-and-test.rst:2
 msgid "Development and Testing"
@@ -9549,61 +9554,61 @@ msgstr ""
 "kui ka loendur nullistuma uuele väärtusele."
 
 #: ../nitropad/qubes/user-password-reset.rst:2
-#, fuzzy
 msgid "User Password Reset"
-msgstr "Tehase lähtestamine"
+msgstr "Kasutaja salasõna lähtestamine"
 
 #: ../nitropad/qubes/user-password-reset.rst:4
 msgid "Follow the next five steps to boot from the installation media"
-msgstr ""
+msgstr "Järgige järgmisi viit sammu, et käivitada paigalduskandjalt"
 
-#, fuzzy
 msgid "Step 1"
-msgstr "secp521"
+msgstr "1. samm"
 
-#, fuzzy
 msgid "Step 2"
-msgstr "secp521"
+msgstr "2. samm"
 
 msgid "Step 3"
-msgstr ""
+msgstr "3. samm"
 
 msgid "Step 4"
-msgstr ""
+msgstr "4. samm"
 
-#, fuzzy
 msgid "Step 5"
-msgstr "secp521"
+msgstr "5. samm"
 
 #: ../nitropad/qubes/user-password-reset.rst:21
 msgid ""
 "In the rescue shell, type: `cryptsetup open /dev/sda3 qubes` to unlock "
 "the encrypted root drive"
 msgstr ""
+"Sisestage päästekorpuses: `cryptsetup open /dev/sda3 qubes`, et avada "
+"krüpteeritud root-ketas."
 
 #: ../nitropad/qubes/user-password-reset.rst:23
 msgid "Mount the root drive `mount /dev/mapper/qubes_dom0-root /mnt`"
-msgstr ""
+msgstr "Ühenda juurketta `mount /dev/mapper/qubes_dom0-root /mnt`."
 
 #: ../nitropad/qubes/user-password-reset.rst:25
 msgid "Change root to it `chroot /mnt`"
-msgstr ""
+msgstr "Muuda root selleks `chroot /mnt`."
 
 #: ../nitropad/qubes/user-password-reset.rst:27
 msgid "Change the password `passwd user` (where \"user\" is your Qubes login)"
-msgstr ""
+msgstr "Muuda parooli `passwd user` (kus \"user\" on sinu Qubes login)"
 
 #: ../nitropad/qubes/user-password-reset.rst:28
 msgid "Type in a new password and confirm"
-msgstr ""
+msgstr "Sisestage uus parool ja kinnitage see"
 
 #: ../nitropad/qubes/user-password-reset.rst:29
 msgid "Type `exit` to exit the chroot"
-msgstr ""
+msgstr "Kirjutage `exit`, et chrootist väljuda."
 
 #: ../nitropad/qubes/user-password-reset.rst:30
 msgid "Type `reboot` and then boot as usal without the installation medium"
 msgstr ""
+"Sisestage `reboot` ja seejärel käivitage ilma paigalduskeskkonnata nagu "
+"tavaline."
 
 #: ../nitropad/ubuntu/change-disk-encryption-passphrase.rst:2
 msgid "Change Disk Encryption Passphrase"
@@ -19849,4 +19854,3 @@ msgstr ""
 
 #~ msgid "Accessing a NetHSM using the nitropy command line tool"
 #~ msgstr "Juurdepääs NetHSMile käsurea nitropy abil"
-
