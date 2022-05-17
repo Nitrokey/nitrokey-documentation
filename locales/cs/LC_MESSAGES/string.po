@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-16 15:11+0200\n"
+"POT-Creation-Date: 2022-05-17 16:51+0200\n"
 "PO-Revision-Date: 2022-05-16 14:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/cs/>\n"
 "Language: cs\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/cs/>\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -34,8 +33,8 @@ msgid ""
 "These are the basic steps for registering the Nitrokey FIDO2 as a second "
 "factor or setting up passwordless login of a Nextcloud account."
 msgstr ""
-"Toto jsou základní kroky pro registraci zařízení Nitrokey FIDO2 jako druhého "
-"faktoru nebo nastavení přihlašování k účtu Nextcloud bez hesla."
+"Toto jsou základní kroky pro registraci zařízení Nitrokey FIDO2 jako "
+"druhého faktoru nebo nastavení přihlašování k účtu Nextcloud bez hesla."
 
 #: ../fido2/2fa-odoo.rst:2
 msgid "Two-factor Authentication for ERP software Odoo"
@@ -3295,16 +3294,11 @@ msgstr ""
 #: ../nethsm/_tutorial.rst:2
 msgid ""
 "Before we start, we store the host name of the NetHSM instance in the "
-"``NETHSM_HOST`` environment variable.  You can use the public NetHSM demo"
-" instance ``nethsmdemo.nitrokey.com`` or run a local demo instance using "
-"the NetHSM docker image, see the `Development and Testing </index.html"
+"NETHSM_HOST environment variable.  You can use the public NetHSM demo "
+"instance nethsmdemo.nitrokey.com or run a local demo instance using the "
+"NetHSM docker image, see the `Development and Testing </index.html"
 "#development-and-testing>`_ section of the NetHSM documentation."
 msgstr ""
-"Před zahájením uložíme název hostitele instance NetHSM do proměnné "
-"prostředí ``NETHSM_HOST``.  Můžete použít veřejnou demo instanci NetHSM "
-"``nethsmdemo.nitrokey.com`` nebo spustit místní demo instanci pomocí "
-"obrazu NetHSM docker, viz `Vývoj a testování </index.html#development-"
-"and-testing>`_ část dokumentace NetHSM."
 
 #: ../nethsm/api.rst:19 ../nethsm/gettingstarted/api.rst:17
 msgid ""
@@ -3352,9 +3346,9 @@ msgstr ""
 "superuživatel NetHSM. Heslo *Unlock Passphrase* slouží k zašifrování "
 "důvěrného úložiště dat NetHSM."
 
-#: ../nethsm/_tutorial.rst:12
+#: ../nethsm/_tutorial.rst:12 ../nethsm/cli.rst:54
 msgid ""
-"The NetHSM demo instance at ``nethsmdemo.nitrokey.com`` is already "
+"The NetHSM demo instance at nethsmdemo.nitrokey.com is already "
 "provisioned."
 msgstr ""
 "Demo instance NetHSM na adrese ``nethsmdemo.nitrokey.com`` je již "
@@ -3458,16 +3452,8 @@ msgstr ""
 "potřebným k zahájení zálohování systému."
 
 #: ../nethsm/_tutorial.rst:23
-msgid ""
-"Note: In a future release another Role will be implemented which is "
-"allowed to /keys/ POST, /keys/generate POST, /keys/{KeyID} PUT & DELETE, "
-"/keys/{KeyID}/cert PUT & DELETE in addition to what R-Operator is allowed"
-" to do."
+msgid "Note: In a future releases, additional Roles may be introduced."
 msgstr ""
-"Poznámka: V některé z budoucích verzí bude implementována další role, "
-"která umožní /keys/ POST, /keys/generate POST, /keys/{KeyID}. PUT & "
-"DELETE, /keys/{KeyID}/cert PUT & DELETE kromě toho, co smí dělat "
-"R-Operator."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3488,12 +3474,13 @@ msgid "Key Management"
 msgstr "Správa klíčů"
 
 #: ../nethsm/_tutorial.rst:5
+#, fuzzy
 msgid ""
 "The NetHSM supports RSA, ED25519 and ECDSA keys.  When creating a key, "
 "you have to select both the key algorithm and the key mechanisms to use."
-"  RSA keys can be used for decryption (with the modes raw, PKCS #1 and "
+"  RSA keys can be used for decryption (with the modes raw, PKCS#11 and "
 "OAEP with MD5, SHA1, SHA224, SHA256, SHA384 or SHA512) and for signatures"
-" (with the modes PKCS #1 and PSS with MD5, SHA1, SHA224, SHA256, SHA384 "
+" (with the modes PKCS#11 and PSS with MD5, SHA1, SHA224, SHA256, SHA384 "
 "or SHA512).  The other algorithms only support the signature mechanism."
 msgstr ""
 "NetHSM podporuje klíče RSA, ED25519 a ECDSA.  Při vytváření klíče je "
@@ -3517,19 +3504,13 @@ msgstr "Generování klíčů"
 
 #: ../nethsm/_tutorial.rst:5
 msgid ""
-"In this guide, we want to use an RSA key to decrypt data using PKCS #1 "
+"In this section, we want to use an RSA key to decrypt data using PKCS#11 "
 "and to sign data with PSS using SHA256.  So let’s generate a new key on "
-"the NetHSM. Make sure to use the ``RSA`` algorithm and to select the "
-"``RSA_Signature_PSS_SHA256`` and ``RSA_Decryption_PKCS1`` key mechanisms."
-"  If you don’t specify a key ID, the NetHSM will generate a random ID for"
-" the new key."
+"the NetHSM. Make sure to use the RSA algorithm and to select the "
+"RSA_Signature_PSS_SHA256 and RSA_Decryption_PKCS1 key mechanisms.  If you"
+" don’t specify a key ID, the NetHSM will generate a random ID for the new"
+" key."
 msgstr ""
-"V této příručce chceme použít klíč RSA k dešifrování dat pomocí PKCS #1 a"
-" k podepisování dat pomocí PSS pomocí SHA256.  Vygenerujme tedy nový klíč"
-" v NetHSM. Ujistěte se, že používáte algoritmus ``RSA`` a že jste zvolili"
-" klíčové mechanismy ``RSA_Signature_PSS_SHA256`` a "
-"``RSA_Decryption_PKCS1``.  Pokud ID klíče nezadáte, vygeneruje NetHSM "
-"náhodné ID nového klíče."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Import Keys"
@@ -3564,26 +3545,27 @@ msgid "We can also query the public key of the generated key pair:"
 msgstr "Můžeme se také zeptat na veřejný klíč vygenerovaného páru klíčů:"
 
 #: ../nethsm/_tutorial.rst:2
+#, fuzzy
 msgid ""
-"To be able to use the key with ``openssl``, we export it as a PEM file "
-"and store it as ``public.pem``:"
+"To be able to use the key with openssl, we export it as a PEM file and "
+"store it as public.pem:"
 msgstr ""
 "Abychom mohli klíč použít s ``openssl``, vyexportujeme jej jako soubor "
 "PEM a uložíme jako ``public.pem``:"
 
 #: ../nethsm/_tutorial.rst:2
 msgid ""
-"We can inspect the key with ``openssl`` and use it for encryption or "
+"We can inspect the key with openssl and use it for encryption or "
 "signature verification (as described in the next section):"
 msgstr ""
 "Klíč můžeme zkontrolovat pomocí ``openssl`` a použít jej pro šifrování "
 "nebo ověření podpisu (jak je popsáno v následující části):"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:291
+#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:287
 msgid "Key Certificates"
 msgstr "Klíčové certifikáty"
 
-#: ../nethsm/_tutorial.rst:5 ../nethsm/cli.rst:293
+#: ../nethsm/_tutorial.rst:5 ../nethsm/cli.rst:289
 msgid ""
 "It is possible to set and query certificates for the keys stored on a "
 "NetHSM instance:"
@@ -3612,9 +3594,10 @@ msgid "Decryption"
 msgstr "Dešifrování"
 
 #: ../nethsm/_tutorial.rst:5
+#, fuzzy
 msgid ""
-"We can encrypt data for the key stored on the NetHSM using ``openssl``. "
-"(``public.pem`` is the public key file that we created in the `Show Key "
+"We can encrypt data for the key stored on the NetHSM using openssl. "
+"(public.pem is the public key file that we created in the `Show Key "
 "Details`_ section.)"
 msgstr ""
 "Data pro klíč uložený v NetHSM můžeme zašifrovat pomocí ``openssl``. "
@@ -3638,12 +3621,12 @@ msgstr ""
 "Podobně můžeme data podepisovat pomocí klíče v systému NetHSM.  V případě"
 " RSA a ECDSA musíme nejprve vypočítat digest:"
 
-#: ../nethsm/_tutorial.rst:16 ../nethsm/cli.rst:349
+#: ../nethsm/_tutorial.rst:16 ../nethsm/cli.rst:345
 msgid "Then we can create a signature from this digest using the NetHSM:"
 msgstr "Poté můžeme z tohoto digestu vytvořit podpis pomocí NetHSM:"
 
 #: ../nethsm/_tutorial.rst:2
-msgid "And then use ``openssl`` to verify the signature:"
+msgid "And then use openssl to verify the signature:"
 msgstr "A pak použijte ``openssl`` k ověření podpisu:"
 
 #: ../nethsm/_tutorial.rst:3
@@ -3665,11 +3648,11 @@ msgstr ""
 msgid "Now you have to create a user with the *R-Backup* role:"
 msgstr "Nyní je třeba vytvořit uživatele s rolí *R-Backup*:"
 
-#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:396
+#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:392
 msgid "Then can you generate the backup and write it to a file:"
 msgstr "Pak můžete vygenerovat zálohu a zapsat ji do souboru:"
 
-#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:411
+#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:407
 msgid "This backup file can be restored on an unprovisioned NetHSM instance:"
 msgstr "Tento záložní soubor lze obnovit v neschválené instanci NetHSM:"
 
@@ -3700,7 +3683,8 @@ msgid "Alternatively, you can cancel the update:"
 msgstr "Případně můžete aktualizaci zrušit:"
 
 #: ../nethsm/cli.rst:2
-msgid "Accessing a NetHSM using the nitropy command line tool"
+#, fuzzy
+msgid "Nitropy command line tool"
 msgstr "Přístup k zařízení NetHSM pomocí nástroje příkazového řádku nitropy"
 
 #: ../nethsm/cli.rst:6 ../nethsm/gettingstarted/cli.rst:6
@@ -3730,8 +3714,9 @@ msgid ""
 "NetHSM. Our demo server can be reached at "
 "https://nethsmdemo.nitrokey.com/"
 msgstr ""
-"Nejprve nastavte hodnotu $NETHSM_HOST na IP adresu nebo URL vašeho NetHSM. "
-"Náš ukázkový server je dostupný na adrese https://nethsmdemo.nitrokey.com/"
+"Nejprve nastavte hodnotu $NETHSM_HOST na IP adresu nebo URL vašeho "
+"NetHSM. Náš ukázkový server je dostupný na adrese "
+"https://nethsmdemo.nitrokey.com/"
 
 #: ../nethsm/cli.rst:24
 msgid "Device Information & Status"
@@ -3748,17 +3733,10 @@ msgid ""
 "which is the super user of the NetHSM. The Unlock Passphrase is used to "
 "encrypt NetHSM’s confidential data store."
 msgstr ""
-"Nový NetHSM je třeba nejprve vybavit přístupovými hesly a aktuálním časem. *"
-"Admin Passphrase* je přístupová fráze *Administrátora*, což je superuživatel "
-"NetHSM. Heslo *Unlock Passphrase* slouží k zašifrování důvěrného úložiště "
-"dat NetHSM."
-
-#: ../nethsm/cli.rst:54
-msgid ""
-"The NetHSM demo instance at nethsmdemo.nitrokey.com is already "
-"provisioned."
-msgstr ""
-"Demo instance NetHSM na adrese ``nethsmdemo.nitrokey.com`` je již zajištěna."
+"Nový NetHSM je třeba nejprve vybavit přístupovými hesly a aktuálním "
+"časem. *Admin Passphrase* je přístupová fráze *Administrátora*, což je "
+"superuživatel NetHSM. Heslo *Unlock Passphrase* slouží k zašifrování "
+"důvěrného úložiště dat NetHSM."
 
 #: ../nethsm/cli.rst:109
 msgid "**Creating & Deleting Users**"
@@ -3770,45 +3748,48 @@ msgid ""
 " decrypt data. Note that the NetHSM assigns a random user ID if we don’t "
 "specify it."
 msgstr ""
-"Nyní vytvořte nového uživatele s rolí operátora, který může podepisovat a "
-"dešifrovat data.  Všimněte si, že NetHSM přiřadí náhodné ID uživatele, pokud "
-"jej nezadáme."
+"Nyní vytvořte nového uživatele s rolí operátora, který může podepisovat a"
+" dešifrovat data.  Všimněte si, že NetHSM přiřadí náhodné ID uživatele, "
+"pokud jej nezadáme."
 
-#: ../nethsm/cli.rst:202 ../nethsm/cli.rst:248
+#: ../nethsm/cli.rst:198 ../nethsm/cli.rst:244
+#, fuzzy
 msgid ""
-"We can inspect the key with openssl and use it for encryption or "
+"We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
 msgstr ""
-"Klíč můžeme zkontrolovat pomocí ``openssl`` a použít jej pro šifrování nebo "
-"ověření podpisu (jak je popsáno v následující části):"
+"Klíč můžeme zkontrolovat pomocí ``openssl`` a použít jej pro šifrování "
+"nebo ověření podpisu (jak je popsáno v následující části):"
 
-#: ../nethsm/cli.rst:321 ../nethsm/dev-and-test.rst:23
+#: ../nethsm/cli.rst:317
+#, fuzzy
 msgid ""
-"We can encrypt data for the key stored on the NetHSM using openssl. "
+"We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
 "Details section.)"
 msgstr ""
 "Data pro klíč uložený v NetHSM můžeme zašifrovat pomocí ``openssl``. "
-"(``public.pem`` je soubor s veřejným klíčem, který jsme vytvořili v části `"
-"Zobrazit podrobnosti o klíči`_)."
+"(``public.pem`` je soubor s veřejným klíčem, který jsme vytvořili v části"
+" `Zobrazit podrobnosti o klíči`_)."
 
-#: ../nethsm/cli.rst:337
+#: ../nethsm/cli.rst:333
 msgid ""
 "Similarily, we can sign data using the key on the NetHSM. For RSA and "
 "ECDSA, we have to calculate a digest first:"
 msgstr ""
-"Podobně můžeme data podepisovat pomocí klíče v systému NetHSM.  V případě "
-"RSA a ECDSA musíme nejprve vypočítat digest:"
+"Podobně můžeme data podepisovat pomocí klíče v systému NetHSM.  V případě"
+" RSA a ECDSA musíme nejprve vypočítat digest:"
 
-#: ../nethsm/cli.rst:357
-msgid "And then use openssl to verify the signature:"
+#: ../nethsm/cli.rst:353
+#, fuzzy
+msgid "And then use OpenSSL to verify the signature:"
 msgstr "A pak použijte ``openssl`` k ověření podpisu:"
 
-#: ../nethsm/cli.rst:370
+#: ../nethsm/cli.rst:366
 msgid "Creating Backups"
 msgstr "Vytváření záloh"
 
-#: ../nethsm/cli.rst:372
+#: ../nethsm/cli.rst:368
 msgid ""
 "It is possible to create a backup of the NetHSM that captures both the "
 "configuration and the stored keys. In order to create a backup, you first"
@@ -3818,17 +3799,21 @@ msgstr ""
 "klíče.  Aby bylo možné vytvořit zálohu, je třeba nejprve nastavit "
 "přístupovou frázi zálohy, která se použije k zašifrování souboru zálohy:"
 
-#: ../nethsm/cli.rst:384
+#: ../nethsm/cli.rst:380
 msgid "Now you have to create a user with the R-Backup role:"
 msgstr "Nyní je třeba vytvořit uživatele s rolí *R-Backup*:"
 
-#: ../nethsm/cli.rst:409
+#: ../nethsm/cli.rst:405
 msgid "Restoring Backups"
 msgstr "Obnovení záloh"
 
-#: ../nethsm/cli.rst:468
+#: ../nethsm/cli.rst:420
 msgid "Updating NetHSM"
 msgstr "Aktualizace NetHSM"
+
+#: ../nethsm/cli.rst:424
+msgid "CAUTION! Data loss may occur due to the installation of a beta update!"
+msgstr ""
 
 #: ../nethsm/dev-and-test.rst:2
 msgid "Development and Testing"
@@ -3855,6 +3840,16 @@ msgstr ""
 "vyžaduje vnořenou virtualizaci pro silné oddělení s ostatními kontejnery."
 " Ke spuštění kontejneru NetHSM je tedy třeba hostitelský počítač se "
 "systémem Linux, který má k dispozici /dev/kvm. Spusťte tento příkaz:"
+
+#: ../nethsm/dev-and-test.rst:23
+msgid ""
+"We can encrypt data for the key stored on the NetHSM using openssl. "
+"(public.pem is the public key file that we created in the Show Key "
+"Details section.)"
+msgstr ""
+"Data pro klíč uložený v NetHSM můžeme zašifrovat pomocí ``openssl``. "
+"(``public.pem`` je soubor s veřejným klíčem, který jsme vytvořili v části"
+" `Zobrazit podrobnosti o klíči`_)."
 
 #: ../nethsm/gettingstarted.rst:2 ../nethsm/index.rst:10
 #: ../nextbox/gettingstarted.rst:2 ../nitropad/qubes/index.rst:7
@@ -9576,6 +9571,63 @@ msgstr ""
 "a postupujte podle pokynů na obrazovce. Poté by měly být tajenka i "
 "počítadlo resetovány na novou hodnotu."
 
+#: ../nitropad/qubes/user-password-reset.rst:2
+#, fuzzy
+msgid "User Password Reset"
+msgstr "Spuštění obnovení továrního nastavení"
+
+#: ../nitropad/qubes/user-password-reset.rst:4
+msgid "Follow the next five steps to boot from the installation media"
+msgstr ""
+
+#, fuzzy
+msgid "Step 1"
+msgstr "secp521"
+
+#, fuzzy
+msgid "Step 2"
+msgstr "secp521"
+
+msgid "Step 3"
+msgstr ""
+
+msgid "Step 4"
+msgstr ""
+
+#, fuzzy
+msgid "Step 5"
+msgstr "secp521"
+
+#: ../nitropad/qubes/user-password-reset.rst:21
+msgid ""
+"In the rescue shell, type: `cryptsetup open /dev/sda3 qubes` to unlock "
+"the encrypted root drive"
+msgstr ""
+
+#: ../nitropad/qubes/user-password-reset.rst:23
+msgid "Mount the root drive `mount /dev/mapper/qubes_dom0-root /mnt`"
+msgstr ""
+
+#: ../nitropad/qubes/user-password-reset.rst:25
+msgid "Change root to it `chroot /mnt`"
+msgstr ""
+
+#: ../nitropad/qubes/user-password-reset.rst:27
+msgid "Change the password `passwd user` (where \"user\" is your Qubes login)"
+msgstr ""
+
+#: ../nitropad/qubes/user-password-reset.rst:28
+msgid "Type in a new password and confirm"
+msgstr ""
+
+#: ../nitropad/qubes/user-password-reset.rst:29
+msgid "Type `exit` to exit the chroot"
+msgstr ""
+
+#: ../nitropad/qubes/user-password-reset.rst:30
+msgid "Type `reboot` and then boot as usal without the installation medium"
+msgstr ""
+
 #: ../nitropad/ubuntu/change-disk-encryption-passphrase.rst:2
 msgid "Change Disk Encryption Passphrase"
 msgstr "Změna přístupové fráze šifrování disku"
@@ -9701,9 +9753,9 @@ msgid ""
 "USB drive after the intended use."
 msgstr ""
 "Spuštění tohoto disku USB zcela vymaže všechna data na pevném disku nebo "
-"jednotce SSD počítače NitroPC bez dalšího varování. Nespouštějte tento USB "
-"disk na žádném počítači, který obsahuje data, jež chcete zachovat. Po "
-"zamýšleném použití nezapomeňte jednotku USB naformátovat."
+"jednotce SSD počítače NitroPC bez dalšího varování. Nespouštějte tento "
+"USB disk na žádném počítači, který obsahuje data, jež chcete zachovat. Po"
+" zamýšleném použití nezapomeňte jednotku USB naformátovat."
 
 #: ../nitropc/sealed-hardware.rst:8
 msgid ""
@@ -16627,8 +16679,8 @@ msgid ""
 "Syntax Highlighting is disabled by default. To enable it for a specific "
 "code snippet use the following:"
 msgstr ""
-"Zvýrazňování syntaxe je ve výchozím nastavení vypnuto. Chcete-li jej povolit "
-"pro konkrétní úryvek kódu, použijte následující příkaz:"
+"Zvýrazňování syntaxe je ve výchozím nastavení vypnuto. Chcete-li jej "
+"povolit pro konkrétní úryvek kódu, použijte následující příkaz:"
 
 #: ../syntax.rst:20
 msgid "H2 Heading"
@@ -19742,3 +19794,103 @@ msgstr ""
 #~ "dotýkejte se dotykového tlačítka po dobu"
 #~ " 5 sekund, dokud se nezmění na "
 #~ "modrou."
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the ``NETHSM_HOST`` environment variable.  You"
+#~ " can use the public NetHSM demo "
+#~ "instance ``nethsmdemo.nitrokey.com`` or run a"
+#~ " local demo instance using the NetHSM"
+#~ " docker image, see the `Development "
+#~ "and Testing </index.html#development-and-"
+#~ "testing>`_ section of the NetHSM "
+#~ "documentation."
+#~ msgstr ""
+#~ "Před zahájením uložíme název hostitele "
+#~ "instance NetHSM do proměnné prostředí "
+#~ "``NETHSM_HOST``.  Můžete použít veřejnou demo"
+#~ " instanci NetHSM ``nethsmdemo.nitrokey.com`` nebo"
+#~ " spustit místní demo instanci pomocí "
+#~ "obrazu NetHSM docker, viz `Vývoj a "
+#~ "testování </index.html#development-and-testing>`_"
+#~ " část dokumentace NetHSM."
+
+#~ msgid ""
+#~ "The NetHSM demo instance at "
+#~ "``nethsmdemo.nitrokey.com`` is already provisioned."
+#~ msgstr ""
+#~ "Demo instance NetHSM na adrese "
+#~ "``nethsmdemo.nitrokey.com`` je již zajištěna."
+
+#~ msgid ""
+#~ "Note: In a future release another "
+#~ "Role will be implemented which is "
+#~ "allowed to /keys/ POST, /keys/generate "
+#~ "POST, /keys/{KeyID} PUT & DELETE, "
+#~ "/keys/{KeyID}/cert PUT & DELETE in "
+#~ "addition to what R-Operator is allowed"
+#~ " to do."
+#~ msgstr ""
+#~ "Poznámka: V některé z budoucích verzí"
+#~ " bude implementována další role, která "
+#~ "umožní /keys/ POST, /keys/generate POST, "
+#~ "/keys/{KeyID}. PUT & DELETE, "
+#~ "/keys/{KeyID}/cert PUT & DELETE kromě "
+#~ "toho, co smí dělat R-Operator."
+
+#~ msgid ""
+#~ "In this guide, we want to use "
+#~ "an RSA key to decrypt data using"
+#~ " PKCS #1 and to sign data with"
+#~ " PSS using SHA256.  So let’s generate"
+#~ " a new key on the NetHSM. Make"
+#~ " sure to use the ``RSA`` algorithm"
+#~ " and to select the "
+#~ "``RSA_Signature_PSS_SHA256`` and ``RSA_Decryption_PKCS1``"
+#~ " key mechanisms.  If you don’t "
+#~ "specify a key ID, the NetHSM will"
+#~ " generate a random ID for the "
+#~ "new key."
+#~ msgstr ""
+#~ "V této příručce chceme použít klíč "
+#~ "RSA k dešifrování dat pomocí PKCS "
+#~ "#1 a k podepisování dat pomocí PSS"
+#~ " pomocí SHA256.  Vygenerujme tedy nový "
+#~ "klíč v NetHSM. Ujistěte se, že "
+#~ "používáte algoritmus ``RSA`` a že jste"
+#~ " zvolili klíčové mechanismy "
+#~ "``RSA_Signature_PSS_SHA256`` a ``RSA_Decryption_PKCS1``."
+#~ "  Pokud ID klíče nezadáte, vygeneruje "
+#~ "NetHSM náhodné ID nového klíče."
+
+#~ msgid ""
+#~ "We can inspect the key with "
+#~ "``openssl`` and use it for encryption"
+#~ " or signature verification (as described"
+#~ " in the next section):"
+#~ msgstr ""
+#~ "Klíč můžeme zkontrolovat pomocí ``openssl``"
+#~ " a použít jej pro šifrování nebo "
+#~ "ověření podpisu (jak je popsáno v "
+#~ "následující části):"
+
+#~ msgid ""
+#~ "We can encrypt data for the key"
+#~ " stored on the NetHSM using "
+#~ "``openssl``. (``public.pem`` is the public "
+#~ "key file that we created in the"
+#~ " `Show Key Details`_ section.)"
+#~ msgstr ""
+#~ "Data pro klíč uložený v NetHSM "
+#~ "můžeme zašifrovat pomocí ``openssl``. "
+#~ "(``public.pem`` je soubor s veřejným "
+#~ "klíčem, který jsme vytvořili v části "
+#~ "`Zobrazit podrobnosti o klíči`_)."
+
+#~ msgid "And then use ``openssl`` to verify the signature:"
+#~ msgstr "A pak použijte ``openssl`` k ověření podpisu:"
+
+#~ msgid "Accessing a NetHSM using the nitropy command line tool"
+#~ msgstr "Přístup k zařízení NetHSM pomocí nástroje příkazového řádku nitropy"
+
