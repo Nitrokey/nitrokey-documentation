@@ -1,9 +1,10 @@
-Two-factor Authentication for ERP software Odoo
+Two-Factor Authentication For ERP Software Odoo
 ===============================================
 
 .. include:: ./product_platform_heading.rst
 
-.. contents:: :local:
+.. 
+ .. contents:: :local:
 
 `Odoo <https://www.odoo.com/>`_ is a powerful ERP (Enterprise Resource Planning) software for companies of all sizes. Odoo is available as open source and contains modules for CRM, website/e-commerce, accounting, financial accounting, production, warehouse management, project management, document management, among others.
 
@@ -15,7 +16,7 @@ This solution was developed together with our partner `initOS <https://www.inito
 
 `Contact <https://www.nitrokey.com/contact>`_
 
-Video: Two-Factor-Authentication with the Nitrokey FIDO U2F in Odoo
+Video: Two-Factor Authentication With The Nitrokey FIDO U2F in Odoo
 -------------------------------------------------------------------
 
 .. raw:: html

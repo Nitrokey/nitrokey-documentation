@@ -1,4 +1,4 @@
-Nitrokey 3 with Windows
+Nitrokey 3 With Windows
 ===========================
 
 .. include:: ../shared/main.rst

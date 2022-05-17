@@ -22,7 +22,7 @@ The Nitrokey 3 can be used with any current browser.
 
    Currently the Nitrokey App can not be used for the Nitrokey 3.
 
-Passwordless authentication
+Passwordless Authentication
 ---------------------------
 
 1. Open a web page that supports FIDO2.
