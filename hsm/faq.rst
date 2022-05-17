@@ -34,8 +34,12 @@ Nitrokey HSM FAQ
   The SO PIN has to be exactly 16 digits long.
    
 **Q:** How many data objects (DF, EF) can be stored?
-    76 KB EEPROM total, max. 150 x ECC-521 keys, max. 300 x
-    ECC/AES-256 keys, max. 19 x RSA-4096 keys, max. 38 x RSA-2048 keys
+    76 KB EEPROM total, that can be used for 
+    
+    * max. 150 x ECC-521 keys or
+    * max. 300 x ECC/AES-256 keys or 
+    * max. 19 x RSA-4096 keys or
+    * max. 38 x RSA-2048 keys
 
 **Q:** How many keys can I store? 
     Nitrokey HSM can store 20 RSA-2048 and 31 ECC-256 key pairs.
