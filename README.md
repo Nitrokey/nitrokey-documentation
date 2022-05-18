@@ -53,7 +53,7 @@ mkdir -p ~/temp/sphinx_preview
 For each preview:
 
 ```
-sphinx-build -a -D language='en' -b html . ~/temp/sphinx_preview
+sphinx-build -j auto -a -D language='en' -b html . ~/temp/sphinx_preview
 ```
 
 Errors about non-existing files in includes can be ignored. Syntax errors and RST files not contained in the TOC are listed.
