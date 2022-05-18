@@ -1,7 +1,7 @@
 Integration into Custom Application
 ---------------------------------
 
-To integrate the NetHSM into own custom applications' client libraries are available for almost all programming languages, including JavaScript, C++ and Python, for example. Therefore, we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_.
+To integrate the NetHSM into own custom applications' client libraries are available for almost all programming languages, including JavaScript, C++ and Python, for example. Therefore,	 we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_.
 
 To list all the available languages, you enter
 
