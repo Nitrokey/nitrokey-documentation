@@ -45,9 +45,9 @@ GET /provision
 .. start:: boot-mode
 NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
 
--  In *Attended Boot* mode the *Unlock Passphrase* needs to be entered
-   during each start which is used to encrypt the data store. For
-   security reasons this mode is recommended.
+-  In *Attended Boot* mode, the *Unlock Passphrase* needs to be entered
+   during each start, which is used to encrypt the data store. For
+   security reasons, this mode is recommended.
 -  In *Unattended Boot* mode no Unlock Passphrase is required, therefore
    the NetHSM can start unattended and the data store is stored
    unencrypted. Use this mode if your availability requirements can’t be
@@ -86,7 +86,7 @@ operations allowed by individual Roles, for endpoint-specific details
 please refer to the REST API documentation.
 
 -  *R-Administrator*: A user account with this Role has access to all
-   operations provided by the REST API, with the exception of key usage
+   operations provided by the REST API, except for key usage
    operations, i.e. message signing and decryption.
 -  *R-Operator*: A user account with this Role has access to all key
    usage operations, a read-only subset of key management operations
@@ -117,8 +117,8 @@ Key Management
 
 The NetHSM supports RSA, ED25519 and ECDSA keys.  When creating a key, you have
 to select both the key algorithm and the key mechanisms to use.  RSA keys can
-be used for decryption (with the modes raw, PKCS#11 and OAEP with MD5, SHA1,
-SHA224, SHA256, SHA384 or SHA512) and for signatures (with the modes PKCS#11
+be used for decryption (with the modes raw, PKCS#1 and OAEP with MD5, SHA1,
+SHA224, SHA256, SHA384 or SHA512) and for signatures (with the modes PKCS#1
 and PSS with MD5, SHA1, SHA224, SHA256, SHA384 or SHA512).  The other
 algorithms only support the signature mechanism.
 
@@ -134,7 +134,7 @@ documentation for the KeyAlgorithm_ and KeyMechanism_ types.
 Generate Keys
 ~~~~~~~~~~~~~
 
-In this section, we want to use an RSA key to decrypt data using PKCS#11 and to
+In this section, we want to use an RSA key to decrypt data using PKCS#1 and to
 sign data with PSS using SHA256.  So let’s generate a new key on the NetHSM.
 Make sure to use the RSA algorithm and to select the
 RSA_Signature_PSS_SHA256 and RSA_Decryption_PKCS1 key mechanisms.  If
@@ -176,19 +176,19 @@ We can also query the public key of the generated key pair:
 GET /keys/myFirstKey
 
 .. start:: get-key-file
-To be able to use the key with openssl, we export it as a PEM file and
+To be able to use the key with OpenSSL, we export it as a PEM file and
 store it as public.pem:
 .. end
 
 GET /keys/myFirstKey/public.pem
 
 .. start:: inspect-key
-We can inspect the key with openssl and use it for encryption or signature
+We can inspect the key with OpenSSL and use it for encryption or signature
 verification (as described in the next section):
 
 ::
 
-    $ openssl rsa -in public.pem -pubin -text
+    openssl rsa -in public.pem -pubin -text
 
 ::
 
@@ -257,13 +257,13 @@ Key Operations
 Decryption
 ~~~~~~~~~~
 
-We can encrypt data for the key stored on the NetHSM using openssl.
+We can encrypt data for the key stored on the NetHSM using OpenSSL.
 (public.pem is the public key file that we created in the `Show Key
 Details`_ section.)
 
 ::
 
-    $ echo 'NetHSM rulez!' | openssl rsautl -encrypt -inkey public.pem -pubin | base64 > data.crypt
+    $ echo 'NetHSM rulez!' | OpenSSL rsautl -encrypt -inkey public.pem -pubin | base64 > data.crypt
 
 Now we can use the NetHSM to decrypt the data:
 .. end
@@ -283,7 +283,7 @@ we have to calculate a digest first:
 
 ::
 
-    $ openssl dgst -sha256 -binary data | base64 > data.digest
+    openssl dgst -sha256 -binary data | base64 > data.digest
 
 Then we can create a signature from this digest using the NetHSM:
 .. end
@@ -291,11 +291,11 @@ Then we can create a signature from this digest using the NetHSM:
 POST /keys/myFirstKey/sign
 
 .. start:: sign-verify
-And then use openssl to verify the signature:
+And then use OpenSSL to verify the signature:
 
 ::
 
-    $ openssl dgst -sha256 -verify public.pem -signature data.sig \
+    openssl dgst -sha256 -verify public.pem -signature data.sig \
     -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
 
 ::
