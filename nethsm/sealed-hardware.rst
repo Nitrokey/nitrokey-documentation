@@ -1,7 +1,13 @@
 Verify Sealed Hardware
 ======================
 
-Your NetHSM has been delivered in a sealed packaging. To verify that your NetSHM has arrived safely you should check the packaging for any tears, cuts, holes or broken sealings. Further on there is a unique handmade glitter seal on top of the packaging. Last but not least we will send you a picture of it after packing. Please compare the picture to your packaged NetHSM. If you notice any changes please contact us to arrange further action.  
+Your NetHSM has been delivered in a sealed packaging. To verify that 
+your NetSHM has arrived safely, you should check the packaging for any 
+tears, cuts, holes or broken sealing. Further on, there is a unique 
+handmade glitter seal on top of the packaging. Last but not least, we 
+will send you a picture of it after packing. Please compare the picture 
+to your packaged NetHSM. If you notice any changes, please contact us to 
+arrange further action.
 
 Here are some pictures of how we wrap up a NetHSM:
 
@@ -11,7 +17,7 @@ Hardware Sealing
  :scale: 20
  :alt: seal
  
-Position of the four Sealings
+Position of the four Sealing
 
 .. figure:: ./images/sealing-position.png
  :scale: 100

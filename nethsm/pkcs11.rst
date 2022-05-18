@@ -1,15 +1,15 @@
 .. important::
    This driver is still an early Proof of Concept implementation that only implements the
-   functions that are necessary for operating TLS servers like for example an HTTPS server.
+   functions that are necessary for operating TLS servers, like for example an HTTPS server.
 
 Accessing a NetHSM using the PKCS#11 driver
 ===========================================
 
 .. contents:: :local:
 
-1. Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-pkcs11>`_ for NetHSM.
-2. Modify the configuration file ``p11nethsm.conf`` according to
-   your setup (e.g. address, operator name) and store it in ``$HOME/.nitrokey``, ``/etc/nitrokey/``,
+1. Download the PKCS#11 driver <https://github.com/Nitrokey/nethsm-pkcs11>_ for NetHSM.
+2. Modify the configuration file `p11nethsm.conf` according to
+   your setup (e.g. address, operator name) and store it in `$HOME/.nitrokey`, `/etc/nitrokey/`,
    or in the folder where your application is executed.
 
 Decrypting

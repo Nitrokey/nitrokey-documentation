@@ -31,7 +31,7 @@ Initialization
 
 A new NetHSM needs to be provisioned first with passphrases and the
 current time. The *Admin Passphrase* is the *Administrator*’s
-passphrase, which is the super user of the NetHSM. The *Unlock
+passphrase, which is the superuser of the NetHSM. The *Unlock
 Passphrase* is used to encrypt NetHSM’s confidential data store.
 
 .. note::
@@ -274,7 +274,7 @@ POST /keys/myFirstKey/decrypt
 Signing
 ~~~~~~~
 
-Similarily, we can sign data using the key on the NetHSM.  For RSA and ECDSA,
+Similarly, we can sign data using the key on the NetHSM.  For RSA and ECDSA,
 we have to calculate a digest first:
 
 ::
@@ -307,7 +307,7 @@ And then use OpenSSL to verify the signature:
 Backups
 -------
 
-It is possible to crate a backup of the NetHSM that captures both the
+It is possible to create a backup of the NetHSM that captures both the
 configuration and the stored keys.  In order to create a backup, you first have
 to set a backup passphrase that is used to encrypt the backup file:
 .. end
