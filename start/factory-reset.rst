@@ -59,7 +59,7 @@ It deletes all keys, pins, configurations and meta data associated with the resp
 Reset code
 ----------
 
-This step is optional for new firmware.. You can add an reset code which enable the reset of the User PIN (not the admin PIN). For older Firmware it is recommended since it is needed to reset the device (see below)
+This step is optional with new firmware.. You can add a reset code which enable the reset of the User PIN (not the Admin PIN). For older Firmware it is recommended since it is needed to reset the device (see below)
 
 
 `Checkout the documentation here <http://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_.
@@ -76,5 +76,5 @@ If and only if the device is not blocked (PIN wasn't typed in wrong too often) y
 
 Nitrokey Start firmware 1.0:
 ------
-In order to reset a Nitrokey Start 1.0, you need to define a public key for `firmware updates <http://no-passwd.net/askbot/question/34/how-gnuk-supports-firmware-upgrade/>`_ beforehand! In case of a blocked device it enables your to perform a firmware update which resets the device.
+In order to reset a Nitrokey Start 1.0, you need to define a public key for `firmware updates <http://no-passwd.net/askbot/question/34/how-gnuk-supports-firmware-upgrade/>`_ beforehand! In case of a blocked device it enables you to perform a firmware update which resets the device.
 
