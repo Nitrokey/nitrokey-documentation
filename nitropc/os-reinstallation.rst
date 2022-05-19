@@ -28,20 +28,17 @@ Operating System Reinstallation
    -  Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`_;
    -  macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`_.
 
-4. Connect the USB drive to your NitroPad and start it. In Heads menu
+4. Connect the USB drive to your NitroPC and start it. In Heads menu
    select Boot Options -> USB Boot.
 
 5. Depending on the operating system you may need to confirm its
    reinstallation.
-
-6. `Sign the boot
-   partition. <system-update.html>`_
 
 To avoid accidential overwriting of valuable data, format the USB drive afterwards.
 
 .. warning::
 
    Booting this USB drive entirely erases all data on the hard disk or
-   SSD of the NitroPad without further warning. Don’t boot this USB
+   SSD of the NitroPC without further warning. Don’t boot this USB
    drive on any computer which contains data you want to keep. Make sure
    to format the USB drive after the intended use.

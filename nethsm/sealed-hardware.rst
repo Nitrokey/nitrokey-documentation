@@ -17,34 +17,32 @@ Position of the four Sealings
  :scale: 100
  :alt: position
  
- Front Side
+Front Side
 
- .. figure:: ./images/front-side.jpg
+.. figure:: ./images/front-side.jpg
   :scale: 20
   :alt: front side
  
- Back Side
+Back Side
 
- .. figure:: ./images/back-side.jpg
+.. figure:: ./images/back-side.jpg
   :alt: back side
   :scale: 20
  
- Buttom Side
+Buttom Side
 
- .. figure:: ./images/buttom-side.jpg
+.. figure:: ./images/buttom-side.jpg
   :alt: buttom side
   :scale: 20
  
- Top Side
+Top Side
  
- .. figure:: ./images/top-side.jpg
+.. figure:: ./images/top-side.jpg
   :alt: top side
   :scale: 20
  
- Left Side
+Left Side
  
- .. figure:: ./images/left-side.jpg
+.. figure:: ./images/left-side.jpg
   :alt: left side
   :scale: 20
- 
- 
