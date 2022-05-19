@@ -79,10 +79,10 @@ User Management
 Roles
 ~~~~~
 
-Separation of duties can be implemented by using the available Roles.
+Separation of duties can be implemented by using different Roles.
 Each user account configured on the NetHSM has one of the following
 Roles assigned to it. Following is a high-level description of the
-operations allowed by individual Roles, for endpoint-specific details
+operations allowed by each Role. For endpoint-specific details
 please refer to the REST API documentation.
 
 -  *R-Administrator*: A user account with this Role has access to all
@@ -307,8 +307,8 @@ And then use OpenSSL to verify the signature:
 Backups
 -------
 
-It is possible to create a backup of the NetHSM that captures both the
-configuration and the stored keys.  In order to create a backup, you first have
+It is possible to create a backup of the NetHSM that contains both the
+configuration and the stored keys. In order to create a backup, you first have
 to set a backup passphrase that is used to encrypt the backup file:
 .. end
 
@@ -321,13 +321,13 @@ Now you have to create a user with the *R-Backup* role:
 PUT /users/backup
 
 .. start:: backup_
-Then can you generate the backup and write it to a file:
+Get the backup and store it in a file:
 .. end
 
 POST /system/backup
 
 .. start:: restore
-This backup file can be restored on an unprovisioned NetHSM instance:
+This backup file can be restored on an unprovisioned NetHSM instance only:
 .. end
 
 POST /system/restore
@@ -336,9 +336,9 @@ POST /system/restore
 Updates
 -------
 
-Updates for the NetHSM can be installed in a two-step process.  First you have
-to upload the update image to the NetHSM.  The image is then checked and
-validated.  If the validation is successful, the release notes for the update
+Updates for the NetHSM can be installed in a two-step process. First you have
+to upload the update image to the NetHSM. The image is then checked and
+validated. If the validation is successful, the release notes for the update
 are returned by the NetHSM:
 .. end
 

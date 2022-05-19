@@ -22,7 +22,7 @@ This tutorial demonstrates how to access the NetHMS via `nitropy <https://github
 
 
 Device Information & Status
-
+---------------------------
 
 ::
 
@@ -375,7 +375,7 @@ Updating NetHSM
 
 .. warning::
 
-	CAUTION! Data loss may occur due to the installation of a beta update!
+	Data loss may occur due to the installation of a beta update!
 
 .. code:: bash
 
