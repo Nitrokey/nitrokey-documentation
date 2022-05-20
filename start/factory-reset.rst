@@ -42,7 +42,8 @@ Reset
 .. code-block:: bash
 
  $ gpg --card-edit` -> admin -> factory-reset
-This will reset the current identity. To reset all identitites the following needs to be done:
+
+This will reset the current identity. To reset  all identitites the following needs to be done:
 
 .. code-block:: bash
 
@@ -68,13 +69,13 @@ This step is optional with new firmware.. You can add a reset code which enable 
 
 
 Firmware below 1.2.5
-------
+--------------------
 Nitrokey Start firmware 1.2.2 to 1.2.5:
-------
+---------------------------------------
 
 If and only if the device is not blocked (PIN wasn't typed in wrong too often) you can use the same procedure as in newer firmware (see above). You need the reset code to unblock device or you can not use the device anymore!
 
 Nitrokey Start firmware 1.0:
-------
+----------------------------
 In order to reset a Nitrokey Start 1.0, you need to define a public key for `firmware updates <http://no-passwd.net/askbot/question/34/how-gnuk-supports-firmware-upgrade/>`_ beforehand! In case of a blocked device it enables you to perform a firmware update which resets the device.
 
