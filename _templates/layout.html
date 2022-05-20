@@ -304,6 +304,13 @@
 
           links.eq(index).trigger('click');
         });
+
+        $('.toc-backref').each(function ($el) {
+          var headerLinkRef = $el.parent().find('.headerlink').attr('href');
+          if (headerLinkRef) {
+            $el.attr('href', headerLinkRef);
+          }
+        });
       });
   </script>
 
