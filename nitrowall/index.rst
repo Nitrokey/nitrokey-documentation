@@ -19,7 +19,7 @@ Getting Started
 - Login: root
 - Password: opnsense
 
-7. Start the system wizard via the menu of the lefthand side: system →  system wizard → setup. The wizard is going trough the configuration with you step-by-step.
+7. Start the system wizard via the menu of the left-hand side: system →  system wizard → setup. The wizard is going through the configuration with you step-by-step.
 
 
 
@@ -44,7 +44,7 @@ Getting Started
         
  Reload the NitroWall
  
-8. After configuring your NitroWall reload it to make the changes persistent. As soon as the process terminates you are back again at the dashboard.
+8. After configuring your NitroWall reload it to make the changes persistent. As soon as the process terminates, you are back again at the dashboard.
 9. After the installation is complete, install the necessary updates. To do this, go to System → Firmware → Updates.
 
 .. toctree::
