@@ -1,4 +1,4 @@
-Windows Logon and S/MIME Email Encryption with Active Directory
+Windows Login and S/MIME Email Encryption with Active Directory
 ===============================================================
 
 .. include:: ./product_platform_heading.rst
