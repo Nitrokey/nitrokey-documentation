@@ -34,6 +34,7 @@ Nitrokey Pro 2 FAQ
 
 **Q:** How fast is encryption and signing?
   Encryption of 50kiB of data:
+  
   * 256 bit AES, 2048 bytes per command -> 880 bytes per second
   * 128 bit AES, 2048 bytes per command -> 893 bytes per second
   * 256 bit AES, 240 bytes per command -> 910 bytes per second

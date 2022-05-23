@@ -5,10 +5,9 @@ Accessing a NetHSM using the REST API
 
 .. contents:: :local:
 
-This tutorial demonstrates how to access the NetHMS via REST API. The interface is `documented here <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_ and it's specification is available as
+This tutorial demonstrates how to access the NetHMS via REST API. The interface is documented `here <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_ ,and its specification is available as
 `RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ and as
-`OpenAPI (Swagger)
-<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_.
+`OpenAPI (Swagger) <https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_.
 
 .. include:: _tutorial.rst
    :start-after: .. start:: setup
@@ -18,7 +17,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
    If you use a NetHSM demo instance with a self-signed certificate, for
    example using the Docker image, you will have to use the
-   ``--insecure``/``-k`` option for ``curl`` to skip the certificate check.
+   --insecure/-k option for curl to skip the certificate check.
 
 .. include:: _tutorial.rst
    :start-after: .. start:: info
@@ -41,8 +40,8 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
 .. note::
 
-   The ``-i``/``--include`` option causes ``curl`` to print the HTTP status
-   code and the response headers.  The ``-w '\n'``/``--write-out '\n'`` option
+   The -i/--include option causes curl to print the HTTP status
+   code and the response headers.  The -w '\n'/--write-out '\n' option
    adds a newline after the response body.
 
 .. include:: _tutorial.rst

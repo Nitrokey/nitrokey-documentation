@@ -12,7 +12,7 @@ Troubleshooting
 Here you will find a collection of common issues.
 
 
-Nitrokey is not detected on Linux
+Nitrokey is Not Detected on Linux
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the Nitrokey is not detected, proceed as follows:
@@ -34,7 +34,7 @@ Timeout Bug
 
 There is a bug with the Nitrokey being recognized by the system, where a timeout occurs before the connection succeeds. 
 
-NFC is not Working
+NFC is Not Working
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Please make sure FIDO2 is working correctly. Otherwise NFC won't work either.
 
@@ -47,7 +47,7 @@ If you have a phone cover, try to find the right spot first without it. Retry af
 
 The search of the optimal spot sometimes took up to 20-30 sec. In our experience holding the Nitrokey in an horizontal orientation yields better results.If you still encounter issues please write a mail to our support. For optimal help please include the shipping/order number and your smartphone model. 
 
-update.nitrokey.com does not work:
+Update Via update.nitrokey.com Does Not Work
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Currently there are no updates available. The first firmware updates will address bug fixes.

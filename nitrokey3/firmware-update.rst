@@ -13,7 +13,7 @@ This guide describes how to update the firmware on the Nitrokey 3.
    the Nitrokey 3 is not the only way to authenticate/2FA for your 
    applications/services.
 
-How to update
+How to Update
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. important::
    Never disconnect the Nitrokey 3 or abort the process while updating,
