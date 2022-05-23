@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-20 18:17+0200\n"
+"POT-Creation-Date: 2022-05-23 12:38+0200\n"
 "PO-Revision-Date: 2022-05-20 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -83,9 +82,9 @@ msgid ""
 "customization of Odoo. If you are interested, `contact us "
 "<https://www.nitrokey.com/contact>`_."
 msgstr ""
-"このFIDOソリューションは、Odooの開発とカスタマイズを専門とするパートナー`initOS <https://www.initos.com/>`_ "
-"と共同で開発されたものである。ご興味のある方は、`contact us <https://www.nitrokey.com/contact>`_ "
-"までお問い合わせください。"
+"このFIDOソリューションは、Odooの開発とカスタマイズを専門とするパートナー`initOS "
+"<https://www.initos.com/>`_ と共同で開発されたものである。ご興味のある方は、`contact us "
+"<https://www.nitrokey.com/contact>`_ までお問い合わせください。"
 
 #: ../fido2/2fa-odoo.rst:21
 msgid "Video: Two-Factor Authentication With The Nitrokey FIDO U2F in Odoo"
@@ -5998,7 +5997,8 @@ msgid ""
 msgstr "問題が発生した場合は、:doc:`Remote Access Section<index>`内の他の記事をお読みください。"
 
 #: ../nextbox/technical/factory-reset.rst:2 ../nitropad/factory-reset.rst:2
-#: ../pro/factory-reset.rst:2 ../storage/factory-reset.rst:2
+#: ../pro/factory-reset.rst:2 ../start/factory-reset.rst:2
+#: ../storage/factory-reset.rst:2
 msgid "Factory Reset"
 msgstr "ファクトリーリセット"
 
@@ -9127,7 +9127,8 @@ msgid ""
 msgstr "楕円曲線に基づく鍵を作成するには、Nitrokey Storage 2 / Pro 2とGnuPGバージョン2.1.17以上が必要です。"
 
 #: ../pro/ecc.rst:26
-msgid "You can read Nitrokey’s OpenPGP Card version via ``gpg2 —card-status``:"
+#, fuzzy
+msgid "You can read Nitrokey’s OpenPGP Card version via ``gpg2 --card-status``:"
 msgstr "NitrokeyのOpenPGP Cardバージョンは、``gpg2 —card-status``で読むことができます。"
 
 #: ../pro/ecc.rst:36
@@ -13067,6 +13068,116 @@ msgstr ""
 msgid "**Q:** Is there a warranty?"
 msgstr "**Q:** 保証はありますか？"
 
+#: ../start/factory-reset.rst:5 ../start/multiple-identities.rst:8
+msgid ""
+"The multiple identites feature allows to use 3 virtual smart cards in "
+"place of one, giving bigger flexibility in the every day use, as well as "
+"separation between user identities (business, personal etc.) or even "
+"allowing usage of it for more than one user (PINs are separate)."
+msgstr "マルチプルアイデンティティ機能により、1枚の仮想スマートカードの代わりに3枚の仮想スマートカードを使用することができ、日常的な使用においてより大きな柔軟性が得られます。また、ユーザーのアイデンティティ（ビジネス、個人など）を分けたり、複数のユーザーで使用することもできます（PINは別）。"
+
+#: ../start/factory-reset.rst:7 ../start/multiple-identities.rst:10
+msgid ""
+"All of the smart cards have separate data objects, meaning they all could"
+" have different keys, certificates stored, and PINs set. Identities do "
+"not intereact between each other."
+msgstr "すべてのスマートカードは、別々のデータオブジェクトを持っています。つまり、すべてのスマートカードは、異なるキー、証明書の保存、およびPINの設定が可能です。識別子は相互に作用しません。"
+
+#: ../start/factory-reset.rst:9
+msgid "This means each identity needs to be resetted on its own."
+msgstr ""
+
+#: ../start/factory-reset.rst:11
+msgid ""
+"Old versions (below 1.2.5) of the firmware might need special treatment "
+"(see below). Usage -----"
+msgstr ""
+
+#: ../start/factory-reset.rst:15 ../start/multiple-identities.rst:17
+msgid ""
+"To change the identity it suffices to send a custom CCID command. This "
+"could be achieved with ``pynitrokey`` tool:"
+msgstr "IDを変更するには、カスタムCCIDコマンドを送信すれば十分です。これは、``pynitrokey``ツールで実現できます。"
+
+#: ../start/factory-reset.rst:17 ../start/multiple-identities.rst:19
+msgid ""
+"`Install pynitrokey "
+"<https://github.com/Nitrokey/pynitrokey#installation>`_."
+msgstr ""
+"`pynitrokeyのインストール "
+"<https://github.com/Nitrokey/pynitrokey#installation>`_です。"
+
+#: ../start/factory-reset.rst:20 ../start/multiple-identities.rst:22
+msgid "Connect your Nitrokey Start and verify that it got recognized."
+msgstr "Nitrokey Startを接続し、認識されたことを確認してください。"
+
+#: ../start/factory-reset.rst:29 ../start/multiple-identities.rst:31
+msgid "Change the identity, by replacing ``<ID>`` with ``0``, ``1``, or ``2``."
+msgstr "``<ID>``を``0``に置き換えて、アイデンティティを変更します。``1``、または``2``となります。"
+
+#: ../start/factory-reset.rst:40
+#, fuzzy
+msgid "Reset"
+msgstr "グリーン"
+
+#: ../start/factory-reset.rst:46
+msgid ""
+"This will reset the current identity. To reset  all identitites the "
+"following needs to be done:"
+msgstr ""
+
+#: ../start/factory-reset.rst:57
+msgid ""
+"It deletes all keys, pins, configurations and meta data associated with "
+"the respective identity."
+msgstr ""
+
+#: ../start/factory-reset.rst:61
+msgid "Reset code"
+msgstr ""
+
+#: ../start/factory-reset.rst:63
+msgid ""
+"This step is optional with new firmware.. You can add a reset code which "
+"enable the reset of the User PIN (not the Admin PIN). For older Firmware "
+"it is recommended since it is needed to reset the device (see below)"
+msgstr ""
+
+#: ../start/factory-reset.rst:66
+msgid ""
+"`Checkout the documentation here <http://www.fsij.org/doc-gnuk/gnuk-"
+"passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_."
+msgstr ""
+
+#: ../start/factory-reset.rst:72
+msgid "Firmware below 1.2.5"
+msgstr ""
+
+#: ../start/factory-reset.rst:74
+msgid "Nitrokey Start firmware 1.2.2 to 1.2.5:"
+msgstr ""
+
+#: ../start/factory-reset.rst:76
+msgid ""
+"If and only if the device is not blocked (PIN wasn't typed in wrong too "
+"often) you can use the same procedure as in newer firmware (see above). "
+"You need the reset code to unblock device or you can not use the device "
+"anymore!"
+msgstr ""
+
+#: ../start/factory-reset.rst:79
+#, fuzzy
+msgid "Nitrokey Start firmware 1.0:"
+msgstr "Nitrokey Start RTM.10"
+
+#: ../start/factory-reset.rst:80
+msgid ""
+"In order to reset a Nitrokey Start 1.0, you need to define a public key "
+"for `firmware updates <http://no-passwd.net/askbot/question/34/how-gnuk-"
+"supports-firmware-upgrade/>`_ beforehand! In case of a blocked device it "
+"enables you to perform a firmware update which resets the device."
+msgstr ""
+
 #: ../start/faq.rst:2
 msgid "Nitrokey Start FAQ"
 msgstr "NitrokeyスタートFAQ"
@@ -13258,49 +13369,12 @@ msgstr ""
 msgid "Multiple Identities"
 msgstr "マルチプル・アイデンティティ"
 
-#: ../start/multiple-identities.rst:8
-msgid ""
-"The multiple identites feature allows to use 3 virtual smart cards in "
-"place of one, giving bigger flexibility in the every day use, as well as "
-"separation between user identities (business, personal etc.) or even "
-"allowing usage of it for more than one user (PINs are separate)."
-msgstr "マルチプルアイデンティティ機能により、1枚の仮想スマートカードの代わりに3枚の仮想スマートカードを使用することができ、日常的な使用においてより大きな柔軟性が得られます。また、ユーザーのアイデンティティ（ビジネス、個人など）を分けたり、複数のユーザーで使用することもできます（PINは別）。"
-
-#: ../start/multiple-identities.rst:10
-msgid ""
-"All of the smart cards have separate data objects, meaning they all could"
-" have different keys, certificates stored, and PINs set. Identities do "
-"not intereact between each other."
-msgstr "すべてのスマートカードは、別々のデータオブジェクトを持っています。つまり、すべてのスマートカードは、異なるキー、証明書の保存、およびPINの設定が可能です。識別子は相互に作用しません。"
-
 #: ../start/multiple-identities.rst:12
 msgid ""
 "The virtual smart cards are identifyable by the first digit of the serial"
 " number, which is replaced by identity number for second (“1”) and third "
 "one (“2”). Serial number is not changed for the first identity."
 msgstr "仮想スマートカードは、シリアル番号の1桁目で識別でき、2番目（「1」）と3番目（「2」）のID番号に置き換えられます。1つ目のIDの場合、シリアルナンバーは変更されません。"
-
-#: ../start/multiple-identities.rst:17
-msgid ""
-"To change the identity it suffices to send a custom CCID command. This "
-"could be achieved with ``pynitrokey`` tool:"
-msgstr "IDを変更するには、カスタムCCIDコマンドを送信すれば十分です。これは、``pynitrokey``ツールで実現できます。"
-
-#: ../start/multiple-identities.rst:19
-msgid ""
-"`Install pynitrokey "
-"<https://github.com/Nitrokey/pynitrokey#installation>`_."
-msgstr ""
-"`pynitrokeyのインストール "
-"<https://github.com/Nitrokey/pynitrokey#installation>`_です。"
-
-#: ../start/multiple-identities.rst:22
-msgid "Connect your Nitrokey Start and verify that it got recognized."
-msgstr "Nitrokey Startを接続し、認識されたことを確認してください。"
-
-#: ../start/multiple-identities.rst:31
-msgid "Change the identity, by replacing ``<ID>`` with ``0``, ``1``, or ``2``."
-msgstr "``<ID>``を``0``に置き換えて、アイデンティティを変更します。``1``、または``2``となります。"
 
 #: ../start/multiple-identities.rst:42
 msgid "Limitations"
@@ -17285,3 +17359,4 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 #~ "* 128ビットAES、2048バイト/コマンド ->893バイト/秒 * "
 #~ "256ビットAES、240バイト/コマンド ->910バイト/秒 * "
 #~ "128ビットAES、240バイト/コマンド ->930バイト/秒"
+

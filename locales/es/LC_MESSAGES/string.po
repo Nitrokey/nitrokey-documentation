@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-20 18:17+0200\n"
+"POT-Creation-Date: 2022-05-23 12:38+0200\n"
 "PO-Revision-Date: 2022-05-20 17:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Spanish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/es/>\n"
 "Language: es\n"
+"Language-Team: Spanish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/es/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -7203,7 +7202,8 @@ msgstr ""
 ":doc:`Sección de Acceso Remoto<índice<`."
 
 #: ../nextbox/technical/factory-reset.rst:2 ../nitropad/factory-reset.rst:2
-#: ../pro/factory-reset.rst:2 ../storage/factory-reset.rst:2
+#: ../pro/factory-reset.rst:2 ../start/factory-reset.rst:2
+#: ../storage/factory-reset.rst:2
 msgid "Factory Reset"
 msgstr "Restablecimiento de fábrica"
 
@@ -10172,8 +10172,8 @@ msgid ""
 "Install the 3 core Google Play Apps (\"Google Play store\", \"Google Play"
 " Services\", \"Google Services Framework\")."
 msgstr ""
-"Instalar los 3 principales Google Play Apps (\"Google Play store\", \"Google "
-"Play Services\", \"Google Services Framework\")."
+"Instalar los 3 principales Google Play Apps (\"Google Play store\", "
+"\"Google Play Services\", \"Google Services Framework\")."
 
 #: ../nitrophone/apps.rst:24
 msgid ""
@@ -10947,7 +10947,8 @@ msgstr ""
 "Storage 2 / Pro 2 y GnuPG versión 2.1.17 o superior."
 
 #: ../pro/ecc.rst:26
-msgid "You can read Nitrokey’s OpenPGP Card version via ``gpg2 —card-status``:"
+#, fuzzy
+msgid "You can read Nitrokey’s OpenPGP Card version via ``gpg2 --card-status``:"
 msgstr ""
 "Puedes leer la versión de la tarjeta OpenPGP de Nitrokey a través de "
 "``gpg2 —card-status``:"
@@ -15656,6 +15657,126 @@ msgstr ""
 msgid "**Q:** Is there a warranty?"
 msgstr "**P: ¿Existe una garantía?"
 
+#: ../start/factory-reset.rst:5 ../start/multiple-identities.rst:8
+msgid ""
+"The multiple identites feature allows to use 3 virtual smart cards in "
+"place of one, giving bigger flexibility in the every day use, as well as "
+"separation between user identities (business, personal etc.) or even "
+"allowing usage of it for more than one user (PINs are separate)."
+msgstr ""
+"La función de identidades múltiples permite utilizar 3 tarjetas "
+"inteligentes virtuales en lugar de una, lo que proporciona una mayor "
+"flexibilidad en el uso diario, así como la separación entre las "
+"identidades de los usuarios (empresarial, personal, etc.) o incluso "
+"permite su uso para más de un usuario (los PIN están separados)."
+
+#: ../start/factory-reset.rst:7 ../start/multiple-identities.rst:10
+msgid ""
+"All of the smart cards have separate data objects, meaning they all could"
+" have different keys, certificates stored, and PINs set. Identities do "
+"not intereact between each other."
+msgstr ""
+"Todas las tarjetas inteligentes tienen objetos de datos separados, lo que"
+" significa que todas podrían tener diferentes claves, certificados "
+"almacenados y PINs establecidos. Las identidades no interactúan entre sí."
+
+#: ../start/factory-reset.rst:9
+msgid "This means each identity needs to be resetted on its own."
+msgstr ""
+
+#: ../start/factory-reset.rst:11
+msgid ""
+"Old versions (below 1.2.5) of the firmware might need special treatment "
+"(see below). Usage -----"
+msgstr ""
+
+#: ../start/factory-reset.rst:15 ../start/multiple-identities.rst:17
+msgid ""
+"To change the identity it suffices to send a custom CCID command. This "
+"could be achieved with ``pynitrokey`` tool:"
+msgstr ""
+"Para cambiar la identidad basta con enviar un comando CCID personalizado."
+" Esto se puede conseguir con la herramienta ``pynitrokey``:"
+
+#: ../start/factory-reset.rst:17 ../start/multiple-identities.rst:19
+msgid ""
+"`Install pynitrokey "
+"<https://github.com/Nitrokey/pynitrokey#installation>`_."
+msgstr ""
+"`Instalar pynitrokey "
+"<https://github.com/Nitrokey/pynitrokey#installation>`."
+
+#: ../start/factory-reset.rst:20 ../start/multiple-identities.rst:22
+msgid "Connect your Nitrokey Start and verify that it got recognized."
+msgstr "Conecta tu Nitrokey Start y comprueba que lo han reconocido."
+
+#: ../start/factory-reset.rst:29 ../start/multiple-identities.rst:31
+msgid "Change the identity, by replacing ``<ID>`` with ``0``, ``1``, or ``2``."
+msgstr "Cambia la identidad, sustituyendo ``<ID>` por ``0``, ``1`` o ``2``."
+
+#: ../start/factory-reset.rst:40
+#, fuzzy
+msgid "Reset"
+msgstr "Verde"
+
+#: ../start/factory-reset.rst:46
+msgid ""
+"This will reset the current identity. To reset  all identitites the "
+"following needs to be done:"
+msgstr ""
+
+#: ../start/factory-reset.rst:57
+msgid ""
+"It deletes all keys, pins, configurations and meta data associated with "
+"the respective identity."
+msgstr ""
+
+#: ../start/factory-reset.rst:61
+msgid "Reset code"
+msgstr ""
+
+#: ../start/factory-reset.rst:63
+msgid ""
+"This step is optional with new firmware.. You can add a reset code which "
+"enable the reset of the User PIN (not the Admin PIN). For older Firmware "
+"it is recommended since it is needed to reset the device (see below)"
+msgstr ""
+
+#: ../start/factory-reset.rst:66
+msgid ""
+"`Checkout the documentation here <http://www.fsij.org/doc-gnuk/gnuk-"
+"passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_."
+msgstr ""
+
+#: ../start/factory-reset.rst:72
+msgid "Firmware below 1.2.5"
+msgstr ""
+
+#: ../start/factory-reset.rst:74
+msgid "Nitrokey Start firmware 1.2.2 to 1.2.5:"
+msgstr ""
+
+#: ../start/factory-reset.rst:76
+msgid ""
+"If and only if the device is not blocked (PIN wasn't typed in wrong too "
+"often) you can use the same procedure as in newer firmware (see above). "
+"You need the reset code to unblock device or you can not use the device "
+"anymore!"
+msgstr ""
+
+#: ../start/factory-reset.rst:79
+#, fuzzy
+msgid "Nitrokey Start firmware 1.0:"
+msgstr "Nitrokey Start RTM.10"
+
+#: ../start/factory-reset.rst:80
+msgid ""
+"In order to reset a Nitrokey Start 1.0, you need to define a public key "
+"for `firmware updates <http://no-passwd.net/askbot/question/34/how-gnuk-"
+"supports-firmware-upgrade/>`_ beforehand! In case of a blocked device it "
+"enables you to perform a firmware update which resets the device."
+msgstr ""
+
 #: ../start/faq.rst:2
 msgid "Nitrokey Start FAQ"
 msgstr "Nitrokey Start FAQ"
@@ -15888,29 +16009,6 @@ msgstr ""
 msgid "Multiple Identities"
 msgstr "Identidades múltiples"
 
-#: ../start/multiple-identities.rst:8
-msgid ""
-"The multiple identites feature allows to use 3 virtual smart cards in "
-"place of one, giving bigger flexibility in the every day use, as well as "
-"separation between user identities (business, personal etc.) or even "
-"allowing usage of it for more than one user (PINs are separate)."
-msgstr ""
-"La función de identidades múltiples permite utilizar 3 tarjetas "
-"inteligentes virtuales en lugar de una, lo que proporciona una mayor "
-"flexibilidad en el uso diario, así como la separación entre las "
-"identidades de los usuarios (empresarial, personal, etc.) o incluso "
-"permite su uso para más de un usuario (los PIN están separados)."
-
-#: ../start/multiple-identities.rst:10
-msgid ""
-"All of the smart cards have separate data objects, meaning they all could"
-" have different keys, certificates stored, and PINs set. Identities do "
-"not intereact between each other."
-msgstr ""
-"Todas las tarjetas inteligentes tienen objetos de datos separados, lo que"
-" significa que todas podrían tener diferentes claves, certificados "
-"almacenados y PINs establecidos. Las identidades no interactúan entre sí."
-
 #: ../start/multiple-identities.rst:12
 msgid ""
 "The virtual smart cards are identifyable by the first digit of the serial"
@@ -15921,30 +16019,6 @@ msgstr ""
 "dígito del número de serie, que se sustituye por el número de identidad "
 "para la segunda (\"1\") y la tercera (\"2\"). El número de serie no se "
 "cambia para la primera identidad."
-
-#: ../start/multiple-identities.rst:17
-msgid ""
-"To change the identity it suffices to send a custom CCID command. This "
-"could be achieved with ``pynitrokey`` tool:"
-msgstr ""
-"Para cambiar la identidad basta con enviar un comando CCID personalizado."
-" Esto se puede conseguir con la herramienta ``pynitrokey``:"
-
-#: ../start/multiple-identities.rst:19
-msgid ""
-"`Install pynitrokey "
-"<https://github.com/Nitrokey/pynitrokey#installation>`_."
-msgstr ""
-"`Instalar pynitrokey "
-"<https://github.com/Nitrokey/pynitrokey#installation>`."
-
-#: ../start/multiple-identities.rst:22
-msgid "Connect your Nitrokey Start and verify that it got recognized."
-msgstr "Conecta tu Nitrokey Start y comprueba que lo han reconocido."
-
-#: ../start/multiple-identities.rst:31
-msgid "Change the identity, by replacing ``<ID>`` with ``0``, ``1``, or ``2``."
-msgstr "Cambia la identidad, sustituyendo ``<ID>` por ``0``, ``1`` o ``2``."
 
 #: ../start/multiple-identities.rst:42
 msgid "Limitations"
@@ -20733,3 +20807,4 @@ msgstr ""
 #~ " 910 bytes por segundo * 128 "
 #~ "bit AES, 240 bytes por comando ->"
 #~ " 930 bytes por segundo"
+
