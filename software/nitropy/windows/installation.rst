@@ -5,7 +5,7 @@ Installing nitropy on Windows
    Generally Windows support and the installer are experimental - please use with caution.
 
 .. note::
-   If you already use Python on your system and are familiar with the command prompt, you can also install nitropy with pipx, see :doc:`../all-platforms/installation`.
+   If you already use Python on your system and are familiar with the command prompt, you can alternatively install nitropy with pipx, see :doc:`../all-platforms/installation`.
 
 How to Install
 --------------
