@@ -1,4 +1,4 @@
-Using the Nitrokey 3 with nitropy
+Using The Nitrokey 3 With nitropy
 ---------------------------------
 
 .. contents:: :local:
@@ -10,7 +10,7 @@ Installation
 
 Please see the `pynitrokey readme <https://github.com/Nitrokey/pynitrokey#installation>`_ for installation instructions.
 
-Listing Nitrokey 3 devices
+Listing Nitrokey 3 Devices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Use ``nitropy list`` or ``nitropy nk3 list`` to list all connected devices:
@@ -29,7 +29,7 @@ Use ``nitropy list`` or ``nitropy nk3 list`` to list all connected devices:
     :: 'Nitrokey 3' keys
     /dev/hidraw3: Nitrokey 3
 
-Querying device information
+Querying Device Information
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following commands are currently available for querying device information:
@@ -42,7 +42,7 @@ The following commands are currently available for querying device information:
       Nitrokey tool for Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 & NetHSM
       v1.0.0
 
-Working with multiple devices
+Working With Multiple Devices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If multiple Nitrokey 3 devices are connected, you can use the ``--path`` option to select one of them.  To determine the path of a device, use the ``nitropy list`` or ``nitropy nk3 list`` command.

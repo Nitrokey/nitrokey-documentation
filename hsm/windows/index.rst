@@ -1,4 +1,4 @@
-Nitrokey HSM with Windows
+Nitrokey HSM With Windows
 =========================
 
 .. contents:: :local:

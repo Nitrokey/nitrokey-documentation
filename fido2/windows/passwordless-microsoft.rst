@@ -1,4 +1,4 @@
-Passwordless Authentication with Microsoft
+Passwordless Authentication With Microsoft
 ==========================================
 
 .. include:: ./product_platform_heading.rst
@@ -7,7 +7,7 @@ Passwordless Authentication with Microsoft
 
 The Nitrokey FIDO2 supports password-less authentication, where entering a password is replaced by logging in with the Nitrokey FIDO2 and a PIN.
 
-Sample login to Microsoft with the Nitrokey FIDO2
+Sample Login to Microsoft With The Nitrokey FIDO2
 -------------------------------------------------
 
 1. Click on “Sign in with security key”.

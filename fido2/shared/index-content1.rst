@@ -27,7 +27,7 @@ The Nitrokey FIDO2 can be used with any current browser.
    `Check online <https://update.nitrokey.com/>`_ if your Nitrokey
    FIDO2 has the latest firmware installed.
 
-Passwordless authentication
+Passwordless Authentication
 ---------------------------
 
 1. Open a web page that supports FIDO2 (currently only
@@ -58,7 +58,7 @@ Checkout the `various use cases and supported
 applications <https://www.nitrokey.com/documentation/applications#p:nitrokey-fido-u2f>`_.
 
 
-Touch Button and LED Behavior
+Touch Button And LED Behavior
 -----------------------------
 
 The first FIDO operation is automatically accepted within two seconds

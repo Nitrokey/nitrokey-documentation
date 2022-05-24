@@ -1,4 +1,4 @@
-Desktop Login and Linux User Authentication
+Desktop Login And Linux User Authentication
 ===========================================
 
 .. include:: ./product_platform_heading.rst
@@ -25,7 +25,7 @@ Requirements
 Instructions
 ------------
 
-GUI method
+GUI Method
 ''''''''''
 
 1. In the lower left corner click on ``Show Applications`` and type
@@ -56,11 +56,10 @@ GUI method
 .. figure:: /fido2/linux/images/fidou2f-5.png
    :alt: img5
 
-CLI method
+CLI Method
 ''''''''''
 
-1. Create a backup user and give it root privileges
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1. Create a backup user and give it root pivileges
 
 You can do so by using these commands:
 
@@ -85,7 +84,6 @@ proceed with the maintenance.
 
 
 2. Set up the ``rules`` to recognize the Nitrokey FIDO2
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Under ``/etc/udev/rules.d`` download ``41-nitrokey.rules``
 
@@ -101,7 +99,6 @@ And restart ``udev`` service
    $ sudo systemctl restart udev
 
 3. Install ``libpam-u2f``
-^^^^^^^^^^^^^^^^^^^^^^^^^
 
 On Ubuntu 20.04 it is possible to download directly ``libpam-u2f`` from the official repos
 
@@ -130,7 +127,6 @@ On Ubuntu 20.04 it is possible to download directly ``libpam-u2f`` from the offi
       /lib/x86_64-linux-gnu/security/pam_u2f.so: \ ELF 64-bit LSB shared object, x86-64, version 1 (SYSV),\ dynamically linked, BuildID[sha1]=1d55e1b11a97be2038c6a139579f6c0d91caedb1, stripped
 
 4. Prepare the Directory
-^^^^^^^^^^^^^^^^^^^^^^^^
 
 Create ``.config/Nitrokey/`` under your home directory
 
@@ -143,7 +139,6 @@ And plug your Nitrokey FIDO2.
 Once done with the preparation, we can start to configure the computer to use the Nitrokey FIDO2 for 2nd factor authentication at login and ``sudo``.
 
 5. Generate the U2F config file
-^^^^^^^^^^^^^^^^^^^^^^^^
 
 To generate the configuration file we will use the ``pamu2fcfg`` utility that comes with the ``libpam-u2f``. For convenience, we will directly write the output of the utility to the ``u2f_keys`` file under ``.config/Nitrokey``. First plug your Nitrokey FIDO2 (if you did not already), and enter the following command:
 
@@ -181,7 +176,6 @@ directory with this command:
       in the PAM configuration.
 
 6. Backup
-^^^^^^^^^
 
 This step is optional, however it is advised to have a backup Nitrokey in the case of loss, theft or destruction of your Nitrokey FIDO.
 
@@ -192,7 +186,6 @@ To set up a backup key, repeat the procedure above, and use ``pamu2fcfg -n``. Th
    <username>:Zx...mw,04...0a:xB...fw,04...3f
 
 7. Modify the Pluggable Authentication Module ``PAM``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The final step is configure the PAM module files under ``/etc/pam.d/``. In this guide we will modify the ``common-auth`` file as it handles the authentication settings which are common to all services, but other options are possible. You can modify the file with the following command:
 
@@ -252,7 +245,7 @@ The flags ``required`` and ``requisite`` provide a tighter access control, and w
 If you need more information about Control Flags in the ``PAM``
 configuration line, you may see the last section of this guide to understand the difference, and the implications of using each of them.
 
-PAM modules
+PAM Modules
 ''''''''''''''''''''''''
 
 There are several PAM modules files that can be modified according to your needs:
@@ -268,8 +261,8 @@ There are several PAM modules files that can be modified according to your needs
 -  Alternatively you can just modify the ``/etc/pam.d/sudo`` file if you
    wish to use FIDO U2F when using the ``sudo`` command.
 
-Control flags
-''''''''''''''''''''''
+Control Flags
+''''''''''''''''''''''''
 
 In step 7 we have used the ``sufficient`` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
 

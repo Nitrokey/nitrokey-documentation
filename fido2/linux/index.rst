@@ -1,4 +1,4 @@
-FIDO2 with Linux
+FIDO2 With Linux
 ================
 
 .. include:: ../shared/index-content1.rst

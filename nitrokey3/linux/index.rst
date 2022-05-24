@@ -1,4 +1,4 @@
-Nitrokey 3 with Linux
+Nitrokey 3 With Linux
 ===========================
 
 .. include:: ../shared/main.rst

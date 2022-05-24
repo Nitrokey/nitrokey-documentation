@@ -1,7 +1,8 @@
-Nitrokey FIDO U2F with macOS
+Nitrokey FIDO U2F With macOS
 ============================
 
-.. contents:: :local:
+.. only:: comment 
+ .. contents:: :local:
 
 .. toctree::
    :maxdepth: 1

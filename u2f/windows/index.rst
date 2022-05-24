@@ -1,7 +1,8 @@
-Nitrokey FIDO U2F with Windows
+Nitrokey FIDO U2F With Windows
 ==============================
 
-.. contents:: :local:
+.. only:: comment
+ .. contents:: :local:
 
 .. toctree::
    :maxdepth: 1

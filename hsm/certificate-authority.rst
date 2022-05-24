@@ -54,7 +54,7 @@ and make sure you install `p11tool as described <https://github.com/thales-e-sec
 Using the PowerShell most commands should be identical as long as both tools and their binaries
 are within your ``PATH``.
 
-Creating the Root Certificate Authority
+Creating The Root Certificate Authority
 ---------------------------------------
 
 We start by generating the private key for the certificate authority directly on the Nitrokey HSM. This allows us to use the private key in the future, but not access it.
@@ -209,7 +209,7 @@ Verify that the root certificate was generated correctly. Verify that Signature-
             2d:29:10:9e:4c:73:7a:55:56:4b:dc:fe:8d:3f:f0:9c:20:e1:
             5a:74:fb:41:86:ad:a4:66:61:74:d7:fd
 
-Creating the Intermediate Certificate Authority
+Creating The Intermediate Certificate Authority
 -----------------------------------------------
 
 We continue by generating the private key for the intermediate certificate authority directly on the Nitrokey HSM. This allows us to use the private key in the future, but not access it.

@@ -1,4 +1,4 @@
-Setup with Gnu Privacy Assistant (GPA)
+Setup With Gnu Privacy Assistant (GPA)
 =======================================================
 
 This document describes how to use Gnu Privacy Assistant (GPA) to set up the Nitrokey for its first usage.

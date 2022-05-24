@@ -1,4 +1,4 @@
-Importing Keys and Certificates
+Importing Keys And Certificates
 ===============================
 
 .. include:: ./product_platform_heading.rst
@@ -33,7 +33,7 @@ Preparation
 
 * download the latest `Smart Card Shell`_ and unpack it into your work-directory
 
-Importing via the SCSH3 GUI
+Importing Via The SCSH3 GUI
 ---------------------------
 
 Inside the unpacked directory you will find ``scsh3gui``, which can be started 

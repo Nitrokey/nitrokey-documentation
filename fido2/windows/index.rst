@@ -1,4 +1,4 @@
-Nitrokey FIDO2 with Windows
+Nitrokey FIDO2 With Windows
 ===========================
 
 .. include:: ../shared/index-content1.rst

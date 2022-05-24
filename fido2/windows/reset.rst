@@ -34,7 +34,7 @@ reset operation of 10 seconds since powering up. If the Nitrokey will
 connect to a virtual machine later than that, it will return error and
 the operation will be aborted.
 
-Other Ways To Reset
+Other Ways to Reset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nitrokey can also be reset by:
