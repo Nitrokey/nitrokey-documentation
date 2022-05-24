@@ -3,25 +3,25 @@ Installing nitropy With pipx
 
 .. contents:: :local:
 
-This guide explains how to install nitropy with `pipx <https://pypa.github.io/pipx/>`_.  pipx creates a virtual environment for nitropy.  This means that nitropy and its dependencies don’t conflict with other packages installed on your system.
+This guide explains how to install nitropy with `pipx <https://pypa.github.io/pipx/>`_. pipx creates a virtual environment for nitropy. This means that nitropy and its dependencies don’t conflict with other packages installed on your system.
 
 .. note::
 
-   **For Windows users:** Windows support is still experimental -- please use with caution.  You can also use pre-compiled binaries or a MSI installer, see :doc:`../windows/installation`.
-
-Requirements
-------------
-
-* Python 3.6 or newer 
-
-  Python is already installed on most macOS and Linux systems or can be downloaded from `python.org <https://python.org>`_.  See the `Downloading Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`_ for more information.
-* pip
-  
-  You can install pip with your system package manager or with ``python3 -m ensurepip``.  See the `pip Installation Guide <https://pip.pypa.io/en/stable/installation/>`_ for more information.
+   **For Windows users:** Windows support is still experimental -- please use with caution. You can also use pre-compiled binaries or a MSI installer, see :doc:`../windows/installation`.
 
 Preparation
 -----------
 
+Python 3.6 or newer 
+~~~~~~~~~~~~~~~~~~~
+  Python is already installed on most macOS and Linux systems or can be downloaded from `python.org <https://python.org>`_. See the `Downloading Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`_ for more information.
+
+pip
+~~~~~  
+  You can install pip with your system package manager or with ``python3 -m ensurepip``. See the `pip Installation Guide <https://pip.pypa.io/en/stable/installation/>`_ for more information.
+
+pipx
+~~~~
 Before installing nitropy, you have to install and configure pipx::
 
     python3 -m pip install --user pipx
@@ -59,7 +59,7 @@ You might have to run nitropy with administrator rights to be able to connect to
 Linux
 ~~~~~
 
-On Linux systems, you also need the Nitrokey udev rules.  These are shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_.  You can also install them manually::
+On Linux systems, you also need the Nitrokey udev rules. These are shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. Alternatively, you can install them manually::
 
     wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
     sudo mv 41-nitrokey.rules /etc/udev/rules.d/
