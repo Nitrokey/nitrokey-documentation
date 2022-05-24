@@ -28,8 +28,6 @@ Device Information & Status
 
     $ nitropy nethsm --host $NETHSM_HOST info
 
-::
-
     Host:    localhost:8443
     Vendor:  Nitrokey GmbH
     Product: NetHSM
@@ -37,8 +35,6 @@ Device Information & Status
 ::
 
     $ nitropy nethsm --host $NETHSM_HOST state
-
-::
 
     NetHSM localhost:8443 is Unprovisioned
 
@@ -55,9 +51,7 @@ A new NetHSM needs to be provisioned first with passphrases and the current time
 
 ::
 
-   $ nitropy nethsm --host $NETHSM_HOST provision --admin-passphrase admin-passphrase --unlock-passphrase unlock-passphrase
-
-::
+   $ nitropy nethsm --host $NETHSM_HOST provision
 
    NetHSM localhost:8443 provisioned
 
@@ -67,34 +61,16 @@ A new NetHSM needs to be provisioned first with passphrases and the current time
 
 ::
 
-   $ nitropy nethsm --host $NETHSM_HOST --username admin    get-config --unattended-boot
-
-::
+   $ nitropy nethsm --host $NETHSM_HOST get-config --unattended-boot
 
     Configuration for NetHSM localhost:8443:
-        Unattended boot: off
+    Unattended boot: off
 
-.. include:: _tutorial.rst
-   :start-after: .. start:: unattended-boot-on
-   :end-before: .. end
-
-.. code:: bash
-
-   $ nitropy nethsm --host $NETHSM_HOST --username admin    set-unattended-boot on
+Turn `Unattended Boot` mode on:
 
 ::
 
-   Updated the unattended boot configuration for NetHSM localhost:8443
-
-.. include:: _tutorial.rst
-   :start-after: .. start:: unattended-boot-off
-   :end-before: .. end
-
-::
-
-   $ nitropy nethsm --host $NETHSM_HOST --username admin    set-unattended-boot on
-
-::
+  $ nitropy nethsm --host $NETHSM_HOST set-unattended-boot on
 
    Updated the unattended boot configuration for NetHSM localhost:8443
 
@@ -108,14 +84,11 @@ A new NetHSM needs to be provisioned first with passphrases and the current time
 
 **Creating & Deleting Users**
 
-
 Now create a new user with the Operator role that can be used to sign and decrypt data. Note that the NetHSM assigns a random user ID if we don’t specify it.
 
 ::
 
-   $ nitropy nethsm --host $NETHSM_HOST --username admin    add-user --user-id Operator --real-name "Jane User" --role Operator --passphrase
-
-::
+   $ nitropy nethsm --host $NETHSM_HOST  add-user --real-name "Jane User" --role Operator
 
    User Operator added to NetHSM localhost:8443
 
@@ -132,9 +105,7 @@ Key Management
 
 ::
 
-   $ nitropy nethsm --host $NETHSM_HOST --username admin    generate-key --algorithm RSA --mechanism RSA_Signature_PSS_SHA256 --mechanism RSA_Decryption_PKCS1 --length 2048 --key-id myFirstKey
-
-::
+   $ nitropy nethsm --host $NETHSM_HOST  generate-key --type RSA --mechanism RSA_Signature_PSS_SHA256 --mechanism RSA_Decryption_PKCS1 --length 2048 --key-id myFirstKey
 
    Key myFirstKey generated on NetHSM localhost:8443
 
@@ -144,10 +115,8 @@ Key Management
 
 ::
 
-   $ nitropy nethsm --host $NETHSM_HOST --username admin    add-key --algorithm RSA --mechanism RSA_Signature_PSS_SHA256 --mechanism RSA_Decryption_PKCS1 --key-id mySecondKey --public-exponent AQAB --prime-p "AOnWFZ+JrI/xOXJU04uYCZOiPVUWd6CSbVseEYrYQYxc7dVroePshz29tc+VEOUP5T0O8lXMEkjFAwjW6C9QTAsPyl6jwyOQluMRIkdN4/7BAg3HAMuGd7VmkGyYrnZWW54sLWp1JD6XJG33kF+9OSar9ETPoVyBgK5punfiUFEL" \
+   $ nitropy nethsm --host $NETHSM_HOST  add-key --type RSA --mechanism RSA_Signature_PSS_SHA256 --mechanism RSA_Decryption_PKCS1 --key-id mySecondKey --public-exponent AQAB --prime-p "AOnWFZ+JrI/xOXJU04uYCZOiPVUWd6CSbVseEYrYQYxc7dVroePshz29tc+VEOUP5T0O8lXMEkjFAwjW6C9QTAsPyl6jwyOQluMRIkdN4/7BAg3HAMuGd7VmkGyYrnZWW54sLWp1JD6XJG33kF+9OSar9ETPoVyBgK5punfiUFEL" \
        --prime-q "ANT1kWDdP9hZoFKT49dwdM/S+3ZDnxQa7kZk9p+JKU5RaU9e8pS2GOJljHwkES1FH6CUGeIaUi81tRKe2XZhe/163sEyMcxkaaRbBbTc1v6ZDKILFKKt4eX7LAQfhL/iFlgi6pcyUM8QDrm1QeFgGz11ChM0JuQw1WwkX06lg8iv"
-
-::
 
    Key mySecondKey added to NetHSM localhost:8443
 
@@ -157,7 +126,7 @@ Key Management
 
 ::
 
-   $ nitropy nethsm --host $NETHSM_HOST --username Operator    list-keys
+   $ nitropy nethsm --host $NETHSM_HOST list-keys
 
 ::
 
@@ -174,16 +143,7 @@ Key Management
 
 ::
 
-   $ nitropy nethsm --host $NETHSM_HOST --username Operator    get-key myFirstKey
-
-::
-
-   Key myFirstKey on NetHSM localhost:8443:
-   Algorithm:       RSA
-   Mechanisms:      RSA_Signature_PSS_SHA256
-   Operations:      0
-   Modulus:         xYDMGEK3CO5vK0ge0pJQEJHBPA/5M42F/kyN7BV+03HEH23NLXWyszYn7MWvxG4uebZfz+6n7auOYePb0FADVvxQvdX4VPcNzBOEgMqfpplEzf5RzmMmFDBgAcGMS5XkbyVS3XR+7bqej5L6qZtGmFn4hG22Ziu5ZdQxyyqos8Go1ogFBz+vQ4WzmDOGEU82quQSxiPT3K71KKVSS4zTL6oz9izuHzOqnLhuGnbtAe5AFBXE2fJIuXMzw36d0OyJ+rdmkh65EXXLo7Qt3VyP7JPIW+JIM2iU26v6suwUCbjFfrDURS8xEftKAe1hkBWJpNHLZhUse7dpvmtlmRyhxw==
-   Public exponent: AQAB
+   $ nitropy nethsm --host $NETHSM_HOST get-key myFirstKey
 
 .. include:: _tutorial.rst
    :start-after: .. start:: get-key-file
@@ -191,7 +151,7 @@ Key Management
 
 ::
 
-  $ nitropy nethsm --host $NETHSM_HOST --username Operator    get-key myFirstKey --public-key > public.pem
+  $ nitropy nethsm --host $NETHSM_HOST get-key myFirstKey --public-key > public.pem
 
 ::
 
@@ -199,9 +159,7 @@ We can inspect the key with OpenSSL and use it for encryption or signature verif
 
 ::
 
-	openssl rsa -in public.pem -pubin -text
-
-::
+	$ openssl rsa -in public.pem -pubin -text
 
 	RSA Public-Key: (2048 bit)
 	Modulus:
@@ -244,15 +202,13 @@ It is possible to set and query certificates for the keys stored on a NetHSM ins
 
 ::
 
-    $ nitropy nethsm --host $NETHSM_HOST --username admin     set-certificate myFirstKey --mime-type application/x-pem-file /tmp/cert.pem
-
-::
+    $ nitropy nethsm --host $NETHSM_HOST  set-certificate myFirstKey --mime-type application/x-pem-file /tmp/cert.pem
 
     Updated the certificate for key myFirstKey on NetHSM localhost:8443
 
 ::
 
-    $ nitropy nethsm --host $NETHSM_HOST --username Operator    get-certificate myFirstKey > /tmp/cert.pem
+    $ nitropy nethsm --host $NETHSM_HOST get-certificate myFirstKey > /tmp/cert.pem
 
 
 .. include:: _tutorial.rst
@@ -261,7 +217,7 @@ It is possible to set and query certificates for the keys stored on a NetHSM ins
 
 ::
 
-   $ nitropy nethsm --host $NETHSM_HOST --username Operator    csr --key-id myFirstKey --country DE --state-or-province BE --locality Berlin --organization ACME --organizational-unit IT --common-name example.com --email-address it@example.com
+   $ nitropy nethsm --host $NETHSM_HOST csr --key-id myFirstKey --country DE --state-or-province BE --locality Berlin --organization ACME --organizational-unit IT --common-name example.com --email-address it@example.com
 
 
 .. include:: _tutorial.rst
@@ -276,9 +232,7 @@ We can encrypt data for the key stored on the NetHSM using OpenSSL. (public.pem 
 
 ::
 
-    $ nitropy nethsm -h $NETHSM_HOST -u Operator -p  decrypt -k myFirstKey -d "$(cat data.crypt)" -m PKCS1 | base64 -d
-
-::
+    $ nitropy nethsm -h $NETHSM_HOST decrypt -k myFirstKey -d "$(cat data.crypt)" -m PKCS1 | base64 -d
 
     NetHSM rulez!
 
@@ -292,7 +246,7 @@ Similarly, we can sign data using the key on the NetHSM. For RSA and ECDSA, we h
 
 ::
 
-	openssl dgst -sha256 -binary data | base64 > data.digest
+	$ openssl dgst -sha256 -binary data | base64 > data.digest
 
 ::
 
@@ -300,7 +254,7 @@ Then we can create a signature from this digest using the NetHSM:
 
 ::
 
-    $ nitropy nethsm -h $NETHSM_HOST -u Operator sign -k myFirstKey -m PSS_SHA256 -d "$(cat data.digest)" | base64 -d > data.sig
+    $ nitropy nethsm -h $NETHSM_HOST sign -k myFirstKey -m PSS_SHA256 -d "$(cat data.digest)" | base64 -d > data.sig
 
 ::
 
@@ -308,9 +262,7 @@ And then use OpenSSL to verify the signature:
 
 ::
 
-	openssl dgst -sha256 -verify public.pem -signature data.sig -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
-
-::
+	$ openssl dgst -sha256 -verify public.pem -signature data.sig -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
 
 	Verified OK
 
@@ -323,9 +275,7 @@ It is possible to create a backup of the NetHSM that captures both the configura
 
 .. code:: bash
 
-	$ nitropy nethsm -h $NETHSM_HOST -u admin set-backup-passphrase --passphrase backupencryptionkey
-
-::
+	$ nitropy nethsm -h $NETHSM_HOST -u admin set-backup-passphrase
 
 	Updated the backup passphrase for NetHSM localhost:8443
 
@@ -335,9 +285,7 @@ Now you have to create a user with the R-Backup role:
 
 .. code:: bash
 
-	$ nitropy nethsm -h $NETHSM_HOST -u admin add-user --user-id backup --real-name "Backup User" --role backup --passphrase backupPassphrase
-
-::
+	$ nitropy nethsm -h $NETHSM_HOST -u admin add-user --user-id backup --real-name "Backup User" --role backup
 
 	User backup added to NetHSM localhost:8443
 
@@ -347,9 +295,7 @@ Then can you generate the backup and write it to a file:
 
 .. code:: bash
 
-	$ nitropy nethsm -h $NETHSM_HOST -u backup -p backupPassphrase backup /tmp/nethsm-backup
-
-::
+	$ nitropy nethsm -h $NETHSM_HOST backup /tmp/nethsm-backup
 
 	Backup for localhost:8443 written to /tmp/backup
 
@@ -364,8 +310,6 @@ This backup file can be restored on an unprovisioned NetHSM instance:
 
 	$ nitropy nethsm -h $NETHSM_HOST restore --backup-passphrase backup-passphrase backupencryptionkey /tmp/nethsm-backup
 
-::
-
 	Backup restored on NetHSM localhost:8443
 
 ::
@@ -379,9 +323,7 @@ Updating NetHSM
 
 .. code:: bash
 
-   $ nitropy nethsm --host $NETHSM_HOST --username admin    update /tmp/nethsm-update.img.cpio
-
-::
+   $ nitropy nethsm --host $NETHSM_HOST  update /tmp/nethsm-update.img.cpio
 
    Image /tmp/nethsm-update.img.cpio uploaded to NetHSM localhost:8443
 
@@ -391,9 +333,7 @@ Updating NetHSM
 
 .. code:: bash
 
-   $ nitropy nethsm --host $NETHSM_HOST --username admin    commit-update
-
-::
+   $ nitropy nethsm --host $NETHSM_HOST     commit-update
 
    Update successfully committed on NetHSM localhost:8443
 
@@ -403,8 +343,6 @@ Updating NetHSM
 
 .. code:: bash
 
-   $ nitropy nethsm --host $NETHSM_HOST --username admin    cancel-update
-
-::
+   $ nitropy nethsm --host $NETHSM_HOST  cancel-update
 
    Update successfully cancelled on NetHSM localhost:8443
