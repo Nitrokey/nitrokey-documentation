@@ -1,6 +1,10 @@
 NetHSM
 ============================
 
+Getting Started
+---------------
+
+
 1. Your NetHSM has been delivered in a sealed packaging. `Verify the sealing <sealed-hardware.html>`_ before unpacking to ensure the device has not been tampered with.
 
 2. Connect the NetHSM's BMC ETH port with the network or your local computer. Set the BMC password.
@@ -15,7 +19,7 @@ NetHSM
    :glob:
 
    #faq.rst
-   #gettingstarted/index.rst 
+   #gettingstarted/index.rst
    sealed-hardware.rst
    cli.rst
    pkcs11.rst
@@ -23,5 +27,4 @@ NetHSM
    tags.rst
    integration.rst
    dev-and-test.rst
-   REST API Index <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary> 
-
+   REST API Index <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>
