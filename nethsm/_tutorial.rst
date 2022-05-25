@@ -1,4 +1,4 @@
-setup.. start:: setup
+
 Before we start, we store the host name of the NetHSM instance in the
 NETHSM_HOST environment variable.  You can use the public NsetupetHSM demo
 instance nethsmdemo.nitrokey.com or run a local demo instance using the
@@ -11,7 +11,8 @@ NetHSM docker image, see `Docker Hub
 
 ::
 
-    $ export NETHSM_HOST="localhost:8443"
+    $ export NETHSM_HOST="localhost:8443" # OR
+    $ export NETHSM_HOST="nethsmdemo.nitrokey.com"
 
 .. end
 
