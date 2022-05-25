@@ -160,7 +160,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    $ curl -i -w '\n' -u admin:adminPassphrase -X POST \
    https://$NETHSM_HOST/api/v1/keys/generate -H "content-type: application/json" \
    -d "{ \"mechanisms\": [ \"RSA_Signature_PSS_SHA256\", \"RSA_Decryption_PKCS1\" ], \
-   \"algorithm\": \"RSA\",  \"length\": 2048,  \"id\": \"myFirstKey\"}"
+   \"type\": \"RSA\",  \"length\": 2048,  \"id\": \"myFirstKey\"}"
 
    HTTP/1.1 201 Created
    cache-control: no-cache
@@ -179,7 +179,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
    $ curl -i -w '\n' -u admin:adminPassphrase -X PUT \
    https://$NETHSM_HOST/api/v1/keys/mySecondKey -H "content-type: application/json" \
    -d "{ \"mechanisms\": [ \"RSA_Signature_PSS_SHA256\", \"RSA_Decryption_PKCS1\" ], \
-   \"algorithm\": \"RSA\",  \"key\": {\"primeP\": \"AOnWFZ+JrI/xOXJU04uYCZOiPVUWd6CSbVseEYrYQYxc7dVroePshz29tc+VEOUP5T0O8lXMEkjFAwjW6C9QTAsPyl6jwyOQluMRIkdN4/7BAg3HAMuGd7VmkGyYrnZWW54sLWp1JD6XJG33kF+9OSar9ETPoVyBgK5punfiUFEL\", \"primeQ\": \"ANT1kWDdP9hZoFKT49dwdM/S+3ZDnxQa7kZk9p+JKU5RaU9e8pS2GOJljHwkES1FH6CUGeIaUi81tRKe2XZhe/163sEyMcxkaaRbBbTc1v6ZDKILFKKt4eX7LAQfhL/iFlgi6pcyUM8QDrm1QeFgGz11ChM0JuQw1WwkX06lg8iv\", \"publicExponent\": \"AQAB\"}}"
+   \"type\": \"RSA\",  \"key\": {\"primeP\": \"AOnWFZ+JrI/xOXJU04uYCZOiPVUWd6CSbVseEYrYQYxc7dVroePshz29tc+VEOUP5T0O8lXMEkjFAwjW6C9QTAsPyl6jwyOQluMRIkdN4/7BAg3HAMuGd7VmkGyYrnZWW54sLWp1JD6XJG33kF+9OSar9ETPoVyBgK5punfiUFEL\", \"primeQ\": \"ANT1kWDdP9hZoFKT49dwdM/S+3ZDnxQa7kZk9p+JKU5RaU9e8pS2GOJljHwkES1FH6CUGeIaUi81tRKe2XZhe/163sEyMcxkaaRbBbTc1v6ZDKILFKKt4eX7LAQfhL/iFlgi6pcyUM8QDrm1QeFgGz11ChM0JuQw1WwkX06lg8iv\", \"publicExponent\": \"AQAB\"}}"
 
    HTTP/1.1 204 No Content
    content-type: application/json
@@ -211,7 +211,7 @@ This tutorial demonstrates how to access the NetHMS via REST API. The interface 
 
    $ curl -s -w '\n' -u admin:adminPassphrase https://$NETHSM_HOST/api/v1/keys/myFirstKey
 
-   {"mechanisms":["RSA_Decryption_PKCS1","RSA_Signature_PSS_SHA256"],"algorithm":"RSA","modulus":"td583uBYRfO7qtvPoQF7liUh8gq3zckCk9LpCfblx2S0HdOvButfD4TyH4EMiZj3NhEoq18BZhqhxTL22UyNJwYJd2tCF4EbgTaj/Z3LeCPoGN5LjadFCsYriPeHsdnuLmTK6KsmTAP/CWJ+u3LesU5bCGWbDnPjv2WaLTeiMuNw1347gj1drft8jFA9SmOFjZxM9pq2Hk1nQSYpeAPCnigC7hLwAWgzKqVQv/J7VVWat3ke/jOrxFiRDFIeC3qxtBs6T7GYwqmsxkxgqKDljTAH4qMrC9vgVbbFPffe8UgmtDfvQ0ghP57b3HYZDON90MJ2qrU944E74g+ua6unTw==","publicExponent":"AQAB","operations":0}
+   {"mechanisms":["RSA_Decryption_PKCS1","RSA_Signature_PSS_SHA256"],"type":"RSA","modulus":"td583uBYRfO7qtvPoQF7liUh8gq3zckCk9LpCfblx2S0HdOvButfD4TyH4EMiZj3NhEoq18BZhqhxTL22UyNJwYJd2tCF4EbgTaj/Z3LeCPoGN5LjadFCsYriPeHsdnuLmTK6KsmTAP/CWJ+u3LesU5bCGWbDnPjv2WaLTeiMuNw1347gj1drft8jFA9SmOFjZxM9pq2Hk1nQSYpeAPCnigC7hLwAWgzKqVQv/J7VVWat3ke/jOrxFiRDFIeC3qxtBs6T7GYwqmsxkxgqKDljTAH4qMrC9vgVbbFPffe8UgmtDfvQ0ghP57b3HYZDON90MJ2qrU944E74g+ua6unTw==","publicExponent":"AQAB","operations":0}
 
 .. include:: _tutorial.rst
    :start-after: .. start:: get-key-file
