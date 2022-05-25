@@ -52,3 +52,4 @@ Getting Started
    :glob:	
    
    dhcp.rst
+   sealed-hardware.rst
