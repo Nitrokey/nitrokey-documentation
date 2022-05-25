@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 15:22+0200\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
 "PO-Revision-Date: 2022-05-24 14:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -2901,24 +2900,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
 "このチュートリアルでは、REST APIを使用してNetHMSにアクセスする方法を説明します。このインターフェースは` こちら "
-"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_ "
-"に記述されています。また、その仕様は`RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api."
-"raml>`_ および `OpenAPI (Swagger) <https://nethsmdemo.nitrokey.com/api_docs/"
-"gen_nethsm_api_oas20.json>`_ として公開されています。"
-
-#: ../nethsm/_tutorial.rst:2
-msgid ""
-"Before we start, we store the host name of the NetHSM instance in the "
-"NETHSM_HOST environment variable.  You can use the public NsetupetHSM "
-"demo instance nethsmdemo.nitrokey.com or run a local demo instance using "
-"the NetHSM docker image, see `Docker Hub "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ section of the NetHSM "
-"documentation."
-msgstr ""
-"開始する前に、NetHSMインスタンスのホスト名をNETHSM_HOST環境変数に格納します。  公開されているNsetupetHSMのデモインスタンス "
-"nethsmdemo.nitrokey.com "
-"を使用するか、NetHSMのドッカーイメージを使用してローカルのデモインスタンスを実行できます。NetHSMドキュメントの`Docker Hub "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ セクションを参照して下さい。"
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
+" に記述されています。また、その仕様は`RAML <https://nethsmdemo.nitrokey.com/api_docs"
+"/nethsm-api.raml>`_ および `OpenAPI (Swagger) "
+"<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_ "
+"として公開されています。"
 
 #: ../nethsm/api.rst:18
 msgid ""
@@ -2929,11 +2915,20 @@ msgstr ""
 "Dockerイメージを使用するなどして、自己署名証明書を持つNetHSMデモインスタンスを使用する場合は、curlに--"
 "insecure/-kオプションを使用して、証明書のチェックを省略する必要があります。"
 
+#: ../nethsm/api.rst:24 ../nethsm/cli.rst:20
+msgid ""
+"First set the value of $NETHSM_HOST to the IP address or URL of your "
+"NetHSM. Our demo server can be reached at "
+"https://nethsmdemo.nitrokey.com/"
+msgstr ""
+"まず、$NETHSM_HOSTの値に、お使いのNetHSMのIPアドレスまたはURLを設定します。私たちのデモサーバーは、https://nethsmdemo.nitrokey.com/"
+" にアクセスできます。"
+
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr "まず、ここにあるものを見てみましょう。"
 
-#: ../nethsm/api.rst:41
+#: ../nethsm/api.rst:46
 msgid ""
 "The -i/--include option causes curl to print the HTTP status code and the"
 " response headers.  The -w '\\n'/--write-out '\\n' option adds a newline "
@@ -3007,53 +3002,6 @@ msgstr "または、*Attended Boot*モードに切り替えてください。"
 #: ../nethsm/_tutorial.rst:3
 msgid "User Management"
 msgstr "ユーザー管理"
-
-#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr "役割"
-
-#: ../nethsm/_tutorial.rst:5
-msgid ""
-"Separation of duties can be implemented by using different Roles. Each "
-"user account configured on the NetHSM has one of the following Roles "
-"assigned to it. Following is a high-level description of the operations "
-"allowed by each Role. For endpoint-specific details please refer to the "
-"REST API documentation."
-msgstr ""
-"職務の分担は、異なるロールを使用することで実現できます。NetHSMに設定された各ユーザーアカウントには、以下のロールのいずれかが割り当てられています。以下は、各ロールで許可される操作のハイレベルな説明です。エンドポイント固有の詳細については、REST"
-" APIのドキュメントを参照してください。"
-
-#: ../nethsm/_tutorial.rst:11
-msgid ""
-"*R-Administrator*: A user account with this Role has access to all "
-"operations provided by the REST API, except for key usage operations, "
-"i.e. message signing and decryption."
-msgstr ""
-"*R-Administrator*。このRoleを持つユーザーアカウントは、鍵の使用操作（メッセージの署名と復号化）を除き、REST "
-"APIが提供するすべての操作にアクセスできます。"
-
-#: ../nethsm/_tutorial.rst:14
-msgid ""
-"*R-Operator*: A user account with this Role has access to all key usage "
-"operations, a read-only subset of key management operations and user "
-"management operations allowing changes to their own account only."
-msgstr "*R-Operator*。このロールを持つユーザーアカウントは、すべての鍵使用操作、鍵管理操作の読み取り専用サブセット、およびユーザー管理操作へのアクセス権を持ち、自分のアカウントのみの変更が可能です。"
-
-#: ../nethsm/_tutorial.rst:18
-msgid ""
-"*R-Metrics*: A user account with this Role has access to read-only "
-"metrics operations only."
-msgstr "*R-Metrics*です。このロールを持つユーザーアカウントは、読み取り専用のメトリクス操作にのみアクセスできます。"
-
-#: ../nethsm/_tutorial.rst:20
-msgid ""
-"*R-Backup*: A user account with this Role has access to the operations "
-"required to initiate a system backup only."
-msgstr "*R-Backup*。この役割を持つユーザーアカウントは、システムのバックアップを開始するために必要な操作にのみアクセスできます。"
-
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr "注：将来のリリースでは、追加のロールが導入される可能性があります。"
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3275,15 +3223,6 @@ msgstr ""
 "Dockerイメージなどを使用して自己署名証明書付きのNetHSMデモインスタンスを使用する場合は、``--no-verify-"
 "tls``オプションで``nitropy``を使用して、証明書のチェックを省略する必要があります。"
 
-#: ../nethsm/cli.rst:20
-msgid ""
-"First set the value of $NETHSM_HOST to the IP address or URL of your "
-"NetHSM. Our demo server can be reached at "
-"https://nethsmdemo.nitrokey.com/"
-msgstr ""
-"まず、$NETHSM_HOSTの値に、お使いのNetHSMのIPアドレスまたはURLを設定します。私たちのデモサーバーは、https://nethsmdemo.nitrokey.com/"
-" にアクセスできます。"
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr "デバイス情報＆ステータス"
@@ -3306,6 +3245,53 @@ msgstr ""
 #: ../nethsm/cli.rst:69
 msgid "Turn `Unattended Boot` mode on:"
 msgstr "無人起動モードをオンにします。"
+
+#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr "役割"
+
+#: ../nethsm/_tutorial.rst:5
+msgid ""
+"Separation of duties can be implemented by using different Roles. Each "
+"user account configured on the NetHSM has one of the following Roles "
+"assigned to it. Following is a high-level description of the operations "
+"allowed by each Role. For endpoint-specific details please refer to the "
+"REST API documentation."
+msgstr ""
+"職務の分担は、異なるロールを使用することで実現できます。NetHSMに設定された各ユーザーアカウントには、以下のロールのいずれかが割り当てられています。以下は、各ロールで許可される操作のハイレベルな説明です。エンドポイント固有の詳細については、REST"
+" APIのドキュメントを参照してください。"
+
+#: ../nethsm/_tutorial.rst:11
+msgid ""
+"*R-Administrator*: A user account with this Role has access to all "
+"operations provided by the REST API, except for key usage operations, "
+"i.e. message signing and decryption."
+msgstr ""
+"*R-Administrator*。このRoleを持つユーザーアカウントは、鍵の使用操作（メッセージの署名と復号化）を除き、REST "
+"APIが提供するすべての操作にアクセスできます。"
+
+#: ../nethsm/_tutorial.rst:14
+msgid ""
+"*R-Operator*: A user account with this Role has access to all key usage "
+"operations, a read-only subset of key management operations and user "
+"management operations allowing changes to their own account only."
+msgstr "*R-Operator*。このロールを持つユーザーアカウントは、すべての鍵使用操作、鍵管理操作の読み取り専用サブセット、およびユーザー管理操作へのアクセス権を持ち、自分のアカウントのみの変更が可能です。"
+
+#: ../nethsm/_tutorial.rst:18
+msgid ""
+"*R-Metrics*: A user account with this Role has access to read-only "
+"metrics operations only."
+msgstr "*R-Metrics*です。このロールを持つユーザーアカウントは、読み取り専用のメトリクス操作にのみアクセスできます。"
+
+#: ../nethsm/_tutorial.rst:20
+msgid ""
+"*R-Backup*: A user account with this Role has access to the operations "
+"required to initiate a system backup only."
+msgstr "*R-Backup*。この役割を持つユーザーアカウントは、システムのバックアップを開始するために必要な操作にのみアクセスできます。"
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
+msgstr "注：将来のリリースでは、追加のロールが導入される可能性があります。"
 
 #: ../nethsm/cli.rst:85
 msgid "**Creating & Deleting Users**"
@@ -3569,7 +3555,7 @@ msgstr ""
 "\"unlockunlock\"。"
 
 #: ../nethsm/sealed-hardware.rst:2 ../nitropad/sealed-hardware.rst:2
-#: ../nitropc/sealed-hardware.rst:2
+#: ../nitropc/sealed-hardware.rst:2 ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr "密封されたハードウェアの確認"
 
@@ -3588,7 +3574,7 @@ msgstr "NetHSMは、密封された状態でお届けしています。NetSHMが
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "NetHSMのラッピングの様子を写真でご紹介します。"
 
-#: ../nethsm/sealed-hardware.rst:14
+#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr "ハードウェアの封印"
 
@@ -8952,6 +8938,14 @@ msgid ""
 "After the installation is complete, install the necessary updates. To do "
 "this, go to System → Firmware → Updates."
 msgstr "インストールが完了したら、必要なアップデートをインストールします。これを行うには、システム → ファームウェア → アップデートと進みます。"
+
+#: ../nitrowall/sealed-hardware.rst:4
+msgid ""
+"Your NitroWall has been delivered in a sealed packaging and sealed "
+"screws. We will send you a picture of your NitroWall before shipping. "
+"Please compare the imaged to your packaged NitroWall. If you notice any "
+"changes, please contact us to arrange further action."
+msgstr ""
 
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
@@ -17383,3 +17377,21 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 
 #~ msgid "Decrypting"
 #~ msgstr "復号化"
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the NETHSM_HOST environment variable.  You "
+#~ "can use the public NsetupetHSM demo "
+#~ "instance nethsmdemo.nitrokey.com or run a "
+#~ "local demo instance using the NetHSM "
+#~ "docker image, see `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ section of"
+#~ " the NetHSM documentation."
+#~ msgstr ""
+#~ "開始する前に、NetHSMインスタンスのホスト名をNETHSM_HOST環境変数に格納します。  "
+#~ "公開されているNsetupetHSMのデモインスタンス nethsmdemo.nitrokey.com "
+#~ "を使用するか、NetHSMのドッカーイメージを使用してローカルのデモインスタンスを実行できます。NetHSMドキュメントの`Docker"
+#~ " Hub <https://hub.docker.com/r/nitrokey/nethsm>`_ "
+#~ "セクションを参照して下さい。"
+

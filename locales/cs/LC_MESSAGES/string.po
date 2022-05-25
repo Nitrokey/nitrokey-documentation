@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 15:22+0200\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
 "PO-Revision-Date: 2022-05-24 14:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/cs/>\n"
 "Language: cs\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/cs/>\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -3296,26 +3295,11 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
 "Tento návod ukazuje, jak přistupovat k systému NetHMS prostřednictvím "
-"rozhraní REST API. Rozhraní je `dokumentováno zde <https://nethsmdemo."
-"nitrokey.com/api_docs/index.html#docs/summary/summary>`_ a je'je k dispozici "
-"jako `RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ a "
-"jako `OpenAPI (Swagger) <https://nethsmdemo.nitrokey.com/api_docs/"
-"gen_nethsm_api_oas20.json>`_."
-
-#: ../nethsm/_tutorial.rst:2
-msgid ""
-"Before we start, we store the host name of the NetHSM instance in the "
-"NETHSM_HOST environment variable.  You can use the public NsetupetHSM "
-"demo instance nethsmdemo.nitrokey.com or run a local demo instance using "
-"the NetHSM docker image, see `Docker Hub "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ section of the NetHSM "
-"documentation."
-msgstr ""
-"Před zahájením uložíme název hostitele instance NetHSM do proměnné prostředí "
-"NETHSM_HOST.  Můžete použít veřejnou demo instanci NsetupetHSM "
-"nethsmdemo.nitrokey.com nebo spustit místní demo instanci pomocí obrazu "
-"NetHSM docker, viz `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_ "
-"část dokumentace NetHSM."
+"rozhraní REST API. Rozhraní je `dokumentováno zde "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
+" a je'je k dispozici jako `RAML <https://nethsmdemo.nitrokey.com/api_docs"
+"/nethsm-api.raml>`_ a jako `OpenAPI (Swagger) "
+"<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 
 #: ../nethsm/api.rst:18
 msgid ""
@@ -3328,11 +3312,21 @@ msgstr ""
 "možnost ``--insecure``/``-k`` pro ``curl``, abyste kontrolu certifikátu "
 "přeskočili."
 
+#: ../nethsm/api.rst:24 ../nethsm/cli.rst:20
+msgid ""
+"First set the value of $NETHSM_HOST to the IP address or URL of your "
+"NetHSM. Our demo server can be reached at "
+"https://nethsmdemo.nitrokey.com/"
+msgstr ""
+"Nejprve nastavte hodnotu $NETHSM_HOST na IP adresu nebo URL vašeho "
+"NetHSM. Náš ukázkový server je dostupný na adrese "
+"https://nethsmdemo.nitrokey.com/"
+
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr "Nejprve se podívejme, co zde máme:"
 
-#: ../nethsm/api.rst:41
+#: ../nethsm/api.rst:46
 msgid ""
 "The -i/--include option causes curl to print the HTTP status code and the"
 " response headers.  The -w '\\n'/--write-out '\\n' option adds a newline "
@@ -3412,65 +3406,6 @@ msgstr "Nebo přepněte zpět do režimu *Attended Boot*:"
 #: ../nethsm/_tutorial.rst:3
 msgid "User Management"
 msgstr "Správa uživatelů"
-
-#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr "Role"
-
-#: ../nethsm/_tutorial.rst:5
-msgid ""
-"Separation of duties can be implemented by using different Roles. Each "
-"user account configured on the NetHSM has one of the following Roles "
-"assigned to it. Following is a high-level description of the operations "
-"allowed by each Role. For endpoint-specific details please refer to the "
-"REST API documentation."
-msgstr ""
-"Oddělení povinností lze realizovat pomocí dostupných rolí. Každý "
-"uživatelský účet nakonfigurovaný v NetHSM má přiřazenu jednu z "
-"následujících Rolí. Níže je uveden stručný popis operací povolených "
-"jednotlivými Rolemi, podrobnosti týkající se konkrétního koncového bodu "
-"naleznete v dokumentaci rozhraní REST API."
-
-#: ../nethsm/_tutorial.rst:11
-msgid ""
-"*R-Administrator*: A user account with this Role has access to all "
-"operations provided by the REST API, except for key usage operations, "
-"i.e. message signing and decryption."
-msgstr ""
-"*R-administrátor*: Uživatelský účet s touto rolí má přístup ke všem "
-"operacím poskytovaným rozhraním REST API, s výjimkou operací používání "
-"klíčů, tj. podepisování a dešifrování zpráv."
-
-#: ../nethsm/_tutorial.rst:14
-msgid ""
-"*R-Operator*: A user account with this Role has access to all key usage "
-"operations, a read-only subset of key management operations and user "
-"management operations allowing changes to their own account only."
-msgstr ""
-"*R-Operátor*: Uživatelský účet s touto rolí má přístup ke všem operacím "
-"používání klíčů, k podmnožině operací správy klíčů pouze pro čtení a k "
-"operacím správy uživatelů, které umožňují změny pouze na jeho vlastním "
-"účtu."
-
-#: ../nethsm/_tutorial.rst:18
-msgid ""
-"*R-Metrics*: A user account with this Role has access to read-only "
-"metrics operations only."
-msgstr ""
-"*R-Metrics*: Uživatelský účet s touto rolí má přístup pouze k operacím "
-"metrik pro čtení."
-
-#: ../nethsm/_tutorial.rst:20
-msgid ""
-"*R-Backup*: A user account with this Role has access to the operations "
-"required to initiate a system backup only."
-msgstr ""
-"*R-Backup*: Uživatelský účet s touto rolí má přístup pouze k operacím "
-"potřebným k zahájení zálohování systému."
-
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr "Poznámka: V budoucích verzích mohou být zavedeny další role."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3725,16 +3660,6 @@ msgstr ""
 "použít možnost ``--no-verify-tls`` pro ``nitropy``, abyste kontrolu "
 "certifikátu přeskočili."
 
-#: ../nethsm/cli.rst:20
-msgid ""
-"First set the value of $NETHSM_HOST to the IP address or URL of your "
-"NetHSM. Our demo server can be reached at "
-"https://nethsmdemo.nitrokey.com/"
-msgstr ""
-"Nejprve nastavte hodnotu $NETHSM_HOST na IP adresu nebo URL vašeho "
-"NetHSM. Náš ukázkový server je dostupný na adrese "
-"https://nethsmdemo.nitrokey.com/"
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr "Informace o zařízení & Stav"
@@ -3758,6 +3683,65 @@ msgstr ""
 #: ../nethsm/cli.rst:69
 msgid "Turn `Unattended Boot` mode on:"
 msgstr "Zapněte režim `Unattended Boot`:"
+
+#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr "Role"
+
+#: ../nethsm/_tutorial.rst:5
+msgid ""
+"Separation of duties can be implemented by using different Roles. Each "
+"user account configured on the NetHSM has one of the following Roles "
+"assigned to it. Following is a high-level description of the operations "
+"allowed by each Role. For endpoint-specific details please refer to the "
+"REST API documentation."
+msgstr ""
+"Oddělení povinností lze realizovat pomocí dostupných rolí. Každý "
+"uživatelský účet nakonfigurovaný v NetHSM má přiřazenu jednu z "
+"následujících Rolí. Níže je uveden stručný popis operací povolených "
+"jednotlivými Rolemi, podrobnosti týkající se konkrétního koncového bodu "
+"naleznete v dokumentaci rozhraní REST API."
+
+#: ../nethsm/_tutorial.rst:11
+msgid ""
+"*R-Administrator*: A user account with this Role has access to all "
+"operations provided by the REST API, except for key usage operations, "
+"i.e. message signing and decryption."
+msgstr ""
+"*R-administrátor*: Uživatelský účet s touto rolí má přístup ke všem "
+"operacím poskytovaným rozhraním REST API, s výjimkou operací používání "
+"klíčů, tj. podepisování a dešifrování zpráv."
+
+#: ../nethsm/_tutorial.rst:14
+msgid ""
+"*R-Operator*: A user account with this Role has access to all key usage "
+"operations, a read-only subset of key management operations and user "
+"management operations allowing changes to their own account only."
+msgstr ""
+"*R-Operátor*: Uživatelský účet s touto rolí má přístup ke všem operacím "
+"používání klíčů, k podmnožině operací správy klíčů pouze pro čtení a k "
+"operacím správy uživatelů, které umožňují změny pouze na jeho vlastním "
+"účtu."
+
+#: ../nethsm/_tutorial.rst:18
+msgid ""
+"*R-Metrics*: A user account with this Role has access to read-only "
+"metrics operations only."
+msgstr ""
+"*R-Metrics*: Uživatelský účet s touto rolí má přístup pouze k operacím "
+"metrik pro čtení."
+
+#: ../nethsm/_tutorial.rst:20
+msgid ""
+"*R-Backup*: A user account with this Role has access to the operations "
+"required to initiate a system backup only."
+msgstr ""
+"*R-Backup*: Uživatelský účet s touto rolí má přístup pouze k operacím "
+"potřebným k zahájení zálohování systému."
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
+msgstr "Poznámka: V budoucích verzích mohou být zavedeny další role."
 
 #: ../nethsm/cli.rst:85
 msgid "**Creating & Deleting Users**"
@@ -3986,8 +3970,8 @@ msgid ""
 "Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`_ for NetHSM."
 msgstr ""
-"Stáhněte si `ovladač PKCS#11 <https://github.com/Nitrokey/nethsm-pkcs11>`_ "
-"pro NetHSM."
+"Stáhněte si `ovladač PKCS#11 <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`_ pro NetHSM."
 
 #: ../nethsm/pkcs11.rst:11
 msgid ""
@@ -4055,7 +4039,7 @@ msgstr ""
 "\"adminadmin\", heslo pro odemknutí \"unlockunlock\"."
 
 #: ../nethsm/sealed-hardware.rst:2 ../nitropad/sealed-hardware.rst:2
-#: ../nitropc/sealed-hardware.rst:2
+#: ../nitropc/sealed-hardware.rst:2 ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr "Ověření zapečetěného hardwaru"
 
@@ -4081,7 +4065,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Zde je několik obrázků, jak balíme NetHSM:"
 
-#: ../nethsm/sealed-hardware.rst:14
+#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr "Těsnění hardwaru"
 
@@ -10422,6 +10406,14 @@ msgid ""
 msgstr ""
 "Po dokončení instalace nainstalujte potřebné aktualizace. Za tímto účelem"
 " přejděte do Systém → Firmware → Aktualizace."
+
+#: ../nitrowall/sealed-hardware.rst:4
+msgid ""
+"Your NitroWall has been delivered in a sealed packaging and sealed "
+"screws. We will send you a picture of your NitroWall before shipping. "
+"Please compare the imaged to your packaged NitroWall. If you notice any "
+"changes, please contact us to arrange further action."
+msgstr ""
 
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
@@ -20243,3 +20235,24 @@ msgstr ""
 
 #~ msgid "Decrypting"
 #~ msgstr "Dešifrování"
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the NETHSM_HOST environment variable.  You "
+#~ "can use the public NsetupetHSM demo "
+#~ "instance nethsmdemo.nitrokey.com or run a "
+#~ "local demo instance using the NetHSM "
+#~ "docker image, see `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ section of"
+#~ " the NetHSM documentation."
+#~ msgstr ""
+#~ "Před zahájením uložíme název hostitele "
+#~ "instance NetHSM do proměnné prostředí "
+#~ "NETHSM_HOST.  Můžete použít veřejnou demo "
+#~ "instanci NsetupetHSM nethsmdemo.nitrokey.com nebo"
+#~ " spustit místní demo instanci pomocí "
+#~ "obrazu NetHSM docker, viz `Docker Hub"
+#~ " <https://hub.docker.com/r/nitrokey/nethsm>`_ část "
+#~ "dokumentace NetHSM."
+

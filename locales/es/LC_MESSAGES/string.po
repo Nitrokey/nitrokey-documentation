@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 15:22+0200\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
 "PO-Revision-Date: 2022-05-24 14:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Spanish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/es/>\n"
 "Language: es\n"
+"Language-Team: Spanish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/es/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -3380,28 +3379,13 @@ msgid ""
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
-"Este tutorial demuestra cómo acceder al NetHMS a través de la API REST. La "
-"interfaz está `documentada aquí <https://nethsmdemo.nitrokey.com/api_docs/"
-"index.html#docs/summary/summary>`_ y su especificación está disponible como "
-"`RAML;s especificación está disponible como `RAML <https://nethsmdemo."
-"nitrokey.com/api_docs/nethsm-api.raml>`_ y como `OpenAPI (Swagger) "
+"Este tutorial demuestra cómo acceder al NetHMS a través de la API REST. "
+"La interfaz está `documentada aquí "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
+" y su especificación está disponible como `RAML;s especificación está "
+"disponible como `RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-"
+"api.raml>`_ y como `OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
-
-#: ../nethsm/_tutorial.rst:2
-msgid ""
-"Before we start, we store the host name of the NetHSM instance in the "
-"NETHSM_HOST environment variable.  You can use the public NsetupetHSM "
-"demo instance nethsmdemo.nitrokey.com or run a local demo instance using "
-"the NetHSM docker image, see `Docker Hub "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ section of the NetHSM "
-"documentation."
-msgstr ""
-"Antes de empezar, almacenamos el nombre del host de la instancia de NetHSM "
-"en la variable de entorno NETHSM_HOST.  Puede utilizar la instancia pública "
-"de demostración de NsetupetHSM nethsmdemo.nitrokey.com o ejecutar una "
-"instancia de demostración local utilizando la imagen docker de NetHSM, "
-"consulte la sección `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_ "
-"de la documentación de NetHSM."
 
 #: ../nethsm/api.rst:18
 msgid ""
@@ -3414,11 +3398,21 @@ msgstr ""
 "utilizar la opción ``--insecure``/``-k`` para omitir la comprobación del "
 "certificado."
 
+#: ../nethsm/api.rst:24 ../nethsm/cli.rst:20
+msgid ""
+"First set the value of $NETHSM_HOST to the IP address or URL of your "
+"NetHSM. Our demo server can be reached at "
+"https://nethsmdemo.nitrokey.com/"
+msgstr ""
+"Primero establezca el valor de $NETHSM_HOST a la dirección IP o URL de su"
+" NetHSM. Nuestro servidor de demostración puede ser alcanzado en "
+"https://nethsmdemo.nitrokey.com/"
+
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr "Primero, veamos lo que tenemos aquí:"
 
-#: ../nethsm/api.rst:41
+#: ../nethsm/api.rst:46
 msgid ""
 "The -i/--include option causes curl to print the HTTP status code and the"
 " response headers.  The -w '\\n'/--write-out '\\n' option adds a newline "
@@ -3501,70 +3495,6 @@ msgstr "O cambiar de nuevo al modo *Attended Boot*:"
 #: ../nethsm/_tutorial.rst:3
 msgid "User Management"
 msgstr "Gestión de usuarios"
-
-#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr "Roles"
-
-#: ../nethsm/_tutorial.rst:5
-msgid ""
-"Separation of duties can be implemented by using different Roles. Each "
-"user account configured on the NetHSM has one of the following Roles "
-"assigned to it. Following is a high-level description of the operations "
-"allowed by each Role. For endpoint-specific details please refer to the "
-"REST API documentation."
-msgstr ""
-"La separación de funciones se puede implementar utilizando los Roles "
-"disponibles. Cada cuenta de usuario configurada en el NetHSM tiene "
-"asignada una de las siguientes funciones. A continuación se presenta una "
-"descripción de alto nivel de las operaciones permitidas por los Roles "
-"individuales, para los detalles específicos del punto final por favor "
-"consulte la documentación de la API REST."
-
-#: ../nethsm/_tutorial.rst:11
-msgid ""
-"*R-Administrator*: A user account with this Role has access to all "
-"operations provided by the REST API, except for key usage operations, "
-"i.e. message signing and decryption."
-msgstr ""
-"*R-Administrador*: Una cuenta de usuario con este rol tiene acceso a "
-"todas las operaciones proporcionadas por la API REST, con la excepción de"
-" las operaciones de uso de claves, es decir, la firma y el descifrado de "
-"mensajes."
-
-#: ../nethsm/_tutorial.rst:14
-msgid ""
-"*R-Operator*: A user account with this Role has access to all key usage "
-"operations, a read-only subset of key management operations and user "
-"management operations allowing changes to their own account only."
-msgstr ""
-"*R-Operador*: Una cuenta de usuario con este rol tiene acceso a todas las"
-" operaciones de uso de claves, a un subconjunto de operaciones de gestión"
-" de claves de sólo lectura y a operaciones de gestión de usuarios que "
-"sólo permiten cambios en su propia cuenta."
-
-#: ../nethsm/_tutorial.rst:18
-msgid ""
-"*R-Metrics*: A user account with this Role has access to read-only "
-"metrics operations only."
-msgstr ""
-"*R-Metrics*: Una cuenta de usuario con este rol sólo tiene acceso a "
-"operaciones de métrica de sólo lectura."
-
-#: ../nethsm/_tutorial.rst:20
-msgid ""
-"*R-Backup*: A user account with this Role has access to the operations "
-"required to initiate a system backup only."
-msgstr ""
-"*R-Backup*: Una cuenta de usuario con este rol tiene acceso a las "
-"operaciones necesarias para iniciar una copia de seguridad del sistema "
-"solamente."
-
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr ""
-"Nota: En futuras versiones, es posible que se introduzcan funciones "
-"adicionales."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3831,16 +3761,6 @@ msgstr ""
 "utilizar la opción ``--no-verify-tls`` para ``nitropy`` para omitir la "
 "comprobación del certificado."
 
-#: ../nethsm/cli.rst:20
-msgid ""
-"First set the value of $NETHSM_HOST to the IP address or URL of your "
-"NetHSM. Our demo server can be reached at "
-"https://nethsmdemo.nitrokey.com/"
-msgstr ""
-"Primero establezca el valor de $NETHSM_HOST a la dirección IP o URL de su"
-" NetHSM. Nuestro servidor de demostración puede ser alcanzado en "
-"https://nethsmdemo.nitrokey.com/"
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr "Información del dispositivo & Estado"
@@ -3865,6 +3785,70 @@ msgstr ""
 #: ../nethsm/cli.rst:69
 msgid "Turn `Unattended Boot` mode on:"
 msgstr "Activa el modo de arranque desatendido:"
+
+#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr "Roles"
+
+#: ../nethsm/_tutorial.rst:5
+msgid ""
+"Separation of duties can be implemented by using different Roles. Each "
+"user account configured on the NetHSM has one of the following Roles "
+"assigned to it. Following is a high-level description of the operations "
+"allowed by each Role. For endpoint-specific details please refer to the "
+"REST API documentation."
+msgstr ""
+"La separación de funciones se puede implementar utilizando los Roles "
+"disponibles. Cada cuenta de usuario configurada en el NetHSM tiene "
+"asignada una de las siguientes funciones. A continuación se presenta una "
+"descripción de alto nivel de las operaciones permitidas por los Roles "
+"individuales, para los detalles específicos del punto final por favor "
+"consulte la documentación de la API REST."
+
+#: ../nethsm/_tutorial.rst:11
+msgid ""
+"*R-Administrator*: A user account with this Role has access to all "
+"operations provided by the REST API, except for key usage operations, "
+"i.e. message signing and decryption."
+msgstr ""
+"*R-Administrador*: Una cuenta de usuario con este rol tiene acceso a "
+"todas las operaciones proporcionadas por la API REST, con la excepción de"
+" las operaciones de uso de claves, es decir, la firma y el descifrado de "
+"mensajes."
+
+#: ../nethsm/_tutorial.rst:14
+msgid ""
+"*R-Operator*: A user account with this Role has access to all key usage "
+"operations, a read-only subset of key management operations and user "
+"management operations allowing changes to their own account only."
+msgstr ""
+"*R-Operador*: Una cuenta de usuario con este rol tiene acceso a todas las"
+" operaciones de uso de claves, a un subconjunto de operaciones de gestión"
+" de claves de sólo lectura y a operaciones de gestión de usuarios que "
+"sólo permiten cambios en su propia cuenta."
+
+#: ../nethsm/_tutorial.rst:18
+msgid ""
+"*R-Metrics*: A user account with this Role has access to read-only "
+"metrics operations only."
+msgstr ""
+"*R-Metrics*: Una cuenta de usuario con este rol sólo tiene acceso a "
+"operaciones de métrica de sólo lectura."
+
+#: ../nethsm/_tutorial.rst:20
+msgid ""
+"*R-Backup*: A user account with this Role has access to the operations "
+"required to initiate a system backup only."
+msgstr ""
+"*R-Backup*: Una cuenta de usuario con este rol tiene acceso a las "
+"operaciones necesarias para iniciar una copia de seguridad del sistema "
+"solamente."
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
+msgstr ""
+"Nota: En futuras versiones, es posible que se introduzcan funciones "
+"adicionales."
 
 #: ../nethsm/cli.rst:85
 msgid "**Creating & Deleting Users**"
@@ -4126,8 +4110,9 @@ msgid ""
 "use it for encryption and decryption, but first you should create the "
 "key:"
 msgstr ""
-"Después de crear una clave (aquí: ID 42) con el mecanismo correspondiente, "
-"puede utilizarla para cifrar y descifrar, pero primero debe crear la clave:"
+"Después de crear una clave (aquí: ID 42) con el mecanismo "
+"correspondiente, puede utilizarla para cifrar y descifrar, pero primero "
+"debe crear la clave:"
 
 #: ../nethsm/pkcs11.rst:35
 msgid "Now you can encrypt:"
@@ -4172,7 +4157,7 @@ msgstr ""
 "contraseña \"adminadmin\", contraseña de desbloqueo \"unlockunlock\"."
 
 #: ../nethsm/sealed-hardware.rst:2 ../nitropad/sealed-hardware.rst:2
-#: ../nitropc/sealed-hardware.rst:2
+#: ../nitropc/sealed-hardware.rst:2 ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr "Verificar el hardware sellado"
 
@@ -4199,7 +4184,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Aquí hay algunas fotos de cómo envolvemos un NetHSM:"
 
-#: ../nethsm/sealed-hardware.rst:14
+#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr "Sellado del hardware"
 
@@ -10729,6 +10714,14 @@ msgid ""
 msgstr ""
 "Una vez finalizada la instalación, instale las actualizaciones "
 "necesarias. Para ello, vaya a Sistema → Firmware → Actualizaciones."
+
+#: ../nitrowall/sealed-hardware.rst:4
+msgid ""
+"Your NitroWall has been delivered in a sealed packaging and sealed "
+"screws. We will send you a picture of your NitroWall before shipping. "
+"Please compare the imaged to your packaged NitroWall. If you notice any "
+"changes, please contact us to arrange further action."
+msgstr ""
 
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
@@ -20848,3 +20841,27 @@ msgstr ""
 
 #~ msgid "Decrypting"
 #~ msgstr "Descifrar"
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the NETHSM_HOST environment variable.  You "
+#~ "can use the public NsetupetHSM demo "
+#~ "instance nethsmdemo.nitrokey.com or run a "
+#~ "local demo instance using the NetHSM "
+#~ "docker image, see `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ section of"
+#~ " the NetHSM documentation."
+#~ msgstr ""
+#~ "Antes de empezar, almacenamos el nombre"
+#~ " del host de la instancia de "
+#~ "NetHSM en la variable de entorno "
+#~ "NETHSM_HOST.  Puede utilizar la instancia "
+#~ "pública de demostración de NsetupetHSM "
+#~ "nethsmdemo.nitrokey.com o ejecutar una "
+#~ "instancia de demostración local utilizando "
+#~ "la imagen docker de NetHSM, consulte "
+#~ "la sección `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ de la "
+#~ "documentación de NetHSM."
+

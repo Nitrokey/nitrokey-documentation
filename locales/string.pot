@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 15:22+0200\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -5693,19 +5693,20 @@ msgstr ""
 msgid "This tutorial demonstrates how to access the NetHMS via REST API. The interface is documented `here <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_, and its specification is available as `RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ and as `OpenAPI (Swagger) <https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
 
-#: ../nethsm/_tutorial.rst:2
-msgid "Before we start, we store the host name of the NetHSM instance in the NETHSM_HOST environment variable.  You can use the public NsetupetHSM demo instance nethsmdemo.nitrokey.com or run a local demo instance using the NetHSM docker image, see `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_ section of the NetHSM documentation."
-msgstr ""
-
 #: ../nethsm/api.rst:18
 msgid "If you use a NetHSM demo instance with a self-signed certificate, for example using the Docker image, you will have to use the --insecure/-k option for curl to skip the certificate check."
+msgstr ""
+
+#: ../nethsm/api.rst:24
+#: ../nethsm/cli.rst:20
+msgid "First set the value of $NETHSM_HOST to the IP address or URL of your NetHSM. Our demo server can be reached at https://nethsmdemo.nitrokey.com/"
 msgstr ""
 
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr ""
 
-#: ../nethsm/api.rst:41
+#: ../nethsm/api.rst:46
 msgid "The -i/--include option causes curl to print the HTTP status code and the response headers.  The -w '\\n'/--write-out '\\n' option adds a newline after the response body."
 msgstr ""
 
@@ -5760,42 +5761,6 @@ msgstr ""
 #: ../nethsm/_tutorial.rst:3
 #: ../nethsm/_tutorial.rst:3
 msgid "User Management"
-msgstr ""
-
-#: ../nethsm/_tutorial.rst:3
-#: ../nethsm/_tutorial.rst:3
-#: ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr ""
-
-#: ../nethsm/_tutorial.rst:5
-#: ../nethsm/_tutorial.rst:5
-msgid "Separation of duties can be implemented by using different Roles. Each user account configured on the NetHSM has one of the following Roles assigned to it. Following is a high-level description of the operations allowed by each Role. For endpoint-specific details please refer to the REST API documentation."
-msgstr ""
-
-#: ../nethsm/_tutorial.rst:11
-#: ../nethsm/_tutorial.rst:11
-msgid "*R-Administrator*: A user account with this Role has access to all operations provided by the REST API, except for key usage operations, i.e. message signing and decryption."
-msgstr ""
-
-#: ../nethsm/_tutorial.rst:14
-#: ../nethsm/_tutorial.rst:14
-msgid "*R-Operator*: A user account with this Role has access to all key usage operations, a read-only subset of key management operations and user management operations allowing changes to their own account only."
-msgstr ""
-
-#: ../nethsm/_tutorial.rst:18
-#: ../nethsm/_tutorial.rst:18
-msgid "*R-Metrics*: A user account with this Role has access to read-only metrics operations only."
-msgstr ""
-
-#: ../nethsm/_tutorial.rst:20
-#: ../nethsm/_tutorial.rst:20
-msgid "*R-Backup*: A user account with this Role has access to the operations required to initiate a system backup only."
-msgstr ""
-
-#: ../nethsm/_tutorial.rst:23
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
 msgstr ""
 
 #: ../nethsm/_tutorial.rst:3
@@ -5976,10 +5941,6 @@ msgstr ""
 msgid "If you use a NetHSM demo instance with a self-signed certificate, for example using the Docker image, you will have to use the ``--no-verify-tls`` option for ``nitropy`` to skip the certificate check."
 msgstr ""
 
-#: ../nethsm/cli.rst:20
-msgid "First set the value of $NETHSM_HOST to the IP address or URL of your NetHSM. Our demo server can be reached at https://nethsmdemo.nitrokey.com/"
-msgstr ""
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr ""
@@ -5994,6 +5955,35 @@ msgstr ""
 
 #: ../nethsm/cli.rst:69
 msgid "Turn `Unattended Boot` mode on:"
+msgstr ""
+
+#: ../nethsm/_tutorial.rst:3
+#: ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr ""
+
+#: ../nethsm/_tutorial.rst:5
+msgid "Separation of duties can be implemented by using different Roles. Each user account configured on the NetHSM has one of the following Roles assigned to it. Following is a high-level description of the operations allowed by each Role. For endpoint-specific details please refer to the REST API documentation."
+msgstr ""
+
+#: ../nethsm/_tutorial.rst:11
+msgid "*R-Administrator*: A user account with this Role has access to all operations provided by the REST API, except for key usage operations, i.e. message signing and decryption."
+msgstr ""
+
+#: ../nethsm/_tutorial.rst:14
+msgid "*R-Operator*: A user account with this Role has access to all key usage operations, a read-only subset of key management operations and user management operations allowing changes to their own account only."
+msgstr ""
+
+#: ../nethsm/_tutorial.rst:18
+msgid "*R-Metrics*: A user account with this Role has access to read-only metrics operations only."
+msgstr ""
+
+#: ../nethsm/_tutorial.rst:20
+msgid "*R-Backup*: A user account with this Role has access to the operations required to initiate a system backup only."
+msgstr ""
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
 msgstr ""
 
 #: ../nethsm/cli.rst:85
@@ -6191,6 +6181,7 @@ msgstr ""
 #: ../nitropc/sealed-hardware.rst:2
 #: ../nitropc/sealed-hardware.rst:2
 #: ../nitropc/sealed-hardware.rst:2
+#: ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr ""
 
@@ -6203,10 +6194,12 @@ msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr ""
 
 #: ../nethsm/sealed-hardware.rst:14
+#: ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr ""
 
 #: ../nethsm/sealed-hardware.rst:None
+#: ../nitrowall/sealed-hardware.rst:None
 msgid "seal"
 msgstr ""
 
@@ -10632,6 +10625,10 @@ msgstr ""
 
 #: ../nitrowall/index.rst:48
 msgid "After the installation is complete, install the necessary updates. To do this, go to System → Firmware → Updates."
+msgstr ""
+
+#: ../nitrowall/sealed-hardware.rst:4
+msgid "Your NitroWall has been delivered in a sealed packaging and sealed screws. We will send you a picture of your NitroWall before shipping. Please compare the imaged to your packaged NitroWall. If you notice any changes, please contact us to arrange further action."
 msgstr ""
 
 #: ../pro/2fa-google.rst:2

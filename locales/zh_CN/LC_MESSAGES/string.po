@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 15:22+0200\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
 "PO-Revision-Date: 2022-05-24 14:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -2806,23 +2806,11 @@ msgid ""
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
-"本教程演示了如何通过REST API访问NetHMS。该接口的文档`在<https://nethsmdemo.nitrokey.com/api_docs/"
-"index.html#docs/summary/summary>`_。其规范可作为`RAML <https://nethsmdemo.nitrokey."
-"com/api_docs/nethsm-api.raml>`_和`OpenAPI（Swagger） <https://nethsmdemo."
-"nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_。"
-
-#: ../nethsm/_tutorial.rst:2
-msgid ""
-"Before we start, we store the host name of the NetHSM instance in the "
-"NETHSM_HOST environment variable.  You can use the public NsetupetHSM "
-"demo instance nethsmdemo.nitrokey.com or run a local demo instance using "
-"the NetHSM docker image, see `Docker Hub "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ section of the NetHSM "
-"documentation."
-msgstr ""
-"在开始之前，我们在NETHSM_HOST环境变量中存储NetHSM实例的主机名。  你可以使用公共的NsetupetHSM演示实例nethsmdemo."
-"nitrokey.com，或者使用NetHSM docker镜像运行本地演示实例，见NetHSM文档的`Docker Hub <https://hub."
-"docker.com/r/nitrokey/nethsm>`_章节。"
+"本教程演示了如何通过REST "
+"API访问NetHMS。该接口的文档`在<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_。其规范可作为`RAML"
+" <https://nethsmdemo.nitrokey.com/api_docs/nethsm-"
+"api.raml>`_和`OpenAPI（Swagger） "
+"<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_。"
 
 #: ../nethsm/api.rst:18
 msgid ""
@@ -2831,11 +2819,18 @@ msgid ""
 "option for curl to skip the certificate check."
 msgstr "如果你使用带有自签名证书的NetHSM演示实例，例如使用Docker镜像，你将不得不使用curl的--insecure/-k选项来跳过证书检查。"
 
+#: ../nethsm/api.rst:24 ../nethsm/cli.rst:20
+msgid ""
+"First set the value of $NETHSM_HOST to the IP address or URL of your "
+"NetHSM. Our demo server can be reached at "
+"https://nethsmdemo.nitrokey.com/"
+msgstr "首先将$NETHSM_HOST的值设置为你的NetHSM的IP地址或URL。我们的演示服务器可以在https://nethsmdemo.nitrokey.com/"
+
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr "首先，让我们看看我们这里有什么。"
 
-#: ../nethsm/api.rst:41
+#: ../nethsm/api.rst:46
 msgid ""
 "The -i/--include option causes curl to print the HTTP status code and the"
 " response headers.  The -w '\\n'/--write-out '\\n' option adds a newline "
@@ -2901,51 +2896,6 @@ msgstr "或者切换回*Attended Boot*模式。"
 #: ../nethsm/_tutorial.rst:3
 msgid "User Management"
 msgstr "用户管理"
-
-#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr "角色"
-
-#: ../nethsm/_tutorial.rst:5
-msgid ""
-"Separation of duties can be implemented by using different Roles. Each "
-"user account configured on the NetHSM has one of the following Roles "
-"assigned to it. Following is a high-level description of the operations "
-"allowed by each Role. For endpoint-specific details please refer to the "
-"REST API documentation."
-msgstr ""
-"职责分离可以通过使用不同的角色来实现。在NetHSM上配置的每个用户账户都有一个分配给它的下列角色。以下是对每个角色所允许的操作的高层次描述。关于终端的具体细节，请参考REST"
-" API文档。"
-
-#: ../nethsm/_tutorial.rst:11
-msgid ""
-"*R-Administrator*: A user account with this Role has access to all "
-"operations provided by the REST API, except for key usage operations, "
-"i.e. message signing and decryption."
-msgstr "*R-Administrator*。拥有此角色的用户账户可以访问REST API提供的所有操作，但密钥使用操作除外，即消息签名和解密。"
-
-#: ../nethsm/_tutorial.rst:14
-msgid ""
-"*R-Operator*: A user account with this Role has access to all key usage "
-"operations, a read-only subset of key management operations and user "
-"management operations allowing changes to their own account only."
-msgstr "*R-Operator*:拥有此角色的用户账户可以访问所有的钥匙使用操作，只读的钥匙管理操作子集和用户管理操作，只允许对他们自己的账户进行更改。"
-
-#: ../nethsm/_tutorial.rst:18
-msgid ""
-"*R-Metrics*: A user account with this Role has access to read-only "
-"metrics operations only."
-msgstr "*R-Metrics*。拥有此角色的用户账户只能访问只读的度量衡操作。"
-
-#: ../nethsm/_tutorial.rst:20
-msgid ""
-"*R-Backup*: A user account with this Role has access to the operations "
-"required to initiate a system backup only."
-msgstr "*R-Backup*:拥有此角色的用户账户只能访问启动系统备份所需的操作。"
-
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr "注意：在未来的版本中，可能会引入额外的角色。"
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3160,13 +3110,6 @@ msgid ""
 "tls`` option for ``nitropy`` to skip the certificate check."
 msgstr "如果你使用带有自签名证书的NetHSM演示实例，例如使用Docker镜像，你将不得不使用``--no-verify-tls``选项来跳过证书检查。"
 
-#: ../nethsm/cli.rst:20
-msgid ""
-"First set the value of $NETHSM_HOST to the IP address or URL of your "
-"NetHSM. Our demo server can be reached at "
-"https://nethsmdemo.nitrokey.com/"
-msgstr "首先将$NETHSM_HOST的值设置为你的NetHSM的IP地址或URL。我们的演示服务器可以在https://nethsmdemo.nitrokey.com/"
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr "设备信息& 状态"
@@ -3186,6 +3129,51 @@ msgstr "一个新的NetHSM需要首先配置密码和当前时间。管理密码
 #: ../nethsm/cli.rst:69
 msgid "Turn `Unattended Boot` mode on:"
 msgstr "开启 \"无人值守启动 \"模式。"
+
+#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr "角色"
+
+#: ../nethsm/_tutorial.rst:5
+msgid ""
+"Separation of duties can be implemented by using different Roles. Each "
+"user account configured on the NetHSM has one of the following Roles "
+"assigned to it. Following is a high-level description of the operations "
+"allowed by each Role. For endpoint-specific details please refer to the "
+"REST API documentation."
+msgstr ""
+"职责分离可以通过使用不同的角色来实现。在NetHSM上配置的每个用户账户都有一个分配给它的下列角色。以下是对每个角色所允许的操作的高层次描述。关于终端的具体细节，请参考REST"
+" API文档。"
+
+#: ../nethsm/_tutorial.rst:11
+msgid ""
+"*R-Administrator*: A user account with this Role has access to all "
+"operations provided by the REST API, except for key usage operations, "
+"i.e. message signing and decryption."
+msgstr "*R-Administrator*。拥有此角色的用户账户可以访问REST API提供的所有操作，但密钥使用操作除外，即消息签名和解密。"
+
+#: ../nethsm/_tutorial.rst:14
+msgid ""
+"*R-Operator*: A user account with this Role has access to all key usage "
+"operations, a read-only subset of key management operations and user "
+"management operations allowing changes to their own account only."
+msgstr "*R-Operator*:拥有此角色的用户账户可以访问所有的钥匙使用操作，只读的钥匙管理操作子集和用户管理操作，只允许对他们自己的账户进行更改。"
+
+#: ../nethsm/_tutorial.rst:18
+msgid ""
+"*R-Metrics*: A user account with this Role has access to read-only "
+"metrics operations only."
+msgstr "*R-Metrics*。拥有此角色的用户账户只能访问只读的度量衡操作。"
+
+#: ../nethsm/_tutorial.rst:20
+msgid ""
+"*R-Backup*: A user account with this Role has access to the operations "
+"required to initiate a system backup only."
+msgstr "*R-Backup*:拥有此角色的用户账户只能访问启动系统备份所需的操作。"
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
+msgstr "注意：在未来的版本中，可能会引入额外的角色。"
 
 #: ../nethsm/cli.rst:85
 msgid "**Creating & Deleting Users**"
@@ -3435,7 +3423,7 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com>`_，将每8小时重置一次（欧洲中部时间6:00，14:00，22:00）。用户\"admin\"，密码\"adminadmin\"，解锁密码\"unlockunlock\"。"
 
 #: ../nethsm/sealed-hardware.rst:2 ../nitropad/sealed-hardware.rst:2
-#: ../nitropc/sealed-hardware.rst:2
+#: ../nitropc/sealed-hardware.rst:2 ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr "核实密封的硬件"
 
@@ -3454,7 +3442,7 @@ msgstr "您的NetHSM是以密封包装交付的。为了验证您的NetSHM已经
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "这里有一些我们是如何包装一个网路健康管理的图片。"
 
-#: ../nethsm/sealed-hardware.rst:14
+#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr "硬件密封"
 
@@ -8654,6 +8642,14 @@ msgid ""
 "After the installation is complete, install the necessary updates. To do "
 "this, go to System → Firmware → Updates."
 msgstr "安装完成后，安装必要的更新。要做到这一点，请进入系统→固件→更新。"
+
+#: ../nitrowall/sealed-hardware.rst:4
+msgid ""
+"Your NitroWall has been delivered in a sealed packaging and sealed "
+"screws. We will send you a picture of your NitroWall before shipping. "
+"Please compare the imaged to your packaged NitroWall. If you notice any "
+"changes, please contact us to arrange further action."
+msgstr ""
 
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
@@ -16800,3 +16796,20 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "Decrypting"
 #~ msgstr "解密"
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the NETHSM_HOST environment variable.  You "
+#~ "can use the public NsetupetHSM demo "
+#~ "instance nethsmdemo.nitrokey.com or run a "
+#~ "local demo instance using the NetHSM "
+#~ "docker image, see `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ section of"
+#~ " the NetHSM documentation."
+#~ msgstr ""
+#~ "在开始之前，我们在NETHSM_HOST环境变量中存储NetHSM实例的主机名。  "
+#~ "你可以使用公共的NsetupetHSM演示实例nethsmdemo.nitrokey.com，或者使用NetHSM "
+#~ "docker镜像运行本地演示实例，见NetHSM文档的`Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_章节。"
+

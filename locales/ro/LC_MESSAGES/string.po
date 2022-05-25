@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 15:22+0200\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
 "PO-Revision-Date: 2022-05-24 14:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ro/>\n"
 "Language: ro\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ro/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
+"< 20)) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -3387,26 +3386,12 @@ msgid ""
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
 "Acest tutorial demonstrează cum să accesați NetHMS prin intermediul API "
-"REST. Interfața este documentată ` aici <https://nethsmdemo.nitrokey.com/"
-"api_docs/index.html#docs/summary/summary>`_, iar specificația sa este "
-"disponibilă ca `RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api."
-"raml>`_ și ca `OpenAPI (Swagger) <https://nethsmdemo.nitrokey.com/api_docs/"
-"gen_nethsm_api_oas20.json>`_."
-
-#: ../nethsm/_tutorial.rst:2
-msgid ""
-"Before we start, we store the host name of the NetHSM instance in the "
-"NETHSM_HOST environment variable.  You can use the public NsetupetHSM "
-"demo instance nethsmdemo.nitrokey.com or run a local demo instance using "
-"the NetHSM docker image, see `Docker Hub "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ section of the NetHSM "
-"documentation."
-msgstr ""
-"Înainte de a începe, stocăm numele de gazdă al instanței NetHSM în variabila "
-"de mediu NETHSM_HOST.  Puteți utiliza instanța demo publică NsetupetHSM "
-"nethsmdemo.nitrokey.com sau puteți rula o instanță demo locală utilizând "
-"imaginea docker NetHSM, consultați secțiunea `Docker Hub <https://hub.docker."
-"com/r/nitrokey/nethsm>`_ din documentația NetHSM."
+"REST. Interfața este documentată ` aici "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_,"
+" iar specificația sa este disponibilă ca `RAML "
+"<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ și ca "
+"`OpenAPI (Swagger) "
+"<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 
 #: ../nethsm/api.rst:18
 msgid ""
@@ -3418,11 +3403,21 @@ msgstr ""
 "exemplu, utilizând imaginea Docker, va trebui să utilizați opțiunea "
 "--insecure/-k pentru curl pentru a sări peste verificarea certificatului."
 
+#: ../nethsm/api.rst:24 ../nethsm/cli.rst:20
+msgid ""
+"First set the value of $NETHSM_HOST to the IP address or URL of your "
+"NetHSM. Our demo server can be reached at "
+"https://nethsmdemo.nitrokey.com/"
+msgstr ""
+"În primul rând, setați valoarea $NETHSM_HOST la adresa IP sau URL a "
+"NetHSM-ului dumneavoastră. Serverul nostru demonstrativ poate fi accesat "
+"la https://nethsmdemo.nitrokey.com/"
+
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr "În primul rând, să vedem ce avem aici:"
 
-#: ../nethsm/api.rst:41
+#: ../nethsm/api.rst:46
 msgid ""
 "The -i/--include option causes curl to print the HTTP status code and the"
 " response headers.  The -w '\\n'/--write-out '\\n' option adds a newline "
@@ -3501,65 +3496,6 @@ msgstr "Sau treceți înapoi la modul *Attended Boot*:"
 #: ../nethsm/_tutorial.rst:3
 msgid "User Management"
 msgstr "Gestionarea utilizatorilor"
-
-#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr "Roluri"
-
-#: ../nethsm/_tutorial.rst:5
-msgid ""
-"Separation of duties can be implemented by using different Roles. Each "
-"user account configured on the NetHSM has one of the following Roles "
-"assigned to it. Following is a high-level description of the operations "
-"allowed by each Role. For endpoint-specific details please refer to the "
-"REST API documentation."
-msgstr ""
-"Separarea sarcinilor poate fi implementată prin utilizarea de roluri "
-"diferite. Fiecărui cont de utilizator configurat pe NetHSM îi este "
-"atribuit unul dintre următoarele Roluri. În continuare este prezentată o "
-"descriere la nivel înalt a operațiunilor permise de fiecare Rol. Pentru "
-"detalii specifice fiecărui punct final, consultați documentația REST API."
-
-#: ../nethsm/_tutorial.rst:11
-msgid ""
-"*R-Administrator*: A user account with this Role has access to all "
-"operations provided by the REST API, except for key usage operations, "
-"i.e. message signing and decryption."
-msgstr ""
-"*R-Administrator*: Un cont de utilizator cu acest rol are acces la toate "
-"operațiunile furnizate de API REST, cu excepția operațiunilor de "
-"utilizare a cheilor, adică semnarea și decriptarea mesajelor."
-
-#: ../nethsm/_tutorial.rst:14
-msgid ""
-"*R-Operator*: A user account with this Role has access to all key usage "
-"operations, a read-only subset of key management operations and user "
-"management operations allowing changes to their own account only."
-msgstr ""
-"*R-Operator*: Un cont de utilizator cu acest rol are acces la toate "
-"operațiunile de utilizare a cheilor, la un subset de operațiuni de "
-"gestionare a cheilor de numai citire și la operațiuni de gestionare a "
-"utilizatorilor care permit modificări numai pentru propriul cont."
-
-#: ../nethsm/_tutorial.rst:18
-msgid ""
-"*R-Metrics*: A user account with this Role has access to read-only "
-"metrics operations only."
-msgstr ""
-"*R-Metrice*: Un cont de utilizator cu acest rol are acces numai la "
-"operațiunile de citire a măsurătorilor."
-
-#: ../nethsm/_tutorial.rst:20
-msgid ""
-"*R-Backup*: A user account with this Role has access to the operations "
-"required to initiate a system backup only."
-msgstr ""
-"*R-Backup*: Un cont de utilizator cu acest rol are acces numai la "
-"operațiunile necesare pentru a iniția o copie de rezervă a sistemului."
-
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr "Notă: În versiunile viitoare, pot fi introduse roluri suplimentare."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3820,16 +3756,6 @@ msgstr ""
 "``--no-verify-tls`` pentru ``nitropy`` pentru a sări peste verificarea "
 "certificatului."
 
-#: ../nethsm/cli.rst:20
-msgid ""
-"First set the value of $NETHSM_HOST to the IP address or URL of your "
-"NetHSM. Our demo server can be reached at "
-"https://nethsmdemo.nitrokey.com/"
-msgstr ""
-"În primul rând, setați valoarea $NETHSM_HOST la adresa IP sau URL a "
-"NetHSM-ului dumneavoastră. Serverul nostru demonstrativ poate fi accesat "
-"la https://nethsmdemo.nitrokey.com/"
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr "Informații despre dispozitiv & Stare"
@@ -3853,6 +3779,65 @@ msgstr ""
 #: ../nethsm/cli.rst:69
 msgid "Turn `Unattended Boot` mode on:"
 msgstr "Activați modul `Unattended Boot`:"
+
+#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr "Roluri"
+
+#: ../nethsm/_tutorial.rst:5
+msgid ""
+"Separation of duties can be implemented by using different Roles. Each "
+"user account configured on the NetHSM has one of the following Roles "
+"assigned to it. Following is a high-level description of the operations "
+"allowed by each Role. For endpoint-specific details please refer to the "
+"REST API documentation."
+msgstr ""
+"Separarea sarcinilor poate fi implementată prin utilizarea de roluri "
+"diferite. Fiecărui cont de utilizator configurat pe NetHSM îi este "
+"atribuit unul dintre următoarele Roluri. În continuare este prezentată o "
+"descriere la nivel înalt a operațiunilor permise de fiecare Rol. Pentru "
+"detalii specifice fiecărui punct final, consultați documentația REST API."
+
+#: ../nethsm/_tutorial.rst:11
+msgid ""
+"*R-Administrator*: A user account with this Role has access to all "
+"operations provided by the REST API, except for key usage operations, "
+"i.e. message signing and decryption."
+msgstr ""
+"*R-Administrator*: Un cont de utilizator cu acest rol are acces la toate "
+"operațiunile furnizate de API REST, cu excepția operațiunilor de "
+"utilizare a cheilor, adică semnarea și decriptarea mesajelor."
+
+#: ../nethsm/_tutorial.rst:14
+msgid ""
+"*R-Operator*: A user account with this Role has access to all key usage "
+"operations, a read-only subset of key management operations and user "
+"management operations allowing changes to their own account only."
+msgstr ""
+"*R-Operator*: Un cont de utilizator cu acest rol are acces la toate "
+"operațiunile de utilizare a cheilor, la un subset de operațiuni de "
+"gestionare a cheilor de numai citire și la operațiuni de gestionare a "
+"utilizatorilor care permit modificări numai pentru propriul cont."
+
+#: ../nethsm/_tutorial.rst:18
+msgid ""
+"*R-Metrics*: A user account with this Role has access to read-only "
+"metrics operations only."
+msgstr ""
+"*R-Metrice*: Un cont de utilizator cu acest rol are acces numai la "
+"operațiunile de citire a măsurătorilor."
+
+#: ../nethsm/_tutorial.rst:20
+msgid ""
+"*R-Backup*: A user account with this Role has access to the operations "
+"required to initiate a system backup only."
+msgstr ""
+"*R-Backup*: Un cont de utilizator cu acest rol are acces numai la "
+"operațiunile necesare pentru a iniția o copie de rezervă a sistemului."
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
+msgstr "Notă: În versiunile viitoare, pot fi introduse roluri suplimentare."
 
 #: ../nethsm/cli.rst:85
 msgid "**Creating & Deleting Users**"
@@ -4087,8 +4072,8 @@ msgid ""
 "Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`_ for NetHSM."
 msgstr ""
-"Descărcați driverul `PKCS#11 <https://github.com/Nitrokey/nethsm-pkcs11>`_ "
-"pentru NetHSM."
+"Descărcați driverul `PKCS#11 <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`_ pentru NetHSM."
 
 #: ../nethsm/pkcs11.rst:11
 msgid ""
@@ -4158,7 +4143,7 @@ msgstr ""
 "\"adminadmin\", parolă de deblocare \"unlockunlock\"."
 
 #: ../nethsm/sealed-hardware.rst:2 ../nitropad/sealed-hardware.rst:2
-#: ../nitropc/sealed-hardware.rst:2
+#: ../nitropc/sealed-hardware.rst:2 ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr "Verificarea hardware-ului sigilat"
 
@@ -4185,7 +4170,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Iată câteva imagini cu modul în care încheiem un NetHSM:"
 
-#: ../nethsm/sealed-hardware.rst:14
+#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr "Etanșare hardware"
 
@@ -10705,6 +10690,14 @@ msgstr ""
 "După ce instalarea este finalizată, instalați actualizările necesare. "
 "Pentru a face acest lucru, accesați System → Firmware → Updates (Sistem →"
 " Firmware → Actualizări)."
+
+#: ../nitrowall/sealed-hardware.rst:4
+msgid ""
+"Your NitroWall has been delivered in a sealed packaging and sealed "
+"screws. We will send you a picture of your NitroWall before shipping. "
+"Please compare the imaged to your packaged NitroWall. If you notice any "
+"changes, please contact us to arrange further action."
+msgstr ""
 
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
@@ -20815,3 +20808,25 @@ msgstr ""
 
 #~ msgid "Decrypting"
 #~ msgstr "Desecretizarea"
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the NETHSM_HOST environment variable.  You "
+#~ "can use the public NsetupetHSM demo "
+#~ "instance nethsmdemo.nitrokey.com or run a "
+#~ "local demo instance using the NetHSM "
+#~ "docker image, see `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ section of"
+#~ " the NetHSM documentation."
+#~ msgstr ""
+#~ "Înainte de a începe, stocăm numele "
+#~ "de gazdă al instanței NetHSM în "
+#~ "variabila de mediu NETHSM_HOST.  Puteți "
+#~ "utiliza instanța demo publică NsetupetHSM "
+#~ "nethsmdemo.nitrokey.com sau puteți rula o "
+#~ "instanță demo locală utilizând imaginea "
+#~ "docker NetHSM, consultați secțiunea `Docker"
+#~ " Hub <https://hub.docker.com/r/nitrokey/nethsm>`_ din"
+#~ " documentația NetHSM."
+

@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-24 15:22+0200\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
 "PO-Revision-Date: 2022-05-24 14:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../fido2/linux/2fa-nextcloud.rst:2
@@ -3369,27 +3368,14 @@ msgid ""
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
-"Ez a bemutató azt mutatja be, hogyan lehet a NetHMS-t REST API-n keresztül "
-"elérni. Az interfész dokumentációja `itt található <https://nethsmdemo."
-"nitrokey.com/api_docs/index.html#docs/summary/summary>`_, és a "
-"specifikációja elérhető `RAML <https://nethsmdemo.nitrokey.com/api_docs/"
-"nethsm-api.raml>`_ és `OpenAPI (Swagger) <https://nethsmdemo.nitrokey.com/"
-"api_docs/gen_nethsm_api_oas20.json>`_ formátumban."
-
-#: ../nethsm/_tutorial.rst:2
-msgid ""
-"Before we start, we store the host name of the NetHSM instance in the "
-"NETHSM_HOST environment variable.  You can use the public NsetupetHSM "
-"demo instance nethsmdemo.nitrokey.com or run a local demo instance using "
-"the NetHSM docker image, see `Docker Hub "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ section of the NetHSM "
-"documentation."
-msgstr ""
-"Mielőtt elkezdenénk, a NetHSM példány állomásnevét a NETHSM_HOST környezeti "
-"változóban tároljuk.  Használhatjuk a nyilvános NsetupetHSM demópéldányt "
-"nethsmdemo.nitrokey.com, vagy futtathatunk egy helyi demópéldányt a NetHSM "
-"dokkoló kép segítségével, lásd a NetHSM dokumentáció `Docker Hub <https://hub"
-".docker.com/r/nitrokey/nethsm>`_ szakaszát."
+"Ez a bemutató azt mutatja be, hogyan lehet a NetHMS-t REST API-n "
+"keresztül elérni. Az interfész dokumentációja `itt található "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_,"
+" és a specifikációja elérhető `RAML "
+"<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ és `OpenAPI "
+"(Swagger) "
+"<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_ "
+"formátumban."
 
 #: ../nethsm/api.rst:18
 msgid ""
@@ -3401,11 +3387,21 @@ msgstr ""
 "például a Docker-kép használatával, akkor a curl-hez a --insecure/-k "
 "kapcsolót kell használnia a tanúsítvány ellenőrzésének kihagyásához."
 
+#: ../nethsm/api.rst:24 ../nethsm/cli.rst:20
+msgid ""
+"First set the value of $NETHSM_HOST to the IP address or URL of your "
+"NetHSM. Our demo server can be reached at "
+"https://nethsmdemo.nitrokey.com/"
+msgstr ""
+"Először állítsa be a $NETHSM_HOST értékét a NetHSM IP-címére vagy URL "
+"címére. A mi demó szerverünk a https://nethsmdemo.nitrokey.com/ címen "
+"érhető el."
+
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr "Először is nézzük meg, hogy mi van itt:"
 
-#: ../nethsm/api.rst:41
+#: ../nethsm/api.rst:46
 msgid ""
 "The -i/--include option causes curl to print the HTTP status code and the"
 " response headers.  The -w '\\n'/--write-out '\\n' option adds a newline "
@@ -3488,70 +3484,6 @@ msgstr "Vagy váltson vissza *Attended Boot* üzemmódba:"
 #: ../nethsm/_tutorial.rst:3
 msgid "User Management"
 msgstr "Felhasználó kezelése"
-
-#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr "Szerepek"
-
-#: ../nethsm/_tutorial.rst:5
-msgid ""
-"Separation of duties can be implemented by using different Roles. Each "
-"user account configured on the NetHSM has one of the following Roles "
-"assigned to it. Following is a high-level description of the operations "
-"allowed by each Role. For endpoint-specific details please refer to the "
-"REST API documentation."
-msgstr ""
-"A feladatok szétválasztása különböző szerepkörök használatával "
-"valósítható meg. A NetHSM-en konfigurált minden felhasználói fiókhoz a "
-"következő szerepkörök egyike tartozik. Az alábbiakban az egyes "
-"szerepkörök által engedélyezett műveletek magas szintű leírása "
-"következik. A végpont-specifikus részleteket lásd a REST API "
-"dokumentációban."
-
-#: ../nethsm/_tutorial.rst:11
-msgid ""
-"*R-Administrator*: A user account with this Role has access to all "
-"operations provided by the REST API, except for key usage operations, "
-"i.e. message signing and decryption."
-msgstr ""
-"*R-adminisztrátor*: A REST API által biztosított összes művelethez "
-"hozzáféréssel rendelkezik, kivéve a kulcshasználati műveleteket, azaz az "
-"üzenetek aláírását és visszafejtését."
-
-#: ../nethsm/_tutorial.rst:14
-msgid ""
-"*R-Operator*: A user account with this Role has access to all key usage "
-"operations, a read-only subset of key management operations and user "
-"management operations allowing changes to their own account only."
-msgstr ""
-"*R-Operátor*: Az ezzel a szereppel rendelkező felhasználói fiók "
-"hozzáféréssel rendelkezik az összes kulcshasználati művelethez, a "
-"kulcskezelési műveletek csak olvasható részhalmazához és a "
-"felhasználókezelési műveletekhez, amelyek csak a saját fiókjának "
-"módosítását teszik lehetővé."
-
-#: ../nethsm/_tutorial.rst:18
-msgid ""
-"*R-Metrics*: A user account with this Role has access to read-only "
-"metrics operations only."
-msgstr ""
-"*R-Metrics*: Az ezzel a szerepkörrel rendelkező felhasználói fiók csak "
-"olvasható metrikai műveletekhez rendelkezik hozzáféréssel."
-
-#: ../nethsm/_tutorial.rst:20
-msgid ""
-"*R-Backup*: A user account with this Role has access to the operations "
-"required to initiate a system backup only."
-msgstr ""
-"*R-Backup*: Az ezzel a szerepkörrel rendelkező felhasználói fiók csak a "
-"rendszer biztonsági mentésének kezdeményezéséhez szükséges műveletekhez "
-"fér hozzá."
-
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr ""
-"Megjegyzés: A későbbi kiadásokban további szerepkörök is bevezetésre "
-"kerülhetnek."
 
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
@@ -3820,16 +3752,6 @@ msgstr ""
 "kell használnia a ``nitropy`` opcióhoz a tanúsítvány ellenőrzésének "
 "kihagyásához."
 
-#: ../nethsm/cli.rst:20
-msgid ""
-"First set the value of $NETHSM_HOST to the IP address or URL of your "
-"NetHSM. Our demo server can be reached at "
-"https://nethsmdemo.nitrokey.com/"
-msgstr ""
-"Először állítsa be a $NETHSM_HOST értékét a NetHSM IP-címére vagy URL "
-"címére. A mi demó szerverünk a https://nethsmdemo.nitrokey.com/ címen "
-"érhető el."
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr "Eszközinformáció & Állapot"
@@ -3853,6 +3775,70 @@ msgstr ""
 #: ../nethsm/cli.rst:69
 msgid "Turn `Unattended Boot` mode on:"
 msgstr "Kapcsolja be a \"felügyelet nélküli indítás\" üzemmódot:"
+
+#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr "Szerepek"
+
+#: ../nethsm/_tutorial.rst:5
+msgid ""
+"Separation of duties can be implemented by using different Roles. Each "
+"user account configured on the NetHSM has one of the following Roles "
+"assigned to it. Following is a high-level description of the operations "
+"allowed by each Role. For endpoint-specific details please refer to the "
+"REST API documentation."
+msgstr ""
+"A feladatok szétválasztása különböző szerepkörök használatával "
+"valósítható meg. A NetHSM-en konfigurált minden felhasználói fiókhoz a "
+"következő szerepkörök egyike tartozik. Az alábbiakban az egyes "
+"szerepkörök által engedélyezett műveletek magas szintű leírása "
+"következik. A végpont-specifikus részleteket lásd a REST API "
+"dokumentációban."
+
+#: ../nethsm/_tutorial.rst:11
+msgid ""
+"*R-Administrator*: A user account with this Role has access to all "
+"operations provided by the REST API, except for key usage operations, "
+"i.e. message signing and decryption."
+msgstr ""
+"*R-adminisztrátor*: A REST API által biztosított összes művelethez "
+"hozzáféréssel rendelkezik, kivéve a kulcshasználati műveleteket, azaz az "
+"üzenetek aláírását és visszafejtését."
+
+#: ../nethsm/_tutorial.rst:14
+msgid ""
+"*R-Operator*: A user account with this Role has access to all key usage "
+"operations, a read-only subset of key management operations and user "
+"management operations allowing changes to their own account only."
+msgstr ""
+"*R-Operátor*: Az ezzel a szereppel rendelkező felhasználói fiók "
+"hozzáféréssel rendelkezik az összes kulcshasználati művelethez, a "
+"kulcskezelési műveletek csak olvasható részhalmazához és a "
+"felhasználókezelési műveletekhez, amelyek csak a saját fiókjának "
+"módosítását teszik lehetővé."
+
+#: ../nethsm/_tutorial.rst:18
+msgid ""
+"*R-Metrics*: A user account with this Role has access to read-only "
+"metrics operations only."
+msgstr ""
+"*R-Metrics*: Az ezzel a szerepkörrel rendelkező felhasználói fiók csak "
+"olvasható metrikai műveletekhez rendelkezik hozzáféréssel."
+
+#: ../nethsm/_tutorial.rst:20
+msgid ""
+"*R-Backup*: A user account with this Role has access to the operations "
+"required to initiate a system backup only."
+msgstr ""
+"*R-Backup*: Az ezzel a szerepkörrel rendelkező felhasználói fiók csak a "
+"rendszer biztonsági mentésének kezdeményezéséhez szükséges műveletekhez "
+"fér hozzá."
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
+msgstr ""
+"Megjegyzés: A későbbi kiadásokban további szerepkörök is bevezetésre "
+"kerülhetnek."
 
 #: ../nethsm/cli.rst:85
 msgid "**Creating & Deleting Users**"
@@ -4087,8 +4073,8 @@ msgid ""
 "Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`_ for NetHSM."
 msgstr ""
-"Töltse le a `PKCS#11 illesztőprogramot <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`_ a NetHSM számára."
+"Töltse le a `PKCS#11 illesztőprogramot <https://github.com/Nitrokey"
+"/nethsm-pkcs11>`_ a NetHSM számára."
 
 #: ../nethsm/pkcs11.rst:11
 msgid ""
@@ -4157,7 +4143,7 @@ msgstr ""
 "\"adminadmin\", feloldási jelszó \"unlockunlock\"."
 
 #: ../nethsm/sealed-hardware.rst:2 ../nitropad/sealed-hardware.rst:2
-#: ../nitropc/sealed-hardware.rst:2
+#: ../nitropc/sealed-hardware.rst:2 ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr "Ellenőrizze a lezárt hardvert"
 
@@ -4184,7 +4170,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Íme néhány kép arról, hogyan csomagolunk be egy NetHSM-et:"
 
-#: ../nethsm/sealed-hardware.rst:14
+#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr "Hardver tömítés"
 
@@ -10684,6 +10670,14 @@ msgid ""
 msgstr ""
 "A telepítés befejezése után telepítse a szükséges frissítéseket. Ehhez "
 "válassza a Rendszer → Firmware → Frissítések menüpontot."
+
+#: ../nitrowall/sealed-hardware.rst:4
+msgid ""
+"Your NitroWall has been delivered in a sealed packaging and sealed "
+"screws. We will send you a picture of your NitroWall before shipping. "
+"Please compare the imaged to your packaged NitroWall. If you notice any "
+"changes, please contact us to arrange further action."
+msgstr ""
 
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
@@ -20766,3 +20760,25 @@ msgstr ""
 
 #~ msgid "Decrypting"
 #~ msgstr "Dekódolás"
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the NETHSM_HOST environment variable.  You "
+#~ "can use the public NsetupetHSM demo "
+#~ "instance nethsmdemo.nitrokey.com or run a "
+#~ "local demo instance using the NetHSM "
+#~ "docker image, see `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ section of"
+#~ " the NetHSM documentation."
+#~ msgstr ""
+#~ "Mielőtt elkezdenénk, a NetHSM példány "
+#~ "állomásnevét a NETHSM_HOST környezeti "
+#~ "változóban tároljuk.  Használhatjuk a "
+#~ "nyilvános NsetupetHSM demópéldányt "
+#~ "nethsmdemo.nitrokey.com, vagy futtathatunk egy "
+#~ "helyi demópéldányt a NetHSM dokkoló kép"
+#~ " segítségével, lásd a NetHSM dokumentáció"
+#~ " `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ szakaszát."
+
