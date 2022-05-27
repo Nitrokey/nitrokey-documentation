@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 12:38+0200\n"
-"PO-Revision-Date: 2022-05-23 12:37+0000\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
+"PO-Revision-Date: 2022-05-25 16:37+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/de/>\n"
@@ -3406,35 +3406,20 @@ msgstr "Zugriff auf ein NetHSM über die REST-API"
 msgid ""
 "This tutorial demonstrates how to access the NetHMS via REST API. The "
 "interface is documented `here "
-"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
-" ,and its specification is available as `RAML "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_,"
+" and its specification is available as `RAML "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ and as "
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
-"Dieses Tutorial zeigt, wie man über die REST API auf NetHMS zugreifen "
+"Dieses Tutorial zeigt, wie man über die REST-API auf NetHMS zugreifen "
 "kann. Die Schnittstelle ist `hier "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
-" dokumentiert,und ihre Spezifikation ist als `RAML "
+" dokumentiert, und ihre Spezifikation ist als `RAML "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ und als "
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_ "
 "verfügbar."
-
-#: ../nethsm/_tutorial.rst:2
-msgid ""
-"Before we start, we store the host name of the NetHSM instance in the "
-"NETHSM_HOST environment variable.  You can use the public NetHSM demo "
-"instance nethsmdemo.nitrokey.com or run a local demo instance using the "
-"NetHSM docker image, see the `Development and Testing </index.html"
-"#development-and-testing>`_ section of the NetHSM documentation."
-msgstr ""
-"Bevor wir beginnen, speichern wir den Hostnamen der NetHSM-Instanz in der"
-" Umgebungsvariablen NETHSM_HOST.  Sie können die öffentliche NetHSM-Demo-"
-"Instanz nethsmdemo.nitrokey.com verwenden oder eine lokale Demo-Instanz "
-"mit dem NetHSM-Docker-Image ausführen, siehe den Abschnitt `Entwicklung "
-"und Tests </index.html#development-and-testing>`_ in der NetHSM-"
-"Dokumentation."
 
 #: ../nethsm/api.rst:18
 msgid ""
@@ -3447,11 +3432,21 @@ msgstr ""
 "--insecure/-k für curl verwenden, um die Zertifikatsprüfung zu "
 "überspringen."
 
+#: ../nethsm/api.rst:24 ../nethsm/cli.rst:20
+msgid ""
+"First set the value of $NETHSM_HOST to the IP address or URL of your "
+"NetHSM. Our demo server can be reached at "
+"https://nethsmdemo.nitrokey.com/"
+msgstr ""
+"Setzen Sie zunächst den Wert von $NETHSM_HOST auf die IP-Adresse oder URL"
+" Ihres NetHSM. Unser Demoserver ist unter "
+"https://nethsmdemo.nitrokey.com/ zu erreichen."
+
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr "Schauen wir uns zunächst an, was wir hier haben:"
 
-#: ../nethsm/api.rst:43
+#: ../nethsm/api.rst:46
 msgid ""
 "The -i/--include option causes curl to print the HTTP status code and the"
 " response headers.  The -w '\\n'/--write-out '\\n' option adds a newline "
@@ -3483,7 +3478,7 @@ msgstr ""
 "Passphrase* wird verwendet, um den vertraulichen Datenspeicher von NetHSM"
 " zu verschlüsseln."
 
-#: ../nethsm/_tutorial.rst:12 ../nethsm/cli.rst:54
+#: ../nethsm/_tutorial.rst:12 ../nethsm/cli.rst:50
 msgid ""
 "The NetHSM demo instance at nethsmdemo.nitrokey.com is already "
 "provisioned."
@@ -3536,69 +3531,6 @@ msgstr "Oder wechseln Sie zurück in den *Attended Boot*-Modus:"
 msgid "User Management"
 msgstr "Benutzerverwaltung"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr "Rollen"
-
-#: ../nethsm/_tutorial.rst:5
-msgid ""
-"Separation of duties can be implemented by using different Roles. Each "
-"user account configured on the NetHSM has one of the following Roles "
-"assigned to it. Following is a high-level description of the operations "
-"allowed by each Role. For endpoint-specific details please refer to the "
-"REST API documentation."
-msgstr ""
-"Die Aufgabentrennung kann durch die Verwendung verschiedener Rollen "
-"realisiert werden. Jedem auf dem NetHSM konfigurierten Benutzerkonto ist "
-"eine der folgenden Rollen zugewiesen. Nachfolgend finden Sie eine "
-"allgemeine Beschreibung der von jeder Rolle erlaubten Operationen. "
-"Endpunktspezifische Details entnehmen Sie bitte der REST-API-"
-"Dokumentation."
-
-#: ../nethsm/_tutorial.rst:11
-msgid ""
-"*R-Administrator*: A user account with this Role has access to all "
-"operations provided by the REST API, except for key usage operations, "
-"i.e. message signing and decryption."
-msgstr ""
-"*R-Verwalter*: Ein Benutzerkonto mit dieser Rolle hat Zugriff auf alle "
-"von der REST-API bereitgestellten Operationen, mit Ausnahme der "
-"Schlüsselverwendungsoperationen, d. h. der Signierung und Entschlüsselung"
-" von Nachrichten."
-
-#: ../nethsm/_tutorial.rst:14
-msgid ""
-"*R-Operator*: A user account with this Role has access to all key usage "
-"operations, a read-only subset of key management operations and user "
-"management operations allowing changes to their own account only."
-msgstr ""
-"*R-Operator*: Ein Benutzerkonto mit dieser Rolle hat Zugriff auf alle "
-"Schlüsselverwendungsvorgänge, eine schreibgeschützte Teilmenge der "
-"Schlüsselverwaltungsvorgänge und Benutzerverwaltungsvorgänge, die nur "
-"Änderungen am eigenen Konto zulassen."
-
-#: ../nethsm/_tutorial.rst:18
-msgid ""
-"*R-Metrics*: A user account with this Role has access to read-only "
-"metrics operations only."
-msgstr ""
-"*R-Metrics*: Ein Benutzerkonto mit dieser Rolle hat nur Zugriff auf "
-"schreibgeschützte Metrikoperationen."
-
-#: ../nethsm/_tutorial.rst:20
-msgid ""
-"*R-Backup*: A user account with this Role has access to the operations "
-"required to initiate a system backup only."
-msgstr ""
-"*R-Backup*: Ein Benutzerkonto mit dieser Rolle hat nur Zugriff auf die "
-"Vorgänge, die zum Einleiten einer Systemsicherung erforderlich sind."
-
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr ""
-"Hinweis: In einer zukünftigen Version können weitere Rollen eingeführt "
-"werden."
-
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
 msgstr "Erstellen eines Benutzers"
@@ -3614,7 +3546,7 @@ msgstr ""
 "Sie, dass der NetHSM eine zufällige Benutzer-ID vergibt, wenn wir diese "
 "nicht angeben."
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:127
+#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:100
 msgid "Key Management"
 msgstr "Schlüsselverwaltung"
 
@@ -3709,7 +3641,7 @@ msgstr ""
 "Um den Schlüssel mit OpenSSL verwenden zu können, exportieren wir ihn als"
 " PEM-Datei und speichern ihn als public.pem:"
 
-#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:198
+#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:158
 msgid ""
 "We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
@@ -3718,11 +3650,11 @@ msgstr ""
 "Verschlüsselung oder Signaturprüfung verwenden (wie im nächsten Abschnitt"
 " beschrieben):"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:241
+#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:199
 msgid "Key Certificates"
 msgstr "Schlüssel-Zertifikate"
 
-#: ../nethsm/_tutorial.rst:5 ../nethsm/cli.rst:243
+#: ../nethsm/_tutorial.rst:5 ../nethsm/cli.rst:201
 msgid ""
 "It is possible to set and query certificates for the keys stored on a "
 "NetHSM instance:"
@@ -3765,7 +3697,7 @@ msgstr ""
 msgid "Now we can use the NetHSM to decrypt the data:"
 msgstr "Jetzt können wir den NetHSM zum Entschlüsseln der Daten verwenden:"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/pkcs11.rst:42
+#: ../nethsm/_tutorial.rst:3 ../nethsm/pkcs11.rst:49
 msgid "Signing"
 msgstr "Signieren"
 
@@ -3777,11 +3709,11 @@ msgstr ""
 "Auf ähnliche Weise können wir Daten mit dem Schlüssel auf dem NetHSM "
 "signieren.  Für RSA und ECDSA müssen wir zuerst einen Digest berechnen:"
 
-#: ../nethsm/_tutorial.rst:16 ../nethsm/cli.rst:299
+#: ../nethsm/_tutorial.rst:16 ../nethsm/cli.rst:253
 msgid "Then we can create a signature from this digest using the NetHSM:"
 msgstr "Dann können wir mit dem NetHSM eine Signatur aus diesem Digest erstellen:"
 
-#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:307
+#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:261
 msgid "And then use OpenSSL to verify the signature:"
 msgstr "Und dann verwenden Sie OpenSSL, um die Signatur zu überprüfen:"
 
@@ -3868,25 +3800,15 @@ msgstr ""
 "``--no-verify-tls`` für ``nitropy`` verwenden, um die Zertifikatsprüfung "
 "zu überspringen."
 
-#: ../nethsm/cli.rst:20
-msgid ""
-"First set the value of $NETHSM_HOST to the IP address or URL of your "
-"NetHSM. Our demo server can be reached at "
-"https://nethsmdemo.nitrokey.com/"
-msgstr ""
-"Setzen Sie zunächst den Wert von $NETHSM_HOST auf die IP-Adresse oder URL"
-" Ihres NetHSM. Unser Demoserver ist unter "
-"https://nethsmdemo.nitrokey.com/ zu erreichen."
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr "Geräteinformationen & Status"
 
-#: ../nethsm/cli.rst:48
+#: ../nethsm/cli.rst:44
 msgid "Provisioning"
 msgstr "Bereitstellung"
 
-#: ../nethsm/cli.rst:50
+#: ../nethsm/cli.rst:46
 msgid ""
 "A new NetHSM needs to be provisioned first with passphrases and the "
 "current time. The Admin Passphrase is the Administrator’s passphrase, "
@@ -3899,11 +3821,78 @@ msgstr ""
 "wird verwendet, um den vertraulichen Datenspeicher des NetHSM zu "
 "verschlüsseln."
 
-#: ../nethsm/cli.rst:109
+#: ../nethsm/cli.rst:69
+msgid "Turn `Unattended Boot` mode on:"
+msgstr "Schalten Sie den Modus \"Unattended Boot\" ein:"
+
+#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr "Rollen"
+
+#: ../nethsm/_tutorial.rst:5
+msgid ""
+"Separation of duties can be implemented by using different Roles. Each "
+"user account configured on the NetHSM has one of the following Roles "
+"assigned to it. Following is a high-level description of the operations "
+"allowed by each Role. For endpoint-specific details please refer to the "
+"REST API documentation."
+msgstr ""
+"Die Aufgabentrennung kann durch die Verwendung verschiedener Rollen "
+"realisiert werden. Jedem auf dem NetHSM konfigurierten Benutzerkonto ist "
+"eine der folgenden Rollen zugewiesen. Nachfolgend finden Sie eine "
+"allgemeine Beschreibung der von jeder Rolle erlaubten Operationen. "
+"Endpunktspezifische Details entnehmen Sie bitte der REST-API-"
+"Dokumentation."
+
+#: ../nethsm/_tutorial.rst:11
+msgid ""
+"*R-Administrator*: A user account with this Role has access to all "
+"operations provided by the REST API, except for key usage operations, "
+"i.e. message signing and decryption."
+msgstr ""
+"*R-Verwalter*: Ein Benutzerkonto mit dieser Rolle hat Zugriff auf alle "
+"von der REST-API bereitgestellten Operationen, mit Ausnahme der "
+"Schlüsselverwendungsoperationen, d. h. der Signierung und Entschlüsselung"
+" von Nachrichten."
+
+#: ../nethsm/_tutorial.rst:14
+msgid ""
+"*R-Operator*: A user account with this Role has access to all key usage "
+"operations, a read-only subset of key management operations and user "
+"management operations allowing changes to their own account only."
+msgstr ""
+"*R-Operator*: Ein Benutzerkonto mit dieser Rolle hat Zugriff auf alle "
+"Schlüsselverwendungsvorgänge, eine schreibgeschützte Teilmenge der "
+"Schlüsselverwaltungsvorgänge und Benutzerverwaltungsvorgänge, die nur "
+"Änderungen am eigenen Konto zulassen."
+
+#: ../nethsm/_tutorial.rst:18
+msgid ""
+"*R-Metrics*: A user account with this Role has access to read-only "
+"metrics operations only."
+msgstr ""
+"*R-Metrics*: Ein Benutzerkonto mit dieser Rolle hat nur Zugriff auf "
+"schreibgeschützte Metrikoperationen."
+
+#: ../nethsm/_tutorial.rst:20
+msgid ""
+"*R-Backup*: A user account with this Role has access to the operations "
+"required to initiate a system backup only."
+msgstr ""
+"*R-Backup*: Ein Benutzerkonto mit dieser Rolle hat nur Zugriff auf die "
+"Vorgänge, die zum Einleiten einer Systemsicherung erforderlich sind."
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
+msgstr ""
+"Hinweis: In einer zukünftigen Version können weitere Rollen eingeführt "
+"werden."
+
+#: ../nethsm/cli.rst:85
 msgid "**Creating & Deleting Users**"
 msgstr "**Anlegen & Löschen von Benutzern**"
 
-#: ../nethsm/cli.rst:112
+#: ../nethsm/cli.rst:87
 msgid ""
 "Now create a new user with the Operator role that can be used to sign and"
 " decrypt data. Note that the NetHSM assigns a random user ID if we don’t "
@@ -3914,7 +3903,7 @@ msgstr ""
 "Sie, dass der NetHSM eine zufällige Benutzer-ID zuweist, wenn wir sie "
 "nicht angeben."
 
-#: ../nethsm/cli.rst:271 ../nethsm/dev-and-test.rst:23
+#: ../nethsm/cli.rst:227 ../nethsm/dev-and-test.rst:23
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
@@ -3924,7 +3913,7 @@ msgstr ""
 "OpenSSL verschlüsseln. (public.pem ist die öffentliche Schlüsseldatei, "
 "die wir im Abschnitt Schlüsseldetails anzeigen erstellt haben)."
 
-#: ../nethsm/cli.rst:287
+#: ../nethsm/cli.rst:241
 msgid ""
 "Similarly, we can sign data using the key on the NetHSM. For RSA and "
 "ECDSA, we have to calculate a digest first:"
@@ -3932,11 +3921,11 @@ msgstr ""
 "Auf ähnliche Weise können wir Daten mit dem Schlüssel auf dem NetHSM "
 "signieren. Für RSA und ECDSA müssen wir zuerst einen Digest berechnen:"
 
-#: ../nethsm/cli.rst:320
+#: ../nethsm/cli.rst:272
 msgid "Creating Backups"
 msgstr "Erstellen von Backups"
 
-#: ../nethsm/cli.rst:322
+#: ../nethsm/cli.rst:274
 msgid ""
 "It is possible to create a backup of the NetHSM that captures both the "
 "configuration and the stored keys. In order to create a backup, you first"
@@ -3947,29 +3936,29 @@ msgstr ""
 " zu erstellen, müssen Sie zunächst eine Backup-Passphrase festlegen, die "
 "zur Verschlüsselung der Backup-Datei verwendet wird:"
 
-#: ../nethsm/cli.rst:334
+#: ../nethsm/cli.rst:284
 msgid "Now you have to create a user with the R-Backup role:"
 msgstr "Nun müssen Sie einen Benutzer mit der Rolle R-Backup anlegen:"
 
-#: ../nethsm/cli.rst:346
+#: ../nethsm/cli.rst:294
 msgid "Then can you generate the backup and write it to a file:"
 msgstr "Dann können Sie die Sicherung erzeugen und in eine Datei schreiben:"
 
-#: ../nethsm/cli.rst:359
+#: ../nethsm/cli.rst:305
 msgid "Restoring Backups"
 msgstr "Wiederherstellung von Backups"
 
-#: ../nethsm/cli.rst:361
+#: ../nethsm/cli.rst:307
 msgid "This backup file can be restored on an unprovisioned NetHSM instance:"
 msgstr ""
 "Diese Sicherungsdatei kann auf einer unprovisionierten NetHSM-Instanz "
 "wiederhergestellt werden:"
 
-#: ../nethsm/cli.rst:374
+#: ../nethsm/cli.rst:318
 msgid "Updating NetHSM"
 msgstr "NetHSM aktualisieren"
 
-#: ../nethsm/cli.rst:378
+#: ../nethsm/cli.rst:322
 msgid "Data loss may occur due to the installation of a beta update!"
 msgstr ""
 "Durch die Installation eines Beta-Updates kann es zu Datenverlusten "
@@ -4002,11 +3991,12 @@ msgstr ""
 "starten, benötigen Sie also einen Linux-Host, auf dem /dev/kvm verfügbar "
 "ist. Führen Sie diesen Befehl aus:"
 
-#: ../nethsm/gettingstarted.rst:2 ../nextbox/gettingstarted.rst:2
-#: ../nitropad/qubes/index.rst:7 ../nitropad/ubuntu/index.rst:7
-#: ../nitropc/debian/index.rst:14 ../nitropc/qubes/index.rst:14
-#: ../nitropc/ubuntu/index.rst:14 ../nitrophone/index.rst:7
-#: ../nitrowall/index.rst:5 ../pro/windows/index.rst:14
+#: ../nethsm/gettingstarted.rst:2 ../nethsm/index.rst:5
+#: ../nextbox/gettingstarted.rst:2 ../nitropad/qubes/index.rst:7
+#: ../nitropad/ubuntu/index.rst:7 ../nitropc/debian/index.rst:14
+#: ../nitropc/qubes/index.rst:14 ../nitropc/ubuntu/index.rst:14
+#: ../nitrophone/index.rst:7 ../nitrowall/index.rst:5
+#: ../pro/windows/index.rst:14
 msgid "Getting Started"
 msgstr "Erste Schritte"
 
@@ -4034,7 +4024,7 @@ msgstr ""
 "Kommandozeilen-Tool <cli.html>`_. Alternativ können auch die `REST API "
 "<api.html>`_ und der `PKCS#11-Treiber <pkcs11.html>`_ verwendet werden."
 
-#: ../nethsm/index.rst:13
+#: ../nethsm/index.rst:17
 msgid "REST API Index"
 msgstr "REST-API-Index"
 
@@ -4042,7 +4032,7 @@ msgstr "REST-API-Index"
 msgid "NetHSM"
 msgstr "NetHSM"
 
-#: ../nethsm/index.rst:4
+#: ../nethsm/index.rst:8
 msgid ""
 "Your NetHSM has been delivered in a sealed packaging. `Verify the sealing"
 " <sealed-hardware.html>`_ before unpacking to ensure the device has not "
@@ -4052,7 +4042,7 @@ msgstr ""
 "Sie die Versiegelung <sealed-hardware.html>`_ vor dem Auspacken, um "
 "sicherzustellen, dass das Gerät nicht manipuliert wurde."
 
-#: ../nethsm/index.rst:6
+#: ../nethsm/index.rst:10
 msgid ""
 "Connect the NetHSM's BMC ETH port with the network or your local "
 "computer. Set the BMC password."
@@ -4060,7 +4050,7 @@ msgstr ""
 "Verbinden Sie den BMC-ETH-Anschluss des NetHSM's mit dem Netzwerk oder "
 "Ihrem lokalen Computer. Legen Sie das BMC-Passwort fest."
 
-#: ../nethsm/index.rst:8
+#: ../nethsm/index.rst:12
 msgid ""
 "Connect the NetHSM's ETH port with the network. Don't use the BMC ETH "
 "port because it allows wider system access. The NetHSM is available at "
@@ -4070,7 +4060,7 @@ msgstr ""
 "nicht den BMC-ETH-Port, da dieser einen breiteren Systemzugriff "
 "ermöglicht. Der NetHSM ist unter der Adresse 192.168.1.1 erreichbar."
 
-#: ../nethsm/index.rst:10
+#: ../nethsm/index.rst:14
 msgid ""
 "Initialize the NetHSM using `nitropy command line tool <cli.html>`_. "
 "Alternatively, the `REST API <api.html>`_ can be used."
@@ -4133,11 +4123,11 @@ msgstr "Zugriff auf einen NetHSM über den PKCS#11-Treiber"
 
 #: ../nethsm/pkcs11.rst:10
 msgid ""
-"Download the PKCS#11 driver <https://github.com/Nitrokey/nethsm-pkcs11>_ "
-"for NetHSM."
+"Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`_ for NetHSM."
 msgstr ""
-"Laden Sie den PKCS#11-Treiber <https://github.com/Nitrokey/nethsm-"
-"pkcs11>_ für NetHSM herunter."
+"Laden Sie den `PKCS#11-Treiber <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`_ für NetHSM herunter."
 
 #: ../nethsm/pkcs11.rst:11
 msgid ""
@@ -4151,19 +4141,33 @@ msgstr ""
 "Anwendung ausgeführt wird."
 
 #: ../nethsm/pkcs11.rst:16
-msgid "Decrypting"
-msgstr "Entschlüsseln"
+msgid "Encrypting & Decrypting"
+msgstr "Verschlüsseln & Entschlüsseln"
 
 #: ../nethsm/pkcs11.rst:18
 msgid ""
 "After creating a key (here: ID 42) with the according mechanism, you can "
-"use it for decryption:"
+"use it for encryption and decryption, but first you should create the "
+"key:"
 msgstr ""
 "Nachdem Sie einen Schlüssel (hier: ID 42) mit dem entsprechenden "
-"Mechanismus erzeugt haben, können Sie diesen zur Entschlüsselung "
-"verwenden:"
+"Mechanismus erstellt haben, können Sie ihn für die Ver- und "
+"Entschlüsselung verwenden, aber zuerst sollten Sie den Schlüssel "
+"erstellen:"
 
-#: ../nethsm/pkcs11.rst:44
+#: ../nethsm/pkcs11.rst:35
+msgid "Now you can encrypt:"
+msgstr "Jetzt können Sie verschlüsseln:"
+
+#: ../nethsm/pkcs11.rst:42
+msgid "... And decrypt:"
+msgstr "... Und entschlüsseln:"
+
+#: ../nethsm/pkcs11.rst:51
+msgid "First create the key again:"
+msgstr "Erstellen Sie zunächst den Schlüssel neu:"
+
+#: ../nethsm/pkcs11.rst:67
 msgid ""
 "After creating a key (here: ID 23) with the according mechanism, you can "
 "use it for signing:"
@@ -4194,7 +4198,7 @@ msgstr ""
 "\"adminadmin\", Freigabepasswort \"unlockunlock\"."
 
 #: ../nethsm/sealed-hardware.rst:2 ../nitropad/sealed-hardware.rst:2
-#: ../nitropc/sealed-hardware.rst:2
+#: ../nitropc/sealed-hardware.rst:2 ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr "Versiegelte Hardware überprüfen"
 
@@ -4221,7 +4225,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Hier sind einige Bilder, die zeigen, wie wir eine NetHSM einpacken:"
 
-#: ../nethsm/sealed-hardware.rst:14
+#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr "Hardware Versiegelung"
 
@@ -10815,6 +10819,19 @@ msgstr ""
 "Installieren Sie nach Abschluss der Installation die erforderlichen "
 "Updates. Gehen Sie dazu zu System → Firmware → Updates."
 
+#: ../nitrowall/sealed-hardware.rst:4
+msgid ""
+"Your NitroWall has been delivered in a sealed packaging and sealed "
+"screws. We will send you a picture of your NitroWall before shipping. "
+"Please compare the imaged to your packaged NitroWall. If you notice any "
+"changes, please contact us to arrange further action."
+msgstr ""
+"Ihre NitroWall wurde in einer versiegelten Verpackung und mit versiegelten "
+"Schrauben geliefert. Wir senden Ihnen vor dem Versand ein Bild Ihrer "
+"NitroWall. Bitte vergleichen Sie das Bild mit Ihrer verpackten NitroWall. "
+"Sollten Sie Veränderungen feststellen, kontaktieren Sie uns bitte, um "
+"weitere Schritte zu vereinbaren."
+
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
 msgstr "Zwei-Faktor-Authentifizierung für Google"
@@ -11054,8 +11071,8 @@ msgstr ""
 #: ../pro/ecc.rst:26
 msgid "You can read Nitrokey’s OpenPGP Card version via ``gpg2 --card-status``:"
 msgstr ""
-"Sie können die OpenPGP-Kartenversion von Nitrokey über ``gpg2 --card-status``"
-" lesen:"
+"Sie können die OpenPGP-Kartenversion von Nitrokey über ``gpg2 --card-"
+"status`` lesen:"
 
 #: ../pro/ecc.rst:36
 msgid ""
@@ -15895,8 +15912,8 @@ msgid ""
 "Old versions (below 1.2.5) of the firmware might need special treatment "
 "(see below). Usage -----"
 msgstr ""
-"Ältere Versionen (unter 1.2.5) der Firmware benötigen möglicherweise eine "
-"Sonderbehandlung (siehe unten). Verwendung -----"
+"Ältere Versionen (unter 1.2.5) der Firmware benötigen möglicherweise eine"
+" Sonderbehandlung (siehe unten). Verwendung -----"
 
 #: ../start/factory-reset.rst:15 ../start/multiple-identities.rst:17
 msgid ""
@@ -15941,8 +15958,8 @@ msgid ""
 "It deletes all keys, pins, configurations and meta data associated with "
 "the respective identity."
 msgstr ""
-"Es werden alle Schlüssel, Pins, Konfigurationen und Metadaten, die mit der "
-"jeweiligen Identität verbunden sind, gelöscht."
+"Es werden alle Schlüssel, Pins, Konfigurationen und Metadaten, die mit "
+"der jeweiligen Identität verbunden sind, gelöscht."
 
 #: ../start/factory-reset.rst:61
 msgid "Reset code"
@@ -15954,18 +15971,18 @@ msgid ""
 "enable the reset of the User PIN (not the Admin PIN). For older Firmware "
 "it is recommended since it is needed to reset the device (see below)"
 msgstr ""
-"Dieser Schritt ist bei neuer Firmware optional.. Sie können einen Reset-Code "
-"hinzufügen, der das Zurücksetzen der Benutzer-PIN (nicht der Admin-PIN) "
-"ermöglicht. Bei älterer Firmware wird dies empfohlen, da es zum Zurücksetzen "
-"des Geräts erforderlich ist (siehe unten)."
+"Dieser Schritt ist bei neuer Firmware optional.. Sie können einen Reset-"
+"Code hinzufügen, der das Zurücksetzen der Benutzer-PIN (nicht der Admin-"
+"PIN) ermöglicht. Bei älterer Firmware wird dies empfohlen, da es zum "
+"Zurücksetzen des Geräts erforderlich ist (siehe unten)."
 
 #: ../start/factory-reset.rst:66
 msgid ""
 "`Checkout the documentation here <http://www.fsij.org/doc-gnuk/gnuk-"
 "passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_."
 msgstr ""
-"`Sehen Sie sich die Dokumentation hier an <http://www.fsij.org/doc-gnuk/gnuk-"
-"passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_."
+"`Sehen Sie sich die Dokumentation hier an <http://www.fsij.org/doc-gnuk"
+"/gnuk-passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_."
 
 #: ../start/factory-reset.rst:72
 msgid "Firmware below 1.2.5"
@@ -15983,9 +16000,9 @@ msgid ""
 "anymore!"
 msgstr ""
 "Wenn und nur wenn das Gerät nicht gesperrt ist (PIN wurde nicht zu oft "
-"falsch eingegeben), können Sie die gleiche Prozedur wie bei neuerer Firmware "
-"anwenden (siehe oben). Sie benötigen den Reset-Code, um das Gerät zu "
-"entsperren, oder Sie können das Gerät nicht mehr verwenden!"
+"falsch eingegeben), können Sie die gleiche Prozedur wie bei neuerer "
+"Firmware anwenden (siehe oben). Sie benötigen den Reset-Code, um das "
+"Gerät zu entsperren, oder Sie können das Gerät nicht mehr verwenden!"
 
 #: ../start/factory-reset.rst:79
 msgid "Nitrokey Start firmware 1.0:"
@@ -15998,11 +16015,11 @@ msgid ""
 "supports-firmware-upgrade/>`_ beforehand! In case of a blocked device it "
 "enables you to perform a firmware update which resets the device."
 msgstr ""
-"Um einen Nitrokey Start 1.0 zurücksetzen zu können, müssen Sie vorher einen "
-"öffentlichen Schlüssel für `Firmware-Updates <http://no-passwd.net/askbot/"
-"question/34/how-gnuk-supports-firmware-upgrade/>`_ definieren! Im Falle "
-"eines gesperrten Geräts können Sie damit ein Firmware-Update durchführen, "
-"das das Gerät zurücksetzt."
+"Um einen Nitrokey Start 1.0 zurücksetzen zu können, müssen Sie vorher "
+"einen öffentlichen Schlüssel für `Firmware-Updates <http://no-"
+"passwd.net/askbot/question/34/how-gnuk-supports-firmware-upgrade/>`_ "
+"definieren! Im Falle eines gesperrten Geräts können Sie damit ein "
+"Firmware-Update durchführen, das das Gerät zurücksetzt."
 
 #: ../start/faq.rst:2
 msgid "Nitrokey Start FAQ"
@@ -21079,3 +21096,27 @@ msgstr ""
 #~ "Befehl -> 910 Bytes pro Sekunde *"
 #~ " 128 bit AES, 240 Bytes pro "
 #~ "Befehl -> 930 Bytes pro Sekunde"
+
+#~ msgid "Decrypting"
+#~ msgstr "Entschlüsseln"
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the NETHSM_HOST environment variable.  You "
+#~ "can use the public NsetupetHSM demo "
+#~ "instance nethsmdemo.nitrokey.com or run a "
+#~ "local demo instance using the NetHSM "
+#~ "docker image, see `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ section of"
+#~ " the NetHSM documentation."
+#~ msgstr ""
+#~ "Bevor wir beginnen, speichern wir den"
+#~ " Hostnamen der NetHSM-Instanz in der"
+#~ " Umgebungsvariablen NETHSM_HOST.  Sie können "
+#~ "die öffentliche NsetupetHSM-Demoinstanz "
+#~ "nethsmdemo.nitrokey.com verwenden oder eine "
+#~ "lokale Demoinstanz mit dem NetHSM-"
+#~ "Docker-Image ausführen, siehe `Docker Hub"
+#~ " <https://hub.docker.com/r/nitrokey/nethsm>`_ Abschnitt "
+#~ "der NetHSM-Dokumentation."

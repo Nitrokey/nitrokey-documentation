@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 12:38+0200\n"
-"PO-Revision-Date: 2022-05-23 12:38+0000\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
+"PO-Revision-Date: 2022-05-25 16:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/hu/>\n"
@@ -3363,35 +3363,20 @@ msgstr "NetHSM elérése a REST API használatával"
 msgid ""
 "This tutorial demonstrates how to access the NetHMS via REST API. The "
 "interface is documented `here "
-"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
-" ,and its specification is available as `RAML "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_,"
+" and its specification is available as `RAML "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ and as "
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
 "Ez a bemutató azt mutatja be, hogyan lehet a NetHMS-t REST API-n "
 "keresztül elérni. Az interfész dokumentációja `itt található "
-"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
-" ,és a specifikációja elérhető `RAML "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_,"
+" és a specifikációja elérhető `RAML "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ és `OpenAPI "
 "(Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_ "
 "formátumban."
-
-#: ../nethsm/_tutorial.rst:2
-msgid ""
-"Before we start, we store the host name of the NetHSM instance in the "
-"NETHSM_HOST environment variable.  You can use the public NetHSM demo "
-"instance nethsmdemo.nitrokey.com or run a local demo instance using the "
-"NetHSM docker image, see the `Development and Testing </index.html"
-"#development-and-testing>`_ section of the NetHSM documentation."
-msgstr ""
-"Mielőtt elkezdenénk, a NetHSM példány állomásnevét a NETHSM_HOST "
-"környezeti változóban tároljuk.  Használhatjuk a nyilvános NetHSM "
-"demópéldányt nethsmdemo.nitrokey.com, vagy futtathatunk egy helyi "
-"demópéldányt a NetHSM docker image segítségével, lásd a NetHSM "
-"dokumentáció `Development and Testing </index.html#development-and-"
-"testing>`_ szakaszát."
 
 #: ../nethsm/api.rst:18
 msgid ""
@@ -3403,11 +3388,21 @@ msgstr ""
 "például a Docker-kép használatával, akkor a curl-hez a --insecure/-k "
 "kapcsolót kell használnia a tanúsítvány ellenőrzésének kihagyásához."
 
+#: ../nethsm/api.rst:24 ../nethsm/cli.rst:20
+msgid ""
+"First set the value of $NETHSM_HOST to the IP address or URL of your "
+"NetHSM. Our demo server can be reached at "
+"https://nethsmdemo.nitrokey.com/"
+msgstr ""
+"Először állítsa be a $NETHSM_HOST értékét a NetHSM IP-címére vagy URL "
+"címére. A mi demó szerverünk a https://nethsmdemo.nitrokey.com/ címen "
+"érhető el."
+
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr "Először is nézzük meg, hogy mi van itt:"
 
-#: ../nethsm/api.rst:43
+#: ../nethsm/api.rst:46
 msgid ""
 "The -i/--include option causes curl to print the HTTP status code and the"
 " response headers.  The -w '\\n'/--write-out '\\n' option adds a newline "
@@ -3438,7 +3433,7 @@ msgstr ""
 "szuperfelhasználója. A *Unlock Passphrase* a NetHSM bizalmas "
 "adattárolójának titkosítására szolgál."
 
-#: ../nethsm/_tutorial.rst:12 ../nethsm/cli.rst:54
+#: ../nethsm/_tutorial.rst:12 ../nethsm/cli.rst:50
 msgid ""
 "The NetHSM demo instance at nethsmdemo.nitrokey.com is already "
 "provisioned."
@@ -3491,70 +3486,6 @@ msgstr "Vagy váltson vissza *Attended Boot* üzemmódba:"
 msgid "User Management"
 msgstr "Felhasználó kezelése"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr "Szerepek"
-
-#: ../nethsm/_tutorial.rst:5
-msgid ""
-"Separation of duties can be implemented by using different Roles. Each "
-"user account configured on the NetHSM has one of the following Roles "
-"assigned to it. Following is a high-level description of the operations "
-"allowed by each Role. For endpoint-specific details please refer to the "
-"REST API documentation."
-msgstr ""
-"A feladatok szétválasztása különböző szerepkörök használatával "
-"valósítható meg. A NetHSM-en konfigurált minden felhasználói fiókhoz a "
-"következő szerepkörök egyike tartozik. Az alábbiakban az egyes "
-"szerepkörök által engedélyezett műveletek magas szintű leírása "
-"következik. A végpont-specifikus részleteket lásd a REST API "
-"dokumentációban."
-
-#: ../nethsm/_tutorial.rst:11
-msgid ""
-"*R-Administrator*: A user account with this Role has access to all "
-"operations provided by the REST API, except for key usage operations, "
-"i.e. message signing and decryption."
-msgstr ""
-"*R-adminisztrátor*: A REST API által biztosított összes művelethez "
-"hozzáféréssel rendelkezik, kivéve a kulcshasználati műveleteket, azaz az "
-"üzenetek aláírását és visszafejtését."
-
-#: ../nethsm/_tutorial.rst:14
-msgid ""
-"*R-Operator*: A user account with this Role has access to all key usage "
-"operations, a read-only subset of key management operations and user "
-"management operations allowing changes to their own account only."
-msgstr ""
-"*R-Operátor*: Az ezzel a szereppel rendelkező felhasználói fiók "
-"hozzáféréssel rendelkezik az összes kulcshasználati művelethez, a "
-"kulcskezelési műveletek csak olvasható részhalmazához és a "
-"felhasználókezelési műveletekhez, amelyek csak a saját fiókjának "
-"módosítását teszik lehetővé."
-
-#: ../nethsm/_tutorial.rst:18
-msgid ""
-"*R-Metrics*: A user account with this Role has access to read-only "
-"metrics operations only."
-msgstr ""
-"*R-Metrics*: Az ezzel a szerepkörrel rendelkező felhasználói fiók csak "
-"olvasható metrikai műveletekhez rendelkezik hozzáféréssel."
-
-#: ../nethsm/_tutorial.rst:20
-msgid ""
-"*R-Backup*: A user account with this Role has access to the operations "
-"required to initiate a system backup only."
-msgstr ""
-"*R-Backup*: Az ezzel a szerepkörrel rendelkező felhasználói fiók csak a "
-"rendszer biztonsági mentésének kezdeményezéséhez szükséges műveletekhez "
-"fér hozzá."
-
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr ""
-"Megjegyzés: A későbbi kiadásokban további szerepkörök is bevezetésre "
-"kerülhetnek."
-
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
 msgstr "Felhasználó létrehozása"
@@ -3570,7 +3501,7 @@ msgstr ""
 " a NetHSM véletlenszerű felhasználói azonosítót rendel hozzá, ha nem "
 "adjuk meg."
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:127
+#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:100
 msgid "Key Management"
 msgstr "Kulcskezelés"
 
@@ -3662,7 +3593,7 @@ msgstr ""
 "Ahhoz, hogy a kulcsot az OpenSSL-lel használhassuk, PEM fájlként "
 "exportáljuk és public.pem néven tároljuk:"
 
-#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:198
+#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:158
 msgid ""
 "We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
@@ -3671,11 +3602,11 @@ msgstr ""
 "titkosításra vagy aláírás-ellenőrzésre (a következő szakaszban leírtak "
 "szerint):"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:241
+#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:199
 msgid "Key Certificates"
 msgstr "Kulcsfontosságú tanúsítványok"
 
-#: ../nethsm/_tutorial.rst:5 ../nethsm/cli.rst:243
+#: ../nethsm/_tutorial.rst:5 ../nethsm/cli.rst:201
 msgid ""
 "It is possible to set and query certificates for the keys stored on a "
 "NetHSM instance:"
@@ -3717,7 +3648,7 @@ msgstr ""
 msgid "Now we can use the NetHSM to decrypt the data:"
 msgstr "Most már használhatjuk a NetHSM-et az adatok visszafejtéséhez:"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/pkcs11.rst:42
+#: ../nethsm/_tutorial.rst:3 ../nethsm/pkcs11.rst:49
 msgid "Signing"
 msgstr "Aláírás"
 
@@ -3730,13 +3661,13 @@ msgstr ""
 "segítségével.  Az RSA és az ECDSA esetében először ki kell számolnunk egy"
 " kivonatot:"
 
-#: ../nethsm/_tutorial.rst:16 ../nethsm/cli.rst:299
+#: ../nethsm/_tutorial.rst:16 ../nethsm/cli.rst:253
 msgid "Then we can create a signature from this digest using the NetHSM:"
 msgstr ""
 "Ezután a NetHSM segítségével létrehozhatunk egy aláírást ebből a "
 "kivonatból:"
 
-#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:307
+#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:261
 msgid "And then use OpenSSL to verify the signature:"
 msgstr "Ezután az OpenSSL segítségével ellenőrizze az aláírást:"
 
@@ -3822,25 +3753,15 @@ msgstr ""
 "kell használnia a ``nitropy`` opcióhoz a tanúsítvány ellenőrzésének "
 "kihagyásához."
 
-#: ../nethsm/cli.rst:20
-msgid ""
-"First set the value of $NETHSM_HOST to the IP address or URL of your "
-"NetHSM. Our demo server can be reached at "
-"https://nethsmdemo.nitrokey.com/"
-msgstr ""
-"Először állítsa be a $NETHSM_HOST értékét a NetHSM IP-címére vagy URL "
-"címére. A mi demó szerverünk a https://nethsmdemo.nitrokey.com/ címen "
-"érhető el."
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr "Eszközinformáció & Állapot"
 
-#: ../nethsm/cli.rst:48
+#: ../nethsm/cli.rst:44
 msgid "Provisioning"
 msgstr "Provisioning"
 
-#: ../nethsm/cli.rst:50
+#: ../nethsm/cli.rst:46
 msgid ""
 "A new NetHSM needs to be provisioned first with passphrases and the "
 "current time. The Admin Passphrase is the Administrator’s passphrase, "
@@ -3852,11 +3773,79 @@ msgstr ""
 "szuperfelhasználója. Az Unlock Passphrase a NetHSM bizalmas "
 "adattárolójának titkosítására szolgál."
 
-#: ../nethsm/cli.rst:109
+#: ../nethsm/cli.rst:69
+msgid "Turn `Unattended Boot` mode on:"
+msgstr "Kapcsolja be a \"felügyelet nélküli indítás\" üzemmódot:"
+
+#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr "Szerepek"
+
+#: ../nethsm/_tutorial.rst:5
+msgid ""
+"Separation of duties can be implemented by using different Roles. Each "
+"user account configured on the NetHSM has one of the following Roles "
+"assigned to it. Following is a high-level description of the operations "
+"allowed by each Role. For endpoint-specific details please refer to the "
+"REST API documentation."
+msgstr ""
+"A feladatok szétválasztása különböző szerepkörök használatával "
+"valósítható meg. A NetHSM-en konfigurált minden felhasználói fiókhoz a "
+"következő szerepkörök egyike tartozik. Az alábbiakban az egyes "
+"szerepkörök által engedélyezett műveletek magas szintű leírása "
+"következik. A végpont-specifikus részleteket lásd a REST API "
+"dokumentációban."
+
+#: ../nethsm/_tutorial.rst:11
+msgid ""
+"*R-Administrator*: A user account with this Role has access to all "
+"operations provided by the REST API, except for key usage operations, "
+"i.e. message signing and decryption."
+msgstr ""
+"*R-adminisztrátor*: A REST API által biztosított összes művelethez "
+"hozzáféréssel rendelkezik, kivéve a kulcshasználati műveleteket, azaz az "
+"üzenetek aláírását és visszafejtését."
+
+#: ../nethsm/_tutorial.rst:14
+msgid ""
+"*R-Operator*: A user account with this Role has access to all key usage "
+"operations, a read-only subset of key management operations and user "
+"management operations allowing changes to their own account only."
+msgstr ""
+"*R-Operátor*: Az ezzel a szereppel rendelkező felhasználói fiók "
+"hozzáféréssel rendelkezik az összes kulcshasználati művelethez, a "
+"kulcskezelési műveletek csak olvasható részhalmazához és a "
+"felhasználókezelési műveletekhez, amelyek csak a saját fiókjának "
+"módosítását teszik lehetővé."
+
+#: ../nethsm/_tutorial.rst:18
+msgid ""
+"*R-Metrics*: A user account with this Role has access to read-only "
+"metrics operations only."
+msgstr ""
+"*R-Metrics*: Az ezzel a szerepkörrel rendelkező felhasználói fiók csak "
+"olvasható metrikai műveletekhez rendelkezik hozzáféréssel."
+
+#: ../nethsm/_tutorial.rst:20
+msgid ""
+"*R-Backup*: A user account with this Role has access to the operations "
+"required to initiate a system backup only."
+msgstr ""
+"*R-Backup*: Az ezzel a szerepkörrel rendelkező felhasználói fiók csak a "
+"rendszer biztonsági mentésének kezdeményezéséhez szükséges műveletekhez "
+"fér hozzá."
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
+msgstr ""
+"Megjegyzés: A későbbi kiadásokban további szerepkörök is bevezetésre "
+"kerülhetnek."
+
+#: ../nethsm/cli.rst:85
 msgid "**Creating & Deleting Users**"
 msgstr "** Felhasználók létrehozása és törlése**"
 
-#: ../nethsm/cli.rst:112
+#: ../nethsm/cli.rst:87
 msgid ""
 "Now create a new user with the Operator role that can be used to sign and"
 " decrypt data. Note that the NetHSM assigns a random user ID if we don’t "
@@ -3867,7 +3856,7 @@ msgstr ""
 "a NetHSM véletlenszerű felhasználói azonosítót rendel hozzá, ha nem adjuk"
 " meg."
 
-#: ../nethsm/cli.rst:271 ../nethsm/dev-and-test.rst:23
+#: ../nethsm/cli.rst:227 ../nethsm/dev-and-test.rst:23
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
@@ -3877,7 +3866,7 @@ msgstr ""
 "(A public.pem az a nyilvános kulcsfájl, amelyet a Kulcsadatok "
 "megjelenítése szakaszban hoztunk létre.)"
 
-#: ../nethsm/cli.rst:287
+#: ../nethsm/cli.rst:241
 msgid ""
 "Similarly, we can sign data using the key on the NetHSM. For RSA and "
 "ECDSA, we have to calculate a digest first:"
@@ -3886,11 +3875,11 @@ msgstr ""
 "segítségével. Az RSA és az ECDSA esetében először ki kell számolnunk egy "
 "kivonatot:"
 
-#: ../nethsm/cli.rst:320
+#: ../nethsm/cli.rst:272
 msgid "Creating Backups"
 msgstr "Biztonsági mentések létrehozása"
 
-#: ../nethsm/cli.rst:322
+#: ../nethsm/cli.rst:274
 msgid ""
 "It is possible to create a backup of the NetHSM that captures both the "
 "configuration and the stored keys. In order to create a backup, you first"
@@ -3901,29 +3890,29 @@ msgstr ""
 "létrehozásához először be kell állítania egy biztonsági mentési jelszót, "
 "amely a biztonsági mentési fájl titkosítására szolgál:"
 
-#: ../nethsm/cli.rst:334
+#: ../nethsm/cli.rst:284
 msgid "Now you have to create a user with the R-Backup role:"
 msgstr "Most létre kell hoznia egy felhasználót az R-Backup szerepkörrel:"
 
-#: ../nethsm/cli.rst:346
+#: ../nethsm/cli.rst:294
 msgid "Then can you generate the backup and write it to a file:"
 msgstr "Ezután létrehozhatja a biztonsági másolatot, és írhatja egy fájlba:"
 
-#: ../nethsm/cli.rst:359
+#: ../nethsm/cli.rst:305
 msgid "Restoring Backups"
 msgstr "Biztonsági mentések visszaállítása"
 
-#: ../nethsm/cli.rst:361
+#: ../nethsm/cli.rst:307
 msgid "This backup file can be restored on an unprovisioned NetHSM instance:"
 msgstr ""
 "Ez a biztonsági mentési fájl visszaállítható egy nem rendelkezésre "
 "bocsátott NetHSM-példányon:"
 
-#: ../nethsm/cli.rst:374
+#: ../nethsm/cli.rst:318
 msgid "Updating NetHSM"
 msgstr "A NetHSM frissítése"
 
-#: ../nethsm/cli.rst:378
+#: ../nethsm/cli.rst:322
 msgid "Data loss may occur due to the installation of a beta update!"
 msgstr "A béta frissítés telepítése miatt adatvesztés következhet be!"
 
@@ -3953,11 +3942,12 @@ msgstr ""
 "virtualizálást igényel. Így a NetHSM konténer indításához olyan Linux "
 "hostra van szükség, ahol a /dev/kvm elérhető. Végezze el ezt a parancsot:"
 
-#: ../nethsm/gettingstarted.rst:2 ../nextbox/gettingstarted.rst:2
-#: ../nitropad/qubes/index.rst:7 ../nitropad/ubuntu/index.rst:7
-#: ../nitropc/debian/index.rst:14 ../nitropc/qubes/index.rst:14
-#: ../nitropc/ubuntu/index.rst:14 ../nitrophone/index.rst:7
-#: ../nitrowall/index.rst:5 ../pro/windows/index.rst:14
+#: ../nethsm/gettingstarted.rst:2 ../nethsm/index.rst:5
+#: ../nextbox/gettingstarted.rst:2 ../nitropad/qubes/index.rst:7
+#: ../nitropad/ubuntu/index.rst:7 ../nitropc/debian/index.rst:14
+#: ../nitropc/qubes/index.rst:14 ../nitropc/ubuntu/index.rst:14
+#: ../nitrophone/index.rst:7 ../nitrowall/index.rst:5
+#: ../pro/windows/index.rst:14
 msgid "Getting Started"
 msgstr "Kezdő lépések"
 
@@ -3984,7 +3974,7 @@ msgstr ""
 " Alternatívaként a `REST API <api.html>`_ és a `PKCS#11 driver "
 "<pkcs11.html>`_ is használható."
 
-#: ../nethsm/index.rst:13
+#: ../nethsm/index.rst:17
 msgid "REST API Index"
 msgstr "REST API index"
 
@@ -3992,7 +3982,7 @@ msgstr "REST API index"
 msgid "NetHSM"
 msgstr "NetHSM"
 
-#: ../nethsm/index.rst:4
+#: ../nethsm/index.rst:8
 msgid ""
 "Your NetHSM has been delivered in a sealed packaging. `Verify the sealing"
 " <sealed-hardware.html>`_ before unpacking to ensure the device has not "
@@ -4002,7 +3992,7 @@ msgstr ""
 "lezárást <sealed-hardware.html>`_ a kicsomagolás előtt, hogy "
 "megbizonyosodjon arról, hogy a készüléket nem manipulálták."
 
-#: ../nethsm/index.rst:6
+#: ../nethsm/index.rst:10
 msgid ""
 "Connect the NetHSM's BMC ETH port with the network or your local "
 "computer. Set the BMC password."
@@ -4010,7 +4000,7 @@ msgstr ""
 "Csatlakoztassa a NetHSM'BMC ETH portját a hálózathoz vagy a helyi "
 "számítógéphez. Állítsa be a BMC jelszavát."
 
-#: ../nethsm/index.rst:8
+#: ../nethsm/index.rst:12
 msgid ""
 "Connect the NetHSM's ETH port with the network. Don't use the BMC ETH "
 "port because it allows wider system access. The NetHSM is available at "
@@ -4020,7 +4010,7 @@ msgstr ""
 "portját, mert az szélesebb körű rendszerelérést tesz lehetővé. A NetHSM a"
 " 192.168.1.1.1 címen érhető el."
 
-#: ../nethsm/index.rst:10
+#: ../nethsm/index.rst:14
 msgid ""
 "Initialize the NetHSM using `nitropy command line tool <cli.html>`_. "
 "Alternatively, the `REST API <api.html>`_ can be used."
@@ -4081,11 +4071,11 @@ msgstr "NetHSM elérése a PKCS#11 illesztőprogrammal"
 
 #: ../nethsm/pkcs11.rst:10
 msgid ""
-"Download the PKCS#11 driver <https://github.com/Nitrokey/nethsm-pkcs11>_ "
-"for NetHSM."
+"Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`_ for NetHSM."
 msgstr ""
-"Töltse le a PKCS#11 illesztőprogramot <https://github.com/Nitrokey"
-"/nethsm-pkcs11>_ a NetHSM számára."
+"Töltse le a `PKCS#11 illesztőprogramot <https://github.com/Nitrokey"
+"/nethsm-pkcs11>`_ a NetHSM számára."
 
 #: ../nethsm/pkcs11.rst:11
 msgid ""
@@ -4098,18 +4088,32 @@ msgstr ""
 "`/etc/nitrokey/` vagy az alkalmazás futtatási mappájában."
 
 #: ../nethsm/pkcs11.rst:16
-msgid "Decrypting"
-msgstr "Dekódolás"
+msgid "Encrypting & Decrypting"
+msgstr "Titkosítás és visszafejtés"
 
 #: ../nethsm/pkcs11.rst:18
 msgid ""
 "After creating a key (here: ID 42) with the according mechanism, you can "
-"use it for decryption:"
+"use it for encryption and decryption, but first you should create the "
+"key:"
 msgstr ""
-"Miután a megfelelő mechanizmussal létrehoztunk egy kulcsot (itt: ID 42), "
-"használhatjuk azt a dekódoláshoz:"
+"Miután létrehoztunk egy kulcsot (itt: ID 42) a megfelelő mechanizmussal, "
+"használhatjuk azt titkosításra és visszafejtésre, de először létre kell "
+"hoznunk a kulcsot:"
 
-#: ../nethsm/pkcs11.rst:44
+#: ../nethsm/pkcs11.rst:35
+msgid "Now you can encrypt:"
+msgstr "Most már titkosíthat:"
+
+#: ../nethsm/pkcs11.rst:42
+msgid "... And decrypt:"
+msgstr "... És dekódolja:"
+
+#: ../nethsm/pkcs11.rst:51
+msgid "First create the key again:"
+msgstr "Először hozza létre újra a kulcsot:"
+
+#: ../nethsm/pkcs11.rst:67
 msgid ""
 "After creating a key (here: ID 23) with the according mechanism, you can "
 "use it for signing:"
@@ -4140,7 +4144,7 @@ msgstr ""
 "\"adminadmin\", feloldási jelszó \"unlockunlock\"."
 
 #: ../nethsm/sealed-hardware.rst:2 ../nitropad/sealed-hardware.rst:2
-#: ../nitropc/sealed-hardware.rst:2
+#: ../nitropc/sealed-hardware.rst:2 ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr "Ellenőrizze a lezárt hardvert"
 
@@ -4167,7 +4171,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Íme néhány kép arról, hogyan csomagolunk be egy NetHSM-et:"
 
-#: ../nethsm/sealed-hardware.rst:14
+#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr "Hardver tömítés"
 
@@ -10668,6 +10672,18 @@ msgstr ""
 "A telepítés befejezése után telepítse a szükséges frissítéseket. Ehhez "
 "válassza a Rendszer → Firmware → Frissítések menüpontot."
 
+#: ../nitrowall/sealed-hardware.rst:4
+msgid ""
+"Your NitroWall has been delivered in a sealed packaging and sealed "
+"screws. We will send you a picture of your NitroWall before shipping. "
+"Please compare the imaged to your packaged NitroWall. If you notice any "
+"changes, please contact us to arrange further action."
+msgstr ""
+"A NitroWall-t lezárt csomagolásban és lezárt csavarokkal szállították. A "
+"szállítás előtt küldünk Önnek egy képet a NitroWallról. Kérjük, hasonlítsa "
+"össze a képet az Ön csomagolt NitroWalljával. Ha bármilyen változást észlel, "
+"kérjük, lépjen kapcsolatba velünk a további teendők egyeztetése érdekében."
+
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
 msgstr "Kétfaktoros hitelesítés a Google számára"
@@ -15639,15 +15655,16 @@ msgstr ""
 #: ../start/factory-reset.rst:9
 msgid "This means each identity needs to be resetted on its own."
 msgstr ""
-"Ez azt jelenti, hogy minden egyes identitást külön-külön kell újraindítani."
+"Ez azt jelenti, hogy minden egyes identitást külön-külön kell "
+"újraindítani."
 
 #: ../start/factory-reset.rst:11
 msgid ""
 "Old versions (below 1.2.5) of the firmware might need special treatment "
 "(see below). Usage -----"
 msgstr ""
-"A firmware régi (1.2.5 alatti) verziói speciális kezelést igényelhetnek ("
-"lásd alább). Használat -----"
+"A firmware régi (1.2.5 alatti) verziói speciális kezelést igényelhetnek "
+"(lásd alább). Használat -----"
 
 #: ../start/factory-reset.rst:15 ../start/multiple-identities.rst:17
 msgid ""
@@ -15692,8 +15709,8 @@ msgid ""
 "It deletes all keys, pins, configurations and meta data associated with "
 "the respective identity."
 msgstr ""
-"Törli az adott azonosítóhoz tartozó összes kulcsot, csapot, konfigurációt és "
-"metaadatot."
+"Törli az adott azonosítóhoz tartozó összes kulcsot, csapot, konfigurációt"
+" és metaadatot."
 
 #: ../start/factory-reset.rst:61
 msgid "Reset code"
@@ -15705,18 +15722,19 @@ msgid ""
 "enable the reset of the User PIN (not the Admin PIN). For older Firmware "
 "it is recommended since it is needed to reset the device (see below)"
 msgstr ""
-"Ez a lépés új firmware esetén nem kötelező.. Hozzáadhat egy visszaállítási "
-"kódot, amely lehetővé teszi a felhasználói PIN-kód visszaállítását (nem a "
-"rendszergazdai PIN-kódét). Régebbi firmware esetén ajánlott, mivel ez "
-"szükséges a készülék alaphelyzetbe állításához (lásd alább)."
+"Ez a lépés új firmware esetén nem kötelező.. Hozzáadhat egy "
+"visszaállítási kódot, amely lehetővé teszi a felhasználói PIN-kód "
+"visszaállítását (nem a rendszergazdai PIN-kódét). Régebbi firmware esetén"
+" ajánlott, mivel ez szükséges a készülék alaphelyzetbe állításához (lásd "
+"alább)."
 
 #: ../start/factory-reset.rst:66
 msgid ""
 "`Checkout the documentation here <http://www.fsij.org/doc-gnuk/gnuk-"
 "passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_."
 msgstr ""
-"`Nézze meg a dokumentációt itt <http://www.fsij.org/doc-gnuk/gnuk-passphrase-"
-"setting.html#set-up-pw1-pw3-and-reset-code>`_."
+"`Nézze meg a dokumentációt itt <http://www.fsij.org/doc-gnuk/gnuk-"
+"passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_."
 
 #: ../start/factory-reset.rst:72
 msgid "Firmware below 1.2.5"
@@ -15733,10 +15751,11 @@ msgid ""
 "You need the reset code to unblock device or you can not use the device "
 "anymore!"
 msgstr ""
-"Ha és csak akkor, ha a készülék nincs blokkolva (a PIN-kódot nem írták be "
-"túl gyakran rosszul), akkor ugyanazt az eljárást használhatja, mint az újabb "
-"firmware-ekben (lásd fentebb). A készülék blokkolásának feloldásához szükség "
-"van a reset kódra, különben nem használhatja tovább a készüléket!"
+"Ha és csak akkor, ha a készülék nincs blokkolva (a PIN-kódot nem írták be"
+" túl gyakran rosszul), akkor ugyanazt az eljárást használhatja, mint az "
+"újabb firmware-ekben (lásd fentebb). A készülék blokkolásának "
+"feloldásához szükség van a reset kódra, különben nem használhatja tovább "
+"a készüléket!"
 
 #: ../start/factory-reset.rst:79
 msgid "Nitrokey Start firmware 1.0:"
@@ -15749,11 +15768,11 @@ msgid ""
 "supports-firmware-upgrade/>`_ beforehand! In case of a blocked device it "
 "enables you to perform a firmware update which resets the device."
 msgstr ""
-"A Nitrokey Start 1.0 visszaállításához előzetesen meg kell határoznod egy "
-"nyilvános kulcsot a `firmware frissítésekhez <http://no-passwd.net/askbot/"
-"question/34/how-gnuk-supports-firmware-upgrade/>`_! Blokkolt készülék esetén "
-"lehetővé teszi a firmware-frissítés elvégzését, amely visszaállítja a "
-"készüléket."
+"A Nitrokey Start 1.0 visszaállításához előzetesen meg kell határoznod egy"
+" nyilvános kulcsot a `firmware frissítésekhez <http://no-"
+"passwd.net/askbot/question/34/how-gnuk-supports-firmware-upgrade/>`_! "
+"Blokkolt készülék esetén lehetővé teszi a firmware-frissítés elvégzését, "
+"amely visszaállítja a készüléket."
 
 #: ../start/faq.rst:2
 msgid "Nitrokey Start FAQ"
@@ -20743,3 +20762,27 @@ msgstr ""
 #~ " -> 910 bájt másodpercenként * 128"
 #~ " bites AES, 240 bájt/parancs -> 930"
 #~ " bájt másodpercenként."
+
+#~ msgid "Decrypting"
+#~ msgstr "Dekódolás"
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the NETHSM_HOST environment variable.  You "
+#~ "can use the public NsetupetHSM demo "
+#~ "instance nethsmdemo.nitrokey.com or run a "
+#~ "local demo instance using the NetHSM "
+#~ "docker image, see `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ section of"
+#~ " the NetHSM documentation."
+#~ msgstr ""
+#~ "Mielőtt elkezdenénk, a NetHSM példány "
+#~ "állomásnevét a NETHSM_HOST környezeti "
+#~ "változóban tároljuk.  Használhatjuk a "
+#~ "nyilvános NsetupetHSM demópéldányt "
+#~ "nethsmdemo.nitrokey.com, vagy futtathatunk egy "
+#~ "helyi demópéldányt a NetHSM dokkoló kép"
+#~ " segítségével, lásd a NetHSM dokumentáció"
+#~ " `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ szakaszát."

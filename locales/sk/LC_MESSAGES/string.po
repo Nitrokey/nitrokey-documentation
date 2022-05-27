@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 12:38+0200\n"
-"PO-Revision-Date: 2022-05-23 12:38+0000\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
+"PO-Revision-Date: 2022-05-25 16:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovak <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/sk/>\n"
@@ -3310,33 +3310,19 @@ msgstr "Prístup k zariadeniu NetHSM pomocou rozhrania REST API"
 msgid ""
 "This tutorial demonstrates how to access the NetHMS via REST API. The "
 "interface is documented `here "
-"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
-" ,and its specification is available as `RAML "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_,"
+" and its specification is available as `RAML "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ and as "
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
 "Tento návod ukazuje, ako pristupovať k NetHMS prostredníctvom rozhrania "
 "REST API. Rozhranie je zdokumentované `tu "
-"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
-" ,a jeho špecifikácia je k dispozícii ako `RAML "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_,"
+" a jeho špecifikácia je k dispozícii ako `RAML "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ a ako "
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
-
-#: ../nethsm/_tutorial.rst:2
-msgid ""
-"Before we start, we store the host name of the NetHSM instance in the "
-"NETHSM_HOST environment variable.  You can use the public NetHSM demo "
-"instance nethsmdemo.nitrokey.com or run a local demo instance using the "
-"NetHSM docker image, see the `Development and Testing </index.html"
-"#development-and-testing>`_ section of the NetHSM documentation."
-msgstr ""
-"Pred začatím uložíme názov hostiteľa inštancie NetHSM do premennej "
-"prostredia NETHSM_HOST.  Môžete použiť verejnú demonštračnú inštanciu "
-"NetHSM nethsmdemo.nitrokey.com alebo spustiť lokálnu demonštračnú "
-"inštanciu pomocou obrazu NetHSM docker, pozri `Vývoj a testovanie "
-"</index.html#development-and-testing>`_ časť dokumentácie NetHSM."
 
 #: ../nethsm/api.rst:18
 msgid ""
@@ -3348,11 +3334,20 @@ msgstr ""
 "napríklad pomocou obrazu Docker, budete musieť použiť možnosť "
 "--insecure/-k pre curl, aby ste preskočili kontrolu certifikátu."
 
+#: ../nethsm/api.rst:24 ../nethsm/cli.rst:20
+msgid ""
+"First set the value of $NETHSM_HOST to the IP address or URL of your "
+"NetHSM. Our demo server can be reached at "
+"https://nethsmdemo.nitrokey.com/"
+msgstr ""
+"Najprv nastavte hodnotu $NETHSM_HOST na IP adresu alebo URL vášho NetHSM."
+" Náš demo server je dostupný na adrese https://nethsmdemo.nitrokey.com/"
+
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr "Najprv sa pozrime, čo tu máme:"
 
-#: ../nethsm/api.rst:43
+#: ../nethsm/api.rst:46
 msgid ""
 "The -i/--include option causes curl to print the HTTP status code and the"
 " response headers.  The -w '\\n'/--write-out '\\n' option adds a newline "
@@ -3383,7 +3378,7 @@ msgstr ""
 "superpoužívateľom NetHSM. Heslo *Unlock Passphrase* sa používa na "
 "zašifrovanie dôverného úložiska údajov NetHSM."
 
-#: ../nethsm/_tutorial.rst:12 ../nethsm/cli.rst:54
+#: ../nethsm/_tutorial.rst:12 ../nethsm/cli.rst:50
 msgid ""
 "The NetHSM demo instance at nethsmdemo.nitrokey.com is already "
 "provisioned."
@@ -3431,65 +3426,6 @@ msgstr "Alebo prepnite späť do režimu *Attended Boot*:"
 msgid "User Management"
 msgstr "Správa používateľov"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr "Úlohy"
-
-#: ../nethsm/_tutorial.rst:5
-msgid ""
-"Separation of duties can be implemented by using different Roles. Each "
-"user account configured on the NetHSM has one of the following Roles "
-"assigned to it. Following is a high-level description of the operations "
-"allowed by each Role. For endpoint-specific details please refer to the "
-"REST API documentation."
-msgstr ""
-"Oddelenie povinností možno realizovať pomocou rôznych rolí. Každému "
-"používateľskému účtu nakonfigurovanému v NetHSM je priradená jedna z "
-"nasledujúcich Rolí. Nasleduje stručný opis operácií povolených "
-"jednotlivými rolami. Podrobnosti týkajúce sa konkrétneho koncového bodu "
-"nájdete v dokumentácii REST API."
-
-#: ../nethsm/_tutorial.rst:11
-msgid ""
-"*R-Administrator*: A user account with this Role has access to all "
-"operations provided by the REST API, except for key usage operations, "
-"i.e. message signing and decryption."
-msgstr ""
-"*R-administrátor*: Používateľský účet s touto rolou má prístup ku všetkým"
-" operáciám poskytovaným rozhraním REST API okrem operácií používania "
-"kľúčov, t. j. podpisovania a dešifrovania správ."
-
-#: ../nethsm/_tutorial.rst:14
-msgid ""
-"*R-Operator*: A user account with this Role has access to all key usage "
-"operations, a read-only subset of key management operations and user "
-"management operations allowing changes to their own account only."
-msgstr ""
-"*R-Operátor*: Používateľský účet s touto rolou má prístup ku všetkým "
-"operáciám používania kľúčov, k podmnožine operácií správy kľúčov len na "
-"čítanie a k operáciám správy používateľov, ktoré umožňujú zmeny len na "
-"vlastnom účte."
-
-#: ../nethsm/_tutorial.rst:18
-msgid ""
-"*R-Metrics*: A user account with this Role has access to read-only "
-"metrics operations only."
-msgstr ""
-"*R-Metrics*: Používateľské konto s touto rolou má prístup len k operáciám"
-" s metrikami určenými na čítanie."
-
-#: ../nethsm/_tutorial.rst:20
-msgid ""
-"*R-Backup*: A user account with this Role has access to the operations "
-"required to initiate a system backup only."
-msgstr ""
-"*R-Backup*: Používateľské konto s touto rolou má prístup len k operáciám "
-"potrebným na spustenie zálohovania systému."
-
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr "Poznámka: V budúcich verziách môžu byť zavedené ďalšie role."
-
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
 msgstr "Vytvorenie používateľa"
@@ -3504,7 +3440,7 @@ msgstr ""
 "použitý na podpisovanie a dešifrovanie údajov.  Všimnite si, že NetHSM "
 "priradí náhodné ID používateľa, ak ho nezadáme."
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:127
+#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:100
 msgid "Key Management"
 msgstr "Riadenie kľúčov"
 
@@ -3592,7 +3528,7 @@ msgstr ""
 "Aby sme mohli kľúč používať s OpenSSL, exportujeme ho ako súbor PEM a "
 "uložíme ho ako public.pem:"
 
-#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:198
+#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:158
 msgid ""
 "We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
@@ -3600,11 +3536,11 @@ msgstr ""
 "Kľúč môžeme skontrolovať pomocou OpenSSL a použiť ho na šifrovanie alebo "
 "overenie podpisu (ako je opísané v nasledujúcej časti):"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:241
+#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:199
 msgid "Key Certificates"
 msgstr "Kľúčové certifikáty"
 
-#: ../nethsm/_tutorial.rst:5 ../nethsm/cli.rst:243
+#: ../nethsm/_tutorial.rst:5 ../nethsm/cli.rst:201
 msgid ""
 "It is possible to set and query certificates for the keys stored on a "
 "NetHSM instance:"
@@ -3646,7 +3582,7 @@ msgstr ""
 msgid "Now we can use the NetHSM to decrypt the data:"
 msgstr "Teraz môžeme použiť NetHSM na dešifrovanie údajov:"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/pkcs11.rst:42
+#: ../nethsm/_tutorial.rst:3 ../nethsm/pkcs11.rst:49
 msgid "Signing"
 msgstr "Podpisovanie"
 
@@ -3658,11 +3594,11 @@ msgstr ""
 "Podobne môžeme údaje podpísať pomocou kľúča na NetHSM.  V prípade RSA a "
 "ECDSA musíme najprv vypočítať digest:"
 
-#: ../nethsm/_tutorial.rst:16 ../nethsm/cli.rst:299
+#: ../nethsm/_tutorial.rst:16 ../nethsm/cli.rst:253
 msgid "Then we can create a signature from this digest using the NetHSM:"
 msgstr "Potom môžeme vytvoriť podpis z tohto digestu pomocou NetHSM:"
 
-#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:307
+#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:261
 msgid "And then use OpenSSL to verify the signature:"
 msgstr "A potom použite OpenSSL na overenie podpisu:"
 
@@ -3742,24 +3678,15 @@ msgstr ""
 "napríklad pomocou obrazu Docker, budete musieť použiť možnosť ``--no-"
 "verify-tls`` pre ``nitropy``, aby ste preskočili kontrolu certifikátu."
 
-#: ../nethsm/cli.rst:20
-msgid ""
-"First set the value of $NETHSM_HOST to the IP address or URL of your "
-"NetHSM. Our demo server can be reached at "
-"https://nethsmdemo.nitrokey.com/"
-msgstr ""
-"Najprv nastavte hodnotu $NETHSM_HOST na IP adresu alebo URL vášho NetHSM."
-" Náš demo server je dostupný na adrese https://nethsmdemo.nitrokey.com/"
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr "Informácie o zariadení & Stav"
 
-#: ../nethsm/cli.rst:48
+#: ../nethsm/cli.rst:44
 msgid "Provisioning"
 msgstr "Zabezpečenie"
 
-#: ../nethsm/cli.rst:50
+#: ../nethsm/cli.rst:46
 msgid ""
 "A new NetHSM needs to be provisioned first with passphrases and the "
 "current time. The Admin Passphrase is the Administrator’s passphrase, "
@@ -3771,11 +3698,74 @@ msgstr ""
 "superpoužívateľom NetHSM. Passphrase Unlock sa používa na šifrovanie "
 "dôverného úložiska údajov NetHSM."
 
-#: ../nethsm/cli.rst:109
+#: ../nethsm/cli.rst:69
+msgid "Turn `Unattended Boot` mode on:"
+msgstr "Zapnite režim `Unattended Boot`:"
+
+#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr "Úlohy"
+
+#: ../nethsm/_tutorial.rst:5
+msgid ""
+"Separation of duties can be implemented by using different Roles. Each "
+"user account configured on the NetHSM has one of the following Roles "
+"assigned to it. Following is a high-level description of the operations "
+"allowed by each Role. For endpoint-specific details please refer to the "
+"REST API documentation."
+msgstr ""
+"Oddelenie povinností možno realizovať pomocou rôznych rolí. Každému "
+"používateľskému účtu nakonfigurovanému v NetHSM je priradená jedna z "
+"nasledujúcich Rolí. Nasleduje stručný opis operácií povolených "
+"jednotlivými rolami. Podrobnosti týkajúce sa konkrétneho koncového bodu "
+"nájdete v dokumentácii REST API."
+
+#: ../nethsm/_tutorial.rst:11
+msgid ""
+"*R-Administrator*: A user account with this Role has access to all "
+"operations provided by the REST API, except for key usage operations, "
+"i.e. message signing and decryption."
+msgstr ""
+"*R-administrátor*: Používateľský účet s touto rolou má prístup ku všetkým"
+" operáciám poskytovaným rozhraním REST API okrem operácií používania "
+"kľúčov, t. j. podpisovania a dešifrovania správ."
+
+#: ../nethsm/_tutorial.rst:14
+msgid ""
+"*R-Operator*: A user account with this Role has access to all key usage "
+"operations, a read-only subset of key management operations and user "
+"management operations allowing changes to their own account only."
+msgstr ""
+"*R-Operátor*: Používateľský účet s touto rolou má prístup ku všetkým "
+"operáciám používania kľúčov, k podmnožine operácií správy kľúčov len na "
+"čítanie a k operáciám správy používateľov, ktoré umožňujú zmeny len na "
+"vlastnom účte."
+
+#: ../nethsm/_tutorial.rst:18
+msgid ""
+"*R-Metrics*: A user account with this Role has access to read-only "
+"metrics operations only."
+msgstr ""
+"*R-Metrics*: Používateľské konto s touto rolou má prístup len k operáciám"
+" s metrikami určenými na čítanie."
+
+#: ../nethsm/_tutorial.rst:20
+msgid ""
+"*R-Backup*: A user account with this Role has access to the operations "
+"required to initiate a system backup only."
+msgstr ""
+"*R-Backup*: Používateľské konto s touto rolou má prístup len k operáciám "
+"potrebným na spustenie zálohovania systému."
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
+msgstr "Poznámka: V budúcich verziách môžu byť zavedené ďalšie role."
+
+#: ../nethsm/cli.rst:85
 msgid "**Creating & Deleting Users**"
 msgstr "**Vytváranie a odstraňovanie používateľov**"
 
-#: ../nethsm/cli.rst:112
+#: ../nethsm/cli.rst:87
 msgid ""
 "Now create a new user with the Operator role that can be used to sign and"
 " decrypt data. Note that the NetHSM assigns a random user ID if we don’t "
@@ -3785,7 +3775,7 @@ msgstr ""
 "použitý na podpisovanie a dešifrovanie údajov. Všimnite si, že NetHSM "
 "priradí náhodné ID používateľa, ak ho nezadáme."
 
-#: ../nethsm/cli.rst:271 ../nethsm/dev-and-test.rst:23
+#: ../nethsm/cli.rst:227 ../nethsm/dev-and-test.rst:23
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
@@ -3795,7 +3785,7 @@ msgstr ""
 "(public.pem je súbor verejného kľúča, ktorý sme vytvorili v časti "
 "Zobraziť podrobnosti o kľúči)."
 
-#: ../nethsm/cli.rst:287
+#: ../nethsm/cli.rst:241
 msgid ""
 "Similarly, we can sign data using the key on the NetHSM. For RSA and "
 "ECDSA, we have to calculate a digest first:"
@@ -3803,11 +3793,11 @@ msgstr ""
 "Podobne môžeme údaje podpísať pomocou kľúča na NetHSM. V prípade RSA a "
 "ECDSA musíme najprv vypočítať digest:"
 
-#: ../nethsm/cli.rst:320
+#: ../nethsm/cli.rst:272
 msgid "Creating Backups"
 msgstr "Vytváranie záloh"
 
-#: ../nethsm/cli.rst:322
+#: ../nethsm/cli.rst:274
 msgid ""
 "It is possible to create a backup of the NetHSM that captures both the "
 "configuration and the stored keys. In order to create a backup, you first"
@@ -3817,27 +3807,27 @@ msgstr ""
 "kľúče. Aby ste mohli vytvoriť zálohu, musíte najprv nastaviť záložnú "
 "prístupovú frázu, ktorá sa použije na zašifrovanie záložného súboru:"
 
-#: ../nethsm/cli.rst:334
+#: ../nethsm/cli.rst:284
 msgid "Now you have to create a user with the R-Backup role:"
 msgstr "Teraz musíte vytvoriť používateľa s rolou R-Backup:"
 
-#: ../nethsm/cli.rst:346
+#: ../nethsm/cli.rst:294
 msgid "Then can you generate the backup and write it to a file:"
 msgstr "Potom môžete vygenerovať zálohu a zapísať ju do súboru:"
 
-#: ../nethsm/cli.rst:359
+#: ../nethsm/cli.rst:305
 msgid "Restoring Backups"
 msgstr "Obnovenie záloh"
 
-#: ../nethsm/cli.rst:361
+#: ../nethsm/cli.rst:307
 msgid "This backup file can be restored on an unprovisioned NetHSM instance:"
 msgstr "Tento záložný súbor je možné obnoviť v nezaradenej inštancii NetHSM:"
 
-#: ../nethsm/cli.rst:374
+#: ../nethsm/cli.rst:318
 msgid "Updating NetHSM"
 msgstr "Aktualizácia NetHSM"
 
-#: ../nethsm/cli.rst:378
+#: ../nethsm/cli.rst:322
 msgid "Data loss may occur due to the installation of a beta update!"
 msgstr "V dôsledku inštalácie beta aktualizácie môže dôjsť k strate údajov!"
 
@@ -3867,11 +3857,12 @@ msgstr ""
 "kontajnermi. Preto na spustenie kontajnera NetHSM potrebujete hostiteľa "
 "Linux s dostupným /dev/kvm. Vykonajte tento príkaz:"
 
-#: ../nethsm/gettingstarted.rst:2 ../nextbox/gettingstarted.rst:2
-#: ../nitropad/qubes/index.rst:7 ../nitropad/ubuntu/index.rst:7
-#: ../nitropc/debian/index.rst:14 ../nitropc/qubes/index.rst:14
-#: ../nitropc/ubuntu/index.rst:14 ../nitrophone/index.rst:7
-#: ../nitrowall/index.rst:5 ../pro/windows/index.rst:14
+#: ../nethsm/gettingstarted.rst:2 ../nethsm/index.rst:5
+#: ../nextbox/gettingstarted.rst:2 ../nitropad/qubes/index.rst:7
+#: ../nitropad/ubuntu/index.rst:7 ../nitropc/debian/index.rst:14
+#: ../nitropc/qubes/index.rst:14 ../nitropc/ubuntu/index.rst:14
+#: ../nitrophone/index.rst:7 ../nitrowall/index.rst:5
+#: ../pro/windows/index.rst:14
 msgid "Getting Started"
 msgstr "Začíname"
 
@@ -3898,7 +3889,7 @@ msgstr ""
 "<cli.html>`_. Alternatívne možno použiť `REST API <api.html>`_ a `PKCS#11"
 " driver <pkcs11.html>`_."
 
-#: ../nethsm/index.rst:13
+#: ../nethsm/index.rst:17
 msgid "REST API Index"
 msgstr "REST API Index"
 
@@ -3906,7 +3897,7 @@ msgstr "REST API Index"
 msgid "NetHSM"
 msgstr "NetHSM"
 
-#: ../nethsm/index.rst:4
+#: ../nethsm/index.rst:8
 msgid ""
 "Your NetHSM has been delivered in a sealed packaging. `Verify the sealing"
 " <sealed-hardware.html>`_ before unpacking to ensure the device has not "
@@ -3916,7 +3907,7 @@ msgstr ""
 "zapečatenie <sealed-hardware.html>`_, aby ste sa uistili, že so "
 "zariadením nebolo manipulované."
 
-#: ../nethsm/index.rst:6
+#: ../nethsm/index.rst:10
 msgid ""
 "Connect the NetHSM's BMC ETH port with the network or your local "
 "computer. Set the BMC password."
@@ -3924,7 +3915,7 @@ msgstr ""
 "Prepojte port BMC ETH zariadenia NetHSM's sieťou alebo miestnym "
 "počítačom. Nastavte heslo BMC."
 
-#: ../nethsm/index.rst:8
+#: ../nethsm/index.rst:12
 msgid ""
 "Connect the NetHSM's ETH port with the network. Don't use the BMC ETH "
 "port because it allows wider system access. The NetHSM is available at "
@@ -3934,7 +3925,7 @@ msgstr ""
 " pretože umožňuje širší prístup k systému. Zariadenie NetHSM je dostupné "
 "na adrese 192.168.1.1."
 
-#: ../nethsm/index.rst:10
+#: ../nethsm/index.rst:14
 msgid ""
 "Initialize the NetHSM using `nitropy command line tool <cli.html>`_. "
 "Alternatively, the `REST API <api.html>`_ can be used."
@@ -3994,11 +3985,11 @@ msgstr "Prístup k zariadeniu NetHSM pomocou ovládača PKCS#11"
 
 #: ../nethsm/pkcs11.rst:10
 msgid ""
-"Download the PKCS#11 driver <https://github.com/Nitrokey/nethsm-pkcs11>_ "
-"for NetHSM."
+"Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`_ for NetHSM."
 msgstr ""
-"Stiahnite si ovládač PKCS#11 <https://github.com/Nitrokey/nethsm-pkcs11>_"
-" pre NetHSM."
+"Stiahnite si ` ovládač PKCS#11 <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`_ pre NetHSM."
 
 #: ../nethsm/pkcs11.rst:11
 msgid ""
@@ -4011,18 +4002,32 @@ msgstr ""
 " `/etc/nitrokey/` alebo do adresára, v ktorom je spustená vaša aplikácia."
 
 #: ../nethsm/pkcs11.rst:16
-msgid "Decrypting"
-msgstr "Dešifrovanie"
+msgid "Encrypting & Decrypting"
+msgstr "Šifrovanie a dešifrovanie"
 
 #: ../nethsm/pkcs11.rst:18
 msgid ""
 "After creating a key (here: ID 42) with the according mechanism, you can "
-"use it for decryption:"
+"use it for encryption and decryption, but first you should create the "
+"key:"
 msgstr ""
 "Po vytvorení kľúča (tu: ID 42) pomocou príslušného mechanizmu ho môžete "
-"použiť na dešifrovanie:"
+"použiť na šifrovanie a dešifrovanie, ale najprv by ste mali vytvoriť "
+"kľúč:"
 
-#: ../nethsm/pkcs11.rst:44
+#: ../nethsm/pkcs11.rst:35
+msgid "Now you can encrypt:"
+msgstr "Teraz môžete šifrovať:"
+
+#: ../nethsm/pkcs11.rst:42
+msgid "... And decrypt:"
+msgstr "... A dešifrovanie:"
+
+#: ../nethsm/pkcs11.rst:51
+msgid "First create the key again:"
+msgstr "Najprv znovu vytvorte kľúč:"
+
+#: ../nethsm/pkcs11.rst:67
 msgid ""
 "After creating a key (here: ID 23) with the according mechanism, you can "
 "use it for signing:"
@@ -4053,7 +4058,7 @@ msgstr ""
 "\"adminadmin\", heslo na odomknutie \"unlockunlock\"."
 
 #: ../nethsm/sealed-hardware.rst:2 ../nitropad/sealed-hardware.rst:2
-#: ../nitropc/sealed-hardware.rst:2
+#: ../nitropc/sealed-hardware.rst:2 ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr "Overenie zapečateného hardvéru"
 
@@ -4079,7 +4084,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Tu je niekoľko obrázkov, ako balíme NetHSM:"
 
-#: ../nethsm/sealed-hardware.rst:14
+#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr "Tesnenie hardvéru"
 
@@ -10449,6 +10454,18 @@ msgstr ""
 "Po dokončení inštalácie nainštalujte potrebné aktualizácie. Ak to chcete "
 "urobiť, prejdite do časti Systém → Firmvér → Aktualizácie."
 
+#: ../nitrowall/sealed-hardware.rst:4
+msgid ""
+"Your NitroWall has been delivered in a sealed packaging and sealed "
+"screws. We will send you a picture of your NitroWall before shipping. "
+"Please compare the imaged to your packaged NitroWall. If you notice any "
+"changes, please contact us to arrange further action."
+msgstr ""
+"Vaša stena NitroWall bola dodaná v zapečatenom obale a so zapečatenými "
+"skrutkami. Pred odoslaním vám zašleme fotografiu vašej steny NitroWall. "
+"Porovnajte, prosím, obrázok so svojou zabalenou stenou NitroWall. Ak si "
+"všimnete akékoľvek zmeny, kontaktujte nás a dohodnite sa na ďalšom postupe."
+
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
 msgstr "Dvojfaktorové overovanie pre Google"
@@ -15387,10 +15404,10 @@ msgid ""
 "enable the reset of the User PIN (not the Admin PIN). For older Firmware "
 "it is recommended since it is needed to reset the device (see below)"
 msgstr ""
-"Tento krok je pri novom firmvéri voliteľný. Môžete pridať resetovací kód, "
-"ktorý umožní resetovanie používateľského PIN kódu (nie administrátorského "
-"PIN kódu). Pri staršom firmvéri sa to odporúča, pretože je potrebný na "
-"resetovanie zariadenia (pozri nižšie)"
+"Tento krok je pri novom firmvéri voliteľný. Môžete pridať resetovací kód,"
+" ktorý umožní resetovanie používateľského PIN kódu (nie "
+"administrátorského PIN kódu). Pri staršom firmvéri sa to odporúča, "
+"pretože je potrebný na resetovanie zariadenia (pozri nižšie)"
 
 #: ../start/factory-reset.rst:66
 msgid ""
@@ -15416,9 +15433,9 @@ msgid ""
 "anymore!"
 msgstr ""
 "Ak zariadenie nie je zablokované (PIN kód nebol príliš často zadávaný "
-"nesprávne), môžete použiť rovnaký postup ako v novšom firmvéri (pozri vyššie)"
-". Na odblokovanie zariadenia potrebujete resetovací kód, inak zariadenie už "
-"nemôžete používať!"
+"nesprávne), môžete použiť rovnaký postup ako v novšom firmvéri (pozri "
+"vyššie). Na odblokovanie zariadenia potrebujete resetovací kód, inak "
+"zariadenie už nemôžete používať!"
 
 #: ../start/factory-reset.rst:79
 msgid "Nitrokey Start firmware 1.0:"
@@ -15431,10 +15448,11 @@ msgid ""
 "supports-firmware-upgrade/>`_ beforehand! In case of a blocked device it "
 "enables you to perform a firmware update which resets the device."
 msgstr ""
-"Aby ste mohli resetovať Nitrokey Start 1.0, musíte vopred definovať verejný "
-"kľúč pre `aktualizácie softvéru <http://no-passwd.net/askbot/question/34/"
-"how-gnuk-supports-firmware-upgrade/>`_! V prípade zablokovaného zariadenia "
-"umožňuje vykonať aktualizáciu firmvéru, ktorá zariadenie resetuje."
+"Aby ste mohli resetovať Nitrokey Start 1.0, musíte vopred definovať "
+"verejný kľúč pre `aktualizácie softvéru <http://no-"
+"passwd.net/askbot/question/34/how-gnuk-supports-firmware-upgrade/>`_! V "
+"prípade zablokovaného zariadenia umožňuje vykonať aktualizáciu firmvéru, "
+"ktorá zariadenie resetuje."
 
 #: ../start/faq.rst:2
 msgid "Nitrokey Start FAQ"
@@ -20330,3 +20348,26 @@ msgstr ""
 #~ " bajtov za sekundu * 128 bit "
 #~ "AES, 240 bajtov na príkaz -> 930"
 #~ " bajtov za sekundu"
+
+#~ msgid "Decrypting"
+#~ msgstr "Dešifrovanie"
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the NETHSM_HOST environment variable.  You "
+#~ "can use the public NsetupetHSM demo "
+#~ "instance nethsmdemo.nitrokey.com or run a "
+#~ "local demo instance using the NetHSM "
+#~ "docker image, see `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ section of"
+#~ " the NetHSM documentation."
+#~ msgstr ""
+#~ "Pred začatím uložíme názov hostiteľa "
+#~ "inštancie NetHSM do premennej prostredia "
+#~ "NETHSM_HOST.  Môžete použiť verejnú demo "
+#~ "inštanciu NsetupetHSM nethsmdemo.nitrokey.com alebo"
+#~ " spustiť lokálnu demo inštanciu pomocou "
+#~ "obrazu NetHSM docker, pozri `Docker Hub"
+#~ " <https://hub.docker.com/r/nitrokey/nethsm>`_ časť "
+#~ "dokumentácie NetHSM."

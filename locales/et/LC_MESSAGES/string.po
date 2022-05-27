@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-23 12:38+0200\n"
-"PO-Revision-Date: 2022-05-23 12:38+0000\n"
+"POT-Creation-Date: 2022-05-25 16:44+0200\n"
+"PO-Revision-Date: 2022-05-25 16:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Estonian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/et/>\n"
@@ -3282,34 +3282,19 @@ msgstr "Juurdepääs NetHSMile REST API abil"
 msgid ""
 "This tutorial demonstrates how to access the NetHMS via REST API. The "
 "interface is documented `here "
-"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
-" ,and its specification is available as `RAML "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_,"
+" and its specification is available as `RAML "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ and as "
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
 msgstr ""
 "See õpetus näitab, kuidas pääseda NetHMSi juurde REST API kaudu. "
 "Kasutajaliides on dokumenteeritud `kuskil "
-"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_"
-" ,ja selle spetsifikatsioon on saadaval kui `RAML "
+"<https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_,"
+" ja selle spetsifikatsioon on saadaval kui `RAML "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ ja kui "
 "`OpenAPI (Swagger) "
 "<https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_."
-
-#: ../nethsm/_tutorial.rst:2
-msgid ""
-"Before we start, we store the host name of the NetHSM instance in the "
-"NETHSM_HOST environment variable.  You can use the public NetHSM demo "
-"instance nethsmdemo.nitrokey.com or run a local demo instance using the "
-"NetHSM docker image, see the `Development and Testing </index.html"
-"#development-and-testing>`_ section of the NetHSM documentation."
-msgstr ""
-"Enne alustamist salvestame NetHSMi instantsi hostinime "
-"keskkonnamuutujasse NETHSM_HOST.  Võite kasutada avalikku NetHSM-i "
-"demoinstantsi nethsmdemo.nitrokey.com või käivitada lokaalset "
-"demoinstantsi, kasutades NetHSM-i dokker-kujutist, vt NetHSM-i "
-"dokumentatsiooni jaotist `Development and Testing </index.html"
-"#development-and-testing>`_."
 
 #: ../nethsm/api.rst:18
 msgid ""
@@ -3321,11 +3306,20 @@ msgstr ""
 " näiteks kasutades Dockeri kujutist, peate kasutama curl'ile valikut "
 "--insecure/-k, et jätta sertifikaadi kontroll vahele."
 
+#: ../nethsm/api.rst:24 ../nethsm/cli.rst:20
+msgid ""
+"First set the value of $NETHSM_HOST to the IP address or URL of your "
+"NetHSM. Our demo server can be reached at "
+"https://nethsmdemo.nitrokey.com/"
+msgstr ""
+"Esmalt määrake $NETHSM_HOST väärtuseks NetHSM-i IP-aadress või URL. Meie "
+"demoserver on kättesaadav aadressil https://nethsmdemo.nitrokey.com/."
+
 #: ../nethsm/_tutorial.rst:2
 msgid "First, let’s see what we have here:"
 msgstr "Kõigepealt vaatame, mis meil siin on:"
 
-#: ../nethsm/api.rst:43
+#: ../nethsm/api.rst:46
 msgid ""
 "The -i/--include option causes curl to print the HTTP status code and the"
 " response headers.  The -w '\\n'/--write-out '\\n' option adds a newline "
@@ -3355,7 +3349,7 @@ msgstr ""
 "ülemkasutaja. *Unlock Passphrase* kasutatakse NetHSMi konfidentsiaalse "
 "andmehoidla krüpteerimiseks."
 
-#: ../nethsm/_tutorial.rst:12 ../nethsm/cli.rst:54
+#: ../nethsm/_tutorial.rst:12 ../nethsm/cli.rst:50
 msgid ""
 "The NetHSM demo instance at nethsmdemo.nitrokey.com is already "
 "provisioned."
@@ -3405,67 +3399,6 @@ msgstr "Või lülitage tagasi režiimi *Attended Boot*:"
 msgid "User Management"
 msgstr "Kasutajate haldamine"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
-msgid "Roles"
-msgstr "Rollid"
-
-#: ../nethsm/_tutorial.rst:5
-msgid ""
-"Separation of duties can be implemented by using different Roles. Each "
-"user account configured on the NetHSM has one of the following Roles "
-"assigned to it. Following is a high-level description of the operations "
-"allowed by each Role. For endpoint-specific details please refer to the "
-"REST API documentation."
-msgstr ""
-"Ülesannete lahusust saab rakendada erinevate rollide abil. Igale NetHSMi "
-"konfigureeritud kasutajakontole on määratud üks järgmistest rollidest. "
-"Järgnevalt on esitatud iga rolliga lubatud toimingute kõrgetasemeline "
-"kirjeldus. Lõpupunktispetsiifilised üksikasjad leiate REST API "
-"dokumentatsioonist."
-
-#: ../nethsm/_tutorial.rst:11
-msgid ""
-"*R-Administrator*: A user account with this Role has access to all "
-"operations provided by the REST API, except for key usage operations, "
-"i.e. message signing and decryption."
-msgstr ""
-"*R-administraator*: Selle rolliga kasutajakontol on juurdepääs kõikidele "
-"REST API poolt pakutavatele toimingutele, välja arvatud võtmekasutuse "
-"toimingud, st sõnumite allkirjastamine ja dekrüpteerimine."
-
-#: ../nethsm/_tutorial.rst:14
-msgid ""
-"*R-Operator*: A user account with this Role has access to all key usage "
-"operations, a read-only subset of key management operations and user "
-"management operations allowing changes to their own account only."
-msgstr ""
-"*R-operaator*: Selle rolliga kasutajakontol on juurdepääs kõikidele "
-"võtmekasutuse toimingutele, võtmehalduse toimingute ainult lugemiseks "
-"mõeldud alamhulgale ja kasutajahalduse toimingutele, mis võimaldavad "
-"muudatusi ainult oma kontole."
-
-#: ../nethsm/_tutorial.rst:18
-msgid ""
-"*R-Metrics*: A user account with this Role has access to read-only "
-"metrics operations only."
-msgstr ""
-"*R-Metrics*: Selle rolliga kasutajakontol on juurdepääs ainult "
-"lugemisõigusega meetrikaoperatsioonidele."
-
-#: ../nethsm/_tutorial.rst:20
-msgid ""
-"*R-Backup*: A user account with this Role has access to the operations "
-"required to initiate a system backup only."
-msgstr ""
-"*R-Backup*: Selle rolliga kasutajakontol on juurdepääs ainult süsteemi "
-"varundamise algatamiseks vajalikele toimingutele."
-
-#: ../nethsm/_tutorial.rst:23
-msgid "Note: In a future releases, additional Roles may be introduced."
-msgstr ""
-"Märkus: tulevastes versioonides võidakse kasutusele võtta täiendavaid "
-"rolle."
-
 #: ../nethsm/_tutorial.rst:3
 msgid "Create a User"
 msgstr "Loo kasutaja"
@@ -3480,7 +3413,7 @@ msgstr ""
 "allkirjastamiseks ja dekrüpteerimiseks.  Pange tähele, et NetHSM määrab "
 "juhusliku kasutajatunnuse, kui me seda ei määra."
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:127
+#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:100
 msgid "Key Management"
 msgstr "Võtmehaldus"
 
@@ -3568,7 +3501,7 @@ msgstr ""
 "Selleks, et saaksime võtit kasutada OpenSSLiga, ekspordime selle PEM-"
 "failina ja salvestame selle public.pem:"
 
-#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:198
+#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:158
 msgid ""
 "We can inspect the key with OpenSSL and use it for encryption or "
 "signature verification (as described in the next section):"
@@ -3577,11 +3510,11 @@ msgstr ""
 "krüpteerimiseks või allkirja kontrollimiseks (nagu on kirjeldatud "
 "järgmises jaotises):"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:241
+#: ../nethsm/_tutorial.rst:3 ../nethsm/cli.rst:199
 msgid "Key Certificates"
 msgstr "Võtmesertifikaadid"
 
-#: ../nethsm/_tutorial.rst:5 ../nethsm/cli.rst:243
+#: ../nethsm/_tutorial.rst:5 ../nethsm/cli.rst:201
 msgid ""
 "It is possible to set and query certificates for the keys stored on a "
 "NetHSM instance:"
@@ -3623,7 +3556,7 @@ msgstr ""
 msgid "Now we can use the NetHSM to decrypt the data:"
 msgstr "Nüüd saame andmete dekrüpteerimiseks kasutada NetHSMi:"
 
-#: ../nethsm/_tutorial.rst:3 ../nethsm/pkcs11.rst:42
+#: ../nethsm/_tutorial.rst:3 ../nethsm/pkcs11.rst:49
 msgid "Signing"
 msgstr "Allkirjastamine"
 
@@ -3635,11 +3568,11 @@ msgstr ""
 "Samamoodi saame andmeid allkirjastada, kasutades NetHSMi võtit.  RSA ja "
 "ECDSA puhul peame kõigepealt arvutama digesti:"
 
-#: ../nethsm/_tutorial.rst:16 ../nethsm/cli.rst:299
+#: ../nethsm/_tutorial.rst:16 ../nethsm/cli.rst:253
 msgid "Then we can create a signature from this digest using the NetHSM:"
 msgstr "Seejärel saame sellest digist luua allkirja, kasutades NetHSM-i:"
 
-#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:307
+#: ../nethsm/_tutorial.rst:2 ../nethsm/cli.rst:261
 msgid "And then use OpenSSL to verify the signature:"
 msgstr "Ja seejärel kasutage OpenSSL-i allkirja kontrollimiseks:"
 
@@ -3721,24 +3654,15 @@ msgstr ""
 " kasutades Dockeri kujutist, peate kasutama ``--no-verify-tls`` valikut "
 "``nitropy``, et jätta sertifikaadi kontrollimine vahele."
 
-#: ../nethsm/cli.rst:20
-msgid ""
-"First set the value of $NETHSM_HOST to the IP address or URL of your "
-"NetHSM. Our demo server can be reached at "
-"https://nethsmdemo.nitrokey.com/"
-msgstr ""
-"Esmalt määrake $NETHSM_HOST väärtuseks NetHSM-i IP-aadress või URL. Meie "
-"demoserver on kättesaadav aadressil https://nethsmdemo.nitrokey.com/."
-
 #: ../nethsm/cli.rst:25
 msgid "Device Information & Status"
 msgstr "Seadme teave & olek"
 
-#: ../nethsm/cli.rst:48
+#: ../nethsm/cli.rst:44
 msgid "Provisioning"
 msgstr "Provisioning"
 
-#: ../nethsm/cli.rst:50
+#: ../nethsm/cli.rst:46
 msgid ""
 "A new NetHSM needs to be provisioned first with passphrases and the "
 "current time. The Admin Passphrase is the Administrator’s passphrase, "
@@ -3750,11 +3674,76 @@ msgstr ""
 " Unlock Passphrase'i kasutatakse NetHSMi konfidentsiaalse andmehoidla "
 "krüpteerimiseks."
 
-#: ../nethsm/cli.rst:109
+#: ../nethsm/cli.rst:69
+msgid "Turn `Unattended Boot` mode on:"
+msgstr "Lülitage sisse režiim `Unattended Boot`:"
+
+#: ../nethsm/_tutorial.rst:3 ../nethsm/tags.rst:47
+msgid "Roles"
+msgstr "Rollid"
+
+#: ../nethsm/_tutorial.rst:5
+msgid ""
+"Separation of duties can be implemented by using different Roles. Each "
+"user account configured on the NetHSM has one of the following Roles "
+"assigned to it. Following is a high-level description of the operations "
+"allowed by each Role. For endpoint-specific details please refer to the "
+"REST API documentation."
+msgstr ""
+"Ülesannete lahusust saab rakendada erinevate rollide abil. Igale NetHSMi "
+"konfigureeritud kasutajakontole on määratud üks järgmistest rollidest. "
+"Järgnevalt on esitatud iga rolliga lubatud toimingute kõrgetasemeline "
+"kirjeldus. Lõpupunktispetsiifilised üksikasjad leiate REST API "
+"dokumentatsioonist."
+
+#: ../nethsm/_tutorial.rst:11
+msgid ""
+"*R-Administrator*: A user account with this Role has access to all "
+"operations provided by the REST API, except for key usage operations, "
+"i.e. message signing and decryption."
+msgstr ""
+"*R-administraator*: Selle rolliga kasutajakontol on juurdepääs kõikidele "
+"REST API poolt pakutavatele toimingutele, välja arvatud võtmekasutuse "
+"toimingud, st sõnumite allkirjastamine ja dekrüpteerimine."
+
+#: ../nethsm/_tutorial.rst:14
+msgid ""
+"*R-Operator*: A user account with this Role has access to all key usage "
+"operations, a read-only subset of key management operations and user "
+"management operations allowing changes to their own account only."
+msgstr ""
+"*R-operaator*: Selle rolliga kasutajakontol on juurdepääs kõikidele "
+"võtmekasutuse toimingutele, võtmehalduse toimingute ainult lugemiseks "
+"mõeldud alamhulgale ja kasutajahalduse toimingutele, mis võimaldavad "
+"muudatusi ainult oma kontole."
+
+#: ../nethsm/_tutorial.rst:18
+msgid ""
+"*R-Metrics*: A user account with this Role has access to read-only "
+"metrics operations only."
+msgstr ""
+"*R-Metrics*: Selle rolliga kasutajakontol on juurdepääs ainult "
+"lugemisõigusega meetrikaoperatsioonidele."
+
+#: ../nethsm/_tutorial.rst:20
+msgid ""
+"*R-Backup*: A user account with this Role has access to the operations "
+"required to initiate a system backup only."
+msgstr ""
+"*R-Backup*: Selle rolliga kasutajakontol on juurdepääs ainult süsteemi "
+"varundamise algatamiseks vajalikele toimingutele."
+
+#: ../nethsm/_tutorial.rst:23
+msgid "Note: In a future releases, additional Roles may be introduced."
+msgstr ""
+"Märkus: tulevastes versioonides võidakse kasutusele võtta täiendavaid "
+"rolle."
+
+#: ../nethsm/cli.rst:85
 msgid "**Creating & Deleting Users**"
 msgstr "**Loomine & Kasutajate kustutamine**"
 
-#: ../nethsm/cli.rst:112
+#: ../nethsm/cli.rst:87
 msgid ""
 "Now create a new user with the Operator role that can be used to sign and"
 " decrypt data. Note that the NetHSM assigns a random user ID if we don’t "
@@ -3764,7 +3753,7 @@ msgstr ""
 "andmete allkirjastamiseks ja dekrüpteerimiseks. Pange tähele, et NetHSM "
 "määrab juhusliku kasutajatunnuse, kui me seda ei määra."
 
-#: ../nethsm/cli.rst:271 ../nethsm/dev-and-test.rst:23
+#: ../nethsm/cli.rst:227 ../nethsm/dev-and-test.rst:23
 msgid ""
 "We can encrypt data for the key stored on the NetHSM using OpenSSL. "
 "(public.pem is the public key file that we created in the Show Key "
@@ -3774,7 +3763,7 @@ msgstr ""
 "OpenSSL-i. (public.pem on avaliku võtme fail, mille me lõime jaotises "
 "Show Key Details)."
 
-#: ../nethsm/cli.rst:287
+#: ../nethsm/cli.rst:241
 msgid ""
 "Similarly, we can sign data using the key on the NetHSM. For RSA and "
 "ECDSA, we have to calculate a digest first:"
@@ -3782,11 +3771,11 @@ msgstr ""
 "Samamoodi saame andmeid allkirjastada, kasutades NetHSMi võtit. RSA ja "
 "ECDSA puhul peame kõigepealt arvutama digesti:"
 
-#: ../nethsm/cli.rst:320
+#: ../nethsm/cli.rst:272
 msgid "Creating Backups"
 msgstr "Varukoopiate loomine"
 
-#: ../nethsm/cli.rst:322
+#: ../nethsm/cli.rst:274
 msgid ""
 "It is possible to create a backup of the NetHSM that captures both the "
 "configuration and the stored keys. In order to create a backup, you first"
@@ -3796,27 +3785,27 @@ msgstr ""
 "kui ka salvestatud võtmed. Varukoopia loomiseks tuleb kõigepealt määrata "
 "varukoopia salasõna, mida kasutatakse varukoopiafaili krüpteerimiseks:"
 
-#: ../nethsm/cli.rst:334
+#: ../nethsm/cli.rst:284
 msgid "Now you have to create a user with the R-Backup role:"
 msgstr "Nüüd peate looma kasutaja, kellel on R-Backup roll:"
 
-#: ../nethsm/cli.rst:346
+#: ../nethsm/cli.rst:294
 msgid "Then can you generate the backup and write it to a file:"
 msgstr "Seejärel saate luua varukoopia ja kirjutada selle faili:"
 
-#: ../nethsm/cli.rst:359
+#: ../nethsm/cli.rst:305
 msgid "Restoring Backups"
 msgstr "Varukoopiate taastamine"
 
-#: ../nethsm/cli.rst:361
+#: ../nethsm/cli.rst:307
 msgid "This backup file can be restored on an unprovisioned NetHSM instance:"
 msgstr "Seda varukoopiafaili saab taastada NetHSMi varundamata instantsil:"
 
-#: ../nethsm/cli.rst:374
+#: ../nethsm/cli.rst:318
 msgid "Updating NetHSM"
 msgstr "NetHSMi ajakohastamine"
 
-#: ../nethsm/cli.rst:378
+#: ../nethsm/cli.rst:322
 msgid "Data loss may occur due to the installation of a beta update!"
 msgstr "Beeta-uuenduse paigaldamise tõttu võib tekkida andmekadu!"
 
@@ -3846,11 +3835,12 @@ msgstr ""
 " konteineritest. Seega on NetHSM konteineri käivitamiseks vaja Linuxi "
 "host'i, kus on saadaval /dev/kvm. Sooritage see käsk:"
 
-#: ../nethsm/gettingstarted.rst:2 ../nextbox/gettingstarted.rst:2
-#: ../nitropad/qubes/index.rst:7 ../nitropad/ubuntu/index.rst:7
-#: ../nitropc/debian/index.rst:14 ../nitropc/qubes/index.rst:14
-#: ../nitropc/ubuntu/index.rst:14 ../nitrophone/index.rst:7
-#: ../nitrowall/index.rst:5 ../pro/windows/index.rst:14
+#: ../nethsm/gettingstarted.rst:2 ../nethsm/index.rst:5
+#: ../nextbox/gettingstarted.rst:2 ../nitropad/qubes/index.rst:7
+#: ../nitropad/ubuntu/index.rst:7 ../nitropc/debian/index.rst:14
+#: ../nitropc/qubes/index.rst:14 ../nitropc/ubuntu/index.rst:14
+#: ../nitrophone/index.rst:7 ../nitrowall/index.rst:5
+#: ../pro/windows/index.rst:14
 msgid "Getting Started"
 msgstr "Alustamine"
 
@@ -3877,7 +3867,7 @@ msgstr ""
 " abil. Alternatiivina võib kasutada `REST API <api.html>`_ ja `PKCS#11 "
 "draiverit <pkcs11.html>`_."
 
-#: ../nethsm/index.rst:13
+#: ../nethsm/index.rst:17
 msgid "REST API Index"
 msgstr "REST API indeks"
 
@@ -3885,7 +3875,7 @@ msgstr "REST API indeks"
 msgid "NetHSM"
 msgstr "NetHSM"
 
-#: ../nethsm/index.rst:4
+#: ../nethsm/index.rst:8
 msgid ""
 "Your NetHSM has been delivered in a sealed packaging. `Verify the sealing"
 " <sealed-hardware.html>`_ before unpacking to ensure the device has not "
@@ -3895,7 +3885,7 @@ msgstr ""
 "<sealed-hardware.html>`_ enne lahtipakkimist, et veenduda, et seadet ei "
 "ole võltsitud."
 
-#: ../nethsm/index.rst:6
+#: ../nethsm/index.rst:10
 msgid ""
 "Connect the NetHSM's BMC ETH port with the network or your local "
 "computer. Set the BMC password."
@@ -3903,7 +3893,7 @@ msgstr ""
 "Ühendage NetHSM'i BMC ETH port võrguga või kohaliku arvutiga. Määrake BMC"
 " parool."
 
-#: ../nethsm/index.rst:8
+#: ../nethsm/index.rst:12
 msgid ""
 "Connect the NetHSM's ETH port with the network. Don't use the BMC ETH "
 "port because it allows wider system access. The NetHSM is available at "
@@ -3913,7 +3903,7 @@ msgstr ""
 " võimaldab laiemat juurdepääsu süsteemile. NetHSM on saadaval aadressil "
 "192.168.1.1."
 
-#: ../nethsm/index.rst:10
+#: ../nethsm/index.rst:14
 msgid ""
 "Initialize the NetHSM using `nitropy command line tool <cli.html>`_. "
 "Alternatively, the `REST API <api.html>`_ can be used."
@@ -3976,11 +3966,11 @@ msgstr "Juurdepääs NetHSMile PKCS#11 draiveri abil"
 
 #: ../nethsm/pkcs11.rst:10
 msgid ""
-"Download the PKCS#11 driver <https://github.com/Nitrokey/nethsm-pkcs11>_ "
-"for NetHSM."
+"Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`_ for NetHSM."
 msgstr ""
-"Laadige alla PKCS#11 draiver <https://github.com/Nitrokey/nethsm-pkcs11>_"
-" NetHSMi jaoks."
+"Laadige alla `PKCS#11 draiver <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`_ NetHSM-i jaoks."
 
 #: ../nethsm/pkcs11.rst:11
 msgid ""
@@ -3993,18 +3983,32 @@ msgstr ""
 "`/etc/nitrokey/` või kausta, kus teie rakendus käivitatakse."
 
 #: ../nethsm/pkcs11.rst:16
-msgid "Decrypting"
-msgstr "Dekrüpteerimine"
+msgid "Encrypting & Decrypting"
+msgstr "Krüpteerimine &; dekrüpteerimine"
 
 #: ../nethsm/pkcs11.rst:18
 msgid ""
 "After creating a key (here: ID 42) with the according mechanism, you can "
-"use it for decryption:"
+"use it for encryption and decryption, but first you should create the "
+"key:"
 msgstr ""
 "Pärast võtme (siin: ID 42) loomist vastava mehhanismiga saate seda "
-"kasutada dekrüpteerimiseks:"
+"kasutada krüpteerimiseks ja dekrüpteerimiseks, kuid kõigepealt peate "
+"looma võtme:"
 
-#: ../nethsm/pkcs11.rst:44
+#: ../nethsm/pkcs11.rst:35
+msgid "Now you can encrypt:"
+msgstr "Nüüd saate krüpteerida:"
+
+#: ../nethsm/pkcs11.rst:42
+msgid "... And decrypt:"
+msgstr "... Ja dekrüpteerida:"
+
+#: ../nethsm/pkcs11.rst:51
+msgid "First create the key again:"
+msgstr "Looge kõigepealt uuesti võti:"
+
+#: ../nethsm/pkcs11.rst:67
 msgid ""
 "After creating a key (here: ID 23) with the according mechanism, you can "
 "use it for signing:"
@@ -4035,7 +4039,7 @@ msgstr ""
 "\"adminadmin\", parool \"unlockunlock\"."
 
 #: ../nethsm/sealed-hardware.rst:2 ../nitropad/sealed-hardware.rst:2
-#: ../nitropc/sealed-hardware.rst:2
+#: ../nitropc/sealed-hardware.rst:2 ../nitrowall/sealed-hardware.rst:2
 msgid "Verify Sealed Hardware"
 msgstr "Kontrollida pitseeritud riistvara"
 
@@ -4061,7 +4065,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Siin on mõned pildid sellest, kuidas me NetHSMi kokku paneme:"
 
-#: ../nethsm/sealed-hardware.rst:14
+#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
 msgid "Hardware Sealing"
 msgstr "Riistvara tihendamine"
 
@@ -10380,6 +10384,18 @@ msgstr ""
 "Pärast installimist installige vajalikud uuendused. Selleks minge "
 "jaotisse Süsteem → Firmware → Uuendused."
 
+#: ../nitrowall/sealed-hardware.rst:4
+msgid ""
+"Your NitroWall has been delivered in a sealed packaging and sealed "
+"screws. We will send you a picture of your NitroWall before shipping. "
+"Please compare the imaged to your packaged NitroWall. If you notice any "
+"changes, please contact us to arrange further action."
+msgstr ""
+"Teie NitroWall on tarnitud pitseeritud pakendis ja pitseeritud kruvidega. "
+"Saadame teile enne saatmist pildi teie NitroWall'ist. Palun võrrelge "
+"kujutist teie pakendatud NitroWalliga. Kui märkate mingeid muutusi, võtke "
+"meiega ühendust, et leppida kokku edasised toimingud."
+
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
 msgstr "Google'i kahefaktoriline autentimine"
@@ -10609,7 +10625,8 @@ msgstr ""
 #: ../pro/ecc.rst:26
 msgid "You can read Nitrokey’s OpenPGP Card version via ``gpg2 --card-status``:"
 msgstr ""
-"Nitrokey OpenPGP-kaardi versiooni saate lugeda ``gpg2 --card-status`` kaudu:"
+"Nitrokey OpenPGP-kaardi versiooni saate lugeda ``gpg2 --card-status`` "
+"kaudu:"
 
 #: ../pro/ecc.rst:36
 msgid ""
@@ -15248,8 +15265,8 @@ msgid ""
 "This will reset the current identity. To reset  all identitites the "
 "following needs to be done:"
 msgstr ""
-"See nullib praeguse identiteedi. Kõikide identiteetide lähtestamiseks tuleb "
-"teha järgmist:"
+"See nullib praeguse identiteedi. Kõikide identiteetide lähtestamiseks "
+"tuleb teha järgmist:"
 
 #: ../start/factory-reset.rst:57
 msgid ""
@@ -15269,18 +15286,18 @@ msgid ""
 "enable the reset of the User PIN (not the Admin PIN). For older Firmware "
 "it is recommended since it is needed to reset the device (see below)"
 msgstr ""
-"See samm on uue püsivara puhul vabatahtlik.. Saate lisada lähtestuskoodi, "
-"mis võimaldab kasutaja PIN-koodi lähtestamist (mitte administraatori PIN-"
-"koodi). Vanema püsivara puhul on see soovitatav, kuna seda on vaja seadme "
-"lähtestamiseks (vt allpool)."
+"See samm on uue püsivara puhul vabatahtlik.. Saate lisada lähtestuskoodi,"
+" mis võimaldab kasutaja PIN-koodi lähtestamist (mitte administraatori "
+"PIN-koodi). Vanema püsivara puhul on see soovitatav, kuna seda on vaja "
+"seadme lähtestamiseks (vt allpool)."
 
 #: ../start/factory-reset.rst:66
 msgid ""
 "`Checkout the documentation here <http://www.fsij.org/doc-gnuk/gnuk-"
 "passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_."
 msgstr ""
-"`Seadme dokumentatsiooni siin <http://www.fsij.org/doc-gnuk/gnuk-passphrase-"
-"setting.html#set-up-pw1-pw3-and-reset-code>`_."
+"`Seadme dokumentatsiooni siin <http://www.fsij.org/doc-gnuk/gnuk-"
+"passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_."
 
 #: ../start/factory-reset.rst:72
 msgid "Firmware below 1.2.5"
@@ -15299,8 +15316,8 @@ msgid ""
 msgstr ""
 "Kui ja ainult siis, kui seade ei ole blokeeritud (PIN-koodi ei ole liiga "
 "tihti valesti sisestatud), saate kasutada sama protseduuri nagu uuemas "
-"püsivara versioonis (vt eespool). Seadme blokeeringu tühistamiseks on vaja "
-"reset-koodi või ei saa seadet enam kasutada!"
+"püsivara versioonis (vt eespool). Seadme blokeeringu tühistamiseks on "
+"vaja reset-koodi või ei saa seadet enam kasutada!"
 
 #: ../start/factory-reset.rst:79
 msgid "Nitrokey Start firmware 1.0:"
@@ -15313,10 +15330,10 @@ msgid ""
 "supports-firmware-upgrade/>`_ beforehand! In case of a blocked device it "
 "enables you to perform a firmware update which resets the device."
 msgstr ""
-"Nitrokey Start 1.0 lähtestamiseks tuleb eelnevalt defineerida avalik võti `"
-"firmware uuenduste <http://no-passwd.net/askbot/question/34/"
-"how-gnuk-supports-firmware-upgrade/>`_ jaoks! Blokeeritud seadme puhul "
-"võimaldab see teha püsivara uuenduse, mis lähtestab seadme."
+"Nitrokey Start 1.0 lähtestamiseks tuleb eelnevalt defineerida avalik võti"
+" `firmware uuenduste <http://no-passwd.net/askbot/question/34/how-gnuk-"
+"supports-firmware-upgrade/>`_ jaoks! Blokeeritud seadme puhul võimaldab "
+"see teha püsivara uuenduse, mis lähtestab seadme."
 
 #: ../start/faq.rst:2
 msgid "Nitrokey Start FAQ"
@@ -20172,3 +20189,26 @@ msgstr ""
 #~ " käsu kohta -> 910 baiti sekundis "
 #~ "* 128-bitine AES, 240 baiti käsu "
 #~ "kohta -> 930 baiti sekundis."
+
+#~ msgid "Decrypting"
+#~ msgstr "Dekrüpteerimine"
+
+#~ msgid ""
+#~ "Before we start, we store the host"
+#~ " name of the NetHSM instance in "
+#~ "the NETHSM_HOST environment variable.  You "
+#~ "can use the public NsetupetHSM demo "
+#~ "instance nethsmdemo.nitrokey.com or run a "
+#~ "local demo instance using the NetHSM "
+#~ "docker image, see `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ section of"
+#~ " the NetHSM documentation."
+#~ msgstr ""
+#~ "Enne alustamist salvestame NetHSMi instantsi"
+#~ " hostinime keskkonnamuutujasse NETHSM_HOST.  "
+#~ "Võite kasutada avalikku NsetupetHSM-i "
+#~ "demoinstantsi nethsmdemo.nitrokey.com või käivitada"
+#~ " lokaalset demoinstantsi, kasutades NetHSM-i "
+#~ "dokker-imago, vt NetHSM-i dokumentatsiooni "
+#~ "jaotist `Docker Hub "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_."

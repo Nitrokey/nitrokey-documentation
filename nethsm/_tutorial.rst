@@ -1,13 +1,18 @@
-.. start:: setup
+
 Before we start, we store the host name of the NetHSM instance in the
-NETHSM_HOST environment variable.  You can use the public NetHSM demo
+NETHSM_HOST environment variable.  You can use the public NsetupetHSM demo
 instance nethsmdemo.nitrokey.com or run a local demo instance using the
-NetHSM docker image, see the `Development and Testing
-</index.html#development-and-testing>`_ section of the NetHSM documentation.
+NetHSM docker image, see `Docker Hub
+<https://hub.docker.com/r/nitrokey/nethsm>`_ section of the NetHSM documentation.
+
+ .. .. warning::
+
+ 	Pull the Docker Container with this command: `docker pull nitrokey/nethsm`
 
 ::
 
-    $ export NETHSM_HOST="localhost:8443"
+    $ export NETHSM_HOST="localhost:8443" # OR
+    $ export NETHSM_HOST="nethsmdemo.nitrokey.com"
 
 .. end
 
@@ -188,9 +193,7 @@ verification (as described in the next section):
 
 ::
 
-    openssl rsa -in public.pem -pubin -text
-
-::
+    $ openssl rsa -in public.pem -pubin -text
 
     RSA Public-Key: (2048 bit)
     Modulus:
@@ -283,7 +286,7 @@ we have to calculate a digest first:
 
 ::
 
-    openssl dgst -sha256 -binary data | base64 > data.digest
+    $ openssl dgst -sha256 -binary data | base64 > data.digest
 
 Then we can create a signature from this digest using the NetHSM:
 .. end
@@ -295,10 +298,8 @@ And then use OpenSSL to verify the signature:
 
 ::
 
-    openssl dgst -sha256 -verify public.pem -signature data.sig \
+    $ openssl dgst -sha256 -verify public.pem -signature data.sig \
     -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
-
-::
 
     Verified OK
 .. end
