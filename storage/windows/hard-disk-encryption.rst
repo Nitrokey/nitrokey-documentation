@@ -1,6 +1,4 @@
-.. only:: comment
- Hard Disk Encryption
- ===========================
+Hard Disk Encryption
+===========================
 
-.. include:: ../../pro/windows/hard-disk-encryption.rst
-~                                   
+.. include:: ../../pro/hard-disk-encryption.rst
