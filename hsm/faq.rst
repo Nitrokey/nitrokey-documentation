@@ -52,7 +52,7 @@ Nitrokey HSM FAQ
     * Signature creation with on-card SHA-256 and 1 kb data: RSA 2048; 68 per minute
     * Signature creation with on-card SHA-256 and 1 kb data: ECDSA 256: 125 per minute
 
-**Q:** How can I distinguish a Nitrokey HSM1 from an Nitrokey HSM2?
+**Q:** How can I distinguish a Nitrokey HSM 1 from an Nitrokey HSM 2?
   Use ``opensc-tool --list-algorithms`` and compare with the table below. Please 
   also see `this thread`_ for the factsheets and more details.
 
@@ -88,7 +88,7 @@ Nitrokey HSM FAQ
 **Q:** How to import an existing key into the Nitrokey HSM?
     First, `set up`_ your Nitrokey HSM to use key backup and restore. Then use Smart Card Shell for importing. If your key is stored in a Java key store you can use `NitroKeyWrapper`_  instead.
 
-**Q:** 
+**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey HSM? 
     An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey HSM can be found at `banzaicloud.com`_.
 
 **Q:** Can I use Nitrokey HSM with cryptocurrencies?
@@ -100,7 +100,7 @@ Nitrokey HSM FAQ
 .. _Smart Card Shell: https://www.openscdp.org/scsh3/
 .. _NitroKeyWrapper: https://git.bubu1.eu/Bubu/nitrokeywrapper
 .. _this thread: https://support.nitrokey.com/t/comparison-between-nitrokey-hsm-2-and-hsm-1/2977
-.. _banzaicloud.com: https://banzaicloud.com/products/bank-vaults/
+.. _banzaicloud.com: https://banzaicloud.com/blog/vault-hsm/#nitrokey-hsm-support-opensc
 .. _program : http://smartbtc.eu/index.html
 .. _Tezos: https://tezos.com/
 .. _reported: https://twitter.com/thomas_quinlan/status/1222492762760716288
