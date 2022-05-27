@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-27 16:54+0200\n"
+"POT-Creation-Date: 2022-05-27 22:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -318,7 +318,7 @@ msgstr ""
 #: ../fido2/linux/desktop-login.rst:13
 #: ../fido2/linux/desktop-login.rst:13
 #: ../fido2/linux/desktop-login.rst:13
-msgid "If you want to login to you computer using `Nitrokey Pro 2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ `Nitrokey Storage 2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`_ you can visit the instructions for Windows available `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:windows>`_, and for Linux `here <https://www.nitrokey.com/documentation/applications#p:nitrokey-pro&a:computer-login&os:linux>`_."
+msgid "If you want to login to you computer using `Nitrokey Pro 2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ `Nitrokey Storage 2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`_ you can visit the instructions available `here <../../pro/linux/login-with-pam.html>`_."
 msgstr ""
 
 #: ../fido2/linux/desktop-login.rst:18
@@ -3197,7 +3197,7 @@ msgid "Signature creation with on-card SHA-256 and 1 kb data: ECDSA 256: 125 per
 msgstr ""
 
 #: ../hsm/faq.rst:57
-msgid "**Q:** How can I distinguish a Nitrokey HSM1 from an Nitrokey HSM2?"
+msgid "**Q:** How can I distinguish a Nitrokey HSM 1 from an Nitrokey HSM 2?"
 msgstr ""
 
 #: ../hsm/faq.rst:56
@@ -3321,10 +3321,9 @@ msgstr ""
 #: ../shared-faqs/algos.rst:6
 #: ../shared-faqs/algos.rst:6
 #: ../shared-faqs/algos.rst:6
-#: ../shared-faqs/generic.rst:99
 #: ../shared-faqs/algos.rst:6
 #: ../shared-faqs/algos.rst:6
-msgid "HSM2"
+msgid "HSM 2"
 msgstr ""
 
 #: ../shared-faqs/algos.rst:8
@@ -4069,9 +4068,7 @@ msgid "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then us
 msgstr ""
 
 #: ../hsm/faq.rst:92
-#: ../to-be-integrated.rst:787
-#: ../to-be-integrated.rst:883
-msgid "**Q:**"
+msgid "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey HSM?"
 msgstr ""
 
 #: ../hsm/faq.rst:92
@@ -4364,6 +4361,175 @@ msgstr ""
 msgid "Nitrokey HSM 2"
 msgstr ""
 
+#: ../hsm/ipsec.rst:5
+#: ../hsm/ipsec.rst:5
+#: ../hsm/ipsec.rst:5
+#: ../hsm/ipsec.rst:5
+#: ../hsm/ipsec.rst:5
+msgid "`Strong Swan <http://www.strongswan.org/>`_ works using the `PKCS#11 driver <https://www.nitrokey.com/documentation/applications#pkcs11>`_. Basically follow these steps:"
+msgstr ""
+
+#: ../hsm/ipsec.rst:7
+#: ../hsm/ipsec.rst:7
+#: ../hsm/ipsec.rst:7
+#: ../hsm/ipsec.rst:7
+#: ../hsm/ipsec.rst:7
+#: ../to-be-integrated.rst:462
+#: ../to-be-integrated.rst:833
+msgid "Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 bit RSA key."
+msgstr ""
+
+#: ../hsm/ipsec.rst:9
+#: ../hsm/ipsec.rst:9
+#: ../hsm/ipsec.rst:9
+#: ../hsm/ipsec.rst:9
+#: ../hsm/ipsec.rst:9
+msgid "``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
+msgstr ""
+
+#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:11
+#: ../to-be-integrated.rst:466
+#: ../to-be-integrated.rst:837
+msgid "Generate a certificate signing request via openssl + pkcs11 module"
+msgstr ""
+
+#: ../hsm/ipsec.rst:13
+#: ../hsm/ipsec.rst:13
+#: ../hsm/ipsec.rst:13
+#: ../hsm/ipsec.rst:13
+#: ../hsm/ipsec.rst:13
+msgid "``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/CN=user@email.com/emailAddress=user@email.com'``"
+msgstr ""
+
+#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:17
+#: ../to-be-integrated.rst:472
+#: ../to-be-integrated.rst:843
+msgid "Sign the certificate with your certificate authority"
+msgstr ""
+
+#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:19
+#: ../to-be-integrated.rst:474
+#: ../to-be-integrated.rst:845
+msgid "Convert the certificate to DER"
+msgstr ""
+
+#: ../hsm/ipsec.rst:21
+#: ../hsm/ipsec.rst:21
+#: ../hsm/ipsec.rst:21
+#: ../hsm/ipsec.rst:21
+#: ../hsm/ipsec.rst:21
+msgid "``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-staging-cert.der -outform DER``"
+msgstr ""
+
+#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:23
+#: ../to-be-integrated.rst:431
+#: ../to-be-integrated.rst:478
+#: ../to-be-integrated.rst:802
+#: ../to-be-integrated.rst:849
+msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
+msgstr ""
+
+#: ../hsm/ipsec.rst:25
+#: ../hsm/ipsec.rst:25
+#: ../hsm/ipsec.rst:25
+#: ../hsm/ipsec.rst:25
+#: ../hsm/ipsec.rst:25
+msgid "``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging Access'``"
+msgstr ""
+
+#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:27
+#: ../to-be-integrated.rst:482
+#: ../to-be-integrated.rst:853
+msgid "Configure Strongswan to load opensc-pkcs11 module then to load the certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and add the following module:"
+msgstr ""
+
+#: ../hsm/ipsec.rst:32
+#: ../hsm/ipsec.rst:32
+#: ../hsm/ipsec.rst:32
+#: ../hsm/ipsec.rst:32
+#: ../hsm/ipsec.rst:32
+#: ../to-be-integrated.rst:486
+#: ../to-be-integrated.rst:857
+msgid "modules {"
+msgstr ""
+
+#: ../hsm/ipsec.rst:30
+#: ../hsm/ipsec.rst:30
+#: ../hsm/ipsec.rst:30
+#: ../hsm/ipsec.rst:30
+#: ../hsm/ipsec.rst:30
+#: ../to-be-integrated.rst:485
+#: ../to-be-integrated.rst:856
+msgid "Nitrokey {"
+msgstr ""
+
+#: ../hsm/ipsec.rst:31
+#: ../hsm/ipsec.rst:31
+#: ../hsm/ipsec.rst:31
+#: ../hsm/ipsec.rst:31
+#: ../hsm/ipsec.rst:31
+#: ../to-be-integrated.rst:486
+#: ../to-be-integrated.rst:857
+msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+msgstr ""
+
+#: ../hsm/ipsec.rst:32
+#: ../hsm/ipsec.rst:33
+#: ../hsm/ipsec.rst:32
+#: ../hsm/ipsec.rst:33
+#: ../hsm/ipsec.rst:32
+#: ../hsm/ipsec.rst:33
+#: ../hsm/ipsec.rst:32
+#: ../hsm/ipsec.rst:33
+#: ../hsm/ipsec.rst:32
+#: ../hsm/ipsec.rst:33
+#: ../to-be-integrated.rst:487
+#: ../to-be-integrated.rst:488
+#: ../to-be-integrated.rst:858
+#: ../to-be-integrated.rst:859
+msgid "}"
+msgstr ""
+
+#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:34
+#: ../to-be-integrated.rst:490
+#: ../to-be-integrated.rst:861
+msgid "Initiate the VPN connection via IPSec/Strongswan, then prompt for Nitrokey PIN"
+msgstr ""
+
+#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:36
+msgid "VPN is now connected"
+msgstr ""
+
+#: ../hsm/linux/product_platform_heading.rst:3
+#: ../hsm/linux/product_platform_heading.rst:3
 #: ../hsm/linux/product_platform_heading.rst:3
 #: ../hsm/linux/product_platform_heading.rst:3
 #: ../hsm/linux/product_platform_heading.rst:3
@@ -5095,6 +5261,39 @@ msgstr ""
 #: ../hsm/mac/index.rst:22
 #: ../hsm/windows/index.rst:22
 msgid "Your Nitrokey is now ready to use."
+msgstr ""
+
+#: ../hsm/linux/index.rst:27
+#: ../hsm/mac/index.rst:24
+#: ../hsm/windows/index.rst:24
+msgid "There is `nitrotool <https://github.com/johndoe31415/nitrotool>`_ as a more comfortable frontend to OpenSC. (hsmwiz)"
+msgstr ""
+
+#: ../hsm/linux/index.rst:28
+#: ../hsm/mac/index.rst:25
+#: ../hsm/windows/index.rst:25
+msgid "Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11 module is provided by the `sc-hsm-embedded <https://github.com/CardContact/sc-hsm-embedded>`_ project."
+msgstr ""
+
+#: ../hsm/linux/index.rst:29
+#: ../hsm/mac/index.rst:26
+#: ../hsm/windows/index.rst:26
+msgid "`This PKCS#11 module <https://github.com/CardContact/sc-hsm-embedded/wiki/PKCS11>`_ is useful for deployments where key generation at the user's workplace is not required. The PKCS#11 module also supports major electronic signature cards available in the German market."
+msgstr ""
+
+#: ../hsm/linux/index.rst:30
+#: ../hsm/mac/index.rst:27
+#: ../hsm/windows/index.rst:27
+msgid "OpenSCDP: The SmartCard-HSM is fully integrated with `OpenSCDP <http://www.openscdp.org/>`_, the open smart card development platform. See the `public support scripts <http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html>`_ for details."
+msgstr ""
+
+#: ../hsm/linux/ipsec.rst:2
+#: ../pro/linux/ipsec.rst:2
+#: ../start/linux/ipsec.rst:2
+#: ../storage/linux/ipsec.rst:2
+#: ../to-be-integrated.rst:458
+#: ../to-be-integrated.rst:829
+msgid "IPsec"
 msgstr ""
 
 #: ../hsm/pkcs11-url.rst:2
@@ -5899,6 +6098,111 @@ msgstr ""
 #: ../pro/smime-thunderbird.rst:47
 #: ../pro/smime-thunderbird.rst:47
 msgid "When composing an email you can now choose to encrypt and sign the message."
+msgstr ""
+
+#: ../hsm/linux/stunnel.rst:2
+#: ../pro/linux/stunnel.rst:2
+#: ../start/linux/stunnel.rst:2
+#: ../storage/linux/stunnel.rst:2
+msgid "Stunnel"
+msgstr ""
+
+#: ../hsm/stunnel.rst:5
+#: ../hsm/stunnel.rst:5
+#: ../hsm/stunnel.rst:5
+#: ../hsm/stunnel.rst:5
+#: ../hsm/stunnel.rst:5
+msgid "`Stunnel <https://www.stunnel.org/>`_ works as an SSL encryption wrapper between remote client and local (inetd-startable) or remote server. It can be used to add SSL functionality to commonly used inetd daemons like POP2, POP3, and IMAP servers without any changes in the programs' code."
+msgstr ""
+
+#: ../hsm/stunnel.rst:7
+#: ../hsm/stunnel.rst:7
+#: ../hsm/stunnel.rst:7
+#: ../hsm/stunnel.rst:7
+#: ../hsm/stunnel.rst:7
+#: ../to-be-integrated.rst:497
+#: ../to-be-integrated.rst:868
+msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
+msgstr ""
+
+#: ../hsm/stunnel.rst:9
+#: ../hsm/stunnel.rst:9
+#: ../hsm/stunnel.rst:9
+#: ../hsm/stunnel.rst:9
+#: ../hsm/stunnel.rst:9
+msgid "engine=dynamic"
+msgstr ""
+
+#: ../hsm/stunnel.rst:10
+#: ../hsm/stunnel.rst:10
+#: ../hsm/stunnel.rst:10
+#: ../hsm/stunnel.rst:10
+#: ../hsm/stunnel.rst:10
+msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+msgstr ""
+
+#: ../hsm/stunnel.rst:11
+#: ../hsm/stunnel.rst:11
+#: ../hsm/stunnel.rst:11
+#: ../hsm/stunnel.rst:11
+#: ../hsm/stunnel.rst:11
+msgid "engineCtrl=ID:pkcs11"
+msgstr ""
+
+#: ../hsm/stunnel.rst:12
+#: ../hsm/stunnel.rst:12
+#: ../hsm/stunnel.rst:12
+#: ../hsm/stunnel.rst:12
+#: ../hsm/stunnel.rst:12
+msgid "engineCtrl=LIST_ADD:1"
+msgstr ""
+
+#: ../hsm/stunnel.rst:13
+#: ../hsm/stunnel.rst:13
+#: ../hsm/stunnel.rst:13
+#: ../hsm/stunnel.rst:13
+#: ../hsm/stunnel.rst:13
+msgid "engineCtrl=LOAD"
+msgstr ""
+
+#: ../hsm/stunnel.rst:14
+#: ../hsm/stunnel.rst:14
+#: ../hsm/stunnel.rst:14
+#: ../hsm/stunnel.rst:14
+#: ../hsm/stunnel.rst:14
+msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+msgstr ""
+
+#: ../hsm/stunnel.rst:15
+#: ../hsm/stunnel.rst:15
+#: ../hsm/stunnel.rst:15
+#: ../hsm/stunnel.rst:15
+#: ../hsm/stunnel.rst:15
+msgid "engineCtrl=INIT"
+msgstr ""
+
+#: ../hsm/stunnel.rst:17
+#: ../hsm/stunnel.rst:17
+#: ../hsm/stunnel.rst:17
+#: ../hsm/stunnel.rst:17
+#: ../hsm/stunnel.rst:17
+msgid "[service]"
+msgstr ""
+
+#: ../hsm/stunnel.rst:18
+#: ../hsm/stunnel.rst:18
+#: ../hsm/stunnel.rst:18
+#: ../hsm/stunnel.rst:18
+#: ../hsm/stunnel.rst:18
+msgid "engineNum=1"
+msgstr ""
+
+#: ../hsm/stunnel.rst:19
+#: ../hsm/stunnel.rst:19
+#: ../hsm/stunnel.rst:19
+#: ../hsm/stunnel.rst:19
+#: ../hsm/stunnel.rst:19
+msgid "key=id_45"
 msgstr ""
 
 #: ../hsm/mac/product_platform_heading.rst:3
@@ -11945,6 +12249,8 @@ msgstr ""
 #: ../pro/linux/product_platform_heading.rst:3
 #: ../pro/linux/product_platform_heading.rst:3
 #: ../pro/linux/product_platform_heading.rst:3
+#: ../pro/linux/product_platform_heading.rst:3
+#: ../pro/linux/product_platform_heading.rst:3
 msgid "(Nitrokey Pro 2 - Linux)"
 msgstr ""
 
@@ -15825,6 +16131,10 @@ msgstr ""
 msgid "Nitrokey U2F stores a single ECC key pair but can be used with an unlimited amount of user accounts."
 msgstr ""
 
+#: ../shared-faqs/generic.rst:99
+msgid "HSM2"
+msgstr ""
+
 #: ../shared-faqs/generic.rst:133
 #: ../shared-faqs/generic.rst:142
 msgid "See the relevant product faq for details: (@todo add links)"
@@ -16106,6 +16416,8 @@ msgstr ""
 msgid "The Nitrokey Start doesn't contain storage capability for ordinary data (it can only store cryptographic keys and certificates)."
 msgstr ""
 
+#: ../start/linux/product_platform_heading.rst:3
+#: ../start/linux/product_platform_heading.rst:3
 #: ../start/linux/product_platform_heading.rst:3
 #: ../start/linux/product_platform_heading.rst:3
 #: ../start/linux/product_platform_heading.rst:3
@@ -16918,6 +17230,8 @@ msgstr ""
 msgid "Make sure to unmount/eject all partitions on the hidden volumes before locking or disconnecting the Nitrokey."
 msgstr ""
 
+#: ../storage/linux/product_platform_heading.rst:3
+#: ../storage/linux/product_platform_heading.rst:3
 #: ../storage/linux/product_platform_heading.rst:3
 #: ../storage/linux/product_platform_heading.rst:3
 #: ../storage/linux/product_platform_heading.rst:3
@@ -17960,13 +18274,6 @@ msgstr ""
 msgid "$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out <FILE.CRT> -config <OPENSSL.CNF> -extensions usr_client"
 msgstr ""
 
-#: ../to-be-integrated.rst:431
-#: ../to-be-integrated.rst:478
-#: ../to-be-integrated.rst:802
-#: ../to-be-integrated.rst:849
-msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
-msgstr ""
-
 #: ../to-be-integrated.rst:433
 #: ../to-be-integrated.rst:804
 msgid "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
@@ -18022,19 +18329,9 @@ msgstr ""
 msgid "Alternatively you could recompile OpenVPN client with systemd support disabled and it will prompt you for the PIN as expected. Alternatively to the OpenVPN client you could use the Viscosity client which provides a better user experience especially for entering the PIN."
 msgstr ""
 
-#: ../to-be-integrated.rst:458
-#: ../to-be-integrated.rst:829
-msgid "IPsec"
-msgstr ""
-
 #: ../to-be-integrated.rst:460
 #: ../to-be-integrated.rst:831
 msgid "Strong Swan works using the PKCS#11 driver. Basically follow these steps:"
-msgstr ""
-
-#: ../to-be-integrated.rst:462
-#: ../to-be-integrated.rst:833
-msgid "Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 bit RSA key."
 msgstr ""
 
 #: ../to-be-integrated.rst:464
@@ -18042,24 +18339,9 @@ msgstr ""
 msgid "$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'"
 msgstr ""
 
-#: ../to-be-integrated.rst:466
-#: ../to-be-integrated.rst:837
-msgid "Generate a certificate signing request via openssl + pkcs11 module"
-msgstr ""
-
 #: ../to-be-integrated.rst:468
 #: ../to-be-integrated.rst:839
 msgid "$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/CN=user@email.com/emailAddress=user@email.com'"
-msgstr ""
-
-#: ../to-be-integrated.rst:472
-#: ../to-be-integrated.rst:843
-msgid "Sign the certificate with your certificate authority"
-msgstr ""
-
-#: ../to-be-integrated.rst:474
-#: ../to-be-integrated.rst:845
-msgid "Convert the certificate to DER"
 msgstr ""
 
 #: ../to-be-integrated.rst:476
@@ -18072,38 +18354,6 @@ msgstr ""
 msgid "$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging Access'"
 msgstr ""
 
-#: ../to-be-integrated.rst:482
-#: ../to-be-integrated.rst:853
-msgid "Configure Strongswan to load opensc-pkcs11 module then to load the certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and add the following module:"
-msgstr ""
-
-#: ../to-be-integrated.rst:486
-#: ../to-be-integrated.rst:857
-msgid "modules {"
-msgstr ""
-
-#: ../to-be-integrated.rst:485
-#: ../to-be-integrated.rst:856
-msgid "Nitrokey {"
-msgstr ""
-
-#: ../to-be-integrated.rst:486
-#: ../to-be-integrated.rst:857
-msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr ""
-
-#: ../to-be-integrated.rst:487
-#: ../to-be-integrated.rst:488
-#: ../to-be-integrated.rst:858
-#: ../to-be-integrated.rst:859
-msgid "}"
-msgstr ""
-
-#: ../to-be-integrated.rst:490
-#: ../to-be-integrated.rst:861
-msgid "Initiate the VPN connection via IPSec/Strongswan, then prompt for Nitrokey PIN"
-msgstr ""
-
 #: ../to-be-integrated.rst:492
 #: ../to-be-integrated.rst:863
 msgid "8. VPN is now connected Stunnel"
@@ -18112,11 +18362,6 @@ msgstr ""
 #: ../to-be-integrated.rst:495
 #: ../to-be-integrated.rst:866
 msgid "Stunnel works as an SSL encryption wrapper between remote client and local (inetd-startable) or remote server. It can be used to add SSL functionality to commonly used inetd daemons like POP2, POP3, and IMAP servers without any changes in the programs' code."
-msgstr ""
-
-#: ../to-be-integrated.rst:497
-#: ../to-be-integrated.rst:868
-msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr ""
 
 #: ../to-be-integrated.rst:499
@@ -18359,6 +18604,11 @@ msgstr ""
 
 #: ../to-be-integrated.rst:784
 msgid "**Q:** Physical Access Control With it's unique build-in device authentication PKI, a Nitrokey HSM has a cryptographically protected unique identity that can be verified in a fast authentication protocol. An access control terminal can verify authenticity and identity of the device, create a secure communication channel and perform offline PIN verification. The coolPACS project has all the details."
+msgstr ""
+
+#: ../to-be-integrated.rst:787
+#: ../to-be-integrated.rst:883
+msgid "**Q:**"
 msgstr ""
 
 #: ../to-be-integrated.rst:885
