@@ -20,3 +20,8 @@ Nitrokey HSM with macOS
    keys <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#generate-key-pair>`_.
 
 Your Nitrokey is now ready to use.
+
+* There is `nitrotool <https://github.com/johndoe31415/nitrotool>`_ as a more comfortable frontend to OpenSC. (hsmwiz)
+* Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11 module is provided by the `sc-hsm-embedded <https://github.com/CardContact/sc-hsm-embedded>`_ project.
+* `This PKCS#11 module <https://github.com/CardContact/sc-hsm-embedded/wiki/PKCS11>`_ is useful for deployments where key generation at the user's workplace is not required. The PKCS#11 module also supports major electronic signature cards available in the German market.
+* OpenSCDP: The SmartCard-HSM is fully integrated with `OpenSCDP <http://www.openscdp.org/>`_, the open smart card development platform. See the `public support scripts <http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html>`_ for details.
