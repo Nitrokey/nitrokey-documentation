@@ -16,7 +16,7 @@ There are two widely used standards for email encryption.
 
 If you are in doubt which one to choose, you should use OpenPGP, see `here <openpgp.html>`_. This page describes the usage of S/MIME email encryption.
 
-You need to purchase a S/MIME certificate or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`_ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`_ page.
+You need to purchase a S/MIME certificate (e.g. at `CERTUM <https://www.certum.eu/en/cert_offer_cert_id/>`_) or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`_ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`_ page.
 
 .. note::
    Windows users with 64-bit system (standard) need to install both, the 32-bit and the 64-bit version of OpenSC!

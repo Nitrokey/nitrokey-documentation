@@ -88,10 +88,21 @@ Nitrokey HSM FAQ
 **Q:** How to import an existing key into the Nitrokey HSM?
     First, `set up`_ your Nitrokey HSM to use key backup and restore. Then use Smart Card Shell for importing. If your key is stored in a Java key store you can use `NitroKeyWrapper`_  instead.
 
+**Q:** 
+    An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey HSM can be found at `banzaicloud.com`_.
+
+**Q:** Can I use Nitrokey HSM with cryptocurrencies?
+    J.v.d.Bosch wrote a simple, free python `program`_ to secure the private key of a Bitcoin wallet in a HSM.
+    `Tezos`_ has been `reported`_ to work with Nitrokey HSM.
+
+
 .. _set up: https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#using-key-backup-and-restore
 .. _Smart Card Shell: https://www.openscdp.org/scsh3/
 .. _NitroKeyWrapper: https://git.bubu1.eu/Bubu/nitrokeywrapper
 .. _this thread: https://support.nitrokey.com/t/comparison-between-nitrokey-hsm-2-and-hsm-1/2977
-
+.. _banzaicloud.com: https://banzaicloud.com/products/bank-vaults/
+.. _program : http://smartbtc.eu/index.html
+.. _Tezos: https://tezos.com/
+.. _reported: https://twitter.com/thomas_quinlan/status/1222492762760716288
 
 .. include:: ../shared-faqs/hyperlinks.rst 

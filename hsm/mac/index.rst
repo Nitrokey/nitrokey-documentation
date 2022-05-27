@@ -20,5 +20,3 @@ Nitrokey HSM with macOS
    keys <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#generate-key-pair>`_.
 
 Your Nitrokey is now ready to use.
-`Checkout <https://www.nitrokey.com/documentation/applications>`_ the
-various use cases and supported applications.
