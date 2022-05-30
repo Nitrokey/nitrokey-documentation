@@ -41,7 +41,8 @@ release = ''
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-    #'sphinxprettysearchresults',
+    'sphinx_copybutton',
+    'sphinxprettysearchresults',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
