@@ -58,8 +58,12 @@ Nitrokey HSM FAQ
 
 .. include:: ../shared-faqs/algos.rst 
 
+**Q:** How can I use the True Random Number Generator (TRNG) of the Nitrokey HSM for my applications?
+    Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC as a PKCS#11 driver.
 
-**Q:** How good is the Random Number Generator (RNG)?
+    OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 doesn't contain a mapping for OpenSSL to C_GenerateRandom.
+
+**Q:** How good is the True Random Number Generator (TRNG)?
     Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2
     (according to AIS 31 of the BSI).
 
@@ -104,5 +108,7 @@ Nitrokey HSM FAQ
 .. _program : http://smartbtc.eu/index.html
 .. _Tezos: https://tezos.com/
 .. _reported: https://twitter.com/thomas_quinlan/status/1222492762760716288
+.. _Botan: https://botan.randombit.net/
+.. _TokenTools: https://github.com/infincia/TokenTools
 
 .. include:: ../shared-faqs/hyperlinks.rst 
