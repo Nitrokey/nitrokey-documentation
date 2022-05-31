@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-27 22:03+0200\n"
-"PO-Revision-Date: 2022-05-27 21:38+0000\n"
+"POT-Creation-Date: 2022-05-30 15:52+0200\n"
+"PO-Revision-Date: 2022-05-30 15:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/sv/>\n"
@@ -156,10 +156,10 @@ msgstr ""
 "Nitrokey FIDO2 innehåller ingen lagringskapacitet för vanliga data (den "
 "kan endast lagra kryptografiska nycklar och certifikat)."
 
-#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nethsm/faq.rst:2
-#: ../nitrokey3/index.rst:15 ../nitropad/index.rst:8 ../nitropc/index.rst:9
-#: ../nitrophone/index.rst:19 ../pro/index.rst:9 ../shared-faqs/index.rst:2
-#: ../start/index.rst:8 ../storage/index.rst:8
+#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nitrokey3/index.rst:15
+#: ../nitropad/index.rst:8 ../nitropc/index.rst:9 ../nitrophone/index.rst:19
+#: ../pro/index.rst:9 ../shared-faqs/index.rst:2 ../start/index.rst:8
+#: ../storage/index.rst:8
 msgid "Frequently Asked Questions"
 msgstr "Vanliga frågor"
 
@@ -236,12 +236,13 @@ msgid ""
 "can visit the instructions available `here <../../pro/linux/login-with-"
 "pam.html>`_."
 msgstr ""
-"Om du vill logga in på datorn med `Nitrokey Pro 2, <https://shop.nitrokey."
-"com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ `Nitrokey Storage 2 "
-"<https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ och `"
-"Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-"
-"start-6>`_ kan du läsa de instruktioner som finns ` här <../../pro/linux/"
-"login-with-pam.html>`_."
+"Om du vill logga in på datorn med `Nitrokey Pro 2, "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ "
+"`Nitrokey Storage 2 <https://shop.nitrokey.com/shop/product/nitrokey-"
+"storage-2-56>`_ och `Nitrokey Start "
+"<https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`_ kan du"
+" läsa de instruktioner som finns ` här <../../pro/linux/login-with-"
+"pam.html>`_."
 
 #: ../fido2/linux/desktop-login.rst:18
 #: ../pro/linux/automatic-screen-lock.rst:13
@@ -2249,8 +2250,7 @@ msgstr ""
 msgid ""
 "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey "
 "HSM?"
-msgstr ""
-"**Q:** Hur skyddar jag min molninfrastruktur/Kubernetes med Nitrokey HSM?"
+msgstr "**Q:** Hur skyddar jag min molninfrastruktur/Kubernetes med Nitrokey HSM?"
 
 #: ../hsm/faq.rst:92
 msgid ""
@@ -2490,9 +2490,10 @@ msgid ""
 "driver <https://www.nitrokey.com/documentation/applications#pkcs11>`_. "
 "Basically follow these steps:"
 msgstr ""
-"`Strong Swan <http://www.strongswan.org/>`_ fungerar med `PKCS#11-"
-"drivrutinen <https://www.nitrokey.com/documentation/applications#pkcs11>`_. "
-"Följ i princip följande steg:"
+"`Strong Swan <http://www.strongswan.org/>`_ fungerar med "
+"`PKCS#11-drivrutinen "
+"<https://www.nitrokey.com/documentation/applications#pkcs11>`_. Följ i "
+"princip följande steg:"
 
 #: ../hsm/ipsec.rst:7 ../to-be-integrated.rst:462 ../to-be-integrated.rst:833
 msgid ""
@@ -2507,8 +2508,8 @@ msgid ""
 "``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
 "pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
 msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -"
-"l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
+"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
+"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
 
 #: ../hsm/ipsec.rst:11 ../to-be-integrated.rst:466 ../to-be-integrated.rst:837
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
@@ -2524,12 +2525,13 @@ msgid ""
 "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
 "Access/CN=user@email.com/emailAddress=user@email.com'``"
 msgstr ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/"
-"engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> req -"
-"engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-"
-"staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/"
-"CN=user@email.com/emailAddress=user@email.com'``"
+"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
+"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
+"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
+"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
+"user@email.com-staging-cert.csr -subj "
+"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+"Access/CN=user@email.com/emailAddress=user@email.com'``"
 
 #: ../hsm/ipsec.rst:17 ../to-be-integrated.rst:472 ../to-be-integrated.rst:843
 msgid "Sign the certificate with your certificate authority"
@@ -2558,9 +2560,9 @@ msgid ""
 "pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
 "'Staging Access'``"
 msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -"
-"l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
-"Access'``"
+"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
+"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
+"'Staging Access'``"
 
 #: ../hsm/ipsec.rst:27 ../to-be-integrated.rst:482 ../to-be-integrated.rst:853
 msgid ""
@@ -3198,8 +3200,8 @@ msgid ""
 "There is `nitrotool <https://github.com/johndoe31415/nitrotool>`_ as a "
 "more comfortable frontend to OpenSC. (hsmwiz)"
 msgstr ""
-"Det finns `nitrotool <https://github.com/johndoe31415/nitrotool>`_ som en "
-"bekvämare frontlinje till OpenSC. (hsmwiz)"
+"Det finns `nitrotool <https://github.com/johndoe31415/nitrotool>`_ som en"
+" bekvämare frontlinje till OpenSC. (hsmwiz)"
 
 #: ../hsm/linux/index.rst:28 ../hsm/mac/index.rst:25
 #: ../hsm/windows/index.rst:25
@@ -3208,9 +3210,9 @@ msgid ""
 "PKCS#11 module is provided by the `sc-hsm-embedded "
 "<https://github.com/CardContact/sc-hsm-embedded>`_ project."
 msgstr ""
-"Inbäddade system: För system med minimalt minnesutrymme tillhandahålls en "
-"skrivskyddad PKCS#11-modul av `sc-hsm-embedded <https://github.com/"
-"CardContact/sc-hsm-embedded>`_-projektet."
+"Inbäddade system: För system med minimalt minnesutrymme tillhandahålls en"
+" skrivskyddad PKCS#11-modul av `sc-hsm-embedded "
+"<https://github.com/CardContact/sc-hsm-embedded>`_-projektet."
 
 #: ../hsm/linux/index.rst:29 ../hsm/mac/index.rst:26
 #: ../hsm/windows/index.rst:26
@@ -3220,10 +3222,11 @@ msgid ""
 " the user's workplace is not required. The PKCS#11 module also supports "
 "major electronic signature cards available in the German market."
 msgstr ""
-"`Denna PKCS#11-modul <https://github.com/CardContact/sc-hsm-embedded/wiki/"
-"PKCS11>`_ är användbar för installationer där nyckelgenerering på "
-"användarens arbetsplats inte krävs. PKCS#11-modulen stöder också de "
-"viktigaste elektroniska signaturkort som finns på den tyska marknaden."
+"`Denna PKCS#11-modul <https://github.com/CardContact/sc-hsm-"
+"embedded/wiki/PKCS11>`_ är användbar för installationer där "
+"nyckelgenerering på användarens arbetsplats inte krävs. PKCS#11-modulen "
+"stöder också de viktigaste elektroniska signaturkort som finns på den "
+"tyska marknaden."
 
 #: ../hsm/linux/index.rst:30 ../hsm/mac/index.rst:27
 #: ../hsm/windows/index.rst:27
@@ -3233,10 +3236,10 @@ msgid ""
 "See the `public support scripts <http://www.openscdp.org/scripts/sc-"
 "hsm/jsdoc/index.html>`_ for details."
 msgstr ""
-"OpenSCDP: SmartCard-HSM är helt integrerad med `OpenSCDP <http://www.openscdp"
-".org/>`_, den öppna utvecklingsplattformen för smarta kort. Se `public "
-"support scripts <http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html>`_ "
-"för mer information."
+"OpenSCDP: SmartCard-HSM är helt integrerad med `OpenSCDP "
+"<http://www.openscdp.org/>`_, den öppna utvecklingsplattformen för smarta"
+" kort. Se `public support scripts <http://www.openscdp.org/scripts/sc-"
+"hsm/jsdoc/index.html>`_ för mer information."
 
 #: ../hsm/linux/ipsec.rst:2 ../pro/linux/ipsec.rst:2 ../start/linux/ipsec.rst:2
 #: ../storage/linux/ipsec.rst:2 ../to-be-integrated.rst:458
@@ -3671,11 +3674,11 @@ msgid ""
 "can be used to add SSL functionality to commonly used inetd daemons like "
 "POP2, POP3, and IMAP servers without any changes in the programs' code."
 msgstr ""
-"`Stunnel <https://www.stunnel.org/>`_ fungerar som en SSL-krypteringshölje "
-"mellan en fjärrklient och en lokal (inetd-startbar) eller fjärrserver. Den "
-"kan användas för att lägga till SSL-funktionalitet till vanligt förekommande "
-"inetd-demoner som POP2-, POP3- och IMAP-servrar utan några ändringar i "
-"programmens kod."
+"`Stunnel <https://www.stunnel.org/>`_ fungerar som en SSL-"
+"krypteringshölje mellan en fjärrklient och en lokal (inetd-startbar) "
+"eller fjärrserver. Den kan användas för att lägga till SSL-funktionalitet"
+" till vanligt förekommande inetd-demoner som POP2-, POP3- och IMAP-"
+"servrar utan några ändringar i programmens kod."
 
 #: ../hsm/stunnel.rst:7 ../to-be-integrated.rst:497 ../to-be-integrated.rst:868
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
@@ -4436,7 +4439,7 @@ msgstr ""
 "<cli.html>`_. Alternativt kan `REST API <api.html>`_ och "
 "`PKCS#11-drivrutin <pkcs11.html>`_ användas."
 
-#: ../nethsm/index.rst:17
+#: ../nethsm/index.rst:19
 msgid "REST API Index"
 msgstr "Index för REST API"
 
@@ -4456,14 +4459,6 @@ msgstr ""
 
 #: ../nethsm/index.rst:10
 msgid ""
-"Connect the NetHSM's BMC ETH port with the network or your local "
-"computer. Set the BMC password."
-msgstr ""
-"Anslut NetHSM's BMC ETH-port till nätverket eller din lokala dator. Ställ"
-" in BMC-lösenordet."
-
-#: ../nethsm/index.rst:12
-msgid ""
 "Connect the NetHSM's ETH port with the network. Don't use the BMC ETH "
 "port because it allows wider system access. The NetHSM is available at "
 "address 192.168.1.1."
@@ -4472,6 +4467,10 @@ msgstr ""
 "eftersom den ger större systemåtkomst. NetHSM är tillgänglig på adressen "
 "192.168.1.1."
 
+#: ../nethsm/index.rst:12
+msgid "Change the password of the BMC ETH Port."
+msgstr "Ändra lösenordet för BMC ETH Port."
+
 #: ../nethsm/index.rst:14
 msgid ""
 "Initialize the NetHSM using `nitropy command line tool <cli.html>`_. "
@@ -4479,6 +4478,10 @@ msgid ""
 msgstr ""
 "Initialisera NetHSM med hjälp av kommandoradsverktyget `nitropy "
 "<cli.html>`_. Alternativt kan `REST API <api.html>`_ användas."
+
+#: ../nethsm/index.rst:16
+msgid "Further information can be obtained in other parts of the documentation."
+msgstr "Ytterligare information finns i andra delar av dokumentationen."
 
 #: ../nethsm/integration.rst:2
 msgid "Integration into Custom Application"
@@ -4635,7 +4638,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Här är några bilder på hur vi avslutar en NetHSM:"
 
-#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
+#: ../nethsm/sealed-hardware.rst:14
 msgid "Hardware Sealing"
 msgstr "Försegling av hårdvara"
 
@@ -11004,15 +11007,24 @@ msgstr ""
 
 #: ../nitrowall/sealed-hardware.rst:4
 msgid ""
-"Your NitroWall has been delivered in a sealed packaging and sealed "
+"Your NitroWall has been delivered in a sealed packaging and with sealed "
 "screws. We will send you a picture of your NitroWall before shipping. "
-"Please compare the imaged to your packaged NitroWall. If you notice any "
+"Please compare the image to your packaged NitroWall. If you notice any "
 "changes, please contact us to arrange further action."
 msgstr ""
-"Din NitroWall har levererats i en förseglad förpackning och förseglade "
-"skruvar. Vi skickar dig en bild på din NitroWall före leverans. Jämför "
-"bilden med din förpackade NitroWall. Om du märker några förändringar, "
-"vänligen kontakta oss för att ordna ytterligare åtgärder."
+"Din NitroWall har levererats i en förseglad förpackning och med "
+"förseglade skruvar. Vi skickar dig en bild på din NitroWall före "
+"leverans. Jämför bilden med din förpackade NitroWall. Om du märker några "
+"förändringar, vänligen kontakta oss för att ordna ytterligare åtgärder."
+
+msgid "sealing number one"
+msgstr "tätning nummer ett"
+
+msgid "sealing number two"
+msgstr "tätning nummer två"
+
+msgid "sealing number three"
+msgstr "tätning nummer tre"
 
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
@@ -20790,3 +20802,12 @@ msgstr ""
 
 #~ msgid "Nitrokey FIDO U2F with Windows"
 #~ msgstr "Nitrokey FIDO2 med Windows"
+
+#~ msgid ""
+#~ "Connect the NetHSM's BMC ETH port "
+#~ "with the network or your local "
+#~ "computer. Set the BMC password."
+#~ msgstr ""
+#~ "Anslut NetHSM's BMC ETH-port till "
+#~ "nätverket eller din lokala dator. Ställ"
+#~ " in BMC-lösenordet."

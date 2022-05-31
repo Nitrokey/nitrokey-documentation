@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-27 22:03+0200\n"
-"PO-Revision-Date: 2022-05-27 21:38+0000\n"
+"POT-Creation-Date: 2022-05-30 15:52+0200\n"
+"PO-Revision-Date: 2022-05-30 15:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovak <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/sk/>\n"
@@ -154,10 +154,10 @@ msgstr ""
 "Nitrokey FIDO2 neobsahuje možnosť ukladania bežných údajov (môže ukladať "
 "len kryptografické kľúče a certifikáty)."
 
-#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nethsm/faq.rst:2
-#: ../nitrokey3/index.rst:15 ../nitropad/index.rst:8 ../nitropc/index.rst:9
-#: ../nitrophone/index.rst:19 ../pro/index.rst:9 ../shared-faqs/index.rst:2
-#: ../start/index.rst:8 ../storage/index.rst:8
+#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nitrokey3/index.rst:15
+#: ../nitropad/index.rst:8 ../nitropc/index.rst:9 ../nitrophone/index.rst:19
+#: ../pro/index.rst:9 ../shared-faqs/index.rst:2 ../start/index.rst:8
+#: ../storage/index.rst:8
 msgid "Frequently Asked Questions"
 msgstr "Často kladené otázky"
 
@@ -234,11 +234,12 @@ msgid ""
 "can visit the instructions available `here <../../pro/linux/login-with-"
 "pam.html>`_."
 msgstr ""
-"Ak sa chcete prihlásiť do počítača pomocou `Nitrokey Pro 2, <https://shop."
-"nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ `Nitrokey Storage 2 "
-"<https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ a `Nitrokey "
-"Štart <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`_ "
-"môžete navštíviť návod dostupný `tu <../../pro/linux/login-with-pam.html>`_."
+"Ak sa chcete prihlásiť do počítača pomocou `Nitrokey Pro 2, "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ "
+"`Nitrokey Storage 2 <https://shop.nitrokey.com/shop/product/nitrokey-"
+"storage-2-56>`_ a `Nitrokey Štart <https://shop.nitrokey.com/shop/product"
+"/nk-sta-nitrokey-start-6>`_ môžete navštíviť návod dostupný `tu "
+"<../../pro/linux/login-with-pam.html>`_."
 
 #: ../fido2/linux/desktop-login.rst:18
 #: ../pro/linux/automatic-screen-lock.rst:13
@@ -2482,8 +2483,8 @@ msgid ""
 "Basically follow these steps:"
 msgstr ""
 "`Strong Swan <http://www.strongswan.org/>`_ funguje pomocou `PKCS#11 "
-"ovládača <https://www.nitrokey.com/documentation/applications#pkcs11>`_. V "
-"zásade postupujte podľa týchto krokov:"
+"ovládača <https://www.nitrokey.com/documentation/applications#pkcs11>`_. "
+"V zásade postupujte podľa týchto krokov:"
 
 #: ../hsm/ipsec.rst:7 ../to-be-integrated.rst:462 ../to-be-integrated.rst:833
 msgid ""
@@ -2498,8 +2499,8 @@ msgid ""
 "``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
 "pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
 msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -"
-"l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
+"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
+"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
 
 #: ../hsm/ipsec.rst:11 ../to-be-integrated.rst:466 ../to-be-integrated.rst:837
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
@@ -2517,12 +2518,13 @@ msgid ""
 "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
 "Access/CN=user@email.com/emailAddress=user@email.com'``"
 msgstr ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/"
-"engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> req -"
-"engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-"
-"staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/"
-"CN=user@email.com/emailAddress=user@email.com'``"
+"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
+"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
+"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
+"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
+"user@email.com-staging-cert.csr -subj "
+"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+"Access/CN=user@email.com/emailAddress=user@email.com'``"
 
 #: ../hsm/ipsec.rst:17 ../to-be-integrated.rst:472 ../to-be-integrated.rst:843
 msgid "Sign the certificate with your certificate authority"
@@ -2551,9 +2553,9 @@ msgid ""
 "pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
 "'Staging Access'``"
 msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -"
-"l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
-"Access'``"
+"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
+"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
+"'Staging Access'``"
 
 #: ../hsm/ipsec.rst:27 ../to-be-integrated.rst:482 ../to-be-integrated.rst:853
 msgid ""
@@ -3201,9 +3203,9 @@ msgid ""
 "PKCS#11 module is provided by the `sc-hsm-embedded "
 "<https://github.com/CardContact/sc-hsm-embedded>`_ project."
 msgstr ""
-"Vstavané systémy: Pre systémy s minimálnou pamäťovou stopou poskytuje modul "
-"PKCS#11 len na čítanie `sc-hsm-embedded <https://github.com/CardContact/sc-"
-"hsm-embedded>`_."
+"Vstavané systémy: Pre systémy s minimálnou pamäťovou stopou poskytuje "
+"modul PKCS#11 len na čítanie `sc-hsm-embedded "
+"<https://github.com/CardContact/sc-hsm-embedded>`_."
 
 #: ../hsm/linux/index.rst:29 ../hsm/mac/index.rst:26
 #: ../hsm/windows/index.rst:26
@@ -3213,10 +3215,10 @@ msgid ""
 " the user's workplace is not required. The PKCS#11 module also supports "
 "major electronic signature cards available in the German market."
 msgstr ""
-"`Tento modul PKCS#11 <https://github.com/CardContact/sc-hsm-embedded/wiki/"
-"PKCS11>`_ je užitočný pri nasadení, kde sa nevyžaduje generovanie kľúčov na "
-"pracovisku používateľa. Modul PKCS#11 podporuje aj hlavné karty "
-"elektronického podpisu dostupné na nemeckom trhu."
+"`Tento modul PKCS#11 <https://github.com/CardContact/sc-hsm-"
+"embedded/wiki/PKCS11>`_ je užitočný pri nasadení, kde sa nevyžaduje "
+"generovanie kľúčov na pracovisku používateľa. Modul PKCS#11 podporuje aj "
+"hlavné karty elektronického podpisu dostupné na nemeckom trhu."
 
 #: ../hsm/linux/index.rst:30 ../hsm/mac/index.rst:27
 #: ../hsm/windows/index.rst:27
@@ -3226,10 +3228,10 @@ msgid ""
 "See the `public support scripts <http://www.openscdp.org/scripts/sc-"
 "hsm/jsdoc/index.html>`_ for details."
 msgstr ""
-"OpenSCDP: SmartCard-HSM je plne integrovaný s `OpenSCDP <http://www.openscdp."
-"org/>`_, otvorenou platformou pre vývoj inteligentných kariet. Podrobnosti "
-"nájdete v `verejných podporných skriptách <http://www.openscdp.org/scripts/"
-"sc-hsm/jsdoc/index.html>`_."
+"OpenSCDP: SmartCard-HSM je plne integrovaný s `OpenSCDP "
+"<http://www.openscdp.org/>`_, otvorenou platformou pre vývoj "
+"inteligentných kariet. Podrobnosti nájdete v `verejných podporných "
+"skriptách <http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html>`_."
 
 #: ../hsm/linux/ipsec.rst:2 ../pro/linux/ipsec.rst:2 ../start/linux/ipsec.rst:2
 #: ../storage/linux/ipsec.rst:2 ../to-be-integrated.rst:458
@@ -3671,11 +3673,11 @@ msgid ""
 "can be used to add SSL functionality to commonly used inetd daemons like "
 "POP2, POP3, and IMAP servers without any changes in the programs' code."
 msgstr ""
-"`Stunnel <https://www.stunnel.org/>`_ funguje ako šifrovací obal SSL medzi "
-"vzdialeným klientom a lokálnym (inetd-startovateľným) alebo vzdialeným "
-"serverom. Možno ho použiť na pridanie funkcie SSL do bežne používaných "
-"démonov inetd, ako sú servery POP2, POP3 a IMAP, bez akýchkoľvek zmien v "
-"kóde programov'."
+"`Stunnel <https://www.stunnel.org/>`_ funguje ako šifrovací obal SSL "
+"medzi vzdialeným klientom a lokálnym (inetd-startovateľným) alebo "
+"vzdialeným serverom. Možno ho použiť na pridanie funkcie SSL do bežne "
+"používaných démonov inetd, ako sú servery POP2, POP3 a IMAP, bez "
+"akýchkoľvek zmien v kóde programov'."
 
 #: ../hsm/stunnel.rst:7 ../to-be-integrated.rst:497 ../to-be-integrated.rst:868
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
@@ -4422,7 +4424,7 @@ msgstr ""
 "<cli.html>`_. Alternatívne možno použiť `REST API <api.html>`_ a `PKCS#11"
 " driver <pkcs11.html>`_."
 
-#: ../nethsm/index.rst:17
+#: ../nethsm/index.rst:19
 msgid "REST API Index"
 msgstr "REST API Index"
 
@@ -4442,14 +4444,6 @@ msgstr ""
 
 #: ../nethsm/index.rst:10
 msgid ""
-"Connect the NetHSM's BMC ETH port with the network or your local "
-"computer. Set the BMC password."
-msgstr ""
-"Prepojte port BMC ETH zariadenia NetHSM's sieťou alebo miestnym "
-"počítačom. Nastavte heslo BMC."
-
-#: ../nethsm/index.rst:12
-msgid ""
 "Connect the NetHSM's ETH port with the network. Don't use the BMC ETH "
 "port because it allows wider system access. The NetHSM is available at "
 "address 192.168.1.1."
@@ -4458,6 +4452,10 @@ msgstr ""
 " pretože umožňuje širší prístup k systému. Zariadenie NetHSM je dostupné "
 "na adrese 192.168.1.1."
 
+#: ../nethsm/index.rst:12
+msgid "Change the password of the BMC ETH Port."
+msgstr "Zmena hesla portu BMC ETH."
+
 #: ../nethsm/index.rst:14
 msgid ""
 "Initialize the NetHSM using `nitropy command line tool <cli.html>`_. "
@@ -4465,6 +4463,10 @@ msgid ""
 msgstr ""
 "Inicializujte NetHSM pomocou `nástroja príkazového riadkanitropy "
 "<cli.html>`_. Alternatívne možno použiť `REST API <api.html>`_."
+
+#: ../nethsm/index.rst:16
+msgid "Further information can be obtained in other parts of the documentation."
+msgstr "Ďalšie informácie nájdete v iných častiach dokumentácie."
 
 #: ../nethsm/integration.rst:2
 msgid "Integration into Custom Application"
@@ -4617,7 +4619,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Tu je niekoľko obrázkov, ako balíme NetHSM:"
 
-#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
+#: ../nethsm/sealed-hardware.rst:14
 msgid "Hardware Sealing"
 msgstr "Tesnenie hardvéru"
 
@@ -10981,9 +10983,9 @@ msgstr ""
 
 #: ../nitrowall/sealed-hardware.rst:4
 msgid ""
-"Your NitroWall has been delivered in a sealed packaging and sealed "
+"Your NitroWall has been delivered in a sealed packaging and with sealed "
 "screws. We will send you a picture of your NitroWall before shipping. "
-"Please compare the imaged to your packaged NitroWall. If you notice any "
+"Please compare the image to your packaged NitroWall. If you notice any "
 "changes, please contact us to arrange further action."
 msgstr ""
 "Vaša stena NitroWall bola dodaná v zapečatenom obale a so zapečatenými "
@@ -10991,6 +10993,15 @@ msgstr ""
 "Porovnajte, prosím, obrázok so svojou zabalenou stenou NitroWall. Ak si "
 "všimnete akékoľvek zmeny, kontaktujte nás a dohodnite sa na ďalšom "
 "postupe."
+
+msgid "sealing number one"
+msgstr "pečať číslo jedna"
+
+msgid "sealing number two"
+msgstr "plomba číslo dva"
+
+msgid "sealing number three"
+msgstr "plomba číslo tri"
 
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
@@ -20753,3 +20764,12 @@ msgstr ""
 
 #~ msgid "Nitrokey FIDO U2F with Windows"
 #~ msgstr "Nitrokey FIDO U2F so systémom Windows"
+
+#~ msgid ""
+#~ "Connect the NetHSM's BMC ETH port "
+#~ "with the network or your local "
+#~ "computer. Set the BMC password."
+#~ msgstr ""
+#~ "Prepojte port BMC ETH zariadenia "
+#~ "NetHSM's sieťou alebo miestnym počítačom. "
+#~ "Nastavte heslo BMC."

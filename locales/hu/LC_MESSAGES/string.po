@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-27 22:03+0200\n"
-"PO-Revision-Date: 2022-05-27 21:38+0000\n"
+"POT-Creation-Date: 2022-05-30 15:52+0200\n"
+"PO-Revision-Date: 2022-05-30 15:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/hu/>\n"
@@ -164,10 +164,10 @@ msgstr ""
 "A Nitrokey FIDO2 nem tartalmaz tárolási lehetőséget a szokásos adatok "
 "számára (csak kriptográfiai kulcsokat és tanúsítványokat képes tárolni)."
 
-#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nethsm/faq.rst:2
-#: ../nitrokey3/index.rst:15 ../nitropad/index.rst:8 ../nitropc/index.rst:9
-#: ../nitrophone/index.rst:19 ../pro/index.rst:9 ../shared-faqs/index.rst:2
-#: ../start/index.rst:8 ../storage/index.rst:8
+#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nitrokey3/index.rst:15
+#: ../nitropad/index.rst:8 ../nitropc/index.rst:9 ../nitrophone/index.rst:19
+#: ../pro/index.rst:9 ../shared-faqs/index.rst:2 ../start/index.rst:8
+#: ../storage/index.rst:8
 msgid "Frequently Asked Questions"
 msgstr "Gyakran ismételt kérdések"
 
@@ -246,12 +246,13 @@ msgid ""
 "can visit the instructions available `here <../../pro/linux/login-with-"
 "pam.html>`_."
 msgstr ""
-"Ha a `Nitrokey Pro 2 segítségével szeretne bejelentkezni a számítógépére, "
-"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ `"
-"Nitrokey Storage 2 <https://shop.nitrokey.com/shop/product/nitrokey-"
-"storage-2-56>`_ és `Nitrokey Indítás <https://shop.nitrokey.com/shop/product/"
-"nk-sta-nitrokey-start-6>`_ az `itt <../../pro/linux/login-with-pam.html>`_ "
-"elérhető útmutatót tekintheti meg."
+"Ha a `Nitrokey Pro 2 segítségével szeretne bejelentkezni a számítógépére,"
+" <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ "
+"`Nitrokey Storage 2 <https://shop.nitrokey.com/shop/product/nitrokey-"
+"storage-2-56>`_ és `Nitrokey Indítás "
+"<https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`_ az "
+"`itt <../../pro/linux/login-with-pam.html>`_ elérhető útmutatót "
+"tekintheti meg."
 
 #: ../fido2/linux/desktop-login.rst:18
 #: ../pro/linux/automatic-screen-lock.rst:13
@@ -2276,8 +2277,8 @@ msgid ""
 "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey "
 "HSM?"
 msgstr ""
-"**K:** Hogyan tudom biztosítani a felhőinfrastruktúrámat/Kubernetesemet a "
-"Nitrokey HSM-mel?"
+"**K:** Hogyan tudom biztosítani a felhőinfrastruktúrámat/Kubernetesemet a"
+" Nitrokey HSM-mel?"
 
 #: ../hsm/faq.rst:92
 msgid ""
@@ -2530,8 +2531,8 @@ msgid ""
 "Basically follow these steps:"
 msgstr ""
 "`A Strong Swan <http://www.strongswan.org/>`_ a `PKCS#11 meghajtó "
-"<https://www.nitrokey.com/documentation/applications#pkcs11>`_ használatával "
-"működik. Alapvetően kövesse a következő lépéseket:"
+"<https://www.nitrokey.com/documentation/applications#pkcs11>`_ "
+"használatával működik. Alapvetően kövesse a következő lépéseket:"
 
 #: ../hsm/ipsec.rst:7 ../to-be-integrated.rst:462 ../to-be-integrated.rst:833
 msgid ""
@@ -2546,8 +2547,8 @@ msgid ""
 "``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
 "pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
 msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -"
-"l -k --key-type rsa:4096 --id 10 --label 'Staging Access'<x>``"
+"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
+"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'<x>``"
 
 #: ../hsm/ipsec.rst:11 ../to-be-integrated.rst:466 ../to-be-integrated.rst:837
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
@@ -2565,12 +2566,13 @@ msgid ""
 "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
 "Access/CN=user@email.com/emailAddress=user@email.com'``"
 msgstr ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/"
-"engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> req -"
-"engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-"
-"staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/"
-"CN=user@email.com/emailAddress=user@email.com'``"
+"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
+"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
+"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
+"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
+"user@email.com-staging-cert.csr -subj "
+"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+"Access/CN=user@email.com/emailAddress=user@email.com'``"
 
 #: ../hsm/ipsec.rst:17 ../to-be-integrated.rst:472 ../to-be-integrated.rst:843
 msgid "Sign the certificate with your certificate authority"
@@ -2599,9 +2601,9 @@ msgid ""
 "pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
 "'Staging Access'``"
 msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -"
-"l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
-"Access'<x>``"
+"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
+"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
+"'Staging Access'<x>``"
 
 #: ../hsm/ipsec.rst:27 ../to-be-integrated.rst:482 ../to-be-integrated.rst:853
 msgid ""
@@ -3262,9 +3264,9 @@ msgid ""
 "PKCS#11 module is provided by the `sc-hsm-embedded "
 "<https://github.com/CardContact/sc-hsm-embedded>`_ project."
 msgstr ""
-"Beágyazott rendszerek: A minimális memóriaigényű rendszerek számára a `sc-"
-"hsm-embedded <https://github.com/CardContact/sc-hsm-embedded>`_ projekt egy "
-"csak olvasható PKCS#11 modult biztosít."
+"Beágyazott rendszerek: A minimális memóriaigényű rendszerek számára a "
+"`sc-hsm-embedded <https://github.com/CardContact/sc-hsm-embedded>`_ "
+"projekt egy csak olvasható PKCS#11 modult biztosít."
 
 #: ../hsm/linux/index.rst:29 ../hsm/mac/index.rst:26
 #: ../hsm/windows/index.rst:26
@@ -3274,10 +3276,10 @@ msgid ""
 " the user's workplace is not required. The PKCS#11 module also supports "
 "major electronic signature cards available in the German market."
 msgstr ""
-"`Ez a PKCS#11 modul <https://github.com/CardContact/sc-hsm-embedded/wiki/"
-"PKCS11>`_ olyan telepítéseknél hasznos, ahol nincs szükség kulcsgenerálásra "
-"a felhasználó munkahelyén. A PKCS#11 modul támogatja a német piacon kapható "
-"főbb elektronikus aláírási kártyákat is."
+"`Ez a PKCS#11 modul <https://github.com/CardContact/sc-hsm-"
+"embedded/wiki/PKCS11>`_ olyan telepítéseknél hasznos, ahol nincs szükség "
+"kulcsgenerálásra a felhasználó munkahelyén. A PKCS#11 modul támogatja a "
+"német piacon kapható főbb elektronikus aláírási kártyákat is."
 
 #: ../hsm/linux/index.rst:30 ../hsm/mac/index.rst:27
 #: ../hsm/windows/index.rst:27
@@ -3287,9 +3289,10 @@ msgid ""
 "See the `public support scripts <http://www.openscdp.org/scripts/sc-"
 "hsm/jsdoc/index.html>`_ for details."
 msgstr ""
-"OpenSCDP: `OpenSCDP <http://www.openscdp.org/>`_, a nyílt intelligenskártya-"
-"fejlesztési platformmal. Részletekért lásd a `nyilvános támogatási "
-"szkripteket <http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html>`_."
+"OpenSCDP: `OpenSCDP <http://www.openscdp.org/>`_, a nyílt "
+"intelligenskártya-fejlesztési platformmal. Részletekért lásd a `nyilvános"
+" támogatási szkripteket <http://www.openscdp.org/scripts/sc-"
+"hsm/jsdoc/index.html>`_."
 
 #: ../hsm/linux/ipsec.rst:2 ../pro/linux/ipsec.rst:2 ../start/linux/ipsec.rst:2
 #: ../storage/linux/ipsec.rst:2 ../to-be-integrated.rst:458
@@ -3727,11 +3730,11 @@ msgid ""
 "can be used to add SSL functionality to commonly used inetd daemons like "
 "POP2, POP3, and IMAP servers without any changes in the programs' code."
 msgstr ""
-"`Stunnel <https://www.stunnel.org/>`_ SSL-titkosítási burkolatként működik a "
-"távoli ügyfél és a helyi (inetd-indítható) vagy távoli kiszolgáló között. "
-"Használható az SSL-funkcionalitás hozzáadására az általánosan használt inetd "
-"démonokhoz, mint például a POP2, POP3 és IMAP szerverekhez, a programok' "
-"kódjának módosítása nélkül."
+"`Stunnel <https://www.stunnel.org/>`_ SSL-titkosítási burkolatként "
+"működik a távoli ügyfél és a helyi (inetd-indítható) vagy távoli "
+"kiszolgáló között. Használható az SSL-funkcionalitás hozzáadására az "
+"általánosan használt inetd démonokhoz, mint például a POP2, POP3 és IMAP "
+"szerverekhez, a programok' kódjának módosítása nélkül."
 
 #: ../hsm/stunnel.rst:7 ../to-be-integrated.rst:497 ../to-be-integrated.rst:868
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
@@ -4510,7 +4513,7 @@ msgstr ""
 " Alternatívaként a `REST API <api.html>`_ és a `PKCS#11 driver "
 "<pkcs11.html>`_ is használható."
 
-#: ../nethsm/index.rst:17
+#: ../nethsm/index.rst:19
 msgid "REST API Index"
 msgstr "REST API index"
 
@@ -4530,14 +4533,6 @@ msgstr ""
 
 #: ../nethsm/index.rst:10
 msgid ""
-"Connect the NetHSM's BMC ETH port with the network or your local "
-"computer. Set the BMC password."
-msgstr ""
-"Csatlakoztassa a NetHSM'BMC ETH portját a hálózathoz vagy a helyi "
-"számítógéphez. Állítsa be a BMC jelszavát."
-
-#: ../nethsm/index.rst:12
-msgid ""
 "Connect the NetHSM's ETH port with the network. Don't use the BMC ETH "
 "port because it allows wider system access. The NetHSM is available at "
 "address 192.168.1.1."
@@ -4546,6 +4541,10 @@ msgstr ""
 "portját, mert az szélesebb körű rendszerelérést tesz lehetővé. A NetHSM a"
 " 192.168.1.1.1 címen érhető el."
 
+#: ../nethsm/index.rst:12
+msgid "Change the password of the BMC ETH Port."
+msgstr "Módosítsa a BMC ETH port jelszavát."
+
 #: ../nethsm/index.rst:14
 msgid ""
 "Initialize the NetHSM using `nitropy command line tool <cli.html>`_. "
@@ -4553,6 +4552,10 @@ msgid ""
 msgstr ""
 "Inicializáljuk a NetHSM-et a `nitropy parancssori eszköz <cli.html>`_ "
 "használatával. Alternatívaként a `REST API <api.html>`_ is használható."
+
+#: ../nethsm/index.rst:16
+msgid "Further information can be obtained in other parts of the documentation."
+msgstr "További információk a dokumentáció más részeiben találhatók."
 
 #: ../nethsm/integration.rst:2
 msgid "Integration into Custom Application"
@@ -4707,7 +4710,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Íme néhány kép arról, hogyan csomagolunk be egy NetHSM-et:"
 
-#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
+#: ../nethsm/sealed-hardware.rst:14
 msgid "Hardware Sealing"
 msgstr "Hardver tömítés"
 
@@ -11202,16 +11205,25 @@ msgstr ""
 
 #: ../nitrowall/sealed-hardware.rst:4
 msgid ""
-"Your NitroWall has been delivered in a sealed packaging and sealed "
+"Your NitroWall has been delivered in a sealed packaging and with sealed "
 "screws. We will send you a picture of your NitroWall before shipping. "
-"Please compare the imaged to your packaged NitroWall. If you notice any "
+"Please compare the image to your packaged NitroWall. If you notice any "
 "changes, please contact us to arrange further action."
 msgstr ""
-"A NitroWall-t lezárt csomagolásban és lezárt csavarokkal szállították. A "
+"A NitroWallt lezárt csomagolásban és lezárt csavarokkal szállították. A "
 "szállítás előtt küldünk Önnek egy képet a NitroWallról. Kérjük, "
 "hasonlítsa össze a képet az Ön csomagolt NitroWalljával. Ha bármilyen "
 "változást észlel, kérjük, lépjen kapcsolatba velünk a további teendők "
 "egyeztetése érdekében."
+
+msgid "sealing number one"
+msgstr "első számú lezárás"
+
+msgid "sealing number two"
+msgstr "második számú lezárás"
+
+msgid "sealing number three"
+msgstr "hármas számú lezárás"
 
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
@@ -21171,3 +21183,12 @@ msgstr ""
 
 #~ msgid "Nitrokey FIDO U2F with Windows"
 #~ msgstr "Nitrokey FIDO U2F a Windows rendszerrel"
+
+#~ msgid ""
+#~ "Connect the NetHSM's BMC ETH port "
+#~ "with the network or your local "
+#~ "computer. Set the BMC password."
+#~ msgstr ""
+#~ "Csatlakoztassa a NetHSM'BMC ETH portját "
+#~ "a hálózathoz vagy a helyi számítógéphez."
+#~ " Állítsa be a BMC jelszavát."

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-27 22:03+0200\n"
-"PO-Revision-Date: 2022-05-27 21:38+0000\n"
+"POT-Creation-Date: 2022-05-30 15:52+0200\n"
+"PO-Revision-Date: 2022-05-30 15:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Latvian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/lv/>\n"
@@ -155,10 +155,10 @@ msgstr ""
 "Nitrokey FIDO2 nav parasto datu glabāšanas iespēju (tajā var glabāt tikai"
 " kriptogrāfiskās atslēgas un sertifikātus)."
 
-#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nethsm/faq.rst:2
-#: ../nitrokey3/index.rst:15 ../nitropad/index.rst:8 ../nitropc/index.rst:9
-#: ../nitrophone/index.rst:19 ../pro/index.rst:9 ../shared-faqs/index.rst:2
-#: ../start/index.rst:8 ../storage/index.rst:8
+#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nitrokey3/index.rst:15
+#: ../nitropad/index.rst:8 ../nitropc/index.rst:9 ../nitrophone/index.rst:19
+#: ../pro/index.rst:9 ../shared-faqs/index.rst:2 ../start/index.rst:8
+#: ../storage/index.rst:8
 msgid "Frequently Asked Questions"
 msgstr "Biežāk uzdotie jautājumi"
 
@@ -235,12 +235,12 @@ msgid ""
 "can visit the instructions available `here <../../pro/linux/login-with-"
 "pam.html>`_."
 msgstr ""
-"Ja vēlaties pieteikties datorā, izmantojot `Nitrokey Pro 2, <https://shop."
-"nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ `Nitrokey Storage 2 "
-"<https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ un `"
-"Nitrokey Sākt <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-"
-"start-6>`_ var apmeklēt instrukcijas, kas pieejamas `šeit <../../pro/linux/"
-"login-with-pam.html>`_."
+"Ja vēlaties pieteikties datorā, izmantojot `Nitrokey Pro 2, "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ "
+"`Nitrokey Storage 2 <https://shop.nitrokey.com/shop/product/nitrokey-"
+"storage-2-56>`_ un `Nitrokey Sākt <https://shop.nitrokey.com/shop/product"
+"/nk-sta-nitrokey-start-6>`_ var apmeklēt instrukcijas, kas pieejamas "
+"`šeit <../../pro/linux/login-with-pam.html>`_."
 
 #: ../fido2/linux/desktop-login.rst:18
 #: ../pro/linux/automatic-screen-lock.rst:13
@@ -2493,9 +2493,9 @@ msgid ""
 "driver <https://www.nitrokey.com/documentation/applications#pkcs11>`_. "
 "Basically follow these steps:"
 msgstr ""
-"`Strong Swan <http://www.strongswan.org/>`_ darbojas, izmantojot `PKCS#11 "
-"draiveri <https://www.nitrokey.com/documentation/applications#pkcs11>`_. "
-"Pamatā veiciet šādas darbības:"
+"`Strong Swan <http://www.strongswan.org/>`_ darbojas, izmantojot `PKCS#11"
+" draiveri <https://www.nitrokey.com/documentation/applications#pkcs11>`_."
+" Pamatā veiciet šādas darbības:"
 
 #: ../hsm/ipsec.rst:7 ../to-be-integrated.rst:462 ../to-be-integrated.rst:833
 msgid ""
@@ -2510,8 +2510,8 @@ msgid ""
 "``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
 "pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
 msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -"
-"l -k --key-type rsa:4096 --id 10 --label 'Staging Access'```"
+"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
+"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'```"
 
 #: ../hsm/ipsec.rst:11 ../to-be-integrated.rst:466 ../to-be-integrated.rst:837
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
@@ -2529,12 +2529,13 @@ msgid ""
 "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
 "Access/CN=user@email.com/emailAddress=user@email.com'``"
 msgstr ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/"
-"engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> req -"
-"engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-"
-"staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/"
-"CN=user@email.com/emailAddress=user@email.com'```"
+"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
+"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
+"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
+"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
+"user@email.com-staging-cert.csr -subj "
+"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+"Access/CN=user@email.com/emailAddress=user@email.com'```"
 
 #: ../hsm/ipsec.rst:17 ../to-be-integrated.rst:472 ../to-be-integrated.rst:843
 msgid "Sign the certificate with your certificate authority"
@@ -2563,9 +2564,9 @@ msgid ""
 "pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
 "'Staging Access'``"
 msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -"
-"l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
-"Access'```"
+"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
+"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
+"'Staging Access'```"
 
 #: ../hsm/ipsec.rst:27 ../to-be-integrated.rst:482 ../to-be-integrated.rst:853
 msgid ""
@@ -3211,8 +3212,8 @@ msgid ""
 "There is `nitrotool <https://github.com/johndoe31415/nitrotool>`_ as a "
 "more comfortable frontend to OpenSC. (hsmwiz)"
 msgstr ""
-"Ir `nitrotool <https://github.com/johndoe31415/nitrotool>`_, kas ir ērtāks "
-"OpenSC frontends. (hsmwiz)"
+"Ir `nitrotool <https://github.com/johndoe31415/nitrotool>`_, kas ir "
+"ērtāks OpenSC frontends. (hsmwiz)"
 
 #: ../hsm/linux/index.rst:28 ../hsm/mac/index.rst:25
 #: ../hsm/windows/index.rst:25
@@ -3221,9 +3222,9 @@ msgid ""
 "PKCS#11 module is provided by the `sc-hsm-embedded "
 "<https://github.com/CardContact/sc-hsm-embedded>`_ project."
 msgstr ""
-"Iegultās sistēmas: `sc-hsm-embedded <https://github.com/CardContact/sc-hsm-"
-"embedded>`_projekts nodrošina PKCS#11 moduli tikai lasīšanai un tikai "
-"lasīšanai."
+"Iegultās sistēmas: `sc-hsm-embedded <https://github.com/CardContact/sc-"
+"hsm-embedded>`_projekts nodrošina PKCS#11 moduli tikai lasīšanai un tikai"
+" lasīšanai."
 
 #: ../hsm/linux/index.rst:29 ../hsm/mac/index.rst:26
 #: ../hsm/windows/index.rst:26
@@ -3233,10 +3234,11 @@ msgid ""
 " the user's workplace is not required. The PKCS#11 module also supports "
 "major electronic signature cards available in the German market."
 msgstr ""
-"`Šis PKCS#11 modulis <https://github.com/CardContact/sc-hsm-embedded/wiki/"
-"PKCS11>`_ ir noderīgs izvietojumiem, kur atslēgas ģenerēšana lietotāja "
-"darbavietā nav nepieciešama. PKCS#11 modulis atbalsta arī galvenās Vācijas "
-"tirgū pieejamās elektroniskā paraksta kartes."
+"`Šis PKCS#11 modulis <https://github.com/CardContact/sc-hsm-"
+"embedded/wiki/PKCS11>`_ ir noderīgs izvietojumiem, kur atslēgas "
+"ģenerēšana lietotāja darbavietā nav nepieciešama. PKCS#11 modulis "
+"atbalsta arī galvenās Vācijas tirgū pieejamās elektroniskā paraksta "
+"kartes."
 
 #: ../hsm/linux/index.rst:30 ../hsm/mac/index.rst:27
 #: ../hsm/windows/index.rst:27
@@ -3246,10 +3248,10 @@ msgid ""
 "See the `public support scripts <http://www.openscdp.org/scripts/sc-"
 "hsm/jsdoc/index.html>`_ for details."
 msgstr ""
-"OpenSCDP: SmartCard-HSM ir pilnībā integrēts ar `OpenSCDP <http://www."
-"openscdp.org/>`_, atvērto viedkaršu izstrādes platformu. Sīkāku informāciju "
-"skatiet `publiskajos atbalsta skriptos <http://www.openscdp.org/scripts/"
-"sc-hsm/jsdoc/index.html>`_."
+"OpenSCDP: SmartCard-HSM ir pilnībā integrēts ar `OpenSCDP "
+"<http://www.openscdp.org/>`_, atvērto viedkaršu izstrādes platformu. "
+"Sīkāku informāciju skatiet `publiskajos atbalsta skriptos "
+"<http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html>`_."
 
 #: ../hsm/linux/ipsec.rst:2 ../pro/linux/ipsec.rst:2 ../start/linux/ipsec.rst:2
 #: ../storage/linux/ipsec.rst:2 ../to-be-integrated.rst:458
@@ -3683,9 +3685,10 @@ msgid ""
 "POP2, POP3, and IMAP servers without any changes in the programs' code."
 msgstr ""
 "`Stunnel <https://www.stunnel.org/>`_ darbojas kā SSL šifrēšanas apvalks "
-"starp attālo klientu un vietējo (inetd palaižamu) vai attālo serveri. To var "
-"izmantot, lai pievienotu SSL funkcionalitāti parasti izmantotajiem inetd "
-"dēmoniem, piemēram, POP2, POP3 un IMAP serveriem, nemainot programmu kodu."
+"starp attālo klientu un vietējo (inetd palaižamu) vai attālo serveri. To "
+"var izmantot, lai pievienotu SSL funkcionalitāti parasti izmantotajiem "
+"inetd dēmoniem, piemēram, POP2, POP3 un IMAP serveriem, nemainot "
+"programmu kodu."
 
 #: ../hsm/stunnel.rst:7 ../to-be-integrated.rst:497 ../to-be-integrated.rst:868
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
@@ -4432,7 +4435,7 @@ msgstr ""
 "<cli.html>`_. Alternatīvi var izmantot `REST API <api.html>`_ un `PKCS#11"
 " draiveri <pkcs11.html>`_."
 
-#: ../nethsm/index.rst:17
+#: ../nethsm/index.rst:19
 msgid "REST API Index"
 msgstr "REST API indekss"
 
@@ -4452,14 +4455,6 @@ msgstr ""
 
 #: ../nethsm/index.rst:10
 msgid ""
-"Connect the NetHSM's BMC ETH port with the network or your local "
-"computer. Set the BMC password."
-msgstr ""
-"Savienojiet NetHSM's BMC ETH portu ar tīklu vai vietējo datoru. Iestatiet"
-" BMC paroli."
-
-#: ../nethsm/index.rst:12
-msgid ""
 "Connect the NetHSM's ETH port with the network. Don't use the BMC ETH "
 "port because it allows wider system access. The NetHSM is available at "
 "address 192.168.1.1."
@@ -4468,6 +4463,10 @@ msgstr ""
 "pieslēgvietu, jo tā nodrošina plašāku piekļuvi sistēmai. NetHSM ir "
 "pieejams adresē 192.168.1.1.1."
 
+#: ../nethsm/index.rst:12
+msgid "Change the password of the BMC ETH Port."
+msgstr "Mainiet BMC ETH porta paroli."
+
 #: ../nethsm/index.rst:14
 msgid ""
 "Initialize the NetHSM using `nitropy command line tool <cli.html>`_. "
@@ -4475,6 +4474,10 @@ msgid ""
 msgstr ""
 "Inicializējiet NetHSM, izmantojot `nitropijas komandrindas rīku "
 "<cli.html>`_. Alternatīvi var izmantot `REST API <api.html>`_."
+
+#: ../nethsm/index.rst:16
+msgid "Further information can be obtained in other parts of the documentation."
+msgstr "Papildu informāciju var iegūt citās dokumentācijas daļās."
 
 #: ../nethsm/integration.rst:2
 msgid "Integration into Custom Application"
@@ -4627,7 +4630,7 @@ msgstr ""
 msgid "Here are some pictures of how we wrap up a NetHSM:"
 msgstr "Šeit ir daži attēli, kuros redzams, kā mēs iesaiņojam NetHSM:"
 
-#: ../nethsm/sealed-hardware.rst:14 ../nitrowall/sealed-hardware.rst:9
+#: ../nethsm/sealed-hardware.rst:14
 msgid "Hardware Sealing"
 msgstr "Aparatūras blīvēšana"
 
@@ -11000,16 +11003,25 @@ msgstr ""
 
 #: ../nitrowall/sealed-hardware.rst:4
 msgid ""
-"Your NitroWall has been delivered in a sealed packaging and sealed "
+"Your NitroWall has been delivered in a sealed packaging and with sealed "
 "screws. We will send you a picture of your NitroWall before shipping. "
-"Please compare the imaged to your packaged NitroWall. If you notice any "
+"Please compare the image to your packaged NitroWall. If you notice any "
 "changes, please contact us to arrange further action."
 msgstr ""
-"Jūsu NitroWall ir piegādāts aizzīmogotā iepakojumā un aizzīmogotās "
-"skrūvēs. Pirms nosūtīšanas mēs jums nosūtīsim jūsu NitroWall sienas "
-"attēlu. Lūdzu, salīdziniet attēlā redzamo ar jūsu iepakoto NitroWall. Ja "
-"pamanāt kādas izmaiņas, lūdzu, sazinieties ar mums, lai vienotos par "
-"turpmāko rīcību."
+"Jūsu NitroWall ir piegādāts aizzīmogotā iepakojumā un ar aizzīmogotām "
+"skrūvēm. Pirms nosūtīšanas mēs jums nosūtīsim jūsu NitroWall sienas "
+"attēlu. Lūdzu, salīdziniet attēlu ar jūsu iepakoto NitroWall. Ja pamanāt "
+"kādas izmaiņas, lūdzu, sazinieties ar mums, lai vienotos par turpmāko "
+"rīcību."
+
+msgid "sealing number one"
+msgstr "plombējums numur viens"
+
+msgid "sealing number two"
+msgstr "plomba numur divi"
+
+msgid "sealing number three"
+msgstr "trešais zīmogs"
 
 #: ../pro/2fa-google.rst:2
 msgid "Two-factor Authentication for Google"
@@ -20744,3 +20756,12 @@ msgstr ""
 
 #~ msgid "Nitrokey FIDO U2F with Windows"
 #~ msgstr "Nitrokey FIDO U2F ar Windows"
+
+#~ msgid ""
+#~ "Connect the NetHSM's BMC ETH port "
+#~ "with the network or your local "
+#~ "computer. Set the BMC password."
+#~ msgstr ""
+#~ "Savienojiet NetHSM's BMC ETH portu ar"
+#~ " tīklu vai vietējo datoru. Iestatiet "
+#~ "BMC paroli."
