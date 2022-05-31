@@ -43,7 +43,6 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx_copybutton',
     'sphinxprettysearchresults',
-#    'sphinx_copybutton',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -231,26 +230,6 @@ html_theme_options = {
     },
 
     "canonical_url": "https://docs.nitrokey.com/",
-
-    # # Options of read the docs theme
-	# 'logo_only': True,
-	# 'display_version': False,
-	# 'prev_next_buttons_location': 'bottom',
-	# 'style_external_links': True,
-	# # Toc options
-	# 'collapse_navigation': False,
-	# 'sticky_navigation': False,
-	# 'navigation_depth': -1,
-	# 'includehidden': True, # to show also hidden TOCs in the menu bar
-	# 'titles_only': False,
-    # 'canonical_url': "https://docs.nitrokey.com/",
-    # # Options of Divio (divio bases on read the docs theme)
-    # 'analytics_id' : '',
-    # 'vcs_pageview_mode' : 'edit',
-    # 'show_cloud_banner' : False, #False makes the divio box disappear
-    # #'cloud_banner_url' : '',
-    # #'cloud_banner_markup' : '',
-    # #'segment_id' : '',
 }
 
 html_title = "Nitrokey Documentation"
