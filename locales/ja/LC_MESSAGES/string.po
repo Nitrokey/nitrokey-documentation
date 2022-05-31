@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-30 15:52+0200\n"
+"POT-Creation-Date: 2022-05-31 10:30+0200\n"
 "PO-Revision-Date: 2022-05-30 15:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -542,7 +541,6 @@ msgstr "img6"
 #: ../pro/openpgp.rst:49 ../pro/smime-outlook.rst:36
 #: ../pro/smime-thunderbird.rst:45 ../pro/smime.rst:57
 #: ../pro/windows/openvpn-viscosity.rst:39 ../start/multiple-identities.rst:15
-#: ../to-be-integrated.rst:210
 msgid "Usage"
 msgstr "使用方法"
 
@@ -995,8 +993,7 @@ msgstr "ファームウェアのアップデートに失敗した場合、Nitrok
 #: ../nitrokey3/shared/nitropy.rst:71 ../nitrokey3/troubleshooting.rst:2
 #: ../nitropad/troubleshooting.rst:2 ../pro/login-with-pam.rst:42
 #: ../pro/openpgp-thunderbird.rst:14 ../pro/smime.rst:72
-#: ../start/linux/index.rst:62 ../to-be-integrated.rst:389
-#: ../to-be-integrated.rst:756 ../u2f/linux/index.rst:41
+#: ../start/linux/index.rst:62 ../u2f/linux/index.rst:41
 msgid "Troubleshooting"
 msgstr "トラブルシューティング"
 
@@ -2192,7 +2189,7 @@ msgstr ""
 "<https://www.nitrokey.com/documentation/applications#pkcs11>`_ "
 "で動作しています。基本的には以下の手順で行います。"
 
-#: ../hsm/ipsec.rst:7 ../to-be-integrated.rst:462 ../to-be-integrated.rst:833
+#: ../hsm/ipsec.rst:7
 msgid ""
 "Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 "
 "bit RSA key."
@@ -2206,7 +2203,7 @@ msgstr ""
 "``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
 "pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``。"
 
-#: ../hsm/ipsec.rst:11 ../to-be-integrated.rst:466 ../to-be-integrated.rst:837
+#: ../hsm/ipsec.rst:11
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr "openssl + pkcs11 モジュールによる証明書署名要求の生成"
 
@@ -2228,11 +2225,11 @@ msgstr ""
 "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
 "Access/CN=user@email.com/emailAddress=user@email.com'``"
 
-#: ../hsm/ipsec.rst:17 ../to-be-integrated.rst:472 ../to-be-integrated.rst:843
+#: ../hsm/ipsec.rst:17
 msgid "Sign the certificate with your certificate authority"
 msgstr "お使いの認証局で証明書に署名する"
 
-#: ../hsm/ipsec.rst:19 ../to-be-integrated.rst:474 ../to-be-integrated.rst:845
+#: ../hsm/ipsec.rst:19
 msgid "Convert the certificate to DER"
 msgstr "証明書をDERに変換する"
 
@@ -2244,8 +2241,7 @@ msgstr ""
 "``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
 "staging-cert.der -outform DER``。"
 
-#: ../hsm/ipsec.rst:23 ../to-be-integrated.rst:431 ../to-be-integrated.rst:478
-#: ../to-be-integrated.rst:802 ../to-be-integrated.rst:849
+#: ../hsm/ipsec.rst:23
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
 msgstr "pkcs11-toolでNitrokeyに証明書をインポートします。"
 
@@ -2259,7 +2255,7 @@ msgstr ""
 "pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
 "'Staging Access'``。"
 
-#: ../hsm/ipsec.rst:27 ../to-be-integrated.rst:482 ../to-be-integrated.rst:853
+#: ../hsm/ipsec.rst:27
 msgid ""
 "Configure Strongswan to load opensc-pkcs11 module then to load the "
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
@@ -2269,25 +2265,23 @@ msgstr ""
 "pkcs11モジュールをロードし、Nitrokeyで証明書をロードするよう設定します。etc/strongswan.d/charon/pkcs11.conf"
 " を編集して、以下のモジュールを追加してください。"
 
-#: ../hsm/ipsec.rst:32 ../to-be-integrated.rst:486 ../to-be-integrated.rst:857
+#: ../hsm/ipsec.rst:32
 msgid "modules {"
 msgstr "モジュール {"
 
-#: ../hsm/ipsec.rst:30 ../to-be-integrated.rst:485 ../to-be-integrated.rst:856
+#: ../hsm/ipsec.rst:30
 msgid "Nitrokey {"
 msgstr "ニトロキー {"
 
-#: ../hsm/ipsec.rst:31 ../to-be-integrated.rst:486 ../to-be-integrated.rst:857
+#: ../hsm/ipsec.rst:31
 msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
 msgstr "パス = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
 
-#: ../hsm/ipsec.rst:32 ../hsm/ipsec.rst:33 ../to-be-integrated.rst:487
-#: ../to-be-integrated.rst:488 ../to-be-integrated.rst:858
-#: ../to-be-integrated.rst:859
+#: ../hsm/ipsec.rst:32 ../hsm/ipsec.rst:33
 msgid "}"
 msgstr "}"
 
-#: ../hsm/ipsec.rst:34 ../to-be-integrated.rst:490 ../to-be-integrated.rst:861
+#: ../hsm/ipsec.rst:34
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
@@ -2704,7 +2698,6 @@ msgstr ""
 " Pro 2を使用するには、以下の手順に従ってください。"
 
 #: ../nethsm/_tutorial.rst:3 ../pro/linux/hard-disk-encryption.rst:69
-#: ../to-be-integrated.rst:187
 msgid "Initialization"
 msgstr "初期化"
 
@@ -2874,8 +2867,7 @@ msgstr ""
 "<http://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html>`_ をご覧ください。"
 
 #: ../hsm/linux/ipsec.rst:2 ../pro/linux/ipsec.rst:2 ../start/linux/ipsec.rst:2
-#: ../storage/linux/ipsec.rst:2 ../to-be-integrated.rst:458
-#: ../to-be-integrated.rst:829
+#: ../storage/linux/ipsec.rst:2
 msgid "IPsec"
 msgstr "アイピーセック"
 
@@ -3240,7 +3232,7 @@ msgstr ""
 " またはリモートサーバ間の SSL 暗号化ラッパーとして動作します。POP2、POP3、IMAP サーバのような一般的な inetd デーモンに "
 "SSL 機能を追加するために、プログラムのコードを変更することなく使うことができます。"
 
-#: ../hsm/stunnel.rst:7 ../to-be-integrated.rst:497 ../to-be-integrated.rst:868
+#: ../hsm/stunnel.rst:7
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr "この設定で、StunnelはOpenSC PKCS#11エンジンをロードすることができます。"
 
@@ -10541,7 +10533,7 @@ msgstr ""
 "鍵についてはトラブルシューティングを参照してください)。poldi のインストール (例: ``sudo apt-get install "
 "libpam-poldi`` on Ubuntu) のほかに、動作させるには次の手順が必要です。"
 
-#: ../pro/login-with-pam.rst:15 ../to-be-integrated.rst:62
+#: ../pro/login-with-pam.rst:15
 msgid ""
 "It is necessary to already have keys generated on the Nitrokey, as the "
 "authentication key is used by PAM."
@@ -10563,11 +10555,11 @@ msgid ""
 " following information"
 msgstr "ここで、/etc/poldi/localdb/usersに以下の情報を含む行を追加する必要があります。"
 
-#: ../pro/login-with-pam.rst:21 ../to-be-integrated.rst:66
+#: ../pro/login-with-pam.rst:21
 msgid "<YourApplicationID> <YourUsername>"
 msgstr "<YourApplicationID> <YourUsername>"
 
-#: ../pro/login-with-pam.rst:23 ../to-be-integrated.rst:68
+#: ../pro/login-with-pam.rst:23
 msgid ""
 "This could look like 'D00600012401020000000000xxxxxxxx nitrokeyuser'. Now"
 " dump the public key from the Nitrokey into poldi local db:"
@@ -10586,13 +10578,12 @@ msgstr ""
 "OPENPGP.3\" /bye'``。"
 
 #: ../pro/login-with-pam.rst:27 ../pro/login-with-pam.rst:48
-#: ../to-be-integrated.rst:72
 msgid ""
 "Please be aware that you have to insert your Application ID in the line "
 "above with the one of your stick!"
 msgstr "応募IDは、スティックと一緒に上の行に入力してください。"
 
-#: ../pro/login-with-pam.rst:29 ../to-be-integrated.rst:74
+#: ../pro/login-with-pam.rst:29
 msgid ""
 "Then you have to configure PAM. Just add \"auth sufficient pam_poldi.so\""
 " to pam configuration files according to your needs:"
@@ -10640,7 +10631,7 @@ msgstr ""
 "<http://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard>`_"
 " (ドイツ語で、一部古い) をご覧いただけます。"
 
-#: ../pro/login-with-pam.rst:44 ../to-be-integrated.rst:87
+#: ../pro/login-with-pam.rst:44
 msgid ""
 "If you get an error similar to 'ERR 100663414 Invalid ID <SCD>' you "
 "should try instead"
@@ -14217,7 +14208,7 @@ msgid ""
 "volume."
 msgstr "隠しボリュームは、暗号化されたボリュームというコンテナの中にあるコンテナのようなものです。"
 
-#: ../storage/faq.rst:118 ../to-be-integrated.rst:632
+#: ../storage/faq.rst:118
 msgid "**Q:** Do you have resources for development and integration?"
 msgstr "**Q:** 開発や統合のためのリソースはあるのでしょうか？"
 
@@ -14982,1784 +14973,6 @@ msgid ""
 "This line contains the product name Nitrokey Start an should not be "
 "altered by the translation."
 msgstr "この行は、Nitrokey Startという製品名を含んでおり、翻訳によって変更されることはありません。"
-
-#: ../to-be-integrated.rst:1
-msgid "# pro"
-msgstr "# pro"
-
-#: ../to-be-integrated.rst:5
-msgid "PKCS#11 Driver"
-msgstr "PKCS#11ドライバ"
-
-#: ../to-be-integrated.rst:7
-msgid ""
-"If you want to use S/MIME email encryption with Thunderbird, to use "
-"TrueCrypt/VeraCrypt, certificate-based SSL authentication with Firefox, "
-"PuTTY/KiTTY, OpenSSH, OpenSSL, or any other PKCS#11 compatible software, "
-"you should install OpenSC."
-msgstr "ThunderbirdでS/MIMEメール暗号を使いたい、TrueCrypt/VeraCryptを使いたい、Firefox、PuTTY/KiTTY、OpenSSH、OpenSSL、その他のPKCS#11対応ソフトウェアで証明書ベースのSSL認証をしたい場合、OpenSCをインストールする必要があります。"
-
-#: ../to-be-integrated.rst:9
-msgid ""
-"Note that a Nitrokey initialized with OpenSC doesn't work with "
-"GnuPG/OpenPGP. But the other way around works fine. If you want to use "
-"Nitrokey with both GnuPG and PKCS#11, generate the keys with GnuPG."
-msgstr ""
-"OpenSCで初期化したNitrokeyは、GnuPG/OpenPGPでは動作しないことに注意してください。しかし、その逆は問題なく動作します。GnuPG"
-" と PKCS#11 の両方で Nitrokey を使用したい場合は、GnuPG で鍵を生成してください。"
-
-#: ../to-be-integrated.rst:11
-msgid ""
-"Don't use PKCS#11 in parallel with GnuPG because both may interfere and "
-"unexpected issues may result. (There is another promising project scd-"
-"pkcs11 in development which may overcome this limitation eventually. "
-"Currently it's limit to the authentication certificate and not widely "
-"tested yet.)"
-msgstr ""
-"PKCS#11とGnuPGを並行して使用すると、両者が干渉し、予期せぬ問題が発生する可能性があります。(この制限を克服できるかもしれない、もう一つの有望なプロジェクト"
-" scd-pkcs11 が開発中です。現在は認証証明書に限定されており、まだ広くテストされていません)。"
-
-#: ../to-be-integrated.rst:13
-msgid ""
-"Instructions, how to create a valid X.509 certificate with Nitrokey (1, "
-"2, 3). These are general instructions how to use X.509 certificates. "
-"Alternative PKCS#11 Driver:"
-msgstr ""
-"Nitrokey で有効な X.509 "
-"証明書を作成する方法について説明します（1、2、3）。X.509証明書の一般的な使用方法です。PKCS#11 ドライバの代替品です。"
-
-#: ../to-be-integrated.rst:16
-msgid "The recommended PKCS#11 driver is OpenSC."
-msgstr "PKCS#11ドライバはOpenSCを推奨します。"
-
-#: ../to-be-integrated.rst:18
-msgid "Windows Mini Driver"
-msgstr "Windowsミニドライバ"
-
-#: ../to-be-integrated.rst:20
-msgid ""
-"This Mini Driver allows to integrate Nitrokey with Window's certificate "
-"store. Subsequently all applications which use this certificate storage "
-"can be used with Nitrokey (e.g. Internet Explorer, Google Chrome web "
-"browser, Windows Login). To install the driver, you may need to allow the"
-" installation of unsigned drivers first. Aloaha"
-msgstr ""
-"このMini "
-"Driverは、NitrokeyをWindow'の証明書ストアに統合するためのものです。これにより、この証明書ストアを使用するすべてのアプリケーションをNitrokeyで使用できます（例：Internet"
-" Explorer、Google "
-"Chromeウェブブラウザ、Windowsログイン）。ドライバをインストールするには、署名されていないドライバのインストールを最初に許可する必要がある場合があります。アロハ"
-
-#: ../to-be-integrated.rst:23
-msgid ""
-"All applications of Aloaha are working with the Nitrokey. This includes a"
-" middleware to integrate Nitrokey with other PKCS#11 based applications "
-"and with Windows as well as applications to encrypt and sign PDFs and the"
-" hard disk."
-msgstr "アロハのすべてのアプリケーションは、ニトロキーと連携しています。これには、他のPKCS#11ベースのアプリケーションやWindowsとNitrokeyを連携させるミドルウェア、PDFやハードディスクを暗号化・署名するアプリケーションも含まれます。"
-
-#: ../to-be-integrated.rst:25
-msgid "Alternative PKCS#11 Driver:"
-msgstr "PKCS#11 ドライバの代替。"
-
-#: ../to-be-integrated.rst:27
-msgid ""
-"The recommended PKCS#11 driver is OpenSC. Alternatively, you could use "
-"Peter Koch's PKCS#11 driver which has the following limitations:"
-msgstr ""
-"PKCS#11ドライバはOpenSCを推奨します。また、Peter Koch's PKCS#11 "
-"ドライバを使用することもできますが、以下の制約があります。"
-
-#: ../to-be-integrated.rst:29
-msgid ""
-"No import of existing X.509 certificates. (Instead, keys have to be "
-"generated on the Nitrokey) The Linux version does not allow to generate "
-"keys. Modification of the password/PIN under Linux is not possible."
-msgstr "既存のX.509証明書のインポートができない。(その代わり、鍵はNitrokey上で生成する必要があります）Linux版では鍵の生成はできません。Linux版では、パスワード/PINの変更はできません。"
-
-#: ../to-be-integrated.rst:33
-msgid "p11-glue"
-msgstr "p11-接着剤"
-
-#: ../to-be-integrated.rst:35
-msgid ""
-"P11-glue uses PKCS#11 as glue between crypto libraries and security "
-"applications on the open source desktop. Articles in German"
-msgstr "P11-glueは、オープンソースデスクトップ上の暗号ライブラリとセキュリティアプリケーションの間の接着剤としてPKCS#11を使用します。ドイツ語の記事"
-
-#: ../to-be-integrated.rst:38
-msgid ""
-"Eine allgemeine und gut verständliche Einführung bietet der Artikel "
-"Magisches Leuchten im Linux Magazin 2010/12. Eine umfangreiche Anleitung "
-"gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter "
-"CentOS."
-msgstr ""
-"Linux Magazin 2010/12号のMagisches Leuchtenの記事は、全体的かつ包括的な解説を提供するものです。Pro-"
-"Linuxに掲載された有用な解説書です。CentOSの体験談もあります。"
-
-#: ../to-be-integrated.rst:44
-msgid "**Q:** How can I login into Windows?"
-msgstr "**Q:** Windowsにログインする方法を教えてください。"
-
-#: ../to-be-integrated.rst:44
-msgid ""
-"To access Nitrokey devices read-only, download and install this Mini "
-"Driver (CSP). If you are using Windows Server you may need to disable the"
-" driver signature verification before being able to install the driver. "
-"Note that the Mini Driver for Nitrokey Pro may not work yet for write "
-"mode."
-msgstr ""
-"Nitrokeyのデバイスに読み取り専用でアクセスするには、このミニドライバー（CSP）をダウンロードし、インストールしてください。Windows"
-" Serverを使用している場合、ドライバの署名検証を無効にしてからインストールする必要があります。なお、Nitrokey "
-"Pro用のミニドライバは、書き込みモードではまだ動作しない場合があります。"
-
-#: ../to-be-integrated.rst:46
-msgid "There exist different ways to use a Nitrokey to logon on Windows:"
-msgstr "WindowsでNitrokeyを使ってログオンするには、さまざまな方法があります。"
-
-#: ../to-be-integrated.rst:48
-msgid ""
-"Login on stand alone Windows computers based on EIDAuthenticate. "
-"Alternatively install OpenSC and use Aloaha Smart Login's PKCS#11 "
-"Credentials. Login on Windows domain computers using MS Active Directory "
-"based OpenPGP-CSP minidriver for Nitrokey Storage 2 Nitrokey Pro 2 Login "
-"on Windows domain computers using MS Active Directory based on Smart "
-"Policy for other Nitrokey devices."
-msgstr ""
-"EIDAuthenticateをベースにしたスタンドアローンのWindowsコンピュータでのログイン。または、OpenSCをインストールし、Aloaha"
-" Smart Login'のPKCS#11認証情報を使用します。Nitrokey Storage 2 Nitrokey Pro 2 "
-"Nitrokey Storage 2用のOpenPGP-CSPミニドライバーを使用して、MS Active "
-"Directoryを使用してWindowsドメインコンピュータにログインすることができます。"
-
-#: ../to-be-integrated.rst:53
-msgid "**Q:** How can I login into Linux? Linux Login with PAM"
-msgstr "**Q:** Linuxにログインするにはどうしたらよいですか？PAMを使ったLinuxのログイン"
-
-#: ../to-be-integrated.rst:56
-msgid "You have two options: pam_p11 or Poldi."
-msgstr "pam_p11とPoldiの2つのオプションがあります。"
-
-#: ../to-be-integrated.rst:58
-msgid ""
-"The solution with pam_p11 is more difficult to achieve and is based on "
-"S/MIME certificates. Please have a look at the documentation for more "
-"information."
-msgstr "pam_p11による解決はより困難で、S/MIME証明書をベースにしています。詳しくはドキュメントをご覧ください。"
-
-#: ../to-be-integrated.rst:60
-msgid ""
-"Poldi 0.4.1 works flawlessly with Nitrokey for PAM authentication with "
-"RSA keys (see Troubleshooting for information on ECC keys). Besides the "
-"installation of poldi (e.g. 'sudo apt-get install libpam-poldi' on "
-"Ubuntu) the following steps are needed to get it working."
-msgstr ""
-"Poldi 0.4.1 は Nitrokey と共に RSA 鍵による PAM 認証で問題なく動作します (ECC "
-"鍵についてはトラブルシューティングを参照してください)。poldi のインストール (例: Ubuntu では 'sudo apt-get "
-"install libpam-poldi') のほかに、動作させるには次の手順が必要です。"
-
-#: ../to-be-integrated.rst:64
-msgid ""
-"At first you need to find out the \"Application ID\" of your Nitrokey. "
-"You can use \"gpg --card-status | grep Application\" to find out what's "
-"yours. It looks like 'D00600012401020000000000xxxxxxxx' or similiar. Now "
-"you have to add a line to /etc/poldi/localdb/users which contains the "
-"following information"
-msgstr ""
-"まず、自分の Nitrokey の \"Application ID\" を確認する必要があります。gpg --card-status | "
-"grep Application\"で、自分のものがわかります。'D00600012401020000000000xxxxxxxx' "
-"といった感じです。次に、/etc/poldi/localdb/usersに以下の情報を含む行を追加する必要があります。"
-
-#: ../to-be-integrated.rst:70
-msgid ""
-"sudo sh -c 'gpg-connect-agent \"/datafile "
-"/etc/poldi/localdb/keys/<YourApplicationID>\" \"SCD READKEY --advanced "
-"OPENPGP.3\" /bye'"
-msgstr ""
-"sudo sh -c 'gpg-connect-agent \"/datafile "
-"/etc/poldi/localdb/keys/<YourApplicationID>\" \"SCD READKEY --advanced "
-"OPENPGP.3\" /bye'.XXX.XXX.XXX;"
-
-#: ../to-be-integrated.rst:76
-msgid ""
-"/etc/pam.d/common-auth for graphical user login /etc/pam.d/login for "
-"console login /etc/pam.d/sudo for sudo authentication /etc/pam.d/gnome-"
-"screensaver for login back from a locked screen etc."
-msgstr ""
-"/etc/pam.d/common-auth グラフィカルユーザーログイン用 /etc/pam.d/login コンソールログイン用 "
-"/etc/pam.d/sudo sudo 認証用 /etc/pam.d/gnome-screensaver ロック画面からのログインバック用 "
-"など。"
-
-#: ../to-be-integrated.rst:82
-msgid ""
-"Note: Pam is dangerous to play around with, so make sure you have a way "
-"of accessing the machine if you break authentication completely. Remember"
-" that booting into rescue mode from Grub requires a root password, so "
-"keep that or a live CD which can read your filesystems to hand."
-msgstr ""
-"注意：Pamは弄ると危険なので、認証を完全に壊してもマシンにアクセスできる方法を確保しておいてください。Grub "
-"からレスキューモードで起動するには root パスワードが必要なのを覚えておいてください。そのパスワードか、ファイルシステムを読み込めるライブ "
-"CD を手元に置いておいてください。"
-
-#: ../to-be-integrated.rst:84
-msgid ""
-"Here you find further instructions (in German, partially outdated). "
-"Troubleshooting"
-msgstr "ここでは、詳しい説明をご覧いただけます（ドイツ語、一部古くなっています）。トラブルシューティング"
-
-#: ../to-be-integrated.rst:89
-msgid ""
-"poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> "
-"/etc/poldi/localdb/keys"
-msgstr ""
-"poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> "
-"/etc/poldi/localdb/keys。"
-
-#: ../to-be-integrated.rst:91
-msgid ""
-"Please be aware that you have to insert your Application ID in the line "
-"above with the one of your stick! ECC Keys Unfortunately, poldi has no "
-"support for ECC keys yet. But there is a patch for ECC keys used with "
-"Nitrokey Start. This is already included in the master branch of the "
-"poldi development repository and thus will be released in a newer version"
-" eventually. In the meantime the only option is to build poldi from "
-"source."
-msgstr ""
-"このとき、アプリケーションIDは、お使いのスティックのものと同じものを入れてください。ECCキー "
-"残念ながらpoldiはまだECCキーに対応していません。しかし、Nitrokey "
-"Startで使用するECCキー用のパッチはあります。これはすでにpoldiの開発リポジトリのmasterブランチに含まれているので、いずれ新しいバージョンでリリースされるでしょう。それまでの間はpoldiをソースからビルドするのが唯一の選択肢です。"
-
-#: ../to-be-integrated.rst:97
-msgid "**Q:** How can I login with One Time Passwords?"
-msgstr "**Q:**ワンタイムパスワードでログインするにはどうしたらよいですか？"
-
-#: ../to-be-integrated.rst:97
-msgid ""
-"One-Time-Passwords (OTP) are used for secure login to websites and local "
-"applications."
-msgstr "ワンタイムパスワード（OTP）は、Webサイトやローカルアプリケーションに安全にログインするために使用されます。"
-
-#: ../to-be-integrated.rst:99
-msgid "Two OTP modes exist:"
-msgstr "2つのOTPモードが存在します。"
-
-#: ../to-be-integrated.rst:101
-msgid ""
-"Time-based One-time Passwords (TOTP) is widely used for websites. If "
-"unsure, assume you are using this mode. HMAC-based One-time Passwords "
-"(HOTP) is used for local applications and computer logins."
-msgstr ""
-"Webサイトでは、TOTP（Time-based One-time "
-"Passwords）が広く使われています。不明な場合は、このモードを使用していると仮定してください。HMAC-based One-time "
-"Passwords (HOTP) は、ローカルアプリケーションやコンピュータのログインに使用されます。"
-
-#: ../to-be-integrated.rst:104
-msgid ""
-"To use One-Time-Passwords with your Nitrokey Pro or Nitrokey Storage, you"
-" need to download and install the latest Nitrokey App. Time-based One-"
-"time Passwords - TOTP"
-msgstr ""
-"Nitrokey Pro または Nitrokey Storage でワンタイムパスワードを使用するには、最新の Nitrokey "
-"アプリをダウンロードし、インストールする必要があります。時間ベースのワンタイムパスワード - TOTP"
-
-#: ../to-be-integrated.rst:107
-msgid ""
-"For login to a Google account. For login to a Microsoft account. For "
-"login to a Nextcloud account. Generic instructions for all other "
-"services."
-msgstr "Googleアカウントでログインする場合。Microsoftアカウントにログインする場合。Nextcloudのアカウントでログインする場合その他のサービスに関する一般的な説明です。"
-
-#: ../to-be-integrated.rst:112
-msgid "**Q:** How can I use the Nitrokey Pro with Android?"
-msgstr "**Q：＊＊＊ Nitrokey ProをAndroidで使うにはどうしたらよいですか？"
-
-#: ../to-be-integrated.rst:114
-msgid ""
-"It is possible to use the Nitrokey on an Android devices in combination "
-"with OpenKeychain. This enables one to encrypt/decrypt E-Mails or files "
-"via OpenPGP."
-msgstr "Nitrokeyは、OpenKeychainと組み合わせてAndroid端末で使用することが可能です。これにより、OpenPGPによるメールやファイルの暗号化・復号化が可能になります。"
-
-#: ../to-be-integrated.rst:116
-msgid ""
-"Cotech provides Android software with commercial support. Please have a "
-"look there, if you like. The following instructions are based on "
-"OpenKeychain."
-msgstr "コーテックは、商用サポート付きのAndroidソフトウェアを提供しています。よろしければそちらをご覧ください。以下の説明は、OpenKeychainをベースにしています。"
-
-#: ../to-be-integrated.rst:118
-msgid ""
-"Tested with Nitrokey Start, Pro and Storage in combination with Android "
-"7.1, OpenKeychain 4.5 and K9Mail 5.207. Prerequisites"
-msgstr ""
-"Nitrokey Start、Pro、StorageとAndroid 7.1、OpenKeychain 4.5、K9Mail "
-"5.207の組み合わせでテストしています。前提条件"
-
-#: ../to-be-integrated.rst:121
-msgid ""
-"Android phone which is capable of USB OTG USB OTG cable to connect the "
-"Nitrokey with your phone OpenKeychain installed on Device Public key "
-"saved on the device or uploaded on a keyserver"
-msgstr ""
-"USB OTG が可能な Android 端末 Nitrokey と端末を接続する USB OTG ケーブル OpenKeychain "
-"を端末にインストール 公開鍵を端末に保存、または鍵サーバにアップロードする。"
-
-#: ../to-be-integrated.rst:126
-msgid "First steps"
-msgstr "はじめの一歩"
-
-#: ../to-be-integrated.rst:128
-msgid ""
-"To import the keys of the Nitrokey you should at first start the "
-"OpenKeychain app. Then insert the Nitrokey with the USB OTG cable. "
-"OpenKeychain starts a dialog to use the Nitrokey (you may have to accept "
-"the usage of the key with OpenKeychain first). Now you can choose between"
-" looking for public key on a keyserver or choosing the public key from "
-"storage. After the public key got imported you have to tap on 'connect "
-"key' to import a reference to the private key of the Nitrokey. That’s "
-"basically it."
-msgstr ""
-"Nitrokey のキーをインポートするには、まず OpenKeychain アプリを起動する必要があります。次に、USB OTG ケーブルで "
-"Nitrokey を挿入します。OpenKeychain は Nitrokey を使用するためのダイアログを開始します（最初に "
-"OpenKeychain "
-"での鍵の使用を許可する必要がある場合があります）。ここで、鍵サーバで公開鍵を探すか、ストレージから公開鍵を選択するかを選択できます。公開鍵がインポートされたら、"
-" 'connect key' をタップしてNitrokeyの秘密鍵への参照をインポートする必要があります。基本的にはこれだけです。"
-
-#: ../to-be-integrated.rst:130
-msgid ""
-"In the case that no there are no keys on the Nitrokey yet, OpenKeychain "
-"will help with the creation of a new key pair instead. Usage"
-msgstr "Nitrokey に鍵がない場合、OpenKeychain が新しい鍵ペアの作成を支援します。使用方法"
-
-#: ../to-be-integrated.rst:133
-msgid ""
-"You can use all functions of OpenKeychain and Apps which make use of "
-"OpenKeychain. Therefore you can just encrypt/decrypt messages or files by"
-" hand using the app directly or for example you combine K9Mail with "
-"OpenKeychain to decrypt your mails automatically. It is important to "
-"choose the right key in the K9Mail account settings first."
-msgstr "OpenKeychainの全機能とOpenKeychainを利用したアプリを利用することができます。そのため、メールやファイルを直接アプリで暗号化・復号化したり、K9MailとOpenKeychainを組み合わせてメールを自動で復号化したりすることができます。ただし、K9Mailのアカウント設定で正しいキーを選択することが重要です。"
-
-#: ../to-be-integrated.rst:135
-msgid ""
-"Note that you may have to enable the on-screen keyboard in the android "
-"settings to type the PIN as the system recognizes the Nitrokey as a "
-"physical keyboard and therefore tries to hide the on-screen keyboard. Go "
-"to 'Language and Input' > 'Current Keyboard' > 'Hardware show input "
-"method'."
-msgstr ""
-"なお、Nitrokeyを物理キーボードとして認識するため、画面上のキーボードを隠そうとするので、暗証番号を入力するためにアンドロイドの設定で画面上のキーボードを有効にしなければならない場合があります。'言語と入力'"
-" > '現在のキーボード' > 'ハードウェアで入力方法を表示' に進みます。"
-
-#: ../to-be-integrated.rst:138
-msgid "**Q:** How can I use the Nitrokey Pro with Iphone?"
-msgstr "**Q：＊＊＊ Nitrokey ProをIphoneで使用するにはどうしたらよいですか？"
-
-#: ../to-be-integrated.rst:139
-msgid "Currently it is not possible"
-msgstr "現状では不可能"
-
-#: ../to-be-integrated.rst:141
-msgid "**Q:** How can I use the Nitrokey Pro with Ubuntu Phone?"
-msgstr "**Q:** Nitrokey ProをUbuntu Phoneで使用するにはどうしたらよいですか？"
-
-#: ../to-be-integrated.rst:141
-msgid ""
-"There are instructions on gnupg.org about how to use a OpenPGP Card on a "
-"UbuntuPhone which should work for the Nitrokey Start, Pro and Storage."
-msgstr "gnupg.org に、UbuntuPhone で OpenPGP カードを使用する方法が掲載されています。"
-
-#: ../to-be-integrated.rst:143
-msgid ""
-"**Q:** How can I do Email encryption? There are two widely used standards"
-" for email encryption. While OpenPGP/GnuPG is popular among individuals, "
-"S/MIME/X.509 is mostly used by enterprises. If you are in doubt which one"
-" to choose, you should use OpenPGP."
-msgstr ""
-"**Q:** "
-"電子メールの暗号化はどのようにすればよいのですか？電子メールの暗号化には、広く使われている2つの規格があります。OpenPGP/GnuPGは個人の間で人気がありますが、S/MIME/X.509は主に企業で使用されています。どちらを選ぶか迷った場合は、OpenPGPを使うのがよいでしょう。"
-
-#: ../to-be-integrated.rst:146
-msgid ""
-"instructions for using the OpenPGP standard with the Nitrokey "
-"instructions for using S/MIME with the Nitrokey. Note: SMIME certificates"
-" can be purchased cheaply from CERTUM and SSLTrust."
-msgstr ""
-"NitrokeyでOpenPGP規格を使用する手順 "
-"NitrokeyでS/MIMEを使用する手順。注：SMIME証明書はCERTUMとSSLTrustから安価に購入できます。"
-
-#: ../to-be-integrated.rst:149
-msgid ""
-"Please note, that it is currently advised to use either OpenPGP or S/MIME"
-" encryption, but not both with the Nitrokey."
-msgstr "現在、NitrokeyではOpenPGPまたはS/MIMEのどちらかの暗号化を使用することが推奨されていますが、両方使用することはできませんので、ご注意ください。"
-
-#: ../to-be-integrated.rst:151
-msgid "To use a Nitrokey Storage with Thunderbird 78+, you can try this tutorial."
-msgstr "Thunderbird 78+でNitrokey Storageを使用するには、こちらのチュートリアルをお試しください。"
-
-#: ../to-be-integrated.rst:153
-msgid "**Q:** How can I do Hard Disk Encryption?"
-msgstr "**Q:**ハードディスクの暗号化について教えてください。"
-
-#: ../to-be-integrated.rst:156
-msgid ""
-"For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (formerly "
-"TrueCrypt)"
-msgstr "のために。Nitrokey Pro、Nitrokey Storage、Nitrokey Start VeraCrypt (旧TrueCrypt)"
-
-#: ../to-be-integrated.rst:159
-msgid ""
-"VeraCrypt is a free and Open Source disk encryption software for Windows,"
-" macOS, and GNU/Linux. It is the successor of TrueCrypt and thus "
-"recommended, although the following instructions should apply to "
-"TrueCrypt as well. Follow these steps to use the program with Nitrokey "
-"Storage or Pro:"
-msgstr ""
-"VeraCrypt は、Windows、macOS、GNU/Linux "
-"用のフリーでオープンソースのディスク暗号化ソフトウェアです。TrueCryptの後継ソフトであるため推奨されていますが、以下の説明はTrueCryptにも適用されるはずです。Nitrokey"
-" Storage または Pro でプログラムを使用するには、以下の手順に従います。"
-
-#: ../to-be-integrated.rst:161 ../to-be-integrated.rst:673
-msgid ""
-"Install OpenSC Choose the library in VeraCrypt under "
-"Settings>Preferences>Security Token (location depends on system, e.g. "
-"/usr/lib/opensc). Generate a 64 Byte key file via Tools>Keyfile "
-"Generator. Now you should be able to import the generated key file via "
-"Tools>Manage Security Token Keyfiles. You should choose the first Slot "
-"([0] User PIN). The keyfile is then stored on the Nitrokey as 'Private "
-"Data Object 1' (PrivDO1). After this you should wipe the original keyfile"
-" on your Computer securely! Now you can use VeraCrypt with the Nitrokey: "
-"Create a container, choose the keyfile on the device as an alternative to"
-" a password."
-msgstr ""
-"OpenSCをインストール VeraCryptのSettings>Preferences>Security "
-"Tokenでライブラリを選択します（場所はシステムによって異なります、例：/usr/lib/opensc)。Tools>Keyfile "
-"Generatorで64Byteのキーファイルを生成します。これで、Tools>Manage Security Token Keyfiles "
-"から、生成された鍵ファイルをインポートできるようになります。最初のSlot([0] User "
-"PIN)を選択します。キーファイルは、Nitrokey に 'Private Data Object 1' (PrivDO1) "
-"として保存されます。この後、コンピュータ上のオリジナルのキーファイルを安全に消去してください。これで、VeraCryptをNitrokeyで使用することができます。コンテナを作成し、デバイス上のキーファイルをパスワードの代わりとして選択します。"
-
-#: ../to-be-integrated.rst:168
-msgid ""
-"Security Consideration: Please note that VeraCrypt doesn't make use of "
-"the full security which Nitrokey (and smart cards in general) offer. "
-"Instead it stores a keyfile on the Nitrokey which theoretically could be "
-"stolen by a computer virus after the user enters the PIN."
-msgstr "セキュリティに配慮しています。VeraCryptは、Nitrokey（および一般的なスマートカード）が提供する完全なセキュリティを利用しないことに注意してください。その代わり、Nitrokeyにキーファイルを保存し、ユーザーがPINを入力した後、理論的にはコンピュータウイルスによって盗まれる可能性があります。"
-
-#: ../to-be-integrated.rst:170
-msgid ""
-"Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
-"described security limitation."
-msgstr "注：Aloaha CryptはTrueCrypt/VeraCryptをベースにしていますが、記述されているセキュリティの制限はありません。"
-
-#: ../to-be-integrated.rst:173
-msgid ""
-"Hard Disk Encryption on Linux, Based on LUKS/dm-crypt Here are excellent "
-"instructions how to use Nitrokey to encrypt your hard disk under Linux "
-"with LUKS/dm-crypt. Other instruction."
-msgstr ""
-"LUKS/dm-cryptに基づくLinuxでのハードディスク暗号化 ここでは、Nitrokeyを使用してLinuxでLUKS/dm-"
-"cryptによりハードディスクを暗号化する優れた方法を説明します。他の指示もあります。"
-
-#: ../to-be-integrated.rst:176
-msgid ""
-"Purism has created a simple script to add the Nitrokey/LibremKey as a way"
-" to unlock LUKS partitions (not tested by Nitrokey yet)."
-msgstr "Purismは、LUKSパーティションのロックを解除する方法として、Nitrokey/LibremKeyを追加する簡単なスクリプトを作成しました（Nitrokeyではまだテストされていません）。"
-
-#: ../to-be-integrated.rst:178
-msgid ""
-"This project aims to ease the use of LUKS with the Nitrokey Pro or "
-"Storage based on the Password Safe (not tested by Nitrokey yet). A "
-"description on how to use it on Gentoo can be found here."
-msgstr ""
-"このプロジェクトは、Nitrokey Pro または Password Safe (Nitrokey ではまだテストされていません) "
-"をベースにした Storage で LUKS "
-"を簡単に使用することを目的としています。Gentooでの使用方法については、こちらで説明されています。"
-
-#: ../to-be-integrated.rst:180
-msgid ""
-"For Arch Linux, see initramfs-scencrypt. Storage Encryption on Linux, "
-"Based on EncFS"
-msgstr ""
-"Arch Linux では、initramfs-scencrypt を参照してください。Linux でのストレージ暗号化、EncFS "
-"をベースにしたもの"
-
-#: ../to-be-integrated.rst:183
-msgid ""
-"Prerequisite: Please ensure that you installed the device driver, changed"
-" the default PINs and generated or imported keys with GnuPG."
-msgstr "前提条件デバイスドライバのインストール、デフォルトのPINの変更、GnuPGでの鍵の生成またはインポートが完了していることを確認してください。"
-
-#: ../to-be-integrated.rst:185
-msgid ""
-"An easy to use encrypted file system is EncFS, which is based on FUSE. "
-"You may follow these steps to use it with very long passwords and "
-"Nitrokey:"
-msgstr "簡単に使える暗号化ファイルシステムとして、FUSEをベースとしたEncFSがあります。非常に長いパスワードとNitrokeyを使用する場合は、以下の手順で使用することができます。"
-
-#: ../to-be-integrated.rst:189
-msgid ""
-"# Create a key file with random data: $ dd bs=64 count=1 if=/dev/urandom "
-"of=keyfile"
-msgstr "# ランダムデータでキーファイルを作成： $ dd bs=64 count=1 if=/dev/urandom of=keyfile"
-
-#: ../to-be-integrated.rst:192
-msgid ""
-"# Encrypt the key file and use the User-ID of your Nitrokey $ gpg "
-"--encrypt keyfile"
-msgstr "# 鍵ファイルを暗号化し、NitrokeyのUser-IDを使用する $ gpg --encrypt keyfile"
-
-#: ../to-be-integrated.rst:195
-msgid ""
-"# Remove the key file in clear text: $ rm keyfile # you may want to use "
-"'wipe' or 'shred' to securely delete the keyfile"
-msgstr ""
-"# 鍵ファイルをクリアテキストで削除： $ rm keyfile # 鍵ファイルを安全に削除するために 'wipe' または 'shred' "
-"を使用したい場合があります。"
-
-#: ../to-be-integrated.rst:198
-msgid "# Create mount point: $ mkdir ~/.cryptdir ~/cryptdir"
-msgstr "# マウントポイントの作成： $ mkdir ~/.cryptdir ~/cryptdir"
-
-#: ../to-be-integrated.rst:201
-msgid ""
-"# Create the actual encryption folder $ gpg -d keyfile.gpg | encfs -S "
-"~/.cryptdir ~/cryptdir"
-msgstr "# 実際の暗号化フォルダの作成 $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
-
-#: ../to-be-integrated.rst:204
-msgid ""
-"# There may appears an error message about missing permission of "
-"fusermount # This message can be ignored"
-msgstr "# fusermountのパーミッションが足りないというエラーメッセージが表示されることがある # このメッセージは無視してもよい。"
-
-#: ../to-be-integrated.rst:207
-msgid "# Unmount the new file system: $ fusermount -u ~/cryptdir"
-msgstr "# 新しいファイルシステムをアンマウントする： $ fusermount -u ~/cryptdir"
-
-#: ../to-be-integrated.rst:212
-msgid ""
-"# Mount encrypted file system and enter PIN of Nitrokey: $ gpg -d "
-"keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
-msgstr ""
-"# 暗号化されたファイルシステムをマウントし、NitrokeyのPINを入力する： $ gpg -d keyfile.gpg | encfs -S"
-" ~/.cryptdir ~/cryptdir"
-
-#: ../to-be-integrated.rst:215
-msgid "# After usage, unmount the file system: $ fusermount -u ~/cryptdir"
-msgstr "# 使用後は、ファイルシステムをアンマウントしてください： $ fusermount -u ~/cryptdir"
-
-#: ../to-be-integrated.rst:219
-msgid "Storage Encryption on Linux, Based on ECryptFS"
-msgstr "ECryptFSをベースとしたLinuxでのストレージ暗号化技術"
-
-#: ../to-be-integrated.rst:221
-msgid ""
-"eCryptfs is a file based transparent encryption file system for Linux "
-"which can be used with Nitrokey through a PKCS#11 driver. See these "
-"instructions. Alternatively, try ESOSI or follow these steps using OpenSC"
-" and OpenVPN:"
-msgstr ""
-"eCryptfsは、Linux用のファイルベースの透過的暗号化ファイルシステムで、PKCS#11ドライバを介してNitrokeyと一緒に使用することができます。これらの手順を参照してください。あるいは、ESOSI"
-" を試すか、OpenSC と OpenVPN を使って以下の手順を実行してください。"
-
-#: ../to-be-integrated.rst:223
-msgid "Warning: This will delete existing keys on your Nitrokey!"
-msgstr "ご注意Nitrokeyの既存のキーが削除されます。"
-
-#: ../to-be-integrated.rst:225
-msgid ""
-"# Import the certificate and key to the Nitrokey $ pkcs15-init --delete-"
-"objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 "
-"--format pkcs12 --auth-id 3 --verify-pin"
-msgstr ""
-"# Nitrokey に証明書と鍵をインポートする $ pkcs15-init --delete-objects privkey,pubkey "
-"--id 3 --store-private-key user@example.com.p12 --format pkcs12 --auth-id"
-" 3 --verify-pin"
-
-#: ../to-be-integrated.rst:228
-msgid "# Create the file ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
-msgstr "# ファイル ~/.ecryptfsrc.pkcs11 の作成: $ editor ~/.ecryptfsrc.pkcs11"
-
-#: ../to-be-integrated.rst:231
-msgid ""
-"# Enter this content: $ pkcs11-log-level=5 "
-"pkcs11-provider1,name=name,library=/usr/lib/opensc-pkcs11.so,cert-"
-"private=true $ openvpn --show-pkcs11-ids path to opensc-pkcs11 module "
-"Certificate"
-msgstr ""
-"# Enter this content: $ pkcs11-log-level=5 "
-"pkcs11-provider1,name=name,library=/usr/lib/opensc-pkcs11.so,cert-"
-"private=true $ openvpn --show-pkcs11-ids opensc-pkcs11 module Certificate"
-" への path"
-
-#: ../to-be-integrated.rst:235
-msgid ""
-"DN: "
-"/description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@example.com"
-" Serial: 066E04 Serialized id: "
-"ZeitControl/PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
-msgstr ""
-"DN: "
-"/description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@example.com"
-" Serial:066E04 "
-"シリアライズされたID。ZeitControl/PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
-
-#: ../to-be-integrated.rst:239
-msgid "# Copy the serialized id for later usage: $ ecryptfs-manager"
-msgstr "# 後で使うためにシリアル化したidをコピーしておく。$ ecryptfs-manager"
-
-#: ../to-be-integrated.rst:242
-msgid ""
-"# This will show list option. Choose option \"Add public key to keyring\""
-" # Choose pkcs11-helper # Enter the serialized ID of step 3 to PKCS#11 "
-"ID."
-msgstr ""
-"# オプションの一覧が表示されます。Add public key to keyring\" オプションを選択 # pkcs11-helperを選択"
-" # PKCS#11 IDに手順3でシリアライズしたIDを入力します。"
-
-#: ../to-be-integrated.rst:250
-msgid "**Q:** How can I sign and encrypt Files and PDFs? GnuPG"
-msgstr "**Q:** ファイルやPDFを署名・暗号化するにはどうしたらよいですか？GnuPG"
-
-#: ../to-be-integrated.rst:253
-msgid ""
-"Use the gpgsm tool to sign, verify, encrypt and decrypt files. Use a "
-"signature key on a Nitrokey to sign documents using Acrobat Reader, Open "
-"Office / Libre Office or any other PDF reader supporting electronic "
-"signatures."
-msgstr ""
-"ファイルの署名、検証、暗号化、復号化には、gpgsm ツールを使用します。Acrobat Reader、Open Office / Libre "
-"Office、その他の電子署名に対応したPDFリーダーを使用して、Nitrokey上の署名キーを使用して文書に署名することができます。"
-
-#: ../to-be-integrated.rst:256
-msgid "GPA - GNU Privacy Assistant"
-msgstr "GPA - GNU プライバシーアシスタント"
-
-#: ../to-be-integrated.rst:258
-msgid ""
-"The Gnu Privacy Assistant (GPA) recognizes Nitrokey out-of-the-box, has "
-"various features to manage keys and cards. It also allows file operations"
-" such as file encryption, decryption, signing."
-msgstr ""
-"Gnu Privacy Assistant (GPA) は、Nitrokey "
-"をすぐに認識し、鍵やカードを管理するためのさまざまな機能を備えています。また、ファイルの暗号化、復号化、署名などのファイル操作が可能です。"
-
-#: ../to-be-integrated.rst:261
-msgid "SOPS - Secrect OPerationS"
-msgstr "SOPS - Secrect OPerationS"
-
-#: ../to-be-integrated.rst:263
-msgid ""
-"SOPS is an editor of encrypted files that supports YAML, JSON and BINARY "
-"formats and encrypts with AWS KMS and PGP. You can find it on github."
-msgstr ""
-"SOPSは、YAML、JSON、BINARY形式をサポートし、AWS "
-"KMSとPGPで暗号化する暗号化ファイルのエディターです。githubで公開されています。"
-
-#: ../to-be-integrated.rst:266
-msgid "Aloaha"
-msgstr "アロハ"
-
-#: ../to-be-integrated.rst:268
-msgid ""
-"Aloaha provides several applications to encrypt and sign PDFs. All of "
-"them, which allow smart card integration, work with Nitrokey. You can for"
-" example import key and certificate by using OpenSC or any other "
-"appropriate variant. After this Windows recognize your certificate and "
-"you can sign the document as it is shown in the screencast below."
-msgstr "Aloahaは、PDFを暗号化し、署名するためのアプリケーションをいくつか提供しています。スマートカードとの連携が可能なものは、すべてNitrokeyと連携して動作します。例えば、OpenSCや他の適切な種類のものを使って、鍵と証明書を取り込むことができます。この後、Windowsが証明書を認識し、以下のスクリーンキャストに示すように、文書に署名することができます。"
-
-#: ../to-be-integrated.rst:270
-msgid "GpgEx for Windows Explorer"
-msgstr "Windowsエクスプローラ用GpgEx"
-
-#: ../to-be-integrated.rst:272
-msgid ""
-"GpgEx integrates smoothly into Windows Explorer to allow encryption and "
-"decryption of files. Install it as part of the GPG4Win package."
-msgstr "GpgExはWindowsのエクスプローラにスムーズに統合され、ファイルの暗号化・復号化を可能にします。GPG4Winパッケージの一部としてインストールします。"
-
-#: ../to-be-integrated.rst:275
-msgid ""
-"Before you start to use any of these applications with your Nitrokey, "
-"please ensure that you installed the device driver and initialized the "
-"device (e.g. generated keys)."
-msgstr "これらのアプリケーションをニトロキーで使用する前に、デバイスドライバのインストールとデバイスの初期化（キーの生成など）が完了していることを確認してください。"
-
-#: ../to-be-integrated.rst:277
-msgid ""
-"Certificate-based login with TLS and web browser is a very secure "
-"authentication method but it is only used rarely. If you are unsure what "
-"this means, this approach is most likely not relevant for you."
-msgstr "TLSとWebブラウザを使用した証明書ベースのログインは、非常に安全な認証方法ですが、まれにしか使用されません。この意味がよくわからない場合は、この方法はあなたにとって関係ない可能性が高いです。"
-
-#: ../to-be-integrated.rst:279
-msgid ""
-"This page refers to websites and applications which support certificate "
-"authentication, so that users don't need to enter username and password "
-"when login. For instance WebID is a great protocol which makes use of it."
-" Certificate authentication can be used easily with the Nitrokey and also"
-" with any other certificate storages. Mozilla Firefox"
-msgstr "このページでは、ログイン時にユーザー名やパスワードの入力が不要な証明書認証に対応したWebサイトやアプリケーションを紹介します。例えば、WebIDは、これを利用した素晴らしいプロトコルです。証明書認証は、Nitrokeyや他の証明書ストレージで簡単に利用することができます。モジラ・ファイアフォックス"
-
-#: ../to-be-integrated.rst:282
-msgid "You need to install the PKCS#11 driver:"
-msgstr "PKCS#11ドライバをインストールする必要があります。"
-
-#: ../to-be-integrated.rst:284
-msgid ""
-"Download the PKCS11 driver and store it on your local hard disk or "
-"install OpenSC. Open the Preferences in Firefox and go to  Privacy & "
-"Security -> Security (just a headline) -> Button 'Security Devices...' "
-"Press the button Load. Enter \"Nitrokey\" as the Module Name and press "
-"the Browse button to select the previously downloaded PKCS11 driver file."
-" Confirm and close all dialogs."
-msgstr ""
-"PKCS11ドライバをダウンロードし、ローカルハードディスクに保存するか、OpenSCをインストールしてください。Firefoxの環境設定を開き、Privacy"
-" & Security -> Security (just a headline) -> Button 'Security Devices...'"
-" ボタンを押してLoadを押します。モジュール名として \"Nitrokey\" を入力し、参照ボタンを押し、以前ダウンロードした PKCS11 "
-"ドライバファイルを選択します。すべてのダイアログを確認し、閉じます。"
-
-#: ../to-be-integrated.rst:288
-msgid ""
-"Now you are ready to access websites which provide certificate "
-"authentication. Internet Explorer"
-msgstr "これで、証明書認証を提供するWebサイトにアクセスする準備が整いました。インターネットエクスプローラー"
-
-#: ../to-be-integrated.rst:291
-msgid ""
-"Install this Mini Driver for Windows. Now you are ready to access "
-"websites which provide certificate authentication. Google Chrome"
-msgstr ""
-"このMini Driver for "
-"Windowsをインストールしてください。これで、証明書認証を提供するWebサイトにアクセスする準備が整いました。グーグルクローム"
-
-#: ../to-be-integrated.rst:294
-msgid ""
-"Under Windows, install this Mini Driver. Under Linux, follow these "
-"instructions. Now you are ready to access websites which provide "
-"certificate authentication. WebID"
-msgstr ""
-"Windowsでは、このMini "
-"Driverをインストールしてください。Linuxでは、以下の手順に従ってください。これで、証明書認証を提供しているWebサイトにアクセスする準備が整いました。WebID"
-
-#: ../to-be-integrated.rst:297
-msgid ""
-"WebID is a technology to enable secure and federated social websites. "
-"Here is a video (WebM, Ogg video, H.264) which demonstrates how to use "
-"Nitrokey to create a WebID profile and subsequently to use it in an "
-"Internet cafe in Singapore. Nitrokey protects against computer viruses "
-"which might otherwise steel the username and password. Websites Web Site"
-"        Category CAcert  community-based Certificate Authority "
-"PrivaSphere     Secure messaging HM Revenue & Customs    UK's tax "
-"administration Software Application     Category Roundcube (plugin)      "
-"Webmail Drupal (WebID, Certificate login)       Content management system"
-" Media Wiki (plugin)     Wiki Joomla!         Content management system "
-"Apache + mod_ssl        Web server OpenSSH         SSH (remote secure "
-"shell) client and server Wordpress (plugin)      Blog and CMS Tivoli  "
-"System management framework Globalscape EFT         managed file transfer"
-" (MFT) Oracle Identity Manager         I&AM Fuse Source     Middleware "
-"Liferay         Blog FusionForge     web-based project-management and "
-"collaboration software"
-msgstr ""
-"WebIDは、安全で連携したソーシャルウェブサイトを実現するための技術です。ここでは、Nitrokeyを使ってWebIDプロファイルを作成し、その後、シンガポールのインターネットカフェで使用する方法を紹介するビデオ（WebM、Oggビデオ、H.264）です。Nitrokeyは、ユーザー名とパスワードを盗み出すコンピューターウイルスから保護します。Webサイト"
-" Webサイトカテゴリ CAcert コミュニティベース認証局 PrivaSphere Secure messaging HM Revenue &"
-" Customs UK's tax administration Software Application Category Roundcube "
-"(plugin) Webmail Drupal (WebID, Certificate login) Content management "
-"system Media Wiki (plugin) Wiki Joomla!         コンテンツ管理システム Apache + "
-"mod_ssl Webサーバ OpenSSH SSH（リモートセキュアシェル）クライアントおよびサーバ Wordpress（プラグイン） "
-"ブログおよびCMS Tivoli システム管理フレームワーク Globalscape EFT 管理ファイル転送（MFT） Oracle "
-"Identity Manager I&AM Fuse Source Middleware Liferay Blog FusionForge "
-"Webベースのプロジェクト管理およびコラボレーション・ソフトウェア"
-
-#: ../to-be-integrated.rst:319
-msgid ""
-"This website is a good read about strong authentication mechanisms, why "
-"client certificate authentication isn't popular and better alternatives "
-"at the horizon."
-msgstr "このサイトでは、強力な認証メカニズム、クライアント証明書認証が普及しない理由、より良い代替手段の可能性などについて解説しています。"
-
-#: ../to-be-integrated.rst:321
-msgid "**Q:** How can I use Enterprise Authentication?"
-msgstr "**Q:** Enterprise Authenticationを利用するにはどうしたらよいですか？"
-
-#: ../to-be-integrated.rst:323
-msgid ""
-"LinOTP privacyIDEA RCDevs OpenOTP Usage of Nitrokey HSM as a secure key "
-"store for the Forgerock OpenDJ server and Forgerock Identity Gateway"
-msgstr ""
-"LinOTP privacyIDEA RCDevs OpenOTP Forgerock OpenDJサーバーとForgerock Identity"
-" Gatewayの安全なキーストアとしてNitrokey HSMを使用する。"
-
-#: ../to-be-integrated.rst:329
-msgid ""
-"**Q:** How can I do SSH for Server Administration on Windows? The "
-"Nitrokey should already have PGP keys installed and the local GnuPG "
-"keyring should be aware of the keys, that is to say GPG4Win should be "
-"installed on the system (only the core application GnuPG is needed). "
-"Furthermore you should install PuTTY. Preparation on client"
-msgstr ""
-"**Q:** Windowsでサーバ管理用のSSHを行うにはどうしたらよいですか？Nitrokey にはすでに PGP "
-"鍵がインストールされており、ローカルの GnuPG キーリングがその鍵を認識していること、つまり GPG4Win "
-"がシステムにインストールされている必要があります (GnuPG "
-"のコアアプリケーションだけが必要です)。さらに、PuTTYをインストールする必要があります。クライアント側の準備"
-
-#: ../to-be-integrated.rst:333 ../to-be-integrated.rst:705
-msgid ""
-"There are two steps needed to make PuTTY work. At first we need to enable"
-" PuTTY support of GnuPG. To achieve this we use the following command:"
-msgstr "PuTTYを動作させるためには、2つのステップが必要です。まず、GnuPGのPuTTYサポートを有効にする必要があります。これを実現するために、以下のコマンドを使用します。"
-
-#: ../to-be-integrated.rst:335 ../to-be-integrated.rst:707
-msgid "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
-msgstr "echo enable-putty-support >> AppDataRoaming ↘Gpg-agent.conf"
-
-#: ../to-be-integrated.rst:337 ../to-be-integrated.rst:709
-msgid ""
-"Now we want to make sure, that the gpg-agent is starting automatically in"
-" the background (you can start it manually with the command below, if you"
-" prefer). We create a shortcut to gpg-connect-agent.exe. Press and hold "
-"the Windows-key and press 'R'. Type in \"shell:startup\" in the opening "
-"textfield (see picture below). The Windows-Explorer opens and you right-"
-"click on an empty space and choose \"New\" -> \"Shortcut\". Now you "
-"should insert the actual command and proceed:"
-msgstr ""
-"ここで、gpg-agentがバックグラウンドで自動的に起動することを確認します（お好みで、以下のコマンドで手動で起動することもできます）。gpg-"
-"connect-agent.exeへのショートカットを作成します。Windows-keyを押したまま、 'R' "
-"を押してください。開いたテキストフィールドに \"shell:startup\"と入力します(下の図を参照)。Windows-"
-"Explorerが開くので、何もないところで右クリックし、\"New\" -> "
-"\"Shortcut\"を選択します。これで、実際のコマンドを挿入して進めてください。"
-
-#: ../to-be-integrated.rst:339 ../to-be-integrated.rst:711
-msgid "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
-msgstr "\"C:\\Program Files (x86)\\gnupg bingpg-connect-agent.exe\" /bye"
-
-#: ../to-be-integrated.rst:343 ../to-be-integrated.rst:715
-msgid ""
-"Reboot your system to make sure the shortcut works. If everything is "
-"alright you now can use PuTTY as usual and PuTTY will make use of the "
-"Nitrokey automatically. Preparation for the server"
-msgstr "システムを再起動し、ショートカットが機能することを確認します。問題がなければ、通常通りPuTTYを使用することができ、PuTTYは自動的にNitrokeyを使用するようになります。サーバーの準備"
-
-#: ../to-be-integrated.rst:346 ../to-be-integrated.rst:718
-msgid "You can generate an authorized_keys file by running"
-msgstr "を実行して authorized_keys ファイルを生成することができます。"
-
-#: ../to-be-integrated.rst:348 ../to-be-integrated.rst:720
-msgid ""
-"\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID "
-">> authorized_keys"
-msgstr "C:³ Files (x86)³³³.exe\" --export-ssh-key keyID >> authorized_keys"
-
-#: ../to-be-integrated.rst:350 ../to-be-integrated.rst:722
-msgid ""
-"where 'keyID' is either the fingerprint of your key or just the E-Mail "
-"address bind to your key. The Nitrokey must already be known to the local"
-" GnuPG keyring. You can now append that file to a remote server's "
-"authorized_keys and when you ssh to the server you'll be asked for a pin "
-"rather than a passphrase."
-msgstr ""
-"ここで 'keyID' はあなたの鍵のフィンガープリントか、あなたの鍵にバインドされているE-Mailアドレスだけです。Nitrokey "
-"はすでにローカルの GnuPG 鍵リングに知られている必要があります。このファイルをリモートサーバーの authorized_keys "
-"に追加すると、サーバーに ssh するときにパスフレーズではなくピンを要求されるようになります。"
-
-#: ../to-be-integrated.rst:357
-msgid "**Q:** How can I do SSH for Server Administration on Linux?"
-msgstr "**Q:** Linuxでサーバー管理のためにSSHを行うにはどうしたらよいですか？"
-
-#: ../to-be-integrated.rst:359 ../to-be-integrated.rst:726
-msgid ""
-"The Nitrokey should already have PGP keys installed and the local GnuPG "
-"keyring should know the keys. Preparation on client"
-msgstr ""
-"Nitrokey にはすでに PGP 鍵がインストールされており、ローカルの GnuPG "
-"キーリングはその鍵を知っている必要があります。クライアント側の準備"
-
-#: ../to-be-integrated.rst:362 ../to-be-integrated.rst:729
-msgid ""
-"Make sure ~/.gnupg/gpg.conf contains 'use-agent' Add ssh support to "
-"gnupg-agent by adding 'enable-ssh-support' to ~/.gnupg/gpg-agent.conf If "
-"the file does not exist yet, you can just create it. Add the following "
-"code somewhere into your ~/.bashrc (for fish shell, look here)"
-msgstr ""
-"~/.gnupg/gpg.conf に 'use-agent' が含まれていることを確認する。 ~/.gnupg/gpg-agent.conf に"
-" 'enable-ssh-support' を追加して gnupg-agent に ssh サポートを追加する "
-"まだファイルが存在しない場合は作成すればよいでしょう。次のコードを ~/.bashrc のどこかに追加してください (fish shell "
-"の場合はここを参照してください)。"
-
-#: ../to-be-integrated.rst:367 ../to-be-integrated.rst:734
-msgid ""
-"unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
-"export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
-msgstr ""
-"unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $ ]; then "
-"export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
-
-#: ../to-be-integrated.rst:372 ../to-be-integrated.rst:739
-msgid ""
-"Simply restart your system or try pkill gpg-agent and open a new "
-"commandline to make sure everything is set In case of problems, please "
-"try gpg2 --card-status on first usage to make sure the gpg-agent gets "
-"started"
-msgstr "システムを再起動するか、pkill gpg-agentを実行して、新しいコマンドラインを開き、すべてが設定されていることを確認してください。"
-
-#: ../to-be-integrated.rst:375 ../to-be-integrated.rst:742
-msgid "Preparation for the server"
-msgstr "サーバーの準備"
-
-#: ../to-be-integrated.rst:377 ../to-be-integrated.rst:744
-msgid "You can generate an authorized_keys file by running either"
-msgstr "authorized_keys ファイルを生成するには、次のいずれかを実行します。"
-
-#: ../to-be-integrated.rst:379 ../to-be-integrated.rst:746
-msgid ""
-"gpgkey2ssh keyID >> ~/authorized_keys #(for GnuPG version <= 2.1.11) or "
-"gpg2 --export-ssh-key keyID >> ~/authorized_keys #(for newer GnuPG "
-"versions)"
-msgstr ""
-"gpgkey2ssh keyID >> ~/authorized_keys #(GnuPG version <= 2.1.11) または gpg2"
-" --export-ssh-key keyID >> ~/authorized_keys #(GnuPG newer version のため)"
-
-#: ../to-be-integrated.rst:382 ../to-be-integrated.rst:749
-msgid "where"
-msgstr "どこ"
-
-#: ../to-be-integrated.rst:384 ../to-be-integrated.rst:751
-msgid "keyID"
-msgstr "キーID"
-
-#: ../to-be-integrated.rst:386 ../to-be-integrated.rst:753
-msgid ""
-"is the subkey id being used for authentication on your Nitrokey. The "
-"Nitrokey must already be known to the local GnuPG keyring. You can now "
-"append that file to a remote server's authorized_keys and when you ssh to"
-" the server you'll be asked for a pin rather than a passphrase."
-msgstr ""
-"は、Nitrokey の認証に使用するサブキーID です。Nitrokey は、ローカルの GnuPG "
-"キーリングにすでに登録されている必要があります。このファイルをリモートサーバーの authorized_keys に追加すると、サーバーに ssh"
-" するときにパスフレーズではなくピンを要求されるようになります。"
-
-#: ../to-be-integrated.rst:391 ../to-be-integrated.rst:758
-msgid "If you are still asked for a password please make sure that"
-msgstr "それでもパスワードの入力が必要な場合は、次のことを確認してください。"
-
-#: ../to-be-integrated.rst:393 ../to-be-integrated.rst:760
-msgid "echo $SSH_AUTH_SOCK"
-msgstr "echo $SSH_AUTH_SOCK"
-
-#: ../to-be-integrated.rst:395 ../to-be-integrated.rst:762
-msgid ""
-"returns something reasonable like '/run/user/1000/gnupg/S.gpg-agent.ssh' "
-"or '/home/username/.gnupg/.S.gpg-agent.ssh'. Unfortunately there were "
-"some changes in GnuPG in the past so that the actual content can differ "
-"from system and GnuPG version. On some systems there may are even "
-"multiple folders in this variable saved. You have to adapt the above "
-"given code in .bashrc so that the variable SSH_AUTH_SOCK is correct. In "
-"doubt look for 'SSH_AUTH_SOCK' in"
-msgstr ""
-"は '/run/user/1000/gnupg/S.gpg-agent.ssh' や '/home/username/.gnupg/.S.gpg-"
-"agent.ssh' などの妥当なものを返します。残念ながら、GnuPG は過去にいくつかの変更があり、システムやGnuPG "
-"のバージョンによって実際の内容が異なることがあります。システムによっては、この変数に複数のフォルダが保存されている場合もあります。.bashrcにある上記のコードを適応して、変数SSH_AUTH_SOCKが正しくなるようにしなければなりません。疑問がある場合は、"
-" 'SSH_AUTH_SOCK' を探してください。"
-
-#: ../to-be-integrated.rst:397 ../to-be-integrated.rst:764
-msgid "man gpg-agent"
-msgstr "man gpg-agent"
-
-#: ../to-be-integrated.rst:399 ../to-be-integrated.rst:766
-msgid "to find the actual code for your version/system."
-msgstr "をクリックすると、あなたのバージョン/システムの実際のコードを見つけることができます。"
-
-#: ../to-be-integrated.rst:401 ../to-be-integrated.rst:768
-msgid ""
-"You may check if you have a 'pinentry' program installed via your package"
-" manager. You may need to set it in the gpg-agent.conf as well. You may "
-"need to point gpg-agent to the correct TTY."
-msgstr ""
-"パッケージマネージャで 'pinentry' プログラムがインストールされているかどうかを確認することができます。gpg-agent.conf "
-"で設定する必要があるかもしれません。gpg-agentに正しいTTYを指定する必要があるかもしれません。"
-
-#: ../to-be-integrated.rst:415
-msgid "**Q:** How can I use the Nitrokey for VPN access?"
-msgstr "**Q:**VPNアクセスにNitrokeyを使用するにはどうしたらよいですか？"
-
-#: ../to-be-integrated.rst:418 ../to-be-integrated.rst:789
-msgid "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
-msgstr "のために。Nitrokey Pro、Nitrokey Storage、Nitrokey Start、Nitrokey HSM OpenVPN"
-
-#: ../to-be-integrated.rst:421 ../to-be-integrated.rst:792
-msgid "Generate a key on Nitrokey via pkcs11-tool."
-msgstr "pkcs11-toolを使用してNitrokeyで鍵を生成します。"
-
-#: ../to-be-integrated.rst:423 ../to-be-integrated.rst:794
-msgid "Generate a certificate signing request via openssl + pkcs11 module:"
-msgstr "openssl + pkcs11モジュールで証明書署名要求を生成します。"
-
-#: ../to-be-integrated.rst:425 ../to-be-integrated.rst:796
-msgid ""
-"$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
-"<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
-msgstr ""
-"$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
-"<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
-
-#: ../to-be-integrated.rst:427 ../to-be-integrated.rst:798
-msgid "Sign the certificate with our certificate authority"
-msgstr "当社の認証局で証明書に署名する"
-
-#: ../to-be-integrated.rst:429 ../to-be-integrated.rst:800
-msgid ""
-"$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out "
-"<FILE.CRT> -config <OPENSSL.CNF> -extensions usr_client"
-msgstr ""
-"$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out "
-"<FILE.CRT> -config <OPENSSL.CNF> -extensions usr_client"
-
-#: ../to-be-integrated.rst:433 ../to-be-integrated.rst:804
-msgid "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
-msgstr "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
-
-#: ../to-be-integrated.rst:435 ../to-be-integrated.rst:806
-msgid "Read the certificate's ID required for openvpn configuration:"
-msgstr "openvpnの設定に必要な証明書のIDを読み取ります。"
-
-#: ../to-be-integrated.rst:437 ../to-be-integrated.rst:808
-msgid "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
-msgstr "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
-
-#: ../to-be-integrated.rst:439 ../to-be-integrated.rst:810
-msgid ""
-"Modify your openvpn configuration. Add the certificate ID which you "
-"gathered in the previous step: E.g."
-msgstr "openvpnの設定を変更します。先程の手順で集めた証明書IDを追加します。例"
-
-#: ../to-be-integrated.rst:441 ../to-be-integrated.rst:812
-msgid ""
-"$ pkcs11-id "
-"'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
-msgstr ""
-"$ pkcs11-id "
-"'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
-
-#: ../to-be-integrated.rst:443 ../to-be-integrated.rst:814
-msgid "Add the PKCS#11 driver to the configuration too, e.g.:"
-msgstr "PKCS#11ドライバもコンフィギュレーションに追加する、など。"
-
-#: ../to-be-integrated.rst:445 ../to-be-integrated.rst:816
-msgid "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
-msgstr "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
-
-#: ../to-be-integrated.rst:447 ../to-be-integrated.rst:818
-msgid "See this link for further information."
-msgstr "詳しくはこちらのリンクをご覧ください。"
-
-#: ../to-be-integrated.rst:451 ../to-be-integrated.rst:822
-msgid ""
-"Now all configurations are done. When executing OpenVPN client, "
-"Nitrokey's PIN needs to be entered. Unfortunately OpenVPN doesn't prompt "
-"to enter the PIN and it has to be entered in the following way:"
-msgstr "これですべての設定が完了しました。OpenVPNクライアントを実行する際に、Nitrokey'のPINを入力する必要があります。残念ながらOpenVPNはPINの入力を促さないので、以下の方法で入力する必要があります。"
-
-#: ../to-be-integrated.rst:453 ../to-be-integrated.rst:824
-msgid "$ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>"
-msgstr "$ telnet 8888 password 'ユーザーPIN（OpenPGPカード）トークン' <PIN&#xg;"
-
-#: ../to-be-integrated.rst:455 ../to-be-integrated.rst:826
-msgid ""
-"Alternatively you could recompile OpenVPN client with systemd support "
-"disabled and it will prompt you for the PIN as expected. Alternatively to"
-" the OpenVPN client you could use the Viscosity client which provides a "
-"better user experience especially for entering the PIN."
-msgstr "あるいは、systemdのサポートを無効にしてOpenVPNクライアントを再コンパイルすれば、期待通りにPINの入力を促してくれるでしょう。OpenVPNクライアントの代わりに、Viscosityクライアントを使うこともできます。"
-
-#: ../to-be-integrated.rst:460 ../to-be-integrated.rst:831
-msgid "Strong Swan works using the PKCS#11 driver. Basically follow these steps:"
-msgstr "Strong Swanは、PKCS#11ドライバを使用して動作します。基本的には以下の手順で行ってください。"
-
-#: ../to-be-integrated.rst:464 ../to-be-integrated.rst:835
-msgid ""
-"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
-"-l -k --key-type rsa:4096 --id 10 --label 'Staging Access'"
-msgstr ""
-"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
-"-l -k --key-type rsa:4096 --id 10 --label 'Staging Access'"
-
-#: ../to-be-integrated.rst:468 ../to-be-integrated.rst:839
-msgid ""
-"$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'"
-msgstr ""
-"$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.So "
-"-pre(ID)・pkcs11(ADD) -pre(LOAD)so OpenSSL> req -engine pkcs11 -sha256 "
-"-new -key id_10 -keyform engine -out user@email.com-staging-cert.csr "
-"-subj '/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'。"
-
-#: ../to-be-integrated.rst:476 ../to-be-integrated.rst:847
-msgid ""
-"$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER"
-msgstr ""
-"$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER"
-
-#: ../to-be-integrated.rst:480 ../to-be-integrated.rst:851
-msgid ""
-"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
-"-l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
-"Access'"
-msgstr ""
-"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
-"-l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
-"Access'.XXX.XXX.XXX.XXX.XXX;"
-
-#: ../to-be-integrated.rst:492 ../to-be-integrated.rst:863
-msgid "8. VPN is now connected Stunnel"
-msgstr "8.VPNが接続された状態 Stunnel"
-
-#: ../to-be-integrated.rst:495 ../to-be-integrated.rst:866
-msgid ""
-"Stunnel works as an SSL encryption wrapper between remote client and "
-"local (inetd-startable) or remote server. It can be used to add SSL "
-"functionality to commonly used inetd daemons like POP2, POP3, and IMAP "
-"servers without any changes in the programs' code."
-msgstr ""
-"Stunnel は、リモートクライアントとローカル (inetd-startable) またはリモートサーバー間の SSL "
-"暗号化ラッパーとして機能します。POP2、POP3、IMAP サーバーのような一般的に使用される inetd "
-"デーモンに、プログラムのコードを変更せずに SSL 機能を追加するために使用することができます'."
-
-#: ../to-be-integrated.rst:499 ../to-be-integrated.rst:870
-msgid ""
-"engine=dynamic engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so "
-"engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
-"engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
-msgstr ""
-"engine=dynamic engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so "
-"engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
-"engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so "
-"engineCtrl=INITを指定して、engineCtrl=LOSTを入力します。"
-
-#: ../to-be-integrated.rst:507 ../to-be-integrated.rst:878
-msgid "[service] engineNum=1 key=id_45"
-msgstr "[サービス] engineNum=1 key=id_45"
-
-#: ../to-be-integrated.rst:525
-msgid "**Q:** How can I do PKI / Certificate Authority (CA)?"
-msgstr "**Q:** PKI/認証局(CA)はどのように行うのですか？"
-
-#: ../to-be-integrated.rst:527
-msgid "CA keys are very sensitive and must not be compromised or lost. GnuPG"
-msgstr "CAキーは非常に機密性が高く、漏洩や紛失は許されません。GnuPG"
-
-#: ../to-be-integrated.rst:530
-msgid "Instructions OpenSSL"
-msgstr "説明書 OpenSSL"
-
-#: ../to-be-integrated.rst:533
-msgid ""
-"Install OpenSC'S engine_pkcs11 Run the command \"pkcs11-tool --list-"
-"slots\" to list the available slots. Run the command \"openssl> req "
-"-engine pkcs11 -new -key slot_X-id_XXXX -keyform engine -x509 -out "
-"cert.pem -text\" where X is the appropriate slot number and XXXX is the "
-"slot ID, e.g. \"... -key "
-"slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" Test"
-msgstr ""
-"OpenSC'S engine_pkcs11 のインストール コマンド \"pkcs11-tool --list-slots\" "
-"を実行し、利用可能なスロットをリストアップします。コマンド \"openssl> req -engine pkcs11 -new -key "
-"slot_X-id_XXXX -keyform engine -x509 -out cert.pem -text\" "
-"ここでXは適切なスロット番号、XXXXはスロットID、例えば \"... を実行します。-key "
-"slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\"テスト"
-
-#: ../to-be-integrated.rst:538
-msgid "Other"
-msgstr "その他"
-
-#: ../to-be-integrated.rst:540
-msgid ""
-"Please see this PDF (p. 30) from heinlein-support.de for summarized "
-"instructions in German."
-msgstr "ドイツ語でまとめた説明は、heinlein-support.deのこちらのPDF（P.30）をご覧ください。"
-
-#: ../to-be-integrated.rst:542
-msgid ""
-"µ-CA-tool is a script based on GnuPG, OpenSC and OpenSSL which helps to "
-"perform basic tasks of a CA. It works with Nitrokey Pro and Nitrokey "
-"Storage."
-msgstr ""
-"μ-CA-toolは、GnuPG、OpenSC、OpenSSLをベースにしたスクリプトで、CAの基本的な作業を支援するものです。Nitrokey "
-"Pro と Nitrokey Storage で動作します。"
-
-#: ../to-be-integrated.rst:550
-msgid "**Q:** How can I use the password manager?"
-msgstr "**Q:** パスワードマネージャーの使い方を教えてください。"
-
-#: ../to-be-integrated.rst:552
-msgid "You have the following options:"
-msgstr "以下のオプションがあります。"
-
-#: ../to-be-integrated.rst:554
-msgid ""
-"Use Nitrokey's built-in Password Safe to store passwords securely. For "
-"this you need the Nitrokey App. Maximum are 16 passwords. Use Pass "
-"(simple commandline password manager for Unix systems, mainly for "
-"experts). Use KeePass as described below."
-msgstr ""
-"Nitrokey に内蔵されている Password Safe "
-"を使って、パスワードを安全に保存します。これにはNitrokeyアプリが必要です。パスワードは最大16個までです。Pass "
-"(Unixシステム用のシンプルなコマンドラインパスワードマネージャー、主に上級者向け) を使用する。後述のKeePassを使用する。"
-
-#: ../to-be-integrated.rst:558
-msgid "Protecting KeePass with Nitrokey's One-Time Passwords"
-msgstr "NitrokeyのワンタイムパスワードでKeePassを保護する'。"
-
-#: ../to-be-integrated.rst:560
-msgid ""
-"You can also follow this video (It contains a mistake around time 4:22 "
-"which is described later below). Keepass Installation"
-msgstr "また、こちらのビデオもご覧ください（4:22頃に間違いがありますので、後ほど説明します）。Keepassのインストール"
-
-#: ../to-be-integrated.rst:563
-msgid ""
-"Install Keepass 2.3.5. For Ubuntu: Because the main repository contains "
-"the older 2.3.4, you have to use some other source like this private PPA "
-"(please run these commands in terminal):"
-msgstr ""
-"Keepass "
-"2.3.5をインストールします。Ubuntuの場合。メインリポジトリには古い2.3.4が含まれているので、このプライベートPPAのような他のソースを使用する必要があります（ターミナルでこれらのコマンドを実行してください）。"
-
-#: ../to-be-integrated.rst:566
-msgid ""
-"sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-"
-"get install keepass2"
-msgstr ""
-"sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-"
-"get install keepass2"
-
-#: ../to-be-integrated.rst:570
-msgid ""
-"Install the OtpKeyProv plugin by downloading the archive, unzipping and "
-"copying the content to Keypass' Plugin directory. On Linux: sudo cp "
-"OtpKeyProv.plgx /usr/lib/keepass2/Plugins/ For Linux, optional: Install "
-"mono-complete package if plugin is not detected when running Keepass2 "
-"(you can check that in Tools/Plugins):"
-msgstr ""
-"OtpKeyProvプラグインをインストールするには、アーカイブをダウンロードし、解凍してKeypass' "
-"Pluginディレクトリに内容をコピーしてください。Linuxの場合: sudo cp OtpKeyProv.plgx "
-"/usr/lib/keepass2/Plugins/ Linuxの場合、オプション: Keepass2実行時にプラグインが検出されない場合は"
-"、mono-completeパッケージをインストールします (Tools/Plugins で確認可能)。"
-
-#: ../to-be-integrated.rst:574
-msgid "sudo apt-get install mono-complete"
-msgstr "sudo apt-get install mono-complete"
-
-#: ../to-be-integrated.rst:576
-msgid "Keepass OTP Configuration Existing Database"
-msgstr "Keepass OTP 設定 既存のデータベース"
-
-#: ../to-be-integrated.rst:579
-msgid ""
-"Do a backup of your database and keep it until you are really sure "
-"everything works fine! Make sure you really did a backup. If you mess up,"
-" your passwords are lost! Open database as usual Select File/Change "
-"Master Key..."
-msgstr ""
-"データベースのバックアップをとり、すべてがうまく機能することが本当に確認できるまで保管してください。本当にバックアップを取ったかどうか確認してください。もし失敗したら、あなたのパスワードは失われてしまいます!通常通りデータベースを開く"
-" ファイル/マスターキーの変更... を選択します。"
-
-#: ../to-be-integrated.rst:584
-msgid "New Database"
-msgstr "新しいデータベース"
-
-#: ../to-be-integrated.rst:586
-msgid "Create new database as usual"
-msgstr "通常通り、新しいデータベースを作成する"
-
-#: ../to-be-integrated.rst:588
-msgid "Common"
-msgstr "共通"
-
-#: ../to-be-integrated.rst:590
-msgid ""
-"Insert Master Password (optional) Set Key file / provider: to One-Time "
-"Passwords (OATH HOTP) Click OK With Nitrokey App: select HOTP slot and "
-"generate HOTP secret (it will be copied to clipboard automatically). "
-"Note: You may want write down this secret and store it anywhere secure. "
-"Otherwise if you lose your Nitrokey or it gets broken your password "
-"database is lost as well!!! Paste the secret to Keepass OTP Plugin window"
-" Make sure the Counter field and digits count are set the same in both "
-"windows. Click OK in Nitrokey App to save the slot. Select secret type: "
-"Base32 Set the other settings as you like. Please consult plugin's manual"
-" (should be in same downloaded archive). I would recommend to set look-"
-"ahead value to non-zero to prevent locking up the database after "
-"accidental code request from used HOTP slot. In that case counters on the"
-" device and in Keepass would be out of sync and OTP codes will not be the"
-" same with expected."
-msgstr ""
-"マスターパスワードの挿入（オプション） Key file / provider: を One-Time Passwords (OATH HOTP)"
-" に設定 OK をクリック Nitrokey App: HOTP スロットを選択し HOTP "
-"シークレットを生成（自動的にクリップボードにコピーされます） HOTP スロットを選択し HOTP "
-"シークレットを生成する。注意：この秘密は書き留めて、安全な場所に保管してください。そうしないと、Nitrokeyを紛失したり、壊れたりした場合、パスワードデータベースも同様に失われます!秘密鍵を"
-" Keepass OTP Plugin のウィンドウに貼り付けます。 両方のウィンドウで Counter "
-"フィールドと桁数が同じに設定されていることを確認してください。NitrokeyアプリのOKをクリックし、スロットを保存します。秘密の種類を選択します。Base32"
-" "
-"その他の設定はお好みで。プラグインのマニュアルを参照してください（ダウンロードしたアーカイブに含まれているはずです）。使用中のHOTPスロットから誤ってコードを要求してデータベースがロックされるのを防ぐため、ルックアヘッド値を0以外に設定することをお勧めします。この場合、デバイスとKeepassのカウンタが同期しなくなり、OTPコードが予想と異なることになります。"
-
-#: ../to-be-integrated.rst:599
-msgid "Unlocking Database"
-msgstr "データベースのアンロック"
-
-#: ../to-be-integrated.rst:601
-msgid ""
-"Open database Insert Master Password (if set) Key file / provider: to "
-"One-Time Passwords (OATH HOTP) Press OK Insert HOTP codes by repeatedly "
-"choosing proper HOTP slot from the Nitrokey App and pasting the clipboard"
-" content to proper field (the order of the codes is important). Press OK"
-msgstr ""
-"Open database Insert Master Password (if set) Key file / provider: to "
-"One-Time Passwords (OATH HOTP) Press OK Nitrokey App から適切な HOTP "
-"スロットを繰り返し選択してクリップボード内容を適切なフィールドに貼り付けて HOTP コードを挿入します（コードの順番は重要です）。OKを押す"
-
-#: ../to-be-integrated.rst:608
-msgid "Issues"
-msgstr "課題"
-
-#: ../to-be-integrated.rst:610
-msgid ""
-"Due to nature of HOTP solution it is possible to get counters "
-"desynchronized (by selecting wrong OTP slot during day-to-day use). Using"
-" look-ahead plugin's setting should prevent that (value 10 or so should "
-"suffice - depends on desired security requirements - this would allow to "
-"10 accidental requests). TOTP is not having that problem. Setting the OTP"
-" protection could be error-prone. There is no secret validation on "
-"OtpKeyProv side. In the test movie at 4:22 I have managed to set the "
-"Base32 coded secret as Hex (which was not a proper hex value) and it has "
-"not complained about it. There is no information what happened to "
-"database and how it is now configured. I have not noticed until I have "
-"watched the movie."
-msgstr "HOTPソリューションの性質上、カウンターが非同期化する可能性があります（日々の使用中に間違ったOTPスロットを選択することによって）。ルックアヘッドプラグインの設定を使用すると、それを防ぐことができます。TOTPはそのような問題はありません。OTP保護の設定は、エラーが発生しやすいかもしれません。OtpKeyProv側で秘密の検証をしない。4:22のテスト動画では、Base32コードのシークレットをHexに設定しましたが（これは適切なHex値ではありませんでした）、それについて苦情は出ませんでした。データベースがどうなったか、どのように設定されたかという情報はありません。ムービーを見て初めて気がつきました。"
-
-#: ../to-be-integrated.rst:613
-msgid "Tested under Ubuntu 16.10, Nitrokey App v0.6.3 and Nitrokey Storage v0.45."
-msgstr "Ubuntu 16.10、Nitrokey App v0.6.3、Nitrokey Storage v0.45でテストしています。"
-
-#: ../to-be-integrated.rst:622
-msgid "**Q:** How can I use the True Random Number Generator?"
-msgstr "**Q:** True Random Number Generatorの使用方法について教えてください。"
-
-#: ../to-be-integrated.rst:624
-msgid ""
-"Both devices are compatible to the OpenPGP Card, so that scdrand should "
-"work. This script may be useful. The TRNG provides about 40 kbit/s."
-msgstr ""
-"どちらのデバイスもOpenPGP "
-"Cardに対応しているので、scdrandは動作するはずです。このスクリプトが役に立つかもしれません。TRNGは約40kbit/sを提供します。"
-
-#: ../to-be-integrated.rst:626
-msgid ""
-"The user comio created a systemd file to use scdrand and thus the TRNG "
-"more generally. He created a ebuild for Gentoo, too."
-msgstr "comioというユーザがscdrandとTRNGをより一般的に使うためのsystemdファイルを作りました。彼はGentoo用のebuildも作りました。"
-
-#: ../to-be-integrated.rst:635
-msgid ""
-"Use Nitrokey library to manage the one-time passwords and password safe "
-"functionality. The project nitrokey-get-totp and nitrokey-get-password "
-"are nice examples for using the python bindings of Nitrokey library to "
-"get a custom interface. In order to access the integrated smart card, you"
-" can use OpenSC's command line tools. If your application has a PKCS#11 "
-"interface, use OpenSC's PKCS#11 driver. To work with the smart card low "
-"level, see the OpenPGP Card specification. The source code of the "
-"firmware and the hardware layout are available too. To develop special "
-"applications or for command line access one can use the nitrocli created "
-"by d-e-s-o. Gkey is a go-based command line tool to access the Password "
-"Safe and OTP entries. A libnitrokey wrapper for Rust providing access to "
-"Nitrokey devices."
-msgstr ""
-"ワンタイムパスワードやパスワードセーフ機能の管理には、Nitrokey ライブラリを使用します。プロジェクト nitrokey-get-totp "
-"と nitrokey-get-password は、Nitrokey ライブラリの python "
-"バインディングを使用してカスタムインターフェイスを取得するための素晴らしい例です。統合されたスマートカードにアクセスするために、OpenSC'のコマンドラインツールを使用することができます。PKCS#11"
-" インタフェースを持つアプリケーションの場合は、OpenSC'の PKCS#11 "
-"ドライバを使用します。スマートカードを低レベルで扱うには、OpenPGP Card "
-"仕様を参照してください。ファームウェアのソースコードとハードウェアのレイアウトも公開されています。特別なアプリケーションを開発したり、コマンドラインアクセスを行うには、"
-" d-e-s-o が作成した nitrocli を使用することができます。Gkey はパスワードセーフと OTP エントリにアクセスするための "
-"go ベースのコマンドラインツールです。Rust 用の libnitrokey ラッパーで、Nitrokey デバイスにアクセスできます。"
-
-#: ../to-be-integrated.rst:646
-msgid "# HSM 2"
-msgstr "# HSM 2"
-
-#: ../to-be-integrated.rst:648
-msgid ""
-"**Nitrokey HSM:** 124 dataobjects (DF, EF) can be created. Each EF can "
-"have a size of up to 256 byte. The total storage capacity of ca. 32 KByte"
-" is shared dynamically among keys and data objects."
-msgstr ""
-"**NitrokeyHSM:**124個のデータオブジェクト(DF, "
-"EF)を作成できます。各EFのサイズは最大256バイトまでです。合計約32KByteの記憶容量は、キーとデータオブジェクトで動的に共有されます。"
-
-#: ../to-be-integrated.rst:652
-msgid "**Q:** How to use the HSM for Login For: Nitrokey HSM"
-msgstr "**Q:** ログイン用HSMの使用方法について For:Nitrokey HSM"
-
-#: ../to-be-integrated.rst:655
-msgid "Select your use case:"
-msgstr "ユースケースを選択します。"
-
-#: ../to-be-integrated.rst:657
-msgid ""
-"Login With Nitrokey HSM on Stand Alone Windows Computers Login With "
-"Nitrokey HSM on Windows Domain Computers Using MS Active Directory For "
-"Unix environments an integration with PAM and OpenSSH is available."
-msgstr ""
-"スタンドアロンWindowsコンピュータでのNitrokey HSMによるログイン MS Active "
-"Directoryを使用したWindowsドメインコンピュータでのNitrokey HSMによるログイン "
-"Unix環境では、PAMとOpenSSHとの統合が利用可能です。"
-
-#: ../to-be-integrated.rst:661
-msgid "**Q:**  How to use the HSM for Email Encryption"
-msgstr "**Q:** 電子メール暗号化用HSMの使用方法について"
-
-#: ../to-be-integrated.rst:663
-msgid ""
-"Encrypt your email using the S/MIME industry standard available in all "
-"major e-mail clients."
-msgstr "主要なメールクライアントで利用可能な業界標準のS/MIMEを使用して、メールを暗号化することができます。"
-
-#: ../to-be-integrated.rst:665
-msgid ""
-"The Nitrokey HSM has been tested to work with Mozilla Thunderbird and "
-"Microsoft Outlook. Other email clients with support for PKCS#11 or "
-"Microsoft CSP should work as well."
-msgstr ""
-"Nitrokey HSMは、Mozilla ThunderbirdおよびMicrosoft "
-"Outlookでの動作が確認されています。PKCS#11 または Microsoft CSP "
-"をサポートする他の電子メールクライアントも同様に動作するはずです。"
-
-#: ../to-be-integrated.rst:667
-msgid "Note: A certificate can be purchased cheaply from CERTUM."
-msgstr "注：証明書はCERTUMから安価に購入できます。"
-
-#: ../to-be-integrated.rst:669
-msgid "**Q:**   How to use the Nitrokey for Hard Disk Encryption with VeraCrpt?"
-msgstr "**Q:**「Nitrokey for Hard Disk Encryption」と「VeraCrpt」の併用方法について教えてください。"
-
-#: ../to-be-integrated.rst:671
-msgid ""
-"VeraCrypt is a free and Open Source disk encryption software for Windows,"
-" macOS, and GNU/Linux. It is the successor of TrueCrypt and thus "
-"recommended, although the following instructions should apply to "
-"TrueCrypt as well. Follow these steps to use the program with Nitrokey:"
-msgstr ""
-"VeraCrypt は、Windows、macOS、GNU/Linux "
-"用のフリーでオープンソースのディスク暗号化ソフトウェアです。TrueCryptの後継ソフトであるため推奨されていますが、以下の説明はTrueCryptにも適用されるはずです。Nitrokey"
-" でプログラムを使用するには、以下の手順に従ってください。"
-
-#: ../to-be-integrated.rst:680
-msgid ""
-"Security Consideration: Please note that VeraCrypt doesn't make use of "
-"the full security which Nitrokey (and smart cards in general) offer. "
-"Instead it stores a keyfile on the Nitrokey which theoretically could be "
-"stolen by a computer virus after the user enters the password."
-msgstr "セキュリティに配慮しています。VeraCryptは、Nitrokey（および一般的なスマートカード）が提供する完全なセキュリティを利用しないことに注意してください。その代わり、Nitrokeyにキーファイルを保存し、ユーザーがパスワードを入力した後、理論的にはコンピュータウイルスによって盗まれる可能性があります。"
-
-#: ../to-be-integrated.rst:682
-msgid ""
-"Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
-"described security limitation. (Not tested with Nitrokey HSM!)"
-msgstr ""
-"注：Aloaha "
-"CryptはTrueCrypt/VeraCryptをベースにしていますが、説明されているセキュリティの制限はありません。(NitrokeyのHSMではテストしていません！)"
-
-#: ../to-be-integrated.rst:685
-msgid "**Q:** How to sign and encrypt files and pdfs?"
-msgstr "**Q:** ファイルやpdfに署名したり暗号化する方法は？"
-
-#: ../to-be-integrated.rst:687
-msgid "GnuPG"
-msgstr "グヌーピー"
-
-#: ../to-be-integrated.rst:689
-msgid ""
-"Starting with version 2.1, GnuPG has build-in but limited support for the"
-" Nitrokey HSM. Use the gpgsm tool to sign, verify, encrypt and decrypt "
-"files or S/MIME messaging using your Nitrokey HSM. Use a signature key on"
-" a Nitrokey HSM to sign documents using Acrobat Reader, Open Office / "
-"Libre Office or any other PDF reader supporting electronic signatures. "
-"ECC HSM Encryptor"
-msgstr ""
-"バージョン2.1以降、GnuPGはNitrokey HSMをビルドインで限定的にサポートしています。gpgsm ツールを使用して、Nitrokey"
-" HSM を使用してファイルや S/MIME メッセージングに署名、検証、暗号化、復号化を行います。Acrobat Reader、Open "
-"Office / Libre Office、または電子署名をサポートするその他の PDF リーダーを使用して、Nitrokey HSM "
-"の署名キーを使用して文書に署名します。ECC HSM暗号化装置"
-
-#: ../to-be-integrated.rst:692
-msgid ""
-"ECC HSM Encryptor is a small application to encrypt and decrypt files "
-"with a Nitrokey HSM."
-msgstr "ECC HSM Encryptor は、Nitrokey HSM を使ってファイルを暗号化・復号化するための小さなアプリケーションです。"
-
-#: ../to-be-integrated.rst:694
-msgid ""
-"**Q:** How to do certificat-based Web login Protect access to sensitive "
-"information on your website with 2nd factor authentication."
-msgstr "**Q:**証明書ベースのWebログインを行う方法 2要素認証により、Webサイト上の機密情報へのアクセスを保護することができます。"
-
-#: ../to-be-integrated.rst:697
-msgid ""
-"Use a Nitrokey HSM as authentication token via the build-in device "
-"authentication PKI or use keys and certificates on a Nitrokey HSM for "
-"TLS/SSL client authentication."
-msgstr ""
-"Nitrokey HSM を内蔵のデバイス認証 PKI を介して認証トークンとして使用するか、Nitrokey HSM 上の鍵および証明書を "
-"TLS/SSL クライアント認証に使用します。"
-
-#: ../to-be-integrated.rst:699
-msgid ""
-"**Q:** SSH for Server Administration with windows For: Nitrokey Pro, "
-"Nitrokey Storage, Nitrokey Start, Nitrokey HSM"
-msgstr ""
-"**Q:** Windowsでサーバ管理を行うためのSSH For:Nitrokey Pro、Nitrokey Storage、Nitrokey "
-"Start、Nitrokey HSM。"
-
-#: ../to-be-integrated.rst:702
-msgid ""
-"The Nitrokey should already have PGP keys installed and the local GnuPG "
-"keyring should be aware of the keys, that is to say GPG4Win should be "
-"installed on the system (only the core application GnuPG is needed). "
-"Furthermore you should install PuTTY. Preparation on client"
-msgstr "NitrokeyにはすでにPGP鍵がインストールされており、ローカルのGnuPGキーリングが鍵を認識していること、つまりGPG4Winがシステムにインストールされている必要があります（コアアプリケーションのGnuPGのみが必要です）。さらに、PuTTYをインストールする必要があります。クライアント側の準備"
-
-#: ../to-be-integrated.rst:724
-msgid "**Q:** SSH Server administration on linux"
-msgstr "**Q:** linuxにおけるSSHサーバーの管理について"
-
-#: ../to-be-integrated.rst:771
-msgid "**Q:** DNSSEC"
-msgstr "**Q:** DNSSECについて"
-
-#: ../to-be-integrated.rst:774
-msgid "For: Nitrokey HSM"
-msgstr "のために。NitrokeyHSM"
-
-#: ../to-be-integrated.rst:776
-msgid ""
-"Protect your domain name resolution using DNSSEC and a Nitrokey HSM as "
-"secure key store. It's based on Smartcard-HSM which is why the following "
-"resource apply:"
-msgstr ""
-"DNSSECとNitrokey HSMを安全なキーストアとして使用し、ドメイン名解決を保護します。これは Smartcard-HSM "
-"をベースにしているため、次のリソースが適用されます。"
-
-#: ../to-be-integrated.rst:778
-msgid ""
-"Signing NSD DNSSEC Zones with Nitrokey HSM by Vadim Penzin. Integration "
-"with OpenDNSSEC has been successfully tested in a demo by Richard Lamb. "
-"Luis D Espinoza Sanchez & Eberhard W Lisse held a session on using the "
-"SmartCard-HSM for DNSSEC at the 2015 ICAAN Meeting in Singapore. Jan-Piet"
-" Mens wrote a nice article about integrating the SmartCard-HSM with "
-"PowerDNS."
-msgstr ""
-"NSD DNSSEC Zones with Nitrokey HSMに署名 by Vadim "
-"Penzin.OpenDNSSECとの統合は、Richard Lambによるデモで成功裏にテストされました。Luis D Espinoza "
-"Sanchez & Eberhard W Lisse は、シンガポールで開催された 2015 ICAAN Meeting で SmartCard-"
-"HSM for DNSSEC の使用に関するセッションを開催しました。Jan-Piet Mens が、SmartCard-HSM と "
-"PowerDNS の統合に関する素晴らしい記事を執筆しました。"
-
-#: ../to-be-integrated.rst:784
-msgid ""
-"**Q:** Physical Access Control With it's unique build-in device "
-"authentication PKI, a Nitrokey HSM has a cryptographically protected "
-"unique identity that can be verified in a fast authentication protocol. "
-"An access control terminal can verify authenticity and identity of the "
-"device, create a secure communication channel and perform offline PIN "
-"verification. The coolPACS project has all the details."
-msgstr ""
-"**Q: **物理的なアクセス管理 それ's の独特な造り埋め込まれた装置証明 PKI によって、Nitrokey HSM "
-"に速い認証議定書で確認することができる暗号学的に保護された独特なアイデンティティがあります。アクセス制御端末は、デバイスの真正性とアイデンティティを確認し、安全な通信チャネルを作成し、オフラインでPIN検証を行うことができます。coolPACSプロジェクトに詳細があります。"
-
-#: ../to-be-integrated.rst:787 ../to-be-integrated.rst:883
-msgid "**Q:**"
-msgstr "**Q:**"
-
-#: ../to-be-integrated.rst:885
-msgid "PKI / Certificate Authority (CA)"
-msgstr "PKI / 認証局 (CA)"
-
-#: ../to-be-integrated.rst:887
-msgid "**Q:** Secret Management and Cloud Infrastructure"
-msgstr "**Q:** 秘密管理とクラウドインフラストラクチャ"
-
-#: ../to-be-integrated.rst:889
-msgid ""
-"An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
-"HSM can be found at banzaicloud.com."
-msgstr ""
-"Hashicorp Vault/Bank-Vault の鍵を Nitrokey HSM で保護する方法は、banzaicloud.com "
-"に記載されています。"
-
-#: ../to-be-integrated.rst:891
-msgid "**Q:** How to do N-of-m Schemes"
-msgstr "**Q：** N-of-m方式はどのように行うのですか？"
-
-#: ../to-be-integrated.rst:893
-msgid ""
-"The Nitrokey HSM 2 supports two different n-of-m schemes - one for secure"
-" sharing of key material/passwords and one for public key authentication "
-"to control the access to the device. Please see this blog post for more "
-"detailed information. N-of-m for DKEK Shares"
-msgstr ""
-"Nitrokey HSM 2 は、鍵素材/パスワードを安全に共有するための n-of-m "
-"スキームと、デバイスへのアクセスを制御するための公開鍵認証の 2 "
-"種類のスキームをサポートしています。より詳細な情報はこちらのブログ記事をご覧ください。DKEK共有のためのN-of-m"
-
-#: ../to-be-integrated.rst:896
-msgid ""
-"This feature can be used with OpenSC as described here. The general "
-"approach is seen in the videos below (external links)."
-msgstr "この機能は、ここで説明するようにOpenSCで使用することができます。一般的なアプローチは、以下のビデオ（外部リンク）でご覧いただけます。"
-
-#: ../to-be-integrated.rst:898
-msgid "Nitrokey HSM's Secure Key Backup and Restore:"
-msgstr "Nitrokey HSM'の安全な鍵のバックアップとリストア。"
-
-#: ../to-be-integrated.rst:900
-msgid "Screencast"
-msgstr "スクリーンキャスト"
-
-#: ../to-be-integrated.rst:902
-msgid "Nitrokey HSM's M-of-N Threshold Scheme:"
-msgstr "Nitrokey HSM'のM-of-N閾値スキーム。"
-
-#: ../to-be-integrated.rst:904
-msgid "screencast N-of-m for public key authentication"
-msgstr "スクリーンキャスト 公開鍵認証のN-of-m"
-
-#: ../to-be-integrated.rst:907
-msgid ""
-"So far n-of-m authentication is only supported in OpenSCDP. The blog post"
-" gives an overview and a how-to here (CDN access required) is shown the "
-"process step by step in the Smart Card Shell. For OpenSC there is a "
-"ticket to get that integrated."
-msgstr ""
-"今のところ、n-of-"
-"m認証はOpenSCDPでのみサポートされています。ブログポストでは概要と、こちらのハウツー(CDNアクセスが必要)ではSmart Card "
-"Shellでステップバイステップで処理する様子を紹介しています。OpenSCについては、統合するためのチケットがあります。"
-
-#: ../to-be-integrated.rst:909
-msgid ""
-"n-of-m authentication is also supported in the PKI-as-a-Service Portal "
-"for locally and remote connected HSMs. The PKI-as-a-Service Portal is "
-"based on OpenSCDP."
-msgstr ""
-"n-of-m 認証は、ローカルおよびリモートに接続された HSM に対して PKI-as-a-Service Portal "
-"でもサポートされています。PKI-as-a-Service Portal は、OpenSCDP をベースとしている。"
-
-#: ../to-be-integrated.rst:911
-msgid "**Q:** How to safe Cryptocurrences in the Nitrokey HSM"
-msgstr "**Q:** Nitrokey HSMでCryptocurrencesを安全に使用するにはどうすればよいですか？"
-
-#: ../to-be-integrated.rst:914
-msgid ""
-"J.v.d.Bosch wrote a simple, free python program to secure the private key"
-" of a Bitcoin wallet in a HSM. See here for further information. Using "
-"the HSM in an Ethereum PoA Chain. Tezos has been reported to work with "
-"Nitrokey HSM."
-msgstr "J.v.d.Boschは、HSMでBitcoinウォレットの秘密鍵を保護するためのシンプルでフリーなpythonプログラムを書きました。詳しくはこちらをご覧ください。イーサリアムのPoAチェーンでHSMを使用する。TezosはNitrokeyのHSMで動作することが報告されています。"
-
-#: ../to-be-integrated.rst:918
-msgid ""
-"**Q:** How to use the True Random Number Generator? Nitrokey HSM can be "
-"used with Botan and TokenTools by using OpenSC as a PKCS#11 driver."
-msgstr ""
-"**Q:** True Random Number Generatorの使用方法について教えてください。Nitrokey "
-"HSMは、PKCS#11ドライバとしてOpenSCを使用することで、BotanやTokenToolsで使用することができます。"
-
-#: ../to-be-integrated.rst:921
-msgid ""
-"OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
-"doesn't contain a mapping for OpenSSL to C_GenerateRandom."
-msgstr ""
-"engine-pkcs11 には OpenSSL と C_GenerateRandom のマッピングがないため、OpenSSL は "
-"Nitrokey HSM の RNG を直接使用できません。"
-
-#: ../to-be-integrated.rst:923
-msgid "**Q:** What can I use for development and integration?"
-msgstr "**Q:**開発・統合に使用できるものは何ですか？"
-
-#: ../to-be-integrated.rst:925
-msgid ""
-"se OpenSC's commandline tools If your application has a PKCS#11 "
-"interface, use OpenSC's PKCS#11 driver. Depending on your Linux "
-"distribution, the PKCS driver may may be located at /usr/lib/x86_64"
-"-linux-gnu/opensc-pkcs11.so for example."
-msgstr ""
-"OpenSC のコマンドラインツール PKCS#11 のインターフェースを持つアプリケーションの場合、OpenSC の PKCS#11 "
-"ドライバを使用します。Linux のディストリビューションによっては、PKCS ドライバは /usr/lib/x86_64-linux-gnu"
-"/opensc-pkcs11.so などに置かれていることがあります。"
-
-#: ../to-be-integrated.rst:927
-msgid ""
-"Alternatively to OpenSC, you might use sc-hsm-embedded PKCS#11 and CSP-"
-"Minidriver Module."
-msgstr "OpenSCの代わりに、sc-hsm-embedded PKCS#11 とCSP-Minidriver Moduleを使用することもできます。"
-
-#: ../to-be-integrated.rst:928
-msgid ""
-"In case you use Java, you find a JCE Provider as part of Smart Card "
-"Shell. You can find information about the m-of-n scheme here. Secure "
-"Messaging can be used with the JCE provider. Please register at the "
-"CardContact Developer Network to get access to the user manual and "
-"further tools. You can also request the manual from us. Smart card "
-"forwarding with Fedora A user generated tool on GitHub to provide an easy"
-" frontend to OpenSCs toolset - nitrotool A forum post describes the "
-"procedure to sign executables with a key stored on HSM on Windows."
-msgstr ""
-"Javaを使用している場合、Smart Card "
-"Shellの一部としてJCEプロバイダがあります。m-of-nスキームに関する情報は、こちらでご覧になれます。JCEプロバイダを使用すると、セキュアメッセージングを使用することができます。CardContact"
-" Developer "
-"Networkに登録すると、ユーザーマニュアルやその他のツールにアクセスすることができます。また、マニュアルは弊社からご請求いただくことも可能です。Fedoraでのスマートカード転送"
-" GitHubでユーザが作成した、OpenSCsツールセットへの簡単なフロントエンドを提供するツール - nitrotool "
-"フォーラムの投稿で、WindowsのHSMに保存した鍵で実行ファイルを署名する手順が説明されています。"
-
-#: ../to-be-integrated.rst:936
-msgid "Key Use Counter"
-msgstr "キーユースカウンター"
-
-#: ../to-be-integrated.rst:938
-msgid ""
-"The Key Use Counter is displayed in the Key Manager of the Smart Card "
-"Shell. At the moment you can only set it with a script "
-"(SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter in the class "
-"scsh/sc-hsm/SmartCardHSM.js)."
-msgstr ""
-"Key Use Counterは、Smart Card ShellのKey Managerに表示されます。現時点ではスクリプト（scsh/sc-"
-"hsm/SmartCardHSM.jsクラス内のSmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter）で設定することが可能です。"
-
-#: ../to-be-integrated.rst:940
-msgid ""
-"In our PKCS#11 module there is a proprietary attribute "
-"CKA_SC_HSM_KEY_USE_COUNTER with the key use of the C_GenerateKeyPair "
-"counter can be set. The attribute can then also be set for a key can be "
-"queried."
-msgstr "PKCS#11モジュールでは、CKA_SC_HSM_KEY_USE_COUNTERという独自の属性があり、C_GenerateKeyPairの鍵使用量のカウンターを設定することができます。この属性は、鍵の問い合わせにも設定することができます。"
-
-#: ../to-be-integrated.rst:942
-msgid ""
-"In OCF and the JCE Provider, the Key Use Counter can be queried with "
-"SmartCardHSMKey.getUseCounter() and confirm with "
-"SmartCardHSMKeySpec.setKeyUseCounter() can be set."
-msgstr ""
-"OCF と JCE Provider では、SmartCardHSMKey.getUseCounter() で Key Use Counter "
-"を問い合わせ、 SmartCardHSMKeySpec.setKeyUseCounter() で確認し、設定することができる。"
 
 #: ../u2f/index.rst:2
 msgid "Nitrokey FIDO U2F"
@@ -17774,3 +15987,2067 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 #~ "with the network or your local "
 #~ "computer. Set the BMC password."
 #~ msgstr "NetHSM'のBMC ETHポートをネットワークまたはローカルコンピュータに接続します。BMCのパスワードを設定します。"
+
+#~ msgid "# pro"
+#~ msgstr "# pro"
+
+#~ msgid "PKCS#11 Driver"
+#~ msgstr "PKCS#11ドライバ"
+
+#~ msgid ""
+#~ "If you want to use S/MIME email"
+#~ " encryption with Thunderbird, to use "
+#~ "TrueCrypt/VeraCrypt, certificate-based SSL "
+#~ "authentication with Firefox, PuTTY/KiTTY, "
+#~ "OpenSSH, OpenSSL, or any other PKCS#11"
+#~ " compatible software, you should install"
+#~ " OpenSC."
+#~ msgstr "ThunderbirdでS/MIMEメール暗号を使いたい、TrueCrypt/VeraCryptを使いたい、Firefox、PuTTY/KiTTY、OpenSSH、OpenSSL、その他のPKCS#11対応ソフトウェアで証明書ベースのSSL認証をしたい場合、OpenSCをインストールする必要があります。"
+
+#~ msgid ""
+#~ "Note that a Nitrokey initialized with"
+#~ " OpenSC doesn't work with GnuPG/OpenPGP."
+#~ " But the other way around works "
+#~ "fine. If you want to use Nitrokey"
+#~ " with both GnuPG and PKCS#11, "
+#~ "generate the keys with GnuPG."
+#~ msgstr ""
+#~ "OpenSCで初期化したNitrokeyは、GnuPG/OpenPGPでは動作しないことに注意してください。しかし、その逆は問題なく動作します。GnuPG"
+#~ " と PKCS#11 の両方で Nitrokey を使用したい場合は、GnuPG"
+#~ " で鍵を生成してください。"
+
+#~ msgid ""
+#~ "Don't use PKCS#11 in parallel with "
+#~ "GnuPG because both may interfere and "
+#~ "unexpected issues may result. (There is"
+#~ " another promising project scd-pkcs11 "
+#~ "in development which may overcome this"
+#~ " limitation eventually. Currently it's "
+#~ "limit to the authentication certificate "
+#~ "and not widely tested yet.)"
+#~ msgstr ""
+#~ "PKCS#11とGnuPGを並行して使用すると、両者が干渉し、予期せぬ問題が発生する可能性があります。(この制限を克服できるかもしれない、もう一つの有望なプロジェクト"
+#~ " scd-pkcs11 が開発中です。現在は認証証明書に限定されており、まだ広くテストされていません)。"
+
+#~ msgid ""
+#~ "Instructions, how to create a valid "
+#~ "X.509 certificate with Nitrokey (1, 2,"
+#~ " 3). These are general instructions "
+#~ "how to use X.509 certificates. "
+#~ "Alternative PKCS#11 Driver:"
+#~ msgstr ""
+#~ "Nitrokey で有効な X.509 "
+#~ "証明書を作成する方法について説明します（1、2、3）。X.509証明書の一般的な使用方法です。PKCS#11 "
+#~ "ドライバの代替品です。"
+
+#~ msgid "The recommended PKCS#11 driver is OpenSC."
+#~ msgstr "PKCS#11ドライバはOpenSCを推奨します。"
+
+#~ msgid "Windows Mini Driver"
+#~ msgstr "Windowsミニドライバ"
+
+#~ msgid ""
+#~ "This Mini Driver allows to integrate "
+#~ "Nitrokey with Window's certificate store. "
+#~ "Subsequently all applications which use "
+#~ "this certificate storage can be used "
+#~ "with Nitrokey (e.g. Internet Explorer, "
+#~ "Google Chrome web browser, Windows "
+#~ "Login). To install the driver, you "
+#~ "may need to allow the installation "
+#~ "of unsigned drivers first. Aloaha"
+#~ msgstr ""
+#~ "このMini "
+#~ "Driverは、NitrokeyをWindow'の証明書ストアに統合するためのものです。これにより、この証明書ストアを使用するすべてのアプリケーションをNitrokeyで使用できます（例：Internet"
+#~ " Explorer、Google "
+#~ "Chromeウェブブラウザ、Windowsログイン）。ドライバをインストールするには、署名されていないドライバのインストールを最初に許可する必要がある場合があります。アロハ"
+
+#~ msgid ""
+#~ "All applications of Aloaha are working"
+#~ " with the Nitrokey. This includes a"
+#~ " middleware to integrate Nitrokey with "
+#~ "other PKCS#11 based applications and "
+#~ "with Windows as well as applications "
+#~ "to encrypt and sign PDFs and the"
+#~ " hard disk."
+#~ msgstr "アロハのすべてのアプリケーションは、ニトロキーと連携しています。これには、他のPKCS#11ベースのアプリケーションやWindowsとNitrokeyを連携させるミドルウェア、PDFやハードディスクを暗号化・署名するアプリケーションも含まれます。"
+
+#~ msgid "Alternative PKCS#11 Driver:"
+#~ msgstr "PKCS#11 ドライバの代替。"
+
+#~ msgid ""
+#~ "The recommended PKCS#11 driver is "
+#~ "OpenSC. Alternatively, you could use "
+#~ "Peter Koch's PKCS#11 driver which has"
+#~ " the following limitations:"
+#~ msgstr ""
+#~ "PKCS#11ドライバはOpenSCを推奨します。また、Peter Koch's PKCS#11 "
+#~ "ドライバを使用することもできますが、以下の制約があります。"
+
+#~ msgid ""
+#~ "No import of existing X.509 "
+#~ "certificates. (Instead, keys have to be"
+#~ " generated on the Nitrokey) The Linux"
+#~ " version does not allow to generate"
+#~ " keys. Modification of the password/PIN "
+#~ "under Linux is not possible."
+#~ msgstr "既存のX.509証明書のインポートができない。(その代わり、鍵はNitrokey上で生成する必要があります）Linux版では鍵の生成はできません。Linux版では、パスワード/PINの変更はできません。"
+
+#~ msgid "p11-glue"
+#~ msgstr "p11-接着剤"
+
+#~ msgid ""
+#~ "P11-glue uses PKCS#11 as glue between"
+#~ " crypto libraries and security applications"
+#~ " on the open source desktop. Articles"
+#~ " in German"
+#~ msgstr "P11-glueは、オープンソースデスクトップ上の暗号ライブラリとセキュリティアプリケーションの間の接着剤としてPKCS#11を使用します。ドイツ語の記事"
+
+#~ msgid ""
+#~ "Eine allgemeine und gut verständliche "
+#~ "Einführung bietet der Artikel Magisches "
+#~ "Leuchten im Linux Magazin 2010/12. Eine"
+#~ " umfangreiche Anleitung gibt es auf "
+#~ "Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht"
+#~ " unter CentOS."
+#~ msgstr ""
+#~ "Linux Magazin 2010/12号のMagisches "
+#~ "Leuchtenの記事は、全体的かつ包括的な解説を提供するものです。Pro-"
+#~ "Linuxに掲載された有用な解説書です。CentOSの体験談もあります。"
+
+#~ msgid "**Q:** How can I login into Windows?"
+#~ msgstr "**Q:** Windowsにログインする方法を教えてください。"
+
+#~ msgid ""
+#~ "To access Nitrokey devices read-only,"
+#~ " download and install this Mini "
+#~ "Driver (CSP). If you are using "
+#~ "Windows Server you may need to "
+#~ "disable the driver signature verification "
+#~ "before being able to install the "
+#~ "driver. Note that the Mini Driver "
+#~ "for Nitrokey Pro may not work yet"
+#~ " for write mode."
+#~ msgstr ""
+#~ "Nitrokeyのデバイスに読み取り専用でアクセスするには、このミニドライバー（CSP）をダウンロードし、インストールしてください。Windows"
+#~ " Serverを使用している場合、ドライバの署名検証を無効にしてからインストールする必要があります。なお、Nitrokey "
+#~ "Pro用のミニドライバは、書き込みモードではまだ動作しない場合があります。"
+
+#~ msgid "There exist different ways to use a Nitrokey to logon on Windows:"
+#~ msgstr "WindowsでNitrokeyを使ってログオンするには、さまざまな方法があります。"
+
+#~ msgid ""
+#~ "Login on stand alone Windows computers"
+#~ " based on EIDAuthenticate. Alternatively "
+#~ "install OpenSC and use Aloaha Smart "
+#~ "Login's PKCS#11 Credentials. Login on "
+#~ "Windows domain computers using MS Active"
+#~ " Directory based OpenPGP-CSP minidriver "
+#~ "for Nitrokey Storage 2 Nitrokey Pro "
+#~ "2 Login on Windows domain computers "
+#~ "using MS Active Directory based on "
+#~ "Smart Policy for other Nitrokey devices."
+#~ msgstr ""
+#~ "EIDAuthenticateをベースにしたスタンドアローンのWindowsコンピュータでのログイン。または、OpenSCをインストールし、Aloaha"
+#~ " Smart Login'のPKCS#11認証情報を使用します。Nitrokey Storage "
+#~ "2 Nitrokey Pro 2 Nitrokey Storage "
+#~ "2用のOpenPGP-CSPミニドライバーを使用して、MS Active "
+#~ "Directoryを使用してWindowsドメインコンピュータにログインすることができます。"
+
+#~ msgid "**Q:** How can I login into Linux? Linux Login with PAM"
+#~ msgstr "**Q:** Linuxにログインするにはどうしたらよいですか？PAMを使ったLinuxのログイン"
+
+#~ msgid "You have two options: pam_p11 or Poldi."
+#~ msgstr "pam_p11とPoldiの2つのオプションがあります。"
+
+#~ msgid ""
+#~ "The solution with pam_p11 is more "
+#~ "difficult to achieve and is based "
+#~ "on S/MIME certificates. Please have a"
+#~ " look at the documentation for more"
+#~ " information."
+#~ msgstr "pam_p11による解決はより困難で、S/MIME証明書をベースにしています。詳しくはドキュメントをご覧ください。"
+
+#~ msgid ""
+#~ "Poldi 0.4.1 works flawlessly with "
+#~ "Nitrokey for PAM authentication with RSA"
+#~ " keys (see Troubleshooting for information"
+#~ " on ECC keys). Besides the "
+#~ "installation of poldi (e.g. 'sudo "
+#~ "apt-get install libpam-poldi' on "
+#~ "Ubuntu) the following steps are needed"
+#~ " to get it working."
+#~ msgstr ""
+#~ "Poldi 0.4.1 は Nitrokey と共に RSA "
+#~ "鍵による PAM 認証で問題なく動作します (ECC "
+#~ "鍵についてはトラブルシューティングを参照してください)。poldi のインストール (例: Ubuntu"
+#~ " では 'sudo apt-get install libpam-"
+#~ "poldi') のほかに、動作させるには次の手順が必要です。"
+
+#~ msgid ""
+#~ "At first you need to find out "
+#~ "the \"Application ID\" of your Nitrokey."
+#~ " You can use \"gpg --card-status "
+#~ "| grep Application\" to find out "
+#~ "what's yours. It looks like "
+#~ "'D00600012401020000000000xxxxxxxx' or similiar. Now"
+#~ " you have to add a line to "
+#~ "/etc/poldi/localdb/users which contains the "
+#~ "following information"
+#~ msgstr ""
+#~ "まず、自分の Nitrokey の \"Application ID\" "
+#~ "を確認する必要があります。gpg --card-status | grep "
+#~ "Application\"で、自分のものがわかります。'D00600012401020000000000xxxxxxxx' "
+#~ "といった感じです。次に、/etc/poldi/localdb/usersに以下の情報を含む行を追加する必要があります。"
+
+#~ msgid ""
+#~ "sudo sh -c 'gpg-connect-agent "
+#~ "\"/datafile /etc/poldi/localdb/keys/<YourApplicationID>\" "
+#~ "\"SCD READKEY --advanced OPENPGP.3\" /bye'"
+#~ msgstr ""
+#~ "sudo sh -c 'gpg-connect-agent "
+#~ "\"/datafile /etc/poldi/localdb/keys/<YourApplicationID>\" "
+#~ "\"SCD READKEY --advanced OPENPGP.3\" "
+#~ "/bye'.XXX.XXX.XXX;"
+
+#~ msgid ""
+#~ "/etc/pam.d/common-auth for graphical user "
+#~ "login /etc/pam.d/login for console login "
+#~ "/etc/pam.d/sudo for sudo authentication "
+#~ "/etc/pam.d/gnome-screensaver for login back"
+#~ " from a locked screen etc."
+#~ msgstr ""
+#~ "/etc/pam.d/common-auth グラフィカルユーザーログイン用 "
+#~ "/etc/pam.d/login コンソールログイン用 /etc/pam.d/sudo sudo "
+#~ "認証用 /etc/pam.d/gnome-screensaver ロック画面からのログインバック用"
+#~ " など。"
+
+#~ msgid ""
+#~ "Note: Pam is dangerous to play "
+#~ "around with, so make sure you have"
+#~ " a way of accessing the machine "
+#~ "if you break authentication completely. "
+#~ "Remember that booting into rescue mode"
+#~ " from Grub requires a root password,"
+#~ " so keep that or a live CD "
+#~ "which can read your filesystems to "
+#~ "hand."
+#~ msgstr ""
+#~ "注意：Pamは弄ると危険なので、認証を完全に壊してもマシンにアクセスできる方法を確保しておいてください。Grub "
+#~ "からレスキューモードで起動するには root "
+#~ "パスワードが必要なのを覚えておいてください。そのパスワードか、ファイルシステムを読み込めるライブ CD "
+#~ "を手元に置いておいてください。"
+
+#~ msgid ""
+#~ "Here you find further instructions (in"
+#~ " German, partially outdated). Troubleshooting"
+#~ msgstr "ここでは、詳しい説明をご覧いただけます（ドイツ語、一部古くなっています）。トラブルシューティング"
+
+#~ msgid ""
+#~ "poldi-ctrl -k > <YourApplicationID>; "
+#~ "sudo mv <YourApplicationID> /etc/poldi/localdb/keys"
+#~ msgstr ""
+#~ "poldi-ctrl -k > <YourApplicationID>; "
+#~ "sudo mv <YourApplicationID> /etc/poldi/localdb/keys。"
+
+#~ msgid ""
+#~ "Please be aware that you have to"
+#~ " insert your Application ID in the"
+#~ " line above with the one of "
+#~ "your stick! ECC Keys Unfortunately, "
+#~ "poldi has no support for ECC keys"
+#~ " yet. But there is a patch for"
+#~ " ECC keys used with Nitrokey Start."
+#~ " This is already included in the "
+#~ "master branch of the poldi development"
+#~ " repository and thus will be released"
+#~ " in a newer version eventually. In"
+#~ " the meantime the only option is "
+#~ "to build poldi from source."
+#~ msgstr ""
+#~ "このとき、アプリケーションIDは、お使いのスティックのものと同じものを入れてください。ECCキー "
+#~ "残念ながらpoldiはまだECCキーに対応していません。しかし、Nitrokey "
+#~ "Startで使用するECCキー用のパッチはあります。これはすでにpoldiの開発リポジトリのmasterブランチに含まれているので、いずれ新しいバージョンでリリースされるでしょう。それまでの間はpoldiをソースからビルドするのが唯一の選択肢です。"
+
+#~ msgid "**Q:** How can I login with One Time Passwords?"
+#~ msgstr "**Q:**ワンタイムパスワードでログインするにはどうしたらよいですか？"
+
+#~ msgid ""
+#~ "One-Time-Passwords (OTP) are used "
+#~ "for secure login to websites and "
+#~ "local applications."
+#~ msgstr "ワンタイムパスワード（OTP）は、Webサイトやローカルアプリケーションに安全にログインするために使用されます。"
+
+#~ msgid "Two OTP modes exist:"
+#~ msgstr "2つのOTPモードが存在します。"
+
+#~ msgid ""
+#~ "Time-based One-time Passwords (TOTP) "
+#~ "is widely used for websites. If "
+#~ "unsure, assume you are using this "
+#~ "mode. HMAC-based One-time Passwords "
+#~ "(HOTP) is used for local applications"
+#~ " and computer logins."
+#~ msgstr ""
+#~ "Webサイトでは、TOTP（Time-based One-time "
+#~ "Passwords）が広く使われています。不明な場合は、このモードを使用していると仮定してください。HMAC-based "
+#~ "One-time Passwords (HOTP) "
+#~ "は、ローカルアプリケーションやコンピュータのログインに使用されます。"
+
+#~ msgid ""
+#~ "To use One-Time-Passwords with "
+#~ "your Nitrokey Pro or Nitrokey Storage,"
+#~ " you need to download and install "
+#~ "the latest Nitrokey App. Time-based "
+#~ "One-time Passwords - TOTP"
+#~ msgstr ""
+#~ "Nitrokey Pro または Nitrokey Storage "
+#~ "でワンタイムパスワードを使用するには、最新の Nitrokey "
+#~ "アプリをダウンロードし、インストールする必要があります。時間ベースのワンタイムパスワード - TOTP"
+
+#~ msgid ""
+#~ "For login to a Google account. For"
+#~ " login to a Microsoft account. For"
+#~ " login to a Nextcloud account. "
+#~ "Generic instructions for all other "
+#~ "services."
+#~ msgstr "Googleアカウントでログインする場合。Microsoftアカウントにログインする場合。Nextcloudのアカウントでログインする場合その他のサービスに関する一般的な説明です。"
+
+#~ msgid "**Q:** How can I use the Nitrokey Pro with Android?"
+#~ msgstr "**Q：＊＊＊ Nitrokey ProをAndroidで使うにはどうしたらよいですか？"
+
+#~ msgid ""
+#~ "It is possible to use the Nitrokey"
+#~ " on an Android devices in combination"
+#~ " with OpenKeychain. This enables one "
+#~ "to encrypt/decrypt E-Mails or files via"
+#~ " OpenPGP."
+#~ msgstr "Nitrokeyは、OpenKeychainと組み合わせてAndroid端末で使用することが可能です。これにより、OpenPGPによるメールやファイルの暗号化・復号化が可能になります。"
+
+#~ msgid ""
+#~ "Cotech provides Android software with "
+#~ "commercial support. Please have a look"
+#~ " there, if you like. The following"
+#~ " instructions are based on OpenKeychain."
+#~ msgstr "コーテックは、商用サポート付きのAndroidソフトウェアを提供しています。よろしければそちらをご覧ください。以下の説明は、OpenKeychainをベースにしています。"
+
+#~ msgid ""
+#~ "Tested with Nitrokey Start, Pro and "
+#~ "Storage in combination with Android 7.1,"
+#~ " OpenKeychain 4.5 and K9Mail 5.207. "
+#~ "Prerequisites"
+#~ msgstr ""
+#~ "Nitrokey Start、Pro、StorageとAndroid 7.1、OpenKeychain "
+#~ "4.5、K9Mail 5.207の組み合わせでテストしています。前提条件"
+
+#~ msgid ""
+#~ "Android phone which is capable of "
+#~ "USB OTG USB OTG cable to connect"
+#~ " the Nitrokey with your phone "
+#~ "OpenKeychain installed on Device Public "
+#~ "key saved on the device or "
+#~ "uploaded on a keyserver"
+#~ msgstr ""
+#~ "USB OTG が可能な Android 端末 Nitrokey "
+#~ "と端末を接続する USB OTG ケーブル OpenKeychain "
+#~ "を端末にインストール 公開鍵を端末に保存、または鍵サーバにアップロードする。"
+
+#~ msgid "First steps"
+#~ msgstr "はじめの一歩"
+
+#~ msgid ""
+#~ "To import the keys of the Nitrokey"
+#~ " you should at first start the "
+#~ "OpenKeychain app. Then insert the "
+#~ "Nitrokey with the USB OTG cable. "
+#~ "OpenKeychain starts a dialog to use "
+#~ "the Nitrokey (you may have to "
+#~ "accept the usage of the key with"
+#~ " OpenKeychain first). Now you can "
+#~ "choose between looking for public key"
+#~ " on a keyserver or choosing the "
+#~ "public key from storage. After the "
+#~ "public key got imported you have "
+#~ "to tap on 'connect key' to import"
+#~ " a reference to the private key "
+#~ "of the Nitrokey. That’s basically it."
+#~ msgstr ""
+#~ "Nitrokey のキーをインポートするには、まず OpenKeychain "
+#~ "アプリを起動する必要があります。次に、USB OTG ケーブルで Nitrokey "
+#~ "を挿入します。OpenKeychain は Nitrokey "
+#~ "を使用するためのダイアログを開始します（最初に OpenKeychain "
+#~ "での鍵の使用を許可する必要がある場合があります）。ここで、鍵サーバで公開鍵を探すか、ストレージから公開鍵を選択するかを選択できます。公開鍵がインポートされたら、"
+#~ " 'connect key' "
+#~ "をタップしてNitrokeyの秘密鍵への参照をインポートする必要があります。基本的にはこれだけです。"
+
+#~ msgid ""
+#~ "In the case that no there are "
+#~ "no keys on the Nitrokey yet, "
+#~ "OpenKeychain will help with the creation"
+#~ " of a new key pair instead. "
+#~ "Usage"
+#~ msgstr "Nitrokey に鍵がない場合、OpenKeychain が新しい鍵ペアの作成を支援します。使用方法"
+
+#~ msgid ""
+#~ "You can use all functions of "
+#~ "OpenKeychain and Apps which make use "
+#~ "of OpenKeychain. Therefore you can just"
+#~ " encrypt/decrypt messages or files by "
+#~ "hand using the app directly or for"
+#~ " example you combine K9Mail with "
+#~ "OpenKeychain to decrypt your mails "
+#~ "automatically. It is important to choose"
+#~ " the right key in the K9Mail "
+#~ "account settings first."
+#~ msgstr "OpenKeychainの全機能とOpenKeychainを利用したアプリを利用することができます。そのため、メールやファイルを直接アプリで暗号化・復号化したり、K9MailとOpenKeychainを組み合わせてメールを自動で復号化したりすることができます。ただし、K9Mailのアカウント設定で正しいキーを選択することが重要です。"
+
+#~ msgid ""
+#~ "Note that you may have to enable"
+#~ " the on-screen keyboard in the "
+#~ "android settings to type the PIN "
+#~ "as the system recognizes the Nitrokey"
+#~ " as a physical keyboard and therefore"
+#~ " tries to hide the on-screen "
+#~ "keyboard. Go to 'Language and Input' "
+#~ "> 'Current Keyboard' > 'Hardware show"
+#~ " input method'."
+#~ msgstr ""
+#~ "なお、Nitrokeyを物理キーボードとして認識するため、画面上のキーボードを隠そうとするので、暗証番号を入力するためにアンドロイドの設定で画面上のキーボードを有効にしなければならない場合があります。'言語と入力'"
+#~ " > '現在のキーボード' > 'ハードウェアで入力方法を表示' に進みます。"
+
+#~ msgid "**Q:** How can I use the Nitrokey Pro with Iphone?"
+#~ msgstr "**Q：＊＊＊ Nitrokey ProをIphoneで使用するにはどうしたらよいですか？"
+
+#~ msgid "Currently it is not possible"
+#~ msgstr "現状では不可能"
+
+#~ msgid "**Q:** How can I use the Nitrokey Pro with Ubuntu Phone?"
+#~ msgstr "**Q:** Nitrokey ProをUbuntu Phoneで使用するにはどうしたらよいですか？"
+
+#~ msgid ""
+#~ "There are instructions on gnupg.org "
+#~ "about how to use a OpenPGP Card"
+#~ " on a UbuntuPhone which should work"
+#~ " for the Nitrokey Start, Pro and "
+#~ "Storage."
+#~ msgstr "gnupg.org に、UbuntuPhone で OpenPGP カードを使用する方法が掲載されています。"
+
+#~ msgid ""
+#~ "**Q:** How can I do Email "
+#~ "encryption? There are two widely used"
+#~ " standards for email encryption. While "
+#~ "OpenPGP/GnuPG is popular among individuals,"
+#~ " S/MIME/X.509 is mostly used by "
+#~ "enterprises. If you are in doubt "
+#~ "which one to choose, you should "
+#~ "use OpenPGP."
+#~ msgstr ""
+#~ "**Q:** "
+#~ "電子メールの暗号化はどのようにすればよいのですか？電子メールの暗号化には、広く使われている2つの規格があります。OpenPGP/GnuPGは個人の間で人気がありますが、S/MIME/X.509は主に企業で使用されています。どちらを選ぶか迷った場合は、OpenPGPを使うのがよいでしょう。"
+
+#~ msgid ""
+#~ "instructions for using the OpenPGP "
+#~ "standard with the Nitrokey instructions "
+#~ "for using S/MIME with the Nitrokey. "
+#~ "Note: SMIME certificates can be "
+#~ "purchased cheaply from CERTUM and "
+#~ "SSLTrust."
+#~ msgstr ""
+#~ "NitrokeyでOpenPGP規格を使用する手順 "
+#~ "NitrokeyでS/MIMEを使用する手順。注：SMIME証明書はCERTUMとSSLTrustから安価に購入できます。"
+
+#~ msgid ""
+#~ "Please note, that it is currently "
+#~ "advised to use either OpenPGP or "
+#~ "S/MIME encryption, but not both with "
+#~ "the Nitrokey."
+#~ msgstr "現在、NitrokeyではOpenPGPまたはS/MIMEのどちらかの暗号化を使用することが推奨されていますが、両方使用することはできませんので、ご注意ください。"
+
+#~ msgid ""
+#~ "To use a Nitrokey Storage with "
+#~ "Thunderbird 78+, you can try this "
+#~ "tutorial."
+#~ msgstr "Thunderbird 78+でNitrokey Storageを使用するには、こちらのチュートリアルをお試しください。"
+
+#~ msgid "**Q:** How can I do Hard Disk Encryption?"
+#~ msgstr "**Q:**ハードディスクの暗号化について教えてください。"
+
+#~ msgid ""
+#~ "For: Nitrokey Pro, Nitrokey Storage, "
+#~ "Nitrokey Start VeraCrypt (formerly TrueCrypt)"
+#~ msgstr ""
+#~ "のために。Nitrokey Pro、Nitrokey Storage、Nitrokey Start"
+#~ " VeraCrypt (旧TrueCrypt)"
+
+#~ msgid ""
+#~ "VeraCrypt is a free and Open "
+#~ "Source disk encryption software for "
+#~ "Windows, macOS, and GNU/Linux. It is "
+#~ "the successor of TrueCrypt and thus "
+#~ "recommended, although the following "
+#~ "instructions should apply to TrueCrypt "
+#~ "as well. Follow these steps to use"
+#~ " the program with Nitrokey Storage or"
+#~ " Pro:"
+#~ msgstr ""
+#~ "VeraCrypt は、Windows、macOS、GNU/Linux "
+#~ "用のフリーでオープンソースのディスク暗号化ソフトウェアです。TrueCryptの後継ソフトであるため推奨されていますが、以下の説明はTrueCryptにも適用されるはずです。Nitrokey"
+#~ " Storage または Pro でプログラムを使用するには、以下の手順に従います。"
+
+#~ msgid ""
+#~ "Install OpenSC Choose the library in "
+#~ "VeraCrypt under Settings>Preferences>Security Token"
+#~ " (location depends on system, e.g. "
+#~ "/usr/lib/opensc). Generate a 64 Byte key"
+#~ " file via Tools>Keyfile Generator. Now "
+#~ "you should be able to import the"
+#~ " generated key file via Tools>Manage "
+#~ "Security Token Keyfiles. You should "
+#~ "choose the first Slot ([0] User "
+#~ "PIN). The keyfile is then stored "
+#~ "on the Nitrokey as 'Private Data "
+#~ "Object 1' (PrivDO1). After this you "
+#~ "should wipe the original keyfile on "
+#~ "your Computer securely! Now you can "
+#~ "use VeraCrypt with the Nitrokey: Create"
+#~ " a container, choose the keyfile on"
+#~ " the device as an alternative to "
+#~ "a password."
+#~ msgstr ""
+#~ "OpenSCをインストール VeraCryptのSettings>Preferences>Security "
+#~ "Tokenでライブラリを選択します（場所はシステムによって異なります、例：/usr/lib/opensc)。Tools>Keyfile"
+#~ " Generatorで64Byteのキーファイルを生成します。これで、Tools>Manage Security "
+#~ "Token Keyfiles から、生成された鍵ファイルをインポートできるようになります。最初のSlot([0]"
+#~ " User PIN)を選択します。キーファイルは、Nitrokey に 'Private "
+#~ "Data Object 1' (PrivDO1) "
+#~ "として保存されます。この後、コンピュータ上のオリジナルのキーファイルを安全に消去してください。これで、VeraCryptをNitrokeyで使用することができます。コンテナを作成し、デバイス上のキーファイルをパスワードの代わりとして選択します。"
+
+#~ msgid ""
+#~ "Security Consideration: Please note that "
+#~ "VeraCrypt doesn't make use of the "
+#~ "full security which Nitrokey (and smart"
+#~ " cards in general) offer. Instead it"
+#~ " stores a keyfile on the Nitrokey "
+#~ "which theoretically could be stolen by"
+#~ " a computer virus after the user "
+#~ "enters the PIN."
+#~ msgstr "セキュリティに配慮しています。VeraCryptは、Nitrokey（および一般的なスマートカード）が提供する完全なセキュリティを利用しないことに注意してください。その代わり、Nitrokeyにキーファイルを保存し、ユーザーがPINを入力した後、理論的にはコンピュータウイルスによって盗まれる可能性があります。"
+
+#~ msgid ""
+#~ "Note: Aloaha Crypt is based on "
+#~ "TrueCrypt/VeraCrypt but without the described"
+#~ " security limitation."
+#~ msgstr "注：Aloaha CryptはTrueCrypt/VeraCryptをベースにしていますが、記述されているセキュリティの制限はありません。"
+
+#~ msgid ""
+#~ "Hard Disk Encryption on Linux, Based "
+#~ "on LUKS/dm-crypt Here are excellent "
+#~ "instructions how to use Nitrokey to "
+#~ "encrypt your hard disk under Linux "
+#~ "with LUKS/dm-crypt. Other instruction."
+#~ msgstr ""
+#~ "LUKS/dm-cryptに基づくLinuxでのハードディスク暗号化 "
+#~ "ここでは、Nitrokeyを使用してLinuxでLUKS/dm-"
+#~ "cryptによりハードディスクを暗号化する優れた方法を説明します。他の指示もあります。"
+
+#~ msgid ""
+#~ "Purism has created a simple script "
+#~ "to add the Nitrokey/LibremKey as a "
+#~ "way to unlock LUKS partitions (not "
+#~ "tested by Nitrokey yet)."
+#~ msgstr "Purismは、LUKSパーティションのロックを解除する方法として、Nitrokey/LibremKeyを追加する簡単なスクリプトを作成しました（Nitrokeyではまだテストされていません）。"
+
+#~ msgid ""
+#~ "This project aims to ease the use"
+#~ " of LUKS with the Nitrokey Pro "
+#~ "or Storage based on the Password "
+#~ "Safe (not tested by Nitrokey yet). "
+#~ "A description on how to use it "
+#~ "on Gentoo can be found here."
+#~ msgstr ""
+#~ "このプロジェクトは、Nitrokey Pro または Password Safe "
+#~ "(Nitrokey ではまだテストされていません) をベースにした Storage で"
+#~ " LUKS を簡単に使用することを目的としています。Gentooでの使用方法については、こちらで説明されています。"
+
+#~ msgid ""
+#~ "For Arch Linux, see initramfs-scencrypt."
+#~ " Storage Encryption on Linux, Based "
+#~ "on EncFS"
+#~ msgstr ""
+#~ "Arch Linux では、initramfs-scencrypt "
+#~ "を参照してください。Linux でのストレージ暗号化、EncFS をベースにしたもの"
+
+#~ msgid ""
+#~ "Prerequisite: Please ensure that you "
+#~ "installed the device driver, changed the"
+#~ " default PINs and generated or "
+#~ "imported keys with GnuPG."
+#~ msgstr "前提条件デバイスドライバのインストール、デフォルトのPINの変更、GnuPGでの鍵の生成またはインポートが完了していることを確認してください。"
+
+#~ msgid ""
+#~ "An easy to use encrypted file "
+#~ "system is EncFS, which is based on"
+#~ " FUSE. You may follow these steps "
+#~ "to use it with very long passwords"
+#~ " and Nitrokey:"
+#~ msgstr "簡単に使える暗号化ファイルシステムとして、FUSEをベースとしたEncFSがあります。非常に長いパスワードとNitrokeyを使用する場合は、以下の手順で使用することができます。"
+
+#~ msgid ""
+#~ "# Create a key file with random"
+#~ " data: $ dd bs=64 count=1 "
+#~ "if=/dev/urandom of=keyfile"
+#~ msgstr "# ランダムデータでキーファイルを作成： $ dd bs=64 count=1 if=/dev/urandom of=keyfile"
+
+#~ msgid ""
+#~ "# Encrypt the key file and use "
+#~ "the User-ID of your Nitrokey $ "
+#~ "gpg --encrypt keyfile"
+#~ msgstr "# 鍵ファイルを暗号化し、NitrokeyのUser-IDを使用する $ gpg --encrypt keyfile"
+
+#~ msgid ""
+#~ "# Remove the key file in clear "
+#~ "text: $ rm keyfile # you may "
+#~ "want to use 'wipe' or 'shred' to"
+#~ " securely delete the keyfile"
+#~ msgstr ""
+#~ "# 鍵ファイルをクリアテキストで削除： $ rm keyfile # "
+#~ "鍵ファイルを安全に削除するために 'wipe' または 'shred' "
+#~ "を使用したい場合があります。"
+
+#~ msgid "# Create mount point: $ mkdir ~/.cryptdir ~/cryptdir"
+#~ msgstr "# マウントポイントの作成： $ mkdir ~/.cryptdir ~/cryptdir"
+
+#~ msgid ""
+#~ "# Create the actual encryption folder"
+#~ " $ gpg -d keyfile.gpg | encfs "
+#~ "-S ~/.cryptdir ~/cryptdir"
+#~ msgstr "# 実際の暗号化フォルダの作成 $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
+
+#~ msgid ""
+#~ "# There may appears an error "
+#~ "message about missing permission of "
+#~ "fusermount # This message can be "
+#~ "ignored"
+#~ msgstr "# fusermountのパーミッションが足りないというエラーメッセージが表示されることがある # このメッセージは無視してもよい。"
+
+#~ msgid "# Unmount the new file system: $ fusermount -u ~/cryptdir"
+#~ msgstr "# 新しいファイルシステムをアンマウントする： $ fusermount -u ~/cryptdir"
+
+#~ msgid ""
+#~ "# Mount encrypted file system and "
+#~ "enter PIN of Nitrokey: $ gpg -d"
+#~ " keyfile.gpg | encfs -S ~/.cryptdir "
+#~ "~/cryptdir"
+#~ msgstr ""
+#~ "# 暗号化されたファイルシステムをマウントし、NitrokeyのPINを入力する： $ gpg "
+#~ "-d keyfile.gpg | encfs -S ~/.cryptdir"
+#~ " ~/cryptdir"
+
+#~ msgid "# After usage, unmount the file system: $ fusermount -u ~/cryptdir"
+#~ msgstr "# 使用後は、ファイルシステムをアンマウントしてください： $ fusermount -u ~/cryptdir"
+
+#~ msgid "Storage Encryption on Linux, Based on ECryptFS"
+#~ msgstr "ECryptFSをベースとしたLinuxでのストレージ暗号化技術"
+
+#~ msgid ""
+#~ "eCryptfs is a file based transparent "
+#~ "encryption file system for Linux which"
+#~ " can be used with Nitrokey through"
+#~ " a PKCS#11 driver. See these "
+#~ "instructions. Alternatively, try ESOSI or "
+#~ "follow these steps using OpenSC and "
+#~ "OpenVPN:"
+#~ msgstr ""
+#~ "eCryptfsは、Linux用のファイルベースの透過的暗号化ファイルシステムで、PKCS#11ドライバを介してNitrokeyと一緒に使用することができます。これらの手順を参照してください。あるいは、ESOSI"
+#~ " を試すか、OpenSC と OpenVPN を使って以下の手順を実行してください。"
+
+#~ msgid "Warning: This will delete existing keys on your Nitrokey!"
+#~ msgstr "ご注意Nitrokeyの既存のキーが削除されます。"
+
+#~ msgid ""
+#~ "# Import the certificate and key "
+#~ "to the Nitrokey $ pkcs15-init "
+#~ "--delete-objects privkey,pubkey --id 3 "
+#~ "--store-private-key user@example.com.p12 --format"
+#~ " pkcs12 --auth-id 3 --verify-pin"
+#~ msgstr ""
+#~ "# Nitrokey に証明書と鍵をインポートする $ pkcs15-init "
+#~ "--delete-objects privkey,pubkey --id 3 "
+#~ "--store-private-key user@example.com.p12 --format"
+#~ " pkcs12 --auth-id 3 --verify-pin"
+
+#~ msgid "# Create the file ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
+#~ msgstr "# ファイル ~/.ecryptfsrc.pkcs11 の作成: $ editor ~/.ecryptfsrc.pkcs11"
+
+#~ msgid ""
+#~ "# Enter this content: $ pkcs11-log-"
+#~ "level=5 pkcs11-provider1,name=name,library=/usr/lib/opensc-"
+#~ "pkcs11.so,cert-private=true $ openvpn "
+#~ "--show-pkcs11-ids path to opensc-pkcs11 "
+#~ "module Certificate"
+#~ msgstr ""
+#~ "# Enter this content: $ pkcs11-log-"
+#~ "level=5 pkcs11-provider1,name=name,library=/usr/lib/opensc-"
+#~ "pkcs11.so,cert-private=true $ openvpn "
+#~ "--show-pkcs11-ids opensc-pkcs11 module "
+#~ "Certificate への path"
+
+#~ msgid ""
+#~ "DN: "
+#~ "/description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@example.com"
+#~ " Serial: 066E04 Serialized id: "
+#~ "ZeitControl/PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
+#~ msgstr ""
+#~ "DN: "
+#~ "/description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@example.com"
+#~ " Serial:066E04 "
+#~ "シリアライズされたID。ZeitControl/PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
+
+#~ msgid "# Copy the serialized id for later usage: $ ecryptfs-manager"
+#~ msgstr "# 後で使うためにシリアル化したidをコピーしておく。$ ecryptfs-manager"
+
+#~ msgid ""
+#~ "# This will show list option. "
+#~ "Choose option \"Add public key to "
+#~ "keyring\" # Choose pkcs11-helper # Enter"
+#~ " the serialized ID of step 3 to"
+#~ " PKCS#11 ID."
+#~ msgstr ""
+#~ "# オプションの一覧が表示されます。Add public key to "
+#~ "keyring\" オプションを選択 # pkcs11-helperを選択 # "
+#~ "PKCS#11 IDに手順3でシリアライズしたIDを入力します。"
+
+#~ msgid "**Q:** How can I sign and encrypt Files and PDFs? GnuPG"
+#~ msgstr "**Q:** ファイルやPDFを署名・暗号化するにはどうしたらよいですか？GnuPG"
+
+#~ msgid ""
+#~ "Use the gpgsm tool to sign, "
+#~ "verify, encrypt and decrypt files. Use"
+#~ " a signature key on a Nitrokey "
+#~ "to sign documents using Acrobat Reader,"
+#~ " Open Office / Libre Office or "
+#~ "any other PDF reader supporting "
+#~ "electronic signatures."
+#~ msgstr ""
+#~ "ファイルの署名、検証、暗号化、復号化には、gpgsm ツールを使用します。Acrobat Reader、Open"
+#~ " Office / Libre "
+#~ "Office、その他の電子署名に対応したPDFリーダーを使用して、Nitrokey上の署名キーを使用して文書に署名することができます。"
+
+#~ msgid "GPA - GNU Privacy Assistant"
+#~ msgstr "GPA - GNU プライバシーアシスタント"
+
+#~ msgid ""
+#~ "The Gnu Privacy Assistant (GPA) "
+#~ "recognizes Nitrokey out-of-the-box, "
+#~ "has various features to manage keys "
+#~ "and cards. It also allows file "
+#~ "operations such as file encryption, "
+#~ "decryption, signing."
+#~ msgstr ""
+#~ "Gnu Privacy Assistant (GPA) は、Nitrokey "
+#~ "をすぐに認識し、鍵やカードを管理するためのさまざまな機能を備えています。また、ファイルの暗号化、復号化、署名などのファイル操作が可能です。"
+
+#~ msgid "SOPS - Secrect OPerationS"
+#~ msgstr "SOPS - Secrect OPerationS"
+
+#~ msgid ""
+#~ "SOPS is an editor of encrypted "
+#~ "files that supports YAML, JSON and "
+#~ "BINARY formats and encrypts with AWS "
+#~ "KMS and PGP. You can find it "
+#~ "on github."
+#~ msgstr ""
+#~ "SOPSは、YAML、JSON、BINARY形式をサポートし、AWS "
+#~ "KMSとPGPで暗号化する暗号化ファイルのエディターです。githubで公開されています。"
+
+#~ msgid "Aloaha"
+#~ msgstr "アロハ"
+
+#~ msgid ""
+#~ "Aloaha provides several applications to "
+#~ "encrypt and sign PDFs. All of "
+#~ "them, which allow smart card "
+#~ "integration, work with Nitrokey. You can"
+#~ " for example import key and "
+#~ "certificate by using OpenSC or any "
+#~ "other appropriate variant. After this "
+#~ "Windows recognize your certificate and "
+#~ "you can sign the document as it"
+#~ " is shown in the screencast below."
+#~ msgstr "Aloahaは、PDFを暗号化し、署名するためのアプリケーションをいくつか提供しています。スマートカードとの連携が可能なものは、すべてNitrokeyと連携して動作します。例えば、OpenSCや他の適切な種類のものを使って、鍵と証明書を取り込むことができます。この後、Windowsが証明書を認識し、以下のスクリーンキャストに示すように、文書に署名することができます。"
+
+#~ msgid "GpgEx for Windows Explorer"
+#~ msgstr "Windowsエクスプローラ用GpgEx"
+
+#~ msgid ""
+#~ "GpgEx integrates smoothly into Windows "
+#~ "Explorer to allow encryption and "
+#~ "decryption of files. Install it as "
+#~ "part of the GPG4Win package."
+#~ msgstr "GpgExはWindowsのエクスプローラにスムーズに統合され、ファイルの暗号化・復号化を可能にします。GPG4Winパッケージの一部としてインストールします。"
+
+#~ msgid ""
+#~ "Before you start to use any of "
+#~ "these applications with your Nitrokey, "
+#~ "please ensure that you installed the "
+#~ "device driver and initialized the device"
+#~ " (e.g. generated keys)."
+#~ msgstr "これらのアプリケーションをニトロキーで使用する前に、デバイスドライバのインストールとデバイスの初期化（キーの生成など）が完了していることを確認してください。"
+
+#~ msgid ""
+#~ "Certificate-based login with TLS and "
+#~ "web browser is a very secure "
+#~ "authentication method but it is only "
+#~ "used rarely. If you are unsure "
+#~ "what this means, this approach is "
+#~ "most likely not relevant for you."
+#~ msgstr "TLSとWebブラウザを使用した証明書ベースのログインは、非常に安全な認証方法ですが、まれにしか使用されません。この意味がよくわからない場合は、この方法はあなたにとって関係ない可能性が高いです。"
+
+#~ msgid ""
+#~ "This page refers to websites and "
+#~ "applications which support certificate "
+#~ "authentication, so that users don't need"
+#~ " to enter username and password when"
+#~ " login. For instance WebID is a "
+#~ "great protocol which makes use of "
+#~ "it. Certificate authentication can be "
+#~ "used easily with the Nitrokey and "
+#~ "also with any other certificate "
+#~ "storages. Mozilla Firefox"
+#~ msgstr "このページでは、ログイン時にユーザー名やパスワードの入力が不要な証明書認証に対応したWebサイトやアプリケーションを紹介します。例えば、WebIDは、これを利用した素晴らしいプロトコルです。証明書認証は、Nitrokeyや他の証明書ストレージで簡単に利用することができます。モジラ・ファイアフォックス"
+
+#~ msgid "You need to install the PKCS#11 driver:"
+#~ msgstr "PKCS#11ドライバをインストールする必要があります。"
+
+#~ msgid ""
+#~ "Download the PKCS11 driver and store "
+#~ "it on your local hard disk or "
+#~ "install OpenSC. Open the Preferences in"
+#~ " Firefox and go to  Privacy & "
+#~ "Security -> Security (just a headline)"
+#~ " -> Button 'Security Devices...' Press "
+#~ "the button Load. Enter \"Nitrokey\" as"
+#~ " the Module Name and press the "
+#~ "Browse button to select the previously"
+#~ " downloaded PKCS11 driver file. Confirm "
+#~ "and close all dialogs."
+#~ msgstr ""
+#~ "PKCS11ドライバをダウンロードし、ローカルハードディスクに保存するか、OpenSCをインストールしてください。Firefoxの環境設定を開き、Privacy"
+#~ " & Security -> Security (just a "
+#~ "headline) -> Button 'Security Devices...' "
+#~ "ボタンを押してLoadを押します。モジュール名として \"Nitrokey\" "
+#~ "を入力し、参照ボタンを押し、以前ダウンロードした PKCS11 "
+#~ "ドライバファイルを選択します。すべてのダイアログを確認し、閉じます。"
+
+#~ msgid ""
+#~ "Now you are ready to access "
+#~ "websites which provide certificate "
+#~ "authentication. Internet Explorer"
+#~ msgstr "これで、証明書認証を提供するWebサイトにアクセスする準備が整いました。インターネットエクスプローラー"
+
+#~ msgid ""
+#~ "Install this Mini Driver for Windows."
+#~ " Now you are ready to access "
+#~ "websites which provide certificate "
+#~ "authentication. Google Chrome"
+#~ msgstr ""
+#~ "このMini Driver for "
+#~ "Windowsをインストールしてください。これで、証明書認証を提供するWebサイトにアクセスする準備が整いました。グーグルクローム"
+
+#~ msgid ""
+#~ "Under Windows, install this Mini Driver."
+#~ " Under Linux, follow these instructions."
+#~ " Now you are ready to access "
+#~ "websites which provide certificate "
+#~ "authentication. WebID"
+#~ msgstr ""
+#~ "Windowsでは、このMini "
+#~ "Driverをインストールしてください。Linuxでは、以下の手順に従ってください。これで、証明書認証を提供しているWebサイトにアクセスする準備が整いました。WebID"
+
+#~ msgid ""
+#~ "WebID is a technology to enable "
+#~ "secure and federated social websites. "
+#~ "Here is a video (WebM, Ogg video,"
+#~ " H.264) which demonstrates how to use"
+#~ " Nitrokey to create a WebID profile"
+#~ " and subsequently to use it in "
+#~ "an Internet cafe in Singapore. Nitrokey"
+#~ " protects against computer viruses which"
+#~ " might otherwise steel the username "
+#~ "and password. Websites Web Site        "
+#~ "Category CAcert  community-based Certificate"
+#~ " Authority PrivaSphere     Secure messaging "
+#~ "HM Revenue & Customs    UK's tax "
+#~ "administration Software Application     Category "
+#~ "Roundcube (plugin)      Webmail Drupal (WebID,"
+#~ " Certificate login)       Content management "
+#~ "system Media Wiki (plugin)     Wiki "
+#~ "Joomla!         Content management system "
+#~ "Apache + mod_ssl        Web server "
+#~ "OpenSSH         SSH (remote secure shell) "
+#~ "client and server Wordpress (plugin)      "
+#~ "Blog and CMS Tivoli  System management"
+#~ " framework Globalscape EFT         managed "
+#~ "file transfer (MFT) Oracle Identity "
+#~ "Manager         I&AM Fuse Source     "
+#~ "Middleware Liferay         Blog FusionForge     "
+#~ "web-based project-management and "
+#~ "collaboration software"
+#~ msgstr ""
+#~ "WebIDは、安全で連携したソーシャルウェブサイトを実現するための技術です。ここでは、Nitrokeyを使ってWebIDプロファイルを作成し、その後、シンガポールのインターネットカフェで使用する方法を紹介するビデオ（WebM、Oggビデオ、H.264）です。Nitrokeyは、ユーザー名とパスワードを盗み出すコンピューターウイルスから保護します。Webサイト"
+#~ " Webサイトカテゴリ CAcert コミュニティベース認証局 PrivaSphere "
+#~ "Secure messaging HM Revenue & Customs"
+#~ " UK's tax administration Software "
+#~ "Application Category Roundcube (plugin) "
+#~ "Webmail Drupal (WebID, Certificate login) "
+#~ "Content management system Media Wiki "
+#~ "(plugin) Wiki Joomla!         コンテンツ管理システム "
+#~ "Apache + mod_ssl Webサーバ OpenSSH "
+#~ "SSH（リモートセキュアシェル）クライアントおよびサーバ Wordpress（プラグイン） ブログおよびCMS"
+#~ " Tivoli システム管理フレームワーク Globalscape EFT "
+#~ "管理ファイル転送（MFT） Oracle Identity Manager I&AM "
+#~ "Fuse Source Middleware Liferay Blog "
+#~ "FusionForge Webベースのプロジェクト管理およびコラボレーション・ソフトウェア"
+
+#~ msgid ""
+#~ "This website is a good read about"
+#~ " strong authentication mechanisms, why "
+#~ "client certificate authentication isn't "
+#~ "popular and better alternatives at the"
+#~ " horizon."
+#~ msgstr "このサイトでは、強力な認証メカニズム、クライアント証明書認証が普及しない理由、より良い代替手段の可能性などについて解説しています。"
+
+#~ msgid "**Q:** How can I use Enterprise Authentication?"
+#~ msgstr "**Q:** Enterprise Authenticationを利用するにはどうしたらよいですか？"
+
+#~ msgid ""
+#~ "LinOTP privacyIDEA RCDevs OpenOTP Usage "
+#~ "of Nitrokey HSM as a secure key"
+#~ " store for the Forgerock OpenDJ "
+#~ "server and Forgerock Identity Gateway"
+#~ msgstr ""
+#~ "LinOTP privacyIDEA RCDevs OpenOTP Forgerock"
+#~ " OpenDJサーバーとForgerock Identity "
+#~ "Gatewayの安全なキーストアとしてNitrokey HSMを使用する。"
+
+#~ msgid ""
+#~ "**Q:** How can I do SSH for "
+#~ "Server Administration on Windows? The "
+#~ "Nitrokey should already have PGP keys"
+#~ " installed and the local GnuPG "
+#~ "keyring should be aware of the "
+#~ "keys, that is to say GPG4Win "
+#~ "should be installed on the system "
+#~ "(only the core application GnuPG is "
+#~ "needed). Furthermore you should install "
+#~ "PuTTY. Preparation on client"
+#~ msgstr ""
+#~ "**Q:** Windowsでサーバ管理用のSSHを行うにはどうしたらよいですか？Nitrokey にはすでに"
+#~ " PGP 鍵がインストールされており、ローカルの GnuPG "
+#~ "キーリングがその鍵を認識していること、つまり GPG4Win がシステムにインストールされている必要があります"
+#~ " (GnuPG "
+#~ "のコアアプリケーションだけが必要です)。さらに、PuTTYをインストールする必要があります。クライアント側の準備"
+
+#~ msgid ""
+#~ "There are two steps needed to make"
+#~ " PuTTY work. At first we need "
+#~ "to enable PuTTY support of GnuPG. "
+#~ "To achieve this we use the "
+#~ "following command:"
+#~ msgstr "PuTTYを動作させるためには、2つのステップが必要です。まず、GnuPGのPuTTYサポートを有効にする必要があります。これを実現するために、以下のコマンドを使用します。"
+
+#~ msgid "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
+#~ msgstr "echo enable-putty-support >> AppDataRoaming ↘Gpg-agent.conf"
+
+#~ msgid ""
+#~ "Now we want to make sure, that "
+#~ "the gpg-agent is starting automatically"
+#~ " in the background (you can start "
+#~ "it manually with the command below, "
+#~ "if you prefer). We create a "
+#~ "shortcut to gpg-connect-agent.exe. Press"
+#~ " and hold the Windows-key and "
+#~ "press 'R'. Type in \"shell:startup\" in"
+#~ " the opening textfield (see picture "
+#~ "below). The Windows-Explorer opens and"
+#~ " you right-click on an empty "
+#~ "space and choose \"New\" -> "
+#~ "\"Shortcut\". Now you should insert the"
+#~ " actual command and proceed:"
+#~ msgstr ""
+#~ "ここで、gpg-"
+#~ "agentがバックグラウンドで自動的に起動することを確認します（お好みで、以下のコマンドで手動で起動することもできます）。gpg-"
+#~ "connect-agent.exeへのショートカットを作成します。Windows-keyを押したまま、 "
+#~ "'R' を押してください。開いたテキストフィールドに \"shell:startup\"と入力します(下の図を参照"
+#~ ")。Windows-Explorerが開くので、何もないところで右クリックし、\"New\" -> "
+#~ "\"Shortcut\"を選択します。これで、実際のコマンドを挿入して進めてください。"
+
+#~ msgid "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
+#~ msgstr "\"C:\\Program Files (x86)\\gnupg bingpg-connect-agent.exe\" /bye"
+
+#~ msgid ""
+#~ "Reboot your system to make sure "
+#~ "the shortcut works. If everything is "
+#~ "alright you now can use PuTTY as"
+#~ " usual and PuTTY will make use "
+#~ "of the Nitrokey automatically. Preparation "
+#~ "for the server"
+#~ msgstr "システムを再起動し、ショートカットが機能することを確認します。問題がなければ、通常通りPuTTYを使用することができ、PuTTYは自動的にNitrokeyを使用するようになります。サーバーの準備"
+
+#~ msgid "You can generate an authorized_keys file by running"
+#~ msgstr "を実行して authorized_keys ファイルを生成することができます。"
+
+#~ msgid ""
+#~ "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" "
+#~ "--export-ssh-key keyID >> authorized_keys"
+#~ msgstr "C:³ Files (x86)³³³.exe\" --export-ssh-key keyID >> authorized_keys"
+
+#~ msgid ""
+#~ "where 'keyID' is either the fingerprint"
+#~ " of your key or just the E-Mail"
+#~ " address bind to your key. The "
+#~ "Nitrokey must already be known to "
+#~ "the local GnuPG keyring. You can "
+#~ "now append that file to a remote"
+#~ " server's authorized_keys and when you "
+#~ "ssh to the server you'll be asked"
+#~ " for a pin rather than a "
+#~ "passphrase."
+#~ msgstr ""
+#~ "ここで 'keyID' はあなたの鍵のフィンガープリントか、あなたの鍵にバインドされているE-"
+#~ "Mailアドレスだけです。Nitrokey はすでにローカルの GnuPG "
+#~ "鍵リングに知られている必要があります。このファイルをリモートサーバーの authorized_keys "
+#~ "に追加すると、サーバーに ssh するときにパスフレーズではなくピンを要求されるようになります。"
+
+#~ msgid "**Q:** How can I do SSH for Server Administration on Linux?"
+#~ msgstr "**Q:** Linuxでサーバー管理のためにSSHを行うにはどうしたらよいですか？"
+
+#~ msgid ""
+#~ "The Nitrokey should already have PGP "
+#~ "keys installed and the local GnuPG "
+#~ "keyring should know the keys. "
+#~ "Preparation on client"
+#~ msgstr ""
+#~ "Nitrokey にはすでに PGP 鍵がインストールされており、ローカルの GnuPG"
+#~ " キーリングはその鍵を知っている必要があります。クライアント側の準備"
+
+#~ msgid ""
+#~ "Make sure ~/.gnupg/gpg.conf contains 'use-"
+#~ "agent' Add ssh support to gnupg-"
+#~ "agent by adding 'enable-ssh-support' "
+#~ "to ~/.gnupg/gpg-agent.conf If the file"
+#~ " does not exist yet, you can "
+#~ "just create it. Add the following "
+#~ "code somewhere into your ~/.bashrc (for"
+#~ " fish shell, look here)"
+#~ msgstr ""
+#~ "~/.gnupg/gpg.conf に 'use-agent' "
+#~ "が含まれていることを確認する。 ~/.gnupg/gpg-agent.conf に "
+#~ "'enable-ssh-support' を追加して gnupg-agent "
+#~ "に ssh サポートを追加する まだファイルが存在しない場合は作成すればよいでしょう。次のコードを"
+#~ " ~/.bashrc のどこかに追加してください (fish shell "
+#~ "の場合はここを参照してください)。"
+
+#~ msgid ""
+#~ "unset SSH_AGENT_PID if [ "
+#~ "\"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; "
+#~ "then export SSH_AUTH_SOCK=\"$(gpgconf --list-"
+#~ "dirs agent-ssh-socket)\" fi"
+#~ msgstr ""
+#~ "unset SSH_AGENT_PID if [ "
+#~ "\"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $ ]; then"
+#~ " export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs "
+#~ "agent-ssh-socket)\" fi"
+
+#~ msgid ""
+#~ "Simply restart your system or try "
+#~ "pkill gpg-agent and open a new "
+#~ "commandline to make sure everything is"
+#~ " set In case of problems, please "
+#~ "try gpg2 --card-status on first "
+#~ "usage to make sure the gpg-agent"
+#~ " gets started"
+#~ msgstr "システムを再起動するか、pkill gpg-agentを実行して、新しいコマンドラインを開き、すべてが設定されていることを確認してください。"
+
+#~ msgid "Preparation for the server"
+#~ msgstr "サーバーの準備"
+
+#~ msgid "You can generate an authorized_keys file by running either"
+#~ msgstr "authorized_keys ファイルを生成するには、次のいずれかを実行します。"
+
+#~ msgid ""
+#~ "gpgkey2ssh keyID >> ~/authorized_keys #(for"
+#~ " GnuPG version <= 2.1.11) or gpg2 "
+#~ "--export-ssh-key keyID >> "
+#~ "~/authorized_keys #(for newer GnuPG versions)"
+#~ msgstr ""
+#~ "gpgkey2ssh keyID >> ~/authorized_keys #(GnuPG"
+#~ " version <= 2.1.11) または gpg2 "
+#~ "--export-ssh-key keyID >> ~/authorized_keys"
+#~ " #(GnuPG newer version のため)"
+
+#~ msgid "where"
+#~ msgstr "どこ"
+
+#~ msgid "keyID"
+#~ msgstr "キーID"
+
+#~ msgid ""
+#~ "is the subkey id being used for"
+#~ " authentication on your Nitrokey. The "
+#~ "Nitrokey must already be known to "
+#~ "the local GnuPG keyring. You can "
+#~ "now append that file to a remote"
+#~ " server's authorized_keys and when you "
+#~ "ssh to the server you'll be asked"
+#~ " for a pin rather than a "
+#~ "passphrase."
+#~ msgstr ""
+#~ "は、Nitrokey の認証に使用するサブキーID です。Nitrokey は、ローカルの "
+#~ "GnuPG キーリングにすでに登録されている必要があります。このファイルをリモートサーバーの "
+#~ "authorized_keys に追加すると、サーバーに ssh "
+#~ "するときにパスフレーズではなくピンを要求されるようになります。"
+
+#~ msgid "If you are still asked for a password please make sure that"
+#~ msgstr "それでもパスワードの入力が必要な場合は、次のことを確認してください。"
+
+#~ msgid "echo $SSH_AUTH_SOCK"
+#~ msgstr "echo $SSH_AUTH_SOCK"
+
+#~ msgid ""
+#~ "returns something reasonable like "
+#~ "'/run/user/1000/gnupg/S.gpg-agent.ssh' or "
+#~ "'/home/username/.gnupg/.S.gpg-agent.ssh'. Unfortunately"
+#~ " there were some changes in GnuPG "
+#~ "in the past so that the actual "
+#~ "content can differ from system and "
+#~ "GnuPG version. On some systems there "
+#~ "may are even multiple folders in "
+#~ "this variable saved. You have to "
+#~ "adapt the above given code in "
+#~ ".bashrc so that the variable "
+#~ "SSH_AUTH_SOCK is correct. In doubt look"
+#~ " for 'SSH_AUTH_SOCK' in"
+#~ msgstr ""
+#~ "は '/run/user/1000/gnupg/S.gpg-agent.ssh' や "
+#~ "'/home/username/.gnupg/.S.gpg-agent.ssh' "
+#~ "などの妥当なものを返します。残念ながら、GnuPG は過去にいくつかの変更があり、システムやGnuPG "
+#~ "のバージョンによって実際の内容が異なることがあります。システムによっては、この変数に複数のフォルダが保存されている場合もあります。.bashrcにある上記のコードを適応して、変数SSH_AUTH_SOCKが正しくなるようにしなければなりません。疑問がある場合は、"
+#~ " 'SSH_AUTH_SOCK' を探してください。"
+
+#~ msgid "man gpg-agent"
+#~ msgstr "man gpg-agent"
+
+#~ msgid "to find the actual code for your version/system."
+#~ msgstr "をクリックすると、あなたのバージョン/システムの実際のコードを見つけることができます。"
+
+#~ msgid ""
+#~ "You may check if you have a "
+#~ "'pinentry' program installed via your "
+#~ "package manager. You may need to "
+#~ "set it in the gpg-agent.conf as"
+#~ " well. You may need to point "
+#~ "gpg-agent to the correct TTY."
+#~ msgstr ""
+#~ "パッケージマネージャで 'pinentry' プログラムがインストールされているかどうかを確認することができます"
+#~ "。gpg-agent.conf で設定する必要があるかもしれません。gpg-"
+#~ "agentに正しいTTYを指定する必要があるかもしれません。"
+
+#~ msgid "**Q:** How can I use the Nitrokey for VPN access?"
+#~ msgstr "**Q:**VPNアクセスにNitrokeyを使用するにはどうしたらよいですか？"
+
+#~ msgid ""
+#~ "For: Nitrokey Pro, Nitrokey Storage, "
+#~ "Nitrokey Start, Nitrokey HSM OpenVPN"
+#~ msgstr "のために。Nitrokey Pro、Nitrokey Storage、Nitrokey Start、Nitrokey HSM OpenVPN"
+
+#~ msgid "Generate a key on Nitrokey via pkcs11-tool."
+#~ msgstr "pkcs11-toolを使用してNitrokeyで鍵を生成します。"
+
+#~ msgid "Generate a certificate signing request via openssl + pkcs11 module:"
+#~ msgstr "openssl + pkcs11モジュールで証明書署名要求を生成します。"
+
+#~ msgid ""
+#~ "$ openssl req -engine pkcs11 -sha256 "
+#~ "-new -key id_3 -keyform engine -out "
+#~ "<CSR FILE.CSR> -config <OPENSSL.CNF> "
+#~ "-extensions usr_client"
+#~ msgstr ""
+#~ "$ openssl req -engine pkcs11 -sha256 "
+#~ "-new -key id_3 -keyform engine -out "
+#~ "<CSR FILE.CSR> -config <OPENSSL.CNF> "
+#~ "-extensions usr_client"
+
+#~ msgid "Sign the certificate with our certificate authority"
+#~ msgstr "当社の認証局で証明書に署名する"
+
+#~ msgid ""
+#~ "$ openssl ca -cert <CA.CRT> -keyfile "
+#~ "<CA.KEY> -in <FILE.CSR> -out <FILE.CRT> "
+#~ "-config <OPENSSL.CNF> -extensions usr_client"
+#~ msgstr ""
+#~ "$ openssl ca -cert <CA.CRT> -keyfile "
+#~ "<CA.KEY> -in <FILE.CSR> -out <FILE.CRT> "
+#~ "-config <OPENSSL.CNF> -extensions usr_client"
+
+#~ msgid "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
+#~ msgstr "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
+
+#~ msgid "Read the certificate's ID required for openvpn configuration:"
+#~ msgstr "openvpnの設定に必要な証明書のIDを読み取ります。"
+
+#~ msgid "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
+#~ msgstr "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
+
+#~ msgid ""
+#~ "Modify your openvpn configuration. Add "
+#~ "the certificate ID which you gathered"
+#~ " in the previous step: E.g."
+#~ msgstr "openvpnの設定を変更します。先程の手順で集めた証明書IDを追加します。例"
+
+#~ msgid ""
+#~ "$ pkcs11-id "
+#~ "'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
+#~ msgstr ""
+#~ "$ pkcs11-id "
+#~ "'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
+
+#~ msgid "Add the PKCS#11 driver to the configuration too, e.g.:"
+#~ msgstr "PKCS#11ドライバもコンフィギュレーションに追加する、など。"
+
+#~ msgid "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
+#~ msgstr "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
+
+#~ msgid "See this link for further information."
+#~ msgstr "詳しくはこちらのリンクをご覧ください。"
+
+#~ msgid ""
+#~ "Now all configurations are done. When"
+#~ " executing OpenVPN client, Nitrokey's PIN"
+#~ " needs to be entered. Unfortunately "
+#~ "OpenVPN doesn't prompt to enter the "
+#~ "PIN and it has to be entered "
+#~ "in the following way:"
+#~ msgstr "これですべての設定が完了しました。OpenVPNクライアントを実行する際に、Nitrokey'のPINを入力する必要があります。残念ながらOpenVPNはPINの入力を促さないので、以下の方法で入力する必要があります。"
+
+#~ msgid "$ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>"
+#~ msgstr "$ telnet 8888 password 'ユーザーPIN（OpenPGPカード）トークン' <PIN&#xg;"
+
+#~ msgid ""
+#~ "Alternatively you could recompile OpenVPN "
+#~ "client with systemd support disabled and"
+#~ " it will prompt you for the PIN"
+#~ " as expected. Alternatively to the "
+#~ "OpenVPN client you could use the "
+#~ "Viscosity client which provides a better"
+#~ " user experience especially for entering"
+#~ " the PIN."
+#~ msgstr "あるいは、systemdのサポートを無効にしてOpenVPNクライアントを再コンパイルすれば、期待通りにPINの入力を促してくれるでしょう。OpenVPNクライアントの代わりに、Viscosityクライアントを使うこともできます。"
+
+#~ msgid ""
+#~ "Strong Swan works using the PKCS#11 "
+#~ "driver. Basically follow these steps:"
+#~ msgstr "Strong Swanは、PKCS#11ドライバを使用して動作します。基本的には以下の手順で行ってください。"
+
+#~ msgid ""
+#~ "$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'"
+#~ msgstr ""
+#~ "$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'"
+
+#~ msgid ""
+#~ "$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'"
+#~ msgstr ""
+#~ "$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.So -pre(ID)・pkcs11(ADD) -pre(LOAD)so "
+#~ "OpenSSL> req -engine pkcs11 -sha256 -new"
+#~ " -key id_10 -keyform engine -out "
+#~ "user@email.com-staging-cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'。"
+
+#~ msgid ""
+#~ "$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER"
+#~ msgstr ""
+#~ "$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER"
+
+#~ msgid ""
+#~ "$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'"
+#~ msgstr ""
+#~ "$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'.XXX.XXX.XXX.XXX.XXX;"
+
+#~ msgid "8. VPN is now connected Stunnel"
+#~ msgstr "8.VPNが接続された状態 Stunnel"
+
+#~ msgid ""
+#~ "Stunnel works as an SSL encryption "
+#~ "wrapper between remote client and local"
+#~ " (inetd-startable) or remote server. "
+#~ "It can be used to add SSL "
+#~ "functionality to commonly used inetd "
+#~ "daemons like POP2, POP3, and IMAP "
+#~ "servers without any changes in the "
+#~ "programs' code."
+#~ msgstr ""
+#~ "Stunnel は、リモートクライアントとローカル (inetd-startable) "
+#~ "またはリモートサーバー間の SSL 暗号化ラッパーとして機能します。POP2、POP3、IMAP "
+#~ "サーバーのような一般的に使用される inetd デーモンに、プログラムのコードを変更せずに SSL"
+#~ " 機能を追加するために使用することができます'."
+
+#~ msgid ""
+#~ "engine=dynamic "
+#~ "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so "
+#~ "engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD"
+#~ " engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so "
+#~ "engineCtrl=INIT"
+#~ msgstr ""
+#~ "engine=dynamic "
+#~ "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so "
+#~ "engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD"
+#~ " engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so "
+#~ "engineCtrl=INITを指定して、engineCtrl=LOSTを入力します。"
+
+#~ msgid "[service] engineNum=1 key=id_45"
+#~ msgstr "[サービス] engineNum=1 key=id_45"
+
+#~ msgid "**Q:** How can I do PKI / Certificate Authority (CA)?"
+#~ msgstr "**Q:** PKI/認証局(CA)はどのように行うのですか？"
+
+#~ msgid "CA keys are very sensitive and must not be compromised or lost. GnuPG"
+#~ msgstr "CAキーは非常に機密性が高く、漏洩や紛失は許されません。GnuPG"
+
+#~ msgid "Instructions OpenSSL"
+#~ msgstr "説明書 OpenSSL"
+
+#~ msgid ""
+#~ "Install OpenSC'S engine_pkcs11 Run the "
+#~ "command \"pkcs11-tool --list-slots\" to "
+#~ "list the available slots. Run the "
+#~ "command \"openssl> req -engine pkcs11 "
+#~ "-new -key slot_X-id_XXXX -keyform engine"
+#~ " -x509 -out cert.pem -text\" where X"
+#~ " is the appropriate slot number and"
+#~ " XXXX is the slot ID, e.g. "
+#~ "\"... -key "
+#~ "slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" "
+#~ "Test"
+#~ msgstr ""
+#~ "OpenSC'S engine_pkcs11 のインストール コマンド "
+#~ "\"pkcs11-tool --list-slots\" "
+#~ "を実行し、利用可能なスロットをリストアップします。コマンド \"openssl> req -engine"
+#~ " pkcs11 -new -key slot_X-id_XXXX "
+#~ "-keyform engine -x509 -out cert.pem "
+#~ "-text\" ここでXは適切なスロット番号、XXXXはスロットID、例えば \"... "
+#~ "を実行します。-key slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a"
+#~ " ...\"テスト"
+
+#~ msgid "Other"
+#~ msgstr "その他"
+
+#~ msgid ""
+#~ "Please see this PDF (p. 30) from"
+#~ " heinlein-support.de for summarized "
+#~ "instructions in German."
+#~ msgstr "ドイツ語でまとめた説明は、heinlein-support.deのこちらのPDF（P.30）をご覧ください。"
+
+#~ msgid ""
+#~ "µ-CA-tool is a script based on "
+#~ "GnuPG, OpenSC and OpenSSL which helps"
+#~ " to perform basic tasks of a "
+#~ "CA. It works with Nitrokey Pro and"
+#~ " Nitrokey Storage."
+#~ msgstr ""
+#~ "μ-CA-"
+#~ "toolは、GnuPG、OpenSC、OpenSSLをベースにしたスクリプトで、CAの基本的な作業を支援するものです。Nitrokey"
+#~ " Pro と Nitrokey Storage で動作します。"
+
+#~ msgid "**Q:** How can I use the password manager?"
+#~ msgstr "**Q:** パスワードマネージャーの使い方を教えてください。"
+
+#~ msgid "You have the following options:"
+#~ msgstr "以下のオプションがあります。"
+
+#~ msgid ""
+#~ "Use Nitrokey's built-in Password Safe"
+#~ " to store passwords securely. For "
+#~ "this you need the Nitrokey App. "
+#~ "Maximum are 16 passwords. Use Pass "
+#~ "(simple commandline password manager for "
+#~ "Unix systems, mainly for experts). Use"
+#~ " KeePass as described below."
+#~ msgstr ""
+#~ "Nitrokey に内蔵されている Password Safe "
+#~ "を使って、パスワードを安全に保存します。これにはNitrokeyアプリが必要です。パスワードは最大16個までです。Pass "
+#~ "(Unixシステム用のシンプルなコマンドラインパスワードマネージャー、主に上級者向け) "
+#~ "を使用する。後述のKeePassを使用する。"
+
+#~ msgid "Protecting KeePass with Nitrokey's One-Time Passwords"
+#~ msgstr "NitrokeyのワンタイムパスワードでKeePassを保護する'。"
+
+#~ msgid ""
+#~ "You can also follow this video (It"
+#~ " contains a mistake around time 4:22"
+#~ " which is described later below). "
+#~ "Keepass Installation"
+#~ msgstr "また、こちらのビデオもご覧ください（4:22頃に間違いがありますので、後ほど説明します）。Keepassのインストール"
+
+#~ msgid ""
+#~ "Install Keepass 2.3.5. For Ubuntu: "
+#~ "Because the main repository contains the"
+#~ " older 2.3.4, you have to use "
+#~ "some other source like this private "
+#~ "PPA (please run these commands in "
+#~ "terminal):"
+#~ msgstr ""
+#~ "Keepass "
+#~ "2.3.5をインストールします。Ubuntuの場合。メインリポジトリには古い2.3.4が含まれているので、このプライベートPPAのような他のソースを使用する必要があります（ターミナルでこれらのコマンドを実行してください）。"
+
+#~ msgid ""
+#~ "sudo add-apt-repository ppa:jtaylor/keepass"
+#~ " sudo apt-get update sudo apt-"
+#~ "get install keepass2"
+#~ msgstr ""
+#~ "sudo add-apt-repository ppa:jtaylor/keepass"
+#~ " sudo apt-get update sudo apt-"
+#~ "get install keepass2"
+
+#~ msgid ""
+#~ "Install the OtpKeyProv plugin by "
+#~ "downloading the archive, unzipping and "
+#~ "copying the content to Keypass' Plugin"
+#~ " directory. On Linux: sudo cp "
+#~ "OtpKeyProv.plgx /usr/lib/keepass2/Plugins/ For "
+#~ "Linux, optional: Install mono-complete "
+#~ "package if plugin is not detected "
+#~ "when running Keepass2 (you can check "
+#~ "that in Tools/Plugins):"
+#~ msgstr ""
+#~ "OtpKeyProvプラグインをインストールするには、アーカイブをダウンロードし、解凍してKeypass' "
+#~ "Pluginディレクトリに内容をコピーしてください。Linuxの場合: sudo cp "
+#~ "OtpKeyProv.plgx /usr/lib/keepass2/Plugins/ Linuxの場合、オプション:"
+#~ " Keepass2実行時にプラグインが検出されない場合は、mono-completeパッケージをインストールします "
+#~ "(Tools/Plugins で確認可能)。"
+
+#~ msgid "sudo apt-get install mono-complete"
+#~ msgstr "sudo apt-get install mono-complete"
+
+#~ msgid "Keepass OTP Configuration Existing Database"
+#~ msgstr "Keepass OTP 設定 既存のデータベース"
+
+#~ msgid ""
+#~ "Do a backup of your database and"
+#~ " keep it until you are really "
+#~ "sure everything works fine! Make sure"
+#~ " you really did a backup. If "
+#~ "you mess up, your passwords are "
+#~ "lost! Open database as usual Select "
+#~ "File/Change Master Key..."
+#~ msgstr ""
+#~ "データベースのバックアップをとり、すべてがうまく機能することが本当に確認できるまで保管してください。本当にバックアップを取ったかどうか確認してください。もし失敗したら、あなたのパスワードは失われてしまいます!通常通りデータベースを開く"
+#~ " ファイル/マスターキーの変更... を選択します。"
+
+#~ msgid "New Database"
+#~ msgstr "新しいデータベース"
+
+#~ msgid "Create new database as usual"
+#~ msgstr "通常通り、新しいデータベースを作成する"
+
+#~ msgid "Common"
+#~ msgstr "共通"
+
+#~ msgid ""
+#~ "Insert Master Password (optional) Set "
+#~ "Key file / provider: to One-Time"
+#~ " Passwords (OATH HOTP) Click OK With"
+#~ " Nitrokey App: select HOTP slot and"
+#~ " generate HOTP secret (it will be "
+#~ "copied to clipboard automatically). Note: "
+#~ "You may want write down this "
+#~ "secret and store it anywhere secure. "
+#~ "Otherwise if you lose your Nitrokey "
+#~ "or it gets broken your password "
+#~ "database is lost as well!!! Paste "
+#~ "the secret to Keepass OTP Plugin "
+#~ "window Make sure the Counter field "
+#~ "and digits count are set the same"
+#~ " in both windows. Click OK in "
+#~ "Nitrokey App to save the slot. "
+#~ "Select secret type: Base32 Set the "
+#~ "other settings as you like. Please "
+#~ "consult plugin's manual (should be in"
+#~ " same downloaded archive). I would "
+#~ "recommend to set look-ahead value "
+#~ "to non-zero to prevent locking up"
+#~ " the database after accidental code "
+#~ "request from used HOTP slot. In "
+#~ "that case counters on the device "
+#~ "and in Keepass would be out of "
+#~ "sync and OTP codes will not be "
+#~ "the same with expected."
+#~ msgstr ""
+#~ "マスターパスワードの挿入（オプション） Key file / provider: "
+#~ "を One-Time Passwords (OATH HOTP) "
+#~ "に設定 OK をクリック Nitrokey App: HOTP "
+#~ "スロットを選択し HOTP シークレットを生成（自動的にクリップボードにコピーされます） HOTP"
+#~ " スロットを選択し HOTP "
+#~ "シークレットを生成する。注意：この秘密は書き留めて、安全な場所に保管してください。そうしないと、Nitrokeyを紛失したり、壊れたりした場合、パスワードデータベースも同様に失われます!秘密鍵を"
+#~ " Keepass OTP Plugin のウィンドウに貼り付けます。 "
+#~ "両方のウィンドウで Counter "
+#~ "フィールドと桁数が同じに設定されていることを確認してください。NitrokeyアプリのOKをクリックし、スロットを保存します。秘密の種類を選択します。Base32"
+#~ " "
+#~ "その他の設定はお好みで。プラグインのマニュアルを参照してください（ダウンロードしたアーカイブに含まれているはずです）。使用中のHOTPスロットから誤ってコードを要求してデータベースがロックされるのを防ぐため、ルックアヘッド値を0以外に設定することをお勧めします。この場合、デバイスとKeepassのカウンタが同期しなくなり、OTPコードが予想と異なることになります。"
+
+#~ msgid "Unlocking Database"
+#~ msgstr "データベースのアンロック"
+
+#~ msgid ""
+#~ "Open database Insert Master Password (if"
+#~ " set) Key file / provider: to "
+#~ "One-Time Passwords (OATH HOTP) Press "
+#~ "OK Insert HOTP codes by repeatedly "
+#~ "choosing proper HOTP slot from the "
+#~ "Nitrokey App and pasting the clipboard"
+#~ " content to proper field (the order"
+#~ " of the codes is important). Press"
+#~ " OK"
+#~ msgstr ""
+#~ "Open database Insert Master Password (if"
+#~ " set) Key file / provider: to "
+#~ "One-Time Passwords (OATH HOTP) Press "
+#~ "OK Nitrokey App から適切な HOTP "
+#~ "スロットを繰り返し選択してクリップボード内容を適切なフィールドに貼り付けて HOTP "
+#~ "コードを挿入します（コードの順番は重要です）。OKを押す"
+
+#~ msgid "Issues"
+#~ msgstr "課題"
+
+#~ msgid ""
+#~ "Due to nature of HOTP solution it"
+#~ " is possible to get counters "
+#~ "desynchronized (by selecting wrong OTP "
+#~ "slot during day-to-day use). Using"
+#~ " look-ahead plugin's setting should "
+#~ "prevent that (value 10 or so "
+#~ "should suffice - depends on desired "
+#~ "security requirements - this would allow"
+#~ " to 10 accidental requests). TOTP is"
+#~ " not having that problem. Setting the"
+#~ " OTP protection could be error-prone."
+#~ " There is no secret validation on "
+#~ "OtpKeyProv side. In the test movie "
+#~ "at 4:22 I have managed to set "
+#~ "the Base32 coded secret as Hex "
+#~ "(which was not a proper hex value)"
+#~ " and it has not complained about "
+#~ "it. There is no information what "
+#~ "happened to database and how it is"
+#~ " now configured. I have not noticed"
+#~ " until I have watched the movie."
+#~ msgstr "HOTPソリューションの性質上、カウンターが非同期化する可能性があります（日々の使用中に間違ったOTPスロットを選択することによって）。ルックアヘッドプラグインの設定を使用すると、それを防ぐことができます。TOTPはそのような問題はありません。OTP保護の設定は、エラーが発生しやすいかもしれません。OtpKeyProv側で秘密の検証をしない。4:22のテスト動画では、Base32コードのシークレットをHexに設定しましたが（これは適切なHex値ではありませんでした）、それについて苦情は出ませんでした。データベースがどうなったか、どのように設定されたかという情報はありません。ムービーを見て初めて気がつきました。"
+
+#~ msgid ""
+#~ "Tested under Ubuntu 16.10, Nitrokey App"
+#~ " v0.6.3 and Nitrokey Storage v0.45."
+#~ msgstr "Ubuntu 16.10、Nitrokey App v0.6.3、Nitrokey Storage v0.45でテストしています。"
+
+#~ msgid "**Q:** How can I use the True Random Number Generator?"
+#~ msgstr "**Q:** True Random Number Generatorの使用方法について教えてください。"
+
+#~ msgid ""
+#~ "Both devices are compatible to the "
+#~ "OpenPGP Card, so that scdrand should "
+#~ "work. This script may be useful. "
+#~ "The TRNG provides about 40 kbit/s."
+#~ msgstr ""
+#~ "どちらのデバイスもOpenPGP "
+#~ "Cardに対応しているので、scdrandは動作するはずです。このスクリプトが役に立つかもしれません。TRNGは約40kbit/sを提供します。"
+
+#~ msgid ""
+#~ "The user comio created a systemd "
+#~ "file to use scdrand and thus the"
+#~ " TRNG more generally. He created a"
+#~ " ebuild for Gentoo, too."
+#~ msgstr "comioというユーザがscdrandとTRNGをより一般的に使うためのsystemdファイルを作りました。彼はGentoo用のebuildも作りました。"
+
+#~ msgid ""
+#~ "Use Nitrokey library to manage the "
+#~ "one-time passwords and password safe "
+#~ "functionality. The project nitrokey-get-"
+#~ "totp and nitrokey-get-password are "
+#~ "nice examples for using the python "
+#~ "bindings of Nitrokey library to get "
+#~ "a custom interface. In order to "
+#~ "access the integrated smart card, you"
+#~ " can use OpenSC's command line tools."
+#~ " If your application has a PKCS#11"
+#~ " interface, use OpenSC's PKCS#11 driver."
+#~ " To work with the smart card "
+#~ "low level, see the OpenPGP Card "
+#~ "specification. The source code of the"
+#~ " firmware and the hardware layout are"
+#~ " available too. To develop special "
+#~ "applications or for command line access"
+#~ " one can use the nitrocli created "
+#~ "by d-e-s-o. Gkey is a go-based "
+#~ "command line tool to access the "
+#~ "Password Safe and OTP entries. A "
+#~ "libnitrokey wrapper for Rust providing "
+#~ "access to Nitrokey devices."
+#~ msgstr ""
+#~ "ワンタイムパスワードやパスワードセーフ機能の管理には、Nitrokey ライブラリを使用します。プロジェクト "
+#~ "nitrokey-get-totp と nitrokey-get-"
+#~ "password は、Nitrokey ライブラリの python "
+#~ "バインディングを使用してカスタムインターフェイスを取得するための素晴らしい例です。統合されたスマートカードにアクセスするために、OpenSC'のコマンドラインツールを使用することができます。PKCS#11"
+#~ " インタフェースを持つアプリケーションの場合は、OpenSC'の PKCS#11 "
+#~ "ドライバを使用します。スマートカードを低レベルで扱うには、OpenPGP Card "
+#~ "仕様を参照してください。ファームウェアのソースコードとハードウェアのレイアウトも公開されています。特別なアプリケーションを開発したり、コマンドラインアクセスを行うには、"
+#~ " d-e-s-o が作成した nitrocli を使用することができます。Gkey "
+#~ "はパスワードセーフと OTP エントリにアクセスするための go "
+#~ "ベースのコマンドラインツールです。Rust 用の libnitrokey ラッパーで、Nitrokey"
+#~ " デバイスにアクセスできます。"
+
+#~ msgid "# HSM 2"
+#~ msgstr "# HSM 2"
+
+#~ msgid ""
+#~ "**Nitrokey HSM:** 124 dataobjects (DF, "
+#~ "EF) can be created. Each EF can"
+#~ " have a size of up to 256 "
+#~ "byte. The total storage capacity of "
+#~ "ca. 32 KByte is shared dynamically "
+#~ "among keys and data objects."
+#~ msgstr ""
+#~ "**NitrokeyHSM:**124個のデータオブジェクト(DF, "
+#~ "EF)を作成できます。各EFのサイズは最大256バイトまでです。合計約32KByteの記憶容量は、キーとデータオブジェクトで動的に共有されます。"
+
+#~ msgid "**Q:** How to use the HSM for Login For: Nitrokey HSM"
+#~ msgstr "**Q:** ログイン用HSMの使用方法について For:Nitrokey HSM"
+
+#~ msgid "Select your use case:"
+#~ msgstr "ユースケースを選択します。"
+
+#~ msgid ""
+#~ "Login With Nitrokey HSM on Stand "
+#~ "Alone Windows Computers Login With "
+#~ "Nitrokey HSM on Windows Domain Computers"
+#~ " Using MS Active Directory For Unix"
+#~ " environments an integration with PAM "
+#~ "and OpenSSH is available."
+#~ msgstr ""
+#~ "スタンドアロンWindowsコンピュータでのNitrokey HSMによるログイン MS Active"
+#~ " Directoryを使用したWindowsドメインコンピュータでのNitrokey HSMによるログイン "
+#~ "Unix環境では、PAMとOpenSSHとの統合が利用可能です。"
+
+#~ msgid "**Q:**  How to use the HSM for Email Encryption"
+#~ msgstr "**Q:** 電子メール暗号化用HSMの使用方法について"
+
+#~ msgid ""
+#~ "Encrypt your email using the S/MIME "
+#~ "industry standard available in all major"
+#~ " e-mail clients."
+#~ msgstr "主要なメールクライアントで利用可能な業界標準のS/MIMEを使用して、メールを暗号化することができます。"
+
+#~ msgid ""
+#~ "The Nitrokey HSM has been tested "
+#~ "to work with Mozilla Thunderbird and "
+#~ "Microsoft Outlook. Other email clients "
+#~ "with support for PKCS#11 or Microsoft"
+#~ " CSP should work as well."
+#~ msgstr ""
+#~ "Nitrokey HSMは、Mozilla ThunderbirdおよびMicrosoft "
+#~ "Outlookでの動作が確認されています。PKCS#11 または Microsoft CSP "
+#~ "をサポートする他の電子メールクライアントも同様に動作するはずです。"
+
+#~ msgid "Note: A certificate can be purchased cheaply from CERTUM."
+#~ msgstr "注：証明書はCERTUMから安価に購入できます。"
+
+#~ msgid ""
+#~ "**Q:**   How to use the Nitrokey "
+#~ "for Hard Disk Encryption with VeraCrpt?"
+#~ msgstr "**Q:**「Nitrokey for Hard Disk Encryption」と「VeraCrpt」の併用方法について教えてください。"
+
+#~ msgid ""
+#~ "VeraCrypt is a free and Open "
+#~ "Source disk encryption software for "
+#~ "Windows, macOS, and GNU/Linux. It is "
+#~ "the successor of TrueCrypt and thus "
+#~ "recommended, although the following "
+#~ "instructions should apply to TrueCrypt "
+#~ "as well. Follow these steps to use"
+#~ " the program with Nitrokey:"
+#~ msgstr ""
+#~ "VeraCrypt は、Windows、macOS、GNU/Linux "
+#~ "用のフリーでオープンソースのディスク暗号化ソフトウェアです。TrueCryptの後継ソフトであるため推奨されていますが、以下の説明はTrueCryptにも適用されるはずです。Nitrokey"
+#~ " でプログラムを使用するには、以下の手順に従ってください。"
+
+#~ msgid ""
+#~ "Security Consideration: Please note that "
+#~ "VeraCrypt doesn't make use of the "
+#~ "full security which Nitrokey (and smart"
+#~ " cards in general) offer. Instead it"
+#~ " stores a keyfile on the Nitrokey "
+#~ "which theoretically could be stolen by"
+#~ " a computer virus after the user "
+#~ "enters the password."
+#~ msgstr "セキュリティに配慮しています。VeraCryptは、Nitrokey（および一般的なスマートカード）が提供する完全なセキュリティを利用しないことに注意してください。その代わり、Nitrokeyにキーファイルを保存し、ユーザーがパスワードを入力した後、理論的にはコンピュータウイルスによって盗まれる可能性があります。"
+
+#~ msgid ""
+#~ "Note: Aloaha Crypt is based on "
+#~ "TrueCrypt/VeraCrypt but without the described"
+#~ " security limitation. (Not tested with "
+#~ "Nitrokey HSM!)"
+#~ msgstr ""
+#~ "注：Aloaha "
+#~ "CryptはTrueCrypt/VeraCryptをベースにしていますが、説明されているセキュリティの制限はありません。(NitrokeyのHSMではテストしていません！)"
+
+#~ msgid "**Q:** How to sign and encrypt files and pdfs?"
+#~ msgstr "**Q:** ファイルやpdfに署名したり暗号化する方法は？"
+
+#~ msgid "GnuPG"
+#~ msgstr "グヌーピー"
+
+#~ msgid ""
+#~ "Starting with version 2.1, GnuPG has "
+#~ "build-in but limited support for "
+#~ "the Nitrokey HSM. Use the gpgsm "
+#~ "tool to sign, verify, encrypt and "
+#~ "decrypt files or S/MIME messaging using"
+#~ " your Nitrokey HSM. Use a signature"
+#~ " key on a Nitrokey HSM to sign"
+#~ " documents using Acrobat Reader, Open "
+#~ "Office / Libre Office or any other"
+#~ " PDF reader supporting electronic "
+#~ "signatures. ECC HSM Encryptor"
+#~ msgstr ""
+#~ "バージョン2.1以降、GnuPGはNitrokey HSMをビルドインで限定的にサポートしています。gpgsm "
+#~ "ツールを使用して、Nitrokey HSM を使用してファイルや S/MIME "
+#~ "メッセージングに署名、検証、暗号化、復号化を行います。Acrobat Reader、Open Office "
+#~ "/ Libre Office、または電子署名をサポートするその他の PDF "
+#~ "リーダーを使用して、Nitrokey HSM の署名キーを使用して文書に署名します。ECC "
+#~ "HSM暗号化装置"
+
+#~ msgid ""
+#~ "ECC HSM Encryptor is a small "
+#~ "application to encrypt and decrypt files"
+#~ " with a Nitrokey HSM."
+#~ msgstr "ECC HSM Encryptor は、Nitrokey HSM を使ってファイルを暗号化・復号化するための小さなアプリケーションです。"
+
+#~ msgid ""
+#~ "**Q:** How to do certificat-based "
+#~ "Web login Protect access to sensitive"
+#~ " information on your website with 2nd"
+#~ " factor authentication."
+#~ msgstr "**Q:**証明書ベースのWebログインを行う方法 2要素認証により、Webサイト上の機密情報へのアクセスを保護することができます。"
+
+#~ msgid ""
+#~ "Use a Nitrokey HSM as authentication "
+#~ "token via the build-in device "
+#~ "authentication PKI or use keys and "
+#~ "certificates on a Nitrokey HSM for "
+#~ "TLS/SSL client authentication."
+#~ msgstr ""
+#~ "Nitrokey HSM を内蔵のデバイス認証 PKI "
+#~ "を介して認証トークンとして使用するか、Nitrokey HSM 上の鍵および証明書を TLS/SSL"
+#~ " クライアント認証に使用します。"
+
+#~ msgid ""
+#~ "**Q:** SSH for Server Administration "
+#~ "with windows For: Nitrokey Pro, Nitrokey"
+#~ " Storage, Nitrokey Start, Nitrokey HSM"
+#~ msgstr ""
+#~ "**Q:** Windowsでサーバ管理を行うためのSSH For:Nitrokey "
+#~ "Pro、Nitrokey Storage、Nitrokey Start、Nitrokey HSM。"
+
+#~ msgid ""
+#~ "The Nitrokey should already have PGP "
+#~ "keys installed and the local GnuPG "
+#~ "keyring should be aware of the "
+#~ "keys, that is to say GPG4Win "
+#~ "should be installed on the system "
+#~ "(only the core application GnuPG is "
+#~ "needed). Furthermore you should install "
+#~ "PuTTY. Preparation on client"
+#~ msgstr "NitrokeyにはすでにPGP鍵がインストールされており、ローカルのGnuPGキーリングが鍵を認識していること、つまりGPG4Winがシステムにインストールされている必要があります（コアアプリケーションのGnuPGのみが必要です）。さらに、PuTTYをインストールする必要があります。クライアント側の準備"
+
+#~ msgid "**Q:** SSH Server administration on linux"
+#~ msgstr "**Q:** linuxにおけるSSHサーバーの管理について"
+
+#~ msgid "**Q:** DNSSEC"
+#~ msgstr "**Q:** DNSSECについて"
+
+#~ msgid "For: Nitrokey HSM"
+#~ msgstr "のために。NitrokeyHSM"
+
+#~ msgid ""
+#~ "Protect your domain name resolution "
+#~ "using DNSSEC and a Nitrokey HSM as"
+#~ " secure key store. It's based on "
+#~ "Smartcard-HSM which is why the "
+#~ "following resource apply:"
+#~ msgstr ""
+#~ "DNSSECとNitrokey HSMを安全なキーストアとして使用し、ドメイン名解決を保護します。これは "
+#~ "Smartcard-HSM をベースにしているため、次のリソースが適用されます。"
+
+#~ msgid ""
+#~ "Signing NSD DNSSEC Zones with Nitrokey"
+#~ " HSM by Vadim Penzin. Integration "
+#~ "with OpenDNSSEC has been successfully "
+#~ "tested in a demo by Richard Lamb."
+#~ " Luis D Espinoza Sanchez & Eberhard"
+#~ " W Lisse held a session on "
+#~ "using the SmartCard-HSM for DNSSEC "
+#~ "at the 2015 ICAAN Meeting in "
+#~ "Singapore. Jan-Piet Mens wrote a "
+#~ "nice article about integrating the "
+#~ "SmartCard-HSM with PowerDNS."
+#~ msgstr ""
+#~ "NSD DNSSEC Zones with Nitrokey HSMに署名"
+#~ " by Vadim Penzin.OpenDNSSECとの統合は、Richard "
+#~ "Lambによるデモで成功裏にテストされました。Luis D Espinoza Sanchez "
+#~ "& Eberhard W Lisse は、シンガポールで開催された 2015"
+#~ " ICAAN Meeting で SmartCard-HSM for"
+#~ " DNSSEC の使用に関するセッションを開催しました。Jan-Piet Mens が"
+#~ "、SmartCard-HSM と PowerDNS の統合に関する素晴らしい記事を執筆しました。"
+
+#~ msgid ""
+#~ "**Q:** Physical Access Control With it's"
+#~ " unique build-in device authentication "
+#~ "PKI, a Nitrokey HSM has a "
+#~ "cryptographically protected unique identity "
+#~ "that can be verified in a fast "
+#~ "authentication protocol. An access control "
+#~ "terminal can verify authenticity and "
+#~ "identity of the device, create a "
+#~ "secure communication channel and perform "
+#~ "offline PIN verification. The coolPACS "
+#~ "project has all the details."
+#~ msgstr ""
+#~ "**Q: **物理的なアクセス管理 それ's の独特な造り埋め込まれた装置証明 PKI"
+#~ " によって、Nitrokey HSM "
+#~ "に速い認証議定書で確認することができる暗号学的に保護された独特なアイデンティティがあります。アクセス制御端末は、デバイスの真正性とアイデンティティを確認し、安全な通信チャネルを作成し、オフラインでPIN検証を行うことができます。coolPACSプロジェクトに詳細があります。"
+
+#~ msgid "**Q:**"
+#~ msgstr "**Q:**"
+
+#~ msgid "PKI / Certificate Authority (CA)"
+#~ msgstr "PKI / 認証局 (CA)"
+
+#~ msgid "**Q:** Secret Management and Cloud Infrastructure"
+#~ msgstr "**Q:** 秘密管理とクラウドインフラストラクチャ"
+
+#~ msgid ""
+#~ "An approach to secure keys for "
+#~ "Hashicorp Vault/Bank-Vault on a Nitrokey"
+#~ " HSM can be found at banzaicloud.com."
+#~ msgstr ""
+#~ "Hashicorp Vault/Bank-Vault の鍵を Nitrokey "
+#~ "HSM で保護する方法は、banzaicloud.com に記載されています。"
+
+#~ msgid "**Q:** How to do N-of-m Schemes"
+#~ msgstr "**Q：** N-of-m方式はどのように行うのですか？"
+
+#~ msgid ""
+#~ "The Nitrokey HSM 2 supports two "
+#~ "different n-of-m schemes - one for "
+#~ "secure sharing of key material/passwords "
+#~ "and one for public key authentication"
+#~ " to control the access to the "
+#~ "device. Please see this blog post "
+#~ "for more detailed information. N-of-m "
+#~ "for DKEK Shares"
+#~ msgstr ""
+#~ "Nitrokey HSM 2 は、鍵素材/パスワードを安全に共有するための n-of-m"
+#~ " スキームと、デバイスへのアクセスを制御するための公開鍵認証の 2 "
+#~ "種類のスキームをサポートしています。より詳細な情報はこちらのブログ記事をご覧ください。DKEK共有のためのN-of-m"
+
+#~ msgid ""
+#~ "This feature can be used with "
+#~ "OpenSC as described here. The general"
+#~ " approach is seen in the videos "
+#~ "below (external links)."
+#~ msgstr "この機能は、ここで説明するようにOpenSCで使用することができます。一般的なアプローチは、以下のビデオ（外部リンク）でご覧いただけます。"
+
+#~ msgid "Nitrokey HSM's Secure Key Backup and Restore:"
+#~ msgstr "Nitrokey HSM'の安全な鍵のバックアップとリストア。"
+
+#~ msgid "Screencast"
+#~ msgstr "スクリーンキャスト"
+
+#~ msgid "Nitrokey HSM's M-of-N Threshold Scheme:"
+#~ msgstr "Nitrokey HSM'のM-of-N閾値スキーム。"
+
+#~ msgid "screencast N-of-m for public key authentication"
+#~ msgstr "スクリーンキャスト 公開鍵認証のN-of-m"
+
+#~ msgid ""
+#~ "So far n-of-m authentication is only "
+#~ "supported in OpenSCDP. The blog post "
+#~ "gives an overview and a how-to "
+#~ "here (CDN access required) is shown "
+#~ "the process step by step in the"
+#~ " Smart Card Shell. For OpenSC there"
+#~ " is a ticket to get that "
+#~ "integrated."
+#~ msgstr ""
+#~ "今のところ、n-of-"
+#~ "m認証はOpenSCDPでのみサポートされています。ブログポストでは概要と、こちらのハウツー(CDNアクセスが必要)ではSmart "
+#~ "Card "
+#~ "Shellでステップバイステップで処理する様子を紹介しています。OpenSCについては、統合するためのチケットがあります。"
+
+#~ msgid ""
+#~ "n-of-m authentication is also supported "
+#~ "in the PKI-as-a-Service Portal for "
+#~ "locally and remote connected HSMs. The"
+#~ " PKI-as-a-Service Portal is based on"
+#~ " OpenSCDP."
+#~ msgstr ""
+#~ "n-of-m 認証は、ローカルおよびリモートに接続された HSM に対して PKI-"
+#~ "as-a-Service Portal でもサポートされています。PKI-as-a-Service"
+#~ " Portal は、OpenSCDP をベースとしている。"
+
+#~ msgid "**Q:** How to safe Cryptocurrences in the Nitrokey HSM"
+#~ msgstr "**Q:** Nitrokey HSMでCryptocurrencesを安全に使用するにはどうすればよいですか？"
+
+#~ msgid ""
+#~ "J.v.d.Bosch wrote a simple, free python"
+#~ " program to secure the private key"
+#~ " of a Bitcoin wallet in a HSM."
+#~ " See here for further information. "
+#~ "Using the HSM in an Ethereum PoA"
+#~ " Chain. Tezos has been reported to"
+#~ " work with Nitrokey HSM."
+#~ msgstr "J.v.d.Boschは、HSMでBitcoinウォレットの秘密鍵を保護するためのシンプルでフリーなpythonプログラムを書きました。詳しくはこちらをご覧ください。イーサリアムのPoAチェーンでHSMを使用する。TezosはNitrokeyのHSMで動作することが報告されています。"
+
+#~ msgid ""
+#~ "**Q:** How to use the True Random"
+#~ " Number Generator? Nitrokey HSM can "
+#~ "be used with Botan and TokenTools "
+#~ "by using OpenSC as a PKCS#11 "
+#~ "driver."
+#~ msgstr ""
+#~ "**Q:** True Random Number "
+#~ "Generatorの使用方法について教えてください。Nitrokey "
+#~ "HSMは、PKCS#11ドライバとしてOpenSCを使用することで、BotanやTokenToolsで使用することができます。"
+
+#~ msgid ""
+#~ "OpenSSL can't use Nitrokey HSM's RNG "
+#~ "directly because engine-pkcs11 doesn't "
+#~ "contain a mapping for OpenSSL to "
+#~ "C_GenerateRandom."
+#~ msgstr ""
+#~ "engine-pkcs11 には OpenSSL と "
+#~ "C_GenerateRandom のマッピングがないため、OpenSSL は Nitrokey "
+#~ "HSM の RNG を直接使用できません。"
+
+#~ msgid "**Q:** What can I use for development and integration?"
+#~ msgstr "**Q:**開発・統合に使用できるものは何ですか？"
+
+#~ msgid ""
+#~ "se OpenSC's commandline tools If your"
+#~ " application has a PKCS#11 interface, "
+#~ "use OpenSC's PKCS#11 driver. Depending "
+#~ "on your Linux distribution, the PKCS "
+#~ "driver may may be located at "
+#~ "/usr/lib/x86_64-linux-gnu/opensc-pkcs11.so for "
+#~ "example."
+#~ msgstr ""
+#~ "OpenSC のコマンドラインツール PKCS#11 "
+#~ "のインターフェースを持つアプリケーションの場合、OpenSC の PKCS#11 "
+#~ "ドライバを使用します。Linux のディストリビューションによっては、PKCS ドライバは "
+#~ "/usr/lib/x86_64-linux-gnu/opensc-pkcs11.so "
+#~ "などに置かれていることがあります。"
+
+#~ msgid ""
+#~ "Alternatively to OpenSC, you might use"
+#~ " sc-hsm-embedded PKCS#11 and CSP-"
+#~ "Minidriver Module."
+#~ msgstr "OpenSCの代わりに、sc-hsm-embedded PKCS#11 とCSP-Minidriver Moduleを使用することもできます。"
+
+#~ msgid ""
+#~ "In case you use Java, you find "
+#~ "a JCE Provider as part of Smart"
+#~ " Card Shell. You can find information"
+#~ " about the m-of-n scheme here. Secure"
+#~ " Messaging can be used with the "
+#~ "JCE provider. Please register at the "
+#~ "CardContact Developer Network to get "
+#~ "access to the user manual and "
+#~ "further tools. You can also request "
+#~ "the manual from us. Smart card "
+#~ "forwarding with Fedora A user generated"
+#~ " tool on GitHub to provide an "
+#~ "easy frontend to OpenSCs toolset - "
+#~ "nitrotool A forum post describes the "
+#~ "procedure to sign executables with a "
+#~ "key stored on HSM on Windows."
+#~ msgstr ""
+#~ "Javaを使用している場合、Smart Card "
+#~ "Shellの一部としてJCEプロバイダがあります。m-of-nスキームに関する情報は、こちらでご覧になれます。JCEプロバイダを使用すると、セキュアメッセージングを使用することができます。CardContact"
+#~ " Developer "
+#~ "Networkに登録すると、ユーザーマニュアルやその他のツールにアクセスすることができます。また、マニュアルは弊社からご請求いただくことも可能です。Fedoraでのスマートカード転送"
+#~ " GitHubでユーザが作成した、OpenSCsツールセットへの簡単なフロントエンドを提供するツール - "
+#~ "nitrotool フォーラムの投稿で、WindowsのHSMに保存した鍵で実行ファイルを署名する手順が説明されています。"
+
+#~ msgid "Key Use Counter"
+#~ msgstr "キーユースカウンター"
+
+#~ msgid ""
+#~ "The Key Use Counter is displayed "
+#~ "in the Key Manager of the Smart"
+#~ " Card Shell. At the moment you "
+#~ "can only set it with a script "
+#~ "(SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter in "
+#~ "the class scsh/sc-hsm/SmartCardHSM.js)."
+#~ msgstr ""
+#~ "Key Use Counterは、Smart Card ShellのKey "
+#~ "Managerに表示されます。現時点ではスクリプト（scsh/sc-"
+#~ "hsm/SmartCardHSM.jsクラス内のSmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter）で設定することが可能です。"
+
+#~ msgid ""
+#~ "In our PKCS#11 module there is a"
+#~ " proprietary attribute CKA_SC_HSM_KEY_USE_COUNTER "
+#~ "with the key use of the "
+#~ "C_GenerateKeyPair counter can be set. "
+#~ "The attribute can then also be set"
+#~ " for a key can be queried."
+#~ msgstr "PKCS#11モジュールでは、CKA_SC_HSM_KEY_USE_COUNTERという独自の属性があり、C_GenerateKeyPairの鍵使用量のカウンターを設定することができます。この属性は、鍵の問い合わせにも設定することができます。"
+
+#~ msgid ""
+#~ "In OCF and the JCE Provider, the"
+#~ " Key Use Counter can be queried "
+#~ "with SmartCardHSMKey.getUseCounter() and confirm "
+#~ "with SmartCardHSMKeySpec.setKeyUseCounter() can be"
+#~ " set."
+#~ msgstr ""
+#~ "OCF と JCE Provider "
+#~ "では、SmartCardHSMKey.getUseCounter() で Key Use "
+#~ "Counter を問い合わせ、 SmartCardHSMKeySpec.setKeyUseCounter() "
+#~ "で確認し、設定することができる。"
+
