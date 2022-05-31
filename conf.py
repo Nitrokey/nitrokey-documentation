@@ -212,6 +212,7 @@ html_theme = "furo"
 
 html_theme_options = {
     # Furo options
+    "theme-color": "light",
     "light_logo": "logo.png",
     "dark_logo": "logo.png",
 
