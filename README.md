@@ -20,8 +20,6 @@
 
 - Relative paths (also included and double included) are always evaluated from the path of the final including page. Images within pages that are included elsewhere must therefore always be specified with an absolute path starting with `/` which stands for the root directory of the document.
 
-- add the subheading below the first heading with `.. contents:: :local:`
-
 - add the ToC for local headings in `/$product/$platform/*.rst` with `.. include:: ./product_platform_heading.rst` 
 
 - After each commit, the CI pushes translations automatically. Therefore always do `git pull` before `git commit ...`
@@ -45,8 +43,7 @@ Before pushing your changes to the Github repository, commit often and test the 
 Setup Sphinx and components:
 
 ```
-apt install python3-sphinx
-python3 -m pip install divio-docs-theme install sphinx-rtd-theme sphinx-intl sphinxprettysearchresults pygments-style-cheerfully-dark furo sphinx_copybutton
+python3 -m pip install Sphinx divio-docs-theme install sphinx-rtd-theme sphinx-intl sphinxprettysearchresults pygments-style-cheerfully-dark furo sphinx_copybutton
 mkdir -p ~/temp/sphinx_preview
 ```
 
