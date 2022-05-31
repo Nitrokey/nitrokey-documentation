@@ -18,3 +18,4 @@ Nitrokey Documentation
    nextbox/index
    nethsm/index
    nitrowall/index
+   software/index
