@@ -212,7 +212,6 @@ html_theme = "furo"
 
 html_theme_options = {
     # Furo options
-    "theme-color": "light",
     "light_logo": "logo.png",
     "dark_logo": "logo.png",
 
@@ -229,8 +228,6 @@ html_theme_options = {
         "color-admonition-background": "#e7f2fa",
         "color-sidebar-link-text--top-level": "#000",
     },
-
-    "canonical_url": "https://docs.nitrokey.com/",
 }
 
 html_title = "Nitrokey Documentation"
