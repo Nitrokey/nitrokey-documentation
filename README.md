@@ -46,7 +46,7 @@ Setup Sphinx and components:
 
 ```
 apt install python3-sphinx
-python3 -m pip install divio-docs-theme install sphinx-rtd-theme sphinx-intl sphinxprettysearchresults pygments-style-cheerfully-dark
+python3 -m pip install divio-docs-theme install sphinx-rtd-theme sphinx-intl sphinxprettysearchresults pygments-style-cheerfully-dark furo sphinx_copybutton
 mkdir -p ~/temp/sphinx_preview
 ```
 
