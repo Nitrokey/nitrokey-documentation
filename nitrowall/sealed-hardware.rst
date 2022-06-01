@@ -8,13 +8,10 @@ please contact us to arrange further action.
 
 
 .. figure:: ./images/nitrowall-num-one.png
- :scale: 100
  :alt: sealing number one
 
 .. figure:: ./images/nitrowall-num-two.png
-  :scale: 100
   :alt: sealing number two
 
 .. figure:: ./images/nitrowall-num-three.png
-   :scale: 100
    :alt: sealing number three
