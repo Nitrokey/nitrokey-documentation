@@ -240,12 +240,19 @@ html_theme_options = {
 
         "font-stack": "'Open Sans', Helvetica, Arial, sans-serif",
         "font-stack--monospace": "'Operator mono', 'Hack', 'Menlo', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace",
+
         "color-admonition-title-background--note": "#6ab0de",
         "color-admonition-title-background--tip": "#1abc9c",
         "color-admonition-title-background--hint": "#1abc9c",
         "color-admonition-title-background--important": "#1abc9c",
         "color-admonition-title-background--warning": "#C70336",
+
         "color-admonition-background": "#e7f2fa",
+        "color-admonition-background--note": "#e6edf1",
+        "color-admonition-background--tip": "#adf8e9",
+        "color-admonition-background--hint": "#adf8e9",
+        "color-admonition-background--important": "#adf8e9",
+        "color-admonition-background--warning": "#f8e2e2",
 
         "color-code": "#ddd",
         "color-code-background": "#3c4142",
