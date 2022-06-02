@@ -246,6 +246,9 @@ html_theme_options = {
         "color-admonition-title-background--important": "#1abc9c",
         "color-admonition-title-background--warning": "#C70336",
         "color-admonition-background": "#e7f2fa",
+
+        "color-code": "#ddd",
+        "color-code-background": "#3c4142",
     },
 
     "dark_css_variables": {
@@ -281,11 +284,14 @@ html_theme_options = {
         "color-admonition-title-background--warning": "#c70336",
 
         "color-admonition-background": "#208571",
-        "color-admonition-background--note": "#6ab0de",
+        "color-admonition-background--note": "#2a6592",
         "color-admonition-background--tip": "#208571",
         "color-admonition-background--hint": "#208571",
         "color-admonition-background--important": "#208571",
         "color-admonition-background--warning": "#4e1d1d",
+
+        "color-code": "#ddd",
+        "color-code-background": "#000",
     },
 }
 
