@@ -216,8 +216,28 @@ html_theme_options = {
     "dark_logo": "logo.png",
 
     "light_css_variables": {
+        "color-logo-text": "#181818",
         "color-brand-primary": "#c70336",
         "color-brand-content": "#c70336",
+        "color-brand-content-hover": "#ef144d",
+        "color-content-foreground": "#131416",
+
+        "color-definition-list-background": "#efecf6",
+        "color-definition-list-text": "#000",
+
+        "color-sidebar-background": "#f5f6fb",
+        "color-sidebar-link-text": "#131416",
+        "color-sidebar-links-hover": "#111",
+        "color-sidebar-link-text--top-level": "#000",
+
+        "color-sidebar-border": "#e8e7f1",
+
+        "color-sidebar-search-background": "#fff",
+        "color-sidebar-search-background--focus": "#f5f6fb",
+        
+        "color-sidebar-select-background": "#fff",
+        "color-sidebar-select-border": "#e8e7f1",
+
         "font-stack": "'Open Sans', Helvetica, Arial, sans-serif",
         "font-stack--monospace": "'Operator mono', 'Hack', 'Menlo', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace",
         "color-admonition-title-background--note": "#6ab0de",
@@ -226,7 +246,46 @@ html_theme_options = {
         "color-admonition-title-background--important": "#1abc9c",
         "color-admonition-title-background--warning": "#C70336",
         "color-admonition-background": "#e7f2fa",
-        "color-sidebar-link-text--top-level": "#000",
+    },
+
+    "dark_css_variables": {
+        "color-logo-text": "#eee",
+        "color-brand-primary": "#c70336",
+        "color-brand-content": "#ef144d",
+        "color-brand-content-hover": "#c70336",
+        "color-content-foreground": "#eee",
+
+        "color-definition-list-background": "#1c1f28",
+        "color-definition-list-text": "#fff",
+
+        "color-sidebar-background": "#111",
+        "color-sidebar-link-text": "#eee",
+        "color-sidebar-links-hover": "#111",
+        "color-sidebar-link-text--top-level": "#fff",
+
+        "color-sidebar-border": "#1f1f1f",
+
+        "color-sidebar-search-background": "#141416",
+        "color-sidebar-search-background--focus": "#000",
+        
+        "color-sidebar-select-background": "#2a2a2a",
+        "color-sidebar-select-border": "#666",
+
+        "font-stack": "'Open Sans', Helvetica, Arial, sans-serif",
+        "font-stack--monospace": "'Operator mono', 'Hack', 'Menlo', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace",
+
+        "color-admonition-title-background--note": "#6ab0de",
+        "color-admonition-title-background--tip": "#1abc9c",
+        "color-admonition-title-background--hint": "#1abc9c",
+        "color-admonition-title-background--important": "#1abc9c",
+        "color-admonition-title-background--warning": "#c70336",
+
+        "color-admonition-background": "#208571",
+        "color-admonition-background--note": "#6ab0de",
+        "color-admonition-background--tip": "#208571",
+        "color-admonition-background--hint": "#208571",
+        "color-admonition-background--important": "#208571",
+        "color-admonition-background--warning": "#4e1d1d",
     },
 }
 

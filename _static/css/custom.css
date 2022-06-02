@@ -18,9 +18,6 @@ body {
     display: none;
     visibility: hidden;
 }
-h1, h2, h3, h4, h5, h6 {
-    color: #000;
-}
 h1, h2, .sidebar-brand-text {
     font-family: "Teko", Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -51,9 +48,16 @@ p {
     margin-bottom: 24px;
 }
 a {
-    color: #C70336;
+    color: var(--color-brand-content);
+    /* color: #ef144d; */
     text-decoration: none;
     cursor: pointer;
+}
+a:visited {
+    color: var(--color-brand-content);
+}
+a:hover {
+    color: var(--color-brand-content-hover);
 }
 
 .btn-neutral {
@@ -61,13 +65,6 @@ a {
     color: #fff !important;
 }
 
-a:hover {
-    color: #AB1738;
-}
-
-a:visited {
-    color: #AB1738;
-}
 .wy-plain-list-disc, .rst-content .section ul,
 .rst-content .toctree-wrapper ul,
 article ul {
@@ -83,13 +80,12 @@ article ul {
 }
 
 .logo {
-    height: 40px;
+    height: 60px;
+    width: auto;
+    color: var(--color-logo-text);
 }
 .back-to-top {
     z-index: 60;
-}
-.theme-toggle-container {
-    display: none;
 }
 
 article .align-default {
@@ -151,7 +147,7 @@ ul.search li a {
 
 /* Sidebar */
 .sidebar-drawer {
-    background: #f5f6fb;
+    background: var(--color-sidebar-background);
     border-right: transparent;
     justify-content: flex-start;
     min-width: auto;
@@ -161,12 +157,12 @@ ul.search li a {
     width: 17em;
 }
 .sidebar-tree {
-    border-top: 1px solid #e8e7f1;
+    border-top: 1px solid var(--color-sidebar-border);
     margin-top: 20px;
     padding-top: 20px;
 }
 .sidebar-brand {
-    border-bottom: 1px solid #e8e7f1;
+    border-bottom: 1px solid var(--color-sidebar-border);
     margin-bottom: 20px;
     padding-top: 13px;
 }
@@ -191,19 +187,21 @@ ul.search li a {
 
 .sidebar-search-container {
     margin: 0 20px 0;
-    background-color: #fff;
+    background-color: var(--color-sidebar-search-background);
     border-radius: 5px;
-    border: 1px solid #e9e8ee;
+    border: 1px solid var(--color-sidebar-border);
     font-size: .9em;
 }
 input.sidebar-search {
     border: none;
 }
 .sidebar-search-container::before {
-    background-color: #222;
+    background-color: var(--color-sidebar-link-text);
     z-index: 20;
 }
-
+.sidebar-tree .current-page > .current {
+    color: var(--color-brand-content);
+}
 /*
 * Sidebar right
 */
@@ -218,24 +216,48 @@ input.sidebar-search {
     width: 100%;
     height: auto;
 }
-
-.tablet-header-actions .toc-logo {
+.content-icon-container,
+.toc-content-icon {
+    align-items: center;
+}
+.theme-toggle {
+    padding: 3px 6px;
+}
+.tablet-lang-switcher + .content-icon-container .toc-content-icon {
+    padding: 3px 6px;
+}
+.tablet-header-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: -1.5rem;
+}
+.tablet-header-actions .logo {
     display: none;
 }
-
 @media screen and (max-width: 82em) {
-    .tablet-header-actions .toc-logo {
+    .tablet-header-actions {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .tablet-header-actions .logo-link {
+        display: block;
+        margin: 0 20px 0 0;
+    }
+    .tablet-header-actions .logo {
         max-width: 120px;
         display: block;
-        margin: -13px 20px 0 0;
     }
 }
 
 @media screen and (max-width: 67em) {
-    .tablet-header-actions .toc-logo {
+    .tablet-header-actions .logo {
         display: none;
     }
-    .toc-logo {
+    .logo {
         max-width: 180px;
     }
 }
@@ -293,17 +315,17 @@ div[class^='highlight'] pre {
     padding: 1.8em 1.6em;
     line-height: 24px;
     margin-bottom: 24px;
-    background: #e7f2fa;
+    background: var(--color-admonition-background);
     border-radius: 5px;
 }
 .admonition {
     border: none;
     padding: 1.8em 1.6em;
 }
-.admonition.tip { background-color: #dbfaf4; }
-.admonition.hint { background-color: #dbfaf4; }
-.admonition.important { background-color: #dbfaf4; }
-.admonition.warning { background-color: #FBEDF1; }
+.admonition.tip { background-color: var(--color-admonition-background--tip); }
+.admonition.hint { background-color: var(--color-admonition-background--hint); }
+.admonition.important { background-color: var(--color-admonition-background--important); }
+.admonition.warning { background-color: var(--color-admonition-background--warning); }
 
 .wy-alert-title, p.admonition-title {
     color: #fff;
@@ -402,7 +424,8 @@ div[class^='highlight'] pre {
 .field-list dt, .option-list dt, dl.footnote dt, dl.glossary dt, dl.simple dt, dl:not([class]) dt {
     font-weight: 500;
     padding: .5em 1em;
-    background-color: #efecf6;
+    background-color: var(--color-definition-list-background);
+    color: var(--color-definition-list-text);
     margin-top: 0.25rem;
     margin-bottom: .5em;
 }

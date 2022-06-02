@@ -70,12 +70,10 @@
         </a>
 
         <div class="tablet-header-actions">
-    
-            <div class="toc-logo">
-                <a href="https://nitrokey.com" title="Nitrokey website">
-                    <img src="/_static/logo.png" alt="Nitrokey logo" />
-                </a>
-            </div>
+
+            <a class="logo-link" href="https://nitrokey.com" title="Nitrokey website">
+                {% include "logo.html" %}
+            </a>
 
             <div class="tablet-lang-switcher">
                 {% include "language-switcher.html" %}
@@ -218,7 +216,7 @@
       <div class="logo-and-language">
         <div class="toc-logo">
             <a href="https://nitrokey.com" title="Nitrokey website">
-                <img src="/_static/logo.png" alt="Nitrokey logo" />
+                {% include "logo.html" %}
             </a>
         </div>
 
@@ -243,8 +241,5 @@
 
   </div>
 </div>
-<script>
-    document.body.dataset.theme = 'light';
-    localStorage.setItem("theme", 'light');
-</script>
+<script src="/_static/js/theme-switcher.js"></script>
 {%- endblock %}
