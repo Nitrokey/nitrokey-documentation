@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 13:21+0200\n"
+"POT-Creation-Date: 2022-06-08 13:30+0200\n"
 "PO-Revision-Date: 2022-05-31 12:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/cs/>\n"
 "Language: cs\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/cs/>\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -141,7 +140,7 @@ msgstr ""
 " můžete se stále přihlásit pomocí druhého klíče Nitrokey (nebo jiného "
 "druhého faktoru)."
 
-#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:69
+#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:72
 #: ../shared-faqs/generic.rst:34 ../start/faq.rst:38 ../storage/faq.rst:21
 msgid "**Q:** How large is the storage capacity?"
 msgstr "**Q:** Jak velká je kapacita úložiště?"
@@ -2146,11 +2145,30 @@ msgstr "secp256"
 msgid "secp521"
 msgstr "secp521"
 
-#: ../hsm/faq.rst:64 ../pro/faq.rst:62 ../shared-faqs/generic.rst:142
-msgid "**Q:** How good is the Random Number Generator (RNG)?"
+#: ../hsm/faq.rst:64
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey HSM for my applications?"
+msgstr ""
+
+#: ../hsm/faq.rst:62
+msgid ""
+"Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC "
+"as a PKCS#11 driver."
+msgstr ""
+
+#: ../hsm/faq.rst:64
+msgid ""
+"OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
+"doesn't contain a mapping for OpenSSL to C_GenerateRandom."
+msgstr ""
+
+#: ../hsm/faq.rst:68 ../pro/faq.rst:66 ../storage/faq.rst:82
+#, fuzzy
+msgid "**Q:** How good is the True Random Number Generator (TRNG)?"
 msgstr "**Otázka:** Jak kvalitní je generátor náhodných čísel (RNG)?"
 
-#: ../hsm/faq.rst:63
+#: ../hsm/faq.rst:67
 msgid ""
 "Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 "
 "(according to AIS 31 of the BSI)."
@@ -2158,11 +2176,11 @@ msgstr ""
 "Nitrokey HSM používá TRNG JCOP 2.4.1r3, který má kvalitu DRNG.2 (podle "
 "AIS 31 BSI)."
 
-#: ../hsm/faq.rst:80
+#: ../hsm/faq.rst:84
 msgid "**Q:** Which API can I use?"
 msgstr "**Q:** Jaké rozhraní API mohu použít?"
 
-#: ../hsm/faq.rst:67
+#: ../hsm/faq.rst:71
 msgid ""
 "OpenSC: Comprehensive instructions exist for OpenSC framework. There is "
 "nitrotool as a more comfortable frontend to OpenSC."
@@ -2170,7 +2188,7 @@ msgstr ""
 "OpenSC: Pro rámec OpenSC existují komplexní pokyny. Jako pohodlnější "
 "frontend k OpenSC existuje nitrotool."
 
-#: ../hsm/faq.rst:70
+#: ../hsm/faq.rst:74
 msgid ""
 "Embedded Systems: For systems with minimal memory footprint a read/only "
 "PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 "
@@ -2184,7 +2202,7 @@ msgstr ""
 "generování klíčů na pracovišti uživatele. Modul PKCS#11 také podporuje "
 "hlavní karty elektronického podpisu dostupné na německém trhu."
 
-#: ../hsm/faq.rst:76
+#: ../hsm/faq.rst:80
 msgid ""
 "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open "
 "smart card development platform. See the public support scripts for "
@@ -2195,11 +2213,11 @@ msgstr ""
 "veřejné podpory. Pro import stávajících klíčů můžete použít jeho SCSH "
 "nebo NitroKeyWrapper."
 
-#: ../hsm/faq.rst:86
+#: ../hsm/faq.rst:90
 msgid "**Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?"
 msgstr "**Q:** Má Nitrokey 3 certifikaci Common Criteria nebo FIPS?"
 
-#: ../hsm/faq.rst:83
+#: ../hsm/faq.rst:87
 msgid ""
 "The security controler's hardware and operating system are Common "
 "Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_, "
@@ -2210,11 +2228,11 @@ msgstr ""
 "na \"ICs, Smart Cards and Smart Card-Related Devices and Systems\" a "
 "vyhledejte \"NXP JCOP 3 P60\")."
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid "**Q:** How to import an existing key into the Nitrokey HSM?"
 msgstr "**Q:** Jak importovat existující klíč do Nitrokey HSM?"
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid ""
 "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then "
 "use Smart Card Shell for importing. If your key is stored in a Java key "
@@ -2225,7 +2243,7 @@ msgstr ""
 "je váš klíč uložen v úložišti klíčů Java, můžete místo toho použít "
 "`NitroKeyWrapper`_."
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey "
 "HSM?"
@@ -2233,7 +2251,7 @@ msgstr ""
 "**Q:** Jak zabezpečím svou cloudovou infrastrukturu/Kubernetes pomocí "
 "Nitrokey HSM?"
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at `banzaicloud.com`_."
@@ -2241,11 +2259,11 @@ msgstr ""
 "Přístup k zabezpečení klíčů pro Hashicorp Vault/Bank-Vault na Nitrokey "
 "HSM naleznete na banzaicloud.com."
 
-#: ../hsm/faq.rst:97
+#: ../hsm/faq.rst:101
 msgid "**Q:** Can I use Nitrokey HSM with cryptocurrencies?"
 msgstr "**Q:** Mohu používat Nitrokey HSM s kryptoměnami?"
 
-#: ../hsm/faq.rst:95
+#: ../hsm/faq.rst:99
 msgid ""
 "J.v.d.Bosch wrote a simple, free python `program`_ to secure the private "
 "key of a Bitcoin wallet in a HSM. `Tezos`_ has been `reported`_ to work "
@@ -2489,67 +2507,23 @@ msgstr ""
 "Vygenerujte klíč na Nitrokey pomocí nástroje pkcs11-tool. V tomto "
 "příkladu je to 4096bitový klíč RSA."
 
-#: ../hsm/ipsec.rst:9
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
-msgstr ""
-"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
-"-l -k --key-type rsa:4096 --id 10 --label 'Staging Access'"
-
-#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:13
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr "Generování žádosti o podepsání certifikátu pomocí openssl + modulu pkcs11"
 
-#: ../hsm/ipsec.rst:13
-msgid ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'``"
-msgstr ""
-"$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'"
-
-#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:21
 msgid "Sign the certificate with your certificate authority"
 msgstr "Podepište certifikát pomocí své certifikační autority"
 
-#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:23
 msgid "Convert the certificate to DER"
 msgstr "Převod certifikátu na DER"
 
-#: ../hsm/ipsec.rst:21
-msgid ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER``"
-msgstr ""
-"$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER"
-
-#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:29
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
 msgstr "Import certifikátu do Nitrokey pomocí nástroje pkcs11-tool"
 
-#: ../hsm/ipsec.rst:25
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'``"
-msgstr ""
-"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
-"-l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
-"Access'"
-
-#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:35
 msgid ""
 "Configure Strongswan to load opensc-pkcs11 module then to load the "
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
@@ -2559,23 +2533,7 @@ msgstr ""
 "načetl certifikát na Nitrokey. Upravte soubor "
 "/etc/strongswan.d/charon/pkcs11.conf a přidejte následující modul:"
 
-#: ../hsm/ipsec.rst:32
-msgid "modules {"
-msgstr "moduly {"
-
-#: ../hsm/ipsec.rst:30
-msgid "Nitrokey {"
-msgstr "Nitrokey {"
-
-#: ../hsm/ipsec.rst:31
-msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr "cesta = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/ipsec.rst:32 ../hsm/ipsec.rst:33
-msgid "}"
-msgstr "}"
-
-#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:46
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
@@ -2583,7 +2541,7 @@ msgstr ""
 "Inicializujte připojení VPN prostřednictvím IPSec/Strongswan a poté "
 "požádejte o zadání PIN kódu Nitrokey."
 
-#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:48
 msgid "VPN is now connected"
 msgstr "VPN je nyní připojena"
 
@@ -3653,46 +3611,6 @@ msgstr ""
 #: ../hsm/stunnel.rst:7
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr "Stunnel je schopen načíst engine OpenSC PKCS#11 pomocí této konfigurace:"
-
-#: ../hsm/stunnel.rst:9
-msgid "engine=dynamic"
-msgstr "engine=dynamic"
-
-#: ../hsm/stunnel.rst:10
-msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-
-#: ../hsm/stunnel.rst:11
-msgid "engineCtrl=ID:pkcs11"
-msgstr "engineCtrl=ID:pkcs11"
-
-#: ../hsm/stunnel.rst:12
-msgid "engineCtrl=LIST_ADD:1"
-msgstr "engineCtrl=LIST_ADD:1"
-
-#: ../hsm/stunnel.rst:13
-msgid "engineCtrl=LOAD"
-msgstr "engineCtrl=LOAD"
-
-#: ../hsm/stunnel.rst:14
-msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/stunnel.rst:15
-msgid "engineCtrl=INIT"
-msgstr "engineCtrl=INIT"
-
-#: ../hsm/stunnel.rst:17
-msgid "[service]"
-msgstr "[služba]"
-
-#: ../hsm/stunnel.rst:18
-msgid "engineNum=1"
-msgstr "engineNum=1"
-
-#: ../hsm/stunnel.rst:19
-msgid "key=id_45"
-msgstr "key=id_45"
 
 #: ../hsm/mac/product_platform_heading.rst:3
 msgid "(Nitrokey HSM 2 - macOS)"
@@ -10175,8 +10093,8 @@ msgid ""
 "(codename 'bionic') on. You can just install it via Software Center or by"
 " typing the following in a terminal:"
 msgstr ""
-"Aplikace Nitrokey je součástí repozitářů Ubuntu'od verze Ubuntu 18.04 ("
-"kódové označení 'bionic'). Stačí ji nainstalovat prostřednictvím Centra "
+"Aplikace Nitrokey je součástí repozitářů Ubuntu'od verze Ubuntu 18.04 "
+"(kódové označení 'bionic'). Stačí ji nainstalovat prostřednictvím Centra "
 "softwaru nebo zadáním následujícího příkazu do terminálu:"
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:14 ../nitropc/ubuntu/nitrokey-app.rst:14
@@ -10212,16 +10130,16 @@ msgid ""
 "The PPA is not necessary for Ubuntu 22.04 and later. The previous "
 "versions of Ubuntu could still use it to update the app."
 msgstr ""
-"Pro Ubuntu 22.04 a novější není PPA nutný. Předchozí verze Ubuntu jej stále "
-"mohou používat k aktualizaci aplikace."
+"Pro Ubuntu 22.04 a novější není PPA nutný. Předchozí verze Ubuntu jej "
+"stále mohou používat k aktualizaci aplikace."
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:36 ../nitropc/ubuntu/nitrokey-app.rst:36
 msgid ""
 "Alternatively, you can use the snap package. Please see `here "
 "<https://www.nitrokey.com/download/snap-package>`_ for more information."
 msgstr ""
-"Můžete také použít balíček snap. Více informací naleznete v `zde <https://www"
-".nitrokey.com/download/snap-package>`_."
+"Můžete také použít balíček snap. Více informací naleznete v `zde "
+"<https://www.nitrokey.com/download/snap-package>`_."
 
 #: ../nitropc/debian/index.rst:2
 msgid "NitroPC with Debian"
@@ -11779,23 +11697,38 @@ msgstr ""
 "P5CD081V1A a jeho hlavní konfigurace P5CC081V1A, P5CN081V1A, P5CD041V1A, "
 "P5CD021V1A a P5CD016V1A, každá s IC dedikovaným softwarem\")."
 
-#: ../pro/faq.rst:58
+#: ../pro/faq.rst:59
 msgid ""
-"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator "
-"(TRNG) for generating keys on the device. The entropy generated by the "
-"TRNG is used for the entire key length. Therefore the TRNG is compliant "
-"to BSI TR-03116."
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Pro for my applications?"
+msgstr ""
+
+#: ../pro/faq.rst:58 ../storage/faq.rst:74
+msgid ""
+"Both devices are compatible to the OpenPGP Card, so that `scdrand`_ "
+"should work. `This script`_ may be useful. The user comio `created a "
+"systemd file`_ to use scdrand and thus the TRNG more generally. He "
+"created an `ebuild for Gentoo`_, too."
+msgstr ""
+
+#: ../pro/faq.rst:62 ../storage/faq.rst:78
+#, fuzzy
+msgid ""
+"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator for "
+"generating keys on the device. The entropy generated by the TRNG is used "
+"for the entire key length. Therefore the TRNG is compliant to BSI "
+"TR-03116."
 msgstr ""
 "Zařízení Nitrokey Pro a Nitrokey Storage používají ke generování klíčů v "
 "zařízení generátor náhodných čísel (TRNG). Entropie generovaná "
 "generátorem TRNG se používá pro celou délku klíče. Proto je TRNG v "
 "souladu s normou BSI TR-03116."
 
-#: ../pro/faq.rst:62
+#: ../pro/faq.rst:66 ../storage/faq.rst:82
 msgid "The TRNG provides about 40 kbit/s."
 msgstr "TRNG poskytuje rychlost přibližně 40 kbit/s."
 
-#: ../pro/faq.rst:65
+#: ../pro/faq.rst:69
 msgid ""
 "The Nitrokey Pro doesn't contain storage capability for ordinary data (it"
 " can only store cryptographic keys and certificates)."
@@ -15570,6 +15503,10 @@ msgstr ""
 "ale ta je méně kvalitní. Funkce Nitrokey Start je implementována v "
 "mikroprocesoru."
 
+#: ../shared-faqs/generic.rst:142
+msgid "**Q:** How good is the Random Number Generator (RNG)?"
+msgstr "**Otázka:** Jak kvalitní je generátor náhodných čísel (RNG)?"
+
 #: ../shared-faqs/generic.rst:169
 msgid "**Q:** Is Nitrokey Common Criteria or FIPS certified?"
 msgstr "**Q:** Má Nitrokey certifikaci Common Criteria nebo FIPS?"
@@ -15770,10 +15707,10 @@ msgid ""
 "nitropy. This means that nitropy and its dependencies don’t conflict with"
 " other packages installed on your system."
 msgstr ""
-"Tento návod vysvětluje, jak nainstalovat nitropy pomocí ` pipx <https://pypa."
-"github.io/pipx/>`_. pipx vytvoří virtuální prostředí pro nitropy. To "
-"znamená, že nitropy a jeho závislosti nebudou v konfliktu s jinými balíčky "
-"nainstalovanými v systému."
+"Tento návod vysvětluje, jak nainstalovat nitropy pomocí ` pipx "
+"<https://pypa.github.io/pipx/>`_. pipx vytvoří virtuální prostředí pro "
+"nitropy. To znamená, že nitropy a jeho závislosti nebudou v konfliktu s "
+"jinými balíčky nainstalovanými v systému."
 
 #: ../software/nitropy/all-platforms/installation.rst:10
 msgid ""
@@ -15783,8 +15720,8 @@ msgid ""
 msgstr ""
 "**Pro uživatele systému Windows:** Podpora systému Windows je stále "
 "experimentální - používejte ji prosím s opatrností. Můžete také použít "
-"předkompilované binární soubory nebo instalační program MSI, viz :doc:`../"
-"windows/installation`."
+"předkompilované binární soubory nebo instalační program MSI, viz "
+":doc:`../windows/installation`."
 
 #: ../software/nitropy/all-platforms/installation.rst:16
 msgid "Python 3.6 or newer"
@@ -15798,9 +15735,9 @@ msgid ""
 " more information."
 msgstr ""
 "Python je již nainstalován ve většině systémů MacOS a Linux nebo jej lze "
-"stáhnout z `python.org <https://python.org>`_. Další informace naleznete v `"
-"Průvodci stahováním Pythonu <https://wiki.python.org/moin/BeginnersGuide/"
-"Download>`_."
+"stáhnout z `python.org <https://python.org>`_. Další informace naleznete "
+"v `Průvodci stahováním Pythonu "
+"<https://wiki.python.org/moin/BeginnersGuide/Download>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:20
 msgid "pip"
@@ -15812,9 +15749,9 @@ msgid ""
 " ensurepip``. See the `pip Installation Guide "
 "<https://pip.pypa.io/en/stable/installation/>`_ for more information."
 msgstr ""
-"Pip můžete nainstalovat pomocí správce systémových balíčků nebo pomocí ``"
-"python3 -m ensurepip``. Další informace naleznete v `příručce pro instalaci "
-"pip <https://pip.pypa.io/en/stable/installation/>`_."
+"Pip můžete nainstalovat pomocí správce systémových balíčků nebo pomocí "
+"``python3 -m ensurepip``. Další informace naleznete v `příručce pro "
+"instalaci pip <https://pip.pypa.io/en/stable/installation/>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:24
 msgid "pipx"
@@ -15856,8 +15793,8 @@ msgid ""
 "<https://github.com/Nitrokey/libnitrokey>`_."
 msgstr ""
 "Pokud chcete nitropy používat se zařízením Nitrokey Pro nebo Nitrokey "
-"Storage, musíte také nainstalovat `libnitrokey <https://github.com/Nitrokey/"
-"libnitrokey>`_."
+"Storage, musíte také nainstalovat `libnitrokey "
+"<https://github.com/Nitrokey/libnitrokey>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:55
 msgid "Windows support is still experimental -- please use with caution."
@@ -15879,9 +15816,9 @@ msgid ""
 "shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. "
 "Alternatively, you can install them manually::"
 msgstr ""
-"V systémech Linux potřebujete také pravidla Nitrokey udev. Ta jsou dodávána "
-"s `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. Případně je "
-"můžete nainstalovat ručně::"
+"V systémech Linux potřebujete také pravidla Nitrokey udev. Ta jsou "
+"dodávána s `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. "
+"Případně je můžete nainstalovat ručně::"
 
 #: ../software/nitropy/all-platforms/installation.rst:67
 msgid "See :doc:`../linux/udev` for more information."
@@ -15933,8 +15870,8 @@ msgid ""
 msgstr ""
 "Abyste mohli přistupovat k zařízením bez práv roota, vyžaduje nitropy "
 "pravidla Nitrokey udev.  Tato pravidla jsou dodávána s `libnitrokey "
-"<https://github.com/Nitrokey/libnitrokey>`_.  Pokud nemáte libnitrokey nebo "
-"potřebujete novější verzi, můžete pravidla nainstalovat ručně::"
+"<https://github.com/Nitrokey/libnitrokey>`_.  Pokud nemáte libnitrokey "
+"nebo potřebujete novější verzi, můžete pravidla nainstalovat ručně::"
 
 #: ../software/nitropy/linux/udev.rst:9
 msgid "After installing the rules, you need to reload them::"
@@ -15957,8 +15894,8 @@ msgid ""
 "describe debugging, see "
 "https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 msgstr ""
-"popis ladění, viz https://github.com/Nitrokey/pynitrokey/issues/"
-"167#issuecomment-1024921046"
+"popis ladění, viz "
+"https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 
 #: ../software/nitropy/linux/udev.rst:21
 msgid "describe requirements: systemd, load order"
@@ -15977,8 +15914,8 @@ msgid ""
 "Generally Windows support and the installer are experimental - please use"
 " with caution."
 msgstr ""
-"Podpora systému Windows a instalační program jsou obecně experimentální - "
-"používejte je s opatrností."
+"Podpora systému Windows a instalační program jsou obecně experimentální -"
+" používejte je s opatrností."
 
 #: ../software/nitropy/windows/installation.rst:8
 msgid ""
@@ -15986,8 +15923,9 @@ msgid ""
 "command prompt, you can alternatively install nitropy with pipx, see :doc"
 ":`../all-platforms/installation`."
 msgstr ""
-"Pokud již v systému používáte Python a znáte příkazový řádek, můžete nitropy "
-"nainstalovat pomocí pipx, viz :doc:`../all-platforms/installation`."
+"Pokud již v systému používáte Python a znáte příkazový řádek, můžete "
+"nitropy nainstalovat pomocí pipx, viz :doc:`../all-"
+"platforms/installation`."
 
 #: ../software/nitropy/windows/installation.rst:11
 msgid "How to Install"
@@ -15998,8 +15936,8 @@ msgid ""
 "Download the latest ``.msi`` installer from `releases "
 "<https://github.com/Nitrokey/pynitrokey/releases/>`_."
 msgstr ""
-"Stáhněte si nejnovější ``.msi`` instalační program z `vydání <https://github."
-"com/Nitrokey/pynitrokey/releases/>`_."
+"Stáhněte si nejnovější ``.msi`` instalační program z `vydání "
+"<https://github.com/Nitrokey/pynitrokey/releases/>`_."
 
 #: ../software/nitropy/windows/installation.rst:14
 msgid "Double-click the installer and click through (*Next* and *Finish*)"
@@ -16013,8 +15951,8 @@ msgid ""
 " right mouse button on the Menu Start and select \"Windows PowerShell "
 "(Admin)\" from the menu)."
 msgstr ""
-"Otevřete příkazovou konzolu v režimu správce (Windows 10: stiskněte pravé "
-"tlačítko myši v nabídce Start a z nabídky vyberte \"Windows PowerShell "
+"Otevřete příkazovou konzolu v režimu správce (Windows 10: stiskněte pravé"
+" tlačítko myši v nabídce Start a z nabídky vyberte \"Windows PowerShell "
 "(Admin)\")."
 
 #: ../software/nitropy/windows/installation.rst:16
@@ -16025,24 +15963,23 @@ msgstr "Zadejte ``nitropy``"
 msgid ""
 "Without administrator privileges nitropy might not be able to communicate"
 " to device."
-msgstr ""
-"Bez oprávnění správce nitropy nemusí být možné se zařízením komunikovat."
+msgstr "Bez oprávnění správce nitropy nemusí být možné se zařízením komunikovat."
 
 #: ../software/nitropy/windows/installation.rst:23
 msgid ""
 "Support for Nitrokey Start under Windows 10 is not working without "
 "installing libusb libraries (to be described)"
 msgstr ""
-"Podpora pro Nitrokey Start pod Windows 10 nefunguje bez instalace knihoven "
-"libusb (bude popsáno)"
+"Podpora pro Nitrokey Start pod Windows 10 nefunguje bez instalace "
+"knihoven libusb (bude popsáno)"
 
 #: ../software/nitropy/windows/installation.rst:24
 msgid ""
 "The installer does not remove a previous installation (manually remove it"
 " using settings -> programs and apps)"
 msgstr ""
-"Instalační program neodstraní předchozí instalaci (odstraňte ji ručně pomocí "
-"nastavení -> programy a aplikace)."
+"Instalační program neodstraní předchozí instalaci (odstraňte ji ručně "
+"pomocí nastavení -> programy a aplikace)."
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst:8
 msgid ""
@@ -16598,6 +16535,80 @@ msgstr ""
 msgid "(Nitrokey Start - Windows)"
 msgstr "(Nitrokey Start - Windows)"
 
+#: ../storage/encrypted-mobile-storage.rst:1
+#, fuzzy
+msgid ""
+"Prior of using the encrypted mobile storage you need to install and "
+"initialize the Nitrokey Storage and download the latest `Nitrokey App "
+"<https://www.nitrokey.com/download>`_."
+msgstr ""
+"Před použitím šifrovaného mobilního úložiště je třeba nainstalovat a "
+"inicializovat úložiště Nitrokey a stáhnout nejnovější aplikaci Nitrokey."
+
+#: ../storage/encrypted-mobile-storage.rst:3 ../storage/faq.rst:87
+msgid "Start the Nitrokey App."
+msgstr "Spusťte aplikaci Nitrokey."
+
+#: ../storage/encrypted-mobile-storage.rst:4 ../storage/faq.rst:88
+msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
+msgstr ""
+"Stiskněte jeho ikonu na liště a v nabídce vyberte možnost \"odemknout "
+"zašifrovaný svazek\"."
+
+#: ../storage/encrypted-mobile-storage.rst:5 ../storage/faq.rst:89
+msgid "Enter your User PIN in the appearing popup window."
+msgstr "V zobrazeném vyskakovacím okně zadejte svůj uživatelský kód PIN."
+
+#: ../storage/encrypted-mobile-storage.rst:6
+#, fuzzy
+msgid ""
+"If this is the first time you may need to create a partition on the "
+"encrypted volume. Windows will open an appropriate window and ask you to "
+"do so. On GNU+Linux and Mac you may need to open a partition manager and "
+"create a partition manually. You can create as many partitions as you "
+"want. We recommend FAT(32) if you want to access the partition from "
+"various operating systems."
+msgstr ""
+"Pokud je to poprvé, může být nutné vytvořit oddíl na zašifrovaném svazku."
+" Systém Windows otevře příslušné okno a vyzve vás k tomu. V systémech "
+"Linux a Mac bude možná nutné otevřít správce oddílů a vytvořit oddíl "
+"ručně. Můžete vytvořit libovolný počet oddílů. Pokud chcete k oddílu "
+"přistupovat z různých operačních systémů, doporučujeme FAT(32)."
+
+#: ../storage/encrypted-mobile-storage.rst:7 ../storage/faq.rst:91
+msgid ""
+"Now you can use the encrypted volume as you would use any other ordinary "
+"USB drive. But all data stored on it will be encrypted in the Nitrokey "
+"hardware automatically."
+msgstr ""
+"Nyní můžete zašifrovaný svazek používat stejně jako jakýkoli jiný běžný "
+"disk USB. Všechna data na něm uložená však budou automaticky zašifrována "
+"v hardwaru Nitrokey."
+
+#: ../storage/encrypted-mobile-storage.rst:8 ../storage/faq.rst:92
+msgid "To remove or lock the encrypted volume you should unmount/eject it first."
+msgstr ""
+"Chcete-li zašifrovaný svazek odebrat nebo uzamknout, měli byste jej "
+"nejprve odpojit/odstranit."
+
+#: ../storage/encrypted-mobile-storage.rst:9 ../storage/faq.rst:93
+msgid ""
+"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
+"volume\" from the Nitrokey App menu."
+msgstr ""
+"Poté můžete Nitrokey odpojit nebo v nabídce aplikace Nitrokey vybrat "
+"možnost \"uzamknout zašifrovaný svazek\"."
+
+#: ../storage/encrypted-mobile-storage.rst:11
+#, fuzzy
+msgid ""
+"The Nitrokey Storage is able to create hidden volumes as well. Please "
+"have a look at the corresponding instructions for `hidden volumes "
+"<hidden.html>`_."
+msgstr ""
+"Úložiště Nitrokey dokáže vytvářet i skryté svazky. Podívejte se prosím na"
+" příslušné pokyny pro skryté svazky."
+
 #: ../storage/factory-reset.rst:8
 msgid "There are two types of factory resets for Nitrokey Storage devices:"
 msgstr ""
@@ -16729,11 +16740,17 @@ msgstr ""
 "Controller P5CD081V1A a jeho hlavní konfigurace P5CC081V1A, P5CN081V1A, "
 "P5CD041V1A, P5CD021V1A a P5CD016V1A, každá s IC dedikovaným softwarem\")."
 
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:75
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Storage for my applications?"
+msgstr ""
+
+#: ../storage/faq.rst:95
 msgid "**Q:** How can I use the encrypted mobile Storage?"
 msgstr "**Q:** Jak mohu používat šifrované mobilní úložiště?"
 
-#: ../storage/faq.rst:74
+#: ../storage/faq.rst:85
 msgid ""
 "Prior of using the encrypted mobile storage you need to install and "
 "initialize the Nitrokey Storage and download the latest Nitrokey App."
@@ -16741,21 +16758,7 @@ msgstr ""
 "Před použitím šifrovaného mobilního úložiště je třeba nainstalovat a "
 "inicializovat úložiště Nitrokey a stáhnout nejnovější aplikaci Nitrokey."
 
-#: ../storage/faq.rst:76
-msgid "Start the Nitrokey App."
-msgstr "Spusťte aplikaci Nitrokey."
-
-#: ../storage/faq.rst:77
-msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
-msgstr ""
-"Stiskněte jeho ikonu na liště a v nabídce vyberte možnost \"odemknout "
-"zašifrovaný svazek\"."
-
-#: ../storage/faq.rst:78
-msgid "Enter your User PIN in the appearing popup window."
-msgstr "V zobrazeném vyskakovacím okně zadejte svůj uživatelský kód PIN."
-
-#: ../storage/faq.rst:79
+#: ../storage/faq.rst:90
 msgid ""
 "If this is the first time you may need to create a partition on the "
 "encrypted volume. Windows will open an appropriate window and ask you to "
@@ -16770,31 +16773,7 @@ msgstr ""
 "ručně. Můžete vytvořit libovolný počet oddílů. Pokud chcete k oddílu "
 "přistupovat z různých operačních systémů, doporučujeme FAT(32)."
 
-#: ../storage/faq.rst:80
-msgid ""
-"Now you can use the encrypted volume as you would use any other ordinary "
-"USB drive. But all data stored on it will be encrypted in the Nitrokey "
-"hardware automatically."
-msgstr ""
-"Nyní můžete zašifrovaný svazek používat stejně jako jakýkoli jiný běžný "
-"disk USB. Všechna data na něm uložená však budou automaticky zašifrována "
-"v hardwaru Nitrokey."
-
-#: ../storage/faq.rst:81
-msgid "To remove or lock the encrypted volume you should unmount/eject it first."
-msgstr ""
-"Chcete-li zašifrovaný svazek odebrat nebo uzamknout, měli byste jej "
-"nejprve odpojit/odstranit."
-
-#: ../storage/faq.rst:82
-msgid ""
-"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
-"volume\" from the Nitrokey App menu."
-msgstr ""
-"Poté můžete Nitrokey odpojit nebo v nabídce aplikace Nitrokey vybrat "
-"možnost \"uzamknout zašifrovaný svazek\"."
-
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:95
 msgid ""
 "The Nitrokey Storage is able to create hidden volumes as well. Please "
 "have a look at the corresponding instructions for hidden volumes."
@@ -16802,11 +16781,11 @@ msgstr ""
 "Úložiště Nitrokey dokáže vytvářet i skryté svazky. Podívejte se prosím na"
 " příslušné pokyny pro skryté svazky."
 
-#: ../storage/faq.rst:107
+#: ../storage/faq.rst:117
 msgid "**Q:** How can I use the hidden volume?"
 msgstr "**Q:** Jak mohu použít skrytý svazek?"
 
-#: ../storage/faq.rst:87
+#: ../storage/faq.rst:98
 msgid ""
 "Hidden volumes allow to hide data in the encrypted volume. The data is "
 "protected with an additional password. Without the password the data "
@@ -16822,7 +16801,7 @@ msgstr ""
 "VeraCrypt's/TrueCrypt's, ale u úložiště Nitrokey Storage je celá funkce "
 "skrytých svazků implementována hardwarově."
 
-#: ../storage/faq.rst:94 ../storage/hidden.rst:8
+#: ../storage/faq.rst:105 ../storage/hidden.rst:8
 msgid ""
 "You can configure up to four hidden volumes. Once unlocked, hidden "
 "volumes behave like ordinary storage where you can create various "
@@ -16832,7 +16811,7 @@ msgstr ""
 "svazky chovají jako běžné úložiště, kde můžete vytvářet různé oddíly, "
 "systémy souborů a ukládat soubory podle libosti."
 
-#: ../storage/faq.rst:98
+#: ../storage/faq.rst:109
 msgid ""
 "If you decide to configure Hidden Volumes, you can not use the encrypted "
 "storage anymore. Because the Hidden Volume is situated on the free space "
@@ -16851,67 +16830,11 @@ msgstr ""
 "vytvoření skrytého svazku do šifrovaného úložiště nic nezapisujte (musíte"
 " jej však nejprve odemknout)."
 
-#: ../storage/faq.rst:106
+#: ../storage/faq.rst:117
 msgid ""
 "Hidden volumes are like containers inside of a container, the encrypted "
 "volume."
 msgstr "Skryté svazky jsou jako kontejnery uvnitř kontejneru, šifrovaného svazku."
-
-#: ../storage/faq.rst:118
-msgid "**Q:** Do you have resources for development and integration?"
-msgstr "**Q:** Máte k dispozici zdroje pro vývoj a integraci?"
-
-#: ../storage/faq.rst:110
-msgid ""
-"Use Nitrokey library to manage the encrypted mass store, one-time "
-"passwords and password safe functionality."
-msgstr ""
-"Ke správě šifrovaného hromadného úložiště, jednorázových hesel a funkce "
-"sejfu hesel použijte knihovnu Nitrokey."
-
-#: ../storage/faq.rst:111
-msgid ""
-"The project nitrokey-get-totp and nitrokey-get-password are nice examples"
-" for using the python bindings of Nitrokey library to get a custom "
-"interface."
-msgstr ""
-"Projekty nitrokey-get-totp a nitrokey-get-password jsou pěknými příklady "
-"použití vazeb knihovny Nitrokey v jazyce Python pro získání vlastního "
-"rozhraní."
-
-#: ../storage/faq.rst:112
-msgid ""
-"In order to access the integrated smart card, you can use OpenSC's "
-"command line tools."
-msgstr ""
-"Pro přístup k integrované čipové kartě můžete použít nástroje příkazového"
-" řádku OpenSC'."
-
-#: ../storage/faq.rst:113
-msgid "If your application has a PKCS#11 interface, use OpenSC's PKCS#11 driver."
-msgstr "Pokud má vaše aplikace rozhraní PKCS#11, použijte ovladač OpenSC'PKCS#11."
-
-#: ../storage/faq.rst:114
-msgid "To work with the smart card low level, see the OpenPGP Card specification."
-msgstr ""
-"Chcete-li pracovat s čipovou kartou na nízké úrovni, přečtěte si "
-"specifikaci karty OpenPGP."
-
-#: ../storage/faq.rst:115
-msgid "The source code of the firmware and the hardware layout are available too."
-msgstr "K dispozici je také zdrojový kód firmwaru a rozložení hardwaru."
-
-#: ../storage/faq.rst:116
-msgid ""
-"To develop special applications or for command line access one can use "
-"the nitrocli created by d-e-s-o."
-msgstr ""
-"Pro vývoj speciálních aplikací nebo pro přístup z příkazového řádku lze "
-"použít nitrocli vytvořené d-e-s-o."
-
-#: ../storage/faq.rst:117
-msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
-msgstr "Obal libnitrokey pro jazyk Rust poskytující přístup k zařízením Nitrokey."
 
 #: ../storage/firmware-update-manually.rst:2
 msgid "Activate Update Mode Manually"
@@ -17220,6 +17143,13 @@ msgstr ""
 #: ../storage/linux/product_platform_heading.rst:3
 msgid "(Nitrokey Storage 2 - Linux)"
 msgstr "(Nitrokey Storage 2 - Linux)"
+
+#: ../storage/linux/encrypted-mobile-storage.rst:2
+#: ../storage/mac/encrypted-mobile-storage.rst:2
+#: ../storage/windows/encrypted-mobile-storage.rst:2
+#, fuzzy
+msgid "Encrypted Mobile Storage"
+msgstr "**Q:** Jak mohu používat šifrované mobilní úložiště?"
 
 #: ../storage/linux/firmware-update.rst:10
 #: ../storage/windows/firmware-update.rst:10
@@ -21598,3 +21528,170 @@ msgstr ""
 #~ " použití klíčů zjistit pomocí funkce "
 #~ "SmartCardHSMKey.getUseCounter() a potvrdit pomocí"
 #~ " funkce SmartCardHSMKeySpec.setKeyUseCounter()."
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'``"
+#~ msgstr ""
+#~ "$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'"
+
+#~ msgid ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'``"
+#~ msgstr ""
+#~ "$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'"
+
+#~ msgid ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER``"
+#~ msgstr ""
+#~ "$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER"
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'``"
+#~ msgstr ""
+#~ "$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'"
+
+#~ msgid "modules {"
+#~ msgstr "moduly {"
+
+#~ msgid "Nitrokey {"
+#~ msgstr "Nitrokey {"
+
+#~ msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+#~ msgstr "cesta = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "}"
+#~ msgstr "}"
+
+#~ msgid "engine=dynamic"
+#~ msgstr "engine=dynamic"
+
+#~ msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+#~ msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+
+#~ msgid "engineCtrl=ID:pkcs11"
+#~ msgstr "engineCtrl=ID:pkcs11"
+
+#~ msgid "engineCtrl=LIST_ADD:1"
+#~ msgstr "engineCtrl=LIST_ADD:1"
+
+#~ msgid "engineCtrl=LOAD"
+#~ msgstr "engineCtrl=LOAD"
+
+#~ msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+#~ msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "engineCtrl=INIT"
+#~ msgstr "engineCtrl=INIT"
+
+#~ msgid "[service]"
+#~ msgstr "[služba]"
+
+#~ msgid "engineNum=1"
+#~ msgstr "engineNum=1"
+
+#~ msgid "key=id_45"
+#~ msgstr "key=id_45"
+
+#~ msgid "**Q:** Do you have resources for development and integration?"
+#~ msgstr "**Q:** Máte k dispozici zdroje pro vývoj a integraci?"
+
+#~ msgid ""
+#~ "Use Nitrokey library to manage the "
+#~ "encrypted mass store, one-time passwords"
+#~ " and password safe functionality."
+#~ msgstr ""
+#~ "Ke správě šifrovaného hromadného úložiště, "
+#~ "jednorázových hesel a funkce sejfu hesel"
+#~ " použijte knihovnu Nitrokey."
+
+#~ msgid ""
+#~ "The project nitrokey-get-totp and "
+#~ "nitrokey-get-password are nice examples "
+#~ "for using the python bindings of "
+#~ "Nitrokey library to get a custom "
+#~ "interface."
+#~ msgstr ""
+#~ "Projekty nitrokey-get-totp a "
+#~ "nitrokey-get-password jsou pěknými příklady"
+#~ " použití vazeb knihovny Nitrokey v "
+#~ "jazyce Python pro získání vlastního "
+#~ "rozhraní."
+
+#~ msgid ""
+#~ "In order to access the integrated "
+#~ "smart card, you can use OpenSC's "
+#~ "command line tools."
+#~ msgstr ""
+#~ "Pro přístup k integrované čipové kartě"
+#~ " můžete použít nástroje příkazového řádku"
+#~ " OpenSC'."
+
+#~ msgid ""
+#~ "If your application has a PKCS#11 "
+#~ "interface, use OpenSC's PKCS#11 driver."
+#~ msgstr ""
+#~ "Pokud má vaše aplikace rozhraní PKCS#11,"
+#~ " použijte ovladač OpenSC'PKCS#11."
+
+#~ msgid ""
+#~ "To work with the smart card low"
+#~ " level, see the OpenPGP Card "
+#~ "specification."
+#~ msgstr ""
+#~ "Chcete-li pracovat s čipovou kartou "
+#~ "na nízké úrovni, přečtěte si specifikaci"
+#~ " karty OpenPGP."
+
+#~ msgid ""
+#~ "The source code of the firmware "
+#~ "and the hardware layout are available"
+#~ " too."
+#~ msgstr "K dispozici je také zdrojový kód firmwaru a rozložení hardwaru."
+
+#~ msgid ""
+#~ "To develop special applications or for"
+#~ " command line access one can use "
+#~ "the nitrocli created by d-e-s-o."
+#~ msgstr ""
+#~ "Pro vývoj speciálních aplikací nebo pro"
+#~ " přístup z příkazového řádku lze "
+#~ "použít nitrocli vytvořené d-e-s-o."
+
+#~ msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
+#~ msgstr ""
+#~ "Obal libnitrokey pro jazyk Rust "
+#~ "poskytující přístup k zařízením Nitrokey."
+

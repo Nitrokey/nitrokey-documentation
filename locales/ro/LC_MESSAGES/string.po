@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 13:21+0200\n"
+"POT-Creation-Date: 2022-06-08 13:30+0200\n"
 "PO-Revision-Date: 2022-05-31 12:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ro/>\n"
 "Language: ro\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ro/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
+"< 20)) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -153,7 +152,7 @@ msgstr ""
 "în continuare cu al doilea Nitrokey FIDO2 (sau cu un alt al doilea "
 "factor)."
 
-#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:69
+#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:72
 #: ../shared-faqs/generic.rst:34 ../start/faq.rst:38 ../storage/faq.rst:21
 msgid "**Q:** How large is the storage capacity?"
 msgstr "**Q:** Cât de mare este capacitatea de stocare?"
@@ -2210,11 +2209,30 @@ msgstr "secp256"
 msgid "secp521"
 msgstr "secp521"
 
-#: ../hsm/faq.rst:64 ../pro/faq.rst:62 ../shared-faqs/generic.rst:142
-msgid "**Q:** How good is the Random Number Generator (RNG)?"
+#: ../hsm/faq.rst:64
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey HSM for my applications?"
+msgstr ""
+
+#: ../hsm/faq.rst:62
+msgid ""
+"Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC "
+"as a PKCS#11 driver."
+msgstr ""
+
+#: ../hsm/faq.rst:64
+msgid ""
+"OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
+"doesn't contain a mapping for OpenSSL to C_GenerateRandom."
+msgstr ""
+
+#: ../hsm/faq.rst:68 ../pro/faq.rst:66 ../storage/faq.rst:82
+#, fuzzy
+msgid "**Q:** How good is the True Random Number Generator (TRNG)?"
 msgstr "**Q:** Cât de bun este generatorul de numere aleatorii (RNG)?"
 
-#: ../hsm/faq.rst:63
+#: ../hsm/faq.rst:67
 msgid ""
 "Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 "
 "(according to AIS 31 of the BSI)."
@@ -2222,11 +2240,11 @@ msgstr ""
 "Nitrokey HSM utilizează TRNG din JCOP 2.4.1r3, care are o calitate de "
 "DRNG.2 (conform AIS 31 al BSI)."
 
-#: ../hsm/faq.rst:80
+#: ../hsm/faq.rst:84
 msgid "**Q:** Which API can I use?"
 msgstr "**Q:** Ce API pot folosi?"
 
-#: ../hsm/faq.rst:67
+#: ../hsm/faq.rst:71
 msgid ""
 "OpenSC: Comprehensive instructions exist for OpenSC framework. There is "
 "nitrotool as a more comfortable frontend to OpenSC."
@@ -2234,7 +2252,7 @@ msgstr ""
 "OpenSC: Există instrucțiuni cuprinzătoare pentru cadrul OpenSC. Există "
 "nitrotool ca un frontend mai confortabil pentru OpenSC."
 
-#: ../hsm/faq.rst:70
+#: ../hsm/faq.rst:74
 msgid ""
 "Embedded Systems: For systems with minimal memory footprint a read/only "
 "PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 "
@@ -2249,7 +2267,7 @@ msgstr ""
 "utilizatorului. Modulul PKCS#11 suportă, de asemenea, principalele "
 "carduri de semnătură electronică disponibile pe piața germană."
 
-#: ../hsm/faq.rst:76
+#: ../hsm/faq.rst:80
 msgid ""
 "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open "
 "smart card development platform. See the public support scripts for "
@@ -2260,11 +2278,11 @@ msgstr ""
 "consultați scripturile de asistență publică. Pentru a importa chei "
 "existente, puteți utiliza SCSH sau NitroKeyWrapper."
 
-#: ../hsm/faq.rst:86
+#: ../hsm/faq.rst:90
 msgid "**Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?"
 msgstr "**Q:** Nitrokey 3 este certificat Common Criteria sau FIPS?"
 
-#: ../hsm/faq.rst:83
+#: ../hsm/faq.rst:87
 msgid ""
 "The security controler's hardware and operating system are Common "
 "Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_, "
@@ -2276,11 +2294,11 @@ msgstr ""
 "Consultați ` aici`_, faceți clic pe \"ICs, Smart Cards and Smart Card-"
 "Related Devices and Systems\" și căutați \"NXP JCOP 3 P60\")."
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid "**Q:** How to import an existing key into the Nitrokey HSM?"
 msgstr "**Q:** Cum se importă o cheie existentă în Nitrokey HSM?"
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid ""
 "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then "
 "use Smart Card Shell for importing. If your key is stored in a Java key "
@@ -2291,13 +2309,13 @@ msgstr ""
 "Dacă cheia dvs. este stocată într-un magazin de chei Java, puteți utiliza"
 " în schimb `NitroKeyWrapper`_."
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey "
 "HSM?"
 msgstr "**Q:** Cum îmi securizez infrastructura cloud/Kubernetes cu Nitrokey HSM?"
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at `banzaicloud.com`_."
@@ -2305,11 +2323,11 @@ msgstr ""
 "O abordare a cheilor securizate pentru Hashicorp Vault/Bank-Vault pe un "
 "HSM Nitrokey poate fi găsită la `banzaicloud.com`_."
 
-#: ../hsm/faq.rst:97
+#: ../hsm/faq.rst:101
 msgid "**Q:** Can I use Nitrokey HSM with cryptocurrencies?"
 msgstr "**Întrebare:** Pot folosi Nitrokey HSM cu criptomonede?"
 
-#: ../hsm/faq.rst:95
+#: ../hsm/faq.rst:99
 msgid ""
 "J.v.d.Bosch wrote a simple, free python `program`_ to secure the private "
 "key of a Bitcoin wallet in a HSM. `Tezos`_ has been `reported`_ to work "
@@ -2553,69 +2571,25 @@ msgstr ""
 "Generați o cheie pe Nitrokey prin intermediul pkcs11-tool. În acest "
 "exemplu, este o cheie RSA de 4096 biți."
 
-#: ../hsm/ipsec.rst:9
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
-msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
-
-#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:13
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr ""
 "Generarea unei cereri de semnare a unui certificat prin intermediul "
 "modulului openssl + pkcs11"
 
-#: ../hsm/ipsec.rst:13
-msgid ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'``"
-msgstr ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'``"
-
-#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:21
 msgid "Sign the certificate with your certificate authority"
 msgstr "Semnați certificatul cu autoritatea dumneavoastră de certificare"
 
-#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:23
 msgid "Convert the certificate to DER"
 msgstr "Conversia certificatului în DER"
 
-#: ../hsm/ipsec.rst:21
-msgid ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER``"
-msgstr ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER``"
-
-#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:29
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
 msgstr "Importați certificatul în Nitrokey prin intermediul pkcs11-tool"
 
-#: ../hsm/ipsec.rst:25
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'``"
-msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'``"
-
-#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:35
 msgid ""
 "Configure Strongswan to load opensc-pkcs11 module then to load the "
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
@@ -2625,23 +2599,7 @@ msgstr ""
 "pentru a încărca certificatul pe Nitrokey. Editați "
 "/etc/strongswan.d/charon/pkcs11.conf și adăugați următorul modul:"
 
-#: ../hsm/ipsec.rst:32
-msgid "modules {"
-msgstr "module {"
-
-#: ../hsm/ipsec.rst:30
-msgid "Nitrokey {"
-msgstr "Nitrokey {"
-
-#: ../hsm/ipsec.rst:31
-msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/ipsec.rst:32 ../hsm/ipsec.rst:33
-msgid "}"
-msgstr "}"
-
-#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:46
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
@@ -2649,7 +2607,7 @@ msgstr ""
 "Inițiați conexiunea VPN prin IPSec/Strongswan, apoi solicitați PIN-ul "
 "Nitrokey."
 
-#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:48
 msgid "VPN is now connected"
 msgstr "VPN-ul este acum conectat"
 
@@ -3757,46 +3715,6 @@ msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr ""
 "Stunnel este capabil să încarce motorul OpenSC PKCS#11 folosind această "
 "configurație:"
-
-#: ../hsm/stunnel.rst:9
-msgid "engine=dynamic"
-msgstr "motor=dynamic"
-
-#: ../hsm/stunnel.rst:10
-msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-
-#: ../hsm/stunnel.rst:11
-msgid "engineCtrl=ID:pkcs11"
-msgstr "engineCtrl=ID:pkcs11"
-
-#: ../hsm/stunnel.rst:12
-msgid "engineCtrl=LIST_ADD:1"
-msgstr "engineCtrl=LIST_ADD:1"
-
-#: ../hsm/stunnel.rst:13
-msgid "engineCtrl=LOAD"
-msgstr "engineCtrl=LOAD"
-
-#: ../hsm/stunnel.rst:14
-msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/stunnel.rst:15
-msgid "engineCtrl=INIT"
-msgstr "engineCtrl=INIT"
-
-#: ../hsm/stunnel.rst:17
-msgid "[service]"
-msgstr "[serviciu]"
-
-#: ../hsm/stunnel.rst:18
-msgid "engineNum=1"
-msgstr "engineNum=1"
-
-#: ../hsm/stunnel.rst:19
-msgid "key=id_45"
-msgstr "key=id_45"
 
 #: ../hsm/mac/product_platform_heading.rst:3
 msgid "(Nitrokey HSM 2 - macOS)"
@@ -10455,8 +10373,8 @@ msgid ""
 "(codename 'bionic') on. You can just install it via Software Center or by"
 " typing the following in a terminal:"
 msgstr ""
-"Aplicația Nitrokey este inclusă în depozitele Ubuntu's începând cu Ubuntu "
-"18.04 (nume de cod 'bionic'). Puteți să o instalați pur și simplu prin "
+"Aplicația Nitrokey este inclusă în depozitele Ubuntu's începând cu Ubuntu"
+" 18.04 (nume de cod 'bionic'). Puteți să o instalați pur și simplu prin "
 "Software Center sau tastând următoarele într-un terminal:"
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:14 ../nitropc/ubuntu/nitrokey-app.rst:14
@@ -10464,8 +10382,8 @@ msgid ""
 "Unfortunately, the App versions in the official Ubuntu repositories are "
 "often not up-to-date."
 msgstr ""
-"Din nefericire, versiunile App din depozitele oficiale Ubuntu sunt adesea "
-"neactualizate."
+"Din nefericire, versiunile App din depozitele oficiale Ubuntu sunt adesea"
+" neactualizate."
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:17 ../nitropc/ubuntu/nitrokey-app.rst:17
 msgid "More recent App versions"
@@ -10476,25 +10394,25 @@ msgid ""
 "To get the most recent Nitrokey App you can add a separate repository "
 "which is maintained by Nitrokey."
 msgstr ""
-"Pentru a obține cea mai recentă aplicație Nitrokey puteți adăuga un depozit "
-"separat care este menținut de Nitrokey."
+"Pentru a obține cea mai recentă aplicație Nitrokey puteți adăuga un "
+"depozit separat care este menținut de Nitrokey."
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:21 ../nitropc/ubuntu/nitrokey-app.rst:21
 msgid ""
 "Please execute the following in a terminal to add the repository and "
 "install the Nitrokey App:"
 msgstr ""
-"Vă rugăm să executați următoarele într-un terminal pentru a adăuga depozitul "
-"și a instala aplicația Nitrokey:"
+"Vă rugăm să executați următoarele într-un terminal pentru a adăuga "
+"depozitul și a instala aplicația Nitrokey:"
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:25 ../nitropc/ubuntu/nitrokey-app.rst:25
 msgid ""
 "The PPA is not necessary for Ubuntu 22.04 and later. The previous "
 "versions of Ubuntu could still use it to update the app."
 msgstr ""
-"PPA nu este necesar pentru Ubuntu 22.04 și versiunile ulterioare. Versiunile "
-"anterioare ale Ubuntu ar putea fi utilizate în continuare pentru a actualiza "
-"aplicația."
+"PPA nu este necesar pentru Ubuntu 22.04 și versiunile ulterioare. "
+"Versiunile anterioare ale Ubuntu ar putea fi utilizate în continuare "
+"pentru a actualiza aplicația."
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:36 ../nitropc/ubuntu/nitrokey-app.rst:36
 msgid ""
@@ -12100,23 +12018,38 @@ msgstr ""
 " P5CD081V1A și principalele sale configurații P5CC081V1A, P5CN081V1A, "
 "P5CD041V1A, P5CD021V1A și P5CD016V1A, fiecare cu software dedicat IC\")."
 
-#: ../pro/faq.rst:58
+#: ../pro/faq.rst:59
 msgid ""
-"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator "
-"(TRNG) for generating keys on the device. The entropy generated by the "
-"TRNG is used for the entire key length. Therefore the TRNG is compliant "
-"to BSI TR-03116."
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Pro for my applications?"
+msgstr ""
+
+#: ../pro/faq.rst:58 ../storage/faq.rst:74
+msgid ""
+"Both devices are compatible to the OpenPGP Card, so that `scdrand`_ "
+"should work. `This script`_ may be useful. The user comio `created a "
+"systemd file`_ to use scdrand and thus the TRNG more generally. He "
+"created an `ebuild for Gentoo`_, too."
+msgstr ""
+
+#: ../pro/faq.rst:62 ../storage/faq.rst:78
+#, fuzzy
+msgid ""
+"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator for "
+"generating keys on the device. The entropy generated by the TRNG is used "
+"for the entire key length. Therefore the TRNG is compliant to BSI "
+"TR-03116."
 msgstr ""
 "Nitrokey Pro și Nitrokey Storage utilizează un generator de numere "
 "aleatoare reale (TRNG) pentru a genera chei pe dispozitiv. Entropia "
 "generată de TRNG este utilizată pentru întreaga lungime a cheii. Prin "
 "urmare, TRNG este conform cu BSI TR-03116."
 
-#: ../pro/faq.rst:62
+#: ../pro/faq.rst:66 ../storage/faq.rst:82
 msgid "The TRNG provides about 40 kbit/s."
 msgstr "TRNG oferă aproximativ 40 kbit/s."
 
-#: ../pro/faq.rst:65
+#: ../pro/faq.rst:69
 msgid ""
 "The Nitrokey Pro doesn't contain storage capability for ordinary data (it"
 " can only store cryptographic keys and certificates)."
@@ -15993,6 +15926,10 @@ msgstr ""
 " la Nitrokey U2F, dar este de calitate inferioară. Nitrokey Start este "
 "implementat în microprocesor."
 
+#: ../shared-faqs/generic.rst:142
+msgid "**Q:** How good is the Random Number Generator (RNG)?"
+msgstr "**Q:** Cât de bun este generatorul de numere aleatorii (RNG)?"
+
 #: ../shared-faqs/generic.rst:169
 msgid "**Q:** Is Nitrokey Common Criteria or FIPS certified?"
 msgstr "**Q:** Este Nitrokey certificat Common Criteria sau FIPS?"
@@ -16197,10 +16134,10 @@ msgid ""
 "nitropy. This means that nitropy and its dependencies don’t conflict with"
 " other packages installed on your system."
 msgstr ""
-"Acest ghid explică cum să instalați nitropy cu `pipx <https://pypa.github.io/"
-"pipx/>`_. pipx creează un mediu virtual pentru nitropy. Acest lucru înseamnă "
-"că nitropy și dependențele sale nu intră în conflict cu alte pachete "
-"instalate pe sistemul dumneavoastră."
+"Acest ghid explică cum să instalați nitropy cu `pipx "
+"<https://pypa.github.io/pipx/>`_. pipx creează un mediu virtual pentru "
+"nitropy. Acest lucru înseamnă că nitropy și dependențele sale nu intră în"
+" conflict cu alte pachete instalate pe sistemul dumneavoastră."
 
 #: ../software/nitropy/all-platforms/installation.rst:10
 msgid ""
@@ -16210,8 +16147,8 @@ msgid ""
 msgstr ""
 "**Pentru utilizatorii de Windows:** Suportul pentru Windows este încă "
 "experimental - vă rugăm să îl utilizați cu precauție. Puteți utiliza, de "
-"asemenea, binare precompilate sau un program de instalare MSI, consultați "
-":doc:`../windows/installation`."
+"asemenea, binare precompilate sau un program de instalare MSI, consultați"
+" :doc:`../windows/installation`."
 
 #: ../software/nitropy/all-platforms/installation.rst:16
 msgid "Python 3.6 or newer"
@@ -16224,10 +16161,11 @@ msgid ""
 "Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`_ for"
 " more information."
 msgstr ""
-"Python este deja instalat pe majoritatea sistemelor macOS și Linux sau poate "
-"fi descărcat de pe `python.org <https://python.org>`_. Consultați Ghidul `"
-"Downloading Python <https://wiki.python.org/moin/BeginnersGuide/Download>`_ "
-"pentru mai multe informații."
+"Python este deja instalat pe majoritatea sistemelor macOS și Linux sau "
+"poate fi descărcat de pe `python.org <https://python.org>`_. Consultați "
+"Ghidul `Downloading Python "
+"<https://wiki.python.org/moin/BeginnersGuide/Download>`_ pentru mai multe"
+" informații."
 
 #: ../software/nitropy/all-platforms/installation.rst:20
 msgid "pip"
@@ -16239,9 +16177,10 @@ msgid ""
 " ensurepip``. See the `pip Installation Guide "
 "<https://pip.pypa.io/en/stable/installation/>`_ for more information."
 msgstr ""
-"Puteți instala pip cu managerul de pachete al sistemului sau cu ``python3 -m "
-"ensurepip``. Consultați Ghidul de instalare `pip <https://pip.pypa.io/en/"
-"stable/installation/>`_ pentru mai multe informații."
+"Puteți instala pip cu managerul de pachete al sistemului sau cu ``python3"
+" -m ensurepip``. Consultați Ghidul de instalare `pip "
+"<https://pip.pypa.io/en/stable/installation/>`_ pentru mai multe "
+"informații."
 
 #: ../software/nitropy/all-platforms/installation.rst:24
 msgid "pipx"
@@ -16250,15 +16189,17 @@ msgstr "pipx"
 #: ../software/nitropy/all-platforms/installation.rst:25
 msgid "Before installing nitropy, you have to install and configure pipx::"
 msgstr ""
-"Înainte de a instala nitropy, trebuie să instalați și să configurați pipx::"
+"Înainte de a instala nitropy, trebuie să instalați și să configurați "
+"pipx::"
 
 #: ../software/nitropy/all-platforms/installation.rst:30
 msgid ""
 "See the `pipx Installation Guide "
 "<https://pypa.github.io/pipx/installation/>`_ for more information."
 msgstr ""
-"Consultați Ghidul de instalare `pipx <https://pypa.github.io/pipx/"
-"installation/>`_ pentru mai multe informații."
+"Consultați Ghidul de instalare `pipx "
+"<https://pypa.github.io/pipx/installation/>`_ pentru mai multe "
+"informații."
 
 #: ../software/nitropy/all-platforms/installation.rst:35
 msgid "Now you can install nitropy from the pynitrokey package::"
@@ -16283,23 +16224,23 @@ msgid ""
 "device, you also have to install `libnitrokey "
 "<https://github.com/Nitrokey/libnitrokey>`_."
 msgstr ""
-"Dacă doriți să utilizați nitropy cu un dispozitiv Nitrokey Pro sau Nitrokey "
-"Storage, trebuie să instalați și `libnitrokey <https://github.com/Nitrokey/"
-"libnitrokey>`_."
+"Dacă doriți să utilizați nitropy cu un dispozitiv Nitrokey Pro sau "
+"Nitrokey Storage, trebuie să instalați și `libnitrokey "
+"<https://github.com/Nitrokey/libnitrokey>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:55
 msgid "Windows support is still experimental -- please use with caution."
 msgstr ""
-"Suportul pentru Windows este încă experimental - vă rugăm să îl utilizați cu "
-"prudență."
+"Suportul pentru Windows este încă experimental - vă rugăm să îl utilizați"
+" cu prudență."
 
 #: ../software/nitropy/all-platforms/installation.rst:57
 msgid ""
 "You might have to run nitropy with administrator rights to be able to "
 "connect to a device."
 msgstr ""
-"Este posibil să trebuiască să rulați nitropy cu drepturi de administrator "
-"pentru a vă putea conecta la un dispozitiv."
+"Este posibil să trebuiască să rulați nitropy cu drepturi de administrator"
+" pentru a vă putea conecta la un dispozitiv."
 
 #: ../software/nitropy/all-platforms/installation.rst:62
 msgid ""
@@ -16307,9 +16248,9 @@ msgid ""
 "shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. "
 "Alternatively, you can install them manually::"
 msgstr ""
-"Pe sistemele Linux, aveți nevoie și de regulile Nitrokey udev. Acestea sunt "
-"livrate cu `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. "
-"Alternativ, le puteți instala manual::"
+"Pe sistemele Linux, aveți nevoie și de regulile Nitrokey udev. Acestea "
+"sunt livrate cu `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_."
+" Alternativ, le puteți instala manual::"
 
 #: ../software/nitropy/all-platforms/installation.rst:67
 msgid "See :doc:`../linux/udev` for more information."
@@ -16362,9 +16303,10 @@ msgid ""
 "rules manually::"
 msgstr ""
 "Pentru a vă putea accesa dispozitivele fără privilegii de root, nitropy "
-"necesită regulile Nitrokey udev.  Aceste reguli sunt livrate cu `libnitrokey "
-"<https://github.com/Nitrokey/libnitrokey>`_.  Dacă nu aveți libnitrokey sau "
-"dacă aveți nevoie de o versiune mai nouă, puteți instala regulile manual::"
+"necesită regulile Nitrokey udev.  Aceste reguli sunt livrate cu "
+"`libnitrokey <https://github.com/Nitrokey/libnitrokey>`_.  Dacă nu aveți "
+"libnitrokey sau dacă aveți nevoie de o versiune mai nouă, puteți instala "
+"regulile manual::"
 
 #: ../software/nitropy/linux/udev.rst:9
 msgid "After installing the rules, you need to reload them::"
@@ -16375,8 +16317,8 @@ msgid ""
 "If you still cannot access your device, try again after rebooting your "
 "system."
 msgstr ""
-"Dacă tot nu puteți accesa dispozitivul, încercați din nou după ce reporniți "
-"sistemul."
+"Dacă tot nu puteți accesa dispozitivul, încercați din nou după ce "
+"reporniți sistemul."
 
 #: ../software/nitropy/linux/udev.rst:15 ../software/nitropy/linux/udev.rst:19
 msgid "Todo"
@@ -16387,8 +16329,8 @@ msgid ""
 "describe debugging, see "
 "https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 msgstr ""
-"descrie depanarea, consultați https://github.com/Nitrokey/pynitrokey/issues/"
-"167#issuecomment-1024921046"
+"descrie depanarea, consultați "
+"https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 
 #: ../software/nitropy/linux/udev.rst:21
 msgid "describe requirements: systemd, load order"
@@ -16416,9 +16358,9 @@ msgid ""
 "command prompt, you can alternatively install nitropy with pipx, see :doc"
 ":`../all-platforms/installation`."
 msgstr ""
-"Dacă utilizați deja Python pe sistemul dumneavoastră și sunteți familiarizat "
-"cu promptul de comandă, puteți instala nitropy cu pipx, consultați :doc"
-":`../all-platforms/installation`."
+"Dacă utilizați deja Python pe sistemul dumneavoastră și sunteți "
+"familiarizat cu promptul de comandă, puteți instala nitropy cu pipx, "
+"consultați :doc:`../all-platforms/installation`."
 
 #: ../software/nitropy/windows/installation.rst:11
 msgid "How to Install"
@@ -16444,9 +16386,9 @@ msgid ""
 " right mouse button on the Menu Start and select \"Windows PowerShell "
 "(Admin)\" from the menu)."
 msgstr ""
-"Deschideți consola de comenzi în modul administrator (Windows 10: apăsați "
-"butonul din dreapta al mouse-ului în meniul Start și selectați \"Windows "
-"PowerShell (Admin)\" din meniu)."
+"Deschideți consola de comenzi în modul administrator (Windows 10: apăsați"
+" butonul din dreapta al mouse-ului în meniul Start și selectați \"Windows"
+" PowerShell (Admin)\" din meniu)."
 
 #: ../software/nitropy/windows/installation.rst:16
 msgid "Enter ``nitropy``"
@@ -16473,8 +16415,8 @@ msgid ""
 "The installer does not remove a previous installation (manually remove it"
 " using settings -> programs and apps)"
 msgstr ""
-"Programul de instalare nu elimină o instalare anterioară (eliminați-o manual "
-"utilizând Setări -> programe și aplicații)"
+"Programul de instalare nu elimină o instalare anterioară (eliminați-o "
+"manual utilizând Setări -> programe și aplicații)"
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst:8
 msgid ""
@@ -17058,6 +17000,83 @@ msgstr ""
 msgid "(Nitrokey Start - Windows)"
 msgstr "(Nitrokey Start - Windows)"
 
+#: ../storage/encrypted-mobile-storage.rst:1
+#, fuzzy
+msgid ""
+"Prior of using the encrypted mobile storage you need to install and "
+"initialize the Nitrokey Storage and download the latest `Nitrokey App "
+"<https://www.nitrokey.com/download>`_."
+msgstr ""
+"Înainte de a utiliza spațiul de stocare mobil criptat, trebuie să "
+"instalați și să inițializați Nitrokey Storage și să descărcați cea mai "
+"recentă aplicație Nitrokey."
+
+#: ../storage/encrypted-mobile-storage.rst:3 ../storage/faq.rst:87
+msgid "Start the Nitrokey App."
+msgstr "Porniți aplicația Nitrokey."
+
+#: ../storage/encrypted-mobile-storage.rst:4 ../storage/faq.rst:88
+msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
+msgstr ""
+"Apăsați pictograma din tavă și selectați \"unlock encrypted volume\" în "
+"meniu."
+
+#: ../storage/encrypted-mobile-storage.rst:5 ../storage/faq.rst:89
+msgid "Enter your User PIN in the appearing popup window."
+msgstr "Introduceți PIN-ul de utilizator în fereastra pop-up care apare."
+
+#: ../storage/encrypted-mobile-storage.rst:6
+#, fuzzy
+msgid ""
+"If this is the first time you may need to create a partition on the "
+"encrypted volume. Windows will open an appropriate window and ask you to "
+"do so. On GNU+Linux and Mac you may need to open a partition manager and "
+"create a partition manually. You can create as many partitions as you "
+"want. We recommend FAT(32) if you want to access the partition from "
+"various operating systems."
+msgstr ""
+"Dacă aceasta este prima dată, este posibil să fie nevoie să creați o "
+"partiție pe volumul criptat. Windows va deschide o fereastră "
+"corespunzătoare și vă va cere să faceți acest lucru. Pe Linux și Mac este"
+" posibil să fie nevoie să deschideți un manager de partiții și să creați "
+"manual o partiție. Puteți crea oricâte partiții doriți. Vă recomandăm "
+"FAT(32) dacă doriți să accesați partiția din diverse sisteme de operare."
+
+#: ../storage/encrypted-mobile-storage.rst:7 ../storage/faq.rst:91
+msgid ""
+"Now you can use the encrypted volume as you would use any other ordinary "
+"USB drive. But all data stored on it will be encrypted in the Nitrokey "
+"hardware automatically."
+msgstr ""
+"Acum puteți utiliza volumul criptat așa cum ați utiliza orice altă "
+"unitate USB obișnuită. Dar toate datele stocate pe acesta vor fi criptate"
+" automat în hardware-ul Nitrokey."
+
+#: ../storage/encrypted-mobile-storage.rst:8 ../storage/faq.rst:92
+msgid "To remove or lock the encrypted volume you should unmount/eject it first."
+msgstr ""
+"Pentru a elimina sau a bloca volumul criptat, trebuie mai întâi să îl "
+"demontați/ejectați."
+
+#: ../storage/encrypted-mobile-storage.rst:9 ../storage/faq.rst:93
+msgid ""
+"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
+"volume\" from the Nitrokey App menu."
+msgstr ""
+"După aceea, puteți deconecta Nitrokey sau puteți selecta \"lock encrypted"
+" volume\" din meniul aplicației Nitrokey."
+
+#: ../storage/encrypted-mobile-storage.rst:11
+#, fuzzy
+msgid ""
+"The Nitrokey Storage is able to create hidden volumes as well. Please "
+"have a look at the corresponding instructions for `hidden volumes "
+"<hidden.html>`_."
+msgstr ""
+"Nitrokey Storage este capabil să creeze și volume ascunse. Vă rugăm să "
+"aruncați o privire la instrucțiunile corespunzătoare pentru volumele "
+"ascunse."
+
 #: ../storage/factory-reset.rst:8
 msgid "There are two types of factory resets for Nitrokey Storage devices:"
 msgstr ""
@@ -17191,11 +17210,17 @@ msgstr ""
 "principalele sale configurații P5CC081V1A, P5CN081V1A, P5CD041V1A, "
 "P5CD021V1A și P5CD016V1A, fiecare cu software dedicat IC\")."
 
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:75
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Storage for my applications?"
+msgstr ""
+
+#: ../storage/faq.rst:95
 msgid "**Q:** How can I use the encrypted mobile Storage?"
 msgstr "**Întrebare:** Cum pot utiliza stocarea mobilă criptată?"
 
-#: ../storage/faq.rst:74
+#: ../storage/faq.rst:85
 msgid ""
 "Prior of using the encrypted mobile storage you need to install and "
 "initialize the Nitrokey Storage and download the latest Nitrokey App."
@@ -17204,21 +17229,7 @@ msgstr ""
 "instalați și să inițializați Nitrokey Storage și să descărcați cea mai "
 "recentă aplicație Nitrokey."
 
-#: ../storage/faq.rst:76
-msgid "Start the Nitrokey App."
-msgstr "Porniți aplicația Nitrokey."
-
-#: ../storage/faq.rst:77
-msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
-msgstr ""
-"Apăsați pictograma din tavă și selectați \"unlock encrypted volume\" în "
-"meniu."
-
-#: ../storage/faq.rst:78
-msgid "Enter your User PIN in the appearing popup window."
-msgstr "Introduceți PIN-ul de utilizator în fereastra pop-up care apare."
-
-#: ../storage/faq.rst:79
+#: ../storage/faq.rst:90
 msgid ""
 "If this is the first time you may need to create a partition on the "
 "encrypted volume. Windows will open an appropriate window and ask you to "
@@ -17234,31 +17245,7 @@ msgstr ""
 "manual o partiție. Puteți crea oricâte partiții doriți. Vă recomandăm "
 "FAT(32) dacă doriți să accesați partiția din diverse sisteme de operare."
 
-#: ../storage/faq.rst:80
-msgid ""
-"Now you can use the encrypted volume as you would use any other ordinary "
-"USB drive. But all data stored on it will be encrypted in the Nitrokey "
-"hardware automatically."
-msgstr ""
-"Acum puteți utiliza volumul criptat așa cum ați utiliza orice altă "
-"unitate USB obișnuită. Dar toate datele stocate pe acesta vor fi criptate"
-" automat în hardware-ul Nitrokey."
-
-#: ../storage/faq.rst:81
-msgid "To remove or lock the encrypted volume you should unmount/eject it first."
-msgstr ""
-"Pentru a elimina sau a bloca volumul criptat, trebuie mai întâi să îl "
-"demontați/ejectați."
-
-#: ../storage/faq.rst:82
-msgid ""
-"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
-"volume\" from the Nitrokey App menu."
-msgstr ""
-"După aceea, puteți deconecta Nitrokey sau puteți selecta \"lock encrypted"
-" volume\" din meniul aplicației Nitrokey."
-
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:95
 msgid ""
 "The Nitrokey Storage is able to create hidden volumes as well. Please "
 "have a look at the corresponding instructions for hidden volumes."
@@ -17267,11 +17254,11 @@ msgstr ""
 "aruncați o privire la instrucțiunile corespunzătoare pentru volumele "
 "ascunse."
 
-#: ../storage/faq.rst:107
+#: ../storage/faq.rst:117
 msgid "**Q:** How can I use the hidden volume?"
 msgstr "**Întrebare:** Cum pot utiliza volumul ascuns?"
 
-#: ../storage/faq.rst:87
+#: ../storage/faq.rst:98
 msgid ""
 "Hidden volumes allow to hide data in the encrypted volume. The data is "
 "protected with an additional password. Without the password the data "
@@ -17288,7 +17275,7 @@ msgstr ""
 " cu Nitrokey Storage întreaga funcționalitate a volumelor ascunse este "
 "implementată în hardware."
 
-#: ../storage/faq.rst:94 ../storage/hidden.rst:8
+#: ../storage/faq.rst:105 ../storage/hidden.rst:8
 msgid ""
 "You can configure up to four hidden volumes. Once unlocked, hidden "
 "volumes behave like ordinary storage where you can create various "
@@ -17298,7 +17285,7 @@ msgstr ""
 "ascunse se comportă ca un spațiu de stocare obișnuit, unde puteți crea "
 "diverse partiții, sisteme de fișiere și stoca fișiere după cum doriți."
 
-#: ../storage/faq.rst:98
+#: ../storage/faq.rst:109
 msgid ""
 "If you decide to configure Hidden Volumes, you can not use the encrypted "
 "storage anymore. Because the Hidden Volume is situated on the free space "
@@ -17318,75 +17305,13 @@ msgstr ""
 " nu scrieți nimic în stocarea criptată după ce ați creat un volum ascuns "
 "(trebuie totuși să îl deblocați mai întâi)."
 
-#: ../storage/faq.rst:106
+#: ../storage/faq.rst:117
 msgid ""
 "Hidden volumes are like containers inside of a container, the encrypted "
 "volume."
 msgstr ""
 "Volumele ascunse sunt ca niște containere în interiorul unui container, "
 "volumul criptat."
-
-#: ../storage/faq.rst:118
-msgid "**Q:** Do you have resources for development and integration?"
-msgstr "**Q:** Aveți resurse pentru dezvoltare și integrare?"
-
-#: ../storage/faq.rst:110
-msgid ""
-"Use Nitrokey library to manage the encrypted mass store, one-time "
-"passwords and password safe functionality."
-msgstr ""
-"Folosiți biblioteca Nitrokey pentru a gestiona stocarea în masă criptată,"
-" parolele unice și funcționalitatea de siguranță a parolelor."
-
-#: ../storage/faq.rst:111
-msgid ""
-"The project nitrokey-get-totp and nitrokey-get-password are nice examples"
-" for using the python bindings of Nitrokey library to get a custom "
-"interface."
-msgstr ""
-"Proiectul nitrokey-get-totp și nitrokey-get-password sunt exemple "
-"frumoase de utilizare a legăturilor python ale bibliotecii Nitrokey "
-"pentru a obține o interfață personalizată."
-
-#: ../storage/faq.rst:112
-msgid ""
-"In order to access the integrated smart card, you can use OpenSC's "
-"command line tools."
-msgstr ""
-"Pentru a accesa cardul inteligent integrat, puteți utiliza instrumentele "
-"de linie de comandă ale OpenSC's."
-
-#: ../storage/faq.rst:113
-msgid "If your application has a PKCS#11 interface, use OpenSC's PKCS#11 driver."
-msgstr ""
-"Dacă aplicația dvs. are o interfață PKCS#11, utilizați driverul PKCS#11 "
-"al OpenSC's."
-
-#: ../storage/faq.rst:114
-msgid "To work with the smart card low level, see the OpenPGP Card specification."
-msgstr ""
-"Pentru a lucra cu cardul inteligent la nivel scăzut, consultați "
-"specificația OpenPGP Card."
-
-#: ../storage/faq.rst:115
-msgid "The source code of the firmware and the hardware layout are available too."
-msgstr ""
-"Codul sursă al firmware-ului și configurația hardware sunt de asemenea "
-"disponibile."
-
-#: ../storage/faq.rst:116
-msgid ""
-"To develop special applications or for command line access one can use "
-"the nitrocli created by d-e-s-o."
-msgstr ""
-"Pentru a dezvolta aplicații speciale sau pentru accesarea liniei de "
-"comandă se poate folosi nitrocli creat de d-e-s-o."
-
-#: ../storage/faq.rst:117
-msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
-msgstr ""
-"Un wrapper libnitrokey pentru Rust care oferă acces la dispozitivele "
-"Nitrokey."
 
 #: ../storage/firmware-update-manually.rst:2
 msgid "Activate Update Mode Manually"
@@ -17701,6 +17626,13 @@ msgstr ""
 #: ../storage/linux/product_platform_heading.rst:3
 msgid "(Nitrokey Storage 2 - Linux)"
 msgstr "(Nitrokey Storage 2 - Linux)"
+
+#: ../storage/linux/encrypted-mobile-storage.rst:2
+#: ../storage/mac/encrypted-mobile-storage.rst:2
+#: ../storage/windows/encrypted-mobile-storage.rst:2
+#, fuzzy
+msgid "Encrypted Mobile Storage"
+msgstr "**Întrebare:** Cum pot utiliza stocarea mobilă criptată?"
 
 #: ../storage/linux/firmware-update.rst:10
 #: ../storage/windows/firmware-update.rst:10
@@ -22256,3 +22188,176 @@ msgstr ""
 #~ " fi interogat cu SmartCardHSMKey.getUseCounter()"
 #~ " și poate fi confirmat cu "
 #~ "SmartCardHSMKeySpec.setKeyUseCounter()."
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'``"
+#~ msgstr ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'``"
+
+#~ msgid ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'``"
+#~ msgstr ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'``"
+
+#~ msgid ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER``"
+#~ msgstr ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER``"
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'``"
+#~ msgstr ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'``"
+
+#~ msgid "modules {"
+#~ msgstr "module {"
+
+#~ msgid "Nitrokey {"
+#~ msgstr "Nitrokey {"
+
+#~ msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+#~ msgstr "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "}"
+#~ msgstr "}"
+
+#~ msgid "engine=dynamic"
+#~ msgstr "motor=dynamic"
+
+#~ msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+#~ msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+
+#~ msgid "engineCtrl=ID:pkcs11"
+#~ msgstr "engineCtrl=ID:pkcs11"
+
+#~ msgid "engineCtrl=LIST_ADD:1"
+#~ msgstr "engineCtrl=LIST_ADD:1"
+
+#~ msgid "engineCtrl=LOAD"
+#~ msgstr "engineCtrl=LOAD"
+
+#~ msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+#~ msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "engineCtrl=INIT"
+#~ msgstr "engineCtrl=INIT"
+
+#~ msgid "[service]"
+#~ msgstr "[serviciu]"
+
+#~ msgid "engineNum=1"
+#~ msgstr "engineNum=1"
+
+#~ msgid "key=id_45"
+#~ msgstr "key=id_45"
+
+#~ msgid "**Q:** Do you have resources for development and integration?"
+#~ msgstr "**Q:** Aveți resurse pentru dezvoltare și integrare?"
+
+#~ msgid ""
+#~ "Use Nitrokey library to manage the "
+#~ "encrypted mass store, one-time passwords"
+#~ " and password safe functionality."
+#~ msgstr ""
+#~ "Folosiți biblioteca Nitrokey pentru a "
+#~ "gestiona stocarea în masă criptată, "
+#~ "parolele unice și funcționalitatea de "
+#~ "siguranță a parolelor."
+
+#~ msgid ""
+#~ "The project nitrokey-get-totp and "
+#~ "nitrokey-get-password are nice examples "
+#~ "for using the python bindings of "
+#~ "Nitrokey library to get a custom "
+#~ "interface."
+#~ msgstr ""
+#~ "Proiectul nitrokey-get-totp și "
+#~ "nitrokey-get-password sunt exemple frumoase"
+#~ " de utilizare a legăturilor python "
+#~ "ale bibliotecii Nitrokey pentru a obține"
+#~ " o interfață personalizată."
+
+#~ msgid ""
+#~ "In order to access the integrated "
+#~ "smart card, you can use OpenSC's "
+#~ "command line tools."
+#~ msgstr ""
+#~ "Pentru a accesa cardul inteligent "
+#~ "integrat, puteți utiliza instrumentele de "
+#~ "linie de comandă ale OpenSC's."
+
+#~ msgid ""
+#~ "If your application has a PKCS#11 "
+#~ "interface, use OpenSC's PKCS#11 driver."
+#~ msgstr ""
+#~ "Dacă aplicația dvs. are o interfață "
+#~ "PKCS#11, utilizați driverul PKCS#11 al "
+#~ "OpenSC's."
+
+#~ msgid ""
+#~ "To work with the smart card low"
+#~ " level, see the OpenPGP Card "
+#~ "specification."
+#~ msgstr ""
+#~ "Pentru a lucra cu cardul inteligent "
+#~ "la nivel scăzut, consultați specificația "
+#~ "OpenPGP Card."
+
+#~ msgid ""
+#~ "The source code of the firmware "
+#~ "and the hardware layout are available"
+#~ " too."
+#~ msgstr ""
+#~ "Codul sursă al firmware-ului și "
+#~ "configurația hardware sunt de asemenea "
+#~ "disponibile."
+
+#~ msgid ""
+#~ "To develop special applications or for"
+#~ " command line access one can use "
+#~ "the nitrocli created by d-e-s-o."
+#~ msgstr ""
+#~ "Pentru a dezvolta aplicații speciale sau"
+#~ " pentru accesarea liniei de comandă "
+#~ "se poate folosi nitrocli creat de "
+#~ "d-e-s-o."
+
+#~ msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
+#~ msgstr ""
+#~ "Un wrapper libnitrokey pentru Rust care"
+#~ " oferă acces la dispozitivele Nitrokey."
+

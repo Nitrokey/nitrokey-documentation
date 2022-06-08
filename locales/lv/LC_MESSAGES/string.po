@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 13:21+0200\n"
+"POT-Creation-Date: 2022-06-08 13:30+0200\n"
 "PO-Revision-Date: 2022-05-31 12:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Latvian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/lv/>\n"
 "Language: lv\n"
+"Language-Team: Latvian <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/lv/>\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100"
+" <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
-"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -142,7 +141,7 @@ msgstr ""
 "FIDO2, joprojām varat pieteikties, izmantojot otro Nitrokey FIDO2 (vai "
 "citu otru faktoru)."
 
-#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:69
+#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:72
 #: ../shared-faqs/generic.rst:34 ../start/faq.rst:38 ../storage/faq.rst:21
 msgid "**Q:** How large is the storage capacity?"
 msgstr "**Q:** Cik liela ir atmiņas ietilpība?"
@@ -2166,11 +2165,30 @@ msgstr "secp256"
 msgid "secp521"
 msgstr "secp521"
 
-#: ../hsm/faq.rst:64 ../pro/faq.rst:62 ../shared-faqs/generic.rst:142
-msgid "**Q:** How good is the Random Number Generator (RNG)?"
+#: ../hsm/faq.rst:64
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey HSM for my applications?"
+msgstr ""
+
+#: ../hsm/faq.rst:62
+msgid ""
+"Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC "
+"as a PKCS#11 driver."
+msgstr ""
+
+#: ../hsm/faq.rst:64
+msgid ""
+"OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
+"doesn't contain a mapping for OpenSSL to C_GenerateRandom."
+msgstr ""
+
+#: ../hsm/faq.rst:68 ../pro/faq.rst:66 ../storage/faq.rst:82
+#, fuzzy
+msgid "**Q:** How good is the True Random Number Generator (TRNG)?"
 msgstr "**K:** Cik labs ir nejaušo skaitļu ģenerators (RNG)?"
 
-#: ../hsm/faq.rst:63
+#: ../hsm/faq.rst:67
 msgid ""
 "Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 "
 "(according to AIS 31 of the BSI)."
@@ -2178,11 +2196,11 @@ msgstr ""
 "Nitrokey HSM izmanto JCOP 2.4.1r3 TRNG, kura kvalitāte ir DRNG.2 (saskaņā"
 " ar BSI AIS 31)."
 
-#: ../hsm/faq.rst:80
+#: ../hsm/faq.rst:84
 msgid "**Q:** Which API can I use?"
 msgstr "**Q:** Kuru API es varu izmantot?"
 
-#: ../hsm/faq.rst:67
+#: ../hsm/faq.rst:71
 msgid ""
 "OpenSC: Comprehensive instructions exist for OpenSC framework. There is "
 "nitrotool as a more comfortable frontend to OpenSC."
@@ -2190,7 +2208,7 @@ msgstr ""
 "OpenSC: OpenSC ietvaram ir pieejamas visaptverošas instrukcijas. Ir "
 "nitrotool kā ērtāks OpenSC frontends."
 
-#: ../hsm/faq.rst:70
+#: ../hsm/faq.rst:74
 msgid ""
 "Embedded Systems: For systems with minimal memory footprint a read/only "
 "PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 "
@@ -2204,7 +2222,7 @@ msgstr ""
 "darbavietā nav nepieciešama. PKCS#11 modulis atbalsta arī galvenās "
 "Vācijas tirgū pieejamās elektroniskā paraksta kartes."
 
-#: ../hsm/faq.rst:76
+#: ../hsm/faq.rst:80
 msgid ""
 "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open "
 "smart card development platform. See the public support scripts for "
@@ -2215,11 +2233,11 @@ msgstr ""
 "atbalsta skriptos. Lai importētu esošās atslēgas, varat izmantot SCSH vai"
 " NitroKeyWrapper."
 
-#: ../hsm/faq.rst:86
+#: ../hsm/faq.rst:90
 msgid "**Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?"
 msgstr "**K:** Vai Nitrokey 3 ir sertificēts pēc Common Criteria vai FIPS?"
 
-#: ../hsm/faq.rst:83
+#: ../hsm/faq.rst:87
 msgid ""
 "The security controler's hardware and operating system are Common "
 "Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_, "
@@ -2231,11 +2249,11 @@ msgstr ""
 "`šeit`_, noklikšķiniet uz \"ICs, Smart Cards and Smart Card-Related "
 "Devices and Systems\" un meklējiet \"NXP JCOP 3 P60\")."
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid "**Q:** How to import an existing key into the Nitrokey HSM?"
 msgstr "**Q:** Kā importēt esošo atslēgu Nitrokey HSM?"
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid ""
 "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then "
 "use Smart Card Shell for importing. If your key is stored in a Java key "
@@ -2246,13 +2264,13 @@ msgstr ""
 "atslēga ir saglabāta Java atslēgu krātuvē, tās vietā varat izmantot "
 "`NitroKeyWrapper`_."
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey "
 "HSM?"
 msgstr "**Q:** Kā nodrošināt mākoņinfrastruktūru/Kubernetes ar Nitrokey HSM?"
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at `banzaicloud.com`_."
@@ -2260,11 +2278,11 @@ msgstr ""
 "Pieeju, kā nodrošināt atslēgas Hashicorp Vault/Bank-Vault ar Nitrokey "
 "HSM, var atrast `banzaicloud.com`_."
 
-#: ../hsm/faq.rst:97
+#: ../hsm/faq.rst:101
 msgid "**Q:** Can I use Nitrokey HSM with cryptocurrencies?"
 msgstr "**Q:** Vai es varu izmantot Nitrokey HSM ar kriptovalūtām?"
 
-#: ../hsm/faq.rst:95
+#: ../hsm/faq.rst:99
 msgid ""
 "J.v.d.Bosch wrote a simple, free python `program`_ to secure the private "
 "key of a Bitcoin wallet in a HSM. `Tezos`_ has been `reported`_ to work "
@@ -2508,69 +2526,25 @@ msgstr ""
 "Izveidojiet atslēgu Nitrokey, izmantojot pkcs11 rīku. Šajā piemērā tā ir "
 "4096 bitu RSA atslēga."
 
-#: ../hsm/ipsec.rst:9
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
-msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'```"
-
-#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:13
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr ""
 "Sertifikāta parakstīšanas pieprasījuma ģenerēšana, izmantojot openssl + "
 "pkcs11 moduli"
 
-#: ../hsm/ipsec.rst:13
-msgid ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'``"
-msgstr ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'```"
-
-#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:21
 msgid "Sign the certificate with your certificate authority"
 msgstr "Parakstiet sertifikātu ar savu sertifikātu iestādi"
 
-#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:23
 msgid "Convert the certificate to DER"
 msgstr "Sertifikāta konvertēšana uz DER"
 
-#: ../hsm/ipsec.rst:21
-msgid ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER``"
-msgstr ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER```"
-
-#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:29
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
 msgstr "Sertifikāta importēšana Nitrokey, izmantojot pkcs11 rīku"
 
-#: ../hsm/ipsec.rst:25
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'``"
-msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'```"
-
-#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:35
 msgid ""
 "Configure Strongswan to load opensc-pkcs11 module then to load the "
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
@@ -2580,23 +2554,7 @@ msgstr ""
 "ielādētu Nitrokey sertifikātu. Rediģējiet "
 "/etc/strongswan.d/charon/pkcs11.conf un pievienojiet šādu moduli:"
 
-#: ../hsm/ipsec.rst:32
-msgid "modules {"
-msgstr "moduļi {"
-
-#: ../hsm/ipsec.rst:30
-msgid "Nitrokey {"
-msgstr "Nitrokey {"
-
-#: ../hsm/ipsec.rst:31
-msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr "ceļš = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/ipsec.rst:32 ../hsm/ipsec.rst:33
-msgid "}"
-msgstr "}"
-
-#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:46
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
@@ -2604,7 +2562,7 @@ msgstr ""
 "Iniciējiet VPN savienojumu, izmantojot IPSec/Strongswan, pēc tam "
 "pieprasiet Nitrokey PIN kodu."
 
-#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:48
 msgid "VPN is now connected"
 msgstr "VPN tagad ir savienots"
 
@@ -3691,46 +3649,6 @@ msgstr ""
 #: ../hsm/stunnel.rst:7
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr "Izmantojot šo konfigurāciju, Stunnel spēj ielādēt OpenSC PKCS#11 dzinēju:"
-
-#: ../hsm/stunnel.rst:9
-msgid "engine=dynamic"
-msgstr "dzinējs=dinamiskais"
-
-#: ../hsm/stunnel.rst:10
-msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-
-#: ../hsm/stunnel.rst:11
-msgid "engineCtrl=ID:pkcs11"
-msgstr "engineCtrl=ID:pkcs11"
-
-#: ../hsm/stunnel.rst:12
-msgid "engineCtrl=LIST_ADD:1"
-msgstr "engineCtrl=LIST_ADD:1"
-
-#: ../hsm/stunnel.rst:13
-msgid "engineCtrl=LOAD"
-msgstr "engineCtrl=LOAD"
-
-#: ../hsm/stunnel.rst:14
-msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/stunnel.rst:15
-msgid "engineCtrl=INIT"
-msgstr "engineCtrl=INIT"
-
-#: ../hsm/stunnel.rst:17
-msgid "[service]"
-msgstr "[pakalpojums]"
-
-#: ../hsm/stunnel.rst:18
-msgid "engineNum=1"
-msgstr "engineNum=1"
-
-#: ../hsm/stunnel.rst:19
-msgid "key=id_45"
-msgstr "key=id_45"
 
 #: ../hsm/mac/product_platform_heading.rst:3
 msgid "(Nitrokey HSM 2 - macOS)"
@@ -10253,16 +10171,16 @@ msgid ""
 " typing the following in a terminal:"
 msgstr ""
 "Nitrokey lietotne ir iekļauta Ubuntu krātuvēs kopš Ubuntu 18.04 (kods "
-"'bionic'). To var vienkārši instalēt, izmantojot Programmatūras centru vai "
-"ievadot terminālī šādu tekstu:"
+"'bionic'). To var vienkārši instalēt, izmantojot Programmatūras centru "
+"vai ievadot terminālī šādu tekstu:"
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:14 ../nitropc/ubuntu/nitrokey-app.rst:14
 msgid ""
 "Unfortunately, the App versions in the official Ubuntu repositories are "
 "often not up-to-date."
 msgstr ""
-"Diemžēl lietotņu versijas oficiālajos Ubuntu repozitorijos bieži vien nav "
-"atjauninātas."
+"Diemžēl lietotņu versijas oficiālajos Ubuntu repozitorijos bieži vien nav"
+" atjauninātas."
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:17 ../nitropc/ubuntu/nitrokey-app.rst:17
 msgid "More recent App versions"
@@ -10289,8 +10207,8 @@ msgid ""
 "The PPA is not necessary for Ubuntu 22.04 and later. The previous "
 "versions of Ubuntu could still use it to update the app."
 msgstr ""
-"PPA nav nepieciešams Ubuntu 22.04 un jaunākām versijām. Iepriekšējās Ubuntu "
-"versijas joprojām varēja to izmantot, lai atjauninātu programmu."
+"PPA nav nepieciešams Ubuntu 22.04 un jaunākām versijām. Iepriekšējās "
+"Ubuntu versijas joprojām varēja to izmantot, lai atjauninātu programmu."
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:36 ../nitropc/ubuntu/nitrokey-app.rst:36
 msgid ""
@@ -11852,22 +11770,37 @@ msgstr ""
 "P5CN081V1A, P5CD041V1A, P5CD021V1A un P5CD016V1A, katra ar IC veltītu "
 "programmatūru\")."
 
-#: ../pro/faq.rst:58
+#: ../pro/faq.rst:59
 msgid ""
-"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator "
-"(TRNG) for generating keys on the device. The entropy generated by the "
-"TRNG is used for the entire key length. Therefore the TRNG is compliant "
-"to BSI TR-03116."
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Pro for my applications?"
+msgstr ""
+
+#: ../pro/faq.rst:58 ../storage/faq.rst:74
+msgid ""
+"Both devices are compatible to the OpenPGP Card, so that `scdrand`_ "
+"should work. `This script`_ may be useful. The user comio `created a "
+"systemd file`_ to use scdrand and thus the TRNG more generally. He "
+"created an `ebuild for Gentoo`_, too."
+msgstr ""
+
+#: ../pro/faq.rst:62 ../storage/faq.rst:78
+#, fuzzy
+msgid ""
+"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator for "
+"generating keys on the device. The entropy generated by the TRNG is used "
+"for the entire key length. Therefore the TRNG is compliant to BSI "
+"TR-03116."
 msgstr ""
 "Nitrokey Pro un Nitrokey Storage izmanto True Random Number Generator "
 "(TRNG), lai ģenerētu atslēgas ierīcē. TRNG ģenerētā entropija tiek "
 "izmantota visam atslēgas garumam. Tāpēc TRNG atbilst BSI TR-03116."
 
-#: ../pro/faq.rst:62
+#: ../pro/faq.rst:66 ../storage/faq.rst:82
 msgid "The TRNG provides about 40 kbit/s."
 msgstr "TRNG nodrošina aptuveni 40 kbit/s."
 
-#: ../pro/faq.rst:65
+#: ../pro/faq.rst:69
 msgid ""
 "The Nitrokey Pro doesn't contain storage capability for ordinary data (it"
 " can only store cryptographic keys and certificates)."
@@ -15654,6 +15587,10 @@ msgstr ""
 "drošu viedkarti. Zināmā mērā tas attiecas arī uz Nitrokey U2F, taču tā ir"
 " zemākas kvalitātes. Nitrokey Start ir iestrādāts mikroprocesorā."
 
+#: ../shared-faqs/generic.rst:142
+msgid "**Q:** How good is the Random Number Generator (RNG)?"
+msgstr "**K:** Cik labs ir nejaušo skaitļu ģenerators (RNG)?"
+
 #: ../shared-faqs/generic.rst:169
 msgid "**Q:** Is Nitrokey Common Criteria or FIPS certified?"
 msgstr "**Q:** Vai Nitrokey ir sertificēts pēc Common Criteria vai FIPS?"
@@ -15856,9 +15793,10 @@ msgid ""
 "nitropy. This means that nitropy and its dependencies don’t conflict with"
 " other packages installed on your system."
 msgstr ""
-"Šajā rokasgrāmatā ir izskaidrots, kā instalēt nitropy ar ` pipx <https://pypa"
-".github.io/pipx/>`_. pipx izveido nitropy virtuālo vidi. Tas nozīmē, ka "
-"nitropy un tās atkarības nekonfliktē ar citām sistēmā instalētajām pakotnēm."
+"Šajā rokasgrāmatā ir izskaidrots, kā instalēt nitropy ar ` pipx "
+"<https://pypa.github.io/pipx/>`_. pipx izveido nitropy virtuālo vidi. Tas"
+" nozīmē, ka nitropy un tās atkarības nekonfliktē ar citām sistēmā "
+"instalētajām pakotnēm."
 
 #: ../software/nitropy/all-platforms/installation.rst:10
 msgid ""
@@ -15884,8 +15822,8 @@ msgid ""
 msgstr ""
 "Python jau ir instalēts vairumā macOS un Linux sistēmu vai arī to var "
 "lejupielādēt no `python.org <https://python.org>`_. Lai iegūtu vairāk "
-"informācijas, skatiet `Python lejupielādes rokasgrāmatu <https://wiki.python."
-"org/moin/BeginnersGuide/Download>`_."
+"informācijas, skatiet `Python lejupielādes rokasgrāmatu "
+"<https://wiki.python.org/moin/BeginnersGuide/Download>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:20
 msgid "pip"
@@ -15897,9 +15835,10 @@ msgid ""
 " ensurepip``. See the `pip Installation Guide "
 "<https://pip.pypa.io/en/stable/installation/>`_ for more information."
 msgstr ""
-"Jūs varat instalēt pip, izmantojot sistēmas pakotņu pārvaldnieku vai ``"
-"python3 -m ensurepip``. Lai iegūtu vairāk informācijas, skatiet `pip "
-"instalēšanas rokasgrāmatu <https://pip.pypa.io/en/stable/installation/>`_."
+"Jūs varat instalēt pip, izmantojot sistēmas pakotņu pārvaldnieku vai "
+"``python3 -m ensurepip``. Lai iegūtu vairāk informācijas, skatiet `pip "
+"instalēšanas rokasgrāmatu "
+"<https://pip.pypa.io/en/stable/installation/>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:24
 msgid "pipx"
@@ -15940,8 +15879,9 @@ msgid ""
 "device, you also have to install `libnitrokey "
 "<https://github.com/Nitrokey/libnitrokey>`_."
 msgstr ""
-"Ja vēlaties izmantot nitropy ar Nitrokey Pro vai Nitrokey krātuves ierīci, "
-"ir jāinstalē arī `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_."
+"Ja vēlaties izmantot nitropy ar Nitrokey Pro vai Nitrokey krātuves "
+"ierīci, ir jāinstalē arī `libnitrokey "
+"<https://github.com/Nitrokey/libnitrokey>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:55
 msgid "Windows support is still experimental -- please use with caution."
@@ -15964,8 +15904,9 @@ msgid ""
 "Alternatively, you can install them manually::"
 msgstr ""
 "Linux sistēmās ir nepieciešami arī Nitrokey udev noteikumi. Tie tiek "
-"piegādāti kopā ar `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. "
-"Alternatīvi tos var instalēt manuāli::"
+"piegādāti kopā ar `libnitrokey "
+"<https://github.com/Nitrokey/libnitrokey>`_. Alternatīvi tos var instalēt"
+" manuāli::"
 
 #: ../software/nitropy/all-platforms/installation.rst:67
 msgid "See :doc:`../linux/udev` for more information."
@@ -16015,10 +15956,11 @@ msgid ""
 "have libnitrokey or if you need a newer version, you can install the "
 "rules manually::"
 msgstr ""
-"Lai varētu piekļūt savām ierīcēm bez root tiesībām, nitropy ir nepieciešami "
-"Nitrokey udev noteikumi.  Šie noteikumi tiek piegādāti kopā ar `libnitrokey "
-"<https://github.com/Nitrokey/libnitrokey>`_.  Ja jums nav libnitrokey vai "
-"nepieciešama jaunāka versija, noteikumus varat instalēt manuāli::"
+"Lai varētu piekļūt savām ierīcēm bez root tiesībām, nitropy ir "
+"nepieciešami Nitrokey udev noteikumi.  Šie noteikumi tiek piegādāti kopā "
+"ar `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_.  Ja jums nav"
+" libnitrokey vai nepieciešama jaunāka versija, noteikumus varat instalēt "
+"manuāli::"
 
 #: ../software/nitropy/linux/udev.rst:9
 msgid "After installing the rules, you need to reload them::"
@@ -16041,8 +15983,8 @@ msgid ""
 "describe debugging, see "
 "https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 msgstr ""
-"aprakstīt atkļūdošanas novēršanu, skatiet https://github.com/Nitrokey/"
-"pynitrokey/issues/167#issuecomment-1024921046"
+"aprakstīt atkļūdošanas novēršanu, skatiet "
+"https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 
 #: ../software/nitropy/linux/udev.rst:21
 msgid "describe requirements: systemd, load order"
@@ -16071,8 +16013,8 @@ msgid ""
 ":`../all-platforms/installation`."
 msgstr ""
 "Ja savā sistēmā jau izmantojat Python un zināt komandrindas, varat "
-"alternatīvi instalēt nitropy ar pipx, skatīt :doc:`../all-platforms/"
-"installation`."
+"alternatīvi instalēt nitropy ar pipx, skatīt :doc:`../all-"
+"platforms/installation`."
 
 #: ../software/nitropy/windows/installation.rst:11
 msgid "How to Install"
@@ -16098,9 +16040,9 @@ msgid ""
 " right mouse button on the Menu Start and select \"Windows PowerShell "
 "(Admin)\" from the menu)."
 msgstr ""
-"Atveriet komandu konsoli administratora režīmā (Windows 10: nospiediet peles "
-"labo pogu izvēlnē Sākums un izvēlnē izvēlieties \"Windows PowerShell (Admin)"
-"\")."
+"Atveriet komandu konsoli administratora režīmā (Windows 10: nospiediet "
+"peles labo pogu izvēlnē Sākums un izvēlnē izvēlieties \"Windows "
+"PowerShell (Admin)\")."
 
 #: ../software/nitropy/windows/installation.rst:16
 msgid "Enter ``nitropy``"
@@ -16111,8 +16053,8 @@ msgid ""
 "Without administrator privileges nitropy might not be able to communicate"
 " to device."
 msgstr ""
-"Bez administratora privilēģijām nitropy var nebūt iespējams sazināties ar "
-"ierīci."
+"Bez administratora privilēģijām nitropy var nebūt iespējams sazināties ar"
+" ierīci."
 
 #: ../software/nitropy/windows/installation.rst:23
 msgid ""
@@ -16697,6 +16639,81 @@ msgstr ""
 msgid "(Nitrokey Start - Windows)"
 msgstr "(Nitrokey Start - Windows)"
 
+#: ../storage/encrypted-mobile-storage.rst:1
+#, fuzzy
+msgid ""
+"Prior of using the encrypted mobile storage you need to install and "
+"initialize the Nitrokey Storage and download the latest `Nitrokey App "
+"<https://www.nitrokey.com/download>`_."
+msgstr ""
+"Pirms šifrētās mobilās krātuves izmantošanas ir nepieciešams instalēt un "
+"inicializēt Nitrokey krātuvi un lejupielādēt jaunāko Nitrokey lietotni."
+
+#: ../storage/encrypted-mobile-storage.rst:3 ../storage/faq.rst:87
+msgid "Start the Nitrokey App."
+msgstr "Palaidiet lietotni Nitrokey."
+
+#: ../storage/encrypted-mobile-storage.rst:4 ../storage/faq.rst:88
+msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
+msgstr ""
+"Nospiediet tā paplātes ikonu un izvēlnē atlasiet \"atbloķēt šifrētu "
+"sējumu\"."
+
+#: ../storage/encrypted-mobile-storage.rst:5 ../storage/faq.rst:89
+msgid "Enter your User PIN in the appearing popup window."
+msgstr "Iznirstošajā logā ievadiet savu lietotāja PIN kodu."
+
+#: ../storage/encrypted-mobile-storage.rst:6
+#, fuzzy
+msgid ""
+"If this is the first time you may need to create a partition on the "
+"encrypted volume. Windows will open an appropriate window and ask you to "
+"do so. On GNU+Linux and Mac you may need to open a partition manager and "
+"create a partition manually. You can create as many partitions as you "
+"want. We recommend FAT(32) if you want to access the partition from "
+"various operating systems."
+msgstr ""
+"Ja šī ir pirmā reize, šifrētajā sējumā var būt nepieciešams izveidot "
+"nodalījumu. Windows atvērs attiecīgu logu un lūgs to izdarīt. Linux un "
+"Mac operētājsistēmās var būt nepieciešams atvērt nodalījumu pārvaldnieku "
+"un izveidot nodalījumu manuāli. Varat izveidot tik daudz nodalījumu, cik "
+"vēlaties. Mēs iesakām izmantot FAT(32), ja vēlaties piekļūt šim "
+"nodalījumam no dažādām operētājsistēmām."
+
+#: ../storage/encrypted-mobile-storage.rst:7 ../storage/faq.rst:91
+msgid ""
+"Now you can use the encrypted volume as you would use any other ordinary "
+"USB drive. But all data stored on it will be encrypted in the Nitrokey "
+"hardware automatically."
+msgstr ""
+"Tagad šifrēto sējumu varat izmantot tāpat kā jebkuru citu parastu USB "
+"disku. Bet visi tajā saglabātie dati tiks automātiski šifrēti Nitrokey "
+"aparatūrā."
+
+#: ../storage/encrypted-mobile-storage.rst:8 ../storage/faq.rst:92
+msgid "To remove or lock the encrypted volume you should unmount/eject it first."
+msgstr ""
+"Lai noņemtu vai bloķētu šifrēto sējumu, vispirms tas ir "
+"jāatbloķē/jāizslēdz."
+
+#: ../storage/encrypted-mobile-storage.rst:9 ../storage/faq.rst:93
+msgid ""
+"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
+"volume\" from the Nitrokey App menu."
+msgstr ""
+"Pēc tam varat atvienot Nitrokey vai Nitrokey lietotnes izvēlnē izvēlēties"
+" \"bloķēt šifrēto sējumu\"."
+
+#: ../storage/encrypted-mobile-storage.rst:11
+#, fuzzy
+msgid ""
+"The Nitrokey Storage is able to create hidden volumes as well. Please "
+"have a look at the corresponding instructions for `hidden volumes "
+"<hidden.html>`_."
+msgstr ""
+"Nitrokey krātuve spēj izveidot arī slēptos sējumus. Lūdzu, aplūkojiet "
+"attiecīgās instrukcijas par slēptajiem sējumiem."
+
 #: ../storage/factory-reset.rst:8
 msgid "There are two types of factory resets for Nitrokey Storage devices:"
 msgstr "Nitrokey atmiņas ierīcēm ir divu veidu rūpnīcas atiestatīšanas iespējas:"
@@ -16828,11 +16845,17 @@ msgstr ""
 "galvenās konfigurācijas P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A un"
 " P5CD016V1A, katra ar IC veltītu programmatūru\")."
 
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:75
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Storage for my applications?"
+msgstr ""
+
+#: ../storage/faq.rst:95
 msgid "**Q:** How can I use the encrypted mobile Storage?"
 msgstr "**Q:** Kā es varu izmantot šifrētu mobilo krātuvi?"
 
-#: ../storage/faq.rst:74
+#: ../storage/faq.rst:85
 msgid ""
 "Prior of using the encrypted mobile storage you need to install and "
 "initialize the Nitrokey Storage and download the latest Nitrokey App."
@@ -16840,21 +16863,7 @@ msgstr ""
 "Pirms šifrētās mobilās krātuves izmantošanas ir nepieciešams instalēt un "
 "inicializēt Nitrokey krātuvi un lejupielādēt jaunāko Nitrokey lietotni."
 
-#: ../storage/faq.rst:76
-msgid "Start the Nitrokey App."
-msgstr "Palaidiet lietotni Nitrokey."
-
-#: ../storage/faq.rst:77
-msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
-msgstr ""
-"Nospiediet tā paplātes ikonu un izvēlnē atlasiet \"atbloķēt šifrētu "
-"sējumu\"."
-
-#: ../storage/faq.rst:78
-msgid "Enter your User PIN in the appearing popup window."
-msgstr "Iznirstošajā logā ievadiet savu lietotāja PIN kodu."
-
-#: ../storage/faq.rst:79
+#: ../storage/faq.rst:90
 msgid ""
 "If this is the first time you may need to create a partition on the "
 "encrypted volume. Windows will open an appropriate window and ask you to "
@@ -16870,31 +16879,7 @@ msgstr ""
 "vēlaties. Mēs iesakām izmantot FAT(32), ja vēlaties piekļūt šim "
 "nodalījumam no dažādām operētājsistēmām."
 
-#: ../storage/faq.rst:80
-msgid ""
-"Now you can use the encrypted volume as you would use any other ordinary "
-"USB drive. But all data stored on it will be encrypted in the Nitrokey "
-"hardware automatically."
-msgstr ""
-"Tagad šifrēto sējumu varat izmantot tāpat kā jebkuru citu parastu USB "
-"disku. Bet visi tajā saglabātie dati tiks automātiski šifrēti Nitrokey "
-"aparatūrā."
-
-#: ../storage/faq.rst:81
-msgid "To remove or lock the encrypted volume you should unmount/eject it first."
-msgstr ""
-"Lai noņemtu vai bloķētu šifrēto sējumu, vispirms tas ir "
-"jāatbloķē/jāizslēdz."
-
-#: ../storage/faq.rst:82
-msgid ""
-"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
-"volume\" from the Nitrokey App menu."
-msgstr ""
-"Pēc tam varat atvienot Nitrokey vai Nitrokey lietotnes izvēlnē izvēlēties"
-" \"bloķēt šifrēto sējumu\"."
-
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:95
 msgid ""
 "The Nitrokey Storage is able to create hidden volumes as well. Please "
 "have a look at the corresponding instructions for hidden volumes."
@@ -16902,11 +16887,11 @@ msgstr ""
 "Nitrokey krātuve spēj izveidot arī slēptos sējumus. Lūdzu, aplūkojiet "
 "attiecīgās instrukcijas par slēptajiem sējumiem."
 
-#: ../storage/faq.rst:107
+#: ../storage/faq.rst:117
 msgid "**Q:** How can I use the hidden volume?"
 msgstr "**Q:** Kā es varu izmantot slēpto skaļumu?"
 
-#: ../storage/faq.rst:87
+#: ../storage/faq.rst:98
 msgid ""
 "Hidden volumes allow to hide data in the encrypted volume. The data is "
 "protected with an additional password. Without the password the data "
@@ -16922,7 +16907,7 @@ msgstr ""
 "sējumam, bet Nitrokey Storage visa slēpto sējumu funkcionalitāte ir "
 "īstenota aparatūrā."
 
-#: ../storage/faq.rst:94 ../storage/hidden.rst:8
+#: ../storage/faq.rst:105 ../storage/hidden.rst:8
 msgid ""
 "You can configure up to four hidden volumes. Once unlocked, hidden "
 "volumes behave like ordinary storage where you can create various "
@@ -16932,7 +16917,7 @@ msgstr ""
 "atbloķēti, tie darbojas kā parastā krātuve, kurā varat izveidot dažādus "
 "nodalījumus, failu sistēmas un glabāt failus pēc saviem ieskatiem."
 
-#: ../storage/faq.rst:98
+#: ../storage/faq.rst:109
 msgid ""
 "If you decide to configure Hidden Volumes, you can not use the encrypted "
 "storage anymore. Because the Hidden Volume is situated on the free space "
@@ -16950,71 +16935,11 @@ msgstr ""
 "struktūra ir parādīta diagrammā turpmāk. Tāpēc pēc slēptā sējuma izveides"
 " šifrētajā krātuvē neko neierakstiet (tomēr vispirms tas ir jāatbloķē)."
 
-#: ../storage/faq.rst:106
+#: ../storage/faq.rst:117
 msgid ""
 "Hidden volumes are like containers inside of a container, the encrypted "
 "volume."
 msgstr "Slēptie sējumi ir kā konteineri konteinerā - šifrētā sējumā."
-
-#: ../storage/faq.rst:118
-msgid "**Q:** Do you have resources for development and integration?"
-msgstr "**Q:** Vai jums ir resursi izstrādes un integrācijas nodrošināšanai?"
-
-#: ../storage/faq.rst:110
-msgid ""
-"Use Nitrokey library to manage the encrypted mass store, one-time "
-"passwords and password safe functionality."
-msgstr ""
-"Izmantojiet Nitrokey bibliotēku, lai pārvaldītu šifrētu masveida krātuvi,"
-" vienreizējas paroles un paroles drošību."
-
-#: ../storage/faq.rst:111
-msgid ""
-"The project nitrokey-get-totp and nitrokey-get-password are nice examples"
-" for using the python bindings of Nitrokey library to get a custom "
-"interface."
-msgstr ""
-"Projekts nitrokey-get-totp un nitrokey-get-password ir labi piemēri "
-"Nitrokey bibliotēkas python sasaistes izmantošanai, lai iegūtu pielāgotu "
-"interfeisu."
-
-#: ../storage/faq.rst:112
-msgid ""
-"In order to access the integrated smart card, you can use OpenSC's "
-"command line tools."
-msgstr ""
-"Lai piekļūtu integrētajai viedkartei, varat izmantot OpenSC'komandrindas "
-"rīkus."
-
-#: ../storage/faq.rst:113
-msgid "If your application has a PKCS#11 interface, use OpenSC's PKCS#11 driver."
-msgstr ""
-"Ja jūsu lietojumprogrammai ir PKCS#11 saskarne, izmantojiet "
-"OpenSC'PKCS#11 draiveri."
-
-#: ../storage/faq.rst:114
-msgid "To work with the smart card low level, see the OpenPGP Card specification."
-msgstr ""
-"Lai strādātu ar viedkarti zemā līmenī, skatiet OpenPGP kartes "
-"specifikāciju."
-
-#: ../storage/faq.rst:115
-msgid "The source code of the firmware and the hardware layout are available too."
-msgstr "Ir pieejams arī programmaparatūras pirmkods un aparatūras izkārtojums."
-
-#: ../storage/faq.rst:116
-msgid ""
-"To develop special applications or for command line access one can use "
-"the nitrocli created by d-e-s-o."
-msgstr ""
-"Lai izstrādātu īpašas lietojumprogrammas vai komandrindas piekļuvei, var "
-"izmantot d-e-s-o izveidoto nitrocli."
-
-#: ../storage/faq.rst:117
-msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
-msgstr ""
-"Libnitrokey ietvars sistēmai Rust, kas nodrošina piekļuvi Nitrokey "
-"ierīcēm."
 
 #: ../storage/firmware-update-manually.rst:2
 msgid "Activate Update Mode Manually"
@@ -17325,6 +17250,13 @@ msgstr ""
 #: ../storage/linux/product_platform_heading.rst:3
 msgid "(Nitrokey Storage 2 - Linux)"
 msgstr "(Nitrokey Storage 2 - Linux)"
+
+#: ../storage/linux/encrypted-mobile-storage.rst:2
+#: ../storage/mac/encrypted-mobile-storage.rst:2
+#: ../storage/windows/encrypted-mobile-storage.rst:2
+#, fuzzy
+msgid "Encrypted Mobile Storage"
+msgstr "**Q:** Kā es varu izmantot šifrētu mobilo krātuvi?"
 
 #: ../storage/linux/firmware-update.rst:10
 #: ../storage/windows/firmware-update.rst:10
@@ -21679,3 +21611,167 @@ msgstr ""
 #~ "izmantošanas skaitītāju var pieprasīt ar "
 #~ "SmartCardHSMKey.getUseCounter() un apstiprināt ar"
 #~ " SmartCardHSMKeySpec.setKeyUseCounter()."
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'``"
+#~ msgstr ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'```"
+
+#~ msgid ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'``"
+#~ msgstr ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'```"
+
+#~ msgid ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER``"
+#~ msgstr ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER```"
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'``"
+#~ msgstr ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'```"
+
+#~ msgid "modules {"
+#~ msgstr "moduļi {"
+
+#~ msgid "Nitrokey {"
+#~ msgstr "Nitrokey {"
+
+#~ msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+#~ msgstr "ceļš = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "}"
+#~ msgstr "}"
+
+#~ msgid "engine=dynamic"
+#~ msgstr "dzinējs=dinamiskais"
+
+#~ msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+#~ msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+
+#~ msgid "engineCtrl=ID:pkcs11"
+#~ msgstr "engineCtrl=ID:pkcs11"
+
+#~ msgid "engineCtrl=LIST_ADD:1"
+#~ msgstr "engineCtrl=LIST_ADD:1"
+
+#~ msgid "engineCtrl=LOAD"
+#~ msgstr "engineCtrl=LOAD"
+
+#~ msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+#~ msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "engineCtrl=INIT"
+#~ msgstr "engineCtrl=INIT"
+
+#~ msgid "[service]"
+#~ msgstr "[pakalpojums]"
+
+#~ msgid "engineNum=1"
+#~ msgstr "engineNum=1"
+
+#~ msgid "key=id_45"
+#~ msgstr "key=id_45"
+
+#~ msgid "**Q:** Do you have resources for development and integration?"
+#~ msgstr "**Q:** Vai jums ir resursi izstrādes un integrācijas nodrošināšanai?"
+
+#~ msgid ""
+#~ "Use Nitrokey library to manage the "
+#~ "encrypted mass store, one-time passwords"
+#~ " and password safe functionality."
+#~ msgstr ""
+#~ "Izmantojiet Nitrokey bibliotēku, lai "
+#~ "pārvaldītu šifrētu masveida krātuvi, "
+#~ "vienreizējas paroles un paroles drošību."
+
+#~ msgid ""
+#~ "The project nitrokey-get-totp and "
+#~ "nitrokey-get-password are nice examples "
+#~ "for using the python bindings of "
+#~ "Nitrokey library to get a custom "
+#~ "interface."
+#~ msgstr ""
+#~ "Projekts nitrokey-get-totp un "
+#~ "nitrokey-get-password ir labi piemēri "
+#~ "Nitrokey bibliotēkas python sasaistes "
+#~ "izmantošanai, lai iegūtu pielāgotu interfeisu."
+
+#~ msgid ""
+#~ "In order to access the integrated "
+#~ "smart card, you can use OpenSC's "
+#~ "command line tools."
+#~ msgstr ""
+#~ "Lai piekļūtu integrētajai viedkartei, varat"
+#~ " izmantot OpenSC'komandrindas rīkus."
+
+#~ msgid ""
+#~ "If your application has a PKCS#11 "
+#~ "interface, use OpenSC's PKCS#11 driver."
+#~ msgstr ""
+#~ "Ja jūsu lietojumprogrammai ir PKCS#11 "
+#~ "saskarne, izmantojiet OpenSC'PKCS#11 draiveri."
+
+#~ msgid ""
+#~ "To work with the smart card low"
+#~ " level, see the OpenPGP Card "
+#~ "specification."
+#~ msgstr ""
+#~ "Lai strādātu ar viedkarti zemā līmenī,"
+#~ " skatiet OpenPGP kartes specifikāciju."
+
+#~ msgid ""
+#~ "The source code of the firmware "
+#~ "and the hardware layout are available"
+#~ " too."
+#~ msgstr "Ir pieejams arī programmaparatūras pirmkods un aparatūras izkārtojums."
+
+#~ msgid ""
+#~ "To develop special applications or for"
+#~ " command line access one can use "
+#~ "the nitrocli created by d-e-s-o."
+#~ msgstr ""
+#~ "Lai izstrādātu īpašas lietojumprogrammas vai"
+#~ " komandrindas piekļuvei, var izmantot "
+#~ "d-e-s-o izveidoto nitrocli."
+
+#~ msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
+#~ msgstr ""
+#~ "Libnitrokey ietvars sistēmai Rust, kas "
+#~ "nodrošina piekļuvi Nitrokey ierīcēm."
+

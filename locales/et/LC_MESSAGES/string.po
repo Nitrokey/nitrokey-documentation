@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 13:21+0200\n"
+"POT-Creation-Date: 2022-06-08 13:30+0200\n"
 "PO-Revision-Date: 2022-05-31 12:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Estonian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/et/>\n"
 "Language: et\n"
+"Language-Team: Estonian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/et/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -144,7 +143,7 @@ msgstr ""
 "Nitrokey FIDO2, saate teise Nitrokey FIDO2 (või mõne muu teise faktoriga)"
 " ikkagi sisse logida."
 
-#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:69
+#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:72
 #: ../shared-faqs/generic.rst:34 ../start/faq.rst:38 ../storage/faq.rst:21
 msgid "**Q:** How large is the storage capacity?"
 msgstr "**K:** Kui suur on salvestusmaht?"
@@ -2150,11 +2149,30 @@ msgstr "secp256"
 msgid "secp521"
 msgstr "secp521"
 
-#: ../hsm/faq.rst:64 ../pro/faq.rst:62 ../shared-faqs/generic.rst:142
-msgid "**Q:** How good is the Random Number Generator (RNG)?"
+#: ../hsm/faq.rst:64
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey HSM for my applications?"
+msgstr ""
+
+#: ../hsm/faq.rst:62
+msgid ""
+"Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC "
+"as a PKCS#11 driver."
+msgstr ""
+
+#: ../hsm/faq.rst:64
+msgid ""
+"OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
+"doesn't contain a mapping for OpenSSL to C_GenerateRandom."
+msgstr ""
+
+#: ../hsm/faq.rst:68 ../pro/faq.rst:66 ../storage/faq.rst:82
+#, fuzzy
+msgid "**Q:** How good is the True Random Number Generator (TRNG)?"
 msgstr "**K:** Kui hea on juhusliku numbri generaator (RNG)?"
 
-#: ../hsm/faq.rst:63
+#: ../hsm/faq.rst:67
 msgid ""
 "Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 "
 "(according to AIS 31 of the BSI)."
@@ -2162,11 +2180,11 @@ msgstr ""
 "Nitrokey HSM kasutab JCOP 2.4.1r3 TRNG-d, mille kvaliteet on DRNG.2 "
 "(vastavalt BSI AIS 31-le)."
 
-#: ../hsm/faq.rst:80
+#: ../hsm/faq.rst:84
 msgid "**Q:** Which API can I use?"
 msgstr "**K:** Millist API-d ma saan kasutada?"
 
-#: ../hsm/faq.rst:67
+#: ../hsm/faq.rst:71
 msgid ""
 "OpenSC: Comprehensive instructions exist for OpenSC framework. There is "
 "nitrotool as a more comfortable frontend to OpenSC."
@@ -2174,7 +2192,7 @@ msgstr ""
 "OpenSC: OpenSC raamistiku jaoks on olemas põhjalikud juhised. OpenSC "
 "jaoks on olemas nitrotool kui mugavam frontend."
 
-#: ../hsm/faq.rst:70
+#: ../hsm/faq.rst:74
 msgid ""
 "Embedded Systems: For systems with minimal memory footprint a read/only "
 "PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 "
@@ -2188,7 +2206,7 @@ msgstr ""
 "kasutaja töökohal ei ole vajalik. PKCS#11-moodul toetab ka peamisi Saksa "
 "turul saadaolevaid elektroonilisi allkirjastamiskaarte."
 
-#: ../hsm/faq.rst:76
+#: ../hsm/faq.rst:80
 msgid ""
 "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open "
 "smart card development platform. See the public support scripts for "
@@ -2199,11 +2217,11 @@ msgstr ""
 "Olemasolevate võtmete importimiseks saate kasutada selle SCSH või "
 "NitroKeyWrapper'i."
 
-#: ../hsm/faq.rst:86
+#: ../hsm/faq.rst:90
 msgid "**Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?"
 msgstr "**K:** Kas Nitrokey 3 on Common Criteria või FIPS sertifitseeritud?"
 
-#: ../hsm/faq.rst:83
+#: ../hsm/faq.rst:87
 msgid ""
 "The security controler's hardware and operating system are Common "
 "Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_, "
@@ -2215,11 +2233,11 @@ msgstr ""
 "klõpsake \"ICs, Smart Cards and Smart Card-Related Devices and Systems\" "
 "ja otsige \"NXP JCOP 3 P60\")."
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid "**Q:** How to import an existing key into the Nitrokey HSM?"
 msgstr "**K:** Kuidas importida olemasolevat võtit Nitrokey HSM-i?"
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid ""
 "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then "
 "use Smart Card Shell for importing. If your key is stored in a Java key "
@@ -2230,7 +2248,7 @@ msgstr ""
 " võti on salvestatud Java võtmehoidlasse, võite selle asemel kasutada "
 "`NitroKeyWrapper`_."
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey "
 "HSM?"
@@ -2238,7 +2256,7 @@ msgstr ""
 "**K:** Kuidas ma kaitsen oma pilveinfrastruktuuri/Kubernetes'i Nitrokey "
 "HSMiga?"
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at `banzaicloud.com`_."
@@ -2246,11 +2264,11 @@ msgstr ""
 "Hashicorp Vault/Bank-Vault'i turvaliste võtmete lähenemine Nitrokey "
 "HSMile on leitav aadressil `banzaicloud.com`_."
 
-#: ../hsm/faq.rst:97
+#: ../hsm/faq.rst:101
 msgid "**Q:** Can I use Nitrokey HSM with cryptocurrencies?"
 msgstr "**K:** Kas ma saan Nitrokey HSM-i kasutada krüptovaluutadega?"
 
-#: ../hsm/faq.rst:95
+#: ../hsm/faq.rst:99
 msgid ""
 "J.v.d.Bosch wrote a simple, free python `program`_ to secure the private "
 "key of a Bitcoin wallet in a HSM. `Tezos`_ has been `reported`_ to work "
@@ -2487,69 +2505,25 @@ msgstr ""
 "Genereeri võti Nitrokey abil pkcs11-tool. Selles näites on see "
 "4096-bitine RSA-võti."
 
-#: ../hsm/ipsec.rst:9
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
-msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'<x>``"
-
-#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:13
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr ""
 "Sertifikaadi allkirjastamise taotluse genereerimine openssl + pkcs11 "
 "mooduli abil"
 
-#: ../hsm/ipsec.rst:13
-msgid ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'``"
-msgstr ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'<x>``"
-
-#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:21
 msgid "Sign the certificate with your certificate authority"
 msgstr "Allkirjastage sertifikaat oma sertifitseerimisasutusega"
 
-#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:23
 msgid "Convert the certificate to DER"
 msgstr "Tunnistuse konverteerimine DERi sertifikaadiks"
 
-#: ../hsm/ipsec.rst:21
-msgid ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER``"
-msgstr ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER<x>``"
-
-#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:29
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
 msgstr "Impordi sertifikaat Nitrokey'sse pkcs11-tool'i abil."
 
-#: ../hsm/ipsec.rst:25
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'``"
-msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'<x>``"
-
-#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:35
 msgid ""
 "Configure Strongswan to load opensc-pkcs11 module then to load the "
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
@@ -2559,23 +2533,7 @@ msgstr ""
 "laadida sertifikaat Nitrokey'sse. Redigeerige faili "
 "/etc/strongswan.d/charon/pkcs11.conf ja lisage järgmine moodul:"
 
-#: ../hsm/ipsec.rst:32
-msgid "modules {"
-msgstr "moodulid {"
-
-#: ../hsm/ipsec.rst:30
-msgid "Nitrokey {"
-msgstr "Nitrokey {"
-
-#: ../hsm/ipsec.rst:31
-msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/ipsec.rst:32 ../hsm/ipsec.rst:33
-msgid "}"
-msgstr "}"
-
-#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:46
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
@@ -2583,7 +2541,7 @@ msgstr ""
 "Algatage VPN-ühendus IPSec/Strongswan kaudu, seejärel küsige Nitrokey "
 "PIN-koodi."
 
-#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:48
 msgid "VPN is now connected"
 msgstr "VPN on nüüd ühendatud"
 
@@ -3656,46 +3614,6 @@ msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr ""
 "Stunnel suudab selle konfiguratsiooni abil laadida OpenSC PKCS#11 "
 "mootorit:"
-
-#: ../hsm/stunnel.rst:9
-msgid "engine=dynamic"
-msgstr "engine=dynamic"
-
-#: ../hsm/stunnel.rst:10
-msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-
-#: ../hsm/stunnel.rst:11
-msgid "engineCtrl=ID:pkcs11"
-msgstr "engineCtrl=ID:pkcs11"
-
-#: ../hsm/stunnel.rst:12
-msgid "engineCtrl=LIST_ADD:1"
-msgstr "engineCtrl=LIST_ADD:1"
-
-#: ../hsm/stunnel.rst:13
-msgid "engineCtrl=LOAD"
-msgstr "engineCtrl=LOAD"
-
-#: ../hsm/stunnel.rst:14
-msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/stunnel.rst:15
-msgid "engineCtrl=INIT"
-msgstr "engineCtrl=INIT"
-
-#: ../hsm/stunnel.rst:17
-msgid "[service]"
-msgstr "[teenus]"
-
-#: ../hsm/stunnel.rst:18
-msgid "engineNum=1"
-msgstr "engineNum=1"
-
-#: ../hsm/stunnel.rst:19
-msgid "key=id_45"
-msgstr "key=id_45"
 
 #: ../hsm/mac/product_platform_heading.rst:3
 msgid "(Nitrokey HSM 2 - macOS)"
@@ -10158,9 +10076,9 @@ msgid ""
 "(codename 'bionic') on. You can just install it via Software Center or by"
 " typing the following in a terminal:"
 msgstr ""
-"Nitrokey App on lisatud Ubuntu's repositooriumidesse alates Ubuntu 18.04 ("
-"koodnimi 'bionic') kohta. Saate selle installida lihtsalt Tarkvarakeskuse "
-"kaudu või kirjutades terminali järgmist:"
+"Nitrokey App on lisatud Ubuntu's repositooriumidesse alates Ubuntu 18.04 "
+"(koodnimi 'bionic') kohta. Saate selle installida lihtsalt "
+"Tarkvarakeskuse kaudu või kirjutades terminali järgmist:"
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:14 ../nitropc/ubuntu/nitrokey-app.rst:14
 msgid ""
@@ -10179,16 +10097,16 @@ msgid ""
 "To get the most recent Nitrokey App you can add a separate repository "
 "which is maintained by Nitrokey."
 msgstr ""
-"Kõige uuema Nitrokey rakenduse saamiseks saate lisada eraldi repositooriumi, "
-"mida Nitrokey hooldab."
+"Kõige uuema Nitrokey rakenduse saamiseks saate lisada eraldi "
+"repositooriumi, mida Nitrokey hooldab."
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:21 ../nitropc/ubuntu/nitrokey-app.rst:21
 msgid ""
 "Please execute the following in a terminal to add the repository and "
 "install the Nitrokey App:"
 msgstr ""
-"Nitrokey rakenduse lisamiseks ja installimiseks täitke terminalis järgmine "
-"käsk:"
+"Nitrokey rakenduse lisamiseks ja installimiseks täitke terminalis "
+"järgmine käsk:"
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:25 ../nitropc/ubuntu/nitrokey-app.rst:25
 msgid ""
@@ -11754,23 +11672,38 @@ msgstr ""
 "peamised konfiguratsioonid P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A"
 " ja P5CD016V1A igaüks koos IC-le pühendatud tarkvaraga\")."
 
-#: ../pro/faq.rst:58
+#: ../pro/faq.rst:59
 msgid ""
-"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator "
-"(TRNG) for generating keys on the device. The entropy generated by the "
-"TRNG is used for the entire key length. Therefore the TRNG is compliant "
-"to BSI TR-03116."
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Pro for my applications?"
+msgstr ""
+
+#: ../pro/faq.rst:58 ../storage/faq.rst:74
+msgid ""
+"Both devices are compatible to the OpenPGP Card, so that `scdrand`_ "
+"should work. `This script`_ may be useful. The user comio `created a "
+"systemd file`_ to use scdrand and thus the TRNG more generally. He "
+"created an `ebuild for Gentoo`_, too."
+msgstr ""
+
+#: ../pro/faq.rst:62 ../storage/faq.rst:78
+#, fuzzy
+msgid ""
+"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator for "
+"generating keys on the device. The entropy generated by the TRNG is used "
+"for the entire key length. Therefore the TRNG is compliant to BSI "
+"TR-03116."
 msgstr ""
 "Nitrokey Pro ja Nitrokey Storage kasutavad seadmes võtmete "
 "genereerimiseks tõelist juhusliku numbri generaatorit (TRNG). TRNG poolt "
 "genereeritud entroopiat kasutatakse kogu võtme pikkuse jaoks. Seetõttu "
 "vastab TRNG standardile BSI TR-03116."
 
-#: ../pro/faq.rst:62
+#: ../pro/faq.rst:66 ../storage/faq.rst:82
 msgid "The TRNG provides about 40 kbit/s."
 msgstr "TRNG pakub umbes 40 kbit/s."
 
-#: ../pro/faq.rst:65
+#: ../pro/faq.rst:69
 msgid ""
 "The Nitrokey Pro doesn't contain storage capability for ordinary data (it"
 " can only store cryptographic keys and certificates)."
@@ -15537,6 +15470,10 @@ msgstr ""
 "kohta, kuid see on madalama kvaliteediga. Nitrokey Start on rakendatud "
 "mikroprotsessoris."
 
+#: ../shared-faqs/generic.rst:142
+msgid "**Q:** How good is the Random Number Generator (RNG)?"
+msgstr "**K:** Kui hea on juhusliku numbri generaator (RNG)?"
+
 #: ../shared-faqs/generic.rst:169
 msgid "**Q:** Is Nitrokey Common Criteria or FIPS certified?"
 msgstr "**K:** Kas Nitrokey on Common Criteria või FIPS sertifitseeritud?"
@@ -15738,8 +15675,8 @@ msgid ""
 msgstr ""
 "Selles juhendis selgitatakse, kuidas paigaldada nitropy koos `pipx "
 "<https://pypa.github.io/pipx/>`_. pipx loob nitropy jaoks virtuaalse "
-"keskkonna. See tähendab, et nitropy ja selle sõltuvused ei lähe vastuollu "
-"teiste teie süsteemi paigaldatud pakettidega."
+"keskkonna. See tähendab, et nitropy ja selle sõltuvused ei lähe vastuollu"
+" teiste teie süsteemi paigaldatud pakettidega."
 
 #: ../software/nitropy/all-platforms/installation.rst:10
 msgid ""
@@ -15747,9 +15684,10 @@ msgid ""
 "use with caution. You can also use pre-compiled binaries or a MSI "
 "installer, see :doc:`../windows/installation`."
 msgstr ""
-"**Windowsi kasutajatele:** Windowsi tugi on veel eksperimentaalne -- palun "
-"kasutage seda ettevaatlikult. Võite kasutada ka eelkompileeritud "
-"binaarsüsteeme või MSI paigaldusprogrammi, vt :doc:`../windows/installation`."
+"**Windowsi kasutajatele:** Windowsi tugi on veel eksperimentaalne -- "
+"palun kasutage seda ettevaatlikult. Võite kasutada ka eelkompileeritud "
+"binaarsüsteeme või MSI paigaldusprogrammi, vt "
+":doc:`../windows/installation`."
 
 #: ../software/nitropy/all-platforms/installation.rst:16
 msgid "Python 3.6 or newer"
@@ -15763,9 +15701,9 @@ msgid ""
 " more information."
 msgstr ""
 "Python on enamikus macOS- ja Linux-süsteemides juba installitud või saab "
-"selle alla laadida aadressilt `python.org <https://python.org>`_. Lisateavet "
-"leiate `Pythoni allalaadimise juhendist <https://wiki.python.org/moin/"
-"BeginnersGuide/Download>`_."
+"selle alla laadida aadressilt `python.org <https://python.org>`_. "
+"Lisateavet leiate `Pythoni allalaadimise juhendist "
+"<https://wiki.python.org/moin/BeginnersGuide/Download>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:20
 msgid "pip"
@@ -15778,8 +15716,8 @@ msgid ""
 "<https://pip.pypa.io/en/stable/installation/>`_ for more information."
 msgstr ""
 "Pipi saab paigaldada oma süsteemi paketihalduriga või ``python3 -m "
-"ensurepip``. Lisateavet leiate `pip-i paigaldusjuhendist <https://pip.pypa."
-"io/en/stable/installation/>`_."
+"ensurepip``. Lisateavet leiate `pip-i paigaldusjuhendist "
+"<https://pip.pypa.io/en/stable/installation/>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:24
 msgid "pipx"
@@ -15794,8 +15732,8 @@ msgid ""
 "See the `pipx Installation Guide "
 "<https://pypa.github.io/pipx/installation/>`_ for more information."
 msgstr ""
-"Lisateavet leiate `pipxi paigaldusjuhendist <https://pypa.github.io/pipx/"
-"installation/>`_."
+"Lisateavet leiate `pipxi paigaldusjuhendist "
+"<https://pypa.github.io/pipx/installation/>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:35
 msgid "Now you can install nitropy from the pynitrokey package::"
@@ -15821,13 +15759,14 @@ msgid ""
 "<https://github.com/Nitrokey/libnitrokey>`_."
 msgstr ""
 "Kui soovite kasutada nitropy't koos Nitrokey Pro või Nitrokey Storage "
-"seadmega, peate paigaldama ka `libnitrokey <https://github.com/Nitrokey/"
-"libnitrokey>`_."
+"seadmega, peate paigaldama ka `libnitrokey "
+"<https://github.com/Nitrokey/libnitrokey>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:55
 msgid "Windows support is still experimental -- please use with caution."
 msgstr ""
-"Windowsi tugi on veel eksperimentaalne - palun kasutage seda ettevaatlikult."
+"Windowsi tugi on veel eksperimentaalne - palun kasutage seda "
+"ettevaatlikult."
 
 #: ../software/nitropy/all-platforms/installation.rst:57
 msgid ""
@@ -15843,9 +15782,9 @@ msgid ""
 "shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. "
 "Alternatively, you can install them manually::"
 msgstr ""
-"Linuxi süsteemides on vaja ka Nitrokey udev-reegleid. Need tarnitakse koos `"
-"libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. Alternatiivselt "
-"võite need käsitsi paigaldada::"
+"Linuxi süsteemides on vaja ka Nitrokey udev-reegleid. Need tarnitakse "
+"koos `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. "
+"Alternatiivselt võite need käsitsi paigaldada::"
 
 #: ../software/nitropy/all-platforms/installation.rst:67
 msgid "See :doc:`../linux/udev` for more information."
@@ -15876,8 +15815,8 @@ msgid ""
 "**nitropy** is a command-line interface for the Nitrokey FIDO2, Nitrokey "
 "Start, Nitrokey 3 and NetHSM."
 msgstr ""
-"**nitropy** on käsurea liides Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 ja "
-"NetHSM jaoks."
+"**nitropy** on käsurea liides Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 "
+"ja NetHSM jaoks."
 
 #: ../software/nitropy/linux/index.rst:2
 msgid "nitropy Documentation For Linux"
@@ -15895,10 +15834,11 @@ msgid ""
 "have libnitrokey or if you need a newer version, you can install the "
 "rules manually::"
 msgstr ""
-"Selleks, et pääseda ligi oma seadmetele ilma root-õigusteta, vajab nitropy "
-"Nitrokey udev-reegleid.  Need reeglid tarnitakse koos `libnitrokey "
-"<https://github.com/Nitrokey/libnitrokey>`_.  Kui teil ei ole libnitrokey't "
-"või kui teil on vaja uuemat versiooni, saate reeglid paigaldada käsitsi::"
+"Selleks, et pääseda ligi oma seadmetele ilma root-õigusteta, vajab "
+"nitropy Nitrokey udev-reegleid.  Need reeglid tarnitakse koos "
+"`libnitrokey <https://github.com/Nitrokey/libnitrokey>`_.  Kui teil ei "
+"ole libnitrokey't või kui teil on vaja uuemat versiooni, saate reeglid "
+"paigaldada käsitsi::"
 
 #: ../software/nitropy/linux/udev.rst:9
 msgid "After installing the rules, you need to reload them::"
@@ -15921,8 +15861,8 @@ msgid ""
 "describe debugging, see "
 "https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 msgstr ""
-"kirjeldada silumist, vt https://github.com/Nitrokey/pynitrokey/issues/"
-"167#issuecomment-1024921046"
+"kirjeldada silumist, vt "
+"https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 
 #: ../software/nitropy/linux/udev.rst:21
 msgid "describe requirements: systemd, load order"
@@ -15941,8 +15881,8 @@ msgid ""
 "Generally Windows support and the installer are experimental - please use"
 " with caution."
 msgstr ""
-"Üldiselt on Windowsi tugi ja paigaldaja eksperimentaalne - palun kasutage "
-"seda ettevaatlikult."
+"Üldiselt on Windowsi tugi ja paigaldaja eksperimentaalne - palun kasutage"
+" seda ettevaatlikult."
 
 #: ../software/nitropy/windows/installation.rst:8
 msgid ""
@@ -15950,9 +15890,9 @@ msgid ""
 "command prompt, you can alternatively install nitropy with pipx, see :doc"
 ":`../all-platforms/installation`."
 msgstr ""
-"Kui te juba kasutate oma süsteemis Pythoni ja olete tuttav käsureaga, võite "
-"alternatiivselt paigaldada nitropy pipxiga, vt :doc:`../all-platforms/"
-"installation`."
+"Kui te juba kasutate oma süsteemis Pythoni ja olete tuttav käsureaga, "
+"võite alternatiivselt paigaldada nitropy pipxiga, vt :doc:`../all-"
+"platforms/installation`."
 
 #: ../software/nitropy/windows/installation.rst:11
 msgid "How to Install"
@@ -15963,13 +15903,14 @@ msgid ""
 "Download the latest ``.msi`` installer from `releases "
 "<https://github.com/Nitrokey/pynitrokey/releases/>`_."
 msgstr ""
-"Laadige alla uusim ``.msi`` paigaldaja `väljaannetest <https://github.com/"
-"Nitrokey/pynitrokey/releases/>`_."
+"Laadige alla uusim ``.msi`` paigaldaja `väljaannetest "
+"<https://github.com/Nitrokey/pynitrokey/releases/>`_."
 
 #: ../software/nitropy/windows/installation.rst:14
 msgid "Double-click the installer and click through (*Next* and *Finish*)"
 msgstr ""
-"Tehke topeltklõps paigaldusprogrammile ja klõpsake läbi (*Next* ja *Finish*)."
+"Tehke topeltklõps paigaldusprogrammile ja klõpsake läbi (*Next* ja "
+"*Finish*)."
 
 #: ../software/nitropy/windows/installation.rst:15
 msgid ""
@@ -15977,8 +15918,8 @@ msgid ""
 " right mouse button on the Menu Start and select \"Windows PowerShell "
 "(Admin)\" from the menu)."
 msgstr ""
-"Ava käsukonsool administraatori režiimis (Windows 10: vajuta menüüs Start "
-"hiire paremale nupule ja vali menüüst \"Windows PowerShell (Admin)\")."
+"Ava käsukonsool administraatori režiimis (Windows 10: vajuta menüüs Start"
+" hiire paremale nupule ja vali menüüst \"Windows PowerShell (Admin)\")."
 
 #: ../software/nitropy/windows/installation.rst:16
 msgid "Enter ``nitropy``"
@@ -16005,8 +15946,8 @@ msgid ""
 "The installer does not remove a previous installation (manually remove it"
 " using settings -> programs and apps)"
 msgstr ""
-"Paigaldaja ei eemalda eelmist paigaldust (eemaldage see käsitsi, kasutades "
-"seaded -> programmid ja rakendused)."
+"Paigaldaja ei eemalda eelmist paigaldust (eemaldage see käsitsi, "
+"kasutades seaded -> programmid ja rakendused)."
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst:8
 msgid ""
@@ -16563,6 +16504,82 @@ msgstr ""
 msgid "(Nitrokey Start - Windows)"
 msgstr "(Nitrokey Start - Windows)"
 
+#: ../storage/encrypted-mobile-storage.rst:1
+#, fuzzy
+msgid ""
+"Prior of using the encrypted mobile storage you need to install and "
+"initialize the Nitrokey Storage and download the latest `Nitrokey App "
+"<https://www.nitrokey.com/download>`_."
+msgstr ""
+"Enne krüpteeritud mobiilse salvestusruumi kasutamist peate Nitrokey "
+"Storage'i paigaldama ja initsialiseerima ning laadima alla uusima "
+"Nitrokey rakenduse."
+
+#: ../storage/encrypted-mobile-storage.rst:3 ../storage/faq.rst:87
+msgid "Start the Nitrokey App."
+msgstr "Käivitage Nitrokey rakendus."
+
+#: ../storage/encrypted-mobile-storage.rst:4 ../storage/faq.rst:88
+msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
+msgstr ""
+"Vajutage selle salve ikooni ja valige menüüst \"unlocked encrypted "
+"volume\"."
+
+#: ../storage/encrypted-mobile-storage.rst:5 ../storage/faq.rst:89
+msgid "Enter your User PIN in the appearing popup window."
+msgstr "Sisestage ilmuvas hüpikaknas oma kasutaja PIN-kood."
+
+#: ../storage/encrypted-mobile-storage.rst:6
+#, fuzzy
+msgid ""
+"If this is the first time you may need to create a partition on the "
+"encrypted volume. Windows will open an appropriate window and ask you to "
+"do so. On GNU+Linux and Mac you may need to open a partition manager and "
+"create a partition manually. You can create as many partitions as you "
+"want. We recommend FAT(32) if you want to access the partition from "
+"various operating systems."
+msgstr ""
+"Kui see on esimene kord, peate võib-olla looma krüpteeritud mahule "
+"partitsiooni. Windows avab vastava akna ja palub seda teha. Linuxi ja "
+"Maci puhul peate võib-olla avama partitsioonihalduri ja looma "
+"partitsiooni käsitsi. Sa võid luua nii palju partitsioone kui soovid. Me "
+"soovitame FAT(32), kui soovite partitsiooni kasutada erinevatest "
+"operatsioonisüsteemidest."
+
+#: ../storage/encrypted-mobile-storage.rst:7 ../storage/faq.rst:91
+msgid ""
+"Now you can use the encrypted volume as you would use any other ordinary "
+"USB drive. But all data stored on it will be encrypted in the Nitrokey "
+"hardware automatically."
+msgstr ""
+"Nüüd saate krüpteeritud andmekandjat kasutada nagu iga teist tavalist "
+"USB-kõvaketast. Kuid kõik sellele salvestatud andmed krüpteeritakse "
+"Nitrokey riistvaras automaatselt."
+
+#: ../storage/encrypted-mobile-storage.rst:8 ../storage/faq.rst:92
+msgid "To remove or lock the encrypted volume you should unmount/eject it first."
+msgstr ""
+"Krüpteeritud andmekandja eemaldamiseks või lukustamiseks tuleb see "
+"kõigepealt lahtiühendada/väljaheitesüsteemist välja lülitada."
+
+#: ../storage/encrypted-mobile-storage.rst:9 ../storage/faq.rst:93
+msgid ""
+"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
+"volume\" from the Nitrokey App menu."
+msgstr ""
+"Pärast seda saate Nitrokey lahti ühendada või valida Nitrokey rakenduse "
+"menüüst \"lukusta krüpteeritud maht\"."
+
+#: ../storage/encrypted-mobile-storage.rst:11
+#, fuzzy
+msgid ""
+"The Nitrokey Storage is able to create hidden volumes as well. Please "
+"have a look at the corresponding instructions for `hidden volumes "
+"<hidden.html>`_."
+msgstr ""
+"Nitrokey Storage suudab luua ka varjatud mahtusid. Palun vaadake "
+"vastavaid juhiseid peidetud mahtude kohta."
+
 #: ../storage/factory-reset.rst:8
 msgid "There are two types of factory resets for Nitrokey Storage devices:"
 msgstr "Nitrokey Storage seadmete puhul on olemas kahte tüüpi tehasepuhastusi:"
@@ -16692,11 +16709,17 @@ msgstr ""
 "P5CN081V1A, P5CD041V1A, P5CD021V1A ja P5CD016V1A igaüks koos IC-le "
 "pühendatud tarkvaraga\")."
 
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:75
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Storage for my applications?"
+msgstr ""
+
+#: ../storage/faq.rst:95
 msgid "**Q:** How can I use the encrypted mobile Storage?"
 msgstr "**K:** Kuidas ma saan kasutada krüpteeritud mobiilside salvestusruumi?"
 
-#: ../storage/faq.rst:74
+#: ../storage/faq.rst:85
 msgid ""
 "Prior of using the encrypted mobile storage you need to install and "
 "initialize the Nitrokey Storage and download the latest Nitrokey App."
@@ -16705,21 +16728,7 @@ msgstr ""
 "Storage'i paigaldama ja initsialiseerima ning laadima alla uusima "
 "Nitrokey rakenduse."
 
-#: ../storage/faq.rst:76
-msgid "Start the Nitrokey App."
-msgstr "Käivitage Nitrokey rakendus."
-
-#: ../storage/faq.rst:77
-msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
-msgstr ""
-"Vajutage selle salve ikooni ja valige menüüst \"unlocked encrypted "
-"volume\"."
-
-#: ../storage/faq.rst:78
-msgid "Enter your User PIN in the appearing popup window."
-msgstr "Sisestage ilmuvas hüpikaknas oma kasutaja PIN-kood."
-
-#: ../storage/faq.rst:79
+#: ../storage/faq.rst:90
 msgid ""
 "If this is the first time you may need to create a partition on the "
 "encrypted volume. Windows will open an appropriate window and ask you to "
@@ -16735,31 +16744,7 @@ msgstr ""
 "soovitame FAT(32), kui soovite partitsiooni kasutada erinevatest "
 "operatsioonisüsteemidest."
 
-#: ../storage/faq.rst:80
-msgid ""
-"Now you can use the encrypted volume as you would use any other ordinary "
-"USB drive. But all data stored on it will be encrypted in the Nitrokey "
-"hardware automatically."
-msgstr ""
-"Nüüd saate krüpteeritud andmekandjat kasutada nagu iga teist tavalist "
-"USB-kõvaketast. Kuid kõik sellele salvestatud andmed krüpteeritakse "
-"Nitrokey riistvaras automaatselt."
-
-#: ../storage/faq.rst:81
-msgid "To remove or lock the encrypted volume you should unmount/eject it first."
-msgstr ""
-"Krüpteeritud andmekandja eemaldamiseks või lukustamiseks tuleb see "
-"kõigepealt lahtiühendada/väljaheitesüsteemist välja lülitada."
-
-#: ../storage/faq.rst:82
-msgid ""
-"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
-"volume\" from the Nitrokey App menu."
-msgstr ""
-"Pärast seda saate Nitrokey lahti ühendada või valida Nitrokey rakenduse "
-"menüüst \"lukusta krüpteeritud maht\"."
-
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:95
 msgid ""
 "The Nitrokey Storage is able to create hidden volumes as well. Please "
 "have a look at the corresponding instructions for hidden volumes."
@@ -16767,11 +16752,11 @@ msgstr ""
 "Nitrokey Storage suudab luua ka varjatud mahtusid. Palun vaadake "
 "vastavaid juhiseid peidetud mahtude kohta."
 
-#: ../storage/faq.rst:107
+#: ../storage/faq.rst:117
 msgid "**Q:** How can I use the hidden volume?"
 msgstr "**K:** Kuidas ma saan kasutada varjatud helitugevust?"
 
-#: ../storage/faq.rst:87
+#: ../storage/faq.rst:98
 msgid ""
 "Hidden volumes allow to hide data in the encrypted volume. The data is "
 "protected with an additional password. Without the password the data "
@@ -16787,7 +16772,7 @@ msgstr ""
 "VeraCrypt's/TrueCrypt's peidetud mahtudega, kuid Nitrokey Storage'i puhul"
 " on kogu peidetud mahtude funktsionaalsus rakendatud riistvaras."
 
-#: ../storage/faq.rst:94 ../storage/hidden.rst:8
+#: ../storage/faq.rst:105 ../storage/hidden.rst:8
 msgid ""
 "You can configure up to four hidden volumes. Once unlocked, hidden "
 "volumes behave like ordinary storage where you can create various "
@@ -16797,7 +16782,7 @@ msgstr ""
 "peidetud mahud nagu tavalised mälupinnad, kus saate luua erinevaid "
 "partitsioone, failisüsteeme ja salvestada faile nii, nagu soovite."
 
-#: ../storage/faq.rst:98
+#: ../storage/faq.rst:109
 msgid ""
 "If you decide to configure Hidden Volumes, you can not use the encrypted "
 "storage anymore. Because the Hidden Volume is situated on the free space "
@@ -16817,69 +16802,13 @@ msgstr ""
 "salvestusruumi pärast varjatud mahu loomist (peate selle siiski esmalt "
 "lahti lukustama)."
 
-#: ../storage/faq.rst:106
+#: ../storage/faq.rst:117
 msgid ""
 "Hidden volumes are like containers inside of a container, the encrypted "
 "volume."
 msgstr ""
 "Varjatud mahud on nagu konteinerid konteineri sees, krüpteeritud mahu "
 "sees."
-
-#: ../storage/faq.rst:118
-msgid "**Q:** Do you have resources for development and integration?"
-msgstr "**K:** Kas teil on ressursse arendamiseks ja integreerimiseks?"
-
-#: ../storage/faq.rst:110
-msgid ""
-"Use Nitrokey library to manage the encrypted mass store, one-time "
-"passwords and password safe functionality."
-msgstr ""
-"Kasutage Nitrokey raamatukogu, et hallata krüpteeritud massivaramut, "
-"ühekordseid paroole ja paroolide turvalist funktsionaalsust."
-
-#: ../storage/faq.rst:111
-msgid ""
-"The project nitrokey-get-totp and nitrokey-get-password are nice examples"
-" for using the python bindings of Nitrokey library to get a custom "
-"interface."
-msgstr ""
-"Projekt nitrokey-get-totp ja nitrokey-get-password on toredad näited "
-"Nitrokey raamatukogu python sidemete kasutamiseks, et saada kohandatud "
-"kasutajaliides."
-
-#: ../storage/faq.rst:112
-msgid ""
-"In order to access the integrated smart card, you can use OpenSC's "
-"command line tools."
-msgstr ""
-"Integreeritud kiipkaardile juurdepääsuks saate kasutada OpenSC'i käsurea "
-"tööriistu."
-
-#: ../storage/faq.rst:113
-msgid "If your application has a PKCS#11 interface, use OpenSC's PKCS#11 driver."
-msgstr ""
-"Kui teie rakendusel on PKCS#11 liides, kasutage OpenSC's PKCS#11 "
-"draiverit."
-
-#: ../storage/faq.rst:114
-msgid "To work with the smart card low level, see the OpenPGP Card specification."
-msgstr "Nutikaardi madala tasemega töötamiseks vt OpenPGP Card spetsifikatsiooni."
-
-#: ../storage/faq.rst:115
-msgid "The source code of the firmware and the hardware layout are available too."
-msgstr "Firmware lähtekood ja riistvara paigutus on samuti saadaval."
-
-#: ../storage/faq.rst:116
-msgid ""
-"To develop special applications or for command line access one can use "
-"the nitrocli created by d-e-s-o."
-msgstr ""
-"Spetsiaalsete rakenduste arendamiseks või käsureale juurdepääsuks võib "
-"kasutada d-e-s-o poolt loodud nitrocli."
-
-#: ../storage/faq.rst:117
-msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
-msgstr "Libnitrokey wrapper Rustile, mis pakub ligipääsu Nitrokey seadmetele."
 
 #: ../storage/firmware-update-manually.rst:2
 msgid "Activate Update Mode Manually"
@@ -17189,6 +17118,13 @@ msgstr ""
 #: ../storage/linux/product_platform_heading.rst:3
 msgid "(Nitrokey Storage 2 - Linux)"
 msgstr "(Nitrokey Storage 2 - Linux)"
+
+#: ../storage/linux/encrypted-mobile-storage.rst:2
+#: ../storage/mac/encrypted-mobile-storage.rst:2
+#: ../storage/windows/encrypted-mobile-storage.rst:2
+#, fuzzy
+msgid "Encrypted Mobile Storage"
+msgstr "**K:** Kuidas ma saan kasutada krüpteeritud mobiilside salvestusruumi?"
 
 #: ../storage/linux/firmware-update.rst:10
 #: ../storage/windows/firmware-update.rst:10
@@ -21498,3 +21434,166 @@ msgstr ""
 #~ "SmartCardHSMKey.getUseCounter() ja kinnitada "
 #~ "funktsiooniga SmartCardHSMKeySpec.setKeyUseCounter() saab"
 #~ " määrata."
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'``"
+#~ msgstr ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'<x>``"
+
+#~ msgid ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'``"
+#~ msgstr ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'<x>``"
+
+#~ msgid ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER``"
+#~ msgstr ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER<x>``"
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'``"
+#~ msgstr ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'<x>``"
+
+#~ msgid "modules {"
+#~ msgstr "moodulid {"
+
+#~ msgid "Nitrokey {"
+#~ msgstr "Nitrokey {"
+
+#~ msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+#~ msgstr "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "}"
+#~ msgstr "}"
+
+#~ msgid "engine=dynamic"
+#~ msgstr "engine=dynamic"
+
+#~ msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+#~ msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+
+#~ msgid "engineCtrl=ID:pkcs11"
+#~ msgstr "engineCtrl=ID:pkcs11"
+
+#~ msgid "engineCtrl=LIST_ADD:1"
+#~ msgstr "engineCtrl=LIST_ADD:1"
+
+#~ msgid "engineCtrl=LOAD"
+#~ msgstr "engineCtrl=LOAD"
+
+#~ msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+#~ msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "engineCtrl=INIT"
+#~ msgstr "engineCtrl=INIT"
+
+#~ msgid "[service]"
+#~ msgstr "[teenus]"
+
+#~ msgid "engineNum=1"
+#~ msgstr "engineNum=1"
+
+#~ msgid "key=id_45"
+#~ msgstr "key=id_45"
+
+#~ msgid "**Q:** Do you have resources for development and integration?"
+#~ msgstr "**K:** Kas teil on ressursse arendamiseks ja integreerimiseks?"
+
+#~ msgid ""
+#~ "Use Nitrokey library to manage the "
+#~ "encrypted mass store, one-time passwords"
+#~ " and password safe functionality."
+#~ msgstr ""
+#~ "Kasutage Nitrokey raamatukogu, et hallata "
+#~ "krüpteeritud massivaramut, ühekordseid paroole "
+#~ "ja paroolide turvalist funktsionaalsust."
+
+#~ msgid ""
+#~ "The project nitrokey-get-totp and "
+#~ "nitrokey-get-password are nice examples "
+#~ "for using the python bindings of "
+#~ "Nitrokey library to get a custom "
+#~ "interface."
+#~ msgstr ""
+#~ "Projekt nitrokey-get-totp ja "
+#~ "nitrokey-get-password on toredad näited "
+#~ "Nitrokey raamatukogu python sidemete "
+#~ "kasutamiseks, et saada kohandatud "
+#~ "kasutajaliides."
+
+#~ msgid ""
+#~ "In order to access the integrated "
+#~ "smart card, you can use OpenSC's "
+#~ "command line tools."
+#~ msgstr ""
+#~ "Integreeritud kiipkaardile juurdepääsuks saate "
+#~ "kasutada OpenSC'i käsurea tööriistu."
+
+#~ msgid ""
+#~ "If your application has a PKCS#11 "
+#~ "interface, use OpenSC's PKCS#11 driver."
+#~ msgstr ""
+#~ "Kui teie rakendusel on PKCS#11 liides,"
+#~ " kasutage OpenSC's PKCS#11 draiverit."
+
+#~ msgid ""
+#~ "To work with the smart card low"
+#~ " level, see the OpenPGP Card "
+#~ "specification."
+#~ msgstr ""
+#~ "Nutikaardi madala tasemega töötamiseks vt "
+#~ "OpenPGP Card spetsifikatsiooni."
+
+#~ msgid ""
+#~ "The source code of the firmware "
+#~ "and the hardware layout are available"
+#~ " too."
+#~ msgstr "Firmware lähtekood ja riistvara paigutus on samuti saadaval."
+
+#~ msgid ""
+#~ "To develop special applications or for"
+#~ " command line access one can use "
+#~ "the nitrocli created by d-e-s-o."
+#~ msgstr ""
+#~ "Spetsiaalsete rakenduste arendamiseks või "
+#~ "käsureale juurdepääsuks võib kasutada d-e-s-o"
+#~ " poolt loodud nitrocli."
+
+#~ msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
+#~ msgstr "Libnitrokey wrapper Rustile, mis pakub ligipääsu Nitrokey seadmetele."
+

@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 13:21+0200\n"
+"POT-Creation-Date: 2022-06-08 13:30+0200\n"
 "PO-Revision-Date: 2022-05-31 12:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -151,7 +150,7 @@ msgstr ""
 "Nitrokey FIDO2-vel (vagy más második faktorral) továbbra is be tud "
 "jelentkezni."
 
-#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:69
+#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:72
 #: ../shared-faqs/generic.rst:34 ../start/faq.rst:38 ../storage/faq.rst:21
 msgid "**Q:** How large is the storage capacity?"
 msgstr "**K:** Mekkora a tárolókapacitás?"
@@ -2194,11 +2193,30 @@ msgstr "secp256"
 msgid "secp521"
 msgstr "secp521"
 
-#: ../hsm/faq.rst:64 ../pro/faq.rst:62 ../shared-faqs/generic.rst:142
-msgid "**Q:** How good is the Random Number Generator (RNG)?"
+#: ../hsm/faq.rst:64
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey HSM for my applications?"
+msgstr ""
+
+#: ../hsm/faq.rst:62
+msgid ""
+"Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC "
+"as a PKCS#11 driver."
+msgstr ""
+
+#: ../hsm/faq.rst:64
+msgid ""
+"OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
+"doesn't contain a mapping for OpenSSL to C_GenerateRandom."
+msgstr ""
+
+#: ../hsm/faq.rst:68 ../pro/faq.rst:66 ../storage/faq.rst:82
+#, fuzzy
+msgid "**Q:** How good is the True Random Number Generator (TRNG)?"
 msgstr "**K:** Mennyire jó a véletlenszám-generátor (RNG)?"
 
-#: ../hsm/faq.rst:63
+#: ../hsm/faq.rst:67
 msgid ""
 "Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 "
 "(according to AIS 31 of the BSI)."
@@ -2206,11 +2224,11 @@ msgstr ""
 "A Nitrokey HSM a JCOP 2.4.1r3 TRNG-t használja, amelynek minősége DRNG.2 "
 "(a BSI AIS 31 szerint)."
 
-#: ../hsm/faq.rst:80
+#: ../hsm/faq.rst:84
 msgid "**Q:** Which API can I use?"
 msgstr "**K:** Melyik API-t használhatom?"
 
-#: ../hsm/faq.rst:67
+#: ../hsm/faq.rst:71
 msgid ""
 "OpenSC: Comprehensive instructions exist for OpenSC framework. There is "
 "nitrotool as a more comfortable frontend to OpenSC."
@@ -2218,7 +2236,7 @@ msgstr ""
 "OpenSC: Az OpenSC keretrendszerhez átfogó utasítások állnak "
 "rendelkezésre. Az OpenSC kényelmesebb frontendjeként létezik a nitrotool."
 
-#: ../hsm/faq.rst:70
+#: ../hsm/faq.rst:74
 msgid ""
 "Embedded Systems: For systems with minimal memory footprint a read/only "
 "PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 "
@@ -2232,7 +2250,7 @@ msgstr ""
 "kulcsgenerálásra a felhasználó munkahelyén. A PKCS#11 modul támogatja a "
 "német piacon kapható főbb elektronikus aláírási kártyákat is."
 
-#: ../hsm/faq.rst:76
+#: ../hsm/faq.rst:80
 msgid ""
 "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open "
 "smart card development platform. See the public support scripts for "
@@ -2243,11 +2261,11 @@ msgstr ""
 "lásd a nyilvános támogatási szkripteket. A meglévő kulcsok importálásához"
 " használhatja az SCSH vagy a NitroKeyWrapper programját."
 
-#: ../hsm/faq.rst:86
+#: ../hsm/faq.rst:90
 msgid "**Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?"
 msgstr "**K:** A Nitrokey 3 Common Criteria vagy FIPS tanúsítvánnyal rendelkezik?"
 
-#: ../hsm/faq.rst:83
+#: ../hsm/faq.rst:87
 msgid ""
 "The security controler's hardware and operating system are Common "
 "Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_, "
@@ -2260,11 +2278,11 @@ msgstr ""
 "Devices and Systems\"-re, és keressen rá a \"NXP JCOP 3 P60\" "
 "kifejezésre)."
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid "**Q:** How to import an existing key into the Nitrokey HSM?"
 msgstr "**K:** Hogyan lehet egy meglévő kulcsot importálni a Nitrokey HSM-be?"
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid ""
 "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then "
 "use Smart Card Shell for importing. If your key is stored in a Java key "
@@ -2275,7 +2293,7 @@ msgstr ""
 "importáláshoz. Ha a kulcsát egy Java kulcstárolóban tárolja, használhatja"
 " helyette a `NitroKeyWrapper`_ programot."
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey "
 "HSM?"
@@ -2283,7 +2301,7 @@ msgstr ""
 "**K:** Hogyan tudom biztosítani a felhőinfrastruktúrámat/Kubernetesemet a"
 " Nitrokey HSM-mel?"
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at `banzaicloud.com`_."
@@ -2291,11 +2309,11 @@ msgstr ""
 "A Hashicorp Vault/Bank-Vault biztonságos kulcsok Nitrokey HSM-en történő "
 "biztosításának megközelítése megtalálható a `banzaicloud.com`_ oldalon."
 
-#: ../hsm/faq.rst:97
+#: ../hsm/faq.rst:101
 msgid "**Q:** Can I use Nitrokey HSM with cryptocurrencies?"
 msgstr "**K:** Használhatom a Nitrokey HSM-et kriptovalutákkal?"
 
-#: ../hsm/faq.rst:95
+#: ../hsm/faq.rst:99
 msgid ""
 "J.v.d.Bosch wrote a simple, free python `program`_ to secure the private "
 "key of a Bitcoin wallet in a HSM. `Tezos`_ has been `reported`_ to work "
@@ -2545,69 +2563,25 @@ msgstr ""
 "Generáljon kulcsot a Nitrokey-n a pkcs11-tool segítségével. Ebben a "
 "példában ez egy 4096 bites RSA kulcs."
 
-#: ../hsm/ipsec.rst:9
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
-msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'<x>``"
-
-#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:13
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr ""
 "Tanúsítvány aláírási kérelem generálása openssl + pkcs11 modul "
 "segítségével"
 
-#: ../hsm/ipsec.rst:13
-msgid ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'``"
-msgstr ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'``"
-
-#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:21
 msgid "Sign the certificate with your certificate authority"
 msgstr "Írja alá a tanúsítványt a hitelesítésszolgáltatóval"
 
-#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:23
 msgid "Convert the certificate to DER"
 msgstr "A tanúsítványt DER-be konvertálja"
 
-#: ../hsm/ipsec.rst:21
-msgid ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER``"
-msgstr ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER<x>``"
-
-#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:29
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
 msgstr "Importálja a tanúsítványt a Nitrokey-be a pkcs11-tool segítségével"
 
-#: ../hsm/ipsec.rst:25
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'``"
-msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'<x>``"
-
-#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:35
 msgid ""
 "Configure Strongswan to load opensc-pkcs11 module then to load the "
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
@@ -2618,23 +2592,7 @@ msgstr ""
 "/etc/strongswan.d/charon/pkcs11.conf állományt, és adjuk hozzá a "
 "következő modult:"
 
-#: ../hsm/ipsec.rst:32
-msgid "modules {"
-msgstr "modulok {"
-
-#: ../hsm/ipsec.rst:30
-msgid "Nitrokey {"
-msgstr "Nitrokey {"
-
-#: ../hsm/ipsec.rst:31
-msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/ipsec.rst:32 ../hsm/ipsec.rst:33
-msgid "}"
-msgstr "}"
-
-#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:46
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
@@ -2642,7 +2600,7 @@ msgstr ""
 "Kezdeményezze a VPN-kapcsolatot IPSec/Strongswan-on keresztül, majd kérje"
 " a Nitrokey PIN-kódot."
 
-#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:48
 msgid "VPN is now connected"
 msgstr "A VPN most már csatlakoztatva van"
 
@@ -3739,46 +3697,6 @@ msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr ""
 "A Stunnel ezzel a konfigurációval képes betölteni az OpenSC PKCS#11 "
 "motort:"
-
-#: ../hsm/stunnel.rst:9
-msgid "engine=dynamic"
-msgstr "engine=dynamic"
-
-#: ../hsm/stunnel.rst:10
-msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-
-#: ../hsm/stunnel.rst:11
-msgid "engineCtrl=ID:pkcs11"
-msgstr "engineCtrl=ID:pkcs11"
-
-#: ../hsm/stunnel.rst:12
-msgid "engineCtrl=LIST_ADD:1"
-msgstr "engineCtrl=LIST_ADD:1"
-
-#: ../hsm/stunnel.rst:13
-msgid "engineCtrl=LOAD"
-msgstr "engineCtrl=LOAD"
-
-#: ../hsm/stunnel.rst:14
-msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/stunnel.rst:15
-msgid "engineCtrl=INIT"
-msgstr "engineCtrl=INIT"
-
-#: ../hsm/stunnel.rst:17
-msgid "[service]"
-msgstr "[service]"
-
-#: ../hsm/stunnel.rst:18
-msgid "engineNum=1"
-msgstr "engineNum=1"
-
-#: ../hsm/stunnel.rst:19
-msgid "key=id_45"
-msgstr "key=id_45"
 
 #: ../hsm/mac/product_platform_heading.rst:3
 msgid "(Nitrokey HSM 2 - macOS)"
@@ -10439,16 +10357,16 @@ msgid ""
 " typing the following in a terminal:"
 msgstr ""
 "A Nitrokey App az Ubuntu 18.04 (kódneve 'bionic') óta szerepel az Ubuntu "
-"tárolókban. Egyszerűen telepítheted a Szoftverközponton keresztül, vagy a "
-"terminálba beírva a következőt:"
+"tárolókban. Egyszerűen telepítheted a Szoftverközponton keresztül, vagy a"
+" terminálba beírva a következőt:"
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:14 ../nitropc/ubuntu/nitrokey-app.rst:14
 msgid ""
 "Unfortunately, the App versions in the official Ubuntu repositories are "
 "often not up-to-date."
 msgstr ""
-"Sajnos a hivatalos Ubuntu tárolókban található alkalmazásverziók gyakran nem "
-"naprakészek."
+"Sajnos a hivatalos Ubuntu tárolókban található alkalmazásverziók gyakran "
+"nem naprakészek."
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:17 ../nitropc/ubuntu/nitrokey-app.rst:17
 msgid "More recent App versions"
@@ -10459,32 +10377,32 @@ msgid ""
 "To get the most recent Nitrokey App you can add a separate repository "
 "which is maintained by Nitrokey."
 msgstr ""
-"A legfrissebb Nitrokey alkalmazáshoz hozzáadhat egy külön tárolót, amelyet a "
-"Nitrokey tart fenn."
+"A legfrissebb Nitrokey alkalmazáshoz hozzáadhat egy külön tárolót, "
+"amelyet a Nitrokey tart fenn."
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:21 ../nitropc/ubuntu/nitrokey-app.rst:21
 msgid ""
 "Please execute the following in a terminal to add the repository and "
 "install the Nitrokey App:"
 msgstr ""
-"A tároló hozzáadásához és a Nitrokey alkalmazás telepítéséhez hajtsa végre "
-"az alábbiakat egy terminálon:"
+"A tároló hozzáadásához és a Nitrokey alkalmazás telepítéséhez hajtsa "
+"végre az alábbiakat egy terminálon:"
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:25 ../nitropc/ubuntu/nitrokey-app.rst:25
 msgid ""
 "The PPA is not necessary for Ubuntu 22.04 and later. The previous "
 "versions of Ubuntu could still use it to update the app."
 msgstr ""
-"A PPA nem szükséges az Ubuntu 22.04 és újabb verziókhoz. A korábbi Ubuntu "
-"verziók továbbra is használhatták az alkalmazás frissítéséhez."
+"A PPA nem szükséges az Ubuntu 22.04 és újabb verziókhoz. A korábbi Ubuntu"
+" verziók továbbra is használhatták az alkalmazás frissítéséhez."
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:36 ../nitropc/ubuntu/nitrokey-app.rst:36
 msgid ""
 "Alternatively, you can use the snap package. Please see `here "
 "<https://www.nitrokey.com/download/snap-package>`_ for more information."
 msgstr ""
-"Alternatívaként használhatja a snap csomagot is. További információkért lásd "
-"`itt <https://www.nitrokey.com/download/snap-package>`_."
+"Alternatívaként használhatja a snap csomagot is. További információkért "
+"lásd `itt <https://www.nitrokey.com/download/snap-package>`_."
 
 #: ../nitropc/debian/index.rst:2
 msgid "NitroPC with Debian"
@@ -12074,23 +11992,38 @@ msgstr ""
 "P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A és P5CD016V1A mindegyik IC"
 " dedikált szoftverrel\")."
 
-#: ../pro/faq.rst:58
+#: ../pro/faq.rst:59
 msgid ""
-"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator "
-"(TRNG) for generating keys on the device. The entropy generated by the "
-"TRNG is used for the entire key length. Therefore the TRNG is compliant "
-"to BSI TR-03116."
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Pro for my applications?"
+msgstr ""
+
+#: ../pro/faq.rst:58 ../storage/faq.rst:74
+msgid ""
+"Both devices are compatible to the OpenPGP Card, so that `scdrand`_ "
+"should work. `This script`_ may be useful. The user comio `created a "
+"systemd file`_ to use scdrand and thus the TRNG more generally. He "
+"created an `ebuild for Gentoo`_, too."
+msgstr ""
+
+#: ../pro/faq.rst:62 ../storage/faq.rst:78
+#, fuzzy
+msgid ""
+"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator for "
+"generating keys on the device. The entropy generated by the TRNG is used "
+"for the entire key length. Therefore the TRNG is compliant to BSI "
+"TR-03116."
 msgstr ""
 "A Nitrokey Pro és a Nitrokey Storage a TRNG (True Random Number "
 "Generator) segítségével generálja a kulcsokat az eszközön. A TRNG által "
 "generált entrópia a teljes kulcshosszra felhasználásra kerül. Ezért a "
 "TRNG megfelel a BSI TR-03116 szabványnak."
 
-#: ../pro/faq.rst:62
+#: ../pro/faq.rst:66 ../storage/faq.rst:82
 msgid "The TRNG provides about 40 kbit/s."
 msgstr "A TRNG körülbelül 40 kbit/s sebességet biztosít."
 
-#: ../pro/faq.rst:65
+#: ../pro/faq.rst:69
 msgid ""
 "The Nitrokey Pro doesn't contain storage capability for ordinary data (it"
 " can only store cryptographic keys and certificates)."
@@ -15969,6 +15902,10 @@ msgstr ""
 "vonatkozik, de ez alacsonyabb minőségű. A Nitrokey Start a "
 "mikroprocesszorban van megvalósítva."
 
+#: ../shared-faqs/generic.rst:142
+msgid "**Q:** How good is the Random Number Generator (RNG)?"
+msgstr "**K:** Mennyire jó a véletlenszám-generátor (RNG)?"
+
 #: ../shared-faqs/generic.rst:169
 msgid "**Q:** Is Nitrokey Common Criteria or FIPS certified?"
 msgstr "**K:** A Nitrokey Common Criteria vagy FIPS tanúsítvánnyal rendelkezik?"
@@ -16171,9 +16108,10 @@ msgid ""
 " other packages installed on your system."
 msgstr ""
 "Ez az útmutató elmagyarázza, hogyan kell a nitropy-t telepíteni a `pipx "
-"<https://pypa.github.io/pipx/>`_ segítségével. pipx létrehoz egy virtuális "
-"környezetet a nitropy számára. Ez azt jelenti, hogy a nitropy és függőségei "
-"nem kerülnek konfliktusba a rendszeredre telepített más csomagokkal."
+"<https://pypa.github.io/pipx/>`_ segítségével. pipx létrehoz egy "
+"virtuális környezetet a nitropy számára. Ez azt jelenti, hogy a nitropy "
+"és függőségei nem kerülnek konfliktusba a rendszeredre telepített más "
+"csomagokkal."
 
 #: ../software/nitropy/all-platforms/installation.rst:10
 msgid ""
@@ -16181,9 +16119,9 @@ msgid ""
 "use with caution. You can also use pre-compiled binaries or a MSI "
 "installer, see :doc:`../windows/installation`."
 msgstr ""
-"**Windows-felhasználóknak:** A Windows-támogatás még kísérleti stádiumban "
-"van - kérjük, óvatosan használja. Használhat előre lefordított binárisokat "
-"vagy MSI telepítőt is, lásd :doc:`../windows/installation`."
+"**Windows-felhasználóknak:** A Windows-támogatás még kísérleti stádiumban"
+" van - kérjük, óvatosan használja. Használhat előre lefordított "
+"binárisokat vagy MSI telepítőt is, lásd :doc:`../windows/installation`."
 
 #: ../software/nitropy/all-platforms/installation.rst:16
 msgid "Python 3.6 or newer"
@@ -16198,8 +16136,8 @@ msgid ""
 msgstr ""
 "A Python már telepítve van a legtöbb macOS és Linux rendszerre, vagy "
 "letölthető a `python.org <https://python.org>`_ honlapról. További "
-"információkért lásd a `A Python letöltése útmutató <https://wiki.python.org/"
-"moin/BeginnersGuide/Download>`_."
+"információkért lásd a `A Python letöltése útmutató "
+"<https://wiki.python.org/moin/BeginnersGuide/Download>`_."
 
 #: ../software/nitropy/all-platforms/installation.rst:20
 msgid "pip"
@@ -16213,7 +16151,8 @@ msgid ""
 msgstr ""
 "A pip telepíthető a rendszer csomagkezelőjével vagy a ``python3 -m "
 "ensurepip`` segítségével. További információkért lásd a `pip telepítési "
-"útmutató <https://pip.pypa.io/en/stable/installation/>`_ című dokumentumot."
+"útmutató <https://pip.pypa.io/en/stable/installation/>`_ című "
+"dokumentumot."
 
 #: ../software/nitropy/all-platforms/installation.rst:24
 msgid "pipx"
@@ -16228,8 +16167,8 @@ msgid ""
 "See the `pipx Installation Guide "
 "<https://pypa.github.io/pipx/installation/>`_ for more information."
 msgstr ""
-"További információkért lásd a `pipx telepítési útmutató <https://pypa.github."
-"io/pipx/installation/>`_ című dokumentumot."
+"További információkért lásd a `pipx telepítési útmutató "
+"<https://pypa.github.io/pipx/installation/>`_ című dokumentumot."
 
 #: ../software/nitropy/all-platforms/installation.rst:35
 msgid "Now you can install nitropy from the pynitrokey package::"
@@ -16255,8 +16194,8 @@ msgid ""
 "<https://github.com/Nitrokey/libnitrokey>`_."
 msgstr ""
 "Ha a nitropy-t Nitrokey Pro vagy Nitrokey Storage eszközzel szeretné "
-"használni, akkor telepítenie kell a `libnitrokey <https://github.com/"
-"Nitrokey/libnitrokey>`_ eszközt is."
+"használni, akkor telepítenie kell a `libnitrokey "
+"<https://github.com/Nitrokey/libnitrokey>`_ eszközt is."
 
 #: ../software/nitropy/all-platforms/installation.rst:55
 msgid "Windows support is still experimental -- please use with caution."
@@ -16269,8 +16208,8 @@ msgid ""
 "You might have to run nitropy with administrator rights to be able to "
 "connect to a device."
 msgstr ""
-"Előfordulhat, hogy a nitropy-t rendszergazdai jogokkal kell futtatnia ahhoz, "
-"hogy csatlakozni tudjon egy eszközhöz."
+"Előfordulhat, hogy a nitropy-t rendszergazdai jogokkal kell futtatnia "
+"ahhoz, hogy csatlakozni tudjon egy eszközhöz."
 
 #: ../software/nitropy/all-platforms/installation.rst:62
 msgid ""
@@ -16278,8 +16217,8 @@ msgid ""
 "shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. "
 "Alternatively, you can install them manually::"
 msgstr ""
-"Linux rendszereken a Nitrokey udev szabályaira is szükséged van. Ezeket a `"
-"libnitrokey <https://github.com/Nitrokey/libnitrokey>`_ csomagban "
+"Linux rendszereken a Nitrokey udev szabályaira is szükséged van. Ezeket a"
+" `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_ csomagban "
 "szállítjuk. Alternatívaként manuálisan is telepítheti őket::"
 
 #: ../software/nitropy/all-platforms/installation.rst:67
@@ -16313,8 +16252,8 @@ msgid ""
 "**nitropy** is a command-line interface for the Nitrokey FIDO2, Nitrokey "
 "Start, Nitrokey 3 and NetHSM."
 msgstr ""
-"A **nitropy** egy parancssori interfész a Nitrokey FIDO2, Nitrokey Start, "
-"Nitrokey 3 és a NetHSM számára."
+"A **nitropy** egy parancssori interfész a Nitrokey FIDO2, Nitrokey Start,"
+" Nitrokey 3 és a NetHSM számára."
 
 #: ../software/nitropy/linux/index.rst:2
 msgid "nitropy Documentation For Linux"
@@ -16332,11 +16271,11 @@ msgid ""
 "have libnitrokey or if you need a newer version, you can install the "
 "rules manually::"
 msgstr ""
-"Ahhoz, hogy root jogosultságok nélkül is hozzáférhessen az eszközökhöz, a "
-"nitropy-nak szüksége van a Nitrokey udev szabályaira.  Ezeket a szabályokat "
-"a `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_ tartalmazza.  Ha "
-"nincs libnitrokey, vagy ha újabb verzióra van szüksége, akkor a szabályokat "
-"manuálisan is telepítheti::"
+"Ahhoz, hogy root jogosultságok nélkül is hozzáférhessen az eszközökhöz, a"
+" nitropy-nak szüksége van a Nitrokey udev szabályaira.  Ezeket a "
+"szabályokat a `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_ "
+"tartalmazza.  Ha nincs libnitrokey, vagy ha újabb verzióra van szüksége, "
+"akkor a szabályokat manuálisan is telepítheti::"
 
 #: ../software/nitropy/linux/udev.rst:9
 msgid "After installing the rules, you need to reload them::"
@@ -16347,8 +16286,8 @@ msgid ""
 "If you still cannot access your device, try again after rebooting your "
 "system."
 msgstr ""
-"Ha továbbra sem tud hozzáférni a készülékhez, próbálja meg újra a rendszer "
-"újraindítása után."
+"Ha továbbra sem tud hozzáférni a készülékhez, próbálja meg újra a "
+"rendszer újraindítása után."
 
 #: ../software/nitropy/linux/udev.rst:15 ../software/nitropy/linux/udev.rst:19
 msgid "Todo"
@@ -16359,8 +16298,8 @@ msgid ""
 "describe debugging, see "
 "https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 msgstr ""
-"a hibakeresés leírása, lásd https://github.com/Nitrokey/pynitrokey/issues/"
-"167#issuecomment-1024921046"
+"a hibakeresés leírása, lásd "
+"https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 
 #: ../software/nitropy/linux/udev.rst:21
 msgid "describe requirements: systemd, load order"
@@ -16388,9 +16327,9 @@ msgid ""
 "command prompt, you can alternatively install nitropy with pipx, see :doc"
 ":`../all-platforms/installation`."
 msgstr ""
-"Ha már használsz Pythont a rendszereden, és ismered a parancssort, akkor a "
-"nitropy-t telepítheted a pipx segítségével is, lásd :doc:`../all-platforms/"
-"installation`."
+"Ha már használsz Pythont a rendszereden, és ismered a parancssort, akkor "
+"a nitropy-t telepítheted a pipx segítségével is, lásd :doc:`../all-"
+"platforms/installation`."
 
 #: ../software/nitropy/windows/installation.rst:11
 msgid "How to Install"
@@ -16401,8 +16340,8 @@ msgid ""
 "Download the latest ``.msi`` installer from `releases "
 "<https://github.com/Nitrokey/pynitrokey/releases/>`_."
 msgstr ""
-"Töltse le a legújabb ``.msi`` telepítőt a `kiadások <https://github.com/"
-"Nitrokey/pynitrokey/releases/>`_ közül."
+"Töltse le a legújabb ``.msi`` telepítőt a `kiadások "
+"<https://github.com/Nitrokey/pynitrokey/releases/>`_ közül."
 
 #: ../software/nitropy/windows/installation.rst:14
 msgid "Double-click the installer and click through (*Next* and *Finish*)"
@@ -16416,9 +16355,9 @@ msgid ""
 " right mouse button on the Menu Start and select \"Windows PowerShell "
 "(Admin)\" from the menu)."
 msgstr ""
-"Nyissa meg a parancskonzolt rendszergazdai módban (Windows 10: nyomja meg a "
-"jobb egérgombot a Start menüben, és válassza a \"Windows PowerShell (Admin)\""
-" menüpontot)."
+"Nyissa meg a parancskonzolt rendszergazdai módban (Windows 10: nyomja meg"
+" a jobb egérgombot a Start menüben, és válassza a \"Windows PowerShell "
+"(Admin)\" menüpontot)."
 
 #: ../software/nitropy/windows/installation.rst:16
 msgid "Enter ``nitropy``"
@@ -16429,24 +16368,24 @@ msgid ""
 "Without administrator privileges nitropy might not be able to communicate"
 " to device."
 msgstr ""
-"Rendszergazdai jogosultságok nélkül a nitropy esetleg nem tud kommunikálni "
-"az eszközzel."
+"Rendszergazdai jogosultságok nélkül a nitropy esetleg nem tud "
+"kommunikálni az eszközzel."
 
 #: ../software/nitropy/windows/installation.rst:23
 msgid ""
 "Support for Nitrokey Start under Windows 10 is not working without "
 "installing libusb libraries (to be described)"
 msgstr ""
-"A Nitrokey Start támogatása Windows 10 alatt nem működik a libusb könyvtárak "
-"telepítése nélkül (leírandó)"
+"A Nitrokey Start támogatása Windows 10 alatt nem működik a libusb "
+"könyvtárak telepítése nélkül (leírandó)"
 
 #: ../software/nitropy/windows/installation.rst:24
 msgid ""
 "The installer does not remove a previous installation (manually remove it"
 " using settings -> programs and apps)"
 msgstr ""
-"A telepítő nem távolítja el a korábbi telepítést (manuálisan távolítsa el a "
-"beállítások -> programok és alkalmazások segítségével)."
+"A telepítő nem távolítja el a korábbi telepítést (manuálisan távolítsa el"
+" a beállítások -> programok és alkalmazások segítségével)."
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst:8
 msgid ""
@@ -17028,6 +16967,83 @@ msgstr ""
 msgid "(Nitrokey Start - Windows)"
 msgstr "(Nitrokey Start - Windows)"
 
+#: ../storage/encrypted-mobile-storage.rst:1
+#, fuzzy
+msgid ""
+"Prior of using the encrypted mobile storage you need to install and "
+"initialize the Nitrokey Storage and download the latest `Nitrokey App "
+"<https://www.nitrokey.com/download>`_."
+msgstr ""
+"A titkosított mobiltároló használata előtt telepítenie és inicializálnia "
+"kell a Nitrokey Storage-t, és le kell töltenie a legújabb Nitrokey "
+"alkalmazást."
+
+#: ../storage/encrypted-mobile-storage.rst:3 ../storage/faq.rst:87
+msgid "Start the Nitrokey App."
+msgstr "Indítsa el a Nitrokey alkalmazást."
+
+#: ../storage/encrypted-mobile-storage.rst:4 ../storage/faq.rst:88
+msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
+msgstr ""
+"Nyomja meg a tálca ikonját, és válassza a \"titkosított kötet feloldása\""
+" menüpontot."
+
+#: ../storage/encrypted-mobile-storage.rst:5 ../storage/faq.rst:89
+msgid "Enter your User PIN in the appearing popup window."
+msgstr "Adja meg a felhasználói PIN-kódot a megjelenő felugró ablakban."
+
+#: ../storage/encrypted-mobile-storage.rst:6
+#, fuzzy
+msgid ""
+"If this is the first time you may need to create a partition on the "
+"encrypted volume. Windows will open an appropriate window and ask you to "
+"do so. On GNU+Linux and Mac you may need to open a partition manager and "
+"create a partition manually. You can create as many partitions as you "
+"want. We recommend FAT(32) if you want to access the partition from "
+"various operating systems."
+msgstr ""
+"Ha ez az első alkalom, előfordulhat, hogy partíciót kell létrehoznia a "
+"titkosított köteten. A Windows megnyit egy megfelelő ablakot, és megkéri "
+"erre. Linuxon és Macen előfordulhat, hogy meg kell nyitnia a "
+"partíciókezelőt, és manuálisan kell létrehoznia egy partíciót. Annyi "
+"partíciót hozhat létre, amennyit csak akar. A FAT(32) formátumot "
+"ajánljuk, ha a partíciót különböző operációs rendszerekből szeretné "
+"elérni."
+
+#: ../storage/encrypted-mobile-storage.rst:7 ../storage/faq.rst:91
+msgid ""
+"Now you can use the encrypted volume as you would use any other ordinary "
+"USB drive. But all data stored on it will be encrypted in the Nitrokey "
+"hardware automatically."
+msgstr ""
+"Most már használhatja a titkosított kötetet úgy, mint bármely más "
+"közönséges USB-meghajtót. De az összes rajta tárolt adat automatikusan "
+"titkosítva lesz a Nitrokey hardverben."
+
+#: ../storage/encrypted-mobile-storage.rst:8 ../storage/faq.rst:92
+msgid "To remove or lock the encrypted volume you should unmount/eject it first."
+msgstr ""
+"A titkosított kötet eltávolításához vagy zárolásához először le kell "
+"csatolnia/ki kell dobnia azt."
+
+#: ../storage/encrypted-mobile-storage.rst:9 ../storage/faq.rst:93
+msgid ""
+"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
+"volume\" from the Nitrokey App menu."
+msgstr ""
+"Ezután leválaszthatja a Nitrokey-t, vagy a Nitrokey App menüből "
+"kiválaszthatja a \"lock encrypted volume\" lehetőséget."
+
+#: ../storage/encrypted-mobile-storage.rst:11
+#, fuzzy
+msgid ""
+"The Nitrokey Storage is able to create hidden volumes as well. Please "
+"have a look at the corresponding instructions for `hidden volumes "
+"<hidden.html>`_."
+msgstr ""
+"A Nitrokey Storage képes rejtett kötetek létrehozására is. Kérjük, "
+"tekintse meg a megfelelő utasításokat a rejtett kötetekre vonatkozóan."
+
 #: ../storage/factory-reset.rst:8
 msgid "There are two types of factory resets for Nitrokey Storage devices:"
 msgstr "A Nitrokey Storage eszközök esetében kétféle gyári visszaállítás létezik:"
@@ -17160,11 +17176,17 @@ msgstr ""
 "konfigurációi P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A és "
 "P5CD016V1A mindegyik IC dedikált szoftverrel\")."
 
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:75
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Storage for my applications?"
+msgstr ""
+
+#: ../storage/faq.rst:95
 msgid "**Q:** How can I use the encrypted mobile Storage?"
 msgstr "**K:** Hogyan használhatom a titkosított mobiltárolót?"
 
-#: ../storage/faq.rst:74
+#: ../storage/faq.rst:85
 msgid ""
 "Prior of using the encrypted mobile storage you need to install and "
 "initialize the Nitrokey Storage and download the latest Nitrokey App."
@@ -17173,21 +17195,7 @@ msgstr ""
 "kell a Nitrokey Storage-t, és le kell töltenie a legújabb Nitrokey "
 "alkalmazást."
 
-#: ../storage/faq.rst:76
-msgid "Start the Nitrokey App."
-msgstr "Indítsa el a Nitrokey alkalmazást."
-
-#: ../storage/faq.rst:77
-msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
-msgstr ""
-"Nyomja meg a tálca ikonját, és válassza a \"titkosított kötet feloldása\""
-" menüpontot."
-
-#: ../storage/faq.rst:78
-msgid "Enter your User PIN in the appearing popup window."
-msgstr "Adja meg a felhasználói PIN-kódot a megjelenő felugró ablakban."
-
-#: ../storage/faq.rst:79
+#: ../storage/faq.rst:90
 msgid ""
 "If this is the first time you may need to create a partition on the "
 "encrypted volume. Windows will open an appropriate window and ask you to "
@@ -17204,31 +17212,7 @@ msgstr ""
 "ajánljuk, ha a partíciót különböző operációs rendszerekből szeretné "
 "elérni."
 
-#: ../storage/faq.rst:80
-msgid ""
-"Now you can use the encrypted volume as you would use any other ordinary "
-"USB drive. But all data stored on it will be encrypted in the Nitrokey "
-"hardware automatically."
-msgstr ""
-"Most már használhatja a titkosított kötetet úgy, mint bármely más "
-"közönséges USB-meghajtót. De az összes rajta tárolt adat automatikusan "
-"titkosítva lesz a Nitrokey hardverben."
-
-#: ../storage/faq.rst:81
-msgid "To remove or lock the encrypted volume you should unmount/eject it first."
-msgstr ""
-"A titkosított kötet eltávolításához vagy zárolásához először le kell "
-"csatolnia/ki kell dobnia azt."
-
-#: ../storage/faq.rst:82
-msgid ""
-"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
-"volume\" from the Nitrokey App menu."
-msgstr ""
-"Ezután leválaszthatja a Nitrokey-t, vagy a Nitrokey App menüből "
-"kiválaszthatja a \"lock encrypted volume\" lehetőséget."
-
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:95
 msgid ""
 "The Nitrokey Storage is able to create hidden volumes as well. Please "
 "have a look at the corresponding instructions for hidden volumes."
@@ -17236,11 +17220,11 @@ msgstr ""
 "A Nitrokey Storage képes rejtett kötetek létrehozására is. Kérjük, "
 "tekintse meg a megfelelő utasításokat a rejtett kötetekre vonatkozóan."
 
-#: ../storage/faq.rst:107
+#: ../storage/faq.rst:117
 msgid "**Q:** How can I use the hidden volume?"
 msgstr "**K:** Hogyan használhatom a rejtett hangerőt?"
 
-#: ../storage/faq.rst:87
+#: ../storage/faq.rst:98
 msgid ""
 "Hidden volumes allow to hide data in the encrypted volume. The data is "
 "protected with an additional password. Without the password the data "
@@ -17257,7 +17241,7 @@ msgstr ""
 "Nitrokey Storage esetében a rejtett kötetek teljes funkcionalitása "
 "hardveresen van megvalósítva."
 
-#: ../storage/faq.rst:94 ../storage/hidden.rst:8
+#: ../storage/faq.rst:105 ../storage/hidden.rst:8
 msgid ""
 "You can configure up to four hidden volumes. Once unlocked, hidden "
 "volumes behave like ordinary storage where you can create various "
@@ -17268,7 +17252,7 @@ msgstr ""
 "partíciókat, fájlrendszereket hozhat létre, és tetszés szerint tárolhatja"
 " a fájlokat."
 
-#: ../storage/faq.rst:98
+#: ../storage/faq.rst:109
 msgid ""
 "If you decide to configure Hidden Volumes, you can not use the encrypted "
 "storage anymore. Because the Hidden Volume is situated on the free space "
@@ -17288,73 +17272,13 @@ msgstr ""
 "után ne írjon semmit a titkosított tárolóba (előbb azonban fel kell "
 "oldania a titkosítást)."
 
-#: ../storage/faq.rst:106
+#: ../storage/faq.rst:117
 msgid ""
 "Hidden volumes are like containers inside of a container, the encrypted "
 "volume."
 msgstr ""
 "A rejtett kötetek olyanok, mint a konténerek egy konténerben, a "
 "titkosított kötetben."
-
-#: ../storage/faq.rst:118
-msgid "**Q:** Do you have resources for development and integration?"
-msgstr "**K:** Rendelkezik erőforrásokkal a fejlesztéshez és az integrációhoz?"
-
-#: ../storage/faq.rst:110
-msgid ""
-"Use Nitrokey library to manage the encrypted mass store, one-time "
-"passwords and password safe functionality."
-msgstr ""
-"Használja a Nitrokey könyvtárat a titkosított tömegtároló, az egyszer "
-"használatos jelszavak és a jelszóbiztonsági funkciók kezeléséhez."
-
-#: ../storage/faq.rst:111
-msgid ""
-"The project nitrokey-get-totp and nitrokey-get-password are nice examples"
-" for using the python bindings of Nitrokey library to get a custom "
-"interface."
-msgstr ""
-"A nitrokey-get-totp és a nitrokey-get-password projekt szép példák a "
-"Nitrokey könyvtár python kötéseinek használatára, hogy egyéni felületet "
-"kapjunk."
-
-#: ../storage/faq.rst:112
-msgid ""
-"In order to access the integrated smart card, you can use OpenSC's "
-"command line tools."
-msgstr ""
-"Az integrált intelligens kártyához való hozzáféréshez az "
-"OpenSC'parancssori eszközeit használhatja."
-
-#: ../storage/faq.rst:113
-msgid "If your application has a PKCS#11 interface, use OpenSC's PKCS#11 driver."
-msgstr ""
-"Ha az alkalmazás PKCS#11 interfésszel rendelkezik, használja az OpenSC's "
-"PKCS#11 illesztőprogramot."
-
-#: ../storage/faq.rst:114
-msgid "To work with the smart card low level, see the OpenPGP Card specification."
-msgstr ""
-"Az intelligens kártyával való alacsony szintű munkához lásd az OpenPGP "
-"Card specifikációt."
-
-#: ../storage/faq.rst:115
-msgid "The source code of the firmware and the hardware layout are available too."
-msgstr "A firmware forráskódja és a hardveres elrendezés is elérhető."
-
-#: ../storage/faq.rst:116
-msgid ""
-"To develop special applications or for command line access one can use "
-"the nitrocli created by d-e-s-o."
-msgstr ""
-"Speciális alkalmazások fejlesztéséhez vagy parancssori eléréshez "
-"használhatjuk a d-e-s-o által létrehozott nitrocli-t."
-
-#: ../storage/faq.rst:117
-msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
-msgstr ""
-"Egy libnitrokey wrapper a Rust számára, amely hozzáférést biztosít a "
-"Nitrokey eszközökhöz."
 
 #: ../storage/firmware-update-manually.rst:2
 msgid "Activate Update Mode Manually"
@@ -17670,6 +17594,13 @@ msgstr ""
 #: ../storage/linux/product_platform_heading.rst:3
 msgid "(Nitrokey Storage 2 - Linux)"
 msgstr "(Nitrokey Storage 2 - Linux)"
+
+#: ../storage/linux/encrypted-mobile-storage.rst:2
+#: ../storage/mac/encrypted-mobile-storage.rst:2
+#: ../storage/windows/encrypted-mobile-storage.rst:2
+#, fuzzy
+msgid "Encrypted Mobile Storage"
+msgstr "**K:** Hogyan használhatom a titkosított mobiltárolót?"
 
 #: ../storage/linux/firmware-update.rst:10
 #: ../storage/windows/firmware-update.rst:10
@@ -22152,3 +22083,172 @@ msgstr ""
 #~ "SmartCardHSMKey.getUseCounter() funkcióval lekérdezhető,"
 #~ " és a SmartCardHSMKeySpec.setKeyUseCounter() "
 #~ "funkcióval megerősíthető."
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'``"
+#~ msgstr ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'<x>``"
+
+#~ msgid ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'``"
+#~ msgstr ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'``"
+
+#~ msgid ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER``"
+#~ msgstr ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER<x>``"
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'``"
+#~ msgstr ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'<x>``"
+
+#~ msgid "modules {"
+#~ msgstr "modulok {"
+
+#~ msgid "Nitrokey {"
+#~ msgstr "Nitrokey {"
+
+#~ msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+#~ msgstr "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "}"
+#~ msgstr "}"
+
+#~ msgid "engine=dynamic"
+#~ msgstr "engine=dynamic"
+
+#~ msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+#~ msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+
+#~ msgid "engineCtrl=ID:pkcs11"
+#~ msgstr "engineCtrl=ID:pkcs11"
+
+#~ msgid "engineCtrl=LIST_ADD:1"
+#~ msgstr "engineCtrl=LIST_ADD:1"
+
+#~ msgid "engineCtrl=LOAD"
+#~ msgstr "engineCtrl=LOAD"
+
+#~ msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+#~ msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "engineCtrl=INIT"
+#~ msgstr "engineCtrl=INIT"
+
+#~ msgid "[service]"
+#~ msgstr "[service]"
+
+#~ msgid "engineNum=1"
+#~ msgstr "engineNum=1"
+
+#~ msgid "key=id_45"
+#~ msgstr "key=id_45"
+
+#~ msgid "**Q:** Do you have resources for development and integration?"
+#~ msgstr "**K:** Rendelkezik erőforrásokkal a fejlesztéshez és az integrációhoz?"
+
+#~ msgid ""
+#~ "Use Nitrokey library to manage the "
+#~ "encrypted mass store, one-time passwords"
+#~ " and password safe functionality."
+#~ msgstr ""
+#~ "Használja a Nitrokey könyvtárat a "
+#~ "titkosított tömegtároló, az egyszer "
+#~ "használatos jelszavak és a jelszóbiztonsági"
+#~ " funkciók kezeléséhez."
+
+#~ msgid ""
+#~ "The project nitrokey-get-totp and "
+#~ "nitrokey-get-password are nice examples "
+#~ "for using the python bindings of "
+#~ "Nitrokey library to get a custom "
+#~ "interface."
+#~ msgstr ""
+#~ "A nitrokey-get-totp és a "
+#~ "nitrokey-get-password projekt szép példák"
+#~ " a Nitrokey könyvtár python kötéseinek "
+#~ "használatára, hogy egyéni felületet kapjunk."
+
+#~ msgid ""
+#~ "In order to access the integrated "
+#~ "smart card, you can use OpenSC's "
+#~ "command line tools."
+#~ msgstr ""
+#~ "Az integrált intelligens kártyához való "
+#~ "hozzáféréshez az OpenSC'parancssori eszközeit "
+#~ "használhatja."
+
+#~ msgid ""
+#~ "If your application has a PKCS#11 "
+#~ "interface, use OpenSC's PKCS#11 driver."
+#~ msgstr ""
+#~ "Ha az alkalmazás PKCS#11 interfésszel "
+#~ "rendelkezik, használja az OpenSC's PKCS#11 "
+#~ "illesztőprogramot."
+
+#~ msgid ""
+#~ "To work with the smart card low"
+#~ " level, see the OpenPGP Card "
+#~ "specification."
+#~ msgstr ""
+#~ "Az intelligens kártyával való alacsony "
+#~ "szintű munkához lásd az OpenPGP Card "
+#~ "specifikációt."
+
+#~ msgid ""
+#~ "The source code of the firmware "
+#~ "and the hardware layout are available"
+#~ " too."
+#~ msgstr "A firmware forráskódja és a hardveres elrendezés is elérhető."
+
+#~ msgid ""
+#~ "To develop special applications or for"
+#~ " command line access one can use "
+#~ "the nitrocli created by d-e-s-o."
+#~ msgstr ""
+#~ "Speciális alkalmazások fejlesztéséhez vagy "
+#~ "parancssori eléréshez használhatjuk a d-e-s-o"
+#~ " által létrehozott nitrocli-t."
+
+#~ msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
+#~ msgstr ""
+#~ "Egy libnitrokey wrapper a Rust számára,"
+#~ " amely hozzáférést biztosít a Nitrokey "
+#~ "eszközökhöz."
+

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 13:21+0200\n"
+"POT-Creation-Date: 2022-06-08 13:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -197,7 +197,7 @@ msgstr ""
 
 #: ../fido2/faq.rst:23
 #: ../nitrokey3/faq.rst:28
-#: ../pro/faq.rst:69
+#: ../pro/faq.rst:72
 #: ../shared-faqs/generic.rst:34
 #: ../start/faq.rst:38
 #: ../storage/faq.rst:21
@@ -4024,60 +4024,72 @@ msgid "secp521"
 msgstr ""
 
 #: ../hsm/faq.rst:64
-#: ../pro/faq.rst:62
-#: ../shared-faqs/generic.rst:142
-msgid "**Q:** How good is the Random Number Generator (RNG)?"
+msgid "**Q:** How can I use the True Random Number Generator (TRNG) of the Nitrokey HSM for my applications?"
 msgstr ""
 
-#: ../hsm/faq.rst:63
-msgid "Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 (according to AIS 31 of the BSI)."
+#: ../hsm/faq.rst:62
+msgid "Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC as a PKCS#11 driver."
 msgstr ""
 
-#: ../hsm/faq.rst:80
-msgid "**Q:** Which API can I use?"
+#: ../hsm/faq.rst:64
+msgid "OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 doesn't contain a mapping for OpenSSL to C_GenerateRandom."
+msgstr ""
+
+#: ../hsm/faq.rst:68
+#: ../pro/faq.rst:66
+#: ../storage/faq.rst:82
+msgid "**Q:** How good is the True Random Number Generator (TRNG)?"
 msgstr ""
 
 #: ../hsm/faq.rst:67
+msgid "Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 (according to AIS 31 of the BSI)."
+msgstr ""
+
+#: ../hsm/faq.rst:84
+msgid "**Q:** Which API can I use?"
+msgstr ""
+
+#: ../hsm/faq.rst:71
 msgid "OpenSC: Comprehensive instructions exist for OpenSC framework. There is nitrotool as a more comfortable frontend to OpenSC."
 msgstr ""
 
-#: ../hsm/faq.rst:70
+#: ../hsm/faq.rst:74
 msgid "Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 module is useful for deployments where key generation at the user's workplace is not required. The PKCS#11 module also supports major electronic signature cards available in the German market."
 msgstr ""
 
-#: ../hsm/faq.rst:76
+#: ../hsm/faq.rst:80
 msgid "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open smart card development platform. See the public support scripts for details. To import existing keys you can use its SCSH or NitroKeyWrapper."
 msgstr ""
 
-#: ../hsm/faq.rst:86
+#: ../hsm/faq.rst:90
 msgid "**Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?"
 msgstr ""
 
-#: ../hsm/faq.rst:83
+#: ../hsm/faq.rst:87
 msgid "The security controler's hardware and operating system are Common Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_, click \"ICs, Smart Cards and Smart Card-Related Devices and Systems\" and search for \"NXP JCOP 3 P60\")."
 msgstr ""
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid "**Q:** How to import an existing key into the Nitrokey HSM?"
 msgstr ""
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then use Smart Card Shell for importing. If your key is stored in a Java key store you can use `NitroKeyWrapper`_  instead."
 msgstr ""
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey HSM?"
 msgstr ""
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey HSM can be found at `banzaicloud.com`_."
 msgstr ""
 
-#: ../hsm/faq.rst:97
+#: ../hsm/faq.rst:101
 msgid "**Q:** Can I use Nitrokey HSM with cryptocurrencies?"
 msgstr ""
 
-#: ../hsm/faq.rst:95
+#: ../hsm/faq.rst:99
 msgid "J.v.d.Bosch wrote a simple, free python `program`_ to secure the private key of a Bitcoin wallet in a HSM. `Tezos`_ has been `reported`_ to work with Nitrokey HSM."
 msgstr ""
 
@@ -4375,128 +4387,59 @@ msgstr ""
 msgid "Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 bit RSA key."
 msgstr ""
 
-#: ../hsm/ipsec.rst:9
-#: ../hsm/ipsec.rst:9
-#: ../hsm/ipsec.rst:9
-#: ../hsm/ipsec.rst:9
-#: ../hsm/ipsec.rst:9
-msgid "``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
-msgstr ""
-
-#: ../hsm/ipsec.rst:11
-#: ../hsm/ipsec.rst:11
-#: ../hsm/ipsec.rst:11
-#: ../hsm/ipsec.rst:11
-#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:13
+#: ../hsm/ipsec.rst:13
+#: ../hsm/ipsec.rst:13
+#: ../hsm/ipsec.rst:13
+#: ../hsm/ipsec.rst:13
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr ""
 
-#: ../hsm/ipsec.rst:13
-#: ../hsm/ipsec.rst:13
-#: ../hsm/ipsec.rst:13
-#: ../hsm/ipsec.rst:13
-#: ../hsm/ipsec.rst:13
-msgid "``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out user@email.com-staging-cert.csr -subj '/C=GB/L=Cambridge/O=Organization/OU=Staging Access/CN=user@email.com/emailAddress=user@email.com'``"
-msgstr ""
-
-#: ../hsm/ipsec.rst:17
-#: ../hsm/ipsec.rst:17
-#: ../hsm/ipsec.rst:17
-#: ../hsm/ipsec.rst:17
-#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:21
+#: ../hsm/ipsec.rst:21
+#: ../hsm/ipsec.rst:21
+#: ../hsm/ipsec.rst:21
+#: ../hsm/ipsec.rst:21
 msgid "Sign the certificate with your certificate authority"
 msgstr ""
 
-#: ../hsm/ipsec.rst:19
-#: ../hsm/ipsec.rst:19
-#: ../hsm/ipsec.rst:19
-#: ../hsm/ipsec.rst:19
-#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:23
 msgid "Convert the certificate to DER"
 msgstr ""
 
-#: ../hsm/ipsec.rst:21
-#: ../hsm/ipsec.rst:21
-#: ../hsm/ipsec.rst:21
-#: ../hsm/ipsec.rst:21
-#: ../hsm/ipsec.rst:21
-msgid "``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-staging-cert.der -outform DER``"
-msgstr ""
-
-#: ../hsm/ipsec.rst:23
-#: ../hsm/ipsec.rst:23
-#: ../hsm/ipsec.rst:23
-#: ../hsm/ipsec.rst:23
-#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:29
+#: ../hsm/ipsec.rst:29
+#: ../hsm/ipsec.rst:29
+#: ../hsm/ipsec.rst:29
+#: ../hsm/ipsec.rst:29
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
 msgstr ""
 
-#: ../hsm/ipsec.rst:25
-#: ../hsm/ipsec.rst:25
-#: ../hsm/ipsec.rst:25
-#: ../hsm/ipsec.rst:25
-#: ../hsm/ipsec.rst:25
-msgid "``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging Access'``"
-msgstr ""
-
-#: ../hsm/ipsec.rst:27
-#: ../hsm/ipsec.rst:27
-#: ../hsm/ipsec.rst:27
-#: ../hsm/ipsec.rst:27
-#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:35
+#: ../hsm/ipsec.rst:35
+#: ../hsm/ipsec.rst:35
+#: ../hsm/ipsec.rst:35
+#: ../hsm/ipsec.rst:35
 msgid "Configure Strongswan to load opensc-pkcs11 module then to load the certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and add the following module:"
 msgstr ""
 
-#: ../hsm/ipsec.rst:32
-#: ../hsm/ipsec.rst:32
-#: ../hsm/ipsec.rst:32
-#: ../hsm/ipsec.rst:32
-#: ../hsm/ipsec.rst:32
-msgid "modules {"
-msgstr ""
-
-#: ../hsm/ipsec.rst:30
-#: ../hsm/ipsec.rst:30
-#: ../hsm/ipsec.rst:30
-#: ../hsm/ipsec.rst:30
-#: ../hsm/ipsec.rst:30
-msgid "Nitrokey {"
-msgstr ""
-
-#: ../hsm/ipsec.rst:31
-#: ../hsm/ipsec.rst:31
-#: ../hsm/ipsec.rst:31
-#: ../hsm/ipsec.rst:31
-#: ../hsm/ipsec.rst:31
-msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr ""
-
-#: ../hsm/ipsec.rst:32
-#: ../hsm/ipsec.rst:33
-#: ../hsm/ipsec.rst:32
-#: ../hsm/ipsec.rst:33
-#: ../hsm/ipsec.rst:32
-#: ../hsm/ipsec.rst:33
-#: ../hsm/ipsec.rst:32
-#: ../hsm/ipsec.rst:33
-#: ../hsm/ipsec.rst:32
-#: ../hsm/ipsec.rst:33
-msgid "}"
-msgstr ""
-
-#: ../hsm/ipsec.rst:34
-#: ../hsm/ipsec.rst:34
-#: ../hsm/ipsec.rst:34
-#: ../hsm/ipsec.rst:34
-#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:46
+#: ../hsm/ipsec.rst:46
+#: ../hsm/ipsec.rst:46
+#: ../hsm/ipsec.rst:46
+#: ../hsm/ipsec.rst:46
 msgid "Initiate the VPN connection via IPSec/Strongswan, then prompt for Nitrokey PIN"
 msgstr ""
 
-#: ../hsm/ipsec.rst:36
-#: ../hsm/ipsec.rst:36
-#: ../hsm/ipsec.rst:36
-#: ../hsm/ipsec.rst:36
-#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:48
+#: ../hsm/ipsec.rst:48
+#: ../hsm/ipsec.rst:48
+#: ../hsm/ipsec.rst:48
+#: ../hsm/ipsec.rst:48
 msgid "VPN is now connected"
 msgstr ""
 
@@ -6089,86 +6032,6 @@ msgstr ""
 #: ../hsm/stunnel.rst:7
 #: ../hsm/stunnel.rst:7
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
-msgstr ""
-
-#: ../hsm/stunnel.rst:9
-#: ../hsm/stunnel.rst:9
-#: ../hsm/stunnel.rst:9
-#: ../hsm/stunnel.rst:9
-#: ../hsm/stunnel.rst:9
-msgid "engine=dynamic"
-msgstr ""
-
-#: ../hsm/stunnel.rst:10
-#: ../hsm/stunnel.rst:10
-#: ../hsm/stunnel.rst:10
-#: ../hsm/stunnel.rst:10
-#: ../hsm/stunnel.rst:10
-msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-msgstr ""
-
-#: ../hsm/stunnel.rst:11
-#: ../hsm/stunnel.rst:11
-#: ../hsm/stunnel.rst:11
-#: ../hsm/stunnel.rst:11
-#: ../hsm/stunnel.rst:11
-msgid "engineCtrl=ID:pkcs11"
-msgstr ""
-
-#: ../hsm/stunnel.rst:12
-#: ../hsm/stunnel.rst:12
-#: ../hsm/stunnel.rst:12
-#: ../hsm/stunnel.rst:12
-#: ../hsm/stunnel.rst:12
-msgid "engineCtrl=LIST_ADD:1"
-msgstr ""
-
-#: ../hsm/stunnel.rst:13
-#: ../hsm/stunnel.rst:13
-#: ../hsm/stunnel.rst:13
-#: ../hsm/stunnel.rst:13
-#: ../hsm/stunnel.rst:13
-msgid "engineCtrl=LOAD"
-msgstr ""
-
-#: ../hsm/stunnel.rst:14
-#: ../hsm/stunnel.rst:14
-#: ../hsm/stunnel.rst:14
-#: ../hsm/stunnel.rst:14
-#: ../hsm/stunnel.rst:14
-msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-msgstr ""
-
-#: ../hsm/stunnel.rst:15
-#: ../hsm/stunnel.rst:15
-#: ../hsm/stunnel.rst:15
-#: ../hsm/stunnel.rst:15
-#: ../hsm/stunnel.rst:15
-msgid "engineCtrl=INIT"
-msgstr ""
-
-#: ../hsm/stunnel.rst:17
-#: ../hsm/stunnel.rst:17
-#: ../hsm/stunnel.rst:17
-#: ../hsm/stunnel.rst:17
-#: ../hsm/stunnel.rst:17
-msgid "[service]"
-msgstr ""
-
-#: ../hsm/stunnel.rst:18
-#: ../hsm/stunnel.rst:18
-#: ../hsm/stunnel.rst:18
-#: ../hsm/stunnel.rst:18
-#: ../hsm/stunnel.rst:18
-msgid "engineNum=1"
-msgstr ""
-
-#: ../hsm/stunnel.rst:19
-#: ../hsm/stunnel.rst:19
-#: ../hsm/stunnel.rst:19
-#: ../hsm/stunnel.rst:19
-#: ../hsm/stunnel.rst:19
-msgid "key=id_45"
 msgstr ""
 
 #: ../hsm/mac/product_platform_heading.rst:3
@@ -12221,15 +12084,26 @@ msgstr ""
 msgid "The security controler's hardware is Common Criteria certified (`Report`_; See `here`_, click \"ICs, Smart Cards and Smart Card-Related Devices and Systems\" and search for \"NXP Smart Card Controller P5CD081V1A and its major configurations P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A and P5CD016V1A each with IC dedicated Software\")."
 msgstr ""
 
+#: ../pro/faq.rst:59
+msgid "**Q:** How can I use the True Random Number Generator (TRNG) of the Nitrokey Pro for my applications?"
+msgstr ""
+
 #: ../pro/faq.rst:58
-msgid "Nitrokey Pro and Nitrokey Storage use a True Random Number Generator (TRNG) for generating keys on the device. The entropy generated by the TRNG is used for the entire key length. Therefore the TRNG is compliant to BSI TR-03116."
+#: ../storage/faq.rst:74
+msgid "Both devices are compatible to the OpenPGP Card, so that `scdrand`_ should work. `This script`_ may be useful. The user comio `created a systemd file`_ to use scdrand and thus the TRNG more generally. He created an `ebuild for Gentoo`_, too."
 msgstr ""
 
 #: ../pro/faq.rst:62
+#: ../storage/faq.rst:78
+msgid "Nitrokey Pro and Nitrokey Storage use a True Random Number Generator for generating keys on the device. The entropy generated by the TRNG is used for the entire key length. Therefore the TRNG is compliant to BSI TR-03116."
+msgstr ""
+
+#: ../pro/faq.rst:66
+#: ../storage/faq.rst:82
 msgid "The TRNG provides about 40 kbit/s."
 msgstr ""
 
-#: ../pro/faq.rst:65
+#: ../pro/faq.rst:69
 msgid "The Nitrokey Pro doesn't contain storage capability for ordinary data (it can only store cryptographic keys and certificates)."
 msgstr ""
 
@@ -16152,6 +16026,10 @@ msgstr ""
 msgid "Nitrokey Pro, Nitrokey HSM and Nitrokey Storage contain a tamper resistant smart card. To some extent this also applies to Nitrokey U2F but it's of lower quality. Nitrokey Start is implemented in the microprocessor."
 msgstr ""
 
+#: ../shared-faqs/generic.rst:142
+msgid "**Q:** How good is the Random Number Generator (RNG)?"
+msgstr ""
+
 #: ../shared-faqs/generic.rst:169
 msgid "**Q:** Is Nitrokey Common Criteria or FIPS certified?"
 msgstr ""
@@ -16956,6 +16834,75 @@ msgstr ""
 msgid "(Nitrokey Start - Windows)"
 msgstr ""
 
+#: ../storage/encrypted-mobile-storage.rst:1
+#: ../storage/encrypted-mobile-storage.rst:1
+#: ../storage/encrypted-mobile-storage.rst:1
+#: ../storage/encrypted-mobile-storage.rst:1
+msgid "Prior of using the encrypted mobile storage you need to install and initialize the Nitrokey Storage and download the latest `Nitrokey App <https://www.nitrokey.com/download>`_."
+msgstr ""
+
+#: ../storage/encrypted-mobile-storage.rst:3
+#: ../storage/faq.rst:87
+#: ../storage/encrypted-mobile-storage.rst:3
+#: ../storage/encrypted-mobile-storage.rst:3
+#: ../storage/encrypted-mobile-storage.rst:3
+msgid "Start the Nitrokey App."
+msgstr ""
+
+#: ../storage/encrypted-mobile-storage.rst:4
+#: ../storage/faq.rst:88
+#: ../storage/encrypted-mobile-storage.rst:4
+#: ../storage/encrypted-mobile-storage.rst:4
+#: ../storage/encrypted-mobile-storage.rst:4
+msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
+msgstr ""
+
+#: ../storage/encrypted-mobile-storage.rst:5
+#: ../storage/faq.rst:89
+#: ../storage/encrypted-mobile-storage.rst:5
+#: ../storage/encrypted-mobile-storage.rst:5
+#: ../storage/encrypted-mobile-storage.rst:5
+msgid "Enter your User PIN in the appearing popup window."
+msgstr ""
+
+#: ../storage/encrypted-mobile-storage.rst:6
+#: ../storage/encrypted-mobile-storage.rst:6
+#: ../storage/encrypted-mobile-storage.rst:6
+#: ../storage/encrypted-mobile-storage.rst:6
+msgid "If this is the first time you may need to create a partition on the encrypted volume. Windows will open an appropriate window and ask you to do so. On GNU+Linux and Mac you may need to open a partition manager and create a partition manually. You can create as many partitions as you want. We recommend FAT(32) if you want to access the partition from various operating systems."
+msgstr ""
+
+#: ../storage/encrypted-mobile-storage.rst:7
+#: ../storage/faq.rst:91
+#: ../storage/encrypted-mobile-storage.rst:7
+#: ../storage/encrypted-mobile-storage.rst:7
+#: ../storage/encrypted-mobile-storage.rst:7
+msgid "Now you can use the encrypted volume as you would use any other ordinary USB drive. But all data stored on it will be encrypted in the Nitrokey hardware automatically."
+msgstr ""
+
+#: ../storage/encrypted-mobile-storage.rst:8
+#: ../storage/faq.rst:92
+#: ../storage/encrypted-mobile-storage.rst:8
+#: ../storage/encrypted-mobile-storage.rst:8
+#: ../storage/encrypted-mobile-storage.rst:8
+msgid "To remove or lock the encrypted volume you should unmount/eject it first."
+msgstr ""
+
+#: ../storage/encrypted-mobile-storage.rst:9
+#: ../storage/faq.rst:93
+#: ../storage/encrypted-mobile-storage.rst:9
+#: ../storage/encrypted-mobile-storage.rst:9
+#: ../storage/encrypted-mobile-storage.rst:9
+msgid "Afterwards you can disconnect the Nitrokey or select \"lock encrypted volume\" from the Nitrokey App menu."
+msgstr ""
+
+#: ../storage/encrypted-mobile-storage.rst:11
+#: ../storage/encrypted-mobile-storage.rst:11
+#: ../storage/encrypted-mobile-storage.rst:11
+#: ../storage/encrypted-mobile-storage.rst:11
+msgid "The Nitrokey Storage is able to create hidden volumes as well. Please have a look at the corresponding instructions for `hidden volumes <hidden.html>`_."
+msgstr ""
+
 #: ../storage/factory-reset.rst:8
 #: ../storage/factory-reset.rst:8
 #: ../storage/factory-reset.rst:8
@@ -17043,55 +16990,35 @@ msgstr ""
 msgid "`Cure53`_ has performed an `independent security audit`_ of the hardware, firmware, and Nitrokey App. The security controler's hardware is Common Criteria certified (`Report`_; See `here`_, click \"ICs, Smart Cards and Smart Card-Related Devices and Systems\" and search for \"NXP Smart Card Controller P5CD081V1A and its major configurations P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A and P5CD016V1A each with IC dedicated Software\")."
 msgstr ""
 
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:75
+msgid "**Q:** How can I use the True Random Number Generator (TRNG) of the Nitrokey Storage for my applications?"
+msgstr ""
+
+#: ../storage/faq.rst:95
 msgid "**Q:** How can I use the encrypted mobile Storage?"
 msgstr ""
 
-#: ../storage/faq.rst:74
+#: ../storage/faq.rst:85
 msgid "Prior of using the encrypted mobile storage you need to install and initialize the Nitrokey Storage and download the latest Nitrokey App."
 msgstr ""
 
-#: ../storage/faq.rst:76
-msgid "Start the Nitrokey App."
-msgstr ""
-
-#: ../storage/faq.rst:77
-msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
-msgstr ""
-
-#: ../storage/faq.rst:78
-msgid "Enter your User PIN in the appearing popup window."
-msgstr ""
-
-#: ../storage/faq.rst:79
+#: ../storage/faq.rst:90
 msgid "If this is the first time you may need to create a partition on the encrypted volume. Windows will open an appropriate window and ask you to do so. On Linux and Mac you may need to open a partition manager and create a partition manually. You can create as many partitions as you want. We recommend FAT(32) if you want to access the partition from various operating systems."
 msgstr ""
 
-#: ../storage/faq.rst:80
-msgid "Now you can use the encrypted volume as you would use any other ordinary USB drive. But all data stored on it will be encrypted in the Nitrokey hardware automatically."
-msgstr ""
-
-#: ../storage/faq.rst:81
-msgid "To remove or lock the encrypted volume you should unmount/eject it first."
-msgstr ""
-
-#: ../storage/faq.rst:82
-msgid "Afterwards you can disconnect the Nitrokey or select \"lock encrypted volume\" from the Nitrokey App menu."
-msgstr ""
-
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:95
 msgid "The Nitrokey Storage is able to create hidden volumes as well. Please have a look at the corresponding instructions for hidden volumes."
 msgstr ""
 
-#: ../storage/faq.rst:107
+#: ../storage/faq.rst:117
 msgid "**Q:** How can I use the hidden volume?"
 msgstr ""
 
-#: ../storage/faq.rst:87
+#: ../storage/faq.rst:98
 msgid "Hidden volumes allow to hide data in the encrypted volume. The data is protected with an additional password. Without the password the data existence's can't be proven. Hidden volumes are not setup by default so that their existence can be denied plausibly. The concept is similar to VeraCrypt's/TrueCrypt's hidden volume but with Nitrokey Storage the entire functionality of hidden volumes is implemented in hardware."
 msgstr ""
 
-#: ../storage/faq.rst:94
+#: ../storage/faq.rst:105
 #: ../storage/hidden.rst:8
 #: ../storage/hidden.rst:8
 #: ../storage/hidden.rst:8
@@ -17099,48 +17026,12 @@ msgstr ""
 msgid "You can configure up to four hidden volumes. Once unlocked, hidden volumes behave like ordinary storage where you can create various partitions, filesystems and store files as you like."
 msgstr ""
 
-#: ../storage/faq.rst:98
+#: ../storage/faq.rst:109
 msgid "If you decide to configure Hidden Volumes, you can not use the encrypted storage anymore. Because the Hidden Volume is situated on the free space of the encrypted storage, there is the potential of overwriting data in the Hidden Volume. You can say, even the encrypted storage \"does not know\" that there is a hidden volumes. The general structure is shown in the diagram below. Therefore, please do not write anything in the encrypted storage after creating a hidden volume (you have to unlock it first though)."
 msgstr ""
 
-#: ../storage/faq.rst:106
-msgid "Hidden volumes are like containers inside of a container, the encrypted volume."
-msgstr ""
-
-#: ../storage/faq.rst:118
-msgid "**Q:** Do you have resources for development and integration?"
-msgstr ""
-
-#: ../storage/faq.rst:110
-msgid "Use Nitrokey library to manage the encrypted mass store, one-time passwords and password safe functionality."
-msgstr ""
-
-#: ../storage/faq.rst:111
-msgid "The project nitrokey-get-totp and nitrokey-get-password are nice examples for using the python bindings of Nitrokey library to get a custom interface."
-msgstr ""
-
-#: ../storage/faq.rst:112
-msgid "In order to access the integrated smart card, you can use OpenSC's command line tools."
-msgstr ""
-
-#: ../storage/faq.rst:113
-msgid "If your application has a PKCS#11 interface, use OpenSC's PKCS#11 driver."
-msgstr ""
-
-#: ../storage/faq.rst:114
-msgid "To work with the smart card low level, see the OpenPGP Card specification."
-msgstr ""
-
-#: ../storage/faq.rst:115
-msgid "The source code of the firmware and the hardware layout are available too."
-msgstr ""
-
-#: ../storage/faq.rst:116
-msgid "To develop special applications or for command line access one can use the nitrocli created by d-e-s-o."
-msgstr ""
-
 #: ../storage/faq.rst:117
-msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
+msgid "Hidden volumes are like containers inside of a container, the encrypted volume."
 msgstr ""
 
 #: ../storage/firmware-update-manually.rst:2
@@ -17442,6 +17333,12 @@ msgstr ""
 #: ../storage/linux/product_platform_heading.rst:3
 #: ../storage/linux/product_platform_heading.rst:3
 msgid "(Nitrokey Storage 2 - Linux)"
+msgstr ""
+
+#: ../storage/linux/encrypted-mobile-storage.rst:2
+#: ../storage/mac/encrypted-mobile-storage.rst:2
+#: ../storage/windows/encrypted-mobile-storage.rst:2
+msgid "Encrypted Mobile Storage"
 msgstr ""
 
 #: ../storage/linux/firmware-update.rst:10

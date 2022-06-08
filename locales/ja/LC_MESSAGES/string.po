@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-31 12:12+0200\n"
+"POT-Creation-Date: 2022-06-08 13:30+0200\n"
 "PO-Revision-Date: 2022-05-31 12:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -129,7 +128,7 @@ msgstr ""
 " FIDO2になります。Nitrokey FIDO2 を紛失した場合でも、2 つ目の Nitrokey FIDO2 （または別の第 2 "
 "要素）でログインすることができます。"
 
-#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:69
+#: ../fido2/faq.rst:23 ../nitrokey3/faq.rst:28 ../pro/faq.rst:72
 #: ../shared-faqs/generic.rst:34 ../start/faq.rst:38 ../storage/faq.rst:21
 msgid "**Q:** How large is the storage capacity?"
 msgstr "**Q：＊＊＊記憶容量はどのくらいですか？"
@@ -1902,27 +1901,46 @@ msgstr "secp256"
 msgid "secp521"
 msgstr "secp521"
 
-#: ../hsm/faq.rst:64 ../pro/faq.rst:62 ../shared-faqs/generic.rst:142
-msgid "**Q:** How good is the Random Number Generator (RNG)?"
+#: ../hsm/faq.rst:64
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey HSM for my applications?"
+msgstr ""
+
+#: ../hsm/faq.rst:62
+msgid ""
+"Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC "
+"as a PKCS#11 driver."
+msgstr ""
+
+#: ../hsm/faq.rst:64
+msgid ""
+"OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
+"doesn't contain a mapping for OpenSSL to C_GenerateRandom."
+msgstr ""
+
+#: ../hsm/faq.rst:68 ../pro/faq.rst:66 ../storage/faq.rst:82
+#, fuzzy
+msgid "**Q:** How good is the True Random Number Generator (TRNG)?"
 msgstr "**Q:** 乱数発生器（RNG）の性能はどのくらいですか？"
 
-#: ../hsm/faq.rst:63
+#: ../hsm/faq.rst:67
 msgid ""
 "Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 "
 "(according to AIS 31 of the BSI)."
 msgstr "Nitrokey HSMは，DRNG.2（BSIのAIS31による）の品質を持つJCOP 2.4.1r3のTRNGを使用しています。"
 
-#: ../hsm/faq.rst:80
+#: ../hsm/faq.rst:84
 msgid "**Q:** Which API can I use?"
 msgstr "**Q:** どのAPIが使えるのですか？"
 
-#: ../hsm/faq.rst:67
+#: ../hsm/faq.rst:71
 msgid ""
 "OpenSC: Comprehensive instructions exist for OpenSC framework. There is "
 "nitrotool as a more comfortable frontend to OpenSC."
 msgstr "OpenSC: OpenSCフレームワークの包括的な説明書があります。また、OpenSCのフロントエンドとして、nitrotoolがあります。"
 
-#: ../hsm/faq.rst:70
+#: ../hsm/faq.rst:74
 msgid ""
 "Embedded Systems: For systems with minimal memory footprint a read/only "
 "PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 "
@@ -1934,7 +1952,7 @@ msgstr ""
 "プロジェクトで提供されています。  "
 "このPKCS#11モジュールは、ユーザーの職場で鍵の生成が必要でない場合に便利です。また、PKCS#11モジュールは、ドイツ市場で入手可能な主要な電子署名カードもサポートしています。"
 
-#: ../hsm/faq.rst:76
+#: ../hsm/faq.rst:80
 msgid ""
 "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open "
 "smart card development platform. See the public support scripts for "
@@ -1943,11 +1961,11 @@ msgstr ""
 "OpenSCDPです。SmartCard-"
 "HSMは、スマートカードのオープンな開発プラットフォームであるOpenSCDPと完全に統合されています。詳細については、公開されているサポートスクリプトを参照してください。既存のキーをインポートするには、そのSCSHまたはNitroKeyWrapperを使用します。"
 
-#: ../hsm/faq.rst:86
+#: ../hsm/faq.rst:90
 msgid "**Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?"
 msgstr "**Q:** Nitrokey ProはCommon CriteriaまたはFIPS認証を取得していますか？"
 
-#: ../hsm/faq.rst:83
+#: ../hsm/faq.rst:87
 msgid ""
 "The security controler's hardware and operating system are Common "
 "Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_, "
@@ -1958,11 +1976,11 @@ msgstr ""
 " Target`_; `HSM2 Report`_; `here`_, click \"IC, Smart Cards and Smart "
 "Card-Related Devices and Systems\" and search for \"NXP JCOP 3 P60参照。)."
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid "**Q:** How to import an existing key into the Nitrokey HSM?"
 msgstr "**Q:** Nitrokey HSM に既存の鍵をインポートするにはどうすればよいですか？"
 
-#: ../hsm/faq.rst:89
+#: ../hsm/faq.rst:93
 msgid ""
 "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then "
 "use Smart Card Shell for importing. If your key is stored in a Java key "
@@ -1972,13 +1990,13 @@ msgstr ""
 "を使用してインポートします。もし鍵がJavaキーストアに保存されている場合は、代わりに`NitroKeyWrapper`_ "
 "を使用することができます。"
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey "
 "HSM?"
 msgstr "**Q:** Nitrokey HSMでクラウドインフラ/Kubernetesを保護するにはどうすればよいですか？"
 
-#: ../hsm/faq.rst:92
+#: ../hsm/faq.rst:96
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at `banzaicloud.com`_."
@@ -1986,11 +2004,11 @@ msgstr ""
 "Hashicorp Vault/Bank-Vault の鍵を Nitrokey HSM で保護する方法は、`banzaicloud.com`_ "
 "で見ることができます。"
 
-#: ../hsm/faq.rst:97
+#: ../hsm/faq.rst:101
 msgid "**Q:** Can I use Nitrokey HSM with cryptocurrencies?"
 msgstr "**Q:**暗号通貨でNitrokey HSMを使用することはできますか？"
 
-#: ../hsm/faq.rst:95
+#: ../hsm/faq.rst:99
 msgid ""
 "J.v.d.Bosch wrote a simple, free python `program`_ to secure the private "
 "key of a Bitcoin wallet in a HSM. `Tezos`_ has been `reported`_ to work "
@@ -2201,67 +2219,23 @@ msgid ""
 "bit RSA key."
 msgstr "pkcs11-tool を使って Nitrokey で鍵を生成します。この例では4096ビットのRSAキーです。"
 
-#: ../hsm/ipsec.rst:9
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``"
-msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'``。"
-
-#: ../hsm/ipsec.rst:11
+#: ../hsm/ipsec.rst:13
 msgid "Generate a certificate signing request via openssl + pkcs11 module"
 msgstr "openssl + pkcs11 モジュールによる証明書署名要求の生成"
 
-#: ../hsm/ipsec.rst:13
-msgid ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'``"
-msgstr ""
-"``$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
-"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
-"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
-"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
-"user@email.com-staging-cert.csr -subj "
-"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
-"Access/CN=user@email.com/emailAddress=user@email.com'``"
-
-#: ../hsm/ipsec.rst:17
+#: ../hsm/ipsec.rst:21
 msgid "Sign the certificate with your certificate authority"
 msgstr "お使いの認証局で証明書に署名する"
 
-#: ../hsm/ipsec.rst:19
+#: ../hsm/ipsec.rst:23
 msgid "Convert the certificate to DER"
 msgstr "証明書をDERに変換する"
 
-#: ../hsm/ipsec.rst:21
-msgid ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER``"
-msgstr ""
-"``$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
-"staging-cert.der -outform DER``。"
-
-#: ../hsm/ipsec.rst:23
+#: ../hsm/ipsec.rst:29
 msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
 msgstr "pkcs11-toolでNitrokeyに証明書をインポートします。"
 
-#: ../hsm/ipsec.rst:25
-msgid ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'``"
-msgstr ""
-"``$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-"
-"pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label "
-"'Staging Access'``。"
-
-#: ../hsm/ipsec.rst:27
+#: ../hsm/ipsec.rst:35
 msgid ""
 "Configure Strongswan to load opensc-pkcs11 module then to load the "
 "certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
@@ -2271,29 +2245,13 @@ msgstr ""
 "pkcs11モジュールをロードし、Nitrokeyで証明書をロードするよう設定します。etc/strongswan.d/charon/pkcs11.conf"
 " を編集して、以下のモジュールを追加してください。"
 
-#: ../hsm/ipsec.rst:32
-msgid "modules {"
-msgstr "モジュール {"
-
-#: ../hsm/ipsec.rst:30
-msgid "Nitrokey {"
-msgstr "ニトロキー {"
-
-#: ../hsm/ipsec.rst:31
-msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-msgstr "パス = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/ipsec.rst:32 ../hsm/ipsec.rst:33
-msgid "}"
-msgstr "}"
-
-#: ../hsm/ipsec.rst:34
+#: ../hsm/ipsec.rst:46
 msgid ""
 "Initiate the VPN connection via IPSec/Strongswan, then prompt for "
 "Nitrokey PIN"
 msgstr "IPSec/StrongswanによるVPN接続を開始し、Nitrokey PINの入力を求めるプロンプトが表示される。"
 
-#: ../hsm/ipsec.rst:36
+#: ../hsm/ipsec.rst:48
 msgid "VPN is now connected"
 msgstr "VPNが接続されました"
 
@@ -3241,46 +3199,6 @@ msgstr ""
 #: ../hsm/stunnel.rst:7
 msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
 msgstr "この設定で、StunnelはOpenSC PKCS#11エンジンをロードすることができます。"
-
-#: ../hsm/stunnel.rst:9
-msgid "engine=dynamic"
-msgstr "engine=dynamic（エンジン・ダイナミック"
-
-#: ../hsm/stunnel.rst:10
-msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
-
-#: ../hsm/stunnel.rst:11
-msgid "engineCtrl=ID:pkcs11"
-msgstr "engineCtrl=ID:pkcs11"
-
-#: ../hsm/stunnel.rst:12
-msgid "engineCtrl=LIST_ADD:1"
-msgstr "engineCtrl=LIST_ADD:1"
-
-#: ../hsm/stunnel.rst:13
-msgid "engineCtrl=LOAD"
-msgstr "engineCtrl=LOAD"
-
-#: ../hsm/stunnel.rst:14
-msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
-
-#: ../hsm/stunnel.rst:15
-msgid "engineCtrl=INIT"
-msgstr "engineCtrl=INIT"
-
-#: ../hsm/stunnel.rst:17
-msgid "[service]"
-msgstr "[サービス]です。"
-
-#: ../hsm/stunnel.rst:18
-msgid "engineNum=1"
-msgstr "engineNum=1"
-
-#: ../hsm/stunnel.rst:19
-msgid "key=id_45"
-msgstr "キー=id_45"
 
 #: ../hsm/mac/product_platform_heading.rst:3
 msgid "(Nitrokey HSM 2 - macOS)"
@@ -8774,8 +8692,8 @@ msgid ""
 "(codename 'bionic') on. You can just install it via Software Center or by"
 " typing the following in a terminal:"
 msgstr ""
-"Nitrokeyアプリは、Ubuntu 18.04（コードネーム 'bionic'）以降、Ubuntuのリポジトリに収録されています。ソフトウェアセンター"
-"からインストールするか、ターミナルで以下のように入力すればOKです。"
+"Nitrokeyアプリは、Ubuntu 18.04（コードネーム "
+"'bionic'）以降、Ubuntuのリポジトリに収録されています。ソフトウェアセンターからインストールするか、ターミナルで以下のように入力すればOKです。"
 
 #: ../nitropad/ubuntu/nitrokey-app.rst:14 ../nitropc/ubuntu/nitrokey-app.rst:14
 msgid ""
@@ -8810,8 +8728,8 @@ msgid ""
 "Alternatively, you can use the snap package. Please see `here "
 "<https://www.nitrokey.com/download/snap-package>`_ for more information."
 msgstr ""
-"または、snap パッケージを使用することもできます。詳しくは`こちら<https://www.nitrokey.com/download/snap-"
-"package>`_を参照してください。"
+"または、snap パッケージを使用することもできます。詳しくは`こちら<https://www.nitrokey.com/download"
+"/snap-package>`_を参照してください。"
 
 #: ../nitropc/debian/index.rst:2
 msgid "NitroPC with Debian"
@@ -10161,22 +10079,37 @@ msgstr ""
 "configuration P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A, P5CD016V1A "
 "each with IC dedicated Software\"を検索してください。）"
 
-#: ../pro/faq.rst:58
+#: ../pro/faq.rst:59
 msgid ""
-"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator "
-"(TRNG) for generating keys on the device. The entropy generated by the "
-"TRNG is used for the entire key length. Therefore the TRNG is compliant "
-"to BSI TR-03116."
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Pro for my applications?"
+msgstr ""
+
+#: ../pro/faq.rst:58 ../storage/faq.rst:74
+msgid ""
+"Both devices are compatible to the OpenPGP Card, so that `scdrand`_ "
+"should work. `This script`_ may be useful. The user comio `created a "
+"systemd file`_ to use scdrand and thus the TRNG more generally. He "
+"created an `ebuild for Gentoo`_, too."
+msgstr ""
+
+#: ../pro/faq.rst:62 ../storage/faq.rst:78
+#, fuzzy
+msgid ""
+"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator for "
+"generating keys on the device. The entropy generated by the TRNG is used "
+"for the entire key length. Therefore the TRNG is compliant to BSI "
+"TR-03116."
 msgstr ""
 "Nitrokey ProおよびNitrokey Storageでは、デバイス上での鍵の生成にTRNG（True Random Number "
 "Generator）を使用しています。TRNGによって生成されたエントロピーは、鍵の長さ全体に使用されます。このため、TRNGはBSI "
 "TR-03116に準拠しています。"
 
-#: ../pro/faq.rst:62
+#: ../pro/faq.rst:66 ../storage/faq.rst:82
 msgid "The TRNG provides about 40 kbit/s."
 msgstr "TRNGは約40kbit/sを提供しています。"
 
-#: ../pro/faq.rst:65
+#: ../pro/faq.rst:69
 msgid ""
 "The Nitrokey Pro doesn't contain storage capability for ordinary data (it"
 " can only store cryptographic keys and certificates)."
@@ -13399,6 +13332,10 @@ msgstr ""
 "Storageには、耐タンパー性のあるスマートカードが含まれています。これはある程度Nitrokey "
 "U2Fにも適用されますが、品質は劣ります。Nitrokey Startはマイクロプロセッサーに実装されています。"
 
+#: ../shared-faqs/generic.rst:142
+msgid "**Q:** How good is the Random Number Generator (RNG)?"
+msgstr "**Q:** 乱数発生器（RNG）の性能はどのくらいですか？"
+
 #: ../shared-faqs/generic.rst:169
 msgid "**Q:** Is Nitrokey Common Criteria or FIPS certified?"
 msgstr "**Q:**NitrokeyはCommon CriteriaまたはFIPSの認証を受けていますか？"
@@ -13582,8 +13519,8 @@ msgid ""
 "nitropy. This means that nitropy and its dependencies don’t conflict with"
 " other packages installed on your system."
 msgstr ""
-"このガイドは、`pipx <https://pypa.github.io/pipx/>`_ を使って nitropy をインストールする方法を説明します。"
-"pipx は nitropy "
+"このガイドは、`pipx <https://pypa.github.io/pipx/>`_ を使って nitropy "
+"をインストールする方法を説明します。pipx は nitropy "
 "のために仮想環境を作成します。これは、nitropyとその依存関係が、あなたのシステムにインストールされた他のパッケージと衝突しないことを意味します。"
 
 #: ../software/nitropy/all-platforms/installation.rst:10
@@ -13606,9 +13543,9 @@ msgid ""
 "Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`_ for"
 " more information."
 msgstr ""
-"Python はほとんどの macOS と Linux システムに既にインストールされているか、`python.org <https://python."
-"org>`_ からダウンロードすることが可能です。詳しくは `Downloading Python Guide <https://wiki.python."
-"org/moin/BeginnersGuide/Download>`_ を参照してください。"
+"Python はほとんどの macOS と Linux システムに既にインストールされているか、`python.org "
+"<https://python.org>`_ からダウンロードすることが可能です。詳しくは `Downloading Python Guide "
+"<https://wiki.python.org/moin/BeginnersGuide/Download>`_ を参照してください。"
 
 #: ../software/nitropy/all-platforms/installation.rst:20
 msgid "pip"
@@ -13620,8 +13557,8 @@ msgid ""
 " ensurepip``. See the `pip Installation Guide "
 "<https://pip.pypa.io/en/stable/installation/>`_ for more information."
 msgstr ""
-"pipはシステムのパッケージマネージャ、または``python3 -m ensurepip``でインストールすることができます。詳しくは `pip "
-"インストールガイド <https://pip.pypa.io/en/stable/installation/>`_ を参照してください。"
+"pipはシステムのパッケージマネージャ、または``python3 -m ensurepip``でインストールすることができます。詳しくは `pip"
+" インストールガイド <https://pip.pypa.io/en/stable/installation/>`_ を参照してください。"
 
 #: ../software/nitropy/all-platforms/installation.rst:24
 msgid "pipx"
@@ -13636,7 +13573,8 @@ msgid ""
 "See the `pipx Installation Guide "
 "<https://pypa.github.io/pipx/installation/>`_ for more information."
 msgstr ""
-"詳しくは、`pipx インストールガイド <https://pypa.github.io/pipx/installation/>`_ をご覧ください。"
+"詳しくは、`pipx インストールガイド <https://pypa.github.io/pipx/installation/>`_ "
+"をご覧ください。"
 
 #: ../software/nitropy/all-platforms/installation.rst:35
 msgid "Now you can install nitropy from the pynitrokey package::"
@@ -13680,8 +13618,9 @@ msgid ""
 "shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. "
 "Alternatively, you can install them manually::"
 msgstr ""
-"Linux システムでは、Nitrokey の udev ルールも必要です。これらは `libnitrokey <https://github.com/"
-"Nitrokey/libnitrokey>`_ と一緒に出荷されています。あるいは、手動でインストールすることもできます::"
+"Linux システムでは、Nitrokey の udev ルールも必要です。これらは `libnitrokey "
+"<https://github.com/Nitrokey/libnitrokey>`_ "
+"と一緒に出荷されています。あるいは、手動でインストールすることもできます::"
 
 #: ../software/nitropy/all-platforms/installation.rst:67
 msgid "See :doc:`../linux/udev` for more information."
@@ -13733,7 +13672,8 @@ msgid ""
 msgstr ""
 "root 権限なしでデバイスにアクセスできるようにするために、nitropy は Nitrokey の udev ルールを必要とします。  "
 "これらのルールは `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_ "
-"と一緒に出荷されています。  libnitrokey がない場合、または新しいバージョンが必要な場合は、手動でルールをインストールすることができます::"
+"と一緒に出荷されています。  libnitrokey "
+"がない場合、または新しいバージョンが必要な場合は、手動でルールをインストールすることができます::"
 
 #: ../software/nitropy/linux/udev.rst:9
 msgid "After installing the rules, you need to reload them::"
@@ -13754,8 +13694,8 @@ msgid ""
 "describe debugging, see "
 "https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
 msgstr ""
-"デバッグについては、https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-"
-"1024921046 を参照してください。"
+"デバッグについては、https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046"
+" を参照してください。"
 
 #: ../software/nitropy/linux/udev.rst:21
 msgid "describe requirements: systemd, load order"
@@ -13781,8 +13721,8 @@ msgid ""
 "command prompt, you can alternatively install nitropy with pipx, see :doc"
 ":`../all-platforms/installation`."
 msgstr ""
-"すでにシステムでPythonを使用していて、コマンドプロンプトに慣れている場合は、代わりにpipxでnitropyをインストールすることができます、 "
-":doc:`../all-platforms/installation` を参照してください。"
+"すでにシステムでPythonを使用していて、コマンドプロンプトに慣れている場合は、代わりにpipxでnitropyをインストールすることができます、"
+" :doc:`../all-platforms/installation` を参照してください。"
 
 #: ../software/nitropy/windows/installation.rst:11
 msgid "How to Install"
@@ -13793,8 +13733,8 @@ msgid ""
 "Download the latest ``.msi`` installer from `releases "
 "<https://github.com/Nitrokey/pynitrokey/releases/>`_."
 msgstr ""
-"``.msi`` の最新インストーラーを `releases <https://github.com/Nitrokey/pynitrokey/"
-"releases/>`_ からダウンロードします。"
+"``.msi`` の最新インストーラーを `releases "
+"<https://github.com/Nitrokey/pynitrokey/releases/>`_ からダウンロードします。"
 
 #: ../software/nitropy/windows/installation.rst:14
 msgid "Double-click the installer and click through (*Next* and *Finish*)"
@@ -14308,6 +14248,68 @@ msgstr ""
 msgid "(Nitrokey Start - Windows)"
 msgstr "(Nitrokey Start - Windows)"
 
+#: ../storage/encrypted-mobile-storage.rst:1
+#, fuzzy
+msgid ""
+"Prior of using the encrypted mobile storage you need to install and "
+"initialize the Nitrokey Storage and download the latest `Nitrokey App "
+"<https://www.nitrokey.com/download>`_."
+msgstr ""
+"暗号化モバイルストレージを利用する前に、Nitrokey "
+"Storageのインストールと初期化、および最新のNitrokeyアプリをダウンロードする必要があります。"
+
+#: ../storage/encrypted-mobile-storage.rst:3 ../storage/faq.rst:87
+msgid "Start the Nitrokey App."
+msgstr "Nitrokeyアプリを起動します。"
+
+#: ../storage/encrypted-mobile-storage.rst:4 ../storage/faq.rst:88
+msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
+msgstr "トレイアイコンを押し、メニューから「暗号化ボリュームのロック解除」を選択してください。"
+
+#: ../storage/encrypted-mobile-storage.rst:5 ../storage/faq.rst:89
+msgid "Enter your User PIN in the appearing popup window."
+msgstr "表示されたポップアップウィンドウにユーザーPINを入力します。"
+
+#: ../storage/encrypted-mobile-storage.rst:6
+#, fuzzy
+msgid ""
+"If this is the first time you may need to create a partition on the "
+"encrypted volume. Windows will open an appropriate window and ask you to "
+"do so. On GNU+Linux and Mac you may need to open a partition manager and "
+"create a partition manually. You can create as many partitions as you "
+"want. We recommend FAT(32) if you want to access the partition from "
+"various operating systems."
+msgstr ""
+"これが初めての場合、暗号化されたボリュームにパーティションを作成する必要があるかもしれません。Windows "
+"は適切なウィンドウを開き、そうするように指示します。Linux や Mac "
+"ではパーティションマネージャを開き、手動でパーティションを作成する必要があるかもし "
+"れません。必要な数のパーティションを作成することができます。様々なオペレーティングシステムからパーティションにアクセスしたい場合は、FAT(32)を推奨します。"
+
+#: ../storage/encrypted-mobile-storage.rst:7 ../storage/faq.rst:91
+msgid ""
+"Now you can use the encrypted volume as you would use any other ordinary "
+"USB drive. But all data stored on it will be encrypted in the Nitrokey "
+"hardware automatically."
+msgstr "これで、暗号化されたボリュームを、他の普通のUSBドライブと同じように使うことができます。しかし、その上に保存されているすべてのデータは、Nitrokeyハードウェアで自動的に暗号化されます。"
+
+#: ../storage/encrypted-mobile-storage.rst:8 ../storage/faq.rst:92
+msgid "To remove or lock the encrypted volume you should unmount/eject it first."
+msgstr "暗号化されたボリュームを削除またはロックするには、まずそれをアンマウント/イジェクトする必要があります。"
+
+#: ../storage/encrypted-mobile-storage.rst:9 ../storage/faq.rst:93
+msgid ""
+"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
+"volume\" from the Nitrokey App menu."
+msgstr "その後、Nitrokeyを切断するか、Nitrokeyアプリのメニューから\"暗号化ボリュームのロック\"を選択してください。"
+
+#: ../storage/encrypted-mobile-storage.rst:11
+#, fuzzy
+msgid ""
+"The Nitrokey Storage is able to create hidden volumes as well. Please "
+"have a look at the corresponding instructions for `hidden volumes "
+"<hidden.html>`_."
+msgstr "Nitrokey Storage は、隠しボリュームを作成することも可能です。隠しボリュームの作成方法については、こちらをご覧ください。"
+
 #: ../storage/factory-reset.rst:8
 msgid "There are two types of factory resets for Nitrokey Storage devices:"
 msgstr "Nitrokey Proデバイスのファクトリーリセットには2種類あります。"
@@ -14423,11 +14425,17 @@ msgstr ""
 "およびその主要構成である P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A, P5CD016V1A と"
 " IC 専用 Software\") を検索してください。"
 
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:75
+msgid ""
+"**Q:** How can I use the True Random Number Generator (TRNG) of the "
+"Nitrokey Storage for my applications?"
+msgstr ""
+
+#: ../storage/faq.rst:95
 msgid "**Q:** How can I use the encrypted mobile Storage?"
 msgstr "**Q:**暗号化モバイルストレージを利用するにはどうしたらよいですか？"
 
-#: ../storage/faq.rst:74
+#: ../storage/faq.rst:85
 msgid ""
 "Prior of using the encrypted mobile storage you need to install and "
 "initialize the Nitrokey Storage and download the latest Nitrokey App."
@@ -14435,19 +14443,7 @@ msgstr ""
 "暗号化モバイルストレージを利用する前に、Nitrokey "
 "Storageのインストールと初期化、および最新のNitrokeyアプリをダウンロードする必要があります。"
 
-#: ../storage/faq.rst:76
-msgid "Start the Nitrokey App."
-msgstr "Nitrokeyアプリを起動します。"
-
-#: ../storage/faq.rst:77
-msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
-msgstr "トレイアイコンを押し、メニューから「暗号化ボリュームのロック解除」を選択してください。"
-
-#: ../storage/faq.rst:78
-msgid "Enter your User PIN in the appearing popup window."
-msgstr "表示されたポップアップウィンドウにユーザーPINを入力します。"
-
-#: ../storage/faq.rst:79
+#: ../storage/faq.rst:90
 msgid ""
 "If this is the first time you may need to create a partition on the "
 "encrypted volume. Windows will open an appropriate window and ask you to "
@@ -14461,34 +14457,17 @@ msgstr ""
 "ではパーティションマネージャを開き、手動でパーティションを作成する必要があるかもし "
 "れません。必要な数のパーティションを作成することができます。様々なオペレーティングシステムからパーティションにアクセスしたい場合は、FAT(32)を推奨します。"
 
-#: ../storage/faq.rst:80
-msgid ""
-"Now you can use the encrypted volume as you would use any other ordinary "
-"USB drive. But all data stored on it will be encrypted in the Nitrokey "
-"hardware automatically."
-msgstr "これで、暗号化されたボリュームを、他の普通のUSBドライブと同じように使うことができます。しかし、その上に保存されているすべてのデータは、Nitrokeyハードウェアで自動的に暗号化されます。"
-
-#: ../storage/faq.rst:81
-msgid "To remove or lock the encrypted volume you should unmount/eject it first."
-msgstr "暗号化されたボリュームを削除またはロックするには、まずそれをアンマウント/イジェクトする必要があります。"
-
-#: ../storage/faq.rst:82
-msgid ""
-"Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
-"volume\" from the Nitrokey App menu."
-msgstr "その後、Nitrokeyを切断するか、Nitrokeyアプリのメニューから\"暗号化ボリュームのロック\"を選択してください。"
-
-#: ../storage/faq.rst:84
+#: ../storage/faq.rst:95
 msgid ""
 "The Nitrokey Storage is able to create hidden volumes as well. Please "
 "have a look at the corresponding instructions for hidden volumes."
 msgstr "Nitrokey Storage は、隠しボリュームを作成することも可能です。隠しボリュームの作成方法については、こちらをご覧ください。"
 
-#: ../storage/faq.rst:107
+#: ../storage/faq.rst:117
 msgid "**Q:** How can I use the hidden volume?"
 msgstr "**Q:** 隠しボリュームの使い方を教えてください。"
 
-#: ../storage/faq.rst:87
+#: ../storage/faq.rst:98
 msgid ""
 "Hidden volumes allow to hide data in the encrypted volume. The data is "
 "protected with an additional password. Without the password the data "
@@ -14501,14 +14480,14 @@ msgstr ""
 " VeraCrypt'/TrueCrypt' の隠しボリュームに似ていますが、Nitrokey Storage "
 "では隠しボリュームの全機能がハードウェアで実装されています。"
 
-#: ../storage/faq.rst:94 ../storage/hidden.rst:8
+#: ../storage/faq.rst:105 ../storage/hidden.rst:8
 msgid ""
 "You can configure up to four hidden volumes. Once unlocked, hidden "
 "volumes behave like ordinary storage where you can create various "
 "partitions, filesystems and store files as you like."
 msgstr "最大4つの隠しボリュームを構成することができます。一度ロックを解除すると、隠しボリュームは通常のストレージのように動作し、様々なパーティションやファイルシステムを作成し、好きなようにファイルを保存することができます。"
 
-#: ../storage/faq.rst:98
+#: ../storage/faq.rst:109
 msgid ""
 "If you decide to configure Hidden Volumes, you can not use the encrypted "
 "storage anymore. Because the Hidden Volume is situated on the free space "
@@ -14520,58 +14499,11 @@ msgid ""
 "first though)."
 msgstr "隠しボリュームを設定することにした場合、暗号化されたストレージを使用することができなくなります。隠しボリュームは暗号化されたストレージの空き領域にあるため、隠しボリュームのデータを上書きする可能性があります。暗号化されたストレージでさえ、隠しボリュームがあることを知らないのです。一般的な構造は下図のとおりです。したがって、隠しボリュームを作成した後は、暗号化されたストレージに何も書き込まないでください（ただし、最初にロックを解除する必要があります）。"
 
-#: ../storage/faq.rst:106
+#: ../storage/faq.rst:117
 msgid ""
 "Hidden volumes are like containers inside of a container, the encrypted "
 "volume."
 msgstr "隠しボリュームは、暗号化されたボリュームというコンテナの中にあるコンテナのようなものです。"
-
-#: ../storage/faq.rst:118
-msgid "**Q:** Do you have resources for development and integration?"
-msgstr "**Q:** 開発や統合のためのリソースはあるのでしょうか？"
-
-#: ../storage/faq.rst:110
-msgid ""
-"Use Nitrokey library to manage the encrypted mass store, one-time "
-"passwords and password safe functionality."
-msgstr "Nitrokeyライブラリを使用して、暗号化されたマスストア、ワンタイムパスワード、パスワードセーフ機能を管理します。"
-
-#: ../storage/faq.rst:111
-msgid ""
-"The project nitrokey-get-totp and nitrokey-get-password are nice examples"
-" for using the python bindings of Nitrokey library to get a custom "
-"interface."
-msgstr ""
-"nitrokey-get-totp と nitrokey-get-password は、Nitrokey ライブラリの python "
-"バインディングを使用してカスタムインターフェイスを取得するための良い例です。"
-
-#: ../storage/faq.rst:112
-msgid ""
-"In order to access the integrated smart card, you can use OpenSC's "
-"command line tools."
-msgstr "統合されたスマートカードにアクセスするためには、OpenSC'のコマンドラインツールを使用することができます。"
-
-#: ../storage/faq.rst:113
-msgid "If your application has a PKCS#11 interface, use OpenSC's PKCS#11 driver."
-msgstr "PKCS#11インターフェースを持つアプリケーションの場合は、OpenSC'のPKCS#11ドライバを使用します。"
-
-#: ../storage/faq.rst:114
-msgid "To work with the smart card low level, see the OpenPGP Card specification."
-msgstr "スマートカードを低レベルで扱うには、OpenPGP Card 仕様を参照してください。"
-
-#: ../storage/faq.rst:115
-msgid "The source code of the firmware and the hardware layout are available too."
-msgstr "ファームウェアのソースコードやハードウェアのレイアウトも公開されています。"
-
-#: ../storage/faq.rst:116
-msgid ""
-"To develop special applications or for command line access one can use "
-"the nitrocli created by d-e-s-o."
-msgstr "特殊なアプリケーションの開発やコマンドラインアクセスには、d-e-s-oが作成したnitrocliを使用することができます。"
-
-#: ../storage/faq.rst:117
-msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
-msgstr "Nitrokey デバイスへのアクセスを提供する Rust 用の libnitrokey ラッパーです。"
 
 #: ../storage/firmware-update-manually.rst:2
 msgid "Activate Update Mode Manually"
@@ -14827,6 +14759,13 @@ msgstr "Nitrokeyをロックまたは切断する前に、隠しボリューム�
 #: ../storage/linux/product_platform_heading.rst:3
 msgid "(Nitrokey Storage 2 - Linux)"
 msgstr "(Nitrokey Storage 2 - Linux)"
+
+#: ../storage/linux/encrypted-mobile-storage.rst:2
+#: ../storage/mac/encrypted-mobile-storage.rst:2
+#: ../storage/windows/encrypted-mobile-storage.rst:2
+#, fuzzy
+msgid "Encrypted Mobile Storage"
+msgstr "**Q:**暗号化モバイルストレージを利用するにはどうしたらよいですか？"
 
 #: ../storage/linux/firmware-update.rst:10
 #: ../storage/windows/firmware-update.rst:10
@@ -18368,3 +18307,152 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 #~ "では、SmartCardHSMKey.getUseCounter() で Key Use "
 #~ "Counter を問い合わせ、 SmartCardHSMKeySpec.setKeyUseCounter() "
 #~ "で確認し、設定することができる。"
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'``"
+#~ msgstr ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -k --key-"
+#~ "type rsa:4096 --id 10 --label 'Staging"
+#~ " Access'``。"
+
+#~ msgid ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'``"
+#~ msgstr ""
+#~ "``$ openssl OpenSSL> engine dynamic -pre"
+#~ " SO_PATH:/usr/lib/x86_64-linux-gnu/engines-1.1/pkcs11.so "
+#~ "-pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD"
+#~ " -pre MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11"
+#~ "/opensc-pkcs11.so OpenSSL> req -engine "
+#~ "pkcs11 -sha256 -new -key id_10 -keyform"
+#~ " engine -out user@email.com-staging-"
+#~ "cert.csr -subj "
+#~ "'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+#~ "Access/CN=user@email.com/emailAddress=user@email.com'``"
+
+#~ msgid ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER``"
+#~ msgstr ""
+#~ "``$ openssl x509 -in user@email.com-"
+#~ "staging-cert.csr -out user@email.com-staging-"
+#~ "cert.der -outform DER``。"
+
+#~ msgid ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'``"
+#~ msgstr ""
+#~ "``$ pkcs11-tool --module /usr/lib/x86_64-linux-"
+#~ "gnu/pkcs11/opensc-pkcs11.so -l -y cert "
+#~ "-w user@email.com-staging-cert.der --id "
+#~ "10 --label 'Staging Access'``。"
+
+#~ msgid "modules {"
+#~ msgstr "モジュール {"
+
+#~ msgid "Nitrokey {"
+#~ msgstr "ニトロキー {"
+
+#~ msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+#~ msgstr "パス = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "}"
+#~ msgstr "}"
+
+#~ msgid "engine=dynamic"
+#~ msgstr "engine=dynamic（エンジン・ダイナミック"
+
+#~ msgid "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+#~ msgstr "engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so"
+
+#~ msgid "engineCtrl=ID:pkcs11"
+#~ msgstr "engineCtrl=ID:pkcs11"
+
+#~ msgid "engineCtrl=LIST_ADD:1"
+#~ msgstr "engineCtrl=LIST_ADD:1"
+
+#~ msgid "engineCtrl=LOAD"
+#~ msgstr "engineCtrl=LOAD"
+
+#~ msgid "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+#~ msgstr "engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so"
+
+#~ msgid "engineCtrl=INIT"
+#~ msgstr "engineCtrl=INIT"
+
+#~ msgid "[service]"
+#~ msgstr "[サービス]です。"
+
+#~ msgid "engineNum=1"
+#~ msgstr "engineNum=1"
+
+#~ msgid "key=id_45"
+#~ msgstr "キー=id_45"
+
+#~ msgid "**Q:** Do you have resources for development and integration?"
+#~ msgstr "**Q:** 開発や統合のためのリソースはあるのでしょうか？"
+
+#~ msgid ""
+#~ "Use Nitrokey library to manage the "
+#~ "encrypted mass store, one-time passwords"
+#~ " and password safe functionality."
+#~ msgstr "Nitrokeyライブラリを使用して、暗号化されたマスストア、ワンタイムパスワード、パスワードセーフ機能を管理します。"
+
+#~ msgid ""
+#~ "The project nitrokey-get-totp and "
+#~ "nitrokey-get-password are nice examples "
+#~ "for using the python bindings of "
+#~ "Nitrokey library to get a custom "
+#~ "interface."
+#~ msgstr ""
+#~ "nitrokey-get-totp と nitrokey-get-"
+#~ "password は、Nitrokey ライブラリの python "
+#~ "バインディングを使用してカスタムインターフェイスを取得するための良い例です。"
+
+#~ msgid ""
+#~ "In order to access the integrated "
+#~ "smart card, you can use OpenSC's "
+#~ "command line tools."
+#~ msgstr "統合されたスマートカードにアクセスするためには、OpenSC'のコマンドラインツールを使用することができます。"
+
+#~ msgid ""
+#~ "If your application has a PKCS#11 "
+#~ "interface, use OpenSC's PKCS#11 driver."
+#~ msgstr "PKCS#11インターフェースを持つアプリケーションの場合は、OpenSC'のPKCS#11ドライバを使用します。"
+
+#~ msgid ""
+#~ "To work with the smart card low"
+#~ " level, see the OpenPGP Card "
+#~ "specification."
+#~ msgstr "スマートカードを低レベルで扱うには、OpenPGP Card 仕様を参照してください。"
+
+#~ msgid ""
+#~ "The source code of the firmware "
+#~ "and the hardware layout are available"
+#~ " too."
+#~ msgstr "ファームウェアのソースコードやハードウェアのレイアウトも公開されています。"
+
+#~ msgid ""
+#~ "To develop special applications or for"
+#~ " command line access one can use "
+#~ "the nitrocli created by d-e-s-o."
+#~ msgstr "特殊なアプリケーションの開発やコマンドラインアクセスには、d-e-s-oが作成したnitrocliを使用することができます。"
+
+#~ msgid "A libnitrokey wrapper for Rust providing access to Nitrokey devices."
+#~ msgstr "Nitrokey デバイスへのアクセスを提供する Rust 用の libnitrokey ラッパーです。"
+
