@@ -263,19 +263,21 @@ html_theme_options = {
         "color-brand-primary": "#c70336",
         "color-brand-content": "#ef144d",
         "color-brand-content-hover": "#c70336",
+        
+        "color-background-primary": "#18191d",
         "color-content-foreground": "#eee",
 
         "color-definition-list-background": "#1c1f28",
         "color-definition-list-text": "#fff",
 
-        "color-sidebar-background": "#111",
+        "color-sidebar-background": "#141516",
         "color-sidebar-link-text": "#eee",
-        "color-sidebar-links-hover": "#111",
+        "color-sidebar-links-hover": "#141516",
         "color-sidebar-link-text--top-level": "#fff",
 
         "color-sidebar-border": "#1f1f1f",
 
-        "color-sidebar-search-background": "#141416",
+        "color-sidebar-search-background": "#141516",
         "color-sidebar-search-background--focus": "#000",
         
         "color-sidebar-select-background": "#2a2a2a",
