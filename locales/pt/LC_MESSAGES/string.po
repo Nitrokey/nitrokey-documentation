@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-09 12:06+0200\n"
+"POT-Creation-Date: 2022-06-10 16:05+0200\n"
 "PO-Revision-Date: 2022-06-09 11:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Portuguese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/pt/>\n"
 "Language: pt\n"
+"Language-Team: Portuguese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/pt/>\n"
+"Plural-Forms: nplurals=2; plural=n > 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -1155,7 +1154,7 @@ msgstr ""
 #: ../fido2/linux/index.rst:7 ../nextbox/troubleshooting.rst:2
 #: ../nitrokey3/shared/nitropy.rst:71 ../nitrokey3/troubleshooting.rst:2
 #: ../nitropad/troubleshooting.rst:2 ../pro/login-with-pam.rst:42
-#: ../pro/openpgp-thunderbird.rst:14 ../pro/smime.rst:72
+#: ../pro/openpgp-thunderbird.rst:14 ../pro/smime.rst:72 ../pro/ssh.rst:42
 #: ../start/linux/index.rst:62 ../u2f/linux/index.rst:41
 msgid "Troubleshooting"
 msgstr "Resolução de problemas"
@@ -2206,13 +2205,15 @@ msgstr ""
 "não't contém um mapeamento de OpenSSL para C_GenerateRandom."
 
 #: ../hsm/faq.rst:68 ../pro/faq.rst:66 ../storage/faq.rst:82
-msgid "**Q:** How good is the True Random Number Generator (TRNG)?"
-msgstr "**Q:** Quão bom é o Verdadeiro Gerador de Números Aleatórios (TRNG)?"
+#, fuzzy
+msgid "**Q:** How good is the Random Number Generator?"
+msgstr "**Q:** Quão bom é o Gerador de Números Aleatórios (RNG)?"
 
 #: ../hsm/faq.rst:67
+#, fuzzy
 msgid ""
-"Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2 "
-"(according to AIS 31 of the BSI)."
+"Nitrokey HSM uses the True Random Number Generator of JCOP 2.4.1r3 which "
+"has a quality of DRNG.2 (according to AIS 31 of the BSI)."
 msgstr ""
 "Nitrokey HSM utiliza o TRNG do JCOP 2.4.1r3 que tem uma qualidade DRNG.2 "
 "(de acordo com AIS 31 do BSI)."
@@ -2741,6 +2742,38 @@ msgstr ""
 "Na(s) próxima(s) vez(s) que desligar a sua Nitrokey do computador, esta "
 "irá bloquear automaticamente o ecrã."
 
+#: ../hsm/linux/dnssec.rst:2
+msgid "DNSSEC"
+msgstr ""
+
+#: ../hsm/linux/dnssec.rst:9
+msgid ""
+"Protect your domain name resolution using DNSSEC and a Nitrokey HSM as "
+"secure key store. It's based on Smartcard-HSM which is why the following "
+"resources apply:"
+msgstr ""
+
+#: ../hsm/linux/dnssec.rst:11
+msgid ""
+"Luis D Espinoza Sanchez & Eberhard W Lisse held a `session on using the "
+"SmartCard-HSM for DNSSEC <http://singapore52.icann.org/en/schedule/mon-"
+"tech/presentation-dnssec-card-signing-09feb15-en.pdf>`_ at the 2015 ICAAN"
+" Meeting in Singapore."
+msgstr ""
+
+#: ../hsm/linux/dnssec.rst:12
+msgid ""
+"Jan-Piet Mens wrote a nice article about `integrating the SmartCard-HSM "
+"with PowerDNS <http://jpmens.net/2015/03/30/powerdns-with-a-smartcard-"
+"hsm-for-dnssec/>`_."
+msgstr ""
+
+#: ../hsm/linux/dnssec.rst:13
+msgid ""
+"Integration with `OpenDNSSEC <https://www.opendnssec.org/>`_ has been "
+"successfully tested."
+msgstr ""
+
 #: ../pro/gpa.rst:2
 msgid "Setup With Gnu Privacy Assistant (GPA)"
 msgstr "Configuração com Gnu Privacy Assistant (GPA)"
@@ -3240,6 +3273,63 @@ msgstr ""
 #: ../storage/linux/ipsec.rst:2
 msgid "IPsec"
 msgstr "IPsec"
+
+#: ../hsm/linux/n-of-m-schemes.rst:2
+msgid "N-of-m Schemes"
+msgstr ""
+
+#: ../hsm/n-of-m-schemes.rst:1
+msgid ""
+"The Nitrokey HSM 2 supports two different n-of-m schemes - one for secure"
+" sharing of key material/passwords and one for public key authentication "
+"to control the access to the device. Please see `this blog post "
+"<https://www.smartcard-"
+"hsm.com/2015/10/10/Shared_Control_over_Key_Usage.html>`_ for more "
+"detailed information."
+msgstr ""
+
+#: ../hsm/n-of-m-schemes.rst:4
+msgid "N-of-m for DKEK Shares"
+msgstr ""
+
+#: ../hsm/n-of-m-schemes.rst:6
+msgid ""
+"This feature can be used with OpenSC as described `here "
+"<https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#using-key-backup-and-"
+"restore>`_. The general approach is seen in the videos below (external "
+"links)."
+msgstr ""
+
+#: ../hsm/n-of-m-schemes.rst:8
+msgid "Nitrokey HSM's Secure Key Backup and Restore:"
+msgstr ""
+
+#: ../hsm/n-of-m-schemes.rst:20
+msgid "Nitrokey HSM's M-of-N Threshold Scheme:"
+msgstr ""
+
+#: ../hsm/n-of-m-schemes.rst:30
+msgid "N-of-m for public key authentication"
+msgstr ""
+
+#: ../hsm/n-of-m-schemes.rst:32
+msgid ""
+"So far n-of-m authentication is only supported in OpenSCDP. `The blog "
+"post <https://www.smartcard-"
+"hsm.com/2015/10/10/Shared_Control_over_Key_Usage.html>`_ gives an "
+"overview and a how-to `here <https://devnet.cardcontact.de/documents/7>`_"
+" (CDN access required) is shown the process step by step in the Smart "
+"Card Shell. For OpenSC there is a `ticket "
+"<https://github.com/OpenSC/OpenSC/issues/594>`_ to get that integrated."
+msgstr ""
+
+#: ../hsm/n-of-m-schemes.rst:34
+msgid ""
+"N-of-m authentication is also supported in the `PKI-as-a-Service Portal "
+"<https://www.smartcard-hsm.com/2018/02/13/pki-as-a-service.html>`_ for "
+"locally and remote connected HSMs. The PKI-as-a-Service Portal is based "
+"on OpenSCDP."
+msgstr ""
 
 #: ../hsm/pkcs11-url.rst:2
 msgid "PKCS#11 URL Generation"
@@ -11150,10 +11240,10 @@ msgid ""
 "interface. If you have large deviations in the system time, you can fix "
 "them as follows:"
 msgstr ""
-"Por defeito, a NitroWall chega ao seu site com um servidor NTPd pré-"
-"configurado. A firewall bloqueia todo o acesso que não ocorra através de uma "
-"interface LAN. Se tiver grandes desvios no tempo do sistema, pode corrigi-"
-"los como se segue:"
+"Por defeito, a NitroWall chega ao seu site com um servidor NTPd "
+"pré-configurado. A firewall bloqueia todo o acesso que não ocorra através"
+" de uma interface LAN. Se tiver grandes desvios no tempo do sistema, pode"
+" corrigi-los como se segue:"
 
 #: ../nitrowall/ntp.rst:6
 msgid ""
@@ -11176,8 +11266,8 @@ msgid ""
 "Set \"Interfaces\" from \"All (recommended)\" to \"LAN\" (Or WAN if you "
 "are connected via WAN interface)"
 msgstr ""
-"Conjunto \" Interfaces\" de \" todos (recomendado)\" para \" LAN\" (ou WAN "
-"se estiver ligado via interface WAN)"
+"Conjunto \" Interfaces\" de \" todos (recomendado)\" para \" LAN\" (ou "
+"WAN se estiver ligado via interface WAN)"
 
 #: ../nitrowall/ntp.rst:10
 msgid "Restart the service e.g. by the restart button in the top-right corner"
@@ -12028,11 +12118,12 @@ msgstr ""
 "de forma mais geral. Ele criou um `ebuild for Gentoo`_, também."
 
 #: ../pro/faq.rst:62 ../storage/faq.rst:78
+#, fuzzy
 msgid ""
-"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator for "
-"generating keys on the device. The entropy generated by the TRNG is used "
-"for the entire key length. Therefore the TRNG is compliant to BSI "
-"TR-03116."
+"Nitrokey Pro and Nitrokey Storage use a True Random Number Generator "
+"(TRNG) for generating keys on the device. The entropy generated by the "
+"TRNG is used for the entire key length. Therefore the TRNG is compliant "
+"to BSI TR-03116."
 msgstr ""
 "Nitrokey Pro e Nitrokey Storage utilizam um Gerador de Números Verdadeiro"
 " Aleatório para gerar chaves no dispositivo. A entropia gerada pela TRNG "
@@ -15045,6 +15136,109 @@ msgstr ""
 " suas outras credenciais, se tentar entrar no site. Basta abrir a "
 "aplicação Nitrokey e ir a \"Menu\" -> \"Passwords\" -> YourSlotName "
 "novamente para obter a palavra-passe única."
+
+#: ../pro/linux/ssh.rst:2 ../start/linux/ssh.rst:2 ../storage/linux/ssh.rst:2
+msgid "SSH For Server Administration"
+msgstr ""
+
+#: ../pro/ssh.rst:1
+msgid ""
+"This guide explains how to prepare your SSH server and client for use "
+"with the Nitrokey."
+msgstr ""
+
+#: ../pro/ssh.rst:3
+msgid ""
+"The Nitrokey should already have PGP keys installed and the local GnuPG "
+"keyring should know the keys."
+msgstr ""
+
+#: ../pro/ssh.rst:6
+#, fuzzy
+msgid "Preparation on client"
+msgstr "Preparação"
+
+#: ../pro/ssh.rst:8
+msgid "Make sure ~/.gnupg/gpg.conf contains 'use-agent'"
+msgstr ""
+
+#: ../pro/ssh.rst:9
+msgid ""
+"Add ssh support to gnupg-agent by adding 'enable-ssh-support' to ~/.gnupg"
+"/gpg-agent.conf"
+msgstr ""
+
+#: ../pro/ssh.rst:10
+msgid "If the file does not exist yet, you can just create it."
+msgstr ""
+
+#: ../pro/ssh.rst:11
+msgid ""
+"Add the following code somewhere into your ~/.bashrc (for fish shell, "
+"look `here <https://support.nitrokey.com/t/ssh-auth-with-fish-instead-of-"
+"bash/2206>`_)"
+msgstr ""
+
+#: ../pro/ssh.rst:20
+msgid ""
+"Simply restart your system or try ``pkill gpg-agent`` and open a new "
+"commandline to make sure everything is set"
+msgstr ""
+
+#: ../pro/ssh.rst:21
+msgid ""
+"In case of problems, please try ``gpg2 --card-status`` on first usage to "
+"make sure the gpg-agent gets started"
+msgstr ""
+
+#: ../pro/ssh.rst:24
+#, fuzzy
+msgid "Preparation for the server"
+msgstr "Criar o pedido de assinatura para o servidor"
+
+#: ../pro/ssh.rst:26
+msgid "You can generate an authorized_keys file by running either"
+msgstr ""
+
+#: ../pro/ssh.rst:32
+msgid "where"
+msgstr ""
+
+#: ../pro/ssh.rst:38
+msgid ""
+"is the subkey id being used for authentication on your Nitrokey. The "
+"Nitrokey must already be known to the local GnuPG keyring. You can now "
+"append that file to a remote server's authorized_keys and when you ssh to"
+" the server you'll be asked for a pin rather than a passphrase."
+msgstr ""
+
+#: ../pro/ssh.rst:44
+msgid "If you are still being asked for a password please make sure that"
+msgstr ""
+
+#: ../pro/ssh.rst:50
+msgid ""
+"returns something like '/run/user/1000/gnupg/S.gpg-agent.ssh' or "
+"'/home/username/.gnupg/.S.gpg-agent.ssh'. Unfortunately there were some "
+"changes in GnuPG in the past so that the actual content can differ from "
+"system and GnuPG version. On some systems there may are even multiple "
+"folders in this variable saved. You have to adapt the above given code in"
+" .bashrc so that the variable SSH_AUTH_SOCK is correct. In doubt look for"
+" 'SSH_AUTH_SOCK' in"
+msgstr ""
+
+#: ../pro/ssh.rst:56
+msgid "to find the actual code for your version/system."
+msgstr ""
+
+#: ../pro/ssh.rst:58
+msgid ""
+"You may check if you have a 'pinentry' program installed via your package"
+" manager. You may need to `set it in the gpg-agent.conf "
+"<https://wiki.archlinux.org/index.php/GnuPG#pinentry>`_ as well. You may "
+"need to `point gpg-agent to the correct TTY "
+"<https://wiki.archlinux.org/index.php/GnuPG#Configure_pinentry_to_use_the_correct_TTY>`_."
+msgstr ""
 
 #: ../pro/mac/product_platform_heading.rst:3
 msgid "(Nitrokey Pro 2 - macOS)"
@@ -22246,3 +22440,7 @@ msgstr ""
 #~ msgstr ""
 #~ "Uma embalagem libnitrokey para Rust "
 #~ "fornecendo acesso aos dispositivos Nitrokey."
+
+#~ msgid "**Q:** How good is the True Random Number Generator (TRNG)?"
+#~ msgstr "**Q:** Quão bom é o Verdadeiro Gerador de Números Aleatórios (TRNG)?"
+
