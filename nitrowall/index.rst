@@ -52,6 +52,7 @@ Getting Started
    :maxdepth: 1
    :glob:
 
+   backup-restore.rst
    dhcp.rst
    sealed-hardware.rst
    ntp.rst
