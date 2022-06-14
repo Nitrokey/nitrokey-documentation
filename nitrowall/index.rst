@@ -48,6 +48,7 @@ Getting Started
 9. After the installation is complete, install the necessary updates. To do this, go to System → Firmware → Updates.
 
 .. toctree::
+   :hidden:
    :maxdepth: 1
    :glob:
 
