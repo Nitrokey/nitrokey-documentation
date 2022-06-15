@@ -55,4 +55,5 @@ Getting Started
    sealed-hardware.rst
    backup-restore.rst
    dhcp.rst
+   lan-bridge.rst
    ntp.rst
