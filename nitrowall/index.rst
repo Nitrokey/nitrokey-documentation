@@ -57,3 +57,4 @@ Getting Started
    dhcp.rst
    lan-bridge.rst
    ntp.rst
+   ids-ips.rst
