@@ -118,7 +118,9 @@ This is a plain link https://foobar.bas/slug1/slug2
 
 This line contains the product name Nitrokey Start an should not be altered by the translation.
 
-Mark cropped Content
---------------------
+Mark cropped Output
+-------------------
 
-✄----------✄----------✄----------✄----------✄
+::
+
+  ✄----------✄----------✄----------✄----------✄✄----------✄----------✄----------✄----------✄
