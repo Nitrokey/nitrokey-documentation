@@ -58,3 +58,4 @@ Getting Started
    lan-bridge.rst
    ntp.rst
    ids-ips.rst
+   hardware.rst
