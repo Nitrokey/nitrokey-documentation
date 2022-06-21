@@ -1,5 +1,5 @@
-Connect Devices 
-===============
+Desktop And Mobile Synchronization
+==================================
 
 .. contents:: :local:
 
@@ -13,4 +13,3 @@ Choose your operating system or device:
    Windows <windows>
    Mac OS X <macosx>
    Linux <linux>
-
