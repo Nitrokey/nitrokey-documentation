@@ -41,6 +41,12 @@ nitropy is now available in your path::
 
     nitropy --help
 
+Upgrade 
+-------
+
+You can upgrade the package with the following command::
+    pipx upgrade pynitrokey
+
 Usage Notes
 -----------
 
