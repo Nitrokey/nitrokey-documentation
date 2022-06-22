@@ -7,10 +7,10 @@ NextBox
 
    gettingstarted
    hardware-overview
+   external-storage
    clients/index
    backup-restore
    remote/index
    technical/index
    faq/index
-
 
