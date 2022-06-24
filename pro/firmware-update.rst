@@ -14,7 +14,8 @@ This guide describes how to update the firmware on the Nitrokey Pro.
    applications/services.
 
 How to Update
-^^^^^^^^^^^^^
+-------------
+
 .. important::
    Never disconnect the Nitrokey Pro or abort the process while updating,
    this will likely render your device useless!
@@ -28,23 +29,8 @@ How to Update
  $ nitropy pro update nitrokey-pro-firmware-v0.14-RC3-to_update.bin
 
 
-Troubleshooting
-"""""""""""""""
-
-In case the libnitrokey could not be found automatically, the path to it can be provided with env. variable:
-
-.. code-block:: bash
- 
- $ env LIBNK_PATH=/libnk/path/libnitrokey.so nitropy pro enable-update
-
-To find libnitrokey on your system use:
- 
-.. code-block:: bash
-
- $ locate libnitrokey.so
-
 Alternative Update Method
-"""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Alternatively `dfu-util` can be used for the firmware update:
 
@@ -73,7 +59,7 @@ For macOS binaries are available via Homebrew:
 4. The boot mode can now be changed back again with the Nitrokey App.
 
 Troubleshooting
-^^^^^^^^^^^^^^^
+---------------
 
 **Issue:** ``libnitrokey`` could not be found.
  In case the libnitrokey could not be found automatically, the path to it can be provided with env. variable:
