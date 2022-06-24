@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-22 12:19+0200\n"
+"POT-Creation-Date: 2022-06-24 12:37+0200\n"
 "PO-Revision-Date: 2022-06-22 11:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Latvian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/lv/>\n"
 "Language: lv\n"
+"Language-Team: Latvian <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/lv/>\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100"
+" <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
-"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -1145,7 +1144,8 @@ msgstr ""
 
 #: ../fido2/linux/index.rst:7 ../nextbox/troubleshooting.rst:2
 #: ../nitrokey3/shared/nitropy.rst:71 ../nitrokey3/troubleshooting.rst:2
-#: ../nitropad/troubleshooting.rst:2 ../pro/login-with-pam.rst:42
+#: ../nitropad/troubleshooting.rst:2 ../pro/firmware-update.rst:32
+#: ../pro/firmware-update.rst:76 ../pro/login-with-pam.rst:42
 #: ../pro/openpgp-thunderbird.rst:14 ../pro/smime.rst:72 ../pro/ssh.rst:42
 #: ../start/linux/index.rst:60 ../u2f/linux/index.rst:40
 msgid "Troubleshooting"
@@ -5348,8 +5348,8 @@ msgid ""
 "the external storage must be formatted with a supported filesystem (e.g. "
 "ext3, ext4 or XFS)"
 msgstr ""
-"ārējā atmiņā jābūt formatētai ar atbalstītu failu sistēmu (piemēram, ext3, "
-"ext4 vai XFS)."
+"ārējā atmiņā jābūt formatētai ar atbalstītu failu sistēmu (piemēram, "
+"ext3, ext4 vai XFS)."
 
 #: ../nextbox/external-storage.rst:20
 msgid "Connect your external storage to your NextBox"
@@ -5374,9 +5374,9 @@ msgid ""
 "\"Share\" to make it available for other users. (As the last image shows)"
 msgstr ""
 "Ja vēlaties kopīgot direktorijus ar vairākiem lietotājiem, ir jāinstalē "
-"programma \"Grupu mapes app\" un noklikšķiniet uz trīs punktiņu simbola un "
-"\"Kopīgot\", lai padarītu to pieejamu citiem lietotājiem. (Kā redzams pēdējā "
-"attēlā)"
+"programma \"Grupu mapes app\" un noklikšķiniet uz trīs punktiņu simbola "
+"un \"Kopīgot\", lai padarītu to pieejamu citiem lietotājiem. (Kā redzams "
+"pēdējā attēlā)"
 
 msgid "Storage Configuration"
 msgstr "Uzglabāšanas konfigurācija"
@@ -8245,7 +8245,8 @@ msgstr ""
 "JCOP 4 SE050M\")."
 
 #: ../nitrokey3/firmware-update.rst:2 ../nitropad/firmware-update.rst:2
-#: ../start/linux/firmware-update.rst:2 ../storage/linux/firmware-update.rst:2
+#: ../pro/firmware-update.rst:2 ../start/linux/firmware-update.rst:2
+#: ../storage/linux/firmware-update.rst:2
 #: ../storage/windows/firmware-update.rst:2
 msgid "Firmware Update"
 msgstr "Programmatūras atjaunināšana"
@@ -8266,7 +8267,7 @@ msgstr ""
 "pieteikšanās metodes un/vai pārliecinieties, ka Nitrokey 3 nav vienīgais "
 "veids, kā autentificēties/2FA jūsu lietojumprogrammām/pakalpojumiem."
 
-#: ../nitrokey3/firmware-update.rst:18
+#: ../nitrokey3/firmware-update.rst:18 ../pro/firmware-update.rst:17
 msgid "How to Update"
 msgstr "Kā atjaunināt"
 
@@ -8363,6 +8364,7 @@ msgid "Troubleshooting:"
 msgstr "Problēmu novēršana:"
 
 #: ../nitrokey3/linux/firmware-update.rst:14
+#: ../pro/linux/firmware-update.rst:11
 msgid "**Issue:** I get ``permission denied for /dev/hidrawX`` during update."
 msgstr ""
 "**Problēma:** Atjaunināšanas laikā es saņemu ``permission denied for "
@@ -12161,6 +12163,112 @@ msgstr ""
 "Nitrokey Pro nav parasto datu glabāšanas iespēju (tajā var glabāt tikai "
 "kriptogrāfijas atslēgas un sertifikātus)."
 
+#: ../pro/firmware-update.rst:6
+#, fuzzy
+msgid "This guide describes how to update the firmware on the Nitrokey Pro."
+msgstr "Šajā rokasgrāmatā aprakstīts, kā atjaunināt Nitrokey 3 programmaparatūru."
+
+#: ../pro/firmware-update.rst:9
+msgid "This guide is still in an experimental state!"
+msgstr ""
+
+#: ../pro/firmware-update.rst:12
+#, fuzzy
+msgid ""
+"Updating could lead to data loss, so make sure you have proper backup "
+"login methods enabled and/or ensure that the Nitrokey Pro is not the only"
+" way to authenticate/2FA for your applications/services."
+msgstr ""
+"**Šobrīd, atjauninot programmaparatūru, tiks dzēsti visi lietotāja "
+"dati!** Pārliecinieties, ka ir iespējotas atbilstošas dublējumkopijas "
+"pieteikšanās metodes un/vai pārliecinieties, ka Nitrokey 3 nav vienīgais "
+"veids, kā autentificēties/2FA jūsu lietojumprogrammām/pakalpojumiem."
+
+#: ../pro/firmware-update.rst:19
+#, fuzzy
+msgid ""
+"Never disconnect the Nitrokey Pro or abort the process while updating, "
+"this will likely render your device useless!"
+msgstr ""
+"Nekad neatvienojiet Nitrokey 3 vai nepārtrauciet procesu atjaunināšanas "
+"laikā, jo tas, iespējams, padarīs ierīci nederīgu!"
+
+#: ../pro/firmware-update.rst:22
+#, fuzzy
+msgid ""
+"Make sure you have the latest `pynitrokey` version installed, please "
+"check the `installation instructions "
+"<https://github.com/Nitrokey/pynitrokey#installation>`_ for your OS."
+msgstr ""
+"Pārliecinieties, ka ir instalēta jaunākā `pynitrokey` versija, lūdzu, "
+"skatiet `instalēšanas instrukcijas`_ savai operētājsistēmai."
+
+#: ../pro/firmware-update.rst:23
+msgid "To apply the update run:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:34 ../pro/firmware-update.rst:79
+msgid ""
+"In case the libnitrokey could not be found automatically, the path to it "
+"can be provided with env. variable:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:40 ../pro/firmware-update.rst:85
+msgid "To find libnitrokey on your system use:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:47
+msgid "Alternative Update Method"
+msgstr ""
+
+#: ../pro/firmware-update.rst:49
+#, fuzzy
+msgid "Alternatively `dfu-util` can be used for the firmware update:"
+msgstr "Varat arī atcelt atjaunināšanu:"
+
+#: ../pro/firmware-update.rst:51
+msgid "Install dfu-util"
+msgstr ""
+
+#: ../pro/firmware-update.rst:54
+msgid "Binaries for Windows are available at:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:54
+msgid "http://dfu-util.sourceforge.net/releases/"
+msgstr ""
+
+#: ../pro/firmware-update.rst:57
+msgid "For macOS binaries are available via Homebrew:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:57
+msgid "https://formulae.brew.sh/formula/dfu-util"
+msgstr ""
+
+#: ../pro/firmware-update.rst:59
+msgid "*macOS only:* Install `dfu-util` via Homebrew"
+msgstr ""
+
+#: ../pro/firmware-update.rst:65
+msgid ""
+"Use Nitrokey App v1.5-RC7 or higher to change the boot mode of the "
+"Nitrokey Pro to update mode."
+msgstr ""
+
+#: ../pro/firmware-update.rst:67
+#, fuzzy
+msgid "Now the following command to apply the update"
+msgstr "Pievienojiet failam šādu rindu"
+
+#: ../pro/firmware-update.rst:73
+msgid "The boot mode can now be changed back again with the Nitrokey App."
+msgstr ""
+
+#: ../pro/firmware-update.rst:89 ../pro/firmware-update.rst:90
+msgid "**Issue:** ``libnitrokey`` could not be found."
+msgstr ""
+
 #: ../pro/index.rst:2 ../shared-faqs/index.rst:4
 msgid "Nitrokey Pro 2"
 msgstr "Nitrokey Pro 2"
@@ -12484,6 +12592,25 @@ msgstr ""
 "SystemD atbalsta LUKS2 nodalījuma atbloķēšanu, izmantojot X509 "
 "sertifikātu, atrodiet lielisku bloga ierakstu par to, kā to īstenot "
 "`Vladimira Timofeenko personīgais blogs`_"
+
+#: ../pro/linux/firmware-update.rst:4
+#, fuzzy
+msgid ""
+"This likely means your user has not the needed permissions to read/write "
+"the device. Please make sure you have set up the correct `udev-rules`_. "
+"Download this `udev-rules`_ set and place it in your udev rules directory"
+" (e.g., ``/etc/udev/rules.d``). Then remove your Nitrokey Pro from the "
+"USB slot and run: ``udevadm control --reload-rules && udevadm trigger`` "
+"or reboot your machine. Afterwards the update should work without the "
+"permission issue."
+msgstr ""
+"Tas, visticamāk, nozīmē, ka lietotājam nav vajadzīgo atļauju lasīt un "
+"rakstīt ierīcē. Pārliecinieties, ka esat iestatījis pareizus `udev-"
+"rules`_. Lejupielādējiet šo `udev-rules`_ komplektu un ievietojiet to "
+"savā udev noteikumu direktorijā (piemēram, ``/etc/udev/rules.d``). Pēc "
+"tam izņemiet Nitrokey 3 no USB slota un palaidiet: ``udevadm control "
+"--reload-rules && udevadm trigger`` vai restartējiet datoru. Pēc tam "
+"atjauninājumam vajadzētu darboties bez atļaujas problēmas."
 
 #: ../pro/linux/index.rst:2
 msgid "Nitrokey Pro, Linux"
@@ -22319,3 +22446,4 @@ msgstr ""
 #~ "`Izpētiet <https://www.nitrokey.com/documentation/applications#p"
 #~ ":nitrokey-fido-u2f&os:all>`_ dažādus izmantošanas"
 #~ " gadījumus un atbalstītās lietojumprogrammas."
+

@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-22 12:19+0200\n"
+"POT-Creation-Date: 2022-06-24 12:37+0200\n"
 "PO-Revision-Date: 2022-06-22 11:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Estonian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/et/>\n"
 "Language: et\n"
+"Language-Team: Estonian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/et/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -1141,7 +1140,8 @@ msgstr ""
 
 #: ../fido2/linux/index.rst:7 ../nextbox/troubleshooting.rst:2
 #: ../nitrokey3/shared/nitropy.rst:71 ../nitrokey3/troubleshooting.rst:2
-#: ../nitropad/troubleshooting.rst:2 ../pro/login-with-pam.rst:42
+#: ../nitropad/troubleshooting.rst:2 ../pro/firmware-update.rst:32
+#: ../pro/firmware-update.rst:76 ../pro/login-with-pam.rst:42
 #: ../pro/openpgp-thunderbird.rst:14 ../pro/smime.rst:72 ../pro/ssh.rst:42
 #: ../start/linux/index.rst:60 ../u2f/linux/index.rst:40
 msgid "Troubleshooting"
@@ -5300,8 +5300,8 @@ msgid ""
 "the external storage must be formatted with a supported filesystem (e.g. "
 "ext3, ext4 or XFS)"
 msgstr ""
-"väline mälu peab olema vormindatud toetatud failisüsteemiga (nt ext3, ext4 "
-"või XFS)."
+"väline mälu peab olema vormindatud toetatud failisüsteemiga (nt ext3, "
+"ext4 või XFS)."
 
 #: ../nextbox/external-storage.rst:20
 msgid "Connect your external storage to your NextBox"
@@ -5325,8 +5325,8 @@ msgid ""
 "the \"Group folders app\" and click onto the three dotted symbol and "
 "\"Share\" to make it available for other users. (As the last image shows)"
 msgstr ""
-"Kui soovite jagada katalooge mitme kasutajaga, peate installima rakenduse "
-"\"Grupikaustad\" ja klõpsama kolmele punktile ja \"Jaga\", et teha see "
+"Kui soovite jagada katalooge mitme kasutajaga, peate installima rakenduse"
+" \"Grupikaustad\" ja klõpsama kolmele punktile ja \"Jaga\", et teha see "
 "teistele kasutajatele kättesaadavaks. (Nagu viimane pilt näitab)"
 
 msgid "Storage Configuration"
@@ -8181,7 +8181,8 @@ msgstr ""
 "SE050M\")."
 
 #: ../nitrokey3/firmware-update.rst:2 ../nitropad/firmware-update.rst:2
-#: ../start/linux/firmware-update.rst:2 ../storage/linux/firmware-update.rst:2
+#: ../pro/firmware-update.rst:2 ../start/linux/firmware-update.rst:2
+#: ../storage/linux/firmware-update.rst:2
 #: ../storage/windows/firmware-update.rst:2
 msgid "Firmware Update"
 msgstr "Püsivara uuendamine"
@@ -8201,7 +8202,7 @@ msgstr ""
 "on sisse lülitatud nõuetekohased varusisselogimismeetodid ja/või et "
 "Nitrokey 3 ei ole ainus viis oma rakenduste/teenuste autentimiseks/2FA."
 
-#: ../nitrokey3/firmware-update.rst:18
+#: ../nitrokey3/firmware-update.rst:18 ../pro/firmware-update.rst:17
 msgid "How to Update"
 msgstr "Kuidas uuendada"
 
@@ -8292,6 +8293,7 @@ msgid "Troubleshooting:"
 msgstr "Veaotsing:"
 
 #: ../nitrokey3/linux/firmware-update.rst:14
+#: ../pro/linux/firmware-update.rst:11
 msgid "**Issue:** I get ``permission denied for /dev/hidrawX`` during update."
 msgstr ""
 "**Küsimus:** Ma saan ``permission denied for /dev/hidrawX`` uuendamise "
@@ -12061,6 +12063,111 @@ msgstr ""
 "Nitrokey Pro ei sisalda tavapäraste andmete salvestamise võimalust (see "
 "saab salvestada ainult krüptograafilisi võtmeid ja sertifikaate)."
 
+#: ../pro/firmware-update.rst:6
+#, fuzzy
+msgid "This guide describes how to update the firmware on the Nitrokey Pro."
+msgstr "Selles juhendis kirjeldatakse, kuidas Nitrokey 3 püsivara uuendada."
+
+#: ../pro/firmware-update.rst:9
+msgid "This guide is still in an experimental state!"
+msgstr ""
+
+#: ../pro/firmware-update.rst:12
+#, fuzzy
+msgid ""
+"Updating could lead to data loss, so make sure you have proper backup "
+"login methods enabled and/or ensure that the Nitrokey Pro is not the only"
+" way to authenticate/2FA for your applications/services."
+msgstr ""
+"**Firmavara uuendamine kustutab kõik kasutajaandmed!** Veenduge, et teil "
+"on sisse lülitatud nõuetekohased varusisselogimismeetodid ja/või et "
+"Nitrokey 3 ei ole ainus viis oma rakenduste/teenuste autentimiseks/2FA."
+
+#: ../pro/firmware-update.rst:19
+#, fuzzy
+msgid ""
+"Never disconnect the Nitrokey Pro or abort the process while updating, "
+"this will likely render your device useless!"
+msgstr ""
+"Ärge kunagi ühendage Nitrokey 3 lahti või katkestage protsessi uuendamise"
+" ajal, see muudab teie seadme tõenäoliselt kasutamiskõlbmatuks!"
+
+#: ../pro/firmware-update.rst:22
+#, fuzzy
+msgid ""
+"Make sure you have the latest `pynitrokey` version installed, please "
+"check the `installation instructions "
+"<https://github.com/Nitrokey/pynitrokey#installation>`_ for your OS."
+msgstr ""
+"Veenduge, et teil on paigaldatud uusim `pynitrokey` versioon, palun "
+"vaadake oma operatsioonisüsteemi `installeerimisjuhiseid`_."
+
+#: ../pro/firmware-update.rst:23
+msgid "To apply the update run:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:34 ../pro/firmware-update.rst:79
+msgid ""
+"In case the libnitrokey could not be found automatically, the path to it "
+"can be provided with env. variable:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:40 ../pro/firmware-update.rst:85
+msgid "To find libnitrokey on your system use:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:47
+msgid "Alternative Update Method"
+msgstr ""
+
+#: ../pro/firmware-update.rst:49
+#, fuzzy
+msgid "Alternatively `dfu-util` can be used for the firmware update:"
+msgstr "Teise võimalusena saate uuenduse tühistada:"
+
+#: ../pro/firmware-update.rst:51
+msgid "Install dfu-util"
+msgstr ""
+
+#: ../pro/firmware-update.rst:54
+msgid "Binaries for Windows are available at:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:54
+msgid "http://dfu-util.sourceforge.net/releases/"
+msgstr ""
+
+#: ../pro/firmware-update.rst:57
+msgid "For macOS binaries are available via Homebrew:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:57
+msgid "https://formulae.brew.sh/formula/dfu-util"
+msgstr ""
+
+#: ../pro/firmware-update.rst:59
+msgid "*macOS only:* Install `dfu-util` via Homebrew"
+msgstr ""
+
+#: ../pro/firmware-update.rst:65
+msgid ""
+"Use Nitrokey App v1.5-RC7 or higher to change the boot mode of the "
+"Nitrokey Pro to update mode."
+msgstr ""
+
+#: ../pro/firmware-update.rst:67
+#, fuzzy
+msgid "Now the following command to apply the update"
+msgstr "Lisage faili järgmine rida"
+
+#: ../pro/firmware-update.rst:73
+msgid "The boot mode can now be changed back again with the Nitrokey App."
+msgstr ""
+
+#: ../pro/firmware-update.rst:89 ../pro/firmware-update.rst:90
+msgid "**Issue:** ``libnitrokey`` could not be found."
+msgstr ""
+
 #: ../pro/index.rst:2 ../shared-faqs/index.rst:4
 msgid "Nitrokey Pro 2"
 msgstr "Nitrokey Pro 2"
@@ -12383,6 +12490,25 @@ msgstr ""
 "SystemD toetab LUKS2 partitsiooni avamist X509 sertifikaadi abil, leia "
 "suurepärane blogi sissekanne selle realiseerimise kohta aadressil "
 "`Personal blog of Vladimir Timofeenko`__"
+
+#: ../pro/linux/firmware-update.rst:4
+#, fuzzy
+msgid ""
+"This likely means your user has not the needed permissions to read/write "
+"the device. Please make sure you have set up the correct `udev-rules`_. "
+"Download this `udev-rules`_ set and place it in your udev rules directory"
+" (e.g., ``/etc/udev/rules.d``). Then remove your Nitrokey Pro from the "
+"USB slot and run: ``udevadm control --reload-rules && udevadm trigger`` "
+"or reboot your machine. Afterwards the update should work without the "
+"permission issue."
+msgstr ""
+"See tähendab tõenäoliselt, et teie kasutajal ei ole seadme lugemiseks-"
+"kirjutamiseks vajalikke õigusi. Veenduge, et olete seadistanud õiged "
+"`udev-rules`_. Laadige see `udev-rules`_ komplekt alla ja paigutage see "
+"oma udev reeglite kataloogi (nt ``/etc/udev/rules.d``). Seejärel "
+"eemaldage oma Nitrokey 3 USB-pesast ja käivitage: ``udevadm control "
+"--reload-rules && udevadm trigger`` või taaskäivitage oma masin. Pärast "
+"seda peaks värskendus toimima ilma lubade probleemita."
 
 #: ../pro/linux/index.rst:2
 msgid "Nitrokey Pro, Linux"
@@ -22150,3 +22276,4 @@ msgstr ""
 #~ "<https://www.nitrokey.com/documentation/applications#p:nitrokey-"
 #~ "fido-u2f&os:all>`_ erinevaid kasutusjuhtumeid ja"
 #~ " toetatud rakendusi."
+

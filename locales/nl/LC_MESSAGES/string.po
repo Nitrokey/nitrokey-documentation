@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-22 12:19+0200\n"
+"POT-Creation-Date: 2022-06-24 12:37+0200\n"
 "PO-Revision-Date: 2022-06-22 11:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Dutch <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/nl/>\n"
 "Language: nl\n"
+"Language-Team: Dutch <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/nl/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -1166,7 +1165,8 @@ msgstr ""
 
 #: ../fido2/linux/index.rst:7 ../nextbox/troubleshooting.rst:2
 #: ../nitrokey3/shared/nitropy.rst:71 ../nitrokey3/troubleshooting.rst:2
-#: ../nitropad/troubleshooting.rst:2 ../pro/login-with-pam.rst:42
+#: ../nitropad/troubleshooting.rst:2 ../pro/firmware-update.rst:32
+#: ../pro/firmware-update.rst:76 ../pro/login-with-pam.rst:42
 #: ../pro/openpgp-thunderbird.rst:14 ../pro/smime.rst:72 ../pro/ssh.rst:42
 #: ../start/linux/index.rst:60 ../u2f/linux/index.rst:40
 msgid "Troubleshooting"
@@ -5450,10 +5450,10 @@ msgid ""
 "the \"Group folders app\" and click onto the three dotted symbol and "
 "\"Share\" to make it available for other users. (As the last image shows)"
 msgstr ""
-"Als je mappen wilt delen met meerdere gebruikers moet je de \"Group folders "
-"app\" installeren en klikken op het drie stippen symbool en \"Share\" om het "
-"beschikbaar te maken voor andere gebruikers. (Zoals de laatste afbeelding "
-"laat zien)"
+"Als je mappen wilt delen met meerdere gebruikers moet je de \"Group "
+"folders app\" installeren en klikken op het drie stippen symbool en "
+"\"Share\" om het beschikbaar te maken voor andere gebruikers. (Zoals de "
+"laatste afbeelding laat zien)"
 
 msgid "Storage Configuration"
 msgstr "Opslagconfiguratie"
@@ -8364,7 +8364,8 @@ msgstr ""
 "Card-Related Devices and Systems\" en zoek naar: \"NXP JCOP 4 SE050M\")."
 
 #: ../nitrokey3/firmware-update.rst:2 ../nitropad/firmware-update.rst:2
-#: ../start/linux/firmware-update.rst:2 ../storage/linux/firmware-update.rst:2
+#: ../pro/firmware-update.rst:2 ../start/linux/firmware-update.rst:2
+#: ../storage/linux/firmware-update.rst:2
 #: ../storage/windows/firmware-update.rst:2
 msgid "Firmware Update"
 msgstr "Firmware bijwerken"
@@ -8386,7 +8387,7 @@ msgstr ""
 "en/of zorg ervoor dat de Nitrokey 3 niet de enige manier is om te "
 "authenticeren/2FA voor uw applicaties/diensten."
 
-#: ../nitrokey3/firmware-update.rst:18
+#: ../nitrokey3/firmware-update.rst:18 ../pro/firmware-update.rst:17
 msgid "How to Update"
 msgstr "Hoe bij te werken"
 
@@ -8481,6 +8482,7 @@ msgid "Troubleshooting:"
 msgstr "Problemen oplossen"
 
 #: ../nitrokey3/linux/firmware-update.rst:14
+#: ../pro/linux/firmware-update.rst:11
 msgid "**Issue:** I get ``permission denied for /dev/hidrawX`` during update."
 msgstr ""
 "**Issue:** Ik krijg ``permission denied for /dev/hidrawX`` tijdens het "
@@ -12349,6 +12351,113 @@ msgstr ""
 "De Nitrokey Pro heeft geen opslagcapaciteit voor gewone gegevens (hij kan"
 " alleen cryptografische sleutels en certificaten opslaan)."
 
+#: ../pro/firmware-update.rst:6
+#, fuzzy
+msgid "This guide describes how to update the firmware on the Nitrokey Pro."
+msgstr ""
+"Deze handleiding beschrijft hoe u de firmware van de Nitrokey 3 kunt "
+"updaten."
+
+#: ../pro/firmware-update.rst:9
+msgid "This guide is still in an experimental state!"
+msgstr ""
+
+#: ../pro/firmware-update.rst:12
+#, fuzzy
+msgid ""
+"Updating could lead to data loss, so make sure you have proper backup "
+"login methods enabled and/or ensure that the Nitrokey Pro is not the only"
+" way to authenticate/2FA for your applications/services."
+msgstr ""
+"**Zorg ervoor dat u de juiste back-up login methodes heeft ingeschakeld "
+"en/of zorg ervoor dat de Nitrokey 3 niet de enige manier is om te "
+"authenticeren/2FA voor uw applicaties/diensten."
+
+#: ../pro/firmware-update.rst:19
+#, fuzzy
+msgid ""
+"Never disconnect the Nitrokey Pro or abort the process while updating, "
+"this will likely render your device useless!"
+msgstr ""
+"Koppel de Nitrokey 3 nooit los en breek het proces nooit af tijdens het "
+"updaten, hierdoor zal uw apparaat waarschijnlijk onbruikbaar worden!"
+
+#: ../pro/firmware-update.rst:22
+#, fuzzy
+msgid ""
+"Make sure you have the latest `pynitrokey` version installed, please "
+"check the `installation instructions "
+"<https://github.com/Nitrokey/pynitrokey#installation>`_ for your OS."
+msgstr ""
+"Zorg ervoor dat u de laatste `pynitrokey` versie heeft geinstalleerd, "
+"kijk hiervoor in de `installatie instructies`_ voor uw OS."
+
+#: ../pro/firmware-update.rst:23
+msgid "To apply the update run:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:34 ../pro/firmware-update.rst:79
+msgid ""
+"In case the libnitrokey could not be found automatically, the path to it "
+"can be provided with env. variable:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:40 ../pro/firmware-update.rst:85
+msgid "To find libnitrokey on your system use:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:47
+msgid "Alternative Update Method"
+msgstr ""
+
+#: ../pro/firmware-update.rst:49
+#, fuzzy
+msgid "Alternatively `dfu-util` can be used for the firmware update:"
+msgstr "U kunt de update ook annuleren:"
+
+#: ../pro/firmware-update.rst:51
+msgid "Install dfu-util"
+msgstr ""
+
+#: ../pro/firmware-update.rst:54
+msgid "Binaries for Windows are available at:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:54
+msgid "http://dfu-util.sourceforge.net/releases/"
+msgstr ""
+
+#: ../pro/firmware-update.rst:57
+msgid "For macOS binaries are available via Homebrew:"
+msgstr ""
+
+#: ../pro/firmware-update.rst:57
+msgid "https://formulae.brew.sh/formula/dfu-util"
+msgstr ""
+
+#: ../pro/firmware-update.rst:59
+msgid "*macOS only:* Install `dfu-util` via Homebrew"
+msgstr ""
+
+#: ../pro/firmware-update.rst:65
+msgid ""
+"Use Nitrokey App v1.5-RC7 or higher to change the boot mode of the "
+"Nitrokey Pro to update mode."
+msgstr ""
+
+#: ../pro/firmware-update.rst:67
+#, fuzzy
+msgid "Now the following command to apply the update"
+msgstr "Voeg de volgende regel toe aan het bestand"
+
+#: ../pro/firmware-update.rst:73
+msgid "The boot mode can now be changed back again with the Nitrokey App."
+msgstr ""
+
+#: ../pro/firmware-update.rst:89 ../pro/firmware-update.rst:90
+msgid "**Issue:** ``libnitrokey`` could not be found."
+msgstr ""
+
 #: ../pro/index.rst:2 ../shared-faqs/index.rst:4
 msgid "Nitrokey Pro 2"
 msgstr "Nitrokey Pro 2"
@@ -12675,6 +12784,26 @@ msgstr ""
 "SystemD ondersteunt het ontgrendelen van een LUKS2-partitie met behulp "
 "van een X509-certificaat, een goede blog entry over hoe dit te realiseren"
 " is te vinden op de `Persoonlijke blog van Vladimir Timofeenko`_"
+
+#: ../pro/linux/firmware-update.rst:4
+#, fuzzy
+msgid ""
+"This likely means your user has not the needed permissions to read/write "
+"the device. Please make sure you have set up the correct `udev-rules`_. "
+"Download this `udev-rules`_ set and place it in your udev rules directory"
+" (e.g., ``/etc/udev/rules.d``). Then remove your Nitrokey Pro from the "
+"USB slot and run: ``udevadm control --reload-rules && udevadm trigger`` "
+"or reboot your machine. Afterwards the update should work without the "
+"permission issue."
+msgstr ""
+"Dit betekent waarschijnlijk dat uw gebruiker niet de benodigde permissies"
+" heeft om het apparaat te lezen/schrijven. Zorg ervoor dat u de juiste "
+"`udev-rules`_ heeft ingesteld. Download deze `udev-rules`_ set en plaats "
+"het in uw udev rules directory (b.v., ``/etc/udev/rules.d``). Verwijder "
+"vervolgens uw Nitrokey 3 uit de USB-sleuf en voer het volgende uit: "
+"``udevadm control --reload-rules && udevadm trigger`` of start uw machine"
+" opnieuw op. Daarna zou de update moeten werken zonder het "
+"toestemmingsprobleem."
 
 #: ../pro/linux/index.rst:2
 msgid "Nitrokey Pro, Linux"
@@ -22809,3 +22938,4 @@ msgstr ""
 #~ "`Kassa <https://www.nitrokey.com/documentation/applications#p"
 #~ ":nitrokey-fido-u2f&os:all>`_ de verschillende "
 #~ "gebruikssituaties en ondersteunde toepassingen."
+
