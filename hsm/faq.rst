@@ -63,8 +63,8 @@ Nitrokey HSM FAQ
 
     OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 doesn't contain a mapping for OpenSSL to C_GenerateRandom.
 
-**Q:** How good is the True Random Number Generator (TRNG)?
-    Nitrokey HSM uses the TRNG of JCOP 2.4.1r3 which has a quality of DRNG.2
+**Q:** How good is the Random Number Generator?
+    Nitrokey HSM uses the True Random Number Generator of JCOP 2.4.1r3 which has a quality of DRNG.2
     (according to AIS 31 of the BSI).
 
 **Q:** Which API can I use?

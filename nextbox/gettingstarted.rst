@@ -19,7 +19,7 @@ Quickstart
 
    External storage drives without an external power supply must NOT be
    connected to the USB sockets. Otherwise, this can lead to data loss on the
-   internal hard disk. **Always use external storage drives with a seperate
+   internal hard disk. **Always use external storage drives with a separate
    power supply together with the NextBox.**
 
 Create Admin Account

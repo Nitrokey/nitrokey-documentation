@@ -15,7 +15,8 @@ This guide describes how to update the firmware on the Nitrokey 3.
    applications/services.
 
 How to Update
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------
+
 .. important::
    Never disconnect the Nitrokey 3 or abort the process while updating,
    this will likely render your device useless!

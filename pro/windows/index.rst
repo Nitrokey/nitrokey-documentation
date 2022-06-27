@@ -26,10 +26,7 @@ Getting Started
    :alt: img
 
 
-
 Your Nitrokey is now ready to use.
-`Checkout <https://www.nitrokey.com/en/applications>`_ the various use
-cases and supported applications.
 
 .. note::
    For many use cases described, it is necessary to have either OpenPGP or S/MIME keys installed on the device (see below).

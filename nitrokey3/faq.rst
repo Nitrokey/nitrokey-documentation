@@ -37,9 +37,12 @@ Nitrokey 3 FAQ
    the firware update is available for the OpenPGP card.
 
 **Q:** How can I set the PIN for my Nitrokey 3?
-   You can configure and do basic settings for your Nitrokey 3 using Chrome(ium)
+   On GNU+Linux and macOS you can configure and do basic settings for your Nitrokey 3 using Chrome(ium)
    just visit: `chrome://settings/securityKeys`_ (clicking the link will not work
    for security reasons, please copy&paste it)
+   
+   On Windows type "Security Keys" into the omnisearch box and click the first result. Then click "Security Keys" and "Manage".
+   Now follow the onscreen instructions.
 
 **Q:** Is the Nitrokey 3 Common Criteria or FIPS certified?
    The secure element is Common Criteria EAL 6+ security certification up to OS 
