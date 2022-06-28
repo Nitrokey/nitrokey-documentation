@@ -41,7 +41,7 @@ Nitrokey 3 FAQ
    just visit: `chrome://settings/securityKeys`_ (clicking the link will not work
    for security reasons, please copy&paste it)
    
-   On Windows type "Security Keys" into the omnisearch box and click the first result. Then click "Security Keys" and "Manage".
+   On Windows type "Security Keys" into the search bar on the bottom left and click the first result. Then click "Security Keys" and "Manage".
    Now follow the onscreen instructions.
 
 **Q:** Is the Nitrokey 3 Common Criteria or FIPS certified?

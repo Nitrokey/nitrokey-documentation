@@ -16,7 +16,7 @@ How to Install
 4. Execute ``nitropy-VERSION.exe``
 
 .. note::
-   Without administrator privileges nitropy might not be able to communicate to device.
+   Without administrator privileges nitropy might not be able to communicate to the device.
 
 Known Issues
 ------------
