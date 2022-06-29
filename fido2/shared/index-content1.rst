@@ -176,3 +176,6 @@ seconds until the green or blue LED lights up.
 |                 |                 |                 | written         |
 |                 |                 |                 | correctly       |
 +-----------------+-----------------+-----------------+-----------------+
+
+
+Note: white LED blinking is used as well to signalize the selected device (the so called WINK command).
