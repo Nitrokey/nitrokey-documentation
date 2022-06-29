@@ -18,7 +18,7 @@ everyday smartphone with more apps we recommend:
 
 3. Many apps work without Google Play Services. However, if you want to use apps
    that require Google Play Services, you can install `Google Play Services in a sandbox <https://grapheneos.org/usage#sandboxed-google-play>`_ as follows.
-   
+
    1. Open Graphenes app repository client: *Home screen -> Apps*
    2. Install the 3 core Google Play Apps ("Google Play store", "Google Play Services", "Google Services Framework").
    3. Disable batterie optimization for Google Play Services (for Push to work properly). From the home screen, select: *Settings -> Apps -> Google Play services > Battery > Unrestricted*
@@ -26,9 +26,9 @@ everyday smartphone with more apps we recommend:
       initialization. You don't have to finish the sign in and a real login is not
       necessary. This is solely to initialize the software.
 
-.. hint:: 
+.. hint::
    To prevent some apps from accessing Google Play Services, install
-   Google Play Services in a separate profile. To do this, create a new 
+   Google Play Services in a separate profile. To do this, create a new
    dedicated user profile and install the Google Play Services there. Using
    a work profile together with *Shelter* is also possible, but without as
    much isolation.
@@ -43,8 +43,15 @@ Compatible Apps
 ###############
 
 Earlier there was a list, but as the Play Service implementation progresses, most of the apps
-should work, although there are still some not working, a list will be available 
+should work, although there are still some not working, a list will be available
 `here <https://github.com/Peter-Easton/GrapheneOS-Knowledge/tree/master/App%20Incompatibility%20List>`_.
+
+There is a `list <https://akc3n.org/projects/banking/#list-of-banking-apps>`_ for compatible banking apps, too.
+Click onto the "Report" link behind the regarding banking app to see in which environment it is supported.
+
+- Pixel 4a refers to the NitroPhone 1
+- Pixel 6 refers to the NitroPhone 2
+- Pixel 6 Pro refers to the NitroPhone 2 Pro
 
 Recommended Apps
 ################
@@ -64,6 +71,6 @@ Recommended Apps
 Permissions of Individual Apps
 ##############################
 
-To check or change the permissions on network access and sensors for a specific app: 
+To check or change the permissions on network access and sensors for a specific app:
 
 *Long press on the respective app icon -> app info -> permissions*
