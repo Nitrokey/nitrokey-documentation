@@ -10,12 +10,13 @@ Installing nitropy on Windows
 How to Install
 --------------
 
-- Download the latest ``.msi`` installer from `releases <https://github.com/Nitrokey/pynitrokey/releases/>`_.
-- Double-click the installer and click through (*Next* and *Finish*)
-- Open the command console in the administrator mode (Windows 10: press the right mouse button on the Menu Start and select "Windows PowerShell (Admin)" from the menu).
-- Enter ``nitropy``
+1. Download the latest ``.exe`` file from `releases <https://github.com/Nitrokey/pynitrokey/releases/>`_.
+2. Open the command console in the administrator mode (Windows 10: press the right mouse button on the Menu Start and select "Windows PowerShell (Admin)" from the menu).
+3. Change to the directoy of the ``.exe`` (something like ``cd C:\Users\YOURUSER\Downloads``)
+4. Execute ``nitropy-VERSION.exe``
 
-Without administrator privileges nitropy might not be able to communicate to device.
+.. note::
+   Without administrator privileges nitropy might not be able to communicate to the device.
 
 Known Issues
 ------------

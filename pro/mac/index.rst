@@ -23,10 +23,7 @@ Nitrokey Pro, Mac
    :alt: img
 
 
-
 Your Nitrokey is now ready to use.
-`Checkout <https://www.nitrokey.com/documentation/applications>`_ the
-various use cases and supported applications.
 
 .. note::
 
