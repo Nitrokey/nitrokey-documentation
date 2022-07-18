@@ -28,8 +28,8 @@ In general the NextBox exposes all ports, which are available on the Raspberry P
 USB Type C port for a better accessible power supply connector. In the following a short description of 
 the different connectors and interfaces is given.
 
-1. :doc:`Status LED<technical/led-colors>`
-2. Hardware button for :doc:`Factory-Reset<technical/factory-reset>`
+1. Hardware button for :doc:`Factory-Reset<technical/factory-reset>`
+2. :doc:`Status LED<technical/led-colors>`
 
 .. figure:: /nextbox/images/hardware-overview/back-side.jpg
    :alt: back view
