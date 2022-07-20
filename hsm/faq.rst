@@ -65,7 +65,7 @@ Nitrokey HSM FAQ
 
 **Q:** How good is the Random Number Generator?
     Nitrokey HSM uses the True Random Number Generator of JCOP 2.4.1r3 which has a quality of DRNG.2
-    (according to AIS 31 of the BSI).
+    (according to `AIS 31`_ of the German Federal Office for Information Security, BSI).
 
 **Q:** Which API can I use?
     OpenSC: Comprehensive instructions exist for OpenSC framework. There is
@@ -110,5 +110,6 @@ Nitrokey HSM FAQ
 .. _reported: https://twitter.com/thomas_quinlan/status/1222492762760716288
 .. _Botan: https://botan.randombit.net/
 .. _TokenTools: https://github.com/infincia/TokenTools
+.. _AIS 31: https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Zertifizierung/Interpretationen/AIS_31_pdf
 
 .. include:: ../shared-faqs/hyperlinks.rst 
