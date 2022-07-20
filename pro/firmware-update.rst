@@ -21,12 +21,17 @@ How to Update
    this will likely render your device useless!
 
 1. Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions <https://github.com/Nitrokey/pynitrokey#installation>`_ for your OS.
-2. To apply the update run:
+2. Download the latest stable `firmware image <https://github.com/Nitrokey/nitrokey-pro-firmware/releases>`_.
+
+.. important:: 
+   For production use you should choose the latest stable version (so only versions, that don’t contain i.e. “pre-release” or “RC”).
+
+3. To apply the update run:
 
 .. code-block:: bash
 
  $ nitropy pro enable-update
- $ nitropy pro update nitrokey-pro-firmware-v0.14-RC3-to_update.bin
+ $ nitropy pro update nitrokey-pro-firmware-<version>.bin
 
 
 Alternative Update Method
