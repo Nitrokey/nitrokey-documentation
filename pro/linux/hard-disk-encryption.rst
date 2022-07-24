@@ -41,7 +41,7 @@ Follow these steps to use the program with `Nitrokey Storage
 Note: `Aloaha Crypt <http://www.aloaha.com/aloaha-crypt-disk/>`_ is based on TrueCrypt/VeraCrypt but without the described security limitation.
 
 Hard Disk Encryption on GNU+Linux with LUKS/dm-crypt
-------------------------------------------------
+----------------------------------------------------
 
 Here are `excellent instructions <http://blog.kumina.nl/2010/07/two-factor-luks-using-ubuntu/>`_ how to use Nitrokey to encrypt your hard disk under GNU+Linux with LUKS/dm-crypt. `Other instructions <https://wiki.ubuntu.com/SmartCardLUKSDiskEncryption>`_.
 
@@ -52,7 +52,7 @@ Purism has created a `simple script <https://docs.puri.sm/PureBoot/LibremKeyLUKS
 For Arch Linux, see `initramfs-scencrypt <https://github.com/fuhry/initramfs-scencrypt>`_.
 
 Storage Encryption on GNU+Linux with EncFS
---------------------------------------
+------------------------------------------
 
 .. tip::
 
@@ -130,7 +130,7 @@ Usage
    $ fusermount -u ~/cryptdir
 
 Storage Encryption on GNU+Linux with ECryptFS
------------------------------------------
+---------------------------------------------
 
 `eCryptfs <https://www.ecryptfs.org/>`_ is a file based transparent encryption file system for GNU+Linux which can be used with Nitrokey through a PKCS#11 driver.
 

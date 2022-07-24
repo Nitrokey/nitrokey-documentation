@@ -11,7 +11,7 @@ Thunderbird 78.3 and newer
 At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy to set up. See `Thunderbird’s documentation <https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`_ for details. Here is a `comprehensive German guide <https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-nitrokey-storage/>`_.
 
 Troubleshooting
-############
+###############
 
 Error message: ``The configured key ID '4BA0183FCBA844A7' cannot be found on your keyring``
 
@@ -25,7 +25,7 @@ Thunderbird 77 and older
 ------------------------
 
 Installation
-########
+############
 
 1. Install the device driver as described
    `here <https://www.nitrokey.com/documentation/installation>`_.
@@ -34,7 +34,7 @@ Installation
    Add-on `Enigmail <https://www.enigmail.net/index.php/en/>`_.
 
 Changing PINs
-##########
+#############
 
 There are two PINs for the Nitrokey:
 
@@ -48,7 +48,7 @@ After receiving the Nitrokey, you should immediately change the User PIN
 = “123456” and Admin PIN = “12345678”.
 
 Procedure
-#######
+#########
 
 1. Insert the Nitrokey into a USB port on your computer.
 
@@ -101,7 +101,7 @@ Procedure
 You have now changed the PINs and should continue to generate your personal keys.
 
 Generation of Keys
-#############
+##################
 
 To encrypt data and e-mails, a key pair consisting of a public key and a private key, must first be generated. The so-called public key is used to **en**\ crypt the data or e-mails. You can distribute this to all those with whom you want to communicate securely (for example, publish it publicly on your site). The so-called private key is used to
 **de**\ crypt the data or messages. This key should **NEVER** be made known! Usually, you also do not have direct access to it (see below), since this is stored securely on the Nitrokey. Use the Nitrokey to create both keys using the following procedure:

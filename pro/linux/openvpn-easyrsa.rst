@@ -239,7 +239,7 @@ The transfer itself is not security sensitive, though it is wise to verify if th
 In order to go through these steps, I will extensively rely on `these instructions <certificate-authority.html#creating-the-intermediate-certificate-authority>`_, to sign the certificate signing requests, once we generated them with Easy-RSA.
 
 5.1. Sign the ``server.req`` file
-'''''''''''''''''''''''''''''''
+'''''''''''''''''''''''''''''''''
 
 On the local machine dedicated to access the HSM, we will use the tools provided by Opensc 0.20 in order to sign the ``.req`` file, and send it back to the OpenVPN server. We assume we have transferred the file from the server machine to the CA machine.
 
@@ -273,7 +273,7 @@ First we start by plugging the HSM Nitrokey, and enter this instruction for list
    $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in server.req -out /home/user/pki/issued/server.crt 
 
 5.2. Retrieve the ``server.crt`` file to the server machine
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 1. Transfer the signed certificates to the server
 
@@ -420,18 +420,18 @@ We can use directly ``dnf install`` to install OpenVPN 2.4.9 and Easy-RSA 3.0.7
    $ ln -s /usr/share/easy-rsa/3/* ~/easyrsa/
 
 2. Create a PKI for the OpenVPN client
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the same manner we created a PKI on the OpenVPN server, we will create a PKI using Easy-RSA on the client side.
 
 3. Create a ``client.req`` and ``client.key``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the same manner we issued the key pair on the sever, we generate a key pair for the client which will be composed of the ``client.req``
 file and the ``client.key`` file. The latter must be kept secret on the client machine.
 
 4. Sign ``client.req`` and issue the ``client.crt`` file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To transfer the ``client.req`` file to the CA machine, we will use the same method as we did for the ``server.req`` file.
 
