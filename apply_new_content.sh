@@ -33,11 +33,11 @@ echo "$(date) [apply_new_content.sh] ($BASHPID) Building englisch Version..." >>
 
 if [ $build_mode == "full" ]
 then
-	sphinx-build -a -D language='en' -b html . /var/www/sphinx/www/docs.nitrokey.com_en_temp
+	sphinx-build -a -D language='en' -b dirhtml . /var/www/sphinx/www/docs.nitrokey.com_en_temp
 	status=$?
 elif [ $build_mode == "incremental" ]
 then
-	sphinx-build -D language='en' -b html . /var/www/sphinx/www/docs.nitrokey.com_en_temp
+	sphinx-build -D language='en' -b dirhtml . /var/www/sphinx/www/docs.nitrokey.com_en_temp
 	status=$?
 else
 	echo "Building Docs.nitrokey.com Language $lang FAILED. Sphinx build mode in config.sh unkown." | mail -s "[Sphinx] ($BASHPID) Building Language $lang FAILED." $admin_mail_address
