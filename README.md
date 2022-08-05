@@ -43,7 +43,7 @@ Before pushing your changes to the Github repository, commit often and test the 
 Setup Sphinx and components:
 
 ```
-python3 -m pip install Sphinx divio-docs-theme install sphinx-rtd-theme sphinx-intl sphinxprettysearchresults pygments-style-cheerfully-dark furo sphinx_copybutton
+python3 -m pip install Sphinx divio-docs-theme install sphinx-rtd-theme sphinx-intl sphinxprettysearchresults pygments-style-cheerfully-dark furo sphinx_copybutton sphinx-tabs
 mkdir -p ~/temp/sphinx_preview
 ```
 

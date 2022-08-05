@@ -43,6 +43,7 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx_copybutton',
     'sphinxprettysearchresults',
+    'sphinx_tabs.tabs',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -429,3 +430,8 @@ todo_include_todos = True
 
 # Extra Path for Redirects
 html_extra_path = ['_redirects/.htaccess']
+
+# -- Options for tabs extension-----------------------------------------------
+
+# Disables the closing of tabs if clicked on the currently active tab
+sphinx_tabs_disable_tab_closing = True
