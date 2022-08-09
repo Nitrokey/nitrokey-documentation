@@ -3,7 +3,7 @@
 lang=$1 
 	echo "$(date) [apply_translated_content.sh] (SPHINX) Building Language Version $lang..." >> /var/www/sphinx/logs_sphinx/webhook.log
 
-	sphinx-build -a -D language="$lang" -b dirhtml /var/www/sphinx/sphinx/nitrokey-documentation/  /var/www/sphinx/sphinx/sphinx_build_temp/$lang-temp
+	sphinx-build -a -D language="$lang" /var/www/sphinx/sphinx/nitrokey-documentation/  /var/www/sphinx/sphinx/sphinx_build_temp/$lang-temp
 	status=$?
 
 	if [ $status -eq 0 ]
