@@ -25,7 +25,7 @@
   {% endif %}
   {# CANONICAL URL #}
   {% if theme_canonical_url %}
-    <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
+    <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}"/>
   {% endif %}
 
   {# CSS #}
@@ -49,8 +49,8 @@
   <link rel="icon" type="image/png" href="{{ pathto('_static/favicon.png', 1) }}">
 
 	{% for lang in languages: %}
-		{% if language != lang and lang != "en" %}<link rel="alternate" hreflang="{{ lang }}" href="/{{ canonical_url }}{{ lang }}/{{ pagename }}.html" />{% endif %}
-		{% if language != lang and lang == "en" %}<link rel="alternate" hreflang="{{ lang }}" href="/{{ canonical_url }}{{ pagename }}.html" />{% endif %}
+		{% if language != lang and lang != "en" %}<link rel="alternate" hreflang="{{ lang }}" href="/{{ canonical_url }}{{ lang }}/{{ pagename }}" />{% endif %}
+		{% if language != lang and lang == "en" %}<link rel="alternate" hreflang="{{ lang }}" href="/{{ canonical_url }}{{ pagename }}" />{% endif %}
 	{% endfor %}
 
   
