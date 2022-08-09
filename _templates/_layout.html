@@ -169,20 +169,20 @@
             <a class="header-title" href="{{ pathto(master_doc) }}">{{ project }}</a>
         </div>
 
-	<div class="language-switcher">
-	<select onchange="location = this.options[this.selectedIndex].value;">
-		<option selected disabled hidden>{{ lang_attr }}</option>
-		{% for lang in languages: %}
-			{% if language != lang %}
-				{% if lang == 'en' %}
-          <option value="/{{ pagename }}{% if pagename ends with 'index' %}.html{% else %}/{% endif %}">{{ lang }}</option>
-        {% else %}
-          <option value="/{{lang}}/{{ pagename }}{% if pagename ends with 'index' %}.html{% else %}/{% endif %}">{{ lang }}</option>
-        {% endif %}
-			{% endif %}
-		{% endfor %}
-	</select>
-	</div>
+    <div class="language-switcher">
+    <select onchange="location = this.options[this.selectedIndex].value;">
+        <option selected>{{ language }}</option>
+        {% for lang in languages: %}
+            {% if language != lang %}
+                {% if lang == 'en' %}
+                    <option value="/{{ pagename }}">{{ lang }}</option>
+                {% else %}
+                    <option value="/{{lang}}/{{ pagename }}">{{ lang }}</option>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </select>
+    </div>
 
   {% include "language-banner.html" %}
 
