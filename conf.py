@@ -241,6 +241,8 @@ html_theme_options = {
         "font-stack": "'Open Sans', Helvetica, Arial, sans-serif",
         "font-stack--monospace": "'Operator mono', 'Hack', 'Menlo', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace",
 
+        "color-admonition-title--todo": "#222222",
+        "color-admonition-title-background--todo": "#d6e3ed",
         "color-admonition-title-background--note": "#6ab0de",
         "color-admonition-title-background--tip": "#1abc9c",
         "color-admonition-title-background--hint": "#1abc9c",
@@ -286,6 +288,9 @@ html_theme_options = {
         "font-stack": "'Open Sans', Helvetica, Arial, sans-serif",
         "font-stack--monospace": "'Operator mono', 'Hack', 'Menlo', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace",
 
+        "color-admonition-title--todo": "#ffffff",
+        
+        "color-admonition-title-background--todo": "#0a6150",
         "color-admonition-title-background--note": "#6ab0de",
         "color-admonition-title-background--tip": "#1abc9c",
         "color-admonition-title-background--hint": "#1abc9c",
