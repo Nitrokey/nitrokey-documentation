@@ -5,9 +5,9 @@
     {% for lang in languages: %}
         {% if language != lang %}
             {% if lang == 'en' %}
-                <option value="/{{ pagename }}">{{ lang }}</option>
+                <option value="/{{ pagename | replace("index.html", "") | replace("index", "") }}">{{ lang }}</option>
             {% else %}
-                <option value="/{{lang}}/{{ pagename }}">{{ lang }}</option>
+                <option value="/{{lang}}/{{ pagename | replace("index.html", "") | replace("index", "") }}">{{ lang }}</option>
             {% endif %}
         {% endif %}
     {% endfor %}
