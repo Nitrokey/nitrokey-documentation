@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-11 13:12+0200\n"
+"POT-Creation-Date: 2022-08-22 18:01+0200\n"
 "PO-Revision-Date: 2022-08-11 12:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
@@ -535,7 +534,8 @@ msgstr ""
 msgid "img6"
 msgstr "img6"
 
-#: ../fido2/linux/desktop-login.rst:236
+#: ../fido2/linux/desktop-login.rst:236 ../hsm/linux/smime.rst:57
+#: ../hsm/mac/smime.rst:57 ../hsm/windows/smime.rst:57
 #: ../pro/linux/automatic-screen-lock.rst:77
 #: ../pro/linux/disk-encryption-luks.rst:140
 #: ../pro/linux/hard-disk-encryption.rst:116 ../pro/openpgp-outlook.rst:26
@@ -988,7 +988,8 @@ msgid ""
 " (the so called WINK command)."
 msgstr "注：白色LEDの点滅は、選択されたデバイスの信号（いわゆるWINKコマンド）にも使用されます。"
 
-#: ../fido2/linux/index.rst:7 ../nextbox/troubleshooting.rst:2
+#: ../fido2/linux/index.rst:7 ../hsm/linux/smime.rst:72 ../hsm/mac/smime.rst:72
+#: ../hsm/windows/smime.rst:72 ../nextbox/troubleshooting.rst:2
 #: ../nitrokey3/shared/nitropy.rst:71 ../nitrokey3/troubleshooting.rst:2
 #: ../nitropad/troubleshooting.rst:2 ../pro/firmware-update.rst:67
 #: ../pro/login-with-pam.rst:42 ../pro/openpgp-thunderbird.rst:14
@@ -3020,37 +3021,45 @@ msgstr ""
 "URLの末尾を調べてみると'がわかります。``label``、``id``などですが、結果のURLを使って必要なオブジェクトを一意に識別できる限り、これらを部分的に削除することができます。``id``のみを使用した例については、doc:`TLS"
 " Apache2 Configuration<apache2-tls>`を参照してください。"
 
+#: ../hsm/linux/smime.rst:2 ../hsm/mac/smime.rst:2 ../hsm/windows/smime.rst:2
 #: ../pro/smime.rst:2
 msgid "S/MIME Email Encryption"
 msgstr "S/MIMEメール暗号化"
 
+#: ../hsm/linux/smime.rst:9 ../hsm/mac/smime.rst:9 ../hsm/windows/smime.rst:9
 #: ../nextbox/technical/replace-drive.rst:12
 #: ../pro/linux/openvpn-easyrsa.rst:24 ../pro/openpgp-outlook.rst:14
 #: ../pro/smime-outlook.rst:9 ../pro/smime-thunderbird.rst:9 ../pro/smime.rst:9
-#: ../pro/windows/openpgp-csp.rst:11 ../pro/windows/openvpn-viscosity.rst:17
+#: ../pro/windows/openpgp-csp.rst:11 ../pro/windows/openvpn-easyrsa.rst:24
+#: ../pro/windows/openvpn-viscosity.rst:17
+#: ../storage/linux/openvpn-easyrsa.rst:24
 msgid "Prerequisites"
 msgstr "前提条件"
 
-#: ../pro/openpgp.rst:8 ../pro/smime.rst:11
+#: ../hsm/linux/smime.rst:11 ../hsm/mac/smime.rst:11
+#: ../hsm/windows/smime.rst:11 ../pro/openpgp.rst:8 ../pro/smime.rst:11
 msgid "There are two widely used standards for email encryption."
 msgstr "電子メールの暗号化には、広く使われている2つの規格があります。"
 
-#: ../pro/openpgp.rst:10 ../pro/smime.rst:13
+#: ../hsm/linux/smime.rst:13 ../hsm/mac/smime.rst:13
+#: ../hsm/windows/smime.rst:13 ../pro/openpgp.rst:10 ../pro/smime.rst:13
 msgid "OpenPGP/GnuPG is popular among individuals,"
 msgstr "個人ではOpenPGP/GnuPGが人気です。"
 
-#: ../pro/openpgp.rst:12 ../pro/smime.rst:15
+#: ../hsm/linux/smime.rst:15 ../hsm/mac/smime.rst:15
+#: ../hsm/windows/smime.rst:15 ../pro/openpgp.rst:12 ../pro/smime.rst:15
 msgid "S/MIME/X.509 is mostly used by enterprises."
 msgstr "S/MIME/X.509は主に企業で使用されています。"
 
-#: ../pro/smime.rst:17
+#: ../hsm/linux/smime.rst:17 ../hsm/mac/smime.rst:17
+#: ../hsm/windows/smime.rst:17
 msgid ""
-"If you are in doubt which one to choose, you should use OpenPGP, see "
-"`here <openpgp.html>`_. This page describes the usage of S/MIME email "
-"encryption."
-msgstr "どれを選べばいいのかわからない場合は、OpenPGPを使うべきで、`こちら<openpgp.html>`_を参照してください。このページでは、S/MIMEのメール暗号化の使い方を説明しています。"
+"The Nitrokey HSM 2 only supports the S/MIME/X.509 standard. This page "
+"describes the usage of S/MIME email encryption."
+msgstr ""
 
-#: ../pro/smime.rst:19
+#: ../hsm/linux/smime.rst:19 ../hsm/mac/smime.rst:19
+#: ../hsm/windows/smime.rst:19 ../pro/smime.rst:19
 msgid ""
 "You need to purchase a S/MIME certificate (e.g. at `CERTUM "
 "<https://www.certum.eu/en/cert_offer_cert_id/>`_) or may already got one "
@@ -3070,18 +3079,21 @@ msgstr ""
 "<https://github.com/OpenSC/OpenSC/wiki>`_ "
 "ページからインストールファイルをダウンロードすることが可能です。"
 
-#: ../pro/smime-outlook.rst:17 ../pro/smime-thunderbird.rst:17
-#: ../pro/smime.rst:22
+#: ../hsm/linux/smime.rst:22 ../hsm/mac/smime.rst:22
+#: ../hsm/windows/smime.rst:22 ../pro/smime-outlook.rst:17
+#: ../pro/smime-thunderbird.rst:17 ../pro/smime.rst:22
 msgid ""
 "Windows users with 64-bit system (standard) need to install both, the "
 "32-bit and the 64-bit version of OpenSC!"
 msgstr "64ビットシステム（標準）のWindowsユーザーは、32ビット版と64ビット版の両方のOpenSC！をインストールする必要があります。"
 
-#: ../pro/smime.rst:25
+#: ../hsm/linux/smime.rst:25 ../hsm/mac/smime.rst:25
+#: ../hsm/windows/smime.rst:25 ../pro/smime.rst:25
 msgid "Import Existing Key and Certificate"
 msgstr "既存の鍵と証明書のインポート"
 
-#: ../pro/smime.rst:27
+#: ../hsm/linux/smime.rst:27 ../hsm/mac/smime.rst:27
+#: ../hsm/windows/smime.rst:27 ../pro/smime.rst:27
 msgid ""
 "The following instructions are based on the `wiki of OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`_. We will assume, "
@@ -3091,7 +3103,9 @@ msgstr ""
 "以下の説明は、OpenSCの`wiki <https://github.com/OpenSC/OpenSC/wiki/OpenPGP-"
 "card>`_に基づいています。ここでは、すでに鍵と証明書のペアを.p12ファイルとして入手していると仮定します。別の鍵と証明書のファイルを入手した場合は、wikiページを参照してください。"
 
-#: ../pro/openpgp-keygen-on-device.rst:25 ../pro/smime.rst:29
+#: ../hsm/linux/smime.rst:29 ../hsm/mac/smime.rst:29
+#: ../hsm/windows/smime.rst:29 ../pro/openpgp-keygen-on-device.rst:25
+#: ../pro/smime.rst:29
 msgid ""
 "To open the Windows command line please push the Windows-key and R-key. "
 "Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on"
@@ -3099,7 +3113,8 @@ msgid ""
 "macOS)."
 msgstr "Windowsのコマンドラインを開くには、WindowsキーとRキーを押してください。テキストフィールドに「cmd.exe」と入力してエンターキーを押します。macOSまたはGNU/Linuxでターミナルを開くには、アプリケーション検索を使用してください（例：macOSのspotlight）。"
 
-#: ../pro/smime.rst:31
+#: ../hsm/linux/smime.rst:31 ../hsm/mac/smime.rst:31
+#: ../hsm/windows/smime.rst:31 ../pro/smime.rst:31
 msgid ""
 "To make these commands as simple as possible, the .p12 file needs to be "
 "in your home folder. On Windows this is usually ‘C:\\Users\\yourusername’"
@@ -3109,43 +3124,51 @@ msgid ""
 "commands."
 msgstr "これらのコマンドをできるだけシンプルにするために、.p12ファイルはあなたのホームフォルダーにある必要があります。Windowsでは通常、「C:Users\\yourusername」、macOSやGNU/Linuxシステムでは「/home/yourusername」となります。この場所に.p12ファイルを保存していない場合は、以下のコマンドでパスを変更する必要があります。コマンドを実行する前に、Nitrokeyを接続してください。"
 
-#: ../pro/smime.rst:33
+#: ../hsm/linux/smime.rst:33 ../hsm/mac/smime.rst:33
+#: ../hsm/windows/smime.rst:33 ../pro/smime.rst:33
 msgid ""
 "Assuming that your key-certificate file reads ‘myprivate.p12’ the "
 "commands for Windows looks like this:"
 msgstr "鍵・証明書のファイル名が「myprivate.p12」であるとすると、Windows用のコマンドは以下のようになります。"
 
-#: ../pro/smime.rst:40
+#: ../hsm/linux/smime.rst:40 ../hsm/mac/smime.rst:40
+#: ../hsm/windows/smime.rst:40 ../pro/smime.rst:40
 msgid "and on macOS and GNU/Linux it will be"
 msgstr "となり、macOSとGNU/Linuxでは以下のようになります。"
 
-#: ../pro/smime.rst:47
+#: ../hsm/linux/smime.rst:47 ../hsm/mac/smime.rst:47
+#: ../hsm/windows/smime.rst:47 ../pro/smime.rst:47
 msgid ""
 "The two commands copy the key-certificate pair to the slot 2 (needed for "
 "decrypting emails) and slot 3 (needed for signing). The output looks on "
 "both systems something like this:"
 msgstr "この2つのコマンドは、鍵と証明書のペアをスロット2（メールの復号化に必要）とスロット3（署名に必要）にコピーします。両システムでの出力は以下のようになります。"
 
-#: ../pro/smime.rst:54
+#: ../hsm/linux/smime.rst:54 ../hsm/mac/smime.rst:54
+#: ../hsm/windows/smime.rst:54 ../pro/smime.rst:54
 msgid ""
 "Please note that there will be error messages that can be safely ignored "
 "(see output example above). You now have the key-certificate pair loaded "
 "on the Nitrokey."
 msgstr "エラーメッセージが表示されますが、無視してかまいません（上記の出力例を参照）。これで、Nitrokeyに鍵と証明書のペアが読み込まれました。"
 
-#: ../pro/openpgp.rst:51 ../pro/smime.rst:59
+#: ../hsm/linux/smime.rst:59 ../hsm/mac/smime.rst:59
+#: ../hsm/windows/smime.rst:59 ../pro/openpgp.rst:51 ../pro/smime.rst:59
 msgid "You can find further information about the usage on these pages:"
 msgstr "このページでは、使用方法についての詳しい情報をご覧いただけます。"
 
-#: ../pro/smime.rst:61
+#: ../hsm/linux/smime.rst:61 ../hsm/mac/smime.rst:61
+#: ../hsm/windows/smime.rst:61 ../pro/smime.rst:61
 msgid "for using `S/MIME encryption on Thunderbird <smime-thunderbird.html>`_"
 msgstr "Thunderbirdで`S/MIME暗号化を使用するための<smime-thunderbird.html>`_。"
 
-#: ../pro/smime.rst:64
+#: ../hsm/linux/smime.rst:64 ../hsm/mac/smime.rst:64
+#: ../hsm/windows/smime.rst:64 ../pro/smime.rst:64
 msgid "for using `S/MIME encryption on Outlook <smime-outlook.html>`_"
 msgstr "Outlook上で`S/MIME暗号化を使用するための<smime-outlook.html><x id=\"60\"></x"
 
-#: ../pro/openpgp.rst:63 ../pro/smime.rst:67
+#: ../hsm/linux/smime.rst:67 ../hsm/mac/smime.rst:67
+#: ../hsm/windows/smime.rst:67 ../pro/openpgp.rst:63 ../pro/smime.rst:67
 msgid ""
 "for using `Evolution <https://help.gnome.org/users/evolution/stable/mail-"
 "encryption.html.en>`_, an email client for the Gnome Desktop on Linux "
@@ -3155,23 +3178,22 @@ msgstr ""
 "<https://help.gnome.org/users/evolution/stable/mail-"
 "encryption.html.en>`_の使用について"
 
-#: ../pro/smime.rst:74
+#: ../hsm/linux/smime.rst:74 ../hsm/mac/smime.rst:74
+#: ../hsm/windows/smime.rst:74 ../pro/smime.rst:74
 msgid ""
 "On Windows: Did you install **both**, the 32-bit and the 64-bit version "
 "of OpenSC?"
 msgstr "Windowsの場合。OpenSCの32ビット版と64ビット版の両方をインストールしましたか？"
 
-#: ../pro/smime.rst:77
+#: ../hsm/linux/smime.rst:77 ../hsm/mac/smime.rst:77
+#: ../hsm/windows/smime.rst:77
 msgid ""
-"Nitrokey Storage 2: You need to install OpenSC in version 0.18 or higher."
-" You can find the files on the `OpenSC website "
+"You need to install OpenSC in version 0.18 or higher. You can find the "
+"files on the `OpenSC website "
 "<https://github.com/OpenSC/OpenSC/releases>`_ for Windows and macOS user "
 "or `here <https://github.com/Nitrokey/opensc-build>`_ for Debian/Ubuntu "
 "users."
 msgstr ""
-"Nitrokey Storage "
-"2：OpenSCをバージョン0.18以上でインストールする必要があります。WindowsやmacOSのユーザーは`OpenSCのウェブサイト<https://github.com/OpenSC/OpenSC/releases>`_で、Debian/Ubuntuのユーザーは`こちら<https://github.com/Nitrokey"
-"/opensc-build>`_でファイルを見つけることができます。"
 
 #: ../pro/smime-outlook.rst:2
 msgid "S/MIME Email Encryption with Outlook"
@@ -12098,17 +12120,20 @@ msgid ""
 "secure email encryption!**"
 msgstr "あなたのNitrokeyはパーソナライズされ、すぐに使用できます。**安全なメールの暗号化で楽しみましょう！***。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:2
+#: ../pro/linux/openvpn-easyrsa.rst:2 ../pro/windows/openvpn-easyrsa.rst:2
+#: ../storage/linux/openvpn-easyrsa.rst:2
 msgid "OpenVPN Configuration with Easy-RSA"
 msgstr "Easy-RSAによるOpenVPNの設定"
 
-#: ../pro/linux/openvpn-easyrsa.rst:11
+#: ../pro/linux/openvpn-easyrsa.rst:11 ../pro/windows/openvpn-easyrsa.rst:11
+#: ../storage/linux/openvpn-easyrsa.rst:11
 msgid ""
 "This guide is work-in-progress, and will be updated accordinlgy. Please "
 "take this status into consideration."
 msgstr "このガイドは進行中のものであり、随時更新されます。この点をご理解の上、ご利用ください。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:13
+#: ../pro/linux/openvpn-easyrsa.rst:13 ../pro/windows/openvpn-easyrsa.rst:13
+#: ../storage/linux/openvpn-easyrsa.rst:13
 msgid ""
 "This guide shows how to configure OpenVPN clients to login using a "
 "`Nitrokey Pro 2 <https://shop.nitrokey.com/shop/product/nk-pro-2"
@@ -12140,7 +12165,8 @@ msgstr ""
 "、<certificate-authority.html#sign-a-server-"
 "certificate>`_で明確に、そして`よく説明されています）。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:20
+#: ../pro/linux/openvpn-easyrsa.rst:20 ../pro/windows/openvpn-easyrsa.rst:20
+#: ../storage/linux/openvpn-easyrsa.rst:20
 msgid ""
 "We will use Easy-RSA, because it seems to provide some flexibility, and "
 "allows key management via external PKIs. We will use it on the server to "
@@ -12152,27 +12178,32 @@ msgstr ""
 "RSAを使用します。これをサーバで使用して署名要求を発行し、クライアントでも同じプロセスを繰り返します。証明書署名要求は、Nitorkey "
 "HSMのCAによって署名され、サーバとクライアントに再送信されます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:26
+#: ../pro/linux/openvpn-easyrsa.rst:26 ../pro/windows/openvpn-easyrsa.rst:26
+#: ../storage/linux/openvpn-easyrsa.rst:26
 msgid ""
 "In the following documentation we will require 3 different machines as "
 "following:"
 msgstr "以下の資料では、以下の3台のマシンを必要とします。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:28
+#: ../pro/linux/openvpn-easyrsa.rst:28 ../pro/windows/openvpn-easyrsa.rst:28
+#: ../storage/linux/openvpn-easyrsa.rst:28
 msgid "OpenVPN server (v. 2.5) on Debian 10 (EC2 virtual machine - AWS)"
 msgstr "Debian 10上のOpenVPNサーバ（v.2.5）（EC2仮想マシン-AWS）"
 
-#: ../pro/linux/openvpn-easyrsa.rst:30
+#: ../pro/linux/openvpn-easyrsa.rst:30 ../pro/windows/openvpn-easyrsa.rst:30
+#: ../storage/linux/openvpn-easyrsa.rst:30
 msgid "OpenVPN client (v. 2.4.9) on Fedora 30 (local machine)"
 msgstr "Fedora 30のOpenVPNクライアント（v.2.4.9）（ローカルマシン）"
 
-#: ../pro/linux/openvpn-easyrsa.rst:32
+#: ../pro/linux/openvpn-easyrsa.rst:32 ../pro/windows/openvpn-easyrsa.rst:32
+#: ../storage/linux/openvpn-easyrsa.rst:32
 msgid ""
 "The Certificate Authority will be accessible from a standalone machine "
 "with Fedora 30 (local machine)"
 msgstr "認証局は、Fedora 30 を搭載したスタンドアロンのマシン（ローカルマシン）からアクセスします。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:35
+#: ../pro/linux/openvpn-easyrsa.rst:35 ../pro/windows/openvpn-easyrsa.rst:35
+#: ../storage/linux/openvpn-easyrsa.rst:35
 msgid ""
 "To interact with the devices we will require `OpenSC 0.20 "
 "<https://github.com/OpenSC/OpenSC/wiki>`_ installed on the client and CA "
@@ -12184,11 +12215,13 @@ msgstr ""
 "<https://github.com/OpenSC/OpenSC/wiki>`_をクライアントとCAマシン（ローカルマシン）にインストールする必要があります。`このリンク(*Unix)<https://github.com/OpenSC/OpenSC/wiki"
 "/Compiling-and-Installing-on-Unix-flavors>`_の指示に従ってセットアップすることができます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:38
+#: ../pro/linux/openvpn-easyrsa.rst:38 ../pro/windows/openvpn-easyrsa.rst:38
+#: ../storage/linux/openvpn-easyrsa.rst:38
 msgid "To download the dependencies on Fedora machines we can this instruction:"
 msgstr "Fedoraのマシンで依存ファイルをダウンロードするには、次の手順を実行します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:44
+#: ../pro/linux/openvpn-easyrsa.rst:44 ../pro/windows/openvpn-easyrsa.rst:44
+#: ../storage/linux/openvpn-easyrsa.rst:44
 msgid ""
 "For Debian Linux, more recent OpenSC packages are available `here "
 "<https://github.com/Nitrokey/opensc-build>`_."
@@ -12196,11 +12229,13 @@ msgstr ""
 "Debian Linuxでは、より新しいOpenSCのパッケージが`こちら<https://github.com/Nitrokey/opensc-"
 "build>`_に用意されています。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:46
+#: ../pro/linux/openvpn-easyrsa.rst:46 ../pro/windows/openvpn-easyrsa.rst:46
+#: ../storage/linux/openvpn-easyrsa.rst:46
 msgid "We will use the following Nitrokeys for physical key management:"
 msgstr "物理的な鍵の管理には、以下のNitrokeysを使用します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:48
+#: ../pro/linux/openvpn-easyrsa.rst:48 ../pro/windows/openvpn-easyrsa.rst:48
+#: ../storage/linux/openvpn-easyrsa.rst:48
 msgid ""
 "An authentication key using the `Nitrokey Pro 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf>`_"
@@ -12208,7 +12243,8 @@ msgstr ""
 "`Nitrokey Pro 2 "
 "(pdf)<https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf>`_を使用した認証キーです。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:51
+#: ../pro/linux/openvpn-easyrsa.rst:51 ../pro/windows/openvpn-easyrsa.rst:51
+#: ../storage/linux/openvpn-easyrsa.rst:51
 msgid ""
 "A Certificate Authority (CA) using the `Nitrokey HSM 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`_"
@@ -12216,7 +12252,8 @@ msgstr ""
 "`Nitrokey HSM 2 "
 "(pdf)<https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`_を使用する認証局（CA）。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:54
+#: ../pro/linux/openvpn-easyrsa.rst:54 ../pro/windows/openvpn-easyrsa.rst:54
+#: ../storage/linux/openvpn-easyrsa.rst:54
 msgid ""
 "As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you "
 "may follow the instructions available `in the documentation <certificate-"
@@ -12225,7 +12262,8 @@ msgstr ""
 "なお、Nitrokey HSM 2で認証局を構築するには、ドキュメント`の<certificate-authority.html#sign-a"
 "-server-certificate>`_に記載されている手順に従うことができます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:56
+#: ../pro/linux/openvpn-easyrsa.rst:56 ../pro/windows/openvpn-easyrsa.rst:56
+#: ../storage/linux/openvpn-easyrsa.rst:56
 msgid ""
 "Alternatively you may set up your own CA on a `on a separate machine "
 "<https://www.digitalocean.com/community/tutorials/how-to-set-up-and-"
@@ -12240,27 +12278,33 @@ msgstr ""
 "/community-resources/setting-up-your-own-certificate-authority-"
 "ca/>`_に依存することもできます。最後の2つのオプションは、鍵管理のためのソフトウェアソリューションに依存しています。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:61
+#: ../pro/linux/openvpn-easyrsa.rst:61 ../pro/windows/openvpn-easyrsa.rst:61
+#: ../storage/linux/openvpn-easyrsa.rst:61
 msgid "Server side"
 msgstr "サーバー側"
 
-#: ../pro/linux/openvpn-easyrsa.rst:64
+#: ../pro/linux/openvpn-easyrsa.rst:64 ../pro/windows/openvpn-easyrsa.rst:64
+#: ../storage/linux/openvpn-easyrsa.rst:64
 msgid "1. Install OpenVPN"
 msgstr "1.OpenVPNのインストール"
 
-#: ../pro/linux/openvpn-easyrsa.rst:66
+#: ../pro/linux/openvpn-easyrsa.rst:66 ../pro/windows/openvpn-easyrsa.rst:66
+#: ../storage/linux/openvpn-easyrsa.rst:66
 msgid "First we need to enable IP Forwarding by editing ``/etc/sysctl.conf`` file"
 msgstr "まず、``/etc/sysctl.conf``ファイルを編集して、IPフォワーディングを有効にする必要があります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:72
+#: ../pro/linux/openvpn-easyrsa.rst:72 ../pro/windows/openvpn-easyrsa.rst:72
+#: ../storage/linux/openvpn-easyrsa.rst:72
 msgid "Uncomment or edit accordingly the following line"
 msgstr "次の行のコメントを外すか、適宜編集してください。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:78
+#: ../pro/linux/openvpn-easyrsa.rst:78 ../pro/windows/openvpn-easyrsa.rst:78
+#: ../storage/linux/openvpn-easyrsa.rst:78
 msgid "Close after saving it, and enter this command"
 msgstr "保存した後に閉じて、次のコマンドを入力します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:84
+#: ../pro/linux/openvpn-easyrsa.rst:84 ../pro/windows/openvpn-easyrsa.rst:84
+#: ../storage/linux/openvpn-easyrsa.rst:84
 msgid ""
 "Once IP forwarding is done, we will need to download the latest release "
 "of OpenvPN for our Debian 10 server, according to `these instructions "
@@ -12269,15 +12313,18 @@ msgstr ""
 "IPフォワーディングが完了したら、`の指示に従って、Debian "
 "10サーバ用にOpenvPNの最新リリースをダウンロードする必要があります<https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`_。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:86
+#: ../pro/linux/openvpn-easyrsa.rst:86 ../pro/windows/openvpn-easyrsa.rst:86
+#: ../storage/linux/openvpn-easyrsa.rst:86
 msgid "Change to root and download the GPG key that signed the package"
 msgstr "rootに変更し、パッケージに署名したGPGキーをダウンロードする"
 
-#: ../pro/linux/openvpn-easyrsa.rst:93
+#: ../pro/linux/openvpn-easyrsa.rst:93 ../pro/windows/openvpn-easyrsa.rst:93
+#: ../storage/linux/openvpn-easyrsa.rst:93
 msgid "Add the URL of the adequate OpenVPN packages to the ``sources.list`` file"
 msgstr "適切なOpenVPNパッケージのURLを``sources.list``ファイルに追加します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:100
+#: ../pro/linux/openvpn-easyrsa.rst:100 ../pro/windows/openvpn-easyrsa.rst:100
+#: ../storage/linux/openvpn-easyrsa.rst:100
 msgid ""
 "We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN "
 "`version 2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`_ to "
@@ -12287,21 +12334,25 @@ msgstr ""
 "<https://community.openvpn.net/openvpn/ticket/1215>`_が必要なので、OpenVPN "
 "2.5をダウンロードしました。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:103
+#: ../pro/linux/openvpn-easyrsa.rst:103 ../pro/windows/openvpn-easyrsa.rst:103
+#: ../storage/linux/openvpn-easyrsa.rst:103
 msgid "Next we download OpenVPN"
 msgstr "次にOpenVPNをダウンロードします。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:109
+#: ../pro/linux/openvpn-easyrsa.rst:109 ../pro/windows/openvpn-easyrsa.rst:109
+#: ../storage/linux/openvpn-easyrsa.rst:109
 msgid ""
 "If you want to check the version, it possible by calling ``--version`` "
 "and print the following:"
 msgstr "バージョンを確認したい場合は、``--version``を呼び出して、次のように表示します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:122
+#: ../pro/linux/openvpn-easyrsa.rst:122 ../pro/windows/openvpn-easyrsa.rst:122
+#: ../storage/linux/openvpn-easyrsa.rst:122
 msgid "2. Install Easy-RSA"
 msgstr "2.Easy-RSAのインストール"
 
-#: ../pro/linux/openvpn-easyrsa.rst:124
+#: ../pro/linux/openvpn-easyrsa.rst:124 ../pro/windows/openvpn-easyrsa.rst:124
+#: ../storage/linux/openvpn-easyrsa.rst:124
 msgid ""
 "To build the PKI, we will download the latest version of Easy-RSA on the "
 "server and client machines. To get the latest release, go to the "
@@ -12315,19 +12366,23 @@ msgstr ""
 "/easy-"
 "rsa/releases>`_にアクセスし、``.tgz`で終わるファイルのダウンロードリンクをコピーして、以下のコマンドに貼り付けます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:126
+#: ../pro/linux/openvpn-easyrsa.rst:126 ../pro/windows/openvpn-easyrsa.rst:126
+#: ../storage/linux/openvpn-easyrsa.rst:126
 msgid "Download the latest release"
 msgstr "最新版のダウンロード"
 
-#: ../pro/linux/openvpn-easyrsa.rst:133
+#: ../pro/linux/openvpn-easyrsa.rst:133 ../pro/windows/openvpn-easyrsa.rst:133
+#: ../storage/linux/openvpn-easyrsa.rst:133
 msgid "Extract the tarball"
 msgstr "タールボールの解凍"
 
-#: ../pro/linux/openvpn-easyrsa.rst:142
+#: ../pro/linux/openvpn-easyrsa.rst:142 ../pro/windows/openvpn-easyrsa.rst:142
+#: ../storage/linux/openvpn-easyrsa.rst:142
 msgid "3. Create a PKI for OpenVPN server"
 msgstr "3.OpenVPN サーバの PKI を作成する"
 
-#: ../pro/linux/openvpn-easyrsa.rst:144
+#: ../pro/linux/openvpn-easyrsa.rst:144 ../pro/windows/openvpn-easyrsa.rst:144
+#: ../storage/linux/openvpn-easyrsa.rst:144
 msgid ""
 "Before you can create your OpenVPN server’s private key and certificate, "
 "you need to create a local Public Key Infrastructure directory on your "
@@ -12338,21 +12393,25 @@ msgstr ""
 "OpenVPNサーバの秘密鍵と証明書を作成する前に、OpenVPNサーバにローカルのPublic Key "
 "Infrastructureディレクトリを作成する必要があります。このディレクトリは、サーバやクライアントの証明書要求を、CAサーバに直接行うのではなく、管理するために使用します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:146
+#: ../pro/linux/openvpn-easyrsa.rst:146 ../pro/windows/openvpn-easyrsa.rst:146
+#: ../storage/linux/openvpn-easyrsa.rst:146
 msgid ""
 "To build a PKI directory on your OpenVPN server, you’ll need to populate "
 "a file called ``vars`` with some default values."
 msgstr "OpenVPNサーバにPKIディレクトリを構築するには、``vars``というファイルに、いくつかのデフォルト値を入力する必要があります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:148
+#: ../pro/linux/openvpn-easyrsa.rst:148 ../pro/windows/openvpn-easyrsa.rst:148
+#: ../storage/linux/openvpn-easyrsa.rst:148
 msgid "Create a ``vars`` file"
 msgstr "``vars``ファイルの作成"
 
-#: ../pro/linux/openvpn-easyrsa.rst:156
+#: ../pro/linux/openvpn-easyrsa.rst:156 ../pro/windows/openvpn-easyrsa.rst:156
+#: ../storage/linux/openvpn-easyrsa.rst:156
 msgid "Once the file is opened, paste in the following two lines"
 msgstr "ファイルを開いたら、次の2行をペーストします。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:163
+#: ../pro/linux/openvpn-easyrsa.rst:163 ../pro/windows/openvpn-easyrsa.rst:163
+#: ../storage/linux/openvpn-easyrsa.rst:163
 msgid ""
 "These are the only two lines that you need in this ``vars`` file on your "
 "OpenVPN server since it will not be used as a Certificate Authority. They"
@@ -12361,7 +12420,8 @@ msgid ""
 " secure signatures for your clients and OpenVPN server."
 msgstr "OpenVPNサーバのこの``vars``ファイルで必要なのは、認証局として使用しないので、この2行だけです。これにより、秘密鍵や証明書要求が楕円曲線暗号（ECC）を使用して鍵を生成するように設定され、クライアントやOpenVPNサーバの署名が安全に行われるようになります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:165
+#: ../pro/linux/openvpn-easyrsa.rst:165 ../pro/windows/openvpn-easyrsa.rst:165
+#: ../storage/linux/openvpn-easyrsa.rst:165
 msgid ""
 "In regards to the choice of the cryptographic algorithms, I follow the "
 "model in `this tutorial <https://www.digitalocean.com/community/tutorials"
@@ -12372,11 +12432,13 @@ msgstr ""
 "/how-to-set-up-and-configure-an-openvpn-server-on-"
 "centos-8>`_のモデルに従っていますが、あなたの特定のニーズに応じてこれらをカスタマイズすることができます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:167
+#: ../pro/linux/openvpn-easyrsa.rst:167 ../pro/windows/openvpn-easyrsa.rst:167
+#: ../storage/linux/openvpn-easyrsa.rst:167
 msgid "Initialize the PKI"
 msgstr "PKIの初期化"
 
-#: ../pro/linux/openvpn-easyrsa.rst:169
+#: ../pro/linux/openvpn-easyrsa.rst:169 ../pro/windows/openvpn-easyrsa.rst:169
+#: ../storage/linux/openvpn-easyrsa.rst:169
 msgid ""
 "Once you have populated the ``vars`` file you can proceed with creating "
 "the PKI directory. To do so, run the easyrsa script with the init-pki "
@@ -12385,18 +12447,21 @@ msgstr ""
 "``vars``のファイルに入力したら、PKIディレクトリの作成に進むことができます。これを行うには、easyrsa スクリプトを init-"
 "pki オプション付きで実行します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:175
+#: ../pro/linux/openvpn-easyrsa.rst:175 ../pro/windows/openvpn-easyrsa.rst:175
+#: ../storage/linux/openvpn-easyrsa.rst:175
 msgid ""
 "After you’ve initialized your PKI on the OpenVPN server, you are ready to"
 " move on to the next step, which is creating an OpenVPN server "
 "certificate request and private key."
 msgstr "OpenVPNサーバのPKIを初期化したら、次のステップである、OpenVPNサーバの証明書要求と秘密鍵の作成に移ることができます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:178
+#: ../pro/linux/openvpn-easyrsa.rst:178 ../pro/windows/openvpn-easyrsa.rst:178
+#: ../storage/linux/openvpn-easyrsa.rst:178
 msgid "4. Create ``server.req`` and ``server.key``"
 msgstr "4.``server.req``と``server.key``を作成。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:180
+#: ../pro/linux/openvpn-easyrsa.rst:180 ../pro/windows/openvpn-easyrsa.rst:180
+#: ../storage/linux/openvpn-easyrsa.rst:180
 msgid ""
 "Now that your OpenVPN server has all the prerequisites installed, the "
 "next step is to generate a key pair composed of a private key (to keep "
@@ -12404,7 +12469,8 @@ msgid ""
 "server."
 msgstr "OpenVPNサーバーにすべての前提条件がインストールされたので、次のステップでは、秘密鍵（秘密にしておきたい）と、OpenVPNサーバー上の証明書署名要求（``.csr``）からなる鍵ペアを生成します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:182
+#: ../pro/linux/openvpn-easyrsa.rst:182 ../pro/windows/openvpn-easyrsa.rst:182
+#: ../storage/linux/openvpn-easyrsa.rst:182
 msgid ""
 "In general terms, on systems where we generate a key and request, these "
 "files are left unencrypted by using the ``nopass`` argument, since "
@@ -12413,55 +12479,66 @@ msgid ""
 "permissions* carefully."
 msgstr "一般論として、鍵とリクエストを生成するシステムでは、通常サーバーはパスワードの入力なしで起動する必要があるため、これらのファイルは``nopass``の引数を使って暗号化されないままにしておきます。これは、*暗号化されていないキー*を生成するので、そのアクセスとファイルのパーミッション*を注意深く保護することを心掛けてください。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:186
+#: ../pro/linux/openvpn-easyrsa.rst:186 ../pro/windows/openvpn-easyrsa.rst:186
+#: ../storage/linux/openvpn-easyrsa.rst:186
 msgid "Configuration notes from OpenVPN:"
 msgstr "OpenVPNの設定メモです。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:188
+#: ../pro/linux/openvpn-easyrsa.rst:188 ../pro/windows/openvpn-easyrsa.rst:188
+#: ../storage/linux/openvpn-easyrsa.rst:188
 msgid ""
 "The server, and each client, must have their own cert and key file. The "
 "server and all clients will use the same CA file."
 msgstr "サーバーと各クライアントは、それぞれの証明書と鍵ファイルを持つ必要があります。サーバーとすべてのクライアントは、同じCAファイルを使用します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:190
+#: ../pro/linux/openvpn-easyrsa.rst:190 ../pro/windows/openvpn-easyrsa.rst:190
+#: ../storage/linux/openvpn-easyrsa.rst:190
 msgid "Server certificate should have the following:"
 msgstr "サーバー証明書は以下のものが必要です。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:192
+#: ../pro/linux/openvpn-easyrsa.rst:192 ../pro/windows/openvpn-easyrsa.rst:192
+#: ../storage/linux/openvpn-easyrsa.rst:192
 msgid "``keyUsage:  digitalSignature, keyEncipherment``"
 msgstr "``keyUsage:  digitalSignature, keyEncipherment``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:194
+#: ../pro/linux/openvpn-easyrsa.rst:194 ../pro/windows/openvpn-easyrsa.rst:194
+#: ../storage/linux/openvpn-easyrsa.rst:194
 msgid "``extendedKeyUsage: serverAuth``"
 msgstr "``extendedKeyUsage: serverAuth``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:196
+#: ../pro/linux/openvpn-easyrsa.rst:196 ../pro/windows/openvpn-easyrsa.rst:196
+#: ../storage/linux/openvpn-easyrsa.rst:196
 msgid "Create the signing request for the server"
 msgstr "サーバーへの署名要求の作成"
 
-#: ../pro/linux/openvpn-easyrsa.rst:198
+#: ../pro/linux/openvpn-easyrsa.rst:198 ../pro/windows/openvpn-easyrsa.rst:198
+#: ../storage/linux/openvpn-easyrsa.rst:198
 msgid ""
 "Navigate to the ``~/easyrsa`` directory on your OpenVPN Server as your "
 "non-root user, and enter the following commands:"
 msgstr "非rootユーザーでOpenVPNサーバーの``~/easyrsa``ディレクトリに移動し、以下のコマンドを入力します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:205
+#: ../pro/linux/openvpn-easyrsa.rst:205 ../pro/windows/openvpn-easyrsa.rst:205
+#: ../storage/linux/openvpn-easyrsa.rst:205
 msgid ""
 "This will create a private key for the server and a certificate request "
 "file called ``server.req``."
 msgstr "これにより、サーバーの秘密鍵と、``server.req``という証明書要求ファイルが作成されます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:207
+#: ../pro/linux/openvpn-easyrsa.rst:207 ../pro/windows/openvpn-easyrsa.rst:207
+#: ../storage/linux/openvpn-easyrsa.rst:207
 msgid ""
 "Once you have a signed certificate, you’ll transfer it back to the "
 "OpenVPN server."
 msgstr "署名済みの証明書ができたら、それをOpenVPNサーバーに転送します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:209
+#: ../pro/linux/openvpn-easyrsa.rst:209 ../pro/windows/openvpn-easyrsa.rst:209
+#: ../storage/linux/openvpn-easyrsa.rst:209
 msgid "Copy the key to the OpenVPN server directory"
 msgstr "鍵をOpenVPNサーバのディレクトリにコピーする"
 
-#: ../pro/linux/openvpn-easyrsa.rst:215
+#: ../pro/linux/openvpn-easyrsa.rst:215 ../pro/windows/openvpn-easyrsa.rst:215
+#: ../storage/linux/openvpn-easyrsa.rst:215
 msgid ""
 "After completing these steps, you have successfully created a private key"
 " for your OpenVPN server. You have also generated a Certificate Signing "
@@ -12470,11 +12547,13 @@ msgstr ""
 "これらの手順を完了すると、OpenVPN サーバーの秘密鍵の作成が完了します。また、OpenVPN サーバー用の Certificate "
 "Signing Request も作成されています。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:219
+#: ../pro/linux/openvpn-easyrsa.rst:219 ../pro/windows/openvpn-easyrsa.rst:219
+#: ../storage/linux/openvpn-easyrsa.rst:219
 msgid "File extensions for certificate signing requests"
 msgstr "証明書署名要求のファイル拡張子"
 
-#: ../pro/linux/openvpn-easyrsa.rst:221
+#: ../pro/linux/openvpn-easyrsa.rst:221 ../pro/windows/openvpn-easyrsa.rst:221
+#: ../storage/linux/openvpn-easyrsa.rst:221
 msgid ""
 "The file extension that is adopted by the CA and HSM tutorial indicates "
 "the creation of a ``.csr`` file, however Easy-RSA creates certificate "
@@ -12483,14 +12562,16 @@ msgstr ""
 "CAやHSMのチュートリアルで採用されているファイル拡張子は、``.csr``のファイルを作成することを示していますが、Easy-"
 "RSAでは``.req``の拡張子で証明書署名要求を作成します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:225
+#: ../pro/linux/openvpn-easyrsa.rst:225 ../pro/windows/openvpn-easyrsa.rst:225
+#: ../storage/linux/openvpn-easyrsa.rst:225
 msgid ""
 "We will use interchangeably both extensions, while making sure that we "
 "transfer the right files to the Certificate Authority, and generate a "
 "final certificate with a ``.crt`` extension."
 msgstr "ここでは、両方の拡張子を使い分けながら、正しいファイルを認証局に転送し、``.crt``の拡張子を持つ最終的な証明書を生成することを確認します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:229
+#: ../pro/linux/openvpn-easyrsa.rst:229 ../pro/windows/openvpn-easyrsa.rst:229
+#: ../storage/linux/openvpn-easyrsa.rst:229
 msgid ""
 "In the next section of this guide, we will sign a ``.req`` file with our "
 "CA on deployed on the HSM 2 device. For this purpose, I will use a "
@@ -12499,24 +12580,28 @@ msgstr ""
 "このガイドの次のセクションでは、``.req``のファイルに、HSM "
 "2デバイス上にデプロイされたCAで署名します。この目的のために、専用のマシンを使ってリクエストに署名することにします。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:232
+#: ../pro/linux/openvpn-easyrsa.rst:232 ../pro/windows/openvpn-easyrsa.rst:232
+#: ../storage/linux/openvpn-easyrsa.rst:232
 msgid "5. Sign and retrieve ``server.crt``"
 msgstr "5.署名・回収 ``server.crt``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:234
+#: ../pro/linux/openvpn-easyrsa.rst:234 ../pro/windows/openvpn-easyrsa.rst:234
+#: ../storage/linux/openvpn-easyrsa.rst:234
 msgid ""
 "The following instructions require the transfer of the ``server.req`` (or"
 " ``server.csr``) file to the CA system."
 msgstr "以下の手順では、``server.req``（または``server.csr``）のファイルをCAシステムに転送する必要があります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:237
+#: ../pro/linux/openvpn-easyrsa.rst:237 ../pro/windows/openvpn-easyrsa.rst:237
+#: ../storage/linux/openvpn-easyrsa.rst:237
 msgid ""
 "The transfer itself is not security sensitive, though it is wise to "
 "verify if the received file matches the sender’s copy, if the transport "
 "is untrusted."
 msgstr "転送自体にはセキュリティ上の問題はありませんが、転送が信頼できない場合には、受信したファイルが送信者のコピーと一致するかどうかを確認するのが賢明です。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:239
+#: ../pro/linux/openvpn-easyrsa.rst:239 ../pro/windows/openvpn-easyrsa.rst:239
+#: ../storage/linux/openvpn-easyrsa.rst:239
 msgid ""
 "In order to go through these steps, I will extensively rely on `these "
 "instructions <certificate-authority.html#creating-the-intermediate-"
@@ -12527,11 +12612,13 @@ msgstr ""
 "authority.html#creating-the-intermediate-certificate-"
 "authority>`_に大きく依存することになります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:242
+#: ../pro/linux/openvpn-easyrsa.rst:242 ../pro/windows/openvpn-easyrsa.rst:242
+#: ../storage/linux/openvpn-easyrsa.rst:242
 msgid "5.1. Sign the ``server.req`` file"
 msgstr "5.1.``server.req``のファイルに署名します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:244
+#: ../pro/linux/openvpn-easyrsa.rst:244 ../pro/windows/openvpn-easyrsa.rst:244
+#: ../storage/linux/openvpn-easyrsa.rst:244
 msgid ""
 "On the local machine dedicated to access the HSM, we will use the tools "
 "provided by Opensc 0.20 in order to sign the ``.req`` file, and send it "
@@ -12541,52 +12628,63 @@ msgstr ""
 "HSMにアクセスする専用のローカルマシンで、Opensc "
 "0.20が提供するツールを使用して、``.req``のファイルに署名し、OpenVPNサーバに送り返します。ここでは、サーバーマシンからCAマシンにファイルを転送したと仮定します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:246
+#: ../pro/linux/openvpn-easyrsa.rst:246 ../pro/windows/openvpn-easyrsa.rst:246
+#: ../storage/linux/openvpn-easyrsa.rst:246
 msgid ""
 "First we start by plugging the HSM Nitrokey, and enter this instruction "
 "for listing the keys available."
 msgstr "まず、HSM Nitrokeyを接続して、使用可能なキーをリストアップするために、この指示を入力します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:248
+#: ../pro/linux/openvpn-easyrsa.rst:248 ../pro/windows/openvpn-easyrsa.rst:248
+#: ../storage/linux/openvpn-easyrsa.rst:248
 msgid "Query the list of available devices"
 msgstr "利用可能なデバイスのリストを問い合わせる"
 
-#: ../pro/linux/openvpn-easyrsa.rst:256
+#: ../pro/linux/openvpn-easyrsa.rst:256 ../pro/windows/openvpn-easyrsa.rst:256
+#: ../storage/linux/openvpn-easyrsa.rst:256
 msgid "The key’s URI should be in this format:"
 msgstr "キーのURIはこのフォーマットでなければなりません。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:262
+#: ../pro/linux/openvpn-easyrsa.rst:262 ../pro/windows/openvpn-easyrsa.rst:262
+#: ../storage/linux/openvpn-easyrsa.rst:262
 msgid "Create ``openvpn/`` directory under ``certificate-authority/``"
 msgstr "``openvpn/``のディレクトリを``certificate-authority/``の下に作成します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:269
+#: ../pro/linux/openvpn-easyrsa.rst:269 ../pro/windows/openvpn-easyrsa.rst:269
+#: ../storage/linux/openvpn-easyrsa.rst:269
 msgid "Sign the ``server.req``"
 msgstr "サインは``server.req``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:276
+#: ../pro/linux/openvpn-easyrsa.rst:276 ../pro/windows/openvpn-easyrsa.rst:276
+#: ../storage/linux/openvpn-easyrsa.rst:276
 msgid "5.2. Retrieve the ``server.crt`` file to the server machine"
 msgstr "5.2.``server.crt``のファイルをサーバー・マシンに取得する。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:278
+#: ../pro/linux/openvpn-easyrsa.rst:278 ../pro/windows/openvpn-easyrsa.rst:278
+#: ../storage/linux/openvpn-easyrsa.rst:278
 msgid "Transfer the signed certificates to the server"
 msgstr "署名済みの証明書をサーバーに転送する"
 
-#: ../pro/linux/openvpn-easyrsa.rst:280
+#: ../pro/linux/openvpn-easyrsa.rst:280 ../pro/windows/openvpn-easyrsa.rst:280
+#: ../storage/linux/openvpn-easyrsa.rst:280
 msgid ""
 "From the CA machine, copy the files ``server.crt`` and ``chain.crt`` to "
 "the OpenVPN server. In this example we will use the ``scp`` command as "
 "following:"
 msgstr "CAのマシンから、``server.crt``と``chain.crt``のファイルをOpenVPNサーバにコピーします。この例では、``scp``のコマンドを以下のように使用します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:286
+#: ../pro/linux/openvpn-easyrsa.rst:286 ../pro/windows/openvpn-easyrsa.rst:286
+#: ../storage/linux/openvpn-easyrsa.rst:286
 msgid "Place the certificates on the server’s directory"
 msgstr "サーバーのディレクトリに証明書を置く"
 
-#: ../pro/linux/openvpn-easyrsa.rst:294
+#: ../pro/linux/openvpn-easyrsa.rst:294 ../pro/windows/openvpn-easyrsa.rst:294
+#: ../storage/linux/openvpn-easyrsa.rst:294
 msgid "CA Certificate and ``chain.crt``"
 msgstr "CA証明書と``chain.crt``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:296
+#: ../pro/linux/openvpn-easyrsa.rst:296 ../pro/windows/openvpn-easyrsa.rst:296
+#: ../storage/linux/openvpn-easyrsa.rst:296
 msgid ""
 "In the above, the CA returns the signed sever certificate, and includes "
 "the CA certificate ``CA.crt`` which is the ``chain.crt`` file. This can "
@@ -12597,18 +12695,21 @@ msgstr ""
 "上の例では、CAは署名された sever "
 "証明書を返し、``CA.crt``であるCA証明書``chain.crt``のファイルを含めます。これは安全でないチャンネルで行うことができますが、トランスポートが信頼されていない場合、クライアントは受信した``chain.crt``が有効であるかどうかを確認することが推奨されます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:302
+#: ../pro/linux/openvpn-easyrsa.rst:302 ../pro/windows/openvpn-easyrsa.rst:302
+#: ../storage/linux/openvpn-easyrsa.rst:302
 msgid ""
 "It is possible to rename the file ``chain.crt`` file to ``CA.crt`` on the"
 " target machine, however we will use ``chain.crt`` in the next "
 "instructions."
 msgstr "ターゲット・マシンでは、``chain.crt``のファイルを``CA.crt``にリネームすることが可能です。しかし、次の説明では、``chain.crt``を使用します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:307
+#: ../pro/linux/openvpn-easyrsa.rst:307 ../pro/windows/openvpn-easyrsa.rst:307
+#: ../storage/linux/openvpn-easyrsa.rst:307
 msgid "6. Configure the OpenVPN server"
 msgstr "6.OpenVPNサーバーの設定"
 
-#: ../pro/linux/openvpn-easyrsa.rst:309
+#: ../pro/linux/openvpn-easyrsa.rst:309 ../pro/windows/openvpn-easyrsa.rst:309
+#: ../storage/linux/openvpn-easyrsa.rst:309
 msgid ""
 "A connection that uses TLS requires multiple `certificates and keys for "
 "authentication <https://wiki.teltonika-"
@@ -12620,7 +12721,8 @@ msgstr ""
 "TLSを使用する接続では、認証のために複数の`証明書と鍵が必要になります<https://wiki.teltonika-"
 "networks.com/view/OpenVPN_configuration_examples>`_。これらの証明書を発行して署名したので、正しいディレクトリに配置します。ルートディレクトリに配置しなければならない証明書と鍵の内訳は以下の通りです。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:320
+#: ../pro/linux/openvpn-easyrsa.rst:320 ../pro/windows/openvpn-easyrsa.rst:320
+#: ../storage/linux/openvpn-easyrsa.rst:320
 msgid ""
 "On your OpenVPN server, now you can create the configuration file "
 "``server.conf`` with your favorite text editor. The file can be "
@@ -12629,73 +12731,89 @@ msgid ""
 " your the files we signed:"
 msgstr "OpenVPNサーバーでは、お気に入りのテキストエディタで設定ファイル``server.conf``を作成します。このファイルは必要に応じて設定することができますが、署名したファイルに選択した名前に従って、サーバー証明書と鍵のセクションを変更するようにしています。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:329
+#: ../pro/linux/openvpn-easyrsa.rst:329 ../pro/windows/openvpn-easyrsa.rst:329
+#: ../storage/linux/openvpn-easyrsa.rst:329
 msgid "Here is the configuration file we can use for testing these instructions:"
 msgstr "以下は、これらの手順をテストするために使用できる設定ファイルです。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:359
+#: ../pro/linux/openvpn-easyrsa.rst:359 ../pro/windows/openvpn-easyrsa.rst:359
+#: ../storage/linux/openvpn-easyrsa.rst:359
 msgid "To test if the configuration functions properly, we can use this command:"
 msgstr "この設定が正しく機能するかどうかをテストするには、このコマンドを使用します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:366
+#: ../pro/linux/openvpn-easyrsa.rst:366 ../pro/windows/openvpn-easyrsa.rst:366
+#: ../storage/linux/openvpn-easyrsa.rst:366
 msgid "7. Start the OpenVPN service on the server"
 msgstr "7.サーバーでOpenVPNサービスを開始する"
 
-#: ../pro/linux/openvpn-easyrsa.rst:368
+#: ../pro/linux/openvpn-easyrsa.rst:368 ../pro/windows/openvpn-easyrsa.rst:368
+#: ../storage/linux/openvpn-easyrsa.rst:368
 msgid ""
 "Enable the OpenVPN service by adding it to systemctl, and start it using "
 "these commands:"
 msgstr "OpenVPNサービスをsystemctlに追加して有効にし、以下のコマンドで起動します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:375
+#: ../pro/linux/openvpn-easyrsa.rst:375 ../pro/windows/openvpn-easyrsa.rst:375
+#: ../storage/linux/openvpn-easyrsa.rst:375
 msgid "To Double check if the OpenVPN service is active use this command:"
 msgstr "OpenVPNサービスがアクティブかどうかをダブルチェックするには、このコマンドを使います。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:381
+#: ../pro/linux/openvpn-easyrsa.rst:381 ../pro/windows/openvpn-easyrsa.rst:381
+#: ../storage/linux/openvpn-easyrsa.rst:381
 msgid "The OpenVPN should be running at this point."
 msgstr "この時点でOpenVPNが起動しているはずです。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:386
+#: ../pro/linux/openvpn-easyrsa.rst:386 ../pro/windows/openvpn-easyrsa.rst:386
+#: ../storage/linux/openvpn-easyrsa.rst:386
 msgid "Client side configuration"
 msgstr "クライアント側の設定"
 
-#: ../pro/linux/openvpn-easyrsa.rst:400
+#: ../pro/linux/openvpn-easyrsa.rst:400 ../pro/windows/openvpn-easyrsa.rst:400
+#: ../storage/linux/openvpn-easyrsa.rst:400
 msgid "1. Install OpenVPN and Easy-RSA"
 msgstr "1.OpenVPNとEasy-RSAのインストール"
 
-#: ../pro/linux/openvpn-easyrsa.rst:402
+#: ../pro/linux/openvpn-easyrsa.rst:402 ../pro/windows/openvpn-easyrsa.rst:402
+#: ../storage/linux/openvpn-easyrsa.rst:402
 msgid "Install the software"
 msgstr "ソフトウェアのインストール"
 
-#: ../pro/linux/openvpn-easyrsa.rst:404
+#: ../pro/linux/openvpn-easyrsa.rst:404 ../pro/windows/openvpn-easyrsa.rst:404
+#: ../storage/linux/openvpn-easyrsa.rst:404
 msgid ""
 "We can use directly ``dnf install`` to install OpenVPN 2.4.9 and Easy-RSA"
 " 3.0.7"
 msgstr "OpenVPN 2.4.9とEasy-RSA 3.0.7をインストールするには、直接``dnf install``を使うことができます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:410
+#: ../pro/linux/openvpn-easyrsa.rst:410 ../pro/windows/openvpn-easyrsa.rst:410
+#: ../storage/linux/openvpn-easyrsa.rst:410
 msgid "Then we create as non-root a directory for Easy RSA called ``Easy-RSA``"
 msgstr "そして、非rootで``Easy-RSA``というEasy RSA用のディレクトリを作成します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:416
+#: ../pro/linux/openvpn-easyrsa.rst:416 ../pro/windows/openvpn-easyrsa.rst:416
+#: ../storage/linux/openvpn-easyrsa.rst:416
 msgid "And link it to the Easy RSA package we just installed"
 msgstr "そして、先ほどインストールしたEasy RSAパッケージにリンクさせます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:423
+#: ../pro/linux/openvpn-easyrsa.rst:423 ../pro/windows/openvpn-easyrsa.rst:423
+#: ../storage/linux/openvpn-easyrsa.rst:423
 msgid "2. Create a PKI for the OpenVPN client"
 msgstr "2.OpenVPNクライアント用のPKIを作成する"
 
-#: ../pro/linux/openvpn-easyrsa.rst:425
+#: ../pro/linux/openvpn-easyrsa.rst:425 ../pro/windows/openvpn-easyrsa.rst:425
+#: ../storage/linux/openvpn-easyrsa.rst:425
 msgid ""
 "In the same manner we created a PKI on the OpenVPN server, we will create"
 " a PKI using Easy-RSA on the client side."
 msgstr "OpenVPNサーバでPKIを作成したのと同じように、クライアント側でもEasy-RSAを使ったPKIを作成します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:428
+#: ../pro/linux/openvpn-easyrsa.rst:428 ../pro/windows/openvpn-easyrsa.rst:428
+#: ../storage/linux/openvpn-easyrsa.rst:428
 msgid "3. Create a ``client.req`` and ``client.key``"
 msgstr "3.``client.req``と``client.key``を作成する。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:430
+#: ../pro/linux/openvpn-easyrsa.rst:430 ../pro/windows/openvpn-easyrsa.rst:430
+#: ../storage/linux/openvpn-easyrsa.rst:430
 msgid ""
 "In the same manner we issued the key pair on the sever, we generate a key"
 " pair for the client which will be composed of the ``client.req`` file "
@@ -12705,27 +12823,32 @@ msgstr ""
 "サーバー上でキーペアを発行したのと同じ方法で、クライアント用のキーペアを生成します。これは ``client.req`` ファイルと "
 "``client.key`` ファイルで構成されます。後者は、クライアントマシン上で秘密にしておく必要があります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:434
+#: ../pro/linux/openvpn-easyrsa.rst:434 ../pro/windows/openvpn-easyrsa.rst:434
+#: ../storage/linux/openvpn-easyrsa.rst:434
 msgid "4. Sign ``client.req`` and issue the ``client.crt`` file"
 msgstr "4.``client.req``に署名し、``client.crt``のファイルを発行する。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:436
+#: ../pro/linux/openvpn-easyrsa.rst:436 ../pro/windows/openvpn-easyrsa.rst:436
+#: ../storage/linux/openvpn-easyrsa.rst:436
 msgid ""
 "To transfer the ``client.req`` file to the CA machine, we will use the "
 "same method as we did for the ``server.req`` file."
 msgstr "``client.req``のファイルをCA機に転送するには、``server.req``のファイルを転送したときと同じ方法で行います。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:438
+#: ../pro/linux/openvpn-easyrsa.rst:438 ../pro/windows/openvpn-easyrsa.rst:438
+#: ../storage/linux/openvpn-easyrsa.rst:438
 msgid ""
 "Once transferred, on the CA machine we sign the certificate signing "
 "request file with this command"
 msgstr "転送が完了したら、CAのマシンで次のコマンドを使って証明書署名要求ファイルに署名します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:445
+#: ../pro/linux/openvpn-easyrsa.rst:445 ../pro/windows/openvpn-easyrsa.rst:445
+#: ../storage/linux/openvpn-easyrsa.rst:445
 msgid "5. Import ``client.crt`` on the Nitrokey from the CA machine"
 msgstr "5.CA機からNitrokeyに``client.crt``をインポートする。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:447
+#: ../pro/linux/openvpn-easyrsa.rst:447 ../pro/windows/openvpn-easyrsa.rst:447
+#: ../storage/linux/openvpn-easyrsa.rst:447
 msgid ""
 "After creating the ``client.crt`` file, we plug the Nitrokey Pro 2 device"
 " in the CA machine, and import the ``.crt`` to the Pro 2 device using "
@@ -12734,17 +12857,20 @@ msgstr ""
 "``client.crt``のファイルを作成した後、CAマシンにNitrokey Pro "
 "2デバイスを接続し、``.crt``をこのコマンドでPro 2デバイスにインポートします。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:453
+#: ../pro/linux/openvpn-easyrsa.rst:453 ../pro/windows/openvpn-easyrsa.rst:453
+#: ../storage/linux/openvpn-easyrsa.rst:453
 msgid ""
 "You can see if the key is effectively stored on the Nitrokey using this "
 "command:"
 msgstr "キーがNitrokeyに有効に保存されているかどうかは、このコマンドで確認できます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:459
+#: ../pro/linux/openvpn-easyrsa.rst:459 ../pro/windows/openvpn-easyrsa.rst:459
+#: ../storage/linux/openvpn-easyrsa.rst:459
 msgid "Or alternatively"
 msgstr "あるいは、代わりに"
 
-#: ../pro/linux/openvpn-easyrsa.rst:465
+#: ../pro/linux/openvpn-easyrsa.rst:465 ../pro/windows/openvpn-easyrsa.rst:465
+#: ../storage/linux/openvpn-easyrsa.rst:465
 msgid ""
 "Fore more commands you can refer to the `OpenSC wiki "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`_."
@@ -12752,11 +12878,13 @@ msgstr ""
 "その他のコマンドについては、`OpenSC wiki <https://github.com/OpenSC/OpenSC/wiki"
 "/OpenPGP-card>`_を参照してください。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:468
+#: ../pro/linux/openvpn-easyrsa.rst:468 ../pro/windows/openvpn-easyrsa.rst:468
+#: ../storage/linux/openvpn-easyrsa.rst:468
 msgid "6. Retrieve the ``chain.crt`` file from the CA machine"
 msgstr "6.CA機から``chain.crt``のファイルを取得します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:470
+#: ../pro/linux/openvpn-easyrsa.rst:470 ../pro/windows/openvpn-easyrsa.rst:470
+#: ../storage/linux/openvpn-easyrsa.rst:470
 msgid ""
 "While we keep the ``client.crt``\\ stored on the nitrokey Pro 2 device, "
 "we must retrieve the ``chain.crt`` file on the client machine, and store "
@@ -12767,11 +12895,13 @@ msgstr ""
 "the "
 "``chain.crt``のファイルをクライアントマシンに置いて、適切なディレクトリに保存していますが。このガイドのサーバーのセクションで説明されている方法のように、``scp``を使用することもあります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:473
+#: ../pro/linux/openvpn-easyrsa.rst:473 ../pro/windows/openvpn-easyrsa.rst:473
+#: ../storage/linux/openvpn-easyrsa.rst:473
 msgid "7. Configure the client to interact with the Nitrokey"
 msgstr "7.クライアントがNitrokeyと対話できるように設定します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:475
+#: ../pro/linux/openvpn-easyrsa.rst:475 ../pro/windows/openvpn-easyrsa.rst:475
+#: ../storage/linux/openvpn-easyrsa.rst:475
 msgid ""
 "Now back on the client machine, we will plug the Nitrokey Pro and use it "
 "to establish the VPN connection with the server. In general terms, a "
@@ -12781,17 +12911,20 @@ msgstr ""
 "さて、クライアントマシンに戻って、Nitrokey "
 "Proを接続し、それを使ってサーバーとのVPN接続を確立します。一般的に、TLSを使用した接続では、認証のために複数の証明書と鍵が必要になります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:484
+#: ../pro/linux/openvpn-easyrsa.rst:484 ../pro/windows/openvpn-easyrsa.rst:484
+#: ../storage/linux/openvpn-easyrsa.rst:484
 msgid ""
 "For this guide we can the following ``client.conf`` file, and add the "
 "required options to it accordingly:"
 msgstr "このガイドでは、以下の``client.conf``ファイルを作成し、必要なオプションを適宜追加しています。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:506
+#: ../pro/linux/openvpn-easyrsa.rst:506 ../pro/windows/openvpn-easyrsa.rst:506
+#: ../storage/linux/openvpn-easyrsa.rst:506
 msgid "Determine the correct object"
 msgstr "正しいオブジェクトの決定"
 
-#: ../pro/linux/openvpn-easyrsa.rst:508
+#: ../pro/linux/openvpn-easyrsa.rst:508 ../pro/windows/openvpn-easyrsa.rst:508
+#: ../storage/linux/openvpn-easyrsa.rst:508
 msgid ""
 "Each PKCS#11 provider can support multiple devices. In order to view the "
 "available object list you can use the following command:"
@@ -12799,7 +12932,8 @@ msgstr ""
 "各 PKCS#11 "
 "プロバイダーは、複数のデバイスをサポートすることができます。利用可能なオブジェクトのリストを表示するには、次のコマンドを使用できます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:524
+#: ../pro/linux/openvpn-easyrsa.rst:524 ../pro/windows/openvpn-easyrsa.rst:524
+#: ../storage/linux/openvpn-easyrsa.rst:524
 msgid ""
 "Each certificate/private key pair have unique ``Serialized id`` string. "
 "The serialized id string of the requested certificate should be "
@@ -12809,17 +12943,20 @@ msgstr ""
 "各証明書と秘密鍵のペアは、ユニークな``Serialized "
 "id``の文字列を持っています。要求された証明書のシリアル化されたid文字列は、設定ファイルで指定する必要があります。これを行うには、シングルクォートマークを使用して、``pkcs11-id``オプションを追加します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:530
+#: ../pro/linux/openvpn-easyrsa.rst:530 ../pro/windows/openvpn-easyrsa.rst:530
+#: ../storage/linux/openvpn-easyrsa.rst:530
 msgid "Add retrieved Serialized ID to the configuration file"
 msgstr "取得したシリアライズドIDを設定ファイルに追加する"
 
-#: ../pro/linux/openvpn-easyrsa.rst:532
+#: ../pro/linux/openvpn-easyrsa.rst:532 ../pro/windows/openvpn-easyrsa.rst:532
+#: ../storage/linux/openvpn-easyrsa.rst:532
 msgid ""
 "Using your favorite text editor, open the server.conf file, and add the "
 "following lines, while taking care to insert your own ``Serialized id``:"
 msgstr "お好きなテキストエディターでserver.confファイルを開き、``Serialized id``に注意しながら、以下の行を追加します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:539
+#: ../pro/linux/openvpn-easyrsa.rst:539 ../pro/windows/openvpn-easyrsa.rst:539
+#: ../storage/linux/openvpn-easyrsa.rst:539
 msgid ""
 "For additional `settings related to OpenVPN <https://openvpn.net"
 "/community-resources/how-to/>`_ authentication, you may also add few "
@@ -12829,33 +12966,43 @@ msgstr ""
 "to/>`_認証に関連する`設定を追加する場合は、オプションですが、鍵の管理を処理するために数行を追加することもできます。"
 
 #: ../pro/linux/openvpn-easyrsa.rst:543 ../pro/linux/openvpn-easyrsa.rst:567
+#: ../pro/windows/openvpn-easyrsa.rst:543
+#: ../pro/windows/openvpn-easyrsa.rst:567
+#: ../storage/linux/openvpn-easyrsa.rst:543
+#: ../storage/linux/openvpn-easyrsa.rst:567
 msgid "Click to view the code"
 msgstr "クリックするとコードが表示されます"
 
-#: ../pro/linux/openvpn-easyrsa.rst:560
+#: ../pro/linux/openvpn-easyrsa.rst:560 ../pro/windows/openvpn-easyrsa.rst:560
+#: ../storage/linux/openvpn-easyrsa.rst:560
 msgid "Optional step"
 msgstr "オプションステップ"
 
-#: ../pro/linux/openvpn-easyrsa.rst:563
+#: ../pro/linux/openvpn-easyrsa.rst:563 ../pro/windows/openvpn-easyrsa.rst:563
+#: ../storage/linux/openvpn-easyrsa.rst:563
 msgid ""
 "If you need to test the configuration, with and without the token on the "
 "Nitrokey, you may add lines to the same ``client.conf`` and "
 "comment/uncomment the relevant lines according to your needs:"
 msgstr "Nitrokeyにトークンがある場合とない場合の構成をテストする必要がある場合は、同じ``client.conf``に行を追加し、必要に応じて関連する行をコメント/アンコメントすることができます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:577
+#: ../pro/linux/openvpn-easyrsa.rst:577 ../pro/windows/openvpn-easyrsa.rst:577
+#: ../storage/linux/openvpn-easyrsa.rst:577
 msgid "Configure the OpenVPN client"
 msgstr "OpenVPNクライアントの設定"
 
-#: ../pro/linux/openvpn-easyrsa.rst:579
+#: ../pro/linux/openvpn-easyrsa.rst:579 ../pro/windows/openvpn-easyrsa.rst:579
+#: ../storage/linux/openvpn-easyrsa.rst:579
 msgid "The final configuration file ``client.conf`` should look like this one:"
 msgstr "最終的な設定ファイル ``client.conf`` は、以下のようになります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:622
+#: ../pro/linux/openvpn-easyrsa.rst:622 ../pro/windows/openvpn-easyrsa.rst:622
+#: ../storage/linux/openvpn-easyrsa.rst:622
 msgid "Known issues"
 msgstr "既知の問題"
 
-#: ../pro/linux/openvpn-easyrsa.rst:624
+#: ../pro/linux/openvpn-easyrsa.rst:624 ../pro/windows/openvpn-easyrsa.rst:624
+#: ../storage/linux/openvpn-easyrsa.rst:624
 msgid ""
 "There are some known issues related to OpenVPN login with OpenSC. Please "
 "consult these issues `here <https://github.com/Nitrokey/wiki/wiki/3rd-"
@@ -12864,31 +13011,38 @@ msgstr ""
 "OpenSCでのOpenVPNログインには、いくつかの既知の問題があります。これらの問題については `こちら "
 "<https://github.com/Nitrokey/wiki/wiki/3rd-Party-Issues>`_ を参照してください。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:627
+#: ../pro/linux/openvpn-easyrsa.rst:627 ../pro/windows/openvpn-easyrsa.rst:627
+#: ../storage/linux/openvpn-easyrsa.rst:627
 msgid "8. Start the OpenVPN client"
 msgstr "8.OpenVPNクライアントの起動"
 
-#: ../pro/linux/openvpn-easyrsa.rst:629
+#: ../pro/linux/openvpn-easyrsa.rst:629 ../pro/windows/openvpn-easyrsa.rst:629
+#: ../storage/linux/openvpn-easyrsa.rst:629
 msgid "Start the OpenVPN service on the client"
 msgstr "クライアントでOpenVPNサービスを開始する"
 
-#: ../pro/linux/openvpn-easyrsa.rst:631
+#: ../pro/linux/openvpn-easyrsa.rst:631 ../pro/windows/openvpn-easyrsa.rst:631
+#: ../storage/linux/openvpn-easyrsa.rst:631
 msgid "Enable the OpenVPN service, and start it using these commands:"
 msgstr "OpenVPNサービスを有効にし、以下のコマンドで起動してください。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:638
+#: ../pro/linux/openvpn-easyrsa.rst:638 ../pro/windows/openvpn-easyrsa.rst:638
+#: ../storage/linux/openvpn-easyrsa.rst:638
 msgid "To double check if the OpenVPN service is active use this command:"
 msgstr "OpenVPNサービスがアクティブかどうかを再確認するには、このコマンドを使用します。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:644
+#: ../pro/linux/openvpn-easyrsa.rst:644 ../pro/windows/openvpn-easyrsa.rst:644
+#: ../storage/linux/openvpn-easyrsa.rst:644
 msgid "Enter your User PIN"
 msgstr "ユーザーPINの入力"
 
-#: ../pro/linux/openvpn-easyrsa.rst:646
+#: ../pro/linux/openvpn-easyrsa.rst:646 ../pro/windows/openvpn-easyrsa.rst:646
+#: ../storage/linux/openvpn-easyrsa.rst:646
 msgid "When executing OpenVPN client, Nitrokey’s PIN needs to be entered:"
 msgstr "OpenVPNクライアントを実行する際に、NitrokeyのPINを入力する必要があります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:658
+#: ../pro/linux/openvpn-easyrsa.rst:658 ../pro/windows/openvpn-easyrsa.rst:658
+#: ../storage/linux/openvpn-easyrsa.rst:658
 msgid ""
 "Unfortunately OpenVPN doesn’t seem to be able to establish a handshake "
 "and stops at an error as reported `here <https://support.nitrokey.com/t"
@@ -12903,20 +13057,23 @@ msgstr ""
 "<https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`_ と "
 "`ここ <https://community.openvpn.net/openvpn/ticket/1215>`_ です。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:688
+#: ../pro/linux/openvpn-easyrsa.rst:688 ../pro/windows/openvpn-easyrsa.rst:688
+#: ../storage/linux/openvpn-easyrsa.rst:688
 msgid ""
 "In some reported cases it does not prompt for a PIN on the terminal. One "
 "workaround would be to use to use this command to login with the PIN:"
 msgstr "一部の報告では、ターミナル上でPINの入力を求められないことがあります。これを回避するには、このコマンドを使ってPINでログインする方法があります。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:694
+#: ../pro/linux/openvpn-easyrsa.rst:694 ../pro/windows/openvpn-easyrsa.rst:694
+#: ../storage/linux/openvpn-easyrsa.rst:694
 msgid ""
 "Alternatively, you could `recompile OpenVPN "
 "<https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`_ client with "
 "systemd support disabled, and it will prompt you for the PIN as expected."
 msgstr "代わりに、systemdサポートを無効にしてOpenVPN `クライアントを再コンパイルすると、期待通りにPINの入力を求められます。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:696
+#: ../pro/linux/openvpn-easyrsa.rst:696 ../pro/windows/openvpn-easyrsa.rst:696
+#: ../storage/linux/openvpn-easyrsa.rst:696
 msgid ""
 "Another option, would be to login to your OpenVPN instance with the "
 "Viscosity client which provides a better user experience especially for "
@@ -13027,6 +13184,25 @@ msgid ""
 msgstr ""
 "今後は、ウェブサイトにログインする際に、他の認証情報に加えてワンタイムパスワードの入力を求められます。ワンタイムパスワードを取得するには、Nitrokeyアプリを起動し、\"Menu\""
 " -> \"Passwords\" -> \"YourSlotName \"に再度アクセスする必要があります。"
+
+#: ../pro/smime.rst:17
+msgid ""
+"If you are in doubt which one to choose, you should use OpenPGP, see "
+"`here <openpgp.html>`_. This page describes the usage of S/MIME email "
+"encryption."
+msgstr "どれを選べばいいのかわからない場合は、OpenPGPを使うべきで、`こちら<openpgp.html>`_を参照してください。このページでは、S/MIMEのメール暗号化の使い方を説明しています。"
+
+#: ../pro/smime.rst:77
+msgid ""
+"Nitrokey Storage 2: You need to install OpenSC in version 0.18 or higher."
+" You can find the files on the `OpenSC website "
+"<https://github.com/OpenSC/OpenSC/releases>`_ for Windows and macOS user "
+"or `here <https://github.com/Nitrokey/opensc-build>`_ for Debian/Ubuntu "
+"users."
+msgstr ""
+"Nitrokey Storage "
+"2：OpenSCをバージョン0.18以上でインストールする必要があります。WindowsやmacOSのユーザーは`OpenSCのウェブサイト<https://github.com/OpenSC/OpenSC/releases>`_で、Debian/Ubuntuのユーザーは`こちら<https://github.com/Nitrokey"
+"/opensc-build>`_でファイルを見つけることができます。"
 
 #: ../pro/linux/ssh.rst:2 ../start/linux/ssh.rst:2 ../storage/linux/ssh.rst:2
 msgid "SSH For Server Administration"
@@ -13504,6 +13680,24 @@ msgid ""
 "<smime.html>`_ with the Nitrokey. The driver has to be installed on every"
 " computer you want to use the certificate on."
 msgstr "これで、パスワードの代わりにNitrokeyを使ってコンピュータにログオンする準備が整い、Nitrokeyを使って`S/MIMEメールの暗号化/署名<smime.html>`_ができるようになります。ドライバは、証明書を使用したいすべてのコンピュータにインストールする必要があります。"
+
+#: ../pro/windows/openvpn-easyrsa.rst:17
+#, fuzzy
+msgid ""
+"To sign the certificates, we will use a `Nitrokey HSM 2 "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ set "
+"up as `Certificate Authority <../../hsm/windows/certificate-"
+"authority.html#creating-the-intermediate-certificate-authority>`_, "
+"however this guide does not cover the set up of the CA itself (it is "
+"clear and `well documented here <../../hsm/windows/certificate-"
+"authority.html#sign-a-server-certificate>`_)."
+msgstr ""
+"証明書に署名するために、`Nitrokey HSM 2 <https://shop.nitrokey.com/shop/product/nk-"
+"pro-2-nitrokey-pro-2-3>`_を`認証局 <certificate-authority.html#creating-the-"
+"intermediate-certificate-"
+"authority>`_としてセットアップして使用します。しかし、このガイドでは、CA自体のセットアップはカバーしていません（それは"
+"、<certificate-authority.html#sign-a-server-"
+"certificate>`_で明確に、そして`よく説明されています）。"
 
 #: ../pro/windows/openvpn-viscosity.rst:6
 msgid "Viscosity Client Configuration with OpenVPN"
@@ -15424,6 +15618,24 @@ msgid ""
 msgstr ""
 "Nitrokeyアプリを使って、デフォルトのUser PIN（デフォルト：123456）とAdmin "
 "PIN（デフォルト：12345678）を自分の好きなものに変更してください。"
+
+#: ../storage/linux/openvpn-easyrsa.rst:17
+#, fuzzy
+msgid ""
+"To sign the certificates, we will use a `Nitrokey HSM 2 "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ set "
+"up as `Certificate Authority <../../hsm/linux/certificate-authority.html"
+"#creating-the-intermediate-certificate-authority>`_, however this guide "
+"does not cover the set up of the CA itself (it is clear and `well "
+"documented here <../../hsm/linux/certificate-authority.html#sign-a"
+"-server-certificate>`_)."
+msgstr ""
+"証明書に署名するために、`Nitrokey HSM 2 <https://shop.nitrokey.com/shop/product/nk-"
+"pro-2-nitrokey-pro-2-3>`_を`認証局 <certificate-authority.html#creating-the-"
+"intermediate-certificate-"
+"authority>`_としてセットアップして使用します。しかし、このガイドでは、CA自体のセットアップはカバーしていません（それは"
+"、<certificate-authority.html#sign-a-server-"
+"certificate>`_で明確に、そして`よく説明されています）。"
 
 #: ../storage/mac/product_platform_heading.rst:3
 msgid "(Nitrokey Storage 2 - macOS)"
@@ -19180,3 +19392,4 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 
 #~ msgid "Nitrokey FIDO U2F With macOS"
 #~ msgstr "Nitrokey FIDO U2FとmacOSの組み合わせ"
+

@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-11 13:12+0200\n"
+"POT-Creation-Date: 2022-08-22 18:01+0200\n"
 "PO-Revision-Date: 2022-08-11 12:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
@@ -517,7 +517,8 @@ msgstr "你也可以通过注销用户会话并重新登录来测试你的配置
 msgid "img6"
 msgstr "img6"
 
-#: ../fido2/linux/desktop-login.rst:236
+#: ../fido2/linux/desktop-login.rst:236 ../hsm/linux/smime.rst:57
+#: ../hsm/mac/smime.rst:57 ../hsm/windows/smime.rst:57
 #: ../pro/linux/automatic-screen-lock.rst:77
 #: ../pro/linux/disk-encryption-luks.rst:140
 #: ../pro/linux/hard-disk-encryption.rst:116 ../pro/openpgp-outlook.rst:26
@@ -961,7 +962,8 @@ msgid ""
 " (the so called WINK command)."
 msgstr "注意：白色LED灯的闪烁也是用来表示所选设备的信号（所谓的WINK命令）。"
 
-#: ../fido2/linux/index.rst:7 ../nextbox/troubleshooting.rst:2
+#: ../fido2/linux/index.rst:7 ../hsm/linux/smime.rst:72 ../hsm/mac/smime.rst:72
+#: ../hsm/windows/smime.rst:72 ../nextbox/troubleshooting.rst:2
 #: ../nitrokey3/shared/nitropy.rst:71 ../nitrokey3/troubleshooting.rst:2
 #: ../nitropad/troubleshooting.rst:2 ../pro/firmware-update.rst:67
 #: ../pro/login-with-pam.rst:42 ../pro/openpgp-thunderbird.rst:14
@@ -2910,37 +2912,45 @@ msgstr ""
 "``id``等等，这些可以部分删除，只要必要的对象可以通过生成的URL唯一地识别，见:doc:`TLS Apache2 "
 "Configuration<apache2-tls>` 对于一个只使用``id`` 的例子。"
 
+#: ../hsm/linux/smime.rst:2 ../hsm/mac/smime.rst:2 ../hsm/windows/smime.rst:2
 #: ../pro/smime.rst:2
 msgid "S/MIME Email Encryption"
 msgstr "S/MIME电子邮件加密"
 
+#: ../hsm/linux/smime.rst:9 ../hsm/mac/smime.rst:9 ../hsm/windows/smime.rst:9
 #: ../nextbox/technical/replace-drive.rst:12
 #: ../pro/linux/openvpn-easyrsa.rst:24 ../pro/openpgp-outlook.rst:14
 #: ../pro/smime-outlook.rst:9 ../pro/smime-thunderbird.rst:9 ../pro/smime.rst:9
-#: ../pro/windows/openpgp-csp.rst:11 ../pro/windows/openvpn-viscosity.rst:17
+#: ../pro/windows/openpgp-csp.rst:11 ../pro/windows/openvpn-easyrsa.rst:24
+#: ../pro/windows/openvpn-viscosity.rst:17
+#: ../storage/linux/openvpn-easyrsa.rst:24
 msgid "Prerequisites"
 msgstr "先决条件"
 
-#: ../pro/openpgp.rst:8 ../pro/smime.rst:11
+#: ../hsm/linux/smime.rst:11 ../hsm/mac/smime.rst:11
+#: ../hsm/windows/smime.rst:11 ../pro/openpgp.rst:8 ../pro/smime.rst:11
 msgid "There are two widely used standards for email encryption."
 msgstr "目前有两种广泛使用的电子邮件加密标准。"
 
-#: ../pro/openpgp.rst:10 ../pro/smime.rst:13
+#: ../hsm/linux/smime.rst:13 ../hsm/mac/smime.rst:13
+#: ../hsm/windows/smime.rst:13 ../pro/openpgp.rst:10 ../pro/smime.rst:13
 msgid "OpenPGP/GnuPG is popular among individuals,"
 msgstr "OpenPGP/GnuPG在个人中很受欢迎。"
 
-#: ../pro/openpgp.rst:12 ../pro/smime.rst:15
+#: ../hsm/linux/smime.rst:15 ../hsm/mac/smime.rst:15
+#: ../hsm/windows/smime.rst:15 ../pro/openpgp.rst:12 ../pro/smime.rst:15
 msgid "S/MIME/X.509 is mostly used by enterprises."
 msgstr "S/MIME/X.509大多被企业使用。"
 
-#: ../pro/smime.rst:17
+#: ../hsm/linux/smime.rst:17 ../hsm/mac/smime.rst:17
+#: ../hsm/windows/smime.rst:17
 msgid ""
-"If you are in doubt which one to choose, you should use OpenPGP, see "
-"`here <openpgp.html>`_. This page describes the usage of S/MIME email "
-"encryption."
-msgstr "如果你对选择哪一种有疑问，你应该使用OpenPGP，见`这里<openpgp.html>`_。本页介绍了S/MIME电子邮件加密的用法。"
+"The Nitrokey HSM 2 only supports the S/MIME/X.509 standard. This page "
+"describes the usage of S/MIME email encryption."
+msgstr ""
 
-#: ../pro/smime.rst:19
+#: ../hsm/linux/smime.rst:19 ../hsm/mac/smime.rst:19
+#: ../hsm/windows/smime.rst:19 ../pro/smime.rst:19
 msgid ""
 "You need to purchase a S/MIME certificate (e.g. at `CERTUM "
 "<https://www.certum.eu/en/cert_offer_cert_id/>`_) or may already got one "
@@ -2958,18 +2968,21 @@ msgstr ""
 " apt install "
 "opensc``在Ubuntu上），但MacOS和Windows用户可以从`OpenSC<https://github.com/OpenSC/OpenSC/wiki>`_页面下载安装文件。"
 
-#: ../pro/smime-outlook.rst:17 ../pro/smime-thunderbird.rst:17
-#: ../pro/smime.rst:22
+#: ../hsm/linux/smime.rst:22 ../hsm/mac/smime.rst:22
+#: ../hsm/windows/smime.rst:22 ../pro/smime-outlook.rst:17
+#: ../pro/smime-thunderbird.rst:17 ../pro/smime.rst:22
 msgid ""
 "Windows users with 64-bit system (standard) need to install both, the "
 "32-bit and the 64-bit version of OpenSC!"
 msgstr "使用64位系统（标准）的Windows用户需要同时安装32位和64位版本的OpenSC!"
 
-#: ../pro/smime.rst:25
+#: ../hsm/linux/smime.rst:25 ../hsm/mac/smime.rst:25
+#: ../hsm/windows/smime.rst:25 ../pro/smime.rst:25
 msgid "Import Existing Key and Certificate"
 msgstr "导入现有的密钥和证书"
 
-#: ../pro/smime.rst:27
+#: ../hsm/linux/smime.rst:27 ../hsm/mac/smime.rst:27
+#: ../hsm/windows/smime.rst:27 ../pro/smime.rst:27
 msgid ""
 "The following instructions are based on the `wiki of OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`_. We will assume, "
@@ -2979,7 +2992,9 @@ msgstr ""
 "下面的说明是基于OpenSC的`wiki <https://github.com/OpenSC/OpenSC/wiki/OpenPGP-"
 "card>`_。我们将假设你已经得到了一个作为.p12文件的密钥-证书对。如果你有一个单独的密钥和证书文件，请看一下wiki页面。"
 
-#: ../pro/openpgp-keygen-on-device.rst:25 ../pro/smime.rst:29
+#: ../hsm/linux/smime.rst:29 ../hsm/mac/smime.rst:29
+#: ../hsm/windows/smime.rst:29 ../pro/openpgp-keygen-on-device.rst:25
+#: ../pro/smime.rst:29
 msgid ""
 "To open the Windows command line please push the Windows-key and R-key. "
 "Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on"
@@ -2989,7 +3004,8 @@ msgstr ""
 "要打开Windows命令行，请按下Windows键和R键。现在在文本字段中输入 \"cmd.exe "
 "\"并点击回车。要在macOS或GNU/Linux上打开终端，请使用应用程序搜索（例如macOS的spotlight）。"
 
-#: ../pro/smime.rst:31
+#: ../hsm/linux/smime.rst:31 ../hsm/mac/smime.rst:31
+#: ../hsm/windows/smime.rst:31 ../pro/smime.rst:31
 msgid ""
 "To make these commands as simple as possible, the .p12 file needs to be "
 "in your home folder. On Windows this is usually ‘C:\\Users\\yourusername’"
@@ -2999,43 +3015,51 @@ msgid ""
 "commands."
 msgstr "为了使这些命令尽可能简单，.p12文件需要放在你的主文件夹中。在Windows系统中，这通常是'C:\\Users\\yusername'，在macOS和GNU/Linux系统中，它将是'/home/yourusername'。如果你没有把.p12文件存放在那里，你必须调整下面的命令中的路径。在提交命令之前，请插入Nitrokey。"
 
-#: ../pro/smime.rst:33
+#: ../hsm/linux/smime.rst:33 ../hsm/mac/smime.rst:33
+#: ../hsm/windows/smime.rst:33 ../pro/smime.rst:33
 msgid ""
 "Assuming that your key-certificate file reads ‘myprivate.p12’ the "
 "commands for Windows looks like this:"
 msgstr "假设你的密钥证书文件是 \"myprivate.p12\"，Windows的命令看起来像这样。"
 
-#: ../pro/smime.rst:40
+#: ../hsm/linux/smime.rst:40 ../hsm/mac/smime.rst:40
+#: ../hsm/windows/smime.rst:40 ../pro/smime.rst:40
 msgid "and on macOS and GNU/Linux it will be"
 msgstr "而在macOS和GNU/Linux上，它将是"
 
-#: ../pro/smime.rst:47
+#: ../hsm/linux/smime.rst:47 ../hsm/mac/smime.rst:47
+#: ../hsm/windows/smime.rst:47 ../pro/smime.rst:47
 msgid ""
 "The two commands copy the key-certificate pair to the slot 2 (needed for "
 "decrypting emails) and slot 3 (needed for signing). The output looks on "
 "both systems something like this:"
 msgstr "这两条命令将密钥-证书对复制到槽2（解密邮件需要）和槽3（签名需要）。在两个系统上的输出看起来都是这样的。"
 
-#: ../pro/smime.rst:54
+#: ../hsm/linux/smime.rst:54 ../hsm/mac/smime.rst:54
+#: ../hsm/windows/smime.rst:54 ../pro/smime.rst:54
 msgid ""
 "Please note that there will be error messages that can be safely ignored "
 "(see output example above). You now have the key-certificate pair loaded "
 "on the Nitrokey."
 msgstr "请注意，会有一些可以安全忽略的错误信息（见上面的输出例子）。现在你已经在Nitrokey上加载了钥匙-证书对。"
 
-#: ../pro/openpgp.rst:51 ../pro/smime.rst:59
+#: ../hsm/linux/smime.rst:59 ../hsm/mac/smime.rst:59
+#: ../hsm/windows/smime.rst:59 ../pro/openpgp.rst:51 ../pro/smime.rst:59
 msgid "You can find further information about the usage on these pages:"
 msgstr "你可以在这些网页上找到有关使用的进一步信息。"
 
-#: ../pro/smime.rst:61
+#: ../hsm/linux/smime.rst:61 ../hsm/mac/smime.rst:61
+#: ../hsm/windows/smime.rst:61 ../pro/smime.rst:61
 msgid "for using `S/MIME encryption on Thunderbird <smime-thunderbird.html>`_"
 msgstr "用于在Thunderbird上使用`S/MIME加密<smime-thunderbird.html>`_。"
 
-#: ../pro/smime.rst:64
+#: ../hsm/linux/smime.rst:64 ../hsm/mac/smime.rst:64
+#: ../hsm/windows/smime.rst:64 ../pro/smime.rst:64
 msgid "for using `S/MIME encryption on Outlook <smime-outlook.html>`_"
 msgstr "用于在Outlook上使用`S/MIME加密<smime-outlook.html>`_。"
 
-#: ../pro/openpgp.rst:63 ../pro/smime.rst:67
+#: ../hsm/linux/smime.rst:67 ../hsm/mac/smime.rst:67
+#: ../hsm/windows/smime.rst:67 ../pro/openpgp.rst:63 ../pro/smime.rst:67
 msgid ""
 "for using `Evolution <https://help.gnome.org/users/evolution/stable/mail-"
 "encryption.html.en>`_, an email client for the Gnome Desktop on Linux "
@@ -3044,23 +3068,22 @@ msgstr ""
 "为使用`Evolution <https://help.gnome.org/users/evolution/stable/mail-"
 "encryption.html.en>`_，Linux系统上Gnome桌面的电子邮件客户端。"
 
-#: ../pro/smime.rst:74
+#: ../hsm/linux/smime.rst:74 ../hsm/mac/smime.rst:74
+#: ../hsm/windows/smime.rst:74 ../pro/smime.rst:74
 msgid ""
 "On Windows: Did you install **both**, the 32-bit and the 64-bit version "
 "of OpenSC?"
 msgstr "在Windows上。你是否同时安装了***，32位和64位版本的OpenSC？"
 
-#: ../pro/smime.rst:77
+#: ../hsm/linux/smime.rst:77 ../hsm/mac/smime.rst:77
+#: ../hsm/windows/smime.rst:77
 msgid ""
-"Nitrokey Storage 2: You need to install OpenSC in version 0.18 or higher."
-" You can find the files on the `OpenSC website "
+"You need to install OpenSC in version 0.18 or higher. You can find the "
+"files on the `OpenSC website "
 "<https://github.com/OpenSC/OpenSC/releases>`_ for Windows and macOS user "
 "or `here <https://github.com/Nitrokey/opensc-build>`_ for Debian/Ubuntu "
 "users."
 msgstr ""
-"Nitrokey Storage 2: "
-"你需要安装0.18或更高版本的OpenSC。你可以在`OpenSC网站<https://github.com/OpenSC/OpenSC/releases>`_为Windows和macOS用户找到这些文件，或者`这里<https://github.com/Nitrokey"
-"/opensc-build>`_为Debian/Ubuntu用户。"
 
 #: ../pro/smime-outlook.rst:2
 msgid "S/MIME Email Encryption with Outlook"
@@ -11699,17 +11722,20 @@ msgid ""
 "secure email encryption!**"
 msgstr "你的Nitrokey是个性化的，可以随时使用。**在安全的电子邮件加密中享受乐趣！**。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:2
+#: ../pro/linux/openvpn-easyrsa.rst:2 ../pro/windows/openvpn-easyrsa.rst:2
+#: ../storage/linux/openvpn-easyrsa.rst:2
 msgid "OpenVPN Configuration with Easy-RSA"
 msgstr "用Easy-RSA配置OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:11
+#: ../pro/linux/openvpn-easyrsa.rst:11 ../pro/windows/openvpn-easyrsa.rst:11
+#: ../storage/linux/openvpn-easyrsa.rst:11
 msgid ""
 "This guide is work-in-progress, and will be updated accordinlgy. Please "
 "take this status into consideration."
 msgstr "本指南是正在进行的工作，并将根据情况进行更新。请考虑到这一状况。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:13
+#: ../pro/linux/openvpn-easyrsa.rst:13 ../pro/windows/openvpn-easyrsa.rst:13
+#: ../storage/linux/openvpn-easyrsa.rst:13
 msgid ""
 "This guide shows how to configure OpenVPN clients to login using a "
 "`Nitrokey Pro 2 <https://shop.nitrokey.com/shop/product/nk-pro-2"
@@ -11741,7 +11767,8 @@ msgstr ""
 "authority>`_设置的。然而，本指南并不包括CA本身的设置（它很清楚，并且`这里有很好的记录<certificate-"
 "authority.html#sign-a-server-certificate>`_）。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:20
+#: ../pro/linux/openvpn-easyrsa.rst:20 ../pro/windows/openvpn-easyrsa.rst:20
+#: ../storage/linux/openvpn-easyrsa.rst:20
 msgid ""
 "We will use Easy-RSA, because it seems to provide some flexibility, and "
 "allows key management via external PKIs. We will use it on the server to "
@@ -11753,27 +11780,32 @@ msgstr ""
 "RSA，因为它似乎提供了一些灵活性，并允许通过外部PKI进行密钥管理。我们将在服务器上使用它来发出签名请求，并在客户端重复同样的过程。证书签名请求将由Nitorkey"
 " HSM上的CA签名，并重新传送到服务器和客户端。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:26
+#: ../pro/linux/openvpn-easyrsa.rst:26 ../pro/windows/openvpn-easyrsa.rst:26
+#: ../storage/linux/openvpn-easyrsa.rst:26
 msgid ""
 "In the following documentation we will require 3 different machines as "
 "following:"
 msgstr "在下面的文件中，我们将需要3台不同的机器，如下。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:28
+#: ../pro/linux/openvpn-easyrsa.rst:28 ../pro/windows/openvpn-easyrsa.rst:28
+#: ../storage/linux/openvpn-easyrsa.rst:28
 msgid "OpenVPN server (v. 2.5) on Debian 10 (EC2 virtual machine - AWS)"
 msgstr "OpenVPN服务器（2.5版）在Debian 10上（EC2虚拟机-AWS）。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:30
+#: ../pro/linux/openvpn-easyrsa.rst:30 ../pro/windows/openvpn-easyrsa.rst:30
+#: ../storage/linux/openvpn-easyrsa.rst:30
 msgid "OpenVPN client (v. 2.4.9) on Fedora 30 (local machine)"
 msgstr "Fedora 30上的OpenVPN客户端（2.4.9版）（本地机）。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:32
+#: ../pro/linux/openvpn-easyrsa.rst:32 ../pro/windows/openvpn-easyrsa.rst:32
+#: ../storage/linux/openvpn-easyrsa.rst:32
 msgid ""
 "The Certificate Authority will be accessible from a standalone machine "
 "with Fedora 30 (local machine)"
 msgstr "证书颁发机构将可以从一台装有Fedora 30的独立机器上访问（本地机器）。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:35
+#: ../pro/linux/openvpn-easyrsa.rst:35 ../pro/windows/openvpn-easyrsa.rst:35
+#: ../storage/linux/openvpn-easyrsa.rst:35
 msgid ""
 "To interact with the devices we will require `OpenSC 0.20 "
 "<https://github.com/OpenSC/OpenSC/wiki>`_ installed on the client and CA "
@@ -11785,11 +11817,13 @@ msgstr ""
 "<https://github.com/OpenSC/OpenSC/wiki>`_。你可以按照`这个链接（*Unix）<https://github.com/OpenSC/OpenSC/wiki"
 "/Compiling-and-Installing-on-Unix-flavors>`_中的说明来设置它。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:38
+#: ../pro/linux/openvpn-easyrsa.rst:38 ../pro/windows/openvpn-easyrsa.rst:38
+#: ../storage/linux/openvpn-easyrsa.rst:38
 msgid "To download the dependencies on Fedora machines we can this instruction:"
 msgstr "要在Fedora机器上下载依赖项，我们可以用这个指令。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:44
+#: ../pro/linux/openvpn-easyrsa.rst:44 ../pro/windows/openvpn-easyrsa.rst:44
+#: ../storage/linux/openvpn-easyrsa.rst:44
 msgid ""
 "For Debian Linux, more recent OpenSC packages are available `here "
 "<https://github.com/Nitrokey/opensc-build>`_."
@@ -11797,11 +11831,13 @@ msgstr ""
 "对于Debian Linux，更多最新的OpenSC软件包可以在`这里获得 <https://github.com/Nitrokey"
 "/opensc-build>`_。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:46
+#: ../pro/linux/openvpn-easyrsa.rst:46 ../pro/windows/openvpn-easyrsa.rst:46
+#: ../storage/linux/openvpn-easyrsa.rst:46
 msgid "We will use the following Nitrokeys for physical key management:"
 msgstr "我们将使用以下硝基钥匙进行物理钥匙管理。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:48
+#: ../pro/linux/openvpn-easyrsa.rst:48 ../pro/windows/openvpn-easyrsa.rst:48
+#: ../storage/linux/openvpn-easyrsa.rst:48
 msgid ""
 "An authentication key using the `Nitrokey Pro 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf>`_"
@@ -11809,7 +11845,8 @@ msgstr ""
 "一个使用`Nitrokey Pro 2 (pdf)的认证密钥 "
 "<https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf>`_"
 
-#: ../pro/linux/openvpn-easyrsa.rst:51
+#: ../pro/linux/openvpn-easyrsa.rst:51 ../pro/windows/openvpn-easyrsa.rst:51
+#: ../storage/linux/openvpn-easyrsa.rst:51
 msgid ""
 "A Certificate Authority (CA) using the `Nitrokey HSM 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`_"
@@ -11817,7 +11854,8 @@ msgstr ""
 "一个使用`Nitrokey HSM 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`_的证书机构（CA）。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:54
+#: ../pro/linux/openvpn-easyrsa.rst:54 ../pro/windows/openvpn-easyrsa.rst:54
+#: ../storage/linux/openvpn-easyrsa.rst:54
 msgid ""
 "As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you "
 "may follow the instructions available `in the documentation <certificate-"
@@ -11826,7 +11864,8 @@ msgstr ""
 "作为提醒，要在Nitrokey HSM 2上建立一个证书颁发机构，你可以按照文档`中提供的说明<certificate-"
 "authority.html#sign-a-server-certificate>`_。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:56
+#: ../pro/linux/openvpn-easyrsa.rst:56 ../pro/windows/openvpn-easyrsa.rst:56
+#: ../storage/linux/openvpn-easyrsa.rst:56
 msgid ""
 "Alternatively you may set up your own CA on a `on a separate machine "
 "<https://www.digitalocean.com/community/tutorials/how-to-set-up-and-"
@@ -11841,27 +11880,33 @@ msgstr ""
 "/community-resources/setting-up-your-own-certificate-authority-"
 "ca/>`_。后面2个选项依靠软件解决方案进行密钥管理。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:61
+#: ../pro/linux/openvpn-easyrsa.rst:61 ../pro/windows/openvpn-easyrsa.rst:61
+#: ../storage/linux/openvpn-easyrsa.rst:61
 msgid "Server side"
 msgstr "服务器端"
 
-#: ../pro/linux/openvpn-easyrsa.rst:64
+#: ../pro/linux/openvpn-easyrsa.rst:64 ../pro/windows/openvpn-easyrsa.rst:64
+#: ../storage/linux/openvpn-easyrsa.rst:64
 msgid "1. Install OpenVPN"
 msgstr "1.安装OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:66
+#: ../pro/linux/openvpn-easyrsa.rst:66 ../pro/windows/openvpn-easyrsa.rst:66
+#: ../storage/linux/openvpn-easyrsa.rst:66
 msgid "First we need to enable IP Forwarding by editing ``/etc/sysctl.conf`` file"
 msgstr "首先，我们需要通过编辑``/etc/sysctl.conf``文件启用IP转发功能。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:72
+#: ../pro/linux/openvpn-easyrsa.rst:72 ../pro/windows/openvpn-easyrsa.rst:72
+#: ../storage/linux/openvpn-easyrsa.rst:72
 msgid "Uncomment or edit accordingly the following line"
 msgstr "取消注释或相应地编辑以下一行"
 
-#: ../pro/linux/openvpn-easyrsa.rst:78
+#: ../pro/linux/openvpn-easyrsa.rst:78 ../pro/windows/openvpn-easyrsa.rst:78
+#: ../storage/linux/openvpn-easyrsa.rst:78
 msgid "Close after saving it, and enter this command"
 msgstr "保存后关闭，并输入以下命令"
 
-#: ../pro/linux/openvpn-easyrsa.rst:84
+#: ../pro/linux/openvpn-easyrsa.rst:84 ../pro/windows/openvpn-easyrsa.rst:84
+#: ../storage/linux/openvpn-easyrsa.rst:84
 msgid ""
 "Once IP forwarding is done, we will need to download the latest release "
 "of OpenvPN for our Debian 10 server, according to `these instructions "
@@ -11870,15 +11915,18 @@ msgstr ""
 "一旦IP转发完成，我们将需要为我们的Debian "
 "10服务器下载最新版本的OpenvPN，根据`这些说明<https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`_。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:86
+#: ../pro/linux/openvpn-easyrsa.rst:86 ../pro/windows/openvpn-easyrsa.rst:86
+#: ../storage/linux/openvpn-easyrsa.rst:86
 msgid "Change to root and download the GPG key that signed the package"
 msgstr "改为根目录，下载签署软件包的GPG密钥。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:93
+#: ../pro/linux/openvpn-easyrsa.rst:93 ../pro/windows/openvpn-easyrsa.rst:93
+#: ../storage/linux/openvpn-easyrsa.rst:93
 msgid "Add the URL of the adequate OpenVPN packages to the ``sources.list`` file"
 msgstr "在``sources.list``文件中添加足够的OpenVPN包的URL。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:100
+#: ../pro/linux/openvpn-easyrsa.rst:100 ../pro/windows/openvpn-easyrsa.rst:100
+#: ../storage/linux/openvpn-easyrsa.rst:100
 msgid ""
 "We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN "
 "`version 2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`_ to "
@@ -11887,21 +11935,25 @@ msgstr ""
 "我们下载了OpenVPN 2.5，因为 \"密码提示 \"至少需要OpenVPN `版本2.4.8 "
 "<https://community.openvpn.net/openvpn/ticket/1215>`_才能登录。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:103
+#: ../pro/linux/openvpn-easyrsa.rst:103 ../pro/windows/openvpn-easyrsa.rst:103
+#: ../storage/linux/openvpn-easyrsa.rst:103
 msgid "Next we download OpenVPN"
 msgstr "接下来我们下载OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:109
+#: ../pro/linux/openvpn-easyrsa.rst:109 ../pro/windows/openvpn-easyrsa.rst:109
+#: ../storage/linux/openvpn-easyrsa.rst:109
 msgid ""
 "If you want to check the version, it possible by calling ``--version`` "
 "and print the following:"
 msgstr "如果你想检查版本，可以通过调用``--version``并打印如下。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:122
+#: ../pro/linux/openvpn-easyrsa.rst:122 ../pro/windows/openvpn-easyrsa.rst:122
+#: ../storage/linux/openvpn-easyrsa.rst:122
 msgid "2. Install Easy-RSA"
 msgstr "2.安装Easy-RSA"
 
-#: ../pro/linux/openvpn-easyrsa.rst:124
+#: ../pro/linux/openvpn-easyrsa.rst:124 ../pro/windows/openvpn-easyrsa.rst:124
+#: ../storage/linux/openvpn-easyrsa.rst:124
 msgid ""
 "To build the PKI, we will download the latest version of Easy-RSA on the "
 "server and client machines. To get the latest release, go to the "
@@ -11914,19 +11966,23 @@ msgstr ""
 "RSA。要获得最新版本，请到EasyRSA官方GitHub项目的`Releases页面<https://github.com/OpenVPN"
 "/easy-rsa/releases>`_，复制以``.tgz``结尾的文件下载链接，然后将其粘贴到以下命令。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:126
+#: ../pro/linux/openvpn-easyrsa.rst:126 ../pro/windows/openvpn-easyrsa.rst:126
+#: ../storage/linux/openvpn-easyrsa.rst:126
 msgid "Download the latest release"
 msgstr "下载最新版本"
 
-#: ../pro/linux/openvpn-easyrsa.rst:133
+#: ../pro/linux/openvpn-easyrsa.rst:133 ../pro/windows/openvpn-easyrsa.rst:133
+#: ../storage/linux/openvpn-easyrsa.rst:133
 msgid "Extract the tarball"
 msgstr "提取tarball文件"
 
-#: ../pro/linux/openvpn-easyrsa.rst:142
+#: ../pro/linux/openvpn-easyrsa.rst:142 ../pro/windows/openvpn-easyrsa.rst:142
+#: ../storage/linux/openvpn-easyrsa.rst:142
 msgid "3. Create a PKI for OpenVPN server"
 msgstr "3.为OpenVPN服务器创建一个PKI"
 
-#: ../pro/linux/openvpn-easyrsa.rst:144
+#: ../pro/linux/openvpn-easyrsa.rst:144 ../pro/windows/openvpn-easyrsa.rst:144
+#: ../storage/linux/openvpn-easyrsa.rst:144
 msgid ""
 "Before you can create your OpenVPN server’s private key and certificate, "
 "you need to create a local Public Key Infrastructure directory on your "
@@ -11935,21 +11991,25 @@ msgid ""
 " server."
 msgstr "在创建OpenVPN服务器的私钥和证书之前，你需要在OpenVPN服务器上创建一个本地公钥基础设施目录。你将使用这个目录来管理服务器和客户的证书请求，而不是直接在你的CA服务器上提出。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:146
+#: ../pro/linux/openvpn-easyrsa.rst:146 ../pro/windows/openvpn-easyrsa.rst:146
+#: ../storage/linux/openvpn-easyrsa.rst:146
 msgid ""
 "To build a PKI directory on your OpenVPN server, you’ll need to populate "
 "a file called ``vars`` with some default values."
 msgstr "要在你的OpenVPN服务器上建立一个PKI目录，你需要在一个名为``vars``的文件中填充一些默认值。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:148
+#: ../pro/linux/openvpn-easyrsa.rst:148 ../pro/windows/openvpn-easyrsa.rst:148
+#: ../storage/linux/openvpn-easyrsa.rst:148
 msgid "Create a ``vars`` file"
 msgstr "创建一个``vars``文件"
 
-#: ../pro/linux/openvpn-easyrsa.rst:156
+#: ../pro/linux/openvpn-easyrsa.rst:156 ../pro/windows/openvpn-easyrsa.rst:156
+#: ../storage/linux/openvpn-easyrsa.rst:156
 msgid "Once the file is opened, paste in the following two lines"
 msgstr "一旦文件被打开，粘贴以下两行内容"
 
-#: ../pro/linux/openvpn-easyrsa.rst:163
+#: ../pro/linux/openvpn-easyrsa.rst:163 ../pro/windows/openvpn-easyrsa.rst:163
+#: ../storage/linux/openvpn-easyrsa.rst:163
 msgid ""
 "These are the only two lines that you need in this ``vars`` file on your "
 "OpenVPN server since it will not be used as a Certificate Authority. They"
@@ -11958,7 +12018,8 @@ msgid ""
 " secure signatures for your clients and OpenVPN server."
 msgstr "这是你在OpenVPN服务器上的``vars``文件中唯一需要的两行，因为它不会被用作证书授权。他们将确保你的私钥和证书请求被配置为使用椭圆曲线加密法（ECC）来生成密钥，并为你的客户和OpenVPN服务器提供安全签名。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:165
+#: ../pro/linux/openvpn-easyrsa.rst:165 ../pro/windows/openvpn-easyrsa.rst:165
+#: ../storage/linux/openvpn-easyrsa.rst:165
 msgid ""
 "In regards to the choice of the cryptographic algorithms, I follow the "
 "model in `this tutorial <https://www.digitalocean.com/community/tutorials"
@@ -11969,29 +12030,34 @@ msgstr ""
 "to-set-up-and-configure-an-openvpn-server-on-"
 "centos-8>`_中的模式，你可以根据自己的具体需要定制这些算法。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:167
+#: ../pro/linux/openvpn-easyrsa.rst:167 ../pro/windows/openvpn-easyrsa.rst:167
+#: ../storage/linux/openvpn-easyrsa.rst:167
 msgid "Initialize the PKI"
 msgstr "初始化PKI"
 
-#: ../pro/linux/openvpn-easyrsa.rst:169
+#: ../pro/linux/openvpn-easyrsa.rst:169 ../pro/windows/openvpn-easyrsa.rst:169
+#: ../storage/linux/openvpn-easyrsa.rst:169
 msgid ""
 "Once you have populated the ``vars`` file you can proceed with creating "
 "the PKI directory. To do so, run the easyrsa script with the init-pki "
 "option:"
 msgstr "一旦你填充了``vars``文件，就可以继续创建PKI目录。要做到这一点，请使用init-pki选项运行easyrsa脚本。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:175
+#: ../pro/linux/openvpn-easyrsa.rst:175 ../pro/windows/openvpn-easyrsa.rst:175
+#: ../storage/linux/openvpn-easyrsa.rst:175
 msgid ""
 "After you’ve initialized your PKI on the OpenVPN server, you are ready to"
 " move on to the next step, which is creating an OpenVPN server "
 "certificate request and private key."
 msgstr "在你初始化了OpenVPN服务器上的PKI后，你就可以进入下一步了，也就是创建OpenVPN服务器证书请求和私钥。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:178
+#: ../pro/linux/openvpn-easyrsa.rst:178 ../pro/windows/openvpn-easyrsa.rst:178
+#: ../storage/linux/openvpn-easyrsa.rst:178
 msgid "4. Create ``server.req`` and ``server.key``"
 msgstr "4.创建``server.req`和``server.key``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:180
+#: ../pro/linux/openvpn-easyrsa.rst:180 ../pro/windows/openvpn-easyrsa.rst:180
+#: ../storage/linux/openvpn-easyrsa.rst:180
 msgid ""
 "Now that your OpenVPN server has all the prerequisites installed, the "
 "next step is to generate a key pair composed of a private key (to keep "
@@ -11999,7 +12065,8 @@ msgid ""
 "server."
 msgstr "现在你的OpenVPN服务器已经安装了所有先决条件，下一步是在你的OpenVPN服务器上生成一个由私钥（保密）和证书签名请求（``.csr``）组成的密钥对。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:182
+#: ../pro/linux/openvpn-easyrsa.rst:182 ../pro/windows/openvpn-easyrsa.rst:182
+#: ../storage/linux/openvpn-easyrsa.rst:182
 msgid ""
 "In general terms, on systems where we generate a key and request, these "
 "files are left unencrypted by using the ``nopass`` argument, since "
@@ -12008,104 +12075,123 @@ msgid ""
 "permissions* carefully."
 msgstr "一般来说，在我们生成密钥和请求的系统上，这些文件通过使用``nopass``参数而不被加密，因为服务器通常需要在没有任何密码输入的情况下启动。这就产生了一个*未加密的密钥，所以要注意*保护其访问和文件权限*。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:186
+#: ../pro/linux/openvpn-easyrsa.rst:186 ../pro/windows/openvpn-easyrsa.rst:186
+#: ../storage/linux/openvpn-easyrsa.rst:186
 msgid "Configuration notes from OpenVPN:"
 msgstr "来自OpenVPN的配置说明。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:188
+#: ../pro/linux/openvpn-easyrsa.rst:188 ../pro/windows/openvpn-easyrsa.rst:188
+#: ../storage/linux/openvpn-easyrsa.rst:188
 msgid ""
 "The server, and each client, must have their own cert and key file. The "
 "server and all clients will use the same CA file."
 msgstr "服务器和每个客户都必须有自己的证书和密钥文件。服务器和所有客户将使用同一个CA文件。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:190
+#: ../pro/linux/openvpn-easyrsa.rst:190 ../pro/windows/openvpn-easyrsa.rst:190
+#: ../storage/linux/openvpn-easyrsa.rst:190
 msgid "Server certificate should have the following:"
 msgstr "服务器证书应具有以下内容。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:192
+#: ../pro/linux/openvpn-easyrsa.rst:192 ../pro/windows/openvpn-easyrsa.rst:192
+#: ../storage/linux/openvpn-easyrsa.rst:192
 msgid "``keyUsage:  digitalSignature, keyEncipherment``"
 msgstr "``keyUsage:  digitalSignature, keyEncipherment``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:194
+#: ../pro/linux/openvpn-easyrsa.rst:194 ../pro/windows/openvpn-easyrsa.rst:194
+#: ../storage/linux/openvpn-easyrsa.rst:194
 msgid "``extendedKeyUsage: serverAuth``"
 msgstr "``extendedKeyUsage: serverAuth``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:196
+#: ../pro/linux/openvpn-easyrsa.rst:196 ../pro/windows/openvpn-easyrsa.rst:196
+#: ../storage/linux/openvpn-easyrsa.rst:196
 msgid "Create the signing request for the server"
 msgstr "为服务器创建签名请求"
 
-#: ../pro/linux/openvpn-easyrsa.rst:198
+#: ../pro/linux/openvpn-easyrsa.rst:198 ../pro/windows/openvpn-easyrsa.rst:198
+#: ../storage/linux/openvpn-easyrsa.rst:198
 msgid ""
 "Navigate to the ``~/easyrsa`` directory on your OpenVPN Server as your "
 "non-root user, and enter the following commands:"
 msgstr "以非root用户身份导航到OpenVPN服务器上的``~/easyrsa`目录，并输入以下命令。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:205
+#: ../pro/linux/openvpn-easyrsa.rst:205 ../pro/windows/openvpn-easyrsa.rst:205
+#: ../storage/linux/openvpn-easyrsa.rst:205
 msgid ""
 "This will create a private key for the server and a certificate request "
 "file called ``server.req``."
 msgstr "这将为服务器创建一个私钥和一个名为``的证书请求文件，server.req``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:207
+#: ../pro/linux/openvpn-easyrsa.rst:207 ../pro/windows/openvpn-easyrsa.rst:207
+#: ../storage/linux/openvpn-easyrsa.rst:207
 msgid ""
 "Once you have a signed certificate, you’ll transfer it back to the "
 "OpenVPN server."
 msgstr "一旦你有了签名的证书，你就把它转回OpenVPN服务器。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:209
+#: ../pro/linux/openvpn-easyrsa.rst:209 ../pro/windows/openvpn-easyrsa.rst:209
+#: ../storage/linux/openvpn-easyrsa.rst:209
 msgid "Copy the key to the OpenVPN server directory"
 msgstr "复制密钥到OpenVPN服务器目录"
 
-#: ../pro/linux/openvpn-easyrsa.rst:215
+#: ../pro/linux/openvpn-easyrsa.rst:215 ../pro/windows/openvpn-easyrsa.rst:215
+#: ../storage/linux/openvpn-easyrsa.rst:215
 msgid ""
 "After completing these steps, you have successfully created a private key"
 " for your OpenVPN server. You have also generated a Certificate Signing "
 "Request for the OpenVPN server."
 msgstr "完成这些步骤后，你已经成功为你的OpenVPN服务器创建了一个私钥。你还为OpenVPN服务器生成了一个证书签名请求。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:219
+#: ../pro/linux/openvpn-easyrsa.rst:219 ../pro/windows/openvpn-easyrsa.rst:219
+#: ../storage/linux/openvpn-easyrsa.rst:219
 msgid "File extensions for certificate signing requests"
 msgstr "证书签署请求的文件扩展名"
 
-#: ../pro/linux/openvpn-easyrsa.rst:221
+#: ../pro/linux/openvpn-easyrsa.rst:221 ../pro/windows/openvpn-easyrsa.rst:221
+#: ../storage/linux/openvpn-easyrsa.rst:221
 msgid ""
 "The file extension that is adopted by the CA and HSM tutorial indicates "
 "the creation of a ``.csr`` file, however Easy-RSA creates certificate "
 "signing requests with a ``.req`` extension."
 msgstr "CA和HSM教程采用的文件扩展名表示创建``.csr``文件，然而Easy-RSA创建的证书签署请求是``.req``扩展名。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:225
+#: ../pro/linux/openvpn-easyrsa.rst:225 ../pro/windows/openvpn-easyrsa.rst:225
+#: ../storage/linux/openvpn-easyrsa.rst:225
 msgid ""
 "We will use interchangeably both extensions, while making sure that we "
 "transfer the right files to the Certificate Authority, and generate a "
 "final certificate with a ``.crt`` extension."
 msgstr "我们将交替使用这两个扩展名，同时确保将正确的文件传输给证书颁发机构，并生成一个带有``.crt``扩展名的最终证书。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:229
+#: ../pro/linux/openvpn-easyrsa.rst:229 ../pro/windows/openvpn-easyrsa.rst:229
+#: ../storage/linux/openvpn-easyrsa.rst:229
 msgid ""
 "In the next section of this guide, we will sign a ``.req`` file with our "
 "CA on deployed on the HSM 2 device. For this purpose, I will use a "
 "dedicated machine to sign the requests."
 msgstr "在本指南的下一节，我们将用我们部署在HSM 2设备上的CA签署一个``.req``文件。为此，我将使用一台专用机器来签署请求。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:232
+#: ../pro/linux/openvpn-easyrsa.rst:232 ../pro/windows/openvpn-easyrsa.rst:232
+#: ../storage/linux/openvpn-easyrsa.rst:232
 msgid "5. Sign and retrieve ``server.crt``"
 msgstr "5.签署和检索``server.crt``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:234
+#: ../pro/linux/openvpn-easyrsa.rst:234 ../pro/windows/openvpn-easyrsa.rst:234
+#: ../storage/linux/openvpn-easyrsa.rst:234
 msgid ""
 "The following instructions require the transfer of the ``server.req`` (or"
 " ``server.csr``) file to the CA system."
 msgstr "以下指令要求将``server.req``（或``server.csr``）文件传输到CA系统。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:237
+#: ../pro/linux/openvpn-easyrsa.rst:237 ../pro/windows/openvpn-easyrsa.rst:237
+#: ../storage/linux/openvpn-easyrsa.rst:237
 msgid ""
 "The transfer itself is not security sensitive, though it is wise to "
 "verify if the received file matches the sender’s copy, if the transport "
 "is untrusted."
 msgstr "传输本身并不具有安全敏感性，不过，如果传输不受信任，验证收到的文件是否与发送者的副本相符是明智的。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:239
+#: ../pro/linux/openvpn-easyrsa.rst:239 ../pro/windows/openvpn-easyrsa.rst:239
+#: ../storage/linux/openvpn-easyrsa.rst:239
 msgid ""
 "In order to go through these steps, I will extensively rely on `these "
 "instructions <certificate-authority.html#creating-the-intermediate-"
@@ -12115,11 +12201,13 @@ msgstr ""
 "为了完成这些步骤，我将广泛依靠`这些说明<certificate-authority.html#creating-the-"
 "intermediate-certificate-authority>`_，来签署证书签署请求，一旦我们用Easy-RSA生成它们。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:242
+#: ../pro/linux/openvpn-easyrsa.rst:242 ../pro/windows/openvpn-easyrsa.rst:242
+#: ../storage/linux/openvpn-easyrsa.rst:242
 msgid "5.1. Sign the ``server.req`` file"
 msgstr "5.1.签署``server.req``文件"
 
-#: ../pro/linux/openvpn-easyrsa.rst:244
+#: ../pro/linux/openvpn-easyrsa.rst:244 ../pro/windows/openvpn-easyrsa.rst:244
+#: ../storage/linux/openvpn-easyrsa.rst:244
 msgid ""
 "On the local machine dedicated to access the HSM, we will use the tools "
 "provided by Opensc 0.20 in order to sign the ``.req`` file, and send it "
@@ -12129,52 +12217,63 @@ msgstr ""
 "在专用于访问HSM的本地机器上，我们将使用Opensc "
 "0.20提供的工具来签署``.req``文件，并把它送回OpenVPN服务器。我们假设我们已经将文件从服务器机器传输到CA机器。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:246
+#: ../pro/linux/openvpn-easyrsa.rst:246 ../pro/windows/openvpn-easyrsa.rst:246
+#: ../storage/linux/openvpn-easyrsa.rst:246
 msgid ""
 "First we start by plugging the HSM Nitrokey, and enter this instruction "
 "for listing the keys available."
 msgstr "首先，我们先插上HSM Nitrokey，并输入这个指令，列出可用的按键。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:248
+#: ../pro/linux/openvpn-easyrsa.rst:248 ../pro/windows/openvpn-easyrsa.rst:248
+#: ../storage/linux/openvpn-easyrsa.rst:248
 msgid "Query the list of available devices"
 msgstr "查询可用设备的列表"
 
-#: ../pro/linux/openvpn-easyrsa.rst:256
+#: ../pro/linux/openvpn-easyrsa.rst:256 ../pro/windows/openvpn-easyrsa.rst:256
+#: ../storage/linux/openvpn-easyrsa.rst:256
 msgid "The key’s URI should be in this format:"
 msgstr "该钥匙的URI应该是这种格式。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:262
+#: ../pro/linux/openvpn-easyrsa.rst:262 ../pro/windows/openvpn-easyrsa.rst:262
+#: ../storage/linux/openvpn-easyrsa.rst:262
 msgid "Create ``openvpn/`` directory under ``certificate-authority/``"
 msgstr "在``openvpn/``目录下创建``certificate-authority/``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:269
+#: ../pro/linux/openvpn-easyrsa.rst:269 ../pro/windows/openvpn-easyrsa.rst:269
+#: ../storage/linux/openvpn-easyrsa.rst:269
 msgid "Sign the ``server.req``"
 msgstr "签署``server.req``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:276
+#: ../pro/linux/openvpn-easyrsa.rst:276 ../pro/windows/openvpn-easyrsa.rst:276
+#: ../storage/linux/openvpn-easyrsa.rst:276
 msgid "5.2. Retrieve the ``server.crt`` file to the server machine"
 msgstr "5.2.检索``server.crt``文件到服务器机上"
 
-#: ../pro/linux/openvpn-easyrsa.rst:278
+#: ../pro/linux/openvpn-easyrsa.rst:278 ../pro/windows/openvpn-easyrsa.rst:278
+#: ../storage/linux/openvpn-easyrsa.rst:278
 msgid "Transfer the signed certificates to the server"
 msgstr "将签名的证书转移到服务器上"
 
-#: ../pro/linux/openvpn-easyrsa.rst:280
+#: ../pro/linux/openvpn-easyrsa.rst:280 ../pro/windows/openvpn-easyrsa.rst:280
+#: ../storage/linux/openvpn-easyrsa.rst:280
 msgid ""
 "From the CA machine, copy the files ``server.crt`` and ``chain.crt`` to "
 "the OpenVPN server. In this example we will use the ``scp`` command as "
 "following:"
 msgstr "从CA机器上复制文件``server.crt`和``chain.crt``到OpenVPN服务器。在这个例子中，我们将使用``scp``命令，如下所示。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:286
+#: ../pro/linux/openvpn-easyrsa.rst:286 ../pro/windows/openvpn-easyrsa.rst:286
+#: ../storage/linux/openvpn-easyrsa.rst:286
 msgid "Place the certificates on the server’s directory"
 msgstr "将证书放在服务器的目录上"
 
-#: ../pro/linux/openvpn-easyrsa.rst:294
+#: ../pro/linux/openvpn-easyrsa.rst:294 ../pro/windows/openvpn-easyrsa.rst:294
+#: ../storage/linux/openvpn-easyrsa.rst:294
 msgid "CA Certificate and ``chain.crt``"
 msgstr "CA证书和``chain.crt``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:296
+#: ../pro/linux/openvpn-easyrsa.rst:296 ../pro/windows/openvpn-easyrsa.rst:296
+#: ../storage/linux/openvpn-easyrsa.rst:296
 msgid ""
 "In the above, the CA returns the signed sever certificate, and includes "
 "the CA certificate ``CA.crt`` which is the ``chain.crt`` file. This can "
@@ -12185,18 +12284,21 @@ msgstr ""
 "在上面，CA返回已签名的sever证书，并包括CA证书``CA.crt``，这是``chain.crt`` "
 "文件。这可以通过不安全的通道进行，尽管鼓励客户端确认收到的``chain.crt``是否有效，如果传输是不信任的。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:302
+#: ../pro/linux/openvpn-easyrsa.rst:302 ../pro/windows/openvpn-easyrsa.rst:302
+#: ../storage/linux/openvpn-easyrsa.rst:302
 msgid ""
 "It is possible to rename the file ``chain.crt`` file to ``CA.crt`` on the"
 " target machine, however we will use ``chain.crt`` in the next "
 "instructions."
 msgstr "可以在目标机上将``chain.crt``文件重命名为``CA.crt`。但是我们将在接下来的说明中使用``chain.crt``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:307
+#: ../pro/linux/openvpn-easyrsa.rst:307 ../pro/windows/openvpn-easyrsa.rst:307
+#: ../storage/linux/openvpn-easyrsa.rst:307
 msgid "6. Configure the OpenVPN server"
 msgstr "6.配置OpenVPN服务器"
 
-#: ../pro/linux/openvpn-easyrsa.rst:309
+#: ../pro/linux/openvpn-easyrsa.rst:309 ../pro/windows/openvpn-easyrsa.rst:309
+#: ../storage/linux/openvpn-easyrsa.rst:309
 msgid ""
 "A connection that uses TLS requires multiple `certificates and keys for "
 "authentication <https://wiki.teltonika-"
@@ -12208,7 +12310,8 @@ msgstr ""
 "一个使用TLS的连接需要多个`证书和密钥进行认证<https://wiki.teltonika-"
 "networks.com/view/OpenVPN_configuration_examples>`_。现在，我们发布并签署了这些证书，我们可以把它们放在正确的目录中。必须位于根目录下的证书和密钥的分类如下。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:320
+#: ../pro/linux/openvpn-easyrsa.rst:320 ../pro/windows/openvpn-easyrsa.rst:320
+#: ../storage/linux/openvpn-easyrsa.rst:320
 msgid ""
 "On your OpenVPN server, now you can create the configuration file "
 "``server.conf`` with your favorite text editor. The file can be "
@@ -12217,73 +12320,89 @@ msgid ""
 " your the files we signed:"
 msgstr "在你的OpenVPN服务器上，现在你可以用你喜欢的文本编辑器创建配置文件``server.conf``。该文件可以根据你的需要进行配置，同时我们确保根据你为我们签署的文件选择的名称来改变服务器证书和密钥部分。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:329
+#: ../pro/linux/openvpn-easyrsa.rst:329 ../pro/windows/openvpn-easyrsa.rst:329
+#: ../storage/linux/openvpn-easyrsa.rst:329
 msgid "Here is the configuration file we can use for testing these instructions:"
 msgstr "这里是我们可以用来测试这些指令的配置文件。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:359
+#: ../pro/linux/openvpn-easyrsa.rst:359 ../pro/windows/openvpn-easyrsa.rst:359
+#: ../storage/linux/openvpn-easyrsa.rst:359
 msgid "To test if the configuration functions properly, we can use this command:"
 msgstr "为了测试配置的功能是否正常，我们可以使用这个命令。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:366
+#: ../pro/linux/openvpn-easyrsa.rst:366 ../pro/windows/openvpn-easyrsa.rst:366
+#: ../storage/linux/openvpn-easyrsa.rst:366
 msgid "7. Start the OpenVPN service on the server"
 msgstr "7.在服务器上启动OpenVPN服务"
 
-#: ../pro/linux/openvpn-easyrsa.rst:368
+#: ../pro/linux/openvpn-easyrsa.rst:368 ../pro/windows/openvpn-easyrsa.rst:368
+#: ../storage/linux/openvpn-easyrsa.rst:368
 msgid ""
 "Enable the OpenVPN service by adding it to systemctl, and start it using "
 "these commands:"
 msgstr "将OpenVPN服务添加到systemctl中启用，并使用这些命令启动它。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:375
+#: ../pro/linux/openvpn-easyrsa.rst:375 ../pro/windows/openvpn-easyrsa.rst:375
+#: ../storage/linux/openvpn-easyrsa.rst:375
 msgid "To Double check if the OpenVPN service is active use this command:"
 msgstr "要重复检查OpenVPN服务是否激活，请使用此命令。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:381
+#: ../pro/linux/openvpn-easyrsa.rst:381 ../pro/windows/openvpn-easyrsa.rst:381
+#: ../storage/linux/openvpn-easyrsa.rst:381
 msgid "The OpenVPN should be running at this point."
 msgstr "这时，OpenVPN应该正在运行。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:386
+#: ../pro/linux/openvpn-easyrsa.rst:386 ../pro/windows/openvpn-easyrsa.rst:386
+#: ../storage/linux/openvpn-easyrsa.rst:386
 msgid "Client side configuration"
 msgstr "客户端配置"
 
-#: ../pro/linux/openvpn-easyrsa.rst:400
+#: ../pro/linux/openvpn-easyrsa.rst:400 ../pro/windows/openvpn-easyrsa.rst:400
+#: ../storage/linux/openvpn-easyrsa.rst:400
 msgid "1. Install OpenVPN and Easy-RSA"
 msgstr "1.安装OpenVPN和Easy-RSA"
 
-#: ../pro/linux/openvpn-easyrsa.rst:402
+#: ../pro/linux/openvpn-easyrsa.rst:402 ../pro/windows/openvpn-easyrsa.rst:402
+#: ../storage/linux/openvpn-easyrsa.rst:402
 msgid "Install the software"
 msgstr "安装软件"
 
-#: ../pro/linux/openvpn-easyrsa.rst:404
+#: ../pro/linux/openvpn-easyrsa.rst:404 ../pro/windows/openvpn-easyrsa.rst:404
+#: ../storage/linux/openvpn-easyrsa.rst:404
 msgid ""
 "We can use directly ``dnf install`` to install OpenVPN 2.4.9 and Easy-RSA"
 " 3.0.7"
 msgstr "我们可以直接使用``dnf install``来安装OpenVPN 2.4.9 和 Easy-RSA 3.0.7"
 
-#: ../pro/linux/openvpn-easyrsa.rst:410
+#: ../pro/linux/openvpn-easyrsa.rst:410 ../pro/windows/openvpn-easyrsa.rst:410
+#: ../storage/linux/openvpn-easyrsa.rst:410
 msgid "Then we create as non-root a directory for Easy RSA called ``Easy-RSA``"
 msgstr "然后我们为Easy RSA创建一个非根目录，名为``Easy-RSA``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:416
+#: ../pro/linux/openvpn-easyrsa.rst:416 ../pro/windows/openvpn-easyrsa.rst:416
+#: ../storage/linux/openvpn-easyrsa.rst:416
 msgid "And link it to the Easy RSA package we just installed"
 msgstr "并将其链接到我们刚刚安装的Easy RSA软件包上"
 
-#: ../pro/linux/openvpn-easyrsa.rst:423
+#: ../pro/linux/openvpn-easyrsa.rst:423 ../pro/windows/openvpn-easyrsa.rst:423
+#: ../storage/linux/openvpn-easyrsa.rst:423
 msgid "2. Create a PKI for the OpenVPN client"
 msgstr "2.为OpenVPN客户端创建一个PKI"
 
-#: ../pro/linux/openvpn-easyrsa.rst:425
+#: ../pro/linux/openvpn-easyrsa.rst:425 ../pro/windows/openvpn-easyrsa.rst:425
+#: ../storage/linux/openvpn-easyrsa.rst:425
 msgid ""
 "In the same manner we created a PKI on the OpenVPN server, we will create"
 " a PKI using Easy-RSA on the client side."
 msgstr "按照我们在OpenVPN服务器上创建PKI的方式，我们将在客户端使用Easy-RSA创建一个PKI。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:428
+#: ../pro/linux/openvpn-easyrsa.rst:428 ../pro/windows/openvpn-easyrsa.rst:428
+#: ../storage/linux/openvpn-easyrsa.rst:428
 msgid "3. Create a ``client.req`` and ``client.key``"
 msgstr "3.创建一个``client.req`和``client.key``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:430
+#: ../pro/linux/openvpn-easyrsa.rst:430 ../pro/windows/openvpn-easyrsa.rst:430
+#: ../storage/linux/openvpn-easyrsa.rst:430
 msgid ""
 "In the same manner we issued the key pair on the sever, we generate a key"
 " pair for the client which will be composed of the ``client.req`` file "
@@ -12291,27 +12410,32 @@ msgid ""
 " machine."
 msgstr "以我们在服务器上发布密钥对的同样方式，我们为客户机生成一个密钥对，它将由``client.req`文件和``client.key`文件组成。后者必须在客户机上保持秘密。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:434
+#: ../pro/linux/openvpn-easyrsa.rst:434 ../pro/windows/openvpn-easyrsa.rst:434
+#: ../storage/linux/openvpn-easyrsa.rst:434
 msgid "4. Sign ``client.req`` and issue the ``client.crt`` file"
 msgstr "4.签署``client.req``并发布``client.crt``文件"
 
-#: ../pro/linux/openvpn-easyrsa.rst:436
+#: ../pro/linux/openvpn-easyrsa.rst:436 ../pro/windows/openvpn-easyrsa.rst:436
+#: ../storage/linux/openvpn-easyrsa.rst:436
 msgid ""
 "To transfer the ``client.req`` file to the CA machine, we will use the "
 "same method as we did for the ``server.req`` file."
 msgstr "要把``client.req``文件传输到CA机器，我们将使用与``server.req``文件同样的方法。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:438
+#: ../pro/linux/openvpn-easyrsa.rst:438 ../pro/windows/openvpn-easyrsa.rst:438
+#: ../storage/linux/openvpn-easyrsa.rst:438
 msgid ""
 "Once transferred, on the CA machine we sign the certificate signing "
 "request file with this command"
 msgstr "一旦转移，在CA机器上我们用这个命令签署证书签署请求文件"
 
-#: ../pro/linux/openvpn-easyrsa.rst:445
+#: ../pro/linux/openvpn-easyrsa.rst:445 ../pro/windows/openvpn-easyrsa.rst:445
+#: ../storage/linux/openvpn-easyrsa.rst:445
 msgid "5. Import ``client.crt`` on the Nitrokey from the CA machine"
 msgstr "5.从CA机器上导入``client.crt``在Nitrokey上。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:447
+#: ../pro/linux/openvpn-easyrsa.rst:447 ../pro/windows/openvpn-easyrsa.rst:447
+#: ../storage/linux/openvpn-easyrsa.rst:447
 msgid ""
 "After creating the ``client.crt`` file, we plug the Nitrokey Pro 2 device"
 " in the CA machine, and import the ``.crt`` to the Pro 2 device using "
@@ -12320,17 +12444,20 @@ msgstr ""
 "在创建了``client.crt``文件后，我们将Nitrokey Pro 2设备插入CA机器，并使用这个命令将``.crt``导入到Pro "
 "2设备。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:453
+#: ../pro/linux/openvpn-easyrsa.rst:453 ../pro/windows/openvpn-easyrsa.rst:453
+#: ../storage/linux/openvpn-easyrsa.rst:453
 msgid ""
 "You can see if the key is effectively stored on the Nitrokey using this "
 "command:"
 msgstr "你可以用这个命令查看钥匙是否有效地存储在Nitrokey上。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:459
+#: ../pro/linux/openvpn-easyrsa.rst:459 ../pro/windows/openvpn-easyrsa.rst:459
+#: ../storage/linux/openvpn-easyrsa.rst:459
 msgid "Or alternatively"
 msgstr "或者说是"
 
-#: ../pro/linux/openvpn-easyrsa.rst:465
+#: ../pro/linux/openvpn-easyrsa.rst:465 ../pro/windows/openvpn-easyrsa.rst:465
+#: ../storage/linux/openvpn-easyrsa.rst:465
 msgid ""
 "Fore more commands you can refer to the `OpenSC wiki "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`_."
@@ -12338,11 +12465,13 @@ msgstr ""
 "更多的命令你可以参考`OpenSC wiki <https://github.com/OpenSC/OpenSC/wiki/OpenPGP-"
 "card>`_。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:468
+#: ../pro/linux/openvpn-easyrsa.rst:468 ../pro/windows/openvpn-easyrsa.rst:468
+#: ../storage/linux/openvpn-easyrsa.rst:468
 msgid "6. Retrieve the ``chain.crt`` file from the CA machine"
 msgstr "6.从CA机器上获取``chain.crt``文件"
 
-#: ../pro/linux/openvpn-easyrsa.rst:470
+#: ../pro/linux/openvpn-easyrsa.rst:470 ../pro/windows/openvpn-easyrsa.rst:470
+#: ../storage/linux/openvpn-easyrsa.rst:470
 msgid ""
 "While we keep the ``client.crt``\\ stored on the nitrokey Pro 2 device, "
 "we must retrieve the ``chain.crt`` file on the client machine, and store "
@@ -12353,11 +12482,13 @@ msgstr ""
 "retrieve the "
 "``chain.crt``文件保存在客户端机器上，并把它存放在足够的目录中。我们可以使用``scp``，正如本指南的服务器部分所解释的方法。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:473
+#: ../pro/linux/openvpn-easyrsa.rst:473 ../pro/windows/openvpn-easyrsa.rst:473
+#: ../storage/linux/openvpn-easyrsa.rst:473
 msgid "7. Configure the client to interact with the Nitrokey"
 msgstr "7.配置客户端以与Nitrokey进行交互。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:475
+#: ../pro/linux/openvpn-easyrsa.rst:475 ../pro/windows/openvpn-easyrsa.rst:475
+#: ../storage/linux/openvpn-easyrsa.rst:475
 msgid ""
 "Now back on the client machine, we will plug the Nitrokey Pro and use it "
 "to establish the VPN connection with the server. In general terms, a "
@@ -12365,23 +12496,27 @@ msgid ""
 "authentication:"
 msgstr "现在回到客户机上，我们将插入Nitrokey Pro，用它来建立与服务器的VPN连接。一般来说，使用TLS的连接需要多个证书和密钥进行认证。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:484
+#: ../pro/linux/openvpn-easyrsa.rst:484 ../pro/windows/openvpn-easyrsa.rst:484
+#: ../storage/linux/openvpn-easyrsa.rst:484
 msgid ""
 "For this guide we can the following ``client.conf`` file, and add the "
 "required options to it accordingly:"
 msgstr "对于这个指南，我们可以在下面的``client.conf``文件中，相应地添加需要的选项。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:506
+#: ../pro/linux/openvpn-easyrsa.rst:506 ../pro/windows/openvpn-easyrsa.rst:506
+#: ../storage/linux/openvpn-easyrsa.rst:506
 msgid "Determine the correct object"
 msgstr "确定正确的对象"
 
-#: ../pro/linux/openvpn-easyrsa.rst:508
+#: ../pro/linux/openvpn-easyrsa.rst:508 ../pro/windows/openvpn-easyrsa.rst:508
+#: ../storage/linux/openvpn-easyrsa.rst:508
 msgid ""
 "Each PKCS#11 provider can support multiple devices. In order to view the "
 "available object list you can use the following command:"
 msgstr "每个PKCS#11提供者可以支持多个设备。为了查看可用的对象列表，你可以使用以下命令。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:524
+#: ../pro/linux/openvpn-easyrsa.rst:524 ../pro/windows/openvpn-easyrsa.rst:524
+#: ../storage/linux/openvpn-easyrsa.rst:524
 msgid ""
 "Each certificate/private key pair have unique ``Serialized id`` string. "
 "The serialized id string of the requested certificate should be "
@@ -12391,17 +12526,20 @@ msgstr ""
 "每个证书/私钥对都有唯一的``Serialized "
 "id``字符串。应在配置文件中指定请求的证书的序列化id字符串。我们可以通过添加``pkcs11-id``选项，使用单引号来实现这一点。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:530
+#: ../pro/linux/openvpn-easyrsa.rst:530 ../pro/windows/openvpn-easyrsa.rst:530
+#: ../storage/linux/openvpn-easyrsa.rst:530
 msgid "Add retrieved Serialized ID to the configuration file"
 msgstr "将检索到的序列化ID添加到配置文件中"
 
-#: ../pro/linux/openvpn-easyrsa.rst:532
+#: ../pro/linux/openvpn-easyrsa.rst:532 ../pro/windows/openvpn-easyrsa.rst:532
+#: ../storage/linux/openvpn-easyrsa.rst:532
 msgid ""
 "Using your favorite text editor, open the server.conf file, and add the "
 "following lines, while taking care to insert your own ``Serialized id``:"
 msgstr "使用你喜欢的文本编辑器，打开server.conf文件，并添加以下几行，同时注意插入你自己的``Serialized id``。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:539
+#: ../pro/linux/openvpn-easyrsa.rst:539 ../pro/windows/openvpn-easyrsa.rst:539
+#: ../storage/linux/openvpn-easyrsa.rst:539
 msgid ""
 "For additional `settings related to OpenVPN <https://openvpn.net"
 "/community-resources/how-to/>`_ authentication, you may also add few "
@@ -12411,33 +12549,43 @@ msgstr ""
 "to/>`_认证，你也可以添加几行来处理密钥管理，尽管它是可选的。"
 
 #: ../pro/linux/openvpn-easyrsa.rst:543 ../pro/linux/openvpn-easyrsa.rst:567
+#: ../pro/windows/openvpn-easyrsa.rst:543
+#: ../pro/windows/openvpn-easyrsa.rst:567
+#: ../storage/linux/openvpn-easyrsa.rst:543
+#: ../storage/linux/openvpn-easyrsa.rst:567
 msgid "Click to view the code"
 msgstr "点击查看代码"
 
-#: ../pro/linux/openvpn-easyrsa.rst:560
+#: ../pro/linux/openvpn-easyrsa.rst:560 ../pro/windows/openvpn-easyrsa.rst:560
+#: ../storage/linux/openvpn-easyrsa.rst:560
 msgid "Optional step"
 msgstr "可选步骤"
 
-#: ../pro/linux/openvpn-easyrsa.rst:563
+#: ../pro/linux/openvpn-easyrsa.rst:563 ../pro/windows/openvpn-easyrsa.rst:563
+#: ../storage/linux/openvpn-easyrsa.rst:563
 msgid ""
 "If you need to test the configuration, with and without the token on the "
 "Nitrokey, you may add lines to the same ``client.conf`` and "
 "comment/uncomment the relevant lines according to your needs:"
 msgstr "如果你需要测试配置，在有和没有Nitrokey的情况下，你可以在同一个``client.conf``中添加行，并根据你的需要注释/取消注释相关行。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:577
+#: ../pro/linux/openvpn-easyrsa.rst:577 ../pro/windows/openvpn-easyrsa.rst:577
+#: ../storage/linux/openvpn-easyrsa.rst:577
 msgid "Configure the OpenVPN client"
 msgstr "配置OpenVPN客户端"
 
-#: ../pro/linux/openvpn-easyrsa.rst:579
+#: ../pro/linux/openvpn-easyrsa.rst:579 ../pro/windows/openvpn-easyrsa.rst:579
+#: ../storage/linux/openvpn-easyrsa.rst:579
 msgid "The final configuration file ``client.conf`` should look like this one:"
 msgstr "最终的配置文件``client.conf``应该看起来像这样的文件。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:622
+#: ../pro/linux/openvpn-easyrsa.rst:622 ../pro/windows/openvpn-easyrsa.rst:622
+#: ../storage/linux/openvpn-easyrsa.rst:622
 msgid "Known issues"
 msgstr "已知问题"
 
-#: ../pro/linux/openvpn-easyrsa.rst:624
+#: ../pro/linux/openvpn-easyrsa.rst:624 ../pro/windows/openvpn-easyrsa.rst:624
+#: ../storage/linux/openvpn-easyrsa.rst:624
 msgid ""
 "There are some known issues related to OpenVPN login with OpenSC. Please "
 "consult these issues `here <https://github.com/Nitrokey/wiki/wiki/3rd-"
@@ -12446,31 +12594,38 @@ msgstr ""
 "有一些与OpenVPN登录OpenSC有关的已知问题。请参考这些问题 `这里 "
 "<https://github.com/Nitrokey/wiki/wiki/3rd-Party-Issues>`_。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:627
+#: ../pro/linux/openvpn-easyrsa.rst:627 ../pro/windows/openvpn-easyrsa.rst:627
+#: ../storage/linux/openvpn-easyrsa.rst:627
 msgid "8. Start the OpenVPN client"
 msgstr "8.启动OpenVPN客户端"
 
-#: ../pro/linux/openvpn-easyrsa.rst:629
+#: ../pro/linux/openvpn-easyrsa.rst:629 ../pro/windows/openvpn-easyrsa.rst:629
+#: ../storage/linux/openvpn-easyrsa.rst:629
 msgid "Start the OpenVPN service on the client"
 msgstr "在客户端启动OpenVPN服务"
 
-#: ../pro/linux/openvpn-easyrsa.rst:631
+#: ../pro/linux/openvpn-easyrsa.rst:631 ../pro/windows/openvpn-easyrsa.rst:631
+#: ../storage/linux/openvpn-easyrsa.rst:631
 msgid "Enable the OpenVPN service, and start it using these commands:"
 msgstr "启用OpenVPN服务，并使用这些命令启动它。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:638
+#: ../pro/linux/openvpn-easyrsa.rst:638 ../pro/windows/openvpn-easyrsa.rst:638
+#: ../storage/linux/openvpn-easyrsa.rst:638
 msgid "To double check if the OpenVPN service is active use this command:"
 msgstr "要仔细检查OpenVPN服务是否激活，请使用此命令。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:644
+#: ../pro/linux/openvpn-easyrsa.rst:644 ../pro/windows/openvpn-easyrsa.rst:644
+#: ../storage/linux/openvpn-easyrsa.rst:644
 msgid "Enter your User PIN"
 msgstr "输入你的用户密码"
 
-#: ../pro/linux/openvpn-easyrsa.rst:646
+#: ../pro/linux/openvpn-easyrsa.rst:646 ../pro/windows/openvpn-easyrsa.rst:646
+#: ../storage/linux/openvpn-easyrsa.rst:646
 msgid "When executing OpenVPN client, Nitrokey’s PIN needs to be entered:"
 msgstr "在执行OpenVPN客户端时，需要输入Nitrokey的PIN。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:658
+#: ../pro/linux/openvpn-easyrsa.rst:658 ../pro/windows/openvpn-easyrsa.rst:658
+#: ../storage/linux/openvpn-easyrsa.rst:658
 msgid ""
 "Unfortunately OpenVPN doesn’t seem to be able to establish a handshake "
 "and stops at an error as reported `here <https://support.nitrokey.com/t"
@@ -12485,13 +12640,15 @@ msgstr ""
 "openssl-error-141f0006/2637>`_和 `这里 "
 "<https://community.openvpn.net/openvpn/ticket/1215>`_"
 
-#: ../pro/linux/openvpn-easyrsa.rst:688
+#: ../pro/linux/openvpn-easyrsa.rst:688 ../pro/windows/openvpn-easyrsa.rst:688
+#: ../storage/linux/openvpn-easyrsa.rst:688
 msgid ""
 "In some reported cases it does not prompt for a PIN on the terminal. One "
 "workaround would be to use to use this command to login with the PIN:"
 msgstr "在一些报告的案例中，它没有在终端上提示密码。一个变通的办法是使用这个命令用PIN码来登录。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:694
+#: ../pro/linux/openvpn-easyrsa.rst:694 ../pro/windows/openvpn-easyrsa.rst:694
+#: ../storage/linux/openvpn-easyrsa.rst:694
 msgid ""
 "Alternatively, you could `recompile OpenVPN "
 "<https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`_ client with "
@@ -12500,7 +12657,8 @@ msgstr ""
 "另外，你可以`重新编译OpenVPN "
 "<https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`_客户端，禁用systemd支持，它将如期提示你输入密码。"
 
-#: ../pro/linux/openvpn-easyrsa.rst:696
+#: ../pro/linux/openvpn-easyrsa.rst:696 ../pro/windows/openvpn-easyrsa.rst:696
+#: ../storage/linux/openvpn-easyrsa.rst:696
 msgid ""
 "Another option, would be to login to your OpenVPN instance with the "
 "Viscosity client which provides a better user experience especially for "
@@ -12605,6 +12763,25 @@ msgid ""
 msgstr ""
 "从现在开始，如果你试图登录网站，除了其他证书外，你还会被要求提供一个一次性密码。你只需打开Nitrokey应用程序，进入 \"菜单\"-> "
 "\"密码\"-> YourSlotName，即可获得一次性密码。"
+
+#: ../pro/smime.rst:17
+msgid ""
+"If you are in doubt which one to choose, you should use OpenPGP, see "
+"`here <openpgp.html>`_. This page describes the usage of S/MIME email "
+"encryption."
+msgstr "如果你对选择哪一种有疑问，你应该使用OpenPGP，见`这里<openpgp.html>`_。本页介绍了S/MIME电子邮件加密的用法。"
+
+#: ../pro/smime.rst:77
+msgid ""
+"Nitrokey Storage 2: You need to install OpenSC in version 0.18 or higher."
+" You can find the files on the `OpenSC website "
+"<https://github.com/OpenSC/OpenSC/releases>`_ for Windows and macOS user "
+"or `here <https://github.com/Nitrokey/opensc-build>`_ for Debian/Ubuntu "
+"users."
+msgstr ""
+"Nitrokey Storage 2: "
+"你需要安装0.18或更高版本的OpenSC。你可以在`OpenSC网站<https://github.com/OpenSC/OpenSC/releases>`_为Windows和macOS用户找到这些文件，或者`这里<https://github.com/Nitrokey"
+"/opensc-build>`_为Debian/Ubuntu用户。"
 
 #: ../pro/linux/ssh.rst:2 ../start/linux/ssh.rst:2 ../storage/linux/ssh.rst:2
 msgid "SSH For Server Administration"
@@ -13058,6 +13235,23 @@ msgid ""
 "<smime.html>`_ with the Nitrokey. The driver has to be installed on every"
 " computer you want to use the certificate on."
 msgstr "你现在可以用Nitrokey代替你的密码登录电脑了，你可以用Nitrokey使用`S/MIME电子邮件加密/签名<smime.html>`_。驱动程序必须安装在你想使用证书的每台电脑上。"
+
+#: ../pro/windows/openvpn-easyrsa.rst:17
+#, fuzzy
+msgid ""
+"To sign the certificates, we will use a `Nitrokey HSM 2 "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ set "
+"up as `Certificate Authority <../../hsm/windows/certificate-"
+"authority.html#creating-the-intermediate-certificate-authority>`_, "
+"however this guide does not cover the set up of the CA itself (it is "
+"clear and `well documented here <../../hsm/windows/certificate-"
+"authority.html#sign-a-server-certificate>`_)."
+msgstr ""
+"为了签署证书，我们将使用`Nitrokey HSM 2 <https://shop.nitrokey.com/shop/product/nk-"
+"pro-2-nitrokey-pro-2-3>`_作为`认证机构<certificate-authority.html#creating-the-"
+"intermediate-certificate-"
+"authority>`_设置的。然而，本指南并不包括CA本身的设置（它很清楚，并且`这里有很好的记录<certificate-"
+"authority.html#sign-a-server-certificate>`_）。"
 
 #: ../pro/windows/openvpn-viscosity.rst:6
 msgid "Viscosity Client Configuration with OpenVPN"
@@ -14901,6 +15095,23 @@ msgid ""
 "Use the Nitrokey App to change the default User PIN (default: 123456) and"
 " Admin PIN (default: 12345678) to your own choices."
 msgstr "使用Nitrokey应用程序，将默认的用户密码（默认：123456）和管理密码（默认：12345678）改为您自己的选择。"
+
+#: ../storage/linux/openvpn-easyrsa.rst:17
+#, fuzzy
+msgid ""
+"To sign the certificates, we will use a `Nitrokey HSM 2 "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ set "
+"up as `Certificate Authority <../../hsm/linux/certificate-authority.html"
+"#creating-the-intermediate-certificate-authority>`_, however this guide "
+"does not cover the set up of the CA itself (it is clear and `well "
+"documented here <../../hsm/linux/certificate-authority.html#sign-a"
+"-server-certificate>`_)."
+msgstr ""
+"为了签署证书，我们将使用`Nitrokey HSM 2 <https://shop.nitrokey.com/shop/product/nk-"
+"pro-2-nitrokey-pro-2-3>`_作为`认证机构<certificate-authority.html#creating-the-"
+"intermediate-certificate-"
+"authority>`_设置的。然而，本指南并不包括CA本身的设置（它很清楚，并且`这里有很好的记录<certificate-"
+"authority.html#sign-a-server-certificate>`_）。"
 
 #: ../storage/mac/product_platform_heading.rst:3
 msgid "(Nitrokey Storage 2 - macOS)"
@@ -18468,3 +18679,4 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "Nitrokey FIDO U2F With macOS"
 #~ msgstr "Nitrokey FIDO U2F与macOS的关系"
+

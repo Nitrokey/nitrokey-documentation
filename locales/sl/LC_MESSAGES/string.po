@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-11 13:12+0200\n"
+"POT-Creation-Date: 2022-08-22 18:01+0200\n"
 "PO-Revision-Date: 2022-08-11 12:38+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/sl/>\n"
 "Language: sl\n"
+"Language-Team: Slovenian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/sl/>\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
+"|| n%100==4 ? 2 : 3\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
@@ -608,7 +607,8 @@ msgstr ""
 msgid "img6"
 msgstr "Img6"
 
-#: ../fido2/linux/desktop-login.rst:236
+#: ../fido2/linux/desktop-login.rst:236 ../hsm/linux/smime.rst:57
+#: ../hsm/mac/smime.rst:57 ../hsm/windows/smime.rst:57
 #: ../pro/linux/automatic-screen-lock.rst:77
 #: ../pro/linux/disk-encryption-luks.rst:140
 #: ../pro/linux/hard-disk-encryption.rst:116 ../pro/openpgp-outlook.rst:26
@@ -1146,7 +1146,8 @@ msgstr ""
 "Opomba: utripanje bele LED se uporablja tudi za signalizacijo izbrane "
 "naprave (tako imenovani ukaz WINK)."
 
-#: ../fido2/linux/index.rst:7 ../nextbox/troubleshooting.rst:2
+#: ../fido2/linux/index.rst:7 ../hsm/linux/smime.rst:72 ../hsm/mac/smime.rst:72
+#: ../hsm/windows/smime.rst:72 ../nextbox/troubleshooting.rst:2
 #: ../nitrokey3/shared/nitropy.rst:71 ../nitrokey3/troubleshooting.rst:2
 #: ../nitropad/troubleshooting.rst:2 ../pro/firmware-update.rst:67
 #: ../pro/login-with-pam.rst:42 ../pro/openpgp-thunderbird.rst:14
@@ -3402,40 +3403,45 @@ msgstr ""
 " prepoznate z uporabo dobljenega URL, glejte :doc:`TLS Apache2 "
 "Configuration<apache2-tls>` za primer uporabe ``id``."
 
+#: ../hsm/linux/smime.rst:2 ../hsm/mac/smime.rst:2 ../hsm/windows/smime.rst:2
 #: ../pro/smime.rst:2
 msgid "S/MIME Email Encryption"
 msgstr "Šifriranje e-pošte S/MIME"
 
+#: ../hsm/linux/smime.rst:9 ../hsm/mac/smime.rst:9 ../hsm/windows/smime.rst:9
 #: ../nextbox/technical/replace-drive.rst:12
 #: ../pro/linux/openvpn-easyrsa.rst:24 ../pro/openpgp-outlook.rst:14
 #: ../pro/smime-outlook.rst:9 ../pro/smime-thunderbird.rst:9 ../pro/smime.rst:9
-#: ../pro/windows/openpgp-csp.rst:11 ../pro/windows/openvpn-viscosity.rst:17
+#: ../pro/windows/openpgp-csp.rst:11 ../pro/windows/openvpn-easyrsa.rst:24
+#: ../pro/windows/openvpn-viscosity.rst:17
+#: ../storage/linux/openvpn-easyrsa.rst:24
 msgid "Prerequisites"
 msgstr "Predpogoji"
 
-#: ../pro/openpgp.rst:8 ../pro/smime.rst:11
+#: ../hsm/linux/smime.rst:11 ../hsm/mac/smime.rst:11
+#: ../hsm/windows/smime.rst:11 ../pro/openpgp.rst:8 ../pro/smime.rst:11
 msgid "There are two widely used standards for email encryption."
 msgstr "Za šifriranje e-pošte se pogosto uporabljata dva standarda."
 
-#: ../pro/openpgp.rst:10 ../pro/smime.rst:13
+#: ../hsm/linux/smime.rst:13 ../hsm/mac/smime.rst:13
+#: ../hsm/windows/smime.rst:13 ../pro/openpgp.rst:10 ../pro/smime.rst:13
 msgid "OpenPGP/GnuPG is popular among individuals,"
 msgstr "OpenPGP/GnuPG je priljubljen med posamezniki,"
 
-#: ../pro/openpgp.rst:12 ../pro/smime.rst:15
+#: ../hsm/linux/smime.rst:15 ../hsm/mac/smime.rst:15
+#: ../hsm/windows/smime.rst:15 ../pro/openpgp.rst:12 ../pro/smime.rst:15
 msgid "S/MIME/X.509 is mostly used by enterprises."
 msgstr "S/MIME/X.509 večinoma uporabljajo podjetja."
 
-#: ../pro/smime.rst:17
+#: ../hsm/linux/smime.rst:17 ../hsm/mac/smime.rst:17
+#: ../hsm/windows/smime.rst:17
 msgid ""
-"If you are in doubt which one to choose, you should use OpenPGP, see "
-"`here <openpgp.html>`_. This page describes the usage of S/MIME email "
-"encryption."
+"The Nitrokey HSM 2 only supports the S/MIME/X.509 standard. This page "
+"describes the usage of S/MIME email encryption."
 msgstr ""
-"Če ste v dvomih, katerega izbrati, uporabite OpenPGP, glejte `tudi "
-"<openpgp.html>`_. Na tej strani je opisana uporaba šifriranja e-pošte "
-"S/MIME."
 
-#: ../pro/smime.rst:19
+#: ../hsm/linux/smime.rst:19 ../hsm/mac/smime.rst:19
+#: ../hsm/windows/smime.rst:19 ../pro/smime.rst:19
 msgid ""
 "You need to purchase a S/MIME certificate (e.g. at `CERTUM "
 "<https://www.certum.eu/en/cert_offer_cert_id/>`_) or may already got one "
@@ -3455,8 +3461,9 @@ msgstr ""
 "in Windows namestitvene datoteke prenesejo s strani `OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki>`_."
 
-#: ../pro/smime-outlook.rst:17 ../pro/smime-thunderbird.rst:17
-#: ../pro/smime.rst:22
+#: ../hsm/linux/smime.rst:22 ../hsm/mac/smime.rst:22
+#: ../hsm/windows/smime.rst:22 ../pro/smime-outlook.rst:17
+#: ../pro/smime-thunderbird.rst:17 ../pro/smime.rst:22
 msgid ""
 "Windows users with 64-bit system (standard) need to install both, the "
 "32-bit and the 64-bit version of OpenSC!"
@@ -3464,11 +3471,13 @@ msgstr ""
 "Uporabniki sistema Windows s 64-bitnim sistemom (standard) morajo "
 "namestiti tako 32-bitno kot 64-bitno različico OpenSC!"
 
-#: ../pro/smime.rst:25
+#: ../hsm/linux/smime.rst:25 ../hsm/mac/smime.rst:25
+#: ../hsm/windows/smime.rst:25 ../pro/smime.rst:25
 msgid "Import Existing Key and Certificate"
 msgstr "Uvoz obstoječega ključa in potrdila"
 
-#: ../pro/smime.rst:27
+#: ../hsm/linux/smime.rst:27 ../hsm/mac/smime.rst:27
+#: ../hsm/windows/smime.rst:27 ../pro/smime.rst:27
 msgid ""
 "The following instructions are based on the `wiki of OpenSC "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`_. We will assume, "
@@ -3480,7 +3489,9 @@ msgstr ""
 "bomo, da ste že dobili par ključ-certifikat v obliki datoteke .p12. Če "
 "ste dobili ločeno datoteko s ključem in potrdilom, si oglejte stran wiki."
 
-#: ../pro/openpgp-keygen-on-device.rst:25 ../pro/smime.rst:29
+#: ../hsm/linux/smime.rst:29 ../hsm/mac/smime.rst:29
+#: ../hsm/windows/smime.rst:29 ../pro/openpgp-keygen-on-device.rst:25
+#: ../pro/smime.rst:29
 msgid ""
 "To open the Windows command line please push the Windows-key and R-key. "
 "Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on"
@@ -3493,7 +3504,8 @@ msgstr ""
 "GNU/Linux, uporabite iskanje aplikacij (npr. Spotlight v operacijskem "
 "sistemu macOS)."
 
-#: ../pro/smime.rst:31
+#: ../hsm/linux/smime.rst:31 ../hsm/mac/smime.rst:31
+#: ../hsm/windows/smime.rst:31 ../pro/smime.rst:31
 msgid ""
 "To make these commands as simple as possible, the .p12 file needs to be "
 "in your home folder. On Windows this is usually ‘C:\\Users\\yourusername’"
@@ -3508,7 +3520,8 @@ msgstr ""
 "'/home/yourusername'. Če datoteke .p12 ne hranite tam, morate prilagoditi"
 " pot v spodnjih ukazih. Pred oddajo ukazov priključite ključ Nitrokey."
 
-#: ../pro/smime.rst:33
+#: ../hsm/linux/smime.rst:33 ../hsm/mac/smime.rst:33
+#: ../hsm/windows/smime.rst:33 ../pro/smime.rst:33
 msgid ""
 "Assuming that your key-certificate file reads ‘myprivate.p12’ the "
 "commands for Windows looks like this:"
@@ -3516,11 +3529,13 @@ msgstr ""
 "Ob predpostavki, da se vaša datoteka s potrdilom ključa glasi "
 "'myprivate.p12', so ukazi za Windows videti takole:"
 
-#: ../pro/smime.rst:40
+#: ../hsm/linux/smime.rst:40 ../hsm/mac/smime.rst:40
+#: ../hsm/windows/smime.rst:40 ../pro/smime.rst:40
 msgid "and on macOS and GNU/Linux it will be"
 msgstr "v operacijskih sistemih macOS in GNU/Linux pa bo"
 
-#: ../pro/smime.rst:47
+#: ../hsm/linux/smime.rst:47 ../hsm/mac/smime.rst:47
+#: ../hsm/windows/smime.rst:47 ../pro/smime.rst:47
 msgid ""
 "The two commands copy the key-certificate pair to the slot 2 (needed for "
 "decrypting emails) and slot 3 (needed for signing). The output looks on "
@@ -3530,7 +3545,8 @@ msgstr ""
 "dešifriranje e-pošte) in režo 3 (ki je potrebna za podpisovanje). Izpis "
 "je v obeh sistemih videti približno takole:"
 
-#: ../pro/smime.rst:54
+#: ../hsm/linux/smime.rst:54 ../hsm/mac/smime.rst:54
+#: ../hsm/windows/smime.rst:54 ../pro/smime.rst:54
 msgid ""
 "Please note that there will be error messages that can be safely ignored "
 "(see output example above). You now have the key-certificate pair loaded "
@@ -3540,19 +3556,23 @@ msgstr ""
 "prezrete (glejte zgornji primer izpisa). Par ključ-certifikat je zdaj "
 "naložen na ključ Nitrokey."
 
-#: ../pro/openpgp.rst:51 ../pro/smime.rst:59
+#: ../hsm/linux/smime.rst:59 ../hsm/mac/smime.rst:59
+#: ../hsm/windows/smime.rst:59 ../pro/openpgp.rst:51 ../pro/smime.rst:59
 msgid "You can find further information about the usage on these pages:"
 msgstr "Več informacij o uporabi najdete na teh straneh:"
 
-#: ../pro/smime.rst:61
+#: ../hsm/linux/smime.rst:61 ../hsm/mac/smime.rst:61
+#: ../hsm/windows/smime.rst:61 ../pro/smime.rst:61
 msgid "for using `S/MIME encryption on Thunderbird <smime-thunderbird.html>`_"
 msgstr "za uporabo `šifriranja S/MIME v Thunderbirdu <smime-thunderbird.html>`_"
 
-#: ../pro/smime.rst:64
+#: ../hsm/linux/smime.rst:64 ../hsm/mac/smime.rst:64
+#: ../hsm/windows/smime.rst:64 ../pro/smime.rst:64
 msgid "for using `S/MIME encryption on Outlook <smime-outlook.html>`_"
 msgstr "za uporabo `šifriranja S/MIME v programu Outlook <smime-outlook.html>`_"
 
-#: ../pro/openpgp.rst:63 ../pro/smime.rst:67
+#: ../hsm/linux/smime.rst:67 ../hsm/mac/smime.rst:67
+#: ../hsm/windows/smime.rst:67 ../pro/openpgp.rst:63 ../pro/smime.rst:67
 msgid ""
 "for using `Evolution <https://help.gnome.org/users/evolution/stable/mail-"
 "encryption.html.en>`_, an email client for the Gnome Desktop on Linux "
@@ -3562,7 +3582,8 @@ msgstr ""
 "/mail-encryption.html.en>`_, odjemalca e-pošte za namizje Gnome v "
 "sistemih Linux"
 
-#: ../pro/smime.rst:74
+#: ../hsm/linux/smime.rst:74 ../hsm/mac/smime.rst:74
+#: ../hsm/windows/smime.rst:74 ../pro/smime.rst:74
 msgid ""
 "On Windows: Did you install **both**, the 32-bit and the 64-bit version "
 "of OpenSC?"
@@ -3570,19 +3591,15 @@ msgstr ""
 "V operacijskem sistemu Windows: Ali ste namestili **oboje**, 32-bitno in "
 "64-bitno različico OpenSC?"
 
-#: ../pro/smime.rst:77
+#: ../hsm/linux/smime.rst:77 ../hsm/mac/smime.rst:77
+#: ../hsm/windows/smime.rst:77
 msgid ""
-"Nitrokey Storage 2: You need to install OpenSC in version 0.18 or higher."
-" You can find the files on the `OpenSC website "
+"You need to install OpenSC in version 0.18 or higher. You can find the "
+"files on the `OpenSC website "
 "<https://github.com/OpenSC/OpenSC/releases>`_ for Windows and macOS user "
 "or `here <https://github.com/Nitrokey/opensc-build>`_ for Debian/Ubuntu "
 "users."
 msgstr ""
-"Nitrokey Storage 2: namestiti morate OpenSC v različici 0.18 ali višji. "
-"Datoteke lahko najdete na `spletišču OpenSC "
-"<https://github.com/OpenSC/OpenSC/releases>`_ za uporabnike sistemov "
-"Windows in MacOS ali ` tu <https://github.com/Nitrokey/opensc-build>`_ za"
-" uporabnike Debian/Ubuntu."
 
 #: ../pro/smime-outlook.rst:2
 msgid "S/MIME Email Encryption with Outlook"
@@ -14113,17 +14130,20 @@ msgstr ""
 "Vaš ključ Nitrokey je prilagojen in pripravljen za uporabo. **Zabavajte "
 "se z varnim šifriranjem e-pošte!**"
 
-#: ../pro/linux/openvpn-easyrsa.rst:2
+#: ../pro/linux/openvpn-easyrsa.rst:2 ../pro/windows/openvpn-easyrsa.rst:2
+#: ../storage/linux/openvpn-easyrsa.rst:2
 msgid "OpenVPN Configuration with Easy-RSA"
 msgstr "Konfiguracija OpenVPN z Easy-RSA"
 
-#: ../pro/linux/openvpn-easyrsa.rst:11
+#: ../pro/linux/openvpn-easyrsa.rst:11 ../pro/windows/openvpn-easyrsa.rst:11
+#: ../storage/linux/openvpn-easyrsa.rst:11
 msgid ""
 "This guide is work-in-progress, and will be updated accordinlgy. Please "
 "take this status into consideration."
 msgstr "Ta vodnik je v nastajanju in bo sproti posodabljan. Upoštevajte to stanje."
 
-#: ../pro/linux/openvpn-easyrsa.rst:13
+#: ../pro/linux/openvpn-easyrsa.rst:13 ../pro/windows/openvpn-easyrsa.rst:13
+#: ../storage/linux/openvpn-easyrsa.rst:13
 msgid ""
 "This guide shows how to configure OpenVPN clients to login using a "
 "`Nitrokey Pro 2 <https://shop.nitrokey.com/shop/product/nk-pro-2"
@@ -14157,7 +14177,8 @@ msgstr ""
 "zajema nastavitve samega overitelja (ta je jasna in `dobro dokumentirana "
 "tukaj <certificate-authority.html#sign-a-server-certificate>`_)."
 
-#: ../pro/linux/openvpn-easyrsa.rst:20
+#: ../pro/linux/openvpn-easyrsa.rst:20 ../pro/windows/openvpn-easyrsa.rst:20
+#: ../storage/linux/openvpn-easyrsa.rst:20
 msgid ""
 "We will use Easy-RSA, because it seems to provide some flexibility, and "
 "allows key management via external PKIs. We will use it on the server to "
@@ -14171,23 +14192,27 @@ msgstr ""
 "postopek ponovili v odjemalcu. Zahteve za podpis potrdila bo podpisal CA "
 "v Nitorkeyjevem HSM ter jih ponovno poslal strežniku in odjemalcu."
 
-#: ../pro/linux/openvpn-easyrsa.rst:26
+#: ../pro/linux/openvpn-easyrsa.rst:26 ../pro/windows/openvpn-easyrsa.rst:26
+#: ../storage/linux/openvpn-easyrsa.rst:26
 msgid ""
 "In the following documentation we will require 3 different machines as "
 "following:"
 msgstr "V naslednji dokumentaciji bomo potrebovali 3 različne stroje, kot sledi:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:28
+#: ../pro/linux/openvpn-easyrsa.rst:28 ../pro/windows/openvpn-easyrsa.rst:28
+#: ../storage/linux/openvpn-easyrsa.rst:28
 msgid "OpenVPN server (v. 2.5) on Debian 10 (EC2 virtual machine - AWS)"
 msgstr "Strežnik OpenVPN (v. 2.5) na sistemu Debian 10 (virtualni stroj EC2 - AWS)"
 
-#: ../pro/linux/openvpn-easyrsa.rst:30
+#: ../pro/linux/openvpn-easyrsa.rst:30 ../pro/windows/openvpn-easyrsa.rst:30
+#: ../storage/linux/openvpn-easyrsa.rst:30
 msgid "OpenVPN client (v. 2.4.9) on Fedora 30 (local machine)"
 msgstr ""
 "Odjemalec OpenVPN (v. 2.4.9) v operacijskem sistemu Fedora 30 (lokalni "
 "računalnik)"
 
-#: ../pro/linux/openvpn-easyrsa.rst:32
+#: ../pro/linux/openvpn-easyrsa.rst:32 ../pro/windows/openvpn-easyrsa.rst:32
+#: ../storage/linux/openvpn-easyrsa.rst:32
 msgid ""
 "The Certificate Authority will be accessible from a standalone machine "
 "with Fedora 30 (local machine)"
@@ -14195,7 +14220,8 @@ msgstr ""
 "Overitelj bo dostopen iz samostojnega računalnika z operacijskim sistemom"
 " Fedora 30 (lokalni računalnik)."
 
-#: ../pro/linux/openvpn-easyrsa.rst:35
+#: ../pro/linux/openvpn-easyrsa.rst:35 ../pro/windows/openvpn-easyrsa.rst:35
+#: ../storage/linux/openvpn-easyrsa.rst:35
 msgid ""
 "To interact with the devices we will require `OpenSC 0.20 "
 "<https://github.com/OpenSC/OpenSC/wiki>`_ installed on the client and CA "
@@ -14210,11 +14236,13 @@ msgstr ""
 "<https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-"
 "flavors>`_."
 
-#: ../pro/linux/openvpn-easyrsa.rst:38
+#: ../pro/linux/openvpn-easyrsa.rst:38 ../pro/windows/openvpn-easyrsa.rst:38
+#: ../storage/linux/openvpn-easyrsa.rst:38
 msgid "To download the dependencies on Fedora machines we can this instruction:"
 msgstr "Za prenos odvisnosti na napravah Fedora lahko uporabimo to navodilo:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:44
+#: ../pro/linux/openvpn-easyrsa.rst:44 ../pro/windows/openvpn-easyrsa.rst:44
+#: ../storage/linux/openvpn-easyrsa.rst:44
 msgid ""
 "For Debian Linux, more recent OpenSC packages are available `here "
 "<https://github.com/Nitrokey/opensc-build>`_."
@@ -14222,11 +14250,13 @@ msgstr ""
 "Za Debian Linux so na voljo novejši paketi OpenSC `tudi "
 "<https://github.com/Nitrokey/opensc-build>`_."
 
-#: ../pro/linux/openvpn-easyrsa.rst:46
+#: ../pro/linux/openvpn-easyrsa.rst:46 ../pro/windows/openvpn-easyrsa.rst:46
+#: ../storage/linux/openvpn-easyrsa.rst:46
 msgid "We will use the following Nitrokeys for physical key management:"
 msgstr "Za upravljanje fizičnih ključev bomo uporabili naslednje Nitrokeys:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:48
+#: ../pro/linux/openvpn-easyrsa.rst:48 ../pro/windows/openvpn-easyrsa.rst:48
+#: ../storage/linux/openvpn-easyrsa.rst:48
 msgid ""
 "An authentication key using the `Nitrokey Pro 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf>`_"
@@ -14234,7 +14264,8 @@ msgstr ""
 "Ključ za preverjanje pristnosti z uporabo `Nitrokey Pro 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf>`_"
 
-#: ../pro/linux/openvpn-easyrsa.rst:51
+#: ../pro/linux/openvpn-easyrsa.rst:51 ../pro/windows/openvpn-easyrsa.rst:51
+#: ../storage/linux/openvpn-easyrsa.rst:51
 msgid ""
 "A Certificate Authority (CA) using the `Nitrokey HSM 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`_"
@@ -14242,7 +14273,8 @@ msgstr ""
 "Organ za izdajo potrdil (CA), ki uporablja `Nitrokey HSM 2 (pdf) "
 "<https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`_"
 
-#: ../pro/linux/openvpn-easyrsa.rst:54
+#: ../pro/linux/openvpn-easyrsa.rst:54 ../pro/windows/openvpn-easyrsa.rst:54
+#: ../storage/linux/openvpn-easyrsa.rst:54
 msgid ""
 "As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you "
 "may follow the instructions available `in the documentation <certificate-"
@@ -14252,7 +14284,8 @@ msgstr ""
 "navodilom, ki so na voljo `v dokumentaciji <certificate-"
 "authority.html#sign-a-server-certificate>`_."
 
-#: ../pro/linux/openvpn-easyrsa.rst:56
+#: ../pro/linux/openvpn-easyrsa.rst:56 ../pro/windows/openvpn-easyrsa.rst:56
+#: ../storage/linux/openvpn-easyrsa.rst:56
 msgid ""
 "Alternatively you may set up your own CA on a `on a separate machine "
 "<https://www.digitalocean.com/community/tutorials/how-to-set-up-and-"
@@ -14269,29 +14302,35 @@ msgstr ""
 "Zadnji dve možnosti se zanašata na programske rešitve za upravljanje "
 "ključev."
 
-#: ../pro/linux/openvpn-easyrsa.rst:61
+#: ../pro/linux/openvpn-easyrsa.rst:61 ../pro/windows/openvpn-easyrsa.rst:61
+#: ../storage/linux/openvpn-easyrsa.rst:61
 msgid "Server side"
 msgstr "Na strani strežnika"
 
-#: ../pro/linux/openvpn-easyrsa.rst:64
+#: ../pro/linux/openvpn-easyrsa.rst:64 ../pro/windows/openvpn-easyrsa.rst:64
+#: ../storage/linux/openvpn-easyrsa.rst:64
 msgid "1. Install OpenVPN"
 msgstr "1. Namestite OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:66
+#: ../pro/linux/openvpn-easyrsa.rst:66 ../pro/windows/openvpn-easyrsa.rst:66
+#: ../storage/linux/openvpn-easyrsa.rst:66
 msgid "First we need to enable IP Forwarding by editing ``/etc/sysctl.conf`` file"
 msgstr ""
 "Najprej moramo omogočiti posredovanje IP z urejanjem datoteke "
 "``/etc/sysctl.conf``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:72
+#: ../pro/linux/openvpn-easyrsa.rst:72 ../pro/windows/openvpn-easyrsa.rst:72
+#: ../storage/linux/openvpn-easyrsa.rst:72
 msgid "Uncomment or edit accordingly the following line"
 msgstr "Spustite komentar ali ustrezno uredite naslednjo vrstico"
 
-#: ../pro/linux/openvpn-easyrsa.rst:78
+#: ../pro/linux/openvpn-easyrsa.rst:78 ../pro/windows/openvpn-easyrsa.rst:78
+#: ../storage/linux/openvpn-easyrsa.rst:78
 msgid "Close after saving it, and enter this command"
 msgstr "Po shranjevanju ga zaprite in vnesite ta ukaz"
 
-#: ../pro/linux/openvpn-easyrsa.rst:84
+#: ../pro/linux/openvpn-easyrsa.rst:84 ../pro/windows/openvpn-easyrsa.rst:84
+#: ../storage/linux/openvpn-easyrsa.rst:84
 msgid ""
 "Once IP forwarding is done, we will need to download the latest release "
 "of OpenvPN for our Debian 10 server, according to `these instructions "
@@ -14301,15 +14340,18 @@ msgstr ""
 "OpenvPN za naš strežnik Debian 10 v skladu s `temi navodili "
 "<https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`_:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:86
+#: ../pro/linux/openvpn-easyrsa.rst:86 ../pro/windows/openvpn-easyrsa.rst:86
+#: ../storage/linux/openvpn-easyrsa.rst:86
 msgid "Change to root and download the GPG key that signed the package"
 msgstr "Spremenite se v root in prenesite ključ GPG, ki je podpisal paket"
 
-#: ../pro/linux/openvpn-easyrsa.rst:93
+#: ../pro/linux/openvpn-easyrsa.rst:93 ../pro/windows/openvpn-easyrsa.rst:93
+#: ../storage/linux/openvpn-easyrsa.rst:93
 msgid "Add the URL of the adequate OpenVPN packages to the ``sources.list`` file"
 msgstr "V datoteko ``sources.list`` dodajte URL ustreznih paketov OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:100
+#: ../pro/linux/openvpn-easyrsa.rst:100 ../pro/windows/openvpn-easyrsa.rst:100
+#: ../storage/linux/openvpn-easyrsa.rst:100
 msgid ""
 "We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN "
 "`version 2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`_ to "
@@ -14319,11 +14361,13 @@ msgstr ""
 "OpenVPN `različico 2.4.8 "
 "<https://community.openvpn.net/openvpn/ticket/1215>`_."
 
-#: ../pro/linux/openvpn-easyrsa.rst:103
+#: ../pro/linux/openvpn-easyrsa.rst:103 ../pro/windows/openvpn-easyrsa.rst:103
+#: ../storage/linux/openvpn-easyrsa.rst:103
 msgid "Next we download OpenVPN"
 msgstr "Nato prenesemo OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:109
+#: ../pro/linux/openvpn-easyrsa.rst:109 ../pro/windows/openvpn-easyrsa.rst:109
+#: ../storage/linux/openvpn-easyrsa.rst:109
 msgid ""
 "If you want to check the version, it possible by calling ``--version`` "
 "and print the following:"
@@ -14331,11 +14375,13 @@ msgstr ""
 "Če želite preveriti različico, lahko to storite tako, da pokličete "
 "``--version`` in izpišete naslednje:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:122
+#: ../pro/linux/openvpn-easyrsa.rst:122 ../pro/windows/openvpn-easyrsa.rst:122
+#: ../storage/linux/openvpn-easyrsa.rst:122
 msgid "2. Install Easy-RSA"
 msgstr "2. Namestite Easy-RSA"
 
-#: ../pro/linux/openvpn-easyrsa.rst:124
+#: ../pro/linux/openvpn-easyrsa.rst:124 ../pro/windows/openvpn-easyrsa.rst:124
+#: ../storage/linux/openvpn-easyrsa.rst:124
 msgid ""
 "To build the PKI, we will download the latest version of Easy-RSA on the "
 "server and client machines. To get the latest release, go to the "
@@ -14351,19 +14397,23 @@ msgstr ""
 "prenos datoteke, ki se konča z ``.tgz``, in jo nato prilepite v naslednji"
 " ukaz:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:126
+#: ../pro/linux/openvpn-easyrsa.rst:126 ../pro/windows/openvpn-easyrsa.rst:126
+#: ../storage/linux/openvpn-easyrsa.rst:126
 msgid "Download the latest release"
 msgstr "Prenesite najnovejšo različico"
 
-#: ../pro/linux/openvpn-easyrsa.rst:133
+#: ../pro/linux/openvpn-easyrsa.rst:133 ../pro/windows/openvpn-easyrsa.rst:133
+#: ../storage/linux/openvpn-easyrsa.rst:133
 msgid "Extract the tarball"
 msgstr "Izvleček paketa tarball"
 
-#: ../pro/linux/openvpn-easyrsa.rst:142
+#: ../pro/linux/openvpn-easyrsa.rst:142 ../pro/windows/openvpn-easyrsa.rst:142
+#: ../storage/linux/openvpn-easyrsa.rst:142
 msgid "3. Create a PKI for OpenVPN server"
 msgstr "3. Ustvarite PKI za strežnik OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:144
+#: ../pro/linux/openvpn-easyrsa.rst:144 ../pro/windows/openvpn-easyrsa.rst:144
+#: ../storage/linux/openvpn-easyrsa.rst:144
 msgid ""
 "Before you can create your OpenVPN server’s private key and certificate, "
 "you need to create a local Public Key Infrastructure directory on your "
@@ -14377,7 +14427,8 @@ msgstr ""
 "potrdila strežnika in odjemalcev, namesto da bi jih neposredno pošiljali "
 "v strežnik CA."
 
-#: ../pro/linux/openvpn-easyrsa.rst:146
+#: ../pro/linux/openvpn-easyrsa.rst:146 ../pro/windows/openvpn-easyrsa.rst:146
+#: ../storage/linux/openvpn-easyrsa.rst:146
 msgid ""
 "To build a PKI directory on your OpenVPN server, you’ll need to populate "
 "a file called ``vars`` with some default values."
@@ -14385,15 +14436,18 @@ msgstr ""
 "Če želite ustvariti imenik PKI v strežniku OpenVPN, morate datoteko z "
 "imenom ``vars`` napolniti z nekaj privzetimi vrednostmi."
 
-#: ../pro/linux/openvpn-easyrsa.rst:148
+#: ../pro/linux/openvpn-easyrsa.rst:148 ../pro/windows/openvpn-easyrsa.rst:148
+#: ../storage/linux/openvpn-easyrsa.rst:148
 msgid "Create a ``vars`` file"
 msgstr "Ustvarite datoteko ``vars``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:156
+#: ../pro/linux/openvpn-easyrsa.rst:156 ../pro/windows/openvpn-easyrsa.rst:156
+#: ../storage/linux/openvpn-easyrsa.rst:156
 msgid "Once the file is opened, paste in the following two lines"
 msgstr "Ko je datoteka odprta, prilepite naslednji dve vrstici"
 
-#: ../pro/linux/openvpn-easyrsa.rst:163
+#: ../pro/linux/openvpn-easyrsa.rst:163 ../pro/windows/openvpn-easyrsa.rst:163
+#: ../storage/linux/openvpn-easyrsa.rst:163
 msgid ""
 "These are the only two lines that you need in this ``vars`` file on your "
 "OpenVPN server since it will not be used as a Certificate Authority. They"
@@ -14408,7 +14462,8 @@ msgstr ""
 "(ECC) za generiranje ključev in varnih podpisov za vaše odjemalce in "
 "strežnik OpenVPN."
 
-#: ../pro/linux/openvpn-easyrsa.rst:165
+#: ../pro/linux/openvpn-easyrsa.rst:165 ../pro/windows/openvpn-easyrsa.rst:165
+#: ../storage/linux/openvpn-easyrsa.rst:165
 msgid ""
 "In regards to the choice of the cryptographic algorithms, I follow the "
 "model in `this tutorial <https://www.digitalocean.com/community/tutorials"
@@ -14420,11 +14475,13 @@ msgstr ""
 "up-and-configure-an-openvpn-server-on-centos-8>`_, lahko pa jih "
 "prilagodite glede na svoje posebne potrebe."
 
-#: ../pro/linux/openvpn-easyrsa.rst:167
+#: ../pro/linux/openvpn-easyrsa.rst:167 ../pro/windows/openvpn-easyrsa.rst:167
+#: ../storage/linux/openvpn-easyrsa.rst:167
 msgid "Initialize the PKI"
 msgstr "Inicializacija infrastrukture PKI"
 
-#: ../pro/linux/openvpn-easyrsa.rst:169
+#: ../pro/linux/openvpn-easyrsa.rst:169 ../pro/windows/openvpn-easyrsa.rst:169
+#: ../storage/linux/openvpn-easyrsa.rst:169
 msgid ""
 "Once you have populated the ``vars`` file you can proceed with creating "
 "the PKI directory. To do so, run the easyrsa script with the init-pki "
@@ -14433,7 +14490,8 @@ msgstr ""
 "Ko izpolnite datoteko ``vars``, lahko nadaljujete z ustvarjanjem imenika "
 "PKI. To storite tako, da zaženete skripto easyrsa z možnostjo init-pki:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:175
+#: ../pro/linux/openvpn-easyrsa.rst:175 ../pro/windows/openvpn-easyrsa.rst:175
+#: ../storage/linux/openvpn-easyrsa.rst:175
 msgid ""
 "After you’ve initialized your PKI on the OpenVPN server, you are ready to"
 " move on to the next step, which is creating an OpenVPN server "
@@ -14443,11 +14501,13 @@ msgstr ""
 "naslednji korak, to je ustvarjanje zahteve za potrdilo strežnika OpenVPN "
 "in zasebnega ključa."
 
-#: ../pro/linux/openvpn-easyrsa.rst:178
+#: ../pro/linux/openvpn-easyrsa.rst:178 ../pro/windows/openvpn-easyrsa.rst:178
+#: ../storage/linux/openvpn-easyrsa.rst:178
 msgid "4. Create ``server.req`` and ``server.key``"
 msgstr "4. Ustvarite ``server.req`` in ``server.key``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:180
+#: ../pro/linux/openvpn-easyrsa.rst:180 ../pro/windows/openvpn-easyrsa.rst:180
+#: ../storage/linux/openvpn-easyrsa.rst:180
 msgid ""
 "Now that your OpenVPN server has all the prerequisites installed, the "
 "next step is to generate a key pair composed of a private key (to keep "
@@ -14459,7 +14519,8 @@ msgstr ""
 "ostane skrivnost) in zahteva za podpis potrdila (``.csr``) v strežniku "
 "OpenVPN."
 
-#: ../pro/linux/openvpn-easyrsa.rst:182
+#: ../pro/linux/openvpn-easyrsa.rst:182 ../pro/windows/openvpn-easyrsa.rst:182
+#: ../storage/linux/openvpn-easyrsa.rst:182
 msgid ""
 "In general terms, on systems where we generate a key and request, these "
 "files are left unencrypted by using the ``nopass`` argument, since "
@@ -14472,11 +14533,13 @@ msgstr ""
 "strežniki običajno zagnati brez vnosa gesla. Tako se ustvari *nešifriran "
 "ključ*, zato skrbno *zaščitite njegov dostop in dovoljenja za datoteke*."
 
-#: ../pro/linux/openvpn-easyrsa.rst:186
+#: ../pro/linux/openvpn-easyrsa.rst:186 ../pro/windows/openvpn-easyrsa.rst:186
+#: ../storage/linux/openvpn-easyrsa.rst:186
 msgid "Configuration notes from OpenVPN:"
 msgstr "Opombe o konfiguraciji iz OpenVPN:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:188
+#: ../pro/linux/openvpn-easyrsa.rst:188 ../pro/windows/openvpn-easyrsa.rst:188
+#: ../storage/linux/openvpn-easyrsa.rst:188
 msgid ""
 "The server, and each client, must have their own cert and key file. The "
 "server and all clients will use the same CA file."
@@ -14484,23 +14547,28 @@ msgstr ""
 "Strežnik in vsak odjemalec morata imeti svojo datoteko s potrdilom in "
 "ključem. Strežnik in vsi odjemalci bodo uporabljali isto datoteko CA."
 
-#: ../pro/linux/openvpn-easyrsa.rst:190
+#: ../pro/linux/openvpn-easyrsa.rst:190 ../pro/windows/openvpn-easyrsa.rst:190
+#: ../storage/linux/openvpn-easyrsa.rst:190
 msgid "Server certificate should have the following:"
 msgstr "Strežniško potrdilo mora vsebovati naslednje podatke:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:192
+#: ../pro/linux/openvpn-easyrsa.rst:192 ../pro/windows/openvpn-easyrsa.rst:192
+#: ../storage/linux/openvpn-easyrsa.rst:192
 msgid "``keyUsage:  digitalSignature, keyEncipherment``"
 msgstr "``keyUsage:  digitalSignature, keyEncipherment``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:194
+#: ../pro/linux/openvpn-easyrsa.rst:194 ../pro/windows/openvpn-easyrsa.rst:194
+#: ../storage/linux/openvpn-easyrsa.rst:194
 msgid "``extendedKeyUsage: serverAuth``"
 msgstr "``extendedKeyUsage: serverAuth``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:196
+#: ../pro/linux/openvpn-easyrsa.rst:196 ../pro/windows/openvpn-easyrsa.rst:196
+#: ../storage/linux/openvpn-easyrsa.rst:196
 msgid "Create the signing request for the server"
 msgstr "Ustvarite zahtevo za podpisovanje za strežnik"
 
-#: ../pro/linux/openvpn-easyrsa.rst:198
+#: ../pro/linux/openvpn-easyrsa.rst:198 ../pro/windows/openvpn-easyrsa.rst:198
+#: ../storage/linux/openvpn-easyrsa.rst:198
 msgid ""
 "Navigate to the ``~/easyrsa`` directory on your OpenVPN Server as your "
 "non-root user, and enter the following commands:"
@@ -14508,7 +14576,8 @@ msgstr ""
 "Kot uporabnik brez korena pojdite v imenik ``~/easyrsa`` v strežniku "
 "OpenVPN in vnesite naslednje ukaze:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:205
+#: ../pro/linux/openvpn-easyrsa.rst:205 ../pro/windows/openvpn-easyrsa.rst:205
+#: ../storage/linux/openvpn-easyrsa.rst:205
 msgid ""
 "This will create a private key for the server and a certificate request "
 "file called ``server.req``."
@@ -14516,17 +14585,20 @@ msgstr ""
 "To bo ustvarilo zasebni ključ za strežnik in datoteko z zahtevo za "
 "potrdilo z imenom ``server.req``."
 
-#: ../pro/linux/openvpn-easyrsa.rst:207
+#: ../pro/linux/openvpn-easyrsa.rst:207 ../pro/windows/openvpn-easyrsa.rst:207
+#: ../storage/linux/openvpn-easyrsa.rst:207
 msgid ""
 "Once you have a signed certificate, you’ll transfer it back to the "
 "OpenVPN server."
 msgstr "Ko imate podpisano potrdilo, ga prenesite nazaj v strežnik OpenVPN."
 
-#: ../pro/linux/openvpn-easyrsa.rst:209
+#: ../pro/linux/openvpn-easyrsa.rst:209 ../pro/windows/openvpn-easyrsa.rst:209
+#: ../storage/linux/openvpn-easyrsa.rst:209
 msgid "Copy the key to the OpenVPN server directory"
 msgstr "Kopiranje ključa v imenik strežnika OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:215
+#: ../pro/linux/openvpn-easyrsa.rst:215 ../pro/windows/openvpn-easyrsa.rst:215
+#: ../storage/linux/openvpn-easyrsa.rst:215
 msgid ""
 "After completing these steps, you have successfully created a private key"
 " for your OpenVPN server. You have also generated a Certificate Signing "
@@ -14536,11 +14608,13 @@ msgstr ""
 "OpenVPN. Ustvarili ste tudi zahtevo za podpis potrdila za strežnik "
 "OpenVPN."
 
-#: ../pro/linux/openvpn-easyrsa.rst:219
+#: ../pro/linux/openvpn-easyrsa.rst:219 ../pro/windows/openvpn-easyrsa.rst:219
+#: ../storage/linux/openvpn-easyrsa.rst:219
 msgid "File extensions for certificate signing requests"
 msgstr "Razširitve datotek za zahteve za podpisovanje potrdil"
 
-#: ../pro/linux/openvpn-easyrsa.rst:221
+#: ../pro/linux/openvpn-easyrsa.rst:221 ../pro/windows/openvpn-easyrsa.rst:221
+#: ../storage/linux/openvpn-easyrsa.rst:221
 msgid ""
 "The file extension that is adopted by the CA and HSM tutorial indicates "
 "the creation of a ``.csr`` file, however Easy-RSA creates certificate "
@@ -14550,7 +14624,8 @@ msgstr ""
 "ustvarjanje datoteke ``.csr``, vendar Easy-RSA ustvarja zahteve za "
 "podpisovanje potrdil z razširitvijo ``.req``."
 
-#: ../pro/linux/openvpn-easyrsa.rst:225
+#: ../pro/linux/openvpn-easyrsa.rst:225 ../pro/windows/openvpn-easyrsa.rst:225
+#: ../storage/linux/openvpn-easyrsa.rst:225
 msgid ""
 "We will use interchangeably both extensions, while making sure that we "
 "transfer the right files to the Certificate Authority, and generate a "
@@ -14560,7 +14635,8 @@ msgstr ""
 "bomo organu za potrjevanje prenesli prave datoteke in ustvarili končno "
 "potrdilo z razširitvijo ``.crt``."
 
-#: ../pro/linux/openvpn-easyrsa.rst:229
+#: ../pro/linux/openvpn-easyrsa.rst:229 ../pro/windows/openvpn-easyrsa.rst:229
+#: ../storage/linux/openvpn-easyrsa.rst:229
 msgid ""
 "In the next section of this guide, we will sign a ``.req`` file with our "
 "CA on deployed on the HSM 2 device. For this purpose, I will use a "
@@ -14570,11 +14646,13 @@ msgstr ""
 "našim CA, nameščenim v napravi HSM 2. V ta namen bom za podpisovanje "
 "zahtevkov uporabil namensko napravo."
 
-#: ../pro/linux/openvpn-easyrsa.rst:232
+#: ../pro/linux/openvpn-easyrsa.rst:232 ../pro/windows/openvpn-easyrsa.rst:232
+#: ../storage/linux/openvpn-easyrsa.rst:232
 msgid "5. Sign and retrieve ``server.crt``"
 msgstr "5. Podpis in prevzem ``server.crt``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:234
+#: ../pro/linux/openvpn-easyrsa.rst:234 ../pro/windows/openvpn-easyrsa.rst:234
+#: ../storage/linux/openvpn-easyrsa.rst:234
 msgid ""
 "The following instructions require the transfer of the ``server.req`` (or"
 " ``server.csr``) file to the CA system."
@@ -14582,7 +14660,8 @@ msgstr ""
 "Naslednja navodila zahtevajo prenos datoteke ``server.req`` (ali "
 "``server.csr``) v sistem CA."
 
-#: ../pro/linux/openvpn-easyrsa.rst:237
+#: ../pro/linux/openvpn-easyrsa.rst:237 ../pro/windows/openvpn-easyrsa.rst:237
+#: ../storage/linux/openvpn-easyrsa.rst:237
 msgid ""
 "The transfer itself is not security sensitive, though it is wise to "
 "verify if the received file matches the sender’s copy, if the transport "
@@ -14592,7 +14671,8 @@ msgstr ""
 "prejeta datoteka ujema s pošiljateljevo kopijo, če prenos ni zaupanja "
 "vreden."
 
-#: ../pro/linux/openvpn-easyrsa.rst:239
+#: ../pro/linux/openvpn-easyrsa.rst:239 ../pro/windows/openvpn-easyrsa.rst:239
+#: ../storage/linux/openvpn-easyrsa.rst:239
 msgid ""
 "In order to go through these steps, I will extensively rely on `these "
 "instructions <certificate-authority.html#creating-the-intermediate-"
@@ -14604,11 +14684,13 @@ msgstr ""
 "authority>`_ za podpisovanje zahtevkov za podpis potrdil, ko smo jih "
 "ustvarili z Easy-RSA."
 
-#: ../pro/linux/openvpn-easyrsa.rst:242
+#: ../pro/linux/openvpn-easyrsa.rst:242 ../pro/windows/openvpn-easyrsa.rst:242
+#: ../storage/linux/openvpn-easyrsa.rst:242
 msgid "5.1. Sign the ``server.req`` file"
 msgstr "5.1. Podpisovanje datoteke ``server.req``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:244
+#: ../pro/linux/openvpn-easyrsa.rst:244 ../pro/windows/openvpn-easyrsa.rst:244
+#: ../storage/linux/openvpn-easyrsa.rst:244
 msgid ""
 "On the local machine dedicated to access the HSM, we will use the tools "
 "provided by Opensc 0.20 in order to sign the ``.req`` file, and send it "
@@ -14620,7 +14702,8 @@ msgstr ""
 "in jo poslali nazaj v strežnik OpenVPN. Predpostavljamo, da smo datoteko "
 "prenesli iz strežnikovega računalnika v računalnik CA."
 
-#: ../pro/linux/openvpn-easyrsa.rst:246
+#: ../pro/linux/openvpn-easyrsa.rst:246 ../pro/windows/openvpn-easyrsa.rst:246
+#: ../storage/linux/openvpn-easyrsa.rst:246
 msgid ""
 "First we start by plugging the HSM Nitrokey, and enter this instruction "
 "for listing the keys available."
@@ -14628,31 +14711,38 @@ msgstr ""
 "Najprej začnemo s priključitvijo ključa HSM Nitrokey in vnesemo to "
 "navodilo za seznam tipk, ki so na voljo."
 
-#: ../pro/linux/openvpn-easyrsa.rst:248
+#: ../pro/linux/openvpn-easyrsa.rst:248 ../pro/windows/openvpn-easyrsa.rst:248
+#: ../storage/linux/openvpn-easyrsa.rst:248
 msgid "Query the list of available devices"
 msgstr "Poizvedba po seznamu razpoložljivih naprav"
 
-#: ../pro/linux/openvpn-easyrsa.rst:256
+#: ../pro/linux/openvpn-easyrsa.rst:256 ../pro/windows/openvpn-easyrsa.rst:256
+#: ../storage/linux/openvpn-easyrsa.rst:256
 msgid "The key’s URI should be in this format:"
 msgstr "URI ključa mora biti v tej obliki:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:262
+#: ../pro/linux/openvpn-easyrsa.rst:262 ../pro/windows/openvpn-easyrsa.rst:262
+#: ../storage/linux/openvpn-easyrsa.rst:262
 msgid "Create ``openvpn/`` directory under ``certificate-authority/``"
 msgstr "Ustvarite ``openvpn/`` imenik pod ``certificate-authority/``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:269
+#: ../pro/linux/openvpn-easyrsa.rst:269 ../pro/windows/openvpn-easyrsa.rst:269
+#: ../storage/linux/openvpn-easyrsa.rst:269
 msgid "Sign the ``server.req``"
 msgstr "Podpisati ``server.req``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:276
+#: ../pro/linux/openvpn-easyrsa.rst:276 ../pro/windows/openvpn-easyrsa.rst:276
+#: ../storage/linux/openvpn-easyrsa.rst:276
 msgid "5.2. Retrieve the ``server.crt`` file to the server machine"
 msgstr "5.2. Pridobitev datoteke ``server.crt`` v strežniški stroj"
 
-#: ../pro/linux/openvpn-easyrsa.rst:278
+#: ../pro/linux/openvpn-easyrsa.rst:278 ../pro/windows/openvpn-easyrsa.rst:278
+#: ../storage/linux/openvpn-easyrsa.rst:278
 msgid "Transfer the signed certificates to the server"
 msgstr "Prenos podpisanih potrdil v strežnik"
 
-#: ../pro/linux/openvpn-easyrsa.rst:280
+#: ../pro/linux/openvpn-easyrsa.rst:280 ../pro/windows/openvpn-easyrsa.rst:280
+#: ../storage/linux/openvpn-easyrsa.rst:280
 msgid ""
 "From the CA machine, copy the files ``server.crt`` and ``chain.crt`` to "
 "the OpenVPN server. In this example we will use the ``scp`` command as "
@@ -14661,15 +14751,18 @@ msgstr ""
 "Iz računalnika CA kopirajte datoteke ``server.crt`` in ``chain.crt`` v "
 "strežnik OpenVPN. V tem primeru bomo uporabili ukaz ``scp``, kot sledi:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:286
+#: ../pro/linux/openvpn-easyrsa.rst:286 ../pro/windows/openvpn-easyrsa.rst:286
+#: ../storage/linux/openvpn-easyrsa.rst:286
 msgid "Place the certificates on the server’s directory"
 msgstr "Potrdila namestite v imenik strežnika"
 
-#: ../pro/linux/openvpn-easyrsa.rst:294
+#: ../pro/linux/openvpn-easyrsa.rst:294 ../pro/windows/openvpn-easyrsa.rst:294
+#: ../storage/linux/openvpn-easyrsa.rst:294
 msgid "CA Certificate and ``chain.crt``"
 msgstr "Potrdilo CA in ``chain.crt``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:296
+#: ../pro/linux/openvpn-easyrsa.rst:296 ../pro/windows/openvpn-easyrsa.rst:296
+#: ../storage/linux/openvpn-easyrsa.rst:296
 msgid ""
 "In the above, the CA returns the signed sever certificate, and includes "
 "the CA certificate ``CA.crt`` which is the ``chain.crt`` file. This can "
@@ -14682,7 +14775,8 @@ msgstr ""
 "nezanesljivega kanala, čeprav se odjemalcu priporoča, da potrdi, ali je "
 "prejeti ``chain.crt`` veljaven, če prenos ni zaupanja vreden."
 
-#: ../pro/linux/openvpn-easyrsa.rst:302
+#: ../pro/linux/openvpn-easyrsa.rst:302 ../pro/windows/openvpn-easyrsa.rst:302
+#: ../storage/linux/openvpn-easyrsa.rst:302
 msgid ""
 "It is possible to rename the file ``chain.crt`` file to ``CA.crt`` on the"
 " target machine, however we will use ``chain.crt`` in the next "
@@ -14691,11 +14785,13 @@ msgstr ""
 "Datoteko ``chain.crt`` je mogoče preimenovati v ``CA.crt`` v ciljnem "
 "računalniku, vendar bomo v naslednjih navodilih uporabili ``chain.crt``."
 
-#: ../pro/linux/openvpn-easyrsa.rst:307
+#: ../pro/linux/openvpn-easyrsa.rst:307 ../pro/windows/openvpn-easyrsa.rst:307
+#: ../storage/linux/openvpn-easyrsa.rst:307
 msgid "6. Configure the OpenVPN server"
 msgstr "6. Konfiguracija strežnika OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:309
+#: ../pro/linux/openvpn-easyrsa.rst:309 ../pro/windows/openvpn-easyrsa.rst:309
+#: ../storage/linux/openvpn-easyrsa.rst:309
 msgid ""
 "A connection that uses TLS requires multiple `certificates and keys for "
 "authentication <https://wiki.teltonika-"
@@ -14711,7 +14807,8 @@ msgstr ""
 "potrdil in ključev, ki se morajo nahajati v korenskem imeniku, je "
 "naslednja:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:320
+#: ../pro/linux/openvpn-easyrsa.rst:320 ../pro/windows/openvpn-easyrsa.rst:320
+#: ../storage/linux/openvpn-easyrsa.rst:320
 msgid ""
 "On your OpenVPN server, now you can create the configuration file "
 "``server.conf`` with your favorite text editor. The file can be "
@@ -14725,23 +14822,27 @@ msgstr ""
 "spremenimo dele certifikata in ključa strežnika v skladu z imeni, ki ste "
 "jih izbrali za vaše datoteke, ki smo jih podpisali:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:329
+#: ../pro/linux/openvpn-easyrsa.rst:329 ../pro/windows/openvpn-easyrsa.rst:329
+#: ../storage/linux/openvpn-easyrsa.rst:329
 msgid "Here is the configuration file we can use for testing these instructions:"
 msgstr ""
 "Tukaj je konfiguracijska datoteka, ki jo lahko uporabimo za testiranje "
 "teh navodil:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:359
+#: ../pro/linux/openvpn-easyrsa.rst:359 ../pro/windows/openvpn-easyrsa.rst:359
+#: ../storage/linux/openvpn-easyrsa.rst:359
 msgid "To test if the configuration functions properly, we can use this command:"
 msgstr ""
 "Če želimo preveriti, ali konfiguracija deluje pravilno, lahko uporabimo "
 "ta ukaz:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:366
+#: ../pro/linux/openvpn-easyrsa.rst:366 ../pro/windows/openvpn-easyrsa.rst:366
+#: ../storage/linux/openvpn-easyrsa.rst:366
 msgid "7. Start the OpenVPN service on the server"
 msgstr "7. Zagon storitve OpenVPN v strežniku"
 
-#: ../pro/linux/openvpn-easyrsa.rst:368
+#: ../pro/linux/openvpn-easyrsa.rst:368 ../pro/windows/openvpn-easyrsa.rst:368
+#: ../storage/linux/openvpn-easyrsa.rst:368
 msgid ""
 "Enable the OpenVPN service by adding it to systemctl, and start it using "
 "these commands:"
@@ -14749,27 +14850,33 @@ msgstr ""
 "Omogočite storitev OpenVPN tako, da jo dodate v systemctl, in jo zaženite"
 " s temi ukazi:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:375
+#: ../pro/linux/openvpn-easyrsa.rst:375 ../pro/windows/openvpn-easyrsa.rst:375
+#: ../storage/linux/openvpn-easyrsa.rst:375
 msgid "To Double check if the OpenVPN service is active use this command:"
 msgstr "Za dvojno preverjanje, ali je storitev OpenVPN aktivna, uporabite ta ukaz:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:381
+#: ../pro/linux/openvpn-easyrsa.rst:381 ../pro/windows/openvpn-easyrsa.rst:381
+#: ../storage/linux/openvpn-easyrsa.rst:381
 msgid "The OpenVPN should be running at this point."
 msgstr "Na tej točki mora delovati OpenVPN."
 
-#: ../pro/linux/openvpn-easyrsa.rst:386
+#: ../pro/linux/openvpn-easyrsa.rst:386 ../pro/windows/openvpn-easyrsa.rst:386
+#: ../storage/linux/openvpn-easyrsa.rst:386
 msgid "Client side configuration"
 msgstr "Konfiguracija na strani odjemalca"
 
-#: ../pro/linux/openvpn-easyrsa.rst:400
+#: ../pro/linux/openvpn-easyrsa.rst:400 ../pro/windows/openvpn-easyrsa.rst:400
+#: ../storage/linux/openvpn-easyrsa.rst:400
 msgid "1. Install OpenVPN and Easy-RSA"
 msgstr "1. Namestitev OpenVPN in Easy-RSA"
 
-#: ../pro/linux/openvpn-easyrsa.rst:402
+#: ../pro/linux/openvpn-easyrsa.rst:402 ../pro/windows/openvpn-easyrsa.rst:402
+#: ../storage/linux/openvpn-easyrsa.rst:402
 msgid "Install the software"
 msgstr "Namestitev programske opreme"
 
-#: ../pro/linux/openvpn-easyrsa.rst:404
+#: ../pro/linux/openvpn-easyrsa.rst:404 ../pro/windows/openvpn-easyrsa.rst:404
+#: ../storage/linux/openvpn-easyrsa.rst:404
 msgid ""
 "We can use directly ``dnf install`` to install OpenVPN 2.4.9 and Easy-RSA"
 " 3.0.7"
@@ -14777,19 +14884,23 @@ msgstr ""
 "Za namestitev OpenVPN 2.4.9 in Easy-RSA 3.0.7 lahko neposredno uporabimo "
 "``dnf install``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:410
+#: ../pro/linux/openvpn-easyrsa.rst:410 ../pro/windows/openvpn-easyrsa.rst:410
+#: ../storage/linux/openvpn-easyrsa.rst:410
 msgid "Then we create as non-root a directory for Easy RSA called ``Easy-RSA``"
 msgstr "Nato ustvarimo imenik za Easy RSA z imenom ``Easy-RSA``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:416
+#: ../pro/linux/openvpn-easyrsa.rst:416 ../pro/windows/openvpn-easyrsa.rst:416
+#: ../storage/linux/openvpn-easyrsa.rst:416
 msgid "And link it to the Easy RSA package we just installed"
 msgstr "in ga povežite s paketom Easy RSA, ki smo ga pravkar namestili"
 
-#: ../pro/linux/openvpn-easyrsa.rst:423
+#: ../pro/linux/openvpn-easyrsa.rst:423 ../pro/windows/openvpn-easyrsa.rst:423
+#: ../storage/linux/openvpn-easyrsa.rst:423
 msgid "2. Create a PKI for the OpenVPN client"
 msgstr "2. Ustvarite PKI za odjemalca OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:425
+#: ../pro/linux/openvpn-easyrsa.rst:425 ../pro/windows/openvpn-easyrsa.rst:425
+#: ../storage/linux/openvpn-easyrsa.rst:425
 msgid ""
 "In the same manner we created a PKI on the OpenVPN server, we will create"
 " a PKI using Easy-RSA on the client side."
@@ -14797,11 +14908,13 @@ msgstr ""
 "Na enak način, kot smo ustvarili PKI v strežniku OpenVPN, bomo ustvarili "
 "PKI z uporabo Easy-RSA na strani odjemalca."
 
-#: ../pro/linux/openvpn-easyrsa.rst:428
+#: ../pro/linux/openvpn-easyrsa.rst:428 ../pro/windows/openvpn-easyrsa.rst:428
+#: ../storage/linux/openvpn-easyrsa.rst:428
 msgid "3. Create a ``client.req`` and ``client.key``"
 msgstr "3. Ustvarite ``client.req`` in ``client.key``"
 
-#: ../pro/linux/openvpn-easyrsa.rst:430
+#: ../pro/linux/openvpn-easyrsa.rst:430 ../pro/windows/openvpn-easyrsa.rst:430
+#: ../storage/linux/openvpn-easyrsa.rst:430
 msgid ""
 "In the same manner we issued the key pair on the sever, we generate a key"
 " pair for the client which will be composed of the ``client.req`` file "
@@ -14813,11 +14926,13 @@ msgstr ""
 "datoteke ``client.key``. Slednja mora biti v odjemalčevem računalniku "
 "tajna."
 
-#: ../pro/linux/openvpn-easyrsa.rst:434
+#: ../pro/linux/openvpn-easyrsa.rst:434 ../pro/windows/openvpn-easyrsa.rst:434
+#: ../storage/linux/openvpn-easyrsa.rst:434
 msgid "4. Sign ``client.req`` and issue the ``client.crt`` file"
 msgstr "4. Podpisati ``client.req`` in izdati ``client.crt`` datoteko"
 
-#: ../pro/linux/openvpn-easyrsa.rst:436
+#: ../pro/linux/openvpn-easyrsa.rst:436 ../pro/windows/openvpn-easyrsa.rst:436
+#: ../storage/linux/openvpn-easyrsa.rst:436
 msgid ""
 "To transfer the ``client.req`` file to the CA machine, we will use the "
 "same method as we did for the ``server.req`` file."
@@ -14825,7 +14940,8 @@ msgstr ""
 "Za prenos datoteke ``client.req`` v računalnik CA bomo uporabili enako "
 "metodo kot za datoteko ``server.req``."
 
-#: ../pro/linux/openvpn-easyrsa.rst:438
+#: ../pro/linux/openvpn-easyrsa.rst:438 ../pro/windows/openvpn-easyrsa.rst:438
+#: ../storage/linux/openvpn-easyrsa.rst:438
 msgid ""
 "Once transferred, on the CA machine we sign the certificate signing "
 "request file with this command"
@@ -14833,11 +14949,13 @@ msgstr ""
 "Po prenosu na računalniku CA podpišemo datoteko z zahtevo za podpis "
 "potrdila s tem ukazom"
 
-#: ../pro/linux/openvpn-easyrsa.rst:445
+#: ../pro/linux/openvpn-easyrsa.rst:445 ../pro/windows/openvpn-easyrsa.rst:445
+#: ../storage/linux/openvpn-easyrsa.rst:445
 msgid "5. Import ``client.crt`` on the Nitrokey from the CA machine"
 msgstr "5. Uvoz ``client.crt`` na Nitrokey iz naprave CA"
 
-#: ../pro/linux/openvpn-easyrsa.rst:447
+#: ../pro/linux/openvpn-easyrsa.rst:447 ../pro/windows/openvpn-easyrsa.rst:447
+#: ../storage/linux/openvpn-easyrsa.rst:447
 msgid ""
 "After creating the ``client.crt`` file, we plug the Nitrokey Pro 2 device"
 " in the CA machine, and import the ``.crt`` to the Pro 2 device using "
@@ -14846,7 +14964,8 @@ msgstr ""
 "Po ustvarjanju datoteke ``client.crt`` priključimo napravo Nitrokey Pro 2"
 " v računalnik CA in uvozimo ``.crt`` v napravo Pro 2 s tem ukazom:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:453
+#: ../pro/linux/openvpn-easyrsa.rst:453 ../pro/windows/openvpn-easyrsa.rst:453
+#: ../storage/linux/openvpn-easyrsa.rst:453
 msgid ""
 "You can see if the key is effectively stored on the Nitrokey using this "
 "command:"
@@ -14854,11 +14973,13 @@ msgstr ""
 "S tem ukazom lahko preverite, ali je ključ učinkovito shranjen v napravi "
 "Nitrokey:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:459
+#: ../pro/linux/openvpn-easyrsa.rst:459 ../pro/windows/openvpn-easyrsa.rst:459
+#: ../storage/linux/openvpn-easyrsa.rst:459
 msgid "Or alternatively"
 msgstr "Ali pa"
 
-#: ../pro/linux/openvpn-easyrsa.rst:465
+#: ../pro/linux/openvpn-easyrsa.rst:465 ../pro/windows/openvpn-easyrsa.rst:465
+#: ../storage/linux/openvpn-easyrsa.rst:465
 msgid ""
 "Fore more commands you can refer to the `OpenSC wiki "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`_."
@@ -14866,11 +14987,13 @@ msgstr ""
 "Za več ukazov si lahko ogledate `OpenSC wiki "
 "<https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`_."
 
-#: ../pro/linux/openvpn-easyrsa.rst:468
+#: ../pro/linux/openvpn-easyrsa.rst:468 ../pro/windows/openvpn-easyrsa.rst:468
+#: ../storage/linux/openvpn-easyrsa.rst:468
 msgid "6. Retrieve the ``chain.crt`` file from the CA machine"
 msgstr "6. Pridobite datoteko ``chain.crt`` z računalnika CA"
 
-#: ../pro/linux/openvpn-easyrsa.rst:470
+#: ../pro/linux/openvpn-easyrsa.rst:470 ../pro/windows/openvpn-easyrsa.rst:470
+#: ../storage/linux/openvpn-easyrsa.rst:470
 msgid ""
 "While we keep the ``client.crt``\\ stored on the nitrokey Pro 2 device, "
 "we must retrieve the ``chain.crt`` file on the client machine, and store "
@@ -14882,11 +15005,13 @@ msgstr ""
 "v ustreznem imeniku. Uporabimo lahko ``scp`` kot pri metodi, razloženi v "
 "strežniškem delu tega vodnika."
 
-#: ../pro/linux/openvpn-easyrsa.rst:473
+#: ../pro/linux/openvpn-easyrsa.rst:473 ../pro/windows/openvpn-easyrsa.rst:473
+#: ../storage/linux/openvpn-easyrsa.rst:473
 msgid "7. Configure the client to interact with the Nitrokey"
 msgstr "7. Konfigurirajte odjemalca za interakcijo z napravo Nitrokey"
 
-#: ../pro/linux/openvpn-easyrsa.rst:475
+#: ../pro/linux/openvpn-easyrsa.rst:475 ../pro/windows/openvpn-easyrsa.rst:475
+#: ../storage/linux/openvpn-easyrsa.rst:475
 msgid ""
 "Now back on the client machine, we will plug the Nitrokey Pro and use it "
 "to establish the VPN connection with the server. In general terms, a "
@@ -14898,7 +15023,8 @@ msgstr ""
 "povezava, ki uporablja protokol TLS, zahteva več potrdil in ključev za "
 "preverjanje pristnosti:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:484
+#: ../pro/linux/openvpn-easyrsa.rst:484 ../pro/windows/openvpn-easyrsa.rst:484
+#: ../storage/linux/openvpn-easyrsa.rst:484
 msgid ""
 "For this guide we can the following ``client.conf`` file, and add the "
 "required options to it accordingly:"
@@ -14906,11 +15032,13 @@ msgstr ""
 "Za ta vodnik lahko uporabimo naslednjo datoteko ``client.conf`` in ji "
 "ustrezno dodamo zahtevane možnosti:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:506
+#: ../pro/linux/openvpn-easyrsa.rst:506 ../pro/windows/openvpn-easyrsa.rst:506
+#: ../storage/linux/openvpn-easyrsa.rst:506
 msgid "Determine the correct object"
 msgstr "Določite pravilen predmet"
 
-#: ../pro/linux/openvpn-easyrsa.rst:508
+#: ../pro/linux/openvpn-easyrsa.rst:508 ../pro/windows/openvpn-easyrsa.rst:508
+#: ../storage/linux/openvpn-easyrsa.rst:508
 msgid ""
 "Each PKCS#11 provider can support multiple devices. In order to view the "
 "available object list you can use the following command:"
@@ -14918,7 +15046,8 @@ msgstr ""
 "Vsak ponudnik PKCS#11 lahko podpira več naprav. Za ogled seznama "
 "razpoložljivih predmetov lahko uporabite naslednji ukaz:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:524
+#: ../pro/linux/openvpn-easyrsa.rst:524 ../pro/windows/openvpn-easyrsa.rst:524
+#: ../storage/linux/openvpn-easyrsa.rst:524
 msgid ""
 "Each certificate/private key pair have unique ``Serialized id`` string. "
 "The serialized id string of the requested certificate should be "
@@ -14930,11 +15059,13 @@ msgstr ""
 " potrdila. To lahko storimo tako, da dodamo možnost ``pkcs11-id`` z "
 "uporabo enojnih narekovajev."
 
-#: ../pro/linux/openvpn-easyrsa.rst:530
+#: ../pro/linux/openvpn-easyrsa.rst:530 ../pro/windows/openvpn-easyrsa.rst:530
+#: ../storage/linux/openvpn-easyrsa.rst:530
 msgid "Add retrieved Serialized ID to the configuration file"
 msgstr "Dodajanje pridobljenega serializiranega ID v konfiguracijsko datoteko"
 
-#: ../pro/linux/openvpn-easyrsa.rst:532
+#: ../pro/linux/openvpn-easyrsa.rst:532 ../pro/windows/openvpn-easyrsa.rst:532
+#: ../storage/linux/openvpn-easyrsa.rst:532
 msgid ""
 "Using your favorite text editor, open the server.conf file, and add the "
 "following lines, while taking care to insert your own ``Serialized id``:"
@@ -14943,7 +15074,8 @@ msgstr ""
 "dodajte naslednje vrstice, pri čemer pazite, da vstavite svoje "
 "``Serialized id``:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:539
+#: ../pro/linux/openvpn-easyrsa.rst:539 ../pro/windows/openvpn-easyrsa.rst:539
+#: ../storage/linux/openvpn-easyrsa.rst:539
 msgid ""
 "For additional `settings related to OpenVPN <https://openvpn.net"
 "/community-resources/how-to/>`_ authentication, you may also add few "
@@ -14954,14 +15086,20 @@ msgstr ""
 "nekaj vrstic za upravljanje ključev, čeprav to ni obvezno."
 
 #: ../pro/linux/openvpn-easyrsa.rst:543 ../pro/linux/openvpn-easyrsa.rst:567
+#: ../pro/windows/openvpn-easyrsa.rst:543
+#: ../pro/windows/openvpn-easyrsa.rst:567
+#: ../storage/linux/openvpn-easyrsa.rst:543
+#: ../storage/linux/openvpn-easyrsa.rst:567
 msgid "Click to view the code"
 msgstr "Kliknite za ogled kode"
 
-#: ../pro/linux/openvpn-easyrsa.rst:560
+#: ../pro/linux/openvpn-easyrsa.rst:560 ../pro/windows/openvpn-easyrsa.rst:560
+#: ../storage/linux/openvpn-easyrsa.rst:560
 msgid "Optional step"
 msgstr "Izbirni korak"
 
-#: ../pro/linux/openvpn-easyrsa.rst:563
+#: ../pro/linux/openvpn-easyrsa.rst:563 ../pro/windows/openvpn-easyrsa.rst:563
+#: ../storage/linux/openvpn-easyrsa.rst:563
 msgid ""
 "If you need to test the configuration, with and without the token on the "
 "Nitrokey, you may add lines to the same ``client.conf`` and "
@@ -14971,19 +15109,23 @@ msgstr ""
 "njega, lahko dodate vrstice v isti ``client.conf`` in po potrebi "
 "komentirate/odkomentirate ustrezne vrstice:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:577
+#: ../pro/linux/openvpn-easyrsa.rst:577 ../pro/windows/openvpn-easyrsa.rst:577
+#: ../storage/linux/openvpn-easyrsa.rst:577
 msgid "Configure the OpenVPN client"
 msgstr "Konfiguracija odjemalca OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:579
+#: ../pro/linux/openvpn-easyrsa.rst:579 ../pro/windows/openvpn-easyrsa.rst:579
+#: ../storage/linux/openvpn-easyrsa.rst:579
 msgid "The final configuration file ``client.conf`` should look like this one:"
 msgstr "Končna konfiguracijska datoteka ``client.conf`` mora biti videti kot ta:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:622
+#: ../pro/linux/openvpn-easyrsa.rst:622 ../pro/windows/openvpn-easyrsa.rst:622
+#: ../storage/linux/openvpn-easyrsa.rst:622
 msgid "Known issues"
 msgstr "Znane težave"
 
-#: ../pro/linux/openvpn-easyrsa.rst:624
+#: ../pro/linux/openvpn-easyrsa.rst:624 ../pro/windows/openvpn-easyrsa.rst:624
+#: ../storage/linux/openvpn-easyrsa.rst:624
 msgid ""
 "There are some known issues related to OpenVPN login with OpenSC. Please "
 "consult these issues `here <https://github.com/Nitrokey/wiki/wiki/3rd-"
@@ -14993,33 +15135,40 @@ msgstr ""
 "težave si oglejte `tudi <https://github.com/Nitrokey/wiki/wiki/3rd-Party-"
 "Issues>`_."
 
-#: ../pro/linux/openvpn-easyrsa.rst:627
+#: ../pro/linux/openvpn-easyrsa.rst:627 ../pro/windows/openvpn-easyrsa.rst:627
+#: ../storage/linux/openvpn-easyrsa.rst:627
 msgid "8. Start the OpenVPN client"
 msgstr "8. Zagon odjemalca OpenVPN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:629
+#: ../pro/linux/openvpn-easyrsa.rst:629 ../pro/windows/openvpn-easyrsa.rst:629
+#: ../storage/linux/openvpn-easyrsa.rst:629
 msgid "Start the OpenVPN service on the client"
 msgstr "Zagon storitve OpenVPN v odjemalcu"
 
-#: ../pro/linux/openvpn-easyrsa.rst:631
+#: ../pro/linux/openvpn-easyrsa.rst:631 ../pro/windows/openvpn-easyrsa.rst:631
+#: ../storage/linux/openvpn-easyrsa.rst:631
 msgid "Enable the OpenVPN service, and start it using these commands:"
 msgstr "Omogočite storitev OpenVPN in jo zaženite s temi ukazi:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:638
+#: ../pro/linux/openvpn-easyrsa.rst:638 ../pro/windows/openvpn-easyrsa.rst:638
+#: ../storage/linux/openvpn-easyrsa.rst:638
 msgid "To double check if the OpenVPN service is active use this command:"
 msgstr ""
 "Če želite dvakrat preveriti, ali je storitev OpenVPN aktivna, uporabite "
 "ta ukaz:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:644
+#: ../pro/linux/openvpn-easyrsa.rst:644 ../pro/windows/openvpn-easyrsa.rst:644
+#: ../storage/linux/openvpn-easyrsa.rst:644
 msgid "Enter your User PIN"
 msgstr "Vnesite uporabniško kodo PIN"
 
-#: ../pro/linux/openvpn-easyrsa.rst:646
+#: ../pro/linux/openvpn-easyrsa.rst:646 ../pro/windows/openvpn-easyrsa.rst:646
+#: ../storage/linux/openvpn-easyrsa.rst:646
 msgid "When executing OpenVPN client, Nitrokey’s PIN needs to be entered:"
 msgstr "Pri izvajanju odjemalca OpenVPN je treba vnesti kodo PIN Nitrokey:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:658
+#: ../pro/linux/openvpn-easyrsa.rst:658 ../pro/windows/openvpn-easyrsa.rst:658
+#: ../storage/linux/openvpn-easyrsa.rst:658
 msgid ""
 "Unfortunately OpenVPN doesn’t seem to be able to establish a handshake "
 "and stops at an error as reported `here <https://support.nitrokey.com/t"
@@ -15035,7 +15184,8 @@ msgstr ""
 "141f0006/2637>`_ in `tudi "
 "<https://community.openvpn.net/openvpn/ticket/1215>`_"
 
-#: ../pro/linux/openvpn-easyrsa.rst:688
+#: ../pro/linux/openvpn-easyrsa.rst:688 ../pro/windows/openvpn-easyrsa.rst:688
+#: ../storage/linux/openvpn-easyrsa.rst:688
 msgid ""
 "In some reported cases it does not prompt for a PIN on the terminal. One "
 "workaround would be to use to use this command to login with the PIN:"
@@ -15044,7 +15194,8 @@ msgstr ""
 "kode PIN. To bi se dalo zaobiti tako, da bi se s tem ukazom prijavili s "
 "kodo PIN:"
 
-#: ../pro/linux/openvpn-easyrsa.rst:694
+#: ../pro/linux/openvpn-easyrsa.rst:694 ../pro/windows/openvpn-easyrsa.rst:694
+#: ../storage/linux/openvpn-easyrsa.rst:694
 msgid ""
 "Alternatively, you could `recompile OpenVPN "
 "<https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`_ client with "
@@ -15054,7 +15205,8 @@ msgstr ""
 "<https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`_ z onemogočeno "
 "podporo systemd, ki vas bo po pričakovanjih pozval k vnosu kode PIN."
 
-#: ../pro/linux/openvpn-easyrsa.rst:696
+#: ../pro/linux/openvpn-easyrsa.rst:696 ../pro/windows/openvpn-easyrsa.rst:696
+#: ../storage/linux/openvpn-easyrsa.rst:696
 msgid ""
 "Another option, would be to login to your OpenVPN instance with the "
 "Viscosity client which provides a better user experience especially for "
@@ -15191,6 +15343,30 @@ msgstr ""
 "drugih poverilnic morali navesti tudi enkratno geslo. Za pridobitev "
 "enkratnega gesla morate odpreti aplikacijo Nitrokey in ponovno odpreti "
 "\"Meni\" -> \"Gesla\" -> YourSlotName."
+
+#: ../pro/smime.rst:17
+msgid ""
+"If you are in doubt which one to choose, you should use OpenPGP, see "
+"`here <openpgp.html>`_. This page describes the usage of S/MIME email "
+"encryption."
+msgstr ""
+"Če ste v dvomih, katerega izbrati, uporabite OpenPGP, glejte `tudi "
+"<openpgp.html>`_. Na tej strani je opisana uporaba šifriranja e-pošte "
+"S/MIME."
+
+#: ../pro/smime.rst:77
+msgid ""
+"Nitrokey Storage 2: You need to install OpenSC in version 0.18 or higher."
+" You can find the files on the `OpenSC website "
+"<https://github.com/OpenSC/OpenSC/releases>`_ for Windows and macOS user "
+"or `here <https://github.com/Nitrokey/opensc-build>`_ for Debian/Ubuntu "
+"users."
+msgstr ""
+"Nitrokey Storage 2: namestiti morate OpenSC v različici 0.18 ali višji. "
+"Datoteke lahko najdete na `spletišču OpenSC "
+"<https://github.com/OpenSC/OpenSC/releases>`_ za uporabnike sistemov "
+"Windows in MacOS ali ` tu <https://github.com/Nitrokey/opensc-build>`_ za"
+" uporabnike Debian/Ubuntu."
 
 #: ../pro/linux/ssh.rst:2 ../start/linux/ssh.rst:2 ../storage/linux/ssh.rst:2
 msgid "SSH For Server Administration"
@@ -15731,6 +15907,24 @@ msgstr ""
 "z geslom in lahko uporabite `Šifriranje/podpisovanje e-pošte "
 "<smime.html>`_ s ključem Nitrokey. Gonilnik je treba namestiti v vsak "
 "računalnik, v katerem želite uporabljati potrdilo."
+
+#: ../pro/windows/openvpn-easyrsa.rst:17
+#, fuzzy
+msgid ""
+"To sign the certificates, we will use a `Nitrokey HSM 2 "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ set "
+"up as `Certificate Authority <../../hsm/windows/certificate-"
+"authority.html#creating-the-intermediate-certificate-authority>`_, "
+"however this guide does not cover the set up of the CA itself (it is "
+"clear and `well documented here <../../hsm/windows/certificate-"
+"authority.html#sign-a-server-certificate>`_)."
+msgstr ""
+"Za podpisovanje potrdil bomo uporabili `Nitrokey HSM 2 "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_, "
+"nastavljen kot `Certificate Authority <certificate-authority.html"
+"#creating-the-intermediate-certificate-authority>`_, vendar ta vodnik ne "
+"zajema nastavitve samega overitelja (ta je jasna in `dobro dokumentirana "
+"tukaj <certificate-authority.html#sign-a-server-certificate>`_)."
 
 #: ../pro/windows/openvpn-viscosity.rst:6
 msgid "Viscosity Client Configuration with OpenVPN"
@@ -17950,6 +18144,24 @@ msgid ""
 msgstr ""
 "Z aplikacijo Nitrokey spremenite privzeta uporabniška PIN (privzeto: "
 "123456) in skrbniški PIN (privzeto: 12345678)."
+
+#: ../storage/linux/openvpn-easyrsa.rst:17
+#, fuzzy
+msgid ""
+"To sign the certificates, we will use a `Nitrokey HSM 2 "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ set "
+"up as `Certificate Authority <../../hsm/linux/certificate-authority.html"
+"#creating-the-intermediate-certificate-authority>`_, however this guide "
+"does not cover the set up of the CA itself (it is clear and `well "
+"documented here <../../hsm/linux/certificate-authority.html#sign-a"
+"-server-certificate>`_)."
+msgstr ""
+"Za podpisovanje potrdil bomo uporabili `Nitrokey HSM 2 "
+"<https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_, "
+"nastavljen kot `Certificate Authority <certificate-authority.html"
+"#creating-the-intermediate-certificate-authority>`_, vendar ta vodnik ne "
+"zajema nastavitve samega overitelja (ta je jasna in `dobro dokumentirana "
+"tukaj <certificate-authority.html#sign-a-server-certificate>`_)."
 
 #: ../storage/mac/product_platform_heading.rst:3
 msgid "(Nitrokey Storage 2 - macOS)"
@@ -22589,3 +22801,4 @@ msgstr ""
 
 #~ msgid "Nitrokey FIDO U2F With macOS"
 #~ msgstr "Nitrokey FIDO U2F z macOS"
+
