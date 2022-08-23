@@ -23,42 +23,6 @@ Device Information & Status
 
     NetHSM localhost:8443 is Unprovisioned
 
-::
-
-Provisioning
-------------
-
-A new NetHSM needs to be provisioned first with passphrases and the current time. The Admin Passphrase is the Administrator’s passphrase, which is the superuser of the NetHSM. The Unlock Passphrase is used to encrypt NetHSM’s confidential data store.
-
-.. note::
-
-  The NetHSM demo instance at nethsmdemo.nitrokey.com is already provisioned.
-
-::
-
-   $ nitropy nethsm --host $NETHSM_HOST provision
-
-   NetHSM localhost:8443 provisioned
-
-.. include:: _tutorial.rst
-   :start-after: .. start:: boot-mode
-   :end-before: .. end
-
-::
-
-   $ nitropy nethsm --host $NETHSM_HOST get-config --unattended-boot
-
-    Configuration for NetHSM localhost:8443:
-    Unattended boot: off
-
-Turn `Unattended Boot` mode on:
-
-::
-
-  $ nitropy nethsm --host $NETHSM_HOST set-unattended-boot on
-
-   Updated the unattended boot configuration for NetHSM localhost:8443
-
 User Management
 ---------------
 

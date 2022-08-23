@@ -1,5 +1,5 @@
-Installation
-============
+Getting Started
+===============
 
 This chapter describes the physical installation and provisioning of the NetHSM.
 
@@ -109,14 +109,14 @@ If the NetHSM hardware is running, the *Power Indicator* on the front will light
     Front side of the server
 |
 
-In an unprovisioned state the NetHSM hardware factory default IP address is ``192.168.1.1``.
+In an unprovisined state the NetHSM hardware factory default IP address is ``192.168.1.1``.
 
 Provisioning
 ~~~~~~~~~~~~
 
 A new NetHSM needs to be provisioned first with passphrases and the current time.
-The Admin Passphrase is the Administrator's passphrase, which is the superuser of the NetHSM.
-The Unlock Passphrase is used to encrypt NetHSM's confidential data store.
+The Admin Passphrase is the *Administrator*, which is the superuser of the NetHSM.
+The *Unlock Passphrase* is used to decrypt NetHSM's *User Data*.
 
 The initial provisioning is executed as follows.
 
