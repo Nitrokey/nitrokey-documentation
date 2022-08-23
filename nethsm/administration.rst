@@ -1,5 +1,5 @@
-Nitropy Command Line Tool
-=========================
+Administration
+==============
 
 .. contents:: :local:
 

@@ -37,7 +37,7 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Installation
    :glob:
 
    installation.rst
-   cli.rst
+   administration.rst
    pkcs11.rst
    nginx.rst
    apache2-tls.rst
