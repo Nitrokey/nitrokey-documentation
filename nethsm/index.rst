@@ -41,3 +41,4 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Installation
    api.rst
    tags.rst
    integration.rst
+   guides.rst
