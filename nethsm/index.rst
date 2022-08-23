@@ -38,8 +38,6 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Installation
 
    installation.rst
    administration.rst
-   nginx.rst
-   apache2-tls.rst
    api.rst
    tags.rst
    integration.rst
