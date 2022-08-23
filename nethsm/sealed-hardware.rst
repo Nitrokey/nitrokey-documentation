@@ -13,42 +13,42 @@ Here are some pictures of how we wrap up a NetHSM:
 
 Hardware Sealing
 
-.. figure:: ./images/sealing.jpg
- :scale: 20
- :alt: seal
+.. figure:: ./images/server-side-with-seal.jpg
+  :scale: 100
+  :alt: seal
  
 Position of the four Sealing
 
 .. figure:: ./images/sealing-position.png
- :scale: 100
- :alt: position
+  :scale: 100
+  :alt: position
  
 Front Side
 
-.. figure:: ./images/front-side.jpg
-  :scale: 20
-  :alt: front side
+.. figure:: ./images/package-front.jpg
+  :scale: 100
+  :alt: Package front side
  
 Back Side
 
-.. figure:: ./images/back-side.jpg
-  :alt: back side
-  :scale: 20
+.. figure:: ./images/package-back.jpg
+  :scale: 100
+  :alt: Package back side
  
-Buttom Side
+Bottom Side
 
-.. figure:: ./images/buttom-side.jpg
-  :alt: buttom side
-  :scale: 20
+.. figure:: ./images/package-bottom.jpg
+  :scale: 100
+  :alt: Package bottom side
  
 Top Side
  
-.. figure:: ./images/top-side.jpg
-  :alt: top side
-  :scale: 20
+.. figure:: ./images/package-top.jpg
+  :scale: 100
+  :alt: Package top side
  
 Left Side
  
-.. figure:: ./images/left-side.jpg
-  :alt: left side
-  :scale: 20
+.. figure:: ./images/package-left.jpg
+  :scale: 100
+  :alt: Package left side
