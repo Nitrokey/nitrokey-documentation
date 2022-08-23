@@ -43,4 +43,3 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Installation
    api.rst
    tags.rst
    integration.rst
-   REST API Index <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>
