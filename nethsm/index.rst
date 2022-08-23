@@ -4,7 +4,7 @@ NetHSM
 This documentation describes the NetHSM software and hardware.
 
 The NetHSM software can be either used on the NetHSM hardware, or as a Docker container.
-This documentation only covers the Docker container in the Integration chapter.
+This documentation only covers the Docker container in the `Integration <integration.html>`__ chapter.
 
 The NetHSM software features a REST API to perform installation, administration and operational tasks.
 The recommended way to use the REST API is through the `nitropy <https://github.com/Nitrokey/pynitrokey>`_ tool.
@@ -38,11 +38,9 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Installation
 
    installation.rst
    administration.rst
-   pkcs11.rst
    nginx.rst
    apache2-tls.rst
    api.rst
    tags.rst
    integration.rst
-   dev-and-test.rst
    REST API Index <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>
