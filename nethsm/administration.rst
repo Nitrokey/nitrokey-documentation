@@ -1,25 +1,10 @@
 Administration
 ==============
 
-.. contents:: :local:
+This chapter describes administrative tasks for users with the Administrator role.
 
-This tutorial demonstrates how to access the NetHMS via `nitropy <https://github.com/Nitrokey/pynitrokey>`_ command line tool, which you need to download and install.
-
-.. include:: tutorial.rst
-   :start-after: .. start:: setup
-   :end-before: .. end
-
-.. note::
-
-   If you use a NetHSM demo instance with a self-signed certificate, for
-   example using the Docker image, you will have to use the ``--no-verify-tls``
-   option for ``nitropy`` to skip the certificate check.
-
-.. note::
-
-	 First set the value of $NETHSM_HOST to the IP address or URL of your NetHSM.
-	 Our demo server can be reached at https://nethsmdemo.nitrokey.com/
-
+.. important::
+    Please make sure you read the information in `Getting started <index.html#getting-started>`__ before starting to work.
 
 Device Information & Status
 ---------------------------
