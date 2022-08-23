@@ -17,11 +17,11 @@ Hardware Sealing
   :scale: 100
   :alt: seal
  
-Position of the four Sealing
+Positions of the four seals
 
-.. figure:: ./images/sealing-position.png
+.. figure:: ./images/server-top-with-seal-positions.jpg
   :scale: 100
-  :alt: position
+  :alt: Server top with seal positions
  
 Front Side
 
