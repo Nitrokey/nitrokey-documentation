@@ -38,6 +38,7 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Installation
 
    installation.rst
    administration.rst
+   operation.rst
    api.rst
    integration.rst
    guides.rst
