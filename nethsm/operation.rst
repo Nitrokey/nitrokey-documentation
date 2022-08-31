@@ -5,7 +5,7 @@ This chapter describes operational tasks for users with the *Administrator* and 
 Please refer to chapter `Roles <administration.html#roles>`__ to learn more about the role.
 
 .. important::
-    Please make sure you read the information in `Getting started <index.html#getting-started>`__ before starting to work.
+    Please make sure you read the information in the beginning of `this document <index.html>`__ before starting to work.
 
 Key Management
 --------------

@@ -15,7 +15,7 @@ To learn how to install nitropy, please refer to the `documentation <../software
 
 For the installation of curl, please refer to the project `website <https://curl.se/download.html>`_.
 
-If you obtained a new NetHSM hardware, please refer to the chapter `Installation <installation.html#installation>`__ first.
+If you obtained a new NetHSM hardware, please refer to the chapter `Getting Started <getting-started.html#getting-started>`__ first.
 
 .. important::
 
@@ -36,7 +36,7 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Installation
    :maxdepth: 1
    :glob:
 
-   installation.rst
+   getting-started.rst
    administration.rst
    operation.rst
    api.rst
