@@ -1,5 +1,5 @@
 Shop and Delivery FAQ
-===========
+=====================
 
 **Q:** How long does the shipping take?
 

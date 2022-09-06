@@ -13,7 +13,7 @@ Here you will find a collection of common issues.
 
 
 Nitrokey is Not Detected on Linux
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If the Nitrokey is not detected, proceed as follows:
 
