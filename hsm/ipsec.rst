@@ -2,7 +2,7 @@
 
 .. contents:: :local:
 
-`Strong Swan <http://www.strongswan.org/>`_ works using the `PKCS#11 driver <https://www.nitrokey.com/documentation/applications#pkcs11>`_. Basically follow these steps:
+`Strong Swan <https://www.strongswan.org/>`_ works using the `PKCS#11 driver <https://www.nitrokey.com/documentation/applications#pkcs11>`_. Basically follow these steps:
 
 1. Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 bit RSA key.
 

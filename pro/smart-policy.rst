@@ -55,7 +55,7 @@ Login to Windows Domain Computers With MS Active Directory
    or `Smart
    Policy <https://www.mysmartlogon.com/products/smart-policy.html>`_.
    The following steps describe the usage of Smart Policy.
-5. `Download <http://download.mysmartlogon.com/SmartPolicyv2/SmartPolicy%20-%20Stage%203.exe>`_
+5. `Download <https://download.mysmartlogon.com/SmartPolicyv2/SmartPolicy%20-%20Stage%203.exe>`_
    and install Smart Policy.
 6. Select “Read a smart card”
 

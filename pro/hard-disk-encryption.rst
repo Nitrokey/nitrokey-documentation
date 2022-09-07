@@ -15,7 +15,7 @@ Follow these steps to use the program with `Nitrokey Storage
 
 1. Install the latest release of
    `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`_, or download the
-   `PKCS#11 library <http://smartcard-auth.de/download-en.html>`_.
+   `PKCS#11 library <https://smartcard-auth.de/download-en.html>`_.
 2. Choose the library in VeraCrypt under Settings>Preferences>Security
    Token (location depends on system, e.g. ``/usr/lib/opensc``).
 3. Generate a 64 Byte key file via Tools>Keyfile Generator.
@@ -37,4 +37,4 @@ Follow these steps to use the program with `Nitrokey Storage
    a keyfile on the Nitrokey which theoretically could be stolen by a
    computer virus after the user enters the PIN.
 
-Note: `Aloaha Crypt <http://www.aloaha.com/aloaha-crypt-disk/>`_ is based on TrueCrypt/VeraCrypt but without the described security limitation.
+Note: `Aloaha Crypt <https://www.aloaha.com/aloaha-crypt-disk/>`_ is based on TrueCrypt/VeraCrypt but without the described security limitation.

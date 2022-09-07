@@ -63,7 +63,7 @@ Reset code
 This step is optional with new firmware.. You can add a reset code which enable the reset of the User PIN (not the Admin PIN). For older Firmware it is recommended since it is needed to reset the device (see below)
 
 
-`Checkout the documentation here <http://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_.
+`Checkout the documentation here <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_.
 
 
 
