@@ -62,7 +62,7 @@ Storage Encryption on GNU+Linux with EncFS
    default PINs and generated or imported keys with
    GnuPG <https://www.nitrokey.com/start>`_.
 
-`EncFS <http://www.arg0.net/encfs>`_ is an easy to utlity for encrypted file systems and it is based on `FUSE <https://de.wikipedia.org/wiki/Filesystem_in_Userspace>`_. You may follow these steps to use it with very long passwords and Nitrokey Pro
+`EncFS <https://github.com/vgough/encfs>`_ is an easy to utlity for encrypted file systems and it is based on `FUSE <https://de.wikipedia.org/wiki/Filesystem_in_Userspace>`_. You may follow these steps to use it with very long passwords and Nitrokey Pro
 2:
 
 Initialization

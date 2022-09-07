@@ -79,7 +79,7 @@ proceed with the maintenance.
    backup.
 
    You might lose access to your data after configuring `PAM
-   modules <http://www.linux-pam.org/Linux-PAM-html/>`_.
+   modules <https://www.man7.org/linux/man-pages/man8/pam.8.html>`_.
 
 
 2. **Set up the** ``rules`` **to recognize the Nitrokey FIDO2**
