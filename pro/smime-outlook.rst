@@ -10,7 +10,7 @@ Prerequisites
 
 If you do not have a S/MIME key-certificate pair installed on your Nitrokey yet, please look at `this page <smime.html>`_ first.
 
-You need to have OpenSC installed on your System. Please have a look at the `wiki page of the OpenSC project <https://github.com/OpenSC/OpenSC/wiki>`_.
+You need to have OpenSC installed on your System. Please have a look at the `wiki page of the OpenSC project <https://github.com/OpenSC/OpenSC/wiki>`__.
 
 .. note::
     

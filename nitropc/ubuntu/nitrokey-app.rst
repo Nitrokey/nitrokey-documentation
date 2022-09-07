@@ -33,4 +33,4 @@ Please execute the following in a terminal to add the repository and install the
  $ sudo apt install nitrokey-app
 
 
-Alternatively, you can use the snap package. Please see `here <https://www.nitrokey.com/download/snap-package>`_ for more information.
+Alternatively, you can use the snap package. Please see `here <https://www.nitrokey.com/download/snap-package>`__ for more information.

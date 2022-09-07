@@ -3,7 +3,7 @@ Setup With Gnu Privacy Assistant (GPA)
 
 This document describes how to use Gnu Privacy Assistant (GPA) to set up the Nitrokey for its first usage.
 
-1. First you need to install Gnu Privacy Assistant (GPA). For Windows you should download and install the `GPG4Win <https://www.gpg4win.org/>`_ package which contains GPA. For Linux you should install the GPA package of your distribution (e.g. on Ubuntu: sudo apt-get install gpa ).
+1. First you need to install Gnu Privacy Assistant (GPA). For Windows you should download and install the `GPG4Win <https://www.gpg4win.org/>`__ package which contains GPA. For Linux you should install the GPA package of your distribution (e.g. on Ubuntu: sudo apt-get install gpa ).
 
 2. Start GPA and select the Card Manager; either by pressing the icon at the top or by choosing Card Manager in the Windows menu.
 
@@ -52,4 +52,4 @@ This document describes how to use Gnu Privacy Assistant (GPA) to set up the Nit
 .. figure:: /pro/images/gpa/9.png
    :alt: img9
 
-Congratulations, your Nitrokey is now ready to use. Please see the `applications <https://www.nitrokey.com/documentation/applications>`_ section for further information of its usage.
+Congratulations, your Nitrokey is now ready to use. Please see the `applications <https://www.nitrokey.com/documentation/applications>`__ section for further information of its usage.

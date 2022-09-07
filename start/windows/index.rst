@@ -10,7 +10,7 @@ Nitrokey Start, Windows
 
    *
 
-1. Install `Gpg4win <https://www.gpg4win.org/>`_ on your Computer.
+1. Install `Gpg4win <https://www.gpg4win.org/>`__ on your Computer.
 2. Connect your Nitrokey to your computer and confirm all dialogs so
    that the USB smart card device driver gets installed almost
    automatically.
@@ -27,15 +27,15 @@ Nitrokey Start, Windows
 
    * The PIN must consist of at least 14 characters (starting from RTM.8), can contain any character (not only numbers). Do not select only numbers. If your environment allows that, use emoticons or national characters.
    * The longer the PIN the better. It is possible to use 6 randomly selected words instead as well for the same or better security than random character string.
-   * Use ‘gpg –card-edit’ -> ‘admin’ -> ‘passwd’ to achieve this (for Admin PIN case). - Please be careful to change Admin PIN first and User PIN second! Otherwise the admin-less mode got activated, see `this instructions <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#>`_ for further information.
-   * Optionally Reset code can be set up (`guide <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html>`_). The minimum length accepted is 8 characters, however it should be as long as User PIN.
+   * Use ‘gpg –card-edit’ -> ‘admin’ -> ‘passwd’ to achieve this (for Admin PIN case). - Please be careful to change Admin PIN first and User PIN second! Otherwise the admin-less mode got activated, see `this instructions <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#>`__ for further information.
+   * Optionally Reset code can be set up (`guide <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html>`__). The minimum length accepted is 8 characters, however it should be as long as User PIN.
    * KDF-DO allows for a shorter PIN of 8 characters minimum, by executing part of the calculations on the PC.
 
 **Firmware version 1.2.5 or below: In case you forget a PIN or enter it
 wrongly three times you need the reset code to unblock the PIN.
 Otherwise the device wouldn’t be usable anymore! Therefore
 please** `set the reset
-code <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html>`_ **as
+code <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html>`__ **as
 well when initialising the key!**
 
 Your Nitrokey is now ready to use.

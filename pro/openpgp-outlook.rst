@@ -15,7 +15,7 @@ Prerequisites
 
 If you do not have PGP-Keys on your Nitrokey yet, please look at `this page <openpgp.html>`_ first.
 
-You need to have GnuPG installed on your System. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org>`_. You need to make sure to have “GpgOL” checked during installation process (see below).
+You need to have GnuPG installed on your System. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org>`__. You need to make sure to have “GpgOL” checked during installation process (see below).
 
 .. figure:: /pro/windows/images/openpgp-outlook/1.png
    :alt: img1

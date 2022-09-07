@@ -8,11 +8,11 @@ Desktop Login And Linux User Authentication
 Introduction
 ------------
 
-This guide will walk you through the configuration of Linux to use FIDO Universal 2nd Factor, i.e. FIDO U2F with ``libpam-u2f`` and `Nitrokey FIDO2 <https://shop.nitrokey.com/shop/product/nk-fi2-nitrokey-fido2-55>`_.
+This guide will walk you through the configuration of Linux to use FIDO Universal 2nd Factor, i.e. FIDO U2F with ``libpam-u2f`` and `Nitrokey FIDO2 <https://shop.nitrokey.com/shop/product/nk-fi2-nitrokey-fido2-55>`__.
 
 If you want to login to you computer using `Nitrokey Pro
-2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`_ you can visit the instructions available `here <../../pro/linux/login-with-pam.html>`_.
+2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ `Nitrokey Storage
+2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`__ you can visit the instructions available `here <../../pro/linux/login-with-pam.html>`_.
 
 Requirements
 ------------
@@ -20,7 +20,7 @@ Requirements
 -  Ubuntu 20.04 with Gnome Display Manager.
 
 -  Nitrokey FIDO2 configured following `these
-   instructions <https://www.nitrokey.com/documentation/installation#p:nitrokey-fido-u2f&os:linux>`_.
+   instructions <https://www.nitrokey.com/documentation/installation#p:nitrokey-fido-u2f&os:linux>`__.
 
 Instructions
 ------------
@@ -79,7 +79,7 @@ proceed with the maintenance.
    backup.
 
    You might lose access to your data after configuring `PAM
-   modules <https://www.man7.org/linux/man-pages/man8/pam.8.html>`_.
+   modules <https://www.man7.org/linux/man-pages/man8/pam.8.html>`__.
 
 
 2. **Set up the** ``rules`` **to recognize the Nitrokey FIDO2**
@@ -110,7 +110,7 @@ On Ubuntu 20.04 it is possible to download directly ``libpam-u2f`` from the offi
    Click for more options
 
    -  Alternatively you can build ``libpam-u2f`` from
-      `Git <https://github.com/phoeagon/pam-u2f>`_.
+      `Git <https://github.com/phoeagon/pam-u2f>`__.
 
    -  To verify that the library is properly installed enter the
       following command:

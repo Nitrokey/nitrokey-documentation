@@ -3,7 +3,7 @@ Installing nitropy With pipx
 
 .. contents:: :local:
 
-This guide explains how to install nitropy with `pipx <https://pypa.github.io/pipx/>`_. pipx creates a virtual environment for nitropy. This means that nitropy and its dependencies don’t conflict with other packages installed on your system.
+This guide explains how to install nitropy with `pipx <https://pypa.github.io/pipx/>`__. pipx creates a virtual environment for nitropy. This means that nitropy and its dependencies don’t conflict with other packages installed on your system.
 
 .. note::
 
@@ -14,11 +14,11 @@ Preparation
 
 Python 3.9 or newer 
 ~~~~~~~~~~~~~~~~~~~
-  Python is already installed on most macOS and Linux systems or can be downloaded from `python.org <https://python.org>`_. See the `Downloading Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`_ for more information.
+  Python is already installed on most macOS and Linux systems or can be downloaded from `python.org <https://python.org>`__. See the `Downloading Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`__ for more information.
 
 pip
 ~~~~~  
-  You can install pip with your system package manager or with ``python3 -m ensurepip``. See the `pip Installation Guide <https://pip.pypa.io/en/stable/installation/>`_ for more information.
+  You can install pip with your system package manager or with ``python3 -m ensurepip``. See the `pip Installation Guide <https://pip.pypa.io/en/stable/installation/>`__ for more information.
 
 pipx
 ~~~~
@@ -27,7 +27,7 @@ Before installing nitropy, you have to install and configure pipx::
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath
 
-See the `pipx Installation Guide <https://pypa.github.io/pipx/installation/>`_ for more information.
+See the `pipx Installation Guide <https://pypa.github.io/pipx/installation/>`__ for more information.
 
 Installation
 ------------
@@ -53,7 +53,7 @@ Usage Notes
 All Platforms
 ~~~~~~~~~~~~~
 
-If you want to use nitropy with a Nitrokey Pro or Nitrokey Storage device, you also have to install `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_.
+If you want to use nitropy with a Nitrokey Pro or Nitrokey Storage device, you also have to install `libnitrokey <https://github.com/Nitrokey/libnitrokey>`__.
 
 Windows
 ~~~~~~~
@@ -65,7 +65,7 @@ You might have to run nitropy with administrator rights to be able to connect to
 Linux
 ~~~~~
 
-On Linux systems, you also need the Nitrokey udev rules. These are shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`_. Alternatively, you can install them manually::
+On Linux systems, you also need the Nitrokey udev rules. These are shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`__. Alternatively, you can install them manually::
 
     wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
     sudo mv 41-nitrokey.rules /etc/udev/rules.d/

@@ -8,15 +8,15 @@ Hard Disk Encryption
 VeraCrypt (formerly TrueCrypt)
 ------------------------------
 
-`VeraCrypt <https://www.veracrypt.fr/en/Home.html>`_ is a free and Open Source disk encryption software for Windows, macOS, and GNU+Linux. It is the successor of TrueCrypt and thus recommended, although the following instructions should apply to TrueCrypt as well.
+`VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__ is a free and Open Source disk encryption software for Windows, macOS, and GNU+Linux. It is the successor of TrueCrypt and thus recommended, although the following instructions should apply to TrueCrypt as well.
 
 Follow these steps to use the program with `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ or `Nitrokey Pro
-2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_:
+2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ or `Nitrokey Pro
+2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__:
 
 1. Install the latest release of
-   `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`_, or download the
-   `PKCS#11 library <https://smartcard-auth.de/download-en.html>`_.
+   `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__, or download the
+   `PKCS#11 library <https://smartcard-auth.de/download-en.html>`__.
 2. Choose the library in VeraCrypt under Settings>Preferences>Security
    Token (location depends on system, e.g. ``/usr/lib/opensc``).
 3. Generate a 64 Byte key file via Tools>Keyfile Generator.
@@ -38,18 +38,18 @@ Follow these steps to use the program with `Nitrokey Storage
    a keyfile on the Nitrokey which theoretically could be stolen by a
    computer virus after the user enters the PIN.
 
-Note: `Aloaha Crypt <https://www.aloaha.com/aloaha-crypt-disk/>`_ is based on TrueCrypt/VeraCrypt but without the described security limitation.
+Note: `Aloaha Crypt <https://www.aloaha.com/aloaha-crypt-disk/>`__ is based on TrueCrypt/VeraCrypt but without the described security limitation.
 
 Hard Disk Encryption on GNU+Linux with LUKS/dm-crypt
 ----------------------------------------------------
 
-Here are `excellent instructions <https://blog.kumina.nl/2010/07/two-factor-luks-using-ubuntu/>`_ how to use Nitrokey to encrypt your hard disk under GNU+Linux with LUKS/dm-crypt. `Other instructions <https://wiki.ubuntu.com/SmartCardLUKSDiskEncryption>`_.
+Here are `excellent instructions <https://blog.kumina.nl/2010/07/two-factor-luks-using-ubuntu/>`__ how to use Nitrokey to encrypt your hard disk under GNU+Linux with LUKS/dm-crypt. `Other instructions <https://wiki.ubuntu.com/SmartCardLUKSDiskEncryption>`__.
 
-Purism has created a `simple script <https://docs.puri.sm/PureBoot/LibremKeyLUKS.html>`_ to add the Nitrokey/LibremKey as a way to unlock LUKS partitions (not tested by Nitrokey yet).
+Purism has created a `simple script <https://docs.puri.sm/PureBoot/LibremKeyLUKS.html>`__ to add the Nitrokey/LibremKey as a way to unlock LUKS partitions (not tested by Nitrokey yet).
 
-`This project <https://github.com/artosan/nitroluks/>`_ aims to ease the use of LUKS with the Nitrokey Pro or Storage based on the Password Safe (not tested by Nitrokey yet). A description on how to use it on Gentoo can be found `here <https://amedeos.github.io/gentoo/nitrokey/2019/01/21/gentoo-nitrokey-luks.html>`_.
+`This project <https://github.com/artosan/nitroluks/>`__ aims to ease the use of LUKS with the Nitrokey Pro or Storage based on the Password Safe (not tested by Nitrokey yet). A description on how to use it on Gentoo can be found `here <https://amedeos.github.io/gentoo/nitrokey/2019/01/21/gentoo-nitrokey-luks.html>`__.
 
-For Arch Linux, see `initramfs-scencrypt <https://github.com/fuhry/initramfs-scencrypt>`_.
+For Arch Linux, see `initramfs-scencrypt <https://github.com/fuhry/initramfs-scencrypt>`__.
 
 Storage Encryption on GNU+Linux with EncFS
 ------------------------------------------
@@ -60,9 +60,9 @@ Storage Encryption on GNU+Linux with EncFS
 
    Please ensure that you `installed the device driver, changed the
    default PINs and generated or imported keys with
-   GnuPG <https://www.nitrokey.com/start>`_.
+   GnuPG <https://www.nitrokey.com/start>`__.
 
-`EncFS <https://github.com/vgough/encfs>`_ is an easy to utlity for encrypted file systems and it is based on `FUSE <https://de.wikipedia.org/wiki/Filesystem_in_Userspace>`_. You may follow these steps to use it with very long passwords and Nitrokey Pro
+`EncFS <https://github.com/vgough/encfs>`__ is an easy to utlity for encrypted file systems and it is based on `FUSE <https://de.wikipedia.org/wiki/Filesystem_in_Userspace>`__. You may follow these steps to use it with very long passwords and Nitrokey Pro
 2:
 
 Initialization
@@ -132,9 +132,9 @@ Usage
 Storage Encryption on GNU+Linux with ECryptFS
 ---------------------------------------------
 
-`eCryptfs <https://www.ecryptfs.org/>`_ is a file based transparent encryption file system for GNU+Linux which can be used with Nitrokey through a PKCS#11 driver.
+`eCryptfs <https://www.ecryptfs.org/>`__ is a file based transparent encryption file system for GNU+Linux which can be used with Nitrokey through a PKCS#11 driver.
 
-See `these <http://tkxuyen.com/blog/?p=293>`_ instructions:
+See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
 
 1. Import the certificate and key to the Nitrokey
                                                  
@@ -173,6 +173,6 @@ See `these <http://tkxuyen.com/blog/?p=293>`_ instructions:
    # Choose pkcs11-helper
    # Enter the serialized ID of step 3 to PKCS#11 ID.
 
-Alternatively, try `ESOSI <https://sourceforge.net/projects/esosi/>`_ or follow these steps using OpenSC and OpenVPN.
+Alternatively, try `ESOSI <https://sourceforge.net/projects/esosi/>`__ or follow these steps using OpenSC and OpenVPN.
 
 Source of the guide: https://www.nitrokey.com/documentation/applications#a:hard-disk-encryption

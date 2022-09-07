@@ -12,7 +12,7 @@ By default you have a secure smartphone, already pre-installed with all the most
 
 2. For extra hardening (optional): Go to Settings -> System -> Developer Options and disable the "OEM unlocking" setting. Afterwards disable the "Developer Options".
 
-3. Please familiarize yourself with `using your GrapheneOS <https://grapheneos.org/usage>`_.
+3. Please familiarize yourself with `using your GrapheneOS <https://grapheneos.org/usage>`__.
 
 For more details, see the following pages:
 

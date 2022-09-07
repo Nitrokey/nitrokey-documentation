@@ -18,7 +18,7 @@ Getting Started
    automatically. Windows may fail to install an additional device
    driver for the smart card. Its safe to ignore this warning.
 2. Download and start the `Nitrokey
-   App <https://www.nitrokey.com/download>`_.
+   App <https://www.nitrokey.com/download>`__.
 3. Go to “Menu” -> “Configure” to change the User PIN (default: 123456)
    and Admin PIN (default: 12345678) to your own choices.
 

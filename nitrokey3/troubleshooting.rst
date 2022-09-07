@@ -18,7 +18,7 @@ Nitrokey is Not Detected on Linux
 If the Nitrokey is not detected, proceed as follows:
 
 1. Copy this file
-   `41-nitrokey.rules <https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`_
+   `41-nitrokey.rules <https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__
    to ``/etc/udev/rules.d/``.
 2. Restart udev via ``sudo service udev restart``.
 
@@ -50,6 +50,6 @@ The search of the optimal spot sometimes took up to 20-30 sec. In our experience
 Update Via update.nitrokey.com Does Not Work
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware updates via our `pynitro tool <https://github.com/Nitrokey/pynitrokey#installation>`_. 
+Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware updates via our `pynitro tool <https://github.com/Nitrokey/pynitrokey#installation>`__. 
 
 .. _nfc.fail: https://nfc.fail/

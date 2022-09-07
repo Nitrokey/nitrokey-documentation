@@ -18,10 +18,10 @@ Nitrokey Pro, Linux
    you have to add the device information by yourself (for example if
    you are using Ubuntu 14.04 or older). In this case please follow
    these
-   `instructions <https://www.nitrokey.com/documentation/frequently-asked-questions-faq#latest-device-driver-missing-on-older-linux-distribution>`_.
+   `instructions <https://www.nitrokey.com/documentation/frequently-asked-questions-faq#latest-device-driver-missing-on-older-linux-distribution>`__.
 
 2. Download and start the `Nitrokey
-   App <https://www.nitrokey.com/download>`_. Follow the
+   App <https://www.nitrokey.com/download>`__. Follow the
    `instructions <change-pins.html>`_
    to change the default User PIN (default: 123456) and Admin PIN
    (default: 12345678) to your own choices.

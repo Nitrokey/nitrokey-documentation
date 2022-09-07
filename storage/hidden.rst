@@ -2,8 +2,8 @@ Hidden Storage
 ==============
 
 Hidden volumes allow hiding data inside of the encrypted volume. This data is protected by an additional passphrase. Without the passphrase, it is impossible to know whether hidden volumes are present.
-They are not configured with a default password so that their existence can be `denied plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`_.
-The concept is similar to `VeraCrypt's/TrueCrypt's hidden volume <https://veracrypt.eu/en/docs/hidden-volume/>`_ but with Nitrokey Storage the entire functionality of hidden volumes is implemented in hardware.
+They are not configured with a default password so that their existence can be `denied plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__.
+The concept is similar to `VeraCrypt's/TrueCrypt's hidden volume <https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey Storage the entire functionality of hidden volumes is implemented in hardware.
 
 You can configure up to four hidden volumes. Once unlocked, hidden volumes behave like ordinary storage where you can create various partitions, filesystems and store files as you like.
 

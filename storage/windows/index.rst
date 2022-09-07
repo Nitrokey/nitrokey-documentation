@@ -16,13 +16,13 @@ Nitrokey Storage, Windows
 
    Windows may fail to install an additional device driver for the smart card. Its safe to ignore this warning.
 
-2. Download and start the `Nitrokey App <https://www.nitrokey.com/download>`_. Perhaps you want to store it on the unencrypted partition of your Nitrokey Storage. There won’t open a window, but an icon appears in the system tray (see screenshot below). Please right-click on this icon to use all the options of the App.
+2. Download and start the `Nitrokey App <https://www.nitrokey.com/download>`__. Perhaps you want to store it on the unencrypted partition of your Nitrokey Storage. There won’t open a window, but an icon appears in the system tray (see screenshot below). Please right-click on this icon to use all the options of the App.
 
 .. figure:: ./images/Windows10-Systemtray.png
    :alt: img1
 
 
-3. Open the About window from Nitrokey App’s menu and check if you have the `latest firmware <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`_ installed. If it’s not the latest, please
+3. Open the About window from Nitrokey App’s menu and check if you have the `latest firmware <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__ installed. If it’s not the latest, please
    `update <firmware-update.html>`_.
 
 4. Use the Nitrokey App to change the default User PIN (default: 123456)

@@ -18,14 +18,14 @@ Nitrokey Storage, Linux
    you have to add the device information by yourself (for example if
    you are using Ubuntu 14.04 or older). In this case please follow
    these
-   `instructions <https://www.nitrokey.com/documentation/frequently-asked-questions-faq#latest-device-driver-missing-on-older-linux-distribution>`_.
+   `instructions <https://www.nitrokey.com/documentation/frequently-asked-questions-faq#latest-device-driver-missing-on-older-linux-distribution>`__.
 
 2. Download and start the `Nitrokey
-   App <https://www.nitrokey.com/download>`_.
+   App <https://www.nitrokey.com/download>`__.
 
 3. Open the About window from Nitrokey App’s menu and check if you have
    the `latest
-   firmware <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`_
+   firmware <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__
    installed. If it’s not the latest, please
    `update <firmware-update.html>`_.
 

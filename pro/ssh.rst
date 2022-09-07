@@ -8,7 +8,7 @@ Preparation on client
 * Make sure ~/.gnupg/gpg.conf contains 'use-agent'
 * Add ssh support to gnupg-agent by adding 'enable-ssh-support' to ~/.gnupg/gpg-agent.conf
 * If the file does not exist yet, you can just create it.
-* Add the following code somewhere into your ~/.bashrc (for fish shell, look `here <https://support.nitrokey.com/t/ssh-auth-with-fish-instead-of-bash/2206>`_)
+* Add the following code somewhere into your ~/.bashrc (for fish shell, look `here <https://support.nitrokey.com/t/ssh-auth-with-fish-instead-of-bash/2206>`__)
 
 .. code-block:: bash
 
@@ -55,5 +55,5 @@ returns something like '/run/user/1000/gnupg/S.gpg-agent.ssh' or '/home/username
 
 to find the actual code for your version/system.
 
-You may check if you have a 'pinentry' program installed via your package manager. You may need to `set it in the gpg-agent.conf <https://wiki.archlinux.org/index.php/GnuPG#pinentry>`_ as well.
-You may need to `point gpg-agent to the correct TTY <https://wiki.archlinux.org/index.php/GnuPG#Configure_pinentry_to_use_the_correct_TTY>`_.
+You may check if you have a 'pinentry' program installed via your package manager. You may need to `set it in the gpg-agent.conf <https://wiki.archlinux.org/index.php/GnuPG#pinentry>`__ as well.
+You may need to `point gpg-agent to the correct TTY <https://wiki.archlinux.org/index.php/GnuPG#Configure_pinentry_to_use_the_correct_TTY>`__.

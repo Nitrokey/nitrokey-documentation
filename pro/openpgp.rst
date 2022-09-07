@@ -13,7 +13,7 @@ There are two widely used standards for email encryption.
 
 If you are in doubt which one to choose, you should use OpenPGP. While this page describes the usage of OpenPGP, S/MIME is described `here <smime.html>`_.
 
-Please familiarize yourself with the general concept behind the OpenPGP standard first, for example by reading `this info graphic <https://emailselfdefense.fsf.org/en/infographic.html>`_ of the Free Software Foundation.
+Please familiarize yourself with the general concept behind the OpenPGP standard first, for example by reading `this info graphic <https://emailselfdefense.fsf.org/en/infographic.html>`__ of the Free Software Foundation.
 
 Key Generation
 --------------
@@ -38,7 +38,7 @@ If you do not have OpenPGP keys yet, you need to generate them first.
    but only secure if your system is not compromised, because you can
    create a backup key outside your Nitrokey A similar description in
    french can be found
-   `here <https://xieme-art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-pro/>`_.
+   `here <https://xieme-art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-pro/>`__.
 
 Importing Existing Keys
 -----------------------
@@ -57,11 +57,11 @@ You can find further information about the usage on these pages:
    Outlook <openpgp-outlook.html>`_
 
 -  for using `Claws
-   Mail <https://www.claws-mail.org/plugin.php?plugin=gpg>`_, an email
+   Mail <https://www.claws-mail.org/plugin.php?plugin=gpg>`__, an email
    client (and news reader) for Linux and Windows
 
 -  for using
-   `Evolution <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>`_,
+   `Evolution <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>`__,
    an email client for the Gnome Desktop on Linux systems
 
--  for using `GPGTools <https://gpgtools.org/>`_ on macOS.
+-  for using `GPGTools <https://gpgtools.org/>`__ on macOS.

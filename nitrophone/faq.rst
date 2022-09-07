@@ -10,7 +10,7 @@ NitroPhone FAQ
 **Q:** What is and how to activate *PIN Layout Scrambling*
    To make it difficult for strangers to read the PIN when typing it in, you can
    display the PIN layout in a random order. Additionally, we recommend a
-   `privacy screen <https://shop.nitrokey.com/shop/product/privacyscreen-for-nitrophone-1-194>`_.
+   `privacy screen <https://shop.nitrokey.com/shop/product/privacyscreen-for-nitrophone-1-194>`__.
    To enable, select: *Settings -> Security -> PIN scrambling -> Scramble PIN*
 
 **Q:** What is a *Kill Switch* and how to activate it?
@@ -33,9 +33,9 @@ NitroPhone FAQ
    If you want to check the integrity of the operating system, you can use `remote verification <https://attestation.app/about>`_.
 
 **Q:** Where can I get further information about GrapheneOS?
-   `Here <https://grapheneos.org/faq>`_ you can find further information on GrapheneOS.
+   `Here <https://grapheneos.org/faq>`__ you can find further information on GrapheneOS.
 
 **Q:** Why is OEM unlocking enabled by default?
-   The only real purpose of the OEM Unlocking setting is `anti-theft protection <https://grapheneos.org/faq#anti-theft>`_ which is not implemented by GrapheneOS. OEM unlocking controls whether the device can be unlocked via boot loader. In the later case all user data is wiped. If OEM Unlocking is disabled, someone can still boot up in recovery mode, enter the menu, wipe data, then boot the OS and enable OEM unlocking. Therefore it doesn't really increase the security but `disabling it <index.html>`_ reduces the potential physical attack surface.
+   The only real purpose of the OEM Unlocking setting is `anti-theft protection <https://grapheneos.org/faq#anti-theft>`__ which is not implemented by GrapheneOS. OEM unlocking controls whether the device can be unlocked via boot loader. In the later case all user data is wiped. If OEM Unlocking is disabled, someone can still boot up in recovery mode, enter the menu, wipe data, then boot the OS and enable OEM unlocking. Therefore it doesn't really increase the security but `disabling it <index.html>`_ reduces the potential physical attack surface.
 
 .. _all major carriers: https://support.google.com/pixelphone/answer/7107188?hl=en

@@ -5,7 +5,7 @@ OpenPGP Key Generation On-Device
 
 .. contents:: :local:
 
-The following instructions explain the generation of OpenPGP keys directly on the Nitrokey. This is done by using the command line interface of GnuPG. Thus, you need to have GnuPG installed on your system. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org/>`_ and the newest version for MacOS can be found `here <https://gpgtools.org/>`_. Users of Linux systems please install GnuPG with help of the package manager.
+The following instructions explain the generation of OpenPGP keys directly on the Nitrokey. This is done by using the command line interface of GnuPG. Thus, you need to have GnuPG installed on your system. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org/>`__ and the newest version for MacOS can be found `here <https://gpgtools.org/>`__. Users of Linux systems please install GnuPG with help of the package manager.
 
 .. note::
 
@@ -95,7 +95,7 @@ Now you are in the interactive interface of GnuPG. Activate the admin commands w
 **Please do not create the suggested off-card backup.** This “backup”
 does only save the encryption key, but not the signature and authentication keys. In case of a loss of the device, you will not be able to restore the whole key set. So on the one hand it is no full backup (use `these instructions <openpgp-keygen-backup.html>`_ instead, if you need one) and on the other hand you risk that someone else can get in possession of your encryption key. The advantage of generating keys on-device is to make sure that keys are stored securely. Therefore, we recommend to skip this half-backup.
 
-Now you have a complete key set on your device which can be used for the `various applications <https://www.nitrokey.com/documentation/applications>`_ listed on our site. Type ``quit`` and hit enter to exit.
+Now you have a complete key set on your device which can be used for the `various applications <https://www.nitrokey.com/documentation/applications>`__ listed on our site. Type ``quit`` and hit enter to exit.
 
 Change Key Attributes
 ---------------------

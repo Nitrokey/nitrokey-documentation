@@ -8,7 +8,7 @@ For very high security requirements, you should use as few apps as possible to
 provide a small attack surface. If instead you want to use the NitroPhone as an
 everyday smartphone with more apps we recommend:
 
-1. Install the `F-Droid <https://f-droid.org/F-Droid.apk>`_ App Store. This has
+1. Install the `F-Droid <https://f-droid.org/F-Droid.apk>`__ App Store. This has
    exclusively open source apps that do without drastic tracking and without
    advertising. Here you will find thousands of apps from a wide variety of fields.
    If you are looking for an app, check F-Droid first.
@@ -17,7 +17,7 @@ everyday smartphone with more apps we recommend:
    Aurora Store. In Aurora Store, you can install all apps from Google Play Store.
 
 3. Many apps work without Google Play Services. However, if you want to use apps
-   that require Google Play Services, you can install `Google Play Services in a sandbox <https://grapheneos.org/usage#sandboxed-google-play>`_ as follows.
+   that require Google Play Services, you can install `Google Play Services in a sandbox <https://grapheneos.org/usage#sandboxed-google-play>`__ as follows.
 
    1. Open Graphenes app repository client: *Home screen -> Apps*
    2. Install the 3 core Google Play Apps ("Google Play store", "Google Play Services", "Google Services Framework").
@@ -44,9 +44,9 @@ Compatible Apps
 
 Earlier there was a list, but as the Play Service implementation progresses, most of the apps
 should work, although there are still some not working, a list will be available
-`here <https://github.com/Peter-Easton/GrapheneOS-Knowledge/tree/master/App%20Incompatibility%20List>`_.
+`here <https://github.com/Peter-Easton/GrapheneOS-Knowledge/tree/master/App%20Incompatibility%20List>`__.
 
-There is a `list <https://akc3n.org/projects/banking/#list-of-banking-apps>`_ for compatible banking apps, too.
+There is a `list <https://akc3n.org/projects/banking/#list-of-banking-apps>`__ for compatible banking apps, too.
 Click onto the "Report" link behind the regarding banking app to see in which environment it is supported.
 
 - Pixel 4a refers to the NitroPhone 1
@@ -56,17 +56,17 @@ Click onto the "Report" link behind the regarding banking app to see in which en
 Recommended Apps
 ################
 
-* Browser: The pre-installed browser Vanadium is hardened and therefore recommended for high security. For better ad blocking, `Bromite <https://github.com/bromite/bromite/releases/latest>`_ browser is recommended instead.
+* Browser: The pre-installed browser Vanadium is hardened and therefore recommended for high security. For better ad blocking, `Bromite <https://github.com/bromite/bromite/releases/latest>`__ browser is recommended instead.
 * Email: K9-mail and OpenKeyChain (for OpenPGP encryption) or FairEmail.
 * VPN: Orbot uses the free TOR network. Mullvad VPN and IVPN are paid VPN services.
 * Backup: The integrated backup (Seedvault) and Nextcloud. Choose Settings -> System -> Backup.
 * Messenger:
-   * `Signal <https://signal.org/android/apk/>`_ is secure and now widely used. It can also be downloaded without an app store.
-   * `Element <https://element.io/>`_ does not require a central infrastructure and allows the use of own servers. An own account can be registered for free at `NitroChat <https://nitro.chat>`_ for example.
-   * `Briar <https://briarproject.org/>`_ is a peer-to-peer messenger without any server at all, which can be used without internet with contacts nearby.
+   * `Signal <https://signal.org/android/apk/>`__ is secure and now widely used. It can also be downloaded without an app store.
+   * `Element <https://element.io/>`__ does not require a central infrastructure and allows the use of own servers. An own account can be registered for free at `NitroChat <https://nitro.chat>`__ for example.
+   * `Briar <https://briarproject.org/>`__ is a peer-to-peer messenger without any server at all, which can be used without internet with contacts nearby.
 * Contacts and calendar synchronization: DAVx5 supports CalDAV, CardDAV and WebCAL.
-* One-time password generator (2FA, OTP): `Aegis Authenticator <https://github.com/beemdevelopment/Aegis>`_.
-* Regarding camera app, see `here <https://grapheneos.org/usage#camera>`_.
+* One-time password generator (2FA, OTP): `Aegis Authenticator <https://github.com/beemdevelopment/Aegis>`__.
+* Regarding camera app, see `here <https://grapheneos.org/usage#camera>`__.
 
 Permissions of Individual Apps
 ##############################

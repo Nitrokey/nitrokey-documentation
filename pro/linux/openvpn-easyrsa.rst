@@ -11,11 +11,11 @@ OpenVPN Configuration with Easy-RSA
   This guide is work-in-progress, and will be updated accordinlgy. Please take this status into consideration.
 
 This guide shows how to configure OpenVPN clients to login using a `Nitrokey Pro
-2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ or a `Nitrokey Storage
-2 <https://shop.nitrokey.com/de_DE/shop/product/nitrokey-storage-2-56>`_. For software key management we will be using `Easy-RSA <https://github.com/OpenVPN/easy-rsa>`_, a utility that has been evolving alongside OpenVPN.
+2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ or a `Nitrokey Storage
+2 <https://shop.nitrokey.com/de_DE/shop/product/nitrokey-storage-2-56>`__. For software key management we will be using `Easy-RSA <https://github.com/OpenVPN/easy-rsa>`__, a utility that has been evolving alongside OpenVPN.
 
 To sign the certificates, we will use a `Nitrokey HSM
-2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_ set up as `Certificate Authority <certificate-authority.html#creating-the-intermediate-certificate-authority>`_, however this guide does not cover the set up of the CA itself (it is clear and `well documented here <certificate-authority.html#sign-a-server-certificate>`_).
+2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ set up as `Certificate Authority <certificate-authority.html#creating-the-intermediate-certificate-authority>`_, however this guide does not cover the set up of the CA itself (it is clear and `well documented here <certificate-authority.html#sign-a-server-certificate>`_).
 
 We will use Easy-RSA, because it seems to provide some flexibility, and allows key management via external PKIs. We will use it on the server to issue the signing request, and repeat the same process on the client. The Certificate Signing Requests will be signed by the CA on the Nitorkey HSM, and re-transmitted to the server and the client.
 
@@ -33,7 +33,7 @@ In the following documentation we will require 3 different machines as following
    machine with Fedora 30 (local machine)
 
 To interact with the devices we will require `OpenSC
-0.20 <https://github.com/OpenSC/OpenSC/wiki>`_ installed on the client and CA machine (the local machines). You can follow the instructions to set it up in `this link (*Unix) <https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors>`_.
+0.20 <https://github.com/OpenSC/OpenSC/wiki>`__ installed on the client and CA machine (the local machines). You can follow the instructions to set it up in `this link (*Unix) <https://github.com/OpenSC/OpenSC/wiki/Compiling-and-Installing-on-Unix-flavors>`__.
 
 To download the dependencies on Fedora machines we can this instruction:
 
@@ -41,19 +41,19 @@ To download the dependencies on Fedora machines we can this instruction:
 
    su -c 'dnf install readline-devel openssl-devel libxslt docbook-style-xsl pcsc-lite-devel automake autoconf libtool gcc zlib-devel'
 
-For Debian Linux, more recent OpenSC packages are available `here <https://github.com/Nitrokey/opensc-build>`_.
+For Debian Linux, more recent OpenSC packages are available `here <https://github.com/Nitrokey/opensc-build>`__.
 
 We will use the following Nitrokeys for physical key management:
 
 -  An authentication key using the `Nitrokey Pro 2
-   (pdf) <https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf>`_
+   (pdf) <https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf>`__
 
 -  A Certificate Authority (CA) using the `Nitrokey HSM 2
-   (pdf) <https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`_
+   (pdf) <https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`__
 
 As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you may follow the instructions available `in the documentation <certificate-authority.html#sign-a-server-certificate>`_.
 
-Alternatively you may set up your own CA on a `on a separate machine <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-a-certificate-authority-ca-on-ubuntu-20-04>`_, or use the OpenVPN tutorial which also relies on `Easy-RSA <https://openvpn.net/community-resources/setting-up-your-own-certificate-authority-ca/>`_. The last 2 options rely on software solutions for key management.
+Alternatively you may set up your own CA on a `on a separate machine <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-a-certificate-authority-ca-on-ubuntu-20-04>`__, or use the OpenVPN tutorial which also relies on `Easy-RSA <https://openvpn.net/community-resources/setting-up-your-own-certificate-authority-ca/>`__. The last 2 options rely on software solutions for key management.
 
 --------------
 
@@ -81,7 +81,7 @@ Server side
 
    $ sysctl -p
 
-Once IP forwarding is done, we will need to download the latest release of OpenvPN for our Debian 10 server, according to `these instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`_:
+Once IP forwarding is done, we will need to download the latest release of OpenvPN for our Debian 10 server, according to `these instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`__:
 
 4. Change to root and download the GPG key that signed the package
 
@@ -98,7 +98,7 @@ Once IP forwarding is done, we will need to download the latest release of Openv
    # exit
 
 We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN `version
-2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`_ to login.
+2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`__ to login.
 
 6. Next we download OpenVPN
 
@@ -121,7 +121,7 @@ and print the following:
 2. Install Easy-RSA
 ^^^^^^^^^^^^^^^^^^^
 
-To build the PKI, we will download the latest version of Easy-RSA on the server and client machines. To get the latest release, go to the `Releases page on the official EasyRSA GitHub project <https://github.com/OpenVPN/easy-rsa/releases>`_, copy the download link for the file ending in ``.tgz``, and then paste it into the following command:
+To build the PKI, we will download the latest version of Easy-RSA on the server and client machines. To get the latest release, go to the `Releases page on the official EasyRSA GitHub project <https://github.com/OpenVPN/easy-rsa/releases>`__, copy the download link for the file ending in ``.tgz``, and then paste it into the following command:
 
 1. Download the latest release
 
@@ -162,7 +162,7 @@ To build a PKI directory on your OpenVPN server, you’ll need to populate a fil
 
 These are the only two lines that you need in this ``vars`` file on your OpenVPN server since it will not be used as a Certificate Authority. They will ensure that your private keys and certificate requests are configured to use Elliptic Curve Cryptography (ECC) to generate keys, and secure signatures for your clients and OpenVPN server.
 
-In regards to the choice of the cryptographic algorithms, I follow the model in `this tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-centos-8>`_, and you can customize these according to your specific needs.
+In regards to the choice of the cryptographic algorithms, I follow the model in `this tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-centos-8>`__, and you can customize these according to your specific needs.
 
 3. Initialize the PKI
 
@@ -306,7 +306,7 @@ From the CA machine, copy the files ``server.crt`` and ``chain.crt`` to the Open
 6. Configure the OpenVPN server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A connection that uses TLS requires multiple `certificates and keys for authentication <https://wiki.teltonika-networks.com/view/OpenVPN_configuration_examples>`_. Now that we issued and signed those, we can place them in the right directories. The breakdown of the certificates and keys that must be located at the root directory are the following:
+A connection that uses TLS requires multiple `certificates and keys for authentication <https://wiki.teltonika-networks.com/view/OpenVPN_configuration_examples>`__. Now that we issued and signed those, we can place them in the right directories. The breakdown of the certificates and keys that must be located at the root directory are the following:
 
 .. code-block:: bash
 
@@ -462,7 +462,7 @@ Or alternatively
 
    $ pkcs11-tool --list-objects 
 
-Fore more commands you can refer to the `OpenSC wiki <https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`_.
+Fore more commands you can refer to the `OpenSC wiki <https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__.
 
 6. Retrieve the ``chain.crt`` file from the CA machine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -536,7 +536,7 @@ Using your favorite text editor, open the server.conf file, and add the followin
    pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
    pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
 
-For additional `settings related to OpenVPN <https://openvpn.net/community-resources/how-to/>`_ authentication, you may also add few lines to handle key maganagement, although it is optional.
+For additional `settings related to OpenVPN <https://openvpn.net/community-resources/how-to/>`__ authentication, you may also add few lines to handle key maganagement, although it is optional.
 
 .. note::
 
@@ -621,7 +621,7 @@ The final configuration file ``client.conf`` should look like this one:
 
 4. Known issues
 
-There are some known issues related to OpenVPN login with OpenSC. Please consult these issues `here <https://github.com/Nitrokey/wiki/wiki/3rd-Party-Issues>`_.
+There are some known issues related to OpenVPN login with OpenSC. Please consult these issues `here <https://github.com/Nitrokey/wiki/wiki/3rd-Party-Issues>`__.
 
 8. Start the OpenVPN client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -655,7 +655,7 @@ When executing OpenVPN client, Nitrokey’s PIN needs to be entered:
 
 .. warning::
  
- Unfortunately OpenVPN doesn’t seem to be able to establish a handshake and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`_, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`_ and `here <https://community.openvpn.net/openvpn/ticket/1215>`_
+ Unfortunately OpenVPN doesn’t seem to be able to establish a handshake and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
 
 .. code-block:: bash
    
@@ -691,6 +691,6 @@ In some reported cases it does not prompt for a PIN on the terminal. One workaro
 
    $ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>
 
-Alternatively, you could `recompile OpenVPN <https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`_ client with systemd support disabled, and it will prompt you for the PIN as expected.
+Alternatively, you could `recompile OpenVPN <https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`__ client with systemd support disabled, and it will prompt you for the PIN as expected.
 
 Another option, would be to login to your OpenVPN instance with the Viscosity client which provides a better user experience especially for entering the PIN.

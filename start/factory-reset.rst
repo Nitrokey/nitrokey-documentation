@@ -15,7 +15,7 @@ Usage
 To change the identity it suffices to send a custom CCID command. This could be achieved with ``pynitrokey`` tool:
 
 1. `Install
-   pynitrokey <https://github.com/Nitrokey/pynitrokey#installation>`_.
+   pynitrokey <https://github.com/Nitrokey/pynitrokey#installation>`__.
 
 2. Connect your Nitrokey Start and verify that it got recognized.
 
@@ -63,7 +63,7 @@ Reset code
 This step is optional with new firmware.. You can add a reset code which enable the reset of the User PIN (not the Admin PIN). For older Firmware it is recommended since it is needed to reset the device (see below)
 
 
-`Checkout the documentation here <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`_.
+`Checkout the documentation here <https://www.fsij.org/doc-gnuk/gnuk-passphrase-setting.html#set-up-pw1-pw3-and-reset-code>`__.
 
 
 
@@ -77,5 +77,5 @@ If and only if the device is not blocked (PIN wasn't typed in wrong too often) y
 
 Nitrokey Start firmware 1.0:
 ----------------------------
-In order to reset a Nitrokey Start 1.0, you need to define a public key for `firmware updates <http://no-passwd.net/askbot/question/34/how-gnuk-supports-firmware-upgrade/>`_ beforehand! In case of a blocked device it enables you to perform a firmware update which resets the device.
+In order to reset a Nitrokey Start 1.0, you need to define a public key for `firmware updates <http://no-passwd.net/askbot/question/34/how-gnuk-supports-firmware-upgrade/>`__ beforehand! In case of a blocked device it enables you to perform a firmware update which resets the device.
 

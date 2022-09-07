@@ -8,7 +8,7 @@ Using The Nitrokey 3 With nitropy
 Installation
 ^^^^^^^^^^^^
 
-Please see the `pynitrokey readme <https://github.com/Nitrokey/pynitrokey#installation>`_ for installation instructions.
+Please see the `pynitrokey readme <https://github.com/Nitrokey/pynitrokey#installation>`__ for installation instructions.
 
 Listing Nitrokey 3 Devices
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

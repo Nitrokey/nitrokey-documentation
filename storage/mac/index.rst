@@ -14,11 +14,11 @@ Nitrokey Storage, Mac
    the Keyboard Setup Assistant. **Don’t run through this assistant but
    exit it right away.**
 2. Download and start the `Nitrokey
-   App <https://www.nitrokey.com/download>`_. Perhaps you want to store
+   App <https://www.nitrokey.com/download>`__. Perhaps you want to store
    it on the unencrypted partition of your Nitrokey Storage
 3. Open the About window from Nitrokey App’s menu and check if you have
    the `latest
-   firmware <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`_
+   firmware <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__
    installed. If it’s not the latest, please
    `update <firmware-update.html>`_.
 4. Use the Nitrokey App to change the default User PIN (default: 123456)
@@ -29,9 +29,9 @@ Your Nitrokey is now ready to use.
 .. note::
 
    -  For some Versions of MacOS it is necessary to install custom `ccid
-      driver <https://github.com/martinpaljak/osx-ccid-installer>`_
+      driver <https://github.com/martinpaljak/osx-ccid-installer>`__
       (for information see
-      `here <https://ludovicrousseau.blogspot.com/2016/04/os-x-el-capitan-and-ccid-driver-upgrades.html>`_),
+      `here <https://ludovicrousseau.blogspot.com/2016/04/os-x-el-capitan-and-ccid-driver-upgrades.html>`__),
       but in general MacOS should have the driver onboard.
 
    -  For many use cases described, it is necessary to have either

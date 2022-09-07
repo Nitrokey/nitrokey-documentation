@@ -62,12 +62,12 @@ we document this here for the curios.
 
 1. Make sure you have a (``flashrom``) compatible flasher like ``ch341a_spi`` with a SOIC-8 clamp.
 
-2. Open the device (`see coreboot docs <https://doc.coreboot.org/mainboard/lenovo/Ivy_Bridge_series.html>`_) 
+2. Open the device (`see coreboot docs <https://doc.coreboot.org/mainboard/lenovo/Ivy_Bridge_series.html>`__) 
    and make sure you can access both flash chips.
 
 3. Using ``flashrom`` read out the **bottom** flash (the 8MB image)
 
-4. Using ``ifdtool`` (`coreboot ifdtool docs <https://doc.coreboot.org/ifdtool/index.html>`_) extract the ``GbE`` flashregion from the 
+4. Using ``ifdtool`` (`coreboot ifdtool docs <https://doc.coreboot.org/ifdtool/index.html>`__) extract the ``GbE`` flashregion from the 
    image and replace the ``GbE``-region inside your ``-maximized`` image.
 
 5. Split the modified firmware image using ``dd`` (as described in the coreboot documentation) into ``-top`` and ``-bottom``
