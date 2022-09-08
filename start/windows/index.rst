@@ -48,10 +48,10 @@ encryption. While OpenPGP/GnuPG is popular among individuals,
 S/MIME/x.509 is mostly used by enterprises. If you are in doubt which
 one to choose, you should use OpenPGP.
 
--  `instructions <openpgp.html>`_
-   for using the OpenPGP standard with the Nitrokey
+To learn more about how to use OpenPGP for email encryption with the Nitrokey,
+please refer to chapter `OpenPGP Email Encryption <openpgp.html>`_.
 
--  `instructions <smime.html>`_
-   for using S/MIME with the Nitrokey
+To learn more about how to use S/MIME for email encryption with the Nitrokey,
+please refer to chapter `S/MIME Email Encryption <smime.html>`_.
 
 Please note that the Nitrokey App can not be used for this device!

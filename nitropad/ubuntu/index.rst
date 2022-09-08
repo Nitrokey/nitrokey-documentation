@@ -24,9 +24,10 @@ changed by you:
    and could already use it normally.
 
 4. Open the pre-installed Nitrokey App and change the PINs of your
-   Nitrokey as `described here <change-pins.html>`_.
+   Nitrokey. To learn more about how to change the PINs, please refer to chapter `Change User and Admin PIN <change-pins.html>`_.
 
-5. Change the passphrase for disk encryption as `described
-   here <change-disk-encryption-passphrase.html>`_. This passphrase is different from your user acount's passphrase.
+5. Change the passphrase for disk encryption.
+   To learn more about how to change the passphrase for disk encryption, please refer to chapter `Change Disk Encryption Passphrase <change-disk-encryption-passphrase.html>`_.
+   This passphrase is different from your user acount's passphrase.
 
 .. include:: ../content/shared-index-content2.rst
