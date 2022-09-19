@@ -40,6 +40,5 @@ In case you want to restore a backup of a NetHSM, please refer to the chapter `R
    getting-started.rst
    administration.rst
    operation.rst
-   api.rst
    integration.rst
    guides.rst
