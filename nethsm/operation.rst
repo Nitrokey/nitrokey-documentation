@@ -92,7 +92,7 @@ The key can be generated as follows.
 
 			Key myFirstKey generated on NetHSM localhost:8443
 	.. tab:: REST API
-		TODO
+		Information about the `/keys/generate` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-generate>`__.
 
 Import Key
 ~~~~~~~~~~
@@ -183,7 +183,7 @@ The import can be initiated as follows.
 
 			Key myFirstKey added to NetHSM localhost:8443
 	.. tab:: REST API
-		TODO
+		Information about the `/keys` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys>`__.
 
 List Keys
 ~~~~~~~~~
@@ -212,7 +212,7 @@ The list can be retrieved as follows.
 			-----------     ---------       ----------------------------------------------  ----------  ----
 			myFirstKey      RSA             RSA_Decryption_PKCS1, RSA_Signature_PSS_SHA256  0
 	.. tab:: REST API
-		TODO
+		Information about the `/keys` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_keys>`__.
 
 Show Key Details
 ~~~~~~~~~~~~~~~~
@@ -242,7 +242,7 @@ The detailed information can be retrieved as follows.
 			Modulus:         r62XHPWMDdEf2I1WEpSxGowY/fQF8lMPtv3EUQJE/PLWBvehF8G0QY3AVVZ3etlQWiKreOuGDx4Nr2PFNYAu5f+JP2Jc1lsFNOYF8D82RF41MBySbQR+k+44N/04B0ahTBCxX+ovFH7Sd6SzvxMPa7EKvhaOsLbgyrPlFZxQnhIEqJRCSo5DRRD+CRCPpGXsVXgFbJrNilh21i8OZCct4nC2OS191MeDKmCH4tjrfLMwOKJE8zKlwhdtA1uMY49+JuaC48GUFsLYwbLp1723Uv1PjZjC5jbUhScD0u9I+iNrqznAeka4dWsJ9jgA+h6hblSgCs0I3MWOsMXx/Y5PGQ==
 			Public exponent: AQAB
 	.. tab:: REST API
-		TODO
+		Information about the `/keys/{KeyID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_keys-KeyID>`__.
 
 The public key of a key can be retrieved as follows.
 
@@ -270,7 +270,7 @@ The public key of a key can be retrieved as follows.
 			GQIDAQAB
 			-----END PUBLIC KEY-----
 	.. tab:: REST API
-		TODO
+		Information about the `/keys/{KeyID}/public.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_keys-KeyID-public-pem>`__.
 
 The public key can be inspected for example with OpenSSL as follows.
 
@@ -319,8 +319,46 @@ The public key can be inspected for example with OpenSSL as follows.
 			Uv1PjZjC5jbUhScD0u9I+iNrqznAeka4dWsJ9jgA+h6hblSgCs0I3MWOsMXx/Y5P
 			GQIDAQAB
 			-----END PUBLIC KEY-----
-	.. tab::
-		TODO
+	.. tab:: REST API
+		Information about the `/keys/{KeyID}/public.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_keys-KeyID-public-pem>`__.
+
+		.. code::
+
+			curl -X 'GET' 'https://nethsmdemo.nitrokey.com/api/v1/keys/myFirstKey/public.pem' -H 'accept: application/x-pem-file' | openssl rsa -pubin -text
+
+		.. code::
+
+			Public-Key: (2048 bit)
+			Modulus:
+				00:af:ad:97:1c:f5:8c:0d:d1:1f:d8:8d:56:12:94:
+				b1:1a:8c:18:fd:f4:05:f2:53:0f:b6:fd:c4:51:02:
+				44:fc:f2:d6:06:f7:a1:17:c1:b4:41:8d:c0:55:56:
+				77:7a:d9:50:5a:22:ab:78:eb:86:0f:1e:0d:af:63:
+				c5:35:80:2e:e5:ff:89:3f:62:5c:d6:5b:05:34:e6:
+				05:f0:3f:36:44:5e:35:30:1c:92:6d:04:7e:93:ee:
+				38:37:fd:38:07:46:a1:4c:10:b1:5f:ea:2f:14:7e:
+				d2:77:a4:b3:bf:13:0f:6b:b1:0a:be:16:8e:b0:b6:
+				e0:ca:b3:e5:15:9c:50:9e:12:04:a8:94:42:4a:8e:
+				43:45:10:fe:09:10:8f:a4:65:ec:55:78:05:6c:9a:
+				cd:8a:58:76:d6:2f:0e:64:27:2d:e2:70:b6:39:2d:
+				7d:d4:c7:83:2a:60:87:e2:d8:eb:7c:b3:30:38:a2:
+				44:f3:32:a5:c2:17:6d:03:5b:8c:63:8f:7e:26:e6:
+				82:e3:c1:94:16:c2:d8:c1:b2:e9:d7:bd:b7:52:fd:
+				4f:8d:98:c2:e6:36:d4:85:27:03:d2:ef:48:fa:23:
+				6b:ab:39:c0:7a:46:b8:75:6b:09:f6:38:00:fa:1e:
+				a1:6e:54:a0:0a:cd:08:dc:c5:8e:b0:c5:f1:fd:8e:
+				4f:19
+			Exponent: 65537 (0x10001)
+			writing RSA key
+			-----BEGIN PUBLIC KEY-----
+			MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr62XHPWMDdEf2I1WEpSx
+			GowY/fQF8lMPtv3EUQJE/PLWBvehF8G0QY3AVVZ3etlQWiKreOuGDx4Nr2PFNYAu
+			5f+JP2Jc1lsFNOYF8D82RF41MBySbQR+k+44N/04B0ahTBCxX+ovFH7Sd6SzvxMP
+			a7EKvhaOsLbgyrPlFZxQnhIEqJRCSo5DRRD+CRCPpGXsVXgFbJrNilh21i8OZCct
+			4nC2OS191MeDKmCH4tjrfLMwOKJE8zKlwhdtA1uMY49+JuaC48GUFsLYwbLp1723
+			Uv1PjZjC5jbUhScD0u9I+iNrqznAeka4dWsJ9jgA+h6hblSgCs0I3MWOsMXx/Y5P
+			GQIDAQAB
+			-----END PUBLIC KEY-----
 
 Tags for Keys
 ~~~~~~~~~~~~~
@@ -363,7 +401,7 @@ The *Tag* can be added as follows.
 
 			Added tag berlin for key 8925c71517637fc6422b on the NetHSM localhost:8443
 	.. tab:: REST API
-		TODO
+		Information about the `/keys/{KeyID}/restrictions/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_keys-KeyID-restrictions-tags-Tag>`__.
 
 The *Tag* can be deleted as follows.
 
@@ -393,7 +431,7 @@ The *Tag* can be deleted as follows.
 
 			Deleted tag berlin for key 8925c71517637fc6422b on the NetHSM localhost:8443
 	.. tab:: REST API
-		TODO
+		Information about the `/keys/{KeyID}/restrictions/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_keys-KeyID-restrictions-tags-Tag>`__.
 
 Key Certificates
 ----------------
@@ -449,7 +487,7 @@ The certificate can be set as follows.
 
 			Updated the certificate for key myFirstKey on NetHSM localhost:8443
 	.. tab:: REST API
-		TODO
+		Information about the `/keys/{KeyID}/cert` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_keys-KeyID-cert>`__.
 
 The certificate can be retrieved as follows.
 
@@ -492,7 +530,7 @@ The certificate can be retrieved as follows.
 			3XbJq/1ij3tKsjV6WA==
 			-----END CERTIFICATE-----
 	.. tab:: REST API
-		TODO
+		Information about the `/keys/{KeyID}/cert` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_keys-KeyID-cert>`__.
 
 Key Certificate Signing Requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -544,7 +582,7 @@ The NetHSM supports generating CSR (Certificate Signing Requests) for the stored
 			gWjEDg==
 			-----END CERTIFICATE REQUEST-----
 	.. tab:: REST API
-		TODO
+		Information about the `/keys/{KeyID}/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-KeyID-csr-pem>`__.
 
 Key Operations
 --------------
@@ -611,7 +649,16 @@ The data can be decrypted as follows.
 
 			NetHSM rulez!
 	.. tab:: REST API
-		TODO
+		Information about the `/keys/{KeyID}/decrypt` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-KeyID-decrypt>`__.
+
+		.. code::
+
+			curl -X 'POST' \
+				'https://nethsmdemo.nitrokey.com/api/v1/keys/myFirstKey/decrypt' \
+				-H 'accept: application/json' \
+				-H 'Content-Type: application/json' \
+				-d '{"mode": "RAW", "encrypted": "nhrfotu32409ru0rgert45z54z099u23r03498uhtr=="}' \
+				| base64 -d
 
 Sign
 ~~~~
@@ -669,7 +716,16 @@ From the digest a signature can be created as follows.
 
 			$ nitropy nethsm -h $NETHSM_HOST sign -k myFirstKey -m PKCS1 -d "$(cat data.digest)" | base64 -d > data.sig
 	.. tab:: REST API
-		TODO
+		Information about the `/keys/{KeyID}/sign` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-KeyID-sign>`__.
+
+		.. code::
+
+			curl -X 'POST' \
+  				'https://nethsmdemo.nitrokey.com/api/v1/keys/myFirstKey/sign' \
+  				-H 'accept: application/json' \
+  				-H 'Content-Type: application/json' \
+  				-d '{"mode": "PKCS1", "message": "nhrfotu32409ru0rgert45z54z099u23r03498uhtr=="}' \
+				| base64 -d > data.sig
 
 The created signature can be verified with OpenSSL as follows.
 
@@ -710,4 +766,4 @@ The NetHSM can provide random bytes as a Base64 string.
 
 			94A2rg==
 	.. tab:: REST API
-		TODO
+		Information about the `/random` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_random>`__.

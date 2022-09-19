@@ -108,7 +108,7 @@ The NetHSM client can be generated for your programming language as follows.
    .. tab:: Docker
       .. code:: bash
 
-         $ docker run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate -i=https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json -o out -g javascript
+         $ docker run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate -i=https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml -o out -g javascript
 
 The generated client code, in this example JavaScript, will be created in the ``./out/`` directory.
 This folder also contains the necessary documentation how to use it.
@@ -116,6 +116,5 @@ This folder also contains the necessary documentation how to use it.
 REST-API
 ~~~~~~~~
 
-The NetHSM's REST API is documented `here <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>`_, and its specification is available as
-`RAML <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.raml>`_ and as
-`OpenAPI (Swagger) <https://nethsmdemo.nitrokey.com/api_docs/gen_nethsm_api_oas20.json>`_.
+The NetHSM's API specification is available in `OpenAPI format <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_,
+and can be inspected and tested in the `API browser <https://nethsmdemo.nitrokey.com/api_docs/index.html>`_.

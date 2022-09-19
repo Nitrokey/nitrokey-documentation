@@ -30,18 +30,7 @@ The vendor and product information for a NetHSM can be retrieved as follows.
             Product: NetHSM
 
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl -i -w '\n' https://$NETHSM_HOST/api/v1/info
-
-            HTTP/1.1 200 OK
-            content-length: 45
-            content-type: application/json
-            date: Mon, 25 Jan 2021 21:00:27 GMT
-            etag: "7bab62510e05c332735624bc7a585a30"
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
-
-            {"vendor":"Nitrokey GmbH","product":"NetHSM"}
+        Information about the `/info` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_info>`__.
 
 State
 ~~~~~
@@ -77,18 +66,7 @@ The current state of the NetHSM can be retrieved as follows.
 
             NetHSM localhost:8443 is Unprovisioned
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl -i -w '\n' https://$NETHSM_HOST/api/v1/health/state
-
-            HTTP/1.1 200 OK
-            cache-control: no-cache
-            content-length: 25
-            content-type: application/json
-            date: Mon, 25 Jan 2021 20:57:32 GMT
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
-
-            {"state":"Unprovisioned"}
+        Information about the `/health/state` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_health-state>`__.
 
 A new NetHSM has an *Unprovisioned* state and after provisioning enters the *Operational* state.
 The provisioning of a NetHSM is described in the chapter `Provisioning <getting-started.html#provisioning>`__.
@@ -107,16 +85,7 @@ A NetHSM in *Operational* state can be locked again to protect it as follows.
 
             NetHSM localhost:8443 locked
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl -i -w '\n' -X POST https://$NETHSM_HOST/api/v1/lock
-
-            HTTP/1.1 204 No Content
-            cache-control: no-cache
-            content-length: 25
-            content-type: application/json
-            date: Mon, 25 Jan 2021 20:57:32 GMT
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+        Information about the `/lock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_lock>`__.
 
 A NetHSM in *Locked* state can be unlocked as follows.
 
@@ -132,16 +101,7 @@ A NetHSM in *Locked* state can be unlocked as follows.
 
             NetHSM localhost:8443 unlocked
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl -i -w '\n' -X POST https://$NETHSM_HOST/api/v1/unlock
-
-            HTTP/1.1 204 No Content
-            cache-control: no-cache
-            content-length: 25
-            content-type: application/json
-            date: Mon, 25 Jan 2021 20:57:32 GMT
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+        Information about the `/unlock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_unlock>`__.
 
 .. important::
     If the NetHSM is in *Locked* or *Operational* state after boot depends on the boot mode.
@@ -180,18 +140,7 @@ The current boot mode can be retrieved as follows.
             Configuration for NetHSM localhost:8443:
               Unattended boot: off
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl -i -w '\n' -u admin \
-            https://$NETHSM_HOST/api/v1/config/unattended-boot
-
-            HTTP/1.1 200 OK
-            content-length: 16
-            content-type: application/json
-            date: Wed, 21 Apr 2021 10:20:55 GMT
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
-
-            {"status":"off"}
+        Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-unattended-boot>`__.
 
 The boot mode can be changed as follows.
 
@@ -216,15 +165,7 @@ The boot mode can be changed as follows.
 
             Updated the unattended boot configuration for NetHSM localhost:8443
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl -i -w '\n' -X PUT -H "content-type: application/json" \
-            https://$NETHSM_HOST/api/v1/config/unattended-boot -d "{ status: \"on\"}"
-
-            HTTP/1.1 204 No Content
-            content-type: application/json
-            date: Wed, 21 Apr 2021 10:24:25 GMT
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+        Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unattended-boot>`__.
 
 Unlock Passphrase
 ~~~~~~~~~~~~~~~~
@@ -256,7 +197,7 @@ The *Unlock Passphrase* can be set as follows.
             Repeat for confirmation:
             Updated the unlock passphrase for localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/config/unlock-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unlock-passphrase>`__.
 
 HTTPS API Certificate
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -296,7 +237,7 @@ The TLS certificate can be retrieved as follows.
             JBax
             -----END CERTIFICATE-----
     .. tab:: REST API
-        TODO
+        Information about the `/config/tls/cert.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-tls-cert-pem>`__.
 
 The TLS certificate can be generated as follows.
 
@@ -322,7 +263,7 @@ The TLS certificate can be generated as follows.
 
             Key for HTTPS API generated on NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/config/tls/generate` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-generate>`__.
 
 The CSR (Certificate Signing Request) for the certificate can be generated as follows.
 
@@ -364,7 +305,7 @@ The CSR (Certificate Signing Request) for the certificate can be generated as fo
             c102GFi963ZPIxG7Z5+uWplz+wr/Vmr7KLr6oM01M/AZPJQO
             -----END CERTIFICATE REQUEST-----
     .. tab:: REST API
-        TODO
+        Information about the `/config/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-csr-pem>`__.
 
 The certificate can be replaced as follows.
 
@@ -393,7 +334,7 @@ The certificate can be replaced as follows.
             nitropy nethsm --host $NETHSM_HOST set-certificate --api /tmp/nethsm-certificate
         TODO
     .. tab:: REST API
-        TODO
+        Information about the `/config/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cert-pem>`__.
 
 Network
 ~~~~~~~
@@ -430,25 +371,7 @@ The network configuration can be retrieved as follows.
                 Netmask:       255.255.255.0
                 Gateway:       0.0.0.0
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl -i -w '\n' "https://$NETHSM_HOST/api/v1/config/network"
-
-        .. code::
-
-            HTTP/2 200
-            server: nginx/1.14.2
-            date: Wed, 17 Aug 2022 12:44:09 GMT
-            content-type: application/json
-            content-length: 73
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
-            strict-transport-security: max-age=63072000; includeSubDomains; preload
-            x-frame-options: DENY
-            x-content-type-options: nosniff
-            x-xss-protection: 1; mode=block
-            x-permitted-cross-domain-policies: none
-
-            {"ipAddress":"192.168.1.1","netmask":"255.255.255.0","gateway":"0.0.0.0"}
+        Information about the `/config/network` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-network>`__.
 
 Set the network configuration as follows.
 
@@ -482,17 +405,7 @@ Set the network configuration as follows.
 
             Updated the network configuration for NetHSM localhost:8443
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl -i -w '\n' -X PUT "https://$NETHSM_HOST/api/v1/config/network" \
-            -d "{ ipAddress: \"192.168.1.1\",  netmask: \"255.255.255.0\",  gateway: \"0.0.0.0\" }"
-
-            HTTP/2 415
-            server: nginx/1.14.2
-            date: Tue, 23 Aug 2022 14:13:11 GMT
-            content-type: application/json
-            content-length: 0
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+        Information about the `/config/network` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-network>`__.
 
 Time
 ~~~~
@@ -523,26 +436,7 @@ The time configuration can be retrieved as follows.
             Configuration for NetHSM localhost:8443:
             Time:            2022-08-17 11:40:00+00:00
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl -i -w '\n' "https://$NETHSM_HOST/api/v1/config/time"
-
-        .. code::
-
-            HTTP/2 200
-            server: nginx/1.14.2
-            date: Wed, 17 Aug 2022 12:45:41 GMT
-            content-type: application/json
-            content-length: 31
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
-            cache-control: no-cache
-            strict-transport-security: max-age=63072000; includeSubDomains; preload
-            x-frame-options: DENY
-            x-content-type-options: nosniff
-            x-xss-protection: 1; mode=block
-            x-permitted-cross-domain-policies: none
-
-            {"time":"2022-08-17T11:51:59Z"}
+        Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-time>`__.
 
 Set the time of the NetHSM.
 
@@ -569,21 +463,7 @@ Set the time of the NetHSM.
 
             Updated the system time for NetHSM localhost:8443
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl "https://$NETHSM_HOST/api/v1/config/time" \
-            -X PUT \
-            -d "{ time: \"2022-08-17T11:40:00Z\" }"
-
-        .. code::
-
-            HTTP/2 415
-            server: nginx/1.14.2
-            date: Wed, 17 Aug 2022 12:57:10 GMT
-            content-type: application/json
-            content-length: 0
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
-            cache-control: no-cache
+        Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-time>`__.
 
 Metrics
 ~~~~~~~
@@ -652,7 +532,7 @@ The metrics can be retrieved as follows.
             total timers                	526
             uptime                      	17626
     .. tab:: REST API
-        TODO
+        Information about the `/metrics` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_metrics>`__.
 
 Logging
 ~~~~~~~
@@ -703,7 +583,7 @@ The syslog server configuration can be retrieved as follows.
               Port:          514
               Log level:     info
     .. tab:: REST API
-        TODO
+        Information about the `/config/logging` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-logging>`__.
 
 The syslog server configuration can be set as follows.
 
@@ -731,7 +611,7 @@ The syslog server configuration can be set as follows.
 
             Updated the logging configuration for NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/config/logging` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-logging>`__.
 
 Backup
 ~~~~~~
@@ -774,7 +654,7 @@ The backup passphrase can be set as follows.
             Repeat for confirmation:
             Updated the backup passphrase for NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/config/backup-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-backup-passphrase>`__.
 
 .. note::
     This command requires the authentication of an user with the *Backup* role.
@@ -802,7 +682,7 @@ The backup can be executed as follows.
 
             Backup for localhost:8443 written to /tmp/backup
     .. tab:: REST API
-        TODO
+        Information about the `/system/backup` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-backup>`__.
 
 .. note::
     This backup file can be restored on an unprovisioned NetHSM instance only.
@@ -851,7 +731,7 @@ The restore can be applied as follows.
             Backup passphrase:
             Backup restored on NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/system/restore` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-restore>`__.
 
 Update
 ~~~~~~
@@ -886,7 +766,7 @@ The update file can be uploaded as follows.
 
             Image /tmp/nethsm-update.img.cpio uploaded to NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/system/update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-update>`__.
 
 The update can now be applied or aborted. Please refer to the desired option below.
 
@@ -904,9 +784,9 @@ The update can be applied (committed) as follows.
 
             Update successfully committed on NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/system/commit-update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-commit-update>`__.
 
-The update can be aborted as follows.
+The update can be cancelled as follows.
 
 .. tabs::
     .. tab:: nitropy
@@ -920,10 +800,7 @@ The update can be aborted as follows.
 
             Update successfully cancelled on NetHSM localhost:8443
     .. tab:: REST API
-        .. code:: bash
-
-            $ curl -i -w '\n' -u admin -X POST  \
-            https://$NETHSM_HOST/api/v1/system/cancel-update
+        Information about the `/system/cancel-update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-cancel-update>`__.
 
 Reboot and Shutdown
 ~~~~~~~~~~~~~~~~~~~
@@ -944,7 +821,7 @@ The remote reboot can be initiated as follows.
 
             NetHSM localhost:8443 is about to reboot
     .. tab:: REST API
-        TODO
+        Information about the `/system/reboot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-reboot>`__.
 
 The remote shutdown can be initiated as follows.
 
@@ -960,7 +837,7 @@ The remote shutdown can be initiated as follows.
 
             NetHSM localhost:8443 is about to shutdown
     .. tab:: REST API
-        TODO
+        Information about the `/system/shutdown` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-shutdown>`__.
 
 Reset to Factory Defaults
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -981,7 +858,7 @@ The reset to factory defaults can be performed as follows.
 
             NetHSM localhost:8443 is about to perform a factory reset
     .. tab:: REST API
-        TODO
+        Information about the `/system/factory-reset` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-factory-reset>`__.
 
 User Management
 ---------------
@@ -1060,7 +937,9 @@ An user account can be added as follows.
             Repeat for confirmation:
             User e8836f4cf2c7fa968bf0 added to NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/users` endpoint, to create an user without specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users>`__.
+
+        Information about the `/users/{UserID}` endpoint, to create an user with specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID>`__.
 
 Delete User
 ~~~~~~~~~~~
@@ -1092,7 +971,7 @@ An user account can be deleted as follows.
 
             User e8836f4cf2c7fa968bf0 deleted on NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID>`__.
 
 User Passphrase
 ~~~~~~~~~~~~~~~
@@ -1129,7 +1008,7 @@ The user passphrase can be set as follows.
             Repeat for confirmation:
             Updated the passphrase for user e8836f4cf2c7fa968bf0 on NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/users/{UserID}/passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users-UserID-passphrase>`__.
 
 Tags for Users
 ~~~~~~~~~~~~~~
@@ -1165,7 +1044,7 @@ The *Tag* can be added as follows.
 
             Added tag berlin for user 5d0d171c067e1f519b33 on the NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/users/{UserID}/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID-tags-Tag>`__.
 
 The *Tag* can be deleted as follows.
 
@@ -1191,4 +1070,4 @@ The *Tag* can be deleted as follows.
 
             Deleted tag berlin for user 5d0d171c067e1f519b33 on the NetHSM localhost:8443
     .. tab:: REST API
-        TODO
+        Information about the `/users/{UserID}/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID-tags-Tag>`__.

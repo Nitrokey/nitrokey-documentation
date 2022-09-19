@@ -151,41 +151,7 @@ The initial provisioning is executed as follows.
             NetHSM localhost:8443 provisioned
 
     .. tab:: REST API
-        The `/provision` path privisions a new NetHSM. The request body must contain the `adminPassphrase`, `unlockPassphrase`, and `systemTime`.
-
-        **Mandatory fields**
-
-        +----------------------+------------------------------------------------------------+
-        | Field                | Description                                                |
-        +======================+============================================================+
-        | ``adminPassphrase``  | The admin passphrase to set                                |
-        +----------------------+------------------------------------------------------------+
-        | ``unlockPassphrase`` | The unlock passphrase to set                               |
-        +----------------------+------------------------------------------------------------+
-        | ``systemTime``       | The system time to set (Format: ``YYYY-MM-DDTHH:MM:SSZ``)  |
-        +----------------------+------------------------------------------------------------+
-
-        **Optional fields**
-
-        No optional fields available
-
-        .. warning::
-            Make sure to pass the time in UTC timezone.
-
-        **Example**
-
-        .. code:: bash
-
-            $ curl -i -w '\n' -X POST https://$NETHSM_HOST/api/v1/provision \
-            -H "content-type: application/json" \
-            -d "{ adminPassphrase: \"adminPassphrase\", unlockPassphrase: \"unlockPassphrase\", \
-            systemTime: \"$(date --utc -Iseconds)\"}"
-
-            HTTP/1.1 204 No Content
-            cache-control: no-cache
-            content-type: application/json
-            date: Wed, 11 Nov 2020 16:35:44 GMT
-            vary: Accept, Accept-Encoding, Accept-Charset, Accept-Language
+        Information about the `/provision` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_provision>`__.
 
 .. warning::
     The default boot mode is *Unattended Boot*. Please refer to chapter `Boot Mode <administration.html#boot-mode>`__ to learn more.
