@@ -20,17 +20,17 @@ In case you want to restore a backup of a NetHSM, please refer to the chapter `R
 
 .. important::
 
-    If you use a NetHSM instance with a self-signed certificate, for example using the Docker image, you will have to instruct *nitropy* or *curl* to ignore the validity of the certificate.
-    For *nitropy* use the option ``--no-verify-tls`` and for *curl* use the option ``--insecure/-k`` to skip the certificate check.
+   If you use a NetHSM instance with a self-signed certificate, for example using the Docker image, you will have to instruct *nitropy* or *curl* to ignore the validity of the certificate.
+   For *nitropy* use the option ``--no-verify-tls`` and for *curl* use the option ``--insecure/-k`` to skip the certificate check.
 
 .. note::
 
-    The examples in this documentation use the environment variable ``NETHSM_HOST``, which contains the IP address or URL of the NetHSM.
-    On a Unix shell the variable can be set with the following command.
+   The examples in this documentation use the environment variable ``NETHSM_HOST``, which contains the IP address or URL of the NetHSM.
+   On a Unix shell the variable can be set with the following command.
 
-    .. code:: bash
+   .. code-block:: bash
 
-        $ export NETHSM_HOST="<URL-or-IP-address>"
+      $ export NETHSM_HOST="<URL-or-IP-address>"
 
 .. toctree::
    :hidden:

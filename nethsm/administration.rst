@@ -5,7 +5,7 @@ This chapter describes administrative tasks for users with the *Administrator* r
 Please refer to chapter `Roles <administration.html#roles>`__ to learn more about the role.
 
 .. important::
-    Please make sure you read the information in the beginning of `this document <index.html>`__ before starting to work.
+   Please make sure you read the information in the beginning of `this document <index.html>`__ before starting to work.
 
 System Management
 -----------------
@@ -16,21 +16,21 @@ Device Information
 The vendor and product information for a NetHSM can be retrieved as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST info
+         $ nitropy nethsm --host $NETHSM_HOST info
 
-        .. code::
+      .. code-block::
 
-            Host:    localhost:8443
-            Vendor:  Nitrokey GmbH
-            Product: NetHSM
+         Host:    localhost:8443
+         Vendor:  Nitrokey GmbH
+         Product: NetHSM
 
-    .. tab:: REST API
-        Information about the `/info` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_info>`__.
+   .. tab:: REST API
+      Information about the `/info` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_info>`__.
 
 State
 ~~~~~
@@ -55,18 +55,18 @@ The NetHSM software has four states: *Unprovisioned*, *Provisioned*, *Locked*, a
 The current state of the NetHSM can be retrieved as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST state
+         $ nitropy nethsm --host $NETHSM_HOST state
 
-        .. code::
+      .. code-block::
 
-            NetHSM localhost:8443 is Unprovisioned
-    .. tab:: REST API
-        Information about the `/health/state` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_health-state>`__.
+         NetHSM localhost:8443 is Unprovisioned
+   .. tab:: REST API
+      Information about the `/health/state` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_health-state>`__.
 
 A new NetHSM has an *Unprovisioned* state and after provisioning enters the *Operational* state.
 The provisioning of a NetHSM is described in the chapter `Provisioning <getting-started.html#provisioning>`__.
@@ -74,38 +74,38 @@ The provisioning of a NetHSM is described in the chapter `Provisioning <getting-
 A NetHSM in *Operational* state can be locked again to protect it as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST lock
+         $ nitropy nethsm --host $NETHSM_HOST lock
 
-        .. code::
+      .. code-block::
 
-            NetHSM localhost:8443 locked
-    .. tab:: REST API
-        Information about the `/lock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_lock>`__.
+         NetHSM localhost:8443 locked
+   .. tab:: REST API
+      Information about the `/lock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_lock>`__.
 
 A NetHSM in *Locked* state can be unlocked as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST unlock
+         $ nitropy nethsm --host $NETHSM_HOST unlock
 
-        .. code::
+      .. code-block::
 
-            NetHSM localhost:8443 unlocked
-    .. tab:: REST API
-        Information about the `/unlock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_unlock>`__.
+         NetHSM localhost:8443 unlocked
+   .. tab:: REST API
+      Information about the `/unlock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_unlock>`__.
 
 .. important::
-    If the NetHSM is in *Locked* or *Operational* state after boot depends on the boot mode.
-    Please refer to chapter `Boot Mode <administration.html#boot-mode>`__ to learn more.
+   If the NetHSM is in *Locked* or *Operational* state after boot depends on the boot mode.
+   Please refer to chapter `Boot Mode <administration.html#boot-mode>`__ to learn more.
 
 Boot Mode
 ~~~~~~~~~
@@ -128,47 +128,47 @@ NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
 The current boot mode can be retrieved as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST get-config --unattended-boot
+         $ nitropy nethsm --host $NETHSM_HOST get-config --unattended-boot
 
-        .. code::
+      .. code-block::
 
-            Configuration for NetHSM localhost:8443:
-              Unattended boot: off
-    .. tab:: REST API
-        Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-unattended-boot>`__.
+         Configuration for NetHSM localhost:8443:
+            Unattended boot: off
+   .. tab:: REST API
+      Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-unattended-boot>`__.
 
 The boot mode can be changed as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Arguments**
+   .. tab:: nitropy
+      **Arguments**
 
-        +----------+--------------------------------------+
-        | Argument | Description                          |
-        +==========+======================================+
-        | Status   | Enable or disable *Unattended Boot*. |
-        |          | Can have value ``on`` or ``off``.    |
-        +----------+--------------------------------------+
+      +----------+--------------------------------------+
+      | Argument | Description                          |
+      +==========+======================================+
+      | Status   | Enable or disable *Unattended Boot*. |
+      |          | Can have value ``on`` or ``off``.    |
+      +----------+--------------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST set-unattended-boot on
+         $ nitropy nethsm --host $NETHSM_HOST set-unattended-boot on
 
-        .. code::
+      .. code-block::
 
-            Updated the unattended boot configuration for NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unattended-boot>`__.
+         Updated the unattended boot configuration for NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unattended-boot>`__.
 
 Unlock Passphrase
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 The *Unlock Passphrase* is used to derive an *Unlock Key* if the NetHSM is in *Locked* state.
 The passphrase is initially set during provisioning of the NetHSM.
@@ -176,28 +176,28 @@ The passphrase is initially set during provisioning of the NetHSM.
 The *Unlock Passphrase* can be set as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Optional Options**
+   .. tab:: nitropy
+      **Optional Options**
 
-        +-----------------------------------+---------------------------+
-        | Option                            | Description               |
-        +===================================+===========================+
-        | ``-p``, ``--passphrase`` ``TEXT`` | The new unlock passphrase |
-        +-----------------------------------+---------------------------+
+      +-----------------------------------+---------------------------+
+      | Option                            | Description               |
+      +===================================+===========================+
+      | ``-p``, ``--passphrase`` ``TEXT`` | The new unlock passphrase |
+      +-----------------------------------+---------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST set-unlock-passphrase
+         $ nitropy nethsm --host $NETHSM_HOST set-unlock-passphrase
 
-        .. code::
+      .. code-block::
 
-            Passphrase:
-            Repeat for confirmation:
-            Updated the unlock passphrase for localhost:8443
-    .. tab:: REST API
-        Information about the `/config/unlock-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unlock-passphrase>`__.
+         Passphrase:
+         Repeat for confirmation:
+         Updated the unlock passphrase for localhost:8443
+   .. tab:: REST API
+      Information about the `/config/unlock-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unlock-passphrase>`__.
 
 HTTPS API Certificate
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,131 +210,130 @@ Such change may be to replace it with a signed certificate from a certificate au
 The TLS certificate can be retrieved as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +-------------------+----------------------------------------------+
-        | Option            | Description                                  |
-        +===================+==============================================+
-        | ``-a``, ``--api`` | Set the certificate for the NetHSM HTTPS API |
-        +-------------------+----------------------------------------------+
+      +-------------------+----------------------------------------------+
+      | Option            | Description                                  |
+      +===================+==============================================+
+      | ``-a``, ``--api`` | Set the certificate for the NetHSM HTTPS API |
+      +-------------------+----------------------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST get-certificate --api
+         $ nitropy nethsm --host $NETHSM_HOST get-certificate --api
         
-        .. code::
+      .. code-block::
 
-            -----BEGIN CERTIFICATE-----
-            MIIBHzCBxaADAgECAgkA7AznVQK3XWkwCgYIKoZIzj0EAwIwFDESMBAGA1UEAwwJ
-            a2V5ZmVuZGVyMCAXDTcwMDEwMTAwMDAwMFoYDzk5OTkxMjMxMjM1OTU5WjAUMRIw
-            EAYDVQQDDAlrZXlmZW5kZXIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARbeCRl
-            F1ZIjK1bTfrPvtCoYDThMjdV1q8mq+B9FMDo4GIahTCUG/Ub6bCOcbip5pP92J3h
-            yMEcPuos72c1KcGjMAoGCCqGSM49BAMCA0kAMEYCIQC/BNrkCM5gpsVfa9EqQcM0
-            PCaADyZG7KKLgDv7asa5LwIhAKDXRE3Tdm9tYObO0X4p0CRQkl1+DnvGljzQe34C
-            JBax
-            -----END CERTIFICATE-----
-    .. tab:: REST API
-        Information about the `/config/tls/cert.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-tls-cert-pem>`__.
+         -----BEGIN CERTIFICATE-----
+         MIIBHzCBxaADAgECAgkA7AznVQK3XWkwCgYIKoZIzj0EAwIwFDESMBAGA1UEAwwJ
+         a2V5ZmVuZGVyMCAXDTcwMDEwMTAwMDAwMFoYDzk5OTkxMjMxMjM1OTU5WjAUMRIw
+         EAYDVQQDDAlrZXlmZW5kZXIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARbeCRl
+         F1ZIjK1bTfrPvtCoYDThMjdV1q8mq+B9FMDo4GIahTCUG/Ub6bCOcbip5pP92J3h
+         yMEcPuos72c1KcGjMAoGCCqGSM49BAMCA0kAMEYCIQC/BNrkCM5gpsVfa9EqQcM0
+         PCaADyZG7KKLgDv7asa5LwIhAKDXRE3Tdm9tYObO0X4p0CRQkl1+DnvGljzQe34C
+         JBax
+         -----END CERTIFICATE-----
+   .. tab:: REST API
+      Information about the `/config/tls/cert.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-tls-cert-pem>`__.
 
 The TLS certificate can be generated as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +-------------------------------------------------------------------------+---------------------------------+
-        | Option                                                                  | Description                     |
-        +=========================================================================+=================================+
-        | ``-t``, ``--type`` ``[RSA|Curve25519|EC_P224|EC_P256|EC_P384|EC_P521]`` | The type for the generated key  |
-        +-------------------------------------------------------------------------+---------------------------------+
-        | ``-l``, ``--length`` ``INTEGER``                                        | The length of the generated key |
-        +-------------------------------------------------------------------------+---------------------------------+
+      +-------------------------------------------------------------------------+---------------------------------+
+      | Option                                                                  | Description                     |
+      +=========================================================================+=================================+
+      | ``-t``, ``--type`` ``[RSA|Curve25519|EC_P224|EC_P256|EC_P384|EC_P521]`` | The type for the generated key  |
+      +-------------------------------------------------------------------------+---------------------------------+
+      | ``-l``, ``--length`` ``INTEGER``                                        | The length of the generated key |
+      +-------------------------------------------------------------------------+---------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST generate-tls-key -t Curve25519
+         $ nitropy nethsm --host $NETHSM_HOST generate-tls-key -t Curve25519
 
-        .. code::
+      .. code-block::
 
-            Key for HTTPS API generated on NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/config/tls/generate` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-generate>`__.
+         Key for HTTPS API generated on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/config/tls/generate` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-generate>`__.
 
 The CSR (Certificate Signing Request) for the certificate can be generated as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +------------------------------------+-----------------------------------------+
-        | Option                             | Description                             |
-        +====================================+=========================================+
-        | ``-a``, ``--api``                  | Generate a CSR for the NetHSM HTTPS API |
-        +------------------------------------+-----------------------------------------+
-        | ``--country`` ``TEXT``             | The country name                        |
-        +------------------------------------+-----------------------------------------+
-        | ``--state-or-province`` ``TEXT``   | The state or province name              |
-        +------------------------------------+-----------------------------------------+
-        | ``--locality`` ``TEXT``            | The locality name                       |
-        +------------------------------------+-----------------------------------------+
-        | ``--organization`` ``TEXT``        | The organization name                   |
-        +------------------------------------+-----------------------------------------+
-        | ``--organizational-unit`` ``TEXT`` | The organization unit name              |
-        +------------------------------------+-----------------------------------------+
-        | ``--common-name`` ``TEXT``         | The common name                         |
-        +------------------------------------+-----------------------------------------+
-        | ``--email-address`` ``TEXT``       | The email address                       |
-        +------------------------------------+-----------------------------------------+
+      +------------------------------------+-----------------------------------------+
+      | Option                             | Description                             |
+      +====================================+=========================================+
+      | ``-a``, ``--api``                  | Generate a CSR for the NetHSM HTTPS API |
+      +------------------------------------+-----------------------------------------+
+      | ``--country`` ``TEXT``             | The country name                        |
+      +------------------------------------+-----------------------------------------+
+      | ``--state-or-province`` ``TEXT``   | The state or province name              |
+      +------------------------------------+-----------------------------------------+
+      | ``--locality`` ``TEXT``            | The locality name                       |
+      +------------------------------------+-----------------------------------------+
+      | ``--organization`` ``TEXT``        | The organization name                   |
+      +------------------------------------+-----------------------------------------+
+      | ``--organizational-unit`` ``TEXT`` | The organization unit name              |
+      +------------------------------------+-----------------------------------------+
+      | ``--common-name`` ``TEXT``         | The common name                         |
+      +------------------------------------+-----------------------------------------+
+      | ``--email-address`` ``TEXT``       | The email address                       |
+      +------------------------------------+-----------------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST csr --api --country="DE" --state-or-province="Berlin" --locality="Berlin" --organization="Nitrokey" --organizational-unit="" --common-name="Nitrokey" --email-address="info@nitrokey.com"
+         $ nitropy nethsm --host $NETHSM_HOST csr --api --country="DE" --state-or-province="Berlin" --locality="Berlin" --organization="Nitrokey" --organizational-unit="" --common-name="Nitrokey" --email-address="info@nitrokey.com"
 
-        .. code::
+      .. code-block::
 
-            -----BEGIN CERTIFICATE REQUEST-----
-            MIGBMDUCAQAwAjEAMCowBQYDK2VwAyEAE+nz+nOj80SWG25UbqVcQk6Ua84zuj5B
-            9qCtPpDUX2qgADAFBgMrZXADQQDwk9LrYDu83a1jgBGqW0I9BVXWEhP4gZLxlVV+
-            c102GFi963ZPIxG7Z5+uWplz+wr/Vmr7KLr6oM01M/AZPJQO
-            -----END CERTIFICATE REQUEST-----
-    .. tab:: REST API
-        Information about the `/config/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-csr-pem>`__.
+         -----BEGIN CERTIFICATE REQUEST-----
+         MIGBMDUCAQAwAjEAMCowBQYDK2VwAyEAE+nz+nOj80SWG25UbqVcQk6Ua84zuj5B
+         9qCtPpDUX2qgADAFBgMrZXADQQDwk9LrYDu83a1jgBGqW0I9BVXWEhP4gZLxlVV+
+         c102GFi963ZPIxG7Z5+uWplz+wr/Vmr7KLr6oM01M/AZPJQO
+         -----END CERTIFICATE REQUEST-----
+   .. tab:: REST API
+      Information about the `/config/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-csr-pem>`__.
 
 The certificate can be replaced as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +-------------------+-----------------------------------------------+
-        | Option            | Description                                   |
-        +===================+==============================================+
-        | ``-a``, ``--api`` | Set the certificate for the NetHSM HTTPS API |
-        +-------------------+----------------------------------------------+
-        
-        **Arguments**
+      +-------------------+----------------------------------------------+
+      | Option            | Description                                  |
+      +===================+==============================================+
+      | ``-a``, ``--api`` | Set the certificate for the NetHSM HTTPS API |
+      +-------------------+----------------------------------------------+
+      
+      **Arguments**
 
-        +--------------+------------------+
-        | Argument     | Description      |
-        +==============+==================+
-        | ``FILENAME`` | Certificate file |
-        +--------------+------------------+
+      +--------------+------------------+
+      | Argument     | Description      |
+      +==============+==================+
+      | ``FILENAME`` | Certificate file |
+      +--------------+------------------+
 
-        **Example**
-        
-        .. code:: bash
+      **Example**
+      
+      .. code-block:: bash
 
-            nitropy nethsm --host $NETHSM_HOST set-certificate --api /tmp/nethsm-certificate
-        TODO
-    .. tab:: REST API
-        Information about the `/config/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cert-pem>`__.
+         nitropy nethsm --host $NETHSM_HOST set-certificate --api /tmp/nethsm-certificate
+   .. tab:: REST API
+      Information about the `/config/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cert-pem>`__.
 
 Network
 ~~~~~~~
@@ -342,70 +341,70 @@ Network
 The network configuration defines the settings used for the ETH network interface.
 
 .. note::
-    This settings do not configure the BMC ETH network interface.
+   This settings do not configure the BMC ETH network interface.
 
 
 The network configuration can be retrieved as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +---------------+----------------------------------------------+
-        | Option        | Description                                  |
-        +===============+==============================================+
-        | ``--network`` | Set the certificate for the NetHSM HTTPS API |
-        +---------------+----------------------------------------------+
+      +---------------+----------------------------------------------+
+      | Option        | Description                                  |
+      +===============+==============================================+
+      | ``--network`` | Set the certificate for the NetHSM HTTPS API |
+      +---------------+----------------------------------------------+
 
-        **Example**
-        
-        .. code:: bash
+      **Example**
+      
+      .. code-block:: bash
 
-            $ nitropy nethsm -h $NETHSM_HOST get-config --network
+         $ nitropy nethsm -h $NETHSM_HOST get-config --network
 
-        .. code::
+      .. code-block::
 
-            Configuration for NetHSM localhost:8443:
-            Network:
-                IP address:    192.168.1.1
-                Netmask:       255.255.255.0
-                Gateway:       0.0.0.0
-    .. tab:: REST API
-        Information about the `/config/network` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-network>`__.
+         Configuration for NetHSM localhost:8443:
+         Network:
+               IP address:    192.168.1.1
+               Netmask:       255.255.255.0
+               Gateway:       0.0.0.0
+   .. tab:: REST API
+      Information about the `/config/network` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-network>`__.
 
 Set the network configuration as follows.
 
 .. note::
-    The NetHSM does not support DHCP (Dynamic Host Configuration Protocol).
+   The NetHSM does not support DHCP (Dynamic Host Configuration Protocol).
 
 .. note::
-    The NetHSM does not support IPv6 (Internet Protocol version 6).
+   The NetHSM does not support IPv6 (Internet Protocol version 6).
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +---------------------------+--------------------+
-        | Option                    | Description        |
-        +===========================+====================+
-        | ``-a``, ``--ip-address``  | The new IP address |
-        +---------------------------+--------------------+
-        | ``-n``, ``--netmask``     | The new netmask    |
-        +---------------------------+--------------------+
-        | ``-g``, ``--gateway``     | The new gateway    |
-        +---------------------------+--------------------+
+      +---------------------------+--------------------+
+      | Option                    | Description        |
+      +===========================+====================+
+      | ``-a``, ``--ip-address``  | The new IP address |
+      +---------------------------+--------------------+
+      | ``-n``, ``--netmask``     | The new netmask    |
+      +---------------------------+--------------------+
+      | ``-g``, ``--gateway``     | The new gateway    |
+      +---------------------------+--------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm -h $NETHSM_HOST set-network-config -a 192.168.1.1 -n 255.255.255.0 -g 0.0.0.0
+         $ nitropy nethsm -h $NETHSM_HOST set-network-config -a 192.168.1.1 -n 255.255.255.0 -g 0.0.0.0
 
-        .. code::
+      .. code-block::
 
-            Updated the network configuration for NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/config/network` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-network>`__.
+         Updated the network configuration for NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/config/network` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-network>`__.
 
 Time
 ~~~~
@@ -416,54 +415,54 @@ It is usually not required to set the system time, as it is set during provision
 The time configuration can be retrieved as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +------------+----------------------------------------------+
-        | Option     | Description                                  |
-        +============+==============================================+
-        | ``--time`` | Set the certificate for the NetHSM HTTPS API |
-        +------------+----------------------------------------------+
+      +------------+----------------------------------------------+
+      | Option     | Description                                  |
+      +============+==============================================+
+      | ``--time`` | Set the certificate for the NetHSM HTTPS API |
+      +------------+----------------------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm -host $NETHSM_HOST get-config --time
+         $ nitropy nethsm -host $NETHSM_HOST get-config --time
 
-        .. code::
+      .. code-block::
 
-            Configuration for NetHSM localhost:8443:
-            Time:            2022-08-17 11:40:00+00:00
-    .. tab:: REST API
-        Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-time>`__.
+         Configuration for NetHSM localhost:8443:
+         Time:            2022-08-17 11:40:00+00:00
+   .. tab:: REST API
+      Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-time>`__.
 
 Set the time of the NetHSM.
 
 .. important::
-    Make sure to pass the time in UTC timezone.
+   Make sure to pass the time in UTC timezone.
 
 .. tabs::
-    .. tab:: nitropy
-        **Arguments**
+   .. tab:: nitropy
+      **Arguments**
 
-        +----------+-------------------------------------------------------+
-        | Argument | Description                                           |
-        +==========+=======================================================+
-        | ``time`` | The system time to set (Format: YYYY-MM-DDTHH:MM:SSZ) |
-        +----------+-------------------------------------------------------+
+      +----------+-------------------------------------------------------+
+      | Argument | Description                                           |
+      +==========+=======================================================+
+      | ``time`` | The system time to set (Format: YYYY-MM-DDTHH:MM:SSZ) |
+      +----------+-------------------------------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm -h $NETHSM_HOST set-time 2022-08-17T11:40:00Z
+         $ nitropy nethsm -h $NETHSM_HOST set-time 2022-08-17T11:40:00Z
 
-        .. code::
+      .. code-block::
 
-            Updated the system time for NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-time>`__.
+         Updated the system time for NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-time>`__.
 
 Metrics
 ~~~~~~~
@@ -471,68 +470,68 @@ Metrics
 The NetHSM logs metrics of system parameters.
 
 .. note::
-    This command requires the authentication of an user with the *Metrics* role.
-    Please refer to chapter `Roles <administration.html#roles>`__ to learn more about the role.
+   This command requires the authentication of an user with the *Metrics* role.
+   Please refer to chapter `Roles <administration.html#roles>`__ to learn more about the role.
 
 The metrics can be retrieved as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm -h $NETHSM_HOST metrics
+         $ nitropy nethsm -h $NETHSM_HOST metrics
 
-        .. code::
+      .. code-block::
 
-            Metric                      	Value
-            ----------------------------	--------
-            client connections          	0
-            established state           	6
-            external.received bytes     	989931
-            external.received packets   	13239
-            external.transmitted bytes  	25908953
-            external.transmitted packets	22037
-            free chunk count            	322
-            gc compactions              	0
-            gc major bytes              	21348352
-            gc major collections        	35
-            gc minor collections        	2652
-            http response 200           	28
-            http response 201           	1
-            http response 204           	1
-            http response 400           	1
-            http response 403           	1
-            http response 404           	145
-            http response 412           	1
-            http response time          	0.084998
-            http response total         	178
-            internal.received bytes     	66541
-            internal.received packets   	1130
-            internal.transmitted bytes  	63802
-            internal.transmitted packets	1133
-            kv write                    	2
-            log errors                  	3
-            log warnings                	3
-            maximum allocated space     	64528384
-            maximum releasable bytes    	1216
-            mmapped region count        	0
-            new sleeper size            	1
-            non-mmapped allocated bytes 	64528384
-            sleep queue size            	11
-            syn-rcvd state              	0
-            timers                      	2
-            total allocated space       	43940832
-            total client                	1
-            total established           	515
-            total free space            	20587552
-            total sleeper size          	12
-            total syn-rcvd              	514
-            total timers                	526
-            uptime                      	17626
-    .. tab:: REST API
-        Information about the `/metrics` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_metrics>`__.
+         Metric                      	Value
+         ----------------------------	--------
+         client connections          	0
+         established state           	6
+         external.received bytes     	989931
+         external.received packets   	13239
+         external.transmitted bytes  	25908953
+         external.transmitted packets	22037
+         free chunk count            	322
+         gc compactions              	0
+         gc major bytes              	21348352
+         gc major collections        	35
+         gc minor collections        	2652
+         http response 200           	28
+         http response 201           	1
+         http response 204           	1
+         http response 400           	1
+         http response 403           	1
+         http response 404           	145
+         http response 412           	1
+         http response time          	0.084998
+         http response total         	178
+         internal.received bytes     	66541
+         internal.received packets   	1130
+         internal.transmitted bytes  	63802
+         internal.transmitted packets	1133
+         kv write                    	2
+         log errors                  	3
+         log warnings                	3
+         maximum allocated space     	64528384
+         maximum releasable bytes    	1216
+         mmapped region count        	0
+         new sleeper size            	1
+         non-mmapped allocated bytes 	64528384
+         sleep queue size            	11
+         syn-rcvd state              	0
+         timers                      	2
+         total allocated space       	43940832
+         total client                	1
+         total established           	515
+         total free space            	20587552
+         total sleeper size          	12
+         total syn-rcvd              	514
+         total timers                	526
+         uptime                      	17626
+   .. tab:: REST API
+      Information about the `/metrics` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_metrics>`__.
 
 Logging
 ~~~~~~~
@@ -561,57 +560,57 @@ The serial console connection settings are as follows.
 The syslog server configuration can be retrieved as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +---------------+----------------------------------------------+
-        | Option        | Description                                  |
-        +===============+==============================================+
-        | ``--logging`` | Set the certificate for the NetHSM HTTPS API |
-        +---------------+----------------------------------------------+
+      +---------------+----------------------------------------------+
+      | Option        | Description                                  |
+      +===============+==============================================+
+      | ``--logging`` | Set the certificate for the NetHSM HTTPS API |
+      +---------------+----------------------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm -h $NETHSM_HOST get-config --logging
+         $ nitropy nethsm -h $NETHSM_HOST get-config --logging
 
-        .. code::
+      .. code-block::
 
-            Logging:
-              IP address:    0.0.0.0
-              Port:          514
-              Log level:     info
-    .. tab:: REST API
-        Information about the `/config/logging` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-logging>`__.
+         Logging:
+            IP address:    0.0.0.0
+            Port:          514
+            Log level:     info
+   .. tab:: REST API
+      Information about the `/config/logging` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-logging>`__.
 
 The syslog server configuration can be set as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +--------------------------------------------------------+-----------------------------------------------+
-        | Option                                                 | Description                                   |
-        +========================================================+===============================================+
-        | ``-a``, ``--ip-address`` ``TEXT``                      | The IP address of the new logging destination |
-        +--------------------------------------------------------+-----------------------------------------------+
-        | ``-p``, ``--port`` ``INTEGER``                         | The port of the new logging destination       |
-        +--------------------------------------------------------+-----------------------------------------------+
-        | ``-l``, ``--log-level`` ``[debug|info|warning|error]`` | The new log level                             |
-        +--------------------------------------------------------+-----------------------------------------------+
+      +--------------------------------------------------------+-----------------------------------------------+
+      | Option                                                 | Description                                   |
+      +========================================================+===============================================+
+      | ``-a``, ``--ip-address`` ``TEXT``                      | The IP address of the new logging destination |
+      +--------------------------------------------------------+-----------------------------------------------+
+      | ``-p``, ``--port`` ``INTEGER``                         | The port of the new logging destination       |
+      +--------------------------------------------------------+-----------------------------------------------+
+      | ``-l``, ``--log-level`` ``[debug|info|warning|error]`` | The new log level                             |
+      +--------------------------------------------------------+-----------------------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm -h $NETHSM_HOST set-logging-config -a 192.168.0.1 -p 514 -l info
+         $ nitropy nethsm -h $NETHSM_HOST set-logging-config -a 192.168.0.1 -p 514 -l info
 
-        .. code::
+      .. code-block::
 
-            Updated the logging configuration for NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/config/logging` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-logging>`__.
+         Updated the logging configuration for NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/config/logging` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-logging>`__.
 
 Backup
 ~~~~~~
@@ -621,11 +620,11 @@ This backup file contains all *User Data*,
 namely *Configuration Store*, *Authentication Store*, *Domain Key Store* and *Key Store*.
 
 .. important::
-    A NetHSM system software in *Unattended Boot* mode will require the *Unlock Passphrase* if restored on a different NetHSM hardware.
-    Please refer to chapter `Unlock Passphrase <administration.html#unlock-passphrase>`__ to learn more.
+   A NetHSM system software in *Unattended Boot* mode will require the *Unlock Passphrase* if restored on a different NetHSM hardware.
+   Please refer to chapter `Unlock Passphrase <administration.html#unlock-passphrase>`__ to learn more.
 
 .. important::
-    A NetHSM in *Unattended Boot* mode will be in the same mode after a restore.
+   A NetHSM in *Unattended Boot* mode will be in the same mode after a restore.
 
 Before a backup can be initiated the *Backup Passphrase* must be set.
 The *Backup Passphrase* is used to encrypt the data in the backup file.
@@ -633,59 +632,59 @@ The *Backup Passphrase* is used to encrypt the data in the backup file.
 The backup passphrase can be set as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Optional Options**
+   .. tab:: nitropy
+      **Optional Options**
 
-        +-----------------------------------+----------------------------------------------+
-        | Option                            | Description                                  |
-        +===================================+==============================================+
-        | ``-p``, ``--passphrase`` ``TEXT`` | Set the certificate for the NetHSM HTTPS API |
-        +-----------------------------------+----------------------------------------------+
+      +-----------------------------------+----------------------------------------------+
+      | Option                            | Description                                  |
+      +===================================+==============================================+
+      | ``-p``, ``--passphrase`` ``TEXT`` | Set the certificate for the NetHSM HTTPS API |
+      +-----------------------------------+----------------------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm -h $NETHSM_HOST -u admin set-backup-passphrase
+         $ nitropy nethsm -h $NETHSM_HOST -u admin set-backup-passphrase
 
-        .. code::
+      .. code-block::
 
-            Passphrase: 
-            Repeat for confirmation:
-            Updated the backup passphrase for NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/config/backup-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-backup-passphrase>`__.
+         Passphrase:
+         Repeat for confirmation:
+         Updated the backup passphrase for NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/config/backup-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-backup-passphrase>`__.
 
 .. note::
-    This command requires the authentication of an user with the *Backup* role.
-    Please refer to chapter `Roles <administration.html#roles>`__ to learn more.
+   This command requires the authentication of an user with the *Backup* role.
+   Please refer to chapter `Roles <administration.html#roles>`__ to learn more.
 
 The backup can be executed as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Arguments**
+   .. tab:: nitropy
+      **Arguments**
 
-        +--------------+-------------+
-        | Argument     | Description |
-        +==============+=============+
-        | ``FILENAME`` | Backup file |
-        +--------------+-------------+
+      +--------------+-------------+
+      | Argument     | Description |
+      +==============+=============+
+      | ``FILENAME`` | Backup file |
+      +--------------+-------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm -h $NETHSM_HOST backup /tmp/nethsm-backup
+         $ nitropy nethsm -h $NETHSM_HOST backup /tmp/nethsm-backup
 
-        .. code::
+      .. code-block::
 
-            Backup for localhost:8443 written to /tmp/backup
-    .. tab:: REST API
-        Information about the `/system/backup` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-backup>`__.
+         Backup for localhost:8443 written to /tmp/backup
+   .. tab:: REST API
+      Information about the `/system/backup` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-backup>`__.
 
 .. note::
-    This backup file can be restored on an unprovisioned NetHSM instance only.
+   This backup file can be restored on an unprovisioned NetHSM instance only.
 
 Restore
 ~~~~~~~
@@ -693,45 +692,45 @@ Restore
 The NetHSM can be restored from a backup file.
 
 .. note::
-    The NetHSM must be in an *Unprovisioned State*.
+   The NetHSM must be in an *Unprovisioned State*.
 
 The restore can be applied as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Optional options**
+   .. tab:: nitropy
+      **Optional options**
 
-        +------------------------------------------------+-----------------------------------------------------------+
-        | Option                                         | Description                                               |
-        +================================================+===========================================================+
-        | ``-p``, ``--backup-passphrase`` ``passphrase`` | The *Backup Passphrase*                                   |
-        +------------------------------------------------+-----------------------------------------------------------+
-        | ``-t``, ``--system-time``                      | The system time to set (Format: ``YYYY-MM-DDTHH:MM:SSZ``) |
-        +------------------------------------------------+-----------------------------------------------------------+
+      +------------------------------------------------+-----------------------------------------------------------+
+      | Option                                         | Description                                               |
+      +================================================+===========================================================+
+      | ``-p``, ``--backup-passphrase`` ``passphrase`` | The *Backup Passphrase*                                   |
+      +------------------------------------------------+-----------------------------------------------------------+
+      | ``-t``, ``--system-time``                      | The system time to set (Format: ``YYYY-MM-DDTHH:MM:SSZ``) |
+      +------------------------------------------------+-----------------------------------------------------------+
 
-        .. important::
-            Make sure the time of your system is correctly set, or manually override the to set time.
-        
-        **Arguments**
+      .. important::
+         Make sure the time of your system is correctly set, or manually override the to set time.
+      
+      **Arguments**
 
-        +--------------+--------------+
-        | Argument     | Description  |
-        +==============+==============+
-        | ``FILENAME`` | Restore file |
-        +----------+------------------+
+      +--------------+--------------+
+      | Argument     | Description  |
+      +==============+==============+
+      | ``FILENAME`` | Restore file |
+      +----------+------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm -h $NETHSM_HOST restore /tmp/nethsm-backup
+         $ nitropy nethsm -h $NETHSM_HOST restore /tmp/nethsm-backup
 
-        .. code::
+      .. code-block::
 
-            Backup passphrase:
-            Backup restored on NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/system/restore` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-restore>`__.
+         Backup passphrase:
+         Backup restored on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/system/restore` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-restore>`__.
 
 Update
 ~~~~~~
@@ -742,65 +741,65 @@ The image is checked and validated automatically.
 
 .. warning::
 
-	Data loss may occur due to the installation of a beta update!
+   Data loss may occur due to the installation of a beta update!
 
 The update file can be uploaded as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Arguments**
+   .. tab:: nitropy
+      **Arguments**
 
-        +--------------+-------------+
-        | Argument     | Description |
-        +==============+=============+
-        | ``FILENAME`` | Update file |
-        +--------------+-------------+
+      +--------------+-------------+
+      | Argument     | Description |
+      +==============+=============+
+      | ``FILENAME`` | Update file |
+      +--------------+-------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST update /tmp/nethsm-update.img.cpio
+         $ nitropy nethsm --host $NETHSM_HOST update /tmp/nethsm-update.img.cpio
 
-        .. code::
+      .. code-block::
 
-            Image /tmp/nethsm-update.img.cpio uploaded to NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/system/update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-update>`__.
+         Image /tmp/nethsm-update.img.cpio uploaded to NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/system/update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-update>`__.
 
 The update can now be applied or aborted. Please refer to the desired option below.
 
 The update can be applied (committed) as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST commit-update
+         $ nitropy nethsm --host $NETHSM_HOST commit-update
 
-        .. code::
+      .. code-block::
 
-            Update successfully committed on NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/system/commit-update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-commit-update>`__.
+         Update successfully committed on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/system/commit-update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-commit-update>`__.
 
 The update can be cancelled as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST cancel-update
+         $ nitropy nethsm --host $NETHSM_HOST cancel-update
 
-        .. code::
+      .. code-block::
 
-            Update successfully cancelled on NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/system/cancel-update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-cancel-update>`__.
+         Update successfully cancelled on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/system/cancel-update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-cancel-update>`__.
 
 Reboot and Shutdown
 ~~~~~~~~~~~~~~~~~~~
@@ -810,34 +809,34 @@ The NetHSM can be rebooted and shutdown, either remotely, or with the restart an
 The remote reboot can be initiated as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST reboot
+         $ nitropy nethsm --host $NETHSM_HOST reboot
 
-        .. code::
+      .. code-block::
 
-            NetHSM localhost:8443 is about to reboot
-    .. tab:: REST API
-        Information about the `/system/reboot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-reboot>`__.
+         NetHSM localhost:8443 is about to reboot
+   .. tab:: REST API
+      Information about the `/system/reboot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-reboot>`__.
 
 The remote shutdown can be initiated as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST shutdown
+         $ nitropy nethsm --host $NETHSM_HOST shutdown
 
-        .. code::
+      .. code-block::
 
-            NetHSM localhost:8443 is about to shutdown
-    .. tab:: REST API
-        Information about the `/system/shutdown` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-shutdown>`__.
+         NetHSM localhost:8443 is about to shutdown
+   .. tab:: REST API
+      Information about the `/system/shutdown` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-shutdown>`__.
 
 Reset to Factory Defaults
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -847,18 +846,18 @@ The NetHSM can be reset to factory defaults. During this process all user data g
 The reset to factory defaults can be performed as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Example**
+   .. tab:: nitropy
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm -h $NETHSM_HOST factory-reset
+         $ nitropy nethsm -h $NETHSM_HOST factory-reset
 
-        .. code::
+      .. code-block::
 
-            NetHSM localhost:8443 is about to perform a factory reset
-    .. tab:: REST API
-        Information about the `/system/factory-reset` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-factory-reset>`__.
+         NetHSM localhost:8443 is about to perform a factory reset
+   .. tab:: REST API
+      Information about the `/system/factory-reset` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-factory-reset>`__.
 
 User Management
 ---------------
@@ -889,7 +888,7 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 +-----------------+-------------------------------------------------------------+
 
 .. note::
-	In a future release, additional *Roles* may be introduced.
+   In a future release, additional *Roles* may be introduced.
 
 Add User
 ~~~~~~~~
@@ -899,47 +898,47 @@ Each user account has a *Role*, which needs to be specified.
 Please refer to chapter `Roles <administration.html#roles>`__ to learn more about *Roles*.
 
 .. note::
-    The NetHSM assigns a random user ID if none is specified.
+   The NetHSM assigns a random user ID if none is specified.
 
 An user account can be added as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +----------------------------------------------------------------+----------------------------------+
-        | Option                                                         | Description                      |
-        +================================================================+==================================+
-        | ``-n``, ``--real-name`` ``TEXT``                               | The real name of the user        |
-        +----------------------------------------------------------------+----------------------------------+
-        | ``-r``, ``--role`` ``[Administrator|Operator|Metrics|Backup]`` | The *Role* of the new user       |
-        +----------------------------------------------------------------+----------------------------------+
-        | ``-p``, ``--passphrase`` ``TEXT``                              | The passphrase of the new user   |
-        +----------------------------------------------------------------+----------------------------------+
+      +----------------------------------------------------------------+----------------------------------+
+      | Option                                                         | Description                      |
+      +================================================================+==================================+
+      | ``-n``, ``--real-name`` ``TEXT``                               | The real name of the user        |
+      +----------------------------------------------------------------+----------------------------------+
+      | ``-r``, ``--role`` ``[Administrator|Operator|Metrics|Backup]`` | The *Role* of the new user       |
+      +----------------------------------------------------------------+----------------------------------+
+      | ``-p``, ``--passphrase`` ``TEXT``                              | The passphrase of the new user   |
+      +----------------------------------------------------------------+----------------------------------+
 
-        **Optional Options**
+      **Optional Options**
 
-        +--------------------------------+-----------------------------+
-        | Option                         | Description                 |
-        +================================+=============================+
-        | ``-u``, ``--user-id`` ``TEXT`` | The user ID of the new user |
-        +--------------------------------+-----------------------------+
+      +--------------------------------+-----------------------------+
+      | Option                         | Description                 |
+      +================================+=============================+
+      | ``-u``, ``--user-id`` ``TEXT`` | The user ID of the new user |
+      +--------------------------------+-----------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST  add-user --real-name "Jane User" --role Operator
+         $ nitropy nethsm --host $NETHSM_HOST  add-user --real-name "Jane User" --role Operator
 
-        .. code::
+      .. code-block::
 
-            Passphrase: 
-            Repeat for confirmation:
-            User e8836f4cf2c7fa968bf0 added to NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/users` endpoint, to create an user without specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users>`__.
+         Passphrase: 
+         Repeat for confirmation:
+         User e8836f4cf2c7fa968bf0 added to NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/users` endpoint, to create an user without specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users>`__.
 
-        Information about the `/users/{UserID}` endpoint, to create an user with specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID>`__.
+      Information about the `/users/{UserID}` endpoint, to create an user with specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID>`__.
 
 Delete User
 ~~~~~~~~~~~
@@ -947,31 +946,31 @@ Delete User
 Delete an user account from the NetHSM.
 
 .. warning::
-    Deletion is permanent and can not be reverted.
+   Deletion is permanent and can not be reverted.
 
 An user account can be deleted as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Arguments**
+   .. tab:: nitropy
+      **Arguments**
 
-        +-------------+--------------------------+
-        | Argument    | Description              |
-        +=============+==========================+
-        | ``USER_ID`` | The user Id of the user. |
-        +-------------+--------------------------+
+      +-------------+--------------------------+
+      | Argument    | Description              |
+      +=============+==========================+
+      | ``USER_ID`` | The user Id of the user. |
+      +-------------+--------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST delete-user "Jane User"
+         $ nitropy nethsm --host $NETHSM_HOST delete-user "Jane User"
 
-        .. code::
+      .. code-block::
 
-            User e8836f4cf2c7fa968bf0 deleted on NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID>`__.
+         User e8836f4cf2c7fa968bf0 deleted on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID>`__.
 
 User Passphrase
 ~~~~~~~~~~~~~~~
@@ -980,35 +979,35 @@ The passphrase of an user account can be reset.
 A passphrase is initial set during adding of an user account.
 
 .. note::
-    Passphrases must have >= 10 and <= 200 characters.
+   Passphrases must have >= 10 and <= 200 characters.
 
 The user passphrase can be set as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Required Options**
+   .. tab:: nitropy
+      **Required Options**
 
-        +-----------------------------------+--------------------------------+
-        | Option                            | Description                    |
-        +===================================+================================+
-        | ``-u``, ``--user-id`` ``TEXT``    | The user ID of the user        |
-        +-----------------------------------+--------------------------------+
-        | ``-p``, ``--passphrase`` ``TEXT`` | The new passphrase of the user |
-        +-----------------------------------+--------------------------------+
+      +-----------------------------------+--------------------------------+
+      | Option                            | Description                    |
+      +===================================+================================+
+      | ``-u``, ``--user-id`` ``TEXT``    | The user ID of the user        |
+      +-----------------------------------+--------------------------------+
+      | ``-p``, ``--passphrase`` ``TEXT`` | The new passphrase of the user |
+      +-----------------------------------+--------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            $ nitropy nethsm --host $NETHSM_HOST set-passphrase --user-id e8836f4cf2c7fa968bf0
-        
-        .. code::
+         $ nitropy nethsm --host $NETHSM_HOST set-passphrase --user-id e8836f4cf2c7fa968bf0
+      
+      .. code-block::
 
-            Passphrase:
-            Repeat for confirmation:
-            Updated the passphrase for user e8836f4cf2c7fa968bf0 on NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/users/{UserID}/passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users-UserID-passphrase>`__.
+         Passphrase:
+         Repeat for confirmation:
+         Updated the passphrase for user e8836f4cf2c7fa968bf0 on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/users/{UserID}/passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users-UserID-passphrase>`__.
 
 Tags for Users
 ~~~~~~~~~~~~~~
@@ -1023,51 +1022,51 @@ To learn about how to use *Tags* on keys, please refer to `Tags for Keys <operat
 The *Tag* can be added as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Arguments**
+   .. tab:: nitropy
+      **Arguments**
 
-        +-------------+--------------------------------+
-        | Argument    | Description                    |
-        +=============+================================+
-        | ``USER_ID`` | The user ID to set the tag on. |
-        +-------------+--------------------------------+
-        | ``TAG``     | The tag to set on the user ID. |
-        +-------------+--------------------------------+
+      +-------------+--------------------------------+
+      | Argument    | Description                    |
+      +=============+================================+
+      | ``USER_ID`` | The user ID to set the tag on. |
+      +-------------+--------------------------------+
+      | ``TAG``     | The tag to set on the user ID. |
+      +-------------+--------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            nitropy nethsm --host $NETHSM_HOST add-operator-tag e8836f4cf2c7fa968bf0 berlin
+         nitropy nethsm --host $NETHSM_HOST add-operator-tag e8836f4cf2c7fa968bf0 berlin
 
-        .. code::
+      .. code-block::
 
-            Added tag berlin for user 5d0d171c067e1f519b33 on the NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/users/{UserID}/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID-tags-Tag>`__.
+         Added tag berlin for user 5d0d171c067e1f519b33 on the NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/users/{UserID}/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID-tags-Tag>`__.
 
 The *Tag* can be deleted as follows.
 
 .. tabs::
-    .. tab:: nitropy
-        **Arguments**
+   .. tab:: nitropy
+      **Arguments**
 
-        +-------------+--------------------------------+
-        | Argument    | Description                    |
-        +=============+================================+
-        | ``USER_ID`` | The user ID to set the tag on. |
-        +-------------+--------------------------------+
-        | ``TAG``     | The tag to set on the user ID. |
-        +-------------+--------------------------------+
+      +-------------+--------------------------------+
+      | Argument    | Description                    |
+      +=============+================================+
+      | ``USER_ID`` | The user ID to set the tag on. |
+      +-------------+--------------------------------+
+      | ``TAG``     | The tag to set on the user ID. |
+      +-------------+--------------------------------+
 
-        **Example**
+      **Example**
 
-        .. code:: bash
+      .. code-block:: bash
 
-            nitropy nethsm --host $NETHSM_HOST delete-operator-tag e8836f4cf2c7fa968bf0 berlin
+         nitropy nethsm --host $NETHSM_HOST delete-operator-tag e8836f4cf2c7fa968bf0 berlin
 
-        .. code::
+      .. code-block::
 
-            Deleted tag berlin for user 5d0d171c067e1f519b33 on the NetHSM localhost:8443
-    .. tab:: REST API
-        Information about the `/users/{UserID}/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID-tags-Tag>`__.
+         Deleted tag berlin for user 5d0d171c067e1f519b33 on the NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/users/{UserID}/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID-tags-Tag>`__.
