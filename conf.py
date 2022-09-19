@@ -43,7 +43,7 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx_copybutton',
     'sphinxprettysearchresults',
-    'sphinx_tabs.tabs',
+    'sphinx-tabs.tabs',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
