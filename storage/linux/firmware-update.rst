@@ -11,6 +11,11 @@ Firmware Update
    firmware upgrades may destroy all data on the device (especially
    coming from firmware version <0.45)!
 
+.. important::
+   Never disconnect the Nitrokey Start or abort the process while updating,
+   this will likely render your device useless
+
+
 1. Download the `Nitrokey App <https://www.nitrokey.com/download>`_ and the program “dfu-programmer” which should be available through your package-manager, e.g. ``apt-get update && apt-get install dfu-programmer`` on Debian-based systems.
 
 2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/latest>`_ and store it as "firmware.hex" in your home folder. Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`_.

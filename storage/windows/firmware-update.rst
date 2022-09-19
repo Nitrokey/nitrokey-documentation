@@ -11,6 +11,11 @@ Firmware Update
    firmware upgrades may destroy all data on the device (especially
    coming from firmware version <0.45)!
 
+.. important::
+   Never disconnect the Nitrokey Start or abort the process while updating,
+   this will likely render your device useless
+
+
 1. Download the `Nitrokey App <https://www.nitrokey.com/download>`_ and the `Nitrokey Update Tool <https://github.com/Nitrokey/nitrokey-update-tool/releases/latest>`_. The Nitrokey Update Tool is currently available for macOS and Windows only.
 
 2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/latest>`_. Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`_.
