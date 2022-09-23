@@ -200,10 +200,14 @@ The *Unlock Passphrase* can be set as follows.
       Information about the `/config/unlock-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unlock-passphrase>`__.
 
 HTTPS API Certificate
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 The HTTPS API certificate is used for the REST API, and thus also used by *nitropy*.
 During provisioning a self-signed certificate is created.
+The certificate can be replaced, for example with a signed certificate from a certificate authority (CA).
+In this case a Certificate Signing Request (CSR) must be generated.
+After signing the certificate must be imported to the NetHSM.
+
 A change is only necessary when the certificate is to be replace.
 Such change may be to replace it with a signed certificate from a certificate authority (CA).
 
@@ -265,7 +269,7 @@ The TLS certificate can be generated as follows.
    .. tab:: REST API
       Information about the `/config/tls/generate` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-generate>`__.
 
-The CSR (Certificate Signing Request) for the certificate can be generated as follows.
+The Certificate Signing Request (CSR) for the certificate can be generated as follows.
 
 .. tabs::
    .. tab:: nitropy
@@ -338,10 +342,10 @@ The certificate can be replaced as follows.
 Network
 ~~~~~~~
 
-The network configuration defines the settings used for the ETH network interface.
+The network configuration defines the settings used for the *Network Port*.
 
 .. note::
-   This settings do not configure the BMC ETH network interface.
+   This settings do not configure the *BMC Network Port*.
 
 
 The network configuration can be retrieved as follows.
@@ -709,7 +713,8 @@ The restore can be applied as follows.
       +------------------------------------------------+-----------------------------------------------------------+
 
       .. important::
-         Make sure the time of your system is correctly set, or manually override the to set time.
+         Make sure the time of your local computer is correctly set.
+         To set a different time, please provide it manually.
       
       **Arguments**
 
@@ -767,7 +772,7 @@ The update file can be uploaded as follows.
    .. tab:: REST API
       Information about the `/system/update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-update>`__.
 
-The update can now be applied or aborted. Please refer to the desired option below.
+Afterwards the update can be applied or aborted. Please refer to the desired option below.
 
 The update can be applied (committed) as follows.
 
