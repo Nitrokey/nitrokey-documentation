@@ -470,7 +470,7 @@ Metrics
 The NetHSM logs metrics of system parameters.
 
 .. note::
-   This command requires the authentication of an user with the *Metrics* role.
+   This command requires the authentication of a user with the *Metrics* role.
    Please refer to chapter `Roles <administration.html#roles>`__ to learn more about the role.
 
 The metrics can be retrieved as follows.
@@ -656,7 +656,7 @@ The backup passphrase can be set as follows.
       Information about the `/config/backup-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-backup-passphrase>`__.
 
 .. note::
-   This command requires the authentication of an user with the *Backup* role.
+   This command requires the authentication of a user with the *Backup* role.
    Please refer to chapter `Roles <administration.html#roles>`__ to learn more.
 
 The backup can be executed as follows.
@@ -871,19 +871,19 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 +-----------------+-------------------------------------------------------------+
 | Role            | Description                                                 |
 +=================+=============================================================+
-| *Administrator* | An user account with this Role has access to all            |
+| *Administrator* | A user account with this Role has access to all            |
 |                 | operations provided by the NetHSM, except for key usage     |
 |                 | operations, i.e. message signing and decryption.            |
 +-----------------+-------------------------------------------------------------+
-| *Operator*      | An user account with this Role has access to all key usage  |
+| *Operator*      | A user account with this Role has access to all key usage  |
 |                 | operations, a read-only subset of key management operations |
 |                 | and user management operations allowing changes to their    |
 |                 | own account only.                                           |
 +-----------------+-------------------------------------------------------------+
-| *Metrics*       | An user account with this Role has access to read-only      |
+| *Metrics*       | A user account with this Role has access to read-only      |
 |                 | metrics operations only.                                    |
 +-----------------+-------------------------------------------------------------+
-| *Backup*        | An user account with this Role has access to the operations |
+| *Backup*        | A user account with this Role has access to the operations |
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
 
@@ -893,14 +893,14 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 Add User
 ~~~~~~~~
 
-Add an user account to the NetHSM.
+Add a user account to the NetHSM.
 Each user account has a *Role*, which needs to be specified.
 Please refer to chapter `Roles <administration.html#roles>`__ to learn more about *Roles*.
 
 .. note::
    The NetHSM assigns a random user ID if none is specified.
 
-An user account can be added as follows.
+A user account can be added as follows.
 
 .. tabs::
    .. tab:: nitropy
@@ -936,19 +936,19 @@ An user account can be added as follows.
          Repeat for confirmation:
          User e8836f4cf2c7fa968bf0 added to NetHSM localhost:8443
    .. tab:: REST API
-      Information about the `/users` endpoint, to create an user without specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users>`__.
+      Information about the `/users` endpoint, to create a user without specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users>`__.
 
-      Information about the `/users/{UserID}` endpoint, to create an user with specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID>`__.
+      Information about the `/users/{UserID}` endpoint, to create a user with specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID>`__.
 
 Delete User
 ~~~~~~~~~~~
 
-Delete an user account from the NetHSM.
+Delete a user account from the NetHSM.
 
 .. warning::
    Deletion is permanent and can not be reverted.
 
-An user account can be deleted as follows.
+A user account can be deleted as follows.
 
 .. tabs::
    .. tab:: nitropy
@@ -975,8 +975,8 @@ An user account can be deleted as follows.
 User Passphrase
 ~~~~~~~~~~~~~~~
 
-The passphrase of an user account can be reset.
-A passphrase is initial set during adding of an user account.
+The passphrase of a user account can be reset.
+A passphrase is initial set during adding of a user account.
 
 .. note::
    Passphrases must have >= 10 and <= 200 characters.
