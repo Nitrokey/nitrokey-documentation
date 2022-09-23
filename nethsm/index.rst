@@ -1,33 +1,44 @@
 NetHSM
-============================
+======
 
-Getting Started
----------------
+This documentation describes the NetHSM software and hardware.
 
+The NetHSM software can be either used on the NetHSM hardware, or as a Docker container.
+This documentation only covers the Docker container in the `Integration <integration.html>`__ chapter.
 
-1. Your NetHSM has been delivered in a sealed packaging. `Verify the sealing <sealed-hardware.html>`_ before unpacking to ensure the device has not been tampered with.
+The NetHSM software features a REST API to perform installation, administration and operational tasks.
+The recommended way to use the REST API is through the `nitropy <https://github.com/Nitrokey/pynitrokey>`_ tool.
+Alternatively `curl <https://curl.se>`_ can be used to send HTTP requests to the REST API.
+This documentation contains for each nitropy command the respective curl command.
 
-2. Connect the NetHSM's ETH port with the network. Don't use the BMC ETH port because it allows wider system access. The NetHSM is available at address 192.168.1.1.
+To learn how to install nitropy, please refer to the `documentation <../software/nitropy/index.html>`__.
 
-3. Change the password of the BMC ETH Port.
+For the installation of curl, please refer to the project `website <https://curl.se/download.html>`_.
 
-4. Initialize the NetHSM using `nitropy command line tool <cli.html>`_. Alternatively, the `REST API <api.html>`_ can be used.
+If you obtained a new NetHSM hardware, please refer to the chapter `Getting Started <getting-started.html#getting-started>`__ first.
+In case you want to restore a backup of a NetHSM, please refer to the chapter `Restore <administration.html#restore>`__.
 
-Further information can be obtained in other parts of the documentation.
+.. important::
 
+   If you use a NetHSM instance with a self-signed certificate, for example using the Docker image, you will have to instruct *nitropy* or *curl* to ignore the validity of the certificate.
+   For *nitropy* use the option ``--no-verify-tls`` and for *curl* use the option ``--insecure/-k`` to skip the certificate check.
+
+.. note::
+
+   The examples in this documentation use the environment variable ``NETHSM_HOST``, which contains the IP address or URL of the NetHSM.
+   On a Unix shell the variable can be set with the following command.
+
+   .. code-block:: bash
+
+      $ export NETHSM_HOST="<URL-or-IP-address>"
 
 .. toctree::
    :hidden:
    :maxdepth: 1
    :glob:
 
-   sealed-hardware.rst
-   cli.rst
-   pkcs11.rst
-   nginx.rst
-   apache2-tls.rst
-   api.rst
-   tags.rst
+   getting-started.rst
+   administration.rst
+   operation.rst
    integration.rst
-   dev-and-test.rst
-   REST API Index <https://nethsmdemo.nitrokey.com/api_docs/index.html#docs/summary/summary>
+   guides.rst

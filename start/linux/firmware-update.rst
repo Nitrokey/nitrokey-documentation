@@ -3,6 +3,15 @@ Firmware Update
 
 .. include:: ./product_platform_heading.rst
 
+.. important::
+   Updating could lead to data loss, so make sure you have proper backup login methods enabled and/or ensure that
+   the Nitrokey Start is not the only way to authenticate/2FA for your 
+   applications/services.
+
+.. important::
+   Never disconnect the Nitrokey Start or abort the process while updating,
+   this will likely render your device useless
+
 .. contents:: :local:
 
 To update the firmware of your Nitrokey Start, proceed as follows.

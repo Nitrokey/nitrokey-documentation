@@ -43,6 +43,7 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx_copybutton',
     'sphinxprettysearchresults',
+    'sphinx_tabs.tabs',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -71,7 +72,7 @@ gettext_compact = "string"
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['nethsm/_*.rst', '*/*/product_platform_heading.rst', 'to-be-integrated.rst']
+exclude_patterns = ['venv/*', 'nethsm/_*.rst', '*/*/product_platform_heading.rst', 'to-be-integrated.rst']
 
 # The name of the Pygments (syntax highlighting) style to use.
 #pygments_style = "solarizeddark"
@@ -429,3 +430,8 @@ todo_include_todos = True
 
 # Extra Path for Redirects
 html_extra_path = ['_redirects/.htaccess']
+
+# -- Options for tabs extension-----------------------------------------------
+
+# Disables the closing of tabs if clicked on the currently active tab
+sphinx_tabs_disable_tab_closing = True
