@@ -97,7 +97,7 @@ The key can be generated as follows.
 Import Key
 ~~~~~~~~~~
 
-The NetHSM import existing private keys to the *Key Store*.
+The NetHSM can import existing private keys to the *Key Store*.
 
 The supported key types and their corresponding mechanisms are the following.
 
@@ -373,7 +373,8 @@ Tags for Keys
 ~~~~~~~~~~~~~
 
 *Tags* can be used to set access restrictions on keys, and are an optional feature.
-The *Operators* can see all keys, but only use those with at least one corresponding *Tag*.
+The *Operator* users can see all keys, but only use those with at least one corresponding *Tag*.
+If a key has no *Tag* it can be used by all *Operator* users.
 A key can not be modified by an *Operator* user.
 
 To learn about how to use *Tags* on *Operator* accounts, please refer to `Tags for Users <administration.html#tags-for-users>`__.

@@ -86,7 +86,7 @@ Thus, to start a NetHSM container you need a Linux host with `/dev/kvm` availabl
    .. tab:: Docker
       .. code-block:: bash
 
-         $ sudo docker run --rm -ti --device=/dev/kvm:/dev/kvm --device=/dev/net/tun:/dev/net/tun --cap-add=NET_ADMIN -p8443:8443 nitrokey/nethsm:testing
+         $ sudo docker run --rm -ti --device=/dev/net/tun:/dev/net/tun --cap-add=NET_ADMIN -p8443:8443 nitrokey/nethsm:testing
 
 Integration into Custom Application
 -----------------------------------

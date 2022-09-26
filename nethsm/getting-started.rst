@@ -51,7 +51,7 @@ Please follow the three step process closely to verify that it has arrived safel
       Package left side
 
 2. Check the unique handmade glitter seal on top of the wrapping paper.
-   You will receive a picture of it from us after wrapping.
+   You will receive a picture of it from us after wrapping via e-mail.
    Compare the received picture with the seal.
    If you notice any changes, please contact us to arrange further action.
 
@@ -101,8 +101,7 @@ Please follow the two step process closely to install the NetHSM hardware.
 
    .. warning::
 
-      Do not use the *BMC Network Port*.
-      The BMC port allows wider system access.
+      Do not use the *BMC Network Port* because it allows wider system access.
 
    .. figure:: ./images/server-front-with-labels.png
       :scale: 100
@@ -113,10 +112,10 @@ Please follow the two step process closely to install the NetHSM hardware.
 In an unprovisioned state the NetHSM hardware factory default IP address is ``192.168.1.1``.
 
 Provisioning
-~~~~~~~~~~~~
+------------
 
 A new NetHSM needs to be provisioned first with passphrases and the current time.
-The Admin Passphrase is for the first user account, which is the superuser of the NetHSM.
+The *Admin Passphrase* is for the first user account, which is the superuser of the NetHSM.
 The *Unlock Passphrase* is used to decrypt NetHSM's *User Data*.
 
 The initial provisioning is executed as follows.
@@ -134,7 +133,7 @@ The initial provisioning is executed as follows.
       .. important::
          If the time is passed manually, make sure to pass the time in UTC timezone.
 
-      .. important::
+      .. note::
          If the time is not passed manually, it will be derived from the system *nitropy* is running on.
 
       **Example**
