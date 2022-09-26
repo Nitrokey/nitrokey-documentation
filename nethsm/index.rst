@@ -15,7 +15,7 @@ In case you want to restore a backup of a NetHSM, please refer to the chapter `R
 
 .. important::
 
-   If you use a NetHSM instance with a self-signed certificate, for example using the Docker image, you will have to instruct *nitropy* or *curl* to ignore the validity of the certificate.
+   If you use a NetHSM instance with a self-signed certificate, for example using the Docker container, you will have to instruct *nitropy* or *curl* to ignore the validity of the certificate.
    For *nitropy* use the option ``--no-verify-tls`` and for *curl* use the option ``--insecure/-k`` to skip the certificate check.
 
 .. note::
