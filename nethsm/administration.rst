@@ -350,11 +350,11 @@ The network configuration can be retrieved as follows.
    .. tab:: nitropy
       **Required Options**
 
-      +---------------+----------------------------------------------+
-      | Option        | Description                                  |
-      +===============+==============================================+
-      | ``--network`` | Set the certificate for the NetHSM HTTPS API |
-      +---------------+----------------------------------------------+
+      +---------------+---------------------------------+
+      | Option        | Description                     |
+      +===============+=================================+
+      | ``--network`` | Query the network configuration |
+      +---------------+---------------------------------+
 
       **Example**
       
@@ -418,11 +418,11 @@ The time configuration can be retrieved as follows.
    .. tab:: nitropy
       **Required Options**
 
-      +------------+----------------------------------------------+
-      | Option     | Description                                  |
-      +============+==============================================+
-      | ``--time`` | Set the certificate for the NetHSM HTTPS API |
-      +------------+----------------------------------------------+
+      +------------+-----------------------+
+      | Option     | Description           |
+      +============+=======================+
+      | ``--time`` | Query the system time |
+      +------------+-----------------------+
 
       **Example**
 
@@ -563,11 +563,11 @@ The syslog server configuration can be retrieved as follows.
    .. tab:: nitropy
       **Required Options**
 
-      +---------------+----------------------------------------------+
-      | Option        | Description                                  |
-      +===============+==============================================+
-      | ``--logging`` | Set the certificate for the NetHSM HTTPS API |
-      +---------------+----------------------------------------------+
+      +---------------+---------------------------------+
+      | Option        | Description                     |
+      +===============+=================================+
+      | ``--logging`` | Query the logging configuration |
+      +---------------+---------------------------------+
 
       **Example**
 
@@ -635,11 +635,11 @@ The backup passphrase can be set as follows.
    .. tab:: nitropy
       **Optional Options**
 
-      +-----------------------------------+----------------------------------------------+
-      | Option                            | Description                                  |
-      +===================================+==============================================+
-      | ``-p``, ``--passphrase`` ``TEXT`` | Set the certificate for the NetHSM HTTPS API |
-      +-----------------------------------+----------------------------------------------+
+      +-----------------------------------+---------------------------+
+      | Option                            | Description               |
+      +===================================+===========================+
+      | ``-p``, ``--passphrase`` ``TEXT`` | The new backup passphrase |
+      +-----------------------------------+---------------------------+
 
       **Example**
 
