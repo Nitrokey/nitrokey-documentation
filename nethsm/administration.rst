@@ -32,6 +32,66 @@ The vendor and product information for a NetHSM can be retrieved as follows.
    .. tab:: REST API
       Information about the `/info` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_info>`__.
 
+Boot Mode
+~~~~~~~~~
+
+NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
+
++-------------------+----------------------------------------------------------------------+
+| Boot Mode         | Description                                                          |
++===================+======================================================================+
+| *Attended Boot*   | The *Unlock Passphrase* needs to be entered during each start,       |
+|                   | which is used to decrypt the *User Data*. For security reasons,      |
+|                   | this mode is recommended.                                            |
++-------------------+----------------------------------------------------------------------+
+| *Unattended Boot* | No *Unlock Passphrase* is required, therefore the NetHSM can start   |
+|                   | unattended.                                                          |
+|                   | Use this mode if your availability requirements can not be fulfilled |
+|                   | with *Attended Boot* mode.                                           |
++-------------------+----------------------------------------------------------------------+
+
+The current boot mode can be retrieved as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST get-config --unattended-boot
+
+      .. code-block::
+
+         Configuration for NetHSM localhost:8443:
+            Unattended boot: off
+   .. tab:: REST API
+      Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-unattended-boot>`__.
+
+The boot mode can be changed as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Arguments**
+
+      +----------+--------------------------------------+
+      | Argument | Description                          |
+      +==========+======================================+
+      | Status   | Enable or disable *Unattended Boot*. |
+      |          | Can have value ``on`` or ``off``.    |
+      +----------+--------------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST set-unattended-boot on
+
+      .. code-block::
+
+         Updated the unattended boot configuration for NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unattended-boot>`__.
+
 State
 ~~~~~
 
@@ -102,70 +162,6 @@ A NetHSM in *Locked* state can be unlocked as follows.
          NetHSM localhost:8443 unlocked
    .. tab:: REST API
       Information about the `/unlock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_unlock>`__.
-
-.. important::
-   If the NetHSM is in *Locked* or *Operational* state after boot depends on the boot mode.
-   Please refer to chapter `Boot Mode <administration.html#boot-mode>`__ to learn more.
-
-Boot Mode
-~~~~~~~~~
-
-NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
-
-+-------------------+----------------------------------------------------------------------+
-| Boot Mode         | Description                                                          |
-+===================+======================================================================+
-| *Attended Boot*   | The *Unlock Passphrase* needs to be entered during each start,       |
-|                   | which is used to decrypt the *User Data*. For security reasons,      |
-|                   | this mode is recommended.                                            |
-+-------------------+----------------------------------------------------------------------+
-| *Unattended Boot* | No *Unlock Passphrase* is required, therefore the NetHSM can start   |
-|                   | unattended.                                                          |
-|                   | Use this mode if your availability requirements can not be fulfilled |
-|                   | with *Attended Boot* mode.                                           |
-+-------------------+----------------------------------------------------------------------+
-
-The current boot mode can be retrieved as follows.
-
-.. tabs::
-   .. tab:: nitropy
-      **Example**
-
-      .. code-block:: bash
-
-         $ nitropy nethsm --host $NETHSM_HOST get-config --unattended-boot
-
-      .. code-block::
-
-         Configuration for NetHSM localhost:8443:
-            Unattended boot: off
-   .. tab:: REST API
-      Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-unattended-boot>`__.
-
-The boot mode can be changed as follows.
-
-.. tabs::
-   .. tab:: nitropy
-      **Arguments**
-
-      +----------+--------------------------------------+
-      | Argument | Description                          |
-      +==========+======================================+
-      | Status   | Enable or disable *Unattended Boot*. |
-      |          | Can have value ``on`` or ``off``.    |
-      +----------+--------------------------------------+
-
-      **Example**
-
-      .. code-block:: bash
-
-         $ nitropy nethsm --host $NETHSM_HOST set-unattended-boot on
-
-      .. code-block::
-
-         Updated the unattended boot configuration for NetHSM localhost:8443
-   .. tab:: REST API
-      Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unattended-boot>`__.
 
 Unlock Passphrase
 ~~~~~~~~~~~~~~~~~
