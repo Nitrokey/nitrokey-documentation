@@ -112,7 +112,7 @@ Please follow the two step process closely to install the NetHSM hardware.
 In an unprovisioned state the NetHSM hardware factory default IP address is ``192.168.1.1``.
 
 Provisioning
-~~~~~~~~~~~~
+------------
 
 A new NetHSM needs to be provisioned first with passphrases and the current time.
 The *Admin Passphrase* is for the first user account, which is the superuser of the NetHSM.
