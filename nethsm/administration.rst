@@ -112,6 +112,14 @@ The NetHSM software has four states: *Unprovisioned*, *Provisioned*, *Locked*, a
 |                 | The *Operational* state implies the *Provisioned* state.                |
 +-----------------+-------------------------------------------------------------------------+
 
+.. figure:: ./images/states.svg
+      :scale: 100
+      :alt: States and transitions of the NetHSM
+
+      States and transitions of the NetHSM
+
+      |
+
 The current state of the NetHSM can be retrieved as follows.
 
 .. tabs::
