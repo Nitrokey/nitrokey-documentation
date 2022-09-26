@@ -195,10 +195,10 @@ The *Unlock Passphrase* can be set as follows.
    .. tab:: REST API
       Information about the `/config/unlock-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unlock-passphrase>`__.
 
-HTTPS API Certificate
-~~~~~~~~~~~~~~~~~~~~~
+TLS Certificate
+~~~~~~~~~~~~~~~
 
-The HTTPS API certificate is used for the REST API, and thus also used by *nitropy*.
+The TLS certificate is used for the HTTPS based REST API, and thus also used by *nitropy*.
 During provisioning a self-signed certificate is created.
 The certificate can be replaced, for example with a signed certificate from a certificate authority (CA).
 In this case a Certificate Signing Request (CSR) must be generated.
@@ -213,11 +213,11 @@ The TLS certificate can be retrieved as follows.
    .. tab:: nitropy
       **Required Options**
 
-      +-------------------+----------------------------------------------+
-      | Option            | Description                                  |
-      +===================+==============================================+
-      | ``-a``, ``--api`` | Set the certificate for the NetHSM HTTPS API |
-      +-------------------+----------------------------------------------+
+      +-------------------+--------------------------------------------------+
+      | Option            | Description                                      |
+      +===================+==================================================+
+      | ``-a``, ``--api`` | Set the certificate for the NetHSM TLS interface |
+      +-------------------+--------------------------------------------------+
 
       **Example**
 
@@ -261,7 +261,7 @@ The TLS certificate can be generated as follows.
 
       .. code-block::
 
-         Key for HTTPS API generated on NetHSM localhost:8443
+         Key for TLS interface generated on NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/tls/generate` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-generate>`__.
 
@@ -271,25 +271,25 @@ The Certificate Signing Request (CSR) for the certificate can be generated as fo
    .. tab:: nitropy
       **Required Options**
 
-      +------------------------------------+-----------------------------------------+
-      | Option                             | Description                             |
-      +====================================+=========================================+
-      | ``-a``, ``--api``                  | Generate a CSR for the NetHSM HTTPS API |
-      +------------------------------------+-----------------------------------------+
-      | ``--country`` ``TEXT``             | The country name                        |
-      +------------------------------------+-----------------------------------------+
-      | ``--state-or-province`` ``TEXT``   | The state or province name              |
-      +------------------------------------+-----------------------------------------+
-      | ``--locality`` ``TEXT``            | The locality name                       |
-      +------------------------------------+-----------------------------------------+
-      | ``--organization`` ``TEXT``        | The organization name                   |
-      +------------------------------------+-----------------------------------------+
-      | ``--organizational-unit`` ``TEXT`` | The organization unit name              |
-      +------------------------------------+-----------------------------------------+
-      | ``--common-name`` ``TEXT``         | The common name                         |
-      +------------------------------------+-----------------------------------------+
-      | ``--email-address`` ``TEXT``       | The email address                       |
-      +------------------------------------+-----------------------------------------+
+      +------------------------------------+-----------------------------------------------+
+      | Option                             | Description                                   |
+      +====================================+===============================================+
+      | ``-a``, ``--api``                  | Generate a CSR for the NetHSM TLS certificate |
+      +------------------------------------+-----------------------------------------------+
+      | ``--country`` ``TEXT``             | The country name                              |
+      +------------------------------------+-----------------------------------------------+
+      | ``--state-or-province`` ``TEXT``   | The state or province name                    |
+      +------------------------------------+-----------------------------------------------+
+      | ``--locality`` ``TEXT``            | The locality name                             |
+      +------------------------------------+-----------------------------------------------+
+      | ``--organization`` ``TEXT``        | The organization name                         |
+      +------------------------------------+-----------------------------------------------+
+      | ``--organizational-unit`` ``TEXT`` | The organization unit name                    |
+      +------------------------------------+-----------------------------------------------+
+      | ``--common-name`` ``TEXT``         | The common name                               |
+      +------------------------------------+-----------------------------------------------+
+      | ``--email-address`` ``TEXT``       | The email address                             |
+      +------------------------------------+-----------------------------------------------+
 
       **Example**
 
@@ -313,11 +313,11 @@ The certificate can be replaced as follows.
    .. tab:: nitropy
       **Required Options**
 
-      +-------------------+----------------------------------------------+
-      | Option            | Description                                  |
-      +===================+==============================================+
-      | ``-a``, ``--api`` | Set the certificate for the NetHSM HTTPS API |
-      +-------------------+----------------------------------------------+
+      +-------------------+--------------------------------------------------+
+      | Option            | Description                                      |
+      +===================+==================================================+
+      | ``-a``, ``--api`` | Set the certificate for the NetHSM TLS interface |
+      +-------------------+--------------------------------------------------+
       
       **Arguments**
 
