@@ -981,6 +981,41 @@ A user account can be deleted as follows.
    .. tab:: REST API
       Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID>`__.
 
+List Users
+~~~~~~~~~
+
+List the users on the NetHSM.
+
+The list can be retrieved as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Optional Options**
+
+      +---------------------------------+------------------------------------------+
+      | Option                          | Description                              |
+      +=================================+==========================================+
+      | ``--details``, ``--no-details`` | Query the real name and role of the user |
+      +---------------------------------+------------------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST list-users
+
+      .. code-block::
+
+         Users on NetHSM localhost:8843:
+
+         User ID	Real name	Role         
+         -------	---------	-------------
+         admin  	admin    	Administrator
+   .. tab:: REST API
+      Information about the `/users` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users>`__.
+
+      Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users-UserID>`__.
+
 User Passphrase
 ~~~~~~~~~~~~~~~
 
