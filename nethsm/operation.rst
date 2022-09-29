@@ -191,6 +191,37 @@ The import can be initiated as follows.
    .. tab:: REST API
       Information about the `/keys` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys>`__.
 
+Delete Key
+~~~~~~~~~~
+
+The NetHSM can delete keys from the *Key Store*.
+
+.. tabs::
+   .. tab:: nitropy
+      **Required Role**
+
+      This operation requires an authentication with the *Administrator* role.
+
+      **Arguments**
+
+      +------------+---------------------------------+
+      | Argument   | Description                     |
+      +============+=================================+
+      | ``KEY_ID`` | The key ID of the key to delete |
+      +------------+---------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST delete-key myFirstKey
+      
+      .. code-block::
+
+         Key myFirstKey deleted on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/keys/{KeyID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_keys-KeyID>`__.
+
 List Keys
 ~~~~~~~~~
 
