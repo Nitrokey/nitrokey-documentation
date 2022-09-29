@@ -982,7 +982,7 @@ A user account can be deleted as follows.
       Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID>`__.
 
 List Users
-~~~~~~~~~
+~~~~~~~~~~
 
 List the users on the NetHSM.
 
