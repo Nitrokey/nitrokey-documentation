@@ -367,7 +367,7 @@ The *Operator* users can see all keys, but only use those with at least one corr
 If a key has no *Tag* it can be used by all *Operator* users.
 A key can not be modified by an *Operator* user.
 
-To learn about how to use *Tags* on *Operator* accounts, please refer to `Tags for Users <administration.html#tags-for-users>`__.
+To learn about how to use *Tags* on *Operator* accounts, please refer to chapter `Tags for Users <administration.html#tags-for-users>`__.
 
 .. note::
    *Tags* are managed without restrictions by users with the *Administrator* role.
@@ -591,7 +591,7 @@ Encrypt
 ~~~~~~~
 
 The NetHSM can not encrypt data, but it provides the public key which can be used for encryption.
-Please refer to the `Show Key Details <operation.html#show-key-details>`__ to learn more about how the retrieve the public key.
+To learn about how to retrieve the public key, please refer to chapter `Show Key Details <operation.html#show-key-details>`__.
 
 Data can be encrypted with OpenSSL as follows.
 
