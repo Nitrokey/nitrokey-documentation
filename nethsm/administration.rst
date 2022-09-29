@@ -880,19 +880,19 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 +-----------------+-------------------------------------------------------------+
 | Role            | Description                                                 |
 +=================+=============================================================+
-| *Administrator* | A user account with this Role has access to all            |
+| *Administrator* | A user account with this Role has access to all             |
 |                 | operations provided by the NetHSM, except for key usage     |
 |                 | operations, i.e. message signing and decryption.            |
 +-----------------+-------------------------------------------------------------+
-| *Operator*      | A user account with this Role has access to all key usage  |
+| *Operator*      | A user account with this Role has access to all key usage   |
 |                 | operations, a read-only subset of key management operations |
 |                 | and user management operations allowing changes to their    |
 |                 | own account only.                                           |
 +-----------------+-------------------------------------------------------------+
-| *Metrics*       | A user account with this Role has access to read-only      |
+| *Metrics*       | A user account with this Role has access to read-only       |
 |                 | metrics operations only.                                    |
 +-----------------+-------------------------------------------------------------+
-| *Backup*        | A user account with this Role has access to the operations |
+| *Backup*        | A user account with this Role has access to the operations  |
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
 
