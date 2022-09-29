@@ -880,19 +880,19 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 +-----------------+-------------------------------------------------------------+
 | Role            | Description                                                 |
 +=================+=============================================================+
-| *Administrator* | A user account with this Role has access to all            |
+| *Administrator* | A user account with this Role has access to all             |
 |                 | operations provided by the NetHSM, except for key usage     |
 |                 | operations, i.e. message signing and decryption.            |
 +-----------------+-------------------------------------------------------------+
-| *Operator*      | A user account with this Role has access to all key usage  |
+| *Operator*      | A user account with this Role has access to all key usage   |
 |                 | operations, a read-only subset of key management operations |
 |                 | and user management operations allowing changes to their    |
 |                 | own account only.                                           |
 +-----------------+-------------------------------------------------------------+
-| *Metrics*       | A user account with this Role has access to read-only      |
+| *Metrics*       | A user account with this Role has access to read-only       |
 |                 | metrics operations only.                                    |
 +-----------------+-------------------------------------------------------------+
-| *Backup*        | A user account with this Role has access to the operations |
+| *Backup*        | A user account with this Role has access to the operations  |
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
 
@@ -937,13 +937,13 @@ A user account can be added as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST  add-user --real-name "Jane User" --role Operator
+         $ nitropy nethsm --host $NETHSM_HOST  add-user --real-name "Nitrokey Operator" --role Operator --user-id operator1
 
       .. code-block::
 
          Passphrase: 
          Repeat for confirmation:
-         User e8836f4cf2c7fa968bf0 added to NetHSM localhost:8443
+         User operator1 added to NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/users` endpoint, to create a user without specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users>`__.
 
@@ -973,13 +973,49 @@ A user account can be deleted as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST delete-user "Jane User"
+         $ nitropy nethsm --host $NETHSM_HOST delete-user operator1
 
       .. code-block::
 
-         User e8836f4cf2c7fa968bf0 deleted on NetHSM localhost:8443
+         User operator1 deleted on NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID>`__.
+
+List Users
+~~~~~~~~~~
+
+List the users on the NetHSM.
+
+The list can be retrieved as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Optional Options**
+
+      +---------------------------------+------------------------------------------+
+      | Option                          | Description                              |
+      +=================================+==========================================+
+      | ``--details``, ``--no-details`` | Query the real name and role of the user |
+      +---------------------------------+------------------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST list-users
+
+      .. code-block::
+
+         Users on NetHSM localhost:8843:
+
+         User ID  	Real name        	Role
+         ---------	-----------------	-------------
+         operator1	Nitrokey Operator	Operator
+         admin    	admin            	Administrator
+   .. tab:: REST API
+      Information about the `/users` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users>`__.
+
+      Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users-UserID>`__.
 
 User Passphrase
 ~~~~~~~~~~~~~~~
@@ -1008,13 +1044,13 @@ The user passphrase can be set as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST set-passphrase --user-id e8836f4cf2c7fa968bf0
+         $ nitropy nethsm --host $NETHSM_HOST set-passphrase --user-id operator1
       
       .. code-block::
 
          Passphrase:
          Repeat for confirmation:
-         Updated the passphrase for user e8836f4cf2c7fa968bf0 on NetHSM localhost:8443
+         Updated the passphrase for user operator1 on NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/users/{UserID}/passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users-UserID-passphrase>`__.
 
@@ -1046,11 +1082,11 @@ The *Tag* can be added as follows.
 
       .. code-block:: bash
 
-         nitropy nethsm --host $NETHSM_HOST add-operator-tag e8836f4cf2c7fa968bf0 berlin
+         nitropy nethsm --host $NETHSM_HOST add-operator-tag operator1 berlin
 
       .. code-block::
 
-         Added tag berlin for user 5d0d171c067e1f519b33 on the NetHSM localhost:8443
+         Added tag berlin for user operator1 on the NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/users/{UserID}/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID-tags-Tag>`__.
 
@@ -1072,10 +1108,10 @@ The *Tag* can be deleted as follows.
 
       .. code-block:: bash
 
-         nitropy nethsm --host $NETHSM_HOST delete-operator-tag e8836f4cf2c7fa968bf0 berlin
+         nitropy nethsm --host $NETHSM_HOST delete-operator-tag operator1 berlin
 
       .. code-block::
 
-         Deleted tag berlin for user 5d0d171c067e1f519b33 on the NetHSM localhost:8443
+         Deleted tag berlin for user operator1 on the NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/users/{UserID}/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID-tags-Tag>`__.
