@@ -16,6 +16,14 @@ How to Install
 4. Execute ``nitropy-VERSION.exe``
 
 .. note::
+   If you're using Microsoft Edge, the downloaded ``.exe`` might be marked as "untrused" by Windows. To mark it as trusted anyway, click the three dot on the right of the warning, then "keep", then "show more" and finally "keep anyway".
+  .. figure:: ./windowswarning/threedotsmore.png
+     :alt: The warning displayed by Edge
+
+  .. figure:: ./windowswarning/keep-anyway.png
+     :alt: The keep anyway button
+
+.. note::
    Without administrator privileges nitropy might not be able to communicate to the device.
 
 Known Issues
