@@ -395,11 +395,11 @@ The *Tag* can be added as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST add-key-tag 8925c71517637fc6422b berlin
+         $ nitropy nethsm --host $NETHSM_HOST add-key-tag myFirstKey berlin
 
       .. code-block::
 
-         Added tag berlin for key 8925c71517637fc6422b on the NetHSM localhost:8443
+         Added tag berlin for key myFirstKey on the NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/keys/{KeyID}/restrictions/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_keys-KeyID-restrictions-tags-Tag>`__.
 
@@ -425,11 +425,11 @@ The *Tag* can be deleted as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST delete-key-tag 8925c71517637fc6422b berlin
+         $ nitropy nethsm --host $NETHSM_HOST delete-key-tag myFirstKey berlin
 
       .. code-block::
 
-         Deleted tag berlin for key 8925c71517637fc6422b on the NetHSM localhost:8443
+         Deleted tag berlin for key myFirstKey on the NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/keys/{KeyID}/restrictions/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_keys-KeyID-restrictions-tags-Tag>`__.
 
