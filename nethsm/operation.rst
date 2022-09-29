@@ -597,7 +597,7 @@ Data can be encrypted with OpenSSL as follows.
 
 .. code-block:: bash
 
-   $ echo 'NetHSM rulez!' | openssl pkeyutl -encrypt -certin -inkey public.pem | base64 > data.crypt
+   $ echo 'NetHSM rulez!' | openssl pkeyutl -encrypt -pubin -inkey public.pem | base64 > data.crypt
 
 This writes the encrypted and base64 encoded message ``NetHSM rulez!`` into the file ``data.crypt``.
 
