@@ -651,15 +651,6 @@ The data can be decrypted as follows.
    .. tab:: REST API
       Information about the `/keys/{KeyID}/decrypt` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-KeyID-decrypt>`__.
 
-      .. code-block::
-
-         curl -X 'POST' \
-            'https://nethsmdemo.nitrokey.com/api/v1/keys/myFirstKey/decrypt' \
-            -H 'accept: application/json' \
-            -H 'Content-Type: application/json' \
-            -d '{"mode": "RAW", "encrypted": "nhrfotu32409ru0rgert45z54z099u23r03498uhtr=="}' \
-            | base64 -d
-
 Sign
 ~~~~
 
