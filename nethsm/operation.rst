@@ -709,15 +709,6 @@ From the digest a signature can be created as follows.
    .. tab:: REST API
       Information about the `/keys/{KeyID}/sign` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-KeyID-sign>`__.
 
-      .. code-block::
-
-         curl -X 'POST' \
-            'https://nethsmdemo.nitrokey.com/api/v1/keys/myFirstKey/sign' \
-            -H 'accept: application/json' \
-            -H 'Content-Type: application/json' \
-            -d '{"mode": "PKCS1", "message": "nhrfotu32409ru0rgert45z54z099u23r03498uhtr=="}' \
-            | base64 -d > data.sig
-
 The created signature can be verified with OpenSSL as follows.
 
 .. code-block:: bash
