@@ -92,6 +92,130 @@ The configuration file needs to be saved either in the following paths or in the
       - `$HOME/.nitrokey`
       - `/etc/nitrokey/`
 
+Key Management
+--------------
+
+Info
+~~~~
+
+Show information about the cryptoki version, and the PKCS#11 driver.
+
+.. code-block:: bash
+
+   $ pkcs11-tool --module p11nethsm.so --show-info
+
+.. code-block::
+
+   Cryptoki version 2.40
+   Manufacturer     Nitrokey GmbH
+   Library          NetHSM PKCS#11 module (ver 0.1)
+   Using slot 0 with a present token (0x0)
+
+List Slots
+~~~~~~~~~~
+
+The information about the available slots.
+The listed slots depend on the configuration of the slots array in the `p11nethsm.conf` configuration file.
+To learn more about the configuration of slots, please refer to chapter `Configuration <pkcs11_with_pkcs11-tool.html#configuration>`_.
+
+.. code-block:: bash
+
+   $ pkcs11-tool --module p11nethsm.so --list-slots
+
+.. code-block::
+
+   Available slots:
+   Slot 0 (0x0): NetHSM Zone A
+     token label        : NetHSM1
+     token manufacturer : Nitrokey GmbH
+     token model        : NetHSM
+     token flags        : rng, token initialized, PIN initialized, readonly
+     hardware version   : 0.1
+     firmware version   : 0.1
+     serial num         : 0
+     pin min/max        : 3/256
+
+.. note::
+   If your configuration supports more than one slot, you maybe have to add the `--slot <arg>` option in pkcs11-tool commands to use the right one.
+
+Generate Key
+~~~~~~~~~~~~
+
+Generate a key-pair and store it on the NetHSM.
+
+.. note::
+   The PKCS#11 driver currently does not support this feature.
+   A key-pair can be generated with *nitropy* or a REST API request.
+   To learn more about how to generate a key, please refer to chapter `Generate Key <../operation.html#generate-key>`_.
+
+List Keys
+~~~~~~~~~
+
+Show information about the keys and certificates in the *Key Store* on a NetHSM.
+
+.. code-block:: bash
+
+   $ pkcs11-tool --module p11nethsm.so --list-objects
+
+.. code-block::
+
+   Using slot 0 with a present token (0x0)
+   Private Key Object; RSA 
+     label:      myFirstKey
+     ID:         6d7946697273744b6579
+     Usage:      decrypt, sign
+     Access:     sensitive, always sensitive, never extractable
+   Public Key Object; RSA 0 bits
+     label:      myFirstKey
+     ID:         6d7946697273744b6579
+     Usage:      none
+     Access:     none
+
+Read Keys
+~~~~~~~~~
+
+Read keys and certificates from the *Key Store* on a NetHSM.
+It is not possible to read private keys from the NetHSM.
+
+The public key of a key-pair can be read as follows.
+
+.. code-block::
+
+   $ pkcs11-tool --module p11nethsm.so --read-object --type pubkey --label myFirstKey -o public.key
+
+The certificate of a key-pair can be read as follows.
+
+.. code-block::
+
+   $ pkcs11-tool --module p11nethsm.so --read-object --type cert --label myFirstKey -o public.key
+
+The returned certificates or public keys are ASN.1 encoded.
+The data can be decoded with the *dumpasn1* tool, as it contains data in DER format.
+The DER format can be converted to PEM format with OpenSSL.
+
+Write Keys
+~~~~~~~~~~
+
+Write keys and certificates to the *Key Store* on a NetHSM.
+
+The private key of a key-pair can be wrote as follows.
+
+.. code-block::
+
+   $ pkcs11-tool --module p11nethsm.so --write-object secret.key --type privkey --label myFirstKey
+
+The public key of a key-pair can be wrote as follows.
+
+.. code-block::
+
+   $ pkcs11-tool --module p11nethsm.so --write-object public.key --type pubkey --label myFirstKey
+
+The certificate of a key-pair can be wrote as follows.
+
+.. code-block::
+
+   $ pkcs11-tool --module p11nethsm.so --write-object cert.pub --type cert --label myFirstKey
+
 Encrypting & Decrypting
 ~~~~~~~~~~~~~~~~~~~~~~~
 
