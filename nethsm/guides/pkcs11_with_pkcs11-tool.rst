@@ -1,14 +1,13 @@
-PKCS#11
--------
+PKCS#11 with pkcs11-tool
+========================
+
+This guide describes the use of the PKCS#11 driver for the NetHSM.
+The guide uses tools from `OpenSC <https://github.com/OpenSC/OpenSC>`__.
+Please refer to their documentation to learn how to use them on your operating system.
 
 .. important::
    This driver is still an early Proof of Concept implementation that only implements the
-   functions that are necessary for operating TLS servers, like for example an HTTPS server.
-
-1. Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-pkcs11>`_ for NetHSM.
-2. Modify the configuration file `p11nethsm.conf` according to
-   your setup (e.g. address, operator name) and store it in `$HOME/.nitrokey`, `/etc/nitrokey/`,
-   or in the folder where your application is executed.
+   functions that are necessary for operating TLS servers.
 
 Encrypting & Decrypting
 ~~~~~~~~~~~~~~~~~~~~~~~
