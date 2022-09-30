@@ -216,60 +216,69 @@ The certificate of a key-pair can be wrote as follows.
 
    $ pkcs11-tool --module p11nethsm.so --write-object cert.pub --type cert --label myFirstKey
 
-Encrypting & Decrypting
-~~~~~~~~~~~~~~~~~~~~~~~
+Key Operations
+--------------
 
-After creating a key (here: ID 42) with the according mechanism, you can use it for encryption and decryption,
-but first you should create the key:
-
-.. code-block:: bash
-
-   $ KEYID=42
-
-.. code-block:: bash
-
-   $ HEXID=$(echo ${KEYID}'\c' | xxd -ps)
-
-.. code-block:: bash
-
-   $ curl -s -X GET https://nethsmdemo.nitrokey.com/api/v1/keys/$KEYID/public.pem -o public.pem
-
-Now you can encrypt:
-
-.. code-block:: bash
-
-   $ echo 'NetHSM rulez!' | openssl pkeyutl -encrypt -pubin -inkey public.pem -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha512 -pkeyopt rsa_mgf1_md:sha512 -out encrypted.data
-
-
-And decrypt:
-
-.. code-block:: bash
-
-   $ pkcs11-tool --module p11nethsm.so -v --decrypt --mechanism RSA-PKCS-OAEP --input-file encrypted.data --id $HEXID --hash-algorithm SHA512
-
-Signing
+Encrypt
 ~~~~~~~
 
-First create the key again:
+The NetHSM can not encrypt data with asymmetric keys, but it provides the public key which can be used for encryption.
+Please refer to chapter `Show Key Details <operation.html#show-key-details>`__,
+or retrieve the key as described in chapter `Read Keys <pkcs11_with_pkcs11.html#read-keys>`,
+to learn more about how to retrieve the public key. The example assumes the public key in the `public.pem` file.
+
+Data can be encrypted with OpenSSL as follows.
 
 .. code-block:: bash
 
-   $ KEYID=23
+   $ echo 'NetHSM rulez!' | openssl pkeyutl -encrypt -pubin \
+      -inkey public.pem \
+      -pkeyopt rsa_padding_mode:oaep \
+      -pkeyopt rsa_oaep_md:sha512 \
+      -pkeyopt rsa_mgf1_md:sha512 \
+      -out encrypted.data
+
+Decrypt
+~~~~~~~
+
+The NetHSM can decrypt data for a private key stored in the *Key Store* on the NetHSM.
+This example uses the encrypted message from the previous chapter `Encrypt <pkcs11_with_pkcs11-tool.html#encrypt>`__.
 
 .. code-block:: bash
 
-   $ HEXID=$(echo ${KEYID}'\c' | xxd -ps)
+   $ pkcs11-tool --module p11nethsm.so --decrypt \
+      --mechanism RSA-PKCS-OAEP \
+      --input-file encrypted.data \
+      --label myFirstKey \
+      --hash-algorithm SHA512
+
+.. code-block::
+
+   NetHSM rulez!
+
+Sign
+~~~~
+
+The NetHSM can sign data for a private key stored in the *Key Store* on the NetHSM.
+For signatures with a RSA and ECDSA key, a digest must be calculate first.
+
+To calculate a digest the data is required first. A message is created as follows.
 
 .. code-block:: bash
 
-   $ curl -s -X GET https://nethsmdemo.nitrokey.com/api/v1/keys/$KEYID/public.pem -o public.pem
+   $ echo 'NetHSM rulez!' | pkcs11-tool --module p11nethsm.so \
+      --sign \
+      --mechanism SHA512-RSA-PKCS-PSS \
+      --output-file sig.data \
+      --label myFirstKey
 
-After creating a key (here: ID 23) with the according mechanism, you can use it for signing:
+The created signature can be verified with OpenSSL as follows.
 
 .. code-block:: bash
 
-   $ echo 'NetHSM rulez!' | pkcs11-tool --module p11nethsm.so -v --sign --mechanism SHA512-RSA-PKCS-PSS --output-file sig.data --id $HEXID
-
-.. code-block:: bash
-
-   $ echo 'NetHSM rulez!' | openssl dgst -keyform PEM -verify public.pem -sha512 -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 -signature sig.data
+   $ echo 'NetHSM rulez!' | openssl dgst -keyform PEM \
+      -verify public.pem \
+      -sha512 \
+      -sigopt rsa_padding_mode:pss \
+      -sigopt rsa_pss_saltlen:-1 \
+      -signature sig.data
