@@ -49,6 +49,49 @@ Compile from source code
 4. Copy the extracted library to the respective path in your operating system.
    The path depends on your installation and configuration of OpenSC.
 
+Configuration
+-------------
+
+The configuration file `p11nethsm.conf` is required and used to configure the connection between the PKCS#11 driver and the NetHSM.
+
+An example configuration file looks like follows.
+
+.. tabs::
+   .. tab:: Linux and MacOS
+      .. code-block:: yaml
+
+         YAML 1.1
+         ---
+         p11nethsm:
+           logfile: /tmp/p11nethsm.log
+           maxsessioncount: 5
+           debug: true
+           slots:
+           - label: NetHSM1
+             description: NetHSM Zone A
+             url: "https://nethsmdemo.nitrokey.com/api/v1"
+             # certSHA256:
+             #   - "0C:66:DC:EB:4D:12:C3:24:FC:82:F4:1D:4C:16:44:12:1D:00:79:FF:36:96:65:E2:21:C4:36:94:F7:8E:22:89"
+             user: "operator"
+             password: "env:NETHSM_PASS"
+
+      Modify the configuration file `p11nethsm.conf` according to your environment.
+
+      The configuration file can include multiple slots, inside the `slots` array.
+      The slots represent multiple NetHSM deployments.
+      The `label` field of a slot needs to contain a unique name.
+      The `url`, `user`, and `password` keys are mandatory.
+      For security reasons it is recommended to pass the password in an environment variable.
+      For this the `env:NETHSM_PASS` is passed in the `password` key, where `NETHSM_PASS` is the name of the environment variable containing the password.
+      The `certSHA256` key needs to be set if the TLS certificate is not signed by a Certificate Authority (CA) contained in the certificate store of the operating system.
+
+The configuration file needs to be saved either in the following paths or in the directory the application is executed.
+
+.. tabs::
+   .. tab:: Linux and MacOS
+      - `$HOME/.nitrokey`
+      - `/etc/nitrokey/`
+
 Encrypting & Decrypting
 ~~~~~~~~~~~~~~~~~~~~~~~
 
