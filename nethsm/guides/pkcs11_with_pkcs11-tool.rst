@@ -9,6 +9,46 @@ Please refer to their documentation to learn how to use them on your operating s
    This driver is still an early Proof of Concept implementation that only implements the
    functions that are necessary for operating TLS servers.
 
+Installation
+------------
+
+Install precompiled library
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Download an archive with the latest release from the `releases page <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the repository.
+   Use the release archive which contains the name of your operating system in the title.
+
+2. Extract the files from the downloaded archive with an archiving programm of your choice.
+
+3. Copy the extracted library to the respective path in your operating system.
+   The path depends on your installation and configuration of OpenSC.
+
+Compile from source code
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. important::
+   This driver can only be compiled with the official Go compiler.
+   Do not use the GNU Go compiler (GCC-Go).
+   Please refer to their `website <https://go.dev/doc/install>`__ to learn how to install it.
+
+1. Download an archive with the latest release from the `releases page <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the repository.
+   Use the release archive which contains `Source code` in the title.
+2. Extract the files from the downloaded archive with an archiving programm of your choice.
+3. In the directory with the extracted source code execute the following command to compile the library.
+
+   .. tabs::
+      .. tab:: Linux
+         .. code-block:: bash
+
+            ./build.sh
+      .. tab:: MacOS
+         .. code-block:: bash
+
+            ./build.sh
+
+4. Copy the extracted library to the respective path in your operating system.
+   The path depends on your installation and configuration of OpenSC.
+
 Encrypting & Decrypting
 ~~~~~~~~~~~~~~~~~~~~~~~
 
