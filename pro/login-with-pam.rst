@@ -6,9 +6,9 @@
 How to Setup The Login
 ''''''''''''''''''''''
 
-You have two options: `pam_p11 <https://github.com/OpenSC/pam_pkcs11>`_ or `Poldi <https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard/>`_.
+You have two options: `pam_p11 <https://github.com/OpenSC/pam_pkcs11>`__ or `Poldi <https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard/>`__.
 
-The solution with pam_p11 is more difficult to achieve and is based on S/MIME certificates. Please have a look at `the documentation <http://opensc.github.io/pam_pkcs11/doc/pam_pkcs11.html>`_ for more information.
+The solution with pam_p11 is more difficult to achieve and is based on S/MIME certificates. Please have a look at `the documentation <https://opensc.github.io/pam_pkcs11/doc/pam_pkcs11.html>`__ for more information.
 
 Poldi 0.4.1 works flawlessly with Nitrokey for PAM authentication with RSA keys (see Troubleshooting for information on ECC keys). Besides the installation of poldi (e.g. ``sudo apt-get install libpam-poldi`` on Ubuntu) the following steps are needed to get it working.
 
@@ -36,7 +36,7 @@ Then you have to configure PAM. Just add "auth sufficient pam_poldi.so" to pam c
 
 .. note:: Pam is dangerous to play around with, so make sure you have a way of accessing the machine if you break authentication completely. Remember that booting into rescue mode from Grub requires a root password, so keep that or a live CD which can read your filesystems to hand.
 
-Here you find `further instructions <http://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard>`_ (in German, partially outdated).
+Here you find `further instructions <https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard>`__ (in German, partially outdated).
 
 Troubleshooting
 '''''''''''''''
@@ -49,4 +49,4 @@ Please be aware that you have to insert your Application ID in the line above wi
 
 ECC Keys
 ''''''''
-Unfortunately, poldi has no support for ECC keys yet. But there is a `patch for ECC keys used with Nitrokey Start <https://dev.gnupg.org/T4009>`_. This is already included in the master branch of the poldi development repository and thus will be released in a newer version eventually. In the meantime the only option is to build poldi from source.
+Unfortunately, poldi has no support for ECC keys yet. But there is a `patch for ECC keys used with Nitrokey Start <https://dev.gnupg.org/T4009>`__. This is already included in the master branch of the poldi development repository and thus will be released in a newer version eventually. In the meantime the only option is to build poldi from source.

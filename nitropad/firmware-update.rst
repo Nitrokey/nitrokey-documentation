@@ -20,7 +20,7 @@ Preparation
 1. Connect your NitroPad to a power plug and load its battery to over
    70%
 2. Download the `latest
-   firmware <https://github.com/Nitrokey/heads/releases/latest>`_ and store it
+   firmware <https://github.com/Nitrokey/heads/releases/latest>`__ and store it
    on a USB drive. For the NitroPad T430 use ``nitropad-t430-[version].npf`` and for the NitroPad X230 use ``nitropad-x230-[version].npf``.
 3. For hash sum verification, store ``sha256sum`` file at the USB
    drive.

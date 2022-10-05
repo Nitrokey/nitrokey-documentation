@@ -18,7 +18,7 @@ Getting Started
    automatically. Windows may fail to install an additional device
    driver for the smart card. Its safe to ignore this warning.
 2. Download and start the `Nitrokey
-   App <https://www.nitrokey.com/download>`_.
+   App <https://www.nitrokey.com/download>`__.
 3. Go to “Menu” -> “Configure” to change the User PIN (default: 123456)
    and Admin PIN (default: 12345678) to your own choices.
 
@@ -39,8 +39,8 @@ OpenPGP/GnuPG is popular among individuals, S/MIME/x.509 is mostly used
 by enterprises. If you are in doubt which one to choose, you should use
 OpenPGP.
 
--  `instructions <openpgp.html>`_
-   for using the OpenPGP standard with the Nitrokey
+To learn more about how to use OpenPGP for email encryption with the Nitrokey,
+please refer to chapter `OpenPGP Email Encryption <openpgp.html>`_.
 
--  `instructions <smime.html>`_
-   for using S/MIME with the Nitrokey
+To learn more about how to use S/MIME for email encryption with the Nitrokey,
+please refer to chapter `S/MIME Email Encryption <smime.html>`_.

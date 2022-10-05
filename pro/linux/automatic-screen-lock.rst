@@ -13,7 +13,7 @@ Requirements
 ~~~~~~~~~~~~
 
 -  Ubuntu 20.04 or Debian 10 (Buster), both with `Gnome Display
-   Manager <https://wiki.gnome.org/Projects/GDM>`_ installed.
+   Manager <https://wiki.gnome.org/Projects/GDM>`__ installed.
 
 -  Nitrokey Pro 2, Nitrokey Storage 2, or Nitrokey HSM 2
 

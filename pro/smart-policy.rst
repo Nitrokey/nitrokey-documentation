@@ -6,7 +6,7 @@ Login to Windows Domain Computers With MS Active Directory
 .. contents:: :local:
 
 1. Download and install the latest
-   `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`_.
+   `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
 2. Use a text editor to add the following settings to
    *C:\Program Files:\OpenSC Project\OpenSC\opensc.conf*.
 
@@ -48,14 +48,14 @@ Login to Windows Domain Computers With MS Active Directory
 
 3. Open a command terminal and enter “regedit”. Use regedit to import
    `this
-   file <https://www.nitrokey.com/sites/default/files/nk-hsm.reg>`_.
+   file <https://www.nitrokey.com/sites/default/files/nk-hsm.reg>`__.
 4. Now you can enroll Nitrokeys for your users managed in Microsoft
    Active Directory. You may either use Microsoft PKI,
-   `gpgsm <https://www.gnupg.org/documentation/manuals/gnupg/Howto-Create-a-Server-Cert.html>`_,
+   `gpgsm <https://www.gnupg.org/documentation/manuals/gnupg/Howto-Create-a-Server-Cert.html>`__,
    or `Smart
-   Policy <https://www.mysmartlogon.com/products/smart-policy.html>`_.
+   Policy <https://www.mysmartlogon.com/products/smart-policy.html>`__.
    The following steps describe the usage of Smart Policy.
-5. `Download <http://download.mysmartlogon.com/SmartPolicyv2/SmartPolicy%20-%20Stage%203.exe>`_
+5. `Download <https://download.mysmartlogon.com/SmartPolicyv2/SmartPolicy%20-%20Stage%203.exe>`__
    and install Smart Policy.
 6. Select “Read a smart card”
 

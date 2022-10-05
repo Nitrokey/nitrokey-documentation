@@ -9,15 +9,15 @@ This mini-howto assumes that the Nitrokey has been initialized and contains cryp
 
 **Required on the client side:**
 
--  `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_
+-  `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`__
    or a variant of it
 
--  `GPG4Win <https://gpg4win.org/>`_ or
-   `pageant.exe <https://smartcard-auth.de/download-de.html>`_ with
+-  `GPG4Win <https://gpg4win.org/>`__ or
+   `pageant.exe <https://smartcard-auth.de/download-de.html>`__ with
    Smartcard support from Dr. Peter Koch
 
 -  Optional: `OpenPGP
-   Minidriver <https://wald.intevation.org/frs/?group_id=49&release_id=353>`_
+   Minidriver <https://wald.intevation.org/frs/?group_id=49&release_id=353>`__
 
 **1) Pageant**
 

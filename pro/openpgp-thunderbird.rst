@@ -8,7 +8,7 @@ OpenPGP Email Encryption With Thunderbird
 Thunderbird 78.3 and newer
 --------------------------
 
-At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy to set up. See `Thunderbird’s documentation <https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`_ for details. Here is a `comprehensive German guide <https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-nitrokey-storage/>`_.
+At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy to set up. See `Thunderbird’s documentation <https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`__ for details. Here is a `comprehensive German guide <https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-nitrokey-storage/>`__.
 
 Troubleshooting
 ###############
@@ -28,10 +28,10 @@ Installation
 ############
 
 1. Install the device driver as described
-   `here <https://www.nitrokey.com/documentation/installation>`_.
+   `here <https://www.nitrokey.com/documentation/installation>`__.
 
-2. Install `Thunderbird <https://www.thunderbird.net/en-US/>`_ and the
-   Add-on `Enigmail <https://www.enigmail.net/index.php/en/>`_.
+2. Install `Thunderbird <https://www.thunderbird.net/en-US/>`__ and the
+   Add-on `Enigmail <https://www.enigmail.net/index.php/en/>`__.
 
 Changing PINs
 #############

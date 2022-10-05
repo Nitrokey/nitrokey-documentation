@@ -20,8 +20,8 @@ How to Update
    Never disconnect the Nitrokey Pro or abort the process while updating,
    this will likely render your device useless!
 
-1. Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions <https://github.com/Nitrokey/pynitrokey#installation>`_ for your OS.
-2. Download the latest stable `firmware image <https://github.com/Nitrokey/nitrokey-pro-firmware/releases>`_.
+1. Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions <https://github.com/Nitrokey/pynitrokey#installation>`__ for your OS.
+2. Download the latest stable `firmware image <https://github.com/Nitrokey/nitrokey-pro-firmware/releases>`__.
 
 .. important:: 
    For production use you should choose the latest stable version (so only versions, that don’t contain i.e. “pre-release” or “RC”).

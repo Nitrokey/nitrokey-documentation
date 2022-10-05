@@ -14,7 +14,7 @@ Nitrokey Pro, Mac
    Setup Assistant. **Don’t run through this assistant but exit it right
    away.**
 2. Download and start the `Nitrokey
-   App <https://www.nitrokey.com/download>`_. Follow the
+   App <https://www.nitrokey.com/download>`__. Follow the
    `instructions <change-pins.html>`_
    to change the default User PIN (default: 123456) and Admin PIN
    (default: 12345678) to your own choices.
@@ -28,9 +28,9 @@ Your Nitrokey is now ready to use.
 .. note::
 
    -  For some Versions of MacOS it is necessary to install custom `ccid
-      driver <https://github.com/martinpaljak/osx-ccid-installer>`_
+      driver <https://github.com/martinpaljak/osx-ccid-installer>`__
       (for information see
-      `here <https://ludovicrousseau.blogspot.com/2016/04/os-x-el-capitan-and-ccid-driver-upgrades.html>`_),
+      `here <https://ludovicrousseau.blogspot.com/2016/04/os-x-el-capitan-and-ccid-driver-upgrades.html>`__),
       but in general MacOS should have the driver onboard.
 
    -  For many use cases described, it is necessary to have either
@@ -44,8 +44,8 @@ OpenPGP/GnuPG is popular among individuals, S/MIME/x.509 is mostly used
 by enterprises. If you are in doubt which one to choose, you should use
 OpenPGP.
 
--  `instructions <openpgp.html>`_
-   for using the OpenPGP standard with the Nitrokey
+To learn more about how to use OpenPGP for email encryption with the Nitrokey,
+please refer to chapter `OpenPGP Email Encryption <openpgp.html>`_.
 
--  `instructions <smime.html>`_
-   for using S/MIME with the Nitrokey
+To learn more about how to use S/MIME for email encryption with the Nitrokey,
+please refer to chapter `S/MIME Email Encryption <smime.html>`_.

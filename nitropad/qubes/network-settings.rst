@@ -1,5 +1,5 @@
 Enable Network Settings, e.g. Wifi
-======================
+==================================
 
 To be able to use Wifi, Bluetooth and other functionalities, "Settings" must be activated in "sys-net".
 

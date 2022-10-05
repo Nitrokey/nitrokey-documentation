@@ -1,5 +1,5 @@
 Nitrokey App Installation
-======================
+=========================
 
 
 1. Set in the "Qubes Settings" of sys-usb "Networking" to default and "Apply" the changes.

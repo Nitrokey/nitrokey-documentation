@@ -24,14 +24,14 @@ The Nitrokey FIDO2 can be used with any current browser.
 
 .. tip::
 
-   `Check online <https://update.nitrokey.com/>`_ if your Nitrokey
+   `Check online <https://update.nitrokey.com/>`__ if your Nitrokey
    FIDO2 has the latest firmware installed.
 
 Passwordless Authentication
 ---------------------------
 
 1. Open a web page that supports FIDO2 (currently only
-   `Microsoft <https://www.microsoft.com>`_).
+   `Microsoft <https://www.microsoft.com>`__).
 2. Log in to the website and go to “Set up security key” in the security
    settings of your account.
 3. Now you need to set a PIN for your Nitrokey FIDO2.
@@ -44,11 +44,11 @@ Two-Factor Authentication (2FA)
 -------------------------------
 
 1. Open one of the `websites that support FIDO
-   U2F <https://www.dongleauth.com/>`_.
+   U2F <https://www.dongleauth.com/>`__.
 2. Log in to the website and enable two-factor authentication in your
    account settings. (In most cases you will find a link to the
    documentation of the supported web service at
-   `dongleauth.com <https://www.dongleauth.com/>`_)
+   `dongleauth.com <https://www.dongleauth.com/>`__)
 3. Register your Nitrokey FIDO2 in the account settings by touching the
    button to activate the Nitrokey FIDO2. After you have successfully
    configured the device, you must activate the Nitrokey FIDO2 this way

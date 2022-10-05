@@ -2,20 +2,21 @@
 .. include:: ./product_platform_heading.rst
 
 .. only:: comment
+
  .. contents:: :local:
 
 VeraCrypt (formerly TrueCrypt)
 ------------------------------
 
-`VeraCrypt <https://www.veracrypt.fr/en/Home.html>`_ is a free and Open Source disk encryption software for Windows, macOS, and GNU+Linux. It is the successor of TrueCrypt and thus recommended, although the following instructions should apply to TrueCrypt as well.
+`VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__ is a free and Open Source disk encryption software for Windows, macOS, and GNU+Linux. It is the successor of TrueCrypt and thus recommended, although the following instructions should apply to TrueCrypt as well.
 
 Follow these steps to use the program with `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`_ or `Nitrokey Pro
-2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`_:
+2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ or `Nitrokey Pro
+2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__:
 
 1. Install the latest release of
-   `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`_, or download the
-   `PKCS#11 library <http://smartcard-auth.de/download-en.html>`_.
+   `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__, or download the
+   `PKCS#11 library <https://smartcard-auth.de/download-en.html>`__.
 2. Choose the library in VeraCrypt under Settings>Preferences>Security
    Token (location depends on system, e.g. ``/usr/lib/opensc``).
 3. Generate a 64 Byte key file via Tools>Keyfile Generator.
@@ -37,4 +38,4 @@ Follow these steps to use the program with `Nitrokey Storage
    a keyfile on the Nitrokey which theoretically could be stolen by a
    computer virus after the user enters the PIN.
 
-Note: `Aloaha Crypt <http://www.aloaha.com/aloaha-crypt-disk/>`_ is based on TrueCrypt/VeraCrypt but without the described security limitation.
+Note: `Aloaha Crypt <https://www.aloaha.com/aloaha-crypt-disk/>`__ is based on TrueCrypt/VeraCrypt but without the described security limitation.

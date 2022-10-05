@@ -10,7 +10,7 @@ Installing nitropy on Windows
 How to Install
 --------------
 
-1. Download the latest ``.exe`` file from `releases <https://github.com/Nitrokey/pynitrokey/releases/>`_.
+1. Download the latest ``.exe`` file from `releases <https://github.com/Nitrokey/pynitrokey/releases/>`__.
 2. Open the command console in the administrator mode (Windows 10: press the right mouse button on the Menu Start and select "Windows PowerShell (Admin)" from the menu).
 3. Change to the directoy of the ``.exe`` (something like ``cd C:\Users\YOURUSER\Downloads``)
 4. Execute ``nitropy-VERSION.exe``
