@@ -77,5 +77,4 @@ Next Steps
 
 You can find more information on using nitropy in these guides:
 
-- :doc:`../../../nethsm/cli`
 - :doc:`../../../nitrokey3/firmware-update`
