@@ -590,16 +590,37 @@ Key Operations
 Encrypt
 ~~~~~~~
 
-The NetHSM can not encrypt data, but it provides the public key which can be used for encryption.
-To learn about how to retrieve the public key, please refer to chapter `Show Key Details <operation.html#show-key-details>`__.
+The NetHSM can encrypt data for symmetric keys, stored in the *Key Store*.
+In contrast encrypting data with asymmetric keys can not be done on the NetHSM,
+because of the concept in public-key cryptography to make the public key available to everybody.
+For asymmetric keys the NetHSM provides the public key, which can be used for encryption with an external tool.
+Please refer to the `Show Key Details <operation.html#show-key-details>`__ to learn more about how to retrieve the public key of a key in the *Key Store*.
 
-Data can be encrypted with OpenSSL as follows.
+Data can be encrypted for a symmetric key as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST encrypt -k myFirstKey -d "TmV0SFNNIHJ1bGV6enp6enp6enp6enp6enp6enp6IQo=" -m AES_CBC -iv "aYlwUI4A9zL9tts4dMAq+A=="
+      
+      .. code-block::
+
+         Encrypted: Uk+9pgucdxTnbyIb/6+BDJef+HfRWhw+Eg3RcCvyHaU=
+         Initialization vector: aYlwUI4A9zL9tts4dMAq+A==
+
+   .. tab:: REST API
+      Information about the `/keys/{KeyID}/encrypt` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__encrypt>`__.
+
+This prints the encrypted and base64 encoded message ``NetHSM rulezzzzzzzzzzzzzzzzzzz!``, and the initialization vector.
+
+Data can be encrypted for asymmetric keys with OpenSSL as follows.
 
 .. code-block:: bash
 
    $ echo 'NetHSM rulez!' | openssl pkeyutl -encrypt -pubin -inkey public.pem | base64 > data.crypt
 
-This writes the encrypted and base64 encoded message ``NetHSM rulez!`` into the file ``data.crypt``.
+This writes the encrypted and base64 encoded message ``NetHSM rulez!`` into the file ``data.crypt``, using the public key from ``public.pem``.
 
 Decrypt
 ~~~~~~~
