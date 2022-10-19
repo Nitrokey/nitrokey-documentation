@@ -868,6 +868,9 @@ The reset to factory defaults can be performed as follows.
 
       .. code-block::
 
+         NetHSM localhost:8443 will be set to factory defaults.
+         All data will be lost!
+         Do you want to continue? [y/N]: y
          NetHSM localhost:8443 is about to perform a factory reset
    .. tab:: REST API
       Information about the `/system/factory-reset` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-factory-reset>`__.
