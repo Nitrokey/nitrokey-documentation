@@ -827,6 +827,8 @@ The remote reboot can be initiated as follows.
 
       .. code-block::
 
+         NetHSM localhost:8443 will be rebooted.
+         Do you want to continue? [y/N]: y
          NetHSM localhost:8443 is about to reboot
    .. tab:: REST API
       Information about the `/system/reboot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-reboot>`__.
