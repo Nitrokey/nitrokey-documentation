@@ -58,7 +58,7 @@ GUI Method
 CLI Method
 ''''''''''
 
-1. **Create a backup user and give it root pivileges**
+1. **Create a backup user and give it root privileges**
 
 You can do so by using these commands:
 
