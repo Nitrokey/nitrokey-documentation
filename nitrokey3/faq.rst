@@ -28,8 +28,10 @@ Nitrokey 3 FAQ
    only store cryptographic keys and certificates).
 
 **Q:** When will the OpenPGP card firmware be available?
-   This is very hard to predict at this point. We are aiming for mid of 2022,
-   but this is a very rough estimation with lots of uncertainties.
+   OpenPGP card functionnality is currently available as a beta firmware.
+   `The announcement <https://www.nitrokey.com/blog/2022/openpgp-card-alpha-nitrokey-3>`_
+   contains more information concerning the current status and installation instructions.
+
 
 **Q:** Why does the Nitrokey 3 not show up in GnuPG/Nitrokey App/nitropy?
    Currently the Nitrokey 3 does only show up and can be managed in
