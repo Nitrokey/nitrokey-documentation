@@ -12,6 +12,10 @@ Operating System Reinstallation
    drive on any computer which contains data you want to keep. Make sure
    to format the USB drive after the intended use.
 
+.. note::
+
+   Due to a bug Linux Mint 21 is currently not supported. The latest supported version is Linux Mint 20.1
+
 1. Download one of the operating system images: `Ubuntu
    Linux <https://www.nitrokey.com/files/ci/nitropad/ubuntu-oem/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/nitropad/qubes-oem/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropad/debian-oem/>`__,
    `Linux Mint <https://linuxmint.com/download.php>`__
