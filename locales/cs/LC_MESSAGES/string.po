@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-04 12:37+0100\n"
+"POT-Creation-Date: 2022-11-11 14:08+0100\n"
 "PO-Revision-Date: 2022-11-04 13:39+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/cs/>\n"
 "Language: cs\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/cs/>\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
@@ -864,35 +863,108 @@ msgstr ""
 msgid "Firmware Update"
 msgstr "Aktualizace firmwaru"
 
-#: ../fido2/shared/firmware-update.rst:10
+#: ../fido2/shared/firmware-update.rst:6
+#, fuzzy
+msgid "This guide describes how to update the firmware on the Nitrokey FIDO2."
+msgstr "Tento návod popisuje, jak aktualizovat firmware zařízení Nitrokey 3."
+
+#: ../fido2/shared/firmware-update.rst:9
+#, fuzzy
+msgid ""
+"**Currently updating the firmware will delete all user data!** Make sure "
+"you have proper backup login methods enabled and/or ensure that the "
+"Nitrokey FIDO2 is not the only way to authenticate/2FA for your "
+"applications/services."
+msgstr ""
+"**Aktuální aktualizace firmwaru odstraní všechna uživatelská data!** "
+"Ujistěte se, že máte povoleny správné záložní metody přihlašování a/nebo "
+"zajistěte, aby Nitrokey 3 nebyl jediným způsobem ověřování/2FA pro vaše "
+"aplikace/služby."
+
+#: ../fido2/shared/firmware-update.rst:15 ../nitrokey3/firmware-update.rst:19
+#: ../pro/firmware-update.rst:17
+msgid "How to Update"
+msgstr "Jak aktualizovat"
+
+#: ../fido2/shared/firmware-update.rst:18
+#, fuzzy
+msgid ""
+"Never disconnect the Nitrokey FIDO2 or abort the process while updating, "
+"this will likely render your device useless!"
+msgstr ""
+"Během aktualizace nikdy neodpojujte Nitrokey 3 ani nepřerušujte proces, "
+"protože by se tím zařízení pravděpodobně stalo nepoužitelným!"
+
+#: ../fido2/shared/firmware-update.rst:22
 msgid "Webupdate"
 msgstr "Webupdate"
 
-#: ../fido2/shared/firmware-update.rst:12
+#: ../fido2/shared/firmware-update.rst:24
 msgid ""
 "The easiest way to update a Nitrokey FIDO2 is to open "
 "`update.nitrokey.com <https://update.nitrokey.com>`_ in your browser and "
 "follow the instructions on the web page."
 msgstr ""
-"Nejjednodušší způsob aktualizace zařízení Nitrokey FIDO2 je otevřít `"
-"update.nitrokey.com <https://update.nitrokey.com>`_ v prohlížeči a "
+"Nejjednodušší způsob aktualizace zařízení Nitrokey FIDO2 je otevřít "
+"`update.nitrokey.com <https://update.nitrokey.com>`_ v prohlížeči a "
 "postupovat podle pokynů na webové stránce."
 
-#: ../fido2/shared/firmware-update.rst:15
-msgid "Update With nitropy"
-msgstr "Aktualizace s nitropy"
-
-#: ../fido2/shared/firmware-update.rst:17
-msgid ""
-"If the webupdate does not work for you, you can also use the nitropy CLI "
-"(installation guide: :doc:`../../software/nitropy/all-"
-"platforms/installation`).  Make sure that no other Nitrokey or FIDO2 "
-"devices are connected to your system and then run::"
+#: ../fido2/shared/firmware-update.rst:27
+msgid "Using the command line"
 msgstr ""
-"Pokud vám webupdate nefunguje, můžete také použít nitropy CLI (instalační "
-"příručka: :doc:`../../software/nitropy/all-platforms/installation`).  "
-"Ujistěte se, že k systému nejsou připojena žádná další zařízení Nitrokey "
-"nebo FIDO2, a poté spusťte::"
+
+#: ../fido2/shared/firmware-update.rst:29
+msgid ""
+"If the webupdate doesn't work for you, you can also use our command line "
+"tool."
+msgstr ""
+
+#: ../fido2/shared/firmware-update.rst:31 ../nitrokey3/firmware-update.rst:25
+msgid ""
+"Make sure you have the latest `pynitrokey` version installed, please "
+"check the `installation instructions`_ for your OS."
+msgstr ""
+"Ujistěte se, že máte nainstalovanou nejnovější verzi `pynitrokey`, "
+"zkontrolujte prosím `instalační pokyny`_ pro váš operační systém."
+
+#: ../fido2/shared/firmware-update.rst:32
+#, fuzzy
+msgid "Run ``nitropy fido update``."
+msgstr "Spustit ``nitropy nk3 update``."
+
+#: ../fido2/shared/firmware-update.rst:33 ../nitrokey3/firmware-update.rst:27
+msgid "Touch device to activate bootloader (once instructed by ``nitropy``)."
+msgstr "Dotykem zařízení aktivujete zavaděč (po zadání pokynu ``nitropy``)."
+
+#: ../fido2/shared/firmware-update.rst:34 ../nitrokey3/firmware-update.rst:28
+msgid "*macOS only:* Run update command again (once instructed by ``nitropy``)."
+msgstr ""
+"*pouze pro systém MacOS:* Spusťte znovu příkaz update (po zadání "
+"``nitropy``)."
+
+#: ../fido2/shared/firmware-update.rst:35 ../nitrokey3/firmware-update.rst:29
+msgid "Wait 3-10mins on macOS/Linux, 12-25mins on Windows."
+msgstr "V systému MacOS/Linux počkejte 3-10 minut, v systému Windows 12-25 minut."
+
+#: ../fido2/shared/firmware-update.rst:36 ../nitrokey3/firmware-update.rst:30
+msgid "The update is finished."
+msgstr "Aktualizace je dokončena"
+
+#: ../fido2/shared/firmware-update.rst:37 ../nitrokey3/firmware-update.rst:31
+msgid ""
+"*Optional*: run ``nitropy nk3 test`` to check if device is working "
+"properly after flashing."
+msgstr ""
+"*Volitelné*: spustit ``nitropy nk3 test`` pro kontrolu, zda zařízení po "
+"flashování funguje správně."
+
+#: ../fido2/shared/firmware-update.rst:39 ../nitrokey3/firmware-update.rst:33
+msgid ""
+"In case of any errors please take the logs from ``/tmp`` directory "
+"(``/tmp/nitropy.log.*``)."
+msgstr ""
+"V případě chyb si prosím vezměte protokoly z adresáře ``/tmp`` "
+"(``/tmp/nitropy.log.*``)."
 
 #: ../fido2/linux/index.rst:2
 msgid "FIDO2 With Linux"
@@ -10174,10 +10246,6 @@ msgstr ""
 "zajistěte, aby Nitrokey 3 nebyl jediným způsobem ověřování/2FA pro vaše "
 "aplikace/služby."
 
-#: ../nitrokey3/firmware-update.rst:19 ../pro/firmware-update.rst:17
-msgid "How to Update"
-msgstr "Jak aktualizovat"
-
 #: ../nitrokey3/firmware-update.rst:22
 msgid ""
 "Never disconnect the Nitrokey 3 or abort the process while updating, this"
@@ -10186,51 +10254,9 @@ msgstr ""
 "Během aktualizace nikdy neodpojujte Nitrokey 3 ani nepřerušujte proces, "
 "protože by se tím zařízení pravděpodobně stalo nepoužitelným!"
 
-#: ../nitrokey3/firmware-update.rst:25
-msgid ""
-"Make sure you have the latest `pynitrokey` version installed, please "
-"check the `installation instructions`_ for your OS."
-msgstr ""
-"Ujistěte se, že máte nainstalovanou nejnovější verzi `pynitrokey`, "
-"zkontrolujte prosím `instalační pokyny`_ pro váš operační systém."
-
 #: ../nitrokey3/firmware-update.rst:26
 msgid "Run ``nitropy nk3 update``."
 msgstr "Spustit ``nitropy nk3 update``."
-
-#: ../nitrokey3/firmware-update.rst:27
-msgid "Touch device to activate bootloader (once instructed by ``nitropy``)."
-msgstr "Dotykem zařízení aktivujete zavaděč (po zadání pokynu ``nitropy``)."
-
-#: ../nitrokey3/firmware-update.rst:28
-msgid "*macOS only:* Run update command again (once instructed by ``nitropy``)."
-msgstr ""
-"*pouze pro systém MacOS:* Spusťte znovu příkaz update (po zadání "
-"``nitropy``)."
-
-#: ../nitrokey3/firmware-update.rst:29
-msgid "Wait 3-10mins on macOS/Linux, 12-25mins on Windows."
-msgstr "V systému MacOS/Linux počkejte 3-10 minut, v systému Windows 12-25 minut."
-
-#: ../nitrokey3/firmware-update.rst:30
-msgid "The update is finished."
-msgstr "Aktualizace je dokončena"
-
-#: ../nitrokey3/firmware-update.rst:31
-msgid ""
-"*Optional*: run ``nitropy nk3 test`` to check if device is working "
-"properly after flashing."
-msgstr ""
-"*Volitelné*: spustit ``nitropy nk3 test`` pro kontrolu, zda zařízení po "
-"flashování funguje správně."
-
-#: ../nitrokey3/firmware-update.rst:33
-msgid ""
-"In case of any errors please take the logs from ``/tmp`` directory "
-"(``/tmp/nitropy.log.*``)."
-msgstr ""
-"V případě chyb si prosím vezměte protokoly z adresáře ``/tmp`` "
-"(``/tmp/nitropy.log.*``)."
 
 #: ../nitrokey3/index.rst:2
 msgid "Nitrokey 3"
@@ -10381,10 +10407,10 @@ msgid "Installation"
 msgstr "Instalace"
 
 #: ../nitrokey3/shared/nitropy.rst:11
+#, fuzzy
 msgid ""
-"Please see the `pynitrokey readme "
-"<https://github.com/Nitrokey/pynitrokey#installation>`__ for installation"
-" instructions."
+"Please see `this guide <https://docs.nitrokey.com/software/nitropy/all-"
+"platforms/installation>`__ for pynitrokey installation instructions."
 msgstr ""
 "Pokyny k instalaci naleznete v `pynitrokey readme "
 "<https://github.com/Nitrokey/pynitrokey#installation>`__."
@@ -11409,7 +11435,7 @@ msgstr "NitroPad"
 msgid "Operating System Reinstallation"
 msgstr "Přeinstalace operačního systému"
 
-#: ../nitropad/os-reinstallation.rst:10 ../nitropad/os-reinstallation.rst:44
+#: ../nitropad/os-reinstallation.rst:10 ../nitropad/os-reinstallation.rst:48
 #: ../nitropc/os-reinstallation.rst:10
 msgid ""
 "Booting this USB drive entirely erases all data on the hard disk or SSD "
@@ -11422,7 +11448,13 @@ msgstr ""
 "žádném počítači, který obsahuje data, jež chcete zachovat. Po zamýšleném "
 "použití nezapomeňte jednotku USB naformátovat."
 
-#: ../nitropad/os-reinstallation.rst:15
+#: ../nitropad/os-reinstallation.rst:17
+msgid ""
+"Due to a bug Linux Mint 21 is currently not supported. The latest "
+"supported version is Linux Mint 20.1"
+msgstr ""
+
+#: ../nitropad/os-reinstallation.rst:19
 msgid ""
 "Download one of the operating system images: `Ubuntu Linux "
 "<https://www.nitrokey.com/files/ci/nitropad/ubuntu-oem/>`__, `Qubes OS "
@@ -11436,7 +11468,7 @@ msgstr ""
 "<https://www.nitrokey.com/files/ci/nitropad/debian-oem/>`__, `Linux Mint "
 "<https://linuxmint.com/download.php>`__"
 
-#: ../nitropad/os-reinstallation.rst:19 ../nitropc/os-reinstallation.rst:19
+#: ../nitropad/os-reinstallation.rst:23 ../nitropc/os-reinstallation.rst:19
 msgid ""
 "Optional: Download hash sum and `verify <https://proprivacy.com/guides"
 "/how-why-and-when-you-should-hash-check#how-to-hash-check>`__ the "
@@ -11446,13 +11478,13 @@ msgstr ""
 "/how-why-and-when-you-should-hash-check#how-to-hash-check>`__ stažený "
 "obraz operačního systému."
 
-#: ../nitropad/os-reinstallation.rst:23 ../nitropc/os-reinstallation.rst:23
+#: ../nitropad/os-reinstallation.rst:27 ../nitropc/os-reinstallation.rst:23
 msgid "Write the operating system image to any USB drive. Possible applications:"
 msgstr ""
 "Obraz operačního systému můžete zapsat na libovolnou jednotku USB. Možné "
 "aplikace:"
 
-#: ../nitropad/os-reinstallation.rst:26 ../nitropc/os-reinstallation.rst:26
+#: ../nitropad/os-reinstallation.rst:30 ../nitropc/os-reinstallation.rst:26
 msgid ""
 "Windows: `Rufus <https://rufus.ie/>`__, `balenaEtcher "
 "<https://www.balena.io/etcher/>`__;"
@@ -11460,15 +11492,15 @@ msgstr ""
 "Windows: `Rufus <https://rufus.ie/>`__, `balenaEtcher "
 "<https://www.balena.io/etcher/>`__;"
 
-#: ../nitropad/os-reinstallation.rst:28 ../nitropc/os-reinstallation.rst:28
+#: ../nitropad/os-reinstallation.rst:32 ../nitropc/os-reinstallation.rst:28
 msgid "Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;"
 msgstr "Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;"
 
-#: ../nitropad/os-reinstallation.rst:29 ../nitropc/os-reinstallation.rst:29
+#: ../nitropad/os-reinstallation.rst:33 ../nitropc/os-reinstallation.rst:29
 msgid "macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__."
 msgstr "macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__."
 
-#: ../nitropad/os-reinstallation.rst:31
+#: ../nitropad/os-reinstallation.rst:35
 msgid ""
 "Connect the USB drive to your NitroPad and start it. In Heads menu select"
 " Boot Options -> USB Boot."
@@ -11476,7 +11508,7 @@ msgstr ""
 "Připojte jednotku USB k zařízení NitroPad a spusťte jej. V nabídce Heads "
 "vyberte Boot Options -> USB Boot."
 
-#: ../nitropad/os-reinstallation.rst:34 ../nitropc/os-reinstallation.rst:34
+#: ../nitropad/os-reinstallation.rst:38 ../nitropc/os-reinstallation.rst:34
 msgid ""
 "Depending on the operating system you may need to confirm its "
 "reinstallation."
@@ -11484,11 +11516,11 @@ msgstr ""
 "V závislosti na operačním systému může být nutné potvrdit jeho "
 "přeinstalování."
 
-#: ../nitropad/os-reinstallation.rst:37
+#: ../nitropad/os-reinstallation.rst:41
 msgid "`Sign the boot partition. <system-update.html>`_"
 msgstr "`Podepište spouštěcí oddíl. <system-update.html>`_"
 
-#: ../nitropad/os-reinstallation.rst:40 ../nitropc/os-reinstallation.rst:37
+#: ../nitropad/os-reinstallation.rst:44 ../nitropc/os-reinstallation.rst:37
 msgid ""
 "To avoid accidential overwriting of valuable data, format the USB drive "
 "afterwards."
@@ -14155,10 +14187,11 @@ msgstr ""
 "protože by se tím zařízení pravděpodobně stalo nepoužitelným!"
 
 #: ../pro/firmware-update.rst:23
+#, fuzzy
 msgid ""
 "Make sure you have the latest `pynitrokey` version installed, please "
-"check the `installation instructions "
-"<https://github.com/Nitrokey/pynitrokey#installation>`__ for your OS."
+"check the `installation instructions <../../software/nitropy/all-"
+"platforms/installation.html>`__ for your OS."
 msgstr ""
 "Ujistěte se, že máte nainstalovanou nejnovější verzi `pynitrokey`, "
 "zkontrolujte prosím `instalační pokyny "
@@ -25845,3 +25878,24 @@ msgstr ""
 #~ " předvídat. Naším cílem je polovina "
 #~ "roku 2022, ale jedná se o velmi"
 #~ " hrubý odhad s mnoha nejistotami."
+
+#~ msgid "Update With nitropy"
+#~ msgstr "Aktualizace s nitropy"
+
+#~ msgid ""
+#~ "If the webupdate does not work for"
+#~ " you, you can also use the "
+#~ "nitropy CLI (installation guide: "
+#~ ":doc:`../../software/nitropy/all-platforms/installation`).  "
+#~ "Make sure that no other Nitrokey "
+#~ "or FIDO2 devices are connected to "
+#~ "your system and then run::"
+#~ msgstr ""
+#~ "Pokud vám webupdate nefunguje, můžete "
+#~ "také použít nitropy CLI (instalační "
+#~ "příručka: :doc:`../../software/nitropy/all-"
+#~ "platforms/installation`).  Ujistěte se, že k"
+#~ " systému nejsou připojena žádná další "
+#~ "zařízení Nitrokey nebo FIDO2, a poté "
+#~ "spusťte::"
+

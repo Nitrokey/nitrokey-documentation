@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-04 12:37+0100\n"
+"POT-Creation-Date: 2022-11-11 14:08+0100\n"
 "PO-Revision-Date: 2022-11-04 13:39+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Lithuanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/lt/>\n"
 "Language: lt\n"
+"Language-Team: Lithuanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/lt/>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
@@ -883,35 +882,110 @@ msgstr ""
 msgid "Firmware Update"
 msgstr "Programinės įrangos atnaujinimas"
 
-#: ../fido2/shared/firmware-update.rst:10
+#: ../fido2/shared/firmware-update.rst:6
+#, fuzzy
+msgid "This guide describes how to update the firmware on the Nitrokey FIDO2."
+msgstr "Šiame vadove aprašoma, kaip atnaujinti \"Nitrokey 3\" programinę įrangą."
+
+#: ../fido2/shared/firmware-update.rst:9
+#, fuzzy
+msgid ""
+"**Currently updating the firmware will delete all user data!** Make sure "
+"you have proper backup login methods enabled and/or ensure that the "
+"Nitrokey FIDO2 is not the only way to authenticate/2FA for your "
+"applications/services."
+msgstr ""
+"**Atnaujinus programinę įrangą bus ištrinti visi naudotojo duomenys!** "
+"Įsitikinkite, kad yra įjungti tinkami atsarginiai prisijungimo metodai ir"
+" (arba) įsitikinkite, kad \"Nitrokey 3\" nėra vienintelis "
+"autentifikavimo/2FA būdas jūsų programoms ir (arba) paslaugoms."
+
+#: ../fido2/shared/firmware-update.rst:15 ../nitrokey3/firmware-update.rst:19
+#: ../pro/firmware-update.rst:17
+msgid "How to Update"
+msgstr "Kaip atnaujinti"
+
+#: ../fido2/shared/firmware-update.rst:18
+#, fuzzy
+msgid ""
+"Never disconnect the Nitrokey FIDO2 or abort the process while updating, "
+"this will likely render your device useless!"
+msgstr ""
+"Niekada neatjunkite \"Nitrokey 3\" arba nenutraukite proceso atnaujinimo "
+"metu, nes dėl to jūsų prietaisas gali tapti nenaudingas!"
+
+#: ../fido2/shared/firmware-update.rst:22
 msgid "Webupdate"
 msgstr "\"Webupdate\""
 
-#: ../fido2/shared/firmware-update.rst:12
+#: ../fido2/shared/firmware-update.rst:24
 msgid ""
 "The easiest way to update a Nitrokey FIDO2 is to open "
 "`update.nitrokey.com <https://update.nitrokey.com>`_ in your browser and "
 "follow the instructions on the web page."
 msgstr ""
-"Paprasčiausias būdas atnaujinti \"Nitrokey FIDO2\" - naršyklėje atidaryti `"
-"update.nitrokey.com <https://update.nitrokey.com>`_ ir vadovautis "
+"Paprasčiausias būdas atnaujinti \"Nitrokey FIDO2\" - naršyklėje atidaryti"
+" `update.nitrokey.com <https://update.nitrokey.com>`_ ir vadovautis "
 "tinklalapyje pateiktais nurodymais."
 
-#: ../fido2/shared/firmware-update.rst:15
-msgid "Update With nitropy"
-msgstr "Atnaujinti su nitropija"
-
-#: ../fido2/shared/firmware-update.rst:17
-msgid ""
-"If the webupdate does not work for you, you can also use the nitropy CLI "
-"(installation guide: :doc:`../../software/nitropy/all-"
-"platforms/installation`).  Make sure that no other Nitrokey or FIDO2 "
-"devices are connected to your system and then run::"
+#: ../fido2/shared/firmware-update.rst:27
+msgid "Using the command line"
 msgstr ""
-"Jei \"webupdate\" neveikia, taip pat galite naudoti \"nitropy CLI\" (diegimo "
-"vadovas: :doc:`../../../software/nitropy/all-platforms/installation`).  "
-"Įsitikinkite, kad prie jūsų sistemos nėra prijungti jokie kiti \"Nitrokey\" "
-"ar FIDO2 įrenginiai, tada paleiskite::"
+
+#: ../fido2/shared/firmware-update.rst:29
+msgid ""
+"If the webupdate doesn't work for you, you can also use our command line "
+"tool."
+msgstr ""
+
+#: ../fido2/shared/firmware-update.rst:31 ../nitrokey3/firmware-update.rst:25
+msgid ""
+"Make sure you have the latest `pynitrokey` version installed, please "
+"check the `installation instructions`_ for your OS."
+msgstr ""
+"Įsitikinkite, kad įdiegta naujausia `pynitrokey` versija, patikrinkite "
+"savo OS `įdiegimo instrukcijas`_."
+
+#: ../fido2/shared/firmware-update.rst:32
+#, fuzzy
+msgid "Run ``nitropy fido update``."
+msgstr "Vykdyti ``nitropy nk3 update``."
+
+#: ../fido2/shared/firmware-update.rst:33 ../nitrokey3/firmware-update.rst:27
+msgid "Touch device to activate bootloader (once instructed by ``nitropy``)."
+msgstr "Palieskite įrenginį, kad įjungtumėte įkroviklį (gavę nurodymą ``nitropy``)"
+
+#: ../fido2/shared/firmware-update.rst:34 ../nitrokey3/firmware-update.rst:28
+msgid "*macOS only:* Run update command again (once instructed by ``nitropy``)."
+msgstr ""
+"*tik \"MacOS\":* Dar kartą paleiskite atnaujinimo komandą (kai tik "
+"nurodys ``nitropy``)"
+
+#: ../fido2/shared/firmware-update.rst:35 ../nitrokey3/firmware-update.rst:29
+msgid "Wait 3-10mins on macOS/Linux, 12-25mins on Windows."
+msgstr ""
+"\"MacOS/Linux\" sistemoje palaukite 3-10 minučių, \"Windows\" sistemoje -"
+" 12-25 minutes."
+
+#: ../fido2/shared/firmware-update.rst:36 ../nitrokey3/firmware-update.rst:30
+msgid "The update is finished."
+msgstr "Atnaujinimas baigtas"
+
+#: ../fido2/shared/firmware-update.rst:37 ../nitrokey3/firmware-update.rst:31
+msgid ""
+"*Optional*: run ``nitropy nk3 test`` to check if device is working "
+"properly after flashing."
+msgstr ""
+"*Pagal pageidavimą*: paleiskite ``nitropy nk3 test``, kad patikrintumėte,"
+" ar įrenginys veikia tinkamai po mirksėjimo"
+
+#: ../fido2/shared/firmware-update.rst:39 ../nitrokey3/firmware-update.rst:33
+msgid ""
+"In case of any errors please take the logs from ``/tmp`` directory "
+"(``/tmp/nitropy.log.*``)."
+msgstr ""
+"Jei pasitaiko klaidų, paimkite žurnalus iš ``</x id=\"50\"></x>`` "
+"katalogo (``</x>`/tmp/nitropy.log.*``)."
 
 #: ../fido2/linux/index.rst:2
 msgid "FIDO2 With Linux"
@@ -10331,10 +10405,6 @@ msgstr ""
 " (arba) įsitikinkite, kad \"Nitrokey 3\" nėra vienintelis "
 "autentifikavimo/2FA būdas jūsų programoms ir (arba) paslaugoms."
 
-#: ../nitrokey3/firmware-update.rst:19 ../pro/firmware-update.rst:17
-msgid "How to Update"
-msgstr "Kaip atnaujinti"
-
 #: ../nitrokey3/firmware-update.rst:22
 msgid ""
 "Never disconnect the Nitrokey 3 or abort the process while updating, this"
@@ -10343,53 +10413,9 @@ msgstr ""
 "Niekada neatjunkite \"Nitrokey 3\" arba nenutraukite proceso atnaujinimo "
 "metu, nes dėl to jūsų prietaisas gali tapti nenaudingas!"
 
-#: ../nitrokey3/firmware-update.rst:25
-msgid ""
-"Make sure you have the latest `pynitrokey` version installed, please "
-"check the `installation instructions`_ for your OS."
-msgstr ""
-"Įsitikinkite, kad įdiegta naujausia `pynitrokey` versija, patikrinkite "
-"savo OS `įdiegimo instrukcijas`_."
-
 #: ../nitrokey3/firmware-update.rst:26
 msgid "Run ``nitropy nk3 update``."
 msgstr "Vykdyti ``nitropy nk3 update``."
-
-#: ../nitrokey3/firmware-update.rst:27
-msgid "Touch device to activate bootloader (once instructed by ``nitropy``)."
-msgstr "Palieskite įrenginį, kad įjungtumėte įkroviklį (gavę nurodymą ``nitropy``)"
-
-#: ../nitrokey3/firmware-update.rst:28
-msgid "*macOS only:* Run update command again (once instructed by ``nitropy``)."
-msgstr ""
-"*tik \"MacOS\":* Dar kartą paleiskite atnaujinimo komandą (kai tik "
-"nurodys ``nitropy``)"
-
-#: ../nitrokey3/firmware-update.rst:29
-msgid "Wait 3-10mins on macOS/Linux, 12-25mins on Windows."
-msgstr ""
-"\"MacOS/Linux\" sistemoje palaukite 3-10 minučių, \"Windows\" sistemoje -"
-" 12-25 minutes."
-
-#: ../nitrokey3/firmware-update.rst:30
-msgid "The update is finished."
-msgstr "Atnaujinimas baigtas"
-
-#: ../nitrokey3/firmware-update.rst:31
-msgid ""
-"*Optional*: run ``nitropy nk3 test`` to check if device is working "
-"properly after flashing."
-msgstr ""
-"*Pagal pageidavimą*: paleiskite ``nitropy nk3 test``, kad patikrintumėte,"
-" ar įrenginys veikia tinkamai po mirksėjimo"
-
-#: ../nitrokey3/firmware-update.rst:33
-msgid ""
-"In case of any errors please take the logs from ``/tmp`` directory "
-"(``/tmp/nitropy.log.*``)."
-msgstr ""
-"Jei pasitaiko klaidų, paimkite žurnalus iš ``</x id=\"50\"></x>`` "
-"katalogo (``</x>`/tmp/nitropy.log.*``)."
 
 #: ../nitrokey3/index.rst:2
 msgid "Nitrokey 3"
@@ -10545,10 +10571,10 @@ msgid "Installation"
 msgstr "Įrengimas"
 
 #: ../nitrokey3/shared/nitropy.rst:11
+#, fuzzy
 msgid ""
-"Please see the `pynitrokey readme "
-"<https://github.com/Nitrokey/pynitrokey#installation>`__ for installation"
-" instructions."
+"Please see `this guide <https://docs.nitrokey.com/software/nitropy/all-"
+"platforms/installation>`__ for pynitrokey installation instructions."
 msgstr ""
 "Diegimo instrukcijas rasite `pynitrokey readme "
 "<https://github.com/Nitrokey/pynitrokey#installation>`__."
@@ -11580,7 +11606,7 @@ msgstr "\"NitroPad\""
 msgid "Operating System Reinstallation"
 msgstr "Operacinės sistemos perinstaliavimas"
 
-#: ../nitropad/os-reinstallation.rst:10 ../nitropad/os-reinstallation.rst:44
+#: ../nitropad/os-reinstallation.rst:10 ../nitropad/os-reinstallation.rst:48
 #: ../nitropc/os-reinstallation.rst:10
 msgid ""
 "Booting this USB drive entirely erases all data on the hard disk or SSD "
@@ -11594,7 +11620,13 @@ msgstr ""
 "kuriuos norite išsaugoti. Po numatyto naudojimo būtinai suformatuokite "
 "USB diską."
 
-#: ../nitropad/os-reinstallation.rst:15
+#: ../nitropad/os-reinstallation.rst:17
+msgid ""
+"Due to a bug Linux Mint 21 is currently not supported. The latest "
+"supported version is Linux Mint 20.1"
+msgstr ""
+
+#: ../nitropad/os-reinstallation.rst:19
 msgid ""
 "Download one of the operating system images: `Ubuntu Linux "
 "<https://www.nitrokey.com/files/ci/nitropad/ubuntu-oem/>`__, `Qubes OS "
@@ -11608,7 +11640,7 @@ msgstr ""
 "<https://www.nitrokey.com/files/ci/nitropad/debian-oem/>`__, `Linux Mint "
 "<https://linuxmint.com/download.php>`__"
 
-#: ../nitropad/os-reinstallation.rst:19 ../nitropc/os-reinstallation.rst:19
+#: ../nitropad/os-reinstallation.rst:23 ../nitropc/os-reinstallation.rst:19
 msgid ""
 "Optional: Download hash sum and `verify <https://proprivacy.com/guides"
 "/how-why-and-when-you-should-hash-check#how-to-hash-check>`__ the "
@@ -11618,13 +11650,13 @@ msgstr ""
 "<https://proprivacy.com/guides/how-why-and-when-you-should-hash-check"
 "#how-to-hash-check>`__ atsisiųstą operacinės sistemos atvaizdą."
 
-#: ../nitropad/os-reinstallation.rst:23 ../nitropc/os-reinstallation.rst:23
+#: ../nitropad/os-reinstallation.rst:27 ../nitropc/os-reinstallation.rst:23
 msgid "Write the operating system image to any USB drive. Possible applications:"
 msgstr ""
 "Įrašykite operacinės sistemos atvaizdą į bet kurį USB diską. Galimos "
 "programos:"
 
-#: ../nitropad/os-reinstallation.rst:26 ../nitropc/os-reinstallation.rst:26
+#: ../nitropad/os-reinstallation.rst:30 ../nitropc/os-reinstallation.rst:26
 msgid ""
 "Windows: `Rufus <https://rufus.ie/>`__, `balenaEtcher "
 "<https://www.balena.io/etcher/>`__;"
@@ -11632,15 +11664,15 @@ msgstr ""
 "\"Windows\": `Rufus <https://rufus.ie/>`__, `balenaEtcher "
 "<https://www.balena.io/etcher/>`__;"
 
-#: ../nitropad/os-reinstallation.rst:28 ../nitropc/os-reinstallation.rst:28
+#: ../nitropad/os-reinstallation.rst:32 ../nitropc/os-reinstallation.rst:28
 msgid "Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;"
 msgstr "\"Linux\": ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;"
 
-#: ../nitropad/os-reinstallation.rst:29 ../nitropc/os-reinstallation.rst:29
+#: ../nitropad/os-reinstallation.rst:33 ../nitropc/os-reinstallation.rst:29
 msgid "macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__."
 msgstr "\"macOS\": ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__."
 
-#: ../nitropad/os-reinstallation.rst:31
+#: ../nitropad/os-reinstallation.rst:35
 msgid ""
 "Connect the USB drive to your NitroPad and start it. In Heads menu select"
 " Boot Options -> USB Boot."
@@ -11648,7 +11680,7 @@ msgstr ""
 "Prijunkite USB diską prie \"NitroPad\" ir įjunkite jį. Galvos meniu "
 "pasirinkite Boot Options -> USB Boot."
 
-#: ../nitropad/os-reinstallation.rst:34 ../nitropc/os-reinstallation.rst:34
+#: ../nitropad/os-reinstallation.rst:38 ../nitropc/os-reinstallation.rst:34
 msgid ""
 "Depending on the operating system you may need to confirm its "
 "reinstallation."
@@ -11656,11 +11688,11 @@ msgstr ""
 "Priklausomai nuo operacinės sistemos, gali tekti patvirtinti, kad ji iš "
 "naujo įdiegta."
 
-#: ../nitropad/os-reinstallation.rst:37
+#: ../nitropad/os-reinstallation.rst:41
 msgid "`Sign the boot partition. <system-update.html>`_"
 msgstr "`Pasirašykite įkrovos skirsnį. <system-update.html>`_"
 
-#: ../nitropad/os-reinstallation.rst:40 ../nitropc/os-reinstallation.rst:37
+#: ../nitropad/os-reinstallation.rst:44 ../nitropc/os-reinstallation.rst:37
 msgid ""
 "To avoid accidential overwriting of valuable data, format the USB drive "
 "afterwards."
@@ -14357,10 +14389,11 @@ msgstr ""
 "metu, nes dėl to jūsų prietaisas gali tapti nenaudingas!"
 
 #: ../pro/firmware-update.rst:23
+#, fuzzy
 msgid ""
 "Make sure you have the latest `pynitrokey` version installed, please "
-"check the `installation instructions "
-"<https://github.com/Nitrokey/pynitrokey#installation>`__ for your OS."
+"check the `installation instructions <../../software/nitropy/all-"
+"platforms/installation.html>`__ for your OS."
 msgstr ""
 "Įsitikinkite, kad įdiegta naujausia `pynitrokey` versija, žr. diegimo "
 "instrukcijas <https://github.com/Nitrokey/pynitrokey#installation>`__, "
@@ -26164,3 +26197,24 @@ msgstr ""
 #~ "viduryje, tačiau tai yra labai "
 #~ "apytikslis įvertinimas su daugybe "
 #~ "neapibrėžtumų."
+
+#~ msgid "Update With nitropy"
+#~ msgstr "Atnaujinti su nitropija"
+
+#~ msgid ""
+#~ "If the webupdate does not work for"
+#~ " you, you can also use the "
+#~ "nitropy CLI (installation guide: "
+#~ ":doc:`../../software/nitropy/all-platforms/installation`).  "
+#~ "Make sure that no other Nitrokey "
+#~ "or FIDO2 devices are connected to "
+#~ "your system and then run::"
+#~ msgstr ""
+#~ "Jei \"webupdate\" neveikia, taip pat "
+#~ "galite naudoti \"nitropy CLI\" (diegimo "
+#~ "vadovas: :doc:`../../../software/nitropy/all-"
+#~ "platforms/installation`).  Įsitikinkite, kad prie"
+#~ " jūsų sistemos nėra prijungti jokie "
+#~ "kiti \"Nitrokey\" ar FIDO2 įrenginiai, "
+#~ "tada paleiskite::"
+
