@@ -24,11 +24,10 @@ How to Update
 
 1. Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions`_ for your OS.
 2. Run ``nitropy nk3 update``.
-3. Touch device to activate bootloader (once instructed by ``nitropy``).
-4. *macOS only:* Run update command again (once instructed by ``nitropy``).
-5. Wait 3-10mins on macOS/Linux, 12-25mins on Windows.
-6. The update is finished.
-7. *Optional*: run ``nitropy nk3 test`` to check if device is working properly after flashing.
+3. Once instructed by ``nitropy`` touch the device to activate bootloader.
+4. *macOS only:* If instructed by ``nitropy`` run update command again.
+5. Please wait until the process finished. (This may vary depending on your operating system)
+6. *Optional*: run ``nitropy nk3 test`` to check if device is working properly after flashing.
 
 In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitropy.log.*``).
 

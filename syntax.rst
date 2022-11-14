@@ -118,6 +118,10 @@ This is a plain link https://foobar.bas/slug1/slug2
 
 This line contains the product name Nitrokey Start an should not be altered by the translation.
 
+
+This command automatically inserts the title of an internal doc page you link to
+::doc:: /link/to/doc
+
 Mark cropped Output
 -------------------
 
