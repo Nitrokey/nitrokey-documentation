@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-14 13:33+0100\n"
+"POT-Creation-Date: 2022-11-28 16:08+0100\n"
 "PO-Revision-Date: 2022-11-14 13:39+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Finnish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/fi/>\n"
 "Language: fi\n"
+"Language-Team: Finnish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/fi/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
@@ -172,8 +171,9 @@ msgstr "Windows"
 msgid "macOS"
 msgstr "macOS"
 
-#: ../fido2/index.rst:16 ../hsm/index.rst:16 ../nextbox/clients/index.rst:8
-#: ../nitrokey3/index.rst:23 ../pro/index.rst:17
+#: ../fido2/index.rst:16 ../hsm/index.rst:16
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:40
+#: ../nextbox/clients/index.rst:8 ../nitrokey3/index.rst:23 ../pro/index.rst:17
 #: ../software/nitropy/all-platforms/installation.rst:84
 #: ../software/nitropy/index.rst:6 ../start/index.rst:16
 #: ../storage/index.rst:16 ../u2f/index.rst:8
@@ -890,8 +890,8 @@ msgid ""
 "service, if for some reason your data is not retained."
 msgstr ""
 "Käyttäjätiedot säilyvät laiteohjelmiston päivityksen aikana. Muista "
-"kuitenkin **aina** rekisteröidä palveluun toinen laite (tai kirjautumistapa)"
-", jos tietojasi ei jostain syystä säilytetä."
+"kuitenkin **aina** rekisteröidä palveluun toinen laite (tai "
+"kirjautumistapa), jos tietojasi ei jostain syystä säilytetä."
 
 #: ../fido2/shared/firmware-update.rst:12 ../nitrokey3/firmware-update.rst:19
 #: ../pro/firmware-update.rst:17
@@ -2828,6 +2828,7 @@ msgstr ""
 msgid "Nitrokey Pro 2, Nitrokey Storage 2, or Nitrokey HSM 2"
 msgstr "Nitrokey Pro 2, Nitrokey Storage 2 tai Nitrokey HSM 2."
 
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:53
 #: ../nextbox/external-storage.rst:18 ../pro/linux/automatic-screen-lock.rst:21
 msgid "Configuration"
 msgstr "Konfigurointi"
@@ -5963,6 +5964,315 @@ msgstr ""
 msgid "Guides"
 msgstr "Oppaat"
 
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:2
+msgid "PKCS#11 with pkcs11-tool"
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:4
+msgid ""
+"This guide describes the use of the PKCS#11 driver for the NetHSM. The "
+"guide uses tools from `OpenSC <https://github.com/OpenSC/OpenSC>`__. "
+"Please refer to their documentation to learn how to use them on your "
+"operating system."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:9 ../nethsm/integration.rst:16
+#, fuzzy
+msgid ""
+"This driver is still an early Proof of Concept implementation that only "
+"implements the functions that are necessary for operating TLS servers."
+msgstr ""
+"Tämä ajuri on vielä varhainen Proof of Concept -toteutus, joka toteuttaa "
+"vain TLS-palvelimien, kuten esimerkiksi HTTPS-palvelimen, käyttämiseen "
+"tarvittavat toiminnot."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:13
+#: ../nitrokey3/shared/nitropy.rst:9 ../pro/openpgp-thunderbird.rst:28
+#: ../software/nitropy/all-platforms/installation.rst:33
+msgid "Installation"
+msgstr "Asennus"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:16
+msgid "Install precompiled library"
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:18
+msgid ""
+"Download an archive with the latest release from the `releases page "
+"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the "
+"repository. Use the release archive which contains the name of your "
+"operating system in the title."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:21
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:36
+msgid ""
+"Extract the files from the downloaded archive with an archiving programm "
+"of your choice."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:23
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:49
+msgid ""
+"Copy the extracted library to the respective path in your operating "
+"system. The path depends on your installation and configuration of "
+"OpenSC."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:27
+msgid "Compile from source code"
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:30
+msgid ""
+"This driver can only be compiled with the official Go compiler. Do not "
+"use the GNU Go compiler (GCC-Go). Please refer to their `website "
+"<https://go.dev/doc/install>`__ to learn how to install it."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:34
+msgid ""
+"Download an archive with the latest release from the `releases page "
+"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the "
+"repository. Use the release archive which contains `Source code` in the "
+"title."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:37
+msgid ""
+"In the directory with the extracted source code execute the following "
+"command to compile the library."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:44
+#, fuzzy
+msgid "MacOS"
+msgstr "macOS"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:55
+msgid ""
+"The configuration file `p11nethsm.conf` is required and used to configure"
+" the connection between the PKCS#11 driver and the NetHSM."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:57
+#, fuzzy
+msgid "An example configuration file looks like follows."
+msgstr "Syslog-palvelimen asetukset voidaan määrittää seuraavasti."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:60
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:91
+#, fuzzy
+msgid "Linux and MacOS"
+msgstr "Windows, Linux ja macOS."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:78
+msgid ""
+"Modify the configuration file `p11nethsm.conf` according to your "
+"environment."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:80
+msgid ""
+"The configuration file can include multiple slots, inside the `slots` "
+"array. The slots represent multiple NetHSM deployments. The `label` field"
+" of a slot needs to contain a unique name. The `url`, `user`, and "
+"`password` keys are mandatory. For security reasons it is recommended to "
+"pass the password in an environment variable. For this the "
+"`env:NETHSM_PASS` is passed in the `password` key, where `NETHSM_PASS` is"
+" the name of the environment variable containing the password. The "
+"`certSHA256` key needs to be set if the TLS certificate is not signed by "
+"a Certificate Authority (CA) contained in the certificate store of the "
+"operating system."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:88
+msgid ""
+"The configuration file needs to be saved either in the following paths or"
+" in the directory the application is executed."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:92
+msgid "`$HOME/.nitrokey`"
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:93
+msgid "`/etc/nitrokey/`"
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:96 ../nethsm/operation.rst:11
+msgid "Key Management"
+msgstr "Avainten hallinta"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:99
+#, fuzzy
+msgid "Info"
+msgstr "ei"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:101
+msgid "Show information about the cryptoki version, and the PKCS#11 driver."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:115
+#, fuzzy
+msgid "List Slots"
+msgstr "Luettelo käyttäjistä"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:117
+msgid ""
+"The information about the available slots. The listed slots depend on the"
+" configuration of the slots array in the `p11nethsm.conf` configuration "
+"file. To learn more about the configuration of slots, please refer to "
+"chapter `Configuration <pkcs11_with_pkcs11-tool.html#configuration>`_."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:139
+msgid ""
+"If your configuration supports more than one slot, you maybe have to add "
+"the `--slot <arg>` option in pkcs11-tool commands to use the right one."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:142 ../nethsm/operation.rst:14
+msgid "Generate Key"
+msgstr "Luo avain"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:144
+msgid "Generate a key-pair and store it on the NetHSM."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:147
+msgid ""
+"The PKCS#11 driver currently does not support this feature. A key-pair "
+"can be generated with *nitropy* or a REST API request. To learn more "
+"about how to generate a key, please refer to chapter `Generate Key "
+"<../operation.html#generate-key>`_."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:152 ../nethsm/operation.rst:226
+msgid "List Keys"
+msgstr "Luetteloavaimet"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:154
+msgid ""
+"Show information about the keys and certificates in the *Key Store* on a "
+"NetHSM."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:175
+msgid "Read Keys"
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:177
+msgid ""
+"Read keys and certificates from the *Key Store* on a NetHSM. It is not "
+"possible to read private keys from the NetHSM."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:180
+#, fuzzy
+msgid "The public key of a key-pair can be read as follows."
+msgstr "Avaimen julkinen avain voidaan hakea seuraavasti."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:186
+#, fuzzy
+msgid "The certificate of a key-pair can be read as follows."
+msgstr "Varmenne voidaan korvata seuraavasti."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:192
+msgid ""
+"The returned certificates or public keys are ASN.1 encoded. The data can "
+"be decoded with the *dumpasn1* tool, as it contains data in DER format. "
+"The DER format can be converted to PEM format with OpenSSL."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:197
+#, fuzzy
+msgid "Write Keys"
+msgstr "Luetteloavaimet"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:199
+#, fuzzy
+msgid "Write keys and certificates to the *Key Store* on a NetHSM."
+msgstr ""
+"NetHSM:ään tallennettujen avainten varmenteita on mahdollista asettaa ja "
+"kysyä."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:201
+#, fuzzy
+msgid "The private key of a key-pair can be wrote as follows."
+msgstr "Avaimen julkinen avain voidaan hakea seuraavasti."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:207
+#, fuzzy
+msgid "The public key of a key-pair can be wrote as follows."
+msgstr "Avaimen julkinen avain voidaan hakea seuraavasti."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:213
+#, fuzzy
+msgid "The certificate of a key-pair can be wrote as follows."
+msgstr "Varmenne voidaan asettaa seuraavasti."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:220 ../nethsm/operation.rst:588
+msgid "Key Operations"
+msgstr "Tärkeimmät toiminnot"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:223 ../nethsm/operation.rst:591
+msgid "Encrypt"
+msgstr "Salaa"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:225
+msgid ""
+"The NetHSM can not encrypt data with asymmetric keys, but it provides the"
+" public key which can be used for encryption. Please refer to chapter "
+"`Show Key Details <operation.html#show-key-details>`__, or retrieve the "
+"key as described in chapter `Read Keys <pkcs11_with_pkcs11.html#read-"
+"keys>`, to learn more about how to retrieve the public key. The example "
+"assumes the public key in the `public.pem` file."
+msgstr ""
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:230 ../nethsm/operation.rst:596
+msgid "Data can be encrypted with OpenSSL as follows."
+msgstr "Tiedot voidaan salata OpenSSL:llä seuraavasti."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:242 ../nethsm/operation.rst:605
+msgid "Decrypt"
+msgstr "Purkakaa salaus"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:244
+#, fuzzy
+msgid ""
+"The NetHSM can decrypt data for a private key stored in the *Key Store* "
+"on the NetHSM. This example uses the encrypted message from the previous "
+"chapter `Encrypt <pkcs11_with_pkcs11-tool.html#encrypt>`__."
+msgstr ""
+"NetHSM voi purkaa tietoja NetHSM:n *Key Store*:iin tallennetulla "
+"yksityisellä avaimella. Tässä esimerkissä käytetään edellisen luvun "
+"salattua viestiä `Salaa <operation.html#encrypt>`__."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:260 ../nethsm/operation.rst:655
+msgid "Sign"
+msgstr "Kirjaudu"
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:262 ../nethsm/operation.rst:657
+msgid ""
+"The NetHSM can sign data for a private key stored in the *Key Store* on "
+"the NetHSM. For signatures with a RSA and ECDSA key, a digest must be "
+"calculate first."
+msgstr ""
+"NetHSM voi allekirjoittaa tietoja yksityisellä avaimella, joka on "
+"tallennettu NetHSM:n *Key Store*:iin. RSA- ja ECDSA-avaimella tehtäviä "
+"allekirjoituksia varten on ensin laskettava digesti."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:265 ../nethsm/operation.rst:660
+msgid ""
+"To calculate a digest the data is required first. A message is created as"
+" follows."
+msgstr "Digestin laskemiseksi tarvitaan ensin tiedot. Viesti luodaan seuraavasti."
+
+#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:275 ../nethsm/operation.rst:712
+msgid "The created signature can be verified with OpenSSL as follows."
+msgstr "Luotu allekirjoitus voidaan todentaa OpenSSL:llä seuraavasti."
+
 #: ../nethsm/index.rst:2
 msgid "NetHSM"
 msgstr "NetHSM"
@@ -6044,80 +6354,28 @@ msgstr ""
 "kaikille käyttäjäryhmille."
 
 #: ../nethsm/integration.rst:7
-msgid "PKCS#11 driver"
-msgstr "PKCS#11-ajuri"
-
-#: ../nethsm/integration.rst:10
-msgid ""
-"This driver is still an early Proof of Concept implementation that only "
-"implements the functions that are necessary for operating TLS servers, "
-"like for example an HTTPS server."
+msgid "PKCS#11"
 msgstr ""
-"Tämä ajuri on vielä varhainen Proof of Concept -toteutus, joka toteuttaa "
-"vain TLS-palvelimien, kuten esimerkiksi HTTPS-palvelimen, käyttämiseen "
-"tarvittavat toiminnot."
+
+#: ../nethsm/integration.rst:9
+msgid ""
+"The NetHSM supports the PKCS#11 standard. The required driver is "
+"available from the `repository <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`__. The repository containes the source code and libraries, for "
+"different operating systems."
+msgstr ""
 
 #: ../nethsm/integration.rst:13
 msgid ""
-"Download the `PKCS#11 driver <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`_ for NetHSM."
+"The `PKCS#11 guide <guides/pkcs11_with_pkcs11-tool.html>`_ describes how "
+"to use them in detail."
 msgstr ""
-"Lataa `PKCS#11-ajuri <https://github.com/Nitrokey/nethsm-pkcs11>`_ "
-"NetHSM:lle."
 
-#: ../nethsm/integration.rst:14
-msgid ""
-"Modify the configuration file `p11nethsm.conf` according to your setup "
-"(e.g. address, operator name) and store it in `$HOME/.nitrokey`, "
-"`/etc/nitrokey/`, or in the folder where your application is executed."
-msgstr ""
-"Muokkaa konfiguraatiotiedostoa `p11nethsm.conf` asetustesi mukaan (esim. "
-"osoite, operaattorin nimi) ja tallenna se `$HOME/.nitrokey`, "
-"`/etc/nitrokey/` tai kansioon, jossa sovelluksesi suoritetaan."
-
-#: ../nethsm/integration.rst:19
-msgid "Encrypting & Decrypting"
-msgstr "Salaus & salauksen purku"
-
-#: ../nethsm/integration.rst:21
-msgid ""
-"After creating a key (here: ID 42) with the according mechanism, you can "
-"use it for encryption and decryption, but first you should create the "
-"key:"
-msgstr ""
-"Kun olet luonut avaimen (tässä: ID 42) vastaavalla mekanismilla, voit "
-"käyttää sitä salaukseen ja salauksen purkamiseen, mutta ensin sinun on "
-"luotava avain:"
-
-#: ../nethsm/integration.rst:36
-msgid "Now you can encrypt:"
-msgstr "Nyt voit salata:"
-
-#: ../nethsm/integration.rst:43
-msgid "And decrypt:"
-msgstr "Ja purkaa salaus:"
-
-#: ../nethsm/integration.rst:50
-msgid "Signing"
-msgstr "Allekirjoitus"
-
-#: ../nethsm/integration.rst:52
-msgid "First create the key again:"
-msgstr "Luo avain ensin uudelleen:"
-
-#: ../nethsm/integration.rst:66
-msgid ""
-"After creating a key (here: ID 23) with the according mechanism, you can "
-"use it for signing:"
-msgstr ""
-"Kun olet luonut avaimen (tässä: ID 23) vastaavalla mekanismilla, voit "
-"käyttää sitä allekirjoittamiseen:"
-
-#: ../nethsm/integration.rst:77
+#: ../nethsm/integration.rst:20
 msgid "Development and Testing"
 msgstr "Kehittäminen ja testaus"
 
-#: ../nethsm/integration.rst:79
+#: ../nethsm/integration.rst:22
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com>`_."
@@ -6125,7 +6383,7 @@ msgstr ""
 "Julkinen NetHSM-demoinstanssi on saatavilla osoitteessa "
 "`nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com>`_."
 
-#: ../nethsm/integration.rst:81
+#: ../nethsm/integration.rst:24
 msgid ""
 "Alternatively, you can run the NetHSM as a `Docker container "
 "<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The NetHSM "
@@ -6140,16 +6398,16 @@ msgstr ""
 "tarvitaan Linux-isäntä, jossa on käytettävissä `/dev/kvm`. Suorita tämä "
 "komento:"
 
-#: ../nethsm/integration.rst:86 ../nethsm/integration.rst:100
-#: ../nethsm/integration.rst:108
+#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:43
+#: ../nethsm/integration.rst:51
 msgid "Docker"
 msgstr "Docker"
 
-#: ../nethsm/integration.rst:92
+#: ../nethsm/integration.rst:35
 msgid "Integration into Custom Application"
 msgstr "Integrointi mukautettuun sovellukseen"
 
-#: ../nethsm/integration.rst:94
+#: ../nethsm/integration.rst:37
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Therefore, we "
@@ -6161,17 +6419,17 @@ msgstr ""
 " käyttämään `OpenAPI Generator <https://github.com/OpenAPITools/openapi-"
 "generator>`_."
 
-#: ../nethsm/integration.rst:97
+#: ../nethsm/integration.rst:40
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "Kaikkien käytettävissä olevien kielten luettelo voidaan hakea seuraavasti."
 
-#: ../nethsm/integration.rst:105
+#: ../nethsm/integration.rst:48
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
 msgstr "NetHSM-asiakasohjelma voidaan luoda ohjelmointikielellesi seuraavasti."
 
-#: ../nethsm/integration.rst:113
+#: ../nethsm/integration.rst:56
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -6181,11 +6439,11 @@ msgstr ""
 "``./out/``. Tämä kansio sisältää myös tarvittavan dokumentaation, miten "
 "sitä käytetään."
 
-#: ../nethsm/integration.rst:117
+#: ../nethsm/integration.rst:60
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../nethsm/integration.rst:119
+#: ../nethsm/integration.rst:62
 msgid ""
 "The NetHSM's API specification is available in `OpenAPI format "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_, and can be "
@@ -6210,14 +6468,6 @@ msgstr ""
 "Tässä luvussa kuvataan käyttötehtäviä käyttäjille, joilla on "
 "*Administrator*- ja *Operator*-rooli. Lisätietoja roolista on luvussa "
 "`Roolit <administration.html#roles>`__."
-
-#: ../nethsm/operation.rst:11
-msgid "Key Management"
-msgstr "Avainten hallinta"
-
-#: ../nethsm/operation.rst:14
-msgid "Generate Key"
-msgstr "Luo avain"
 
 #: ../nethsm/operation.rst:16
 msgid ""
@@ -6457,10 +6707,6 @@ msgstr ""
 "Tietoa `/keys/{KeyID}`-päätepisteestä löytyy `API-dokumentaatiosta "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_keys-KeyID>`__."
-
-#: ../nethsm/operation.rst:226
-msgid "List Keys"
-msgstr "Luetteloavaimet"
 
 #: ../nethsm/operation.rst:228
 msgid "The NetHSM can list all the available keys in the *Key Store*."
@@ -6708,14 +6954,6 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-"
 "KeyID-csr-pem>`__."
 
-#: ../nethsm/operation.rst:588
-msgid "Key Operations"
-msgstr "Tärkeimmät toiminnot"
-
-#: ../nethsm/operation.rst:591
-msgid "Encrypt"
-msgstr "Salaa"
-
 #: ../nethsm/operation.rst:593
 msgid ""
 "The NetHSM can not encrypt data, but it provides the public key which can"
@@ -6727,10 +6965,6 @@ msgstr ""
 "voidaan käyttää salaukseen. Lisätietoja julkisen avaimen hakemisesta on "
 "luvussa `Show Key Details <operation.html#show-key-details>`__."
 
-#: ../nethsm/operation.rst:596
-msgid "Data can be encrypted with OpenSSL as follows."
-msgstr "Tiedot voidaan salata OpenSSL:llä seuraavasti."
-
 #: ../nethsm/operation.rst:602
 msgid ""
 "This writes the encrypted and base64 encoded message ``NetHSM rulez!`` "
@@ -6738,10 +6972,6 @@ msgid ""
 msgstr ""
 "Tämä kirjoittaa salatun ja base64-koodatun viestin ``NetHSM rulez!`` "
 "tiedostoon ``data.crypt``."
-
-#: ../nethsm/operation.rst:605
-msgid "Decrypt"
-msgstr "Purkakaa salaus"
 
 #: ../nethsm/operation.rst:607
 msgid ""
@@ -6830,26 +7060,6 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-"
 "KeyID-decrypt>`__."
 
-#: ../nethsm/operation.rst:655
-msgid "Sign"
-msgstr "Kirjaudu"
-
-#: ../nethsm/operation.rst:657
-msgid ""
-"The NetHSM can sign data for a private key stored in the *Key Store* on "
-"the NetHSM. For signatures with a RSA and ECDSA key, a digest must be "
-"calculate first."
-msgstr ""
-"NetHSM voi allekirjoittaa tietoja yksityisellä avaimella, joka on "
-"tallennettu NetHSM:n *Key Store*:iin. RSA- ja ECDSA-avaimella tehtäviä "
-"allekirjoituksia varten on ensin laskettava digesti."
-
-#: ../nethsm/operation.rst:660
-msgid ""
-"To calculate a digest the data is required first. A message is created as"
-" follows."
-msgstr "Digestin laskemiseksi tarvitaan ensin tiedot. Viesti luodaan seuraavasti."
-
 #: ../nethsm/operation.rst:666
 msgid "The digest is calculated with OpenSSL as follows."
 msgstr "Tunniste lasketaan OpenSSL:llä seuraavasti."
@@ -6916,10 +7126,6 @@ msgstr ""
 "Tietoa `/keys/{KeyID}/sign`-päätepisteestä löytyy `API-dokumentaatiosta "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-"
 "KeyID-sign>`__."
-
-#: ../nethsm/operation.rst:712
-msgid "The created signature can be verified with OpenSSL as follows."
-msgstr "Luotu allekirjoitus voidaan todentaa OpenSSL:llä seuraavasti."
 
 #: ../nethsm/operation.rst:723
 msgid "Random"
@@ -10504,11 +10710,6 @@ msgid "``nitropy`` can be used to list and manage Nitrokey 3 devices."
 msgstr ""
 "``nitropy`` voidaan käyttää Nitrokey 3 -laitteiden luettelointiin ja "
 "hallintaan."
-
-#: ../nitrokey3/shared/nitropy.rst:9 ../pro/openpgp-thunderbird.rst:28
-#: ../software/nitropy/all-platforms/installation.rst:33
-msgid "Installation"
-msgstr "Asennus"
 
 #: ../nitrokey3/shared/nitropy.rst:11
 msgid ""
@@ -20753,8 +20954,8 @@ msgid ""
 "This command automatically inserts the title of an internal doc page you "
 "link to ::doc:: /link/to/doc"
 msgstr ""
-"Tämä komento lisää automaattisesti sisäisen dokumenttisivun otsikon, johon "
-"linkität ::doc:: /link/to/doc"
+"Tämä komento lisää automaattisesti sisäisen dokumenttisivun otsikon, "
+"johon linkität ::doc:: /link/to/doc"
 
 #: ../syntax.rst:126
 msgid "Mark cropped Output"
@@ -26108,3 +26309,57 @@ msgstr ""
 
 #~ msgid "The update is finished."
 #~ msgstr "Päivitys on valmis"
+
+#~ msgid "PKCS#11 driver"
+#~ msgstr "PKCS#11-ajuri"
+
+#~ msgid ""
+#~ "Modify the configuration file `p11nethsm.conf`"
+#~ " according to your setup (e.g. "
+#~ "address, operator name) and store it "
+#~ "in `$HOME/.nitrokey`, `/etc/nitrokey/`, or in"
+#~ " the folder where your application is"
+#~ " executed."
+#~ msgstr ""
+#~ "Muokkaa konfiguraatiotiedostoa `p11nethsm.conf` "
+#~ "asetustesi mukaan (esim. osoite, operaattorin"
+#~ " nimi) ja tallenna se `$HOME/.nitrokey`,"
+#~ " `/etc/nitrokey/` tai kansioon, jossa "
+#~ "sovelluksesi suoritetaan."
+
+#~ msgid "Encrypting & Decrypting"
+#~ msgstr "Salaus & salauksen purku"
+
+#~ msgid ""
+#~ "After creating a key (here: ID 42)"
+#~ " with the according mechanism, you "
+#~ "can use it for encryption and "
+#~ "decryption, but first you should create"
+#~ " the key:"
+#~ msgstr ""
+#~ "Kun olet luonut avaimen (tässä: ID "
+#~ "42) vastaavalla mekanismilla, voit käyttää "
+#~ "sitä salaukseen ja salauksen purkamiseen, "
+#~ "mutta ensin sinun on luotava avain:"
+
+#~ msgid "Now you can encrypt:"
+#~ msgstr "Nyt voit salata:"
+
+#~ msgid "And decrypt:"
+#~ msgstr "Ja purkaa salaus:"
+
+#~ msgid "Signing"
+#~ msgstr "Allekirjoitus"
+
+#~ msgid "First create the key again:"
+#~ msgstr "Luo avain ensin uudelleen:"
+
+#~ msgid ""
+#~ "After creating a key (here: ID 23)"
+#~ " with the according mechanism, you "
+#~ "can use it for signing:"
+#~ msgstr ""
+#~ "Kun olet luonut avaimen (tässä: ID "
+#~ "23) vastaavalla mekanismilla, voit käyttää "
+#~ "sitä allekirjoittamiseen:"
+
