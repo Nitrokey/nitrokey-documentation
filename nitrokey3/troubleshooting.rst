@@ -50,6 +50,7 @@ The search of the optimal spot sometimes took up to 20-30 sec. In our experience
 Update Via update.nitrokey.com Does Not Work
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware updates via our `pynitro tool <https://github.com/Nitrokey/pynitrokey#installation>`__. 
+Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware using these `instructions <firmware-update.html>`_. 
+
 
 .. _nfc.fail: https://nfc.fail/
