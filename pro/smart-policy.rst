@@ -8,7 +8,7 @@ Login to Windows Domain Computers With MS Active Directory
 1. Download and install the latest
    `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
 2. Use a text editor to add the following settings to
-   *C:\Program Files:\OpenSC Project\OpenSC\opensc.conf*.
+   ``C:\Program Files:\OpenSC Project\OpenSC\opensc.conf``.
 
 .. code-block:: bash
 

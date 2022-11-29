@@ -28,7 +28,7 @@ The following instructions are based on the `wiki of OpenSC <https://github.com/
 
 To open the Windows command line please push the Windows-key and R-key. Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
 
-To make these commands as simple as possible, the .p12 file needs to be in your home folder. On Windows this is usually ‘C:\Users\yourusername’ and on macOS and GNU/Linux system it will be ‘/home/yourusername’. If you do not store the .p12 file there, you have to adapt the path in the commands below. Please plug in the Nitrokey before submitting the commands.
+To make these commands as simple as possible, the .p12 file needs to be in your home folder. On Windows this is usually ``C:\Users\yourusername`` and on macOS and GNU/Linux system it will be ``/home/yourusername``. If you do not store the .p12 file there, you have to adapt the path in the commands below. Please plug in the Nitrokey before submitting the commands.
 
 Assuming that your key-certificate file reads ‘myprivate.p12’ the commands for Windows looks like this:
 
