@@ -1,4 +1,4 @@
-Hidden Storage
+Hidden Volumes
 ==============
 
 Hidden volumes allow hiding data inside of the encrypted volume. This data is protected by an additional passphrase. Without the passphrase, it is impossible to know whether hidden volumes are present.
