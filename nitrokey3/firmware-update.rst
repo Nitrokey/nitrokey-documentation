@@ -10,10 +10,13 @@ Firmware Update
 This guide describes how to update the firmware on the Nitrokey 3.
 
 .. important::
-   **Currently updating the firmware will delete all user data!** Make
-   sure you have proper backup login methods enabled and/or ensure that
+   **For firmware v.1.0.0 and below the update will delete all user data!**    
+   Make sure you have proper backup login methods enabled and/or ensure that
    the Nitrokey 3 is not the only way to authenticate/2FA for your 
    applications/services.
+
+
+   **For firmware v1.0.1 and above user data is retained** during the update. Anyways, be sure to always have another device (or login method) registered with your service, if for some reason your data is not retained.
 
 How to Update
 -------------
