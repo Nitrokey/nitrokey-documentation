@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-12 13:51+0100\n"
+"POT-Creation-Date: 2022-12-12 15:19+0100\n"
 "PO-Revision-Date: 2022-11-29 17:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: lt\n"
@@ -21,6 +21,110 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: ../dontread/test.rst:2
+msgid "This site is for testing certain things."
+msgstr ""
+
+#: ../dontread/test.rst:5 ../storage/hidden.rst:2
+#, fuzzy
+msgid "Hidden Volumes"
+msgstr "Paslėptų tomų naudojimas"
+
+#: ../dontread/test.rst:8 ../storage/hidden.rst:23
+msgid "Configuring hidden volumes"
+msgstr "Paslėptų tomų konfigūravimas"
+
+#: ../dontread/test.rst:10 ../storage/hidden.rst:4
+msgid ""
+"Hidden volumes allow hiding data inside of the encrypted volume. This "
+"data is protected by an additional passphrase. Without the passphrase, it"
+" is impossible to know whether hidden volumes are present. They are not "
+"configured with a default password so that their existence can be `denied"
+" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
+"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
+"Storage the entire functionality of hidden volumes is implemented in "
+"hardware."
+msgstr ""
+"Paslėpti tomai leidžia paslėpti duomenis užšifruotame tome. Šie duomenys "
+"apsaugomi papildoma slaptažodžių fraze. Be slaptažodžio neįmanoma "
+"sužinoti, ar yra paslėptų tomų. Jiems nesukonfigūruotas numatytasis "
+"slaptažodis, kad jų egzistavimą būtų galima `įtikinamai paneigti "
+"<https://en.wikipedia.org/wiki/Plausible_deniability>`__. Koncepcija "
+"panaši į `VeraCrypt's/TrueCrypt's paslėpto tomo "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`__ koncepciją, tačiau "
+"\"Nitrokey Storage\" atveju visas paslėptų tomų funkcionalumas "
+"įgyvendinamas aparatinėje įrangoje."
+
+#: ../dontread/test.rst:15 ../storage/hidden.rst:11
+msgid ""
+"If you chose to use hidden volumes, you must not write any data to the "
+"encrypted volume, or you risk loosing data in the hidden volume."
+msgstr ""
+"Jei nusprendėte naudoti paslėptus tomus, į užšifruotą tomą negalima "
+"įrašyti jokių duomenų, kitaip rizikuojate prarasti paslėptame tome "
+"esančius duomenis."
+
+#: ../dontread/test.rst:18 ../storage/hidden.rst:14
+msgid ""
+"Hidden volumes are hidden within the free space of the encrypted volume, "
+"which will be overwritten when writing data to the encrypted volume. "
+"There are no mechanisms to prevent accidental overwritting of hidden "
+"data, as they would reveal the existence of hidden volumes. Data written "
+"to the encrypted volume before the creation of the hidden volume can "
+"still be read."
+msgstr ""
+"Paslėpti tomai yra paslėpti užšifruoto tomo laisvoje erdvėje, kuri bus "
+"perrašyta įrašant duomenis į užšifruotą tomą. Nėra mechanizmų, kurie "
+"apsaugotų nuo atsitiktinio paslėptų duomenų perrašymo, nes jie atskleistų"
+" paslėptų tomų egzistavimą. Duomenis, įrašytus į užšifruotą tomą prieš "
+"sukuriant paslėptą tomą, vis tiek galima perskaityti."
+
+#: ../dontread/test.rst:-1 ../storage/hidden.rst:-1
+msgid ""
+"Hidden volume description. The hidden volumes are within the free space "
+"of the encrypted volume."
+msgstr ""
+"Paslėpto tomo aprašymas. Paslėpti tomai yra laisvoje užšifruoto tomo "
+"erdvėje."
+
+#: ../dontread/test.rst:27 ../storage/hidden.rst:26
+msgid ""
+"Copy some files to the encrypted volume prior to creating the hidden "
+"volume."
+msgstr ""
+"Prieš kurdami paslėptą tomą nukopijuokite kai kuriuos failus į užšifruotą"
+" tomą."
+
+#: ../dontread/test.rst:30 ../storage/hidden.rst:29
+msgid ""
+"Using a journaling filesystem may risk overwriting the hidden data. The "
+"encrypted filesystem is formated to FAT32 by default, and it is "
+"recommended to leave it that way when using hidden volumes."
+msgstr ""
+"Naudojant žurnalo rinkmenų sistemą gali kilti pavojus, kad paslėpti "
+"duomenys bus perrašyti. Pagal numatytuosius nustatymus užšifruota failų "
+"sistema suformuota kaip FAT32, todėl naudojant paslėptus tomus "
+"rekomenduojama palikti ją tokią."
+
+#: ../dontread/test.rst:33
+msgid ""
+"This is for testing certain words like Brainpool 192, Nitropy and "
+"curve25519"
+msgstr ""
+
+#: ../dontread/test.rst:36
+msgid ""
+"These are the words in question: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
+
+#: ../dontread/test.rst:39
+msgid ""
+"And here they are in a text: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
 msgid ""
@@ -20461,87 +20565,6 @@ msgstr ""
 " tik ją pirmą kartą įdėsite į \"Windows\". Tiesiog sutikite su prašymu, "
 "kad galėtumėte naudoti USB atmintinę kaip anksčiau."
 
-#: ../storage/hidden.rst:2
-msgid "Hidden Storage"
-msgstr "Paslėpta saugykla"
-
-#: ../storage/hidden.rst:4
-msgid ""
-"Hidden volumes allow hiding data inside of the encrypted volume. This "
-"data is protected by an additional passphrase. Without the passphrase, it"
-" is impossible to know whether hidden volumes are present. They are not "
-"configured with a default password so that their existence can be `denied"
-" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
-"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
-"Storage the entire functionality of hidden volumes is implemented in "
-"hardware."
-msgstr ""
-"Paslėpti tomai leidžia paslėpti duomenis užšifruotame tome. Šie duomenys "
-"apsaugomi papildoma slaptažodžių fraze. Be slaptažodžio neįmanoma "
-"sužinoti, ar yra paslėptų tomų. Jiems nesukonfigūruotas numatytasis "
-"slaptažodis, kad jų egzistavimą būtų galima `įtikinamai paneigti "
-"<https://en.wikipedia.org/wiki/Plausible_deniability>`__. Koncepcija "
-"panaši į `VeraCrypt's/TrueCrypt's paslėpto tomo "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`__ koncepciją, tačiau "
-"\"Nitrokey Storage\" atveju visas paslėptų tomų funkcionalumas "
-"įgyvendinamas aparatinėje įrangoje."
-
-#: ../storage/hidden.rst:11
-msgid ""
-"If you chose to use hidden volumes, you must not write any data to the "
-"encrypted volume, or you risk loosing data in the hidden volume."
-msgstr ""
-"Jei nusprendėte naudoti paslėptus tomus, į užšifruotą tomą negalima "
-"įrašyti jokių duomenų, kitaip rizikuojate prarasti paslėptame tome "
-"esančius duomenis."
-
-#: ../storage/hidden.rst:14
-msgid ""
-"Hidden volumes are hidden within the free space of the encrypted volume, "
-"which will be overwritten when writing data to the encrypted volume. "
-"There are no mechanisms to prevent accidental overwritting of hidden "
-"data, as they would reveal the existence of hidden volumes. Data written "
-"to the encrypted volume before the creation of the hidden volume can "
-"still be read."
-msgstr ""
-"Paslėpti tomai yra paslėpti užšifruoto tomo laisvoje erdvėje, kuri bus "
-"perrašyta įrašant duomenis į užšifruotą tomą. Nėra mechanizmų, kurie "
-"apsaugotų nuo atsitiktinio paslėptų duomenų perrašymo, nes jie atskleistų"
-" paslėptų tomų egzistavimą. Duomenis, įrašytus į užšifruotą tomą prieš "
-"sukuriant paslėptą tomą, vis tiek galima perskaityti."
-
-#: ../storage/hidden.rst:-1
-msgid ""
-"Hidden volume description. The hidden volumes are within the free space "
-"of the encrypted volume."
-msgstr ""
-"Paslėpto tomo aprašymas. Paslėpti tomai yra laisvoje užšifruoto tomo "
-"erdvėje."
-
-#: ../storage/hidden.rst:23
-msgid "Configuring hidden volumes"
-msgstr "Paslėptų tomų konfigūravimas"
-
-#: ../storage/hidden.rst:26
-msgid ""
-"Copy some files to the encrypted volume prior to creating the hidden "
-"volume."
-msgstr ""
-"Prieš kurdami paslėptą tomą nukopijuokite kai kuriuos failus į užšifruotą"
-" tomą."
-
-#: ../storage/hidden.rst:29
-msgid ""
-"Using a journaling filesystem may risk overwriting the hidden data. The "
-"encrypted filesystem is formated to FAT32 by default, and it is "
-"recommended to leave it that way when using hidden volumes."
-msgstr ""
-"Naudojant žurnalo rinkmenų sistemą gali kilti pavojus, kad paslėpti "
-"duomenys bus perrašyti. Pagal numatytuosius nustatymus užšifruota failų "
-"sistema suformuota kaip FAT32, todėl naudojant paslėptus tomus "
-"rekomenduojama palikti ją tokią."
-
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted volume using the Nitrokey App."
 msgstr "Užšifruotą tomą atrakinkite naudodami programėlę \"Nitrokey\"."
@@ -26590,4 +26613,7 @@ msgstr ""
 #~ " kad \"Nitrokey 3\" nėra vienintelis "
 #~ "autentifikavimo/2FA būdas jūsų programoms ir"
 #~ " (arba) paslaugoms."
+
+#~ msgid "Hidden Storage"
+#~ msgstr "Paslėpta saugykla"
 

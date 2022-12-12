@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-12 13:51+0100\n"
+"POT-Creation-Date: 2022-12-12 15:19+0100\n"
 "PO-Revision-Date: 2022-11-29 17:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: bg\n"
@@ -19,6 +19,108 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: ../dontread/test.rst:2
+msgid "This site is for testing certain things."
+msgstr ""
+
+#: ../dontread/test.rst:5 ../storage/hidden.rst:2
+#, fuzzy
+msgid "Hidden Volumes"
+msgstr "Използване на скрити обеми"
+
+#: ../dontread/test.rst:8 ../storage/hidden.rst:23
+msgid "Configuring hidden volumes"
+msgstr "Конфигуриране на скрити томове"
+
+#: ../dontread/test.rst:10 ../storage/hidden.rst:4
+msgid ""
+"Hidden volumes allow hiding data inside of the encrypted volume. This "
+"data is protected by an additional passphrase. Without the passphrase, it"
+" is impossible to know whether hidden volumes are present. They are not "
+"configured with a default password so that their existence can be `denied"
+" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
+"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
+"Storage the entire functionality of hidden volumes is implemented in "
+"hardware."
+msgstr ""
+"Скритите томове позволяват скриване на данни в криптирания том. Тези "
+"данни са защитени с допълнителна парола. Без паролата е невъзможно да се "
+"разбере дали са налице скрити томове. Те не са конфигурирани с парола по "
+"подразбиране, така че съществуването им да може да бъде `отричано "
+"правдоподобно <https://en.wikipedia.org/wiki/Plausible_deniability>`__. "
+"Концепцията е подобна на `скрития том на VeraCrypt's/TrueCrypt's "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`__, но при Nitrokey Storage"
+" цялата функционалност на скритите томове е реализирана хардуерно."
+
+#: ../dontread/test.rst:15 ../storage/hidden.rst:11
+msgid ""
+"If you chose to use hidden volumes, you must not write any data to the "
+"encrypted volume, or you risk loosing data in the hidden volume."
+msgstr ""
+"Ако сте избрали да използвате скрити томове, не трябва да записвате "
+"никакви данни в криптирания том, в противен случай рискувате да загубите "
+"данните в скрития том."
+
+#: ../dontread/test.rst:18 ../storage/hidden.rst:14
+msgid ""
+"Hidden volumes are hidden within the free space of the encrypted volume, "
+"which will be overwritten when writing data to the encrypted volume. "
+"There are no mechanisms to prevent accidental overwritting of hidden "
+"data, as they would reveal the existence of hidden volumes. Data written "
+"to the encrypted volume before the creation of the hidden volume can "
+"still be read."
+msgstr ""
+"Скритите томове са скрити в свободното пространство на криптирания том, "
+"което ще бъде презаписано при запис на данни в криптирания том. Няма "
+"механизми за предотвратяване на случайно презаписване на скрити данни, "
+"тъй като те биха разкрили съществуването на скрити томове. Данните, "
+"записани в криптирания том преди създаването на скрития том, все още "
+"могат да бъдат прочетени."
+
+#: ../dontread/test.rst:-1 ../storage/hidden.rst:-1
+msgid ""
+"Hidden volume description. The hidden volumes are within the free space "
+"of the encrypted volume."
+msgstr ""
+"Описание на скрития обем. Скритите томове се намират в свободното "
+"пространство на криптирания том."
+
+#: ../dontread/test.rst:27 ../storage/hidden.rst:26
+msgid ""
+"Copy some files to the encrypted volume prior to creating the hidden "
+"volume."
+msgstr "Копирайте някои файлове в криптирания том, преди да създадете скрития том."
+
+#: ../dontread/test.rst:30 ../storage/hidden.rst:29
+msgid ""
+"Using a journaling filesystem may risk overwriting the hidden data. The "
+"encrypted filesystem is formated to FAT32 by default, and it is "
+"recommended to leave it that way when using hidden volumes."
+msgstr ""
+"Използването на файлова система за водене на дневник може да доведе до "
+"риск от презаписване на скритите данни. Криптираната файлова система по "
+"подразбиране е форматирана като FAT32 и се препоръчва да я оставите така,"
+" когато използвате скрити томове."
+
+#: ../dontread/test.rst:33
+msgid ""
+"This is for testing certain words like Brainpool 192, Nitropy and "
+"curve25519"
+msgstr ""
+
+#: ../dontread/test.rst:36
+msgid ""
+"These are the words in question: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
+
+#: ../dontread/test.rst:39
+msgid ""
+"And here they are in a text: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
 msgid ""
@@ -20649,85 +20751,6 @@ msgstr ""
 "щом поставите USB паметта за първи път отново в Windows. Просто приемете "
 "искането, за да можете да използвате USB стика както преди."
 
-#: ../storage/hidden.rst:2
-msgid "Hidden Storage"
-msgstr "Скрито съхранение"
-
-#: ../storage/hidden.rst:4
-msgid ""
-"Hidden volumes allow hiding data inside of the encrypted volume. This "
-"data is protected by an additional passphrase. Without the passphrase, it"
-" is impossible to know whether hidden volumes are present. They are not "
-"configured with a default password so that their existence can be `denied"
-" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
-"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
-"Storage the entire functionality of hidden volumes is implemented in "
-"hardware."
-msgstr ""
-"Скритите томове позволяват скриване на данни в криптирания том. Тези "
-"данни са защитени с допълнителна парола. Без паролата е невъзможно да се "
-"разбере дали са налице скрити томове. Те не са конфигурирани с парола по "
-"подразбиране, така че съществуването им да може да бъде `отричано "
-"правдоподобно <https://en.wikipedia.org/wiki/Plausible_deniability>`__. "
-"Концепцията е подобна на `скрития том на VeraCrypt's/TrueCrypt's "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`__, но при Nitrokey Storage"
-" цялата функционалност на скритите томове е реализирана хардуерно."
-
-#: ../storage/hidden.rst:11
-msgid ""
-"If you chose to use hidden volumes, you must not write any data to the "
-"encrypted volume, or you risk loosing data in the hidden volume."
-msgstr ""
-"Ако сте избрали да използвате скрити томове, не трябва да записвате "
-"никакви данни в криптирания том, в противен случай рискувате да загубите "
-"данните в скрития том."
-
-#: ../storage/hidden.rst:14
-msgid ""
-"Hidden volumes are hidden within the free space of the encrypted volume, "
-"which will be overwritten when writing data to the encrypted volume. "
-"There are no mechanisms to prevent accidental overwritting of hidden "
-"data, as they would reveal the existence of hidden volumes. Data written "
-"to the encrypted volume before the creation of the hidden volume can "
-"still be read."
-msgstr ""
-"Скритите томове са скрити в свободното пространство на криптирания том, "
-"което ще бъде презаписано при запис на данни в криптирания том. Няма "
-"механизми за предотвратяване на случайно презаписване на скрити данни, "
-"тъй като те биха разкрили съществуването на скрити томове. Данните, "
-"записани в криптирания том преди създаването на скрития том, все още "
-"могат да бъдат прочетени."
-
-#: ../storage/hidden.rst:-1
-msgid ""
-"Hidden volume description. The hidden volumes are within the free space "
-"of the encrypted volume."
-msgstr ""
-"Описание на скрития обем. Скритите томове се намират в свободното "
-"пространство на криптирания том."
-
-#: ../storage/hidden.rst:23
-msgid "Configuring hidden volumes"
-msgstr "Конфигуриране на скрити томове"
-
-#: ../storage/hidden.rst:26
-msgid ""
-"Copy some files to the encrypted volume prior to creating the hidden "
-"volume."
-msgstr "Копирайте някои файлове в криптирания том, преди да създадете скрития том."
-
-#: ../storage/hidden.rst:29
-msgid ""
-"Using a journaling filesystem may risk overwriting the hidden data. The "
-"encrypted filesystem is formated to FAT32 by default, and it is "
-"recommended to leave it that way when using hidden volumes."
-msgstr ""
-"Използването на файлова система за водене на дневник може да доведе до "
-"риск от презаписване на скритите данни. Криптираната файлова система по "
-"подразбиране е форматирана като FAT32 и се препоръчва да я оставите така,"
-" когато използвате скрити томове."
-
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted volume using the Nitrokey App."
 msgstr "Отключете криптирания том с помощта на приложението Nitrokey."
@@ -26979,4 +27002,7 @@ msgstr ""
 #~ "уверете, че Nitrokey 3 не е "
 #~ "единственият начин за удостоверяване/2FA за"
 #~ " вашите приложения/услуги."
+
+#~ msgid "Hidden Storage"
+#~ msgstr "Скрито съхранение"
 

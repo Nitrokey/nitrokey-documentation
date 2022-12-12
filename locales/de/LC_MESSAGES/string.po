@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-12 13:51+0100\n"
+"POT-Creation-Date: 2022-12-12 15:19+0100\n"
 "PO-Revision-Date: 2022-12-02 11:24+0000\n"
 "Last-Translator: Erik Grun <erik@nitrokey.com>\n"
 "Language: de\n"
@@ -19,6 +19,114 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: ../dontread/test.rst:2
+msgid "This site is for testing certain things."
+msgstr ""
+
+#: ../dontread/test.rst:5 ../storage/hidden.rst:2
+#, fuzzy
+msgid "Hidden Volumes"
+msgstr "Verwendung versteckter Volumen"
+
+#: ../dontread/test.rst:8 ../storage/hidden.rst:23
+msgid "Configuring hidden volumes"
+msgstr "Versteckte Volumes konfigurieren"
+
+#: ../dontread/test.rst:10 ../storage/hidden.rst:4
+msgid ""
+"Hidden volumes allow hiding data inside of the encrypted volume. This "
+"data is protected by an additional passphrase. Without the passphrase, it"
+" is impossible to know whether hidden volumes are present. They are not "
+"configured with a default password so that their existence can be `denied"
+" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
+"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
+"Storage the entire functionality of hidden volumes is implemented in "
+"hardware."
+msgstr ""
+"Versteckte Datenträger ermöglichen das Verstecken von Daten innerhalb des"
+" verschlüsselten Datenträgers. Diese Daten werden durch eine zusätzliche "
+"Passphrase geschützt. Ohne die Passphrase ist es unmöglich zu wissen, ob "
+"versteckte Volumes vorhanden sind. Sie sind nicht mit einem "
+"Standardpasswort konfiguriert, so dass ihre Existenz `plausibel geleugnet"
+" werden kann <https://en.wikipedia.org/wiki/Plausible_deniability>`_. Das"
+" Konzept ähnelt dem von `VeraCrypt's/TrueCrypt's Hidden Volume "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`_, aber bei Nitrokey "
+"Storage ist die gesamte Funktionalität von Hidden Volumes in Hardware "
+"implementiert."
+
+#: ../dontread/test.rst:15 ../storage/hidden.rst:11
+msgid ""
+"If you chose to use hidden volumes, you must not write any data to the "
+"encrypted volume, or you risk loosing data in the hidden volume."
+msgstr ""
+"Wenn Sie sich für die Verwendung von versteckten Volumes entscheiden, "
+"dürfen Sie keine Daten auf das verschlüsselte Volume schreiben, da sonst "
+"die Gefahr besteht, dass Daten auf dem versteckten Volume verloren gehen."
+
+#: ../dontread/test.rst:18 ../storage/hidden.rst:14
+msgid ""
+"Hidden volumes are hidden within the free space of the encrypted volume, "
+"which will be overwritten when writing data to the encrypted volume. "
+"There are no mechanisms to prevent accidental overwritting of hidden "
+"data, as they would reveal the existence of hidden volumes. Data written "
+"to the encrypted volume before the creation of the hidden volume can "
+"still be read."
+msgstr ""
+"Versteckte Datenträger sind im freien Speicher des verschlüsselten "
+"Datenträgers verborgen, der beim Schreiben von Daten auf den "
+"verschlüsselten Datenträger überschrieben wird. Es gibt keine "
+"Mechanismen, die ein versehentliches Überschreiben von versteckten Daten "
+"verhindern, da sie die Existenz von versteckten Volumes aufdecken würden."
+" Daten, die vor der Erstellung des versteckten Datenträgers auf den "
+"verschlüsselten Datenträger geschrieben wurden, können weiterhin gelesen "
+"werden."
+
+#: ../dontread/test.rst:-1 ../storage/hidden.rst:-1
+msgid ""
+"Hidden volume description. The hidden volumes are within the free space "
+"of the encrypted volume."
+msgstr ""
+"Beschreibung des versteckten Volumes. Die versteckten Volumes befinden "
+"sich innerhalb des freien Speicherplatzes des verschlüsselten Volumes."
+
+#: ../dontread/test.rst:27 ../storage/hidden.rst:26
+msgid ""
+"Copy some files to the encrypted volume prior to creating the hidden "
+"volume."
+msgstr ""
+"Kopieren Sie einige Dateien auf das verschlüsselte Volume, bevor Sie das "
+"versteckte Volume erstellen."
+
+#: ../dontread/test.rst:30 ../storage/hidden.rst:29
+msgid ""
+"Using a journaling filesystem may risk overwriting the hidden data. The "
+"encrypted filesystem is formated to FAT32 by default, and it is "
+"recommended to leave it that way when using hidden volumes."
+msgstr ""
+"Bei Verwendung eines Journaling-Dateisystems besteht die Gefahr, dass die"
+" versteckten Daten überschrieben werden. Das verschlüsselte Dateisystem "
+"ist standardmäßig auf FAT32 formatiert, und es wird empfohlen, es so zu "
+"belassen, wenn Sie versteckte Volumes verwenden."
+
+#: ../dontread/test.rst:33
+msgid ""
+"This is for testing certain words like Brainpool 192, Nitropy and "
+"curve25519"
+msgstr ""
+
+#: ../dontread/test.rst:36
+msgid ""
+"These are the words in question: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
+
+#: ../dontread/test.rst:39
+msgid ""
+"And here they are in a text: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
 msgid ""
@@ -20989,91 +21097,6 @@ msgstr ""
 "Akzeptieren Sie einfach die Aufforderung, um den USB-Stick wie bisher "
 "verwenden zu können."
 
-#: ../storage/hidden.rst:2
-msgid "Hidden Storage"
-msgstr "Versteckte Lagerung"
-
-#: ../storage/hidden.rst:4
-msgid ""
-"Hidden volumes allow hiding data inside of the encrypted volume. This "
-"data is protected by an additional passphrase. Without the passphrase, it"
-" is impossible to know whether hidden volumes are present. They are not "
-"configured with a default password so that their existence can be `denied"
-" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
-"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
-"Storage the entire functionality of hidden volumes is implemented in "
-"hardware."
-msgstr ""
-"Versteckte Datenträger ermöglichen das Verstecken von Daten innerhalb des"
-" verschlüsselten Datenträgers. Diese Daten werden durch eine zusätzliche "
-"Passphrase geschützt. Ohne die Passphrase ist es unmöglich zu wissen, ob "
-"versteckte Volumes vorhanden sind. Sie sind nicht mit einem "
-"Standardpasswort konfiguriert, so dass ihre Existenz `plausibel geleugnet"
-" werden kann <https://en.wikipedia.org/wiki/Plausible_deniability>`_. Das"
-" Konzept ähnelt dem von `VeraCrypt's/TrueCrypt's Hidden Volume "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`_, aber bei Nitrokey "
-"Storage ist die gesamte Funktionalität von Hidden Volumes in Hardware "
-"implementiert."
-
-#: ../storage/hidden.rst:11
-msgid ""
-"If you chose to use hidden volumes, you must not write any data to the "
-"encrypted volume, or you risk loosing data in the hidden volume."
-msgstr ""
-"Wenn Sie sich für die Verwendung von versteckten Volumes entscheiden, "
-"dürfen Sie keine Daten auf das verschlüsselte Volume schreiben, da sonst "
-"die Gefahr besteht, dass Daten auf dem versteckten Volume verloren gehen."
-
-#: ../storage/hidden.rst:14
-msgid ""
-"Hidden volumes are hidden within the free space of the encrypted volume, "
-"which will be overwritten when writing data to the encrypted volume. "
-"There are no mechanisms to prevent accidental overwritting of hidden "
-"data, as they would reveal the existence of hidden volumes. Data written "
-"to the encrypted volume before the creation of the hidden volume can "
-"still be read."
-msgstr ""
-"Versteckte Datenträger sind im freien Speicher des verschlüsselten "
-"Datenträgers verborgen, der beim Schreiben von Daten auf den "
-"verschlüsselten Datenträger überschrieben wird. Es gibt keine "
-"Mechanismen, die ein versehentliches Überschreiben von versteckten Daten "
-"verhindern, da sie die Existenz von versteckten Volumes aufdecken würden."
-" Daten, die vor der Erstellung des versteckten Datenträgers auf den "
-"verschlüsselten Datenträger geschrieben wurden, können weiterhin gelesen "
-"werden."
-
-#: ../storage/hidden.rst:-1
-msgid ""
-"Hidden volume description. The hidden volumes are within the free space "
-"of the encrypted volume."
-msgstr ""
-"Beschreibung des versteckten Volumes. Die versteckten Volumes befinden "
-"sich innerhalb des freien Speicherplatzes des verschlüsselten Volumes."
-
-#: ../storage/hidden.rst:23
-msgid "Configuring hidden volumes"
-msgstr "Versteckte Volumes konfigurieren"
-
-#: ../storage/hidden.rst:26
-msgid ""
-"Copy some files to the encrypted volume prior to creating the hidden "
-"volume."
-msgstr ""
-"Kopieren Sie einige Dateien auf das verschlüsselte Volume, bevor Sie das "
-"versteckte Volume erstellen."
-
-#: ../storage/hidden.rst:29
-msgid ""
-"Using a journaling filesystem may risk overwriting the hidden data. The "
-"encrypted filesystem is formated to FAT32 by default, and it is "
-"recommended to leave it that way when using hidden volumes."
-msgstr ""
-"Bei Verwendung eines Journaling-Dateisystems besteht die Gefahr, dass die"
-" versteckten Daten überschrieben werden. Das verschlüsselte Dateisystem "
-"ist standardmäßig auf FAT32 formatiert, und es wird empfohlen, es so zu "
-"belassen, wenn Sie versteckte Volumes verwenden."
-
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted volume using the Nitrokey App."
 msgstr "Entsperren Sie das verschlüsselte Volume mit der Nitrokey-App."
@@ -27390,4 +27413,7 @@ msgstr ""
 #~ "Nitrokey 3 nicht die einzige Möglichkeit"
 #~ " zur Authentifizierung/2FA für Ihre "
 #~ "Anwendungen/Dienste ist."
+
+#~ msgid "Hidden Storage"
+#~ msgstr "Versteckte Lagerung"
 

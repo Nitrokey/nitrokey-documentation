@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-12 13:51+0100\n"
+"POT-Creation-Date: 2022-12-12 15:19+0100\n"
 "PO-Revision-Date: 2022-11-29 17:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: ja\n"
@@ -19,6 +19,92 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: ../dontread/test.rst:2
+msgid "This site is for testing certain things."
+msgstr ""
+
+#: ../dontread/test.rst:5 ../storage/hidden.rst:2
+#, fuzzy
+msgid "Hidden Volumes"
+msgstr "隠しボリュームの使用"
+
+#: ../dontread/test.rst:8 ../storage/hidden.rst:23
+msgid "Configuring hidden volumes"
+msgstr "隠しボリュームの設定"
+
+#: ../dontread/test.rst:10 ../storage/hidden.rst:4
+msgid ""
+"Hidden volumes allow hiding data inside of the encrypted volume. This "
+"data is protected by an additional passphrase. Without the passphrase, it"
+" is impossible to know whether hidden volumes are present. They are not "
+"configured with a default password so that their existence can be `denied"
+" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
+"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
+"Storage the entire functionality of hidden volumes is implemented in "
+"hardware."
+msgstr ""
+"隠しボリュームは、暗号化されたボリュームの中にデータを隠すことができます。このデータは追加のパスフレーズによって保護されます。パスフレーズなしには、隠しボリュームが存在するかどうかを知ることは不可能です。デフォルトのパスワードは設定されていないため、`"
+" その存在をもっともらしく否定することができます "
+"<https://en.wikipedia.org/wiki/Plausible_deniability>`__.このコンセプトは、`VeraCrypt's/TrueCrypt's"
+" の隠しボリューム <https://veracrypt.eu/en/docs/hidden-volume/>`__ "
+"に似ていますが、Nitrokey Storage では隠しボリューム全体の機能がハードウェアで実装されています。"
+
+#: ../dontread/test.rst:15 ../storage/hidden.rst:11
+msgid ""
+"If you chose to use hidden volumes, you must not write any data to the "
+"encrypted volume, or you risk loosing data in the hidden volume."
+msgstr "隠しボリュームの使用を選択した場合、暗号化されたボリュームにデータを書き込まないようにしなければ、隠しボリュームのデータが失われる危険性があります。"
+
+#: ../dontread/test.rst:18 ../storage/hidden.rst:14
+msgid ""
+"Hidden volumes are hidden within the free space of the encrypted volume, "
+"which will be overwritten when writing data to the encrypted volume. "
+"There are no mechanisms to prevent accidental overwritting of hidden "
+"data, as they would reveal the existence of hidden volumes. Data written "
+"to the encrypted volume before the creation of the hidden volume can "
+"still be read."
+msgstr "隠しボリュームは、暗号化ボリュームの空き領域内に隠されており、暗号化ボリュームにデータを書き込むと上書きされます。隠しボリュームの存在を明らかにしてしまうため、誤って上書きされることを防ぐ仕組みはありません。隠しボリュームが作成される前に暗号化ボリュームに書き込まれたデータは、まだ読み取ることができます。"
+
+#: ../dontread/test.rst:-1 ../storage/hidden.rst:-1
+msgid ""
+"Hidden volume description. The hidden volumes are within the free space "
+"of the encrypted volume."
+msgstr "隠しボリュームの説明。隠しボリュームは、暗号化されたボリュームの空き領域内にあります。"
+
+#: ../dontread/test.rst:27 ../storage/hidden.rst:26
+msgid ""
+"Copy some files to the encrypted volume prior to creating the hidden "
+"volume."
+msgstr "隠しボリュームを作成する前に、いくつかのファイルを暗号化ボリュームにコピーしてください。"
+
+#: ../dontread/test.rst:30 ../storage/hidden.rst:29
+msgid ""
+"Using a journaling filesystem may risk overwriting the hidden data. The "
+"encrypted filesystem is formated to FAT32 by default, and it is "
+"recommended to leave it that way when using hidden volumes."
+msgstr ""
+"ジャーナリングファイルシステムを使用すると、隠しデータを上書きしてしまう危険性があります。暗号化されたファイルシステムはデフォルトで FAT32 "
+"にフォーマットされており、隠しボリュームを使用する場合はその ままにしておくことをお勧めします。"
+
+#: ../dontread/test.rst:33
+msgid ""
+"This is for testing certain words like Brainpool 192, Nitropy and "
+"curve25519"
+msgstr ""
+
+#: ../dontread/test.rst:36
+msgid ""
+"These are the words in question: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
+
+#: ../dontread/test.rst:39
+msgid ""
+"And here they are in a text: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
 msgid ""
@@ -17676,69 +17762,6 @@ msgid ""
 "request for being able to use the USB Stick as previously."
 msgstr "Windowsで初めてUSBスティックを挿入すると、Windowsは自動的にUSBスティックのフォーマットを要求してきます。これまで通りお使いいただけますので、ご了承ください。"
 
-#: ../storage/hidden.rst:2
-msgid "Hidden Storage"
-msgstr "隠し収納"
-
-#: ../storage/hidden.rst:4
-msgid ""
-"Hidden volumes allow hiding data inside of the encrypted volume. This "
-"data is protected by an additional passphrase. Without the passphrase, it"
-" is impossible to know whether hidden volumes are present. They are not "
-"configured with a default password so that their existence can be `denied"
-" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
-"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
-"Storage the entire functionality of hidden volumes is implemented in "
-"hardware."
-msgstr ""
-"隠しボリュームは、暗号化されたボリュームの中にデータを隠すことができます。このデータは追加のパスフレーズによって保護されます。パスフレーズなしには、隠しボリュームが存在するかどうかを知ることは不可能です。デフォルトのパスワードは設定されていないため、`"
-" その存在をもっともらしく否定することができます "
-"<https://en.wikipedia.org/wiki/Plausible_deniability>`__.このコンセプトは、`VeraCrypt's/TrueCrypt's"
-" の隠しボリューム <https://veracrypt.eu/en/docs/hidden-volume/>`__ "
-"に似ていますが、Nitrokey Storage では隠しボリューム全体の機能がハードウェアで実装されています。"
-
-#: ../storage/hidden.rst:11
-msgid ""
-"If you chose to use hidden volumes, you must not write any data to the "
-"encrypted volume, or you risk loosing data in the hidden volume."
-msgstr "隠しボリュームの使用を選択した場合、暗号化されたボリュームにデータを書き込まないようにしなければ、隠しボリュームのデータが失われる危険性があります。"
-
-#: ../storage/hidden.rst:14
-msgid ""
-"Hidden volumes are hidden within the free space of the encrypted volume, "
-"which will be overwritten when writing data to the encrypted volume. "
-"There are no mechanisms to prevent accidental overwritting of hidden "
-"data, as they would reveal the existence of hidden volumes. Data written "
-"to the encrypted volume before the creation of the hidden volume can "
-"still be read."
-msgstr "隠しボリュームは、暗号化ボリュームの空き領域内に隠されており、暗号化ボリュームにデータを書き込むと上書きされます。隠しボリュームの存在を明らかにしてしまうため、誤って上書きされることを防ぐ仕組みはありません。隠しボリュームが作成される前に暗号化ボリュームに書き込まれたデータは、まだ読み取ることができます。"
-
-#: ../storage/hidden.rst:-1
-msgid ""
-"Hidden volume description. The hidden volumes are within the free space "
-"of the encrypted volume."
-msgstr "隠しボリュームの説明。隠しボリュームは、暗号化されたボリュームの空き領域内にあります。"
-
-#: ../storage/hidden.rst:23
-msgid "Configuring hidden volumes"
-msgstr "隠しボリュームの設定"
-
-#: ../storage/hidden.rst:26
-msgid ""
-"Copy some files to the encrypted volume prior to creating the hidden "
-"volume."
-msgstr "隠しボリュームを作成する前に、いくつかのファイルを暗号化ボリュームにコピーしてください。"
-
-#: ../storage/hidden.rst:29
-msgid ""
-"Using a journaling filesystem may risk overwriting the hidden data. The "
-"encrypted filesystem is formated to FAT32 by default, and it is "
-"recommended to leave it that way when using hidden volumes."
-msgstr ""
-"ジャーナリングファイルシステムを使用すると、隠しデータを上書きしてしまう危険性があります。暗号化されたファイルシステムはデフォルトで FAT32 "
-"にフォーマットされており、隠しボリュームを使用する場合はその ままにしておくことをお勧めします。"
-
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted volume using the Nitrokey App."
 msgstr "Nitrokeyアプリを使用して暗号化されたボリュームのロックを解除します。"
@@ -22620,4 +22643,7 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 #~ "**ファームウェアをアップデートすると、すべてのユーザーデータが削除されます！** "
 #~ "適切なバックアップログイン方法を有効にしているか、またはNitrokey "
 #~ "3がアプリケーション/サービスの認証/2FAを行う唯一の方法ではないことを確認してください。"
+
+#~ msgid "Hidden Storage"
+#~ msgstr "隠し収納"
 

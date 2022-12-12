@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-12 13:51+0100\n"
+"POT-Creation-Date: 2022-12-12 15:19+0100\n"
 "PO-Revision-Date: 2022-11-29 17:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: sv\n"
@@ -19,6 +19,110 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: ../dontread/test.rst:2
+msgid "This site is for testing certain things."
+msgstr ""
+
+#: ../dontread/test.rst:5 ../storage/hidden.rst:2
+#, fuzzy
+msgid "Hidden Volumes"
+msgstr "Använda dolda volymer"
+
+#: ../dontread/test.rst:8 ../storage/hidden.rst:23
+msgid "Configuring hidden volumes"
+msgstr "Konfigurera dolda volymer"
+
+#: ../dontread/test.rst:10 ../storage/hidden.rst:4
+msgid ""
+"Hidden volumes allow hiding data inside of the encrypted volume. This "
+"data is protected by an additional passphrase. Without the passphrase, it"
+" is impossible to know whether hidden volumes are present. They are not "
+"configured with a default password so that their existence can be `denied"
+" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
+"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
+"Storage the entire functionality of hidden volumes is implemented in "
+"hardware."
+msgstr ""
+"Dolda volymer gör det möjligt att gömma data i den krypterade volymen. "
+"Dessa data skyddas av en extra lösenfras. Utan lösenfrasen är det "
+"omöjligt att veta om det finns dolda volymer. De är inte konfigurerade "
+"med ett standardlösenord så att deras existens kan `förnekas på ett "
+"trovärdigt sätt <https://en.wikipedia.org/wiki/Plausible_deniability>`__."
+" Konceptet liknar `VeraCrypt's/TrueCrypt's dolda volym "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`__ men med Nitrokey Storage"
+" är hela funktionen för dolda volymer implementerad i hårdvara."
+
+#: ../dontread/test.rst:15 ../storage/hidden.rst:11
+msgid ""
+"If you chose to use hidden volumes, you must not write any data to the "
+"encrypted volume, or you risk loosing data in the hidden volume."
+msgstr ""
+"Om du väljer att använda dolda volymer får du inte skriva några data till"
+" den krypterade volymen, annars riskerar du att förlora data i den dolda "
+"volymen."
+
+#: ../dontread/test.rst:18 ../storage/hidden.rst:14
+msgid ""
+"Hidden volumes are hidden within the free space of the encrypted volume, "
+"which will be overwritten when writing data to the encrypted volume. "
+"There are no mechanisms to prevent accidental overwritting of hidden "
+"data, as they would reveal the existence of hidden volumes. Data written "
+"to the encrypted volume before the creation of the hidden volume can "
+"still be read."
+msgstr ""
+"Dolda volymer är dolda i det fria utrymmet för den krypterade volymen, "
+"som skrivs över när data skrivs till den krypterade volymen. Det finns "
+"inga mekanismer för att förhindra oavsiktlig överskrivning av dolda data,"
+" eftersom detta skulle avslöja att det finns dolda volymer. Data som "
+"skrivits till den krypterade volymen innan den dolda volymen skapades kan"
+" fortfarande läsas."
+
+#: ../dontread/test.rst:-1 ../storage/hidden.rst:-1
+msgid ""
+"Hidden volume description. The hidden volumes are within the free space "
+"of the encrypted volume."
+msgstr ""
+"Beskrivning av den dolda volymen. De dolda volymerna finns i det fria "
+"utrymmet för den krypterade volymen."
+
+#: ../dontread/test.rst:27 ../storage/hidden.rst:26
+msgid ""
+"Copy some files to the encrypted volume prior to creating the hidden "
+"volume."
+msgstr ""
+"Kopiera några filer till den krypterade volymen innan du skapar den dolda"
+" volymen."
+
+#: ../dontread/test.rst:30 ../storage/hidden.rst:29
+msgid ""
+"Using a journaling filesystem may risk overwriting the hidden data. The "
+"encrypted filesystem is formated to FAT32 by default, and it is "
+"recommended to leave it that way when using hidden volumes."
+msgstr ""
+"Om du använder ett journaliserande filsystem kan det finnas risk för att "
+"de dolda uppgifterna skrivs över. Det krypterade filsystemet är som "
+"standard formaterat till FAT32, och det rekommenderas att du låter det "
+"vara så när du använder dolda volymer."
+
+#: ../dontread/test.rst:33
+msgid ""
+"This is for testing certain words like Brainpool 192, Nitropy and "
+"curve25519"
+msgstr ""
+
+#: ../dontread/test.rst:36
+msgid ""
+"These are the words in question: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
+
+#: ../dontread/test.rst:39
+msgid ""
+"And here they are in a text: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
 msgid ""
@@ -20304,87 +20408,6 @@ msgstr ""
 "sätter in USB-stickan första gången i Windows igen. Acceptera bara "
 "begäran för att kunna använda USB-stickan som tidigare."
 
-#: ../storage/hidden.rst:2
-msgid "Hidden Storage"
-msgstr "Dold förvaring"
-
-#: ../storage/hidden.rst:4
-msgid ""
-"Hidden volumes allow hiding data inside of the encrypted volume. This "
-"data is protected by an additional passphrase. Without the passphrase, it"
-" is impossible to know whether hidden volumes are present. They are not "
-"configured with a default password so that their existence can be `denied"
-" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
-"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
-"Storage the entire functionality of hidden volumes is implemented in "
-"hardware."
-msgstr ""
-"Dolda volymer gör det möjligt att gömma data i den krypterade volymen. "
-"Dessa data skyddas av en extra lösenfras. Utan lösenfrasen är det "
-"omöjligt att veta om det finns dolda volymer. De är inte konfigurerade "
-"med ett standardlösenord så att deras existens kan `förnekas på ett "
-"trovärdigt sätt <https://en.wikipedia.org/wiki/Plausible_deniability>`__."
-" Konceptet liknar `VeraCrypt's/TrueCrypt's dolda volym "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`__ men med Nitrokey Storage"
-" är hela funktionen för dolda volymer implementerad i hårdvara."
-
-#: ../storage/hidden.rst:11
-msgid ""
-"If you chose to use hidden volumes, you must not write any data to the "
-"encrypted volume, or you risk loosing data in the hidden volume."
-msgstr ""
-"Om du väljer att använda dolda volymer får du inte skriva några data till"
-" den krypterade volymen, annars riskerar du att förlora data i den dolda "
-"volymen."
-
-#: ../storage/hidden.rst:14
-msgid ""
-"Hidden volumes are hidden within the free space of the encrypted volume, "
-"which will be overwritten when writing data to the encrypted volume. "
-"There are no mechanisms to prevent accidental overwritting of hidden "
-"data, as they would reveal the existence of hidden volumes. Data written "
-"to the encrypted volume before the creation of the hidden volume can "
-"still be read."
-msgstr ""
-"Dolda volymer är dolda i det fria utrymmet för den krypterade volymen, "
-"som skrivs över när data skrivs till den krypterade volymen. Det finns "
-"inga mekanismer för att förhindra oavsiktlig överskrivning av dolda data,"
-" eftersom detta skulle avslöja att det finns dolda volymer. Data som "
-"skrivits till den krypterade volymen innan den dolda volymen skapades kan"
-" fortfarande läsas."
-
-#: ../storage/hidden.rst:-1
-msgid ""
-"Hidden volume description. The hidden volumes are within the free space "
-"of the encrypted volume."
-msgstr ""
-"Beskrivning av den dolda volymen. De dolda volymerna finns i det fria "
-"utrymmet för den krypterade volymen."
-
-#: ../storage/hidden.rst:23
-msgid "Configuring hidden volumes"
-msgstr "Konfigurera dolda volymer"
-
-#: ../storage/hidden.rst:26
-msgid ""
-"Copy some files to the encrypted volume prior to creating the hidden "
-"volume."
-msgstr ""
-"Kopiera några filer till den krypterade volymen innan du skapar den dolda"
-" volymen."
-
-#: ../storage/hidden.rst:29
-msgid ""
-"Using a journaling filesystem may risk overwriting the hidden data. The "
-"encrypted filesystem is formated to FAT32 by default, and it is "
-"recommended to leave it that way when using hidden volumes."
-msgstr ""
-"Om du använder ett journaliserande filsystem kan det finnas risk för att "
-"de dolda uppgifterna skrivs över. Det krypterade filsystemet är som "
-"standard formaterat till FAT32, och det rekommenderas att du låter det "
-"vara så när du använder dolda volymer."
-
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted volume using the Nitrokey App."
 msgstr "Lås upp den krypterade volymen med hjälp av Nitrokey-appen."
@@ -26511,4 +26534,7 @@ msgstr ""
 #~ "Nitrokey 3 inte är det enda sättet"
 #~ " att autentisera/2FA för dina "
 #~ "program/tjänster."
+
+#~ msgid "Hidden Storage"
+#~ msgstr "Dold förvaring"
 

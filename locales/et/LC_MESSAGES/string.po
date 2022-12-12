@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-12 13:51+0100\n"
+"POT-Creation-Date: 2022-12-12 15:19+0100\n"
 "PO-Revision-Date: 2022-11-29 17:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: et\n"
@@ -19,6 +19,109 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: ../dontread/test.rst:2
+msgid "This site is for testing certain things."
+msgstr ""
+
+#: ../dontread/test.rst:5 ../storage/hidden.rst:2
+#, fuzzy
+msgid "Hidden Volumes"
+msgstr "Varjatud mahtude kasutamine"
+
+#: ../dontread/test.rst:8 ../storage/hidden.rst:23
+msgid "Configuring hidden volumes"
+msgstr "Varjatud mahtude konfigureerimine"
+
+#: ../dontread/test.rst:10 ../storage/hidden.rst:4
+msgid ""
+"Hidden volumes allow hiding data inside of the encrypted volume. This "
+"data is protected by an additional passphrase. Without the passphrase, it"
+" is impossible to know whether hidden volumes are present. They are not "
+"configured with a default password so that their existence can be `denied"
+" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
+"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
+"Storage the entire functionality of hidden volumes is implemented in "
+"hardware."
+msgstr ""
+"Varjatud mahud võimaldavad andmete peitmist krüpteeritud mahu sees. Need "
+"andmed on kaitstud täiendava salasõna abil. Ilma tunnusmärgita on võimatu"
+" teada, kas varjatud andmekandjad on olemas. Neid ei ole konfigureeritud "
+"vaikimisi parooliga, nii et nende olemasolu saab ` usutavalt "
+"<https://en.wikipedia.org/wiki/Plausible_deniability>`__ eitada. "
+"Kontseptsioon on sarnane `VeraCrypt's/TrueCrypt's peidetud mahtudega "
+"<https://veracrypt.eu/en/docs/hidden-volume/>`__, kuid Nitrokey Storage'i"
+" puhul on kogu peidetud mahtude funktsionaalsus rakendatud riistvaras."
+
+#: ../dontread/test.rst:15 ../storage/hidden.rst:11
+msgid ""
+"If you chose to use hidden volumes, you must not write any data to the "
+"encrypted volume, or you risk loosing data in the hidden volume."
+msgstr ""
+"Kui te otsustate kasutada varjatud mahtu, ei tohi te krüpteeritud mahtu "
+"andmeid kirjutada, sest muidu on oht, et varjatud mahu andmed lähevad "
+"kaduma."
+
+#: ../dontread/test.rst:18 ../storage/hidden.rst:14
+msgid ""
+"Hidden volumes are hidden within the free space of the encrypted volume, "
+"which will be overwritten when writing data to the encrypted volume. "
+"There are no mechanisms to prevent accidental overwritting of hidden "
+"data, as they would reveal the existence of hidden volumes. Data written "
+"to the encrypted volume before the creation of the hidden volume can "
+"still be read."
+msgstr ""
+"Varjatud mahud on peidetud krüpteeritud mahu vabasse ruumi, mis "
+"kirjutatakse üle, kui andmeid krüpteeritud mahule kirjutatakse. Puuduvad "
+"mehhanismid, mis takistaksid varjatud andmete juhuslikku ülekirjutamist, "
+"kuna need paljastaksid varjatud mahtude olemasolu. Enne varjatud mahu "
+"loomist krüpteeritud mahule kirjutatud andmeid saab endiselt lugeda."
+
+#: ../dontread/test.rst:-1 ../storage/hidden.rst:-1
+msgid ""
+"Hidden volume description. The hidden volumes are within the free space "
+"of the encrypted volume."
+msgstr ""
+"Varjatud mahu kirjeldus. Varjatud mahud asuvad krüpteeritud mahu vabas "
+"ruumis."
+
+#: ../dontread/test.rst:27 ../storage/hidden.rst:26
+msgid ""
+"Copy some files to the encrypted volume prior to creating the hidden "
+"volume."
+msgstr ""
+"Kopeerige mõned failid krüpteeritud andmekandjale enne varjatud "
+"andmekandja loomist."
+
+#: ../dontread/test.rst:30 ../storage/hidden.rst:29
+msgid ""
+"Using a journaling filesystem may risk overwriting the hidden data. The "
+"encrypted filesystem is formated to FAT32 by default, and it is "
+"recommended to leave it that way when using hidden volumes."
+msgstr ""
+"Journalisatsioonifailisüsteemi kasutamine võib ohustada peidetud andmete "
+"ülekirjutamist. Krüpteeritud failisüsteem on vaikimisi vormindatud "
+"FAT32-süsteemiks ja soovitatakse seda varjatud mahtude kasutamisel nii "
+"jätta."
+
+#: ../dontread/test.rst:33
+msgid ""
+"This is for testing certain words like Brainpool 192, Nitropy and "
+"curve25519"
+msgstr ""
+
+#: ../dontread/test.rst:36
+msgid ""
+"These are the words in question: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
+
+#: ../dontread/test.rst:39
+msgid ""
+"And here they are in a text: Nitropy, curve25519, Brainpool 192, "
+"Brainpool 256-320, Brainpool 384-521, Brainpool"
+msgstr ""
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
 msgid ""
@@ -20136,86 +20239,6 @@ msgstr ""
 "sisestate USB-mälupulga esimest korda uuesti Windowsis. Nõustuge lihtsalt"
 " palvega, et saaksite USB-mälupulka kasutada nagu varemgi."
 
-#: ../storage/hidden.rst:2
-msgid "Hidden Storage"
-msgstr "Varjatud ladustamine"
-
-#: ../storage/hidden.rst:4
-msgid ""
-"Hidden volumes allow hiding data inside of the encrypted volume. This "
-"data is protected by an additional passphrase. Without the passphrase, it"
-" is impossible to know whether hidden volumes are present. They are not "
-"configured with a default password so that their existence can be `denied"
-" plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__. The "
-"concept is similar to `VeraCrypt's/TrueCrypt's hidden volume "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey "
-"Storage the entire functionality of hidden volumes is implemented in "
-"hardware."
-msgstr ""
-"Varjatud mahud võimaldavad andmete peitmist krüpteeritud mahu sees. Need "
-"andmed on kaitstud täiendava salasõna abil. Ilma tunnusmärgita on võimatu"
-" teada, kas varjatud andmekandjad on olemas. Neid ei ole konfigureeritud "
-"vaikimisi parooliga, nii et nende olemasolu saab ` usutavalt "
-"<https://en.wikipedia.org/wiki/Plausible_deniability>`__ eitada. "
-"Kontseptsioon on sarnane `VeraCrypt's/TrueCrypt's peidetud mahtudega "
-"<https://veracrypt.eu/en/docs/hidden-volume/>`__, kuid Nitrokey Storage'i"
-" puhul on kogu peidetud mahtude funktsionaalsus rakendatud riistvaras."
-
-#: ../storage/hidden.rst:11
-msgid ""
-"If you chose to use hidden volumes, you must not write any data to the "
-"encrypted volume, or you risk loosing data in the hidden volume."
-msgstr ""
-"Kui te otsustate kasutada varjatud mahtu, ei tohi te krüpteeritud mahtu "
-"andmeid kirjutada, sest muidu on oht, et varjatud mahu andmed lähevad "
-"kaduma."
-
-#: ../storage/hidden.rst:14
-msgid ""
-"Hidden volumes are hidden within the free space of the encrypted volume, "
-"which will be overwritten when writing data to the encrypted volume. "
-"There are no mechanisms to prevent accidental overwritting of hidden "
-"data, as they would reveal the existence of hidden volumes. Data written "
-"to the encrypted volume before the creation of the hidden volume can "
-"still be read."
-msgstr ""
-"Varjatud mahud on peidetud krüpteeritud mahu vabasse ruumi, mis "
-"kirjutatakse üle, kui andmeid krüpteeritud mahule kirjutatakse. Puuduvad "
-"mehhanismid, mis takistaksid varjatud andmete juhuslikku ülekirjutamist, "
-"kuna need paljastaksid varjatud mahtude olemasolu. Enne varjatud mahu "
-"loomist krüpteeritud mahule kirjutatud andmeid saab endiselt lugeda."
-
-#: ../storage/hidden.rst:-1
-msgid ""
-"Hidden volume description. The hidden volumes are within the free space "
-"of the encrypted volume."
-msgstr ""
-"Varjatud mahu kirjeldus. Varjatud mahud asuvad krüpteeritud mahu vabas "
-"ruumis."
-
-#: ../storage/hidden.rst:23
-msgid "Configuring hidden volumes"
-msgstr "Varjatud mahtude konfigureerimine"
-
-#: ../storage/hidden.rst:26
-msgid ""
-"Copy some files to the encrypted volume prior to creating the hidden "
-"volume."
-msgstr ""
-"Kopeerige mõned failid krüpteeritud andmekandjale enne varjatud "
-"andmekandja loomist."
-
-#: ../storage/hidden.rst:29
-msgid ""
-"Using a journaling filesystem may risk overwriting the hidden data. The "
-"encrypted filesystem is formated to FAT32 by default, and it is "
-"recommended to leave it that way when using hidden volumes."
-msgstr ""
-"Journalisatsioonifailisüsteemi kasutamine võib ohustada peidetud andmete "
-"ülekirjutamist. Krüpteeritud failisüsteem on vaikimisi vormindatud "
-"FAT32-süsteemiks ja soovitatakse seda varjatud mahtude kasutamisel nii "
-"jätta."
-
 #: ../storage/hidden.rst:32
 msgid "Unlock the encrypted volume using the Nitrokey App."
 msgstr "Avage krüpteeritud maht Nitrokey rakenduse abil."
@@ -26151,4 +26174,7 @@ msgstr ""
 #~ "varusisselogimismeetodid ja/või et Nitrokey 3"
 #~ " ei ole ainus viis oma "
 #~ "rakenduste/teenuste autentimiseks/2FA."
+
+#~ msgid "Hidden Storage"
+#~ msgstr "Varjatud ladustamine"
 
