@@ -14,12 +14,6 @@ Nitrokey Storage, Linux
    libccid. On Debian/Ubuntu based Distributions type in terminal: *sudo
    apt-get update && sudo apt-get install libccid*
 
-   If your distribution has a rather old version of libccid (<1.4.21)
-   you have to add the device information by yourself (for example if
-   you are using Ubuntu 14.04 or older). In this case please follow
-   these
-   `instructions <https://www.nitrokey.com/documentation/frequently-asked-questions-faq#latest-device-driver-missing-on-older-linux-distribution>`__.
-
 2. Download and start the `Nitrokey
    App <https://www.nitrokey.com/download>`__.
 
