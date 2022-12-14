@@ -12,7 +12,8 @@ KDF-DO stands for Key Derived Function - Data Object.
 With this data object the card can inform clients that it supports derived keys,
 details are described in section 4.3.2 of the OpenPGP Smart Card 3.4 specification.
 The benefit of using derived keys is that instead of transmitting passwords in clear text only hashes are transmitted to the card and
-therfore only hashes are stored on the card.
+therefore only hashes are stored on the card.
+Since a derived key will be longer than the original password it will also be harder to successfully run a brute force attack.
 
 
 Warning
