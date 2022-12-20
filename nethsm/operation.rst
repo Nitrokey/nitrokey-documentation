@@ -235,6 +235,14 @@ The list can be retrieved as follows.
 
       This operation requires an authentication with the *Administrator* or *Operator* role.
 
+      **Optional Options**
+
+      +-------------------------------+-----------------------+
+      | Option                        | Description           |
+      +===============================+=======================+
+      | ``-f``, ``--filter`` ``TEXT`` | The Tag to search for |
+      +-------------------------------+-----------------------+
+
       **Example**
 
       .. code-block:: bash
