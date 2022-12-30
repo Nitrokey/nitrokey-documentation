@@ -46,3 +46,4 @@ please refer to chapter `OpenPGP Email Encryption <openpgp.html>`_.
 
 To learn more about how to use S/MIME for email encryption with the Nitrokey,
 please refer to chapter `S/MIME Email Encryption <smime.html>`_.
+
