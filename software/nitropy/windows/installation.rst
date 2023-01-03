@@ -17,6 +17,7 @@ How to Install
 
 .. note::
    If you're using Microsoft Edge, the downloaded ``.exe`` might be marked as "untrused" by Windows. To mark it as trusted anyway, click the three dot on the right of the warning, then "keep", then "show more" and finally "keep anyway".
+
   .. figure:: ./windowswarning/threedotsmore.png
      :alt: The warning displayed by Edge
 
