@@ -1,4 +1,4 @@
-Nitrokey FIDO U2F With Linux
+Nitrokey FIDO U2F With macOS
 ============================
 
 .. contents:: :local:
