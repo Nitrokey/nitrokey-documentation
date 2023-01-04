@@ -41,12 +41,3 @@ Configuring hidden volumes
 .. figure:: ../images/hidden-storage-passphrase.png
   :alt: Hidden volume dialog box
 
-Using hidden volumes
---------------------
-
-1. Unlock the encrypted volume.
-2. Select "unlock hidden volume" and enter any of the hidden volume's passwords.
-
-.. include:: ./hidden-os-specific-partitioning.rst
-
-4. Make sure to unmount/eject all partitions on the hidden volumes before locking or disconnecting the Nitrokey.
