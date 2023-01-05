@@ -166,11 +166,13 @@ The import can be initiated as follows.
 
       **Optional Options**
 
-      +-------------------------------+-----------------------+
-      | Option                        | Description           |
-      +===============================+=======================+
-      | ``-k``, ``--key-id`` ``TEXT`` | The ID of the new key |
-      +-------------------------------+-----------------------+
+      +-------------------------------+-------------------------+
+      | Option                        | Description             |
+      +===============================+=========================+
+      | ``-k``, ``--key-id`` ``TEXT`` | The ID of the new key   |
+      +-------------------------------+-------------------------+
+      | ``--tags`` ``TEXT``           | The Tag for the new key |
+      +-------------------------------+-------------------------+
 
       **Example**
 
@@ -234,6 +236,14 @@ The list can be retrieved as follows.
       **Required Role**
 
       This operation requires an authentication with the *Administrator* or *Operator* role.
+
+      **Optional Options**
+
+      +-------------------------------+-----------------------+
+      | Option                        | Description           |
+      +===============================+=======================+
+      | ``-f``, ``--filter`` ``TEXT`` | The Tag to search for |
+      +-------------------------------+-----------------------+
 
       **Example**
 
