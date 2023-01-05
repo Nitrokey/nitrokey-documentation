@@ -385,7 +385,7 @@ The OpenVPN should be running at this point.
 Client side configuration
 -------------------------
 
-.. code-block:: bash
+.. code-block:: none
 
        1. Install OpenVPN and Easy-RSA
        2. Create a Public Key Infrastructure (PKI) for the OpenVPN client
