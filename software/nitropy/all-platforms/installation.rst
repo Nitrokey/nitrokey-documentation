@@ -65,6 +65,13 @@ Arm Not Supported
 
 Currently, recent nitropy versions cannot be installed on Arm platforms due to a dependency issue (`GitHub issue <https://github.com/Nitrokey/pynitrokey/issues/265>`_).  As a workaround, you can use an x86 Python installation in a Rosetta terminal as described in `this discussion <https://stackoverflow.com/questions/71691598/how-to-run-python-as-x86-with-rosetta2-on-arm-macos-machine>`_).
 
+libusb-1.0.dylib not found
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When running nitropy on macOS, you might see an error message indicating a missing libusb-1.0.dylib file.  This can be fixed by manually installing libusb, e. g. with homebrew::
+
+    $ brew install libusb
+
 Usage Notes
 -----------
 
