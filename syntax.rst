@@ -1,3 +1,5 @@
+:orphan:
+
 Nitrokey Documentation - Syntax
 ===============================
 .. container:: product_platform_heading
