@@ -1,8 +1,3 @@
-Factory Reset
-=============
-
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 There are two types of factory resets for Nitrokey Storage devices:

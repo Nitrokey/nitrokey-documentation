@@ -1,8 +1,3 @@
-Activate Update Mode Manually
-=============================
-
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 .. note::
