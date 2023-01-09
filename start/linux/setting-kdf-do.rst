@@ -1,1 +1,1 @@
-.. include:: ../setting-kdf-do.rst
+.. include:: ../setting-kdf-do.rst.inc
