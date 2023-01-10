@@ -12,12 +12,12 @@ This guide explains how to install nitropy with `pipx <https://pypa.github.io/pi
 Preparation
 -----------
 
-Python 3.9 or newer 
-~~~~~~~~~~~~~~~~~~~
+Python 3.9 or 3.10
+~~~~~~~~~~~~~~~~~~
 Python is already installed on most macOS and Linux systems or can be downloaded from `python.org <https://python.org>`__. See the `Downloading Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`__ for more information.
 
 pip
-~~~~~  
+~~~
 You can install pip with your system package manager or with ``python3 -m ensurepip``. See the `pip Installation Guide <https://pip.pypa.io/en/stable/installation/>`__ for more information.
 
 pipx
@@ -53,10 +53,10 @@ Troubleshooting
 
 If you encounter problems, please make sure that you use the latest version by comparing the output of ``nitropy version`` with the `release list <https://github.com/Nitrokey/pynitrokey/releases>`_ on GitHub.  If an upgrade does not install the latest version, you might be running into one of the following problems.
 
-Python Version Too Old
-~~~~~~~~~~~~~~~~~~~~~~
+Wrong Python Version
+~~~~~~~~~~~~~~~~~~~~
 
-nitropy requires Python 3.9 or later.  If your default Python installation is older than that and cannot be updated, you have to additionally install Python 3.9 and specify the name of its Python executable when calling pipx, for example::
+nitropy requires Python 3.9 or 3.10.  If your default Python installation is older or newer than that and cannot be updated, you have to additionally install Python 3.9 and specify the name of its Python executable when calling pipx, for example::
 
     $ pipx install --python python3.9 pynitrokey
     
@@ -64,6 +64,13 @@ Arm Not Supported
 ~~~~~~~~~~~~~~~~~
 
 Currently, recent nitropy versions cannot be installed on Arm platforms due to a dependency issue (`GitHub issue <https://github.com/Nitrokey/pynitrokey/issues/265>`_).  As a workaround, you can use an x86 Python installation in a Rosetta terminal as described in `this discussion <https://stackoverflow.com/questions/71691598/how-to-run-python-as-x86-with-rosetta2-on-arm-macos-machine>`_).
+
+libusb-1.0.dylib not found
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When running nitropy on macOS, you might see an error message indicating a missing libusb-1.0.dylib file.  This can be fixed by manually installing libusb, e. g. with homebrew::
+
+    $ brew install libusb
 
 Usage Notes
 -----------
