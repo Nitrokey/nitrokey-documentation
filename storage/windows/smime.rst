@@ -1,1 +1,1 @@
-.. include:: ../../pro/smime.rst 
+.. include:: ../../pro/smime.rst.inc 
