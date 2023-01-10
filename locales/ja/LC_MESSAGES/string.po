@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-10 12:14+0100\n"
+"POT-Creation-Date: 2023-01-10 14:23+0100\n"
 "PO-Revision-Date: 2023-01-10 12:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../dontread/test.rst:2
@@ -228,7 +227,7 @@ msgstr "よくあるご質問"
 
 #: ../fido2/index.rst:16 ../hsm/index.rst:16 ../nextbox/clients/index.rst:8
 #: ../nitrokey3/index.rst:23 ../pro/index.rst:17
-#: ../software/nitropy/all-platforms/installation.rst:77
+#: ../software/nitropy/all-platforms/installation.rst:84
 #: ../software/nitropy/index.rst:6 ../start/index.rst:16
 #: ../storage/index.rst:16 ../u2f/index.rst:8
 msgid "Windows"
@@ -243,7 +242,7 @@ msgstr "macOS"
 #: ../fido2/index.rst:16 ../hsm/index.rst:16
 #: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:40
 #: ../nextbox/clients/index.rst:8 ../nitrokey3/index.rst:23 ../pro/index.rst:17
-#: ../software/nitropy/all-platforms/installation.rst:84
+#: ../software/nitropy/all-platforms/installation.rst:91
 #: ../software/nitropy/index.rst:6 ../start/index.rst:16
 #: ../storage/index.rst:16 ../u2f/index.rst:8
 msgid "Linux"
@@ -3367,8 +3366,8 @@ msgid ""
 "The Nitrokey HSM 2 currently supports the S/MIME/X.509 standard. This "
 "page describes the usage of S/MIME email encryption."
 msgstr ""
-"Nitrokey HSM 2は、現在S/MIME/X.509規格に対応しています。このページでは、S/"
-"MIMEのメール暗号化の使用方法について説明します。"
+"Nitrokey HSM "
+"2は、現在S/MIME/X.509規格に対応しています。このページでは、S/MIMEのメール暗号化の使用方法について説明します。"
 
 #: ../hsm/smime.rst:19 ../pro/smime.rst:19
 msgid ""
@@ -3381,12 +3380,11 @@ msgid ""
 "download the installation files from the `OpenSC "
 "<https://github.com/OpenSC/OpenSC/releases>`__ page."
 msgstr ""
-"S/MIME証明書を購入する必要があります（例：`CERTUM<https://www.certum.eu/en/"
-"cert_offer_cert_id/>`__） または、すでに会社で取得している場合もあります。さ"
-"らに、`OpenSC<https://github.com/OpenSC/OpenSC/wiki>`__ "
-"をあなたのシステムにインストールする必要があります。GNU/Linux "
-"ユーザーは通常、パッケージマネージャで OpenSC をインストールできますが (例: "
-"Ubuntu の``sudo apt install opensc``)、 macOS と Windows "
+"S/MIME証明書を購入する必要があります（例：`CERTUM<https://www.certum.eu/en/cert_offer_cert_id/>`__）"
+" "
+"または、すでに会社で取得している場合もあります。さらに、`OpenSC<https://github.com/OpenSC/OpenSC/wiki>`__"
+" をあなたのシステムにインストールする必要があります。GNU/Linux ユーザーは通常、パッケージマネージャで OpenSC "
+"をインストールできますが (例: Ubuntu の``sudo apt install opensc``)、 macOS と Windows "
 "ユーザーは`OpenSC<https://github.com/OpenSC/OpenSC/releases>`__ "
 "ページからインストールファイルをダウンロードできます。"
 
@@ -16581,7 +16579,8 @@ msgstr ""
 "慎重に使用してください。プリコンパイルされたバイナリやMSIインストーラを使用することもできます。"
 
 #: ../software/nitropy/all-platforms/installation.rst:16
-msgid "Python 3.9 or newer"
+#, fuzzy
+msgid "Python 3.9 or 3.10"
 msgstr "Python 3.9 以降"
 
 #: ../software/nitropy/all-platforms/installation.rst:17
@@ -16654,13 +16653,14 @@ msgstr ""
 "アップグレードで最新版がインストールされない場合、以下のような問題が発生している可能性があります。"
 
 #: ../software/nitropy/all-platforms/installation.rst:57
-msgid "Python Version Too Old"
-msgstr "Pythonのバージョンが古すぎる"
+msgid "Wrong Python Version"
+msgstr ""
 
 #: ../software/nitropy/all-platforms/installation.rst:59
+#, fuzzy
 msgid ""
-"nitropy requires Python 3.9 or later.  If your default Python "
-"installation is older than that and cannot be updated, you have to "
+"nitropy requires Python 3.9 or 3.10.  If your default Python installation"
+" is older or newer than that and cannot be updated, you have to "
 "additionally install Python 3.9 and specify the name of its Python "
 "executable when calling pipx, for example::"
 msgstr ""
@@ -16689,15 +16689,26 @@ msgstr ""
 "インストールを Rosetta ターミナルで使用することができます)。"
 
 #: ../software/nitropy/all-platforms/installation.rst:69
+msgid "libusb-1.0.dylib not found"
+msgstr ""
+
+#: ../software/nitropy/all-platforms/installation.rst:71
+msgid ""
+"When running nitropy on macOS, you might see an error message indicating "
+"a missing libusb-1.0.dylib file.  This can be fixed by manually "
+"installing libusb, e. g. with homebrew::"
+msgstr ""
+
+#: ../software/nitropy/all-platforms/installation.rst:76
 msgid "Usage Notes"
 msgstr "使用上の注意"
 
-#: ../software/nitropy/all-platforms/installation.rst:72
+#: ../software/nitropy/all-platforms/installation.rst:79
 #: ../software/nitropy/index.rst:6
 msgid "All Platforms"
 msgstr "すべてのプラットフォーム"
 
-#: ../software/nitropy/all-platforms/installation.rst:74
+#: ../software/nitropy/all-platforms/installation.rst:81
 msgid ""
 "If you want to use nitropy with a Nitrokey Pro or Nitrokey Storage "
 "device, you also have to install `libnitrokey "
@@ -16706,17 +16717,17 @@ msgstr ""
 "Nitrokey Pro や Nitrokey Storage デバイスで nitropy を使用する場合は、`libnitrokey "
 "<https://github.com/Nitrokey/libnitrokey>`__ もインストールしておく必要があります。"
 
-#: ../software/nitropy/all-platforms/installation.rst:79
+#: ../software/nitropy/all-platforms/installation.rst:86
 msgid "Windows support is still experimental -- please use with caution."
 msgstr "Windowsへの対応はまだ実験的なものであり、使用には注意が必要です。"
 
-#: ../software/nitropy/all-platforms/installation.rst:81
+#: ../software/nitropy/all-platforms/installation.rst:88
 msgid ""
 "You might have to run nitropy with administrator rights to be able to "
 "connect to a device."
 msgstr "デバイスに接続するために、管理者権限でnitropyを実行する必要がある場合があります。"
 
-#: ../software/nitropy/all-platforms/installation.rst:86
+#: ../software/nitropy/all-platforms/installation.rst:93
 msgid ""
 "On Linux systems, you also need the Nitrokey udev rules. These are "
 "shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`__. "
@@ -16726,19 +16737,19 @@ msgstr ""
 "<https://github.com/Nitrokey/libnitrokey>`__ "
 "と一緒に出荷されています。あるいは、手動でインストールすることもできます::"
 
-#: ../software/nitropy/all-platforms/installation.rst:91
+#: ../software/nitropy/all-platforms/installation.rst:98
 msgid "See :doc:`../linux/udev` for more information."
 msgstr "詳しくは :doc:`../linux/udev` を参照してください。"
 
-#: ../software/nitropy/all-platforms/installation.rst:94
+#: ../software/nitropy/all-platforms/installation.rst:101
 msgid "Next Steps"
 msgstr "次のステップ"
 
-#: ../software/nitropy/all-platforms/installation.rst:96
+#: ../software/nitropy/all-platforms/installation.rst:103
 msgid "You can find more information on using nitropy in these guides:"
 msgstr "nitropyの使用方法については、これらのガイドで詳しく説明しています。"
 
-#: ../software/nitropy/all-platforms/installation.rst:98
+#: ../software/nitropy/all-platforms/installation.rst:105
 msgid ":doc:`../../../nitrokey3/firmware-update`"
 msgstr "doc:`../../../nitrokey3/firmware-update`."
 
@@ -22690,3 +22701,7 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 #~ "Nitrokey Storage "
 #~ "2：OpenSCをバージョン0.18以上でインストールする必要があります。WindowsやmacOSのユーザーは`OpenSCのウェブサイト<https://github.com/OpenSC/OpenSC/releases>`_で、Debian/Ubuntuのユーザーは`こちら<https://github.com/Nitrokey"
 #~ "/opensc-build>`_でファイルを見つけることができます。"
+
+#~ msgid "Python Version Too Old"
+#~ msgstr "Pythonのバージョンが古すぎる"
+
