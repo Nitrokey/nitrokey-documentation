@@ -10,7 +10,9 @@
 
 - If different Image are to be used for different languages use the substitution syntax and translate the substitution names in Weblate e.g. translate |Picture1| with |Bild1| |tableau1| etc. and define all substitutions with files pathes at the end of the document.
 
-- For content which is identical for different models or operating  systems, use `include` to avoid duplication of files. Locate those  instructions not in but next to the operating system folders.
+- For content which is identical for different models or operating  systems, use `include` to avoid duplication of files. Locate those instructions not in but next to the operating system folders.
+
+- On [include directives](https://docutils.sourceforge.io/docs/ref/rst/directives.html#miscellaneous) you can use ``:start-line:`` and ``:end-line:`` to include different parts of a document. 
 
 - Add a subfolder named the same way as the RST with the numbered image files for each guide.
 
