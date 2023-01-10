@@ -1,1 +1,1 @@
-.. include:: ../multiple-identities.rst 
+.. include:: ../multiple-identities.rst.inc
