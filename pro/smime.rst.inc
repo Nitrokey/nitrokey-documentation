@@ -16,10 +16,7 @@ There are two widely used standards for email encryption.
 
 If you are in doubt which one to choose, you should use OpenPGP, see `here <openpgp.html>`_. This page describes the usage of S/MIME email encryption.
 
-You need to purchase a S/MIME certificate (e.g. at `CERTUM <https://www.certum.eu/en/cert_offer_cert_id/>`__) or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ page.
-
-.. note::
-   Windows users with 64-bit system (standard) need to install both, the 32-bit and the 64-bit version of OpenSC!
+You need to purchase a S/MIME certificate (e.g. at `CERTUM <https://www.certum.eu/en/cert_offer_cert_id/>`__) or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/releases>`__ page.
 
 Import Existing Key and Certificate
 -----------------------------------
@@ -67,15 +64,3 @@ You can find further information about the usage on these pages:
 -  for using
    `Evolution <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>`__,
    an email client for the Gnome Desktop on Linux systems
-
-Troubleshooting
----------------
-
--  On Windows: Did you install **both**, the 32-bit and the 64-bit
-   version of OpenSC?
-
--  Nitrokey Storage 2: You need to install OpenSC in version 0.18 or
-   higher. You can find the files on the `OpenSC
-   website <https://github.com/OpenSC/OpenSC/releases>`__ for Windows
-   and macOS user or `here <https://github.com/Nitrokey/opensc-build>`__
-   for Debian/Ubuntu users.
