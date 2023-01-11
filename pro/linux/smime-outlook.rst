@@ -1,1 +1,1 @@
-.. include:: ../smime-outlook.rst
+.. include:: ../smime-outlook.rst.inc

@@ -1,1 +1,1 @@
-.. include:: ../../pro/smime-thunderbird.rst 
+.. include:: ../../pro/smime-thunderbird.rst.inc 

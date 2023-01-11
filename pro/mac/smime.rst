@@ -1,1 +1,1 @@
-.. include:: ../smime.rst
+.. include:: ../smime.rst.inc

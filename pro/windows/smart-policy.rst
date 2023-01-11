@@ -1,1 +1,1 @@
-.. include:: ../smart-policy.rst
+.. include:: ../smart-policy.rst.inc
