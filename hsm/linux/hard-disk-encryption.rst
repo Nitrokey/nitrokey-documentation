@@ -1,1 +1,1 @@
-.. include:: ../../pro/linux/hard-disk-encryption.rst 
+.. include:: ../../pro/linux/hard-disk-encryption.rst
