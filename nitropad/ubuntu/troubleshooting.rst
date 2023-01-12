@@ -1,1 +1,1 @@
-.. include:: ../troubleshooting.rst 
+.. include:: ../troubleshooting.rst.inc
