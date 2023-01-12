@@ -1,1 +1,1 @@
-.. include:: ../sealed-hardware.rst
+.. include:: ../sealed-hardware.rst.inc
