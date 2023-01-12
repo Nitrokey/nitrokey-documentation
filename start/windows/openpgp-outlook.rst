@@ -1,1 +1,1 @@
-.. include:: ../../pro/openpgp-outlook.rst
+.. include:: ../../pro/openpgp-outlook.rst.inc
