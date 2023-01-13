@@ -1,4 +1,4 @@
-.. include:: ../firmware-update.rst 
+.. include:: ../firmware-update.rst.inc 
 
 Troubleshooting:
 ----------------
