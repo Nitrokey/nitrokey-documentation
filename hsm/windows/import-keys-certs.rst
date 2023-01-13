@@ -1,4 +1,4 @@
 
 
-.. include:: ../import-keys-certs.rst 
+.. include:: ../import-keys-certs.rst.inc 
 

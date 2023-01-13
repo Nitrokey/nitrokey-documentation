@@ -1,4 +1,4 @@
 
 
-.. include:: ../pkcs11-url.rst 
+.. include:: ../pkcs11-url.rst.inc 
 
