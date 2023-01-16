@@ -1,1 +1,1 @@
-.. include:: ../2fa-odoo.rst 
+.. include:: ../2fa-odoo.rst.inc
