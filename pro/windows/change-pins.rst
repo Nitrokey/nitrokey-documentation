@@ -1,1 +1,1 @@
-.. include:: ../change-pins.rst 
+.. include:: ../change-pins.rst.inc

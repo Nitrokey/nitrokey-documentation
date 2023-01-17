@@ -1,1 +1,1 @@
-.. include:: ../2fa-nextcloud.rst 
+.. include:: ../2fa-nextcloud.rst.inc

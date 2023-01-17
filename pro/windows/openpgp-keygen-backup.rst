@@ -1,1 +1,1 @@
-.. include:: ../openpgp-keygen-backup.rst
+.. include:: ../openpgp-keygen-backup.rst.inc

@@ -1,1 +1,1 @@
-.. include:: ../openpgp-thunderbird.rst
+.. include:: ../openpgp-thunderbird.rst.inc

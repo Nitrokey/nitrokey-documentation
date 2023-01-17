@@ -1,4 +1,4 @@
 Login With PAM
 ===========================
 
-.. include:: ../login-with-pam.rst  
+.. include:: ../login-with-pam.rst.inc  

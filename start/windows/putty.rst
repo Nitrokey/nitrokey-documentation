@@ -1,1 +1,1 @@
-.. include:: ../../pro/putty.rst 
+.. include:: ../../pro/putty.rst.inc

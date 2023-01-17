@@ -1,4 +1,4 @@
-.. include:: ../firmware-update.rst 
+.. include:: ../firmware-update.rst.inc 
 
 **Issue:** I get ``permission denied for /dev/hidrawX`` during update.
   This likely means your user has not the needed permissions to

@@ -1,1 +1,1 @@
-.. include:: ../../pro/openpgp.rst 
+.. include:: ../../pro/openpgp.rst.inc 

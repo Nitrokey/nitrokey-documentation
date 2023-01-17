@@ -1,1 +1,1 @@
-.. include:: ../../pro/openpgp-keygen-gpa.rst
+.. include:: ../../pro/openpgp-keygen-gpa.rst.inc

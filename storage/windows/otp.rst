@@ -1,1 +1,1 @@
-.. include:: ../../pro/otp.rst 
+.. include:: ../../pro/otp.rst.inc

@@ -1,1 +1,1 @@
-.. include:: ../../pro/eidauthenticate.rst
+.. include:: ../../pro/eidauthenticate.rst.inc
