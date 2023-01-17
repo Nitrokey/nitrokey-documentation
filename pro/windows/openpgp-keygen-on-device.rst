@@ -1,1 +1,1 @@
-.. include:: ../openpgp-keygen-on-device.rst
+.. include:: ../openpgp-keygen-on-device.rst.inc

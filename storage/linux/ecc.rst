@@ -1,1 +1,1 @@
-.. include:: ../../pro/ecc.rst
+.. include:: ../../pro/ecc.rst.inc

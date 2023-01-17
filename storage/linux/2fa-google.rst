@@ -1,1 +1,1 @@
-.. include:: ../..//pro/2fa-google.rst
+.. include:: ../..//pro/2fa-google.rst.inc

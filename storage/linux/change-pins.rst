@@ -1,1 +1,1 @@
-.. include:: ../../pro/change-pins.rst 
+.. include:: ../../pro/change-pins.rst.inc 
