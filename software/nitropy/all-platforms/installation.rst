@@ -102,4 +102,6 @@ Next Steps
 
 You can find more information on using nitropy in these guides:
 
-- :doc:`../../../nitrokey3/firmware-update`
+- For Linux: :doc:`../../../nitrokey3/linux/firmware-update`
+- For Mac: :doc:`../../../nitrokey3/mac/firmware-update`
+- For Windows: :doc:`../../../nitrokey3/windows/firmware-update`
