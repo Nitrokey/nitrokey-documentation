@@ -1,1 +1,1 @@
-.. include:: ../system-update.rst 
+.. include:: ../system-update.rst.inc 

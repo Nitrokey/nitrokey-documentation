@@ -1,1 +1,1 @@
-.. include:: ../default-boot.rst 
+.. include:: ../default-boot.rst.inc 

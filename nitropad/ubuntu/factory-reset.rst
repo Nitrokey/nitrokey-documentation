@@ -1,1 +1,1 @@
-.. include:: ../factory-reset.rst 
+.. include:: ../factory-reset.rst.inc 
