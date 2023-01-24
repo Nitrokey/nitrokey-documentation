@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-24 18:55+0100\n"
-"PO-Revision-Date: 2023-01-10 15:24+0000\n"
+"PO-Revision-Date: 2023-01-24 19:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/hu/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
@@ -4110,6 +4111,8 @@ msgid ""
 "Follow these steps to use the program with `Nitrokey "
 "<https://shop.nitrokey.com/>`__:"
 msgstr ""
+"Kövesse az alábbi lépéseket a program használatához a `Nitrokey <https://shop"
+".nitrokey.com/>`__:"
 
 #: ../hsm/mac/index.rst:2
 msgid "Nitrokey HSM with macOS"
@@ -15329,15 +15332,14 @@ msgid "How to Setup The Login"
 msgstr "A bejelentkezés beállítása"
 
 #: ../pro/login-with-pam.rst.inc:9
-#, fuzzy
 msgid ""
 "You have two options: `pam_p11 <https://github.com/OpenSC/pam_pkcs11>`__ "
 "or `PAM Poldi "
 "<https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard/>`__."
 msgstr ""
-"Két lehetősége van: `pam_p11 <https://github.com/OpenSC/pam_pkcs11>`__ "
-"vagy `Poldi "
-"<https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard/>`__."
+"Két lehetőséged van: `pam_p11 <https://github.com/OpenSC/pam_pkcs11>`__ vagy "
+"`PAM Poldi <https://wiki.ubuntuusers.de/Archiv/"
+"Authentifizierung_OpenPGP_SmartCard/>`__."
 
 #: ../pro/login-with-pam.rst.inc:11
 msgid ""
@@ -15352,18 +15354,16 @@ msgstr ""
 "információkért."
 
 #: ../pro/login-with-pam.rst.inc:13
-#, fuzzy
 msgid ""
 "PAM Poldi 0.4.1 works flawlessly with Nitrokey for PAM authentication "
 "with RSA keys (see Troubleshooting for information on ECC keys). Besides "
 "the installation of Poldi (e.g. ``sudo apt-get install libpam-poldi`` on "
 "Ubuntu) the following steps are needed to get it working."
 msgstr ""
-"A Poldi 0.4.1 hibátlanul működik a Nitrokey-vel a PAM hitelesítéshez RSA "
+"A PAM Poldi 0.4.1 hibátlanul működik a Nitrokey-vel a PAM hitelesítéshez RSA "
 "kulcsokkal (az ECC kulcsokkal kapcsolatos információkért lásd a "
-"Hibaelhárítás című részt). A poldi telepítése mellett (pl. ``sudo apt-get"
-" install libpam-poldi`` Ubuntun) a következő lépések szükségesek a "
-"működéshez."
+"Hibaelhárítás című részt). A Poldi telepítése mellett (pl. ``sudo apt-get "
+"install libpam-poldi`` Ubuntun) a következő lépések szükségesek a működéshez."
 
 #: ../pro/login-with-pam.rst.inc:15
 msgid ""
@@ -15374,90 +15374,79 @@ msgstr ""
 " hitelesítési kulcsot használja."
 
 #: ../pro/login-with-pam.rst.inc:17
-#, fuzzy
 msgid ""
 "At first you need to find out the Application ID of your Nitrokey. It "
 "looks like or similar to ``D00600012401020000000000xxxxxxxx``."
 msgstr ""
-"Először is meg kell tudnia a Nitrokey \"Application ID\" azonosítóját. A "
-"``gpg --card-status | grep Application`` segítségével megtudhatod, hogy "
-"mi a tiéd. Úgy néz ki, mint ``D00600012401020000000000xxxxxxxx`` vagy "
-"hasonló."
+"Először is meg kell tudnia a Nitrokey alkalmazásazonosítóját. Ez úgy néz ki, "
+"vagy hasonló a ``D00600012401020000000000xxxxxxxx``."
 
 #: ../pro/login-with-pam.rst.inc:23
-#, fuzzy
 msgid ""
 "Now you have to add a line to ``/etc/poldi/localdb/users`` which contains"
 " the following information ``<YourApplicationID> <YourUsername>``."
 msgstr ""
-"Most hozzá kell adnod egy sort az /etc/poldi/localdb/users állományhoz, "
-"amely a következő információt tartalmazza"
+"Most a ``/etc/poldi/localdb/users`` oldalhoz kell hozzáadni egy sort, amely "
+"a következő információkat tartalmazza: ``<YourApplicationID> "
+"<YourUsername>``."
 
 #: ../pro/login-with-pam.rst.inc:25
-#, fuzzy
 msgid ""
 "This could look like ``D00600012401020000000000xxxxxxxx nitrokeyuser``. "
 "Now dump the public key from the Nitrokey into Poldis local db:"
 msgstr ""
-"Ez így nézhet ki: 'D006000124010200000000000000xxxxxxxx nitrokeyuser'. "
-"Most a nyilvános kulcsot a Nitrokey-ből a poldi local db-ba dumpoljuk:"
+"Ez így nézhet ki: ``D00600012401020000000000xxxxxxxx nitrokeyuser``. Most a "
+"nyilvános kulcsot a Nitrokey-ből a Poldis helyi adatbázisa tartalmazza:"
 
 #: ../pro/login-with-pam.rst.inc:31
-#, fuzzy
 msgid ""
 "Please be aware that you have to insert your Application ID in the line "
 "above with the one of your Nitrokey!"
 msgstr ""
-"Felhívjuk figyelmét, hogy a fenti sorba a Pályázati azonosítóját kell "
-"beírnia a pálcája azonosítójával együtt!"
+"Kérjük, vegye figyelembe, hogy a fenti sorba a Nitrokey azonosítóját kell "
+"beírnia a fenti sorba!"
 
 #: ../pro/login-with-pam.rst.inc:33
-#, fuzzy
 msgid ""
 "Then you have to configure PAM. Just add ``auth sufficient pam_poldi.so``"
 " to PAM configuration files according to your needs:"
 msgstr ""
-"Ezután konfigurálnia kell a PAM-ot. Csak add hozzá a \"auth sufficient "
-"pam_poldi.so\" -t a pam konfigurációs fájlokhoz az igényeidnek "
-"megfelelően:"
+"Ezután konfigurálnia kell a PAM-ot. Csak add hozzá a ``auth sufficient "
+"pam_poldi.so`` a PAM konfigurációs fájlokat az igényeidnek megfelelően:"
 
 #: ../pro/login-with-pam.rst.inc:36
-#, fuzzy
 msgid "``/etc/pam.d/common-auth`` for graphical user login"
-msgstr "/etc/pam.d/common-auth grafikus felhasználói bejelentkezéshez"
+msgstr "``/etc/pam.d/common-auth`` grafikus felhasználói bejelentkezéshez"
 
 #: ../pro/login-with-pam.rst.inc:37
-#, fuzzy
 msgid "``/etc/pam.d/login`` for console login"
-msgstr "/etc/pam.d/login a konzolos bejelentkezéshez"
+msgstr "``/etc/pam.d/login`` a konzolos bejelentkezéshez"
 
 #: ../pro/login-with-pam.rst.inc:38
-#, fuzzy
 msgid "``/etc/pam.d/sudo`` for sudo authentication"
-msgstr "/etc/pam.d/sudo a sudo hitelesítéshez"
+msgstr "``/etc/pam.d/sudo`` a sudo hitelesítéshez"
 
 #: ../pro/login-with-pam.rst.inc:39
-#, fuzzy
 msgid "``/etc/pam.d/gnome-screensaver`` for login back from a locked screen"
-msgstr "/etc/pam.d/gnome-screensaver a zárolt képernyőről való visszalépéshez,"
+msgstr ""
+"``/etc/pam.d/gnome-screensaver`` a zárolt képernyőről való visszalépéshez"
 
 #: ../pro/login-with-pam.rst.inc:40
 msgid "and other files in ``/etc/pam.d``"
-msgstr ""
+msgstr "és más fájlokat a ``/etc/pam.d``"
 
 #: ../pro/login-with-pam.rst.inc:42
-#, fuzzy
 msgid ""
 "PAM is dangerous to play around with, so make sure you have a way of "
 "accessing the machine if you break authentication completely. Remember "
 "that booting into rescue mode from GRUB requires a root password, so keep"
 " that or a live CD which can read your filesystems to hand."
 msgstr ""
-"A Pammel veszélyes játszani, ezért győződjön meg róla, hogy van-e módja a"
-" géphez való hozzáférésre, ha teljesen megszakad a hitelesítés. Ne "
-"feledje, hogy a Grubból mentési módba való bootoláshoz root jelszóra van "
-"szükség, ezért tartsa kéznél azt vagy egy élő CD-t, amely képes beolvasni"
-" a fájlrendszereit."
+"A PAM-mal veszélyes játszani, ezért győződj meg róla, hogy van módod a "
+"géphez való hozzáférésre, ha teljesen megszakítod a hitelesítést. Ne "
+"feledje, hogy a GRUB-ból mentési módba való bootoláshoz root jelszóra van "
+"szükség, ezért tartsa kéznél azt vagy egy élő CD-t, amely képes olvasni a "
+"fájlrendszereit."
 
 #: ../pro/login-with-pam.rst.inc:44
 msgid ""
@@ -15470,13 +15459,12 @@ msgstr ""
 " (németül, részben elavult)."
 
 #: ../pro/login-with-pam.rst.inc:49
-#, fuzzy
 msgid ""
 "If you get an error similar to ``ERR 100663414 Invalid ID <SCD>`` you "
 "should try instead"
 msgstr ""
-"Ha a 'ERR 100663414 Érvénytelen azonosító <SCD>'-hez hasonló hibaüzenetet"
-" kap, akkor próbálja meg a következőt."
+"Ha a ``ERR 100663414 Invalid ID <SCD>`` -hoz hasonló hibát kap, akkor "
+"próbálja meg helyette a következőt"
 
 #: ../pro/login-with-pam.rst.inc:55
 msgid ""
@@ -15491,7 +15479,6 @@ msgid "ECC Keys"
 msgstr "ECC kulcsok"
 
 #: ../pro/login-with-pam.rst.inc:59
-#, fuzzy
 msgid ""
 "Unfortunately, Poldi has no support for ECC keys yet. But there is a "
 "`patch for ECC keys used with Nitrokey Start "
@@ -15500,13 +15487,11 @@ msgid ""
 " newer version eventually. In the meantime the only option is to build "
 "Poldi from source."
 msgstr ""
-"Sajnos a poldi még nem támogatja az ECC kulcsokat. De van egy `patch a "
-"Nitrokey Start "
-"<https://dev.gnupg.org/T4009><https://dev.gnupg.org/T4009>`__ "
-"segítségével használt ECC kulcsokhoz. Ez már szerepel a poldi fejlesztői "
-"adattár master ágában, így előbb-utóbb egy újabb verzióban is ki fog "
-"kerülni. Addig is az egyetlen lehetőség a poldi forrásból történő "
-"összeállítása."
+"Sajnos a Poldi még nem támogatja az ECC kulcsokat. De van egy `javítás a "
+"Nitrokey Start <https://dev.gnupg.org/T4009>`__ segítségével használt ECC "
+"kulcsokhoz. Ez már szerepel a Poldi fejlesztői tárolójának master ágában, és "
+"így előbb-utóbb egy újabb verzióban fog megjelenni. Addig is az egyetlen "
+"lehetőség a Poldi forrásból történő összeállítása."
 
 #: ../pro/openpgp.rst.inc:2
 msgid "OpenPGP Email Encryption"
@@ -27109,4 +27094,3 @@ msgstr ""
 #~ "``poldi-ctrl -k > <YourApplicationID>; "
 #~ "sudo mv <YourApplicationID> "
 #~ "/etc/poldi/localdb/keys``"
-
