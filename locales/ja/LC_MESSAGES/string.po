@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-24 18:55+0100\n"
-"PO-Revision-Date: 2023-01-10 15:24+0000\n"
+"PO-Revision-Date: 2023-01-24 19:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/ja/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
@@ -3587,7 +3588,8 @@ msgstr "(Nitrokey HSM 2 - macOS)"
 msgid ""
 "Follow these steps to use the program with `Nitrokey "
 "<https://shop.nitrokey.com/>`__:"
-msgstr ""
+msgstr "`Nitrokey<https://shop.nitrokey.com/"
+">`__でプログラムを使用する場合は、以下の手順に従ってください。"
 
 #: ../hsm/mac/index.rst:2
 msgid "Nitrokey HSM with macOS"
@@ -13204,15 +13206,14 @@ msgid "How to Setup The Login"
 msgstr "ログインの設定方法"
 
 #: ../pro/login-with-pam.rst.inc:9
-#, fuzzy
 msgid ""
 "You have two options: `pam_p11 <https://github.com/OpenSC/pam_pkcs11>`__ "
 "or `PAM Poldi "
 "<https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard/>`__."
 msgstr ""
-"選択肢は2つです。`pam_p11 <https://github.com/OpenSC/pam_pkcs11>`__ または `Poldi "
-"<https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard/>`__"
-" です。"
+"`pam_p11<https://github.com/OpenSC/pam_pkcs11>`__ または`PAM "
+"Poldi<https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard/"
+">`__ の2つのオプションがあります。"
 
 #: ../pro/login-with-pam.rst.inc:11
 msgid ""
@@ -13225,16 +13226,17 @@ msgstr ""
 "<https://opensc.github.io/pam_pkcs11/doc/pam_pkcs11.html>`__ を見てください。"
 
 #: ../pro/login-with-pam.rst.inc:13
-#, fuzzy
 msgid ""
 "PAM Poldi 0.4.1 works flawlessly with Nitrokey for PAM authentication "
 "with RSA keys (see Troubleshooting for information on ECC keys). Besides "
 "the installation of Poldi (e.g. ``sudo apt-get install libpam-poldi`` on "
 "Ubuntu) the following steps are needed to get it working."
 msgstr ""
-"Poldi 0.4.1 は Nitrokey を使って RSA 鍵による PAM 認証で問題なく動作します (ECC "
-"鍵についてはトラブルシューティングを参照してください)。poldi のインストール (例: ``sudo apt-get install "
-"libpam-poldi`` on Ubuntu) のほかに、動作させるには次の手順が必要です。"
+"PAM Poldi 0.4.1 は Nitrokey を使って RSA 鍵による PAM "
+"認証で問題なく動作します (ECC 鍵については "
+"トラブルシューティングを参照してください)。Poldi のインストール (例:``sudo "
+"apt-get install libpam-poldi`` on Ubuntu) "
+"の他に、動作させるために以下の手順が必要です。"
 
 #: ../pro/login-with-pam.rst.inc:15
 msgid ""
@@ -13243,81 +13245,77 @@ msgid ""
 msgstr "認証キーはPAMで使用するため、すでにNitrokeyでキーを生成しておく必要があります。"
 
 #: ../pro/login-with-pam.rst.inc:17
-#, fuzzy
 msgid ""
 "At first you need to find out the Application ID of your Nitrokey. It "
 "looks like or similar to ``D00600012401020000000000xxxxxxxx``."
 msgstr ""
-"まず、自分の Nitrokey の \"Application ID\" を見つける必要があります。``gpg --card-status | "
-"grep Application`` で、自分のものが分かります。``D00600012401020000000000xxxxxxxx`` "
-"のような感じです。"
+"まず、Nitrokey のアプリケーション ID "
+"を確認する必要があります。``D00600012401020000000000xxxxxxxx`` "
+"のような形か似ています。"
 
 #: ../pro/login-with-pam.rst.inc:23
-#, fuzzy
 msgid ""
 "Now you have to add a line to ``/etc/poldi/localdb/users`` which contains"
 " the following information ``<YourApplicationID> <YourUsername>``."
-msgstr "ここで、/etc/poldi/localdb/usersに以下の情報を含む行を追加する必要があります。"
+msgstr ""
+"ここで、``/etc/poldi/localdb/users`` "
+"に、以下の情報を含む行を追加する必要があります。``<YourApplicationID> "
+"<YourUsername>``."
 
 #: ../pro/login-with-pam.rst.inc:25
-#, fuzzy
 msgid ""
 "This could look like ``D00600012401020000000000xxxxxxxx nitrokeyuser``. "
 "Now dump the public key from the Nitrokey into Poldis local db:"
 msgstr ""
-"これは 'D00600012401020000000000xxxxxxx nitrokeyuser' のようになります。ここで、Nitrokey "
-"から公開鍵を poldi のローカル db にダンプします。"
+"これは、``D00600012401020000000000xxxxxxxx nitrokeyuser``のように見えるかもし"
+"れません。NitrokeyからPoldisのローカルDBに公開鍵をダンプします。"
 
 #: ../pro/login-with-pam.rst.inc:31
-#, fuzzy
 msgid ""
 "Please be aware that you have to insert your Application ID in the line "
 "above with the one of your Nitrokey!"
-msgstr "応募IDは、スティックと一緒に上の行に入力してください。"
+msgstr "応募IDは、ニトロキーのものと一緒に上の行に入れる必要がありますので、ご注意く"
+"ださい。"
 
 #: ../pro/login-with-pam.rst.inc:33
-#, fuzzy
 msgid ""
 "Then you have to configure PAM. Just add ``auth sufficient pam_poldi.so``"
 " to PAM configuration files according to your needs:"
 msgstr ""
-"次に、PAMの設定を行います。必要に応じて、pamの設定ファイルに \"auth sufficient pam_poldi.so\" "
-"を追加するだけです。"
+"次に、PAMの設定を行います。PAMの設定ファイルに``auth sufficient pam_poldi."
+"so`` を必要な分だけ追加するだけです。"
 
 #: ../pro/login-with-pam.rst.inc:36
-#, fuzzy
 msgid "``/etc/pam.d/common-auth`` for graphical user login"
-msgstr "/etc/pam.d/common-auth （グラフィカルユーザーログイン用"
+msgstr "`グラフィカルなユーザーログインのための `/etc/pam.d/common-auth``"
 
 #: ../pro/login-with-pam.rst.inc:37
-#, fuzzy
 msgid "``/etc/pam.d/login`` for console login"
-msgstr "/etc/pam.d/login コンソールログイン用"
+msgstr "``/etc/pam.d/login`` コンソールログイン用"
 
 #: ../pro/login-with-pam.rst.inc:38
-#, fuzzy
 msgid "``/etc/pam.d/sudo`` for sudo authentication"
-msgstr "/etc/pam.d/sudo で sudo 認証を行う。"
+msgstr "``/etc/pam.d/sudo`` sudo 認証用"
 
 #: ../pro/login-with-pam.rst.inc:39
-#, fuzzy
 msgid "``/etc/pam.d/gnome-screensaver`` for login back from a locked screen"
-msgstr "/etc/pam.d/gnome-screensaver ロックされた画面からの復帰に使用します。"
+msgstr "`ロックされた画面からログインし直すための `/etc/pam.d/gnome-screensaver`` "
+"を用意しました。"
 
 #: ../pro/login-with-pam.rst.inc:40
 msgid "and other files in ``/etc/pam.d``"
-msgstr ""
+msgstr "およびその他のファイル``/etc/pam.d`` にあります。"
 
 #: ../pro/login-with-pam.rst.inc:42
-#, fuzzy
 msgid ""
 "PAM is dangerous to play around with, so make sure you have a way of "
 "accessing the machine if you break authentication completely. Remember "
 "that booting into rescue mode from GRUB requires a root password, so keep"
 " that or a live CD which can read your filesystems to hand."
 msgstr ""
-"Pam を弄るのは危険なので、認証を完全に解除してもマシンにアクセスできる方法を確保しておいてください。Grub "
-"からレスキューモードで起動するには root パスワードが必要であることを忘れないでください。"
+"PAM は弄るには危険なので、認証を完全に壊してもマシンにアクセスできる方法を "
+"確保してください。GRUB からレスキューモードで起動するには root "
+"パスワードが必要であることを忘れないでください。"
 
 #: ../pro/login-with-pam.rst.inc:44
 msgid ""
@@ -13330,11 +13328,11 @@ msgstr ""
 " (ドイツ語で、一部古くなっています) をご覧ください。"
 
 #: ../pro/login-with-pam.rst.inc:49
-#, fuzzy
 msgid ""
 "If you get an error similar to ``ERR 100663414 Invalid ID <SCD>`` you "
 "should try instead"
-msgstr "もし 'ERR 100663414 Invalid ID <SCD>' のようなエラーが発生した場合は、代わりに次のことを試してみてください。"
+msgstr "``ERR 100663414 Invalid ID <SCD>`` "
+"のようなエラーが発生した場合は、代わりに以下を試してみてください。"
 
 #: ../pro/login-with-pam.rst.inc:55
 msgid ""
@@ -13347,7 +13345,6 @@ msgid "ECC Keys"
 msgstr "ECCキー"
 
 #: ../pro/login-with-pam.rst.inc:59
-#, fuzzy
 msgid ""
 "Unfortunately, Poldi has no support for ECC keys yet. But there is a "
 "`patch for ECC keys used with Nitrokey Start "
@@ -13356,10 +13353,11 @@ msgid ""
 " newer version eventually. In the meantime the only option is to build "
 "Poldi from source."
 msgstr ""
-"残念ながら、poldi はまだ ECC キーをサポートしていません。しかし、Nitrokey Start "
-"<https://dev.gnupg.org/T4009>`__ で使われるECCキー用の` パッチが存在します。これはすでに poldi "
-"の開発リポジトリの master ブランチに含まれているので、いずれ新しいバージョンでリリースされるでしょう。それまでの間は、poldi "
-"をソースからビルドするのが唯一の選択肢です。"
+"残念ながら、Poldi はまだ ECC キーをサポートしていません。しかし、Nitrokey "
+"Start<https://dev.gnupg.org/T4009>`__で使われるECCキー用の`パッチがあります。"
+"これはすでに Poldi の開発リポジトリの master ブランチに含まれているので、いず"
+"れは新しいバージョンでリリースされるでしょう。それまでは Poldi "
+"をソースからビルドするのが唯一の方法です。"
 
 #: ../pro/openpgp.rst.inc:2
 msgid "OpenPGP Email Encryption"
@@ -22784,4 +22782,3 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 #~ "``poldi-ctrl -k > <YourApplicationID>; "
 #~ "sudo mv <YourApplicationID> "
 #~ "/etc/poldi/localdb/keys``。"
-
