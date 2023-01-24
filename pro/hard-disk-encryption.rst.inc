@@ -10,9 +10,7 @@ VeraCrypt (formerly TrueCrypt)
 
 `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__ is a free and Open Source disk encryption software for Windows, macOS, and GNU+Linux. It is the successor of TrueCrypt and thus recommended, although the following instructions should apply to TrueCrypt as well.
 
-Follow these steps to use the program with `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ or `Nitrokey Pro
-2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__:
+Follow these steps to use the program with `Nitrokey <https://shop.nitrokey.com/>`__:
 
 1. Install the latest release of
    `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__, or download the
