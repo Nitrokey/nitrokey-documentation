@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-24 18:55+0100\n"
-"PO-Revision-Date: 2023-01-10 15:24+0000\n"
+"PO-Revision-Date: 2023-01-24 19:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Russian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/ru/>\n"
 "Language: ru\n"
-"Language-Team: Russian <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/ru/>\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2 ../u2f/2fa-nextcloud.rst:4
@@ -4091,6 +4092,8 @@ msgid ""
 "Follow these steps to use the program with `Nitrokey "
 "<https://shop.nitrokey.com/>`__:"
 msgstr ""
+"Выполните следующие шаги, чтобы использовать программу с `Nitrokey "
+"<https://shop.nitrokey.com/>`__:"
 
 #: ../hsm/mac/index.rst:2
 msgid "Nitrokey HSM with macOS"
@@ -15274,15 +15277,14 @@ msgid "How to Setup The Login"
 msgstr "Как настроить вход в систему"
 
 #: ../pro/login-with-pam.rst.inc:9
-#, fuzzy
 msgid ""
 "You have two options: `pam_p11 <https://github.com/OpenSC/pam_pkcs11>`__ "
 "or `PAM Poldi "
 "<https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard/>`__."
 msgstr ""
-"У вас есть два варианта: `pam_p11 "
-"<https://github.com/OpenSC/pam_pkcs11>`__ или `Poldi "
-"<https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard/>`__."
+"У вас есть два варианта: `pam_p11 <https://github.com/OpenSC/pam_pkcs11>`__ "
+"или `PAM Poldi <https://wiki.ubuntuusers.de/Archiv/"
+"Authentifizierung_OpenPGP_SmartCard/>`__."
 
 #: ../pro/login-with-pam.rst.inc:11
 msgid ""
@@ -15297,17 +15299,16 @@ msgstr ""
 "получения дополнительной информации."
 
 #: ../pro/login-with-pam.rst.inc:13
-#, fuzzy
 msgid ""
 "PAM Poldi 0.4.1 works flawlessly with Nitrokey for PAM authentication "
 "with RSA keys (see Troubleshooting for information on ECC keys). Besides "
 "the installation of Poldi (e.g. ``sudo apt-get install libpam-poldi`` on "
 "Ubuntu) the following steps are needed to get it working."
 msgstr ""
-"Poldi 0.4.1 безупречно работает с Nitrokey для аутентификации PAM с "
-"ключами RSA (информацию о ключах ECC см. в разделе Устранение неполадок)."
-" Помимо установки poldi (например, ``sudo apt-get install libpam-poldi`` "
-"на Ubuntu) для его работы необходимы следующие шаги."
+"PAM Poldi 0.4.1 безупречно работает с Nitrokey для аутентификации PAM с "
+"ключами RSA (информацию о ключах ECC см. в разделе Устранение неполадок). "
+"Помимо установки Poldi (например, ``sudo apt-get install libpam-poldi`` на "
+"Ubuntu), для его работы необходимы следующие шаги."
 
 #: ../pro/login-with-pam.rst.inc:15
 msgid ""
@@ -15318,91 +15319,77 @@ msgstr ""
 "ключ аутентификации используется PAM."
 
 #: ../pro/login-with-pam.rst.inc:17
-#, fuzzy
 msgid ""
 "At first you need to find out the Application ID of your Nitrokey. It "
 "looks like or similar to ``D00600012401020000000000xxxxxxxx``."
 msgstr ""
-"Сначала вам нужно узнать \"ID приложения\" вашего Nitrokey. Вы можете "
-"использовать ``gpg --card-status | grep Application``, чтобы узнать свой."
-" Это похоже на ``D00600012401020000000000xxxxxxxx`` или что-то похожее."
+"Сначала вам нужно узнать идентификатор приложения Nitrokey. Он выглядит как "
+"или похож на ``D00600012401020000000000xxxxxxxx``."
 
 #: ../pro/login-with-pam.rst.inc:23
-#, fuzzy
 msgid ""
 "Now you have to add a line to ``/etc/poldi/localdb/users`` which contains"
 " the following information ``<YourApplicationID> <YourUsername>``."
 msgstr ""
-"Теперь вам нужно добавить строку в /etc/poldi/localdb/users, которая "
-"содержит следующую информацию"
+"Теперь необходимо добавить строку в ``/etc/poldi/localdb/users``, которая "
+"содержит следующую информацию ``<YourApplicationID> <YourUsername>``."
 
 #: ../pro/login-with-pam.rst.inc:25
-#, fuzzy
 msgid ""
 "This could look like ``D00600012401020000000000xxxxxxxx nitrokeyuser``. "
 "Now dump the public key from the Nitrokey into Poldis local db:"
 msgstr ""
-"Это может выглядеть как 'D00600012401020000000000xxxxxxx nitrokeyuser'. "
-"Теперь сбросьте открытый ключ из Nitrokey в локальную базу данных poldi:"
+"Это может выглядеть как ``D00600012401020000000000xxxxxxxx nitrokeyuser``. "
+"Теперь сбросьте открытый ключ из Nitrokey в локальную базу данных Poldis:"
 
 #: ../pro/login-with-pam.rst.inc:31
-#, fuzzy
 msgid ""
 "Please be aware that you have to insert your Application ID in the line "
 "above with the one of your Nitrokey!"
 msgstr ""
-"Пожалуйста, имейте в виду, что в строке выше вы должны вставить ID вашей "
-"заявки вместе с ID вашей палочки!"
+"Пожалуйста, обратите внимание, что в строке выше вы должны вставить свой ID "
+"приложения вместе с ID вашего Nitrokey!"
 
 #: ../pro/login-with-pam.rst.inc:33
-#, fuzzy
 msgid ""
 "Then you have to configure PAM. Just add ``auth sufficient pam_poldi.so``"
 " to PAM configuration files according to your needs:"
 msgstr ""
-"Затем вам нужно настроить PAM. Просто добавьте \"auth sufficient "
-"pam_poldi.so\" в конфигурационные файлы pam в соответствии с вашими "
-"потребностями:"
+"Затем необходимо настроить PAM. Просто добавьте ``auth sufficient pam_poldi."
+"so`` в конфигурационные файлы PAM в соответствии с вашими потребностями:"
 
 #: ../pro/login-with-pam.rst.inc:36
-#, fuzzy
 msgid "``/etc/pam.d/common-auth`` for graphical user login"
-msgstr "/etc/pam.d/common-auth для графического входа пользователей в систему"
+msgstr "``/etc/pam.d/common-auth`` для графического входа пользователей"
 
 #: ../pro/login-with-pam.rst.inc:37
-#, fuzzy
 msgid "``/etc/pam.d/login`` for console login"
-msgstr "/etc/pam.d/login для входа в консоль"
+msgstr "``/etc/pam.d/login`` для входа в консоль"
 
 #: ../pro/login-with-pam.rst.inc:38
-#, fuzzy
 msgid "``/etc/pam.d/sudo`` for sudo authentication"
-msgstr "/etc/pam.d/sudo для аутентификации sudo"
+msgstr "``/etc/pam.d/sudo`` для аутентификации sudo"
 
 #: ../pro/login-with-pam.rst.inc:39
-#, fuzzy
 msgid "``/etc/pam.d/gnome-screensaver`` for login back from a locked screen"
 msgstr ""
-"/etc/pam.d/gnome-screensaver для возврата входа в систему с "
-"заблокированного экрана,"
+"``/etc/pam.d/gnome-screensaver`` для возврата входа с заблокированного экрана"
 
 #: ../pro/login-with-pam.rst.inc:40
 msgid "and other files in ``/etc/pam.d``"
-msgstr ""
+msgstr "и другие файлы в разделе ``/etc/pam.d``"
 
 #: ../pro/login-with-pam.rst.inc:42
-#, fuzzy
 msgid ""
 "PAM is dangerous to play around with, so make sure you have a way of "
 "accessing the machine if you break authentication completely. Remember "
 "that booting into rescue mode from GRUB requires a root password, so keep"
 " that or a live CD which can read your filesystems to hand."
 msgstr ""
-"С Pam опасно играть, поэтому убедитесь, что у вас есть способ получить "
+"С PAM опасно играть, поэтому убедитесь, что у вас есть способ получить "
 "доступ к машине, если вы полностью нарушите аутентификацию. Помните, что "
-"для загрузки в режим спасения из Grub требуется пароль root, поэтому "
-"держите его или live CD, который может читать ваши файловые системы, под "
-"рукой."
+"загрузка в режим спасения из GRUB требует пароля root, поэтому держите его "
+"или live CD, который может читать ваши файловые системы, под рукой."
 
 #: ../pro/login-with-pam.rst.inc:44
 msgid ""
@@ -15415,12 +15402,11 @@ msgstr ""
 " (на немецком языке, частично устаревшие)."
 
 #: ../pro/login-with-pam.rst.inc:49
-#, fuzzy
 msgid ""
 "If you get an error similar to ``ERR 100663414 Invalid ID <SCD>`` you "
 "should try instead"
 msgstr ""
-"Если вы получите ошибку, подобную 'ERR 100663414 Invalid ID <SCD>', вам "
+"Если вы получите ошибку, подобную ``ERR 100663414 Invalid ID <SCD>``, вам "
 "следует попробовать вместо этого"
 
 #: ../pro/login-with-pam.rst.inc:55
@@ -15436,7 +15422,6 @@ msgid "ECC Keys"
 msgstr "Ключи ECC"
 
 #: ../pro/login-with-pam.rst.inc:59
-#, fuzzy
 msgid ""
 "Unfortunately, Poldi has no support for ECC keys yet. But there is a "
 "`patch for ECC keys used with Nitrokey Start "
@@ -15445,12 +15430,11 @@ msgid ""
 " newer version eventually. In the meantime the only option is to build "
 "Poldi from source."
 msgstr ""
-"К сожалению, у poldi пока нет поддержки ключей ECC. Но есть `патч для "
-"ключей ECC, используемых с Nitrokey Start "
-"<https://dev.gnupg.org/T4009>`__. Это уже включено в мастер-ветку "
-"репозитория разработки poldi и, следовательно, со временем будет выпущено"
-" в новой версии. А пока единственным вариантом является сборка poldi из "
-"исходников."
+"К сожалению, в Poldi пока нет поддержки ключей ECC. Но есть патч `для ключей "
+"ECC, используемых с Nitrokey Start <https://dev.gnupg.org/T4009>`__. Он уже "
+"включен в мастер-ветку репозитория разработки Poldi и, следовательно, со "
+"временем будет выпущен в новой версии. А пока единственным вариантом "
+"является сборка Poldi из исходников."
 
 #: ../pro/openpgp.rst.inc:2
 msgid "OpenPGP Email Encryption"
@@ -26961,4 +26945,3 @@ msgstr ""
 #~ "``poldi-ctrl -k > <YourApplicationID>; "
 #~ "sudo mv <YourApplicationID> "
 #~ "/etc/poldi/localdb/keys```"
-
