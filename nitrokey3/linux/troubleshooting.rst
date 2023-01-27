@@ -1,1 +1,1 @@
-.. include:: ../../nitrokey3/troubleshooting.rst
+.. include:: ../../nitrokey3/troubleshooting.rst.inc

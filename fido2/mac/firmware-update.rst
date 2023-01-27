@@ -1,1 +1,1 @@
-.. include:: ../shared/firmware-update.rst
+.. include:: ../shared/firmware-update.rst.inc

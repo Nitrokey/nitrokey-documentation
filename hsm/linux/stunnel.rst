@@ -1,4 +1,4 @@
 Stunnel
 =======
 
-.. include:: ../stunnel.rst
+.. include:: ../stunnel.rst.inc

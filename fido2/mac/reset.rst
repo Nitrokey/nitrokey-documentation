@@ -1,1 +1,1 @@
-.. include:: ../shared/index-content2.rst
+.. include:: ../shared/index-content2.rst.inc

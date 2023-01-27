@@ -1,1 +1,1 @@
-.. include:: ../certificate-authority.rst 
+.. include:: ../certificate-authority.rst.inc 
