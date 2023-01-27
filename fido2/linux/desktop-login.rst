@@ -20,7 +20,7 @@ Requirements
 -  Ubuntu 20.04 with Gnome Display Manager.
 
 -  Nitrokey FIDO2 configured following `these
-   instructions <https://docs.nitrokey.com/fido2/linux/>`__.
+   instructions <https://docs.nitrokey.com/fido2/linux>`__.
 
 Instructions
 ------------
