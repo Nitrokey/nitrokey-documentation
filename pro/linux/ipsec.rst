@@ -1,4 +1,4 @@
 IPsec
 =====
 
-.. include:: ../../hsm/ipsec.rst
+.. include:: ../../hsm/ipsec.rst.inc
