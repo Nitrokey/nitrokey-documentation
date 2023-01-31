@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-31 13:27+0100\n"
+"POT-Creation-Date: 2023-01-31 18:41+0100\n"
 "PO-Revision-Date: 2023-01-27 11:24+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: ru\n"
@@ -215,7 +215,7 @@ msgstr "Видео: Двухфакторная аутентификация с N
 msgid "Desktop Login And Linux User Authentication"
 msgstr "Вход в систему рабочего стола и аутентификация пользователей Linux"
 
-#: ../fido2/linux/desktop-login.rst:9
+#: ../fido2/linux/desktop-login.rst:9 ../start/setting-kdf-do.rst.inc:9
 msgid "Introduction"
 msgstr "Введение"
 
@@ -11322,7 +11322,7 @@ msgstr "Ubuntu"
 msgid "NitroPad"
 msgstr "NitroPad"
 
-#: ../pro/change-pins.rst.inc:2 ../start/setting-kdf-do.rst.inc:17
+#: ../pro/change-pins.rst.inc:2 ../start/setting-kdf-do.rst.inc:28
 msgid "Change User and Admin PIN"
 msgstr "Изменение PIN-кода пользователя и администратора"
 
@@ -19888,7 +19888,20 @@ msgstr ""
 msgid "Setting KDF-DO"
 msgstr "Настройка KDF-DO"
 
-#: ../start/setting-kdf-do.rst.inc:8
+#: ../start/setting-kdf-do.rst.inc:11
+msgid ""
+"KDF-DO stands for Key Derived Function - Data Object. With this data "
+"object the card can inform clients that it supports derived keys. (For "
+"details see section 4.3.2 of the `OpenPGP Smart Card 3.4 specification "
+"<https://gnupg.org/ftp/specs/OpenPGP-smart-card-application-3.4.pdf>`__) "
+"The benefit of using derived keys is, that instead of transmitting "
+"passwords in clear text only hashes are transmitted to the card and "
+"therefore only hashes are stored on the card. Since a derived key will be"
+" longer than the original password it will also be harder to successfully"
+" run a brute force attack."
+msgstr ""
+
+#: ../start/setting-kdf-do.rst.inc:19
 msgid ""
 "At the moment it is only possible to set the KDF-DO, when the Nitrokey "
 "Start is empty (just after a factory reset)."
@@ -19896,19 +19909,19 @@ msgstr ""
 "В настоящее время установить KDF-DO можно только тогда, когда Nitrokey "
 "Start пуст (сразу после сброса к заводским настройкам)."
 
-#: ../start/setting-kdf-do.rst.inc:11
-msgid "Overview"
-msgstr "Обзор"
+#: ../start/setting-kdf-do.rst.inc:22
+msgid "Steps to Configure KDF-DO"
+msgstr ""
 
-#: ../start/setting-kdf-do.rst.inc:13
+#: ../start/setting-kdf-do.rst.inc:24
 msgid "Run factory reset"
 msgstr "Выполните сброс к заводским настройкам"
 
-#: ../start/setting-kdf-do.rst.inc:14
+#: ../start/setting-kdf-do.rst.inc:25
 msgid "Set up KDF-DO using GnuPG"
 msgstr "Настройка KDF-DO с помощью GnuPG"
 
-#: ../start/setting-kdf-do.rst.inc:15
+#: ../start/setting-kdf-do.rst.inc:26
 msgid ""
 "Change Admin PIN (optional; without keys only Admin PIN change is "
 "possible)"
@@ -19916,51 +19929,55 @@ msgstr ""
 "Изменение PIN-кода администратора (опционально; без ключей возможно "
 "только изменение PIN-кода администратора)"
 
-#: ../start/setting-kdf-do.rst.inc:16
+#: ../start/setting-kdf-do.rst.inc:27
 msgid "Import / generate keys"
 msgstr "Импорт / генерация ключей"
 
-#: ../start/setting-kdf-do.rst.inc:21
+#: ../start/setting-kdf-do.rst.inc:32
 msgid "Setting KDF-DO using GnuPG"
 msgstr "Настройка KDF-DO с помощью GnuPG"
 
-#: ../start/setting-kdf-do.rst.inc:23
-msgid "Run `gpg2 --card-edit`"
+#: ../start/setting-kdf-do.rst.inc:34
+#, fuzzy
+msgid "Run ``gpg2 --card-edit``"
 msgstr "Запустите `gpg2 --card-edit`."
 
-#: ../start/setting-kdf-do.rst.inc:24
-msgid "`$ admin`"
+#: ../start/setting-kdf-do.rst.inc:35
+#, fuzzy
+msgid "``$ admin``"
 msgstr "`$ admin`"
 
-#: ../start/setting-kdf-do.rst.inc:25
-msgid "`$ kdf-setup`"
+#: ../start/setting-kdf-do.rst.inc:36
+#, fuzzy
+msgid "``$ kdf-setup``"
 msgstr "`$ kdf-setup`"
 
-#: ../start/setting-kdf-do.rst.inc:26
+#: ../start/setting-kdf-do.rst.inc:37
 msgid "Enter Admin PIN"
 msgstr "Введите PIN-код администратора"
 
-#: ../start/setting-kdf-do.rst.inc:27
+#: ../start/setting-kdf-do.rst.inc:38
+#, fuzzy
 msgid ""
-"Verify current state state by looking at the card details (`gpg2 --card-"
-"status`), where `KDF setting ......: on` should be visible, e.g.:"
+"Verify current state state by looking at the card details (``gpg2 --card-"
+"status``), where ``KDF setting ......: on`` should be visible, e.g.:"
 msgstr ""
 "Проверьте текущее состояние, просмотрев детали карты (`gpg2 --card-"
 "status`), где должна быть видна настройка `KDF ......: on`, например:"
 
-#: ../start/setting-kdf-do.rst.inc:39
+#: ../start/setting-kdf-do.rst.inc:50
 msgid "Tested with"
 msgstr "Проверено с"
 
-#: ../start/setting-kdf-do.rst.inc:41
+#: ../start/setting-kdf-do.rst.inc:52
 msgid "gpg (GnuPG) 2.2.20 / 2.2.25"
 msgstr "gpg (GnuPG) 2.2.20 / 2.2.25"
 
-#: ../start/setting-kdf-do.rst.inc:42
+#: ../start/setting-kdf-do.rst.inc:53
 msgid "Nitrokey Start RTM.10"
 msgstr "Nitrokey Start RTM.10"
 
-#: ../start/setting-kdf-do.rst.inc:43
+#: ../start/setting-kdf-do.rst.inc:54
 msgid "Curve 25519 keys"
 msgstr "Кривая 25519 клавиш"
 
@@ -26986,4 +27003,7 @@ msgstr ""
 
 #~ msgid "**Q:** Is there a warranty?"
 #~ msgstr "**Вопрос:** Есть ли гарантия?"
+
+#~ msgid "Overview"
+#~ msgstr "Обзор"
 

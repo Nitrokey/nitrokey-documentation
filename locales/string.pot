@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-31 13:27+0100\n"
+"POT-Creation-Date: 2023-01-31 18:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -195,6 +195,7 @@ msgstr ""
 
 #: ../fido2/linux/desktop-login.rst:9
 #: ../fido2/linux/desktop-login.rst:9
+#: ../start/setting-kdf-do.rst.inc:9
 msgid "Introduction"
 msgstr ""
 
@@ -7759,7 +7760,7 @@ msgid "NitroPad"
 msgstr ""
 
 #: ../pro/change-pins.rst.inc:2
-#: ../start/setting-kdf-do.rst.inc:17
+#: ../start/setting-kdf-do.rst.inc:28
 msgid "Change User and Admin PIN"
 msgstr ""
 
@@ -12836,67 +12837,71 @@ msgstr ""
 msgid "Setting KDF-DO"
 msgstr ""
 
-#: ../start/setting-kdf-do.rst.inc:8
+#: ../start/setting-kdf-do.rst.inc:11
+msgid "KDF-DO stands for Key Derived Function - Data Object. With this data object the card can inform clients that it supports derived keys. (For details see section 4.3.2 of the `OpenPGP Smart Card 3.4 specification <https://gnupg.org/ftp/specs/OpenPGP-smart-card-application-3.4.pdf>`__) The benefit of using derived keys is, that instead of transmitting passwords in clear text only hashes are transmitted to the card and therefore only hashes are stored on the card. Since a derived key will be longer than the original password it will also be harder to successfully run a brute force attack."
+msgstr ""
+
+#: ../start/setting-kdf-do.rst.inc:19
 msgid "At the moment it is only possible to set the KDF-DO, when the Nitrokey Start is empty (just after a factory reset)."
 msgstr ""
 
-#: ../start/setting-kdf-do.rst.inc:11
-msgid "Overview"
-msgstr ""
-
-#: ../start/setting-kdf-do.rst.inc:13
-msgid "Run factory reset"
-msgstr ""
-
-#: ../start/setting-kdf-do.rst.inc:14
-msgid "Set up KDF-DO using GnuPG"
-msgstr ""
-
-#: ../start/setting-kdf-do.rst.inc:15
-msgid "Change Admin PIN (optional; without keys only Admin PIN change is possible)"
-msgstr ""
-
-#: ../start/setting-kdf-do.rst.inc:16
-msgid "Import / generate keys"
-msgstr ""
-
-#: ../start/setting-kdf-do.rst.inc:21
-msgid "Setting KDF-DO using GnuPG"
-msgstr ""
-
-#: ../start/setting-kdf-do.rst.inc:23
-msgid "Run `gpg2 --card-edit`"
+#: ../start/setting-kdf-do.rst.inc:22
+msgid "Steps to Configure KDF-DO"
 msgstr ""
 
 #: ../start/setting-kdf-do.rst.inc:24
-msgid "`$ admin`"
+msgid "Run factory reset"
 msgstr ""
 
 #: ../start/setting-kdf-do.rst.inc:25
-msgid "`$ kdf-setup`"
+msgid "Set up KDF-DO using GnuPG"
 msgstr ""
 
 #: ../start/setting-kdf-do.rst.inc:26
-msgid "Enter Admin PIN"
+msgid "Change Admin PIN (optional; without keys only Admin PIN change is possible)"
 msgstr ""
 
 #: ../start/setting-kdf-do.rst.inc:27
-msgid "Verify current state state by looking at the card details (`gpg2 --card-status`), where `KDF setting ......: on` should be visible, e.g.:"
+msgid "Import / generate keys"
 msgstr ""
 
-#: ../start/setting-kdf-do.rst.inc:39
+#: ../start/setting-kdf-do.rst.inc:32
+msgid "Setting KDF-DO using GnuPG"
+msgstr ""
+
+#: ../start/setting-kdf-do.rst.inc:34
+msgid "Run ``gpg2 --card-edit``"
+msgstr ""
+
+#: ../start/setting-kdf-do.rst.inc:35
+msgid "``$ admin``"
+msgstr ""
+
+#: ../start/setting-kdf-do.rst.inc:36
+msgid "``$ kdf-setup``"
+msgstr ""
+
+#: ../start/setting-kdf-do.rst.inc:37
+msgid "Enter Admin PIN"
+msgstr ""
+
+#: ../start/setting-kdf-do.rst.inc:38
+msgid "Verify current state state by looking at the card details (``gpg2 --card-status``), where ``KDF setting ......: on`` should be visible, e.g.:"
+msgstr ""
+
+#: ../start/setting-kdf-do.rst.inc:50
 msgid "Tested with"
 msgstr ""
 
-#: ../start/setting-kdf-do.rst.inc:41
+#: ../start/setting-kdf-do.rst.inc:52
 msgid "gpg (GnuPG) 2.2.20 / 2.2.25"
 msgstr ""
 
-#: ../start/setting-kdf-do.rst.inc:42
+#: ../start/setting-kdf-do.rst.inc:53
 msgid "Nitrokey Start RTM.10"
 msgstr ""
 
-#: ../start/setting-kdf-do.rst.inc:43
+#: ../start/setting-kdf-do.rst.inc:54
 msgid "Curve 25519 keys"
 msgstr ""
 
