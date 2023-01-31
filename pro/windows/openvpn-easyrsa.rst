@@ -385,17 +385,6 @@ The OpenVPN should be running at this point.
 Client side configuration
 -------------------------
 
-.. code-block:: bash
-
-       1. Install OpenVPN and Easy-RSA
-       2. Create a Public Key Infrastructure (PKI) for the OpenVPN client
-       3. Create the client's certificate signing request and the client's key
-       4. Sign and issue the client's certificate
-       5. Import the client certificate on the Nitrokey from the CA machine
-       6. Retrieve the chain certificate from the CA machine 
-       7. Configure the client to interact with the Nitrokey 
-       8. Start the OpenVPN client
-
 1. Install OpenVPN and Easy-RSA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

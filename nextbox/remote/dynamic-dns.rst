@@ -53,7 +53,7 @@ enabling and the contents of the `ddclient.conf` used by `ddclient`_. Various
 examples can be found at the `official documentation`_, the one used for the
 guided DNS configuration uses the following template:
 
-.. code-block:: config
+.. code-block:: none
 
     daemon=300
     protocol=dyndns2
