@@ -19,4 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('#breadcrumbs').append(clone);
         }
     });
+
+    document.querySelector('#breadcrumbs a.current').remove();
 }, false);
