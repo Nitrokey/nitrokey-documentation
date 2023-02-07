@@ -691,3 +691,30 @@ article ul li {
   margin: 0 0.5rem !important;
 }
 
+#breadcrumbs .icon {
+    display: none;
+}
+#breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -20px;
+    font-size: 14px;
+}
+#breadcrumbs a {
+    margin-right: 20px;
+    position: relative;
+    color: var(--color-toc-item-text);
+}
+#breadcrumbs a:hover {
+    color: var(--color-brand-content);
+}
+#breadcrumbs a:after {
+    position: absolute;
+    content: '›';
+    left: 100%;
+    margin-left: 7px;
+    pointer-events: none;
+}
+#breadcrumbs a:last-child:after {
+    display: none;
+}
