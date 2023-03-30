@@ -3,9 +3,9 @@ Update OpenWrt Firmware
 
 .. contents:: :local:
 
-1. We recommend updating OpenWrt via the preinstalled Attended Sysupgrade  `OpenWrt documentation <https://openwrt.org/docs/guide-user/installation/attended.sysupgrade>`_
+1. We recommend updating OpenWrt via the pre-installed Attended Sysupgrade  `OpenWrt documentation <https://openwrt.org/docs/guide-user/installation/attended.sysupgrade>`_
 
-2. To be able to use this service you need configure it to ignore the nitrowall package if installed before.
+2. To be able to use this service you need configure it to ignore the nitrowall package, if it has been installed before.
 
 3. Go to System -> Attended Sysupgrade -> Configuration and enable the Advanced Mode -> Save & Apply
 
@@ -23,9 +23,9 @@ Update OpenWrt Firmware
 
 	.. image:: /images/nitrowall/openwrt_upgrade5.png
 
-7. The software will be installed and the NitroWall will be restarted.
+7. The software will be installed and the NitroWall will restart.
 
-8. After the restart we need to reinstall the `nitrowall.ipk <https://www.nitrokey.com/files/ci/nitrowall/nitrowall_1.0.0-0_x86_64.ipk>`_ package. This will resize your disk and add the kernel parameter *pcie_aspm=off* to our */boot/grub/grub.cfg* which fixes a problem with the igb driver `bug <https://bugzilla.kernel.org/show_bug.cgi?id=205073>`.
+8. After the restart we need to reinstall the `nitrowall.ipk <https://www.nitrokey.com/files/ci/nitrowall/nitrowall_1.0.0-0_x86_64.ipk>`_ package. This will resize your disk and add the kernel parameter *pcie_aspm=off* to your */boot/grub/grub.cfg* which fixes a problem with the *igb* driver `bug <https://bugzilla.kernel.org/show_bug.cgi?id=205073>`.
 
 9. Under System -> Software -> Upload Package Upload the package 
 
