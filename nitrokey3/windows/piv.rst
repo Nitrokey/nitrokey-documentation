@@ -1,32 +1,25 @@
-Smartcard authentication for windows logon
-==========================================
+Windows Login With PIV Smartcard Authentication
+===============================================
 
-This document explains how to provision a how to provision the PIV function of a Nitrokey 3  for windows smartcard logon manually with a key and a certificate so that it can be used for authentication with Windows logon.
+This document explains how to provision the PIV function of a Nitrokey 3  for Windows smartcard logon manually with a key and a certificate.
 
-In the future, this manual provisionning step will be automated through a Windows Minidriver.
+In the future, this manual provisioning may be automated through a Windows MiniDriver.
 
 Prerequisites
 -------------
 
 -  A Windows server with:
 
-   -  Active Directory:
-      https://serverspace.io/support/help/installing-active-directory-on-windows-server-2019/
-   -  A certificate authority (CA), with a certificate template for
-      logon authentication using RSA 2048 bit keys:
+   -  Active Directory (`instructions <https://serverspace.io/support/help/installing-active-directory-on-windows-server-2019/>`__)
+   -  A certificate authority (CA), with a certificate template for logon authentication using RSA 2048 bit keys:
 
-      -  Certificate Authority:
-         https://learn.microsoft.com/en-us/windows-server/networking/core-network-guide/cncg/server-certs/server-certificate-deployment-overview
-      -  Authentication template:
-         https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/configure-the-workstation-authentication-certificate-template
+      -  Certificate Authority (`instructions <https://learn.microsoft.com/en-us/windows-server/networking/core-network-guide/cncg/server-certs/server-certificate-deployment-overview>`__)
+      -  Authentication template (`instructions <https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/configure-the-workstation-authentication-certificate-template>`__)
 
 -  A Windows user machine joined to the domain of the server
 -  A Nitrokey 3 with
    `PIV <https://github.com/Nitrokey/piv-authenticator>`__
--  A Linux system with `pivy <https://github.com/coin3d/pivy>`__
-   installed, to provision the Nitrokeys (step 1, 2 and
-   4). `WSL <https://learn.microsoft.com/en-us/windows/wsl/>`__ may work
-   instead of a separate Linux system (not tested yet).
+-  A Linux system with `pivy <https://github.com/coin3d/pivy>`__ installed, to provision the Nitrokey (step 1, 2 and 4). `WSL <https://learn.microsoft.com/en-us/windows/wsl/>`__ may work instead of a separate Linux system (not tested yet).
 
 1: Generate a key on the Nitrokey
 ---------------------------------
@@ -39,14 +32,11 @@ The key is generated in slot 9A (authentication).
 
    If the administration key is not the default one, it can be specified with `-A 3des -K 010203040506070801020304050607080102030405060708` . The argument to `-A` can also be `aes256`, and the argument to `-K` is the key in hexadecimal. 
 
-The user PIN can also be specified with ``-P 123456``, or
-``-P <value>`` if it is not the default. If ``-P`` is not provided, it
-will be asked for after key generation.
+The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` if it is not the default. If ``-P`` is not provided, it will be asked for after key generation.
 
 This applies to all ``pivy-tool`` commands.
 
-This step can take a couple minutes for RSA keys, as the pure software
-implementation is slow.
+This step can take a couple of minutes for RSA keys, as the pure software implementation is slow.
 
 **Expected output**:
 
@@ -57,11 +47,9 @@ implementation is slow.
 2: Generate a Certificate Signing Request (CSR)
 -----------------------------------------------
 
-This step generates a certificate for the key in the authentication slot.
-``pivy-tool req-cert 9A -n 'Nitro Test' -u "nitro@test.nitrokey.com" -T user-auth``
+This step generates a certificate for the key in the authentication slot. ``pivy-tool req-cert 9A -n 'Nitro Test' -u "nitro@test.nitrokey.com" -T user-auth``
 
-The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email
-must be changed to the appropriate account name and email.
+The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email address must be changed to own values.
 
 Expected output:
 
@@ -91,19 +79,14 @@ Copy the certificate signing request to a file ``request.csr``
 3: Sign the CSR
 ---------------
 
-Move the request.csr file from the previous step to the server that
-hosts the certificate authority. Verify in the certificate template
-console (``certtmpl.msc`` ) that the template for the users can accept
-subject names from the request:
+Move the request.csr file from the previous step to the server that hosts the certificate authority. Verify in the certificate template console (``certtmpl.msc`` ) that the template for the users can accept subject names from the request:
 
 .. figure:: images/piv/certtmpl-SN.png
-   :alt: In the certificate template console, in the parameter for the authentication certificate template, toggle "supply in request" in the "subject name" tab
+   :alt: In the certificate template console, in the parameter for the authentication certificate template, toggle "supply in request" in the "subject name" tab.
 
-Then, open PowerShell and sign the certificate signing request with
-  ``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``
-This will open a GUI where you can select the correct Certificate
-  Authority if there are multiple on this server. Then, save the
-  certificate as ``certificate.crt``
+Open PowerShell and sign the certificate signing request with ``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``
+
+This will open a GUI where you can select the correct Certificate Authority if there are multiple on this server. Save the certificate as ``certificate.crt``
 
 4: Store the certificate on the Nitrokey
 ----------------------------------------
@@ -113,8 +96,7 @@ This will open a GUI where you can select the correct Certificate
 5: Import the certificate to the user account
 ---------------------------------------------
 
-Move ``certificate.der`` to the user Windows device, and open the
-certificate manager (**For the user, not the machine**):
+Move ``certificate.der`` to the user Windows device, and open the certificate manager (**For the user, not the machine**):
 
 .. figure:: images/piv/user-cert.png
    :alt: Open the "manage user certificate control panel"
@@ -124,5 +106,4 @@ Import the certificate:
 .. figure:: images/piv/import-cert.png
    :alt: In actions, all tasks, you can find the import action
 
-Once this is done, log out. Log in with the Nitrokey by using the
-“sign-in options”
+Once this is done, log out. Log in with the Nitrokey by using the “sign-in options”
