@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-21 16:37+0100\n"
+"POT-Creation-Date: 2023-04-18 16:09+0200\n"
 "PO-Revision-Date: 2022-12-12 14:20+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: pt\n"
@@ -6481,27 +6481,40 @@ msgstr ""
 #: ../nethsm/integration.rst:24
 msgid ""
 "Alternatively, you can run the NetHSM as a `Docker container "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The NetHSM "
-"container requires nested virtualization for strong separation with other"
-" containers. Thus, to start a NetHSM container you need a Linux host with"
-" `/dev/kvm` available. Execute this command:"
+"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
 msgstr ""
-"Alternativamente, pode executar o NetHSM como um `Contentor de doca "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ localmente. O contentor "
-"NetHSM requer uma virtualização aninhada para uma forte separação com "
-"outros contentores. Assim, para iniciar um contentor NetHSM é necessário "
-"um anfitrião Linux com `/dev/kvm` disponível. Execute este comando:"
 
-#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:43
-#: ../nethsm/integration.rst:51
+#: ../nethsm/integration.rst:26
+#, fuzzy
+msgid "The container can be executed as follows."
+msgstr "A cópia de segurança pode ser executada da seguinte forma."
+
+#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:55
+#: ../nethsm/integration.rst:68
 msgid "Docker"
 msgstr "Docker"
 
-#: ../nethsm/integration.rst:35
+#: ../nethsm/integration.rst:34 ../nethsm/integration.rst:60
+#: ../nethsm/integration.rst:73
+msgid "Podman"
+msgstr ""
+
+#: ../nethsm/integration.rst:39
+msgid "This will provide the REST API on the port `8443` via the HTTPS protocol."
+msgstr ""
+
+#: ../nethsm/integration.rst:42
+msgid ""
+"The container uses a self-signed TLS certificate. Make sure to use the "
+"correct connection settings to establish a connection. Please refer to "
+"chapter `NetHSM introduction <index.html>`__ to learn more."
+msgstr ""
+
+#: ../nethsm/integration.rst:47
 msgid "Integration into Custom Application"
 msgstr "Integração em aplicação personalizada"
 
-#: ../nethsm/integration.rst:37
+#: ../nethsm/integration.rst:49
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Therefore, we "
@@ -6514,13 +6527,13 @@ msgstr ""
 "Generator <https://github.com/OpenAPITools/openapi-generator>>x "
 "id=\"223\"></x>."
 
-#: ../nethsm/integration.rst:40
+#: ../nethsm/integration.rst:52
 msgid "The list of all available languages can be retrieved as follows."
 msgstr ""
 "A lista de todas as línguas disponíveis pode ser recuperada da seguinte "
 "forma."
 
-#: ../nethsm/integration.rst:48
+#: ../nethsm/integration.rst:65
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
@@ -6528,7 +6541,7 @@ msgstr ""
 "O cliente NetHSM pode ser gerado para a sua linguagem de programação como"
 " se segue."
 
-#: ../nethsm/integration.rst:56
+#: ../nethsm/integration.rst:78
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -6538,11 +6551,20 @@ msgstr ""
 "diretório ``./out/``. Esta pasta também contém a documentação necessária "
 "para a sua utilização."
 
-#: ../nethsm/integration.rst:60
+#: ../nethsm/integration.rst:82
+msgid ""
+"If Podman is used with enforcing SELinux, a labeling to the volume mount "
+"might be required. The mode of SELinux can be requested with ``sestatus "
+"|grep \"Current mode\"``. If the mode is set to ``enforcing``, a change "
+"to the context is required. In this case the volume mount must be "
+"postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
+msgstr ""
+
+#: ../nethsm/integration.rst:88
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../nethsm/integration.rst:62
+#: ../nethsm/integration.rst:90
 msgid ""
 "The NetHSM's API specification is available in `OpenAPI format "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_, and can be "
@@ -27135,4 +27157,25 @@ msgstr ""
 
 #~ msgid "Overview"
 #~ msgstr "Visão geral"
+
+#~ msgid ""
+#~ "Alternatively, you can run the NetHSM"
+#~ " as a `Docker container "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The"
+#~ " NetHSM container requires nested "
+#~ "virtualization for strong separation with "
+#~ "other containers. Thus, to start a "
+#~ "NetHSM container you need a Linux "
+#~ "host with `/dev/kvm` available. Execute "
+#~ "this command:"
+#~ msgstr ""
+#~ "Alternativamente, pode executar o NetHSM "
+#~ "como um `Contentor de doca "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ localmente. O"
+#~ " contentor NetHSM requer uma virtualização"
+#~ " aninhada para uma forte separação "
+#~ "com outros contentores. Assim, para "
+#~ "iniciar um contentor NetHSM é necessário"
+#~ " um anfitrião Linux com `/dev/kvm` "
+#~ "disponível. Execute este comando:"
 

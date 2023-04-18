@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-21 16:37+0100\n"
+"POT-Creation-Date: 2023-04-18 16:09+0200\n"
 "PO-Revision-Date: 2023-03-21 16:45+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5815,25 +5814,40 @@ msgstr ""
 #: ../nethsm/integration.rst:24
 msgid ""
 "Alternatively, you can run the NetHSM as a `Docker container "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The NetHSM "
-"container requires nested virtualization for strong separation with other"
-" containers. Thus, to start a NetHSM container you need a Linux host with"
-" `/dev/kvm` available. Execute this command:"
+"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
 msgstr ""
-"または、ローカルで `Docker コンテナ <https://hub.docker.com/r/nitrokey/nethsm>`_ として "
-"NetHSM "
-"を実行することも可能です。NetHSMコンテナは、他のコンテナとの強力な分離のためにネストされた仮想化を必要とします。したがって、NetHSMコンテナを起動するには、`/dev/kvm`が利用可能なLinuxホストが必要です。以下のコマンドを実行します。"
 
-#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:43
-#: ../nethsm/integration.rst:51
+#: ../nethsm/integration.rst:26
+#, fuzzy
+msgid "The container can be executed as follows."
+msgstr "バックアップは次のように実行できます。"
+
+#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:55
+#: ../nethsm/integration.rst:68
 msgid "Docker"
 msgstr "ドッカー"
 
-#: ../nethsm/integration.rst:35
+#: ../nethsm/integration.rst:34 ../nethsm/integration.rst:60
+#: ../nethsm/integration.rst:73
+msgid "Podman"
+msgstr ""
+
+#: ../nethsm/integration.rst:39
+msgid "This will provide the REST API on the port `8443` via the HTTPS protocol."
+msgstr ""
+
+#: ../nethsm/integration.rst:42
+msgid ""
+"The container uses a self-signed TLS certificate. Make sure to use the "
+"correct connection settings to establish a connection. Please refer to "
+"chapter `NetHSM introduction <index.html>`__ to learn more."
+msgstr ""
+
+#: ../nethsm/integration.rst:47
 msgid "Integration into Custom Application"
 msgstr "カスタムアプリケーションへの組込み"
 
-#: ../nethsm/integration.rst:37
+#: ../nethsm/integration.rst:49
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Therefore, we "
@@ -5844,28 +5858,37 @@ msgstr ""
 " Generator <https://github.com/OpenAPITools/openapi-generator>`_ "
 "を使用することをお勧めします。"
 
-#: ../nethsm/integration.rst:40
+#: ../nethsm/integration.rst:52
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "利用可能な全言語の一覧は、以下のように取得できます。"
 
-#: ../nethsm/integration.rst:48
+#: ../nethsm/integration.rst:65
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
 msgstr "NetHSMクライアントは、以下のようにしてお使いのプログラミング言語用に生成することができます。"
 
-#: ../nethsm/integration.rst:56
+#: ../nethsm/integration.rst:78
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
 "documentation how to use it."
 msgstr "生成されたクライアントコード（この例ではJavaScript）は、``./out/``ディレクトリに作成されます。このフォルダには、使用方法の必要なドキュメントも含まれています。"
 
-#: ../nethsm/integration.rst:60
+#: ../nethsm/integration.rst:82
+msgid ""
+"If Podman is used with enforcing SELinux, a labeling to the volume mount "
+"might be required. The mode of SELinux can be requested with ``sestatus "
+"|grep \"Current mode\"``. If the mode is set to ``enforcing``, a change "
+"to the context is required. In this case the volume mount must be "
+"postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
+msgstr ""
+
+#: ../nethsm/integration.rst:88
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../nethsm/integration.rst:62
+#: ../nethsm/integration.rst:90
 msgid ""
 "The NetHSM's API specification is available in `OpenAPI format "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_, and can be "
@@ -11757,10 +11780,7 @@ msgid ""
 "transparent way to monitor the device. However, physical removal is the "
 "only way to completely exclude possible misuse. Especially in the case of"
 " a microphone, which allows continuous eavesdropping."
-msgstr ""
-"GrapheneOSは、センサーへのアクティブなアクセスを通知し、デバイスを監視する透"
-"明な方法を提供します。しかし、悪用される可能性を完全に排除するためには、物理"
-"的な除去が唯一の方法です。特にマイクの場合、継続的な盗聴が可能です。"
+msgstr "GrapheneOSは、センサーへのアクティブなアクセスを通知し、デバイスを監視する透明な方法を提供します。しかし、悪用される可能性を完全に排除するためには、物理的な除去が唯一の方法です。特にマイクの場合、継続的な盗聴が可能です。"
 
 #: ../nitrophone/faq.rst:45
 msgid "**Q:** Why do we also offer to remove the gyroscope?"
@@ -11773,11 +11793,7 @@ msgid ""
 "is held in portrait or landscape mode. Additionally the gyroscope can "
 "also pick up mechanical vibrations, so it has the functionality of a "
 "microphone."
-msgstr ""
-"ジャイロセンサーは、スマートフォンの向きを検出するセンサーです。カメラを安定"
-"させるだけでなく、スマートフォンが縦向きか横向きかを教えてくれます。さらに、"
-"ジャイロセンサーは機械的な振動を拾うことができるので、マイクのような機能も持"
-"っています。"
+msgstr "ジャイロセンサーは、スマートフォンの向きを検出するセンサーです。カメラを安定させるだけでなく、スマートフォンが縦向きか横向きかを教えてくれます。さらに、ジャイロセンサーは機械的な振動を拾うことができるので、マイクのような機能も持っています。"
 
 #: ../nitrophone/faq.rst:48
 msgid "**Q:** Why don't we offer to remove the speakers?"
@@ -11795,15 +11811,7 @@ msgid ""
 "amplifier is installed, as this does not allow the signal to be "
 "transmitted from the loudspeaker to the device. All Nitrophones only have"
 " speakers with built-in amplifiers and are therefore harmless."
-msgstr ""
-"マイクロホンは通常、機械的な振動を電気信号に変換するために使用されます。スピ"
-"ーカーの機械的構造は、基本的にマイクロホンと同じであるため、スピーカをマイク"
-"ロホンとして使用することができます。スピーカでは、電気信号によって振動板を振"
-"動させ、音を発生させます。逆に言えば、この過程を利用して、マイクロフォンのよ"
-"うに振動板から電気信号を機器に伝達することも可能です。ただし、アンプを搭載し"
-"ている場合は、スピーカから機器に信号を伝えることができないため、この方法は使"
-"えません。ナイトロフォンはすべてアンプ内蔵のスピーカーしか搭載していないため"
-"、無害です。"
+msgstr "マイクロホンは通常、機械的な振動を電気信号に変換するために使用されます。スピーカーの機械的構造は、基本的にマイクロホンと同じであるため、スピーカをマイクロホンとして使用することができます。スピーカでは、電気信号によって振動板を振動させ、音を発生させます。逆に言えば、この過程を利用して、マイクロフォンのように振動板から電気信号を機器に伝達することも可能です。ただし、アンプを搭載している場合は、スピーカから機器に信号を伝えることができないため、この方法は使えません。ナイトロフォンはすべてアンプ内蔵のスピーカーしか搭載していないため、無害です。"
 
 #: ../nitrophone/index.rst:19
 msgid "Apps"
@@ -22869,3 +22877,20 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 
 #~ msgid "Overview"
 #~ msgstr "概要"
+
+#~ msgid ""
+#~ "Alternatively, you can run the NetHSM"
+#~ " as a `Docker container "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The"
+#~ " NetHSM container requires nested "
+#~ "virtualization for strong separation with "
+#~ "other containers. Thus, to start a "
+#~ "NetHSM container you need a Linux "
+#~ "host with `/dev/kvm` available. Execute "
+#~ "this command:"
+#~ msgstr ""
+#~ "または、ローカルで `Docker コンテナ "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ として NetHSM"
+#~ " "
+#~ "を実行することも可能です。NetHSMコンテナは、他のコンテナとの強力な分離のためにネストされた仮想化を必要とします。したがって、NetHSMコンテナを起動するには、`/dev/kvm`が利用可能なLinuxホストが必要です。以下のコマンドを実行します。"
+

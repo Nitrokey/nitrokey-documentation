@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-21 16:37+0100\n"
+"POT-Creation-Date: 2023-04-18 16:09+0200\n"
 "PO-Revision-Date: 2023-03-21 16:45+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Greek <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/el/>\n"
 "Language: el\n"
+"Language-Team: Greek <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/el/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6654,27 +6653,40 @@ msgstr ""
 #: ../nethsm/integration.rst:24
 msgid ""
 "Alternatively, you can run the NetHSM as a `Docker container "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The NetHSM "
-"container requires nested virtualization for strong separation with other"
-" containers. Thus, to start a NetHSM container you need a Linux host with"
-" `/dev/kvm` available. Execute this command:"
+"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
 msgstr ""
-"Εναλλακτικά, μπορείτε να εκτελέσετε το NetHSM ως δοχείο `Docker "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ τοπικά. Το δοχείο NetHSM "
-"απαιτεί φωλιασμένη εικονικοποίηση για ισχυρό διαχωρισμό με άλλα δοχεία. "
-"Έτσι, για να ξεκινήσετε ένα NetHSM container χρειάζεστε έναν κεντρικό "
-"υπολογιστή Linux με διαθέσιμο το `/dev/kvm`. Εκτελέστε αυτή την εντολή:"
 
-#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:43
-#: ../nethsm/integration.rst:51
+#: ../nethsm/integration.rst:26
+#, fuzzy
+msgid "The container can be executed as follows."
+msgstr "Το αντίγραφο ασφαλείας μπορεί να εκτελεστεί ως εξής."
+
+#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:55
+#: ../nethsm/integration.rst:68
 msgid "Docker"
 msgstr "Docker"
 
-#: ../nethsm/integration.rst:35
+#: ../nethsm/integration.rst:34 ../nethsm/integration.rst:60
+#: ../nethsm/integration.rst:73
+msgid "Podman"
+msgstr ""
+
+#: ../nethsm/integration.rst:39
+msgid "This will provide the REST API on the port `8443` via the HTTPS protocol."
+msgstr ""
+
+#: ../nethsm/integration.rst:42
+msgid ""
+"The container uses a self-signed TLS certificate. Make sure to use the "
+"correct connection settings to establish a connection. Please refer to "
+"chapter `NetHSM introduction <index.html>`__ to learn more."
+msgstr ""
+
+#: ../nethsm/integration.rst:47
 msgid "Integration into Custom Application"
 msgstr "Ενσωμάτωση σε προσαρμοσμένη εφαρμογή"
 
-#: ../nethsm/integration.rst:37
+#: ../nethsm/integration.rst:49
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Therefore, we "
@@ -6686,11 +6698,11 @@ msgstr ""
 "προγραμματισμού. Ως εκ τούτου, συνιστούμε τη χρήση του `OpenAPI Generator"
 " <https://github.com/OpenAPITools/openapi-generator>`_."
 
-#: ../nethsm/integration.rst:40
+#: ../nethsm/integration.rst:52
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "Ο κατάλογος όλων των διαθέσιμων γλωσσών μπορεί να ανακτηθεί ως εξής."
 
-#: ../nethsm/integration.rst:48
+#: ../nethsm/integration.rst:65
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
@@ -6698,7 +6710,7 @@ msgstr ""
 "Ο πελάτης NetHSM μπορεί να δημιουργηθεί για τη γλώσσα προγραμματισμού σας"
 " ως εξής."
 
-#: ../nethsm/integration.rst:56
+#: ../nethsm/integration.rst:78
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -6708,11 +6720,20 @@ msgstr ""
 "δημιουργηθεί στον κατάλογο ``./out/``. Αυτός ο φάκελος περιέχει επίσης "
 "την απαραίτητη τεκμηρίωση για τον τρόπο χρήσης."
 
-#: ../nethsm/integration.rst:60
+#: ../nethsm/integration.rst:82
+msgid ""
+"If Podman is used with enforcing SELinux, a labeling to the volume mount "
+"might be required. The mode of SELinux can be requested with ``sestatus "
+"|grep \"Current mode\"``. If the mode is set to ``enforcing``, a change "
+"to the context is required. In this case the volume mount must be "
+"postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
+msgstr ""
+
+#: ../nethsm/integration.rst:88
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../nethsm/integration.rst:62
+#: ../nethsm/integration.rst:90
 msgid ""
 "The NetHSM's API specification is available in `OpenAPI format "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_, and can be "
@@ -13907,10 +13928,10 @@ msgid ""
 " a microphone, which allows continuous eavesdropping."
 msgstr ""
 "Το GrapheneOS ενημερώνει για την ενεργή πρόσβαση στους αισθητήρες και "
-"προσφέρει έναν διαφανή τρόπο παρακολούθησης της συσκευής. Ωστόσο, η φυσική "
-"αφαίρεση είναι ο μόνος τρόπος για να αποκλειστεί εντελώς η πιθανή κακή "
-"χρήση. Ειδικά στην περίπτωση ενός μικροφώνου, το οποίο επιτρέπει τη συνεχή "
-"υποκλοπή."
+"προσφέρει έναν διαφανή τρόπο παρακολούθησης της συσκευής. Ωστόσο, η "
+"φυσική αφαίρεση είναι ο μόνος τρόπος για να αποκλειστεί εντελώς η πιθανή "
+"κακή χρήση. Ειδικά στην περίπτωση ενός μικροφώνου, το οποίο επιτρέπει τη "
+"συνεχή υποκλοπή."
 
 #: ../nitrophone/faq.rst:45
 msgid "**Q:** Why do we also offer to remove the gyroscope?"
@@ -13924,8 +13945,8 @@ msgid ""
 "also pick up mechanical vibrations, so it has the functionality of a "
 "microphone."
 msgstr ""
-"Το γυροσκόπιο είναι ένας αισθητήρας που ανιχνεύει τον προσανατολισμό ενός "
-"smartphone. Όχι μόνο σταθεροποιεί την κάμερα, αλλά και ενημερώνει το "
+"Το γυροσκόπιο είναι ένας αισθητήρας που ανιχνεύει τον προσανατολισμό ενός"
+" smartphone. Όχι μόνο σταθεροποιεί την κάμερα, αλλά και ενημερώνει το "
 "smartphone αν το κρατάτε σε κατακόρυφη ή οριζόντια θέση. Επιπλέον, το "
 "γυροσκόπιο μπορεί επίσης να λαμβάνει μηχανικές δονήσεις, οπότε έχει τη "
 "λειτουργικότητα ενός μικροφώνου."
@@ -13947,17 +13968,17 @@ msgid ""
 "transmitted from the loudspeaker to the device. All Nitrophones only have"
 " speakers with built-in amplifiers and are therefore harmless."
 msgstr ""
-"Τα μικρόφωνα χρησιμοποιούνται συνήθως για τη μετατροπή μηχανικών δονήσεων σε "
-"ηλεκτρικά σήματα. Η μηχανική κατασκευή των μεγαφώνων είναι ουσιαστικά η ίδια "
-"με εκείνη των μικροφώνων, έτσι ώστε τα μεγάφωνα να μπορούν επίσης να "
-"χρησιμοποιηθούν ως μικρόφωνα. Στα μεγάφωνα, τα ηλεκτρικά σήματα προκαλούν τη "
-"δόνηση του διαφράγματος, παράγοντας έτσι ήχο. Αντίστροφα, η διαδικασία αυτή "
-"μπορεί να χρησιμοποιηθεί για τη μετάδοση του ηλεκτρικού σήματος από το "
-"διάφραγμα στη συσκευή, όπως συμβαίνει με ένα μικρόφωνο. Ωστόσο, η μέθοδος "
-"αυτή δεν είναι δυνατή εάν έχει εγκατασταθεί ενισχυτής, καθώς αυτός δεν "
-"επιτρέπει τη μετάδοση του σήματος από το μεγάφωνο στη συσκευή. Όλα τα "
-"Nitrophones διαθέτουν μόνο ηχεία με ενσωματωμένους ενισχυτές και επομένως "
-"είναι ακίνδυνα."
+"Τα μικρόφωνα χρησιμοποιούνται συνήθως για τη μετατροπή μηχανικών δονήσεων"
+" σε ηλεκτρικά σήματα. Η μηχανική κατασκευή των μεγαφώνων είναι ουσιαστικά"
+" η ίδια με εκείνη των μικροφώνων, έτσι ώστε τα μεγάφωνα να μπορούν επίσης"
+" να χρησιμοποιηθούν ως μικρόφωνα. Στα μεγάφωνα, τα ηλεκτρικά σήματα "
+"προκαλούν τη δόνηση του διαφράγματος, παράγοντας έτσι ήχο. Αντίστροφα, η "
+"διαδικασία αυτή μπορεί να χρησιμοποιηθεί για τη μετάδοση του ηλεκτρικού "
+"σήματος από το διάφραγμα στη συσκευή, όπως συμβαίνει με ένα μικρόφωνο. "
+"Ωστόσο, η μέθοδος αυτή δεν είναι δυνατή εάν έχει εγκατασταθεί ενισχυτής, "
+"καθώς αυτός δεν επιτρέπει τη μετάδοση του σήματος από το μεγάφωνο στη "
+"συσκευή. Όλα τα Nitrophones διαθέτουν μόνο ηχεία με ενσωματωμένους "
+"ενισχυτές και επομένως είναι ακίνδυνα."
 
 #: ../nitrophone/index.rst:19
 msgid "Apps"
@@ -27919,3 +27940,26 @@ msgstr ""
 
 #~ msgid "Overview"
 #~ msgstr "Επισκόπηση"
+
+#~ msgid ""
+#~ "Alternatively, you can run the NetHSM"
+#~ " as a `Docker container "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The"
+#~ " NetHSM container requires nested "
+#~ "virtualization for strong separation with "
+#~ "other containers. Thus, to start a "
+#~ "NetHSM container you need a Linux "
+#~ "host with `/dev/kvm` available. Execute "
+#~ "this command:"
+#~ msgstr ""
+#~ "Εναλλακτικά, μπορείτε να εκτελέσετε το "
+#~ "NetHSM ως δοχείο `Docker "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ τοπικά. Το"
+#~ " δοχείο NetHSM απαιτεί φωλιασμένη "
+#~ "εικονικοποίηση για ισχυρό διαχωρισμό με "
+#~ "άλλα δοχεία. Έτσι, για να ξεκινήσετε "
+#~ "ένα NetHSM container χρειάζεστε έναν "
+#~ "κεντρικό υπολογιστή Linux με διαθέσιμο "
+#~ "το `/dev/kvm`. Εκτελέστε αυτή την "
+#~ "εντολή:"
+

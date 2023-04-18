@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-21 16:37+0100\n"
+"POT-Creation-Date: 2023-04-18 16:09+0200\n"
 "PO-Revision-Date: 2023-03-21 16:45+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Slovak <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/sk/>\n"
 "Language: sk\n"
+"Language-Team: Slovak <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/sk/>\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6427,27 +6426,40 @@ msgstr ""
 #: ../nethsm/integration.rst:24
 msgid ""
 "Alternatively, you can run the NetHSM as a `Docker container "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The NetHSM "
-"container requires nested virtualization for strong separation with other"
-" containers. Thus, to start a NetHSM container you need a Linux host with"
-" `/dev/kvm` available. Execute this command:"
+"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
 msgstr ""
-"Prípadne môžete spustiť NetHSM ako `kontajner Docker "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ lokálne. Kontajner NetHSM "
-"vyžaduje vnorenú virtualizáciu pre silné oddelenie s ostatnými "
-"kontajnermi. Preto na spustenie kontajnera NetHSM potrebujete hostiteľa "
-"Linux s dostupným `/dev/kvm`. Vykonajte tento príkaz:"
 
-#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:43
-#: ../nethsm/integration.rst:51
+#: ../nethsm/integration.rst:26
+#, fuzzy
+msgid "The container can be executed as follows."
+msgstr "Zálohovanie možno vykonať takto."
+
+#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:55
+#: ../nethsm/integration.rst:68
 msgid "Docker"
 msgstr "Docker"
 
-#: ../nethsm/integration.rst:35
+#: ../nethsm/integration.rst:34 ../nethsm/integration.rst:60
+#: ../nethsm/integration.rst:73
+msgid "Podman"
+msgstr ""
+
+#: ../nethsm/integration.rst:39
+msgid "This will provide the REST API on the port `8443` via the HTTPS protocol."
+msgstr ""
+
+#: ../nethsm/integration.rst:42
+msgid ""
+"The container uses a self-signed TLS certificate. Make sure to use the "
+"correct connection settings to establish a connection. Please refer to "
+"chapter `NetHSM introduction <index.html>`__ to learn more."
+msgstr ""
+
+#: ../nethsm/integration.rst:47
 msgid "Integration into Custom Application"
 msgstr "Integrácia do vlastnej aplikácie"
 
-#: ../nethsm/integration.rst:37
+#: ../nethsm/integration.rst:49
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Therefore, we "
@@ -6458,17 +6470,17 @@ msgstr ""
 "knižnice pre takmer všetky programovacie jazyky. Preto odporúčame použiť "
 "`OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_."
 
-#: ../nethsm/integration.rst:40
+#: ../nethsm/integration.rst:52
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "Zoznam všetkých dostupných jazykov môžete získať takto."
 
-#: ../nethsm/integration.rst:48
+#: ../nethsm/integration.rst:65
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
 msgstr "Klienta NetHSM je možné vygenerovať pre váš programovací jazyk nasledovne."
 
-#: ../nethsm/integration.rst:56
+#: ../nethsm/integration.rst:78
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -6478,11 +6490,20 @@ msgstr ""
 " adresári ``./out/``. Tento adresár obsahuje aj potrebnú dokumentáciu, "
 "ako ho používať."
 
-#: ../nethsm/integration.rst:60
+#: ../nethsm/integration.rst:82
+msgid ""
+"If Podman is used with enforcing SELinux, a labeling to the volume mount "
+"might be required. The mode of SELinux can be requested with ``sestatus "
+"|grep \"Current mode\"``. If the mode is set to ``enforcing``, a change "
+"to the context is required. In this case the volume mount must be "
+"postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
+msgstr ""
+
+#: ../nethsm/integration.rst:88
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../nethsm/integration.rst:62
+#: ../nethsm/integration.rst:90
 msgid ""
 "The NetHSM's API specification is available in `OpenAPI format "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_, and can be "
@@ -13365,10 +13386,10 @@ msgid ""
 "only way to completely exclude possible misuse. Especially in the case of"
 " a microphone, which allows continuous eavesdropping."
 msgstr ""
-"GrapheneOS informuje o aktívnom prístupe k senzorom a ponúka transparentný "
-"spôsob monitorovania zariadenia. Fyzické odstránenie je však jediným "
-"spôsobom, ako úplne vylúčiť možné zneužitie. Najmä v prípade mikrofónu, "
-"ktorý umožňuje nepretržité odpočúvanie."
+"GrapheneOS informuje o aktívnom prístupe k senzorom a ponúka "
+"transparentný spôsob monitorovania zariadenia. Fyzické odstránenie je "
+"však jediným spôsobom, ako úplne vylúčiť možné zneužitie. Najmä v prípade"
+" mikrofónu, ktorý umožňuje nepretržité odpočúvanie."
 
 #: ../nitrophone/faq.rst:45
 msgid "**Q:** Why do we also offer to remove the gyroscope?"
@@ -13382,10 +13403,10 @@ msgid ""
 "also pick up mechanical vibrations, so it has the functionality of a "
 "microphone."
 msgstr ""
-"Gyroskop je senzor, ktorý zisťuje orientáciu smartfónu. Nielenže stabilizuje "
-"fotoaparát, ale tiež informuje o tom, či je smartfón držaný v režime na "
-"výšku alebo na šírku. Okrem toho gyroskop dokáže snímať aj mechanické "
-"vibrácie, takže má funkciu mikrofónu."
+"Gyroskop je senzor, ktorý zisťuje orientáciu smartfónu. Nielenže "
+"stabilizuje fotoaparát, ale tiež informuje o tom, či je smartfón držaný v"
+" režime na výšku alebo na šírku. Okrem toho gyroskop dokáže snímať aj "
+"mechanické vibrácie, takže má funkciu mikrofónu."
 
 #: ../nitrophone/faq.rst:48
 msgid "**Q:** Why don't we offer to remove the speakers?"
@@ -13406,14 +13427,14 @@ msgid ""
 msgstr ""
 "Mikrofóny sa zvyčajne používajú na premenu mechanických vibrácií na "
 "elektrické signály. Mechanická konštrukcia reproduktorov je v podstate "
-"rovnaká ako konštrukcia mikrofónov, takže reproduktory sa môžu používať aj "
-"ako mikrofóny. V reproduktoroch elektrické signály spôsobujú vibrácie "
-"membrány, čím sa vytvára zvuk. Naopak, tento proces sa môže použiť na prenos "
-"elektrického signálu z membrány do zariadenia, podobne ako pri mikrofóne. "
-"Táto metóda však nie je možná, ak je nainštalovaný zosilňovač, pretože ten "
-"neumožňuje prenos signálu z reproduktora do zariadenia. Všetky telefóny "
-"Nitrophones majú iba reproduktory so zabudovanými zosilňovačmi, a preto sú "
-"neškodné."
+"rovnaká ako konštrukcia mikrofónov, takže reproduktory sa môžu používať "
+"aj ako mikrofóny. V reproduktoroch elektrické signály spôsobujú vibrácie "
+"membrány, čím sa vytvára zvuk. Naopak, tento proces sa môže použiť na "
+"prenos elektrického signálu z membrány do zariadenia, podobne ako pri "
+"mikrofóne. Táto metóda však nie je možná, ak je nainštalovaný zosilňovač,"
+" pretože ten neumožňuje prenos signálu z reproduktora do zariadenia. "
+"Všetky telefóny Nitrophones majú iba reproduktory so zabudovanými "
+"zosilňovačmi, a preto sú neškodné."
 
 #: ../nitrophone/index.rst:19
 msgid "Apps"
@@ -26678,3 +26699,25 @@ msgstr ""
 
 #~ msgid "Overview"
 #~ msgstr "Prehľad"
+
+#~ msgid ""
+#~ "Alternatively, you can run the NetHSM"
+#~ " as a `Docker container "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The"
+#~ " NetHSM container requires nested "
+#~ "virtualization for strong separation with "
+#~ "other containers. Thus, to start a "
+#~ "NetHSM container you need a Linux "
+#~ "host with `/dev/kvm` available. Execute "
+#~ "this command:"
+#~ msgstr ""
+#~ "Prípadne môžete spustiť NetHSM ako "
+#~ "`kontajner Docker "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ lokálne. "
+#~ "Kontajner NetHSM vyžaduje vnorenú "
+#~ "virtualizáciu pre silné oddelenie s "
+#~ "ostatnými kontajnermi. Preto na spustenie "
+#~ "kontajnera NetHSM potrebujete hostiteľa Linux"
+#~ " s dostupným `/dev/kvm`. Vykonajte tento"
+#~ " príkaz:"
+

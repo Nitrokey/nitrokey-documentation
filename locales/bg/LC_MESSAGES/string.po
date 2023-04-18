@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-21 16:37+0100\n"
+"POT-Creation-Date: 2023-04-18 16:09+0200\n"
 "PO-Revision-Date: 2023-03-21 16:45+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Bulgarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/bg/>\n"
 "Language: bg\n"
+"Language-Team: Bulgarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/bg/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6544,27 +6543,40 @@ msgstr ""
 #: ../nethsm/integration.rst:24
 msgid ""
 "Alternatively, you can run the NetHSM as a `Docker container "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The NetHSM "
-"container requires nested virtualization for strong separation with other"
-" containers. Thus, to start a NetHSM container you need a Linux host with"
-" `/dev/kvm` available. Execute this command:"
+"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
 msgstr ""
-"Като алтернатива можете да стартирате `контейнера Docker наNetHSM "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ локално. Контейнерът NetHSM "
-"изисква вложена виртуализация за силно разделяне с други контейнери. "
-"Следователно, за да стартирате контейнер NetHSM, се нуждаете от хост с "
-"Linux и наличен /dev/kvm. Изпълнете тази команда:"
 
-#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:43
-#: ../nethsm/integration.rst:51
+#: ../nethsm/integration.rst:26
+#, fuzzy
+msgid "The container can be executed as follows."
+msgstr "Резервното копие може да се изпълни по следния начин."
+
+#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:55
+#: ../nethsm/integration.rst:68
 msgid "Docker"
 msgstr "Docker"
 
-#: ../nethsm/integration.rst:35
+#: ../nethsm/integration.rst:34 ../nethsm/integration.rst:60
+#: ../nethsm/integration.rst:73
+msgid "Podman"
+msgstr ""
+
+#: ../nethsm/integration.rst:39
+msgid "This will provide the REST API on the port `8443` via the HTTPS protocol."
+msgstr ""
+
+#: ../nethsm/integration.rst:42
+msgid ""
+"The container uses a self-signed TLS certificate. Make sure to use the "
+"correct connection settings to establish a connection. Please refer to "
+"chapter `NetHSM introduction <index.html>`__ to learn more."
+msgstr ""
+
+#: ../nethsm/integration.rst:47
 msgid "Integration into Custom Application"
 msgstr "Интеграция към потребителско приложение"
 
-#: ../nethsm/integration.rst:37
+#: ../nethsm/integration.rst:49
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Therefore, we "
@@ -6576,11 +6588,11 @@ msgstr ""
 "използвате `OpenAPI Generator <https://github.com/OpenAPITools/openapi-"
 "generator>`_."
 
-#: ../nethsm/integration.rst:40
+#: ../nethsm/integration.rst:52
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "Списъкът с всички налични езици може да бъде изтеглен по следния начин."
 
-#: ../nethsm/integration.rst:48
+#: ../nethsm/integration.rst:65
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
@@ -6588,7 +6600,7 @@ msgstr ""
 "Клиентът на NetHSM може да бъде генериран за вашия език за програмиране "
 "по следния начин."
 
-#: ../nethsm/integration.rst:56
+#: ../nethsm/integration.rst:78
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -6598,11 +6610,20 @@ msgstr ""
 "директорията ``./out/``. Тази папка съдържа и необходимата документация "
 "как да я използвате."
 
-#: ../nethsm/integration.rst:60
+#: ../nethsm/integration.rst:82
+msgid ""
+"If Podman is used with enforcing SELinux, a labeling to the volume mount "
+"might be required. The mode of SELinux can be requested with ``sestatus "
+"|grep \"Current mode\"``. If the mode is set to ``enforcing``, a change "
+"to the context is required. In this case the volume mount must be "
+"postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
+msgstr ""
+
+#: ../nethsm/integration.rst:88
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../nethsm/integration.rst:62
+#: ../nethsm/integration.rst:90
 msgid ""
 "The NetHSM's API specification is available in `OpenAPI format "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_, and can be "
@@ -13631,10 +13652,11 @@ msgid ""
 "only way to completely exclude possible misuse. Especially in the case of"
 " a microphone, which allows continuous eavesdropping."
 msgstr ""
-"GrapheneOS информира за активния достъп до сензорите и предлага прозрачен "
-"начин за наблюдение на устройството. Въпреки това физическото отстраняване е "
-"единственият начин за пълно изключване на възможна злоупотреба. Особено в "
-"случая с микрофона, който позволява непрекъснато подслушване."
+"GrapheneOS информира за активния достъп до сензорите и предлага прозрачен"
+" начин за наблюдение на устройството. Въпреки това физическото "
+"отстраняване е единственият начин за пълно изключване на възможна "
+"злоупотреба. Особено в случая с микрофона, който позволява непрекъснато "
+"подслушване."
 
 #: ../nitrophone/faq.rst:45
 msgid "**Q:** Why do we also offer to remove the gyroscope?"
@@ -13648,10 +13670,10 @@ msgid ""
 "also pick up mechanical vibrations, so it has the functionality of a "
 "microphone."
 msgstr ""
-"Жироскопът е сензор, който определя ориентацията на смартфона. Той не само "
-"стабилизира камерата, но и определя дали смартфонът се държи в портретен или "
-"пейзажен режим. Освен това жироскопът може да улавя и механични вибрации, "
-"така че има функцията на микрофон."
+"Жироскопът е сензор, който определя ориентацията на смартфона. Той не "
+"само стабилизира камерата, но и определя дали смартфонът се държи в "
+"портретен или пейзажен режим. Освен това жироскопът може да улавя и "
+"механични вибрации, така че има функцията на микрофон."
 
 #: ../nitrophone/faq.rst:48
 msgid "**Q:** Why don't we offer to remove the speakers?"
@@ -13670,17 +13692,17 @@ msgid ""
 "transmitted from the loudspeaker to the device. All Nitrophones only have"
 " speakers with built-in amplifiers and are therefore harmless."
 msgstr ""
-"Микрофоните обикновено се използват за преобразуване на механични вибрации в "
-"електрически сигнали. Механичната конструкция на високоговорителите по "
-"същество е същата като тази на микрофоните, така че високоговорителите могат "
-"да се използват и като микрофони. В високоговорителите електрическите "
-"сигнали предизвикват вибрации на мембраната, като по този начин се генерира "
-"звук. Обратно, този процес може да се използва за предаване на електрическия "
-"сигнал от мембраната към устройството, както при микрофона. Този метод обаче "
-"не е възможен, ако е инсталиран усилвател, тъй като той не позволява "
-"предаването на сигнала от високоговорителя към устройството. Всички "
-"Nitrophones имат само високоговорители с вградени усилватели и следователно "
-"са безвредни."
+"Микрофоните обикновено се използват за преобразуване на механични "
+"вибрации в електрически сигнали. Механичната конструкция на "
+"високоговорителите по същество е същата като тази на микрофоните, така че"
+" високоговорителите могат да се използват и като микрофони. В "
+"високоговорителите електрическите сигнали предизвикват вибрации на "
+"мембраната, като по този начин се генерира звук. Обратно, този процес "
+"може да се използва за предаване на електрическия сигнал от мембраната "
+"към устройството, както при микрофона. Този метод обаче не е възможен, "
+"ако е инсталиран усилвател, тъй като той не позволява предаването на "
+"сигнала от високоговорителя към устройството. Всички Nitrophones имат "
+"само високоговорители с вградени усилватели и следователно са безвредни."
 
 #: ../nitrophone/index.rst:19
 msgid "Apps"
@@ -27273,3 +27295,25 @@ msgstr ""
 
 #~ msgid "Overview"
 #~ msgstr "Преглед"
+
+#~ msgid ""
+#~ "Alternatively, you can run the NetHSM"
+#~ " as a `Docker container "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ locally. The"
+#~ " NetHSM container requires nested "
+#~ "virtualization for strong separation with "
+#~ "other containers. Thus, to start a "
+#~ "NetHSM container you need a Linux "
+#~ "host with `/dev/kvm` available. Execute "
+#~ "this command:"
+#~ msgstr ""
+#~ "Като алтернатива можете да стартирате "
+#~ "`контейнера Docker наNetHSM "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ локално. "
+#~ "Контейнерът NetHSM изисква вложена "
+#~ "виртуализация за силно разделяне с други"
+#~ " контейнери. Следователно, за да стартирате"
+#~ " контейнер NetHSM, се нуждаете от "
+#~ "хост с Linux и наличен /dev/kvm. "
+#~ "Изпълнете тази команда:"
+
