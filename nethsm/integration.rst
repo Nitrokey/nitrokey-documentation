@@ -55,7 +55,12 @@ The list of all available languages can be retrieved as follows.
    .. tab:: Docker
       .. code-block:: bash
 
-         $ docker run --pull --rm -ti openapitools/openapi-generator-cli list -i stable
+         $ docker run --rm -ti openapitools/openapi-generator-cli list -i stable
+   
+   .. tab:: Podman
+      .. code-block:: bash
+
+         $ podman run --rm -ti openapitools/openapi-generator-cli list -i stable
 
 The NetHSM client can be generated for your programming language as follows.
 
@@ -65,8 +70,19 @@ The NetHSM client can be generated for your programming language as follows.
 
          $ docker run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate -i=https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml -o out -g javascript
 
+   .. tab:: Podman
+      .. code-block:: bash
+
+         $ podman run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate -i=https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml -o out -g javascript
+
 The generated client code, in this example JavaScript, will be created in the ``./out/`` directory.
 This folder also contains the necessary documentation how to use it.
+
+.. important::
+   If Podman is used with enforcing SELinux, a labeling to the volume mount might be required.
+   The mode of SELinux can be requested with ``sestatus |grep "Current mode"``.
+   If the mode is set to ``enforcing``, a change to the context is required.
+   In this case the volume mount must be postfixed with ``:z``, resulting in ``-v "${PWD}/out:/out:z"``.
 
 REST-API
 ~~~~~~~~
