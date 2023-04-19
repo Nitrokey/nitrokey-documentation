@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-18 16:09+0200\n"
+"POT-Creation-Date: 2023-04-19 11:43+0200\n"
 "PO-Revision-Date: 2023-04-18 15:45+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Italian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/it/>\n"
 "Language: it\n"
+"Language-Team: Italian <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/it/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -3754,10 +3753,10 @@ msgid "S/MIME Email Encryption"
 msgstr "Crittografia e-mail S/MIME"
 
 #: ../hsm/smime.rst.inc:9 ../nextbox/technical/replace-drive.rst:12
-#: ../pro/linux/openvpn-easyrsa.rst:24 ../pro/openpgp-outlook.rst.inc:14
-#: ../pro/smime-outlook.rst.inc:9 ../pro/smime-thunderbird.rst.inc:9
-#: ../pro/smime.rst.inc:9 ../pro/windows/openpgp-csp.rst:11
-#: ../pro/windows/openvpn-easyrsa.rst:24
+#: ../nitrokey3/windows/piv.rst:9 ../pro/linux/openvpn-easyrsa.rst:24
+#: ../pro/openpgp-outlook.rst.inc:14 ../pro/smime-outlook.rst.inc:9
+#: ../pro/smime-thunderbird.rst.inc:9 ../pro/smime.rst.inc:9
+#: ../pro/windows/openpgp-csp.rst:11 ../pro/windows/openvpn-easyrsa.rst:24
 #: ../pro/windows/openvpn-viscosity.rst:17
 #: ../storage/linux/openvpn-easyrsa.rst:24
 msgid "Prerequisites"
@@ -6571,8 +6570,7 @@ msgstr "Podman"
 
 #: ../nethsm/integration.rst:39
 msgid "This will provide the REST API on the port `8443` via the HTTPS protocol."
-msgstr ""
-"Questo fornirà l'API REST sulla porta `8443` tramite il protocollo HTTPS."
+msgstr "Questo fornirà l'API REST sulla porta `8443` tramite il protocollo HTTPS."
 
 #: ../nethsm/integration.rst:42
 msgid ""
@@ -6580,10 +6578,10 @@ msgid ""
 "correct connection settings to establish a connection. Please refer to "
 "chapter `NetHSM introduction <index.html>`__ to learn more."
 msgstr ""
-"Il contenitore utilizza un certificato TLS autofirmato. Assicurarsi di usare "
-"le impostazioni di connessione corrette per stabilire una connessione. Per "
-"saperne di più, consultare il capitolo `Introduzione a NetHSM <index."
-"html>`__."
+"Il contenitore utilizza un certificato TLS autofirmato. Assicurarsi di "
+"usare le impostazioni di connessione corrette per stabilire una "
+"connessione. Per saperne di più, consultare il capitolo `Introduzione a "
+"NetHSM <index.html>`__."
 
 #: ../nethsm/integration.rst:47
 msgid "Integration into Custom Application"
@@ -6632,9 +6630,9 @@ msgid ""
 "postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
 msgstr ""
 "Se Podman viene usato con SELinux, potrebbe essere necessaria "
-"un'etichettatura del montaggio del volume. La modalità di SELinux può essere "
-"richiesta con ``sestatus |grep \"Current mode\"``. Se la modalità è "
-"impostata su ``enforcing``, è necessaria una modifica del contesto. In "
+"un'etichettatura del montaggio del volume. La modalità di SELinux può "
+"essere richiesta con ``sestatus |grep \"Current mode\"``. Se la modalità "
+"è impostata su ``enforcing``, è necessaria una modifica del contesto. In "
 "questo caso il montaggio del volume deve essere postfissato con ``:z``, "
 "ottenendo ``-v \"${PWD}/out:/out:z\"``."
 
@@ -11262,6 +11260,207 @@ msgstr "(Nitrokey 3 - Windows)"
 #: ../nitrokey3/windows/index.rst:2
 msgid "Nitrokey 3 With Windows"
 msgstr "Nitrokey 3 con Windows"
+
+#: ../nitrokey3/windows/piv.rst:2
+msgid "Windows Login With PIV Smartcard Authentication"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:4
+msgid ""
+"This document explains how to provision the PIV function of a Nitrokey 3"
+"  for Windows smartcard logon manually with a key and a certificate."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:6
+msgid ""
+"In the future, this manual provisioning may be automated through a "
+"Windows MiniDriver."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:11
+msgid "A Windows server with:"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:13
+msgid ""
+"Active Directory (`instructions <https://serverspace.io/support/help"
+"/installing-active-directory-on-windows-server-2019/>`__)"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:14
+msgid ""
+"A certificate authority (CA), with a certificate template for logon "
+"authentication using RSA 2048 bit keys:"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:16
+msgid ""
+"Certificate Authority (`instructions <https://learn.microsoft.com/en-us"
+"/windows-server/networking/core-network-guide/cncg/server-certs/server-"
+"certificate-deployment-overview>`__)"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:17
+msgid ""
+"Authentication template (`instructions <https://learn.microsoft.com/en-"
+"us/windows/security/threat-protection/windows-firewall/configure-the-"
+"workstation-authentication-certificate-template>`__)"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:19
+msgid "A Windows user machine joined to the domain of the server"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:20
+#, fuzzy
+msgid "A Nitrokey 3 with `PIV <https://github.com/Nitrokey/piv-authenticator>`__"
+msgstr ""
+"`Installa pynitrokey "
+"<https://github.com/Nitrokey/pynitrokey#installation>`_."
+
+#: ../nitrokey3/windows/piv.rst:22
+msgid ""
+"A Linux system with `pivy <https://github.com/coin3d/pivy>`__ and PCSCD "
+"installed (``sudo apt install pcscd``), to provision the Nitrokey (step "
+"1, 2 and 4). Instead of a separate Linux system you can `install WSL "
+"<https://learn.microsoft.com/en-us/windows/wsl/install>`__ on Windows. "
+"Note that you need to `virtually attach "
+"<https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-"
+"wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start "
+"pcscd``) before using pivy."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:25
+msgid "1: Generate a key on the Nitrokey"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:27
+msgid "The key is generated in slot 9A (authentication)."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:29
+msgid "``pivy-tool generate 9A -a rsa2048``"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:35
+msgid ""
+"The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` "
+"if it is not the default. If ``-P`` is not provided, it will be asked for"
+" after key generation."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:37
+msgid "This applies to all ``pivy-tool`` commands."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:39
+msgid ""
+"This step can take a couple of minutes for RSA keys, as the pure software"
+" implementation is slow."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:41
+msgid "**Expected output**:"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:48
+#, fuzzy
+msgid "2: Generate a Certificate Signing Request (CSR)"
+msgstr ""
+"Generare una richiesta di firma del certificato tramite openssl + modulo "
+"pkcs11"
+
+#: ../nitrokey3/windows/piv.rst:50
+msgid ""
+"This step generates a certificate for the key in the authentication slot."
+" ``pivy-tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" "
+"-T user-auth``"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:52
+msgid ""
+"The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email "
+"address must be changed to own values."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:54
+msgid "Expected output:"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:77
+msgid "Copy the certificate signing request to a file ``request.csr``"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:80
+msgid "3: Sign the CSR"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:82
+msgid ""
+"Move the request.csr file from the previous step to the server that hosts"
+" the certificate authority. Verify in the certificate template console "
+"(``certtmpl.msc`` ) that the template for the users can accept subject "
+"names from the request:"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:-1
+msgid ""
+"In the certificate template console, in the parameter for the "
+"authentication certificate template, toggle \"supply in request\" in the "
+"\"subject name\" tab."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:87
+msgid ""
+"Open PowerShell and sign the certificate signing request with "
+"``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:89
+msgid ""
+"This will open a GUI where you can select the correct Certificate "
+"Authority if there are multiple on this server. Save the certificate as "
+"``certificate.crt``"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:92
+#, fuzzy
+msgid "4: Store the certificate on the Nitrokey"
+msgstr "Importare il certificato e la chiave in Nitrokey"
+
+#: ../nitrokey3/windows/piv.rst:94
+msgid "``cat certificate.der | pivy-tool write-cert 9A``"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:97
+#, fuzzy
+msgid "5: Import the certificate to the user account"
+msgstr "Importare il certificato e la chiave in Nitrokey"
+
+#: ../nitrokey3/windows/piv.rst:99
+msgid ""
+"Move ``certificate.der`` to the user Windows device, and open the "
+"certificate manager (**For the user, not the machine**):"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:-1
+msgid "Open the \"manage user certificate control panel\""
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:104
+#, fuzzy
+msgid "Import the certificate:"
+msgstr "Convertire il certificato in DER"
+
+#: ../nitrokey3/windows/piv.rst:-1
+msgid "In actions, all tasks, you can find the import action"
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:109
+msgid ""
+"Once this is done, log out. Log in with the Nitrokey by using the “sign-"
+"in options”"
+msgstr ""
 
 #: ../nitropad/content/shared-index-content1.rst:11
 #: ../nitropad/content/shared-index-content1.rst:28
@@ -27288,3 +27487,4 @@ msgstr ""
 #~ "per avviare un contenitore NetHSM hai"
 #~ " bisogno di un host Linux con "
 #~ "/dev/kvm disponibile. Esegui questo comando:"
+
