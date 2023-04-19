@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-19 11:43+0200\n"
-"PO-Revision-Date: 2023-04-18 15:45+0000\n"
+"PO-Revision-Date: 2023-04-19 11:45+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Slovak <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/sk/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -11026,35 +11027,43 @@ msgstr "Nitrokey 3 so systémom Windows"
 
 #: ../nitrokey3/windows/piv.rst:2
 msgid "Windows Login With PIV Smartcard Authentication"
-msgstr ""
+msgstr "Prihlásenie do systému Windows pomocou overovania čipovou kartou PIV"
 
 #: ../nitrokey3/windows/piv.rst:4
 msgid ""
 "This document explains how to provision the PIV function of a Nitrokey 3"
 "  for Windows smartcard logon manually with a key and a certificate."
 msgstr ""
+"Tento dokument vysvetľuje, ako zabezpečiť funkciu PIV prihlásenia čipovou "
+"kartou Nitrokey 3 for Windows manuálne pomocou kľúča a certifikátu."
 
 #: ../nitrokey3/windows/piv.rst:6
 msgid ""
 "In the future, this manual provisioning may be automated through a "
 "Windows MiniDriver."
 msgstr ""
+"V budúcnosti sa toto manuálne zabezpečovanie môže automatizovať "
+"prostredníctvom ovládača Windows MiniDriver."
 
 #: ../nitrokey3/windows/piv.rst:11
 msgid "A Windows server with:"
-msgstr ""
+msgstr "Server so systémom Windows s:"
 
 #: ../nitrokey3/windows/piv.rst:13
 msgid ""
 "Active Directory (`instructions <https://serverspace.io/support/help"
 "/installing-active-directory-on-windows-server-2019/>`__)"
 msgstr ""
+"Active Directory (`pokyny <https://serverspace.io/support/help/"
+"installing-active-directory-on-windows-server-2019/>`__)"
 
 #: ../nitrokey3/windows/piv.rst:14
 msgid ""
 "A certificate authority (CA), with a certificate template for logon "
 "authentication using RSA 2048 bit keys:"
 msgstr ""
+"Certifikačná autorita (CA) so šablónou certifikátu na overovanie prihlásenia "
+"pomocou 2048-bitových kľúčov RSA:"
 
 #: ../nitrokey3/windows/piv.rst:16
 msgid ""
@@ -11062,6 +11071,9 @@ msgid ""
 "/windows-server/networking/core-network-guide/cncg/server-certs/server-"
 "certificate-deployment-overview>`__)"
 msgstr ""
+"Certifikačná autorita (`pokyny <https://learn.microsoft.com/en-us/"
+"windows-server/networking/core-network-guide/cncg/server-certs/server-"
+"certificate-deployment-overview>`__)"
 
 #: ../nitrokey3/windows/piv.rst:17
 msgid ""
@@ -11069,17 +11081,17 @@ msgid ""
 "us/windows/security/threat-protection/windows-firewall/configure-the-"
 "workstation-authentication-certificate-template>`__)"
 msgstr ""
+"Šablóna overovania (`pokyny <https://learn.microsoft.com/en-us/windows/"
+"security/threat-protection/windows-firewall/configure-the-workstation-"
+"authentication-certificate-template>`__)"
 
 #: ../nitrokey3/windows/piv.rst:19
 msgid "A Windows user machine joined to the domain of the server"
-msgstr ""
+msgstr "Používateľský počítač so systémom Windows pripojený k doméne servera"
 
 #: ../nitrokey3/windows/piv.rst:20
-#, fuzzy
 msgid "A Nitrokey 3 with `PIV <https://github.com/Nitrokey/piv-authenticator>`__"
-msgstr ""
-"`Inštalácia pynitrokey "
-"<https://github.com/Nitrokey/pynitrokey#installation>`__."
+msgstr "Nitrokey 3 s `PIV <https://github.com/Nitrokey/piv-authenticator>`__"
 
 #: ../nitrokey3/windows/piv.rst:22
 msgid ""
@@ -11092,18 +11104,25 @@ msgid ""
 "wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start "
 "pcscd``) before using pivy."
 msgstr ""
+"Systém Linux s nainštalovanými `pivy <https://github.com/coin3d/pivy>`__ a "
+"PCSCD (``sudo apt install pcscd``), na zabezpečenie Nitrokey (krok 1, 2 a 4)"
+". Namiesto samostatného systému Linux môžete `nainštalovať WSL <https://learn"
+".microsoft.com/en-us/windows/wsl/install>`__ v systéme Windows. "
+"Upozorňujeme, že pred použitím pivy musíte `virtuálne pripojiť "
+"<https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/>`"
+"__ Nitrokey k WSL a spustiť PCSCD (``sudo service start pcscd``)."
 
 #: ../nitrokey3/windows/piv.rst:25
 msgid "1: Generate a key on the Nitrokey"
-msgstr ""
+msgstr "1: Vygenerujte kľúč na Nitrokey"
 
 #: ../nitrokey3/windows/piv.rst:27
 msgid "The key is generated in slot 9A (authentication)."
-msgstr ""
+msgstr "Kľúč sa generuje v slote 9A (autentifikácia)."
 
 #: ../nitrokey3/windows/piv.rst:29
 msgid "``pivy-tool generate 9A -a rsa2048``"
-msgstr ""
+msgstr "``pivy-tool generate 9A -a rsa2048``"
 
 #: ../nitrokey3/windows/piv.rst:35
 msgid ""
@@ -11111,27 +11130,29 @@ msgid ""
 "if it is not the default. If ``-P`` is not provided, it will be asked for"
 " after key generation."
 msgstr ""
+"Používateľský PIN kód možno tiež zadať pomocou ``-P 123456`` alebo ``-P "
+"<value>``, ak nie je predvolený. Ak nie je zadaný ``-P``, bude sa naň "
+"dotazovať po vygenerovaní kľúča."
 
 #: ../nitrokey3/windows/piv.rst:37
 msgid "This applies to all ``pivy-tool`` commands."
-msgstr ""
+msgstr "To platí pre všetky príkazy ``pivy-tool``."
 
 #: ../nitrokey3/windows/piv.rst:39
 msgid ""
 "This step can take a couple of minutes for RSA keys, as the pure software"
 " implementation is slow."
 msgstr ""
+"Tento krok môže v prípade kľúčov RSA trvať niekoľko minút, pretože čisto "
+"softvérová implementácia je pomalá."
 
 #: ../nitrokey3/windows/piv.rst:41
 msgid "**Expected output**:"
-msgstr ""
+msgstr "**Očakávaný výstup**:"
 
 #: ../nitrokey3/windows/piv.rst:48
-#, fuzzy
 msgid "2: Generate a Certificate Signing Request (CSR)"
-msgstr ""
-"Generovanie žiadosti o podpis certifikátu prostredníctvom modulu openssl "
-"+ pkcs11"
+msgstr "2: Vygenerovanie žiadosti o podpis certifikátu (CSR)"
 
 #: ../nitrokey3/windows/piv.rst:50
 msgid ""
@@ -11139,24 +11160,29 @@ msgid ""
 " ``pivy-tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" "
 "-T user-auth``"
 msgstr ""
+"V tomto kroku sa vygeneruje certifikát pre kľúč v autentifikačnom slote. "
+"``pivy-tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" -T "
+"user-auth``"
 
 #: ../nitrokey3/windows/piv.rst:52
 msgid ""
 "The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email "
 "address must be changed to own values."
 msgstr ""
+"Používateľské meno ``Nitro Test`` a e-mailová adresa ``nitro@test.nitrokey."
+"com`` musia byť zmenené na vlastné hodnoty."
 
 #: ../nitrokey3/windows/piv.rst:54
 msgid "Expected output:"
-msgstr ""
+msgstr "Očakávaný výstup:"
 
 #: ../nitrokey3/windows/piv.rst:77
 msgid "Copy the certificate signing request to a file ``request.csr``"
-msgstr ""
+msgstr "Skopírujte žiadosť o podpis certifikátu do súboru ``request.csr``"
 
 #: ../nitrokey3/windows/piv.rst:80
 msgid "3: Sign the CSR"
-msgstr ""
+msgstr "3: Podpíšte CSR"
 
 #: ../nitrokey3/windows/piv.rst:82
 msgid ""
@@ -11165,6 +11191,10 @@ msgid ""
 "(``certtmpl.msc`` ) that the template for the users can accept subject "
 "names from the request:"
 msgstr ""
+"Presuňte súbor request.csr z predchádzajúceho kroku na server, na ktorom je "
+"umiestnená certifikačná autorita. V konzole šablóny certifikátu (``certtmpl."
+"msc`` ) overte, či šablóna pre používateľov môže prijímať názvy subjektov zo "
+"žiadosti:"
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid ""
@@ -11172,12 +11202,17 @@ msgid ""
 "authentication certificate template, toggle \"supply in request\" in the "
 "\"subject name\" tab."
 msgstr ""
+"V konzole šablóny certifikátu v parametri pre šablónu autentifikačného "
+"certifikátu prepnite možnosť \"dodať v žiadosti\" na karte \"názov subjektu\""
+"."
 
 #: ../nitrokey3/windows/piv.rst:87
 msgid ""
 "Open PowerShell and sign the certificate signing request with "
 "``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``"
 msgstr ""
+"Otvorte PowerShell a podpíšte žiadosť o podpis certifikátu pomocou ``"
+"certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``"
 
 #: ../nitrokey3/windows/piv.rst:89
 msgid ""
@@ -11185,45 +11220,49 @@ msgid ""
 "Authority if there are multiple on this server. Save the certificate as "
 "``certificate.crt``"
 msgstr ""
+"Otvorí sa grafické rozhranie, v ktorom môžete vybrať správnu certifikačnú "
+"autoritu, ak ich je na tomto serveri viac. Uložte certifikát ako "
+"``certificate.crt``"
 
 #: ../nitrokey3/windows/piv.rst:92
-#, fuzzy
 msgid "4: Store the certificate on the Nitrokey"
-msgstr "Import certifikátu a kľúča do aplikácie Nitrokey"
+msgstr "4: Uloženie certifikátu na kľúč Nitrokey"
 
 #: ../nitrokey3/windows/piv.rst:94
 msgid "``cat certificate.der | pivy-tool write-cert 9A``"
-msgstr ""
+msgstr "``cat certificate.der | pivy-tool write-cert 9A``"
 
 #: ../nitrokey3/windows/piv.rst:97
-#, fuzzy
 msgid "5: Import the certificate to the user account"
-msgstr "Import certifikátu a kľúča do aplikácie Nitrokey"
+msgstr "5: Import certifikátu do používateľského účtu"
 
 #: ../nitrokey3/windows/piv.rst:99
 msgid ""
 "Move ``certificate.der`` to the user Windows device, and open the "
 "certificate manager (**For the user, not the machine**):"
 msgstr ""
+"Presuňte ``certificate.der`` do používateľského zariadenia Windows a otvorte "
+"správcu certifikátov (**Pre používateľa, nie pre stroj**):"
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid "Open the \"manage user certificate control panel\""
-msgstr ""
+msgstr "Otvorte ovládací panel \"spravovať používateľský certifikát\""
 
 #: ../nitrokey3/windows/piv.rst:104
-#, fuzzy
 msgid "Import the certificate:"
-msgstr "Previesť certifikát na DER"
+msgstr "Importovať certifikát:"
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid "In actions, all tasks, you can find the import action"
-msgstr ""
+msgstr "V časti akcie, všetky úlohy nájdete akciu import"
 
 #: ../nitrokey3/windows/piv.rst:109
 msgid ""
 "Once this is done, log out. Log in with the Nitrokey by using the “sign-"
 "in options”"
 msgstr ""
+"Po dokončení tohto kroku sa odhláste. Prihláste sa pomocou kľúča Nitrokey "
+"pomocou \"možností prihlásenia\"."
 
 #: ../nitropad/content/shared-index-content1.rst:11
 #: ../nitropad/content/shared-index-content1.rst:28
@@ -26932,4 +26971,3 @@ msgstr ""
 #~ "kontajnera NetHSM potrebujete hostiteľa Linux"
 #~ " s dostupným `/dev/kvm`. Vykonajte tento"
 #~ " príkaz:"
-
