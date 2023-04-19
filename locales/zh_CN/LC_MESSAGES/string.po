@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-19 11:43+0200\n"
-"PO-Revision-Date: 2023-04-18 15:45+0000\n"
+"PO-Revision-Date: 2023-04-19 11:45+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified) "
-"<https://translate.nitrokey.com/projects/nitrokey-documentation"
-"/documentation-string/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -9452,35 +9452,37 @@ msgstr "Nitrokey 3与Windows"
 
 #: ../nitrokey3/windows/piv.rst:2
 msgid "Windows Login With PIV Smartcard Authentication"
-msgstr ""
+msgstr "使用PIV智能卡认证的Windows登录"
 
 #: ../nitrokey3/windows/piv.rst:4
 msgid ""
 "This document explains how to provision the PIV function of a Nitrokey 3"
 "  for Windows smartcard logon manually with a key and a certificate."
-msgstr ""
+msgstr "本文解释了如何用钥匙和证书手动配置Nitrokey 3 for Windows智能卡登录的PIV功能。"
 
 #: ../nitrokey3/windows/piv.rst:6
 msgid ""
 "In the future, this manual provisioning may be automated through a "
 "Windows MiniDriver."
-msgstr ""
+msgstr "在未来，这种手动配置可能会通过Windows MiniDriver自动进行。"
 
 #: ../nitrokey3/windows/piv.rst:11
 msgid "A Windows server with:"
-msgstr ""
+msgstr "一台具有以下功能的Windows服务器："
 
 #: ../nitrokey3/windows/piv.rst:13
 msgid ""
 "Active Directory (`instructions <https://serverspace.io/support/help"
 "/installing-active-directory-on-windows-server-2019/>`__)"
 msgstr ""
+"活动目录 (`说明<https://serverspace.io/support/help/"
+"installing-active-directory-on-windows-server-2019/>`__)"
 
 #: ../nitrokey3/windows/piv.rst:14
 msgid ""
 "A certificate authority (CA), with a certificate template for logon "
 "authentication using RSA 2048 bit keys:"
-msgstr ""
+msgstr "一个证书颁发机构（CA），有一个使用RSA 2048比特密钥进行登录认证的证书模板："
 
 #: ../nitrokey3/windows/piv.rst:16
 msgid ""
@@ -9488,6 +9490,9 @@ msgid ""
 "/windows-server/networking/core-network-guide/cncg/server-certs/server-"
 "certificate-deployment-overview>`__)"
 msgstr ""
+"证书机构 (`说明<https://learn.microsoft.com/en-us/windows-server/networking/"
+"core-network-guide/cncg/server-certs/server-certificate-deployment-"
+"overview>`__)"
 
 #: ../nitrokey3/windows/piv.rst:17
 msgid ""
@@ -9495,15 +9500,17 @@ msgid ""
 "us/windows/security/threat-protection/windows-firewall/configure-the-"
 "workstation-authentication-certificate-template>`__)"
 msgstr ""
+"认证模板(`说明<https://learn.microsoft.com/en-us/windows/security/"
+"threat-protection/windows-firewall/configure-the-workstation-authentication-"
+"certificate-template>`__)"
 
 #: ../nitrokey3/windows/piv.rst:19
 msgid "A Windows user machine joined to the domain of the server"
-msgstr ""
+msgstr "一台加入到服务器域的Windows用户机器"
 
 #: ../nitrokey3/windows/piv.rst:20
-#, fuzzy
 msgid "A Nitrokey 3 with `PIV <https://github.com/Nitrokey/piv-authenticator>`__"
-msgstr "`安装pynitrokey <https://github.com/Nitrokey/pynitrokey#installation>`__。"
+msgstr "一个带有`PIV的Nitrokey 3<https://github.com/Nitrokey/piv-authenticator>`__"
 
 #: ../nitrokey3/windows/piv.rst:22
 msgid ""
@@ -9516,18 +9523,24 @@ msgid ""
 "wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start "
 "pcscd``) before using pivy."
 msgstr ""
+"一个装有`pivy<https://github.com/coin3d/pivy>`__和PCSCD的Linux系统（``sudo "
+"apt install pcscd``），以配置Nitrokey（步骤1、2和4）。`你可以在Windows上安装W"
+"SL<https://learn.microsoft.com/en-us/windows/wsl/install>`__，而不是单独的Lin"
+"ux系统。注意，在使用pivy之前，你需要`，将Nitrokey<https://devblogs.microsoft."
+"com/commandline/connecting-usb-devices-to-wsl/>`__连接到WSL，并启动PCSCD (``"
+"sudo service start pcscd``) 。"
 
 #: ../nitrokey3/windows/piv.rst:25
 msgid "1: Generate a key on the Nitrokey"
-msgstr ""
+msgstr "1：在Nitrokey上生成一个密钥"
 
 #: ../nitrokey3/windows/piv.rst:27
 msgid "The key is generated in slot 9A (authentication)."
-msgstr ""
+msgstr "密钥在9A槽（认证）中生成。"
 
 #: ../nitrokey3/windows/piv.rst:29
 msgid "``pivy-tool generate 9A -a rsa2048``"
-msgstr ""
+msgstr "``pivy-tool generate 9A -a rsa2048``"
 
 #: ../nitrokey3/windows/piv.rst:35
 msgid ""
@@ -9535,25 +9548,26 @@ msgid ""
 "if it is not the default. If ``-P`` is not provided, it will be asked for"
 " after key generation."
 msgstr ""
+"用户PIN码也可以用``-P 123456``来指定，如果不是默认的，也可以用``-P "
+"<value>``。如果没有提供``-P``，它将在密钥生成后被要求提供。"
 
 #: ../nitrokey3/windows/piv.rst:37
 msgid "This applies to all ``pivy-tool`` commands."
-msgstr ""
+msgstr "这适用于所有``pivy-tool``命令。"
 
 #: ../nitrokey3/windows/piv.rst:39
 msgid ""
 "This step can take a couple of minutes for RSA keys, as the pure software"
 " implementation is slow."
-msgstr ""
+msgstr "这个步骤对于RSA密钥来说可能需要几分钟，因为纯软件的实现速度很慢。"
 
 #: ../nitrokey3/windows/piv.rst:41
 msgid "**Expected output**:"
-msgstr ""
+msgstr "**预期的输出** ："
 
 #: ../nitrokey3/windows/piv.rst:48
-#, fuzzy
 msgid "2: Generate a Certificate Signing Request (CSR)"
-msgstr "通过openssl + pkcs11模块生成一个证书签名请求"
+msgstr "2：生成一个证书签名请求（CSR）"
 
 #: ../nitrokey3/windows/piv.rst:50
 msgid ""
@@ -9561,24 +9575,27 @@ msgid ""
 " ``pivy-tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" "
 "-T user-auth``"
 msgstr ""
+"这一步为认证槽中的密钥生成一个证书。``pivy-tool req-cert 9A -n 'Nitro Test' -"
+"u \"nitro@test.nitrokey.com\" -T user-auth``"
 
 #: ../nitrokey3/windows/piv.rst:52
 msgid ""
 "The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email "
 "address must be changed to own values."
-msgstr ""
+msgstr "``Nitro Test``用户名和``nitro@test.nitrokey."
+"com``电子邮件地址必须改为自己的值。"
 
 #: ../nitrokey3/windows/piv.rst:54
 msgid "Expected output:"
-msgstr ""
+msgstr "预期的产出："
 
 #: ../nitrokey3/windows/piv.rst:77
 msgid "Copy the certificate signing request to a file ``request.csr``"
-msgstr ""
+msgstr "将证书签署请求复制到一个文件中``request.csr``"
 
 #: ../nitrokey3/windows/piv.rst:80
 msgid "3: Sign the CSR"
-msgstr ""
+msgstr "3: 签署CSR"
 
 #: ../nitrokey3/windows/piv.rst:82
 msgid ""
@@ -9587,65 +9604,70 @@ msgid ""
 "(``certtmpl.msc`` ) that the template for the users can accept subject "
 "names from the request:"
 msgstr ""
+"将上一步中的 request.csr 文件移到存放证书颁发机构的服务器上。"
+"在证书模板控制台 (``certtmpl.msc`` ) "
+"验证用户的模板可以接受来自请求的主题名称："
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid ""
 "In the certificate template console, in the parameter for the "
 "authentication certificate template, toggle \"supply in request\" in the "
 "\"subject name\" tab."
-msgstr ""
+msgstr "在证书模板控制台，在认证证书模板的参数中，在 \"主题名称 \"标签中切换 "
+"\"在请求中提供\"。"
 
 #: ../nitrokey3/windows/piv.rst:87
 msgid ""
 "Open PowerShell and sign the certificate signing request with "
 "``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``"
 msgstr ""
+"打开PowerShell，用``certreq.exe -attrib CertificateTemplate:Nitrotest -"
+"submit request.csr``签署证书签署请求。"
 
 #: ../nitrokey3/windows/piv.rst:89
 msgid ""
 "This will open a GUI where you can select the correct Certificate "
 "Authority if there are multiple on this server. Save the certificate as "
 "``certificate.crt``"
-msgstr ""
+msgstr "这将打开一个图形用户界面，如果该服务器上有多个证书颁发机构，你可以选择正确的"
+"证书颁发机构。将证书保存为``certificate.crt``。"
 
 #: ../nitrokey3/windows/piv.rst:92
-#, fuzzy
 msgid "4: Store the certificate on the Nitrokey"
-msgstr "将证书和密钥导入到Nitrokey。"
+msgstr "4：在Nitrokey上存储证书"
 
 #: ../nitrokey3/windows/piv.rst:94
 msgid "``cat certificate.der | pivy-tool write-cert 9A``"
-msgstr ""
+msgstr "``cat certificate.der | pivy-tool write-cert 9A``"
 
 #: ../nitrokey3/windows/piv.rst:97
-#, fuzzy
 msgid "5: Import the certificate to the user account"
-msgstr "将证书和密钥导入到Nitrokey。"
+msgstr "5: 将证书导入到用户账户"
 
 #: ../nitrokey3/windows/piv.rst:99
 msgid ""
 "Move ``certificate.der`` to the user Windows device, and open the "
 "certificate manager (**For the user, not the machine**):"
-msgstr ""
+msgstr "将``certificate.der`` 移到用户的 Windows 设备上，并打开证书管理器 "
+"(**对于用户，而不是机器**) ："
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid "Open the \"manage user certificate control panel\""
-msgstr ""
+msgstr "打开 \"管理用户证书控制面板\""
 
 #: ../nitrokey3/windows/piv.rst:104
-#, fuzzy
 msgid "Import the certificate:"
-msgstr "将证书转换为DER"
+msgstr "导入证书："
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid "In actions, all tasks, you can find the import action"
-msgstr ""
+msgstr "在行动、所有任务中，你可以找到导入行动"
 
 #: ../nitrokey3/windows/piv.rst:109
 msgid ""
 "Once this is done, log out. Log in with the Nitrokey by using the “sign-"
 "in options”"
-msgstr ""
+msgstr "完成这些工作后，退出。通过使用 \"登录选项 \"用硝基钥匙登录"
 
 #: ../nitropad/content/shared-index-content1.rst:11
 #: ../nitropad/content/shared-index-content1.rst:28
@@ -22262,4 +22284,3 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 #~ "host with `/dev/kvm` available. Execute "
 #~ "this command:"
 #~ msgstr "另外，你可以将NetHSM作为`Docker容器<https://hub.docker.com/r/nitrokey/nethsm>`_本地运行。NetHSM容器需要嵌套的虚拟化，以便与其他容器进行强分离。因此，要启动一个NetHSM容器，你需要一个有`/dev/kvm`的Linux主机。执行这个命令。"
-
