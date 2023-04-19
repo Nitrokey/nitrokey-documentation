@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-19 11:43+0200\n"
-"PO-Revision-Date: 2023-04-18 15:45+0000\n"
+"PO-Revision-Date: 2023-04-19 11:45+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Danish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/da/>\n"
 "Language: da\n"
-"Language-Team: Danish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/da/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -11092,35 +11093,44 @@ msgstr "Nitrokey 3 med Windows"
 
 #: ../nitrokey3/windows/piv.rst:2
 msgid "Windows Login With PIV Smartcard Authentication"
-msgstr ""
+msgstr "Windows-login med PIV Smartcard-autentificering"
 
 #: ../nitrokey3/windows/piv.rst:4
 msgid ""
 "This document explains how to provision the PIV function of a Nitrokey 3"
 "  for Windows smartcard logon manually with a key and a certificate."
 msgstr ""
+"I dette dokument forklares det, hvordan du manuelt tilvejebringer PIV-"
+"funktionen i et Nitrokey 3 for Windows smartcard-logon med en nøgle og et "
+"certifikat."
 
 #: ../nitrokey3/windows/piv.rst:6
 msgid ""
 "In the future, this manual provisioning may be automated through a "
 "Windows MiniDriver."
 msgstr ""
+"I fremtiden kan denne manuelle tilrådighedsstillelse automatiseres via en "
+"Windows MiniDriver."
 
 #: ../nitrokey3/windows/piv.rst:11
 msgid "A Windows server with:"
-msgstr ""
+msgstr "En Windows-server med:"
 
 #: ../nitrokey3/windows/piv.rst:13
 msgid ""
 "Active Directory (`instructions <https://serverspace.io/support/help"
 "/installing-active-directory-on-windows-server-2019/>`__)"
 msgstr ""
+"Active Directory (`instruktioner <https://serverspace.io/support/help/"
+"installing-active-directory-on-windows-server-2019/>`__)"
 
 #: ../nitrokey3/windows/piv.rst:14
 msgid ""
 "A certificate authority (CA), with a certificate template for logon "
 "authentication using RSA 2048 bit keys:"
 msgstr ""
+"En certifikatudstedende myndighed (CA) med en certifikatskabelon til logon-"
+"godkendelse ved hjælp af RSA 2048 bit-nøgler:"
 
 #: ../nitrokey3/windows/piv.rst:16
 msgid ""
@@ -11128,6 +11138,9 @@ msgid ""
 "/windows-server/networking/core-network-guide/cncg/server-certs/server-"
 "certificate-deployment-overview>`__)"
 msgstr ""
+"Certifikatmyndighed (`instruktioner <https://learn.microsoft.com/en-us/"
+"windows-server/networking/core-network-guide/cncg/server-certs/server-"
+"certificate-deployment-overview>`__)"
 
 #: ../nitrokey3/windows/piv.rst:17
 msgid ""
@@ -11135,17 +11148,18 @@ msgid ""
 "us/windows/security/threat-protection/windows-firewall/configure-the-"
 "workstation-authentication-certificate-template>`__)"
 msgstr ""
+"Godkendelsesskabelon (`instruktioner <https://learn.microsoft.com/en-us/"
+"windows/security/threat-protection/windows-firewall/configure-the-"
+"workstation-authentication-certificate-template>`__)"
 
 #: ../nitrokey3/windows/piv.rst:19
 msgid "A Windows user machine joined to the domain of the server"
-msgstr ""
+msgstr "En Windows-brugermaskine, der er tilknyttet serverens domæne"
 
 #: ../nitrokey3/windows/piv.rst:20
-#, fuzzy
 msgid "A Nitrokey 3 with `PIV <https://github.com/Nitrokey/piv-authenticator>`__"
 msgstr ""
-"`Installer pynitrokey "
-"<https://github.com/Nitrokey/pynitrokey#installation>`__."
+"En Nitrokey 3 med `PIV <https://github.com/Nitrokey/piv-authenticator>`__"
 
 #: ../nitrokey3/windows/piv.rst:22
 msgid ""
@@ -11158,18 +11172,25 @@ msgid ""
 "wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start "
 "pcscd``) before using pivy."
 msgstr ""
+"Et Linux-system med `pivy <https://github.com/coin3d/pivy>`__ og PCSCD "
+"installeret (``sudo apt install pcscd``), til at levere Nitrokey (trin 1, 2 "
+"og 4). I stedet for et separat Linux-system kan du `installere WSL "
+"<https://learn.microsoft.com/en-us/windows/wsl/install>`__ på Windows. "
+"Bemærk, at du skal `virtuelt tilknytte <https://devblogs.microsoft.com/"
+"commandline/connecting-usb-devices-to-wsl/>`__ Nitrokey til WSL og starte "
+"PCSCD (``sudo service start pcscd``), før du bruger pivy."
 
 #: ../nitrokey3/windows/piv.rst:25
 msgid "1: Generate a key on the Nitrokey"
-msgstr ""
+msgstr "1: Generer en nøgle på Nitrokey"
 
 #: ../nitrokey3/windows/piv.rst:27
 msgid "The key is generated in slot 9A (authentication)."
-msgstr ""
+msgstr "Nøglen genereres i slot 9A (autentifikation)."
 
 #: ../nitrokey3/windows/piv.rst:29
 msgid "``pivy-tool generate 9A -a rsa2048``"
-msgstr ""
+msgstr "``pivy-tool generate 9A -a rsa2048``"
 
 #: ../nitrokey3/windows/piv.rst:35
 msgid ""
@@ -11177,27 +11198,29 @@ msgid ""
 "if it is not the default. If ``-P`` is not provided, it will be asked for"
 " after key generation."
 msgstr ""
+"Bruger-PIN-koden kan også angives med ``-P 123456``, eller ``-P <value>``, "
+"hvis den ikke er standardindstillingen. Hvis ``-P`` ikke er angivet, vil der "
+"blive spurgt om den efter nøglegenerering."
 
 #: ../nitrokey3/windows/piv.rst:37
 msgid "This applies to all ``pivy-tool`` commands."
-msgstr ""
+msgstr "Dette gælder for alle ``pivy-tool``-kommandoer."
 
 #: ../nitrokey3/windows/piv.rst:39
 msgid ""
 "This step can take a couple of minutes for RSA keys, as the pure software"
 " implementation is slow."
 msgstr ""
+"Dette trin kan tage et par minutter for RSA-nøgler, da den rene "
+"softwareimplementering er langsom."
 
 #: ../nitrokey3/windows/piv.rst:41
 msgid "**Expected output**:"
-msgstr ""
+msgstr "**Forventet output**:"
 
 #: ../nitrokey3/windows/piv.rst:48
-#, fuzzy
 msgid "2: Generate a Certificate Signing Request (CSR)"
-msgstr ""
-"Generer en anmodning om signering af certifikat via openssl + "
-"pkcs11-modulet"
+msgstr "2: Generer en Certificate Signing Request (CSR)"
 
 #: ../nitrokey3/windows/piv.rst:50
 msgid ""
@@ -11205,24 +11228,30 @@ msgid ""
 " ``pivy-tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" "
 "-T user-auth``"
 msgstr ""
+"Dette trin genererer et certifikat for nøglen i godkendelsesslottet. ``pivy-"
+"tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" -T user-"
+"auth``"
 
 #: ../nitrokey3/windows/piv.rst:52
 msgid ""
 "The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email "
 "address must be changed to own values."
 msgstr ""
+"Brugernavnet ``Nitro Test`` og e-mailadressen ``nitro@test.nitrokey.com`` "
+"skal ændres til egne værdier."
 
 #: ../nitrokey3/windows/piv.rst:54
 msgid "Expected output:"
-msgstr ""
+msgstr "Forventet resultat:"
 
 #: ../nitrokey3/windows/piv.rst:77
 msgid "Copy the certificate signing request to a file ``request.csr``"
 msgstr ""
+"Kopier anmodningen om signering af certifikatet til en fil ``request.csr``"
 
 #: ../nitrokey3/windows/piv.rst:80
 msgid "3: Sign the CSR"
-msgstr ""
+msgstr "3: Underskriv CSR'en"
 
 #: ../nitrokey3/windows/piv.rst:82
 msgid ""
@@ -11231,6 +11260,10 @@ msgid ""
 "(``certtmpl.msc`` ) that the template for the users can accept subject "
 "names from the request:"
 msgstr ""
+"Flyt filen request.csr fra det foregående trin til den server, der er vært "
+"for certifikatudstederen. Kontroller i konsollen for certifikatskabeloner "
+"(``certtmpl.msc`` ), at skabelonen for brugerne kan acceptere emnenavne fra "
+"anmodningen:"
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid ""
@@ -11238,12 +11271,17 @@ msgid ""
 "authentication certificate template, toggle \"supply in request\" in the "
 "\"subject name\" tab."
 msgstr ""
+"I konsollen for certifikatskabeloner skal du i parameteren for skabelonen "
+"for autentifikationscertifikatet slå \"supply in request\" fra under fanen "
+"\"subject name\"."
 
 #: ../nitrokey3/windows/piv.rst:87
 msgid ""
 "Open PowerShell and sign the certificate signing request with "
 "``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``"
 msgstr ""
+"Åbn PowerShell, og signér anmodningen om signering af certifikatet med ``"
+"certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``"
 
 #: ../nitrokey3/windows/piv.rst:89
 msgid ""
@@ -11251,45 +11289,49 @@ msgid ""
 "Authority if there are multiple on this server. Save the certificate as "
 "``certificate.crt``"
 msgstr ""
+"Dette åbner en GUI, hvor du kan vælge den korrekte certifikatudstedende "
+"myndighed, hvis der er flere på denne server. Gem certifikatet som "
+"``certificate.crt``"
 
 #: ../nitrokey3/windows/piv.rst:92
-#, fuzzy
 msgid "4: Store the certificate on the Nitrokey"
-msgstr "Importer certifikatet og nøglen til Nitrokey"
+msgstr "4: Gem certifikatet på Nitrokey"
 
 #: ../nitrokey3/windows/piv.rst:94
 msgid "``cat certificate.der | pivy-tool write-cert 9A``"
-msgstr ""
+msgstr "``cat certificate.der | pivy-tool write-cert 9A``"
 
 #: ../nitrokey3/windows/piv.rst:97
-#, fuzzy
 msgid "5: Import the certificate to the user account"
-msgstr "Importer certifikatet og nøglen til Nitrokey"
+msgstr "5: Importer certifikatet til brugerkontoen"
 
 #: ../nitrokey3/windows/piv.rst:99
 msgid ""
 "Move ``certificate.der`` to the user Windows device, and open the "
 "certificate manager (**For the user, not the machine**):"
 msgstr ""
+"Flyt ``certificate.der`` til brugerens Windows-enhed, og åbn "
+"certifikatadministratoren (**For brugeren, ikke maskinen**):"
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid "Open the \"manage user certificate control panel\""
-msgstr ""
+msgstr "Åbn kontrolpanelet \"Administrer brugercertifikat\""
 
 #: ../nitrokey3/windows/piv.rst:104
-#, fuzzy
 msgid "Import the certificate:"
-msgstr "Konverter certifikatet til DER"
+msgstr "Importer certifikatet:"
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid "In actions, all tasks, you can find the import action"
-msgstr ""
+msgstr "Under handlinger, alle opgaver, kan du finde importhandlingen"
 
 #: ../nitrokey3/windows/piv.rst:109
 msgid ""
 "Once this is done, log out. Log in with the Nitrokey by using the “sign-"
 "in options”"
 msgstr ""
+"Når dette er gjort, skal du logge ud. Log ind med Nitrokey ved at bruge "
+"\"sign-in options\""
 
 #: ../nitropad/content/shared-index-content1.rst:11
 #: ../nitropad/content/shared-index-content1.rst:28
@@ -27099,4 +27141,3 @@ msgstr ""
 #~ "en NetHSM-container skal du således "
 #~ "have en Linux-vært med /dev/kvm "
 #~ "tilgængelig. Udfør denne kommando:"
-
