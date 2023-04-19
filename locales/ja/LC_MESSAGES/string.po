@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-19 11:43+0200\n"
-"PO-Revision-Date: 2023-04-18 15:45+0000\n"
+"PO-Revision-Date: 2023-04-19 11:45+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/ja/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -9771,35 +9772,41 @@ msgstr "Nitrokey 3とWindowsの組み合わせ"
 
 #: ../nitrokey3/windows/piv.rst:2
 msgid "Windows Login With PIV Smartcard Authentication"
-msgstr ""
+msgstr "PIV Smartcard認証によるWindowsログイン。"
 
 #: ../nitrokey3/windows/piv.rst:4
 msgid ""
 "This document explains how to provision the PIV function of a Nitrokey 3"
 "  for Windows smartcard logon manually with a key and a certificate."
 msgstr ""
+"本書は、Nitrokey 3 for Windows のスマートカードログオンの PIV "
+"機能を、鍵と証明書を用いて手動でプロビジョニングする方法について説明します。"
 
 #: ../nitrokey3/windows/piv.rst:6
 msgid ""
 "In the future, this manual provisioning may be automated through a "
 "Windows MiniDriver."
-msgstr ""
+msgstr "将来的には、この手動プロビジョニングをWindowsのMiniDriverで自動化することも可"
+"能です。"
 
 #: ../nitrokey3/windows/piv.rst:11
 msgid "A Windows server with:"
-msgstr ""
+msgstr "持つWindowsサーバー："
 
 #: ../nitrokey3/windows/piv.rst:13
 msgid ""
 "Active Directory (`instructions <https://serverspace.io/support/help"
 "/installing-active-directory-on-windows-server-2019/>`__)"
 msgstr ""
+"Active Directory (`指示<https://serverspace.io/support/help/"
+"installing-active-directory-on-windows-server-2019/>`__)"
 
 #: ../nitrokey3/windows/piv.rst:14
 msgid ""
 "A certificate authority (CA), with a certificate template for logon "
 "authentication using RSA 2048 bit keys:"
-msgstr ""
+msgstr "認証局（CA）で、RSA2048ビット鍵を使用したログオン認証用の証明書テンプレートが"
+"あります："
 
 #: ../nitrokey3/windows/piv.rst:16
 msgid ""
@@ -9807,6 +9814,9 @@ msgid ""
 "/windows-server/networking/core-network-guide/cncg/server-certs/server-"
 "certificate-deployment-overview>`__)"
 msgstr ""
+"認証局(`指示<https://learn.microsoft.com/en-us/windows-server/networking/"
+"core-network-guide/cncg/server-certs/server-certificate-deployment-"
+"overview>`__)"
 
 #: ../nitrokey3/windows/piv.rst:17
 msgid ""
@@ -9814,17 +9824,18 @@ msgid ""
 "us/windows/security/threat-protection/windows-firewall/configure-the-"
 "workstation-authentication-certificate-template>`__)"
 msgstr ""
+"認証テンプレート(`指示<https://learn.microsoft.com/en-us/windows/security/"
+"threat-protection/windows-firewall/configure-the-workstation-authentication-"
+"certificate-template>`__)"
 
 #: ../nitrokey3/windows/piv.rst:19
 msgid "A Windows user machine joined to the domain of the server"
-msgstr ""
+msgstr "サーバーのドメインに参加しているWindowsユーザーマシン"
 
 #: ../nitrokey3/windows/piv.rst:20
-#, fuzzy
 msgid "A Nitrokey 3 with `PIV <https://github.com/Nitrokey/piv-authenticator>`__"
 msgstr ""
-"`pynitrokeyのインストール "
-"<https://github.com/Nitrokey/pynitrokey#installation>`__."
+"A Nitrokey 3 with`PIV<https://github.com/Nitrokey/piv-authenticator>`__。"
 
 #: ../nitrokey3/windows/piv.rst:22
 msgid ""
@@ -9837,18 +9848,26 @@ msgid ""
 "wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start "
 "pcscd``) before using pivy."
 msgstr ""
+"`pivy<https://github.com/coin3d/pivy>`__ と PCSCD をインストールした Linux "
+"システム（``sudo apt install pcscd``）で、Nitrokey をプロビジョニングします（"
+"ステップ 1、2、4）。別の Linux システムの代わりに、`Windows に "
+"WSL<https://learn.microsoft.com/en-us/windows/wsl/install>`__ "
+"をインストールすることができます。なお、pivy "
+"を使用する前に、`仮想的に<https://devblogs.microsoft.com/commandline/"
+"connecting-usb-devices-to-wsl/>`__ Nitrokey を WSL に接続し、PCSCD "
+"を起動する必要があります (``sudo service start pcscd``)。"
 
 #: ../nitrokey3/windows/piv.rst:25
 msgid "1: Generate a key on the Nitrokey"
-msgstr ""
+msgstr "1：Nitrokeyでキーを生成する。"
 
 #: ../nitrokey3/windows/piv.rst:27
 msgid "The key is generated in slot 9A (authentication)."
-msgstr ""
+msgstr "鍵はスロット9Aで生成されます（認証）。"
 
 #: ../nitrokey3/windows/piv.rst:29
 msgid "``pivy-tool generate 9A -a rsa2048``"
-msgstr ""
+msgstr "``pivy-tool generate 9A -a rsa2048``"
 
 #: ../nitrokey3/windows/piv.rst:35
 msgid ""
@@ -9856,25 +9875,27 @@ msgid ""
 "if it is not the default. If ``-P`` is not provided, it will be asked for"
 " after key generation."
 msgstr ""
+"ユーザーPINは、``-P 123456``、デフォルトでない場合は``-P <value>``で指定する"
+"ことも可能です。``-P``が提供されない場合、鍵生成後に要求されます。"
 
 #: ../nitrokey3/windows/piv.rst:37
 msgid "This applies to all ``pivy-tool`` commands."
-msgstr ""
+msgstr "これは、すべての``pivy-tool`` コマンドに適用されます。"
 
 #: ../nitrokey3/windows/piv.rst:39
 msgid ""
 "This step can take a couple of minutes for RSA keys, as the pure software"
 " implementation is slow."
-msgstr ""
+msgstr "RSA鍵の場合、純粋なソフトウェアの実装が遅いため、このステップに数分かかること"
+"があります。"
 
 #: ../nitrokey3/windows/piv.rst:41
 msgid "**Expected output**:"
-msgstr ""
+msgstr "**期待される出力** ："
 
 #: ../nitrokey3/windows/piv.rst:48
-#, fuzzy
 msgid "2: Generate a Certificate Signing Request (CSR)"
-msgstr "openssl + pkcs11 モジュールによる証明書署名要求の生成"
+msgstr "2: CSR（Certificate Signing Request）の生成"
 
 #: ../nitrokey3/windows/piv.rst:50
 msgid ""
@@ -9882,24 +9903,28 @@ msgid ""
 " ``pivy-tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" "
 "-T user-auth``"
 msgstr ""
+"このステップでは、認証スロットの鍵の証明書を生成します。``pivy-tool req-cert "
+"9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" -T user-auth``"
 
 #: ../nitrokey3/windows/piv.rst:52
 msgid ""
 "The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email "
 "address must be changed to own values."
 msgstr ""
+"``Nitro Test``のユーザー名と``nitro@test.nitrokey."
+"com``のメールアドレスは、独自の値に変更する必要があります。"
 
 #: ../nitrokey3/windows/piv.rst:54
 msgid "Expected output:"
-msgstr ""
+msgstr "期待される出力"
 
 #: ../nitrokey3/windows/piv.rst:77
 msgid "Copy the certificate signing request to a file ``request.csr``"
-msgstr ""
+msgstr "証明書署名要求をファイル``request.csr`` にコピーします。"
 
 #: ../nitrokey3/windows/piv.rst:80
 msgid "3: Sign the CSR"
-msgstr ""
+msgstr "3: CSRに署名する"
 
 #: ../nitrokey3/windows/piv.rst:82
 msgid ""
@@ -9908,19 +9933,26 @@ msgid ""
 "(``certtmpl.msc`` ) that the template for the users can accept subject "
 "names from the request:"
 msgstr ""
+"前のステップで作成したrequest.csrファイルを、認証局をホストするサーバーに移動"
+"します。証明書テンプレートコンソール（``certtmpl.msc`` ）で、ユーザー用のテン"
+"プレートがリクエストからサブジェクト名を受け入れることができることを確認しま"
+"す："
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid ""
 "In the certificate template console, in the parameter for the "
 "authentication certificate template, toggle \"supply in request\" in the "
 "\"subject name\" tab."
-msgstr ""
+msgstr "証明書テンプレートコンソールの認証証明書テンプレートのパラメータで、「サブジ"
+"ェクト名」タブの「リクエストで供給する」を切り替えます。"
 
 #: ../nitrokey3/windows/piv.rst:87
 msgid ""
 "Open PowerShell and sign the certificate signing request with "
 "``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``"
 msgstr ""
+"PowerShellを開き、証明書署名リクエストに``certreq.exe -attrib "
+"CertificateTemplate:Nitrotest -submit request.csr`` で署名します。"
 
 #: ../nitrokey3/windows/piv.rst:89
 msgid ""
@@ -9928,45 +9960,47 @@ msgid ""
 "Authority if there are multiple on this server. Save the certificate as "
 "``certificate.crt``"
 msgstr ""
+"このサーバーに複数の認証局がある場合、正しい認証局を選択するためのGUIが表示さ"
+"れます。証明書を``certificate.crt`` として保存します。"
 
 #: ../nitrokey3/windows/piv.rst:92
-#, fuzzy
 msgid "4: Store the certificate on the Nitrokey"
-msgstr "証明書と鍵をNitrokeyにインポートします。"
+msgstr "4：証明書をNitrokeyに保存する"
 
 #: ../nitrokey3/windows/piv.rst:94
 msgid "``cat certificate.der | pivy-tool write-cert 9A``"
-msgstr ""
+msgstr "``cat certificate.der | pivy-tool write-cert 9A``"
 
 #: ../nitrokey3/windows/piv.rst:97
-#, fuzzy
 msgid "5: Import the certificate to the user account"
-msgstr "証明書と鍵をNitrokeyにインポートします。"
+msgstr "5：ユーザーアカウントに証明書をインポートする"
 
 #: ../nitrokey3/windows/piv.rst:99
 msgid ""
 "Move ``certificate.der`` to the user Windows device, and open the "
 "certificate manager (**For the user, not the machine**):"
 msgstr ""
+"``certificate.der``をユーザーのWindowsデバイスに移動し、証明書マネージャを開"
+"く（**ユーザー用、マシン用ではない** ）："
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid "Open the \"manage user certificate control panel\""
-msgstr ""
+msgstr "\"ユーザー証明書の管理コントロールパネル \"を開く"
 
 #: ../nitrokey3/windows/piv.rst:104
-#, fuzzy
 msgid "Import the certificate:"
-msgstr "証明書をDERに変換する"
+msgstr "証明書をインポートする："
 
 #: ../nitrokey3/windows/piv.rst:-1
 msgid "In actions, all tasks, you can find the import action"
-msgstr ""
+msgstr "アクション、すべてのタスクの中に、インポートアクションがあります。"
 
 #: ../nitrokey3/windows/piv.rst:109
 msgid ""
 "Once this is done, log out. Log in with the Nitrokey by using the “sign-"
 "in options”"
-msgstr ""
+msgstr "これが完了したら、ログアウトします。\"サインインオプション "
+"\"を使ってNitrokeyでログインします。"
 
 #: ../nitropad/content/shared-index-content1.rst:11
 #: ../nitropad/content/shared-index-content1.rst:28
@@ -23097,4 +23131,3 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 #~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ として NetHSM"
 #~ " "
 #~ "を実行することも可能です。NetHSMコンテナは、他のコンテナとの強力な分離のためにネストされた仮想化を必要とします。したがって、NetHSMコンテナを起動するには、`/dev/kvm`が利用可能なLinuxホストが必要です。以下のコマンドを実行します。"
-
