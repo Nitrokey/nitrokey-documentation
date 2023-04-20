@@ -486,6 +486,8 @@ The NetHSM logs metrics of system parameters.
    This command requires the authentication of a user with the *Metrics* role.
    Please refer to chapter `Roles <administration.html#roles>`__ to learn more about the role.
 
+Please refer to `Metrics <metrics.html>`__ to learn more about each metric.
+
 The metrics can be retrieved as follows.
 
 .. tabs::
