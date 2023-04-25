@@ -4,11 +4,9 @@ Nitrokey 3
 .. contents:: :local:
 
 
-As of this writing the Nitrokey 3 is roughly identical with the Nitrokey FIDO2, from a functionality point of view.
-The Nitrokey 3A and 3C additionally support NFC, while the Nitrokey 3 Mini does not support NFC.
+The Nitrokey 3 currently supports FIDO2 and one-time passwords (OTP). Additional features like OpenPGP Card and PIV are available in test firmware releases. See the `release notes`_ on GitHub for more information.
 
-Future firmware updates will enable additional functionality and will be documented here accordingly.
-
+.. _release notes: https://github.com/Nitrokey/nitrokey-3-firmware/releases
 
 First check the:
 
@@ -46,8 +44,6 @@ These releases are still being tested and are more likely to contain bugs.
 
 See the `release notes`_ on GitHub for more information on the features available in a release.
 
-.. _release notes: https://github.com/Nitrokey/nitrokey-3-firmware/releases
-
 You can identify the type of a firmware release by its version number:
 
 .. list-table::
@@ -70,9 +66,7 @@ You can identify the type of a firmware release by its version number:
 Downgrade Protection
 ~~~~~~~~~~~~~~~~~~~~
 
-The firmware of the Nitrokey 3 cannot be downgraded:
-You can only install a firmware update with the same or a higher major, minor and patch version number than the firmware currently installed on the device.
-This protects against downgrade attacks where a secure firmware version would be replaced with an old, potentially insecure version.
+The firmware of the Nitrokey 3 cannot be downgraded. You can only install a firmware update with the same or a higher major, minor and patch version number than the firmware currently installed on the device. This protects against downgrade attacks where a secure firmware version would be replaced with an old, potentially insecure version.
 
 Examples:
 
