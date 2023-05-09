@@ -43,7 +43,7 @@ If you do not have OpenPGP keys yet, you need to generate them first.
 Importing Existing Keys
 -----------------------
 
-If you already have OpenPGP keys you may want to use them with your Nitrokey, instead of generating new ones. Importing exsiting keys works basically the same as generating keys locally first and copy them to the Nitrokey (see above). Therefore, please have a look at the `corresponding instructions <openpgp-keygen-backup.html#key-import>`_. Note that you probably want to generate another subkey for authentication to your existing key. See at the same instructions for `subkey generation <openpgp-keygen-backup.html#subkey-for-authentication>`_.
+If you already have OpenPGP keys you may want to use them with your Nitrokey, instead of generating new ones. Importing existing keys works basically the same as generating keys locally first and copying them to the Nitrokey (see above). Therefore, please have a look at the `corresponding instructions <openpgp-keygen-backup.html#key-import>`_. Note that you probably want to generate another subkey for authentication to your existing key. See at the same instructions for `subkey generation <openpgp-keygen-backup.html#subkey-for-authentication>`_.
 
 Usage
 -----
