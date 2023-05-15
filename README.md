@@ -46,19 +46,18 @@ Before pushing your changes to the Github repository, commit often and test the 
 Setup Sphinx and components:
 
 ```
-python3 -m pip install Sphinx divio-docs-theme install sphinx-rtd-theme sphinx-intl sphinxprettysearchresults pygments-style-cheerfully-dark furo sphinx_copybutton sphinx-tabs
-mkdir -p ~/temp/sphinx_preview
+make venv
 ```
 
 For each preview:
 
 ```
-sphinx-build -j auto -a -D language='en' -b html . ~/temp/sphinx_preview
+make
 ```
 
 Errors about non-existing files in includes can be ignored. Syntax errors and RST files not contained in the TOC are listed.
 
-Open ~/temp/sphinx_preview/index.html In the browser.
+Open __preview/index.html in the browser.
 
 ## Solving Merge Conflicts
 
