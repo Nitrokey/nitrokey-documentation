@@ -19,7 +19,7 @@ The `PKCS#11 guide <guides/pkcs11_with_pkcs11-tool.html>`_ describes how to use 
 Development and Testing
 -----------------------
 
-A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com>`_.
+A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com/api/v1/info>`_.
 
 Alternatively, you can run the NetHSM as a `Docker container <https://hub.docker.com/r/nitrokey/nethsm>`_ locally.
 
