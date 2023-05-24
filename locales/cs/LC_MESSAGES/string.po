@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 22:03+0200\n"
+"POT-Creation-Date: 2023-05-24 13:53+0200\n"
 "PO-Revision-Date: 2023-05-22 21:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/cs/>\n"
 "Language: cs\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/cs/>\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -2225,7 +2224,8 @@ msgid "Nitrokey Pro 2, Nitrokey Storage 2, or Nitrokey HSM 2"
 msgstr "Nitrokey Pro 2, Nitrokey Storage 2 nebo Nitrokey HSM 2"
 
 #: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:53
-#: ../nextbox/external-storage.rst:18 ../pro/linux/automatic-screen-lock.rst:21
+#: ../nextbox/external-storage.rst:18 ../nitrokey3/shared/openpgp-uif.rst:17
+#: ../pro/linux/automatic-screen-lock.rst:21
 msgid "Configuration"
 msgstr "Konfigurace"
 
@@ -3861,9 +3861,9 @@ msgstr ""
 "V systému musí být nainstalován program OpenSC. Podívejte se prosím na "
 "`wiki stránku projektu OpenSC <https://github.com/OpenSC/OpenSC/wiki>`_."
 
-#: ../hsm/windows/smime.rst:5 ../pro/smime-outlook.rst.inc:17
-#: ../pro/smime-thunderbird.rst.inc:17 ../pro/windows/smime.rst:5
-#: ../storage/windows/smime.rst:5
+#: ../hsm/windows/smime.rst:5 ../nitrokey3/windows/smime.rst:5
+#: ../pro/smime-outlook.rst.inc:17 ../pro/smime-thunderbird.rst.inc:17
+#: ../pro/windows/smime.rst:5 ../storage/windows/smime.rst:5
 msgid ""
 "Windows users with 64-bit system (standard) need to install both, the "
 "32-bit and the 64-bit version of OpenSC!"
@@ -6394,8 +6394,8 @@ msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com/api/v1/info>`_."
 msgstr ""
-"Veřejná ukázková instance NetHSM je k dispozici na adrese `"
-"nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com/api/v1/info>`_."
+"Veřejná ukázková instance NetHSM je k dispozici na adrese "
+"`nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com/api/v1/info>`_."
 
 #: ../nethsm/integration.rst:24
 msgid ""
@@ -11015,6 +11015,1283 @@ msgstr ""
 "Pokud jste pro své zařízení nastavili pin FIDO2, musíte použít možnost "
 "``--pin``:"
 
+#: ../pro/openpgp.rst.inc:2
+msgid "OpenPGP Email Encryption"
+msgstr "Šifrování e-mailů OpenPGP"
+
+#: ../pro/openpgp.rst.inc:14
+msgid ""
+"If you are in doubt which one to choose, you should use OpenPGP. While "
+"this page describes the usage of OpenPGP, S/MIME is described `here "
+"<smime.html>`_."
+msgstr ""
+"Pokud váháte, který z nich zvolit, měli byste použít OpenPGP. Zatímco "
+"tato stránka popisuje použití OpenPGP, S/MIME je popsán `zde "
+"<smime.html>`_."
+
+#: ../pro/openpgp.rst.inc:16
+msgid ""
+"Please familiarize yourself with the general concept behind the OpenPGP "
+"standard first, for example by reading `this info graphic "
+"<https://emailselfdefense.fsf.org/en/infographic.html>`__ of the Free "
+"Software Foundation."
+msgstr ""
+"Nejprve se seznamte s obecnou koncepcí standardu OpenPGP, například "
+"přečtením `této informační grafiky "
+"<https://emailselfdefense.fsf.org/en/infographic.html>`_ Nadace pro "
+"svobodný software."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:11 ../pro/openpgp-keygen-gpa.rst.inc:13
+#: ../pro/openpgp-keygen-on-device.rst.inc:19 ../pro/openpgp.rst.inc:19
+msgid "Key Generation"
+msgstr "Generování klíčů"
+
+#: ../pro/openpgp.rst.inc:21
+msgid "If you do not have OpenPGP keys yet, you need to generate them first."
+msgstr "Pokud ještě nemáte klíče OpenPGP, musíte si je nejprve vygenerovat."
+
+#: ../pro/openpgp.rst.inc:23
+msgid ""
+"`Generate keys on Nitrokey <openpgp-keygen-gpa.html>`_ - this is the best"
+" option if you are unexperienced, but you won’t have a backup of your "
+"keys and therefore won’t be able to mitigate the loss of the Nitrokey"
+msgstr ""
+"`Generování klíčů na Nitrokey <openpgp-keygen-gpa.html>`_ - tato možnost "
+"je nejlepší, pokud nemáte zkušenosti, ale nebudete mít zálohu svých "
+"klíčů, a proto nebudete moci zmírnit ztrátu Nitrokey."
+
+#: ../pro/openpgp.rst.inc:29
+msgid ""
+"`Generate keys on Nitrokey with different algorithm or key size <openpgp-"
+"keygen-on-device.html>`_ - this is as secure as the previous option and "
+"thus you won’t have a backup as well, but you can change the key "
+"attributes (that is the algorithm and key size)"
+msgstr ""
+"`Generování klíčů na Nitrokey s jiným algoritmem nebo velikostí klíče "
+"<openpgp-keygen-on-device.html>`_ - tato možnost je stejně bezpečná jako "
+"předchozí, a proto nebudete mít ani zálohu, ale můžete změnit atributy "
+"klíče (tedy algoritmus a velikost klíče)."
+
+#: ../pro/openpgp.rst.inc:35
+msgid ""
+"`Generate keys locally <openpgp-keygen-backup.html>`_ and copy them to "
+"Nitrokey - this is the most flexible, expert option, but only secure if "
+"your system is not compromised, because you can create a backup key "
+"outside your Nitrokey A similar description in french can be found `here "
+"<https://xieme-art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-"
+"pro/>`__."
+msgstr ""
+"`Vygenerujte klíče lokálně <openpgp-keygen-backup.html>`_ a zkopírujte je"
+" do Nitrokey - tato možnost je nejflexibilnější, nejodbornější, ale "
+"bezpečná pouze v případě, že váš systém není kompromitován, protože "
+"záložní klíč můžete vytvořit mimo Nitrokey Podobný popis ve francouzštině"
+" najdete `zde <https://xieme-art.org/post/importer-des-clefs-gnupg-dans-"
+"sa-nitrokey-pro/>`_."
+
+#: ../pro/openpgp.rst.inc:44
+msgid "Importing Existing Keys"
+msgstr "Importování existujících klíčů"
+
+#: ../pro/openpgp.rst.inc:46
+msgid ""
+"If you already have OpenPGP keys you may want to use them with your "
+"Nitrokey, instead of generating new ones. Importing existing keys works "
+"basically the same as generating keys locally first and copying them to "
+"the Nitrokey (see above). Therefore, please have a look at the "
+"`corresponding instructions <openpgp-keygen-backup.html#key-import>`_. "
+"Note that you probably want to generate another subkey for authentication"
+" to your existing key. See at the same instructions for `subkey "
+"generation <openpgp-keygen-backup.html#subkey-for-authentication>`_."
+msgstr ""
+"Pokud již máte klíče OpenPGP, můžete je použít s klíčem Nitrokey namísto "
+"generování nových klíčů. Import stávajících klíčů funguje v podstatě "
+"stejně, jako kdybyste klíče nejprve vygenerovali lokálně a zkopírovali je"
+" do klíče Nitrokey (viz výše). Proto se prosím podívejte na `odpovídající"
+" pokyny <openpgp-keygen-backup.html#key-import>`_. Všimněte si, že "
+"pravděpodobně budete chtít vygenerovat další podklíč pro ověřování ke "
+"stávajícímu klíči. Podívejte se na stejné pokyny pro `generování podklíče"
+" <openpgp-keygen-backup.html#subkey-for-authentication>`_."
+
+#: ../pro/openpgp.rst.inc:53
+msgid ""
+"for using `OpenPGP encryption with Thunderbird <openpgp-"
+"thunderbird.html>`_"
+msgstr ""
+"pro použití `OpenPGP šifrování s Thunderbirdem <openpgp-"
+"thunderbird.html>`_"
+
+#: ../pro/openpgp.rst.inc:56
+msgid "for using `OpenPGP encryption with Outlook <openpgp-outlook.html>`_"
+msgstr "pro použití `OpenPGP šifrování s Outlookem <openpgp-outlook.html>`_"
+
+#: ../pro/openpgp.rst.inc:59
+msgid ""
+"for using `Claws Mail <https://www.claws-"
+"mail.org/plugin.php?plugin=gpg>`__, an email client (and news reader) for"
+" Linux and Windows"
+msgstr ""
+"pro použití `Claws Mail <https://www.claws-"
+"mail.org/plugin.php?plugin=gpg>`_, e-mailového klienta (a čtečky zpráv) "
+"pro Linux a Windows."
+
+#: ../pro/openpgp.rst.inc:67
+msgid "for using `GPGTools <https://gpgtools.org/>`__ on macOS."
+msgstr "pro použití `GPGTools <https://gpgtools.org/>`_ v systému macOS."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:2
+msgid "OpenPGP Key Generation With Backup"
+msgstr "Generování klíčů OpenPGP se zálohováním"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:8
+msgid ""
+"The following instructions explain the generation of OpenPGP keys and how"
+" to copy them to the Nitrokey. This method has the advantage of providing"
+" a backup of the keys in case of losing or breaking the Nitrokey. The "
+"instructions are based on the command line interface of GnuPG. Thus, you "
+"need to have GnuPG installed on your system. The newest GnuPG version for"
+" Windows can be found `here <https://www.gpg4win.org/>`__ and the newest "
+"version for MacOS can be found `here <https://gpgtools.org/>`__. Users of"
+" Linux systems please install GnuPG with help of the package manager."
+msgstr ""
+"Následující pokyny vysvětlují generování klíčů OpenPGP a jejich "
+"kopírování do klíče Nitrokey. Výhodou této metody je, že poskytuje zálohu"
+" klíčů pro případ ztráty nebo rozbití klíče Nitrokey. Návod vychází z "
+"rozhraní příkazového řádku programu GnuPG. Proto je nutné mít v systému "
+"nainstalovaný GnuPG. Nejnovější verzi GnuPG pro Windows najdete `zde "
+"<https://www.gpg4win.org/>`_ a nejnovější verzi pro MacOS najdete `zde "
+"<https://gpgtools.org/>`_. Uživatelé systémů Linux si prosím nainstalujte"
+" GnuPG pomocí správce balíčků."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:13
+msgid ""
+"At first, you need to generate a key locally. You can decide, which key "
+"attributes to use and - most importantly - you can export the key and "
+"keep it somewhere save in case you need to restore the key."
+msgstr ""
+"Nejprve je třeba vygenerovat klíč lokálně. Můžete se rozhodnout, které "
+"atributy klíče použijete, a - což je nejdůležitější - klíč můžete "
+"exportovat a uložit pro případ, že byste jej potřebovali obnovit."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:16
+msgid "Main Key and Encryption Subkey"
+msgstr "Hlavní klíč a dílčí šifrovací klíč"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:18
+msgid ""
+"We can use the command ``gpg --full-generate-key --expert`` to start a "
+"guided key generation with all possible options. You can choose the key "
+"type (usually RSA (1) or ECC (9)), the length of the key and other "
+"attributes. The following output is just a simple example, you may choose"
+" other values."
+msgstr ""
+"Příkazem ``gpg --full-generate-key --expert`` spustíme řízené generování "
+"klíče se všemi možnými volbami. Můžete zvolit typ klíče (obvykle RSA (1) "
+"nebo ECC (9)), délku klíče a další atributy. Následující výstup je jen "
+"jednoduchý příklad, můžete zvolit i jiné hodnoty."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:81
+msgid ""
+"The following table illustrates which algorithm can be used on which "
+"device, in case you want to use different key attributes."
+msgstr ""
+"Následující tabulka ukazuje, který algoritmus lze použít na kterém "
+"zařízení v případě, že chcete použít různé atributy klíče."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:84
+#: ../pro/openpgp-keygen-on-device.rst.inc:193
+msgid "\\"
+msgstr "\\"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:90
+#: ../pro/openpgp-keygen-on-device.rst.inc:199
+msgid "curve25519 (ECC)"
+msgstr "curve25519 (ECC)"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:91
+#: ../pro/openpgp-keygen-on-device.rst.inc:200
+msgid "NIST (ECC)"
+msgstr "NIST (ECC)"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:92
+#: ../pro/openpgp-keygen-on-device.rst.inc:201
+msgid "Brainpool (ECC)"
+msgstr "Brainpool (ECC)"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:93
+#: ../pro/openpgp-keygen-on-device.rst.inc:202
+msgid "secp256k1"
+msgstr "secp256k1"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:97
+msgid "Subkey for Authentication"
+msgstr "Dílčí klíč pro ověřování"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:99
+msgid ""
+"You now have a main key with the capability to sign and certify (marked "
+"as [SC]) and a subkey for encryption (marked as [E]). It is necessary to "
+"have another subkey for use cases in which authentication is needed. This"
+" subkey is generated in the next step. Type in ``gpg --edit-key --expert "
+"keyID`` to start the process, whereas “keyID” is either the id of the key"
+" or the email address used during key generation."
+msgstr ""
+"Nyní máte hlavní klíč s možností podepisování a certifikace (označený "
+"jako [SC]) a dílčí klíč pro šifrování (označený jako [E]). Je nutné mít "
+"další dílčí klíč pro případy použití, kdy je potřeba ověřování. Tento "
+"dílčí klíč se vygeneruje v dalším kroku. Pro zahájení procesu zadejte "
+"``gpg --edit-key --expert keyID``, přičemž \"keyID\" je buď id klíče, "
+"nebo e-mailová adresa použitá při generování klíče."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:120
+msgid ""
+"Now you are in the interactive mode of GnuPG and you can add a key by "
+"simply typing ``addkey``. You need to choose the key you want to use. It "
+"is crucial to choose “set your own capabilities”, because we want to have"
+" the “authenticate” capability which is not available otherwise. We "
+"toggle sign and encrypt by typing ``s`` and ``e`` and we activate "
+"authenticate by typing ``a``."
+msgstr ""
+"Nyní jste v interaktivním režimu GnuPG a můžete přidat klíč jednoduše "
+"zadáním ``addkey``. Je třeba vybrat klíč, který chcete použít. Zásadní je"
+" zvolit \"nastavit vlastní schopnosti\", protože chceme mít k dispozici "
+"schopnost \"ověřit\", která jinak není k dispozici. Podepisování a "
+"šifrování přepínáme zadáním ``s`` a ``e`` a aktivujeme ověření zadáním "
+"``a``."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:178
+msgid ""
+"We quit with ``q``. Afterwards we need to answer the same questions as "
+"before. Finally, we have a ready-to-go key set which we can import to our"
+" device."
+msgstr ""
+"Končíme ``q``. Poté musíme odpovědět na stejné otázky jako dříve. Konečně"
+" máme připravenou sadu klíčů, kterou můžeme importovat do našeho "
+"zařízení."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:212
+msgid ""
+"Now is good time to backup your key. Please keep this backup very secure."
+" It is best practice to never have this key on a regular computer which "
+"has connection to the internet, so that the key never gets compromised. "
+"You can create a backup with something like:"
+msgstr ""
+"Nyní je vhodná doba pro zálohování klíče. Tuto zálohu si velmi dobře "
+"zabezpečte. Nejlepší je nemít tento klíč nikdy na běžném počítači, který "
+"je připojen k internetu, aby nedošlo k jeho ohrožení. Zálohu můžete "
+"vytvořit pomocí např:"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:219
+msgid "Key Import"
+msgstr "Klíčový import"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:221
+msgid ""
+"You have a main key and two subkeys which can be imported to your "
+"Nitrokey. Before proceeding please make sure that you really have a "
+"backup of the key, if you need one. The ``keytocard`` command used in the"
+" next steps will **delete** your key from your disk!"
+msgstr ""
+"Máte hlavní klíč a dva dílčí klíče, které lze importovat do klíče "
+"Nitrokey. Než budete pokračovat, ujistěte se, že máte skutečně zálohu "
+"klíče, pokud ji potřebujete. Příkaz ``keytocard`` použitý v následujících"
+" krocích **odstraní** váš klíč z disku!"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:223
+msgid ""
+"We start the process by accessing the interactive interface of GnuPG "
+"again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is either"
+" the id of the key or the email address used during key generation."
+msgstr ""
+"Proces zahájíme opětovným přístupem do interaktivního rozhraní GnuPG "
+"pomocí ``gpg --edit-key --expert keyID``, přičemž ``keyID`` je buď id "
+"klíče, nebo e-mailová adresa použitá při generování klíče."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:259
+msgid ""
+"We just imported the main key to the card. Now we proceed with the two "
+"subkeys. We type ``key 1`` to select the encryption subkey and type in "
+"``keytocard`` again and select the slot to use."
+msgstr ""
+"Na kartu jsme právě importovali hlavní klíč. Nyní budeme pokračovat se "
+"dvěma dílčími klíči. Zadáme ``key 1`` pro výběr šifrovacího podklíče a "
+"zadáme ``keytocard`` a opět vybereme slot, který chceme použít."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:288
+msgid ""
+"Now we deselect the first key with ``key 1`` and select the second subkey"
+" with ``key 2`` and move it as well with ``keytocard``. Afterwards we "
+"quit and save the changes."
+msgstr ""
+"Nyní zrušíme výběr prvního klíče pomocí ``key 1`` a vybereme druhý "
+"podklíč pomocí ``key 2`` a přesuneme ji také pomocí ``keytocard``. Poté "
+"ukončíme práci a uložíme změny."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:331
+msgid ""
+"Your keys are now moved to the Nitrokey and thus secured in hardware. "
+"Congratulations!"
+msgstr ""
+"Vaše klíče jsou nyní přesunuty do klíče Nitrokey a tím hardwarově "
+"zabezpečeny. Gratulujeme!"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:334
+#: ../pro/openpgp-keygen-gpa.rst.inc:53
+#: ../pro/openpgp-keygen-on-device.rst.inc:206
+msgid "Exporting Public Key and Keyserver Usage"
+msgstr "Exportování veřejného klíče a používání serveru Keyserver"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:336
+#: ../pro/openpgp-keygen-gpa.rst.inc:55
+#: ../pro/openpgp-keygen-on-device.rst.inc:208
+msgid ""
+"Although you can start to use your Nitrokey right away after generating "
+"the keys on your system, you need to import your public key on every "
+"system, you want to use the Nitrokey on. So to be prepared you have two "
+"options: You either save the public key anywhere you like and use it on "
+"another system or you save the public key on a webpage/keyserver."
+msgstr ""
+"Přestože můžete začít používat klíč Nitrokey ihned po vygenerování klíčů "
+"ve svém systému, je třeba importovat veřejný klíč do každého systému, ve "
+"kterém chcete klíč Nitrokey používat. Chcete-li být připraveni, máte tedy"
+" dvě možnosti: Buď si veřejný klíč uložíte kamkoli a použijete ho v jiném"
+" systému, nebo si veřejný klíč uložíte na webovou stránku/keyserver."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:339
+#: ../pro/openpgp-keygen-on-device.rst.inc:211
+msgid "Generating a Public Key File"
+msgstr "Generování souboru veřejného klíče"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:341
+msgid ""
+"To get a simple file of your public key, you can just use ``gpg --armor "
+"--export keyID > pubkey.asc``. Use either the fingerprint as “keyID” "
+"(look at ``gpg -K`` to get it) or just use your email address as an "
+"identifier."
+msgstr ""
+"Chcete-li získat jednoduchý soubor svého veřejného klíče, stačí použít "
+"``gpg --armor --export keyID > pubkey.asc``. Jako \"keyID\" použijte buď "
+"otisk prstu (podívejte se na ``gpg -K`` a získejte jej), nebo jako "
+"identifikátor použijte pouze svou e-mailovou adresu."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:343
+msgid ""
+"You can carry this file with you or send it to anyone who you like. This "
+"file is not secret at all. If you want to use the Nitrokey on another "
+"system, you first import this public key via ``gpg --import pubkey.asc`` "
+"and then types ``gpg --card-status`` so that the system knows where to "
+"look for this key. That’s all."
+msgstr ""
+"Tento soubor můžete nosit s sebou nebo ho poslat komukoli, komu se vám "
+"líbí. Tento soubor není vůbec tajný. Pokud chcete použít klíč Nitrokey v "
+"jiném systému, nejprve tento veřejný klíč importujte pomocí ``gpg "
+"--import pubkey.asc`` a poté zadejte ``gpg --card-status``, aby systém "
+"věděl, kde má tento klíč hledat. To je vše."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:347
+#: ../pro/openpgp-keygen-on-device.rst.inc:218
+msgid "Uploading the Public Key"
+msgstr "Nahrání veřejného klíče"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:349
+#: ../pro/openpgp-keygen-on-device.rst.inc:220
+msgid ""
+"If you do not want to carry a public keyfile with you, you can upload it "
+"to keyserver. You can do this by typing ``gpg --keyserver "
+"search.keyserver.net --send-key keyID``. If you are using another machine"
+" you can just import it by using ``gpg --keyserver search.keyserver.net "
+"--recv-key keyID``."
+msgstr ""
+"Pokud nechcete mít veřejný soubor s klíčem u sebe, můžete jej nahrát na "
+"server keyserver. Můžete to provést zadáním ``gpg --keyserver "
+"search.keyserver.net --send-key keyID``. Pokud používáte jiný počítač, "
+"můžete jej jednoduše importovat pomocí ``gpg --keyserver "
+"search.keyserver.net --recv-key keyID``."
+
+#: ../pro/openpgp-keygen-backup.rst.inc:351
+msgid ""
+"Another possibility is to change the URL setting on your card. Start "
+"``gpg --card-edit`` again and first set the URL where the key is situated"
+" (e.g. on the keyserver or on your webpage etc.) via the ``url`` command."
+" From now on you can import the key on another system by just using the "
+"``fetch`` command within the ``gpg --card-edit environment``."
+msgstr ""
+"Další možností je změnit nastavení adresy URL na kartě. Spusťte znovu "
+"``gpg --card-edit`` a nejprve nastavte URL adresu, na které se klíč "
+"nachází (např. na keyserveru nebo na vaší webové stránce apod.), pomocí "
+"příkazu ``url``. Od této chvíle můžete klíč importovat do jiného systému "
+"pouze pomocí příkazu ``fetch`` v rámci ``gpg --card-edit environment``."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:2
+msgid "OpenPGP Key Generation Using GPA"
+msgstr "Generování klíčů OpenPGP pomocí GPA"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:8
+msgid ""
+"The following instructions explain the generation of OpenPGP keys "
+"directly on the Nitrokey with help of the GNU Privacy Assistant (GPA). "
+"You won’t be able to create a backup of these keys. Thus, if you lose the"
+" Nitrokey or it breaks you can not decrypt mails or use these keys "
+"anymore. Please see `here <openpgp-outlook.html>`_ for a comparison of "
+"the different methods to generate OpenPGP keys."
+msgstr ""
+"Následující pokyny vysvětlují generování klíčů OpenPGP přímo na Nitrokey "
+"pomocí programu GNU Privacy Assistant (GPA). Zálohu těchto klíčů nebude "
+"možné vytvořit. Pokud tedy Nitrokey ztratíte nebo se rozbije, nebudete "
+"moci dešifrovat poštu ani tyto klíče dále používat. Srovnání různých "
+"metod generování klíčů OpenPGP naleznete `zde <openpgp-outlook.html>`_."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:10
+msgid ""
+"You need to have GnuPG and GPA installed on your system. The newest "
+"version for Windows can be found `here <https://www.gpg4win.org/>`__ "
+"(make sure to check “GPA” during the installation!). Users of Linux "
+"systems please install GnuPG and GPA with help of the package manager "
+"(e.g. using ``sudo apt install gnupg gpa`` on Ubuntu)."
+msgstr ""
+"V systému musíte mít nainstalovaný GnuPG a GPA. Nejnovější verzi pro "
+"Windows najdete `zde <https://www.gpg4win.org/>`_ (při instalaci "
+"nezapomeňte zaškrtnout \"GPA\"!). Uživatelé systémů Linux nainstalujte "
+"GnuPG a GPA pomocí správce balíčků (např. pomocí ``sudo apt install gnupg"
+" gpa`` v Ubuntu)."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:15
+msgid ""
+"At first, open the GNU Privacy Assistant (GPA). You may are asked to "
+"generate a key, you can skip this step for now by clicking “Do it later”."
+" In the main window, please click on “Card” or “Card Manager”."
+msgstr ""
+"Nejprve otevřete program GNU Privacy Assistant (GPA). Můžete být požádáni"
+" o vygenerování klíče, tento krok můžete prozatím přeskočit kliknutím na "
+"\"Do it later\". V hlavním okně klikněte na \"Card\" (Karta) nebo \"Card "
+"Manager\" (Správce karet)."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:22
+msgid ""
+"Another windows opens. Please go to “Card” -> “Generate key” to start the"
+" key generation process."
+msgstr ""
+"Otevře se další okno. Přejděte na \"Card\" -> \"Generate key\" a spusťte "
+"proces generování klíče."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:29
+msgid ""
+"Now you can put in your name and the email address you want to use for "
+"the key that will be generated next. You may choose an expiration date "
+"for your key, but you don’t have to."
+msgstr ""
+"Nyní můžete zadat své jméno a e-mailovou adresu, kterou chcete použít pro"
+" klíč, který bude vygenerován příště. Můžete zvolit datum vypršení "
+"platnosti klíče, ale nemusíte."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:31
+msgid ""
+"**Please do not use the backup checkbox**. This “backup” does only save "
+"the encryption key. In case of a loss of the device, you will not be able"
+" to restore the whole key set. So on the one hand it is no full backup "
+"(use `these instructions <openpgp-keygen-backup.html>`_ instead, if you "
+"need one) and on the other hand you risk that someone else can get in "
+"possession of your encryption key. The advantage of generating keys on-"
+"device is to make sure that keys are stored securely. Therefore, we "
+"recommend to skip this half-backup."
+msgstr ""
+"**Prosím, nepoužívejte zaškrtávací políčko zálohování**. Tato \"záloha\" "
+"ukládá pouze šifrovací klíč. V případě ztráty zařízení nebude možné "
+"obnovit celou sadu klíčů. Jednak tedy nejde o žádnou úplnou zálohu (pokud"
+" ji potřebujete, použijte místo ní `tento návod <openpgp-keygen-"
+"backup.html>`_) a jednak riskujete, že se k vašemu šifrovacímu klíči může"
+" dostat někdo jiný. Výhodou generování klíčů v zařízení je zajištění "
+"bezpečného uložení klíčů. Proto doporučujeme tuto poloviční zálohu "
+"vynechat."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:38
+msgid ""
+"You will be asked for the admin PIN (default: 12345678) and the user PIN "
+"(default: 123456). When the key generation is finished, you can see the "
+"fingerprints of the keys on the bottom of the window. You may fill up the"
+" fields shown above, which are saved on your Nitrokey as well."
+msgstr ""
+"Budete požádáni o zadání administrátorského PIN kódu (výchozí: 12345678) "
+"a uživatelského PIN kódu (výchozí: 123456). Po dokončení generování klíčů"
+" se ve spodní části okna zobrazí otisky klíčů. Můžete vyplnit výše "
+"zobrazená pole, která se rovněž uloží do klíče Nitrokey."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:45
+msgid ""
+"Now you can close the window and go back to the main window. Your key "
+"will be visible in the key manager after refreshing. Every application "
+"which makes use of GnuPG will work with your Nitrokey as well, because "
+"GnuPG is fully aware of the fact, that the keys are stored on your "
+"Nitrokey."
+msgstr ""
+"Nyní můžete okno zavřít a vrátit se do hlavního okna. Po obnovení bude "
+"váš klíč viditelný ve správci klíčů. Každá aplikace, která využívá GnuPG,"
+" bude pracovat i s vaším klíčem Nitrokey, protože GnuPG si je plně vědom "
+"skutečnosti, že klíče jsou uloženy na vašem klíči Nitrokey."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:62
+msgid ""
+"Right-click on your key entry in the key manager and click “Export Keys…”"
+" to export the public key to a file and/or “Send Keys…” to upload the key"
+" to a keyserver."
+msgstr ""
+"Klikněte pravým tlačítkem myši na položku klíče ve správci klíčů a "
+"klikněte na \"Exportovat klíče...\" pro export veřejného klíče do souboru"
+" a/nebo na \"Odeslat klíče...\" pro odeslání klíče na server klíčů."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:64
+msgid ""
+"You can carry the keyfile with you or send it to anyone who you like. "
+"This file is not secret at all. If you want to use the Nitrokey on "
+"another system, you first import this public key via clicking on “Keys” "
+"-> “Importing Keys…” and choosing the file."
+msgstr ""
+"Soubor s klíčem můžete nosit s sebou nebo ho poslat komukoli, komu se vám"
+" líbí. Tento soubor není vůbec tajný. Pokud chcete klíč Nitrokey používat"
+" v jiném systému, musíte tento veřejný klíč nejprve importovat kliknutím "
+"na \"Klíče\" -> \"Import klíčů...\" a výběrem souboru."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:67
+msgid ""
+"If you do not want to carry a public keyfile with you, you can upload it "
+"to keyserver. If you are using another machine you can just import it by "
+"using “Server” -> “Retrieve Keys…” and entering your name or key id."
+msgstr ""
+"Pokud nechcete mít veřejný soubor s klíčem u sebe, můžete jej nahrát na "
+"server keyserver. Pokud používáte jiný počítač, můžete jej jednoduše "
+"importovat pomocí příkazu \"Server\" -> \"Retrieve Keys...\" a zadáním "
+"svého jména nebo ID klíče."
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:69
+msgid ""
+"Another possibility is to change the URL setting on your card. Open the "
+"card manager again and fill in the URL where the key is situated (e.g. on"
+" the keyserver or on your webpage etc.). From now on you can import the "
+"key on another system by right-clicking on the URL and click on “Fetch "
+"Key”."
+msgstr ""
+"Další možností je změnit nastavení adresy URL na kartě. Znovu otevřete "
+"správce karet a vyplňte adresu URL, na které se klíč nachází (např. na "
+"keyserveru nebo na vaší webové stránce apod.). Od této chvíle můžete klíč"
+" importovat do jiného systému tak, že kliknete pravým tlačítkem myši na "
+"adresu URL a zvolíte \"Fetch Key\"."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:2
+msgid "OpenPGP Key Generation On-Device"
+msgstr "Generování klíčů OpenPGP v zařízení"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:8
+msgid ""
+"The following instructions explain the generation of OpenPGP keys "
+"directly on the Nitrokey. This is done by using the command line "
+"interface of GnuPG. Thus, you need to have GnuPG installed on your "
+"system. The newest GnuPG version for Windows can be found `here "
+"<https://www.gpg4win.org/>`__ and the newest version for MacOS can be "
+"found `here <https://gpgtools.org/>`__. Users of Linux systems please "
+"install GnuPG with help of the package manager."
+msgstr ""
+"Následující pokyny vysvětlují generování klíčů OpenPGP přímo na Nitrokey."
+" To se provádí pomocí rozhraní příkazového řádku GnuPG. Proto je třeba "
+"mít v systému nainstalované GnuPG. Nejnovější verzi GnuPG pro Windows "
+"najdete `zde <https://www.gpg4win.org/>`_ a nejnovější verzi pro MacOS "
+"najdete `zde <https://gpgtools.org/>`_. Uživatelé systémů Linux si prosím"
+" nainstalujte GnuPG pomocí správce balíčků."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:12
+msgid ""
+"These instructions are based on GnuPG version 2.2.6 or higher. Some Linux"
+" Distributions have an older version installed. In this case please "
+"choose a different method as listed `here <openpgp.html>`_ or install a "
+"newer version if possible."
+msgstr ""
+"Tyto pokyny jsou založeny na GnuPG verze 2.2.6 nebo vyšší. Některé "
+"linuxové distribuce mají nainstalovanou starší verzi. V takovém případě "
+"zvolte jinou metodu, jak je uvedeno `zde <openpgp.html>`_, nebo si "
+"nainstalujte novější verzi, pokud je to možné."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:21
+msgid ""
+"The following descriptions explain the basic key generation on-device via"
+" GnuPG’s command line interface. The default behaviour is to generate RSA"
+" keys of 2048 bit size. If you want to change the key algorithm and "
+"length, have a look at the next section first."
+msgstr ""
+"Následující popisy vysvětlují základní generování klíčů v zařízení "
+"prostřednictvím rozhraní příkazového řádku GnuPG. Výchozí chování je "
+"generování klíčů RSA o velikosti 2048 bitů. Pokud chcete změnit "
+"algoritmus a délku klíče, podívejte se nejprve do další části."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:23
+msgid "Open a command line and type ``gpg2 --card-edit``."
+msgstr "Otevřete příkazový řádek a zadejte ``gpg2 --card-edit``."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:53
+msgid ""
+"Now you are in the interactive interface of GnuPG. Activate the admin "
+"commands with ``admin`` and use ``generate`` afterwards to start the "
+"generation of keys."
+msgstr ""
+"Nyní se nacházíte v interaktivním rozhraní GnuPG. Aktivujte příkazy "
+"správce pomocí ``admin`` a poté pomocí ``generate`` spusťte generování "
+"klíčů."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:95
+msgid ""
+"**Please do not create the suggested off-card backup.** This “backup” "
+"does only save the encryption key, but not the signature and "
+"authentication keys. In case of a loss of the device, you will not be "
+"able to restore the whole key set. So on the one hand it is no full "
+"backup (use `these instructions <openpgp-keygen-backup.html>`_ instead, "
+"if you need one) and on the other hand you risk that someone else can get"
+" in possession of your encryption key. The advantage of generating keys "
+"on-device is to make sure that keys are stored securely. Therefore, we "
+"recommend to skip this half-backup."
+msgstr ""
+"**Navrženou zálohu mimo kartu nevytvářejte.** Tato \"záloha\" ukládá "
+"pouze šifrovací klíč, ale ne podpisový a ověřovací klíč. V případě ztráty"
+" zařízení nebude možné obnovit celou sadu klíčů. Jednak tedy nejde o "
+"žádnou úplnou zálohu (pokud ji potřebujete, použijte místo ní `tento "
+"návod <openpgp-keygen-backup.html>`_) a jednak riskujete, že se k vašemu "
+"šifrovacímu klíči může dostat někdo jiný. Výhodou generování klíčů v "
+"zařízení je zajištění bezpečného uložení klíčů. Proto doporučujeme tuto "
+"poloviční zálohu vynechat."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:98
+msgid ""
+"Now you have a complete key set on your device which can be used for the "
+"`various applications "
+"<https://www.nitrokey.com/documentation/applications>`__ listed on our "
+"site. Type ``quit`` and hit enter to exit."
+msgstr ""
+"Nyní máte v zařízení kompletní sadu klíčů, kterou můžete použít pro "
+"`různé aplikace <https://www.nitrokey.com/documentation/applications>`_ "
+"uvedené na našich stránkách. Zadejte ``quit`` a stiskněte enter pro "
+"ukončení."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:101
+msgid "Change Key Attributes"
+msgstr "Změna klíčových atributů"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:103
+msgid ""
+"This section is about changing the key attributes. If you want to use the"
+" default values, you can proceed with the next section."
+msgstr ""
+"Tato část se zabývá změnou klíčových atributů. Pokud chcete použít "
+"výchozí hodnoty, můžete pokračovat další částí."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:105
+msgid "Open a command line and type ``gpg2 --card-edit --expert``."
+msgstr "Otevřete příkazový řádek a zadejte ``gpg2 --card-edit --expert``."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:131
+msgid ""
+"Now you are in the interactive interface of GnuPG. As you can see in the "
+"“Key attributes” field above, the default value rsa2048 is set. To change"
+" them, activate the admin commands with ``admin`` and use ``key-attr`` "
+"afterwards to change the attributes of the keys."
+msgstr ""
+"Nyní se nacházíte v interaktivním rozhraní GnuPG. Jak vidíte v poli \"Key"
+" attributes\" výše, je nastavena výchozí hodnota rsa2048. Chcete-li je "
+"změnit, aktivujte příkazy pro správu pomocí ``admin`` a poté použijte "
+"``key-attr`` pro změnu atributů klíčů."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:162
+msgid ""
+"You can choose the attribute for each key (that is, signature, encryption"
+" and authentication key). Most people will use the same attributes for "
+"every key. Type ``list`` to see the results (have look at the “Key "
+"attributes” field, which now reads rsa4096)."
+msgstr ""
+"Pro každý klíč (tj. podpisový, šifrovací a ověřovací klíč) můžete zvolit "
+"atribut. Většina lidí bude pro každý klíč používat stejné atributy. "
+"Zadejte ``list`` a podívejte se na výsledek (podívejte se do pole "
+"\"Atributy klíče\", které nyní zní rsa4096)."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:188
+msgid ""
+"Type ``quit`` and hit enter to exit or proceed directly with the previous"
+" section to actually generate the keys with the key attributes you just "
+"set."
+msgstr ""
+"Zadejte ``quit`` a stiskněte enter pro ukončení nebo pokračujte přímo v "
+"předchozí části, abyste skutečně vygenerovali klíče s právě nastavenými "
+"atributy."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:190
+msgid ""
+"The following table illustrates which algorithm can be used on which "
+"device."
+msgstr ""
+"Následující tabulka ukazuje, který algoritmus lze použít na kterém "
+"zařízení."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:213
+msgid ""
+"To get a simple file of your public key, you can just use ``gpg2 --armor "
+"--export keyID > pubkey.asc``. Use either the fingerprint as “keyID” "
+"(look at ``gpg -K`` to get it) or just use your email address as an "
+"identifier."
+msgstr ""
+"Chcete-li získat jednoduchý soubor svého veřejného klíče, stačí použít "
+"``gpg2 --armor --export keyID > pubkey.asc``. Jako \"keyID\" použijte buď"
+" otisk prstu (podívejte se na ``gpg -K`` a získejte jej), nebo jako "
+"identifikátor použijte pouze svou e-mailovou adresu."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:215
+msgid ""
+"You can carry this file with you or send it to anyone who you like. This "
+"file is not secret at all. If you want to use the Nitrokey on another "
+"system, you first import this public key via ``gpg2 --import pubkey.asc``"
+" and then types ``gpg2 --card-status`` so that the system knows where to "
+"look for this key. That’s all."
+msgstr ""
+"Tento soubor můžete nosit s sebou nebo ho poslat komukoli, komu se vám "
+"líbí. Tento soubor není vůbec tajný. Pokud chcete použít klíč Nitrokey v "
+"jiném systému, nejprve tento veřejný klíč importujte pomocí ``gpg2 "
+"--import pubkey.asc`` a poté zadejte ``gpg2 --card-status``, aby systém "
+"věděl, kde má tento klíč hledat. To je vše."
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:222
+msgid ""
+"Another possibility is to change the URL setting on your card. Start gpg "
+"–card-edit again and first set the URL where the key is situated (e.g. on"
+" the keyserver or on your webpage etc.) via the ``url`` command. From now"
+" on you can import the key on another system by just using the ``fetch`` "
+"command within the ``gpg --card-edit`` environment."
+msgstr ""
+"Další možností je změnit nastavení adresy URL na kartě. Spusťte znovu gpg"
+" -card-edit a nejprve nastavte adresu URL, na které se klíč nachází "
+"(např. na keyserveru nebo na vaší webové stránce apod.), pomocí příkazu "
+"``url``. Od této chvíle můžete klíč importovat do jiného systému pouze "
+"pomocí příkazu ``fetch`` v rámci prostředí ``gpg --card-edit``."
+
+#: ../pro/openpgp-outlook.rst.inc:2
+msgid "OpenPGP Email Encryption with Outlook"
+msgstr "Šifrování e-mailů OpenPGP s aplikací Outlook"
+
+#: ../pro/openpgp-outlook.rst.inc:10
+msgid ""
+"Unfortunately, there is no solution to use OpenPGP in Outlook for macOS "
+"yet."
+msgstr ""
+"Bohužel zatím neexistuje řešení pro použití OpenPGP v aplikaci Outlook "
+"pro macOS."
+
+#: ../pro/openpgp-outlook.rst.inc:16
+msgid ""
+"If you do not have PGP-Keys on your Nitrokey yet, please look at `this "
+"page <openpgp.html>`_ first."
+msgstr ""
+"Pokud na svém klíči Nitrokey ještě nemáte klíče PGP, podívejte se nejprve"
+" na `tuto stránku <openpgp.html>`_."
+
+#: ../pro/openpgp-outlook.rst.inc:18
+msgid ""
+"You need to have GnuPG installed on your System. The newest GnuPG version"
+" for Windows can be found `here <https://www.gpg4win.org>`__. You need to"
+" make sure to have “GpgOL” checked during installation process (see "
+"below)."
+msgstr ""
+"V systému musíte mít nainstalovaný GnuPG. Nejnovější verzi GnuPG pro "
+"Windows najdete `zde <https://www.gpg4win.org>`_. Při instalaci je třeba "
+"se ujistit, že je zaškrtnuta volba \"GpgOL\" (viz níže)."
+
+#: ../pro/openpgp-outlook.rst.inc:28
+msgid ""
+"After installing GPG4Win along with GpgOL, you will see a new icon "
+"labeled “Secure” in the composing window. To encrypt and sign a mail you "
+"just click on the sign like seen below."
+msgstr ""
+"Po instalaci GPG4Win spolu s GpgOL se v okně pro vytváření souborů "
+"zobrazí nová ikona s označením \"Secure\". Pro zašifrování a podepsání "
+"e-mailu stačí kliknout na znak, jak je vidět níže."
+
+#: ../pro/openpgp-outlook.rst.inc:35
+msgid ""
+"GnuPG will start signing and encrypting the mail as soon as you click on "
+"‘send’. You are requested to choose the identity you want to sign with "
+"and encrypt for."
+msgstr ""
+"GnuPG začne podepisovat a šifrovat poštu, jakmile kliknete na tlačítko "
+"\"odeslat\". Budete vyzváni k výběru identity, kterou chcete podepsat a "
+"zašifrovat."
+
+#: ../pro/openpgp-outlook.rst.inc:42
+msgid ""
+"Furthermore, you are asked for typing in the User PIN of the Nitrokey for"
+" signing the mail."
+msgstr ""
+"Dále jste vyzváni k zadání uživatelského PIN kódu Nitrokey pro podepsání "
+"pošty."
+
+#: ../pro/openpgp-outlook.rst.inc:49
+msgid ""
+"You will be asked automatically for your User PIN if you want to read an "
+"encrypted mail."
+msgstr ""
+"Pokud chcete číst zašifrovanou poštu, budete automaticky požádáni o "
+"zadání uživatelského kódu PIN."
+
+#: ../pro/openpgp-thunderbird.rst.inc:2
+msgid "OpenPGP Email Encryption With Thunderbird"
+msgstr "Šifrování e-mailů pomocí OpenPGP v aplikaci Thunderbird"
+
+#: ../pro/openpgp-thunderbird.rst.inc:9
+msgid "Thunderbird 78.3 and newer"
+msgstr "Thunderbird 78.3 a novější"
+
+#: ../pro/openpgp-thunderbird.rst.inc:11
+msgid ""
+"At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy"
+" to set up. See `Thunderbird’s documentation "
+"<https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`__ for details."
+" Here is a `comprehensive German guide "
+"<https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-"
+"nitrokey-storage/>`__."
+msgstr ""
+"V současné době není snadné nastavit podporu e-mailů OpenPGP v "
+"Thunderbirdu. Podrobnosti naleznete v `dokumentaci Thunderbirdu "
+"<https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`_. Zde je "
+"`kompletní německý průvodce <https://decatec.de/it/thunderbird-78-pgp-"
+"verschluesselung-mit-dem-nitrokey-storage/>`_."
+
+#: ../pro/openpgp-thunderbird.rst.inc:16
+msgid ""
+"Error message: ``The configured key ID '4BA0183FCBA844A7' cannot be found"
+" on your keyring``"
+msgstr ""
+"Chybová zpráva: ``The configured key ID '4BA0183FCBA844A7' cannot be "
+"found on your keyring``"
+
+#: ../pro/openpgp-thunderbird.rst.inc:18
+msgid "Make sure that the public key is imported to the Thunderbird’s manager and"
+msgstr "Ujistěte se, že veřejný klíč je importován do správce Thunderbirdu a"
+
+#: ../pro/openpgp-thunderbird.rst.inc:19
+msgid ""
+"The key ID does not contain any whitespace, and consists of 16 characters"
+" from range 0-9 A-F"
+msgstr ""
+"ID klíče neobsahuje žádné bílé znaky a skládá se z 16 znaků z rozsahu 0-9"
+" A-F."
+
+#: ../pro/openpgp-thunderbird.rst.inc:20
+msgid "you have GPA or Kleopatra software installed."
+msgstr "máte nainstalovaný software GPA nebo Kleopatra."
+
+#: ../pro/openpgp-thunderbird.rst.inc:22
+msgid ""
+"Please use Kleopatra or `GPA <openpgp-keygen-gpa.html>`_ software to "
+"handle the smart card."
+msgstr ""
+"Pro obsluhu čipové karty použijte software Kleopatra nebo `GPA <openpgp-"
+"keygen-gpa.html>`_."
+
+#: ../pro/openpgp-thunderbird.rst.inc:25
+msgid "Thunderbird 77 and older"
+msgstr "Thunderbird 77 a starší"
+
+#: ../pro/openpgp-thunderbird.rst.inc:30
+msgid ""
+"Install the device driver as described `here "
+"<https://www.nitrokey.com/documentation/installation>`__."
+msgstr ""
+"Nainstalujte ovladač zařízení podle popisu `zde "
+"<https://www.nitrokey.com/documentation/installation>`_."
+
+#: ../pro/openpgp-thunderbird.rst.inc:33
+msgid ""
+"Install `Thunderbird <https://www.thunderbird.net/en-US/>`__ and the Add-"
+"on `Enigmail <https://www.enigmail.net/index.php/en/>`__."
+msgstr ""
+"Nainstalujte `Thunderbird <https://www.thunderbird.net/en-US/>`_ a "
+"doplněk `Enigmail <https://www.enigmail.net/index.php/en/>`_."
+
+#: ../pro/openpgp-thunderbird.rst.inc:37
+msgid "Changing PINs"
+msgstr "Změna kódů PIN"
+
+#: ../pro/openpgp-thunderbird.rst.inc:39
+msgid "There are two PINs for the Nitrokey:"
+msgstr "Pro klíč Nitrokey existují dva kódy PIN:"
+
+#: ../pro/openpgp-thunderbird.rst.inc:41
+msgid "The User PIN required for daily work"
+msgstr "Uživatelský kód PIN potřebný pro každodenní práci"
+
+#: ../pro/openpgp-thunderbird.rst.inc:43
+msgid ""
+"The Admin PIN is required to change keys or other settings of the device."
+" In addition, the Nitrokey can be unlocked (for example, after 3 times "
+"incorrect input of the User PIN) by means of the Admin PIN."
+msgstr ""
+"Kód PIN správce je nutný pro změnu klíčů nebo jiných nastavení zařízení. "
+"Kromě toho lze Nitrokey odemknout (například po trojnásobném nesprávném "
+"zadání uživatelského kódu PIN) pomocí kódu PIN správce."
+
+#: ../pro/openpgp-thunderbird.rst.inc:47
+msgid ""
+"After receiving the Nitrokey, you should immediately change the User PIN "
+"= “123456” and Admin PIN = “12345678”."
+msgstr ""
+"Po obdržení klíče Nitrokey byste měli okamžitě změnit PIN uživatele = "
+"\"123456\" a PIN správce = \"12345678\"."
+
+#: ../nitropad/factory-reset.rst.inc:24 ../nitropad/firmware-update.rst.inc:53
+#: ../pro/openpgp-thunderbird.rst.inc:51
+msgid "Procedure"
+msgstr "Postup"
+
+#: ../pro/openpgp-thunderbird.rst.inc:53
+msgid "Insert the Nitrokey into a USB port on your computer."
+msgstr "Vložte Nitrokey do portu USB v počítači."
+
+#: ../pro/openpgp-thunderbird.rst.inc:55
+msgid "Start Thunderbird."
+msgstr "Spusťte Thunderbird."
+
+#: ../pro/openpgp-thunderbird.rst.inc:57
+msgid ""
+"In Thunderbird, select as shown in the following picture. “OpenPGP” → "
+"“Manage smart card”"
+msgstr ""
+"V aplikaci Thunderbird vyberte podle následujícího obrázku. \"OpenPGP\" →"
+" \"Spravovat čipovou kartu\""
+
+#: ../pro/openpgp-thunderbird.rst.inc:65
+msgid "In the “SmartCard Details” window, select “SmartCard → Change PIN”"
+msgstr ""
+"V okně \"Podrobnosti o kartě SmartCard\" vyberte možnost \"Karta "
+"SmartCard → Změnit PIN\"."
+
+#: ../pro/openpgp-thunderbird.rst.inc:72
+msgid ""
+"Select “Change PIN”. This is your User PIN you need for daily work. Enter"
+" the current PIN ( “123456” for delivery) and twice your new PIN. For "
+"this PIN you can use the characters: a-z A-Z 0-9 / .;;:- !? () [] {}% +. "
+"The PIN should be at least 6 characters long. Click “OK”."
+msgstr ""
+"Vyberte možnost \"Změnit PIN\". Toto je váš uživatelský PIN, který "
+"potřebujete pro každodenní práci. Zadejte stávající PIN (\"123456\" pro "
+"doručení) a dvakrát nový PIN. Pro tento PIN můžete použít znaky: a-z A-Z "
+"0-9 / .;;:- !? () [] {}% +. PIN by měl mít alespoň 6 znaků. Klikněte na "
+"tlačítko \"OK\"."
+
+#: ../pro/openpgp-thunderbird.rst.inc:83
+msgid "Repeat the procedure for the Admin PIN. “SmartCard → Change PIN”"
+msgstr "Zopakujte postup pro kód PIN správce. \"SmartCard → Změna PIN\""
+
+#: ../pro/openpgp-thunderbird.rst.inc:90
+msgid ""
+"Select Change Admin PIN. This is your Admin PIN that you only rarely "
+"need. Enter the current PIN ( “12345678” for delivery) and the new PIN "
+"twice. For this PIN, you can use the characters: a-z A-Z 0-9 / .;;:- !? "
+"() [] {}% +. The PIN should be at least 8 characters long. Click “OK”."
+msgstr ""
+"Vyberte možnost Změnit PIN správce. Toto je váš PIN administrátora, který"
+" potřebujete jen zřídka. Zadejte dvakrát aktuální PIN (\"12345678\" pro "
+"doručení) a nový PIN. Pro tento PIN můžete použít znaky: a-z A-Z 0-9 / "
+".;;:- !? () [] {}% +. PIN by měl mít alespoň 8 znaků. Klikněte na "
+"tlačítko \"OK\"."
+
+#: ../pro/openpgp-thunderbird.rst.inc:101
+msgid ""
+"You have now changed the PINs and should continue to generate your "
+"personal keys."
+msgstr ""
+"Nyní jste změnili kódy PIN a měli byste pokračovat v generování osobních "
+"klíčů."
+
+#: ../pro/openpgp-thunderbird.rst.inc:104
+msgid "Generation of Keys"
+msgstr "Generování klíčů"
+
+#: ../pro/openpgp-thunderbird.rst.inc:106
+msgid ""
+"To encrypt data and e-mails, a key pair consisting of a public key and a "
+"private key, must first be generated. The so-called public key is used to"
+" **en**\\ crypt the data or e-mails. You can distribute this to all those"
+" with whom you want to communicate securely (for example, publish it "
+"publicly on your site). The so-called private key is used to **de**\\ "
+"crypt the data or messages. This key should **NEVER** be made known! "
+"Usually, you also do not have direct access to it (see below), since this"
+" is stored securely on the Nitrokey. Use the Nitrokey to create both keys"
+" using the following procedure:"
+msgstr ""
+"Pro šifrování dat a e-mailů je třeba nejprve vygenerovat dvojici klíčů, "
+"která se skládá z veřejného a soukromého klíče. Takzvaný veřejný klíč se "
+"používá k **šifrování dat nebo e-mailů. Ten můžete distribuovat všem, se "
+"kterými chcete bezpečně komunikovat (například jej zveřejnit na svých "
+"stránkách). Takzvaný soukromý klíč se používá k **de**\\ šifrování dat "
+"nebo zpráv. Tento klíč by neměl být **nikdy** zveřejněn! Obvykle k němu "
+"také nemáte přímý přístup (viz níže), protože je bezpečně uložen v "
+"systému Nitrokey. Pomocí klíče Nitrokey vytvořte oba klíče následujícím "
+"postupem:"
+
+#: ../pro/openpgp-thunderbird.rst.inc:109
+msgid "Insert the Nitrokey into a USB port on your computer. StartThunderbird"
+msgstr "Vložte Nitrokey do portu USB v počítači. SpustitThunderbird"
+
+#: ../pro/openpgp-thunderbird.rst.inc:112
+msgid ""
+"In Thunderbird, select as shown in the following picture „OpenPGP“ → "
+"„Manage Smart Card“"
+msgstr ""
+"V Thunderbirdu vyberte podle následujícího obrázku \"OpenPGP\" → "
+"\"Spravovat čipovou kartu\"."
+
+#: ../pro/openpgp-thunderbird.rst.inc:115
+msgid "In the “SmartCard details” window, select “SmartCard” → “Generate key”"
+msgstr ""
+"V okně \"Podrobnosti o kartě SmartCard\" vyberte možnost \"Karta "
+"SmartCard\" → \"Generovat klíč\"."
+
+#: ../pro/openpgp-thunderbird.rst.inc:118
+msgid ""
+"In the following window, select your e-mail address for which you want to"
+" generate keys. Verify that the e-mail address specified in “User ID” is "
+"correct. You can also specify whether a private key backup copy should be"
+" stored on your computer."
+msgstr ""
+"V následujícím okně vyberte e-mailovou adresu, pro kterou chcete "
+"generovat klíče. Zkontrolujte, zda je e-mailová adresa zadaná v poli \"ID"
+" uživatele\" správná. Můžete také určit, zda má být záložní kopie "
+"soukromého klíče uložena v počítači."
+
+#: ../pro/openpgp-thunderbird.rst.inc:128
+msgid ""
+"If you do not create a backup copy, you have no chance to get your "
+"encrypted data if the Nitrokey is lost or damaged!"
+msgstr ""
+"Pokud si nevytvoříte záložní kopii, nemáte v případě ztráty nebo "
+"poškození klíče Nitrokey šanci získat zašifrovaná data!"
+
+#: ../pro/openpgp-thunderbird.rst.inc:136
+msgid ""
+"It is recommended to store this safety device. Select “Save key copy of "
+"the key outside the Smard Card”. Then enter your personal password for "
+"the backup copy under “Passphrase”. This password should not be less than"
+" 8 characters, and should contain both uppercase and lowercase letters "
+"and numbers. You can also use a long sentence, but avoid known prose or "
+"lyric. Also, no name or known term should be used."
+msgstr ""
+"Doporučuje se toto bezpečnostní zařízení uložit. Vyberte možnost \"Uložit"
+" kopii klíče mimo kartu Smard\". Poté zadejte své osobní heslo pro "
+"záložní kopii v části \"Passphrase\" (Fráze). Toto heslo by nemělo mít "
+"méně než 8 znaků a mělo by obsahovat velká i malá písmena a číslice. "
+"Můžete také použít dlouhou větu, ale vyhněte se známé próze nebo textu. "
+"Rovněž by nemělo být použito žádné jméno nebo známý pojem."
+
+#: ../pro/openpgp-thunderbird.rst.inc:144
+msgid ""
+"**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö"
+" or ß)"
+msgstr ""
+"**Povolené znaky**: a-z A-Z 0-9 /.,;:-!?( )%+ (bez umlauts ä,ü,ö,Ä,Ü,Ö "
+"nebo ß)"
+
+#: ../pro/openpgp-thunderbird.rst.inc:146
+msgid ""
+"**Poor Passwords**: qwerty123, ILoveSusi3, Password, If you can dream it,"
+" you can do it."
+msgstr ""
+"**Chudé heslo**: qwerty123, ILoveSusi3, Heslo, Když o tom můžeš snít, tak"
+" to zvládneš."
+
+#: ../pro/openpgp-thunderbird.rst.inc:148
+#, python-format
+msgid ""
+"**Strong Passwords**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen "
+"Earz and fife legs (spelling errors increase security)"
+msgstr ""
+"**Silné heslo**: g(Ak?2Pn7Yn nebo Ki.stg2bLqzp%d nebo A dog with greeen "
+"Ears and fife legs (pravopisné chyby zvyšují bezpečnost)."
+
+#: ../pro/openpgp-thunderbird.rst.inc:150
+msgid ""
+"You do **not** need this password for daily work. It is only necessary "
+"for the restoration of the secret key, e.g. if you have lost the "
+"Nitrokey. Therefore, keep the password in a safe place."
+msgstr ""
+"Toto heslo **nepotřebujete** pro každodenní práci. Je nutné pouze pro "
+"obnovení tajného klíče, např. pokud jste ztratili Nitrokey. Heslo proto "
+"uchovávejte na bezpečném místě."
+
+#: ../pro/openpgp-thunderbird.rst.inc:152
+msgid ""
+"You can also specify whether and when the key should be automatically "
+"invalid. This means, from this point onwards, no more e-mails can be "
+"encrypted with this key and you have to create a new key pair."
+msgstr ""
+"Můžete také určit, zda a kdy má být klíč automaticky neplatný. To "
+"znamená, že od této chvíle již nelze tímto klíčem šifrovat žádné e-maily "
+"a je třeba vytvořit nový pár klíčů."
+
+#: ../pro/openpgp-thunderbird.rst.inc:154
+msgid "Finally, click on “Generate key pair”."
+msgstr "Nakonec klikněte na možnost \"Generovat pár klíčů\"."
+
+#: ../pro/openpgp-thunderbird.rst.inc:161
+msgid "You are now asked if the key should be generated. Confirm with “Yes”."
+msgstr "Nyní jste dotázáni, zda má být klíč vygenerován. Potvrďte \"Ano\"."
+
+#: ../pro/openpgp-thunderbird.rst.inc:168
+msgid ""
+"In order for the program to write your keys to the stick, you must enter "
+"the admin PIN and the user PIN (changed above)."
+msgstr ""
+"Aby program mohl zapsat vaše klíče na paměťovou kartu, musíte zadat "
+"administrátorský PIN a uživatelský PIN (změněný výše)."
+
+#: ../pro/openpgp-thunderbird.rst.inc:176
+msgid ""
+"The key generation can take a few minutes. Do not terminate the program "
+"prematurely!"
+msgstr "Generování klíče může trvat několik minut. Neukončujte program předčasně!"
+
+#: ../pro/openpgp-thunderbird.rst.inc:178
+msgid ""
+"When the key generation is complete, you receive the following message. A"
+" certificate is now created that allows you to invalidate your key in an "
+"emergency. This certificate is automatically saved with your private key."
+" This should be printed out or backed up on at least one other external "
+"medium so that you can revoke the validity of the keys if your keys and "
+"backups are lost. Click “Yes”"
+msgstr ""
+"Po dokončení generování klíče se zobrazí následující zpráva. Nyní je "
+"vytvořen certifikát, který umožňuje v případě nouze klíč zneplatnit. "
+"Tento certifikát je automaticky uložen spolu s vaším soukromým klíčem. "
+"Ten by měl být vytištěn nebo zálohován alespoň na jednom dalším externím "
+"médiu, abyste mohli platnost klíčů zrušit v případě ztráty klíčů a záloh."
+" Klikněte na tlačítko \"Ano\""
+
+#: ../pro/openpgp-thunderbird.rst.inc:185
+msgid ""
+"You can now select the directory in which the backup copy is stored. This"
+" copy is encrypted with your password entered above. This means that no "
+"one can read or use the keys without your password. Do not give your "
+"password to anyone. This file with the name of your e-mail address and "
+"the suffix “.asc” should be backed up on another medium. After selecting "
+"the directory, click “Save”."
+msgstr ""
+"Nyní můžete vybrat adresář, do kterého bude záložní kopie uložena. Tato "
+"kopie je zašifrována vaším výše zadaným heslem. To znamená, že bez vašeho"
+" hesla ji nikdo nemůže přečíst ani použít. Své heslo nikomu nesdělujte. "
+"Tento soubor s názvem vaší e-mailové adresy a příponou \".asc\" by měl "
+"být zálohován na jiném médiu. Po výběru adresáře klikněte na tlačítko "
+"\"Uložit\"."
+
+#: ../pro/openpgp-thunderbird.rst.inc:192
+msgid "Here you must again specify your user PIN or passphrase. Then click “OK”"
+msgstr ""
+"Zde musíte opět zadat svůj uživatelský kód PIN nebo přístupovou frázi. "
+"Poté klikněte na tlačítko \"OK\"."
+
+#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
+#: ../storage/firmware-update-manually.rst:-1
+msgid "img12"
+msgstr "img12"
+
+#: ../pro/openpgp-thunderbird.rst.inc:200
+msgid ""
+"You will now see the message that the certificate was created and saved. "
+"Click “OK”"
+msgstr ""
+"Nyní se zobrazí zpráva, že certifikát byl vytvořen a uložen. Klikněte na "
+"tlačítko \"OK\""
+
+#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
+#: ../storage/firmware-update-manually.rst:-1
+msgid "img13"
+msgstr "img13"
+
+#: ../pro/openpgp-thunderbird.rst.inc:208
+msgid ""
+"Key generation is now complete. You can now exit the program (File - "
+"Close)."
+msgstr ""
+"Generování klíčů je nyní dokončeno. Nyní můžete program ukončit (Soubor -"
+" Zavřít)."
+
+#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
+msgid "img14"
+msgstr "img14"
+
+#: ../pro/openpgp-thunderbird.rst.inc:216
+msgid ""
+"Your Nitrokey is personalized and ready to use. **Have fun with the "
+"secure email encryption!**"
+msgstr ""
+"Váš klíč Nitrokey je personalizovaný a připravený k použití. **Zabavte se"
+" s bezpečným šifrováním e-mailu!**"
+
+#: ../nitrokey3/shared/openpgp-uif.rst:2
+msgid "OpenPGP Touch Confirmation (UIF)"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:8
+msgid ""
+"The Nitrokey 3 OpenPGP Card functionality supports touch button "
+"confirmations (so called User Interaction Flags, UIF) when performing "
+"cryptographic key operations. It can be configured separately for each "
+"operation (Signature, Decryption and Authentication)."
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:10
+msgid "UIF supports 3 modes:"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:12
+msgid ""
+"Disabled: The device never prompts for user presence, which is the "
+"default behaviour"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:13
+msgid "Enabled: The device always prompts for user presence"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:14
+msgid ""
+"Permanentaly Enabled: Behaves like Enabled, but can only be reverted to "
+"Disabled through a factory-reset"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:19
+msgid "With GnuPG 2.3 or more recent:"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:29
+msgid "Then, set the UIF flag accordingly:"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:31
+msgid ""
+"For signature operation: ``uif 1 on`` or ``uif 1 off`` or with ``uif 1 "
+"permanent``."
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:32
+msgid ""
+"For decryption operation: ``uif 2 on`` or ``uif 2 off`` or ``uif 2 "
+"permanent``."
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:33
+msgid ""
+"For authentication operation: ``uif 3 on`` or ``uif 3 off`` or ``uif 3 "
+"permanent``."
+msgstr ""
+
+#: ../pro/smime.rst.inc:17
+msgid ""
+"If you are in doubt which one to choose, you should use OpenPGP, see "
+"`here <openpgp.html>`_. This page describes the usage of S/MIME email "
+"encryption."
+msgstr ""
+"Pokud váháte, který z nich zvolit, měli byste použít OpenPGP, viz `zde "
+"<openpgp.html>`_. Tato stránka popisuje použití šifrování e-mailů S/MIME."
+
 #: ../nitrokey3/troubleshooting.rst.inc:12
 #: ../nitropad/troubleshooting.rst.inc:13
 msgid "Here you will find a collection of common issues."
@@ -11142,6 +12419,153 @@ msgstr "(Nitrokey 3 - Windows)"
 #: ../nitrokey3/windows/index.rst:2
 msgid "Nitrokey 3 With Windows"
 msgstr "Nitrokey 3 se systémem Windows"
+
+#: ../pro/windows/openpgp-csp.rst:2
+msgid "Windows Login and S/MIME Email Encryption with Active Directory"
+msgstr ""
+"Přihlašování k systému Windows a šifrování e-mailů S/MIME pomocí služby "
+"Active Directory"
+
+#: ../pro/windows/openpgp-csp.rst:8
+msgid ""
+"Please note that this driver is still in development/testing. Please tell"
+" us your experiences! See our `contact page "
+"<https://www.nitrokey.com/contact>`__."
+msgstr ""
+"Upozorňujeme, že tento ovladač je stále ve fázi vývoje/testování. Sdělte "
+"nám prosím své zkušenosti! Viz naše `kontaktní stránka "
+"<https://www.nitrokey.com/contact>`_."
+
+#: ../pro/windows/openpgp-csp.rst:13
+msgid ""
+"This guide assumes that an Active Directory server with role ‘Active "
+"Directory Certificate Services’ is installed and running on a server. "
+"These instructions are based on Nitrokey Storage 2 and Nitrokey Pro 2 "
+"only."
+msgstr ""
+"Tato příručka předpokládá, že na serveru je nainstalován a spuštěn server"
+" služby Active Directory s rolí \"Certifikační služby Active Directory\"."
+" Tyto pokyny jsou založeny pouze na produktech Nitrokey Storage 2 a "
+"Nitrokey Pro 2."
+
+#: ../pro/windows/openpgp-csp.rst:16
+msgid "Installing OpenPGP-CSP"
+msgstr "Instalace protokolu OpenPGP-CSP"
+
+#: ../pro/windows/openpgp-csp.rst:18
+msgid ""
+"This step is needed for clients to use the OpenPGP-CSP driver. Download "
+"and install the `latest version <https://github.com/vletoux/OpenPGP-"
+"CSP/releases/tag/1.3>`__ of the installer file ‘SetupOpenPGPCsp’ for your"
+" system architecture, for ‘SetupOpenPGPCsp_x64.msi’ for 64-bit systems."
+msgstr ""
+"Tento krok je nutný, aby klienti mohli používat ovladač OpenPGP-CSP. "
+"Stáhněte a nainstalujte `nejnovější verzi <https://github.com/vletoux"
+"/OpenPGP-CSP/releases/tag/1.3>`_ instalačního souboru 'SetupOpenPGPCsp' "
+"pro vaši systémovou architekturu, pro 'SetupOpenPGPCsp_x64.msi' pro "
+"64bitové systémy."
+
+#: ../pro/windows/openpgp-csp.rst:20
+msgid ""
+"You may want to install the driver on the server as well for being able "
+"to enforce the use of this driver in the template (see below)."
+msgstr ""
+"Možná budete chtít nainstalovat ovladač také na server, abyste mohli "
+"vynutit použití tohoto ovladače v šabloně (viz níže)."
+
+#: ../pro/windows/openpgp-csp.rst:23
+msgid "Creating Certificate Template on Server Side"
+msgstr "Vytvoření šablony certifikátu na straně serveru"
+
+#: ../pro/windows/openpgp-csp.rst:25
+msgid ""
+"On Active Directory Server open certsrv.msc to manage your certificate "
+"templates. Right click on ‘Certificate Templates’ and choose ‘Manage’"
+msgstr ""
+"Na serveru Active Directory otevřete soubor certsrv.msc a spravujte "
+"šablony certifikátů. Klikněte pravým tlačítkem myši na položku \"Šablony "
+"certifikátů\" a vyberte možnost \"Spravovat\"."
+
+#: ../pro/windows/openpgp-csp.rst:32
+msgid ""
+"Now right click on ‘Smartcard Logon’ template and click ‘Duplicate’, to "
+"create a new template on basis of this standard template. Rename template"
+" to ‘OpenPGP Card Logon and Email’ or alike."
+msgstr ""
+"Nyní klikněte pravým tlačítkem myši na šablonu \"Přihlášení pomocí čipové"
+" karty\" a kliknutím na tlačítko \"Duplikovat\" vytvořte novou šablonu na"
+" základě této standardní šablony. Přejmenujte šablonu na \"Přihlášení "
+"kartou OpenPGP a e-mail\" nebo podobně."
+
+#: ../pro/windows/openpgp-csp.rst:39
+msgid ""
+"Under ‘Request Handling’, you can choose the OpenPGP-CSP as the one and "
+"only Cryptography Service Provider (click the Button labeled ‘CSPs…’). "
+"For this to work, you need to install the driver on the server as well "
+"and you have to insert a Nitrokey beforehand. This is optional. You can "
+"let the user choose, which CSP to use."
+msgstr ""
+"V části \"Request Handling\" můžete jako jediného poskytovatele "
+"kryptografických služeb vybrat OpenPGP-CSP (klikněte na tlačítko "
+"\"CSPs...\"). Aby to fungovalo, je třeba nainstalovat ovladač i na server"
+" a předtím vložit Nitrokey. To je nepovinné. Můžete nechat uživatele "
+"vybrat, který CSP chce použít."
+
+#: ../pro/windows/openpgp-csp.rst:51
+msgid ""
+"For enabling S/MIME email encryption go to ‘Subject name’. Tick the "
+"checkbox ‘E-Mail name’ (note: You must save the mail addresses of your "
+"users in the corresponding Active Directory field!)."
+msgstr ""
+"Chcete-li povolit šifrování e-mailu S/MIME, přejděte na položku \"Název "
+"předmětu\". Zaškrtněte políčko 'E-mail name' (poznámka: poštovní adresy "
+"uživatelů musíte uložit do příslušného pole Active Directory!)."
+
+#: ../pro/windows/openpgp-csp.rst:58
+msgid ""
+"Then go to ‘Extensions’, there you edit the applications guideline and "
+"add ‘Secure Email’."
+msgstr ""
+"Poté přejděte do části \"Rozšíření\", kde upravte pokyny pro aplikace a "
+"přidejte \"Zabezpečený e-mail\"."
+
+#: ../pro/windows/openpgp-csp.rst:71
+msgid "Request Certificate on Client (Domain Member)"
+msgstr "Žádost o certifikát na klientovi (člen domény)"
+
+#: ../pro/windows/openpgp-csp.rst:73
+msgid ""
+"To request a certificate for a domain member, you have to open "
+"certmgr.msc. Right click on folder ‘Personal->Certificates’ and click "
+"’All Tasks->Request New Certificate and choose the template you created "
+"on the AD."
+msgstr ""
+"Chcete-li požádat o certifikát pro člena domény, musíte otevřít soubor "
+"certmgr.msc. Klikněte pravým tlačítkem myši na složku "
+"\"Personal->Certificates\" a klikněte na \"All Tasks->Request New "
+"Certificate\" a vyberte šablonu, kterou jste vytvořili v AD."
+
+#: ../pro/windows/openpgp-csp.rst:81
+msgid ""
+"If you did not enforce the usage of OpenPGP-CSP you have to choose it "
+"here now."
+msgstr "Pokud jste si nevynutili použití OpenPGP-CSP, musíte si jej zvolit zde."
+
+#: ../pro/windows/openpgp-csp.rst:93
+msgid "Next you choose the Authentication slot for the certificate."
+msgstr "Dále vyberete slot pro ověření certifikátu."
+
+#: ../pro/windows/openpgp-csp.rst:95
+msgid ""
+"You are now ready to logon on the computer with the Nitrokey instead of "
+"your password and you can use `S/MIME email encryption/signing "
+"<smime.html>`_ with the Nitrokey. The driver has to be installed on every"
+" computer you want to use the certificate on."
+msgstr ""
+"Nyní jste připraveni přihlásit se k počítači pomocí klíče Nitrokey místo "
+"hesla a můžete použít `Šifrování/podpisování e-mailů S/MIME "
+"<smime.html>`_ pomocí klíče Nitrokey. Ovladač musí být nainstalován na "
+"každém počítači, na kterém chcete certifikát používat."
 
 #: ../nitrokey3/windows/piv.rst:2
 msgid "Windows Login With PIV Smartcard Authentication"
@@ -11820,11 +13244,6 @@ msgid ""
 msgstr ""
 "Pokud zařízení resetujete, všechna data budou ztracena. Proto před "
 "provedením resetu zálohujte svá data."
-
-#: ../nitropad/factory-reset.rst.inc:24 ../nitropad/firmware-update.rst.inc:53
-#: ../pro/openpgp-thunderbird.rst.inc:51
-msgid "Procedure"
-msgstr "Postup"
 
 #: ../nitropad/factory-reset.rst.inc:26
 msgid ""
@@ -15632,1211 +17051,6 @@ msgstr ""
 "časem vydán v novější verzi. Do té doby je jedinou možností sestavit "
 "Poldi ze zdrojových kódů."
 
-#: ../pro/openpgp.rst.inc:2
-msgid "OpenPGP Email Encryption"
-msgstr "Šifrování e-mailů OpenPGP"
-
-#: ../pro/openpgp.rst.inc:14
-msgid ""
-"If you are in doubt which one to choose, you should use OpenPGP. While "
-"this page describes the usage of OpenPGP, S/MIME is described `here "
-"<smime.html>`_."
-msgstr ""
-"Pokud váháte, který z nich zvolit, měli byste použít OpenPGP. Zatímco "
-"tato stránka popisuje použití OpenPGP, S/MIME je popsán `zde "
-"<smime.html>`_."
-
-#: ../pro/openpgp.rst.inc:16
-msgid ""
-"Please familiarize yourself with the general concept behind the OpenPGP "
-"standard first, for example by reading `this info graphic "
-"<https://emailselfdefense.fsf.org/en/infographic.html>`__ of the Free "
-"Software Foundation."
-msgstr ""
-"Nejprve se seznamte s obecnou koncepcí standardu OpenPGP, například "
-"přečtením `této informační grafiky "
-"<https://emailselfdefense.fsf.org/en/infographic.html>`_ Nadace pro "
-"svobodný software."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:11 ../pro/openpgp-keygen-gpa.rst.inc:13
-#: ../pro/openpgp-keygen-on-device.rst.inc:19 ../pro/openpgp.rst.inc:19
-msgid "Key Generation"
-msgstr "Generování klíčů"
-
-#: ../pro/openpgp.rst.inc:21
-msgid "If you do not have OpenPGP keys yet, you need to generate them first."
-msgstr "Pokud ještě nemáte klíče OpenPGP, musíte si je nejprve vygenerovat."
-
-#: ../pro/openpgp.rst.inc:23
-msgid ""
-"`Generate keys on Nitrokey <openpgp-keygen-gpa.html>`_ - this is the best"
-" option if you are unexperienced, but you won’t have a backup of your "
-"keys and therefore won’t be able to mitigate the loss of the Nitrokey"
-msgstr ""
-"`Generování klíčů na Nitrokey <openpgp-keygen-gpa.html>`_ - tato možnost "
-"je nejlepší, pokud nemáte zkušenosti, ale nebudete mít zálohu svých "
-"klíčů, a proto nebudete moci zmírnit ztrátu Nitrokey."
-
-#: ../pro/openpgp.rst.inc:29
-msgid ""
-"`Generate keys on Nitrokey with different algorithm or key size <openpgp-"
-"keygen-on-device.html>`_ - this is as secure as the previous option and "
-"thus you won’t have a backup as well, but you can change the key "
-"attributes (that is the algorithm and key size)"
-msgstr ""
-"`Generování klíčů na Nitrokey s jiným algoritmem nebo velikostí klíče "
-"<openpgp-keygen-on-device.html>`_ - tato možnost je stejně bezpečná jako "
-"předchozí, a proto nebudete mít ani zálohu, ale můžete změnit atributy "
-"klíče (tedy algoritmus a velikost klíče)."
-
-#: ../pro/openpgp.rst.inc:35
-msgid ""
-"`Generate keys locally <openpgp-keygen-backup.html>`_ and copy them to "
-"Nitrokey - this is the most flexible, expert option, but only secure if "
-"your system is not compromised, because you can create a backup key "
-"outside your Nitrokey A similar description in french can be found `here "
-"<https://xieme-art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-"
-"pro/>`__."
-msgstr ""
-"`Vygenerujte klíče lokálně <openpgp-keygen-backup.html>`_ a zkopírujte je"
-" do Nitrokey - tato možnost je nejflexibilnější, nejodbornější, ale "
-"bezpečná pouze v případě, že váš systém není kompromitován, protože "
-"záložní klíč můžete vytvořit mimo Nitrokey Podobný popis ve francouzštině"
-" najdete `zde <https://xieme-art.org/post/importer-des-clefs-gnupg-dans-"
-"sa-nitrokey-pro/>`_."
-
-#: ../pro/openpgp.rst.inc:44
-msgid "Importing Existing Keys"
-msgstr "Importování existujících klíčů"
-
-#: ../pro/openpgp.rst.inc:46
-msgid ""
-"If you already have OpenPGP keys you may want to use them with your "
-"Nitrokey, instead of generating new ones. Importing existing keys works "
-"basically the same as generating keys locally first and copying them to "
-"the Nitrokey (see above). Therefore, please have a look at the "
-"`corresponding instructions <openpgp-keygen-backup.html#key-import>`_. "
-"Note that you probably want to generate another subkey for authentication"
-" to your existing key. See at the same instructions for `subkey "
-"generation <openpgp-keygen-backup.html#subkey-for-authentication>`_."
-msgstr ""
-"Pokud již máte klíče OpenPGP, můžete je použít s klíčem Nitrokey namísto "
-"generování nových klíčů. Import stávajících klíčů funguje v podstatě "
-"stejně, jako kdybyste klíče nejprve vygenerovali lokálně a zkopírovali je"
-" do klíče Nitrokey (viz výše). Proto se prosím podívejte na `odpovídající"
-" pokyny <openpgp-keygen-backup.html#key-import>`_. Všimněte si, že "
-"pravděpodobně budete chtít vygenerovat další podklíč pro ověřování ke "
-"stávajícímu klíči. Podívejte se na stejné pokyny pro `generování podklíče"
-" <openpgp-keygen-backup.html#subkey-for-authentication>`_."
-
-#: ../pro/openpgp.rst.inc:53
-msgid ""
-"for using `OpenPGP encryption with Thunderbird <openpgp-"
-"thunderbird.html>`_"
-msgstr ""
-"pro použití `OpenPGP šifrování s Thunderbirdem <openpgp-"
-"thunderbird.html>`_"
-
-#: ../pro/openpgp.rst.inc:56
-msgid "for using `OpenPGP encryption with Outlook <openpgp-outlook.html>`_"
-msgstr "pro použití `OpenPGP šifrování s Outlookem <openpgp-outlook.html>`_"
-
-#: ../pro/openpgp.rst.inc:59
-msgid ""
-"for using `Claws Mail <https://www.claws-"
-"mail.org/plugin.php?plugin=gpg>`__, an email client (and news reader) for"
-" Linux and Windows"
-msgstr ""
-"pro použití `Claws Mail <https://www.claws-"
-"mail.org/plugin.php?plugin=gpg>`_, e-mailového klienta (a čtečky zpráv) "
-"pro Linux a Windows."
-
-#: ../pro/openpgp.rst.inc:67
-msgid "for using `GPGTools <https://gpgtools.org/>`__ on macOS."
-msgstr "pro použití `GPGTools <https://gpgtools.org/>`_ v systému macOS."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:2
-msgid "OpenPGP Key Generation With Backup"
-msgstr "Generování klíčů OpenPGP se zálohováním"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:8
-msgid ""
-"The following instructions explain the generation of OpenPGP keys and how"
-" to copy them to the Nitrokey. This method has the advantage of providing"
-" a backup of the keys in case of losing or breaking the Nitrokey. The "
-"instructions are based on the command line interface of GnuPG. Thus, you "
-"need to have GnuPG installed on your system. The newest GnuPG version for"
-" Windows can be found `here <https://www.gpg4win.org/>`__ and the newest "
-"version for MacOS can be found `here <https://gpgtools.org/>`__. Users of"
-" Linux systems please install GnuPG with help of the package manager."
-msgstr ""
-"Následující pokyny vysvětlují generování klíčů OpenPGP a jejich "
-"kopírování do klíče Nitrokey. Výhodou této metody je, že poskytuje zálohu"
-" klíčů pro případ ztráty nebo rozbití klíče Nitrokey. Návod vychází z "
-"rozhraní příkazového řádku programu GnuPG. Proto je nutné mít v systému "
-"nainstalovaný GnuPG. Nejnovější verzi GnuPG pro Windows najdete `zde "
-"<https://www.gpg4win.org/>`_ a nejnovější verzi pro MacOS najdete `zde "
-"<https://gpgtools.org/>`_. Uživatelé systémů Linux si prosím nainstalujte"
-" GnuPG pomocí správce balíčků."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:13
-msgid ""
-"At first, you need to generate a key locally. You can decide, which key "
-"attributes to use and - most importantly - you can export the key and "
-"keep it somewhere save in case you need to restore the key."
-msgstr ""
-"Nejprve je třeba vygenerovat klíč lokálně. Můžete se rozhodnout, které "
-"atributy klíče použijete, a - což je nejdůležitější - klíč můžete "
-"exportovat a uložit pro případ, že byste jej potřebovali obnovit."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:16
-msgid "Main Key and Encryption Subkey"
-msgstr "Hlavní klíč a dílčí šifrovací klíč"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:18
-msgid ""
-"We can use the command ``gpg --full-generate-key --expert`` to start a "
-"guided key generation with all possible options. You can choose the key "
-"type (usually RSA (1) or ECC (9)), the length of the key and other "
-"attributes. The following output is just a simple example, you may choose"
-" other values."
-msgstr ""
-"Příkazem ``gpg --full-generate-key --expert`` spustíme řízené generování "
-"klíče se všemi možnými volbami. Můžete zvolit typ klíče (obvykle RSA (1) "
-"nebo ECC (9)), délku klíče a další atributy. Následující výstup je jen "
-"jednoduchý příklad, můžete zvolit i jiné hodnoty."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:81
-msgid ""
-"The following table illustrates which algorithm can be used on which "
-"device, in case you want to use different key attributes."
-msgstr ""
-"Následující tabulka ukazuje, který algoritmus lze použít na kterém "
-"zařízení v případě, že chcete použít různé atributy klíče."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:84
-#: ../pro/openpgp-keygen-on-device.rst.inc:193
-msgid "\\"
-msgstr "\\"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:90
-#: ../pro/openpgp-keygen-on-device.rst.inc:199
-msgid "curve25519 (ECC)"
-msgstr "curve25519 (ECC)"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:91
-#: ../pro/openpgp-keygen-on-device.rst.inc:200
-msgid "NIST (ECC)"
-msgstr "NIST (ECC)"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:92
-#: ../pro/openpgp-keygen-on-device.rst.inc:201
-msgid "Brainpool (ECC)"
-msgstr "Brainpool (ECC)"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:93
-#: ../pro/openpgp-keygen-on-device.rst.inc:202
-msgid "secp256k1"
-msgstr "secp256k1"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:97
-msgid "Subkey for Authentication"
-msgstr "Dílčí klíč pro ověřování"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:99
-msgid ""
-"You now have a main key with the capability to sign and certify (marked "
-"as [SC]) and a subkey for encryption (marked as [E]). It is necessary to "
-"have another subkey for use cases in which authentication is needed. This"
-" subkey is generated in the next step. Type in ``gpg --edit-key --expert "
-"keyID`` to start the process, whereas “keyID” is either the id of the key"
-" or the email address used during key generation."
-msgstr ""
-"Nyní máte hlavní klíč s možností podepisování a certifikace (označený "
-"jako [SC]) a dílčí klíč pro šifrování (označený jako [E]). Je nutné mít "
-"další dílčí klíč pro případy použití, kdy je potřeba ověřování. Tento "
-"dílčí klíč se vygeneruje v dalším kroku. Pro zahájení procesu zadejte "
-"``gpg --edit-key --expert keyID``, přičemž \"keyID\" je buď id klíče, "
-"nebo e-mailová adresa použitá při generování klíče."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:120
-msgid ""
-"Now you are in the interactive mode of GnuPG and you can add a key by "
-"simply typing ``addkey``. You need to choose the key you want to use. It "
-"is crucial to choose “set your own capabilities”, because we want to have"
-" the “authenticate” capability which is not available otherwise. We "
-"toggle sign and encrypt by typing ``s`` and ``e`` and we activate "
-"authenticate by typing ``a``."
-msgstr ""
-"Nyní jste v interaktivním režimu GnuPG a můžete přidat klíč jednoduše "
-"zadáním ``addkey``. Je třeba vybrat klíč, který chcete použít. Zásadní je"
-" zvolit \"nastavit vlastní schopnosti\", protože chceme mít k dispozici "
-"schopnost \"ověřit\", která jinak není k dispozici. Podepisování a "
-"šifrování přepínáme zadáním ``s`` a ``e`` a aktivujeme ověření zadáním "
-"``a``."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:178
-msgid ""
-"We quit with ``q``. Afterwards we need to answer the same questions as "
-"before. Finally, we have a ready-to-go key set which we can import to our"
-" device."
-msgstr ""
-"Končíme ``q``. Poté musíme odpovědět na stejné otázky jako dříve. Konečně"
-" máme připravenou sadu klíčů, kterou můžeme importovat do našeho "
-"zařízení."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:212
-msgid ""
-"Now is good time to backup your key. Please keep this backup very secure."
-" It is best practice to never have this key on a regular computer which "
-"has connection to the internet, so that the key never gets compromised. "
-"You can create a backup with something like:"
-msgstr ""
-"Nyní je vhodná doba pro zálohování klíče. Tuto zálohu si velmi dobře "
-"zabezpečte. Nejlepší je nemít tento klíč nikdy na běžném počítači, který "
-"je připojen k internetu, aby nedošlo k jeho ohrožení. Zálohu můžete "
-"vytvořit pomocí např:"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:219
-msgid "Key Import"
-msgstr "Klíčový import"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:221
-msgid ""
-"You have a main key and two subkeys which can be imported to your "
-"Nitrokey. Before proceeding please make sure that you really have a "
-"backup of the key, if you need one. The ``keytocard`` command used in the"
-" next steps will **delete** your key from your disk!"
-msgstr ""
-"Máte hlavní klíč a dva dílčí klíče, které lze importovat do klíče "
-"Nitrokey. Než budete pokračovat, ujistěte se, že máte skutečně zálohu "
-"klíče, pokud ji potřebujete. Příkaz ``keytocard`` použitý v následujících"
-" krocích **odstraní** váš klíč z disku!"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:223
-msgid ""
-"We start the process by accessing the interactive interface of GnuPG "
-"again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is either"
-" the id of the key or the email address used during key generation."
-msgstr ""
-"Proces zahájíme opětovným přístupem do interaktivního rozhraní GnuPG "
-"pomocí ``gpg --edit-key --expert keyID``, přičemž ``keyID`` je buď id "
-"klíče, nebo e-mailová adresa použitá při generování klíče."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:259
-msgid ""
-"We just imported the main key to the card. Now we proceed with the two "
-"subkeys. We type ``key 1`` to select the encryption subkey and type in "
-"``keytocard`` again and select the slot to use."
-msgstr ""
-"Na kartu jsme právě importovali hlavní klíč. Nyní budeme pokračovat se "
-"dvěma dílčími klíči. Zadáme ``key 1`` pro výběr šifrovacího podklíče a "
-"zadáme ``keytocard`` a opět vybereme slot, který chceme použít."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:288
-msgid ""
-"Now we deselect the first key with ``key 1`` and select the second subkey"
-" with ``key 2`` and move it as well with ``keytocard``. Afterwards we "
-"quit and save the changes."
-msgstr ""
-"Nyní zrušíme výběr prvního klíče pomocí ``key 1`` a vybereme druhý "
-"podklíč pomocí ``key 2`` a přesuneme ji také pomocí ``keytocard``. Poté "
-"ukončíme práci a uložíme změny."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:331
-msgid ""
-"Your keys are now moved to the Nitrokey and thus secured in hardware. "
-"Congratulations!"
-msgstr ""
-"Vaše klíče jsou nyní přesunuty do klíče Nitrokey a tím hardwarově "
-"zabezpečeny. Gratulujeme!"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:334
-#: ../pro/openpgp-keygen-gpa.rst.inc:53
-#: ../pro/openpgp-keygen-on-device.rst.inc:206
-msgid "Exporting Public Key and Keyserver Usage"
-msgstr "Exportování veřejného klíče a používání serveru Keyserver"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:336
-#: ../pro/openpgp-keygen-gpa.rst.inc:55
-#: ../pro/openpgp-keygen-on-device.rst.inc:208
-msgid ""
-"Although you can start to use your Nitrokey right away after generating "
-"the keys on your system, you need to import your public key on every "
-"system, you want to use the Nitrokey on. So to be prepared you have two "
-"options: You either save the public key anywhere you like and use it on "
-"another system or you save the public key on a webpage/keyserver."
-msgstr ""
-"Přestože můžete začít používat klíč Nitrokey ihned po vygenerování klíčů "
-"ve svém systému, je třeba importovat veřejný klíč do každého systému, ve "
-"kterém chcete klíč Nitrokey používat. Chcete-li být připraveni, máte tedy"
-" dvě možnosti: Buď si veřejný klíč uložíte kamkoli a použijete ho v jiném"
-" systému, nebo si veřejný klíč uložíte na webovou stránku/keyserver."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:339
-#: ../pro/openpgp-keygen-on-device.rst.inc:211
-msgid "Generating a Public Key File"
-msgstr "Generování souboru veřejného klíče"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:341
-msgid ""
-"To get a simple file of your public key, you can just use ``gpg --armor "
-"--export keyID > pubkey.asc``. Use either the fingerprint as “keyID” "
-"(look at ``gpg -K`` to get it) or just use your email address as an "
-"identifier."
-msgstr ""
-"Chcete-li získat jednoduchý soubor svého veřejného klíče, stačí použít "
-"``gpg --armor --export keyID > pubkey.asc``. Jako \"keyID\" použijte buď "
-"otisk prstu (podívejte se na ``gpg -K`` a získejte jej), nebo jako "
-"identifikátor použijte pouze svou e-mailovou adresu."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:343
-msgid ""
-"You can carry this file with you or send it to anyone who you like. This "
-"file is not secret at all. If you want to use the Nitrokey on another "
-"system, you first import this public key via ``gpg --import pubkey.asc`` "
-"and then types ``gpg --card-status`` so that the system knows where to "
-"look for this key. That’s all."
-msgstr ""
-"Tento soubor můžete nosit s sebou nebo ho poslat komukoli, komu se vám "
-"líbí. Tento soubor není vůbec tajný. Pokud chcete použít klíč Nitrokey v "
-"jiném systému, nejprve tento veřejný klíč importujte pomocí ``gpg "
-"--import pubkey.asc`` a poté zadejte ``gpg --card-status``, aby systém "
-"věděl, kde má tento klíč hledat. To je vše."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:347
-#: ../pro/openpgp-keygen-on-device.rst.inc:218
-msgid "Uploading the Public Key"
-msgstr "Nahrání veřejného klíče"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:349
-#: ../pro/openpgp-keygen-on-device.rst.inc:220
-msgid ""
-"If you do not want to carry a public keyfile with you, you can upload it "
-"to keyserver. You can do this by typing ``gpg --keyserver "
-"search.keyserver.net --send-key keyID``. If you are using another machine"
-" you can just import it by using ``gpg --keyserver search.keyserver.net "
-"--recv-key keyID``."
-msgstr ""
-"Pokud nechcete mít veřejný soubor s klíčem u sebe, můžete jej nahrát na "
-"server keyserver. Můžete to provést zadáním ``gpg --keyserver "
-"search.keyserver.net --send-key keyID``. Pokud používáte jiný počítač, "
-"můžete jej jednoduše importovat pomocí ``gpg --keyserver "
-"search.keyserver.net --recv-key keyID``."
-
-#: ../pro/openpgp-keygen-backup.rst.inc:351
-msgid ""
-"Another possibility is to change the URL setting on your card. Start "
-"``gpg --card-edit`` again and first set the URL where the key is situated"
-" (e.g. on the keyserver or on your webpage etc.) via the ``url`` command."
-" From now on you can import the key on another system by just using the "
-"``fetch`` command within the ``gpg --card-edit environment``."
-msgstr ""
-"Další možností je změnit nastavení adresy URL na kartě. Spusťte znovu "
-"``gpg --card-edit`` a nejprve nastavte URL adresu, na které se klíč "
-"nachází (např. na keyserveru nebo na vaší webové stránce apod.), pomocí "
-"příkazu ``url``. Od této chvíle můžete klíč importovat do jiného systému "
-"pouze pomocí příkazu ``fetch`` v rámci ``gpg --card-edit environment``."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:2
-msgid "OpenPGP Key Generation Using GPA"
-msgstr "Generování klíčů OpenPGP pomocí GPA"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:8
-msgid ""
-"The following instructions explain the generation of OpenPGP keys "
-"directly on the Nitrokey with help of the GNU Privacy Assistant (GPA). "
-"You won’t be able to create a backup of these keys. Thus, if you lose the"
-" Nitrokey or it breaks you can not decrypt mails or use these keys "
-"anymore. Please see `here <openpgp-outlook.html>`_ for a comparison of "
-"the different methods to generate OpenPGP keys."
-msgstr ""
-"Následující pokyny vysvětlují generování klíčů OpenPGP přímo na Nitrokey "
-"pomocí programu GNU Privacy Assistant (GPA). Zálohu těchto klíčů nebude "
-"možné vytvořit. Pokud tedy Nitrokey ztratíte nebo se rozbije, nebudete "
-"moci dešifrovat poštu ani tyto klíče dále používat. Srovnání různých "
-"metod generování klíčů OpenPGP naleznete `zde <openpgp-outlook.html>`_."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:10
-msgid ""
-"You need to have GnuPG and GPA installed on your system. The newest "
-"version for Windows can be found `here <https://www.gpg4win.org/>`__ "
-"(make sure to check “GPA” during the installation!). Users of Linux "
-"systems please install GnuPG and GPA with help of the package manager "
-"(e.g. using ``sudo apt install gnupg gpa`` on Ubuntu)."
-msgstr ""
-"V systému musíte mít nainstalovaný GnuPG a GPA. Nejnovější verzi pro "
-"Windows najdete `zde <https://www.gpg4win.org/>`_ (při instalaci "
-"nezapomeňte zaškrtnout \"GPA\"!). Uživatelé systémů Linux nainstalujte "
-"GnuPG a GPA pomocí správce balíčků (např. pomocí ``sudo apt install gnupg"
-" gpa`` v Ubuntu)."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:15
-msgid ""
-"At first, open the GNU Privacy Assistant (GPA). You may are asked to "
-"generate a key, you can skip this step for now by clicking “Do it later”."
-" In the main window, please click on “Card” or “Card Manager”."
-msgstr ""
-"Nejprve otevřete program GNU Privacy Assistant (GPA). Můžete být požádáni"
-" o vygenerování klíče, tento krok můžete prozatím přeskočit kliknutím na "
-"\"Do it later\". V hlavním okně klikněte na \"Card\" (Karta) nebo \"Card "
-"Manager\" (Správce karet)."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:22
-msgid ""
-"Another windows opens. Please go to “Card” -> “Generate key” to start the"
-" key generation process."
-msgstr ""
-"Otevře se další okno. Přejděte na \"Card\" -> \"Generate key\" a spusťte "
-"proces generování klíče."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:29
-msgid ""
-"Now you can put in your name and the email address you want to use for "
-"the key that will be generated next. You may choose an expiration date "
-"for your key, but you don’t have to."
-msgstr ""
-"Nyní můžete zadat své jméno a e-mailovou adresu, kterou chcete použít pro"
-" klíč, který bude vygenerován příště. Můžete zvolit datum vypršení "
-"platnosti klíče, ale nemusíte."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:31
-msgid ""
-"**Please do not use the backup checkbox**. This “backup” does only save "
-"the encryption key. In case of a loss of the device, you will not be able"
-" to restore the whole key set. So on the one hand it is no full backup "
-"(use `these instructions <openpgp-keygen-backup.html>`_ instead, if you "
-"need one) and on the other hand you risk that someone else can get in "
-"possession of your encryption key. The advantage of generating keys on-"
-"device is to make sure that keys are stored securely. Therefore, we "
-"recommend to skip this half-backup."
-msgstr ""
-"**Prosím, nepoužívejte zaškrtávací políčko zálohování**. Tato \"záloha\" "
-"ukládá pouze šifrovací klíč. V případě ztráty zařízení nebude možné "
-"obnovit celou sadu klíčů. Jednak tedy nejde o žádnou úplnou zálohu (pokud"
-" ji potřebujete, použijte místo ní `tento návod <openpgp-keygen-"
-"backup.html>`_) a jednak riskujete, že se k vašemu šifrovacímu klíči může"
-" dostat někdo jiný. Výhodou generování klíčů v zařízení je zajištění "
-"bezpečného uložení klíčů. Proto doporučujeme tuto poloviční zálohu "
-"vynechat."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:38
-msgid ""
-"You will be asked for the admin PIN (default: 12345678) and the user PIN "
-"(default: 123456). When the key generation is finished, you can see the "
-"fingerprints of the keys on the bottom of the window. You may fill up the"
-" fields shown above, which are saved on your Nitrokey as well."
-msgstr ""
-"Budete požádáni o zadání administrátorského PIN kódu (výchozí: 12345678) "
-"a uživatelského PIN kódu (výchozí: 123456). Po dokončení generování klíčů"
-" se ve spodní části okna zobrazí otisky klíčů. Můžete vyplnit výše "
-"zobrazená pole, která se rovněž uloží do klíče Nitrokey."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:45
-msgid ""
-"Now you can close the window and go back to the main window. Your key "
-"will be visible in the key manager after refreshing. Every application "
-"which makes use of GnuPG will work with your Nitrokey as well, because "
-"GnuPG is fully aware of the fact, that the keys are stored on your "
-"Nitrokey."
-msgstr ""
-"Nyní můžete okno zavřít a vrátit se do hlavního okna. Po obnovení bude "
-"váš klíč viditelný ve správci klíčů. Každá aplikace, která využívá GnuPG,"
-" bude pracovat i s vaším klíčem Nitrokey, protože GnuPG si je plně vědom "
-"skutečnosti, že klíče jsou uloženy na vašem klíči Nitrokey."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:62
-msgid ""
-"Right-click on your key entry in the key manager and click “Export Keys…”"
-" to export the public key to a file and/or “Send Keys…” to upload the key"
-" to a keyserver."
-msgstr ""
-"Klikněte pravým tlačítkem myši na položku klíče ve správci klíčů a "
-"klikněte na \"Exportovat klíče...\" pro export veřejného klíče do souboru"
-" a/nebo na \"Odeslat klíče...\" pro odeslání klíče na server klíčů."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:64
-msgid ""
-"You can carry the keyfile with you or send it to anyone who you like. "
-"This file is not secret at all. If you want to use the Nitrokey on "
-"another system, you first import this public key via clicking on “Keys” "
-"-> “Importing Keys…” and choosing the file."
-msgstr ""
-"Soubor s klíčem můžete nosit s sebou nebo ho poslat komukoli, komu se vám"
-" líbí. Tento soubor není vůbec tajný. Pokud chcete klíč Nitrokey používat"
-" v jiném systému, musíte tento veřejný klíč nejprve importovat kliknutím "
-"na \"Klíče\" -> \"Import klíčů...\" a výběrem souboru."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:67
-msgid ""
-"If you do not want to carry a public keyfile with you, you can upload it "
-"to keyserver. If you are using another machine you can just import it by "
-"using “Server” -> “Retrieve Keys…” and entering your name or key id."
-msgstr ""
-"Pokud nechcete mít veřejný soubor s klíčem u sebe, můžete jej nahrát na "
-"server keyserver. Pokud používáte jiný počítač, můžete jej jednoduše "
-"importovat pomocí příkazu \"Server\" -> \"Retrieve Keys...\" a zadáním "
-"svého jména nebo ID klíče."
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:69
-msgid ""
-"Another possibility is to change the URL setting on your card. Open the "
-"card manager again and fill in the URL where the key is situated (e.g. on"
-" the keyserver or on your webpage etc.). From now on you can import the "
-"key on another system by right-clicking on the URL and click on “Fetch "
-"Key”."
-msgstr ""
-"Další možností je změnit nastavení adresy URL na kartě. Znovu otevřete "
-"správce karet a vyplňte adresu URL, na které se klíč nachází (např. na "
-"keyserveru nebo na vaší webové stránce apod.). Od této chvíle můžete klíč"
-" importovat do jiného systému tak, že kliknete pravým tlačítkem myši na "
-"adresu URL a zvolíte \"Fetch Key\"."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:2
-msgid "OpenPGP Key Generation On-Device"
-msgstr "Generování klíčů OpenPGP v zařízení"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:8
-msgid ""
-"The following instructions explain the generation of OpenPGP keys "
-"directly on the Nitrokey. This is done by using the command line "
-"interface of GnuPG. Thus, you need to have GnuPG installed on your "
-"system. The newest GnuPG version for Windows can be found `here "
-"<https://www.gpg4win.org/>`__ and the newest version for MacOS can be "
-"found `here <https://gpgtools.org/>`__. Users of Linux systems please "
-"install GnuPG with help of the package manager."
-msgstr ""
-"Následující pokyny vysvětlují generování klíčů OpenPGP přímo na Nitrokey."
-" To se provádí pomocí rozhraní příkazového řádku GnuPG. Proto je třeba "
-"mít v systému nainstalované GnuPG. Nejnovější verzi GnuPG pro Windows "
-"najdete `zde <https://www.gpg4win.org/>`_ a nejnovější verzi pro MacOS "
-"najdete `zde <https://gpgtools.org/>`_. Uživatelé systémů Linux si prosím"
-" nainstalujte GnuPG pomocí správce balíčků."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:12
-msgid ""
-"These instructions are based on GnuPG version 2.2.6 or higher. Some Linux"
-" Distributions have an older version installed. In this case please "
-"choose a different method as listed `here <openpgp.html>`_ or install a "
-"newer version if possible."
-msgstr ""
-"Tyto pokyny jsou založeny na GnuPG verze 2.2.6 nebo vyšší. Některé "
-"linuxové distribuce mají nainstalovanou starší verzi. V takovém případě "
-"zvolte jinou metodu, jak je uvedeno `zde <openpgp.html>`_, nebo si "
-"nainstalujte novější verzi, pokud je to možné."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:21
-msgid ""
-"The following descriptions explain the basic key generation on-device via"
-" GnuPG’s command line interface. The default behaviour is to generate RSA"
-" keys of 2048 bit size. If you want to change the key algorithm and "
-"length, have a look at the next section first."
-msgstr ""
-"Následující popisy vysvětlují základní generování klíčů v zařízení "
-"prostřednictvím rozhraní příkazového řádku GnuPG. Výchozí chování je "
-"generování klíčů RSA o velikosti 2048 bitů. Pokud chcete změnit "
-"algoritmus a délku klíče, podívejte se nejprve do další části."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:23
-msgid "Open a command line and type ``gpg2 --card-edit``."
-msgstr "Otevřete příkazový řádek a zadejte ``gpg2 --card-edit``."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:53
-msgid ""
-"Now you are in the interactive interface of GnuPG. Activate the admin "
-"commands with ``admin`` and use ``generate`` afterwards to start the "
-"generation of keys."
-msgstr ""
-"Nyní se nacházíte v interaktivním rozhraní GnuPG. Aktivujte příkazy "
-"správce pomocí ``admin`` a poté pomocí ``generate`` spusťte generování "
-"klíčů."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:95
-msgid ""
-"**Please do not create the suggested off-card backup.** This “backup” "
-"does only save the encryption key, but not the signature and "
-"authentication keys. In case of a loss of the device, you will not be "
-"able to restore the whole key set. So on the one hand it is no full "
-"backup (use `these instructions <openpgp-keygen-backup.html>`_ instead, "
-"if you need one) and on the other hand you risk that someone else can get"
-" in possession of your encryption key. The advantage of generating keys "
-"on-device is to make sure that keys are stored securely. Therefore, we "
-"recommend to skip this half-backup."
-msgstr ""
-"**Navrženou zálohu mimo kartu nevytvářejte.** Tato \"záloha\" ukládá "
-"pouze šifrovací klíč, ale ne podpisový a ověřovací klíč. V případě ztráty"
-" zařízení nebude možné obnovit celou sadu klíčů. Jednak tedy nejde o "
-"žádnou úplnou zálohu (pokud ji potřebujete, použijte místo ní `tento "
-"návod <openpgp-keygen-backup.html>`_) a jednak riskujete, že se k vašemu "
-"šifrovacímu klíči může dostat někdo jiný. Výhodou generování klíčů v "
-"zařízení je zajištění bezpečného uložení klíčů. Proto doporučujeme tuto "
-"poloviční zálohu vynechat."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:98
-msgid ""
-"Now you have a complete key set on your device which can be used for the "
-"`various applications "
-"<https://www.nitrokey.com/documentation/applications>`__ listed on our "
-"site. Type ``quit`` and hit enter to exit."
-msgstr ""
-"Nyní máte v zařízení kompletní sadu klíčů, kterou můžete použít pro "
-"`různé aplikace <https://www.nitrokey.com/documentation/applications>`_ "
-"uvedené na našich stránkách. Zadejte ``quit`` a stiskněte enter pro "
-"ukončení."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:101
-msgid "Change Key Attributes"
-msgstr "Změna klíčových atributů"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:103
-msgid ""
-"This section is about changing the key attributes. If you want to use the"
-" default values, you can proceed with the next section."
-msgstr ""
-"Tato část se zabývá změnou klíčových atributů. Pokud chcete použít "
-"výchozí hodnoty, můžete pokračovat další částí."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:105
-msgid "Open a command line and type ``gpg2 --card-edit --expert``."
-msgstr "Otevřete příkazový řádek a zadejte ``gpg2 --card-edit --expert``."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:131
-msgid ""
-"Now you are in the interactive interface of GnuPG. As you can see in the "
-"“Key attributes” field above, the default value rsa2048 is set. To change"
-" them, activate the admin commands with ``admin`` and use ``key-attr`` "
-"afterwards to change the attributes of the keys."
-msgstr ""
-"Nyní se nacházíte v interaktivním rozhraní GnuPG. Jak vidíte v poli \"Key"
-" attributes\" výše, je nastavena výchozí hodnota rsa2048. Chcete-li je "
-"změnit, aktivujte příkazy pro správu pomocí ``admin`` a poté použijte "
-"``key-attr`` pro změnu atributů klíčů."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:162
-msgid ""
-"You can choose the attribute for each key (that is, signature, encryption"
-" and authentication key). Most people will use the same attributes for "
-"every key. Type ``list`` to see the results (have look at the “Key "
-"attributes” field, which now reads rsa4096)."
-msgstr ""
-"Pro každý klíč (tj. podpisový, šifrovací a ověřovací klíč) můžete zvolit "
-"atribut. Většina lidí bude pro každý klíč používat stejné atributy. "
-"Zadejte ``list`` a podívejte se na výsledek (podívejte se do pole "
-"\"Atributy klíče\", které nyní zní rsa4096)."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:188
-msgid ""
-"Type ``quit`` and hit enter to exit or proceed directly with the previous"
-" section to actually generate the keys with the key attributes you just "
-"set."
-msgstr ""
-"Zadejte ``quit`` a stiskněte enter pro ukončení nebo pokračujte přímo v "
-"předchozí části, abyste skutečně vygenerovali klíče s právě nastavenými "
-"atributy."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:190
-msgid ""
-"The following table illustrates which algorithm can be used on which "
-"device."
-msgstr ""
-"Následující tabulka ukazuje, který algoritmus lze použít na kterém "
-"zařízení."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:213
-msgid ""
-"To get a simple file of your public key, you can just use ``gpg2 --armor "
-"--export keyID > pubkey.asc``. Use either the fingerprint as “keyID” "
-"(look at ``gpg -K`` to get it) or just use your email address as an "
-"identifier."
-msgstr ""
-"Chcete-li získat jednoduchý soubor svého veřejného klíče, stačí použít "
-"``gpg2 --armor --export keyID > pubkey.asc``. Jako \"keyID\" použijte buď"
-" otisk prstu (podívejte se na ``gpg -K`` a získejte jej), nebo jako "
-"identifikátor použijte pouze svou e-mailovou adresu."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:215
-msgid ""
-"You can carry this file with you or send it to anyone who you like. This "
-"file is not secret at all. If you want to use the Nitrokey on another "
-"system, you first import this public key via ``gpg2 --import pubkey.asc``"
-" and then types ``gpg2 --card-status`` so that the system knows where to "
-"look for this key. That’s all."
-msgstr ""
-"Tento soubor můžete nosit s sebou nebo ho poslat komukoli, komu se vám "
-"líbí. Tento soubor není vůbec tajný. Pokud chcete použít klíč Nitrokey v "
-"jiném systému, nejprve tento veřejný klíč importujte pomocí ``gpg2 "
-"--import pubkey.asc`` a poté zadejte ``gpg2 --card-status``, aby systém "
-"věděl, kde má tento klíč hledat. To je vše."
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:222
-msgid ""
-"Another possibility is to change the URL setting on your card. Start gpg "
-"–card-edit again and first set the URL where the key is situated (e.g. on"
-" the keyserver or on your webpage etc.) via the ``url`` command. From now"
-" on you can import the key on another system by just using the ``fetch`` "
-"command within the ``gpg --card-edit`` environment."
-msgstr ""
-"Další možností je změnit nastavení adresy URL na kartě. Spusťte znovu gpg"
-" -card-edit a nejprve nastavte adresu URL, na které se klíč nachází "
-"(např. na keyserveru nebo na vaší webové stránce apod.), pomocí příkazu "
-"``url``. Od této chvíle můžete klíč importovat do jiného systému pouze "
-"pomocí příkazu ``fetch`` v rámci prostředí ``gpg --card-edit``."
-
-#: ../pro/openpgp-outlook.rst.inc:2
-msgid "OpenPGP Email Encryption with Outlook"
-msgstr "Šifrování e-mailů OpenPGP s aplikací Outlook"
-
-#: ../pro/openpgp-outlook.rst.inc:10
-msgid ""
-"Unfortunately, there is no solution to use OpenPGP in Outlook for macOS "
-"yet."
-msgstr ""
-"Bohužel zatím neexistuje řešení pro použití OpenPGP v aplikaci Outlook "
-"pro macOS."
-
-#: ../pro/openpgp-outlook.rst.inc:16
-msgid ""
-"If you do not have PGP-Keys on your Nitrokey yet, please look at `this "
-"page <openpgp.html>`_ first."
-msgstr ""
-"Pokud na svém klíči Nitrokey ještě nemáte klíče PGP, podívejte se nejprve"
-" na `tuto stránku <openpgp.html>`_."
-
-#: ../pro/openpgp-outlook.rst.inc:18
-msgid ""
-"You need to have GnuPG installed on your System. The newest GnuPG version"
-" for Windows can be found `here <https://www.gpg4win.org>`__. You need to"
-" make sure to have “GpgOL” checked during installation process (see "
-"below)."
-msgstr ""
-"V systému musíte mít nainstalovaný GnuPG. Nejnovější verzi GnuPG pro "
-"Windows najdete `zde <https://www.gpg4win.org>`_. Při instalaci je třeba "
-"se ujistit, že je zaškrtnuta volba \"GpgOL\" (viz níže)."
-
-#: ../pro/openpgp-outlook.rst.inc:28
-msgid ""
-"After installing GPG4Win along with GpgOL, you will see a new icon "
-"labeled “Secure” in the composing window. To encrypt and sign a mail you "
-"just click on the sign like seen below."
-msgstr ""
-"Po instalaci GPG4Win spolu s GpgOL se v okně pro vytváření souborů "
-"zobrazí nová ikona s označením \"Secure\". Pro zašifrování a podepsání "
-"e-mailu stačí kliknout na znak, jak je vidět níže."
-
-#: ../pro/openpgp-outlook.rst.inc:35
-msgid ""
-"GnuPG will start signing and encrypting the mail as soon as you click on "
-"‘send’. You are requested to choose the identity you want to sign with "
-"and encrypt for."
-msgstr ""
-"GnuPG začne podepisovat a šifrovat poštu, jakmile kliknete na tlačítko "
-"\"odeslat\". Budete vyzváni k výběru identity, kterou chcete podepsat a "
-"zašifrovat."
-
-#: ../pro/openpgp-outlook.rst.inc:42
-msgid ""
-"Furthermore, you are asked for typing in the User PIN of the Nitrokey for"
-" signing the mail."
-msgstr ""
-"Dále jste vyzváni k zadání uživatelského PIN kódu Nitrokey pro podepsání "
-"pošty."
-
-#: ../pro/openpgp-outlook.rst.inc:49
-msgid ""
-"You will be asked automatically for your User PIN if you want to read an "
-"encrypted mail."
-msgstr ""
-"Pokud chcete číst zašifrovanou poštu, budete automaticky požádáni o "
-"zadání uživatelského kódu PIN."
-
-#: ../pro/openpgp-thunderbird.rst.inc:2
-msgid "OpenPGP Email Encryption With Thunderbird"
-msgstr "Šifrování e-mailů pomocí OpenPGP v aplikaci Thunderbird"
-
-#: ../pro/openpgp-thunderbird.rst.inc:9
-msgid "Thunderbird 78.3 and newer"
-msgstr "Thunderbird 78.3 a novější"
-
-#: ../pro/openpgp-thunderbird.rst.inc:11
-msgid ""
-"At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy"
-" to set up. See `Thunderbird’s documentation "
-"<https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`__ for details."
-" Here is a `comprehensive German guide "
-"<https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-"
-"nitrokey-storage/>`__."
-msgstr ""
-"V současné době není snadné nastavit podporu e-mailů OpenPGP v "
-"Thunderbirdu. Podrobnosti naleznete v `dokumentaci Thunderbirdu "
-"<https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`_. Zde je "
-"`kompletní německý průvodce <https://decatec.de/it/thunderbird-78-pgp-"
-"verschluesselung-mit-dem-nitrokey-storage/>`_."
-
-#: ../pro/openpgp-thunderbird.rst.inc:16
-msgid ""
-"Error message: ``The configured key ID '4BA0183FCBA844A7' cannot be found"
-" on your keyring``"
-msgstr ""
-"Chybová zpráva: ``The configured key ID '4BA0183FCBA844A7' cannot be "
-"found on your keyring``"
-
-#: ../pro/openpgp-thunderbird.rst.inc:18
-msgid "Make sure that the public key is imported to the Thunderbird’s manager and"
-msgstr "Ujistěte se, že veřejný klíč je importován do správce Thunderbirdu a"
-
-#: ../pro/openpgp-thunderbird.rst.inc:19
-msgid ""
-"The key ID does not contain any whitespace, and consists of 16 characters"
-" from range 0-9 A-F"
-msgstr ""
-"ID klíče neobsahuje žádné bílé znaky a skládá se z 16 znaků z rozsahu 0-9"
-" A-F."
-
-#: ../pro/openpgp-thunderbird.rst.inc:20
-msgid "you have GPA or Kleopatra software installed."
-msgstr "máte nainstalovaný software GPA nebo Kleopatra."
-
-#: ../pro/openpgp-thunderbird.rst.inc:22
-msgid ""
-"Please use Kleopatra or `GPA <openpgp-keygen-gpa.html>`_ software to "
-"handle the smart card."
-msgstr ""
-"Pro obsluhu čipové karty použijte software Kleopatra nebo `GPA <openpgp-"
-"keygen-gpa.html>`_."
-
-#: ../pro/openpgp-thunderbird.rst.inc:25
-msgid "Thunderbird 77 and older"
-msgstr "Thunderbird 77 a starší"
-
-#: ../pro/openpgp-thunderbird.rst.inc:30
-msgid ""
-"Install the device driver as described `here "
-"<https://www.nitrokey.com/documentation/installation>`__."
-msgstr ""
-"Nainstalujte ovladač zařízení podle popisu `zde "
-"<https://www.nitrokey.com/documentation/installation>`_."
-
-#: ../pro/openpgp-thunderbird.rst.inc:33
-msgid ""
-"Install `Thunderbird <https://www.thunderbird.net/en-US/>`__ and the Add-"
-"on `Enigmail <https://www.enigmail.net/index.php/en/>`__."
-msgstr ""
-"Nainstalujte `Thunderbird <https://www.thunderbird.net/en-US/>`_ a "
-"doplněk `Enigmail <https://www.enigmail.net/index.php/en/>`_."
-
-#: ../pro/openpgp-thunderbird.rst.inc:37
-msgid "Changing PINs"
-msgstr "Změna kódů PIN"
-
-#: ../pro/openpgp-thunderbird.rst.inc:39
-msgid "There are two PINs for the Nitrokey:"
-msgstr "Pro klíč Nitrokey existují dva kódy PIN:"
-
-#: ../pro/openpgp-thunderbird.rst.inc:41
-msgid "The User PIN required for daily work"
-msgstr "Uživatelský kód PIN potřebný pro každodenní práci"
-
-#: ../pro/openpgp-thunderbird.rst.inc:43
-msgid ""
-"The Admin PIN is required to change keys or other settings of the device."
-" In addition, the Nitrokey can be unlocked (for example, after 3 times "
-"incorrect input of the User PIN) by means of the Admin PIN."
-msgstr ""
-"Kód PIN správce je nutný pro změnu klíčů nebo jiných nastavení zařízení. "
-"Kromě toho lze Nitrokey odemknout (například po trojnásobném nesprávném "
-"zadání uživatelského kódu PIN) pomocí kódu PIN správce."
-
-#: ../pro/openpgp-thunderbird.rst.inc:47
-msgid ""
-"After receiving the Nitrokey, you should immediately change the User PIN "
-"= “123456” and Admin PIN = “12345678”."
-msgstr ""
-"Po obdržení klíče Nitrokey byste měli okamžitě změnit PIN uživatele = "
-"\"123456\" a PIN správce = \"12345678\"."
-
-#: ../pro/openpgp-thunderbird.rst.inc:53
-msgid "Insert the Nitrokey into a USB port on your computer."
-msgstr "Vložte Nitrokey do portu USB v počítači."
-
-#: ../pro/openpgp-thunderbird.rst.inc:55
-msgid "Start Thunderbird."
-msgstr "Spusťte Thunderbird."
-
-#: ../pro/openpgp-thunderbird.rst.inc:57
-msgid ""
-"In Thunderbird, select as shown in the following picture. “OpenPGP” → "
-"“Manage smart card”"
-msgstr ""
-"V aplikaci Thunderbird vyberte podle následujícího obrázku. \"OpenPGP\" →"
-" \"Spravovat čipovou kartu\""
-
-#: ../pro/openpgp-thunderbird.rst.inc:65
-msgid "In the “SmartCard Details” window, select “SmartCard → Change PIN”"
-msgstr ""
-"V okně \"Podrobnosti o kartě SmartCard\" vyberte možnost \"Karta "
-"SmartCard → Změnit PIN\"."
-
-#: ../pro/openpgp-thunderbird.rst.inc:72
-msgid ""
-"Select “Change PIN”. This is your User PIN you need for daily work. Enter"
-" the current PIN ( “123456” for delivery) and twice your new PIN. For "
-"this PIN you can use the characters: a-z A-Z 0-9 / .;;:- !? () [] {}% +. "
-"The PIN should be at least 6 characters long. Click “OK”."
-msgstr ""
-"Vyberte možnost \"Změnit PIN\". Toto je váš uživatelský PIN, který "
-"potřebujete pro každodenní práci. Zadejte stávající PIN (\"123456\" pro "
-"doručení) a dvakrát nový PIN. Pro tento PIN můžete použít znaky: a-z A-Z "
-"0-9 / .;;:- !? () [] {}% +. PIN by měl mít alespoň 6 znaků. Klikněte na "
-"tlačítko \"OK\"."
-
-#: ../pro/openpgp-thunderbird.rst.inc:83
-msgid "Repeat the procedure for the Admin PIN. “SmartCard → Change PIN”"
-msgstr "Zopakujte postup pro kód PIN správce. \"SmartCard → Změna PIN\""
-
-#: ../pro/openpgp-thunderbird.rst.inc:90
-msgid ""
-"Select Change Admin PIN. This is your Admin PIN that you only rarely "
-"need. Enter the current PIN ( “12345678” for delivery) and the new PIN "
-"twice. For this PIN, you can use the characters: a-z A-Z 0-9 / .;;:- !? "
-"() [] {}% +. The PIN should be at least 8 characters long. Click “OK”."
-msgstr ""
-"Vyberte možnost Změnit PIN správce. Toto je váš PIN administrátora, který"
-" potřebujete jen zřídka. Zadejte dvakrát aktuální PIN (\"12345678\" pro "
-"doručení) a nový PIN. Pro tento PIN můžete použít znaky: a-z A-Z 0-9 / "
-".;;:- !? () [] {}% +. PIN by měl mít alespoň 8 znaků. Klikněte na "
-"tlačítko \"OK\"."
-
-#: ../pro/openpgp-thunderbird.rst.inc:101
-msgid ""
-"You have now changed the PINs and should continue to generate your "
-"personal keys."
-msgstr ""
-"Nyní jste změnili kódy PIN a měli byste pokračovat v generování osobních "
-"klíčů."
-
-#: ../pro/openpgp-thunderbird.rst.inc:104
-msgid "Generation of Keys"
-msgstr "Generování klíčů"
-
-#: ../pro/openpgp-thunderbird.rst.inc:106
-msgid ""
-"To encrypt data and e-mails, a key pair consisting of a public key and a "
-"private key, must first be generated. The so-called public key is used to"
-" **en**\\ crypt the data or e-mails. You can distribute this to all those"
-" with whom you want to communicate securely (for example, publish it "
-"publicly on your site). The so-called private key is used to **de**\\ "
-"crypt the data or messages. This key should **NEVER** be made known! "
-"Usually, you also do not have direct access to it (see below), since this"
-" is stored securely on the Nitrokey. Use the Nitrokey to create both keys"
-" using the following procedure:"
-msgstr ""
-"Pro šifrování dat a e-mailů je třeba nejprve vygenerovat dvojici klíčů, "
-"která se skládá z veřejného a soukromého klíče. Takzvaný veřejný klíč se "
-"používá k **šifrování dat nebo e-mailů. Ten můžete distribuovat všem, se "
-"kterými chcete bezpečně komunikovat (například jej zveřejnit na svých "
-"stránkách). Takzvaný soukromý klíč se používá k **de**\\ šifrování dat "
-"nebo zpráv. Tento klíč by neměl být **nikdy** zveřejněn! Obvykle k němu "
-"také nemáte přímý přístup (viz níže), protože je bezpečně uložen v "
-"systému Nitrokey. Pomocí klíče Nitrokey vytvořte oba klíče následujícím "
-"postupem:"
-
-#: ../pro/openpgp-thunderbird.rst.inc:109
-msgid "Insert the Nitrokey into a USB port on your computer. StartThunderbird"
-msgstr "Vložte Nitrokey do portu USB v počítači. SpustitThunderbird"
-
-#: ../pro/openpgp-thunderbird.rst.inc:112
-msgid ""
-"In Thunderbird, select as shown in the following picture „OpenPGP“ → "
-"„Manage Smart Card“"
-msgstr ""
-"V Thunderbirdu vyberte podle následujícího obrázku \"OpenPGP\" → "
-"\"Spravovat čipovou kartu\"."
-
-#: ../pro/openpgp-thunderbird.rst.inc:115
-msgid "In the “SmartCard details” window, select “SmartCard” → “Generate key”"
-msgstr ""
-"V okně \"Podrobnosti o kartě SmartCard\" vyberte možnost \"Karta "
-"SmartCard\" → \"Generovat klíč\"."
-
-#: ../pro/openpgp-thunderbird.rst.inc:118
-msgid ""
-"In the following window, select your e-mail address for which you want to"
-" generate keys. Verify that the e-mail address specified in “User ID” is "
-"correct. You can also specify whether a private key backup copy should be"
-" stored on your computer."
-msgstr ""
-"V následujícím okně vyberte e-mailovou adresu, pro kterou chcete "
-"generovat klíče. Zkontrolujte, zda je e-mailová adresa zadaná v poli \"ID"
-" uživatele\" správná. Můžete také určit, zda má být záložní kopie "
-"soukromého klíče uložena v počítači."
-
-#: ../pro/openpgp-thunderbird.rst.inc:128
-msgid ""
-"If you do not create a backup copy, you have no chance to get your "
-"encrypted data if the Nitrokey is lost or damaged!"
-msgstr ""
-"Pokud si nevytvoříte záložní kopii, nemáte v případě ztráty nebo "
-"poškození klíče Nitrokey šanci získat zašifrovaná data!"
-
-#: ../pro/openpgp-thunderbird.rst.inc:136
-msgid ""
-"It is recommended to store this safety device. Select “Save key copy of "
-"the key outside the Smard Card”. Then enter your personal password for "
-"the backup copy under “Passphrase”. This password should not be less than"
-" 8 characters, and should contain both uppercase and lowercase letters "
-"and numbers. You can also use a long sentence, but avoid known prose or "
-"lyric. Also, no name or known term should be used."
-msgstr ""
-"Doporučuje se toto bezpečnostní zařízení uložit. Vyberte možnost \"Uložit"
-" kopii klíče mimo kartu Smard\". Poté zadejte své osobní heslo pro "
-"záložní kopii v části \"Passphrase\" (Fráze). Toto heslo by nemělo mít "
-"méně než 8 znaků a mělo by obsahovat velká i malá písmena a číslice. "
-"Můžete také použít dlouhou větu, ale vyhněte se známé próze nebo textu. "
-"Rovněž by nemělo být použito žádné jméno nebo známý pojem."
-
-#: ../pro/openpgp-thunderbird.rst.inc:144
-msgid ""
-"**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö"
-" or ß)"
-msgstr ""
-"**Povolené znaky**: a-z A-Z 0-9 /.,;:-!?( )%+ (bez umlauts ä,ü,ö,Ä,Ü,Ö "
-"nebo ß)"
-
-#: ../pro/openpgp-thunderbird.rst.inc:146
-msgid ""
-"**Poor Passwords**: qwerty123, ILoveSusi3, Password, If you can dream it,"
-" you can do it."
-msgstr ""
-"**Chudé heslo**: qwerty123, ILoveSusi3, Heslo, Když o tom můžeš snít, tak"
-" to zvládneš."
-
-#: ../pro/openpgp-thunderbird.rst.inc:148
-#, python-format
-msgid ""
-"**Strong Passwords**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen "
-"Earz and fife legs (spelling errors increase security)"
-msgstr ""
-"**Silné heslo**: g(Ak?2Pn7Yn nebo Ki.stg2bLqzp%d nebo A dog with greeen "
-"Ears and fife legs (pravopisné chyby zvyšují bezpečnost)."
-
-#: ../pro/openpgp-thunderbird.rst.inc:150
-msgid ""
-"You do **not** need this password for daily work. It is only necessary "
-"for the restoration of the secret key, e.g. if you have lost the "
-"Nitrokey. Therefore, keep the password in a safe place."
-msgstr ""
-"Toto heslo **nepotřebujete** pro každodenní práci. Je nutné pouze pro "
-"obnovení tajného klíče, např. pokud jste ztratili Nitrokey. Heslo proto "
-"uchovávejte na bezpečném místě."
-
-#: ../pro/openpgp-thunderbird.rst.inc:152
-msgid ""
-"You can also specify whether and when the key should be automatically "
-"invalid. This means, from this point onwards, no more e-mails can be "
-"encrypted with this key and you have to create a new key pair."
-msgstr ""
-"Můžete také určit, zda a kdy má být klíč automaticky neplatný. To "
-"znamená, že od této chvíle již nelze tímto klíčem šifrovat žádné e-maily "
-"a je třeba vytvořit nový pár klíčů."
-
-#: ../pro/openpgp-thunderbird.rst.inc:154
-msgid "Finally, click on “Generate key pair”."
-msgstr "Nakonec klikněte na možnost \"Generovat pár klíčů\"."
-
-#: ../pro/openpgp-thunderbird.rst.inc:161
-msgid "You are now asked if the key should be generated. Confirm with “Yes”."
-msgstr "Nyní jste dotázáni, zda má být klíč vygenerován. Potvrďte \"Ano\"."
-
-#: ../pro/openpgp-thunderbird.rst.inc:168
-msgid ""
-"In order for the program to write your keys to the stick, you must enter "
-"the admin PIN and the user PIN (changed above)."
-msgstr ""
-"Aby program mohl zapsat vaše klíče na paměťovou kartu, musíte zadat "
-"administrátorský PIN a uživatelský PIN (změněný výše)."
-
-#: ../pro/openpgp-thunderbird.rst.inc:176
-msgid ""
-"The key generation can take a few minutes. Do not terminate the program "
-"prematurely!"
-msgstr "Generování klíče může trvat několik minut. Neukončujte program předčasně!"
-
-#: ../pro/openpgp-thunderbird.rst.inc:178
-msgid ""
-"When the key generation is complete, you receive the following message. A"
-" certificate is now created that allows you to invalidate your key in an "
-"emergency. This certificate is automatically saved with your private key."
-" This should be printed out or backed up on at least one other external "
-"medium so that you can revoke the validity of the keys if your keys and "
-"backups are lost. Click “Yes”"
-msgstr ""
-"Po dokončení generování klíče se zobrazí následující zpráva. Nyní je "
-"vytvořen certifikát, který umožňuje v případě nouze klíč zneplatnit. "
-"Tento certifikát je automaticky uložen spolu s vaším soukromým klíčem. "
-"Ten by měl být vytištěn nebo zálohován alespoň na jednom dalším externím "
-"médiu, abyste mohli platnost klíčů zrušit v případě ztráty klíčů a záloh."
-" Klikněte na tlačítko \"Ano\""
-
-#: ../pro/openpgp-thunderbird.rst.inc:185
-msgid ""
-"You can now select the directory in which the backup copy is stored. This"
-" copy is encrypted with your password entered above. This means that no "
-"one can read or use the keys without your password. Do not give your "
-"password to anyone. This file with the name of your e-mail address and "
-"the suffix “.asc” should be backed up on another medium. After selecting "
-"the directory, click “Save”."
-msgstr ""
-"Nyní můžete vybrat adresář, do kterého bude záložní kopie uložena. Tato "
-"kopie je zašifrována vaším výše zadaným heslem. To znamená, že bez vašeho"
-" hesla ji nikdo nemůže přečíst ani použít. Své heslo nikomu nesdělujte. "
-"Tento soubor s názvem vaší e-mailové adresy a příponou \".asc\" by měl "
-"být zálohován na jiném médiu. Po výběru adresáře klikněte na tlačítko "
-"\"Uložit\"."
-
-#: ../pro/openpgp-thunderbird.rst.inc:192
-msgid "Here you must again specify your user PIN or passphrase. Then click “OK”"
-msgstr ""
-"Zde musíte opět zadat svůj uživatelský kód PIN nebo přístupovou frázi. "
-"Poté klikněte na tlačítko \"OK\"."
-
-#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
-#: ../storage/firmware-update-manually.rst:-1
-msgid "img12"
-msgstr "img12"
-
-#: ../pro/openpgp-thunderbird.rst.inc:200
-msgid ""
-"You will now see the message that the certificate was created and saved. "
-"Click “OK”"
-msgstr ""
-"Nyní se zobrazí zpráva, že certifikát byl vytvořen a uložen. Klikněte na "
-"tlačítko \"OK\""
-
-#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
-#: ../storage/firmware-update-manually.rst:-1
-msgid "img13"
-msgstr "img13"
-
-#: ../pro/openpgp-thunderbird.rst.inc:208
-msgid ""
-"Key generation is now complete. You can now exit the program (File - "
-"Close)."
-msgstr ""
-"Generování klíčů je nyní dokončeno. Nyní můžete program ukončit (Soubor -"
-" Zavřít)."
-
-#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
-msgid "img14"
-msgstr "img14"
-
-#: ../pro/openpgp-thunderbird.rst.inc:216
-msgid ""
-"Your Nitrokey is personalized and ready to use. **Have fun with the "
-"secure email encryption!**"
-msgstr ""
-"Váš klíč Nitrokey je personalizovaný a připravený k použití. **Zabavte se"
-" s bezpečným šifrováním e-mailu!**"
-
 #: ../pro/linux/openvpn-easyrsa.rst:2 ../pro/windows/openvpn-easyrsa.rst:2
 #: ../storage/linux/openvpn-easyrsa.rst:2
 msgid "OpenVPN Configuration with Easy-RSA"
@@ -18062,15 +18276,6 @@ msgstr ""
 "Pro získání jednorázového hesla stačí otevřít aplikaci Nitrokey a znovu "
 "přejít do \"Menu\" -> \"Passwords\" -> YourSlotName."
 
-#: ../pro/smime.rst.inc:17
-msgid ""
-"If you are in doubt which one to choose, you should use OpenPGP, see "
-"`here <openpgp.html>`_. This page describes the usage of S/MIME email "
-"encryption."
-msgstr ""
-"Pokud váháte, který z nich zvolit, měli byste použít OpenPGP, viz `zde "
-"<openpgp.html>`_. Tato stránka popisuje použití šifrování e-mailů S/MIME."
-
 #: ../pro/linux/ssh.rst:2 ../start/linux/ssh.rst:2 ../storage/linux/ssh.rst:2
 msgid "SSH For Server Administration"
 msgstr "SSH pro správu serveru"
@@ -18427,153 +18632,6 @@ msgid ""
 msgstr ""
 "Přejděte do \"Menu\" -> \"Configure\" a změňte PIN uživatele (výchozí: "
 "123456) a PIN správce (výchozí: 12345678) na vlastní volbu."
-
-#: ../pro/windows/openpgp-csp.rst:2
-msgid "Windows Login and S/MIME Email Encryption with Active Directory"
-msgstr ""
-"Přihlašování k systému Windows a šifrování e-mailů S/MIME pomocí služby "
-"Active Directory"
-
-#: ../pro/windows/openpgp-csp.rst:8
-msgid ""
-"Please note that this driver is still in development/testing. Please tell"
-" us your experiences! See our `contact page "
-"<https://www.nitrokey.com/contact>`__."
-msgstr ""
-"Upozorňujeme, že tento ovladač je stále ve fázi vývoje/testování. Sdělte "
-"nám prosím své zkušenosti! Viz naše `kontaktní stránka "
-"<https://www.nitrokey.com/contact>`_."
-
-#: ../pro/windows/openpgp-csp.rst:13
-msgid ""
-"This guide assumes that an Active Directory server with role ‘Active "
-"Directory Certificate Services’ is installed and running on a server. "
-"These instructions are based on Nitrokey Storage 2 and Nitrokey Pro 2 "
-"only."
-msgstr ""
-"Tato příručka předpokládá, že na serveru je nainstalován a spuštěn server"
-" služby Active Directory s rolí \"Certifikační služby Active Directory\"."
-" Tyto pokyny jsou založeny pouze na produktech Nitrokey Storage 2 a "
-"Nitrokey Pro 2."
-
-#: ../pro/windows/openpgp-csp.rst:16
-msgid "Installing OpenPGP-CSP"
-msgstr "Instalace protokolu OpenPGP-CSP"
-
-#: ../pro/windows/openpgp-csp.rst:18
-msgid ""
-"This step is needed for clients to use the OpenPGP-CSP driver. Download "
-"and install the `latest version <https://github.com/vletoux/OpenPGP-"
-"CSP/releases/tag/1.3>`__ of the installer file ‘SetupOpenPGPCsp’ for your"
-" system architecture, for ‘SetupOpenPGPCsp_x64.msi’ for 64-bit systems."
-msgstr ""
-"Tento krok je nutný, aby klienti mohli používat ovladač OpenPGP-CSP. "
-"Stáhněte a nainstalujte `nejnovější verzi <https://github.com/vletoux"
-"/OpenPGP-CSP/releases/tag/1.3>`_ instalačního souboru 'SetupOpenPGPCsp' "
-"pro vaši systémovou architekturu, pro 'SetupOpenPGPCsp_x64.msi' pro "
-"64bitové systémy."
-
-#: ../pro/windows/openpgp-csp.rst:20
-msgid ""
-"You may want to install the driver on the server as well for being able "
-"to enforce the use of this driver in the template (see below)."
-msgstr ""
-"Možná budete chtít nainstalovat ovladač také na server, abyste mohli "
-"vynutit použití tohoto ovladače v šabloně (viz níže)."
-
-#: ../pro/windows/openpgp-csp.rst:23
-msgid "Creating Certificate Template on Server Side"
-msgstr "Vytvoření šablony certifikátu na straně serveru"
-
-#: ../pro/windows/openpgp-csp.rst:25
-msgid ""
-"On Active Directory Server open certsrv.msc to manage your certificate "
-"templates. Right click on ‘Certificate Templates’ and choose ‘Manage’"
-msgstr ""
-"Na serveru Active Directory otevřete soubor certsrv.msc a spravujte "
-"šablony certifikátů. Klikněte pravým tlačítkem myši na položku \"Šablony "
-"certifikátů\" a vyberte možnost \"Spravovat\"."
-
-#: ../pro/windows/openpgp-csp.rst:32
-msgid ""
-"Now right click on ‘Smartcard Logon’ template and click ‘Duplicate’, to "
-"create a new template on basis of this standard template. Rename template"
-" to ‘OpenPGP Card Logon and Email’ or alike."
-msgstr ""
-"Nyní klikněte pravým tlačítkem myši na šablonu \"Přihlášení pomocí čipové"
-" karty\" a kliknutím na tlačítko \"Duplikovat\" vytvořte novou šablonu na"
-" základě této standardní šablony. Přejmenujte šablonu na \"Přihlášení "
-"kartou OpenPGP a e-mail\" nebo podobně."
-
-#: ../pro/windows/openpgp-csp.rst:39
-msgid ""
-"Under ‘Request Handling’, you can choose the OpenPGP-CSP as the one and "
-"only Cryptography Service Provider (click the Button labeled ‘CSPs…’). "
-"For this to work, you need to install the driver on the server as well "
-"and you have to insert a Nitrokey beforehand. This is optional. You can "
-"let the user choose, which CSP to use."
-msgstr ""
-"V části \"Request Handling\" můžete jako jediného poskytovatele "
-"kryptografických služeb vybrat OpenPGP-CSP (klikněte na tlačítko "
-"\"CSPs...\"). Aby to fungovalo, je třeba nainstalovat ovladač i na server"
-" a předtím vložit Nitrokey. To je nepovinné. Můžete nechat uživatele "
-"vybrat, který CSP chce použít."
-
-#: ../pro/windows/openpgp-csp.rst:51
-msgid ""
-"For enabling S/MIME email encryption go to ‘Subject name’. Tick the "
-"checkbox ‘E-Mail name’ (note: You must save the mail addresses of your "
-"users in the corresponding Active Directory field!)."
-msgstr ""
-"Chcete-li povolit šifrování e-mailu S/MIME, přejděte na položku \"Název "
-"předmětu\". Zaškrtněte políčko 'E-mail name' (poznámka: poštovní adresy "
-"uživatelů musíte uložit do příslušného pole Active Directory!)."
-
-#: ../pro/windows/openpgp-csp.rst:58
-msgid ""
-"Then go to ‘Extensions’, there you edit the applications guideline and "
-"add ‘Secure Email’."
-msgstr ""
-"Poté přejděte do části \"Rozšíření\", kde upravte pokyny pro aplikace a "
-"přidejte \"Zabezpečený e-mail\"."
-
-#: ../pro/windows/openpgp-csp.rst:71
-msgid "Request Certificate on Client (Domain Member)"
-msgstr "Žádost o certifikát na klientovi (člen domény)"
-
-#: ../pro/windows/openpgp-csp.rst:73
-msgid ""
-"To request a certificate for a domain member, you have to open "
-"certmgr.msc. Right click on folder ‘Personal->Certificates’ and click "
-"’All Tasks->Request New Certificate and choose the template you created "
-"on the AD."
-msgstr ""
-"Chcete-li požádat o certifikát pro člena domény, musíte otevřít soubor "
-"certmgr.msc. Klikněte pravým tlačítkem myši na složku "
-"\"Personal->Certificates\" a klikněte na \"All Tasks->Request New "
-"Certificate\" a vyberte šablonu, kterou jste vytvořili v AD."
-
-#: ../pro/windows/openpgp-csp.rst:81
-msgid ""
-"If you did not enforce the usage of OpenPGP-CSP you have to choose it "
-"here now."
-msgstr "Pokud jste si nevynutili použití OpenPGP-CSP, musíte si jej zvolit zde."
-
-#: ../pro/windows/openpgp-csp.rst:93
-msgid "Next you choose the Authentication slot for the certificate."
-msgstr "Dále vyberete slot pro ověření certifikátu."
-
-#: ../pro/windows/openpgp-csp.rst:95
-msgid ""
-"You are now ready to logon on the computer with the Nitrokey instead of "
-"your password and you can use `S/MIME email encryption/signing "
-"<smime.html>`_ with the Nitrokey. The driver has to be installed on every"
-" computer you want to use the certificate on."
-msgstr ""
-"Nyní jste připraveni přihlásit se k počítači pomocí klíče Nitrokey místo "
-"hesla a můžete použít `Šifrování/podpisování e-mailů S/MIME "
-"<smime.html>`_ pomocí klíče Nitrokey. Ovladač musí být nainstalován na "
-"každém počítači, na kterém chcete certifikát používat."
 
 #: ../pro/windows/openvpn-easyrsa.rst:17
 msgid ""
@@ -27119,3 +27177,4 @@ msgstr ""
 #~ "Budoucí aktualizace firmwaru umožní další "
 #~ "funkce a budou zde odpovídajícím "
 #~ "způsobem zdokumentovány."
+

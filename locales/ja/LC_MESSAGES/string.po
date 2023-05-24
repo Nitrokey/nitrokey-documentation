@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 22:03+0200\n"
+"POT-Creation-Date: 2023-05-24 13:53+0200\n"
 "PO-Revision-Date: 2023-05-22 21:46+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -1998,7 +1997,8 @@ msgid "Nitrokey Pro 2, Nitrokey Storage 2, or Nitrokey HSM 2"
 msgstr "Nitrokey Pro 2、Nitrokey Storage 2、またはNitrokey HSM 2"
 
 #: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:53
-#: ../nextbox/external-storage.rst:18 ../pro/linux/automatic-screen-lock.rst:21
+#: ../nextbox/external-storage.rst:18 ../nitrokey3/shared/openpgp-uif.rst:17
+#: ../pro/linux/automatic-screen-lock.rst:21
 msgid "Configuration"
 msgstr "構成"
 
@@ -3454,9 +3454,9 @@ msgid ""
 "<https://github.com/OpenSC/OpenSC/wiki>`__."
 msgstr "システムにOpenSCがインストールされている必要があります。OpenSCプロジェクトの`wikiページ<https://github.com/OpenSC/OpenSC/wiki>`_を参照してみてください。"
 
-#: ../hsm/windows/smime.rst:5 ../pro/smime-outlook.rst.inc:17
-#: ../pro/smime-thunderbird.rst.inc:17 ../pro/windows/smime.rst:5
-#: ../storage/windows/smime.rst:5
+#: ../hsm/windows/smime.rst:5 ../nitrokey3/windows/smime.rst:5
+#: ../pro/smime-outlook.rst.inc:17 ../pro/smime-thunderbird.rst.inc:17
+#: ../pro/windows/smime.rst:5 ../storage/windows/smime.rst:5
 msgid ""
 "Windows users with 64-bit system (standard) need to install both, the "
 "32-bit and the 64-bit version of OpenSC!"
@@ -5811,8 +5811,8 @@ msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com/api/v1/info>`_."
 msgstr ""
-"公開されているNetHSMのデモインスタンスは、`nethsmdemo.nitrokey."
-"com<https://nethsmdemo.nitrokey.com/api/v1/info>`_ で利用可能です。"
+"公開されているNetHSMのデモインスタンスは、`nethsmdemo.nitrokey.com<https://nethsmdemo.nitrokey.com/api/v1/info>`_"
+" で利用可能です。"
 
 #: ../nethsm/integration.rst:24
 msgid ""
@@ -9794,6 +9794,1064 @@ msgid ""
 "``--pin`` option:"
 msgstr "デバイスにFIDO2ピンを設定している場合、``--pin`` オプションを使用する必要があります。"
 
+#: ../pro/openpgp.rst.inc:2
+msgid "OpenPGP Email Encryption"
+msgstr "OpenPGPメール暗号化"
+
+#: ../pro/openpgp.rst.inc:14
+msgid ""
+"If you are in doubt which one to choose, you should use OpenPGP. While "
+"this page describes the usage of OpenPGP, S/MIME is described `here "
+"<smime.html>`_."
+msgstr "どちらを選ぶべきか迷ったら、OpenPGPを使うべきです。このページではOpenPGPの使い方を説明していますが、S/MIMEについては`こちら<smime.html>`_で説明しています。"
+
+#: ../pro/openpgp.rst.inc:16
+msgid ""
+"Please familiarize yourself with the general concept behind the OpenPGP "
+"standard first, for example by reading `this info graphic "
+"<https://emailselfdefense.fsf.org/en/infographic.html>`__ of the Free "
+"Software Foundation."
+msgstr ""
+"例えば、Free Software "
+"Foundationの`この情報のグラフィック<https://emailselfdefense.fsf.org/en/infographic.html>`_を読むなどして、OpenPGP規格の背後にある一般的な概念をまず理解してください。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:11 ../pro/openpgp-keygen-gpa.rst.inc:13
+#: ../pro/openpgp-keygen-on-device.rst.inc:19 ../pro/openpgp.rst.inc:19
+msgid "Key Generation"
+msgstr "キー・ジェネレーション"
+
+#: ../pro/openpgp.rst.inc:21
+msgid "If you do not have OpenPGP keys yet, you need to generate them first."
+msgstr "まだOpenPGPの鍵を持っていない場合は、まず鍵を生成する必要があります。"
+
+#: ../pro/openpgp.rst.inc:23
+msgid ""
+"`Generate keys on Nitrokey <openpgp-keygen-gpa.html>`_ - this is the best"
+" option if you are unexperienced, but you won’t have a backup of your "
+"keys and therefore won’t be able to mitigate the loss of the Nitrokey"
+msgstr ""
+"` Nitrokeyでキーを生成する <openpgp-keygen-gpa.html>`_ - "
+"経験のない方には最適なオプションですが、キーのバックアップがないため、Nitrokeyの紛失を軽減することができません。"
+
+#: ../pro/openpgp.rst.inc:29
+msgid ""
+"`Generate keys on Nitrokey with different algorithm or key size <openpgp-"
+"keygen-on-device.html>`_ - this is as secure as the previous option and "
+"thus you won’t have a backup as well, but you can change the key "
+"attributes (that is the algorithm and key size)"
+msgstr ""
+"`Nitrokeyで異なるアルゴリズムまたはキーサイズ<openpgp-keygen-on-device.html>`_でキーを生成する - "
+"これは前のオプションと同様に安全で、したがってバックアップもありませんが、キーの属性（アルゴリズムとキーサイズ）を変更することができます。"
+
+#: ../pro/openpgp.rst.inc:35
+msgid ""
+"`Generate keys locally <openpgp-keygen-backup.html>`_ and copy them to "
+"Nitrokey - this is the most flexible, expert option, but only secure if "
+"your system is not compromised, because you can create a backup key "
+"outside your Nitrokey A similar description in french can be found `here "
+"<https://xieme-art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-"
+"pro/>`__."
+msgstr ""
+"`キーをローカルに生成し<openpgp-keygen-backup.html>`_、Nitrokeyにコピーする - "
+"これは最も柔軟で専門的なオプションですが、Nitrokeyの外にバックアップ "
+"キーを作成できるため、システムが危険にさらされていない場合にのみ安全です フレンチでの同様の説明は、`こちら<https://xieme-"
+"art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-pro/>`_にあります。"
+
+#: ../pro/openpgp.rst.inc:44
+msgid "Importing Existing Keys"
+msgstr "既存のキーのインポート"
+
+#: ../pro/openpgp.rst.inc:46
+msgid ""
+"If you already have OpenPGP keys you may want to use them with your "
+"Nitrokey, instead of generating new ones. Importing existing keys works "
+"basically the same as generating keys locally first and copying them to "
+"the Nitrokey (see above). Therefore, please have a look at the "
+"`corresponding instructions <openpgp-keygen-backup.html#key-import>`_. "
+"Note that you probably want to generate another subkey for authentication"
+" to your existing key. See at the same instructions for `subkey "
+"generation <openpgp-keygen-backup.html#subkey-for-authentication>`_."
+msgstr ""
+"すでにOpenPGPキーをお持ちの方は、新しいキーを生成する代わりに、Nitrokeyでそのキーを使用することができます。既存の鍵をインポートする方法は、基本的にはローカルで鍵を生成し、それをNitrokeyにコピーする方法と同じです（上記参照）。したがって、`対応する説明書"
+"<openpgp-keygen-backup.html#key-"
+"import>`_を参照してください。なお、既存の鍵に認証用の別のサブキーを生成したい場合もあるでしょう。`サブキーの生成 <openpgp-"
+"keygen-backup.html#subkey-for-authentication>`_については、同じ指示を参照してください。"
+
+#: ../pro/openpgp.rst.inc:53
+msgid ""
+"for using `OpenPGP encryption with Thunderbird <openpgp-"
+"thunderbird.html>`_"
+msgstr "Thunderbirdで`OpenPGPの暗号化を使用する場合 <openpgp-thunderbird.html>`_。"
+
+#: ../pro/openpgp.rst.inc:56
+msgid "for using `OpenPGP encryption with Outlook <openpgp-outlook.html>`_"
+msgstr "Outlookで`OpenPGPの暗号化を使用する場合 <openpgp-outlook.html>`_。"
+
+#: ../pro/openpgp.rst.inc:59
+msgid ""
+"for using `Claws Mail <https://www.claws-"
+"mail.org/plugin.php?plugin=gpg>`__, an email client (and news reader) for"
+" Linux and Windows"
+msgstr ""
+"`Claws Mail <https://www.claws-"
+"mail.org/plugin.php?plugin=gpg>`_というLinuxおよびWindows用のメールクライアント（およびニュースリーダー）を使用しているため。"
+
+#: ../pro/openpgp.rst.inc:67
+msgid "for using `GPGTools <https://gpgtools.org/>`__ on macOS."
+msgstr "macOSで`GPGTools <https://gpgtools.org/>`_を使用するためのものです。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:2
+msgid "OpenPGP Key Generation With Backup"
+msgstr "バックアップ付きOpenPGP鍵生成"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:8
+msgid ""
+"The following instructions explain the generation of OpenPGP keys and how"
+" to copy them to the Nitrokey. This method has the advantage of providing"
+" a backup of the keys in case of losing or breaking the Nitrokey. The "
+"instructions are based on the command line interface of GnuPG. Thus, you "
+"need to have GnuPG installed on your system. The newest GnuPG version for"
+" Windows can be found `here <https://www.gpg4win.org/>`__ and the newest "
+"version for MacOS can be found `here <https://gpgtools.org/>`__. Users of"
+" Linux systems please install GnuPG with help of the package manager."
+msgstr "以下の説明では、OpenPGPキーの生成とNitrokeyへのコピー方法を説明します。この方法は、Nitrokeyを紛失したり壊したりした場合に、鍵のバックアップが取れるという利点があります。説明は、GnuPGのコマンドライン・インターフェースに基づいています。そのため、お使いのシステムにGnuPGがインストールされている必要があります。Windows用の最新のGnuPGバージョンは`こちら<https://www.gpg4win.org/>`_、MacOS用の最新バージョンは`こちら<https://gpgtools.org/>`_でご覧いただけます。Linuxシステムのユーザは、パッケージマネージャの助けを借りてGnuPGをインストールしてください。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:13
+msgid ""
+"At first, you need to generate a key locally. You can decide, which key "
+"attributes to use and - most importantly - you can export the key and "
+"keep it somewhere save in case you need to restore the key."
+msgstr "まず最初に、ローカルで鍵を生成する必要があります。どのような鍵の属性を使用するかを決めることができ、最も重要なことは、鍵をエクスポートしてどこかに保存し、鍵を復元する必要がある場合に備えることができることです。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:16
+msgid "Main Key and Encryption Subkey"
+msgstr "メインキーと暗号化サブキー"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:18
+msgid ""
+"We can use the command ``gpg --full-generate-key --expert`` to start a "
+"guided key generation with all possible options. You can choose the key "
+"type (usually RSA (1) or ECC (9)), the length of the key and other "
+"attributes. The following output is just a simple example, you may choose"
+" other values."
+msgstr ""
+"コマンド ``gpg --full-generate-key --expert`` "
+"を使用すると、可能なすべてのオプションを使ってガイド付きの鍵生成を開始することができます。鍵の種類（通常はRSA（1）またはECC（9））、鍵の長さ、その他の属性を選択することができます。以下の出力は簡単な例であり、他の値を選択することもできます。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:81
+msgid ""
+"The following table illustrates which algorithm can be used on which "
+"device, in case you want to use different key attributes."
+msgstr "次の表は、異なるキー属性を使用したい場合に、どのアルゴリズムをどのデバイスで使用できるかを示しています。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:84
+#: ../pro/openpgp-keygen-on-device.rst.inc:193
+msgid "\\"
+msgstr "\\"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:90
+#: ../pro/openpgp-keygen-on-device.rst.inc:199
+msgid "curve25519 (ECC)"
+msgstr "カーブ25519（ECC）"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:91
+#: ../pro/openpgp-keygen-on-device.rst.inc:200
+msgid "NIST (ECC)"
+msgstr "NIST（ECC）"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:92
+#: ../pro/openpgp-keygen-on-device.rst.inc:201
+msgid "Brainpool (ECC)"
+msgstr "ブレインプール（ECC）"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:93
+#: ../pro/openpgp-keygen-on-device.rst.inc:202
+msgid "secp256k1"
+msgstr "secp256k1"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:97
+msgid "Subkey for Authentication"
+msgstr "認証用サブキー"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:99
+msgid ""
+"You now have a main key with the capability to sign and certify (marked "
+"as [SC]) and a subkey for encryption (marked as [E]). It is necessary to "
+"have another subkey for use cases in which authentication is needed. This"
+" subkey is generated in the next step. Type in ``gpg --edit-key --expert "
+"keyID`` to start the process, whereas “keyID” is either the id of the key"
+" or the email address used during key generation."
+msgstr ""
+"これで、署名と認証の機能を持つメインキー（[SC]と表示）と、暗号化のためのサブキー（[E]と表示）ができました。認証が必要なユースケースでは、別のサブキーが必要になります。このサブキーは次のステップで生成します。``gpg"
+" --edit-key --expert keyID``と入力して処理を開始します。\"keyID "
+"\"には、鍵のIDまたは鍵生成時に使用したメールアドレスを指定します。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:120
+msgid ""
+"Now you are in the interactive mode of GnuPG and you can add a key by "
+"simply typing ``addkey``. You need to choose the key you want to use. It "
+"is crucial to choose “set your own capabilities”, because we want to have"
+" the “authenticate” capability which is not available otherwise. We "
+"toggle sign and encrypt by typing ``s`` and ``e`` and we activate "
+"authenticate by typing ``a``."
+msgstr ""
+"これでGnuPGのインタラクティブモードになり、``addkey``と入力するだけで、キーを追加することができます。使用するキーを選択する必要があります。set"
+" your own capabilities \"を選択することは非常に重要です。なぜなら、他の方法では利用できない \"authenticate"
+" \"機能を利用したいからです。``s``と``<xid=\"330\"></x>``、``a``と入力して、認証を有効にします。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:178
+msgid ""
+"We quit with ``q``. Afterwards we need to answer the same questions as "
+"before. Finally, we have a ready-to-go key set which we can import to our"
+" device."
+msgstr "``q``で終了しました。その後、以前と同じ質問に答える必要があります。最後に、すぐに使えるキーセットができあがりましたので、これをデバイスにインポートします。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:212
+msgid ""
+"Now is good time to backup your key. Please keep this backup very secure."
+" It is best practice to never have this key on a regular computer which "
+"has connection to the internet, so that the key never gets compromised. "
+"You can create a backup with something like:"
+msgstr "今こそ、あなたのキーをバックアップする良い機会です。このバックアップは非常に安全に保管してください。インターネットに接続されている通常のコンピュータでは、このキーを決して使用しないことをお勧めします。以下のような方法でバックアップを作成することができます。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:219
+msgid "Key Import"
+msgstr "キーインポート"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:221
+msgid ""
+"You have a main key and two subkeys which can be imported to your "
+"Nitrokey. Before proceeding please make sure that you really have a "
+"backup of the key, if you need one. The ``keytocard`` command used in the"
+" next steps will **delete** your key from your disk!"
+msgstr ""
+"メインキーと2つのサブキーがありますが、これらはNitrokeyにインポートすることができます。先に進む前に、必要に応じてキーのバックアップが本当にあるかどうか確認してください。次のステップで使用する``keytocard``コマンドは、ディスクからキーを"
+" **削除** します!"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:223
+msgid ""
+"We start the process by accessing the interactive interface of GnuPG "
+"again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is either"
+" the id of the key or the email address used during key generation."
+msgstr ""
+"まず、``gpg --edit-key --expert "
+"keyID``で再びGnuPGの対話型インターフェースにアクセスし、``keyID``には、鍵のIDか、鍵の生成時に使用したメールアドレスを指定します。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:259
+msgid ""
+"We just imported the main key to the card. Now we proceed with the two "
+"subkeys. We type ``key 1`` to select the encryption subkey and type in "
+"``keytocard`` again and select the slot to use."
+msgstr ""
+"メインキーをカードに取り込んだところです。次に、2つのサブキーを入力します。``key "
+"1``と入力して暗号化サブキーを選択し、``keytocard``と再度入力して使用するスロットを選択します。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:288
+msgid ""
+"Now we deselect the first key with ``key 1`` and select the second subkey"
+" with ``key 2`` and move it as well with ``keytocard``. Afterwards we "
+"quit and save the changes."
+msgstr ""
+"ここで、``key 1``で最初のキーを選択解除し、<xid=\"79\"></x>`key "
+"2``で2つ目のサブキーを選択し、``keytocard``で同様に移動します。その後、終了して変更を保存します。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:331
+msgid ""
+"Your keys are now moved to the Nitrokey and thus secured in hardware. "
+"Congratulations!"
+msgstr "あなたの鍵はNitrokeyに移され、こうしてハードウェアで固定されました。おめでとうございます。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:334
+#: ../pro/openpgp-keygen-gpa.rst.inc:53
+#: ../pro/openpgp-keygen-on-device.rst.inc:206
+msgid "Exporting Public Key and Keyserver Usage"
+msgstr "公開鍵のエクスポートと鍵サーバの利用"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:336
+#: ../pro/openpgp-keygen-gpa.rst.inc:55
+#: ../pro/openpgp-keygen-on-device.rst.inc:208
+msgid ""
+"Although you can start to use your Nitrokey right away after generating "
+"the keys on your system, you need to import your public key on every "
+"system, you want to use the Nitrokey on. So to be prepared you have two "
+"options: You either save the public key anywhere you like and use it on "
+"another system or you save the public key on a webpage/keyserver."
+msgstr "お使いのシステムで鍵を生成した後、すぐにNitrokeyを使い始めることができますが、Nitrokeyを使用したいすべてのシステムで公開鍵をインポートする必要があります。そのための準備として、2つの選択肢があります。公開鍵を好きな場所に保存して別のシステムで使用するか、Webページ/鍵サーバに公開鍵を保存するかです。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:339
+#: ../pro/openpgp-keygen-on-device.rst.inc:211
+msgid "Generating a Public Key File"
+msgstr "公開鍵ファイルの生成"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:341
+msgid ""
+"To get a simple file of your public key, you can just use ``gpg --armor "
+"--export keyID > pubkey.asc``. Use either the fingerprint as “keyID” "
+"(look at ``gpg -K`` to get it) or just use your email address as an "
+"identifier."
+msgstr ""
+"公開鍵のシンプルなファイルを取得するには、``gpg --armor --export keyID > "
+"pubkey.asc``を使用すればよいでしょう。フィンガープリントを \"keyID \"として使用するか（``gpg "
+"-K``を参照してください）、メールアドレスを識別子として使用してください。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:343
+msgid ""
+"You can carry this file with you or send it to anyone who you like. This "
+"file is not secret at all. If you want to use the Nitrokey on another "
+"system, you first import this public key via ``gpg --import pubkey.asc`` "
+"and then types ``gpg --card-status`` so that the system knows where to "
+"look for this key. That’s all."
+msgstr ""
+"このファイルを持ち歩いたり、好きな人に送ったりすることができます。このファイルは全く秘密ではありません。別のシステムでNitrokeyを使いたい場合は、まず``gpg"
+" --import pubkey.asc``を介してこの公開鍵をインポートし、次に``gpg --card-"
+"status``をタイプして、システムがこの鍵をどこで探すかを知るようにします。以上です。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:347
+#: ../pro/openpgp-keygen-on-device.rst.inc:218
+msgid "Uploading the Public Key"
+msgstr "公開鍵のアップロード"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:349
+#: ../pro/openpgp-keygen-on-device.rst.inc:220
+msgid ""
+"If you do not want to carry a public keyfile with you, you can upload it "
+"to keyserver. You can do this by typing ``gpg --keyserver "
+"search.keyserver.net --send-key keyID``. If you are using another machine"
+" you can just import it by using ``gpg --keyserver search.keyserver.net "
+"--recv-key keyID``."
+msgstr ""
+"公開鍵ファイルを持ち歩きたくない場合は、keyserverにアップロードすることができます。これは、``gpg --keyserver "
+"search.keyserver.net --send-key "
+"keyID``と入力することで行うことができます。別のマシンを使っている場合は、``gpg --keyserver "
+"search.keyserver.net --recv-key keyID``を使ってインポートすることができます。"
+
+#: ../pro/openpgp-keygen-backup.rst.inc:351
+msgid ""
+"Another possibility is to change the URL setting on your card. Start "
+"``gpg --card-edit`` again and first set the URL where the key is situated"
+" (e.g. on the keyserver or on your webpage etc.) via the ``url`` command."
+" From now on you can import the key on another system by just using the "
+"``fetch`` command within the ``gpg --card-edit environment``."
+msgstr ""
+"もう一つの可能性は、カードのURL設定を変更することです。``gpg --card-"
+"edit``を再度起動し、最初に``url``コマンドを使用して、キーが置かれているURLを設定します（例：キーサーバーや自分のウェブページなど）。今後は、``gpg"
+" --card-edit "
+"environment``コマンドの中で``fetch``コマンドを使用するだけで、別のシステムにキーをインポートすることができます。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:2
+msgid "OpenPGP Key Generation Using GPA"
+msgstr "GPAによるOpenPGPの鍵生成"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:8
+msgid ""
+"The following instructions explain the generation of OpenPGP keys "
+"directly on the Nitrokey with help of the GNU Privacy Assistant (GPA). "
+"You won’t be able to create a backup of these keys. Thus, if you lose the"
+" Nitrokey or it breaks you can not decrypt mails or use these keys "
+"anymore. Please see `here <openpgp-outlook.html>`_ for a comparison of "
+"the different methods to generate OpenPGP keys."
+msgstr ""
+"ここでは、GNU Privacy Assistant "
+"(GPA)を使って、Nitrokey上で直接OpenPGP鍵を生成する方法を説明します。この鍵のバックアップを作成することはできません。そのため、Nitrokeyを紛失したり壊れたりした場合、メールの解読やこれらの鍵の使用はできなくなります。OpenPGPの鍵を生成するさまざまな方法の比較については、`こちら"
+"<openpgp-outlook.html>`_をご覧ください。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:10
+msgid ""
+"You need to have GnuPG and GPA installed on your system. The newest "
+"version for Windows can be found `here <https://www.gpg4win.org/>`__ "
+"(make sure to check “GPA” during the installation!). Users of Linux "
+"systems please install GnuPG and GPA with help of the package manager "
+"(e.g. using ``sudo apt install gnupg gpa`` on Ubuntu)."
+msgstr ""
+"お使いのシステムにGnuPGとGPAがインストールされている必要があります。Windows用の最新版は、`こちら "
+"<https://www.gpg4win.org/>`_にあります（インストールの際には、必ず「GPA」をチェックしてください！）。Linuxシステムのユーザは、パッケージマネージャを使ってGnuPGとGPAをインストールしてください（例：Ubuntuでは``sudo"
+" apt install gnupg gpa``を使う）。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:15
+msgid ""
+"At first, open the GNU Privacy Assistant (GPA). You may are asked to "
+"generate a key, you can skip this step for now by clicking “Do it later”."
+" In the main window, please click on “Card” or “Card Manager”."
+msgstr ""
+"まず、GNU Privacy Assistant "
+"(GPA)を開きます。鍵の生成を求められることがありますが、「後で行う」をクリックすることで、このステップを省略することができます。メインウィンドウで、「カード」または「カードマネージャー」をクリックしてください。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:22
+msgid ""
+"Another windows opens. Please go to “Card” -> “Generate key” to start the"
+" key generation process."
+msgstr "別のウィンドウが開きます。カード」-> 「キーの生成」でキーの生成処理を開始してください。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:29
+msgid ""
+"Now you can put in your name and the email address you want to use for "
+"the key that will be generated next. You may choose an expiration date "
+"for your key, but you don’t have to."
+msgstr "ここで、あなたの名前と、次に生成されるキーに使用する電子メールアドレスを入力します。キーの有効期限を選択することもできますが、その必要はありません。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:31
+msgid ""
+"**Please do not use the backup checkbox**. This “backup” does only save "
+"the encryption key. In case of a loss of the device, you will not be able"
+" to restore the whole key set. So on the one hand it is no full backup "
+"(use `these instructions <openpgp-keygen-backup.html>`_ instead, if you "
+"need one) and on the other hand you risk that someone else can get in "
+"possession of your encryption key. The advantage of generating keys on-"
+"device is to make sure that keys are stored securely. Therefore, we "
+"recommend to skip this half-backup."
+msgstr ""
+"**バックアップのチェックボックスは使用しないでください**。この「バックアップ」は、暗号化キーのみを保存します。デバイスを紛失した場合は、キーセット全体を復元することはできません。つまり、一方では完全なバックアップではなく"
+" (必要であれば、`この説明書 <openpgp-keygen-backup.html>`_ "
+"を代わりに使用してください)、他方では、他の人があなたの暗号化キーを手に入れることができるというリスクがあります。デバイス上で鍵を生成する利点は、鍵が安全に保管されていることを確認できることです。そのため、このハーフバックアップは省略することをお勧めします。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:38
+msgid ""
+"You will be asked for the admin PIN (default: 12345678) and the user PIN "
+"(default: 123456). When the key generation is finished, you can see the "
+"fingerprints of the keys on the bottom of the window. You may fill up the"
+" fields shown above, which are saved on your Nitrokey as well."
+msgstr "管理者用暗証番号（デフォルト：12345678）とユーザー用暗証番号（デフォルト：123456）の入力を求められます。鍵の生成が終了すると、ウィンドウの下部に鍵のフィンガープリントが表示されます。上に表示されているフィールドに記入することができ、Nitrokeyにも保存されます。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:45
+msgid ""
+"Now you can close the window and go back to the main window. Your key "
+"will be visible in the key manager after refreshing. Every application "
+"which makes use of GnuPG will work with your Nitrokey as well, because "
+"GnuPG is fully aware of the fact, that the keys are stored on your "
+"Nitrokey."
+msgstr "これで、ウィンドウを閉じて、メインウィンドウに戻ることができます。あなたの鍵は、更新後にキーマネージャに表示されます。GnuPGを使用するすべてのアプリケーションは、あなたのNitrokeyでも動作します。なぜなら、GnuPGは鍵があなたのNitrokeyに保存されているという事実を完全に認識しているからです。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:62
+msgid ""
+"Right-click on your key entry in the key manager and click “Export Keys…”"
+" to export the public key to a file and/or “Send Keys…” to upload the key"
+" to a keyserver."
+msgstr ""
+"鍵マネージャの鍵エントリを右クリックして、「Export Keys...」をクリックすると、公開鍵がファイルにエクスポートされ、「Send "
+"Keys...」をクリックすると、鍵が鍵サーバにアップロードされます。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:64
+msgid ""
+"You can carry the keyfile with you or send it to anyone who you like. "
+"This file is not secret at all. If you want to use the Nitrokey on "
+"another system, you first import this public key via clicking on “Keys” "
+"-> “Importing Keys…” and choosing the file."
+msgstr ""
+"このキーファイルを持ち歩いたり、好きな人に送ったりすることができます。このファイルには一切の秘密はありません。別のシステムでNitrokeyを使用したい場合は、まず「鍵」->"
+" 「鍵のインポート...」をクリックしてファイルを選択し、この公開鍵をインポートします。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:67
+msgid ""
+"If you do not want to carry a public keyfile with you, you can upload it "
+"to keyserver. If you are using another machine you can just import it by "
+"using “Server” -> “Retrieve Keys…” and entering your name or key id."
+msgstr ""
+"公開鍵ファイルを持ち歩きたくない場合は、keyserverにアップロードすることができます。他のマシンを使用している場合は、\"Server\" "
+"-> \"Retrieve Keys... \"で名前やキーIDを入力してインポートすることができます。"
+
+#: ../pro/openpgp-keygen-gpa.rst.inc:69
+msgid ""
+"Another possibility is to change the URL setting on your card. Open the "
+"card manager again and fill in the URL where the key is situated (e.g. on"
+" the keyserver or on your webpage etc.). From now on you can import the "
+"key on another system by right-clicking on the URL and click on “Fetch "
+"Key”."
+msgstr ""
+"また、カードのURL設定を変更することもできます。カードマネージャーを再度開き、キーが置かれているURLを記入してください（例：キーサーバーやあなたのウェブページなど）。今後は、URLを右クリックして"
+" \"Fetch Key \"をクリックすることで、他のシステムにキーをインポートすることができます。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:2
+msgid "OpenPGP Key Generation On-Device"
+msgstr "デバイス上でのOpenPGP鍵生成"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:8
+msgid ""
+"The following instructions explain the generation of OpenPGP keys "
+"directly on the Nitrokey. This is done by using the command line "
+"interface of GnuPG. Thus, you need to have GnuPG installed on your "
+"system. The newest GnuPG version for Windows can be found `here "
+"<https://www.gpg4win.org/>`__ and the newest version for MacOS can be "
+"found `here <https://gpgtools.org/>`__. Users of Linux systems please "
+"install GnuPG with help of the package manager."
+msgstr "以下の説明では、Nitrokey上で直接OpenPGPキーを生成する方法を説明します。これは、GnuPGのコマンドラインインターフェイスを使用して行われます。そのため、お使いのシステムにGnuPGがインストールされている必要があります。Windows用の最新のGnuPGバージョンは`こちら<https://www.gpg4win.org/>`_、MacOS用の最新バージョンは`こちら<https://gpgtools.org/>`_で見つけることができます。Linuxシステムのユーザは、パッケージマネージャの助けを借りてGnuPGをインストールしてください。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:12
+msgid ""
+"These instructions are based on GnuPG version 2.2.6 or higher. Some Linux"
+" Distributions have an older version installed. In this case please "
+"choose a different method as listed `here <openpgp.html>`_ or install a "
+"newer version if possible."
+msgstr "これらの説明は、GnuPGのバージョン2.2.6以降に基づいています。一部のLinuxディストリビューションでは、古いバージョンがインストールされている場合があります。この場合、`こちらの<openpgp.html>`_に記載されている別の方法を選択するか、可能であればより新しいバージョンをインストールしてください。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:21
+msgid ""
+"The following descriptions explain the basic key generation on-device via"
+" GnuPG’s command line interface. The default behaviour is to generate RSA"
+" keys of 2048 bit size. If you want to change the key algorithm and "
+"length, have a look at the next section first."
+msgstr "以下の説明では、GnuPGのコマンドラインインターフェイスを使ったデバイス上での基本的な鍵生成について説明します。デフォルトの動作は、2048ビットサイズのRSA鍵を生成することです。鍵のアルゴリズムや長さを変更したい場合は、まず次のセクションを見てください。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:23
+msgid "Open a command line and type ``gpg2 --card-edit``."
+msgstr "コマンドラインを開き、``gpg2 --card-edit``と入力します。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:53
+msgid ""
+"Now you are in the interactive interface of GnuPG. Activate the admin "
+"commands with ``admin`` and use ``generate`` afterwards to start the "
+"generation of keys."
+msgstr "これであなたはGnuPGの対話型インターフェースに入りました。``admin``で管理コマンドを有効にし、その後``generate``で鍵の生成を開始してください。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:95
+msgid ""
+"**Please do not create the suggested off-card backup.** This “backup” "
+"does only save the encryption key, but not the signature and "
+"authentication keys. In case of a loss of the device, you will not be "
+"able to restore the whole key set. So on the one hand it is no full "
+"backup (use `these instructions <openpgp-keygen-backup.html>`_ instead, "
+"if you need one) and on the other hand you risk that someone else can get"
+" in possession of your encryption key. The advantage of generating keys "
+"on-device is to make sure that keys are stored securely. Therefore, we "
+"recommend to skip this half-backup."
+msgstr ""
+"**この「バックアップ」では、暗号化キーのみが保存され、署名キーや認証キーは保存されません。この「バックアップ」は、暗号化キーのみを保存し、署名キーや認証キーは保存しません。デバイスを紛失した場合、キーセット全体を復元することはできません。つまり、一方では完全なバックアップではなく"
+" (必要であれば、`この説明書 <openpgp-keygen-"
+"backup.html>`_を使用してください)、他方では、誰か他の人があなたの暗号化キーを手に入れることができるというリスクがあります。デバイス上で鍵を生成する利点は、鍵が安全に保管されていることを確認できることです。そのため、このハーフバックアップは省略することをお勧めします。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:98
+msgid ""
+"Now you have a complete key set on your device which can be used for the "
+"`various applications "
+"<https://www.nitrokey.com/documentation/applications>`__ listed on our "
+"site. Type ``quit`` and hit enter to exit."
+msgstr "これで、当サイトに掲載されている`さまざまなアプリケーション<https://www.nitrokey.com/documentation/applications>`_に使用できる完全なキーセットがデバイスに備わったことになります。``quit``と入力してエンターキーを押すと終了します。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:101
+msgid "Change Key Attributes"
+msgstr "Change Key Attributes"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:103
+msgid ""
+"This section is about changing the key attributes. If you want to use the"
+" default values, you can proceed with the next section."
+msgstr "このセクションでは、キーアトリビュートの変更について説明します。デフォルトの値を使用したい場合は、次のセクションに進んでください。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:105
+msgid "Open a command line and type ``gpg2 --card-edit --expert``."
+msgstr "コマンドラインを開き、``gpg2 --card-edit --expert``と入力します。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:131
+msgid ""
+"Now you are in the interactive interface of GnuPG. As you can see in the "
+"“Key attributes” field above, the default value rsa2048 is set. To change"
+" them, activate the admin commands with ``admin`` and use ``key-attr`` "
+"afterwards to change the attributes of the keys."
+msgstr ""
+"これであなたはGnuPGのインタラクティブなインターフェイスに入りました。上の「鍵の属性」欄を見ると、デフォルト値のrsa2048が設定されているのがわかります。これを変更するには、``admin``で管理コマンドを起動し、その後"
+"``key-attr``で鍵の属性を変更してください。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:162
+msgid ""
+"You can choose the attribute for each key (that is, signature, encryption"
+" and authentication key). Most people will use the same attributes for "
+"every key. Type ``list`` to see the results (have look at the “Key "
+"attributes” field, which now reads rsa4096)."
+msgstr ""
+"各キー（つまり、署名キー、暗号化キー、認証キー）の属性を選択することができます。ほとんどの人は、すべてのキーに同じ属性を使うでしょう。``list``"
+" と入力すると、結果が表示されます（「鍵の属性」フィールドに rsa4096 と表示されているのを見てください）。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:188
+msgid ""
+"Type ``quit`` and hit enter to exit or proceed directly with the previous"
+" section to actually generate the keys with the key attributes you just "
+"set."
+msgstr "``quit``と入力してエンターキーを押して終了するか、そのまま前のセクションに進み、先ほど設定したキー属性を持つキーを実際に生成します。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:190
+msgid ""
+"The following table illustrates which algorithm can be used on which "
+"device."
+msgstr "次の表は、どのアルゴリズムがどのデバイスで使用できるかを示しています。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:213
+msgid ""
+"To get a simple file of your public key, you can just use ``gpg2 --armor "
+"--export keyID > pubkey.asc``. Use either the fingerprint as “keyID” "
+"(look at ``gpg -K`` to get it) or just use your email address as an "
+"identifier."
+msgstr ""
+"公開鍵のシンプルなファイルを取得するには、``gpg2 --armor --export keyID > "
+"pubkey.asc``を使用すればよいでしょう。フィンガープリントを \"keyID \"として使用するか（``gpg "
+"-K``を参照してください）、または単に識別子として電子メールアドレスを使用してください。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:215
+msgid ""
+"You can carry this file with you or send it to anyone who you like. This "
+"file is not secret at all. If you want to use the Nitrokey on another "
+"system, you first import this public key via ``gpg2 --import pubkey.asc``"
+" and then types ``gpg2 --card-status`` so that the system knows where to "
+"look for this key. That’s all."
+msgstr ""
+"このファイルを持ち歩いたり、好きな人に送ったりすることができます。このファイルは全く秘密ではありません。他のシステムでNitrokeyを使いたい場合は、まず``gpg2"
+" --import pubkey.asc``を介してこの公開鍵をインポートし、次に``gpg2 --card-"
+"status``をタイプして、システムがこの鍵をどこで探すかを知るようにします。以上です。"
+
+#: ../pro/openpgp-keygen-on-device.rst.inc:222
+msgid ""
+"Another possibility is to change the URL setting on your card. Start gpg "
+"–card-edit again and first set the URL where the key is situated (e.g. on"
+" the keyserver or on your webpage etc.) via the ``url`` command. From now"
+" on you can import the key on another system by just using the ``fetch`` "
+"command within the ``gpg --card-edit`` environment."
+msgstr ""
+"もうひとつの方法は、カードのURL設定を変更することです。gpg -card-"
+"editを再度起動し、まず``url``コマンドで、鍵が置かれているURLを設定します（鍵サーバや自分のウェブページなど）。今後は、``fetch``コマンドを``gpg"
+" --card-edit``環境内で使用するだけで、別のシステムで鍵をインポートすることができます。"
+
+#: ../pro/openpgp-outlook.rst.inc:2
+msgid "OpenPGP Email Encryption with Outlook"
+msgstr "OutlookでのOpenPGP電子メール暗号化"
+
+#: ../pro/openpgp-outlook.rst.inc:10
+msgid ""
+"Unfortunately, there is no solution to use OpenPGP in Outlook for macOS "
+"yet."
+msgstr "残念ながら、Outlook for macOSでOpenPGPを使うためのソリューションはまだありません。"
+
+#: ../pro/openpgp-outlook.rst.inc:16
+msgid ""
+"If you do not have PGP-Keys on your Nitrokey yet, please look at `this "
+"page <openpgp.html>`_ first."
+msgstr "まだNitrokeyにPGP-Keyを入れていない方は、まずこのページの` <openpgp.html>`_をご覧ください。"
+
+#: ../pro/openpgp-outlook.rst.inc:18
+msgid ""
+"You need to have GnuPG installed on your System. The newest GnuPG version"
+" for Windows can be found `here <https://www.gpg4win.org>`__. You need to"
+" make sure to have “GpgOL” checked during installation process (see "
+"below)."
+msgstr ""
+"あなたのシステムにはGnuPGがインストールされている必要があります。Windows用の最新のGnuPGバージョンは、`こちら "
+"<https://www.gpg4win.org>`_にあります。なお、インストールの際には、「GpgOL」にチェックを入れておく必要があります（下記参照）。"
+
+#: ../pro/openpgp-outlook.rst.inc:28
+msgid ""
+"After installing GPG4Win along with GpgOL, you will see a new icon "
+"labeled “Secure” in the composing window. To encrypt and sign a mail you "
+"just click on the sign like seen below."
+msgstr "GPG4WinとGpgOLをインストールすると、メール作成画面に「Secure」と書かれたアイコンが表示されるようになります。メールを暗号化して署名するには、以下のように署名をクリックします。"
+
+#: ../pro/openpgp-outlook.rst.inc:35
+msgid ""
+"GnuPG will start signing and encrypting the mail as soon as you click on "
+"‘send’. You are requested to choose the identity you want to sign with "
+"and encrypt for."
+msgstr "送信」をクリックすると、GnuPGがメールの署名と暗号化を開始します。署名と暗号化を行うIDを選択するよう求められます。"
+
+#: ../pro/openpgp-outlook.rst.inc:42
+msgid ""
+"Furthermore, you are asked for typing in the User PIN of the Nitrokey for"
+" signing the mail."
+msgstr "さらに、メールに署名するためのNitrokeyのユーザーPINを入力するよう求められます。"
+
+#: ../pro/openpgp-outlook.rst.inc:49
+msgid ""
+"You will be asked automatically for your User PIN if you want to read an "
+"encrypted mail."
+msgstr "暗号化されたメールを読みたい場合は、自動的にユーザーPINを求められます。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:2
+msgid "OpenPGP Email Encryption With Thunderbird"
+msgstr "ThunderbirdでのOpenPGPによるメール暗号化"
+
+#: ../pro/openpgp-thunderbird.rst.inc:9
+msgid "Thunderbird 78.3 and newer"
+msgstr "Thunderbird 78.3以降のバージョン"
+
+#: ../pro/openpgp-thunderbird.rst.inc:11
+msgid ""
+"At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy"
+" to set up. See `Thunderbird’s documentation "
+"<https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`__ for details."
+" Here is a `comprehensive German guide "
+"<https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-"
+"nitrokey-storage/>`__."
+msgstr ""
+"現時点では、Thunderbirdの78サポートのOpenPGPメールの設定は簡単ではありません。詳細については、`Thunderbirdのドキュメント<https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`_を参照してください。ここには`包括的なドイツ語のガイド<https://decatec.de/it/thunderbird-78"
+"-pgp-verschluesselung-mit-dem-nitrokey-storage/>`_があります。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:16
+msgid ""
+"Error message: ``The configured key ID '4BA0183FCBA844A7' cannot be found"
+" on your keyring``"
+msgstr ""
+"エラーメッセージを表示します。``The configured key ID '4BA0183FCBA844A7' cannot be found"
+" on your keyring``"
+
+#: ../pro/openpgp-thunderbird.rst.inc:18
+msgid "Make sure that the public key is imported to the Thunderbird’s manager and"
+msgstr "公開鍵がサンダーバードのマネージャーにインポートされていることを確認して"
+
+#: ../pro/openpgp-thunderbird.rst.inc:19
+msgid ""
+"The key ID does not contain any whitespace, and consists of 16 characters"
+" from range 0-9 A-F"
+msgstr "キーIDは空白を含まず、0-9 A-Fの範囲の16文字で構成されています。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:20
+msgid "you have GPA or Kleopatra software installed."
+msgstr "GPAまたはKleopatraソフトウェアがインストールされていること。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:22
+msgid ""
+"Please use Kleopatra or `GPA <openpgp-keygen-gpa.html>`_ software to "
+"handle the smart card."
+msgstr "スマートカードの取り扱いには、Kleopatraまたは`GPA <openpgp-keygen-gpa.html>`_ソフトウェアをご利用ください。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:25
+msgid "Thunderbird 77 and older"
+msgstr "サンダーバード77以上"
+
+#: ../pro/openpgp-thunderbird.rst.inc:30
+msgid ""
+"Install the device driver as described `here "
+"<https://www.nitrokey.com/documentation/installation>`__."
+msgstr "`こちらの<https://www.nitrokey.com/documentation/installation>`_の説明に従って、デバイスドライバーをインストールします。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:33
+msgid ""
+"Install `Thunderbird <https://www.thunderbird.net/en-US/>`__ and the Add-"
+"on `Enigmail <https://www.enigmail.net/index.php/en/>`__."
+msgstr ""
+"`Thunderbird <https://www.thunderbird.net/en-US/>`_とアドオンの`Enigmail "
+"<https://www.enigmail.net/index.php/en/>`_をインストールします。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:37
+msgid "Changing PINs"
+msgstr "暗証番号の変更"
+
+#: ../pro/openpgp-thunderbird.rst.inc:39
+msgid "There are two PINs for the Nitrokey:"
+msgstr "Nitrokeyには2つのPINがあります。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:41
+msgid "The User PIN required for daily work"
+msgstr "日常業務に必要なユーザーPIN"
+
+#: ../pro/openpgp-thunderbird.rst.inc:43
+msgid ""
+"The Admin PIN is required to change keys or other settings of the device."
+" In addition, the Nitrokey can be unlocked (for example, after 3 times "
+"incorrect input of the User PIN) by means of the Admin PIN."
+msgstr ""
+"管理者PINは、デバイスのキーやその他の設定を変更するために必要です。また、NitrokeyはAdmin "
+"PINでロックを解除することができます（例：ユーザーPINを3回誤入力した場合など）。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:47
+msgid ""
+"After receiving the Nitrokey, you should immediately change the User PIN "
+"= “123456” and Admin PIN = “12345678”."
+msgstr ""
+"Nitrokeyを受け取ったら、すぐにUser PIN = \"123456 \"とAdmin PIN = \"12345678 "
+"\"に変更してください。"
+
+#: ../nitropad/factory-reset.rst.inc:24 ../nitropad/firmware-update.rst.inc:53
+#: ../pro/openpgp-thunderbird.rst.inc:51
+msgid "Procedure"
+msgstr "手順"
+
+#: ../pro/openpgp-thunderbird.rst.inc:53
+msgid "Insert the Nitrokey into a USB port on your computer."
+msgstr "NitrokeyをパソコンのUSBポートに挿入する。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:55
+msgid "Start Thunderbird."
+msgstr "Thunderbirdを起動します。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:57
+msgid ""
+"In Thunderbird, select as shown in the following picture. “OpenPGP” → "
+"“Manage smart card”"
+msgstr "Thunderbirdで、以下の図のように選択します。\"OpenPGP\" → \"スマートカードの管理\""
+
+#: ../pro/openpgp-thunderbird.rst.inc:65
+msgid "In the “SmartCard Details” window, select “SmartCard → Change PIN”"
+msgstr "SmartCard Details \"ウィンドウで、\"SmartCard → Change PIN \"を選択します。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:72
+msgid ""
+"Select “Change PIN”. This is your User PIN you need for daily work. Enter"
+" the current PIN ( “123456” for delivery) and twice your new PIN. For "
+"this PIN you can use the characters: a-z A-Z 0-9 / .;;:- !? () [] {}% +. "
+"The PIN should be at least 6 characters long. Click “OK”."
+msgstr ""
+"Change PIN \"を選択します。この暗証番号は、日常業務で必要となるユーザー暗証番号です。現在の暗証番号（配送時は "
+"\"123456\"）と新しい暗証番号を2回入力してください。この暗証番号には、以下の文字が使用できます。 a-z A-Z 0-9 / .;;:-"
+" !?() [] {}% +.暗証番号は6文字以上で入力してください。OK \"をクリックします。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:83
+msgid "Repeat the procedure for the Admin PIN. “SmartCard → Change PIN”"
+msgstr "Admin PINの手順を繰り返します。\"スマートカード → PINの変更\""
+
+#: ../pro/openpgp-thunderbird.rst.inc:90
+msgid ""
+"Select Change Admin PIN. This is your Admin PIN that you only rarely "
+"need. Enter the current PIN ( “12345678” for delivery) and the new PIN "
+"twice. For this PIN, you can use the characters: a-z A-Z 0-9 / .;;:- !? "
+"() [] {}% +. The PIN should be at least 8 characters long. Click “OK”."
+msgstr ""
+"Change Admin "
+"PIN」を選択します。これはまれにしか必要としない管理者用暗証番号です。現在の暗証番号（配送時は「12345678」）と新しい暗証番号を2回入力します。このPINには、以下の文字が使用できます。"
+" a-z A-Z 0-9 / .;;:- !() [] {}% +.暗証番号は8文字以上で入力してください。OK \"をクリックします。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:101
+msgid ""
+"You have now changed the PINs and should continue to generate your "
+"personal keys."
+msgstr "これでPINの変更が完了し、引き続き個人キーを生成する必要があります。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:104
+msgid "Generation of Keys"
+msgstr "キーの生成"
+
+#: ../pro/openpgp-thunderbird.rst.inc:106
+msgid ""
+"To encrypt data and e-mails, a key pair consisting of a public key and a "
+"private key, must first be generated. The so-called public key is used to"
+" **en**\\ crypt the data or e-mails. You can distribute this to all those"
+" with whom you want to communicate securely (for example, publish it "
+"publicly on your site). The so-called private key is used to **de**\\ "
+"crypt the data or messages. This key should **NEVER** be made known! "
+"Usually, you also do not have direct access to it (see below), since this"
+" is stored securely on the Nitrokey. Use the Nitrokey to create both keys"
+" using the following procedure:"
+msgstr ""
+"データや電子メールを暗号化するためには、まず公開鍵と秘密鍵からなる鍵ペアを生成する必要があります。公開鍵は、データや電子メールを暗号化するために使用されます。これを安全に通信したい相手に配布することができます（例えば、サイトで公開するなど）。秘密鍵は、データやメッセージを暗号化するために使用されます。この鍵は絶対に"
+" **知られてはいけません** "
+"。通常、秘密鍵はNitrokeyに安全に保管されているので、あなたが直接アクセスすることはありません（下記参照）。Nitrokeyを使用して、以下の手順で両方の鍵を作成してください。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:109
+msgid "Insert the Nitrokey into a USB port on your computer. StartThunderbird"
+msgstr "NitrokeyをコンピュータのUSBポートに挿入する。StartThunderbird"
+
+#: ../pro/openpgp-thunderbird.rst.inc:112
+msgid ""
+"In Thunderbird, select as shown in the following picture „OpenPGP“ → "
+"„Manage Smart Card“"
+msgstr "Thunderbirdで、以下の図のように「OpenPGP」→「Manage Smart Card」を選択します。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:115
+msgid "In the “SmartCard details” window, select “SmartCard” → “Generate key”"
+msgstr "\"SmartCard details \"ウィンドウで、\"SmartCard\"→\"Generate key \"を選択します。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:118
+msgid ""
+"In the following window, select your e-mail address for which you want to"
+" generate keys. Verify that the e-mail address specified in “User ID” is "
+"correct. You can also specify whether a private key backup copy should be"
+" stored on your computer."
+msgstr "次の画面で、鍵を生成するためのメールアドレスを選択します。ユーザーID」で指定したメールアドレスが正しいことを確認してください。また、秘密鍵のバックアップコピーをパソコンに保存するかどうかも指定できます。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:128
+msgid ""
+"If you do not create a backup copy, you have no chance to get your "
+"encrypted data if the Nitrokey is lost or damaged!"
+msgstr "バックアップコピーを作成しないと、Nitrokeyを紛失したり破損したりした場合に、暗号化されたデータを入手するチャンスがありません"
+
+#: ../pro/openpgp-thunderbird.rst.inc:136
+msgid ""
+"It is recommended to store this safety device. Select “Save key copy of "
+"the key outside the Smard Card”. Then enter your personal password for "
+"the backup copy under “Passphrase”. This password should not be less than"
+" 8 characters, and should contain both uppercase and lowercase letters "
+"and numbers. You can also use a long sentence, but avoid known prose or "
+"lyric. Also, no name or known term should be used."
+msgstr ""
+"この安全装置を保存することをお勧めします。Smard Cardの外にキーのコピーを保存する \"を選択します。次に、\"Passphrase "
+"\"の下に、バックアップ・コピー用の個人的なパスワードを入力します。このパスワードは、8文字以上で、大文字と小文字、数字を含む必要があります。長い文章を使うこともできますが、既知の散文や歌詞は避けてください。また、名前や既知の用語も使用してはいけません。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:144
+msgid ""
+"**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö"
+" or ß)"
+msgstr "**許可される文字**: a-z A-Z 0-9 /.,;:-!?( )%+ (ウムラウト ä,ü,ö,Ä,Ü,Ö,ß は不可)"
+
+#: ../pro/openpgp-thunderbird.rst.inc:146
+msgid ""
+"**Poor Passwords**: qwerty123, ILoveSusi3, Password, If you can dream it,"
+" you can do it."
+msgstr ""
+"**Poor Password**: qwerty123, ILoveSusi3, Password, If you can dream it, "
+"you can do it."
+
+#: ../pro/openpgp-thunderbird.rst.inc:148
+#, python-format
+msgid ""
+"**Strong Passwords**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen "
+"Earz and fife legs (spelling errors increase security)"
+msgstr ""
+"**強力なパスワード**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen Earz and"
+" fife legs (spelling error increases security)"
+
+#: ../pro/openpgp-thunderbird.rst.inc:150
+msgid ""
+"You do **not** need this password for daily work. It is only necessary "
+"for the restoration of the secret key, e.g. if you have lost the "
+"Nitrokey. Therefore, keep the password in a safe place."
+msgstr ""
+"このパスワードは日常業務では **必要ありません** "
+"。このパスワードは、Nitrokeyを紛失した場合など、秘密鍵を復元するためにのみ必要です。したがって、パスワードは安全な場所に保管してください。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:152
+msgid ""
+"You can also specify whether and when the key should be automatically "
+"invalid. This means, from this point onwards, no more e-mails can be "
+"encrypted with this key and you have to create a new key pair."
+msgstr "また、この鍵を自動的に無効にするかどうか、いつ無効にするかを指定することもできます。これは、この時点から、この鍵で電子メールを暗号化することができなくなり、新しいキー・ペアを作成しなければならないことを意味しています。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:154
+msgid "Finally, click on “Generate key pair”."
+msgstr "最後に「Generate key pair」をクリックします。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:161
+msgid "You are now asked if the key should be generated. Confirm with “Yes”."
+msgstr "キーを生成するかどうかを聞かれます。Yes \"を選択してください。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:168
+msgid ""
+"In order for the program to write your keys to the stick, you must enter "
+"the admin PIN and the user PIN (changed above)."
+msgstr "プログラムがあなたのキーをスティックに書き込むためには、管理者用暗証番号とユーザー用暗証番号（上記で変更）を入力する必要があります。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:176
+msgid ""
+"The key generation can take a few minutes. Do not terminate the program "
+"prematurely!"
+msgstr "鍵の生成には数分かかることがあります。早期にプログラムを終了しないでください。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:178
+msgid ""
+"When the key generation is complete, you receive the following message. A"
+" certificate is now created that allows you to invalidate your key in an "
+"emergency. This certificate is automatically saved with your private key."
+" This should be printed out or backed up on at least one other external "
+"medium so that you can revoke the validity of the keys if your keys and "
+"backups are lost. Click “Yes”"
+msgstr ""
+"鍵の生成が完了すると、次のようなメッセージが表示されます。緊急時に鍵を無効にすることができる証明書が作成されました。この証明書は、あなたの秘密鍵とともに自動的に保存されます。これは、鍵やバックアップを紛失した場合に、鍵の有効性を無効にできるように、プリントアウトするか、少なくとも他の外部媒体にバックアップしてください。\"はい"
+" \"をクリック"
+
+#: ../pro/openpgp-thunderbird.rst.inc:185
+msgid ""
+"You can now select the directory in which the backup copy is stored. This"
+" copy is encrypted with your password entered above. This means that no "
+"one can read or use the keys without your password. Do not give your "
+"password to anyone. This file with the name of your e-mail address and "
+"the suffix “.asc” should be backed up on another medium. After selecting "
+"the directory, click “Save”."
+msgstr "ここで、バックアップコピーを保存するディレクトリを選択できます。このコピーは、上記で入力したパスワードで暗号化されます。つまり、あなたのパスワードなしでは、誰もキーを読み取ったり使用したりすることはできません。パスワードは誰にも教えないでください。あなたのメールアドレスの名前と接尾辞「.asc」が付いたこのファイルは、別の媒体にバックアップしてください。ディレクトリを選択後、「保存」をクリックします。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:192
+msgid "Here you must again specify your user PIN or passphrase. Then click “OK”"
+msgstr "ここで再度、ユーザーPINまたはパスフレーズを指定する必要があります。そして、\"OK \"をクリックします。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
+#: ../storage/firmware-update-manually.rst:-1
+msgid "img12"
+msgstr "img12"
+
+#: ../pro/openpgp-thunderbird.rst.inc:200
+msgid ""
+"You will now see the message that the certificate was created and saved. "
+"Click “OK”"
+msgstr "これで、証明書が作成され、保存されたというメッセージが表示されます。OK \"をクリックします。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
+#: ../storage/firmware-update-manually.rst:-1
+msgid "img13"
+msgstr "img13"
+
+#: ../pro/openpgp-thunderbird.rst.inc:208
+msgid ""
+"Key generation is now complete. You can now exit the program (File - "
+"Close)."
+msgstr "キーの生成が完了しました。これでプログラムを終了することができます（ファイル - 閉じる）。"
+
+#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
+msgid "img14"
+msgstr "img14"
+
+#: ../pro/openpgp-thunderbird.rst.inc:216
+msgid ""
+"Your Nitrokey is personalized and ready to use. **Have fun with the "
+"secure email encryption!**"
+msgstr "あなたのNitrokeyはパーソナライズされ、すぐに使用できます。**安全なメールの暗号化で楽しみましょう！***。"
+
+#: ../nitrokey3/shared/openpgp-uif.rst:2
+msgid "OpenPGP Touch Confirmation (UIF)"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:8
+msgid ""
+"The Nitrokey 3 OpenPGP Card functionality supports touch button "
+"confirmations (so called User Interaction Flags, UIF) when performing "
+"cryptographic key operations. It can be configured separately for each "
+"operation (Signature, Decryption and Authentication)."
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:10
+msgid "UIF supports 3 modes:"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:12
+msgid ""
+"Disabled: The device never prompts for user presence, which is the "
+"default behaviour"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:13
+msgid "Enabled: The device always prompts for user presence"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:14
+msgid ""
+"Permanentaly Enabled: Behaves like Enabled, but can only be reverted to "
+"Disabled through a factory-reset"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:19
+msgid "With GnuPG 2.3 or more recent:"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:29
+msgid "Then, set the UIF flag accordingly:"
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:31
+msgid ""
+"For signature operation: ``uif 1 on`` or ``uif 1 off`` or with ``uif 1 "
+"permanent``."
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:32
+msgid ""
+"For decryption operation: ``uif 2 on`` or ``uif 2 off`` or ``uif 2 "
+"permanent``."
+msgstr ""
+
+#: ../nitrokey3/shared/openpgp-uif.rst:33
+msgid ""
+"For authentication operation: ``uif 3 on`` or ``uif 3 off`` or ``uif 3 "
+"permanent``."
+msgstr ""
+
+#: ../pro/smime.rst.inc:17
+msgid ""
+"If you are in doubt which one to choose, you should use OpenPGP, see "
+"`here <openpgp.html>`_. This page describes the usage of S/MIME email "
+"encryption."
+msgstr "どれを選べばいいのかわからない場合は、OpenPGPを使うべきで、`こちら<openpgp.html>`_を参照してください。このページでは、S/MIMEのメール暗号化の使い方を説明しています。"
+
 #: ../nitrokey3/troubleshooting.rst.inc:12
 #: ../nitropad/troubleshooting.rst.inc:13
 msgid "Here you will find a collection of common issues."
@@ -9905,6 +10963,131 @@ msgstr "(Nitrokey 3 - Windows)"
 #: ../nitrokey3/windows/index.rst:2
 msgid "Nitrokey 3 With Windows"
 msgstr "Nitrokey 3とWindowsの組み合わせ"
+
+#: ../pro/windows/openpgp-csp.rst:2
+msgid "Windows Login and S/MIME Email Encryption with Active Directory"
+msgstr "Active DirectoryによるWindowsログオンとS/MIMEメールの暗号化"
+
+#: ../pro/windows/openpgp-csp.rst:8
+msgid ""
+"Please note that this driver is still in development/testing. Please tell"
+" us your experiences! See our `contact page "
+"<https://www.nitrokey.com/contact>`__."
+msgstr "このドライバーはまだ開発/テスト中であることをご了承ください。あなたの経験を私たちに教えてください。私たちの`コンタクトページ<https://www.nitrokey.com/contact>`_をご覧ください。"
+
+#: ../pro/windows/openpgp-csp.rst:13
+msgid ""
+"This guide assumes that an Active Directory server with role ‘Active "
+"Directory Certificate Services’ is installed and running on a server. "
+"These instructions are based on Nitrokey Storage 2 and Nitrokey Pro 2 "
+"only."
+msgstr ""
+"このガイドは、「Active Directory Certificate Services」の役割を持つActive "
+"Directoryサーバーがインストールされ、サーバー上で動作していることを前提としています。本ガイドは、Nitrokey Storage "
+"2およびNitrokey Pro 2のみを対象としています。"
+
+#: ../pro/windows/openpgp-csp.rst:16
+msgid "Installing OpenPGP-CSP"
+msgstr "OpenPGP-CSPのインストール"
+
+#: ../pro/windows/openpgp-csp.rst:18
+msgid ""
+"This step is needed for clients to use the OpenPGP-CSP driver. Download "
+"and install the `latest version <https://github.com/vletoux/OpenPGP-"
+"CSP/releases/tag/1.3>`__ of the installer file ‘SetupOpenPGPCsp’ for your"
+" system architecture, for ‘SetupOpenPGPCsp_x64.msi’ for 64-bit systems."
+msgstr ""
+"この手順は、クライアントがOpenPGP-"
+"CSPドライバーを使用するために必要です。お使いのシステム・アーキテクチャ用のインストーラー・ファイル「SetupOpenPGPCsp」の`最新バージョン<https://github.com/vletoux"
+"/OpenPGP-"
+"CSP/releases/tag/1.3>`_、64ビット・システム用の「SetupOpenPGPCsp_x64.msi」をダウンロードしてインストールします。"
+
+#: ../pro/windows/openpgp-csp.rst:20
+msgid ""
+"You may want to install the driver on the server as well for being able "
+"to enforce the use of this driver in the template (see below)."
+msgstr "テンプレートでこのドライバーの使用を強制するために、サーバーにもドライバーをインストールしておくとよいでしょう（下記参照）。"
+
+#: ../pro/windows/openpgp-csp.rst:23
+msgid "Creating Certificate Template on Server Side"
+msgstr "サーバー側での証明書テンプレートの作成"
+
+#: ../pro/windows/openpgp-csp.rst:25
+msgid ""
+"On Active Directory Server open certsrv.msc to manage your certificate "
+"templates. Right click on ‘Certificate Templates’ and choose ‘Manage’"
+msgstr ""
+"Active Directory "
+"Server上でcertsrv.mscを開き、証明書テンプレートを管理する。証明書テンプレート」を右クリックし、「管理」を選択する。"
+
+#: ../pro/windows/openpgp-csp.rst:32
+msgid ""
+"Now right click on ‘Smartcard Logon’ template and click ‘Duplicate’, to "
+"create a new template on basis of this standard template. Rename template"
+" to ‘OpenPGP Card Logon and Email’ or alike."
+msgstr ""
+"Smartcard "
+"Logon」テンプレートを右クリックして「Duplicate」をクリックすると、この標準テンプレートをベースにした新しいテンプレートが作成されます。テンプレートの名前を「OpenPGP"
+" Card Logon and Email」などと変更します。"
+
+#: ../pro/windows/openpgp-csp.rst:39
+msgid ""
+"Under ‘Request Handling’, you can choose the OpenPGP-CSP as the one and "
+"only Cryptography Service Provider (click the Button labeled ‘CSPs…’). "
+"For this to work, you need to install the driver on the server as well "
+"and you have to insert a Nitrokey beforehand. This is optional. You can "
+"let the user choose, which CSP to use."
+msgstr ""
+"リクエスト処理」では、唯一の暗号化サービスプロバイダとしてOpenPGP-"
+"CSPを選択することができます（「CSPs...」と書かれたボタンをクリック）。この機能を利用するには、サーバーにもドライバーをインストールする必要があり、事前にNitrokeyを挿入する必要があります。これはオプションです。どのCSPを使用するかは、ユーザーに選択させることができます。"
+
+#: ../pro/windows/openpgp-csp.rst:51
+msgid ""
+"For enabling S/MIME email encryption go to ‘Subject name’. Tick the "
+"checkbox ‘E-Mail name’ (note: You must save the mail addresses of your "
+"users in the corresponding Active Directory field!)."
+msgstr ""
+"S/MIMEメールの暗号化を有効にするには、「Subject name」に進みます。チェックボックス「E-Mail "
+"name」にチェックを入れます（注意：ユーザーのメールアドレスは、対応するActive Directoryのフィールドに保存する必要があります）。"
+
+#: ../pro/windows/openpgp-csp.rst:58
+msgid ""
+"Then go to ‘Extensions’, there you edit the applications guideline and "
+"add ‘Secure Email’."
+msgstr "その後、「拡張機能」に進み、アプリケーションのガイドラインを編集し、「Secure Email」を追加します。"
+
+#: ../pro/windows/openpgp-csp.rst:71
+msgid "Request Certificate on Client (Domain Member)"
+msgstr "クライアント（ドメインメンバー）に証明書を要求する"
+
+#: ../pro/windows/openpgp-csp.rst:73
+msgid ""
+"To request a certificate for a domain member, you have to open "
+"certmgr.msc. Right click on folder ‘Personal->Certificates’ and click "
+"’All Tasks->Request New Certificate and choose the template you created "
+"on the AD."
+msgstr ""
+"ドメインメンバーの証明書を要求するには、certmgr.mscを開く必要があります。Personal->Certificates "
+"\"フォルダを右クリックし、\"All Tasks->Request New Certificate "
+"\"をクリックし、ADで作成したテンプレートを選択する。"
+
+#: ../pro/windows/openpgp-csp.rst:81
+msgid ""
+"If you did not enforce the usage of OpenPGP-CSP you have to choose it "
+"here now."
+msgstr "OpenPGP-CSPの使用を強制していない場合は、ここで選択する必要があります。"
+
+#: ../pro/windows/openpgp-csp.rst:93
+msgid "Next you choose the Authentication slot for the certificate."
+msgstr "次に、証明書の認証スロットを選択します。"
+
+#: ../pro/windows/openpgp-csp.rst:95
+msgid ""
+"You are now ready to logon on the computer with the Nitrokey instead of "
+"your password and you can use `S/MIME email encryption/signing "
+"<smime.html>`_ with the Nitrokey. The driver has to be installed on every"
+" computer you want to use the certificate on."
+msgstr "これで、パスワードの代わりにNitrokeyを使ってコンピュータにログオンする準備が整い、Nitrokeyを使って`S/MIMEメールの暗号化/署名<smime.html>`_ができるようになります。ドライバは、証明書を使用したいすべてのコンピュータにインストールする必要があります。"
 
 #: ../nitrokey3/windows/piv.rst:2
 msgid "Windows Login With PIV Smartcard Authentication"
@@ -10483,11 +11666,6 @@ msgid ""
 "All your data will be lost if you reset your device. Therefore please "
 "backup your data before performing the reset."
 msgstr "端末をリセットすると、すべてのデータが失われます。そのため、リセットを実行する前に、データをバックアップしてください。"
-
-#: ../nitropad/factory-reset.rst.inc:24 ../nitropad/firmware-update.rst.inc:53
-#: ../pro/openpgp-thunderbird.rst.inc:51
-msgid "Procedure"
-msgstr "手順"
 
 #: ../nitropad/factory-reset.rst.inc:26
 msgid ""
@@ -13789,994 +14967,6 @@ msgstr ""
 "の開発リポジトリの master ブランチに含まれているので、いずれは新しいバージョンでリリースされるでしょう。それまでは Poldi "
 "をソースからビルドするのが唯一の方法です。"
 
-#: ../pro/openpgp.rst.inc:2
-msgid "OpenPGP Email Encryption"
-msgstr "OpenPGPメール暗号化"
-
-#: ../pro/openpgp.rst.inc:14
-msgid ""
-"If you are in doubt which one to choose, you should use OpenPGP. While "
-"this page describes the usage of OpenPGP, S/MIME is described `here "
-"<smime.html>`_."
-msgstr "どちらを選ぶべきか迷ったら、OpenPGPを使うべきです。このページではOpenPGPの使い方を説明していますが、S/MIMEについては`こちら<smime.html>`_で説明しています。"
-
-#: ../pro/openpgp.rst.inc:16
-msgid ""
-"Please familiarize yourself with the general concept behind the OpenPGP "
-"standard first, for example by reading `this info graphic "
-"<https://emailselfdefense.fsf.org/en/infographic.html>`__ of the Free "
-"Software Foundation."
-msgstr ""
-"例えば、Free Software "
-"Foundationの`この情報のグラフィック<https://emailselfdefense.fsf.org/en/infographic.html>`_を読むなどして、OpenPGP規格の背後にある一般的な概念をまず理解してください。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:11 ../pro/openpgp-keygen-gpa.rst.inc:13
-#: ../pro/openpgp-keygen-on-device.rst.inc:19 ../pro/openpgp.rst.inc:19
-msgid "Key Generation"
-msgstr "キー・ジェネレーション"
-
-#: ../pro/openpgp.rst.inc:21
-msgid "If you do not have OpenPGP keys yet, you need to generate them first."
-msgstr "まだOpenPGPの鍵を持っていない場合は、まず鍵を生成する必要があります。"
-
-#: ../pro/openpgp.rst.inc:23
-msgid ""
-"`Generate keys on Nitrokey <openpgp-keygen-gpa.html>`_ - this is the best"
-" option if you are unexperienced, but you won’t have a backup of your "
-"keys and therefore won’t be able to mitigate the loss of the Nitrokey"
-msgstr ""
-"` Nitrokeyでキーを生成する <openpgp-keygen-gpa.html>`_ - "
-"経験のない方には最適なオプションですが、キーのバックアップがないため、Nitrokeyの紛失を軽減することができません。"
-
-#: ../pro/openpgp.rst.inc:29
-msgid ""
-"`Generate keys on Nitrokey with different algorithm or key size <openpgp-"
-"keygen-on-device.html>`_ - this is as secure as the previous option and "
-"thus you won’t have a backup as well, but you can change the key "
-"attributes (that is the algorithm and key size)"
-msgstr ""
-"`Nitrokeyで異なるアルゴリズムまたはキーサイズ<openpgp-keygen-on-device.html>`_でキーを生成する - "
-"これは前のオプションと同様に安全で、したがってバックアップもありませんが、キーの属性（アルゴリズムとキーサイズ）を変更することができます。"
-
-#: ../pro/openpgp.rst.inc:35
-msgid ""
-"`Generate keys locally <openpgp-keygen-backup.html>`_ and copy them to "
-"Nitrokey - this is the most flexible, expert option, but only secure if "
-"your system is not compromised, because you can create a backup key "
-"outside your Nitrokey A similar description in french can be found `here "
-"<https://xieme-art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-"
-"pro/>`__."
-msgstr ""
-"`キーをローカルに生成し<openpgp-keygen-backup.html>`_、Nitrokeyにコピーする - "
-"これは最も柔軟で専門的なオプションですが、Nitrokeyの外にバックアップ "
-"キーを作成できるため、システムが危険にさらされていない場合にのみ安全です フレンチでの同様の説明は、`こちら<https://xieme-"
-"art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-pro/>`_にあります。"
-
-#: ../pro/openpgp.rst.inc:44
-msgid "Importing Existing Keys"
-msgstr "既存のキーのインポート"
-
-#: ../pro/openpgp.rst.inc:46
-msgid ""
-"If you already have OpenPGP keys you may want to use them with your "
-"Nitrokey, instead of generating new ones. Importing existing keys works "
-"basically the same as generating keys locally first and copying them to "
-"the Nitrokey (see above). Therefore, please have a look at the "
-"`corresponding instructions <openpgp-keygen-backup.html#key-import>`_. "
-"Note that you probably want to generate another subkey for authentication"
-" to your existing key. See at the same instructions for `subkey "
-"generation <openpgp-keygen-backup.html#subkey-for-authentication>`_."
-msgstr ""
-"すでにOpenPGPキーをお持ちの方は、新しいキーを生成する代わりに、Nitrokeyでそのキーを使用することができます。既存の鍵をインポートする方法は、基本的にはローカルで鍵を生成し、それをNitrokeyにコピーする方法と同じです（上記参照）。したがって、`対応する説明書"
-"<openpgp-keygen-backup.html#key-"
-"import>`_を参照してください。なお、既存の鍵に認証用の別のサブキーを生成したい場合もあるでしょう。`サブキーの生成 <openpgp-"
-"keygen-backup.html#subkey-for-authentication>`_については、同じ指示を参照してください。"
-
-#: ../pro/openpgp.rst.inc:53
-msgid ""
-"for using `OpenPGP encryption with Thunderbird <openpgp-"
-"thunderbird.html>`_"
-msgstr "Thunderbirdで`OpenPGPの暗号化を使用する場合 <openpgp-thunderbird.html>`_。"
-
-#: ../pro/openpgp.rst.inc:56
-msgid "for using `OpenPGP encryption with Outlook <openpgp-outlook.html>`_"
-msgstr "Outlookで`OpenPGPの暗号化を使用する場合 <openpgp-outlook.html>`_。"
-
-#: ../pro/openpgp.rst.inc:59
-msgid ""
-"for using `Claws Mail <https://www.claws-"
-"mail.org/plugin.php?plugin=gpg>`__, an email client (and news reader) for"
-" Linux and Windows"
-msgstr ""
-"`Claws Mail <https://www.claws-"
-"mail.org/plugin.php?plugin=gpg>`_というLinuxおよびWindows用のメールクライアント（およびニュースリーダー）を使用しているため。"
-
-#: ../pro/openpgp.rst.inc:67
-msgid "for using `GPGTools <https://gpgtools.org/>`__ on macOS."
-msgstr "macOSで`GPGTools <https://gpgtools.org/>`_を使用するためのものです。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:2
-msgid "OpenPGP Key Generation With Backup"
-msgstr "バックアップ付きOpenPGP鍵生成"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:8
-msgid ""
-"The following instructions explain the generation of OpenPGP keys and how"
-" to copy them to the Nitrokey. This method has the advantage of providing"
-" a backup of the keys in case of losing or breaking the Nitrokey. The "
-"instructions are based on the command line interface of GnuPG. Thus, you "
-"need to have GnuPG installed on your system. The newest GnuPG version for"
-" Windows can be found `here <https://www.gpg4win.org/>`__ and the newest "
-"version for MacOS can be found `here <https://gpgtools.org/>`__. Users of"
-" Linux systems please install GnuPG with help of the package manager."
-msgstr "以下の説明では、OpenPGPキーの生成とNitrokeyへのコピー方法を説明します。この方法は、Nitrokeyを紛失したり壊したりした場合に、鍵のバックアップが取れるという利点があります。説明は、GnuPGのコマンドライン・インターフェースに基づいています。そのため、お使いのシステムにGnuPGがインストールされている必要があります。Windows用の最新のGnuPGバージョンは`こちら<https://www.gpg4win.org/>`_、MacOS用の最新バージョンは`こちら<https://gpgtools.org/>`_でご覧いただけます。Linuxシステムのユーザは、パッケージマネージャの助けを借りてGnuPGをインストールしてください。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:13
-msgid ""
-"At first, you need to generate a key locally. You can decide, which key "
-"attributes to use and - most importantly - you can export the key and "
-"keep it somewhere save in case you need to restore the key."
-msgstr "まず最初に、ローカルで鍵を生成する必要があります。どのような鍵の属性を使用するかを決めることができ、最も重要なことは、鍵をエクスポートしてどこかに保存し、鍵を復元する必要がある場合に備えることができることです。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:16
-msgid "Main Key and Encryption Subkey"
-msgstr "メインキーと暗号化サブキー"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:18
-msgid ""
-"We can use the command ``gpg --full-generate-key --expert`` to start a "
-"guided key generation with all possible options. You can choose the key "
-"type (usually RSA (1) or ECC (9)), the length of the key and other "
-"attributes. The following output is just a simple example, you may choose"
-" other values."
-msgstr ""
-"コマンド ``gpg --full-generate-key --expert`` "
-"を使用すると、可能なすべてのオプションを使ってガイド付きの鍵生成を開始することができます。鍵の種類（通常はRSA（1）またはECC（9））、鍵の長さ、その他の属性を選択することができます。以下の出力は簡単な例であり、他の値を選択することもできます。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:81
-msgid ""
-"The following table illustrates which algorithm can be used on which "
-"device, in case you want to use different key attributes."
-msgstr "次の表は、異なるキー属性を使用したい場合に、どのアルゴリズムをどのデバイスで使用できるかを示しています。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:84
-#: ../pro/openpgp-keygen-on-device.rst.inc:193
-msgid "\\"
-msgstr "\\"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:90
-#: ../pro/openpgp-keygen-on-device.rst.inc:199
-msgid "curve25519 (ECC)"
-msgstr "カーブ25519（ECC）"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:91
-#: ../pro/openpgp-keygen-on-device.rst.inc:200
-msgid "NIST (ECC)"
-msgstr "NIST（ECC）"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:92
-#: ../pro/openpgp-keygen-on-device.rst.inc:201
-msgid "Brainpool (ECC)"
-msgstr "ブレインプール（ECC）"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:93
-#: ../pro/openpgp-keygen-on-device.rst.inc:202
-msgid "secp256k1"
-msgstr "secp256k1"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:97
-msgid "Subkey for Authentication"
-msgstr "認証用サブキー"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:99
-msgid ""
-"You now have a main key with the capability to sign and certify (marked "
-"as [SC]) and a subkey for encryption (marked as [E]). It is necessary to "
-"have another subkey for use cases in which authentication is needed. This"
-" subkey is generated in the next step. Type in ``gpg --edit-key --expert "
-"keyID`` to start the process, whereas “keyID” is either the id of the key"
-" or the email address used during key generation."
-msgstr ""
-"これで、署名と認証の機能を持つメインキー（[SC]と表示）と、暗号化のためのサブキー（[E]と表示）ができました。認証が必要なユースケースでは、別のサブキーが必要になります。このサブキーは次のステップで生成します。``gpg"
-" --edit-key --expert keyID``と入力して処理を開始します。\"keyID "
-"\"には、鍵のIDまたは鍵生成時に使用したメールアドレスを指定します。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:120
-msgid ""
-"Now you are in the interactive mode of GnuPG and you can add a key by "
-"simply typing ``addkey``. You need to choose the key you want to use. It "
-"is crucial to choose “set your own capabilities”, because we want to have"
-" the “authenticate” capability which is not available otherwise. We "
-"toggle sign and encrypt by typing ``s`` and ``e`` and we activate "
-"authenticate by typing ``a``."
-msgstr ""
-"これでGnuPGのインタラクティブモードになり、``addkey``と入力するだけで、キーを追加することができます。使用するキーを選択する必要があります。set"
-" your own capabilities \"を選択することは非常に重要です。なぜなら、他の方法では利用できない \"authenticate"
-" \"機能を利用したいからです。``s``と``<xid=\"330\"></x>``、``a``と入力して、認証を有効にします。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:178
-msgid ""
-"We quit with ``q``. Afterwards we need to answer the same questions as "
-"before. Finally, we have a ready-to-go key set which we can import to our"
-" device."
-msgstr "``q``で終了しました。その後、以前と同じ質問に答える必要があります。最後に、すぐに使えるキーセットができあがりましたので、これをデバイスにインポートします。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:212
-msgid ""
-"Now is good time to backup your key. Please keep this backup very secure."
-" It is best practice to never have this key on a regular computer which "
-"has connection to the internet, so that the key never gets compromised. "
-"You can create a backup with something like:"
-msgstr "今こそ、あなたのキーをバックアップする良い機会です。このバックアップは非常に安全に保管してください。インターネットに接続されている通常のコンピュータでは、このキーを決して使用しないことをお勧めします。以下のような方法でバックアップを作成することができます。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:219
-msgid "Key Import"
-msgstr "キーインポート"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:221
-msgid ""
-"You have a main key and two subkeys which can be imported to your "
-"Nitrokey. Before proceeding please make sure that you really have a "
-"backup of the key, if you need one. The ``keytocard`` command used in the"
-" next steps will **delete** your key from your disk!"
-msgstr ""
-"メインキーと2つのサブキーがありますが、これらはNitrokeyにインポートすることができます。先に進む前に、必要に応じてキーのバックアップが本当にあるかどうか確認してください。次のステップで使用する``keytocard``コマンドは、ディスクからキーを"
-" **削除** します!"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:223
-msgid ""
-"We start the process by accessing the interactive interface of GnuPG "
-"again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is either"
-" the id of the key or the email address used during key generation."
-msgstr ""
-"まず、``gpg --edit-key --expert "
-"keyID``で再びGnuPGの対話型インターフェースにアクセスし、``keyID``には、鍵のIDか、鍵の生成時に使用したメールアドレスを指定します。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:259
-msgid ""
-"We just imported the main key to the card. Now we proceed with the two "
-"subkeys. We type ``key 1`` to select the encryption subkey and type in "
-"``keytocard`` again and select the slot to use."
-msgstr ""
-"メインキーをカードに取り込んだところです。次に、2つのサブキーを入力します。``key "
-"1``と入力して暗号化サブキーを選択し、``keytocard``と再度入力して使用するスロットを選択します。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:288
-msgid ""
-"Now we deselect the first key with ``key 1`` and select the second subkey"
-" with ``key 2`` and move it as well with ``keytocard``. Afterwards we "
-"quit and save the changes."
-msgstr ""
-"ここで、``key 1``で最初のキーを選択解除し、<xid=\"79\"></x>`key "
-"2``で2つ目のサブキーを選択し、``keytocard``で同様に移動します。その後、終了して変更を保存します。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:331
-msgid ""
-"Your keys are now moved to the Nitrokey and thus secured in hardware. "
-"Congratulations!"
-msgstr "あなたの鍵はNitrokeyに移され、こうしてハードウェアで固定されました。おめでとうございます。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:334
-#: ../pro/openpgp-keygen-gpa.rst.inc:53
-#: ../pro/openpgp-keygen-on-device.rst.inc:206
-msgid "Exporting Public Key and Keyserver Usage"
-msgstr "公開鍵のエクスポートと鍵サーバの利用"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:336
-#: ../pro/openpgp-keygen-gpa.rst.inc:55
-#: ../pro/openpgp-keygen-on-device.rst.inc:208
-msgid ""
-"Although you can start to use your Nitrokey right away after generating "
-"the keys on your system, you need to import your public key on every "
-"system, you want to use the Nitrokey on. So to be prepared you have two "
-"options: You either save the public key anywhere you like and use it on "
-"another system or you save the public key on a webpage/keyserver."
-msgstr "お使いのシステムで鍵を生成した後、すぐにNitrokeyを使い始めることができますが、Nitrokeyを使用したいすべてのシステムで公開鍵をインポートする必要があります。そのための準備として、2つの選択肢があります。公開鍵を好きな場所に保存して別のシステムで使用するか、Webページ/鍵サーバに公開鍵を保存するかです。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:339
-#: ../pro/openpgp-keygen-on-device.rst.inc:211
-msgid "Generating a Public Key File"
-msgstr "公開鍵ファイルの生成"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:341
-msgid ""
-"To get a simple file of your public key, you can just use ``gpg --armor "
-"--export keyID > pubkey.asc``. Use either the fingerprint as “keyID” "
-"(look at ``gpg -K`` to get it) or just use your email address as an "
-"identifier."
-msgstr ""
-"公開鍵のシンプルなファイルを取得するには、``gpg --armor --export keyID > "
-"pubkey.asc``を使用すればよいでしょう。フィンガープリントを \"keyID \"として使用するか（``gpg "
-"-K``を参照してください）、メールアドレスを識別子として使用してください。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:343
-msgid ""
-"You can carry this file with you or send it to anyone who you like. This "
-"file is not secret at all. If you want to use the Nitrokey on another "
-"system, you first import this public key via ``gpg --import pubkey.asc`` "
-"and then types ``gpg --card-status`` so that the system knows where to "
-"look for this key. That’s all."
-msgstr ""
-"このファイルを持ち歩いたり、好きな人に送ったりすることができます。このファイルは全く秘密ではありません。別のシステムでNitrokeyを使いたい場合は、まず``gpg"
-" --import pubkey.asc``を介してこの公開鍵をインポートし、次に``gpg --card-"
-"status``をタイプして、システムがこの鍵をどこで探すかを知るようにします。以上です。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:347
-#: ../pro/openpgp-keygen-on-device.rst.inc:218
-msgid "Uploading the Public Key"
-msgstr "公開鍵のアップロード"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:349
-#: ../pro/openpgp-keygen-on-device.rst.inc:220
-msgid ""
-"If you do not want to carry a public keyfile with you, you can upload it "
-"to keyserver. You can do this by typing ``gpg --keyserver "
-"search.keyserver.net --send-key keyID``. If you are using another machine"
-" you can just import it by using ``gpg --keyserver search.keyserver.net "
-"--recv-key keyID``."
-msgstr ""
-"公開鍵ファイルを持ち歩きたくない場合は、keyserverにアップロードすることができます。これは、``gpg --keyserver "
-"search.keyserver.net --send-key "
-"keyID``と入力することで行うことができます。別のマシンを使っている場合は、``gpg --keyserver "
-"search.keyserver.net --recv-key keyID``を使ってインポートすることができます。"
-
-#: ../pro/openpgp-keygen-backup.rst.inc:351
-msgid ""
-"Another possibility is to change the URL setting on your card. Start "
-"``gpg --card-edit`` again and first set the URL where the key is situated"
-" (e.g. on the keyserver or on your webpage etc.) via the ``url`` command."
-" From now on you can import the key on another system by just using the "
-"``fetch`` command within the ``gpg --card-edit environment``."
-msgstr ""
-"もう一つの可能性は、カードのURL設定を変更することです。``gpg --card-"
-"edit``を再度起動し、最初に``url``コマンドを使用して、キーが置かれているURLを設定します（例：キーサーバーや自分のウェブページなど）。今後は、``gpg"
-" --card-edit "
-"environment``コマンドの中で``fetch``コマンドを使用するだけで、別のシステムにキーをインポートすることができます。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:2
-msgid "OpenPGP Key Generation Using GPA"
-msgstr "GPAによるOpenPGPの鍵生成"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:8
-msgid ""
-"The following instructions explain the generation of OpenPGP keys "
-"directly on the Nitrokey with help of the GNU Privacy Assistant (GPA). "
-"You won’t be able to create a backup of these keys. Thus, if you lose the"
-" Nitrokey or it breaks you can not decrypt mails or use these keys "
-"anymore. Please see `here <openpgp-outlook.html>`_ for a comparison of "
-"the different methods to generate OpenPGP keys."
-msgstr ""
-"ここでは、GNU Privacy Assistant "
-"(GPA)を使って、Nitrokey上で直接OpenPGP鍵を生成する方法を説明します。この鍵のバックアップを作成することはできません。そのため、Nitrokeyを紛失したり壊れたりした場合、メールの解読やこれらの鍵の使用はできなくなります。OpenPGPの鍵を生成するさまざまな方法の比較については、`こちら"
-"<openpgp-outlook.html>`_をご覧ください。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:10
-msgid ""
-"You need to have GnuPG and GPA installed on your system. The newest "
-"version for Windows can be found `here <https://www.gpg4win.org/>`__ "
-"(make sure to check “GPA” during the installation!). Users of Linux "
-"systems please install GnuPG and GPA with help of the package manager "
-"(e.g. using ``sudo apt install gnupg gpa`` on Ubuntu)."
-msgstr ""
-"お使いのシステムにGnuPGとGPAがインストールされている必要があります。Windows用の最新版は、`こちら "
-"<https://www.gpg4win.org/>`_にあります（インストールの際には、必ず「GPA」をチェックしてください！）。Linuxシステムのユーザは、パッケージマネージャを使ってGnuPGとGPAをインストールしてください（例：Ubuntuでは``sudo"
-" apt install gnupg gpa``を使う）。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:15
-msgid ""
-"At first, open the GNU Privacy Assistant (GPA). You may are asked to "
-"generate a key, you can skip this step for now by clicking “Do it later”."
-" In the main window, please click on “Card” or “Card Manager”."
-msgstr ""
-"まず、GNU Privacy Assistant "
-"(GPA)を開きます。鍵の生成を求められることがありますが、「後で行う」をクリックすることで、このステップを省略することができます。メインウィンドウで、「カード」または「カードマネージャー」をクリックしてください。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:22
-msgid ""
-"Another windows opens. Please go to “Card” -> “Generate key” to start the"
-" key generation process."
-msgstr "別のウィンドウが開きます。カード」-> 「キーの生成」でキーの生成処理を開始してください。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:29
-msgid ""
-"Now you can put in your name and the email address you want to use for "
-"the key that will be generated next. You may choose an expiration date "
-"for your key, but you don’t have to."
-msgstr "ここで、あなたの名前と、次に生成されるキーに使用する電子メールアドレスを入力します。キーの有効期限を選択することもできますが、その必要はありません。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:31
-msgid ""
-"**Please do not use the backup checkbox**. This “backup” does only save "
-"the encryption key. In case of a loss of the device, you will not be able"
-" to restore the whole key set. So on the one hand it is no full backup "
-"(use `these instructions <openpgp-keygen-backup.html>`_ instead, if you "
-"need one) and on the other hand you risk that someone else can get in "
-"possession of your encryption key. The advantage of generating keys on-"
-"device is to make sure that keys are stored securely. Therefore, we "
-"recommend to skip this half-backup."
-msgstr ""
-"**バックアップのチェックボックスは使用しないでください**。この「バックアップ」は、暗号化キーのみを保存します。デバイスを紛失した場合は、キーセット全体を復元することはできません。つまり、一方では完全なバックアップではなく"
-" (必要であれば、`この説明書 <openpgp-keygen-backup.html>`_ "
-"を代わりに使用してください)、他方では、他の人があなたの暗号化キーを手に入れることができるというリスクがあります。デバイス上で鍵を生成する利点は、鍵が安全に保管されていることを確認できることです。そのため、このハーフバックアップは省略することをお勧めします。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:38
-msgid ""
-"You will be asked for the admin PIN (default: 12345678) and the user PIN "
-"(default: 123456). When the key generation is finished, you can see the "
-"fingerprints of the keys on the bottom of the window. You may fill up the"
-" fields shown above, which are saved on your Nitrokey as well."
-msgstr "管理者用暗証番号（デフォルト：12345678）とユーザー用暗証番号（デフォルト：123456）の入力を求められます。鍵の生成が終了すると、ウィンドウの下部に鍵のフィンガープリントが表示されます。上に表示されているフィールドに記入することができ、Nitrokeyにも保存されます。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:45
-msgid ""
-"Now you can close the window and go back to the main window. Your key "
-"will be visible in the key manager after refreshing. Every application "
-"which makes use of GnuPG will work with your Nitrokey as well, because "
-"GnuPG is fully aware of the fact, that the keys are stored on your "
-"Nitrokey."
-msgstr "これで、ウィンドウを閉じて、メインウィンドウに戻ることができます。あなたの鍵は、更新後にキーマネージャに表示されます。GnuPGを使用するすべてのアプリケーションは、あなたのNitrokeyでも動作します。なぜなら、GnuPGは鍵があなたのNitrokeyに保存されているという事実を完全に認識しているからです。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:62
-msgid ""
-"Right-click on your key entry in the key manager and click “Export Keys…”"
-" to export the public key to a file and/or “Send Keys…” to upload the key"
-" to a keyserver."
-msgstr ""
-"鍵マネージャの鍵エントリを右クリックして、「Export Keys...」をクリックすると、公開鍵がファイルにエクスポートされ、「Send "
-"Keys...」をクリックすると、鍵が鍵サーバにアップロードされます。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:64
-msgid ""
-"You can carry the keyfile with you or send it to anyone who you like. "
-"This file is not secret at all. If you want to use the Nitrokey on "
-"another system, you first import this public key via clicking on “Keys” "
-"-> “Importing Keys…” and choosing the file."
-msgstr ""
-"このキーファイルを持ち歩いたり、好きな人に送ったりすることができます。このファイルには一切の秘密はありません。別のシステムでNitrokeyを使用したい場合は、まず「鍵」->"
-" 「鍵のインポート...」をクリックしてファイルを選択し、この公開鍵をインポートします。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:67
-msgid ""
-"If you do not want to carry a public keyfile with you, you can upload it "
-"to keyserver. If you are using another machine you can just import it by "
-"using “Server” -> “Retrieve Keys…” and entering your name or key id."
-msgstr ""
-"公開鍵ファイルを持ち歩きたくない場合は、keyserverにアップロードすることができます。他のマシンを使用している場合は、\"Server\" "
-"-> \"Retrieve Keys... \"で名前やキーIDを入力してインポートすることができます。"
-
-#: ../pro/openpgp-keygen-gpa.rst.inc:69
-msgid ""
-"Another possibility is to change the URL setting on your card. Open the "
-"card manager again and fill in the URL where the key is situated (e.g. on"
-" the keyserver or on your webpage etc.). From now on you can import the "
-"key on another system by right-clicking on the URL and click on “Fetch "
-"Key”."
-msgstr ""
-"また、カードのURL設定を変更することもできます。カードマネージャーを再度開き、キーが置かれているURLを記入してください（例：キーサーバーやあなたのウェブページなど）。今後は、URLを右クリックして"
-" \"Fetch Key \"をクリックすることで、他のシステムにキーをインポートすることができます。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:2
-msgid "OpenPGP Key Generation On-Device"
-msgstr "デバイス上でのOpenPGP鍵生成"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:8
-msgid ""
-"The following instructions explain the generation of OpenPGP keys "
-"directly on the Nitrokey. This is done by using the command line "
-"interface of GnuPG. Thus, you need to have GnuPG installed on your "
-"system. The newest GnuPG version for Windows can be found `here "
-"<https://www.gpg4win.org/>`__ and the newest version for MacOS can be "
-"found `here <https://gpgtools.org/>`__. Users of Linux systems please "
-"install GnuPG with help of the package manager."
-msgstr "以下の説明では、Nitrokey上で直接OpenPGPキーを生成する方法を説明します。これは、GnuPGのコマンドラインインターフェイスを使用して行われます。そのため、お使いのシステムにGnuPGがインストールされている必要があります。Windows用の最新のGnuPGバージョンは`こちら<https://www.gpg4win.org/>`_、MacOS用の最新バージョンは`こちら<https://gpgtools.org/>`_で見つけることができます。Linuxシステムのユーザは、パッケージマネージャの助けを借りてGnuPGをインストールしてください。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:12
-msgid ""
-"These instructions are based on GnuPG version 2.2.6 or higher. Some Linux"
-" Distributions have an older version installed. In this case please "
-"choose a different method as listed `here <openpgp.html>`_ or install a "
-"newer version if possible."
-msgstr "これらの説明は、GnuPGのバージョン2.2.6以降に基づいています。一部のLinuxディストリビューションでは、古いバージョンがインストールされている場合があります。この場合、`こちらの<openpgp.html>`_に記載されている別の方法を選択するか、可能であればより新しいバージョンをインストールしてください。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:21
-msgid ""
-"The following descriptions explain the basic key generation on-device via"
-" GnuPG’s command line interface. The default behaviour is to generate RSA"
-" keys of 2048 bit size. If you want to change the key algorithm and "
-"length, have a look at the next section first."
-msgstr "以下の説明では、GnuPGのコマンドラインインターフェイスを使ったデバイス上での基本的な鍵生成について説明します。デフォルトの動作は、2048ビットサイズのRSA鍵を生成することです。鍵のアルゴリズムや長さを変更したい場合は、まず次のセクションを見てください。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:23
-msgid "Open a command line and type ``gpg2 --card-edit``."
-msgstr "コマンドラインを開き、``gpg2 --card-edit``と入力します。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:53
-msgid ""
-"Now you are in the interactive interface of GnuPG. Activate the admin "
-"commands with ``admin`` and use ``generate`` afterwards to start the "
-"generation of keys."
-msgstr "これであなたはGnuPGの対話型インターフェースに入りました。``admin``で管理コマンドを有効にし、その後``generate``で鍵の生成を開始してください。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:95
-msgid ""
-"**Please do not create the suggested off-card backup.** This “backup” "
-"does only save the encryption key, but not the signature and "
-"authentication keys. In case of a loss of the device, you will not be "
-"able to restore the whole key set. So on the one hand it is no full "
-"backup (use `these instructions <openpgp-keygen-backup.html>`_ instead, "
-"if you need one) and on the other hand you risk that someone else can get"
-" in possession of your encryption key. The advantage of generating keys "
-"on-device is to make sure that keys are stored securely. Therefore, we "
-"recommend to skip this half-backup."
-msgstr ""
-"**この「バックアップ」では、暗号化キーのみが保存され、署名キーや認証キーは保存されません。この「バックアップ」は、暗号化キーのみを保存し、署名キーや認証キーは保存しません。デバイスを紛失した場合、キーセット全体を復元することはできません。つまり、一方では完全なバックアップではなく"
-" (必要であれば、`この説明書 <openpgp-keygen-"
-"backup.html>`_を使用してください)、他方では、誰か他の人があなたの暗号化キーを手に入れることができるというリスクがあります。デバイス上で鍵を生成する利点は、鍵が安全に保管されていることを確認できることです。そのため、このハーフバックアップは省略することをお勧めします。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:98
-msgid ""
-"Now you have a complete key set on your device which can be used for the "
-"`various applications "
-"<https://www.nitrokey.com/documentation/applications>`__ listed on our "
-"site. Type ``quit`` and hit enter to exit."
-msgstr "これで、当サイトに掲載されている`さまざまなアプリケーション<https://www.nitrokey.com/documentation/applications>`_に使用できる完全なキーセットがデバイスに備わったことになります。``quit``と入力してエンターキーを押すと終了します。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:101
-msgid "Change Key Attributes"
-msgstr "Change Key Attributes"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:103
-msgid ""
-"This section is about changing the key attributes. If you want to use the"
-" default values, you can proceed with the next section."
-msgstr "このセクションでは、キーアトリビュートの変更について説明します。デフォルトの値を使用したい場合は、次のセクションに進んでください。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:105
-msgid "Open a command line and type ``gpg2 --card-edit --expert``."
-msgstr "コマンドラインを開き、``gpg2 --card-edit --expert``と入力します。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:131
-msgid ""
-"Now you are in the interactive interface of GnuPG. As you can see in the "
-"“Key attributes” field above, the default value rsa2048 is set. To change"
-" them, activate the admin commands with ``admin`` and use ``key-attr`` "
-"afterwards to change the attributes of the keys."
-msgstr ""
-"これであなたはGnuPGのインタラクティブなインターフェイスに入りました。上の「鍵の属性」欄を見ると、デフォルト値のrsa2048が設定されているのがわかります。これを変更するには、``admin``で管理コマンドを起動し、その後"
-"``key-attr``で鍵の属性を変更してください。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:162
-msgid ""
-"You can choose the attribute for each key (that is, signature, encryption"
-" and authentication key). Most people will use the same attributes for "
-"every key. Type ``list`` to see the results (have look at the “Key "
-"attributes” field, which now reads rsa4096)."
-msgstr ""
-"各キー（つまり、署名キー、暗号化キー、認証キー）の属性を選択することができます。ほとんどの人は、すべてのキーに同じ属性を使うでしょう。``list``"
-" と入力すると、結果が表示されます（「鍵の属性」フィールドに rsa4096 と表示されているのを見てください）。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:188
-msgid ""
-"Type ``quit`` and hit enter to exit or proceed directly with the previous"
-" section to actually generate the keys with the key attributes you just "
-"set."
-msgstr "``quit``と入力してエンターキーを押して終了するか、そのまま前のセクションに進み、先ほど設定したキー属性を持つキーを実際に生成します。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:190
-msgid ""
-"The following table illustrates which algorithm can be used on which "
-"device."
-msgstr "次の表は、どのアルゴリズムがどのデバイスで使用できるかを示しています。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:213
-msgid ""
-"To get a simple file of your public key, you can just use ``gpg2 --armor "
-"--export keyID > pubkey.asc``. Use either the fingerprint as “keyID” "
-"(look at ``gpg -K`` to get it) or just use your email address as an "
-"identifier."
-msgstr ""
-"公開鍵のシンプルなファイルを取得するには、``gpg2 --armor --export keyID > "
-"pubkey.asc``を使用すればよいでしょう。フィンガープリントを \"keyID \"として使用するか（``gpg "
-"-K``を参照してください）、または単に識別子として電子メールアドレスを使用してください。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:215
-msgid ""
-"You can carry this file with you or send it to anyone who you like. This "
-"file is not secret at all. If you want to use the Nitrokey on another "
-"system, you first import this public key via ``gpg2 --import pubkey.asc``"
-" and then types ``gpg2 --card-status`` so that the system knows where to "
-"look for this key. That’s all."
-msgstr ""
-"このファイルを持ち歩いたり、好きな人に送ったりすることができます。このファイルは全く秘密ではありません。他のシステムでNitrokeyを使いたい場合は、まず``gpg2"
-" --import pubkey.asc``を介してこの公開鍵をインポートし、次に``gpg2 --card-"
-"status``をタイプして、システムがこの鍵をどこで探すかを知るようにします。以上です。"
-
-#: ../pro/openpgp-keygen-on-device.rst.inc:222
-msgid ""
-"Another possibility is to change the URL setting on your card. Start gpg "
-"–card-edit again and first set the URL where the key is situated (e.g. on"
-" the keyserver or on your webpage etc.) via the ``url`` command. From now"
-" on you can import the key on another system by just using the ``fetch`` "
-"command within the ``gpg --card-edit`` environment."
-msgstr ""
-"もうひとつの方法は、カードのURL設定を変更することです。gpg -card-"
-"editを再度起動し、まず``url``コマンドで、鍵が置かれているURLを設定します（鍵サーバや自分のウェブページなど）。今後は、``fetch``コマンドを``gpg"
-" --card-edit``環境内で使用するだけで、別のシステムで鍵をインポートすることができます。"
-
-#: ../pro/openpgp-outlook.rst.inc:2
-msgid "OpenPGP Email Encryption with Outlook"
-msgstr "OutlookでのOpenPGP電子メール暗号化"
-
-#: ../pro/openpgp-outlook.rst.inc:10
-msgid ""
-"Unfortunately, there is no solution to use OpenPGP in Outlook for macOS "
-"yet."
-msgstr "残念ながら、Outlook for macOSでOpenPGPを使うためのソリューションはまだありません。"
-
-#: ../pro/openpgp-outlook.rst.inc:16
-msgid ""
-"If you do not have PGP-Keys on your Nitrokey yet, please look at `this "
-"page <openpgp.html>`_ first."
-msgstr "まだNitrokeyにPGP-Keyを入れていない方は、まずこのページの` <openpgp.html>`_をご覧ください。"
-
-#: ../pro/openpgp-outlook.rst.inc:18
-msgid ""
-"You need to have GnuPG installed on your System. The newest GnuPG version"
-" for Windows can be found `here <https://www.gpg4win.org>`__. You need to"
-" make sure to have “GpgOL” checked during installation process (see "
-"below)."
-msgstr ""
-"あなたのシステムにはGnuPGがインストールされている必要があります。Windows用の最新のGnuPGバージョンは、`こちら "
-"<https://www.gpg4win.org>`_にあります。なお、インストールの際には、「GpgOL」にチェックを入れておく必要があります（下記参照）。"
-
-#: ../pro/openpgp-outlook.rst.inc:28
-msgid ""
-"After installing GPG4Win along with GpgOL, you will see a new icon "
-"labeled “Secure” in the composing window. To encrypt and sign a mail you "
-"just click on the sign like seen below."
-msgstr "GPG4WinとGpgOLをインストールすると、メール作成画面に「Secure」と書かれたアイコンが表示されるようになります。メールを暗号化して署名するには、以下のように署名をクリックします。"
-
-#: ../pro/openpgp-outlook.rst.inc:35
-msgid ""
-"GnuPG will start signing and encrypting the mail as soon as you click on "
-"‘send’. You are requested to choose the identity you want to sign with "
-"and encrypt for."
-msgstr "送信」をクリックすると、GnuPGがメールの署名と暗号化を開始します。署名と暗号化を行うIDを選択するよう求められます。"
-
-#: ../pro/openpgp-outlook.rst.inc:42
-msgid ""
-"Furthermore, you are asked for typing in the User PIN of the Nitrokey for"
-" signing the mail."
-msgstr "さらに、メールに署名するためのNitrokeyのユーザーPINを入力するよう求められます。"
-
-#: ../pro/openpgp-outlook.rst.inc:49
-msgid ""
-"You will be asked automatically for your User PIN if you want to read an "
-"encrypted mail."
-msgstr "暗号化されたメールを読みたい場合は、自動的にユーザーPINを求められます。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:2
-msgid "OpenPGP Email Encryption With Thunderbird"
-msgstr "ThunderbirdでのOpenPGPによるメール暗号化"
-
-#: ../pro/openpgp-thunderbird.rst.inc:9
-msgid "Thunderbird 78.3 and newer"
-msgstr "Thunderbird 78.3以降のバージョン"
-
-#: ../pro/openpgp-thunderbird.rst.inc:11
-msgid ""
-"At the moment Thunderbird’s 78 support for the OpenPGP emails is not easy"
-" to set up. See `Thunderbird’s documentation "
-"<https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`__ for details."
-" Here is a `comprehensive German guide "
-"<https://decatec.de/it/thunderbird-78-pgp-verschluesselung-mit-dem-"
-"nitrokey-storage/>`__."
-msgstr ""
-"現時点では、Thunderbirdの78サポートのOpenPGPメールの設定は簡単ではありません。詳細については、`Thunderbirdのドキュメント<https://wiki.mozilla.org/Thunderbird:OpenPGP:Smartcards>`_を参照してください。ここには`包括的なドイツ語のガイド<https://decatec.de/it/thunderbird-78"
-"-pgp-verschluesselung-mit-dem-nitrokey-storage/>`_があります。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:16
-msgid ""
-"Error message: ``The configured key ID '4BA0183FCBA844A7' cannot be found"
-" on your keyring``"
-msgstr ""
-"エラーメッセージを表示します。``The configured key ID '4BA0183FCBA844A7' cannot be found"
-" on your keyring``"
-
-#: ../pro/openpgp-thunderbird.rst.inc:18
-msgid "Make sure that the public key is imported to the Thunderbird’s manager and"
-msgstr "公開鍵がサンダーバードのマネージャーにインポートされていることを確認して"
-
-#: ../pro/openpgp-thunderbird.rst.inc:19
-msgid ""
-"The key ID does not contain any whitespace, and consists of 16 characters"
-" from range 0-9 A-F"
-msgstr "キーIDは空白を含まず、0-9 A-Fの範囲の16文字で構成されています。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:20
-msgid "you have GPA or Kleopatra software installed."
-msgstr "GPAまたはKleopatraソフトウェアがインストールされていること。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:22
-msgid ""
-"Please use Kleopatra or `GPA <openpgp-keygen-gpa.html>`_ software to "
-"handle the smart card."
-msgstr "スマートカードの取り扱いには、Kleopatraまたは`GPA <openpgp-keygen-gpa.html>`_ソフトウェアをご利用ください。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:25
-msgid "Thunderbird 77 and older"
-msgstr "サンダーバード77以上"
-
-#: ../pro/openpgp-thunderbird.rst.inc:30
-msgid ""
-"Install the device driver as described `here "
-"<https://www.nitrokey.com/documentation/installation>`__."
-msgstr "`こちらの<https://www.nitrokey.com/documentation/installation>`_の説明に従って、デバイスドライバーをインストールします。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:33
-msgid ""
-"Install `Thunderbird <https://www.thunderbird.net/en-US/>`__ and the Add-"
-"on `Enigmail <https://www.enigmail.net/index.php/en/>`__."
-msgstr ""
-"`Thunderbird <https://www.thunderbird.net/en-US/>`_とアドオンの`Enigmail "
-"<https://www.enigmail.net/index.php/en/>`_をインストールします。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:37
-msgid "Changing PINs"
-msgstr "暗証番号の変更"
-
-#: ../pro/openpgp-thunderbird.rst.inc:39
-msgid "There are two PINs for the Nitrokey:"
-msgstr "Nitrokeyには2つのPINがあります。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:41
-msgid "The User PIN required for daily work"
-msgstr "日常業務に必要なユーザーPIN"
-
-#: ../pro/openpgp-thunderbird.rst.inc:43
-msgid ""
-"The Admin PIN is required to change keys or other settings of the device."
-" In addition, the Nitrokey can be unlocked (for example, after 3 times "
-"incorrect input of the User PIN) by means of the Admin PIN."
-msgstr ""
-"管理者PINは、デバイスのキーやその他の設定を変更するために必要です。また、NitrokeyはAdmin "
-"PINでロックを解除することができます（例：ユーザーPINを3回誤入力した場合など）。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:47
-msgid ""
-"After receiving the Nitrokey, you should immediately change the User PIN "
-"= “123456” and Admin PIN = “12345678”."
-msgstr ""
-"Nitrokeyを受け取ったら、すぐにUser PIN = \"123456 \"とAdmin PIN = \"12345678 "
-"\"に変更してください。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:53
-msgid "Insert the Nitrokey into a USB port on your computer."
-msgstr "NitrokeyをパソコンのUSBポートに挿入する。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:55
-msgid "Start Thunderbird."
-msgstr "Thunderbirdを起動します。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:57
-msgid ""
-"In Thunderbird, select as shown in the following picture. “OpenPGP” → "
-"“Manage smart card”"
-msgstr "Thunderbirdで、以下の図のように選択します。\"OpenPGP\" → \"スマートカードの管理\""
-
-#: ../pro/openpgp-thunderbird.rst.inc:65
-msgid "In the “SmartCard Details” window, select “SmartCard → Change PIN”"
-msgstr "SmartCard Details \"ウィンドウで、\"SmartCard → Change PIN \"を選択します。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:72
-msgid ""
-"Select “Change PIN”. This is your User PIN you need for daily work. Enter"
-" the current PIN ( “123456” for delivery) and twice your new PIN. For "
-"this PIN you can use the characters: a-z A-Z 0-9 / .;;:- !? () [] {}% +. "
-"The PIN should be at least 6 characters long. Click “OK”."
-msgstr ""
-"Change PIN \"を選択します。この暗証番号は、日常業務で必要となるユーザー暗証番号です。現在の暗証番号（配送時は "
-"\"123456\"）と新しい暗証番号を2回入力してください。この暗証番号には、以下の文字が使用できます。 a-z A-Z 0-9 / .;;:-"
-" !?() [] {}% +.暗証番号は6文字以上で入力してください。OK \"をクリックします。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:83
-msgid "Repeat the procedure for the Admin PIN. “SmartCard → Change PIN”"
-msgstr "Admin PINの手順を繰り返します。\"スマートカード → PINの変更\""
-
-#: ../pro/openpgp-thunderbird.rst.inc:90
-msgid ""
-"Select Change Admin PIN. This is your Admin PIN that you only rarely "
-"need. Enter the current PIN ( “12345678” for delivery) and the new PIN "
-"twice. For this PIN, you can use the characters: a-z A-Z 0-9 / .;;:- !? "
-"() [] {}% +. The PIN should be at least 8 characters long. Click “OK”."
-msgstr ""
-"Change Admin "
-"PIN」を選択します。これはまれにしか必要としない管理者用暗証番号です。現在の暗証番号（配送時は「12345678」）と新しい暗証番号を2回入力します。このPINには、以下の文字が使用できます。"
-" a-z A-Z 0-9 / .;;:- !() [] {}% +.暗証番号は8文字以上で入力してください。OK \"をクリックします。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:101
-msgid ""
-"You have now changed the PINs and should continue to generate your "
-"personal keys."
-msgstr "これでPINの変更が完了し、引き続き個人キーを生成する必要があります。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:104
-msgid "Generation of Keys"
-msgstr "キーの生成"
-
-#: ../pro/openpgp-thunderbird.rst.inc:106
-msgid ""
-"To encrypt data and e-mails, a key pair consisting of a public key and a "
-"private key, must first be generated. The so-called public key is used to"
-" **en**\\ crypt the data or e-mails. You can distribute this to all those"
-" with whom you want to communicate securely (for example, publish it "
-"publicly on your site). The so-called private key is used to **de**\\ "
-"crypt the data or messages. This key should **NEVER** be made known! "
-"Usually, you also do not have direct access to it (see below), since this"
-" is stored securely on the Nitrokey. Use the Nitrokey to create both keys"
-" using the following procedure:"
-msgstr ""
-"データや電子メールを暗号化するためには、まず公開鍵と秘密鍵からなる鍵ペアを生成する必要があります。公開鍵は、データや電子メールを暗号化するために使用されます。これを安全に通信したい相手に配布することができます（例えば、サイトで公開するなど）。秘密鍵は、データやメッセージを暗号化するために使用されます。この鍵は絶対に"
-" **知られてはいけません** "
-"。通常、秘密鍵はNitrokeyに安全に保管されているので、あなたが直接アクセスすることはありません（下記参照）。Nitrokeyを使用して、以下の手順で両方の鍵を作成してください。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:109
-msgid "Insert the Nitrokey into a USB port on your computer. StartThunderbird"
-msgstr "NitrokeyをコンピュータのUSBポートに挿入する。StartThunderbird"
-
-#: ../pro/openpgp-thunderbird.rst.inc:112
-msgid ""
-"In Thunderbird, select as shown in the following picture „OpenPGP“ → "
-"„Manage Smart Card“"
-msgstr "Thunderbirdで、以下の図のように「OpenPGP」→「Manage Smart Card」を選択します。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:115
-msgid "In the “SmartCard details” window, select “SmartCard” → “Generate key”"
-msgstr "\"SmartCard details \"ウィンドウで、\"SmartCard\"→\"Generate key \"を選択します。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:118
-msgid ""
-"In the following window, select your e-mail address for which you want to"
-" generate keys. Verify that the e-mail address specified in “User ID” is "
-"correct. You can also specify whether a private key backup copy should be"
-" stored on your computer."
-msgstr "次の画面で、鍵を生成するためのメールアドレスを選択します。ユーザーID」で指定したメールアドレスが正しいことを確認してください。また、秘密鍵のバックアップコピーをパソコンに保存するかどうかも指定できます。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:128
-msgid ""
-"If you do not create a backup copy, you have no chance to get your "
-"encrypted data if the Nitrokey is lost or damaged!"
-msgstr "バックアップコピーを作成しないと、Nitrokeyを紛失したり破損したりした場合に、暗号化されたデータを入手するチャンスがありません"
-
-#: ../pro/openpgp-thunderbird.rst.inc:136
-msgid ""
-"It is recommended to store this safety device. Select “Save key copy of "
-"the key outside the Smard Card”. Then enter your personal password for "
-"the backup copy under “Passphrase”. This password should not be less than"
-" 8 characters, and should contain both uppercase and lowercase letters "
-"and numbers. You can also use a long sentence, but avoid known prose or "
-"lyric. Also, no name or known term should be used."
-msgstr ""
-"この安全装置を保存することをお勧めします。Smard Cardの外にキーのコピーを保存する \"を選択します。次に、\"Passphrase "
-"\"の下に、バックアップ・コピー用の個人的なパスワードを入力します。このパスワードは、8文字以上で、大文字と小文字、数字を含む必要があります。長い文章を使うこともできますが、既知の散文や歌詞は避けてください。また、名前や既知の用語も使用してはいけません。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:144
-msgid ""
-"**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö"
-" or ß)"
-msgstr "**許可される文字**: a-z A-Z 0-9 /.,;:-!?( )%+ (ウムラウト ä,ü,ö,Ä,Ü,Ö,ß は不可)"
-
-#: ../pro/openpgp-thunderbird.rst.inc:146
-msgid ""
-"**Poor Passwords**: qwerty123, ILoveSusi3, Password, If you can dream it,"
-" you can do it."
-msgstr ""
-"**Poor Password**: qwerty123, ILoveSusi3, Password, If you can dream it, "
-"you can do it."
-
-#: ../pro/openpgp-thunderbird.rst.inc:148
-#, python-format
-msgid ""
-"**Strong Passwords**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen "
-"Earz and fife legs (spelling errors increase security)"
-msgstr ""
-"**強力なパスワード**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen Earz and"
-" fife legs (spelling error increases security)"
-
-#: ../pro/openpgp-thunderbird.rst.inc:150
-msgid ""
-"You do **not** need this password for daily work. It is only necessary "
-"for the restoration of the secret key, e.g. if you have lost the "
-"Nitrokey. Therefore, keep the password in a safe place."
-msgstr ""
-"このパスワードは日常業務では **必要ありません** "
-"。このパスワードは、Nitrokeyを紛失した場合など、秘密鍵を復元するためにのみ必要です。したがって、パスワードは安全な場所に保管してください。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:152
-msgid ""
-"You can also specify whether and when the key should be automatically "
-"invalid. This means, from this point onwards, no more e-mails can be "
-"encrypted with this key and you have to create a new key pair."
-msgstr "また、この鍵を自動的に無効にするかどうか、いつ無効にするかを指定することもできます。これは、この時点から、この鍵で電子メールを暗号化することができなくなり、新しいキー・ペアを作成しなければならないことを意味しています。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:154
-msgid "Finally, click on “Generate key pair”."
-msgstr "最後に「Generate key pair」をクリックします。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:161
-msgid "You are now asked if the key should be generated. Confirm with “Yes”."
-msgstr "キーを生成するかどうかを聞かれます。Yes \"を選択してください。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:168
-msgid ""
-"In order for the program to write your keys to the stick, you must enter "
-"the admin PIN and the user PIN (changed above)."
-msgstr "プログラムがあなたのキーをスティックに書き込むためには、管理者用暗証番号とユーザー用暗証番号（上記で変更）を入力する必要があります。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:176
-msgid ""
-"The key generation can take a few minutes. Do not terminate the program "
-"prematurely!"
-msgstr "鍵の生成には数分かかることがあります。早期にプログラムを終了しないでください。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:178
-msgid ""
-"When the key generation is complete, you receive the following message. A"
-" certificate is now created that allows you to invalidate your key in an "
-"emergency. This certificate is automatically saved with your private key."
-" This should be printed out or backed up on at least one other external "
-"medium so that you can revoke the validity of the keys if your keys and "
-"backups are lost. Click “Yes”"
-msgstr ""
-"鍵の生成が完了すると、次のようなメッセージが表示されます。緊急時に鍵を無効にすることができる証明書が作成されました。この証明書は、あなたの秘密鍵とともに自動的に保存されます。これは、鍵やバックアップを紛失した場合に、鍵の有効性を無効にできるように、プリントアウトするか、少なくとも他の外部媒体にバックアップしてください。\"はい"
-" \"をクリック"
-
-#: ../pro/openpgp-thunderbird.rst.inc:185
-msgid ""
-"You can now select the directory in which the backup copy is stored. This"
-" copy is encrypted with your password entered above. This means that no "
-"one can read or use the keys without your password. Do not give your "
-"password to anyone. This file with the name of your e-mail address and "
-"the suffix “.asc” should be backed up on another medium. After selecting "
-"the directory, click “Save”."
-msgstr "ここで、バックアップコピーを保存するディレクトリを選択できます。このコピーは、上記で入力したパスワードで暗号化されます。つまり、あなたのパスワードなしでは、誰もキーを読み取ったり使用したりすることはできません。パスワードは誰にも教えないでください。あなたのメールアドレスの名前と接尾辞「.asc」が付いたこのファイルは、別の媒体にバックアップしてください。ディレクトリを選択後、「保存」をクリックします。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:192
-msgid "Here you must again specify your user PIN or passphrase. Then click “OK”"
-msgstr "ここで再度、ユーザーPINまたはパスフレーズを指定する必要があります。そして、\"OK \"をクリックします。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
-#: ../storage/firmware-update-manually.rst:-1
-msgid "img12"
-msgstr "img12"
-
-#: ../pro/openpgp-thunderbird.rst.inc:200
-msgid ""
-"You will now see the message that the certificate was created and saved. "
-"Click “OK”"
-msgstr "これで、証明書が作成され、保存されたというメッセージが表示されます。OK \"をクリックします。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
-#: ../storage/firmware-update-manually.rst:-1
-msgid "img13"
-msgstr "img13"
-
-#: ../pro/openpgp-thunderbird.rst.inc:208
-msgid ""
-"Key generation is now complete. You can now exit the program (File - "
-"Close)."
-msgstr "キーの生成が完了しました。これでプログラムを終了することができます（ファイル - 閉じる）。"
-
-#: ../pro/openpgp-thunderbird.rst.inc:-1 ../pro/windows/2fa-microsoft.rst:-1
-msgid "img14"
-msgstr "img14"
-
-#: ../pro/openpgp-thunderbird.rst.inc:216
-msgid ""
-"Your Nitrokey is personalized and ready to use. **Have fun with the "
-"secure email encryption!**"
-msgstr "あなたのNitrokeyはパーソナライズされ、すぐに使用できます。**安全なメールの暗号化で楽しみましょう！***。"
-
 #: ../pro/linux/openvpn-easyrsa.rst:2 ../pro/windows/openvpn-easyrsa.rst:2
 #: ../storage/linux/openvpn-easyrsa.rst:2
 msgid "OpenVPN Configuration with Easy-RSA"
@@ -15842,13 +16032,6 @@ msgstr ""
 "今後は、ウェブサイトにログインする際に、他の認証情報に加えてワンタイムパスワードの入力を求められます。ワンタイムパスワードを取得するには、Nitrokeyアプリを起動し、\"Menu\""
 " -> \"Passwords\" -> \"YourSlotName \"に再度アクセスする必要があります。"
 
-#: ../pro/smime.rst.inc:17
-msgid ""
-"If you are in doubt which one to choose, you should use OpenPGP, see "
-"`here <openpgp.html>`_. This page describes the usage of S/MIME email "
-"encryption."
-msgstr "どれを選べばいいのかわからない場合は、OpenPGPを使うべきで、`こちら<openpgp.html>`_を参照してください。このページでは、S/MIMEのメール暗号化の使い方を説明しています。"
-
 #: ../pro/linux/ssh.rst:2 ../start/linux/ssh.rst:2 ../storage/linux/ssh.rst:2
 msgid "SSH For Server Administration"
 msgstr "SSHによるサーバー管理"
@@ -16169,131 +16352,6 @@ msgid ""
 "Go to “Menu” -> “Configure” to change the User PIN (default: 123456) and "
 "Admin PIN (default: 12345678) to your own choices."
 msgstr "メニュー」-> 「設定」で、ユーザーPIN（初期値：123456）とアドミンPIN（初期値：12345678）を任意のものに変更します。"
-
-#: ../pro/windows/openpgp-csp.rst:2
-msgid "Windows Login and S/MIME Email Encryption with Active Directory"
-msgstr "Active DirectoryによるWindowsログオンとS/MIMEメールの暗号化"
-
-#: ../pro/windows/openpgp-csp.rst:8
-msgid ""
-"Please note that this driver is still in development/testing. Please tell"
-" us your experiences! See our `contact page "
-"<https://www.nitrokey.com/contact>`__."
-msgstr "このドライバーはまだ開発/テスト中であることをご了承ください。あなたの経験を私たちに教えてください。私たちの`コンタクトページ<https://www.nitrokey.com/contact>`_をご覧ください。"
-
-#: ../pro/windows/openpgp-csp.rst:13
-msgid ""
-"This guide assumes that an Active Directory server with role ‘Active "
-"Directory Certificate Services’ is installed and running on a server. "
-"These instructions are based on Nitrokey Storage 2 and Nitrokey Pro 2 "
-"only."
-msgstr ""
-"このガイドは、「Active Directory Certificate Services」の役割を持つActive "
-"Directoryサーバーがインストールされ、サーバー上で動作していることを前提としています。本ガイドは、Nitrokey Storage "
-"2およびNitrokey Pro 2のみを対象としています。"
-
-#: ../pro/windows/openpgp-csp.rst:16
-msgid "Installing OpenPGP-CSP"
-msgstr "OpenPGP-CSPのインストール"
-
-#: ../pro/windows/openpgp-csp.rst:18
-msgid ""
-"This step is needed for clients to use the OpenPGP-CSP driver. Download "
-"and install the `latest version <https://github.com/vletoux/OpenPGP-"
-"CSP/releases/tag/1.3>`__ of the installer file ‘SetupOpenPGPCsp’ for your"
-" system architecture, for ‘SetupOpenPGPCsp_x64.msi’ for 64-bit systems."
-msgstr ""
-"この手順は、クライアントがOpenPGP-"
-"CSPドライバーを使用するために必要です。お使いのシステム・アーキテクチャ用のインストーラー・ファイル「SetupOpenPGPCsp」の`最新バージョン<https://github.com/vletoux"
-"/OpenPGP-"
-"CSP/releases/tag/1.3>`_、64ビット・システム用の「SetupOpenPGPCsp_x64.msi」をダウンロードしてインストールします。"
-
-#: ../pro/windows/openpgp-csp.rst:20
-msgid ""
-"You may want to install the driver on the server as well for being able "
-"to enforce the use of this driver in the template (see below)."
-msgstr "テンプレートでこのドライバーの使用を強制するために、サーバーにもドライバーをインストールしておくとよいでしょう（下記参照）。"
-
-#: ../pro/windows/openpgp-csp.rst:23
-msgid "Creating Certificate Template on Server Side"
-msgstr "サーバー側での証明書テンプレートの作成"
-
-#: ../pro/windows/openpgp-csp.rst:25
-msgid ""
-"On Active Directory Server open certsrv.msc to manage your certificate "
-"templates. Right click on ‘Certificate Templates’ and choose ‘Manage’"
-msgstr ""
-"Active Directory "
-"Server上でcertsrv.mscを開き、証明書テンプレートを管理する。証明書テンプレート」を右クリックし、「管理」を選択する。"
-
-#: ../pro/windows/openpgp-csp.rst:32
-msgid ""
-"Now right click on ‘Smartcard Logon’ template and click ‘Duplicate’, to "
-"create a new template on basis of this standard template. Rename template"
-" to ‘OpenPGP Card Logon and Email’ or alike."
-msgstr ""
-"Smartcard "
-"Logon」テンプレートを右クリックして「Duplicate」をクリックすると、この標準テンプレートをベースにした新しいテンプレートが作成されます。テンプレートの名前を「OpenPGP"
-" Card Logon and Email」などと変更します。"
-
-#: ../pro/windows/openpgp-csp.rst:39
-msgid ""
-"Under ‘Request Handling’, you can choose the OpenPGP-CSP as the one and "
-"only Cryptography Service Provider (click the Button labeled ‘CSPs…’). "
-"For this to work, you need to install the driver on the server as well "
-"and you have to insert a Nitrokey beforehand. This is optional. You can "
-"let the user choose, which CSP to use."
-msgstr ""
-"リクエスト処理」では、唯一の暗号化サービスプロバイダとしてOpenPGP-"
-"CSPを選択することができます（「CSPs...」と書かれたボタンをクリック）。この機能を利用するには、サーバーにもドライバーをインストールする必要があり、事前にNitrokeyを挿入する必要があります。これはオプションです。どのCSPを使用するかは、ユーザーに選択させることができます。"
-
-#: ../pro/windows/openpgp-csp.rst:51
-msgid ""
-"For enabling S/MIME email encryption go to ‘Subject name’. Tick the "
-"checkbox ‘E-Mail name’ (note: You must save the mail addresses of your "
-"users in the corresponding Active Directory field!)."
-msgstr ""
-"S/MIMEメールの暗号化を有効にするには、「Subject name」に進みます。チェックボックス「E-Mail "
-"name」にチェックを入れます（注意：ユーザーのメールアドレスは、対応するActive Directoryのフィールドに保存する必要があります）。"
-
-#: ../pro/windows/openpgp-csp.rst:58
-msgid ""
-"Then go to ‘Extensions’, there you edit the applications guideline and "
-"add ‘Secure Email’."
-msgstr "その後、「拡張機能」に進み、アプリケーションのガイドラインを編集し、「Secure Email」を追加します。"
-
-#: ../pro/windows/openpgp-csp.rst:71
-msgid "Request Certificate on Client (Domain Member)"
-msgstr "クライアント（ドメインメンバー）に証明書を要求する"
-
-#: ../pro/windows/openpgp-csp.rst:73
-msgid ""
-"To request a certificate for a domain member, you have to open "
-"certmgr.msc. Right click on folder ‘Personal->Certificates’ and click "
-"’All Tasks->Request New Certificate and choose the template you created "
-"on the AD."
-msgstr ""
-"ドメインメンバーの証明書を要求するには、certmgr.mscを開く必要があります。Personal->Certificates "
-"\"フォルダを右クリックし、\"All Tasks->Request New Certificate "
-"\"をクリックし、ADで作成したテンプレートを選択する。"
-
-#: ../pro/windows/openpgp-csp.rst:81
-msgid ""
-"If you did not enforce the usage of OpenPGP-CSP you have to choose it "
-"here now."
-msgstr "OpenPGP-CSPの使用を強制していない場合は、ここで選択する必要があります。"
-
-#: ../pro/windows/openpgp-csp.rst:93
-msgid "Next you choose the Authentication slot for the certificate."
-msgstr "次に、証明書の認証スロットを選択します。"
-
-#: ../pro/windows/openpgp-csp.rst:95
-msgid ""
-"You are now ready to logon on the computer with the Nitrokey instead of "
-"your password and you can use `S/MIME email encryption/signing "
-"<smime.html>`_ with the Nitrokey. The driver has to be installed on every"
-" computer you want to use the certificate on."
-msgstr "これで、パスワードの代わりにNitrokeyを使ってコンピュータにログオンする準備が整い、Nitrokeyを使って`S/MIMEメールの暗号化/署名<smime.html>`_ができるようになります。ドライバは、証明書を使用したいすべてのコンピュータにインストールする必要があります。"
 
 #: ../pro/windows/openvpn-easyrsa.rst:17
 msgid ""
@@ -23367,3 +23425,4 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 #~ "additional functionality and will be "
 #~ "documented here accordingly."
 #~ msgstr "今後のファームウェアのアップデートにより、さらに機能が追加される予定ですので、その都度、ここに記載します。"
+
