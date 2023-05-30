@@ -3,39 +3,39 @@ Update OpenWrt Firmware
 
 .. contents:: :local:
 
-1. We recommend updating OpenWrt via the pre-installed Attended Sysupgrade  `OpenWrt documentation <https://openwrt.org/docs/guide-user/installation/attended.sysupgrade>`_
+We recommend updating OpenWrt via the pre-installed `Attended Sysupgrade <https://openwrt.org/docs/guide-user/installation/attended.sysupgrade>`_. To be able to use this service you need to configure it to ignore the "nitrowall" package, if it has been installed before:
 
-2. To be able to use this service you need configure it to ignore the nitrowall package, if it has been installed before.
-
-3. Go to System -> Attended Sysupgrade -> Configuration and enable the Advanced Mode -> Save & Apply
+1. Go to System -> Attended Sysupgrade -> Configuration and enable the Advanced Mode -> Save & Apply
 
 	.. image:: /images/nitrowall/openwrt_upgrade1.png
 
-4. Go back to overview and search for available updates
+2. Go back to overview and search for available updates
 
 	.. image:: /images/nitrowall/openwrt_upgrade2.png
 
-5. Search through the list of installed packages and remove the nitrowall package. Then Request Firmware Image
+3. Search through the list of installed packages and remove the "nitrowall" package. Then Request Firmware Image
 
 	.. image:: /images/nitrowall/openwrt_upgrade4.png
 
-6. Wait for the image to be build -> then install it. Check if "keep settings and current configuration" is set
+4. Wait for the image to be build. Then install it. Check if "keep settings and current configuration" is set
 
 	.. image:: /images/nitrowall/openwrt_upgrade5.png
 
-7. The software will be installed and the NitroWall will restart.
+5. The software will be installed and the NitroWall will restart.
 
-8. After the restart we need to reinstall the `nitrowall.ipk <https://www.nitrokey.com/files/ci/nitrowall/nitrowall_1.0.0-0_x86_64.ipk>`_ package. This will resize your disk and add the kernel parameter *pcie_aspm=off* to your */boot/grub/grub.cfg* which fixes a problem with the *igb* driver `bug <https://bugzilla.kernel.org/show_bug.cgi?id=205073>`.
+6. After the restart we need to reinstall the `nitrowall.ipk <https://www.nitrokey.com/files/ci/nitrowall/nitrowall_1.0.0-0_x86_64.ipk>`_ package. This will resize your disk and add the kernel parameter *pcie_aspm=off* to your */boot/grub/grub.cfg* which fixes a problem with the *igb* driver `bug <https://bugzilla.kernel.org/show_bug.cgi?id=205073>`.
 
-9. Under System -> Software -> Upload Package Upload the package 
+7. Under System -> Software -> Upload Package, upload the package 
 
 	.. image:: /images/nitrowall/openwrt_installnw2.png
 	.. image:: /images/nitrowall/openwrt_installnw1.png
 
 	
-10. Install it. Afterwards the NitroWall will restart.
+8. Install it. Afterwards the NitroWall will restart.
 
 	.. image:: /images/nitrowall/openwrt_installnw3.png
+
+9. Update OpenWrt via `Attended Sysupgrade <https://openwrt.org/docs/guide-user/installation/attended.sysupgrade>`_.
 
 Alternatively to the above instructions, you can login via ssh and execute this script::
 
@@ -54,4 +54,3 @@ Alternatively to the above instructions, you can login via ssh and execute this 
 	echo "INFO: add pcie_aspm=off as boot parameter"
 	sed -i s/rootwait/rootwait\ pcie_aspm=off/g /boot/grub/grub.cfg
 	reboot
-	
