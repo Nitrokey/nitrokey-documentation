@@ -1,2 +1,2 @@
-.. include:: ../shared/openpgp-uif.rst
+.. include:: ../shared/openpgp-uif.rst.inc
 

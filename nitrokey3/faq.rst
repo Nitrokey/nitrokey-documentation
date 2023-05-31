@@ -27,19 +27,17 @@ Nitrokey 3 FAQ
    The Nitrokey 3 doesn't contain storage capability for ordinary data (it can
    only store cryptographic keys and certificates).
 
-**Q:** When will the OpenPGP card firmware be available?
-   OpenPGP card functionnality is currently available as a beta firmware.
-   `The announcement <https://www.nitrokey.com/blog/2022/openpgp-card-alpha-nitrokey-3>`_
-   contains more information concerning the current status and installation instructions.
+**Q:** Why does the Nitrokey 3 not show up in GnuPG
+   Make sure to install a firmware more recent than version 1.4.0.
+   For more information, see the firmware-update page for your operating system.
 
+**Q:** Why does the Nitrokey 3 not show up in Nitrokey App?
+   Nitrokey 3 does only show up and can be managed in "nitropy" and "Nitrokey App 2, not in Nitrokey App 1".
 
-**Q:** Why does the Nitrokey 3 not show up in GnuPG/Nitrokey App/nitropy?
-   Currently the Nitrokey 3 does only show up and can be managed in
-   ``nitropy``. Nitrokey App and GnuPG will likely be only available once
-   the firware update is available for the OpenPGP card.
+.. include:: ../shared-faqs/algos.rst 
 
 **Q:** How can I set the PIN for my Nitrokey 3?
-   On GNU+Linux and macOS you can configure and do basic settings for your Nitrokey 3 using Chrome(ium)
+   On Linux and macOS you can configure and do basic settings for your Nitrokey 3 using Chrome(ium)
    just visit: `chrome://settings/securityKeys`_ (clicking the link will not work
    for security reasons, please copy&paste it)
    
