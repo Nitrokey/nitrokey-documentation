@@ -34,7 +34,7 @@ Nitrokey 3 FAQ
 **Q:** Why does the Nitrokey 3 not show up in Nitrokey App?
    Nitrokey 3 does only show up and can be managed in "nitropy" and "Nitrokey App 2, not in Nitrokey App 1".
 
-.. include:: ../shared-faqs/algos.rst 
+.. include:: ../shared-faqs/algos.rst.inc 
 
 **Q:** How can I set the PIN for my Nitrokey 3?
    On Linux and macOS you can configure and do basic settings for your Nitrokey 3 using Chrome(ium)
@@ -49,5 +49,5 @@ Nitrokey 3 FAQ
    level (See `here`_, click “ICs, Smart Cards and Smart Card-Related Devices and 
    Systems” and search for: "NXP JCOP 4 SE050M”).
 
-.. include:: ../shared-faqs/hyperlinks.rst 
+.. include:: ../shared-faqs/hyperlinks.rst.inc 
 

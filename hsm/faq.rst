@@ -2,7 +2,7 @@ Nitrokey HSM FAQ
 ================
 
 
-.. include:: ../shared-faqs/nitrokeys.rst 
+.. include:: ../shared-faqs/nitrokeys.rst.inc 
 
 
 **Q:** What is the maximum length of the PIN?
@@ -56,7 +56,7 @@ Nitrokey HSM FAQ
   Use ``opensc-tool --list-algorithms`` and compare with the table below. Please 
   also see `this thread`_ for the factsheets and more details.
 
-.. include:: ../shared-faqs/algos.rst 
+.. include:: ../shared-faqs/algos.rst.inc 
 
 **Q:** How can I use the True Random Number Generator (TRNG) of the Nitrokey HSM for my applications?
     Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC as a PKCS#11 driver.
@@ -112,4 +112,4 @@ Nitrokey HSM FAQ
 .. _TokenTools: https://github.com/infincia/TokenTools
 .. _AIS 31: https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Zertifizierung/Interpretationen/AIS_31_pdf
 
-.. include:: ../shared-faqs/hyperlinks.rst 
+.. include:: ../shared-faqs/hyperlinks.rst.inc 
