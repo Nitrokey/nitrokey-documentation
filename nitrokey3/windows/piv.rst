@@ -19,7 +19,7 @@ Prerequisites
 -  A Windows user machine joined to the domain of the server
 -  A Nitrokey 3 with
    `PIV <https://github.com/Nitrokey/piv-authenticator>`__
--  A Linux system with `pivy <https://github.com/coin3d/pivy>`__ and PCSCD installed (``sudo apt install pcscd``), to provision the Nitrokey (step 1, 2 and 4). Instead of a separate Linux system you can `install WSL <https://learn.microsoft.com/en-us/windows/wsl/install>`__ on Windows. Note that you need to `virtually attach <https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start pcscd``) before using pivy.
+-  A Linux system with `pivy <https://github.com/arekinath/pivy>`__ and PCSCD installed (``sudo apt install pcscd``), to provision the Nitrokey (step 1, 2 and 4). Instead of a separate Linux system you can `install WSL <https://learn.microsoft.com/en-us/windows/wsl/install>`__ on Windows. Note that you need to `virtually attach <https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start pcscd``) before using pivy.
 
 1: Generate a key on the Nitrokey
 ---------------------------------
