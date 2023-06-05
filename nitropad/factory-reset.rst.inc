@@ -22,23 +22,17 @@ Reasons for resetting to factory settings
 
 Procedure
 ~~~~~~~~~
-
-1. Connect any USB flash drive to the NitroPad. (You need that USB flash
-   drive for saving your security key)
+1. Connect any USB flash drive to the NitroPad. (You need that USB flash drive for saving your security key)
 2. Connect your Nitrokey to the NitroPad.
 
 .. figure:: /nitropad/images/factory-reset/1.jpg
-   :alt: img1
-
-
+    :alt: img1
 
 3. Turn on the NitroPad.
 4. Select “Options”.
 
 .. figure:: /nitropad/images/factory-reset/2.jpg
    :alt: img2
-
-
 
 5. Select “OEM-Factory Reset”.
 
@@ -53,8 +47,6 @@ Procedure
 
 .. figure:: /nitropad/images/factory-reset/4.jpg
    :alt: img4
-
-
 
 7. You will be asked if you want to set the User and Admin/TPM PIN
    yourself. You press Enter to continue without changing the PINs.
@@ -96,7 +88,6 @@ Procedure
 
 .. figure:: /nitropad/images/factory-reset/5.jpg
    :alt: img5
-
 
 
 10. The rest of the configuration will be done automatically. You
