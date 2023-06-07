@@ -1,4 +1,4 @@
-Factory Reset NV41/NS50
+Factory Reset Heads 2.0
 =======================
 
 .. include:: ./product_platform_heading.rst
@@ -12,8 +12,7 @@ Reasons for resetting to factory settings
 
 -  You have lost your Nitrokey (in which case you will first need a new one)
 
--  You have installed an operating system yourself (e.g. after changing
-   the hard disk)
+-  You have installed an operating system yourself (e.g. after changing the hard disk)
 
 -  Your operating system does not start
 
@@ -101,7 +100,6 @@ Procedure
 .. figure:: /nitropad/images/factory-reset-heads20/reboot.jpg
    :alt: reboot
 
-
 10. After the restart the OTP secret must be created. Confirm the
     process with Enter.
 
@@ -137,5 +135,4 @@ Procedure
 
 .. note::
 
-   If you see the message that no default exists yet, please follow the
-   procedure described in “Troubleshooting: Default Boot Menu”.
+   If you see the message that no default exists yet, please follow the procedure described in “Troubleshooting: Default Boot Menu”.
