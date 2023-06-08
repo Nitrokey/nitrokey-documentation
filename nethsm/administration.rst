@@ -546,6 +546,9 @@ Logging
 
 The NetHSM can log system events to the serial port or to a syslog server on the network.
 
+.. important::
+   For any production deployment, the NetHSM log should be monitored continuously to provide immediate notification of any potential security issues.
+
 The serial console works right from the start of the NetHSM hardware.
 It includes events from the NetHSM firmware and the NetHSM software.
 
