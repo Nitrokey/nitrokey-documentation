@@ -40,12 +40,12 @@ NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
 +-------------------+----------------------------------------------------------------------+
 | Boot Mode         | Description                                                          |
 +===================+======================================================================+
-| *Attended Boot*   | The *Unlock Passphrase* needs to be entered during each start,       |
-|                   | which is used to decrypt the *User Data*. For security reasons,      |
-|                   | this mode is recommended.                                            |
+| *Attended Boot*   | The NetHSM boots up into the _Locked_ state. The *Unlock Passphrase* |
+|                   | needs to be entered during each start, which is used to decrypt the  |
+|                   | *User Data*. For security reasons, this mode is recommended.         |
 +-------------------+----------------------------------------------------------------------+
 | *Unattended Boot* | No *Unlock Passphrase* is required, therefore the NetHSM can start   |
-|                   | unattended.                                                          |
+|                   | into an _Operational_ state with no user intervention.               |
 |                   | Use this mode if your availability requirements can not be fulfilled |
 |                   | with *Attended Boot* mode.                                           |
 +-------------------+----------------------------------------------------------------------+
@@ -92,6 +92,8 @@ The boot mode can be changed as follows.
    .. tab:: REST API
       Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unattended-boot>`__.
 
+At next boot, the NetHSM will behave accordingly.
+
 State
 ~~~~~
 
@@ -109,7 +111,7 @@ The NetHSM software has four states: *Unprovisioned*, *Provisioned*, *Locked*, a
 |                 | The *Operational* state implies the *Provisioned* state.                |
 +-----------------+-------------------------------------------------------------------------+
 | *Locked*        | NetHSM with configuration but protected (requires unlock).              |
-|                 | The *Operational* state implies the *Provisioned* state.                |
+|                 | The *Locked* state implies the *Provisioned* state.                |
 +-----------------+-------------------------------------------------------------------------+
 
 .. figure:: ./images/states.svg
@@ -155,7 +157,7 @@ A NetHSM in *Operational* state can be locked again to protect it as follows.
    .. tab:: REST API
       Information about the `/lock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_lock>`__.
 
-A NetHSM in *Locked* state can be unlocked as follows.
+A NetHSM in *Locked* state can be unlocked as follows. No other operations are possible when the NetHSM is in the _Locked_ state.
 
 .. tabs::
    .. tab:: nitropy
@@ -170,6 +172,8 @@ A NetHSM in *Locked* state can be unlocked as follows.
          NetHSM localhost:8443 unlocked
    .. tab:: REST API
       Information about the `/unlock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_unlock>`__.
+
+The NetHSM is now in an _Operational_ state.
 
 Unlock Passphrase
 ~~~~~~~~~~~~~~~~~
@@ -702,8 +706,8 @@ Restore
 
 The NetHSM can be restored from a backup file.
 
-.. note::
-   The NetHSM must be in an *Unprovisioned State*.
+* If the NetHSM is *Unprovisioned* it will restore all *User Data* including system configuration and reboot. Therefore the system may get different network settings, TLS certificate and *Unlock Passphrase* afterwards.
+* If the NetHSM is *Provisioned* it will restore users and user keys but not system configuration. In this case all previously existing users and user keys will be deleted. The NetHSM ends in an *Operational* state.
 
 The restore can be applied as follows.
 
@@ -744,16 +748,14 @@ The restore can be applied as follows.
    .. tab:: REST API
       Information about the `/system/restore` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-restore>`__.
 
-Update
-~~~~~~
+System Software Update
+~~~~~~~~~~~~~~~~~~~~~~
 
-Updates for the NetHSM can be installed in a two-step process.
-First the update image needs to be uploaded to the NetHSM.
-The image is checked and validated automatically.
+System software updates for the NetHSM can be installed in a two-step process. First the update image needs to be uploaded to a *Provisioned* NetHSM. The NetHSM verifies image authenticity, integrity, and version number.Optionally, the NetHSM displays release notes, if any.
 
 .. warning::
 
-   Data loss may occur due to the installation of a beta update!
+   Data loss may occur due to the installation of a beta update! Stable versions should not cause data loss. However, it's recommended to create a backup before updating.
 
 The update file can be uploaded as follows.
 
@@ -779,7 +781,7 @@ The update file can be uploaded as follows.
    .. tab:: REST API
       Information about the `/system/update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-update>`__.
 
-Afterwards the update can be applied or aborted. Please refer to the desired option below.
+Afterwards the update can be applied or aborted. Please refer to the desired option below. If the NetHSM is powered down before the "commit" operation, the user will have to re-upload the update.
 
 The update can be applied (committed) as follows.
 
@@ -796,6 +798,8 @@ The update can be applied (committed) as follows.
          Update successfully committed on NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/system/commit-update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-commit-update>`__.
+
+Any data migration is only performed _after_ the NetHSM has successfully booted the new system software version.
 
 The update can be cancelled as follows.
 
@@ -857,7 +861,7 @@ The remote shutdown can be initiated as follows.
 Reset to Factory Defaults
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The NetHSM can be reset to factory defaults. In this case all user data is securely deleted and the NetHSM boots into an *Unprovisioned* state. Afterwards, you may want to `provision <getting-started#provisioning>`__ the NetHSM.
+A *Provisioned* NetHSM can be reset to factory defaults. In this case all user data is securely deleted and the NetHSM boots into an *Unprovisioned* state. Afterwards, you may want to `provision <getting-started#provisioning>`__ the NetHSM.
 
 The reset to factory defaults can be performed as follows.
 
