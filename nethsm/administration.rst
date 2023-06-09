@@ -857,7 +857,7 @@ The remote shutdown can be initiated as follows.
 Reset to Factory Defaults
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The NetHSM can be reset to factory defaults. During this process all user data gets deleted.
+The NetHSM can be reset to factory defaults. In this case all user data is securely deleted and the NetHSM boots into an *Unprovisioned* state. Afterwards, you may want to `provision <getting-started#provisioning>`__ the NetHSM.
 
 The reset to factory defaults can be performed as follows.
 
