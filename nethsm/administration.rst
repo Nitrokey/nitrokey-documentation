@@ -42,7 +42,8 @@ NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
 +===================+======================================================================+
 | *Attended Boot*   | The NetHSM boots up into the _Locked_ state. The *Unlock Passphrase* |
 |                   | needs to be entered during each start, which is used to decrypt the  |
-|                   | *User Data*. For security reasons, this mode is recommended.         |
+|                   | *User Data*. For security reasons, this mode is recommended and it's |
+|                   | the default mode for a freshly provisioned system.                   |
 +-------------------+----------------------------------------------------------------------+
 | *Unattended Boot* | No *Unlock Passphrase* is required, therefore the NetHSM can start   |
 |                   | into an _Operational_ state with no user intervention.               |
@@ -110,8 +111,9 @@ The NetHSM software has four states: *Unprovisioned*, *Provisioned*, *Locked*, a
 | *Operational*   | NetHSM with configuration and ready to execute commands.                |
 |                 | The *Operational* state implies the *Provisioned* state.                |
 +-----------------+-------------------------------------------------------------------------+
-| *Locked*        | NetHSM with configuration but protected (requires unlock).              |
-|                 | The *Locked* state implies the *Provisioned* state.                |
+| *Locked*        | NetHSM with configuration but encrypted and inaccessible data stores.   |
+|                 | Typically, the next step is to unlock the system. The *Locked* state    |
+|                 | implies the *Provisioned* state.                                        |
 +-----------------+-------------------------------------------------------------------------+
 
 .. figure:: ./images/states.svg
@@ -909,6 +911,8 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 | *Backup*        | A user account with this Role has access to the operations  |
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
+
+See `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
 
 .. note::
    In a future release, additional *Roles* may be introduced.
