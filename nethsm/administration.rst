@@ -1071,8 +1071,8 @@ The user passphrase can be set as follows.
 Tags for Users
 ~~~~~~~~~~~~~~
 
-*Tags* can be used to set access restrictions on keys, and are an optional feature.
-They can only be assigned to user accounts with the *Operator* role.
+*Tags* can be used to set fine-grained access restrictions on keys, and are an optional feature.
+One or more *Tags* can be assigned to user accounts with the *Operator* role only.
 The *Operators* can see all keys, but only use those with at least one corresponding *Tag*.
 A key can not be modified by an *Operator* user.
 
