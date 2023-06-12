@@ -78,20 +78,9 @@ We can use the command ``gpg --full-generate-key --expert`` to start a guided ke
    uid                      Jane Doe 
    sub   rsa2048 2018-09-17 [E]
 
-The following table illustrates which algorithm can be used on which device, in case you want to use different key attributes.
+.. note::
+     For information regarding the supported algorithms, please refer to the `faq <../faq.html>`_
 
-================ ===== ============= =================
-\                Start Pro + Storage Pro 2 + Storage 2
-================ ===== ============= =================
-rsa1024          ✓     ✓             
-rsa2048          ✓     ✓             ✓
-rsa3072                ✓             ✓
-rsa4096                ✓             ✓
-curve25519 (ECC) ✓                   
-NIST (ECC)       ✓                   ✓
-Brainpool (ECC)                      ✓
-secp256k1        ✓                   
-================ ===== ============= =================
 
 Subkey for Authentication
 -------------------------

@@ -12,33 +12,29 @@ Reasons for resetting to factory settings
 
 -  You have lost your Nitrokey (in which case you will first need a new one)
 
--  You have installed an operating system yourself (e.g. after changing
-   the hard disk)
+-  You have installed an operating system yourself (e.g. after changing the hard disk)
 
 -  Your operating system does not start
 
 .. warning::
    All your data will be lost if you reset your device. Therefore please backup your data before performing the reset.
 
+.. note::
+   Only for firmware till version 1.4 
+
 Procedure
 ~~~~~~~~~
-
-1. Connect any USB flash drive to the NitroPad. (You need that USB flash
-   drive for saving your security key)
+1. Connect any USB flash drive to the NitroPad. (You need that USB flash drive for saving your security key)
 2. Connect your Nitrokey to the NitroPad.
 
 .. figure:: /nitropad/images/factory-reset/1.jpg
-   :alt: img1
-
-
+    :alt: img1
 
 3. Turn on the NitroPad.
 4. Select “Options”.
 
 .. figure:: /nitropad/images/factory-reset/2.jpg
    :alt: img2
-
-
 
 5. Select “OEM-Factory Reset”.
 
@@ -54,13 +50,9 @@ Procedure
 .. figure:: /nitropad/images/factory-reset/4.jpg
    :alt: img4
 
+7. You will be asked if you want to set the User and Admin/TPM PIN yourself. You press Enter to continue without changing the PINs.
 
-
-7. You will be asked if you want to set the User and Admin/TPM PIN
-   yourself. You press Enter to continue without changing the PINs.
-
-8. You will then be asked if manual user information should be added.
-   You confirm with ‘y’ and enter your name and then the email address.
+8. You will then be asked if manual user information should be added. You confirm with ‘y’ and enter your name and then the email address.
 
 .. code-block:: bash
 
@@ -89,26 +81,20 @@ Procedure
    Resetting GPG Key... 
    (this will take a minute or two)
 
-9. If you are using Nitrokey Storage, you must then select the drive. If
-   the drives /dev/sdb1, /dev/sdc, /dev/sdd1 are displayed, select
-   /dev/sdd1. If the drives /dev/sdb1, /dev/sdc1, /dev/sdd are
-   displayed, select /dev/sdb1.
+9. If you are using Nitrokey Storage, you must then select the drive. If the drives /dev/sdb1, /dev/sdc, /dev/sdd1 are displayed, select /dev/sdd1. If the drives /dev/sdb1, /dev/sdc1, /dev/sdd are displayed, select /dev/sdb1.
 
 .. figure:: /nitropad/images/factory-reset/5.jpg
    :alt: img5
 
 
-
-10. The rest of the configuration will be done automatically. You
-    confirm the subsequent restart.
+10. The rest of the configuration will be done automatically. You confirm the subsequent restart.
 
 .. figure:: /nitropad/images/factory-reset/6.jpg
    :alt: img6
 
 
 
-11. After the restart the OTP secret must be created. Confirm the
-    process with Enter.
+11. After the restart the OTP secret must be created. Confirm the process with Enter.
 
 .. figure:: /nitropad/images/factory-reset/7.jpg
    :alt: img7
@@ -122,8 +108,7 @@ Procedure
 
 
 
-13. When prompted, enter the Admin PIN and TPM password. Both are by
-    default: “12345678”.
+13. When prompted, enter the Admin PIN and TPM password. Both are by default: “12345678”.
 
 .. figure:: /nitropad/images/factory-reset/9.jpg
    :alt: img9
@@ -141,16 +126,13 @@ Procedure
 
 .. note::
 
-   If you see the message that no default exists yet, please follow the
-   procedure described in “Troubleshooting: Default Boot Menu”.
+   If you see the message that no default exists yet, please follow the procedure described in “Troubleshooting: Default Boot Menu”.
 
-16. Once the operating system starts until the encryption password is
-    requested, you are done.
+16. Once the operating system starts until the encryption password is requested, you are done.
 
 .. figure:: /nitropad/images/factory-reset/11.jpg
    :alt: img11
 
 
 
-17. Finally, copy the public PGP key from the data stick to your
-    computer, e.g. to use it for e-mail encryption.
+17. Finally, copy the public PGP key from the data stick to your computer, e.g. to use it for e-mail encryption.

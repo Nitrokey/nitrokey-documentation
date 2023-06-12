@@ -546,6 +546,9 @@ Logging
 
 The NetHSM can log system events to the serial port or to a syslog server on the network.
 
+.. important::
+   For any production deployment, the NetHSM log should be monitored continuously to provide immediate notification of any potential security issues.
+
 The serial console works right from the start of the NetHSM hardware.
 It includes events from the NetHSM firmware and the NetHSM software.
 
@@ -854,7 +857,7 @@ The remote shutdown can be initiated as follows.
 Reset to Factory Defaults
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The NetHSM can be reset to factory defaults. During this process all user data gets deleted.
+The NetHSM can be reset to factory defaults. In this case all user data is securely deleted and the NetHSM boots into an *Unprovisioned* state. Afterwards, you may want to `provision <getting-started#provisioning>`__ the NetHSM.
 
 The reset to factory defaults can be performed as follows.
 

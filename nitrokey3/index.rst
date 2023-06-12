@@ -4,11 +4,9 @@ Nitrokey 3
 .. contents:: :local:
 
 
-As of this writing the Nitrokey 3 is roughly identical with the Nitrokey FIDO2, from a functionality point of view.
-The Nitrokey 3A and 3C additionally support NFC, while the Nitrokey 3 Mini does not support NFC.
+The Nitrokey 3 currently supports FIDO2 and one-time passwords (OTP). Additional features like OpenPGP Card and PIV are available in test firmware releases. See the `release notes`_ on GitHub for more information.
 
-Future firmware updates will enable additional functionality and will be documented here accordingly.
-
+.. _release notes: https://github.com/Nitrokey/nitrokey-3-firmware/releases
 
 First check the:
 

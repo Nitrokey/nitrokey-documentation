@@ -12,6 +12,16 @@ The bag and all screws on the bottom of the device have been sealed. For the bag
 1. Check each screw individually to see if its individual appearance
    matches the photo. It is best to use a magnifying glass or macro lens
    for this purpose. The screws are numbered as follows.
+   
+   Nitropad NV41:
+   
+   .. figure:: /nitropad/images/nv41_sealed.jpg
+      :alt: NV41
+
+   Nitropad NS50:
+
+   .. figure:: /nitropad/images/ns50_sealed.jpg
+      :alt: NS50
 
    NitroPad X230:
 

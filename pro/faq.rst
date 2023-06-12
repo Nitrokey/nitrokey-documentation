@@ -2,7 +2,7 @@ Nitrokey Pro 2 FAQ
 ==================
 
 
-.. include:: ../shared-faqs/nitrokeys.rst 
+.. include:: ../shared-faqs/nitrokeys.rst.inc 
 
 **Q:** What are the default PINs?
    * **User PIN:** "123456"
@@ -11,7 +11,7 @@ Nitrokey Pro 2 FAQ
    We strongly recommend to change these PINs/password to user-chosen values
    before using the Nitrokey.
 
-.. include:: ../shared-faqs/pins.rst 
+.. include:: ../shared-faqs/pins.rst.inc 
 
 **Q:** Why does my Nitrokey Pro hang when switching between nitrokey-app and GnuPG?
   GnuPG and nitrokey-app sometimes tend to hand each other. This is a known problem
@@ -41,7 +41,7 @@ Nitrokey Pro 2 FAQ
   * 128 bit AES, 240 bytes per command -> 930 bytes per second
 
 
-.. include:: ../shared-faqs/algos.rst 
+.. include:: ../shared-faqs/algos.rst.inc 
 
 
 **Q:** Does the Nitrokey Pro contain a secure chip or just a normal microcontroller?
@@ -69,4 +69,4 @@ Nitrokey Pro 2 FAQ
     The Nitrokey Pro doesn't contain storage capability for ordinary data (it can
     only store cryptographic keys and certificates).
 
-.. include:: ../shared-faqs/hyperlinks.rst 
+.. include:: ../shared-faqs/hyperlinks.rst.inc 

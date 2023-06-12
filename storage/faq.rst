@@ -4,7 +4,7 @@ Nitrokey Storage FAQ
 As the Nitrokey Storage 2 is essentially a Nitrokey Pro 2 including a
 non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` also partly applies.
 
-.. include:: ../shared-faqs/nitrokeys.rst 
+.. include:: ../shared-faqs/nitrokeys.rst.inc 
 
 **Q:** What are the default PINs?
    * **User PIN:** "123456"
@@ -25,7 +25,7 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    make sure you first "Destroy encrypted data" inside the Nitrokey App.
 
 
-.. include:: ../shared-faqs/pins.rst 
+.. include:: ../shared-faqs/pins.rst.inc 
 
 
 **Q:** Why does my Nitrokey Storage hang when switching between nitrokey-app and GnuPG?
@@ -57,7 +57,7 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
     * 256 bit AES, 240 bytes per command -> 910 bytes per second
     * 128 bit AES, 240 bytes per command -> 930 bytes per second
 
-.. include:: ../shared-faqs/algos.rst 
+.. include:: ../shared-faqs/algos.rst.inc 
 
 **Q:** Does the Nitrokey Storage contain a secure chip or just a normal microcontroller?
     Nitrokey Storage contains a tamper resistant smart card.
@@ -116,4 +116,4 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
 
     Hidden volumes are like containers inside of a container, the encrypted volume.
 
-.. include:: ../shared-faqs/hyperlinks.rst 
+.. include:: ../shared-faqs/hyperlinks.rst.inc 

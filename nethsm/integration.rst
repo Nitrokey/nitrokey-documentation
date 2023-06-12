@@ -19,17 +19,29 @@ The `PKCS#11 guide <guides/pkcs11_with_pkcs11-tool.html>`_ describes how to use 
 Development and Testing
 -----------------------
 
-A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com>`_.
+A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com/api/v1/info>`_.
 
 Alternatively, you can run the NetHSM as a `Docker container <https://hub.docker.com/r/nitrokey/nethsm>`_ locally.
-The NetHSM container requires nested virtualization for strong separation with other containers.
-Thus, to start a NetHSM container you need a Linux host with `/dev/kvm` available. Execute this command:
+
+The container can be executed as follows.
 
 .. tabs::
    .. tab:: Docker
       .. code-block:: bash
 
-         $ sudo docker run --rm -ti --device=/dev/net/tun:/dev/net/tun --cap-add=NET_ADMIN -p8443:8443 nitrokey/nethsm:testing
+         $ sudo docker run --rm -ti -p8443:8443 nitrokey/nethsm:testing
+
+   .. tab:: Podman
+      .. code-block:: bash
+
+         $ podman run --rm -ti -p8443:8443 nitrokey/nethsm:testing
+
+This will provide the REST API on the port `8443` via the HTTPS protocol.
+
+.. important::
+   The container uses a self-signed TLS certificate.
+   Make sure to use the correct connection settings to establish a connection.
+   Please refer to chapter `NetHSM introduction <index.html>`__ to learn more.
 
 Integration into Custom Application
 -----------------------------------
@@ -43,7 +55,12 @@ The list of all available languages can be retrieved as follows.
    .. tab:: Docker
       .. code-block:: bash
 
-         $ docker run --pull --rm -ti openapitools/openapi-generator-cli list -i stable
+         $ docker run --rm -ti openapitools/openapi-generator-cli list -i stable
+   
+   .. tab:: Podman
+      .. code-block:: bash
+
+         $ podman run --rm -ti openapitools/openapi-generator-cli list -i stable
 
 The NetHSM client can be generated for your programming language as follows.
 
@@ -53,8 +70,19 @@ The NetHSM client can be generated for your programming language as follows.
 
          $ docker run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate -i=https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml -o out -g javascript
 
+   .. tab:: Podman
+      .. code-block:: bash
+
+         $ podman run --rm -ti -v "${PWD}/out:/out" openapitools/openapi-generator-cli generate -i=https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml -o out -g javascript
+
 The generated client code, in this example JavaScript, will be created in the ``./out/`` directory.
 This folder also contains the necessary documentation how to use it.
+
+.. important::
+   If Podman is used with enforcing SELinux, a labeling to the volume mount might be required.
+   The mode of SELinux can be requested with ``sestatus |grep "Current mode"``.
+   If the mode is set to ``enforcing``, a change to the context is required.
+   In this case the volume mount must be postfixed with ``:z``, resulting in ``-v "${PWD}/out:/out:z"``.
 
 REST-API
 ~~~~~~~~

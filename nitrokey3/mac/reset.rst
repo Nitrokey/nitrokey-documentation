@@ -1,2 +1,1 @@
-
-.. include:: ../../fido2/shared/index-content2.rst.inc
+.. include:: ../shared/reset.rst.inc

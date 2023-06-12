@@ -1,1 +1,1 @@
-.. include:: ../../fido2/windows/reset.rst
+.. include:: ../shared/reset.rst.inc
