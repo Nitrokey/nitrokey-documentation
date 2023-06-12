@@ -25,22 +25,22 @@ Procedure
 2. Turn on the NitroPad.
 3. Select “Options”.
 
-.. figure:: /nitropad/images/factory-reset-heads20/options.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/options.jpg
    :alt: heads options menu
 
 4. Select “OEM-Factory Reset /Re-Ownership”.
 
-.. figure:: /nitropad/images/factory-reset-heads20/reset.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/reset.jpg
    :alt: reset
 
 5. Confirm Reset with “Continue”.
 
-.. figure:: /nitropad/images/factory-reset-heads20/confirm.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/confirm.jpg
    :alt: confirm
 
 6. The integrity of your Setup will be tested, deppending on your reason to perform the reset this can fail continue with ok anyways
 
-.. figure:: /nitropad/images/factory-reset-heads20/confirm-integrity.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/confirm-integrity.jpg
    :alt: confirm integrity
 
 7. The following Question can all be answered with the Default. Just hit enter if you only want to reset your device.  
@@ -92,43 +92,43 @@ Procedure
 
 8. It will show the Default GPG PINS and TPM Password
 
-.. figure:: /nitropad/images/factory-reset-heads20/default-sec.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/default-sec.jpg
    :alt: defaults
  
 9.  confirm the subsequent restart.
 
-.. figure:: /nitropad/images/factory-reset-heads20/reboot.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/reboot.jpg
    :alt: reboot
 
 10. After the restart the OTP secret must be created. Confirm the
     process with Enter.
 
-.. figure:: /nitropad/images/factory-reset-heads20/otp-sec1.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/otp-sec1.jpg
    :alt: otp secrets generate confirm 1
 
-.. figure:: /nitropad/images/factory-reset-heads20/otp-sec2.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/otp-sec2.jpg
    :alt: otp secrets generate confirm 2
 
 
 11. Enter TPM Password (Default: 12345678)
 
-.. figure:: /nitropad/images/factory-reset-heads20/tpm.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/tpm.jpg
    :alt: tpm password enter
 
 12. Scan QR COde with Phone to inport TOTP Seceret (Optional) and hit Enter 
 
-.. figure:: /nitropad/images/factory-reset-heads20/totp.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/totp.jpg
    :alt: qr code totp
 
 
 13. When prompted, enter the Admin PIN of your Nitrokey (Default: 12345678) and hit Enter
 
-.. figure:: /nitropad/images/factory-reset-heads20/admin-pin.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/admin-pin.jpg
    :alt: admin pin nitrokey input
 
 14. You should then reach the Start menu.
 
-.. figure:: /nitropad/images/factory-reset-heads20/start-menu.jpg
+.. figure:: /nitropad/images/factory-reset-heads2/start-menu.jpg
    :alt: start menu
 
 15. Press Enter to start the “Default Boot”.
