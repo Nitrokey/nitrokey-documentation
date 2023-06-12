@@ -55,7 +55,8 @@ Getting Started
    :hidden:
    :maxdepth: 1
    :glob:
-
+   
+   firmware-update-nw678.rst
    sealed-hardware.rst
    backup-restore.rst
    dhcp.rst
