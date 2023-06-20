@@ -44,11 +44,14 @@ NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
 |                   | which is used to decrypt the *User Data*. For security reasons,      |
 |                   | this mode is recommended.                                            |
 +-------------------+----------------------------------------------------------------------+
-| *Unattended Boot* | No *Unlock Passphrase* is required, therefore the NetHSM can start   |
-|                   | unattended.                                                          |
+| *Unattended Boot* | The system starts unattended without the need to enter the *Unlock*  |
+|                   | *Passphrase*.                                                        |
 |                   | Use this mode if your availability requirements can not be fulfilled |
 |                   | with *Attended Boot* mode.                                           |
 +-------------------+----------------------------------------------------------------------+
+
+.. warning::
+   Regardless of the boot mode, the *Unlock Passphrase* retains its validity and is required for restoring backups on other hardware. Keep the *Unlock Passphrase* safe at any time.
 
 The current boot mode can be retrieved as follows.
 

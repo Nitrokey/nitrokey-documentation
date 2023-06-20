@@ -130,11 +130,8 @@ The initial provisioning is executed as follows.
       | ``-t``, ``--system-time`` | The system time to set (Format: ``YYYY-MM-DDTHH:MM:SSZ``)  |
       +---------------------------+------------------------------------------------------------+
 
-      .. important::
-         If the time is passed manually, make sure to pass the time in UTC timezone.
-
       .. note::
-         If the time is not passed manually, it will be derived from the system *nitropy* is running on.
+         If the time is not passed manually, it will be derived from the system *nitropy* is running on. If the time is passed manually, make sure to pass the time in UTC timezone.
 
       **Example**
 
