@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 22:50+0200\n"
-"PO-Revision-Date: 2023-06-20 10:47+0000\n"
+"PO-Revision-Date: 2023-06-21 22:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Danish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/da/>\n"
 "Language: da\n"
-"Language-Team: Danish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/da/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -12576,19 +12577,20 @@ msgstr ""
 "forsendelses-/ordrenummer og din smartphone-model."
 
 #: ../nitrokey3/troubleshooting.rst.inc:51
-#, fuzzy
 msgid "OpenPGP Troubleshooting"
-msgstr "Fejlfinding"
+msgstr "OpenPGP Fejlfinding"
 
 #: ../nitrokey3/troubleshooting.rst.inc:54
 msgid "GnuPG: OpenPGP Card Not Available"
-msgstr ""
+msgstr "GnuPG: OpenPGP-kort ikke tilgængeligt"
 
 #: ../nitrokey3/troubleshooting.rst.inc:56
 msgid ""
 "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error "
 "message like this::"
 msgstr ""
+"**Problem:** GnuPG kan ikke få adgang til Nitrokey 3 og viser en "
+"fejlmeddelelse som denne::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:63
 msgid ""
@@ -12598,6 +12600,11 @@ msgid ""
 "Its integrated ``ccid`` driver tries to directly access the smartcard. "
 "The ``pcsc`` drivers uses the ``pcscd`` daemon instead."
 msgstr ""
+"**Løsning:** Der er to almindelige smartcard-tjenester på Linux-systemer: "
+"``scdaemon``, GnuPG's smartcard daemon, og ``pcscd``, en generisk smartcard "
+"daemon. `scdaemon` ` har to drivere til at tilgå smartcards: Den integrerede "
+"``ccid`` driver forsøger at få direkte adgang til smartcardet. ` `pcsc`` "
+"driveren bruger i stedet ``pcscd`` dæmonen."
 
 #: ../nitrokey3/troubleshooting.rst.inc:69
 msgid ""
@@ -12610,32 +12617,46 @@ msgid ""
 "example with ``gpg-connect-agent \"SCD KILLSCD\" /bye``. If this does not"
 " fix the problem, see the next section for more information."
 msgstr ""
+"Et smartcard kan kun tilgås direkte af én dæmon. Det betyder, at afhængigt "
+"af opstartsrækkefølgen, kan ``pcscd`` låse kortet, før ``scdaemon`` forsøger "
+"at få adgang til det ved hjælp af den interne ``ccid`` driver. Derfor "
+"anbefaler vi at bruge ``pcscd`` driveren til ``scdaemon``. Du kan aktivere "
+"den ved at tilføje ``disable-ccid`` til ``~/.gnupg/scdaemon.conf`` config-"
+"filen og genstarte ``scdaemon``, for eksempel med ``gpg-connect-agent \"SCD "
+"KILLSCD\" /bye``. Hvis dette ikke løser problemet, se næste afsnit for mere "
+"information."
 
 #: ../nitrokey3/troubleshooting.rst.inc:75
 msgid ""
 "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this "
 "conflict."
 msgstr ""
+"Alternativt kan du deaktivere eller afinstallere ``pcscd`` for at undgå "
+"denne konflikt."
 
 #: ../nitrokey3/troubleshooting.rst.inc:78
 msgid "pcscd: Card Not Found"
-msgstr ""
+msgstr "pcscd: Kort ikke fundet"
 
 #: ../nitrokey3/troubleshooting.rst.inc:80
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
-msgstr ""
+msgstr "**Problem:** Et program, der bruger ``pcscd``, viser ikke Nitrokey 3."
 
 #: ../nitrokey3/troubleshooting.rst.inc:83
 msgid ""
 "**Solution:** First, make sure that ``scdaemon`` is not running (see the "
 "previous section)::"
 msgstr ""
+"**Løsning:** Først skal du sørge for, at ``scdaemon`` ikke kører (se forrige "
+"afsnit)::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:88
 msgid ""
 "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. "
 "You should see an entry like this one::"
 msgstr ""
+"Nu skal du liste de smartcards, der genkendes af ``pcscd`` med ``pcsc_scan "
+"-r``. Du bør se en post som denne::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:96
 msgid ""
@@ -12644,11 +12665,14 @@ msgid ""
 "it does not show up, make sure that your ``libccid`` version is up to "
 "date. Support for the Nitrokey 3 was added in ``libccid`` 1.5.0."
 msgstr ""
+"Hvis Nitrokey 3 dukker op, genkendes den korrekt af ``pcscd``, og der kan "
+"være et problem med det program, der forsøger at få adgang til den. Hvis den "
+"ikke dukker op, skal du sørge for, at din ``libccid`` version er opdateret. "
+"Understøttelse af Nitrokey 3 blev tilføjet i ``libccid`` 1.5.0."
 
 #: ../nitrokey3/troubleshooting.rst.inc:101
-#, fuzzy
 msgid "Updating The Device Database"
-msgstr "Opdatering af firmware"
+msgstr "Opdatering af enhedsdatabasen"
 
 #: ../nitrokey3/troubleshooting.rst.inc:103
 msgid ""
@@ -12656,10 +12680,13 @@ msgid ""
 "manually update the device database. The path of the database depends on "
 "your distribution:"
 msgstr ""
+"Hvis du ikke kan opdatere ``libccid`` til en understøttet version, er du "
+"nødt til manuelt at opdatere enhedsdatabasen. Stien til databasen afhænger "
+"af din distribution:"
 
 #: ../nitrokey3/troubleshooting.rst.inc:106
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
-msgstr ""
+msgstr "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 
 #: ../nitrokey3/troubleshooting.rst.inc:108
 msgid ""
@@ -12670,6 +12697,11 @@ msgid ""
 "restart ``pcscd`` and run ``pcsc_scan -r`` again. The Nitrokey 3 should "
 "now show up."
 msgstr ""
+"Sørg for at tage backup af filen, før du overskriver den. Du kan downloade "
+"en `opdateret enhedsdatabasefil <https://github.com/Nitrokey/"
+"nitrokey-3-firmware/blob/main/Info.plist>`__ fra ``nitrokey-3-firmware`` "
+"repository. Når du har opdateret filen, skal du genstarte ``pcscd`` og køre "
+"``pcsc_scan -r`` igen. Nitrokey 3 skulle nu dukke op."
 
 #: ../nitrokey3/troubleshooting.rst.inc:114
 msgid "Update Via update.nitrokey.com Does Not Work"
@@ -27988,4 +28020,3 @@ msgstr ""
 #~ "Hvis tiden angives manuelt, skal du "
 #~ "sørge for at angive tiden i "
 #~ "UTC-tidszone."
-
