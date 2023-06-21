@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 22:50+0200\n"
-"PO-Revision-Date: 2023-06-20 10:47+0000\n"
+"PO-Revision-Date: 2023-06-21 22:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Latvian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/lv/>\n"
 "Language: lv\n"
-"Language-Team: Latvian <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/lv/>\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100"
-" <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -12540,19 +12541,19 @@ msgstr ""
 "piegādes/pasūtījuma numuru un viedtālruņa modeli."
 
 #: ../nitrokey3/troubleshooting.rst.inc:51
-#, fuzzy
 msgid "OpenPGP Troubleshooting"
-msgstr "Problēmu novēršana"
+msgstr "OpenPGP problēmu novēršana"
 
 #: ../nitrokey3/troubleshooting.rst.inc:54
 msgid "GnuPG: OpenPGP Card Not Available"
-msgstr ""
+msgstr "GnuPG: OpenPGP karte nav pieejama"
 
 #: ../nitrokey3/troubleshooting.rst.inc:56
 msgid ""
 "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error "
 "message like this::"
 msgstr ""
+"**Problēma:** GnuPG nevar piekļūt Nitrokey 3 un parāda šādu kļūdas ziņojumu::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:63
 msgid ""
@@ -12562,6 +12563,11 @@ msgid ""
 "Its integrated ``ccid`` driver tries to directly access the smartcard. "
 "The ``pcsc`` drivers uses the ``pcscd`` daemon instead."
 msgstr ""
+"**Risinājums:** Linux sistēmās ir divi izplatīti viedkaršu pakalpojumi: "
+"`scdaemon` ` `, GnuPG viedkaršu dēmons, un ``pcscd``, vispārējs viedkaršu "
+"dēmons. ``scdaemon`` ir divi draiveri piekļuvei viedkartēm: Tā integrētais "
+"``ccid`` draiveris mēģina tieši piekļūt viedkartei. Savukārt ``pcsc`` "
+"draiveri izmanto ``pcscd`` dēmonu."
 
 #: ../nitrokey3/troubleshooting.rst.inc:69
 msgid ""
@@ -12574,32 +12580,48 @@ msgid ""
 "example with ``gpg-connect-agent \"SCD KILLSCD\" /bye``. If this does not"
 " fix the problem, see the next section for more information."
 msgstr ""
+"Viedkartei tieši piekļūt var tikai viens dēmons. Tas nozīmē, ka atkarībā no "
+"palaišanas secības ``pcscd`` var bloķēt karti, pirms ``scdaemon`` mēģina tai "
+"piekļūt, izmantojot iekšējo ``ccid`` draiveri. Tāpēc mēs iesakām izmantot "
+"``pcscd`` draiveri ``scdaemon``. To var aktivizēt, pievienojot ``disable-"
+"ccid`` ``~/.gnupg/scdaemon.conf`` konfigurācijas failā un restartējot "
+"``scdaemon``, piemēram, ar ``gpg-connect-agent \"SCD KILLSCD\" /bye``. Ja "
+"tas problēmu neatrisina, skatiet nākamo sadaļu, lai iegūtu vairāk "
+"informācijas."
 
 #: ../nitrokey3/troubleshooting.rst.inc:75
 msgid ""
 "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this "
 "conflict."
 msgstr ""
+"Varat arī deaktivizēt vai atinstalēt ``pcscd``, lai izvairītos no šī "
+"konflikta."
 
 #: ../nitrokey3/troubleshooting.rst.inc:78
 msgid "pcscd: Card Not Found"
-msgstr ""
+msgstr "pcscd: Karte nav atrasta"
 
 #: ../nitrokey3/troubleshooting.rst.inc:80
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
 msgstr ""
+"**Problēma:** Lietojumprogrammā, kurā tiek izmantots ``pcscd``, netiek "
+"parādīts Nitrokey 3."
 
 #: ../nitrokey3/troubleshooting.rst.inc:83
 msgid ""
 "**Solution:** First, make sure that ``scdaemon`` is not running (see the "
 "previous section)::"
 msgstr ""
+"**Risinājums:** Vispirms pārliecinieties, ka ``scdaemon`` netiek palaists ("
+"skat. iepriekšējo sadaļu)::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:88
 msgid ""
 "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. "
 "You should see an entry like this one::"
 msgstr ""
+"Tagad uzskaitiet viedkartes, kuras atpazīst ``pcscd`` ar ``pcsc_scan -r``. "
+"Jums vajadzētu redzēt šādu ierakstu::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:96
 msgid ""
@@ -12608,11 +12630,14 @@ msgid ""
 "it does not show up, make sure that your ``libccid`` version is up to "
 "date. Support for the Nitrokey 3 was added in ``libccid`` 1.5.0."
 msgstr ""
+"Ja tiek parādīts Nitrokey 3, to pareizi atpazīst ``pcscd`` un, iespējams, ir "
+"problēmas ar lietojumprogrammu, kas mēģina tam piekļūt. Ja tas neparādās, "
+"pārliecinieties, vai jūsu ``libccid`` versija ir atjaunināta. Nitrokey 3 "
+"atbalsts tika pievienots ``libccid`` 1.5.0 versijā."
 
 #: ../nitrokey3/troubleshooting.rst.inc:101
-#, fuzzy
 msgid "Updating The Device Database"
-msgstr "Programmatūras atjaunināšana"
+msgstr "Ierīces datu bāzes atjaunināšana"
 
 #: ../nitrokey3/troubleshooting.rst.inc:103
 msgid ""
@@ -12620,10 +12645,12 @@ msgid ""
 "manually update the device database. The path of the database depends on "
 "your distribution:"
 msgstr ""
+"Ja nav iespējams atjaunināt ``libccid`` uz atbalstīto versiju, ierīces datu "
+"bāze jāatjaunina manuāli. Datu bāzes ceļš ir atkarīgs no jūsu izplatīšanas:"
 
 #: ../nitrokey3/troubleshooting.rst.inc:106
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
-msgstr ""
+msgstr "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 
 #: ../nitrokey3/troubleshooting.rst.inc:108
 msgid ""
@@ -12634,6 +12661,12 @@ msgid ""
 "restart ``pcscd`` and run ``pcsc_scan -r`` again. The Nitrokey 3 should "
 "now show up."
 msgstr ""
+"Pirms faila pārrakstīšanas izveidojiet tā rezerves kopiju. Jūs varat "
+"lejupielādēt `atjauninātu ierīču datubāzes failu <https://github.com/"
+"Nitrokey/nitrokey-3-firmware/blob/main/Info.plist>`__ no "
+"``nitrokey-3-firmware`` repozitorija. Pēc faila atjaunināšanas restartējiet "
+"``pcscd`` un vēlreiz palaidiet ``pcsc_scan -r``. Tagad Nitrokey 3 vajadzētu "
+"parādīties."
 
 #: ../nitrokey3/troubleshooting.rst.inc:114
 msgid "Update Via update.nitrokey.com Does Not Work"
@@ -27772,4 +27805,3 @@ msgstr ""
 #~ "Ja laiks tiek ievadīts manuāli, "
 #~ "pārliecinieties, ka laiks tiek ievadīts "
 #~ "UTC laika joslā."
-
