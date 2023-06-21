@@ -8,19 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-20 10:53+0200\n"
+"POT-Creation-Date: 2023-06-21 22:50+0200\n"
 "PO-Revision-Date: 2023-06-20 10:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Lithuanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/lt/>\n"
 "Language: lt\n"
+"Language-Team: Lithuanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/lt/>\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100"
+" > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > "
+"19)) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
-"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
-"1 : 2);\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -4370,8 +4369,8 @@ msgid ""
 "fulfilled with *Attended Boot* mode."
 msgstr ""
 "Sistema paleidžiama be priežiūros ir nereikia įvesti *atrakinimo* "
-"*slaptažodžio*. Šį režimą naudokite, jei prieinamumo reikalavimų negalima "
-"įvykdyti naudojant *Attended Boot* režimą."
+"*slaptažodžio*. Šį režimą naudokite, jei prieinamumo reikalavimų negalima"
+" įvykdyti naudojant *Attended Boot* režimą."
 
 #: ../nethsm/administration.rst:54
 msgid ""
@@ -4381,8 +4380,8 @@ msgid ""
 msgstr ""
 "Nepriklausomai nuo įkrovos režimo, *atrakinimo slaptažodis* išlieka "
 "galiojantis ir yra reikalingas atkuriant atsargines kopijas kitoje "
-"aparatinėje įrangoje. Saugokite *Unlock Passphrase* slaptažodį bet kuriuo "
-"metu."
+"aparatinėje įrangoje. Saugokite *Unlock Passphrase* slaptažodį bet kuriuo"
+" metu."
 
 #: ../nethsm/administration.rst:56
 msgid "The current boot mode can be retrieved as follows."
@@ -12642,10 +12641,106 @@ msgstr ""
 "užsakymo numerį ir savo išmaniojo telefono modelį."
 
 #: ../nitrokey3/troubleshooting.rst.inc:51
+#, fuzzy
+msgid "OpenPGP Troubleshooting"
+msgstr "Trikčių šalinimas"
+
+#: ../nitrokey3/troubleshooting.rst.inc:54
+msgid "GnuPG: OpenPGP Card Not Available"
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:56
+msgid ""
+"**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error "
+"message like this::"
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:63
+msgid ""
+"**Solution:** There are two common smartcard services on Linux systems: "
+"``scdaemon``, GnuPG’s smartcard daemon, and ``pcscd``, a generic "
+"smartcard daemon. ``scdaemon`` has two drivers for accessing smartcards: "
+"Its integrated ``ccid`` driver tries to directly access the smartcard. "
+"The ``pcsc`` drivers uses the ``pcscd`` daemon instead."
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:69
+msgid ""
+"A smartcard can only be accessed directly by one daemon. This means that "
+"depending on the startup order, ``pcscd`` might lock the card before "
+"``scdaemon`` tries to access it using the internal ``ccid`` driver. "
+"Therefore we recommend to use the ``pcscd`` driver for ``scdaemon``. You "
+"can activate it by adding ``disable-ccid`` to the "
+"``~/.gnupg/scdaemon.conf`` config file and restarting ``scdaemon``, for "
+"example with ``gpg-connect-agent \"SCD KILLSCD\" /bye``. If this does not"
+" fix the problem, see the next section for more information."
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:75
+msgid ""
+"Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this "
+"conflict."
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:78
+msgid "pcscd: Card Not Found"
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:80
+msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:83
+msgid ""
+"**Solution:** First, make sure that ``scdaemon`` is not running (see the "
+"previous section)::"
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:88
+msgid ""
+"Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. "
+"You should see an entry like this one::"
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:96
+msgid ""
+"If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and "
+"there might be an issue with the application that tries to access it. If "
+"it does not show up, make sure that your ``libccid`` version is up to "
+"date. Support for the Nitrokey 3 was added in ``libccid`` 1.5.0."
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:101
+#, fuzzy
+msgid "Updating The Device Database"
+msgstr "Programinės įrangos atnaujinimas"
+
+#: ../nitrokey3/troubleshooting.rst.inc:103
+msgid ""
+"If you cannot update ``libccid`` to a supported version, you have to "
+"manually update the device database. The path of the database depends on "
+"your distribution:"
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:106
+msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:108
+msgid ""
+"Make sure to backup the file before overwriting it. You can download an "
+"`updated device database file "
+"<https://github.com/Nitrokey/nitrokey-3-firmware/blob/main/Info.plist>`__"
+" from the ``nitrokey-3-firmware`` repository. After updating the file, "
+"restart ``pcscd`` and run ``pcsc_scan -r`` again. The Nitrokey 3 should "
+"now show up."
+msgstr ""
+
+#: ../nitrokey3/troubleshooting.rst.inc:114
 msgid "Update Via update.nitrokey.com Does Not Work"
 msgstr "Atnaujinimas per update.nitrokey.com neveikia"
 
-#: ../nitrokey3/troubleshooting.rst.inc:53
+#: ../nitrokey3/troubleshooting.rst.inc:116
 msgid ""
 "Currently the web updater doesn't support the Nitrokey 3. However you can"
 " get the latest firmware using these `instructions <firmware-"
@@ -27929,3 +28024,4 @@ msgstr ""
 #~ "Jei laikas perduodamas rankiniu būdu, "
 #~ "įsitikinkite, kad laikas perduodamas UTC "
 #~ "laiko juostoje."
+
