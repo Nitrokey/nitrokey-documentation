@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 22:50+0200\n"
-"PO-Revision-Date: 2023-06-20 10:47+0000\n"
+"PO-Revision-Date: 2023-06-21 22:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/ro/>\n"
 "Language: ro\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/ro/>\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
-"< 20)) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -12800,19 +12801,20 @@ msgstr ""
 "modelul smartphone-ului dvs."
 
 #: ../nitrokey3/troubleshooting.rst.inc:51
-#, fuzzy
 msgid "OpenPGP Troubleshooting"
-msgstr "Depanare"
+msgstr "Depanarea OpenPGP"
 
 #: ../nitrokey3/troubleshooting.rst.inc:54
 msgid "GnuPG: OpenPGP Card Not Available"
-msgstr ""
+msgstr "GnuPG: Cardul OpenPGP nu este disponibil"
 
 #: ../nitrokey3/troubleshooting.rst.inc:56
 msgid ""
 "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error "
 "message like this::"
 msgstr ""
+"**Problemă:** GnuPG nu poate accesa Nitrokey 3 și afișează un mesaj de "
+"eroare ca acesta::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:63
 msgid ""
@@ -12822,6 +12824,12 @@ msgid ""
 "Its integrated ``ccid`` driver tries to directly access the smartcard. "
 "The ``pcsc`` drivers uses the ``pcscd`` daemon instead."
 msgstr ""
+"**Soluție:** Există două servicii comune de carduri inteligente pe sistemele "
+"Linux: ``scdaemon``, daemonul GnuPG pentru carduri inteligente, și ``pcscd``"
+", un daemon generic pentru carduri inteligente. ``scdaemon`` are două "
+"drivere pentru accesarea cardurilor inteligente: Driverul său integrat "
+"``ccid`` încearcă să acceseze direct cardul inteligent. Driverul ``pcsc`` "
+"utilizează în schimb daemonul ``pcscd``."
 
 #: ../nitrokey3/troubleshooting.rst.inc:69
 msgid ""
@@ -12834,32 +12842,47 @@ msgid ""
 "example with ``gpg-connect-agent \"SCD KILLSCD\" /bye``. If this does not"
 " fix the problem, see the next section for more information."
 msgstr ""
+"Un card inteligent poate fi accesat direct doar de un singur demon. Aceasta "
+"înseamnă că, în funcție de ordinea de pornire, ``pcscd`` poate bloca cardul "
+"înainte ca ``scdaemon`` să încerce să-l acceseze folosind driverul intern "
+"``ccid``. Prin urmare, vă recomandăm să utilizați driverul ``pcscd`` pentru "
+"``scdaemon``. Îl puteți activa adăugând ``disable-ccid`` la fișierul de "
+"configurare ``~/.gnupg/scdaemon.conf`` și repornind ``scdaemon``, de exemplu "
+"cu ``gpg-connect-agent \"SCD KILLSCD\" /bye``. Dacă acest lucru nu rezolvă "
+"problema, consultați secțiunea următoare pentru mai multe informații."
 
 #: ../nitrokey3/troubleshooting.rst.inc:75
 msgid ""
 "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this "
 "conflict."
 msgstr ""
+"Alternativ, puteți dezactiva sau dezinstala ``pcscd`` pentru a evita acest "
+"conflict."
 
 #: ../nitrokey3/troubleshooting.rst.inc:78
 msgid "pcscd: Card Not Found"
-msgstr ""
+msgstr "pcscd: Card neînregistrat"
 
 #: ../nitrokey3/troubleshooting.rst.inc:80
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
 msgstr ""
+"**Problemă:** O aplicație care utilizează ``pcscd`` nu afișează Nitrokey 3."
 
 #: ../nitrokey3/troubleshooting.rst.inc:83
 msgid ""
 "**Solution:** First, make sure that ``scdaemon`` is not running (see the "
 "previous section)::"
 msgstr ""
+"**Soluție:** În primul rând, asigurați-vă că ``scdaemon`` nu rulează (a se "
+"vedea secțiunea anterioară)::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:88
 msgid ""
 "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. "
 "You should see an entry like this one::"
 msgstr ""
+"Acum listați cărțile inteligente recunoscute de ``pcscd`` cu ``pcsc_scan -r``"
+". Ar trebui să vedeți o intrare ca aceasta::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:96
 msgid ""
@@ -12868,11 +12891,14 @@ msgid ""
 "it does not show up, make sure that your ``libccid`` version is up to "
 "date. Support for the Nitrokey 3 was added in ``libccid`` 1.5.0."
 msgstr ""
+"Dacă Nitrokey 3 apare, înseamnă că este recunoscută corect de ``pcscd`` și "
+"este posibil să existe o problemă cu aplicația care încearcă să o acceseze. "
+"Dacă nu apare, asigurați-vă că versiunea ``libccid`` este actualizată. "
+"Suportul pentru Nitrokey 3 a fost adăugat în ``libccid`` 1.5.0."
 
 #: ../nitrokey3/troubleshooting.rst.inc:101
-#, fuzzy
 msgid "Updating The Device Database"
-msgstr "Actualizarea firmware-ului"
+msgstr "Actualizarea bazei de date a dispozitivului"
 
 #: ../nitrokey3/troubleshooting.rst.inc:103
 msgid ""
@@ -12880,10 +12906,13 @@ msgid ""
 "manually update the device database. The path of the database depends on "
 "your distribution:"
 msgstr ""
+"Dacă nu puteți actualiza ``libccid`` la o versiune acceptată, trebuie să "
+"actualizați manual baza de date a dispozitivului. Calea bazei de date "
+"depinde de distribuția dumneavoastră:"
 
 #: ../nitrokey3/troubleshooting.rst.inc:106
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
-msgstr ""
+msgstr "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 
 #: ../nitrokey3/troubleshooting.rst.inc:108
 msgid ""
@@ -12894,6 +12923,12 @@ msgid ""
 "restart ``pcscd`` and run ``pcsc_scan -r`` again. The Nitrokey 3 should "
 "now show up."
 msgstr ""
+"Asigurați-vă că faceți o copie de rezervă a fișierului înainte de a-l "
+"suprascrie. Puteți descărca un fișier `actualizat al bazei de date a "
+"dispozitivelor <https://github.com/Nitrokey/nitrokey-3-firmware/blob/main/"
+"Info.plist>`__ din depozitul ``nitrokey-3-firmware``. După actualizarea "
+"fișierului, reporniți ``pcscd`` și rulați din nou ``pcsc_scan -r``. Nitrokey "
+"3 ar trebui să apară acum."
 
 #: ../nitrokey3/troubleshooting.rst.inc:114
 msgid "Update Via update.nitrokey.com Does Not Work"
@@ -28550,4 +28585,3 @@ msgstr ""
 #~ "În cazul în care ora este "
 #~ "transmisă manual, asigurați-vă că ora "
 #~ "este transmisă în fusul orar UTC."
-
