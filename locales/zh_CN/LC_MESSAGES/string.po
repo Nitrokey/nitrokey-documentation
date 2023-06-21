@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 22:50+0200\n"
-"PO-Revision-Date: 2023-06-20 10:47+0000\n"
+"PO-Revision-Date: 2023-06-21 22:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified) "
-"<https://translate.nitrokey.com/projects/nitrokey-documentation"
-"/documentation-string/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -10633,19 +10633,18 @@ msgid ""
 msgstr "寻找最佳位置有时需要20-30秒。根据我们的经验，将Nitrokey水平放置会产生更好的效果。如果你仍然遇到问题，请写信给我们的支持。如果您仍然遇到问题，请给我们的支持部门写信，为了获得最佳帮助，请注明发货/订单号和您的智能手机型号。"
 
 #: ../nitrokey3/troubleshooting.rst.inc:51
-#, fuzzy
 msgid "OpenPGP Troubleshooting"
-msgstr "故障排除"
+msgstr "OpenPGP的故障排除"
 
 #: ../nitrokey3/troubleshooting.rst.inc:54
 msgid "GnuPG: OpenPGP Card Not Available"
-msgstr ""
+msgstr "GnuPG：OpenPGP卡不可用"
 
 #: ../nitrokey3/troubleshooting.rst.inc:56
 msgid ""
 "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error "
 "message like this::"
-msgstr ""
+msgstr "**问题：** GnuPG无法访问Nitrokey 3，并显示这样的错误信息：："
 
 #: ../nitrokey3/troubleshooting.rst.inc:63
 msgid ""
@@ -10655,6 +10654,10 @@ msgid ""
 "Its integrated ``ccid`` driver tries to directly access the smartcard. "
 "The ``pcsc`` drivers uses the ``pcscd`` daemon instead."
 msgstr ""
+"**解决方案：** 在Linux系统上有两种常见的智能卡服务：``scdaemon``，GnuPG的智能"
+"卡守护程序，以及``pcscd``，一个通用的智能卡守护程序。``scdaemon``有两个驱动用"
+"于访问智能卡：其集成的``ccid``驱动程序试图直接访问智能卡。``pcsc`` "
+"驱动程序使用``pcscd`` 守护程序代替。"
 
 #: ../nitrokey3/troubleshooting.rst.inc:69
 msgid ""
@@ -10667,32 +10670,40 @@ msgid ""
 "example with ``gpg-connect-agent \"SCD KILLSCD\" /bye``. If this does not"
 " fix the problem, see the next section for more information."
 msgstr ""
+"一个智能卡只能由一个守护进程直接访问。这意味着，根据启动顺序，``pcscd`` "
+"可能会在``scdaemon`` 试图使用内部``ccid`` "
+"驱动程序访问该卡之前锁定该卡。因此，我们建议使用``pcscd`` "
+"驱动程序，用于``scdaemon``。你可以通过将``disable-ccid``添加到``~/.gnupg/"
+"scdaemon.conf``配置文件中，并重新启动``scdaemon``，例如用``gpg-connect-agent "
+"\"SCD KILLSCD\" "
+"/bye``来激活它。如果这样还不能解决问题，请看下一节，了解更多信息。"
 
 #: ../nitrokey3/troubleshooting.rst.inc:75
 msgid ""
 "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this "
 "conflict."
-msgstr ""
+msgstr "另外，你可以停用或卸载``pcscd``以避免这种冲突。"
 
 #: ../nitrokey3/troubleshooting.rst.inc:78
 msgid "pcscd: Card Not Found"
-msgstr ""
+msgstr "pcscd：未找到卡片"
 
 #: ../nitrokey3/troubleshooting.rst.inc:80
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
-msgstr ""
+msgstr "**问题：** 一个使用``pcscd``的应用程序不显示Nitrokey 3。"
 
 #: ../nitrokey3/troubleshooting.rst.inc:83
 msgid ""
 "**Solution:** First, make sure that ``scdaemon`` is not running (see the "
 "previous section)::"
-msgstr ""
+msgstr "**解决方案：** 首先，确保``scdaemon``没有运行（见上一节）：："
 
 #: ../nitrokey3/troubleshooting.rst.inc:88
 msgid ""
 "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. "
 "You should see an entry like this one::"
-msgstr ""
+msgstr "现在列出由``pcscd``与``pcsc_scan "
+"-r``识别的智能卡。你应该看到一个像这样的条目：："
 
 #: ../nitrokey3/troubleshooting.rst.inc:96
 msgid ""
@@ -10701,22 +10712,25 @@ msgid ""
 "it does not show up, make sure that your ``libccid`` version is up to "
 "date. Support for the Nitrokey 3 was added in ``libccid`` 1.5.0."
 msgstr ""
+"如果Nitrokey 3显示出来，说明它被``pcscd``正确识别，试图访问它的应用程序可能有"
+"问题。如果它没有出现，请确保你的``libccid``版本是最新的。对Nitrokey "
+"3的支持在``libccid`` 1.5.0中添加。"
 
 #: ../nitrokey3/troubleshooting.rst.inc:101
-#, fuzzy
 msgid "Updating The Device Database"
-msgstr "更新固件"
+msgstr "更新设备数据库"
 
 #: ../nitrokey3/troubleshooting.rst.inc:103
 msgid ""
 "If you cannot update ``libccid`` to a supported version, you have to "
 "manually update the device database. The path of the database depends on "
 "your distribution:"
-msgstr ""
+msgstr "如果你不能将``libccid``更新到一个支持的版本，你必须手动更新设备数据库。数据库"
+"的路径取决于你的发行版："
 
 #: ../nitrokey3/troubleshooting.rst.inc:106
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
-msgstr ""
+msgstr "Arch, Debian, Ubuntu：``/etc/libccid_Info.plist``"
 
 #: ../nitrokey3/troubleshooting.rst.inc:108
 msgid ""
@@ -10727,6 +10741,11 @@ msgid ""
 "restart ``pcscd`` and run ``pcsc_scan -r`` again. The Nitrokey 3 should "
 "now show up."
 msgstr ""
+"在覆盖文件之前，请确保备份该文件。你可以从``nitrokey-3-firmware`` "
+"资源库下载一个`更新的设备数据库文件<https://github.com/Nitrokey/"
+"nitrokey-3-firmware/blob/main/Info."
+"plist>`__。更新文件后，重新启动``pcscd``并再次运行``pcsc_scan -r``。Nitrokey "
+"3现在应该出现了。"
 
 #: ../nitrokey3/troubleshooting.rst.inc:114
 msgid "Update Via update.nitrokey.com Does Not Work"
@@ -22981,4 +23000,3 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 #~ "make sure to pass the time in "
 #~ "UTC timezone."
 #~ msgstr "如果是手动传递时间，请确保以UTC时区传递时间。"
-
