@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-21 22:50+0200\n"
-"PO-Revision-Date: 2023-06-20 10:47+0000\n"
+"PO-Revision-Date: 2023-06-21 22:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/cs/>\n"
 "Language: cs\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/cs/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -12449,19 +12450,20 @@ msgstr ""
 "model vašeho smartphonu."
 
 #: ../nitrokey3/troubleshooting.rst.inc:51
-#, fuzzy
 msgid "OpenPGP Troubleshooting"
-msgstr "Řešení problémů"
+msgstr "Řešení problémů s OpenPGP"
 
 #: ../nitrokey3/troubleshooting.rst.inc:54
 msgid "GnuPG: OpenPGP Card Not Available"
-msgstr ""
+msgstr "GnuPG: Karta OpenPGP není k dispozici"
 
 #: ../nitrokey3/troubleshooting.rst.inc:56
 msgid ""
 "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error "
 "message like this::"
 msgstr ""
+"**Problém:** GnuPG nemůže získat přístup k Nitrokey 3 a zobrazí se chybová "
+"zpráva, jako je tato::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:63
 msgid ""
@@ -12471,6 +12473,11 @@ msgid ""
 "Its integrated ``ccid`` driver tries to directly access the smartcard. "
 "The ``pcsc`` drivers uses the ``pcscd`` daemon instead."
 msgstr ""
+"**Řešení:** V systémech Linux existují dvě běžné služby čipových karet: "
+"`scdaemon` `, démon pro čipové karty GnuPG, a ``pcscd``, obecný démon pro "
+"čipové karty. ``scdaemon`` má dva ovladače pro přístup k čipovým kartám: "
+"Jeho integrovaný ovladač ``ccid`` se snaží přistupovat k čipové kartě přímo. "
+"Ovladače ``pcsc`` místo toho používají démona ``pcscd``."
 
 #: ../nitrokey3/troubleshooting.rst.inc:69
 msgid ""
@@ -12483,32 +12490,46 @@ msgid ""
 "example with ``gpg-connect-agent \"SCD KILLSCD\" /bye``. If this does not"
 " fix the problem, see the next section for more information."
 msgstr ""
+"K čipové kartě může mít přímý přístup pouze jeden démon. To znamená, že v "
+"závislosti na pořadí spouštění může ``pcscd`` uzamknout kartu dříve, než se "
+"k ní ``scdaemon`` pokusí přistoupit pomocí interního ``ccid`` ovladače. "
+"Proto doporučujeme používat ovladač ``pcscd`` pro ``scdaemon``. Aktivovat "
+"jej můžete přidáním ``disable-ccid`` do konfiguračního souboru ``~/.gnupg/"
+"scdaemon.conf`` a restartováním ``scdaemon``, například pomocí ``gpg-connect-"
+"agent \"SCD KILLSCD\" /bye``. Pokud to problém nevyřeší, další informace "
+"naleznete v následující části."
 
 #: ../nitrokey3/troubleshooting.rst.inc:75
 msgid ""
 "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this "
 "conflict."
 msgstr ""
+"Případně můžete deaktivovat nebo odinstalovat ``pcscd``, abyste se tomuto "
+"konfliktu vyhnuli."
 
 #: ../nitrokey3/troubleshooting.rst.inc:78
 msgid "pcscd: Card Not Found"
-msgstr ""
+msgstr "pcscd: Karta nenalezena"
 
 #: ../nitrokey3/troubleshooting.rst.inc:80
 msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
-msgstr ""
+msgstr "**Problém:** Aplikace používající ``pcscd`` nezobrazuje Nitrokey 3."
 
 #: ../nitrokey3/troubleshooting.rst.inc:83
 msgid ""
 "**Solution:** First, make sure that ``scdaemon`` is not running (see the "
 "previous section)::"
 msgstr ""
+"**Řešení:** Nejprve se ujistěte, že není spuštěna stránka ``scdaemon`` (viz "
+"předchozí část)::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:88
 msgid ""
 "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. "
 "You should see an entry like this one::"
 msgstr ""
+"Nyní vypište seznam čipových karet rozpoznaných pomocí ``pcscd`` s ``"
+"pcsc_scan -r``. Měli byste vidět záznam, jako je tento::"
 
 #: ../nitrokey3/troubleshooting.rst.inc:96
 msgid ""
@@ -12517,11 +12538,14 @@ msgid ""
 "it does not show up, make sure that your ``libccid`` version is up to "
 "date. Support for the Nitrokey 3 was added in ``libccid`` 1.5.0."
 msgstr ""
+"Pokud se Nitrokey 3 zobrazí, je správně rozpoznán serverem ``pcscd`` a může "
+"být problém s aplikací, která se k němu pokouší přistupovat. Pokud se "
+"nezobrazí, zkontrolujte, zda je vaše ``libccid`` verze aktuální. Podpora pro "
+"Nitrokey 3 byla přidána v ``libccid`` 1.5.0."
 
 #: ../nitrokey3/troubleshooting.rst.inc:101
-#, fuzzy
 msgid "Updating The Device Database"
-msgstr "Aktualizace firmwaru"
+msgstr "Aktualizace databáze zařízení"
 
 #: ../nitrokey3/troubleshooting.rst.inc:103
 msgid ""
@@ -12529,10 +12553,13 @@ msgid ""
 "manually update the device database. The path of the database depends on "
 "your distribution:"
 msgstr ""
+"Pokud nemůžete aktualizovat ``libccid`` na podporovanou verzi, musíte "
+"databázi zařízení aktualizovat ručně. Cesta k databázi závisí na vaší "
+"distribuci:"
 
 #: ../nitrokey3/troubleshooting.rst.inc:106
 msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
-msgstr ""
+msgstr "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
 
 #: ../nitrokey3/troubleshooting.rst.inc:108
 msgid ""
@@ -12543,6 +12570,11 @@ msgid ""
 "restart ``pcscd`` and run ``pcsc_scan -r`` again. The Nitrokey 3 should "
 "now show up."
 msgstr ""
+"Před přepsáním souboru nezapomeňte soubor zálohovat. <https://github.com/"
+"Nitrokey/nitrokey-3-firmware/blob/main/Info.plist>` Aktualizovaný soubor "
+"databáze zařízení `můžete stáhnout z úložiště ``nitrokey-3-firmware``. Po "
+"aktualizaci souboru restartujte ``pcscd`` a znovu spusťte ``pcsc_scan -r``. "
+"Nyní by se měl zobrazit klíč Nitrokey 3."
 
 #: ../nitrokey3/troubleshooting.rst.inc:114
 msgid "Update Via update.nitrokey.com Does Not Work"
@@ -27678,4 +27710,3 @@ msgstr ""
 #~ "make sure to pass the time in "
 #~ "UTC timezone."
 #~ msgstr "Pokud je čas zadáván ručně, nezapomeňte zadat čas v časovém pásmu UTC."
-
