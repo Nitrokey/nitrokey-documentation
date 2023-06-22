@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 09:10+0200\n"
-"PO-Revision-Date: 2023-06-21 22:47+0000\n"
+"PO-Revision-Date: 2023-06-22 08:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified) "
-"<https://translate.nitrokey.com/projects/nitrokey-documentation"
-"/documentation-string/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -3713,11 +3713,10 @@ msgstr ""
 "unattended-boot>`__中找到。"
 
 #: ../nethsm/administration.rst:74
-#, fuzzy
 msgid ""
 "The boot mode can be changed as follows. At next boot, the NetHSM will "
 "behave accordingly."
-msgstr "启动模式可以按以下方式改变。"
+msgstr "启动模式可以按以下方式改变。在下次启动时，NetHSM会有相应的表现。"
 
 #: ../nethsm/administration.rst:78 ../nethsm/administration.rst:335
 #: ../nethsm/administration.rst:460 ../nethsm/administration.rst:682
@@ -3827,12 +3826,12 @@ msgid "*Locked*"
 msgstr "*被锁住*"
 
 #: ../nethsm/administration.rst:115
-#, fuzzy
 msgid ""
 "NetHSM with configuration but encrypted and inaccessible data stores. "
 "Typically, the next step is to unlock the system. The *Locked* state "
 "implies the *Provisioned* state."
-msgstr "NetHSM有配置但受到保护（需要解锁）。运行的*状态意味着*配置的*状态。"
+msgstr "有配置的NetHSM，但数据存储被加密且无法访问。通常情况下，下一步是解锁系统。*锁"
+"定的* 状态意味着*配置的* 状态。"
 
 #: ../nethsm/administration.rst:-1 ../nethsm/administration.rst:124
 msgid "States and transitions of the NetHSM"
@@ -3882,6 +3881,8 @@ msgid ""
 "is in the _Locked_ state no other operations are possible. Afterwards the"
 " NetHSM is in an _Operational_ state."
 msgstr ""
+"处于*锁定* 状态的NetHSM可以按以下方式解锁。当NetHSM处于_Locked_状态时，不可能"
+"有其他操作。之后，NetHSM处于_Operational_状态。"
 
 #: ../nethsm/administration.rst:177
 msgid ""
@@ -4541,6 +4542,8 @@ msgid ""
 "different network settings, TLS certificate and *Unlock Passphrase* "
 "afterwards."
 msgstr ""
+"如果NetHSM是*Unprovisioned* ，它将恢复所有*用户数据* ，包括系统配置和重新启动"
+"。因此，之后系统可能会得到不同的网络设置、TLS证书和*解锁密码* 。"
 
 #: ../nethsm/administration.rst:711
 msgid ""
@@ -4548,6 +4551,9 @@ msgid ""
 "not system configuration. In this case all previously existing users and "
 "user keys will be deleted. The NetHSM ends in an *Operational* state."
 msgstr ""
+"如果NetHSM是*Provisioned* ，它将恢复用户和用户钥匙，但不恢复系统配置。在这种"
+"情况下，所有以前存在的用户和用户钥匙将被删除。NetHSM结束时处于*Operational* "
+"状态。"
 
 #: ../nethsm/administration.rst:713
 msgid "The restore can be applied as follows."
@@ -4594,7 +4600,6 @@ msgstr ""
 "/POST_system-restore>`__中找到。"
 
 #: ../nethsm/administration.rst:753
-#, fuzzy
 msgid "System Update"
 msgstr "系统更新"
 
@@ -4605,13 +4610,17 @@ msgid ""
 " image authenticity, integrity, and version number. Optionally, the "
 "NetHSM displays release notes, if any."
 msgstr ""
+"系统更新可以分两步进行安装。首先，更新的图像需要上传到一个*Provisioned* NetHS"
+"M。NetHSM会验证图像的真实性、完整性和版本号。如果有的话，NetHSM会显示发布说明"
+"。"
 
 #: ../nethsm/administration.rst:759
 msgid ""
 "Data loss may occur due to the installation of a beta update! Stable "
 "versions should not cause data loss. However, it's recommended to create "
 "a backup before updating."
-msgstr ""
+msgstr "由于安装了一个测试版的更新，可能会发生数据丢失!稳定的版本应该不会导致数据丢失"
+"。然而，建议在更新前创建一个备份。"
 
 #: ../nethsm/administration.rst:761
 msgid "The update file can be uploaded as follows."
@@ -4632,19 +4641,20 @@ msgstr ""
 "/POST_system-update>`__中找到。"
 
 #: ../nethsm/administration.rst:785
-#, fuzzy
 msgid ""
 "Afterwards the update can be applied or aborted. Please refer to the "
 "desired option below. If the NetHSM is powered down before the \"commit\""
 " operation, the update file has to be uploaded again."
-msgstr "之后，可以应用或中止更新。请参考以下所需的选项。"
+msgstr "之后，可以应用或中止更新。请参考下面所需的选项。如果NetHSM在 \"提交 "
+"\"操作前断电，更新文件必须重新上传。"
 
 #: ../nethsm/administration.rst:787
 msgid ""
 "The update can be applied (committed) as follows. Any data migration is "
 "only performed _after_ the NetHSM has successfully booted the new system "
 "software version."
-msgstr ""
+msgstr "更新可以按以下方式应用（提交）。只有在NetHSM成功启动新的系统软件版本后，才会"
+"进行任何数据迁移。"
 
 #: ../nethsm/administration.rst:801
 msgid ""
@@ -4716,15 +4726,15 @@ msgid "Reset to Factory Defaults"
 msgstr "重置为出厂默认值"
 
 #: ../nethsm/administration.rst:863
-#, fuzzy
 msgid ""
 "A *Provisioned* NetHSM can be reset to factory defaults. In this case all"
 " user data is securely deleted and the NetHSM boots into an "
 "*Unprovisioned* state. Afterwards, you may want to `provision <getting-"
 "started#provisioning>`__ the NetHSM."
 msgstr ""
-"NetHSM可以被重置为出厂默认值。在这种情况下，所有的用户数据都被安全删除，NetHSM启动后进入*未配置的* "
-"状态。之后，你可能想`，为NetHSM提供<getting-started#provisioning>`__。"
+"*供给的* NetHSM可以被重置为出厂默认值。在这种情况下，所有的用户数据都被安全删"
+"除，NetHSM启动后进入*未配置的* 状态。之后，你可能想`，为NetHSM提供<getting-"
+"started#provisioning>`__。"
 
 #: ../nethsm/administration.rst:865
 msgid "The reset to factory defaults can be performed as follows."
@@ -4806,7 +4816,7 @@ msgstr "拥有该角色的用户账户只能访问启动系统备份所需的操
 msgid ""
 "See `Tags <administration.html#tags-for-users>`__ for more fine-grained "
 "access restricions."
-msgstr ""
+msgstr "参见`标签<administration.html#tags-for-users>`__ 以了解更精细的访问限制。"
 
 #: ../nethsm/administration.rst:915
 msgid "In a future release, additional *Roles* may be introduced."
@@ -4993,14 +5003,17 @@ msgid "Tags for Users"
 msgstr "用户的标签"
 
 #: ../nethsm/administration.rst:1075
-#, fuzzy
 msgid ""
 "*Tags* can be used to set fine-grained access restrictions on keys, and "
 "are an optional feature. One or more *Tags* can be assigned to user "
 "accounts with the *Operator* role only. The *Operators* can see all keys,"
 " but only use those with at least one corresponding *Tag*. A key can not "
 "be modified by an *Operator* user."
-msgstr "*标签*可以用来设置钥匙的访问限制，是一个可选的功能。它们只能被分配给具有*操作者*角色的用户账户。操作员*可以看到所有的钥匙，但只能使用那些至少有一个相应的*标签*的钥匙。一个密钥不能被*操作者*的用户修改。"
+msgstr ""
+"*标签* ，可用于对钥匙设置细粒度的访问限制，是一项可选功能。一个或多个*标签* "
+"只能分配给具有*操作员* 角色的用户账户。*操作员* "
+"可以看到所有的键，但只能使用那些至少有一个相应的*标签* "
+"。一个键不能被一个*操作员* 用户修改。"
 
 #: ../nethsm/administration.rst:1077
 msgid ""
@@ -5009,9 +5022,8 @@ msgid ""
 msgstr "要了解如何在钥匙上使用*标记，请参考`钥匙的标记 <operation.html#tags-for-keys>`__。"
 
 #: ../nethsm/administration.rst:1079
-#, fuzzy
 msgid "A *Tag* can be added as follows."
-msgstr "可以按以下方式添加*标签。"
+msgstr "*标签* ，可按以下方式添加。"
 
 #: ../nethsm/administration.rst:1088 ../nethsm/administration.rst:1114
 msgid "The user ID to set the tag on."
@@ -5177,13 +5189,15 @@ msgid "Provisioning"
 msgstr "供应"
 
 #: ../nethsm/getting-started.rst:117
-#, fuzzy
 msgid ""
 "A new or otherwise *Unprovisioned* NetHSM needs to be provisioned first "
 "with passphrases and the current time. The *Admin Passphrase* is for the "
 "first user account, which is the superuser of the NetHSM. The *Unlock "
 "Passphrase* is used to decrypt NetHSM's *User Data*."
-msgstr "一个新的NetHSM需要首先配置密码和当前时间。管理员密码*是为第一个用户账户准备的，它是NetHSM的超级用户。解锁密码*用于解密NetHSM'的*用户数据*。"
+msgstr ""
+"一个新的或其他未配置的** NetHSM需要首先配置口令和当前时间。*Admin Passphrase*"
+" 是为第一个用户帐户准备的，它是NetHSM的超级用户。*解锁密码* "
+"，用于解密NetHSM的*用户数据* 。"
 
 #: ../nethsm/getting-started.rst:119
 msgid "The initial provisioning is executed as follows."
@@ -6032,14 +6046,18 @@ msgid "Tags for Keys"
 msgstr "钥匙的标签"
 
 #: ../nethsm/operation.rst:375
-#, fuzzy
 msgid ""
 "*Tags* can be used to set fine-grained access restrictions on keys, and "
 "are an optional feature. One or more *Tags* can be assigned to a key. The"
 " *Operator* users can see all keys, but only use those with at least one "
 "corresponding *Tag*. If a key has no *Tag* it can be used by all "
 "*Operator* users. A key can not be modified by an *Operator* user."
-msgstr "*标签*可以用来设置钥匙的访问限制，是一个可选的功能。操作员*用户可以看到所有的钥匙，但只能使用那些至少有一个相应*标签*的钥匙。如果一个钥匙没有*Tag*，它可以被所有*操作者*用户使用。一个键不能被*操作者*用户修改。"
+msgstr ""
+"*标签* ，可以用来对钥匙设置细粒度的访问限制，是一个可选功能。一个或多个*标签*"
+" 可以分配给一个键。*操作员* "
+"用户可以看到所有的键，但只能使用那些至少有一个相应的*标签* "
+"。如果一个钥匙没有*Tag* ，它可以被所有*Operator* "
+"用户使用。一个键不能被*Operator* 用户修改。"
 
 #: ../nethsm/operation.rst:377
 msgid ""
@@ -23059,4 +23077,3 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "The update can be applied (committed) as follows."
 #~ msgstr "更新可以按以下方式应用（承诺）。"
-
