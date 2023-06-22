@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 09:10+0200\n"
-"PO-Revision-Date: 2023-06-21 22:47+0000\n"
+"PO-Revision-Date: 2023-06-22 08:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Russian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/ru/>\n"
 "Language: ru\n"
-"Language-Team: Russian <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/ru/>\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -4358,11 +4359,12 @@ msgstr ""
 "unattended-boot>`__."
 
 #: ../nethsm/administration.rst:74
-#, fuzzy
 msgid ""
 "The boot mode can be changed as follows. At next boot, the NetHSM will "
 "behave accordingly."
-msgstr "Режим загрузки можно изменить следующим образом."
+msgstr ""
+"Режим загрузки можно изменить следующим образом. При следующей загрузке "
+"NetHSM будет вести себя соответствующим образом."
 
 #: ../nethsm/administration.rst:78 ../nethsm/administration.rst:335
 #: ../nethsm/administration.rst:460 ../nethsm/administration.rst:682
@@ -4481,14 +4483,14 @@ msgid "*Locked*"
 msgstr "*Заперто*"
 
 #: ../nethsm/administration.rst:115
-#, fuzzy
 msgid ""
 "NetHSM with configuration but encrypted and inaccessible data stores. "
 "Typically, the next step is to unlock the system. The *Locked* state "
 "implies the *Provisioned* state."
 msgstr ""
-"NetHSM с конфигурацией, но защищенный (требуется разблокировка). "
-"Состояние *Operational* подразумевает состояние *Provisioned*."
+"NetHSM с конфигурацией, но зашифрованными и недоступными хранилищами данных. "
+"Как правило, следующим шагом является разблокировка системы. Состояние "
+"*Locked* подразумевает состояние *Provisioned*."
 
 #: ../nethsm/administration.rst:-1 ../nethsm/administration.rst:124
 msgid "States and transitions of the NetHSM"
@@ -4543,6 +4545,9 @@ msgid ""
 "is in the _Locked_ state no other operations are possible. Afterwards the"
 " NetHSM is in an _Operational_ state."
 msgstr ""
+"NetHSM в состоянии *Locked* можно разблокировать следующим образом. Пока "
+"NetHSM находится в состоянии _Locked_, никакие другие операции невозможны. "
+"После этого NetHSM переходит в состояние _Operational_."
 
 #: ../nethsm/administration.rst:177
 msgid ""
@@ -5270,6 +5275,10 @@ msgid ""
 "different network settings, TLS certificate and *Unlock Passphrase* "
 "afterwards."
 msgstr ""
+"Если NetHSM является *Unprovisioned*, он восстановит все *пользовательские "
+"данные*, включая конфигурацию системы, и перезагрузится. Поэтому после этого "
+"система может получить другие сетевые настройки, сертификат TLS и *Unlock "
+"Passphrase*."
 
 #: ../nethsm/administration.rst:711
 msgid ""
@@ -5277,6 +5286,10 @@ msgid ""
 "not system configuration. In this case all previously existing users and "
 "user keys will be deleted. The NetHSM ends in an *Operational* state."
 msgstr ""
+"Если NetHSM находится по адресу *Provisioned*, то будут восстановлены "
+"пользователи и ключи пользователей, но не конфигурация системы. В этом "
+"случае все ранее существовавшие пользователи и ключи пользователей будут "
+"удалены. NetHSM завершается в состоянии *Operational*."
 
 #: ../nethsm/administration.rst:713
 msgid "The restore can be applied as follows."
@@ -5327,7 +5340,6 @@ msgstr ""
 "/POST_system-restore>`__."
 
 #: ../nethsm/administration.rst:753
-#, fuzzy
 msgid "System Update"
 msgstr "Обновление системы"
 
@@ -5338,6 +5350,10 @@ msgid ""
 " image authenticity, integrity, and version number. Optionally, the "
 "NetHSM displays release notes, if any."
 msgstr ""
+"Обновления системы можно установить в два этапа. Сначала образ обновления "
+"необходимо загрузить на *Provisioned* NetHSM. NetHSM проверяет подлинность, "
+"целостность и номер версии образа. По желанию NetHSM отображает примечания к "
+"выпуску, если таковые имеются."
 
 #: ../nethsm/administration.rst:759
 msgid ""
@@ -5345,6 +5361,9 @@ msgid ""
 "versions should not cause data loss. However, it's recommended to create "
 "a backup before updating."
 msgstr ""
+"Потеря данных может произойти из-за установки бета-версии обновления! "
+"Стабильные версии не должны вызывать потерю данных. Однако перед обновлением "
+"рекомендуется создать резервную копию."
 
 #: ../nethsm/administration.rst:761
 msgid "The update file can be uploaded as follows."
@@ -5367,14 +5386,14 @@ msgstr ""
 "/POST_system-update>`__."
 
 #: ../nethsm/administration.rst:785
-#, fuzzy
 msgid ""
 "Afterwards the update can be applied or aborted. Please refer to the "
 "desired option below. If the NetHSM is powered down before the \"commit\""
 " operation, the update file has to be uploaded again."
 msgstr ""
-"После этого обновление может быть применено или отменено. Пожалуйста, "
-"обратитесь к желаемому варианту ниже."
+"После этого обновление может быть применено или отменено. Желаемый вариант "
+"указан ниже. Если питание NetHSM отключается до операции \"фиксация\", файл "
+"обновления необходимо загрузить заново."
 
 #: ../nethsm/administration.rst:787
 msgid ""
@@ -5382,6 +5401,9 @@ msgid ""
 "only performed _after_ the NetHSM has successfully booted the new system "
 "software version."
 msgstr ""
+"Обновление может быть применено (зафиксировано) следующим образом. Любая "
+"миграция данных выполняется только _после_ того, как NetHSM успешно загрузит "
+"новую версию системного ПО."
 
 #: ../nethsm/administration.rst:801
 msgid ""
@@ -5461,17 +5483,16 @@ msgid "Reset to Factory Defaults"
 msgstr "Сброс к заводским настройкам по умолчанию"
 
 #: ../nethsm/administration.rst:863
-#, fuzzy
 msgid ""
 "A *Provisioned* NetHSM can be reset to factory defaults. In this case all"
 " user data is securely deleted and the NetHSM boots into an "
 "*Unprovisioned* state. Afterwards, you may want to `provision <getting-"
 "started#provisioning>`__ the NetHSM."
 msgstr ""
-"NetHSM можно вернуть к заводским настройкам по умолчанию. В этом случае "
-"все пользовательские данные безопасно удаляются, а NetHSM загружается в "
-"состояние *Unprovisioned*. После этого вы можете захотеть `предоставить "
-"<getting-started#provisioning>`__ NetHSM."
+"NetHSM *Provisioned* может быть сброшен к заводским настройкам по умолчанию. "
+"В этом случае все пользовательские данные безопасно удаляются, а NetHSM "
+"загружается в состояние *Unprovisioned*. После этого вы можете захотеть `"
+"обеспечить <getting-started#provisioning>`__ NetHSM."
 
 #: ../nethsm/administration.rst:865
 msgid "The reset to factory defaults can be performed as follows."
@@ -5571,6 +5592,8 @@ msgid ""
 "See `Tags <administration.html#tags-for-users>`__ for more fine-grained "
 "access restricions."
 msgstr ""
+"См. `Теги <administration.html#tags-for-users>`__ для более тонких "
+"ограничений доступа."
 
 #: ../nethsm/administration.rst:915
 msgid "In a future release, additional *Roles* may be introduced."
@@ -5772,7 +5795,6 @@ msgid "Tags for Users"
 msgstr "Теги для пользователей"
 
 #: ../nethsm/administration.rst:1075
-#, fuzzy
 msgid ""
 "*Tags* can be used to set fine-grained access restrictions on keys, and "
 "are an optional feature. One or more *Tags* can be assigned to user "
@@ -5780,12 +5802,12 @@ msgid ""
 " but only use those with at least one corresponding *Tag*. A key can not "
 "be modified by an *Operator* user."
 msgstr ""
-"Теги *Tags* могут использоваться для установки ограничений доступа к "
-"ключам и являются необязательной функцией. Они могут быть назначены "
-"только учетным записям пользователей с ролью *Оператор*. Операторы* могут"
-" видеть все ключи, но использовать только те, у которых есть хотя бы один"
-" соответствующий *Tag*. Ключ не может быть изменен пользователем "
-"*Оператор*."
+"*Теги* могут быть использованы для установки тонких ограничений доступа к "
+"ключам и являются дополнительной функцией. Одна или несколько *меток* могут "
+"быть назначены только учетным записям пользователей с ролью *Оператор*. "
+"Операторы ** могут видеть все ключи, но использовать только те, у которых "
+"есть хотя бы одна соответствующая *метка*. Ключ не может быть изменен "
+"пользователем *Оператор*."
 
 #: ../nethsm/administration.rst:1077
 msgid ""
@@ -5796,9 +5818,8 @@ msgstr ""
 "`Тэги для клавиш <operation.html#tags-for-keys>`__."
 
 #: ../nethsm/administration.rst:1079
-#, fuzzy
 msgid "A *Tag* can be added as follows."
-msgstr "Метка *Tag* может быть добавлена следующим образом."
+msgstr "Тег ** можно добавить следующим образом."
 
 #: ../nethsm/administration.rst:1088 ../nethsm/administration.rst:1114
 msgid "The user ID to set the tag on."
@@ -5993,17 +6014,17 @@ msgid "Provisioning"
 msgstr "Обеспечение"
 
 #: ../nethsm/getting-started.rst:117
-#, fuzzy
 msgid ""
 "A new or otherwise *Unprovisioned* NetHSM needs to be provisioned first "
 "with passphrases and the current time. The *Admin Passphrase* is for the "
 "first user account, which is the superuser of the NetHSM. The *Unlock "
 "Passphrase* is used to decrypt NetHSM's *User Data*."
 msgstr ""
-"Для нового NetHSM необходимо сначала установить парольные фразы и текущее"
-" время. Парольная фраза *Admin* предназначена для первой учетной записи "
-"пользователя, которая является суперпользователем NetHSM. Пароль *Unlock "
-"Passphrase* используется для расшифровки данных пользователя NetHSM'."
+"На новом или ином *Непровизированном* NetHSM необходимо сначала установить "
+"парольные фразы и текущее время. Пассфраза *Admin* предназначена для первой "
+"учетной записи пользователя, которая является суперпользователем NetHSM. "
+"Парольная фраза *Unlock Passphrase* используется для расшифровки "
+"пользовательских данных NetHSM ** ."
 
 #: ../nethsm/getting-started.rst:119
 msgid "The initial provisioning is executed as follows."
@@ -6973,7 +6994,6 @@ msgid "Tags for Keys"
 msgstr "Теги для ключей"
 
 #: ../nethsm/operation.rst:375
-#, fuzzy
 msgid ""
 "*Tags* can be used to set fine-grained access restrictions on keys, and "
 "are an optional feature. One or more *Tags* can be assigned to a key. The"
@@ -6981,12 +7001,12 @@ msgid ""
 "corresponding *Tag*. If a key has no *Tag* it can be used by all "
 "*Operator* users. A key can not be modified by an *Operator* user."
 msgstr ""
-"Теги *Tag* могут быть использованы для установки ограничений доступа к "
-"ключам и являются необязательной функцией. Пользователи *Operator* могут "
-"видеть все ключи, но использовать только те, у которых есть хотя бы один "
-"соответствующий *Tag*. Если у ключа нет *Tag*, его могут использовать все"
-" пользователи *Operator*. Ключ не может быть изменен пользователем "
-"*Оператор*."
+"*Теги* могут использоваться для установления более тонких ограничений "
+"доступа к ключам и являются необязательной функцией. Ключу может быть "
+"назначена одна или несколько *меток*. Оператор ** может видеть все ключи, но "
+"использовать только те, у которых есть хотя бы один соответствующий *тег*. "
+"Если у ключа нет *Метки*, его могут использовать все пользователи *Operator*"
+". Ключ не может быть изменен пользователем *Operator*."
 
 #: ../nethsm/operation.rst:377
 msgid ""
@@ -28328,4 +28348,3 @@ msgstr ""
 
 #~ msgid "The update can be applied (committed) as follows."
 #~ msgstr "Обновление может быть применено (зафиксировано) следующим образом."
-
