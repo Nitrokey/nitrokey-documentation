@@ -40,12 +40,13 @@ NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
 +-------------------+----------------------------------------------------------------------+
 | Boot Mode         | Description                                                          |
 +===================+======================================================================+
-| *Attended Boot*   | The *Unlock Passphrase* needs to be entered during each start,       |
-|                   | which is used to decrypt the *User Data*. For security reasons,      |
-|                   | this mode is recommended.                                            |
+| *Attended Boot*   | The NetHSM boots up into a _Locked_ state. The *Unlock Passphrase* |
+|                   | needs to be entered during each start, which is used to decrypt the  |
+|                   | *User Data*. For security reasons, this mode is recommended and it's |
+|                   | the default mode for a freshly provisioned system.                   |
 +-------------------+----------------------------------------------------------------------+
 | *Unattended Boot* | The system starts unattended without the need to enter the *Unlock*  |
-|                   | *Passphrase*.                                                        |
+|                   | *Passphrase* into an _Operational_ state.                                                        |
 |                   | Use this mode if your availability requirements can not be fulfilled |
 |                   | with *Attended Boot* mode.                                           |
 +-------------------+----------------------------------------------------------------------+
@@ -70,7 +71,7 @@ The current boot mode can be retrieved as follows.
    .. tab:: REST API
       Information about the `/config/unattended-boot` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-unattended-boot>`__.
 
-The boot mode can be changed as follows.
+The boot mode can be changed as follows. At next boot, the NetHSM will behave accordingly.
 
 .. tabs::
    .. tab:: nitropy
@@ -111,8 +112,9 @@ The NetHSM software has four states: *Unprovisioned*, *Provisioned*, *Locked*, a
 | *Operational*   | NetHSM with configuration and ready to execute commands.                |
 |                 | The *Operational* state implies the *Provisioned* state.                |
 +-----------------+-------------------------------------------------------------------------+
-| *Locked*        | NetHSM with configuration but protected (requires unlock).              |
-|                 | The *Operational* state implies the *Provisioned* state.                |
+| *Locked*        | NetHSM with configuration but encrypted and inaccessible data stores.   |
+|                 | Typically, the next step is to unlock the system. The *Locked* state    |
+|                 | implies the *Provisioned* state.                                        |
 +-----------------+-------------------------------------------------------------------------+
 
 .. figure:: ./images/states.svg
@@ -158,7 +160,7 @@ A NetHSM in *Operational* state can be locked again to protect it as follows.
    .. tab:: REST API
       Information about the `/lock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_lock>`__.
 
-A NetHSM in *Locked* state can be unlocked as follows.
+A NetHSM in *Locked* state can be unlocked as follows. While the NetHSM is in the _Locked_ state no other operations are possible. Afterwards the NetHSM is in an _Operational_ state.
 
 .. tabs::
    .. tab:: nitropy
@@ -705,8 +707,8 @@ Restore
 
 The NetHSM can be restored from a backup file.
 
-.. note::
-   The NetHSM must be in an *Unprovisioned State*.
+* If the NetHSM is *Unprovisioned* it will restore all *User Data* including system configuration and reboot. Therefore the system may get different network settings, TLS certificate and *Unlock Passphrase* afterwards.
+* If the NetHSM is *Provisioned* it will restore users and user keys but not system configuration. In this case all previously existing users and user keys will be deleted. The NetHSM ends in an *Operational* state.
 
 The restore can be applied as follows.
 
@@ -747,16 +749,14 @@ The restore can be applied as follows.
    .. tab:: REST API
       Information about the `/system/restore` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-restore>`__.
 
-Update
-~~~~~~
+System Update
+~~~~~~~~~~~~~
 
-Updates for the NetHSM can be installed in a two-step process.
-First the update image needs to be uploaded to the NetHSM.
-The image is checked and validated automatically.
+System updates can be installed in a two-step process. First the update image needs to be uploaded to a *Provisioned* NetHSM. The NetHSM verifies image authenticity, integrity, and version number. Optionally, the NetHSM displays release notes, if any.
 
 .. warning::
 
-   Data loss may occur due to the installation of a beta update!
+   Data loss may occur due to the installation of a beta update! Stable versions should not cause data loss. However, it's recommended to create a backup before updating.
 
 The update file can be uploaded as follows.
 
@@ -782,9 +782,9 @@ The update file can be uploaded as follows.
    .. tab:: REST API
       Information about the `/system/update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-update>`__.
 
-Afterwards the update can be applied or aborted. Please refer to the desired option below.
+Afterwards the update can be applied or aborted. Please refer to the desired option below. If the NetHSM is powered down before the "commit" operation, the update file has to be uploaded again.
 
-The update can be applied (committed) as follows.
+The update can be applied (committed) as follows. Any data migration is only performed _after_ the NetHSM has successfully booted the new system software version.
 
 .. tabs::
    .. tab:: nitropy
@@ -860,7 +860,7 @@ The remote shutdown can be initiated as follows.
 Reset to Factory Defaults
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The NetHSM can be reset to factory defaults. In this case all user data is securely deleted and the NetHSM boots into an *Unprovisioned* state. Afterwards, you may want to `provision <getting-started#provisioning>`__ the NetHSM.
+A *Provisioned* NetHSM can be reset to factory defaults. In this case all user data is securely deleted and the NetHSM boots into an *Unprovisioned* state. Afterwards, you may want to `provision <getting-started#provisioning>`__ the NetHSM.
 
 The reset to factory defaults can be performed as follows.
 
@@ -908,6 +908,8 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 | *Backup*        | A user account with this Role has access to the operations  |
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
+
+See `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
 
 .. note::
    In a future release, additional *Roles* may be introduced.
@@ -1070,14 +1072,11 @@ The user passphrase can be set as follows.
 Tags for Users
 ~~~~~~~~~~~~~~
 
-*Tags* can be used to set access restrictions on keys, and are an optional feature.
-They can only be assigned to user accounts with the *Operator* role.
-The *Operators* can see all keys, but only use those with at least one corresponding *Tag*.
-A key can not be modified by an *Operator* user.
+*Tags* can be used to set fine-grained access restrictions on keys, and are an optional feature. One or more *Tags* can be assigned to user accounts with the *Operator* role only. The *Operators* can see all keys, but only use those with at least one corresponding *Tag*. A key can not be modified by an *Operator* user.
 
 To learn about how to use *Tags* on keys, please refer to `Tags for Keys <operation.html#tags-for-keys>`__.
 
-The *Tag* can be added as follows.
+A *Tag* can be added as follows.
 
 .. tabs::
    .. tab:: nitropy

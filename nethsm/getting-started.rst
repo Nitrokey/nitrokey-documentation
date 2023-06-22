@@ -114,9 +114,7 @@ In an unprovisioned state the NetHSM hardware factory default IP address is ``19
 Provisioning
 ------------
 
-A new NetHSM needs to be provisioned first with passphrases and the current time.
-The *Admin Passphrase* is for the first user account, which is the superuser of the NetHSM.
-The *Unlock Passphrase* is used to decrypt NetHSM's *User Data*.
+A new or otherwise *Unprovisioned* NetHSM needs to be provisioned first with passphrases and the current time. The *Admin Passphrase* is for the first user account, which is the superuser of the NetHSM. The *Unlock Passphrase* is used to decrypt NetHSM's *User Data*.
 
 The initial provisioning is executed as follows.
 
