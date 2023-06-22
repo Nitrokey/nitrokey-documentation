@@ -1,14 +1,14 @@
 
 
 all: __preview venv
-	source venv/bin/activate && sphinx-build -j auto -a -D language='en' -b html . __preview
+	. venv/bin/activate && sphinx-build -j auto -a -D language='en' -b html . __preview
 
 watch:
 	while true; do inotifywait -e MODIFY `find . -name '*.rst'`; make; sleep 1; done
 
 venv:
 	virtualenv venv
-	source venv/bin/activate && pip install -r requirements.txt
+	. venv/bin/activate && pip install -r requirements.txt
 
 
 .PHONY: watch
