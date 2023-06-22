@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-22 09:10+0200\n"
-"PO-Revision-Date: 2023-06-21 22:47+0000\n"
+"PO-Revision-Date: 2023-06-22 08:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Finnish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/fi/>\n"
 "Language: fi\n"
-"Language-Team: Finnish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/fi/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -4324,11 +4325,12 @@ msgstr ""
 "unattended-boot>`__."
 
 #: ../nethsm/administration.rst:74
-#, fuzzy
 msgid ""
 "The boot mode can be changed as follows. At next boot, the NetHSM will "
 "behave accordingly."
-msgstr "Käynnistystilaa voidaan muuttaa seuraavasti."
+msgstr ""
+"Käynnistystilaa voidaan muuttaa seuraavasti. Seuraavan käynnistyksen "
+"yhteydessä NetHSM käyttäytyy vastaavasti."
 
 #: ../nethsm/administration.rst:78 ../nethsm/administration.rst:335
 #: ../nethsm/administration.rst:460 ../nethsm/administration.rst:682
@@ -4447,14 +4449,14 @@ msgid "*Locked*"
 msgstr "*Lukittu*"
 
 #: ../nethsm/administration.rst:115
-#, fuzzy
 msgid ""
 "NetHSM with configuration but encrypted and inaccessible data stores. "
 "Typically, the next step is to unlock the system. The *Locked* state "
 "implies the *Provisioned* state."
 msgstr ""
-"NetHSM konfiguroituna, mutta suojattuna (vaatii lukituksen avaamisen). "
-"*Käytössä oleva* tila edellyttää *Varattu* tilaa."
+"NetHSM, jossa on konfiguraatio, mutta salatut ja saavuttamattomat "
+"tietovarastot. Seuraava vaihe on yleensä järjestelmän lukituksen avaaminen. *"
+" Locked* -tilassa on *Provisioned* -tilassa."
 
 #: ../nethsm/administration.rst:-1 ../nethsm/administration.rst:124
 msgid "States and transitions of the NetHSM"
@@ -4508,6 +4510,9 @@ msgid ""
 "is in the _Locked_ state no other operations are possible. Afterwards the"
 " NetHSM is in an _Operational_ state."
 msgstr ""
+"NetHSM, joka on tilassa *Locked*, voidaan vapauttaa seuraavasti. Kun NetHSM "
+"on _Locked_-tilassa, muut toiminnot eivät ole mahdollisia. Sen jälkeen "
+"NetHSM on _Operational_-tilassa."
 
 #: ../nethsm/administration.rst:177
 msgid ""
@@ -5216,6 +5221,10 @@ msgid ""
 "different network settings, TLS certificate and *Unlock Passphrase* "
 "afterwards."
 msgstr ""
+"Jos NetHSM on *Unprovisioned*, se palauttaa kaikki *Käyttäjätiedot* mukaan "
+"lukien järjestelmän kokoonpanon ja uudelleenkäynnistyksen. Tämän vuoksi "
+"järjestelmä voi saada erilaiset verkkoasetukset, TLS-varmenteen ja *Unlock "
+"Passphrase* jälkeenpäin."
 
 #: ../nethsm/administration.rst:711
 msgid ""
@@ -5223,6 +5232,10 @@ msgid ""
 "not system configuration. In this case all previously existing users and "
 "user keys will be deleted. The NetHSM ends in an *Operational* state."
 msgstr ""
+"Jos NetHSM on *Provisioned*, se palauttaa käyttäjät ja käyttäjäavaimet mutta "
+"ei järjestelmän kokoonpanoa. Tällöin kaikki aiemmin olemassa olleet "
+"käyttäjät ja käyttäjäavaimet poistetaan. NetHSM päättyy *Operational* "
+"-tilaan."
 
 #: ../nethsm/administration.rst:713
 msgid "The restore can be applied as follows."
@@ -5272,9 +5285,8 @@ msgstr ""
 "/POST_system-restore>`__."
 
 #: ../nethsm/administration.rst:753
-#, fuzzy
 msgid "System Update"
-msgstr "Järjestelmän päivitys"
+msgstr "Järjestelmäpäivitys"
 
 #: ../nethsm/administration.rst:755
 msgid ""
@@ -5283,6 +5295,10 @@ msgid ""
 " image authenticity, integrity, and version number. Optionally, the "
 "NetHSM displays release notes, if any."
 msgstr ""
+"Järjestelmäpäivitykset voidaan asentaa kaksivaiheisesti. Ensin päivityskuva "
+"on ladattava osoitteeseen *Provisioned* NetHSM. NetHSM tarkistaa kuvan "
+"aitouden, eheyden ja versionumeron. Valinnaisesti NetHSM näyttää mahdolliset "
+"julkaisutiedotteet."
 
 #: ../nethsm/administration.rst:759
 msgid ""
@@ -5290,6 +5306,9 @@ msgid ""
 "versions should not cause data loss. However, it's recommended to create "
 "a backup before updating."
 msgstr ""
+"Beta-päivityksen asentaminen voi aiheuttaa tietojen menetyksen! Vakaiden "
+"versioiden ei pitäisi aiheuttaa tietojen menetystä. On kuitenkin "
+"suositeltavaa luoda varmuuskopio ennen päivitystä."
 
 #: ../nethsm/administration.rst:761
 msgid "The update file can be uploaded as follows."
@@ -5313,14 +5332,14 @@ msgstr ""
 "/POST_system-update>`__."
 
 #: ../nethsm/administration.rst:785
-#, fuzzy
 msgid ""
 "Afterwards the update can be applied or aborted. Please refer to the "
 "desired option below. If the NetHSM is powered down before the \"commit\""
 " operation, the update file has to be uploaded again."
 msgstr ""
 "Tämän jälkeen päivitys voidaan ottaa käyttöön tai keskeyttää. Katso "
-"haluamasi vaihtoehto alla."
+"haluamasi vaihtoehto alla. Jos NetHSM:stä katkaistaan virta ennen \"commit\"-"
+"toimintoa, päivitystiedosto on ladattava uudelleen."
 
 #: ../nethsm/administration.rst:787
 msgid ""
@@ -5328,6 +5347,9 @@ msgid ""
 "only performed _after_ the NetHSM has successfully booted the new system "
 "software version."
 msgstr ""
+"Päivitystä voidaan soveltaa (sitoa) seuraavasti. Tietojen siirto suoritetaan "
+"vasta sen jälkeen, kun NetHSM on onnistuneesti käynnistänyt uuden "
+"järjestelmäohjelmistoversion."
 
 #: ../nethsm/administration.rst:801
 msgid ""
@@ -5407,17 +5429,16 @@ msgid "Reset to Factory Defaults"
 msgstr "Palauta tehdasasetuksiin"
 
 #: ../nethsm/administration.rst:863
-#, fuzzy
 msgid ""
 "A *Provisioned* NetHSM can be reset to factory defaults. In this case all"
 " user data is securely deleted and the NetHSM boots into an "
 "*Unprovisioned* state. Afterwards, you may want to `provision <getting-"
 "started#provisioning>`__ the NetHSM."
 msgstr ""
-"NetHSM voidaan palauttaa tehdasasetuksiin. Tällöin kaikki käyttäjätiedot "
-"poistetaan turvallisesti ja NetHSM käynnistyy tilaan *Unprovisioned*. Sen"
-" jälkeen voit halutessasi `provisioida <getting-started#provisioning>`__ "
-"NetHSM:n."
+"*Provisioned* NetHSM voidaan palauttaa tehdasasetuksiin. Tällöin kaikki "
+"käyttäjätiedot poistetaan turvallisesti ja NetHSM käynnistyy *Unprovisioned* "
+"-tilaan. Tämän jälkeen voit halutessasi `provisioida <getting-"
+"started#provisioning>`__ NetHSM:n."
 
 #: ../nethsm/administration.rst:865
 msgid "The reset to factory defaults can be performed as follows."
@@ -5515,6 +5536,8 @@ msgid ""
 "See `Tags <administration.html#tags-for-users>`__ for more fine-grained "
 "access restricions."
 msgstr ""
+"Katso `Tunnisteet <administration.html#tags-for-users>`__ tarkemmista "
+"käyttöoikeusrajoituksista."
 
 #: ../nethsm/administration.rst:915
 msgid "In a future release, additional *Roles* may be introduced."
@@ -5716,7 +5739,6 @@ msgid "Tags for Users"
 msgstr "Käyttäjien tunnisteet"
 
 #: ../nethsm/administration.rst:1075
-#, fuzzy
 msgid ""
 "*Tags* can be used to set fine-grained access restrictions on keys, and "
 "are an optional feature. One or more *Tags* can be assigned to user "
@@ -5724,11 +5746,12 @@ msgid ""
 " but only use those with at least one corresponding *Tag*. A key can not "
 "be modified by an *Operator* user."
 msgstr ""
-"*Tageja* voidaan käyttää avainten käyttörajoitusten asettamiseen, ja ne "
-"ovat valinnainen ominaisuus. Niitä voidaan määrittää vain "
-"käyttäjätileille, joilla on *Operator*-rooli. *Operatorit* näkevät kaikki"
-" avaimet, mutta käyttävät vain niitä, joilla on vähintään yksi vastaava "
-"*Tag*. *Operator*-käyttäjä ei voi muokata avainta."
+"*Tunnisteilla* voidaan asettaa hienojakoisia käyttöoikeusrajoituksia "
+"avaimille, ja ne ovat valinnainen ominaisuus. Yksi tai useampi *Tunnisteet* "
+"voidaan määrittää käyttäjätileille, joilla on vain *Operaattori* -rooli. * "
+"Operaattorit* näkevät kaikki avaimet, mutta voivat käyttää vain niitä, "
+"joilla on vähintään yksi vastaava *Tag*. Avainta ei voi muuttaa *Operator* "
+"-käyttäjä."
 
 #: ../nethsm/administration.rst:1077
 msgid ""
@@ -5739,7 +5762,6 @@ msgstr ""
 "näppäimille <operation.html#tags-for-keys>`__."
 
 #: ../nethsm/administration.rst:1079
-#, fuzzy
 msgid "A *Tag* can be added as follows."
 msgstr "*Tag* voidaan lisätä seuraavasti."
 
@@ -5935,17 +5957,16 @@ msgid "Provisioning"
 msgstr "Provisioning"
 
 #: ../nethsm/getting-started.rst:117
-#, fuzzy
 msgid ""
 "A new or otherwise *Unprovisioned* NetHSM needs to be provisioned first "
 "with passphrases and the current time. The *Admin Passphrase* is for the "
 "first user account, which is the superuser of the NetHSM. The *Unlock "
 "Passphrase* is used to decrypt NetHSM's *User Data*."
 msgstr ""
-"Uuteen NetHSM:ään on ensin määritettävä salasanat ja nykyinen kellonaika."
-" *Admin Passphrase* on tarkoitettu ensimmäiselle käyttäjätilille, joka on"
-" NetHSM:n pääkäyttäjä. *Unlock Passphrase* käytetään NetHSM'n *User "
-"Data*:n salauksen purkamiseen."
+"Uusi tai muuten *Unprovisioned* NetHSM on ensin varustettava salasanoilla ja "
+"nykyisellä kellonajalla. * Admin Passphrase* on tarkoitettu ensimmäiselle "
+"käyttäjätilille, joka on NetHSM:n pääkäyttäjä. * Unlock Passphrase* "
+"käytetään NetHSM:n *käyttäjätietojen* salauksen purkamiseen."
 
 #: ../nethsm/getting-started.rst:119
 msgid "The initial provisioning is executed as follows."
@@ -6890,7 +6911,6 @@ msgid "Tags for Keys"
 msgstr "Avainten tunnisteet"
 
 #: ../nethsm/operation.rst:375
-#, fuzzy
 msgid ""
 "*Tags* can be used to set fine-grained access restrictions on keys, and "
 "are an optional feature. One or more *Tags* can be assigned to a key. The"
@@ -6898,11 +6918,12 @@ msgid ""
 "corresponding *Tag*. If a key has no *Tag* it can be used by all "
 "*Operator* users. A key can not be modified by an *Operator* user."
 msgstr ""
-"*Tageja* voidaan käyttää avainten käyttörajoitusten asettamiseen, ja ne "
-"ovat valinnainen ominaisuus. *Operator*-käyttäjät näkevät kaikki "
-"näppäimet, mutta käyttävät vain niitä, joilla on vähintään yksi vastaava "
-"*Tag*. Jos avaimella ei ole *Tagia*, sitä voivat käyttää kaikki "
-"*Operator*-käyttäjät. *Operator*-käyttäjä ei voi muokata avainta."
+"*Tunnisteilla* voidaan asettaa hienojakoisia käyttöoikeusrajoituksia "
+"avaimille, ja ne ovat valinnainen ominaisuus. Avaimelle voidaan määrittää "
+"yksi tai useampi *Tunnisteet*. * Operaattori* käyttäjät näkevät kaikki "
+"näppäimet, mutta voivat käyttää vain niitä, joilla on vähintään yksi "
+"vastaava *Tag*. Jos näppäimellä ei ole *Tagia*, kaikki *Operator* -käyttäjät "
+"voivat käyttää sitä. Avainta ei voi muuttaa *Operator* -käyttäjä."
 
 #: ../nethsm/operation.rst:377
 msgid ""
@@ -27937,4 +27958,3 @@ msgstr ""
 
 #~ msgid "The update can be applied (committed) as follows."
 #~ msgstr "Päivitystä voidaan soveltaa (sitoa) seuraavasti."
-
