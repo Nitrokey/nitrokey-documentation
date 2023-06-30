@@ -3,6 +3,10 @@ Nitrokey App 2 For Windows
 
 .. toctree::
    :maxdepth: 1
+   :glob:
+   :hidden:
+
+   *
 
 .. include:: ../shared/introduction.rst.inc
 
