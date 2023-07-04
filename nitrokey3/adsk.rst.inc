@@ -1,5 +1,5 @@
-Using Additional Decryption Subkeys (ADSK) with GnuPG
-=====================================================
+Additional Decryption Subkeys (ADSK) with GnuPG
+===============================================
 
 .. include:: ./product_platform_heading.rst
 
