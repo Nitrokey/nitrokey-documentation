@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-04 18:08+0200\n"
-"PO-Revision-Date: 2023-06-22 08:47+0000\n"
+"PO-Revision-Date: 2023-07-04 17:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Dutch <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/nl/>\n"
 "Language: nl\n"
-"Language-Team: Dutch <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/nl/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -10843,7 +10844,7 @@ msgstr "(Nitrokey 3 - Linux)"
 
 #: ../nitrokey3/adsk.rst.inc:2
 msgid "Additional Decryption Subkeys (ADSK) with GnuPG"
-msgstr ""
+msgstr "Extra ontcijferingssleutels (ADSK) met GnuPG"
 
 #: ../nitrokey3/adsk.rst.inc:8
 msgid ""
@@ -10852,31 +10853,40 @@ msgid ""
 "automatically add recipients when encrypting a message with GnuPG. "
 "Typical use cases include"
 msgstr ""
+"`Additional Decryption Subkeys (ADSK) <https://gnupg.org/blog/20230321-adsk."
+"html>`__ kan gebruikt worden om automatisch ontvangers toe te voegen bij het "
+"versleutelen van een bericht met GnuPG. Typische gebruikssituaties zijn"
 
 #: ../nitrokey3/adsk.rst.inc:11
 msgid ""
 "having a single encryption key for a group without the need to share the "
 "private key between the members of the group,"
 msgstr ""
+"het hebben van een enkele coderingssleutel voor een groep zonder de noodzaak "
+"om de privésleutel te delen tussen de leden van de groep,"
 
 #: ../nitrokey3/adsk.rst.inc:12
-#, fuzzy
 msgid "adding a backup key to an encryption key, and"
-msgstr "Hoofdsleutel en Encryptie Sub Sleutel"
+msgstr "een reservesleutel toevoegen aan een coderingssleutel, en"
 
 #: ../nitrokey3/adsk.rst.inc:13
 msgid "setting up a master key that can decrypt messages for other keys."
 msgstr ""
+"het opzetten van een hoofdsleutel die berichten voor andere sleutels kan "
+"ontsleutelen."
 
 #: ../nitrokey3/adsk.rst.inc:17
 msgid ""
 "To configure an ADSK, you need GnuPG 2.4.1 or newer. To encrypt a message"
 " for a key with an ADSK, you need GnuPG 2.2.42 or newer."
 msgstr ""
+"Om een ADSK te configureren hebt u GnuPG 2.4.1 of nieuwer nodig. Om een "
+"bericht te versleutelen voor een sleutel met een ADSK hebt u GnuPG 2.2.42 of "
+"nieuwer nodig."
 
 #: ../nitrokey3/adsk.rst.inc:21
 msgid "Overview"
-msgstr ""
+msgstr "Overzicht"
 
 #: ../nitrokey3/adsk.rst.inc:23
 msgid ""
@@ -10886,44 +10896,51 @@ msgid ""
 " can be used to add multiple ADSK to a key, or to add the same key as an "
 "ADSK to multiple other keys."
 msgstr ""
+"In deze handleiding wordt uitgelegd hoe je een reservesleutel (gebruikers-ID "
+"``backup@example.com``) als ADSK toevoegt aan een hoofdsleutel (gebruikers-"
+"ID ``main@example.com``). Beide sleutels zijn opgeslagen op een Nitrokey. "
+"Dezelfde stappen kunnen worden gebruikt om meerdere ADSK aan een sleutel toe "
+"te voegen, of om dezelfde sleutel als een ADSK aan meerdere andere sleutels "
+"toe te voegen."
 
 #: ../nitrokey3/adsk.rst.inc:28
-#, fuzzy
 msgid "Preparing the Keys"
-msgstr "Voorbereiden om te beginnen"
+msgstr "De sleutels voorbereiden"
 
 #: ../nitrokey3/adsk.rst.inc:30
-#, fuzzy
 msgid "Follow one of these guides to generate the two keys:"
-msgstr "De ID van de sleutel om het CSR voor te genereren"
+msgstr "Volg een van deze gidsen om de twee sleutels te genereren:"
 
 #: ../nitrokey3/adsk.rst.inc:32
 msgid ":doc:`openpgp-keygen-backup`"
-msgstr ""
+msgstr ":doc:`openpgp-keygen-backup`"
 
 #: ../nitrokey3/adsk.rst.inc:33
 msgid ":doc:`openpgp-keygen-on-device`"
-msgstr ""
+msgstr ":doc:`openpgp-keygen-op-apparaat`"
 
 #: ../nitrokey3/adsk.rst.inc:34
 msgid ":doc:`openpgp-keygen-gpa`"
-msgstr ""
+msgstr ":doc:`openpgp-keygen-gpa`"
 
 #: ../nitrokey3/adsk.rst.inc:36
 msgid ""
 "Make sure that you can list both keys with ``gpg --list-keys``, for "
 "example::"
 msgstr ""
+"Zorg ervoor dat je beide sleutels kunt opnoemen met ``gpg --list-keys``, "
+"bijvoorbeeld::"
 
 #: ../nitrokey3/adsk.rst.inc:53
 msgid "Adding an ADSK"
-msgstr ""
+msgstr "Een ADSK toevoegen"
 
 #: ../nitrokey3/adsk.rst.inc:55
 msgid ""
 "First determine the fingerprint of the encryption subkey for the backup "
 "key::"
 msgstr ""
+"Bepaal eerst de vingerafdruk van de coderingssubkey voor de reservesleutel::"
 
 #: ../nitrokey3/adsk.rst.inc:66
 msgid ""
@@ -10932,82 +10949,103 @@ msgid ""
 "this subkey is listed in the next line. In this case, the fingerprint is "
 "``C1735CB29890EEDEABCF1D0DC9310F81D77519BC``."
 msgstr ""
+"Zoek naar de regel die begint met ``sub`` die de letter ``E`` bevat, wat "
+"wijst op een subsleutel met de versleutelingsmogelijkheid. De fingerprint "
+"van deze subsleutel staat in de volgende regel. In dit geval is de "
+"vingerafdruk ``C1735CB29890EEDEABCF1D0DC9310F81D77519BC``."
 
 #: ../nitrokey3/adsk.rst.inc:70
 msgid "Then determine the fingerprint of the main key::"
-msgstr ""
+msgstr "Bepaal dan de vingerafdruk van de hoofdsleutel::"
 
 #: ../nitrokey3/adsk.rst.inc:79
 msgid ""
 "You can find it in the next line after ``pub``, in this case "
 "``55BC284C1D30D97638DA4A2C7963A4CD00C947CE``."
 msgstr ""
+"Je kunt het vinden in de volgende regel na ``pub``, in dit geval "
+"``55BC284C1D30D97638DA4A2C7963A4CD00C947CE``."
 
 #: ../nitrokey3/adsk.rst.inc:81
 msgid "Now you can add the ADSK using the ``--quick-add-adsk`` flag::"
-msgstr ""
+msgstr "Nu kun je de ADSK toevoegen met de ``--quick-add-adsk`` vlag::"
 
 #: ../nitrokey3/adsk.rst.inc:87
 msgid ""
 "The first argument is the fingerprint of the main key. The second "
 "argument is the fingerprint of the encryption subkey of the backup key."
 msgstr ""
+"Het eerste argument is de vingerafdruk van de hoofdsleutel. Het tweede "
+"argument is de vingerafdruk van de coderingssubkey van de reservesleutel."
 
 #: ../nitrokey3/adsk.rst.inc:90
 msgid "You can check that the ADSK has been created::"
-msgstr ""
+msgstr "Je kunt controleren of de ADSK is gemaakt::"
 
 #: ../nitrokey3/adsk.rst.inc:103
 msgid ""
 "The subkey with the ``R`` (restricted) capability is the ADSK. It has the"
 " same fingerprint as the encryption subkey of the backup key."
 msgstr ""
+"De subsleutel met de ``R`` (beperkte) mogelijkheid is de ADSK. Deze heeft "
+"dezelfde vingerafdruk als de versleutelingssubsleutel van de back-upsleutel."
 
 #: ../nitrokey3/adsk.rst.inc:106
 msgid "Now you can distribute the public key with the ADSK."
-msgstr ""
+msgstr "Nu kun je de publieke sleutel distribueren met de ADSK."
 
 #: ../nitrokey3/adsk.rst.inc:109
 msgid "Using an ADSK"
-msgstr ""
+msgstr "Een ADSK gebruiken"
 
 #: ../nitrokey3/adsk.rst.inc:111
 msgid ""
 "When encrypting a message for the main key, the backup key is now "
 "automatically added as a recipient. The only requirements for this are:"
 msgstr ""
+"Bij het versleutelen van een bericht voor de hoofdsleutel wordt de "
+"reservesleutel nu automatisch toegevoegd als ontvanger. De enige vereisten "
+"hiervoor zijn:"
 
 #: ../nitrokey3/adsk.rst.inc:114
 msgid ""
 "The sender of the message has an up-to-date public key that includes the "
 "ADSK."
 msgstr ""
+"De afzender van het bericht heeft een actuele openbare sleutel die de ADSK "
+"bevat."
 
 #: ../nitrokey3/adsk.rst.inc:115
 msgid "The sender of the message uses GnuPG 2.2.42 or newer."
-msgstr ""
+msgstr "De verzender van het bericht gebruikt GnuPG 2.2.42 of nieuwer."
 
 #: ../nitrokey3/adsk.rst.inc:117
 msgid ""
 "If you add the ``--verbose`` flag, you can check the keys the message is "
 "encrypted to::"
 msgstr ""
+"Als je de vlag ``--verbose`` toevoegt, kun je de sleutels controleren "
+"waarmee het bericht is versleuteld::"
 
 #: ../nitrokey3/adsk.rst.inc:130
 msgid ""
 "You can also use the ``--list-packets`` option to check an encrypted "
 "message::"
 msgstr ""
+"Je kunt ook de optie ``--list-packets`` gebruiken om een versleuteld bericht "
+"te controleren::"
 
 #: ../nitrokey3/adsk.rst.inc:136
 msgid ""
 "Each ``pubkey enc packet`` line represents one key that can decrypt the "
 "message."
 msgstr ""
+"Elke regel op ``pubkey enc packet`` vertegenwoordigt een sleutel die het "
+"bericht kan ontsleutelen."
 
 #: ../nitrokey3/adsk.rst.inc:140
 msgid "Revoking an ADSK"
-msgstr ""
+msgstr "Een ADSK intrekken"
 
 #: ../nitrokey3/adsk.rst.inc:142
 msgid ""
@@ -11015,23 +11053,28 @@ msgid ""
 "encrypting a message. To perform a revocation, open the key with ``gpg "
 "--edit-key``::"
 msgstr ""
+"Als je een ADSK intrekt, zal deze niet langer worden toegevoegd als "
+"ontvanger bij het versleutelen van een bericht. Om een intrekking uit te "
+"voeren, open je de sleutel met ``gpg --edit-key``::"
 
 #: ../nitrokey3/adsk.rst.inc:162
 msgid ""
 "Select the subkey to revoke with ``key N``. The selected subkey is marked"
 " with an asterisk::"
 msgstr ""
+"Selecteer de subsleutel die u wilt intrekken met ``key N``. De geselecteerde "
+"subsleutel is gemarkeerd met een sterretje::"
 
 #: ../nitrokey3/adsk.rst.inc:181
 msgid ""
 "Revoke the subkey with ``revkey`` and then save the changes with "
 "``save``::"
 msgstr ""
+"Trek de subsleutel in met ``revkey`` en sla de wijzigingen op met ``save``::"
 
 #: ../nitrokey3/adsk.rst.inc:215
-#, fuzzy
 msgid "Now distribute the updated public key."
-msgstr "Exporteer de publieke sleutel"
+msgstr "Distribueer nu de bijgewerkte openbare sleutel."
 
 #: ../nitrokey3/adsk.rst.inc:219
 msgid ""
@@ -11039,6 +11082,10 @@ msgid ""
 " public key with the revoked ADSK. Messages that have already been "
 "encrypted can still be decrypted with the ADSK even if it is revoked."
 msgstr ""
+"De intrekking wordt pas van kracht als de afzender de openbare sleutel heeft "
+"bijgewerkt met de ingetrokken ADSK. Berichten die al zijn versleuteld, "
+"kunnen nog steeds worden ontsleuteld met de ADSK, zelfs als deze is "
+"ingetrokken."
 
 #: ../nitrokey3/firmware-update.rst.inc:10
 msgid "This guide describes how to update the firmware on the Nitrokey 3."
@@ -28717,4 +28764,3 @@ msgstr ""
 
 #~ msgid "The update can be applied (committed) as follows."
 #~ msgstr "De update kan als volgt worden toegepast (vastgelegd)."
-
