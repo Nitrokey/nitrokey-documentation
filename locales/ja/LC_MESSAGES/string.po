@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-04 18:08+0200\n"
-"PO-Revision-Date: 2023-06-22 08:47+0000\n"
+"PO-Revision-Date: 2023-07-04 17:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/ja/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -9450,7 +9451,7 @@ msgstr "(Nitrokey 3 - Linux)"
 
 #: ../nitrokey3/adsk.rst.inc:2
 msgid "Additional Decryption Subkeys (ADSK) with GnuPG"
-msgstr ""
+msgstr "GnuPGでの追加復号サブキー(ADSK)"
 
 #: ../nitrokey3/adsk.rst.inc:8
 msgid ""
@@ -9459,31 +9460,37 @@ msgid ""
 "automatically add recipients when encrypting a message with GnuPG. "
 "Typical use cases include"
 msgstr ""
+"`Additional Decryption Subkeys (ADSK)<https://gnupg.org/blog/20230321-adsk."
+"html>`__ GnuPGでメッセージを暗号化する際に、受信者を自動的に追加するために使"
+"用することができます。典型的な使用例"
 
 #: ../nitrokey3/adsk.rst.inc:11
 msgid ""
 "having a single encryption key for a group without the need to share the "
 "private key between the members of the group,"
-msgstr ""
+msgstr "グループのメンバー間で秘密鍵を共有する必要がなく、グループ用に単一の暗号鍵を"
+"持つ、"
 
 #: ../nitrokey3/adsk.rst.inc:12
-#, fuzzy
 msgid "adding a backup key to an encryption key, and"
-msgstr "メインキーと暗号化サブキー"
+msgstr "暗号化キーにバックアップ・キーを追加するステップと"
 
 #: ../nitrokey3/adsk.rst.inc:13
 msgid "setting up a master key that can decrypt messages for other keys."
-msgstr ""
+msgstr "他の鍵のメッセージを解読できるマスター・キーを設定する。"
 
 #: ../nitrokey3/adsk.rst.inc:17
 msgid ""
 "To configure an ADSK, you need GnuPG 2.4.1 or newer. To encrypt a message"
 " for a key with an ADSK, you need GnuPG 2.2.42 or newer."
 msgstr ""
+"ADSKを設定するには、GnuPG 2.4."
+"1以降が必要である。ADSKで鍵のメッセージを暗号化するには、GnuPG 2.2."
+"42以降が必要です。"
 
 #: ../nitrokey3/adsk.rst.inc:21
 msgid "Overview"
-msgstr ""
+msgstr "概要"
 
 #: ../nitrokey3/adsk.rst.inc:23
 msgid ""
@@ -9493,44 +9500,47 @@ msgid ""
 " can be used to add multiple ADSK to a key, or to add the same key as an "
 "ADSK to multiple other keys."
 msgstr ""
+"このガイドでは、メインキー（ユーザーID` 「main@example."
+"com``」）にADSKとしてバックアップキー（ユーザーID` 「backup@example.com``」）"
+"を追加する方法を説明します。どちらの鍵もNitrokeyに保存されます。同じ手順で複"
+"数のADSKを1つの鍵に追加したり、同じ鍵をADSKとして他の複数の鍵に追加することが"
+"できる。"
 
 #: ../nitrokey3/adsk.rst.inc:28
-#, fuzzy
 msgid "Preparing the Keys"
-msgstr "スタートの準備"
+msgstr "キーの準備"
 
 #: ../nitrokey3/adsk.rst.inc:30
-#, fuzzy
 msgid "Follow one of these guides to generate the two keys:"
-msgstr "のCSRを生成するための鍵のID。"
+msgstr "以下のいずれかのガイドに従って、2つのキーを生成する："
 
 #: ../nitrokey3/adsk.rst.inc:32
 msgid ":doc:`openpgp-keygen-backup`"
-msgstr ""
+msgstr "doc:`openpgp-keygen-backup`。"
 
 #: ../nitrokey3/adsk.rst.inc:33
 msgid ":doc:`openpgp-keygen-on-device`"
-msgstr ""
+msgstr "doc:`openpgp-keygen-on-device`。"
 
 #: ../nitrokey3/adsk.rst.inc:34
 msgid ":doc:`openpgp-keygen-gpa`"
-msgstr ""
+msgstr "doc:`openpgp-keygen-gpa`。"
 
 #: ../nitrokey3/adsk.rst.inc:36
 msgid ""
 "Make sure that you can list both keys with ``gpg --list-keys``, for "
 "example::"
-msgstr ""
+msgstr "両方のキーを``gpg --list-keys`` でリストできることを確認してください："
 
 #: ../nitrokey3/adsk.rst.inc:53
 msgid "Adding an ADSK"
-msgstr ""
+msgstr "ADSKの追加"
 
 #: ../nitrokey3/adsk.rst.inc:55
 msgid ""
 "First determine the fingerprint of the encryption subkey for the backup "
 "key::"
-msgstr ""
+msgstr "まず、バックアップ・キーの暗号化サブキーのフィンガープリントを決定する："
 
 #: ../nitrokey3/adsk.rst.inc:66
 msgid ""
@@ -9539,82 +9549,93 @@ msgid ""
 "this subkey is listed in the next line. In this case, the fingerprint is "
 "``C1735CB29890EEDEABCF1D0DC9310F81D77519BC``."
 msgstr ""
+"``sub``で始まり、``E``という文字を含む行を探す。これは暗号化機能を持つサブキ"
+"ーを示している。このサブキーのフィンガープリントは次の行にリストされている。"
+"この場合、フィンガープリントは``C1735CB29890EEDEABCF1D0DC9310F81D77519BC`` "
+"である。"
 
 #: ../nitrokey3/adsk.rst.inc:70
 msgid "Then determine the fingerprint of the main key::"
-msgstr ""
+msgstr "次にメインキーのフィンガープリントを決定する："
 
 #: ../nitrokey3/adsk.rst.inc:79
 msgid ""
 "You can find it in the next line after ``pub``, in this case "
 "``55BC284C1D30D97638DA4A2C7963A4CD00C947CE``."
-msgstr ""
+msgstr "``pub`` の次の行、この場合は``55BC284C1D30D97638DA4A2C7963A4CD00C947CE`` "
+"にあります。"
 
 #: ../nitrokey3/adsk.rst.inc:81
 msgid "Now you can add the ADSK using the ``--quick-add-adsk`` flag::"
-msgstr ""
+msgstr "これで、``--quick-add-adsk`` フラグを使ってADSKを追加することができる："
 
 #: ../nitrokey3/adsk.rst.inc:87
 msgid ""
 "The first argument is the fingerprint of the main key. The second "
 "argument is the fingerprint of the encryption subkey of the backup key."
-msgstr ""
+msgstr "最初の引数はメイン鍵のフィンガープリントである。第2引数はバックアップ鍵の暗号"
+"化サブキーのフィンガープリントである。"
 
 #: ../nitrokey3/adsk.rst.inc:90
 msgid "You can check that the ADSK has been created::"
-msgstr ""
+msgstr "ADSKが作成されたことを確認できます："
 
 #: ../nitrokey3/adsk.rst.inc:103
 msgid ""
 "The subkey with the ``R`` (restricted) capability is the ADSK. It has the"
 " same fingerprint as the encryption subkey of the backup key."
-msgstr ""
+msgstr "``R``（制限付き）機能を持つサブキーはADSKである。バックアップ鍵の暗号化サブキ"
+"ーと同じフィンガープリントを持つ。"
 
 #: ../nitrokey3/adsk.rst.inc:106
 msgid "Now you can distribute the public key with the ADSK."
-msgstr ""
+msgstr "これでADSKで公開鍵を配布できる。"
 
 #: ../nitrokey3/adsk.rst.inc:109
 msgid "Using an ADSK"
-msgstr ""
+msgstr "ADSKの使用"
 
 #: ../nitrokey3/adsk.rst.inc:111
 msgid ""
 "When encrypting a message for the main key, the backup key is now "
 "automatically added as a recipient. The only requirements for this are:"
-msgstr ""
+msgstr "メイン・キーのメッセージを暗号化する際、バックアップ・キーが自動的に受信者と"
+"して追加されるようになりました。このために必要なのは"
 
 #: ../nitrokey3/adsk.rst.inc:114
 msgid ""
 "The sender of the message has an up-to-date public key that includes the "
 "ADSK."
-msgstr ""
+msgstr "メッセージの送信者は、ADSKを含む最新の公開鍵を持っている。"
 
 #: ../nitrokey3/adsk.rst.inc:115
 msgid "The sender of the message uses GnuPG 2.2.42 or newer."
-msgstr ""
+msgstr "メッセージの送信者はGnuPG 2.2.42以降を使用している。"
 
 #: ../nitrokey3/adsk.rst.inc:117
 msgid ""
 "If you add the ``--verbose`` flag, you can check the keys the message is "
 "encrypted to::"
-msgstr ""
+msgstr "``--verbose`` "
+"フラグを追加すると、メッセージが暗号化されている鍵をチェックすることができる:"
+" ："
 
 #: ../nitrokey3/adsk.rst.inc:130
 msgid ""
 "You can also use the ``--list-packets`` option to check an encrypted "
 "message::"
-msgstr ""
+msgstr "``--list-packets`` "
+"オプションを使って暗号化されたメッセージをチェックすることもできます:："
 
 #: ../nitrokey3/adsk.rst.inc:136
 msgid ""
 "Each ``pubkey enc packet`` line represents one key that can decrypt the "
 "message."
-msgstr ""
+msgstr "``pubkey enc packet`` の各行は、メッセージを復号化できる1つの鍵を表す。"
 
 #: ../nitrokey3/adsk.rst.inc:140
 msgid "Revoking an ADSK"
-msgstr ""
+msgstr "ADSKの失効"
 
 #: ../nitrokey3/adsk.rst.inc:142
 msgid ""
@@ -9622,23 +9643,25 @@ msgid ""
 "encrypting a message. To perform a revocation, open the key with ``gpg "
 "--edit-key``::"
 msgstr ""
+"ADSKを失効させると、メッセージを暗号化する際に受信者として追加されなくなる。"
+"失効させるには、``gpg --edit-key``: で鍵を開く："
 
 #: ../nitrokey3/adsk.rst.inc:162
 msgid ""
 "Select the subkey to revoke with ``key N``. The selected subkey is marked"
 " with an asterisk::"
-msgstr ""
+msgstr "``key N``で取り消すサブキーを選択する。選択したサブキーにはアスタリスク: "
+"が付く："
 
 #: ../nitrokey3/adsk.rst.inc:181
 msgid ""
 "Revoke the subkey with ``revkey`` and then save the changes with "
 "``save``::"
-msgstr ""
+msgstr "``revkey``でサブキーを失効させ、``save``: で変更を保存する："
 
 #: ../nitrokey3/adsk.rst.inc:215
-#, fuzzy
 msgid "Now distribute the updated public key."
-msgstr "公開鍵のエクスポート"
+msgstr "更新した公開鍵を配布する。"
 
 #: ../nitrokey3/adsk.rst.inc:219
 msgid ""
@@ -9646,6 +9669,8 @@ msgid ""
 " public key with the revoked ADSK. Messages that have already been "
 "encrypted can still be decrypted with the ADSK even if it is revoked."
 msgstr ""
+"失効は、送信者が失効したADSKで公開鍵を更新したときにのみ有効となる。すでに暗"
+"号化されているメッセージは、ADSKが失効しても、そのADSKで復号化できる。"
 
 #: ../nitrokey3/firmware-update.rst.inc:10
 msgid "This guide describes how to update the firmware on the Nitrokey 3."
@@ -24140,4 +24165,3 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 
 #~ msgid "The update can be applied (committed) as follows."
 #~ msgstr "アップデートは以下のように適用（コミット）することができます。"
-
