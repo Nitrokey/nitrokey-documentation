@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-04 18:08+0200\n"
-"PO-Revision-Date: 2023-06-22 08:47+0000\n"
+"PO-Revision-Date: 2023-07-04 17:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Swedish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/sv/>\n"
 "Language: sv\n"
-"Language-Team: Swedish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/sv/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -10692,7 +10693,7 @@ msgstr "(Nitrokey 3 - Linux)"
 
 #: ../nitrokey3/adsk.rst.inc:2
 msgid "Additional Decryption Subkeys (ADSK) with GnuPG"
-msgstr ""
+msgstr "Ytterligare dekrypteringsundernycklar (ADSK) med GnuPG"
 
 #: ../nitrokey3/adsk.rst.inc:8
 msgid ""
@@ -10701,31 +10702,38 @@ msgid ""
 "automatically add recipients when encrypting a message with GnuPG. "
 "Typical use cases include"
 msgstr ""
+"`Additional Decryption Subkeys (ADSK) <https://gnupg.org/blog/20230321-adsk."
+"html>`__ kan användas för att automatiskt lägga till mottagare när ett "
+"meddelande krypteras med GnuPG. Typiska användningsfall inkluderar"
 
 #: ../nitrokey3/adsk.rst.inc:11
 msgid ""
 "having a single encryption key for a group without the need to share the "
 "private key between the members of the group,"
 msgstr ""
+"ha en enda krypteringsnyckel för en grupp utan att behöva dela den privata "
+"nyckeln mellan gruppens medlemmar,"
 
 #: ../nitrokey3/adsk.rst.inc:12
-#, fuzzy
 msgid "adding a backup key to an encryption key, and"
-msgstr "Huvudnyckel och krypteringsundernyckel"
+msgstr "lägga till en reservnyckel till en krypteringsnyckel, och"
 
 #: ../nitrokey3/adsk.rst.inc:13
 msgid "setting up a master key that can decrypt messages for other keys."
-msgstr ""
+msgstr "skapa en huvudnyckel som kan dekryptera meddelanden för andra nycklar."
 
 #: ../nitrokey3/adsk.rst.inc:17
 msgid ""
 "To configure an ADSK, you need GnuPG 2.4.1 or newer. To encrypt a message"
 " for a key with an ADSK, you need GnuPG 2.2.42 or newer."
 msgstr ""
+"För att konfigurera en ADSK behöver du GnuPG 2.4.1 eller nyare. För att "
+"kryptera ett meddelande för en nyckel med en ADSK behöver du GnuPG 2.2.42 "
+"eller nyare."
 
 #: ../nitrokey3/adsk.rst.inc:21
 msgid "Overview"
-msgstr ""
+msgstr "Översikt"
 
 #: ../nitrokey3/adsk.rst.inc:23
 msgid ""
@@ -10735,44 +10743,50 @@ msgid ""
 " can be used to add multiple ADSK to a key, or to add the same key as an "
 "ADSK to multiple other keys."
 msgstr ""
+"Den här guiden förklarar hur du lägger till en reservnyckel (användar-ID "
+"``backup@example.com``) som en ADSK till en huvudnyckel (användar-ID "
+"``main@example.com``). Båda nycklarna lagras på en Nitrokey. Samma steg kan "
+"användas för att lägga till flera ADSK till en nyckel, eller för att lägga "
+"till samma nyckel som en ADSK till flera andra nycklar."
 
 #: ../nitrokey3/adsk.rst.inc:28
-#, fuzzy
 msgid "Preparing the Keys"
-msgstr "Förberedelser för att börja"
+msgstr "Förberedelse av nycklarna"
 
 #: ../nitrokey3/adsk.rst.inc:30
-#, fuzzy
 msgid "Follow one of these guides to generate the two keys:"
-msgstr "ID för den nyckel som ska generera CSR för."
+msgstr "Följ en av dessa guider för att generera de två nycklarna:"
 
 #: ../nitrokey3/adsk.rst.inc:32
 msgid ":doc:`openpgp-keygen-backup`"
-msgstr ""
+msgstr ":doc:`openpgp-keygen-backup`"
 
 #: ../nitrokey3/adsk.rst.inc:33
 msgid ":doc:`openpgp-keygen-on-device`"
-msgstr ""
+msgstr ":doc:`openpgp-keygen-on-device`"
 
 #: ../nitrokey3/adsk.rst.inc:34
 msgid ":doc:`openpgp-keygen-gpa`"
-msgstr ""
+msgstr ":doc:`openpgp-keygen-gpa`"
 
 #: ../nitrokey3/adsk.rst.inc:36
 msgid ""
 "Make sure that you can list both keys with ``gpg --list-keys``, for "
 "example::"
 msgstr ""
+"Se till att du kan lista båda nycklarna med ``gpg --list-keys``, till "
+"exempel::"
 
 #: ../nitrokey3/adsk.rst.inc:53
 msgid "Adding an ADSK"
-msgstr ""
+msgstr "Lägga till en ADSK"
 
 #: ../nitrokey3/adsk.rst.inc:55
 msgid ""
 "First determine the fingerprint of the encryption subkey for the backup "
 "key::"
 msgstr ""
+"Bestäm först fingeravtrycket för krypteringsundernyckeln för reservnyckeln::"
 
 #: ../nitrokey3/adsk.rst.inc:66
 msgid ""
@@ -10781,82 +10795,102 @@ msgid ""
 "this subkey is listed in the next line. In this case, the fingerprint is "
 "``C1735CB29890EEDEABCF1D0DC9310F81D77519BC``."
 msgstr ""
+"Leta efter raden som börjar med ``sub`` och som innehåller bokstaven ``E``, "
+"vilket indikerar en undernyckel med krypteringsfunktion. Fingeravtrycket för "
+"denna undernyckel listas på nästa rad. I det här fallet är fingeravtrycket "
+"``C1735CB29890EEDEABCF1D0DC9310F81D77519BC``."
 
 #: ../nitrokey3/adsk.rst.inc:70
 msgid "Then determine the fingerprint of the main key::"
-msgstr ""
+msgstr "Fastställ sedan huvudnyckelns fingeravtryck::"
 
 #: ../nitrokey3/adsk.rst.inc:79
 msgid ""
 "You can find it in the next line after ``pub``, in this case "
 "``55BC284C1D30D97638DA4A2C7963A4CD00C947CE``."
 msgstr ""
+"Du hittar den på nästa rad efter ``pub``, i det här fallet "
+"``55BC284C1D30D97638DA4A2C7963A4CD00C947CE``."
 
 #: ../nitrokey3/adsk.rst.inc:81
 msgid "Now you can add the ADSK using the ``--quick-add-adsk`` flag::"
-msgstr ""
+msgstr "Nu kan du lägga till ADSK med hjälp av ``--quick-add-adsk`` flaggan::"
 
 #: ../nitrokey3/adsk.rst.inc:87
 msgid ""
 "The first argument is the fingerprint of the main key. The second "
 "argument is the fingerprint of the encryption subkey of the backup key."
 msgstr ""
+"Det första argumentet är fingeravtrycket för huvudnyckeln. Det andra "
+"argumentet är fingeravtrycket för krypteringsundernyckeln för reservnyckeln."
 
 #: ../nitrokey3/adsk.rst.inc:90
 msgid "You can check that the ADSK has been created::"
-msgstr ""
+msgstr "Du kan kontrollera att ADSK har skapats::"
 
 #: ../nitrokey3/adsk.rst.inc:103
 msgid ""
 "The subkey with the ``R`` (restricted) capability is the ADSK. It has the"
 " same fingerprint as the encryption subkey of the backup key."
 msgstr ""
+"Den undernyckel som har kapaciteten ``R`` (restricted) är ADSK. Den har "
+"samma fingeravtryck som krypteringsundernyckeln för reservnyckeln."
 
 #: ../nitrokey3/adsk.rst.inc:106
 msgid "Now you can distribute the public key with the ADSK."
-msgstr ""
+msgstr "Nu kan du distribuera den offentliga nyckeln med ADSK."
 
 #: ../nitrokey3/adsk.rst.inc:109
 msgid "Using an ADSK"
-msgstr ""
+msgstr "Använda en ADSK"
 
 #: ../nitrokey3/adsk.rst.inc:111
 msgid ""
 "When encrypting a message for the main key, the backup key is now "
 "automatically added as a recipient. The only requirements for this are:"
 msgstr ""
+"Vid kryptering av ett meddelande för huvudnyckeln läggs nu reservnyckeln "
+"automatiskt till som mottagare. De enda kraven för detta är:"
 
 #: ../nitrokey3/adsk.rst.inc:114
 msgid ""
 "The sender of the message has an up-to-date public key that includes the "
 "ADSK."
 msgstr ""
+"Avsändaren av meddelandet har en aktuell offentlig nyckel som innehåller "
+"ADSK."
 
 #: ../nitrokey3/adsk.rst.inc:115
 msgid "The sender of the message uses GnuPG 2.2.42 or newer."
-msgstr ""
+msgstr "Avsändaren av meddelandet använder GnuPG 2.2.42 eller nyare."
 
 #: ../nitrokey3/adsk.rst.inc:117
 msgid ""
 "If you add the ``--verbose`` flag, you can check the keys the message is "
 "encrypted to::"
 msgstr ""
+"Om du lägger till flaggan ``--verbose`` kan du kontrollera de nycklar som "
+"meddelandet är krypterat till::"
 
 #: ../nitrokey3/adsk.rst.inc:130
 msgid ""
 "You can also use the ``--list-packets`` option to check an encrypted "
 "message::"
 msgstr ""
+"Du kan också använda alternativet ``--list-packets`` för att kontrollera ett "
+"krypterat meddelande::"
 
 #: ../nitrokey3/adsk.rst.inc:136
 msgid ""
 "Each ``pubkey enc packet`` line represents one key that can decrypt the "
 "message."
 msgstr ""
+"Varje rad i ``pubkey enc packet`` representerar en nyckel som kan dekryptera "
+"meddelandet."
 
 #: ../nitrokey3/adsk.rst.inc:140
 msgid "Revoking an ADSK"
-msgstr ""
+msgstr "Återkalla en ADSK"
 
 #: ../nitrokey3/adsk.rst.inc:142
 msgid ""
@@ -10864,23 +10898,29 @@ msgid ""
 "encrypting a message. To perform a revocation, open the key with ``gpg "
 "--edit-key``::"
 msgstr ""
+"Om du återkallar en ADSK kommer den inte längre att läggas till som "
+"mottagare vid kryptering av ett meddelande. Om du vill återkalla en nyckel "
+"öppnar du den med ``gpg --edit-key``::"
 
 #: ../nitrokey3/adsk.rst.inc:162
 msgid ""
 "Select the subkey to revoke with ``key N``. The selected subkey is marked"
 " with an asterisk::"
 msgstr ""
+"Välj den undernyckel som ska återkallas med ``key N``. Den valda "
+"undernyckeln är markerad med en asterisk::"
 
 #: ../nitrokey3/adsk.rst.inc:181
 msgid ""
 "Revoke the subkey with ``revkey`` and then save the changes with "
 "``save``::"
 msgstr ""
+"Återkalla undernyckeln med ``revkey`` och spara sedan ändringarna med "
+"``save``::"
 
 #: ../nitrokey3/adsk.rst.inc:215
-#, fuzzy
 msgid "Now distribute the updated public key."
-msgstr "Exportera den offentliga nyckeln"
+msgstr "Distribuera nu den uppdaterade publika nyckeln."
 
 #: ../nitrokey3/adsk.rst.inc:219
 msgid ""
@@ -10888,6 +10928,9 @@ msgid ""
 " public key with the revoked ADSK. Messages that have already been "
 "encrypted can still be decrypted with the ADSK even if it is revoked."
 msgstr ""
+"Återkallelsen träder i kraft först när avsändaren har uppdaterat den publika "
+"nyckeln med den återkallade ADSK. Meddelanden som redan har krypterats kan "
+"fortfarande dekrypteras med ADSK även om den har återkallats."
 
 #: ../nitrokey3/firmware-update.rst.inc:10
 msgid "This guide describes how to update the firmware on the Nitrokey 3."
@@ -28262,4 +28305,3 @@ msgstr ""
 
 #~ msgid "The update can be applied (committed) as follows."
 #~ msgstr "Uppdateringen kan tillämpas på följande sätt."
-
