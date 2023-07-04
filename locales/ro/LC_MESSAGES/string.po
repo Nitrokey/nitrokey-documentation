@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-04 18:08+0200\n"
-"PO-Revision-Date: 2023-06-22 08:47+0000\n"
+"PO-Revision-Date: 2023-07-04 17:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/ro/>\n"
 "Language: ro\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/ro/>\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
-"< 20)) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -10910,7 +10911,7 @@ msgstr "(Nitrokey 3 - Linux)"
 
 #: ../nitrokey3/adsk.rst.inc:2
 msgid "Additional Decryption Subkeys (ADSK) with GnuPG"
-msgstr ""
+msgstr "Subchei de decriptare suplimentare (ADSK) cu GnuPG"
 
 #: ../nitrokey3/adsk.rst.inc:8
 msgid ""
@@ -10919,31 +10920,39 @@ msgid ""
 "automatically add recipients when encrypting a message with GnuPG. "
 "Typical use cases include"
 msgstr ""
+"`Additional Decryption Subkeys (ADSK) <https://gnupg.org/blog/20230321-adsk."
+"html>`__ poate fi folosit pentru a adăuga automat destinatari la criptarea "
+"unui mesaj cu GnuPG. Cazurile tipice de utilizare includ"
 
 #: ../nitrokey3/adsk.rst.inc:11
 msgid ""
 "having a single encryption key for a group without the need to share the "
 "private key between the members of the group,"
 msgstr ""
+"existența unei singure chei de criptare pentru un grup, fără a fi necesară "
+"partajarea cheii private între membrii grupului,"
 
 #: ../nitrokey3/adsk.rst.inc:12
-#, fuzzy
 msgid "adding a backup key to an encryption key, and"
-msgstr "Cheia principală și subcheia de criptare"
+msgstr "adăugarea unei chei de rezervă la o cheie de criptare și"
 
 #: ../nitrokey3/adsk.rst.inc:13
 msgid "setting up a master key that can decrypt messages for other keys."
 msgstr ""
+"stabilirea unei chei principale care poate decripta mesaje pentru alte chei."
 
 #: ../nitrokey3/adsk.rst.inc:17
 msgid ""
 "To configure an ADSK, you need GnuPG 2.4.1 or newer. To encrypt a message"
 " for a key with an ADSK, you need GnuPG 2.2.42 or newer."
 msgstr ""
+"Pentru a configura un ADSK, aveți nevoie de GnuPG 2.4.1 sau o versiune mai "
+"nouă. Pentru a cripta un mesaj pentru o cheie cu o ADSK, aveți nevoie de "
+"GnuPG 2.2.42 sau o versiune mai nouă."
 
 #: ../nitrokey3/adsk.rst.inc:21
 msgid "Overview"
-msgstr ""
+msgstr "Prezentare generală"
 
 #: ../nitrokey3/adsk.rst.inc:23
 msgid ""
@@ -10953,44 +10962,50 @@ msgid ""
 " can be used to add multiple ADSK to a key, or to add the same key as an "
 "ADSK to multiple other keys."
 msgstr ""
+"Acest ghid explică modul în care se adaugă o cheie de rezervă (ID utilizator "
+"``backup@example.com``) ca ADSK la o cheie principală (ID utilizator "
+"``main@example.com``). Ambele chei sunt stocate pe o Nitrokey. Aceiași pași "
+"pot fi utilizați pentru a adăuga mai multe ADSK la o cheie sau pentru a "
+"adăuga aceeași cheie ca ADSK la mai multe alte chei."
 
 #: ../nitrokey3/adsk.rst.inc:28
-#, fuzzy
 msgid "Preparing the Keys"
-msgstr "Pregătirea pentru a începe"
+msgstr "Pregătirea cheilor"
 
 #: ../nitrokey3/adsk.rst.inc:30
-#, fuzzy
 msgid "Follow one of these guides to generate the two keys:"
-msgstr "ID-ul cheii pentru care se generează CSR-ul"
+msgstr "Urmați unul dintre aceste ghiduri pentru a genera cele două chei:"
 
 #: ../nitrokey3/adsk.rst.inc:32
 msgid ":doc:`openpgp-keygen-backup`"
-msgstr ""
+msgstr ":doc:`openpgp-keygen-backup`"
 
 #: ../nitrokey3/adsk.rst.inc:33
 msgid ":doc:`openpgp-keygen-on-device`"
-msgstr ""
+msgstr ":doc:`openpgp-keygen-on-device`"
 
 #: ../nitrokey3/adsk.rst.inc:34
 msgid ":doc:`openpgp-keygen-gpa`"
-msgstr ""
+msgstr ":doc:`openpgp-keygen-gpa`"
 
 #: ../nitrokey3/adsk.rst.inc:36
 msgid ""
 "Make sure that you can list both keys with ``gpg --list-keys``, for "
 "example::"
 msgstr ""
+"Asigurați-vă că puteți lista ambele chei cu ``gpg --list-keys``, de exemplu::"
 
 #: ../nitrokey3/adsk.rst.inc:53
 msgid "Adding an ADSK"
-msgstr ""
+msgstr "Adăugarea unei ADSK"
 
 #: ../nitrokey3/adsk.rst.inc:55
 msgid ""
 "First determine the fingerprint of the encryption subkey for the backup "
 "key::"
 msgstr ""
+"Determinați mai întâi amprenta digitală a subcheie de criptare pentru cheia "
+"de rezervă::"
 
 #: ../nitrokey3/adsk.rst.inc:66
 msgid ""
@@ -10999,82 +11014,101 @@ msgid ""
 "this subkey is listed in the next line. In this case, the fingerprint is "
 "``C1735CB29890EEDEABCF1D0DC9310F81D77519BC``."
 msgstr ""
+"Căutați linia care începe cu ``sub`` și care conține litera ``E``, indicând "
+"o subcheie cu capacitate de criptare. Amprenta acestei subclave este listată "
+"în rândul următor. În acest caz, amprenta este "
+"``C1735CB29890EEDEABCF1D0DC9310F81D77519BC``."
 
 #: ../nitrokey3/adsk.rst.inc:70
 msgid "Then determine the fingerprint of the main key::"
-msgstr ""
+msgstr "Apoi se determină amprenta digitală a cheii principale::"
 
 #: ../nitrokey3/adsk.rst.inc:79
 msgid ""
 "You can find it in the next line after ``pub``, in this case "
 "``55BC284C1D30D97638DA4A2C7963A4CD00C947CE``."
 msgstr ""
+"Îl puteți găsi în următoarea linie după ``pub``, în acest caz "
+"``55BC284C1D30D97638DA4A2C7963A4CD00C947CE``."
 
 #: ../nitrokey3/adsk.rst.inc:81
 msgid "Now you can add the ADSK using the ``--quick-add-adsk`` flag::"
-msgstr ""
+msgstr "Acum puteți adăuga ADSK folosind steagul ``--quick-add-adsk``::"
 
 #: ../nitrokey3/adsk.rst.inc:87
 msgid ""
 "The first argument is the fingerprint of the main key. The second "
 "argument is the fingerprint of the encryption subkey of the backup key."
 msgstr ""
+"Primul argument este amprenta digitală a cheii principale. Al doilea "
+"argument este amprenta digitală a subcheie de criptare a cheii de rezervă."
 
 #: ../nitrokey3/adsk.rst.inc:90
 msgid "You can check that the ADSK has been created::"
-msgstr ""
+msgstr "Puteți verifica dacă ADSK a fost creat::"
 
 #: ../nitrokey3/adsk.rst.inc:103
 msgid ""
 "The subkey with the ``R`` (restricted) capability is the ADSK. It has the"
 " same fingerprint as the encryption subkey of the backup key."
 msgstr ""
+"Subcheia cu capacitatea ``R`` (restricționată) este ADSK. Aceasta are "
+"aceeași amprentă digitală ca și subcheia de criptare a cheii de rezervă."
 
 #: ../nitrokey3/adsk.rst.inc:106
 msgid "Now you can distribute the public key with the ADSK."
-msgstr ""
+msgstr "Acum puteți distribui cheia publică cu ADSK."
 
 #: ../nitrokey3/adsk.rst.inc:109
 msgid "Using an ADSK"
-msgstr ""
+msgstr "Utilizarea unei ADSK"
 
 #: ../nitrokey3/adsk.rst.inc:111
 msgid ""
 "When encrypting a message for the main key, the backup key is now "
 "automatically added as a recipient. The only requirements for this are:"
 msgstr ""
+"La criptarea unui mesaj pentru cheia principală, cheia de rezervă este acum "
+"adăugată automat ca destinatar. Singurele cerințe în acest sens sunt:"
 
 #: ../nitrokey3/adsk.rst.inc:114
 msgid ""
 "The sender of the message has an up-to-date public key that includes the "
 "ADSK."
 msgstr ""
+"Expeditorul mesajului are o cheie publică actualizată care include ADSK."
 
 #: ../nitrokey3/adsk.rst.inc:115
 msgid "The sender of the message uses GnuPG 2.2.42 or newer."
-msgstr ""
+msgstr "Expeditorul mesajului utilizează GnuPG 2.2.42 sau o versiune mai nouă."
 
 #: ../nitrokey3/adsk.rst.inc:117
 msgid ""
 "If you add the ``--verbose`` flag, you can check the keys the message is "
 "encrypted to::"
 msgstr ""
+"Dacă adăugați indicatorul ``--verbose``, puteți verifica cheile cu care este "
+"criptat mesajul::"
 
 #: ../nitrokey3/adsk.rst.inc:130
 msgid ""
 "You can also use the ``--list-packets`` option to check an encrypted "
 "message::"
 msgstr ""
+"De asemenea, puteți utiliza opțiunea ``--list-packets`` pentru a verifica un "
+"mesaj criptat::"
 
 #: ../nitrokey3/adsk.rst.inc:136
 msgid ""
 "Each ``pubkey enc packet`` line represents one key that can decrypt the "
 "message."
 msgstr ""
+"Fiecare linie ``pubkey enc packet`` reprezintă o cheie care poate decripta "
+"mesajul."
 
 #: ../nitrokey3/adsk.rst.inc:140
 msgid "Revoking an ADSK"
-msgstr ""
+msgstr "Revocarea unei ADSK"
 
 #: ../nitrokey3/adsk.rst.inc:142
 msgid ""
@@ -11082,23 +11116,29 @@ msgid ""
 "encrypting a message. To perform a revocation, open the key with ``gpg "
 "--edit-key``::"
 msgstr ""
+"Dacă revocați un ADSK, acesta nu va mai fi adăugat ca destinatar la "
+"criptarea unui mesaj. Pentru a efectua o revocare, deschideți cheia cu ``gpg "
+"--edit-key``::"
 
 #: ../nitrokey3/adsk.rst.inc:162
 msgid ""
 "Select the subkey to revoke with ``key N``. The selected subkey is marked"
 " with an asterisk::"
 msgstr ""
+"Selectați cheia secundară care urmează să fie revocată cu ``key N``. "
+"Subcheia selectată este marcată cu un asterisc::"
 
 #: ../nitrokey3/adsk.rst.inc:181
 msgid ""
 "Revoke the subkey with ``revkey`` and then save the changes with "
 "``save``::"
 msgstr ""
+"Revocați cheia secundară cu ``revkey`` și apoi salvați modificările cu "
+"``save``::"
 
 #: ../nitrokey3/adsk.rst.inc:215
-#, fuzzy
 msgid "Now distribute the updated public key."
-msgstr "Exportați cheia publică"
+msgstr "Acum distribuiți cheia publică actualizată."
 
 #: ../nitrokey3/adsk.rst.inc:219
 msgid ""
@@ -11106,6 +11146,9 @@ msgid ""
 " public key with the revoked ADSK. Messages that have already been "
 "encrypted can still be decrypted with the ADSK even if it is revoked."
 msgstr ""
+"Revocarea va intra în vigoare numai după ce expeditorul a actualizat cheia "
+"publică cu ADSK revocată. Mesajele care au fost deja criptate pot fi în "
+"continuare decriptate cu ADSK chiar dacă aceasta este revocată."
 
 #: ../nitrokey3/firmware-update.rst.inc:10
 msgid "This guide describes how to update the firmware on the Nitrokey 3."
@@ -28885,4 +28928,3 @@ msgstr ""
 
 #~ msgid "The update can be applied (committed) as follows."
 #~ msgstr "Actualizarea poate fi aplicată (angajată) după cum urmează."
-
