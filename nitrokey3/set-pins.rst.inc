@@ -89,3 +89,40 @@ It is useful in situations when the user of the Nitrokey should be able to unblo
 3. In the prompt enter ``admin``, followed by ``passwd``.
 4. In the prompt enter ``4``, to set the *Reset Code*.
 5. GnuPG will now ask for the *Admin PIN*, and the *Reset Code*.
+
+PIV
+---
+
+The *PIN* and *PUK* for PIV (Personal Identity Verification) Card can be set with `pivy-tool <hhttps://github.com/arekinath/pivy>`__.
+
+PIN
+^^^
+
+The *PIN* is used for key operations, such as signing and authentication.
+
+.. note::
+    The *PIN* must have maximal length of 8 characters.
+    It can contain alphanumeric characters, including special characters such as punctations.
+
+.. warning::
+    The *PIN* has a PIN retry counter of 3 attempts.
+    If this attempts are used up, the *PIN* must be unlocked with the *PUK*.
+
+1. Connect the Nitrokey 3 with your computer.
+2. On the terminal enter ``pivy-tool change-pin``.
+
+PUK
+^^^
+
+The *PUK* is used for management operations, such as unblocking the PIN.
+
+.. note::
+    The *PUK* must have a maximal length of 8 characters.
+    It can contain alphanumeric characters, including special characters such as punctations.
+
+.. warning::
+    The *PUK* has a retry counter of 3 attempts.
+    If this attempts are used up, the PIV Card can not be used anymore and must be reset to factory defaults.
+
+1. Connect the Nitrokey 3 with your computer.
+2. On the terminal enter ``pivy-tool change-puk``.
