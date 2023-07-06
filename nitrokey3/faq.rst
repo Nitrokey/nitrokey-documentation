@@ -37,12 +37,8 @@ Nitrokey 3 FAQ
 .. include:: ../shared-faqs/algos.rst.inc 
 
 **Q:** How can I set the PIN for my Nitrokey 3?
-   On Linux and macOS you can configure and do basic settings for your Nitrokey 3 using Chrome(ium)
-   just visit: `chrome://settings/securityKeys`_ (clicking the link will not work
-   for security reasons, please copy&paste it)
-   
-   On Windows type "Security Keys" into the search bar on the bottom left and click the first result. Then click "Security Keys" and "Manage".
-   Now follow the onscreen instructions.
+   The Nitrokey 3 has distinct PINs for each feature.
+   Please refer to the chapter of your respective operating system (`Linux <linux/set-pins.html>`__, `Mac OS <mac/set-pins.html>`__, `Windows <windows/set-pins.html>`__).
 
 **Q:** Is the Nitrokey 3 Common Criteria or FIPS certified?
    The secure element is Common Criteria EAL 6+ security certification up to OS 
