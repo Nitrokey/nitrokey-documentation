@@ -1,3 +1,5 @@
+.. start-header
+
 Set PINs
 ========
 
@@ -8,6 +10,10 @@ The Nitrokey 3 has distinct PINs for each feature.
 - OpenPGP Card (User PIN, Admin PIN, and optional Reset Code)
 - PIV
 
+.. end-header
+
+.. start-passwords-otp-secrets
+
 Passwords and OTP secrets
 -------------------------
 
@@ -15,6 +21,10 @@ The PIN for passwords and OTP secrets can be set with the `Nitropy <../../softwa
 
 1. Connect the Nitrokey 3 with your computer.
 2. On the terminal enter ``nitropy nk3 secrets set-pin`` and follow the instructions.
+
+.. end-passwords-otp-secrets
+
+.. start-openpgp-card
 
 OpenPGP Card
 ------------
@@ -90,6 +100,10 @@ It is useful in situations when the user of the Nitrokey should be able to unblo
 4. In the prompt enter ``4``, to set the *Reset Code*.
 5. GnuPG will now ask for the *Admin PIN*, and the *Reset Code*.
 
+.. end-openpgp-card
+
+.. start-piv-card
+
 PIV
 ---
 
@@ -126,3 +140,5 @@ The *PUK* is used for management operations, such as unblocking the PIN.
 
 1. Connect the Nitrokey 3 with your computer.
 2. On the terminal enter ``pivy-tool change-puk``.
+
+.. end-piv-card
