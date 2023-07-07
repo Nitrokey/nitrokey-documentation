@@ -1,1 +1,1 @@
-.. include:: ../set-pins.rst.inc
+.. include:: ../shared/set-pins.rst.inc
