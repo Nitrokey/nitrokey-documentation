@@ -40,13 +40,13 @@ NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
 +-------------------+----------------------------------------------------------------------+
 | Boot Mode         | Description                                                          |
 +===================+======================================================================+
-| *Attended Boot*   | The NetHSM boots up into a _Locked_ state. The *Unlock Passphrase* |
+| *Attended Boot*   | The NetHSM boots up into a _Locked_ state. The *Unlock Passphrase*   |
 |                   | needs to be entered during each start, which is used to decrypt the  |
 |                   | *User Data*. For security reasons, this mode is recommended and it's |
 |                   | the default mode for a freshly provisioned system.                   |
 +-------------------+----------------------------------------------------------------------+
 | *Unattended Boot* | The system starts unattended without the need to enter the *Unlock*  |
-|                   | *Passphrase* into an _Operational_ state.                                                        |
+|                   | *Passphrase* into an _Operational_ state.                            |
 |                   | Use this mode if your availability requirements can not be fulfilled |
 |                   | with *Attended Boot* mode.                                           |
 +-------------------+----------------------------------------------------------------------+
