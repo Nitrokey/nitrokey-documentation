@@ -2,6 +2,15 @@
    :start-after: start-header
    :end-before: end-header
 .. include:: ../shared/set-pins.rst.inc
+   :start-after: start-fido2-header
+   :end-before: end-fido2-header
+.. include:: ../shared/set-pins.rst.inc
+   :start-after: start-fido2-nitropy
+   :end-before: end-fido2-nitropy
+.. include:: ../shared/set-pins.rst.inc
+   :start-after: start-fido2-chromeium
+   :end-before: end-fido2-chromeium
+.. include:: ../shared/set-pins.rst.inc
    :start-after: start-passwords-otp-secrets
    :end-before: end-passwords-otp-secrets
 .. include:: ../shared/set-pins.rst.inc

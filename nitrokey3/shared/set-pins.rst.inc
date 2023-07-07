@@ -12,6 +12,60 @@ The Nitrokey 3 has distinct PINs for each feature.
 
 .. end-header
 
+.. start-fido2-header
+
+FIDO2
+-----
+
+The PIN for FIDO2 can be set with `Nitropy <../../software/nitropy/index.html>`__, operating system native apps, or a webbrowser such as Chrom(e|ium).
+
+.. end-fido2-header
+
+.. start-fido2-nitropy
+
+Setting PIN with Nitropy
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The PIN for FIDO2 can be set with the `Nitropy <../../software/nitropy/index.html>`__ utility.
+
+1. Connect the Nitrokey 3 with your computer.
+2. On the terminal enter ``nitropy fido2 set-pin`` and follow the instructions.
+   If the PIN has been already set before the above command must be changed to ``nitropy fido2 change-pin``.
+
+.. end-fido2-nitropy
+
+.. start-fido2-chromeium
+
+Setting PIN with the Chrom(e|ium) webbrowser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+# Chrome(e|ium) - Linux, Mac OS, and Windows
+
+1. Open Chrome(e|ium).
+2. Open the menu with the three dots in the top right of the menubar.
+3. Click on "Settings".
+4. In the menubar on the left click on "Privacy and security".
+5. In the menu in the middle click on "Security".
+6. In the menu in the middle click on "Manage security keys".
+7. In the menu in the middle click on "Create a PIN".
+8. Follow the instructions on the screen to set the PIN.
+
+.. end-fido2-chromeium
+
+.. start-fido2-windows-settings-application
+
+Settings PIN with Windows Settings application
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Open the Windows "Settings" application.
+2. Open the "Accounts" menu.
+3. In the menubar on the left click on "Sign-in options".
+4. In the menu in the middle click on "Security Key" and then "Manage" under it.
+5. Under the header "Security Key PIN" click on "Change".
+6. Follow the instructions on the screen to set the PIN.
+
+.. start-fido2-windows-settings-application
+
 .. start-passwords-otp-secrets
 
 Passwords and OTP secrets
