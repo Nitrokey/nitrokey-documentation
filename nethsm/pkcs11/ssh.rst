@@ -15,6 +15,14 @@ You can use NetHSM for SSH authentication. You need to pass the module path in t
       Host example.com
         PKCS11Provider /usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so
 
+.. note:: 
+  You can also set up SSH to use the NetHSM by default. To do so, add the following lines to your ``~/.ssh/config`` file:
+
+  .. code-block::
+
+    Host *
+      PKCS11Provider /usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so
+
 
 SSH will search for a key on the NetHSM that is accepted by the server.
 

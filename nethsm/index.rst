@@ -36,5 +36,4 @@ In case you want to restore a backup of a NetHSM, please refer to the chapter `R
    administration.rst
    operation.rst
    integration.rst
-   legacy.rst
    pkcs11.rst

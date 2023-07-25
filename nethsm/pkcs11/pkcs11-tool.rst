@@ -3,21 +3,21 @@ pkcs11-tool
 
 `pkcs11-tool <https://github.com/OpenSC/OpenSC/wiki/Using-pkcs11-tool-and-OpenSSL>`__ is a tool part of the `OpenSC <https://github.com/OpenSC/OpenSC>`__ project that can be used to manage keys on a PKCS#11 device.
 
-You need to pass the location of the PKCS#11 library to use with the ``--module`` option : 
+You need to pass the location of the PKCS#11 module to use with the ``--module`` option: 
 
 .. code-block:: bash
 
     pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so
 
-Replace ``/usr/lib/nitrokey/libnethsm_pkcs11.so`` with the path where the NetHSM PKCS#11 library is located.
+Replace ``/usr/lib/nitrokey/libnethsm_pkcs11.so`` with the path where the NetHSM PKCS#11 module is located.
 
-You can test if the module is working with the next command :
+You can test if the module is working with the next command:
 
 .. code-block:: bash
 
     pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --show-info
 
-You should see something like this :
+You should see something like this:
 
 .. code-block:: 
 
@@ -50,13 +50,13 @@ To learn more about the configuration of slots, please refer to chapter `Configu
     pin min/max        : 0/0
 
 .. note::
-   If your configuration supports more than one slot, you maybe have to add the `--slot <arg>` option in pkcs11-tool commands to use the right one.
+   If your configuration supports more than one slot, you may have to add the ``--slot <arg>`` option in pkcs11-tool commands to use the right one.
 
 Key IDs
 -------
 
-pkcs11-tool uses an hexadecimal key ID to identify keys. In this module the NetHSM string name is transformed into bytes so the key ID is the hexadecimal representation of the bytes.
-You can get the hexadecimal version of a NetHSM key with ``xxd`` :
+pkcs11-tool uses an hexadecimal key ID to identify keys. NetHSM uses alphanumerical strings as key ID. NetHSM's PKCS#11 module uses the raw byte values of the string to form the PKCS#11 ID.
+You can get the hexadecimal version of a NetHSM key with ``xxd``:
 
 .. code-block:: bash
   
@@ -66,7 +66,9 @@ You can get the hexadecimal version of a NetHSM key with ``xxd`` :
 
   4d794b6579
 
-Generate a key
+You can then pass this hex value to pkcs11-tool with the ``--id`` option.
+
+Generate a Key
 --------------
 
 Generate a key-pair and store it on the NetHSM.
@@ -96,7 +98,7 @@ AES/Generic
 
     pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --keygen --key-type GENERIC:256 --label "MyAESKey"
 
-List keys
+List Keys
 ---------
 
 List the keys stored on the NetHSM.
@@ -119,7 +121,7 @@ List the keys stored on the NetHSM.
     Usage:      decrypt, sign
     Access:     sensitive, always sensitive, never extractable
 
-Read keys
+Read Keys
 ---------
 
 Read the public key of a key-pair stored on the NetHSM.
@@ -135,7 +137,7 @@ The certificate of the key-pair can be read with the same command by changing th
 .. note:: 
   The output is in DER format.
 
-Write keys
+Write Keys
 ----------
 
 Write a private key on the NetHSM. The public key is automatically derived from the private key.
@@ -183,7 +185,7 @@ You can encrypt data with the public key and decrypt it with the private key.
   # get the public key first
   curl -s -u operator:opPassphrase -k -X GET https://localhost:8443/api/v1/keys/$KEYID/public.pem -o public.pem
 
-  # encrypt some data with openssl
+  # encrypt some data with OpenSSL
   echo 'NetHSM rulez!NetHSM rulez!' | openssl pkeyutl -encrypt -pubin -inkey public.pem -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256 -out data.crypt
 
 .. code-block:: bash
@@ -197,7 +199,7 @@ Sign
 
     echo "NetHSM rulez!" | openssl dgst -sha256 -binary |  pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --sign --id 7273616b6579 --mechanism RSA_PKCS-PSS --hash-algorithm SHA256 --output-file data.sig
 
-To verify the signature with openssl :
+To verify the signature with OpenSSL:
 
 .. code-block:: bash
 
