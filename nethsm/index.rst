@@ -36,4 +36,9 @@ In case you want to restore a backup of a NetHSM, please refer to the chapter `R
    administration.rst
    operation.rst
    integration.rst
-   pkcs11.rst
+   pkcs11-setup.rst
+   pkcs11-tool.rst
+   nginx.rst
+   ssh.rst
+   opendnssec.rst
+
