@@ -5,15 +5,15 @@ Setup
 Installation
 ------------
 
-You can either get the NetHSM PKCS#11 library as a precompiled binary or compile it from source.
+You can either get the NetHSM PKCS#11 module as a precompiled binary or compile it from source.
 
-Precompiled binaries
+Precompiled Binaries
 ~~~~~~~~~~~~~~~~~~~~
 
-1. Download the library file corresponding to your system from the `releases page <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the repository.
-2. Copy the library file to the directory where your PKCS#11 applications expect to find it.
+1. Download the module file corresponding to your system from the `releases page <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the repository.
+2. Copy the module file to the directory where your PKCS#11 applications expect to find it.
 
-Compile from source
+Compile From Source
 ~~~~~~~~~~~~~~~~~~~
 
 1. Install the `Rust toolchain <https://www.rust-lang.org/tools/install>`__.
@@ -24,7 +24,7 @@ Compile from source
 Configuration
 -------------
 
-By default the modules searches for configuration files in :
+By default the module searches for configuration files in:
 
 - ``/etc/nitrokey/p11nethsm.conf``
 - ``/usr/local/etc/nitrokey/p11nethsm.conf``
@@ -32,20 +32,22 @@ By default the modules searches for configuration files in :
 
 If multiple files are present the slots of all the config files will be added.
 
-You can manually set the config file location (only this one will be read) wiht the env variable ``P11NETHSM_CONFIG_FILE`` (e.g. ``P11NETHSM_CONFIG_FILE=./p11nethsm.conf``).
+You can manually set the config file location (only this one will be read) with the env variable ``P11NETHSM_CONFIG_FILE`` (e.g. ``P11NETHSM_CONFIG_FILE=./p11nethsm.conf``).
 
-Configuration file format
+Configuration File Format
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The configuration is yaml-formatted :
+The configuration is yaml-formatted:
 
 .. tabs::
   .. tab:: All platforms
     .. code-block:: yaml
 
-        # you can set the log file location here, if no value is set, the module will output to stderr, if a value is set it will output to the file
+        # You can set the log file location here.
+        # If no value is set the module will output to stderr.
+        # If a value is set it will output to the file.
         log_file: /tmp/p11nethsm.log
-        # optional log level
+        # Optional log level
         log_level: Debug
 
         # Each "slot" represents a NetHSM server
@@ -61,7 +63,7 @@ The configuration is yaml-formatted :
             administrator:
               username: "admin"
 
-            # When the server has a self-signed certificate, you can allow it via two ways :
+            # When the server has a self-signed certificate, you can allow it via two ways:
 
             # File containing the certificate of the server
             certificate_file: /etc/cert/localhsm.pem
@@ -89,12 +91,12 @@ The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 SO is ma
 Passwords
 ~~~~~~~~~
 
-The password can be provided by multiple means :
+The password can be provided by multiple means:
 
 - In plain text in the configuration ``password: "mypassword"``
-- In an environment variable read by the module with the ``env:`` prefix : ``env:ENV_STORING_THE_PASSWORD``
-- Via the login function of pkcs11, example for pcks11-tool : ``pkcs11-tool --module libnethsm_pkcs11.so -p opPassphrase``
-  To provide the the admin password you need to use ``--so-pin`` instead : ``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``
+- In an environment variable read by the module with the ``env:`` prefix: ``env:ENV_STORING_THE_PASSWORD``
+- Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool --module libnethsm_pkcs11.so -p opPassphrase``
+  To provide the the admin password you need to use ``--so-pin`` instead: ``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``
 
 If the password of an user is not set in the configuration file a login will be required to provide the password (3rd method).
 

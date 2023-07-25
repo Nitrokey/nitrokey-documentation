@@ -1,13 +1,13 @@
 Nginx
 =====
 
-Nginx doesn't directly support PKCS#11 modules, but you can use the OpenSSL engine to use the PKCS#11 module.
+Because Nginx doesn't directly support PKCS#11 modules, we use OpenSSL engine with our PKCS#11 module.
 
 The certificate file has to be on the disk but the private key can be used from the NetHSM.
 
 An example is available in the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ under container/nginx.
 
-OpenSSL configuration
+OpenSSL Configuration
 ---------------------
 
 .. code-block:: ini
@@ -37,7 +37,7 @@ The engine can be installed on debian-based machines using
   
         apt install libengine-pkcs11-openssl
 
-Nginx configuration
+Nginx Configuration
 -------------------
 
 .. code-block:: 
@@ -77,15 +77,14 @@ Nginx configuration
 
 The ``ssl_certificate`` must point to a certificate file on the disk.
 
-The ``ssl_certificate_key`` can be an OpenSSL configuration, here we use the OpenSSL engine to use the PKCS#11 module and select the private key with the label/ID ``webserver`` and the key type ``private``.
+The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use the OpenSSL engine with the PKCS#11 module and select the private key with the label/ID ``webserver`` and the key type ``private``.
 
 ``ssl_certificate_key "engine:pkcs11:pkcs11:object=webserver;type=private";``
 
 .. note:: 
-  There is currently no way to generate a certificate and certificate key on the NetHSM directly, you must use generate the certificate and then upload it to the NetHSM.
-  If the certificate on disk and the key in the NetHSM don't match Nginx won't start.
+  You must generate the certificate separately and then upload it to the NetHSM. If the certificate on disk and the key in the NetHSM don't match Nginx won't start.
 
-libnethsm_pkcs11 configuration
+libnethsm_pkcs11 Configuration
 ------------------------------
 
 .. code-block:: yaml
@@ -98,43 +97,41 @@ libnethsm_pkcs11 configuration
         username: "operator"
         password: "opPassphrase"
 
-To secure the password you can provide it via an environment variable (see `Setup <setup.html>`__). You can also provide it in the nginx configuration :
+To secure the password you can provide it via an environment variable (see `Setup <setup.html>`__). You can also provide it in the nginx configuration:
 
 .. code-block::
 
     ssl_certificate_key "engine:pkcs11:pkcs11:object=webserver;type=private;pin=opPassphrase";
 
 
-Running the example
--------------------
+Executing The Example
+---------------------
 
-If you want to experiment with the given example you can clone with git the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands :
+If you want to experiment with the given example you can clone with git the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:
 
 .. warning:: 
 
   Running the generate script deletes the ``webserver`` key and replaces it.
 
-- Configure a NetHSM, either a real one or a container, see the getting-started guide for more information.
-- If your NetHSM is not running on localhost, you will need to change the url of the curl requests in ``container/nginx/generate.sh`` to point to your nethsm.
+- Configure a NetHSM, either a real one or a container. See the getting-started guide for more information.
+- If your NetHSM is not running on localhost, you will need to change the URL of the curl requests in ``container/nginx/generate.sh`` to point to your NetHSM.
 - Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/nginx/p11nethsm.conf``.
-- Generate the certificate and key
+- Generate the certificate and key.
   
   .. code-block:: bash
    
     ./container/nginx/generate.sh
 
-- Build the container
+- Build the container.
   
   .. code-block:: bash
     
     docker build -f container/nginx/Dockerfile . -t pkcs-nginx 
 
-- Run the container
+- Run the container.
   
   .. code-block:: bash
     
     docker run -p 9443:443 -p 9080:80 pkcs-nginx
   
-The container will be available on `https://localhost:9443/ <https://localhost:9443/>`__.
-
-    
+The container will be available at `https://localhost:9443/ <https://localhost:9443/>`__.

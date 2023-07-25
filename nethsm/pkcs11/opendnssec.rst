@@ -1,9 +1,9 @@
 OpenDNSSEC
 ==========
 
-OpenDNSSEC is a tool suite for managing the security of domain names. It can directly load a PKCS11 module and manage the modules.
+`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing the security of domain names. It can directly load a PKCS11 module and manage the modules.
 
-As OpenDNSSEC needs access to manage the keys, you will need to configure an admintistrator and operator account.
+As OpenDNSSEC needs access to manage the keys, you will need to configure an administrator and operator account.
 
 You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by editing the /etc/opendnssec/conf.xml file. You will need to add the following lines:
 
