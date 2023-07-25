@@ -1,7 +1,7 @@
 Nginx
 =====
 
-Because Nginx doesn't directly support PKCS#11 modules, we use OpenSSL engine with our PKCS#11 module.
+You can configure Nginx to use NetHSM by configuring Nginx to use the OpenSSL engine that then uses NetHSM's PKCS#11 module.
 
 The certificate file has to be on the disk but the private key can be used from the NetHSM.
 

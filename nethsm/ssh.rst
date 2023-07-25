@@ -1,7 +1,7 @@
 SSH
 ===
 
-You can use NetHSM for SSH authentication. You need to pass the module path in the command line or the SSH configuration.
+You can use NetHSM for SSH authentication. You need to pass the PKCS#11 module path in the command line or the SSH configuration.
 
 .. tabs::
   .. tab:: Command line
