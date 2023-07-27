@@ -54,7 +54,6 @@ The configuration is yaml-formatted:
         slots:
           - label: LocalHSM                        # Name you NetHSM however you want
             description: Local HSM (docker)        # Optional description
-            url: "https://keyfender:8443/api/v1"   # URL to reach the server
             
             # Users connecting to the NetHSM server
             operator:
@@ -63,21 +62,32 @@ The configuration is yaml-formatted:
             administrator:
               username: "admin"
 
-            # When the server has a self-signed certificate, you can allow it via two ways:
+            # List the NetHSM instances 
+            instances:
+              - url: "https://keyfender:8443/api/v1"   # URL to reach the server
+                # When the server has a self-signed certificate, you can allow it via two ways:
 
-            # File containing the certificate of the server
-            certificate_file: /etc/cert/localhsm.pem
-            # The string certificate of the server
-            certificate: |
-                -----BEGIN CERTIFICATE-----
-                MIIBHjCBxaADAgECAgkApoJ3bQqnwmcwCgYIKoZIzj0EAwIwFDESMBAGA1UEAwwJ
-                a2V5ZmVuZGVyMCAXDTcwMDEwMTAwMDAwMFoYDzk5OTkxMjMxMjM1OTU5WjAUMRIw
-                EAYDVQQDDAlrZXlmZW5kZXIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARzywjh
-                NQM4pBxNBIOrgWvKFcWle5SLGux1caV9rur/fnPptDnekjZ2fajJX2EEACjk9JKw
-                VykkfhbAdR46VGgFMAoGCCqGSM49BAMCA0gAMEUCIQDvm9J5y9S9POsfdlo5lKzg
-                VFYo7UBT3aTavB6b+hUUbQIgMzT1fBhbBFTgCx5LKQMp1V7SuyCby3oxL5RWYqhl
-                /R0=
-                -----END CERTIFICATE-----
+                # File containing the certificate of the server
+                certificate_file: /etc/cert/localhsm.pem
+                # The string certificate of the server
+                certificate: |
+                    -----BEGIN CERTIFICATE-----
+                    MIIBHjCBxaADAgECAgkApoJ3bQqnwmcwCgYIKoZIzj0EAwIwFDESMBAGA1UEAwwJ
+                    a2V5ZmVuZGVyMCAXDTcwMDEwMTAwMDAwMFoYDzk5OTkxMjMxMjM1OTU5WjAUMRIw
+                    EAYDVQQDDAlrZXlmZW5kZXIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARzywjh
+                    NQM4pBxNBIOrgWvKFcWle5SLGux1caV9rur/fnPptDnekjZ2fajJX2EEACjk9JKw
+                    VykkfhbAdR46VGgFMAoGCCqGSM49BAMCA0gAMEUCIQDvm9J5y9S9POsfdlo5lKzg
+                    VFYo7UBT3aTavB6b+hUUbQIgMzT1fBhbBFTgCx5LKQMp1V7SuyCby3oxL5RWYqhl
+                    /R0=
+                    -----END CERTIFICATE-----
+
+Instances
+~~~~~~~~~
+
+If multiple NetHSM instances are listed in the same slot, these instances must be configured in a cluster. The credentials of the users and the keys must be the same on all instances.
+
+The module will use the instances in a round-robin fashion, trying another instance if one fails.
+
 
 Users
 ~~~~~
