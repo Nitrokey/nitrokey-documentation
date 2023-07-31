@@ -1,8 +1,7 @@
 System Recovery
 ===============
 
-The following describes the recovery process for the NetHSM system software.
-Please follow the instructions precicsely to prevent any accidential deletion of data.
+The following describes the recovery process for the NetHSM system software. Follow the instructions precicsely to prevent any accidential deletion of data.
 
 .. important::
    The system recovery only works if the GUID partition table (GPT) and the partitions itself on the disk are not corrupted.
@@ -53,7 +52,7 @@ The system recovery can be performed as follows.
       BMC KVM console view
 
    This window will show you the graphical output of the NetHSM installer.
-   Please keep this second window open together with the main window from the BMC.
+   Keep this second window open together with the main window from the BMC.
 8. Change to the view *Overview* from the top of the menu on the left.
 9. In the box *Override Boot Device*, select *USB_BMC-virtual_media* from the drop-down next to *Select a Boot Device*.
 
