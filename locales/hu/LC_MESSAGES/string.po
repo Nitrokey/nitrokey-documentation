@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-29 00:05+0200\n"
+"POT-Creation-Date: 2023-07-31 12:30+0200\n"
 "PO-Revision-Date: 2023-07-28 23:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -108,9 +107,8 @@ msgstr "Windows"
 msgid "macOS"
 msgstr "macOS"
 
-#: ../fido2/index.rst:16 ../hsm/index.rst:16
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:40
-#: ../nextbox/clients/index.rst:8 ../nitrokey3/index.rst:21 ../pro/index.rst:17
+#: ../fido2/index.rst:16 ../hsm/index.rst:16 ../nextbox/clients/index.rst:8
+#: ../nitrokey3/index.rst:21 ../pro/index.rst:17
 #: ../software/nitropy/all-platforms/installation.rst:89
 #: ../software/nitropy/index.rst:6 ../start/index.rst:16
 #: ../storage/index.rst:16 ../u2f/index.rst:8
@@ -2240,8 +2238,7 @@ msgstr ""
 msgid "Nitrokey Pro 2, Nitrokey Storage 2, or Nitrokey HSM 2"
 msgstr "Nitrokey Pro 2, Nitrokey Storage 2 vagy Nitrokey HSM 2"
 
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:53
-#: ../nextbox/external-storage.rst:18
+#: ../nethsm/pkcs11-setup.rst:25 ../nextbox/external-storage.rst:18
 #: ../nitrokey3/shared/openpgp-uif.rst.inc:17
 #: ../pro/linux/automatic-screen-lock.rst:21
 msgid "Configuration"
@@ -5916,6 +5913,81 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_users-UserID-tags-Tag>`__ találhatók."
 
+#: ../nethsm/ejbca.rst:2
+msgid "EJBCA"
+msgstr ""
+
+#: ../nethsm/ejbca.rst:4
+msgid ""
+"EJBCA is a PKI Certificate Authority software, you can find more "
+"information about EJBCA at `EJBCA <https://www.ejbca.org/>`__."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:6
+msgid ""
+"To be able to use NetHSM with EJBCA you need to setup the NetHSM PKCS#11 "
+"module (`setup <pkcs11-setup.html>`__)."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:8
+msgid ""
+"Then configure EJBCA to ues the NetHSM PKCS#11 module by adding an entry "
+"in the ``/etc/ejbca/conf/web.properties`` file:"
+msgstr ""
+
+#: ../nethsm/ejbca.rst:16
+msgid ""
+"The ``418`` in the name is an index that must be unique for each PKCS#11 "
+"module in the configuration file."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:18
+msgid ""
+"After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
+"GUI "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
+"name is ``Nitrokey NetHSM``."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:22 ../nethsm/nginx.rst:108
+msgid "Executing The Example"
+msgstr ""
+
+#: ../nethsm/ejbca.rst:24 ../nethsm/nginx.rst:110
+msgid ""
+"If you want to experiment with the given example you can clone with git "
+"the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`__ and run the following commands:"
+msgstr ""
+
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the getting-"
+"started guide for more information."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:27
+msgid ""
+"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
+"``container/ejbca/p11nethsm.conf``."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:28 ../nethsm/nginx.rst:125
+msgid "Build the container."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:34 ../nethsm/nginx.rst:131
+#, fuzzy
+msgid "Run the container."
+msgstr "A parancssor használata"
+
+#: ../nethsm/ejbca.rst:40 ../nethsm/nginx.rst:137
+msgid ""
+"The container will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
+msgstr ""
+
 #: ../nethsm/getting-started.rst:2 ../nextbox/gettingstarted.rst:2
 #: ../nitropad/qubes/index.rst:7 ../nitropad/ubuntu/index.rst:7
 #: ../nitropc/debian/index.rst:14 ../nitropc/qubes/index.rst:14
@@ -6114,372 +6186,6 @@ msgstr ""
 "információkért olvassa el a `Boot Mode <administration.html#boot-mode>`__"
 " fejezetet."
 
-#: ../nethsm/guides.rst:2
-msgid "Guides"
-msgstr "Útmutatók"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:2
-msgid "PKCS#11 with pkcs11-tool"
-msgstr "PKCS#11 a pkcs11-tool segítségével"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:4
-msgid ""
-"This guide describes the use of the PKCS#11 driver for the NetHSM. The "
-"guide uses tools from `OpenSC <https://github.com/OpenSC/OpenSC>`__. "
-"Please refer to their documentation to learn how to use them on your "
-"operating system."
-msgstr ""
-"Ez az útmutató a PKCS#11 illesztőprogram használatát írja le a NetHSM "
-"számára. Az útmutató a `OpenSC <https://github.com/OpenSC/OpenSC>`__ "
-"eszközökkel dolgozik. Kérjük, olvassa el a dokumentációjukat, hogy "
-"megtudja, hogyan kell használni őket az Ön operációs rendszerén."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:9 ../nethsm/integration.rst:16
-msgid ""
-"This driver is still an early Proof of Concept implementation that only "
-"implements the functions that are necessary for operating TLS servers."
-msgstr ""
-"Ez az illesztőprogram még mindig egy korai Proof of Concept megvalósítás,"
-" amely csak a TLS-kiszolgálók működtetéséhez szükséges funkciókat "
-"valósítja meg."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:13
-#: ../nitrokey3/shared/nitropy.rst:9 ../pro/openpgp-thunderbird.rst.inc:28
-#: ../software/nitropy/all-platforms/installation.rst:31
-msgid "Installation"
-msgstr "Telepítés"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:16
-msgid "Install precompiled library"
-msgstr "Előre lefordított könyvtár telepítése"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:18
-msgid ""
-"Download an archive with the latest release from the `releases page "
-"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the "
-"repository. Use the release archive which contains the name of your "
-"operating system in the title."
-msgstr ""
-"Töltse le a legfrissebb kiadást tartalmazó archívumot a `releases "
-"oldalról <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ az "
-"adattárból. Használja azt a kiadási archívumot, amelynek címében szerepel"
-" az operációs rendszer neve."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:21
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:36
-msgid ""
-"Extract the files from the downloaded archive with an archiving programm "
-"of your choice."
-msgstr ""
-"A fájlokat a letöltött archívumból egy tetszőleges archiválóprogrammal "
-"kicsomagolhatja."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:23
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:49
-msgid ""
-"Copy the extracted library to the respective path in your operating "
-"system. The path depends on your installation and configuration of "
-"OpenSC."
-msgstr ""
-"Másolja a kinyert könyvtárat az operációs rendszer megfelelő elérési "
-"útvonalára. Az útvonal az OpenSC telepítésétől és konfigurációjától függ."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:27
-msgid "Compile from source code"
-msgstr "Fordítás forráskódból"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:30
-msgid ""
-"This driver can only be compiled with the official Go compiler. Do not "
-"use the GNU Go compiler (GCC-Go). Please refer to their `website "
-"<https://go.dev/doc/install>`__ to learn how to install it."
-msgstr ""
-"Ez az illesztőprogram csak a hivatalos Go fordítóval fordítható. Ne "
-"használja a GNU Go fordítót (GCC-Go). Kérjük, olvassa el a `weboldalukat "
-"<https://go.dev/doc/install>`__, hogy megtudja, hogyan kell telepíteni."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:34
-msgid ""
-"Download an archive with the latest release from the `releases page "
-"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the "
-"repository. Use the release archive which contains `Source code` in the "
-"title."
-msgstr ""
-"Töltse le a legfrissebb kiadást tartalmazó archívumot a `releases "
-"oldalról <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ az "
-"adattárból. Használja azt a kiadási archívumot, amelynek címében szerepel"
-" a `Source code`."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:37
-msgid ""
-"In the directory with the extracted source code execute the following "
-"command to compile the library."
-msgstr ""
-"A kinyert forráskódot tartalmazó könyvtárban a következő parancsot kell "
-"végrehajtani a könyvtár lefordításához."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:44
-msgid "MacOS"
-msgstr "MacOS"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:55
-msgid ""
-"The configuration file `p11nethsm.conf` is required and used to configure"
-" the connection between the PKCS#11 driver and the NetHSM."
-msgstr ""
-"A PKCS#11 illesztőprogram és a NetHSM közötti kapcsolat konfigurálásához "
-"szükséges az `p11nethsm.conf` konfigurációs fájl."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:57
-msgid "An example configuration file looks like follows."
-msgstr "Egy példa konfigurációs fájl a következőképpen néz ki."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:60
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:91
-msgid "Linux and MacOS"
-msgstr "Linux és MacOS"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:78
-msgid ""
-"Modify the configuration file `p11nethsm.conf` according to your "
-"environment."
-msgstr ""
-"Módosítsa a `p11nethsm.conf` konfigurációs fájlt a környezetének "
-"megfelelően."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:80
-msgid ""
-"The configuration file can include multiple slots, inside the `slots` "
-"array. The slots represent multiple NetHSM deployments. The `label` field"
-" of a slot needs to contain a unique name. The `url`, `user`, and "
-"`password` keys are mandatory. For security reasons it is recommended to "
-"pass the password in an environment variable. For this the "
-"`env:NETHSM_PASS` is passed in the `password` key, where `NETHSM_PASS` is"
-" the name of the environment variable containing the password. The "
-"`certSHA256` key needs to be set if the TLS certificate is not signed by "
-"a Certificate Authority (CA) contained in the certificate store of the "
-"operating system."
-msgstr ""
-"A konfigurációs fájl több slotot is tartalmazhat, a `slots` tömbben. A "
-"slotok több NetHSM telepítést képviselnek. A slotok `label` mezőjének "
-"tartalmaznia kell egy egyedi nevet. Az `url`, `user` és `password` "
-"kulcsok kötelezőek. Biztonsági okokból ajánlott a jelszót egy környezeti "
-"változóban átadni. Ehhez a `env:NETHSM_PASS` kulcsban a `password` "
-"kulcsot kell átadni, ahol a `NETHSM_PASS` a jelszót tartalmazó környezeti"
-" változó neve. A `certSHA256` kulcsot akkor kell beállítani, ha a TLS "
-"tanúsítványt nem az operációs rendszer tanúsítványtárolójában található "
-"tanúsítványkiadó (CA) írta alá."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:88
-msgid ""
-"The configuration file needs to be saved either in the following paths or"
-" in the directory the application is executed."
-msgstr ""
-"A konfigurációs fájlt vagy a következő elérési utakra, vagy az alkalmazás"
-" futtatásának könyvtárába kell menteni."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:92
-msgid "`$HOME/.nitrokey`"
-msgstr "`$HOME/.nitrokey`"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:93
-msgid "`/etc/nitrokey/`"
-msgstr "`/etc/nitrokey/`"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:96 ../nethsm/operation.rst:11
-msgid "Key Management"
-msgstr "Kulcskezelés"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:99
-msgid "Info"
-msgstr "Info"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:101
-msgid "Show information about the cryptoki version, and the PKCS#11 driver."
-msgstr ""
-"A cryptoki verziójára és a PKCS#11 illesztőprogramra vonatkozó "
-"információk megjelenítése."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:115
-msgid "List Slots"
-msgstr "Listanyílások listája"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:117
-msgid ""
-"The information about the available slots. The listed slots depend on the"
-" configuration of the slots array in the `p11nethsm.conf` configuration "
-"file. To learn more about the configuration of slots, please refer to "
-"chapter `Configuration <pkcs11_with_pkcs11-tool.html#configuration>`_."
-msgstr ""
-"A rendelkezésre álló résidőkre vonatkozó információk. A felsorolt slotok "
-"a `p11nethsm.conf` konfigurációs fájlban található slot tömb "
-"konfigurációjától függnek. A bővítőhelyek konfigurációjáról bővebben a "
-"`Konfiguráció <pkcs11_with_pkcs11-tool.html#configuration>`_ című "
-"fejezetben olvashat."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:139
-msgid ""
-"If your configuration supports more than one slot, you maybe have to add "
-"the `--slot <arg>` option in pkcs11-tool commands to use the right one."
-msgstr ""
-"Ha a konfigurációd egynél több slotot támogat, akkor lehet, hogy a "
-"pkcs11-tool parancsokban a `--slot <arg>` opciót kell hozzáadnod a "
-"megfelelő slot használatához."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:142 ../nethsm/operation.rst:14
-msgid "Generate Key"
-msgstr "Kulcs generálása"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:144
-msgid "Generate a key-pair and store it on the NetHSM."
-msgstr "Generáljon egy kulcspárt, és tárolja azt a NetHSM-en."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:147
-msgid ""
-"The PKCS#11 driver currently does not support this feature. A key-pair "
-"can be generated with *nitropy* or a REST API request. To learn more "
-"about how to generate a key, please refer to chapter `Generate Key "
-"<../operation.html#generate-key>`_."
-msgstr ""
-"A PKCS#11 illesztőprogram jelenleg nem támogatja ezt a funkciót. A "
-"kulcspárokat a *nitropy* vagy egy REST API-kérelem segítségével lehet "
-"létrehozni. A kulcs generálásáról bővebben a `Kulcs generálása "
-"<../operation.html#generate-key>`_ fejezetben olvashat."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:152 ../nethsm/operation.rst:228
-msgid "List Keys"
-msgstr "Kulcsok listája"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:154
-msgid ""
-"Show information about the keys and certificates in the *Key Store* on a "
-"NetHSM."
-msgstr ""
-"A NetHSM-en a *Key Store* címen található kulcsokról és tanúsítványokról "
-"szóló információk megjelenítése."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:175
-msgid "Read Keys"
-msgstr "Kulcsok olvasása"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:177
-msgid ""
-"Read keys and certificates from the *Key Store* on a NetHSM. It is not "
-"possible to read private keys from the NetHSM."
-msgstr ""
-"Kulcsok és tanúsítványok olvasása a *kulcstárolóról* a NetHSM-en. A "
-"NetHSM-ről nem lehet privát kulcsokat olvasni."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:180
-msgid "The public key of a key-pair can be read as follows."
-msgstr "Egy kulcspár nyilvános kulcsa a következőképpen olvasható."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:186
-msgid "The certificate of a key-pair can be read as follows."
-msgstr "A kulcspár tanúsítványa a következőképpen olvasható."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:192
-msgid ""
-"The returned certificates or public keys are ASN.1 encoded. The data can "
-"be decoded with the *dumpasn1* tool, as it contains data in DER format. "
-"The DER format can be converted to PEM format with OpenSSL."
-msgstr ""
-"A visszaküldött tanúsítványok vagy nyilvános kulcsok ASN.1 kódolásúak. Az"
-" adatok dekódolhatók a *dumpasn1* eszközzel, mivel DER formátumú adatokat"
-" tartalmaznak. A DER formátum az OpenSSL segítségével PEM formátumra "
-"konvertálható."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:197
-msgid "Write Keys"
-msgstr "Kulcsok írása"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:199
-msgid "Write keys and certificates to the *Key Store* on a NetHSM."
-msgstr "Kulcsok és tanúsítványok írása a *kulcstárolóba* a NetHSM-en."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:201
-msgid "The private key of a key-pair can be wrote as follows."
-msgstr "A kulcspár privát kulcsa a következőképpen írható."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:207
-msgid "The public key of a key-pair can be wrote as follows."
-msgstr "A kulcspár nyilvános kulcsa a következőképpen írható."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:213
-msgid "The certificate of a key-pair can be wrote as follows."
-msgstr "A kulcspár tanúsítványa a következőképpen írható."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:220 ../nethsm/operation.rst:595
-msgid "Key Operations"
-msgstr "Kulcsműveletek"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:223 ../nethsm/operation.rst:598
-msgid "Encrypt"
-msgstr "Titkosítás"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:225
-msgid ""
-"The NetHSM can not encrypt data with asymmetric keys, but it provides the"
-" public key which can be used for encryption. Please refer to chapter "
-"`Show Key Details <operation.html#show-key-details>`__, or retrieve the "
-"key as described in chapter `Read Keys <pkcs11_with_pkcs11.html#read-"
-"keys>`, to learn more about how to retrieve the public key. The example "
-"assumes the public key in the `public.pem` file."
-msgstr ""
-"A NetHSM nem képes aszimmetrikus kulcsokkal titkosítani az adatokat, de "
-"biztosítja a titkosításhoz használható nyilvános kulcsot. Kérjük, olvassa"
-" el a `A kulcs adatainak megjelenítése <operation.html#show-key-"
-"details>`__ fejezetet, vagy kérje le a kulcsot a `Kulcsok olvasása "
-"<pkcs11_with_pkcs11.html#read-keys>` fejezetben leírtak szerint, hogy "
-"többet megtudjon a nyilvános kulcs lekérdezéséről. A példa feltételezi, "
-"hogy a nyilvános kulcs a `public.pem` fájlban található."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:230
-msgid "Data can be encrypted with OpenSSL as follows."
-msgstr "Az adatok az OpenSSL segítségével a következőképpen titkosíthatók."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:242 ../nethsm/operation.rst:633
-msgid "Decrypt"
-msgstr "Dekódolás"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:244
-msgid ""
-"The NetHSM can decrypt data for a private key stored in the *Key Store* "
-"on the NetHSM. This example uses the encrypted message from the previous "
-"chapter `Encrypt <pkcs11_with_pkcs11-tool.html#encrypt>`__."
-msgstr ""
-"A NetHSM képes visszafejteni a NetHSM *Key Store* címén tárolt magánkulcs"
-" adatait. Ez a példa az előző fejezetben `Encrypt "
-"<pkcs11_with_pkcs11-tool.html#encrypt>`__ titkosított üzenetét használja."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:260 ../nethsm/operation.rst:683
-msgid "Sign"
-msgstr "Jelentkezzen a  címen."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:262 ../nethsm/operation.rst:685
-msgid ""
-"The NetHSM can sign data for a private key stored in the *Key Store* on "
-"the NetHSM. For signatures with a RSA and ECDSA key, a digest must be "
-"calculate first."
-msgstr ""
-"A NetHSM képes aláírni a NetHSM-en található *Key Store*-ban tárolt "
-"magánkulcshoz tartozó adatokat. Az RSA és ECDSA kulccsal történő "
-"aláíráshoz először egy digestet kell kiszámítani."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:265 ../nethsm/operation.rst:688
-msgid ""
-"To calculate a digest the data is required first. A message is created as"
-" follows."
-msgstr ""
-"A digest kiszámításához először az adatokra van szükség. Az üzenet "
-"létrehozása a következőképpen történik."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:275 ../nethsm/operation.rst:740
-msgid "The created signature can be verified with OpenSSL as follows."
-msgstr ""
-"A létrehozott aláírás az OpenSSL segítségével a következőképpen "
-"ellenőrizhető."
-
 #: ../nethsm/index.rst:2
 msgid "NetHSM"
 msgstr "NetHSM"
@@ -6578,12 +6284,22 @@ msgstr ""
 "operációs rendszerekhez."
 
 #: ../nethsm/integration.rst:13
+#, fuzzy
 msgid ""
-"The `PKCS#11 guide <guides/pkcs11_with_pkcs11-tool.html>`_ describes how "
-"to use them in detail."
+"The `PKCS#11 guide <guides/pkcs11-setup.html>`_ describes how to use them"
+" in detail."
 msgstr ""
 "A `PKCS#11 útmutató <guides/pkcs11_with_pkcs11-tool.html>`_ részletesen "
 "leírja ezek használatát."
+
+#: ../nethsm/integration.rst:16
+msgid ""
+"This driver is still an early Proof of Concept implementation that only "
+"implements the functions that are necessary for operating TLS servers."
+msgstr ""
+"Ez az illesztőprogram még mindig egy korai Proof of Concept megvalósítás,"
+" amely csak a TLS-kiszolgálók működtetéséhez szükséges funkciókat "
+"valósítja meg."
 
 #: ../nethsm/integration.rst:20
 msgid "Development and Testing"
@@ -6704,6 +6420,164 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`_ megtekinthető és "
 "tesztelhető."
 
+#: ../nethsm/nginx.rst:2
+#, fuzzy
+msgid "Nginx"
+msgstr "Linux"
+
+#: ../nethsm/nginx.rst:4
+msgid ""
+"You can configure Nginx to use NetHSM by configuring Nginx to use the "
+"OpenSSL engine that then uses NetHSM's PKCS#11 module."
+msgstr ""
+
+#: ../nethsm/nginx.rst:6
+msgid ""
+"The certificate file has to be on the disk but the private key can be "
+"used from the NetHSM."
+msgstr ""
+
+#: ../nethsm/nginx.rst:8
+msgid ""
+"An example is available in the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"under container/nginx."
+msgstr ""
+
+#: ../nethsm/nginx.rst:11
+#, fuzzy
+msgid "OpenSSL Configuration"
+msgstr "Ügyféloldali konfiguráció"
+
+#: ../nethsm/nginx.rst:30
+msgid ""
+"You need to configure the engine section to include the pkcs11 engine in "
+"the ``dynamic_path`` property and the ``libnethsm_pkcs11.so`` module in "
+"the ``MODULE_PATH`` property."
+msgstr ""
+
+#: ../nethsm/nginx.rst:32
+msgid "The engine can be installed on debian-based machines using"
+msgstr ""
+
+#: ../nethsm/nginx.rst:35
+msgid "Debian/Ubuntu"
+msgstr ""
+
+#: ../nethsm/nginx.rst:41
+#, fuzzy
+msgid "Nginx Configuration"
+msgstr "Konfiguráció"
+
+#: ../nethsm/nginx.rst:78
+msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
+msgstr ""
+
+#: ../nethsm/nginx.rst:80
+msgid ""
+"The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
+"the OpenSSL engine with the PKCS#11 module and select the private key "
+"with the label/ID ``webserver`` and the key type ``private``."
+msgstr ""
+
+#: ../nethsm/nginx.rst:82
+msgid ""
+"``ssl_certificate_key "
+"\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
+msgstr ""
+
+#: ../nethsm/nginx.rst:85
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"Nginx won't start."
+msgstr ""
+
+#: ../nethsm/nginx.rst:88
+#, fuzzy
+msgid "libnethsm_pkcs11 Configuration"
+msgstr "Ügyféloldali konfiguráció"
+
+#: ../nethsm/nginx.rst:100
+msgid ""
+"To secure the password you can provide it via an environment variable "
+"(see `Setup <setup.html>`__). You can also provide it in the nginx "
+"configuration:"
+msgstr ""
+
+#: ../nethsm/nginx.rst:114
+msgid "Running the generate script deletes the ``webserver`` key and replaces it."
+msgstr ""
+
+#: ../nethsm/nginx.rst:117
+msgid ""
+"If your NetHSM is not running on localhost, you will need to change the "
+"URL of the curl requests in ``container/nginx/generate.sh`` to point to "
+"your NetHSM."
+msgstr ""
+
+#: ../nethsm/nginx.rst:118
+msgid ""
+"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
+"``container/nginx/p11nethsm.conf``."
+msgstr ""
+
+#: ../nethsm/nginx.rst:119
+#, fuzzy
+msgid "Generate the certificate and key."
+msgstr "A tanúsítványt DER-be konvertálja"
+
+#: ../nethsm/opendnssec.rst:2
+msgid "OpenDNSSEC"
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:4
+msgid ""
+"`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing"
+" the security of domain names. It can directly load a PKCS#11 module and "
+"manage the keys."
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:6
+msgid ""
+"To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick "
+"Start Guide "
+"<https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__. You "
+"don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be used"
+" instead."
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:8
+msgid ""
+"As OpenDNSSEC needs access to manage the keys and then use them, you will"
+" need to configure both administrator and operator account in the PKCS#11"
+" module configuration file."
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:10
+msgid ""
+"You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by "
+"editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the "
+"following lines:"
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:34
+msgid ""
+"Replace ``/root/libnethsm_pkcs11.so`` with the path to the "
+"libnethsm_pkcs11.so module. You need to match the ``<TokenLabel>`` with "
+"the label you set in the ``p11nethsm.conf`` configuration file. The "
+"``<PIN>`` is the operator PIN, you can either set it in plain text in the"
+" ``conf.xml`` file or use ``ods-hsmutil login``. OpenDNSSEC need to have "
+"a pin provided or it will refuse to start."
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:38
+msgid ""
+"You also need to update the ``<Repository>`` fields in "
+"``/etc/opendnssec/kasp.xml`` to ``NetHSM`` instead of the default "
+"``SoftHSM`` :"
+msgstr ""
+
 #: ../nethsm/operation.rst:2
 msgid "Operation"
 msgstr "Művelet"
@@ -6717,6 +6591,14 @@ msgstr ""
 "Ez a fejezet a *Administrator* és *Operator* szerepkörrel rendelkező "
 "felhasználók üzemeltetési feladatait írja le. A szerepkörökről bővebben a"
 " `Rollák <administration.html#roles>`__ fejezetben olvashat."
+
+#: ../nethsm/operation.rst:11
+msgid "Key Management"
+msgstr "Kulcskezelés"
+
+#: ../nethsm/operation.rst:14
+msgid "Generate Key"
+msgstr "Kulcs generálása"
 
 #: ../nethsm/operation.rst:16
 msgid ""
@@ -6971,6 +6853,10 @@ msgstr ""
 "dokumentációban "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_keys-KeyID>`__ találhatók."
+
+#: ../nethsm/operation.rst:228 ../nethsm/pkcs11-tool.rst:102
+msgid "List Keys"
+msgstr "Kulcsok listája"
 
 #: ../nethsm/operation.rst:230
 msgid "The NetHSM can list all the available keys in the *Key Store*."
@@ -7241,6 +7127,14 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-"
 "KeyID-csr-pem><x>`__ találhatók."
 
+#: ../nethsm/operation.rst:595
+msgid "Key Operations"
+msgstr "Kulcsműveletek"
+
+#: ../nethsm/operation.rst:598 ../nethsm/pkcs11-tool.rst:157
+msgid "Encrypt"
+msgstr "Titkosítás"
+
 #: ../nethsm/operation.rst:600
 msgid ""
 "The NetHSM can encrypt data for symmetric keys, stored in the *Key "
@@ -7299,6 +7193,10 @@ msgstr ""
 "Ez a ``NetHSM rulez!`` titkosított és base64 kódolt üzenetet írja a "
 "``data.crypt`` fájlba, a ``public.pem`` nyilvános kulcsának "
 "felhasználásával."
+
+#: ../nethsm/operation.rst:633 ../nethsm/pkcs11-tool.rst:169
+msgid "Decrypt"
+msgstr "Dekódolás"
 
 #: ../nethsm/operation.rst:635
 msgid ""
@@ -7387,6 +7285,28 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-"
 "KeyID-decrypt>`__ találhatók."
 
+#: ../nethsm/operation.rst:683 ../nethsm/pkcs11-tool.rst:196
+msgid "Sign"
+msgstr "Jelentkezzen a  címen."
+
+#: ../nethsm/operation.rst:685
+msgid ""
+"The NetHSM can sign data for a private key stored in the *Key Store* on "
+"the NetHSM. For signatures with a RSA and ECDSA key, a digest must be "
+"calculate first."
+msgstr ""
+"A NetHSM képes aláírni a NetHSM-en található *Key Store*-ban tárolt "
+"magánkulcshoz tartozó adatokat. Az RSA és ECDSA kulccsal történő "
+"aláíráshoz először egy digestet kell kiszámítani."
+
+#: ../nethsm/operation.rst:688
+msgid ""
+"To calculate a digest the data is required first. A message is created as"
+" follows."
+msgstr ""
+"A digest kiszámításához először az adatokra van szükség. Az üzenet "
+"létrehozása a következőképpen történik."
+
 #: ../nethsm/operation.rst:694
 msgid "The digest is calculated with OpenSSL as follows."
 msgstr "A kivonatot az OpenSSL a következőképpen számítja ki."
@@ -7455,6 +7375,12 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-"
 "KeyID-sign>`__ találhatók."
 
+#: ../nethsm/operation.rst:740
+msgid "The created signature can be verified with OpenSSL as follows."
+msgstr ""
+"A létrehozott aláírás az OpenSSL segítségével a következőképpen "
+"ellenőrizhető."
+
 #: ../nethsm/operation.rst:751
 msgid "Random"
 msgstr "Random"
@@ -7482,6 +7408,406 @@ msgstr ""
 "A `/random` végponttal kapcsolatos információk az `API dokumentációban "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_random>`__"
 " találhatók."
+
+#: ../nethsm/pkcs11-setup.rst:2
+msgid "PKCS#11 Setup"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:6 ../nitrokey3/shared/nitropy.rst:9
+#: ../pro/openpgp-thunderbird.rst.inc:28
+#: ../software/nitropy/all-platforms/installation.rst:31
+msgid "Installation"
+msgstr "Telepítés"
+
+#: ../nethsm/pkcs11-setup.rst:8
+msgid ""
+"You can either get the NetHSM PKCS#11 module as a precompiled binary or "
+"compile it from source."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:11
+#, fuzzy
+msgid "Precompiled Binaries"
+msgstr "Előre lefordított könyvtár telepítése"
+
+#: ../nethsm/pkcs11-setup.rst:13
+#, fuzzy
+msgid ""
+"Download the module file corresponding to your system from the `releases "
+"page <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the "
+"repository."
+msgstr ""
+"Töltse le a legfrissebb kiadást tartalmazó archívumot a `releases "
+"oldalról <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ az "
+"adattárból. Használja azt a kiadási archívumot, amelynek címében szerepel"
+" a `Source code`."
+
+#: ../nethsm/pkcs11-setup.rst:14
+msgid ""
+"Copy the module file to the directory where your PKCS#11 applications "
+"expect to find it."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:17
+#, fuzzy
+msgid "Compile From Source"
+msgstr "Fordítás forráskódból"
+
+#: ../nethsm/pkcs11-setup.rst:19
+msgid "Install the `Rust toolchain <https://www.rust-lang.org/tools/install>`__."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:20
+#, fuzzy
+msgid ""
+"Download and extract the source from the `releases page "
+"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ or clone the "
+"`repository <https://github.com/Nitrokey/nethsm-pkcs11>`__."
+msgstr ""
+"Töltse le a legfrissebb kiadást tartalmazó archívumot a `releases "
+"oldalról <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ az "
+"adattárból. Használja azt a kiadási archívumot, amelynek címében szerepel"
+" a `Source code`."
+
+#: ../nethsm/pkcs11-setup.rst:21
+msgid "Run ``cargo build --release`` in the source directory."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:27
+msgid "By default the module searches for configuration files in:"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:29
+#, fuzzy
+msgid "``/etc/nitrokey/p11nethsm.conf``"
+msgstr "`/etc/nitrokey/`"
+
+#: ../nethsm/pkcs11-setup.rst:30
+msgid "``/usr/local/etc/nitrokey/p11nethsm.conf``"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:31
+msgid "``$HOME/.config/nitrokey/p11nethsm.conf``"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:33
+msgid ""
+"If multiple files are present the slots of all the config files will be "
+"added."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:35
+msgid ""
+"You can manually set the config file location (only this one will be "
+"read) with the env variable ``P11NETHSM_CONFIG_FILE`` (e.g. "
+"``P11NETHSM_CONFIG_FILE=./p11nethsm.conf``)."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:38
+#, fuzzy
+msgid "Configuration File Format"
+msgstr "Konfiguráció"
+
+#: ../nethsm/pkcs11-setup.rst:40
+msgid "The configuration is yaml-formatted:"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:43
+#, fuzzy
+msgid "All platforms"
+msgstr "Minden platform"
+
+#: ../nethsm/pkcs11-setup.rst:85
+msgid "Instances"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:87
+msgid ""
+"If multiple NetHSM instances are listed in the same slot, these instances"
+" must be configured in a cluster. The credentials of the users and the "
+"keys must be the same on all instances."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:89
+msgid ""
+"The module will use the instances in a round-robin fashion, trying "
+"another instance if one fails."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:93
+#, fuzzy
+msgid "Users"
+msgstr "Qubes"
+
+#: ../nethsm/pkcs11-setup.rst:95
+msgid ""
+"The operator and administrator users are both optional but the module "
+"won't start if no user is configured. This is so you can configure the "
+"module with only an administrator user, only an operator user or both at "
+"the same time."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:97
+msgid ""
+"When the two users are set the module will use the operator by default "
+"and only use the administrator user when the action needs it."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:99
+msgid ""
+"The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 "
+"SO is mapped to the NetHSM administrator."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:102 ../nitrokey3/shared/reset.rst.inc:19
+#: ../software/nk-app2/passwords.rst:2
+msgid "Passwords"
+msgstr "Jelszavak"
+
+#: ../nethsm/pkcs11-setup.rst:104
+msgid "The password can be provided by multiple means:"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:106
+msgid "In plain text in the configuration ``password: \"mypassword\"``"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:107
+msgid ""
+"In an environment variable read by the module with the ``env:`` prefix: "
+"``env:ENV_STORING_THE_PASSWORD``"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:108
+msgid ""
+"Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
+"--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
+"password you need to use ``--so-pin`` instead: ``pkcs11-tool --module "
+"libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:111
+msgid ""
+"If the password of an user is not set in the configuration file a login "
+"will be required to provide the password (3rd method)."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:113
+msgid ""
+"A NetHSM that is not operational is considered as a slot with the token "
+"not present."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:2
+#, fuzzy
+msgid "pkcs11-tool"
+msgstr "PKCS#11 a pkcs11-tool segítségével"
+
+#: ../nethsm/pkcs11-tool.rst:4
+msgid ""
+"`pkcs11-tool <https://github.com/OpenSC/OpenSC/wiki/Using-pkcs11-tool-"
+"and-OpenSSL>`__ is a tool part of the `OpenSC "
+"<https://github.com/OpenSC/OpenSC>`__ project that can be used to manage "
+"keys on a PKCS#11 device."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:6
+msgid ""
+"You need to pass the location of the PKCS#11 module to use with the "
+"``--module`` option:"
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:12
+msgid ""
+"Replace ``/usr/lib/nitrokey/libnethsm_pkcs11.so`` with the path where the"
+" NetHSM PKCS#11 module is located."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:14
+#, fuzzy
+msgid "You can test if the module is working with the next command:"
+msgstr "A csomagot a következő paranccsal frissítheti::"
+
+#: ../nethsm/pkcs11-tool.rst:20
+#, fuzzy
+msgid "You should see something like this:"
+msgstr "A kimenetnek a következőképp kell kinéznie:"
+
+#: ../nethsm/pkcs11-tool.rst:30
+msgid "List Slots"
+msgstr "Listanyílások listája"
+
+#: ../nethsm/pkcs11-tool.rst:32
+#, fuzzy
+msgid ""
+"The information about the available slots. The listed slots depend on the"
+" configuration of the slots array in the `p11nethsm.conf` configuration "
+"file. To learn more about the configuration of slots, please refer to "
+"chapter `Configuration <setup.html#Configuration>`_."
+msgstr ""
+"A rendelkezésre álló résidőkre vonatkozó információk. A felsorolt slotok "
+"a `p11nethsm.conf` konfigurációs fájlban található slot tömb "
+"konfigurációjától függnek. A bővítőhelyek konfigurációjáról bővebben a "
+"`Konfiguráció <pkcs11_with_pkcs11-tool.html#configuration>`_ című "
+"fejezetben olvashat."
+
+#: ../nethsm/pkcs11-tool.rst:53
+#, fuzzy
+msgid ""
+"If your configuration supports more than one slot, you may have to add "
+"the ``--slot <arg>`` option in pkcs11-tool commands to use the right one."
+msgstr ""
+"Ha a konfigurációd egynél több slotot támogat, akkor lehet, hogy a "
+"pkcs11-tool parancsokban a `--slot <arg>` opciót kell hozzáadnod a "
+"megfelelő slot használatához."
+
+#: ../nethsm/pkcs11-tool.rst:56
+msgid "Key IDs"
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:58
+msgid ""
+"pkcs11-tool uses an hexadecimal key ID to identify keys. NetHSM uses "
+"alphanumerical strings as key ID. NetHSM's PKCS#11 module uses the raw "
+"byte values of the string to form the PKCS#11 ID. You can get the "
+"hexadecimal version of a NetHSM key with ``xxd``:"
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:69
+msgid "You can then pass this hex value to pkcs11-tool with the ``--id`` option."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:72
+#, fuzzy
+msgid "Generate a Key"
+msgstr "AES kulcs generálása"
+
+#: ../nethsm/pkcs11-tool.rst:74
+msgid "Generate a key-pair and store it on the NetHSM."
+msgstr "Generáljon egy kulcspárt, és tárolja azt a NetHSM-en."
+
+#: ../nethsm/pkcs11-tool.rst:77
+msgid ""
+"The slot you want to use needs to have an andministrator user in the "
+"configuration file. Otherwise you will get a `CKR_USER_NOT_LOGGED_IN` "
+"error."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:80 ../nethsm/pkcs11-tool.rst:179
+#, fuzzy
+msgid "RSA"
+msgstr "rsa4096"
+
+#: ../nethsm/pkcs11-tool.rst:87
+msgid "ECDSA"
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:95
+#, fuzzy
+msgid "AES/Generic"
+msgstr "Általános"
+
+#: ../nethsm/pkcs11-tool.rst:104
+#, fuzzy
+msgid "List the keys stored on the NetHSM."
+msgstr "A NetHSM felhasználóinak listája."
+
+#: ../nethsm/pkcs11-tool.rst:125
+msgid "Read Keys"
+msgstr "Kulcsok olvasása"
+
+#: ../nethsm/pkcs11-tool.rst:127
+#, fuzzy
+msgid ""
+"Read the public key of a key-pair stored on the NetHSM. It is not "
+"possible to read private keys from the NetHSM."
+msgstr ""
+"Kulcsok és tanúsítványok olvasása a *kulcstárolóról* a NetHSM-en. A "
+"NetHSM-ről nem lehet privát kulcsokat olvasni."
+
+#: ../nethsm/pkcs11-tool.rst:134
+msgid ""
+"The certificate of the key-pair can be read with the same command by "
+"changing the ``--type`` option to ``cert``."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:138
+msgid "The output is in DER format."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:141
+msgid "Write Keys"
+msgstr "Kulcsok írása"
+
+#: ../nethsm/pkcs11-tool.rst:143
+msgid ""
+"Write a private key on the NetHSM. The public key is automatically "
+"derived from the private key."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:149
+msgid ""
+"The certificate of the key-pair can be written with the same command by "
+"changing the ``--type`` option to ``cert``."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:159
+msgid "Encryption of data is only supported for AES keys."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:166
+msgid "You have to manually pad the input data to the block size of the AES key."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:172
+#, fuzzy
+msgid "AES"
+msgstr "igen"
+
+#: ../nethsm/pkcs11-tool.rst:181
+msgid ""
+"You can encrypt data with the public key and decrypt it with the private "
+"key."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:202
+msgid "To verify the signature with OpenSSL:"
+msgstr ""
+
+#: ../nethsm/ssh.rst:2
+msgid "SSH"
+msgstr ""
+
+#: ../nethsm/ssh.rst:4
+msgid ""
+"You can use NetHSM for SSH authentication. You need to pass the PKCS#11 "
+"module path in the command line or the SSH configuration."
+msgstr ""
+
+#: ../nethsm/ssh.rst:7
+#, fuzzy
+msgid "Command line"
+msgstr "A parancssor használata"
+
+#: ../nethsm/ssh.rst:12
+msgid "SSH config"
+msgstr ""
+
+#: ../nethsm/ssh.rst:19
+msgid ""
+"You can also set up SSH to use the NetHSM by default. To do so, add the "
+"following lines to your ``~/.ssh/config`` file:"
+msgstr ""
+
+#: ../nethsm/ssh.rst:27
+msgid "SSH will search for a key on the NetHSM that is accepted by the server."
+msgstr ""
+
+#: ../nethsm/ssh.rst:29
+msgid ""
+"To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
+" following command:"
+msgstr ""
 
 #: ../nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
@@ -12929,10 +13255,6 @@ msgid ""
 msgstr ""
 "nitropiás eszköz: `nitropy fido2 reset`(futtatásához rendszergazdai jogok"
 " szükségesek)."
-
-#: ../nitrokey3/shared/reset.rst.inc:19 ../software/nk-app2/passwords.rst:2
-msgid "Passwords"
-msgstr "Jelszavak"
 
 #: ../nitrokey3/shared/reset.rst.inc:21
 msgid ""
@@ -21103,15 +21425,16 @@ msgstr ""
 #: ../software/nk-app2/passwords.rst:5
 msgid "For now only One-Time Passwords (TOTP and HOTP) are supported."
 msgstr ""
-"Egyelőre csak az egyszer használatos jelszavak (TOTP és HOTP) támogatottak."
+"Egyelőre csak az egyszer használatos jelszavak (TOTP és HOTP) "
+"támogatottak."
 
 #: ../software/nk-app2/passwords.rst:7
 msgid ""
 "For a list of websites supporting OTP have a look at `dongleauth.com "
 "<https://www.dongleauth.com/>`__."
 msgstr ""
-"Az OTP-t támogató webhelyek listáját a `dongleauth.com <https://www."
-"dongleauth.com/>`__ oldalon találja."
+"Az OTP-t támogató webhelyek listáját a `dongleauth.com "
+"<https://www.dongleauth.com/>`__ oldalon találja."
 
 #: ../software/nk-app2/passwords.rst:12
 msgid ""
@@ -21119,10 +21442,10 @@ msgid ""
 "lock) and protected (shown as a closed lock). Unprotected entries can be "
 "accessed directly. Protected entries can only be accessed with the PIN."
 msgstr ""
-"A bejegyzések két kategóriára oszthatók: nem védett (nyitott zárként jelenik "
-"meg) és védett (zárt zárként jelenik meg). A nem védett bejegyzések "
-"közvetlenül elérhetők. A védett bejegyzésekhez csak a PIN-kóddal lehet "
-"hozzáférni."
+"A bejegyzések két kategóriára oszthatók: nem védett (nyitott zárként "
+"jelenik meg) és védett (zárt zárként jelenik meg). A nem védett "
+"bejegyzések közvetlenül elérhetők. A védett bejegyzésekhez csak a PIN-"
+"kóddal lehet hozzáférni."
 
 #: ../software/nk-app2/passwords.rst:14
 msgid ""
@@ -21138,8 +21461,9 @@ msgid ""
 "required touch on the Nitrokey 3 to access the entry by checking the "
 "\"Require User Presence\" box."
 msgstr ""
-"Lehetősége van arra is, hogy a \"Felhasználó jelenlétének megkövetelése\" "
-"négyzet bejelölésével a Nitrokey 3 érintése szükséges a bejegyzés eléréséhez."
+"Lehetősége van arra is, hogy a \"Felhasználó jelenlétének megkövetelése\""
+" négyzet bejelölésével a Nitrokey 3 érintése szükséges a bejegyzés "
+"eléréséhez."
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst.inc:8
 msgid ""
@@ -29263,3 +29587,274 @@ msgstr ""
 
 #~ msgid "Nitrokey App 2 For Windows"
 #~ msgstr "Nitrokey App 2 a Windows számára"
+
+#~ msgid "Guides"
+#~ msgstr "Útmutatók"
+
+#~ msgid ""
+#~ "This guide describes the use of "
+#~ "the PKCS#11 driver for the NetHSM. "
+#~ "The guide uses tools from `OpenSC "
+#~ "<https://github.com/OpenSC/OpenSC>`__. Please refer "
+#~ "to their documentation to learn how "
+#~ "to use them on your operating "
+#~ "system."
+#~ msgstr ""
+#~ "Ez az útmutató a PKCS#11 illesztőprogram"
+#~ " használatát írja le a NetHSM "
+#~ "számára. Az útmutató a `OpenSC "
+#~ "<https://github.com/OpenSC/OpenSC>`__ eszközökkel "
+#~ "dolgozik. Kérjük, olvassa el a "
+#~ "dokumentációjukat, hogy megtudja, hogyan kell"
+#~ " használni őket az Ön operációs "
+#~ "rendszerén."
+
+#~ msgid ""
+#~ "Download an archive with the latest "
+#~ "release from the `releases page "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of"
+#~ " the repository. Use the release "
+#~ "archive which contains the name of "
+#~ "your operating system in the title."
+#~ msgstr ""
+#~ "Töltse le a legfrissebb kiadást "
+#~ "tartalmazó archívumot a `releases oldalról "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ az"
+#~ " adattárból. Használja azt a kiadási "
+#~ "archívumot, amelynek címében szerepel az "
+#~ "operációs rendszer neve."
+
+#~ msgid ""
+#~ "Extract the files from the downloaded"
+#~ " archive with an archiving programm "
+#~ "of your choice."
+#~ msgstr ""
+#~ "A fájlokat a letöltött archívumból egy"
+#~ " tetszőleges archiválóprogrammal kicsomagolhatja."
+
+#~ msgid ""
+#~ "Copy the extracted library to the "
+#~ "respective path in your operating "
+#~ "system. The path depends on your "
+#~ "installation and configuration of OpenSC."
+#~ msgstr ""
+#~ "Másolja a kinyert könyvtárat az "
+#~ "operációs rendszer megfelelő elérési "
+#~ "útvonalára. Az útvonal az OpenSC "
+#~ "telepítésétől és konfigurációjától függ."
+
+#~ msgid ""
+#~ "This driver can only be compiled "
+#~ "with the official Go compiler. Do "
+#~ "not use the GNU Go compiler "
+#~ "(GCC-Go). Please refer to their "
+#~ "`website <https://go.dev/doc/install>`__ to learn"
+#~ " how to install it."
+#~ msgstr ""
+#~ "Ez az illesztőprogram csak a hivatalos"
+#~ " Go fordítóval fordítható. Ne használja "
+#~ "a GNU Go fordítót (GCC-Go). "
+#~ "Kérjük, olvassa el a `weboldalukat "
+#~ "<https://go.dev/doc/install>`__, hogy megtudja, "
+#~ "hogyan kell telepíteni."
+
+#~ msgid ""
+#~ "In the directory with the extracted "
+#~ "source code execute the following "
+#~ "command to compile the library."
+#~ msgstr ""
+#~ "A kinyert forráskódot tartalmazó könyvtárban"
+#~ " a következő parancsot kell végrehajtani"
+#~ " a könyvtár lefordításához."
+
+#~ msgid "MacOS"
+#~ msgstr "MacOS"
+
+#~ msgid ""
+#~ "The configuration file `p11nethsm.conf` is "
+#~ "required and used to configure the "
+#~ "connection between the PKCS#11 driver "
+#~ "and the NetHSM."
+#~ msgstr ""
+#~ "A PKCS#11 illesztőprogram és a NetHSM"
+#~ " közötti kapcsolat konfigurálásához szükséges "
+#~ "az `p11nethsm.conf` konfigurációs fájl."
+
+#~ msgid "An example configuration file looks like follows."
+#~ msgstr "Egy példa konfigurációs fájl a következőképpen néz ki."
+
+#~ msgid "Linux and MacOS"
+#~ msgstr "Linux és MacOS"
+
+#~ msgid ""
+#~ "Modify the configuration file `p11nethsm.conf`"
+#~ " according to your environment."
+#~ msgstr ""
+#~ "Módosítsa a `p11nethsm.conf` konfigurációs "
+#~ "fájlt a környezetének megfelelően."
+
+#~ msgid ""
+#~ "The configuration file can include "
+#~ "multiple slots, inside the `slots` "
+#~ "array. The slots represent multiple "
+#~ "NetHSM deployments. The `label` field of"
+#~ " a slot needs to contain a "
+#~ "unique name. The `url`, `user`, and "
+#~ "`password` keys are mandatory. For "
+#~ "security reasons it is recommended to"
+#~ " pass the password in an environment"
+#~ " variable. For this the `env:NETHSM_PASS`"
+#~ " is passed in the `password` key, "
+#~ "where `NETHSM_PASS` is the name of "
+#~ "the environment variable containing the "
+#~ "password. The `certSHA256` key needs to"
+#~ " be set if the TLS certificate "
+#~ "is not signed by a Certificate "
+#~ "Authority (CA) contained in the "
+#~ "certificate store of the operating "
+#~ "system."
+#~ msgstr ""
+#~ "A konfigurációs fájl több slotot is "
+#~ "tartalmazhat, a `slots` tömbben. A "
+#~ "slotok több NetHSM telepítést képviselnek. "
+#~ "A slotok `label` mezőjének tartalmaznia "
+#~ "kell egy egyedi nevet. Az `url`, "
+#~ "`user` és `password` kulcsok kötelezőek. "
+#~ "Biztonsági okokból ajánlott a jelszót "
+#~ "egy környezeti változóban átadni. Ehhez "
+#~ "a `env:NETHSM_PASS` kulcsban a `password` "
+#~ "kulcsot kell átadni, ahol a "
+#~ "`NETHSM_PASS` a jelszót tartalmazó környezeti"
+#~ " változó neve. A `certSHA256` kulcsot "
+#~ "akkor kell beállítani, ha a TLS "
+#~ "tanúsítványt nem az operációs rendszer "
+#~ "tanúsítványtárolójában található tanúsítványkiadó "
+#~ "(CA) írta alá."
+
+#~ msgid ""
+#~ "The configuration file needs to be "
+#~ "saved either in the following paths "
+#~ "or in the directory the application "
+#~ "is executed."
+#~ msgstr ""
+#~ "A konfigurációs fájlt vagy a következő"
+#~ " elérési utakra, vagy az alkalmazás "
+#~ "futtatásának könyvtárába kell menteni."
+
+#~ msgid "`$HOME/.nitrokey`"
+#~ msgstr "`$HOME/.nitrokey`"
+
+#~ msgid "Info"
+#~ msgstr "Info"
+
+#~ msgid "Show information about the cryptoki version, and the PKCS#11 driver."
+#~ msgstr ""
+#~ "A cryptoki verziójára és a PKCS#11 "
+#~ "illesztőprogramra vonatkozó információk "
+#~ "megjelenítése."
+
+#~ msgid ""
+#~ "The PKCS#11 driver currently does not"
+#~ " support this feature. A key-pair "
+#~ "can be generated with *nitropy* or "
+#~ "a REST API request. To learn more"
+#~ " about how to generate a key, "
+#~ "please refer to chapter `Generate Key"
+#~ " <../operation.html#generate-key>`_."
+#~ msgstr ""
+#~ "A PKCS#11 illesztőprogram jelenleg nem "
+#~ "támogatja ezt a funkciót. A kulcspárokat"
+#~ " a *nitropy* vagy egy REST API-"
+#~ "kérelem segítségével lehet létrehozni. A "
+#~ "kulcs generálásáról bővebben a `Kulcs "
+#~ "generálása <../operation.html#generate-key>`_ "
+#~ "fejezetben olvashat."
+
+#~ msgid ""
+#~ "Show information about the keys and "
+#~ "certificates in the *Key Store* on "
+#~ "a NetHSM."
+#~ msgstr ""
+#~ "A NetHSM-en a *Key Store* címen"
+#~ " található kulcsokról és tanúsítványokról "
+#~ "szóló információk megjelenítése."
+
+#~ msgid "The public key of a key-pair can be read as follows."
+#~ msgstr "Egy kulcspár nyilvános kulcsa a következőképpen olvasható."
+
+#~ msgid "The certificate of a key-pair can be read as follows."
+#~ msgstr "A kulcspár tanúsítványa a következőképpen olvasható."
+
+#~ msgid ""
+#~ "The returned certificates or public keys"
+#~ " are ASN.1 encoded. The data can "
+#~ "be decoded with the *dumpasn1* tool, "
+#~ "as it contains data in DER format."
+#~ " The DER format can be converted "
+#~ "to PEM format with OpenSSL."
+#~ msgstr ""
+#~ "A visszaküldött tanúsítványok vagy nyilvános"
+#~ " kulcsok ASN.1 kódolásúak. Az adatok "
+#~ "dekódolhatók a *dumpasn1* eszközzel, mivel "
+#~ "DER formátumú adatokat tartalmaznak. A "
+#~ "DER formátum az OpenSSL segítségével PEM"
+#~ " formátumra konvertálható."
+
+#~ msgid "Write keys and certificates to the *Key Store* on a NetHSM."
+#~ msgstr "Kulcsok és tanúsítványok írása a *kulcstárolóba* a NetHSM-en."
+
+#~ msgid "The private key of a key-pair can be wrote as follows."
+#~ msgstr "A kulcspár privát kulcsa a következőképpen írható."
+
+#~ msgid "The public key of a key-pair can be wrote as follows."
+#~ msgstr "A kulcspár nyilvános kulcsa a következőképpen írható."
+
+#~ msgid "The certificate of a key-pair can be wrote as follows."
+#~ msgstr "A kulcspár tanúsítványa a következőképpen írható."
+
+#~ msgid ""
+#~ "The NetHSM can not encrypt data "
+#~ "with asymmetric keys, but it provides"
+#~ " the public key which can be "
+#~ "used for encryption. Please refer to "
+#~ "chapter `Show Key Details <operation.html"
+#~ "#show-key-details>`__, or retrieve the "
+#~ "key as described in chapter `Read "
+#~ "Keys <pkcs11_with_pkcs11.html#read-keys>`, to "
+#~ "learn more about how to retrieve "
+#~ "the public key. The example assumes "
+#~ "the public key in the `public.pem` "
+#~ "file."
+#~ msgstr ""
+#~ "A NetHSM nem képes aszimmetrikus "
+#~ "kulcsokkal titkosítani az adatokat, de "
+#~ "biztosítja a titkosításhoz használható "
+#~ "nyilvános kulcsot. Kérjük, olvassa el a"
+#~ " `A kulcs adatainak megjelenítése "
+#~ "<operation.html#show-key-details>`__ fejezetet, "
+#~ "vagy kérje le a kulcsot a `Kulcsok"
+#~ " olvasása <pkcs11_with_pkcs11.html#read-keys>` "
+#~ "fejezetben leírtak szerint, hogy többet "
+#~ "megtudjon a nyilvános kulcs lekérdezéséről."
+#~ " A példa feltételezi, hogy a "
+#~ "nyilvános kulcs a `public.pem` fájlban "
+#~ "található."
+
+#~ msgid "Data can be encrypted with OpenSSL as follows."
+#~ msgstr "Az adatok az OpenSSL segítségével a következőképpen titkosíthatók."
+
+#~ msgid ""
+#~ "The NetHSM can decrypt data for a"
+#~ " private key stored in the *Key "
+#~ "Store* on the NetHSM. This example "
+#~ "uses the encrypted message from the "
+#~ "previous chapter `Encrypt "
+#~ "<pkcs11_with_pkcs11-tool.html#encrypt>`__."
+#~ msgstr ""
+#~ "A NetHSM képes visszafejteni a NetHSM"
+#~ " *Key Store* címén tárolt magánkulcs "
+#~ "adatait. Ez a példa az előző "
+#~ "fejezetben `Encrypt "
+#~ "<pkcs11_with_pkcs11-tool.html#encrypt>`__ titkosított "
+#~ "üzenetét használja."
+

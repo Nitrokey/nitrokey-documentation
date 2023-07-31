@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-29 00:05+0200\n"
+"POT-Creation-Date: 2023-07-31 12:30+0200\n"
 "PO-Revision-Date: 2023-07-28 23:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ro/>\n"
 "Language: ro\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ro/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
+"< 20)) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -109,9 +108,8 @@ msgstr "Windows"
 msgid "macOS"
 msgstr "macOS"
 
-#: ../fido2/index.rst:16 ../hsm/index.rst:16
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:40
-#: ../nextbox/clients/index.rst:8 ../nitrokey3/index.rst:21 ../pro/index.rst:17
+#: ../fido2/index.rst:16 ../hsm/index.rst:16 ../nextbox/clients/index.rst:8
+#: ../nitrokey3/index.rst:21 ../pro/index.rst:17
 #: ../software/nitropy/all-platforms/installation.rst:89
 #: ../software/nitropy/index.rst:6 ../start/index.rst:16
 #: ../storage/index.rst:16 ../u2f/index.rst:8
@@ -2253,8 +2251,7 @@ msgstr ""
 msgid "Nitrokey Pro 2, Nitrokey Storage 2, or Nitrokey HSM 2"
 msgstr "Nitrokey Pro 2, Nitrokey Storage 2 sau Nitrokey HSM 2"
 
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:53
-#: ../nextbox/external-storage.rst:18
+#: ../nethsm/pkcs11-setup.rst:25 ../nextbox/external-storage.rst:18
 #: ../nitrokey3/shared/openpgp-uif.rst.inc:17
 #: ../pro/linux/automatic-screen-lock.rst:21
 msgid "Configuration"
@@ -5942,6 +5939,81 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_users-UserID-tags-Tag>`__."
 
+#: ../nethsm/ejbca.rst:2
+msgid "EJBCA"
+msgstr ""
+
+#: ../nethsm/ejbca.rst:4
+msgid ""
+"EJBCA is a PKI Certificate Authority software, you can find more "
+"information about EJBCA at `EJBCA <https://www.ejbca.org/>`__."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:6
+msgid ""
+"To be able to use NetHSM with EJBCA you need to setup the NetHSM PKCS#11 "
+"module (`setup <pkcs11-setup.html>`__)."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:8
+msgid ""
+"Then configure EJBCA to ues the NetHSM PKCS#11 module by adding an entry "
+"in the ``/etc/ejbca/conf/web.properties`` file:"
+msgstr ""
+
+#: ../nethsm/ejbca.rst:16
+msgid ""
+"The ``418`` in the name is an index that must be unique for each PKCS#11 "
+"module in the configuration file."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:18
+msgid ""
+"After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
+"GUI "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
+"name is ``Nitrokey NetHSM``."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:22 ../nethsm/nginx.rst:108
+msgid "Executing The Example"
+msgstr ""
+
+#: ../nethsm/ejbca.rst:24 ../nethsm/nginx.rst:110
+msgid ""
+"If you want to experiment with the given example you can clone with git "
+"the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
+"pkcs11>`__ and run the following commands:"
+msgstr ""
+
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the getting-"
+"started guide for more information."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:27
+msgid ""
+"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
+"``container/ejbca/p11nethsm.conf``."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:28 ../nethsm/nginx.rst:125
+msgid "Build the container."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:34 ../nethsm/nginx.rst:131
+#, fuzzy
+msgid "Run the container."
+msgstr "Utilizarea liniei de comandă"
+
+#: ../nethsm/ejbca.rst:40 ../nethsm/nginx.rst:137
+msgid ""
+"The container will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
+msgstr ""
+
 #: ../nethsm/getting-started.rst:2 ../nextbox/gettingstarted.rst:2
 #: ../nitropad/qubes/index.rst:7 ../nitropad/ubuntu/index.rst:7
 #: ../nitropc/debian/index.rst:14 ../nitropc/qubes/index.rst:14
@@ -6141,367 +6213,6 @@ msgstr ""
 "capitolul `Mode de pornire <administration.html#boot-mode>`__ pentru a "
 "afla mai multe."
 
-#: ../nethsm/guides.rst:2
-msgid "Guides"
-msgstr "Ghiduri"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:2
-msgid "PKCS#11 with pkcs11-tool"
-msgstr "PKCS#11 cu pkcs11-tool"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:4
-msgid ""
-"This guide describes the use of the PKCS#11 driver for the NetHSM. The "
-"guide uses tools from `OpenSC <https://github.com/OpenSC/OpenSC>`__. "
-"Please refer to their documentation to learn how to use them on your "
-"operating system."
-msgstr ""
-"Acest ghid descrie utilizarea driverului PKCS#11 pentru NetHSM. Ghidul "
-"utilizează instrumente din `OpenSC <https://github.com/OpenSC/OpenSC>`__."
-" Vă rugăm să consultați documentația acestora pentru a afla cum să le "
-"utilizați pe sistemul dumneavoastră de operare."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:9 ../nethsm/integration.rst:16
-msgid ""
-"This driver is still an early Proof of Concept implementation that only "
-"implements the functions that are necessary for operating TLS servers."
-msgstr ""
-"Acest driver este încă o implementare timpurie de tip \"Proof of "
-"Concept\" care implementează doar funcțiile necesare pentru operarea "
-"serverelor TLS."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:13
-#: ../nitrokey3/shared/nitropy.rst:9 ../pro/openpgp-thunderbird.rst.inc:28
-#: ../software/nitropy/all-platforms/installation.rst:31
-msgid "Installation"
-msgstr "Instalare"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:16
-msgid "Install precompiled library"
-msgstr "Instalați biblioteca precompilată"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:18
-msgid ""
-"Download an archive with the latest release from the `releases page "
-"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the "
-"repository. Use the release archive which contains the name of your "
-"operating system in the title."
-msgstr ""
-"Descărcați o arhivă cu cea mai recentă versiune de pe pagina `releases "
-"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ a depozitului. "
-"Utilizați arhiva de versiuni care conține în titlu numele sistemului "
-"dumneavoastră de operare."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:21
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:36
-msgid ""
-"Extract the files from the downloaded archive with an archiving programm "
-"of your choice."
-msgstr ""
-"Extrageți fișierele din arhiva descărcată cu un program de arhivare la "
-"alegere."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:23
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:49
-msgid ""
-"Copy the extracted library to the respective path in your operating "
-"system. The path depends on your installation and configuration of "
-"OpenSC."
-msgstr ""
-"Copiați biblioteca extrasă în calea respectivă din sistemul dumneavoastră"
-" de operare. Calea depinde de instalarea și configurarea OpenSC."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:27
-msgid "Compile from source code"
-msgstr "Compilați din codul sursă"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:30
-msgid ""
-"This driver can only be compiled with the official Go compiler. Do not "
-"use the GNU Go compiler (GCC-Go). Please refer to their `website "
-"<https://go.dev/doc/install>`__ to learn how to install it."
-msgstr ""
-"Acest driver poate fi compilat numai cu compilatorul oficial Go. Nu "
-"utilizați compilatorul GNU Go (GCC-Go). Vă rugăm să consultați site-ul "
-"lor ` <https://go.dev/doc/install>` __ pentru a afla cum să îl instalați."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:34
-msgid ""
-"Download an archive with the latest release from the `releases page "
-"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the "
-"repository. Use the release archive which contains `Source code` in the "
-"title."
-msgstr ""
-"Descărcați o arhivă cu cea mai recentă versiune de pe pagina `releases "
-"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ a depozitului. "
-"Utilizați arhiva de versiuni care conține `Source code` în titlu."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:37
-msgid ""
-"In the directory with the extracted source code execute the following "
-"command to compile the library."
-msgstr ""
-"În directorul cu codul sursă extras, executați următoarea comandă pentru "
-"a compila biblioteca."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:44
-msgid "MacOS"
-msgstr "MacOS"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:55
-msgid ""
-"The configuration file `p11nethsm.conf` is required and used to configure"
-" the connection between the PKCS#11 driver and the NetHSM."
-msgstr ""
-"Fișierul de configurare `p11nethsm.conf` este necesar și este utilizat "
-"pentru a configura conexiunea dintre driverul PKCS#11 și NetHSM."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:57
-msgid "An example configuration file looks like follows."
-msgstr "Un exemplu de fișier de configurare arată după cum urmează."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:60
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:91
-msgid "Linux and MacOS"
-msgstr "Linux și MacOS"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:78
-msgid ""
-"Modify the configuration file `p11nethsm.conf` according to your "
-"environment."
-msgstr ""
-"Modificați fișierul de configurare `p11nethsm.conf` în funcție de mediul "
-"dumneavoastră."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:80
-msgid ""
-"The configuration file can include multiple slots, inside the `slots` "
-"array. The slots represent multiple NetHSM deployments. The `label` field"
-" of a slot needs to contain a unique name. The `url`, `user`, and "
-"`password` keys are mandatory. For security reasons it is recommended to "
-"pass the password in an environment variable. For this the "
-"`env:NETHSM_PASS` is passed in the `password` key, where `NETHSM_PASS` is"
-" the name of the environment variable containing the password. The "
-"`certSHA256` key needs to be set if the TLS certificate is not signed by "
-"a Certificate Authority (CA) contained in the certificate store of the "
-"operating system."
-msgstr ""
-"Fișierul de configurare poate include mai multe sloturi, în interiorul "
-"matricei `slots`. Sloturile reprezintă mai multe implementări NetHSM. "
-"Câmpul `label` al unui slot trebuie să conțină un nume unic. Cheile "
-"`url`, `user` și `password` sunt obligatorii. Din motive de securitate, "
-"se recomandă să se treacă parola într-o variabilă de mediu. În acest "
-"scop, în cheia `password` se trece `env:NETHSM_PASS`, unde `NETHSM_PASS` "
-"este numele variabilei de mediu care conține parola. Cheia `certSHA256` "
-"trebuie să fie setată dacă certificatul TLS nu este semnat de o "
-"autoritate de certificare (CA) conținută în stocul de certificate al "
-"sistemului de operare."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:88
-msgid ""
-"The configuration file needs to be saved either in the following paths or"
-" in the directory the application is executed."
-msgstr ""
-"Fișierul de configurare trebuie salvat fie în următoarele căi, fie în "
-"directorul în care este executată aplicația."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:92
-msgid "`$HOME/.nitrokey`"
-msgstr "`$HOME/.nitrokey`"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:93
-msgid "`/etc/nitrokey/`"
-msgstr "`/etc/nitrokey/`"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:96 ../nethsm/operation.rst:11
-msgid "Key Management"
-msgstr "Managementul cheilor"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:99
-msgid "Info"
-msgstr "Informații"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:101
-msgid "Show information about the cryptoki version, and the PKCS#11 driver."
-msgstr "Afișează informații despre versiunea cryptoki și despre driverul PKCS#11."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:115
-msgid "List Slots"
-msgstr "Lista sloturilor"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:117
-msgid ""
-"The information about the available slots. The listed slots depend on the"
-" configuration of the slots array in the `p11nethsm.conf` configuration "
-"file. To learn more about the configuration of slots, please refer to "
-"chapter `Configuration <pkcs11_with_pkcs11-tool.html#configuration>`_."
-msgstr ""
-"Informații despre sloturile disponibile. Sloturile listate depind de "
-"configurația matricei de sloturi din fișierul de configurare "
-"`p11nethsm.conf`. Pentru a afla mai multe despre configurarea sloturilor,"
-" consultați capitolul `Configurare "
-"<pkcs11_with_pkcs11-tool.html#configuration>`_."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:139
-msgid ""
-"If your configuration supports more than one slot, you maybe have to add "
-"the `--slot <arg>` option in pkcs11-tool commands to use the right one."
-msgstr ""
-"Dacă configurația dvs. acceptă mai multe sloturi, poate că va trebui să "
-"adăugați opțiunea `--slot <arg>` în comenzile pkcs11-tool pentru a-l "
-"utiliza pe cel corect."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:142 ../nethsm/operation.rst:14
-msgid "Generate Key"
-msgstr "Generarea cheii"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:144
-msgid "Generate a key-pair and store it on the NetHSM."
-msgstr "Generați o pereche de chei și stocați-o pe NetHSM."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:147
-msgid ""
-"The PKCS#11 driver currently does not support this feature. A key-pair "
-"can be generated with *nitropy* or a REST API request. To learn more "
-"about how to generate a key, please refer to chapter `Generate Key "
-"<../operation.html#generate-key>`_."
-msgstr ""
-"În prezent, driverul PKCS#11 nu acceptă această funcție. O pereche de "
-"chei poate fi generată cu *nitropy* sau cu o solicitare REST API. Pentru "
-"a afla mai multe despre modul de generare a unei chei, consultați "
-"capitolul `Generate Key <../operation.html#generate-key>`_."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:152 ../nethsm/operation.rst:228
-msgid "List Keys"
-msgstr "Chei de listă"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:154
-msgid ""
-"Show information about the keys and certificates in the *Key Store* on a "
-"NetHSM."
-msgstr ""
-"Afișează informații despre cheile și certificatele din *Key Store* pe un "
-"NetHSM."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:175
-msgid "Read Keys"
-msgstr "Chei de citire"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:177
-msgid ""
-"Read keys and certificates from the *Key Store* on a NetHSM. It is not "
-"possible to read private keys from the NetHSM."
-msgstr ""
-"Citiți cheile și certificatele din *Key Store* pe un NetHSM. Nu este "
-"posibil să citiți chei private de pe NetHSM."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:180
-msgid "The public key of a key-pair can be read as follows."
-msgstr "Cheia publică a unei perechi de chei poate fi citită după cum urmează."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:186
-msgid "The certificate of a key-pair can be read as follows."
-msgstr "Certificatul unei perechi de chei poate fi citit după cum urmează."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:192
-msgid ""
-"The returned certificates or public keys are ASN.1 encoded. The data can "
-"be decoded with the *dumpasn1* tool, as it contains data in DER format. "
-"The DER format can be converted to PEM format with OpenSSL."
-msgstr ""
-"Certificatele sau cheile publice returnate sunt codificate ASN.1. Datele "
-"pot fi decodate cu instrumentul *dumpasn1*, deoarece conțin date în "
-"format DER. Formatul DER poate fi convertit în format PEM cu OpenSSL."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:197
-msgid "Write Keys"
-msgstr "Chei de scriere"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:199
-msgid "Write keys and certificates to the *Key Store* on a NetHSM."
-msgstr "Scrieți chei și certificate în *Key Store* pe un NetHSM."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:201
-msgid "The private key of a key-pair can be wrote as follows."
-msgstr "Cheia privată a unei perechi de chei poate fi scrisă după cum urmează."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:207
-msgid "The public key of a key-pair can be wrote as follows."
-msgstr "Cheia publică a unei perechi de chei poate fi scrisă după cum urmează."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:213
-msgid "The certificate of a key-pair can be wrote as follows."
-msgstr "Certificatul unei perechi de chei poate fi scris după cum urmează."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:220 ../nethsm/operation.rst:595
-msgid "Key Operations"
-msgstr "Operațiuni cheie"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:223 ../nethsm/operation.rst:598
-msgid "Encrypt"
-msgstr "Criptare"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:225
-msgid ""
-"The NetHSM can not encrypt data with asymmetric keys, but it provides the"
-" public key which can be used for encryption. Please refer to chapter "
-"`Show Key Details <operation.html#show-key-details>`__, or retrieve the "
-"key as described in chapter `Read Keys <pkcs11_with_pkcs11.html#read-"
-"keys>`, to learn more about how to retrieve the public key. The example "
-"assumes the public key in the `public.pem` file."
-msgstr ""
-"NetHSM nu poate cripta date cu chei asimetrice, dar furnizează cheia "
-"publică care poate fi utilizată pentru criptare. Vă rugăm să consultați "
-"capitolul `Show Key Details <operation.html#show-key-details>` __, sau să"
-" recuperați cheia așa cum este descris în capitolul `Read Keys "
-"<pkcs11_with_pkcs11.html#read-keys>`, pentru a afla mai multe despre cum "
-"să recuperați cheia publică. Exemplul presupune că cheia publică se află "
-"în fișierul `public.pem`."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:230
-msgid "Data can be encrypted with OpenSSL as follows."
-msgstr "Datele pot fi criptate cu OpenSSL după cum urmează."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:242 ../nethsm/operation.rst:633
-msgid "Decrypt"
-msgstr "Decriptare"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:244
-msgid ""
-"The NetHSM can decrypt data for a private key stored in the *Key Store* "
-"on the NetHSM. This example uses the encrypted message from the previous "
-"chapter `Encrypt <pkcs11_with_pkcs11-tool.html#encrypt>`__."
-msgstr ""
-"NetHSM poate decripta date pentru o cheie privată stocată în *Key Store* "
-"de pe NetHSM. Acest exemplu utilizează mesajul criptat din capitolul "
-"anterior `Encrypt <pkcs11_with_pkcs11-tool.html#encrypt>`__."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:260 ../nethsm/operation.rst:683
-msgid "Sign"
-msgstr "Semnează"
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:262 ../nethsm/operation.rst:685
-msgid ""
-"The NetHSM can sign data for a private key stored in the *Key Store* on "
-"the NetHSM. For signatures with a RSA and ECDSA key, a digest must be "
-"calculate first."
-msgstr ""
-"NetHSM poate semna date pentru o cheie privată stocată în *Key Store* de "
-"pe NetHSM. Pentru semnăturile cu o cheie RSA și ECDSA, trebuie să se "
-"calculeze mai întâi un compendiu."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:265 ../nethsm/operation.rst:688
-msgid ""
-"To calculate a digest the data is required first. A message is created as"
-" follows."
-msgstr ""
-"Pentru a calcula un compendiu sunt necesare mai întâi datele. Se creează "
-"un mesaj după cum urmează."
-
-#: ../nethsm/guides/pkcs11_with_pkcs11-tool.rst:275 ../nethsm/operation.rst:740
-msgid "The created signature can be verified with OpenSSL as follows."
-msgstr "Semnătura creată poate fi verificată cu OpenSSL după cum urmează."
-
 #: ../nethsm/index.rst:2
 msgid "NetHSM"
 msgstr "NetHSM"
@@ -6599,12 +6310,22 @@ msgstr ""
 "sisteme de operare."
 
 #: ../nethsm/integration.rst:13
+#, fuzzy
 msgid ""
-"The `PKCS#11 guide <guides/pkcs11_with_pkcs11-tool.html>`_ describes how "
-"to use them in detail."
+"The `PKCS#11 guide <guides/pkcs11-setup.html>`_ describes how to use them"
+" in detail."
 msgstr ""
 "Ghidul `PKCS#11 <guides/pkcs11_with_pkcs11-tool.html>`_ descrie în "
 "detaliu modul de utilizare a acestora."
+
+#: ../nethsm/integration.rst:16
+msgid ""
+"This driver is still an early Proof of Concept implementation that only "
+"implements the functions that are necessary for operating TLS servers."
+msgstr ""
+"Acest driver este încă o implementare timpurie de tip \"Proof of "
+"Concept\" care implementează doar funcțiile necesare pentru operarea "
+"serverelor TLS."
 
 #: ../nethsm/integration.rst:20
 msgid "Development and Testing"
@@ -6726,6 +6447,164 @@ msgstr ""
 " inspectată și testată în browserul `API "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`_."
 
+#: ../nethsm/nginx.rst:2
+#, fuzzy
+msgid "Nginx"
+msgstr "Linux"
+
+#: ../nethsm/nginx.rst:4
+msgid ""
+"You can configure Nginx to use NetHSM by configuring Nginx to use the "
+"OpenSSL engine that then uses NetHSM's PKCS#11 module."
+msgstr ""
+
+#: ../nethsm/nginx.rst:6
+msgid ""
+"The certificate file has to be on the disk but the private key can be "
+"used from the NetHSM."
+msgstr ""
+
+#: ../nethsm/nginx.rst:8
+msgid ""
+"An example is available in the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"under container/nginx."
+msgstr ""
+
+#: ../nethsm/nginx.rst:11
+#, fuzzy
+msgid "OpenSSL Configuration"
+msgstr "Configurație pe partea clientului"
+
+#: ../nethsm/nginx.rst:30
+msgid ""
+"You need to configure the engine section to include the pkcs11 engine in "
+"the ``dynamic_path`` property and the ``libnethsm_pkcs11.so`` module in "
+"the ``MODULE_PATH`` property."
+msgstr ""
+
+#: ../nethsm/nginx.rst:32
+msgid "The engine can be installed on debian-based machines using"
+msgstr ""
+
+#: ../nethsm/nginx.rst:35
+msgid "Debian/Ubuntu"
+msgstr ""
+
+#: ../nethsm/nginx.rst:41
+#, fuzzy
+msgid "Nginx Configuration"
+msgstr "Configurație"
+
+#: ../nethsm/nginx.rst:78
+msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
+msgstr ""
+
+#: ../nethsm/nginx.rst:80
+msgid ""
+"The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
+"the OpenSSL engine with the PKCS#11 module and select the private key "
+"with the label/ID ``webserver`` and the key type ``private``."
+msgstr ""
+
+#: ../nethsm/nginx.rst:82
+msgid ""
+"``ssl_certificate_key "
+"\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
+msgstr ""
+
+#: ../nethsm/nginx.rst:85
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"Nginx won't start."
+msgstr ""
+
+#: ../nethsm/nginx.rst:88
+#, fuzzy
+msgid "libnethsm_pkcs11 Configuration"
+msgstr "Configurație pe partea clientului"
+
+#: ../nethsm/nginx.rst:100
+msgid ""
+"To secure the password you can provide it via an environment variable "
+"(see `Setup <setup.html>`__). You can also provide it in the nginx "
+"configuration:"
+msgstr ""
+
+#: ../nethsm/nginx.rst:114
+msgid "Running the generate script deletes the ``webserver`` key and replaces it."
+msgstr ""
+
+#: ../nethsm/nginx.rst:117
+msgid ""
+"If your NetHSM is not running on localhost, you will need to change the "
+"URL of the curl requests in ``container/nginx/generate.sh`` to point to "
+"your NetHSM."
+msgstr ""
+
+#: ../nethsm/nginx.rst:118
+msgid ""
+"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
+"``container/nginx/p11nethsm.conf``."
+msgstr ""
+
+#: ../nethsm/nginx.rst:119
+#, fuzzy
+msgid "Generate the certificate and key."
+msgstr "Conversia certificatului în DER"
+
+#: ../nethsm/opendnssec.rst:2
+msgid "OpenDNSSEC"
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:4
+msgid ""
+"`OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing"
+" the security of domain names. It can directly load a PKCS#11 module and "
+"manage the keys."
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:6
+msgid ""
+"To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick "
+"Start Guide "
+"<https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__. You "
+"don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be used"
+" instead."
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:8
+msgid ""
+"As OpenDNSSEC needs access to manage the keys and then use them, you will"
+" need to configure both administrator and operator account in the PKCS#11"
+" module configuration file."
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:10
+msgid ""
+"You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by "
+"editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the "
+"following lines:"
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:34
+msgid ""
+"Replace ``/root/libnethsm_pkcs11.so`` with the path to the "
+"libnethsm_pkcs11.so module. You need to match the ``<TokenLabel>`` with "
+"the label you set in the ``p11nethsm.conf`` configuration file. The "
+"``<PIN>`` is the operator PIN, you can either set it in plain text in the"
+" ``conf.xml`` file or use ``ods-hsmutil login``. OpenDNSSEC need to have "
+"a pin provided or it will refuse to start."
+msgstr ""
+
+#: ../nethsm/opendnssec.rst:38
+msgid ""
+"You also need to update the ``<Repository>`` fields in "
+"``/etc/opendnssec/kasp.xml`` to ``NetHSM`` instead of the default "
+"``SoftHSM`` :"
+msgstr ""
+
 #: ../nethsm/operation.rst:2
 msgid "Operation"
 msgstr "Operațiunea"
@@ -6740,6 +6619,14 @@ msgstr ""
 "rolurile *Administrator* și *Operator*. Vă rugăm să consultați capitolul "
 "`Roluri <administration.html#roles>`__ pentru a afla mai multe despre "
 "rol."
+
+#: ../nethsm/operation.rst:11
+msgid "Key Management"
+msgstr "Managementul cheilor"
+
+#: ../nethsm/operation.rst:14
+msgid "Generate Key"
+msgstr "Generarea cheii"
 
 #: ../nethsm/operation.rst:16
 msgid ""
@@ -6992,6 +6879,10 @@ msgstr ""
 "documentația `API "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_keys-KeyID>`__."
+
+#: ../nethsm/operation.rst:228 ../nethsm/pkcs11-tool.rst:102
+msgid "List Keys"
+msgstr "Chei de listă"
 
 #: ../nethsm/operation.rst:230
 msgid "The NetHSM can list all the available keys in the *Key Store*."
@@ -7260,6 +7151,14 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-"
 "KeyID-csr-pem>`__."
 
+#: ../nethsm/operation.rst:595
+msgid "Key Operations"
+msgstr "Operațiuni cheie"
+
+#: ../nethsm/operation.rst:598 ../nethsm/pkcs11-tool.rst:157
+msgid "Encrypt"
+msgstr "Criptare"
+
 #: ../nethsm/operation.rst:600
 msgid ""
 "The NetHSM can encrypt data for symmetric keys, stored in the *Key "
@@ -7314,6 +7213,10 @@ msgstr ""
 "Acest lucru scrie mesajul criptat și codificat în baza64 ``NetHSM "
 "rulez!`` în fișierul ``data.crypt``, folosind cheia publică din "
 "``public.pem``."
+
+#: ../nethsm/operation.rst:633 ../nethsm/pkcs11-tool.rst:169
+msgid "Decrypt"
+msgstr "Decriptare"
 
 #: ../nethsm/operation.rst:635
 msgid ""
@@ -7402,6 +7305,28 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-"
 "KeyID-decrypt>`__."
 
+#: ../nethsm/operation.rst:683 ../nethsm/pkcs11-tool.rst:196
+msgid "Sign"
+msgstr "Semnează"
+
+#: ../nethsm/operation.rst:685
+msgid ""
+"The NetHSM can sign data for a private key stored in the *Key Store* on "
+"the NetHSM. For signatures with a RSA and ECDSA key, a digest must be "
+"calculate first."
+msgstr ""
+"NetHSM poate semna date pentru o cheie privată stocată în *Key Store* de "
+"pe NetHSM. Pentru semnăturile cu o cheie RSA și ECDSA, trebuie să se "
+"calculeze mai întâi un compendiu."
+
+#: ../nethsm/operation.rst:688
+msgid ""
+"To calculate a digest the data is required first. A message is created as"
+" follows."
+msgstr ""
+"Pentru a calcula un compendiu sunt necesare mai întâi datele. Se creează "
+"un mesaj după cum urmează."
+
 #: ../nethsm/operation.rst:694
 msgid "The digest is calculated with OpenSSL as follows."
 msgstr "Digestul este calculat cu OpenSSL după cum urmează."
@@ -7470,6 +7395,10 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_keys-"
 "KeyID-sign>`__."
 
+#: ../nethsm/operation.rst:740
+msgid "The created signature can be verified with OpenSSL as follows."
+msgstr "Semnătura creată poate fi verificată cu OpenSSL după cum urmează."
+
 #: ../nethsm/operation.rst:751
 msgid "Random"
 msgstr "Aleatoriu"
@@ -7495,6 +7424,404 @@ msgstr ""
 "Informații despre punctul final `/random` pot fi găsite în documentația "
 "`API "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_random>`__."
+
+#: ../nethsm/pkcs11-setup.rst:2
+msgid "PKCS#11 Setup"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:6 ../nitrokey3/shared/nitropy.rst:9
+#: ../pro/openpgp-thunderbird.rst.inc:28
+#: ../software/nitropy/all-platforms/installation.rst:31
+msgid "Installation"
+msgstr "Instalare"
+
+#: ../nethsm/pkcs11-setup.rst:8
+msgid ""
+"You can either get the NetHSM PKCS#11 module as a precompiled binary or "
+"compile it from source."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:11
+#, fuzzy
+msgid "Precompiled Binaries"
+msgstr "Instalați biblioteca precompilată"
+
+#: ../nethsm/pkcs11-setup.rst:13
+#, fuzzy
+msgid ""
+"Download the module file corresponding to your system from the `releases "
+"page <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of the "
+"repository."
+msgstr ""
+"Descărcați o arhivă cu cea mai recentă versiune de pe pagina `releases "
+"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ a depozitului. "
+"Utilizați arhiva de versiuni care conține `Source code` în titlu."
+
+#: ../nethsm/pkcs11-setup.rst:14
+msgid ""
+"Copy the module file to the directory where your PKCS#11 applications "
+"expect to find it."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:17
+#, fuzzy
+msgid "Compile From Source"
+msgstr "Compilați din codul sursă"
+
+#: ../nethsm/pkcs11-setup.rst:19
+msgid "Install the `Rust toolchain <https://www.rust-lang.org/tools/install>`__."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:20
+#, fuzzy
+msgid ""
+"Download and extract the source from the `releases page "
+"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ or clone the "
+"`repository <https://github.com/Nitrokey/nethsm-pkcs11>`__."
+msgstr ""
+"Descărcați o arhivă cu cea mai recentă versiune de pe pagina `releases "
+"<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ a depozitului. "
+"Utilizați arhiva de versiuni care conține `Source code` în titlu."
+
+#: ../nethsm/pkcs11-setup.rst:21
+msgid "Run ``cargo build --release`` in the source directory."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:27
+msgid "By default the module searches for configuration files in:"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:29
+#, fuzzy
+msgid "``/etc/nitrokey/p11nethsm.conf``"
+msgstr "`/etc/nitrokey/`"
+
+#: ../nethsm/pkcs11-setup.rst:30
+msgid "``/usr/local/etc/nitrokey/p11nethsm.conf``"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:31
+msgid "``$HOME/.config/nitrokey/p11nethsm.conf``"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:33
+msgid ""
+"If multiple files are present the slots of all the config files will be "
+"added."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:35
+msgid ""
+"You can manually set the config file location (only this one will be "
+"read) with the env variable ``P11NETHSM_CONFIG_FILE`` (e.g. "
+"``P11NETHSM_CONFIG_FILE=./p11nethsm.conf``)."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:38
+#, fuzzy
+msgid "Configuration File Format"
+msgstr "Configurație"
+
+#: ../nethsm/pkcs11-setup.rst:40
+msgid "The configuration is yaml-formatted:"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:43
+#, fuzzy
+msgid "All platforms"
+msgstr "Toate platformele"
+
+#: ../nethsm/pkcs11-setup.rst:85
+msgid "Instances"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:87
+msgid ""
+"If multiple NetHSM instances are listed in the same slot, these instances"
+" must be configured in a cluster. The credentials of the users and the "
+"keys must be the same on all instances."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:89
+msgid ""
+"The module will use the instances in a round-robin fashion, trying "
+"another instance if one fails."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:93
+#, fuzzy
+msgid "Users"
+msgstr "Qubes"
+
+#: ../nethsm/pkcs11-setup.rst:95
+msgid ""
+"The operator and administrator users are both optional but the module "
+"won't start if no user is configured. This is so you can configure the "
+"module with only an administrator user, only an operator user or both at "
+"the same time."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:97
+msgid ""
+"When the two users are set the module will use the operator by default "
+"and only use the administrator user when the action needs it."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:99
+msgid ""
+"The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 "
+"SO is mapped to the NetHSM administrator."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:102 ../nitrokey3/shared/reset.rst.inc:19
+#: ../software/nk-app2/passwords.rst:2
+msgid "Passwords"
+msgstr "Parole"
+
+#: ../nethsm/pkcs11-setup.rst:104
+msgid "The password can be provided by multiple means:"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:106
+msgid "In plain text in the configuration ``password: \"mypassword\"``"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:107
+msgid ""
+"In an environment variable read by the module with the ``env:`` prefix: "
+"``env:ENV_STORING_THE_PASSWORD``"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:108
+msgid ""
+"Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
+"--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
+"password you need to use ``--so-pin`` instead: ``pkcs11-tool --module "
+"libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:111
+msgid ""
+"If the password of an user is not set in the configuration file a login "
+"will be required to provide the password (3rd method)."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:113
+msgid ""
+"A NetHSM that is not operational is considered as a slot with the token "
+"not present."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:2
+#, fuzzy
+msgid "pkcs11-tool"
+msgstr "PKCS#11 cu pkcs11-tool"
+
+#: ../nethsm/pkcs11-tool.rst:4
+msgid ""
+"`pkcs11-tool <https://github.com/OpenSC/OpenSC/wiki/Using-pkcs11-tool-"
+"and-OpenSSL>`__ is a tool part of the `OpenSC "
+"<https://github.com/OpenSC/OpenSC>`__ project that can be used to manage "
+"keys on a PKCS#11 device."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:6
+msgid ""
+"You need to pass the location of the PKCS#11 module to use with the "
+"``--module`` option:"
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:12
+msgid ""
+"Replace ``/usr/lib/nitrokey/libnethsm_pkcs11.so`` with the path where the"
+" NetHSM PKCS#11 module is located."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:14
+#, fuzzy
+msgid "You can test if the module is working with the next command:"
+msgstr "Puteți actualiza pachetul cu următoarea comandă::"
+
+#: ../nethsm/pkcs11-tool.rst:20
+#, fuzzy
+msgid "You should see something like this:"
+msgstr "Rezultatul ar trebui să fie ceva de genul următor:"
+
+#: ../nethsm/pkcs11-tool.rst:30
+msgid "List Slots"
+msgstr "Lista sloturilor"
+
+#: ../nethsm/pkcs11-tool.rst:32
+#, fuzzy
+msgid ""
+"The information about the available slots. The listed slots depend on the"
+" configuration of the slots array in the `p11nethsm.conf` configuration "
+"file. To learn more about the configuration of slots, please refer to "
+"chapter `Configuration <setup.html#Configuration>`_."
+msgstr ""
+"Informații despre sloturile disponibile. Sloturile listate depind de "
+"configurația matricei de sloturi din fișierul de configurare "
+"`p11nethsm.conf`. Pentru a afla mai multe despre configurarea sloturilor,"
+" consultați capitolul `Configurare "
+"<pkcs11_with_pkcs11-tool.html#configuration>`_."
+
+#: ../nethsm/pkcs11-tool.rst:53
+#, fuzzy
+msgid ""
+"If your configuration supports more than one slot, you may have to add "
+"the ``--slot <arg>`` option in pkcs11-tool commands to use the right one."
+msgstr ""
+"Dacă configurația dvs. acceptă mai multe sloturi, poate că va trebui să "
+"adăugați opțiunea `--slot <arg>` în comenzile pkcs11-tool pentru a-l "
+"utiliza pe cel corect."
+
+#: ../nethsm/pkcs11-tool.rst:56
+msgid "Key IDs"
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:58
+msgid ""
+"pkcs11-tool uses an hexadecimal key ID to identify keys. NetHSM uses "
+"alphanumerical strings as key ID. NetHSM's PKCS#11 module uses the raw "
+"byte values of the string to form the PKCS#11 ID. You can get the "
+"hexadecimal version of a NetHSM key with ``xxd``:"
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:69
+msgid "You can then pass this hex value to pkcs11-tool with the ``--id`` option."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:72
+#, fuzzy
+msgid "Generate a Key"
+msgstr "Generarea cheii AES"
+
+#: ../nethsm/pkcs11-tool.rst:74
+msgid "Generate a key-pair and store it on the NetHSM."
+msgstr "Generați o pereche de chei și stocați-o pe NetHSM."
+
+#: ../nethsm/pkcs11-tool.rst:77
+msgid ""
+"The slot you want to use needs to have an andministrator user in the "
+"configuration file. Otherwise you will get a `CKR_USER_NOT_LOGGED_IN` "
+"error."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:80 ../nethsm/pkcs11-tool.rst:179
+#, fuzzy
+msgid "RSA"
+msgstr "rsa4096"
+
+#: ../nethsm/pkcs11-tool.rst:87
+msgid "ECDSA"
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:95
+#, fuzzy
+msgid "AES/Generic"
+msgstr "Generic"
+
+#: ../nethsm/pkcs11-tool.rst:104
+#, fuzzy
+msgid "List the keys stored on the NetHSM."
+msgstr "Lista utilizatorilor de pe NetHSM."
+
+#: ../nethsm/pkcs11-tool.rst:125
+msgid "Read Keys"
+msgstr "Chei de citire"
+
+#: ../nethsm/pkcs11-tool.rst:127
+#, fuzzy
+msgid ""
+"Read the public key of a key-pair stored on the NetHSM. It is not "
+"possible to read private keys from the NetHSM."
+msgstr ""
+"Citiți cheile și certificatele din *Key Store* pe un NetHSM. Nu este "
+"posibil să citiți chei private de pe NetHSM."
+
+#: ../nethsm/pkcs11-tool.rst:134
+msgid ""
+"The certificate of the key-pair can be read with the same command by "
+"changing the ``--type`` option to ``cert``."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:138
+msgid "The output is in DER format."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:141
+msgid "Write Keys"
+msgstr "Chei de scriere"
+
+#: ../nethsm/pkcs11-tool.rst:143
+msgid ""
+"Write a private key on the NetHSM. The public key is automatically "
+"derived from the private key."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:149
+msgid ""
+"The certificate of the key-pair can be written with the same command by "
+"changing the ``--type`` option to ``cert``."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:159
+msgid "Encryption of data is only supported for AES keys."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:166
+msgid "You have to manually pad the input data to the block size of the AES key."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:172
+#, fuzzy
+msgid "AES"
+msgstr "da"
+
+#: ../nethsm/pkcs11-tool.rst:181
+msgid ""
+"You can encrypt data with the public key and decrypt it with the private "
+"key."
+msgstr ""
+
+#: ../nethsm/pkcs11-tool.rst:202
+msgid "To verify the signature with OpenSSL:"
+msgstr ""
+
+#: ../nethsm/ssh.rst:2
+msgid "SSH"
+msgstr ""
+
+#: ../nethsm/ssh.rst:4
+msgid ""
+"You can use NetHSM for SSH authentication. You need to pass the PKCS#11 "
+"module path in the command line or the SSH configuration."
+msgstr ""
+
+#: ../nethsm/ssh.rst:7
+#, fuzzy
+msgid "Command line"
+msgstr "Utilizarea liniei de comandă"
+
+#: ../nethsm/ssh.rst:12
+msgid "SSH config"
+msgstr ""
+
+#: ../nethsm/ssh.rst:19
+msgid ""
+"You can also set up SSH to use the NetHSM by default. To do so, add the "
+"following lines to your ``~/.ssh/config`` file:"
+msgstr ""
+
+#: ../nethsm/ssh.rst:27
+msgid "SSH will search for a key on the NetHSM that is accepted by the server."
+msgstr ""
+
+#: ../nethsm/ssh.rst:29
+msgid ""
+"To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
+" following command:"
+msgstr ""
 
 #: ../nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
@@ -12964,10 +13291,6 @@ msgid ""
 msgstr ""
 "instrument de nitropie: ``nitropy fido2 reset`` (executarea necesită "
 "drepturi de administrator)"
-
-#: ../nitrokey3/shared/reset.rst.inc:19 ../software/nk-app2/passwords.rst:2
-msgid "Passwords"
-msgstr "Parole"
 
 #: ../nitrokey3/shared/reset.rst.inc:21
 msgid ""
@@ -21160,8 +21483,8 @@ msgid ""
 "For a list of websites supporting OTP have a look at `dongleauth.com "
 "<https://www.dongleauth.com/>`__."
 msgstr ""
-"Pentru o listă de site-uri web care acceptă OTP, consultați `dongleauth.com "
-"<https://www.dongleauth.com/>`__."
+"Pentru o listă de site-uri web care acceptă OTP, consultați "
+"`dongleauth.com <https://www.dongleauth.com/>`__."
 
 #: ../software/nk-app2/passwords.rst:12
 msgid ""
@@ -21169,18 +21492,18 @@ msgid ""
 "lock) and protected (shown as a closed lock). Unprotected entries can be "
 "accessed directly. Protected entries can only be accessed with the PIN."
 msgstr ""
-"Intrările sunt împărțite în două categorii: neprotejate (reprezentate de un "
-"lacăt deschis) și protejate (reprezentate de un lacăt închis). Intrările "
-"neprotejate pot fi accesate direct. Intrările protejate pot fi accesate "
-"numai cu ajutorul PIN-ului."
+"Intrările sunt împărțite în două categorii: neprotejate (reprezentate de "
+"un lacăt deschis) și protejate (reprezentate de un lacăt închis). "
+"Intrările neprotejate pot fi accesate direct. Intrările protejate pot fi "
+"accesate numai cu ajutorul PIN-ului."
 
 #: ../software/nk-app2/passwords.rst:14
 msgid ""
 "You can choose to create a protected entry by checking the \"Protect with"
 " PIN\" box when adding a new entry."
 msgstr ""
-"Puteți alege să creați o intrare protejată bifând caseta \"Protect with PIN\""
-" (Protejați cu PIN) atunci când adăugați o intrare nouă."
+"Puteți alege să creați o intrare protejată bifând caseta \"Protect with "
+"PIN\" (Protejați cu PIN) atunci când adăugați o intrare nouă."
 
 #: ../software/nk-app2/passwords.rst:16
 msgid ""
@@ -21188,9 +21511,10 @@ msgid ""
 "required touch on the Nitrokey 3 to access the entry by checking the "
 "\"Require User Presence\" box."
 msgstr ""
-"Aveți, de asemenea, opțiunea de a solicita prezența utilizatorului sub forma "
-"unei atingeri obligatorii a Nitrokey 3 pentru a accesa intrarea, bifând "
-"caseta \"Require User Presence\" (Solicită prezența utilizatorului)."
+"Aveți, de asemenea, opțiunea de a solicita prezența utilizatorului sub "
+"forma unei atingeri obligatorii a Nitrokey 3 pentru a accesa intrarea, "
+"bifând caseta \"Require User Presence\" (Solicită prezența "
+"utilizatorului)."
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst.inc:8
 msgid ""
@@ -29443,3 +29767,278 @@ msgstr ""
 
 #~ msgid "Nitrokey App 2 For Windows"
 #~ msgstr "Nitrokey App 2 pentru Windows"
+
+#~ msgid "Guides"
+#~ msgstr "Ghiduri"
+
+#~ msgid ""
+#~ "This guide describes the use of "
+#~ "the PKCS#11 driver for the NetHSM. "
+#~ "The guide uses tools from `OpenSC "
+#~ "<https://github.com/OpenSC/OpenSC>`__. Please refer "
+#~ "to their documentation to learn how "
+#~ "to use them on your operating "
+#~ "system."
+#~ msgstr ""
+#~ "Acest ghid descrie utilizarea driverului "
+#~ "PKCS#11 pentru NetHSM. Ghidul utilizează "
+#~ "instrumente din `OpenSC "
+#~ "<https://github.com/OpenSC/OpenSC>`__. Vă rugăm să"
+#~ " consultați documentația acestora pentru a"
+#~ " afla cum să le utilizați pe "
+#~ "sistemul dumneavoastră de operare."
+
+#~ msgid ""
+#~ "Download an archive with the latest "
+#~ "release from the `releases page "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ of"
+#~ " the repository. Use the release "
+#~ "archive which contains the name of "
+#~ "your operating system in the title."
+#~ msgstr ""
+#~ "Descărcați o arhivă cu cea mai "
+#~ "recentă versiune de pe pagina `releases"
+#~ " <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__ "
+#~ "a depozitului. Utilizați arhiva de "
+#~ "versiuni care conține în titlu numele"
+#~ " sistemului dumneavoastră de operare."
+
+#~ msgid ""
+#~ "Extract the files from the downloaded"
+#~ " archive with an archiving programm "
+#~ "of your choice."
+#~ msgstr ""
+#~ "Extrageți fișierele din arhiva descărcată "
+#~ "cu un program de arhivare la "
+#~ "alegere."
+
+#~ msgid ""
+#~ "Copy the extracted library to the "
+#~ "respective path in your operating "
+#~ "system. The path depends on your "
+#~ "installation and configuration of OpenSC."
+#~ msgstr ""
+#~ "Copiați biblioteca extrasă în calea "
+#~ "respectivă din sistemul dumneavoastră de "
+#~ "operare. Calea depinde de instalarea și"
+#~ " configurarea OpenSC."
+
+#~ msgid ""
+#~ "This driver can only be compiled "
+#~ "with the official Go compiler. Do "
+#~ "not use the GNU Go compiler "
+#~ "(GCC-Go). Please refer to their "
+#~ "`website <https://go.dev/doc/install>`__ to learn"
+#~ " how to install it."
+#~ msgstr ""
+#~ "Acest driver poate fi compilat numai "
+#~ "cu compilatorul oficial Go. Nu utilizați"
+#~ " compilatorul GNU Go (GCC-Go). Vă "
+#~ "rugăm să consultați site-ul lor `"
+#~ " <https://go.dev/doc/install>` __ pentru a "
+#~ "afla cum să îl instalați."
+
+#~ msgid ""
+#~ "In the directory with the extracted "
+#~ "source code execute the following "
+#~ "command to compile the library."
+#~ msgstr ""
+#~ "În directorul cu codul sursă extras, "
+#~ "executați următoarea comandă pentru a "
+#~ "compila biblioteca."
+
+#~ msgid "MacOS"
+#~ msgstr "MacOS"
+
+#~ msgid ""
+#~ "The configuration file `p11nethsm.conf` is "
+#~ "required and used to configure the "
+#~ "connection between the PKCS#11 driver "
+#~ "and the NetHSM."
+#~ msgstr ""
+#~ "Fișierul de configurare `p11nethsm.conf` este"
+#~ " necesar și este utilizat pentru a"
+#~ " configura conexiunea dintre driverul "
+#~ "PKCS#11 și NetHSM."
+
+#~ msgid "An example configuration file looks like follows."
+#~ msgstr "Un exemplu de fișier de configurare arată după cum urmează."
+
+#~ msgid "Linux and MacOS"
+#~ msgstr "Linux și MacOS"
+
+#~ msgid ""
+#~ "Modify the configuration file `p11nethsm.conf`"
+#~ " according to your environment."
+#~ msgstr ""
+#~ "Modificați fișierul de configurare "
+#~ "`p11nethsm.conf` în funcție de mediul "
+#~ "dumneavoastră."
+
+#~ msgid ""
+#~ "The configuration file can include "
+#~ "multiple slots, inside the `slots` "
+#~ "array. The slots represent multiple "
+#~ "NetHSM deployments. The `label` field of"
+#~ " a slot needs to contain a "
+#~ "unique name. The `url`, `user`, and "
+#~ "`password` keys are mandatory. For "
+#~ "security reasons it is recommended to"
+#~ " pass the password in an environment"
+#~ " variable. For this the `env:NETHSM_PASS`"
+#~ " is passed in the `password` key, "
+#~ "where `NETHSM_PASS` is the name of "
+#~ "the environment variable containing the "
+#~ "password. The `certSHA256` key needs to"
+#~ " be set if the TLS certificate "
+#~ "is not signed by a Certificate "
+#~ "Authority (CA) contained in the "
+#~ "certificate store of the operating "
+#~ "system."
+#~ msgstr ""
+#~ "Fișierul de configurare poate include "
+#~ "mai multe sloturi, în interiorul "
+#~ "matricei `slots`. Sloturile reprezintă mai "
+#~ "multe implementări NetHSM. Câmpul `label` "
+#~ "al unui slot trebuie să conțină un"
+#~ " nume unic. Cheile `url`, `user` și"
+#~ " `password` sunt obligatorii. Din motive"
+#~ " de securitate, se recomandă să se"
+#~ " treacă parola într-o variabilă de "
+#~ "mediu. În acest scop, în cheia "
+#~ "`password` se trece `env:NETHSM_PASS`, unde"
+#~ " `NETHSM_PASS` este numele variabilei de"
+#~ " mediu care conține parola. Cheia "
+#~ "`certSHA256` trebuie să fie setată dacă"
+#~ " certificatul TLS nu este semnat de"
+#~ " o autoritate de certificare (CA) "
+#~ "conținută în stocul de certificate al"
+#~ " sistemului de operare."
+
+#~ msgid ""
+#~ "The configuration file needs to be "
+#~ "saved either in the following paths "
+#~ "or in the directory the application "
+#~ "is executed."
+#~ msgstr ""
+#~ "Fișierul de configurare trebuie salvat "
+#~ "fie în următoarele căi, fie în "
+#~ "directorul în care este executată "
+#~ "aplicația."
+
+#~ msgid "`$HOME/.nitrokey`"
+#~ msgstr "`$HOME/.nitrokey`"
+
+#~ msgid "Info"
+#~ msgstr "Informații"
+
+#~ msgid "Show information about the cryptoki version, and the PKCS#11 driver."
+#~ msgstr ""
+#~ "Afișează informații despre versiunea cryptoki"
+#~ " și despre driverul PKCS#11."
+
+#~ msgid ""
+#~ "The PKCS#11 driver currently does not"
+#~ " support this feature. A key-pair "
+#~ "can be generated with *nitropy* or "
+#~ "a REST API request. To learn more"
+#~ " about how to generate a key, "
+#~ "please refer to chapter `Generate Key"
+#~ " <../operation.html#generate-key>`_."
+#~ msgstr ""
+#~ "În prezent, driverul PKCS#11 nu acceptă"
+#~ " această funcție. O pereche de chei"
+#~ " poate fi generată cu *nitropy* sau"
+#~ " cu o solicitare REST API. Pentru "
+#~ "a afla mai multe despre modul de"
+#~ " generare a unei chei, consultați "
+#~ "capitolul `Generate Key <../operation.html"
+#~ "#generate-key>`_."
+
+#~ msgid ""
+#~ "Show information about the keys and "
+#~ "certificates in the *Key Store* on "
+#~ "a NetHSM."
+#~ msgstr ""
+#~ "Afișează informații despre cheile și "
+#~ "certificatele din *Key Store* pe un "
+#~ "NetHSM."
+
+#~ msgid "The public key of a key-pair can be read as follows."
+#~ msgstr "Cheia publică a unei perechi de chei poate fi citită după cum urmează."
+
+#~ msgid "The certificate of a key-pair can be read as follows."
+#~ msgstr "Certificatul unei perechi de chei poate fi citit după cum urmează."
+
+#~ msgid ""
+#~ "The returned certificates or public keys"
+#~ " are ASN.1 encoded. The data can "
+#~ "be decoded with the *dumpasn1* tool, "
+#~ "as it contains data in DER format."
+#~ " The DER format can be converted "
+#~ "to PEM format with OpenSSL."
+#~ msgstr ""
+#~ "Certificatele sau cheile publice returnate "
+#~ "sunt codificate ASN.1. Datele pot fi "
+#~ "decodate cu instrumentul *dumpasn1*, deoarece"
+#~ " conțin date în format DER. Formatul"
+#~ " DER poate fi convertit în format "
+#~ "PEM cu OpenSSL."
+
+#~ msgid "Write keys and certificates to the *Key Store* on a NetHSM."
+#~ msgstr "Scrieți chei și certificate în *Key Store* pe un NetHSM."
+
+#~ msgid "The private key of a key-pair can be wrote as follows."
+#~ msgstr "Cheia privată a unei perechi de chei poate fi scrisă după cum urmează."
+
+#~ msgid "The public key of a key-pair can be wrote as follows."
+#~ msgstr "Cheia publică a unei perechi de chei poate fi scrisă după cum urmează."
+
+#~ msgid "The certificate of a key-pair can be wrote as follows."
+#~ msgstr "Certificatul unei perechi de chei poate fi scris după cum urmează."
+
+#~ msgid ""
+#~ "The NetHSM can not encrypt data "
+#~ "with asymmetric keys, but it provides"
+#~ " the public key which can be "
+#~ "used for encryption. Please refer to "
+#~ "chapter `Show Key Details <operation.html"
+#~ "#show-key-details>`__, or retrieve the "
+#~ "key as described in chapter `Read "
+#~ "Keys <pkcs11_with_pkcs11.html#read-keys>`, to "
+#~ "learn more about how to retrieve "
+#~ "the public key. The example assumes "
+#~ "the public key in the `public.pem` "
+#~ "file."
+#~ msgstr ""
+#~ "NetHSM nu poate cripta date cu "
+#~ "chei asimetrice, dar furnizează cheia "
+#~ "publică care poate fi utilizată pentru"
+#~ " criptare. Vă rugăm să consultați "
+#~ "capitolul `Show Key Details <operation.html"
+#~ "#show-key-details>` __, sau să "
+#~ "recuperați cheia așa cum este descris"
+#~ " în capitolul `Read Keys "
+#~ "<pkcs11_with_pkcs11.html#read-keys>`, pentru a "
+#~ "afla mai multe despre cum să "
+#~ "recuperați cheia publică. Exemplul presupune"
+#~ " că cheia publică se află în "
+#~ "fișierul `public.pem`."
+
+#~ msgid "Data can be encrypted with OpenSSL as follows."
+#~ msgstr "Datele pot fi criptate cu OpenSSL după cum urmează."
+
+#~ msgid ""
+#~ "The NetHSM can decrypt data for a"
+#~ " private key stored in the *Key "
+#~ "Store* on the NetHSM. This example "
+#~ "uses the encrypted message from the "
+#~ "previous chapter `Encrypt "
+#~ "<pkcs11_with_pkcs11-tool.html#encrypt>`__."
+#~ msgstr ""
+#~ "NetHSM poate decripta date pentru o "
+#~ "cheie privată stocată în *Key Store* "
+#~ "de pe NetHSM. Acest exemplu utilizează"
+#~ " mesajul criptat din capitolul anterior "
+#~ "`Encrypt <pkcs11_with_pkcs11-tool.html#encrypt>`__."
+
