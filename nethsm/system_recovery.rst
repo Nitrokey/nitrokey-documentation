@@ -8,6 +8,8 @@ Follow the instructions precicsely to prevent any accidential deletion of data.
 
 .. important::
    The system recovery only works if the GUID partition table (GPT) and the partitions itself on the disk are not corrupted.
+   A corruption could be indicated by the message "No bootable device found" during boot.
+   If they are corrupted this instructions will result in a factory installation of the NetHSM system software.
 
 The system recovery can be performed as follows.
 
