@@ -1,7 +1,10 @@
 System Recovery
 ===============
 
-The following describes the recovery process for the NetHSM system software. Follow the instructions precicsely to prevent any accidential deletion of data.
+The following describes the recovery process for the NetHSM system software.
+These instructions are only applicable if the API is inoperable, e.g. not responding to API requests.
+In the case of an operable API perform a factory reset instead.
+Follow the instructions precicsely to prevent any accidential deletion of data.
 
 .. important::
    The system recovery only works if the GUID partition table (GPT) and the partitions itself on the disk are not corrupted.
