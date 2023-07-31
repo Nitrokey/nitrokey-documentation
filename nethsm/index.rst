@@ -42,6 +42,7 @@ In case you want to restore a backup of a NetHSM, please refer to the chapter `R
    nginx.rst
    metrics.rst
    ssh.rst
+   system_recovery.rst
    opendnssec.rst
    ejbca.rst
 
