@@ -10,8 +10,8 @@ This guide explains how to install nitropy with `pipx <https://pypa.github.io/pi
 Preparation
 -----------
 
-Python 3.9 or 3.10
-~~~~~~~~~~~~~~~~~~
+Python 3.9, 3.10 or 3.11
+~~~~~~~~~~~~~~~~~~~~~~~~
 Python is already installed on most macOS and Linux systems or can be downloaded from `python.org <https://python.org>`__. See the `Downloading Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`__ for more information.
 
 pip
