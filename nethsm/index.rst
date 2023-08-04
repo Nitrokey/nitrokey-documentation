@@ -39,6 +39,7 @@ In case you want to restore a backup of a NetHSM, please refer to the chapter `R
    pkcs11-setup.rst
    pkcs11-tool.rst
    nginx.rst
+   metrics.rst
    ssh.rst
    opendnssec.rst
    ejbca.rst
