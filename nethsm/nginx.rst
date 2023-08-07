@@ -1,11 +1,11 @@
-Nginx
+nginx
 =====
 
-You can configure Nginx to use NetHSM by configuring Nginx to use the OpenSSL engine that then uses NetHSM's PKCS#11 module.
+You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module.
 
 The certificate file has to be on the disk but the private key can be used from the NetHSM.
 
-An example is available in the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ under container/nginx.
+A full example is available `below <#example>`__.
 
 OpenSSL Configuration
 ---------------------
@@ -29,7 +29,7 @@ OpenSSL Configuration
 
 You need to configure the engine section to include the pkcs11 engine in the ``dynamic_path`` property and the ``libnethsm_pkcs11.so`` module in the ``MODULE_PATH`` property.
 
-The engine can be installed on debian-based machines using
+The engine can be installed on Debian-based systems by executing the following command.
 
 .. tabs::
   .. tab:: Debian/Ubuntu
@@ -37,7 +37,7 @@ The engine can be installed on debian-based machines using
   
         apt install libengine-pkcs11-openssl
 
-Nginx Configuration
+nginx Configuration
 -------------------
 
 .. code-block:: 
@@ -82,7 +82,7 @@ The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use the Ope
 ``ssl_certificate_key "engine:pkcs11:pkcs11:object=webserver;type=private";``
 
 .. note:: 
-  You must generate the certificate separately and then upload it to the NetHSM. If the certificate on disk and the key in the NetHSM don't match Nginx won't start.
+  You must generate the certificate separately and then upload it to the NetHSM. If the certificate on disk and the key in the NetHSM don't match nginx won't start.
 
 libnethsm_pkcs11 Configuration
 ------------------------------
@@ -97,38 +97,38 @@ libnethsm_pkcs11 Configuration
         username: "operator"
         password: "opPassphrase"
 
-To secure the password you can provide it via an environment variable (see `Setup <setup.html>`__). You can also provide it in the nginx configuration:
+To secure the password you can provide it via an environment variable (see `Setup <setup>`__) or provide it in the nginx configuration:
 
 .. code-block::
 
     ssl_certificate_key "engine:pkcs11:pkcs11:object=webserver;type=private;pin=opPassphrase";
 
 
-Executing The Example
----------------------
+Example
+-------
 
-If you want to experiment with the given example you can clone with git the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:
+If you want to experiment with the `given example <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:
 
 .. warning:: 
 
   Running the generate script deletes the ``webserver`` key and replaces it.
 
-- Configure a NetHSM, either a real one or a container. See the getting-started guide for more information.
-- If your NetHSM is not running on localhost, you will need to change the URL of the curl requests in ``container/nginx/generate.sh`` to point to your NetHSM.
-- Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/nginx/p11nethsm.conf``.
-- Generate the certificate and key.
+1. Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started>`__ for more information.
+2. If your NetHSM is not running on localhost, you will need to change the URL of the curl requests in ``container/nginx/generate.sh`` to point to your NetHSM.
+3. Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/nginx/p11nethsm.conf``.
+4. Generate the certificate and key.
   
   .. code-block:: bash
    
     ./container/nginx/generate.sh
 
-- Build the container.
+5. Build the container.
   
   .. code-block:: bash
     
     docker build -f container/nginx/Dockerfile . -t pkcs-nginx 
 
-- Run the container.
+6. Run the container.
   
   .. code-block:: bash
     
