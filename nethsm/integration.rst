@@ -10,7 +10,7 @@ The NetHSM supports the PKCS#11 standard.
 The required driver is available from the `repository <https://github.com/Nitrokey/nethsm-pkcs11>`__.
 The repository containes the source code and libraries, for different operating systems.
 
-The `PKCS#11 guide <guides/pkcs11-setup.html>`_ describes how to use them in detail.
+The `PKCS#11 guide <pkcs11-setup.html>`_ describes how to use them in detail.
 
 .. important::
    This driver is still an early Proof of Concept implementation that only implements the
