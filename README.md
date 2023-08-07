@@ -63,14 +63,14 @@ Open __preview/index.html in the browser.
 
 Do not push twice an hour to the repo to avoid merge conflicts. Test locally as described above.
 
-- clone the repo from github
-- get the weblate api key from https://translate.nitrokey.com/accounts/profile/#api
-- add the remote repo 
+1. clone the repo from github
+2. get the weblate api key from https://translate.nitrokey.com/accounts/profile/#api
+3. add the remote repo 
 
 ```
 git remote add weblate https://$USERNAME:$APIKEY@translate.nitrokey.com/git/nitrokey-documentation/index/
 ```
-- Now solve the conflict manually and push upstream e.g.:
+4. Now solve the conflict manually and push upstream e.g.:
 
 ```
 git remote update weblate
@@ -78,7 +78,7 @@ git merge weblate/master
  Auto-merging locales/de/LC_MESSAGES/x230.po
  CONFLICT (content): Merge conflict in locales/de/LC_MESSAGES/x230.po
  Automatic merge failed; fix conflicts and then commit the result.
-vim locales/de/LC_MESSAGES/x230.po
+editor locales/de/LC_MESSAGES/x230.po
   # search for every ">>>>>>>"
   # delete the lines as necessary 
   # save
