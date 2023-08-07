@@ -10,6 +10,7 @@ As OpenDNSSEC needs access to manage the keys and then use them, you will need t
 You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by editing the ``/etc/opendnssec/conf.xml`` file. You will need to add the following lines:
 
 .. code-block:: xml
+      
       <?xml version="1.0" encoding="UTF-8"?>
 
       <Configuration>
