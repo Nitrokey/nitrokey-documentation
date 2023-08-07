@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-07 09:15+0200\n"
+"POT-Creation-Date: 2023-08-07 10:20+0200\n"
 "PO-Revision-Date: 2023-08-04 16:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: ja\n"
@@ -5313,7 +5313,7 @@ msgstr ""
 " Tokenを追加できる。Crypto Token タイプは``PKCS#11 Crypto Token`` で、Crypto Token "
 "名は``Nitrokey NetHSM`` である。"
 
-#: ../nethsm/ejbca.rst:22 ../nethsm/nginx.rst:108
+#: ../nethsm/ejbca.rst:22
 msgid "Executing The Example"
 msgstr "例の実行"
 
@@ -5327,7 +5327,7 @@ msgstr ""
 "与えられた例で実験したい場合は、`nethsm-pkcs11リポジトリ<https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__をgitでクローンし、以下のコマンドを実行してください："
 
-#: ../nethsm/ejbca.rst:26
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
@@ -5950,13 +5950,15 @@ msgid "Uptime in seconds."
 msgstr "アップタイムは秒単位。"
 
 #: ../nethsm/nginx.rst:2
-msgid "Nginx"
+#, fuzzy
+msgid "nginx"
 msgstr "Nginx"
 
 #: ../nethsm/nginx.rst:4
+#, fuzzy
 msgid ""
-"You can configure Nginx to use NetHSM by configuring Nginx to use the "
-"OpenSSL engine that then uses NetHSM's PKCS#11 module."
+"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
+"OpenSSL engine which then uses NetHSM's PKCS#11 module."
 msgstr "NginxがNetHSMを使うように設定するには、NginxがOpenSSLエンジンを使うように設定し、そのOpenSSLエンジンがNetHSMのPKCS#11モジュールを使うように設定します。"
 
 #: ../nethsm/nginx.rst:6
@@ -5966,13 +5968,8 @@ msgid ""
 msgstr "証明書ファイルはディスク上にある必要がありますが、秘密鍵はNetHSMから使用できます。"
 
 #: ../nethsm/nginx.rst:8
-msgid ""
-"An example is available in the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"under container/nginx."
+msgid "A full example is available `below <#example>`__."
 msgstr ""
-"サンプルは`nethsm-pkcs11 リポジトリ<https://github.com/Nitrokey/nethsm-"
-"pkcs11/tree/main/container/nginx>`__ container/nginx 以下にある。"
 
 #: ../nethsm/nginx.rst:11
 msgid "OpenSSL Configuration"
@@ -5988,7 +5985,10 @@ msgstr ""
 "モジュールを``MODULE_PATH`` プロパティに含めるように、エンジン・セクションを構成する必要があります。"
 
 #: ../nethsm/nginx.rst:32
-msgid "The engine can be installed on debian-based machines using"
+#, fuzzy
+msgid ""
+"The engine can be installed on Debian-based systems by executing the "
+"following command."
 msgstr "このエンジンは debian ベースのマシンに次の方法でインストールできます。"
 
 #: ../nethsm/nginx.rst:35
@@ -5996,7 +5996,8 @@ msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
 #: ../nethsm/nginx.rst:41
-msgid "Nginx Configuration"
+#, fuzzy
+msgid "nginx Configuration"
 msgstr "Nginxの設定"
 
 #: ../nethsm/nginx.rst:78
@@ -6021,10 +6022,11 @@ msgstr ""
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
 #: ../nethsm/nginx.rst:85
+#, fuzzy
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"Nginx won't start."
+"nginx won't start."
 msgstr ""
 "証明書は別途生成して NetHSM "
 "にアップロードする必要があります。ディスク上の証明書とNetHSMのキーが一致しない場合、Nginxは起動しません。"
@@ -6034,30 +6036,28 @@ msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 設定"
 
 #: ../nethsm/nginx.rst:100
+#, fuzzy
 msgid ""
 "To secure the password you can provide it via an environment variable "
-"(see `Setup <setup.html>`__). You can also provide it in the nginx "
-"configuration:"
+"(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr "パスワードを保護するには、環境変数で指定します（`Setup<setup.html>`__を参照）。また、nginxのコンフィギュレーションで指定することもできます："
+
+#: ../nethsm/nginx.rst:108 ../nitrokey3/firmware-update.rst.inc:69
+msgid "Example"
+msgstr "例"
 
 #: ../nethsm/nginx.rst:110
 msgid ""
-"If you want to experiment with the given example you can clone with git "
-"the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__ and run the following commands:"
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
 msgstr ""
-"与えられた例で実験したい場合は、`nethsm-pkcs11リポジトリ<https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__をgitでクローンし、以下のコマンドを実行してください："
 
 #: ../nethsm/nginx.rst:114
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr "生成スクリプトを実行すると、``webserver`` キーが削除され、置き換わる。"
-
-#: ../nethsm/nginx.rst:116
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the getting-"
-"started guide for more information."
-msgstr "NetHSMを設定します。本物のNetHSMでもコンテナでもかまいません。詳細については、スタートガイドを参照してください。"
 
 #: ../nethsm/nginx.rst:117
 msgid ""
@@ -10396,10 +10396,6 @@ msgstr "タイプ"
 #: ../nitrokey3/firmware-update.rst.inc:68
 msgid "Version Number"
 msgstr "バージョン番号"
-
-#: ../nitrokey3/firmware-update.rst.inc:69
-msgid "Example"
-msgstr "例"
 
 #: ../nitrokey3/firmware-update.rst.inc:70
 msgid "stable release"
@@ -25419,4 +25415,30 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 #~ msgstr ""
 #~ "EJBCA は PKI 認証局ソフトウェアです。EJBCA "
 #~ "についての詳細は`EJBCA<https://www.ejbca.org/>`__ をご覧ください。"
+
+#~ msgid ""
+#~ "An example is available in the "
+#~ "`nethsm-pkcs11 repository <https://github.com/Nitrokey"
+#~ "/nethsm-pkcs11/tree/main/container/nginx>`__ under "
+#~ "container/nginx."
+#~ msgstr ""
+#~ "サンプルは`nethsm-pkcs11 リポジトリ<https://github.com/Nitrokey"
+#~ "/nethsm-pkcs11/tree/main/container/nginx>`__ container/nginx"
+#~ " 以下にある。"
+
+#~ msgid ""
+#~ "If you want to experiment with the"
+#~ " given example you can clone with "
+#~ "git the `nethsm-pkcs11 repository "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11>`__ and "
+#~ "run the following commands:"
+#~ msgstr ""
+#~ "与えられた例で実験したい場合は、`nethsm-pkcs11リポジトリ<https://github.com/Nitrokey"
+#~ "/nethsm-pkcs11>`__をgitでクローンし、以下のコマンドを実行してください："
+
+#~ msgid ""
+#~ "Configure a NetHSM, either a real "
+#~ "one or a container. See the "
+#~ "getting-started guide for more information."
+#~ msgstr "NetHSMを設定します。本物のNetHSMでもコンテナでもかまいません。詳細については、スタートガイドを参照してください。"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-07 09:15+0200\n"
+"POT-Creation-Date: 2023-08-07 10:20+0200\n"
 "PO-Revision-Date: 2023-08-04 16:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: cs\n"
@@ -5840,7 +5840,7 @@ msgstr ""
 "Typ Crypto Tokenu je ``PKCS#11 Crypto Token`` a název Crypto Tokenu je "
 "``Nitrokey NetHSM``."
 
-#: ../nethsm/ejbca.rst:22 ../nethsm/nginx.rst:108
+#: ../nethsm/ejbca.rst:22
 msgid "Executing The Example"
 msgstr "Provedení příkladu"
 
@@ -5855,7 +5855,7 @@ msgstr ""
 "naklonovat repozitář `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ a spustit následující příkazy:"
 
-#: ../nethsm/ejbca.rst:26
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
@@ -6526,13 +6526,15 @@ msgid "Uptime in seconds."
 msgstr "Doba provozu v sekundách."
 
 #: ../nethsm/nginx.rst:2
-msgid "Nginx"
+#, fuzzy
+msgid "nginx"
 msgstr "Nginx"
 
 #: ../nethsm/nginx.rst:4
+#, fuzzy
 msgid ""
-"You can configure Nginx to use NetHSM by configuring Nginx to use the "
-"OpenSSL engine that then uses NetHSM's PKCS#11 module."
+"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
+"OpenSSL engine which then uses NetHSM's PKCS#11 module."
 msgstr ""
 "Nginx můžete nakonfigurovat tak, aby používal NetHSM, a to tak, že jej "
 "nakonfigurujete na použití enginu OpenSSL, který pak použije modul "
@@ -6547,14 +6549,8 @@ msgstr ""
 "NetHSM."
 
 #: ../nethsm/nginx.rst:8
-msgid ""
-"An example is available in the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"under container/nginx."
+msgid "A full example is available `below <#example>`__."
 msgstr ""
-"Příklad je k dispozici v repozitáři `nethsm-pkcs11 "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"v kontejneru/nginx."
 
 #: ../nethsm/nginx.rst:11
 msgid "OpenSSL Configuration"
@@ -6571,7 +6567,10 @@ msgstr ""
 "vlastnosti ``MODULE_PATH``."
 
 #: ../nethsm/nginx.rst:32
-msgid "The engine can be installed on debian-based machines using"
+#, fuzzy
+msgid ""
+"The engine can be installed on Debian-based systems by executing the "
+"following command."
 msgstr "Motor lze nainstalovat na počítače se systémem Debian pomocí příkazu"
 
 #: ../nethsm/nginx.rst:35
@@ -6579,7 +6578,8 @@ msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
 #: ../nethsm/nginx.rst:41
-msgid "Nginx Configuration"
+#, fuzzy
+msgid "nginx Configuration"
 msgstr "Konfigurace Nginx"
 
 #: ../nethsm/nginx.rst:78
@@ -6607,10 +6607,11 @@ msgstr ""
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
 #: ../nethsm/nginx.rst:85
+#, fuzzy
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"Nginx won't start."
+"nginx won't start."
 msgstr ""
 "Certifikát je nutné vygenerovat samostatně a poté jej nahrát do NetHSM. "
 "Pokud se certifikát na disku a klíč v NetHSM neshodují, Nginx se "
@@ -6621,37 +6622,32 @@ msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Konfigurace"
 
 #: ../nethsm/nginx.rst:100
+#, fuzzy
 msgid ""
 "To secure the password you can provide it via an environment variable "
-"(see `Setup <setup.html>`__). You can also provide it in the nginx "
-"configuration:"
+"(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr ""
 "Heslo můžete zabezpečit pomocí proměnné prostředí (viz `Setup "
 "<setup.html>`__). Můžete jej také zadat v konfiguraci nginx:"
 
+#: ../nethsm/nginx.rst:108 ../nitrokey3/firmware-update.rst.inc:69
+msgid "Example"
+msgstr "Příklad"
+
 #: ../nethsm/nginx.rst:110
 msgid ""
-"If you want to experiment with the given example you can clone with git "
-"the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__ and run the following commands:"
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
 msgstr ""
-"Pokud chcete s uvedeným příkladem experimentovat, můžete pomocí git "
-"naklonovat repozitář `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__ a spustit následující příkazy:"
 
 #: ../nethsm/nginx.rst:114
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Spuštěním generovacího skriptu se odstraní klíč ``webserver`` a nahradí "
 "se."
-
-#: ../nethsm/nginx.rst:116
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the getting-"
-"started guide for more information."
-msgstr ""
-"Nakonfigurujte NetHSM, buď skutečný, nebo kontejner. Další informace "
-"naleznete v příručce Začínáme."
 
 #: ../nethsm/nginx.rst:117
 msgid ""
@@ -11673,10 +11669,6 @@ msgstr "Typ"
 #: ../nitrokey3/firmware-update.rst.inc:68
 msgid "Version Number"
 msgstr "Číslo verze"
-
-#: ../nitrokey3/firmware-update.rst.inc:69
-msgid "Example"
-msgstr "Příklad"
 
 #: ../nitrokey3/firmware-update.rst.inc:70
 msgid "stable release"
@@ -29483,4 +29475,36 @@ msgstr ""
 #~ "EJBCA je software certifikační autority "
 #~ "PKI, více informací o EJBCA najdete "
 #~ "na adrese `EJBCA <https://www.ejbca.org/>`__."
+
+#~ msgid ""
+#~ "An example is available in the "
+#~ "`nethsm-pkcs11 repository <https://github.com/Nitrokey"
+#~ "/nethsm-pkcs11/tree/main/container/nginx>`__ under "
+#~ "container/nginx."
+#~ msgstr ""
+#~ "Příklad je k dispozici v repozitáři "
+#~ "`nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
+#~ "pkcs11/tree/main/container/nginx>`__ v kontejneru/nginx."
+
+#~ msgid ""
+#~ "If you want to experiment with the"
+#~ " given example you can clone with "
+#~ "git the `nethsm-pkcs11 repository "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11>`__ and "
+#~ "run the following commands:"
+#~ msgstr ""
+#~ "Pokud chcete s uvedeným příkladem "
+#~ "experimentovat, můžete pomocí git naklonovat"
+#~ " repozitář `nethsm-pkcs11 "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11>`__ a "
+#~ "spustit následující příkazy:"
+
+#~ msgid ""
+#~ "Configure a NetHSM, either a real "
+#~ "one or a container. See the "
+#~ "getting-started guide for more information."
+#~ msgstr ""
+#~ "Nakonfigurujte NetHSM, buď skutečný, nebo "
+#~ "kontejner. Další informace naleznete v "
+#~ "příručce Začínáme."
 

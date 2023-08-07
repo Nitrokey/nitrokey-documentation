@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-07 09:15+0200\n"
+"POT-Creation-Date: 2023-08-07 10:20+0200\n"
 "PO-Revision-Date: 2023-08-04 16:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: zh_CN\n"
@@ -5128,7 +5128,7 @@ msgstr ""
 "GUI``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``"
 " 添加一个新的加密令牌。加密令牌类型是``PKCS#11 Crypto Token``，加密令牌名称是``Nitrokey NetHSM``。"
 
-#: ../nethsm/ejbca.rst:22 ../nethsm/nginx.rst:108
+#: ../nethsm/ejbca.rst:22
 msgid "Executing The Example"
 msgstr "执行示例"
 
@@ -5142,7 +5142,7 @@ msgstr ""
 "如果您想用给出的示例进行实验，可以用 git 克隆`nethsm-pkcs11 软件仓库<https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__ 并运行以下命令："
 
-#: ../nethsm/ejbca.rst:26
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
@@ -5742,13 +5742,15 @@ msgid "Uptime in seconds."
 msgstr "正常运行时间（秒）。"
 
 #: ../nethsm/nginx.rst:2
-msgid "Nginx"
+#, fuzzy
+msgid "nginx"
 msgstr "Nginx"
 
 #: ../nethsm/nginx.rst:4
+#, fuzzy
 msgid ""
-"You can configure Nginx to use NetHSM by configuring Nginx to use the "
-"OpenSSL engine that then uses NetHSM's PKCS#11 module."
+"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
+"OpenSSL engine which then uses NetHSM's PKCS#11 module."
 msgstr "通过配置Nginx使用OpenSSL引擎，然后使用NetHSM的PKCS#11模块，就可以配置Nginx使用NetHSM。"
 
 #: ../nethsm/nginx.rst:6
@@ -5758,13 +5760,8 @@ msgid ""
 msgstr "证书文件必须在磁盘上，但私钥可通过 NetHSM 使用。"
 
 #: ../nethsm/nginx.rst:8
-msgid ""
-"An example is available in the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"under container/nginx."
+msgid "A full example is available `below <#example>`__."
 msgstr ""
-"`nethsm-pkcs11 存储库<https://github.com/Nitrokey/nethsm-"
-"pkcs11/tree/main/container/nginx>`__container/nginx下提供了一个示例。"
 
 #: ../nethsm/nginx.rst:11
 msgid "OpenSSL Configuration"
@@ -5780,7 +5777,10 @@ msgstr ""
 "属性中包含``libnethsm_pkcs11.so`` 模块。"
 
 #: ../nethsm/nginx.rst:32
-msgid "The engine can be installed on debian-based machines using"
+#, fuzzy
+msgid ""
+"The engine can be installed on Debian-based systems by executing the "
+"following command."
 msgstr "该引擎可安装在基于 debian 的机器上，使用"
 
 #: ../nethsm/nginx.rst:35
@@ -5788,7 +5788,8 @@ msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
 #: ../nethsm/nginx.rst:41
-msgid "Nginx Configuration"
+#, fuzzy
+msgid "nginx Configuration"
 msgstr "Nginx 配置"
 
 #: ../nethsm/nginx.rst:78
@@ -5813,10 +5814,11 @@ msgstr ""
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
 #: ../nethsm/nginx.rst:85
+#, fuzzy
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"Nginx won't start."
+"nginx won't start."
 msgstr "你必须单独生成证书，然后上传到NetHSM。如果磁盘上的证书和NetHSM中的密钥不匹配，Nginx将无法启动。"
 
 #: ../nethsm/nginx.rst:88
@@ -5824,30 +5826,28 @@ msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 配置"
 
 #: ../nethsm/nginx.rst:100
+#, fuzzy
 msgid ""
 "To secure the password you can provide it via an environment variable "
-"(see `Setup <setup.html>`__). You can also provide it in the nginx "
-"configuration:"
+"(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr "为确保密码安全，可通过环境变量提供密码（参见`Setup<setup.html>`__ ）。也可以在 nginx 配置中提供："
+
+#: ../nethsm/nginx.rst:108 ../nitrokey3/firmware-update.rst.inc:69
+msgid "Example"
+msgstr "例子"
 
 #: ../nethsm/nginx.rst:110
 msgid ""
-"If you want to experiment with the given example you can clone with git "
-"the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__ and run the following commands:"
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
 msgstr ""
-"如果您想用给出的示例进行实验，可以用 git 克隆`nethsm-pkcs11 软件仓库<https://github.com/Nitrokey"
-"/nethsm-pkcs11>`__ 并运行以下命令："
 
 #: ../nethsm/nginx.rst:114
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr "运行生成脚本会删除``webserver`` 密钥并将其替换。"
-
-#: ../nethsm/nginx.rst:116
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the getting-"
-"started guide for more information."
-msgstr "配置 NetHSM，可以是真实的，也可以是容器。更多信息，请参阅入门指南。"
 
 #: ../nethsm/nginx.rst:117
 msgid ""
@@ -10056,10 +10056,6 @@ msgstr "类型"
 #: ../nitrokey3/firmware-update.rst.inc:68
 msgid "Version Number"
 msgstr "版本号"
-
-#: ../nitrokey3/firmware-update.rst.inc:69
-msgid "Example"
-msgstr "例子"
 
 #: ../nitrokey3/firmware-update.rst.inc:70
 msgid "stable release"
@@ -24495,4 +24491,30 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 #~ msgstr ""
 #~ "EJBCA 是一款 PKI 证书颁发机构软件，有关 EJBCA "
 #~ "的更多信息，请访问`EJBCA<https://www.ejbca.org/>`__。"
+
+#~ msgid ""
+#~ "An example is available in the "
+#~ "`nethsm-pkcs11 repository <https://github.com/Nitrokey"
+#~ "/nethsm-pkcs11/tree/main/container/nginx>`__ under "
+#~ "container/nginx."
+#~ msgstr ""
+#~ "`nethsm-pkcs11 存储库<https://github.com/Nitrokey/nethsm-"
+#~ "pkcs11/tree/main/container/nginx>`__container/nginx下提供了一个示例。"
+
+#~ msgid ""
+#~ "If you want to experiment with the"
+#~ " given example you can clone with "
+#~ "git the `nethsm-pkcs11 repository "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11>`__ and "
+#~ "run the following commands:"
+#~ msgstr ""
+#~ "如果您想用给出的示例进行实验，可以用 git 克隆`nethsm-pkcs11 "
+#~ "软件仓库<https://github.com/Nitrokey/nethsm-pkcs11>`__ "
+#~ "并运行以下命令："
+
+#~ msgid ""
+#~ "Configure a NetHSM, either a real "
+#~ "one or a container. See the "
+#~ "getting-started guide for more information."
+#~ msgstr "配置 NetHSM，可以是真实的，也可以是容器。更多信息，请参阅入门指南。"
 

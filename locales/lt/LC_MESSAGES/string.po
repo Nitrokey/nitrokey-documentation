@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-07 09:15+0200\n"
+"POT-Creation-Date: 2023-08-07 10:20+0200\n"
 "PO-Revision-Date: 2023-08-04 16:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: lt\n"
@@ -5931,7 +5931,7 @@ msgstr ""
 "Kriptožetono tipas yra ``PKCS#11 Crypto Token``, o kriptožetono "
 "pavadinimas - ``Nitrokey NetHSM``."
 
-#: ../nethsm/ejbca.rst:22 ../nethsm/nginx.rst:108
+#: ../nethsm/ejbca.rst:22
 msgid "Executing The Example"
 msgstr "Pavyzdžio vykdymas"
 
@@ -5946,7 +5946,7 @@ msgstr ""
 "`nethsm-pkcs11 saugyklą <https://github.com/Nitrokey/nethsm-pkcs11>`__ ir"
 " paleisti šias komandas:"
 
-#: ../nethsm/ejbca.rst:26
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
@@ -6624,13 +6624,15 @@ msgid "Uptime in seconds."
 msgstr "Nepertraukiamo veikimo laikas sekundėmis."
 
 #: ../nethsm/nginx.rst:2
-msgid "Nginx"
+#, fuzzy
+msgid "nginx"
 msgstr "Nginx"
 
 #: ../nethsm/nginx.rst:4
+#, fuzzy
 msgid ""
-"You can configure Nginx to use NetHSM by configuring Nginx to use the "
-"OpenSSL engine that then uses NetHSM's PKCS#11 module."
+"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
+"OpenSSL engine which then uses NetHSM's PKCS#11 module."
 msgstr ""
 "Galite sukonfigūruoti \"Nginx\" naudoti NetHSM sukonfigūruodami \"Nginx\""
 " naudoti \"OpenSSL\" variklį, kuris tada naudoja NetHSM PKCS#11 modulį."
@@ -6644,14 +6646,8 @@ msgstr ""
 " iš NetHSM."
 
 #: ../nethsm/nginx.rst:8
-msgid ""
-"An example is available in the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"under container/nginx."
+msgid "A full example is available `below <#example>`__."
 msgstr ""
-"Pavyzdys pateikiamas `nethsm-pkcs11 saugykloje "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"po konteineris/nginx."
 
 #: ../nethsm/nginx.rst:11
 msgid "OpenSSL Configuration"
@@ -6668,7 +6664,10 @@ msgstr ""
 "``libnethsm_pkcs11.so`` modulis."
 
 #: ../nethsm/nginx.rst:32
-msgid "The engine can be installed on debian-based machines using"
+#, fuzzy
+msgid ""
+"The engine can be installed on Debian-based systems by executing the "
+"following command."
 msgstr ""
 "Variklį galima įdiegti \"Debian\" pagrindu veikiančiuose kompiuteriuose "
 "naudojant"
@@ -6678,7 +6677,8 @@ msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
 #: ../nethsm/nginx.rst:41
-msgid "Nginx Configuration"
+#, fuzzy
+msgid "nginx Configuration"
 msgstr "\"Nginx\" konfigūracija"
 
 #: ../nethsm/nginx.rst:78
@@ -6704,10 +6704,11 @@ msgstr ""
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
 #: ../nethsm/nginx.rst:85
+#, fuzzy
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"Nginx won't start."
+"nginx won't start."
 msgstr ""
 "Sertifikatą reikia sukurti atskirai ir tada įkelti į NetHSM. Jei diske "
 "esantis sertifikatas ir NetHSM esantis raktas nesutampa, \"Nginx\" "
@@ -6718,38 +6719,33 @@ msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 konfigūracija"
 
 #: ../nethsm/nginx.rst:100
+#, fuzzy
 msgid ""
 "To secure the password you can provide it via an environment variable "
-"(see `Setup <setup.html>`__). You can also provide it in the nginx "
-"configuration:"
+"(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr ""
 "Norėdami apsaugoti slaptažodį, galite jį pateikti per aplinkos kintamąjį "
 "(žr. `Setup <setup.html>`__). Jį taip pat galite nurodyti \"nginx\" "
 "konfigūracijoje:"
 
+#: ../nethsm/nginx.rst:108 ../nitrokey3/firmware-update.rst.inc:69
+msgid "Example"
+msgstr "Pavyzdys"
+
 #: ../nethsm/nginx.rst:110
 msgid ""
-"If you want to experiment with the given example you can clone with git "
-"the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__ and run the following commands:"
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
 msgstr ""
-"Jei norite paeksperimentuoti su pateiktu pavyzdžiu, galite klonuoti "
-"`nethsm-pkcs11 saugyklą <https://github.com/Nitrokey/nethsm-pkcs11>`__ ir"
-" paleisti šias komandas:"
 
 #: ../nethsm/nginx.rst:114
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Paleidus generavimo scenarijų ištrinamas ``webserver`` raktas ir jis "
 "pakeičiamas nauju."
-
-#: ../nethsm/nginx.rst:116
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the getting-"
-"started guide for more information."
-msgstr ""
-"Sukonfigūruokite tikrą arba konteinerį NetHSM. Daugiau informacijos žr. "
-"\"Getting-started\" vadove."
 
 #: ../nethsm/nginx.rst:117
 msgid ""
@@ -11846,10 +11842,6 @@ msgstr "Tipas"
 #: ../nitrokey3/firmware-update.rst.inc:68
 msgid "Version Number"
 msgstr "Versijos numeris"
-
-#: ../nitrokey3/firmware-update.rst.inc:69
-msgid "Example"
-msgstr "Pavyzdys"
 
 #: ../nitrokey3/firmware-update.rst.inc:70
 msgid "stable release"
@@ -29845,4 +29837,35 @@ msgstr ""
 #~ "programinė įranga, daugiau informacijos apie"
 #~ " EJBCA galite rasti adresu `EJBCA "
 #~ "<https://www.ejbca.org/>`__."
+
+#~ msgid ""
+#~ "An example is available in the "
+#~ "`nethsm-pkcs11 repository <https://github.com/Nitrokey"
+#~ "/nethsm-pkcs11/tree/main/container/nginx>`__ under "
+#~ "container/nginx."
+#~ msgstr ""
+#~ "Pavyzdys pateikiamas `nethsm-pkcs11 saugykloje"
+#~ " <https://github.com/Nitrokey/nethsm-"
+#~ "pkcs11/tree/main/container/nginx>`__ po konteineris/nginx."
+
+#~ msgid ""
+#~ "If you want to experiment with the"
+#~ " given example you can clone with "
+#~ "git the `nethsm-pkcs11 repository "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11>`__ and "
+#~ "run the following commands:"
+#~ msgstr ""
+#~ "Jei norite paeksperimentuoti su pateiktu "
+#~ "pavyzdžiu, galite klonuoti `nethsm-pkcs11 "
+#~ "saugyklą <https://github.com/Nitrokey/nethsm-pkcs11>`__"
+#~ " ir paleisti šias komandas:"
+
+#~ msgid ""
+#~ "Configure a NetHSM, either a real "
+#~ "one or a container. See the "
+#~ "getting-started guide for more information."
+#~ msgstr ""
+#~ "Sukonfigūruokite tikrą arba konteinerį NetHSM."
+#~ " Daugiau informacijos žr. \"Getting-"
+#~ "started\" vadove."
 

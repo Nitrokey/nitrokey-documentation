@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-07 09:15+0200\n"
+"POT-Creation-Date: 2023-08-07 10:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4444,7 +4444,6 @@ msgid "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin 
 msgstr ""
 
 #: ../nethsm/ejbca.rst:22
-#: ../nethsm/nginx.rst:108
 msgid "Executing The Example"
 msgstr ""
 
@@ -4453,6 +4452,7 @@ msgid "If you want to experiment with the given example you can use git to clone
 msgstr ""
 
 #: ../nethsm/ejbca.rst:26
+#: ../nethsm/nginx.rst:116
 msgid "Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started>`__ for more information."
 msgstr ""
 
@@ -4954,11 +4954,11 @@ msgid "Uptime in seconds."
 msgstr ""
 
 #: ../nethsm/nginx.rst:2
-msgid "Nginx"
+msgid "nginx"
 msgstr ""
 
 #: ../nethsm/nginx.rst:4
-msgid "You can configure Nginx to use NetHSM by configuring Nginx to use the OpenSSL engine that then uses NetHSM's PKCS#11 module."
+msgid "You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
 msgstr ""
 
 #: ../nethsm/nginx.rst:6
@@ -4966,7 +4966,7 @@ msgid "The certificate file has to be on the disk but the private key can be use
 msgstr ""
 
 #: ../nethsm/nginx.rst:8
-msgid "An example is available in the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ under container/nginx."
+msgid "A full example is available `below <#example>`__."
 msgstr ""
 
 #: ../nethsm/nginx.rst:11
@@ -4978,7 +4978,7 @@ msgid "You need to configure the engine section to include the pkcs11 engine in 
 msgstr ""
 
 #: ../nethsm/nginx.rst:32
-msgid "The engine can be installed on debian-based machines using"
+msgid "The engine can be installed on Debian-based systems by executing the following command."
 msgstr ""
 
 #: ../nethsm/nginx.rst:35
@@ -4986,7 +4986,7 @@ msgid "Debian/Ubuntu"
 msgstr ""
 
 #: ../nethsm/nginx.rst:41
-msgid "Nginx Configuration"
+msgid "nginx Configuration"
 msgstr ""
 
 #: ../nethsm/nginx.rst:78
@@ -5002,7 +5002,7 @@ msgid "``ssl_certificate_key \"engine:pkcs11:pkcs11:object=webserver;type=privat
 msgstr ""
 
 #: ../nethsm/nginx.rst:85
-msgid "You must generate the certificate separately and then upload it to the NetHSM. If the certificate on disk and the key in the NetHSM don't match Nginx won't start."
+msgid "You must generate the certificate separately and then upload it to the NetHSM. If the certificate on disk and the key in the NetHSM don't match nginx won't start."
 msgstr ""
 
 #: ../nethsm/nginx.rst:88
@@ -5010,19 +5010,20 @@ msgid "libnethsm_pkcs11 Configuration"
 msgstr ""
 
 #: ../nethsm/nginx.rst:100
-msgid "To secure the password you can provide it via an environment variable (see `Setup <setup.html>`__). You can also provide it in the nginx configuration:"
+msgid "To secure the password you can provide it via an environment variable (see `Setup <setup>`__) or provide it in the nginx configuration:"
+msgstr ""
+
+#: ../nethsm/nginx.rst:108
+#: ../nitrokey3/firmware-update.rst.inc:69
+msgid "Example"
 msgstr ""
 
 #: ../nethsm/nginx.rst:110
-msgid "If you want to experiment with the given example you can clone with git the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:"
+msgid "If you want to experiment with the `given example <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:"
 msgstr ""
 
 #: ../nethsm/nginx.rst:114
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
-msgstr ""
-
-#: ../nethsm/nginx.rst:116
-msgid "Configure a NetHSM, either a real one or a container. See the getting-started guide for more information."
 msgstr ""
 
 #: ../nethsm/nginx.rst:117
@@ -8043,10 +8044,6 @@ msgstr ""
 
 #: ../nitrokey3/firmware-update.rst.inc:68
 msgid "Version Number"
-msgstr ""
-
-#: ../nitrokey3/firmware-update.rst.inc:69
-msgid "Example"
 msgstr ""
 
 #: ../nitrokey3/firmware-update.rst.inc:70

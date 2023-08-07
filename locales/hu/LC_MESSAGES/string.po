@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-07 09:15+0200\n"
+"POT-Creation-Date: 2023-08-07 10:20+0200\n"
 "PO-Revision-Date: 2023-08-04 16:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: hu\n"
@@ -5972,7 +5972,7 @@ msgstr ""
 "adhat hozzá egy új kriptotokent. A kriptotoken típusa ``PKCS#11 Crypto "
 "Token``, a kriptotoken neve pedig ``Nitrokey NetHSM``."
 
-#: ../nethsm/ejbca.rst:22 ../nethsm/nginx.rst:108
+#: ../nethsm/ejbca.rst:22
 msgid "Executing The Example"
 msgstr "A példa végrehajtása"
 
@@ -5987,7 +5987,7 @@ msgstr ""
 "klónozd a `nethsm-pkcs11 repository-t <https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__ és futtasd a következő parancsokat:"
 
-#: ../nethsm/ejbca.rst:26
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
@@ -6668,13 +6668,15 @@ msgid "Uptime in seconds."
 msgstr "Üzemidő másodpercekben."
 
 #: ../nethsm/nginx.rst:2
-msgid "Nginx"
+#, fuzzy
+msgid "nginx"
 msgstr "Nginx"
 
 #: ../nethsm/nginx.rst:4
+#, fuzzy
 msgid ""
-"You can configure Nginx to use NetHSM by configuring Nginx to use the "
-"OpenSSL engine that then uses NetHSM's PKCS#11 module."
+"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
+"OpenSSL engine which then uses NetHSM's PKCS#11 module."
 msgstr ""
 "Az Nginxet úgy konfigurálhatja a NetHSM használatára, hogy az Nginxet az "
 "OpenSSL motor használatára konfigurálja, amely aztán a NetHSM PKCS#11 "
@@ -6689,14 +6691,8 @@ msgstr ""
 "ről is használható."
 
 #: ../nethsm/nginx.rst:8
-msgid ""
-"An example is available in the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"under container/nginx."
+msgid "A full example is available `below <#example>`__."
 msgstr ""
-"Egy példa elérhető a `nethsm-pkcs11 tárolóban "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"a container/nginx alatt."
 
 #: ../nethsm/nginx.rst:11
 msgid "OpenSSL Configuration"
@@ -6713,7 +6709,10 @@ msgstr ""
 "``MODULE_PATH`` tulajdonságban a ` ` modul szerepeljen."
 
 #: ../nethsm/nginx.rst:32
-msgid "The engine can be installed on debian-based machines using"
+#, fuzzy
+msgid ""
+"The engine can be installed on Debian-based systems by executing the "
+"following command."
 msgstr "A motor telepíthető debian-alapú gépekre a következővel"
 
 #: ../nethsm/nginx.rst:35
@@ -6721,7 +6720,8 @@ msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
 #: ../nethsm/nginx.rst:41
-msgid "Nginx Configuration"
+#, fuzzy
+msgid "nginx Configuration"
 msgstr "Nginx konfiguráció"
 
 #: ../nethsm/nginx.rst:78
@@ -6749,10 +6749,11 @@ msgstr ""
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";`"
 
 #: ../nethsm/nginx.rst:85
+#, fuzzy
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"Nginx won't start."
+"nginx won't start."
 msgstr ""
 "A tanúsítványt külön kell létrehoznia, majd feltöltenie a NetHSM-be. Ha a"
 " lemezen lévő tanúsítvány és a NetHSM-ben lévő kulcs nem egyezik, az "
@@ -6763,37 +6764,32 @@ msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Konfiguráció"
 
 #: ../nethsm/nginx.rst:100
+#, fuzzy
 msgid ""
 "To secure the password you can provide it via an environment variable "
-"(see `Setup <setup.html>`__). You can also provide it in the nginx "
-"configuration:"
+"(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr ""
 "A jelszó biztonságossá tételéhez megadhatja azt egy környezeti változóval"
 " (lásd `Setup <setup.html>`__). Az nginx konfigurációjában is megadhatja:"
 
+#: ../nethsm/nginx.rst:108 ../nitrokey3/firmware-update.rst.inc:69
+msgid "Example"
+msgstr "Példa"
+
 #: ../nethsm/nginx.rst:110
 msgid ""
-"If you want to experiment with the given example you can clone with git "
-"the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__ and run the following commands:"
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
 msgstr ""
-"Ha kísérletezni akarsz az adott példával, akkor a git segítségével "
-"klónozd a `nethsm-pkcs11 repository-t <https://github.com/Nitrokey"
-"/nethsm-pkcs11>`__ és futtasd a következő parancsokat:"
 
 #: ../nethsm/nginx.rst:114
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "A generáló szkript futtatása törli a ``webserver`` kulcsot és kicseréli "
 "azt."
-
-#: ../nethsm/nginx.rst:116
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the getting-"
-"started guide for more information."
-msgstr ""
-"Konfiguráljon egy NetHSM-et, akár egy valódi, akár egy konténert. További"
-" információkért lásd a Getting-started útmutatót."
 
 #: ../nethsm/nginx.rst:117
 msgid ""
@@ -11939,10 +11935,6 @@ msgstr "Típus"
 #: ../nitrokey3/firmware-update.rst.inc:68
 msgid "Version Number"
 msgstr "Verziószám"
-
-#: ../nitrokey3/firmware-update.rst.inc:69
-msgid "Example"
-msgstr "Példa"
 
 #: ../nitrokey3/firmware-update.rst.inc:70
 msgid "stable release"
@@ -30218,4 +30210,38 @@ msgstr ""
 #~ " szoftver, az EJBCA-val kapcsolatos "
 #~ "további információkat a `EJBCA "
 #~ "<https://www.ejbca.org/>`__ oldalon talál."
+
+#~ msgid ""
+#~ "An example is available in the "
+#~ "`nethsm-pkcs11 repository <https://github.com/Nitrokey"
+#~ "/nethsm-pkcs11/tree/main/container/nginx>`__ under "
+#~ "container/nginx."
+#~ msgstr ""
+#~ "Egy példa elérhető a `nethsm-pkcs11 "
+#~ "tárolóban <https://github.com/Nitrokey/nethsm-"
+#~ "pkcs11/tree/main/container/nginx>`__ a container/nginx "
+#~ "alatt."
+
+#~ msgid ""
+#~ "If you want to experiment with the"
+#~ " given example you can clone with "
+#~ "git the `nethsm-pkcs11 repository "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11>`__ and "
+#~ "run the following commands:"
+#~ msgstr ""
+#~ "Ha kísérletezni akarsz az adott "
+#~ "példával, akkor a git segítségével "
+#~ "klónozd a `nethsm-pkcs11 repository-t "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11>`__ és "
+#~ "futtasd a következő parancsokat:"
+
+#~ msgid ""
+#~ "Configure a NetHSM, either a real "
+#~ "one or a container. See the "
+#~ "getting-started guide for more information."
+#~ msgstr ""
+#~ "Konfiguráljon egy NetHSM-et, akár egy"
+#~ " valódi, akár egy konténert. További "
+#~ "információkért lásd a Getting-started "
+#~ "útmutatót."
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-07 09:15+0200\n"
+"POT-Creation-Date: 2023-08-07 10:20+0200\n"
 "PO-Revision-Date: 2023-08-04 16:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: fi\n"
@@ -5892,7 +5892,7 @@ msgstr ""
 "Crypto Tokenin tyyppi on ``PKCS#11 Crypto Token`` ja Crypto Tokenin nimi "
 "on ``Nitrokey NetHSM``."
 
-#: ../nethsm/ejbca.rst:22 ../nethsm/nginx.rst:108
+#: ../nethsm/ejbca.rst:22
 msgid "Executing The Example"
 msgstr "Esimerkin suorittaminen"
 
@@ -5907,7 +5907,7 @@ msgstr ""
 "`nethsm-pkcs11-arkiston <https://github.com/Nitrokey/nethsm-pkcs11>`__ ja"
 " suorittaa seuraavat komennot:"
 
-#: ../nethsm/ejbca.rst:26
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
 #, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
@@ -6576,13 +6576,15 @@ msgid "Uptime in seconds."
 msgstr "Käynnissäoloaika sekunteina."
 
 #: ../nethsm/nginx.rst:2
-msgid "Nginx"
+#, fuzzy
+msgid "nginx"
 msgstr "Nginx"
 
 #: ../nethsm/nginx.rst:4
+#, fuzzy
 msgid ""
-"You can configure Nginx to use NetHSM by configuring Nginx to use the "
-"OpenSSL engine that then uses NetHSM's PKCS#11 module."
+"You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
+"OpenSSL engine which then uses NetHSM's PKCS#11 module."
 msgstr ""
 "Voit määrittää Nginxin käyttämään NetHSM:ää määrittämällä Nginxin "
 "käyttämään OpenSSL-moottoria, joka käyttää NetHSM:n PKCS#11-moduulia."
@@ -6596,14 +6598,8 @@ msgstr ""
 "käyttää NetHSM:stä."
 
 #: ../nethsm/nginx.rst:8
-msgid ""
-"An example is available in the `nethsm-pkcs11 repository "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"under container/nginx."
+msgid "A full example is available `below <#example>`__."
 msgstr ""
-"Esimerkki on saatavilla `nethsm-pkcs11-arkistossa "
-"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
-"osoitteessa container/nginx."
 
 #: ../nethsm/nginx.rst:11
 msgid "OpenSSL Configuration"
@@ -6620,7 +6616,10 @@ msgstr ""
 "-ominaisuuteen."
 
 #: ../nethsm/nginx.rst:32
-msgid "The engine can be installed on debian-based machines using"
+#, fuzzy
+msgid ""
+"The engine can be installed on Debian-based systems by executing the "
+"following command."
 msgstr "Moottori voidaan asentaa debian-pohjaisiin koneisiin käyttämällä komentoa"
 
 #: ../nethsm/nginx.rst:35
@@ -6628,7 +6627,8 @@ msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
 #: ../nethsm/nginx.rst:41
-msgid "Nginx Configuration"
+#, fuzzy
+msgid "nginx Configuration"
 msgstr "Nginxin konfigurointi"
 
 #: ../nethsm/nginx.rst:78
@@ -6657,10 +6657,11 @@ msgstr ""
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";`"
 
 #: ../nethsm/nginx.rst:85
+#, fuzzy
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
-"Nginx won't start."
+"nginx won't start."
 msgstr ""
 "Varmenne on luotava erikseen ja ladattava sitten NetHSM:ään. Jos levyllä "
 "oleva varmenne ja NetHSM:ssä oleva avain eivät täsmää, Nginx ei "
@@ -6671,37 +6672,32 @@ msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Konfigurointi"
 
 #: ../nethsm/nginx.rst:100
+#, fuzzy
 msgid ""
 "To secure the password you can provide it via an environment variable "
-"(see `Setup <setup.html>`__). You can also provide it in the nginx "
-"configuration:"
+"(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr ""
 "Voit suojata salasanan antamalla sen ympäristömuuttujalla (katso `Setup "
 "<setup.html>`__). Voit myös antaa sen nginxin asetuksissa:"
 
+#: ../nethsm/nginx.rst:108 ../nitrokey3/firmware-update.rst.inc:69
+msgid "Example"
+msgstr "Esimerkki"
+
 #: ../nethsm/nginx.rst:110
 msgid ""
-"If you want to experiment with the given example you can clone with git "
-"the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
-"pkcs11>`__ and run the following commands:"
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
+"use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
 msgstr ""
-"Jos haluat kokeilla annettua esimerkkiä, voit kloonata Gitin avulla "
-"`nethsm-pkcs11-arkiston <https://github.com/Nitrokey/nethsm-pkcs11>`__ ja"
-" suorittaa seuraavat komennot:"
 
 #: ../nethsm/nginx.rst:114
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Generointiskriptin suorittaminen poistaa avaimen ``webserver`` ja korvaa "
 "sen."
-
-#: ../nethsm/nginx.rst:116
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the getting-"
-"started guide for more information."
-msgstr ""
-"Määritä NetHSM, joko oikea tai kontti. Lisätietoja on Getting-started-"
-"oppaassa."
 
 #: ../nethsm/nginx.rst:117
 msgid ""
@@ -11777,10 +11773,6 @@ msgstr "Tyyppi"
 #: ../nitrokey3/firmware-update.rst.inc:68
 msgid "Version Number"
 msgstr "Version numero"
-
-#: ../nitrokey3/firmware-update.rst.inc:69
-msgid "Example"
-msgstr "Esimerkki"
 
 #: ../nitrokey3/firmware-update.rst.inc:70
 msgid "stable release"
@@ -29648,4 +29640,35 @@ msgstr ""
 #~ "EJBCA on PKI-varmenteiden myöntäjäohjelmisto,"
 #~ " lisätietoja EJBCA:sta löydät osoitteesta "
 #~ "`EJBCA <https://www.ejbca.org/>`__."
+
+#~ msgid ""
+#~ "An example is available in the "
+#~ "`nethsm-pkcs11 repository <https://github.com/Nitrokey"
+#~ "/nethsm-pkcs11/tree/main/container/nginx>`__ under "
+#~ "container/nginx."
+#~ msgstr ""
+#~ "Esimerkki on saatavilla `nethsm-"
+#~ "pkcs11-arkistossa <https://github.com/Nitrokey/nethsm-"
+#~ "pkcs11/tree/main/container/nginx>`__ osoitteessa "
+#~ "container/nginx."
+
+#~ msgid ""
+#~ "If you want to experiment with the"
+#~ " given example you can clone with "
+#~ "git the `nethsm-pkcs11 repository "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11>`__ and "
+#~ "run the following commands:"
+#~ msgstr ""
+#~ "Jos haluat kokeilla annettua esimerkkiä, "
+#~ "voit kloonata Gitin avulla `nethsm-"
+#~ "pkcs11-arkiston <https://github.com/Nitrokey/nethsm-"
+#~ "pkcs11>`__ ja suorittaa seuraavat komennot:"
+
+#~ msgid ""
+#~ "Configure a NetHSM, either a real "
+#~ "one or a container. See the "
+#~ "getting-started guide for more information."
+#~ msgstr ""
+#~ "Määritä NetHSM, joko oikea tai kontti."
+#~ " Lisätietoja on Getting-started-oppaassa."
 
