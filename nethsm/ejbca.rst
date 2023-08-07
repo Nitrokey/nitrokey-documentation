@@ -1,11 +1,11 @@
 EJBCA
 =====
 
-EJBCA is a PKI Certificate Authority software, you can find more information about EJBCA at `EJBCA <https://www.ejbca.org/>`__.
+`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority software available as open source.
 
-To be able to use NetHSM with EJBCA you need to setup the NetHSM PKCS#11 module (`setup <pkcs11-setup.html>`__).
+To be able to use NetHSM with EJBCA you need to `setup <pkcs11-setup.html>`__ the NetHSM PKCS#11 module first.
 
-Then configure EJBCA to ues the NetHSM PKCS#11 module by adding an entry in the ``/etc/ejbca/conf/web.properties`` file:
+Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry in the ``/etc/ejbca/conf/web.properties`` file:
 
 .. code-block:: 
 
@@ -21,9 +21,9 @@ After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin GUI ``h
 Executing The Example
 ---------------------
 
-If you want to experiment with the given example you can clone with git the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:
+If you want to experiment with the given example you can use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:
 
-- Configure a NetHSM, either a real one or a container. See the getting-started guide for more information.
+- Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started>`__ for more information.
 - Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/ejbca/p11nethsm.conf``.
 - Build the container.
   
