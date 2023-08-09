@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-09 22:29+0200\n"
-"PO-Revision-Date: 2023-08-07 12:47+0000\n"
+"PO-Revision-Date: 2023-08-09 21:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Slovak <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/sk/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -11589,7 +11590,7 @@ msgstr ""
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:2
 msgid "OpenPGP smartcard with GnuPG on Fedora"
-msgstr ""
+msgstr "Inteligentná karta OpenPGP s GnuPG na Fedore"
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:5
 msgid ""
@@ -11597,28 +11598,37 @@ msgid ""
 "firmware version ``1.4.0`` installed. Please refer to `firmware update "
 "<./firmware-update.html>`__ to learn how to update it."
 msgstr ""
+"Nasledujúce pokyny vyžadujú, aby bol v zariadení Nitrokey 3 nainštalovaný "
+"firmvér minimálne vo verzii ``1.4.0``. Informácie o tom, ako ho "
+"aktualizovať, nájdete v časti `aktualizácia firmvéru <./firmware-update."
+"html>`__."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:8
 msgid ""
 "The GnuPG smartcard support requires *scdaemon*. In Fedora the *scdaemon*"
 " is part of the GnuPG package."
 msgstr ""
+"Podpora čipovej karty GnuPG vyžaduje *scdaemon*. Vo Fedore je *scdaemon* "
+"súčasťou balíka GnuPG."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:12
 msgid ""
 "The *scdaemon* is installed in ``/usr/libexec/scdaemon``. This path is "
 "usually not part of the PATH environment variable."
 msgstr ""
+"Démon *scdaemon* je nainštalovaný v ``/usr/libexec/scdaemon``. Táto cesta "
+"zvyčajne nie je súčasťou premennej prostredia PATH."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:15
 msgid ""
 "The GnuPG project supports two setups of interfacing with a OpenPGP "
 "smartcard."
 msgstr ""
+"Projekt GnuPG podporuje dve nastavenia prepojenia s čipovou kartou OpenPGP."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:17
 msgid "**GnuPG (scdaemon with CCID driver) → Smartcard (e.g. Nitrokey)**"
-msgstr ""
+msgstr "**GnuPG (scdaemon s ovládačom CCID) → Smartcard (napr. Nitrokey)**"
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:19
 msgid ""
@@ -11627,16 +11637,23 @@ msgid ""
 "set, because the *scdaemon* runs in userspace with the permissions of the"
 " logged in user."
 msgstr ""
+"V tomto nastavení komunikuje démon *scdaemon* priamo s Nitrokey pomocou "
+"svojho interného ovládača CCID a *libusb*. Vyžaduje si to nastavenie "
+"pravidiel Udev, pretože *scdaemon* beží v užívateľskom priestore s právami "
+"prihláseného používateľa."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:22
 msgid "**GnuPG (scdaemon with PCSC library) → pcscd → Smartcard (e.g. Nitrokey)**"
 msgstr ""
+"**GnuPG (scdaemon s knižnicou PCSC) → pcscd → Smartcard (napr. Nitrokey)**"
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:24
 msgid ""
 "In this setup the *scdaemon* communicates with *pcscd*, which then "
 "communicates with the Nitrokey."
 msgstr ""
+"V tomto nastavení komunikuje *scdaemon* s *pcscd*, ktorý potom komunikuje s "
+"Nitrokey."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:26
 msgid ""
@@ -11648,6 +11665,12 @@ msgid ""
 " and `here "
 "<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_51>`__."
 msgstr ""
+"V systéme Fedora je podporované len druhé nastavenie, pretože konfigurácia "
+"balíka GnuPG nastavuje ovládač CCID ako vypnutý a podporu pcsc ako "
+"požadovanú. Príslušnú konfiguráciu nájdete v súbore špecifikácií `tu "
+"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_140>`"
+"__ a `tu <https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2."
+"spec#_51>`__."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:32
 msgid ""
@@ -11657,16 +11680,23 @@ msgid ""
 "issues with GnuPG and smartcards. The instructions below only apply to "
 "*Fedora Workstation* and *Fedora Server* editions."
 msgstr ""
+"Najnovšia verzia Fedory 38 by mala po inštalácii fungovať bez problémov. "
+"Aktualizované verzie Fedory môžu mať konfliktnú konfiguráciu a mali by sa "
+"skontrolovať podľa nižšie uvedeného postupu. V prípade Fedory Silverblue "
+"boli hlásené problémy s GnuPG a čipovými kartami. Nižšie uvedené pokyny sa "
+"vzťahujú len na vydania *Fedora Workstation* a *Fedora Server*."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:37
 msgid ""
 "The correct configuration of a setup can be checked by querying "
 "information about the Nitrokey with ``gpg --card-status``."
 msgstr ""
+"Správnu konfiguráciu nastavenia možno skontrolovať dopytovaním sa na "
+"informácie o Nitrokey pomocou ``gpg --card-status``."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:40
 msgid "Check recognition"
-msgstr ""
+msgstr "Kontrola rozpoznávania"
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:42
 msgid ""
@@ -11674,11 +11704,13 @@ msgid ""
 "output should list the Nitrokey, e.g. `Bus 001 Device 002: ID 20a0:42b2 "
 "Clay Logic Nitrokey 3`."
 msgstr ""
+"Pomocou príkazu `lsusb` overte, či je kľúč Nitrokey rozpoznaný. Výstup by "
+"mal obsahovať zoznam kľúča Nitrokey, napríklad `Bus 001 Device 002: ID 20a0:"
+"42b2 Clay Logic Nitrokey 3`."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:46
-#, fuzzy
 msgid "Check system configuration"
-msgstr "Konfigurácia na strane klienta"
+msgstr "Kontrola konfigurácie systému"
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:48
 msgid ""
@@ -11687,6 +11719,10 @@ msgid ""
 "started with ``systemctl enable pcscd.socket pcscd.service && systemctl "
 "start pcscd.socket``."
 msgstr ""
+"Uistite sa, že balík *pcscd* je nainštalovaný spolu s ``dnf install pcsc-"
+"lite``. Ďalej je potrebné povoliť a spustiť službu *systemd* a socket "
+"pomocou ``systemctl enable pcscd.socket pcscd.service && systemctl start "
+"pcscd.socket``."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:51
 msgid ""
@@ -11697,6 +11733,12 @@ msgid ""
 "follows ``ln -s /usr/lib64/libpcsclite.so.1``. Make sure the "
 "``~/.gnupg/scdaemon.conf`` file has no conflicting settings applied."
 msgstr ""
+"Démon *scdaemon* vyžaduje knižnicu *libpcsclite* na pripojenie k *pcscd*. "
+"Cestu ku knižnici pcsc možno explicitne nastaviť pomocou ``echo \"pcsc-"
+"driver /usr/lib64/libpcsclite.so.1\" >> ~/.gnupg/scdaemon.conf``. "
+"Alternatívne je možné knižnicu sprístupniť aj pomocou symlinku takto: ``ln -"
+"s /usr/lib64/libpcsclite.so.1``. Uistite sa, že súbor ``~/.gnupg/scdaemon."
+"conf`` nemá použité žiadne konfliktné nastavenia."
 
 #: ../nitrokey3/firmware-update.rst.inc:10
 msgid "This guide describes how to update the firmware on the Nitrokey 3."
@@ -29768,4 +29810,3 @@ msgstr ""
 #~ "Nakonfigurujte NetHSM, buď skutočný, alebo "
 #~ "kontajner. Viac informácií nájdete v "
 #~ "príručke na začatie práce."
-
