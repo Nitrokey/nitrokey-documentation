@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-07 10:20+0200\n"
+"POT-Creation-Date: 2023-08-09 22:29+0200\n"
 "PO-Revision-Date: 2023-08-07 12:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -1346,11 +1345,12 @@ msgstr ""
 "Megjegyzés: a fehér LED villogása a kiválasztott eszköz jelzésére is "
 "szolgál (az úgynevezett WINK parancs)."
 
-#: ../fido2/linux/index.rst:16 ../nitrokey3/shared/nitropy.rst:71
-#: ../nitrokey3/troubleshooting.rst.inc:2 ../nitropad/troubleshooting.rst.inc:2
-#: ../pro/firmware-update.rst.inc:67 ../pro/login-with-pam.rst.inc:47
-#: ../pro/openpgp-thunderbird.rst.inc:14 ../pro/ssh.rst:42
-#: ../software/nitropy/all-platforms/installation.rst:50
+#: ../fido2/linux/index.rst:16
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:30
+#: ../nitrokey3/shared/nitropy.rst:71 ../nitrokey3/troubleshooting.rst.inc:2
+#: ../nitropad/troubleshooting.rst.inc:2 ../pro/firmware-update.rst.inc:67
+#: ../pro/login-with-pam.rst.inc:47 ../pro/openpgp-thunderbird.rst.inc:14
+#: ../pro/ssh.rst:42 ../software/nitropy/all-platforms/installation.rst:50
 #: ../start/linux/index.rst:60 ../u2f/linux/index.rst:16
 msgid "Troubleshooting"
 msgstr "Hibaelhárítás"
@@ -6675,9 +6675,9 @@ msgid ""
 "You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the "
 "OpenSSL engine which then uses NetHSM's PKCS#11 module."
 msgstr ""
-"A `nginx <https://nginx.org/>`__ úgy konfigurálható, hogy az OpenSSL motoron "
-"keresztül használja a NetHSM-et, amely ezután a NetHSM PKCS#11 modulját "
-"használja."
+"A `nginx <https://nginx.org/>`__ úgy konfigurálható, hogy az OpenSSL "
+"motoron keresztül használja a NetHSM-et, amely ezután a NetHSM PKCS#11 "
+"modulját használja."
 
 #: ../nethsm/nginx.rst:6
 msgid ""
@@ -6751,9 +6751,9 @@ msgid ""
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
 "nginx won't start."
 msgstr ""
-"A tanúsítványt külön kell létrehoznia, majd feltöltenie a NetHSM-be. Ha a "
-"lemezen lévő tanúsítvány és a NetHSM-ben lévő kulcs nem egyezik, az nginx "
-"nem fog elindulni."
+"A tanúsítványt külön kell létrehoznia, majd feltöltenie a NetHSM-be. Ha a"
+" lemezen lévő tanúsítvány és a NetHSM-ben lévő kulcs nem egyezik, az "
+"nginx nem fog elindulni."
 
 #: ../nethsm/nginx.rst:88
 msgid "libnethsm_pkcs11 Configuration"
@@ -6764,8 +6764,8 @@ msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr ""
-"A jelszó biztonságossá tételéhez megadhatja egy környezeti változóval (lásd `"
-"Setup <setup>`__) vagy megadhatja az nginx konfigurációjában:"
+"A jelszó biztonságossá tételéhez megadhatja egy környezeti változóval "
+"(lásd `Setup <setup>`__) vagy megadhatja az nginx konfigurációjában:"
 
 #: ../nethsm/nginx.rst:108 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
@@ -6779,8 +6779,8 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
 "commands:"
 msgstr ""
-"Ha kísérletezni akarsz a `adott példával <https://github.com/Nitrokey/"
-"nethsm-pkcs11/tree/main/container/nginx>`__ használd a git-et a `nethsm-"
+"Ha kísérletezni akarsz a `adott példával <https://github.com/Nitrokey"
+"/nethsm-pkcs11/tree/main/container/nginx>`__ használd a git-et a `nethsm-"
 "pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ "
 "klónozásához és futtasd a következő parancsokat:"
 
@@ -11813,6 +11813,117 @@ msgstr ""
 "A visszavonás csak akkor lép hatályba, ha a feladó frissítette a "
 "nyilvános kulcsot a visszavont ADSK-val. A már titkosított üzenetek akkor"
 " is visszavehetők az ADSK-val, ha azt visszavonták."
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:2
+msgid "OpenPGP smartcard with GnuPG on Fedora"
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:5
+msgid ""
+"The following instructions require the Nitrokey 3 to have at least "
+"firmware version ``1.4.0`` installed. Please refer to `firmware update "
+"<./firmware-update.html>`__ to learn how to update it."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:8
+msgid ""
+"The GnuPG smartcard support requires *scdaemon*. In Fedora the *scdaemon*"
+" is part of the GnuPG package."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:12
+msgid ""
+"The *scdaemon* is installed in ``/usr/libexec/scdaemon``. This path is "
+"usually not part of the PATH environment variable."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:15
+msgid ""
+"The GnuPG project supports two setups of interfacing with a OpenPGP "
+"smartcard."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:17
+msgid "**GnuPG (scdaemon with CCID driver) → Smartcard (e.g. Nitrokey)**"
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:19
+msgid ""
+"In this setup the *scdaemon* communicates directly to the Nitrokey with "
+"its internal CCID driver and *libusb*. It requires the Udev rules to be "
+"set, because the *scdaemon* runs in userspace with the permissions of the"
+" logged in user."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:22
+msgid "**GnuPG (scdaemon with PCSC library) → pcscd → Smartcard (e.g. Nitrokey)**"
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:24
+msgid ""
+"In this setup the *scdaemon* communicates with *pcscd*, which then "
+"communicates with the Nitrokey."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:26
+msgid ""
+"On Fedora only the second setup is supported, because the configuration "
+"of the GnuPG package sets the CCID driver as disabled and the pcsc "
+"support as required. The relevant configuration can be found in the spec "
+"file `here "
+"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_140>`__"
+" and `here "
+"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_51>`__."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:32
+msgid ""
+"The latest Fedora 38 version should work after installation without "
+"issues. Upgraded versions of Fedora might have conflicting configuration "
+"and should be checked as below. Fedora Silverblue was reported to have "
+"issues with GnuPG and smartcards. The instructions below only apply to "
+"*Fedora Workstation* and *Fedora Server* editions."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:37
+msgid ""
+"The correct configuration of a setup can be checked by querying "
+"information about the Nitrokey with ``gpg --card-status``."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:40
+msgid "Check recognition"
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:42
+msgid ""
+"Verify with the `lsusb` command that the Nitrokey is recognized. The "
+"output should list the Nitrokey, e.g. `Bus 001 Device 002: ID 20a0:42b2 "
+"Clay Logic Nitrokey 3`."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:46
+#, fuzzy
+msgid "Check system configuration"
+msgstr "Ügyféloldali konfiguráció"
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:48
+msgid ""
+"Make sure the *pcscd* package is installed with ``dnf install pcsc-"
+"lite``. Further the *systemd* service and socket must be enabled and "
+"started with ``systemctl enable pcscd.socket pcscd.service && systemctl "
+"start pcscd.socket``."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:51
+msgid ""
+"The *scdaemon* requires the *libpcsclite* library to connect to *pcscd*. "
+"The path to the pcsc library can be set explicitly with ``echo \"pcsc-"
+"driver /usr/lib64/libpcsclite.so.1\" >> ~/.gnupg/scdaemon.conf``. "
+"Alternatively, the library can also be made available with a symlink as "
+"follows ``ln -s /usr/lib64/libpcsclite.so.1``. Make sure the "
+"``~/.gnupg/scdaemon.conf`` file has no conflicting settings applied."
+msgstr ""
 
 #: ../nitrokey3/firmware-update.rst.inc:10
 msgid "This guide describes how to update the firmware on the Nitrokey 3."
@@ -30243,3 +30354,4 @@ msgstr ""
 #~ " valódi, akár egy konténert. További "
 #~ "információkért lásd a Getting-started "
 #~ "útmutatót."
+
