@@ -1,4 +1,4 @@
-nginx
+Nginx
 =====
 
 You can configure `nginx <https://nginx.org/>`__ to use NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module.
@@ -10,34 +10,9 @@ A full example is available `below <#example>`__.
 OpenSSL Configuration
 ---------------------
 
-.. code-block:: ini
+Follow the `OpenSSL setup guide <openssl.html>`__.
 
-  openssl_conf = openssl_init
-
-  [openssl_init]
-  engines=engine_section
-
-  [engine_section]
-  pkcs11 = pkcs11_section
-
-  [pkcs11_section]
-  engine_id = pkcs11
-  dynamic_path = /usr/lib/x86_64-linux-gnu/engines-1.1/libpkcs11.so
-  MODULE_PATH = /usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so
-  init = 0
-
-
-You need to configure the engine section to include the pkcs11 engine in the ``dynamic_path`` property and the ``libnethsm_pkcs11.so`` module in the ``MODULE_PATH`` property.
-
-The engine can be installed on Debian-based systems by executing the following command.
-
-.. tabs::
-  .. tab:: Debian/Ubuntu
-      .. code-block:: bash
-  
-        apt install libengine-pkcs11-openssl
-
-nginx Configuration
+Nginx Configuration
 -------------------
 
 .. code-block:: 
