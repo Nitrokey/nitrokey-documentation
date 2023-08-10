@@ -24,6 +24,11 @@ Follow the instructions precicsely to prevent any accidential deletion of data.
 The system recovery can be performed as follows.
 
 1. Download the installer image from the `releases page <https://github.com/nitrokey/nethsm/releases>`__.
+
+   .. warning::
+      Download the installer image of the same version which was installed at the time of corruption.
+      A downgrade, or upgrade skipping versions, is not supported.
+
 2. Make sure the system is turned off, but connected to power, and the power button on the back turned on.
 3. Connect the BMC network port with a network cable.
 
