@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-09 22:29+0200\n"
+"POT-Creation-Date: 2023-08-10 12:43+0200\n"
 "PO-Revision-Date: 2023-08-09 21:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/sl/>\n"
 "Language: sl\n"
+"Language-Team: Slovenian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/sl/>\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
+"|| n%100==4 ? 2 : 3\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5881,7 +5880,7 @@ msgstr ""
 "klonirate skladišče `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ in zaženete naslednje ukaze:"
 
-#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:91
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5897,15 +5896,15 @@ msgstr ""
 "Spremenite konfiguracijo libnethsm_pkcs11, da bo ustrezala vašemu NetHSM "
 "na ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:28 ../nethsm/nginx.rst:125
+#: ../nethsm/ejbca.rst:28 ../nethsm/nginx.rst:100
 msgid "Build the container."
 msgstr "Zgradite posodo."
 
-#: ../nethsm/ejbca.rst:34 ../nethsm/nginx.rst:131
+#: ../nethsm/ejbca.rst:34 ../nethsm/nginx.rst:106
 msgid "Run the container."
 msgstr "Zaženite vsebnik."
 
-#: ../nethsm/ejbca.rst:40 ../nethsm/nginx.rst:137
+#: ../nethsm/ejbca.rst:40 ../nethsm/nginx.rst:112
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6547,7 +6546,8 @@ msgid "Uptime in seconds."
 msgstr "Čas delovanja v sekundah."
 
 #: ../nethsm/nginx.rst:2
-msgid "nginx"
+#, fuzzy
+msgid "Nginx"
 msgstr "nginx"
 
 #: ../nethsm/nginx.rst:4
@@ -6574,37 +6574,20 @@ msgstr "Celoten primer je na voljo `spodaj <#example>`__."
 msgid "OpenSSL Configuration"
 msgstr "Konfiguracija OpenSSL"
 
-#: ../nethsm/nginx.rst:30
-msgid ""
-"You need to configure the engine section to include the pkcs11 engine in "
-"the ``dynamic_path`` property and the ``libnethsm_pkcs11.so`` module in "
-"the ``MODULE_PATH`` property."
+#: ../nethsm/nginx.rst:13
+msgid "Follow the `OpenSSL setup guide <openssl.html>`__."
 msgstr ""
-"Nastaviti morate razdelek motorja tako, da vključuje motor pkcs11 v "
-"lastnost ``dynamic_path`` in modul ``libnethsm_pkcs11.so`` v lastnost "
-"``MODULE_PATH``."
 
-#: ../nethsm/nginx.rst:32
-msgid ""
-"The engine can be installed on Debian-based systems by executing the "
-"following command."
-msgstr ""
-"Pogon lahko namestite v sisteme, ki temeljijo na sistemu Debian, tako da "
-"izvedete naslednji ukaz."
-
-#: ../nethsm/nginx.rst:35
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-
-#: ../nethsm/nginx.rst:41
-msgid "nginx Configuration"
+#: ../nethsm/nginx.rst:16
+#, fuzzy
+msgid "Nginx Configuration"
 msgstr "Konfiguracija nginx"
 
-#: ../nethsm/nginx.rst:78
+#: ../nethsm/nginx.rst:53
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "``ssl_certificate`` mora kazati na datoteko s potrdilom na disku."
 
-#: ../nethsm/nginx.rst:80
+#: ../nethsm/nginx.rst:55
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6614,7 +6597,7 @@ msgstr ""
 "uporabimo pogon OpenSSL z modulom PKCS#11 in izberemo zasebni ključ z "
 "oznako/ID ``webserver`` in vrsto ključa ``private``."
 
-#: ../nethsm/nginx.rst:82
+#: ../nethsm/nginx.rst:57
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6622,7 +6605,7 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:85
+#: ../nethsm/nginx.rst:60
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6631,11 +6614,11 @@ msgstr ""
 "Potrdilo morate ustvariti ločeno in ga nato naložiti v NetHSM. Če se "
 "certifikat na disku in ključ v NetHSM ne ujemata, se nginx ne zažene."
 
-#: ../nethsm/nginx.rst:88
+#: ../nethsm/nginx.rst:63
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Konfiguracija"
 
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:75
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6643,11 +6626,11 @@ msgstr ""
 "Če želite geslo zavarovati, ga lahko navedete v spremenljivki okolja "
 "(glejte `Nastavitev <setup>`__) ali ga navedete v konfiguraciji nginxa:"
 
-#: ../nethsm/nginx.rst:108 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:83 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Primer"
 
-#: ../nethsm/nginx.rst:110
+#: ../nethsm/nginx.rst:85
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6661,13 +6644,13 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ in zaženite naslednje "
 "ukaze:"
 
-#: ../nethsm/nginx.rst:114
+#: ../nethsm/nginx.rst:89
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Z zagonom skripte za generiranje izbrišete ključ ``webserver`` in ga "
 "nadomestite."
 
-#: ../nethsm/nginx.rst:117
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6677,7 +6660,7 @@ msgstr ""
 "URL zahtevkov curl v ``container/nginx/generate.sh``, da bo kazal na vaš "
 "NetHSM."
 
-#: ../nethsm/nginx.rst:118
+#: ../nethsm/nginx.rst:93
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6685,7 +6668,7 @@ msgstr ""
 "Spremenite konfiguracijo libnethsm_pkcs11, da bo ustrezala vašemu NetHSM "
 "na ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:119
+#: ../nethsm/nginx.rst:94
 msgid "Generate the certificate and key."
 msgstr "Ustvarite potrdilo in ključ."
 
@@ -6762,6 +6745,105 @@ msgstr ""
 "Prav tako morate posodobiti polja ``<Repository>`` v "
 "``/etc/opendnssec/kasp.xml`` na ``NetHSM`` namesto privzetih ``SoftHSM`` "
 ":"
+
+#: ../nethsm/openssl.rst:2
+msgid "OpenSSL"
+msgstr ""
+
+#: ../nethsm/openssl.rst:4
+msgid ""
+"NetHSM can be used as a backend for OpenSSL using the ``engine`` "
+"interface."
+msgstr ""
+
+#: ../nethsm/openssl.rst:7
+msgid ""
+"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
+" key on the NetHSM will cause OpenSSL to not find any key."
+msgstr ""
+
+#: ../nethsm/openssl.rst:10
+msgid ""
+"Trying to retrieve the private key will crash, this is normal. You may "
+"want to retrieve the public key instead (see example below)."
+msgstr ""
+
+#: ../nethsm/openssl.rst:13
+#, fuzzy
+msgid "Setup"
+msgstr "ponastavitev"
+
+#: ../nethsm/openssl.rst:15
+msgid ""
+"You will need to setup the PKCS#11 module, following `these instructions "
+"<pkcs11-setup.html>`__."
+msgstr ""
+
+#: ../nethsm/openssl.rst:17
+#, fuzzy
+msgid "Install the engine:"
+msgstr "Namestitev programske opreme"
+
+#: ../nethsm/openssl.rst:20
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+
+#: ../nethsm/openssl.rst:26
+msgid "Fedora"
+msgstr ""
+
+#: ../nethsm/openssl.rst:32
+msgid "Arch Linux"
+msgstr ""
+
+#: ../nethsm/openssl.rst:38
+msgid ""
+"Then you need to configure OpenSSL to use the engine. This is done by "
+"adding the following line to your ``openssl.cnf`` file:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:57
+msgid ""
+"You can specify to OpenSSL the path of the OpenSSL configuration file "
+"using the ``OPENSSL_CONF`` environment variable."
+msgstr ""
+
+#: ../nethsm/openssl.rst:59
+#, fuzzy
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
+" path to the PKCS#11 module you installed earlier."
+msgstr ""
+"Zamenjajte ``/usr/lib/nitrokey/libnethsm_pkcs11.so`` s potjo, kjer se "
+"nahaja modul NetHSM PKCS#11."
+
+#: ../nethsm/openssl.rst:61
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
+"path to the OpenSSL engine you installed. The path varies depending on "
+"your distribution. The number in ``engines-3`` corresponds to your "
+"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
+"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
+"``/usr/lib64/engines-3/libpkcs11.so``."
+msgstr ""
+
+#: ../nethsm/openssl.rst:63
+msgid ""
+"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:69
+msgid "This will use the key ``webserver``."
+msgstr ""
+
+#: ../nethsm/openssl.rst:73
+msgid "Example Commands"
+msgstr ""
+
+#: ../nethsm/openssl.rst:75
+msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
+msgstr ""
 
 #: ../nethsm/operation.rst:2
 msgid "Operation"
@@ -11598,37 +11680,37 @@ msgid ""
 "<./firmware-update.html>`__ to learn how to update it."
 msgstr ""
 "V skladu z naslednjimi navodili mora biti v napravo Nitrokey 3 nameščena "
-"vsaj različica vdelane programske opreme ``1.4.0``. Če želite izvedeti, kako "
-"posodobiti vdelano programsko opremo, si oglejte `posodobitev vdelane "
-"programske opreme <./firmware-update.html>`__."
+"vsaj različica vdelane programske opreme ``1.4.0``. Če želite izvedeti, "
+"kako posodobiti vdelano programsko opremo, si oglejte `posodobitev "
+"vdelane programske opreme <./firmware-update.html>`__."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:8
 msgid ""
 "The GnuPG smartcard support requires *scdaemon*. In Fedora the *scdaemon*"
 " is part of the GnuPG package."
 msgstr ""
-"Podpora pametne kartice GnuPG zahteva *scdaemon*. V Fedori je *scdaemon* del "
-"paketa GnuPG."
+"Podpora pametne kartice GnuPG zahteva *scdaemon*. V Fedori je *scdaemon* "
+"del paketa GnuPG."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:12
 msgid ""
 "The *scdaemon* is installed in ``/usr/libexec/scdaemon``. This path is "
 "usually not part of the PATH environment variable."
 msgstr ""
-"Demon *scdaemon* je nameščen v ``/usr/libexec/scdaemon``. Ta pot običajno ni "
-"del okoljske spremenljivke PATH."
+"Demon *scdaemon* je nameščen v ``/usr/libexec/scdaemon``. Ta pot običajno"
+" ni del okoljske spremenljivke PATH."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:15
 msgid ""
 "The GnuPG project supports two setups of interfacing with a OpenPGP "
 "smartcard."
 msgstr ""
-"Projekt GnuPG podpira dve nastavitvi povezovanja s pametno kartico OpenPGP."
+"Projekt GnuPG podpira dve nastavitvi povezovanja s pametno kartico "
+"OpenPGP."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:17
 msgid "**GnuPG (scdaemon with CCID driver) → Smartcard (e.g. Nitrokey)**"
-msgstr ""
-"**GnuPG (scdaemon z gonilnikom CCID) → pametna kartica (npr. Nitrokey)**"
+msgstr "**GnuPG (scdaemon z gonilnikom CCID) → pametna kartica (npr. Nitrokey)**"
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:19
 msgid ""
@@ -11638,9 +11720,9 @@ msgid ""
 " logged in user."
 msgstr ""
 "V tej nastavitvi *scdaemon* komunicira neposredno z Nitrokeyjem s svojim "
-"notranjim gonilnikom CCID in *libusb*. Potrebno je nastaviti pravila Udev, "
-"saj se *scdaemon* izvaja v uporabniškem prostoru z dovoljenji prijavljenega "
-"uporabnika."
+"notranjim gonilnikom CCID in *libusb*. Potrebno je nastaviti pravila "
+"Udev, saj se *scdaemon* izvaja v uporabniškem prostoru z dovoljenji "
+"prijavljenega uporabnika."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:22
 msgid "**GnuPG (scdaemon with PCSC library) → pcscd → Smartcard (e.g. Nitrokey)**"
@@ -11668,10 +11750,11 @@ msgid ""
 msgstr ""
 "V operacijskem sistemu Fedora je podprta le druga nastavitev, saj je v "
 "konfiguraciji paketa GnuPG gonilnik CCID onemogočen, podpora pcsc pa "
-"zahtevana. Ustrezno konfiguracijo najdete v specifikacijski datoteki `tukaj "
-"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_140>`"
-"__ in `tukaj <https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2"
-".spec#_51>`__."
+"zahtevana. Ustrezno konfiguracijo najdete v specifikacijski datoteki "
+"`tukaj "
+"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_140>`__"
+" in `tukaj "
+"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_51>`__."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:32
 msgid ""
@@ -11681,19 +11764,19 @@ msgid ""
 "issues with GnuPG and smartcards. The instructions below only apply to "
 "*Fedora Workstation* and *Fedora Server* editions."
 msgstr ""
-"Najnovejša različica Fedora 38 bi morala po namestitvi delovati brez težav. "
-"Pri nadgrajenih različicah Fedore lahko pride do konfliktnih konfiguracij, "
-"zato jih je treba preveriti, kot je opisano spodaj. Fedora Silverblue naj bi "
-"imela težave z GnuPG in pametnimi karticami. Spodnja navodila veljajo samo "
-"za *Fedora Workstation* in *Fedora Server* izdaje."
+"Najnovejša različica Fedora 38 bi morala po namestitvi delovati brez "
+"težav. Pri nadgrajenih različicah Fedore lahko pride do konfliktnih "
+"konfiguracij, zato jih je treba preveriti, kot je opisano spodaj. Fedora "
+"Silverblue naj bi imela težave z GnuPG in pametnimi karticami. Spodnja "
+"navodila veljajo samo za *Fedora Workstation* in *Fedora Server* izdaje."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:37
 msgid ""
 "The correct configuration of a setup can be checked by querying "
 "information about the Nitrokey with ``gpg --card-status``."
 msgstr ""
-"Pravilno konfiguracijo nastavitve lahko preverite tako, da poizvedujete po "
-"informacijah o ključu Nitrokey s ``gpg --card-status``."
+"Pravilno konfiguracijo nastavitve lahko preverite tako, da poizvedujete "
+"po informacijah o ključu Nitrokey s ``gpg --card-status``."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:40
 msgid "Check recognition"
@@ -11705,9 +11788,9 @@ msgid ""
 "output should list the Nitrokey, e.g. `Bus 001 Device 002: ID 20a0:42b2 "
 "Clay Logic Nitrokey 3`."
 msgstr ""
-"Z ukazom `lsusb` preverite, ali je ključ Nitrokey prepoznan. V izpisu mora "
-"biti naveden ključ Nitrokey, npr. `Bus 001 Device 002: ID 20a0:42b2 Clay "
-"Logic Nitrokey 3`."
+"Z ukazom `lsusb` preverite, ali je ključ Nitrokey prepoznan. V izpisu "
+"mora biti naveden ključ Nitrokey, npr. `Bus 001 Device 002: ID 20a0:42b2 "
+"Clay Logic Nitrokey 3`."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:46
 msgid "Check system configuration"
@@ -11720,10 +11803,10 @@ msgid ""
 "started with ``systemctl enable pcscd.socket pcscd.service && systemctl "
 "start pcscd.socket``."
 msgstr ""
-"Prepričajte se, da je paket *pcscd* nameščen s ``dnf install pcsc-lite``. "
-"Nadalje je treba omogočiti in zagnati storitev *systemd* in vtičnico z ``"
-"systemctl enable pcscd.socket pcscd.service && systemctl start pcscd."
-"socket``."
+"Prepričajte se, da je paket *pcscd* nameščen s ``dnf install pcsc-lite``."
+" Nadalje je treba omogočiti in zagnati storitev *systemd* in vtičnico z "
+"``systemctl enable pcscd.socket pcscd.service && systemctl start "
+"pcscd.socket``."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:51
 msgid ""
@@ -11734,12 +11817,12 @@ msgid ""
 "follows ``ln -s /usr/lib64/libpcsclite.so.1``. Make sure the "
 "``~/.gnupg/scdaemon.conf`` file has no conflicting settings applied."
 msgstr ""
-"Demon *scdaemon* potrebuje knjižnico *libpcsclite* za povezavo s *pcscd*. "
-"Pot do knjižnice pcsc je mogoče izrecno nastaviti s ``echo \"pcsc-driver /"
-"usr/lib64/libpcsclite.so.1\" >> ~/.gnupg/scdaemon.conf``. Druga možnost je, "
-"da je knjižnica na voljo s simlinkom, kot sledi ``ln -s /usr/lib64/"
-"libpcsclite.so.1``. Prepričajte se, da v datoteki ``~/.gnupg/scdaemon.conf`` "
-"niso uporabljene nasprotujoče si nastavitve."
+"Demon *scdaemon* potrebuje knjižnico *libpcsclite* za povezavo s *pcscd*."
+" Pot do knjižnice pcsc je mogoče izrecno nastaviti s ``echo \"pcsc-driver"
+" /usr/lib64/libpcsclite.so.1\" >> ~/.gnupg/scdaemon.conf``. Druga možnost"
+" je, da je knjižnica na voljo s simlinkom, kot sledi ``ln -s "
+"/usr/lib64/libpcsclite.so.1``. Prepričajte se, da v datoteki "
+"``~/.gnupg/scdaemon.conf`` niso uporabljene nasprotujoče si nastavitve."
 
 #: ../nitrokey3/firmware-update.rst.inc:10
 msgid "This guide describes how to update the firmware on the Nitrokey 3."
@@ -29811,3 +29894,25 @@ msgstr ""
 #~ "Konfigurirajte NetHSM, bodisi pravi bodisi "
 #~ "vsebnik. Za več informacij glejte "
 #~ "priročnik za začetek delovanja."
+
+#~ msgid ""
+#~ "You need to configure the engine "
+#~ "section to include the pkcs11 engine "
+#~ "in the ``dynamic_path`` property and the"
+#~ " ``libnethsm_pkcs11.so`` module in the "
+#~ "``MODULE_PATH`` property."
+#~ msgstr ""
+#~ "Nastaviti morate razdelek motorja tako, "
+#~ "da vključuje motor pkcs11 v lastnost "
+#~ "``dynamic_path`` in modul ``libnethsm_pkcs11.so``"
+#~ " v lastnost ``MODULE_PATH``."
+
+#~ msgid ""
+#~ "The engine can be installed on "
+#~ "Debian-based systems by executing the "
+#~ "following command."
+#~ msgstr ""
+#~ "Pogon lahko namestite v sisteme, ki "
+#~ "temeljijo na sistemu Debian, tako da "
+#~ "izvedete naslednji ukaz."
+

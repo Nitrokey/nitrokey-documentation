@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-09 22:29+0200\n"
+"POT-Creation-Date: 2023-08-10 12:43+0200\n"
 "PO-Revision-Date: 2023-08-09 21:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5988,7 +5987,7 @@ msgstr ""
 "klónozd a `nethsm-pkcs11 tárolót <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ és futtasd a következő parancsokat:"
 
-#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:91
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -6004,15 +6003,15 @@ msgstr ""
 "Módosítsa a libnethsm_pkcs11 konfigurációját a NetHSM-nek megfelelően a "
 "``container/ejbca/p11nethsm.conf`` címen."
 
-#: ../nethsm/ejbca.rst:28 ../nethsm/nginx.rst:125
+#: ../nethsm/ejbca.rst:28 ../nethsm/nginx.rst:100
 msgid "Build the container."
 msgstr "Építse meg a konténert."
 
-#: ../nethsm/ejbca.rst:34 ../nethsm/nginx.rst:131
+#: ../nethsm/ejbca.rst:34 ../nethsm/nginx.rst:106
 msgid "Run the container."
 msgstr "Futtassa a konténert."
 
-#: ../nethsm/ejbca.rst:40 ../nethsm/nginx.rst:137
+#: ../nethsm/ejbca.rst:40 ../nethsm/nginx.rst:112
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6668,7 +6667,8 @@ msgid "Uptime in seconds."
 msgstr "Üzemidő másodpercekben."
 
 #: ../nethsm/nginx.rst:2
-msgid "nginx"
+#, fuzzy
+msgid "Nginx"
 msgstr "nginx"
 
 #: ../nethsm/nginx.rst:4
@@ -6696,39 +6696,22 @@ msgstr "Egy teljes példa elérhető a `címen: <#example>`__."
 msgid "OpenSSL Configuration"
 msgstr "OpenSSL konfiguráció"
 
-#: ../nethsm/nginx.rst:30
-msgid ""
-"You need to configure the engine section to include the pkcs11 engine in "
-"the ``dynamic_path`` property and the ``libnethsm_pkcs11.so`` module in "
-"the ``MODULE_PATH`` property."
+#: ../nethsm/nginx.rst:13
+msgid "Follow the `OpenSSL setup guide <openssl.html>`__."
 msgstr ""
-"A motor szekciót úgy kell konfigurálnod, hogy a ``dynamic_path`` "
-"tulajdonságban a pkcs11 motor, a ``libnethsm_pkcs11.so`` modul pedig a "
-"``MODULE_PATH`` tulajdonságban a ` ` modul szerepeljen."
 
-#: ../nethsm/nginx.rst:32
-msgid ""
-"The engine can be installed on Debian-based systems by executing the "
-"following command."
-msgstr ""
-"A motor telepíthető Debian-alapú rendszerekre a következő parancs "
-"végrehajtásával."
-
-#: ../nethsm/nginx.rst:35
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-
-#: ../nethsm/nginx.rst:41
-msgid "nginx Configuration"
+#: ../nethsm/nginx.rst:16
+#, fuzzy
+msgid "Nginx Configuration"
 msgstr "nginx konfiguráció"
 
-#: ../nethsm/nginx.rst:78
+#: ../nethsm/nginx.rst:53
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr ""
 "A ``ssl_certificate`` egy lemezen található tanúsítványfájlra kell "
 "mutatnia."
 
-#: ../nethsm/nginx.rst:80
+#: ../nethsm/nginx.rst:55
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6738,7 +6721,7 @@ msgstr ""
 "motort használjuk a PKCS#11 modullal, és kiválasztjuk a privát kulcsot a "
 "``webserver`` címkével/ID-vel és a ``private`` kulcstípussal."
 
-#: ../nethsm/nginx.rst:82
+#: ../nethsm/nginx.rst:57
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6746,7 +6729,7 @@ msgstr ""
 "`\"ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";`"
 
-#: ../nethsm/nginx.rst:85
+#: ../nethsm/nginx.rst:60
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6756,11 +6739,11 @@ msgstr ""
 " lemezen lévő tanúsítvány és a NetHSM-ben lévő kulcs nem egyezik, az "
 "nginx nem fog elindulni."
 
-#: ../nethsm/nginx.rst:88
+#: ../nethsm/nginx.rst:63
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Konfiguráció"
 
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:75
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6768,11 +6751,11 @@ msgstr ""
 "A jelszó biztonságossá tételéhez megadhatja egy környezeti változóval "
 "(lásd `Setup <setup>`__) vagy megadhatja az nginx konfigurációjában:"
 
-#: ../nethsm/nginx.rst:108 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:83 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Példa"
 
-#: ../nethsm/nginx.rst:110
+#: ../nethsm/nginx.rst:85
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6785,13 +6768,13 @@ msgstr ""
 "pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ "
 "klónozásához és futtasd a következő parancsokat:"
 
-#: ../nethsm/nginx.rst:114
+#: ../nethsm/nginx.rst:89
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "A generáló szkript futtatása törli a ``webserver`` kulcsot és kicseréli "
 "azt."
 
-#: ../nethsm/nginx.rst:117
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6801,7 +6784,7 @@ msgstr ""
 "``container/nginx/generate.sh`` oldalon meg kell változtatnia a curl-"
 "kérések URL-címét, hogy a NetHSM-re mutasson."
 
-#: ../nethsm/nginx.rst:118
+#: ../nethsm/nginx.rst:93
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6809,7 +6792,7 @@ msgstr ""
 "Módosítsa a libnethsm_pkcs11 konfigurációját a NetHSM-nek megfelelően a "
 "``container/ejbca/p11nethsm.conf`` címen."
 
-#: ../nethsm/nginx.rst:119
+#: ../nethsm/nginx.rst:94
 msgid "Generate the certificate and key."
 msgstr "Generálja a tanúsítványt és a kulcsot."
 
@@ -6885,6 +6868,105 @@ msgid ""
 msgstr ""
 "A ``/etc/opendnssec/kasp.xml`` ``NetHSM`` mezőkben a ``<Repository>`` "
 "mezőt is frissítenie kell a ``SoftHSM`` helyett a ` ` mezőre:"
+
+#: ../nethsm/openssl.rst:2
+msgid "OpenSSL"
+msgstr ""
+
+#: ../nethsm/openssl.rst:4
+msgid ""
+"NetHSM can be used as a backend for OpenSSL using the ``engine`` "
+"interface."
+msgstr ""
+
+#: ../nethsm/openssl.rst:7
+msgid ""
+"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
+" key on the NetHSM will cause OpenSSL to not find any key."
+msgstr ""
+
+#: ../nethsm/openssl.rst:10
+msgid ""
+"Trying to retrieve the private key will crash, this is normal. You may "
+"want to retrieve the public key instead (see example below)."
+msgstr ""
+
+#: ../nethsm/openssl.rst:13
+#, fuzzy
+msgid "Setup"
+msgstr "reset"
+
+#: ../nethsm/openssl.rst:15
+msgid ""
+"You will need to setup the PKCS#11 module, following `these instructions "
+"<pkcs11-setup.html>`__."
+msgstr ""
+
+#: ../nethsm/openssl.rst:17
+#, fuzzy
+msgid "Install the engine:"
+msgstr "Telepítse a szoftvert"
+
+#: ../nethsm/openssl.rst:20
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+
+#: ../nethsm/openssl.rst:26
+msgid "Fedora"
+msgstr ""
+
+#: ../nethsm/openssl.rst:32
+msgid "Arch Linux"
+msgstr ""
+
+#: ../nethsm/openssl.rst:38
+msgid ""
+"Then you need to configure OpenSSL to use the engine. This is done by "
+"adding the following line to your ``openssl.cnf`` file:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:57
+msgid ""
+"You can specify to OpenSSL the path of the OpenSSL configuration file "
+"using the ``OPENSSL_CONF`` environment variable."
+msgstr ""
+
+#: ../nethsm/openssl.rst:59
+#, fuzzy
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
+" path to the PKCS#11 module you installed earlier."
+msgstr ""
+"A ``/usr/lib/nitrokey/libnethsm_pkcs11.so`` helyett a NetHSM PKCS#11 "
+"modul elérési útvonalát adja meg."
+
+#: ../nethsm/openssl.rst:61
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
+"path to the OpenSSL engine you installed. The path varies depending on "
+"your distribution. The number in ``engines-3`` corresponds to your "
+"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
+"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
+"``/usr/lib64/engines-3/libpkcs11.so``."
+msgstr ""
+
+#: ../nethsm/openssl.rst:63
+msgid ""
+"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:69
+msgid "This will use the key ``webserver``."
+msgstr ""
+
+#: ../nethsm/openssl.rst:73
+msgid "Example Commands"
+msgstr ""
+
+#: ../nethsm/openssl.rst:75
+msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
+msgstr ""
 
 #: ../nethsm/operation.rst:2
 msgid "Operation"
@@ -11825,25 +11907,25 @@ msgid ""
 "firmware version ``1.4.0`` installed. Please refer to `firmware update "
 "<./firmware-update.html>`__ to learn how to update it."
 msgstr ""
-"Az alábbi utasítások szerint a Nitrokey 3-ra legalább a ``1.4.0`` firmware "
-"verziója telepítve kell lennie. A frissítés módját a `firmware frissítés "
-"<./firmware-update.html>`__ oldalon találja."
+"Az alábbi utasítások szerint a Nitrokey 3-ra legalább a ``1.4.0`` "
+"firmware verziója telepítve kell lennie. A frissítés módját a `firmware "
+"frissítés <./firmware-update.html>`__ oldalon találja."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:8
 msgid ""
 "The GnuPG smartcard support requires *scdaemon*. In Fedora the *scdaemon*"
 " is part of the GnuPG package."
 msgstr ""
-"A GnuPG smartcard támogatásához a *scdaemon* szükséges. A Fedora rendszerben "
-"a *scdaemon* a GnuPG csomag része."
+"A GnuPG smartcard támogatásához a *scdaemon* szükséges. A Fedora "
+"rendszerben a *scdaemon* a GnuPG csomag része."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:12
 msgid ""
 "The *scdaemon* is installed in ``/usr/libexec/scdaemon``. This path is "
 "usually not part of the PATH environment variable."
 msgstr ""
-"A *scdaemon* a ``/usr/libexec/scdaemon`` alatt van telepítve. Ez az útvonal "
-"általában nem része a PATH környezeti változónak."
+"A *scdaemon* a ``/usr/libexec/scdaemon`` alatt van telepítve. Ez az "
+"útvonal általában nem része a PATH környezeti változónak."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:15
 msgid ""
@@ -11864,15 +11946,14 @@ msgid ""
 "set, because the *scdaemon* runs in userspace with the permissions of the"
 " logged in user."
 msgstr ""
-"Ebben a beállításban a *scdaemon* közvetlenül kommunikál a Nitrokey-vel a "
-"belső CCID vezérlőjével és a *libusb*. Ehhez az Udev-szabályok beállítása "
-"szükséges, mivel a *scdaemon* a felhasználói térben fut a bejelentkezett "
-"felhasználó jogosultságaival."
+"Ebben a beállításban a *scdaemon* közvetlenül kommunikál a Nitrokey-vel a"
+" belső CCID vezérlőjével és a *libusb*. Ehhez az Udev-szabályok "
+"beállítása szükséges, mivel a *scdaemon* a felhasználói térben fut a "
+"bejelentkezett felhasználó jogosultságaival."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:22
 msgid "**GnuPG (scdaemon with PCSC library) → pcscd → Smartcard (e.g. Nitrokey)**"
-msgstr ""
-"**GnuPG (scdaemon PCSC könyvtárral) → pcscd → Smartcard (pl. Nitrokey)**"
+msgstr "**GnuPG (scdaemon PCSC könyvtárral) → pcscd → Smartcard (pl. Nitrokey)**"
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:24
 msgid ""
@@ -11895,9 +11976,10 @@ msgstr ""
 "Fedorán csak a második beállítás támogatott, mivel a GnuPG csomag "
 "konfigurációja a CCID vezérlőt letiltottnak, a pcsc támogatást pedig "
 "szükségesnek állítja be. A vonatkozó konfiguráció megtalálható a `itt "
-"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_140>`"
-"__ és a `itt <https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2"
-".spec#_51>`__ spec fájlban."
+"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_140>`__"
+" és a `itt "
+"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_51>`__"
+" spec fájlban."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:32
 msgid ""
@@ -11907,20 +11989,21 @@ msgid ""
 "issues with GnuPG and smartcards. The instructions below only apply to "
 "*Fedora Workstation* and *Fedora Server* editions."
 msgstr ""
-"A legújabb Fedora 38-as verziónak a telepítés után problémamentesen működnie "
-"kell. A Fedora frissített verzióinak konfigurációi ellentmondásosak "
-"lehetnek, és az alábbiak szerint kell ellenőrizni. A Fedora Silverblue-ról "
-"jelentették, hogy problémái vannak a GnuPG-vel és a smartkártyákkal. Az "
-"alábbi utasítások csak a *Fedora Workstation* és a *Fedora Server* "
-"kiadásokra vonatkoznak."
+"A legújabb Fedora 38-as verziónak a telepítés után problémamentesen "
+"működnie kell. A Fedora frissített verzióinak konfigurációi "
+"ellentmondásosak lehetnek, és az alábbiak szerint kell ellenőrizni. A "
+"Fedora Silverblue-ról jelentették, hogy problémái vannak a GnuPG-vel és a"
+" smartkártyákkal. Az alábbi utasítások csak a *Fedora Workstation* és a "
+"*Fedora Server* kiadásokra vonatkoznak."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:37
 msgid ""
 "The correct configuration of a setup can be checked by querying "
 "information about the Nitrokey with ``gpg --card-status``."
 msgstr ""
-"A beállítás helyes konfigurációja ellenőrizhető a Nitrokey-vel kapcsolatos "
-"információk lekérdezésével a ``gpg --card-status`` segítségével."
+"A beállítás helyes konfigurációja ellenőrizhető a Nitrokey-vel "
+"kapcsolatos információk lekérdezésével a ``gpg --card-status`` "
+"segítségével."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:40
 msgid "Check recognition"
@@ -11932,9 +12015,9 @@ msgid ""
 "output should list the Nitrokey, e.g. `Bus 001 Device 002: ID 20a0:42b2 "
 "Clay Logic Nitrokey 3`."
 msgstr ""
-"Ellenőrizze az `lsusb` paranccsal, hogy a Nitrokey-t felismeri. A kimenetnek "
-"fel kell sorolnia a Nitrokey-t, például `Bus 001 Device 002: ID 20a0:42b2 "
-"Clay Logic Nitrokey 3`."
+"Ellenőrizze az `lsusb` paranccsal, hogy a Nitrokey-t felismeri. A "
+"kimenetnek fel kell sorolnia a Nitrokey-t, például `Bus 001 Device 002: "
+"ID 20a0:42b2 Clay Logic Nitrokey 3`."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:46
 msgid "Check system configuration"
@@ -11947,9 +12030,9 @@ msgid ""
 "started with ``systemctl enable pcscd.socket pcscd.service && systemctl "
 "start pcscd.socket``."
 msgstr ""
-"Győződjön meg róla, hogy a *pcscd* csomag telepítve van a ``dnf install pcsc-"
-"lite`` csomaggal együtt. Továbbá a *systemd* szolgáltatást és a socketet "
-"engedélyezni és indítani kell a ``systemctl enable pcscd.socket "
+"Győződjön meg róla, hogy a *pcscd* csomag telepítve van a ``dnf install "
+"pcsc-lite`` csomaggal együtt. Továbbá a *systemd* szolgáltatást és a "
+"socketet engedélyezni és indítani kell a ``systemctl enable pcscd.socket "
 "pcscd.service && systemctl start pcscd.socket`` segítségével."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:51
@@ -11961,13 +12044,13 @@ msgid ""
 "follows ``ln -s /usr/lib64/libpcsclite.so.1``. Make sure the "
 "``~/.gnupg/scdaemon.conf`` file has no conflicting settings applied."
 msgstr ""
-"A *scdaemon* a *libpcsclite* könyvtárat igényli a *pcscd* kapcsolathoz. A "
-"pcsc könyvtár elérési útvonalát explicit módon a ``echo \"pcsc-driver /usr/"
-"lib64/libpcsclite.so.1\" >> ~/.gnupg/scdaemon.conf`` paranccsal lehet "
-"beállítani. Alternatívaként a könyvtár egy szimlinkkel is elérhetővé tehető "
-"a következőképpen: ``ln -s /usr/lib64/libpcsclite.so.1``. Győződjön meg "
-"róla, hogy a ``~/.gnupg/scdaemon.conf`` fájlban nem alkalmaznak ütköző "
-"beállításokat."
+"A *scdaemon* a *libpcsclite* könyvtárat igényli a *pcscd* kapcsolathoz. A"
+" pcsc könyvtár elérési útvonalát explicit módon a ``echo \"pcsc-driver "
+"/usr/lib64/libpcsclite.so.1\" >> ~/.gnupg/scdaemon.conf`` paranccsal "
+"lehet beállítani. Alternatívaként a könyvtár egy szimlinkkel is "
+"elérhetővé tehető a következőképpen: ``ln -s "
+"/usr/lib64/libpcsclite.so.1``. Győződjön meg róla, hogy a "
+"``~/.gnupg/scdaemon.conf`` fájlban nem alkalmaznak ütköző beállításokat."
 
 #: ../nitrokey3/firmware-update.rst.inc:10
 msgid "This guide describes how to update the firmware on the Nitrokey 3."
@@ -30398,3 +30481,26 @@ msgstr ""
 #~ " valódi, akár egy konténert. További "
 #~ "információkért lásd a Getting-started "
 #~ "útmutatót."
+
+#~ msgid ""
+#~ "You need to configure the engine "
+#~ "section to include the pkcs11 engine "
+#~ "in the ``dynamic_path`` property and the"
+#~ " ``libnethsm_pkcs11.so`` module in the "
+#~ "``MODULE_PATH`` property."
+#~ msgstr ""
+#~ "A motor szekciót úgy kell konfigurálnod,"
+#~ " hogy a ``dynamic_path`` tulajdonságban a"
+#~ " pkcs11 motor, a ``libnethsm_pkcs11.so`` "
+#~ "modul pedig a ``MODULE_PATH`` tulajdonságban"
+#~ " a ` ` modul szerepeljen."
+
+#~ msgid ""
+#~ "The engine can be installed on "
+#~ "Debian-based systems by executing the "
+#~ "following command."
+#~ msgstr ""
+#~ "A motor telepíthető Debian-alapú "
+#~ "rendszerekre a következő parancs "
+#~ "végrehajtásával."
+

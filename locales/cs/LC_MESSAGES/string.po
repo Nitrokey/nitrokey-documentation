@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-09 22:29+0200\n"
+"POT-Creation-Date: 2023-08-10 12:43+0200\n"
 "PO-Revision-Date: 2023-08-09 21:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/cs/>\n"
 "Language: cs\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/cs/>\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5856,7 +5855,7 @@ msgstr ""
 "naklonovat repozitář `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ a spustit následující příkazy:"
 
-#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:116
+#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:91
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5872,15 +5871,15 @@ msgstr ""
 "Změňte konfiguraci libnethsm_pkcs11 tak, aby odpovídala vašemu NetHSM na "
 "adrese ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:28 ../nethsm/nginx.rst:125
+#: ../nethsm/ejbca.rst:28 ../nethsm/nginx.rst:100
 msgid "Build the container."
 msgstr "Sestavte kontejner."
 
-#: ../nethsm/ejbca.rst:34 ../nethsm/nginx.rst:131
+#: ../nethsm/ejbca.rst:34 ../nethsm/nginx.rst:106
 msgid "Run the container."
 msgstr "Spusťte kontejner."
 
-#: ../nethsm/ejbca.rst:40 ../nethsm/nginx.rst:137
+#: ../nethsm/ejbca.rst:40 ../nethsm/nginx.rst:112
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6526,7 +6525,8 @@ msgid "Uptime in seconds."
 msgstr "Doba provozu v sekundách."
 
 #: ../nethsm/nginx.rst:2
-msgid "nginx"
+#, fuzzy
+msgid "Nginx"
 msgstr "nginx"
 
 #: ../nethsm/nginx.rst:4
@@ -6554,39 +6554,22 @@ msgstr "Úplný příklad je k dispozici na `pod <#example>`__."
 msgid "OpenSSL Configuration"
 msgstr "Konfigurace protokolu OpenSSL"
 
-#: ../nethsm/nginx.rst:30
-msgid ""
-"You need to configure the engine section to include the pkcs11 engine in "
-"the ``dynamic_path`` property and the ``libnethsm_pkcs11.so`` module in "
-"the ``MODULE_PATH`` property."
+#: ../nethsm/nginx.rst:13
+msgid "Follow the `OpenSSL setup guide <openssl.html>`__."
 msgstr ""
-"Je třeba nakonfigurovat sekci engine tak, aby zahrnovala engine pkcs11 ve"
-" vlastnosti ``dynamic_path`` a modul ``libnethsm_pkcs11.so`` ve "
-"vlastnosti ``MODULE_PATH``."
 
-#: ../nethsm/nginx.rst:32
-msgid ""
-"The engine can be installed on Debian-based systems by executing the "
-"following command."
-msgstr ""
-"Na systémech založených na Debianu lze engine nainstalovat následujícím "
-"příkazem."
-
-#: ../nethsm/nginx.rst:35
-msgid "Debian/Ubuntu"
-msgstr "Debian/Ubuntu"
-
-#: ../nethsm/nginx.rst:41
-msgid "nginx Configuration"
+#: ../nethsm/nginx.rst:16
+#, fuzzy
+msgid "Nginx Configuration"
 msgstr "Konfigurace nginx"
 
-#: ../nethsm/nginx.rst:78
+#: ../nethsm/nginx.rst:53
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr ""
 "Adresa ``ssl_certificate`` musí ukazovat na soubor s certifikátem na "
 "disku."
 
-#: ../nethsm/nginx.rst:80
+#: ../nethsm/nginx.rst:55
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6596,7 +6579,7 @@ msgstr ""
 "engine OpenSSL s modulem PKCS#11 a vybereme soukromý klíč s označením/ID "
 "``webserver`` a typem klíče ``private``."
 
-#: ../nethsm/nginx.rst:82
+#: ../nethsm/nginx.rst:57
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6604,7 +6587,7 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:85
+#: ../nethsm/nginx.rst:60
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6614,11 +6597,11 @@ msgstr ""
 "Pokud se certifikát na disku a klíč v NetHSM neshodují, nginx se "
 "nespustí."
 
-#: ../nethsm/nginx.rst:88
+#: ../nethsm/nginx.rst:63
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Konfigurace"
 
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:75
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6626,11 +6609,11 @@ msgstr ""
 "Heslo můžete zabezpečit pomocí proměnné prostředí (viz `Setup <setup>`__)"
 " nebo jej zadat v konfiguraci nginx:"
 
-#: ../nethsm/nginx.rst:108 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:83 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Příklad"
 
-#: ../nethsm/nginx.rst:110
+#: ../nethsm/nginx.rst:85
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6644,13 +6627,13 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ a spusťte následující "
 "příkazy:"
 
-#: ../nethsm/nginx.rst:114
+#: ../nethsm/nginx.rst:89
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Spuštěním generovacího skriptu se odstraní klíč ``webserver`` a nahradí "
 "se."
 
-#: ../nethsm/nginx.rst:117
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6660,7 +6643,7 @@ msgstr ""
 "požadavků curl v ``container/nginx/generate.sh`` tak, aby ukazovala na "
 "váš NetHSM."
 
-#: ../nethsm/nginx.rst:118
+#: ../nethsm/nginx.rst:93
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6668,7 +6651,7 @@ msgstr ""
 "Změňte konfiguraci libnethsm_pkcs11 tak, aby odpovídala vašemu NetHSM na "
 "adrese ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:119
+#: ../nethsm/nginx.rst:94
 msgid "Generate the certificate and key."
 msgstr "Vygenerujte certifikát a klíč."
 
@@ -6744,6 +6727,105 @@ msgid ""
 msgstr ""
 "Je také třeba aktualizovat pole ``<Repository>`` v "
 "``/etc/opendnssec/kasp.xml`` na ``NetHSM`` místo výchozího ``SoftHSM`` :"
+
+#: ../nethsm/openssl.rst:2
+msgid "OpenSSL"
+msgstr ""
+
+#: ../nethsm/openssl.rst:4
+msgid ""
+"NetHSM can be used as a backend for OpenSSL using the ``engine`` "
+"interface."
+msgstr ""
+
+#: ../nethsm/openssl.rst:7
+msgid ""
+"When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
+" key on the NetHSM will cause OpenSSL to not find any key."
+msgstr ""
+
+#: ../nethsm/openssl.rst:10
+msgid ""
+"Trying to retrieve the private key will crash, this is normal. You may "
+"want to retrieve the public key instead (see example below)."
+msgstr ""
+
+#: ../nethsm/openssl.rst:13
+#, fuzzy
+msgid "Setup"
+msgstr "resetování"
+
+#: ../nethsm/openssl.rst:15
+msgid ""
+"You will need to setup the PKCS#11 module, following `these instructions "
+"<pkcs11-setup.html>`__."
+msgstr ""
+
+#: ../nethsm/openssl.rst:17
+#, fuzzy
+msgid "Install the engine:"
+msgstr "Instalace softwaru"
+
+#: ../nethsm/openssl.rst:20
+msgid "Debian/Ubuntu"
+msgstr "Debian/Ubuntu"
+
+#: ../nethsm/openssl.rst:26
+msgid "Fedora"
+msgstr ""
+
+#: ../nethsm/openssl.rst:32
+msgid "Arch Linux"
+msgstr ""
+
+#: ../nethsm/openssl.rst:38
+msgid ""
+"Then you need to configure OpenSSL to use the engine. This is done by "
+"adding the following line to your ``openssl.cnf`` file:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:57
+msgid ""
+"You can specify to OpenSSL the path of the OpenSSL configuration file "
+"using the ``OPENSSL_CONF`` environment variable."
+msgstr ""
+
+#: ../nethsm/openssl.rst:59
+#, fuzzy
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
+" path to the PKCS#11 module you installed earlier."
+msgstr ""
+"Nahraďte ``/usr/lib/nitrokey/libnethsm_pkcs11.so`` cestou, kde je umístěn"
+" modul NetHSM PKCS#11."
+
+#: ../nethsm/openssl.rst:61
+msgid ""
+"Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
+"path to the OpenSSL engine you installed. The path varies depending on "
+"your distribution. The number in ``engines-3`` corresponds to your "
+"OpenSSL version. On Debian the path for the OpenSSL 3 engine is "
+"``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
+"``/usr/lib64/engines-3/libpkcs11.so``."
+msgstr ""
+
+#: ../nethsm/openssl.rst:63
+msgid ""
+"Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:69
+msgid "This will use the key ``webserver``."
+msgstr ""
+
+#: ../nethsm/openssl.rst:73
+msgid "Example Commands"
+msgstr ""
+
+#: ../nethsm/openssl.rst:75
+msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
+msgstr ""
 
 #: ../nethsm/operation.rst:2
 msgid "Operation"
@@ -11572,8 +11654,8 @@ msgid ""
 "The GnuPG smartcard support requires *scdaemon*. In Fedora the *scdaemon*"
 " is part of the GnuPG package."
 msgstr ""
-"Podpora čipových karet GnuPG vyžaduje *scdaemon*. Ve Fedoře je *scdaemon* "
-"součástí balíčku GnuPG."
+"Podpora čipových karet GnuPG vyžaduje *scdaemon*. Ve Fedoře je *scdaemon*"
+" součástí balíčku GnuPG."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:12
 msgid ""
@@ -11587,8 +11669,7 @@ msgstr ""
 msgid ""
 "The GnuPG project supports two setups of interfacing with a OpenPGP "
 "smartcard."
-msgstr ""
-"Projekt GnuPG podporuje dvě nastavení propojení s čipovou kartou OpenPGP."
+msgstr "Projekt GnuPG podporuje dvě nastavení propojení s čipovou kartou OpenPGP."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:17
 msgid "**GnuPG (scdaemon with CCID driver) → Smartcard (e.g. Nitrokey)**"
@@ -11601,23 +11682,22 @@ msgid ""
 "set, because the *scdaemon* runs in userspace with the permissions of the"
 " logged in user."
 msgstr ""
-"V tomto nastavení komunikuje démon *scdaemon* přímo s Nitrokey pomocí svého "
-"interního ovladače CCID a *libusb*. Vyžaduje nastavení pravidel Udev, "
-"protože *scdaemon* běží v uživatelském prostoru s právy přihlášeného "
-"uživatele."
+"V tomto nastavení komunikuje démon *scdaemon* přímo s Nitrokey pomocí "
+"svého interního ovladače CCID a *libusb*. Vyžaduje nastavení pravidel "
+"Udev, protože *scdaemon* běží v uživatelském prostoru s právy "
+"přihlášeného uživatele."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:22
 msgid "**GnuPG (scdaemon with PCSC library) → pcscd → Smartcard (e.g. Nitrokey)**"
-msgstr ""
-"**GnuPG (scdaemon s knihovnou PCSC) → pcscd → Smartcard (např. Nitrokey)**"
+msgstr "**GnuPG (scdaemon s knihovnou PCSC) → pcscd → Smartcard (např. Nitrokey)**"
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:24
 msgid ""
 "In this setup the *scdaemon* communicates with *pcscd*, which then "
 "communicates with the Nitrokey."
 msgstr ""
-"V tomto nastavení komunikuje *scdaemon* s *pcscd*, který pak komunikuje s "
-"Nitrokey."
+"V tomto nastavení komunikuje *scdaemon* s *pcscd*, který pak komunikuje s"
+" Nitrokey."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:26
 msgid ""
@@ -11631,10 +11711,10 @@ msgid ""
 msgstr ""
 "Ve Fedoře je podporováno pouze druhé nastavení, protože v konfiguraci "
 "balíčku GnuPG je ovladač CCID zakázán a podpora pcsc je požadována. "
-"Příslušnou konfiguraci najdete ve specifikačním souboru `zde <https://src."
-"fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_140>`__ a `zde "
-"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2."
-"spec#_51>`__."
+"Příslušnou konfiguraci najdete ve specifikačním souboru `zde "
+"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_140>`__"
+" a `zde "
+"<https://src.fedoraproject.org/rpms/gnupg2/blob/rawhide/f/gnupg2.spec#_51>`__."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:32
 msgid ""
@@ -11645,18 +11725,18 @@ msgid ""
 "*Fedora Workstation* and *Fedora Server* editions."
 msgstr ""
 "Nejnovější verze Fedory 38 by měla po instalaci fungovat bez problémů. "
-"Aktualizované verze Fedory mohou mít konfliktní konfiguraci a měly by být "
-"zkontrolovány podle níže uvedeného postupu. U Fedory Silverblue byly hlášeny "
-"problémy s GnuPG a čipovými kartami. Níže uvedené pokyny platí pouze pro "
-"edice *Fedora Workstation* a *Fedora Server*."
+"Aktualizované verze Fedory mohou mít konfliktní konfiguraci a měly by být"
+" zkontrolovány podle níže uvedeného postupu. U Fedory Silverblue byly "
+"hlášeny problémy s GnuPG a čipovými kartami. Níže uvedené pokyny platí "
+"pouze pro edice *Fedora Workstation* a *Fedora Server*."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:37
 msgid ""
 "The correct configuration of a setup can be checked by querying "
 "information about the Nitrokey with ``gpg --card-status``."
 msgstr ""
-"Správnou konfiguraci nastavení lze zkontrolovat dotazem na informace o klíči "
-"Nitrokey pomocí ``gpg --card-status``."
+"Správnou konfiguraci nastavení lze zkontrolovat dotazem na informace o "
+"klíči Nitrokey pomocí ``gpg --card-status``."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:40
 msgid "Check recognition"
@@ -11668,9 +11748,9 @@ msgid ""
 "output should list the Nitrokey, e.g. `Bus 001 Device 002: ID 20a0:42b2 "
 "Clay Logic Nitrokey 3`."
 msgstr ""
-"Pomocí příkazu `lsusb` ověřte, zda je klíč Nitrokey rozpoznán. Na výstupu by "
-"měl být uveden seznam kláves Nitrokey, např. `Bus 001 Device 002: ID 20a0:"
-"42b2 Clay Logic Nitrokey 3`."
+"Pomocí příkazu `lsusb` ověřte, zda je klíč Nitrokey rozpoznán. Na výstupu"
+" by měl být uveden seznam kláves Nitrokey, např. `Bus 001 Device 002: ID "
+"20a0:42b2 Clay Logic Nitrokey 3`."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:46
 msgid "Check system configuration"
@@ -11683,10 +11763,10 @@ msgid ""
 "started with ``systemctl enable pcscd.socket pcscd.service && systemctl "
 "start pcscd.socket``."
 msgstr ""
-"Ujistěte se, že balíček *pcscd* je nainstalován spolu s ``dnf install pcsc-"
-"lite``. Dále musí být povolena a spuštěna služba *systemd* a socket pomocí ``"
-"systemctl enable pcscd.socket pcscd.service && systemctl start pcscd."
-"socket``."
+"Ujistěte se, že balíček *pcscd* je nainstalován spolu s ``dnf install "
+"pcsc-lite``. Dále musí být povolena a spuštěna služba *systemd* a socket "
+"pomocí ``systemctl enable pcscd.socket pcscd.service && systemctl start "
+"pcscd.socket``."
 
 #: ../nitrokey3/linux/fedora-gnupg-configuration.rst:51
 msgid ""
@@ -11697,12 +11777,12 @@ msgid ""
 "follows ``ln -s /usr/lib64/libpcsclite.so.1``. Make sure the "
 "``~/.gnupg/scdaemon.conf`` file has no conflicting settings applied."
 msgstr ""
-"Démon *scdaemon* vyžaduje knihovnu *libpcsclite* pro připojení k *pcscd*. "
-"Cestu ke knihovně pcsc lze explicitně nastavit pomocí ``echo \"pcsc-driver /"
-"usr/lib64/libpcsclite.so.1\" >> ~/.gnupg/scdaemon.conf``. Alternativně lze "
-"knihovnu zpřístupnit také pomocí symlinku takto: ``ln -s /usr/lib64/"
-"libpcsclite.so.1``. Ujistěte se, že v souboru ``~/.gnupg/scdaemon.conf`` "
-"nejsou použita žádná konfliktní nastavení."
+"Démon *scdaemon* vyžaduje knihovnu *libpcsclite* pro připojení k *pcscd*."
+" Cestu ke knihovně pcsc lze explicitně nastavit pomocí ``echo \"pcsc-"
+"driver /usr/lib64/libpcsclite.so.1\" >> ~/.gnupg/scdaemon.conf``. "
+"Alternativně lze knihovnu zpřístupnit také pomocí symlinku takto: ``ln -s"
+" /usr/lib64/libpcsclite.so.1``. Ujistěte se, že v souboru "
+"``~/.gnupg/scdaemon.conf`` nejsou použita žádná konfliktní nastavení."
 
 #: ../nitrokey3/firmware-update.rst.inc:10
 msgid "This guide describes how to update the firmware on the Nitrokey 3."
@@ -29659,3 +29739,25 @@ msgstr ""
 #~ "Nakonfigurujte NetHSM, buď skutečný, nebo "
 #~ "kontejner. Další informace naleznete v "
 #~ "příručce Začínáme."
+
+#~ msgid ""
+#~ "You need to configure the engine "
+#~ "section to include the pkcs11 engine "
+#~ "in the ``dynamic_path`` property and the"
+#~ " ``libnethsm_pkcs11.so`` module in the "
+#~ "``MODULE_PATH`` property."
+#~ msgstr ""
+#~ "Je třeba nakonfigurovat sekci engine "
+#~ "tak, aby zahrnovala engine pkcs11 ve "
+#~ "vlastnosti ``dynamic_path`` a modul "
+#~ "``libnethsm_pkcs11.so`` ve vlastnosti "
+#~ "``MODULE_PATH``."
+
+#~ msgid ""
+#~ "The engine can be installed on "
+#~ "Debian-based systems by executing the "
+#~ "following command."
+#~ msgstr ""
+#~ "Na systémech založených na Debianu lze"
+#~ " engine nainstalovat následujícím příkazem."
+
