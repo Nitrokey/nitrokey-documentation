@@ -3,7 +3,7 @@ System Recovery
 
 The following describes the recovery process for the NetHSM system software.
 These instructions are only applicable if the API is inoperable, e.g. not responding to API requests.
-In the case of an operable API perform a factory reset instead.
+In the case of an operable API perform a `factory reset <administration.html#reset-to-factory-defaults>`__ instead.
 Follow the instructions precicsely to prevent any accidential deletion of data.
 
 .. important::
