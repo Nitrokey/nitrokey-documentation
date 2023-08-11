@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 11:09+0200\n"
+"POT-Creation-Date: 2023-08-11 12:31+0200\n"
 "PO-Revision-Date: 2023-08-11 10:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -12558,11 +12558,15 @@ msgstr "1：在Nitrokey上生成一个密钥"
 msgid "The key is generated in slot 9A (authentication)."
 msgstr "密钥在9A槽（认证）中生成。"
 
-#: ../nitrokey3/windows/piv.rst:29
-msgid "``pivy-tool generate 9A -a rsa2048``"
-msgstr "``pivy-tool generate 9A -a rsa2048``"
-
 #: ../nitrokey3/windows/piv.rst:35
+msgid ""
+"If the administration key is not the default one, it can be specified "
+"with ``-A 3des -K 010203040506070801020304050607080102030405060708`` . "
+"The argument to ``-A`` can also be ``aes256``, and the argument to ``-K``"
+" is the key in hexadecimal."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:37
 msgid ""
 "The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` "
 "if it is not the default. If ``-P`` is not provided, it will be asked for"
@@ -12571,25 +12575,25 @@ msgstr ""
 "用户PIN码也可以用``-P 123456``来指定，如果不是默认的，也可以用``-P "
 "<value>``。如果没有提供``-P``，它将在密钥生成后被要求提供。"
 
-#: ../nitrokey3/windows/piv.rst:37
+#: ../nitrokey3/windows/piv.rst:39
 msgid "This applies to all ``pivy-tool`` commands."
 msgstr "这适用于所有``pivy-tool``命令。"
 
-#: ../nitrokey3/windows/piv.rst:39
+#: ../nitrokey3/windows/piv.rst:41
 msgid ""
 "This step can take a couple of minutes for RSA keys, as the pure software"
 " implementation is slow."
 msgstr "这个步骤对于RSA密钥来说可能需要几分钟，因为纯软件的实现速度很慢。"
 
-#: ../nitrokey3/windows/piv.rst:41
+#: ../nitrokey3/windows/piv.rst:43
 msgid "**Expected output**:"
 msgstr "**预期的输出** ："
 
-#: ../nitrokey3/windows/piv.rst:48
+#: ../nitrokey3/windows/piv.rst:50
 msgid "2: Generate a Certificate Signing Request (CSR)"
 msgstr "2：生成一个证书签名请求（CSR）"
 
-#: ../nitrokey3/windows/piv.rst:50
+#: ../nitrokey3/windows/piv.rst:52
 msgid ""
 "This step generates a certificate for the key in the authentication slot."
 " ``pivy-tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" "
@@ -12598,25 +12602,25 @@ msgstr ""
 "这一步为认证槽中的密钥生成一个证书。``pivy-tool req-cert 9A -n 'Nitro Test' -u "
 "\"nitro@test.nitrokey.com\" -T user-auth``"
 
-#: ../nitrokey3/windows/piv.rst:52
+#: ../nitrokey3/windows/piv.rst:54
 msgid ""
 "The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email "
 "address must be changed to own values."
 msgstr "``Nitro Test``用户名和``nitro@test.nitrokey.com``电子邮件地址必须改为自己的值。"
 
-#: ../nitrokey3/windows/piv.rst:54
+#: ../nitrokey3/windows/piv.rst:56
 msgid "Expected output:"
 msgstr "预期的产出："
 
-#: ../nitrokey3/windows/piv.rst:77
+#: ../nitrokey3/windows/piv.rst:79
 msgid "Copy the certificate signing request to a file ``request.csr``"
 msgstr "将证书签署请求复制到一个文件中``request.csr``"
 
-#: ../nitrokey3/windows/piv.rst:80
+#: ../nitrokey3/windows/piv.rst:82
 msgid "3: Sign the CSR"
 msgstr "3: 签署CSR"
 
-#: ../nitrokey3/windows/piv.rst:82
+#: ../nitrokey3/windows/piv.rst:84
 msgid ""
 "Move the request.csr file from the previous step to the server that hosts"
 " the certificate authority. Verify in the certificate template console "
@@ -12633,7 +12637,7 @@ msgid ""
 "\"subject name\" tab."
 msgstr "在证书模板控制台，在认证证书模板的参数中，在 \"主题名称 \"标签中切换 \"在请求中提供\"。"
 
-#: ../nitrokey3/windows/piv.rst:87
+#: ../nitrokey3/windows/piv.rst:89
 msgid ""
 "Open PowerShell and sign the certificate signing request with "
 "``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``"
@@ -12641,26 +12645,26 @@ msgstr ""
 "打开PowerShell，用``certreq.exe -attrib CertificateTemplate:Nitrotest -submit"
 " request.csr``签署证书签署请求。"
 
-#: ../nitrokey3/windows/piv.rst:89
+#: ../nitrokey3/windows/piv.rst:91
 msgid ""
 "This will open a GUI where you can select the correct Certificate "
 "Authority if there are multiple on this server. Save the certificate as "
 "``certificate.crt``"
 msgstr "这将打开一个图形用户界面，如果该服务器上有多个证书颁发机构，你可以选择正确的证书颁发机构。将证书保存为``certificate.crt``。"
 
-#: ../nitrokey3/windows/piv.rst:92
+#: ../nitrokey3/windows/piv.rst:94
 msgid "4: Store the certificate on the Nitrokey"
 msgstr "4：在Nitrokey上存储证书"
 
-#: ../nitrokey3/windows/piv.rst:94
+#: ../nitrokey3/windows/piv.rst:96
 msgid "``cat certificate.der | pivy-tool write-cert 9A``"
 msgstr "``cat certificate.der | pivy-tool write-cert 9A``"
 
-#: ../nitrokey3/windows/piv.rst:97
+#: ../nitrokey3/windows/piv.rst:99
 msgid "5: Import the certificate to the user account"
 msgstr "5: 将证书导入到用户账户"
 
-#: ../nitrokey3/windows/piv.rst:99
+#: ../nitrokey3/windows/piv.rst:101
 msgid ""
 "Move ``certificate.der`` to the user Windows device, and open the "
 "certificate manager (**For the user, not the machine**):"
@@ -12670,7 +12674,7 @@ msgstr "将``certificate.der`` 移到用户的 Windows 设备上，并打开证�
 msgid "Open the \"manage user certificate control panel\""
 msgstr "打开 \"管理用户证书控制面板\""
 
-#: ../nitrokey3/windows/piv.rst:104
+#: ../nitrokey3/windows/piv.rst:106
 msgid "Import the certificate:"
 msgstr "导入证书："
 
@@ -12678,7 +12682,7 @@ msgstr "导入证书："
 msgid "In actions, all tasks, you can find the import action"
 msgstr "在行动、所有任务中，你可以找到导入行动"
 
-#: ../nitrokey3/windows/piv.rst:109
+#: ../nitrokey3/windows/piv.rst:111
 msgid ""
 "Once this is done, log out. Log in with the Nitrokey by using the “sign-"
 "in options”"
@@ -14521,9 +14525,8 @@ msgid ""
 "recommended for high security. For ad-blocking, we recommend `DNS-based "
 "ad-blocking <https://grapheneos.org/faq#ad-blocking>`__."
 msgstr ""
-"浏览器预装的浏览器 Vanadium "
-"经过加固，因此建议使用安全性较高的浏览器。对于广告拦截，我们建议使用`基于 "
-"DNS 的广告拦截<https://grapheneos.org/faq#ad-blocking>`__。"
+"浏览器预装的浏览器 Vanadium 经过加固，因此建议使用安全性较高的浏览器。对于广告拦截，我们建议使用`基于 DNS "
+"的广告拦截<https://grapheneos.org/faq#ad-blocking>`__。"
 
 #: ../nitrophone/apps.rst:46
 msgid "Email: K9-mail and OpenKeyChain (for OpenPGP encryption) or FairEmail."
@@ -14613,9 +14616,8 @@ msgid ""
 "service to unlock a car in the proximity. To enable this choose: Settings"
 " -> Location -> Location Services -> Bluetooth scanning -> on"
 msgstr ""
-"某些汽车共享应用程序（如 SHARE "
-"NOW）使用蓝牙定位服务来解锁附近的汽车。要启用此功能，请选择设置 -> 位置 -> "
-"定位服务 -> 蓝牙扫描 -> 打开"
+"某些汽车共享应用程序（如 SHARE NOW）使用蓝牙定位服务来解锁附近的汽车。要启用此功能，请选择设置 -> 位置 -> 定位服务 -> "
+"蓝牙扫描 -> 打开"
 
 #: ../nitrophone/background-images.rst:2 ../nitrophone/index.rst:19
 msgid "Background Images"
@@ -24962,3 +24964,7 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "Pixel 6 Pro refers to the NitroPhone 2 Pro"
 #~ msgstr "Pixel 6 Pro指的是NitroPhone 2 Pro"
+
+#~ msgid "``pivy-tool generate 9A -a rsa2048``"
+#~ msgstr "``pivy-tool generate 9A -a rsa2048``"
+

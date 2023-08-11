@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 11:09+0200\n"
+"POT-Creation-Date: 2023-08-11 12:31+0200\n"
 "PO-Revision-Date: 2023-08-11 10:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Polish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/pl/>\n"
 "Language: pl\n"
+"Language-Team: Polish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/pl/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -14931,11 +14930,15 @@ msgstr "1: Wygeneruj klucz na Nitrokey"
 msgid "The key is generated in slot 9A (authentication)."
 msgstr "Klucz jest generowany w gnieździe 9A (uwierzytelnianie)."
 
-#: ../nitrokey3/windows/piv.rst:29
-msgid "``pivy-tool generate 9A -a rsa2048``"
-msgstr "``pivy-tool generate 9A -a rsa2048``"
-
 #: ../nitrokey3/windows/piv.rst:35
+msgid ""
+"If the administration key is not the default one, it can be specified "
+"with ``-A 3des -K 010203040506070801020304050607080102030405060708`` . "
+"The argument to ``-A`` can also be ``aes256``, and the argument to ``-K``"
+" is the key in hexadecimal."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:37
 msgid ""
 "The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` "
 "if it is not the default. If ``-P`` is not provided, it will be asked for"
@@ -14945,11 +14948,11 @@ msgstr ""
 "<value>`` jeśli nie jest domyślny. Jeśli ``-P`` nie jest podany, będzie o"
 " niego poproszony po wygenerowaniu klucza."
 
-#: ../nitrokey3/windows/piv.rst:37
+#: ../nitrokey3/windows/piv.rst:39
 msgid "This applies to all ``pivy-tool`` commands."
 msgstr "Dotyczy to wszystkich komend ``pivy-tool``."
 
-#: ../nitrokey3/windows/piv.rst:39
+#: ../nitrokey3/windows/piv.rst:41
 msgid ""
 "This step can take a couple of minutes for RSA keys, as the pure software"
 " implementation is slow."
@@ -14957,15 +14960,15 @@ msgstr ""
 "Ten krok może zająć kilka minut dla kluczy RSA, ponieważ czysta "
 "implementacja oprogramowania jest powolna."
 
-#: ../nitrokey3/windows/piv.rst:41
+#: ../nitrokey3/windows/piv.rst:43
 msgid "**Expected output**:"
 msgstr "**Oczekiwane wyjście**:"
 
-#: ../nitrokey3/windows/piv.rst:48
+#: ../nitrokey3/windows/piv.rst:50
 msgid "2: Generate a Certificate Signing Request (CSR)"
 msgstr "2: Wygeneruj żądanie podpisania certyfikatu (CSR)"
 
-#: ../nitrokey3/windows/piv.rst:50
+#: ../nitrokey3/windows/piv.rst:52
 msgid ""
 "This step generates a certificate for the key in the authentication slot."
 " ``pivy-tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" "
@@ -14975,7 +14978,7 @@ msgstr ""
 "``pivy-tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" -T"
 " user-auth``"
 
-#: ../nitrokey3/windows/piv.rst:52
+#: ../nitrokey3/windows/piv.rst:54
 msgid ""
 "The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email "
 "address must be changed to own values."
@@ -14983,19 +14986,19 @@ msgstr ""
 "``Nitro Test`` nazwa użytkownika i ``nitro@test.nitrokey.com`` adres "
 "e-mail muszą być zmienione na własne wartości."
 
-#: ../nitrokey3/windows/piv.rst:54
+#: ../nitrokey3/windows/piv.rst:56
 msgid "Expected output:"
 msgstr "Spodziewane wyjście:"
 
-#: ../nitrokey3/windows/piv.rst:77
+#: ../nitrokey3/windows/piv.rst:79
 msgid "Copy the certificate signing request to a file ``request.csr``"
 msgstr "Skopiuj żądanie podpisania certyfikatu do pliku ``request.csr``"
 
-#: ../nitrokey3/windows/piv.rst:80
+#: ../nitrokey3/windows/piv.rst:82
 msgid "3: Sign the CSR"
 msgstr "3: Podpisz CSR"
 
-#: ../nitrokey3/windows/piv.rst:82
+#: ../nitrokey3/windows/piv.rst:84
 msgid ""
 "Move the request.csr file from the previous step to the server that hosts"
 " the certificate authority. Verify in the certificate template console "
@@ -15017,7 +15020,7 @@ msgstr ""
 "uwierzytelniającego, w zakładce \"subject name\" włącz \"supply in "
 "request\"."
 
-#: ../nitrokey3/windows/piv.rst:87
+#: ../nitrokey3/windows/piv.rst:89
 msgid ""
 "Open PowerShell and sign the certificate signing request with "
 "``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``"
@@ -15026,7 +15029,7 @@ msgstr ""
 "``certreq.exe -attrib CertificateTemplate:Nitrotest -submit "
 "request.csr``."
 
-#: ../nitrokey3/windows/piv.rst:89
+#: ../nitrokey3/windows/piv.rst:91
 msgid ""
 "This will open a GUI where you can select the correct Certificate "
 "Authority if there are multiple on this server. Save the certificate as "
@@ -15036,19 +15039,19 @@ msgstr ""
 "jeśli na tym serwerze jest ich kilka. Zapisz certyfikat jako "
 "``certificate.crt``"
 
-#: ../nitrokey3/windows/piv.rst:92
+#: ../nitrokey3/windows/piv.rst:94
 msgid "4: Store the certificate on the Nitrokey"
 msgstr "4: Zapisz certyfikat na Nitrokey"
 
-#: ../nitrokey3/windows/piv.rst:94
+#: ../nitrokey3/windows/piv.rst:96
 msgid "``cat certificate.der | pivy-tool write-cert 9A``"
 msgstr "``cat certificate.der | pivy-tool write-cert 9A``"
 
-#: ../nitrokey3/windows/piv.rst:97
+#: ../nitrokey3/windows/piv.rst:99
 msgid "5: Import the certificate to the user account"
 msgstr "5: Importuj certyfikat na konto użytkownika"
 
-#: ../nitrokey3/windows/piv.rst:99
+#: ../nitrokey3/windows/piv.rst:101
 msgid ""
 "Move ``certificate.der`` to the user Windows device, and open the "
 "certificate manager (**For the user, not the machine**):"
@@ -15060,7 +15063,7 @@ msgstr ""
 msgid "Open the \"manage user certificate control panel\""
 msgstr "Otwórz \"panel sterowania certyfikatem użytkownika zarządzaj\""
 
-#: ../nitrokey3/windows/piv.rst:104
+#: ../nitrokey3/windows/piv.rst:106
 msgid "Import the certificate:"
 msgstr "Importuj certyfikat:"
 
@@ -15068,7 +15071,7 @@ msgstr "Importuj certyfikat:"
 msgid "In actions, all tasks, you can find the import action"
 msgstr "W akcjach, wszystkich zadaniach, można znaleźć akcję importu"
 
-#: ../nitrokey3/windows/piv.rst:109
+#: ../nitrokey3/windows/piv.rst:111
 msgid ""
 "Once this is done, log out. Log in with the Nitrokey by using the “sign-"
 "in options”"
@@ -17313,10 +17316,10 @@ msgid ""
 "recommended for high security. For ad-blocking, we recommend `DNS-based "
 "ad-blocking <https://grapheneos.org/faq#ad-blocking>`__."
 msgstr ""
-"Przeglądarka: Preinstalowana przeglądarka Vanadium jest wzmocniona i dlatego "
-"jest zalecana dla wysokiego poziomu bezpieczeństwa. Do blokowania reklam "
-"zalecamy `Blokowanie reklam oparte na DNS <https://grapheneos.org/faq#ad-"
-"blocking>`__."
+"Przeglądarka: Preinstalowana przeglądarka Vanadium jest wzmocniona i "
+"dlatego jest zalecana dla wysokiego poziomu bezpieczeństwa. Do blokowania"
+" reklam zalecamy `Blokowanie reklam oparte na DNS "
+"<https://grapheneos.org/faq#ad-blocking>`__."
 
 #: ../nitrophone/apps.rst:46
 msgid "Email: K9-mail and OpenKeyChain (for OpenPGP encryption) or FairEmail."
@@ -30591,3 +30594,7 @@ msgstr ""
 
 #~ msgid "Pixel 6 Pro refers to the NitroPhone 2 Pro"
 #~ msgstr "Pixel 6 Pro nawiązuje do telefonu NitroPhone 2 Pro"
+
+#~ msgid "``pivy-tool generate 9A -a rsa2048``"
+#~ msgstr "``pivy-tool generate 9A -a rsa2048``"
+

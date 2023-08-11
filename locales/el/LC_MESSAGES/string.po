@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 11:09+0200\n"
+"POT-Creation-Date: 2023-08-11 12:31+0200\n"
 "PO-Revision-Date: 2023-08-11 10:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Greek <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/el/>\n"
 "Language: el\n"
+"Language-Team: Greek <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/el/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -15318,11 +15317,15 @@ msgstr "1: Δημιουργήστε ένα κλειδί στο Nitrokey"
 msgid "The key is generated in slot 9A (authentication)."
 msgstr "Το κλειδί δημιουργείται στην υποδοχή 9A (έλεγχος ταυτότητας)."
 
-#: ../nitrokey3/windows/piv.rst:29
-msgid "``pivy-tool generate 9A -a rsa2048``"
-msgstr "``pivy-tool generate 9A -a rsa2048``"
-
 #: ../nitrokey3/windows/piv.rst:35
+msgid ""
+"If the administration key is not the default one, it can be specified "
+"with ``-A 3des -K 010203040506070801020304050607080102030405060708`` . "
+"The argument to ``-A`` can also be ``aes256``, and the argument to ``-K``"
+" is the key in hexadecimal."
+msgstr ""
+
+#: ../nitrokey3/windows/piv.rst:37
 msgid ""
 "The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` "
 "if it is not the default. If ``-P`` is not provided, it will be asked for"
@@ -15332,11 +15335,11 @@ msgstr ""
 "<value>`` εάν δεν είναι το προεπιλεγμένο. Εάν δεν δοθεί το ``-P``, θα "
 "ζητηθεί μετά τη δημιουργία κλειδιού."
 
-#: ../nitrokey3/windows/piv.rst:37
+#: ../nitrokey3/windows/piv.rst:39
 msgid "This applies to all ``pivy-tool`` commands."
 msgstr "Αυτό ισχύει για όλες τις εντολές ``pivy-tool``."
 
-#: ../nitrokey3/windows/piv.rst:39
+#: ../nitrokey3/windows/piv.rst:41
 msgid ""
 "This step can take a couple of minutes for RSA keys, as the pure software"
 " implementation is slow."
@@ -15344,15 +15347,15 @@ msgstr ""
 "Αυτό το βήμα μπορεί να διαρκέσει μερικά λεπτά για τα κλειδιά RSA, καθώς η"
 " υλοποίηση του λογισμικού είναι αργή."
 
-#: ../nitrokey3/windows/piv.rst:41
+#: ../nitrokey3/windows/piv.rst:43
 msgid "**Expected output**:"
 msgstr "**Αναμενόμενη έξοδος**:"
 
-#: ../nitrokey3/windows/piv.rst:48
+#: ../nitrokey3/windows/piv.rst:50
 msgid "2: Generate a Certificate Signing Request (CSR)"
 msgstr "2: Δημιουργία αίτησης υπογραφής πιστοποιητικού (CSR)"
 
-#: ../nitrokey3/windows/piv.rst:50
+#: ../nitrokey3/windows/piv.rst:52
 msgid ""
 "This step generates a certificate for the key in the authentication slot."
 " ``pivy-tool req-cert 9A -n 'Nitro Test' -u \"nitro@test.nitrokey.com\" "
@@ -15362,7 +15365,7 @@ msgstr ""
 "ελέγχου ταυτότητας. ``pivy-tool req-cert 9A -n 'Nitro Test' -u "
 "\"nitro@test.nitrokey.com\" -T user-auth``"
 
-#: ../nitrokey3/windows/piv.rst:52
+#: ../nitrokey3/windows/piv.rst:54
 msgid ""
 "The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email "
 "address must be changed to own values."
@@ -15370,21 +15373,21 @@ msgstr ""
 "Το όνομα χρήστη ``Nitro Test`` και η διεύθυνση ηλεκτρονικού ταχυδρομείου "
 "``nitro@test.nitrokey.com`` πρέπει να αλλάξουν σε δικές τους τιμές."
 
-#: ../nitrokey3/windows/piv.rst:54
+#: ../nitrokey3/windows/piv.rst:56
 msgid "Expected output:"
 msgstr "Αναμενόμενη έξοδος:"
 
-#: ../nitrokey3/windows/piv.rst:77
+#: ../nitrokey3/windows/piv.rst:79
 msgid "Copy the certificate signing request to a file ``request.csr``"
 msgstr ""
 "Αντιγράψτε την αίτηση υπογραφής πιστοποιητικού σε ένα αρχείο "
 "``request.csr``"
 
-#: ../nitrokey3/windows/piv.rst:80
+#: ../nitrokey3/windows/piv.rst:82
 msgid "3: Sign the CSR"
 msgstr "3: Υπογράψτε την ΕΚΕ"
 
-#: ../nitrokey3/windows/piv.rst:82
+#: ../nitrokey3/windows/piv.rst:84
 msgid ""
 "Move the request.csr file from the previous step to the server that hosts"
 " the certificate authority. Verify in the certificate template console "
@@ -15406,7 +15409,7 @@ msgstr ""
 "πιστοποιητικού ελέγχου ταυτότητας, ενεργοποιήστε την επιλογή \"παροχή "
 "στην αίτηση\" στην καρτέλα \"όνομα θέματος\"."
 
-#: ../nitrokey3/windows/piv.rst:87
+#: ../nitrokey3/windows/piv.rst:89
 msgid ""
 "Open PowerShell and sign the certificate signing request with "
 "``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``"
@@ -15415,7 +15418,7 @@ msgstr ""
 "με τη διεύθυνση ``certreq.exe -attrib CertificateTemplate:Nitrotest "
 "-submit request.csr``"
 
-#: ../nitrokey3/windows/piv.rst:89
+#: ../nitrokey3/windows/piv.rst:91
 msgid ""
 "This will open a GUI where you can select the correct Certificate "
 "Authority if there are multiple on this server. Save the certificate as "
@@ -15425,19 +15428,19 @@ msgstr ""
 "πιστοποιητικών, εάν υπάρχουν πολλές σε αυτόν τον διακομιστή. Αποθηκεύστε "
 "το πιστοποιητικό ως ``certificate.crt``"
 
-#: ../nitrokey3/windows/piv.rst:92
+#: ../nitrokey3/windows/piv.rst:94
 msgid "4: Store the certificate on the Nitrokey"
 msgstr "4: Αποθηκεύστε το πιστοποιητικό στο Nitrokey"
 
-#: ../nitrokey3/windows/piv.rst:94
+#: ../nitrokey3/windows/piv.rst:96
 msgid "``cat certificate.der | pivy-tool write-cert 9A``"
 msgstr "``cat certificate.der | pivy-tool write-cert 9A``"
 
-#: ../nitrokey3/windows/piv.rst:97
+#: ../nitrokey3/windows/piv.rst:99
 msgid "5: Import the certificate to the user account"
 msgstr "5: Εισαγωγή του πιστοποιητικού στο λογαριασμό χρήστη"
 
-#: ../nitrokey3/windows/piv.rst:99
+#: ../nitrokey3/windows/piv.rst:101
 msgid ""
 "Move ``certificate.der`` to the user Windows device, and open the "
 "certificate manager (**For the user, not the machine**):"
@@ -15450,7 +15453,7 @@ msgstr ""
 msgid "Open the \"manage user certificate control panel\""
 msgstr "Ανοίξτε τον \"πίνακα ελέγχου διαχείρισης πιστοποιητικών χρηστών\""
 
-#: ../nitrokey3/windows/piv.rst:104
+#: ../nitrokey3/windows/piv.rst:106
 msgid "Import the certificate:"
 msgstr "Εισάγετε το πιστοποιητικό:"
 
@@ -15460,7 +15463,7 @@ msgstr ""
 "Στις ενέργειες, όλες οι εργασίες, μπορείτε να βρείτε την ενέργεια "
 "εισαγωγής"
 
-#: ../nitrokey3/windows/piv.rst:109
+#: ../nitrokey3/windows/piv.rst:111
 msgid ""
 "Once this is done, log out. Log in with the Nitrokey by using the “sign-"
 "in options”"
@@ -17784,8 +17787,8 @@ msgid ""
 "recommended for high security. For ad-blocking, we recommend `DNS-based "
 "ad-blocking <https://grapheneos.org/faq#ad-blocking>`__."
 msgstr ""
-"Browser: Ο προεγκατεστημένος φυλλομετρητής Vanadium είναι σκληρυμένος και "
-"επομένως συνιστάται για υψηλή ασφάλεια. Για το μπλοκάρισμα διαφημίσεων, "
+"Browser: Ο προεγκατεστημένος φυλλομετρητής Vanadium είναι σκληρυμένος και"
+" επομένως συνιστάται για υψηλή ασφάλεια. Για το μπλοκάρισμα διαφημίσεων, "
 "συνιστούμε το `DNS-based ad-blocking <https://grapheneos.org/faq#ad-"
 "blocking>`__."
 
@@ -17895,8 +17898,8 @@ msgid ""
 msgstr ""
 "Ορισμένες εφαρμογές κοινής χρήσης αυτοκινήτων (όπως το SHARE NOW) "
 "χρησιμοποιούν την υπηρεσία εντοπισμού θέσης μέσω Bluetooth για να "
-"ξεκλειδώσουν ένα αυτοκίνητο που βρίσκεται κοντά. Για να το ενεργοποιήσετε "
-"αυτό επιλέξτε: Υπηρεσίες τοποθεσίας -> σάρωση Bluetooth -> ενεργοποίηση"
+"ξεκλειδώσουν ένα αυτοκίνητο που βρίσκεται κοντά. Για να το ενεργοποιήσετε"
+" αυτό επιλέξτε: Υπηρεσίες τοποθεσίας -> σάρωση Bluetooth -> ενεργοποίηση"
 
 #: ../nitrophone/background-images.rst:2 ../nitrophone/index.rst:19
 msgid "Background Images"
@@ -31566,3 +31569,7 @@ msgstr ""
 
 #~ msgid "Pixel 6 Pro refers to the NitroPhone 2 Pro"
 #~ msgstr "Το Pixel 6 Pro αναφέρεται στο NitroPhone 2 Pro"
+
+#~ msgid "``pivy-tool generate 9A -a rsa2048``"
+#~ msgstr "``pivy-tool generate 9A -a rsa2048``"
+
