@@ -1,5 +1,5 @@
-NitroPhone Apps
-***************
+Apps
+****
 
 App Store
 #########
@@ -39,24 +39,10 @@ everyday smartphone with more apps we recommend:
    Instead, always use F-Droid (for open source apps) or Aurora Store (for apps
    from Google Play Store) to install apps.
 
-Compatible Apps
-###############
-
-Earlier there was a list, but as the Play Service implementation progresses, most of the apps
-should work, although there are still some not working, a list will be available
-`here <https://github.com/Peter-Easton/GrapheneOS-Knowledge/tree/master/App%20Incompatibility%20List>`__.
-
-There is a `list <https://akc3n.org/projects/banking/#list-of-banking-apps>`__ for compatible banking apps, too.
-Click onto the "Report" link behind the regarding banking app to see in which environment it is supported.
-
-- Pixel 4a refers to the NitroPhone 1
-- Pixel 6 refers to the NitroPhone 2
-- Pixel 6 Pro refers to the NitroPhone 2 Pro
-
 Recommended Apps
 ################
 
-* Browser: The pre-installed browser Vanadium is hardened and therefore recommended for high security. For better ad blocking, `Bromite <https://github.com/bromite/bromite/releases/latest>`__ browser is recommended instead.
+* Browser: The pre-installed browser Vanadium is hardened and therefore recommended for high security. For ad-blocking, we recommend `DNS-based ad-blocking <https://grapheneos.org/faq#ad-blocking>`__.
 * Email: K9-mail and OpenKeyChain (for OpenPGP encryption) or FairEmail.
 * VPN: Orbot uses the free TOR network. Mullvad VPN and IVPN are paid VPN services.
 * Backup: The integrated backup (Seedvault) and Nextcloud. Choose Settings -> System -> Backup.
@@ -74,3 +60,8 @@ Permissions of Individual Apps
 To check or change the permissions on network access and sensors for a specific app:
 
 *Long press on the respective app icon -> app info -> permissions*
+
+Car Sharing Apps
+################
+
+Some car sharing apps (such as SHARE NOW) use Bluetooth-based location service to unlock a car in the proximity. To enable this choose: Settings -> Location -> Location Services -> Bluetooth scanning -> on
