@@ -26,8 +26,12 @@ OpenPGP
 The OpenPGP Card can be reset with GnuPG: ``gpg --card-edit``, then ``admin`` and ``factory-reset``.
 
 PIV Smartcard
--------
+-------------
 
-The PIV smartcard can be reset using: ``echo -n | pivy-tool write-cert <KEY REFERENCE>``
+The PIV smartcard can be reset using the following command: 
+
+::
+
+    opensc-tool -s 00:A4:04:00:0B:A000000308000010000100 -s 00:20:00:80:08:FFFFFFFFFFFFFFFF -s 00:20:00:80:08:FFFFFFFFFFFFFFFF -s 00:20:00:80:08:FFFFFFFFFFFFFFFF -s 00:FB:00:00
 
 
