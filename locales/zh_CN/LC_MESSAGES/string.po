@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-10 12:43+0200\n"
+"POT-Creation-Date: 2023-08-11 09:53+0200\n"
 "PO-Revision-Date: 2023-08-10 12:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5264,6 +5264,7 @@ msgid ""
 msgstr "用*电源接口*连接电源线，用*网络接口*连接网线。此外，按下*电源开关*，打开电源。"
 
 #: ../nethsm/getting-started.rst ../nethsm/getting-started.rst:96
+#: ../nethsm/system_recovery.rst:41
 msgid "Back side of the server"
 msgstr "服务器的背面"
 
@@ -5927,8 +5928,7 @@ msgstr "通过``engine`` 接口，NetHSM 可用作 OpenSSL 的后端。"
 msgid ""
 "When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
 " key on the NetHSM will cause OpenSSL to not find any key."
-msgstr "当使用 0.4.12 或更高版本的引擎（libp11）时，NetHSM 上的 EdDSA 密钥会导致 "
-"OpenSSL 找不到任何密钥。"
+msgstr "当使用 0.4.12 或更高版本的引擎（libp11）时，NetHSM 上的 EdDSA 密钥会导致 OpenSSL 找不到任何密钥。"
 
 #: ../nethsm/openssl.rst:10
 msgid ""
@@ -5966,8 +5966,7 @@ msgstr "Arch Linux"
 msgid ""
 "Then you need to configure OpenSSL to use the engine. This is done by "
 "adding the following line to your ``openssl.cnf`` file:"
-msgstr "然后，您需要配置 OpenSSL 以使用该引擎。只需在``openssl.cnf`` "
-"文件中添加以下一行即可："
+msgstr "然后，您需要配置 OpenSSL 以使用该引擎。只需在``openssl.cnf`` 文件中添加以下一行即可："
 
 #: ../nethsm/openssl.rst:57
 msgid ""
@@ -5980,8 +5979,8 @@ msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
 msgstr ""
-"将``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` "
-"替换为您之前安装的 PKCS#11 模块的路径。"
+"将``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` 替换为您之前安装的 "
+"PKCS#11 模块的路径。"
 
 #: ../nethsm/openssl.rst:61
 msgid ""
@@ -5992,19 +5991,18 @@ msgid ""
 "``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's "
 "``/usr/lib64/engines-3/libpkcs11.so``."
 msgstr ""
-"将``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` 替换为您安装的 "
-"OpenSSL 引擎的路径。路径因发行版而异。``engines-3`` 中的数字与 OpenSSL "
-"版本相对应。在 Debian 上，OpenSSL 3 引擎的路径是``/usr/lib/x86_64-linux-gnu/"
-"engines-3/libpkcs11.so``；在 Fedora 上，路径是``/usr/lib64/engines-3/"
-"libpkcs11.so``。"
+"将``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` 替换为您安装的 OpenSSL "
+"引擎的路径。路径因发行版而异。``engines-3`` 中的数字与 OpenSSL 版本相对应。在 Debian 上，OpenSSL 3 "
+"引擎的路径是``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``；在 Fedora "
+"上，路径是``/usr/lib64/engines-3/libpkcs11.so``。"
 
 #: ../nethsm/openssl.rst:63
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
 msgstr ""
-"现在，您可以使用`PKCS#11 URIs<https://www.rfc-editor.org/rfc/rfc7512>`___，"
-"在 NetHSM 上使用密钥："
+"现在，您可以使用`PKCS#11 URIs<https://www.rfc-editor.org/rfc/rfc7512>`___，在 "
+"NetHSM 上使用密钥："
 
 #: ../nethsm/openssl.rst:69
 msgid "This will use the key ``webserver``."
@@ -7143,6 +7141,190 @@ msgid ""
 "To list the keys of a NetHSM in a SSH ``authorized_keys`` format, use the"
 " following command:"
 msgstr "要以 SSH``authorized_keys`` 格式列出 NetHSM 的密钥，请使用以下命令："
+
+#: ../nethsm/system_recovery.rst:2
+msgid "System Recovery"
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:4
+msgid ""
+"The following describes the recovery process for the NetHSM system "
+"software. These instructions are only applicable if the API is "
+"inoperable, e.g. not responding to API requests. In the case of an "
+"operable API perform a `factory reset <administration.html#reset-to-"
+"factory-defaults>`__ instead. Follow the instructions precicsely to "
+"prevent any accidential deletion of data."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:10
+msgid ""
+"The system recovery only works if the GUID partition table (GPT) and the "
+"partitions itself on the disk are not corrupted. A corruption could be "
+"indicated by the following message during boot."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:22
+msgid ""
+"If they are corrupted this instructions will result in a factory "
+"installation of the NetHSM system software."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:24
+#, fuzzy
+msgid "The system recovery can be performed as follows."
+msgstr "重置为出厂默认值可以按以下方式进行。"
+
+#: ../nethsm/system_recovery.rst:26
+#, fuzzy
+msgid ""
+"Download the installer image from the `releases page "
+"<https://github.com/nitrokey/nethsm/releases>`__."
+msgstr ""
+"从`releases "
+"<https://github.com/Nitrokey/pynitrokey/releases/>`__下载最新的``.exe`` 文件。"
+
+#: ../nethsm/system_recovery.rst:29
+msgid ""
+"Download the installer image of the same version which was installed at "
+"the time of corruption. A downgrade, or upgrade skipping versions, is not"
+" supported."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:32
+msgid ""
+"Make sure the system is turned off, but connected to power, and the power"
+" button on the back turned on."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:33
+#, fuzzy
+msgid "Connect the BMC network port with a network cable."
+msgstr "通过网线将NextBox连接到您的互联网路由器。"
+
+#: ../nethsm/system_recovery.rst:35
+msgid "See the image below to identify the BMC network port."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:43
+msgid ""
+"Per default the BMC will wait for an address assignment with DHCP. If "
+"DHCP is not available the link-local address can be determined with Nmap."
+" The command ``nmap <network-in-cidr-notation> -p 80 --open`` will return"
+" a list of hosts with open port 80."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:46
+msgid ""
+"Open the BMC website in a web browser, using the determined IP address "
+"from the previous step. To login, the default credentials are username "
+"``bmc_admin``, and password ``abcd1234``."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:49
+msgid ""
+"Mount the downloaded installer image by clicking in the menu on the left "
+"on *FRU: Hermes CFL (with TPM) Nitrokey Config* followed by *Virtual "
+"media* in the submenu. In the middle open the tab *usb0*, and click the "
+"button *Attach media*."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:55
+msgid "BMC menu to attach USB device"
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:57
+msgid ""
+"In the opening dialog choose *Stream local file via browser* as the "
+"*Transfer method*. Click the button *Browse...* and choose the downloaded"
+" installer image. Confirm the operation with the *Submit* button."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:64
+msgid "BMC menu to select USB image"
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:66
+msgid ""
+"In the menu on the left select *FRU: Hermes CFL (with TPM) Nitrokey "
+"Config*, and then *Remote KVM*."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:67
+msgid ""
+"In the middle click the *Open a floating Remote KVM window* button, in "
+"the top right corner of the VGA output box."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:72
+msgid "BMC KVM console view"
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:74
+msgid ""
+"This window will show you the graphical output of the NetHSM installer. "
+"Keep this second window open together with the main window from the BMC."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:76
+msgid "Change to the view *Overview* from the top of the menu on the left."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:77
+msgid ""
+"In the box *Override Boot Device*, select *USB_BMC-virtual_media* from "
+"the drop-down next to *Select a Boot Device*."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:82
+msgid "BMC boot device setting"
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:84
+msgid ""
+"In the box with the title *FRU: Hermes CFL (with TPM) Nitrokey Config*, "
+"select *On* from the drop-down menu next to *Power*. Confirm with the "
+"*Apply* button."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:90
+msgid "BMC power up setting"
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:92
+msgid ""
+"In the previously opened *Remote KVM* window you can now see the "
+"installation wizard."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:93
+msgid ""
+"The KVM window now shows the boot dialog. Confirm the selection of "
+"``NetHSM automatic boot (USB or primary system)`` with the *Enter* key."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:99
+msgid "NetHSM boot selection in the BMC KVM console"
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:101
+msgid ""
+"In the following dialog confirm the selection of ``NetHSM Software "
+"Installer`` with the *Enter* key."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:106
+msgid "NetHSM installer selection in the BMC KVM console"
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:109
+msgid ""
+"Do NOT select ``NetHSM Factory Reset - DELETES ALL DATA!`` from the menu."
+" This will unrecoverable wipe the data on the disk."
+msgstr ""
+
+#: ../nethsm/system_recovery.rst:111
+msgid "The NetHSM Installer will install the system software and shutdown."
+msgstr ""
 
 #: ../nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
@@ -24750,3 +24932,4 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 #~ "Debian-based systems by executing the "
 #~ "following command."
 #~ msgstr "在基于 Debian 的系统上，执行以下命令即可安装该引擎。"
+
