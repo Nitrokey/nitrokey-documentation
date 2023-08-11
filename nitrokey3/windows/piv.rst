@@ -26,11 +26,13 @@ Prerequisites
 
 The key is generated in slot 9A (authentication).
 
-``pivy-tool generate 9A -a rsa2048``
-
 ::
 
-   If the administration key is not the default one, it can be specified with `-A 3des -K 010203040506070801020304050607080102030405060708` . The argument to `-A` can also be `aes256`, and the argument to `-K` is the key in hexadecimal. 
+      pivy-tool generate 9A -a rsa2048
+
+.. note::
+
+   If the administration key is not the default one, it can be specified with ``-A 3des -K 010203040506070801020304050607080102030405060708`` . The argument to ``-A`` can also be ``aes256``, and the argument to ``-K`` is the key in hexadecimal. 
 
 The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` if it is not the default. If ``-P`` is not provided, it will be asked for after key generation.
 
