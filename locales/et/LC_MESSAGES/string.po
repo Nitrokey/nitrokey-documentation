@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-11 09:53+0200\n"
-"PO-Revision-Date: 2023-08-10 12:47+0000\n"
+"PO-Revision-Date: 2023-08-11 09:04+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Estonian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/et/>\n"
 "Language: et\n"
-"Language-Team: Estonian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/et/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -8078,7 +8079,7 @@ msgstr ""
 
 #: ../nethsm/system_recovery.rst:2
 msgid "System Recovery"
-msgstr ""
+msgstr "Süsteemi taastamine"
 
 #: ../nethsm/system_recovery.rst:4
 msgid ""
@@ -8089,6 +8090,11 @@ msgid ""
 "factory-defaults>`__ instead. Follow the instructions precicsely to "
 "prevent any accidential deletion of data."
 msgstr ""
+"Järgnevalt kirjeldatakse NetHSM-süsteemi tarkvara taastamise protsessi. Need "
+"juhised on kohaldatavad ainult siis, kui API ei toimi, nt ei vasta API "
+"päringutele. Toimiva API puhul tehke selle asemel `tehase lähtestamine "
+"<administration.html#reset-to-factory-defaults>`__. Järgige täpselt "
+"juhiseid, et vältida andmete tahtmatut kustutamist."
 
 #: ../nethsm/system_recovery.rst:10
 msgid ""
@@ -8096,26 +8102,29 @@ msgid ""
 "partitions itself on the disk are not corrupted. A corruption could be "
 "indicated by the following message during boot."
 msgstr ""
+"Süsteemi taastamine toimib ainult siis, kui GUID partitsioonitabel (GPT) ja "
+"partitsioonid ise kettal ei ole rikutud. Korruptsioonist võib märku anda "
+"järgmine teade käivitamise ajal."
 
 #: ../nethsm/system_recovery.rst:22
 msgid ""
 "If they are corrupted this instructions will result in a factory "
 "installation of the NetHSM system software."
 msgstr ""
+"Kui need on rikutud, toob see juhis kaasa NetHSM-süsteemi tarkvara "
+"tehasepoolse installeerimise."
 
 #: ../nethsm/system_recovery.rst:24
-#, fuzzy
 msgid "The system recovery can be performed as follows."
-msgstr "Tehase algseadistuste lähtestamist saab teostada järgmiselt."
+msgstr "Süsteemi taastamist saab teostada järgmiselt."
 
 #: ../nethsm/system_recovery.rst:26
-#, fuzzy
 msgid ""
 "Download the installer image from the `releases page "
 "<https://github.com/nitrokey/nethsm/releases>`__."
 msgstr ""
-"Laadige uusim ``.exe`` fail alla aadressilt `releases "
-"<https://github.com/Nitrokey/pynitrokey/releases/>`__."
+"Laadige paigaldusprogrammipilt alla veebilehelt `releases page "
+"<https://github.com/nitrokey/nethsm/releases>`__."
 
 #: ../nethsm/system_recovery.rst:29
 msgid ""
@@ -8123,21 +8132,25 @@ msgid ""
 "the time of corruption. A downgrade, or upgrade skipping versions, is not"
 " supported."
 msgstr ""
+"Laadige alla sama versiooni installija kujutis, mis oli paigaldatud "
+"kahjustuse ajal. Versioone vahele jättes ei toetata allakandmist või "
+"uuendamist."
 
 #: ../nethsm/system_recovery.rst:32
 msgid ""
 "Make sure the system is turned off, but connected to power, and the power"
 " button on the back turned on."
 msgstr ""
+"Veenduge, et süsteem on välja lülitatud, kuid ühendatud vooluvõrku ja "
+"tagaküljel olev toitenupp sisse lülitatud."
 
 #: ../nethsm/system_recovery.rst:33
-#, fuzzy
 msgid "Connect the BMC network port with a network cable."
-msgstr "Ühendage NextBox võrgukaabli kaudu oma internetiruuteriga."
+msgstr "Ühendage BMC võrguport võrgukaabliga."
 
 #: ../nethsm/system_recovery.rst:35
 msgid "See the image below to identify the BMC network port."
-msgstr ""
+msgstr "BMC võrgupordi tuvastamiseks vaadake allolevat pilti."
 
 #: ../nethsm/system_recovery.rst:43
 msgid ""
@@ -8146,6 +8159,10 @@ msgid ""
 " The command ``nmap <network-in-cidr-notation> -p 80 --open`` will return"
 " a list of hosts with open port 80."
 msgstr ""
+"Vaikimisi ootab BMC aadressi määramist DHCP abil. Kui DHCP ei ole saadaval, "
+"saab link-lokaalse aadressi määrata Nmapiga. Käsk ``nmap <network-in-cidr-"
+"notation> -p 80 --open`` annab tagasi nimekirja hostidest, millel on avatud "
+"port 80."
 
 #: ../nethsm/system_recovery.rst:46
 msgid ""
@@ -8153,6 +8170,9 @@ msgid ""
 "from the previous step. To login, the default credentials are username "
 "``bmc_admin``, and password ``abcd1234``."
 msgstr ""
+"Avage BMC veebisait veebibrauseris, kasutades eelmises etapis määratud IP-"
+"aadressi. Sisselogimiseks on vaikimisi kasutajanimi ``bmc_admin`` ja parool "
+"``abcd1234``."
 
 #: ../nethsm/system_recovery.rst:49
 msgid ""
@@ -8161,10 +8181,14 @@ msgid ""
 "media* in the submenu. In the middle open the tab *usb0*, and click the "
 "button *Attach media*."
 msgstr ""
+"Paigaldage allalaetud paigaldusprogrammi kujutis, klõpsates vasakpoolses "
+"menüüs *FRU: Hermes CFL (TPM-iga) Nitrokey Config* ja seejärel alammenüüs *"
+"Virtual media*. Avage keskel vahekaart *usb0* ja klõpsake nuppu *Attach "
+"media*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:55
 msgid "BMC menu to attach USB device"
-msgstr ""
+msgstr "BMC menüü USB-seadme kinnitamiseks"
 
 #: ../nethsm/system_recovery.rst:57
 msgid ""
@@ -8172,46 +8196,57 @@ msgid ""
 "*Transfer method*. Click the button *Browse...* and choose the downloaded"
 " installer image. Confirm the operation with the *Submit* button."
 msgstr ""
+"Avamisdialoogis valige *Stream local file via browser* kui *Transfer method*"
+". Klõpsake nuppu *Browse...* ja valige allalaaditud paigaldusprogrammi "
+"kujutis. Kinnitage toiming nupuga *Submit*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:64
 msgid "BMC menu to select USB image"
-msgstr ""
+msgstr "BMC menüü USB-pildi valimiseks"
 
 #: ../nethsm/system_recovery.rst:66
 msgid ""
 "In the menu on the left select *FRU: Hermes CFL (with TPM) Nitrokey "
 "Config*, and then *Remote KVM*."
 msgstr ""
+"Valige vasakpoolses menüüs *FRU: Hermes CFL (TPM-iga) Nitrokey Config* ja "
+"seejärel *Remote KVM*."
 
 #: ../nethsm/system_recovery.rst:67
 msgid ""
 "In the middle click the *Open a floating Remote KVM window* button, in "
 "the top right corner of the VGA output box."
 msgstr ""
+"Klõpsake keskel VGA-väljundikasti paremas ülemises nurgas asuvat nuppu *"
+"Avage ujuv kaug-KVM-aken*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:72
 msgid "BMC KVM console view"
-msgstr ""
+msgstr "BMC KVM konsooli vaade"
 
 #: ../nethsm/system_recovery.rst:74
 msgid ""
 "This window will show you the graphical output of the NetHSM installer. "
 "Keep this second window open together with the main window from the BMC."
 msgstr ""
+"See aken näitab teile NetHSM-i paigaldaja graafilist väljundit. Hoidke see "
+"teine aken koos BMC põhiaknaga avatud."
 
 #: ../nethsm/system_recovery.rst:76
 msgid "Change to the view *Overview* from the top of the menu on the left."
-msgstr ""
+msgstr "Vahetage vasakpoolse menüü ülemisest osast vaade *Ülevaade*."
 
 #: ../nethsm/system_recovery.rst:77
 msgid ""
 "In the box *Override Boot Device*, select *USB_BMC-virtual_media* from "
 "the drop-down next to *Select a Boot Device*."
 msgstr ""
+"Lahtris *Override Boot Device*, valige *USB_BMC-virtual_media* kõrval "
+"olevast rippmenüüst *Select a Boot Device*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:82
 msgid "BMC boot device setting"
-msgstr ""
+msgstr "BMC alglaadimisseadme seadistus"
 
 #: ../nethsm/system_recovery.rst:84
 msgid ""
@@ -8219,46 +8254,54 @@ msgid ""
 "select *On* from the drop-down menu next to *Power*. Confirm with the "
 "*Apply* button."
 msgstr ""
+"Lahtris pealkirjaga *FRU: Hermes CFL (koos TPM-iga) Nitrokey Config*, valige "
+"*On* rippmenüüst *Power* kõrval. Kinnitage nupuga *Apply*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:90
 msgid "BMC power up setting"
-msgstr ""
+msgstr "BMC sisselülitamise seadistus"
 
 #: ../nethsm/system_recovery.rst:92
 msgid ""
 "In the previously opened *Remote KVM* window you can now see the "
 "installation wizard."
-msgstr ""
+msgstr "Eelnevalt avatud aknas *Remote KVM* näete nüüd paigaldusviisikut."
 
 #: ../nethsm/system_recovery.rst:93
 msgid ""
 "The KVM window now shows the boot dialog. Confirm the selection of "
 "``NetHSM automatic boot (USB or primary system)`` with the *Enter* key."
 msgstr ""
+"KVM-aknas kuvatakse nüüd alglaadimisdialoog. Kinnitage valik ``NetHSM "
+"automatic boot (USB or primary system)`` klahviga *Enter*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:99
 msgid "NetHSM boot selection in the BMC KVM console"
-msgstr ""
+msgstr "NetHSM-i käivitamise valik BMC KVM-konsoolis"
 
 #: ../nethsm/system_recovery.rst:101
 msgid ""
 "In the following dialog confirm the selection of ``NetHSM Software "
 "Installer`` with the *Enter* key."
 msgstr ""
+"Järgnevas dialoogis kinnitage valik ``NetHSM Software Installer`` klahviga "
+"*Enter*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:106
 msgid "NetHSM installer selection in the BMC KVM console"
-msgstr ""
+msgstr "NetHSM paigaldaja valik BMC KVM konsoolis"
 
 #: ../nethsm/system_recovery.rst:109
 msgid ""
 "Do NOT select ``NetHSM Factory Reset - DELETES ALL DATA!`` from the menu."
 " This will unrecoverable wipe the data on the disk."
 msgstr ""
+"ÄRGE valige menüüst ``NetHSM Factory Reset - DELETES ALL DATA!``. See "
+"kustutab taastumatult andmed kettalt."
 
 #: ../nethsm/system_recovery.rst:111
 msgid "The NetHSM Installer will install the system software and shutdown."
-msgstr ""
+msgstr "NetHSM Installer installib süsteemitarkvara ja sulgeb süsteemi."
 
 #: ../nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
@@ -29833,4 +29876,3 @@ msgstr ""
 #~ "Mootorit saab paigaldada Debianil "
 #~ "põhinevatesse süsteemidesse, sooritades järgmise "
 #~ "käsu."
-
