@@ -608,7 +608,31 @@ The final configuration file ``client.conf`` should look like this one:
    # key client.key
    # tls-auth ta.key 1
 
-4. Known issues
+4. Configure OpenVPN
+
+In order to establish a handshake, you must configure OpenSSL included in OpenVPN.
+
+Create the directory ``ssl`` in ``C:\Program Files\OpenVPN`` and create file ``openssl.cnf`` with the following content : 
+
+    openssl_conf = default_conf
+        
+    [ default_conf ]
+    ssl_conf = ssl_sect
+
+    [ ssl_sect ]
+    system_default = ssl_default_sect
+
+    [ ssl_default_sect ]
+    SignatureAlgorithms = RSA+SHA512:ECDSA+SHA512:RSA+SHA384:ECDSA+SHA384:RSA+SHA256:ECDSA+SHA256
+    MaxProtocol = TLSv1.2
+    MinProtocol = TLSv1.2
+
+
+With this modification, you will not have error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
+
+
+
+5. Known issues
 
 There are some known issues related to OpenVPN login with OpenSC. Please consult these issues `here <https://github.com/Nitrokey/wiki/wiki/3rd-Party-Issues>`__.
 
@@ -642,37 +666,6 @@ When executing OpenVPN client, Nitrokey’s PIN needs to be entered:
    Fri Sep 11 17:42:01 2020 PKCS#11: Adding PKCS#11 provider '/usr/lib64/pkcs11/opensc-pkcs11.so'
    Enter User PIN (OpenPGP card) token Password: ******
 
-.. warning::
- 
- Unfortunately OpenVPN doesn’t seem to be able to establish a handshake and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
-
-.. code-block:: bash
-   
-   This is what the error output looks like:
-
-   $ sudo openvpn --client --config client.conf
-   Fri Sep 11 17:42:01 2020 OpenVPN 2.4.9 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Apr 24 2020
-   Fri Sep 11 17:42:01 2020 library versions: OpenSSL 1.1.1g FIPS  21 Apr 2020, LZO 2.08
-   Fri Sep 11 17:42:01 2020 PKCS#11: Adding PKCS#11 provider '/usr/lib64/pkcs11/opensc-pkcs11.so'
-   Enter User PIN (OpenPGP card) token Password: ******``
-   Fri Sep 11 17:42:12 2020 TCP/UDP: Preserving recently used remote address: [AF_INET]18.157.180.240:1194``
-   Fri Sep 11 17:42:12 2020 Socket Buffers: R=[212992->212992] S=[212992->212992]``
-   Fri Sep 11 17:42:12 2020 UDP link local: (not bound)
-   Fri Sep 11 17:42:12 2020 UDP link remote: [AF_INET]18.157.180.240:1194
-   Fri Sep 11 17:42:12 2020 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
-   Fri Sep 11 17:42:12 2020 TLS: Initial packet from [AF_INET]18.157.180.240:1194, sid=d79690cf 9e38ce89
-   Fri Sep 11 17:42:12 2020 VERIFY OK: depth=1, CN=server_CA
-   Fri Sep 11 17:42:12 2020 VERIFY KU OK
-   Fri Sep 11 17:42:12 2020 Validating certificate extended key usage
-   Fri Sep 11 17:42:12 2020 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
-   Fri Sep 11 17:42:12 2020 VERIFY EKU OK
-   Fri Sep 11 17:42:12 2020 VERIFY OK: depth=0, CN=server
-   Fri Sep 11 17:42:12 2020 OpenSSL: error:141F0006:SSL routines:tls_construct_cert_verify:EVP lib
-   Fri Sep 11 17:42:12 2020 TLS_ERROR: BIO read tls_read_plaintext error
-   Fri Sep 11 17:42:12 2020 TLS Error: TLS object -> incoming plaintext read error
-   Fri Sep 11 17:42:12 2020 TLS Error: TLS handshake failed
-   Fri Sep 11 17:42:12 2020 SIGUSR1[soft,tls-error] received, process restarting
-   Fri Sep 11 17:42:12 2020 Restart pause, 5 second(s)
 
 In some reported cases it does not prompt for a PIN on the terminal. One workaround would be to use to use this command to login with the PIN:
 
