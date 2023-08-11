@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-11 09:53+0200\n"
-"PO-Revision-Date: 2023-08-10 12:47+0000\n"
+"PO-Revision-Date: 2023-08-11 09:04+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/bg/>\n"
 "Language: bg\n"
-"Language-Team: Bulgarian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/bg/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -8253,7 +8254,7 @@ msgstr ""
 
 #: ../nethsm/system_recovery.rst:2
 msgid "System Recovery"
-msgstr ""
+msgstr "Възстановяване на системата"
 
 #: ../nethsm/system_recovery.rst:4
 msgid ""
@@ -8264,6 +8265,12 @@ msgid ""
 "factory-defaults>`__ instead. Follow the instructions precicsely to "
 "prevent any accidential deletion of data."
 msgstr ""
+"По-долу е описан процесът на възстановяване на системния софтуер на NetHSM. "
+"Тези инструкции са приложими само ако API не работи, например не отговаря на "
+"API заявки. В случай на работещ API вместо това извършете възстановяване на "
+"фабричните настройки на ` <administration.html#reset-to-factory-defaults>` "
+"__. Следвайте инструкциите точно, за да предотвратите случайно изтриване на "
+"данни."
 
 #: ../nethsm/system_recovery.rst:10
 msgid ""
@@ -8271,28 +8278,29 @@ msgid ""
 "partitions itself on the disk are not corrupted. A corruption could be "
 "indicated by the following message during boot."
 msgstr ""
+"Възстановяването на системата работи само ако таблицата на дяловете GUID "
+"(GPT) и самите дялове на диска не са повредени. Повреждането може да бъде "
+"сигнализирано от следното съобщение по време на зареждане."
 
 #: ../nethsm/system_recovery.rst:22
 msgid ""
 "If they are corrupted this instructions will result in a factory "
 "installation of the NetHSM system software."
 msgstr ""
+"Ако те са повредени, тази инструкция ще доведе до фабрична инсталация на "
+"системния софтуер NetHSM."
 
 #: ../nethsm/system_recovery.rst:24
-#, fuzzy
 msgid "The system recovery can be performed as follows."
-msgstr ""
-"Възстановяването на фабричните настройки може да се извърши по следния "
-"начин."
+msgstr "Възстановяването на системата може да се извърши по следния начин."
 
 #: ../nethsm/system_recovery.rst:26
-#, fuzzy
 msgid ""
 "Download the installer image from the `releases page "
 "<https://github.com/nitrokey/nethsm/releases>`__."
 msgstr ""
-"Изтеглете най-новия ``.exe`` файл от `издания "
-"<https://github.com/Nitrokey/pynitrokey/releases/>`__."
+"Изтеглете образа на инсталатора от страницата `releases <https://github.com/"
+"nitrokey/nethsm/releases>`__."
 
 #: ../nethsm/system_recovery.rst:29
 msgid ""
@@ -8300,21 +8308,25 @@ msgid ""
 "the time of corruption. A downgrade, or upgrade skipping versions, is not"
 " supported."
 msgstr ""
+"Изтеглете инсталационния образ на същата версия, която е била инсталирана по "
+"време на повредата. Не се поддържа понижаване или надграждане, при което се "
+"пропускат версии."
 
 #: ../nethsm/system_recovery.rst:32
 msgid ""
 "Make sure the system is turned off, but connected to power, and the power"
 " button on the back turned on."
 msgstr ""
+"Уверете се, че системата е изключена, но е свързана към захранването, а "
+"бутонът за захранване на гърба е включен."
 
 #: ../nethsm/system_recovery.rst:33
-#, fuzzy
 msgid "Connect the BMC network port with a network cable."
-msgstr "Свържете NextBox към вашия интернет рутер чрез мрежов кабел."
+msgstr "Свържете мрежовия порт на BMC с мрежов кабел."
 
 #: ../nethsm/system_recovery.rst:35
 msgid "See the image below to identify the BMC network port."
-msgstr ""
+msgstr "Вижте изображението по-долу, за да идентифицирате мрежовия порт на BMC."
 
 #: ../nethsm/system_recovery.rst:43
 msgid ""
@@ -8323,6 +8335,10 @@ msgid ""
 " The command ``nmap <network-in-cidr-notation> -p 80 --open`` will return"
 " a list of hosts with open port 80."
 msgstr ""
+"По подразбиране BMC ще изчака присвояването на адрес с DHCP. Ако DHCP не е "
+"наличен, локалният адрес на връзката може да се определи с Nmap. Командата ``"
+"nmap <network-in-cidr-notation> -p 80 --open`` ще върне списък на хостовете "
+"с отворен порт 80."
 
 #: ../nethsm/system_recovery.rst:46
 msgid ""
@@ -8330,6 +8346,9 @@ msgid ""
 "from the previous step. To login, the default credentials are username "
 "``bmc_admin``, and password ``abcd1234``."
 msgstr ""
+"Отворете уебсайта на BMC в уеб браузър, като използвате определения IP адрес "
+"от предишната стъпка. За да влезете в системата, данните по подразбиране са: "
+"потребителско име ``bmc_admin`` и парола ``abcd1234``."
 
 #: ../nethsm/system_recovery.rst:49
 msgid ""
@@ -8338,10 +8357,14 @@ msgid ""
 "media* in the submenu. In the middle open the tab *usb0*, and click the "
 "button *Attach media*."
 msgstr ""
+"Монтирайте изтегленото инсталационно изображение, като щракнете в менюто "
+"отляво върху *FRU: Hermes CFL (с TPM) Nitrokey Config*, последвано от *"
+"Virtual media* в подменюто. В средата отворете раздела *usb0*, след което "
+"щракнете върху бутона *Attach media (Прикрепете носител)*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:55
 msgid "BMC menu to attach USB device"
-msgstr ""
+msgstr "BMC меню за прикачване на USB устройство"
 
 #: ../nethsm/system_recovery.rst:57
 msgid ""
@@ -8349,46 +8372,60 @@ msgid ""
 "*Transfer method*. Click the button *Browse...* and choose the downloaded"
 " installer image. Confirm the operation with the *Submit* button."
 msgstr ""
+"В диалоговия прозорец за отваряне изберете *Stream local file via browser* "
+"като *Transfer method*. Щракнете върху бутона *Browse... (Преглед...)* и "
+"изберете изтегления инсталационен образ. Потвърдете операцията с бутона *"
+"Submit (Изпрати)*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:64
 msgid "BMC menu to select USB image"
-msgstr ""
+msgstr "BMC меню за избор на USB изображение"
 
 #: ../nethsm/system_recovery.rst:66
 msgid ""
 "In the menu on the left select *FRU: Hermes CFL (with TPM) Nitrokey "
 "Config*, and then *Remote KVM*."
 msgstr ""
+"В менюто отляво изберете *FRU: Hermes CFL (с TPM) Nitrokey Config*, а след "
+"това *Remote KVM*."
 
 #: ../nethsm/system_recovery.rst:67
 msgid ""
 "In the middle click the *Open a floating Remote KVM window* button, in "
 "the top right corner of the VGA output box."
 msgstr ""
+"В средата щракнете върху бутона *Open a floating Remote KVM window (Отваряне "
+"на плаващ отдалечен KVM прозорец)*, в горния десен ъгъл на полето за VGA "
+"изход."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:72
 msgid "BMC KVM console view"
-msgstr ""
+msgstr "Изглед на конзолата BMC KVM"
 
 #: ../nethsm/system_recovery.rst:74
 msgid ""
 "This window will show you the graphical output of the NetHSM installer. "
 "Keep this second window open together with the main window from the BMC."
 msgstr ""
+"Този прозорец ще ви покаже графичния изход на инсталатора на NetHSM. Дръжте "
+"този втори прозорец отворен заедно с основния прозорец от BMC."
 
 #: ../nethsm/system_recovery.rst:76
 msgid "Change to the view *Overview* from the top of the menu on the left."
-msgstr ""
+msgstr "Преминете към изгледа *Overview* от горната част на менюто вляво."
 
 #: ../nethsm/system_recovery.rst:77
 msgid ""
 "In the box *Override Boot Device*, select *USB_BMC-virtual_media* from "
 "the drop-down next to *Select a Boot Device*."
 msgstr ""
+"В полето *Override Boot Device (Пределно устройство за зареждане)*, изберете "
+"*USB_BMC-virtual_media (USB_BMC-виртуална_медия)* от падащото меню до *"
+"Select a Boot Device (Изберете устройство за зареждане)*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:82
 msgid "BMC boot device setting"
-msgstr ""
+msgstr "Настройка на устройството за зареждане на BMC"
 
 #: ../nethsm/system_recovery.rst:84
 msgid ""
@@ -8396,46 +8433,58 @@ msgid ""
 "select *On* from the drop-down menu next to *Power*. Confirm with the "
 "*Apply* button."
 msgstr ""
+"В полето със заглавие *FRU: Hermes CFL (with TPM) Nitrokey Config*, изберете "
+"*On* от падащото меню до *Power*. Потвърдете с бутона *Apply (Приложи* )."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:90
 msgid "BMC power up setting"
-msgstr ""
+msgstr "Настройка за включване на BMC"
 
 #: ../nethsm/system_recovery.rst:92
 msgid ""
 "In the previously opened *Remote KVM* window you can now see the "
 "installation wizard."
 msgstr ""
+"В отворения преди това прозорец *Remote KVM* вече можете да видите съветника "
+"за инсталиране."
 
 #: ../nethsm/system_recovery.rst:93
 msgid ""
 "The KVM window now shows the boot dialog. Confirm the selection of "
 "``NetHSM automatic boot (USB or primary system)`` with the *Enter* key."
 msgstr ""
+"Прозорецът KVM вече показва диалоговия прозорец за зареждане. Потвърдете "
+"избора на ``NetHSM automatic boot (USB or primary system)`` с клавиша "
+"*Enter*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:99
 msgid "NetHSM boot selection in the BMC KVM console"
-msgstr ""
+msgstr "Избор на зареждане на NetHSM в конзолата BMC KVM"
 
 #: ../nethsm/system_recovery.rst:101
 msgid ""
 "In the following dialog confirm the selection of ``NetHSM Software "
 "Installer`` with the *Enter* key."
 msgstr ""
+"В следващия диалогов прозорец потвърдете избора на ``NetHSM Software "
+"Installer`` с клавиша *Въведете*."
 
 #: ../nethsm/system_recovery.rst ../nethsm/system_recovery.rst:106
 msgid "NetHSM installer selection in the BMC KVM console"
-msgstr ""
+msgstr "Избор на инсталатор на NetHSM в конзолата BMC KVM"
 
 #: ../nethsm/system_recovery.rst:109
 msgid ""
 "Do NOT select ``NetHSM Factory Reset - DELETES ALL DATA!`` from the menu."
 " This will unrecoverable wipe the data on the disk."
 msgstr ""
+"НЕ избирайте ``NetHSM Factory Reset - DELETES ALL DATA!`` от менюто. Това ще "
+"доведе до невъзстановимо изтриване на данните на диска."
 
 #: ../nethsm/system_recovery.rst:111
 msgid "The NetHSM Installer will install the system software and shutdown."
 msgstr ""
+"Инсталаторът на NetHSM ще инсталира системния софтуер и ще изключи системата."
 
 #: ../nextbox/backup-restore.rst:2
 msgid "Backup and Restore"
@@ -30776,4 +30825,3 @@ msgstr ""
 #~ "Двигателят може да бъде инсталиран на"
 #~ " системи, базирани на Дебиан, чрез "
 #~ "изпълнение на следната команда."
-
