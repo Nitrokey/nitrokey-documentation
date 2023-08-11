@@ -1,1 +1,1 @@
-.. include:: ../../fido2/2fa-odoo.rst.inc 
+.. include:: ../../pro/2fa-odoo.rst.inc 
