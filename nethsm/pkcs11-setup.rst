@@ -42,6 +42,12 @@ The configuration is yaml-formatted:
 .. tabs::
   .. tab:: All platforms
     .. code-block:: yaml
+      
+        # Set this option to true to enable the compatibility option for the C_SetAttributeValue() function.
+        # This allows the applications using the Java Sun PKCS11 module (like EJBCA) to generate keys.
+        # When using this, the names given to the keys will be ignored and the keys will have random names.
+        # Under the hood it will store in memory the name given to the key when calling C_SetAttributeValue(). When a certificate is uploaded it will check if the name was previously passed to C_SetAttributeValue() and translate it to the real name on the NetHSM.
+        enable_set_attribute_value: false
 
         # You can set the log file location here.
         # If no value is set the module will output to stderr.
