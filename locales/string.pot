@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 17:48+0200\n"
+"POT-Creation-Date: 2023-08-14 13:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4446,37 +4446,45 @@ msgid "The ``418`` in the name is an index that must be unique for each PKCS#11 
 msgstr ""
 
 #: ../nethsm/ejbca.rst:18
-msgid "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin GUI ``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token name is ``Nitrokey NetHSM``."
+msgid "To be able to generate keys from the interface you need to set the ``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` file."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:20
+msgid "Because of some integration problems with the Sun PKCS11 provider, keys generated from EJBCA will have a random name instead of the name given in the interface."
 msgstr ""
 
 #: ../nethsm/ejbca.rst:22
-msgid "Executing The Example"
-msgstr ""
-
-#: ../nethsm/ejbca.rst:24
-msgid "If you want to experiment with the given example you can use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:"
+msgid "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin GUI ``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token name is ``NetHSM``."
 msgstr ""
 
 #: ../nethsm/ejbca.rst:26
+msgid "Executing The Example"
+msgstr ""
+
+#: ../nethsm/ejbca.rst:28
+msgid "If you want to experiment with the given example you can use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:"
+msgstr ""
+
+#: ../nethsm/ejbca.rst:30
 #: ../nethsm/nginx.rst:91
 msgid "Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started>`__ for more information."
 msgstr ""
 
-#: ../nethsm/ejbca.rst:27
+#: ../nethsm/ejbca.rst:31
 msgid "Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/ejbca/p11nethsm.conf``."
 msgstr ""
 
-#: ../nethsm/ejbca.rst:28
+#: ../nethsm/ejbca.rst:32
 #: ../nethsm/nginx.rst:100
 msgid "Build the container."
 msgstr ""
 
-#: ../nethsm/ejbca.rst:34
+#: ../nethsm/ejbca.rst:38
 #: ../nethsm/nginx.rst:106
 msgid "Run the container."
 msgstr ""
 
-#: ../nethsm/ejbca.rst:40
+#: ../nethsm/ejbca.rst:44
 #: ../nethsm/nginx.rst:112
 msgid "The container will be available at `https://localhost:9443/ <https://localhost:9443/>`__."
 msgstr ""
@@ -5852,61 +5860,61 @@ msgstr ""
 msgid "All platforms"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:85
+#: ../nethsm/pkcs11-setup.rst:91
 msgid "Instances"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:87
+#: ../nethsm/pkcs11-setup.rst:93
 msgid "If multiple NetHSM instances are listed in the same slot, these instances must be configured in a cluster. The credentials of the users and the keys must be the same on all instances."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:89
+#: ../nethsm/pkcs11-setup.rst:95
 msgid "The module will use the instances in a round-robin fashion, trying another instance if one fails."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:93
+#: ../nethsm/pkcs11-setup.rst:99
 msgid "Users"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:95
+#: ../nethsm/pkcs11-setup.rst:101
 msgid "The operator and administrator users are both optional but the module won't start if no user is configured. This is so you can configure the module with only an administrator user, only an operator user or both at the same time."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:97
+#: ../nethsm/pkcs11-setup.rst:103
 msgid "When the two users are set the module will use the operator by default and only use the administrator user when the action needs it."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:99
+#: ../nethsm/pkcs11-setup.rst:105
 msgid "The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 SO is mapped to the NetHSM administrator."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:102
+#: ../nethsm/pkcs11-setup.rst:108
 #: ../software/nk-app2/passwords.rst:2
 #: ../nitrokey3/shared/reset.rst.inc:19
 msgid "Passwords"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:104
+#: ../nethsm/pkcs11-setup.rst:110
 msgid "The password can be provided by multiple means:"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:106
+#: ../nethsm/pkcs11-setup.rst:112
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:107
+#: ../nethsm/pkcs11-setup.rst:113
 msgid "In an environment variable read by the module with the ``env:`` prefix: ``env:ENV_STORING_THE_PASSWORD``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:108
+#: ../nethsm/pkcs11-setup.rst:114
 msgid "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool --module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin password you need to use ``--so-pin`` instead: ``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:111
+#: ../nethsm/pkcs11-setup.rst:117
 msgid "If the password of an user is not set in the configuration file a login will be required to provide the password (3rd method)."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:113
+#: ../nethsm/pkcs11-setup.rst:119
 msgid "A NetHSM that is not operational is considered as a slot with the token not present."
 msgstr ""
 

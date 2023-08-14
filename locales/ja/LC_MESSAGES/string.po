@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 14:04+0200\n"
+"POT-Creation-Date: 2023-08-14 13:49+0200\n"
 "PO-Revision-Date: 2023-08-11 14:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -127,7 +126,7 @@ msgstr "をクリックするか、お使いのOSを選択してください。"
 msgid "Two-Factor Authentication And Passwordless Login For Nextcloud Accounts"
 msgstr "Nextcloudアカウントの2要素認証とパスワードレスログイン"
 
-#: ../fido2/2fa-odoo.rst.inc:2 ../pro/linux/2fa-odoo.rst:2
+#: ../fido2/2fa-odoo.rst.inc:2 ../pro/2fa-odoo.rst.inc:2
 msgid "Two-Factor Authentication For ERP Software Odoo"
 msgstr "ERPソフト「Odoo」の二要素認証について"
 
@@ -135,7 +134,7 @@ msgstr "ERPソフト「Odoo」の二要素認証について"
 msgid "(Nitrokey FIDO2 - Linux)"
 msgstr "(Nitrokey FIDO2 - Linux)"
 
-#: ../fido2/2fa-odoo.rst.inc:10 ../pro/linux/2fa-odoo.rst:10
+#: ../fido2/2fa-odoo.rst.inc:10 ../pro/2fa-odoo.rst.inc:10
 msgid ""
 "`Odoo <https://www.odoo.com/>`__ is a powerful ERP (Enterprise Resource "
 "Planning) software for companies of all sizes. Odoo is available as open "
@@ -146,7 +145,7 @@ msgstr ""
 "`Odoo <https://www.odoo.com/>`_ は、あらゆる規模の企業向けの強力なERP（Enterprise Resource "
 "Planning）ソフトウェアです。Odooはオープンソースで提供されており、CRM、Webサイト/e-commerce、会計、財務会計、生産、倉庫管理、プロジェクト管理、文書管理などのモジュールが含まれています。"
 
-#: ../fido2/2fa-odoo.rst.inc:12 ../pro/linux/2fa-odoo.rst:12
+#: ../fido2/2fa-odoo.rst.inc:12 ../pro/2fa-odoo.rst.inc:12
 msgid ""
 "The secure access to such a central software is especially important and "
 "can now be realized with the Nitrokey. For this purpose access is "
@@ -158,7 +157,7 @@ msgstr ""
 "このような中央のソフトウェアへの安全なアクセスは特に重要であり、現在では Nitrokey "
 "を使って実現することができるようになりました。このため、アクセスは二要素認証（2FA）で保護され、重要なユーザーにはニトロキーが与えられます。今後、ログイン時にパスワードに加えてニトロキーが確認されるようになります。これにより、フィッシング攻撃は阻止され、重要な企業データは保護されます。"
 
-#: ../fido2/2fa-odoo.rst.inc:14 ../pro/linux/2fa-odoo.rst:14
+#: ../fido2/2fa-odoo.rst.inc:14 ../pro/2fa-odoo.rst.inc:14
 msgid ""
 "The two-factor authentication can be carried out using one-time passwords"
 " (TOTP, RFC 6238) and FIDO U2F, thus enabling Nitrokey Pro, Nitrokey "
@@ -170,7 +169,7 @@ msgstr ""
 "Pro、Nitrokey Storage、Nitrokey FIDO "
 "U2Fを使用することができます。また、認証を一元的に設定し、選択したユーザーに対してのみ認証を有効にすることも可能です。"
 
-#: ../fido2/2fa-odoo.rst.inc:16 ../pro/linux/2fa-odoo.rst:16
+#: ../fido2/2fa-odoo.rst.inc:16 ../pro/2fa-odoo.rst.inc:16
 msgid ""
 "The FIDO solution was developed together with our partner `initOS "
 "<https://www.initos.com/>`__, who are specialized in the development and "
@@ -5302,22 +5301,32 @@ msgstr "名前の``418`` は、コンフィギュレーション・ファイル�
 
 #: ../nethsm/ejbca.rst:18
 msgid ""
+"To be able to generate keys from the interface you need to set the "
+"``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` "
+"file."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:20
+msgid ""
+"Because of some integration problems with the Sun PKCS11 provider, keys "
+"generated from EJBCA will have a random name instead of the name given in"
+" the interface."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:22
+msgid ""
 "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
 "GUI "
 "``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
 "The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
-"name is ``Nitrokey NetHSM``."
+"name is ``NetHSM``."
 msgstr ""
-"EJBCAを再起動した後、EJBCA Admin "
-"GUI``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``で新しいCrypto"
-" Tokenを追加できる。Crypto Token タイプは``PKCS#11 Crypto Token`` で、Crypto Token "
-"名は``Nitrokey NetHSM`` である。"
 
-#: ../nethsm/ejbca.rst:22
+#: ../nethsm/ejbca.rst:26
 msgid "Executing The Example"
 msgstr "例の実行"
 
-#: ../nethsm/ejbca.rst:24
+#: ../nethsm/ejbca.rst:28
 msgid ""
 "If you want to experiment with the given example you can use git to clone"
 " the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
@@ -5326,7 +5335,7 @@ msgstr ""
 "与えられた例で実験したい場合は、gitを使って`nethsm-pkcs11リポジトリ<https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__をクローンし、以下のコマンドを実行することができます："
 
-#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:91
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:91
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5334,7 +5343,7 @@ msgstr ""
 "NetHSMを設定する。本物のNetHSMでもコンテナでもよい。詳しくは`getting-started guide<getting-"
 "started>`__ を参照。"
 
-#: ../nethsm/ejbca.rst:27
+#: ../nethsm/ejbca.rst:31
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
@@ -5342,15 +5351,15 @@ msgstr ""
 "``container/ejbca/p11nethsm.conf`` にある libnethsm_pkcs11 の設定をお使いの NetHSM "
 "に合わせて変更してください。"
 
-#: ../nethsm/ejbca.rst:28 ../nethsm/nginx.rst:100
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:100
 msgid "Build the container."
 msgstr "コンテナを作る。"
 
-#: ../nethsm/ejbca.rst:34 ../nethsm/nginx.rst:106
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:106
 msgid "Run the container."
 msgstr "コンテナを実行する。"
 
-#: ../nethsm/ejbca.rst:40 ../nethsm/nginx.rst:112
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:112
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -7109,28 +7118,28 @@ msgstr "コンフィギュレーションはyamlフォーマットである："
 msgid "All platforms"
 msgstr "すべてのプラットフォーム"
 
-#: ../nethsm/pkcs11-setup.rst:85
+#: ../nethsm/pkcs11-setup.rst:91
 msgid "Instances"
 msgstr "インスタンス"
 
-#: ../nethsm/pkcs11-setup.rst:87
+#: ../nethsm/pkcs11-setup.rst:93
 msgid ""
 "If multiple NetHSM instances are listed in the same slot, these instances"
 " must be configured in a cluster. The credentials of the users and the "
 "keys must be the same on all instances."
 msgstr "同じスロットに複数のNetHSMインスタンスが表示されている場合は、これらのインスタンスをクラスタに構成する必要があります。ユーザーとキーの認証情報は、すべてのインスタンスで同じでなければなりません。"
 
-#: ../nethsm/pkcs11-setup.rst:89
+#: ../nethsm/pkcs11-setup.rst:95
 msgid ""
 "The module will use the instances in a round-robin fashion, trying "
 "another instance if one fails."
 msgstr "モジュールはラウンドロビン方式でインスタンスを使用し、1つが失敗したら別のインスタンスを試す。"
 
-#: ../nethsm/pkcs11-setup.rst:93
+#: ../nethsm/pkcs11-setup.rst:99
 msgid "Users"
 msgstr "ユーザー"
 
-#: ../nethsm/pkcs11-setup.rst:95
+#: ../nethsm/pkcs11-setup.rst:101
 msgid ""
 "The operator and administrator users are both optional but the module "
 "won't start if no user is configured. This is so you can configure the "
@@ -7138,38 +7147,38 @@ msgid ""
 "the same time."
 msgstr "オペレータと管理者ユーザはどちらも任意ですが、ユーザが設定されていない場合、モジュールは起動しません。これは、モジュールを管理者ユーザーだけ、オペレーターユーザーだけ、または両方を同時に設定できるようにするためです。"
 
-#: ../nethsm/pkcs11-setup.rst:97
+#: ../nethsm/pkcs11-setup.rst:103
 msgid ""
 "When the two users are set the module will use the operator by default "
 "and only use the administrator user when the action needs it."
 msgstr "2人のユーザーが設定されると、モジュールはデフォルトでオペレータを使用し、アクションが必要なときだけ管理者ユーザーを使用します。"
 
-#: ../nethsm/pkcs11-setup.rst:99
+#: ../nethsm/pkcs11-setup.rst:105
 msgid ""
 "The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 "
 "SO is mapped to the NetHSM administrator."
 msgstr "通常のPKCS11ユーザーはNetHSMオペレータに、PKCS11 SOはNetHSM管理者にマッピングされます。"
 
-#: ../nethsm/pkcs11-setup.rst:102 ../nitrokey3/shared/reset.rst.inc:19
+#: ../nethsm/pkcs11-setup.rst:108 ../nitrokey3/shared/reset.rst.inc:19
 #: ../software/nk-app2/passwords.rst:2
 msgid "Passwords"
 msgstr "パスワード"
 
-#: ../nethsm/pkcs11-setup.rst:104
+#: ../nethsm/pkcs11-setup.rst:110
 msgid "The password can be provided by multiple means:"
 msgstr "パスワードは複数の方法で提供することができる："
 
-#: ../nethsm/pkcs11-setup.rst:106
+#: ../nethsm/pkcs11-setup.rst:112
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr "コンフィギュレーション``password: \"mypassword\"`` のプレーンテキストで。"
 
-#: ../nethsm/pkcs11-setup.rst:107
+#: ../nethsm/pkcs11-setup.rst:113
 msgid ""
 "In an environment variable read by the module with the ``env:`` prefix: "
 "``env:ENV_STORING_THE_PASSWORD``"
 msgstr "``env:`` のプレフィックスを持つモジュールが読み込む環境変数:``env:ENV_STORING_THE_PASSWORD``"
 
-#: ../nethsm/pkcs11-setup.rst:108
+#: ../nethsm/pkcs11-setup.rst:114
 msgid ""
 "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
 "--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
@@ -7181,13 +7190,13 @@ msgstr ""
 "を使用する必要があります：`pkcs11-tool --module libnethsm_pkcs11.so --login --login-"
 "type so --so-pin Administrator``"
 
-#: ../nethsm/pkcs11-setup.rst:111
+#: ../nethsm/pkcs11-setup.rst:117
 msgid ""
 "If the password of an user is not set in the configuration file a login "
 "will be required to provide the password (3rd method)."
 msgstr "ユーザーのパスワードが設定ファイルに設定されていない場合、パスワードを入力するためにログインが要求されます（第3の方法）。"
 
-#: ../nethsm/pkcs11-setup.rst:113
+#: ../nethsm/pkcs11-setup.rst:119
 msgid ""
 "A NetHSM that is not operational is considered as a slot with the token "
 "not present."
@@ -16040,7 +16049,7 @@ msgid ""
 " otherwise you might not be able to log in to your account anymore!"
 msgstr "ネクストクラウドでは、Nitrokeyを紛失した場合に備えて、バックアップコードを提供しています。これらのコードは印刷して保存しておくことをお勧めします。そうしないと、アカウントにログインできなくなる可能性があります。"
 
-#: ../pro/linux/2fa-odoo.rst:23
+#: ../pro/2fa-odoo.rst.inc:23
 msgid "Video: Two-Factor Authentication With The Nitrokey Pro in Odoo"
 msgstr "ビデオOdoo Nitrokey Proによる二要素認証"
 
@@ -18385,16 +18394,14 @@ msgstr "OpenVPNの設定"
 msgid ""
 "In order to establish a handshake, you must configure OpenSSL included in"
 " OpenVPN."
-msgstr "ハンドシェイクを確立するためには、OpenVPNに含まれるOpenSSLを設定する必要があ"
-"ります。"
+msgstr "ハンドシェイクを確立するためには、OpenVPNに含まれるOpenSSLを設定する必要があります。"
 
 #: ../pro/windows/openvpn-easyrsa.rst:615
 msgid ""
 "Create the directory ``ssl`` in ``C:\\Program Files\\OpenVPN`` and create"
 " file ``openssl.cnf`` with the following content :"
 msgstr ""
-"``C:\\Program Files\\OpenVPN`` の中に``ssl`` "
-"というディレクトリを作成し、``openssl.cnf`` "
+"``C:\\Program Files\\OpenVPN`` の中に``ssl`` というディレクトリを作成し、``openssl.cnf`` "
 "というファイルを以下の内容で作成する："
 
 #: ../pro/windows/openvpn-easyrsa.rst:617
@@ -18427,9 +18434,9 @@ msgid ""
 "<https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ "
 "and `here <https://community.openvpn.net/openvpn/ticket/1215>`__"
 msgstr ""
-"この修正により、` <https://support.nitrokey.com/t/"
-"nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>` "
-"__、` <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>` "
+"この修正により、` <https://support.nitrokey.com/t/nitrokey-pro-with-"
+"openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>` __、` "
+"<https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>` "
 "__、` <https://community.openvpn.net/openvpn/ticket/1215>` __ "
 "で報告されているようなエラーは発生しなくなります。"
 
@@ -25981,3 +25988,19 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 
 #~ msgid "``pivy-tool generate 9A -a rsa2048``"
 #~ msgstr "``pivy-tool generate 9A -a rsa2048``"
+
+#~ msgid ""
+#~ "After restarting EJBCA you can add "
+#~ "a new Crypto Token in the EJBCA"
+#~ " Admin GUI "
+#~ "``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``."
+#~ " The Crypto Token type is ``PKCS#11"
+#~ " Crypto Token`` and the Crypto Token"
+#~ " name is ``Nitrokey NetHSM``."
+#~ msgstr ""
+#~ "EJBCAを再起動した後、EJBCA Admin "
+#~ "GUI``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``で新しいCrypto"
+#~ " Tokenを追加できる。Crypto Token タイプは``PKCS#11 Crypto"
+#~ " Token`` で、Crypto Token 名は``Nitrokey "
+#~ "NetHSM`` である。"
+

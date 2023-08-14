@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 14:04+0200\n"
+"POT-Creation-Date: 2023-08-14 13:49+0200\n"
 "PO-Revision-Date: 2023-08-11 14:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -124,7 +124,7 @@ msgstr "或选择你的操作系统。"
 msgid "Two-Factor Authentication And Passwordless Login For Nextcloud Accounts"
 msgstr "Nextcloud账户的双因素认证和无密码登录"
 
-#: ../fido2/2fa-odoo.rst.inc:2 ../pro/linux/2fa-odoo.rst:2
+#: ../fido2/2fa-odoo.rst.inc:2 ../pro/2fa-odoo.rst.inc:2
 msgid "Two-Factor Authentication For ERP Software Odoo"
 msgstr "ERP软件Odoo的双因素认证"
 
@@ -132,7 +132,7 @@ msgstr "ERP软件Odoo的双因素认证"
 msgid "(Nitrokey FIDO2 - Linux)"
 msgstr "(Nitrokey FIDO2 - Linux)"
 
-#: ../fido2/2fa-odoo.rst.inc:10 ../pro/linux/2fa-odoo.rst:10
+#: ../fido2/2fa-odoo.rst.inc:10 ../pro/2fa-odoo.rst.inc:10
 msgid ""
 "`Odoo <https://www.odoo.com/>`__ is a powerful ERP (Enterprise Resource "
 "Planning) software for companies of all sizes. Odoo is available as open "
@@ -143,7 +143,7 @@ msgstr ""
 "`Odoo "
 "<https://www.odoo.com/>`__是一个功能强大的ERP（企业资源计划）软件，适用于各种规模的公司。Odoo可作为开源软件使用，包含CRM、网站、电子商务、会计、财务会计、生产、仓库管理、项目管理、文档管理等模块。"
 
-#: ../fido2/2fa-odoo.rst.inc:12 ../pro/linux/2fa-odoo.rst:12
+#: ../fido2/2fa-odoo.rst.inc:12 ../pro/2fa-odoo.rst.inc:12
 msgid ""
 "The secure access to such a central software is especially important and "
 "can now be realized with the Nitrokey. For this purpose access is "
@@ -153,7 +153,7 @@ msgid ""
 "your critical company data is protected."
 msgstr "对这样一个中央软件的安全访问特别重要，现在可以通过Nitrokey来实现。为此，访问受到双因素认证（2FA）的保护，关键用户会得到一个Nitrokey。从现在起，在登录过程中，除了用户的密码外，还将检查Nitrokey。这样，网络钓鱼攻击就被挫败了，你的重要公司数据也得到了保护。"
 
-#: ../fido2/2fa-odoo.rst.inc:14 ../pro/linux/2fa-odoo.rst:14
+#: ../fido2/2fa-odoo.rst.inc:14 ../pro/2fa-odoo.rst.inc:14
 msgid ""
 "The two-factor authentication can be carried out using one-time passwords"
 " (TOTP, RFC 6238) and FIDO U2F, thus enabling Nitrokey Pro, Nitrokey "
@@ -164,7 +164,7 @@ msgstr ""
 "双因素认证可以使用一次性密码（TOTP，RFC 6238）和FIDO U2F进行，因此可以使用Nitrokey Pro、Nitrokey "
 "Storage和Nitrokey FIDO U2F。也可以集中配置认证，只对选定的用户激活。"
 
-#: ../fido2/2fa-odoo.rst.inc:16 ../pro/linux/2fa-odoo.rst:16
+#: ../fido2/2fa-odoo.rst.inc:16 ../pro/2fa-odoo.rst.inc:16
 msgid ""
 "The FIDO solution was developed together with our partner `initOS "
 "<https://www.initos.com/>`__, who are specialized in the development and "
@@ -5117,21 +5117,32 @@ msgstr "名称中的``418`` 是一个索引，对于配置文件中的每个 PKC
 
 #: ../nethsm/ejbca.rst:18
 msgid ""
+"To be able to generate keys from the interface you need to set the "
+"``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` "
+"file."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:20
+msgid ""
+"Because of some integration problems with the Sun PKCS11 provider, keys "
+"generated from EJBCA will have a random name instead of the name given in"
+" the interface."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:22
+msgid ""
 "After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin "
 "GUI "
 "``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
 "The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
-"name is ``Nitrokey NetHSM``."
+"name is ``NetHSM``."
 msgstr ""
-"重新启动 EJBCA 后，你可以在 EJBCA 管理 "
-"GUI``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``"
-" 添加一个新的加密令牌。加密令牌类型是``PKCS#11 Crypto Token``，加密令牌名称是``Nitrokey NetHSM``。"
 
-#: ../nethsm/ejbca.rst:22
+#: ../nethsm/ejbca.rst:26
 msgid "Executing The Example"
 msgstr "执行示例"
 
-#: ../nethsm/ejbca.rst:24
+#: ../nethsm/ejbca.rst:28
 msgid ""
 "If you want to experiment with the given example you can use git to clone"
 " the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
@@ -5140,27 +5151,27 @@ msgstr ""
 "如果您想用给出的示例进行实验，可以使用 git 克隆`nethsm-pkcs11 仓库<https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__ 并运行以下命令："
 
-#: ../nethsm/ejbca.rst:26 ../nethsm/nginx.rst:91
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:91
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
 msgstr "配置 NetHSM，可以是一个真正的 NetHSM，也可以是一个容器。更多信息，请参阅`入门指南<getting-started>`__。"
 
-#: ../nethsm/ejbca.rst:27
+#: ../nethsm/ejbca.rst:31
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
 msgstr "在``container/ejbca/p11nethsm.conf`` 中更改 libnethsm_pkcs11 配置，使其与 NetHSM 匹配。"
 
-#: ../nethsm/ejbca.rst:28 ../nethsm/nginx.rst:100
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:100
 msgid "Build the container."
 msgstr "建造集装箱"
 
-#: ../nethsm/ejbca.rst:34 ../nethsm/nginx.rst:106
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:106
 msgid "Run the container."
 msgstr "运行容器。"
 
-#: ../nethsm/ejbca.rst:40 ../nethsm/nginx.rst:112
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:112
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6862,28 +6873,28 @@ msgstr "配置采用 yaml 格式："
 msgid "All platforms"
 msgstr "所有平台"
 
-#: ../nethsm/pkcs11-setup.rst:85
+#: ../nethsm/pkcs11-setup.rst:91
 msgid "Instances"
 msgstr "实例"
 
-#: ../nethsm/pkcs11-setup.rst:87
+#: ../nethsm/pkcs11-setup.rst:93
 msgid ""
 "If multiple NetHSM instances are listed in the same slot, these instances"
 " must be configured in a cluster. The credentials of the users and the "
 "keys must be the same on all instances."
 msgstr "如果同一插槽中列出多个 NetHSM 实例，则必须将这些实例配置为一个群集。所有实例上的用户证书和密钥必须相同。"
 
-#: ../nethsm/pkcs11-setup.rst:89
+#: ../nethsm/pkcs11-setup.rst:95
 msgid ""
 "The module will use the instances in a round-robin fashion, trying "
 "another instance if one fails."
 msgstr "模块将以循环方式使用实例，如果一个实例失败，就会尝试另一个实例。"
 
-#: ../nethsm/pkcs11-setup.rst:93
+#: ../nethsm/pkcs11-setup.rst:99
 msgid "Users"
 msgstr "用户"
 
-#: ../nethsm/pkcs11-setup.rst:95
+#: ../nethsm/pkcs11-setup.rst:101
 msgid ""
 "The operator and administrator users are both optional but the module "
 "won't start if no user is configured. This is so you can configure the "
@@ -6891,38 +6902,38 @@ msgid ""
 "the same time."
 msgstr "操作员和管理员用户都是可选的，但如果没有配置用户，模块将无法启动。因此，您可以只配置管理员用户、操作员用户或同时配置这两个用户。"
 
-#: ../nethsm/pkcs11-setup.rst:97
+#: ../nethsm/pkcs11-setup.rst:103
 msgid ""
 "When the two users are set the module will use the operator by default "
 "and only use the administrator user when the action needs it."
 msgstr "设置两个用户后，模块将默认使用操作员用户，只有在操作需要时才使用管理员用户。"
 
-#: ../nethsm/pkcs11-setup.rst:99
+#: ../nethsm/pkcs11-setup.rst:105
 msgid ""
 "The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 "
 "SO is mapped to the NetHSM administrator."
 msgstr "常规 PKCS11 用户映射为 NetHSM 操作员，PKCS11 SO 映射为 NetHSM 管理员。"
 
-#: ../nethsm/pkcs11-setup.rst:102 ../nitrokey3/shared/reset.rst.inc:19
+#: ../nethsm/pkcs11-setup.rst:108 ../nitrokey3/shared/reset.rst.inc:19
 #: ../software/nk-app2/passwords.rst:2
 msgid "Passwords"
 msgstr "密码"
 
-#: ../nethsm/pkcs11-setup.rst:104
+#: ../nethsm/pkcs11-setup.rst:110
 msgid "The password can be provided by multiple means:"
 msgstr "密码可以通过多种方式提供："
 
-#: ../nethsm/pkcs11-setup.rst:106
+#: ../nethsm/pkcs11-setup.rst:112
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr "在配置``password: \"mypassword\"`` 中以纯文本形式出现。"
 
-#: ../nethsm/pkcs11-setup.rst:107
+#: ../nethsm/pkcs11-setup.rst:113
 msgid ""
 "In an environment variable read by the module with the ``env:`` prefix: "
 "``env:ENV_STORING_THE_PASSWORD``"
 msgstr "在模块读取的环境变量中，以``env:`` 为前缀：``env:ENV_STORING_THE_PASSWORD``"
 
-#: ../nethsm/pkcs11-setup.rst:108
+#: ../nethsm/pkcs11-setup.rst:114
 msgid ""
 "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
 "--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
@@ -6934,13 +6945,13 @@ msgstr ""
 "代替：``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so "
 "--so-pin Administrator``"
 
-#: ../nethsm/pkcs11-setup.rst:111
+#: ../nethsm/pkcs11-setup.rst:117
 msgid ""
 "If the password of an user is not set in the configuration file a login "
 "will be required to provide the password (3rd method)."
 msgstr "如果配置文件中未设置用户密码，则需要登录以提供密码（第 3 种方法）。"
 
-#: ../nethsm/pkcs11-setup.rst:113
+#: ../nethsm/pkcs11-setup.rst:119
 msgid ""
 "A NetHSM that is not operational is considered as a slot with the token "
 "not present."
@@ -15519,7 +15530,7 @@ msgid ""
 " otherwise you might not be able to log in to your account anymore!"
 msgstr "Nextcloud为您提供了备份代码，以防您丢失您的Nitrokey。建议您打印出这些代码，并将其保存在某个地方，否则您可能无法再登录您的账户了。"
 
-#: ../pro/linux/2fa-odoo.rst:23
+#: ../pro/2fa-odoo.rst.inc:23
 msgid "Video: Two-Factor Authentication With The Nitrokey Pro in Odoo"
 msgstr "视频：在 Odoo 中使用 Nitrokey Pro 进行双因素身份验证"
 
@@ -17789,9 +17800,7 @@ msgstr "要建立握手，必须配置 OpenVPN 中的 OpenSSL。"
 msgid ""
 "Create the directory ``ssl`` in ``C:\\Program Files\\OpenVPN`` and create"
 " file ``openssl.cnf`` with the following content :"
-msgstr ""
-"在``C:\\Program Files\\OpenVPN`` 中创建``ssl`` "
-"目录，并创建内容如下的文件``openssl.cnf`` ："
+msgstr "在``C:\\Program Files\\OpenVPN`` 中创建``ssl`` 目录，并创建内容如下的文件``openssl.cnf`` ："
 
 #: ../pro/windows/openvpn-easyrsa.rst:617
 msgid "openssl_conf = default_conf"
@@ -17823,11 +17832,11 @@ msgid ""
 "<https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ "
 "and `here <https://community.openvpn.net/openvpn/ticket/1215>`__"
 msgstr ""
-"作此修改后，就不会出现`here<https://support.nitrokey.com/t/"
-"nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/"
-"2>`__、`here<https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/"
-"2637>`__和`here<https://community.openvpn.net/openvpn/ticket/"
-"1215>`__报告的错误。"
+"作此修改后，就不会出现`here<https://support.nitrokey.com/t/nitrokey-pro-with-"
+"openssl-1-1-1-tls-1-3-and-rsa-based-"
+"certificates/2180/2>`__、`here<https://support.nitrokey.com/t/openvpn-"
+"openssl-error-"
+"141f0006/2637>`__和`here<https://community.openvpn.net/openvpn/ticket/1215>`__报告的错误。"
 
 #: ../pro/windows/openvpn-viscosity.rst:6
 msgid "Viscosity Client Configuration with OpenVPN"
@@ -25028,3 +25037,18 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "``pivy-tool generate 9A -a rsa2048``"
 #~ msgstr "``pivy-tool generate 9A -a rsa2048``"
+
+#~ msgid ""
+#~ "After restarting EJBCA you can add "
+#~ "a new Crypto Token in the EJBCA"
+#~ " Admin GUI "
+#~ "``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``."
+#~ " The Crypto Token type is ``PKCS#11"
+#~ " Crypto Token`` and the Crypto Token"
+#~ " name is ``Nitrokey NetHSM``."
+#~ msgstr ""
+#~ "重新启动 EJBCA 后，你可以在 EJBCA 管理 "
+#~ "GUI``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``"
+#~ " 添加一个新的加密令牌。加密令牌类型是``PKCS#11 Crypto "
+#~ "Token``，加密令牌名称是``Nitrokey NetHSM``。"
+
