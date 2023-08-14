@@ -17,7 +17,7 @@ Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry in the 
 
 To be able to generate keys from the interface you need to set the ``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` file.
 
-.. warning:: Because of some integration problems with the Sun PKCS11 provider, Keys generated from the EJBCA interface will have a random name instead of the name given in the interface.
+.. warning:: Because of some integration problems with the Sun PKCS11 provider, keys generated from EJBCA will have a random name instead of the name given in the interface.
 
 After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin GUI ``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token name is ``NetHSM``.
 
