@@ -35,14 +35,14 @@ Install the engine:
 
         pacman -S libp11
 
-Then you need to configure OpenSSL to use the engine. This is done by adding the following line to your ``openssl.cnf`` file:
+Then you need to configure OpenSSL to use the engine. This is done by adding the following lines to your ``openssl.cnf`` file:
 
 .. code-block:: ini
 
   openssl_conf = openssl_init
 
   [openssl_init]
-  engines=engine_section
+  engines = engine_section
 
   [engine_section]
   pkcs11 = pkcs11_section
@@ -56,6 +56,9 @@ Then you need to configure OpenSSL to use the engine. This is done by adding the
 .. note:: 
   You can specify to OpenSSL the path of the OpenSSL configuration file using the ``OPENSSL_CONF`` environment variable.
 
+.. warning:: 
+  If the main OpenSSL configuration file is modified to contain only these lines, it could break the other programs using OpenSSL. You may want to create a separate configuration file for the engine.
+
 Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the path to the PKCS#11 module you installed earlier.
 
 Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the path to the OpenSSL engine you installed. The path varies depending on your distribution. The number in ``engines-3`` corresponds to your OpenSSL version. On Debian the path for the OpenSSL 3 engine is ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's ``/usr/lib64/engines-3/libpkcs11.so``.
@@ -68,6 +71,12 @@ Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www.rfc-edito
 
 This will use the key ``webserver``.
 
+.. note:: 
+  You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` get the full URI of the keys: 
+
+  .. code-block:: bash
+
+    p11tool --provider /usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so --list-all
 
 Example Commands
 ----------------
