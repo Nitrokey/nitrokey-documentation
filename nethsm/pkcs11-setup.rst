@@ -30,7 +30,7 @@ By default the module searches for configuration files in:
 - ``/usr/local/etc/nitrokey/p11nethsm.conf``
 - ``$HOME/.config/nitrokey/p11nethsm.conf``
 
-If multiple files are present the slots of all the config files will be added.
+If multiple files are present the configurations will be merged so that the slots of all the config files will be used by the module.
 
 You can manually set the config file location (only this one will be read) with the env variable ``P11NETHSM_CONFIG_FILE`` (e.g. ``P11NETHSM_CONFIG_FILE=./p11nethsm.conf``).
 
