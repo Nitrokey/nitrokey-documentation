@@ -57,7 +57,7 @@ Then you need to configure OpenSSL to use the engine. This is done by adding the
   You can specify to OpenSSL the path of the OpenSSL configuration file using the ``OPENSSL_CONF`` environment variable.
 
 .. warning:: 
-  If the main OpenSSL configuration file is modified to contain only these lines, it could break the other programs using OpenSSL. You may want to create a separate configuration file for the engine.
+  If the main OpenSSL configuration file is modified to contain only these lines, it could break other programs using OpenSSL. Thus, you may want to create a separate configuration file for the engine.
 
 Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the path to the PKCS#11 module you installed earlier.
 
