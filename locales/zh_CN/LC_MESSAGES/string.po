@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 13:49+0200\n"
+"POT-Creation-Date: 2023-08-18 10:42+0200\n"
 "PO-Revision-Date: 2023-08-14 13:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5121,16 +5121,15 @@ msgid ""
 "``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` "
 "file."
 msgstr ""
-"要从接口生成密钥，需要在``p11nethsm.conf`` "
-"文件中将``enable_set_attribute_value`` 选项设为 true。"
+"要从接口生成密钥，需要在``p11nethsm.conf`` 文件中将``enable_set_attribute_value`` 选项设为 "
+"true。"
 
 #: ../nethsm/ejbca.rst:20
 msgid ""
 "Because of some integration problems with the Sun PKCS11 provider, keys "
 "generated from EJBCA will have a random name instead of the name given in"
 " the interface."
-msgstr "由于与 Sun PKCS11 提供程序的集成问题，从 EJBCA "
-"生成的密钥将使用随机名称，而不是接口中给出的名称。"
+msgstr "由于与 Sun PKCS11 提供程序的集成问题，从 EJBCA 生成的密钥将使用随机名称，而不是接口中给出的名称。"
 
 #: ../nethsm/ejbca.rst:22
 msgid ""
@@ -5140,10 +5139,9 @@ msgid ""
 "The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
 "name is ``NetHSM``."
 msgstr ""
-"重新启动 EJBCA 后，你可以在 EJBCA 管理 GUI``https://mycahostname/ejbca/"
-"adminweb/cryptotoken/cryptotokens.xhtml`` "
-"添加一个新的加密令牌。加密令牌类型是``PKCS#11 Crypto "
-"Token``，加密令牌名称是``NetHSM``。"
+"重新启动 EJBCA 后，你可以在 EJBCA 管理 "
+"GUI``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``"
+" 添加一个新的加密令牌。加密令牌类型是``PKCS#11 Crypto Token``，加密令牌名称是``NetHSM``。"
 
 #: ../nethsm/ejbca.rst:26
 msgid "Executing The Example"
@@ -5158,7 +5156,7 @@ msgstr ""
 "如果您想用给出的示例进行实验，可以使用 git 克隆`nethsm-pkcs11 仓库<https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__ 并运行以下命令："
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:91
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5170,15 +5168,15 @@ msgid ""
 "``container/ejbca/p11nethsm.conf``."
 msgstr "在``container/ejbca/p11nethsm.conf`` 中更改 libnethsm_pkcs11 配置，使其与 NetHSM 匹配。"
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:100
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
 msgid "Build the container."
 msgstr "建造集装箱"
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:106
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
 msgid "Run the container."
 msgstr "运行容器。"
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:112
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -5791,11 +5789,11 @@ msgstr "请遵循`OpenSSL 设置指南<openssl.html>`__。"
 msgid "Nginx Configuration"
 msgstr "Nginx 配置"
 
-#: ../nethsm/nginx.rst:53
+#: ../nethsm/nginx.rst:57
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "``ssl_certificate`` 必须指向磁盘上的证书文件。"
 
-#: ../nethsm/nginx.rst:55
+#: ../nethsm/nginx.rst:59
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -5804,7 +5802,7 @@ msgstr ""
 "``ssl_certificate_key`` 可以是 OpenSSL 配置。在此，我们使用带有 PKCS#11 模块的 OpenSSL "
 "引擎，并选择带有标签/ID``webserver`` 和密钥类型``private`` 的私钥。"
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:61
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -5812,28 +5810,35 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:60
+#: ../nethsm/nginx.rst:64
+msgid ""
+"Currently the NetHSM PKCS#11 module only works when ``master_process`` "
+"and ``daemon`` are set to ``off``. These options are not recommended for "
+"production use."
+msgstr ""
+
+#: ../nethsm/nginx.rst:67
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
 "nginx won't start."
 msgstr "你必须单独生成证书，然后上传到NetHSM。如果磁盘上的证书和NetHSM中的密钥不匹配，nginx将无法启动。"
 
-#: ../nethsm/nginx.rst:63
+#: ../nethsm/nginx.rst:70
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 配置"
 
-#: ../nethsm/nginx.rst:75
+#: ../nethsm/nginx.rst:82
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr "要确保密码安全，可以通过环境变量（参见`Setup<setup>`__ ）或在 nginx 配置中提供密码："
 
-#: ../nethsm/nginx.rst:83 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:90 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "例子"
 
-#: ../nethsm/nginx.rst:85
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -5845,11 +5850,11 @@ msgstr ""
 "pkcs11/tree/main/container/nginx>`__进行实验，请使用 git 克隆`nethsm-pkcs11 "
 "仓库<https://github.com/Nitrokey/nethsm-pkcs11>`__，并运行以下命令："
 
-#: ../nethsm/nginx.rst:89
+#: ../nethsm/nginx.rst:96
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr "运行生成脚本会删除``webserver`` 密钥并将其替换。"
 
-#: ../nethsm/nginx.rst:92
+#: ../nethsm/nginx.rst:99
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -5858,13 +5863,13 @@ msgstr ""
 "如果 NetHSM 不在 localhost 上运行，则需要更改``container/nginx/generate.sh`` 中 curl "
 "请求的 URL，使其指向 NetHSM。"
 
-#: ../nethsm/nginx.rst:93
+#: ../nethsm/nginx.rst:100
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
 msgstr "在``container/ejbca/p11nethsm.conf`` 中更改 libnethsm_pkcs11 配置，使其与 NetHSM 匹配。"
 
-#: ../nethsm/nginx.rst:94
+#: ../nethsm/nginx.rst:101
 msgid "Generate the certificate and key."
 msgstr "生成证书和密钥"
 
@@ -5981,9 +5986,10 @@ msgid "Arch Linux"
 msgstr "Arch Linux"
 
 #: ../nethsm/openssl.rst:38
+#, fuzzy
 msgid ""
 "Then you need to configure OpenSSL to use the engine. This is done by "
-"adding the following line to your ``openssl.cnf`` file:"
+"adding the following lines to your ``openssl.cnf`` file:"
 msgstr "然后，您需要配置 OpenSSL 以使用该引擎。只需在``openssl.cnf`` 文件中添加以下一行即可："
 
 #: ../nethsm/openssl.rst:57
@@ -5992,7 +5998,14 @@ msgid ""
 "using the ``OPENSSL_CONF`` environment variable."
 msgstr "您可以使用``OPENSSL_CONF`` 环境变量向 OpenSSL 指定 OpenSSL 配置文件的路径。"
 
-#: ../nethsm/openssl.rst:59
+#: ../nethsm/openssl.rst:60
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the engine."
+msgstr ""
+
+#: ../nethsm/openssl.rst:62
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -6000,7 +6013,7 @@ msgstr ""
 "将``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` 替换为您之前安装的 "
 "PKCS#11 模块的路径。"
 
-#: ../nethsm/openssl.rst:61
+#: ../nethsm/openssl.rst:64
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -6014,7 +6027,7 @@ msgstr ""
 "引擎的路径是``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``；在 Fedora "
 "上，路径是``/usr/lib64/engines-3/libpkcs11.so``。"
 
-#: ../nethsm/openssl.rst:63
+#: ../nethsm/openssl.rst:66
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -6022,15 +6035,21 @@ msgstr ""
 "现在，您可以使用`PKCS#11 URIs<https://www.rfc-editor.org/rfc/rfc7512>`___，在 "
 "NetHSM 上使用密钥："
 
-#: ../nethsm/openssl.rst:69
+#: ../nethsm/openssl.rst:72
 msgid "This will use the key ``webserver``."
 msgstr "这将使用密钥``webserver``。"
 
-#: ../nethsm/openssl.rst:73
+#: ../nethsm/openssl.rst:75
+msgid ""
+"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
+"get the full URI of the keys:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:82
 msgid "Example Commands"
 msgstr "命令示例"
 
-#: ../nethsm/openssl.rst:75
+#: ../nethsm/openssl.rst:84
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "读取 NetHSM 上非对称密钥对的公开密钥："
 
@@ -6856,9 +6875,10 @@ msgid "``$HOME/.config/nitrokey/p11nethsm.conf``"
 msgstr "``$HOME/.config/nitrokey/p11nethsm.conf``"
 
 #: ../nethsm/pkcs11-setup.rst:33
+#, fuzzy
 msgid ""
-"If multiple files are present the slots of all the config files will be "
-"added."
+"If multiple files are present the configurations will be merged so that "
+"the slots of all the config files will be used by the module."
 msgstr "如果存在多个文件，则会添加所有配置文件的插槽。"
 
 #: ../nethsm/pkcs11-setup.rst:35
@@ -25058,3 +25078,4 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 #~ "GUI``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``"
 #~ " 添加一个新的加密令牌。加密令牌类型是``PKCS#11 Crypto "
 #~ "Token``，加密令牌名称是``Nitrokey NetHSM``。"
+

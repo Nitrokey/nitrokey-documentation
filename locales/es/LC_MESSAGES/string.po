@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 13:49+0200\n"
+"POT-Creation-Date: 2023-08-18 10:42+0200\n"
 "PO-Revision-Date: 2023-08-14 13:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Spanish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/es/>\n"
 "Language: es\n"
+"Language-Team: Spanish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/es/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6006,9 +6005,9 @@ msgid ""
 "generated from EJBCA will have a random name instead of the name given in"
 " the interface."
 msgstr ""
-"Debido a algunos problemas de integración con el proveedor Sun PKCS11, las "
-"claves generadas desde EJBCA tendrán un nombre aleatorio en lugar del nombre "
-"dado en la interfaz."
+"Debido a algunos problemas de integración con el proveedor Sun PKCS11, "
+"las claves generadas desde EJBCA tendrán un nombre aleatorio en lugar del"
+" nombre dado en la interfaz."
 
 #: ../nethsm/ejbca.rst:22
 msgid ""
@@ -6019,10 +6018,10 @@ msgid ""
 "name is ``NetHSM``."
 msgstr ""
 "Tras reiniciar EJBCA, puede añadir un nuevo token criptográfico en la "
-"interfaz gráfica de usuario del administrador de EJBCA ``https://"
-"mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. El tipo de "
-"token criptográfico es ``PKCS#11 Crypto Token`` y el nombre del token "
-"criptográfico es ``NetHSM``."
+"interfaz gráfica de usuario del administrador de EJBCA "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"El tipo de token criptográfico es ``PKCS#11 Crypto Token`` y el nombre "
+"del token criptográfico es ``NetHSM``."
 
 #: ../nethsm/ejbca.rst:26
 msgid "Executing The Example"
@@ -6038,7 +6037,7 @@ msgstr ""
 "el repositorio `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ y ejecutar los siguientes comandos:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:91
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -6054,15 +6053,15 @@ msgstr ""
 "Cambie la configuración de libnethsm_pkcs11 para que coincida con su "
 "NetHSM en ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:100
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
 msgid "Build the container."
 msgstr "Construye el contenedor."
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:106
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
 msgid "Run the container."
 msgstr "Ejecuta el contenedor."
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:112
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6763,13 +6762,13 @@ msgstr "Siga la guía de configuración de OpenSSL ` <openssl.html>` __."
 msgid "Nginx Configuration"
 msgstr "Configuración de Nginx"
 
-#: ../nethsm/nginx.rst:53
+#: ../nethsm/nginx.rst:57
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr ""
 "El ``ssl_certificate`` debe apuntar a un archivo de certificado en el "
 "disco."
 
-#: ../nethsm/nginx.rst:55
+#: ../nethsm/nginx.rst:59
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6780,7 +6779,7 @@ msgstr ""
 "clave privada con la etiqueta/ID ``webserver`` y el tipo de clave "
 "``private``."
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:61
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6788,7 +6787,14 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:60
+#: ../nethsm/nginx.rst:64
+msgid ""
+"Currently the NetHSM PKCS#11 module only works when ``master_process`` "
+"and ``daemon`` are set to ``off``. These options are not recommended for "
+"production use."
+msgstr ""
+
+#: ../nethsm/nginx.rst:67
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6798,11 +6804,11 @@ msgstr ""
 " certificado en el disco y la clave en el NetHSM no coinciden nginx no se"
 " iniciará."
 
-#: ../nethsm/nginx.rst:63
+#: ../nethsm/nginx.rst:70
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Configuración"
 
-#: ../nethsm/nginx.rst:75
+#: ../nethsm/nginx.rst:82
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6811,11 +6817,11 @@ msgstr ""
 "variable de entorno (ver `Setup <setup>`__) o proporcionarla en la "
 "configuración de nginx:"
 
-#: ../nethsm/nginx.rst:83 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:90 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Ejemplo"
 
-#: ../nethsm/nginx.rst:85
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6828,13 +6834,13 @@ msgstr ""
 "repositorio `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-pkcs11>`__"
 " y ejecuta los siguientes comandos:"
 
-#: ../nethsm/nginx.rst:89
+#: ../nethsm/nginx.rst:96
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Al ejecutar el script de generación se borra la clave ``webserver`` y se "
 "sustituye."
 
-#: ../nethsm/nginx.rst:92
+#: ../nethsm/nginx.rst:99
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6844,7 +6850,7 @@ msgstr ""
 " peticiones curl en ``container/nginx/generate.sh`` para que apunte a su "
 "NetHSM."
 
-#: ../nethsm/nginx.rst:93
+#: ../nethsm/nginx.rst:100
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6852,7 +6858,7 @@ msgstr ""
 "Cambie la configuración de libnethsm_pkcs11 para que coincida con su "
 "NetHSM en ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:94
+#: ../nethsm/nginx.rst:101
 msgid "Generate the certificate and key."
 msgstr "Genere el certificado y la clave."
 
@@ -6990,9 +6996,10 @@ msgid "Arch Linux"
 msgstr "Arch Linux"
 
 #: ../nethsm/openssl.rst:38
+#, fuzzy
 msgid ""
 "Then you need to configure OpenSSL to use the engine. This is done by "
-"adding the following line to your ``openssl.cnf`` file:"
+"adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
 "A continuación, debe configurar OpenSSL para utilizar el motor. Esto se "
 "hace añadiendo la siguiente línea a su ``openssl.cnf`` archivo:"
@@ -7005,7 +7012,14 @@ msgstr ""
 "Puede especificar a OpenSSL la ruta del archivo de configuración de "
 "OpenSSL utilizando la variable de entorno ``OPENSSL_CONF``."
 
-#: ../nethsm/openssl.rst:59
+#: ../nethsm/openssl.rst:60
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the engine."
+msgstr ""
+
+#: ../nethsm/openssl.rst:62
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -7013,7 +7027,7 @@ msgstr ""
 "Sustituya ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` por la"
 " ruta al módulo PKCS#11 que instaló anteriormente."
 
-#: ../nethsm/openssl.rst:61
+#: ../nethsm/openssl.rst:64
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -7029,7 +7043,7 @@ msgstr ""
 "-linux-gnu/engines-3/libpkcs11.so``; para Fedora es "
 "``/usr/lib64/engines-3/libpkcs11.so``."
 
-#: ../nethsm/openssl.rst:63
+#: ../nethsm/openssl.rst:66
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -7037,15 +7051,21 @@ msgstr ""
 "Ahora puede utilizar claves en el NetHSM utilizando `PKCS#11 URIs "
 "<https://www.rfc-editor.org/rfc/rfc7512>`__, ejemplo:"
 
-#: ../nethsm/openssl.rst:69
+#: ../nethsm/openssl.rst:72
 msgid "This will use the key ``webserver``."
 msgstr "Se utilizará la clave ``webserver``."
 
-#: ../nethsm/openssl.rst:73
+#: ../nethsm/openssl.rst:75
+msgid ""
+"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
+"get the full URI of the keys:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:82
 msgid "Example Commands"
 msgstr "Ejemplos de comandos"
 
-#: ../nethsm/openssl.rst:75
+#: ../nethsm/openssl.rst:84
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "Recuperar la clave pública de un par de claves asimétricas en el NetHSM :"
 
@@ -7961,9 +7981,10 @@ msgid "``$HOME/.config/nitrokey/p11nethsm.conf``"
 msgstr "``$HOME/.config/nitrokey/p11nethsm.conf``"
 
 #: ../nethsm/pkcs11-setup.rst:33
+#, fuzzy
 msgid ""
-"If multiple files are present the slots of all the config files will be "
-"added."
+"If multiple files are present the configurations will be merged so that "
+"the slots of all the config files will be used by the module."
 msgstr ""
 "Si hay varios archivos, se añadirán las ranuras de todos los archivos de "
 "configuración."
@@ -31194,3 +31215,4 @@ msgstr ""
 #~ " ``PKCS#11 Crypto Token`` y el nombre"
 #~ " del token criptográfico es ``Nitrokey "
 #~ "NetHSM``."
+

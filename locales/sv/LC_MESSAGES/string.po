@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 13:49+0200\n"
+"POT-Creation-Date: 2023-08-18 10:42+0200\n"
 "PO-Revision-Date: 2023-08-14 13:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Swedish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/sv/>\n"
 "Language: sv\n"
+"Language-Team: Swedish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/sv/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5871,8 +5870,9 @@ msgid ""
 "``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` "
 "file."
 msgstr ""
-"För att kunna generera nycklar från gränssnittet måste du ange alternativet "
-"``enable_set_attribute_value`` till true i filen ``p11nethsm.conf``."
+"För att kunna generera nycklar från gränssnittet måste du ange "
+"alternativet ``enable_set_attribute_value`` till true i filen "
+"``p11nethsm.conf``."
 
 #: ../nethsm/ejbca.rst:20
 msgid ""
@@ -5881,8 +5881,8 @@ msgid ""
 " the interface."
 msgstr ""
 "På grund av vissa integrationsproblem med Sun PKCS11-providern kommer "
-"nycklar som genereras från EJBCA att ha ett slumpmässigt namn istället för "
-"det namn som anges i gränssnittet."
+"nycklar som genereras från EJBCA att ha ett slumpmässigt namn istället "
+"för det namn som anges i gränssnittet."
 
 #: ../nethsm/ejbca.rst:22
 msgid ""
@@ -5892,10 +5892,11 @@ msgid ""
 "The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token "
 "name is ``NetHSM``."
 msgstr ""
-"Efter omstart av EJBCA kan du lägga till en ny Crypto Token i EJBCA Admin "
-"GUI ``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
-"Crypto Token-typen är ``PKCS#11 Crypto Token`` och Crypto Token-namnet är "
-"``NetHSM``."
+"Efter omstart av EJBCA kan du lägga till en ny Crypto Token i EJBCA Admin"
+" GUI "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"Crypto Token-typen är ``PKCS#11 Crypto Token`` och Crypto Token-namnet är"
+" ``NetHSM``."
 
 #: ../nethsm/ejbca.rst:26
 msgid "Executing The Example"
@@ -5911,7 +5912,7 @@ msgstr ""
 "att klona `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ och köra följande kommandon:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:91
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5927,15 +5928,15 @@ msgstr ""
 "Ändra libnethsm_pkcs11-konfigurationen så att den matchar din NetHSM i "
 "``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:100
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
 msgid "Build the container."
 msgstr "Bygg upp behållaren."
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:106
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
 msgid "Run the container."
 msgstr "Kör containern."
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:112
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6619,11 +6620,11 @@ msgstr "Följ `OpenSSL installationsguide <openssl.html>`__."
 msgid "Nginx Configuration"
 msgstr "Konfiguration av Nginx"
 
-#: ../nethsm/nginx.rst:53
+#: ../nethsm/nginx.rst:57
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "``ssl_certificate`` måste peka på en certifikatfil på disken."
 
-#: ../nethsm/nginx.rst:55
+#: ../nethsm/nginx.rst:59
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6633,7 +6634,7 @@ msgstr ""
 "vi OpenSSL-motorn med PKCS#11-modulen och väljer den privata nyckeln med "
 "etiketten/ID ``webserver`` och nyckeltypen ``private``."
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:61
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6641,7 +6642,14 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:60
+#: ../nethsm/nginx.rst:64
+msgid ""
+"Currently the NetHSM PKCS#11 module only works when ``master_process`` "
+"and ``daemon`` are set to ``off``. These options are not recommended for "
+"production use."
+msgstr ""
+
+#: ../nethsm/nginx.rst:67
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6651,11 +6659,11 @@ msgstr ""
 "NetHSM. Om certifikatet på disken och nyckeln i NetHSM inte matchar "
 "varandra kommer nginx inte att starta."
 
-#: ../nethsm/nginx.rst:63
+#: ../nethsm/nginx.rst:70
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Konfiguration"
 
-#: ../nethsm/nginx.rst:75
+#: ../nethsm/nginx.rst:82
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6663,11 +6671,11 @@ msgstr ""
 "För att säkra lösenordet kan du ange det via en miljövariabel (se `Setup "
 "<setup>`__) eller ange det i nginx-konfigurationen:"
 
-#: ../nethsm/nginx.rst:83 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:90 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Exempel"
 
-#: ../nethsm/nginx.rst:85
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6680,13 +6688,13 @@ msgstr ""
 "klona `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ och kör följande kommandon:"
 
-#: ../nethsm/nginx.rst:89
+#: ../nethsm/nginx.rst:96
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "När genereringsskriptet körs raderas nyckeln ``webserver`` och ersätts "
 "med en ny."
 
-#: ../nethsm/nginx.rst:92
+#: ../nethsm/nginx.rst:99
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6696,7 +6704,7 @@ msgstr ""
 "förfrågningarna i ``container/nginx/generate.sh`` så att de pekar på din "
 "NetHSM."
 
-#: ../nethsm/nginx.rst:93
+#: ../nethsm/nginx.rst:100
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6704,7 +6712,7 @@ msgstr ""
 "Ändra libnethsm_pkcs11-konfigurationen så att den matchar din NetHSM i "
 "``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:94
+#: ../nethsm/nginx.rst:101
 msgid "Generate the certificate and key."
 msgstr "Generera certifikat och nyckel."
 
@@ -6840,9 +6848,10 @@ msgid "Arch Linux"
 msgstr "Arch Linux"
 
 #: ../nethsm/openssl.rst:38
+#, fuzzy
 msgid ""
 "Then you need to configure OpenSSL to use the engine. This is done by "
-"adding the following line to your ``openssl.cnf`` file:"
+"adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
 "Sedan måste du konfigurera OpenSSL att använda motorn. Detta görs genom "
 "att lägga till följande rad i filen ``openssl.cnf``:"
@@ -6855,7 +6864,14 @@ msgstr ""
 "Du kan ange sökvägen till OpenSSL-konfigurationsfilen för OpenSSL med "
 "hjälp av miljövariabeln ``OPENSSL_CONF``."
 
-#: ../nethsm/openssl.rst:59
+#: ../nethsm/openssl.rst:60
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the engine."
+msgstr ""
+
+#: ../nethsm/openssl.rst:62
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -6863,7 +6879,7 @@ msgstr ""
 "Ersätt ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` med "
 "sökvägen till den PKCS#11-modul som du installerade tidigare."
 
-#: ../nethsm/openssl.rst:61
+#: ../nethsm/openssl.rst:64
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -6879,7 +6895,7 @@ msgstr ""
 "gnu/engines-3/libpkcs11.so``; för Fedora är den "
 "``/usr/lib64/engines-3/libpkcs11.so``."
 
-#: ../nethsm/openssl.rst:63
+#: ../nethsm/openssl.rst:66
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -6887,15 +6903,21 @@ msgstr ""
 "Nu kan du använda nycklar på NetHSM genom att använda `PKCS#11 URIs "
 "<https://www.rfc-editor.org/rfc/rfc7512>`__, t.ex:"
 
-#: ../nethsm/openssl.rst:69
+#: ../nethsm/openssl.rst:72
 msgid "This will use the key ``webserver``."
 msgstr "Detta kommer att använda nyckeln ``webserver``."
 
-#: ../nethsm/openssl.rst:73
+#: ../nethsm/openssl.rst:75
+msgid ""
+"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
+"get the full URI of the keys:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:82
 msgid "Example Commands"
 msgstr "Exempel på kommandon"
 
-#: ../nethsm/openssl.rst:75
+#: ../nethsm/openssl.rst:84
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "Hämta den offentliga nyckeln till ett asymmetriskt nyckelpar på NetHSM :"
 
@@ -7786,9 +7808,10 @@ msgid "``$HOME/.config/nitrokey/p11nethsm.conf``"
 msgstr "``$HOME/.config/nitrokey/p11nethsm.conf``"
 
 #: ../nethsm/pkcs11-setup.rst:33
+#, fuzzy
 msgid ""
-"If multiple files are present the slots of all the config files will be "
-"added."
+"If multiple files are present the configurations will be merged so that "
+"the slots of all the config files will be used by the module."
 msgstr ""
 "Om det finns flera filer kommer slitsarna för alla konfigurationsfiler "
 "att läggas till."
@@ -30416,3 +30439,4 @@ msgstr ""
 #~ " Crypto Token-typen är ``PKCS#11 "
 #~ "Crypto Token`` och Crypto Token-namnet"
 #~ " är ``Nitrokey NetHSM``."
+

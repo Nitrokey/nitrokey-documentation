@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 13:49+0200\n"
+"POT-Creation-Date: 2023-08-18 10:42+0200\n"
 "PO-Revision-Date: 2023-08-14 13:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Latvian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/lv/>\n"
 "Language: lv\n"
+"Language-Team: Latvian <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/lv/>\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100"
+" <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
-"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5896,8 +5895,9 @@ msgid ""
 "generated from EJBCA will have a random name instead of the name given in"
 " the interface."
 msgstr ""
-"Sakarā ar dažām integrācijas problēmām ar Sun PKCS11 nodrošinātāju, no EJBCA "
-"ģenerētajām atslēgām būs nejaušs vārds, nevis saskarnē norādītais vārds."
+"Sakarā ar dažām integrācijas problēmām ar Sun PKCS11 nodrošinātāju, no "
+"EJBCA ģenerētajām atslēgām būs nejaušs vārds, nevis saskarnē norādītais "
+"vārds."
 
 #: ../nethsm/ejbca.rst:22
 msgid ""
@@ -5908,9 +5908,10 @@ msgid ""
 "name is ``NetHSM``."
 msgstr ""
 "Pēc EJBCA restartēšanas varat pievienot jaunu kriptožetonu EJBCA "
-"administratora GUI ``https://mycahostname/ejbca/adminweb/cryptotoken/"
-"cryptotokens.xhtml``. Kriptožetona tips ir ``PKCS#11 Crypto Token`` un "
-"kriptožetona nosaukums ir ``NetHSM``."
+"administratora GUI "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"Kriptožetona tips ir ``PKCS#11 Crypto Token`` un kriptožetona nosaukums "
+"ir ``NetHSM``."
 
 #: ../nethsm/ejbca.rst:26
 msgid "Executing The Example"
@@ -5926,7 +5927,7 @@ msgstr ""
 "klonētu `nethsm-pkcs11 repozitoriju <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ un palaist šādas komandas:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:91
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5942,15 +5943,15 @@ msgstr ""
 "Mainiet libnethsm_pkcs11 konfigurāciju, lai tā atbilstu jūsu NetHSM "
 "vietnē ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:100
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
 msgid "Build the container."
 msgstr "Izveidojiet konteineru."
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:106
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
 msgid "Run the container."
 msgstr "Palaist konteineru."
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:112
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6632,11 +6633,11 @@ msgstr "Sekojiet `OpenSSL iestatīšanas rokasgrāmatai <openssl.html>`__."
 msgid "Nginx Configuration"
 msgstr "Nginx konfigurācija"
 
-#: ../nethsm/nginx.rst:53
+#: ../nethsm/nginx.rst:57
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "``ssl_certificate`` jānorāda uz sertifikāta failu diskā."
 
-#: ../nethsm/nginx.rst:55
+#: ../nethsm/nginx.rst:59
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6646,7 +6647,7 @@ msgstr ""
 "izmantojam OpenSSL dzinēju ar PKCS#11 moduli un izvēlamies privāto "
 "atslēgu ar marķējumu/ID ``webserver`` un atslēgas tipu ``private``."
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:61
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6654,7 +6655,14 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:60
+#: ../nethsm/nginx.rst:64
+msgid ""
+"Currently the NetHSM PKCS#11 module only works when ``master_process`` "
+"and ``daemon`` are set to ``off``. These options are not recommended for "
+"production use."
+msgstr ""
+
+#: ../nethsm/nginx.rst:67
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6663,11 +6671,11 @@ msgstr ""
 "Sertifikāts ir jāģenerē atsevišķi un pēc tam jāielādē NetHSM. Ja "
 "sertifikāts diskā un atslēga NetHSM nesakrīt, nginx nesāksies."
 
-#: ../nethsm/nginx.rst:63
+#: ../nethsm/nginx.rst:70
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 konfigurācija"
 
-#: ../nethsm/nginx.rst:75
+#: ../nethsm/nginx.rst:82
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6676,11 +6684,11 @@ msgstr ""
 "mainīgo (skatiet `Iestatīšana <setup>`__), vai norādīt to nginx "
 "konfigurācijā:"
 
-#: ../nethsm/nginx.rst:83 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:90 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Piemērs"
 
-#: ../nethsm/nginx.rst:85
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6693,13 +6701,13 @@ msgstr ""
 "klonētu `nethsm-pkcs11 repozitoriju <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ un izpildiet šādas komandas:"
 
-#: ../nethsm/nginx.rst:89
+#: ../nethsm/nginx.rst:96
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Palaižot ģenerēšanas skriptu, tiek dzēsta ``webserver`` atslēga un tā "
 "tiek aizstāta."
 
-#: ../nethsm/nginx.rst:92
+#: ../nethsm/nginx.rst:99
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6709,7 +6717,7 @@ msgstr ""
 "pieprasījumu URL ``container/nginx/generate.sh``, lai norādītu uz jūsu "
 "NetHSM."
 
-#: ../nethsm/nginx.rst:93
+#: ../nethsm/nginx.rst:100
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6717,7 +6725,7 @@ msgstr ""
 "Mainiet libnethsm_pkcs11 konfigurāciju, lai tā atbilstu jūsu NetHSM "
 "vietnē ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:94
+#: ../nethsm/nginx.rst:101
 msgid "Generate the certificate and key."
 msgstr "Sertifikāta un atslēgas ģenerēšana."
 
@@ -6849,9 +6857,10 @@ msgid "Arch Linux"
 msgstr "Arch Linux"
 
 #: ../nethsm/openssl.rst:38
+#, fuzzy
 msgid ""
 "Then you need to configure OpenSSL to use the engine. This is done by "
-"adding the following line to your ``openssl.cnf`` file:"
+"adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
 "Pēc tam ir jākonfigurē OpenSSL, lai izmantotu dzinēju. To var izdarīt, "
 "pievienojot ``openssl.cnf`` failā šādu rindu:"
@@ -6864,7 +6873,14 @@ msgstr ""
 "OpenSSL konfigurācijas faila ceļu var norādīt, izmantojot "
 "``OPENSSL_CONF`` vides mainīgo."
 
-#: ../nethsm/openssl.rst:59
+#: ../nethsm/openssl.rst:60
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the engine."
+msgstr ""
+
+#: ../nethsm/openssl.rst:62
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -6872,7 +6888,7 @@ msgstr ""
 "Aizstājiet ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` ar "
 "iepriekš instalētā PKCS#11 moduļa ceļu."
 
-#: ../nethsm/openssl.rst:61
+#: ../nethsm/openssl.rst:64
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -6888,7 +6904,7 @@ msgstr ""
 "gnu/engines-3/libpkcs11.so``; Fedora sistēmā tas ir "
 "``/usr/lib64/engines-3/libpkcs11.so``."
 
-#: ../nethsm/openssl.rst:63
+#: ../nethsm/openssl.rst:66
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -6896,15 +6912,21 @@ msgstr ""
 "Tagad jūs varat izmantot atslēgas NetHSM, izmantojot `PKCS#11 URI "
 "<https://www.rfc-editor.org/rfc/rfc7512>`__, piemērs:"
 
-#: ../nethsm/openssl.rst:69
+#: ../nethsm/openssl.rst:72
 msgid "This will use the key ``webserver``."
 msgstr "Tiks izmantota atslēga ``webserver``."
 
-#: ../nethsm/openssl.rst:73
+#: ../nethsm/openssl.rst:75
+msgid ""
+"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
+"get the full URI of the keys:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:82
 msgid "Example Commands"
 msgstr "Komandu piemēri"
 
-#: ../nethsm/openssl.rst:75
+#: ../nethsm/openssl.rst:84
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "Asimetriskā atslēgu pāra publiskās atslēgas iegūšana NetHSM :"
 
@@ -7784,9 +7806,10 @@ msgid "``$HOME/.config/nitrokey/p11nethsm.conf``"
 msgstr "``$HOME/.config/nitrokey/p11nethsm.conf``"
 
 #: ../nethsm/pkcs11-setup.rst:33
+#, fuzzy
 msgid ""
-"If multiple files are present the slots of all the config files will be "
-"added."
+"If multiple files are present the configurations will be merged so that "
+"the slots of all the config files will be used by the module."
 msgstr "Ja ir vairāki faili, tiks pievienotas visu konfigurācijas failu nišas."
 
 #: ../nethsm/pkcs11-setup.rst:35
@@ -30240,3 +30263,4 @@ msgstr ""
 #~ " Kriptožetona tips ir ``PKCS#11 Crypto "
 #~ "Token`` un kriptožetona nosaukums ir "
 #~ "``Nitrokey NetHSM``."
+

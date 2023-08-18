@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 13:49+0200\n"
+"POT-Creation-Date: 2023-08-18 10:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4466,7 +4466,7 @@ msgid "If you want to experiment with the given example you can use git to clone
 msgstr ""
 
 #: ../nethsm/ejbca.rst:30
-#: ../nethsm/nginx.rst:91
+#: ../nethsm/nginx.rst:98
 msgid "Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started>`__ for more information."
 msgstr ""
 
@@ -4475,17 +4475,17 @@ msgid "Change the libnethsm_pkcs11 configuration to match your NetHSM in ``conta
 msgstr ""
 
 #: ../nethsm/ejbca.rst:32
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:107
 msgid "Build the container."
 msgstr ""
 
 #: ../nethsm/ejbca.rst:38
-#: ../nethsm/nginx.rst:106
+#: ../nethsm/nginx.rst:113
 msgid "Run the container."
 msgstr ""
 
 #: ../nethsm/ejbca.rst:44
-#: ../nethsm/nginx.rst:112
+#: ../nethsm/nginx.rst:119
 msgid "The container will be available at `https://localhost:9443/ <https://localhost:9443/>`__."
 msgstr ""
 
@@ -4996,52 +4996,56 @@ msgstr ""
 msgid "Nginx Configuration"
 msgstr ""
 
-#: ../nethsm/nginx.rst:53
+#: ../nethsm/nginx.rst:57
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr ""
 
-#: ../nethsm/nginx.rst:55
+#: ../nethsm/nginx.rst:59
 msgid "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use the OpenSSL engine with the PKCS#11 module and select the private key with the label/ID ``webserver`` and the key type ``private``."
 msgstr ""
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:61
 msgid "``ssl_certificate_key \"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 msgstr ""
 
-#: ../nethsm/nginx.rst:60
+#: ../nethsm/nginx.rst:64
+msgid "Currently the NetHSM PKCS#11 module only works when ``master_process`` and ``daemon`` are set to ``off``. These options are not recommended for production use."
+msgstr ""
+
+#: ../nethsm/nginx.rst:67
 msgid "You must generate the certificate separately and then upload it to the NetHSM. If the certificate on disk and the key in the NetHSM don't match nginx won't start."
 msgstr ""
 
-#: ../nethsm/nginx.rst:63
+#: ../nethsm/nginx.rst:70
 msgid "libnethsm_pkcs11 Configuration"
 msgstr ""
 
-#: ../nethsm/nginx.rst:75
+#: ../nethsm/nginx.rst:82
 msgid "To secure the password you can provide it via an environment variable (see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr ""
 
-#: ../nethsm/nginx.rst:83
+#: ../nethsm/nginx.rst:90
 #: ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr ""
 
-#: ../nethsm/nginx.rst:85
+#: ../nethsm/nginx.rst:92
 msgid "If you want to experiment with the `given example <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:"
 msgstr ""
 
-#: ../nethsm/nginx.rst:89
+#: ../nethsm/nginx.rst:96
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 
-#: ../nethsm/nginx.rst:92
+#: ../nethsm/nginx.rst:99
 msgid "If your NetHSM is not running on localhost, you will need to change the URL of the curl requests in ``container/nginx/generate.sh`` to point to your NetHSM."
 msgstr ""
 
-#: ../nethsm/nginx.rst:93
+#: ../nethsm/nginx.rst:100
 msgid "Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/nginx/p11nethsm.conf``."
 msgstr ""
 
-#: ../nethsm/nginx.rst:94
+#: ../nethsm/nginx.rst:101
 msgid "Generate the certificate and key."
 msgstr ""
 
@@ -5114,34 +5118,42 @@ msgid "Arch Linux"
 msgstr ""
 
 #: ../nethsm/openssl.rst:38
-msgid "Then you need to configure OpenSSL to use the engine. This is done by adding the following line to your ``openssl.cnf`` file:"
+msgid "Then you need to configure OpenSSL to use the engine. This is done by adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
 
 #: ../nethsm/openssl.rst:57
 msgid "You can specify to OpenSSL the path of the OpenSSL configuration file using the ``OPENSSL_CONF`` environment variable."
 msgstr ""
 
-#: ../nethsm/openssl.rst:59
+#: ../nethsm/openssl.rst:60
+msgid "If the main OpenSSL configuration file is modified to contain only these lines, it could break other programs using OpenSSL. Thus, you may want to create a separate configuration file for the engine."
+msgstr ""
+
+#: ../nethsm/openssl.rst:62
 msgid "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the path to the PKCS#11 module you installed earlier."
 msgstr ""
 
-#: ../nethsm/openssl.rst:61
+#: ../nethsm/openssl.rst:64
 msgid "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the path to the OpenSSL engine you installed. The path varies depending on your distribution. The number in ``engines-3`` corresponds to your OpenSSL version. On Debian the path for the OpenSSL 3 engine is ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; for Fedora it's ``/usr/lib64/engines-3/libpkcs11.so``."
 msgstr ""
 
-#: ../nethsm/openssl.rst:63
+#: ../nethsm/openssl.rst:66
 msgid "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www.rfc-editor.org/rfc/rfc7512>`__, example:"
 msgstr ""
 
-#: ../nethsm/openssl.rst:69
+#: ../nethsm/openssl.rst:72
 msgid "This will use the key ``webserver``."
 msgstr ""
 
-#: ../nethsm/openssl.rst:73
+#: ../nethsm/openssl.rst:75
+msgid "You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` get the full URI of the keys:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:82
 msgid "Example Commands"
 msgstr ""
 
-#: ../nethsm/openssl.rst:75
+#: ../nethsm/openssl.rst:84
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr ""
 
@@ -5841,7 +5853,7 @@ msgid "``$HOME/.config/nitrokey/p11nethsm.conf``"
 msgstr ""
 
 #: ../nethsm/pkcs11-setup.rst:33
-msgid "If multiple files are present the slots of all the config files will be added."
+msgid "If multiple files are present the configurations will be merged so that the slots of all the config files will be used by the module."
 msgstr ""
 
 #: ../nethsm/pkcs11-setup.rst:35

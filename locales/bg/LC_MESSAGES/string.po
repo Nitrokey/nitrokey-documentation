@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 13:49+0200\n"
+"POT-Creation-Date: 2023-08-18 10:42+0200\n"
 "PO-Revision-Date: 2023-08-14 13:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Bulgarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/bg/>\n"
 "Language: bg\n"
+"Language-Team: Bulgarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/bg/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5973,7 +5972,8 @@ msgid ""
 "file."
 msgstr ""
 "За да можете да генерирате ключове от интерфейса, трябва да настроите "
-"опцията ``enable_set_attribute_value`` на true във файла ``p11nethsm.conf``."
+"опцията ``enable_set_attribute_value`` на true във файла "
+"``p11nethsm.conf``."
 
 #: ../nethsm/ejbca.rst:20
 msgid ""
@@ -5981,9 +5981,9 @@ msgid ""
 "generated from EJBCA will have a random name instead of the name given in"
 " the interface."
 msgstr ""
-"Поради някои проблеми с интеграцията с доставчика на Sun PKCS11 ключовете, "
-"генерирани от EJBCA, ще имат произволно име вместо името, зададено в "
-"интерфейса."
+"Поради някои проблеми с интеграцията с доставчика на Sun PKCS11 "
+"ключовете, генерирани от EJBCA, ще имат произволно име вместо името, "
+"зададено в интерфейса."
 
 #: ../nethsm/ejbca.rst:22
 msgid ""
@@ -5994,10 +5994,10 @@ msgid ""
 "name is ``NetHSM``."
 msgstr ""
 "След рестартиране на EJBCA можете да добавите нов криптографски токен в "
-"графичния потребителски интерфейс на EJBCA Admin ``https://mycahostname/"
-"ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. Типът на криптографския "
-"токен е ``PKCS#11 Crypto Token``, а името на криптографския токен е "
-"``NetHSM``."
+"графичния потребителски интерфейс на EJBCA Admin "
+"``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``. "
+"Типът на криптографския токен е ``PKCS#11 Crypto Token``, а името на "
+"криптографския токен е ``NetHSM``."
 
 #: ../nethsm/ejbca.rst:26
 msgid "Executing The Example"
@@ -6014,7 +6014,7 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ и да изпълните следните "
 "команди:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:91
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -6030,15 +6030,15 @@ msgstr ""
 "Променете конфигурацията на libnethsm_pkcs11, за да съответства на вашия "
 "NetHSM в ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:100
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
 msgid "Build the container."
 msgstr "Изградете контейнера."
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:106
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
 msgid "Run the container."
 msgstr "Стартирайте контейнера."
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:112
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6727,11 +6727,11 @@ msgstr "Следвайте ръководството за настройка н
 msgid "Nginx Configuration"
 msgstr "Конфигурация на Nginx"
 
-#: ../nethsm/nginx.rst:53
+#: ../nethsm/nginx.rst:57
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "``ssl_certificate`` трябва да сочи към файл със сертификат на диска."
 
-#: ../nethsm/nginx.rst:55
+#: ../nethsm/nginx.rst:59
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6741,7 +6741,7 @@ msgstr ""
 "използваме енджина OpenSSL с модула PKCS#11 и избираме частния ключ с "
 "етикет/ID ``webserver`` и тип ключ ``private``."
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:61
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6749,7 +6749,14 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:60
+#: ../nethsm/nginx.rst:64
+msgid ""
+"Currently the NetHSM PKCS#11 module only works when ``master_process`` "
+"and ``daemon`` are set to ``off``. These options are not recommended for "
+"production use."
+msgstr ""
+
+#: ../nethsm/nginx.rst:67
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6759,11 +6766,11 @@ msgstr ""
 "NetHSM. Ако сертификатът на диска и ключът в NetHSM не съвпадат, nginx "
 "няма да се стартира."
 
-#: ../nethsm/nginx.rst:63
+#: ../nethsm/nginx.rst:70
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "Конфигурация на libnethsm_pkcs11"
 
-#: ../nethsm/nginx.rst:75
+#: ../nethsm/nginx.rst:82
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6772,11 +6779,11 @@ msgstr ""
 "средата (вж. `Настройка <setup>`__) или да я предоставите в "
 "конфигурацията на nginx:"
 
-#: ../nethsm/nginx.rst:83 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:90 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Пример:"
 
-#: ../nethsm/nginx.rst:85
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6790,13 +6797,13 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ и изпълнете следните "
 "команди:"
 
-#: ../nethsm/nginx.rst:89
+#: ../nethsm/nginx.rst:96
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Изпълнението на скрипта за генериране изтрива ключа ``webserver`` и го "
 "заменя."
 
-#: ../nethsm/nginx.rst:92
+#: ../nethsm/nginx.rst:99
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6806,7 +6813,7 @@ msgstr ""
 "адреса на curl заявките в ``container/nginx/generate.sh``, за да сочи към"
 " вашия NetHSM."
 
-#: ../nethsm/nginx.rst:93
+#: ../nethsm/nginx.rst:100
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6814,7 +6821,7 @@ msgstr ""
 "Променете конфигурацията на libnethsm_pkcs11, за да съответства на вашия "
 "NetHSM в ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:94
+#: ../nethsm/nginx.rst:101
 msgid "Generate the certificate and key."
 msgstr "Генерирайте сертификата и ключа."
 
@@ -6952,9 +6959,10 @@ msgid "Arch Linux"
 msgstr "Arch Linux"
 
 #: ../nethsm/openssl.rst:38
+#, fuzzy
 msgid ""
 "Then you need to configure OpenSSL to use the engine. This is done by "
-"adding the following line to your ``openssl.cnf`` file:"
+"adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
 "След това трябва да конфигурирате OpenSSL да използва двигателя. Това "
 "става, като добавите следния ред към файла ``openssl.cnf``:"
@@ -6967,7 +6975,14 @@ msgstr ""
 "Можете да укажете на OpenSSL пътя до конфигурационния файл на OpenSSL, "
 "като използвате променливата на средата ``OPENSSL_CONF``."
 
-#: ../nethsm/openssl.rst:59
+#: ../nethsm/openssl.rst:60
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the engine."
+msgstr ""
+
+#: ../nethsm/openssl.rst:62
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -6975,7 +6990,7 @@ msgstr ""
 "Заменете ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` с пътя "
 "до модула PKCS#11, който инсталирахте по-рано."
 
-#: ../nethsm/openssl.rst:61
+#: ../nethsm/openssl.rst:64
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -6991,7 +7006,7 @@ msgstr ""
 "gnu/engines-3/libpkcs11.so``; във Fedora е "
 "``/usr/lib64/engines-3/libpkcs11.so``."
 
-#: ../nethsm/openssl.rst:63
+#: ../nethsm/openssl.rst:66
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -6999,15 +7014,21 @@ msgstr ""
 "Сега можете да използвате ключове в NetHSM, като използвате `PKCS#11 URIs"
 " <https://www.rfc-editor.org/rfc/rfc7512>`__, например:"
 
-#: ../nethsm/openssl.rst:69
+#: ../nethsm/openssl.rst:72
 msgid "This will use the key ``webserver``."
 msgstr "Това ще използва ключа ``webserver``."
 
-#: ../nethsm/openssl.rst:73
+#: ../nethsm/openssl.rst:75
+msgid ""
+"You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
+"get the full URI of the keys:"
+msgstr ""
+
+#: ../nethsm/openssl.rst:82
 msgid "Example Commands"
 msgstr "Примерни команди"
 
-#: ../nethsm/openssl.rst:75
+#: ../nethsm/openssl.rst:84
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "Извличане на публичния ключ на асиметрична двойка ключове в NetHSM :"
 
@@ -7908,9 +7929,10 @@ msgid "``$HOME/.config/nitrokey/p11nethsm.conf``"
 msgstr "``$HOME/.config/nitrokey/p11nethsm.conf``"
 
 #: ../nethsm/pkcs11-setup.rst:33
+#, fuzzy
 msgid ""
-"If multiple files are present the slots of all the config files will be "
-"added."
+"If multiple files are present the configurations will be merged so that "
+"the slots of all the config files will be used by the module."
 msgstr ""
 "Ако са налични няколко файла, ще бъдат добавени слотовете на всички "
 "конфигурационни файлове."
@@ -30961,3 +30983,4 @@ msgstr ""
 #~ " Типът на криптографския токен е "
 #~ "``PKCS#11 Crypto Token``, а името на "
 #~ "криптографския токен е ``Nitrokey NetHSM``."
+
