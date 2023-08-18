@@ -548,7 +548,7 @@ The NetHSM supports generating CSR (Certificate Signing Requests) for the stored
    .. tab:: nitropy
       **Required Role**
 
-      This operation requires an authentication with the *Administrator* role.
+      This operation requires an authentication with the *Administrator* or *Operator* role.
 
       **Required Options**
 
