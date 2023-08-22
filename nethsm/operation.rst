@@ -372,7 +372,7 @@ The public key can be inspected for example with OpenSSL as follows.
 Tags for Keys
 ~~~~~~~~~~~~~
 
-*Tags* can be used to set fine-grained access restrictions on keys, and are an optional feature. One or more *Tags* can be assigned to a key. The *Operator* users can see all keys, but only use those with at least one corresponding *Tag*. If a key has no *Tag* it can be used by all *Operator* users. A key can not be modified by an *Operator* user.
+*Tags* can be used to set fine-grained access restrictions on keys, and are an optional feature. One or more *Tags* can be assigned to a key. The *Operator* users can see all keys, but only use those with at least one corresponding *Tag*. If a key has no *Tag* it can be used by all *Operator* users. A *Tag* can not be modified by an *Operator* user.
 
 To learn about how to use *Tags* on *Operator* accounts, please refer to chapter `Tags for Users <administration.html#tags-for-users>`__.
 
