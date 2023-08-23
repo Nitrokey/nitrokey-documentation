@@ -31,8 +31,8 @@ Add the following lines to the KnotDNS configuration file ``/etc/knot/knot.conf`
       dnssec-signing: on
       dnssec-policy: manual_policy
 
-The `token` value in the PKCS#11 URI is the `label` from the `p11nethsm.conf`. Adjust the path to the
-`libnethsm_pkcs11.so` as needed.
+The ``token`` value in the PKCS#11 URI is the ``label`` from the ``p11nethsm.conf``. Adjust the path to the
+``libnethsm_pkcs11.so`` as needed.
 
 To generate the keys run the following commands:
 
@@ -89,6 +89,6 @@ Add the following lines to the Knot DNS configuration file ``/etc/knot/knot.conf
       dnssec-signing: on
       dnssec-policy: auto_policy
 
-Setting `key-label` to `on` doesn't change anything and the pkcs11 module ignores the given label and
+Setting ``key-label`` to ``on`` doesn't change anything and the pkcs11 module ignores the given label and
 always returns the hexadecimal key id as label. The policy uses very short key lifetimes and TTL's
 for testing purposes.
