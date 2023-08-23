@@ -44,3 +44,4 @@ In case you want to restore a backup of a NetHSM, please refer to the chapter `R
    system_recovery.rst
    opendnssec.rst
    ejbca.rst
+   knotdns.rst
