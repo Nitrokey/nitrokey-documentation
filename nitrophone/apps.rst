@@ -54,6 +54,11 @@ Recommended Apps
 * One-time password generator (2FA, OTP): `Aegis Authenticator <https://github.com/beemdevelopment/Aegis>`__.
 * Regarding camera app, see `here <https://grapheneos.org/usage#camera>`__.
 
+Recommendation for Sensor-Less Devices
+######################################
+
+If you have a NitroPhone or NitroTablet without rotation sensor, you could use Rotation Control <https://play.google.com/store/apps/details?id=org.crape.rotationcontrol>`__ to rotate your screen manually.
+
 Permissions of Individual Apps
 ##############################
 

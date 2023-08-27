@@ -1,5 +1,5 @@
-NitroPhone
-**********
+NitroPhone, NitroTablet
+************************
 
 .. contents:: :local:
 
