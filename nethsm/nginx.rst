@@ -10,7 +10,9 @@ A full example is available `below <#example>`__.
 OpenSSL Configuration
 ---------------------
 
-Follow the `OpenSSL setup guide <openssl.html>`__.
+Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide <openssl.html#engine>`__.
+
+Providers aren't supported yet by Nginx.
 
 Nginx Configuration
 -------------------
