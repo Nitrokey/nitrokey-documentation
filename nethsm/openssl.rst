@@ -3,7 +3,7 @@ OpenSSL
 
 
 .. warning:: 
-  Trying to retrieve the private key will crash, this is normal. You may want to retrieve the public key instead (see example below).
+  Trying to retrieve the private key will crash OpenSSL. This is normal because private keys cannot be extracted from a NetHSM. You may want to retrieve the public key instead (see example below).
 
 Engine
 ------
@@ -11,7 +11,7 @@ Engine
 .. warning:: 
   When using an engine (libp11) version of 0.4.12 or older, having an EdDSA key on the NetHSM will cause OpenSSL to not find any key.
 
-The OpenSSL engine interface is the old way to implement custom backends for OpenSSL. It is Deprecated in OpenSSL 3. This is still the most stable way to use the NetHSM with OpenSSL.
+The OpenSSL engine interface is the old way to implement custom backends for OpenSSL and it is deprecated in OpenSSL 3. This is still the most stable way to use the NetHSM with OpenSSL.
 
 You will need to setup the PKCS#11 module, following `these instructions <pkcs11-setup.html>`__.
 
@@ -36,7 +36,7 @@ Install the engine:
 
         pacman -S libp11
 
-Then you need to configure OpenSSL to use the engine. This is done by adding the following lines to your ``openssl.cnf`` file:
+Next you need to configure OpenSSL to use the engine. This is done by adding the following lines to your ``openssl.cnf`` file:
 
 .. code-block:: ini
 
@@ -79,8 +79,8 @@ This will use the key ``webserver``.
 
     p11tool --provider /usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so --list-all
 
-Example Commands
-~~~~~~~~~~~~~~~~
+Example Command
+~~~~~~~~~~~~~~~
 
 Retrieve the public key of an asymmetric key pair on the NetHSM :
 
@@ -96,7 +96,7 @@ The OpenSSL provider interface is the new way to implement custom backends for O
 
 You will need to setup the PKCS#11 module, following `these instructions <pkcs11-setup.html>`__.
 
-Install the provider, theres a Fedora package named ``pkcs11-provider``, for the other distributions you will need to `build it from source <https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__.
+Install the provider. For Fedora a package named ``pkcs11-provider`` exists. For other Linux distributions you will need to `build it from source <https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__.
 
 Then you need to configure OpenSSL to use the provider. This is done by adding the following lines to your ``openssl.cnf`` file:
 
@@ -124,7 +124,7 @@ If you want to set NetHSM as the default provider, you can add ``default = pkcs1
 
 
 .. warning:: 
-  If the main OpenSSL configuration file is modified to contain only these lines, it could break other programs using OpenSSL. Thus, you may want to create a separate configuration file for the engine.
+  If the main OpenSSL configuration file is modified to contain only these lines, it could break other programs using OpenSSL. Thus, you may want to create a separate configuration file for the provider.
 
 Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www.rfc-editor.org/rfc/rfc7512>`__, example:
 
