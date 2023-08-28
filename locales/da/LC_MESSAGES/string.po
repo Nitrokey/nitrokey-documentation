@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-27 19:54+0200\n"
+"POT-Creation-Date: 2023-08-28 10:25+0200\n"
 "PO-Revision-Date: 2023-08-27 19:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Danish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/da/>\n"
 "Language: da\n"
+"Language-Team: Danish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/da/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5946,7 +5945,7 @@ msgstr ""
 "at klone `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ og køre følgende kommandoer:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:100
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5962,15 +5961,15 @@ msgstr ""
 "Skift libnethsm_pkcs11-konfigurationen, så den passer til din NetHSM i "
 "``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:109
 msgid "Build the container."
 msgstr "Byg beholderen."
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:115
 msgid "Run the container."
 msgstr "Kør containeren."
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:121
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6741,18 +6740,25 @@ msgid "OpenSSL Configuration"
 msgstr "OpenSSL-konfiguration"
 
 #: ../nethsm/nginx.rst:13
-msgid "Follow the `OpenSSL setup guide <openssl.html>`__."
+#, fuzzy
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__."
 msgstr "Følg `OpenSSL setup guide <openssl.html>`__."
 
-#: ../nethsm/nginx.rst:16
+#: ../nethsm/nginx.rst:15
+msgid "Providers aren't supported yet by Nginx."
+msgstr ""
+
+#: ../nethsm/nginx.rst:18
 msgid "Nginx Configuration"
 msgstr "Nginx-konfiguration"
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:59
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "``ssl_certificate`` skal pege på en certifikatfil på disken."
 
-#: ../nethsm/nginx.rst:59
+#: ../nethsm/nginx.rst:61
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6762,7 +6768,7 @@ msgstr ""
 "OpenSSL-motoren med PKCS#11-modulet og vælger den private nøgle med "
 "etiketten/ID ``webserver`` og nøgletypen ``private``."
 
-#: ../nethsm/nginx.rst:61
+#: ../nethsm/nginx.rst:63
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6770,7 +6776,7 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:64
+#: ../nethsm/nginx.rst:66
 msgid ""
 "Currently the NetHSM PKCS#11 module only works when ``master_process`` "
 "and ``daemon`` are set to ``off``. These options are not recommended for "
@@ -6780,7 +6786,7 @@ msgstr ""
 "og ``daemon`` er indstillet til ``off``. Disse indstillinger anbefales "
 "ikke til produktionsbrug."
 
-#: ../nethsm/nginx.rst:67
+#: ../nethsm/nginx.rst:69
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6790,11 +6796,11 @@ msgstr ""
 " Hvis certifikatet på disken og nøglen i NetHSM ikke stemmer overens, vil"
 " nginx ikke starte."
 
-#: ../nethsm/nginx.rst:70
+#: ../nethsm/nginx.rst:72
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Konfiguration"
 
-#: ../nethsm/nginx.rst:82
+#: ../nethsm/nginx.rst:84
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6802,11 +6808,11 @@ msgstr ""
 "For at sikre adgangskoden kan du angive den via en miljøvariabel (se "
 "`Setup <setup>`__) eller angive den i nginx-konfigurationen:"
 
-#: ../nethsm/nginx.rst:90 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:92 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Eksempel"
 
-#: ../nethsm/nginx.rst:92
+#: ../nethsm/nginx.rst:94
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6820,13 +6826,13 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ og køre følgende "
 "kommandoer:"
 
-#: ../nethsm/nginx.rst:96
+#: ../nethsm/nginx.rst:98
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Når du kører genereringsscriptet, slettes nøglen ``webserver``, og den "
 "erstattes."
 
-#: ../nethsm/nginx.rst:99
+#: ../nethsm/nginx.rst:101
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6836,7 +6842,7 @@ msgstr ""
 "anmodningerne i ``container/nginx/generate.sh``, så den peger på din "
 "NetHSM."
 
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:102
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6844,7 +6850,7 @@ msgstr ""
 "Skift libnethsm_pkcs11-konfigurationen, så den passer til din NetHSM i "
 "``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:101
+#: ../nethsm/nginx.rst:103
 msgid "Generate the certificate and key."
 msgstr "Generer certifikatet og nøglen."
 
@@ -6926,15 +6932,22 @@ msgstr ""
 msgid "OpenSSL"
 msgstr "OpenSSL"
 
-#: ../nethsm/openssl.rst:4
+#: ../nethsm/openssl.rst:6
+#, fuzzy
 msgid ""
-"NetHSM can be used as a backend for OpenSSL using the ``engine`` "
-"interface."
+"Trying to retrieve the private key will crash OpenSSL. This is normal "
+"because private keys cannot be extracted from a NetHSM. You may want to "
+"retrieve the public key instead (see example below)."
 msgstr ""
-"NetHSM kan bruges som backend for OpenSSL ved hjælp af ``engine`` "
-"interface."
+"Forsøg på at hente den private nøgle vil gå ned, det er normalt. Det kan "
+"være en god idé at hente den offentlige nøgle i stedet (se eksemplet "
+"nedenfor)."
 
-#: ../nethsm/openssl.rst:7
+#: ../nethsm/openssl.rst:9
+msgid "Engine"
+msgstr ""
+
+#: ../nethsm/openssl.rst:12
 msgid ""
 "When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
 " key on the NetHSM will cause OpenSSL to not find any key."
@@ -6942,20 +6955,14 @@ msgstr ""
 "Når du bruger en engine (libp11) version på 0.4.12 eller ældre, vil en "
 "EdDSA-nøgle på NetHSM få OpenSSL til ikke at finde nogen nøgle."
 
-#: ../nethsm/openssl.rst:10
+#: ../nethsm/openssl.rst:14
 msgid ""
-"Trying to retrieve the private key will crash, this is normal. You may "
-"want to retrieve the public key instead (see example below)."
+"The OpenSSL engine interface is the old way to implement custom backends "
+"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
+"stable way to use the NetHSM with OpenSSL."
 msgstr ""
-"Forsøg på at hente den private nøgle vil gå ned, det er normalt. Det kan "
-"være en god idé at hente den offentlige nøgle i stedet (se eksemplet "
-"nedenfor)."
 
-#: ../nethsm/openssl.rst:13
-msgid "Setup"
-msgstr "Opsætning"
-
-#: ../nethsm/openssl.rst:15
+#: ../nethsm/openssl.rst:16 ../nethsm/openssl.rst:97
 msgid ""
 "You will need to setup the PKCS#11 module, following `these instructions "
 "<pkcs11-setup.html>`__."
@@ -6963,31 +6970,32 @@ msgstr ""
 "Du skal opsætte PKCS#11-modulet ved at følge `disse instruktioner "
 "<pkcs11-setup.html>`__."
 
-#: ../nethsm/openssl.rst:17
+#: ../nethsm/openssl.rst:18
 msgid "Install the engine:"
 msgstr "Installer motoren:"
 
-#: ../nethsm/openssl.rst:20
+#: ../nethsm/openssl.rst:21
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
-#: ../nethsm/openssl.rst:26
+#: ../nethsm/openssl.rst:27
 msgid "Fedora"
 msgstr "Fedora"
 
-#: ../nethsm/openssl.rst:32
+#: ../nethsm/openssl.rst:33
 msgid "Arch Linux"
 msgstr "Arch Linux"
 
-#: ../nethsm/openssl.rst:38
+#: ../nethsm/openssl.rst:39
+#, fuzzy
 msgid ""
-"Then you need to configure OpenSSL to use the engine. This is done by "
+"Next you need to configure OpenSSL to use the engine. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
 "Derefter skal du konfigurere OpenSSL til at bruge motoren. Dette gøres "
 "ved at tilføje følgende linjer til din ``openssl.cnf`` fil:"
 
-#: ../nethsm/openssl.rst:57
+#: ../nethsm/openssl.rst:58 ../nethsm/openssl.rst:123
 msgid ""
 "You can specify to OpenSSL the path of the OpenSSL configuration file "
 "using the ``OPENSSL_CONF`` environment variable."
@@ -6995,7 +7003,7 @@ msgstr ""
 "Du kan angive stien til OpenSSL-konfigurationsfilen til OpenSSL ved hjælp"
 " af miljøvariablen ``OPENSSL_CONF``."
 
-#: ../nethsm/openssl.rst:60
+#: ../nethsm/openssl.rst:61
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
@@ -7005,7 +7013,7 @@ msgstr ""
 "linjer, kan det ødelægge andre programmer, der bruger OpenSSL. Derfor kan"
 " det være en god idé at oprette en separat konfigurationsfil til motoren."
 
-#: ../nethsm/openssl.rst:62
+#: ../nethsm/openssl.rst:63
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -7013,7 +7021,7 @@ msgstr ""
 "Erstat ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` med stien"
 " til det PKCS#11-modul, du installerede tidligere."
 
-#: ../nethsm/openssl.rst:64
+#: ../nethsm/openssl.rst:65
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -7029,7 +7037,7 @@ msgstr ""
 "gnu/engines-3/libpkcs11.so``; for Fedora er det "
 "``/usr/lib64/engines-3/libpkcs11.so``."
 
-#: ../nethsm/openssl.rst:66
+#: ../nethsm/openssl.rst:67
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -7037,11 +7045,11 @@ msgstr ""
 "Nu kan du bruge nøgler på NetHSM ved at bruge `PKCS#11 URI'er "
 "<https://www.rfc-editor.org/rfc/rfc7512>`__, eksempel:"
 
-#: ../nethsm/openssl.rst:72
+#: ../nethsm/openssl.rst:73
 msgid "This will use the key ``webserver``."
 msgstr "Dette vil bruge nøglen ``webserver``."
 
-#: ../nethsm/openssl.rst:75
+#: ../nethsm/openssl.rst:76
 msgid ""
 "You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
 "get the full URI of the keys:"
@@ -7049,13 +7057,88 @@ msgstr ""
 "Du kan bruge kommandoen ``p11tool`` fra `GnuTLS <https://gnutls.org/>` "
 "til at få den fulde URI for nøglerne:"
 
-#: ../nethsm/openssl.rst:82
-msgid "Example Commands"
+#: ../nethsm/openssl.rst:83
+#, fuzzy
+msgid "Example Command"
 msgstr "Eksempel på kommandoer"
 
-#: ../nethsm/openssl.rst:84
+#: ../nethsm/openssl.rst:85
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "Hent den offentlige nøgle til et asymmetrisk nøglepar på NetHSM:"
+
+#: ../nethsm/openssl.rst:93
+msgid "Provider"
+msgstr ""
+
+#: ../nethsm/openssl.rst:95
+msgid ""
+"The OpenSSL provider interface is the new way to implement custom "
+"backends for OpenSSL. The `pkcs11-provider backend "
+"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
+"stage of development."
+msgstr ""
+
+#: ../nethsm/openssl.rst:99
+msgid ""
+"Install the provider. For Fedora a package named ``pkcs11-provider`` "
+"exists. For other Linux distributions you will need to `build it from "
+"source "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
+msgstr ""
+
+#: ../nethsm/openssl.rst:101
+#, fuzzy
+msgid ""
+"Then you need to configure OpenSSL to use the provider. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr ""
+"Derefter skal du konfigurere OpenSSL til at bruge motoren. Dette gøres "
+"ved at tilføje følgende linjer til din ``openssl.cnf`` fil:"
+
+#: ../nethsm/openssl.rst:118
+msgid ""
+"Set ``module`` to the path of the provider you installed and ``pkcs11"
+"-module-path`` to the path of the PKCS#11 module you installed."
+msgstr ""
+
+#: ../nethsm/openssl.rst:120
+msgid ""
+"If you want to set NetHSM as the default provider, you can add ``default "
+"= pkcs11`` to the ``provider_sect`` section."
+msgstr ""
+
+#: ../nethsm/openssl.rst:127
+#, fuzzy
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the provider."
+msgstr ""
+"Hvis OpenSSL's hovedkonfigurationsfil ændres til kun at indeholde disse "
+"linjer, kan det ødelægge andre programmer, der bruger OpenSSL. Derfor kan"
+" det være en god idé at oprette en separat konfigurationsfil til motoren."
+
+#: ../nethsm/openssl.rst:129
+#, fuzzy
+msgid ""
+"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"Nu kan du bruge nøgler på NetHSM ved at bruge `PKCS#11 URI'er "
+"<https://www.rfc-editor.org/rfc/rfc7512>`__, eksempel:"
+
+#: ../nethsm/openssl.rst:135
+msgid ""
+"If you set NetHSM as the default provider, you can omit the ``-provider "
+"pkcs11`` argument."
+msgstr ""
+
+#: ../nethsm/openssl.rst:138
+msgid ""
+"Currently when manually setting a key type in the URI the provider will "
+"not be able to find the key. You can omit the ``;type=private`` or "
+"``;type=public`` part of the URI to make it work."
+msgstr ""
 
 #: ../nethsm/operation.rst:2
 msgid "Operation"
@@ -17411,8 +17494,9 @@ msgid ""
 " to rotate your screen manually."
 msgstr ""
 "Hvis du har en NitroPhone eller NitroTablet uden rotationssensor, kan du "
-"bruge Rotation Control <https://play.google.com/store/apps/details?id=org."
-"crape.rotationcontrol>`__ til at rotere din skærm manuelt."
+"bruge Rotation Control "
+"<https://play.google.com/store/apps/details?id=org.crape.rotationcontrol>`__"
+" til at rotere din skærm manuelt."
 
 #: ../nitrophone/apps.rst:63
 msgid "Permissions of Individual Apps"
@@ -30605,3 +30689,16 @@ msgstr ""
 
 #~ msgid "NitroPhone"
 #~ msgstr "NitroPhone"
+
+#~ msgid ""
+#~ "NetHSM can be used as a backend"
+#~ " for OpenSSL using the ``engine`` "
+#~ "interface."
+#~ msgstr ""
+#~ "NetHSM kan bruges som backend for "
+#~ "OpenSSL ved hjælp af ``engine`` "
+#~ "interface."
+
+#~ msgid "Setup"
+#~ msgstr "Opsætning"
+

@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-27 19:54+0200\n"
+"POT-Creation-Date: 2023-08-28 10:25+0200\n"
 "PO-Revision-Date: 2023-08-27 19:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Greek <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/el/>\n"
 "Language: el\n"
+"Language-Team: Greek <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/el/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6106,7 +6105,7 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ και να εκτελέσετε τις "
 "ακόλουθες εντολές:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:100
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -6123,15 +6122,15 @@ msgstr ""
 "Αλλάξτε τις ρυθμίσεις του libnethsm_pkcs11 ώστε να ταιριάζουν με το δικό "
 "σας NetHSM στο ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:109
 msgid "Build the container."
 msgstr "Κατασκευάστε το δοχείο."
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:115
 msgid "Run the container."
 msgstr "Εκτελέστε το εμπορευματοκιβώτιο."
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:121
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6920,20 +6919,27 @@ msgid "OpenSSL Configuration"
 msgstr "Διαμόρφωση OpenSSL"
 
 #: ../nethsm/nginx.rst:13
-msgid "Follow the `OpenSSL setup guide <openssl.html>`__."
+#, fuzzy
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__."
 msgstr "Ακολουθήστε τον οδηγό εγκατάστασης `OpenSSL <openssl.html>`__."
 
-#: ../nethsm/nginx.rst:16
+#: ../nethsm/nginx.rst:15
+msgid "Providers aren't supported yet by Nginx."
+msgstr ""
+
+#: ../nethsm/nginx.rst:18
 msgid "Nginx Configuration"
 msgstr "Διαμόρφωση Nginx"
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:59
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr ""
 "Το ``ssl_certificate`` πρέπει να παραπέμπει σε ένα αρχείο πιστοποιητικού "
 "στο δίσκο."
 
-#: ../nethsm/nginx.rst:59
+#: ../nethsm/nginx.rst:61
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6944,7 +6950,7 @@ msgstr ""
 "ιδιωτικό κλειδί με την ετικέτα/ID ``webserver`` και τον τύπο κλειδιού "
 "``private``."
 
-#: ../nethsm/nginx.rst:61
+#: ../nethsm/nginx.rst:63
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6952,7 +6958,7 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:64
+#: ../nethsm/nginx.rst:66
 msgid ""
 "Currently the NetHSM PKCS#11 module only works when ``master_process`` "
 "and ``daemon`` are set to ``off``. These options are not recommended for "
@@ -6962,7 +6968,7 @@ msgstr ""
 "``master_process`` και ``daemon`` έχουν οριστεί σε ``off``. Αυτές οι "
 "επιλογές δεν συνιστώνται για παραγωγική χρήση."
 
-#: ../nethsm/nginx.rst:67
+#: ../nethsm/nginx.rst:69
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6972,11 +6978,11 @@ msgstr ""
 " μεταφορτώσετε στο NetHSM. Εάν το πιστοποιητικό στο δίσκο και το κλειδί "
 "στο NetHSM δεν ταιριάζουν, το nginx δεν θα ξεκινήσει."
 
-#: ../nethsm/nginx.rst:70
+#: ../nethsm/nginx.rst:72
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Διαμόρφωση"
 
-#: ../nethsm/nginx.rst:82
+#: ../nethsm/nginx.rst:84
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6985,11 +6991,11 @@ msgstr ""
 "μεταβλητής περιβάλλοντος (βλ. `Setup <setup>`__) ή να τον δώσετε στις "
 "ρυθμίσεις του nginx:"
 
-#: ../nethsm/nginx.rst:90 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:92 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Παράδειγμα"
 
-#: ../nethsm/nginx.rst:92
+#: ../nethsm/nginx.rst:94
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -7003,13 +7009,13 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ και εκτελέστε τις "
 "ακόλουθες εντολές:"
 
-#: ../nethsm/nginx.rst:96
+#: ../nethsm/nginx.rst:98
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Η εκτέλεση του σεναρίου generate διαγράφει το κλειδί ``webserver`` και το"
 " αντικαθιστά."
 
-#: ../nethsm/nginx.rst:99
+#: ../nethsm/nginx.rst:101
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -7019,7 +7025,7 @@ msgstr ""
 "διεύθυνση URL των αιτήσεων curl στο ``container/nginx/generate.sh`` ώστε "
 "να δείχνει στο NetHSM σας."
 
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:102
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -7027,7 +7033,7 @@ msgstr ""
 "Αλλάξτε τις ρυθμίσεις του libnethsm_pkcs11 ώστε να ταιριάζουν με το δικό "
 "σας NetHSM στο ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:101
+#: ../nethsm/nginx.rst:103
 msgid "Generate the certificate and key."
 msgstr "Δημιουργήστε το πιστοποιητικό και το κλειδί."
 
@@ -7112,15 +7118,22 @@ msgstr ""
 msgid "OpenSSL"
 msgstr "OpenSSL"
 
-#: ../nethsm/openssl.rst:4
+#: ../nethsm/openssl.rst:6
+#, fuzzy
 msgid ""
-"NetHSM can be used as a backend for OpenSSL using the ``engine`` "
-"interface."
+"Trying to retrieve the private key will crash OpenSSL. This is normal "
+"because private keys cannot be extracted from a NetHSM. You may want to "
+"retrieve the public key instead (see example below)."
 msgstr ""
-"Το NetHSM μπορεί να χρησιμοποιηθεί ως backend για το OpenSSL "
-"χρησιμοποιώντας τη διεπαφή ``engine``."
+"Αν προσπαθήσετε να ανακτήσετε το ιδιωτικό κλειδί, αυτό είναι φυσιολογικό."
+" Ίσως να θέλετε να ανακτήσετε το δημόσιο κλειδί (δείτε το παράδειγμα "
+"παρακάτω)."
 
-#: ../nethsm/openssl.rst:7
+#: ../nethsm/openssl.rst:9
+msgid "Engine"
+msgstr ""
+
+#: ../nethsm/openssl.rst:12
 msgid ""
 "When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
 " key on the NetHSM will cause OpenSSL to not find any key."
@@ -7129,20 +7142,14 @@ msgstr ""
 "ύπαρξη ενός κλειδιού EdDSA στο NetHSM θα προκαλέσει το OpenSSL να μην "
 "βρει κανένα κλειδί."
 
-#: ../nethsm/openssl.rst:10
+#: ../nethsm/openssl.rst:14
 msgid ""
-"Trying to retrieve the private key will crash, this is normal. You may "
-"want to retrieve the public key instead (see example below)."
+"The OpenSSL engine interface is the old way to implement custom backends "
+"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
+"stable way to use the NetHSM with OpenSSL."
 msgstr ""
-"Αν προσπαθήσετε να ανακτήσετε το ιδιωτικό κλειδί, αυτό είναι φυσιολογικό."
-" Ίσως να θέλετε να ανακτήσετε το δημόσιο κλειδί (δείτε το παράδειγμα "
-"παρακάτω)."
 
-#: ../nethsm/openssl.rst:13
-msgid "Setup"
-msgstr "Ρύθμιση"
-
-#: ../nethsm/openssl.rst:15
+#: ../nethsm/openssl.rst:16 ../nethsm/openssl.rst:97
 msgid ""
 "You will need to setup the PKCS#11 module, following `these instructions "
 "<pkcs11-setup.html>`__."
@@ -7150,32 +7157,33 @@ msgstr ""
 "Θα πρέπει να ρυθμίσετε την ενότητα PKCS#11, ακολουθώντας τις παρακάτω "
 "οδηγίες ` <pkcs11-setup.html>` __."
 
-#: ../nethsm/openssl.rst:17
+#: ../nethsm/openssl.rst:18
 msgid "Install the engine:"
 msgstr "Τοποθετήστε τον κινητήρα:"
 
-#: ../nethsm/openssl.rst:20
+#: ../nethsm/openssl.rst:21
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
-#: ../nethsm/openssl.rst:26
+#: ../nethsm/openssl.rst:27
 msgid "Fedora"
 msgstr "Fedora"
 
-#: ../nethsm/openssl.rst:32
+#: ../nethsm/openssl.rst:33
 msgid "Arch Linux"
 msgstr "Arch Linux"
 
-#: ../nethsm/openssl.rst:38
+#: ../nethsm/openssl.rst:39
+#, fuzzy
 msgid ""
-"Then you need to configure OpenSSL to use the engine. This is done by "
+"Next you need to configure OpenSSL to use the engine. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
 "Στη συνέχεια, πρέπει να ρυθμίσετε το OpenSSL ώστε να χρησιμοποιεί τη "
 "μηχανή. Αυτό γίνεται προσθέτοντας τις ακόλουθες γραμμές στο αρχείο "
 "``openssl.cnf``:"
 
-#: ../nethsm/openssl.rst:57
+#: ../nethsm/openssl.rst:58 ../nethsm/openssl.rst:123
 msgid ""
 "You can specify to OpenSSL the path of the OpenSSL configuration file "
 "using the ``OPENSSL_CONF`` environment variable."
@@ -7183,7 +7191,7 @@ msgstr ""
 "Μπορείτε να καθορίσετε στο OpenSSL τη διαδρομή του αρχείου ρυθμίσεων του "
 "OpenSSL χρησιμοποιώντας τη μεταβλητή περιβάλλοντος ``OPENSSL_CONF``."
 
-#: ../nethsm/openssl.rst:60
+#: ../nethsm/openssl.rst:61
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
@@ -7194,7 +7202,7 @@ msgstr ""
 "χρησιμοποιούν το OpenSSL. Έτσι, ίσως να θέλετε να δημιουργήσετε ένα "
 "ξεχωριστό αρχείο ρυθμίσεων για τη μηχανή."
 
-#: ../nethsm/openssl.rst:62
+#: ../nethsm/openssl.rst:63
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -7203,7 +7211,7 @@ msgstr ""
 "gnu/pkcs11/libnethsm_pkcs11.so`` με τη διαδρομή προς την ενότητα PKCS#11 "
 "που εγκαταστήσατε νωρίτερα."
 
-#: ../nethsm/openssl.rst:64
+#: ../nethsm/openssl.rst:65
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -7219,7 +7227,7 @@ msgstr ""
 "είναι ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``, για το Fedora"
 " είναι ``/usr/lib64/engines-3/libpkcs11.so``."
 
-#: ../nethsm/openssl.rst:66
+#: ../nethsm/openssl.rst:67
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -7227,11 +7235,11 @@ msgstr ""
 "Τώρα μπορείτε να χρησιμοποιήσετε κλειδιά στο NetHSM χρησιμοποιώντας "
 "`PKCS#11 URIs <https://www.rfc-editor.org/rfc/rfc7512>`__, παράδειγμα:"
 
-#: ../nethsm/openssl.rst:72
+#: ../nethsm/openssl.rst:73
 msgid "This will use the key ``webserver``."
 msgstr "Αυτό θα χρησιμοποιήσει το κλειδί ``webserver``."
 
-#: ../nethsm/openssl.rst:75
+#: ../nethsm/openssl.rst:76
 msgid ""
 "You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
 "get the full URI of the keys:"
@@ -7239,15 +7247,92 @@ msgstr ""
 "Μπορείτε να χρησιμοποιήσετε την εντολή ``p11tool`` από το `GnuTLS "
 "<https://gnutls.org/>` για να λάβετε το πλήρες URI των κλειδιών:"
 
-#: ../nethsm/openssl.rst:82
-msgid "Example Commands"
+#: ../nethsm/openssl.rst:83
+#, fuzzy
+msgid "Example Command"
 msgstr "Παράδειγμα εντολών"
 
-#: ../nethsm/openssl.rst:84
+#: ../nethsm/openssl.rst:85
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr ""
 "Ανάκτηση του δημόσιου κλειδιού ενός ζεύγους ασύμμετρων κλειδιών στο "
 "NetHSM :"
+
+#: ../nethsm/openssl.rst:93
+msgid "Provider"
+msgstr ""
+
+#: ../nethsm/openssl.rst:95
+msgid ""
+"The OpenSSL provider interface is the new way to implement custom "
+"backends for OpenSSL. The `pkcs11-provider backend "
+"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
+"stage of development."
+msgstr ""
+
+#: ../nethsm/openssl.rst:99
+msgid ""
+"Install the provider. For Fedora a package named ``pkcs11-provider`` "
+"exists. For other Linux distributions you will need to `build it from "
+"source "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
+msgstr ""
+
+#: ../nethsm/openssl.rst:101
+#, fuzzy
+msgid ""
+"Then you need to configure OpenSSL to use the provider. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr ""
+"Στη συνέχεια, πρέπει να ρυθμίσετε το OpenSSL ώστε να χρησιμοποιεί τη "
+"μηχανή. Αυτό γίνεται προσθέτοντας τις ακόλουθες γραμμές στο αρχείο "
+"``openssl.cnf``:"
+
+#: ../nethsm/openssl.rst:118
+msgid ""
+"Set ``module`` to the path of the provider you installed and ``pkcs11"
+"-module-path`` to the path of the PKCS#11 module you installed."
+msgstr ""
+
+#: ../nethsm/openssl.rst:120
+msgid ""
+"If you want to set NetHSM as the default provider, you can add ``default "
+"= pkcs11`` to the ``provider_sect`` section."
+msgstr ""
+
+#: ../nethsm/openssl.rst:127
+#, fuzzy
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the provider."
+msgstr ""
+"Αν το κύριο αρχείο ρυθμίσεων του OpenSSL τροποποιηθεί ώστε να περιέχει "
+"μόνο αυτές τις γραμμές, θα μπορούσε να καταστρέψει άλλα προγράμματα που "
+"χρησιμοποιούν το OpenSSL. Έτσι, ίσως να θέλετε να δημιουργήσετε ένα "
+"ξεχωριστό αρχείο ρυθμίσεων για τη μηχανή."
+
+#: ../nethsm/openssl.rst:129
+#, fuzzy
+msgid ""
+"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"Τώρα μπορείτε να χρησιμοποιήσετε κλειδιά στο NetHSM χρησιμοποιώντας "
+"`PKCS#11 URIs <https://www.rfc-editor.org/rfc/rfc7512>`__, παράδειγμα:"
+
+#: ../nethsm/openssl.rst:135
+msgid ""
+"If you set NetHSM as the default provider, you can omit the ``-provider "
+"pkcs11`` argument."
+msgstr ""
+
+#: ../nethsm/openssl.rst:138
+msgid ""
+"Currently when manually setting a key type in the URI the provider will "
+"not be able to find the key. You can omit the ``;type=private`` or "
+"``;type=public`` part of the URI to make it work."
+msgstr ""
 
 #: ../nethsm/operation.rst:2
 msgid "Operation"
@@ -18032,10 +18117,10 @@ msgid ""
 "<https://play.google.com/store/apps/details?id=org.crape.rotationcontrol>`__"
 " to rotate your screen manually."
 msgstr ""
-"Αν έχετε NitroPhone ή NitroTablet χωρίς αισθητήρα περιστροφής, μπορείτε να "
-"χρησιμοποιήσετε το Rotation Control <https://play.google.com/store/apps/"
-"details?id=org.crape.rotationcontrol>`__ για να περιστρέψετε την οθόνη σας "
-"χειροκίνητα."
+"Αν έχετε NitroPhone ή NitroTablet χωρίς αισθητήρα περιστροφής, μπορείτε "
+"να χρησιμοποιήσετε το Rotation Control "
+"<https://play.google.com/store/apps/details?id=org.crape.rotationcontrol>`__"
+" για να περιστρέψετε την οθόνη σας χειροκίνητα."
 
 #: ../nitrophone/apps.rst:63
 msgid "Permissions of Individual Apps"
@@ -31822,3 +31907,16 @@ msgstr ""
 
 #~ msgid "NitroPhone"
 #~ msgstr "NitroPhone"
+
+#~ msgid ""
+#~ "NetHSM can be used as a backend"
+#~ " for OpenSSL using the ``engine`` "
+#~ "interface."
+#~ msgstr ""
+#~ "Το NetHSM μπορεί να χρησιμοποιηθεί ως"
+#~ " backend για το OpenSSL χρησιμοποιώντας "
+#~ "τη διεπαφή ``engine``."
+
+#~ msgid "Setup"
+#~ msgstr "Ρύθμιση"
+

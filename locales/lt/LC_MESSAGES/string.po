@@ -8,19 +8,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-27 19:54+0200\n"
+"POT-Creation-Date: 2023-08-28 10:25+0200\n"
 "PO-Revision-Date: 2023-08-27 19:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Lithuanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/lt/>\n"
 "Language: lt\n"
+"Language-Team: Lithuanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/lt/>\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100"
+" > 19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > "
+"19)) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
-"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
-"1 : 2);\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5965,7 +5964,7 @@ msgstr ""
 "kad klonuotumėte `nethsm-pkcs11 saugyklą <https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__ ir paleisti šias komandas:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:100
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5981,15 +5980,15 @@ msgstr ""
 "Pakeiskite libnethsm_pkcs11 konfigūraciją taip, kad ji atitiktų jūsų "
 "NetHSM ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:109
 msgid "Build the container."
 msgstr "Pastatykite konteinerį."
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:115
 msgid "Run the container."
 msgstr "Paleiskite konteinerį."
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:121
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6766,18 +6765,25 @@ msgid "OpenSSL Configuration"
 msgstr "\"OpenSSL\" konfigūracija"
 
 #: ../nethsm/nginx.rst:13
-msgid "Follow the `OpenSSL setup guide <openssl.html>`__."
+#, fuzzy
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__."
 msgstr "Vadovaukitės `OpenSSL sąrankos vadovu <openssl.html>`__."
 
-#: ../nethsm/nginx.rst:16
+#: ../nethsm/nginx.rst:15
+msgid "Providers aren't supported yet by Nginx."
+msgstr ""
+
+#: ../nethsm/nginx.rst:18
 msgid "Nginx Configuration"
 msgstr "\"Nginx\" konfigūracija"
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:59
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "``ssl_certificate`` turi nurodyti į sertifikato failą diske."
 
-#: ../nethsm/nginx.rst:59
+#: ../nethsm/nginx.rst:61
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6787,7 +6793,7 @@ msgstr ""
 "OpenSSL variklį su PKCS#11 moduliu ir pasirenkame privatųjį raktą su "
 "``webserver`` ``private`` etikete/ID ir rakto tipu."
 
-#: ../nethsm/nginx.rst:61
+#: ../nethsm/nginx.rst:63
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6795,7 +6801,7 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:64
+#: ../nethsm/nginx.rst:66
 msgid ""
 "Currently the NetHSM PKCS#11 module only works when ``master_process`` "
 "and ``daemon`` are set to ``off``. These options are not recommended for "
@@ -6805,7 +6811,7 @@ msgstr ""
 "ir ``daemon`` yra nustatyti į ``off``. Šių parinkčių nerekomenduojama "
 "naudoti gamybiniam naudojimui."
 
-#: ../nethsm/nginx.rst:67
+#: ../nethsm/nginx.rst:69
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6815,11 +6821,11 @@ msgstr ""
 "esantis sertifikatas ir NetHSM esantis raktas nesutampa, \"nginx\" "
 "nepradės veikti."
 
-#: ../nethsm/nginx.rst:70
+#: ../nethsm/nginx.rst:72
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 konfigūracija"
 
-#: ../nethsm/nginx.rst:82
+#: ../nethsm/nginx.rst:84
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6827,11 +6833,11 @@ msgstr ""
 "Norėdami apsaugoti slaptažodį, galite jį pateikti per aplinkos kintamąjį "
 "(žr. `sąranka <setup>`__) arba nurodyti jį \"nginx\" konfigūracijoje:"
 
-#: ../nethsm/nginx.rst:90 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:92 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Pavyzdys"
 
-#: ../nethsm/nginx.rst:92
+#: ../nethsm/nginx.rst:94
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6845,13 +6851,13 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ ir vykdykite šias "
 "komandas:"
 
-#: ../nethsm/nginx.rst:96
+#: ../nethsm/nginx.rst:98
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Paleidus generavimo scenarijų ištrinamas ``webserver`` raktas ir jis "
 "pakeičiamas nauju."
 
-#: ../nethsm/nginx.rst:99
+#: ../nethsm/nginx.rst:101
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6861,7 +6867,7 @@ msgstr ""
 "URL adresą ``container/nginx/generate.sh``, kad jis būtų nukreiptas į "
 "jūsų NetHSM."
 
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:102
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6869,7 +6875,7 @@ msgstr ""
 "Pakeiskite libnethsm_pkcs11 konfigūraciją taip, kad ji atitiktų jūsų "
 "NetHSM ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:101
+#: ../nethsm/nginx.rst:103
 msgid "Generate the certificate and key."
 msgstr "Sukurkite sertifikatą ir raktą."
 
@@ -6950,15 +6956,21 @@ msgstr ""
 msgid "OpenSSL"
 msgstr "OpenSSL"
 
-#: ../nethsm/openssl.rst:4
+#: ../nethsm/openssl.rst:6
+#, fuzzy
 msgid ""
-"NetHSM can be used as a backend for OpenSSL using the ``engine`` "
-"interface."
+"Trying to retrieve the private key will crash OpenSSL. This is normal "
+"because private keys cannot be extracted from a NetHSM. You may want to "
+"retrieve the public key instead (see example below)."
 msgstr ""
-"NetHSM galima naudoti kaip OpenSSL galinį serverį, naudojant ``engine`` "
-"sąsają."
+"Bandant gauti privatų raktą, įvyks avarija, tai normalu. Vietoj to galite"
+" norėti gauti viešąjį raktą (žr. pavyzdį toliau)."
 
-#: ../nethsm/openssl.rst:7
+#: ../nethsm/openssl.rst:9
+msgid "Engine"
+msgstr ""
+
+#: ../nethsm/openssl.rst:12
 msgid ""
 "When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
 " key on the NetHSM will cause OpenSSL to not find any key."
@@ -6966,19 +6978,14 @@ msgstr ""
 "Kai naudojama variklio (libp11) versija 0.4.12 arba senesnė, jei NetHSM "
 "turi EdDSA raktą, \"OpenSSL\" neranda jokio rakto."
 
-#: ../nethsm/openssl.rst:10
+#: ../nethsm/openssl.rst:14
 msgid ""
-"Trying to retrieve the private key will crash, this is normal. You may "
-"want to retrieve the public key instead (see example below)."
+"The OpenSSL engine interface is the old way to implement custom backends "
+"for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
+"stable way to use the NetHSM with OpenSSL."
 msgstr ""
-"Bandant gauti privatų raktą, įvyks avarija, tai normalu. Vietoj to galite"
-" norėti gauti viešąjį raktą (žr. pavyzdį toliau)."
 
-#: ../nethsm/openssl.rst:13
-msgid "Setup"
-msgstr "Sąranka"
-
-#: ../nethsm/openssl.rst:15
+#: ../nethsm/openssl.rst:16 ../nethsm/openssl.rst:97
 msgid ""
 "You will need to setup the PKCS#11 module, following `these instructions "
 "<pkcs11-setup.html>`__."
@@ -6986,31 +6993,32 @@ msgstr ""
 "Turėsite nustatyti PKCS#11 modulį, vadovaudamiesi `šiomis instrukcijomis "
 "<pkcs11-setup.html>`__."
 
-#: ../nethsm/openssl.rst:17
+#: ../nethsm/openssl.rst:18
 msgid "Install the engine:"
 msgstr "Sumontuokite variklį:"
 
-#: ../nethsm/openssl.rst:20
+#: ../nethsm/openssl.rst:21
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
-#: ../nethsm/openssl.rst:26
+#: ../nethsm/openssl.rst:27
 msgid "Fedora"
 msgstr "\"Fedora\""
 
-#: ../nethsm/openssl.rst:32
+#: ../nethsm/openssl.rst:33
 msgid "Arch Linux"
 msgstr "\"Arch Linux"
 
-#: ../nethsm/openssl.rst:38
+#: ../nethsm/openssl.rst:39
+#, fuzzy
 msgid ""
-"Then you need to configure OpenSSL to use the engine. This is done by "
+"Next you need to configure OpenSSL to use the engine. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
 "Tada reikia sukonfigūruoti \"OpenSSL\", kad ji naudotų variklį. Tai "
 "atliekama į ``openssl.cnf`` failą įrašius šias eilutes:"
 
-#: ../nethsm/openssl.rst:57
+#: ../nethsm/openssl.rst:58 ../nethsm/openssl.rst:123
 msgid ""
 "You can specify to OpenSSL the path of the OpenSSL configuration file "
 "using the ``OPENSSL_CONF`` environment variable."
@@ -7018,7 +7026,7 @@ msgstr ""
 "OpenSSL konfigūracijos failo kelią galite nurodyti naudodami "
 "``OPENSSL_CONF`` aplinkos kintamąjį."
 
-#: ../nethsm/openssl.rst:60
+#: ../nethsm/openssl.rst:61
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
@@ -7029,7 +7037,7 @@ msgstr ""
 "naudojančias programas. Todėl galite norėti sukurti atskirą variklio "
 "konfigūracijos failą."
 
-#: ../nethsm/openssl.rst:62
+#: ../nethsm/openssl.rst:63
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -7037,7 +7045,7 @@ msgstr ""
 "Pakeiskite ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` keliu"
 " į anksčiau įdiegtą PKCS#11 modulį."
 
-#: ../nethsm/openssl.rst:64
+#: ../nethsm/openssl.rst:65
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -7053,7 +7061,7 @@ msgstr ""
 "-linux-gnu/engines-3/libpkcs11.so``; \"Fedora\" sistemoje - "
 "``/usr/lib64/engines-3/libpkcs11.so``."
 
-#: ../nethsm/openssl.rst:66
+#: ../nethsm/openssl.rst:67
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -7061,11 +7069,11 @@ msgstr ""
 "Dabar galite naudoti raktus NetHSM, naudodami `PKCS#11 URI <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, pvz:"
 
-#: ../nethsm/openssl.rst:72
+#: ../nethsm/openssl.rst:73
 msgid "This will use the key ``webserver``."
 msgstr "Bus naudojamas raktas ``webserver``."
 
-#: ../nethsm/openssl.rst:75
+#: ../nethsm/openssl.rst:76
 msgid ""
 "You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
 "get the full URI of the keys:"
@@ -7073,13 +7081,89 @@ msgstr ""
 "Galite naudoti ``p11tool`` komandą iš `GnuTLS <https://gnutls.org/>` "
 "gauti visą raktų URI:"
 
-#: ../nethsm/openssl.rst:82
-msgid "Example Commands"
+#: ../nethsm/openssl.rst:83
+#, fuzzy
+msgid "Example Command"
 msgstr "Komandų pavyzdžiai"
 
-#: ../nethsm/openssl.rst:84
+#: ../nethsm/openssl.rst:85
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "Gauti asimetrinių raktų poros viešąjį raktą iš NetHSM :"
+
+#: ../nethsm/openssl.rst:93
+msgid "Provider"
+msgstr ""
+
+#: ../nethsm/openssl.rst:95
+msgid ""
+"The OpenSSL provider interface is the new way to implement custom "
+"backends for OpenSSL. The `pkcs11-provider backend "
+"<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
+"stage of development."
+msgstr ""
+
+#: ../nethsm/openssl.rst:99
+msgid ""
+"Install the provider. For Fedora a package named ``pkcs11-provider`` "
+"exists. For other Linux distributions you will need to `build it from "
+"source "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
+msgstr ""
+
+#: ../nethsm/openssl.rst:101
+#, fuzzy
+msgid ""
+"Then you need to configure OpenSSL to use the provider. This is done by "
+"adding the following lines to your ``openssl.cnf`` file:"
+msgstr ""
+"Tada reikia sukonfigūruoti \"OpenSSL\", kad ji naudotų variklį. Tai "
+"atliekama į ``openssl.cnf`` failą įrašius šias eilutes:"
+
+#: ../nethsm/openssl.rst:118
+msgid ""
+"Set ``module`` to the path of the provider you installed and ``pkcs11"
+"-module-path`` to the path of the PKCS#11 module you installed."
+msgstr ""
+
+#: ../nethsm/openssl.rst:120
+msgid ""
+"If you want to set NetHSM as the default provider, you can add ``default "
+"= pkcs11`` to the ``provider_sect`` section."
+msgstr ""
+
+#: ../nethsm/openssl.rst:127
+#, fuzzy
+msgid ""
+"If the main OpenSSL configuration file is modified to contain only these "
+"lines, it could break other programs using OpenSSL. Thus, you may want to"
+" create a separate configuration file for the provider."
+msgstr ""
+"Jei pagrindinis \"OpenSSL\" konfigūracijos failas būtų pakeistas taip, "
+"kad jame būtų tik šios eilutės, tai galėtų pažeisti kitas \"OpenSSL\" "
+"naudojančias programas. Todėl galite norėti sukurti atskirą variklio "
+"konfigūracijos failą."
+
+#: ../nethsm/openssl.rst:129
+#, fuzzy
+msgid ""
+"Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, example:"
+msgstr ""
+"Dabar galite naudoti raktus NetHSM, naudodami `PKCS#11 URI <https://www"
+".rfc-editor.org/rfc/rfc7512>`__, pvz:"
+
+#: ../nethsm/openssl.rst:135
+msgid ""
+"If you set NetHSM as the default provider, you can omit the ``-provider "
+"pkcs11`` argument."
+msgstr ""
+
+#: ../nethsm/openssl.rst:138
+msgid ""
+"Currently when manually setting a key type in the URI the provider will "
+"not be able to find the key. You can omit the ``;type=private`` or "
+"``;type=public`` part of the URI to make it work."
+msgstr ""
 
 #: ../nethsm/operation.rst:2
 msgid "Operation"
@@ -17505,10 +17589,10 @@ msgid ""
 "<https://play.google.com/store/apps/details?id=org.crape.rotationcontrol>`__"
 " to rotate your screen manually."
 msgstr ""
-"Jei turite \"NitroPhone\" arba \"NitroTablet\" be sukimosi jutiklio, galite "
-"naudoti \"Rotation Control\" <https://play.google.com/store/apps/"
-"details?id=org.crape.rotationcontrol>`__, kad pasuktumėte ekraną rankiniu "
-"būdu."
+"Jei turite \"NitroPhone\" arba \"NitroTablet\" be sukimosi jutiklio, "
+"galite naudoti \"Rotation Control\" "
+"<https://play.google.com/store/apps/details?id=org.crape.rotationcontrol>`__,"
+" kad pasuktumėte ekraną rankiniu būdu."
 
 #: ../nitrophone/apps.rst:63
 msgid "Permissions of Individual Apps"
@@ -30645,3 +30729,15 @@ msgstr ""
 
 #~ msgid "NitroPhone"
 #~ msgstr "\"NitroPhone\""
+
+#~ msgid ""
+#~ "NetHSM can be used as a backend"
+#~ " for OpenSSL using the ``engine`` "
+#~ "interface."
+#~ msgstr ""
+#~ "NetHSM galima naudoti kaip OpenSSL "
+#~ "galinį serverį, naudojant ``engine`` sąsają."
+
+#~ msgid "Setup"
+#~ msgstr "Sąranka"
+
