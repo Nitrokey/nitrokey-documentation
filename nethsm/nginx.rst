@@ -20,8 +20,6 @@ Nginx Configuration
 .. code-block:: 
 
   ssl_engine pkcs11;
-  daemon off;
-  master_process off;
 
   server {
       listen       443 ssl;
@@ -61,9 +59,6 @@ The ``ssl_certificate`` must point to a certificate file on the disk.
 The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use the OpenSSL engine with the PKCS#11 module and select the private key with the label/ID ``webserver`` and the key type ``private``.
 
 ``ssl_certificate_key "engine:pkcs11:pkcs11:object=webserver;type=private";``
-
-.. note:: 
-  Currently the NetHSM PKCS#11 module only works when ``master_process`` and ``daemon`` are set to ``off``. These options are not recommended for production use.
 
 .. note:: 
   You must generate the certificate separately and then upload it to the NetHSM. If the certificate on disk and the key in the NetHSM don't match nginx won't start.

@@ -71,21 +71,10 @@ The configuration is yaml-formatted:
             # List the NetHSM instances 
             instances:
               - url: "https://keyfender:8443/api/v1"   # URL to reach the server
-                # When the server has a self-signed certificate, you can allow it via two ways:
-
-                # File containing the certificate of the server
-                certificate_file: /etc/cert/localhsm.pem
-                # The string certificate of the server
-                certificate: |
-                    -----BEGIN CERTIFICATE-----
-                    MIIBHjCBxaADAgECAgkApoJ3bQqnwmcwCgYIKoZIzj0EAwIwFDESMBAGA1UEAwwJ
-                    a2V5ZmVuZGVyMCAXDTcwMDEwMTAwMDAwMFoYDzk5OTkxMjMxMjM1OTU5WjAUMRIw
-                    EAYDVQQDDAlrZXlmZW5kZXIwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAARzywjh
-                    NQM4pBxNBIOrgWvKFcWle5SLGux1caV9rur/fnPptDnekjZ2fajJX2EEACjk9JKw
-                    VykkfhbAdR46VGgFMAoGCCqGSM49BAMCA0gAMEUCIQDvm9J5y9S9POsfdlo5lKzg
-                    VFYo7UBT3aTavB6b+hUUbQIgMzT1fBhbBFTgCx5LKQMp1V7SuyCby3oxL5RWYqhl
-                    /R0=
-                    -----END CERTIFICATE-----
+                # When the NetHSM has a self-signed certificate, it can be verified by a sha256 fingerprint of the NetHSM's certificate:
+                sha256_fingerprints: 
+                  - "31:92:8E:A4:5E:16:5C:A7:33:44:E8:E9:8E:64:C4:AE:7B:2A:57:E5:77:43:49:F3:69:C9:8F:C4:2F:3A:3B:6E"
+                
 
 Instances
 ~~~~~~~~~
