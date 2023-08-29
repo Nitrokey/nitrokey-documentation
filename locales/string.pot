@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-28 10:25+0200\n"
+"POT-Creation-Date: 2023-08-29 13:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4466,7 +4466,7 @@ msgid "If you want to experiment with the given example you can use git to clone
 msgstr ""
 
 #: ../nethsm/ejbca.rst:30
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:95
 msgid "Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started>`__ for more information."
 msgstr ""
 
@@ -4475,17 +4475,17 @@ msgid "Change the libnethsm_pkcs11 configuration to match your NetHSM in ``conta
 msgstr ""
 
 #: ../nethsm/ejbca.rst:32
-#: ../nethsm/nginx.rst:109
+#: ../nethsm/nginx.rst:104
 msgid "Build the container."
 msgstr ""
 
 #: ../nethsm/ejbca.rst:38
-#: ../nethsm/nginx.rst:115
+#: ../nethsm/nginx.rst:110
 msgid "Run the container."
 msgstr ""
 
 #: ../nethsm/ejbca.rst:44
-#: ../nethsm/nginx.rst:121
+#: ../nethsm/nginx.rst:116
 msgid "The container will be available at `https://localhost:9443/ <https://localhost:9443/>`__."
 msgstr ""
 
@@ -5052,56 +5052,52 @@ msgstr ""
 msgid "Nginx Configuration"
 msgstr ""
 
-#: ../nethsm/nginx.rst:59
+#: ../nethsm/nginx.rst:57
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr ""
 
-#: ../nethsm/nginx.rst:61
+#: ../nethsm/nginx.rst:59
 msgid "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use the OpenSSL engine with the PKCS#11 module and select the private key with the label/ID ``webserver`` and the key type ``private``."
 msgstr ""
 
-#: ../nethsm/nginx.rst:63
+#: ../nethsm/nginx.rst:61
 msgid "``ssl_certificate_key \"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 msgstr ""
 
-#: ../nethsm/nginx.rst:66
-msgid "Currently the NetHSM PKCS#11 module only works when ``master_process`` and ``daemon`` are set to ``off``. These options are not recommended for production use."
-msgstr ""
-
-#: ../nethsm/nginx.rst:69
+#: ../nethsm/nginx.rst:64
 msgid "You must generate the certificate separately and then upload it to the NetHSM. If the certificate on disk and the key in the NetHSM don't match nginx won't start."
 msgstr ""
 
-#: ../nethsm/nginx.rst:72
+#: ../nethsm/nginx.rst:67
 msgid "libnethsm_pkcs11 Configuration"
 msgstr ""
 
-#: ../nethsm/nginx.rst:84
+#: ../nethsm/nginx.rst:79
 msgid "To secure the password you can provide it via an environment variable (see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr ""
 
-#: ../nethsm/nginx.rst:92
+#: ../nethsm/nginx.rst:87
 #: ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr ""
 
-#: ../nethsm/nginx.rst:94
+#: ../nethsm/nginx.rst:89
 msgid "If you want to experiment with the `given example <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:"
 msgstr ""
 
-#: ../nethsm/nginx.rst:98
+#: ../nethsm/nginx.rst:93
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 
-#: ../nethsm/nginx.rst:101
+#: ../nethsm/nginx.rst:96
 msgid "If your NetHSM is not running on localhost, you will need to change the URL of the curl requests in ``container/nginx/generate.sh`` to point to your NetHSM."
 msgstr ""
 
-#: ../nethsm/nginx.rst:102
+#: ../nethsm/nginx.rst:97
 msgid "Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/nginx/p11nethsm.conf``."
 msgstr ""
 
-#: ../nethsm/nginx.rst:103
+#: ../nethsm/nginx.rst:98
 msgid "Generate the certificate and key."
 msgstr ""
 
@@ -5970,61 +5966,61 @@ msgstr ""
 msgid "All platforms"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:91
+#: ../nethsm/pkcs11-setup.rst:80
 msgid "Instances"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:93
+#: ../nethsm/pkcs11-setup.rst:82
 msgid "If multiple NetHSM instances are listed in the same slot, these instances must be configured in a cluster. The credentials of the users and the keys must be the same on all instances."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:95
+#: ../nethsm/pkcs11-setup.rst:84
 msgid "The module will use the instances in a round-robin fashion, trying another instance if one fails."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:99
+#: ../nethsm/pkcs11-setup.rst:88
 msgid "Users"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:101
+#: ../nethsm/pkcs11-setup.rst:90
 msgid "The operator and administrator users are both optional but the module won't start if no user is configured. This is so you can configure the module with only an administrator user, only an operator user or both at the same time."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:103
+#: ../nethsm/pkcs11-setup.rst:92
 msgid "When the two users are set the module will use the operator by default and only use the administrator user when the action needs it."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:105
+#: ../nethsm/pkcs11-setup.rst:94
 msgid "The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 SO is mapped to the NetHSM administrator."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:108
+#: ../nethsm/pkcs11-setup.rst:97
 #: ../software/nk-app2/passwords.rst:2
 #: ../nitrokey3/shared/reset.rst.inc:19
 msgid "Passwords"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:110
+#: ../nethsm/pkcs11-setup.rst:99
 msgid "The password can be provided by multiple means:"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:112
+#: ../nethsm/pkcs11-setup.rst:101
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:113
+#: ../nethsm/pkcs11-setup.rst:102
 msgid "In an environment variable read by the module with the ``env:`` prefix: ``env:ENV_STORING_THE_PASSWORD``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:114
+#: ../nethsm/pkcs11-setup.rst:103
 msgid "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool --module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin password you need to use ``--so-pin`` instead: ``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:117
+#: ../nethsm/pkcs11-setup.rst:106
 msgid "If the password of an user is not set in the configuration file a login will be required to provide the password (3rd method)."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:119
+#: ../nethsm/pkcs11-setup.rst:108
 msgid "A NetHSM that is not operational is considered as a slot with the token not present."
 msgstr ""
 

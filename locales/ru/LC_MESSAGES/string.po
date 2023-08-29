@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-28 10:25+0200\n"
+"POT-Creation-Date: 2023-08-29 13:12+0200\n"
 "PO-Revision-Date: 2023-08-28 09:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Russian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ru/>\n"
 "Language: ru\n"
+"Language-Team: Russian <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/ru/>\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5987,7 +5986,7 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ и выполнить следующие "
 "команды:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:100
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -6003,15 +6002,15 @@ msgstr ""
 "Измените конфигурацию libnethsm_pkcs11 в соответствии с вашим NetHSM в "
 "разделе ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:109
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
 msgid "Build the container."
 msgstr "Постройте контейнер."
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:115
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
 msgid "Run the container."
 msgstr "Запустите контейнер."
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:121
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6792,8 +6791,8 @@ msgid ""
 "Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
 "<openssl.html#engine>`__."
 msgstr ""
-"Настройте механизм OpenSSL, следуя руководству по настройке механизма `"
-"OpenSSL Engine <openssl.html#engine>`__."
+"Настройте механизм OpenSSL, следуя руководству по настройке механизма "
+"`OpenSSL Engine <openssl.html#engine>`__."
 
 #: ../nethsm/nginx.rst:15
 msgid "Providers aren't supported yet by Nginx."
@@ -6803,11 +6802,11 @@ msgstr "Провайдеры пока не поддерживаются Nginx."
 msgid "Nginx Configuration"
 msgstr "Конфигурация Nginx"
 
-#: ../nethsm/nginx.rst:59
+#: ../nethsm/nginx.rst:57
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "Адрес ``ssl_certificate`` должен указывать на файл сертификата на диске."
 
-#: ../nethsm/nginx.rst:61
+#: ../nethsm/nginx.rst:59
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6817,7 +6816,7 @@ msgstr ""
 "Здесь мы используем движок OpenSSL с модулем PKCS#11 и выбираем закрытый "
 "ключ с меткой/идентификатором ``webserver`` и типом ключа ``private``."
 
-#: ../nethsm/nginx.rst:63
+#: ../nethsm/nginx.rst:61
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6825,17 +6824,7 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:66
-msgid ""
-"Currently the NetHSM PKCS#11 module only works when ``master_process`` "
-"and ``daemon`` are set to ``off``. These options are not recommended for "
-"production use."
-msgstr ""
-"В настоящее время модуль NetHSM PKCS#11 работает только в том случае, "
-"если для опций ``master_process`` и ``daemon`` установлено значение "
-"``off``. Эти опции не рекомендуются для использования в производстве."
-
-#: ../nethsm/nginx.rst:69
+#: ../nethsm/nginx.rst:64
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6845,11 +6834,11 @@ msgstr ""
 "NetHSM. Если сертификат на диске и ключ в NetHSM не совпадают, nginx не "
 "запустится."
 
-#: ../nethsm/nginx.rst:72
+#: ../nethsm/nginx.rst:67
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Конфигурация"
 
-#: ../nethsm/nginx.rst:84
+#: ../nethsm/nginx.rst:79
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6857,11 +6846,11 @@ msgstr ""
 "Для защиты пароля можно задать его через переменную окружения (см. `Setup"
 " <setup>`__) или указать его в конфигурации nginx:"
 
-#: ../nethsm/nginx.rst:92 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:87 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Пример"
 
-#: ../nethsm/nginx.rst:94
+#: ../nethsm/nginx.rst:89
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6875,11 +6864,11 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ и выполните следующие "
 "команды:"
 
-#: ../nethsm/nginx.rst:98
+#: ../nethsm/nginx.rst:93
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr "Запуск скрипта generate удаляет ключ ``webserver`` и заменяет его."
 
-#: ../nethsm/nginx.rst:101
+#: ../nethsm/nginx.rst:96
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6889,7 +6878,7 @@ msgstr ""
 "URL-адрес запросов curl в ``container/nginx/generate.sh``, чтобы он "
 "указывал на ваш NetHSM."
 
-#: ../nethsm/nginx.rst:102
+#: ../nethsm/nginx.rst:97
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6897,7 +6886,7 @@ msgstr ""
 "Измените конфигурацию libnethsm_pkcs11 в соответствии с вашим NetHSM в "
 "разделе ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:103
+#: ../nethsm/nginx.rst:98
 msgid "Generate the certificate and key."
 msgstr "Сгенерируйте сертификат и ключ."
 
@@ -6986,8 +6975,8 @@ msgid ""
 "retrieve the public key instead (see example below)."
 msgstr ""
 "Попытка извлечь закрытый ключ приводит к аварийному завершению работы "
-"OpenSSL. Это нормально, поскольку закрытые ключи не могут быть извлечены из "
-"NetHSM. Вместо этого можно получить открытый ключ (см. пример ниже)."
+"OpenSSL. Это нормально, поскольку закрытые ключи не могут быть извлечены "
+"из NetHSM. Вместо этого можно получить открытый ключ (см. пример ниже)."
 
 #: ../nethsm/openssl.rst:9
 msgid "Engine"
@@ -7008,8 +6997,8 @@ msgid ""
 "stable way to use the NetHSM with OpenSSL."
 msgstr ""
 "Интерфейс движка OpenSSL - это старый способ реализации пользовательских "
-"бэкендов для OpenSSL, который устарел в OpenSSL 3. Это по-прежнему наиболее "
-"стабильный способ использования NetHSM с OpenSSL."
+"бэкендов для OpenSSL, который устарел в OpenSSL 3. Это по-прежнему "
+"наиболее стабильный способ использования NetHSM с OpenSSL."
 
 #: ../nethsm/openssl.rst:16 ../nethsm/openssl.rst:97
 msgid ""
@@ -7124,9 +7113,10 @@ msgid ""
 "<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
 "stage of development."
 msgstr ""
-"Интерфейс OpenSSL provider - это новый способ реализации пользовательских "
-"бэкендов для OpenSSL. Бэкенд `pkcs11-provider <https://github.com/latchset/"
-"pkcs11-provider>`__ пока находится на ранней стадии разработки."
+"Интерфейс OpenSSL provider - это новый способ реализации пользовательских"
+" бэкендов для OpenSSL. Бэкенд `pkcs11-provider "
+"<https://github.com/latchset/pkcs11-provider>`__ пока находится на ранней"
+" стадии разработки."
 
 #: ../nethsm/openssl.rst:99
 msgid ""
@@ -7136,25 +7126,25 @@ msgid ""
 "<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
 msgstr ""
 "Установите провайдера. Для Fedora существует пакет с именем "
-"``pkcs11-provider``. Для других дистрибутивов Linux вам потребуется `собрать "
-"его из исходных текстов <https://github.com/latchset/pkcs11-provider/blob/"
-"main/BUILD.md>`__."
+"``pkcs11-provider``. Для других дистрибутивов Linux вам потребуется "
+"`собрать его из исходных текстов "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
 
 #: ../nethsm/openssl.rst:101
 msgid ""
 "Then you need to configure OpenSSL to use the provider. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
-"Затем необходимо настроить OpenSSL на использование провайдера. Это делается "
-"путем добавления следующих строк в файл ``openssl.cnf``:"
+"Затем необходимо настроить OpenSSL на использование провайдера. Это "
+"делается путем добавления следующих строк в файл ``openssl.cnf``:"
 
 #: ../nethsm/openssl.rst:118
 msgid ""
 "Set ``module`` to the path of the provider you installed and ``pkcs11"
 "-module-path`` to the path of the PKCS#11 module you installed."
 msgstr ""
-"Установите ``module`` на путь установленного провайдера, а ``pkcs11-module-"
-"path`` - на путь установленного модуля PKCS#11."
+"Установите ``module`` на путь установленного провайдера, а ``pkcs11"
+"-module-path`` - на путь установленного модуля PKCS#11."
 
 #: ../nethsm/openssl.rst:120
 msgid ""
@@ -7180,16 +7170,16 @@ msgid ""
 "Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
 msgstr ""
-"Затем можно использовать ключи на NetHSM с помощью URI `PKCS#11 <https://www."
-"rfc-editor.org/rfc/rfc7512>`__, например:"
+"Затем можно использовать ключи на NetHSM с помощью URI `PKCS#11 "
+"<https://www.rfc-editor.org/rfc/rfc7512>`__, например:"
 
 #: ../nethsm/openssl.rst:135
 msgid ""
 "If you set NetHSM as the default provider, you can omit the ``-provider "
 "pkcs11`` argument."
 msgstr ""
-"Если в качестве провайдера по умолчанию установлен NetHSM, то аргумент ``-"
-"provider pkcs11`` можно опустить."
+"Если в качестве провайдера по умолчанию установлен NetHSM, то аргумент "
+"``-provider pkcs11`` можно опустить."
 
 #: ../nethsm/openssl.rst:138
 msgid ""
@@ -7197,8 +7187,8 @@ msgid ""
 "not be able to find the key. You can omit the ``;type=private`` or "
 "``;type=public`` part of the URI to make it work."
 msgstr ""
-"В настоящее время при ручном задании типа ключа в URI провайдер не сможет "
-"найти ключ. Вы можете опустить в URI часть ``;type=private`` или "
+"В настоящее время при ручном задании типа ключа в URI провайдер не сможет"
+" найти ключ. Вы можете опустить в URI часть ``;type=private`` или "
 "``;type=public``, чтобы все заработало."
 
 #: ../nethsm/operation.rst:2
@@ -8126,11 +8116,11 @@ msgstr "Конфигурация имеет формат yaml:"
 msgid "All platforms"
 msgstr "Все платформы"
 
-#: ../nethsm/pkcs11-setup.rst:91
+#: ../nethsm/pkcs11-setup.rst:80
 msgid "Instances"
 msgstr "Экземпляры"
 
-#: ../nethsm/pkcs11-setup.rst:93
+#: ../nethsm/pkcs11-setup.rst:82
 msgid ""
 "If multiple NetHSM instances are listed in the same slot, these instances"
 " must be configured in a cluster. The credentials of the users and the "
@@ -8140,7 +8130,7 @@ msgstr ""
 "экземпляры должны быть сконфигурированы в кластер. Учетные данные "
 "пользователей и ключи должны быть одинаковыми на всех экземплярах."
 
-#: ../nethsm/pkcs11-setup.rst:95
+#: ../nethsm/pkcs11-setup.rst:84
 msgid ""
 "The module will use the instances in a round-robin fashion, trying "
 "another instance if one fails."
@@ -8148,11 +8138,11 @@ msgstr ""
 "Модуль будет использовать экземпляры по кругу, пробуя другой экземпляр, "
 "если один из них не работает."
 
-#: ../nethsm/pkcs11-setup.rst:99
+#: ../nethsm/pkcs11-setup.rst:88
 msgid "Users"
 msgstr "Пользователи"
 
-#: ../nethsm/pkcs11-setup.rst:101
+#: ../nethsm/pkcs11-setup.rst:90
 msgid ""
 "The operator and administrator users are both optional but the module "
 "won't start if no user is configured. This is so you can configure the "
@@ -8165,7 +8155,7 @@ msgstr ""
 "пользователем-администратором, только с пользователем-оператором или с "
 "обоими одновременно."
 
-#: ../nethsm/pkcs11-setup.rst:103
+#: ../nethsm/pkcs11-setup.rst:92
 msgid ""
 "When the two users are set the module will use the operator by default "
 "and only use the administrator user when the action needs it."
@@ -8174,7 +8164,7 @@ msgstr ""
 "оператора, а пользователя-администратора - только тогда, когда это будет "
 "необходимо."
 
-#: ../nethsm/pkcs11-setup.rst:105
+#: ../nethsm/pkcs11-setup.rst:94
 msgid ""
 "The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 "
 "SO is mapped to the NetHSM administrator."
@@ -8182,20 +8172,20 @@ msgstr ""
 "Обычный пользователь PKCS11 сопоставляется с оператором NetHSM, а PKCS11 "
 "SO - с администратором NetHSM."
 
-#: ../nethsm/pkcs11-setup.rst:108 ../nitrokey3/shared/reset.rst.inc:19
+#: ../nethsm/pkcs11-setup.rst:97 ../nitrokey3/shared/reset.rst.inc:19
 #: ../software/nk-app2/passwords.rst:2
 msgid "Passwords"
 msgstr "Пароли"
 
-#: ../nethsm/pkcs11-setup.rst:110
+#: ../nethsm/pkcs11-setup.rst:99
 msgid "The password can be provided by multiple means:"
 msgstr "Пароль может быть предоставлен несколькими способами:"
 
-#: ../nethsm/pkcs11-setup.rst:112
+#: ../nethsm/pkcs11-setup.rst:101
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr "Открытым текстом в конфигурации ``password: \"mypassword\"``."
 
-#: ../nethsm/pkcs11-setup.rst:113
+#: ../nethsm/pkcs11-setup.rst:102
 msgid ""
 "In an environment variable read by the module with the ``env:`` prefix: "
 "``env:ENV_STORING_THE_PASSWORD``"
@@ -8203,7 +8193,7 @@ msgstr ""
 "В переменной окружения, читаемой модулем с префиксом ``env:``: "
 "``env:ENV_STORING_THE_PASSWORD``"
 
-#: ../nethsm/pkcs11-setup.rst:114
+#: ../nethsm/pkcs11-setup.rst:103
 msgid ""
 "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
 "--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
@@ -8216,7 +8206,7 @@ msgstr ""
 " --module libnethsm_pkcs11.so --login --login-type so --so-pin "
 "Administrator``"
 
-#: ../nethsm/pkcs11-setup.rst:117
+#: ../nethsm/pkcs11-setup.rst:106
 msgid ""
 "If the password of an user is not set in the configuration file a login "
 "will be required to provide the password (3rd method)."
@@ -8224,7 +8214,7 @@ msgstr ""
 "Если пароль пользователя не задан в конфигурационном файле, то для ввода "
 "пароля потребуется вход в систему (3-й способ)."
 
-#: ../nethsm/pkcs11-setup.rst:119
+#: ../nethsm/pkcs11-setup.rst:108
 msgid ""
 "A NetHSM that is not operational is considered as a slot with the token "
 "not present."
@@ -30971,3 +30961,18 @@ msgstr ""
 
 #~ msgid "Setup"
 #~ msgstr "Настройка"
+
+#~ msgid ""
+#~ "Currently the NetHSM PKCS#11 module only"
+#~ " works when ``master_process`` and "
+#~ "``daemon`` are set to ``off``. These "
+#~ "options are not recommended for "
+#~ "production use."
+#~ msgstr ""
+#~ "В настоящее время модуль NetHSM PKCS#11"
+#~ " работает только в том случае, если"
+#~ " для опций ``master_process`` и ``daemon``"
+#~ " установлено значение ``off``. Эти опции"
+#~ " не рекомендуются для использования в "
+#~ "производстве."
+

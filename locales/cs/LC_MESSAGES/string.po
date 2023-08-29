@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-28 10:25+0200\n"
+"POT-Creation-Date: 2023-08-29 13:12+0200\n"
 "PO-Revision-Date: 2023-08-28 09:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Czech <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/cs/>\n"
 "Language: cs\n"
+"Language-Team: Czech <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/cs/>\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5876,7 +5875,7 @@ msgstr ""
 "naklonovat repozitář `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ a spustit následující příkazy:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:100
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5892,15 +5891,15 @@ msgstr ""
 "Změňte konfiguraci libnethsm_pkcs11 tak, aby odpovídala vašemu NetHSM na "
 "adrese ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:109
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
 msgid "Build the container."
 msgstr "Sestavte kontejner."
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:115
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
 msgid "Run the container."
 msgstr "Spusťte kontejner."
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:121
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6674,8 +6673,8 @@ msgid ""
 "Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
 "<openssl.html#engine>`__."
 msgstr ""
-"Nastavte engine OpenSSL podle průvodce nastavením `OpenSSL Engine <openssl."
-"html#engine>`__."
+"Nastavte engine OpenSSL podle průvodce nastavením `OpenSSL Engine "
+"<openssl.html#engine>`__."
 
 #: ../nethsm/nginx.rst:15
 msgid "Providers aren't supported yet by Nginx."
@@ -6685,13 +6684,13 @@ msgstr "Nginx zatím zprostředkovatele nepodporuje."
 msgid "Nginx Configuration"
 msgstr "Konfigurace Nginx"
 
-#: ../nethsm/nginx.rst:59
+#: ../nethsm/nginx.rst:57
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr ""
 "Adresa ``ssl_certificate`` musí ukazovat na soubor s certifikátem na "
 "disku."
 
-#: ../nethsm/nginx.rst:61
+#: ../nethsm/nginx.rst:59
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6701,7 +6700,7 @@ msgstr ""
 "engine OpenSSL s modulem PKCS#11 a vybereme soukromý klíč s označením/ID "
 "``webserver`` a typem klíče ``private``."
 
-#: ../nethsm/nginx.rst:63
+#: ../nethsm/nginx.rst:61
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6709,17 +6708,7 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:66
-msgid ""
-"Currently the NetHSM PKCS#11 module only works when ``master_process`` "
-"and ``daemon`` are set to ``off``. These options are not recommended for "
-"production use."
-msgstr ""
-"V současné době modul NetHSM PKCS#11 funguje pouze tehdy, když jsou "
-"``master_process`` a ``daemon`` nastaveny na ``off``. Tyto volby se pro "
-"produkční použití nedoporučují."
-
-#: ../nethsm/nginx.rst:69
+#: ../nethsm/nginx.rst:64
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6729,11 +6718,11 @@ msgstr ""
 "Pokud se certifikát na disku a klíč v NetHSM neshodují, nginx se "
 "nespustí."
 
-#: ../nethsm/nginx.rst:72
+#: ../nethsm/nginx.rst:67
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Konfigurace"
 
-#: ../nethsm/nginx.rst:84
+#: ../nethsm/nginx.rst:79
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6741,11 +6730,11 @@ msgstr ""
 "Heslo můžete zabezpečit pomocí proměnné prostředí (viz `Setup <setup>`__)"
 " nebo jej zadat v konfiguraci nginx:"
 
-#: ../nethsm/nginx.rst:92 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:87 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Příklad"
 
-#: ../nethsm/nginx.rst:94
+#: ../nethsm/nginx.rst:89
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6759,13 +6748,13 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ a spusťte následující "
 "příkazy:"
 
-#: ../nethsm/nginx.rst:98
+#: ../nethsm/nginx.rst:93
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "Spuštěním generovacího skriptu se odstraní klíč ``webserver`` a nahradí "
 "se."
 
-#: ../nethsm/nginx.rst:101
+#: ../nethsm/nginx.rst:96
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6775,7 +6764,7 @@ msgstr ""
 "požadavků curl v ``container/nginx/generate.sh`` tak, aby ukazovala na "
 "váš NetHSM."
 
-#: ../nethsm/nginx.rst:102
+#: ../nethsm/nginx.rst:97
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6783,7 +6772,7 @@ msgstr ""
 "Změňte konfiguraci libnethsm_pkcs11 tak, aby odpovídala vašemu NetHSM na "
 "adrese ``container/ejbca/p11nethsm.conf``."
 
-#: ../nethsm/nginx.rst:103
+#: ../nethsm/nginx.rst:98
 msgid "Generate the certificate and key."
 msgstr "Vygenerujte certifikát a klíč."
 
@@ -6871,8 +6860,8 @@ msgid ""
 "retrieve the public key instead (see example below)."
 msgstr ""
 "Pokus o získání soukromého klíče způsobí pád protokolu OpenSSL. To je "
-"normální, protože soukromé klíče nelze z NetHSM získat. Místo toho můžete "
-"chtít načíst veřejný klíč (viz příklad níže)."
+"normální, protože soukromé klíče nelze z NetHSM získat. Místo toho můžete"
+" chtít načíst veřejný klíč (viz příklad níže)."
 
 #: ../nethsm/openssl.rst:9
 msgid "Engine"
@@ -6892,9 +6881,9 @@ msgid ""
 "for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
 "stable way to use the NetHSM with OpenSSL."
 msgstr ""
-"Rozhraní OpenSSL engine je starý způsob implementace vlastních backendů pro "
-"OpenSSL, který je v OpenSSL 3 zastaralý. Stále se jedná o nejstabilnější "
-"způsob použití NetHSM s OpenSSL."
+"Rozhraní OpenSSL engine je starý způsob implementace vlastních backendů "
+"pro OpenSSL, který je v OpenSSL 3 zastaralý. Stále se jedná o "
+"nejstabilnější způsob použití NetHSM s OpenSSL."
 
 #: ../nethsm/openssl.rst:16 ../nethsm/openssl.rst:97
 msgid ""
@@ -6925,8 +6914,8 @@ msgid ""
 "Next you need to configure OpenSSL to use the engine. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
-"Dále je třeba nakonfigurovat OpenSSL tak, aby engine používal. To provedete "
-"přidáním následujících řádků do souboru ``openssl.cnf``:"
+"Dále je třeba nakonfigurovat OpenSSL tak, aby engine používal. To "
+"provedete přidáním následujících řádků do souboru ``openssl.cnf``:"
 
 #: ../nethsm/openssl.rst:58 ../nethsm/openssl.rst:123
 msgid ""
@@ -7010,9 +6999,10 @@ msgid ""
 "<https://github.com/latchset/pkcs11-provider>`__ is still in an early "
 "stage of development."
 msgstr ""
-"Rozhraní OpenSSL provider je nový způsob implementace vlastních backendů pro "
-"OpenSSL. Backend `pkcs11-provider <https://github.com/latchset/"
-"pkcs11-provider>`__ je stále v rané fázi vývoje."
+"Rozhraní OpenSSL provider je nový způsob implementace vlastních backendů "
+"pro OpenSSL. Backend `pkcs11-provider "
+"<https://github.com/latchset/pkcs11-provider>`__ je stále v rané fázi "
+"vývoje."
 
 #: ../nethsm/openssl.rst:99
 msgid ""
@@ -7022,33 +7012,33 @@ msgid ""
 "<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
 msgstr ""
 "Nainstalujte poskytovatele. Pro Fedoru existuje balíček s názvem "
-"``pkcs11-provider``. Pro ostatní linuxové distribuce jej budete muset `"
-"sestavit ze zdrojových kódů <https://github.com/latchset/pkcs11-provider/"
-"blob/main/BUILD.md>`__."
+"``pkcs11-provider``. Pro ostatní linuxové distribuce jej budete muset "
+"`sestavit ze zdrojových kódů "
+"<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
 
 #: ../nethsm/openssl.rst:101
 msgid ""
 "Then you need to configure OpenSSL to use the provider. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
 msgstr ""
-"Poté je třeba nakonfigurovat OpenSSL tak, aby používal zprostředkovatele. To "
-"provedete přidáním následujících řádků do souboru ``openssl.cnf``:"
+"Poté je třeba nakonfigurovat OpenSSL tak, aby používal zprostředkovatele."
+" To provedete přidáním následujících řádků do souboru ``openssl.cnf``:"
 
 #: ../nethsm/openssl.rst:118
 msgid ""
 "Set ``module`` to the path of the provider you installed and ``pkcs11"
 "-module-path`` to the path of the PKCS#11 module you installed."
 msgstr ""
-"Nastavte ``module`` na cestu k nainstalovanému zprostředkovateli a ``pkcs11"
-"-module-path`` na cestu k nainstalovanému modulu PKCS#11."
+"Nastavte ``module`` na cestu k nainstalovanému zprostředkovateli a "
+"``pkcs11-module-path`` na cestu k nainstalovanému modulu PKCS#11."
 
 #: ../nethsm/openssl.rst:120
 msgid ""
 "If you want to set NetHSM as the default provider, you can add ``default "
 "= pkcs11`` to the ``provider_sect`` section."
 msgstr ""
-"Pokud chcete nastavit NetHSM jako výchozího poskytovatele, můžete přidat ``"
-"default = pkcs11`` do sekce ``provider_sect``."
+"Pokud chcete nastavit NetHSM jako výchozího poskytovatele, můžete přidat "
+"``default = pkcs11`` do sekce ``provider_sect``."
 
 #: ../nethsm/openssl.rst:127
 msgid ""
@@ -7056,9 +7046,9 @@ msgid ""
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
 " create a separate configuration file for the provider."
 msgstr ""
-"Pokud by byl hlavní konfigurační soubor OpenSSL upraven tak, aby obsahoval "
-"pouze tyto řádky, mohlo by dojít k poškození ostatních programů "
-"používajících OpenSSL. Proto je vhodné vytvořit pro zprostředkovatele "
+"Pokud by byl hlavní konfigurační soubor OpenSSL upraven tak, aby "
+"obsahoval pouze tyto řádky, mohlo by dojít k poškození ostatních programů"
+" používajících OpenSSL. Proto je vhodné vytvořit pro zprostředkovatele "
 "samostatný konfigurační soubor."
 
 #: ../nethsm/openssl.rst:129
@@ -7083,9 +7073,9 @@ msgid ""
 "not be able to find the key. You can omit the ``;type=private`` or "
 "``;type=public`` part of the URI to make it work."
 msgstr ""
-"V současné době při ručním nastavení typu klíče v URI není zprostředkovatel "
-"schopen klíč najít. Aby to fungovalo, můžete vynechat část URI "
-"``;type=private`` nebo ``;type=public``."
+"V současné době při ručním nastavení typu klíče v URI není "
+"zprostředkovatel schopen klíč najít. Aby to fungovalo, můžete vynechat "
+"část URI ``;type=private`` nebo ``;type=public``."
 
 #: ../nethsm/operation.rst:2
 msgid "Operation"
@@ -7991,11 +7981,11 @@ msgstr "Konfigurace je ve formátu yaml:"
 msgid "All platforms"
 msgstr "Všechny platformy"
 
-#: ../nethsm/pkcs11-setup.rst:91
+#: ../nethsm/pkcs11-setup.rst:80
 msgid "Instances"
 msgstr "Instance"
 
-#: ../nethsm/pkcs11-setup.rst:93
+#: ../nethsm/pkcs11-setup.rst:82
 msgid ""
 "If multiple NetHSM instances are listed in the same slot, these instances"
 " must be configured in a cluster. The credentials of the users and the "
@@ -8005,7 +7995,7 @@ msgstr ""
 "instance nakonfigurovány v clusteru. Pověření uživatelů a klíče musí být "
 "ve všech instancích stejné."
 
-#: ../nethsm/pkcs11-setup.rst:95
+#: ../nethsm/pkcs11-setup.rst:84
 msgid ""
 "The module will use the instances in a round-robin fashion, trying "
 "another instance if one fails."
@@ -8013,11 +8003,11 @@ msgstr ""
 "Modul bude instance používat obousměrně a v případě selhání jedné "
 "instance vyzkouší jinou."
 
-#: ../nethsm/pkcs11-setup.rst:99
+#: ../nethsm/pkcs11-setup.rst:88
 msgid "Users"
 msgstr "Uživatelé"
 
-#: ../nethsm/pkcs11-setup.rst:101
+#: ../nethsm/pkcs11-setup.rst:90
 msgid ""
 "The operator and administrator users are both optional but the module "
 "won't start if no user is configured. This is so you can configure the "
@@ -8029,7 +8019,7 @@ msgstr ""
 "nakonfigurovat pouze s uživatelem správce, pouze s uživatelem operátora "
 "nebo s oběma uživateli současně."
 
-#: ../nethsm/pkcs11-setup.rst:103
+#: ../nethsm/pkcs11-setup.rst:92
 msgid ""
 "When the two users are set the module will use the operator by default "
 "and only use the administrator user when the action needs it."
@@ -8038,7 +8028,7 @@ msgstr ""
 "uživatele operátora a uživatele správce použije pouze tehdy, když to akce"
 " vyžaduje."
 
-#: ../nethsm/pkcs11-setup.rst:105
+#: ../nethsm/pkcs11-setup.rst:94
 msgid ""
 "The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 "
 "SO is mapped to the NetHSM administrator."
@@ -8046,20 +8036,20 @@ msgstr ""
 "Běžný uživatel PKCS11 je namapován na operátora NetHSM a PKCS11 SO je "
 "namapován na správce NetHSM."
 
-#: ../nethsm/pkcs11-setup.rst:108 ../nitrokey3/shared/reset.rst.inc:19
+#: ../nethsm/pkcs11-setup.rst:97 ../nitrokey3/shared/reset.rst.inc:19
 #: ../software/nk-app2/passwords.rst:2
 msgid "Passwords"
 msgstr "Hesla"
 
-#: ../nethsm/pkcs11-setup.rst:110
+#: ../nethsm/pkcs11-setup.rst:99
 msgid "The password can be provided by multiple means:"
 msgstr "Heslo lze zadat více způsoby:"
 
-#: ../nethsm/pkcs11-setup.rst:112
+#: ../nethsm/pkcs11-setup.rst:101
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr "V prostém textu v konfiguraci ``password: \"mypassword\"``"
 
-#: ../nethsm/pkcs11-setup.rst:113
+#: ../nethsm/pkcs11-setup.rst:102
 msgid ""
 "In an environment variable read by the module with the ``env:`` prefix: "
 "``env:ENV_STORING_THE_PASSWORD``"
@@ -8067,7 +8057,7 @@ msgstr ""
 "V proměnné prostředí načtené modulem s předponou ``env:``: "
 "``env:ENV_STORING_THE_PASSWORD``"
 
-#: ../nethsm/pkcs11-setup.rst:114
+#: ../nethsm/pkcs11-setup.rst:103
 msgid ""
 "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
 "--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
@@ -8080,7 +8070,7 @@ msgstr ""
 "--module libnethsm_pkcs11.so --login --login-type so --so-pin "
 "Administrator``"
 
-#: ../nethsm/pkcs11-setup.rst:117
+#: ../nethsm/pkcs11-setup.rst:106
 msgid ""
 "If the password of an user is not set in the configuration file a login "
 "will be required to provide the password (3rd method)."
@@ -8088,7 +8078,7 @@ msgstr ""
 "Pokud není heslo uživatele nastaveno v konfiguračním souboru, bude "
 "vyžadováno přihlášení za účelem zadání hesla (3. metoda)."
 
-#: ../nethsm/pkcs11-setup.rst:119
+#: ../nethsm/pkcs11-setup.rst:108
 msgid ""
 "A NetHSM that is not operational is considered as a slot with the token "
 "not present."
@@ -30387,3 +30377,17 @@ msgstr ""
 
 #~ msgid "Setup"
 #~ msgstr "Nastavení"
+
+#~ msgid ""
+#~ "Currently the NetHSM PKCS#11 module only"
+#~ " works when ``master_process`` and "
+#~ "``daemon`` are set to ``off``. These "
+#~ "options are not recommended for "
+#~ "production use."
+#~ msgstr ""
+#~ "V současné době modul NetHSM PKCS#11 "
+#~ "funguje pouze tehdy, když jsou "
+#~ "``master_process`` a ``daemon`` nastaveny na"
+#~ " ``off``. Tyto volby se pro produkční"
+#~ " použití nedoporučují."
+

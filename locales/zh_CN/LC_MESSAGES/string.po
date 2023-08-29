@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-28 10:25+0200\n"
+"POT-Creation-Date: 2023-08-29 13:12+0200\n"
 "PO-Revision-Date: 2023-08-28 09:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5156,7 +5156,7 @@ msgstr ""
 "如果您想用给出的示例进行实验，可以使用 git 克隆`nethsm-pkcs11 仓库<https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__ 并运行以下命令："
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:100
+#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5168,15 +5168,15 @@ msgid ""
 "``container/ejbca/p11nethsm.conf``."
 msgstr "在``container/ejbca/p11nethsm.conf`` 中更改 libnethsm_pkcs11 配置，使其与 NetHSM 匹配。"
 
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:109
+#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
 msgid "Build the container."
 msgstr "建造集装箱"
 
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:115
+#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
 msgid "Run the container."
 msgstr "运行容器。"
 
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:121
+#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -5877,11 +5877,11 @@ msgstr "Nginx 尚不支持提供程序。"
 msgid "Nginx Configuration"
 msgstr "Nginx 配置"
 
-#: ../nethsm/nginx.rst:59
+#: ../nethsm/nginx.rst:57
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "``ssl_certificate`` 必须指向磁盘上的证书文件。"
 
-#: ../nethsm/nginx.rst:61
+#: ../nethsm/nginx.rst:59
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -5890,7 +5890,7 @@ msgstr ""
 "``ssl_certificate_key`` 可以是 OpenSSL 配置。在此，我们使用带有 PKCS#11 模块的 OpenSSL "
 "引擎，并选择带有标签/ID``webserver`` 和密钥类型``private`` 的私钥。"
 
-#: ../nethsm/nginx.rst:63
+#: ../nethsm/nginx.rst:61
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -5898,37 +5898,28 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:66
-msgid ""
-"Currently the NetHSM PKCS#11 module only works when ``master_process`` "
-"and ``daemon`` are set to ``off``. These options are not recommended for "
-"production use."
-msgstr ""
-"目前，只有当``master_process`` 和``daemon`` 设置为``off`` 时，NetHSM PKCS#11 "
-"模块才能工作。不建议在生产中使用这些选项。"
-
-#: ../nethsm/nginx.rst:69
+#: ../nethsm/nginx.rst:64
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
 "nginx won't start."
 msgstr "你必须单独生成证书，然后上传到NetHSM。如果磁盘上的证书和NetHSM中的密钥不匹配，nginx将无法启动。"
 
-#: ../nethsm/nginx.rst:72
+#: ../nethsm/nginx.rst:67
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 配置"
 
-#: ../nethsm/nginx.rst:84
+#: ../nethsm/nginx.rst:79
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr "要确保密码安全，可以通过环境变量（参见`Setup<setup>`__ ）或在 nginx 配置中提供密码："
 
-#: ../nethsm/nginx.rst:92 ../nitrokey3/firmware-update.rst.inc:69
+#: ../nethsm/nginx.rst:87 ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "例子"
 
-#: ../nethsm/nginx.rst:94
+#: ../nethsm/nginx.rst:89
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -5940,11 +5931,11 @@ msgstr ""
 "pkcs11/tree/main/container/nginx>`__进行实验，请使用 git 克隆`nethsm-pkcs11 "
 "仓库<https://github.com/Nitrokey/nethsm-pkcs11>`__，并运行以下命令："
 
-#: ../nethsm/nginx.rst:98
+#: ../nethsm/nginx.rst:93
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr "运行生成脚本会删除``webserver`` 密钥并将其替换。"
 
-#: ../nethsm/nginx.rst:101
+#: ../nethsm/nginx.rst:96
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -5953,13 +5944,13 @@ msgstr ""
 "如果 NetHSM 不在 localhost 上运行，则需要更改``container/nginx/generate.sh`` 中 curl "
 "请求的 URL，使其指向 NetHSM。"
 
-#: ../nethsm/nginx.rst:102
+#: ../nethsm/nginx.rst:97
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
 msgstr "在``container/ejbca/p11nethsm.conf`` 中更改 libnethsm_pkcs11 配置，使其与 NetHSM 匹配。"
 
-#: ../nethsm/nginx.rst:103
+#: ../nethsm/nginx.rst:98
 msgid "Generate the certificate and key."
 msgstr "生成证书和密钥"
 
@@ -6036,8 +6027,7 @@ msgid ""
 "Trying to retrieve the private key will crash OpenSSL. This is normal "
 "because private keys cannot be extracted from a NetHSM. You may want to "
 "retrieve the public key instead (see example below)."
-msgstr "尝试检索私钥将导致 OpenSSL 崩溃。这是正常现象，因为私钥无法从 NetHSM "
-"中提取。您可能需要检索公钥（见下面的示例）。"
+msgstr "尝试检索私钥将导致 OpenSSL 崩溃。这是正常现象，因为私钥无法从 NetHSM 中提取。您可能需要检索公钥（见下面的示例）。"
 
 #: ../nethsm/openssl.rst:9
 msgid "Engine"
@@ -6054,8 +6044,7 @@ msgid ""
 "The OpenSSL engine interface is the old way to implement custom backends "
 "for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
 "stable way to use the NetHSM with OpenSSL."
-msgstr "OpenSSL 引擎接口是为 OpenSSL 实现自定义后端的旧方法，在 OpenSSL 3 "
-"中已被弃用。"
+msgstr "OpenSSL 引擎接口是为 OpenSSL 实现自定义后端的旧方法，在 OpenSSL 3 中已被弃用。"
 
 #: ../nethsm/openssl.rst:16 ../nethsm/openssl.rst:97
 msgid ""
@@ -6083,8 +6072,7 @@ msgstr "Arch Linux"
 msgid ""
 "Next you need to configure OpenSSL to use the engine. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
-msgstr "接下来需要配置 OpenSSL 以使用该引擎。在``openssl.cnf`` "
-"文件中添加以下几行即可："
+msgstr "接下来需要配置 OpenSSL 以使用该引擎。在``openssl.cnf`` 文件中添加以下几行即可："
 
 #: ../nethsm/openssl.rst:58 ../nethsm/openssl.rst:123
 msgid ""
@@ -6168,31 +6156,26 @@ msgid ""
 "source "
 "<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
 msgstr ""
-"安装提供程序。Fedora 存在一个名为``pkcs11-provider`` 的软件包。对于其他 "
-"Linux 发行版，您需要`从源代码构建它<https://github.com/latchset/"
-"pkcs11-provider/blob/main/BUILD.md>`__。"
+"安装提供程序。Fedora 存在一个名为``pkcs11-provider`` 的软件包。对于其他 Linux "
+"发行版，您需要`从源代码构建它<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__。"
 
 #: ../nethsm/openssl.rst:101
 msgid ""
 "Then you need to configure OpenSSL to use the provider. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
-msgstr "然后，您需要配置 OpenSSL 以使用该提供程序。只需在``openssl.cnf`` "
-"文件中添加以下几行即可："
+msgstr "然后，您需要配置 OpenSSL 以使用该提供程序。只需在``openssl.cnf`` 文件中添加以下几行即可："
 
 #: ../nethsm/openssl.rst:118
 msgid ""
 "Set ``module`` to the path of the provider you installed and ``pkcs11"
 "-module-path`` to the path of the PKCS#11 module you installed."
-msgstr ""
-"将``module`` 设置为已安装的提供程序的路径，将``pkcs11-module-path`` "
-"设置为已安装的 PKCS#11 模块的路径。"
+msgstr "将``module`` 设置为已安装的提供程序的路径，将``pkcs11-module-path`` 设置为已安装的 PKCS#11 模块的路径。"
 
 #: ../nethsm/openssl.rst:120
 msgid ""
 "If you want to set NetHSM as the default provider, you can add ``default "
 "= pkcs11`` to the ``provider_sect`` section."
-msgstr "如果要将 NetHSM 设置为默认提供程序，可将``default = pkcs11`` "
-"添加到``provider_sect`` 部分。"
+msgstr "如果要将 NetHSM 设置为默认提供程序，可将``default = pkcs11`` 添加到``provider_sect`` 部分。"
 
 #: ../nethsm/openssl.rst:127
 msgid ""
@@ -6208,8 +6191,8 @@ msgid ""
 "Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
 msgstr ""
-"然后，您可以通过`PKCS#11 URIs<https://www.rfc-editor.org/rfc/rfc7512>`__ 在 "
-"NetHSM 上使用密钥，例如"
+"然后，您可以通过`PKCS#11 URIs<https://www.rfc-editor.org/rfc/rfc7512>`__ 在 NetHSM"
+" 上使用密钥，例如"
 
 #: ../nethsm/openssl.rst:135
 msgid ""
@@ -6223,8 +6206,8 @@ msgid ""
 "not be able to find the key. You can omit the ``;type=private`` or "
 "``;type=public`` part of the URI to make it work."
 msgstr ""
-"目前，在 URI 中手动设置密钥类型时，提供程序将无法找到密钥。您可以省略 URI "
-"中的``;type=private`` 或``;type=public`` 部分，使其正常工作。"
+"目前，在 URI 中手动设置密钥类型时，提供程序将无法找到密钥。您可以省略 URI 中的``;type=private`` "
+"或``;type=public`` 部分，使其正常工作。"
 
 #: ../nethsm/operation.rst:2
 msgid "Operation"
@@ -7071,28 +7054,28 @@ msgstr "配置采用 yaml 格式："
 msgid "All platforms"
 msgstr "所有平台"
 
-#: ../nethsm/pkcs11-setup.rst:91
+#: ../nethsm/pkcs11-setup.rst:80
 msgid "Instances"
 msgstr "实例"
 
-#: ../nethsm/pkcs11-setup.rst:93
+#: ../nethsm/pkcs11-setup.rst:82
 msgid ""
 "If multiple NetHSM instances are listed in the same slot, these instances"
 " must be configured in a cluster. The credentials of the users and the "
 "keys must be the same on all instances."
 msgstr "如果同一插槽中列出多个 NetHSM 实例，则必须将这些实例配置为一个群集。所有实例上的用户证书和密钥必须相同。"
 
-#: ../nethsm/pkcs11-setup.rst:95
+#: ../nethsm/pkcs11-setup.rst:84
 msgid ""
 "The module will use the instances in a round-robin fashion, trying "
 "another instance if one fails."
 msgstr "模块将以循环方式使用实例，如果一个实例失败，就会尝试另一个实例。"
 
-#: ../nethsm/pkcs11-setup.rst:99
+#: ../nethsm/pkcs11-setup.rst:88
 msgid "Users"
 msgstr "用户"
 
-#: ../nethsm/pkcs11-setup.rst:101
+#: ../nethsm/pkcs11-setup.rst:90
 msgid ""
 "The operator and administrator users are both optional but the module "
 "won't start if no user is configured. This is so you can configure the "
@@ -7100,38 +7083,38 @@ msgid ""
 "the same time."
 msgstr "操作员和管理员用户都是可选的，但如果没有配置用户，模块将无法启动。因此，您可以只配置管理员用户、操作员用户或同时配置这两个用户。"
 
-#: ../nethsm/pkcs11-setup.rst:103
+#: ../nethsm/pkcs11-setup.rst:92
 msgid ""
 "When the two users are set the module will use the operator by default "
 "and only use the administrator user when the action needs it."
 msgstr "设置两个用户后，模块将默认使用操作员用户，只有在操作需要时才使用管理员用户。"
 
-#: ../nethsm/pkcs11-setup.rst:105
+#: ../nethsm/pkcs11-setup.rst:94
 msgid ""
 "The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 "
 "SO is mapped to the NetHSM administrator."
 msgstr "常规 PKCS11 用户映射为 NetHSM 操作员，PKCS11 SO 映射为 NetHSM 管理员。"
 
-#: ../nethsm/pkcs11-setup.rst:108 ../nitrokey3/shared/reset.rst.inc:19
+#: ../nethsm/pkcs11-setup.rst:97 ../nitrokey3/shared/reset.rst.inc:19
 #: ../software/nk-app2/passwords.rst:2
 msgid "Passwords"
 msgstr "密码"
 
-#: ../nethsm/pkcs11-setup.rst:110
+#: ../nethsm/pkcs11-setup.rst:99
 msgid "The password can be provided by multiple means:"
 msgstr "密码可以通过多种方式提供："
 
-#: ../nethsm/pkcs11-setup.rst:112
+#: ../nethsm/pkcs11-setup.rst:101
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr "在配置``password: \"mypassword\"`` 中以纯文本形式出现。"
 
-#: ../nethsm/pkcs11-setup.rst:113
+#: ../nethsm/pkcs11-setup.rst:102
 msgid ""
 "In an environment variable read by the module with the ``env:`` prefix: "
 "``env:ENV_STORING_THE_PASSWORD``"
 msgstr "在模块读取的环境变量中，以``env:`` 为前缀：``env:ENV_STORING_THE_PASSWORD``"
 
-#: ../nethsm/pkcs11-setup.rst:114
+#: ../nethsm/pkcs11-setup.rst:103
 msgid ""
 "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
 "--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
@@ -7143,13 +7126,13 @@ msgstr ""
 "代替：``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so "
 "--so-pin Administrator``"
 
-#: ../nethsm/pkcs11-setup.rst:117
+#: ../nethsm/pkcs11-setup.rst:106
 msgid ""
 "If the password of an user is not set in the configuration file a login "
 "will be required to provide the password (3rd method)."
 msgstr "如果配置文件中未设置用户密码，则需要登录以提供密码（第 3 种方法）。"
 
-#: ../nethsm/pkcs11-setup.rst:119
+#: ../nethsm/pkcs11-setup.rst:108
 msgid ""
 "A NetHSM that is not operational is considered as a slot with the token "
 "not present."
@@ -25276,3 +25259,14 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "Setup"
 #~ msgstr "设置"
+
+#~ msgid ""
+#~ "Currently the NetHSM PKCS#11 module only"
+#~ " works when ``master_process`` and "
+#~ "``daemon`` are set to ``off``. These "
+#~ "options are not recommended for "
+#~ "production use."
+#~ msgstr ""
+#~ "目前，只有当``master_process`` 和``daemon`` 设置为``off`` "
+#~ "时，NetHSM PKCS#11 模块才能工作。不建议在生产中使用这些选项。"
+
