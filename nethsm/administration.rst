@@ -751,10 +751,10 @@ The restore can be applied as follows.
    .. tab:: REST API
       Information about the `/system/restore` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-restore>`__.
 
-System Update
-~~~~~~~~~~~~~
+Software Update
+~~~~~~~~~~~~~~~
 
-System updates can be installed in a two-step process. First the update image needs to be uploaded to a *Provisioned* NetHSM. The NetHSM verifies image authenticity, integrity, and version number. Optionally, the NetHSM displays release notes, if any.
+Software updates can be installed in a two-step process. First the update image needs to be uploaded to a *Provisioned* NetHSM. The NetHSM verifies image authenticity, integrity, and version number. Optionally, the NetHSM displays release notes, if any.
 
 .. warning::
 
