@@ -40,6 +40,7 @@ In case you want to restore a backup of a NetHSM, please refer to the chapter `R
    pkcs11-tool.rst
    openssl.rst
    nginx.rst
+   apache.rst
    ssh.rst
    system_recovery.rst
    opendnssec.rst
