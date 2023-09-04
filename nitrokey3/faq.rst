@@ -45,5 +45,7 @@ Nitrokey 3 FAQ
    level (See `here`_, click “ICs, Smart Cards and Smart Card-Related Devices and 
    Systems” and search for: "NXP JCOP 4 SE050M”).
 
-.. include:: ../shared-faqs/hyperlinks.rst.inc 
+**Q:** How to use Nitrokey 3 with Azure Entra ID (Active Directory)?
+   After `disabling Enforce Attestation`_ Nitrokey 3 is supported by Azure Entra ID out of the box.
 
+.. include:: ../shared-faqs/hyperlinks.rst.inc 
