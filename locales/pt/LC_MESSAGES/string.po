@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-04 15:42+0200\n"
+"POT-Creation-Date: 2023-09-05 14:41+0200\n"
 "PO-Revision-Date: 2023-06-12 15:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: pt\n"
@@ -5880,6 +5880,134 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_users-UserID-tags-Tag>`__."
 
+#: ../nethsm/apache.rst:2
+msgid "Apache"
+msgstr ""
+
+#: ../nethsm/apache.rst:4
+msgid ""
+"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
+"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+
+#: ../nethsm/apache.rst:6 ../nethsm/nginx.rst:6
+msgid ""
+"The certificate file has to be on the disk but the private key can be "
+"used from the NetHSM."
+msgstr ""
+
+#: ../nethsm/apache.rst:8 ../nethsm/nginx.rst:8
+msgid "A full example is available `below <#example>`__."
+msgstr ""
+
+#: ../nethsm/apache.rst:11 ../nethsm/nginx.rst:11
+#, fuzzy
+msgid "OpenSSL Configuration"
+msgstr "Configuração do lado do cliente"
+
+#: ../nethsm/apache.rst:13
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
+"Apache httpd.)"
+msgstr ""
+
+#: ../nethsm/apache.rst:16
+#, fuzzy
+msgid "Httpd Configuration"
+msgstr "Configuração"
+
+#: ../nethsm/apache.rst:18
+#, fuzzy
+msgid "Add the following lines to your ``httpd.conf`` :"
+msgstr "Adicione a seguinte linha ao arquivo"
+
+#: ../nethsm/apache.rst:36
+msgid "The ``SSLCertificateFile`` must point to a certificate file on the disk."
+msgstr ""
+
+#: ../nethsm/apache.rst:38
+msgid ""
+"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
+msgstr ""
+
+#: ../nethsm/apache.rst:41
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"httpd won't start."
+msgstr ""
+
+#: ../nethsm/apache.rst:44 ../nethsm/nginx.rst:67
+#, fuzzy
+msgid "libnethsm_pkcs11 Configuration"
+msgstr "Configuração do lado do cliente"
+
+#: ../nethsm/apache.rst:56
+msgid ""
+"To secure the password you can provide it via an environment variable "
+"(see `Setup <setup>`__) or provide it in the httpd configuration:"
+msgstr ""
+
+#: ../nethsm/apache.rst:64 ../nethsm/nginx.rst:87
+#: ../nitrokey3/firmware-update.rst.inc:69
+#, fuzzy
+msgid "Example"
+msgstr "**Exemplo***"
+
+#: ../nethsm/apache.rst:66
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
+" use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+
+#: ../nethsm/apache.rst:70 ../nethsm/nginx.rst:93
+msgid "Running the generate script deletes the ``webserver`` key and replaces it."
+msgstr ""
+
+#: ../nethsm/apache.rst:72 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <getting-started>`__ for more information."
+msgstr ""
+
+#: ../nethsm/apache.rst:73
+msgid ""
+"If your NetHSM is not running on localhost, you will need to change the "
+"URL of the curl requests in ``container/apache/generate.sh`` to point to "
+"your NetHSM."
+msgstr ""
+
+#: ../nethsm/apache.rst:74
+msgid ""
+"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
+"``container/apache/p11nethsm.conf``."
+msgstr ""
+
+#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:98
+#, fuzzy
+msgid "Generate the certificate and key."
+msgstr "Converter o certificado em DER"
+
+#: ../nethsm/apache.rst:81 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
+msgid "Build the container."
+msgstr ""
+
+#: ../nethsm/apache.rst:87 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
+#, fuzzy
+msgid "Run the container."
+msgstr "Usando a linha de comando"
+
+#: ../nethsm/apache.rst:93 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
+msgid ""
+"The container will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
+msgstr ""
+
 #: ../nethsm/ejbca.rst:2
 msgid "EJBCA"
 msgstr ""
@@ -5942,31 +6070,10 @@ msgid ""
 "pkcs11>`__ and run the following commands:"
 msgstr ""
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started>`__ for more information."
-msgstr ""
-
 #: ../nethsm/ejbca.rst:31
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
-msgstr ""
-
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
-msgid "Build the container."
-msgstr ""
-
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
-#, fuzzy
-msgid "Run the container."
-msgstr "Usando a linha de comando"
-
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
-msgid ""
-"The container will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__."
 msgstr ""
 
 #: ../nethsm/getting-started.rst:2 ../nextbox/gettingstarted.rst:2
@@ -6695,21 +6802,6 @@ msgid ""
 "OpenSSL engine which then uses NetHSM's PKCS#11 module."
 msgstr ""
 
-#: ../nethsm/nginx.rst:6
-msgid ""
-"The certificate file has to be on the disk but the private key can be "
-"used from the NetHSM."
-msgstr ""
-
-#: ../nethsm/nginx.rst:8
-msgid "A full example is available `below <#example>`__."
-msgstr ""
-
-#: ../nethsm/nginx.rst:11
-#, fuzzy
-msgid "OpenSSL Configuration"
-msgstr "Configuração do lado do cliente"
-
 #: ../nethsm/nginx.rst:13
 msgid ""
 "Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
@@ -6749,21 +6841,11 @@ msgid ""
 "nginx won't start."
 msgstr ""
 
-#: ../nethsm/nginx.rst:67
-#, fuzzy
-msgid "libnethsm_pkcs11 Configuration"
-msgstr "Configuração do lado do cliente"
-
 #: ../nethsm/nginx.rst:79
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr ""
-
-#: ../nethsm/nginx.rst:87 ../nitrokey3/firmware-update.rst.inc:69
-#, fuzzy
-msgid "Example"
-msgstr "**Exemplo***"
 
 #: ../nethsm/nginx.rst:89
 msgid ""
@@ -6772,10 +6854,6 @@ msgid ""
 "use git to clone the `nethsm-pkcs11 repository "
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
 "commands:"
-msgstr ""
-
-#: ../nethsm/nginx.rst:93
-msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 
 #: ../nethsm/nginx.rst:96
@@ -6790,11 +6868,6 @@ msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
 msgstr ""
-
-#: ../nethsm/nginx.rst:98
-#, fuzzy
-msgid "Generate the certificate and key."
-msgstr "Converter o certificado em DER"
 
 #: ../nethsm/opendnssec.rst:2
 msgid "OpenDNSSEC"

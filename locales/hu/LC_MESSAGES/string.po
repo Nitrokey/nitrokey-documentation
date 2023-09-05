@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-04 15:42+0200\n"
+"POT-Creation-Date: 2023-09-05 14:41+0200\n"
 "PO-Revision-Date: 2023-09-04 14:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -91,8 +90,8 @@ msgstr ""
 #: ../fido2/faq.rst:25
 msgid "**Q:** How to use Nitrokey FIDO2 with Azure Entra ID (Active Directory)?"
 msgstr ""
-"**Q:** Hogyan használhatom a Nitrokey FIDO2-t az Azure Entra ID-vel (Active "
-"Directory)?"
+"**Q:** Hogyan használhatom a Nitrokey FIDO2-t az Azure Entra ID-vel "
+"(Active Directory)?"
 
 #: ../fido2/faq.rst:24
 msgid ""
@@ -5938,6 +5937,166 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_users-UserID-tags-Tag>`__ találhatók."
 
+#: ../nethsm/apache.rst:2
+msgid "Apache"
+msgstr ""
+
+#: ../nethsm/apache.rst:4
+#, fuzzy
+msgid ""
+"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
+"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+"A `nginx <https://nginx.org/>`__ úgy konfigurálható, hogy az OpenSSL "
+"motoron keresztül használja a NetHSM-et, amely ezután a NetHSM PKCS#11 "
+"modulját használja."
+
+#: ../nethsm/apache.rst:6 ../nethsm/nginx.rst:6
+msgid ""
+"The certificate file has to be on the disk but the private key can be "
+"used from the NetHSM."
+msgstr ""
+"A tanúsítványfájlnak a lemezen kell lennie, de a privát kulcs a NetHSM-"
+"ről is használható."
+
+#: ../nethsm/apache.rst:8 ../nethsm/nginx.rst:8
+msgid "A full example is available `below <#example>`__."
+msgstr "Egy teljes példa elérhető a `címen: <#example>`__."
+
+#: ../nethsm/apache.rst:11 ../nethsm/nginx.rst:11
+msgid "OpenSSL Configuration"
+msgstr "OpenSSL konfiguráció"
+
+#: ../nethsm/apache.rst:13
+#, fuzzy
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
+"Apache httpd.)"
+msgstr ""
+"Állítsa be az OpenSSL-motort a `OpenSSL Engine setup guide "
+"<openssl.html#engine>`__."
+
+#: ../nethsm/apache.rst:16
+#, fuzzy
+msgid "Httpd Configuration"
+msgstr "Konfiguráció"
+
+#: ../nethsm/apache.rst:18
+#, fuzzy
+msgid "Add the following lines to your ``httpd.conf`` :"
+msgstr "Adja hozzá a következő sort a fájlhoz"
+
+#: ../nethsm/apache.rst:36
+#, fuzzy
+msgid "The ``SSLCertificateFile`` must point to a certificate file on the disk."
+msgstr ""
+"A ``ssl_certificate`` egy lemezen található tanúsítványfájlra kell "
+"mutatnia."
+
+#: ../nethsm/apache.rst:38
+msgid ""
+"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
+msgstr ""
+
+#: ../nethsm/apache.rst:41
+#, fuzzy
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"httpd won't start."
+msgstr ""
+"A tanúsítványt külön kell létrehoznia, majd feltöltenie a NetHSM-be. Ha a"
+" lemezen lévő tanúsítvány és a NetHSM-ben lévő kulcs nem egyezik, az "
+"nginx nem fog elindulni."
+
+#: ../nethsm/apache.rst:44 ../nethsm/nginx.rst:67
+msgid "libnethsm_pkcs11 Configuration"
+msgstr "libnethsm_pkcs11 Konfiguráció"
+
+#: ../nethsm/apache.rst:56
+#, fuzzy
+msgid ""
+"To secure the password you can provide it via an environment variable "
+"(see `Setup <setup>`__) or provide it in the httpd configuration:"
+msgstr ""
+"A jelszó biztonságossá tételéhez megadhatja egy környezeti változóval "
+"(lásd `Setup <setup>`__) vagy megadhatja az nginx konfigurációjában:"
+
+#: ../nethsm/apache.rst:64 ../nethsm/nginx.rst:87
+#: ../nitrokey3/firmware-update.rst.inc:69
+msgid "Example"
+msgstr "Példa"
+
+#: ../nethsm/apache.rst:66
+#, fuzzy
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
+" use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+"Ha kísérletezni akarsz a `adott példával <https://github.com/Nitrokey"
+"/nethsm-pkcs11/tree/main/container/nginx>`__ használd a git-et a `nethsm-"
+"pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ "
+"klónozásához és futtasd a következő parancsokat:"
+
+#: ../nethsm/apache.rst:70 ../nethsm/nginx.rst:93
+msgid "Running the generate script deletes the ``webserver`` key and replaces it."
+msgstr ""
+"A generáló szkript futtatása törli a ``webserver`` kulcsot és kicseréli "
+"azt."
+
+#: ../nethsm/apache.rst:72 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <getting-started>`__ for more information."
+msgstr ""
+"Konfiguráljon egy NetHSM-et, akár egy valódi, akár egy konténert. További"
+" információkért lásd a `getting-started guide <getting-started>`__."
+
+#: ../nethsm/apache.rst:73
+#, fuzzy
+msgid ""
+"If your NetHSM is not running on localhost, you will need to change the "
+"URL of the curl requests in ``container/apache/generate.sh`` to point to "
+"your NetHSM."
+msgstr ""
+"Ha a NetHSM nem a localhoston fut, akkor a "
+"``container/nginx/generate.sh`` oldalon meg kell változtatnia a curl-"
+"kérések URL-címét, hogy a NetHSM-re mutasson."
+
+#: ../nethsm/apache.rst:74
+#, fuzzy
+msgid ""
+"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
+"``container/apache/p11nethsm.conf``."
+msgstr ""
+"Módosítsa a libnethsm_pkcs11 konfigurációját a NetHSM-nek megfelelően a "
+"``container/ejbca/p11nethsm.conf`` címen."
+
+#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:98
+msgid "Generate the certificate and key."
+msgstr "Generálja a tanúsítványt és a kulcsot."
+
+#: ../nethsm/apache.rst:81 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
+msgid "Build the container."
+msgstr "Építse meg a konténert."
+
+#: ../nethsm/apache.rst:87 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
+msgid "Run the container."
+msgstr "Futtassa a konténert."
+
+#: ../nethsm/apache.rst:93 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
+msgid ""
+"The container will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
+msgstr ""
+"A konténer elérhető lesz a `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
+
 #: ../nethsm/ejbca.rst:2
 msgid "EJBCA"
 msgstr "EJBCA"
@@ -6022,14 +6181,6 @@ msgstr ""
 "klónozd a `nethsm-pkcs11 tárolót <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ és futtasd a következő parancsokat:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started>`__ for more information."
-msgstr ""
-"Konfiguráljon egy NetHSM-et, akár egy valódi, akár egy konténert. További"
-" információkért lásd a `getting-started guide <getting-started>`__."
-
 #: ../nethsm/ejbca.rst:31
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
@@ -6037,22 +6188,6 @@ msgid ""
 msgstr ""
 "Módosítsa a libnethsm_pkcs11 konfigurációját a NetHSM-nek megfelelően a "
 "``container/ejbca/p11nethsm.conf`` címen."
-
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
-msgid "Build the container."
-msgstr "Építse meg a konténert."
-
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
-msgid "Run the container."
-msgstr "Futtassa a konténert."
-
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
-msgid ""
-"The container will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__."
-msgstr ""
-"A konténer elérhető lesz a `https://localhost:9443/ "
-"<https://localhost:9443/>`__."
 
 #: ../nethsm/getting-started.rst:2 ../nextbox/gettingstarted.rst:2
 #: ../nitropad/qubes/index.rst:7 ../nitropad/ubuntu/index.rst:7
@@ -6811,22 +6946,6 @@ msgstr ""
 "motoron keresztül használja a NetHSM-et, amely ezután a NetHSM PKCS#11 "
 "modulját használja."
 
-#: ../nethsm/nginx.rst:6
-msgid ""
-"The certificate file has to be on the disk but the private key can be "
-"used from the NetHSM."
-msgstr ""
-"A tanúsítványfájlnak a lemezen kell lennie, de a privát kulcs a NetHSM-"
-"ről is használható."
-
-#: ../nethsm/nginx.rst:8
-msgid "A full example is available `below <#example>`__."
-msgstr "Egy teljes példa elérhető a `címen: <#example>`__."
-
-#: ../nethsm/nginx.rst:11
-msgid "OpenSSL Configuration"
-msgstr "OpenSSL konfiguráció"
-
 #: ../nethsm/nginx.rst:13
 msgid ""
 "Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
@@ -6877,10 +6996,6 @@ msgstr ""
 " lemezen lévő tanúsítvány és a NetHSM-ben lévő kulcs nem egyezik, az "
 "nginx nem fog elindulni."
 
-#: ../nethsm/nginx.rst:67
-msgid "libnethsm_pkcs11 Configuration"
-msgstr "libnethsm_pkcs11 Konfiguráció"
-
 #: ../nethsm/nginx.rst:79
 msgid ""
 "To secure the password you can provide it via an environment variable "
@@ -6888,10 +7003,6 @@ msgid ""
 msgstr ""
 "A jelszó biztonságossá tételéhez megadhatja egy környezeti változóval "
 "(lásd `Setup <setup>`__) vagy megadhatja az nginx konfigurációjában:"
-
-#: ../nethsm/nginx.rst:87 ../nitrokey3/firmware-update.rst.inc:69
-msgid "Example"
-msgstr "Példa"
 
 #: ../nethsm/nginx.rst:89
 msgid ""
@@ -6905,12 +7016,6 @@ msgstr ""
 "/nethsm-pkcs11/tree/main/container/nginx>`__ használd a git-et a `nethsm-"
 "pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ "
 "klónozásához és futtasd a következő parancsokat:"
-
-#: ../nethsm/nginx.rst:93
-msgid "Running the generate script deletes the ``webserver`` key and replaces it."
-msgstr ""
-"A generáló szkript futtatása törli a ``webserver`` kulcsot és kicseréli "
-"azt."
 
 #: ../nethsm/nginx.rst:96
 msgid ""
@@ -6929,10 +7034,6 @@ msgid ""
 msgstr ""
 "Módosítsa a libnethsm_pkcs11 konfigurációját a NetHSM-nek megfelelően a "
 "``container/ejbca/p11nethsm.conf`` címen."
-
-#: ../nethsm/nginx.rst:98
-msgid "Generate the certificate and key."
-msgstr "Generálja a tanúsítványt és a kulcsot."
 
 #: ../nethsm/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -12143,8 +12244,8 @@ msgid ""
 "After `disabling Enforce Attestation`_ Nitrokey 3 is supported by Azure "
 "Entra ID out of the box."
 msgstr ""
-"Miután a `letiltotta az Enforce Attestation`_ Nitrokey 3-t az Azure Entra ID "
-"támogatja a dobozból."
+"Miután a `letiltotta az Enforce Attestation`_ Nitrokey 3-t az Azure Entra"
+" ID támogatja a dobozból."
 
 #: ../nitrokey3/index.rst:7
 msgid ""
@@ -31181,3 +31282,4 @@ msgstr ""
 
 #~ msgid "System Update"
 #~ msgstr "Rendszerfrissítés"
+

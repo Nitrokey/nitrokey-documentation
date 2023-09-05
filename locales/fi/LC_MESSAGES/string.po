@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-04 15:42+0200\n"
+"POT-Creation-Date: 2023-09-05 14:41+0200\n"
 "PO-Revision-Date: 2023-09-04 14:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Finnish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/fi/>\n"
 "Language: fi\n"
+"Language-Team: Finnish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/fi/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -86,16 +85,16 @@ msgstr ""
 #: ../fido2/faq.rst:25
 msgid "**Q:** How to use Nitrokey FIDO2 with Azure Entra ID (Active Directory)?"
 msgstr ""
-"**Q:** Miten Nitrokey FIDO2:ta käytetään Azure Entra ID:n (Active Directory) "
-"kanssa?"
+"**Q:** Miten Nitrokey FIDO2:ta käytetään Azure Entra ID:n (Active "
+"Directory) kanssa?"
 
 #: ../fido2/faq.rst:24
 msgid ""
 "After `disabling Enforce Attestation`_ Nitrokey FIDO2 is supported by "
 "Azure Entra ID out of the box."
 msgstr ""
-"Kun `on poistanut Enforce Attestation`_ Enforce Attestation`_ Nitrokey FIDO2:"
-"ta tuetaan Azure Entra ID:ssä heti."
+"Kun `on poistanut Enforce Attestation`_ Enforce Attestation`_ Nitrokey "
+"FIDO2:ta tuetaan Azure Entra ID:ssä heti."
 
 #: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nitrokey3/index.rst:13
 #: ../nitropad/index.rst:8 ../nitropc/index.rst:9 ../nitrophone/index.rst:19
@@ -5858,6 +5857,165 @@ msgstr ""
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html#/default"
 "/DELETE_users-UserID-tags-Tag>`__."
 
+#: ../nethsm/apache.rst:2
+msgid "Apache"
+msgstr ""
+
+#: ../nethsm/apache.rst:4
+#, fuzzy
+msgid ""
+"You can configure `Apache httpd <https://httpd.apache.org/>`__ to use "
+"NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module."
+msgstr ""
+"Voit määrittää `nginx <https://nginx.org/>`__ käyttämään NetHSM:ää "
+"OpenSSL-moottorin kautta, joka käyttää NetHSM:n PKCS#11-moduulia."
+
+#: ../nethsm/apache.rst:6 ../nethsm/nginx.rst:6
+msgid ""
+"The certificate file has to be on the disk but the private key can be "
+"used from the NetHSM."
+msgstr ""
+"Varmentetiedoston on oltava levyllä, mutta yksityistä avainta voidaan "
+"käyttää NetHSM:stä."
+
+#: ../nethsm/apache.rst:8 ../nethsm/nginx.rst:8
+msgid "A full example is available `below <#example>`__."
+msgstr "Täydellinen esimerkki on saatavilla `alla <#example>`__."
+
+#: ../nethsm/apache.rst:11 ../nethsm/nginx.rst:11
+msgid "OpenSSL Configuration"
+msgstr "OpenSSL-konfiguraatio"
+
+#: ../nethsm/apache.rst:13
+#, fuzzy
+msgid ""
+"Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
+"<openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by "
+"Apache httpd.)"
+msgstr ""
+"Määritä OpenSSL-moottori noudattamalla `OpenSSL Engine setup guide "
+"<openssl.html#engine>`__."
+
+#: ../nethsm/apache.rst:16
+#, fuzzy
+msgid "Httpd Configuration"
+msgstr "Konfigurointi"
+
+#: ../nethsm/apache.rst:18
+#, fuzzy
+msgid "Add the following lines to your ``httpd.conf`` :"
+msgstr "Lisää tiedostoon seuraava rivi"
+
+#: ../nethsm/apache.rst:36
+#, fuzzy
+msgid "The ``SSLCertificateFile`` must point to a certificate file on the disk."
+msgstr ""
+"Osoitteen ``ssl_certificate`` on osoitettava levyllä olevaan "
+"varmennetiedostoon."
+
+#: ../nethsm/apache.rst:38
+msgid ""
+"The ``SSLCertificateKeyFile`` should be a PKCS#11 `URI <https://www.rfc-"
+"editor.org/rfc/rfc7512>`__ pointing to the private key in the NetHSM."
+msgstr ""
+
+#: ../nethsm/apache.rst:41
+#, fuzzy
+msgid ""
+"You must generate the certificate separately and then upload it to the "
+"NetHSM. If the certificate on disk and the key in the NetHSM don't match "
+"httpd won't start."
+msgstr ""
+"Varmenne on luotava erikseen ja ladattava sitten NetHSM:ään. Jos levyllä "
+"oleva varmenne ja NetHSM:ssä oleva avain eivät täsmää, nginx ei "
+"käynnisty."
+
+#: ../nethsm/apache.rst:44 ../nethsm/nginx.rst:67
+msgid "libnethsm_pkcs11 Configuration"
+msgstr "libnethsm_pkcs11 Konfigurointi"
+
+#: ../nethsm/apache.rst:56
+#, fuzzy
+msgid ""
+"To secure the password you can provide it via an environment variable "
+"(see `Setup <setup>`__) or provide it in the httpd configuration:"
+msgstr ""
+"Voit suojata salasanan antamalla sen ympäristömuuttujalla (katso `Setup "
+"<setup>`__) tai antamalla sen nginxin asetuksissa:"
+
+#: ../nethsm/apache.rst:64 ../nethsm/nginx.rst:87
+#: ../nitrokey3/firmware-update.rst.inc:69
+msgid "Example"
+msgstr "Esimerkki"
+
+#: ../nethsm/apache.rst:66
+#, fuzzy
+msgid ""
+"If you want to experiment with the `given example "
+"<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/apache>`__"
+" use git to clone the `nethsm-pkcs11 repository "
+"<https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following "
+"commands:"
+msgstr ""
+"Jos haluat kokeilla `annettua esimerkkiä <https://github.com/Nitrokey"
+"/nethsm-pkcs11/tree/main/container/nginx>`__ käytä git-ohjelmaa "
+"kloonataksesi `nethsm-pkcs11-arkiston <https://github.com/Nitrokey"
+"/nethsm-pkcs11>`__ ja suorita seuraavat komennot:"
+
+#: ../nethsm/apache.rst:70 ../nethsm/nginx.rst:93
+msgid "Running the generate script deletes the ``webserver`` key and replaces it."
+msgstr ""
+"Generointiskriptin suorittaminen poistaa avaimen ``webserver`` ja korvaa "
+"sen."
+
+#: ../nethsm/apache.rst:72 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <getting-started>`__ for more information."
+msgstr ""
+"Määritä NetHSM, joko oikea tai kontti. Katso lisätietoja osoitteesta "
+"`getting-started guide <getting-started>`__."
+
+#: ../nethsm/apache.rst:73
+#, fuzzy
+msgid ""
+"If your NetHSM is not running on localhost, you will need to change the "
+"URL of the curl requests in ``container/apache/generate.sh`` to point to "
+"your NetHSM."
+msgstr ""
+"Jos NetHSM ei toimi localhostissa, sinun on muutettava curl-pyyntöjen "
+"URL-osoite osoitteessa ``container/nginx/generate.sh`` osoittamaan "
+"NetHSM:ääsi."
+
+#: ../nethsm/apache.rst:74
+#, fuzzy
+msgid ""
+"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
+"``container/apache/p11nethsm.conf``."
+msgstr ""
+"Muuta libnethsm_pkcs11-konfiguraatio vastaamaan NetHSM:ääsi osoitteessa "
+"``container/ejbca/p11nethsm.conf``."
+
+#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:98
+msgid "Generate the certificate and key."
+msgstr "Luo varmenne ja avain."
+
+#: ../nethsm/apache.rst:81 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
+msgid "Build the container."
+msgstr "Rakenna säiliö."
+
+#: ../nethsm/apache.rst:87 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
+msgid "Run the container."
+msgstr "Käynnistä säiliö."
+
+#: ../nethsm/apache.rst:93 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
+msgid ""
+"The container will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
+msgstr ""
+"Kontti on saatavilla osoitteessa `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
+
 #: ../nethsm/ejbca.rst:2
 msgid "EJBCA"
 msgstr "EJBCA"
@@ -5942,14 +6100,6 @@ msgstr ""
 "`nethsm-pkcs11-arkiston <https://github.com/Nitrokey/nethsm-pkcs11>`__ ja"
 " suorittaa seuraavat komennot:"
 
-#: ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
-msgid ""
-"Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started>`__ for more information."
-msgstr ""
-"Määritä NetHSM, joko oikea tai kontti. Katso lisätietoja osoitteesta "
-"`getting-started guide <getting-started>`__."
-
 #: ../nethsm/ejbca.rst:31
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
@@ -5957,22 +6107,6 @@ msgid ""
 msgstr ""
 "Muuta libnethsm_pkcs11-konfiguraatio vastaamaan NetHSM:ääsi osoitteessa "
 "``container/ejbca/p11nethsm.conf``."
-
-#: ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
-msgid "Build the container."
-msgstr "Rakenna säiliö."
-
-#: ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
-msgid "Run the container."
-msgstr "Käynnistä säiliö."
-
-#: ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
-msgid ""
-"The container will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__."
-msgstr ""
-"Kontti on saatavilla osoitteessa `https://localhost:9443/ "
-"<https://localhost:9443/>`__."
 
 #: ../nethsm/getting-started.rst:2 ../nextbox/gettingstarted.rst:2
 #: ../nitropad/qubes/index.rst:7 ../nitropad/ubuntu/index.rst:7
@@ -6717,22 +6851,6 @@ msgstr ""
 "Voit määrittää `nginx <https://nginx.org/>`__ käyttämään NetHSM:ää "
 "OpenSSL-moottorin kautta, joka käyttää NetHSM:n PKCS#11-moduulia."
 
-#: ../nethsm/nginx.rst:6
-msgid ""
-"The certificate file has to be on the disk but the private key can be "
-"used from the NetHSM."
-msgstr ""
-"Varmentetiedoston on oltava levyllä, mutta yksityistä avainta voidaan "
-"käyttää NetHSM:stä."
-
-#: ../nethsm/nginx.rst:8
-msgid "A full example is available `below <#example>`__."
-msgstr "Täydellinen esimerkki on saatavilla `alla <#example>`__."
-
-#: ../nethsm/nginx.rst:11
-msgid "OpenSSL Configuration"
-msgstr "OpenSSL-konfiguraatio"
-
 #: ../nethsm/nginx.rst:13
 msgid ""
 "Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide "
@@ -6784,10 +6902,6 @@ msgstr ""
 "oleva varmenne ja NetHSM:ssä oleva avain eivät täsmää, nginx ei "
 "käynnisty."
 
-#: ../nethsm/nginx.rst:67
-msgid "libnethsm_pkcs11 Configuration"
-msgstr "libnethsm_pkcs11 Konfigurointi"
-
 #: ../nethsm/nginx.rst:79
 msgid ""
 "To secure the password you can provide it via an environment variable "
@@ -6795,10 +6909,6 @@ msgid ""
 msgstr ""
 "Voit suojata salasanan antamalla sen ympäristömuuttujalla (katso `Setup "
 "<setup>`__) tai antamalla sen nginxin asetuksissa:"
-
-#: ../nethsm/nginx.rst:87 ../nitrokey3/firmware-update.rst.inc:69
-msgid "Example"
-msgstr "Esimerkki"
 
 #: ../nethsm/nginx.rst:89
 msgid ""
@@ -6812,12 +6922,6 @@ msgstr ""
 "/nethsm-pkcs11/tree/main/container/nginx>`__ käytä git-ohjelmaa "
 "kloonataksesi `nethsm-pkcs11-arkiston <https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__ ja suorita seuraavat komennot:"
-
-#: ../nethsm/nginx.rst:93
-msgid "Running the generate script deletes the ``webserver`` key and replaces it."
-msgstr ""
-"Generointiskriptin suorittaminen poistaa avaimen ``webserver`` ja korvaa "
-"sen."
 
 #: ../nethsm/nginx.rst:96
 msgid ""
@@ -6836,10 +6940,6 @@ msgid ""
 msgstr ""
 "Muuta libnethsm_pkcs11-konfiguraatio vastaamaan NetHSM:ääsi osoitteessa "
 "``container/ejbca/p11nethsm.conf``."
-
-#: ../nethsm/nginx.rst:98
-msgid "Generate the certificate and key."
-msgstr "Luo varmenne ja avain."
 
 #: ../nethsm/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -11978,8 +12078,8 @@ msgid ""
 "After `disabling Enforce Attestation`_ Nitrokey 3 is supported by Azure "
 "Entra ID out of the box."
 msgstr ""
-"Kun `on poistanut Enforce Attestation`_ Enforce Attestation`_ Nitrokey 3:a "
-"tukee Azure Entra ID:tä heti."
+"Kun `on poistanut Enforce Attestation`_ Enforce Attestation`_ Nitrokey "
+"3:a tukee Azure Entra ID:tä heti."
 
 #: ../nitrokey3/index.rst:7
 msgid ""
@@ -30588,3 +30688,4 @@ msgstr ""
 
 #~ msgid "System Update"
 #~ msgstr "Järjestelmäpäivitys"
+
