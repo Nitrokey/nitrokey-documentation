@@ -10,9 +10,7 @@ A full example is available `below <#example>`__.
 OpenSSL Configuration
 ---------------------
 
-Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide <openssl.html#engine>`__.
-
-Providers aren't supported yet by Apache httpd.
+Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide <openssl.html#engine>`__. (OpenSSL Providers aren't supported yet by Apache httpd.)
 
 Httpd Configuration
 -------------------
