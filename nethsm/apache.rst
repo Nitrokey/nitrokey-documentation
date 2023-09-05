@@ -12,7 +12,7 @@ OpenSSL Configuration
 
 Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide <openssl.html#engine>`__.
 
-Providers aren't supported yet by Httpd ?
+Providers aren't supported yet by Apache httpd.
 
 Httpd Configuration
 -------------------
