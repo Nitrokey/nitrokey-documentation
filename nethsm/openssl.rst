@@ -10,6 +10,7 @@ Engine
 
 .. warning:: 
   When using an engine (libp11) version of 0.4.12 or older, having an EdDSA key on the NetHSM will cause OpenSSL to not find any key.
+  On version 0.4.12 and older, the engine lists all the keys on the NetHSM when a key is requested. When searching a key by label or id, it is recommended to use version 0.4.13 or newer, or build `libp11 <https://github.com/OpenSC/libp11>`__ from source. The engine binary will be in ``src/.libs/pkcs11.so``.
 
 The OpenSSL engine interface is the old way to implement custom backends for OpenSSL and it is deprecated in OpenSSL 3. This is still the most stable way to use the NetHSM with OpenSSL.
 

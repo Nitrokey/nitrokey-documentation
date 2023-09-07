@@ -14,6 +14,9 @@ Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide <openssl
 
 Providers aren't supported yet by Nginx.
 
+.. note:: 
+  Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with a lot of key will make the initial loading of Nginx slow (more than a minute for 1 thousand keys). It is recommended to use version 0.4.13 or newer or to build the engine from `source <https://github.com/OpenSC/libp11>`__.
+
 Nginx Configuration
 -------------------
 
