@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-07 16:39+0200\n"
+"POT-Creation-Date: 2023-09-11 08:48+0200\n"
 "PO-Revision-Date: 2023-09-07 15:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Swedish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/sv/>\n"
 "Language: sv\n"
+"Language-Team: Swedish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/sv/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5912,7 +5911,7 @@ msgstr ""
 "NetHSM. Om certifikatet på disken och nyckeln i NetHSM inte matchar "
 "varandra startar inte httpd."
 
-#: ../nethsm/apache.rst:44 ../nethsm/nginx.rst:67
+#: ../nethsm/apache.rst:44 ../nethsm/nginx.rst:70
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Konfiguration"
 
@@ -5924,7 +5923,7 @@ msgstr ""
 "För att säkra lösenordet kan du ange det via en miljövariabel (se `Setup "
 "<setup>`__) eller ange det i httpd-konfigurationen:"
 
-#: ../nethsm/apache.rst:64 ../nethsm/nginx.rst:87
+#: ../nethsm/apache.rst:64 ../nethsm/nginx.rst:90
 #: ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Exempel"
@@ -5942,13 +5941,13 @@ msgstr ""
 "klona `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ och kör följande kommandon:"
 
-#: ../nethsm/apache.rst:70 ../nethsm/nginx.rst:93
+#: ../nethsm/apache.rst:70 ../nethsm/nginx.rst:96
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 "När genereringsskriptet körs raderas nyckeln ``webserver`` och ersätts "
 "med en ny."
 
-#: ../nethsm/apache.rst:72 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
+#: ../nethsm/apache.rst:72 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5974,19 +5973,19 @@ msgstr ""
 "Ändra libnethsm_pkcs11-konfigurationen så att den matchar din NetHSM i "
 "``container/apache/p11nethsm.conf``."
 
-#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:98
+#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:101
 msgid "Generate the certificate and key."
 msgstr "Generera certifikat och nyckel."
 
-#: ../nethsm/apache.rst:81 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
+#: ../nethsm/apache.rst:81 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
 msgid "Build the container."
 msgstr "Bygg upp behållaren."
 
-#: ../nethsm/apache.rst:87 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
+#: ../nethsm/apache.rst:87 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
 msgid "Run the container."
 msgstr "Kör containern."
 
-#: ../nethsm/apache.rst:93 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
+#: ../nethsm/apache.rst:93 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6844,14 +6843,23 @@ msgid "Providers aren't supported yet by Nginx."
 msgstr "Providers stöds ännu inte av Nginx."
 
 #: ../nethsm/nginx.rst:18
+msgid ""
+"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
+" a lot of key will make the initial loading of Nginx slow (more than a "
+"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
+"newer or to build the engine from `source "
+"<https://github.com/OpenSC/libp11>`__."
+msgstr ""
+
+#: ../nethsm/nginx.rst:21
 msgid "Nginx Configuration"
 msgstr "Konfiguration av Nginx"
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:60
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "``ssl_certificate`` måste peka på en certifikatfil på disken."
 
-#: ../nethsm/nginx.rst:59
+#: ../nethsm/nginx.rst:62
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6861,7 +6869,7 @@ msgstr ""
 "vi OpenSSL-motorn med PKCS#11-modulen och väljer den privata nyckeln med "
 "etiketten/ID ``webserver`` och nyckeltypen ``private``."
 
-#: ../nethsm/nginx.rst:61
+#: ../nethsm/nginx.rst:64
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6869,7 +6877,7 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:64
+#: ../nethsm/nginx.rst:67
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6879,7 +6887,7 @@ msgstr ""
 "NetHSM. Om certifikatet på disken och nyckeln i NetHSM inte matchar "
 "varandra kommer nginx inte att starta."
 
-#: ../nethsm/nginx.rst:79
+#: ../nethsm/nginx.rst:82
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6887,7 +6895,7 @@ msgstr ""
 "För att säkra lösenordet kan du ange det via en miljövariabel (se `Setup "
 "<setup>`__) eller ange det i nginx-konfigurationen:"
 
-#: ../nethsm/nginx.rst:89
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6900,7 +6908,7 @@ msgstr ""
 "klona `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ och kör följande kommandon:"
 
-#: ../nethsm/nginx.rst:96
+#: ../nethsm/nginx.rst:99
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6910,7 +6918,7 @@ msgstr ""
 "förfrågningarna i ``container/nginx/generate.sh`` så att de pekar på din "
 "NetHSM."
 
-#: ../nethsm/nginx.rst:97
+#: ../nethsm/nginx.rst:100
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -7013,12 +7021,15 @@ msgstr "Motor"
 #: ../nethsm/openssl.rst:12
 msgid ""
 "When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
-" key on the NetHSM will cause OpenSSL to not find any key."
+" key on the NetHSM will cause OpenSSL to not find any key. On version "
+"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
+"is requested. When searching a key by label or id, it is recommended to "
+"use version 0.4.13 or newer, or build `libp11 "
+"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
+" be in ``src/.libs/pkcs11.so``."
 msgstr ""
-"Om du använder en motor (libp11) med version 0.4.12 eller äldre och har "
-"en EdDSA-nyckel på NetHSM kommer OpenSSL inte att hitta någon nyckel."
 
-#: ../nethsm/openssl.rst:14
+#: ../nethsm/openssl.rst:15
 msgid ""
 "The OpenSSL engine interface is the old way to implement custom backends "
 "for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
@@ -7028,7 +7039,7 @@ msgstr ""
 "anpassade backends för OpenSSL och det är föråldrat i OpenSSL 3. Detta är"
 " fortfarande det mest stabila sättet att använda NetHSM med OpenSSL."
 
-#: ../nethsm/openssl.rst:16 ../nethsm/openssl.rst:97
+#: ../nethsm/openssl.rst:17 ../nethsm/openssl.rst:98
 msgid ""
 "You will need to setup the PKCS#11 module, following `these instructions "
 "<pkcs11-setup.html>`__."
@@ -7036,23 +7047,23 @@ msgstr ""
 "Du måste installera PKCS#11-modulen genom att följa `dessa instruktioner "
 "<pkcs11-setup.html>`__."
 
-#: ../nethsm/openssl.rst:18
+#: ../nethsm/openssl.rst:19
 msgid "Install the engine:"
 msgstr "Montera motorn:"
 
-#: ../nethsm/openssl.rst:21
+#: ../nethsm/openssl.rst:22
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
-#: ../nethsm/openssl.rst:27
+#: ../nethsm/openssl.rst:28
 msgid "Fedora"
 msgstr "Fedora"
 
-#: ../nethsm/openssl.rst:33
+#: ../nethsm/openssl.rst:34
 msgid "Arch Linux"
 msgstr "Arch Linux"
 
-#: ../nethsm/openssl.rst:39
+#: ../nethsm/openssl.rst:40
 msgid ""
 "Next you need to configure OpenSSL to use the engine. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
@@ -7060,7 +7071,7 @@ msgstr ""
 "Därefter måste du konfigurera OpenSSL för att använda motorn. Detta görs "
 "genom att lägga till följande rader i filen ``openssl.cnf``:"
 
-#: ../nethsm/openssl.rst:58 ../nethsm/openssl.rst:123
+#: ../nethsm/openssl.rst:59 ../nethsm/openssl.rst:124
 msgid ""
 "You can specify to OpenSSL the path of the OpenSSL configuration file "
 "using the ``OPENSSL_CONF`` environment variable."
@@ -7068,7 +7079,7 @@ msgstr ""
 "Du kan ange sökvägen till OpenSSL-konfigurationsfilen för OpenSSL med "
 "hjälp av miljövariabeln ``OPENSSL_CONF``."
 
-#: ../nethsm/openssl.rst:61
+#: ../nethsm/openssl.rst:62
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
@@ -7078,7 +7089,7 @@ msgstr ""
 "dessa rader, kan andra program som använder OpenSSL störas. Därför kan "
 "det vara bra att skapa en separat konfigurationsfil för motorn."
 
-#: ../nethsm/openssl.rst:63
+#: ../nethsm/openssl.rst:64
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -7086,7 +7097,7 @@ msgstr ""
 "Ersätt ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` med "
 "sökvägen till den PKCS#11-modul som du installerade tidigare."
 
-#: ../nethsm/openssl.rst:65
+#: ../nethsm/openssl.rst:66
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -7102,7 +7113,7 @@ msgstr ""
 "gnu/engines-3/libpkcs11.so``; för Fedora är den "
 "``/usr/lib64/engines-3/libpkcs11.so``."
 
-#: ../nethsm/openssl.rst:67
+#: ../nethsm/openssl.rst:68
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -7110,11 +7121,11 @@ msgstr ""
 "Nu kan du använda nycklar på NetHSM genom att använda `PKCS#11 URIs "
 "<https://www.rfc-editor.org/rfc/rfc7512>`__, t.ex:"
 
-#: ../nethsm/openssl.rst:73
+#: ../nethsm/openssl.rst:74
 msgid "This will use the key ``webserver``."
 msgstr "Detta kommer att använda nyckeln ``webserver``."
 
-#: ../nethsm/openssl.rst:76
+#: ../nethsm/openssl.rst:77
 msgid ""
 "You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
 "get the full URI of the keys:"
@@ -7122,19 +7133,19 @@ msgstr ""
 "Du kan använda kommandot ``p11tool`` från `GnuTLS <https://gnutls.org/>` "
 "för att få den fullständiga URI:n för nycklarna:"
 
-#: ../nethsm/openssl.rst:83
+#: ../nethsm/openssl.rst:84
 msgid "Example Command"
 msgstr "Exempel på kommando"
 
-#: ../nethsm/openssl.rst:85
+#: ../nethsm/openssl.rst:86
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "Hämta den offentliga nyckeln till ett asymmetriskt nyckelpar på NetHSM :"
 
-#: ../nethsm/openssl.rst:93
+#: ../nethsm/openssl.rst:94
 msgid "Provider"
 msgstr "Leverantör"
 
-#: ../nethsm/openssl.rst:95
+#: ../nethsm/openssl.rst:96
 msgid ""
 "The OpenSSL provider interface is the new way to implement custom "
 "backends for OpenSSL. The `pkcs11-provider backend "
@@ -7146,7 +7157,7 @@ msgstr ""
 "<https://github.com/latchset/pkcs11-provider>`__ är fortfarande i ett "
 "tidigt utvecklingsstadium."
 
-#: ../nethsm/openssl.rst:99
+#: ../nethsm/openssl.rst:100
 msgid ""
 "Install the provider. For Fedora a package named ``pkcs11-provider`` "
 "exists. For other Linux distributions you will need to `build it from "
@@ -7158,7 +7169,7 @@ msgstr ""
 "från källan "
 "<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
 
-#: ../nethsm/openssl.rst:101
+#: ../nethsm/openssl.rst:102
 msgid ""
 "Then you need to configure OpenSSL to use the provider. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
@@ -7166,7 +7177,7 @@ msgstr ""
 "Sedan måste du konfigurera OpenSSL att använda providern. Detta görs "
 "genom att lägga till följande rader i filen ``openssl.cnf``:"
 
-#: ../nethsm/openssl.rst:118
+#: ../nethsm/openssl.rst:119
 msgid ""
 "Set ``module`` to the path of the provider you installed and ``pkcs11"
 "-module-path`` to the path of the PKCS#11 module you installed."
@@ -7174,7 +7185,7 @@ msgstr ""
 "Ange ``module`` som sökväg till den provider du installerade och ``pkcs11"
 "-module-path`` som sökväg till den PKCS#11-modul du installerade."
 
-#: ../nethsm/openssl.rst:120
+#: ../nethsm/openssl.rst:121
 msgid ""
 "If you want to set NetHSM as the default provider, you can add ``default "
 "= pkcs11`` to the ``provider_sect`` section."
@@ -7182,7 +7193,7 @@ msgstr ""
 "Om du vill ange NetHSM som standardleverantör kan du lägga till ``default"
 " = pkcs11`` i avsnittet ``provider_sect``."
 
-#: ../nethsm/openssl.rst:127
+#: ../nethsm/openssl.rst:128
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
@@ -7192,7 +7203,7 @@ msgstr ""
 "dessa rader, kan andra program som använder OpenSSL gå sönder. Därför kan"
 " det vara bra att skapa en separat konfigurationsfil för providern."
 
-#: ../nethsm/openssl.rst:129
+#: ../nethsm/openssl.rst:130
 msgid ""
 "Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -7200,7 +7211,7 @@ msgstr ""
 "Sedan kan du använda nycklar på NetHSM genom att använda `PKCS#11 URIs "
 "<https://www.rfc-editor.org/rfc/rfc7512>`__, t.ex:"
 
-#: ../nethsm/openssl.rst:135
+#: ../nethsm/openssl.rst:136
 msgid ""
 "If you set NetHSM as the default provider, you can omit the ``-provider "
 "pkcs11`` argument."
@@ -7208,7 +7219,7 @@ msgstr ""
 "Om du anger NetHSM som standardleverantör kan du utelämna argumentet "
 "``-provider pkcs11``."
 
-#: ../nethsm/openssl.rst:138
+#: ../nethsm/openssl.rst:139
 msgid ""
 "Currently when manually setting a key type in the URI the provider will "
 "not be able to find the key. You can omit the ``;type=private`` or "
@@ -17579,8 +17590,9 @@ msgid ""
 " to rotate your screen manually."
 msgstr ""
 "Om du har en NitroPhone eller NitroTablet utan rotationssensor kan du "
-"använda `Rotation Control <https://play.google.com/store/apps/details?id=org."
-"crape.rotationcontrol>`__ för att rotera skärmen manuellt."
+"använda `Rotation Control "
+"<https://play.google.com/store/apps/details?id=org.crape.rotationcontrol>`__"
+" för att rotera skärmen manuellt."
 
 #: ../nitrophone/apps.rst:63
 msgid "Permissions of Individual Apps"
@@ -30793,3 +30805,16 @@ msgstr ""
 
 #~ msgid "System Update"
 #~ msgstr "Uppdatering av systemet"
+
+#~ msgid ""
+#~ "When using an engine (libp11) version"
+#~ " of 0.4.12 or older, having an "
+#~ "EdDSA key on the NetHSM will cause"
+#~ " OpenSSL to not find any key."
+#~ msgstr ""
+#~ "Om du använder en motor (libp11) "
+#~ "med version 0.4.12 eller äldre och "
+#~ "har en EdDSA-nyckel på NetHSM "
+#~ "kommer OpenSSL inte att hitta någon "
+#~ "nyckel."
+

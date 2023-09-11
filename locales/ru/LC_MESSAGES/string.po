@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-07 16:39+0200\n"
+"POT-Creation-Date: 2023-09-11 08:48+0200\n"
 "PO-Revision-Date: 2023-09-07 15:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Russian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ru/>\n"
 "Language: ru\n"
+"Language-Team: Russian <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/ru/>\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5989,7 +5988,7 @@ msgstr ""
 "NetHSM. Если сертификат на диске и ключ в NetHSM не совпадают, то httpd "
 "не запустится."
 
-#: ../nethsm/apache.rst:44 ../nethsm/nginx.rst:67
+#: ../nethsm/apache.rst:44 ../nethsm/nginx.rst:70
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 Конфигурация"
 
@@ -6001,7 +6000,7 @@ msgstr ""
 "Для защиты пароля можно задать его через переменную окружения (см. `Setup"
 " <setup>`__) или указать его в конфигурации httpd:"
 
-#: ../nethsm/apache.rst:64 ../nethsm/nginx.rst:87
+#: ../nethsm/apache.rst:64 ../nethsm/nginx.rst:90
 #: ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "Пример"
@@ -6020,11 +6019,11 @@ msgstr ""
 "репозитория `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-pkcs11>`__"
 " и выполните следующие команды:"
 
-#: ../nethsm/apache.rst:70 ../nethsm/nginx.rst:93
+#: ../nethsm/apache.rst:70 ../nethsm/nginx.rst:96
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr "Запуск скрипта generate удаляет ключ ``webserver`` и заменяет его."
 
-#: ../nethsm/apache.rst:72 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
+#: ../nethsm/apache.rst:72 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -6050,19 +6049,19 @@ msgstr ""
 "Измените конфигурацию libnethsm_pkcs11 в соответствии с вашим NetHSM в "
 "разделе ``container/apache/p11nethsm.conf``."
 
-#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:98
+#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:101
 msgid "Generate the certificate and key."
 msgstr "Сгенерируйте сертификат и ключ."
 
-#: ../nethsm/apache.rst:81 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
+#: ../nethsm/apache.rst:81 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
 msgid "Build the container."
 msgstr "Постройте контейнер."
 
-#: ../nethsm/apache.rst:87 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
+#: ../nethsm/apache.rst:87 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
 msgid "Run the container."
 msgstr "Запустите контейнер."
 
-#: ../nethsm/apache.rst:93 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
+#: ../nethsm/apache.rst:93 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -6928,14 +6927,23 @@ msgid "Providers aren't supported yet by Nginx."
 msgstr "Провайдеры пока не поддерживаются Nginx."
 
 #: ../nethsm/nginx.rst:18
+msgid ""
+"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
+" a lot of key will make the initial loading of Nginx slow (more than a "
+"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
+"newer or to build the engine from `source "
+"<https://github.com/OpenSC/libp11>`__."
+msgstr ""
+
+#: ../nethsm/nginx.rst:21
 msgid "Nginx Configuration"
 msgstr "Конфигурация Nginx"
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:60
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "Адрес ``ssl_certificate`` должен указывать на файл сертификата на диске."
 
-#: ../nethsm/nginx.rst:59
+#: ../nethsm/nginx.rst:62
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6945,7 +6953,7 @@ msgstr ""
 "Здесь мы используем движок OpenSSL с модулем PKCS#11 и выбираем закрытый "
 "ключ с меткой/идентификатором ``webserver`` и типом ключа ``private``."
 
-#: ../nethsm/nginx.rst:61
+#: ../nethsm/nginx.rst:64
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6953,7 +6961,7 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:64
+#: ../nethsm/nginx.rst:67
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
@@ -6963,7 +6971,7 @@ msgstr ""
 "NetHSM. Если сертификат на диске и ключ в NetHSM не совпадают, nginx не "
 "запустится."
 
-#: ../nethsm/nginx.rst:79
+#: ../nethsm/nginx.rst:82
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
@@ -6971,7 +6979,7 @@ msgstr ""
 "Для защиты пароля можно задать его через переменную окружения (см. `Setup"
 " <setup>`__) или указать его в конфигурации nginx:"
 
-#: ../nethsm/nginx.rst:89
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6985,7 +6993,7 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ и выполните следующие "
 "команды:"
 
-#: ../nethsm/nginx.rst:96
+#: ../nethsm/nginx.rst:99
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6995,7 +7003,7 @@ msgstr ""
 "URL-адрес запросов curl в ``container/nginx/generate.sh``, чтобы он "
 "указывал на ваш NetHSM."
 
-#: ../nethsm/nginx.rst:97
+#: ../nethsm/nginx.rst:100
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -7098,12 +7106,15 @@ msgstr "Двигатель"
 #: ../nethsm/openssl.rst:12
 msgid ""
 "When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
-" key on the NetHSM will cause OpenSSL to not find any key."
+" key on the NetHSM will cause OpenSSL to not find any key. On version "
+"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
+"is requested. When searching a key by label or id, it is recommended to "
+"use version 0.4.13 or newer, or build `libp11 "
+"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
+" be in ``src/.libs/pkcs11.so``."
 msgstr ""
-"При использовании движка (libp11) версии 0.4.12 и старше наличие ключа "
-"EdDSA на NetHSM приводит к тому, что OpenSSL не находит ни одного ключа."
 
-#: ../nethsm/openssl.rst:14
+#: ../nethsm/openssl.rst:15
 msgid ""
 "The OpenSSL engine interface is the old way to implement custom backends "
 "for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
@@ -7113,7 +7124,7 @@ msgstr ""
 "бэкендов для OpenSSL, который устарел в OpenSSL 3. Это по-прежнему "
 "наиболее стабильный способ использования NetHSM с OpenSSL."
 
-#: ../nethsm/openssl.rst:16 ../nethsm/openssl.rst:97
+#: ../nethsm/openssl.rst:17 ../nethsm/openssl.rst:98
 msgid ""
 "You will need to setup the PKCS#11 module, following `these instructions "
 "<pkcs11-setup.html>`__."
@@ -7121,23 +7132,23 @@ msgstr ""
 "Вам необходимо настроить модуль PKCS#11, следуя `этой инструкции "
 "<pkcs11-setup.html>`__."
 
-#: ../nethsm/openssl.rst:18
+#: ../nethsm/openssl.rst:19
 msgid "Install the engine:"
 msgstr "Установите двигатель:"
 
-#: ../nethsm/openssl.rst:21
+#: ../nethsm/openssl.rst:22
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
-#: ../nethsm/openssl.rst:27
+#: ../nethsm/openssl.rst:28
 msgid "Fedora"
 msgstr "Fedora"
 
-#: ../nethsm/openssl.rst:33
+#: ../nethsm/openssl.rst:34
 msgid "Arch Linux"
 msgstr "Arch Linux"
 
-#: ../nethsm/openssl.rst:39
+#: ../nethsm/openssl.rst:40
 msgid ""
 "Next you need to configure OpenSSL to use the engine. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
@@ -7145,7 +7156,7 @@ msgstr ""
 "Далее необходимо настроить OpenSSL на использование движка. Это делается "
 "путем добавления следующих строк в файл ``openssl.cnf``:"
 
-#: ../nethsm/openssl.rst:58 ../nethsm/openssl.rst:123
+#: ../nethsm/openssl.rst:59 ../nethsm/openssl.rst:124
 msgid ""
 "You can specify to OpenSSL the path of the OpenSSL configuration file "
 "using the ``OPENSSL_CONF`` environment variable."
@@ -7153,7 +7164,7 @@ msgstr ""
 "Вы можете указать OpenSSL путь к конфигурационному файлу OpenSSL с "
 "помощью переменной окружения ``OPENSSL_CONF``."
 
-#: ../nethsm/openssl.rst:61
+#: ../nethsm/openssl.rst:62
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
@@ -7164,7 +7175,7 @@ msgstr ""
 "программ, использующих OpenSSL. Поэтому, возможно, потребуется создать "
 "отдельный конфигурационный файл для движка."
 
-#: ../nethsm/openssl.rst:63
+#: ../nethsm/openssl.rst:64
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -7172,7 +7183,7 @@ msgstr ""
 "Замените ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` на путь"
 " к установленному ранее модулю PKCS#11."
 
-#: ../nethsm/openssl.rst:65
+#: ../nethsm/openssl.rst:66
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -7187,7 +7198,7 @@ msgstr ""
 " OpenSSL 3 - ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``; в "
 "Fedora - ``/usr/lib64/engines-3/libpkcs11.so``."
 
-#: ../nethsm/openssl.rst:67
+#: ../nethsm/openssl.rst:68
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -7195,11 +7206,11 @@ msgstr ""
 "Теперь вы можете использовать ключи на NetHSM, используя URI `PKCS#11 "
 "<https://www.rfc-editor.org/rfc/rfc7512>`__, например:"
 
-#: ../nethsm/openssl.rst:73
+#: ../nethsm/openssl.rst:74
 msgid "This will use the key ``webserver``."
 msgstr "При этом будет использоваться ключ ``webserver``."
 
-#: ../nethsm/openssl.rst:76
+#: ../nethsm/openssl.rst:77
 msgid ""
 "You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
 "get the full URI of the keys:"
@@ -7207,19 +7218,19 @@ msgstr ""
 "Для получения полного URI ключей можно воспользоваться командой "
 "``p11tool`` из `GnuTLS <https://gnutls.org/>`:"
 
-#: ../nethsm/openssl.rst:83
+#: ../nethsm/openssl.rst:84
 msgid "Example Command"
 msgstr "Пример команды"
 
-#: ../nethsm/openssl.rst:85
+#: ../nethsm/openssl.rst:86
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "Получение открытого ключа асимметричной пары ключей на NetHSM:"
 
-#: ../nethsm/openssl.rst:93
+#: ../nethsm/openssl.rst:94
 msgid "Provider"
 msgstr "Провайдер"
 
-#: ../nethsm/openssl.rst:95
+#: ../nethsm/openssl.rst:96
 msgid ""
 "The OpenSSL provider interface is the new way to implement custom "
 "backends for OpenSSL. The `pkcs11-provider backend "
@@ -7231,7 +7242,7 @@ msgstr ""
 "<https://github.com/latchset/pkcs11-provider>`__ пока находится на ранней"
 " стадии разработки."
 
-#: ../nethsm/openssl.rst:99
+#: ../nethsm/openssl.rst:100
 msgid ""
 "Install the provider. For Fedora a package named ``pkcs11-provider`` "
 "exists. For other Linux distributions you will need to `build it from "
@@ -7243,7 +7254,7 @@ msgstr ""
 "`собрать его из исходных текстов "
 "<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__."
 
-#: ../nethsm/openssl.rst:101
+#: ../nethsm/openssl.rst:102
 msgid ""
 "Then you need to configure OpenSSL to use the provider. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
@@ -7251,7 +7262,7 @@ msgstr ""
 "Затем необходимо настроить OpenSSL на использование провайдера. Это "
 "делается путем добавления следующих строк в файл ``openssl.cnf``:"
 
-#: ../nethsm/openssl.rst:118
+#: ../nethsm/openssl.rst:119
 msgid ""
 "Set ``module`` to the path of the provider you installed and ``pkcs11"
 "-module-path`` to the path of the PKCS#11 module you installed."
@@ -7259,7 +7270,7 @@ msgstr ""
 "Установите ``module`` на путь установленного провайдера, а ``pkcs11"
 "-module-path`` - на путь установленного модуля PKCS#11."
 
-#: ../nethsm/openssl.rst:120
+#: ../nethsm/openssl.rst:121
 msgid ""
 "If you want to set NetHSM as the default provider, you can add ``default "
 "= pkcs11`` to the ``provider_sect`` section."
@@ -7267,7 +7278,7 @@ msgstr ""
 "Если вы хотите установить NetHSM в качестве провайдера по умолчанию, вы "
 "можете добавить ``default = pkcs11`` в раздел ``provider_sect``."
 
-#: ../nethsm/openssl.rst:127
+#: ../nethsm/openssl.rst:128
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
@@ -7278,7 +7289,7 @@ msgstr ""
 "программ, использующих OpenSSL. Поэтому, возможно, потребуется создать "
 "отдельный конфигурационный файл для провайдера."
 
-#: ../nethsm/openssl.rst:129
+#: ../nethsm/openssl.rst:130
 msgid ""
 "Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -7286,7 +7297,7 @@ msgstr ""
 "Затем можно использовать ключи на NetHSM с помощью URI `PKCS#11 "
 "<https://www.rfc-editor.org/rfc/rfc7512>`__, например:"
 
-#: ../nethsm/openssl.rst:135
+#: ../nethsm/openssl.rst:136
 msgid ""
 "If you set NetHSM as the default provider, you can omit the ``-provider "
 "pkcs11`` argument."
@@ -7294,7 +7305,7 @@ msgstr ""
 "Если в качестве провайдера по умолчанию установлен NetHSM, то аргумент "
 "``-provider pkcs11`` можно опустить."
 
-#: ../nethsm/openssl.rst:138
+#: ../nethsm/openssl.rst:139
 msgid ""
 "Currently when manually setting a key type in the URI the provider will "
 "not be able to find the key. You can omit the ``;type=private`` or "
@@ -17807,8 +17818,9 @@ msgid ""
 " to rotate your screen manually."
 msgstr ""
 "Если у вас NitroPhone или NitroTablet без датчика поворота, вы можете "
-"использовать `Rotation Control <https://play.google.com/store/apps/"
-"details?id=org.crape.rotationcontrol>`__ для поворота экрана вручную."
+"использовать `Rotation Control "
+"<https://play.google.com/store/apps/details?id=org.crape.rotationcontrol>`__"
+" для поворота экрана вручную."
 
 #: ../nitrophone/apps.rst:63
 msgid "Permissions of Individual Apps"
@@ -31102,3 +31114,15 @@ msgstr ""
 
 #~ msgid "System Update"
 #~ msgstr "Обновление системы"
+
+#~ msgid ""
+#~ "When using an engine (libp11) version"
+#~ " of 0.4.12 or older, having an "
+#~ "EdDSA key on the NetHSM will cause"
+#~ " OpenSSL to not find any key."
+#~ msgstr ""
+#~ "При использовании движка (libp11) версии "
+#~ "0.4.12 и старше наличие ключа EdDSA "
+#~ "на NetHSM приводит к тому, что "
+#~ "OpenSSL не находит ни одного ключа."
+

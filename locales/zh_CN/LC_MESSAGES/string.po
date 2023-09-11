@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-07 16:39+0200\n"
+"POT-Creation-Date: 2023-09-11 08:48+0200\n"
 "PO-Revision-Date: 2023-09-07 15:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5157,7 +5157,7 @@ msgid ""
 "httpd won't start."
 msgstr "你必须单独生成证书，然后上传到 NetHSM。如果磁盘上的证书与 NetHSM 中的密钥不匹配，httpd 将无法启动。"
 
-#: ../nethsm/apache.rst:44 ../nethsm/nginx.rst:67
+#: ../nethsm/apache.rst:44 ../nethsm/nginx.rst:70
 msgid "libnethsm_pkcs11 Configuration"
 msgstr "libnethsm_pkcs11 配置"
 
@@ -5167,7 +5167,7 @@ msgid ""
 "(see `Setup <setup>`__) or provide it in the httpd configuration:"
 msgstr "要确保密码的安全，可以通过环境变量（参见`Setup<setup>`__ ）或在 httpd 配置中提供："
 
-#: ../nethsm/apache.rst:64 ../nethsm/nginx.rst:87
+#: ../nethsm/apache.rst:64 ../nethsm/nginx.rst:90
 #: ../nitrokey3/firmware-update.rst.inc:69
 msgid "Example"
 msgstr "例子"
@@ -5184,11 +5184,11 @@ msgstr ""
 "pkcs11/tree/main/container/apache>`__进行实验，请使用 git 克隆`nethsm-pkcs11 "
 "仓库<https://github.com/Nitrokey/nethsm-pkcs11>`__，并运行以下命令："
 
-#: ../nethsm/apache.rst:70 ../nethsm/nginx.rst:93
+#: ../nethsm/apache.rst:70 ../nethsm/nginx.rst:96
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr "运行生成脚本会删除``webserver`` 密钥并将其替换。"
 
-#: ../nethsm/apache.rst:72 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:95
+#: ../nethsm/apache.rst:72 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started>`__ for more information."
@@ -5211,19 +5211,19 @@ msgstr ""
 "在``container/apache/p11nethsm.conf`` 中更改 libnethsm_pkcs11 配置，使其与 NetHSM "
 "匹配。"
 
-#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:98
+#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:101
 msgid "Generate the certificate and key."
 msgstr "生成证书和密钥"
 
-#: ../nethsm/apache.rst:81 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:104
+#: ../nethsm/apache.rst:81 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
 msgid "Build the container."
 msgstr "建造集装箱"
 
-#: ../nethsm/apache.rst:87 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:110
+#: ../nethsm/apache.rst:87 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
 msgid "Run the container."
 msgstr "运行容器。"
 
-#: ../nethsm/apache.rst:93 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:116
+#: ../nethsm/apache.rst:93 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
 msgid ""
 "The container will be available at `https://localhost:9443/ "
 "<https://localhost:9443/>`__."
@@ -5984,14 +5984,23 @@ msgid "Providers aren't supported yet by Nginx."
 msgstr "Nginx 尚不支持提供程序。"
 
 #: ../nethsm/nginx.rst:18
+msgid ""
+"Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with"
+" a lot of key will make the initial loading of Nginx slow (more than a "
+"minute for 1 thousand keys). It is recommended to use version 0.4.13 or "
+"newer or to build the engine from `source "
+"<https://github.com/OpenSC/libp11>`__."
+msgstr ""
+
+#: ../nethsm/nginx.rst:21
 msgid "Nginx Configuration"
 msgstr "Nginx 配置"
 
-#: ../nethsm/nginx.rst:57
+#: ../nethsm/nginx.rst:60
 msgid "The ``ssl_certificate`` must point to a certificate file on the disk."
 msgstr "``ssl_certificate`` 必须指向磁盘上的证书文件。"
 
-#: ../nethsm/nginx.rst:59
+#: ../nethsm/nginx.rst:62
 msgid ""
 "The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use "
 "the OpenSSL engine with the PKCS#11 module and select the private key "
@@ -6000,7 +6009,7 @@ msgstr ""
 "``ssl_certificate_key`` 可以是 OpenSSL 配置。在此，我们使用带有 PKCS#11 模块的 OpenSSL "
 "引擎，并选择带有标签/ID``webserver`` 和密钥类型``private`` 的私钥。"
 
-#: ../nethsm/nginx.rst:61
+#: ../nethsm/nginx.rst:64
 msgid ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
@@ -6008,20 +6017,20 @@ msgstr ""
 "``ssl_certificate_key "
 "\"engine:pkcs11:pkcs11:object=webserver;type=private\";``"
 
-#: ../nethsm/nginx.rst:64
+#: ../nethsm/nginx.rst:67
 msgid ""
 "You must generate the certificate separately and then upload it to the "
 "NetHSM. If the certificate on disk and the key in the NetHSM don't match "
 "nginx won't start."
 msgstr "你必须单独生成证书，然后上传到NetHSM。如果磁盘上的证书和NetHSM中的密钥不匹配，nginx将无法启动。"
 
-#: ../nethsm/nginx.rst:79
+#: ../nethsm/nginx.rst:82
 msgid ""
 "To secure the password you can provide it via an environment variable "
 "(see `Setup <setup>`__) or provide it in the nginx configuration:"
 msgstr "要确保密码安全，可以通过环境变量（参见`Setup<setup>`__ ）或在 nginx 配置中提供密码："
 
-#: ../nethsm/nginx.rst:89
+#: ../nethsm/nginx.rst:92
 msgid ""
 "If you want to experiment with the `given example "
 "<https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ "
@@ -6033,7 +6042,7 @@ msgstr ""
 "pkcs11/tree/main/container/nginx>`__进行实验，请使用 git 克隆`nethsm-pkcs11 "
 "仓库<https://github.com/Nitrokey/nethsm-pkcs11>`__，并运行以下命令："
 
-#: ../nethsm/nginx.rst:96
+#: ../nethsm/nginx.rst:99
 msgid ""
 "If your NetHSM is not running on localhost, you will need to change the "
 "URL of the curl requests in ``container/nginx/generate.sh`` to point to "
@@ -6042,7 +6051,7 @@ msgstr ""
 "如果 NetHSM 不在 localhost 上运行，则需要更改``container/nginx/generate.sh`` 中 curl "
 "请求的 URL，使其指向 NetHSM。"
 
-#: ../nethsm/nginx.rst:97
+#: ../nethsm/nginx.rst:100
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/nginx/p11nethsm.conf``."
@@ -6130,58 +6139,63 @@ msgstr "发动机"
 #: ../nethsm/openssl.rst:12
 msgid ""
 "When using an engine (libp11) version of 0.4.12 or older, having an EdDSA"
-" key on the NetHSM will cause OpenSSL to not find any key."
-msgstr "当使用 0.4.12 或更高版本的引擎（libp11）时，NetHSM 上的 EdDSA 密钥会导致 OpenSSL 找不到任何密钥。"
+" key on the NetHSM will cause OpenSSL to not find any key. On version "
+"0.4.12 and older, the engine lists all the keys on the NetHSM when a key "
+"is requested. When searching a key by label or id, it is recommended to "
+"use version 0.4.13 or newer, or build `libp11 "
+"<https://github.com/OpenSC/libp11>`__ from source. The engine binary will"
+" be in ``src/.libs/pkcs11.so``."
+msgstr ""
 
-#: ../nethsm/openssl.rst:14
+#: ../nethsm/openssl.rst:15
 msgid ""
 "The OpenSSL engine interface is the old way to implement custom backends "
 "for OpenSSL and it is deprecated in OpenSSL 3. This is still the most "
 "stable way to use the NetHSM with OpenSSL."
 msgstr "OpenSSL 引擎接口是为 OpenSSL 实现自定义后端的旧方法，在 OpenSSL 3 中已被弃用。"
 
-#: ../nethsm/openssl.rst:16 ../nethsm/openssl.rst:97
+#: ../nethsm/openssl.rst:17 ../nethsm/openssl.rst:98
 msgid ""
 "You will need to setup the PKCS#11 module, following `these instructions "
 "<pkcs11-setup.html>`__."
 msgstr "您需要按照`上的说明设置 PKCS#11 模块<pkcs11-setup.html>`__。"
 
-#: ../nethsm/openssl.rst:18
+#: ../nethsm/openssl.rst:19
 msgid "Install the engine:"
 msgstr "安装发动机："
 
-#: ../nethsm/openssl.rst:21
+#: ../nethsm/openssl.rst:22
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
-#: ../nethsm/openssl.rst:27
+#: ../nethsm/openssl.rst:28
 msgid "Fedora"
 msgstr "Fedora"
 
-#: ../nethsm/openssl.rst:33
+#: ../nethsm/openssl.rst:34
 msgid "Arch Linux"
 msgstr "Arch Linux"
 
-#: ../nethsm/openssl.rst:39
+#: ../nethsm/openssl.rst:40
 msgid ""
 "Next you need to configure OpenSSL to use the engine. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
 msgstr "接下来需要配置 OpenSSL 以使用该引擎。在``openssl.cnf`` 文件中添加以下几行即可："
 
-#: ../nethsm/openssl.rst:58 ../nethsm/openssl.rst:123
+#: ../nethsm/openssl.rst:59 ../nethsm/openssl.rst:124
 msgid ""
 "You can specify to OpenSSL the path of the OpenSSL configuration file "
 "using the ``OPENSSL_CONF`` environment variable."
 msgstr "您可以使用``OPENSSL_CONF`` 环境变量向 OpenSSL 指定 OpenSSL 配置文件的路径。"
 
-#: ../nethsm/openssl.rst:61
+#: ../nethsm/openssl.rst:62
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
 " create a separate configuration file for the engine."
 msgstr "如果修改 OpenSSL 主配置文件，使其仅包含这些行，则可能会破坏使用 OpenSSL 的其他程序。因此，你可能需要为引擎创建一个单独的配置文件。"
 
-#: ../nethsm/openssl.rst:63
+#: ../nethsm/openssl.rst:64
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` with the"
 " path to the PKCS#11 module you installed earlier."
@@ -6189,7 +6203,7 @@ msgstr ""
 "将``/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so`` 替换为您之前安装的 "
 "PKCS#11 模块的路径。"
 
-#: ../nethsm/openssl.rst:65
+#: ../nethsm/openssl.rst:66
 msgid ""
 "Replace ``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so`` with the "
 "path to the OpenSSL engine you installed. The path varies depending on "
@@ -6203,7 +6217,7 @@ msgstr ""
 "引擎的路径是``/usr/lib/x86_64-linux-gnu/engines-3/libpkcs11.so``；在 Fedora "
 "上，路径是``/usr/lib64/engines-3/libpkcs11.so``。"
 
-#: ../nethsm/openssl.rst:67
+#: ../nethsm/openssl.rst:68
 msgid ""
 "Now you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -6211,29 +6225,29 @@ msgstr ""
 "现在，您可以使用`PKCS#11 URIs<https://www.rfc-editor.org/rfc/rfc7512>`___，在 "
 "NetHSM 上使用密钥："
 
-#: ../nethsm/openssl.rst:73
+#: ../nethsm/openssl.rst:74
 msgid "This will use the key ``webserver``."
 msgstr "这将使用密钥``webserver``。"
 
-#: ../nethsm/openssl.rst:76
+#: ../nethsm/openssl.rst:77
 msgid ""
 "You can use the ``p11tool`` command from `GnuTLS <https://gnutls.org/>` "
 "get the full URI of the keys:"
 msgstr "你可以使用``p11tool`` 命令从 `GnuTLS <https://gnutls.org/>` 获取密钥的完整 URI："
 
-#: ../nethsm/openssl.rst:83
+#: ../nethsm/openssl.rst:84
 msgid "Example Command"
 msgstr "命令示例"
 
-#: ../nethsm/openssl.rst:85
+#: ../nethsm/openssl.rst:86
 msgid "Retrieve the public key of an asymmetric key pair on the NetHSM :"
 msgstr "读取 NetHSM 上非对称密钥对的公开密钥："
 
-#: ../nethsm/openssl.rst:93
+#: ../nethsm/openssl.rst:94
 msgid "Provider"
 msgstr "提供商"
 
-#: ../nethsm/openssl.rst:95
+#: ../nethsm/openssl.rst:96
 msgid ""
 "The OpenSSL provider interface is the new way to implement custom "
 "backends for OpenSSL. The `pkcs11-provider backend "
@@ -6243,7 +6257,7 @@ msgstr ""
 "OpenSSL 提供者接口是为 OpenSSL 实现自定义后端的新方法。`pkcs11-provider "
 "后端<https://github.com/latchset/pkcs11-provider>`__仍处于早期开发阶段。"
 
-#: ../nethsm/openssl.rst:99
+#: ../nethsm/openssl.rst:100
 msgid ""
 "Install the provider. For Fedora a package named ``pkcs11-provider`` "
 "exists. For other Linux distributions you will need to `build it from "
@@ -6253,25 +6267,25 @@ msgstr ""
 "安装提供程序。Fedora 存在一个名为``pkcs11-provider`` 的软件包。对于其他 Linux "
 "发行版，您需要`从源代码构建它<https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__。"
 
-#: ../nethsm/openssl.rst:101
+#: ../nethsm/openssl.rst:102
 msgid ""
 "Then you need to configure OpenSSL to use the provider. This is done by "
 "adding the following lines to your ``openssl.cnf`` file:"
 msgstr "然后，您需要配置 OpenSSL 以使用该提供程序。只需在``openssl.cnf`` 文件中添加以下几行即可："
 
-#: ../nethsm/openssl.rst:118
+#: ../nethsm/openssl.rst:119
 msgid ""
 "Set ``module`` to the path of the provider you installed and ``pkcs11"
 "-module-path`` to the path of the PKCS#11 module you installed."
 msgstr "将``module`` 设置为已安装的提供程序的路径，将``pkcs11-module-path`` 设置为已安装的 PKCS#11 模块的路径。"
 
-#: ../nethsm/openssl.rst:120
+#: ../nethsm/openssl.rst:121
 msgid ""
 "If you want to set NetHSM as the default provider, you can add ``default "
 "= pkcs11`` to the ``provider_sect`` section."
 msgstr "如果要将 NetHSM 设置为默认提供程序，可将``default = pkcs11`` 添加到``provider_sect`` 部分。"
 
-#: ../nethsm/openssl.rst:127
+#: ../nethsm/openssl.rst:128
 msgid ""
 "If the main OpenSSL configuration file is modified to contain only these "
 "lines, it could break other programs using OpenSSL. Thus, you may want to"
@@ -6280,7 +6294,7 @@ msgstr ""
 "如果修改 OpenSSL 主配置文件，使其仅包含这些行，则可能会破坏使用 OpenSSL "
 "的其他程序。因此，你可能需要为提供程序创建一个单独的配置文件。"
 
-#: ../nethsm/openssl.rst:129
+#: ../nethsm/openssl.rst:130
 msgid ""
 "Then you can use keys on the NetHSM by using `PKCS#11 URIs <https://www"
 ".rfc-editor.org/rfc/rfc7512>`__, example:"
@@ -6288,13 +6302,13 @@ msgstr ""
 "然后，您可以通过`PKCS#11 URIs<https://www.rfc-editor.org/rfc/rfc7512>`__ 在 NetHSM"
 " 上使用密钥，例如"
 
-#: ../nethsm/openssl.rst:135
+#: ../nethsm/openssl.rst:136
 msgid ""
 "If you set NetHSM as the default provider, you can omit the ``-provider "
 "pkcs11`` argument."
 msgstr "如果将 NetHSM 设置为默认提供程序，则可以省略``-provider pkcs11`` 参数。"
 
-#: ../nethsm/openssl.rst:138
+#: ../nethsm/openssl.rst:139
 msgid ""
 "Currently when manually setting a key type in the URI the provider will "
 "not be able to find the key. You can omit the ``;type=private`` or "
@@ -14903,8 +14917,8 @@ msgid ""
 " to rotate your screen manually."
 msgstr ""
 "如果您的 NitroPhone 或 NitroTablet 没有旋转传感器，您可以使用`Rotation "
-"Control<https://play.google.com/store/apps/details?id=org.crape."
-"rotationcontrol>`__ 手动旋转屏幕。"
+"Control<https://play.google.com/store/apps/details?id=org.crape.rotationcontrol>`__"
+" 手动旋转屏幕。"
 
 #: ../nitrophone/apps.rst:63
 msgid "Permissions of Individual Apps"
@@ -25376,3 +25390,11 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "System Update"
 #~ msgstr "系统更新"
+
+#~ msgid ""
+#~ "When using an engine (libp11) version"
+#~ " of 0.4.12 or older, having an "
+#~ "EdDSA key on the NetHSM will cause"
+#~ " OpenSSL to not find any key."
+#~ msgstr "当使用 0.4.12 或更高版本的引擎（libp11）时，NetHSM 上的 EdDSA 密钥会导致 OpenSSL 找不到任何密钥。"
+
