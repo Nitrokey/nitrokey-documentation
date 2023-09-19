@@ -34,7 +34,7 @@ The container can be executed as follows.
    .. tab:: Podman
       .. code-block:: bash
 
-         $ podman run --rm -ti -p8443:8443 nitrokey/nethsm:testing
+         $ podman run --rm -ti -p8443:8443 docker.io/nitrokey/nethsm:testing 
 
 This will provide the REST API on the port `8443` via the HTTPS protocol.
 
