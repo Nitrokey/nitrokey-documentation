@@ -18,6 +18,7 @@ Httpd Configuration
 Add the following lines to your ``httpd.conf`` :
 
 .. code-block:: 
+  
   Listen 443
   #...
   LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
