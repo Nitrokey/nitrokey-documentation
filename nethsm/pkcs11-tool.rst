@@ -81,14 +81,14 @@ RSA
 
 .. code-block:: bash
 
-    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --keypairgen --key-type rsa:2048 --label "MyKey"
+    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --keypairgen --key-type rsa:2048 --label "rsakey"
 
 ECDSA
 ~~~~~
 
 .. code-block:: bash
 
-    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --keypairgen --key-type EC:prime256v1 --label "MyECKey"
+    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --keypairgen --key-type EC:prime256v1 --label "eckey"
 
 
 AES/Generic
@@ -96,7 +96,7 @@ AES/Generic
 
 .. code-block:: bash
 
-    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --keygen --key-type GENERIC:256 --label "MyAESKey"
+    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --keygen --key-type AES:256 --label "aeskey"
 
 List Keys
 ---------
@@ -129,7 +129,7 @@ It is not possible to read private keys from the NetHSM.
 
 .. code-block:: bash
 
-    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --read-object --type pubkey --id 7273616b6579 --output-file rsakey.pub
+    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --read-object --type pubkey --label rsakey --output-file rsakey.pub
 
 The certificate of the key-pair can be read with the same command by changing the ``--type`` option to ``cert``.
 
@@ -160,7 +160,7 @@ Encryption of data is only supported for AES keys.
 
 .. code-block:: bash
 
-    echo "NetHSM rulez!  " | pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --encrypt --id 4d794b6579 --mechanism AES_CBC --output-file encrypted.txt
+    echo "NetHSM rulez!  " | pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --encrypt --id 6165736b6579 --mechanism AES_CBC --output-file encrypted.txt
 
 .. note::
   You have to manually pad the input data to the block size of the AES key. 
@@ -173,7 +173,7 @@ AES
 
 .. code-block:: bash
 
-    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --decrypt --id 4d794b6579 --mechanism AES_CBC --input-file encrypted.txt
+    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --decrypt --id 6165736b6579 --mechanism AES_CBC --input-file encrypted.txt
 
 RSA
 ~~~
@@ -183,27 +183,27 @@ You can encrypt data with the public key and decrypt it with the private key.
 .. code-block:: bash
 
   # get the public key first
-  curl -s -u operator:opPassphrase -k -X GET https://localhost:8443/api/v1/keys/$KEYID/public.pem -o public.pem
+  pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --read-object --type pubkey --id 7273616b6579 --output-file public.der
 
   # encrypt some data with OpenSSL
-  echo 'NetHSM rulez!NetHSM rulez!' | openssl pkeyutl -encrypt -pubin -inkey public.pem -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -pkeyopt rsa_mgf1_md:sha256 -out data.crypt
+  echo 'NetHSM rulez!NetHSM rulez!' | openssl pkeyutl -encrypt -pubin -inkey public.der -keyform DER -out data.crypt
 
 .. code-block:: bash
 
-    pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --decrypt --id 7273616b6579 --mechanism RSA_PKCS --input-file data.crypt
+  pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --decrypt --id 7273616b6579 --mechanism RSA-PKCS --input-file data.crypt
 
 Sign
 ----
 
 .. code-block:: bash
 
-    echo "NetHSM rulez!" | openssl dgst -sha256 -binary |  pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --sign --id 7273616b6579 --mechanism RSA_PKCS-PSS --hash-algorithm SHA256 --output-file data.sig
+    echo "NetHSM rulez!" | openssl dgst -sha256 -binary |  pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --sign --label rsakey --mechanism RSA-PKCS-PSS --hash-algorithm SHA256 --output-file data.sig --signature-format openssl
 
 To verify the signature with OpenSSL:
 
 .. code-block:: bash
 
   # get the public key
-  curl -s -u operator:opPassphrase -k -X GET https://localhost:8443/api/v1/keys/$KEYID/public.pem -o public.pem
+  pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --read-object --type pubkey --label rsakey --output-file public.der
 
-  echo 'NetHSM rulez!' | openssl dgst -keyform PEM -verify public.pem -sha256 -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 -signature data.sig
+  echo 'NetHSM rulez!' | openssl dgst -keyform DER -verify public.der -sha256 -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 -signature data.sig
