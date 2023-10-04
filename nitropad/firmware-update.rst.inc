@@ -19,35 +19,41 @@ Preparation
 
 1. Connect your NitroPad to a power plug and load its battery to over
    70%
-2. Download the `latest
-   firmware <https://github.com/Nitrokey/heads/releases/latest>`__ and store it
-   on a USB drive. For the NitroPad T430 use ``nitropad-t430-[version].npf`` and for the NitroPad X230 use ``nitropad-x230-[version].npf``.
-3. For hash sum verification, store ``sha256sum`` file at the USB
-   drive.
 
-Firmware file verification
+2. Download the `latest firmware <https://github.com/Nitrokey/heads/releases/latest>`__ and store it on a USB drive. For the:
+
+   - NitroPad T430: ``firmware-nitropad-t430-[version].npf`` 
+   - NitroPad X230: ``firmware-nitropad-x230-[version].npf``
+   - NitroPad NV41: ``firmware-nitropad-nv41-[version].npf``
+   - NitroPad NS50: ``firmware-nitropad-ns50-[version].npf``
+
+Firmware Signature Check
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It is mandatory to run a firmware file consistency check before writing it to the device. After copying the firmware file to the USB drive make sure the latter is properly unmounted/ejected to avoid write issues. The consistency check should be run on NitroPad, so the data verified will be exact same as the later read by the update application. This action will not be required in the further firmware updates.
+To verify the firmware follow these steps:
 
-1. Start Nitropad and open recovery console from
-   ``Options -> Exit to recovery shell``
-2. Execute the following to verify the firmware:
+1. Download  `sha256sum.sig <https://github.com/Nitrokey/heads/releases/latest>`__ and store it
 
-.. code-block:: bash
+2. Download and import Markus Meissners `gpg key <https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__ 
 
-   $ mount-usb              # select USB device
-   $ cd /media
-   $ sha256sum -c sha256sum
-
-For ``v1.1-rc3`` version this should result in:
+3. Verify the signature: 
 
 .. code-block:: bash
 
-   $ sha256sum -c sha256sum
-   nitropad_x230_v1.1-rc3.rom: OK
+   gpg --verify sha256sum.sig sha256sum
 
-This confirms the content of the file is as expected. Please reboot the Nitropad to continue (either by switching off and powering on again, or hitting CTRL+ALT+DELETE).
+
+You expect an output like this one:
+
+.. code-block:: bash
+
+	gpg: Signature made Wed 05 Jul 2023 04:30:34 PM CEST
+	gpg:                using RSA key C7E32619E2F71736F5910BB144CB2D868DD16BDA
+	gpg: Good signature from "Markus Meissner <meissner@nitrokey.com>" [ultimate]
+	gpg:                 aka "Markus Meissner <coder@safemailbox.de>" [ultimate]
+
+
+This verifys the file. 
 
 Procedure
 ~~~~~~~~~
@@ -124,4 +130,7 @@ You have successfully updated your firmware!
 Further steps
 ~~~~~~~~~~~~~
 
-In case ``ERROR: TOTP Generation Failed!`` screen will show up, please follow the instructions for Factory Reset (on the left side menu), starting from step 11.
+.. hint::
+	There is a known issue with the NV41 that it can get stuck after the update in the boot splash(heads takes longer then 30s to get up). This solves it self after max 5 restarts (pressing the power button short). If not please contact support@nitrokey.com 
+
+1. In case ``ERROR: TOTP Generation Failed!`` screen will show up, please follow the instructions for Factory Reset (on the left side menu), starting from step
