@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-04 17:14+0200\n"
+"POT-Creation-Date: 2023-10-31 10:53+0100\n"
 "PO-Revision-Date: 2023-06-12 15:47+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: pt\n"
@@ -6364,75 +6364,62 @@ msgid ""
 "The NetHSM supports the PKCS#11 standard. The required driver is "
 "available from the `repository <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__. The repository containes the source code and libraries, for "
-"different operating systems."
+"different operating systems. The `PKCS#11 guide <pkcs11-setup.html>`_ "
+"describes the usage in detail."
 msgstr ""
 
-#: ../nethsm/integration.rst:13
-msgid ""
-"The `PKCS#11 guide <pkcs11-setup.html>`_ describes how to use them in "
-"detail."
-msgstr ""
-
-#: ../nethsm/integration.rst:16
-#, fuzzy
-msgid ""
-"This driver is still an early Proof of Concept implementation that only "
-"implements the functions that are necessary for operating TLS servers."
-msgstr ""
-"Este driver é ainda uma implementação antecipada da Prova de Conceito que"
-" implementa apenas as funções necessárias para o funcionamento de "
-"servidores TLS, como por exemplo um servidor HTTPS."
-
-#: ../nethsm/integration.rst:20
+#: ../nethsm/integration.rst:15
 msgid "Development and Testing"
 msgstr "Desenvolvimento e testes"
 
-#: ../nethsm/integration.rst:22
+#: ../nethsm/integration.rst:17
 #, fuzzy
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
-"<https://nethsmdemo.nitrokey.com/api/v1/info>`_."
+"<https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every "
+"eight hours (CET 6:00, 14:00, 22:00). User \"admin\", password "
+"\"adminadmin\", unlock password \"unlockunlock\"."
 msgstr ""
 "Uma instância pública de demonstração do NetHSM está disponível em "
 "`nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com>`_."
 
-#: ../nethsm/integration.rst:24
+#: ../nethsm/integration.rst:19
 msgid ""
 "Alternatively, you can run the NetHSM as a `Docker container "
 "<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
 msgstr ""
 
-#: ../nethsm/integration.rst:26
+#: ../nethsm/integration.rst:21
 #, fuzzy
 msgid "The container can be executed as follows."
 msgstr "A cópia de segurança pode ser executada da seguinte forma."
 
-#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:54
-#: ../nethsm/integration.rst:67
+#: ../nethsm/integration.rst:24 ../nethsm/integration.rst:49
+#: ../nethsm/integration.rst:62
 msgid "Docker"
 msgstr "Docker"
 
-#: ../nethsm/integration.rst:34 ../nethsm/integration.rst:59
-#: ../nethsm/integration.rst:72
+#: ../nethsm/integration.rst:29 ../nethsm/integration.rst:54
+#: ../nethsm/integration.rst:67
 msgid "Podman"
 msgstr ""
 
-#: ../nethsm/integration.rst:39
+#: ../nethsm/integration.rst:34
 msgid "This will provide the REST API on the port `8443` via the HTTPS protocol."
 msgstr ""
 
-#: ../nethsm/integration.rst:42
+#: ../nethsm/integration.rst:37
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
 "correct connection settings to establish a connection. Please refer to "
 "chapter `NetHSM introduction <index.html>`__ to learn more."
 msgstr ""
 
-#: ../nethsm/integration.rst:47
+#: ../nethsm/integration.rst:42
 msgid "Integration into Custom Application"
 msgstr "Integração em aplicação personalizada"
 
-#: ../nethsm/integration.rst:49
+#: ../nethsm/integration.rst:44
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Here are libraries "
@@ -6442,13 +6429,13 @@ msgid ""
 "<https://github.com/OpenAPITools/openapi-generator>`_."
 msgstr ""
 
-#: ../nethsm/integration.rst:51
+#: ../nethsm/integration.rst:46
 msgid "The list of all available languages can be retrieved as follows."
 msgstr ""
 "A lista de todas as línguas disponíveis pode ser recuperada da seguinte "
 "forma."
 
-#: ../nethsm/integration.rst:64
+#: ../nethsm/integration.rst:59
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
@@ -6456,7 +6443,7 @@ msgstr ""
 "O cliente NetHSM pode ser gerado para a sua linguagem de programação como"
 " se segue."
 
-#: ../nethsm/integration.rst:77
+#: ../nethsm/integration.rst:72
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -6466,7 +6453,7 @@ msgstr ""
 "diretório ``./out/``. Esta pasta também contém a documentação necessária "
 "para a sua utilização."
 
-#: ../nethsm/integration.rst:81
+#: ../nethsm/integration.rst:76
 msgid ""
 "If Podman is used with enforcing SELinux, a labeling to the volume mount "
 "might be required. The mode of SELinux can be requested with ``sestatus "
@@ -6475,13 +6462,14 @@ msgid ""
 "postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
 msgstr ""
 
-#: ../nethsm/integration.rst:87
+#: ../nethsm/integration.rst:82
 msgid "REST-API"
 msgstr "REST-API"
 
-#: ../nethsm/integration.rst:89
+#: ../nethsm/integration.rst:84
+#, fuzzy
 msgid ""
-"The NetHSM's API specification is available in `OpenAPI format "
+"NetHSM's API specification is available in `OpenAPI format "
 "<https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_, and can be "
 "inspected and tested in the `API browser "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`_."
@@ -30813,4 +30801,33 @@ msgstr ""
 #~ "reinicie o Nitropad para continuar (ou"
 #~ " desligando e ligando novamente, ou "
 #~ "pressionando CTRL+ALT+DELETE)."
+
+#~ msgid ""
+#~ "The NetHSM supports the PKCS#11 "
+#~ "standard. The required driver is "
+#~ "available from the `repository "
+#~ "<https://github.com/Nitrokey/nethsm-pkcs11>`__. The "
+#~ "repository containes the source code and"
+#~ " libraries, for different operating "
+#~ "systems."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The `PKCS#11 guide <pkcs11-setup.html>`_ "
+#~ "describes how to use them in "
+#~ "detail."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This driver is still an early "
+#~ "Proof of Concept implementation that "
+#~ "only implements the functions that are"
+#~ " necessary for operating TLS servers."
+#~ msgstr ""
+#~ "Este driver é ainda uma implementação"
+#~ " antecipada da Prova de Conceito que"
+#~ " implementa apenas as funções necessárias"
+#~ " para o funcionamento de servidores "
+#~ "TLS, como por exemplo um servidor "
+#~ "HTTPS."
 
