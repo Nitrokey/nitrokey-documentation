@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-31 10:53+0100\n"
+"POT-Creation-Date: 2023-10-31 14:58+0100\n"
 "PO-Revision-Date: 2023-10-31 11:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5306,6 +5306,120 @@ msgid ""
 "``container/ejbca/p11nethsm.conf``."
 msgstr "在``container/ejbca/p11nethsm.conf`` 中更改 libnethsm_pkcs11 配置，使其与 NetHSM 匹配。"
 
+#: ../nethsm/faq.rst:2
+#, fuzzy
+msgid "Frequently Asked Questions (FAQ)"
+msgstr "常见问题"
+
+#: ../nethsm/faq.rst:5
+msgid "Scalability: How to synchronize a cluster of multiple instances?"
+msgstr ""
+
+#: ../nethsm/faq.rst:7
+msgid ""
+"NetHSM is stateless, so that several NetHSM devices can be used to enable"
+" extremely high throughput and high availability. The PKCS#11 module "
+"supports round-robin schedule for a cluster of NetHSM instances. Multiple"
+" instances of NetHSM can be synchronized via encrypted backups. For this "
+"a separate system downloads and uploads backup files between the "
+"instances. This can be a scripted system utilizing pynitrokey. This "
+"separate system doesn't has access to the backup data in clear text "
+"because the backup files are encrypted."
+msgstr ""
+
+#: ../nethsm/faq.rst:10
+#, fuzzy
+msgid "Is NetHSM FIPS or Common Criteria certified?"
+msgstr "**问：**Nitrokey存储系统是否经过通用标准或FIPS认证？"
+
+#: ../nethsm/faq.rst:12
+msgid ""
+"Not yet but we are aiming for certifications in the future. Please "
+"contact us if you are interested in supporting such efforts."
+msgstr ""
+
+#: ../nethsm/faq.rst:15
+msgid ""
+"Where can I learn more about NetHMS's security architecture and "
+"implementation?"
+msgstr ""
+
+#: ../nethsm/faq.rst:17
+msgid ""
+"Start with the chapters Getting Started, Administration and Operations. "
+"Proceed with the following resources."
+msgstr ""
+
+#: ../nethsm/faq.rst:19
+msgid "Overall system design - COMING SOON"
+msgstr ""
+
+#: ../nethsm/faq.rst:20
+msgid ""
+"`Security assessment report "
+"<https://www.nitrokey.com/files/doc/Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_"
+msgstr ""
+
+#: ../nethsm/faq.rst:21
+msgid "Full source code - COMING SOON"
+msgstr ""
+
+#: ../nethsm/faq.rst:22
+msgid ""
+"Physical random number generator (TRNG) of quality PTG.3 according to "
+"AIS-20: `hardware <https://github.com/Nitrokey/nitrokey-trng-"
+"rs232-hardware>`_, `firmware <https://github.com/Nitrokey/nitrokey-trng-"
+"rs232-firmware>`_"
+msgstr ""
+
+#: ../nethsm/faq.rst:25
+msgid "Roadmap: Which features are planned?"
+msgstr ""
+
+#: ../nethsm/faq.rst:27
+msgid "In loose order:"
+msgstr ""
+
+#: ../nethsm/faq.rst:29
+msgid "Quorum: m-of-n access scheme and security domain management"
+msgstr ""
+
+#: ../nethsm/faq.rst:30
+msgid "Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
+msgstr ""
+
+#: ../nethsm/faq.rst:31
+msgid "Performance improvements"
+msgstr ""
+
+#: ../nethsm/faq.rst:32
+msgid "Direct, dynamic cluster capability, possibly support for external database"
+msgstr ""
+
+#: ../nethsm/faq.rst:33
+msgid "User authentication via mTLS certificates or FIDO"
+msgstr ""
+
+#: ../nethsm/faq.rst:34
+msgid "More user rights management (e.g. additional roles, groups)"
+msgstr ""
+
+#: ../nethsm/faq.rst:35
+msgid "Productive usable software container"
+msgstr ""
+
+#: ../nethsm/faq.rst:36
+msgid "Further separations and hardenings"
+msgstr ""
+
+#: ../nethsm/faq.rst:37
+msgid "FIPS and/or Common Criteria certifications"
+msgstr ""
+
+#: ../nethsm/faq.rst:38
+msgid "Redundant power supplies"
+msgstr ""
+
 #: ../nethsm/getting-started.rst:2 ../nextbox/gettingstarted.rst:2
 #: ../nitropad/qubes/index.rst:7 ../nitropad/ubuntu/index.rst:7
 #: ../nitropc/debian/index.rst:14 ../nitropc/qubes/index.rst:14
@@ -5546,10 +5660,9 @@ msgid ""
 "different operating systems. The `PKCS#11 guide <pkcs11-setup.html>`_ "
 "describes the usage in detail."
 msgstr ""
-"NetHSM 支持 PKCS#11 标准。所需驱动程序可从`存储库<https://github.com/"
-"Nitrokey/nethsm-"
-"pkcs11>`__中获取。该资源库包含适用于不同操作系统的源代码和库。`PKCS#11 "
-"指南<pkcs11-setup.html>`_ 详细介绍了使用方法。"
+"NetHSM 支持 PKCS#11 标准。所需驱动程序可从`存储库<https://github.com/Nitrokey/nethsm-"
+"pkcs11>`__中获取。该资源库包含适用于不同操作系统的源代码和库。`PKCS#11 指南<pkcs11-setup.html>`_ "
+"详细介绍了使用方法。"
 
 #: ../nethsm/integration.rst:15
 msgid "Development and Testing"
@@ -5562,10 +5675,10 @@ msgid ""
 "eight hours (CET 6:00, 14:00, 22:00). User \"admin\", password "
 "\"adminadmin\", unlock password \"unlockunlock\"."
 msgstr ""
-"公共 NetHSM 演示实例可在`nethsmdemo.nitrokey.com<https://nethsmdemo.nitrokey."
-"com/api/v1/info>`_ 上获得。它将每八小时重置一次（欧洲中部时间 "
-"6:00、14:00、22:00）。用户名 \"admin\"，密码 \"adminadmin\"，解锁密码 "
-"\"unlockunlock\"。"
+"公共 NetHSM "
+"演示实例可在`nethsmdemo.nitrokey.com<https://nethsmdemo.nitrokey.com/api/v1/info>`_"
+" 上获得。它将每八小时重置一次（欧洲中部时间 6:00、14:00、22:00）。用户名 \"admin\"，密码 "
+"\"adminadmin\"，解锁密码 \"unlockunlock\"。"
 
 #: ../nethsm/integration.rst:19
 msgid ""
@@ -5660,9 +5773,9 @@ msgid ""
 "inspected and tested in the `API browser "
 "<https://nethsmdemo.nitrokey.com/api_docs/index.html>`_."
 msgstr ""
-"NetHSM 的应用程序接口规范采用`OpenAPI 格式<https://nethsmdemo.nitrokey.com/"
-"api_docs/nethsm-api.yaml>`_ ，可在`API 浏览器<https://nethsmdemo.nitrokey."
-"com/api_docs/index.html>`_ 中检查和测试。"
+"NetHSM 的应用程序接口规范采用`OpenAPI 格式<https://nethsmdemo.nitrokey.com/api_docs"
+"/nethsm-api.yaml>`_ ，可在`API "
+"浏览器<https://nethsmdemo.nitrokey.com/api_docs/index.html>`_ 中检查和测试。"
 
 #: ../nethsm/knotdns.rst:2
 msgid "Knot DNS"
@@ -25525,3 +25638,4 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 #~ "only implements the functions that are"
 #~ " necessary for operating TLS servers."
 #~ msgstr "这个驱动仍然是一个早期的概念验证实现，只实现了操作TLS服务器所需的功能。"
+
