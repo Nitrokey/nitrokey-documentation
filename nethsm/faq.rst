@@ -11,6 +11,11 @@ Is NetHSM FIPS or Common Criteria certified?
 
 Not yet but we are aiming for certifications in the future. Please contact us if you are interested in supporting such efforts.
 
+Which protections against physical tampering are in place?
+----------------------------------------------------------
+
+NetHSM contains a TPM which is protected against physical tampering. The TPM is the root of trust and securely stores cryptographic keys which are used to encrypt and decrypt further data and keys in the NetHSM. This protects against booting malicious firmware and software and decrypting data and keys being stored. The current NetHSM doesn't contain additional sensors to detect tampering.
+
 Where can I learn more about NetHMS's security architecture and implementation?
 -------------------------------------------------------------------------------
 
@@ -24,12 +29,15 @@ Start with the chapters Getting Started, Administration and Operations. Proceed 
 Roadmap: Which features are planned?
 ------------------------------------
 
-In loose order:
+We plan the following developments in the loose order. Changes to this prioritization based on customer
+requests are possible.
 
+* Non-exportable setting, affecting backups
+* Performance improvements
 * Quorum: m-of-n access scheme and security domain management
 * Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool
-* Performance improvements
 * Direct, dynamic cluster capability, possibly support for external database
+* Remote attestation and cloud service
 * User authentication via mTLS certificates or FIDO
 * More user rights management (e.g. additional roles, groups)
 * Productive usable software container
