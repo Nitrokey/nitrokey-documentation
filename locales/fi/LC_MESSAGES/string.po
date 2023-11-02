@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-31 14:58+0100\n"
+"POT-Creation-Date: 2023-11-02 10:27+0100\n"
 "PO-Revision-Date: 2023-10-31 15:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Finnish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/fi/>\n"
 "Language: fi\n"
+"Language-Team: Finnish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/fi/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6122,15 +6121,15 @@ msgid ""
 "separate system doesn't has access to the backup data in clear text "
 "because the backup files are encrypted."
 msgstr ""
-"NetHSM on tilaton, joten useita NetHSM-laitteita voidaan käyttää erittäin "
-"suuren läpimenon ja korkean käytettävyyden mahdollistamiseksi. PKCS#11-"
-"moduuli tukee NetHSM-instanssien klusterin round-robin-aikataulua. NetHSM:n "
-"useita instansseja voidaan synkronoida salattujen varmuuskopioiden avulla. "
-"Tätä varten erillinen järjestelmä lataa ja lataa varmuuskopiotiedostot "
-"instanssien välillä. Tämä voi olla skriptattu järjestelmä, jossa käytetään "
-"pynitrokey-avainta. Tämä erillinen järjestelmä ei pääse käsiksi "
-"varmuuskopiointitietoihin selvänä tekstinä, koska varmuuskopiotiedostot on "
-"salattu."
+"NetHSM on tilaton, joten useita NetHSM-laitteita voidaan käyttää erittäin"
+" suuren läpimenon ja korkean käytettävyyden mahdollistamiseksi. "
+"PKCS#11-moduuli tukee NetHSM-instanssien klusterin round-robin-"
+"aikataulua. NetHSM:n useita instansseja voidaan synkronoida salattujen "
+"varmuuskopioiden avulla. Tätä varten erillinen järjestelmä lataa ja lataa"
+" varmuuskopiotiedostot instanssien välillä. Tämä voi olla skriptattu "
+"järjestelmä, jossa käytetään pynitrokey-avainta. Tämä erillinen "
+"järjestelmä ei pääse käsiksi varmuuskopiointitietoihin selvänä tekstinä, "
+"koska varmuuskopiotiedostot on salattu."
 
 #: ../nethsm/faq.rst:10
 msgid "Is NetHSM FIPS or Common Criteria certified?"
@@ -6145,6 +6144,20 @@ msgstr ""
 "yhteyttä, jos olet kiinnostunut tukemaan näitä pyrkimyksiä."
 
 #: ../nethsm/faq.rst:15
+msgid "Which protections against physical tampering are in place?"
+msgstr ""
+
+#: ../nethsm/faq.rst:17
+msgid ""
+"NetHSM contains a TPM which is protected against physical tampering. The "
+"TPM is the root of trust and securely stores cryptographic keys which are"
+" used to encrypt and decrypt further data and keys in the NetHSM. This "
+"protects against booting malicious firmware and software and decrypting "
+"data and keys being stored. The current NetHSM doesn't contain additional"
+" sensors to detect tampering."
+msgstr ""
+
+#: ../nethsm/faq.rst:20
 msgid ""
 "Where can I learn more about NetHMS's security architecture and "
 "implementation?"
@@ -6152,7 +6165,7 @@ msgstr ""
 "Mistä saan lisätietoja NetHMS:n turvallisuusarkkitehtuurista ja "
 "-toteutuksesta?"
 
-#: ../nethsm/faq.rst:17
+#: ../nethsm/faq.rst:22
 msgid ""
 "Start with the chapters Getting Started, Administration and Operations. "
 "Proceed with the following resources."
@@ -6160,81 +6173,91 @@ msgstr ""
 "Aloita luvuista Aloittaminen, Hallinta ja Toiminnot. Jatka seuraavilla "
 "resursseilla."
 
-#: ../nethsm/faq.rst:19
+#: ../nethsm/faq.rst:24
 msgid "Overall system design - COMING SOON"
 msgstr "Yleinen järjestelmäsuunnittelu - tulossa pian"
 
-#: ../nethsm/faq.rst:20
+#: ../nethsm/faq.rst:25
 msgid ""
 "`Security assessment report "
 "<https://www.nitrokey.com/files/doc/Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_"
 msgstr ""
-"`Turvallisuusarviointiraportti <https://www.nitrokey.com/files/doc/"
-"Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_"
+"`Turvallisuusarviointiraportti "
+"<https://www.nitrokey.com/files/doc/Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_"
 
-#: ../nethsm/faq.rst:21
+#: ../nethsm/faq.rst:26
 msgid "Full source code - COMING SOON"
 msgstr "Täydellinen lähdekoodi - tulossa pian"
 
-#: ../nethsm/faq.rst:22
+#: ../nethsm/faq.rst:27
 msgid ""
 "Physical random number generator (TRNG) of quality PTG.3 according to "
 "AIS-20: `hardware <https://github.com/Nitrokey/nitrokey-trng-"
 "rs232-hardware>`_, `firmware <https://github.com/Nitrokey/nitrokey-trng-"
 "rs232-firmware>`_"
 msgstr ""
-"AIS-20:n mukainen fyysinen satunnaislukugeneraattori (TRNG), jonka laatu on "
-"PTG.3: `laitteisto <https://github.com/Nitrokey/nitrokey-trng-"
-"rs232-hardware>`_, `laiteohjelmisto. <https://github.com/Nitrokey/nitrokey-"
-"trng-rs232-firmware>`_"
+"AIS-20:n mukainen fyysinen satunnaislukugeneraattori (TRNG), jonka laatu "
+"on PTG.3: `laitteisto <https://github.com/Nitrokey/nitrokey-trng-"
+"rs232-hardware>`_, `laiteohjelmisto. <https://github.com/Nitrokey"
+"/nitrokey-trng-rs232-firmware>`_"
 
-#: ../nethsm/faq.rst:25
+#: ../nethsm/faq.rst:30
 msgid "Roadmap: Which features are planned?"
 msgstr "Tiekartta: Mitä ominaisuuksia on suunnitteilla?"
 
-#: ../nethsm/faq.rst:27
-msgid "In loose order:"
-msgstr "Vapaassa järjestyksessä:"
+#: ../nethsm/faq.rst:32
+msgid ""
+"We plan the following developments in the loose order. Changes to this "
+"prioritization based on customer requests are possible."
+msgstr ""
 
-#: ../nethsm/faq.rst:29
-msgid "Quorum: m-of-n access scheme and security domain management"
-msgstr "Quorum: m-of-n-käyttöoikeusjärjestelmä ja tietoturva-alueen hallinta"
+#: ../nethsm/faq.rst:35
+msgid "Non-exportable setting, affecting backups"
+msgstr ""
 
-#: ../nethsm/faq.rst:30
-msgid "Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
-msgstr "Lisää ECC:tä: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpooli."
-
-#: ../nethsm/faq.rst:31
+#: ../nethsm/faq.rst:36
 msgid "Performance improvements"
 msgstr "Suorituskyvyn parannukset"
 
-#: ../nethsm/faq.rst:32
+#: ../nethsm/faq.rst:37
+msgid "Quorum: m-of-n access scheme and security domain management"
+msgstr "Quorum: m-of-n-käyttöoikeusjärjestelmä ja tietoturva-alueen hallinta"
+
+#: ../nethsm/faq.rst:38
+msgid "Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
+msgstr "Lisää ECC:tä: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpooli."
+
+#: ../nethsm/faq.rst:39
 msgid "Direct, dynamic cluster capability, possibly support for external database"
 msgstr ""
-"Suora, dynaaminen klusterointimahdollisuus, mahdollisesti tuki ulkoiselle "
-"tietokannalle."
+"Suora, dynaaminen klusterointimahdollisuus, mahdollisesti tuki ulkoiselle"
+" tietokannalle."
 
-#: ../nethsm/faq.rst:33
+#: ../nethsm/faq.rst:40
+msgid "Remote attestation and cloud service"
+msgstr ""
+
+#: ../nethsm/faq.rst:41
 msgid "User authentication via mTLS certificates or FIDO"
 msgstr "Käyttäjän todennus mTLS-varmenteilla tai FIDO:lla"
 
-#: ../nethsm/faq.rst:34
+#: ../nethsm/faq.rst:42
 msgid "More user rights management (e.g. additional roles, groups)"
 msgstr "Lisää käyttäjäoikeuksien hallintaa (esim. lisäroolit, ryhmät)."
 
-#: ../nethsm/faq.rst:35
+#: ../nethsm/faq.rst:43
 msgid "Productive usable software container"
 msgstr "Tuottava käyttökelpoinen ohjelmistokontti"
 
-#: ../nethsm/faq.rst:36
+#: ../nethsm/faq.rst:44
 msgid "Further separations and hardenings"
 msgstr "Muita erotteluja ja kovetuksia"
 
-#: ../nethsm/faq.rst:37
+#: ../nethsm/faq.rst:45
 msgid "FIPS and/or Common Criteria certifications"
 msgstr "FIPS- ja/tai Common Criteria -sertifikaatit"
 
-#: ../nethsm/faq.rst:38
+#: ../nethsm/faq.rst:46
 msgid "Redundant power supplies"
 msgstr "Ylimääräiset virtalähteet"
 
@@ -30991,3 +31014,7 @@ msgstr ""
 #~ "of Concept -toteutus, joka toteuttaa "
 #~ "vain TLS-palvelinten käyttämiseen tarvittavat"
 #~ " toiminnot."
+
+#~ msgid "In loose order:"
+#~ msgstr "Vapaassa järjestyksessä:"
+

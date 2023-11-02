@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-31 14:58+0100\n"
+"POT-Creation-Date: 2023-11-02 10:27+0100\n"
 "PO-Revision-Date: 2023-10-31 15:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ro/>\n"
 "Language: ro\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ro/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
+"< 20)) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6230,14 +6229,14 @@ msgid ""
 "because the backup files are encrypted."
 msgstr ""
 "NetHSM nu are stare, astfel încât mai multe dispozitive NetHSM pot fi "
-"utilizate pentru a permite un debit extrem de ridicat și o disponibilitate "
-"ridicată. Modulul PKCS#11 suportă programarea round-robin pentru un cluster "
-"de instanțe NetHSM. Mai multe instanțe de NetHSM pot fi sincronizate prin "
-"intermediul unor copii de rezervă criptate. Pentru aceasta, un sistem "
-"separat descarcă și încarcă fișierele de backup între instanțe. Acesta poate "
-"fi un sistem scriptat care utilizează pynitrokey. Acest sistem separat nu "
-"are acces la datele de backup în text clar, deoarece fișierele de backup "
-"sunt criptate."
+"utilizate pentru a permite un debit extrem de ridicat și o "
+"disponibilitate ridicată. Modulul PKCS#11 suportă programarea round-robin"
+" pentru un cluster de instanțe NetHSM. Mai multe instanțe de NetHSM pot "
+"fi sincronizate prin intermediul unor copii de rezervă criptate. Pentru "
+"aceasta, un sistem separat descarcă și încarcă fișierele de backup între "
+"instanțe. Acesta poate fi un sistem scriptat care utilizează pynitrokey. "
+"Acest sistem separat nu are acces la datele de backup în text clar, "
+"deoarece fișierele de backup sunt criptate."
 
 #: ../nethsm/faq.rst:10
 msgid "Is NetHSM FIPS or Common Criteria certified?"
@@ -6248,18 +6247,32 @@ msgid ""
 "Not yet but we are aiming for certifications in the future. Please "
 "contact us if you are interested in supporting such efforts."
 msgstr ""
-"Nu încă, dar ne propunem să obținem certificări în viitor. Vă rugăm să ne "
-"contactați dacă sunteți interesat să sprijiniți astfel de eforturi."
+"Nu încă, dar ne propunem să obținem certificări în viitor. Vă rugăm să ne"
+" contactați dacă sunteți interesat să sprijiniți astfel de eforturi."
 
 #: ../nethsm/faq.rst:15
+msgid "Which protections against physical tampering are in place?"
+msgstr ""
+
+#: ../nethsm/faq.rst:17
+msgid ""
+"NetHSM contains a TPM which is protected against physical tampering. The "
+"TPM is the root of trust and securely stores cryptographic keys which are"
+" used to encrypt and decrypt further data and keys in the NetHSM. This "
+"protects against booting malicious firmware and software and decrypting "
+"data and keys being stored. The current NetHSM doesn't contain additional"
+" sensors to detect tampering."
+msgstr ""
+
+#: ../nethsm/faq.rst:20
 msgid ""
 "Where can I learn more about NetHMS's security architecture and "
 "implementation?"
 msgstr ""
-"Unde pot afla mai multe despre arhitectura de securitate și implementarea "
-"NetHMS?"
+"Unde pot afla mai multe despre arhitectura de securitate și implementarea"
+" NetHMS?"
 
-#: ../nethsm/faq.rst:17
+#: ../nethsm/faq.rst:22
 msgid ""
 "Start with the chapters Getting Started, Administration and Operations. "
 "Proceed with the following resources."
@@ -6267,83 +6280,93 @@ msgstr ""
 "Începeți cu capitolele Noțiuni introductive, Administrare și Operațiuni. "
 "Continuați cu următoarele resurse."
 
-#: ../nethsm/faq.rst:19
+#: ../nethsm/faq.rst:24
 msgid "Overall system design - COMING SOON"
 msgstr "Proiectarea generală a sistemului - ÎN CURÂND"
 
-#: ../nethsm/faq.rst:20
+#: ../nethsm/faq.rst:25
 msgid ""
 "`Security assessment report "
 "<https://www.nitrokey.com/files/doc/Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_"
 msgstr ""
-"`Raport de evaluare a securității <https://www.nitrokey.com/files/doc/"
-"Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_"
+"`Raport de evaluare a securității "
+"<https://www.nitrokey.com/files/doc/Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_"
 
-#: ../nethsm/faq.rst:21
+#: ../nethsm/faq.rst:26
 msgid "Full source code - COMING SOON"
 msgstr "Codul sursă complet - ÎN CURÂND"
 
-#: ../nethsm/faq.rst:22
+#: ../nethsm/faq.rst:27
 msgid ""
 "Physical random number generator (TRNG) of quality PTG.3 according to "
 "AIS-20: `hardware <https://github.com/Nitrokey/nitrokey-trng-"
 "rs232-hardware>`_, `firmware <https://github.com/Nitrokey/nitrokey-trng-"
 "rs232-firmware>`_"
 msgstr ""
-"Generator fizic de numere aleatoare (TRNG) de calitate PTG.3 în conformitate "
-"cu AIS-20: `hardware <https://github.com/Nitrokey/nitrokey-trng-"
-"rs232-hardware>`_, `firmware <https://github.com/Nitrokey/nitrokey-trng-"
-"rs232-firmware>`_"
+"Generator fizic de numere aleatoare (TRNG) de calitate PTG.3 în "
+"conformitate cu AIS-20: `hardware <https://github.com/Nitrokey/nitrokey-"
+"trng-rs232-hardware>`_, `firmware <https://github.com/Nitrokey/nitrokey-"
+"trng-rs232-firmware>`_"
 
-#: ../nethsm/faq.rst:25
+#: ../nethsm/faq.rst:30
 msgid "Roadmap: Which features are planned?"
 msgstr "Foaie de parcurs: Ce caracteristici sunt planificate?"
 
-#: ../nethsm/faq.rst:27
-msgid "In loose order:"
-msgstr "În ordine liberă:"
+#: ../nethsm/faq.rst:32
+msgid ""
+"We plan the following developments in the loose order. Changes to this "
+"prioritization based on customer requests are possible."
+msgstr ""
 
-#: ../nethsm/faq.rst:29
-msgid "Quorum: m-of-n access scheme and security domain management"
-msgstr "Quorum: schema de acces m-of-n și gestionarea domeniului de securitate"
+#: ../nethsm/faq.rst:35
+msgid "Non-exportable setting, affecting backups"
+msgstr ""
 
-#: ../nethsm/faq.rst:30
-msgid "Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
-msgstr "ECC suplimentar: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
-
-#: ../nethsm/faq.rst:31
+#: ../nethsm/faq.rst:36
 msgid "Performance improvements"
 msgstr "Îmbunătățiri de performanță"
 
-#: ../nethsm/faq.rst:32
+#: ../nethsm/faq.rst:37
+msgid "Quorum: m-of-n access scheme and security domain management"
+msgstr "Quorum: schema de acces m-of-n și gestionarea domeniului de securitate"
+
+#: ../nethsm/faq.rst:38
+msgid "Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
+msgstr "ECC suplimentar: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
+
+#: ../nethsm/faq.rst:39
 msgid "Direct, dynamic cluster capability, possibly support for external database"
 msgstr ""
-"Capacitate de cluster direct, dinamic, eventual suport pentru baze de date "
-"externe"
+"Capacitate de cluster direct, dinamic, eventual suport pentru baze de "
+"date externe"
 
-#: ../nethsm/faq.rst:33
+#: ../nethsm/faq.rst:40
+msgid "Remote attestation and cloud service"
+msgstr ""
+
+#: ../nethsm/faq.rst:41
 msgid "User authentication via mTLS certificates or FIDO"
 msgstr "Autentificarea utilizatorilor prin certificate mTLS sau FIDO"
 
-#: ../nethsm/faq.rst:34
+#: ../nethsm/faq.rst:42
 msgid "More user rights management (e.g. additional roles, groups)"
 msgstr ""
 "Gestionarea drepturilor utilizatorilor (de exemplu, roluri suplimentare, "
 "grupuri)"
 
-#: ../nethsm/faq.rst:35
+#: ../nethsm/faq.rst:43
 msgid "Productive usable software container"
 msgstr "Container de software utilizabil productiv"
 
-#: ../nethsm/faq.rst:36
+#: ../nethsm/faq.rst:44
 msgid "Further separations and hardenings"
 msgstr "Alte separări și întăriri"
 
-#: ../nethsm/faq.rst:37
+#: ../nethsm/faq.rst:45
 msgid "FIPS and/or Common Criteria certifications"
 msgstr "Certificări FIPS și/sau Common Criteria"
 
-#: ../nethsm/faq.rst:38
+#: ../nethsm/faq.rst:46
 msgid "Redundant power supplies"
 msgstr "Surse de alimentare redundante"
 
@@ -31800,3 +31823,7 @@ msgstr ""
 #~ " timpurie de tip \"Proof of Concept\""
 #~ " care implementează doar funcțiile necesare"
 #~ " pentru operarea serverelor TLS."
+
+#~ msgid "In loose order:"
+#~ msgstr "În ordine liberă:"
+

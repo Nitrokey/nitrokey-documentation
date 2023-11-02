@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-31 14:58+0100\n"
+"POT-Creation-Date: 2023-11-02 10:27+0100\n"
 "PO-Revision-Date: 2023-10-31 15:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/sl/>\n"
 "Language: sl\n"
+"Language-Team: Slovenian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/sl/>\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
+"|| n%100==4 ? 2 : 3\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6092,13 +6091,14 @@ msgid ""
 "separate system doesn't has access to the backup data in clear text "
 "because the backup files are encrypted."
 msgstr ""
-"NetHSM je brez stanja, tako da je mogoče uporabiti več naprav NetHSM, kar "
-"omogoča izjemno visoko prepustnost in razpoložljivost. Modul PKCS#11 podpira "
-"krožni razpored za gručo instanc NetHSM. Več instanc NetHSM se lahko "
-"sinhronizira prek šifriranih varnostnih kopij. V ta namen ločen sistem "
-"prenaša in nalaga varnostne kopije med instancami. To je lahko skriptni "
-"sistem, ki uporablja pynitrokey. Ta ločeni sistem nima dostopa do podatkov "
-"varnostnih kopij v čistem besedilu, ker so varnostne kopije šifrirane."
+"NetHSM je brez stanja, tako da je mogoče uporabiti več naprav NetHSM, kar"
+" omogoča izjemno visoko prepustnost in razpoložljivost. Modul PKCS#11 "
+"podpira krožni razpored za gručo instanc NetHSM. Več instanc NetHSM se "
+"lahko sinhronizira prek šifriranih varnostnih kopij. V ta namen ločen "
+"sistem prenaša in nalaga varnostne kopije med instancami. To je lahko "
+"skriptni sistem, ki uporablja pynitrokey. Ta ločeni sistem nima dostopa "
+"do podatkov varnostnih kopij v čistem besedilu, ker so varnostne kopije "
+"šifrirane."
 
 #: ../nethsm/faq.rst:10
 msgid "Is NetHSM FIPS or Common Criteria certified?"
@@ -6109,17 +6109,30 @@ msgid ""
 "Not yet but we are aiming for certifications in the future. Please "
 "contact us if you are interested in supporting such efforts."
 msgstr ""
-"Zaenkrat še ne, vendar nameravamo v prihodnosti pridobiti certifikate. Če "
-"želite podpreti takšna prizadevanja, se obrnite na nas."
+"Zaenkrat še ne, vendar nameravamo v prihodnosti pridobiti certifikate. Če"
+" želite podpreti takšna prizadevanja, se obrnite na nas."
 
 #: ../nethsm/faq.rst:15
+msgid "Which protections against physical tampering are in place?"
+msgstr ""
+
+#: ../nethsm/faq.rst:17
+msgid ""
+"NetHSM contains a TPM which is protected against physical tampering. The "
+"TPM is the root of trust and securely stores cryptographic keys which are"
+" used to encrypt and decrypt further data and keys in the NetHSM. This "
+"protects against booting malicious firmware and software and decrypting "
+"data and keys being stored. The current NetHSM doesn't contain additional"
+" sensors to detect tampering."
+msgstr ""
+
+#: ../nethsm/faq.rst:20
 msgid ""
 "Where can I learn more about NetHMS's security architecture and "
 "implementation?"
-msgstr ""
-"Kje lahko izvem več o varnostni arhitekturi in izvajanju sistema NetHMS?"
+msgstr "Kje lahko izvem več o varnostni arhitekturi in izvajanju sistema NetHMS?"
 
-#: ../nethsm/faq.rst:17
+#: ../nethsm/faq.rst:22
 msgid ""
 "Start with the chapters Getting Started, Administration and Operations. "
 "Proceed with the following resources."
@@ -6127,81 +6140,91 @@ msgstr ""
 "Začnite s poglavji Začetek, Upravljanje in Delovanje. Nadaljujte z "
 "naslednjimi viri."
 
-#: ../nethsm/faq.rst:19
+#: ../nethsm/faq.rst:24
 msgid "Overall system design - COMING SOON"
 msgstr "Splošna zasnova sistema - Prihaja kmalu"
 
-#: ../nethsm/faq.rst:20
+#: ../nethsm/faq.rst:25
 msgid ""
 "`Security assessment report "
 "<https://www.nitrokey.com/files/doc/Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_"
 msgstr ""
-"`Poročilo o oceni varnosti <https://www.nitrokey.com/files/doc/"
-"Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_"
+"`Poročilo o oceni varnosti "
+"<https://www.nitrokey.com/files/doc/Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_"
 
-#: ../nethsm/faq.rst:21
+#: ../nethsm/faq.rst:26
 msgid "Full source code - COMING SOON"
 msgstr "Celotna izvorna koda - Prihaja kmalu"
 
-#: ../nethsm/faq.rst:22
+#: ../nethsm/faq.rst:27
 msgid ""
 "Physical random number generator (TRNG) of quality PTG.3 according to "
 "AIS-20: `hardware <https://github.com/Nitrokey/nitrokey-trng-"
 "rs232-hardware>`_, `firmware <https://github.com/Nitrokey/nitrokey-trng-"
 "rs232-firmware>`_"
 msgstr ""
-"Fizični generator naključnih števil (TRNG) kakovosti PTG.3 v skladu z AIS-20:"
-" `strojna oprema <https://github.com/Nitrokey/nitrokey-trng-rs232-hardware>`"
-"_, `strojna programska oprema <https://github.com/Nitrokey/nitrokey-trng-"
-"rs232-firmware>`_"
+"Fizični generator naključnih števil (TRNG) kakovosti PTG.3 v skladu z "
+"AIS-20: `strojna oprema <https://github.com/Nitrokey/nitrokey-trng-"
+"rs232-hardware>`_, `strojna programska oprema "
+"<https://github.com/Nitrokey/nitrokey-trng-rs232-firmware>`_"
 
-#: ../nethsm/faq.rst:25
+#: ../nethsm/faq.rst:30
 msgid "Roadmap: Which features are planned?"
 msgstr "Časovni načrt: Katere funkcije so načrtovane?"
 
-#: ../nethsm/faq.rst:27
-msgid "In loose order:"
-msgstr "V ohlapnem vrstnem redu:"
+#: ../nethsm/faq.rst:32
+msgid ""
+"We plan the following developments in the loose order. Changes to this "
+"prioritization based on customer requests are possible."
+msgstr ""
 
-#: ../nethsm/faq.rst:29
-msgid "Quorum: m-of-n access scheme and security domain management"
-msgstr "Kvorum: shema dostopa m-of-n in upravljanje varnostne domene"
+#: ../nethsm/faq.rst:35
+msgid "Non-exportable setting, affecting backups"
+msgstr ""
 
-#: ../nethsm/faq.rst:30
-msgid "Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
-msgstr "Dodatni ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
-
-#: ../nethsm/faq.rst:31
+#: ../nethsm/faq.rst:36
 msgid "Performance improvements"
 msgstr "Izboljšave delovanja"
 
-#: ../nethsm/faq.rst:32
+#: ../nethsm/faq.rst:37
+msgid "Quorum: m-of-n access scheme and security domain management"
+msgstr "Kvorum: shema dostopa m-of-n in upravljanje varnostne domene"
+
+#: ../nethsm/faq.rst:38
+msgid "Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
+msgstr "Dodatni ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool"
+
+#: ../nethsm/faq.rst:39
 msgid "Direct, dynamic cluster capability, possibly support for external database"
 msgstr ""
 "Neposredna, dinamična zmogljivost gruče, po možnosti podpora za zunanjo "
 "zbirko podatkov"
 
-#: ../nethsm/faq.rst:33
+#: ../nethsm/faq.rst:40
+msgid "Remote attestation and cloud service"
+msgstr ""
+
+#: ../nethsm/faq.rst:41
 msgid "User authentication via mTLS certificates or FIDO"
 msgstr "Preverjanje pristnosti uporabnika s potrdili mTLS ali FIDO"
 
-#: ../nethsm/faq.rst:34
+#: ../nethsm/faq.rst:42
 msgid "More user rights management (e.g. additional roles, groups)"
 msgstr "Več upravljanja pravic uporabnikov (npr. dodatne vloge, skupine)"
 
-#: ../nethsm/faq.rst:35
+#: ../nethsm/faq.rst:43
 msgid "Productive usable software container"
 msgstr "Produktivna uporabna posoda za programsko opremo"
 
-#: ../nethsm/faq.rst:36
+#: ../nethsm/faq.rst:44
 msgid "Further separations and hardenings"
 msgstr "Nadaljnje ločevanje in utrjevanje"
 
-#: ../nethsm/faq.rst:37
+#: ../nethsm/faq.rst:45
 msgid "FIPS and/or Common Criteria certifications"
 msgstr "certifikati FIPS in/ali Common Criteria"
 
-#: ../nethsm/faq.rst:38
+#: ../nethsm/faq.rst:46
 msgid "Redundant power supplies"
 msgstr "Redundantni napajalniki"
 
@@ -30985,3 +31008,7 @@ msgstr ""
 #~ "izvedba, ki je poskusna in izvaja "
 #~ "le funkcije, ki so potrebne za "
 #~ "delovanje strežnikov TLS."
+
+#~ msgid "In loose order:"
+#~ msgstr "V ohlapnem vrstnem redu:"
+
