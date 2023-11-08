@@ -84,7 +84,7 @@ Nitrokey HSM FAQ
 
 
 **Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?
-    The security controler's hardware and operating system are
+    The security controller's hardware and operating system are
     Common Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_,
     click "ICs, Smart Cards and Smart Card-Related Devices and Systems" and
     search for "NXP JCOP 3 P60").

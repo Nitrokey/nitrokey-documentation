@@ -48,7 +48,7 @@ Nitrokey Pro 2 FAQ
     Nitrokey Pro contains a tamper resistant smart card.
 
 **Q:** Is the Nitrokey Pro Common Criteria or FIPS certified?
-    The security controler's hardware is Common Criteria certified (`Report`_;
+    The security controller's hardware is Common Criteria certified (`Report`_;
     See `here`_, click "ICs, Smart Cards and Smart Card-Related Devices and
     Systems" and search for "NXP Smart Card Controller P5CD081V1A and its major
     configurations P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A and P5CD016V1A

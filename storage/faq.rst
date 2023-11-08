@@ -64,7 +64,7 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
 
 **Q:** Is the Nitrokey Storage Common Criteria or FIPS certified?
     `Cure53`_ has performed an `independent security audit`_ of the hardware,
-    firmware, and Nitrokey App. The security controler's hardware is Common
+    firmware, and Nitrokey App. The security controller's hardware is Common
     Criteria certified (`Report`_; See `here`_, click "ICs, Smart Cards and
     Smart Card-Related Devices and Systems" and search for "NXP Smart Card
     Controller P5CD081V1A and its major configurations P5CC081V1A, P5CN081V1A,
