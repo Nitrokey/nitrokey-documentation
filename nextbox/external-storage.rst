@@ -33,5 +33,23 @@ Configuration
 .. figure:: ./images/storage-two.png
     :alt: Storage Mount
 
-.. figure:: ./images/storage-three.png
-    :alt: Install Group folders app
+
+Allow Access From Files App
+-----------------------------
+
+As an additional requirement the hard-disk must have its mounted directory
+access permissions be set to ``777`` or owned by user and group id ``32``. If the
+hard-disk is mounted on your host locally the easiest way is just to do ``chmod
+777 /path/to/mounted/hard-disk`` as root.
+
+To allow direct access to the mounted external storage through the Nextcloud
+"Files" App, the **External storage support** app has to be installed from the
+Nextcloud App Store. There the correct mount point listed inside "Storage
+Management" inside the NextBox App has to be made available. As shown in this screenshot:
+
+.. figure:: ./images/storage-settings.png
+   :alt: External Storage Support Settings
+
+Replace ``/media/extra-1`` with the mountpoint found in "Storage Management". Given
+the configuration above the external hard-disk shall be available as "Local" within the
+Files App now.
