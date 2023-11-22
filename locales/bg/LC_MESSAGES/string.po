@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-20 16:46+0100\n"
+"POT-Creation-Date: 2023-11-22 13:43+0100\n"
 "PO-Revision-Date: 2023-11-20 17:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Bulgarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/bg/>\n"
 "Language: bg\n"
+"Language-Team: Bulgarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/bg/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -9496,11 +9495,11 @@ msgid ""
 " id ``32``. If the hard-disk is mounted on your host locally the easiest "
 "way is just to do ``chmod 777 /path/to/mounted/hard-disk`` as root."
 msgstr ""
-"Като допълнително изискване твърдият диск трябва да има права за достъп до "
-"монтираната директория, зададени на ``777`` или притежавани от потребител и "
-"група с идентификационни номера ``32``. Ако твърдият диск е монтиран локално "
-"на вашия хост, най-лесният начин е просто да направите ``chmod 777 /path/to/"
-"mounted/hard-disk`` като root."
+"Като допълнително изискване твърдият диск трябва да има права за достъп "
+"до монтираната директория, зададени на ``777`` или притежавани от "
+"потребител и група с идентификационни номера ``32``. Ако твърдият диск е "
+"монтиран локално на вашия хост, най-лесният начин е просто да направите "
+"``chmod 777 /path/to/mounted/hard-disk`` като root."
 
 #: ../nextbox/external-storage.rst:45
 msgid ""
@@ -9511,11 +9510,11 @@ msgid ""
 "made available. As shown in this screenshot:"
 msgstr ""
 "За да се позволи директен достъп до монтираното външно хранилище чрез "
-"приложението Nextcloud \"Files\", трябва да се инсталира приложението **"
-"Поддръжка на външно хранилище** от Nextcloud App Store. Там трябва да се "
-"направи достъпна правилната точка за монтиране, посочена в \"Управление на "
-"съхранението\" в приложението NextBox. Както е показано на тази екранна "
-"снимка:"
+"приложението Nextcloud \"Files\", трябва да се инсталира приложението "
+"**Поддръжка на външно хранилище** от Nextcloud App Store. Там трябва да "
+"се направи достъпна правилната точка за монтиране, посочена в "
+"\"Управление на съхранението\" в приложението NextBox. Както е показано "
+"на тази екранна снимка:"
 
 #: ../nextbox/external-storage.rst:-1
 msgid "External Storage Support Settings"
@@ -9527,9 +9526,10 @@ msgid ""
 "Management\". Given the configuration above the external hard-disk shall "
 "be available as \"Local\" within the Files App now."
 msgstr ""
-"Заменете ``/media/extra-1`` с точката на монтиране, намерена в \"Управление "
-"на съхранението\". Предвид горната конфигурация външният твърд диск сега ще "
-"бъде достъпен като \"Local\" (Местен) в приложението Files (Файлове)."
+"Заменете ``/media/extra-1`` с точката на монтиране, намерена в "
+"\"Управление на съхранението\". Предвид горната конфигурация външният "
+"твърд диск сега ще бъде достъпен като \"Local\" (Местен) в приложението "
+"Files (Файлове)."
 
 #: ../nextbox/faq/generic.rst:2
 msgid "Generic FAQ"
@@ -15900,6 +15900,47 @@ msgid "The default Nitropad disk encryption password: \"PleaseChangeMe\""
 msgstr ""
 "Паролата по подразбиране за криптиране на диска на Nitropad: "
 "\"PleaseChangeMe\""
+
+#: ../nitropad/faq.rst:10
+#, fuzzy
+msgid "**Q:** How to change the hard-disk encryption password from within HEADS?"
+msgstr "**В:** Каква е паролата по подразбиране за криптиране на твърдия диск?"
+
+#: ../nitropad/faq.rst:8
+msgid ""
+"This is the prefered way to change the hard-disk encryption password. "
+"Inside HEADS choose ``Options -> Change LUKS Disk Recovery Key "
+"passphrase`` and follow the instructions."
+msgstr ""
+
+#: ../nitropad/faq.rst:15
+#, fuzzy
+msgid "**Q:** How to change the hard-disk encryption password from within the OS?"
+msgstr "**В:** Каква е паролата по подразбиране за криптиране на твърдия диск?"
+
+#: ../nitropad/faq.rst:13
+msgid ""
+"Using default ``cryptsetup`` tools it is important to note that the right"
+" key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 "
+"/dev/nvme0n1p3`` or ``sudo cryptsetup luksChangeKey --key-slot=0 "
+"/dev/sda3``"
+msgstr ""
+
+#: ../nitropad/faq.rst:27
+msgid "**Q:** What is re-ownership / re-encryption and why is it important?"
+msgstr ""
+
+#: ../nitropad/faq.rst:18
+msgid ""
+"Changing your hard-disk encryption password does not change the "
+"encryption itself, just the access to the encryption key. This means that"
+" in a situation where somebody had phyisical access to the device (e.g., "
+"during shipment) they may have copied the LUKS header, i.e., the "
+"encryption key. Using this copy one might decrypt the hard-disk even with"
+" a new password being set. This is why the re-ownership wizard proposes "
+"to re-encrypt the hard-disk, which reencrypts in place ensuring the "
+"previously described scenario cannot be applied."
+msgstr ""
 
 #: ../nitropad/index.rst:16 ../nitropc/index.rst:17
 msgid "Qubes"
@@ -31761,3 +31802,4 @@ msgstr ""
 
 #~ msgid "Install Group folders app"
 #~ msgstr "Инсталиране на приложението Групови папки"
+
