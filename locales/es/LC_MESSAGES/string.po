@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-11-22 13:43+0100\n"
-"PO-Revision-Date: 2023-11-20 17:48+0000\n"
+"PO-Revision-Date: 2023-11-22 13:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Spanish <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/es/>\n"
 "Language: es\n"
-"Language-Team: Spanish <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/es/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -16006,9 +16007,9 @@ msgstr ""
 "\"PleaseChangeMe\""
 
 #: ../nitropad/faq.rst:10
-#, fuzzy
 msgid "**Q:** How to change the hard-disk encryption password from within HEADS?"
-msgstr "**P: ** ¿Cuál es la contraseña de encriptación del disco duro por defecto?"
+msgstr ""
+"**P:** ¿Cómo cambiar la contraseña de cifrado del disco duro desde HEADS?"
 
 #: ../nitropad/faq.rst:8
 msgid ""
@@ -16016,11 +16017,15 @@ msgid ""
 "Inside HEADS choose ``Options -> Change LUKS Disk Recovery Key "
 "passphrase`` and follow the instructions."
 msgstr ""
+"Esta es la forma preferida de cambiar la contraseña de encriptación del "
+"disco duro. Dentro de HEADS elija ``Options -> Change LUKS Disk Recovery Key "
+"passphrase`` y siga las instrucciones."
 
 #: ../nitropad/faq.rst:15
-#, fuzzy
 msgid "**Q:** How to change the hard-disk encryption password from within the OS?"
-msgstr "**P: ** ¿Cuál es la contraseña de encriptación del disco duro por defecto?"
+msgstr ""
+"**P:** ¿Cómo cambiar la contraseña de cifrado del disco duro desde el "
+"sistema operativo?"
 
 #: ../nitropad/faq.rst:13
 msgid ""
@@ -16029,10 +16034,14 @@ msgid ""
 "/dev/nvme0n1p3`` or ``sudo cryptsetup luksChangeKey --key-slot=0 "
 "/dev/sda3``"
 msgstr ""
+"Utilizando las herramientas por defecto ``cryptsetup`` es importante tener "
+"en cuenta que se utiliza la ranura de teclas correcta: ``sudo cryptsetup "
+"luksChangeKey --key-slot=0 /dev/nvme0n1p3`` o ``sudo cryptsetup "
+"luksChangeKey --key-slot=0 /dev/sda3``"
 
 #: ../nitropad/faq.rst:27
 msgid "**Q:** What is re-ownership / re-encryption and why is it important?"
-msgstr ""
+msgstr "**P:** ¿Qué es la retitularidad/recifrado y por qué es importante?"
 
 #: ../nitropad/faq.rst:18
 msgid ""
@@ -16045,6 +16054,14 @@ msgid ""
 "to re-encrypt the hard-disk, which reencrypts in place ensuring the "
 "previously described scenario cannot be applied."
 msgstr ""
+"Cambiar la contraseña de cifrado del disco duro no cambia el cifrado en sí, "
+"sólo el acceso a la clave de cifrado. Esto significa que en una situación en "
+"la que alguien tuviera acceso físico al dispositivo (por ejemplo, durante el "
+"envío) podría haber copiado la cabecera LUKS, es decir, la clave de cifrado. "
+"Usando esta copia se podría descifrar el disco duro incluso con una nueva "
+"contraseña. Por este motivo, el asistente de retitularidad propone volver a "
+"cifrar el disco duro, que se vuelve a cifrar en su lugar, lo que garantiza "
+"que no se pueda aplicar el escenario descrito anteriormente."
 
 #: ../nitropad/index.rst:16 ../nitropc/index.rst:17
 msgid "Qubes"
@@ -32046,4 +32063,3 @@ msgstr ""
 
 #~ msgid "Install Group folders app"
 #~ msgstr "Instalar la aplicación de carpetas de grupo"
-
