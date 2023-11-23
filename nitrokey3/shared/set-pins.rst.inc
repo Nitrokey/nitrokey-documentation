@@ -161,7 +161,7 @@ It is useful in situations when the user of the Nitrokey should be able to unblo
 PIV
 ---
 
-The *PIN* and *PUK* for PIV (Personal Identity Verification) Card can be set with `pivy-tool <hhttps://github.com/arekinath/pivy>`__.
+The *PIN* and *PUK* for PIV (Personal Identity Verification) Card can be set with `pivy-tool <https://github.com/arekinath/pivy>`__.
 
 PIN
 ^^^
