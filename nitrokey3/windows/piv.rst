@@ -5,6 +5,11 @@ This document explains how to provision the PIV function of a Nitrokey 3  for
 
 In the future, this manual provisioning may be automated through a Windows MiniDriver.
 
+.. warning::
+   The PIV function of the Nitrokey 3 is currently considered unstable and is not available on the stable firmware releases.
+   To obtain that functionality it is required to install a test firmware.
+   Please refer to `the firmware update documentation <firmware-update.html#firmware-release-types>`__ for more information.
+
 Prerequisites
 -------------
 
