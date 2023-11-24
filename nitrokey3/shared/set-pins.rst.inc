@@ -167,6 +167,7 @@ PIN
 ^^^
 
 The *PIN* is used for key operations, such as signing and authentication.
+The factory default for the *PIN* is ``123456``.
 
 .. note::
     The *PIN* must have maximal length of 8 characters.
@@ -183,6 +184,7 @@ PUK
 ^^^
 
 The *PUK* is used for management operations, such as unblocking the PIN.
+The factory default for the *PUK* is ``123456``.
 
 .. note::
     The *PUK* must have a maximal length of 8 characters.
