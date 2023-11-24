@@ -1,7 +1,7 @@
 Windows Login With PIV Smartcard Authentication
 ===============================================
 
-This document explains how to provision the PIV function of a Nitrokey 3  for Windows smartcard logon manually with a key and a certificate.
+This document explains how to provision the PIV function of a Nitrokey 3 for Windows smartcard logon manually with a key and a certificate.
 
 In the future, this manual provisioning may be automated through a Windows MiniDriver.
 
