@@ -1,7 +1,7 @@
 Windows Login With PIV Smartcard Authentication
 ===============================================
 
-This document explains how to provision the PIV function of a Nitrokey 3  for Windows smartcard logon manually with a key and a certificate.
+This document explains how to provision the PIV function of a Nitrokey 3  for Windows smartcard logon manually with a key and a certificate.
 
 In the future, this manual provisioning may be automated through a Windows MiniDriver.
 
@@ -33,13 +33,13 @@ The key is generated in slot 9A (authentication).
 
 ::
 
-      pivy-tool generate 9A -a rsa2048
+      pivy-tool -a rsa2048 generate 9A
 
 .. note::
 
-   If the administration key is not the default one, it can be specified with ``-A 3des -K 010203040506070801020304050607080102030405060708`` . The argument to ``-A`` can also be ``aes256``, and the argument to ``-K`` is the key in hexadecimal. 
+   If the administration key is not the default one, it can be specified with ``-A 3des -K 010203040506070801020304050607080102030405060708`` . The argument to ``-A`` can also be ``aes256``, and the argument to ``-K`` is the key in hexadecimal.
 
-The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` if it is not the default. If ``-P`` is not provided, it will be asked for after key generation.
+The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` if it is not the default. If ``-P`` is not provided, it will be asked for after key generation.
 
 This applies to all ``pivy-tool`` commands.
 
@@ -54,7 +54,7 @@ This step can take a couple of minutes for RSA keys, as the pure software imple
 2: Generate a Certificate Signing Request (CSR)
 -----------------------------------------------
 
-This step generates a certificate for the key in the authentication slot. ``pivy-tool req-cert 9A -n 'Nitro Test' -u "nitro@test.nitrokey.com" -T user-auth``
+This step generates a certificate for the key in the authentication slot. ``pivy-tool -n 'Nitro Test' -u "nitro@test.nitrokey.com" -T user-auth req-cert 9A``
 
 The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email address must be changed to own values.
 
@@ -93,7 +93,7 @@ Move the request.csr file from the previous step to the server that hosts the ce
 
 Open PowerShell and sign the certificate signing request with ``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``
 
-This will open a GUI where you can select the correct Certificate Authority if there are multiple on this server. Save the certificate as ``certificate.crt``
+This will open a GUI where you can select the correct Certificate Authority if there are multiple on this server. Save the certificate as ``certificate.crt``
 
 4: Store the certificate on the Nitrokey
 ----------------------------------------
