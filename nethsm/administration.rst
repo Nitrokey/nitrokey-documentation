@@ -182,17 +182,26 @@ Unlock Passphrase
 The *Unlock Passphrase* is used to derive an *Unlock Key* if the NetHSM is in *Locked* state.
 The passphrase is initially set during provisioning of the NetHSM.
 
+... warning::
+   The unlock passphrase cannot be reset without knowing the current value.
+   If the unlock passphrase is lost, neither can it be reset to a new value nor can the NetHSM be unlocked.
+
 The *Unlock Passphrase* can be set as follows.
 
 .. tabs::
    .. tab:: nitropy
       **Optional Options**
 
-      +-----------------------------------+---------------------------+
-      | Option                            | Description               |
-      +===================================+===========================+
-      | ``-p``, ``--passphrase`` ``TEXT`` | The new unlock passphrase |
-      +-----------------------------------+---------------------------+
+      +-------------------------------------------+---------------------------------------------+
+      | Option                                    | Description                                 |
+      +===========================================+=============================================+
+      | ``-n``, ``--new-passphrase`` ``TEXT``     | The new unlock passphrase                   |
+      +-------------------------------------------+---------------------------------------------+
+      | ``-p``, ``--current-passphrase`` ``TEXT`` | The current unlock passphrase               |
+      +-------------------------------------------+---------------------------------------------+
+      | ``-f``, ``--force``                       | Do not ask for confirmation before changing |
+      |                                           | the passphrase                              |
+      +-------------------------------------------+---------------------------------------------+
 
       **Example**
 
@@ -202,9 +211,12 @@ The *Unlock Passphrase* can be set as follows.
 
       .. code-block::
 
-         Passphrase:
-         Repeat for confirmation:
-         Updated the unlock passphrase for localhost:8443
+         New passphrase: 
+         Repeat for confirmation: 
+         Current passphrase: 
+         Warning: The unlock passphrase cannot be reset without knowing the current value. If the unlock passphrase is lost, neither can it be reset to a new value nor can the NetHSM be unlocked.
+         Do you want to continue? [y/N]: y
+         Updated the unlock passphrase for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/unlock-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unlock-passphrase>`__.
 
@@ -647,17 +659,27 @@ namely *Configuration Store*, *Authentication Store*, *Domain Key Store* and *Ke
 Before a backup can be initiated the *Backup Passphrase* must be set.
 The *Backup Passphrase* is used to encrypt the data in the backup file.
 
+.. warning::
+   The backup passphrase cannot be reset without knowing the current value.
+   If the backup passphrase is lost, neither can it be reset to a new value nor can the created backups be restored.
+
 The backup passphrase can be set as follows.
 
 .. tabs::
    .. tab:: nitropy
       **Optional Options**
 
-      +-----------------------------------+---------------------------+
-      | Option                            | Description               |
-      +===================================+===========================+
-      | ``-p``, ``--passphrase`` ``TEXT`` | The new backup passphrase |
-      +-----------------------------------+---------------------------+
+      +-------------------------------------------+---------------------------------------------+
+      | Option                                    | Description                                 |
+      +===========================================+=============================================+
+      | ``-n``, ``--new-passphrase`` ``TEXT``     | The new backup passphrase                   |
+      +-------------------------------------------+---------------------------------------------+
+      | ``-p``, ``--current-passphrase`` ``TEXT`` | The current backup passphrase (or an empty  |
+      |                                           | string if not set)                          |
+      +-------------------------------------------+---------------------------------------------+
+      | ``-f``, ``--force``                       | Do not ask for confirmation before changing |
+      |                                           | the passphrase                              |
+      +-------------------------------------------+---------------------------------------------+
 
       **Example**
 
@@ -667,8 +689,11 @@ The backup passphrase can be set as follows.
 
       .. code-block::
 
-         Passphrase:
+         New passphrase:
          Repeat for confirmation:
+         Warning: The backup passphrase cannot be reset without knowing the current value. If the backup passphrase is lost, neither can it be reset to a new value nor can the created backups be restored.
+         Do you want to continue? [y/N]: y
+         The current backup passphrase (or an empty string if not set) []: 
          Updated the backup passphrase for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/backup-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-backup-passphrase>`__.
