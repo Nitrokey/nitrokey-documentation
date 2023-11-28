@@ -143,6 +143,7 @@ The initial provisioning is executed as follows.
          Repeat for confirmation:
          Admin passphrase:
          Repeat for confirmation:
+         Warning: The unlock passphrase cannot be reset without knowing the current value. If the unlock passphrase is lost, neither can it be reset to a new value nor can the NetHSM be unlocked.
          NetHSM localhost:8443 provisioned
 
    .. tab:: REST API
