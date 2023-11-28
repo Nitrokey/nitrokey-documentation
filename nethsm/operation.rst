@@ -609,6 +609,26 @@ Data can be encrypted for a symmetric key as follows.
 
 .. tabs::
    .. tab:: nitropy
+      **Required Role**
+
+      This operation requires an authentication with the *Operator* role.
+
+      **Required Options**
+
+      +-----------------------------------------------+----------------------------------------------+
+      | Option                                        | Description                                  |
+      +===============================================+==============================================+
+      | ``-k``, ``--key-id`` ``TEXT``                 | The ID of the key to encrypt the data with   |
+      +-----------------------------------------------+----------------------------------------------+
+      | ``-d``, ``--data`` ``TEXT``                   | The data in Base64 encoding                  |
+      +-----------------------------------------------+----------------------------------------------+
+      | ``-m``, ``--mode`` ``[AES_CBC]``              | The encrypt mode                             |
+      +-----------------------------------------------+----------------------------------------------+
+      | ``-iv``, ``--initialization-vector`` ``TEXT`` | The initialization vector in Base64 encoding |
+      +-----------------------------------------------+----------------------------------------------+
+
+      **Example**
+
       .. code-block:: bash
 
          $ nitropy nethsm --host $NETHSM_HOST encrypt -k myFirstKey -d "TmV0SFNNIHJ1bGV6enp6enp6enp6enp6enp6enp6IQo=" -m AES_CBC -iv "aYlwUI4A9zL9tts4dMAq+A=="
