@@ -256,7 +256,7 @@ The list can be retrieved as follows.
          Keys on NetHSM localhost:8443:
 
          Key ID          Algorithm       Mechanisms                                      Operations	Tags
-         -----------     ---------       ----------------------------------------------  ----------  ----
+         -----------     ---------       ----------------------------------------------  ----------	----
          myFirstKey      RSA             RSA_Decryption_PKCS1, RSA_Signature_PSS_SHA256  0
    .. tab:: REST API
       Information about the `/keys` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_keys>`__.
