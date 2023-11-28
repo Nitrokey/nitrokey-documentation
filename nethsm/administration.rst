@@ -653,11 +653,17 @@ The backup passphrase can be set as follows.
    .. tab:: nitropy
       **Optional Options**
 
-      +-----------------------------------+---------------------------+
-      | Option                            | Description               |
-      +===================================+===========================+
-      | ``-p``, ``--passphrase`` ``TEXT`` | The new backup passphrase |
-      +-----------------------------------+---------------------------+
+      +-------------------------------------------+---------------------------------------------+
+      | Option                                    | Description                                 |
+      +===========================================+=============================================+
+      | ``-n``, ``--new-passphrase`` ``TEXT``     | The new backup passphrase                   |
+      +-------------------------------------------+---------------------------------------------+
+      | ``-p``, ``--current-passphrase`` ``TEXT`` | The current backup passphrase (or an empty  |
+      |                                           | string if not set)                          |
+      +-------------------------------------------+---------------------------------------------+
+      | ``-f``, ``--force``                       | Do not ask for confirmation before changing |
+      |                                           | the passphrase                              |
+      +-------------------------------------------+---------------------------------------------+
 
       **Example**
 
@@ -667,8 +673,11 @@ The backup passphrase can be set as follows.
 
       .. code-block::
 
-         Passphrase:
+         New passphrase:
          Repeat for confirmation:
+         Warning: The backup passphrase cannot be reset without knowing the current value. If the backup passphrase is lost, neither can it be reset to a new value nor can the created backups be restored.
+         Do you want to continue? [y/N]: y
+         The current backup passphrase (or an empty string if not set) []: 
          Updated the backup passphrase for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/backup-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-backup-passphrase>`__.
