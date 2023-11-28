@@ -155,13 +155,15 @@ The import can be initiated as follows.
       |                                        | Possible values for the ``MECHANISM`` argument can |
       |                                        | be found in the table above.                       |
       +----------------------------------------+----------------------------------------------------+
-      | ``-p``, ``--prime-p`` ``TEXT``         | The prime p for RSA keys                           |
+      | ``-p``, ``--prime-p`` ``TEXT``         | The prime p for RSA keys, base64-encoded           |
       +----------------------------------------+----------------------------------------------------+
-      | ``-q``, ``--prime-q`` ``TEXT``         | The prime q for RSA keys                           |
+      | ``-q``, ``--prime-q`` ``TEXT``         | The prime q for RSA keys, base64-encoded           |
       +----------------------------------------+----------------------------------------------------+
-      | ``-e``, ``--public-exponent`` ``TEXT`` | The public exponent for RSA keys                   |
+      | ``-e``, ``--public-exponent`` ``TEXT`` | The public exponent for RSA keys,                  |
+      |                                        | base64 encoded                                     |
       +----------------------------------------+----------------------------------------------------+
-      | ``-d``, ``--data`` ``TEXT``            | The key data for ED25519 or ECDSA_* keys           |
+      | ``-d``, ``--data`` ``TEXT``            | The key data for ED25519 or ECDSA_* keys,          |
+      |                                        | base64-encoded                                     |
       +----------------------------------------+----------------------------------------------------+
 
       **Optional Options**
