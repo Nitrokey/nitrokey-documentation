@@ -188,11 +188,16 @@ The *Unlock Passphrase* can be set as follows.
    .. tab:: nitropy
       **Optional Options**
 
-      +-----------------------------------+---------------------------+
-      | Option                            | Description               |
-      +===================================+===========================+
-      | ``-p``, ``--passphrase`` ``TEXT`` | The new unlock passphrase |
-      +-----------------------------------+---------------------------+
+      +-------------------------------------------+---------------------------------------------+
+      | Option                                    | Description                                 |
+      +===========================================+=============================================+
+      | ``-n``, ``--new-passphrase`` ``TEXT``     | The new unlock passphrase                   |
+      +-------------------------------------------+---------------------------------------------+
+      | ``-p``, ``--current-passphrase`` ``TEXT`` | The current unlock passphrase               |
+      +-------------------------------------------+---------------------------------------------+
+      | ``-f``, ``--force``                       | Do not ask for confirmation before changing |
+      |                                           | the passphrase                              |
+      +-------------------------------------------+---------------------------------------------+
 
       **Example**
 
@@ -202,9 +207,12 @@ The *Unlock Passphrase* can be set as follows.
 
       .. code-block::
 
-         Passphrase:
-         Repeat for confirmation:
-         Updated the unlock passphrase for localhost:8443
+         New passphrase: 
+         Repeat for confirmation: 
+         Current passphrase: 
+         Warning: The unlock passphrase cannot be reset without knowing the current value. If the unlock passphrase is lost, neither can it be reset to a new value nor can the NetHSM be unlocked.
+         Do you want to continue? [y/N]: y
+         Updated the unlock passphrase for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/unlock-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-unlock-passphrase>`__.
 
