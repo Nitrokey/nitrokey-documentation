@@ -182,6 +182,10 @@ Unlock Passphrase
 The *Unlock Passphrase* is used to derive an *Unlock Key* if the NetHSM is in *Locked* state.
 The passphrase is initially set during provisioning of the NetHSM.
 
+... warning::
+   The unlock passphrase cannot be reset without knowing the current value.
+   If the unlock passphrase is lost, neither can it be reset to a new value nor can the NetHSM be unlocked.
+
 The *Unlock Passphrase* can be set as follows.
 
 .. tabs::
@@ -654,6 +658,10 @@ namely *Configuration Store*, *Authentication Store*, *Domain Key Store* and *Ke
 
 Before a backup can be initiated the *Backup Passphrase* must be set.
 The *Backup Passphrase* is used to encrypt the data in the backup file.
+
+.. warning::
+   The backup passphrase cannot be reset without knowing the current value.
+   If the backup passphrase is lost, neither can it be reset to a new value nor can the created backups be restored.
 
 The backup passphrase can be set as follows.
 

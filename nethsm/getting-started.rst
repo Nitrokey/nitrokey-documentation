@@ -116,6 +116,10 @@ Provisioning
 
 A new or otherwise *Unprovisioned* NetHSM needs to be provisioned first with passphrases and the current time. The *Admin Passphrase* is for the first user account, which is the superuser of the NetHSM. The *Unlock Passphrase* is used to decrypt NetHSM's *User Data*.
 
+.. warning::
+   The unlock passphrase cannot be reset without knowing the current value.
+   If the unlock passphrase is lost, neither can it be reset to a new value nor can the NetHSM be unlocked.
+
 The initial provisioning is executed as follows.
 
 .. tabs::
