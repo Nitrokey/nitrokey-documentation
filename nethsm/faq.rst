@@ -21,7 +21,7 @@ Where can I learn more about NetHMS's security architecture and implementation?
 
 Start with the chapters Getting Started, Administration and Operations. Proceed with the following resources.
 
-* `Overall system design <https://www.nitrokey.com/files/doc/nethsm-system-design.pdf>`_
+* `Overall system design <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md>`_
 * `Security assessment report <https://www.nitrokey.com/files/doc/Nitrokey_NetHSM_Security_Assessment_v1.0.pdf>`_
 * `Full source code <https://github.com/Nitrokey/nethsm/>`_
 * Physical random number generator (TRNG) of quality PTG.3 according to AIS-20: `hardware <https://github.com/Nitrokey/nitrokey-trng-rs232-hardware>`_, `firmware <https://github.com/Nitrokey/nitrokey-trng-rs232-firmware>`_
