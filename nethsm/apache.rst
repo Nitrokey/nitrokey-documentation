@@ -71,8 +71,8 @@ If you want to experiment with the `given example <https://github.com/Nitrokey/n
   Running the generate script deletes the ``webserver`` key and replaces it.
 
 1. Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started>`__ for more information.
-2. If your NetHSM is not running on localhost, you will need to change the URL of the curl requests in ``container/apache/generate.sh`` to point to your NetHSM.
-3. Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/apache/p11nethsm.conf``.
+2. Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and ``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that ``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the corresponding password.
+3. Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` with your NetHSMs URL and valid operator credentials.
 4. Generate the certificate and key.
   
   .. code-block:: bash
@@ -91,4 +91,4 @@ If you want to experiment with the `given example <https://github.com/Nitrokey/n
     
     docker run -p 9443:443 -p 9080:80 pkcs-httpd
   
-The container will be available at `https://localhost:9443/ <https://localhost:9443/>`__.
+The Apache test page will be available at `https://localhost:9443/ <https://localhost:9443/>`__. Note that your browser, hopefully, will warn you that the websites certificate is self-signed.
