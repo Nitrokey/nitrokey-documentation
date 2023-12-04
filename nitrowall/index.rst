@@ -1,4 +1,4 @@
-NitroWall
+NitroWall NW678, NW4J3
 ============================
 
 Getting Started
@@ -56,9 +56,6 @@ Getting Started
    :maxdepth: 1
    :glob:
 
-   factory-reset-nw750.rst
-   imei-change-nw750.rst
-   nw750-webinterface.rst
    firmware-update-nw678.rst
    sealed-hardware.rst
    backup-restore.rst
