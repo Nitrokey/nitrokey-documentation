@@ -55,7 +55,10 @@ Getting Started
    :hidden:
    :maxdepth: 1
    :glob:
-   
+
+   factory-reset-nw750.rst
+   imei-change-nw750.rst
+   nw750-webinterface.rst
    firmware-update-nw678.rst
    sealed-hardware.rst
    backup-restore.rst
