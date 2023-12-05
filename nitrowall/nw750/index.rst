@@ -6,13 +6,14 @@ Getting Started
 
 .. contents:: :local:
 
-The general webinterface in located under http://192.168.8.1 after you connected to the **GL-E750-XXX** Wifi password: **goodlife**.
-For more help see `here <https://docs.gl-inet.com/router/en/4/interface_guide/>`_
+1. Connect to the Wifi network **GL-E750-XXX** with password: **goodlife**.
+2. Open the webinterface at http://192.168.8.1
+3. For more help see `this documentation <https://docs.gl-inet.com/router/en/4/interface_guide/>`_
 
 .. toctree::
    :hidden:
    :maxdepth: 1
    :glob:
 
-   factory-reset-nw750.rst  
-   imei-change-nw750.rst
+   factory-reset.rst  
+   imei-change.rst
