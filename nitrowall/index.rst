@@ -1,5 +1,5 @@
-NitroWall
-============================
+NitroWall NW678, NW4J3
+======================
 
 Getting Started
 ---------------
@@ -55,7 +55,7 @@ Getting Started
    :hidden:
    :maxdepth: 1
    :glob:
-   
+
    firmware-update-nw678.rst
    sealed-hardware.rst
    backup-restore.rst
