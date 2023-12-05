@@ -1,5 +1,5 @@
-NW750
-=====
+Nitrowall NW750
+===============
 
 Getting Started
 ---------------
