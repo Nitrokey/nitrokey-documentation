@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 14:17+0100\n"
+"POT-Creation-Date: 2023-12-08 13:45+0100\n"
 "PO-Revision-Date: 2023-12-05 14:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6097,51 +6096,76 @@ msgstr ""
 "A generáló szkript futtatása törli a ``webserver`` kulcsot és kicseréli "
 "azt."
 
-#: ../nethsm/apache.rst:73 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
+#: ../nethsm/apache.rst:73 ../nethsm/nginx.rst:98
+#, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started>`__ for more information."
+"started guide <getting-started.html>`__ for more information. Besides an "
+"administrator, you are going to need an operator account."
 msgstr ""
 "Konfiguráljon egy NetHSM-et, akár egy valódi, akár egy konténert. További"
 " információkért lásd a `getting-started guide <getting-started>`__."
 
-#: ../nethsm/apache.rst:74
+#: ../nethsm/apache.rst:74 ../nethsm/nginx.rst:99
+#, fuzzy
 msgid ""
-"If your NetHSM is not running on localhost, you will need to change the "
-"URL of the curl requests in ``container/apache/generate.sh`` to point to "
-"your NetHSM."
+"Download and install the latest version of the nethsm-pkcs11 driver "
+"`available from here <https://github.com/Nitrokey/nethsm-"
+"pkcs11/releases>`__."
 msgstr ""
-"Ha a NetHSM nem a localhoston fut, akkor a "
-"``container/apache/generate.sh`` oldalon meg kell változtatnia a curl-"
-"kérések URL-címét, hogy a NetHSM-re mutasson."
+"Töltse le a telepítő képét a `releases oldalról "
+"<https://github.com/nitrokey/nethsm/releases>`__."
 
-#: ../nethsm/apache.rst:75
+#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:100
 msgid ""
-"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
-"``container/apache/p11nethsm.conf``."
+"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
+"<openssl.html>`__. You do not need to create a configuration file."
 msgstr ""
-"Módosítsa a libnethsm_pkcs11 konfigurációját a NetHSM-nek megfelelően a "
-"``container/apache/p11nethsm.conf`` címen."
 
-#: ../nethsm/apache.rst:76 ../nethsm/nginx.rst:101
+#: ../nethsm/apache.rst:76
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+
+#: ../nethsm/apache.rst:77 ../nethsm/nginx.rst:102
+msgid ""
+"Create a NetHSM PKCS11 configuration file in one of the `known locations "
+"<pkcs11-setup.html#configuration>`__, e.g., "
+"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
+"account and use the same NetHSM instance specified in the generate script"
+" before."
+msgstr ""
+
+#: ../nethsm/apache.rst:78
+msgid ""
+"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+
+#: ../nethsm/apache.rst:79 ../nethsm/nginx.rst:104
 msgid "Generate the certificate and key."
 msgstr "Generálja a tanúsítványt és a kulcsot."
 
-#: ../nethsm/apache.rst:82 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
+#: ../nethsm/apache.rst:85 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:110
 msgid "Build the container."
 msgstr "Építse meg a konténert."
 
-#: ../nethsm/apache.rst:88 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
+#: ../nethsm/apache.rst:91 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:116
 msgid "Run the container."
 msgstr "Futtassa a konténert."
 
-#: ../nethsm/apache.rst:94 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
+#: ../nethsm/apache.rst:97
 msgid ""
-"The container will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__."
+"The Apache test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
 msgstr ""
-"A konténer elérhető lesz a `https://localhost:9443/ "
-"<https://localhost:9443/>`__."
 
 #: ../nethsm/ejbca.rst:2
 msgid "EJBCA"
@@ -6227,6 +6251,14 @@ msgstr ""
 "klónozd a `nethsm-pkcs11 tárolót <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ és futtasd a következő parancsokat:"
 
+#: ../nethsm/ejbca.rst:30
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <getting-started>`__ for more information."
+msgstr ""
+"Konfiguráljon egy NetHSM-et, akár egy valódi, akár egy konténert. További"
+" információkért lásd a `getting-started guide <getting-started>`__."
+
 #: ../nethsm/ejbca.rst:31
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
@@ -6234,6 +6266,14 @@ msgid ""
 msgstr ""
 "Módosítsa a libnethsm_pkcs11 konfigurációját a NetHSM-nek megfelelően a "
 "``container/ejbca/p11nethsm.conf`` címen."
+
+#: ../nethsm/ejbca.rst:44
+msgid ""
+"The container will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
+msgstr ""
+"A konténer elérhető lesz a `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
 
 #: ../nethsm/faq.rst:2
 msgid "Frequently Asked Questions (FAQ)"
@@ -7241,23 +7281,29 @@ msgstr ""
 "pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ "
 "klónozásához és futtasd a következő parancsokat:"
 
-#: ../nethsm/nginx.rst:99
+#: ../nethsm/nginx.rst:101
 msgid ""
-"If your NetHSM is not running on localhost, you will need to change the "
-"URL of the curl requests in ``container/nginx/generate.sh`` to point to "
-"your NetHSM."
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
-"Ha a NetHSM nem a localhoston fut, akkor a "
-"``container/nginx/generate.sh`` oldalon meg kell változtatnia a curl-"
-"kérések URL-címét, hogy a NetHSM-re mutasson."
 
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:103
 msgid ""
-"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
-"``container/nginx/p11nethsm.conf``."
+"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
 msgstr ""
-"Módosítsa a libnethsm_pkcs11 konfigurációját a NetHSM-nek megfelelően a "
-"``container/ejbca/p11nethsm.conf`` címen."
+
+#: ../nethsm/nginx.rst:122
+msgid ""
+"The NGINX test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
+msgstr ""
 
 #: ../nethsm/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -8525,11 +8571,11 @@ msgstr "A konfiguráció yaml-formátumú:"
 msgid "All platforms"
 msgstr "Minden platform"
 
-#: ../nethsm/pkcs11-setup.rst:80
+#: ../nethsm/pkcs11-setup.rst:83
 msgid "Instances"
 msgstr "Instances"
 
-#: ../nethsm/pkcs11-setup.rst:82
+#: ../nethsm/pkcs11-setup.rst:85
 msgid ""
 "If multiple NetHSM instances are listed in the same slot, these instances"
 " must be configured in a cluster. The credentials of the users and the "
@@ -8539,7 +8585,7 @@ msgstr ""
 "példányokat fürtben kell konfigurálni. A felhasználók hitelesítő "
 "adatainak és a kulcsoknak minden példányban azonosnak kell lenniük."
 
-#: ../nethsm/pkcs11-setup.rst:84
+#: ../nethsm/pkcs11-setup.rst:87
 msgid ""
 "The module will use the instances in a round-robin fashion, trying "
 "another instance if one fails."
@@ -8547,11 +8593,11 @@ msgstr ""
 "A modul a példányokat körkörösen használja, és ha az egyik meghibásodik, "
 "egy másik példányt próbál meg."
 
-#: ../nethsm/pkcs11-setup.rst:88
+#: ../nethsm/pkcs11-setup.rst:91
 msgid "Users"
 msgstr "Felhasználók"
 
-#: ../nethsm/pkcs11-setup.rst:90
+#: ../nethsm/pkcs11-setup.rst:93
 msgid ""
 "The operator and administrator users are both optional but the module "
 "won't start if no user is configured. This is so you can configure the "
@@ -8563,7 +8609,7 @@ msgstr ""
 " csak rendszergazdai, csak üzemeltetői vagy mindkettő felhasználóval "
 "egyszerre konfigurálhassa."
 
-#: ../nethsm/pkcs11-setup.rst:92
+#: ../nethsm/pkcs11-setup.rst:95
 msgid ""
 "When the two users are set the module will use the operator by default "
 "and only use the administrator user when the action needs it."
@@ -8572,7 +8618,7 @@ msgstr ""
 "operátort használja, és csak akkor használja a rendszergazda "
 "felhasználót, ha a műveletnek szüksége van rá."
 
-#: ../nethsm/pkcs11-setup.rst:94
+#: ../nethsm/pkcs11-setup.rst:97
 msgid ""
 "The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 "
 "SO is mapped to the NetHSM administrator."
@@ -8580,20 +8626,20 @@ msgstr ""
 "A hagyományos PKCS11 felhasználó a NetHSM operátorhoz, a PKCS11 SO pedig "
 "a NetHSM rendszergazdához van hozzárendelve."
 
-#: ../nethsm/pkcs11-setup.rst:97 ../nitrokey3/shared/reset.rst.inc:19
+#: ../nethsm/pkcs11-setup.rst:100 ../nitrokey3/shared/reset.rst.inc:19
 #: ../software/nk-app2/passwords.rst:2
 msgid "Passwords"
 msgstr "Jelszavak"
 
-#: ../nethsm/pkcs11-setup.rst:99
+#: ../nethsm/pkcs11-setup.rst:102
 msgid "The password can be provided by multiple means:"
 msgstr "A jelszó többféle módon is megadható:"
 
-#: ../nethsm/pkcs11-setup.rst:101
+#: ../nethsm/pkcs11-setup.rst:104
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr "Egyszerű szövegben a konfigurációban ``password: \"mypassword\"``"
 
-#: ../nethsm/pkcs11-setup.rst:102
+#: ../nethsm/pkcs11-setup.rst:105
 msgid ""
 "In an environment variable read by the module with the ``env:`` prefix: "
 "``env:ENV_STORING_THE_PASSWORD``"
@@ -8601,7 +8647,7 @@ msgstr ""
 "A modul által a ``env:`` előtaggal olvasott környezeti változóban: "
 "``env:ENV_STORING_THE_PASSWORD``"
 
-#: ../nethsm/pkcs11-setup.rst:103
+#: ../nethsm/pkcs11-setup.rst:106
 msgid ""
 "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
 "--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
@@ -8614,7 +8660,7 @@ msgstr ""
 "használni: ``pkcs11-tool --module libnethsm_pkcs11.so --login --login-"
 "type so --so-pin Administrator``"
 
-#: ../nethsm/pkcs11-setup.rst:106
+#: ../nethsm/pkcs11-setup.rst:109
 msgid ""
 "If the password of an user is not set in the configuration file a login "
 "will be required to provide the password (3rd method)."
@@ -8622,7 +8668,7 @@ msgstr ""
 "Ha a felhasználó jelszava nincs megadva a konfigurációs fájlban, akkor a "
 "jelszó megadásához bejelentkezésre van szükség (3. módszer)."
 
-#: ../nethsm/pkcs11-setup.rst:108
+#: ../nethsm/pkcs11-setup.rst:111
 msgid ""
 "A NetHSM that is not operational is considered as a slot with the token "
 "not present."
@@ -19014,8 +19060,8 @@ msgid ""
 "Make sure the NW750 is connected to a power source or has at least 50% "
 "batterie left."
 msgstr ""
-"Győződjön meg róla, hogy az NW750 csatlakoztatva van-e áramforráshoz, vagy "
-"legalább 50%-os akkumulátorral rendelkezik-e még."
+"Győződjön meg róla, hogy az NW750 csatlakoztatva van-e áramforráshoz, "
+"vagy legalább 50%-os akkumulátorral rendelkezik-e még."
 
 #: ../nitrowall/nw750/factory-reset.rst:7
 msgid ""
@@ -19034,9 +19080,9 @@ msgid ""
 "In order to be able to change your device's IMEI, `reinstall blue-merle "
 "<https://github.com/srlabs/blue-merle/tree/main#installation>`_."
 msgstr ""
-"Annak érdekében, hogy képes legyen megváltoztatni a készülék IMEI-jét, `"
-"telepítse újra a blue-merle <https://github.com/srlabs/blue-merle/tree/"
-"main#installation>`_."
+"Annak érdekében, hogy képes legyen megváltoztatni a készülék IMEI-jét, "
+"`telepítse újra a blue-merle <https://github.com/srlabs/blue-"
+"merle/tree/main#installation>`_."
 
 #: ../nitrowall/nw750/imei-change.rst:2
 msgid "Changing IMEI"
@@ -19063,8 +19109,8 @@ msgid ""
 "There a different ways to change the IMEI. The simplest is to use the "
 "toogle on the side of the NW750:"
 msgstr ""
-"Az IMEI megváltoztatásának különböző módjai vannak. A legegyszerűbb az NW750 "
-"oldalán található gomb segítségével:"
+"Az IMEI megváltoztatásának különböző módjai vannak. A legegyszerűbb az "
+"NW750 oldalán található gomb segítségével:"
 
 #: ../nitrowall/nw750/imei-change.rst:12
 msgid "Switch the hardware toggle."
@@ -19083,8 +19129,8 @@ msgid ""
 "After replacing the SIM card, flip the toggle again. This changes the "
 "IMEI and powers off your device."
 msgstr ""
-"A SIM-kártya cseréje után fordítsa meg újra a kapcsolót. Ez megváltoztatja "
-"az IMEI-t és kikapcsolja a készüléket."
+"A SIM-kártya cseréje után fordítsa meg újra a kapcsolót. Ez "
+"megváltoztatja az IMEI-t és kikapcsolja a készüléket."
 
 #: ../nitrowall/nw750/imei-change.rst:15
 msgid "You should change your geographical location before booting again."
@@ -19095,8 +19141,8 @@ msgid ""
 "For more details see `this documentation <https://github.com/srlabs/blue-"
 "merle/blob/main/Documentation.pdf>`_."
 msgstr ""
-"További részletekért lásd: `ez a dokumentáció <https://github.com/srlabs/"
-"blue-merle/blob/main/Documentation.pdf>`_."
+"További részletekért lásd: `ez a dokumentáció <https://github.com/srlabs"
+"/blue-merle/blob/main/Documentation.pdf>`_."
 
 #: ../nitrowall/nw750/imei-change.rst:19
 msgid ""
@@ -19110,12 +19156,12 @@ msgid ""
 msgstr ""
 "Előfordulhat, hogy az eszközön végrehajtott parancsok a vártnál hosszabb "
 "ideig tartanak. Ez azt eredményezheti, hogy a kijelző néhány másodpercre "
-"kikapcsol (készenléti állapot), mielőtt megjelenik a várt végső üzenet (pl. "
-"a SIM-kártya cseréjére vonatkozó utasítás). Várja meg a végső üzenet "
-"megjelenését, mielőtt ismét meghúzza a kapcsolót. Ha egy perc elteltével nem "
-"jelenik meg üzenet, akkor lehet, hogy a forgatókönyv kilépett, vagy Ön nem "
-"vette észre az üzenetet. Ebben az esetben húzza meg a kapcsolót a folyamat "
-"folytatásához/újraindításához."
+"kikapcsol (készenléti állapot), mielőtt megjelenik a várt végső üzenet "
+"(pl. a SIM-kártya cseréjére vonatkozó utasítás). Várja meg a végső üzenet"
+" megjelenését, mielőtt ismét meghúzza a kapcsolót. Ha egy perc elteltével"
+" nem jelenik meg üzenet, akkor lehet, hogy a forgatókönyv kilépett, vagy "
+"Ön nem vette észre az üzenetet. Ebben az esetben húzza meg a kapcsolót a "
+"folyamat folytatásához/újraindításához."
 
 #: ../nitrowall/nw750/index.rst:2
 msgid "Nitrowall NW750"
@@ -19134,8 +19180,8 @@ msgid ""
 "For more help see `this documentation <https://docs.gl-"
 "inet.com/router/en/4/interface_guide/>`_"
 msgstr ""
-"További segítségért lásd: `ez a dokumentáció <https://docs.gl-inet.com/"
-"router/en/4/interface_guide/>`_"
+"További segítségért lásd: `ez a dokumentáció <https://docs.gl-"
+"inet.com/router/en/4/interface_guide/>`_"
 
 #: ../nitrowall/sealed-hardware.rst:4
 msgid ""
@@ -32020,3 +32066,48 @@ msgstr ""
 
 #~ msgid "NitroWall"
 #~ msgstr "NitroWall"
+
+#~ msgid ""
+#~ "If your NetHSM is not running on"
+#~ " localhost, you will need to change"
+#~ " the URL of the curl requests "
+#~ "in ``container/apache/generate.sh`` to point "
+#~ "to your NetHSM."
+#~ msgstr ""
+#~ "Ha a NetHSM nem a localhoston fut,"
+#~ " akkor a ``container/apache/generate.sh`` oldalon"
+#~ " meg kell változtatnia a curl-kérések"
+#~ " URL-címét, hogy a NetHSM-re "
+#~ "mutasson."
+
+#~ msgid ""
+#~ "Change the libnethsm_pkcs11 configuration to"
+#~ " match your NetHSM in "
+#~ "``container/apache/p11nethsm.conf``."
+#~ msgstr ""
+#~ "Módosítsa a libnethsm_pkcs11 konfigurációját a"
+#~ " NetHSM-nek megfelelően a "
+#~ "``container/apache/p11nethsm.conf`` címen."
+
+#~ msgid ""
+#~ "If your NetHSM is not running on"
+#~ " localhost, you will need to change"
+#~ " the URL of the curl requests "
+#~ "in ``container/nginx/generate.sh`` to point to"
+#~ " your NetHSM."
+#~ msgstr ""
+#~ "Ha a NetHSM nem a localhoston fut,"
+#~ " akkor a ``container/nginx/generate.sh`` oldalon"
+#~ " meg kell változtatnia a curl-kérések"
+#~ " URL-címét, hogy a NetHSM-re "
+#~ "mutasson."
+
+#~ msgid ""
+#~ "Change the libnethsm_pkcs11 configuration to"
+#~ " match your NetHSM in "
+#~ "``container/nginx/p11nethsm.conf``."
+#~ msgstr ""
+#~ "Módosítsa a libnethsm_pkcs11 konfigurációját a"
+#~ " NetHSM-nek megfelelően a "
+#~ "``container/ejbca/p11nethsm.conf`` címen."
+

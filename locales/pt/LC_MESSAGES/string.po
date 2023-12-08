@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 14:17+0100\n"
+"POT-Creation-Date: 2023-12-08 13:43+0100\n"
 "PO-Revision-Date: 2023-10-31 15:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: pt\n"
@@ -6017,43 +6017,74 @@ msgstr ""
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr ""
 
-#: ../nethsm/apache.rst:73 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
+#: ../nethsm/apache.rst:73 ../nethsm/nginx.rst:98
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started>`__ for more information."
+"started guide <getting-started.html>`__ for more information. Besides an "
+"administrator, you are going to need an operator account."
 msgstr ""
 
-#: ../nethsm/apache.rst:74
+#: ../nethsm/apache.rst:74 ../nethsm/nginx.rst:99
+#, fuzzy
 msgid ""
-"If your NetHSM is not running on localhost, you will need to change the "
-"URL of the curl requests in ``container/apache/generate.sh`` to point to "
-"your NetHSM."
+"Download and install the latest version of the nethsm-pkcs11 driver "
+"`available from here <https://github.com/Nitrokey/nethsm-"
+"pkcs11/releases>`__."
 msgstr ""
+"Descarregar o último ``.exe`` ficheiro de `leases "
+"<https://github.com/Nitrokey/pynitrokey/releases/>`__."
 
-#: ../nethsm/apache.rst:75
+#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:100
 msgid ""
-"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
-"``container/apache/p11nethsm.conf``."
+"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
+"<openssl.html>`__. You do not need to create a configuration file."
 msgstr ""
 
-#: ../nethsm/apache.rst:76 ../nethsm/nginx.rst:101
+#: ../nethsm/apache.rst:76
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+
+#: ../nethsm/apache.rst:77 ../nethsm/nginx.rst:102
+msgid ""
+"Create a NetHSM PKCS11 configuration file in one of the `known locations "
+"<pkcs11-setup.html#configuration>`__, e.g., "
+"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
+"account and use the same NetHSM instance specified in the generate script"
+" before."
+msgstr ""
+
+#: ../nethsm/apache.rst:78
+msgid ""
+"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+
+#: ../nethsm/apache.rst:79 ../nethsm/nginx.rst:104
 #, fuzzy
 msgid "Generate the certificate and key."
 msgstr "Converter o certificado em DER"
 
-#: ../nethsm/apache.rst:82 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
+#: ../nethsm/apache.rst:85 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:110
 msgid "Build the container."
 msgstr ""
 
-#: ../nethsm/apache.rst:88 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
+#: ../nethsm/apache.rst:91 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:116
 #, fuzzy
 msgid "Run the container."
 msgstr "Usando a linha de comando"
 
-#: ../nethsm/apache.rst:94 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
+#: ../nethsm/apache.rst:97
 msgid ""
-"The container will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__."
+"The Apache test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
 msgstr ""
 
 #: ../nethsm/ejbca.rst:2
@@ -6118,10 +6149,22 @@ msgid ""
 "pkcs11>`__ and run the following commands:"
 msgstr ""
 
+#: ../nethsm/ejbca.rst:30
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <getting-started>`__ for more information."
+msgstr ""
+
 #: ../nethsm/ejbca.rst:31
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:44
+msgid ""
+"The container will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
 msgstr ""
 
 #: ../nethsm/faq.rst:2
@@ -7042,17 +7085,28 @@ msgid ""
 "commands:"
 msgstr ""
 
-#: ../nethsm/nginx.rst:99
+#: ../nethsm/nginx.rst:101
 msgid ""
-"If your NetHSM is not running on localhost, you will need to change the "
-"URL of the curl requests in ``container/nginx/generate.sh`` to point to "
-"your NetHSM."
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
 
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:103
 msgid ""
-"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
-"``container/nginx/p11nethsm.conf``."
+"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+
+#: ../nethsm/nginx.rst:122
+msgid ""
+"The NGINX test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
 msgstr ""
 
 #: ../nethsm/opendnssec.rst:2
@@ -31341,4 +31395,32 @@ msgstr ""
 
 #~ msgid "NitroWall"
 #~ msgstr "NitroWall"
+
+#~ msgid ""
+#~ "If your NetHSM is not running on"
+#~ " localhost, you will need to change"
+#~ " the URL of the curl requests "
+#~ "in ``container/apache/generate.sh`` to point "
+#~ "to your NetHSM."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Change the libnethsm_pkcs11 configuration to"
+#~ " match your NetHSM in "
+#~ "``container/apache/p11nethsm.conf``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your NetHSM is not running on"
+#~ " localhost, you will need to change"
+#~ " the URL of the curl requests "
+#~ "in ``container/nginx/generate.sh`` to point to"
+#~ " your NetHSM."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Change the libnethsm_pkcs11 configuration to"
+#~ " match your NetHSM in "
+#~ "``container/nginx/p11nethsm.conf``."
+#~ msgstr ""
 

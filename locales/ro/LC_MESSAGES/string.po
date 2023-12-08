@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 14:17+0100\n"
+"POT-Creation-Date: 2023-12-08 13:43+0100\n"
 "PO-Revision-Date: 2023-12-05 14:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ro/>\n"
 "Language: ro\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ro/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
+"< 20)) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6124,51 +6123,76 @@ msgstr ""
 "Rularea scriptului de generare șterge cheia ``webserver`` și o "
 "înlocuiește."
 
-#: ../nethsm/apache.rst:73 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
+#: ../nethsm/apache.rst:73 ../nethsm/nginx.rst:98
+#, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started>`__ for more information."
+"started guide <getting-started.html>`__ for more information. Besides an "
+"administrator, you are going to need an operator account."
 msgstr ""
 "Configurați un NetHSM, fie unul real, fie un container. Pentru mai multe "
 "informații, consultați ghidul `get-started <getting-started>`__."
 
-#: ../nethsm/apache.rst:74
+#: ../nethsm/apache.rst:74 ../nethsm/nginx.rst:99
+#, fuzzy
 msgid ""
-"If your NetHSM is not running on localhost, you will need to change the "
-"URL of the curl requests in ``container/apache/generate.sh`` to point to "
-"your NetHSM."
+"Download and install the latest version of the nethsm-pkcs11 driver "
+"`available from here <https://github.com/Nitrokey/nethsm-"
+"pkcs11/releases>`__."
 msgstr ""
-"Dacă NetHSM nu rulează pe localhost, va trebui să modificați URL-ul "
-"cererilor curl din ``container/apache/generate.sh`` pentru a indica "
-"NetHSM-ul."
+"Descărcați imaginea de instalare de pe pagina de versiuni ` "
+"<https://github.com/nitrokey/nethsm/releases>` __."
 
-#: ../nethsm/apache.rst:75
+#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:100
 msgid ""
-"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
-"``container/apache/p11nethsm.conf``."
+"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
+"<openssl.html>`__. You do not need to create a configuration file."
 msgstr ""
-"Schimbați configurația libnethsm_pkcs11 pentru a se potrivi cu NetHSM-ul "
-"dvs. în ``container/apache/p11nethsm.conf``."
 
-#: ../nethsm/apache.rst:76 ../nethsm/nginx.rst:101
+#: ../nethsm/apache.rst:76
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+
+#: ../nethsm/apache.rst:77 ../nethsm/nginx.rst:102
+msgid ""
+"Create a NetHSM PKCS11 configuration file in one of the `known locations "
+"<pkcs11-setup.html#configuration>`__, e.g., "
+"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
+"account and use the same NetHSM instance specified in the generate script"
+" before."
+msgstr ""
+
+#: ../nethsm/apache.rst:78
+msgid ""
+"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+
+#: ../nethsm/apache.rst:79 ../nethsm/nginx.rst:104
 msgid "Generate the certificate and key."
 msgstr "Generați certificatul și cheia."
 
-#: ../nethsm/apache.rst:82 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
+#: ../nethsm/apache.rst:85 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:110
 msgid "Build the container."
 msgstr "Construiți containerul."
 
-#: ../nethsm/apache.rst:88 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
+#: ../nethsm/apache.rst:91 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:116
 msgid "Run the container."
 msgstr "Rulați containerul."
 
-#: ../nethsm/apache.rst:94 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
+#: ../nethsm/apache.rst:97
 msgid ""
-"The container will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__."
+"The Apache test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
 msgstr ""
-"Containerul va fi disponibil la `https://localhost:9443/ "
-"https://localhost:9443/ <https://localhost:9443/>`__."
 
 #: ../nethsm/ejbca.rst:2
 msgid "EJBCA"
@@ -6253,6 +6277,14 @@ msgstr ""
 "clona depozitul `nethsm-pkcs11 <https://github.com/Nitrokey/nethsm-"
 "pkcs11>`__ și să rulați următoarele comenzi:"
 
+#: ../nethsm/ejbca.rst:30
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <getting-started>`__ for more information."
+msgstr ""
+"Configurați un NetHSM, fie unul real, fie un container. Pentru mai multe "
+"informații, consultați ghidul `get-started <getting-started>`__."
+
 #: ../nethsm/ejbca.rst:31
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
@@ -6260,6 +6292,14 @@ msgid ""
 msgstr ""
 "Schimbați configurația libnethsm_pkcs11 pentru a se potrivi cu NetHSM-ul "
 "dvs. în ``container/ejbca/p11nethsm.conf``."
+
+#: ../nethsm/ejbca.rst:44
+msgid ""
+"The container will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
+msgstr ""
+"Containerul va fi disponibil la `https://localhost:9443/ "
+"https://localhost:9443/ <https://localhost:9443/>`__."
 
 #: ../nethsm/faq.rst:2
 msgid "Frequently Asked Questions (FAQ)"
@@ -7273,23 +7313,29 @@ msgstr ""
 "<https://github.com/Nitrokey/nethsm-pkcs11>`__ și rulați următoarele "
 "comenzi:"
 
-#: ../nethsm/nginx.rst:99
+#: ../nethsm/nginx.rst:101
 msgid ""
-"If your NetHSM is not running on localhost, you will need to change the "
-"URL of the curl requests in ``container/nginx/generate.sh`` to point to "
-"your NetHSM."
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
-"Dacă NetHSM nu rulează pe localhost, va trebui să modificați URL-ul "
-"cererilor curl din ``container/nginx/generate.sh`` pentru a indica "
-"NetHSM-ul."
 
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:103
 msgid ""
-"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
-"``container/nginx/p11nethsm.conf``."
+"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
 msgstr ""
-"Schimbați configurația libnethsm_pkcs11 pentru a se potrivi cu NetHSM-ul "
-"dvs. în ``container/ejbca/p11nethsm.conf``."
+
+#: ../nethsm/nginx.rst:122
+msgid ""
+"The NGINX test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
+msgstr ""
 
 #: ../nethsm/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -19056,16 +19102,16 @@ msgid ""
 "Make sure the NW750 is connected to a power source or has at least 50% "
 "batterie left."
 msgstr ""
-"Asigurați-vă că NW750 este conectat la o sursă de alimentare sau că mai are "
-"cel puțin 50% din baterie."
+"Asigurați-vă că NW750 este conectat la o sursă de alimentare sau că mai "
+"are cel puțin 50% din baterie."
 
 #: ../nitrowall/nw750/factory-reset.rst:7
 msgid ""
 "Press and hold the reset button (next to the microSD card slot) for 10 "
 "seconds."
 msgstr ""
-"Apăsați și mențineți apăsat butonul de resetare (lângă slotul pentru card "
-"microSD) timp de 10 secunde."
+"Apăsați și mențineți apăsat butonul de resetare (lângă slotul pentru card"
+" microSD) timp de 10 secunde."
 
 #: ../nitrowall/nw750/factory-reset.rst:8
 msgid "This will trigger a reboot which takes ca. 3 minutes."
@@ -19076,8 +19122,8 @@ msgid ""
 "In order to be able to change your device's IMEI, `reinstall blue-merle "
 "<https://github.com/srlabs/blue-merle/tree/main#installation>`_."
 msgstr ""
-"Pentru a putea schimba IMEI-ul dispozitivului dvs., `reinstalați blue-merle "
-"<https://github.com/srlabs/blue-merle/tree/main#installation>`_."
+"Pentru a putea schimba IMEI-ul dispozitivului dvs., `reinstalați blue-"
+"merle <https://github.com/srlabs/blue-merle/tree/main#installation>`_."
 
 #: ../nitrowall/nw750/imei-change.rst:2
 msgid "Changing IMEI"
@@ -19088,8 +19134,8 @@ msgid ""
 "To be able to change the IMEI of your device, the software `blue merle "
 "<https://github.com/srlabs/blue-merle>`_ is pre-installed."
 msgstr ""
-"Pentru a putea schimba IMEI-ul dispozitivului dumneavoastră, software-ul `"
-"blue merle <https://github.com/srlabs/blue-merle>`_ este preinstalat."
+"Pentru a putea schimba IMEI-ul dispozitivului dumneavoastră, software-ul "
+"`blue merle <https://github.com/srlabs/blue-merle>`_ este preinstalat."
 
 #: ../nitrowall/nw750/imei-change.rst:6
 msgid ""
@@ -19104,8 +19150,8 @@ msgid ""
 "There a different ways to change the IMEI. The simplest is to use the "
 "toogle on the side of the NW750:"
 msgstr ""
-"Există mai multe moduri de a schimba IMEI. Cel mai simplu este să folosiți "
-"butonul de pe partea laterală a NW750:"
+"Există mai multe moduri de a schimba IMEI. Cel mai simplu este să "
+"folosiți butonul de pe partea laterală a NW750:"
 
 #: ../nitrowall/nw750/imei-change.rst:12
 msgid "Switch the hardware toggle."
@@ -19116,29 +19162,28 @@ msgid ""
 "Follow the instructions on the display, which will prompt you to replace "
 "the SIM card eventually."
 msgstr ""
-"Urmați instrucțiunile de pe ecran, care vă vor solicita să înlocuiți în cele "
-"din urmă cartela SIM."
+"Urmați instrucțiunile de pe ecran, care vă vor solicita să înlocuiți în "
+"cele din urmă cartela SIM."
 
 #: ../nitrowall/nw750/imei-change.rst:14
 msgid ""
 "After replacing the SIM card, flip the toggle again. This changes the "
 "IMEI and powers off your device."
 msgstr ""
-"După înlocuirea cartelei SIM, rotiți din nou comutatorul. În acest fel se "
-"schimbă IMEI și se oprește dispozitivul."
+"După înlocuirea cartelei SIM, rotiți din nou comutatorul. În acest fel se"
+" schimbă IMEI și se oprește dispozitivul."
 
 #: ../nitrowall/nw750/imei-change.rst:15
 msgid "You should change your geographical location before booting again."
-msgstr ""
-"Ar trebui să vă schimbați locația geografică înainte de a porni din nou."
+msgstr "Ar trebui să vă schimbați locația geografică înainte de a porni din nou."
 
 #: ../nitrowall/nw750/imei-change.rst:17
 msgid ""
 "For more details see `this documentation <https://github.com/srlabs/blue-"
 "merle/blob/main/Documentation.pdf>`_."
 msgstr ""
-"Pentru mai multe detalii, consultați `această documentație <https://github."
-"com/srlabs/blue-merle/blob/main/Documentation.pdf>`_."
+"Pentru mai multe detalii, consultați `această documentație "
+"<https://github.com/srlabs/blue-merle/blob/main/Documentation.pdf>`_."
 
 #: ../nitrowall/nw750/imei-change.rst:19
 msgid ""
@@ -19154,10 +19199,10 @@ msgstr ""
 "așteaptă. Acest lucru poate avea ca rezultat oprirea ecranului (standby) "
 "timp de câteva secunde înainte de a afișa mesajul final așteptat (de "
 "exemplu, instrucțiuni de înlocuire a cartelei SIM). Așteptați afișarea "
-"mesajului final înainte de a trage din nou de comutator. Dacă după un minut "
-"nu se afișează niciun mesaj, este posibil ca scenariul să fi ieșit sau să fi "
-"ratat mesajul. În acest caz, trageți comutatorul pentru a continua/reporni "
-"procesul."
+"mesajului final înainte de a trage din nou de comutator. Dacă după un "
+"minut nu se afișează niciun mesaj, este posibil ca scenariul să fi ieșit "
+"sau să fi ratat mesajul. În acest caz, trageți comutatorul pentru a "
+"continua/reporni procesul."
 
 #: ../nitrowall/nw750/index.rst:2
 msgid "Nitrowall NW750"
@@ -19176,8 +19221,8 @@ msgid ""
 "For more help see `this documentation <https://docs.gl-"
 "inet.com/router/en/4/interface_guide/>`_"
 msgstr ""
-"Pentru mai mult ajutor, consultați `această documentație <https://docs.gl-"
-"inet.com/router/en/4/interface_guide/>`_"
+"Pentru mai mult ajutor, consultați `această documentație <https://docs"
+".gl-inet.com/router/en/4/interface_guide/>`_"
 
 #: ../nitrowall/sealed-hardware.rst:4
 msgid ""
@@ -32222,3 +32267,46 @@ msgstr ""
 
 #~ msgid "NitroWall"
 #~ msgstr "NitroWall"
+
+#~ msgid ""
+#~ "If your NetHSM is not running on"
+#~ " localhost, you will need to change"
+#~ " the URL of the curl requests "
+#~ "in ``container/apache/generate.sh`` to point "
+#~ "to your NetHSM."
+#~ msgstr ""
+#~ "Dacă NetHSM nu rulează pe localhost, "
+#~ "va trebui să modificați URL-ul "
+#~ "cererilor curl din ``container/apache/generate.sh``"
+#~ " pentru a indica NetHSM-ul."
+
+#~ msgid ""
+#~ "Change the libnethsm_pkcs11 configuration to"
+#~ " match your NetHSM in "
+#~ "``container/apache/p11nethsm.conf``."
+#~ msgstr ""
+#~ "Schimbați configurația libnethsm_pkcs11 pentru "
+#~ "a se potrivi cu NetHSM-ul dvs. "
+#~ "în ``container/apache/p11nethsm.conf``."
+
+#~ msgid ""
+#~ "If your NetHSM is not running on"
+#~ " localhost, you will need to change"
+#~ " the URL of the curl requests "
+#~ "in ``container/nginx/generate.sh`` to point to"
+#~ " your NetHSM."
+#~ msgstr ""
+#~ "Dacă NetHSM nu rulează pe localhost, "
+#~ "va trebui să modificați URL-ul "
+#~ "cererilor curl din ``container/nginx/generate.sh``"
+#~ " pentru a indica NetHSM-ul."
+
+#~ msgid ""
+#~ "Change the libnethsm_pkcs11 configuration to"
+#~ " match your NetHSM in "
+#~ "``container/nginx/p11nethsm.conf``."
+#~ msgstr ""
+#~ "Schimbați configurația libnethsm_pkcs11 pentru "
+#~ "a se potrivi cu NetHSM-ul dvs. "
+#~ "în ``container/ejbca/p11nethsm.conf``."
+

@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 14:17+0100\n"
+"POT-Creation-Date: 2023-12-08 13:43+0100\n"
 "PO-Revision-Date: 2023-12-05 14:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5230,46 +5230,72 @@ msgstr ""
 msgid "Running the generate script deletes the ``webserver`` key and replaces it."
 msgstr "运行生成脚本会删除``webserver`` 密钥并将其替换。"
 
-#: ../nethsm/apache.rst:73 ../nethsm/ejbca.rst:30 ../nethsm/nginx.rst:98
+#: ../nethsm/apache.rst:73 ../nethsm/nginx.rst:98
+#, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
-"started guide <getting-started>`__ for more information."
+"started guide <getting-started.html>`__ for more information. Besides an "
+"administrator, you are going to need an operator account."
 msgstr "配置 NetHSM，可以是一个真正的 NetHSM，也可以是一个容器。更多信息，请参阅`入门指南<getting-started>`__。"
 
-#: ../nethsm/apache.rst:74
+#: ../nethsm/apache.rst:74 ../nethsm/nginx.rst:99
+#, fuzzy
 msgid ""
-"If your NetHSM is not running on localhost, you will need to change the "
-"URL of the curl requests in ``container/apache/generate.sh`` to point to "
-"your NetHSM."
-msgstr ""
-"如果 NetHSM 不在 localhost 上运行，则需要更改``container/apache/generate.sh`` 中 curl "
-"请求的 URL，使其指向 NetHSM。"
+"Download and install the latest version of the nethsm-pkcs11 driver "
+"`available from here <https://github.com/Nitrokey/nethsm-"
+"pkcs11/releases>`__."
+msgstr "从`发布页面下载安装镜像文件<https://github.com/nitrokey/nethsm/releases>`__。"
 
-#: ../nethsm/apache.rst:75
+#: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:100
 msgid ""
-"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
-"``container/apache/p11nethsm.conf``."
+"Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
+"<openssl.html>`__. You do not need to create a configuration file."
 msgstr ""
-"在``container/apache/p11nethsm.conf`` 中更改 libnethsm_pkcs11 配置，使其与 NetHSM "
-"匹配。"
 
-#: ../nethsm/apache.rst:76 ../nethsm/nginx.rst:101
+#: ../nethsm/apache.rst:76
+msgid ""
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+
+#: ../nethsm/apache.rst:77 ../nethsm/nginx.rst:102
+msgid ""
+"Create a NetHSM PKCS11 configuration file in one of the `known locations "
+"<pkcs11-setup.html#configuration>`__, e.g., "
+"``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator "
+"account and use the same NetHSM instance specified in the generate script"
+" before."
+msgstr ""
+
+#: ../nethsm/apache.rst:78
+msgid ""
+"Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+
+#: ../nethsm/apache.rst:79 ../nethsm/nginx.rst:104
 msgid "Generate the certificate and key."
 msgstr "生成证书和密钥"
 
-#: ../nethsm/apache.rst:82 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:107
+#: ../nethsm/apache.rst:85 ../nethsm/ejbca.rst:32 ../nethsm/nginx.rst:110
 msgid "Build the container."
 msgstr "建造集装箱"
 
-#: ../nethsm/apache.rst:88 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:113
+#: ../nethsm/apache.rst:91 ../nethsm/ejbca.rst:38 ../nethsm/nginx.rst:116
 msgid "Run the container."
 msgstr "运行容器。"
 
-#: ../nethsm/apache.rst:94 ../nethsm/ejbca.rst:44 ../nethsm/nginx.rst:119
+#: ../nethsm/apache.rst:97
 msgid ""
-"The container will be available at `https://localhost:9443/ "
-"<https://localhost:9443/>`__."
-msgstr "集装箱可在`https://localhost:9443/<https://localhost:9443/>`___。"
+"The Apache test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
+msgstr ""
 
 #: ../nethsm/ejbca.rst:2
 msgid "EJBCA"
@@ -5342,11 +5368,23 @@ msgstr ""
 "如果您想用给出的示例进行实验，可以使用 git 克隆`nethsm-pkcs11 仓库<https://github.com/Nitrokey"
 "/nethsm-pkcs11>`__ 并运行以下命令："
 
+#: ../nethsm/ejbca.rst:30
+msgid ""
+"Configure a NetHSM, either a real one or a container. See the `getting-"
+"started guide <getting-started>`__ for more information."
+msgstr "配置 NetHSM，可以是一个真正的 NetHSM，也可以是一个容器。更多信息，请参阅`入门指南<getting-started>`__。"
+
 #: ../nethsm/ejbca.rst:31
 msgid ""
 "Change the libnethsm_pkcs11 configuration to match your NetHSM in "
 "``container/ejbca/p11nethsm.conf``."
 msgstr "在``container/ejbca/p11nethsm.conf`` 中更改 libnethsm_pkcs11 配置，使其与 NetHSM 匹配。"
+
+#: ../nethsm/ejbca.rst:44
+msgid ""
+"The container will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__."
+msgstr "集装箱可在`https://localhost:9443/<https://localhost:9443/>`___。"
 
 #: ../nethsm/faq.rst:2
 msgid "Frequently Asked Questions (FAQ)"
@@ -6234,20 +6272,29 @@ msgstr ""
 "pkcs11/tree/main/container/nginx>`__进行实验，请使用 git 克隆`nethsm-pkcs11 "
 "仓库<https://github.com/Nitrokey/nethsm-pkcs11>`__，并运行以下命令："
 
-#: ../nethsm/nginx.rst:99
+#: ../nethsm/nginx.rst:101
 msgid ""
-"If your NetHSM is not running on localhost, you will need to change the "
-"URL of the curl requests in ``container/nginx/generate.sh`` to point to "
-"your NetHSM."
+"Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and "
+"``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that "
+"``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains "
+"an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the "
+"corresponding password. Further configure the absolute path of the "
+"OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
+"path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
-"如果 NetHSM 不在 localhost 上运行，则需要更改``container/nginx/generate.sh`` 中 curl "
-"请求的 URL，使其指向 NetHSM。"
 
-#: ../nethsm/nginx.rst:100
+#: ../nethsm/nginx.rst:103
 msgid ""
-"Change the libnethsm_pkcs11 configuration to match your NetHSM in "
-"``container/nginx/p11nethsm.conf``."
-msgstr "在``container/ejbca/p11nethsm.conf`` 中更改 libnethsm_pkcs11 配置，使其与 NetHSM 匹配。"
+"Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
+"with your NetHSMs URL and valid operator credentials."
+msgstr ""
+
+#: ../nethsm/nginx.rst:122
+msgid ""
+"The NGINX test page will be available at `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Note that your browser, hopefully, will "
+"warn you that the websites certificate is self-signed."
+msgstr ""
 
 #: ../nethsm/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -15846,8 +15893,8 @@ msgid ""
 "In order to be able to change your device's IMEI, `reinstall blue-merle "
 "<https://github.com/srlabs/blue-merle/tree/main#installation>`_."
 msgstr ""
-"为了能够更改设备的 IMEI，`重新安装 blue-merle<https://github.com/srlabs/"
-"blue-merle/tree/main#installation>`_ 。"
+"为了能够更改设备的 IMEI，`重新安装 blue-merle<https://github.com/srlabs/blue-"
+"merle/tree/main#installation>`_ 。"
 
 #: ../nitrowall/nw750/imei-change.rst:2
 msgid "Changing IMEI"
@@ -15857,16 +15904,15 @@ msgstr "更改 IMEI"
 msgid ""
 "To be able to change the IMEI of your device, the software `blue merle "
 "<https://github.com/srlabs/blue-merle>`_ is pre-installed."
-msgstr "要更改设备的 IMEI，需要预装软件`blue merle<https://github.com/srlabs/blue-"
-"merle>`_ 。"
+msgstr "要更改设备的 IMEI，需要预装软件`blue merle<https://github.com/srlabs/blue-merle>`_ 。"
 
 #: ../nitrowall/nw750/imei-change.rst:6
 msgid ""
 "After performing a factory reset, you need to `reinstall "
 "<https://github.com/srlabs/blue-merle#installation>`_ blue-merle."
 msgstr ""
-"执行出厂重置后，您需要`重新安装<https://github.com/srlabs/blue-"
-"merle#installation>`_ blue-merle。"
+"执行出厂重置后，您需要`重新安装<https://github.com/srlabs/blue-merle#installation>`_ "
+"blue-merle。"
 
 #: ../nitrowall/nw750/imei-change.rst:10
 msgid ""
@@ -15899,8 +15945,8 @@ msgid ""
 "For more details see `this documentation <https://github.com/srlabs/blue-"
 "merle/blob/main/Documentation.pdf>`_."
 msgstr ""
-"更多详情，请参阅`本文档<https://github.com/srlabs/blue-merle/blob/main/"
-"Documentation.pdf>`_ 。"
+"更多详情，请参阅`本文档<https://github.com/srlabs/blue-"
+"merle/blob/main/Documentation.pdf>`_ 。"
 
 #: ../nitrowall/nw750/imei-change.rst:19
 msgid ""
@@ -15912,10 +15958,8 @@ msgid ""
 "a minute, the script might have exited or you might have missed the "
 "message. In this case, pull the switch to continue / restart the process."
 msgstr ""
-"有时，在设备上执行命令所需的时间可能比预期的要长。这可能导致显示屏在显示预期"
-"的最终信息（例如更换 SIM 卡的说明）之前关闭（待机）几秒钟。请等待最终信息出现"
-"后再拉动开关。如果一分钟后仍未显示信息，则可能是脚本已退出或您错过了信息。在"
-"这种情况下，拉动开关继续/重新启动程序。"
+"有时，在设备上执行命令所需的时间可能比预期的要长。这可能导致显示屏在显示预期的最终信息（例如更换 SIM "
+"卡的说明）之前关闭（待机）几秒钟。请等待最终信息出现后再拉动开关。如果一分钟后仍未显示信息，则可能是脚本已退出或您错过了信息。在这种情况下，拉动开关继续/重新启动程序。"
 
 #: ../nitrowall/nw750/index.rst:2
 msgid "Nitrowall NW750"
@@ -15933,8 +15977,7 @@ msgstr "打开 http://192.168.8.1 的网络界面"
 msgid ""
 "For more help see `this documentation <https://docs.gl-"
 "inet.com/router/en/4/interface_guide/>`_"
-msgstr "如需更多帮助，请参阅`本文档<https://docs.gl-inet.com/router/en/4/"
-"interface_guide/>`_"
+msgstr "如需更多帮助，请参阅`本文档<https://docs.gl-inet.com/router/en/4/interface_guide/>`_"
 
 #: ../nitrowall/sealed-hardware.rst:4
 msgid ""
@@ -25997,3 +26040,42 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "NitroWall"
 #~ msgstr "硝化墙"
+
+#~ msgid ""
+#~ "If your NetHSM is not running on"
+#~ " localhost, you will need to change"
+#~ " the URL of the curl requests "
+#~ "in ``container/apache/generate.sh`` to point "
+#~ "to your NetHSM."
+#~ msgstr ""
+#~ "如果 NetHSM 不在 localhost "
+#~ "上运行，则需要更改``container/apache/generate.sh`` 中 curl 请求的"
+#~ " URL，使其指向 NetHSM。"
+
+#~ msgid ""
+#~ "Change the libnethsm_pkcs11 configuration to"
+#~ " match your NetHSM in "
+#~ "``container/apache/p11nethsm.conf``."
+#~ msgstr ""
+#~ "在``container/apache/p11nethsm.conf`` 中更改 libnethsm_pkcs11"
+#~ " 配置，使其与 NetHSM 匹配。"
+
+#~ msgid ""
+#~ "If your NetHSM is not running on"
+#~ " localhost, you will need to change"
+#~ " the URL of the curl requests "
+#~ "in ``container/nginx/generate.sh`` to point to"
+#~ " your NetHSM."
+#~ msgstr ""
+#~ "如果 NetHSM 不在 localhost "
+#~ "上运行，则需要更改``container/nginx/generate.sh`` 中 curl 请求的"
+#~ " URL，使其指向 NetHSM。"
+
+#~ msgid ""
+#~ "Change the libnethsm_pkcs11 configuration to"
+#~ " match your NetHSM in "
+#~ "``container/nginx/p11nethsm.conf``."
+#~ msgstr ""
+#~ "在``container/ejbca/p11nethsm.conf`` 中更改 libnethsm_pkcs11"
+#~ " 配置，使其与 NetHSM 匹配。"
+

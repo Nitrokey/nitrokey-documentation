@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-05 14:17+0100\n"
+"POT-Creation-Date: 2023-12-08 13:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4548,40 +4548,52 @@ msgid "Running the generate script deletes the ``webserver`` key and replaces it
 msgstr ""
 
 #: ../nethsm/apache.rst:73
-#: ../nethsm/ejbca.rst:30
 #: ../nethsm/nginx.rst:98
-msgid "Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started>`__ for more information."
+msgid "Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started.html>`__ for more information. Besides an administrator, you are going to need an operator account."
 msgstr ""
 
 #: ../nethsm/apache.rst:74
-msgid "If your NetHSM is not running on localhost, you will need to change the URL of the curl requests in ``container/apache/generate.sh`` to point to your NetHSM."
+#: ../nethsm/nginx.rst:99
+msgid "Download and install the latest version of the nethsm-pkcs11 driver `available from here <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__."
 msgstr ""
 
 #: ../nethsm/apache.rst:75
-msgid "Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/apache/p11nethsm.conf``."
+#: ../nethsm/nginx.rst:100
+msgid "Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual <openssl.html>`__. You do not need to create a configuration file."
 msgstr ""
 
 #: ../nethsm/apache.rst:76
-#: ../nethsm/nginx.rst:101
+msgid "Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and ``ADMIN_ACCOUNT_PWD`` in ``container/apache/generate.sh`` such that ``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the corresponding password. Further configure the absolute path of the OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
+msgstr ""
+
+#: ../nethsm/apache.rst:77
+#: ../nethsm/nginx.rst:102
+msgid "Create a NetHSM PKCS11 configuration file in one of the `known locations <pkcs11-setup.html#configuration>`__, e.g., ``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator account and use the same NetHSM instance specified in the generate script before."
+msgstr ""
+
+#: ../nethsm/apache.rst:78
+msgid "Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` with your NetHSMs URL and valid operator credentials."
+msgstr ""
+
+#: ../nethsm/apache.rst:79
+#: ../nethsm/nginx.rst:104
 msgid "Generate the certificate and key."
 msgstr ""
 
-#: ../nethsm/apache.rst:82
+#: ../nethsm/apache.rst:85
 #: ../nethsm/ejbca.rst:32
-#: ../nethsm/nginx.rst:107
+#: ../nethsm/nginx.rst:110
 msgid "Build the container."
 msgstr ""
 
-#: ../nethsm/apache.rst:88
+#: ../nethsm/apache.rst:91
 #: ../nethsm/ejbca.rst:38
-#: ../nethsm/nginx.rst:113
+#: ../nethsm/nginx.rst:116
 msgid "Run the container."
 msgstr ""
 
-#: ../nethsm/apache.rst:94
-#: ../nethsm/ejbca.rst:44
-#: ../nethsm/nginx.rst:119
-msgid "The container will be available at `https://localhost:9443/ <https://localhost:9443/>`__."
+#: ../nethsm/apache.rst:97
+msgid "The Apache test page will be available at `https://localhost:9443/ <https://localhost:9443/>`__. Note that your browser, hopefully, will warn you that the websites certificate is self-signed."
 msgstr ""
 
 #: ../nethsm/ejbca.rst:2
@@ -4624,8 +4636,16 @@ msgstr ""
 msgid "If you want to experiment with the given example you can use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:"
 msgstr ""
 
+#: ../nethsm/ejbca.rst:30
+msgid "Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started>`__ for more information."
+msgstr ""
+
 #: ../nethsm/ejbca.rst:31
 msgid "Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/ejbca/p11nethsm.conf``."
+msgstr ""
+
+#: ../nethsm/ejbca.rst:44
+msgid "The container will be available at `https://localhost:9443/ <https://localhost:9443/>`__."
 msgstr ""
 
 #: ../nethsm/faq.rst:2
@@ -5304,12 +5324,16 @@ msgstr ""
 msgid "If you want to experiment with the `given example <https://github.com/Nitrokey/nethsm-pkcs11/tree/main/container/nginx>`__ use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:"
 msgstr ""
 
-#: ../nethsm/nginx.rst:99
-msgid "If your NetHSM is not running on localhost, you will need to change the URL of the curl requests in ``container/nginx/generate.sh`` to point to your NetHSM."
+#: ../nethsm/nginx.rst:101
+msgid "Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and ``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that ``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the corresponding password. Further configure the absolute path of the OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
 
-#: ../nethsm/nginx.rst:100
-msgid "Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/nginx/p11nethsm.conf``."
+#: ../nethsm/nginx.rst:103
+msgid "Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` with your NetHSMs URL and valid operator credentials."
+msgstr ""
+
+#: ../nethsm/nginx.rst:122
+msgid "The NGINX test page will be available at `https://localhost:9443/ <https://localhost:9443/>`__. Note that your browser, hopefully, will warn you that the websites certificate is self-signed."
 msgstr ""
 
 #: ../nethsm/opendnssec.rst:2
@@ -6205,61 +6229,61 @@ msgstr ""
 msgid "All platforms"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:80
+#: ../nethsm/pkcs11-setup.rst:83
 msgid "Instances"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:82
+#: ../nethsm/pkcs11-setup.rst:85
 msgid "If multiple NetHSM instances are listed in the same slot, these instances must be configured in a cluster. The credentials of the users and the keys must be the same on all instances."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:84
+#: ../nethsm/pkcs11-setup.rst:87
 msgid "The module will use the instances in a round-robin fashion, trying another instance if one fails."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:88
+#: ../nethsm/pkcs11-setup.rst:91
 msgid "Users"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:90
+#: ../nethsm/pkcs11-setup.rst:93
 msgid "The operator and administrator users are both optional but the module won't start if no user is configured. This is so you can configure the module with only an administrator user, only an operator user or both at the same time."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:92
+#: ../nethsm/pkcs11-setup.rst:95
 msgid "When the two users are set the module will use the operator by default and only use the administrator user when the action needs it."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:94
+#: ../nethsm/pkcs11-setup.rst:97
 msgid "The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 SO is mapped to the NetHSM administrator."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:97
+#: ../nethsm/pkcs11-setup.rst:100
 #: ../software/nk-app2/passwords.rst:2
 #: ../nitrokey3/shared/reset.rst.inc:19
 msgid "Passwords"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:99
+#: ../nethsm/pkcs11-setup.rst:102
 msgid "The password can be provided by multiple means:"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:101
+#: ../nethsm/pkcs11-setup.rst:104
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:102
+#: ../nethsm/pkcs11-setup.rst:105
 msgid "In an environment variable read by the module with the ``env:`` prefix: ``env:ENV_STORING_THE_PASSWORD``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:103
+#: ../nethsm/pkcs11-setup.rst:106
 msgid "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool --module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin password you need to use ``--so-pin`` instead: ``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:106
+#: ../nethsm/pkcs11-setup.rst:109
 msgid "If the password of an user is not set in the configuration file a login will be required to provide the password (3rd method)."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:108
+#: ../nethsm/pkcs11-setup.rst:111
 msgid "A NetHSM that is not operational is considered as a slot with the token not present."
 msgstr ""
 
