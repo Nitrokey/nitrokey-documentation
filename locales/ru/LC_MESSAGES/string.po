@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-08 13:43+0100\n"
-"PO-Revision-Date: 2023-12-05 14:48+0000\n"
+"PO-Revision-Date: 2023-12-08 14:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Russian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/ru/>\n"
 "Language: ru\n"
-"Language-Team: Russian <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/ru/>\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6076,30 +6077,31 @@ msgid "Running the generate script deletes the ``webserver`` key and replaces it
 msgstr "Запуск скрипта generate удаляет ключ ``webserver`` и заменяет его."
 
 #: ../nethsm/apache.rst:73 ../nethsm/nginx.rst:98
-#, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started.html>`__ for more information. Besides an "
 "administrator, you are going to need an operator account."
 msgstr ""
-"Настройте NetHSM, либо реальный, либо контейнер. Дополнительную "
-"информацию см. в руководстве по началу работы ` <getting-started>` __."
+"Настройте NetHSM, либо реальный, либо контейнер. Дополнительную информацию "
+"см. в руководстве по началу работы ` <getting-started.html>` __. Помимо "
+"администратора, вам понадобится учетная запись оператора."
 
 #: ../nethsm/apache.rst:74 ../nethsm/nginx.rst:99
-#, fuzzy
 msgid ""
 "Download and install the latest version of the nethsm-pkcs11 driver "
 "`available from here <https://github.com/Nitrokey/nethsm-"
 "pkcs11/releases>`__."
 msgstr ""
-"Загрузите образ программы установки со страницы `releases "
-"<https://github.com/nitrokey/nethsm/releases>`__."
+"Загрузите и установите последнюю версию драйвера nethsm-pkcs11 `, доступную "
+"отсюда <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__."
 
 #: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:100
 msgid ""
 "Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
 "<openssl.html>`__. You do not need to create a configuration file."
 msgstr ""
+"Установите механизм OpenSSL PKCS11, как описано в руководстве `OpenSSL "
+"Manual <openssl.html>`__. Вам не нужно создавать файл конфигурации."
 
 #: ../nethsm/apache.rst:76
 msgid ""
@@ -6111,6 +6113,13 @@ msgid ""
 "OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
 "path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
+"Настройте переменные ``HOST``, ``ADMIN_ACCOUNT`` и ``ADMIN_ACCOUNT_PWD`` в ``"
+"container/apache/generate.sh`` таким образом, чтобы ``HOST`` содержал URL и "
+"порт вашего NetHSM, ``ADMIN_ACCOUNT`` содержал имя пользователя учетной "
+"записи администратора и ``ADMIN_ACCOUNT_PWD`` соответствующий пароль. Далее "
+"укажите абсолютный путь к движку OpenSSL PKCS11 в "
+"``OPENSSL_PKCS11_ENGINE_PATH`` и абсолютный путь к библиотеке NetHSM PKCS11 "
+"в ``NETHSM_PKCS11_LIBRARY_PATH``."
 
 #: ../nethsm/apache.rst:77 ../nethsm/nginx.rst:102
 msgid ""
@@ -6120,12 +6129,19 @@ msgid ""
 "account and use the same NetHSM instance specified in the generate script"
 " before."
 msgstr ""
+"Создайте файл конфигурации NetHSM PKCS11 в одном из `известных мест "
+"<pkcs11-setup.html#configuration>`__, например, ``/etc/nitrokey/p11nethsm."
+"conf``. В нем должна быть настроена учетная запись оператора и "
+"использоваться тот же экземпляр NetHSM, который был указан в сценарии "
+"генерации ранее."
 
 #: ../nethsm/apache.rst:78
 msgid ""
 "Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
 "with your NetHSMs URL and valid operator credentials."
 msgstr ""
+"Обновите конфигурацию PKCS11 в разделе ``container/apache/p11nethsm.conf``, "
+"добавив URL-адрес NetHSMs и действительные учетные данные оператора."
 
 #: ../nethsm/apache.rst:79 ../nethsm/nginx.rst:104
 msgid "Generate the certificate and key."
@@ -6145,6 +6161,9 @@ msgid ""
 "<https://localhost:9443/>`__. Note that your browser, hopefully, will "
 "warn you that the websites certificate is self-signed."
 msgstr ""
+"Тестовая страница Apache будет доступна по адресу `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Обратите внимание, что ваш браузер, надеюсь, "
+"предупредит вас о том, что сертификат сайта является самоподписанным."
 
 #: ../nethsm/ejbca.rst:2
 msgid "EJBCA"
@@ -7271,12 +7290,21 @@ msgid ""
 "OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
 "path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
+"Настройте переменные ``HOST``, ``ADMIN_ACCOUNT`` и ``ADMIN_ACCOUNT_PWD`` в ``"
+"container/nginx/generate.sh`` таким образом, чтобы ``HOST`` содержал URL и "
+"порт вашего NetHSM, ``ADMIN_ACCOUNT`` содержал имя пользователя учетной "
+"записи администратора и ``ADMIN_ACCOUNT_PWD`` соответствующий пароль. Далее "
+"укажите абсолютный путь к движку OpenSSL PKCS11 в "
+"``OPENSSL_PKCS11_ENGINE_PATH`` и абсолютный путь к библиотеке NetHSM PKCS11 "
+"в ``NETHSM_PKCS11_LIBRARY_PATH``."
 
 #: ../nethsm/nginx.rst:103
 msgid ""
 "Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
 "with your NetHSMs URL and valid operator credentials."
 msgstr ""
+"Обновите конфигурацию PKCS11 в разделе ``container/nginx/p11nethsm.conf``, "
+"добавив URL-адрес NetHSMs и действительные учетные данные оператора."
 
 #: ../nethsm/nginx.rst:122
 msgid ""
@@ -7284,6 +7312,9 @@ msgid ""
 "<https://localhost:9443/>`__. Note that your browser, hopefully, will "
 "warn you that the websites certificate is self-signed."
 msgstr ""
+"Тестовая страница NGINX будет доступна по адресу `https://localhost:9443/ "
+"<https://localhost:9443/>`__. Обратите внимание, что ваш браузер, надеюсь, "
+"предупредит вас о том, что сертификат сайта является самоподписанным."
 
 #: ../nethsm/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -31931,4 +31962,3 @@ msgstr ""
 #~ "Измените конфигурацию libnethsm_pkcs11 в "
 #~ "соответствии с вашим NetHSM в разделе"
 #~ " ``container/ejbca/p11nethsm.conf``."
-
