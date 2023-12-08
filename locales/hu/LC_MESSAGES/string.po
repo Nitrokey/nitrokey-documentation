@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-08 13:45+0100\n"
-"PO-Revision-Date: 2023-12-05 14:48+0000\n"
+"PO-Revision-Date: 2023-12-08 14:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
-"/nitrokey-documentation/documentation-string/hu/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6097,30 +6098,31 @@ msgstr ""
 "azt."
 
 #: ../nethsm/apache.rst:73 ../nethsm/nginx.rst:98
-#, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started.html>`__ for more information. Besides an "
 "administrator, you are going to need an operator account."
 msgstr ""
-"Konfiguráljon egy NetHSM-et, akár egy valódi, akár egy konténert. További"
-" információkért lásd a `getting-started guide <getting-started>`__."
+"Konfiguráljon egy NetHSM-et, akár egy valódi, akár egy konténert. További "
+"információkért lásd a `getting-started guide <getting-started.html>`__. A "
+"rendszergazdán kívül szükséged lesz egy operátori fiókra is."
 
 #: ../nethsm/apache.rst:74 ../nethsm/nginx.rst:99
-#, fuzzy
 msgid ""
 "Download and install the latest version of the nethsm-pkcs11 driver "
 "`available from here <https://github.com/Nitrokey/nethsm-"
 "pkcs11/releases>`__."
 msgstr ""
-"Töltse le a telepítő képét a `releases oldalról "
-"<https://github.com/nitrokey/nethsm/releases>`__."
+"Töltse le és telepítse a nethsm-pkcs11 illesztőprogram legújabb verzióját "
+"`innen: <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__."
 
 #: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:100
 msgid ""
 "Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
 "<openssl.html>`__. You do not need to create a configuration file."
 msgstr ""
+"Telepítse az OpenSSL PKCS11 motorját a `OpenSSL kézikönyvben <openssl.html>`"
+"__ leírtak szerint. Nem kell konfigurációs fájlt létrehoznia."
 
 #: ../nethsm/apache.rst:76
 msgid ""
@@ -6132,6 +6134,13 @@ msgid ""
 "OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
 "path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
+"Állítsa be a ``HOST``, ``ADMIN_ACCOUNT`` és ``ADMIN_ACCOUNT_PWD`` változókat "
+"a ``container/apache/generate.sh``-ban úgy, hogy a ``HOST`` tartalmazza a "
+"NetHSM URL-jét és portját, a ``ADMIN_ACCOUNT`` tartalmazza a rendszergazdai "
+"fiók felhasználónevét és a ``ADMIN_ACCOUNT_PWD`` a megfelelő jelszót. "
+"Továbbá konfigurálja az OpenSSL PKCS11 motor abszolút elérési útvonalát a "
+"``OPENSSL_PKCS11_ENGINE_PATH`` és a NetHSM PKCS11 könyvtár abszolút elérési "
+"útvonalát a ``NETHSM_PKCS11_LIBRARY_PATH`` alatt."
 
 #: ../nethsm/apache.rst:77 ../nethsm/nginx.rst:102
 msgid ""
@@ -6141,12 +6150,18 @@ msgid ""
 "account and use the same NetHSM instance specified in the generate script"
 " before."
 msgstr ""
+"Hozzon létre egy NetHSM PKCS11 konfigurációs fájlt a `ismert helyek egyikén "
+"<pkcs11-setup.html#configuration>`__, pl. ``/etc/nitrokey/p11nethsm.conf``. "
+"Be kell konfigurálnia egy operátori fiókot, és ugyanazt a NetHSM-példányt "
+"kell használnia, amelyet korábban a generáló szkriptben megadott."
 
 #: ../nethsm/apache.rst:78
 msgid ""
 "Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
 "with your NetHSMs URL and valid operator credentials."
 msgstr ""
+"Frissítse a PKCS11 konfigurációt a ``container/apache/p11nethsm.conf`` "
+"oldalon a NetHSM URL-címével és az érvényes üzemeltetői hitelesítő adatokkal."
 
 #: ../nethsm/apache.rst:79 ../nethsm/nginx.rst:104
 msgid "Generate the certificate and key."
@@ -6166,6 +6181,9 @@ msgid ""
 "<https://localhost:9443/>`__. Note that your browser, hopefully, will "
 "warn you that the websites certificate is self-signed."
 msgstr ""
+"Az Apache tesztoldal a `https://localhost:9443/ <https://localhost:9443/>`__ "
+"címen lesz elérhető. Vegye figyelembe, hogy a böngészője remélhetőleg "
+"figyelmeztetni fogja, hogy a weboldalak tanúsítványa saját aláírású."
 
 #: ../nethsm/ejbca.rst:2
 msgid "EJBCA"
@@ -7291,12 +7309,21 @@ msgid ""
 "OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
 "path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
+"Állítsa be a ``HOST``, ``ADMIN_ACCOUNT`` és ``ADMIN_ACCOUNT_PWD`` változókat "
+"a ``container/nginx/generate.sh``-ban úgy, hogy a ``HOST`` tartalmazza a "
+"NetHSM URL-jét és portját, a ``ADMIN_ACCOUNT`` tartalmazza a rendszergazdai "
+"fiók felhasználónevét és a ``ADMIN_ACCOUNT_PWD`` a megfelelő jelszót. "
+"Továbbá konfigurálja az OpenSSL PKCS11 motor abszolút elérési útvonalát a "
+"``OPENSSL_PKCS11_ENGINE_PATH`` és a NetHSM PKCS11 könyvtár abszolút elérési "
+"útvonalát a ``NETHSM_PKCS11_LIBRARY_PATH`` alatt."
 
 #: ../nethsm/nginx.rst:103
 msgid ""
 "Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
 "with your NetHSMs URL and valid operator credentials."
 msgstr ""
+"Frissítse a PKCS11 konfigurációt a ``container/nginx/p11nethsm.conf`` "
+"oldalon a NetHSM URL-címével és az érvényes üzemeltetői hitelesítő adatokkal."
 
 #: ../nethsm/nginx.rst:122
 msgid ""
@@ -7304,6 +7331,9 @@ msgid ""
 "<https://localhost:9443/>`__. Note that your browser, hopefully, will "
 "warn you that the websites certificate is self-signed."
 msgstr ""
+"Az NGINX tesztoldal a `https://localhost:9443/ <https://localhost:9443/>`__ "
+"címen lesz elérhető. Vegye figyelembe, hogy a böngészője remélhetőleg "
+"figyelmeztetni fogja, hogy a weboldalak tanúsítványa saját aláírású."
 
 #: ../nethsm/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -32110,4 +32140,3 @@ msgstr ""
 #~ "Módosítsa a libnethsm_pkcs11 konfigurációját a"
 #~ " NetHSM-nek megfelelően a "
 #~ "``container/ejbca/p11nethsm.conf`` címen."
-
