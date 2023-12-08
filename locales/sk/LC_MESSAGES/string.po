@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-08 13:43+0100\n"
-"PO-Revision-Date: 2023-12-05 14:48+0000\n"
+"PO-Revision-Date: 2023-12-08 14:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Slovak <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <https://translate.nitrokey.com/projects/nitrokey-"
-"documentation/documentation-string/sk/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5990,30 +5991,32 @@ msgstr ""
 "sa."
 
 #: ../nethsm/apache.rst:73 ../nethsm/nginx.rst:98
-#, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started.html>`__ for more information. Besides an "
 "administrator, you are going to need an operator account."
 msgstr ""
 "Nakonfigurujte NetHSM, buď skutočný, alebo kontajner. Viac informácií "
-"nájdete v príručke `getting-started guide <getting-started>`__."
+"nájdete v príručke `getting-started guide <getting-started.html>`__. Okrem "
+"účtu správcu budete potrebovať aj účet operátora."
 
 #: ../nethsm/apache.rst:74 ../nethsm/nginx.rst:99
-#, fuzzy
 msgid ""
 "Download and install the latest version of the nethsm-pkcs11 driver "
 "`available from here <https://github.com/Nitrokey/nethsm-"
 "pkcs11/releases>`__."
 msgstr ""
-"Stiahnite si obraz inštalačného programu zo stránky `releases "
-"<https://github.com/nitrokey/nethsm/releases>`__."
+"Stiahnite si a nainštalujte najnovšiu verziu nethsm-pkcs11 ovládača `, ktorá "
+"je k dispozícii na adrese <https://github.com/Nitrokey/nethsm-pkcs11/"
+"releases>`__."
 
 #: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:100
 msgid ""
 "Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
 "<openssl.html>`__. You do not need to create a configuration file."
 msgstr ""
+"Nainštalujte engine OpenSSL PKCS11 podľa opisu v príručke `OpenSSL <openssl."
+"html>`__. Konfiguračný súbor nemusíte vytvárať."
 
 #: ../nethsm/apache.rst:76
 msgid ""
@@ -6025,6 +6028,13 @@ msgid ""
 "OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
 "path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
+"Upravte premenné ``HOST``, ``ADMIN_ACCOUNT`` a ``ADMIN_ACCOUNT_PWD`` v ``"
+"container/apache/generate.sh`` tak, aby ``HOST`` obsahovala adresu URL a "
+"port vášho NetHSM, ``ADMIN_ACCOUNT`` obsahovala používateľské meno "
+"administrátorských účtov a ``ADMIN_ACCOUNT_PWD`` príslušné heslo. Ďalej "
+"nakonfigurujte absolútnu cestu k OpenSSL PKCS11 engine v "
+"``OPENSSL_PKCS11_ENGINE_PATH`` a absolútnu cestu k NetHSM PKCS11 knižnici v "
+"``NETHSM_PKCS11_LIBRARY_PATH``."
 
 #: ../nethsm/apache.rst:77 ../nethsm/nginx.rst:102
 msgid ""
@@ -6034,12 +6044,18 @@ msgid ""
 "account and use the same NetHSM instance specified in the generate script"
 " before."
 msgstr ""
+"Vytvorte konfiguračný súbor NetHSM PKCS11 v jednom zo známych umiestnení ` "
+"<pkcs11-setup.html#configuration>` __, napr. ``/etc/nitrokey/p11nethsm.conf``"
+". Musí mať nakonfigurovaný účet operátora a používať tú istú inštanciu "
+"NetHSM, ktorá bola predtým uvedená v generovacom skripte."
 
 #: ../nethsm/apache.rst:78
 msgid ""
 "Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
 "with your NetHSMs URL and valid operator credentials."
 msgstr ""
+"Aktualizujte konfiguráciu PKCS11 na stránke ``container/apache/p11nethsm."
+"conf`` s vašou adresou URL NetHSM a platnými povereniami operátora."
 
 #: ../nethsm/apache.rst:79 ../nethsm/nginx.rst:104
 msgid "Generate the certificate and key."
@@ -6059,6 +6075,9 @@ msgid ""
 "<https://localhost:9443/>`__. Note that your browser, hopefully, will "
 "warn you that the websites certificate is self-signed."
 msgstr ""
+"Testovacia stránka Apache bude k dispozícii na adrese `https://localhost:"
+"9443/ <https://localhost:9443/>`__. Všimnite si, že váš prehliadač vás, "
+"dúfajme, upozorní, že certifikát webových stránok je podpísaný samopodpisom."
 
 #: ../nethsm/ejbca.rst:2
 msgid "EJBCA"
@@ -7170,12 +7189,21 @@ msgid ""
 "OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
 "path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
+"Upravte premenné ``HOST``, ``ADMIN_ACCOUNT`` a ``ADMIN_ACCOUNT_PWD`` v ``"
+"container/nginx/generate.sh`` tak, aby ``HOST`` obsahovala adresu URL a port "
+"vášho NetHSM, ``ADMIN_ACCOUNT`` obsahovala používateľské meno "
+"administrátorských účtov a ``ADMIN_ACCOUNT_PWD`` príslušné heslo. Ďalej "
+"nakonfigurujte absolútnu cestu k OpenSSL PKCS11 engine v "
+"``OPENSSL_PKCS11_ENGINE_PATH`` a absolútnu cestu k NetHSM PKCS11 knižnici v "
+"``NETHSM_PKCS11_LIBRARY_PATH``."
 
 #: ../nethsm/nginx.rst:103
 msgid ""
 "Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
 "with your NetHSMs URL and valid operator credentials."
 msgstr ""
+"Aktualizujte konfiguráciu PKCS11 na stránke ``container/nginx/p11nethsm."
+"conf`` s vašou adresou URL NetHSM a platnými povereniami operátora."
 
 #: ../nethsm/nginx.rst:122
 msgid ""
@@ -7183,6 +7211,9 @@ msgid ""
 "<https://localhost:9443/>`__. Note that your browser, hopefully, will "
 "warn you that the websites certificate is self-signed."
 msgstr ""
+"Testovacia stránka NGINX bude k dispozícii na adrese `https://localhost:9443/"
+" <https://localhost:9443/>`__. Všimnite si, že váš prehliadač vás, dúfajme, "
+"upozorní, že certifikát webových stránok je podpísaný samopodpisom."
 
 #: ../nethsm/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -31497,4 +31528,3 @@ msgstr ""
 #~ "Zmeňte konfiguráciu libnethsm_pkcs11 tak, aby"
 #~ " zodpovedala vášmu NetHSM na "
 #~ "``container/ejbca/p11nethsm.conf``."
-
