@@ -74,7 +74,10 @@ The configuration is yaml-formatted:
                 # When the NetHSM has a self-signed certificate, it can be verified by a sha256 fingerprint of the NetHSM's certificate:
                 sha256_fingerprints: 
                   - "31:92:8E:A4:5E:16:5C:A7:33:44:E8:E9:8E:64:C4:AE:7B:2A:57:E5:77:43:49:F3:69:C9:8F:C4:2F:3A:3B:6E"
-                
+                # Alternatively certificate checks can be skipped entirely with danger_insecure_cert option.
+                # However, this should be avoided if possible and certainly not used with a productive NetHSM.
+                # danger_insecure_cert: true
+
 
 Instances
 ~~~~~~~~~
