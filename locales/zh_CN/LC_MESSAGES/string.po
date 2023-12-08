@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-12-08 13:43+0100\n"
-"PO-Revision-Date: 2023-12-05 14:48+0000\n"
+"PO-Revision-Date: 2023-12-08 14:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
+"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
-"Language-Team: Chinese (Simplified) "
-"<https://translate.nitrokey.com/projects/nitrokey-documentation"
-"/documentation-string/zh_Hans/>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5231,26 +5231,30 @@ msgid "Running the generate script deletes the ``webserver`` key and replaces it
 msgstr "运行生成脚本会删除``webserver`` 密钥并将其替换。"
 
 #: ../nethsm/apache.rst:73 ../nethsm/nginx.rst:98
-#, fuzzy
 msgid ""
 "Configure a NetHSM, either a real one or a container. See the `getting-"
 "started guide <getting-started.html>`__ for more information. Besides an "
 "administrator, you are going to need an operator account."
-msgstr "配置 NetHSM，可以是一个真正的 NetHSM，也可以是一个容器。更多信息，请参阅`入门指南<getting-started>`__。"
+msgstr ""
+"配置 NetHSM，可以是一个真正的 "
+"NetHSM，也可以是一个容器。更多信息，请参阅`入门指南<getting-started."
+"html>`__。除了管理员，你还需要一个操作员账户。"
 
 #: ../nethsm/apache.rst:74 ../nethsm/nginx.rst:99
-#, fuzzy
 msgid ""
 "Download and install the latest version of the nethsm-pkcs11 driver "
 "`available from here <https://github.com/Nitrokey/nethsm-"
 "pkcs11/releases>`__."
-msgstr "从`发布页面下载安装镜像文件<https://github.com/nitrokey/nethsm/releases>`__。"
+msgstr ""
+"下载并安装最新版本的 nethsm-pkcs11 驱动程序`，可从此处获取<https://github."
+"com/Nitrokey/nethsm-pkcs11/releases>`__。"
 
 #: ../nethsm/apache.rst:75 ../nethsm/nginx.rst:100
 msgid ""
 "Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual "
 "<openssl.html>`__. You do not need to create a configuration file."
-msgstr ""
+msgstr "按照`OpenSSL Manual<openssl.html>`__ 中的说明安装 OpenSSL PKCS11 "
+"引擎。无需创建配置文件。"
 
 #: ../nethsm/apache.rst:76
 msgid ""
@@ -5262,6 +5266,12 @@ msgid ""
 "OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
 "path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
+"调整``container/apache/generate.sh`` 中的变量``HOST``、``ADMIN_ACCOUNT`` "
+"和``ADMIN_ACCOUNT_PWD``，使``HOST`` 中包含 NetHSM 的 URL "
+"和端口，``ADMIN_ACCOUNT`` 中包含管理员账户的用户名，``ADMIN_ACCOUNT_PWD`` "
+"中包含相应的密码。进一步在``OPENSSL_PKCS11_ENGINE_PATH`` 中配置 OpenSSL "
+"PKCS11 引擎的绝对路径，在``NETHSM_PKCS11_LIBRARY_PATH`` 中配置 NetHSM PKCS11 "
+"库的绝对路径。"
 
 #: ../nethsm/apache.rst:77 ../nethsm/nginx.rst:102
 msgid ""
@@ -5271,12 +5281,17 @@ msgid ""
 "account and use the same NetHSM instance specified in the generate script"
 " before."
 msgstr ""
+"在`的一个已知位置<pkcs11-setup.html#configuration>`__ 中创建 NetHSM PKCS11 "
+"配置文件，例如``/etc/nitrokey/p11nethsm.conf``。它必须已配置操作员账户，"
+"并使用之前生成脚本中指定的相同 NetHSM 实例。"
 
 #: ../nethsm/apache.rst:78
 msgid ""
 "Update the PKCS11 configuration in ``container/apache/p11nethsm.conf`` "
 "with your NetHSMs URL and valid operator credentials."
 msgstr ""
+"在``container/apache/p11nethsm.conf`` 中用 NetHSMs URL "
+"和有效的操作员凭证更新 PKCS11 配置。"
 
 #: ../nethsm/apache.rst:79 ../nethsm/nginx.rst:104
 msgid "Generate the certificate and key."
@@ -5296,6 +5311,8 @@ msgid ""
 "<https://localhost:9443/>`__. Note that your browser, hopefully, will "
 "warn you that the websites certificate is self-signed."
 msgstr ""
+"Apache 测试页面可在`https://localhost:9443/<https://localhost:9443/"
+">`___中找到。请注意，希望您的浏览器会警告您网站证书是自签名的。"
 
 #: ../nethsm/ejbca.rst:2
 msgid "EJBCA"
@@ -6282,12 +6299,20 @@ msgid ""
 "OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute "
 "path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``."
 msgstr ""
+"调整``container/nginx/generate.sh`` 中的变量``HOST``、``ADMIN_ACCOUNT`` "
+"和``ADMIN_ACCOUNT_PWD``，使``HOST`` 中包含 NetHSM 的 URL "
+"和端口，``ADMIN_ACCOUNT`` 中包含管理员账户的用户名，``ADMIN_ACCOUNT_PWD`` "
+"中包含相应的密码。进一步在``OPENSSL_PKCS11_ENGINE_PATH`` 中配置 OpenSSL "
+"PKCS11 引擎的绝对路径，在``NETHSM_PKCS11_LIBRARY_PATH`` 中配置 NetHSM PKCS11 "
+"库的绝对路径。"
 
 #: ../nethsm/nginx.rst:103
 msgid ""
 "Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` "
 "with your NetHSMs URL and valid operator credentials."
 msgstr ""
+"在``container/nginx/p11nethsm.conf`` 中用 NetHSMs URL 和有效的操作员凭证更新 "
+"PKCS11 配置。"
 
 #: ../nethsm/nginx.rst:122
 msgid ""
@@ -6295,6 +6320,8 @@ msgid ""
 "<https://localhost:9443/>`__. Note that your browser, hopefully, will "
 "warn you that the websites certificate is self-signed."
 msgstr ""
+"NGINX 测试页面将在`https://localhost:9443/<https://localhost:9443/"
+">`___。请注意，希望您的浏览器会警告您网站证书是自签名的。"
 
 #: ../nethsm/opendnssec.rst:2
 msgid "OpenDNSSEC"
@@ -26078,4 +26105,3 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 #~ msgstr ""
 #~ "在``container/ejbca/p11nethsm.conf`` 中更改 libnethsm_pkcs11"
 #~ " 配置，使其与 NetHSM 匹配。"
-
