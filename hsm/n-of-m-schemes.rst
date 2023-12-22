@@ -32,7 +32,7 @@ Nitrokey HSM's M-of-N Threshold Scheme:
 N-of-m for public key authentication
 ''''''''''''''''''''''''''''''''''''
 
-So far n-of-m authentication is only supported in OpenSCDP. `The blog post <https://www.smartcard-hsm.com/2015/10/10/Shared_Control_over_Key_Usage.html>`__ gives an overview and a how-to `here <https://devnet.cardcontact.de/documents/7>`__ (CDN access required) is shown the process step by step in the Smart Card Shell. For OpenSC there is a `ticket <https://github.com/OpenSC/OpenSC/issues/594>`__ to get that integrated.
+So far n-of-m authentication is only supported in OpenSCDP. `The blog post <https://www.smartcard-hsm.com/2015/10/10/Shared_Control_over_Key_Usage.html>`__ gives an overview and a how-to `here <https://devnet.cardcontact.de/documents/7>`__ (CDN access required) is shown the process step by step in the Smart Card Shell.
 
 N-of-m authentication is also supported in the `PKI-as-a-Service Portal <https://www.smartcard-hsm.com/2018/02/13/pki-as-a-service.html>`__ for locally and remote connected HSMs. The PKI-as-a-Service Portal is based on OpenSCDP.
 
