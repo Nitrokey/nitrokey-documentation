@@ -6,6 +6,11 @@ To be able to access your devices without root privileges, nitropy requires the 
     wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
     sudo mv 41-nitrokey.rules /etc/udev/rules.d/
 
+You most likely want to change the owner and the permissions of this file::
+
+    sudo chown root:root /etc/udev/rules.d/41-nitrokey.rules
+    sudo chmod 644 /etc/udev/rules.d/41-nitrokey.rules
+
 After installing the rules, you need to reload them::
 
     sudo udevadm control --reload-rules && sudo udevadm trigger
