@@ -13,18 +13,16 @@ In the future, this manual provisioning may be automated through a Windows MiniD
 Prerequisites
 -------------
 
--  A Windows server with:
-
-   -  Active Directory (`instructions <https://serverspace.io/support/help/installing-active-directory-on-windows-server-2019/>`__)
-   -  A certificate authority (CA), with a certificate template for logon authentication using RSA 2048 bit keys:
-
-      -  Certificate Authority (`instructions <https://learn.microsoft.com/en-us/windows-server/networking/core-network-guide/cncg/server-certs/server-certificate-deployment-overview>`__)
-      -  Authentication template (`instructions <https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/configure-the-workstation-authentication-certificate-template>`__)
-
--  A Windows user machine joined to the domain of the server
--  A Nitrokey 3 with
-   `PIV <https://github.com/Nitrokey/piv-authenticator>`__
--  A Linux system with `pivy <https://github.com/arekinath/pivy>`__ and PCSCD installed (``sudo apt install pcscd``), to provision the Nitrokey (step 1, 2 and 4). Instead of a separate Linux system you can `install WSL <https://learn.microsoft.com/en-us/windows/wsl/install>`__ on Windows. Note that you need to `virtually attach <https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start pcscd``) before using pivy.
+* A Windows server with:
+   * Active Directory (`instructions <https://serverspace.io/support/help/installing-active-directory-on-windows-server-2019/>`__)
+   * A certificate authority (CA), with a certificate template for logon authentication using RSA 2048 bit keys:
+      * Certificate Authority (`instructions <https://learn.microsoft.com/en-us/windows-server/networking/core-network-guide/cncg/server-certs/server-certificate-deployment-overview>`__)
+      * Authentication template (`instructions <https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/configure-the-workstation-authentication-certificate-template>`__)
+* A Windows user machine joined to the domain of the server
+* A Nitrokey 3 with `PIV <https://github.com/Nitrokey/piv-authenticator>`__
+* A Linux system with `pivy <https://github.com/arekinath/pivy>`__ and PCSCD installed (``sudo apt install pcscd``), to provision the Nitrokey (step 1, 2 and 4).
+  Instead of a separate Linux system you can `install WSL <https://learn.microsoft.com/en-us/windows/wsl/install>`__ on Windows.
+  Note that you need to `virtually attach <https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start pcscd``) before using pivy.
 
 1. Generate a key on the Nitrokey
 ---------------------------------
@@ -93,14 +91,16 @@ Save the certificate signing request to a file ``request.csr``
 3. Sign the CSR
 ---------------
 
-Move the request.csr file from the previous step to the server that hosts the certificate authority. Verify in the certificate template console (``certtmpl.msc`` ) that the template for the users can accept subject names from the request:
+Move the request.csr file from the previous step to the server that hosts the certificate authority.
+Verify in the certificate template console (``certtmpl.msc`` ) that the template for the users can accept subject names from the request:
 
 .. figure:: images/piv/certtmpl-SN.png
    :alt: In the certificate template console, in the parameter for the authentication certificate template, toggle "supply in request" in the "subject name" tab.
 
 Open PowerShell and sign the certificate signing request with ``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``
 
-This will open a GUI where you can select the correct Certificate Authority if there are multiple on this server. Save the certificate as ``certificate.crt``
+This will open a GUI where you can select the correct Certificate Authority if there are multiple on this server.
+Save the certificate as ``certificate.crt``
 
 4. Store the certificate on the Nitrokey
 ----------------------------------------
