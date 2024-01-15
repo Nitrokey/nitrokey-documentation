@@ -26,32 +26,31 @@ Prerequisites
    `PIV <https://github.com/Nitrokey/piv-authenticator>`__
 -  A Linux system with `pivy <https://github.com/arekinath/pivy>`__ and PCSCD installed (``sudo apt install pcscd``), to provision the Nitrokey (step 1, 2 and 4). Instead of a separate Linux system you can `install WSL <https://learn.microsoft.com/en-us/windows/wsl/install>`__ on Windows. Note that you need to `virtually attach <https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start pcscd``) before using pivy.
 
-1: Generate a key on the Nitrokey
+1. Generate a key on the Nitrokey
 ---------------------------------
 
 The key is generated in slot 9A (authentication).
 
-::
+.. code-block::
 
-      pivy-tool -a rsa2048 generate 9A
+   pivy-tool -a rsa2048 generate 9A
 
 .. note::
+   If the administration key is not the default one, it can be specified with ``-A 3des -K 010203040506070801020304050607080102030405060708`` . The argument to ``-A`` can also be ``aes256``, and the argument to ``-K`` is the key in hexadecimal.
 
-   If the administration key is not the default one, it can be specified with ``-A 3des -K 010203040506070801020304050607080102030405060708`` . The argument to ``-A`` can also be ``aes256``, and the argument to ``-K`` is the key in hexadecimal.
+The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` if it is not the default. If ``-P`` is not provided, it will be asked for after key generation.
 
-The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` if it is not the default. If ``-P`` is not provided, it will be asked for after key generation.
+This applies to all ``pivy-tool`` commands.
 
-This applies to all ``pivy-tool`` commands.
-
-This step can take a couple of minutes for RSA keys, as the pure software implementation is slow.
+This step can take a couple of minutes for RSA keys, as the pure software implementation is slow.
 
 **Expected output**:
 
-::
+.. code-block::
 
    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKO5ENwrK3qKBAgDkyq1tfiw5JxnoCEIiM3Vc+8Eylux04r1sgjHEyqbOvpScObZuchxFZZ5LdeHynvFn3c07K4HpoZ/7NjLzUYOmlVAy4wpEwRs9psbrT6wbvHVLyffZiiSPW15HHQKcUZZ30WDunh5m7xzvY9ej810QIW/P724MFWTbRdpqmG8m1qWCUM5dqkmpiprI/WeD+VmTcQWbJJ+oyoPyxmwzGyAotl7mVC6EYdcfvyBSNQdVdGfYGxjNEec4aWxoFRg4ADfpPnYD+gLxHcj/9s7o/wdMhXRiSio1tjsEjaeuOICGLaiiLGMfLxpfEApb8qJgsEFgYl6kn PIV_slot_9A@9E424375A38449E59B3DF89D9B90E601
 
-2: Generate a Certificate Signing Request (CSR)
+2. Generate a Certificate Signing Request (CSR)
 -----------------------------------------------
 
 This step generates a certificate for the key in the authentication slot. ``pivy-tool -n 'Nitro Test' -u "nitro@test.nitrokey.com" -T user-auth req-cert 9A``
@@ -60,8 +59,7 @@ The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email address mu
 
 Expected output:
 
-::
-
+.. code-block::
    -----BEGIN CERTIFICATE REQUEST-----
    MIIC4DCCAcgCAQEwFTETMBEGA1UEAwwKTml0cm8gVGVzdDCCASIwDQYJKoZIhvcN
    AQEBBQADggEPADCCAQoCggEBAMo7kQ3CsreooECAOTKrW1+LDknGegIQiIzdVz7w
@@ -83,7 +81,7 @@ Expected output:
 
 Copy the certificate signing request to a file ``request.csr``
 
-3: Sign the CSR
+3. Sign the CSR
 ---------------
 
 Move the request.csr file from the previous step to the server that hosts the certificate authority. Verify in the certificate template console (``certtmpl.msc`` ) that the template for the users can accept subject names from the request:
@@ -95,12 +93,12 @@ Open PowerShell and sign the certificate signing request with ``certreq.exe -att
 
 This will open a GUI where you can select the correct Certificate Authority if there are multiple on this server. Save the certificate as ``certificate.crt``
 
-4: Store the certificate on the Nitrokey
+4. Store the certificate on the Nitrokey
 ----------------------------------------
 
 ``cat certificate.der | pivy-tool write-cert 9A``
 
-5: Import the certificate to the user account
+5. Import the certificate to the user account
 ---------------------------------------------
 
 Move ``certificate.der`` to the user Windows device, and open the certificate manager (**For the user, not the machine**):
