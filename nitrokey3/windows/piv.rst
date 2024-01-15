@@ -53,13 +53,22 @@ This step can take a couple of minutes for RSA keys, as the pure software implem
 2. Generate a Certificate Signing Request (CSR)
 -----------------------------------------------
 
-This step generates a certificate for the key in the authentication slot. ``pivy-tool -n 'Nitro Test' -u "nitro@test.nitrokey.com" -T user-auth req-cert 9A``
-
-The ``Nitro Test`` username and the ``nitro@test.nitrokey.com`` email address must be changed to own values.
-
-Expected output:
+The following command generates a certificate signing request (CSR) for the key in the authentication slot.
 
 .. code-block::
+
+   pivy-tool -n <cn-or-dn> -u <upn> -T user-auth req-cert 9A
+
+In the above command replace ``<cn-or-dn>`` and ``<upn>`` with their respective values.
+The values are based on the Active Directory user account, for which the CSR is generated.
+The value for ``<cn-or-dn>`` is the value of the ``commonName`` attribute.
+Depending on the *Workstation Authentication Template* configuration this field might needs to contain the value from the ``distinguishedName`` attribute.
+The value for ``<upn>`` is the value of the ``userPrincipal`` attribute.
+
+A successful generation of the CSR returns the certificate request in PEM format.
+
+.. code-block::
+
    -----BEGIN CERTIFICATE REQUEST-----
    MIIC4DCCAcgCAQEwFTETMBEGA1UEAwwKTml0cm8gVGVzdDCCASIwDQYJKoZIhvcN
    AQEBBQADggEPADCCAQoCggEBAMo7kQ3CsreooECAOTKrW1+LDknGegIQiIzdVz7w
@@ -79,7 +88,7 @@ Expected output:
    eGQvuPRBmR71GRkGmqu+e1oyze8=
    -----END CERTIFICATE REQUEST-----
 
-Copy the certificate signing request to a file ``request.csr``
+Save the certificate signing request to a file ``request.csr``
 
 3. Sign the CSR
 ---------------
