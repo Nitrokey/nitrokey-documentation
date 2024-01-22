@@ -12,7 +12,7 @@ Operating System Reinstallation
    to format the USB drive after the intended use.
 
 1. Download one of the operating system images: `Ubuntu
-   Linux <https://www.nitrokey.com/files/ci/nitropc/ubuntu-oem/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/nitropc/qubes-oem/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropc/debian-oem/>`__,
+   Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/qubes/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropc/debian-oem/>`__,
    `Linux Mint <https://linuxmint.com/download.php>`__
 
 2. Optional: Download hash sum and

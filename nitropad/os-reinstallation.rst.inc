@@ -17,8 +17,9 @@ Operating System Reinstallation
    Due to a bug Linux Mint 21 is currently not supported. The latest supported version is Linux Mint 20.1
 
 1. Download one of the operating system images: `Ubuntu
-   Linux <https://www.nitrokey.com/files/ci/nitropad/ubuntu-oem/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/nitropad/qubes-oem/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropad/debian-oem/>`__,
+   Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/qubes/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropad/debian-oem/>`__,
    `Linux Mint <https://linuxmint.com/download.php>`__
+
 
 2. Optional: Download hash sum and
    `verify <https://proprivacy.com/guides/how-why-and-when-you-should-hash-check#how-to-hash-check>`__
