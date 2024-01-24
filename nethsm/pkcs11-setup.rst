@@ -48,19 +48,36 @@ The configuration is yaml-formatted:
       # When using this, the names given to the keys will be ignored and the keys will have random names.
       # Under the hood it will store in memory the name given to the key when calling C_SetAttributeValue(). When a certificate is uploaded it will check if the name was previously passed to C_SetAttributeValue() and translate it to the real name on the NetHSM.
       enable_set_attribute_value: false
-      
-      # You can set the log file location here.
-      # If no value is set the module will output to stderr.
-      # If a value is set it will output to the file.
-      log_file: /tmp/p11nethsm.log
+
       # Optional log level, acceptable  values are Trace, Debug, Info, Warn and Error
       log_level: Debug
-      
+
+      # By default, the module logs to both syslog and stderr, trying the sockets /dev/log, /var/run/syslog and finally /var/run/log
+      # A custom socket can be configured:
+      syslog_socket: /var/nethsm/log
+      # Instead of a socket, a custom UDP or TCP syslog can be configured:
+      # syslog_udp: 
+      #    to_addr: 127.0.0:1:514
+      #    from_addr: 127.0.0:1:4789
+      # syslog_tcp: 127.0.0.1:601
+      # Only one option among "syslog_socket", "syslog_udp", "syslog_tcp" can be configured at the same time
+
+      # You can configure the syslog facility ( "kern", "user", "mail", "daemon", "auth", "syslog", "lpr", "news", "uucp", "cron", "authpriv", "ftp", "local0", "local1", "local2", "local3", "local4", "local5", "local6" or "local7"):
+      syslog_facility: "user"
+      # You can set the hostname (for use only with syslog_udp or syslog_tcp)
+      # syslog_hostname: "localhsm-pkcs11"
+      # You can set the process name (defaults to the process name obtained from the OS)
+      # syslog_process: "NetHSM Pkcs11"
+      # You can set the pid used in logs (defaults to the process id obtained from the OS)
+      # syslog_pid: 0
+      # You can also configure a custom file, or "-" for stderr.
+      # log_file: /tmp/p11nethsm.log
+
       # Each "slot" represents a HSM cluster of server that share the same user and keys.
       slots:
         - label: LocalHSM                        # Name your NetHSM however you want
           description: Local HSM (docker)        # Optional description
-      
+
           # Users connecting to the NetHSM server
           operator:
             username: "operator"
@@ -69,7 +86,7 @@ The configuration is yaml-formatted:
             password: "localpass"
           administrator:
             username: "admin"
-      
+
           # List the NetHSM instances
           instances:
             - url: "https://keyfender:8443/api/v1"   # URL to reach the server
