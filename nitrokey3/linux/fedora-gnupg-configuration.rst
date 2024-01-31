@@ -50,5 +50,9 @@ Check system configuration
 
 2. The *scdaemon* requires the *libpcsclite* library to connect to *pcscd*.
    The path to the pcsc library can be set explicitly with ``echo "pcsc-driver /usr/lib64/libpcsclite.so.1" >> ~/.gnupg/scdaemon.conf``.
-   Alternatively, the library can also be made available with a symlink as follows ``ln -s /usr/lib64/libpcsclite.so.1``.
+   Alternatively, the library can also be made available with a symlink as follows ``ln -s /usr/lib64/libpcsclite.so.1 /usr/lib64/libpcsclite.so``.
    Make sure the ``~/.gnupg/scdaemon.conf`` file has no conflicting settings applied.
+
+3. The *scdaemon* by default expects exclusive access to *pcscd*, to avoid potential issues with concurrent modifications of information on the card.
+   This causes access to fail if other clients, usually web browsers, accessed the card, even if only for reading.
+   Shared access can be enabled with ``echo "pcsc-shared" >> ~/.gnupg/scdaemon.conf`` (in GnuPG version 2.2.28 or higher).
