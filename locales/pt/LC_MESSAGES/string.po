@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-22 15:12+0100\n"
+"POT-Creation-Date: 2024-02-01 01:03+0100\n"
 "PO-Revision-Date: 2023-10-31 15:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: pt\n"
@@ -8303,29 +8303,29 @@ msgstr ""
 msgid "All platforms"
 msgstr "Todas as Plataformas"
 
-#: ../nethsm/pkcs11-setup.rst:83
+#: ../nethsm/pkcs11-setup.rst:117
 msgid "Instances"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:85
+#: ../nethsm/pkcs11-setup.rst:119
 msgid ""
 "If multiple NetHSM instances are listed in the same slot, these instances"
 " must be configured in a cluster. The credentials of the users and the "
 "keys must be the same on all instances."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:87
+#: ../nethsm/pkcs11-setup.rst:121
 msgid ""
 "The module will use the instances in a round-robin fashion, trying "
 "another instance if one fails."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:91
+#: ../nethsm/pkcs11-setup.rst:125
 #, fuzzy
 msgid "Users"
 msgstr "Qubes"
 
-#: ../nethsm/pkcs11-setup.rst:93
+#: ../nethsm/pkcs11-setup.rst:127
 msgid ""
 "The operator and administrator users are both optional but the module "
 "won't start if no user is configured. This is so you can configure the "
@@ -8333,39 +8333,39 @@ msgid ""
 "the same time."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:95
+#: ../nethsm/pkcs11-setup.rst:129
 msgid ""
 "When the two users are set the module will use the operator by default "
 "and only use the administrator user when the action needs it."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:97
+#: ../nethsm/pkcs11-setup.rst:131
 msgid ""
 "The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 "
 "SO is mapped to the NetHSM administrator."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:100 ../nitrokey3/shared/reset.rst.inc:19
+#: ../nethsm/pkcs11-setup.rst:134 ../nitrokey3/shared/reset.rst.inc:19
 #: ../software/nk-app2/passwords.rst:2
 #, fuzzy
 msgid "Passwords"
 msgstr "Palavra-passe para a acção DKEK"
 
-#: ../nethsm/pkcs11-setup.rst:102
+#: ../nethsm/pkcs11-setup.rst:136
 msgid "The password can be provided by multiple means:"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:104
+#: ../nethsm/pkcs11-setup.rst:138
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:105
+#: ../nethsm/pkcs11-setup.rst:139
 msgid ""
 "In an environment variable read by the module with the ``env:`` prefix: "
 "``env:ENV_STORING_THE_PASSWORD``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:106
+#: ../nethsm/pkcs11-setup.rst:140
 msgid ""
 "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
 "--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
@@ -8373,13 +8373,13 @@ msgid ""
 "libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``"
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:109
+#: ../nethsm/pkcs11-setup.rst:143
 msgid ""
 "If the password of an user is not set in the configuration file a login "
 "will be required to provide the password (3rd method)."
 msgstr ""
 
-#: ../nethsm/pkcs11-setup.rst:111
+#: ../nethsm/pkcs11-setup.rst:145
 msgid ""
 "A NetHSM that is not operational is considered as a slot with the token "
 "not present."
@@ -12527,8 +12527,19 @@ msgid ""
 "The path to the pcsc library can be set explicitly with ``echo \"pcsc-"
 "driver /usr/lib64/libpcsclite.so.1\" >> ~/.gnupg/scdaemon.conf``. "
 "Alternatively, the library can also be made available with a symlink as "
-"follows ``ln -s /usr/lib64/libpcsclite.so.1``. Make sure the "
-"``~/.gnupg/scdaemon.conf`` file has no conflicting settings applied."
+"follows ``ln -s /usr/lib64/libpcsclite.so.1 /usr/lib64/libpcsclite.so``. "
+"Make sure the ``~/.gnupg/scdaemon.conf`` file has no conflicting settings"
+" applied."
+msgstr ""
+
+#: ../nitrokey3/linux/fedora-gnupg-configuration.rst:56
+msgid ""
+"The *scdaemon* by default expects exclusive access to *pcscd*, to avoid "
+"potential issues with concurrent modifications of information on the "
+"card. This causes access to fail if other clients, usually web browsers, "
+"accessed the card, even if only for reading. Shared access can be enabled"
+" with ``echo \"pcsc-shared\" >> ~/.gnupg/scdaemon.conf`` (in GnuPG "
+"version 2.2.28 or higher)."
 msgstr ""
 
 #: ../nitrokey3/firmware-update.rst.inc:10
@@ -31488,4 +31499,18 @@ msgstr ""
 #~ "/qubes-oem/>`__, `Debian "
 #~ "<https://www.nitrokey.com/files/ci/nitropc/debian-oem/>`__, "
 #~ "`Linux Mint <https://linuxmint.com/download.php>`__"
+
+#~ msgid ""
+#~ "The *scdaemon* requires the *libpcsclite* "
+#~ "library to connect to *pcscd*. The "
+#~ "path to the pcsc library can be"
+#~ " set explicitly with ``echo \"pcsc-"
+#~ "driver /usr/lib64/libpcsclite.so.1\" >> "
+#~ "~/.gnupg/scdaemon.conf``. Alternatively, the library"
+#~ " can also be made available with "
+#~ "a symlink as follows ``ln -s "
+#~ "/usr/lib64/libpcsclite.so.1``. Make sure the "
+#~ "``~/.gnupg/scdaemon.conf`` file has no "
+#~ "conflicting settings applied."
+#~ msgstr ""
 
