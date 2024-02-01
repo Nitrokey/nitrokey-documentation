@@ -293,7 +293,7 @@ The detailed information can be retrieved as follows.
    .. tab:: REST API
       Information about the `/keys/{KeyID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys__KeyID_>`__.
 
-The public key of a key can be retrieved as follows.
+The public key of a key can be retrieved as follows. It's in PKCS#8 format.
 
 .. tabs::
    .. tab:: nitropy
