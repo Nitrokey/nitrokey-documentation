@@ -154,4 +154,4 @@ The initial provisioning is executed as follows.
         Information about the `/provision` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_provision>`__.
 
 .. warning::
-   The default boot mode is *Unattended Boot*. Please refer to chapter `Boot Mode <administration.html#boot-mode>`__ to learn more.
+   The default boot mode is *Attended Boot*. Please refer to chapter `Boot Mode <administration.html#boot-mode>`__ to learn more.
