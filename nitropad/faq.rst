@@ -12,7 +12,10 @@ NitroPad FAQ
 **Q:** How to change the hard-disk encryption password from within the OS?
    Using default ``cryptsetup`` tools it is important to note that the right
    key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/nvme0n1p3`` or
-   ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that under System Settings
+   ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that:
+
+      .. figure:: ../images/qubes/ChangeDiskPasswordQubes.png
+        :alt: Change Password Qubes Image
 
 **Q:** What is re-ownership / re-encryption and why is it important?
    Changing your hard-disk encryption password does not change the encryption

@@ -14,16 +14,16 @@ Getting Started
 ---------------
 
 1. During boot, the system will prompt you to enter the passphrase to decrypt
-   the hard disk. Enter the default passphrase “PleaseChangeMe”.
+   the hard disk. Enter the default passphrase "12345678". This was change on the 15.01.2024 so if "12345678" is not working try the old default: "PleaseChangeMe"
    The system will then guide you through the process of creating a user
    account. After that you should have successfully booted the system
    and could already use it normally.
 
-2. Change the passphrase for disk encryption by opening a terminal and execute:
+2. Change the passphrase for disk encryption by searching in the Qubes Menu for "Change Disk Password"
 
-.. code-block:: bash
+   .. figure:: ../../images/qubes/ChangeDiskPasswordQubes.png
+        :alt: Change Password Qubes Image
 
-   sudo cryptsetup luksChangeKey /dev/nvme0n1p3
 
 
 Failed to start Load Kernel Modules
