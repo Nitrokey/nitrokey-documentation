@@ -2,7 +2,14 @@ Passwords
 =========
 .. _passwords:
 
-For now only One-Time Passwords (TOTP and HOTP) are supported.
+Password entries may consist of:
+
+* Login
+* Password
+* Comment (for e.g. a website reference)
+* OTP (HOTP or TOTP)
+
+All fields are optional and can be edited and added at any time using the "Edit" button.
 
 For a list of websites supporting OTP have a look at `dongleauth.com <https://www.dongleauth.com/>`__.
 

@@ -11,11 +11,11 @@ Supported Features
 
 - Updating the firmware
 - :ref:`One-Time Passwords (OTP)<passwords>`
+- :ref:`Password Storage <passwords>`
 
 Planned Features
 ----------------
 
-- Password storage
 - PIN management
 - macOS support
 
