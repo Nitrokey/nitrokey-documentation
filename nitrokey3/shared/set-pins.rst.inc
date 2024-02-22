@@ -138,7 +138,7 @@ It is useful in situations when the user of the Nitrokey should be able to unblo
     The Reset Code has no factory default. It must be explicitly set using the Admin PIN.
 
 .. note::
-    The *Reset Code* must have a minimal length of 6 characters and maximal length of 127 characters.
+    The *Reset Code* must have a minimal length of 8 characters and maximal length of 127 characters.
     It can contain alphanumeric characters, including special characters such as punctations.
 
 .. note::
