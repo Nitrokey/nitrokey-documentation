@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-26 13:41+0100\n"
+"POT-Creation-Date: 2024-02-27 15:19+0100\n"
 "PO-Revision-Date: 2024-02-26 13:49+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Japanese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ja/>\n"
 "Language: ja\n"
+"Language-Team: Japanese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ja/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -5611,8 +5610,7 @@ msgstr "よくある質問（FAQ）"
 msgid ""
 "**Q:** Scalability, High Availability: How to synchronize a cluster of "
 "multiple instances?"
-msgstr "**Q:** スケーラビリティ、高可用性：複数のインスタンスからなるクラスタを同期さ"
-"せる方法は？"
+msgstr "**Q:** スケーラビリティ、高可用性：複数のインスタンスからなるクラスタを同期させる方法は？"
 
 #: ../nethsm/faq.rst:5
 msgid ""
@@ -5656,8 +5654,7 @@ msgstr ""
 msgid ""
 "**Q:** Where can I learn more about NetHMS's security architecture and "
 "implementation?"
-msgstr "**Q:** NetHMSのセキュリティ・アーキテクチャと実装についてもっと詳しく知りたい"
-"のですが？"
+msgstr "**Q:** NetHMSのセキュリティ・アーキテクチャと実装についてもっと詳しく知りたいのですが？"
 
 #: ../nethsm/faq.rst:14
 msgid ""
@@ -13944,27 +13941,31 @@ msgstr ""
 "ハードディスク暗号化パスワードを変更するには、この方法をお勧めします。HEADS 内で``Options -> Change LUKS Disk "
 "Recovery Key passphrase`` を選択し、指示に従ってください。"
 
-#: ../nitropad/faq.rst:15
+#: ../nitropad/faq.rst:18
 msgid "**Q:** How to change the hard-disk encryption password from within the OS?"
 msgstr "**Q:** OS内部からハードディスク暗号化パスワードを変更する方法は？"
 
 #: ../nitropad/faq.rst:13
+#, fuzzy
 msgid ""
 "Using default ``cryptsetup`` tools it is important to note that the right"
 " key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 "
 "/dev/nvme0n1p3`` or ``sudo cryptsetup luksChangeKey --key-slot=0 "
-"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that under System"
-" Settings"
+"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that:"
 msgstr ""
 "デフォルトの``cryptsetup`` ツールを使用する場合、正しいキースロットを使用することが重要です：`sudo cryptsetup "
 "luksChangeKey --key-slot=0 /dev/nvme0n1p3`` または``sudo cryptsetup "
 "luksChangeKey --key-slot=0 /dev/sda3``.Qubes 4.2では、システム設定の下にGUIツールもあります。"
 
-#: ../nitropad/faq.rst:27
+#: ../nitropad/faq.rst ../nitropad/qubes/index.rst ../nitropc/qubes/index.rst
+msgid "Change Password Qubes Image"
+msgstr ""
+
+#: ../nitropad/faq.rst:30
 msgid "**Q:** What is re-ownership / re-encryption and why is it important?"
 msgstr "**Q:** 再所有権／再暗号化とは何ですか？"
 
-#: ../nitropad/faq.rst:18
+#: ../nitropad/faq.rst:21
 msgid ""
 "Changing your hard-disk encryption password does not change the "
 "encryption itself, just the access to the encryption key. This means that"
@@ -14785,11 +14786,13 @@ msgid ""
 "above)."
 msgstr "システムを起動した後、NitroPadにエラーが表示されず、Nitrokeyが緑色に点灯していれば、Enterキー（「デフォルトブート」）を押してください（上記参照）。"
 
-#: ../nitropad/qubes/index.rst:16 ../nitropad/ubuntu/index.rst:16
+#: ../nitropad/qubes/index.rst:16
 msgid ""
 "Next, the system will prompt you to enter the passphrase to decrypt the "
-"hard disk. The passphrase is initially “PleaseChangeMe”."
-msgstr "次に、ハードディスクを復号化するためのパスフレーズを入力する画面が表示されます。パスフレーズは、初期状態では「PleaseChangeMe」となっています。"
+"hard disk. The passphrase is initially \"12345678\". This was change on "
+"the 15.01.2024 so if \"12345678\" is not working try the old default: "
+"\"PleaseChangeMe\""
+msgstr ""
 
 #: ../nitropad/qubes/index.rst:22 ../nitropad/ubuntu/index.rst:22
 msgid ""
@@ -14807,42 +14810,14 @@ msgstr ""
 "に記載されているようにNitrokeyのPINを変更します。"
 
 #: ../nitropad/qubes/index.rst:29
+#, fuzzy
 msgid ""
-"Change the passphrase for the hard disk encryption by running “sudo "
-"cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is "
-"different from your user acount's passphrase."
+"Change the passphrase for the hard disk encryption by searching in the "
+"Qubes Menu for \"Change Disk Passwort\". This passphrase is different "
+"from your user acount's passphrase."
 msgstr ""
 "ターミナルで「sudo cryptsetup luksChangeKey "
 "/dev/sda2」を実行して、ハードディスクの暗号化のためのパスフレーズを変更します。このパスフレーズは、ユーザーアカウント'のパスフレーズとは異なります。"
-
-#: ../nitropad/qubes/index.rst:31
-msgid ""
-"In case the Network Manager icon is not shown and when starting a VM an "
-"error like “Domain sys-net has failed to start: PCI device dom0:03_00.0 "
-"does not exist” is shown, proceed as follows:"
-msgstr ""
-"ネットワークマネージャーのアイコンが表示されず、VMの起動時に「Domain sys-net has failed to start:PCI "
-"device dom0:03_00.0 does not exist \"などのエラーが表示される場合は、以下の手順で対処してください。"
-
-#: ../nitropad/qubes/index.rst:35
-msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
-msgstr "メニューを開く -> Service: sys-net -> sys-net:Qubeの設定"
-
-#: ../nitropad/qubes/index.rst:36
-msgid "Go to Devices tab"
-msgstr "デバイス」タブに移動"
-
-#: ../nitropad/qubes/index.rst:37
-msgid "Remove “Unknown device” from the right side"
-msgstr "右側の「不明なデバイス」を削除"
-
-#: ../nitropad/qubes/index.rst:38
-msgid "Add “Network controler” device"
-msgstr "ネットワークコントローラー」デバイスの追加"
-
-#: ../nitropad/qubes/index.rst:39
-msgid "Click “OK” and restart the system."
-msgstr "OK \"をクリックし、システムを再起動します。"
 
 #: ../nitropad/qubes/network-settings.rst:2
 msgid "Enable Network Settings, e.g. Wifi"
@@ -15427,6 +15402,12 @@ msgstr "お客様のアカウントのパスワードを入力してください
 msgid "NitroPad with Ubuntu Linux"
 msgstr "Ubuntu Linuxを搭載したNitroPad"
 
+#: ../nitropad/ubuntu/index.rst:16
+msgid ""
+"Next, the system will prompt you to enter the passphrase to decrypt the "
+"hard disk. The passphrase is initially “PleaseChangeMe”."
+msgstr "次に、ハードディスクを復号化するためのパスフレーズを入力する画面が表示されます。パスフレーズは、初期状態では「PleaseChangeMe」となっています。"
+
 #: ../nitropad/ubuntu/index.rst:26
 msgid ""
 "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey."
@@ -15514,8 +15495,7 @@ msgstr ""
 "システムにはすでにユーザーアカウントが設定されています。それを選択して、デフォルトのパスフレーズ \"PleaseChangeMe\" "
 "でログインしてください。既存のユーザーアカウントを使い続けることも、新しいユーザーアカウントを作成することもできますが、お好みでどうぞ。"
 
-#: ../nitropc/debian/index.rst:22 ../nitropc/qubes/index.rst:22
-#: ../nitropc/ubuntu/index.rst:22
+#: ../nitropc/debian/index.rst:22 ../nitropc/ubuntu/index.rst:22
 msgid ""
 "Change the passphrase for disk encryption by opening a terminal and "
 "execute:"
@@ -15620,16 +15600,22 @@ msgstr ""
 msgid "NitroPC with Qubes OS"
 msgstr "Qubes OSを搭載したNitroPC"
 
-#: ../nitropc/qubes/index.rst:16 ../nitropc/ubuntu/index.rst:16
+#: ../nitropc/qubes/index.rst:16
 msgid ""
 "During boot, the system will prompt you to enter the passphrase to "
-"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
-" system will then guide you through the process of creating a user "
-"account. After that you should have successfully booted the system and "
-"could already use it normally."
+"decrypt the hard disk. Enter the default passphrase \"12345678\". This "
+"was change on the 15.01.2024 so if \"12345678\" is not working try the "
+"old default: \"PleaseChangeMe\" The system will then guide you through "
+"the process of creating a user account. After that you should have "
+"successfully booted the system and could already use it normally."
 msgstr ""
-"起動時に、ハードディスクを復号化するためのパスフレーズの入力を求められます。デフォルトのパスフレーズである \"PleaseChangeMe "
-"\"を入力してください。その後、ユーザーアカウントの作成プロセスが表示されます。その後、システムの起動に成功し、通常通り使用できるようになります。"
+
+#: ../nitropc/qubes/index.rst:22
+#, fuzzy
+msgid ""
+"Change the passphrase for disk encryption by searching in the Qubes Menu "
+"for \"Change Disk Password\""
+msgstr "ディスク暗号化用のパスフレーズを変更するには、ターミナルを開いて実行します。"
 
 #: ../nitropc/qubes/index.rst:30
 msgid "Failed to start Load Kernel Modules"
@@ -15649,6 +15635,17 @@ msgstr ""
 #: ../nitropc/ubuntu/index.rst:2
 msgid "NitroPC with Ubuntu"
 msgstr "Ubuntuを搭載したNitroPC"
+
+#: ../nitropc/ubuntu/index.rst:16
+msgid ""
+"During boot, the system will prompt you to enter the passphrase to "
+"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
+" system will then guide you through the process of creating a user "
+"account. After that you should have successfully booted the system and "
+"could already use it normally."
+msgstr ""
+"起動時に、ハードディスクを復号化するためのパスフレーズの入力を求められます。デフォルトのパスフレーズである \"PleaseChangeMe "
+"\"を入力してください。その後、ユーザーアカウントの作成プロセスが表示されます。その後、システムの起動に成功し、通常通り使用できるようになります。"
 
 #: ../nitrophone/apps.rst:2 ../nitrophone/index.rst:19
 msgid "Apps"
@@ -27238,3 +27235,31 @@ msgstr "Nitrokey FIDO U2Fを初めて接続したとき、Windowsがデバイス
 
 #~ msgid "For now only One-Time Passwords (TOTP and HOTP) are supported."
 #~ msgstr "現在のところ、ワンタイムパスワード（TOTPおよびHOTP）のみがサポートされています。"
+
+#~ msgid ""
+#~ "In case the Network Manager icon "
+#~ "is not shown and when starting a"
+#~ " VM an error like “Domain sys-"
+#~ "net has failed to start: PCI "
+#~ "device dom0:03_00.0 does not exist” is"
+#~ " shown, proceed as follows:"
+#~ msgstr ""
+#~ "ネットワークマネージャーのアイコンが表示されず、VMの起動時に「Domain sys-net has"
+#~ " failed to start:PCI device dom0:03_00.0"
+#~ " does not exist \"などのエラーが表示される場合は、以下の手順で対処してください。"
+
+#~ msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
+#~ msgstr "メニューを開く -> Service: sys-net -> sys-net:Qubeの設定"
+
+#~ msgid "Go to Devices tab"
+#~ msgstr "デバイス」タブに移動"
+
+#~ msgid "Remove “Unknown device” from the right side"
+#~ msgstr "右側の「不明なデバイス」を削除"
+
+#~ msgid "Add “Network controler” device"
+#~ msgstr "ネットワークコントローラー」デバイスの追加"
+
+#~ msgid "Click “OK” and restart the system."
+#~ msgstr "OK \"をクリックし、システムを再起動します。"
+

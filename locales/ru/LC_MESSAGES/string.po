@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-26 13:41+0100\n"
+"POT-Creation-Date: 2024-02-27 15:19+0100\n"
 "PO-Revision-Date: 2024-02-26 13:49+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Russian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ru/>\n"
 "Language: ru\n"
+"Language-Team: Russian <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/ru/>\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -16073,17 +16072,17 @@ msgstr ""
 " диска. Внутри HEADS выберите ``Options -> Change LUKS Disk Recovery Key "
 "passphrase`` и следуйте инструкциям."
 
-#: ../nitropad/faq.rst:15
+#: ../nitropad/faq.rst:18
 msgid "**Q:** How to change the hard-disk encryption password from within the OS?"
 msgstr "**Q:** Как изменить пароль шифрования жесткого диска изнутри ОС?"
 
 #: ../nitropad/faq.rst:13
+#, fuzzy
 msgid ""
 "Using default ``cryptsetup`` tools it is important to note that the right"
 " key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 "
 "/dev/nvme0n1p3`` or ``sudo cryptsetup luksChangeKey --key-slot=0 "
-"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that under System"
-" Settings"
+"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that:"
 msgstr ""
 "Используя стандартные инструменты ``cryptsetup``, важно обратить внимание"
 " на то, чтобы был использован правильный ключевой слот: ``sudo cryptsetup"
@@ -16091,13 +16090,17 @@ msgstr ""
 "luksChangeKey --key-slot=0 /dev/sda3``. В Qubes 4.2 также появился "
 "GUI-инструмент для этого в разделе Системные настройки"
 
-#: ../nitropad/faq.rst:27
+#: ../nitropad/faq.rst ../nitropad/qubes/index.rst ../nitropc/qubes/index.rst
+msgid "Change Password Qubes Image"
+msgstr ""
+
+#: ../nitropad/faq.rst:30
 msgid "**Q:** What is re-ownership / re-encryption and why is it important?"
 msgstr ""
 "**Q:** Что такое повторное владение / повторное шифрование и почему это "
 "важно?"
 
-#: ../nitropad/faq.rst:18
+#: ../nitropad/faq.rst:21
 msgid ""
 "Changing your hard-disk encryption password does not change the "
 "encryption itself, just the access to the encryption key. This means that"
@@ -17063,13 +17066,13 @@ msgstr ""
 "Нажмите Enter (\"Загрузка по умолчанию\") после загрузки системы, если "
 "NitroPad не показал никаких ошибок и Nitrokey горит зеленым (см. выше)."
 
-#: ../nitropad/qubes/index.rst:16 ../nitropad/ubuntu/index.rst:16
+#: ../nitropad/qubes/index.rst:16
 msgid ""
 "Next, the system will prompt you to enter the passphrase to decrypt the "
-"hard disk. The passphrase is initially “PleaseChangeMe”."
+"hard disk. The passphrase is initially \"12345678\". This was change on "
+"the 15.01.2024 so if \"12345678\" is not working try the old default: "
+"\"PleaseChangeMe\""
 msgstr ""
-"Далее система предложит вам ввести кодовую фразу для расшифровки жесткого"
-" диска. Изначально парольная фраза звучит как \"PleaseChangeMe\"."
 
 #: ../nitropad/qubes/index.rst:22 ../nitropad/ubuntu/index.rst:22
 msgid ""
@@ -17090,46 +17093,16 @@ msgstr ""
 "вашего Nitrokey, как `описано здесь <change-pins.html>`_."
 
 #: ../nitropad/qubes/index.rst:29
+#, fuzzy
 msgid ""
-"Change the passphrase for the hard disk encryption by running “sudo "
-"cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is "
-"different from your user acount's passphrase."
+"Change the passphrase for the hard disk encryption by searching in the "
+"Qubes Menu for \"Change Disk Passwort\". This passphrase is different "
+"from your user acount's passphrase."
 msgstr ""
 "Измените парольную фразу для шифрования жесткого диска, выполнив в "
 "терминале команду \"sudo cryptsetup luksChangeKey /dev/sda2\". Эта "
 "парольная фраза отличается от парольной фразы вашей учетной записи "
 "пользователя."
-
-#: ../nitropad/qubes/index.rst:31
-msgid ""
-"In case the Network Manager icon is not shown and when starting a VM an "
-"error like “Domain sys-net has failed to start: PCI device dom0:03_00.0 "
-"does not exist” is shown, proceed as follows:"
-msgstr ""
-"Если значок Network Manager не отображается и при запуске виртуальной "
-"машины возникает ошибка типа \"Domain sys-net has failed to start: "
-"PCI-устройство dom0:03_00.0 не существует\", выполните следующие "
-"действия:"
-
-#: ../nitropad/qubes/index.rst:35
-msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
-msgstr "Открыть меню -> Сервис: sys-net -> sys-net: Настройки Qube"
-
-#: ../nitropad/qubes/index.rst:36
-msgid "Go to Devices tab"
-msgstr "Перейдите на вкладку Устройства"
-
-#: ../nitropad/qubes/index.rst:37
-msgid "Remove “Unknown device” from the right side"
-msgstr "Удалите \"Неизвестное устройство\" с правой стороны"
-
-#: ../nitropad/qubes/index.rst:38
-msgid "Add “Network controler” device"
-msgstr "Добавить устройство \"Контроллер сети\""
-
-#: ../nitropad/qubes/index.rst:39
-msgid "Click “OK” and restart the system."
-msgstr "Нажмите \"OK\" и перезагрузите систему."
 
 #: ../nitropad/qubes/network-settings.rst:2
 msgid "Enable Network Settings, e.g. Wifi"
@@ -17834,6 +17807,14 @@ msgstr "Введите пароль вашей учетной записи."
 msgid "NitroPad with Ubuntu Linux"
 msgstr "NitroPad с Ubuntu Linux"
 
+#: ../nitropad/ubuntu/index.rst:16
+msgid ""
+"Next, the system will prompt you to enter the passphrase to decrypt the "
+"hard disk. The passphrase is initially “PleaseChangeMe”."
+msgstr ""
+"Далее система предложит вам ввести кодовую фразу для расшифровки жесткого"
+" диска. Изначально парольная фраза звучит как \"PleaseChangeMe\"."
+
 #: ../nitropad/ubuntu/index.rst:26
 msgid ""
 "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey."
@@ -17936,8 +17917,7 @@ msgstr ""
 "можете продолжать использовать существующую учетную запись или создать "
 "новую, как вам удобно."
 
-#: ../nitropc/debian/index.rst:22 ../nitropc/qubes/index.rst:22
-#: ../nitropc/ubuntu/index.rst:22
+#: ../nitropc/debian/index.rst:22 ../nitropc/ubuntu/index.rst:22
 msgid ""
 "Change the passphrase for disk encryption by opening a terminal and "
 "execute:"
@@ -18062,19 +18042,24 @@ msgstr ""
 msgid "NitroPC with Qubes OS"
 msgstr "NitroPC с Qubes OS"
 
-#: ../nitropc/qubes/index.rst:16 ../nitropc/ubuntu/index.rst:16
+#: ../nitropc/qubes/index.rst:16
 msgid ""
 "During boot, the system will prompt you to enter the passphrase to "
-"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
-" system will then guide you through the process of creating a user "
-"account. After that you should have successfully booted the system and "
-"could already use it normally."
+"decrypt the hard disk. Enter the default passphrase \"12345678\". This "
+"was change on the 15.01.2024 so if \"12345678\" is not working try the "
+"old default: \"PleaseChangeMe\" The system will then guide you through "
+"the process of creating a user account. After that you should have "
+"successfully booted the system and could already use it normally."
 msgstr ""
-"Во время загрузки система предложит ввести кодовую фразу для расшифровки "
-"жесткого диска. Введите ключевую фразу по умолчанию \"PleaseChangeMe\". "
-"Затем система проведет вас через процесс создания учетной записи "
-"пользователя. После этого система должна успешно загрузиться, и вы уже "
-"сможете нормально пользоваться ею."
+
+#: ../nitropc/qubes/index.rst:22
+#, fuzzy
+msgid ""
+"Change the passphrase for disk encryption by searching in the Qubes Menu "
+"for \"Change Disk Password\""
+msgstr ""
+"Измените парольную фразу для шифрования диска, открыв терминал и выполнив"
+" команду :"
 
 #: ../nitropc/qubes/index.rst:30
 msgid "Failed to start Load Kernel Modules"
@@ -18095,6 +18080,20 @@ msgstr ""
 #: ../nitropc/ubuntu/index.rst:2
 msgid "NitroPC with Ubuntu"
 msgstr "NitroPC с Ubuntu"
+
+#: ../nitropc/ubuntu/index.rst:16
+msgid ""
+"During boot, the system will prompt you to enter the passphrase to "
+"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
+" system will then guide you through the process of creating a user "
+"account. After that you should have successfully booted the system and "
+"could already use it normally."
+msgstr ""
+"Во время загрузки система предложит ввести кодовую фразу для расшифровки "
+"жесткого диска. Введите ключевую фразу по умолчанию \"PleaseChangeMe\". "
+"Затем система проведет вас через процесс создания учетной записи "
+"пользователя. После этого система должна успешно загрузиться, и вы уже "
+"сможете нормально пользоваться ею."
 
 #: ../nitrophone/apps.rst:2 ../nitrophone/index.rst:19
 msgid "Apps"
@@ -32156,3 +32155,34 @@ msgstr ""
 #~ msgstr ""
 #~ "В настоящее время поддерживаются только "
 #~ "одноразовые пароли (TOTP и HOTP)."
+
+#~ msgid ""
+#~ "In case the Network Manager icon "
+#~ "is not shown and when starting a"
+#~ " VM an error like “Domain sys-"
+#~ "net has failed to start: PCI "
+#~ "device dom0:03_00.0 does not exist” is"
+#~ " shown, proceed as follows:"
+#~ msgstr ""
+#~ "Если значок Network Manager не "
+#~ "отображается и при запуске виртуальной "
+#~ "машины возникает ошибка типа \"Domain "
+#~ "sys-net has failed to start: "
+#~ "PCI-устройство dom0:03_00.0 не существует\", "
+#~ "выполните следующие действия:"
+
+#~ msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
+#~ msgstr "Открыть меню -> Сервис: sys-net -> sys-net: Настройки Qube"
+
+#~ msgid "Go to Devices tab"
+#~ msgstr "Перейдите на вкладку Устройства"
+
+#~ msgid "Remove “Unknown device” from the right side"
+#~ msgstr "Удалите \"Неизвестное устройство\" с правой стороны"
+
+#~ msgid "Add “Network controler” device"
+#~ msgstr "Добавить устройство \"Контроллер сети\""
+
+#~ msgid "Click “OK” and restart the system."
+#~ msgstr "Нажмите \"OK\" и перезагрузите систему."
+

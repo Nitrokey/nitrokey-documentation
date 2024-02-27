@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-26 13:41+0100\n"
+"POT-Creation-Date: 2024-02-27 15:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10319,19 +10319,25 @@ msgstr ""
 msgid "This is the prefered way to change the hard-disk encryption password. Inside HEADS choose ``Options -> Change LUKS Disk Recovery Key passphrase`` and follow the instructions."
 msgstr ""
 
-#: ../nitropad/faq.rst:15
+#: ../nitropad/faq.rst:18
 msgid "**Q:** How to change the hard-disk encryption password from within the OS?"
 msgstr ""
 
 #: ../nitropad/faq.rst:13
-msgid "Using default ``cryptsetup`` tools it is important to note that the right key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/nvme0n1p3`` or ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that under System Settings"
+msgid "Using default ``cryptsetup`` tools it is important to note that the right key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/nvme0n1p3`` or ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that:"
 msgstr ""
 
-#: ../nitropad/faq.rst:27
+#: ../nitropad/faq.rst:0
+#: ../nitropad/qubes/index.rst:0
+#: ../nitropc/qubes/index.rst:0
+msgid "Change Password Qubes Image"
+msgstr ""
+
+#: ../nitropad/faq.rst:30
 msgid "**Q:** What is re-ownership / re-encryption and why is it important?"
 msgstr ""
 
-#: ../nitropad/faq.rst:18
+#: ../nitropad/faq.rst:21
 msgid "Changing your hard-disk encryption password does not change the encryption itself, just the access to the encryption key. This means that in a situation where somebody had phyisical access to the device (e.g., during shipment) they may have copied the LUKS header, i.e., the encryption key. Using this copy one might decrypt the hard-disk even with a new password being set. This is why the re-ownership wizard proposes to re-encrypt the hard-disk, which reencrypts in place ensuring the previously described scenario cannot be applied."
 msgstr ""
 
@@ -10927,8 +10933,7 @@ msgid "Press Enter (“Default Boot”) after booting the system, provided the N
 msgstr ""
 
 #: ../nitropad/qubes/index.rst:16
-#: ../nitropad/ubuntu/index.rst:16
-msgid "Next, the system will prompt you to enter the passphrase to decrypt the hard disk. The passphrase is initially “PleaseChangeMe”."
+msgid "Next, the system will prompt you to enter the passphrase to decrypt the hard disk. The passphrase is initially \"12345678\". This was change on the 15.01.2024 so if \"12345678\" is not working try the old default: \"PleaseChangeMe\""
 msgstr ""
 
 #: ../nitropad/qubes/index.rst:22
@@ -10941,31 +10946,7 @@ msgid "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey 
 msgstr ""
 
 #: ../nitropad/qubes/index.rst:29
-msgid "Change the passphrase for the hard disk encryption by running “sudo cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is different from your user acount's passphrase."
-msgstr ""
-
-#: ../nitropad/qubes/index.rst:31
-msgid "In case the Network Manager icon is not shown and when starting a VM an error like “Domain sys-net has failed to start: PCI device dom0:03_00.0 does not exist” is shown, proceed as follows:"
-msgstr ""
-
-#: ../nitropad/qubes/index.rst:35
-msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
-msgstr ""
-
-#: ../nitropad/qubes/index.rst:36
-msgid "Go to Devices tab"
-msgstr ""
-
-#: ../nitropad/qubes/index.rst:37
-msgid "Remove “Unknown device” from the right side"
-msgstr ""
-
-#: ../nitropad/qubes/index.rst:38
-msgid "Add “Network controler” device"
-msgstr ""
-
-#: ../nitropad/qubes/index.rst:39
-msgid "Click “OK” and restart the system."
+msgid "Change the passphrase for the hard disk encryption by searching in the Qubes Menu for \"Change Disk Passwort\". This passphrase is different from your user acount's passphrase."
 msgstr ""
 
 #: ../nitropad/qubes/network-settings.rst:2
@@ -11432,6 +11413,10 @@ msgstr ""
 msgid "NitroPad with Ubuntu Linux"
 msgstr ""
 
+#: ../nitropad/ubuntu/index.rst:16
+msgid "Next, the system will prompt you to enter the passphrase to decrypt the hard disk. The passphrase is initially “PleaseChangeMe”."
+msgstr ""
+
 #: ../nitropad/ubuntu/index.rst:26
 msgid "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey. To learn more about how to change the PINs, please refer to chapter `Change User and Admin PIN <change-pins.html>`_."
 msgstr ""
@@ -11488,7 +11473,6 @@ msgid "The system has a user account setup already. Choose it and login with the
 msgstr ""
 
 #: ../nitropc/debian/index.rst:22
-#: ../nitropc/qubes/index.rst:22
 #: ../nitropc/ubuntu/index.rst:22
 msgid "Change the passphrase for disk encryption by opening a terminal and execute:"
 msgstr ""
@@ -11554,8 +11538,11 @@ msgid "NitroPC with Qubes OS"
 msgstr ""
 
 #: ../nitropc/qubes/index.rst:16
-#: ../nitropc/ubuntu/index.rst:16
-msgid "During boot, the system will prompt you to enter the passphrase to decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The system will then guide you through the process of creating a user account. After that you should have successfully booted the system and could already use it normally."
+msgid "During boot, the system will prompt you to enter the passphrase to decrypt the hard disk. Enter the default passphrase \"12345678\". This was change on the 15.01.2024 so if \"12345678\" is not working try the old default: \"PleaseChangeMe\" The system will then guide you through the process of creating a user account. After that you should have successfully booted the system and could already use it normally."
+msgstr ""
+
+#: ../nitropc/qubes/index.rst:22
+msgid "Change the passphrase for disk encryption by searching in the Qubes Menu for \"Change Disk Password\""
 msgstr ""
 
 #: ../nitropc/qubes/index.rst:30
@@ -11568,6 +11555,10 @@ msgstr ""
 
 #: ../nitropc/ubuntu/index.rst:2
 msgid "NitroPC with Ubuntu"
+msgstr ""
+
+#: ../nitropc/ubuntu/index.rst:16
+msgid "During boot, the system will prompt you to enter the passphrase to decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The system will then guide you through the process of creating a user account. After that you should have successfully booted the system and could already use it normally."
 msgstr ""
 
 #: ../nitrophone/apps.rst:2

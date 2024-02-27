@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-26 13:41+0100\n"
+"POT-Creation-Date: 2024-02-27 15:19+0100\n"
 "PO-Revision-Date: 2024-02-26 13:49+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Portuguese <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/pt/>\n"
 "Language: pt\n"
+"Language-Team: Portuguese <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/pt/>\n"
+"Plural-Forms: nplurals=2; plural=n > 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -15393,7 +15392,7 @@ msgid ""
 "passphrase`` and follow the instructions."
 msgstr ""
 
-#: ../nitropad/faq.rst:15
+#: ../nitropad/faq.rst:18
 #, fuzzy
 msgid "**Q:** How to change the hard-disk encryption password from within the OS?"
 msgstr "**Q:** Qual é a senha padrão de criptografia do disco rígido?"
@@ -15403,15 +15402,18 @@ msgid ""
 "Using default ``cryptsetup`` tools it is important to note that the right"
 " key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 "
 "/dev/nvme0n1p3`` or ``sudo cryptsetup luksChangeKey --key-slot=0 "
-"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that under System"
-" Settings"
+"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that:"
 msgstr ""
 
-#: ../nitropad/faq.rst:27
+#: ../nitropad/faq.rst ../nitropad/qubes/index.rst ../nitropc/qubes/index.rst
+msgid "Change Password Qubes Image"
+msgstr ""
+
+#: ../nitropad/faq.rst:30
 msgid "**Q:** What is re-ownership / re-encryption and why is it important?"
 msgstr ""
 
-#: ../nitropad/faq.rst:18
+#: ../nitropad/faq.rst:21
 msgid ""
 "Changing your hard-disk encryption password does not change the "
 "encryption itself, just the access to the encryption key. This means that"
@@ -16366,14 +16368,13 @@ msgstr ""
 "NitroPad não tenha mostrado nenhum erro e a Nitrokey esteja acesa a verde"
 " (ver acima)."
 
-#: ../nitropad/qubes/index.rst:16 ../nitropad/ubuntu/index.rst:16
+#: ../nitropad/qubes/index.rst:16
 msgid ""
 "Next, the system will prompt you to enter the passphrase to decrypt the "
-"hard disk. The passphrase is initially “PleaseChangeMe”."
+"hard disk. The passphrase is initially \"12345678\". This was change on "
+"the 15.01.2024 so if \"12345678\" is not working try the old default: "
+"\"PleaseChangeMe\""
 msgstr ""
-"Em seguida, o sistema solicitará que você digite a senha para "
-"descriptografar o disco rígido. A frase-senha é inicialmente "
-"\"PleaseChangeMe\"."
 
 #: ../nitropad/qubes/index.rst:22 ../nitropad/ubuntu/index.rst:22
 msgid ""
@@ -16394,44 +16395,15 @@ msgstr ""
 "como `descrito aqui <change-pins.html>`_."
 
 #: ../nitropad/qubes/index.rst:29
+#, fuzzy
 msgid ""
-"Change the passphrase for the hard disk encryption by running “sudo "
-"cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is "
-"different from your user acount's passphrase."
+"Change the passphrase for the hard disk encryption by searching in the "
+"Qubes Menu for \"Change Disk Passwort\". This passphrase is different "
+"from your user acount's passphrase."
 msgstr ""
 "Mude a frase-chave para a criptografia do disco rígido executando \"sudo "
 "cryptsetup luksChangeKey /dev/sda2\" em um terminal. Esta frase-chave é "
 "diferente da frase-chave da sua conta de usuário' s passphrase."
-
-#: ../nitropad/qubes/index.rst:31
-msgid ""
-"In case the Network Manager icon is not shown and when starting a VM an "
-"error like “Domain sys-net has failed to start: PCI device dom0:03_00.0 "
-"does not exist” is shown, proceed as follows:"
-msgstr ""
-"No caso do ícone Network Manager não ser mostrado e ao iniciar uma VM, um"
-" erro como \"Domain sys-net falhou em iniciar: PCI device dom0:03_00.0 "
-"does not exist\" é mostrado, proceda da seguinte forma:"
-
-#: ../nitropad/qubes/index.rst:35
-msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
-msgstr "Abrir menu -> Serviço: sys-net -> sys-net: Configurações do cubo"
-
-#: ../nitropad/qubes/index.rst:36
-msgid "Go to Devices tab"
-msgstr "Ir para a guia Dispositivos"
-
-#: ../nitropad/qubes/index.rst:37
-msgid "Remove “Unknown device” from the right side"
-msgstr "Remover \"Dispositivo desconhecido\" do lado direito"
-
-#: ../nitropad/qubes/index.rst:38
-msgid "Add “Network controler” device"
-msgstr "Adicionar dispositivo \"Controlador de rede"
-
-#: ../nitropad/qubes/index.rst:39
-msgid "Click “OK” and restart the system."
-msgstr "Clique em \"OK\" e reinicie o sistema."
 
 #: ../nitropad/qubes/network-settings.rst:2
 msgid "Enable Network Settings, e.g. Wifi"
@@ -17129,6 +17101,15 @@ msgstr "Digite a senha da sua conta."
 msgid "NitroPad with Ubuntu Linux"
 msgstr "NitroPad com Ubuntu Linux"
 
+#: ../nitropad/ubuntu/index.rst:16
+msgid ""
+"Next, the system will prompt you to enter the passphrase to decrypt the "
+"hard disk. The passphrase is initially “PleaseChangeMe”."
+msgstr ""
+"Em seguida, o sistema solicitará que você digite a senha para "
+"descriptografar o disco rígido. A frase-senha é inicialmente "
+"\"PleaseChangeMe\"."
+
 #: ../nitropad/ubuntu/index.rst:26
 msgid ""
 "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey."
@@ -17232,8 +17213,7 @@ msgstr ""
 " login com a senha padrão \"PleaseChangeMe\". Você pode continuar usando "
 "a conta de usuário existente ou criar uma nova, como você quiser."
 
-#: ../nitropc/debian/index.rst:22 ../nitropc/qubes/index.rst:22
-#: ../nitropc/ubuntu/index.rst:22
+#: ../nitropc/debian/index.rst:22 ../nitropc/ubuntu/index.rst:22
 msgid ""
 "Change the passphrase for disk encryption by opening a terminal and "
 "execute:"
@@ -17348,19 +17328,24 @@ msgstr ""
 msgid "NitroPC with Qubes OS"
 msgstr "NitroPC com SO Qubes"
 
-#: ../nitropc/qubes/index.rst:16 ../nitropc/ubuntu/index.rst:16
+#: ../nitropc/qubes/index.rst:16
 msgid ""
 "During boot, the system will prompt you to enter the passphrase to "
-"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
-" system will then guide you through the process of creating a user "
-"account. After that you should have successfully booted the system and "
-"could already use it normally."
+"decrypt the hard disk. Enter the default passphrase \"12345678\". This "
+"was change on the 15.01.2024 so if \"12345678\" is not working try the "
+"old default: \"PleaseChangeMe\" The system will then guide you through "
+"the process of creating a user account. After that you should have "
+"successfully booted the system and could already use it normally."
 msgstr ""
-"Durante o arranque, o sistema irá pedir-lhe para introduzir a frase-chave"
-" para decifrar o disco rígido. Insira a frase-chave padrão "
-"\"PleaseChangeMe\". O sistema irá então guiá-lo através do processo de "
-"criação de uma conta de utilizador. Depois disso, você deve ter "
-"inicializado o sistema com sucesso e já pode usá-lo normalmente."
+
+#: ../nitropc/qubes/index.rst:22
+#, fuzzy
+msgid ""
+"Change the passphrase for disk encryption by searching in the Qubes Menu "
+"for \"Change Disk Password\""
+msgstr ""
+"Altere a frase-chave para criptografia de disco abrindo um terminal e "
+"execute:"
 
 #: ../nitropc/qubes/index.rst:30
 msgid "Failed to start Load Kernel Modules"
@@ -17381,6 +17366,20 @@ msgstr ""
 #: ../nitropc/ubuntu/index.rst:2
 msgid "NitroPC with Ubuntu"
 msgstr "NitroPC com Ubuntu"
+
+#: ../nitropc/ubuntu/index.rst:16
+msgid ""
+"During boot, the system will prompt you to enter the passphrase to "
+"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
+" system will then guide you through the process of creating a user "
+"account. After that you should have successfully booted the system and "
+"could already use it normally."
+msgstr ""
+"Durante o arranque, o sistema irá pedir-lhe para introduzir a frase-chave"
+" para decifrar o disco rígido. Insira a frase-chave padrão "
+"\"PleaseChangeMe\". O sistema irá então guiá-lo através do processo de "
+"criação de uma conta de utilizador. Depois disso, você deve ter "
+"inicializado o sistema com sucesso e já pode usá-lo normalmente."
 
 #: ../nitrophone/apps.rst:2 ../nitrophone/index.rst:19
 msgid "Apps"
@@ -31637,3 +31636,45 @@ msgstr ""
 
 #~ msgid "Roadmap: Which features are planned?"
 #~ msgstr ""
+
+#~ msgid ""
+#~ "Using default ``cryptsetup`` tools it is"
+#~ " important to note that the right "
+#~ "key slot is used: ``sudo cryptsetup "
+#~ "luksChangeKey --key-slot=0 /dev/nvme0n1p3`` or"
+#~ " ``sudo cryptsetup luksChangeKey --key-"
+#~ "slot=0 /dev/sda3``. In Qubes 4.2 exist"
+#~ " also now a GUI tool for that"
+#~ " under System Settings"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In case the Network Manager icon "
+#~ "is not shown and when starting a"
+#~ " VM an error like “Domain sys-"
+#~ "net has failed to start: PCI "
+#~ "device dom0:03_00.0 does not exist” is"
+#~ " shown, proceed as follows:"
+#~ msgstr ""
+#~ "No caso do ícone Network Manager "
+#~ "não ser mostrado e ao iniciar uma"
+#~ " VM, um erro como \"Domain sys-"
+#~ "net falhou em iniciar: PCI device "
+#~ "dom0:03_00.0 does not exist\" é "
+#~ "mostrado, proceda da seguinte forma:"
+
+#~ msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
+#~ msgstr "Abrir menu -> Serviço: sys-net -> sys-net: Configurações do cubo"
+
+#~ msgid "Go to Devices tab"
+#~ msgstr "Ir para a guia Dispositivos"
+
+#~ msgid "Remove “Unknown device” from the right side"
+#~ msgstr "Remover \"Dispositivo desconhecido\" do lado direito"
+
+#~ msgid "Add “Network controler” device"
+#~ msgstr "Adicionar dispositivo \"Controlador de rede"
+
+#~ msgid "Click “OK” and restart the system."
+#~ msgstr "Clique em \"OK\" e reinicie o sistema."
+

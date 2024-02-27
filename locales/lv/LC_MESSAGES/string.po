@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-26 13:41+0100\n"
+"POT-Creation-Date: 2024-02-27 15:19+0100\n"
 "PO-Revision-Date: 2024-02-26 13:49+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Latvian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/lv/>\n"
 "Language: lv\n"
+"Language-Team: Latvian <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/lv/>\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100"
+" <= 19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
-"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6224,8 +6223,8 @@ msgid ""
 "**Q:** Scalability, High Availability: How to synchronize a cluster of "
 "multiple instances?"
 msgstr ""
-"**J:** mērogojamība, augsta pieejamība: kā sinhronizēt klasteri ar vairākiem "
-"gadījumiem?"
+"**J:** mērogojamība, augsta pieejamība: kā sinhronizēt klasteri ar "
+"vairākiem gadījumiem?"
 
 #: ../nethsm/faq.rst:5
 msgid ""
@@ -15871,17 +15870,17 @@ msgstr ""
 "iekšpusē izvēlieties ``Options -> Change LUKS Disk Recovery Key "
 "passphrase`` un izpildiet norādījumus."
 
-#: ../nitropad/faq.rst:15
+#: ../nitropad/faq.rst:18
 msgid "**Q:** How to change the hard-disk encryption password from within the OS?"
 msgstr "**J:** Kā mainīt cietā diska šifrēšanas paroli no operētājsistēmas?"
 
 #: ../nitropad/faq.rst:13
+#, fuzzy
 msgid ""
 "Using default ``cryptsetup`` tools it is important to note that the right"
 " key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 "
 "/dev/nvme0n1p3`` or ``sudo cryptsetup luksChangeKey --key-slot=0 "
-"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that under System"
-" Settings"
+"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that:"
 msgstr ""
 "Izmantojot noklusējuma ``cryptsetup`` rīkus, ir svarīgi ievērot, ka tiek "
 "izmantots pareizais taustiņu slots: ``sudo cryptsetup luksChangeKey "
@@ -15889,13 +15888,17 @@ msgstr ""
 "slot=0 /dev/sda3``. Qubes 4.2 versijā tagad ir arī GUI rīks, kas atrodas "
 "sadaļā Sistēmas iestatījumi."
 
-#: ../nitropad/faq.rst:27
+#: ../nitropad/faq.rst ../nitropad/qubes/index.rst ../nitropc/qubes/index.rst
+msgid "Change Password Qubes Image"
+msgstr ""
+
+#: ../nitropad/faq.rst:30
 msgid "**Q:** What is re-ownership / re-encryption and why is it important?"
 msgstr ""
 "**J:** Kas ir atkārtota īpašumtiesības maiņa / atkārtota šifrēšana un "
 "kāpēc tā ir svarīga?"
 
-#: ../nitropad/faq.rst:18
+#: ../nitropad/faq.rst:21
 msgid ""
 "Changing your hard-disk encryption password does not change the "
 "encryption itself, just the access to the encryption key. This means that"
@@ -16853,13 +16856,13 @@ msgstr ""
 "nav parādījis nekādas kļūdas un Nitrokey iedegas zaļā krāsā (skatīt "
 "iepriekš)."
 
-#: ../nitropad/qubes/index.rst:16 ../nitropad/ubuntu/index.rst:16
+#: ../nitropad/qubes/index.rst:16
 msgid ""
 "Next, the system will prompt you to enter the passphrase to decrypt the "
-"hard disk. The passphrase is initially “PleaseChangeMe”."
+"hard disk. The passphrase is initially \"12345678\". This was change on "
+"the 15.01.2024 so if \"12345678\" is not working try the old default: "
+"\"PleaseChangeMe\""
 msgstr ""
-"Pēc tam sistēma lūgs ievadīt piekļuves frāzi, lai atšifrētu cieto disku. "
-"Sākotnēji parole ir \"PleaseChangeMe\"."
 
 #: ../nitropad/qubes/index.rst:22 ../nitropad/ubuntu/index.rst:22
 msgid ""
@@ -16880,44 +16883,15 @@ msgstr ""
 "kodus, kā ` aprakstīts šeit <change-pins.html>`_."
 
 #: ../nitropad/qubes/index.rst:29
+#, fuzzy
 msgid ""
-"Change the passphrase for the hard disk encryption by running “sudo "
-"cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is "
-"different from your user acount's passphrase."
+"Change the passphrase for the hard disk encryption by searching in the "
+"Qubes Menu for \"Change Disk Passwort\". This passphrase is different "
+"from your user acount's passphrase."
 msgstr ""
 "Mainiet cietā diska šifrēšanas paroli, terminālī izpildot \"sudo "
 "cryptsetup luksChangeKey /dev/sda2\". Šī piekļuves frāze atšķiras no jūsu"
 " lietotāja konta'piekļuves frāzes."
-
-#: ../nitropad/qubes/index.rst:31
-msgid ""
-"In case the Network Manager icon is not shown and when starting a VM an "
-"error like “Domain sys-net has failed to start: PCI device dom0:03_00.0 "
-"does not exist” is shown, proceed as follows:"
-msgstr ""
-"Ja tīkla pārvaldnieka ikona nav redzama un, palaižot VM, tiek parādīta "
-"kļūda, piemēram, \"Domain sys-net nav izdevies palaist: PCI ierīce "
-"dom0:03_00.0 nepastāv\", rīkojieties šādi:"
-
-#: ../nitropad/qubes/index.rst:35
-msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
-msgstr "Atvērt izvēlni -> Service: sys-net -> sys-net: Qube Settings"
-
-#: ../nitropad/qubes/index.rst:36
-msgid "Go to Devices tab"
-msgstr "Dodieties uz cilni Ierīces"
-
-#: ../nitropad/qubes/index.rst:37
-msgid "Remove “Unknown device” from the right side"
-msgstr "Noņemiet no labās puses \"Nezināma ierīce\""
-
-#: ../nitropad/qubes/index.rst:38
-msgid "Add “Network controler” device"
-msgstr "Pievienot ierīci \"Tīkla kontrolieris\""
-
-#: ../nitropad/qubes/index.rst:39
-msgid "Click “OK” and restart the system."
-msgstr "Noklikšķiniet uz \"OK\" un restartējiet sistēmu."
 
 #: ../nitropad/qubes/network-settings.rst:2
 msgid "Enable Network Settings, e.g. Wifi"
@@ -17613,6 +17587,14 @@ msgstr "Ievadiet konta paroli."
 msgid "NitroPad with Ubuntu Linux"
 msgstr "NitroPad ar Ubuntu Linux"
 
+#: ../nitropad/ubuntu/index.rst:16
+msgid ""
+"Next, the system will prompt you to enter the passphrase to decrypt the "
+"hard disk. The passphrase is initially “PleaseChangeMe”."
+msgstr ""
+"Pēc tam sistēma lūgs ievadīt piekļuves frāzi, lai atšifrētu cieto disku. "
+"Sākotnēji parole ir \"PleaseChangeMe\"."
+
 #: ../nitropad/ubuntu/index.rst:26
 msgid ""
 "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey."
@@ -17713,8 +17695,7 @@ msgstr ""
 "izmantot esošo lietotāja kontu vai izveidot jaunu lietotāja kontu pēc "
 "saviem ieskatiem."
 
-#: ../nitropc/debian/index.rst:22 ../nitropc/qubes/index.rst:22
-#: ../nitropc/ubuntu/index.rst:22
+#: ../nitropc/debian/index.rst:22 ../nitropc/ubuntu/index.rst:22
 msgid ""
 "Change the passphrase for disk encryption by opening a terminal and "
 "execute:"
@@ -17836,19 +17817,22 @@ msgstr ""
 msgid "NitroPC with Qubes OS"
 msgstr "NitroPC ar Qubes OS"
 
-#: ../nitropc/qubes/index.rst:16 ../nitropc/ubuntu/index.rst:16
+#: ../nitropc/qubes/index.rst:16
 msgid ""
 "During boot, the system will prompt you to enter the passphrase to "
-"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
-" system will then guide you through the process of creating a user "
-"account. After that you should have successfully booted the system and "
-"could already use it normally."
+"decrypt the hard disk. Enter the default passphrase \"12345678\". This "
+"was change on the 15.01.2024 so if \"12345678\" is not working try the "
+"old default: \"PleaseChangeMe\" The system will then guide you through "
+"the process of creating a user account. After that you should have "
+"successfully booted the system and could already use it normally."
 msgstr ""
-"Palaišanas laikā sistēma lūgs ievadīt piekļuves frāzi, lai atšifrētu "
-"cieto disku. Ievadiet noklusējuma paroli \"PleaseChangeMe\". Pēc tam "
-"sistēma jūs vadīs lietotāja konta izveides procesā. Pēc tam jums "
-"vajadzētu būt veiksmīgi iestartējušam sistēmu un jau varētu to normāli "
-"izmantot."
+
+#: ../nitropc/qubes/index.rst:22
+#, fuzzy
+msgid ""
+"Change the passphrase for disk encryption by searching in the Qubes Menu "
+"for \"Change Disk Password\""
+msgstr "Mainiet diska šifrēšanas paroli, atverot termināli un izpildiet:"
 
 #: ../nitropc/qubes/index.rst:30
 msgid "Failed to start Load Kernel Modules"
@@ -17868,6 +17852,20 @@ msgstr ""
 #: ../nitropc/ubuntu/index.rst:2
 msgid "NitroPC with Ubuntu"
 msgstr "NitroPC ar Ubuntu"
+
+#: ../nitropc/ubuntu/index.rst:16
+msgid ""
+"During boot, the system will prompt you to enter the passphrase to "
+"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
+" system will then guide you through the process of creating a user "
+"account. After that you should have successfully booted the system and "
+"could already use it normally."
+msgstr ""
+"Palaišanas laikā sistēma lūgs ievadīt piekļuves frāzi, lai atšifrētu "
+"cieto disku. Ievadiet noklusējuma paroli \"PleaseChangeMe\". Pēc tam "
+"sistēma jūs vadīs lietotāja konta izveides procesā. Pēc tam jums "
+"vajadzētu būt veiksmīgi iestartējušam sistēmu un jau varētu to normāli "
+"izmantot."
 
 #: ../nitrophone/apps.rst:2 ../nitrophone/index.rst:19
 msgid "Apps"
@@ -31642,3 +31640,33 @@ msgstr ""
 
 #~ msgid "For now only One-Time Passwords (TOTP and HOTP) are supported."
 #~ msgstr "Pagaidām tiek atbalstītas tikai vienreizējās paroles (TOTP un HOTP)."
+
+#~ msgid ""
+#~ "In case the Network Manager icon "
+#~ "is not shown and when starting a"
+#~ " VM an error like “Domain sys-"
+#~ "net has failed to start: PCI "
+#~ "device dom0:03_00.0 does not exist” is"
+#~ " shown, proceed as follows:"
+#~ msgstr ""
+#~ "Ja tīkla pārvaldnieka ikona nav redzama"
+#~ " un, palaižot VM, tiek parādīta "
+#~ "kļūda, piemēram, \"Domain sys-net nav"
+#~ " izdevies palaist: PCI ierīce dom0:03_00.0"
+#~ " nepastāv\", rīkojieties šādi:"
+
+#~ msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
+#~ msgstr "Atvērt izvēlni -> Service: sys-net -> sys-net: Qube Settings"
+
+#~ msgid "Go to Devices tab"
+#~ msgstr "Dodieties uz cilni Ierīces"
+
+#~ msgid "Remove “Unknown device” from the right side"
+#~ msgstr "Noņemiet no labās puses \"Nezināma ierīce\""
+
+#~ msgid "Add “Network controler” device"
+#~ msgstr "Pievienot ierīci \"Tīkla kontrolieris\""
+
+#~ msgid "Click “OK” and restart the system."
+#~ msgstr "Noklikšķiniet uz \"OK\" un restartējiet sistēmu."
+

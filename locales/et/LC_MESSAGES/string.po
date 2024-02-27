@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-26 13:41+0100\n"
+"POT-Creation-Date: 2024-02-27 15:19+0100\n"
 "PO-Revision-Date: 2024-02-26 13:49+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Estonian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/et/>\n"
 "Language: et\n"
+"Language-Team: Estonian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/et/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -15752,19 +15751,19 @@ msgstr ""
 " HEADS'i sees ``Options -> Change LUKS Disk Recovery Key passphrase`` ja "
 "järgige juhiseid."
 
-#: ../nitropad/faq.rst:15
+#: ../nitropad/faq.rst:18
 msgid "**Q:** How to change the hard-disk encryption password from within the OS?"
 msgstr ""
 "**K:** Kuidas muuta kõvaketta krüpteerimise salasõna "
 "operatsioonisüsteemis?"
 
 #: ../nitropad/faq.rst:13
+#, fuzzy
 msgid ""
 "Using default ``cryptsetup`` tools it is important to note that the right"
 " key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 "
 "/dev/nvme0n1p3`` or ``sudo cryptsetup luksChangeKey --key-slot=0 "
-"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that under System"
-" Settings"
+"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that:"
 msgstr ""
 "Kasutades vaikimisi ``cryptsetup`` tööriistu, on oluline jälgida, et "
 "kasutataks õiget klahvipesa: ``sudo cryptsetup luksChangeKey --key-slot=0"
@@ -15772,13 +15771,17 @@ msgstr ""
 "/dev/sda3``. Qubes 4.2 olemas ka nüüd GUI tööriist, mis on süsteemi "
 "seadete all."
 
-#: ../nitropad/faq.rst:27
+#: ../nitropad/faq.rst ../nitropad/qubes/index.rst ../nitropc/qubes/index.rst
+msgid "Change Password Qubes Image"
+msgstr ""
+
+#: ../nitropad/faq.rst:30
 msgid "**Q:** What is re-ownership / re-encryption and why is it important?"
 msgstr ""
 "**K:** Mis on taasomandamine / uuesti krüpteerimine ja miks on see "
 "oluline?"
 
-#: ../nitropad/faq.rst:18
+#: ../nitropad/faq.rst:21
 msgid ""
 "Changing your hard-disk encryption password does not change the "
 "encryption itself, just the access to the encryption key. This means that"
@@ -16723,13 +16726,13 @@ msgstr ""
 "NitroPad ei ole näidanud ühtegi viga ja Nitrokey põleb roheliselt (vt "
 "eespool)."
 
-#: ../nitropad/qubes/index.rst:16 ../nitropad/ubuntu/index.rst:16
+#: ../nitropad/qubes/index.rst:16
 msgid ""
 "Next, the system will prompt you to enter the passphrase to decrypt the "
-"hard disk. The passphrase is initially “PleaseChangeMe”."
+"hard disk. The passphrase is initially \"12345678\". This was change on "
+"the 15.01.2024 so if \"12345678\" is not working try the old default: "
+"\"PleaseChangeMe\""
 msgstr ""
-"Seejärel palub süsteem sisestada kõvaketta dekrüpteerimiseks salasõna. "
-"Salasõna on esialgu \"PleaseChangeMe\"."
 
 #: ../nitropad/qubes/index.rst:22 ../nitropad/ubuntu/index.rst:22
 msgid ""
@@ -16750,44 +16753,15 @@ msgstr ""
 "koodid, nagu on kirjeldatud siin ` <change-pins.html>`_."
 
 #: ../nitropad/qubes/index.rst:29
+#, fuzzy
 msgid ""
-"Change the passphrase for the hard disk encryption by running “sudo "
-"cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is "
-"different from your user acount's passphrase."
+"Change the passphrase for the hard disk encryption by searching in the "
+"Qubes Menu for \"Change Disk Passwort\". This passphrase is different "
+"from your user acount's passphrase."
 msgstr ""
 "Muutke kõvaketta krüpteerimise salasõna, käivitades terminalis käsu "
 "\"sudo cryptsetup luksChangeKey /dev/sda2\". See parool erineb teie "
 "kasutajakonto paroolist."
-
-#: ../nitropad/qubes/index.rst:31
-msgid ""
-"In case the Network Manager icon is not shown and when starting a VM an "
-"error like “Domain sys-net has failed to start: PCI device dom0:03_00.0 "
-"does not exist” is shown, proceed as follows:"
-msgstr ""
-"Kui võrguhalduri ikooni ei kuvata ja VM-i käivitamisel ilmneb viga nagu "
-"\"Domeeni sys-net ei õnnestunud käivitada: PCI seade dom0:03_00.0 ei ole "
-"olemas\", toimige järgmiselt:"
-
-#: ../nitropad/qubes/index.rst:35
-msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
-msgstr "Ava menüü -> Teenus: sys-net -> sys-net: Qube Settings"
-
-#: ../nitropad/qubes/index.rst:36
-msgid "Go to Devices tab"
-msgstr "Minge vahekaardile Seadmed"
-
-#: ../nitropad/qubes/index.rst:37
-msgid "Remove “Unknown device” from the right side"
-msgstr "Eemaldage \"Tundmatu seade\" paremalt küljelt"
-
-#: ../nitropad/qubes/index.rst:38
-msgid "Add “Network controler” device"
-msgstr "Lisage seade \"Network controler\"."
-
-#: ../nitropad/qubes/index.rst:39
-msgid "Click “OK” and restart the system."
-msgstr "Klõpsake nuppu \"OK\" ja käivitage süsteem uuesti."
 
 #: ../nitropad/qubes/network-settings.rst:2
 msgid "Enable Network Settings, e.g. Wifi"
@@ -17475,6 +17449,14 @@ msgstr "Sisestage oma konto parool."
 msgid "NitroPad with Ubuntu Linux"
 msgstr "NitroPad koos Ubuntu Linuxiga"
 
+#: ../nitropad/ubuntu/index.rst:16
+msgid ""
+"Next, the system will prompt you to enter the passphrase to decrypt the "
+"hard disk. The passphrase is initially “PleaseChangeMe”."
+msgstr ""
+"Seejärel palub süsteem sisestada kõvaketta dekrüpteerimiseks salasõna. "
+"Salasõna on esialgu \"PleaseChangeMe\"."
+
 #: ../nitropad/ubuntu/index.rst:26
 msgid ""
 "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey."
@@ -17576,8 +17558,7 @@ msgstr ""
 "vaikimisi parooliga \"PleaseChangeMe\". Võite kasutada olemasolevat "
 "kasutajakontot või luua endale uue, nagu soovite."
 
-#: ../nitropc/debian/index.rst:22 ../nitropc/qubes/index.rst:22
-#: ../nitropc/ubuntu/index.rst:22
+#: ../nitropc/debian/index.rst:22 ../nitropc/ubuntu/index.rst:22
 msgid ""
 "Change the passphrase for disk encryption by opening a terminal and "
 "execute:"
@@ -17697,19 +17678,22 @@ msgstr ""
 msgid "NitroPC with Qubes OS"
 msgstr "NitroPC koos Qubes OSiga"
 
-#: ../nitropc/qubes/index.rst:16 ../nitropc/ubuntu/index.rst:16
+#: ../nitropc/qubes/index.rst:16
 msgid ""
 "During boot, the system will prompt you to enter the passphrase to "
-"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
-" system will then guide you through the process of creating a user "
-"account. After that you should have successfully booted the system and "
-"could already use it normally."
+"decrypt the hard disk. Enter the default passphrase \"12345678\". This "
+"was change on the 15.01.2024 so if \"12345678\" is not working try the "
+"old default: \"PleaseChangeMe\" The system will then guide you through "
+"the process of creating a user account. After that you should have "
+"successfully booted the system and could already use it normally."
 msgstr ""
-"Süsteem palub teil käivitamise ajal sisestada kõvaketta dekrüpteerimiseks"
-" salasõna. Sisestage vaikimisi salasõna \"PleaseChangeMe\". Seejärel "
-"juhatab süsteem teid läbi kasutajakonto loomise protsessi. Pärast seda "
-"peaksite olema edukalt süsteemi käivitanud ja saate seda juba normaalselt"
-" kasutada."
+
+#: ../nitropc/qubes/index.rst:22
+#, fuzzy
+msgid ""
+"Change the passphrase for disk encryption by searching in the Qubes Menu "
+"for \"Change Disk Password\""
+msgstr "Muutke ketta krüpteerimise salasõna, avades terminali ja tehes järgmist:"
 
 #: ../nitropc/qubes/index.rst:30
 msgid "Failed to start Load Kernel Modules"
@@ -17730,6 +17714,20 @@ msgstr ""
 #: ../nitropc/ubuntu/index.rst:2
 msgid "NitroPC with Ubuntu"
 msgstr "NitroPC koos Ubuntuga"
+
+#: ../nitropc/ubuntu/index.rst:16
+msgid ""
+"During boot, the system will prompt you to enter the passphrase to "
+"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
+" system will then guide you through the process of creating a user "
+"account. After that you should have successfully booted the system and "
+"could already use it normally."
+msgstr ""
+"Süsteem palub teil käivitamise ajal sisestada kõvaketta dekrüpteerimiseks"
+" salasõna. Sisestage vaikimisi salasõna \"PleaseChangeMe\". Seejärel "
+"juhatab süsteem teid läbi kasutajakonto loomise protsessi. Pärast seda "
+"peaksite olema edukalt süsteemi käivitanud ja saate seda juba normaalselt"
+" kasutada."
 
 #: ../nitrophone/apps.rst:2 ../nitrophone/index.rst:19
 msgid "Apps"
@@ -31401,3 +31399,33 @@ msgstr ""
 
 #~ msgid "For now only One-Time Passwords (TOTP and HOTP) are supported."
 #~ msgstr "Hetkel on toetatud ainult ühekordsed paroolid (TOTP ja HOTP)."
+
+#~ msgid ""
+#~ "In case the Network Manager icon "
+#~ "is not shown and when starting a"
+#~ " VM an error like “Domain sys-"
+#~ "net has failed to start: PCI "
+#~ "device dom0:03_00.0 does not exist” is"
+#~ " shown, proceed as follows:"
+#~ msgstr ""
+#~ "Kui võrguhalduri ikooni ei kuvata ja "
+#~ "VM-i käivitamisel ilmneb viga nagu "
+#~ "\"Domeeni sys-net ei õnnestunud "
+#~ "käivitada: PCI seade dom0:03_00.0 ei ole"
+#~ " olemas\", toimige järgmiselt:"
+
+#~ msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
+#~ msgstr "Ava menüü -> Teenus: sys-net -> sys-net: Qube Settings"
+
+#~ msgid "Go to Devices tab"
+#~ msgstr "Minge vahekaardile Seadmed"
+
+#~ msgid "Remove “Unknown device” from the right side"
+#~ msgstr "Eemaldage \"Tundmatu seade\" paremalt küljelt"
+
+#~ msgid "Add “Network controler” device"
+#~ msgstr "Lisage seade \"Network controler\"."
+
+#~ msgid "Click “OK” and restart the system."
+#~ msgstr "Klõpsake nuppu \"OK\" ja käivitage süsteem uuesti."
+

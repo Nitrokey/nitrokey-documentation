@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-26 13:41+0100\n"
+"POT-Creation-Date: 2024-02-27 15:19+0100\n"
 "PO-Revision-Date: 2024-02-26 13:49+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -13496,27 +13496,31 @@ msgstr ""
 "这是更改硬盘加密密码的首选方法。在 HEADS 中选择``Options -> Change LUKS Disk Recovery Key "
 "passphrase``，然后按说明操作。"
 
-#: ../nitropad/faq.rst:15
+#: ../nitropad/faq.rst:18
 msgid "**Q:** How to change the hard-disk encryption password from within the OS?"
 msgstr "**问：** 如何在操作系统内更改硬盘加密密码？"
 
 #: ../nitropad/faq.rst:13
+#, fuzzy
 msgid ""
 "Using default ``cryptsetup`` tools it is important to note that the right"
 " key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 "
 "/dev/nvme0n1p3`` or ``sudo cryptsetup luksChangeKey --key-slot=0 "
-"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that under System"
-" Settings"
+"/dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that:"
 msgstr ""
 "使用默认的``cryptsetup`` 工具时，必须注意使用正确的键位：`sudo cryptsetup luksChangeKey --key-"
 "slot=0 /dev/nvme0n1p3`` 或``sudo cryptsetup luksChangeKey --key-slot=0 "
 "/dev/sda3``。在 Qubes 4.2 中，系统设置下还有一个 GUI 工具"
 
-#: ../nitropad/faq.rst:27
+#: ../nitropad/faq.rst ../nitropad/qubes/index.rst ../nitropc/qubes/index.rst
+msgid "Change Password Qubes Image"
+msgstr ""
+
+#: ../nitropad/faq.rst:30
 msgid "**Q:** What is re-ownership / re-encryption and why is it important?"
 msgstr "**问：** 什么是重新拥有/重新加密，为什么它很重要？"
 
-#: ../nitropad/faq.rst:18
+#: ../nitropad/faq.rst:21
 msgid ""
 "Changing your hard-disk encryption password does not change the "
 "encryption itself, just the access to the encryption key. This means that"
@@ -14311,11 +14315,13 @@ msgid ""
 "above)."
 msgstr "在启动系统后按回车键（\"默认启动\"），前提是NitroPad没有显示任何错误，且Nitrokey亮起绿色（见上文）。"
 
-#: ../nitropad/qubes/index.rst:16 ../nitropad/ubuntu/index.rst:16
+#: ../nitropad/qubes/index.rst:16
 msgid ""
 "Next, the system will prompt you to enter the passphrase to decrypt the "
-"hard disk. The passphrase is initially “PleaseChangeMe”."
-msgstr "接下来，系统会提示你输入解密硬盘的口令。该口令最初为 \"PleaseChangeMe\"。"
+"hard disk. The passphrase is initially \"12345678\". This was change on "
+"the 15.01.2024 so if \"12345678\" is not working try the old default: "
+"\"PleaseChangeMe\""
+msgstr ""
 
 #: ../nitropad/qubes/index.rst:22 ../nitropad/ubuntu/index.rst:22
 msgid ""
@@ -14331,42 +14337,14 @@ msgid ""
 msgstr "打开预装的Nitrokey应用程序，按照`这里描述的<change-pins.html>`_更改Nitrokey的密码。"
 
 #: ../nitropad/qubes/index.rst:29
+#, fuzzy
 msgid ""
-"Change the passphrase for the hard disk encryption by running “sudo "
-"cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is "
-"different from your user acount's passphrase."
+"Change the passphrase for the hard disk encryption by searching in the "
+"Qubes Menu for \"Change Disk Passwort\". This passphrase is different "
+"from your user acount's passphrase."
 msgstr ""
 "通过在终端运行 \"sudo cryptsetup luksChangeKey /dev/sda2 "
 "\"改变硬盘加密的口令。这个口令与你的用户账户的口令不同。"
-
-#: ../nitropad/qubes/index.rst:31
-msgid ""
-"In case the Network Manager icon is not shown and when starting a VM an "
-"error like “Domain sys-net has failed to start: PCI device dom0:03_00.0 "
-"does not exist” is shown, proceed as follows:"
-msgstr ""
-"如果没有显示网络管理器图标，并且在启动虚拟机时出现类似 \"Domain sys-net has failed to "
-"start:显示PCI设备dom0:03_00.0不存在\"，请按以下步骤操作。"
-
-#: ../nitropad/qubes/index.rst:35
-msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
-msgstr "打开菜单 -> 服务：sys-net -> sys-net。Qube设置"
-
-#: ../nitropad/qubes/index.rst:36
-msgid "Go to Devices tab"
-msgstr "转到设备选项卡"
-
-#: ../nitropad/qubes/index.rst:37
-msgid "Remove “Unknown device” from the right side"
-msgstr "从右侧删除 \"未知设备\"。"
-
-#: ../nitropad/qubes/index.rst:38
-msgid "Add “Network controler” device"
-msgstr "添加 \"网络控制仪 \"设备"
-
-#: ../nitropad/qubes/index.rst:39
-msgid "Click “OK” and restart the system."
-msgstr "点击 \"确定 \"并重新启动系统。"
 
 #: ../nitropad/qubes/network-settings.rst:2
 msgid "Enable Network Settings, e.g. Wifi"
@@ -14946,6 +14924,12 @@ msgstr "输入你的账户密码。"
 msgid "NitroPad with Ubuntu Linux"
 msgstr "使用Ubuntu Linux的NitroPad"
 
+#: ../nitropad/ubuntu/index.rst:16
+msgid ""
+"Next, the system will prompt you to enter the passphrase to decrypt the "
+"hard disk. The passphrase is initially “PleaseChangeMe”."
+msgstr "接下来，系统会提示你输入解密硬盘的口令。该口令最初为 \"PleaseChangeMe\"。"
+
 #: ../nitropad/ubuntu/index.rst:26
 msgid ""
 "Open the pre-installed Nitrokey App and change the PINs of your Nitrokey."
@@ -15028,8 +15012,7 @@ msgid ""
 "user account or create you a new one, as you like."
 msgstr "该系统已经设置了一个用户账户。选择它并使用默认的口令\"PleaseChangeMe\"登录。你可以继续使用现有的用户账户，或者根据你的意愿创建一个新的账户。"
 
-#: ../nitropc/debian/index.rst:22 ../nitropc/qubes/index.rst:22
-#: ../nitropc/ubuntu/index.rst:22
+#: ../nitropc/debian/index.rst:22 ../nitropc/ubuntu/index.rst:22
 msgid ""
 "Change the passphrase for disk encryption by opening a terminal and "
 "execute:"
@@ -15129,16 +15112,22 @@ msgstr "将USB驱动器连接到一个黑色的USB2.0插座上（蓝色的USB3.0
 msgid "NitroPC with Qubes OS"
 msgstr "带有Qubes操作系统的NitroPC"
 
-#: ../nitropc/qubes/index.rst:16 ../nitropc/ubuntu/index.rst:16
+#: ../nitropc/qubes/index.rst:16
 msgid ""
 "During boot, the system will prompt you to enter the passphrase to "
-"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
-" system will then guide you through the process of creating a user "
-"account. After that you should have successfully booted the system and "
-"could already use it normally."
+"decrypt the hard disk. Enter the default passphrase \"12345678\". This "
+"was change on the 15.01.2024 so if \"12345678\" is not working try the "
+"old default: \"PleaseChangeMe\" The system will then guide you through "
+"the process of creating a user account. After that you should have "
+"successfully booted the system and could already use it normally."
 msgstr ""
-"在启动过程中，系统会提示你输入密码来解密硬盘。输入默认的口令 "
-"\"PleaseChangeMe\"。然后，系统将引导你完成创建用户账户的过程。之后，你应该已经成功启动了系统，并且已经可以正常使用。"
+
+#: ../nitropc/qubes/index.rst:22
+#, fuzzy
+msgid ""
+"Change the passphrase for disk encryption by searching in the Qubes Menu "
+"for \"Change Disk Password\""
+msgstr "通过打开一个终端并执行，改变磁盘加密的口令。"
 
 #: ../nitropc/qubes/index.rst:30
 msgid "Failed to start Load Kernel Modules"
@@ -15157,6 +15146,17 @@ msgstr ""
 #: ../nitropc/ubuntu/index.rst:2
 msgid "NitroPC with Ubuntu"
 msgstr "带有Ubuntu的NitroPC"
+
+#: ../nitropc/ubuntu/index.rst:16
+msgid ""
+"During boot, the system will prompt you to enter the passphrase to "
+"decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”. The"
+" system will then guide you through the process of creating a user "
+"account. After that you should have successfully booted the system and "
+"could already use it normally."
+msgstr ""
+"在启动过程中，系统会提示你输入密码来解密硬盘。输入默认的口令 "
+"\"PleaseChangeMe\"。然后，系统将引导你完成创建用户账户的过程。之后，你应该已经成功启动了系统，并且已经可以正常使用。"
 
 #: ../nitrophone/apps.rst:2 ../nitrophone/index.rst:19
 msgid "Apps"
@@ -26265,3 +26265,31 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "For now only One-Time Passwords (TOTP and HOTP) are supported."
 #~ msgstr "目前只支持一次性密码（TOTP 和 HOTP）。"
+
+#~ msgid ""
+#~ "In case the Network Manager icon "
+#~ "is not shown and when starting a"
+#~ " VM an error like “Domain sys-"
+#~ "net has failed to start: PCI "
+#~ "device dom0:03_00.0 does not exist” is"
+#~ " shown, proceed as follows:"
+#~ msgstr ""
+#~ "如果没有显示网络管理器图标，并且在启动虚拟机时出现类似 \"Domain sys-net "
+#~ "has failed to "
+#~ "start:显示PCI设备dom0:03_00.0不存在\"，请按以下步骤操作。"
+
+#~ msgid "Open menu -> Service: sys-net -> sys-net: Qube Settings"
+#~ msgstr "打开菜单 -> 服务：sys-net -> sys-net。Qube设置"
+
+#~ msgid "Go to Devices tab"
+#~ msgstr "转到设备选项卡"
+
+#~ msgid "Remove “Unknown device” from the right side"
+#~ msgstr "从右侧删除 \"未知设备\"。"
+
+#~ msgid "Add “Network controler” device"
+#~ msgstr "添加 \"网络控制仪 \"设备"
+
+#~ msgid "Click “OK” and restart the system."
+#~ msgstr "点击 \"确定 \"并重新启动系统。"
+
