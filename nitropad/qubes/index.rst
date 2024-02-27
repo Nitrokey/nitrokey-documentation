@@ -14,7 +14,7 @@ changed by you:
    above).
 
 2. Next, the system will prompt you to enter the passphrase to decrypt
-   the hard disk. The passphrase is initially “PleaseChangeMe”. 
+   the hard disk. The passphrase is initially "12345678". This was change on the 15.01.2024 so if "12345678" is not working try the old default: "PleaseChangeMe"
 
    .. figure:: ./images/QubesDiskPassword.jpg
       :alt: img3
@@ -26,16 +26,10 @@ changed by you:
 4. Open the pre-installed Nitrokey App and change the PINs of your
    Nitrokey as `described here <change-pins.html>`_.
 
-5. Change the passphrase for the hard disk encryption by running “sudo cryptsetup luksChangeKey /dev/sda2” in a terminal. This passphrase is different from your user acount's passphrase.
+5. Change the passphrase for the hard disk encryption by searching in the Qubes Menu for "Change Disk Passwort". This passphrase is different from your user acount's passphrase.
 
-In case the Network Manager icon is not shown and when starting a VM an
-error like “Domain sys-net has failed to start: PCI device dom0:03_00.0
-does not exist” is shown, proceed as follows:
+   .. figure:: ../../images/qubes/ChangeDiskPasswordQubes.png
+        :alt: Change Password Qubes Image 
 
-1. Open menu -> Service: sys-net -> sys-net: Qube Settings
-2. Go to Devices tab
-3. Remove “Unknown device” from the right side
-4. Add “Network controler” device
-5. Click “OK” and restart the system.
 
 .. include:: ../content/shared-index-content2.rst
