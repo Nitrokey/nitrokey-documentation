@@ -134,7 +134,7 @@ This may sound complex, but the NextBox comes with all you need to get
 through this process:
 
 1. Navigate to the Nextcloud NextBox-App
-2. Click on "Guided Dynamic DNS"
+2. Click on "Remote Access" -> "Guided Dynamic DNS"
 3. Insert a valid e-mail address you have access to into the first input field
 4. Insert the full sub-domain your NextBox shall be available through. As `deSEC`_ is 
    used here, your sub-domain always has to end with *dedyn.io*, so something like: 
