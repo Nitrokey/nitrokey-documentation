@@ -8,5 +8,6 @@ Technical Documentation
 
    led-colors
    factory-reset
+   soft-reset
    replace-drive
 
