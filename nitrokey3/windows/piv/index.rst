@@ -14,4 +14,5 @@ The *Personal Identity Verfication* (PIV) is based on the NIST special publicati
    :maxdepth: 1
    :glob:
 
+   access_control.rst
    guides/index.rst
