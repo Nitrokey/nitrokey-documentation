@@ -16,4 +16,5 @@ The *Personal Identity Verfication* (PIV) is based on the NIST special publicati
 
    access_control.rst
    certificate_management.rst
+   factory_reset.rst
    guides/index.rst
