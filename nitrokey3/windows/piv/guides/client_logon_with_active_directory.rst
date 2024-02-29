@@ -1,5 +1,5 @@
-Windows Login With PIV Smartcard Authentication
-===============================================
+Client Logon with Active Directory
+==================================
 
 This document explains how to provision the PIV function of a Nitrokey 3 for Windows smartcard logon manually with a key and a certificate.
 
@@ -94,7 +94,7 @@ Save the certificate signing request to a file ``request.csr``
 Move the request.csr file from the previous step to the server that hosts the certificate authority.
 Verify in the certificate template console (``certtmpl.msc`` ) that the template for the users can accept subject names from the request:
 
-.. figure:: images/piv/certtmpl-SN.png
+.. figure:: ../../images/piv/certtmpl-SN.png
    :alt: In the certificate template console, in the parameter for the authentication certificate template, toggle "supply in request" in the "subject name" tab.
 
 Open PowerShell and sign the certificate signing request with ``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``
@@ -112,12 +112,12 @@ Save the certificate as ``certificate.crt``
 
 Move ``certificate.der`` to the user Windows device, and open the certificate manager (**For the user, not the machine**):
 
-.. figure:: images/piv/user-cert.png
+.. figure:: ../../images/piv/user-cert.png
    :alt: Open the "manage user certificate control panel"
 
 Import the certificate:
 
-.. figure:: images/piv/import-cert.png
+.. figure:: ../../images/piv/import-cert.png
    :alt: In actions, all tasks, you can find the import action
 
 Once this is done, log out. Log in with the Nitrokey by using the “sign-in options”
