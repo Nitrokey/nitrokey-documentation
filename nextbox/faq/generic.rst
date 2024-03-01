@@ -8,6 +8,8 @@ Generic FAQ
   like a smartphone sim-card tray removal device.
   If this doesn't help, please make sure you have connected the NextBox correctly
   as described in Quickstart: :doc:`../gettingstarted`.
+  Otherwise you can try a :doc:`../technical/factory-reset` as long
+  as your NextBox doesn't contain any data you care about losing.
   If everything fails, please contact our customer support. Do note that our
   ability to help you might be limited if you changed your system configuration
   using for example ssh.
