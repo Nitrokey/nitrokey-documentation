@@ -2,8 +2,8 @@ Soft Reset
 =======================
 
 **If ever your NextBox doesn't start or behaves strangely the soft reset might fix your problems**
-The soft reset functionality tries to fix some common faliures on your NextBox.
-So whenever somethign is wrong, ie. the NextBox doesn't start, the first thing you could try is
+The soft reset functionality tries to fix some common failures on your NextBox.
+So whenever something is wrong, i.e. the NextBox doesn't start, the first thing you could try is
 a soft reset.
 
 **To soft reset your NextBox simply press the hardware button 2 times within 2 seconds.**
