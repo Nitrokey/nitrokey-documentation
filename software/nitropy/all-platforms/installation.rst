@@ -29,7 +29,7 @@ See the `pipx Installation Guide <https://pypa.github.io/pipx/installation/>`__ 
 
 .. note::
    **For Linux Users** - currently a transient dependency (``oscrypto``) is generating issues on some Linux distrubutions. 
-   The respective `GitHub issue <https://github.com/Nitrokey/pynitrokey/issues/431#issuecomment-1937704327>`_ documents the 
+   The respective `GitHub issue <https://github.com/Nitrokey/pynitrokey/issues/431#issuecomment-1937704327>`__ documents the 
    currently needed workaround::
    
        pipx inject --pip-args="--upgrade --force" pynitrokey "oscrypto @ git+https://github.com/wbond/oscrypto.git@1547f535001ba568b239b8797465536759c742a3"
@@ -69,7 +69,7 @@ nitropy requires Python 3.9 or 3.10.  If your default Python installation is old
 Arm Not Supported
 ~~~~~~~~~~~~~~~~~
 
-Currently, recent nitropy versions cannot be installed on Arm platforms due to a dependency issue (`GitHub issue <https://github.com/Nitrokey/pynitrokey/issues/265>`_).  As a workaround, you can use an x86 Python installation in a Rosetta terminal as described in `this discussion <https://stackoverflow.com/questions/71691598/how-to-run-python-as-x86-with-rosetta2-on-arm-macos-machine>`_).
+Currently, recent nitropy versions cannot be installed on Arm platforms due to a dependency issue (`GitHub issue <https://github.com/Nitrokey/pynitrokey/issues/265>`__).  As a workaround, you can use an x86 Python installation in a Rosetta terminal as described in `this discussion <https://stackoverflow.com/questions/71691598/how-to-run-python-as-x86-with-rosetta2-on-arm-macos-machine>`_).
 
 libusb-1.0.dylib not found
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
