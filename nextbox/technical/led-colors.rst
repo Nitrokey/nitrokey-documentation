@@ -8,6 +8,7 @@ Dimmed-out-Blue None         NextBox is booting
 Green           None         NextBox Daemon active and in regular operating mode
 Green           Fast-Blink   Nextcloud is starting up (docker starting)
 Blue            None         (Reset) button is currently being pressed
+Blue            Blink        Soft-Reset is ongoing
 Yellow          None         Initializing NextBox Daemon
 Yellow          Blink        NextBox Daemon update check/apply
 Red             Blink        Factory-Reset is ongoing
