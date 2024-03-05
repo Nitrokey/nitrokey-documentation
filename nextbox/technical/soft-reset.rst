@@ -6,7 +6,7 @@ The soft reset functionality tries to fix some common failures on your NextBox.
 So whenever something is wrong, i.e. the NextBox doesn't start, the first thing you could try is
 a soft reset.
 
-**To soft reset your NextBox simply press the hardware button 2 times within 2 seconds.**
+**To start the soft reset on your NextBox simply press the hardware button 2 times within 2 seconds.**
 
 The NextBox LED will change to *blue* on every press, after the second press
 it will change to blinking blue (see :doc:`LED documentation <led-colors>`).
