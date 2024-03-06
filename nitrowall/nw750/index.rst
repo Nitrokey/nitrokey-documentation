@@ -17,3 +17,4 @@ Getting Started
 
    factory-reset.rst  
    imei-change.rst
+   update-firmware.rst
