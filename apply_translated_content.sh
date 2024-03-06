@@ -63,7 +63,7 @@ do
 		
 		if [ $build_mode == "full" ]
 		then
-			rm /var/www/sphinx/www/static/$lang
+			rm -r /var/www/sphinx/www/static/$lang
 			mv /var/www/sphinx/sphinx/sphinx_build_temp/$lang-temp /var/www/sphinx/www/static/$lang
 		elif [ $build_mode == "incremental" ]
 		then
