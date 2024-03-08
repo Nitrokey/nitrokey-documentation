@@ -70,3 +70,8 @@ Car Sharing Apps
 ################
 
 Some car sharing apps (such as SHARE NOW) use Bluetooth-based location service to unlock a car in the proximity. To enable this choose: Settings -> Location -> Location Services -> Bluetooth scanning -> on
+
+Banking Apps
+############
+
+There is an online archive for banking apps available, which lists many apps and if they are working or not: https://privsec.dev/posts/android/banking-applications-compatibility-with-grapheneos/
