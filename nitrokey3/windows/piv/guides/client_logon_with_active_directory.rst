@@ -1,123 +1,175 @@
 Client Logon with Active Directory
 ==================================
 
-This document explains how to provision the PIV function of a Nitrokey 3 for Windows smartcard logon manually with a key and a certificate.
+This document explains how to use the PIV application of a Nitrokey 3 for smartcard logon with Active Directory.
 
 In the future, this manual provisioning may be automated through a Windows MiniDriver.
 
 .. warning::
-   The PIV function of the Nitrokey 3 is currently considered unstable and is not available on the stable firmware releases.
-   To obtain that functionality it is required to install a test firmware. Subsequent firmware updates may lead to loss of data and cryptographic keys.
+   The PIV application of the Nitrokey 3 is currently considered unstable and is not available on the stable firmware releases.
+   To obtain that functionality it is required to install a test firmware.
+   Subsequent firmware updates may lead to loss of data and cryptographic keys.
    Please refer to `the firmware update documentation <firmware-update.html#firmware-release-types>`__ for more information.
 
 Prerequisites
 -------------
 
-* A Windows server with:
-   * Active Directory (`instructions <https://serverspace.io/support/help/installing-active-directory-on-windows-server-2019/>`__)
-   * A certificate authority (CA), with a certificate template for logon authentication using RSA 2048 bit keys:
-      * Certificate Authority (`instructions <https://learn.microsoft.com/en-us/windows-server/networking/core-network-guide/cncg/server-certs/server-certificate-deployment-overview>`__)
-      * Authentication template (`instructions <https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-firewall/configure-the-workstation-authentication-certificate-template>`__)
-* A Windows user machine joined to the domain of the server
-* A Nitrokey 3 with `PIV <https://github.com/Nitrokey/piv-authenticator>`__
-* A Linux system with `pivy <https://github.com/arekinath/pivy>`__ and PCSCD installed (``sudo apt install pcscd``), to provision the Nitrokey (step 1, 2 and 4).
-  Instead of a separate Linux system you can `install WSL <https://learn.microsoft.com/en-us/windows/wsl/install>`__ on Windows.
-  Note that you need to `virtually attach <https://devblogs.microsoft.com/commandline/connecting-usb-devices-to-wsl/>`__ the Nitrokey to WSL and start PCSCD (``sudo service start pcscd``) before using pivy.
+The setup requires administrative access to the machines running Active Directory Directory Services (ADDS) and Active Directory Certificate Services (ADCS).
+On the client machine only access to the respective user account used for logon is required.
 
-1. Generate a key on the Nitrokey
----------------------------------
+* Windows server (supported versions are Windows Server 2016, 2019, 2022 in all editions)
+   * ADDS role installed and configured.
+   * ADCS role installed and *Enterprise-CA* with root certificate configured.
+      * Each Domain Controller (DC) must have a *Domain Controller*, *Domain Controller Authentication*, and *Kerberos Authentication* certificate issued.
+      * If you have clients leaving the company network, make sure the published full and delta certificate revocation lists (CRL) are retrievable from external networks.
+* Windows client (supported versions are Windows 10, 11 in editions *Professional* and *Enterprise*)
+   * Client must be a domain member of the Active Directory (AD) domain.
+* Nitrokey 3 with PIV application.
 
-The key is generated in slot 9A (authentication).
+Configure smartcard logon for use with Active Directory (AD)
+------------------------------------------------------------
 
-.. code-block::
+The smartcard logon requires a certificate template in the certificate authority (CA) of the the domain.
+This template defines the values and constraints of the user certificates.
+It is used to sign the Certificate Request (CSR) during provisioning of the Nitrokey.
 
-   pivy-tool -a rsa2048 generate 9A
+1. Signing a certificate request for smartcard logon requires to create a certificate template in the certificate authority.
+
+   .. tabs::
+      .. tab:: MMC
+         1. From the Command Line, PowerShell, or Run, type ``certtmpl.msc`` and press Enter.
+         2. In the detail pane select the template **Smartcard Logon**.
+         3. In the menu bar click **Actions → All Tasks → Duplicate Template**.
+         4. Set the settings below on the template, according to the mentioned tab.
+
+            **Compatibility**
+               * Disable **Show resulting changes**
+               * Set **Certificate Authority** and **Certificate recipient** to the oldest clients in the domain which are supposed to use smartcard logon.
+
+                  .. important::
+                     If you want to use Elliptic Curve (EC) keys your clients must be not older than Windows Server 2008 and Windows Vista.
+
+            **General**
+               * Set a **Template display name**.
+               * Set the **Validity period** and **Renewal period**.
+
+            **Request handling**
+               * Set a purpose of **Signature and smartcard logon**.
+
+            **Cryptography**
+               * Set a provider category of **Key Storage Provider**.
+               * Set a algorithm name and minimum key size.
+
+                  .. important::
+                     Microsoft recommends to use the RSA algorithm with a key length of ``2048`` Bit.
+                     If you choose to use Eliptic Curve (EC) keys you need to make additional changes on your client computers.
+
+            **Subject Name**
+               * Set **Supply in the request**.
+         5. Confirm the template creation with **OK**.
+
+2. After the creation of a certificate template, the template must be issued to be used by the clients.
+
+   .. tabs::
+      .. tab:: MMC
+         1. From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press Enter.
+         2. In the navigation pane expand the Certificate Authority (CA) and navigate to **Certificate Templates**.
+         3. In the menu bar click **Action → New → Certificate Template to Issue**.
+         4. Select the certificate template you want to issue and confirm with **OK**.
+
+
+Provision Nitrokey 3 for smartcard logon with Active Directory
+--------------------------------------------------------------
+
+The smartcard logon requires to provision a Nitrokey for an user in Active Directory.
+The provisiong contains the private key and Certificate Singing Request (CSR) generation.
+The certificate is then written to the Nitrokey.
+
+.. warning::
+   Before following the steps below make sure the Active Directory user account you want to use for smartcard logon exists.
+   A creation time of the certificate before the creation time of the user account will lead to a failed logon.
+
+.. important::
+   If the PIV application on the Nitrokey was not used before, perform a initialization with ``nitropy nk3 piv init`` first.
+
+1. Generate a private key and write the CSR to file with the command below.
+
+   .. code-block::
+
+      nitropy nk3 piv generate-key --key 9A --algo <algorithm> --subject-name <subject-name> --subject-alt-name-upn <subject-alternative-name> --out-file <file>
+
+   The value of ``<algorithm>`` is the used algorithm with its key length, e.g. ``rsa2048``.
+   The values of ``<subject-name>`` and ``<subject-alternative-name>`` corresponds typically to the ``commonName`` and ``userPrincipalName`` attribute of the Active Directory user account.
+
+2. Sign the CSR with the certificate authority (CA) of the domain with the command below.
+
+   .. code-block::
+
+      certreq -attrib CertificateTemplate:<template-name> -submit <file>
+   
+   The value of ``<template-name>`` is the name of the certificate template for smartcard logon.
+   The value of ``<file>`` is the certificate singing request file.
+
+3. Write the signed certificate to the Nitrokey with the command below.
+
+   .. code-block::
+
+      nitropy nk3 piv write-certificate --format PEM --path <file>
+
+   The value of ``<file>`` is the certificate file.
+
+
+Revoke smartcard logon for use with Active Directory (AD)
+---------------------------------------------------------
+
+The issued user logon certificates are listed in the Active Directory Certificate Services (ADCS).
+From ADCS the certificates can be revoked, which adds them to the configured Certificate Revocation List (CRL).
+This is required in case of a lost or broken Nitrokey.
+
+.. important::
+   It is strongly advised to never leave unused user certificates without revoking them.
 
 .. note::
-   If the administration key is not the default one, it can be specified with ``-A 3des -K 010203040506070801020304050607080102030405060708`` . The argument to ``-A`` can also be ``aes256``, and the argument to ``-K`` is the key in hexadecimal.
+   It is possible to temporarily revoke a certificate with the reason *Certificate Hold*.
+   This revocation can be reverted and is hence not permanent.
 
-The user PIN can also be specified with ``-P 123456``, or ``-P <value>`` if it is not the default. If ``-P`` is not provided, it will be asked for after key generation.
+.. tabs::
+   .. tab:: MMC (certsrv.msc)
+      1. From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press Enter.
+      2. In the navigation pane expand the certificate authority (CA) and navigate to **Issued Certificates**.
+      3. In the detail pane select the user certificate you want to revoke.
+      4. In the menu bar click **Action → All Tasks → Revoke Certificate**.
+      5. Specifiy a reason for the revocation, date and time, and confirm with **Yes**.
+      6. In the navigation pane navigate to **Revoked Certificates**.
+      7. In the menu bar click **Action → All Tasks → Publish**.
+      8. Select the revocation list you want to publish and confirm with **OK**.
 
-This applies to all ``pivy-tool`` commands.
+.. note::
+   During each smartcard logon attempt Windows checks if the certificate presented by the smartcard is listed on a Certificate Revocation List (CRL).
+   If the certificate is found on a CRL the logon is denied.
+   Each CRL contains a validity to make them expire.
+   Windows caches the fetched CRL and updates them if the CRL is about to expire.
+   Hence a revocation is not immediate and depends on the expiration of the CRL the client has.
 
-This step can take a couple of minutes for RSA keys, as the pure software implementation is slow.
 
-**Expected output**:
+Import a user smartcard certificate to the personal certificate store
+---------------------------------------------------------------------
 
-.. code-block::
+The user certificate which is stored on the Nitrokey can be imported to the user's personal certificate store.
+In certain situations this is a required procedure.
 
-   ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKO5ENwrK3qKBAgDkyq1tfiw5JxnoCEIiM3Vc+8Eylux04r1sgjHEyqbOvpScObZuchxFZZ5LdeHynvFn3c07K4HpoZ/7NjLzUYOmlVAy4wpEwRs9psbrT6wbvHVLyffZiiSPW15HHQKcUZZ30WDunh5m7xzvY9ej810QIW/P724MFWTbRdpqmG8m1qWCUM5dqkmpiprI/WeD+VmTcQWbJJ+oyoPyxmwzGyAotl7mVC6EYdcfvyBSNQdVdGfYGxjNEec4aWxoFRg4ADfpPnYD+gLxHcj/9s7o/wdMhXRiSio1tjsEjaeuOICGLaiiLGMfLxpfEApb8qJgsEFgYl6kn PIV_slot_9A@9E424375A38449E59B3DF89D9B90E601
+.. tabs::
+   .. tab:: MMC (certmgr.msc)
+      1. Make sure you are logged on to the user account the certificate corresponds to.
+      2. From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press Enter.
+      3. In the navigation pane expand the **Personal** key store and navigate to **Certificates**.
+      4. In the menu bar click **Action → All Tasks → Import**.
+      5. Follow the import wizard and provide the user certificate file when requested.
+      6. After the import completed check the detail pane for the imported certificate.
+         If the Nitrokey is connected, the properties of the certificate should show the message *You have a private key that corresponds to this certificate.* indicating that the private on the Nitrokey could be identified.
 
-2. Generate a Certificate Signing Request (CSR)
------------------------------------------------
-
-The following command generates a certificate signing request (CSR) for the key in the authentication slot.
-
-.. code-block::
-
-   pivy-tool -n <cn-or-dn> -u <upn> -T user-auth req-cert 9A
-
-In the above command replace ``<cn-or-dn>`` and ``<upn>`` with their respective values.
-The values are based on the Active Directory user account, for which the CSR is generated.
-The value for ``<cn-or-dn>`` is the value of the ``commonName`` attribute.
-Depending on the *Workstation Authentication Template* configuration this field might needs to contain the value from the ``distinguishedName`` attribute.
-The value for ``<upn>`` is the value of the ``userPrincipal`` attribute.
-
-A successful generation of the CSR returns the certificate request in PEM format.
-
-.. code-block::
-
-   -----BEGIN CERTIFICATE REQUEST-----
-   MIIC4DCCAcgCAQEwFTETMBEGA1UEAwwKTml0cm8gVGVzdDCCASIwDQYJKoZIhvcN
-   AQEBBQADggEPADCCAQoCggEBAMo7kQ3CsreooECAOTKrW1+LDknGegIQiIzdVz7w
-   TKW7HTivWyCMcTKps6+lJw5tm5yHEVlnkt14fKe8WfdzTsrgemhn/s2MvNRg6aVU
-   DLjCkTBGz2mxutPrBu8dUvJ99mKJI9bXkcdApxRlnfRYO6eHmbvHO9j16PzXRAhb
-   8/vbgwVZNtF2mqYbybWpYJQzl2qSamKmsj9Z4P5WZNxBZskn6jKg/LGbDMbICi2X
-   uZULoRh1x+/IFI1B1V0Z9gbGM0R5zhpbGgVGDgAN+k+dgP6AvEdyP/2zuj/B0yFd
-   GJKKjW2OwSNp644gIYtqKIsYx8vGl8QClvyomCwQWBiXqScCAwEAAaCBhTCBggYJ
-   KoZIhvcNAQkOMXUwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIGwDAfBgNV
-   HSUEGDAWBggrBgEFBQcDAgYKKwYBBAGCNxQCAjAyBgNVHREEKzApoCcGCisGAQQB
-   gjcUAgOgGQwXbml0cm9AdGVzdC5uaXRyb2tleS5jb20wDQYJKoZIhvcNAQELBQAD
-   ggEBAH6XBlBmc7dQP0mt7uXOyIu8xRSYSfxKBJGjPl0IKDHWke3/4frU5C99/KS/
-   b9/T4JrlZa/9letjMj8hV4a+pdE0Gpxy+Ac1a9XlMki35UESOXC0JSyirBBLnNtD
-   qtHKtfPeQ3Csbsj57qjdqBMlWII5cz3jO9EpEG2FgxreJwY5s58KuKit01AJDIWt
-   GYg9P7MblEEO8iPjcFqccsPTRgU04COT6dOFZ8bGZ18UsnAVMXPOdcR7cppp8mL+
-   QZCyqdk1m+91rtkJPkqVUK/0o8MJj5k3Ch4ANvQEWnOabRumJaHDu4PmhsqLnQJA
-   eGQvuPRBmR71GRkGmqu+e1oyze8=
-   -----END CERTIFICATE REQUEST-----
-
-Save the certificate signing request to a file ``request.csr``
-
-3. Sign the CSR
----------------
-
-Move the request.csr file from the previous step to the server that hosts the certificate authority.
-Verify in the certificate template console (``certtmpl.msc`` ) that the template for the users can accept subject names from the request:
-
-.. figure:: ../../images/piv/certtmpl-SN.png
-   :alt: In the certificate template console, in the parameter for the authentication certificate template, toggle "supply in request" in the "subject name" tab.
-
-Open PowerShell and sign the certificate signing request with ``certreq.exe -attrib CertificateTemplate:Nitrotest -submit request.csr``
-
-This will open a GUI where you can select the correct Certificate Authority if there are multiple on this server.
-Save the certificate as ``certificate.crt``
-
-4. Store the certificate on the Nitrokey
-----------------------------------------
-
-``cat certificate.der | pivy-tool write-cert 9A``
-
-5. Import the certificate to the user account
----------------------------------------------
-
-Move ``certificate.der`` to the user Windows device, and open the certificate manager (**For the user, not the machine**):
-
-.. figure:: ../../images/piv/user-cert.png
-   :alt: Open the "manage user certificate control panel"
-
-Import the certificate:
-
-.. figure:: ../../images/piv/import-cert.png
-   :alt: In actions, all tasks, you can find the import action
-
-Once this is done, log out. Log in with the Nitrokey by using the “sign-in options”
+   .. tab:: PowerShell
+      1. Make sure you are logged on to the user account the certificate corresponds to.
+      2. Open PowerShell.
+      3. Change to the personal certficate store of the user with ``Set-Location -Path cert:\CurrentUser\My``.
+      4. Import the certificate to the store with ``Import-Certificate -Filepath '<path>'``, replacing ``<path>`` with the certificate file path.
