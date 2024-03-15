@@ -16,11 +16,7 @@ passwordless authentication:
 -  With **two-factor authentication** (2FA), the Nitrokey 3 is
    checked in addition to the password.
 
-The Nitrokey 3 can be used with any current browser.
-
-.. important::
-
-   Currently the Nitrokey App can not be used for the Nitrokey 3.
+The Nitrokey 3 can be used with any current browser and with the `Nitrokey App 2 </software/nk-app2/>`__.
 
 Passwordless Authentication
 ---------------------------
