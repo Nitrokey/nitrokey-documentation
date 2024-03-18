@@ -1,8 +1,6 @@
 Two-factor Authentication for Google
 ====================================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 These are the basic steps for registering the Nitrokey Pro or Nitrokey Storage as a second factor of a Google account:

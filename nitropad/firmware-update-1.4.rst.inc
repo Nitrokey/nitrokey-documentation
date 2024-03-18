@@ -1,8 +1,6 @@
 Firmware Update v1.4+
 =======================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 Starting with v1.4 due to elementary changes inside Heads and the firmware

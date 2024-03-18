@@ -1,8 +1,6 @@
 Importing Keys And Certificates
 ===============================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 Generally the concept to import key-pairs and/or certificates

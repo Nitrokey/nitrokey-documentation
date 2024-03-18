@@ -72,7 +72,7 @@ gettext_compact = "string"
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['venv/*', 'nethsm/_*.rst', '*/*/product_platform_heading.rst', 'to-be-integrated.rst']
+exclude_patterns = ['venv/*', 'nethsm/_*.rst', 'to-be-integrated.rst']
 
 # The name of the Pygments (syntax highlighting) style to use.
 #pygments_style = "solarizeddark"

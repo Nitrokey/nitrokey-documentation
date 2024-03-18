@@ -1,8 +1,6 @@
 Verify Sealed Hardware
 ======================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 If you ordered your NitroPad with sealed screws and in a sealed bag, it allows you to check if the NitroPad has been tampered with during shipping.

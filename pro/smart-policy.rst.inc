@@ -1,8 +1,6 @@
 Login to Windows Domain Computers With MS Active Directory
 ==========================================================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 1. Download and install the latest

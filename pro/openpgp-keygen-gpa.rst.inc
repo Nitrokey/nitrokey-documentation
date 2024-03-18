@@ -1,8 +1,6 @@
 OpenPGP Key Generation Using GPA
 ================================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 The following instructions explain the generation of OpenPGP keys directly on the Nitrokey with help of the GNU Privacy Assistant (GPA). You won’t be able to create a backup of these keys. Thus, if you lose the Nitrokey or it breaks you can not decrypt mails or use these keys anymore. Please see `here <openpgp-outlook.html>`_ for a comparison of the different methods to generate OpenPGP keys.

@@ -1,8 +1,6 @@
 Multiple Identities
 ===================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 The multiple identites feature allows to use 3 virtual smart cards in place of one, giving bigger flexibility in the every day use, as well as separation between user identities (business, personal etc.) or even allowing usage of it for more than one user (PINs are separate).

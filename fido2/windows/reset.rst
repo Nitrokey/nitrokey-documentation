@@ -1,8 +1,6 @@
 Nitrokey Reset
 --------------
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 The Factory Reset operation deletes the FIDO secret keys stored on the Nitrokey and generates new ones. Afterwards the Nitrokey behaves like a new device.
