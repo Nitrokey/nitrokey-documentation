@@ -1,8 +1,6 @@
 Change Disk Encryption Passphrase
 =================================
 
-.. include:: ./product_platform_heading.rst
-
 1. To change the passphrase for disk encryption, first click on
    “Activities” in the upper left corner and enter “disk” in the search
    bar. Then select the “Disks” program that appears in the middle of

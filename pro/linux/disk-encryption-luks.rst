@@ -1,8 +1,6 @@
 Full-Disk Encryption With cryptsetup/LUKS
 =========================================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 This guide shows how to configure LUKS-encrypted volumes, to authenticate at boot with `Nitrokey Pro <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ or `Nitrokey Storage <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__.

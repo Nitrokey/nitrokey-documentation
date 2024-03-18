@@ -1,8 +1,6 @@
 Firmware Update
 ===============
 
-.. include:: ./product_platform_heading.rst
-
 .. important::
    Updating could lead to data loss, so make sure you have proper backup login methods enabled and/or ensure that
    the Nitrokey Start is not the only way to authenticate/2FA for your 

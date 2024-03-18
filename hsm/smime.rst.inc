@@ -1,8 +1,6 @@
 S/MIME Email Encryption
 =======================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 Prerequisites

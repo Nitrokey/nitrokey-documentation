@@ -1,8 +1,6 @@
 TLS Setup With Apache2 
 ======================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 .. hint::
