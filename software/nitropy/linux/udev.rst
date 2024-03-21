@@ -23,7 +23,3 @@ After installing the rules, you need to reload them::
 If you still cannot access your device, try again after rebooting your system.
 If you encouter issues, look at this `github comment <https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__
 for some debugging hints.
-
-.. todo::
-
-   describe requirements: systemd, load order
