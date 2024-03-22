@@ -60,6 +60,7 @@ CLI Method
 
    You can do so by using these commands:
 
+   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       $ sudo adduser <backup_user>
@@ -119,6 +120,7 @@ CLI Method
 
       The Output should be something like the following:
 
+      .. rstcheck: ignore-next-code-block
       .. code-block:: bash
 
          /lib/x86_64-linux-gnu/security/pam_u2f.so: \ ELF 64-bit LSB shared object, x86-64, version 1 (SYSV),\ dynamically linked, BuildID[sha1]=1d55e1b11a97be2038c6a139579f6c0d91caedb1, stripped
@@ -164,9 +166,10 @@ CLI Method
          user. For this purpose the previous command takes the ``-u``
          option, to specify a user, like in the example below:
 
-      .. code-block:: bash
+         .. rstcheck: ignore-next-code-block
+         .. code-block:: bash
 
-         $ pamu2fcfg -u <username> > ~/.config/Nitrokey/u2f_keys
+            $ pamu2fcfg -u <username> > ~/.config/Nitrokey/u2f_keys
 
       -  For individual user configuration you should point to the home
          directory in the next step, or not include the ``authfile`` option

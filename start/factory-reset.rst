@@ -18,6 +18,7 @@ To change the identity it suffices to send a custom CCID command. This could be 
 
 2. Connect your Nitrokey Start and verify that it got recognized.
 
+   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       $ nitropy start list
@@ -27,6 +28,7 @@ To change the identity it suffices to send a custom CCID command. This could be 
 
 3. Change the identity, by replacing ``<ID>`` with ``0``, ``1``, or ``2``.
 
+   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       $ nitropy start set-identity <ID>
@@ -39,7 +41,9 @@ Reset
 
 .. code-block:: bash
 
- $ gpg --card-edit` -> admin -> factory-reset
+   $ gpg --card-edit
+
+In the menu enter `admin` and then `factory-reset`
 
 This will reset the current identity. To reset  all identitites the following needs to be done:
 

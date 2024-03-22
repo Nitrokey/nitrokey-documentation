@@ -105,6 +105,7 @@ Install OpenVPN
    If you want to check the version, it possible by calling ``--version``
    and print the following:
 
+   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       $ sudo openvpn --version
@@ -306,14 +307,10 @@ Configure the OpenVPN server
 
 A connection that uses TLS requires multiple `certificates and keys for authentication <https://wiki.teltonika-networks.com/view/OpenVPN_configuration_examples>`__. Now that we issued and signed those, we can place them in the right directories. The breakdown of the certificates and keys that must be located at the root directory are the following:
 
-.. code-block:: bash
-
-   OpenVPN server 
-
-       - The root certificate file (CA.crt or chain.crt in our setup)
-       - Server certificate
-       - Server key
-       - Diffie Hellman Parameters (optional)
+- The root certificate file (CA.crt or chain.crt in our setup)
+- Server certificate
+- Server key
+- Diffie Hellman Parameters (optional)
 
 On your OpenVPN server, now you can create the configuration file ``server.conf`` with your favorite text editor. The file can be configured according to your needs, while we make sure to change the server certificate and key sections according the names you chose for the your the files we signed:
 
@@ -459,12 +456,9 @@ Configure the client to interact with the Nitrokey
 
 Now back on the client machine, we will plug the Nitrokey Pro and use it to establish the VPN connection with the server. In general terms, a connection that uses TLS requires multiple certificates and keys for authentication:
 
-.. code-block:: bash
-
-   OpenVPN client 
-       - The root certificate file (`chain.crt`)
-       - Client certificate
-       - Client key
+- The root certificate file (`chain.crt`)
+- Client certificate
+- Client key
 
 For this guide we can the following ``client.conf`` file, and add the required options to it accordingly:
 
@@ -630,6 +624,7 @@ Start the OpenVPN client
 
    When executing OpenVPN client, Nitrokey’s PIN needs to be entered:
 
+   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       $ sudo openvpn --client --config client.conf 
@@ -639,9 +634,10 @@ Start the OpenVPN client
       Enter User PIN (OpenPGP card) token Password: ******
 
    .. warning::
-   
+
       Unfortunately OpenVPN doesn’t seem to be able to establish a handshake and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
 
+   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
       
       This is what the error output looks like:
@@ -672,6 +668,7 @@ Start the OpenVPN client
 
    In some reported cases it does not prompt for a PIN on the terminal. One workaround would be to use to use this command to login with the PIN:
 
+   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       $ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>
