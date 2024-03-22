@@ -39,5 +39,4 @@ Configuring hidden volumes
 4. Define the storage area to be used. Hidden volumes are stored in the free areas of the encrypted volume. When creating multiple hidden volume, you need to allocate a part of the free area for each volume, making sure they do not overlap.
 
    .. figure:: /storage/images/hidden-storage-passphrase.png
-   :alt: Hidden volume dialog box
-
+      :alt: Hidden volume dialog box

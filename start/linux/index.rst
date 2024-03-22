@@ -17,10 +17,10 @@ Nitrokey Start, Linux
    ones <openpgp.html>`_.
 
    .. note::
-   It is indeed necessary to first import or create new keys and
-   change the PINs afterwards. Otherwise changing User PIN will fail!
-   Furthermore overriding keys results in PIN reset (default values),
-   please keep this in mind!
+      It is indeed necessary to first import or create new keys and
+      change the PINs afterwards. Otherwise changing User PIN will fail!
+      Furthermore overriding keys results in PIN reset (default values),
+      please keep this in mind!
 
 4. Change the Admin PIN (default: ``12345678``) and then the User PIN (default: ``123456``) to your own choices.
 
