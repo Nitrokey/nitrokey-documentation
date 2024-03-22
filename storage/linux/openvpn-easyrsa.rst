@@ -53,91 +53,89 @@ As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you may follo
 
 Alternatively you may set up your own CA on a `on a separate machine <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-a-certificate-authority-ca-on-ubuntu-20-04>`__, or use the OpenVPN tutorial which also relies on `Easy-RSA <https://openvpn.net/community-resources/setting-up-your-own-certificate-authority-ca/>`__. The last 2 options rely on software solutions for key management.
 
---------------
-
 Server side
 -----------
 
-1. Install OpenVPN
-^^^^^^^^^^^^^^^^^^
+Install OpenVPN
+^^^^^^^^^^^^^^^
 
 1. First we need to enable IP Forwarding by editing ``/etc/sysctl.conf`` file
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ editor /etc/sysctl.conf
+      $ editor /etc/sysctl.conf
 
 2. Uncomment or edit accordingly the following line
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   net.ipv4.ip_forward=1
+      net.ipv4.ip_forward=1
 
 3. Close after saving it, and enter this command
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ sysctl -p
+      $ sysctl -p
 
-Once IP forwarding is done, we will need to download the latest release of OpenvPN for our Debian 10 server, according to `these instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`__:
+   Once IP forwarding is done, we will need to download the latest release of OpenvPN for our Debian 10 server, according to `these instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`__:
 
 4. Change to root and download the GPG key that signed the package
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ sudo -s 
-   # wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
+      $ sudo -s 
+      # wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
 
 5. Add the URL of the adequate OpenVPN packages to the ``sources.list`` file
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   # echo "deb http://build.openvpn.net/debian/openvpn/release/2.5 buster main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
-   # exit
+      # echo "deb http://build.openvpn.net/debian/openvpn/release/2.5 buster main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
+      # exit
 
-We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN `version
-2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`__ to login.
+   We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN `version
+   2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`__ to login.
 
 6. Next we download OpenVPN
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ sudo apt install openvpn
+      $ sudo apt install openvpn
 
-If you want to check the version, it possible by calling ``--version``
-and print the following:
+   If you want to check the version, it possible by calling ``--version``
+   and print the following:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ sudo openvpn --version
-   OpenVPN 2.5_beta3 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Sep  1 2020
-   library versions: OpenSSL 1.1.1d 10 Sep 2019, LZO 2.10
-   Originally developed by James Yonan
-   Copyright (C) 2002-2018 OpenVPN Inc <sales@openvpn.net>
-   Compile time defines: enable_async_push=no enable_comp_stub=no enable_crypto_ofb_cfb=yes enable_debug=yes enable_def_auth=yes enable_dependency_tracking=no \ enable_dlopen=unknown enable_dlopen_self=unknown enable_dlopen_self_static=unknown enable_fast_install=needless enable_fragment=yes enable_iproute2=yes \ enable_libtool_lock=yes enable_lz4=yes enable_lzo=yes enable_maintainer_mode=no enable_management=yes enable_multihome=yes enable_pam_dlopen=no enable_pedantic=no \ enable_pf=yes enable_pkcs11=yes enable_plugin_auth_pam=yes enable_plugin_down_root=yes enable_plugins=yes enable_port_share=yes enable_selinux=no \ enable_shared=yes enable_shared_with_static_runtimes=no enable_silent_rules=no enable_small=no enable_static=yes enable_strict=no enable_strict_options=no \ enable_systemd=yes enable_werror=no enable_win32_dll=yes enable_x509_alt_username=yes with_aix_soname=aix with_crypto_library=openssl with_gnu_ld=yes \ with_mem_check=no with_sysroot=no
+      $ sudo openvpn --version
+      OpenVPN 2.5_beta3 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Sep  1 2020
+      library versions: OpenSSL 1.1.1d 10 Sep 2019, LZO 2.10
+      Originally developed by James Yonan
+      Copyright (C) 2002-2018 OpenVPN Inc <sales@openvpn.net>
+      Compile time defines: enable_async_push=no enable_comp_stub=no enable_crypto_ofb_cfb=yes enable_debug=yes enable_def_auth=yes enable_dependency_tracking=no \ enable_dlopen=unknown enable_dlopen_self=unknown enable_dlopen_self_static=unknown enable_fast_install=needless enable_fragment=yes enable_iproute2=yes \ enable_libtool_lock=yes enable_lz4=yes enable_lzo=yes enable_maintainer_mode=no enable_management=yes enable_multihome=yes enable_pam_dlopen=no enable_pedantic=no \ enable_pf=yes enable_pkcs11=yes enable_plugin_auth_pam=yes enable_plugin_down_root=yes enable_plugins=yes enable_port_share=yes enable_selinux=no \ enable_shared=yes enable_shared_with_static_runtimes=no enable_silent_rules=no enable_small=no enable_static=yes enable_strict=no enable_strict_options=no \ enable_systemd=yes enable_werror=no enable_win32_dll=yes enable_x509_alt_username=yes with_aix_soname=aix with_crypto_library=openssl with_gnu_ld=yes \ with_mem_check=no with_sysroot=no
 
-2. Install Easy-RSA
-^^^^^^^^^^^^^^^^^^^
+Install Easy-RSA
+^^^^^^^^^^^^^^^^
 
 To build the PKI, we will download the latest version of Easy-RSA on the server and client machines. To get the latest release, go to the `Releases page on the official EasyRSA GitHub project <https://github.com/OpenVPN/easy-rsa/releases>`__, copy the download link for the file ending in ``.tgz``, and then paste it into the following command:
 
 1. Download the latest release
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ cd ~
-   wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-3.0.7.tgz
+      $ cd ~
+      wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-3.0.7.tgz
 
 2. Extract the tarball
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ cd ~
-   $ tar xvf EasyRSA-3.0.7.tgz
-   $ mv EasyRSA-3.0.7/ easyrsa/ # rename folder
+      $ cd ~
+      $ tar xvf EasyRSA-3.0.7.tgz
+      $ mv EasyRSA-3.0.7/ easyrsa/ # rename folder
 
-3. Create a PKI for OpenVPN server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Create a PKI for OpenVPN server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Before you can create your OpenVPN server’s private key and certificate, you need to create a local Public Key Infrastructure directory on your OpenVPN server. You will use this directory to manage the server and clients’ certificate requests, instead of making them directly on your CA server.
 
@@ -145,35 +143,37 @@ To build a PKI directory on your OpenVPN server, you’ll need to populate a fil
 
 1. Create a ``vars`` file
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ touch ~/easyrsa/vars
-   $ cd easyrsa/
-   $ editor vars
+      $ touch ~/easyrsa/vars
+      $ cd easyrsa/
+      $ editor vars
 
 2. Once the file is opened, paste in the following two lines
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   set_var EASYRSA_ALGO "ec"
-   set_var EASYRSA_DIGEST "sha512"
+      set_var EASYRSA_ALGO "ec"
+      set_var EASYRSA_DIGEST "sha512"
 
-These are the only two lines that you need in this ``vars`` file on your OpenVPN server since it will not be used as a Certificate Authority. They will ensure that your private keys and certificate requests are configured to use Elliptic Curve Cryptography (ECC) to generate keys, and secure signatures for your clients and OpenVPN server.
+   These are the only two lines that you need in this ``vars`` file on your OpenVPN server since it will not be used as a Certificate Authority.
+   They will ensure that your private keys and certificate requests are configured to use Elliptic Curve Cryptography (ECC) to generate keys, and secure signatures for your clients and OpenVPN server.
 
-In regards to the choice of the cryptographic algorithms, I follow the model in `this tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-centos-8>`__, and you can customize these according to your specific needs.
+   In regards to the choice of the cryptographic algorithms, I follow the model in `this tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-centos-8>`__, and you can customize these according to your specific needs.
 
 3. Initialize the PKI
 
-Once you have populated the ``vars`` file you can proceed with creating the PKI directory. To do so, run the easyrsa script with the init-pki option:
+   Once you have populated the ``vars`` file you can proceed with creating the PKI directory.
+   To do so, run the easyrsa script with the init-pki option:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ ./easyrsa init-pki
+      $ ./easyrsa init-pki
 
 After you’ve initialized your PKI on the OpenVPN server, you are ready to move on to the next step, which is creating an OpenVPN server certificate request and private key.
 
-4. Create ``server.req`` and ``server.key``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Create ``server.req`` and ``server.key``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now that your OpenVPN server has all the prerequisites installed, the next step is to generate a key pair composed of a private key (to keep secret), and a Certificate Signing Request (``.csr``) on your OpenVPN server.
 
@@ -193,41 +193,41 @@ In general terms, on systems where we generate a key and request, these files ar
 
 1. Create the signing request for the server
 
-Navigate to the ``~/easyrsa`` directory on your OpenVPN Server as your non-root user, and enter the following commands:
+   Navigate to the ``~/easyrsa`` directory on your OpenVPN Server as your non-root user, and enter the following commands:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ cd easyrsa/
-   $ ./easyrsa gen-req server nopass
+      $ cd easyrsa/
+      $ ./easyrsa gen-req server nopass
 
-This will create a private key for the server and a certificate request file called ``server.req``.
+   This will create a private key for the server and a certificate request file called ``server.req``.
 
-Once you have a signed certificate, you’ll transfer it back to the OpenVPN server.
+   Once you have a signed certificate, you’ll transfer it back to the OpenVPN server.
 
 2. Copy the key to the OpenVPN server directory
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ sudo cp /home/admin/EasyRSA/pki/private/server.key /etc/openvpn/server/
+      $ sudo cp /home/admin/EasyRSA/pki/private/server.key /etc/openvpn/server/
 
-After completing these steps, you have successfully created a private key for your OpenVPN server. You have also generated a Certificate Signing Request for the OpenVPN server.
+   After completing these steps, you have successfully created a private key for your OpenVPN server. You have also generated a Certificate Signing Request for the OpenVPN server.
 
-.. tip::
+   .. tip::
 
-   File extensions for certificate signing requests
+      File extensions for certificate signing requests
 
-   The file extension that is adopted by the CA and HSM tutorial
-   indicates the creation of a ``.csr`` file, however Easy-RSA creates
-   certificate signing requests with a ``.req`` extension.
+      The file extension that is adopted by the CA and HSM tutorial
+      indicates the creation of a ``.csr`` file, however Easy-RSA creates
+      certificate signing requests with a ``.req`` extension.
 
-   We will use interchangeably both extensions, while making sure that
-   we transfer the right files to the Certificate Authority, and
-   generate a final certificate with a ``.crt`` extension.
+      We will use interchangeably both extensions, while making sure that
+      we transfer the right files to the Certificate Authority, and
+      generate a final certificate with a ``.crt`` extension.
 
 In the next section of this guide, we will sign a ``.req`` file with our CA on deployed on the HSM 2 device. For this purpose, I will use a dedicated machine to sign the requests.
 
-5. Sign and retrieve ``server.crt``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sign and retrieve ``server.crt``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following instructions require the transfer of the ``server.req``
 (or ``server.csr``) file to the CA system.
@@ -236,8 +236,8 @@ The transfer itself is not security sensitive, though it is wise to verify if th
 
 In order to go through these steps, I will extensively rely on `these instructions <certificate-authority.html#creating-the-intermediate-certificate-authority>`_, to sign the certificate signing requests, once we generated them with Easy-RSA.
 
-5.1. Sign the ``server.req`` file
-'''''''''''''''''''''''''''''''''
+Sign the ``server.req`` file
+''''''''''''''''''''''''''''
 
 On the local machine dedicated to access the HSM, we will use the tools provided by Opensc 0.20 in order to sign the ``.req`` file, and send it back to the OpenVPN server. We assume we have transferred the file from the server machine to the CA machine.
 
@@ -245,64 +245,64 @@ First we start by plugging the HSM Nitrokey, and enter this instruction for list
 
 1. Query the list of available devices
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ p11tool --list-all
+      $ p11tool --list-all
 
- **(Required step)** If this is the first time you sign a certificate with the CA, you might want to retrieve the URI of the CA’s private key from the HSM, and include it in the config file.
+   **(Required step)** If this is the first time you sign a certificate with the CA, you might want to retrieve the URI of the CA’s private key from the HSM, and include it in the config file.
 
--  The key’s URI should be in this format:
+   -  The key’s URI should be in this format:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private
+      pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private
 
 2. Create ``openvpn/`` directory under ``certificate-authority/``
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ mkdir/opt/certificate-authority/
-   $ cd /opt/certificate-authority/
+      $ mkdir/opt/certificate-authority/
+      $ cd /opt/certificate-authority/
 
 3. Sign the ``server.req``
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in server.req -out /home/user/pki/issued/server.crt 
+      $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in server.req -out /home/user/pki/issued/server.crt 
 
-5.2. Retrieve the ``server.crt`` file to the server machine
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Retrieve the ``server.crt`` file to the server machine
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 1. Transfer the signed certificates to the server
 
-From the CA machine, copy the files ``server.crt`` and ``chain.crt`` to the OpenVPN server. In this example we will use the ``scp`` command as following:
+   From the CA machine, copy the files ``server.crt`` and ``chain.crt`` to the OpenVPN server. In this example we will use the ``scp`` command as following:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ scp openvpn/{server.crt,chain.crt} admin@your_openvpnserver_ip:/tmp
+      $ scp openvpn/{server.crt,chain.crt} admin@your_openvpnserver_ip:/tmp
 
 2. Place the certificates on the server’s directory
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ mv /tmp/{server.crt,chain.crt} /etc/openvpn/server
+      $ mv /tmp/{server.crt,chain.crt} /etc/openvpn/server
 
-.. warning::
+   .. warning::
 
-   CA Certificate and ``chain.crt``
+      CA Certificate and ``chain.crt``
 
-   In the above, the CA returns the signed sever certificate, and
-   includes the CA certificate ``CA.crt`` which is the ``chain.crt``
-   file. This can be done over an insecure channel, though the client is
-   encouraged to confirm if the received ``chain.crt`` is valid, if the
-   transport is untrusted.
+      In the above, the CA returns the signed sever certificate, and
+      includes the CA certificate ``CA.crt`` which is the ``chain.crt``
+      file. This can be done over an insecure channel, though the client is
+      encouraged to confirm if the received ``chain.crt`` is valid, if the
+      transport is untrusted.
 
-   It is possible to rename the file ``chain.crt`` file to ``CA.crt`` on
-   the target machine, however we will use ``chain.crt`` in the next
-   instructions.
+      It is possible to rename the file ``chain.crt`` file to ``CA.crt`` on
+      the target machine, however we will use ``chain.crt`` in the next
+      instructions.
 
-6. Configure the OpenVPN server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configure the OpenVPN server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A connection that uses TLS requires multiple `certificates and keys for authentication <https://wiki.teltonika-networks.com/view/OpenVPN_configuration_examples>`__. Now that we issued and signed those, we can place them in the right directories. The breakdown of the certificates and keys that must be located at the root directory are the following:
 
@@ -360,8 +360,8 @@ To test if the configuration functions properly, we can use this command:
 
    $ sudo openvpn --server --config server.conf
 
-7. Start the OpenVPN service on the server
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Start the OpenVPN service on the server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Enable the OpenVPN service by adding it to systemctl, and start it using these commands:
 
@@ -378,47 +378,45 @@ To Double check if the OpenVPN service is active use this command:
 
 The OpenVPN should be running at this point.
 
---------------
-
 Client side configuration
 -------------------------
 
-1. Install OpenVPN and Easy-RSA
+Install OpenVPN and Easy-RSA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Install the software
 
-We can use directly ``dnf install`` to install OpenVPN 2.4.9 and Easy-RSA 3.0.7
+   We can use directly ``dnf install`` to install OpenVPN 2.4.9 and Easy-RSA 3.0.7
 
-.. code-block:: bash
+   .. code-block:: bash
 
    $ sudo dnf install openvpn easy-rsa
 
 2. Then we create as non-root a directory for Easy RSA called ``Easy-RSA``
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ mkdir ~/easyrsa
+      $ mkdir ~/easyrsa
 
 3. And link it to the Easy RSA package we just installed
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ ln -s /usr/share/easy-rsa/3/* ~/easyrsa/
+      $ ln -s /usr/share/easy-rsa/3/* ~/easyrsa/
 
-2. Create a PKI for the OpenVPN client
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Create a PKI for the OpenVPN client
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the same manner we created a PKI on the OpenVPN server, we will create a PKI using Easy-RSA on the client side.
 
-3. Create a ``client.req`` and ``client.key``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Create a ``client.req`` and ``client.key``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In the same manner we issued the key pair on the sever, we generate a key pair for the client which will be composed of the ``client.req``
 file and the ``client.key`` file. The latter must be kept secret on the client machine.
 
-4. Sign ``client.req`` and issue the ``client.crt`` file
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sign ``client.req`` and issue the ``client.crt`` file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To transfer the ``client.req`` file to the CA machine, we will use the same method as we did for the ``server.req`` file.
 
@@ -428,8 +426,8 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
    $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in client.req -out /home/user/pki/issued/client.crt 
 
-5. Import ``client.crt`` on the Nitrokey from the CA machine
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Import ``client.crt`` on the Nitrokey from the CA machine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After creating the ``client.crt`` file, we plug the Nitrokey Pro 2 device in the CA machine, and import the ``.crt`` to the Pro 2 device using this command:
 
@@ -451,13 +449,13 @@ Or alternatively
 
 Fore more commands you can refer to the `OpenSC wiki <https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__.
 
-6. Retrieve the ``chain.crt`` file from the CA machine
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Retrieve the ``chain.crt`` file from the CA machine
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 While we keep the ``client.crt``\ stored on the nitrokey Pro 2 device, we must retrieve the ``chain.crt`` file on the client machine, and store it in the adequate directory. We may use ``scp`` as in the method explained in the server section of this guide.
 
-7. Configure the client to interact with the Nitrokey
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Configure the client to interact with the Nitrokey
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now back on the client machine, we will plug the Nitrokey Pro and use it to establish the VPN connection with the server. In general terms, a connection that uses TLS requires multiple certificates and keys for authentication:
 
@@ -492,47 +490,101 @@ For this guide we can the following ``client.conf`` file, and add the required o
 
 1. Determine the correct object
 
-Each PKCS#11 provider can support multiple devices. In order to view the available object list you can use the following command:
-
-.. code-block:: bash
-
-   $ openvpn --show-pkcs11-ids /usr/lib64/pkcs11/opensc-pkcs11.so 
-
-   The following objects are available for use.
-   Each object shown below may be used as parameter to
-
-   --pkcs11-id option please remember to use single quote mark.
-
-   Certificate
-          DN:             CN=client
-          Serial:         E53DA75C5B8F1518F520BCEF0128C09F
-          Serialized id:  pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03
-
-Each certificate/private key pair have unique ``Serialized id`` string. The serialized id string of the requested certificate should be specified, in the configuration file. We can do this by adding the ``pkcs11-id`` option using single quote marks.
-
-.. code-block:: bash
-
-   pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
-
-2. Add retrieved Serialized ID to the configuration file
-
-Using your favorite text editor, open the server.conf file, and add the following lines, while taking care to insert your own ``Serialized id``:
-
-.. code-block:: bash
-
-   pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
-   pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
-
-For additional `settings related to OpenVPN <https://openvpn.net/community-resources/how-to/>`__ authentication, you may also add few lines to handle key maganagement, although it is optional.
-
-.. note::
-
-   Click to view the code
+   Each PKCS#11 provider can support multiple devices. In order to view the available object list you can use the following command:
 
    .. code-block:: bash
 
-      # nitrokey config
-          
+      $ openvpn --show-pkcs11-ids /usr/lib64/pkcs11/opensc-pkcs11.so 
+
+      The following objects are available for use.
+      Each object shown below may be used as parameter to
+
+      --pkcs11-id option please remember to use single quote mark.
+
+      Certificate
+            DN:             CN=client
+            Serial:         E53DA75C5B8F1518F520BCEF0128C09F
+            Serialized id:  pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03
+
+   Each certificate/private key pair have unique ``Serialized id`` string. The serialized id string of the requested certificate should be specified, in the configuration file. We can do this by adding the ``pkcs11-id`` option using single quote marks.
+
+   .. code-block:: bash
+
+      pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
+
+2. Add retrieved Serialized ID to the configuration file
+
+   Using your favorite text editor, open the server.conf file, and add the following lines, while taking care to insert your own ``Serialized id``:
+
+   .. code-block:: bash
+
+      pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
+      pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
+
+   For additional `settings related to OpenVPN <https://openvpn.net/community-resources/how-to/>`__ authentication, you may also add few lines to handle key maganagement, although it is optional.
+
+   .. note::
+
+      Click to view the code
+
+      .. code-block:: bash
+
+         # nitrokey config
+            
+         pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
+         pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
+         # pkcs11-pin-cache 300
+         # daemon
+         # auth-retry nointeract
+         # management-hold
+         # management-signal
+         # management 127.0.0.1 8888
+         # management-query-passwords
+         pkcs11-cert-private 1 # Prompt for PIN
+
+   Optional step
+               
+
+   If you need to test the configuration, with and without the token on the Nitrokey, you may add lines to the same ``client.conf`` and comment/uncomment the relevant lines according to your needs:
+
+   .. note::
+
+      Click to view the code
+
+      .. code-block:: bash
+
+         # non_nitrokey login
+      
+         # cert client.crt
+         # key client.key
+         # tls-auth ta.key 1
+
+3. Configure the OpenVPN client
+
+   The final configuration file ``client.conf`` should look like this one:
+
+   .. code-block:: bash
+
+      client
+      dev tun
+      proto udp
+      remote <server> 1194
+      resolv-retry infinite
+      nobind
+      user nobody
+      group nobody
+      persist-key
+      persist-tun
+      ca ca.crt
+      remote-cert-tls server
+      cipher AES-256-CBC
+      verb 3
+      redirect-gateway def1
+      tls-version-min 1.2 # Lower boundary for TLS version 
+      tls-version-max 1.2 # Higher boundary for TLS version
+         
+      # nitrokey login
+
       pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
       pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
       # pkcs11-pin-cache 300
@@ -543,141 +595,87 @@ For additional `settings related to OpenVPN <https://openvpn.net/community-resou
       # management 127.0.0.1 8888
       # management-query-passwords
       pkcs11-cert-private 1 # Prompt for PIN
-
-Optional step
-             
-
-If you need to test the configuration, with and without the token on the Nitrokey, you may add lines to the same ``client.conf`` and comment/uncomment the relevant lines according to your needs:
-
-.. note::
-
-   Click to view the code
-
-   .. code-block:: bash
+         
+      # OR
 
       # non_nitrokey login
-    
+
       # cert client.crt
       # key client.key
       # tls-auth ta.key 1
 
-3. Configure the OpenVPN client
-
-The final configuration file ``client.conf`` should look like this one:
-
-.. code-block:: bash
-
-   client
-   dev tun
-   proto udp
-   remote <server> 1194
-   resolv-retry infinite
-   nobind
-   user nobody
-   group nobody
-   persist-key
-   persist-tun
-   ca ca.crt
-   remote-cert-tls server
-   cipher AES-256-CBC
-   verb 3
-   redirect-gateway def1
-   tls-version-min 1.2 # Lower boundary for TLS version 
-   tls-version-max 1.2 # Higher boundary for TLS version
-       
-   # nitrokey login
-
-   pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
-   pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
-   # pkcs11-pin-cache 300
-   # daemon
-   # auth-retry nointeract
-   # management-hold
-   # management-signal
-   # management 127.0.0.1 8888
-   # management-query-passwords
-   pkcs11-cert-private 1 # Prompt for PIN
-       
-   # OR
-
-   # non_nitrokey login
-
-   # cert client.crt
-   # key client.key
-   # tls-auth ta.key 1
-
 4. Known issues
 
-There are some known issues related to OpenVPN login with OpenSC. Please consult these issues `here <https://github.com/Nitrokey/wiki/wiki/3rd-Party-Issues>`__.
+   There are some known issues related to OpenVPN login with OpenSC. Please consult these issues `here <https://github.com/Nitrokey/wiki/wiki/3rd-Party-Issues>`__.
 
-8. Start the OpenVPN client
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Start the OpenVPN client
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Start the OpenVPN service on the client
 
-Enable the OpenVPN service, and start it using these commands:
+   Enable the OpenVPN service, and start it using these commands:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ sudo systemctl -f enable openvpn-server@server.service
-   $ sudo systemctl start openvpn-server@server.service
+      $ sudo systemctl -f enable openvpn-server@server.service
+      $ sudo systemctl start openvpn-server@server.service
 
-To double check if the OpenVPN service is active use this command:
+   To double check if the OpenVPN service is active use this command:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ sudo systemctl status openvpn-server@server.service
+      $ sudo systemctl status openvpn-server@server.service
 
 2. Enter your User PIN
 
-When executing OpenVPN client, Nitrokey’s PIN needs to be entered:
+   When executing OpenVPN client, Nitrokey’s PIN needs to be entered:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ sudo openvpn --client --config client.conf 
-   Fri Sep 11 17:42:01 2020 OpenVPN 2.4.9 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Apr 24 2020
-   Fri Sep 11 17:42:01 2020 library versions: OpenSSL 1.1.1g FIPS  21 Apr 2020, LZO 2.08
-   Fri Sep 11 17:42:01 2020 PKCS#11: Adding PKCS#11 provider '/usr/lib64/pkcs11/opensc-pkcs11.so'
-   Enter User PIN (OpenPGP card) token Password: ******
+      $ sudo openvpn --client --config client.conf 
+      Fri Sep 11 17:42:01 2020 OpenVPN 2.4.9 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Apr 24 2020
+      Fri Sep 11 17:42:01 2020 library versions: OpenSSL 1.1.1g FIPS  21 Apr 2020, LZO 2.08
+      Fri Sep 11 17:42:01 2020 PKCS#11: Adding PKCS#11 provider '/usr/lib64/pkcs11/opensc-pkcs11.so'
+      Enter User PIN (OpenPGP card) token Password: ******
 
-.. warning::
- 
- Unfortunately OpenVPN doesn’t seem to be able to establish a handshake and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
-
-.. code-block:: bash
+   .. warning::
    
-   This is what the error output looks like:
+      Unfortunately OpenVPN doesn’t seem to be able to establish a handshake and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
 
-   $ sudo openvpn --client --config client.conf
-   Fri Sep 11 17:42:01 2020 OpenVPN 2.4.9 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Apr 24 2020
-   Fri Sep 11 17:42:01 2020 library versions: OpenSSL 1.1.1g FIPS  21 Apr 2020, LZO 2.08
-   Fri Sep 11 17:42:01 2020 PKCS#11: Adding PKCS#11 provider '/usr/lib64/pkcs11/opensc-pkcs11.so'
-   Enter User PIN (OpenPGP card) token Password: ******``
-   Fri Sep 11 17:42:12 2020 TCP/UDP: Preserving recently used remote address: [AF_INET]18.157.180.240:1194``
-   Fri Sep 11 17:42:12 2020 Socket Buffers: R=[212992->212992] S=[212992->212992]``
-   Fri Sep 11 17:42:12 2020 UDP link local: (not bound)
-   Fri Sep 11 17:42:12 2020 UDP link remote: [AF_INET]18.157.180.240:1194
-   Fri Sep 11 17:42:12 2020 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
-   Fri Sep 11 17:42:12 2020 TLS: Initial packet from [AF_INET]18.157.180.240:1194, sid=d79690cf 9e38ce89
-   Fri Sep 11 17:42:12 2020 VERIFY OK: depth=1, CN=server_CA
-   Fri Sep 11 17:42:12 2020 VERIFY KU OK
-   Fri Sep 11 17:42:12 2020 Validating certificate extended key usage
-   Fri Sep 11 17:42:12 2020 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
-   Fri Sep 11 17:42:12 2020 VERIFY EKU OK
-   Fri Sep 11 17:42:12 2020 VERIFY OK: depth=0, CN=server
-   Fri Sep 11 17:42:12 2020 OpenSSL: error:141F0006:SSL routines:tls_construct_cert_verify:EVP lib
-   Fri Sep 11 17:42:12 2020 TLS_ERROR: BIO read tls_read_plaintext error
-   Fri Sep 11 17:42:12 2020 TLS Error: TLS object -> incoming plaintext read error
-   Fri Sep 11 17:42:12 2020 TLS Error: TLS handshake failed
-   Fri Sep 11 17:42:12 2020 SIGUSR1[soft,tls-error] received, process restarting
-   Fri Sep 11 17:42:12 2020 Restart pause, 5 second(s)
+   .. code-block:: bash
+      
+      This is what the error output looks like:
 
-In some reported cases it does not prompt for a PIN on the terminal. One workaround would be to use to use this command to login with the PIN:
+      $ sudo openvpn --client --config client.conf
+      Fri Sep 11 17:42:01 2020 OpenVPN 2.4.9 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Apr 24 2020
+      Fri Sep 11 17:42:01 2020 library versions: OpenSSL 1.1.1g FIPS  21 Apr 2020, LZO 2.08
+      Fri Sep 11 17:42:01 2020 PKCS#11: Adding PKCS#11 provider '/usr/lib64/pkcs11/opensc-pkcs11.so'
+      Enter User PIN (OpenPGP card) token Password: ******``
+      Fri Sep 11 17:42:12 2020 TCP/UDP: Preserving recently used remote address: [AF_INET]18.157.180.240:1194``
+      Fri Sep 11 17:42:12 2020 Socket Buffers: R=[212992->212992] S=[212992->212992]``
+      Fri Sep 11 17:42:12 2020 UDP link local: (not bound)
+      Fri Sep 11 17:42:12 2020 UDP link remote: [AF_INET]18.157.180.240:1194
+      Fri Sep 11 17:42:12 2020 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
+      Fri Sep 11 17:42:12 2020 TLS: Initial packet from [AF_INET]18.157.180.240:1194, sid=d79690cf 9e38ce89
+      Fri Sep 11 17:42:12 2020 VERIFY OK: depth=1, CN=server_CA
+      Fri Sep 11 17:42:12 2020 VERIFY KU OK
+      Fri Sep 11 17:42:12 2020 Validating certificate extended key usage
+      Fri Sep 11 17:42:12 2020 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+      Fri Sep 11 17:42:12 2020 VERIFY EKU OK
+      Fri Sep 11 17:42:12 2020 VERIFY OK: depth=0, CN=server
+      Fri Sep 11 17:42:12 2020 OpenSSL: error:141F0006:SSL routines:tls_construct_cert_verify:EVP lib
+      Fri Sep 11 17:42:12 2020 TLS_ERROR: BIO read tls_read_plaintext error
+      Fri Sep 11 17:42:12 2020 TLS Error: TLS object -> incoming plaintext read error
+      Fri Sep 11 17:42:12 2020 TLS Error: TLS handshake failed
+      Fri Sep 11 17:42:12 2020 SIGUSR1[soft,tls-error] received, process restarting
+      Fri Sep 11 17:42:12 2020 Restart pause, 5 second(s)
 
-.. code-block:: bash
+   In some reported cases it does not prompt for a PIN on the terminal. One workaround would be to use to use this command to login with the PIN:
 
-   $ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>
+   .. code-block:: bash
 
-Alternatively, you could `recompile OpenVPN <https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`__ client with systemd support disabled, and it will prompt you for the PIN as expected.
+      $ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>
 
-Another option, would be to login to your OpenVPN instance with the Viscosity client which provides a better user experience especially for entering the PIN.
+   Alternatively, you could `recompile OpenVPN <https://forums.openvpn.net/viewtopic.php?f=4&t=23318>`__ client with systemd support disabled, and it will prompt you for the PIN as expected.
+
+   Another option, would be to login to your OpenVPN instance with the Viscosity client which provides a better user experience especially for entering the PIN.
