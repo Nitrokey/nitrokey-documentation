@@ -31,21 +31,21 @@ the different connectors and interfaces is given.
 1. Hardware button for :doc:`Factory-Reset<technical/factory-reset>`
 2. :doc:`Status LED<technical/led-colors>`
 
-.. figure:: /nextbox/images/hardware-overview/back-side.jpg
-   :alt: back view
-   :align: center
+   .. figure:: /nextbox/images/hardware-overview/back-side.jpg
+      :alt: back view
+      :align: center
 
 3. **USB Type-C / Power Supply** connector is designated as a replacement for the stock
    connector on the front side and is exclusively for supplying power to the NextBox and cannot 
    transfer data.
 
 
-.. hint:: The right side of the NextBox is designed so that all mandatory
-          interfaces can be accessed from this side. 
+   .. hint:: The right side of the NextBox is designed so that all mandatory
+            interfaces can be accessed from this side. 
 
-.. figure:: /nextbox/images/hardware-overview/right-side.jpg
-   :alt: right view
-   :align: center
+   .. figure:: /nextbox/images/hardware-overview/right-side.jpg
+      :alt: right view
+      :align: center
 
 4. The **RJ45 - 1GbE Ethernet** connector connects your NextBox with your home network and shall 
    stay connected at all times. 
@@ -53,18 +53,18 @@ the different connectors and interfaces is given.
 6. **Reserved USB 3 - Type A Slot**, used for the internal hard-disk. *Never remove this connector!*
 7. **2x Free USB 2 - Type A Slots**, please see :ref:`Hardware FAQ<usb-power-supply>`
 
-.. hint:: Using a hard-drive with an external power supply you can use any of
-          the available USB slots. Keep in mind that the data transfer bandwidth for
-          the USB 2 slots is less compared to the USB 3 slot. 
+   .. hint:: Using a hard-drive with an external power supply you can use any of
+            the available USB slots. Keep in mind that the data transfer bandwidth for
+            the USB 2 slots is less compared to the USB 3 slot. 
 
 8. **USB Type-C / Power Supply** (stock) connector, can be used as **[3]**
 9. **Micro HDMI 1 slot**, usable but not needed.
 10. **Micro HDMI 2 slot**, usable but not needed.
 11. **Headphone Jack**, usable but not needed.
 
-.. figure:: /nextbox/images/hardware-overview/front-side.jpg
-   :alt: front view
-   :align: center
+   .. figure:: /nextbox/images/hardware-overview/front-side.jpg
+      :alt: front view
+      :align: center
 
 .. hint:: The front interfaces are all optional and not necessary for NextBox
           usage in general. While the **USB Type-C/Power Supply** may be used, the

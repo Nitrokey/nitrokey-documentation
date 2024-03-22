@@ -12,14 +12,14 @@ Nitrokey Storage, Windows
 
 1. Connect your Nitrokey to your computer and confirm all dialogs so that the USB smart card device driver gets installed almost automatically.
 
-.. note::
+   .. note::
 
-   Windows may fail to install an additional device driver for the smart card. Its safe to ignore this warning.
+      Windows may fail to install an additional device driver for the smart card. Its safe to ignore this warning.
 
 2. Download and start the `Nitrokey App <https://www.nitrokey.com/download>`__. Perhaps you want to store it on the unencrypted partition of your Nitrokey Storage. There won’t open a window, but an icon appears in the system tray (see screenshot below). Please right-click on this icon to use all the options of the App.
 
-.. figure:: ./images/Windows10-Systemtray.png
-   :alt: img1
+   .. figure:: ./images/Windows10-Systemtray.png
+      :alt: img1
 
 
 3. Open the About window from Nitrokey App’s menu and check if you have the `latest firmware <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__ installed. If it’s not the latest, please

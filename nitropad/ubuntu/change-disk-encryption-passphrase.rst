@@ -6,32 +6,32 @@ Change Disk Encryption Passphrase
    bar. Then select the “Disks” program that appears in the middle of
    the screen.
 
-.. figure:: ../images/change-disk-encryption-passphrase/1.png
-   :alt: img1
+   .. figure:: ../images/change-disk-encryption-passphrase/1.png
+      :alt: img1
 
 
 
 2. Select the field that says “Luks”. Afterwards it should have an
    orange background.
 
-.. figure:: ../images/change-disk-encryption-passphrase/2.png
-   :alt: img2
+   .. figure:: ../images/change-disk-encryption-passphrase/2.png
+      :alt: img2
 
 
 
 3. Left click on the gears and select “Change Passphrase” from the
    context menu.
 
-.. figure:: ../images/change-disk-encryption-passphrase/3.png
-   :alt: img3
+   .. figure:: ../images/change-disk-encryption-passphrase/3.png
+      :alt: img3
 
 
 
 4. Enter “PleaseChangeMe” as the current passphrase and select a secure
    new one.
 
-.. figure:: ../images/change-disk-encryption-passphrase/4.png
-   :alt: img4
+   .. figure:: ../images/change-disk-encryption-passphrase/4.png
+      :alt: img4
 
 
 
