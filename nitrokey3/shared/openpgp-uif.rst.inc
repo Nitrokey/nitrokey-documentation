@@ -1,8 +1,6 @@
 OpenPGP Touch Confirmation (UIF)
 ================================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 The Nitrokey 3 OpenPGP Card functionality supports touch button confirmations (so called User Interaction Flags, UIF) when performing cryptographic key operations. It can be configured separately for each operation (Signature, Decryption and Authentication).

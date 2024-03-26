@@ -1,8 +1,6 @@
 Firmware Update
 ===============
 
-.. include:: ./product_platform_heading.rst
-
 .. only:: comment
 
  .. contents:: :local:

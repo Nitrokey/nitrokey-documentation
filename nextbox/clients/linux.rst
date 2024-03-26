@@ -8,8 +8,8 @@ Connect using the Nextcloud App
 
 1. Download the client application from: https://nextcloud.com/install/ 
 
-.. hint:: Most distributions do provide the Nextcloud client via their 
-          package managers. (e.g., Ubuntu, Arch Linux, Mint, ...)
+   .. hint:: Most distributions do provide the Nextcloud client via their 
+            package managers. (e.g., Ubuntu, Arch Linux, Mint, ...)
 
 2. After starting the ``nextcloud`` application, you will find it 
    as a tray icon.
@@ -30,8 +30,8 @@ Connect using WebDAV
 
 * To mount use: 
   
-.. code-block:: bash
+   .. code-block:: bash
 
-   mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path
+      mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path
 
 

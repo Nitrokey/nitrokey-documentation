@@ -1,8 +1,6 @@
 DNSSEC
 ======================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 

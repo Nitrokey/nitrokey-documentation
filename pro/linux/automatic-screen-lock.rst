@@ -1,8 +1,6 @@
 Automatic Screen Lock at Removal
 ================================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 This guide will walk you through the configuration of your computer, to automatically lock your session when you remove the Nitrokey.

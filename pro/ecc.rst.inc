@@ -1,8 +1,6 @@
 Elliptic Curves (ECC) Support
 =============================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 RSA-2048 Becomes Increasingly Insecure

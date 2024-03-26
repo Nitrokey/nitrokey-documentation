@@ -1,8 +1,6 @@
 Factory Reset Heads 2.0
 =======================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 Reasons for resetting to factory settings

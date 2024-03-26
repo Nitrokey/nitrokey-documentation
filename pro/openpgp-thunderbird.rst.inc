@@ -1,8 +1,6 @@
 OpenPGP Email Encryption With Thunderbird
 =========================================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 Thunderbird 78.3 and newer

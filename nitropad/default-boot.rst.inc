@@ -1,8 +1,6 @@
 Default Boot
 ============
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 If you have installed a new operating system, it may be that default boot is not yet assigned. If this is the case, please proceed as described below.

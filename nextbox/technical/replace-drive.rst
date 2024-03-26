@@ -43,20 +43,20 @@ Prepare New Hard-Disk
 6. Determine your hard-disk's device name (e.g., ``/dev/sdb``) and make sure
    none of its partitions are mounted
 
-.. warning::
-   **Again: think at least twice about the following step. Make sure you are referring to the 
-   correct hard-drive device (and NOT a partition, means** ``/dev/sdb1`` **is wrong).** The script will
-   decline to do the operation on ``/dev/sda`` as there are good chances this might be your 
-   system hard-disk, if you really need this you can comment out lines 23-26 inside the script. 
+   .. warning::
+      **Again: think at least twice about the following step. Make sure you are referring to the 
+      correct hard-drive device (and NOT a partition, means** ``/dev/sdb1`` **is wrong).** The script will
+      decline to do the operation on ``/dev/sda`` as there are good chances this might be your 
+      system hard-disk, if you really need this you can comment out lines 23-26 inside the script. 
 
 7. Run the script using the device name you have determined. Once prompted for
    your sudo-password please provide it to allow r/w access to the hard-drive:
 
-.. code::
+   .. code::
 
-   $ ./simple_prepare_harddrive.sh <device-name> 
-   
-   # example: ./simple_prepare_harddrive.sh /dev/sdb  
+      $ ./simple_prepare_harddrive.sh <device-name> 
+      
+      # example: ./simple_prepare_harddrive.sh /dev/sdb  
    
 
 8. Watch the script's output for any errors, there should be none
@@ -79,25 +79,25 @@ Replacement Guide
 6. Unfold the USB-to-SATA cable and put the NextBox bridge upside down onto a electronics friendly
    surface like a desk as shown in the following image
 
-.. figure:: /nextbox/images/technical/nextbox_bridge_backside.jpeg
-   :alt: nextbox-backside
-   :align: center
+   .. figure:: /nextbox/images/technical/nextbox_bridge_backside.jpeg
+      :alt: nextbox-backside
+      :align: center
 
 7. Unscrew the Phillips screws holding the hard-disk in position (the amount of screws may differ,
    depending on your hard-disk type) shown in the following image:
 
-.. figure:: /nextbox/images/technical/nextbox_bridge_backside_screws.jpeg
-   :alt: nextbox-backside-screws
-   :align: center
+   .. figure:: /nextbox/images/technical/nextbox_bridge_backside_screws.jpeg
+      :alt: nextbox-backside-screws
+      :align: center
 
 8. Once the screws are removed, push the hard-disk carefully towards the direction shown in the
    image above. Do not push it towards the other direction, you might damage the USB cable.
 9. Remove the USB-to-SATA cable from the hard-drive
 
-.. warning::
-   Avoid disconnecting the male-female USB connector to not change the position and bending 
-   of the cable. If you have to: be careful to keep the force as small as possible onto the
-   90° part of the USB extension cable.
+   .. warning::
+      Avoid disconnecting the male-female USB connector to not change the position and bending 
+      of the cable. If you have to: be careful to keep the force as small as possible onto the
+      90° part of the USB extension cable.
 
 10. Connect your previously prepared new hard-drive
 11. Carefully slide your new hard-drive into the bridge and fix it into the right position

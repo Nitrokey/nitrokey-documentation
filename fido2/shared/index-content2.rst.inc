@@ -1,8 +1,6 @@
 Nitrokey Reset
 --------------
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 Factory Reset operation regenerates the secret material stored on the Nitrokey FIDO U2F / Nitrokey FIDO2, which makes it a completely new key logic-side. New owner cannot use it to login to account of the previous one. In case of the FIDO2 Resident Keys the material is erased.

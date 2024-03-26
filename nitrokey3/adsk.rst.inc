@@ -1,8 +1,6 @@
 Additional Decryption Subkeys (ADSK) with GnuPG
 ===============================================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 `Additional Decryption Subkeys (ADSK) <https://gnupg.org/blog/20230321-adsk.html>`__ can be used to automatically add recipients when encrypting a message with GnuPG.

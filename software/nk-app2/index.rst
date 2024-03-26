@@ -10,8 +10,8 @@ Supported Features
 ------------------
 
 - Updating the firmware
-- :ref:`One-Time Passwords (OTP)<passwords>`
-- :ref:`Password Storage <passwords>`
+- One-Time Passwords (OTP)
+- Password Storage
 
 Planned Features
 ----------------

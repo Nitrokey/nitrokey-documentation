@@ -2,7 +2,7 @@
 
 .. note::
 
-  The following steps are only necessary if you are using Windows 10 Build 1809 (or higher) and Nitrokey Storage with firmware 0.52 or older. In all other cases, or if you have access to another system, the regular update as described `here <firmware-update.html>`_ is sufficient and easier.
+  The following steps are only necessary if you are using Windows 10 Build 1809 (or higher) and Nitrokey Storage with firmware 0.52 or older. In all other cases, or if you have access to another system, the regular update as described `here <firmware-update.html>`__ is sufficient and easier.
 
 What is needed
 --------------
@@ -92,7 +92,7 @@ The Firmware Update Mode will be started automatically if the standard password 
    :alt: img12
 
 
-After the system has activated the firmware update on the Nitrokey Storage, a restart is issued after 60 seconds. Please remove the USB Stick. Afterwards you can use the Nitrokey Update Tool in Windows as described `here <firmware-update.html>`_.
+After the system has activated the firmware update on the Nitrokey Storage, a restart is issued after 60 seconds. Please remove the USB Stick. Afterwards you can use the Nitrokey Update Tool in Windows as described `here <firmware-update.html>`__.
 
 Restoring the USB Stick
 -----------------------

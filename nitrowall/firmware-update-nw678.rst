@@ -6,7 +6,7 @@ Update OpenWrt Firmware
 
 .. contents:: :local:
 
-We recommend updating OpenWrt via the pre-installed `Attended Sysupgrade <https://openwrt.org/docs/guide-user/installation/attended.sysupgrade>`_. To be able to use this service you need to configure it to ignore the "nitrowall" package, if it has been installed before:
+We recommend updating OpenWrt via the pre-installed `Attended Sysupgrade <https://openwrt.org/docs/guide-user/installation/attended.sysupgrade>`__. To be able to use this service you need to configure it to ignore the "nitrowall" package, if it has been installed before:
 
 1. Go to System -> Attended Sysupgrade -> Configuration and enable the Advanced Mode -> Save & Apply
 
@@ -38,7 +38,7 @@ We recommend updating OpenWrt via the pre-installed `Attended Sysupgrade <https:
 
 	.. image:: /nitrowall/images/openwrt_installnw3.png
 
-9. Update OpenWrt via `Attended Sysupgrade <https://openwrt.org/docs/guide-user/installation/attended.sysupgrade>`_.
+9. Update OpenWrt via `Attended Sysupgrade <https://openwrt.org/docs/guide-user/installation/attended.sysupgrade>`__.
 
 Alternatively to the above instructions, you can login via ssh and execute this script::
 
