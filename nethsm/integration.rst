@@ -41,7 +41,7 @@ This will provide the REST API on the port `8443` via the HTTPS protocol.
 Integration into Custom Application
 -----------------------------------
 
-To integrate the NetHSM into own custom applications, client libraries are available for almost all programming languages. Here are libraries for `Rust <https://github.com/Nitrokey/nethsm-sdk-rs>`_ and `Python <https://github.com/Nitrokey/nethsm-sdk-py>`_. For all other programming languages we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_.
+To integrate the NetHSM into own custom applications, client libraries are available for almost all programming languages. Here are libraries for `Python <https://github.com/Nitrokey/nethsm-sdk-py>`_ and `Rust <https://github.com/Nitrokey/nethsm-sdk-rs>`_ as well as `this 3rd party Rust crate <https://crates.io/crates/nethsm>`_. For all other programming languages we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_.
 
 The list of all available languages can be retrieved as follows.
 
