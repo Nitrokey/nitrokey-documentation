@@ -15,12 +15,12 @@ Quickstart
    green (see :doc:`LEDs <technical/led-colors>`).
    
 
-.. Warning::
+   .. Warning::
 
-   External storage drives without an external power supply must NOT be
-   connected to the USB sockets. Otherwise, this can lead to data loss on the
-   internal hard disk. **Always use external storage drives with a separate
-   power supply together with the NextBox.**
+      External storage drives without an external power supply must NOT be
+      connected to the USB sockets. Otherwise, this can lead to data loss on the
+      internal hard disk. **Always use external storage drives with a separate
+      power supply together with the NextBox.**
 
 Create Admin Account
 --------------------
@@ -28,17 +28,17 @@ Create Admin Account
 1. Enter your desired username and password. Remember to choose a strong
    password for your admin account.
 
-.. figure:: /nextbox/images/gettingstarted/1.png
-   :alt: img1
+   .. figure:: /nextbox/images/gettingstarted/1.png
+      :alt: img1
    
-.. .. Note:: 
+   .. note:: 
 
-   An occurring warning can be ignored since you are on your local network.
+      An occurring warning can be ignored since you are on your local network.
 
 2. Press "Finish Setup". This process may take a few minutes.
 
-.. figure:: /nextbox/images/gettingstarted/2.png
-   :alt: img2
+   .. figure:: /nextbox/images/gettingstarted/2.png
+      :alt: img2
 
 Configure NextBox Related Features
 ----------------------------------
@@ -63,10 +63,8 @@ continue on:
   private cloud from the internet. Our :doc:`guide <remote/index>` covers
   various approaches.
 
-.. hint:: We prepared a *one-click* remote access method, allowing you
-   to set up basic remote access in seconds. 
-   
-
+   .. hint:: We prepared a *one-click* remote access method, allowing you
+      to set up basic remote access in seconds. 
 
 * **Connect your devices to your NextBox.** For smartphones the official
   `Android App`_ and `iOS App`_ are both great additions for your personal

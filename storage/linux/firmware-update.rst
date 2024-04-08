@@ -1,8 +1,6 @@
 Firmware Update
 ===============
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 .. warning::
@@ -22,23 +20,23 @@ Firmware Update
 
 3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ‘12345678’.
 
-.. figure:: /storage/images/enable-firmware-update.png
-   :alt: Enable firmware update
+   .. figure:: /storage/images/enable-firmware-update.png
+      :alt: Enable firmware update
 
-.. note::
+   .. note::
 
-   The Nitrokey Storage is not detected by Nitrokey App anymore once update mode got
-   activated. You have to proceed with the instructions described below
-   to make it work again.
+      The Nitrokey Storage is not detected by Nitrokey App anymore once update mode got
+      activated. You have to proceed with the instructions described below
+      to make it work again.
 
 
 4. Open a terminal and execute:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   sudo dfu-programmer at32uc3a3256s erase
-   sudo dfu-programmer at32uc3a3256s flash --suppress-bootloader-mem firmware.hex
-   sudo dfu-programmer at32uc3a3256s launch
-   # versions <0.7 of dfu-programmer use "start" instead of "launch"
+      sudo dfu-programmer at32uc3a3256s erase
+      sudo dfu-programmer at32uc3a3256s flash --suppress-bootloader-mem firmware.hex
+      sudo dfu-programmer at32uc3a3256s launch
+      # versions <0.7 of dfu-programmer use "start" instead of "launch"
 
-whereas “firmware.hex” needs to be the path and file name of the firmware which you downloaded in step 2.
+   whereas “firmware.hex” needs to be the path and file name of the firmware which you downloaded in step 2.

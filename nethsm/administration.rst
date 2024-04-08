@@ -182,7 +182,7 @@ Unlock Passphrase
 The *Unlock Passphrase* is used to derive an *Unlock Key* if the NetHSM is in *Locked* state.
 The passphrase is initially set during provisioning of the NetHSM.
 
-... warning::
+.. warning::
    The unlock passphrase cannot be reset without knowing the current value.
    If the unlock passphrase is lost, neither can it be reset to a new value nor can the NetHSM be unlocked.
 

@@ -1,8 +1,6 @@
 OpenPGP Key Generation On-Device
 ================================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 The following instructions explain the generation of OpenPGP keys directly on the Nitrokey. This is done by using the command line interface of GnuPG. Thus, you need to have GnuPG installed on your system. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org/>`__ and the newest version for MacOS can be found `here <https://gpgtools.org/>`__. Users of Linux systems please install GnuPG with help of the package manager.

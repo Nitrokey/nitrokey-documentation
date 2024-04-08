@@ -1,8 +1,6 @@
 Creating a Certificate Authority
 ================================
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 This article shows you how to setup your own private certificate authority backed by a Nitrokey HSM. This certificate authority has no automation and does not really scale. Other open source projects can be referenced for automation and scalability.

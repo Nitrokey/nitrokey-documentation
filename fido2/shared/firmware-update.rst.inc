@@ -1,8 +1,6 @@
 Firmware Update
 ===============
 
-.. include:: ./product_platform_heading.rst
-
 This guide describes how to update the firmware on the Nitrokey FIDO2.
 
 .. important::

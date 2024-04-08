@@ -1,5 +1,3 @@
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 `Strong Swan <https://www.strongswan.org/>`__ works using the `PKCS#11 driver <https://www.nitrokey.com/documentation/applications#pkcs11>`__. Basically follow these steps:

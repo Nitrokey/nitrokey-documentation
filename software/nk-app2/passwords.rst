@@ -1,6 +1,5 @@
 Passwords
 =========
-.. _passwords:
 
 Password entries may consist of:
 

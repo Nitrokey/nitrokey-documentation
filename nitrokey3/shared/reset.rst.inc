@@ -1,8 +1,6 @@
 Factory Reset
 =============
 
-.. include:: ./product_platform_heading.rst
-
 .. contents:: :local:
 
 Each functionality of the Nitrokey 3 can be reset individually. 
