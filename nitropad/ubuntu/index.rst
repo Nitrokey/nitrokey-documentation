@@ -14,7 +14,7 @@ changed by you:
    above).
 
 2. Next, the system will prompt you to enter the passphrase to decrypt
-   the hard disk. The passphrase is initially “PleaseChangeMe”. 
+   the hard disk. The passphrase is initially "12345678". This was changed on the 10.04.2024 so if "12345678" is not working try the old default: "PleaseChangeMe" 
 
    .. figure:: ./images/UbuntuDiskPassword.png
       :alt: img3

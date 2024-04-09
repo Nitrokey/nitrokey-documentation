@@ -14,7 +14,7 @@ changed by you:
    above).
 
 2. Next, the system will prompt you to enter the passphrase to decrypt
-   the hard disk. The passphrase is initially "12345678". This was change on the 15.01.2024 so if "12345678" is not working try the old default: "PleaseChangeMe"
+   the hard disk. The passphrase is initially "12345678". This was changed on the 15.01.2024 so if "12345678" is not working try the old default: "PleaseChangeMe"
 
    .. figure:: ./images/QubesDiskPassword.jpg
       :alt: img3
