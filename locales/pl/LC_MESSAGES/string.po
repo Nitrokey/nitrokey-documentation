@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-08 10:34+0200\n"
-"PO-Revision-Date: 2024-04-08 09:49+0000\n"
+"POT-Creation-Date: 2024-04-09 14:34+0200\n"
+"PO-Revision-Date: 2024-04-09 14:49+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Polish <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/pl/>\n"
@@ -10481,8 +10481,8 @@ msgstr ""
 #: ../nextbox/gettingstarted.rst:36
 msgid "An occurring warning can be ignored since you are on your local network."
 msgstr ""
-"Pojawiające się ostrzeżenie można zignorować, ponieważ użytkownik znajduje "
-"się w sieci lokalnej."
+"Pojawiające się ostrzeżenie można zignorować, ponieważ użytkownik "
+"znajduje się w sieci lokalnej."
 
 #: ../nextbox/gettingstarted.rst:38
 msgid "Press \"Finish Setup\". This process may take a few minutes."
@@ -13350,6 +13350,254 @@ msgstr ""
 "Zarejestruj swoje Nitrokey 3 w ustawieniach konta, dotykając przycisku, "
 "aby aktywować Nitrokey 3. Po pomyślnym skonfigurowaniu urządzenia musisz "
 "aktywować Nitrokey 3 w ten sposób przy każdym logowaniu."
+
+#: ../software/nk-app2/keepassxc.rst:2
+msgid "KeePassXC"
+msgstr "KeePassXC"
+
+#: ../software/nk-app2/keepassxc.rst:5
+msgid ""
+"These instructions describe how to protect and encrypt a `KeePassXC "
+"<https://keepassxc.org/>`__ password database with Nitrokey 3."
+msgstr ""
+"Niniejsza instrukcja opisuje sposób ochrony i szyfrowania bazy danych haseł `"
+"KeePassXC <https://keepassxc.org/>`__ za pomocą Nitrokey 3."
+
+#: ../software/nk-app2/keepassxc.rst:9
+msgid "KeePassXC version 2.7.6 or newer is required."
+msgstr "Wymagany jest program KeePassXC w wersji 2.7.6 lub nowszej."
+
+#: ../software/nk-app2/keepassxc.rst:12
+msgid "First Step: Generate a HMAC Secret With the Nitrokey App 2"
+msgstr ""
+"Pierwszy krok: Wygenerowanie sekretu HMAC za pomocą aplikacji Nitrokey 2"
+
+#: ../software/nk-app2/keepassxc.rst:14
+msgid "Open `Nitrokey App 2 </software/nk-app2/>`__"
+msgstr "Otwórz `Nitrokey App 2 </software/nk-app2/>`__"
+
+#: ../software/nk-app2/keepassxc.rst:15
+msgid "Select the Nitrokey 3"
+msgstr "Wybierz Nitrokey 3"
+
+#: ../software/nk-app2/keepassxc.rst:16
+msgid "Select the ``PASSWORDS`` tab"
+msgstr "Wybierz zakładkę ``PASSWORDS``"
+
+#: ../software/nk-app2/keepassxc.rst:17
+msgid "Click on ``ADD`` to create a new credential"
+msgstr "Kliknij na ``ADD``, aby utworzyć nowe dane uwierzytelniające."
+
+#: ../software/nk-app2/keepassxc.rst:18
+msgid "Select ``HMAC`` from the algorithm drop-down menu"
+msgstr "Wybierz ``HMAC`` z rozwijanego menu algorytmu."
+
+#: ../software/nk-app2/keepassxc.rst:22
+msgid "The credential is automatically named in ``HmacSlot2``."
+msgstr "Poświadczenie jest automatycznie nazywane w ``HmacSlot2``."
+
+#: ../software/nk-app2/keepassxc.rst:23
+msgid "No extra attributes can be saved for the HMAC credential."
+msgstr "Dla poświadczenia HMAC nie można zapisać żadnych dodatkowych atrybutów."
+
+#: ../software/nk-app2/keepassxc.rst:24
+msgid ""
+"The HMAC secret must be *exactly 20 bytes* long and in *Base32* format. "
+"That is exactly 32 characters."
+msgstr ""
+"Sekret HMAC musi mieć *dokładnie 20 bajtów* długości i w formacie *Base32*. "
+"Oznacza to dokładnie 32 znaki."
+
+#: ../software/nk-app2/keepassxc.rst:25
+msgid "It is possible to save exactly one HMAC secret on a Nitrokey 3."
+msgstr ""
+"Możliwe jest zapisanie dokładnie jednego klucza tajnego HMAC na Nitrokey 3."
+
+#: ../software/nk-app2/keepassxc.rst:27
+msgid ""
+"To generate a secret, there is a button in the field on the right-hand. "
+"It is also possible to enter your own secret, as long as it is compliant."
+msgstr ""
+"Aby wygenerować sekret, w polu po prawej stronie znajduje się przycisk. "
+"Możliwe jest również wprowadzenie własnego sekretu, o ile jest on zgodny z "
+"przepisami."
+
+#: ../software/nk-app2/keepassxc.rst:32
+msgid ""
+"The database can no longer be unlocked if the Nitrokey 3 is lost or "
+"unavailable! Thus, you may want to set up a second Nitrokey 3 with the "
+"same HMAC secret as a backup device."
+msgstr ""
+"Baza danych nie może zostać odblokowana, jeśli Nitrokey 3 zostanie utracony "
+"lub będzie niedostępny! Dlatego warto skonfigurować drugi Nitrokey 3 z tym "
+"samym sekretem HMAC jako urządzenie zapasowe."
+
+#: ../software/nk-app2/keepassxc.rst:36
+msgid ""
+"The secret can **only** be seen before saving. If the KeePassXC database "
+"is to be used with another Nitrokey 3, the HMAC secret must be copied "
+"which is **only** possible **before saving** the credential."
+msgstr ""
+"Sekret można **tylko** zobaczyć przed zapisaniem. Jeśli baza danych "
+"KeePassXC ma być używana z innym Nitrokey 3, sekret HMAC musi zostać "
+"skopiowany, co jest **tylko** możliwe **przed zapisaniem** danych "
+"uwierzytelniających."
+
+#: ../software/nk-app2/keepassxc.rst:38
+msgid "Click on ``SAVE`` to save the credential"
+msgstr "Kliknij na ``SAVE``, aby zapisać dane uwierzytelniające."
+
+#: ../software/nk-app2/keepassxc.rst:41
+msgid "First Option: Protect an Existing KeePassXC Database With a Nitrokey 3"
+msgstr ""
+"Pierwsza opcja: Ochrona istniejącej bazy danych KeePassXC za pomocą Nitrokey "
+"3"
+
+#: ../software/nk-app2/keepassxc.rst:43 ../software/nk-app2/keepassxc.rst:65
+msgid "Open KeePassXC"
+msgstr "Otwórz KeePassXC"
+
+#: ../software/nk-app2/keepassxc.rst:44
+msgid ""
+"Open the existing KeePassXC database that is to be protected with a "
+"Nitrokey 3."
+msgstr ""
+"Otwórz istniejącą bazę danych KeePassXC, która ma być chroniona za pomocą "
+"klucza Nitrokey 3."
+
+#: ../software/nk-app2/keepassxc.rst:45
+msgid "Select ``Database`` -> ``Database Security...`` from the menu bar"
+msgstr "Wybierz ``Database`` -> ``Database Security...`` z paska menu."
+
+#: ../software/nk-app2/keepassxc.rst:46
+msgid "Select ``Security`` on the left side"
+msgstr "Wybierz ``Security`` po lewej stronie"
+
+#: ../software/nk-app2/keepassxc.rst:47
+msgid ""
+"Click on the ``Add additional protection...`` button in the ``Database "
+"Credentials`` tab"
+msgstr ""
+"Kliknij przycisk ``Add additional protection...`` w zakładce ``Database "
+"Credentials``"
+
+#: ../software/nk-app2/keepassxc.rst:48 ../software/nk-app2/keepassxc.rst:76
+msgid ""
+"Scroll down to ``Challenge-Response`` and click on ``Add Challenge-"
+"Response``"
+msgstr ""
+"Przewiń w dół do ``Challenge-Response`` i kliknij na ``Add Challenge-"
+"Response``."
+
+#: ../software/nk-app2/keepassxc.rst:49
+msgid ""
+"Now if the Nitrokey 3 is plugged in and a HMAC was generated before, "
+"Nitrokey 3 should be displayed in the field."
+msgstr ""
+"Teraz, jeśli Nitrokey 3 jest podłączony i HMAC został wygenerowany "
+"wcześniej, Nitrokey 3 powinien być wyświetlany w polu."
+
+#: ../software/nk-app2/keepassxc.rst:51
+msgid "Click on ``OK`` to add the Nitrokey 3 to the existing KeePassXC database"
+msgstr ""
+"Kliknij na ``OK``, aby dodać Nitrokey 3 do istniejącej bazy danych KeePassXC."
+
+#: ../software/nk-app2/keepassxc.rst:55
+msgid ""
+"By default the Nitrokey 3 is used as a second factor in addition to the "
+"passphrase. To protect the database by the Nitrokey 3 exclusively, delete"
+" the passphrase by clicking the button ``Remove Password``."
+msgstr ""
+"Domyślnie Nitrokey 3 jest używany jako drugi czynnik oprócz hasła. Aby "
+"chronić bazę danych wyłącznie za pomocą Nitrokey 3, usuń hasło, klikając "
+"przycisk ``Remove Password``."
+
+#: ../software/nk-app2/keepassxc.rst:59
+msgid ""
+"If the Nirokey 3 is not recognized, close KeePassXC completely. Then "
+"connect the Nitrokey 3 to your computer before restarting KeePassXC."
+msgstr ""
+"Jeśli Nirokey 3 nie zostanie rozpoznany, zamknij całkowicie KeePassXC. "
+"Następnie podłącz Nitrokey 3 do komputera przed ponownym uruchomieniem "
+"KeePassXC."
+
+#: ../software/nk-app2/keepassxc.rst:64
+msgid "Second Option: Creating a KeePassXC Database, Protected by Nitrokey 3"
+msgstr ""
+"Druga opcja: Tworzenie bazy danych KeePassXC chronionej przez Nitrokey 3"
+
+#: ../software/nk-app2/keepassxc.rst:66
+msgid ""
+"Select ``Database`` -> ``New Database...`` from the menu bar to create a "
+"new KeePassXC database."
+msgstr ""
+"Wybierz ``Database`` -> ``New Database...`` z paska menu, aby utworzyć nową "
+"bazę danych KeePassXC."
+
+#: ../software/nk-app2/keepassxc.rst:67
+msgid ""
+"Fill in the display name and an optional description for your new "
+"database and click on ``Continue``"
+msgstr ""
+"Wpisz nazwę wyświetlaną i opcjonalny opis nowej bazy danych, a następnie "
+"kliknij na ``Continue``."
+
+#: ../software/nk-app2/keepassxc.rst:68
+msgid ""
+"`Further database encryption settings <https://keepassxc.org/docs/>`__ "
+"can now be configured here or the default settings can be retained. The "
+"settings can also be changed later in the database settings."
+msgstr ""
+"`Dalsze ustawienia szyfrowania bazy danych <https://keepassxc.org/docs/>`__ "
+"można teraz skonfigurować tutaj lub zachować ustawienia domyślne. Ustawienia "
+"można również zmienić później w ustawieniach bazy danych."
+
+#: ../software/nk-app2/keepassxc.rst:71
+msgid "Click on ``Continue`` to confirm the settings"
+msgstr "Kliknij na ``Continue``, aby potwierdzić ustawienia."
+
+#: ../software/nk-app2/keepassxc.rst:72
+msgid "**Database Credential**"
+msgstr "**Poświadczenie bazy danych**"
+
+#: ../software/nk-app2/keepassxc.rst:74
+msgid ""
+"Here you can enter a password as a second factor to unlock the database. "
+"To connect the Nitrokey 3 (on which the HMAC secret was generated) to the"
+" new KeePassXC database, click on ``Add additional protection...``"
+msgstr ""
+"Tutaj można wprowadzić hasło jako drugi czynnik odblokowujący bazę danych. "
+"Aby połączyć Nitrokey 3 (na którym wygenerowano sekret HMAC) z nową bazą "
+"danych KeePassXC, kliknij ``Add additional protection...``"
+
+#: ../software/nk-app2/keepassxc.rst:77
+msgid ""
+"Now if the Nitrokey 3 is plugged in and a HMAC was generated before, "
+"Nitrokey 3 should be displayed in the field. Click on ``Continue`` to "
+"complete the creation of the new KeePassXC database."
+msgstr ""
+"Teraz, jeśli Nitrokey 3 jest podłączony i HMAC został wygenerowany "
+"wcześniej, Nitrokey 3 powinien być wyświetlony w polu. Kliknij ``Continue``, "
+"aby zakończyć tworzenie nowej bazy danych KeePassXC."
+
+#: ../software/nk-app2/keepassxc.rst:82
+msgid ""
+"If the passphrase is left empty, the database will be protected by the "
+"Nitrokey 3 exclusively. If a passphrase is entered, the database will be "
+"protected by the passphrase **and** the Nitrokey 3."
+msgstr ""
+"Jeśli hasło pozostanie puste, baza danych będzie chroniona wyłącznie przez "
+"Nitrokey 3. Jeśli zostanie wprowadzone hasło, baza danych będzie chroniona "
+"hasłem **i** Nitrokey 3."
+
+#: ../software/nk-app2/keepassxc.rst:86
+msgid ""
+"If the Nitrokey 3 is not recognized, close KeePassXC completely. Then "
+"connect the Nitrokey 3 to your computer before restarting KeePassXC."
+msgstr ""
+"Jeśli Nitrokey 3 nie zostanie rozpoznany, zamknij całkowicie KeePassXC. "
+"Następnie podłącz Nitrokey 3 do komputera przed ponownym uruchomieniem "
+"KeePassXC."
 
 #: ../nitrokey3/shared/nitropy.rst:2
 msgid "Using The Nitrokey 3 With nitropy"
@@ -18730,9 +18978,10 @@ msgid ""
 "been installed before:"
 msgstr ""
 "Zalecamy aktualizację OpenWrt za pomocą preinstalowanej usługi `Attended "
-"Sysupgrade <https://openwrt.org/docs/guide-user/installation/attended."
-"sysupgrade>`__. Aby móc korzystać z tej usługi, należy skonfigurować ją tak, "
-"aby ignorowała pakiet \"nitrowall\", jeśli został on wcześniej zainstalowany:"
+"Sysupgrade <https://openwrt.org/docs/guide-"
+"user/installation/attended.sysupgrade>`__. Aby móc korzystać z tej "
+"usługi, należy skonfigurować ją tak, aby ignorowała pakiet \"nitrowall\","
+" jeśli został on wcześniej zainstalowany:"
 
 #: ../nitrowall/firmware-update-nw678.rst:11
 msgid ""
@@ -18796,8 +19045,8 @@ msgid ""
 "Update OpenWrt via `Attended Sysupgrade <https://openwrt.org/docs/guide-"
 "user/installation/attended.sysupgrade>`__."
 msgstr ""
-"Aktualizacja OpenWrt przez `Attended Sysupgrade <https://openwrt.org/docs/"
-"guide-user/installation/attended.sysupgrade>`__."
+"Aktualizacja OpenWrt przez `Attended Sysupgrade <https://openwrt.org/docs"
+"/guide-user/installation/attended.sysupgrade>`__."
 
 #: ../nitrowall/firmware-update-nw678.rst:43
 msgid ""
@@ -24311,11 +24560,11 @@ msgid ""
 " other cases, or if you have access to another system, the regular update"
 " as described `here <firmware-update.html>`__ is sufficient and easier."
 msgstr ""
-"Poniższe kroki są konieczne tylko w przypadku korzystania z systemu Windows "
-"10 Build 1809 (lub nowszego) i Nitrokey Storage z oprogramowaniem układowym "
-"0.52 lub starszym. We wszystkich innych przypadkach lub jeśli masz dostęp do "
-"innego systemu, regularna aktualizacja opisana `tutaj <firmware-update.html>`"
-"__ jest wystarczająca i łatwiejsza."
+"Poniższe kroki są konieczne tylko w przypadku korzystania z systemu "
+"Windows 10 Build 1809 (lub nowszego) i Nitrokey Storage z oprogramowaniem"
+" układowym 0.52 lub starszym. We wszystkich innych przypadkach lub jeśli "
+"masz dostęp do innego systemu, regularna aktualizacja opisana `tutaj "
+"<firmware-update.html>`__ jest wystarczająca i łatwiejsza."
 
 #: ../storage/firmware-update-manually.rst:8
 msgid "What is needed"
@@ -24804,9 +25053,9 @@ msgid ""
 " the CA, you might want to retrieve the URI of the CA’s private key from "
 "the HSM, and include it in the config file."
 msgstr ""
-"**(Wymagany krok)** Jeśli po raz pierwszy podpisujesz certyfikat z urzędem "
-"certyfikacji, możesz pobrać URI klucza prywatnego urzędu certyfikacji z HSM "
-"i dołączyć go do pliku konfiguracyjnego."
+"**(Wymagany krok)** Jeśli po raz pierwszy podpisujesz certyfikat z "
+"urzędem certyfikacji, możesz pobrać URI klucza prywatnego urzędu "
+"certyfikacji z HSM i dołączyć go do pliku konfiguracyjnego."
 
 #: ../storage/linux/openvpn-easyrsa.rst:275
 msgid "Retrieve the ``server.crt`` file to the server machine"
