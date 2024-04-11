@@ -6,7 +6,8 @@ These instructions describe how to protect and encrypt a `KeePassXC <https://kee
 
 .. note::
 
-    KeePassXC version 2.7.6 or newer is required.
+    - KeePassXC version 2.7.6 or newer is required.
+    - `Nitrokey App 2 </software/nk-app2/>`__ version 2.2.2 or newer is required.
 
 First Step: Generate a HMAC Secret With the Nitrokey App 2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
