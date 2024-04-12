@@ -1,12 +1,6 @@
 Troubleshooting
 ===============
 
-.. contents:: :local:
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
 Here you will find a collection of common issues.
 
 

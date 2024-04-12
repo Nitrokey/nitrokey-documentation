@@ -21,7 +21,8 @@ First check the:
    :glob:
 
    Frequently Asked Questions <faq>
-
+   Test your nitrokey3 <test-your-nk3>
+   
 Or choose your operating system:
 
 .. toctree::

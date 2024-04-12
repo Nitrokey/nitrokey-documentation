@@ -41,6 +41,12 @@ Before pushing your changes to the Github repository, commit often and test the 
 
 ## Local Preview
 
+Install virtualenv with pip:
+
+```
+pip install virtualenv
+```
+
 Setup Sphinx and components:
 
 ```

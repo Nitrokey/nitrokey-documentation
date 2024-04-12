@@ -10,7 +10,8 @@ Nitrokey 3 FAQ
 **Q:** How can I check if my Nitrokey 3 is working?
    On `WebAuthn.io`_ you can check various high-level functionalities, while
    `webautn.bin.coffee`_ provides good developer level details (technical)
-   details. 
+   details.
+   You can also `test`_ your nitrokey.
 
 **Q:** Where is the right spot for NFC on my smartphone?
    Use `nfc.fail`_ to find the right spot!
@@ -49,3 +50,4 @@ Nitrokey 3 FAQ
    After `disabling Enforce Attestation`_ Nitrokey 3 is supported by Azure Entra ID out of the box.
 
 .. include:: ../shared-faqs/hyperlinks.rst.inc 
+.. _test: ../nitrokey3/test-your-nk3.html

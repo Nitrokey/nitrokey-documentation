@@ -25,7 +25,7 @@ Before installing nitropy, you have to install and configure pipx::
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath
 
-See the `pipx Installation Guide <https://pypa.github.io/pipx/installation/>`__ for more information.
+See the `pipx Installation Guide <https://pipx.pypa.io/stable/>`__ for more information.
 
 .. note::
    **For Linux Users** - currently a transient dependency (``oscrypto``) is generating issues on some Linux distrubutions. 
