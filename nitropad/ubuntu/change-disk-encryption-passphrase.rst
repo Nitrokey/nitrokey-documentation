@@ -27,8 +27,8 @@ Change Disk Encryption Passphrase
 
 
 
-4. Enter “PleaseChangeMe” as the current passphrase and select a secure
-   new one.
+4. Enter "12345678" this was changed on the 10.04.2024 so if it's not working try the old default: "PleaseChangeMe" as the current passphrase 
+   and select a secure new one.
 
    .. figure:: ../images/change-disk-encryption-passphrase/4.png
       :alt: img4
