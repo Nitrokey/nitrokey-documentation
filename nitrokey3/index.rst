@@ -4,7 +4,13 @@ Nitrokey 3
 .. contents:: :local:
 
 
-The Nitrokey 3 currently supports FIDO2 and one-time passwords (OTP). Additional features like OpenPGP Card and PIV are available in test firmware releases. See the `release notes`_ on GitHub for more information.
+The Nitrokey 3 currently supports:
+
+* FIDO2
+* Password-Safe & One-Time Passwords (OTP)
+* OpenPGP Card
+ 
+Additional features like PIV are available in test firmware releases. See the `release notes`_ on GitHub for more information.
 
 .. _release notes: https://github.com/Nitrokey/nitrokey-3-firmware/releases
 
