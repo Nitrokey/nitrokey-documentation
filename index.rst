@@ -6,6 +6,7 @@ Nitrokey Documentation
    :titlesonly:
 
    nitrokey3/index
+   nkpk/index
    fido2/index
    u2f/index
    hsm/index
