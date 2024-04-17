@@ -1,5 +1,5 @@
-Test your NitroKey 3
-====================
+Test
+====
 
 This guide describes how to test the Nitrokey 3.
 
