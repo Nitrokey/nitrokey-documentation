@@ -21,7 +21,8 @@ First check the:
    :glob:
 
    Frequently Asked Questions <faq>
-
+   Test <test>
+   
 Or choose your operating system:
 
 .. toctree::
