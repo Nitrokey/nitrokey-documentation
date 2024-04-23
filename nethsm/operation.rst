@@ -50,7 +50,7 @@ The supported key types and their corresponding mechanisms are the following.
 |                | ``AES_Decryption_CBC``         |
 +----------------+--------------------------------+
 
-Keys are assigned to the `*Namespace* <administration.html#namespaces>`__ of the user that generates the key.
+Keys are assigned to the *`Namespace <administration.html#namespaces>`__* of the user that generates the key.
 
 The key can be generated as follows.
 

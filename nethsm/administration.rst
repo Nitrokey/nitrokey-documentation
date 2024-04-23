@@ -940,7 +940,7 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
 
-See `Namespaces <administration.html#namespaces`__ and `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
+See `Namespaces <administration.html#namespaces>`__ and `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
 
 .. note::
    In a future release, additional *Roles* may be introduced.
