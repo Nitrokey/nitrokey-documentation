@@ -50,6 +50,8 @@ The supported key types and their corresponding mechanisms are the following.
 |                | ``AES_Decryption_CBC``         |
 +----------------+--------------------------------+
 
+Keys are assigned to the `*Namespace* <administration.html#namespaces>`__ of the user that generates the key.
+
 The key can be generated as follows.
 
 .. tabs::
@@ -134,6 +136,8 @@ The supported key types and their corresponding mechanisms are the following.
 |                | ``AES_Decryption_CBC``         |
 +----------------+--------------------------------+
 
+Keys are assigned to the `*Namespace* <administration.html#namespaces>`__ of the user that imports the key.
+
 The import can be initiated as follows.
 
 .. tabs::
@@ -199,6 +203,7 @@ Delete Key
 ~~~~~~~~~~
 
 The NetHSM can delete keys from the *Key Store*.
+Users can only delete keys in their `*Namespace* <administration.html#namespaces>`__.
 
 .. tabs::
    .. tab:: nitropy
@@ -229,7 +234,7 @@ The NetHSM can delete keys from the *Key Store*.
 List Keys
 ~~~~~~~~~
 
-The NetHSM can list all the available keys in the *Key Store*.
+The NetHSM can list all keys in the *Key Store* that are in the `*Namespace* <administration.html#namespaces>`__ of the current user.
 
 The list can be retrieved as follows.
 
@@ -267,6 +272,7 @@ Show Key Details
 ~~~~~~~~~~~~~~~~
 
 The NetHSM can output more detailed information about a stored key.
+Users can only access keys in their `*Namespace* <administration.html#namespaces>`__.
 
 The detailed information can be retrieved as follows.
 
@@ -595,6 +601,8 @@ The NetHSM supports generating CSR (Certificate Signing Requests) for the stored
 
 Key Operations
 --------------
+
+All operations described in this chapter can only be executed for keys that are in the `*Namespace* <administration.html#namespaces>`__ of the current user.
 
 Encrypt
 ~~~~~~~

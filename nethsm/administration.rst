@@ -940,7 +940,7 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
 
-See `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
+See `Namespaces <administration.html#namespaces`__ and `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
 
 .. note::
    In a future release, additional *Roles* may be introduced.
@@ -951,6 +951,9 @@ Add User
 Add a user account to the NetHSM.
 Each user account has a *Role*, which needs to be specified.
 Please refer to chapter `Roles <administration.html#roles>`__ to learn more about *Roles*.
+
+Optionally, a user can be assigned to a *Namespace*.
+See the chapter `Namespaces <administration.html#namespaces>`__ for more information.
 
 .. note::
    The NetHSM assigns a random user ID if none is specified.
@@ -965,6 +968,8 @@ A user account can be added as follows.
       | Option                                                         | Description                      |
       +================================================================+==================================+
       | ``-n``, ``--real-name`` ``TEXT``                               | The real name of the user        |
+      +----------------------------------------------------------------+----------------------------------+
+      | ``-N``, ``--namespace`` ``TEXT``                               | The namespace of the new user    |
       +----------------------------------------------------------------+----------------------------------+
       | ``-r``, ``--role`` ``[Administrator|Operator|Metrics|Backup]`` | The *Role* of the new user       |
       +----------------------------------------------------------------+----------------------------------+
@@ -994,6 +999,9 @@ A user account can be added as follows.
       Information about the `/users` endpoint, to create a user without specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users>`__.
 
       Information about the `/users/{UserID}` endpoint, to create a user with specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID>`__.
+
+Per default, the namespace is inherited from the user that adds the new user.
+Only users without a namespace can chose a different namespace for new users.
 
 Delete User
 ~~~~~~~~~~~
@@ -1026,6 +1034,9 @@ A user account can be deleted as follows.
          User operator1 deleted on NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID>`__.
+
+.. note::
+   Before deleting the last user in a namespace, all keys in the namespace must be deleted.
 
 List Users
 ~~~~~~~~~~
@@ -1063,6 +1074,8 @@ The list can be retrieved as follows.
 
       Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users-UserID>`__.
 
+Users within a namespace can only see users in the same namespace.
+
 User Passphrase
 ~~~~~~~~~~~~~~~
 
@@ -1099,6 +1112,19 @@ The user passphrase can be set as follows.
          Updated the passphrase for user operator1 on NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/users/{UserID}/passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users-UserID-passphrase>`__.
+
+Namespaces
+~~~~~~~~~~
+
+*Namespaces* group the keys and users on a NetHSM into subsets.
+Users can only see and use keys in the same namespace.
+When a new user is created, it inherits the namespace of the user that created it.
+It is not possible to see users from other namespaces.
+
+Special rules apply to users without a namespace:
+They can set the namespace for new users, list all users and query the namespace of a user.
+
+It is not necessary to explicitly create or delete namespaces.
 
 Tags for Users
 ~~~~~~~~~~~~~~
