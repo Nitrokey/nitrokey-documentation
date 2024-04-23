@@ -1119,7 +1119,7 @@ Namespaces
 *Namespaces* group the keys and users on a NetHSM into subsets.
 Users can only see and use keys in the same namespace.
 When a new user is created, it inherits the namespace of the user that created it.
-It is not possible to see users from other namespaces.
+It is not possible to see users of other namespaces.
 
 Special rules apply to users without a namespace:
 They can set the namespace for new users, list all users and query the namespace of a user.
