@@ -8,7 +8,7 @@ Frequently Asked Questions (FAQ)
    Not yet but we are aiming for certifications in the future. Please contact us if you are interested in supporting these efforts.
 
 **Q:** Which protections against physical tampering are in place?
-   NetHSM contains a TPM which is protected against physical tampering. The TPM is the root of trust and securely stores cryptographic keys which are used to encrypt and decrypt further data and keys in the NetHSM. This protects against booting malicious firmware and software and decrypting data and keys being stored. The current NetHSM doesn't contain additional sensors to detect tampering.
+   NetHSM is sealed which allows to detect physical tampering. It contains a TPM which is protected against physical tampering. The TPM is the root of trust and securely stores cryptographic keys which are used to encrypt and decrypt further data and keys in the NetHSM. This protects against booting malicious firmware and software and decrypting data and keys being stored. The current NetHSM doesn't contain additional sensors to detect tampering.
 
 **Q:** Where can I learn more about NetHMS's security architecture and implementation?
    Start with the chapters Getting Started, Administration and Operations. Proceed with the following resources.
