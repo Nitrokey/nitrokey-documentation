@@ -568,25 +568,6 @@ The NetHSM can log system events to the serial port or to a syslog server on the
 .. important::
    For any production deployment, the NetHSM log should be monitored continuously to provide immediate notification of any potential security issues.
 
-The serial console works right from the start of the NetHSM hardware.
-It includes events from the NetHSM firmware and the NetHSM software.
-
-The serial console connection settings are as follows.
-
-+--------------+--------+
-| Setting      | Value  |
-+==============+========+
-| Baud rate    | 115200 |
-+--------------+--------+
-| Data bits    | 8      |
-+--------------+--------+
-| Stop bits    | 1      |
-+--------------+--------+
-| Parity       | None   |
-+--------------+--------+
-| Flow Control | None   |
-+--------------+--------+
-
 The syslog server configuration can be retrieved as follows.
 
 .. tabs::
@@ -641,6 +622,24 @@ The syslog server configuration can be set as follows.
          Updated the logging configuration for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/logging` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-logging>`__.
+
+The serial console works right from the start of the NetHSM hardware. It includes events from the NetHSM firmware and the NetHSM software.
+
+The serial console connection settings are as follows.
+
++--------------+--------+
+| Setting      | Value  |
++==============+========+
+| Baud rate    | 115200 |
++--------------+--------+
+| Data bits    | 8      |
++--------------+--------+
+| Stop bits    | 1      |
++--------------+--------+
+| Parity       | None   |
++--------------+--------+
+| Flow Control | None   |
++--------------+--------+
 
 Backup
 ~~~~~~
