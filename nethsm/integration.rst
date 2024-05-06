@@ -3,6 +3,12 @@ Integration
 
 The chapter describes processes for various tasks and aims at all user groups.
 
+REST-API
+~~~~~~~~
+
+NetHSM's API specification is available in `OpenAPI format <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_,
+and can be inspected and tested in the `API browser <https://nethsmdemo.nitrokey.com/api_docs/index.html>`_.
+
 PKCS#11
 -------
 
@@ -90,9 +96,3 @@ This folder also contains the necessary documentation how to use it.
    The mode of SELinux can be requested with ``sestatus |grep "Current mode"``.
    If the mode is set to ``enforcing``, a change to the context is required.
    In this case the volume mount must be postfixed with ``:z``, resulting in ``-v "${PWD}/out:/out:z"``.
-
-REST-API
-~~~~~~~~
-
-NetHSM's API specification is available in `OpenAPI format <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_,
-and can be inspected and tested in the `API browser <https://nethsmdemo.nitrokey.com/api_docs/index.html>`_.
