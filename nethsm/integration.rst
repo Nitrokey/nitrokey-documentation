@@ -31,7 +31,20 @@ The container can be executed as follows.
 
          $ podman run --rm -ti -p8443:8443 docker.io/nitrokey/nethsm:testing 
 
-This will provide the REST API on the port `8443` via the HTTPS protocol.
+This will run NetHSM as a Unix process inside the container and expose the REST API on the port `8443` via the HTTPS protocol.
+
+Additionaly to running the NetHSM as a Unix process it can be run as a unikernel supported by KVM.
+
+The container can be executed as follows.
+
+.. tabs::
+   .. tab:: Docker
+      .. code-block:: bash
+
+         $ docker run -ti --rm -p 8443:8443 --device /dev/net/tun --device /dev/kvm --cap-add=NET_ADMIN nitrokey/nethsm:testing
+
+This will run NetHSM as a unikernel inside a KVM virtual machine.
+The container will expose the REST API, via the HTTPS protocol, on the interface `tap200` with the IP address `192.168.1.100` and port `8443`.
 
 .. important::
    The container uses a self-signed TLS certificate.
