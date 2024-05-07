@@ -6,7 +6,8 @@ The chapter describes processes for various tasks and aims at all user groups.
 REST-API
 ~~~~~~~~
 
-NetHSM's API specification is available in `OpenAPI format <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_,
+NetHSM's primary interface is a modern REST-API that guarantees best performance and functionality.
+The API specification is available in `OpenAPI format <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_,
 and can be inspected and tested in the `API browser <https://nethsmdemo.nitrokey.com/api_docs/index.html>`_.
 
 PKCS#11
