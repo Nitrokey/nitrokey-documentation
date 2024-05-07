@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-29 18:24+0200\n"
+"POT-Creation-Date: 2024-05-07 14:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4911,79 +4911,89 @@ msgid "The chapter describes processes for various tasks and aims at all user gr
 msgstr ""
 
 #: ../nethsm/integration.rst:7
-msgid "PKCS#11"
-msgstr ""
-
-#: ../nethsm/integration.rst:9
-msgid "The NetHSM supports the PKCS#11 standard. The required driver is available from the `repository <https://github.com/Nitrokey/nethsm-pkcs11>`__. The repository containes the source code and libraries, for different operating systems. The `PKCS#11 guide <pkcs11-setup.html>`_ describes the usage in detail."
-msgstr ""
-
-#: ../nethsm/integration.rst:15
-msgid "Development and Testing"
-msgstr ""
-
-#: ../nethsm/integration.rst:17
-msgid "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every eight hours (CET 6:00, 14:00, 22:00). User \"admin\", password \"adminadmin\", unlock password \"unlockunlock\"."
-msgstr ""
-
-#: ../nethsm/integration.rst:19
-msgid "Alternatively, you can run the NetHSM as a `Docker container <https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
-msgstr ""
-
-#: ../nethsm/integration.rst:21
-msgid "The container can be executed as follows."
-msgstr ""
-
-#: ../nethsm/integration.rst:24
-#: ../nethsm/integration.rst:49
-#: ../nethsm/integration.rst:62
-msgid "Docker"
-msgstr ""
-
-#: ../nethsm/integration.rst:29
-#: ../nethsm/integration.rst:54
-#: ../nethsm/integration.rst:67
-msgid "Podman"
-msgstr ""
-
-#: ../nethsm/integration.rst:34
-msgid "This will provide the REST API on the port `8443` via the HTTPS protocol."
-msgstr ""
-
-#: ../nethsm/integration.rst:37
-msgid "The container uses a self-signed TLS certificate. Make sure to use the correct connection settings to establish a connection. Please refer to chapter `NetHSM introduction <index.html>`__ to learn more."
-msgstr ""
-
-#: ../nethsm/integration.rst:42
-msgid "Integration into Custom Application"
-msgstr ""
-
-#: ../nethsm/integration.rst:44
-msgid "To integrate the NetHSM into own custom applications, client libraries are available for almost all programming languages. Here are libraries for `Python <https://github.com/Nitrokey/nethsm-sdk-py>`_ and `Rust <https://github.com/Nitrokey/nethsm-sdk-rs>`_ as well as `this 3rd party Rust crate <https://crates.io/crates/nethsm>`_. For all other programming languages we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_."
-msgstr ""
-
-#: ../nethsm/integration.rst:46
-msgid "The list of all available languages can be retrieved as follows."
-msgstr ""
-
-#: ../nethsm/integration.rst:59
-msgid "The NetHSM client can be generated for your programming language as follows."
-msgstr ""
-
-#: ../nethsm/integration.rst:72
-msgid "The generated client code, in this example JavaScript, will be created in the ``./out/`` directory. This folder also contains the necessary documentation how to use it."
-msgstr ""
-
-#: ../nethsm/integration.rst:76
-msgid "If Podman is used with enforcing SELinux, a labeling to the volume mount might be required. The mode of SELinux can be requested with ``sestatus |grep \"Current mode\"``. If the mode is set to ``enforcing``, a change to the context is required. In this case the volume mount must be postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
-msgstr ""
-
-#: ../nethsm/integration.rst:82
 msgid "REST-API"
 msgstr ""
 
-#: ../nethsm/integration.rst:84
-msgid "NetHSM's API specification is available in `OpenAPI format <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_, and can be inspected and tested in the `API browser <https://nethsmdemo.nitrokey.com/api_docs/index.html>`_."
+#: ../nethsm/integration.rst:9
+msgid "NetHSM's primary interface is a modern REST-API that guarantees best performance and functionality. The API specification is available in `OpenAPI format <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_, and can be inspected and tested in the `API browser <https://nethsmdemo.nitrokey.com/api_docs/index.html>`_."
+msgstr ""
+
+#: ../nethsm/integration.rst:14
+msgid "PKCS#11"
+msgstr ""
+
+#: ../nethsm/integration.rst:16
+msgid "The NetHSM supports the PKCS#11 standard. The required driver is available from the `repository <https://github.com/Nitrokey/nethsm-pkcs11>`__. The repository containes the source code and libraries, for different operating systems. The `PKCS#11 guide <pkcs11-setup.html>`_ describes the usage in detail."
+msgstr ""
+
+#: ../nethsm/integration.rst:22
+msgid "Development and Testing"
+msgstr ""
+
+#: ../nethsm/integration.rst:24
+msgid "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every eight hours (CET 6:00, 14:00, 22:00). User \"admin\", password \"adminadmin\", unlock password \"unlockunlock\"."
+msgstr ""
+
+#: ../nethsm/integration.rst:26
+msgid "Alternatively, you can run the NetHSM as a `Docker container <https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
+msgstr ""
+
+#: ../nethsm/integration.rst:28
+#: ../nethsm/integration.rst:45
+msgid "The container can be executed as follows."
+msgstr ""
+
+#: ../nethsm/integration.rst:31
+#: ../nethsm/integration.rst:48
+#: ../nethsm/integration.rst:69
+#: ../nethsm/integration.rst:82
+msgid "Docker"
+msgstr ""
+
+#: ../nethsm/integration.rst:36
+#: ../nethsm/integration.rst:74
+#: ../nethsm/integration.rst:87
+msgid "Podman"
+msgstr ""
+
+#: ../nethsm/integration.rst:41
+msgid "This will run NetHSM as a Unix process inside the container and expose the REST API on the port `8443` via the HTTPS protocol."
+msgstr ""
+
+#: ../nethsm/integration.rst:43
+msgid "Additionaly to running the NetHSM as a Unix process it can be run as a unikernel supported by KVM."
+msgstr ""
+
+#: ../nethsm/integration.rst:53
+msgid "This will run NetHSM as a unikernel inside a KVM virtual machine. The container will expose the REST API, via the HTTPS protocol, on the interface `tap200` with the IP address `192.168.1.100` and port `8443`."
+msgstr ""
+
+#: ../nethsm/integration.rst:57
+msgid "The container uses a self-signed TLS certificate. Make sure to use the correct connection settings to establish a connection. Please refer to chapter `NetHSM introduction <index.html>`__ to learn more."
+msgstr ""
+
+#: ../nethsm/integration.rst:62
+msgid "Integration into Custom Application"
+msgstr ""
+
+#: ../nethsm/integration.rst:64
+msgid "To integrate the NetHSM into own custom applications, client libraries are available for almost all programming languages. Here are libraries for `Python <https://github.com/Nitrokey/nethsm-sdk-py>`_ and `Rust <https://github.com/Nitrokey/nethsm-sdk-rs>`_ as well as `this 3rd party Rust crate <https://crates.io/crates/nethsm>`_. For all other programming languages we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_."
+msgstr ""
+
+#: ../nethsm/integration.rst:66
+msgid "The list of all available languages can be retrieved as follows."
+msgstr ""
+
+#: ../nethsm/integration.rst:79
+msgid "The NetHSM client can be generated for your programming language as follows."
+msgstr ""
+
+#: ../nethsm/integration.rst:92
+msgid "The generated client code, in this example JavaScript, will be created in the ``./out/`` directory. This folder also contains the necessary documentation how to use it."
+msgstr ""
+
+#: ../nethsm/integration.rst:96
+msgid "If Podman is used with enforcing SELinux, a labeling to the volume mount might be required. The mode of SELinux can be requested with ``sestatus |grep \"Current mode\"``. If the mode is set to ``enforcing``, a change to the context is required. In this case the volume mount must be postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
 msgstr ""
 
 #: ../nethsm/knotdns.rst:2
