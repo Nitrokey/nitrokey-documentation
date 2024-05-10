@@ -1,5 +1,20 @@
 # Nitrokey's User Documentation
 
+## Text Style Tips
+
+- Use language that everyone can understand and make sure the text has a good flow.
+- Use subheadings to organize the text.
+- Write short, clear sentences in the active voice.
+- Don't leave out any relevant information.
+- Remove all filler words.
+- Simplify technical language.
+- Avoid convoluted sentences.
+- Write only in the active and present tense.
+- Write concisely, precisely and to the point.
+- Add short explanations if something is unclear.
+- If possible, use gender-neutral language
+- Imagine a style scale from 1 to 10. 10 is the exaggerated language of a US-American marketing salesperson. 1 is the boring, sober language of a German bureaucrat. Write the text in the style of a 3. 
+
 ## Tips and Conventions
 
 - See syntax examples in `syntax.rst` and live at https://docs.nitrokey.com/syntax.html 
