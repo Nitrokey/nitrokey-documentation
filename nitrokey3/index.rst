@@ -22,6 +22,7 @@ First check the:
    :glob:
 
    Frequently Asked Questions <faq>
+   features
    
 Or choose your operating system:
 

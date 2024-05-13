@@ -53,7 +53,8 @@ Nitrokey 3 FAQ
   Starting with version 1.7.0 the Secure Element should be automatically activated, if the OpenPGP Card
   was not used before. To check its activation state you can use: ``nitropy nk3 get-config opcard.use_se050_backend``.
   To activate it, if it isn't activated use: ``nitropy nk3 set-config opcard.use_se050_backend true`` or disable
-  it accordingly by passing ``false``.
+  it accordingly by passing ``false``. **Changing the backend from one to the other will always wipe all your data 
+  inside the OpenPGP Card**
 
   .. note:: If you are updating from a test version firmware, we recommend factory resetting the device before
             using the Nitrokey 3 with the SE050 in production environments.
