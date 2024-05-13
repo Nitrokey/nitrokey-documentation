@@ -43,7 +43,7 @@ features are realized.
    user has to `manually switch`_ as described in the FAQ.
 
 
-On top of the stable firmware for the Nitrokey 3, we also provide a Test Firmware, which
+On top of the stable firmware for the Nitrokey 3, we also provide a `Test Firmware`_, which
 comes with additional functionalities, which are not (yet) included into the stable firmware.
 
 **Using the Test Firmware is not recommended for production environments, there might be 
@@ -79,6 +79,7 @@ incompatibilities between test and stable firmware upgrades - please use with ca
 .. _pynitrokey: ../software/nitropy
 .. _NitrokeyApp2: ../software/nk-app2
 
+.. _Test Firmware: linux/firmware-update#firmware-release-types
 
 
 .. _manually switch: faq#how-can-I-use-the-se050-secure-element
