@@ -5,3 +5,4 @@ nitropy Documentation For All Platforms
    :maxdepth: 1
 
    installation
+   test
