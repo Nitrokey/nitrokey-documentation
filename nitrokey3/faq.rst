@@ -14,7 +14,9 @@ Nitrokey 3 FAQ
    You can also `test`_ your Nitrokey.
 
 **Q:** Where is the right spot for NFC on my smartphone?
-   Use `nfc.fail`_ to find the right spot!
+   This is different for every smartphone model, you should find your 
+   brand's respective hardware description to find this out. A quite
+   extensive list can be found `here <https://support.bagtag.com/hc/en-us/articles/4417056455185-Where-to-the-find-NFC-location-per-phone-brand>`_. 
 
 **Q:** What happens if I lose my device?
    When securing accounts using FIDO (two-factor authentication and
