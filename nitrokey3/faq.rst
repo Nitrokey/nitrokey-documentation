@@ -44,10 +44,20 @@ Nitrokey 3 FAQ
 **Q:** Is the Nitrokey 3 Common Criteria or FIPS certified?
    The secure element is Common Criteria EAL 6+ security certification up to OS 
    level (See `here`_, click “ICs, Smart Cards and Smart Card-Related Devices and 
-   Systems” and search for: "NXP JCOP 4 SE050M”).
+   ystems” and search for: "NXP JCOP 4 SE050M”).
 
 **Q:** How to use Nitrokey 3 with Azure Entra ID (Active Directory)?
    After `disabling Enforce Attestation`_ Nitrokey 3 is supported by Azure Entra ID out of the box.
 
+**Q:** How can I use the SE050 Secure Element?
+  Starting with version 1.7.0 the Secure Element should be automatically activated, if the OpenPGP Card
+  was not used before. To check its activation state you can use: ``nitropy nk3 get-config opcard.use_se050_backend``.
+  To activate it, if it isn't activated use: ``nitropy nk3 set-config opcard.use_se050_backend true`` or disable
+  it accordingly by passing ``false``.
+
+  .. note:: If you are updating from a test version firmware, we recommend factory resetting the device before
+            using the Nitrokey 3 with the SE050 in production environments.
+
+
 .. include:: ../shared-faqs/hyperlinks.rst.inc 
-.. _test: ../nitrokey3/test.html
+.. _test: ../software/nitropy/all-platforms/test.html
