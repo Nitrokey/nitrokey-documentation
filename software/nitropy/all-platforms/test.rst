@@ -26,6 +26,8 @@ This is an example of a working key::
    5 tests, 4 successful, 1 skipped, 0 failed
    Summary: 1 device(s) tested, 1 successful, 0 failed
 
+In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitropy.log.*``).
+
 
 .. _installation instructions: ../software/nitropy/all-platforms/installation.html
 
