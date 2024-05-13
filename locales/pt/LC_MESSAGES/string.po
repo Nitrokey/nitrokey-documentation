@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-07 14:42+0200\n"
+"POT-Creation-Date: 2024-05-13 11:53+0200\n"
 "PO-Revision-Date: 2024-04-22 13:49+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: pt\n"
@@ -91,7 +91,7 @@ msgid ""
 "Azure Entra ID out of the box."
 msgstr ""
 
-#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nitrokey3/index.rst:19
+#: ../fido2/index.rst:8 ../hsm/index.rst:8 ../nitrokey3/index.rst:20
 #: ../nitropad/index.rst:8 ../nitropc/index.rst:9 ../nitrophone/index.rst:19
 #: ../pro/index.rst:9 ../start/index.rst:8 ../storage/index.rst:8
 msgid "Frequently Asked Questions"
@@ -123,7 +123,7 @@ msgstr "Linux"
 msgid "Nitrokey FIDO2"
 msgstr "Nitrokey FIDO2"
 
-#: ../fido2/index.rst:6 ../hsm/index.rst:6 ../nitrokey3/index.rst:17
+#: ../fido2/index.rst:6 ../hsm/index.rst:6 ../nitrokey3/index.rst:18
 #: ../nitropad/index.rst:6 ../nitropc/index.rst:7 ../pro/index.rst:7
 #: ../start/index.rst:6 ../storage/index.rst:6
 msgid "First check the:"
@@ -933,7 +933,8 @@ msgstr ""
 "ferramenta de linha de comando."
 
 #: ../fido2/shared/firmware-update.rst.inc:26
-#: ../nitrokey3/firmware-update.rst.inc:26 ../nitrokey3/test.rst:7
+#: ../nitrokey3/firmware-update.rst.inc:26
+#: ../software/nitropy/all-platforms/test.rst:7
 msgid ""
 "Make sure you have the latest `pynitrokey` version installed, please "
 "check the `installation instructions`_ for your OS."
@@ -12234,10 +12235,11 @@ msgid "**Q:** Is the Nitrokey 3 Common Criteria or FIPS certified?"
 msgstr "**Q:** O Nitrokey 3 Common Criteria ou FIPS é certificado?"
 
 #: ../nitrokey3/faq.rst:45
+#, fuzzy
 msgid ""
 "The secure element is Common Criteria EAL 6+ security certification up to"
 " OS level (See `here`_, click “ICs, Smart Cards and Smart Card-Related "
-"Devices and Systems” and search for: \"NXP JCOP 4 SE050M”)."
+"Devices and ystems” and search for: \"NXP JCOP 4 SE050M”)."
 msgstr ""
 "O elemento seguro é a certificação de segurança Common Criteria EAL 6+ "
 "até ao nível do SO (Ver `here`_, clique em \"ICs, Smart Cards e "
@@ -12254,9 +12256,26 @@ msgid ""
 "Entra ID out of the box."
 msgstr ""
 
-#: ../nitrokey3/index.rst:19 ../nitrokey3/test.rst:2
-msgid "Test"
-msgstr "Test2"
+#: ../nitrokey3/faq.rst:60
+msgid "**Q:** How can I use the SE050 Secure Element?"
+msgstr ""
+
+#: ../nitrokey3/faq.rst:53
+msgid ""
+"Starting with version 1.7.0 the Secure Element should be automatically "
+"activated, if the OpenPGP Card was not used before. To check its "
+"activation state you can use: ``nitropy nk3 get-config "
+"opcard.use_se050_backend``. To activate it, if it isn't activated use: "
+"``nitropy nk3 set-config opcard.use_se050_backend true`` or disable it "
+"accordingly by passing ``false``."
+msgstr ""
+
+#: ../nitrokey3/faq.rst:58
+msgid ""
+"If you are updating from a test version firmware, we recommend factory "
+"resetting the device before using the Nitrokey 3 with the SE050 in "
+"production environments."
+msgstr ""
 
 #: ../nitrokey3/index.rst:7
 msgid "The Nitrokey 3 currently supports:"
@@ -12272,8 +12291,8 @@ msgstr ""
 msgid "Password-Safe & One-Time Passwords (OTP)"
 msgstr ""
 
-#: ../nitrokey3/index.rst:11 ../nitrokey3/shared/set-pins.rst.inc:4
-msgid "OpenPGP Card"
+#: ../nitrokey3/index.rst:11
+msgid "OpenPGP Card (`Secure Element Backend or Software Backend`_)"
 msgstr ""
 
 #: ../nitrokey3/index.rst:13
@@ -14673,6 +14692,10 @@ msgid ""
 "instructions."
 msgstr ""
 
+#: ../nitrokey3/shared/set-pins.rst.inc:4
+msgid "OpenPGP Card"
+msgstr ""
+
 #: ../nitrokey3/shared/set-pins.rst.inc:6
 msgid ""
 "The PINs on the OpenPGP Card can be set with GnuPG. The OpenPGP Card has "
@@ -15092,22 +15115,6 @@ msgstr ""
 #: ../nitrokey3/mac/index.rst:2
 msgid "Nitrokey 3 With macOS"
 msgstr "Nitrokey 3 Com macOS"
-
-#: ../nitrokey3/test.rst:4
-msgid "This guide describes how to test the Nitrokey 3."
-msgstr "Este guia descreve como actualizar o firmware na Nitrokey 3."
-
-#: ../nitrokey3/test.rst:8
-msgid "Run ``nitropy nk3 test`` this will launch several tests over your key."
-msgstr ""
-
-#: ../nitrokey3/test.rst:9
-msgid "During the test, when asked touch the key."
-msgstr ""
-
-#: ../nitrokey3/test.rst:11
-msgid "This is an example of a working key::"
-msgstr ""
 
 #: ../nitrokey3/windows/index.rst:2
 msgid "Nitrokey 3 With Windows"
@@ -22462,6 +22469,27 @@ msgstr ":doc:`.../.../.../nitrokey3/firmware-update`"
 #, fuzzy
 msgid "For Windows: :doc:`../../../nitrokey3/windows/firmware-update`"
 msgstr ":doc:`.../.../.../nitrokey3/firmware-update`"
+
+#: ../software/nitropy/all-platforms/test.rst:2
+#, fuzzy
+msgid "Test Nitrokey 3"
+msgstr "Nitrokey 3"
+
+#: ../software/nitropy/all-platforms/test.rst:4
+msgid "This guide describes how to test the Nitrokey 3."
+msgstr "Este guia descreve como actualizar o firmware na Nitrokey 3."
+
+#: ../software/nitropy/all-platforms/test.rst:8
+msgid "Run ``nitropy nk3 test`` this will launch several tests over your key."
+msgstr ""
+
+#: ../software/nitropy/all-platforms/test.rst:9
+msgid "During the test, when asked touch the key."
+msgstr ""
+
+#: ../software/nitropy/all-platforms/test.rst:11
+msgid "This is an example of a working key::"
+msgstr ""
 
 #: ../software/nitropy/index.rst:4
 msgid ""
@@ -32398,4 +32426,7 @@ msgstr ""
 #~ " the port `8443` via the HTTPS "
 #~ "protocol."
 #~ msgstr ""
+
+#~ msgid "Test"
+#~ msgstr "Test2"
 
