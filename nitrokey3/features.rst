@@ -47,7 +47,8 @@ On top of the stable firmware for the Nitrokey 3, we also provide a `Test Firmwa
 comes with additional functionalities, which are not (yet) included into the stable firmware.
 
 **Using the Test Firmware is not recommended for production environments, there might be 
-incompatibilities between test and stable firmware upgrades - please use with caution.**
+incompatibilities between test and stable firmware upgrades - please use with caution. Especially
+data migrations from test to stable firmwares will not be implemented.**
    
 .. list-table::
    :width: 100%
