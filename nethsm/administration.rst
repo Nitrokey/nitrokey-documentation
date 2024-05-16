@@ -1035,9 +1035,6 @@ A user account can be deleted as follows.
    .. tab:: REST API
       Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_users-UserID>`__.
 
-.. note::
-   Before deleting the last user in a namespace, all keys in the namespace must be deleted.
-
 List Users
 ~~~~~~~~~~
 
@@ -1121,12 +1118,110 @@ Users can only see and use keys in the same namespace.
 When a new user is created, it inherits the namespace of the user that created it.
 It is not possible to see users of other namespaces.
 
-Special rules apply to users without a namespace:
-They can set the namespace for new users, list all users and query the namespace of a user.
+Users with the *Administrator* `Role <administration.html#roles>`__ are also referred to as *R-Administrator* if they are not in a namespace, or *N-Administrator* if they are in a namespace.
 
-It is not necessary to explicitly create or delete namespaces.
+Special rules apply to *R-Administrator* users:
+They can set the namespace for new users, list all users and query the namespace of a user.
+Also, the NetHSM configuration can only be accessed by *R-Administrator* users.
+
+To be able to generate keys and users in a namespace, the namespace needs to be created by an *R-Administrator* user.
+Once the namespace has been created, *R-Administrator* users can no longer create new users in that namespace.
+Therefore, it is necessary to create an *N-Administrator* user for the namespace before creating the namespace.
+*R-Administrator* users can also delete a namespace with all contained keys.
 
 When migrating from an earlier version of the software without the namespace concept (1.0), all existing users and keys will be without a namespace.
+
+List Namespaces
+^^^^^^^^^^^^^^^
+
+List the namespaces on the NetHSM.
+
+The list can be retrieved as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST list-namespaces
+
+      .. code-block::
+
+         Namespaces on NetHSM localhost:8843:
+         - ns1
+         - ns2
+   .. tab:: REST API
+      Information about the `/namespaces` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_namespaces>`__.
+
+Add Namespace
+^^^^^^^^^^^^^
+
+Add a namespace to the NetHSM.
+
+*R-Administrator* users can already create new accounts in the namespace before it is created.
+After the creation, only *N-Administrator* users can manage the accounts in the namespace.
+The creation and usage of keys in the namespace is only possible after it has been added.
+
+.. note::
+   The NetHSM assigns a random user ID if none is specified.
+
+A namespace can be added as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Arguments**
+
+      +---------------+------------------------+
+      | Argument      | Description            |
+      +===============+========================+
+      | ``NAMESPACE`` | The new namespace.     |
+      +-------------+--------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST add-namespace ns1
+
+      .. code-block::
+
+         Namespace ns1 added to NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/namespaces/{NamespaceID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_namespaces-NamespaceID>`__.
+
+
+Delete Namespace
+^^^^^^^^^^^^^^^^
+
+Delete a namespace from the NetHSM.
+
+Deleting a namespace also deletes all keys in the namespace.
+Users in the namespace cannot add keys until the namespace has been added again.
+
+A namespace can be deleted as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Arguments**
+
+      +---------------+--------------------------+
+      | Argument      | Description              |
+      +===============+==========================+
+      | ``NAMESPACE`` | The namespace to delete. |
+      +---------------+--------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST delete-namespace ns1
+
+      .. code-block::
+
+         Namespace ns1 deleted on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/namespaces/{NamespaceID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_namespaces-NamespaceID>`__.
 
 Tags for Users
 ~~~~~~~~~~~~~~
