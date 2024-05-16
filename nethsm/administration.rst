@@ -1000,8 +1000,8 @@ A user account can be added as follows.
 
       Information about the `/users/{UserID}` endpoint, to create a user with specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID>`__.
 
-Per default, the namespace is inherited from the user that adds the new user.
-Only users without a namespace can chose a different namespace for new users.
+By default, the namespace is inherited from the user that adds the new user.
+Only users without a namespace can choose a different namespace for new users.
 
 Delete User
 ~~~~~~~~~~~
@@ -1125,6 +1125,8 @@ Special rules apply to users without a namespace:
 They can set the namespace for new users, list all users and query the namespace of a user.
 
 It is not necessary to explicitly create or delete namespaces.
+
+When migrating from an earlier version of the software without the namespace concept (1.0), all existing users and keys will be without a namespace.
 
 Tags for Users
 ~~~~~~~~~~~~~~
