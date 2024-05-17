@@ -969,7 +969,7 @@ A user account can be added as follows.
       +================================================================+==================================+
       | ``-n``, ``--real-name`` ``TEXT``                               | The real name of the user        |
       +----------------------------------------------------------------+----------------------------------+
-      | ``-N``, ``--namespace`` ``TEXT``                               | The namespace of the new user    |
+      | ``-N``, ``--namespace`` ``TEXT``                               | The Namespace of the new user    |
       +----------------------------------------------------------------+----------------------------------+
       | ``-r``, ``--role`` ``[Administrator|Operator|Metrics|Backup]`` | The *Role* of the new user       |
       +----------------------------------------------------------------+----------------------------------+
@@ -1000,8 +1000,8 @@ A user account can be added as follows.
 
       Information about the `/users/{UserID}` endpoint, to create a user with specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID>`__.
 
-By default, the namespace is inherited from the user that adds the new user.
-Only users without a namespace can choose a different namespace for new users.
+By default, the Namespace is inherited from the user that adds the new user.
+Only users without a Namespace can choose a different Namespace for new users.
 
 Delete User
 ~~~~~~~~~~~
@@ -1071,7 +1071,7 @@ The list can be retrieved as follows.
 
       Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users-UserID>`__.
 
-Users within a namespace can only see users in the same namespace.
+Users within a Namespace can only see users in the same Namespace.
 
 User Passphrase
 ~~~~~~~~~~~~~~~
@@ -1113,28 +1113,28 @@ The user passphrase can be set as follows.
 Namespaces
 ~~~~~~~~~~
 
-*Namespaces* group the keys and users on a NetHSM into subsets.
-Users can only see and use keys in the same namespace.
-When a new user is created, it inherits the namespace of the user that created it.
-It is not possible to see users of other namespaces.
+*Namespaces* were introduced in software version 1.1. When migrating from an earlier version of the software, all existing users and keys will be without a Namespace.
 
-Users with the *Administrator* `Role <administration.html#roles>`__ are also referred to as *R-Administrator* if they are not in a namespace, or *N-Administrator* if they are in a namespace.
+*Namespaces* group keys and users on a NetHSM into subsets.
+Users can only see and use keys in the same Namespace and can only see users in the same Namespace.
+It is not possible to see users and to see and use keys of other Namespaces.
+When a new user is created, it inherits the Namespace of the user that created it.
+
+Users with the *Administrator* `Role <administration.html#roles>`__ are also referred to as *R-Administrator* if they are not in a Namespace, or *N-Administrator* if they are in a Namespace.
 
 Special rules apply to *R-Administrator* users:
-They can set the namespace for new users, list all users and query the namespace of a user.
+They can set the Namespace for new users, list all users and query the Namespace of a user.
 Also, the NetHSM configuration can only be accessed by *R-Administrator* users.
 
-To be able to generate keys and users in a namespace, the namespace needs to be created by an *R-Administrator* user.
-Once the namespace has been created, *R-Administrator* users can no longer create new users in that namespace.
-Therefore, it is necessary to create an *N-Administrator* user for the namespace before creating the namespace.
-*R-Administrator* users can also delete a namespace with all contained keys.
-
-When migrating from an earlier version of the software without the namespace concept (1.0), all existing users and keys will be without a namespace.
+To be able to generate keys and users in a Namespace, the Namespace needs to be created by an *R-Administrator* user.
+Once the Namespace has been created, *R-Administrator* users can no longer create new users in that Namespace.
+Therefore, it is necessary to create an *N-Administrator* user for the Namespace before creating the Namespace.
+*R-Administrator* users can also delete a Namespace with all contained keys.
 
 List Namespaces
 ^^^^^^^^^^^^^^^
 
-List the namespaces on the NetHSM.
+List the Namespaces on the NetHSM.
 
 The list can be retrieved as follows.
 
@@ -1157,16 +1157,16 @@ The list can be retrieved as follows.
 Add Namespace
 ^^^^^^^^^^^^^
 
-Add a namespace to the NetHSM.
+Add a Namespace to the NetHSM.
 
-*R-Administrator* users can already create new accounts in the namespace before it is created.
-After the creation, only *N-Administrator* users can manage the accounts in the namespace.
-The creation and usage of keys in the namespace is only possible after it has been added.
+*R-Administrator* users can already create new accounts in the Namespace before it is created.
+After the creation, only *N-Administrator* users can manage the users in the Namespace.
+The creation and usage of keys in the Namespace is only possible after it has been added.
 
 .. note::
    The NetHSM assigns a random user ID if none is specified.
 
-A namespace can be added as follows.
+A Namespace can be added as follows.
 
 .. tabs::
    .. tab:: nitropy
@@ -1175,7 +1175,7 @@ A namespace can be added as follows.
       +---------------+------------------------+
       | Argument      | Description            |
       +===============+========================+
-      | ``NAMESPACE`` | The new namespace.     |
+      | ``NAMESPACE`` | The new Namespace.     |
       +-------------+--------------------------+
 
       **Example**
@@ -1194,12 +1194,12 @@ A namespace can be added as follows.
 Delete Namespace
 ^^^^^^^^^^^^^^^^
 
-Delete a namespace from the NetHSM.
+Delete a Namespace from the NetHSM.
 
-Deleting a namespace also deletes all keys in the namespace.
-Users in the namespace cannot add keys until the namespace has been added again.
+Deleting a Namespace also deletes all keys of that Namespace.
+Remaining users in the Namespace cannot add keys until the Namespace has been added again.
 
-A namespace can be deleted as follows.
+A Namespace can be deleted as follows.
 
 .. tabs::
    .. tab:: nitropy
@@ -1208,7 +1208,7 @@ A namespace can be deleted as follows.
       +---------------+--------------------------+
       | Argument      | Description              |
       +===============+==========================+
-      | ``NAMESPACE`` | The namespace to delete. |
+      | ``NAMESPACE`` | The Namespace to delete. |
       +---------------+--------------------------+
 
       **Example**
