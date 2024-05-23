@@ -1,11 +1,11 @@
-Firmware Update Qubes
-=====================
+Firmware Update With Qubes OS
+=============================
 
 .. only:: comment
 
  .. contents:: :local:
 
-This guide describes how to update the firmware on the Nitrokey 3 in Qubes. 
+This guide describes how to update Nitrokey 3's firmware with Qubes OS.
 
 .. important::
 	This process might change in the future when https://github.com/QubesOS/qubes-issues/issues/8953 is resolved
@@ -14,8 +14,8 @@ Setup
 -----
 
 .. important::
-	This setup is not persitence, if your sys-usb is not persitent, which we recommend and is the default. So this needs to be done again
-	if you want to update again. For all other nitropy operations attaching the nitrokey to app vm is working.
+	This setup is not persistence, if your sys-usb is not persistent, which is recommended and the default. So this needs to be done again
+	if you want to update again. For all other nitropy operations attaching the Nitrokey to app VM is working.
 
 1. Enable network via sys-firewall in sys-usb in Qubes Settings
 
@@ -30,7 +30,7 @@ Setup
 .. figure:: images/update-nk3/sys-usb_terminal.png
    :alt: sys-usb terminal
 
-2. Install pynitrokey for fedora based sys-usb 
+2. Install pynitrokey for Fedora based sys-usb 
 
 .. code-block:: bash
 
@@ -54,10 +54,10 @@ How to Update
 
 .. important::
    Never disconnect the Nitrokey 3 or abort the process while updating,
-   this will likely render your device useless!
+   because it will likely render your device unusable!
 
 1. Run ``nitropy nk3 update`` in sys-usb.
-2. Once instructed by ``nitropy`` touch the device to activate bootloader.
+2. Once instructed by ``nitropy`` touch the device to activate the bootloader.
 3. Please wait until the process finished. (This may vary depending on your operating system)
 4. *Optional*: run ``nitropy nk3 test`` to check if device is working properly after flashing.
 5. Restart sys-usb and disable the network in Qubes Settings again
