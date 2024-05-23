@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-17 16:14+0200\n"
+"POT-Creation-Date: 2024-05-23 16:25+0200\n"
 "PO-Revision-Date: 2024-05-17 15:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/zh_Hans/>\n"
 "Language: zh_CN\n"
+"Language-Team: Chinese (Simplified) "
+"<https://translate.nitrokey.com/projects/nitrokey-documentation"
+"/documentation-string/zh_Hans/>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -63,7 +63,7 @@ msgstr ""
 "在使用FIDO（双因素认证和无密码登录）保护账户安全时，你应该在账户中配置另一个因素作为备份。根据不同的服务，这个备份因素可以是一个电话号码、一个应用程序或甚至第二个Nitrokey"
 " FIDO2。如果你丢失了一个Nitrokey FIDO2，你仍然可以用第二个Nitrokey FIDO2（或另一个第二因素）来登录。"
 
-#: ../fido2/faq.rst:21 ../nitrokey3/faq.rst:31 ../pro/faq.rst:70
+#: ../fido2/faq.rst:21 ../nitrokey3/faq.rst:31 ../pro/faq.rst:69
 #: ../start/faq.rst:38 ../storage/faq.rst:21
 msgid "**Q:** How large is the storage capacity?"
 msgstr "**问：**存储容量有多大？"
@@ -1658,7 +1658,7 @@ msgstr ""
 "OpenSSL不能直接使用Nitrokey HSM的RNG，因为engine-"
 "pkcs11不包含OpenSSL对C_GenerateRandom的映射。"
 
-#: ../hsm/faq.rst:68 ../pro/faq.rst:66 ../storage/faq.rst:82
+#: ../hsm/faq.rst:68 ../pro/faq.rst:65 ../storage/faq.rst:81
 msgid "**Q:** How good is the Random Number Generator?"
 msgstr "**问：**随机数字发生器有多好？"
 
@@ -1699,25 +1699,31 @@ msgstr ""
 "OpenSCDP。SmartCard-"
 "HSM与开放式智能卡开发平台OpenSCDP完全集成。详情见公共支持脚本。要导入现有的密钥，你可以使用其SCSH或NitroKeyWrapper。"
 
-#: ../hsm/faq.rst:90
+#: ../hsm/faq.rst:88
 msgid "**Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?"
 msgstr "**问：**Nitrokey HSM 2是否经过通用标准或FIPS认证？"
 
 #: ../hsm/faq.rst:87
+#, python-format
 msgid ""
-"The security controller's hardware and operating system are Common "
-"Criteria certified (`Security Target`_; `HSM2 Report`_; See `here`_, "
-"click \"ICs, Smart Cards and Smart Card-Related Devices and Systems\" and"
-" search for \"NXP JCOP 3 P60\")."
+"The security controller (NXP JCOP 3 P60) is Common Criteria EAL 5+ "
+"certified up to the OS level (`Certificate "
+"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+"certificate%2021-98209.pdf>`__, `Certification Report "
+"<https://commoncriteriaportal.org/files/epfiles/Certification%20Report"
+"%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__, "
+"`Security Target <https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+"CC-98209_5-STLite.pdf>`__, `Java Card System Protection Profile Open "
+"Configuration, Version 3.0 "
+"<https://commoncriteriaportal.org/files/ppfiles/ANSSI-CC-"
+"profil_PP-2010-03en.pdf>`__)."
 msgstr ""
-"该安全控制器的硬件和操作系统已通过通用标准认证（`Security Target`_；`HSM2 Report`_；见`here`_，点击 "
-"\"集成电路、智能卡和智能卡相关设备与系统\"，搜索 \"恩智浦 JCOP 3 P60\"）。"
 
-#: ../hsm/faq.rst:93
+#: ../hsm/faq.rst:91
 msgid "**Q:** How to import an existing key into the Nitrokey HSM?"
 msgstr "**问：**如何将现有密钥导入Nitrokey HSM？"
 
-#: ../hsm/faq.rst:93
+#: ../hsm/faq.rst:91
 msgid ""
 "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then "
 "use Smart Card Shell for importing. If your key is stored in a Java key "
@@ -1726,23 +1732,23 @@ msgstr ""
 "首先，`设置`_你的Nitrokey "
 "HSM以使用钥匙备份和恢复。然后使用智能卡外壳进行导入。如果你的钥匙存储在Java钥匙库中，你可以使用`NitroKeyWrapper`_代替。"
 
-#: ../hsm/faq.rst:96
+#: ../hsm/faq.rst:94
 msgid ""
 "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey "
 "HSM?"
 msgstr "**问：**我如何用Nitrokey HSM来保护我的云基础设施/Kubernetes？"
 
-#: ../hsm/faq.rst:96
+#: ../hsm/faq.rst:94
 msgid ""
 "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
 "HSM can be found at `banzaicloud.com`_."
 msgstr "在Nitrokey HSM上为Hashicorp Vault/Bank-Vault提供安全钥匙的方法可以在`banzaicloud.com`_找到。"
 
-#: ../hsm/faq.rst:101
+#: ../hsm/faq.rst:99
 msgid "**Q:** Can I use Nitrokey HSM with cryptocurrencies?"
 msgstr "**问：**我可以用加密货币使用Nitrokey HSM吗？"
 
-#: ../hsm/faq.rst:99
+#: ../hsm/faq.rst:97
 msgid ""
 "J.v.d.Bosch wrote a simple, free python `program`_ to secure the private "
 "key of a Bitcoin wallet in a HSM. `Tezos`_ has been `reported`_ to work "
@@ -10692,34 +10698,39 @@ msgstr ""
 "Nitrokey 3的每项功能都有不同的密码。请参考各自操作系统的章节 (`Linux<linux/set-pins.html>`__,`Mac "
 "OS<mac/set-pins.html>`__,`Windows<windows/set-pins.html>`__) 。"
 
-#: ../nitrokey3/faq.rst:49
+#: ../nitrokey3/faq.rst:48
 msgid "**Q:** Is the Nitrokey 3 Common Criteria or FIPS certified?"
 msgstr "**问：** Nitrokey 3是否经过通用标准或FIPS认证？"
 
 #: ../nitrokey3/faq.rst:47
 msgid ""
-"The secure element is Common Criteria EAL 6+ security certification up to"
-" OS level (See `here`_, click “ICs, Smart Cards and Smart Card-Related "
-"Devices and ystems” and search for: \"NXP JCOP 4 SE050M”)."
+"The secure element (SE050M) is Common Criteria EAL 6+ security certified "
+"up to the OS level (`Certificate "
+"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+"CC-23-0075446_2-Cert.pdf>`__, `Certification Report "
+"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+"CC-0075446-CR2-1.pdf>`__, `Security Target "
+"<https://commoncriteriaportal.org/files/epfiles/NSCIB-"
+"CC-0075446_2-STLite.pdf>`__, `Java Card Protection Profile - Open "
+"Configuration "
+"<https://commoncriteriaportal.org/files/ppfiles/pp0099b_pdf.pdf>`__)."
 msgstr ""
-"安全要素是通用标准 EAL 6+ 安全认证，最高可达到操作系统级别（见`here`_，点击 "
-"\"集成电路、智能卡和智能卡相关设备和系统\"，搜索：\"NXP JCOP 4 SE050M\"）。"
 
-#: ../nitrokey3/faq.rst:52
+#: ../nitrokey3/faq.rst:51
 msgid "**Q:** How to use Nitrokey 3 with Azure Entra ID (Active Directory)?"
 msgstr "**问：** 如何将 Nitrokey 3 与 Azure Entra ID（活动目录）一起使用？"
 
-#: ../nitrokey3/faq.rst:52
+#: ../nitrokey3/faq.rst:51
 msgid ""
 "After `disabling Enforce Attestation`_ Nitrokey 3 is supported by Azure "
 "Entra ID out of the box."
 msgstr "`禁用 \"强制认证 \"后，Azure Entra ID 即可支持 Nitrokey 3。"
 
-#: ../nitrokey3/faq.rst:63
+#: ../nitrokey3/faq.rst:62
 msgid "**Q:** How can I use the SE050 Secure Element?"
 msgstr "**问：** 如何使用 SE050 安全元件？"
 
-#: ../nitrokey3/faq.rst:55
+#: ../nitrokey3/faq.rst:54
 msgid ""
 "Starting with version 1.7.0 the Secure Element should be automatically "
 "activated, if the OpenPGP Card was not used before. To check its "
@@ -10734,7 +10745,7 @@ msgstr ""
 "config opcard.use_se050_backend true`` 或通过``false`` "
 "相应地禁用它。**将后端从一个改为另一个将始终清除 OpenPGP 卡内的所有数据。**"
 
-#: ../nitrokey3/faq.rst:61
+#: ../nitrokey3/faq.rst:60
 msgid ""
 "If you are updating from a test version firmware, we recommend factory "
 "resetting the device before using the Nitrokey 3 with the SE050 in "
@@ -16715,30 +16726,32 @@ msgstr "**问：**Nitrokey Pro是否包含安全芯片或只是一个普通的�
 msgid "Nitrokey Pro contains a tamper resistant smart card."
 msgstr "Nitrokey Pro包含一个防篡改的智能卡。"
 
-#: ../pro/faq.rst:55
+#: ../pro/faq.rst:54
 msgid "**Q:** Is the Nitrokey Pro Common Criteria or FIPS certified?"
 msgstr "**问：** Nitrokey Pro是否经过通用标准或FIPS认证？"
 
 #: ../pro/faq.rst:51
 msgid ""
-"The security controller's hardware is Common Criteria certified "
-"(`Report`_; See `here`_, click \"ICs, Smart Cards and Smart Card-Related "
-"Devices and Systems\" and search for \"NXP Smart Card Controller "
-"P5CD081V1A and its major configurations P5CC081V1A, P5CN081V1A, "
-"P5CD041V1A, P5CD021V1A and P5CD016V1A each with IC dedicated Software\")."
+"The security controller (NXP Smart Card Controller P5CD081V1A and its "
+"major configurations P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A and "
+"P5CD016V1A each with IC dedicated Software) is Common Criteria EAL 5+ "
+"certified up to the OS level (`Certification Report "
+"<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, "
+"`Security Target "
+"<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, "
+"`Maintenance Report "
+"<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__, "
+"`Maintenance ST "
+"<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__)."
 msgstr ""
-"该安全控制器的硬件已通过通用标准认证（`Report`_；见`here`_，点击 \"集成电路、智能卡和智能卡相关设备与系统\"，搜索 "
-"\"恩智浦智能卡控制器 P5CD081V1A 及其主要配置 P5CC081V1A、P5CN081V1A、P5CD041V1A\"）。并搜索 "
-"\"恩智浦智能卡控制器 P5CD081V1A 及其主要配置 P5CC081V1A、P5CN081V1A、P5CD041V1A、P5CD021V1A"
-" 和 P5CD016V1A，每个配置都有 IC 专用软件\"）。"
 
-#: ../pro/faq.rst:59
+#: ../pro/faq.rst:58
 msgid ""
 "**Q:** How can I use the True Random Number Generator (TRNG) of the "
 "Nitrokey Pro for my applications?"
 msgstr "**问：**我怎样才能在我的应用中使用Nitrokey Pro的真随机数发生器（TRNG）？"
 
-#: ../pro/faq.rst:58 ../storage/faq.rst:74
+#: ../pro/faq.rst:57 ../storage/faq.rst:73
 msgid ""
 "Both devices are compatible to the OpenPGP Card, so that `scdrand`_ "
 "should work. `This script`_ may be useful. The user comio `created a "
@@ -16748,7 +16761,7 @@ msgstr ""
 "这两种设备都与OpenPGP卡兼容，因此，`scdrand`_应该可以工作。`这个脚本`_可能有用。用户comio "
 "`创建了一个systemd文件`_来使用scdrand，从而更普遍地使用TRNG。他还为Gentoo创建了一个`ebuild`_。"
 
-#: ../pro/faq.rst:62 ../storage/faq.rst:78
+#: ../pro/faq.rst:61 ../storage/faq.rst:77
 msgid ""
 "Nitrokey Pro and Nitrokey Storage use a True Random Number Generator "
 "(TRNG) for generating keys on the device. The entropy generated by the "
@@ -16759,11 +16772,11 @@ msgstr ""
 "Storage使用真随机数发生器（TRNG）来生成设备上的密钥。TRNG产生的熵被用于整个密钥长度。因此，TRNG符合`BSI "
 "TR-03116`_的规定。"
 
-#: ../pro/faq.rst:66 ../storage/faq.rst:82
+#: ../pro/faq.rst:65 ../storage/faq.rst:81
 msgid "The TRNG provides about 40 kbit/s."
 msgstr "TRNG提供约40 kbit/s。"
 
-#: ../pro/faq.rst:69
+#: ../pro/faq.rst:68
 msgid ""
 "The Nitrokey Pro doesn't contain storage capability for ordinary data (it"
 " can only store cryptographic keys and certificates)."
@@ -19914,8 +19927,8 @@ msgid ""
 " (or use the native Flathub integration of your Operating System i.e., "
 "\"Software\" on Ubuntu systems)"
 msgstr ""
-"执行``flatpak install flathub com.nitrokey.nitrokey-app2`` 安装（"
-"或使用操作系统的本地 Flathub 集成，即 Ubuntu 系统中的 \"软件\"）。"
+"执行``flatpak install flathub com.nitrokey.nitrokey-app2`` 安装（或使用操作系统的本地 "
+"Flathub 集成，即 Ubuntu 系统中的 \"软件\"）。"
 
 #: ../software/nk-app2/installation_linux.rst:11
 #: ../software/nk-app2/installation_linux.rst:25
@@ -20528,15 +20541,15 @@ msgid ""
 "<https://www.nitrokey.com/download>`__."
 msgstr "在使用加密的移动存储之前，你需要安装和初始化Nitrokey存储，并下载最新的`Nitrokey应用程序<https://www.nitrokey.com/download>`__。"
 
-#: ../storage/encrypted-mobile-storage.rst:3 ../storage/faq.rst:87
+#: ../storage/encrypted-mobile-storage.rst:3 ../storage/faq.rst:86
 msgid "Start the Nitrokey App."
 msgstr "启动Nitrokey应用程序。"
 
-#: ../storage/encrypted-mobile-storage.rst:4 ../storage/faq.rst:88
+#: ../storage/encrypted-mobile-storage.rst:4 ../storage/faq.rst:87
 msgid "Press its tray icon and select \"unlock encrypted volume\" in the menu."
 msgstr "按其托盘图标，在菜单中选择\"解锁加密卷\"。"
 
-#: ../storage/encrypted-mobile-storage.rst:5 ../storage/faq.rst:89
+#: ../storage/encrypted-mobile-storage.rst:5 ../storage/faq.rst:88
 msgid "Enter your User PIN in the appearing popup window."
 msgstr "在出现的弹出窗口中输入你的用户密码。"
 
@@ -20550,18 +20563,18 @@ msgid ""
 "various operating systems."
 msgstr "如果这是第一次，您可能需要在加密的卷上创建一个分区。Windows会打开一个适当的窗口并要求你这样做。在GNU+Linux和Mac上，您可能需要打开一个分区管理器并手动创建一个分区。您可以根据您的需要创建任意多的分区。如果你想从不同的操作系统访问该分区，我们推荐使用FAT(32)。"
 
-#: ../storage/encrypted-mobile-storage.rst:7 ../storage/faq.rst:91
+#: ../storage/encrypted-mobile-storage.rst:7 ../storage/faq.rst:90
 msgid ""
 "Now you can use the encrypted volume as you would use any other ordinary "
 "USB drive. But all data stored on it will be encrypted in the Nitrokey "
 "hardware automatically."
 msgstr "现在你可以像使用其他普通USB驱动器一样使用加密的卷。但是，存储在上面的所有数据都将在Nitrokey硬件中自动加密。"
 
-#: ../storage/encrypted-mobile-storage.rst:8 ../storage/faq.rst:92
+#: ../storage/encrypted-mobile-storage.rst:8 ../storage/faq.rst:91
 msgid "To remove or lock the encrypted volume you should unmount/eject it first."
 msgstr "要删除或锁定加密的卷，你应该先卸载/弹出它。"
 
-#: ../storage/encrypted-mobile-storage.rst:9 ../storage/faq.rst:93
+#: ../storage/encrypted-mobile-storage.rst:9 ../storage/faq.rst:92
 msgid ""
 "Afterwards you can disconnect the Nitrokey or select \"lock encrypted "
 "volume\" from the Nitrokey App menu."
@@ -20692,44 +20705,46 @@ msgstr "**问：**尼特罗基存储器是否包含安全芯片或只是一个�
 msgid "Nitrokey Storage contains a tamper resistant smart card."
 msgstr "Nitrokey存储器包含一个防篡改的智能卡。"
 
-#: ../storage/faq.rst:71
+#: ../storage/faq.rst:70
 msgid "**Q:** Is the Nitrokey Storage Common Criteria or FIPS certified?"
 msgstr "**问：**Nitrokey存储系统是否经过通用标准或FIPS认证？"
 
 #: ../storage/faq.rst:66
 msgid ""
-"`Cure53`_ has performed an `independent security audit`_ of the hardware,"
-" firmware, and Nitrokey App. The security controller's hardware is Common"
-" Criteria certified (`Report`_; See `here`_, click \"ICs, Smart Cards and"
-" Smart Card-Related Devices and Systems\" and search for \"NXP Smart Card"
-" Controller P5CD081V1A and its major configurations P5CC081V1A, "
-"P5CN081V1A, P5CD041V1A, P5CD021V1A and P5CD016V1A each with IC dedicated "
-"Software\")."
+"The security controller (NXP Smart Card Controller P5CD081V1A and its "
+"major configurations P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A and "
+"P5CD016V1A each with IC dedicated Software) is Common Criteria EAL 5+ "
+"certified up to the OS level (`Certification Report "
+"<https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, "
+"`Security Target "
+"<https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, "
+"`Maintenance Report "
+"<https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__, "
+"`Maintenance ST "
+"<https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__`). "
+"Additionally `Cure53 <https://cure53.de>`__ has performed an `independent"
+" security audit <https://www.nitrokey.com/news/2015/nitrokey-storage-got-"
+"great-results-3rd-party-security-audit>`__ of the hardware, firmware, and"
+" Nitrokey App."
 msgstr ""
-"`Cure53`_ 对硬件、固件和 Nitrokey "
-"应用程序进行了`独立安全审计。该安全控制器的硬件已通过通用标准认证（`Report`_；见`here`_，单击 "
-"\"集成电路、智能卡和智能卡相关设备与系统\"，搜索 \"恩智浦智能卡控制器 P5CD081V1A 和主要配置 P5CD081V1A\"）。并搜索"
-" \"恩智浦智能卡控制器 P5CD081V1A 及其主要配置 "
-"P5CC081V1A、P5CN081V1A、P5CD041V1A、P5CD021V1A 和 P5CD016V1A，每个配置都有 IC "
-"专用软件\"）。"
 
-#: ../storage/faq.rst:75
+#: ../storage/faq.rst:74
 msgid ""
 "**Q:** How can I use the True Random Number Generator (TRNG) of the "
 "Nitrokey Storage for my applications?"
 msgstr "**问：**如何在我的应用中使用Nitrokey存储的真随机数发生器（TRNG）？"
 
-#: ../storage/faq.rst:95
+#: ../storage/faq.rst:94
 msgid "**Q:** How can I use the encrypted mobile Storage?"
 msgstr "**问：**我如何使用加密的移动存储？"
 
-#: ../storage/faq.rst:85
+#: ../storage/faq.rst:84
 msgid ""
 "Prior of using the encrypted mobile storage you need to install and "
 "initialize the Nitrokey Storage and download the latest Nitrokey App."
 msgstr "在使用加密的移动存储之前，你需要安装和初始化Nitrokey存储并下载最新的Nitrokey应用程序。"
 
-#: ../storage/faq.rst:90
+#: ../storage/faq.rst:89
 msgid ""
 "If this is the first time you may need to create a partition on the "
 "encrypted volume. Windows will open an appropriate window and ask you to "
@@ -20739,17 +20754,17 @@ msgid ""
 "various operating systems."
 msgstr "如果这是第一次，您可能需要在加密的卷上创建一个分区。Windows会打开一个适当的窗口并要求你这样做。在Linux和Mac上，您可能需要打开一个分区管理器并手动创建一个分区。您可以根据您的需要创建任意多的分区。如果你想从不同的操作系统访问该分区，我们建议使用FAT(32)。"
 
-#: ../storage/faq.rst:95
+#: ../storage/faq.rst:94
 msgid ""
 "The Nitrokey Storage is able to create hidden volumes as well. Please "
 "have a look at the corresponding instructions for hidden volumes."
 msgstr "Nitrokey Storage也能够创建隐藏卷。请看一下隐藏卷的相应说明。"
 
-#: ../storage/faq.rst:117
+#: ../storage/faq.rst:116
 msgid "**Q:** How can I use the hidden volume?"
 msgstr "**问：**如何使用隐藏卷？"
 
-#: ../storage/faq.rst:98
+#: ../storage/faq.rst:97
 msgid ""
 "Hidden volumes allow to hide data in the encrypted volume. The data is "
 "protected with an additional password. Without the password the data "
@@ -20761,14 +20776,14 @@ msgstr ""
 "隐藏卷允许在加密卷中隐藏数据。这些数据受到额外密码的保护。没有密码，数据的存在就不能被证明。默认情况下，隐藏卷不会被设置，因此它们的存在可以被合理地否认。这个概念类似于VeraCrypt/TrueCrypt的隐藏卷，但在Nitrokey"
 " Storage中，隐藏卷的整个功能是在硬件中实现的。"
 
-#: ../storage/faq.rst:105 ../storage/hidden.rst:8
+#: ../storage/faq.rst:104 ../storage/hidden.rst:8
 msgid ""
 "You can configure up to four hidden volumes. Once unlocked, hidden "
 "volumes behave like ordinary storage where you can create various "
 "partitions, filesystems and store files as you like."
 msgstr "你最多可以配置四个隐藏卷。一旦解锁，隐藏卷的行为与普通存储一样，你可以创建各种分区、文件系统，并按你的意愿存储文件。"
 
-#: ../storage/faq.rst:109
+#: ../storage/faq.rst:108
 msgid ""
 "If you decide to configure Hidden Volumes, you can not use the encrypted "
 "storage anymore. Because the Hidden Volume is situated on the free space "
@@ -20780,7 +20795,7 @@ msgid ""
 "first though)."
 msgstr "如果您决定配置隐藏卷，您就不能再使用加密的存储。因为隐藏卷位于加密存储的自由空间上，有可能会覆盖隐藏卷中的数据。你可以说，即使是加密存储也不知道有一个隐藏卷。一般的结构如下图所示。因此，在创建了隐藏卷之后，请不要在加密存储中写入任何东西（虽然你必须先解锁它）。"
 
-#: ../storage/faq.rst:117
+#: ../storage/faq.rst:116
 msgid ""
 "Hidden volumes are like containers inside of a container, the encrypted "
 "volume."
@@ -27000,3 +27015,67 @@ msgstr "第一次插入Nitrokey FIDO U2F时，Windows可能需要一些时间来
 
 #~ msgid "Use `nfc.fail`_ to find the right spot!"
 #~ msgstr "使用`nfc.fail`_来找到正确的位置!"
+
+#~ msgid ""
+#~ "The security controller's hardware and "
+#~ "operating system are Common Criteria "
+#~ "certified (`Security Target`_; `HSM2 Report`_;"
+#~ " See `here`_, click \"ICs, Smart "
+#~ "Cards and Smart Card-Related Devices "
+#~ "and Systems\" and search for \"NXP "
+#~ "JCOP 3 P60\")."
+#~ msgstr ""
+#~ "该安全控制器的硬件和操作系统已通过通用标准认证（`Security Target`_；`HSM2 "
+#~ "Report`_；见`here`_，点击 \"集成电路、智能卡和智能卡相关设备与系统\"，搜索 \"恩智浦 "
+#~ "JCOP 3 P60\"）。"
+
+#~ msgid ""
+#~ "The secure element is Common Criteria"
+#~ " EAL 6+ security certification up to"
+#~ " OS level (See `here`_, click “ICs,"
+#~ " Smart Cards and Smart Card-Related"
+#~ " Devices and ystems” and search for:"
+#~ " \"NXP JCOP 4 SE050M”)."
+#~ msgstr ""
+#~ "安全要素是通用标准 EAL 6+ 安全认证，最高可达到操作系统级别（见`here`_，点击 "
+#~ "\"集成电路、智能卡和智能卡相关设备和系统\"，搜索：\"NXP JCOP 4 SE050M\"）。"
+
+#~ msgid ""
+#~ "The security controller's hardware is "
+#~ "Common Criteria certified (`Report`_; See "
+#~ "`here`_, click \"ICs, Smart Cards and"
+#~ " Smart Card-Related Devices and "
+#~ "Systems\" and search for \"NXP Smart "
+#~ "Card Controller P5CD081V1A and its major"
+#~ " configurations P5CC081V1A, P5CN081V1A, "
+#~ "P5CD041V1A, P5CD021V1A and P5CD016V1A each "
+#~ "with IC dedicated Software\")."
+#~ msgstr ""
+#~ "该安全控制器的硬件已通过通用标准认证（`Report`_；见`here`_，点击 "
+#~ "\"集成电路、智能卡和智能卡相关设备与系统\"，搜索 \"恩智浦智能卡控制器 P5CD081V1A "
+#~ "及其主要配置 P5CC081V1A、P5CN081V1A、P5CD041V1A\"）。并搜索 \"恩智浦智能卡控制器"
+#~ " P5CD081V1A 及其主要配置 "
+#~ "P5CC081V1A、P5CN081V1A、P5CD041V1A、P5CD021V1A 和 "
+#~ "P5CD016V1A，每个配置都有 IC 专用软件\"）。"
+
+#~ msgid ""
+#~ "`Cure53`_ has performed an `independent "
+#~ "security audit`_ of the hardware, "
+#~ "firmware, and Nitrokey App. The security"
+#~ " controller's hardware is Common Criteria"
+#~ " certified (`Report`_; See `here`_, click"
+#~ " \"ICs, Smart Cards and Smart "
+#~ "Card-Related Devices and Systems\" and "
+#~ "search for \"NXP Smart Card Controller"
+#~ " P5CD081V1A and its major configurations"
+#~ " P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A"
+#~ " and P5CD016V1A each with IC "
+#~ "dedicated Software\")."
+#~ msgstr ""
+#~ "`Cure53`_ 对硬件、固件和 Nitrokey "
+#~ "应用程序进行了`独立安全审计。该安全控制器的硬件已通过通用标准认证（`Report`_；见`here`_，单击 "
+#~ "\"集成电路、智能卡和智能卡相关设备与系统\"，搜索 \"恩智浦智能卡控制器 P5CD081V1A "
+#~ "和主要配置 P5CD081V1A\"）。并搜索 \"恩智浦智能卡控制器 P5CD081V1A "
+#~ "及其主要配置 P5CC081V1A、P5CN081V1A、P5CD041V1A、P5CD021V1A 和 "
+#~ "P5CD016V1A，每个配置都有 IC 专用软件\"）。"
+
