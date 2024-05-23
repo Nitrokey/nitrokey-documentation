@@ -48,11 +48,10 @@ Nitrokey Pro 2 FAQ
     Nitrokey Pro contains a tamper resistant smart card.
 
 **Q:** Is the Nitrokey Pro Common Criteria or FIPS certified?
-    The security controller's hardware is Common Criteria certified (`Report`_;
-    See `here`_, click "ICs, Smart Cards and Smart Card-Related Devices and
-    Systems" and search for "NXP Smart Card Controller P5CD081V1A and its major
+    The security controller (NXP Smart Card Controller P5CD081V1A and its major
     configurations P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A and P5CD016V1A
-    each with IC dedicated Software").
+    each with IC dedicated Software) is Common Criteria EAL 5+ certified up to the OS
+    level (`Certification Report <https://commoncriteriaportal.org/files/epfiles/0555a_pdf.pdf>`__, `Security Target <https://commoncriteriaportal.org/files/epfiles/0555b_pdf.pdf>`__, `Maintenance Report <https://commoncriteriaportal.org/files/epfiles/0555_ma1a_pdf.pdf>`__, `Maintenance ST <https://commoncriteriaportal.org/files/epfiles/0555_ma1b_pdf.pdf>`__).
 
 **Q:** How can I use the True Random Number Generator (TRNG) of the Nitrokey Pro for my applications?
     Both devices are compatible to the OpenPGP Card, so that `scdrand`_ should work. `This script`_ may be useful.
