@@ -44,9 +44,8 @@ Nitrokey 3 FAQ
    Please refer to the chapter of your respective operating system (`Linux <linux/set-pins.html>`__, `Mac OS <mac/set-pins.html>`__, `Windows <windows/set-pins.html>`__).
 
 **Q:** Is the Nitrokey 3 Common Criteria or FIPS certified?
-   The secure element is Common Criteria EAL 6+ security certification up to OS 
-   level (See `here`_, click “ICs, Smart Cards and Smart Card-Related Devices and 
-   ystems” and search for: "NXP JCOP 4 SE050M”).
+   The secure element (SE050M) is Common Criteria EAL 6+ security certified up to the OS 
+   level (`Certificate <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-23-0075446_2-Cert.pdf>`__, `Certification Report <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-0075446-CR2-1.pdf>`__, `Security Target <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-0075446_2-STLite.pdf>`__, `Java Card Protection Profile - Open Configuration <https://commoncriteriaportal.org/files/ppfiles/pp0099b_pdf.pdf>`__).
 
 **Q:** How to use Nitrokey 3 with Azure Entra ID (Active Directory)?
    After `disabling Enforce Attestation`_ Nitrokey 3 is supported by Azure Entra ID out of the box.
