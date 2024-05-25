@@ -16,10 +16,11 @@ You can install nitropy along with all other required dependencies by using::
 
     sudo apt install python3 && sudo apt install pipx && pipx ensurepath && pipx install pynitrokey
 
-If you have already installed python on your system, you can simply run::
+If you have already installed Python on your system, you can simply run::
     
     sudo apt install pipx && pipx ensurepath && pipx install pynitrokey
 
+After logging out or restarting your system, nitropy will now be available.
 
 Arch
 ~~~~
@@ -27,9 +28,11 @@ You can install nitropy along with all other required dependencies by using::
 
     sudo pacman -S python python-pipx && pipx ensurepath && pipx install pynitrokey
 
-If you have already installed python on your system, you can simply run::
+If you have already installed Python on your system, you can simply run::
     
     sudo pacman -S python-pipx && pipx ensurepath && pipx install pynitrokey
+
+After logging out or restarting your system, nitropy will now be available.
 
 
 Installation on other distributions/operating systems
