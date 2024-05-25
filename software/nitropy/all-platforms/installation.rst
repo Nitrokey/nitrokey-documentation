@@ -7,6 +7,36 @@ This guide explains how to install nitropy with `pipx <https://pypa.github.io/pi
 
    **For Windows users:** Windows support is still experimental -- please use with caution. You can also use pre-compiled binaries or a MSI installer, see :doc:`../windows/installation`.
 
+Installation on Debian, Ubuntu and Arch
+---------------------------------------
+
+Debian/Ubuntu
+~~~~~~~~~~~~~
+You can install nitropy along with all other required dependencies by using::
+
+    sudo apt install python3 && sudo apt install pipx && pipx ensurepath && pipx install pynitrokey
+
+If you have already installed python on your system, you can simply run::
+    
+    sudo apt install pipx && pipx ensurepath && pipx install pynitrokey
+
+
+Arch
+~~~~
+You can install nitropy along with all other required dependencies by using::
+
+    sudo pacman -S python python-pipx && pipx ensurepath && pipx install pynitrokey
+
+If you have already installed python on your system, you can simply run::
+    
+    sudo pacman -S python-pipx && pipx ensurepath && pipx install pynitrokey
+
+
+.. note::
+
+    **For all other distributions or operating systems:** Please install nitropy and its dependencies manually by following the rest of the guide.
+
+
 Preparation
 -----------
 
