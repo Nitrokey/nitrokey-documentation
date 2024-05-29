@@ -16,7 +16,7 @@ This guide describes how to update Nitrokey 3's firmware with nitropy in Qubes O
 Setup
 -----
 
-Install nitropy in a app VM of your choice follow this `installation instructions`_.
+Install nitropy in a app VM of your choice following the `installation instructions`_.
 
 .. _installation instructions: ../../software/nitropy/all-platforms/installation.html
 
