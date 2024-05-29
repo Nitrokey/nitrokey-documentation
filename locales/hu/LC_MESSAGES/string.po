@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
+"POT-Creation-Date: 2024-05-29 12:33+0200\n"
 "PO-Revision-Date: 2024-05-24 12:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -905,7 +904,9 @@ msgstr ""
 "oknál fogva az adatai nem maradnak meg."
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "Hogyan frissíthet"
 
@@ -981,6 +982,7 @@ msgstr ""
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -13629,6 +13631,78 @@ msgstr ""
 "trigger`` vagy indítsa újra a gépét. Ezután a frissítésnek az "
 "engedélyezési probléma nélkül kell működnie."
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+#, fuzzy
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr "Ez az útmutató a Nitrokey 3 firmware frissítését írja le."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+#, fuzzy
+msgid "Setup"
+msgstr "reset"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+#, fuzzy
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr ""
+"Soha ne válassza le a Nitrokey 3-at, és ne szakítsa meg a folyamatot "
+"frissítés közben, mert ez valószínűleg használhatatlanná teszi a "
+"készüléket!"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+#, fuzzy
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr ""
+"A ``nitropy`` utasítást követően érintse meg a készüléket a bootloader "
+"aktiválásához."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr ""
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"
 msgstr "Nitrokey 3 Linux-szal"
@@ -16333,8 +16407,8 @@ msgid ""
 "learn more."
 msgstr ""
 "A *PIN* a megismétlési számláló korlátozása mellett működik. További "
-"információkért olvassa el a `Újrapróbálkozási számláló <access_control.html"
-"#retry-counter>`__ fejezetet."
+"információkért olvassa el a `Újrapróbálkozási számláló "
+"<access_control.html#retry-counter>`__ fejezetet."
 
 #: ../nitrokey3/windows/piv/access_control.rst:40
 msgid "On the terminal enter ``nitropy nk3 piv change-pin``."
@@ -16351,8 +16425,8 @@ msgid ""
 "learn more."
 msgstr ""
 "A *PUK* a megismétlési számláló korlátozásával működik. További "
-"információkért olvassa el a `Újrapróbálkozási számláló <access_control.html"
-"#retry-counter>`__ fejezetet."
+"információkért olvassa el a `Újrapróbálkozási számláló "
+"<access_control.html#retry-counter>`__ fejezetet."
 
 #: ../nitrokey3/windows/piv/access_control.rst:58
 msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
@@ -16368,9 +16442,10 @@ msgid ""
 " for every failed login attempt. A retry counter of zero means that there"
 " are no attempts left."
 msgstr ""
-"A megismétlési számlálót a *PIN* és a *PUK* esetében használják. A számláló "
-"minden sikertelen bejelentkezési kísérletnél csökken. A nulla értékű "
-"újrapróbálkozási számláló azt jelenti, hogy nincs több próbálkozás."
+"A megismétlési számlálót a *PIN* és a *PUK* esetében használják. A "
+"számláló minden sikertelen bejelentkezési kísérletnél csökken. A nulla "
+"értékű újrapróbálkozási számláló azt jelenti, hogy nincs több "
+"próbálkozás."
 
 #: ../nitrokey3/windows/piv/access_control.rst:68
 msgid ""
@@ -16378,8 +16453,8 @@ msgid ""
 "up, the *PIN* must be unlocked with the *PUK*."
 msgstr ""
 "A *PIN* 3 újbóli próbálkozás számlálóval rendelkezik. Ha ezek a "
-"próbálkozások elfogytak, a *PIN* * PUK* segítségével kell feloldani a PIN "
-"feloldását."
+"próbálkozások elfogytak, a *PIN* * PUK* segítségével kell feloldani a PIN"
+" feloldását."
 
 #: ../nitrokey3/windows/piv/access_control.rst:71
 msgid ""
@@ -16397,9 +16472,10 @@ msgid ""
 "<factory_reset.html>`__ to learn more."
 msgstr ""
 "A *PUK* 3 újbóli próbálkozás számlálóval rendelkezik. Ha ezek a "
-"próbálkozások elfogynak, a PIV-kártya nem használható tovább, és vissza kell "
-"állítani a gyári alapértelmezett értékekre. Kérjük, olvassa el a `Gyári "
-"visszaállítás <factory_reset.html>`__ fejezetet, ha többet szeretne megtudni."
+"próbálkozások elfogynak, a PIV-kártya nem használható tovább, és vissza "
+"kell állítani a gyári alapértelmezett értékekre. Kérjük, olvassa el a "
+"`Gyári visszaállítás <factory_reset.html>`__ fejezetet, ha többet "
+"szeretne megtudni."
 
 #: ../nitrokey3/windows/piv/access_control.rst:80
 msgid "Management Key (MGM)"
@@ -16415,15 +16491,17 @@ msgid ""
 "the management key. The authentication is done with ``nitropy nk3 piv "
 "admin-auth``."
 msgstr ""
-"A kezelési műveletek elvégzése előtt a kezelési kulccsal kell hitelesítenie "
-"magát. A hitelesítés a ``nitropy nk3 piv admin-auth`` címen történik."
+"A kezelési műveletek elvégzése előtt a kezelési kulccsal kell "
+"hitelesítenie magát. A hitelesítés a ``nitropy nk3 piv admin-auth`` címen"
+" történik."
 
 #: ../nitrokey3/windows/piv/access_control.rst:87
 msgid ""
 "The management key can be changed with ``nitropy nk3 piv change-admin-"
 "key``."
 msgstr ""
-"A kezelési kulcs a ``nitropy nk3 piv change-admin-key`` címmel módosítható."
+"A kezelési kulcs a ``nitropy nk3 piv change-admin-key`` címmel "
+"módosítható."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:2
 msgid "Certificate Management"
@@ -16436,8 +16514,8 @@ msgid ""
 "layer and about 6kB."
 msgstr ""
 "Minden magánkulcshoz tanúsítvány tartozik. A tanúsítványok olvashatók és "
-"írhatók. A tanúsítvány méretét a szállítási réteg korlátozza, és körülbelül "
-"6 kB."
+"írhatók. A tanúsítvány méretét a szállítási réteg korlátozza, és "
+"körülbelül 6 kB."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:9
 msgid "Read Certificate"
@@ -16460,8 +16538,8 @@ msgid ""
 "The PIV application can be reset to factory defaults. It can only be "
 "reset if the PIN and PUK are blocked."
 msgstr ""
-"A PIV-alkalmazás visszaállítható a gyári alapbeállításokra. Csak akkor lehet "
-"visszaállítani, ha a PIN és a PUK blokkolva van."
+"A PIV-alkalmazás visszaállítható a gyári alapbeállításokra. Csak akkor "
+"lehet visszaállítani, ha a PIN és a PUK blokkolva van."
 
 #: ../nitrokey3/windows/piv/factory_reset.rst:8
 msgid ""
@@ -16502,12 +16580,12 @@ msgid ""
 "refer to `the firmware update documentation <firmware-update.html"
 "#firmware-release-types>`__ for more information."
 msgstr ""
-"A Nitrokey 3 PIV-alkalmazása jelenleg instabilnak minősül, és nem érhető el "
-"a stabil firmware-verziókban. A funkció eléréséhez egy teszt firmware "
+"A Nitrokey 3 PIV-alkalmazása jelenleg instabilnak minősül, és nem érhető "
+"el a stabil firmware-verziókban. A funkció eléréséhez egy teszt firmware "
 "telepítése szükséges. A későbbi firmware-frissítések az adatok és a "
 "kriptográfiai kulcsok elvesztéséhez vezethetnek. További információkért "
-"kérjük, olvassa el a `a firmware-frissítési dokumentációt <firmware-update."
-"html#firmware-release-types>`__."
+"kérjük, olvassa el a `a firmware-frissítési dokumentációt <firmware-"
+"update.html#firmware-release-types>`__."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:17
 msgid ""
@@ -16518,16 +16596,16 @@ msgid ""
 msgstr ""
 "A beállításhoz rendszergazdai hozzáférés szükséges az Active Directory "
 "címtárszolgáltatásokat (ADDS) és az Active Directory "
-"tanúsítványszolgáltatásokat (ADCS) futtató gépekhez. Az ügyfélgépen csak a "
-"bejelentkezéshez használt felhasználói fiókhoz kell hozzáférni."
+"tanúsítványszolgáltatásokat (ADCS) futtató gépekhez. Az ügyfélgépen csak "
+"a bejelentkezéshez használt felhasználói fiókhoz kell hozzáférni."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
 "Windows server (supported versions are Windows Server 2016, 2019, 2022 in"
 " all editions)"
 msgstr ""
-"Windows szerver (támogatott verziók: Windows Server 2016, 2019, 2022 minden "
-"kiadásban)"
+"Windows szerver (támogatott verziók: Windows Server 2016, 2019, 2022 "
+"minden kiadásban)"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:21
 msgid "ADDS role installed and configured."
@@ -16545,8 +16623,9 @@ msgid ""
 "Controller Authentication*, and *Kerberos Authentication* certificate "
 "issued."
 msgstr ""
-"Minden tartományvezérlő (DC) számára ki kell állítani egy *tartományvezérlő*"
-", *tartományvezérlő-hitelesítés* és *Kerberos-hitelesítés* tanúsítványt."
+"Minden tartományvezérlő (DC) számára ki kell állítani egy "
+"*tartományvezérlő*, *tartományvezérlő-hitelesítés* és *Kerberos-"
+"hitelesítés* tanúsítványt."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:24
 msgid ""
@@ -16554,8 +16633,8 @@ msgid ""
 "full and delta certificate revocation lists (CRL) are retrievable from "
 "external networks."
 msgstr ""
-"Ha az ügyfelek elhagyják a vállalati hálózatot, győződjön meg arról, hogy a "
-"közzétett teljes és delta tanúsítvány-visszavonási listák (CRL) "
+"Ha az ügyfelek elhagyják a vállalati hálózatot, győződjön meg arról, hogy"
+" a közzétett teljes és delta tanúsítvány-visszavonási listák (CRL) "
 "lekérdezhetők a külső hálózatokról."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:25
@@ -16587,10 +16666,10 @@ msgid ""
 "constraints of the user certificates. It is used to sign the Certificate "
 "Request (CSR) during provisioning of the Nitrokey."
 msgstr ""
-"Az intelligens kártyás bejelentkezéshez tanúsítványsablonra van szükség a "
-"tartomány tanúsítványhivatalában (CA). Ez a sablon határozza meg a "
-"felhasználói tanúsítványok értékeit és korlátait. A tanúsítványkérelem (CSR) "
-"aláírására szolgál a Nitrokey rendelkezésre bocsátása során."
+"Az intelligens kártyás bejelentkezéshez tanúsítványsablonra van szükség a"
+" tartomány tanúsítványhivatalában (CA). Ez a sablon határozza meg a "
+"felhasználói tanúsítványok értékeit és korlátait. A tanúsítványkérelem "
+"(CSR) aláírására szolgál a Nitrokey rendelkezésre bocsátása során."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:36
 msgid ""
@@ -16598,7 +16677,8 @@ msgid ""
 "certificate template in the certificate authority."
 msgstr ""
 "Az intelligens kártyás bejelentkezéshez szükséges tanúsítványkérelem "
-"aláírásához tanúsítványsablont kell létrehozni a hitelesítésszolgáltatóban."
+"aláírásához tanúsítványsablont kell létrehozni a "
+"hitelesítésszolgáltatóban."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:39
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:74
@@ -16610,8 +16690,8 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certtmpl.msc`` and "
 "press Enter."
 msgstr ""
-"A parancssorból, a PowerShellből vagy a Futtatásból írja be a ``certtmpl."
-"msc`` parancsot, és nyomja meg az Entert."
+"A parancssorból, a PowerShellből vagy a Futtatásból írja be a "
+"``certtmpl.msc`` parancsot, és nyomja meg az Entert."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:41
 msgid "In the detail pane select the template **Smartcard Logon**."
@@ -16644,8 +16724,8 @@ msgid ""
 "Set **Certificate Authority** and **Certificate recipient** to the oldest"
 " clients in the domain which are supposed to use smartcard logon."
 msgstr ""
-"Állítsa be a **Tanúsítványkezelő** és a **Tanúsítvány címzettje** címeket a "
-"tartomány legrégebbi, intelligens kártyás bejelentkezést használó "
+"Állítsa be a **Tanúsítványkezelő** és a **Tanúsítvány címzettje** címeket"
+" a tartomány legrégebbi, intelligens kártyás bejelentkezést használó "
 "ügyfeleinek."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:50
@@ -16653,8 +16733,8 @@ msgid ""
 "If you want to use Elliptic Curve (EC) keys your clients must be not "
 "older than Windows Server 2008 and Windows Vista."
 msgstr ""
-"Ha elliptikus görbületű (EC) kulcsokat szeretne használni, az ügyfelek nem "
-"lehetnek régebbiek, mint a Windows Server 2008 és a Windows Vista."
+"Ha elliptikus görbületű (EC) kulcsokat szeretne használni, az ügyfelek "
+"nem lehetnek régebbiek, mint a Windows Server 2008 és a Windows Vista."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:54
 msgid "**General**"
@@ -16674,8 +16754,7 @@ msgstr "**Kérelmek kezelése**"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:57
 msgid "Set a purpose of **Signature and smartcard logon**."
-msgstr ""
-"A **Aláírás és az intelligens kártyás bejelentkezés céljának beállítása**."
+msgstr "A **Aláírás és az intelligens kártyás bejelentkezés céljának beállítása**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:65
 msgid "**Cryptography**"
@@ -16695,8 +16774,8 @@ msgid ""
 "``2048`` Bit. If you choose to use Eliptic Curve (EC) keys you need to "
 "make additional changes on your client computers."
 msgstr ""
-"A Microsoft az RSA-algoritmus használatát ajánlja ``2048`` Bit hosszúságú "
-"kulcsokkal. Ha az Eliptikus görbe (EC) kulcsok használata mellett dönt, "
+"A Microsoft az RSA-algoritmus használatát ajánlja ``2048`` Bit hosszúságú"
+" kulcsokkal. Ha az Eliptikus görbe (EC) kulcsok használata mellett dönt, "
 "további módosításokat kell végrehajtania az ügyfélszámítógépeken."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:67
@@ -16726,28 +16805,28 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press"
 " Enter."
 msgstr ""
-"A parancssorból, a PowerShellből vagy a Futtatásból írja be a ``certsrv.msc``"
-" parancsot, és nyomja meg az Entert."
+"A parancssorból, a PowerShellből vagy a Futtatásból írja be a "
+"``certsrv.msc`` parancsot, és nyomja meg az Entert."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:76
 msgid ""
 "In the navigation pane expand the Certificate Authority (CA) and navigate"
 " to **Certificate Templates**."
 msgstr ""
-"A navigációs ablaktáblán bontsa ki a Tanúsítványkezelőt (CA), és navigáljon "
-"a **Tanúsítványsablonok** pontra."
+"A navigációs ablaktáblán bontsa ki a Tanúsítványkezelőt (CA), és "
+"navigáljon a **Tanúsítványsablonok** pontra."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:77
 msgid "In the menu bar click **Action → New → Certificate Template to Issue**."
 msgstr ""
-"A menüsorban kattintson a **Action → New → Certificate Template to Issue** "
-"menüpontra."
+"A menüsorban kattintson a **Action → New → Certificate Template to "
+"Issue** menüpontra."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:78
 msgid "Select the certificate template you want to issue and confirm with **OK**."
 msgstr ""
-"Válassza ki a kiállítani kívánt tanúsítványsablont, és erősítse meg a **OK** "
-"címmel."
+"Válassza ki a kiállítani kívánt tanúsítványsablont, és erősítse meg a "
+"**OK** címmel."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:82
 msgid "Provision Nitrokey 3 for smartcard logon with Active Directory"
@@ -16784,13 +16863,14 @@ msgid ""
 "If the PIV application on the Nitrokey was not used before, perform a "
 "initialization with ``nitropy nk3 piv init`` first."
 msgstr ""
-"Ha a Nitrokey-n lévő PIV-alkalmazást korábban még nem használták, először "
-"végezzen inicializálást a ``nitropy nk3 piv init`` címen."
+"Ha a Nitrokey-n lévő PIV-alkalmazást korábban még nem használták, először"
+" végezzen inicializálást a ``nitropy nk3 piv init`` címen."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:95
 msgid "Generate a private key and write the CSR to file with the command below."
 msgstr ""
-"Generáljon egy privát kulcsot, és írja a CSR-t a fájlba az alábbi paranccsal."
+"Generáljon egy privát kulcsot, és írja a CSR-t a fájlba az alábbi "
+"paranccsal."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:101
 msgid ""
@@ -16800,9 +16880,9 @@ msgid ""
 "``userPrincipalName`` attribute of the Active Directory user account."
 msgstr ""
 "A ``<algorithm>`` értéke a használt algoritmus és annak kulcshossza, pl. "
-"``rsa2048``. A ``<subject-name>`` és ``<subject-alternative-name>`` értékei "
-"jellemzően az Active Directory felhasználói fiók ``commonName`` és "
-"``userPrincipalName`` attribútumának felelnek meg."
+"``rsa2048``. A ``<subject-name>`` és ``<subject-alternative-name>`` "
+"értékei jellemzően az Active Directory felhasználói fiók ``commonName`` "
+"és ``userPrincipalName`` attribútumának felelnek meg."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:104
 msgid ""
@@ -16863,8 +16943,8 @@ msgid ""
 "*Certificate Hold*. This revocation can be reverted and is hence not "
 "permanent."
 msgstr ""
-"Lehetőség van a tanúsítvány ideiglenes visszavonására a *Certificate Hold* "
-"címen. Ez a visszavonás visszaállítható, tehát nem végleges."
+"Lehetőség van a tanúsítvány ideiglenes visszavonására a *Certificate "
+"Hold* címen. Ez a visszavonás visszaállítható, tehát nem végleges."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:137
 msgid "MMC (certsrv.msc)"
@@ -16875,14 +16955,14 @@ msgid ""
 "In the navigation pane expand the certificate authority (CA) and navigate"
 " to **Issued Certificates**."
 msgstr ""
-"A navigációs ablaktáblán bontsa ki a hitelesítésszolgáltatót, és navigáljon "
-"a **Kiállított tanúsítványok** menüpontra."
+"A navigációs ablaktáblán bontsa ki a hitelesítésszolgáltatót, és "
+"navigáljon a **Kiállított tanúsítványok** menüpontra."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:140
 msgid "In the detail pane select the user certificate you want to revoke."
 msgstr ""
-"A részleteket tartalmazó ablaktáblán jelölje ki a visszavonandó felhasználói "
-"tanúsítványt."
+"A részleteket tartalmazó ablaktáblán jelölje ki a visszavonandó "
+"felhasználói tanúsítványt."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:141
 msgid "In the menu bar click **Action → All Tasks → Revoke Certificate**."
@@ -16895,8 +16975,8 @@ msgid ""
 "Specifiy a reason for the revocation, date and time, and confirm with "
 "**Yes**."
 msgstr ""
-"Adja meg a visszavonás okát, dátumát és időpontját, és erősítse meg a **Yes**"
-" címmel."
+"Adja meg a visszavonás okát, dátumát és időpontját, és erősítse meg a "
+"**Yes** címmel."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:143
 msgid "In the navigation pane navigate to **Revoked Certificates**."
@@ -16911,8 +16991,8 @@ msgstr "A menüsorban kattintson a **Action → All Tasks → Publish** menüpon
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:145
 msgid "Select the revocation list you want to publish and confirm with **OK**."
 msgstr ""
-"Válassza ki a közzétenni kívánt visszavonási listát, és erősítse meg a **OK**"
-" címmel."
+"Válassza ki a közzétenni kívánt visszavonási listát, és erősítse meg a "
+"**OK** címmel."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:148
 msgid ""
@@ -16924,12 +17004,13 @@ msgid ""
 " immediate and depends on the expiration of the CRL the client has."
 msgstr ""
 "A Windows minden egyes intelligens kártyás bejelentkezési kísérlet során "
-"ellenőrzi, hogy az intelligens kártya által bemutatott tanúsítvány szerepel-"
-"e a tanúsítvány-visszavonási listán (CRL). Ha a tanúsítvány szerepel a CRL-"
-"ben, a bejelentkezést megtagadja. Minden CRL tartalmaz egy érvényességi "
-"időt, hogy lejárjon. A Windows gyorsítótárba helyezi a lekérdezett CRL-t, és "
-"frissíti azokat, ha a CRL hamarosan lejár. Ezért a visszavonás nem azonnali, "
-"és az ügyfél birtokában lévő CRL lejáratától függ."
+"ellenőrzi, hogy az intelligens kártya által bemutatott tanúsítvány "
+"szerepel-e a tanúsítvány-visszavonási listán (CRL). Ha a tanúsítvány "
+"szerepel a CRL-ben, a bejelentkezést megtagadja. Minden CRL tartalmaz egy"
+" érvényességi időt, hogy lejárjon. A Windows gyorsítótárba helyezi a "
+"lekérdezett CRL-t, és frissíti azokat, ha a CRL hamarosan lejár. Ezért a "
+"visszavonás nem azonnali, és az ügyfél birtokában lévő CRL lejáratától "
+"függ."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:156
 msgid "Import a user smartcard certificate to the personal certificate store"
@@ -16990,9 +17071,9 @@ msgid ""
 msgstr ""
 "Az importálás befejezése után ellenőrizze az importált tanúsítványt a "
 "részleteket tartalmazó ablaktáblán. Ha a Nitrokey csatlakoztatva van, a "
-"tanúsítvány tulajdonságai között a *A tanúsítványnak megfelelő magánkulccsal "
-"rendelkezik.* üzenetnek kell jeleznie, hogy a Nitrokey magánkulcsa "
-"azonosítható."
+"tanúsítvány tulajdonságai között a *A tanúsítványnak megfelelő "
+"magánkulccsal rendelkezik.* üzenetnek kell jeleznie, hogy a Nitrokey "
+"magánkulcsa azonosítható."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:171
 msgid "PowerShell"
@@ -17007,8 +17088,8 @@ msgid ""
 "Change to the personal certficate store of the user with ``Set-Location "
 "-Path cert:\\CurrentUser\\My``."
 msgstr ""
-"A felhasználó személyes tanúsítványtárolójának módosítása a ``Set-Location -"
-"Path cert:\\CurrentUser\\My`` címen."
+"A felhasználó személyes tanúsítványtárolójának módosítása a ``Set-"
+"Location -Path cert:\\CurrentUser\\My`` címen."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:175
 msgid ""
@@ -17016,8 +17097,8 @@ msgid ""
 "'<path>'``, replacing ``<path>`` with the certificate file path."
 msgstr ""
 "Importálja a tanúsítványt a tárolóba a ``Import-Certificate -Filepath "
-"'<path>'`` címmel, a ``<path>`` helyére a tanúsítványfájl elérési útját írja "
-"be."
+"'<path>'`` címmel, a ``<path>`` helyére a tanúsítványfájl elérési útját "
+"írja be."
 
 #: ../nitrokey3/windows/piv/guides/index.rst:2
 msgid "Guides"
@@ -17033,9 +17114,9 @@ msgid ""
 "publication `SP 800-73 "
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 msgstr ""
-"A *Személyazonosság-ellenőrzés* (PIV) a NIST `SP 800-73 <https://nvlpubs.nist"
-".gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>` __ speciális "
-"kiadványán alapul."
+"A *Személyazonosság-ellenőrzés* (PIV) a NIST `SP 800-73 "
+"<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`"
+" __ speciális kiadványán alapul."
 
 #: ../nitrokey3/windows/piv/key_management.rst:5
 msgid "Key Slots"
@@ -17048,7 +17129,8 @@ msgid ""
 " in a key slot."
 msgstr ""
 "A PIV-alkalmazás különböző célú tanúsítványokat tárolhat. Minden egyes "
-"célhoz a magánkulcs és a hozzá tartozó tanúsítvány egy kulcshelyen tárolódik."
+"célhoz a magánkulcs és a hozzá tartozó tanúsítvány egy kulcshelyen "
+"tárolódik."
 
 #: ../nitrokey3/windows/piv/key_management.rst:11
 msgid "Slot"
@@ -17072,9 +17154,9 @@ msgid ""
 "management applications and are still there to provide backward "
 "compatibility."
 msgstr ""
-"Az ezekben a nyílásokban lévő magánkulcsokat és tanúsítványokat kulcskezelő "
-"alkalmazásokhoz használták, és a visszamenőleges kompatibilitás érdekében "
-"továbbra is ott vannak."
+"Az ezekben a nyílásokban lévő magánkulcsokat és tanúsítványokat "
+"kulcskezelő alkalmazásokhoz használták, és a visszamenőleges "
+"kompatibilitás érdekében továbbra is ott vannak."
 
 #: ../nitrokey3/windows/piv/key_management.rst:17
 msgid "9a"
@@ -17134,9 +17216,9 @@ msgid ""
 "operations, such as building access or time recording. Support from the "
 "respective system is a prerequisite."
 msgstr ""
-"Az ebben a nyílásban lévő magánkulcsot és tanúsítványt fizikai műveletekhez, "
-"például épületbe való belépéshez vagy időfelvételhez használják. A megfelelő "
-"rendszer támogatása előfeltétel."
+"Az ebben a nyílásban lévő magánkulcsot és tanúsítványt fizikai "
+"műveletekhez, például épületbe való belépéshez vagy időfelvételhez "
+"használják. A megfelelő rendszer támogatása előfeltétel."
 
 #: ../nitrokey3/windows/piv/key_management.rst:33
 msgid "Algorithms"
@@ -17148,9 +17230,9 @@ msgid ""
 "asymmetric algorithms are used for the user private keys and the "
 "symmetric algorithms for the management key."
 msgstr ""
-"A PIV-alkalmazás aszimmetrikus és szimmetrikus algoritmusokat használ. Az "
-"aszimmetrikus algoritmusokat a felhasználói magánkulcsokhoz, a szimmetrikus "
-"algoritmusokat pedig a kezelési kulcshoz használják."
+"A PIV-alkalmazás aszimmetrikus és szimmetrikus algoritmusokat használ. Az"
+" aszimmetrikus algoritmusokat a felhasználói magánkulcsokhoz, a "
+"szimmetrikus algoritmusokat pedig a kezelési kulcshoz használják."
 
 #: ../nitrokey3/windows/piv/key_management.rst:38
 msgid "Supported asymmetric key algorithms:"
@@ -17190,9 +17272,9 @@ msgid ""
 " with the subject name ``John Doe`` and subject alternative name "
 "``jd@nitrokey.local``."
 msgstr ""
-"Az alábbi parancs létrehozza a privát kulcsot a ``9a`` kulcshelyen a ``John "
-"Doe`` és a ``jd@nitrokey.local`` alanyi alternatív névvel rendelkező "
-"felhasználó számára."
+"Az alábbi parancs létrehozza a privát kulcsot a ``9a`` kulcshelyen a "
+"``John Doe`` és a ``jd@nitrokey.local`` alanyi alternatív névvel "
+"rendelkező felhasználó számára."
 
 #: ../nitrokey3/shared/set-pins.rst.inc:4
 msgid "Settings PIN with Windows Settings application"
@@ -34305,3 +34387,4 @@ msgstr ""
 #~ "Ha ez megtörtént, jelentkezzen ki. "
 #~ "Jelentkezzen be a Nitrokey-vel a "
 #~ "\"bejelentkezési lehetőségek\" segítségével."
+

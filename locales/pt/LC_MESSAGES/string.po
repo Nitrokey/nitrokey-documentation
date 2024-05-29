@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
+"POT-Creation-Date: 2024-05-29 12:33+0200\n"
 "PO-Revision-Date: 2024-05-13 11:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: pt\n"
@@ -894,7 +894,9 @@ msgstr ""
 "razão os seus dados não forem retidos."
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "Como atualizar"
 
@@ -970,6 +972,7 @@ msgstr ""
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -12985,6 +12988,77 @@ msgstr ""
 "execute: ``udevadm control --reload-rules && udevadm trigger``` ou "
 "reinicie a sua máquina. Depois disso a atualização deve funcionar sem a "
 "emissão da permissão."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+#, fuzzy
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr "Este guia descreve como actualizar o firmware na Nitrokey 3."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+#, fuzzy
+msgid "Setup"
+msgstr "Reinicialização"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+#, fuzzy
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr ""
+"Nunca desconecte a Nitrokey 3 ou aborte o processo durante a atualização,"
+" isso provavelmente tornará seu aparelho inútil!"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+#, fuzzy
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr ""
+"Uma vez instruído por ``nitropy`` toca no dispositivo para activar o "
+"carregador de arranque."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr ""
 
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"

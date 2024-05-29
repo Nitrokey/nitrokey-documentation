@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
+"POT-Creation-Date: 2024-05-29 12:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -808,6 +808,7 @@ msgstr ""
 msgid "User Data is retained during firmware update. Anyways, be sure to **always** have another device (or login method) registered with your service, if for some reason your data is not retained."
 msgstr ""
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
 #: ../fido2/shared/firmware-update.rst.inc:10
 #: ../nitrokey3/firmware-update.rst.inc:20
 #: ../pro/firmware-update.rst.inc:15
@@ -858,6 +859,7 @@ msgstr ""
 msgid "Please wait until the process finished. (This may vary depending on your operating system"
 msgstr ""
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
@@ -8994,6 +8996,54 @@ msgstr ""
 
 #: ../nitrokey3/linux/firmware-update.rst:7
 msgid "This likely means your user has not the needed permissions to read/write the device. Please make sure you have set up the correct `udev-rules`_. Download this `udev-rules`_ set and place it in your udev rules directory (e.g., ``/etc/udev/rules.d``). Then remove your Nitrokey 3 from the USB slot and run: ``udevadm control --reload-rules && udevadm trigger`` or reboot your machine. Afterwards the update should work without the permission issue."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+msgid "This guide describes how to update Nitrokey 3's firmware with nitropy in Qubes OS."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid "please read the general `firmware update instructions`_ before! Since for specifc versions there are limitations regarding what data is possible to migrate to the new version."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+msgid "Setup"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid "Install nitropy in a app VM of your choice following the `installation instructions`_."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+msgid "Never disconnect the Nitrokey 3 or abort the process while updating, because it will likely render your device unusable!"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+msgid "Once instructed by ``nitropy`` touch the device to activate the bootloader."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid "This will detach the nitrokey from the app VM, and the bootloader will apear in sys-usb"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid "Run ``nitropy nk3 update`` and follow the instructions. This will reboot the Nitrokey to finalice the update eventually."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
 msgstr ""
 
 #: ../nitrokey3/linux/index.rst:2

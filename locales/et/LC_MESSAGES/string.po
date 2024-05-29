@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
+"POT-Creation-Date: 2024-05-29 12:33+0200\n"
 "PO-Revision-Date: 2024-05-24 09:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Estonian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/et/>\n"
 "Language: et\n"
+"Language-Team: Estonian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/et/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -889,7 +888,9 @@ msgstr ""
 "teenuses registreeritud, kui teie andmed mingil põhjusel ei säiliks."
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "Kuidas uuendada"
 
@@ -961,6 +962,7 @@ msgstr ""
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -13308,6 +13310,75 @@ msgstr ""
 "--reload-rules && udevadm trigger`` või taaskäivitage oma masin. Pärast "
 "seda peaks värskendus toimima ilma lubade probleemita."
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+#, fuzzy
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr "Selles juhendis kirjeldatakse, kuidas Nitrokey 3 püsivara uuendada."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+#, fuzzy
+msgid "Setup"
+msgstr "reset"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+#, fuzzy
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr ""
+"Ärge kunagi ühendage Nitrokey 3 lahti või katkestage protsessi uuendamise"
+" ajal, see muudab teie seadme tõenäoliselt kasutamiskõlbmatuks!"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+#, fuzzy
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr "Pärast juhiseid ``nitropy`` puudutage seadet, et aktiveerida alglaadija."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr ""
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"
 msgstr "Nitrokey 3 Linuxiga"
@@ -15929,8 +16000,8 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"*PIN-kood* on piiratud kordusloenduriga. Lisateavet leiate peatükist `"
-"kordusloendur <access_control.html#retry-counter>`__."
+"*PIN-kood* on piiratud kordusloenduriga. Lisateavet leiate peatükist "
+"`kordusloendur <access_control.html#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:40
 msgid "On the terminal enter ``nitropy nk3 piv change-pin``."
@@ -15946,8 +16017,8 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"*PUK* on piiratud korduvkatsete loenduriga. Lisateavet leiate peatükist `"
-"kordusloendur <access_control.html#retry-counter>`__."
+"*PUK* on piiratud korduvkatsete loenduriga. Lisateavet leiate peatükist "
+"`kordusloendur <access_control.html#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:58
 msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
@@ -15964,16 +16035,16 @@ msgid ""
 " are no attempts left."
 msgstr ""
 "Kordusloendurit kasutatakse *PIN* ja *PUK*. Loendur väheneb iga "
-"ebaõnnestunud sisselogimiskatse korral. Kui korduvkatsete loendur on null, "
-"tähendab see, et ühtegi katset ei ole enam tehtud."
+"ebaõnnestunud sisselogimiskatse korral. Kui korduvkatsete loendur on "
+"null, tähendab see, et ühtegi katset ei ole enam tehtud."
 
 #: ../nitrokey3/windows/piv/access_control.rst:68
 msgid ""
 "The *PIN* has a retry counter of 3 attempts. If these attempts are used "
 "up, the *PIN* must be unlocked with the *PUK*."
 msgstr ""
-"*PIN-kood* on varustatud 3 katse kordusloenduriga. Kui need katsed on ära "
-"kasutatud, tuleb *PIN* avada *PUK* abil."
+"*PIN-kood* on varustatud 3 katse kordusloenduriga. Kui need katsed on ära"
+" kasutatud, tuleb *PIN* avada *PUK* abil."
 
 #: ../nitrokey3/windows/piv/access_control.rst:71
 msgid ""
@@ -15990,9 +16061,9 @@ msgid ""
 "defaults. Please refer to the chapter `Factory Reset "
 "<factory_reset.html>`__ to learn more."
 msgstr ""
-"*PUK* on 3 korduskatset. Kui need katsed on ära kasutatud, ei saa PIV-kaarti "
-"enam kasutada ja see tuleb lähtestada tehaseseadetele. Lisateavet leiate "
-"peatükist `Factory Reset <factory_reset.html>`__."
+"*PUK* on 3 korduskatset. Kui need katsed on ära kasutatud, ei saa PIV-"
+"kaarti enam kasutada ja see tuleb lähtestada tehaseseadetele. Lisateavet "
+"leiate peatükist `Factory Reset <factory_reset.html>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:80
 msgid "Management Key (MGM)"
@@ -16028,7 +16099,8 @@ msgid ""
 "layer and about 6kB."
 msgstr ""
 "Iga privaatne võti on seotud sertifikaadiga. Sertifikaate saab lugeda ja "
-"kirjutada. Sertifikaadi suurus on piiratud transpordikihiga ja on umbes 6 kB."
+"kirjutada. Sertifikaadi suurus on piiratud transpordikihiga ja on umbes 6"
+" kB."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:9
 msgid "Read Certificate"
@@ -16051,8 +16123,8 @@ msgid ""
 "The PIV application can be reset to factory defaults. It can only be "
 "reset if the PIN and PUK are blocked."
 msgstr ""
-"PIV-rakenduse saab lähtestada tehaseseadetele. Seda saab lähtestada ainult "
-"siis, kui PIN-kood ja PUK on blokeeritud."
+"PIV-rakenduse saab lähtestada tehaseseadetele. Seda saab lähtestada "
+"ainult siis, kui PIN-kood ja PUK on blokeeritud."
 
 #: ../nitrokey3/windows/piv/factory_reset.rst:8
 msgid ""
@@ -16095,9 +16167,9 @@ msgstr ""
 "Nitrokey 3 PIV-rakendust peetakse praegu ebastabiilseks ja see ei ole "
 "stabiilse püsivara versioonides saadaval. Selle funktsiooni saamiseks on "
 "vaja paigaldada testfirmavara. Hilisemad püsivara uuendused võivad "
-"põhjustada andmete ja krüptograafiliste võtmete kadumist. Lisateavet leiate `"
-"firmavara uuendamise dokumentatsioonist <firmware-update.html#firmware-"
-"release-types>`__."
+"põhjustada andmete ja krüptograafiliste võtmete kadumist. Lisateavet "
+"leiate `firmavara uuendamise dokumentatsioonist <firmware-update.html"
+"#firmware-release-types>`__."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:17
 msgid ""
@@ -16106,10 +16178,10 @@ msgid ""
 "Services (ADCS). On the client machine only access to the respective user"
 " account used for logon is required."
 msgstr ""
-"Seadistamine nõuab administraatori juurdepääsu masinatele, millel töötavad "
-"Active Directory Directory Directory Services (ADDS) ja Active Directory "
-"Certificate Services (ADCS). Kliendimasinas on vaja ainult juurdepääsu "
-"vastavale kasutajakontole, mida kasutatakse sisselogimiseks."
+"Seadistamine nõuab administraatori juurdepääsu masinatele, millel "
+"töötavad Active Directory Directory Directory Services (ADDS) ja Active "
+"Directory Certificate Services (ADCS). Kliendimasinas on vaja ainult "
+"juurdepääsu vastavale kasutajakontole, mida kasutatakse sisselogimiseks."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16135,8 +16207,9 @@ msgid ""
 "Controller Authentication*, and *Kerberos Authentication* certificate "
 "issued."
 msgstr ""
-"Igale domeenikontrollerile (DC) peab olema väljastatud *domeenikontroller*, *"
-"domeenikontrollerite autentimise* ja *Kerberos Authentication* sertifikaat."
+"Igale domeenikontrollerile (DC) peab olema väljastatud "
+"*domeenikontroller*, *domeenikontrollerite autentimise* ja *Kerberos "
+"Authentication* sertifikaat."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:24
 msgid ""
@@ -16144,9 +16217,9 @@ msgid ""
 "full and delta certificate revocation lists (CRL) are retrievable from "
 "external networks."
 msgstr ""
-"Kui teil on kliente, kes lahkuvad ettevõtte võrgust, veenduge, et avaldatud "
-"sertifikaatide täielikud ja delta tühistamisnimekirjad (CRL) on "
-"välisvõrkudest leitavad."
+"Kui teil on kliente, kes lahkuvad ettevõtte võrgust, veenduge, et "
+"avaldatud sertifikaatide täielikud ja delta tühistamisnimekirjad (CRL) on"
+" välisvõrkudest leitavad."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:25
 msgid ""
@@ -16167,7 +16240,8 @@ msgstr "Nitrokey 3 koos PIV-rakendusega."
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:30
 msgid "Configure smartcard logon for use with Active Directory (AD)"
 msgstr ""
-"Nutikaardi sisselogimise konfigureerimine Active Directory (AD) kasutamiseks"
+"Nutikaardi sisselogimise konfigureerimine Active Directory (AD) "
+"kasutamiseks"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:32
 msgid ""
@@ -16177,9 +16251,9 @@ msgid ""
 "Request (CSR) during provisioning of the Nitrokey."
 msgstr ""
 "Nutikaardiga sisselogimine nõuab domeeni sertifitseerimisasutuse (CA) "
-"sertifikaadi malli. See mall määratleb kasutajate sertifikaatide väärtused "
-"ja piirangud. Seda kasutatakse sertifikaaditaotluse (CSR) allkirjastamiseks "
-"Nitrokey'i määramise ajal."
+"sertifikaadi malli. See mall määratleb kasutajate sertifikaatide "
+"väärtused ja piirangud. Seda kasutatakse sertifikaaditaotluse (CSR) "
+"allkirjastamiseks Nitrokey'i määramise ajal."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:36
 msgid ""
@@ -16199,8 +16273,8 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certtmpl.msc`` and "
 "press Enter."
 msgstr ""
-"Kirjutage käsurealt, PowerShellist või Run'ist ``certtmpl.msc`` ja vajutage "
-"Enter."
+"Kirjutage käsurealt, PowerShellist või Run'ist ``certtmpl.msc`` ja "
+"vajutage Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:41
 msgid "In the detail pane select the template **Smartcard Logon**."
@@ -16235,8 +16309,8 @@ msgid ""
 "If you want to use Elliptic Curve (EC) keys your clients must be not "
 "older than Windows Server 2008 and Windows Vista."
 msgstr ""
-"Kui soovite kasutada Elliptic Curve (EC) võtmeid, ei tohi teie kliendid olla "
-"vanemad kui Windows Server 2008 ja Windows Vista."
+"Kui soovite kasutada Elliptic Curve (EC) võtmeid, ei tohi teie kliendid "
+"olla vanemad kui Windows Server 2008 ja Windows Vista."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:54
 msgid "**General**"
@@ -16276,8 +16350,8 @@ msgid ""
 "``2048`` Bit. If you choose to use Eliptic Curve (EC) keys you need to "
 "make additional changes on your client computers."
 msgstr ""
-"Microsoft soovitab kasutada RSA algoritmi, mille võtme pikkus on ``2048`` "
-"Bit. Kui te otsustate kasutada Eliptic Curve (EC) võtmeid, peate tegema "
+"Microsoft soovitab kasutada RSA algoritmi, mille võtme pikkus on ``2048``"
+" Bit. Kui te otsustate kasutada Eliptic Curve (EC) võtmeid, peate tegema "
 "lisamuudatusi oma kliendiarvutites."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:67
@@ -16297,8 +16371,8 @@ msgid ""
 "After the creation of a certificate template, the template must be issued"
 " to be used by the clients."
 msgstr ""
-"Pärast sertifikaadi malli loomist tuleb see välja anda, et kliendid saaksid "
-"seda kasutada."
+"Pärast sertifikaadi malli loomist tuleb see välja anda, et kliendid "
+"saaksid seda kasutada."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:75
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:138
@@ -16307,8 +16381,8 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press"
 " Enter."
 msgstr ""
-"Kirjutage käsurealt, PowerShellist või Run'ist ``certsrv.msc`` ja vajutage "
-"Enter."
+"Kirjutage käsurealt, PowerShellist või Run'ist ``certsrv.msc`` ja "
+"vajutage Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:76
 msgid ""
@@ -16339,8 +16413,8 @@ msgid ""
 msgstr ""
 "Nutikaardiga sisselogimine eeldab Nitrokey kasutajale Active Directory's "
 "nitrovõtme andmist. Provisiong sisaldab privaatvõtit ja sertifikaadi "
-"esitamise taotluse (CSR) genereerimist. Seejärel kirjutatakse sertifikaat "
-"Nitrokey'sse."
+"esitamise taotluse (CSR) genereerimist. Seejärel kirjutatakse sertifikaat"
+" Nitrokey'sse."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:89
 msgid ""
@@ -16373,9 +16447,9 @@ msgid ""
 "alternative-name>`` corresponds typically to the ``commonName`` and "
 "``userPrincipalName`` attribute of the Active Directory user account."
 msgstr ""
-"Väärtus ``<algorithm>`` on kasutatud algoritm koos selle võtme pikkusega, nt "
-"``rsa2048``. Väärtused ``<subject-name>`` ja ``<subject-alternative-name>`` "
-"vastavad tavaliselt Active Directory kasutajakonto atribuutidele "
+"Väärtus ``<algorithm>`` on kasutatud algoritm koos selle võtme pikkusega,"
+" nt ``rsa2048``. Väärtused ``<subject-name>`` ja ``<subject-alternative-"
+"name>`` vastavad tavaliselt Active Directory kasutajakonto atribuutidele "
 "``commonName`` ja ``userPrincipalName``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:104
@@ -16383,7 +16457,8 @@ msgid ""
 "Sign the CSR with the certificate authority (CA) of the domain with the "
 "command below."
 msgstr ""
-"Allkirjastage CSR domeeni sertifitseerimisasutusega (CA) alljärgneva käsuga."
+"Allkirjastage CSR domeeni sertifitseerimisasutusega (CA) alljärgneva "
+"käsuga."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:110
 msgid ""
@@ -16404,8 +16479,7 @@ msgstr "``<file>`` väärtus on sertifikaadifail."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:123
 msgid "Revoke smartcard logon for use with Active Directory (AD)"
-msgstr ""
-"Active Directory'ga (AD) kasutatava kiipkaardi sisselogimise tühistamine"
+msgstr "Active Directory'ga (AD) kasutatava kiipkaardi sisselogimise tühistamine"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:125
 msgid ""
@@ -16424,8 +16498,8 @@ msgid ""
 "It is strongly advised to never leave unused user certificates without "
 "revoking them."
 msgstr ""
-"On tungivalt soovitatav mitte kunagi jätta kasutamata kasutajasertifikaate "
-"ilma neid tühistamata."
+"On tungivalt soovitatav mitte kunagi jätta kasutamata "
+"kasutajasertifikaate ilma neid tühistamata."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:133
 msgid ""
@@ -16433,8 +16507,8 @@ msgid ""
 "*Certificate Hold*. This revocation can be reverted and is hence not "
 "permanent."
 msgstr ""
-"Sertifikaati on võimalik ajutiselt tühistada põhjendusega *Certificate Hold*"
-". Seda tühistamist saab tagasi võtta ja see ei ole seega püsiv."
+"Sertifikaati on võimalik ajutiselt tühistada põhjendusega *Certificate "
+"Hold*. Seda tühistamist saab tagasi võtta ja see ei ole seega püsiv."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:137
 msgid "MMC (certsrv.msc)"
@@ -16464,8 +16538,7 @@ msgstr "Määrake tühistamise põhjus, kuupäev ja kellaaeg ning kinnitage **Ja
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:143
 msgid "In the navigation pane navigate to **Revoked Certificates**."
-msgstr ""
-"Navigatsioonipaanis navigeeri aadressile **Tagasivõetud sertifikaadid**."
+msgstr "Navigatsioonipaanis navigeeri aadressile **Tagasivõetud sertifikaadid**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:144
 msgid "In the menu bar click **Action → All Tasks → Publish**."
@@ -16487,15 +16560,14 @@ msgstr ""
 "Windows kontrollib iga kiipkaardiga sisselogimise katse ajal, kas "
 "kiipkaardil esitatud sertifikaat on kantud sertifikaatide "
 "tühistamisnimekirja (CRL). Kui sertifikaat leitakse CRL-is, keeldutakse "
-"sisselogimisest. Iga CRL sisaldab kehtivusaega, et need aeguksid. Windows "
-"salvestab välja otsitud CRL-i vahemällu ja uuendab neid, kui CRL-i "
+"sisselogimisest. Iga CRL sisaldab kehtivusaega, et need aeguksid. Windows"
+" salvestab välja otsitud CRL-i vahemällu ja uuendab neid, kui CRL-i "
 "kehtivusaeg hakkab lõppema. Seega ei ole tühistamine kohene ja sõltub "
 "kliendi CRLi kehtivusaja lõppemisest."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:156
 msgid "Import a user smartcard certificate to the personal certificate store"
-msgstr ""
-"Kasutaja kiipkaardi sertifikaadi importimine isiklikku sertifikaadipanka"
+msgstr "Kasutaja kiipkaardi sertifikaadi importimine isiklikku sertifikaadipanka"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:158
 msgid ""
@@ -16504,7 +16576,8 @@ msgid ""
 "required procedure."
 msgstr ""
 "Nitrokey's salvestatud kasutajasertifikaadi saab importida kasutaja "
-"isiklikku sertifikaadipanka. Teatud olukordades on see vajalik protseduur."
+"isiklikku sertifikaadipanka. Teatud olukordades on see vajalik "
+"protseduur."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:162
 msgid "MMC (certmgr.msc)"
@@ -16516,7 +16589,8 @@ msgid ""
 "Make sure you are logged on to the user account the certificate "
 "corresponds to."
 msgstr ""
-"Veenduge, et olete sisse logitud kasutajakontole, millele sertifikaat vastab."
+"Veenduge, et olete sisse logitud kasutajakontole, millele sertifikaat "
+"vastab."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:165
 msgid ""
@@ -16535,8 +16609,8 @@ msgid ""
 "Follow the import wizard and provide the user certificate file when "
 "requested."
 msgstr ""
-"Järgige importimisviisikut ja esitage kasutaja sertifikaadi fail, kui seda "
-"nõutakse."
+"Järgige importimisviisikut ja esitage kasutaja sertifikaadi fail, kui "
+"seda nõutakse."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:168
 msgid ""
@@ -16547,9 +16621,9 @@ msgid ""
 "Nitrokey could be identified."
 msgstr ""
 "Pärast impordi lõpetamist kontrollige imporditud sertifikaadi detailide "
-"paanil. Kui Nitrokey on ühendatud, peaks sertifikaadi omadustes ilmuma teade "
-"*Teil on sellele sertifikaadile vastav privaatvõti.*, mis näitab, et "
-"Nitrokey privaatvõti on võimalik tuvastada."
+"paanil. Kui Nitrokey on ühendatud, peaks sertifikaadi omadustes ilmuma "
+"teade *Teil on sellele sertifikaadile vastav privaatvõti.*, mis näitab, "
+"et Nitrokey privaatvõti on võimalik tuvastada."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:171
 msgid "PowerShell"
@@ -16572,8 +16646,8 @@ msgid ""
 "Import the certificate to the store with ``Import-Certificate -Filepath "
 "'<path>'``, replacing ``<path>`` with the certificate file path."
 msgstr ""
-"Impordige sertifikaat salvestusse ``Import-Certificate -Filepath '<path>'``, "
-"asendades ``<path>`` sertifikaadifaili teega."
+"Impordige sertifikaat salvestusse ``Import-Certificate -Filepath "
+"'<path>'``, asendades ``<path>`` sertifikaadifaili teega."
 
 #: ../nitrokey3/windows/piv/guides/index.rst:2
 msgid "Guides"
@@ -16589,9 +16663,9 @@ msgid ""
 "publication `SP 800-73 "
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 msgstr ""
-"*Isikliku identiteedi kontrollimine* (PIV) põhineb NISTi eriväljaandel `SP "
-"800-73 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP."
-"800-73-4.pdf>`__."
+"*Isikliku identiteedi kontrollimine* (PIV) põhineb NISTi eriväljaandel "
+"`SP 800-73 "
+"<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 
 #: ../nitrokey3/windows/piv/key_management.rst:5
 msgid "Key Slots"
@@ -16603,8 +16677,9 @@ msgid ""
 "each purpose the private key and its corresponding certificate are stored"
 " in a key slot."
 msgstr ""
-"PIV-rakenduses saab hoida sertifikaate erinevatel eesmärkidel. Iga otstarbe "
-"jaoks säilitatakse privaatne võti ja vastav sertifikaat võtmepesas."
+"PIV-rakenduses saab hoida sertifikaate erinevatel eesmärkidel. Iga "
+"otstarbe jaoks säilitatakse privaatne võti ja vastav sertifikaat "
+"võtmepesas."
 
 #: ../nitrokey3/windows/piv/key_management.rst:11
 msgid "Slot"
@@ -16645,8 +16720,8 @@ msgid ""
 "The private key and certificate in this slot are used to authenticate the"
 " cardholder."
 msgstr ""
-"Selles pesa olevat isiklikku võtit ja sertifikaati kasutatakse kaardiomaniku "
-"autentimiseks."
+"Selles pesa olevat isiklikku võtit ja sertifikaati kasutatakse "
+"kaardiomaniku autentimiseks."
 
 #: ../nitrokey3/windows/piv/key_management.rst:20
 msgid "9c"
@@ -16690,9 +16765,9 @@ msgid ""
 "operations, such as building access or time recording. Support from the "
 "respective system is a prerequisite."
 msgstr ""
-"Selles pesa olevat isiklikku võtit ja sertifikaati kasutatakse füüsilisteks "
-"toiminguteks, näiteks hoonesse sisenemiseks või aja registreerimiseks. "
-"Eelduseks on vastava süsteemi tugi."
+"Selles pesa olevat isiklikku võtit ja sertifikaati kasutatakse "
+"füüsilisteks toiminguteks, näiteks hoonesse sisenemiseks või aja "
+"registreerimiseks. Eelduseks on vastava süsteemi tugi."
 
 #: ../nitrokey3/windows/piv/key_management.rst:33
 msgid "Algorithms"
@@ -16747,8 +16822,8 @@ msgid ""
 "``jd@nitrokey.local``."
 msgstr ""
 "Alljärgnev käsk loob privaatvõtme võtmepesas ``9a`` kasutajale, kelle "
-"subjektinimi on ``John Doe`` ja subjekti alternatiivne nimi ``jd@nitrokey."
-"local``."
+"subjektinimi on ``John Doe`` ja subjekti alternatiivne nimi "
+"``jd@nitrokey.local``."
 
 #: ../nitrokey3/shared/set-pins.rst.inc:4
 msgid "Settings PIN with Windows Settings application"
@@ -33291,3 +33366,4 @@ msgstr ""
 #~ "Kui see on tehtud, logige välja. "
 #~ "Logige sisse Nitrokey abil, kasutades "
 #~ "\"sisselogimisvõimalusi\"."
+

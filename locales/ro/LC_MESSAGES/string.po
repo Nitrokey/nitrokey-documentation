@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
+"POT-Creation-Date: 2024-05-29 12:33+0200\n"
 "PO-Revision-Date: 2024-05-24 12:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Romanian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/ro/>\n"
 "Language: ro\n"
+"Language-Team: Romanian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/ro/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 "
+"< 20)) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -908,7 +907,9 @@ msgstr ""
 "anumite motive, datele dvs. nu sunt păstrate."
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "Cum se actualizează"
 
@@ -986,6 +987,7 @@ msgstr ""
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -13681,6 +13683,78 @@ msgstr ""
 "reporniți mașina. Ulterior, actualizarea ar trebui să funcționeze fără "
 "problema de permisiune."
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+#, fuzzy
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr "Acest ghid descrie modul de actualizare a firmware-ului de pe Nitrokey 3."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+#, fuzzy
+msgid "Setup"
+msgstr "resetare"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+#, fuzzy
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr ""
+"Nu deconectați niciodată Nitrokey 3 sau nu întrerupeți procesul în timpul"
+" actualizării, deoarece acest lucru va face ca dispozitivul să devină "
+"inutilizabil!"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+#, fuzzy
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr ""
+"Odată ce ați fost instruiți de ``nitropy``` atingeți dispozitivul pentru "
+"a activa bootloaderul."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr ""
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"
 msgstr "Nitrokey 3 cu Linux"
@@ -16386,8 +16460,8 @@ msgid ""
 "learn more."
 msgstr ""
 "*PIN* este supus restricției unui contor de reîncercări. Vă rugăm să "
-"consultați capitolul `Contor de reluare <access_control.html#retry-counter>`"
-"__ pentru a afla mai multe."
+"consultați capitolul `Contor de reluare <access_control.html#retry-"
+"counter>`__ pentru a afla mai multe."
 
 #: ../nitrokey3/windows/piv/access_control.rst:40
 msgid "On the terminal enter ``nitropy nk3 piv change-pin``."
@@ -16404,8 +16478,8 @@ msgid ""
 "learn more."
 msgstr ""
 "*PUK* este supus restricției unui contor de reîncercări. Vă rugăm să "
-"consultați capitolul `Contor de reluare <access_control.html#retry-counter>`"
-"__ pentru a afla mai multe."
+"consultați capitolul `Contor de reluare <access_control.html#retry-"
+"counter>`__ pentru a afla mai multe."
 
 #: ../nitrokey3/windows/piv/access_control.rst:58
 msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
@@ -16421,9 +16495,9 @@ msgid ""
 " for every failed login attempt. A retry counter of zero means that there"
 " are no attempts left."
 msgstr ""
-"Contorul de reîncercări este utilizat pentru *PIN* și *PUK*. Contorul scade "
-"la fiecare încercare de conectare eșuată. Un contor de încercări de zero "
-"înseamnă că nu mai există încercări."
+"Contorul de reîncercări este utilizat pentru *PIN* și *PUK*. Contorul "
+"scade la fiecare încercare de conectare eșuată. Un contor de încercări de"
+" zero înseamnă că nu mai există încercări."
 
 #: ../nitrokey3/windows/piv/access_control.rst:68
 msgid ""
@@ -16448,10 +16522,10 @@ msgid ""
 "defaults. Please refer to the chapter `Factory Reset "
 "<factory_reset.html>`__ to learn more."
 msgstr ""
-"*PUK* are un contor de 3 încercări. În cazul în care aceste încercări sunt "
-"epuizate, cardul PIV nu mai poate fi utilizat și trebuie resetat la valorile "
-"implicite din fabrică. Vă rugăm să consultați capitolul `Factory Reset "
-"<factory_reset.html>`__ pentru a afla mai multe informații."
+"*PUK* are un contor de 3 încercări. În cazul în care aceste încercări "
+"sunt epuizate, cardul PIV nu mai poate fi utilizat și trebuie resetat la "
+"valorile implicite din fabrică. Vă rugăm să consultați capitolul `Factory"
+" Reset <factory_reset.html>`__ pentru a afla mai multe informații."
 
 #: ../nitrokey3/windows/piv/access_control.rst:80
 msgid "Management Key (MGM)"
@@ -16468,8 +16542,8 @@ msgid ""
 "admin-auth``."
 msgstr ""
 "Înainte de a putea efectua operațiuni de gestionare, trebuie să vă "
-"autentificați cu cheia de gestionare. Autentificarea se face cu ``nitropy "
-"nk3 piv admin-auth``."
+"autentificați cu cheia de gestionare. Autentificarea se face cu ``nitropy"
+" nk3 piv admin-auth``."
 
 #: ../nitrokey3/windows/piv/access_control.rst:87
 msgid ""
@@ -16489,9 +16563,9 @@ msgid ""
 "read and written. The size of a certificate is limited by the transport "
 "layer and about 6kB."
 msgstr ""
-"Fiecare cheie privată are asociat un certificat. Certificatele pot fi citite "
-"și scrise. Dimensiunea unui certificat este limitată de stratul de transport "
-"și este de aproximativ 6 kB."
+"Fiecare cheie privată are asociat un certificat. Certificatele pot fi "
+"citite și scrise. Dimensiunea unui certificat este limitată de stratul de"
+" transport și este de aproximativ 6 kB."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:9
 msgid "Read Certificate"
@@ -16514,16 +16588,16 @@ msgid ""
 "The PIV application can be reset to factory defaults. It can only be "
 "reset if the PIN and PUK are blocked."
 msgstr ""
-"Aplicația PIV poate fi resetată la valorile implicite din fabrică. Aceasta "
-"poate fi resetată numai dacă PIN-ul și PUK-ul sunt blocate."
+"Aplicația PIV poate fi resetată la valorile implicite din fabrică. "
+"Aceasta poate fi resetată numai dacă PIN-ul și PUK-ul sunt blocate."
 
 #: ../nitrokey3/windows/piv/factory_reset.rst:8
 msgid ""
 "Performing a factory reset of the PIV application will delete all private"
 " keys and certificates."
 msgstr ""
-"Efectuarea unei resetări din fabrică a aplicației PIV va șterge toate cheile "
-"private și certificatele."
+"Efectuarea unei resetări din fabrică a aplicației PIV va șterge toate "
+"cheile private și certificatele."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:2
 msgid "Client Logon with Active Directory"
@@ -16534,8 +16608,8 @@ msgid ""
 "This document explains how to use the PIV application of a Nitrokey 3 for"
 " smartcard logon with Active Directory."
 msgstr ""
-"Acest document explică modul de utilizare a aplicației PIV a unui Nitrokey 3 "
-"pentru conectarea cu cardul inteligent la Active Directory."
+"Acest document explică modul de utilizare a aplicației PIV a unui "
+"Nitrokey 3 pentru conectarea cu cardul inteligent la Active Directory."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:6
 msgid ""
@@ -16555,13 +16629,13 @@ msgid ""
 "refer to `the firmware update documentation <firmware-update.html"
 "#firmware-release-types>`__ for more information."
 msgstr ""
-"Aplicația PIV a Nitrokey 3 este considerată în prezent instabilă și nu este "
-"disponibilă în versiunile stabile de firmware. Pentru a obține această "
-"funcționalitate, este necesară instalarea unui firmware de testare. "
-"Actualizările ulterioare ale firmware-ului pot duce la pierderea datelor și "
-"a cheilor criptografice. Vă rugăm să consultați `documentația de actualizare "
-"a firmware-ului <firmware-update.html#firmware-release-types>`__ pentru mai "
-"multe informații."
+"Aplicația PIV a Nitrokey 3 este considerată în prezent instabilă și nu "
+"este disponibilă în versiunile stabile de firmware. Pentru a obține "
+"această funcționalitate, este necesară instalarea unui firmware de "
+"testare. Actualizările ulterioare ale firmware-ului pot duce la pierderea"
+" datelor și a cheilor criptografice. Vă rugăm să consultați `documentația"
+" de actualizare a firmware-ului <firmware-update.html#firmware-release-"
+"types>`__ pentru mai multe informații."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:17
 msgid ""
@@ -16570,18 +16644,18 @@ msgid ""
 "Services (ADCS). On the client machine only access to the respective user"
 " account used for logon is required."
 msgstr ""
-"Configurarea necesită acces administrativ la mașinile pe care rulează Active "
-"Directory Directory Directory Services (ADDS) și Active Directory "
-"Certificate Services (ADCS). Pe mașina client este necesar doar accesul la "
-"contul de utilizator respectiv utilizat pentru conectare."
+"Configurarea necesită acces administrativ la mașinile pe care rulează "
+"Active Directory Directory Directory Services (ADDS) și Active Directory "
+"Certificate Services (ADCS). Pe mașina client este necesar doar accesul "
+"la contul de utilizator respectiv utilizat pentru conectare."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
 "Windows server (supported versions are Windows Server 2016, 2019, 2022 in"
 " all editions)"
 msgstr ""
-"Server Windows (versiunile acceptate sunt Windows Server 2016, 2019, 2022 în "
-"toate edițiile)"
+"Server Windows (versiunile acceptate sunt Windows Server 2016, 2019, 2022"
+" în toate edițiile)"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:21
 msgid "ADDS role installed and configured."
@@ -16589,8 +16663,7 @@ msgstr "Rolul ADDS instalat și configurat."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid "ADCS role installed and *Enterprise-CA* with root certificate configured."
-msgstr ""
-"Rolul ADCS instalat și *Enterprise-CA* cu certificat rădăcină configurat."
+msgstr "Rolul ADCS instalat și *Enterprise-CA* cu certificat rădăcină configurat."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16599,8 +16672,8 @@ msgid ""
 "issued."
 msgstr ""
 "Fiecare controler de domeniu (DC) trebuie să aibă un certificat *Domain "
-"Controller*, *Domain Controller Authentication*, și *Kerberos Authentication*"
-" emis."
+"Controller*, *Domain Controller Authentication*, și *Kerberos "
+"Authentication* emis."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:24
 msgid ""
@@ -16608,9 +16681,9 @@ msgid ""
 "full and delta certificate revocation lists (CRL) are retrievable from "
 "external networks."
 msgstr ""
-"Dacă aveți clienți care părăsesc rețeaua companiei, asigurați-vă că listele "
-"complete și delta de revocare a certificatelor (CRL) publicate pot fi "
-"recuperate din rețelele externe."
+"Dacă aveți clienți care părăsesc rețeaua companiei, asigurați-vă că "
+"listele complete și delta de revocare a certificatelor (CRL) publicate "
+"pot fi recuperate din rețelele externe."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:25
 msgid ""
@@ -16644,16 +16717,17 @@ msgstr ""
 "Conectarea cu cardul inteligent necesită un model de certificat în "
 "autoritatea de certificare (CA) a domeniului. Acest șablon definește "
 "valorile și constrângerile certificatelor de utilizator. Acesta este "
-"utilizat pentru a semna cererea de certificat (CSR) în timpul aprovizionării "
-"Nitrokey."
+"utilizat pentru a semna cererea de certificat (CSR) în timpul "
+"aprovizionării Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:36
 msgid ""
 "Signing a certificate request for smartcard logon requires to create a "
 "certificate template in the certificate authority."
 msgstr ""
-"Semnarea unei cereri de certificat pentru conectarea cu cardul inteligent "
-"necesită crearea unui șablon de certificat în autoritatea de certificare."
+"Semnarea unei cereri de certificat pentru conectarea cu cardul inteligent"
+" necesită crearea unui șablon de certificat în autoritatea de "
+"certificare."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:39
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:74
@@ -16680,8 +16754,7 @@ msgstr ""
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:43
 msgid "Set the settings below on the template, according to the mentioned tab."
-msgstr ""
-"Setați setările de mai jos pe șablon, în conformitate cu fila menționată."
+msgstr "Setați setările de mai jos pe șablon, în conformitate cu fila menționată."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:50
 msgid "**Compatibility**"
@@ -16696,9 +16769,9 @@ msgid ""
 "Set **Certificate Authority** and **Certificate recipient** to the oldest"
 " clients in the domain which are supposed to use smartcard logon."
 msgstr ""
-"Setați **Autoritatea de certificare** și **Destinatarul certificatului** la "
-"cei mai vechi clienți din domeniu care trebuie să utilizeze conectarea prin "
-"card inteligent."
+"Setați **Autoritatea de certificare** și **Destinatarul certificatului** "
+"la cei mai vechi clienți din domeniu care trebuie să utilizeze conectarea"
+" prin card inteligent."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:50
 msgid ""
@@ -16747,8 +16820,8 @@ msgid ""
 "make additional changes on your client computers."
 msgstr ""
 "Microsoft recomandă utilizarea algoritmului RSA cu o lungime a cheii de "
-"``2048`` Bit. Dacă alegeți să utilizați chei cu curbă eliptică (EC), trebuie "
-"să faceți modificări suplimentare pe calculatoarele client."
+"``2048`` Bit. Dacă alegeți să utilizați chei cu curbă eliptică (EC), "
+"trebuie să faceți modificări suplimentare pe calculatoarele client."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:67
 msgid "**Subject Name**"
@@ -16767,8 +16840,8 @@ msgid ""
 "After the creation of a certificate template, the template must be issued"
 " to be used by the clients."
 msgstr ""
-"După crearea unui șablon de certificat, șablonul trebuie să fie emis pentru "
-"a fi utilizat de către clienți."
+"După crearea unui șablon de certificat, șablonul trebuie să fie emis "
+"pentru a fi utilizat de către clienți."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:75
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:138
@@ -16777,33 +16850,34 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press"
 " Enter."
 msgstr ""
-"Din linia de comandă, PowerShell sau Run, tastați ``certsrv.msc`` și apăsați "
-"Enter."
+"Din linia de comandă, PowerShell sau Run, tastați ``certsrv.msc`` și "
+"apăsați Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:76
 msgid ""
 "In the navigation pane expand the Certificate Authority (CA) and navigate"
 " to **Certificate Templates**."
 msgstr ""
-"În panoul de navigare, extindeți Autoritatea de certificare (CA) și navigați "
-"la **Certificate Templates**."
+"În panoul de navigare, extindeți Autoritatea de certificare (CA) și "
+"navigați la **Certificate Templates**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:77
 msgid "In the menu bar click **Action → New → Certificate Template to Issue**."
 msgstr ""
-"În bara de meniu, faceți clic pe **Action → New → Certificate Template to "
-"Issue**."
+"În bara de meniu, faceți clic pe **Action → New → Certificate Template to"
+" Issue**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:78
 msgid "Select the certificate template you want to issue and confirm with **OK**."
 msgstr ""
-"Selectați șablonul de certificat pe care doriți să îl emiteți și confirmați "
-"cu **OK**."
+"Selectați șablonul de certificat pe care doriți să îl emiteți și "
+"confirmați cu **OK**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:82
 msgid "Provision Nitrokey 3 for smartcard logon with Active Directory"
 msgstr ""
-"Aprovizionarea Nitrokey 3 pentru conectarea cu smartcard cu Active Directory"
+"Aprovizionarea Nitrokey 3 pentru conectarea cu smartcard cu Active "
+"Directory"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:84
 msgid ""
@@ -16812,10 +16886,10 @@ msgid ""
 " Singing Request (CSR) generation. The certificate is then written to the"
 " Nitrokey."
 msgstr ""
-"Conectarea cu cardul inteligent necesită furnizarea unei Nitrokey pentru un "
-"utilizator în Active Directory. Provizionarea conține cheia privată și "
-"generarea unei cereri de certificare (Certificate Singing Request (CSR)). "
-"Certificatul este apoi scris pe Nitrokey."
+"Conectarea cu cardul inteligent necesită furnizarea unei Nitrokey pentru "
+"un utilizator în Active Directory. Provizionarea conține cheia privată și"
+" generarea unei cereri de certificare (Certificate Singing Request "
+"(CSR)). Certificatul este apoi scris pe Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:89
 msgid ""
@@ -16825,22 +16899,24 @@ msgid ""
 " a failed logon."
 msgstr ""
 "Înainte de a urma pașii de mai jos, asigurați-vă că există contul de "
-"utilizator Active Directory pe care doriți să îl utilizați pentru conectarea "
-"cu cardul inteligent. O oră de creare a certificatului anterioară orei de "
-"creare a contului de utilizator va duce la o logare eșuată."
+"utilizator Active Directory pe care doriți să îl utilizați pentru "
+"conectarea cu cardul inteligent. O oră de creare a certificatului "
+"anterioară orei de creare a contului de utilizator va duce la o logare "
+"eșuată."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:93
 msgid ""
 "If the PIV application on the Nitrokey was not used before, perform a "
 "initialization with ``nitropy nk3 piv init`` first."
 msgstr ""
-"Dacă aplicația PIV de pe Nitrokey nu a mai fost utilizată înainte, efectuați "
-"mai întâi o inițializare cu ``nitropy nk3 piv init``."
+"Dacă aplicația PIV de pe Nitrokey nu a mai fost utilizată înainte, "
+"efectuați mai întâi o inițializare cu ``nitropy nk3 piv init``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:95
 msgid "Generate a private key and write the CSR to file with the command below."
 msgstr ""
-"Generați o cheie privată și scrieți CSR-ul în fișier cu comanda de mai jos."
+"Generați o cheie privată și scrieți CSR-ul în fișier cu comanda de mai "
+"jos."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:101
 msgid ""
@@ -16850,17 +16926,18 @@ msgid ""
 "``userPrincipalName`` attribute of the Active Directory user account."
 msgstr ""
 "Valoarea lui ``<algorithm>`` este algoritmul utilizat cu lungimea cheii "
-"sale, de exemplu ``rsa2048``. Valorile din ``<subject-name>`` și ``<subject-"
-"alternative-name>`` corespund de obicei atributelor ``commonName`` și "
-"``userPrincipalName`` din contul de utilizator Active Directory."
+"sale, de exemplu ``rsa2048``. Valorile din ``<subject-name>`` și "
+"``<subject-alternative-name>`` corespund de obicei atributelor "
+"``commonName`` și ``userPrincipalName`` din contul de utilizator Active "
+"Directory."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:104
 msgid ""
 "Sign the CSR with the certificate authority (CA) of the domain with the "
 "command below."
 msgstr ""
-"Semnați CSR-ul cu autoritatea de certificare (CA) a domeniului cu ajutorul "
-"comenzii de mai jos."
+"Semnați CSR-ul cu autoritatea de certificare (CA) a domeniului cu "
+"ajutorul comenzii de mai jos."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:110
 msgid ""
@@ -16868,9 +16945,9 @@ msgid ""
 "for smartcard logon. The value of ``<file>`` is the certificate singing "
 "request file."
 msgstr ""
-"Valoarea din ``<template-name>`` este numele șablonului de certificat pentru "
-"conectarea cu cardul inteligent. Valoarea din ``<file>`` este fișierul de "
-"solicitare a certificatului de cântărire."
+"Valoarea din ``<template-name>`` este numele șablonului de certificat "
+"pentru conectarea cu cardul inteligent. Valoarea din ``<file>`` este "
+"fișierul de solicitare a certificatului de cântărire."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:113
 msgid "Write the signed certificate to the Nitrokey with the command below."
@@ -16896,8 +16973,8 @@ msgstr ""
 "Certificatele de conectare a utilizatorilor emise sunt listate în Active "
 "Directory Certificate Services (ADCS). Din ADCS, certificatele pot fi "
 "revocate, ceea ce le adaugă la lista de revocare a certificatelor (CRL) "
-"configurată. Acest lucru este necesar în cazul în care Nitrokey este pierdut "
-"sau stricat."
+"configurată. Acest lucru este necesar în cazul în care Nitrokey este "
+"pierdut sau stricat."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:130
 msgid ""
@@ -16913,8 +16990,9 @@ msgid ""
 "*Certificate Hold*. This revocation can be reverted and is hence not "
 "permanent."
 msgstr ""
-"Este posibilă revocarea temporară a unui certificat cu motivul *Certificate "
-"Hold*. Această revocare poate fi anulată și, prin urmare, nu este permanentă."
+"Este posibilă revocarea temporară a unui certificat cu motivul "
+"*Certificate Hold*. Această revocare poate fi anulată și, prin urmare, nu"
+" este permanentă."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:137
 msgid "MMC (certsrv.msc)"
@@ -16925,19 +17003,20 @@ msgid ""
 "In the navigation pane expand the certificate authority (CA) and navigate"
 " to **Issued Certificates**."
 msgstr ""
-"În panoul de navigare, extindeți autoritatea de certificare (CA) și navigați "
-"la **Issued Certificates**."
+"În panoul de navigare, extindeți autoritatea de certificare (CA) și "
+"navigați la **Issued Certificates**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:140
 msgid "In the detail pane select the user certificate you want to revoke."
 msgstr ""
-"În panoul detaliat, selectați certificatul de utilizator pe care doriți să "
-"îl revocați."
+"În panoul detaliat, selectați certificatul de utilizator pe care doriți "
+"să îl revocați."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:141
 msgid "In the menu bar click **Action → All Tasks → Revoke Certificate**."
 msgstr ""
-"În bara de meniu, faceți clic pe **Action → All Tasks → Revoke Certificate**."
+"În bara de meniu, faceți clic pe **Action → All Tasks → Revoke "
+"Certificate**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:142
 msgid ""
@@ -16956,8 +17035,8 @@ msgstr "În bara de meniu, faceți clic pe **Action → All Tasks → Publish**.
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:145
 msgid "Select the revocation list you want to publish and confirm with **OK**."
 msgstr ""
-"Selectați lista de revocare pe care doriți să o publicați și confirmați cu "
-"**OK**."
+"Selectați lista de revocare pe care doriți să o publicați și confirmați "
+"cu **OK**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:148
 msgid ""
@@ -16969,19 +17048,19 @@ msgid ""
 " immediate and depends on the expiration of the CRL the client has."
 msgstr ""
 "În timpul fiecărei încercări de conectare cu cardul inteligent, Windows "
-"verifică dacă certificatul prezentat de cardul inteligent este listat pe o "
-"listă de revocare a certificatelor (CRL). În cazul în care certificatul se "
-"găsește pe o CRL, conectarea este refuzată. Fiecare CRL conține un termen de "
-"valabilitate care le face să expire. Windows păstrează în memoria cache CRL-"
-"ul preluat și le actualizează dacă CRL-ul este pe cale să expire. Prin "
-"urmare, o revocare nu este imediată și depinde de expirarea CRL-ului pe care "
-"îl are clientul."
+"verifică dacă certificatul prezentat de cardul inteligent este listat pe "
+"o listă de revocare a certificatelor (CRL). În cazul în care certificatul"
+" se găsește pe o CRL, conectarea este refuzată. Fiecare CRL conține un "
+"termen de valabilitate care le face să expire. Windows păstrează în "
+"memoria cache CRL-ul preluat și le actualizează dacă CRL-ul este pe cale "
+"să expire. Prin urmare, o revocare nu este imediată și depinde de "
+"expirarea CRL-ului pe care îl are clientul."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:156
 msgid "Import a user smartcard certificate to the personal certificate store"
 msgstr ""
-"Importați un certificat de card inteligent al utilizatorului în stocul de "
-"certificate personal"
+"Importați un certificat de card inteligent al utilizatorului în stocul de"
+" certificate personal"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:158
 msgid ""
@@ -16989,9 +17068,9 @@ msgid ""
 "the user's personal certificate store. In certain situations this is a "
 "required procedure."
 msgstr ""
-"Certificatul utilizatorului care este stocat pe Nitrokey poate fi importat "
-"în stocul personal de certificate al utilizatorului. În anumite situații, "
-"aceasta este o procedură necesară."
+"Certificatul utilizatorului care este stocat pe Nitrokey poate fi "
+"importat în stocul personal de certificate al utilizatorului. În anumite "
+"situații, aceasta este o procedură necesară."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:162
 msgid "MMC (certmgr.msc)"
@@ -17011,8 +17090,8 @@ msgid ""
 "In the navigation pane expand the **Personal** key store and navigate to "
 "**Certificates**."
 msgstr ""
-"În panoul de navigare, extindeți magazinul de chei **Personal** și navigați "
-"la **Certificate**."
+"În panoul de navigare, extindeți magazinul de chei **Personal** și "
+"navigați la **Certificate**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:166
 msgid "In the menu bar click **Action → All Tasks → Import**."
@@ -17037,8 +17116,8 @@ msgstr ""
 "După finalizarea importului, verificați panoul de detalii pentru "
 "certificatul importat. Dacă Nitrokey este conectat, proprietățile "
 "certificatului ar trebui să afișeze mesajul *You have a private key that "
-"corresponds to this certificate.* care indică faptul că cheia privată de pe "
-"Nitrokey a putut fi identificată."
+"corresponds to this certificate.* care indică faptul că cheia privată de "
+"pe Nitrokey a putut fi identificată."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:171
 msgid "PowerShell"
@@ -17078,9 +17157,9 @@ msgid ""
 "publication `SP 800-73 "
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 msgstr ""
-"*Personal Identity Verfication* (PIV) se bazează pe publicația specială a "
-"NIST `SP 800-73 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST."
-"SP.800-73-4.pdf>`__."
+"*Personal Identity Verfication* (PIV) se bazează pe publicația specială a"
+" NIST `SP 800-73 "
+"<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 
 #: ../nitrokey3/windows/piv/key_management.rst:5
 msgid "Key Slots"
@@ -17092,9 +17171,9 @@ msgid ""
 "each purpose the private key and its corresponding certificate are stored"
 " in a key slot."
 msgstr ""
-"Aplicația PIV poate deține certificate în diferite scopuri. Pentru fiecare "
-"scop, cheia privată și certificatul corespunzător sunt stocate într-un slot "
-"de chei."
+"Aplicația PIV poate deține certificate în diferite scopuri. Pentru "
+"fiecare scop, cheia privată și certificatul corespunzător sunt stocate "
+"într-un slot de chei."
 
 #: ../nitrokey3/windows/piv/key_management.rst:11
 msgid "Slot"
@@ -17118,9 +17197,9 @@ msgid ""
 "management applications and are still there to provide backward "
 "compatibility."
 msgstr ""
-"Cheile private și certificatele din aceste sloturi au fost utilizate pentru "
-"aplicații de gestionare a cheilor și sunt încă acolo pentru a asigura "
-"compatibilitatea cu trecutul."
+"Cheile private și certificatele din aceste sloturi au fost utilizate "
+"pentru aplicații de gestionare a cheilor și sunt încă acolo pentru a "
+"asigura compatibilitatea cu trecutul."
 
 #: ../nitrokey3/windows/piv/key_management.rst:17
 msgid "9a"
@@ -17151,8 +17230,8 @@ msgid ""
 "The private key and certificate in this slot are used to sign emails and "
 "files."
 msgstr ""
-"Cheia privată și certificatul din acest slot sunt utilizate pentru a semna e-"
-"mailuri și fișiere."
+"Cheia privată și certificatul din acest slot sunt utilizate pentru a "
+"semna e-mailuri și fișiere."
 
 #: ../nitrokey3/windows/piv/key_management.rst:23
 msgid "9d"
@@ -17163,8 +17242,8 @@ msgid ""
 "The private key and certificate in this slot are used to encrypt emails "
 "and files."
 msgstr ""
-"Cheia privată și certificatul din acest slot sunt folosite pentru a cripta e-"
-"mailuri și fișiere."
+"Cheia privată și certificatul din acest slot sunt folosite pentru a "
+"cripta e-mailuri și fișiere."
 
 #: ../nitrokey3/windows/piv/key_management.rst:26
 msgid "9e"
@@ -17181,8 +17260,9 @@ msgid ""
 "respective system is a prerequisite."
 msgstr ""
 "Cheia privată și certificatul din acest slot sunt utilizate pentru "
-"operațiuni fizice, cum ar fi accesul la clădire sau înregistrarea timpului. "
-"Suportul din partea sistemului respectiv este o condiție prealabilă."
+"operațiuni fizice, cum ar fi accesul la clădire sau înregistrarea "
+"timpului. Suportul din partea sistemului respectiv este o condiție "
+"prealabilă."
 
 #: ../nitrokey3/windows/piv/key_management.rst:33
 msgid "Algorithms"
@@ -34507,3 +34587,4 @@ msgstr ""
 #~ "deconectați-vă. Conectați-vă cu Nitrokey "
 #~ "folosind \"Sign-in options\" (opțiuni de"
 #~ " conectare)"
+

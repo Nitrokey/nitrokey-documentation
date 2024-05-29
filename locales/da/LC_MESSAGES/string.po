@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
+"POT-Creation-Date: 2024-05-29 12:33+0200\n"
 "PO-Revision-Date: 2024-05-24 12:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Danish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/da/>\n"
 "Language: da\n"
+"Language-Team: Danish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/da/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -891,7 +890,9 @@ msgstr ""
 "hvis dine data af en eller anden grund ikke bevares."
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "Sådan opdaterer du"
 
@@ -967,6 +968,7 @@ msgstr ""
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -13434,6 +13436,77 @@ msgstr ""
 "--reload-rules && udevadm trigger`` eller genstart din maskine. Herefter "
 "burde opdateringen fungere uden problemet med tilladelser."
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+#, fuzzy
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr "Denne vejledning beskriver, hvordan du opdaterer firmwaren på Nitrokey 3."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+#, fuzzy
+msgid "Setup"
+msgstr "Nulstil"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+#, fuzzy
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr ""
+"Afbryd aldrig Nitrokey 3 eller afbryd processen under opdatering, da "
+"dette sandsynligvis vil gøre din enhed ubrugelig!"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+#, fuzzy
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr ""
+"Når du har fået besked af ``nitropy``, skal du røre ved enheden for at "
+"aktivere bootloader."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr ""
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr ""
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"
 msgstr "Nitrokey 3 med Linux"
@@ -16023,8 +16096,8 @@ msgid ""
 "The following access matrix shows what authentication a certain operation"
 " requires."
 msgstr ""
-"Følgende adgangsmatrix viser, hvilken autentificering en bestemt operation "
-"kræver."
+"Følgende adgangsmatrix viser, hvilken autentificering en bestemt "
+"operation kræver."
 
 #: ../nitrokey3/windows/piv/access_control.rst:7
 msgid "MGM"
@@ -16085,8 +16158,9 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"*PIN* er underlagt begrænsningen af en gentagelsestæller. Se kapitlet `Retry "
-"Counter <access_control.html#retry-counter>`__ for at få mere at vide."
+"*PIN* er underlagt begrænsningen af en gentagelsestæller. Se kapitlet "
+"`Retry Counter <access_control.html#retry-counter>`__ for at få mere at "
+"vide."
 
 #: ../nitrokey3/windows/piv/access_control.rst:40
 msgid "On the terminal enter ``nitropy nk3 piv change-pin``."
@@ -16102,8 +16176,9 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"*PUK* er underlagt begrænsningen af en gentagelsestæller. Se kapitlet `Retry "
-"Counter <access_control.html#retry-counter>`__ for at få mere at vide."
+"*PUK* er underlagt begrænsningen af en gentagelsestæller. Se kapitlet "
+"`Retry Counter <access_control.html#retry-counter>`__ for at få mere at "
+"vide."
 
 #: ../nitrokey3/windows/piv/access_control.rst:58
 msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
@@ -16120,8 +16195,8 @@ msgid ""
 " are no attempts left."
 msgstr ""
 "Genforsøgstælleren bruges til *PIN* og *PUK*. Tælleren falder for hvert "
-"mislykket login-forsøg. En genforsøgstæller på nul betyder, at der ikke er "
-"flere forsøg tilbage."
+"mislykket login-forsøg. En genforsøgstæller på nul betyder, at der ikke "
+"er flere forsøg tilbage."
 
 #: ../nitrokey3/windows/piv/access_control.rst:68
 msgid ""
@@ -16136,8 +16211,8 @@ msgid ""
 "To unblock the *PIN*, use the command ``nitropy nk3 piv reset-retry-"
 "counter``. This command requires the *PUK*."
 msgstr ""
-"For at fjerne blokeringen af *PIN* skal du bruge kommandoen ``nitropy nk3 "
-"piv reset-retry-counter``. Denne kommando kræver *PUK*."
+"For at fjerne blokeringen af *PIN* skal du bruge kommandoen ``nitropy nk3"
+" piv reset-retry-counter``. Denne kommando kræver *PUK*."
 
 #: ../nitrokey3/windows/piv/access_control.rst:74
 msgid ""
@@ -16146,10 +16221,10 @@ msgid ""
 "defaults. Please refer to the chapter `Factory Reset "
 "<factory_reset.html>`__ to learn more."
 msgstr ""
-"*PUK* har en genforsøgstæller på 3 forsøg. Hvis disse forsøg er opbrugt, kan "
-"PIV-kortet ikke længere bruges og skal nulstilles til "
-"fabriksindstillingerne. Se kapitlet `Fabriksnulstilling <factory_reset.html>`"
-"__ for at få mere at vide."
+"*PUK* har en genforsøgstæller på 3 forsøg. Hvis disse forsøg er opbrugt, "
+"kan PIV-kortet ikke længere bruges og skal nulstilles til "
+"fabriksindstillingerne. Se kapitlet `Fabriksnulstilling "
+"<factory_reset.html>`__ for at få mere at vide."
 
 #: ../nitrokey3/windows/piv/access_control.rst:80
 msgid "Management Key (MGM)"
@@ -16165,15 +16240,15 @@ msgid ""
 "the management key. The authentication is done with ``nitropy nk3 piv "
 "admin-auth``."
 msgstr ""
-"Før du kan udføre administrationsoperationer, skal du autentificere dig med "
-"administrationsnøglen. Godkendelsen sker med ``nitropy nk3 piv admin-auth``."
+"Før du kan udføre administrationsoperationer, skal du autentificere dig "
+"med administrationsnøglen. Godkendelsen sker med ``nitropy nk3 piv admin-"
+"auth``."
 
 #: ../nitrokey3/windows/piv/access_control.rst:87
 msgid ""
 "The management key can be changed with ``nitropy nk3 piv change-admin-"
 "key``."
-msgstr ""
-"Administrationsnøglen kan ændres med ``nitropy nk3 piv change-admin-key``."
+msgstr "Administrationsnøglen kan ændres med ``nitropy nk3 piv change-admin-key``."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:2
 msgid "Certificate Management"
@@ -16185,9 +16260,9 @@ msgid ""
 "read and written. The size of a certificate is limited by the transport "
 "layer and about 6kB."
 msgstr ""
-"Hver privat nøgle har et certifikat tilknyttet. Certifikaterne kan læses og "
-"skrives. Størrelsen på et certifikat er begrænset af transportlaget og er "
-"ca. 6 kB."
+"Hver privat nøgle har et certifikat tilknyttet. Certifikaterne kan læses "
+"og skrives. Størrelsen på et certifikat er begrænset af transportlaget og"
+" er ca. 6 kB."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:9
 msgid "Read Certificate"
@@ -16218,8 +16293,8 @@ msgid ""
 "Performing a factory reset of the PIV application will delete all private"
 " keys and certificates."
 msgstr ""
-"En fabriksnulstilling af PIV-applikationen vil slette alle private nøgler og "
-"certifikater."
+"En fabriksnulstilling af PIV-applikationen vil slette alle private nøgler"
+" og certifikater."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:2
 msgid "Client Logon with Active Directory"
@@ -16251,12 +16326,13 @@ msgid ""
 "refer to `the firmware update documentation <firmware-update.html"
 "#firmware-release-types>`__ for more information."
 msgstr ""
-"PIV-applikationen i Nitrokey 3 betragtes i øjeblikket som ustabil og er ikke "
-"tilgængelig i de stabile firmwareudgivelser. For at få denne funktionalitet "
-"er det nødvendigt at installere en test-firmware. Efterfølgende "
-"firmwareopdateringer kan føre til tab af data og kryptografiske nøgler. Se `"
-"dokumentationen til firmwareopdatering <firmware-update.html#firmware-"
-"release-types>`__ for at få flere oplysninger."
+"PIV-applikationen i Nitrokey 3 betragtes i øjeblikket som ustabil og er "
+"ikke tilgængelig i de stabile firmwareudgivelser. For at få denne "
+"funktionalitet er det nødvendigt at installere en test-firmware. "
+"Efterfølgende firmwareopdateringer kan føre til tab af data og "
+"kryptografiske nøgler. Se `dokumentationen til firmwareopdatering "
+"<firmware-update.html#firmware-release-types>`__ for at få flere "
+"oplysninger."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:17
 msgid ""
@@ -16265,18 +16341,18 @@ msgid ""
 "Services (ADCS). On the client machine only access to the respective user"
 " account used for logon is required."
 msgstr ""
-"Opsætningen kræver administrativ adgang til de maskiner, der kører Active "
-"Directory Directory Services (ADDS) og Active Directory Certificate Services "
-"(ADCS). På klientmaskinen kræves der kun adgang til den respektive "
-"brugerkonto, der bruges til logon."
+"Opsætningen kræver administrativ adgang til de maskiner, der kører Active"
+" Directory Directory Services (ADDS) og Active Directory Certificate "
+"Services (ADCS). På klientmaskinen kræves der kun adgang til den "
+"respektive brugerkonto, der bruges til logon."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
 "Windows server (supported versions are Windows Server 2016, 2019, 2022 in"
 " all editions)"
 msgstr ""
-"Windows-server (understøttede versioner er Windows Server 2016, 2019, 2022 i "
-"alle udgaver)"
+"Windows-server (understøttede versioner er Windows Server 2016, 2019, "
+"2022 i alle udgaver)"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:21
 msgid "ADDS role installed and configured."
@@ -16284,8 +16360,7 @@ msgstr "ADDS-rollen er installeret og konfigureret."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid "ADCS role installed and *Enterprise-CA* with root certificate configured."
-msgstr ""
-"ADCS-rolle installeret og *Enterprise-CA* med rodcertifikat konfigureret."
+msgstr "ADCS-rolle installeret og *Enterprise-CA* med rodcertifikat konfigureret."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16293,8 +16368,9 @@ msgid ""
 "Controller Authentication*, and *Kerberos Authentication* certificate "
 "issued."
 msgstr ""
-"Hver domænecontroller (DC) skal have udstedt et *Domain Controller*, *Domain "
-"Controller Authentication* og *Kerberos Authentication* certifikat."
+"Hver domænecontroller (DC) skal have udstedt et *Domain Controller*, "
+"*Domain Controller Authentication* og *Kerberos Authentication* "
+"certifikat."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:24
 msgid ""
@@ -16302,9 +16378,9 @@ msgid ""
 "full and delta certificate revocation lists (CRL) are retrievable from "
 "external networks."
 msgstr ""
-"Hvis du har klienter, der forlader virksomhedens netværk, skal du sørge for, "
-"at de offentliggjorte fulde og delta-certifikattilbagekaldelseslister (CRL) "
-"kan hentes fra eksterne netværk."
+"Hvis du har klienter, der forlader virksomhedens netværk, skal du sørge "
+"for, at de offentliggjorte fulde og delta-"
+"certifikattilbagekaldelseslister (CRL) kan hentes fra eksterne netværk."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:25
 msgid ""
@@ -16333,10 +16409,10 @@ msgid ""
 "constraints of the user certificates. It is used to sign the Certificate "
 "Request (CSR) during provisioning of the Nitrokey."
 msgstr ""
-"Smartcard-logon kræver en certifikatskabelon i domænets certifikatautoritet "
-"(CA). Denne skabelon definerer værdierne og begrænsningerne for "
-"brugercertifikaterne. Den bruges til at underskrive certifikatanmodningen "
-"(CSR) under klargøring af Nitrokey."
+"Smartcard-logon kræver en certifikatskabelon i domænets "
+"certifikatautoritet (CA). Denne skabelon definerer værdierne og "
+"begrænsningerne for brugercertifikaterne. Den bruges til at underskrive "
+"certifikatanmodningen (CSR) under klargøring af Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:36
 msgid ""
@@ -16356,8 +16432,8 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certtmpl.msc`` and "
 "press Enter."
 msgstr ""
-"Skriv ``certtmpl.msc`` fra kommandolinjen, PowerShell eller Run, og tryk på "
-"Enter."
+"Skriv ``certtmpl.msc`` fra kommandolinjen, PowerShell eller Run, og tryk "
+"på Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:41
 msgid "In the detail pane select the template **Smartcard Logon**."
@@ -16370,7 +16446,8 @@ msgstr "Klik på **Actions → All Tasks → Duplicate Template** i menulinjen."
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:43
 msgid "Set the settings below on the template, according to the mentioned tab."
 msgstr ""
-"Angiv nedenstående indstillinger på skabelonen i henhold til den nævnte fane."
+"Angiv nedenstående indstillinger på skabelonen i henhold til den nævnte "
+"fane."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:50
 msgid "**Compatibility**"
@@ -16434,9 +16511,9 @@ msgid ""
 "``2048`` Bit. If you choose to use Eliptic Curve (EC) keys you need to "
 "make additional changes on your client computers."
 msgstr ""
-"Microsoft anbefaler at bruge RSA-algoritmen med en nøglelængde på ``2048`` "
-"Bit. Hvis du vælger at bruge EC-nøgler (Eliptic Curve), skal du foretage "
-"yderligere ændringer på dine klientcomputere."
+"Microsoft anbefaler at bruge RSA-algoritmen med en nøglelængde på "
+"``2048`` Bit. Hvis du vælger at bruge EC-nøgler (Eliptic Curve), skal du "
+"foretage yderligere ændringer på dine klientcomputere."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:67
 msgid "**Subject Name**"
@@ -16455,8 +16532,8 @@ msgid ""
 "After the creation of a certificate template, the template must be issued"
 " to be used by the clients."
 msgstr ""
-"Efter oprettelsen af en certifikatskabelon skal skabelonen udstedes, så den "
-"kan bruges af klienterne."
+"Efter oprettelsen af en certifikatskabelon skal skabelonen udstedes, så "
+"den kan bruges af klienterne."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:75
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:138
@@ -16465,21 +16542,22 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press"
 " Enter."
 msgstr ""
-"Skriv ``certsrv.msc`` fra kommandolinjen, PowerShell eller Run, og tryk på "
-"Enter."
+"Skriv ``certsrv.msc`` fra kommandolinjen, PowerShell eller Run, og tryk "
+"på Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:76
 msgid ""
 "In the navigation pane expand the Certificate Authority (CA) and navigate"
 " to **Certificate Templates**."
 msgstr ""
-"I navigationsruden udvides certifikatudstederen (CA), og der navigeres til **"
-"Certificate Templates**."
+"I navigationsruden udvides certifikatudstederen (CA), og der navigeres "
+"til **Certificate Templates**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:77
 msgid "In the menu bar click **Action → New → Certificate Template to Issue**."
 msgstr ""
-"Klik på **Handling → Ny → Certifikatskabelon til udstedelse** i menulinjen."
+"Klik på **Handling → Ny → Certifikatskabelon til udstedelse** i "
+"menulinjen."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:78
 msgid "Select the certificate template you want to issue and confirm with **OK**."
@@ -16496,9 +16574,9 @@ msgid ""
 " Singing Request (CSR) generation. The certificate is then written to the"
 " Nitrokey."
 msgstr ""
-"Smartcard-logon kræver, at der oprettes en Nitrokey for en bruger i Active "
-"Directory. Provisionen indeholder den private nøgle og generering af "
-"Certificate Singing Request (CSR). Certifikatet skrives derefter til "
+"Smartcard-logon kræver, at der oprettes en Nitrokey for en bruger i "
+"Active Directory. Provisionen indeholder den private nøgle og generering "
+"af Certificate Singing Request (CSR). Certifikatet skrives derefter til "
 "Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:89
@@ -16508,8 +16586,8 @@ msgid ""
 "the certificate before the creation time of the user account will lead to"
 " a failed logon."
 msgstr ""
-"Før du følger nedenstående trin, skal du sikre dig, at den Active Directory-"
-"brugerkonto, du vil bruge til smartcard-logon, findes. Et "
+"Før du følger nedenstående trin, skal du sikre dig, at den Active "
+"Directory-brugerkonto, du vil bruge til smartcard-logon, findes. Et "
 "oprettelsestidspunkt for certifikatet før oprettelsestidspunktet for "
 "brugerkontoen vil føre til et mislykket logon."
 
@@ -16518,8 +16596,8 @@ msgid ""
 "If the PIV application on the Nitrokey was not used before, perform a "
 "initialization with ``nitropy nk3 piv init`` first."
 msgstr ""
-"Hvis PIV-applikationen på Nitrokey ikke har været brugt før, skal du først "
-"udføre en initialisering med ``nitropy nk3 piv init``."
+"Hvis PIV-applikationen på Nitrokey ikke har været brugt før, skal du "
+"først udføre en initialisering med ``nitropy nk3 piv init``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:95
 msgid "Generate a private key and write the CSR to file with the command below."
@@ -16534,17 +16612,18 @@ msgid ""
 "alternative-name>`` corresponds typically to the ``commonName`` and "
 "``userPrincipalName`` attribute of the Active Directory user account."
 msgstr ""
-"Værdien af ``<algorithm>`` er den anvendte algoritme med dens nøglelængde, "
-"f.eks. ``rsa2048``. Værdierne af ``<subject-name>`` og ``<subject-"
-"alternative-name>`` svarer typisk til attributten ``commonName`` og "
-"``userPrincipalName`` i Active Directory-brugerkontoen."
+"Værdien af ``<algorithm>`` er den anvendte algoritme med dens "
+"nøglelængde, f.eks. ``rsa2048``. Værdierne af ``<subject-name>`` og "
+"``<subject-alternative-name>`` svarer typisk til attributten "
+"``commonName`` og ``userPrincipalName`` i Active Directory-brugerkontoen."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:104
 msgid ""
 "Sign the CSR with the certificate authority (CA) of the domain with the "
 "command below."
 msgstr ""
-"Signer CSR'en med domænets certifikatudsteder (CA) med nedenstående kommando."
+"Signer CSR'en med domænets certifikatudsteder (CA) med nedenstående "
+"kommando."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:110
 msgid ""
@@ -16595,9 +16674,9 @@ msgid ""
 "*Certificate Hold*. This revocation can be reverted and is hence not "
 "permanent."
 msgstr ""
-"Det er muligt at tilbagekalde et certifikat midlertidigt med begrundelsen *"
-"Certificate Hold*. Denne tilbagekaldelse kan annulleres og er derfor ikke "
-"permanent."
+"Det er muligt at tilbagekalde et certifikat midlertidigt med begrundelsen"
+" *Certificate Hold*. Denne tilbagekaldelse kan annulleres og er derfor "
+"ikke permanent."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:137
 msgid "MMC (certsrv.msc)"
@@ -16648,18 +16727,17 @@ msgid ""
 "and updates them if the CRL is about to expire. Hence a revocation is not"
 " immediate and depends on the expiration of the CRL the client has."
 msgstr ""
-"Under hvert smartcard-logonforsøg kontrollerer Windows, om certifikatet, der "
-"præsenteres af smartcardet, er opført på en liste over tilbagekaldte "
-"certifikater (CRL). Hvis certifikatet findes på en CRL, afvises logon. Hver "
-"CRL indeholder en gyldighedsperiode, der får dem til at udløbe. Windows "
-"cacher de hentede CRL'er og opdaterer dem, hvis CRL'en er ved at udløbe. "
-"Derfor er en tilbagekaldelse ikke øjeblikkelig og afhænger af udløbet af den "
-"CRL, klienten har."
+"Under hvert smartcard-logonforsøg kontrollerer Windows, om certifikatet, "
+"der præsenteres af smartcardet, er opført på en liste over tilbagekaldte "
+"certifikater (CRL). Hvis certifikatet findes på en CRL, afvises logon. "
+"Hver CRL indeholder en gyldighedsperiode, der får dem til at udløbe. "
+"Windows cacher de hentede CRL'er og opdaterer dem, hvis CRL'en er ved at "
+"udløbe. Derfor er en tilbagekaldelse ikke øjeblikkelig og afhænger af "
+"udløbet af den CRL, klienten har."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:156
 msgid "Import a user smartcard certificate to the personal certificate store"
-msgstr ""
-"Importer et bruger-smartcard-certifikat til det personlige certifikatlager"
+msgstr "Importer et bruger-smartcard-certifikat til det personlige certifikatlager"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:158
 msgid ""
@@ -16667,9 +16745,9 @@ msgid ""
 "the user's personal certificate store. In certain situations this is a "
 "required procedure."
 msgstr ""
-"Det brugercertifikat, der er gemt på Nitrokey, kan importeres til brugerens "
-"personlige certifikatlager. I visse situationer er dette en nødvendig "
-"procedure."
+"Det brugercertifikat, der er gemt på Nitrokey, kan importeres til "
+"brugerens personlige certifikatlager. I visse situationer er dette en "
+"nødvendig procedure."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:162
 msgid "MMC (certmgr.msc)"
@@ -16681,8 +16759,8 @@ msgid ""
 "Make sure you are logged on to the user account the certificate "
 "corresponds to."
 msgstr ""
-"Sørg for, at du er logget ind på den brugerkonto, som certifikatet svarer "
-"til."
+"Sørg for, at du er logget ind på den brugerkonto, som certifikatet svarer"
+" til."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:165
 msgid ""
@@ -16701,7 +16779,8 @@ msgid ""
 "Follow the import wizard and provide the user certificate file when "
 "requested."
 msgstr ""
-"Følg importguiden, og angiv brugercertifikatfilen, når du bliver bedt om det."
+"Følg importguiden, og angiv brugercertifikatfilen, når du bliver bedt om "
+"det."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:168
 msgid ""
@@ -16711,10 +16790,11 @@ msgid ""
 "corresponds to this certificate.* indicating that the private on the "
 "Nitrokey could be identified."
 msgstr ""
-"Når importen er afsluttet, skal du tjekke detaljeruden for det importerede "
-"certifikat. Hvis Nitrokey er tilsluttet, bør certifikatets egenskaber vise "
-"meddelelsen *Du har en privat nøgle, der svarer til dette certifikat.*, "
-"hvilket indikerer, at den private nøgle på Nitrokey kunne identificeres."
+"Når importen er afsluttet, skal du tjekke detaljeruden for det "
+"importerede certifikat. Hvis Nitrokey er tilsluttet, bør certifikatets "
+"egenskaber vise meddelelsen *Du har en privat nøgle, der svarer til dette"
+" certifikat.*, hvilket indikerer, at den private nøgle på Nitrokey kunne "
+"identificeres."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:171
 msgid "PowerShell"
@@ -16729,8 +16809,8 @@ msgid ""
 "Change to the personal certficate store of the user with ``Set-Location "
 "-Path cert:\\CurrentUser\\My``."
 msgstr ""
-"Skift til brugerens personlige certifikatlager med ``Set-Location -Path cert:"
-"\\CurrentUser\\My``."
+"Skift til brugerens personlige certifikatlager med ``Set-Location -Path "
+"cert:\\CurrentUser\\My``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:175
 msgid ""
@@ -16755,8 +16835,8 @@ msgid ""
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 msgstr ""
 "*Personal Identity Verfication* (PIV) er baseret på NIST's særlige "
-"publikation `SP 800-73 <https://nvlpubs.nist.gov/nistpubs/"
-"SpecialPublications/NIST.SP.800-73-4.pdf>`__."
+"publikation `SP 800-73 "
+"<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 
 #: ../nitrokey3/windows/piv/key_management.rst:5
 msgid "Key Slots"
@@ -16811,8 +16891,8 @@ msgid ""
 "The private key and certificate in this slot are used to authenticate the"
 " cardholder."
 msgstr ""
-"Den private nøgle og certifikatet i dette slot bruges til at autentificere "
-"kortholderen."
+"Den private nøgle og certifikatet i dette slot bruges til at "
+"autentificere kortholderen."
 
 #: ../nitrokey3/windows/piv/key_management.rst:20
 msgid "9c"
@@ -16827,8 +16907,8 @@ msgid ""
 "The private key and certificate in this slot are used to sign emails and "
 "files."
 msgstr ""
-"Den private nøgle og certifikatet i dette slot bruges til at signere e-mails "
-"og filer."
+"Den private nøgle og certifikatet i dette slot bruges til at signere "
+"e-mails og filer."
 
 #: ../nitrokey3/windows/piv/key_management.rst:23
 msgid "9d"
@@ -16839,8 +16919,8 @@ msgid ""
 "The private key and certificate in this slot are used to encrypt emails "
 "and files."
 msgstr ""
-"Den private nøgle og certifikatet i dette slot bruges til at kryptere e-"
-"mails og filer."
+"Den private nøgle og certifikatet i dette slot bruges til at kryptere "
+"e-mails og filer."
 
 #: ../nitrokey3/windows/piv/key_management.rst:26
 msgid "9e"
@@ -16857,8 +16937,8 @@ msgid ""
 "respective system is a prerequisite."
 msgstr ""
 "Den private nøgle og certifikatet i dette slot bruges til fysiske "
-"operationer, som f.eks. bygningsadgang eller tidsregistrering. Support fra "
-"det respektive system er en forudsætning."
+"operationer, som f.eks. bygningsadgang eller tidsregistrering. Support "
+"fra det respektive system er en forudsætning."
 
 #: ../nitrokey3/windows/piv/key_management.rst:33
 msgid "Algorithms"
@@ -16912,9 +16992,9 @@ msgid ""
 " with the subject name ``John Doe`` and subject alternative name "
 "``jd@nitrokey.local``."
 msgstr ""
-"Kommandoen nedenfor opretter en privat nøgle i nøgleslot ``9a`` for brugeren "
-"med emnenavnet ``John Doe`` og det alternative emnenavn ``jd@nitrokey."
-"local``."
+"Kommandoen nedenfor opretter en privat nøgle i nøgleslot ``9a`` for "
+"brugeren med emnenavnet ``John Doe`` og det alternative emnenavn "
+"``jd@nitrokey.local``."
 
 #: ../nitrokey3/shared/set-pins.rst.inc:4
 msgid "Settings PIN with Windows Settings application"
@@ -33796,3 +33876,4 @@ msgstr ""
 #~ "Når dette er gjort, skal du logge"
 #~ " ud. Log ind med Nitrokey ved "
 #~ "at bruge \"sign-in options\""
+
