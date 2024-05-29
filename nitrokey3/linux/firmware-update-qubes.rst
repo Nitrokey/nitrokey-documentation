@@ -16,7 +16,7 @@ This guide describes how to update Nitrokey 3's firmware with nitropy in Qubes O
 Setup
 -----
 
-install nitropy in a app vm of your choice follow this `installation instructions`_
+Install nitropy in a app VM of your choice follow this `installation instructions`_.
 
 .. _installation instructions: ../../software/nitropy/all-platforms/installation.html
 
@@ -28,13 +28,11 @@ How to Update
    Never disconnect the Nitrokey 3 or abort the process while updating,
    because it will likely render your device unusable!
 
-1. Run ``nitropy nk3 reboot --bootloader`` in app vm.
+1. Run ``nitropy nk3 reboot --bootloader`` in app VM.
 2. Once instructed by ``nitropy`` touch the device to activate the bootloader.
-3. This will detach the nitrokey from the app vm, and the bootloader will apear in sys-usb 
-4. attach the bootloader to the app vm 
-5. run ``nitropy nk3 update`` and follow the instrutions, in the end this will reboot the nitrokey to finalice the update.
-6. reattch the nitrokey back to th app vm
+3. This will detach the nitrokey from the app VM, and the bootloader will apear in sys-usb 
+4. Attach the bootloader to the app VM 
+5. Run ``nitropy nk3 update`` and follow the instructions. This will reboot the Nitrokey to finalice the update eventually.
+6. Re-attach the Nitrokey back to th app VM
 
 In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitropy.log.*``).
-
-
