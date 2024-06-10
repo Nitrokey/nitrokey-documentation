@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
-"PO-Revision-Date: 2024-05-24 09:50+0000\n"
+"POT-Creation-Date: 2024-05-30 15:52+0200\n"
+"PO-Revision-Date: 2024-05-30 15:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Simplified) <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/zh_Hans/>\n"
@@ -755,7 +755,9 @@ msgid ""
 msgstr "用户数据在固件更新时被保留。总之，要确保***总是有另一个设备（或登录方式）在你的服务中注册，如果由于某种原因你的数据没有被保留。"
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "如何更新"
 
@@ -818,6 +820,7 @@ msgstr "请等待，直到该过程结束。(这可能因你的操作系统而�
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -11473,6 +11476,69 @@ msgstr ""
 " 3并运行。``udevadm control --reload-rules && udevadm "
 "trigger``或者重新启动你的机器。之后，更新应该可以工作，没有权限问题。"
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr "使用 Qubes OS 进行固件更新"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr "本指南介绍如何使用 Qubes OS 中的 nitropy 更新 Nitrokey 3 的固件。"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr "请先阅读`固件更新说明！因为对于特定版本来说，可以迁移到新版本的数据是有限制的。"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+msgid "Setup"
+msgstr "设置"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr "按照`installation instructions`_ 在您选择的应用程序虚拟机中安装 nitropy。"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr "在更新过程中，切勿断开 Nitrokey 3 的连接或中止进程，因为这很可能会导致设备无法使用！"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr "在应用程序虚拟机中运行``nitropy nk3 reboot --bootloader``。"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr "一旦收到``nitropy`` 的指示，请触摸设备激活引导加载程序。"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr "这将使 nitrokey 脱离应用程序虚拟机，引导加载程序将出现在 sys-usb 中。"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr "将引导加载器附加到应用程序虚拟机"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr "运行``nitropy nk3 update`` 并按说明操作。这将重启 Nitrokey，最终完成更新。"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr "将 Nitrokey 重新装回应用程序虚拟机"
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"
 msgstr "使用Linux的Nitrokey 3"
@@ -13650,9 +13716,7 @@ msgid ""
 "The *PIN* is subject to the restriction of a retry counter. Please refer "
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
-msgstr ""
-"*PIN* 受重试计数器的限制。请参阅`重试计数器<access_control.html#retry-"
-"counter>`__ 章节了解更多信息。"
+msgstr "*PIN* 受重试计数器的限制。请参阅`重试计数器<access_control.html#retry-counter>`__ 章节了解更多信息。"
 
 #: ../nitrokey3/windows/piv/access_control.rst:40
 msgid "On the terminal enter ``nitropy nk3 piv change-pin``."
@@ -13667,9 +13731,7 @@ msgid ""
 "The *PUK* is subject to the restriction of a retry counter. Please refer "
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
-msgstr ""
-"*PUK* 受重试计数器的限制。请参阅`重试计数器<access_control.html#retry-"
-"counter>`__ 章节了解更多信息。"
+msgstr "*PUK* 受重试计数器的限制。请参阅`重试计数器<access_control.html#retry-counter>`__ 章节了解更多信息。"
 
 #: ../nitrokey3/windows/piv/access_control.rst:58
 msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
@@ -13684,8 +13746,7 @@ msgid ""
 "The retry counter is used for the *PIN* and *PUK*. The counter decrements"
 " for every failed login attempt. A retry counter of zero means that there"
 " are no attempts left."
-msgstr "重试计数器用于*PIN* 和*PUK* "
-"。每次登录失败，计数器都会递减。重试计数器为零表示没有任何登录尝试。"
+msgstr "重试计数器用于*PIN* 和*PUK* 。每次登录失败，计数器都会递减。重试计数器为零表示没有任何登录尝试。"
 
 #: ../nitrokey3/windows/piv/access_control.rst:68
 msgid ""
@@ -13697,9 +13758,7 @@ msgstr "*PIN 码* 的重试次数为 3 次。如果尝试次数用完，*密码*
 msgid ""
 "To unblock the *PIN*, use the command ``nitropy nk3 piv reset-retry-"
 "counter``. This command requires the *PUK*."
-msgstr ""
-"要解除对*PIN* 的封锁，请使用``nitropy nk3 piv reset-retry-counter`` "
-"命令。该命令需要*PUK* 。"
+msgstr "要解除对*PIN* 的封锁，请使用``nitropy nk3 piv reset-retry-counter`` 命令。该命令需要*PUK* 。"
 
 #: ../nitrokey3/windows/piv/access_control.rst:74
 msgid ""
@@ -13708,9 +13767,8 @@ msgid ""
 "defaults. Please refer to the chapter `Factory Reset "
 "<factory_reset.html>`__ to learn more."
 msgstr ""
-"*PUK* 有一个 3 次重试计数器。如果这些尝试次数用完，PIV "
-"卡就不能再使用，必须重置为出厂默认设置。请参阅`Factory Reset<factory_reset."
-"html>`__ 章节了解更多信息。"
+"*PUK* 有一个 3 次重试计数器。如果这些尝试次数用完，PIV 卡就不能再使用，必须重置为出厂默认设置。请参阅`Factory "
+"Reset<factory_reset.html>`__ 章节了解更多信息。"
 
 #: ../nitrokey3/windows/piv/access_control.rst:80
 msgid "Management Key (MGM)"
@@ -13725,8 +13783,7 @@ msgid ""
 "Before you can perform management operations you must authenticate with "
 "the management key. The authentication is done with ``nitropy nk3 piv "
 "admin-auth``."
-msgstr "在执行管理操作前，必须使用管理密钥进行身份验证。身份验证通过``nitropy nk3 "
-"piv admin-auth`` 完成。"
+msgstr "在执行管理操作前，必须使用管理密钥进行身份验证。身份验证通过``nitropy nk3 piv admin-auth`` 完成。"
 
 #: ../nitrokey3/windows/piv/access_control.rst:87
 msgid ""
@@ -13743,8 +13800,7 @@ msgid ""
 "Every private key has a certificate associated. The certificates can be "
 "read and written. The size of a certificate is limited by the transport "
 "layer and about 6kB."
-msgstr "每个私人密钥都有一个相关证书。证书可以读取和写入。证书的大小受传输层限制，"
-"约为 6kB。"
+msgstr "每个私人密钥都有一个相关证书。证书可以读取和写入。证书的大小受传输层限制，约为 6kB。"
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:9
 msgid "Read Certificate"
@@ -13766,8 +13822,7 @@ msgstr "每个密钥槽都可以向 Nitrokey 写入证书。"
 msgid ""
 "The PIV application can be reset to factory defaults. It can only be "
 "reset if the PIN and PUK are blocked."
-msgstr "PIV 应用程序可以重置为出厂默认设置。只有在 PIN 和 PUK "
-"被阻止的情况下才能重置。"
+msgstr "PIV 应用程序可以重置为出厂默认设置。只有在 PIN 和 PUK 被阻止的情况下才能重置。"
 
 #: ../nitrokey3/windows/piv/factory_reset.rst:8
 msgid ""
@@ -13783,8 +13838,7 @@ msgstr "使用活动目录登录客户端"
 msgid ""
 "This document explains how to use the PIV application of a Nitrokey 3 for"
 " smartcard logon with Active Directory."
-msgstr "本文档介绍如何使用 Nitrokey 3 的 PIV 应用程序通过 Active Directory "
-"进行智能卡登录。"
+msgstr "本文档介绍如何使用 Nitrokey 3 的 PIV 应用程序通过 Active Directory 进行智能卡登录。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:6
 msgid ""
@@ -13802,9 +13856,9 @@ msgid ""
 "refer to `the firmware update documentation <firmware-update.html"
 "#firmware-release-types>`__ for more information."
 msgstr ""
-"Nitrokey 3 的 PIV 应用程序目前被认为是不稳定的，在稳定固件版本中不可用。要获"
-"得该功能，需要安装测试固件。随后的固件更新可能会导致数据和加密密钥丢失。更多"
-"信息请参阅`固件更新文档<firmware-update.html#firmware-release-types>`__。"
+"Nitrokey 3 的 PIV "
+"应用程序目前被认为是不稳定的，在稳定固件版本中不可用。要获得该功能，需要安装测试固件。随后的固件更新可能会导致数据和加密密钥丢失。更多信息请参阅`固件更新文档"
+"<firmware-update.html#firmware-release-types>`__。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:17
 msgid ""
@@ -13813,8 +13867,8 @@ msgid ""
 "Services (ADCS). On the client machine only access to the respective user"
 " account used for logon is required."
 msgstr ""
-"设置要求对运行 Active Directory 目录服务 (ADDS) 和 Active Directory 证书服务 "
-"(ADCS) 的计算机具有管理访问权限。在客户机上，只需访问用于登录的相应用户账户。"
+"设置要求对运行 Active Directory 目录服务 (ADDS) 和 Active Directory 证书服务 (ADCS) "
+"的计算机具有管理访问权限。在客户机上，只需访问用于登录的相应用户账户。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -13835,23 +13889,20 @@ msgid ""
 "Each Domain Controller (DC) must have a *Domain Controller*, *Domain "
 "Controller Authentication*, and *Kerberos Authentication* certificate "
 "issued."
-msgstr "每个域控制器 (DC) 都必须有*域控制器* 、*域控制器验证* 和*Kerberos 验证* "
-"证书。"
+msgstr "每个域控制器 (DC) 都必须有*域控制器* 、*域控制器验证* 和*Kerberos 验证* 证书。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:24
 msgid ""
 "If you have clients leaving the company network, make sure the published "
 "full and delta certificate revocation lists (CRL) are retrievable from "
 "external networks."
-msgstr "如果有客户离开公司网络，请确保已发布的完整和 delta 证书吊销列表 (CRL) "
-"可从外部网络检索到。"
+msgstr "如果有客户离开公司网络，请确保已发布的完整和 delta 证书吊销列表 (CRL) 可从外部网络检索到。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:25
 msgid ""
 "Windows client (supported versions are Windows 10, 11 in editions "
 "*Professional* and *Enterprise*)"
-msgstr "Windows 客户端（支持的版本有 Windows 10、11，版本为*Professional* "
-"和*Enterprise*)"
+msgstr "Windows 客户端（支持的版本有 Windows 10、11，版本为*Professional* 和*Enterprise*)"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:26
 msgid "Client must be a domain member of the Active Directory (AD) domain."
@@ -13871,8 +13922,7 @@ msgid ""
 "authority (CA) of the the domain. This template defines the values and "
 "constraints of the user certificates. It is used to sign the Certificate "
 "Request (CSR) during provisioning of the Nitrokey."
-msgstr "智能卡登录需要域证书颁发机构（CA）的证书模板。该模板定义了用户证书的值和限制"
-"。它用于在配置 Nitrokey 时签署证书请求（CSR）。"
+msgstr "智能卡登录需要域证书颁发机构（CA）的证书模板。该模板定义了用户证书的值和限制。它用于在配置 Nitrokey 时签署证书请求（CSR）。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:36
 msgid ""
@@ -13915,16 +13965,13 @@ msgstr "禁用**显示产生的更改**"
 msgid ""
 "Set **Certificate Authority** and **Certificate recipient** to the oldest"
 " clients in the domain which are supposed to use smartcard logon."
-msgstr ""
-"将**Certificate Authority** 和**Certificate recipient** "
-"设置为域中最早使用智能卡登录的客户端。"
+msgstr "将**Certificate Authority** 和**Certificate recipient** 设置为域中最早使用智能卡登录的客户端。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:50
 msgid ""
 "If you want to use Elliptic Curve (EC) keys your clients must be not "
 "older than Windows Server 2008 and Windows Vista."
-msgstr "如果要使用椭圆曲线 (EC) 密钥，客户机的版本必须不高于 Windows Server 2008 和 "
-"Windows Vista。"
+msgstr "如果要使用椭圆曲线 (EC) 密钥，客户机的版本必须不高于 Windows Server 2008 和 Windows Vista。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:54
 msgid "**General**"
@@ -13964,8 +14011,8 @@ msgid ""
 "``2048`` Bit. If you choose to use Eliptic Curve (EC) keys you need to "
 "make additional changes on your client computers."
 msgstr ""
-"Microsoft 建议使用密钥长度为``2048`` 位的 RSA 算法。如果选择使用 Eliptic "
-"Curve (EC) 密钥，则需要在客户端计算机上进行额外的更改。"
+"Microsoft 建议使用密钥长度为``2048`` 位的 RSA 算法。如果选择使用 Eliptic Curve (EC) "
+"密钥，则需要在客户端计算机上进行额外的更改。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:67
 msgid "**Subject Name**"
@@ -14018,8 +14065,8 @@ msgid ""
 " Singing Request (CSR) generation. The certificate is then written to the"
 " Nitrokey."
 msgstr ""
-"智能卡登录需要在 Active Directory 中为用户配置 "
-"Nitrokey。该配置包含私钥和证书生成请求（CSR）。然后将证书写入 Nitrokey。"
+"智能卡登录需要在 Active Directory 中为用户配置 Nitrokey。该配置包含私钥和证书生成请求（CSR）。然后将证书写入 "
+"Nitrokey。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:89
 msgid ""
@@ -14027,16 +14074,13 @@ msgid ""
 "account you want to use for smartcard logon exists. A creation time of "
 "the certificate before the creation time of the user account will lead to"
 " a failed logon."
-msgstr ""
-"在执行以下步骤之前，请确保要用于智能卡登录的 Active Directory "
-"用户账户已经存在。证书创建时间早于用户账户创建时间将导致登录失败。"
+msgstr "在执行以下步骤之前，请确保要用于智能卡登录的 Active Directory 用户账户已经存在。证书创建时间早于用户账户创建时间将导致登录失败。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:93
 msgid ""
 "If the PIV application on the Nitrokey was not used before, perform a "
 "initialization with ``nitropy nk3 piv init`` first."
-msgstr "如果之前没有使用过 Nitrokey 上的 PIV 应用程序，请先使用``nitropy nk3 piv "
-"init`` 进行初始化。"
+msgstr "如果之前没有使用过 Nitrokey 上的 PIV 应用程序，请先使用``nitropy nk3 piv init`` 进行初始化。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:95
 msgid "Generate a private key and write the CSR to file with the command below."
@@ -14049,10 +14093,9 @@ msgid ""
 "alternative-name>`` corresponds typically to the ``commonName`` and "
 "``userPrincipalName`` attribute of the Active Directory user account."
 msgstr ""
-"``<algorithm>`` 的值是使用的算法及其密钥长度，例如``rsa2048``。``<subject-"
-"name>`` 和``<subject-alternative-name>`` "
-"的值通常与活动目录用户账户的``commonName`` 和``userPrincipalName`` "
-"属性相对应。"
+"``<algorithm>`` 的值是使用的算法及其密钥长度，例如``rsa2048``。``<subject-name>`` 和"
+"``<subject-alternative-name>`` 的值通常与活动目录用户账户的``commonName`` "
+"和``userPrincipalName`` 属性相对应。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:104
 msgid ""
@@ -14065,8 +14108,7 @@ msgid ""
 "The value of ``<template-name>`` is the name of the certificate template "
 "for smartcard logon. The value of ``<file>`` is the certificate singing "
 "request file."
-msgstr "``<template-name>`` 的值是用于智能卡登录的证书模板名称。``<file>`` "
-"的值是证书演唱请求文件。"
+msgstr "``<template-name>`` 的值是用于智能卡登录的证书模板名称。``<file>`` 的值是证书演唱请求文件。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:113
 msgid "Write the signed certificate to the Nitrokey with the command below."
@@ -14088,8 +14130,7 @@ msgid ""
 " is required in case of a lost or broken Nitrokey."
 msgstr ""
 "已签发的用户登录证书列在 Active Directory 证书服务 (ADCS) 中。从 ADCS "
-"中可以撤销证书，并将其添加到配置的证书撤销列表（CRL）中。这在 Nitrokey "
-"丢失或损坏时是必需的。"
+"中可以撤销证书，并将其添加到配置的证书撤销列表（CRL）中。这在 Nitrokey 丢失或损坏时是必需的。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:130
 msgid ""
@@ -14102,8 +14143,7 @@ msgid ""
 "It is possible to temporarily revoke a certificate with the reason "
 "*Certificate Hold*. This revocation can be reverted and is hence not "
 "permanent."
-msgstr "可以暂时吊销证书，理由是*Certificate Hold* "
-"。这种撤销可以恢复，因此不是永久性的。"
+msgstr "可以暂时吊销证书，理由是*Certificate Hold* 。这种撤销可以恢复，因此不是永久性的。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:137
 msgid "MMC (certsrv.msc)"
@@ -14150,11 +14190,9 @@ msgid ""
 "and updates them if the CRL is about to expire. Hence a revocation is not"
 " immediate and depends on the expiration of the CRL the client has."
 msgstr ""
-"在每次智能卡登录尝试中，Windows 都会检查智能卡出示的证书是否列在证书吊销列表"
-"（CRL）中。如果在证书吊销列表中发现该证书，则拒绝登录。每个 CRL "
-"都包含一个使其过期的有效期。Windows 会缓存获取的 CRL，并在 CRL 即将过期时更新"
-"它们。因此，证书吊销不会立即发生，而是取决于客户端所拥有的证书废止列表的过期"
-"时间。"
+"在每次智能卡登录尝试中，Windows 都会检查智能卡出示的证书是否列在证书吊销列表（CRL）中。如果在证书吊销列表中发现该证书，则拒绝登录。每个"
+" CRL 都包含一个使其过期的有效期。Windows 会缓存获取的 CRL，并在 CRL "
+"即将过期时更新它们。因此，证书吊销不会立即发生，而是取决于客户端所拥有的证书废止列表的过期时间。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:156
 msgid "Import a user smartcard certificate to the personal certificate store"
@@ -14165,8 +14203,7 @@ msgid ""
 "The user certificate which is stored on the Nitrokey can be imported to "
 "the user's personal certificate store. In certain situations this is a "
 "required procedure."
-msgstr "存储在 Nitrokey "
-"上的用户证书可以导入到用户的个人证书存储空间。在某些情况下，这是必要的程序。"
+msgstr "存储在 Nitrokey 上的用户证书可以导入到用户的个人证书存储空间。在某些情况下，这是必要的程序。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:162
 msgid "MMC (certmgr.msc)"
@@ -14203,10 +14240,8 @@ msgid ""
 "corresponds to this certificate.* indicating that the private on the "
 "Nitrokey could be identified."
 msgstr ""
-"导入完成后，检查导入证书的详细信息窗格。如果 Nitrokey 已连接，证书属性应显示*"
-"You have a private key that corresponds to this "
-"certificate（你有一个与此证书对应的私钥）。* 表明 Nitrokey "
-"上的私钥可以被识别。"
+"导入完成后，检查导入证书的详细信息窗格。如果 Nitrokey 已连接，证书属性应显示*You have a private key that "
+"corresponds to this certificate（你有一个与此证书对应的私钥）。* 表明 Nitrokey 上的私钥可以被识别。"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:171
 msgid "PowerShell"
@@ -14226,9 +14261,7 @@ msgstr "通过``Set-Location -Path cert:\\CurrentUser\\My`` 更改用户的个�
 msgid ""
 "Import the certificate to the store with ``Import-Certificate -Filepath "
 "'<path>'``, replacing ``<path>`` with the certificate file path."
-msgstr ""
-"使用``Import-Certificate -Filepath '<path>'`` "
-"将证书导入存储区，用证书文件路径替换``<path>``。"
+msgstr "使用``Import-Certificate -Filepath '<path>'`` 将证书导入存储区，用证书文件路径替换``<path>``。"
 
 #: ../nitrokey3/windows/piv/guides/index.rst:2
 msgid "Guides"
@@ -14245,8 +14278,7 @@ msgid ""
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 msgstr ""
 "*Personal Identity Verfication* (PIV) 以 NIST 特别出版物`SP "
-"800-73<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4"
-".pdf>`___为基础。"
+"800-73<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`___为基础。"
 
 #: ../nitrokey3/windows/piv/key_management.rst:5
 msgid "Key Slots"
@@ -14257,8 +14289,7 @@ msgid ""
 "The PIV application can hold certificates for different purposes. For "
 "each purpose the private key and its corresponding certificate are stored"
 " in a key slot."
-msgstr "PIV 应用程序可持有不同用途的证书。每种用途的私人密钥及其相应的证书都存储在一"
-"个密钥槽中。"
+msgstr "PIV 应用程序可持有不同用途的证书。每种用途的私人密钥及其相应的证书都存储在一个密钥槽中。"
 
 #: ../nitrokey3/windows/piv/key_management.rst:11
 msgid "Slot"
@@ -14334,8 +14365,7 @@ msgid ""
 "The private key and certificate in this slot are used for physical "
 "operations, such as building access or time recording. Support from the "
 "respective system is a prerequisite."
-msgstr "该插槽中的私钥和证书用于实际操作，如楼宇门禁或时间记录。前提条件是相关系统提"
-"供支持。"
+msgstr "该插槽中的私钥和证书用于实际操作，如楼宇门禁或时间记录。前提条件是相关系统提供支持。"
 
 #: ../nitrokey3/windows/piv/key_management.rst:33
 msgid "Algorithms"
@@ -14346,8 +14376,7 @@ msgid ""
 "The PIV application uses asymmetric and symmetric algorithms. The "
 "asymmetric algorithms are used for the user private keys and the "
 "symmetric algorithms for the management key."
-msgstr "PIV "
-"应用程序使用非对称和对称算法。非对称算法用于用户私钥，对称算法用于管理密钥。"
+msgstr "PIV 应用程序使用非对称和对称算法。非对称算法用于用户私钥，对称算法用于管理密钥。"
 
 #: ../nitrokey3/windows/piv/key_management.rst:38
 msgid "Supported asymmetric key algorithms:"
@@ -14386,9 +14415,7 @@ msgid ""
 "The command below will create private key in key slot ``9a`` for the user"
 " with the subject name ``John Doe`` and subject alternative name "
 "``jd@nitrokey.local``."
-msgstr ""
-"下面的命令将在密钥槽``9a`` 中为用户创建私人密钥，用户名为``John "
-"Doe``，主题替代名称为``jd@nitrokey.local``。"
+msgstr "下面的命令将在密钥槽``9a`` 中为用户创建私人密钥，用户名为``John Doe``，主题替代名称为``jd@nitrokey.local``。"
 
 #: ../nitrokey3/shared/set-pins.rst.inc:4
 msgid "Settings PIN with Windows Settings application"
@@ -20670,6 +20697,158 @@ msgid ""
 "required touch on the Nitrokey 3 to access the entry by checking the "
 "\"Require User Presence\" box."
 msgstr "您还可以选中 \"要求用户在场 \"复选框，以要求用户在场的形式触摸 Nitrokey 3 访问条目。"
+
+#: ../software/nk-app2/pin.rst:2
+msgid "PIN Settings for FIDO2 and OTP in the Nitrokey App 2"
+msgstr "Nitrokey App 2 中的 FIDO2 和 OTP 密码设置"
+
+#: ../software/nk-app2/pin.rst:5
+msgid ""
+"These instructions describe how to set or change the PINs for FIDO2 and "
+"OTP in the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr ""
+"本说明介绍如何在`Nitrokey App 2</software/nk-app2/>`__ 中设置或更改 FIDO2 和 "
+"OTP 的 PIN 码。"
+
+#: ../software/nk-app2/pin.rst:9
+msgid ""
+"This function is not yet available in the current release of the "
+"`Nitrokey App 2 </software/nk-app2/>`__ version 2.3.0"
+msgstr "`Nitrokey App 2</software/nk-app2/>`__版本 2.3.0 的当前版本尚未提供此功能。"
+
+#: ../software/nk-app2/pin.rst:10
+msgid ""
+"The function is expected to be available in the release of the `Nitrokey "
+"App 2 </software/nk-app2/>`__  version 2.3.1"
+msgstr "该功能预计将在`Nitrokey App 2</software/nk-app2/>`__2.3.1版本中发布。"
+
+#: ../software/nk-app2/pin.rst:14
+msgid ""
+"Each function FIDO2, OTP or OpenPGP Card is assigned a separate PIN, "
+"which is managed separately."
+msgstr "每个功能的 FIDO2 卡、OTP 卡或 OpenPGP 卡都有一个单独的 PIN 码，可单独管理。"
+
+#: ../software/nk-app2/pin.rst:17
+msgid "First Steps:"
+msgstr "第一步："
+
+#: ../software/nk-app2/pin.rst:19
+msgid "Open the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr "打开`Nitrokey App 2</software/nk-app2/>`__。"
+
+#: ../software/nk-app2/pin.rst:20
+msgid "Select the Nitrokey 3."
+msgstr "选择 Nitrokey 3。"
+
+#: ../software/nk-app2/pin.rst:21
+msgid "Select the ``SETTINGS`` tab."
+msgstr "选择``SETTINGS`` 选项卡。"
+
+#: ../software/nk-app2/pin.rst:22
+msgid ""
+"On the left-hand side of the ``SETTINGS`` tab, a tree structure with "
+"various options is available."
+msgstr "在``SETTINGS`` 选项卡的左侧，有一个包含各种选项的树形结构。"
+
+#: ../software/nk-app2/pin.rst:26
+msgid "FIDO2 PIN Settings"
+msgstr "FIDO2 PIN 设置"
+
+#: ../software/nk-app2/pin.rst:28
+msgid "Select ``FIDO2``."
+msgstr "选择``FIDO2``。"
+
+#: ../software/nk-app2/pin.rst:29
+msgid ""
+"A branch with ``FIDO2 PIN SETTINGS`` opens below ``FIDO2``. The status of"
+" the FIDO2 PIN is now available on the left-hand side of the ``SETTINGS``"
+" tab, including a short description."
+msgstr ""
+"``FIDO2 PIN SETTINGS`` 分支在``FIDO2`` 下方打开。``SETTINGS`` "
+"标签的左侧现在可以看到 FIDO2 PIN 的状态，包括简短说明。"
+
+#: ../software/nk-app2/pin.rst:30
+msgid "Select ``FIDO2 PIN SETTINGS`` to set or change the PIN."
+msgstr "选择``FIDO2 PIN SETTINGS`` 设置或更改 PIN 码。"
+
+#: ../software/nk-app2/pin.rst:31
+msgid ""
+"Depending on the status of the Fido2 PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr "根据 Fido2 PIN 的状态，现在将显示用于设置或更改 PIN 的输入掩码。"
+
+#: ../software/nk-app2/pin.rst:33
+msgid ""
+"To set the FIDO2 PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr "要设置 FIDO2 PIN 码，请输入新 PIN 码并在提供的方框中重复输入。要更改 PIN 码，"
+"请在提供的方框中输入当前 PIN 码。"
+
+#: ../software/nk-app2/pin.rst:33 ../software/nk-app2/pin.rst:49
+msgid "PIN length minimum 4 characters"
+msgstr "密码长度至少为 4 个字符"
+
+#: ../software/nk-app2/pin.rst:34 ../software/nk-app2/pin.rst:50
+msgid "If the repetition of the new PIN is not correct, it will not be accepted."
+msgstr "如果重复的新 PIN 码不正确，将不予接受。"
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:53
+msgid "Select the ``SAVE`` button."
+msgstr "选择``SAVE`` 按钮。"
+
+#: ../software/nk-app2/pin.rst:36 ../software/nk-app2/pin.rst:52
+msgid "If the ``SAVE`` button is greyed out, the entries are not correct."
+msgstr "如果``SAVE`` 按钮显示为灰色，说明输入不正确。"
+
+#: ../software/nk-app2/pin.rst:37 ../software/nk-app2/pin.rst:53
+msgid "When you hover over the ``SAVE`` button, a list of reasons is displayed."
+msgstr "将鼠标悬停在``SAVE`` 按钮上时，会显示原因列表。"
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:54
+msgid ""
+"The ``PIN_INVALID`` error message, when changing the PIN, indicates that "
+"the current PIN is incorrect."
+msgstr "更改 PIN 码时，``PIN_INVALID`` 错误信息表示当前 PIN 码不正确。"
+
+#: ../software/nk-app2/pin.rst:41
+msgid "OTP PIN Settings"
+msgstr "OTP 密码设置"
+
+#: ../software/nk-app2/pin.rst:44
+msgid "Select ``OTP``."
+msgstr "选择``OTP``。"
+
+#: ../software/nk-app2/pin.rst:44
+msgid ""
+"A branch with ``OTP PIN SETTINGS`` opens below ``OTP``. The status of the"
+" OTP PIN is now available on the left-hand side of the ``SETTINGS`` tab, "
+"including a short description."
+msgstr ""
+"在``OTP`` 下方打开``OTP PIN SETTINGS`` 分支。在``SETTINGS`` 标签的左侧，"
+"现在可以看到 OTP PIN 的状态，包括一个简短的说明。"
+
+#: ../software/nk-app2/pin.rst:45
+msgid ""
+"Information about the version, serial number and PIN attempt counter is "
+"also available."
+msgstr "还提供有关版本、序列号和 PIN 尝试计数器的信息。"
+
+#: ../software/nk-app2/pin.rst:46
+msgid "Select ``OTP PIN SETTINGS`` to set or change the PIN."
+msgstr "选择``OTP PIN SETTINGS`` 设置或更改 PIN 码。"
+
+#: ../software/nk-app2/pin.rst:47
+msgid ""
+"Depending on the status of the OTP PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr "根据 OTP PIN 的状态，现在会显示用于设置或更改 PIN 的输入掩码。"
+
+#: ../software/nk-app2/pin.rst:49
+msgid ""
+"To set the OTP PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr "要设置 OTP PIN 码，请在提供的框中输入新 PIN 码并重复。要更改 PIN 码，"
+"请在提供的方框中输入当前 PIN 码。"
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst.inc:6
 msgid ""

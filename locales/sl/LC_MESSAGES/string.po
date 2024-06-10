@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
-"PO-Revision-Date: 2024-05-24 12:50+0000\n"
+"POT-Creation-Date: 2024-05-30 15:52+0200\n"
+"PO-Revision-Date: 2024-05-30 15:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/sl/>\n"
@@ -895,7 +895,9 @@ msgstr ""
 "storitvi vedno registrirano drugo napravo (ali način prijave)."
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "Kako posodobiti"
 
@@ -969,6 +971,7 @@ msgstr ""
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -13373,6 +13376,84 @@ msgstr ""
 "trigger`` ali ponovno zaženite računalnik. Nato bi morala posodobitev "
 "delovati brez težav z dovoljenji."
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr "Posodobitev strojne programske opreme z operacijskim sistemom Qubes OS"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr ""
+"V tem priročniku je opisano, kako posodobiti vdelano programsko opremo "
+"naprave Nitrokey 3 z nitropy v operacijskem sistemu Qubes OS."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr ""
+"Pred tem preberite splošna navodila za posodobitev vdelane programske "
+"opreme `! Ker pri določenih različicah obstajajo omejitve glede podatkov,"
+" ki jih je mogoče prenesti na novo različico."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+msgid "Setup"
+msgstr "Nastavitev"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr ""
+"Nitropy namestite v izbrani virtualni stroj aplikacije v skladu z "
+"navodili za namestitev ``_."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr ""
+"Med posodabljanjem nikoli ne odklopite ključa Nitrokey 3 ali prekinite "
+"postopka, saj bo naprava zaradi tega verjetno neuporabna!"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr "Zaženite ``nitropy nk3 reboot --bootloader`` v aplikaciji VM."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr ""
+"Po navodilu ``nitropy`` se dotaknite naprave, da aktivirate zagonski "
+"program."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr ""
+"S tem se bo nitrokey odklopil od VM z aplikacijo, zagonski nalagalnik pa "
+"se bo pojavil v sys-usb"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr "Pritrditev zagonskega nalagalnika na aplikacijo VM"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr ""
+"Zaženite ``nitropy nk3 update`` in sledite navodilom. To bo ponovno "
+"zagnalo ključ Nitrokey, da se posodobitev dokončno izvede."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr "Ponovno pritrdite ključ Nitrokey nazaj na aplikacijo VM"
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"
 msgstr "Nitrokey 3 z Linuxom"
@@ -16016,8 +16097,8 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"Za *PIN* velja omejitev števca ponovnih poskusov. Za več informacij glejte "
-"poglavje `Števec ponovitev <access_control.html#retry-counter>`__."
+"Za *PIN* velja omejitev števca ponovnih poskusov. Za več informacij "
+"glejte poglavje `Števec ponovitev <access_control.html#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:40
 msgid "On the terminal enter ``nitropy nk3 piv change-pin``."
@@ -16033,8 +16114,8 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"Za *PUK* velja omejitev števca ponovnih poskusov. Za več informacij glejte "
-"poglavje `Števec ponovitev <access_control.html#retry-counter>`__."
+"Za *PUK* velja omejitev števca ponovnih poskusov. Za več informacij "
+"glejte poglavje `Števec ponovitev <access_control.html#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:58
 msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
@@ -16050,17 +16131,17 @@ msgid ""
 " for every failed login attempt. A retry counter of zero means that there"
 " are no attempts left."
 msgstr ""
-"Števec ponovitev se uporablja za *PIN* in *PUK*. Števec se zmanjša za vsak "
-"neuspeli poskus prijave. Če je števec ponovitev enak nič, pomeni, da ni več "
-"poskusov prijave."
+"Števec ponovitev se uporablja za *PIN* in *PUK*. Števec se zmanjša za "
+"vsak neuspeli poskus prijave. Če je števec ponovitev enak nič, pomeni, da"
+" ni več poskusov prijave."
 
 #: ../nitrokey3/windows/piv/access_control.rst:68
 msgid ""
 "The *PIN* has a retry counter of 3 attempts. If these attempts are used "
 "up, the *PIN* must be unlocked with the *PUK*."
 msgstr ""
-"Spletna stran *PIN* ima števec ponovnih poskusov 3 poskuse. Če so ti poskusi "
-"porabljeni, je treba *PIN* odkleniti s *PUK*."
+"Spletna stran *PIN* ima števec ponovnih poskusov 3 poskuse. Če so ti "
+"poskusi porabljeni, je treba *PIN* odkleniti s *PUK*."
 
 #: ../nitrokey3/windows/piv/access_control.rst:71
 msgid ""
@@ -16097,15 +16178,16 @@ msgid ""
 "admin-auth``."
 msgstr ""
 "Preden lahko izvajate operacije upravljanja, se morate avtentificirati s "
-"ključem za upravljanje. Avtentikacija se izvede s ``nitropy nk3 piv admin-"
-"auth``."
+"ključem za upravljanje. Avtentikacija se izvede s ``nitropy nk3 piv "
+"admin-auth``."
 
 #: ../nitrokey3/windows/piv/access_control.rst:87
 msgid ""
 "The management key can be changed with ``nitropy nk3 piv change-admin-"
 "key``."
 msgstr ""
-"Ključ za upravljanje lahko spremenite s ``nitropy nk3 piv change-admin-key``."
+"Ključ za upravljanje lahko spremenite s ``nitropy nk3 piv change-admin-"
+"key``."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:2
 msgid "Certificate Management"
@@ -16142,8 +16224,8 @@ msgid ""
 "The PIV application can be reset to factory defaults. It can only be "
 "reset if the PIN and PUK are blocked."
 msgstr ""
-"Aplikacijo PIV lahko ponastavite na tovarniške nastavitve. Ponastavitev je "
-"mogoča le, če sta PIN in PUK blokirana."
+"Aplikacijo PIV lahko ponastavite na tovarniške nastavitve. Ponastavitev "
+"je mogoča le, če sta PIN in PUK blokirana."
 
 #: ../nitrokey3/windows/piv/factory_reset.rst:8
 msgid ""
@@ -16162,8 +16244,8 @@ msgid ""
 "This document explains how to use the PIV application of a Nitrokey 3 for"
 " smartcard logon with Active Directory."
 msgstr ""
-"Ta dokument pojasnjuje, kako uporabljati aplikacijo PIV naprave Nitrokey 3 "
-"za prijavo s pametno kartico v imenik Active Directory."
+"Ta dokument pojasnjuje, kako uporabljati aplikacijo PIV naprave Nitrokey "
+"3 za prijavo s pametno kartico v imenik Active Directory."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:6
 msgid ""
@@ -16187,9 +16269,9 @@ msgstr ""
 "voljo v stabilnih izdajah vdelane programske opreme. Za pridobitev te "
 "funkcionalnosti je treba namestiti testno vdelano programsko opremo. "
 "Kasnejše posodobitve vdelane programske opreme lahko povzročijo izgubo "
-"podatkov in kriptografskih ključev. Za več informacij glejte `dokumentacijo "
-"o posodobitvi vdelane programske opreme <firmware-update.html#firmware-"
-"release-types>`__."
+"podatkov in kriptografskih ključev. Za več informacij glejte "
+"`dokumentacijo o posodobitvi vdelane programske opreme <firmware-"
+"update.html#firmware-release-types>`__."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:17
 msgid ""
@@ -16199,10 +16281,10 @@ msgid ""
 " account used for logon is required."
 msgstr ""
 "Nastavitev zahteva upraviteljski dostop do računalnikov, v katerih sta "
-"nameščeni storitvi ADDS (Active Directory Directory Directory Services) in "
-"ADCS (Active Directory Certificate Services). V odjemalskem računalniku je "
-"potreben samo dostop do ustreznega uporabniškega računa, ki se uporablja za "
-"prijavo."
+"nameščeni storitvi ADDS (Active Directory Directory Directory Services) "
+"in ADCS (Active Directory Certificate Services). V odjemalskem "
+"računalniku je potreben samo dostop do ustreznega uporabniškega računa, "
+"ki se uporablja za prijavo."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16228,8 +16310,9 @@ msgid ""
 "Controller Authentication*, and *Kerberos Authentication* certificate "
 "issued."
 msgstr ""
-"Vsak domenski krmilnik (DC) mora imeti izdano potrdilo *Domain Controller*, *"
-"Domain Controller Authentication* in *Kerberos Authentication*."
+"Vsak domenski krmilnik (DC) mora imeti izdano potrdilo *Domain "
+"Controller*, *Domain Controller Authentication* in *Kerberos "
+"Authentication*."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:24
 msgid ""
@@ -16237,9 +16320,9 @@ msgid ""
 "full and delta certificate revocation lists (CRL) are retrievable from "
 "external networks."
 msgstr ""
-"Če odjemalci zapustijo omrežje podjetja, poskrbite, da je objavljene popolne "
-"in delta sezname preklicanih potrdil (CRL) mogoče pridobiti iz zunanjih "
-"omrežij."
+"Če odjemalci zapustijo omrežje podjetja, poskrbite, da je objavljene "
+"popolne in delta sezname preklicanih potrdil (CRL) mogoče pridobiti iz "
+"zunanjih omrežij."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:25
 msgid ""
@@ -16270,18 +16353,18 @@ msgid ""
 "constraints of the user certificates. It is used to sign the Certificate "
 "Request (CSR) during provisioning of the Nitrokey."
 msgstr ""
-"Prijava s pametno kartico zahteva predlogo potrdila v organu za potrjevanje "
-"(CA) domene. Ta predloga določa vrednosti in omejitve uporabniških potrdil. "
-"Uporablja se za podpisovanje zahtevka za potrdilo (CSR) med zagotavljanjem "
-"ključa Nitrokey."
+"Prijava s pametno kartico zahteva predlogo potrdila v organu za "
+"potrjevanje (CA) domene. Ta predloga določa vrednosti in omejitve "
+"uporabniških potrdil. Uporablja se za podpisovanje zahtevka za potrdilo "
+"(CSR) med zagotavljanjem ključa Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:36
 msgid ""
 "Signing a certificate request for smartcard logon requires to create a "
 "certificate template in the certificate authority."
 msgstr ""
-"Za podpisovanje zahtevka za potrdilo za prijavo s pametno kartico je treba v "
-"overitelju ustvariti predlogo potrdila."
+"Za podpisovanje zahtevka za potrdilo za prijavo s pametno kartico je "
+"treba v overitelju ustvariti predlogo potrdila."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:39
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:74
@@ -16303,7 +16386,8 @@ msgstr "V podoknu s podrobnostmi izberite predlogo **Smartcard Logon**."
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:42
 msgid "In the menu bar click **Actions → All Tasks → Duplicate Template**."
 msgstr ""
-"V menijski vrstici kliknite **Dejavnosti → Vsa opravila → Podvoji predlogo**."
+"V menijski vrstici kliknite **Dejavnosti → Vsa opravila → Podvoji "
+"predlogo**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:43
 msgid "Set the settings below on the template, according to the mentioned tab."
@@ -16372,9 +16456,9 @@ msgid ""
 "``2048`` Bit. If you choose to use Eliptic Curve (EC) keys you need to "
 "make additional changes on your client computers."
 msgstr ""
-"Microsoft priporoča uporabo algoritma RSA z dolžino ključa ``2048`` Bit. Če "
-"se odločite za uporabo ključev eliptične krivulje (EC), morate v odjemalskih "
-"računalnikih izvesti dodatne spremembe."
+"Microsoft priporoča uporabo algoritma RSA z dolžino ključa ``2048`` Bit. "
+"Če se odločite za uporabo ključev eliptične krivulje (EC), morate v "
+"odjemalskih računalnikih izvesti dodatne spremembe."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:67
 msgid "**Subject Name**"
@@ -16393,8 +16477,8 @@ msgid ""
 "After the creation of a certificate template, the template must be issued"
 " to be used by the clients."
 msgstr ""
-"Po ustvarjanju predloge potrdila je treba predlogo izdati, da jo bodo lahko "
-"uporabljali odjemalci."
+"Po ustvarjanju predloge potrdila je treba predlogo izdati, da jo bodo "
+"lahko uporabljali odjemalci."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:75
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:138
@@ -16411,13 +16495,14 @@ msgid ""
 "In the navigation pane expand the Certificate Authority (CA) and navigate"
 " to **Certificate Templates**."
 msgstr ""
-"V navigacijskem podoknu razširite overitelja potrdil (CA) in pojdite na **"
-"Predloge potrdil**."
+"V navigacijskem podoknu razširite overitelja potrdil (CA) in pojdite na "
+"**Predloge potrdil**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:77
 msgid "In the menu bar click **Action → New → Certificate Template to Issue**."
 msgstr ""
-"V menijski vrstici kliknite **Action → New → Certificate Template to Issue**."
+"V menijski vrstici kliknite **Action → New → Certificate Template to "
+"Issue**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:78
 msgid "Select the certificate template you want to issue and confirm with **OK**."
@@ -16437,8 +16522,9 @@ msgid ""
 " Nitrokey."
 msgstr ""
 "Za prijavo s pametno kartico je treba zagotoviti ključ Nitrokey za "
-"uporabnika v imeniku Active Directory. Ta vsebuje zasebni ključ in zahtevo "
-"za izdajo potrdila (CSR). Potrdilo se nato zapiše v ključ Nitrokey."
+"uporabnika v imeniku Active Directory. Ta vsebuje zasebni ključ in "
+"zahtevo za izdajo potrdila (CSR). Potrdilo se nato zapiše v ključ "
+"Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:89
 msgid ""
@@ -16447,10 +16533,10 @@ msgid ""
 "the certificate before the creation time of the user account will lead to"
 " a failed logon."
 msgstr ""
-"Pred izvajanjem spodnjih korakov se prepričajte, da uporabniški račun Active "
-"Directory, ki ga želite uporabiti za prijavo s pametno kartico, obstaja. Če "
-"je čas ustvarjanja potrdila pred časom ustvarjanja uporabniškega računa, "
-"prijava ne bo uspešna."
+"Pred izvajanjem spodnjih korakov se prepričajte, da uporabniški račun "
+"Active Directory, ki ga želite uporabiti za prijavo s pametno kartico, "
+"obstaja. Če je čas ustvarjanja potrdila pred časom ustvarjanja "
+"uporabniškega računa, prijava ne bo uspešna."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:93
 msgid ""
@@ -16471,10 +16557,10 @@ msgid ""
 "alternative-name>`` corresponds typically to the ``commonName`` and "
 "``userPrincipalName`` attribute of the Active Directory user account."
 msgstr ""
-"Vrednost ``<algorithm>`` je uporabljeni algoritem z njegovo dolžino ključa, "
-"npr. ``rsa2048``. Vrednosti ``<subject-name>`` in ``<subject-alternative-"
-"name>`` običajno ustrezata atributu ``commonName`` in ``userPrincipalName`` "
-"uporabniškega računa Active Directory."
+"Vrednost ``<algorithm>`` je uporabljeni algoritem z njegovo dolžino "
+"ključa, npr. ``rsa2048``. Vrednosti ``<subject-name>`` in ``<subject-"
+"alternative-name>`` običajno ustrezata atributu ``commonName`` in "
+"``userPrincipalName`` uporabniškega računa Active Directory."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:104
 msgid ""
@@ -16488,8 +16574,9 @@ msgid ""
 "for smartcard logon. The value of ``<file>`` is the certificate singing "
 "request file."
 msgstr ""
-"Vrednost ``<template-name>`` je ime predloge potrdila za prijavo s pametno "
-"kartico. Vrednost ``<file>`` je datoteka z zahtevo za izdajo potrdila."
+"Vrednost ``<template-name>`` je ime predloge potrdila za prijavo s "
+"pametno kartico. Vrednost ``<file>`` je datoteka z zahtevo za izdajo "
+"potrdila."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:113
 msgid "Write the signed certificate to the Nitrokey with the command below."
@@ -16502,7 +16589,8 @@ msgstr "Vrednost ``<file>`` je datoteka s potrdilom."
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:123
 msgid "Revoke smartcard logon for use with Active Directory (AD)"
 msgstr ""
-"Preklic prijave s pametno kartico za uporabo z imenikom Active Directory (AD)"
+"Preklic prijave s pametno kartico za uporabo z imenikom Active Directory "
+"(AD)"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:125
 msgid ""
@@ -16511,19 +16599,19 @@ msgid ""
 "which adds them to the configured Certificate Revocation List (CRL). This"
 " is required in case of a lost or broken Nitrokey."
 msgstr ""
-"Izdana potrdila za prijavo uporabnikov so navedena v storitvi ADCS (Active "
-"Directory Certificate Services). V sistemu ADCS je mogoče potrdila "
-"preklicati, s čimer se dodajo na konfigurirani seznam preklicanih potrdil "
-"(CRL). To je potrebno v primeru izgubljenega ali poškodovanega ključa "
-"Nitrokey."
+"Izdana potrdila za prijavo uporabnikov so navedena v storitvi ADCS "
+"(Active Directory Certificate Services). V sistemu ADCS je mogoče "
+"potrdila preklicati, s čimer se dodajo na konfigurirani seznam "
+"preklicanih potrdil (CRL). To je potrebno v primeru izgubljenega ali "
+"poškodovanega ključa Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:130
 msgid ""
 "It is strongly advised to never leave unused user certificates without "
 "revoking them."
 msgstr ""
-"Priporočljivo je, da nikoli ne puščate neuporabljenih uporabniških potrdil, "
-"ne da bi jih preklicali."
+"Priporočljivo je, da nikoli ne puščate neuporabljenih uporabniških "
+"potrdil, ne da bi jih preklicali."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:133
 msgid ""
@@ -16543,8 +16631,8 @@ msgid ""
 "In the navigation pane expand the certificate authority (CA) and navigate"
 " to **Issued Certificates**."
 msgstr ""
-"V navigacijskem podoknu razširite overitelja potrdil (CA) in pojdite na **"
-"Izdana potrdila**."
+"V navigacijskem podoknu razširite overitelja potrdil (CA) in pojdite na "
+"**Izdana potrdila**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:140
 msgid "In the detail pane select the user certificate you want to revoke."
@@ -16554,8 +16642,7 @@ msgstr ""
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:141
 msgid "In the menu bar click **Action → All Tasks → Revoke Certificate**."
-msgstr ""
-"V menijski vrstici kliknite **Action → All Tasks → Revoke Certificate**."
+msgstr "V menijski vrstici kliknite **Action → All Tasks → Revoke Certificate**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:142
 msgid ""
@@ -16584,13 +16671,13 @@ msgid ""
 "and updates them if the CRL is about to expire. Hence a revocation is not"
 " immediate and depends on the expiration of the CRL the client has."
 msgstr ""
-"Med vsakim poskusom prijave s pametno kartico sistem Windows preveri, ali je "
-"potrdilo, ki ga predstavlja pametna kartica, uvrščeno na seznam preklicanih "
-"potrdil (CRL). Če je potrdilo na seznamu CRL, je prijava zavrnjena. Vsak "
-"seznam CRL vsebuje veljavnost, zaradi katere preneha veljati. Windows "
-"poiskane CRL shrani v predpomnilnik in jih posodobi, če CRL kmalu poteče. "
-"Zato preklic ni takojšen in je odvisen od poteka veljavnosti CRL, ki ga ima "
-"odjemalec."
+"Med vsakim poskusom prijave s pametno kartico sistem Windows preveri, ali"
+" je potrdilo, ki ga predstavlja pametna kartica, uvrščeno na seznam "
+"preklicanih potrdil (CRL). Če je potrdilo na seznamu CRL, je prijava "
+"zavrnjena. Vsak seznam CRL vsebuje veljavnost, zaradi katere preneha "
+"veljati. Windows poiskane CRL shrani v predpomnilnik in jih posodobi, če "
+"CRL kmalu poteče. Zato preklic ni takojšen in je odvisen od poteka "
+"veljavnosti CRL, ki ga ima odjemalec."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:156
 msgid "Import a user smartcard certificate to the personal certificate store"
@@ -16624,8 +16711,8 @@ msgid ""
 "In the navigation pane expand the **Personal** key store and navigate to "
 "**Certificates**."
 msgstr ""
-"V navigacijskem podoknu razširite shrambo ključev **Personal** in pojdite na "
-"**Certificates**."
+"V navigacijskem podoknu razširite shrambo ključev **Personal** in pojdite"
+" na **Certificates**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:166
 msgid "In the menu bar click **Action → All Tasks → Import**."
@@ -16647,10 +16734,10 @@ msgid ""
 "corresponds to this certificate.* indicating that the private on the "
 "Nitrokey could be identified."
 msgstr ""
-"Po končanem uvozu preverite podokno s podrobnostmi za uvoženo potrdilo. Če "
-"je Nitrokey povezan, bi moralo biti v lastnostih potrdila prikazano "
-"sporočilo *You have a private key that corresponds to this certificate.*, ki "
-"nakazuje, da je bilo mogoče identificirati zasebni na Nitrokeyu."
+"Po končanem uvozu preverite podokno s podrobnostmi za uvoženo potrdilo. "
+"Če je Nitrokey povezan, bi moralo biti v lastnostih potrdila prikazano "
+"sporočilo *You have a private key that corresponds to this certificate.*,"
+" ki nakazuje, da je bilo mogoče identificirati zasebni na Nitrokeyu."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:171
 msgid "PowerShell"
@@ -16665,16 +16752,16 @@ msgid ""
 "Change to the personal certficate store of the user with ``Set-Location "
 "-Path cert:\\CurrentUser\\My``."
 msgstr ""
-"Sprememba v osebno shrambo potrdil uporabnika s ``Set-Location -Path cert:"
-"\\CurrentUser\\My``."
+"Sprememba v osebno shrambo potrdil uporabnika s ``Set-Location -Path "
+"cert:\\CurrentUser\\My``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:175
 msgid ""
 "Import the certificate to the store with ``Import-Certificate -Filepath "
 "'<path>'``, replacing ``<path>`` with the certificate file path."
 msgstr ""
-"Uvozite potrdilo v shrambo s ``Import-Certificate -Filepath '<path>'``, pri "
-"čemer ``<path>`` nadomestite s potjo do datoteke potrdila."
+"Uvozite potrdilo v shrambo s ``Import-Certificate -Filepath '<path>'``, "
+"pri čemer ``<path>`` nadomestite s potjo do datoteke potrdila."
 
 #: ../nitrokey3/windows/piv/guides/index.rst:2
 msgid "Guides"
@@ -16690,9 +16777,9 @@ msgid ""
 "publication `SP 800-73 "
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 msgstr ""
-"*Osebno preverjanje identitete* (PIV) temelji na posebni publikaciji NIST `"
-"SP 800-73 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP."
-"800-73-4.pdf>`__."
+"*Osebno preverjanje identitete* (PIV) temelji na posebni publikaciji NIST"
+" `SP 800-73 "
+"<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 
 #: ../nitrokey3/windows/piv/key_management.rst:5
 msgid "Key Slots"
@@ -16704,8 +16791,8 @@ msgid ""
 "each purpose the private key and its corresponding certificate are stored"
 " in a key slot."
 msgstr ""
-"Aplikacija PIV lahko hrani potrdila za različne namene. Za vsak namen sta "
-"zasebni ključ in ustrezno potrdilo shranjena v reži za ključe."
+"Aplikacija PIV lahko hrani potrdila za različne namene. Za vsak namen sta"
+" zasebni ključ in ustrezno potrdilo shranjena v reži za ključe."
 
 #: ../nitrokey3/windows/piv/key_management.rst:11
 msgid "Slot"
@@ -16729,9 +16816,9 @@ msgid ""
 "management applications and are still there to provide backward "
 "compatibility."
 msgstr ""
-"Zasebni ključi in potrdila v teh režah so se uporabljali za aplikacije za "
-"upravljanje ključev in so še vedno tam zaradi zagotavljanja združljivosti za "
-"nazaj."
+"Zasebni ključi in potrdila v teh režah so se uporabljali za aplikacije za"
+" upravljanje ključev in so še vedno tam zaradi zagotavljanja "
+"združljivosti za nazaj."
 
 #: ../nitrokey3/windows/piv/key_management.rst:17
 msgid "9a"
@@ -16762,8 +16849,8 @@ msgid ""
 "The private key and certificate in this slot are used to sign emails and "
 "files."
 msgstr ""
-"Zasebni ključ in potrdilo v tej reži se uporabljata za podpisovanje e-"
-"poštnih sporočil in datotek."
+"Zasebni ključ in potrdilo v tej reži se uporabljata za podpisovanje "
+"e-poštnih sporočil in datotek."
 
 #: ../nitrokey3/windows/piv/key_management.rst:23
 msgid "9d"
@@ -16774,8 +16861,8 @@ msgid ""
 "The private key and certificate in this slot are used to encrypt emails "
 "and files."
 msgstr ""
-"Zasebni ključ in potrdilo v tej reži se uporabljata za šifriranje e-poštnih "
-"sporočil in datotek."
+"Zasebni ključ in potrdilo v tej reži se uporabljata za šifriranje "
+"e-poštnih sporočil in datotek."
 
 #: ../nitrokey3/windows/piv/key_management.rst:26
 msgid "9e"
@@ -16791,9 +16878,9 @@ msgid ""
 "operations, such as building access or time recording. Support from the "
 "respective system is a prerequisite."
 msgstr ""
-"Zasebni ključ in potrdilo v tej reži se uporabljata za fizične operacije, "
-"kot sta dostop do stavbe ali beleženje časa. Pogoj je podpora ustreznega "
-"sistema."
+"Zasebni ključ in potrdilo v tej reži se uporabljata za fizične operacije,"
+" kot sta dostop do stavbe ali beleženje časa. Pogoj je podpora ustreznega"
+" sistema."
 
 #: ../nitrokey3/windows/piv/key_management.rst:33
 msgid "Algorithms"
@@ -16805,9 +16892,9 @@ msgid ""
 "asymmetric algorithms are used for the user private keys and the "
 "symmetric algorithms for the management key."
 msgstr ""
-"Aplikacija PIV uporablja asimetrične in simetrične algoritme. Asimetrični "
-"algoritmi se uporabljajo za zasebne ključe uporabnikov, simetrični pa za "
-"ključ upravljanja."
+"Aplikacija PIV uporablja asimetrične in simetrične algoritme. Asimetrični"
+" algoritmi se uporabljajo za zasebne ključe uporabnikov, simetrični pa za"
+" ključ upravljanja."
 
 #: ../nitrokey3/windows/piv/key_management.rst:38
 msgid "Supported asymmetric key algorithms:"
@@ -16847,9 +16934,9 @@ msgid ""
 " with the subject name ``John Doe`` and subject alternative name "
 "``jd@nitrokey.local``."
 msgstr ""
-"Spodnji ukaz bo ustvaril zasebni ključ v reži za ključe ``9a`` za uporabnika "
-"z imenom subjekta ``John Doe`` in alternativnim imenom subjekta ``jd@nitrokey"
-".local``."
+"Spodnji ukaz bo ustvaril zasebni ključ v reži za ključe ``9a`` za "
+"uporabnika z imenom subjekta ``John Doe`` in alternativnim imenom "
+"subjekta ``jd@nitrokey.local``."
 
 #: ../nitrokey3/shared/set-pins.rst.inc:4
 msgid "Settings PIN with Windows Settings application"
@@ -24280,6 +24367,179 @@ msgstr ""
 "Za dostop do vnosa lahko zahtevate tudi prisotnost uporabnika v obliki "
 "obveznega dotika na tipki Nitrokey 3, tako da potrdite polje \"Zahtevati "
 "prisotnost uporabnika\"."
+
+#: ../software/nk-app2/pin.rst:2
+msgid "PIN Settings for FIDO2 and OTP in the Nitrokey App 2"
+msgstr "Nastavitve PIN za FIDO2 in OTP v aplikaciji Nitrokey 2"
+
+#: ../software/nk-app2/pin.rst:5
+msgid ""
+"These instructions describe how to set or change the PINs for FIDO2 and "
+"OTP in the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr ""
+"Ta navodila opisujejo, kako nastaviti ali spremeniti kode PIN za FIDO2 in "
+"OTP v aplikaciji `Nitrokey App 2 </software/nk-app2/>`__."
+
+#: ../software/nk-app2/pin.rst:9
+msgid ""
+"This function is not yet available in the current release of the "
+"`Nitrokey App 2 </software/nk-app2/>`__ version 2.3.0"
+msgstr ""
+"Ta funkcija v trenutni izdaji aplikacije `Nitrokey App 2 </software/nk-app2/"
+">`__ različica 2.3.0 še ni na voljo."
+
+#: ../software/nk-app2/pin.rst:10
+msgid ""
+"The function is expected to be available in the release of the `Nitrokey "
+"App 2 </software/nk-app2/>`__  version 2.3.1"
+msgstr ""
+"Funkcija naj bi bila na voljo v izdaji aplikacije `Nitrokey App 2 </software/"
+"nk-app2/>`__ različica 2.3.1."
+
+#: ../software/nk-app2/pin.rst:14
+msgid ""
+"Each function FIDO2, OTP or OpenPGP Card is assigned a separate PIN, "
+"which is managed separately."
+msgstr ""
+"Vsaki funkciji kartice FIDO2, OTP ali OpenPGP je dodeljen ločen PIN, ki se "
+"upravlja ločeno."
+
+#: ../software/nk-app2/pin.rst:17
+msgid "First Steps:"
+msgstr "Prvi koraki:"
+
+#: ../software/nk-app2/pin.rst:19
+msgid "Open the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr "Odprite aplikacijo `Nitrokey 2 </software/nk-app2/>`__."
+
+#: ../software/nk-app2/pin.rst:20
+msgid "Select the Nitrokey 3."
+msgstr "Izberite tipko Nitrokey 3."
+
+#: ../software/nk-app2/pin.rst:21
+msgid "Select the ``SETTINGS`` tab."
+msgstr "Izberite zavihek ``SETTINGS``."
+
+#: ../software/nk-app2/pin.rst:22
+msgid ""
+"On the left-hand side of the ``SETTINGS`` tab, a tree structure with "
+"various options is available."
+msgstr ""
+"Na levi strani zavihka ``SETTINGS`` je na voljo drevesna struktura z "
+"različnimi možnostmi."
+
+#: ../software/nk-app2/pin.rst:26
+msgid "FIDO2 PIN Settings"
+msgstr "Nastavitve PIN FIDO2"
+
+#: ../software/nk-app2/pin.rst:28
+msgid "Select ``FIDO2``."
+msgstr "Izberite ``FIDO2``."
+
+#: ../software/nk-app2/pin.rst:29
+msgid ""
+"A branch with ``FIDO2 PIN SETTINGS`` opens below ``FIDO2``. The status of"
+" the FIDO2 PIN is now available on the left-hand side of the ``SETTINGS``"
+" tab, including a short description."
+msgstr ""
+"Pod ``FIDO2`` se odpre veja z ``FIDO2 PIN SETTINGS``. Na levi strani zavihka "
+"``SETTINGS`` je zdaj na voljo stanje kode PIN FIDO2, vključno s kratkim "
+"opisom."
+
+#: ../software/nk-app2/pin.rst:30
+msgid "Select ``FIDO2 PIN SETTINGS`` to set or change the PIN."
+msgstr "Izberite ``FIDO2 PIN SETTINGS`` za nastavitev ali spremembo kode PIN."
+
+#: ../software/nk-app2/pin.rst:31
+msgid ""
+"Depending on the status of the Fido2 PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr ""
+"Glede na stanje Fido2 PIN se prikaže vnosna maska za nastavitev ali "
+"spremembo kode PIN."
+
+#: ../software/nk-app2/pin.rst:33
+msgid ""
+"To set the FIDO2 PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr ""
+"Če želite nastaviti kodo PIN FIDO2, vnesite novo kodo PIN in jo ponovite v "
+"predvidenih poljih. Če želite spremeniti kodo PIN, v predvideno polje "
+"vnesite trenutno kodo PIN."
+
+#: ../software/nk-app2/pin.rst:33 ../software/nk-app2/pin.rst:49
+msgid "PIN length minimum 4 characters"
+msgstr "Dolžina kode PIN najmanj 4 znaki"
+
+#: ../software/nk-app2/pin.rst:34 ../software/nk-app2/pin.rst:50
+msgid "If the repetition of the new PIN is not correct, it will not be accepted."
+msgstr "Če ponovitev nove kode PIN ni pravilna, ne bo sprejeta."
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:53
+msgid "Select the ``SAVE`` button."
+msgstr "Izberite gumb ``SAVE``."
+
+#: ../software/nk-app2/pin.rst:36 ../software/nk-app2/pin.rst:52
+msgid "If the ``SAVE`` button is greyed out, the entries are not correct."
+msgstr "Če je gumb ``SAVE`` siv, vnosi niso pravilni."
+
+#: ../software/nk-app2/pin.rst:37 ../software/nk-app2/pin.rst:53
+msgid "When you hover over the ``SAVE`` button, a list of reasons is displayed."
+msgstr "Ko se pomaknete nad gumb ``SAVE``, se prikaže seznam razlogov."
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:54
+msgid ""
+"The ``PIN_INVALID`` error message, when changing the PIN, indicates that "
+"the current PIN is incorrect."
+msgstr ""
+"Sporočilo o napaki ``PIN_INVALID`` pri spreminjanju kode PIN pomeni, da je "
+"trenutna koda PIN napačna."
+
+#: ../software/nk-app2/pin.rst:41
+msgid "OTP PIN Settings"
+msgstr "Nastavitve kode PIN OTP"
+
+#: ../software/nk-app2/pin.rst:44
+msgid "Select ``OTP``."
+msgstr "Izberite ``OTP``."
+
+#: ../software/nk-app2/pin.rst:44
+msgid ""
+"A branch with ``OTP PIN SETTINGS`` opens below ``OTP``. The status of the"
+" OTP PIN is now available on the left-hand side of the ``SETTINGS`` tab, "
+"including a short description."
+msgstr ""
+"Pod ``OTP`` se odpre veja z ``OTP PIN SETTINGS``. Na levi strani zavihka "
+"``SETTINGS`` je zdaj na voljo stanje kode OTP PIN, vključno s kratkim opisom."
+
+#: ../software/nk-app2/pin.rst:45
+msgid ""
+"Information about the version, serial number and PIN attempt counter is "
+"also available."
+msgstr ""
+"Na voljo so tudi informacije o različici, serijski številki in števcu "
+"poskusov PIN."
+
+#: ../software/nk-app2/pin.rst:46
+msgid "Select ``OTP PIN SETTINGS`` to set or change the PIN."
+msgstr "Izberite ``OTP PIN SETTINGS`` za nastavitev ali spremembo kode PIN."
+
+#: ../software/nk-app2/pin.rst:47
+msgid ""
+"Depending on the status of the OTP PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr ""
+"Glede na stanje kode OTP PIN se prikaže vnosna maska za nastavitev ali "
+"spremembo kode PIN."
+
+#: ../software/nk-app2/pin.rst:49
+msgid ""
+"To set the OTP PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr ""
+"Če želite nastaviti kodo PIN OTP, vnesite novo kodo PIN in jo ponovite v "
+"predvidenih poljih. Če želite spremeniti kodo PIN, v predvideno polje "
+"vnesite trenutno kodo PIN."
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst.inc:6
 msgid ""

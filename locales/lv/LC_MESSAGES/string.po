@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
-"PO-Revision-Date: 2024-05-24 12:50+0000\n"
+"POT-Creation-Date: 2024-05-30 15:52+0200\n"
+"PO-Revision-Date: 2024-05-30 15:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Latvian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/lv/>\n"
@@ -888,7 +888,9 @@ msgstr ""
 "netiek saglabāti."
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "Kā atjaunināt"
 
@@ -962,6 +964,7 @@ msgstr ""
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -13396,6 +13399,82 @@ msgstr ""
 "--reload-rules && udevadm trigger`` vai restartējiet datoru. Pēc tam "
 "atjauninājumam vajadzētu darboties bez atļaujas problēmas."
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr "Programmatūras atjaunināšana ar Qubes OS"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr ""
+"Šajā rokasgrāmatā aprakstīts, kā atjaunināt Nitrokey 3 programmaparatūru "
+"ar nitropy Qubes OS."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr ""
+"Lūdzu, pirms tam izlasiet vispārīgos `firmware update instructions`_! Tā "
+"kā konkrētām versijām ir ierobežojumi attiecībā uz to, kādus datus ir "
+"iespējams migrēt uz jauno versiju."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+msgid "Setup"
+msgstr "Iestatīšana"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr ""
+"Instalējiet nitropy izvēlētajā virtuālajā datorā, sekojot `instalēšanas "
+"norādījumiem`_."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr ""
+"Nekad neatvienojiet Nitrokey 3 vai nepārtrauciet procesu atjaunināšanas "
+"laikā, jo tas, visticamāk, padarīs ierīci nelietojamu!"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr "Palaist ``nitropy nk3 reboot --bootloader`` lietotnes VM."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr ""
+"Pēc norādījuma ``nitropy`` pieskarieties ierīcei, lai aktivizētu "
+"bootloader."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr "Tas atdalīs nitrokey no lietotnes VM, un bootloader parādīsies sys-usb."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr "Programmas VM pievienojiet sākumiekrāvēju"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr ""
+"Palaidiet ``nitropy nk3 update`` un izpildiet norādījumus. Tas pārstartēs"
+" Nitrokey, lai galu galā pabeigtu atjaunināšanu."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr "Atkārtoti pievienojiet Nitrokey atpakaļ lietotnei VM"
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"
 msgstr "Nitrokey 3 ar Linux"
@@ -16043,9 +16122,9 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"Uz *PIN* attiecas atkārtotu mēģinājumu skaitītāja ierobežojums. Lai uzzinātu "
-"vairāk, lūdzu, skatiet nodaļu `Retry Counter <access_control.html#retry-"
-"counter>`__."
+"Uz *PIN* attiecas atkārtotu mēģinājumu skaitītāja ierobežojums. Lai "
+"uzzinātu vairāk, lūdzu, skatiet nodaļu `Retry Counter "
+"<access_control.html#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:40
 msgid "On the terminal enter ``nitropy nk3 piv change-pin``."
@@ -16061,9 +16140,9 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"Uz *PUK* attiecas atkārtotu mēģinājumu skaitītāja ierobežojums. Lai uzzinātu "
-"vairāk, lūdzu, skatiet nodaļu `Retry Counter <access_control.html#retry-"
-"counter>`__."
+"Uz *PUK* attiecas atkārtotu mēģinājumu skaitītāja ierobežojums. Lai "
+"uzzinātu vairāk, lūdzu, skatiet nodaļu `Retry Counter "
+"<access_control.html#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:58
 msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
@@ -16079,8 +16158,8 @@ msgid ""
 " for every failed login attempt. A retry counter of zero means that there"
 " are no attempts left."
 msgstr ""
-"Atkārtotu mēģinājumu skaitītājs tiek izmantots *PIN* un *PUK*. Skaitītājs "
-"samazinās par katru neveiksmīgu pieteikšanās mēģinājumu. Ja atkārtotu "
+"Atkārtotu mēģinājumu skaitītājs tiek izmantots *PIN* un *PUK*. Skaitītājs"
+" samazinās par katru neveiksmīgu pieteikšanās mēģinājumu. Ja atkārtotu "
 "mēģinājumu skaitītāja vērtība ir nulle, tas nozīmē, ka vairs nav neviena "
 "mēģinājuma."
 
@@ -16097,8 +16176,8 @@ msgid ""
 "To unblock the *PIN*, use the command ``nitropy nk3 piv reset-retry-"
 "counter``. This command requires the *PUK*."
 msgstr ""
-"Lai atbloķētu *PIN kodu*, izmantojiet komandu ``nitropy nk3 piv reset-retry-"
-"counter``. Šai komandai ir nepieciešams *PUK*."
+"Lai atbloķētu *PIN kodu*, izmantojiet komandu ``nitropy nk3 piv reset-"
+"retry-counter``. Šai komandai ir nepieciešams *PUK*."
 
 #: ../nitrokey3/windows/piv/access_control.rst:74
 msgid ""
@@ -16107,10 +16186,10 @@ msgid ""
 "defaults. Please refer to the chapter `Factory Reset "
 "<factory_reset.html>`__ to learn more."
 msgstr ""
-"*PUK* ir 3 mēģinājumu atkārtojumu skaitītājs. Ja šie mēģinājumi ir izsmelti, "
-"PIV karti vairs nevar izmantot, un ir jāatjauno rūpnīcas noklusējuma "
-"iestatījumi. Lai uzzinātu vairāk, lūdzu, skatiet nodaļu `Rūpnīcas "
-"atiestatīšana <factory_reset.html>`__."
+"*PUK* ir 3 mēģinājumu atkārtojumu skaitītājs. Ja šie mēģinājumi ir "
+"izsmelti, PIV karti vairs nevar izmantot, un ir jāatjauno rūpnīcas "
+"noklusējuma iestatījumi. Lai uzzinātu vairāk, lūdzu, skatiet nodaļu "
+"`Rūpnīcas atiestatīšana <factory_reset.html>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:80
 msgid "Management Key (MGM)"
@@ -16126,17 +16205,17 @@ msgid ""
 "the management key. The authentication is done with ``nitropy nk3 piv "
 "admin-auth``."
 msgstr ""
-"Pirms pārvaldības darbību veikšanas ir jāveic autentifikācija, izmantojot "
-"pārvaldības atslēgu. Autentifikācija tiek veikta, izmantojot ``nitropy nk3 "
-"piv admin-auth``."
+"Pirms pārvaldības darbību veikšanas ir jāveic autentifikācija, izmantojot"
+" pārvaldības atslēgu. Autentifikācija tiek veikta, izmantojot ``nitropy "
+"nk3 piv admin-auth``."
 
 #: ../nitrokey3/windows/piv/access_control.rst:87
 msgid ""
 "The management key can be changed with ``nitropy nk3 piv change-admin-"
 "key``."
 msgstr ""
-"Pārvaldības atslēgu var mainīt, izmantojot ``nitropy nk3 piv change-admin-"
-"key``."
+"Pārvaldības atslēgu var mainīt, izmantojot ``nitropy nk3 piv change-"
+"admin-key``."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:2
 msgid "Certificate Management"
@@ -16149,8 +16228,8 @@ msgid ""
 "layer and about 6kB."
 msgstr ""
 "Katrai privātajai atslēgai ir piesaistīts sertifikāts. Sertifikātus var "
-"lasīt un rakstīt. Sertifikāta lielumu ierobežo transporta slānis, un tas ir "
-"aptuveni 6 kB."
+"lasīt un rakstīt. Sertifikāta lielumu ierobežo transporta slānis, un tas "
+"ir aptuveni 6 kB."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:9
 msgid "Read Certificate"
@@ -16173,8 +16252,8 @@ msgid ""
 "The PIV application can be reset to factory defaults. It can only be "
 "reset if the PIN and PUK are blocked."
 msgstr ""
-"PIV lietojumprogrammā var atjaunot rūpnīcas noklusējuma iestatījumus. To var "
-"atiestatīt tikai tad, ja PIN un PUK ir bloķēti."
+"PIV lietojumprogrammā var atjaunot rūpnīcas noklusējuma iestatījumus. To "
+"var atiestatīt tikai tad, ja PIN un PUK ir bloķēti."
 
 #: ../nitrokey3/windows/piv/factory_reset.rst:8
 msgid ""
@@ -16193,8 +16272,8 @@ msgid ""
 "This document explains how to use the PIV application of a Nitrokey 3 for"
 " smartcard logon with Active Directory."
 msgstr ""
-"Šajā dokumentā ir izskaidrots, kā izmantot Nitrokey 3 PIV lietojumprogrammu "
-"viedkaršu pieteikšanai ar Active Directory."
+"Šajā dokumentā ir izskaidrots, kā izmantot Nitrokey 3 PIV "
+"lietojumprogrammu viedkaršu pieteikšanai ar Active Directory."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:6
 msgid ""
@@ -16214,13 +16293,13 @@ msgid ""
 "refer to `the firmware update documentation <firmware-update.html"
 "#firmware-release-types>`__ for more information."
 msgstr ""
-"Nitrokey 3 PIV lietojumprogramma pašlaik tiek uzskatīta par nestabilu un nav "
-"pieejama stabilās programmaparatūras versijās. Lai iegūtu šo "
+"Nitrokey 3 PIV lietojumprogramma pašlaik tiek uzskatīta par nestabilu un "
+"nav pieejama stabilās programmaparatūras versijās. Lai iegūtu šo "
 "funkcionalitāti, ir jāinstalē testa programmaparatūra. Turpmākie "
-"programmaparatūras atjauninājumi var izraisīt datu un kriptogrāfisko atslēgu "
-"zudumu. Lai iegūtu vairāk informācijas, lūdzu, skatiet `programmaparatūras "
-"atjaunināšanas dokumentāciju <firmware-update.html#firmware-release-"
-"types>`__."
+"programmaparatūras atjauninājumi var izraisīt datu un kriptogrāfisko "
+"atslēgu zudumu. Lai iegūtu vairāk informācijas, lūdzu, skatiet "
+"`programmaparatūras atjaunināšanas dokumentāciju <firmware-update.html"
+"#firmware-release-types>`__."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:17
 msgid ""
@@ -16231,16 +16310,17 @@ msgid ""
 msgstr ""
 "Iestatīšanai ir nepieciešama administratīvā piekļuve datoriem, kuros "
 "darbojas Active Directory Directory Directory Services (ADDS) un Active "
-"Directory Certificate Services (ADCS). Klienta datorā ir nepieciešama tikai "
-"piekļuve attiecīgajam lietotāja kontam, kas tiek izmantots pieteikšanai."
+"Directory Certificate Services (ADCS). Klienta datorā ir nepieciešama "
+"tikai piekļuve attiecīgajam lietotāja kontam, kas tiek izmantots "
+"pieteikšanai."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
 "Windows server (supported versions are Windows Server 2016, 2019, 2022 in"
 " all editions)"
 msgstr ""
-"Windows serveris (atbalstītās versijas ir Windows Server 2016, 2019, 2022 "
-"visās redakcijās)"
+"Windows serveris (atbalstītās versijas ir Windows Server 2016, 2019, 2022"
+" visās redakcijās)"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:21
 msgid "ADDS role installed and configured."
@@ -16248,8 +16328,7 @@ msgstr "ADDS loma ir instalēta un konfigurēta."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid "ADCS role installed and *Enterprise-CA* with root certificate configured."
-msgstr ""
-"Uzstādīta ADCS loma un konfigurēts *Enterprise-CA* ar saknes sertifikātu."
+msgstr "Uzstādīta ADCS loma un konfigurēts *Enterprise-CA* ar saknes sertifikātu."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16257,8 +16336,8 @@ msgid ""
 "Controller Authentication*, and *Kerberos Authentication* certificate "
 "issued."
 msgstr ""
-"Katram domēna kontrolierim (DC) ir jābūt izsniegtam *domēna kontroliera*, *"
-"domēna kontroliera autentifikācijas* un *Kerberos autentifikācijas* "
+"Katram domēna kontrolierim (DC) ir jābūt izsniegtam *domēna kontroliera*,"
+" *domēna kontroliera autentifikācijas* un *Kerberos autentifikācijas* "
 "sertifikātam."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:24
@@ -16267,8 +16346,9 @@ msgid ""
 "full and delta certificate revocation lists (CRL) are retrievable from "
 "external networks."
 msgstr ""
-"Ja klienti atstāj uzņēmuma tīklu, pārliecinieties, ka publicētie pilnie un "
-"delta sertifikātu atsaukšanas saraksti (CRL) ir iegūstami no ārējiem tīkliem."
+"Ja klienti atstāj uzņēmuma tīklu, pārliecinieties, ka publicētie pilnie "
+"un delta sertifikātu atsaukšanas saraksti (CRL) ir iegūstami no ārējiem "
+"tīkliem."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:25
 msgid ""
@@ -16288,8 +16368,7 @@ msgstr "Nitrokey 3 ar PIV lietojumprogrammu."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:30
 msgid "Configure smartcard logon for use with Active Directory (AD)"
-msgstr ""
-"Konfigurēt viedkaršu pieteikšanos lietošanai kopā ar Active Directory (AD)"
+msgstr "Konfigurēt viedkaršu pieteikšanos lietošanai kopā ar Active Directory (AD)"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:32
 msgid ""
@@ -16331,7 +16410,8 @@ msgstr "Detalizētajā logā atlasiet veidni **Smartcard Logon**."
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:42
 msgid "In the menu bar click **Actions → All Tasks → Duplicate Template**."
 msgstr ""
-"Izvēlnes joslā noklikšķiniet uz **Darbības → Visi uzdevumi → Dublēt veidni**."
+"Izvēlnes joslā noklikšķiniet uz **Darbības → Visi uzdevumi → Dublēt "
+"veidni**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:43
 msgid "Set the settings below on the template, according to the mentioned tab."
@@ -16358,8 +16438,8 @@ msgid ""
 "If you want to use Elliptic Curve (EC) keys your clients must be not "
 "older than Windows Server 2008 and Windows Vista."
 msgstr ""
-"Ja vēlaties izmantot elipses līknes (EC) atslēgas, jūsu klienti nedrīkst būt "
-"vecāki par Windows Server 2008 un Windows Vista."
+"Ja vēlaties izmantot elipses līknes (EC) atslēgas, jūsu klienti nedrīkst "
+"būt vecāki par Windows Server 2008 un Windows Vista."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:54
 msgid "**General**"
@@ -16388,8 +16468,8 @@ msgstr "**Kriptogrāfija**"
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:60
 msgid "Set a provider category of **Key Storage Provider**."
 msgstr ""
-"Iestatiet pakalpojumu sniedzēja kategoriju **Atslēgu glabāšanas pakalpojumu "
-"sniedzējs**."
+"Iestatiet pakalpojumu sniedzēja kategoriju **Atslēgu glabāšanas "
+"pakalpojumu sniedzējs**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:61
 msgid "Set a algorithm name and minimum key size."
@@ -16401,9 +16481,9 @@ msgid ""
 "``2048`` Bit. If you choose to use Eliptic Curve (EC) keys you need to "
 "make additional changes on your client computers."
 msgstr ""
-"Microsoft iesaka izmantot RSA algoritmu ar atslēgas garumu ``2048`` Bitu. Ja "
-"izvēlaties izmantot Eliptic Curve (EC) atslēgas, klientu datoros ir jāveic "
-"papildu izmaiņas."
+"Microsoft iesaka izmantot RSA algoritmu ar atslēgas garumu ``2048`` Bitu."
+" Ja izvēlaties izmantot Eliptic Curve (EC) atslēgas, klientu datoros ir "
+"jāveic papildu izmaiņas."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:67
 msgid "**Subject Name**"
@@ -16432,15 +16512,16 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press"
 " Enter."
 msgstr ""
-"Komandrindē, PowerShell vai Run ievadiet ``certsrv.msc`` un nospiediet Enter."
+"Komandrindē, PowerShell vai Run ievadiet ``certsrv.msc`` un nospiediet "
+"Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:76
 msgid ""
 "In the navigation pane expand the Certificate Authority (CA) and navigate"
 " to **Certificate Templates**."
 msgstr ""
-"Navigācijas panelī izvērsiet sertifikātu iestādi (CA) un dodieties uz **"
-"Sertifikātu veidnes**."
+"Navigācijas panelī izvērsiet sertifikātu iestādi (CA) un dodieties uz "
+"**Sertifikātu veidnes**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:77
 msgid "In the menu bar click **Action → New → Certificate Template to Issue**."
@@ -16451,8 +16532,8 @@ msgstr ""
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:78
 msgid "Select the certificate template you want to issue and confirm with **OK**."
 msgstr ""
-"Izvēlieties sertifikāta veidni, kuru vēlaties izsniegt, un apstipriniet to "
-"ar **OK**."
+"Izvēlieties sertifikāta veidni, kuru vēlaties izsniegt, un apstipriniet "
+"to ar **OK**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:82
 msgid "Provision Nitrokey 3 for smartcard logon with Active Directory"
@@ -16469,7 +16550,8 @@ msgid ""
 msgstr ""
 "Lai pieteiktos ar viedkarti, lietotājam Active Directory ir jānodrošina "
 "Nitrokey atslēga. Tas ietver privāto atslēgu un sertifikāta dziedāšanas "
-"pieprasījuma (CSR) ģenerēšanu. Pēc tam sertifikāts tiek ierakstīts Nitrokey."
+"pieprasījuma (CSR) ģenerēšanu. Pēc tam sertifikāts tiek ierakstīts "
+"Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:89
 msgid ""
@@ -16488,8 +16570,8 @@ msgid ""
 "If the PIV application on the Nitrokey was not used before, perform a "
 "initialization with ``nitropy nk3 piv init`` first."
 msgstr ""
-"Ja PIV lietojumprogramma Nitrokey iepriekš nav izmantota, vispirms veiciet "
-"inicializāciju ar ``nitropy nk3 piv init``."
+"Ja PIV lietojumprogramma Nitrokey iepriekš nav izmantota, vispirms "
+"veiciet inicializāciju ar ``nitropy nk3 piv init``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:95
 msgid "Generate a private key and write the CSR to file with the command below."
@@ -16505,17 +16587,17 @@ msgid ""
 "``userPrincipalName`` attribute of the Active Directory user account."
 msgstr ""
 "Vērtība ``<algorithm>`` ir izmantotais algoritms ar tā atslēgas garumu, "
-"piemēram, ``rsa2048``. Vērtības ``<subject-name>`` un ``<subject-alternative-"
-"name>`` parasti atbilst ``commonName`` un ``userPrincipalName`` Active "
-"Directory lietotāja konta atribūtam."
+"piemēram, ``rsa2048``. Vērtības ``<subject-name>`` un ``<subject-"
+"alternative-name>`` parasti atbilst ``commonName`` un "
+"``userPrincipalName`` Active Directory lietotāja konta atribūtam."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:104
 msgid ""
 "Sign the CSR with the certificate authority (CA) of the domain with the "
 "command below."
 msgstr ""
-"Parakstiet CSR ar domēna sertifikātu iestādi (CA), izmantojot tālāk norādīto "
-"komandu."
+"Parakstiet CSR ar domēna sertifikātu iestādi (CA), izmantojot tālāk "
+"norādīto komandu."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:110
 msgid ""
@@ -16523,8 +16605,9 @@ msgid ""
 "for smartcard logon. The value of ``<file>`` is the certificate singing "
 "request file."
 msgstr ""
-"Vērtība ``<template-name>`` ir viedkartes pieteikšanās sertifikāta veidnes "
-"nosaukums. Vērtība ``<file>`` ir sertifikāta dziedāšanas pieprasījuma fails."
+"Vērtība ``<template-name>`` ir viedkartes pieteikšanās sertifikāta "
+"veidnes nosaukums. Vērtība ``<file>`` ir sertifikāta dziedāšanas "
+"pieprasījuma fails."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:113
 msgid "Write the signed certificate to the Nitrokey with the command below."
@@ -16538,8 +16621,7 @@ msgstr "``<file>`` vērtība ir sertifikāta fails."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:123
 msgid "Revoke smartcard logon for use with Active Directory (AD)"
-msgstr ""
-"Atcelt viedkaršu pieteikšanos izmantošanai kopā ar Active Directory (AD)"
+msgstr "Atcelt viedkaršu pieteikšanos izmantošanai kopā ar Active Directory (AD)"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:125
 msgid ""
@@ -16548,17 +16630,19 @@ msgid ""
 "which adds them to the configured Certificate Revocation List (CRL). This"
 " is required in case of a lost or broken Nitrokey."
 msgstr ""
-"Izsniegtie lietotāju pieteikšanās sertifikāti ir uzskaitīti Active Directory "
-"sertifikātu pakalpojumu (ADCS) sarakstā. Sertifikātus var atsaukt no ADCS, "
-"tādējādi tos iekļaujot konfigurētajā sertifikātu atsaukšanas sarakstā (CRL). "
-"Tas ir nepieciešams Nitrokey nozaudēšanas vai bojājuma gadījumā."
+"Izsniegtie lietotāju pieteikšanās sertifikāti ir uzskaitīti Active "
+"Directory sertifikātu pakalpojumu (ADCS) sarakstā. Sertifikātus var "
+"atsaukt no ADCS, tādējādi tos iekļaujot konfigurētajā sertifikātu "
+"atsaukšanas sarakstā (CRL). Tas ir nepieciešams Nitrokey nozaudēšanas vai"
+" bojājuma gadījumā."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:130
 msgid ""
 "It is strongly advised to never leave unused user certificates without "
 "revoking them."
 msgstr ""
-"Ieteicams nekad neatstāt neizmantotus lietotāja sertifikātus, tos neatsaucot."
+"Ieteicams nekad neatstāt neizmantotus lietotāja sertifikātus, tos "
+"neatsaucot."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:133
 msgid ""
@@ -16578,13 +16662,12 @@ msgid ""
 "In the navigation pane expand the certificate authority (CA) and navigate"
 " to **Issued Certificates**."
 msgstr ""
-"Navigācijas panelī izvērsiet sertifikātu iestādi (CA) un pārejiet uz **"
-"Izsniegtie sertifikāti**."
+"Navigācijas panelī izvērsiet sertifikātu iestādi (CA) un pārejiet uz "
+"**Izsniegtie sertifikāti**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:140
 msgid "In the detail pane select the user certificate you want to revoke."
-msgstr ""
-"Detalizētajā logā atlasiet lietotāja sertifikātu, kuru vēlaties atsaukt."
+msgstr "Detalizētajā logā atlasiet lietotāja sertifikātu, kuru vēlaties atsaukt."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:141
 msgid "In the menu bar click **Action → All Tasks → Revoke Certificate**."
@@ -16596,8 +16679,7 @@ msgstr ""
 msgid ""
 "Specifiy a reason for the revocation, date and time, and confirm with "
 "**Yes**."
-msgstr ""
-"Norādiet atsaukšanas iemeslu, datumu un laiku un apstipriniet ar **Jā**."
+msgstr "Norādiet atsaukšanas iemeslu, datumu un laiku un apstipriniet ar **Jā**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:143
 msgid "In the navigation pane navigate to **Revoked Certificates**."
@@ -16610,8 +16692,8 @@ msgstr "Izvēlnes joslā noklikšķiniet uz **Darbība → Visi uzdevumi → Pub
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:145
 msgid "Select the revocation list you want to publish and confirm with **OK**."
 msgstr ""
-"Izvēlieties atsaukšanas sarakstu, kuru vēlaties publicēt, un apstipriniet ar "
-"**OK**."
+"Izvēlieties atsaukšanas sarakstu, kuru vēlaties publicēt, un apstipriniet"
+" ar **OK**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:148
 msgid ""
@@ -16624,16 +16706,17 @@ msgid ""
 msgstr ""
 "Katra viedkartes pieteikšanās mēģinājuma laikā Windows pārbauda, vai "
 "viedkartes uzrādītais sertifikāts nav iekļauts sertifikātu atsaukšanas "
-"sarakstā (CRL). Ja sertifikāts ir atrodams CRL, pieteikšanās tiek atteikta. "
-"Katrā CRL ir norādīts derīguma termiņš, līdz kuram tie zaudē spēku. Windows "
-"kešatmiņā saglabā iegūtos CRL un atjaunina tos, ja CRL drīz beigsies. "
-"Tādējādi atsaukšana nav tūlītēja un ir atkarīga no klientam pieejamā CRL "
-"derīguma termiņa beigām."
+"sarakstā (CRL). Ja sertifikāts ir atrodams CRL, pieteikšanās tiek "
+"atteikta. Katrā CRL ir norādīts derīguma termiņš, līdz kuram tie zaudē "
+"spēku. Windows kešatmiņā saglabā iegūtos CRL un atjaunina tos, ja CRL "
+"drīz beigsies. Tādējādi atsaukšana nav tūlītēja un ir atkarīga no "
+"klientam pieejamā CRL derīguma termiņa beigām."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:156
 msgid "Import a user smartcard certificate to the personal certificate store"
 msgstr ""
-"Lietotāja viedkartes sertifikāta importēšana personīgajā sertifikātu krātuvē"
+"Lietotāja viedkartes sertifikāta importēšana personīgajā sertifikātu "
+"krātuvē"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:158
 msgid ""
@@ -16641,8 +16724,8 @@ msgid ""
 "the user's personal certificate store. In certain situations this is a "
 "required procedure."
 msgstr ""
-"Nitrokey glabāto lietotāja sertifikātu var importēt lietotāja personīgajā "
-"sertifikātu krātuvē. Noteiktās situācijās tā ir nepieciešama procedūra."
+"Nitrokey glabāto lietotāja sertifikātu var importēt lietotāja personīgajā"
+" sertifikātu krātuvē. Noteiktās situācijās tā ir nepieciešama procedūra."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:162
 msgid "MMC (certmgr.msc)"
@@ -16662,8 +16745,8 @@ msgid ""
 "In the navigation pane expand the **Personal** key store and navigate to "
 "**Certificates**."
 msgstr ""
-"Navigācijas panelī izvērsiet atslēgu krātuvi **Personal** un dodieties uz "
-"**Certificates**."
+"Navigācijas panelī izvērsiet atslēgu krātuvi **Personal** un dodieties uz"
+" **Certificates**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:166
 msgid "In the menu bar click **Action → All Tasks → Import**."
@@ -16674,8 +16757,8 @@ msgid ""
 "Follow the import wizard and provide the user certificate file when "
 "requested."
 msgstr ""
-"Izpildiet importa vedņa norādījumus un pēc pieprasījuma sniedziet lietotāja "
-"sertifikāta failu."
+"Izpildiet importa vedņa norādījumus un pēc pieprasījuma sniedziet "
+"lietotāja sertifikāta failu."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:168
 msgid ""
@@ -16686,9 +16769,9 @@ msgid ""
 "Nitrokey could be identified."
 msgstr ""
 "Pēc importa pabeigšanas pārbaudiet importētā sertifikāta detalizētu "
-"informāciju panelī. Ja Nitrokey ir savienots, sertifikāta īpašībās jāparādās "
-"ziņai *Jums ir privātā atslēga, kas atbilst šim sertifikātam.*, norādot, ka "
-"Nitrokey privāto var identificēt."
+"informāciju panelī. Ja Nitrokey ir savienots, sertifikāta īpašībās "
+"jāparādās ziņai *Jums ir privātā atslēga, kas atbilst šim sertifikātam.*,"
+" norādot, ka Nitrokey privāto var identificēt."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:171
 msgid "PowerShell"
@@ -16703,8 +16786,8 @@ msgid ""
 "Change to the personal certficate store of the user with ``Set-Location "
 "-Path cert:\\CurrentUser\\My``."
 msgstr ""
-"Izmaiņas lietotāja personīgajā sertifikātu krātuvē ar ``Set-Location -Path "
-"cert:\\CurrentUser\\My``."
+"Izmaiņas lietotāja personīgajā sertifikātu krātuvē ar ``Set-Location "
+"-Path cert:\\CurrentUser\\My``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:175
 msgid ""
@@ -16729,8 +16812,8 @@ msgid ""
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 msgstr ""
 "*Personas identitātes verifikācijas sistēma* (PIV) ir balstīta uz NIST "
-"speciālo publikāciju `SP 800-73 <https://nvlpubs.nist.gov/nistpubs/"
-"SpecialPublications/NIST.SP.800-73-4.pdf>`__."
+"speciālo publikāciju `SP 800-73 "
+"<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 
 #: ../nitrokey3/windows/piv/key_management.rst:5
 msgid "Key Slots"
@@ -16743,8 +16826,8 @@ msgid ""
 " in a key slot."
 msgstr ""
 "PIV lietojumprogrammā var glabāt sertifikātus dažādiem mērķiem. Katram "
-"mērķim privātā atslēga un tai atbilstošais sertifikāts tiek glabāti atslēgu "
-"slotā."
+"mērķim privātā atslēga un tai atbilstošais sertifikāts tiek glabāti "
+"atslēgu slotā."
 
 #: ../nitrokey3/windows/piv/key_management.rst:11
 msgid "Slot"
@@ -16769,8 +16852,8 @@ msgid ""
 "compatibility."
 msgstr ""
 "Privātās atslēgas un sertifikāti šajos slotos tika izmantoti atslēgu "
-"pārvaldības lietojumprogrammām, un tie joprojām ir pieejami, lai nodrošinātu "
-"atpakaļejošu savietojamību."
+"pārvaldības lietojumprogrammām, un tie joprojām ir pieejami, lai "
+"nodrošinātu atpakaļejošu savietojamību."
 
 #: ../nitrokey3/windows/piv/key_management.rst:17
 msgid "9a"
@@ -16813,8 +16896,8 @@ msgid ""
 "The private key and certificate in this slot are used to encrypt emails "
 "and files."
 msgstr ""
-"Šajā slotā esošā privātā atslēga un sertifikāts tiek izmantoti, lai šifrētu "
-"e-pasta ziņojumus un failus."
+"Šajā slotā esošā privātā atslēga un sertifikāts tiek izmantoti, lai "
+"šifrētu e-pasta ziņojumus un failus."
 
 #: ../nitrokey3/windows/piv/key_management.rst:26
 msgid "9e"
@@ -16844,9 +16927,9 @@ msgid ""
 "asymmetric algorithms are used for the user private keys and the "
 "symmetric algorithms for the management key."
 msgstr ""
-"PIV lietojumprogrammā tiek izmantoti asimetriski un simetriski algoritmi. "
-"Asimetriskie algoritmi tiek izmantoti lietotāju privātajām atslēgām, bet "
-"simetriskie - pārvaldības atslēgām."
+"PIV lietojumprogrammā tiek izmantoti asimetriski un simetriski algoritmi."
+" Asimetriskie algoritmi tiek izmantoti lietotāju privātajām atslēgām, bet"
+" simetriskie - pārvaldības atslēgām."
 
 #: ../nitrokey3/windows/piv/key_management.rst:38
 msgid "Supported asymmetric key algorithms:"
@@ -24345,6 +24428,179 @@ msgstr ""
 "Lai piekļūtu ierakstam, varat arī pieprasīt lietotāja klātbūtni, proti, "
 "pieskārienu Nitrokey 3, atzīmējot izvēles rūtiņu \"Pieprasīt lietotāja "
 "klātbūtni\"."
+
+#: ../software/nk-app2/pin.rst:2
+msgid "PIN Settings for FIDO2 and OTP in the Nitrokey App 2"
+msgstr "PIN iestatījumi FIDO2 un OTP lietotnē Nitrokey App 2"
+
+#: ../software/nk-app2/pin.rst:5
+msgid ""
+"These instructions describe how to set or change the PINs for FIDO2 and "
+"OTP in the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr ""
+"Šajos norādījumos aprakstīts, kā iestatīt vai mainīt PIN kodus FIDO2 un OTP "
+"lietotnē `Nitrokey App 2 </software/nk-app2/>`__."
+
+#: ../software/nk-app2/pin.rst:9
+msgid ""
+"This function is not yet available in the current release of the "
+"`Nitrokey App 2 </software/nk-app2/>`__ version 2.3.0"
+msgstr ""
+"Šī funkcija vēl nav pieejama pašreizējā `Nitrokey App 2 </software/nk-app2/>`"
+"__ versijā 2.3.0."
+
+#: ../software/nk-app2/pin.rst:10
+msgid ""
+"The function is expected to be available in the release of the `Nitrokey "
+"App 2 </software/nk-app2/>`__  version 2.3.1"
+msgstr ""
+"Paredzams, ka šī funkcija būs pieejama lietotnes `Nitrokey App 2 </software/"
+"nk-app2/>`__ versijā 2.3.1."
+
+#: ../software/nk-app2/pin.rst:14
+msgid ""
+"Each function FIDO2, OTP or OpenPGP Card is assigned a separate PIN, "
+"which is managed separately."
+msgstr ""
+"Katrai FIDO2, OTP vai OpenPGP kartei tiek piešķirts atsevišķs PIN kods, kas "
+"tiek pārvaldīts atsevišķi."
+
+#: ../software/nk-app2/pin.rst:17
+msgid "First Steps:"
+msgstr "Pirmie soļi:"
+
+#: ../software/nk-app2/pin.rst:19
+msgid "Open the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr "Atveriet `Nitrokey App 2 </software/nk-app2/>`__."
+
+#: ../software/nk-app2/pin.rst:20
+msgid "Select the Nitrokey 3."
+msgstr "Izvēlieties Nitrokey 3."
+
+#: ../software/nk-app2/pin.rst:21
+msgid "Select the ``SETTINGS`` tab."
+msgstr "Izvēlieties cilni ``SETTINGS``."
+
+#: ../software/nk-app2/pin.rst:22
+msgid ""
+"On the left-hand side of the ``SETTINGS`` tab, a tree structure with "
+"various options is available."
+msgstr ""
+"``SETTINGS`` cilnes kreisajā pusē ir pieejama koka struktūra ar dažādām "
+"opcijām."
+
+#: ../software/nk-app2/pin.rst:26
+msgid "FIDO2 PIN Settings"
+msgstr "FIDO2 PIN iestatījumi"
+
+#: ../software/nk-app2/pin.rst:28
+msgid "Select ``FIDO2``."
+msgstr "Atlasiet ``FIDO2``."
+
+#: ../software/nk-app2/pin.rst:29
+msgid ""
+"A branch with ``FIDO2 PIN SETTINGS`` opens below ``FIDO2``. The status of"
+" the FIDO2 PIN is now available on the left-hand side of the ``SETTINGS``"
+" tab, including a short description."
+msgstr ""
+"Atzarojums ar ``FIDO2 PIN SETTINGS`` atveras zem ``FIDO2``. Tagad "
+"``SETTINGS`` cilnes kreisajā pusē ir pieejams FIDO2 PIN statuss, tostarp īss "
+"apraksts."
+
+#: ../software/nk-app2/pin.rst:30
+msgid "Select ``FIDO2 PIN SETTINGS`` to set or change the PIN."
+msgstr "Lai iestatītu vai mainītu PIN kodu, izvēlieties ``FIDO2 PIN SETTINGS``."
+
+#: ../software/nk-app2/pin.rst:31
+msgid ""
+"Depending on the status of the Fido2 PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr ""
+"Atkarībā no Fido2 PIN statusa tagad tiek parādīta ievades maska, lai "
+"iestatītu vai mainītu PIN kodu."
+
+#: ../software/nk-app2/pin.rst:33
+msgid ""
+"To set the FIDO2 PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr ""
+"Lai iestatītu FIDO2 PIN kodu, ievadiet jauno PIN kodu un atkārtojiet to "
+"paredzētajos lodziņos. Lai mainītu PIN kodu, paredzētajā lodziņā ievadiet "
+"pašreizējo PIN kodu."
+
+#: ../software/nk-app2/pin.rst:33 ../software/nk-app2/pin.rst:49
+msgid "PIN length minimum 4 characters"
+msgstr "PIN koda garums vismaz 4 simboli"
+
+#: ../software/nk-app2/pin.rst:34 ../software/nk-app2/pin.rst:50
+msgid "If the repetition of the new PIN is not correct, it will not be accepted."
+msgstr "Ja jaunais PIN kods netiks pareizi atkārtots, tas netiks pieņemts."
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:53
+msgid "Select the ``SAVE`` button."
+msgstr "Izvēlieties ``SAVE`` pogu."
+
+#: ../software/nk-app2/pin.rst:36 ../software/nk-app2/pin.rst:52
+msgid "If the ``SAVE`` button is greyed out, the entries are not correct."
+msgstr "Ja poga ``SAVE`` ir pelēkā krāsā, ieraksti nav pareizi."
+
+#: ../software/nk-app2/pin.rst:37 ../software/nk-app2/pin.rst:53
+msgid "When you hover over the ``SAVE`` button, a list of reasons is displayed."
+msgstr "Uzliekot kursoru virs pogas ``SAVE``, tiek parādīts iemeslu saraksts."
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:54
+msgid ""
+"The ``PIN_INVALID`` error message, when changing the PIN, indicates that "
+"the current PIN is incorrect."
+msgstr ""
+"Kļūdas ziņojums ``PIN_INVALID``, mainot PIN kodu, norāda, ka pašreizējais "
+"PIN kods ir nepareizs."
+
+#: ../software/nk-app2/pin.rst:41
+msgid "OTP PIN Settings"
+msgstr "OTP PIN iestatījumi"
+
+#: ../software/nk-app2/pin.rst:44
+msgid "Select ``OTP``."
+msgstr "Atlasiet ``OTP``."
+
+#: ../software/nk-app2/pin.rst:44
+msgid ""
+"A branch with ``OTP PIN SETTINGS`` opens below ``OTP``. The status of the"
+" OTP PIN is now available on the left-hand side of the ``SETTINGS`` tab, "
+"including a short description."
+msgstr ""
+"Atzarojums ar ``OTP PIN SETTINGS`` atveras zem ``OTP``. OTP PIN kods tagad "
+"ir pieejams ``SETTINGS`` cilnes kreisajā pusē, tostarp īss apraksts."
+
+#: ../software/nk-app2/pin.rst:45
+msgid ""
+"Information about the version, serial number and PIN attempt counter is "
+"also available."
+msgstr ""
+"Pieejama arī informācija par versiju, sērijas numuru un PIN mēģinājumu "
+"skaitītāju."
+
+#: ../software/nk-app2/pin.rst:46
+msgid "Select ``OTP PIN SETTINGS`` to set or change the PIN."
+msgstr "Lai iestatītu vai mainītu PIN kodu, izvēlieties ``OTP PIN SETTINGS``."
+
+#: ../software/nk-app2/pin.rst:47
+msgid ""
+"Depending on the status of the OTP PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr ""
+"Atkarībā no OTP PIN statusa tagad tiek parādīta ievades maska PIN "
+"iestatīšanai vai maiņai."
+
+#: ../software/nk-app2/pin.rst:49
+msgid ""
+"To set the OTP PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr ""
+"Lai iestatītu OTP PIN kodu, ievadiet jauno PIN kodu un atkārtojiet to "
+"paredzētajos lodziņos. Lai mainītu PIN kodu, paredzētajā lodziņā ievadiet "
+"pašreizējo PIN kodu."
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst.inc:6
 msgid ""

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
-"PO-Revision-Date: 2024-05-24 09:50+0000\n"
+"POT-Creation-Date: 2024-05-30 15:52+0200\n"
+"PO-Revision-Date: 2024-05-30 15:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/ru/>\n"
@@ -899,7 +899,9 @@ msgstr ""
 "входа) в службу, если по какой-то причине ваши данные не сохраняются."
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "Как обновить"
 
@@ -975,6 +977,7 @@ msgstr ""
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -13565,6 +13568,84 @@ msgstr ""
 "&& udevadm trigger`` или перезагрузите машину. После этого обновление "
 "должно работать без проблем с разрешениями."
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr "Обновление прошивки с помощью Qubes OS"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr ""
+"В этом руководстве описано, как обновить прошивку Nitrokey 3 с помощью "
+"nitropy в Qubes OS."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr ""
+"пожалуйста, прочитайте общие инструкции по обновлению прошивки `! "
+"Поскольку для определенных версий существуют ограничения по переносу "
+"данных в новую версию."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+msgid "Setup"
+msgstr "Настройка"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr ""
+"Установите nitropy в выбранную вами виртуальную машину, следуя "
+"инструкциям по установке ``_."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr ""
+"Никогда не отключайте Nitrokey 3 и не прерывайте процесс обновления, так "
+"как это может вывести устройство из строя!"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr "Запустите ``nitropy nk3 reboot --bootloader`` в app VM."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr ""
+"По указанию ``nitropy`` прикоснитесь к устройству, чтобы активировать "
+"загрузчик."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr ""
+"Это отсоединит nitrokey от виртуальной машины приложения, и загрузчик "
+"появится в sys-usb."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr "Прикрепите загрузчик к виртуальной машине приложения."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr ""
+"Запустите ``nitropy nk3 update`` и следуйте инструкциям. Это перезагрузит"
+" Nitrokey для окончательной установки обновления."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr "Прикрепите Nitrokey обратно к приложению VM."
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"
 msgstr "Nitrokey 3 с Linux"
@@ -16190,8 +16271,8 @@ msgid ""
 "The following access matrix shows what authentication a certain operation"
 " requires."
 msgstr ""
-"Следующая матрица доступа показывает, какой аутентификации требует та или "
-"иная операция."
+"Следующая матрица доступа показывает, какой аутентификации требует та или"
+" иная операция."
 
 #: ../nitrokey3/windows/piv/access_control.rst:7
 msgid "MGM"
@@ -16252,9 +16333,9 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"На *PIN-код* распространяется ограничение счетчика повторных попыток. Для "
-"получения дополнительной информации см. главу `Счетчик повторных попыток "
-"<access_control.html#retry-counter>`__."
+"На *PIN-код* распространяется ограничение счетчика повторных попыток. Для"
+" получения дополнительной информации см. главу `Счетчик повторных попыток"
+" <access_control.html#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:40
 msgid "On the terminal enter ``nitropy nk3 piv change-pin``."
@@ -16270,9 +16351,9 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"При использовании *PUK* действует ограничение счетчика повторных попыток. "
-"Для получения дополнительной информации см. главу `Счетчик повторных попыток "
-"<access_control.html#retry-counter>`__."
+"При использовании *PUK* действует ограничение счетчика повторных попыток."
+" Для получения дополнительной информации см. главу `Счетчик повторных "
+"попыток <access_control.html#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:58
 msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
@@ -16289,8 +16370,8 @@ msgid ""
 " are no attempts left."
 msgstr ""
 "Счетчик повторных попыток используется для *PIN* и *PUK*. Счетчик "
-"уменьшается при каждой неудачной попытке входа в систему. Нулевое значение "
-"счетчика повторных попыток означает, что попыток не осталось."
+"уменьшается при каждой неудачной попытке входа в систему. Нулевое "
+"значение счетчика повторных попыток означает, что попыток не осталось."
 
 #: ../nitrokey3/windows/piv/access_control.rst:68
 msgid ""
@@ -16315,10 +16396,11 @@ msgid ""
 "defaults. Please refer to the chapter `Factory Reset "
 "<factory_reset.html>`__ to learn more."
 msgstr ""
-"На сайте *PUK* есть счетчик повторных попыток, состоящий из 3 попыток. Если "
-"эти попытки исчерпаны, PIV-карту больше нельзя использовать и необходимо "
-"сбросить заводские настройки по умолчанию. Для получения дополнительной "
-"информации см. главу `Factory Reset <factory_reset.html>`__."
+"На сайте *PUK* есть счетчик повторных попыток, состоящий из 3 попыток. "
+"Если эти попытки исчерпаны, PIV-карту больше нельзя использовать и "
+"необходимо сбросить заводские настройки по умолчанию. Для получения "
+"дополнительной информации см. главу `Factory Reset "
+"<factory_reset.html>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:80
 msgid "Management Key (MGM)"
@@ -16335,8 +16417,8 @@ msgid ""
 "admin-auth``."
 msgstr ""
 "Перед выполнением операций управления необходимо пройти аутентификацию с "
-"помощью ключа управления. Аутентификация выполняется с помощью ``nitropy nk3 "
-"piv admin-auth``."
+"помощью ключа управления. Аутентификация выполняется с помощью ``nitropy "
+"nk3 piv admin-auth``."
 
 #: ../nitrokey3/windows/piv/access_control.rst:87
 msgid ""
@@ -16357,8 +16439,8 @@ msgid ""
 "layer and about 6kB."
 msgstr ""
 "С каждым закрытым ключом связан сертификат. Сертификаты можно читать и "
-"записывать. Размер сертификата ограничен транспортным уровнем и составляет "
-"около 6 КБ."
+"записывать. Размер сертификата ограничен транспортным уровнем и "
+"составляет около 6 КБ."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:9
 msgid "Read Certificate"
@@ -16389,8 +16471,8 @@ msgid ""
 "Performing a factory reset of the PIV application will delete all private"
 " keys and certificates."
 msgstr ""
-"При сбросе настроек приложения PIV к заводским установкам все закрытые ключи "
-"и сертификаты будут удалены."
+"При сбросе настроек приложения PIV к заводским установкам все закрытые "
+"ключи и сертификаты будут удалены."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:2
 msgid "Client Logon with Active Directory"
@@ -16401,8 +16483,8 @@ msgid ""
 "This document explains how to use the PIV application of a Nitrokey 3 for"
 " smartcard logon with Active Directory."
 msgstr ""
-"В этом документе объясняется, как использовать приложение PIV на Nitrokey 3 "
-"для входа в систему с помощью смарт-карт в Active Directory."
+"В этом документе объясняется, как использовать приложение PIV на Nitrokey"
+" 3 для входа в систему с помощью смарт-карт в Active Directory."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:6
 msgid ""
@@ -16422,12 +16504,12 @@ msgid ""
 "refer to `the firmware update documentation <firmware-update.html"
 "#firmware-release-types>`__ for more information."
 msgstr ""
-"Приложение PIV для Nitrokey 3 в настоящее время считается нестабильным и не "
-"доступно в стабильных прошивках. Для получения этой функциональности "
+"Приложение PIV для Nitrokey 3 в настоящее время считается нестабильным и "
+"не доступно в стабильных прошивках. Для получения этой функциональности "
 "необходимо установить тестовую прошивку. Последующие обновления прошивки "
 "могут привести к потере данных и криптографических ключей. Для получения "
-"дополнительной информации см. `документацию по обновлению прошивки <firmware-"
-"update.html#firmware-release-types>`__."
+"дополнительной информации см. `документацию по обновлению прошивки "
+"<firmware-update.html#firmware-release-types>`__."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:17
 msgid ""
@@ -16438,9 +16520,9 @@ msgid ""
 msgstr ""
 "Для настройки требуется административный доступ к машинам, на которых "
 "запущены службы каталогов Active Directory Directory Directory Services "
-"(ADDS) и Active Directory Certificate Services (ADCS). На клиентской машине "
-"требуется только доступ к соответствующей учетной записи пользователя, "
-"используемой для входа в систему."
+"(ADDS) и Active Directory Certificate Services (ADCS). На клиентской "
+"машине требуется только доступ к соответствующей учетной записи "
+"пользователя, используемой для входа в систему."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16456,8 +16538,7 @@ msgstr "Роль ADDS установлена и настроена."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid "ADCS role installed and *Enterprise-CA* with root certificate configured."
-msgstr ""
-"Установлена роль ADCS и настроен *Enterprise-CA* с корневым сертификатом."
+msgstr "Установлена роль ADCS и настроен *Enterprise-CA* с корневым сертификатом."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16465,8 +16546,9 @@ msgid ""
 "Controller Authentication*, and *Kerberos Authentication* certificate "
 "issued."
 msgstr ""
-"Для каждого контроллера домена (DC) должен быть выпущен сертификат *Domain "
-"Controller*, *Domain Controller Authentication*, и *Kerberos Authentication*."
+"Для каждого контроллера домена (DC) должен быть выпущен сертификат "
+"*Domain Controller*, *Domain Controller Authentication*, и *Kerberos "
+"Authentication*."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:24
 msgid ""
@@ -16474,9 +16556,9 @@ msgid ""
 "full and delta certificate revocation lists (CRL) are retrievable from "
 "external networks."
 msgstr ""
-"Если клиенты покидают сеть компании, убедитесь, что опубликованные полные и "
-"дельта-списки отзыва сертификатов (CRL) доступны для получения из внешних "
-"сетей."
+"Если клиенты покидают сеть компании, убедитесь, что опубликованные полные"
+" и дельта-списки отзыва сертификатов (CRL) доступны для получения из "
+"внешних сетей."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:25
 msgid ""
@@ -16496,8 +16578,7 @@ msgstr "Nitrokey 3 с приложением PIV."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:30
 msgid "Configure smartcard logon for use with Active Directory (AD)"
-msgstr ""
-"Настройка входа по смарт-карте для использования с Active Directory (AD)"
+msgstr "Настройка входа по смарт-карте для использования с Active Directory (AD)"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:32
 msgid ""
@@ -16529,8 +16610,8 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certtmpl.msc`` and "
 "press Enter."
 msgstr ""
-"В командной строке, PowerShell или Run введите ``certtmpl.msc`` и нажмите "
-"Enter."
+"В командной строке, PowerShell или Run введите ``certtmpl.msc`` и нажмите"
+" Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:41
 msgid "In the detail pane select the template **Smartcard Logon**."
@@ -16559,16 +16640,17 @@ msgid ""
 "Set **Certificate Authority** and **Certificate recipient** to the oldest"
 " clients in the domain which are supposed to use smartcard logon."
 msgstr ""
-"Установите **Certificate Authority** и **Certificate recipient** для самых "
-"старых клиентов в домене, которые должны использовать вход по смарт-карте."
+"Установите **Certificate Authority** и **Certificate recipient** для "
+"самых старых клиентов в домене, которые должны использовать вход по "
+"смарт-карте."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:50
 msgid ""
 "If you want to use Elliptic Curve (EC) keys your clients must be not "
 "older than Windows Server 2008 and Windows Vista."
 msgstr ""
-"Если вы хотите использовать ключи Elliptic Curve (EC), ваши клиенты должны "
-"быть не старше Windows Server 2008 и Windows Vista."
+"Если вы хотите использовать ключи Elliptic Curve (EC), ваши клиенты "
+"должны быть не старше Windows Server 2008 и Windows Vista."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:54
 msgid "**General**"
@@ -16608,9 +16690,9 @@ msgid ""
 "``2048`` Bit. If you choose to use Eliptic Curve (EC) keys you need to "
 "make additional changes on your client computers."
 msgstr ""
-"Microsoft рекомендует использовать алгоритм RSA с длиной ключа ``2048`` Bit. "
-"Если вы решили использовать ключи Eliptic Curve (EC), вам необходимо внести "
-"дополнительные изменения на клиентских компьютерах."
+"Microsoft рекомендует использовать алгоритм RSA с длиной ключа ``2048`` "
+"Bit. Если вы решили использовать ключи Eliptic Curve (EC), вам необходимо"
+" внести дополнительные изменения на клиентских компьютерах."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:67
 msgid "**Subject Name**"
@@ -16647,13 +16729,14 @@ msgid ""
 "In the navigation pane expand the Certificate Authority (CA) and navigate"
 " to **Certificate Templates**."
 msgstr ""
-"В панели навигации разверните центр сертификации (ЦС) и перейдите по ссылке "
-"**Шаблоны сертификатов**."
+"В панели навигации разверните центр сертификации (ЦС) и перейдите по "
+"ссылке **Шаблоны сертификатов**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:77
 msgid "In the menu bar click **Action → New → Certificate Template to Issue**."
 msgstr ""
-"В строке меню нажмите **Действие → Новый → Шаблон сертификата для выдачи**."
+"В строке меню нажмите **Действие → Новый → Шаблон сертификата для "
+"выдачи**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:78
 msgid "Select the certificate template you want to issue and confirm with **OK**."
@@ -16672,9 +16755,9 @@ msgid ""
 " Singing Request (CSR) generation. The certificate is then written to the"
 " Nitrokey."
 msgstr ""
-"Для входа по смарт-карте требуется предоставить Nitrokey для пользователя в "
-"Active Directory. В нем содержится закрытый ключ и запрос на генерацию "
-"сертификата (CSR). Затем сертификат записывается на Nitrokey."
+"Для входа по смарт-карте требуется предоставить Nitrokey для пользователя"
+" в Active Directory. В нем содержится закрытый ключ и запрос на генерацию"
+" сертификата (CSR). Затем сертификат записывается на Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:89
 msgid ""
@@ -16684,22 +16767,24 @@ msgid ""
 " a failed logon."
 msgstr ""
 "Перед выполнением описанных ниже действий убедитесь, что учетная запись "
-"пользователя Active Directory, которую вы хотите использовать для входа по "
-"смарт-карте, существует. Время создания сертификата раньше времени создания "
-"учетной записи пользователя приведет к неудачному входу в систему."
+"пользователя Active Directory, которую вы хотите использовать для входа "
+"по смарт-карте, существует. Время создания сертификата раньше времени "
+"создания учетной записи пользователя приведет к неудачному входу в "
+"систему."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:93
 msgid ""
 "If the PIV application on the Nitrokey was not used before, perform a "
 "initialization with ``nitropy nk3 piv init`` first."
 msgstr ""
-"Если приложение PIV на Nitrokey ранее не использовалось, сначала выполните "
-"инициализацию с помощью ``nitropy nk3 piv init``."
+"Если приложение PIV на Nitrokey ранее не использовалось, сначала "
+"выполните инициализацию с помощью ``nitropy nk3 piv init``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:95
 msgid "Generate a private key and write the CSR to file with the command below."
 msgstr ""
-"Сгенерируйте закрытый ключ и запишите CSR в файл с помощью следующей команды."
+"Сгенерируйте закрытый ключ и запишите CSR в файл с помощью следующей "
+"команды."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:101
 msgid ""
@@ -16709,16 +16794,17 @@ msgid ""
 "``userPrincipalName`` attribute of the Active Directory user account."
 msgstr ""
 "Значение ``<algorithm>`` - это используемый алгоритм с длиной ключа, "
-"например, ``rsa2048``. Значения ``<subject-name>`` и ``<subject-alternative-"
-"name>`` обычно соответствуют атрибутам ``commonName`` и ``userPrincipalName``"
-" учетной записи пользователя Active Directory."
+"например, ``rsa2048``. Значения ``<subject-name>`` и ``<subject-"
+"alternative-name>`` обычно соответствуют атрибутам ``commonName`` и "
+"``userPrincipalName`` учетной записи пользователя Active Directory."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:104
 msgid ""
 "Sign the CSR with the certificate authority (CA) of the domain with the "
 "command below."
 msgstr ""
-"Подпишите CSR в центре сертификации (ЦС) домена с помощью следующей команды."
+"Подпишите CSR в центре сертификации (ЦС) домена с помощью следующей "
+"команды."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:110
 msgid ""
@@ -16750,9 +16836,9 @@ msgid ""
 " is required in case of a lost or broken Nitrokey."
 msgstr ""
 "Выданные сертификаты входа пользователей в систему перечислены в службе "
-"сертификации Active Directory (ADCS). Из ADCS сертификаты можно отозвать, "
-"для чего они добавляются в настроенный список отзыва сертификатов (CRL). Это "
-"необходимо в случае потери или поломки Nitrokey."
+"сертификации Active Directory (ADCS). Из ADCS сертификаты можно отозвать,"
+" для чего они добавляются в настроенный список отзыва сертификатов (CRL)."
+" Это необходимо в случае потери или поломки Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:130
 msgid ""
@@ -16768,8 +16854,8 @@ msgid ""
 "*Certificate Hold*. This revocation can be reverted and is hence not "
 "permanent."
 msgstr ""
-"Можно временно отозвать сертификат с причиной *Certificate Hold*. Этот отзыв "
-"может быть отменен и, следовательно, не является постоянным."
+"Можно временно отозвать сертификат с причиной *Certificate Hold*. Этот "
+"отзыв может быть отменен и, следовательно, не является постоянным."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:137
 msgid "MMC (certsrv.msc)"
@@ -16780,14 +16866,14 @@ msgid ""
 "In the navigation pane expand the certificate authority (CA) and navigate"
 " to **Issued Certificates**."
 msgstr ""
-"В панели навигации раскройте центр сертификации (ЦС) и перейдите на страницу "
-"**Issued Certificates**."
+"В панели навигации раскройте центр сертификации (ЦС) и перейдите на "
+"страницу **Issued Certificates**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:140
 msgid "In the detail pane select the user certificate you want to revoke."
 msgstr ""
-"На панели подробностей выберите сертификат пользователя, который вы хотите "
-"отозвать."
+"На панели подробностей выберите сертификат пользователя, который вы "
+"хотите отозвать."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:141
 msgid "In the menu bar click **Action → All Tasks → Revoke Certificate**."
@@ -16810,8 +16896,8 @@ msgstr "В строке меню нажмите **Действие → Все з
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:145
 msgid "Select the revocation list you want to publish and confirm with **OK**."
 msgstr ""
-"Выберите список отзыва, который вы хотите опубликовать, и подтвердите выбор "
-"с помощью **OK**."
+"Выберите список отзыва, который вы хотите опубликовать, и подтвердите "
+"выбор с помощью **OK**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:148
 msgid ""
@@ -16822,18 +16908,20 @@ msgid ""
 "and updates them if the CRL is about to expire. Hence a revocation is not"
 " immediate and depends on the expiration of the CRL the client has."
 msgstr ""
-"При каждой попытке входа в систему с помощью смарт-карты Windows проверяет, "
-"не включен ли сертификат, представленный смарт-картой, в список отзыва "
-"сертификатов (Certificate Revocation List, CRL). Если сертификат обнаружен в "
-"CRL, вход в систему будет запрещен. Каждый CRL содержит срок действия, по "
-"истечении которого он истекает. Windows кэширует найденные CRL и обновляет "
-"их, если срок действия CRL истекает. Таким образом, отзыв не является "
-"немедленным и зависит от срока действия CRL, который есть у клиента."
+"При каждой попытке входа в систему с помощью смарт-карты Windows "
+"проверяет, не включен ли сертификат, представленный смарт-картой, в "
+"список отзыва сертификатов (Certificate Revocation List, CRL). Если "
+"сертификат обнаружен в CRL, вход в систему будет запрещен. Каждый CRL "
+"содержит срок действия, по истечении которого он истекает. Windows "
+"кэширует найденные CRL и обновляет их, если срок действия CRL истекает. "
+"Таким образом, отзыв не является немедленным и зависит от срока действия "
+"CRL, который есть у клиента."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:156
 msgid "Import a user smartcard certificate to the personal certificate store"
 msgstr ""
-"Импорт сертификата смарт-карты пользователя в личное хранилище сертификатов"
+"Импорт сертификата смарт-карты пользователя в личное хранилище "
+"сертификатов"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:158
 msgid ""
@@ -16841,8 +16929,8 @@ msgid ""
 "the user's personal certificate store. In certain situations this is a "
 "required procedure."
 msgstr ""
-"Сертификат пользователя, хранящийся на Nitrokey, может быть импортирован в "
-"личное хранилище сертификатов пользователя. В некоторых ситуациях это "
+"Сертификат пользователя, хранящийся на Nitrokey, может быть импортирован "
+"в личное хранилище сертификатов пользователя. В некоторых ситуациях это "
 "является обязательной процедурой."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:162
@@ -16855,16 +16943,16 @@ msgid ""
 "Make sure you are logged on to the user account the certificate "
 "corresponds to."
 msgstr ""
-"Убедитесь, что вы вошли в систему под учетной записью пользователя, которой "
-"соответствует сертификат."
+"Убедитесь, что вы вошли в систему под учетной записью пользователя, "
+"которой соответствует сертификат."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:165
 msgid ""
 "In the navigation pane expand the **Personal** key store and navigate to "
 "**Certificates**."
 msgstr ""
-"В панели навигации разверните хранилище ключей **Personal** и перейдите к "
-"разделу **Certificates**."
+"В панели навигации разверните хранилище ключей **Personal** и перейдите к"
+" разделу **Certificates**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:166
 msgid "In the menu bar click **Action → All Tasks → Import**."
@@ -16886,11 +16974,11 @@ msgid ""
 "corresponds to this certificate.* indicating that the private on the "
 "Nitrokey could be identified."
 msgstr ""
-"После завершения импорта проверьте панель подробностей для импортированного "
-"сертификата. Если Nitrokey подключен, в свойствах сертификата должно "
-"появиться сообщение *У вас есть закрытый ключ, соответствующий этому "
-"сертификату.* указывает на то, что закрытый ключ на Nitrokey может быть "
-"идентифицирован."
+"После завершения импорта проверьте панель подробностей для "
+"импортированного сертификата. Если Nitrokey подключен, в свойствах "
+"сертификата должно появиться сообщение *У вас есть закрытый ключ, "
+"соответствующий этому сертификату.* указывает на то, что закрытый ключ на"
+" Nitrokey может быть идентифицирован."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:171
 msgid "PowerShell"
@@ -16905,16 +16993,16 @@ msgid ""
 "Change to the personal certficate store of the user with ``Set-Location "
 "-Path cert:\\CurrentUser\\My``."
 msgstr ""
-"Переход в хранилище персональных сертификатов пользователя с ``Set-Location -"
-"Path cert:\\CurrentUser\\My``."
+"Переход в хранилище персональных сертификатов пользователя с ``Set-"
+"Location -Path cert:\\CurrentUser\\My``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:175
 msgid ""
 "Import the certificate to the store with ``Import-Certificate -Filepath "
 "'<path>'``, replacing ``<path>`` with the certificate file path."
 msgstr ""
-"Импортируйте сертификат в хранилище с помощью ``Import-Certificate -Filepath "
-"'<path>'``, заменив ``<path>`` на путь к файлу сертификата."
+"Импортируйте сертификат в хранилище с помощью ``Import-Certificate "
+"-Filepath '<path>'``, заменив ``<path>`` на путь к файлу сертификата."
 
 #: ../nitrokey3/windows/piv/guides/index.rst:2
 msgid "Guides"
@@ -16931,8 +17019,8 @@ msgid ""
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 msgstr ""
 "*Personal Identity Verfication* (PIV) основана на специальной публикации "
-"NIST `SP 800-73 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST."
-"SP.800-73-4.pdf>`__."
+"NIST `SP 800-73 "
+"<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 
 #: ../nitrokey3/windows/piv/key_management.rst:5
 msgid "Key Slots"
@@ -17003,8 +17091,8 @@ msgid ""
 "The private key and certificate in this slot are used to sign emails and "
 "files."
 msgstr ""
-"Закрытый ключ и сертификат в этом слоте используются для подписи электронных "
-"писем и файлов."
+"Закрытый ключ и сертификат в этом слоте используются для подписи "
+"электронных писем и файлов."
 
 #: ../nitrokey3/windows/piv/key_management.rst:23
 msgid "9d"
@@ -17033,8 +17121,8 @@ msgid ""
 "respective system is a prerequisite."
 msgstr ""
 "Закрытый ключ и сертификат в этом слоте используются для физических "
-"операций, таких как доступ в здание или учет рабочего времени. Необходимым "
-"условием является поддержка соответствующей системы."
+"операций, таких как доступ в здание или учет рабочего времени. "
+"Необходимым условием является поддержка соответствующей системы."
 
 #: ../nitrokey3/windows/piv/key_management.rst:33
 msgid "Algorithms"
@@ -17088,9 +17176,9 @@ msgid ""
 " with the subject name ``John Doe`` and subject alternative name "
 "``jd@nitrokey.local``."
 msgstr ""
-"Команда ниже создаст закрытый ключ в ключевом слоте ``9a`` для пользователя "
-"с именем субъекта ``John Doe`` и альтернативным именем субъекта ``jd@nitrokey"
-".local``."
+"Команда ниже создаст закрытый ключ в ключевом слоте ``9a`` для "
+"пользователя с именем субъекта ``John Doe`` и альтернативным именем "
+"субъекта ``jd@nitrokey.local``."
 
 #: ../nitrokey3/shared/set-pins.rst.inc:4
 msgid "Settings PIN with Windows Settings application"
@@ -24650,6 +24738,179 @@ msgstr ""
 "Вы также можете потребовать присутствия пользователя в виде обязательного"
 " прикосновения к Nitrokey 3 для доступа к записи, установив флажок "
 "\"Требовать присутствия пользователя\"."
+
+#: ../software/nk-app2/pin.rst:2
+msgid "PIN Settings for FIDO2 and OTP in the Nitrokey App 2"
+msgstr "Настройки PIN-кода для FIDO2 и OTP в приложении Nitrokey App 2"
+
+#: ../software/nk-app2/pin.rst:5
+msgid ""
+"These instructions describe how to set or change the PINs for FIDO2 and "
+"OTP in the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr ""
+"В этих инструкциях описано, как установить или изменить PIN-коды для FIDO2 и "
+"OTP в приложении `Nitrokey App 2 </software/nk-app2/>`__."
+
+#: ../software/nk-app2/pin.rst:9
+msgid ""
+"This function is not yet available in the current release of the "
+"`Nitrokey App 2 </software/nk-app2/>`__ version 2.3.0"
+msgstr ""
+"Эта функция пока недоступна в текущем выпуске `Nitrokey App 2 </software/"
+"nk-app2/>`__ версии 2.3.0."
+
+#: ../software/nk-app2/pin.rst:10
+msgid ""
+"The function is expected to be available in the release of the `Nitrokey "
+"App 2 </software/nk-app2/>`__  version 2.3.1"
+msgstr ""
+"Ожидается, что функция будет доступна в релизе `Nitrokey App 2 </software/"
+"nk-app2/>`__ версии 2.3.1."
+
+#: ../software/nk-app2/pin.rst:14
+msgid ""
+"Each function FIDO2, OTP or OpenPGP Card is assigned a separate PIN, "
+"which is managed separately."
+msgstr ""
+"Каждой функции FIDO2, OTP или OpenPGP Card присваивается отдельный PIN-код, "
+"который управляется отдельно."
+
+#: ../software/nk-app2/pin.rst:17
+msgid "First Steps:"
+msgstr "Первые шаги:"
+
+#: ../software/nk-app2/pin.rst:19
+msgid "Open the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr "Откройте `Nitrokey App 2 </software/nk-app2/>`__."
+
+#: ../software/nk-app2/pin.rst:20
+msgid "Select the Nitrokey 3."
+msgstr "Выберите Nitrokey 3."
+
+#: ../software/nk-app2/pin.rst:21
+msgid "Select the ``SETTINGS`` tab."
+msgstr "Выберите вкладку ``SETTINGS``."
+
+#: ../software/nk-app2/pin.rst:22
+msgid ""
+"On the left-hand side of the ``SETTINGS`` tab, a tree structure with "
+"various options is available."
+msgstr ""
+"На левой стороне вкладки ``SETTINGS`` доступна древовидная структура с "
+"различными опциями."
+
+#: ../software/nk-app2/pin.rst:26
+msgid "FIDO2 PIN Settings"
+msgstr "Настройки PIN-кода FIDO2"
+
+#: ../software/nk-app2/pin.rst:28
+msgid "Select ``FIDO2``."
+msgstr "Выберите ``FIDO2``."
+
+#: ../software/nk-app2/pin.rst:29
+msgid ""
+"A branch with ``FIDO2 PIN SETTINGS`` opens below ``FIDO2``. The status of"
+" the FIDO2 PIN is now available on the left-hand side of the ``SETTINGS``"
+" tab, including a short description."
+msgstr ""
+"Ветка с ``FIDO2 PIN SETTINGS`` открывается ниже ``FIDO2``. Статус FIDO2 PIN-"
+"кода теперь доступен в левой части вкладки ``SETTINGS``, включая краткое "
+"описание."
+
+#: ../software/nk-app2/pin.rst:30
+msgid "Select ``FIDO2 PIN SETTINGS`` to set or change the PIN."
+msgstr "Выберите ``FIDO2 PIN SETTINGS``, чтобы установить или изменить PIN-код."
+
+#: ../software/nk-app2/pin.rst:31
+msgid ""
+"Depending on the status of the Fido2 PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr ""
+"В зависимости от состояния PIN-кода Fido2 на экране отображается маска ввода "
+"для установки или изменения PIN-кода."
+
+#: ../software/nk-app2/pin.rst:33
+msgid ""
+"To set the FIDO2 PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr ""
+"Чтобы установить PIN-код FIDO2, введите новый PIN-код и повторите его в "
+"соответствующих полях. Чтобы изменить PIN-код, введите текущий PIN-код в "
+"соответствующее поле."
+
+#: ../software/nk-app2/pin.rst:33 ../software/nk-app2/pin.rst:49
+msgid "PIN length minimum 4 characters"
+msgstr "Длина PIN-кода не менее 4 символов"
+
+#: ../software/nk-app2/pin.rst:34 ../software/nk-app2/pin.rst:50
+msgid "If the repetition of the new PIN is not correct, it will not be accepted."
+msgstr "Если повтор нового PIN-кода будет неправильным, он не будет принят."
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:53
+msgid "Select the ``SAVE`` button."
+msgstr "Выберите кнопку ``SAVE``."
+
+#: ../software/nk-app2/pin.rst:36 ../software/nk-app2/pin.rst:52
+msgid "If the ``SAVE`` button is greyed out, the entries are not correct."
+msgstr "Если кнопка ``SAVE`` выделена серым цветом, значит, записи не верны."
+
+#: ../software/nk-app2/pin.rst:37 ../software/nk-app2/pin.rst:53
+msgid "When you hover over the ``SAVE`` button, a list of reasons is displayed."
+msgstr "При наведении курсора на кнопку ``SAVE`` отображается список причин."
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:54
+msgid ""
+"The ``PIN_INVALID`` error message, when changing the PIN, indicates that "
+"the current PIN is incorrect."
+msgstr ""
+"Сообщение об ошибке ``PIN_INVALID`` при изменении PIN-кода означает, что "
+"текущий PIN-код неверен."
+
+#: ../software/nk-app2/pin.rst:41
+msgid "OTP PIN Settings"
+msgstr "Настройки OTP PIN-кода"
+
+#: ../software/nk-app2/pin.rst:44
+msgid "Select ``OTP``."
+msgstr "Выберите ``OTP``."
+
+#: ../software/nk-app2/pin.rst:44
+msgid ""
+"A branch with ``OTP PIN SETTINGS`` opens below ``OTP``. The status of the"
+" OTP PIN is now available on the left-hand side of the ``SETTINGS`` tab, "
+"including a short description."
+msgstr ""
+"Ветка с ``OTP PIN SETTINGS`` открывается ниже ``OTP``. Статус OTP PIN теперь "
+"доступен в левой части вкладки ``SETTINGS``, включая краткое описание."
+
+#: ../software/nk-app2/pin.rst:45
+msgid ""
+"Information about the version, serial number and PIN attempt counter is "
+"also available."
+msgstr ""
+"Также доступна информация о версии, серийном номере и счетчике попыток ввода "
+"PIN-кода."
+
+#: ../software/nk-app2/pin.rst:46
+msgid "Select ``OTP PIN SETTINGS`` to set or change the PIN."
+msgstr "Выберите ``OTP PIN SETTINGS``, чтобы установить или изменить PIN-код."
+
+#: ../software/nk-app2/pin.rst:47
+msgid ""
+"Depending on the status of the OTP PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr ""
+"В зависимости от статуса OTP PIN на экране отображается маска ввода для "
+"установки или изменения PIN-кода."
+
+#: ../software/nk-app2/pin.rst:49
+msgid ""
+"To set the OTP PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr ""
+"Чтобы установить OTP PIN, введите новый PIN-код и повторите его в "
+"соответствующих полях. Чтобы изменить PIN-код, введите текущий PIN-код в "
+"соответствующее поле."
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst.inc:6
 msgid ""

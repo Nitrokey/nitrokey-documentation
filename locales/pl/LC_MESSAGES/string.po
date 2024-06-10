@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
-"PO-Revision-Date: 2024-05-24 12:50+0000\n"
+"POT-Creation-Date: 2024-05-30 15:52+0200\n"
+"PO-Revision-Date: 2024-05-30 15:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Polish <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/pl/>\n"
@@ -895,7 +895,9 @@ msgstr ""
 "nie zostaną zachowane."
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "Jak zaktualizować"
 
@@ -972,6 +974,7 @@ msgstr ""
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -13542,6 +13545,89 @@ msgstr ""
 "udevadm trigger`` lub zrestartuj komputer. Po tym aktualizacja powinna "
 "działać bez problemu z uprawnieniami."
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr "Aktualizacja oprogramowania układowego za pomocą Qubes OS"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr ""
+"Ten przewodnik opisuje, jak zaktualizować oprogramowanie układowe "
+"Nitrokey 3 za pomocą nitropy w Qubes OS."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr ""
+"prosimy o wcześniejsze zapoznanie się z ogólnymi instrukcjami "
+"aktualizacji oprogramowania sprzętowego `! Ponieważ dla określonych "
+"wersji istnieją ograniczenia dotyczące danych, które można migrować do "
+"nowej wersji."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+msgid "Setup"
+msgstr "Konfiguracja"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr ""
+"Zainstaluj nitropy w wybranej maszynie wirtualnej aplikacji, postępując "
+"zgodnie z instrukcjami instalacji ``_."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr ""
+"Nigdy nie odłączaj Nitrokey 3 ani nie przerywaj procesu podczas "
+"aktualizacji, ponieważ może to spowodować, że urządzenie stanie się "
+"bezużyteczne!"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr ""
+"Uruchom ``nitropy nk3 reboot --bootloader`` w maszynie wirtualnej "
+"aplikacji."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr ""
+"Po otrzymaniu instrukcji od ``nitropy`` dotknij urządzenia, aby aktywować"
+" bootloader."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr ""
+"Spowoduje to odłączenie nitrokey od maszyny wirtualnej aplikacji, a "
+"bootloader pojawi się w sys-usb"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr "Dołącz bootloader do maszyny wirtualnej aplikacji"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr ""
+"Uruchom ``nitropy nk3 update`` i postępuj zgodnie z instrukcjami. "
+"Spowoduje to ponowne uruchomienie Nitrokey w celu sfinalizowania "
+"aktualizacji."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr "Ponownie podłącz Nitrokey do maszyny wirtualnej z aplikacją"
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"
 msgstr "Nitrokey 3 z Linuksem"
@@ -16169,8 +16255,8 @@ msgid ""
 "The following access matrix shows what authentication a certain operation"
 " requires."
 msgstr ""
-"Poniższa macierz dostępu pokazuje, jakiego uwierzytelnienia wymaga określona "
-"operacja."
+"Poniższa macierz dostępu pokazuje, jakiego uwierzytelnienia wymaga "
+"określona operacja."
 
 #: ../nitrokey3/windows/piv/access_control.rst:7
 msgid "MGM"
@@ -16249,9 +16335,9 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"PUK ** podlega ograniczeniu licznika ponownych prób. Więcej informacji można "
-"znaleźć w rozdziale `Licznik ponownych prób <access_control.html#retry-"
-"counter>`__."
+"PUK ** podlega ograniczeniu licznika ponownych prób. Więcej informacji "
+"można znaleźć w rozdziale `Licznik ponownych prób <access_control.html"
+"#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:58
 msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
@@ -16268,24 +16354,24 @@ msgid ""
 " are no attempts left."
 msgstr ""
 "Licznik ponownych prób jest używany dla kodów PIN ** i PUK ** . Licznik "
-"zmniejsza się przy każdej nieudanej próbie logowania. Licznik ponownych prób "
-"równy zero oznacza, że nie pozostały żadne próby."
+"zmniejsza się przy każdej nieudanej próbie logowania. Licznik ponownych "
+"prób równy zero oznacza, że nie pozostały żadne próby."
 
 #: ../nitrokey3/windows/piv/access_control.rst:68
 msgid ""
 "The *PIN* has a retry counter of 3 attempts. If these attempts are used "
 "up, the *PIN* must be unlocked with the *PUK*."
 msgstr ""
-"Kod PIN ** ma licznik 3 ponownych prób. Jeśli te próby zostaną wykorzystane, "
-"kod PIN ** musi zostać odblokowany za pomocą kodu PUK ** ."
+"Kod PIN ** ma licznik 3 ponownych prób. Jeśli te próby zostaną "
+"wykorzystane, kod PIN ** musi zostać odblokowany za pomocą kodu PUK ** ."
 
 #: ../nitrokey3/windows/piv/access_control.rst:71
 msgid ""
 "To unblock the *PIN*, use the command ``nitropy nk3 piv reset-retry-"
 "counter``. This command requires the *PUK*."
 msgstr ""
-"Aby odblokować *PIN*, użyj polecenia ``nitropy nk3 piv reset-retry-counter``"
-". To polecenie wymaga *PUK*."
+"Aby odblokować *PIN*, użyj polecenia ``nitropy nk3 piv reset-retry-"
+"counter``. To polecenie wymaga *PUK*."
 
 #: ../nitrokey3/windows/piv/access_control.rst:74
 msgid ""
@@ -16294,9 +16380,9 @@ msgid ""
 "defaults. Please refer to the chapter `Factory Reset "
 "<factory_reset.html>`__ to learn more."
 msgstr ""
-"PUK ** ma licznik 3 prób ponowienia. Jeśli te próby zostaną wykorzystane, "
-"karta PIV nie może być już używana i musi zostać zresetowana do ustawień "
-"fabrycznych. Więcej informacji można znaleźć w rozdziale `Przywracanie "
+"PUK ** ma licznik 3 prób ponowienia. Jeśli te próby zostaną wykorzystane,"
+" karta PIV nie może być już używana i musi zostać zresetowana do ustawień"
+" fabrycznych. Więcej informacji można znaleźć w rozdziale `Przywracanie "
 "ustawień fabrycznych <factory_reset.html>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:80
@@ -16314,8 +16400,8 @@ msgid ""
 "admin-auth``."
 msgstr ""
 "Przed wykonaniem operacji zarządzania należy uwierzytelnić się za pomocą "
-"klucza zarządzania. Uwierzytelnianie odbywa się za pomocą ``nitropy nk3 piv "
-"admin-auth``."
+"klucza zarządzania. Uwierzytelnianie odbywa się za pomocą ``nitropy nk3 "
+"piv admin-auth``."
 
 #: ../nitrokey3/windows/piv/access_control.rst:87
 msgid ""
@@ -16336,8 +16422,8 @@ msgid ""
 "layer and about 6kB."
 msgstr ""
 "Każdy klucz prywatny ma powiązany certyfikat. Certyfikaty mogą być "
-"odczytywane i zapisywane. Rozmiar certyfikatu jest ograniczony przez warstwę "
-"transportową i wynosi około 6kB."
+"odczytywane i zapisywane. Rozmiar certyfikatu jest ograniczony przez "
+"warstwę transportową i wynosi około 6kB."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:9
 msgid "Read Certificate"
@@ -16360,8 +16446,8 @@ msgid ""
 "The PIV application can be reset to factory defaults. It can only be "
 "reset if the PIN and PUK are blocked."
 msgstr ""
-"Aplikację PIV można zresetować do domyślnych ustawień fabrycznych. Można ją "
-"zresetować tylko wtedy, gdy PIN i PUK są zablokowane."
+"Aplikację PIV można zresetować do domyślnych ustawień fabrycznych. Można "
+"ją zresetować tylko wtedy, gdy PIN i PUK są zablokowane."
 
 #: ../nitrokey3/windows/piv/factory_reset.rst:8
 msgid ""
@@ -16404,10 +16490,10 @@ msgstr ""
 "Aplikacja PIV Nitrokey 3 jest obecnie uważana za niestabilną i nie jest "
 "dostępna w stabilnych wersjach oprogramowania układowego. Aby uzyskać tę "
 "funkcjonalność, wymagane jest zainstalowanie testowego oprogramowania "
-"układowego. Kolejne aktualizacje oprogramowania sprzętowego mogą prowadzić "
-"do utraty danych i kluczy kryptograficznych. Więcej informacji można znaleźć "
-"na stronie `w dokumentacji aktualizacji oprogramowania sprzętowego <firmware-"
-"update.html#firmware-release-types>`__."
+"układowego. Kolejne aktualizacje oprogramowania sprzętowego mogą "
+"prowadzić do utraty danych i kluczy kryptograficznych. Więcej informacji "
+"można znaleźć na stronie `w dokumentacji aktualizacji oprogramowania "
+"sprzętowego <firmware-update.html#firmware-release-types>`__."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:17
 msgid ""
@@ -16416,11 +16502,11 @@ msgid ""
 "Services (ADCS). On the client machine only access to the respective user"
 " account used for logon is required."
 msgstr ""
-"Konfiguracja wymaga dostępu administracyjnego do komputerów z uruchomionymi "
-"Usługami katalogowymi w usłudze Active Directory (ADDS) i Usługami "
-"certyfikatów w usłudze Active Directory (ADCS). Na komputerze klienckim "
-"wymagany jest jedynie dostęp do odpowiedniego konta użytkownika używanego do "
-"logowania."
+"Konfiguracja wymaga dostępu administracyjnego do komputerów z "
+"uruchomionymi Usługami katalogowymi w usłudze Active Directory (ADDS) i "
+"Usługami certyfikatów w usłudze Active Directory (ADCS). Na komputerze "
+"klienckim wymagany jest jedynie dostęp do odpowiedniego konta użytkownika"
+" używanego do logowania."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16437,8 +16523,8 @@ msgstr "Zainstalowana i skonfigurowana rola ADDS."
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid "ADCS role installed and *Enterprise-CA* with root certificate configured."
 msgstr ""
-"Zainstalowana rola ADCS i *Enterprise-CA* ze skonfigurowanym certyfikatem "
-"głównym."
+"Zainstalowana rola ADCS i *Enterprise-CA* ze skonfigurowanym certyfikatem"
+" głównym."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16456,8 +16542,9 @@ msgid ""
 "full and delta certificate revocation lists (CRL) are retrievable from "
 "external networks."
 msgstr ""
-"Jeśli klienci opuszczają sieć firmową, upewnij się, że opublikowane pełne i "
-"delta listy odwołania certyfikatów (CRL) są dostępne z sieci zewnętrznych."
+"Jeśli klienci opuszczają sieć firmową, upewnij się, że opublikowane pełne"
+" i delta listy odwołania certyfikatów (CRL) są dostępne z sieci "
+"zewnętrznych."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:25
 msgid ""
@@ -16498,8 +16585,8 @@ msgid ""
 "Signing a certificate request for smartcard logon requires to create a "
 "certificate template in the certificate authority."
 msgstr ""
-"Podpisanie żądania certyfikatu do logowania za pomocą karty inteligentnej "
-"wymaga utworzenia szablonu certyfikatu w urzędzie certyfikacji."
+"Podpisanie żądania certyfikatu do logowania za pomocą karty inteligentnej"
+" wymaga utworzenia szablonu certyfikatu w urzędzie certyfikacji."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:39
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:74
@@ -16511,8 +16598,8 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certtmpl.msc`` and "
 "press Enter."
 msgstr ""
-"Z Wiersza poleceń, PowerShell lub Uruchom wpisz ``certtmpl.msc`` i naciśnij "
-"Enter."
+"Z Wiersza poleceń, PowerShell lub Uruchom wpisz ``certtmpl.msc`` i "
+"naciśnij Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:41
 msgid "In the detail pane select the template **Smartcard Logon**."
@@ -16525,7 +16612,8 @@ msgstr "Na pasku menu kliknij **Actions → All Tasks → Duplicate Template**."
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:43
 msgid "Set the settings below on the template, according to the mentioned tab."
 msgstr ""
-"Skonfiguruj poniższe ustawienia w szablonie, zgodnie ze wspomnianą zakładką."
+"Skonfiguruj poniższe ustawienia w szablonie, zgodnie ze wspomnianą "
+"zakładką."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:50
 msgid "**Compatibility**"
@@ -16549,8 +16637,8 @@ msgid ""
 "If you want to use Elliptic Curve (EC) keys your clients must be not "
 "older than Windows Server 2008 and Windows Vista."
 msgstr ""
-"Jeśli chcesz używać kluczy z krzywą eliptyczną (EC), klienci nie mogą być "
-"starsi niż Windows Server 2008 i Windows Vista."
+"Jeśli chcesz używać kluczy z krzywą eliptyczną (EC), klienci nie mogą być"
+" starsi niż Windows Server 2008 i Windows Vista."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:54
 msgid "**General**"
@@ -16590,9 +16678,9 @@ msgid ""
 "``2048`` Bit. If you choose to use Eliptic Curve (EC) keys you need to "
 "make additional changes on your client computers."
 msgstr ""
-"Microsoft zaleca używanie algorytmu RSA z kluczem o długości ``2048`` Bit. "
-"Jeśli zdecydujesz się użyć kluczy Eliptic Curve (EC), musisz wprowadzić "
-"dodatkowe zmiany na komputerach klienckich."
+"Microsoft zaleca używanie algorytmu RSA z kluczem o długości ``2048`` "
+"Bit. Jeśli zdecydujesz się użyć kluczy Eliptic Curve (EC), musisz "
+"wprowadzić dodatkowe zmiany na komputerach klienckich."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:67
 msgid "**Subject Name**"
@@ -16611,8 +16699,8 @@ msgid ""
 "After the creation of a certificate template, the template must be issued"
 " to be used by the clients."
 msgstr ""
-"Po utworzeniu szablonu certyfikatu, szablon musi zostać wydany, aby mógł być "
-"używany przez klientów."
+"Po utworzeniu szablonu certyfikatu, szablon musi zostać wydany, aby mógł "
+"być używany przez klientów."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:75
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:138
@@ -16621,16 +16709,16 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press"
 " Enter."
 msgstr ""
-"Z Wiersza poleceń, PowerShell lub Uruchom wpisz ``certsrv.msc`` i naciśnij "
-"Enter."
+"Z Wiersza poleceń, PowerShell lub Uruchom wpisz ``certsrv.msc`` i "
+"naciśnij Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:76
 msgid ""
 "In the navigation pane expand the Certificate Authority (CA) and navigate"
 " to **Certificate Templates**."
 msgstr ""
-"W okienku nawigacji rozwiń Urząd certyfikacji (CA) i przejdź do **Szablony "
-"certyfikatów**."
+"W okienku nawigacji rozwiń Urząd certyfikacji (CA) i przejdź do "
+"**Szablony certyfikatów**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:77
 msgid "In the menu bar click **Action → New → Certificate Template to Issue**."
@@ -16639,8 +16727,8 @@ msgstr "Na pasku menu kliknij **Action → New → Certificate Template to Issue
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:78
 msgid "Select the certificate template you want to issue and confirm with **OK**."
 msgstr ""
-"Wybierz szablon certyfikatu, który chcesz wystawić i potwierdź przyciskiem "
-"**OK**."
+"Wybierz szablon certyfikatu, który chcesz wystawić i potwierdź "
+"przyciskiem **OK**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:82
 msgid "Provision Nitrokey 3 for smartcard logon with Active Directory"
@@ -16655,10 +16743,10 @@ msgid ""
 " Singing Request (CSR) generation. The certificate is then written to the"
 " Nitrokey."
 msgstr ""
-"Logowanie za pomocą karty inteligentnej wymaga utworzenia klucza Nitrokey "
-"dla użytkownika w usłudze Active Directory. Provisiong zawiera klucz "
-"prywatny i generowanie Certificate Singing Request (CSR). Certyfikat jest "
-"następnie zapisywany w Nitrokey."
+"Logowanie za pomocą karty inteligentnej wymaga utworzenia klucza Nitrokey"
+" dla użytkownika w usłudze Active Directory. Provisiong zawiera klucz "
+"prywatny i generowanie Certificate Singing Request (CSR). Certyfikat jest"
+" następnie zapisywany w Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:89
 msgid ""
@@ -16667,18 +16755,18 @@ msgid ""
 "the certificate before the creation time of the user account will lead to"
 " a failed logon."
 msgstr ""
-"Przed wykonaniem poniższych kroków upewnij się, że konto użytkownika Active "
-"Directory, którego chcesz użyć do logowania za pomocą karty inteligentnej, "
-"istnieje. Czas utworzenia certyfikatu przed czasem utworzenia konta "
-"użytkownika doprowadzi do niepowodzenia logowania."
+"Przed wykonaniem poniższych kroków upewnij się, że konto użytkownika "
+"Active Directory, którego chcesz użyć do logowania za pomocą karty "
+"inteligentnej, istnieje. Czas utworzenia certyfikatu przed czasem "
+"utworzenia konta użytkownika doprowadzi do niepowodzenia logowania."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:93
 msgid ""
 "If the PIV application on the Nitrokey was not used before, perform a "
 "initialization with ``nitropy nk3 piv init`` first."
 msgstr ""
-"Jeśli aplikacja PIV na Nitrokey nie była wcześniej używana, najpierw wykonaj "
-"inicjalizację za pomocą ``nitropy nk3 piv init``."
+"Jeśli aplikacja PIV na Nitrokey nie była wcześniej używana, najpierw "
+"wykonaj inicjalizację za pomocą ``nitropy nk3 piv init``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:95
 msgid "Generate a private key and write the CSR to file with the command below."
@@ -16693,10 +16781,10 @@ msgid ""
 "alternative-name>`` corresponds typically to the ``commonName`` and "
 "``userPrincipalName`` attribute of the Active Directory user account."
 msgstr ""
-"Wartość ``<algorithm>`` jest używanym algorytmem z jego długością klucza, "
-"np. ``rsa2048``. Wartości ``<subject-name>`` i ``<subject-alternative-name>``"
-" odpowiadają zazwyczaj atrybutom ``commonName`` i ``userPrincipalName`` "
-"konta użytkownika Active Directory."
+"Wartość ``<algorithm>`` jest używanym algorytmem z jego długością klucza,"
+" np. ``rsa2048``. Wartości ``<subject-name>`` i ``<subject-alternative-"
+"name>`` odpowiadają zazwyczaj atrybutom ``commonName`` i "
+"``userPrincipalName`` konta użytkownika Active Directory."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:104
 msgid ""
@@ -16712,9 +16800,9 @@ msgid ""
 "for smartcard logon. The value of ``<file>`` is the certificate singing "
 "request file."
 msgstr ""
-"Wartość ``<template-name>`` to nazwa szablonu certyfikatu dla logowania za "
-"pomocą karty inteligentnej. Wartość ``<file>`` to plik żądania śpiewania "
-"certyfikatu."
+"Wartość ``<template-name>`` to nazwa szablonu certyfikatu dla logowania "
+"za pomocą karty inteligentnej. Wartość ``<file>`` to plik żądania "
+"śpiewania certyfikatu."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:113
 msgid "Write the signed certificate to the Nitrokey with the command below."
@@ -16727,8 +16815,8 @@ msgstr "Wartością ``<file>`` jest plik certyfikatu."
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:123
 msgid "Revoke smartcard logon for use with Active Directory (AD)"
 msgstr ""
-"Cofnięcie logowania za pomocą karty inteligentnej do użytku z usługą Active "
-"Directory (AD)"
+"Cofnięcie logowania za pomocą karty inteligentnej do użytku z usługą "
+"Active Directory (AD)"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:125
 msgid ""
@@ -16739,8 +16827,8 @@ msgid ""
 msgstr ""
 "Wydane certyfikaty logowania użytkowników są wymienione w Usługach "
 "certyfikatów w usłudze Active Directory (ADCS). Z ADCS certyfikaty mogą "
-"zostać unieważnione, co powoduje dodanie ich do skonfigurowanej listy CRL ("
-"Certificate Revocation List). Jest to wymagane w przypadku utraty lub "
+"zostać unieważnione, co powoduje dodanie ich do skonfigurowanej listy CRL"
+" (Certificate Revocation List). Jest to wymagane w przypadku utraty lub "
 "uszkodzenia Nitrokey."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:130
@@ -16748,8 +16836,8 @@ msgid ""
 "It is strongly advised to never leave unused user certificates without "
 "revoking them."
 msgstr ""
-"Zdecydowanie zaleca się, aby nigdy nie pozostawiać nieużywanych certyfikatów "
-"użytkownika bez ich unieważnienia."
+"Zdecydowanie zaleca się, aby nigdy nie pozostawiać nieużywanych "
+"certyfikatów użytkownika bez ich unieważnienia."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:133
 msgid ""
@@ -16758,7 +16846,8 @@ msgid ""
 "permanent."
 msgstr ""
 "Możliwe jest tymczasowe unieważnienie certyfikatu z powodem *Certificate "
-"Hold*. To unieważnienie może zostać przywrócone i dlatego nie jest trwałe."
+"Hold*. To unieważnienie może zostać przywrócone i dlatego nie jest "
+"trwałe."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:137
 msgid "MMC (certsrv.msc)"
@@ -16774,8 +16863,7 @@ msgstr ""
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:140
 msgid "In the detail pane select the user certificate you want to revoke."
-msgstr ""
-"W oknie szczegółów wybierz certyfikat użytkownika, który chcesz odwołać."
+msgstr "W oknie szczegółów wybierz certyfikat użytkownika, który chcesz odwołać."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:141
 msgid "In the menu bar click **Action → All Tasks → Revoke Certificate**."
@@ -16785,8 +16873,7 @@ msgstr "Na pasku menu kliknij **Action → All Tasks → Revoke Certificate**."
 msgid ""
 "Specifiy a reason for the revocation, date and time, and confirm with "
 "**Yes**."
-msgstr ""
-"Określ powód odwołania, datę i godzinę oraz potwierdź za pomocą **Yes**."
+msgstr "Określ powód odwołania, datę i godzinę oraz potwierdź za pomocą **Yes**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:143
 msgid "In the navigation pane navigate to **Revoked Certificates**."
@@ -16811,20 +16898,20 @@ msgid ""
 "and updates them if the CRL is about to expire. Hence a revocation is not"
 " immediate and depends on the expiration of the CRL the client has."
 msgstr ""
-"Podczas każdej próby logowania za pomocą karty inteligentnej system Windows "
-"sprawdza, czy certyfikat przedstawiony przez kartę inteligentną znajduje się "
-"na liście CRL (Certificate Revocation List). Jeśli certyfikat znajduje się "
-"na liście CRL, logowanie jest odrzucane. Każda lista CRL zawiera datę "
-"ważności, która powoduje jej wygaśnięcie. System Windows buforuje pobrane "
-"listy CRL i aktualizuje je, jeśli lista CRL wkrótce wygaśnie. W związku z "
-"tym unieważnienie nie jest natychmiastowe i zależy od wygaśnięcia listy CRL "
-"posiadanej przez klienta."
+"Podczas każdej próby logowania za pomocą karty inteligentnej system "
+"Windows sprawdza, czy certyfikat przedstawiony przez kartę inteligentną "
+"znajduje się na liście CRL (Certificate Revocation List). Jeśli "
+"certyfikat znajduje się na liście CRL, logowanie jest odrzucane. Każda "
+"lista CRL zawiera datę ważności, która powoduje jej wygaśnięcie. System "
+"Windows buforuje pobrane listy CRL i aktualizuje je, jeśli lista CRL "
+"wkrótce wygaśnie. W związku z tym unieważnienie nie jest natychmiastowe i"
+" zależy od wygaśnięcia listy CRL posiadanej przez klienta."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:156
 msgid "Import a user smartcard certificate to the personal certificate store"
 msgstr ""
-"Import certyfikatu karty inteligentnej użytkownika do magazynu certyfikatów "
-"osobistych"
+"Import certyfikatu karty inteligentnej użytkownika do magazynu "
+"certyfikatów osobistych"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:158
 msgid ""
@@ -16832,9 +16919,9 @@ msgid ""
 "the user's personal certificate store. In certain situations this is a "
 "required procedure."
 msgstr ""
-"Certyfikat użytkownika przechowywany w Nitrokey może zostać zaimportowany do "
-"osobistego magazynu certyfikatów użytkownika. W niektórych sytuacjach jest "
-"to wymagana procedura."
+"Certyfikat użytkownika przechowywany w Nitrokey może zostać zaimportowany"
+" do osobistego magazynu certyfikatów użytkownika. W niektórych sytuacjach"
+" jest to wymagana procedura."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:162
 msgid "MMC (certmgr.msc)"
@@ -16846,8 +16933,8 @@ msgid ""
 "Make sure you are logged on to the user account the certificate "
 "corresponds to."
 msgstr ""
-"Upewnij się, że jesteś zalogowany na konto użytkownika, któremu odpowiada "
-"certyfikat."
+"Upewnij się, że jesteś zalogowany na konto użytkownika, któremu odpowiada"
+" certyfikat."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:165
 msgid ""
@@ -16877,11 +16964,11 @@ msgid ""
 "corresponds to this certificate.* indicating that the private on the "
 "Nitrokey could be identified."
 msgstr ""
-"Po zakończeniu importu sprawdź panel szczegółów zaimportowanego certyfikatu. "
-"Jeśli Nitrokey jest podłączony, we właściwościach certyfikatu powinien "
-"pojawić się komunikat *You have a private key that corresponds to this "
-"certificate.* wskazujący, że klucz prywatny na Nitrokey może zostać "
-"zidentyfikowany."
+"Po zakończeniu importu sprawdź panel szczegółów zaimportowanego "
+"certyfikatu. Jeśli Nitrokey jest podłączony, we właściwościach "
+"certyfikatu powinien pojawić się komunikat *You have a private key that "
+"corresponds to this certificate.* wskazujący, że klucz prywatny na "
+"Nitrokey może zostać zidentyfikowany."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:171
 msgid "PowerShell"
@@ -16896,8 +16983,8 @@ msgid ""
 "Change to the personal certficate store of the user with ``Set-Location "
 "-Path cert:\\CurrentUser\\My``."
 msgstr ""
-"Zmiana na osobisty magazyn certyfikatów użytkownika z ``Set-Location -Path "
-"cert:\\CurrentUser\\My``."
+"Zmiana na osobisty magazyn certyfikatów użytkownika z ``Set-Location "
+"-Path cert:\\CurrentUser\\My``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:175
 msgid ""
@@ -16921,9 +17008,9 @@ msgid ""
 "publication `SP 800-73 "
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 msgstr ""
-"*Personal Identity Verfication* (PIV) opiera się na specjalnej publikacji "
-"NIST `SP 800-73 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST."
-"SP.800-73-4.pdf>`__."
+"*Personal Identity Verfication* (PIV) opiera się na specjalnej publikacji"
+" NIST `SP 800-73 "
+"<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 
 #: ../nitrokey3/windows/piv/key_management.rst:5
 msgid "Key Slots"
@@ -16935,9 +17022,9 @@ msgid ""
 "each purpose the private key and its corresponding certificate are stored"
 " in a key slot."
 msgstr ""
-"Aplikacja PIV może przechowywać certyfikaty do różnych celów. Dla każdego "
-"celu klucz prywatny i odpowiadający mu certyfikat są przechowywane w slocie "
-"na klucze."
+"Aplikacja PIV może przechowywać certyfikaty do różnych celów. Dla każdego"
+" celu klucz prywatny i odpowiadający mu certyfikat są przechowywane w "
+"slocie na klucze."
 
 #: ../nitrokey3/windows/piv/key_management.rst:11
 msgid "Slot"
@@ -16961,8 +17048,9 @@ msgid ""
 "management applications and are still there to provide backward "
 "compatibility."
 msgstr ""
-"Klucze prywatne i certyfikaty w tych gniazdach były używane w aplikacjach do "
-"zarządzania kluczami i nadal tam są, aby zapewnić kompatybilność wsteczną."
+"Klucze prywatne i certyfikaty w tych gniazdach były używane w aplikacjach"
+" do zarządzania kluczami i nadal tam są, aby zapewnić kompatybilność "
+"wsteczną."
 
 #: ../nitrokey3/windows/piv/key_management.rst:17
 msgid "9a"
@@ -17022,9 +17110,9 @@ msgid ""
 "operations, such as building access or time recording. Support from the "
 "respective system is a prerequisite."
 msgstr ""
-"Klucz prywatny i certyfikat w tym slocie są używane do operacji fizycznych, "
-"takich jak dostęp do budynku lub rejestracja czasu. Obsługa przez odpowiedni "
-"system jest warunkiem wstępnym."
+"Klucz prywatny i certyfikat w tym slocie są używane do operacji "
+"fizycznych, takich jak dostęp do budynku lub rejestracja czasu. Obsługa "
+"przez odpowiedni system jest warunkiem wstępnym."
 
 #: ../nitrokey3/windows/piv/key_management.rst:33
 msgid "Algorithms"
@@ -17036,9 +17124,9 @@ msgid ""
 "asymmetric algorithms are used for the user private keys and the "
 "symmetric algorithms for the management key."
 msgstr ""
-"Aplikacja PIV wykorzystuje algorytmy asymetryczne i symetryczne. Algorytmy "
-"asymetryczne są używane do kluczy prywatnych użytkowników, a algorytmy "
-"symetryczne do klucza zarządzania."
+"Aplikacja PIV wykorzystuje algorytmy asymetryczne i symetryczne. "
+"Algorytmy asymetryczne są używane do kluczy prywatnych użytkowników, a "
+"algorytmy symetryczne do klucza zarządzania."
 
 #: ../nitrokey3/windows/piv/key_management.rst:38
 msgid "Supported asymmetric key algorithms:"
@@ -17079,8 +17167,8 @@ msgid ""
 "``jd@nitrokey.local``."
 msgstr ""
 "Poniższe polecenie utworzy klucz prywatny w slocie klucza ``9a`` dla "
-"użytkownika o nazwie podmiotu ``John Doe`` i alternatywnej nazwie podmiotu "
-"``jd@nitrokey.local``."
+"użytkownika o nazwie podmiotu ``John Doe`` i alternatywnej nazwie "
+"podmiotu ``jd@nitrokey.local``."
 
 #: ../nitrokey3/shared/set-pins.rst.inc:4
 msgid "Settings PIN with Windows Settings application"
@@ -24605,6 +24693,181 @@ msgstr ""
 "Istnieje również opcja wymagania obecności użytkownika w postaci "
 "wymaganego dotknięcia przycisku Nitrokey 3 w celu uzyskania dostępu do "
 "wpisu poprzez zaznaczenie pola \"Wymagaj obecności użytkownika\"."
+
+#: ../software/nk-app2/pin.rst:2
+msgid "PIN Settings for FIDO2 and OTP in the Nitrokey App 2"
+msgstr "Ustawienia kodu PIN dla FIDO2 i OTP w aplikacji Nitrokey App 2"
+
+#: ../software/nk-app2/pin.rst:5
+msgid ""
+"These instructions describe how to set or change the PINs for FIDO2 and "
+"OTP in the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr ""
+"Niniejsza instrukcja opisuje, jak ustawić lub zmienić kody PIN dla FIDO2 i "
+"OTP w aplikacji `Nitrokey App 2 </software/nk-app2/>`__."
+
+#: ../software/nk-app2/pin.rst:9
+msgid ""
+"This function is not yet available in the current release of the "
+"`Nitrokey App 2 </software/nk-app2/>`__ version 2.3.0"
+msgstr ""
+"Funkcja ta nie jest jeszcze dostępna w aktualnej wersji aplikacji `Nitrokey "
+"App 2 </software/nk-app2/>`__ w wersji 2.3.0."
+
+#: ../software/nk-app2/pin.rst:10
+msgid ""
+"The function is expected to be available in the release of the `Nitrokey "
+"App 2 </software/nk-app2/>`__  version 2.3.1"
+msgstr ""
+"Oczekuje się, że funkcja ta będzie dostępna w wydaniu aplikacji `Nitrokey "
+"App 2 </software/nk-app2/>`__ w wersji 2.3.1."
+
+#: ../software/nk-app2/pin.rst:14
+msgid ""
+"Each function FIDO2, OTP or OpenPGP Card is assigned a separate PIN, "
+"which is managed separately."
+msgstr ""
+"Każda funkcja FIDO2, OTP lub OpenPGP Card ma przypisany oddzielny kod PIN, "
+"który jest zarządzany osobno."
+
+#: ../software/nk-app2/pin.rst:17
+msgid "First Steps:"
+msgstr "Pierwsze kroki:"
+
+#: ../software/nk-app2/pin.rst:19
+msgid "Open the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr "Otwórz aplikację `Nitrokey App 2 </software/nk-app2/>`__."
+
+#: ../software/nk-app2/pin.rst:20
+msgid "Select the Nitrokey 3."
+msgstr "Wybierz przycisk Nitrokey 3."
+
+#: ../software/nk-app2/pin.rst:21
+msgid "Select the ``SETTINGS`` tab."
+msgstr "Wybierz zakładkę ``SETTINGS``."
+
+#: ../software/nk-app2/pin.rst:22
+msgid ""
+"On the left-hand side of the ``SETTINGS`` tab, a tree structure with "
+"various options is available."
+msgstr ""
+"Po lewej stronie zakładki ``SETTINGS`` dostępna jest struktura drzewa z "
+"różnymi opcjami."
+
+#: ../software/nk-app2/pin.rst:26
+msgid "FIDO2 PIN Settings"
+msgstr "Ustawienia kodu PIN FIDO2"
+
+#: ../software/nk-app2/pin.rst:28
+msgid "Select ``FIDO2``."
+msgstr "Wybierz ``FIDO2``."
+
+#: ../software/nk-app2/pin.rst:29
+msgid ""
+"A branch with ``FIDO2 PIN SETTINGS`` opens below ``FIDO2``. The status of"
+" the FIDO2 PIN is now available on the left-hand side of the ``SETTINGS``"
+" tab, including a short description."
+msgstr ""
+"Gałąź z ``FIDO2 PIN SETTINGS`` otwiera się poniżej ``FIDO2``. Status kodu "
+"PIN FIDO2 jest teraz dostępny po lewej stronie zakładki ``SETTINGS``, wraz z "
+"krótkim opisem."
+
+#: ../software/nk-app2/pin.rst:30
+msgid "Select ``FIDO2 PIN SETTINGS`` to set or change the PIN."
+msgstr "Wybierz ``FIDO2 PIN SETTINGS``, aby ustawić lub zmienić kod PIN."
+
+#: ../software/nk-app2/pin.rst:31
+msgid ""
+"Depending on the status of the Fido2 PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr ""
+"W zależności od stanu kodu PIN Fido2 wyświetlana jest teraz maska "
+"wprowadzania służąca do ustawiania lub zmiany kodu PIN."
+
+#: ../software/nk-app2/pin.rst:33
+msgid ""
+"To set the FIDO2 PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr ""
+"Aby ustawić kod PIN FIDO2, wprowadź nowy kod PIN i powtórz go w odpowiednich "
+"polach. Aby zmienić kod PIN, wprowadź aktualny kod PIN w odpowiednim polu."
+
+#: ../software/nk-app2/pin.rst:33 ../software/nk-app2/pin.rst:49
+msgid "PIN length minimum 4 characters"
+msgstr "Długość kodu PIN: minimum 4 znaki"
+
+#: ../software/nk-app2/pin.rst:34 ../software/nk-app2/pin.rst:50
+msgid "If the repetition of the new PIN is not correct, it will not be accepted."
+msgstr ""
+"Jeśli powtórzenie nowego kodu PIN jest nieprawidłowe, nie zostanie on "
+"zaakceptowany."
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:53
+msgid "Select the ``SAVE`` button."
+msgstr "Wybierz przycisk ``SAVE``."
+
+#: ../software/nk-app2/pin.rst:36 ../software/nk-app2/pin.rst:52
+msgid "If the ``SAVE`` button is greyed out, the entries are not correct."
+msgstr "Jeśli przycisk ``SAVE`` jest wyszarzony, wpisy nie są poprawne."
+
+#: ../software/nk-app2/pin.rst:37 ../software/nk-app2/pin.rst:53
+msgid "When you hover over the ``SAVE`` button, a list of reasons is displayed."
+msgstr ""
+"Po najechaniu kursorem na przycisk ``SAVE`` wyświetlana jest lista powodów."
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:54
+msgid ""
+"The ``PIN_INVALID`` error message, when changing the PIN, indicates that "
+"the current PIN is incorrect."
+msgstr ""
+"Komunikat o błędzie ``PIN_INVALID`` podczas zmiany kodu PIN wskazuje, że "
+"bieżący kod PIN jest nieprawidłowy."
+
+#: ../software/nk-app2/pin.rst:41
+msgid "OTP PIN Settings"
+msgstr "Ustawienia kodu PIN OTP"
+
+#: ../software/nk-app2/pin.rst:44
+msgid "Select ``OTP``."
+msgstr "Wybierz ``OTP``."
+
+#: ../software/nk-app2/pin.rst:44
+msgid ""
+"A branch with ``OTP PIN SETTINGS`` opens below ``OTP``. The status of the"
+" OTP PIN is now available on the left-hand side of the ``SETTINGS`` tab, "
+"including a short description."
+msgstr ""
+"Oddział z ``OTP PIN SETTINGS`` otwiera się poniżej ``OTP``. Status kodu PIN "
+"OTP jest teraz dostępny po lewej stronie zakładki ``SETTINGS``, wraz z "
+"krótkim opisem."
+
+#: ../software/nk-app2/pin.rst:45
+msgid ""
+"Information about the version, serial number and PIN attempt counter is "
+"also available."
+msgstr ""
+"Dostępne są również informacje o wersji, numerze seryjnym i liczniku prób "
+"wprowadzenia kodu PIN."
+
+#: ../software/nk-app2/pin.rst:46
+msgid "Select ``OTP PIN SETTINGS`` to set or change the PIN."
+msgstr "Wybierz ``OTP PIN SETTINGS``, aby ustawić lub zmienić kod PIN."
+
+#: ../software/nk-app2/pin.rst:47
+msgid ""
+"Depending on the status of the OTP PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr ""
+"W zależności od stanu kodu PIN OTP, wyświetlana jest teraz maska "
+"wprowadzania służąca do ustawiania lub zmiany kodu PIN."
+
+#: ../software/nk-app2/pin.rst:49
+msgid ""
+"To set the OTP PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr ""
+"Aby ustawić kod PIN OTP, wprowadź nowy kod PIN i powtórz go w odpowiednich "
+"polach. Aby zmienić kod PIN, wprowadź aktualny kod PIN w odpowiednim polu."
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst.inc:6
 msgid ""

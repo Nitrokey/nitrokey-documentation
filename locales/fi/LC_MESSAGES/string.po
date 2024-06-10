@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 10:13+0200\n"
-"PO-Revision-Date: 2024-05-24 12:50+0000\n"
+"POT-Creation-Date: 2024-05-30 15:52+0200\n"
+"PO-Revision-Date: 2024-05-30 15:50+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Finnish <https://translate.nitrokey.com/projects/"
 "nitrokey-documentation/documentation-string/fi/>\n"
@@ -897,7 +897,9 @@ msgstr ""
 "kirjautumistapa), jos tietojasi ei jostain syystä säilytetä."
 
 #: ../fido2/shared/firmware-update.rst.inc:10
-#: ../nitrokey3/firmware-update.rst.inc:20 ../pro/firmware-update.rst.inc:15
+#: ../nitrokey3/firmware-update.rst.inc:20
+#: ../nitrokey3/linux/firmware-update-qubes.rst:25
+#: ../pro/firmware-update.rst.inc:15
 msgid "How to Update"
 msgstr "Kuinka päivittää"
 
@@ -971,6 +973,7 @@ msgstr ""
 
 #: ../fido2/shared/firmware-update.rst.inc:32
 #: ../nitrokey3/firmware-update.rst.inc:33
+#: ../nitrokey3/linux/firmware-update-qubes.rst:38
 #: ../software/nitropy/all-platforms/test.rst:29
 msgid ""
 "In case of any errors please take the logs from ``/tmp`` directory "
@@ -13437,6 +13440,84 @@ msgstr ""
 "käynnistä kone uudelleen. Sen jälkeen päivityksen pitäisi toimia ilman "
 "lupaongelmaa."
 
+#: ../nitrokey3/linux/firmware-update-qubes.rst:2
+msgid "Firmware Update With Qubes OS"
+msgstr "Firmware-päivitys Qubes OS:n kanssa"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:8
+msgid ""
+"This guide describes how to update Nitrokey 3's firmware with nitropy in "
+"Qubes OS."
+msgstr ""
+"Tässä oppaassa kuvataan, miten Nitrokey 3:n laiteohjelmisto päivitetään "
+"Qubes OS:n nitropy-ohjelmalla."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:11
+msgid ""
+"please read the general `firmware update instructions`_ before! Since for"
+" specifc versions there are limitations regarding what data is possible "
+"to migrate to the new version."
+msgstr ""
+"lue yleiset `firmware update instructions`_ ennen! Koska tietyissä "
+"versioissa on rajoituksia sen suhteen, mitä tietoja on mahdollista "
+"siirtää uuteen versioon."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:17
+msgid "Setup"
+msgstr "Setup"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:19
+msgid ""
+"Install nitropy in a app VM of your choice following the `installation "
+"instructions`_."
+msgstr ""
+"Asenna nitropy valitsemaasi sovelluksen VM:ään noudattaen "
+"`asennusohjeita`_."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:28
+msgid ""
+"Never disconnect the Nitrokey 3 or abort the process while updating, "
+"because it will likely render your device unusable!"
+msgstr ""
+"Älä koskaan irrota Nitrokey 3:a tai keskeytä prosessia päivityksen "
+"aikana, koska se todennäköisesti tekee laitteestasi käyttökelvottoman!"
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:31
+msgid "Run ``nitropy nk3 reboot --bootloader`` in app VM."
+msgstr "Suorita ``nitropy nk3 reboot --bootloader`` app VM:ssä."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:32
+msgid ""
+"Once instructed by ``nitropy`` touch the device to activate the "
+"bootloader."
+msgstr ""
+"Kun ``nitropy`` on antanut ohjeet, kosketa laitetta käynnistyslataajan "
+"aktivoimiseksi."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:33
+msgid ""
+"This will detach the nitrokey from the app VM, and the bootloader will "
+"apear in sys-usb"
+msgstr ""
+"Tämä irrottaa nitroavaimen sovellus-VM:stä, ja käynnistyslatauslaite "
+"ilmestyy sys-usb:hen."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:34
+msgid "Attach the bootloader to the app VM"
+msgstr "Kiinnitä käynnistyslatausohjelma sovelluksen VM:ään."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:35
+msgid ""
+"Run ``nitropy nk3 update`` and follow the instructions. This will reboot "
+"the Nitrokey to finalice the update eventually."
+msgstr ""
+"Suorita ``nitropy nk3 update`` ja noudata ohjeita. Tämä käynnistää "
+"Nitrokey:n uudelleen, jotta päivitys saadaan lopulta valmiiksi."
+
+#: ../nitrokey3/linux/firmware-update-qubes.rst:36
+msgid "Re-attach the Nitrokey back to th app VM"
+msgstr "Kiinnitä Nitrokey takaisin sovelluksen VM:ään."
+
 #: ../nitrokey3/linux/index.rst:2
 msgid "Nitrokey 3 With Linux"
 msgstr "Nitrokey 3 Linuxilla"
@@ -16075,8 +16156,8 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"*PIN-koodi* on rajoitettu uusintalaskurilla. Lisätietoja on luvussa `"
-"Uusintalaskuri <access_control.html#retry-counter>`__."
+"*PIN-koodi* on rajoitettu uusintalaskurilla. Lisätietoja on luvussa "
+"`Uusintalaskuri <access_control.html#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:40
 msgid "On the terminal enter ``nitropy nk3 piv change-pin``."
@@ -16092,8 +16173,8 @@ msgid ""
 "to the chapter `Retry Counter <access_control.html#retry-counter>`__ to "
 "learn more."
 msgstr ""
-"*PUK* on rajoitettu uusintalaskurilla. Lisätietoja on luvussa `"
-"Uusintalaskuri <access_control.html#retry-counter>`__."
+"*PUK* on rajoitettu uusintalaskurilla. Lisätietoja on luvussa "
+"`Uusintalaskuri <access_control.html#retry-counter>`__."
 
 #: ../nitrokey3/windows/piv/access_control.rst:58
 msgid "On the terminal enter ``nitropy nk3 piv change-puk``."
@@ -16110,8 +16191,8 @@ msgid ""
 " are no attempts left."
 msgstr ""
 "Uusintalaskuria käytetään *PIN* ja *PUK*. Laskuri pienenee jokaisesta "
-"epäonnistuneesta kirjautumisyrityksestä. Nollan suuruinen uusintayritysten "
-"laskuri tarkoittaa, että yrityksiä ei ole jäljellä."
+"epäonnistuneesta kirjautumisyrityksestä. Nollan suuruinen "
+"uusintayritysten laskuri tarkoittaa, että yrityksiä ei ole jäljellä."
 
 #: ../nitrokey3/windows/piv/access_control.rst:68
 msgid ""
@@ -16155,9 +16236,9 @@ msgid ""
 "the management key. The authentication is done with ``nitropy nk3 piv "
 "admin-auth``."
 msgstr ""
-"Ennen kuin voit suorittaa hallintatoimintoja, sinun on todennettava itsesi "
-"hallintaavaimella. Tunnistautuminen tapahtuu osoitteessa ``nitropy nk3 piv "
-"admin-auth``."
+"Ennen kuin voit suorittaa hallintatoimintoja, sinun on todennettava "
+"itsesi hallintaavaimella. Tunnistautuminen tapahtuu osoitteessa ``nitropy"
+" nk3 piv admin-auth``."
 
 #: ../nitrokey3/windows/piv/access_control.rst:87
 msgid ""
@@ -16177,8 +16258,9 @@ msgid ""
 "read and written. The size of a certificate is limited by the transport "
 "layer and about 6kB."
 msgstr ""
-"Jokaiseen yksityiseen avaimeen liittyy varmenne. Varmenteita voidaan lukea "
-"ja kirjoittaa. Varmenteen kokoa rajoittaa siirtokerros ja se on noin 6 kB."
+"Jokaiseen yksityiseen avaimeen liittyy varmenne. Varmenteita voidaan "
+"lukea ja kirjoittaa. Varmenteen kokoa rajoittaa siirtokerros ja se on "
+"noin 6 kB."
 
 #: ../nitrokey3/windows/piv/certificate_management.rst:9
 msgid "Read Certificate"
@@ -16201,8 +16283,8 @@ msgid ""
 "The PIV application can be reset to factory defaults. It can only be "
 "reset if the PIN and PUK are blocked."
 msgstr ""
-"PIV-sovellus voidaan palauttaa tehdasasetuksiin. Se voidaan palauttaa vain, "
-"jos PIN- ja PUK-koodi on estetty."
+"PIV-sovellus voidaan palauttaa tehdasasetuksiin. Se voidaan palauttaa "
+"vain, jos PIN- ja PUK-koodi on estetty."
 
 #: ../nitrokey3/windows/piv/factory_reset.rst:8
 msgid ""
@@ -16221,8 +16303,8 @@ msgid ""
 "This document explains how to use the PIV application of a Nitrokey 3 for"
 " smartcard logon with Active Directory."
 msgstr ""
-"Tässä asiakirjassa kerrotaan, miten Nitrokey 3:n PIV-sovellusta käytetään "
-"älykorttikirjautumiseen Active Directoryyn."
+"Tässä asiakirjassa kerrotaan, miten Nitrokey 3:n PIV-sovellusta käytetään"
+" älykorttikirjautumiseen Active Directoryyn."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:6
 msgid ""
@@ -16242,12 +16324,12 @@ msgid ""
 "refer to `the firmware update documentation <firmware-update.html"
 "#firmware-release-types>`__ for more information."
 msgstr ""
-"Nitrokey 3:n PIV-sovellusta pidetään tällä hetkellä epävakaana, eikä se ole "
-"saatavilla vakaissa laiteohjelmistoversioissa. Tämän toiminnon saamiseksi on "
-"asennettava testiohjelmisto. Myöhemmät laiteohjelmistopäivitykset voivat "
-"johtaa tietojen ja salausavainten katoamiseen. Lisätietoja on osoitteessa `"
-"firmware update documentation <firmware-update.html#firmware-release-"
-"types>`__."
+"Nitrokey 3:n PIV-sovellusta pidetään tällä hetkellä epävakaana, eikä se "
+"ole saatavilla vakaissa laiteohjelmistoversioissa. Tämän toiminnon "
+"saamiseksi on asennettava testiohjelmisto. Myöhemmät "
+"laiteohjelmistopäivitykset voivat johtaa tietojen ja salausavainten "
+"katoamiseen. Lisätietoja on osoitteessa `firmware update documentation "
+"<firmware-update.html#firmware-release-types>`__."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:17
 msgid ""
@@ -16256,10 +16338,10 @@ msgid ""
 "Services (ADCS). On the client machine only access to the respective user"
 " account used for logon is required."
 msgstr ""
-"Asennus edellyttää järjestelmänvalvojan käyttöoikeuksia koneisiin, joilla "
-"käytetään Active Directory -hakemistopalveluja (ADDS) ja Active Directory -"
-"varmennepalveluja (ADCS). Asiakaskoneessa tarvitaan vain kirjautumiseen "
-"käytettävän käyttäjätilin käyttöoikeus."
+"Asennus edellyttää järjestelmänvalvojan käyttöoikeuksia koneisiin, joilla"
+" käytetään Active Directory -hakemistopalveluja (ADDS) ja Active "
+"Directory -varmennepalveluja (ADCS). Asiakaskoneessa tarvitaan vain "
+"kirjautumiseen käytettävän käyttäjätilin käyttöoikeus."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16275,8 +16357,7 @@ msgstr "ADDS-rooli asennettu ja määritetty."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid "ADCS role installed and *Enterprise-CA* with root certificate configured."
-msgstr ""
-"ADCS-rooli on asennettu ja *Enterprise-CA* sekä juurivarmenne määritetty."
+msgstr "ADCS-rooli on asennettu ja *Enterprise-CA* sekä juurivarmenne määritetty."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:23
 msgid ""
@@ -16284,8 +16365,8 @@ msgid ""
 "Controller Authentication*, and *Kerberos Authentication* certificate "
 "issued."
 msgstr ""
-"Kullekin toimialueen ohjaimelle (DC) on myönnettävä *toimialueen ohjain*, *"
-"toimialueen ohjaimen todennus* ja *Kerberos-todennus* -varmenne."
+"Kullekin toimialueen ohjaimelle (DC) on myönnettävä *toimialueen ohjain*,"
+" *toimialueen ohjaimen todennus* ja *Kerberos-todennus* -varmenne."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:24
 msgid ""
@@ -16316,7 +16397,8 @@ msgstr "Nitrokey 3 ja PIV-sovellus."
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:30
 msgid "Configure smartcard logon for use with Active Directory (AD)"
 msgstr ""
-"Älykorttikirjautumisen määrittäminen Active Directory (AD) -käyttöä varten."
+"Älykorttikirjautumisen määrittäminen Active Directory (AD) -käyttöä "
+"varten."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:32
 msgid ""
@@ -16325,18 +16407,18 @@ msgid ""
 "constraints of the user certificates. It is used to sign the Certificate "
 "Request (CSR) during provisioning of the Nitrokey."
 msgstr ""
-"Älykorttikirjautuminen edellyttää varmennepohjaa toimialueen varmentajassa "
-"(CA). Tämä malli määrittelee käyttäjän varmenteiden arvot ja rajoitukset. "
-"Sitä käytetään varmennepyynnön (CSR) allekirjoittamiseen Nitrokey-avaimen "
-"käyttöönoton yhteydessä."
+"Älykorttikirjautuminen edellyttää varmennepohjaa toimialueen "
+"varmentajassa (CA). Tämä malli määrittelee käyttäjän varmenteiden arvot "
+"ja rajoitukset. Sitä käytetään varmennepyynnön (CSR) allekirjoittamiseen "
+"Nitrokey-avaimen käyttöönoton yhteydessä."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:36
 msgid ""
 "Signing a certificate request for smartcard logon requires to create a "
 "certificate template in the certificate authority."
 msgstr ""
-"Varmennepyynnön allekirjoittaminen älykorttikirjautumista varten edellyttää "
-"varmennepohjan luomista varmentajassa."
+"Varmennepyynnön allekirjoittaminen älykorttikirjautumista varten "
+"edellyttää varmennepohjan luomista varmentajassa."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:39
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:74
@@ -16348,8 +16430,8 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certtmpl.msc`` and "
 "press Enter."
 msgstr ""
-"Kirjoita komentoriviltä, PowerShellistä tai Suorita, kirjoita ``certtmpl."
-"msc`` ja paina Enter."
+"Kirjoita komentoriviltä, PowerShellistä tai Suorita, kirjoita "
+"``certtmpl.msc`` ja paina Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:41
 msgid "In the detail pane select the template **Smartcard Logon**."
@@ -16376,16 +16458,17 @@ msgid ""
 "Set **Certificate Authority** and **Certificate recipient** to the oldest"
 " clients in the domain which are supposed to use smartcard logon."
 msgstr ""
-"Aseta **Varmentaja** ja **Varmenteen vastaanottaja** toimialueen vanhimmille "
-"asiakkaille, joiden on tarkoitus käyttää älykorttikirjautumista."
+"Aseta **Varmentaja** ja **Varmenteen vastaanottaja** toimialueen "
+"vanhimmille asiakkaille, joiden on tarkoitus käyttää "
+"älykorttikirjautumista."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:50
 msgid ""
 "If you want to use Elliptic Curve (EC) keys your clients must be not "
 "older than Windows Server 2008 and Windows Vista."
 msgstr ""
-"Jos haluat käyttää EC-avaimia (Elliptic Curve), asiakkaasi eivät saa olla "
-"vanhempia kuin Windows Server 2008 ja Windows Vista."
+"Jos haluat käyttää EC-avaimia (Elliptic Curve), asiakkaasi eivät saa olla"
+" vanhempia kuin Windows Server 2008 ja Windows Vista."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:54
 msgid "**General**"
@@ -16456,8 +16539,8 @@ msgid ""
 "From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press"
 " Enter."
 msgstr ""
-"Kirjoita komentoriviltä, PowerShellistä tai Suorita, kirjoita ``certsrv.msc``"
-" ja paina Enter."
+"Kirjoita komentoriviltä, PowerShellistä tai Suorita, kirjoita "
+"``certsrv.msc`` ja paina Enter."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:76
 msgid ""
@@ -16470,19 +16553,18 @@ msgstr ""
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:77
 msgid "In the menu bar click **Action → New → Certificate Template to Issue**."
 msgstr ""
-"Valitse valikkoriviltä **Toiminto → Uusi → Varmennepohjan malli myöntämistä "
-"varten**."
+"Valitse valikkoriviltä **Toiminto → Uusi → Varmennepohjan malli "
+"myöntämistä varten**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:78
 msgid "Select the certificate template you want to issue and confirm with **OK**."
-msgstr ""
-"Valitse haluamasi varmennepohjan malli ja vahvista se painamalla **OK**."
+msgstr "Valitse haluamasi varmennepohjan malli ja vahvista se painamalla **OK**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:82
 msgid "Provision Nitrokey 3 for smartcard logon with Active Directory"
 msgstr ""
-"Nitrokey 3:n käyttöönotto älykorttikirjautumista varten Active Directoryn "
-"kanssa"
+"Nitrokey 3:n käyttöönotto älykorttikirjautumista varten Active Directoryn"
+" kanssa"
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:84
 msgid ""
@@ -16491,10 +16573,10 @@ msgid ""
 " Singing Request (CSR) generation. The certificate is then written to the"
 " Nitrokey."
 msgstr ""
-"Älykorttikirjautuminen edellyttää Nitrokey-avaimen määrittämistä käyttäjälle "
-"Active Directoryyn. Provisiong sisältää yksityisen avaimen ja CSR:n ("
-"Certificate Singing Request) luomisen. Tämän jälkeen varmenne kirjoitetaan "
-"Nitrokey-avaimeen."
+"Älykorttikirjautuminen edellyttää Nitrokey-avaimen määrittämistä "
+"käyttäjälle Active Directoryyn. Provisiong sisältää yksityisen avaimen ja"
+" CSR:n (Certificate Singing Request) luomisen. Tämän jälkeen varmenne "
+"kirjoitetaan Nitrokey-avaimeen."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:89
 msgid ""
@@ -16503,23 +16585,22 @@ msgid ""
 "the certificate before the creation time of the user account will lead to"
 " a failed logon."
 msgstr ""
-"Varmista ennen seuraavien ohjeiden noudattamista, että Active Directory -"
-"käyttäjätili, jota haluat käyttää älykorttikirjautumiseen, on olemassa. Jos "
-"varmenteen luontiaika on ennen käyttäjätilin luontiaikaa, kirjautuminen "
-"epäonnistuu."
+"Varmista ennen seuraavien ohjeiden noudattamista, että Active Directory "
+"-käyttäjätili, jota haluat käyttää älykorttikirjautumiseen, on olemassa. "
+"Jos varmenteen luontiaika on ennen käyttäjätilin luontiaikaa, "
+"kirjautuminen epäonnistuu."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:93
 msgid ""
 "If the PIV application on the Nitrokey was not used before, perform a "
 "initialization with ``nitropy nk3 piv init`` first."
 msgstr ""
-"Jos PIV-sovellusta Nitrokey-järjestelmässä ei ole käytetty aiemmin, suorita "
-"ensin alustaminen osoitteessa ``nitropy nk3 piv init``."
+"Jos PIV-sovellusta Nitrokey-järjestelmässä ei ole käytetty aiemmin, "
+"suorita ensin alustaminen osoitteessa ``nitropy nk3 piv init``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:95
 msgid "Generate a private key and write the CSR to file with the command below."
-msgstr ""
-"Luo yksityinen avain ja kirjoita CSR tiedostoon alla olevalla komennolla."
+msgstr "Luo yksityinen avain ja kirjoita CSR tiedostoon alla olevalla komennolla."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:101
 msgid ""
@@ -16569,11 +16650,11 @@ msgid ""
 "which adds them to the configured Certificate Revocation List (CRL). This"
 " is required in case of a lost or broken Nitrokey."
 msgstr ""
-"Myönnetyt käyttäjän kirjautumisvarmenteet luetellaan Active Directory -"
-"varmennepalveluissa (ADCS). ADCS:stä varmenteet voidaan peruuttaa, jolloin "
-"ne lisätään määritettyyn varmenteiden peruutusluetteloon (Certificate "
-"Revocation List, CRL). Tätä tarvitaan, jos Nitrokey on kadonnut tai "
-"rikkoutunut."
+"Myönnetyt käyttäjän kirjautumisvarmenteet luetellaan Active Directory "
+"-varmennepalveluissa (ADCS). ADCS:stä varmenteet voidaan peruuttaa, "
+"jolloin ne lisätään määritettyyn varmenteiden peruutusluetteloon "
+"(Certificate Revocation List, CRL). Tätä tarvitaan, jos Nitrokey on "
+"kadonnut tai rikkoutunut."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:130
 msgid ""
@@ -16589,8 +16670,8 @@ msgid ""
 "*Certificate Hold*. This revocation can be reverted and is hence not "
 "permanent."
 msgstr ""
-"Varmenne on mahdollista peruuttaa väliaikaisesti *Certificate Hold*. Tämä "
-"peruutus voidaan peruuttaa, eikä se siten ole pysyvä."
+"Varmenne on mahdollista peruuttaa väliaikaisesti *Certificate Hold*. Tämä"
+" peruutus voidaan peruuttaa, eikä se siten ole pysyvä."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:137
 msgid "MMC (certsrv.msc)"
@@ -16601,8 +16682,8 @@ msgid ""
 "In the navigation pane expand the certificate authority (CA) and navigate"
 " to **Issued Certificates**."
 msgstr ""
-"Laajenna navigointipaneelissa varmentaja (CA) ja siirry kohtaan **Myönnetyt "
-"varmenteet**."
+"Laajenna navigointipaneelissa varmentaja (CA) ja siirry kohtaan "
+"**Myönnetyt varmenteet**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:140
 msgid "In the detail pane select the user certificate you want to revoke."
@@ -16610,15 +16691,13 @@ msgstr "Valitse tietoruudussa käyttäjän varmenne, jonka haluat peruuttaa."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:141
 msgid "In the menu bar click **Action → All Tasks → Revoke Certificate**."
-msgstr ""
-"Valitse valikkoriviltä **Toiminto → Kaikki tehtävät → Peruuta varmenne**."
+msgstr "Valitse valikkoriviltä **Toiminto → Kaikki tehtävät → Peruuta varmenne**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:142
 msgid ""
 "Specifiy a reason for the revocation, date and time, and confirm with "
 "**Yes**."
-msgstr ""
-"Määritä peruuttamisen syy, päivämäärä ja kellonaika ja vahvista **Yes**."
+msgstr "Määritä peruuttamisen syy, päivämäärä ja kellonaika ja vahvista **Yes**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:143
 msgid "In the navigation pane navigate to **Revoked Certificates**."
@@ -16631,8 +16710,8 @@ msgstr "Valitse valikkoriviltä **Toiminto → Kaikki tehtävät → Julkaise**.
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:145
 msgid "Select the revocation list you want to publish and confirm with **OK**."
 msgstr ""
-"Valitse peruutusluettelo, jonka haluat julkaista, ja vahvista se painamalla "
-"**OK**."
+"Valitse peruutusluettelo, jonka haluat julkaista, ja vahvista se "
+"painamalla **OK**."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:148
 msgid ""
@@ -16644,12 +16723,13 @@ msgid ""
 " immediate and depends on the expiration of the CRL the client has."
 msgstr ""
 "Jokaisen älykortilla tapahtuvan kirjautumisyrityksen aikana Windows "
-"tarkistaa, onko älykortin esittämä varmenne merkitty CRL-luetteloon ("
-"Certificate Revocation List). Jos varmenne löytyy CRL:stä, kirjautuminen "
-"evätään. Jokaisessa CRL:ssä on voimassaoloaika, jonka jälkeen ne vanhenevat. "
-"Windows tallentaa haetun CRL:n välimuistiin ja päivittää ne, jos CRL:n "
-"voimassaolo on päättymässä. Näin ollen peruutus ei ole välitön, vaan se "
-"riippuu asiakkaan hallussa olevan CRL:n voimassaolon päättymisestä."
+"tarkistaa, onko älykortin esittämä varmenne merkitty CRL-luetteloon "
+"(Certificate Revocation List). Jos varmenne löytyy CRL:stä, kirjautuminen"
+" evätään. Jokaisessa CRL:ssä on voimassaoloaika, jonka jälkeen ne "
+"vanhenevat. Windows tallentaa haetun CRL:n välimuistiin ja päivittää ne, "
+"jos CRL:n voimassaolo on päättymässä. Näin ollen peruutus ei ole välitön,"
+" vaan se riippuu asiakkaan hallussa olevan CRL:n voimassaolon "
+"päättymisestä."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:156
 msgid "Import a user smartcard certificate to the personal certificate store"
@@ -16676,8 +16756,7 @@ msgstr "MMC (certmgr.msc)"
 msgid ""
 "Make sure you are logged on to the user account the certificate "
 "corresponds to."
-msgstr ""
-"Varmista, että olet kirjautuneena käyttäjätilille, jota varmenne vastaa."
+msgstr "Varmista, että olet kirjautuneena käyttäjätilille, jota varmenne vastaa."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:165
 msgid ""
@@ -16696,7 +16775,8 @@ msgid ""
 "Follow the import wizard and provide the user certificate file when "
 "requested."
 msgstr ""
-"Seuraa ohjattua tuontia ja anna käyttäjän varmentamistiedosto pyydettäessä."
+"Seuraa ohjattua tuontia ja anna käyttäjän varmentamistiedosto "
+"pyydettäessä."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:168
 msgid ""
@@ -16706,9 +16786,9 @@ msgid ""
 "corresponds to this certificate.* indicating that the private on the "
 "Nitrokey could be identified."
 msgstr ""
-"Kun tuonti on päättynyt, tarkista tuodun varmenteen tiedot. Jos Nitrokey on "
-"yhdistetty, varmenteen ominaisuuksissa pitäisi näkyä viesti *Sinulla on "
-"yksityinen avain, joka vastaa tätä varmentetta.*, joka osoittaa, että "
+"Kun tuonti on päättynyt, tarkista tuodun varmenteen tiedot. Jos Nitrokey "
+"on yhdistetty, varmenteen ominaisuuksissa pitäisi näkyä viesti *Sinulla "
+"on yksityinen avain, joka vastaa tätä varmentetta.*, joka osoittaa, että "
 "Nitrokeyn yksityinen avain on voitu tunnistaa."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:171
@@ -16724,16 +16804,16 @@ msgid ""
 "Change to the personal certficate store of the user with ``Set-Location "
 "-Path cert:\\CurrentUser\\My``."
 msgstr ""
-"Vaihda käyttäjän henkilökohtaiseen varmenteiden säilytyspaikkaan osoitteessa "
-"``Set-Location -Path cert:\\CurrentUser\\My``."
+"Vaihda käyttäjän henkilökohtaiseen varmenteiden säilytyspaikkaan "
+"osoitteessa ``Set-Location -Path cert:\\CurrentUser\\My``."
 
 #: ../nitrokey3/windows/piv/guides/client_logon_with_active_directory.rst:175
 msgid ""
 "Import the certificate to the store with ``Import-Certificate -Filepath "
 "'<path>'``, replacing ``<path>`` with the certificate file path."
 msgstr ""
-"Tuo varmenne varastoon osoitteella ``Import-Certificate -Filepath '<path>'``"
-", korvaa ``<path>`` varmenteen tiedostopolulla."
+"Tuo varmenne varastoon osoitteella ``Import-Certificate -Filepath "
+"'<path>'``, korvaa ``<path>`` varmenteen tiedostopolulla."
 
 #: ../nitrokey3/windows/piv/guides/index.rst:2
 msgid "Guides"
@@ -16749,9 +16829,9 @@ msgid ""
 "publication `SP 800-73 "
 "<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 msgstr ""
-"*Personal Identity Verfication* (PIV) perustuu NIST:n erityisjulkaisuun `SP "
-"800-73 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP."
-"800-73-4.pdf>`__."
+"*Personal Identity Verfication* (PIV) perustuu NIST:n erityisjulkaisuun "
+"`SP 800-73 "
+"<https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__."
 
 #: ../nitrokey3/windows/piv/key_management.rst:5
 msgid "Key Slots"
@@ -16764,8 +16844,8 @@ msgid ""
 " in a key slot."
 msgstr ""
 "PIV-sovelluksessa voi olla varmenteita eri tarkoituksiin. Jokaista "
-"tarkoitusta varten yksityinen avain ja sitä vastaava varmenne tallennetaan "
-"avainpaikkaan."
+"tarkoitusta varten yksityinen avain ja sitä vastaava varmenne "
+"tallennetaan avainpaikkaan."
 
 #: ../nitrokey3/windows/piv/key_management.rst:11
 msgid "Slot"
@@ -16806,8 +16886,8 @@ msgid ""
 "The private key and certificate in this slot are used to authenticate the"
 " cardholder."
 msgstr ""
-"Tässä korttipaikassa olevaa yksityistä avainta ja sertifikaattia käytetään "
-"kortinhaltijan todentamiseen."
+"Tässä korttipaikassa olevaa yksityistä avainta ja sertifikaattia "
+"käytetään kortinhaltijan todentamiseen."
 
 #: ../nitrokey3/windows/piv/key_management.rst:20
 msgid "9c"
@@ -16852,8 +16932,8 @@ msgid ""
 "respective system is a prerequisite."
 msgstr ""
 "Tässä korttipaikassa olevaa yksityistä avainta ja varmentetta käytetään "
-"fyysisiin toimintoihin, kuten rakennukseen pääsyyn tai ajan tallentamiseen. "
-"Edellytyksenä on kyseisen järjestelmän tuki."
+"fyysisiin toimintoihin, kuten rakennukseen pääsyyn tai ajan "
+"tallentamiseen. Edellytyksenä on kyseisen järjestelmän tuki."
 
 #: ../nitrokey3/windows/piv/key_management.rst:33
 msgid "Algorithms"
@@ -16907,9 +16987,9 @@ msgid ""
 " with the subject name ``John Doe`` and subject alternative name "
 "``jd@nitrokey.local``."
 msgstr ""
-"Alla oleva komento luo yksityisen avaimen avainpaikkaan ``9a`` käyttäjälle, "
-"jolla on aiheen nimi ``John Doe`` ja aiheen vaihtoehtoinen nimi ``jd@nitrokey"
-".local``."
+"Alla oleva komento luo yksityisen avaimen avainpaikkaan ``9a`` "
+"käyttäjälle, jolla on aiheen nimi ``John Doe`` ja aiheen vaihtoehtoinen "
+"nimi ``jd@nitrokey.local``."
 
 #: ../nitrokey3/shared/set-pins.rst.inc:4
 msgid "Settings PIN with Windows Settings application"
@@ -24378,6 +24458,183 @@ msgstr ""
 "Sinulla on myös mahdollisuus vaatia käyttäjän läsnäoloa Nitrokey 3 "
 "-näppäimen koskettamisen muodossa, jotta voit käyttää merkintää "
 "valitsemalla \"Vaadi käyttäjän läsnäolo\" -ruutu."
+
+#: ../software/nk-app2/pin.rst:2
+msgid "PIN Settings for FIDO2 and OTP in the Nitrokey App 2"
+msgstr "FIDO2:n ja OTP:n PIN-asetukset Nitrokey-sovelluksessa 2"
+
+#: ../software/nk-app2/pin.rst:5
+msgid ""
+"These instructions describe how to set or change the PINs for FIDO2 and "
+"OTP in the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr ""
+"Näissä ohjeissa kuvataan, miten FIDO2- ja OTP-koodien PIN-koodit asetetaan "
+"tai muutetaan osoitteessa `Nitrokey App 2 </software/nk-app2/>`__."
+
+#: ../software/nk-app2/pin.rst:9
+msgid ""
+"This function is not yet available in the current release of the "
+"`Nitrokey App 2 </software/nk-app2/>`__ version 2.3.0"
+msgstr ""
+"Tämä toiminto ei ole vielä käytettävissä `Nitrokey App 2 </software/nk-app2/"
+">`__ versiossa 2.3.0. Nitrokey App 2 __ versiossa 2.3.0"
+
+#: ../software/nk-app2/pin.rst:10
+msgid ""
+"The function is expected to be available in the release of the `Nitrokey "
+"App 2 </software/nk-app2/>`__  version 2.3.1"
+msgstr ""
+"Toiminnon odotetaan olevan saatavilla `Nitrokey App 2 </software/nk-app2/>`"
+"__ version 2.3.1 julkaisussa."
+
+#: ../software/nk-app2/pin.rst:14
+msgid ""
+"Each function FIDO2, OTP or OpenPGP Card is assigned a separate PIN, "
+"which is managed separately."
+msgstr ""
+"Jokaiselle FIDO2-, OTP- tai OpenPGP-kortille annetaan oma PIN-koodi, jota "
+"hallinnoidaan erikseen."
+
+#: ../software/nk-app2/pin.rst:17
+msgid "First Steps:"
+msgstr "Ensimmäiset askeleet:"
+
+#: ../software/nk-app2/pin.rst:19
+msgid "Open the `Nitrokey App 2 </software/nk-app2/>`__."
+msgstr "Avaa `Nitrokey App 2 </software/nk-app2/>`__."
+
+#: ../software/nk-app2/pin.rst:20
+msgid "Select the Nitrokey 3."
+msgstr "Valitse Nitrokey 3."
+
+#: ../software/nk-app2/pin.rst:21
+msgid "Select the ``SETTINGS`` tab."
+msgstr "Valitse ``SETTINGS`` -välilehti."
+
+#: ../software/nk-app2/pin.rst:22
+msgid ""
+"On the left-hand side of the ``SETTINGS`` tab, a tree structure with "
+"various options is available."
+msgstr ""
+"``SETTINGS`` -välilehden vasemmassa reunassa on puurakenne, jossa on "
+"erilaisia vaihtoehtoja."
+
+#: ../software/nk-app2/pin.rst:26
+msgid "FIDO2 PIN Settings"
+msgstr "FIDO2 PIN-asetukset"
+
+#: ../software/nk-app2/pin.rst:28
+msgid "Select ``FIDO2``."
+msgstr "Valitse ``FIDO2``."
+
+#: ../software/nk-app2/pin.rst:29
+msgid ""
+"A branch with ``FIDO2 PIN SETTINGS`` opens below ``FIDO2``. The status of"
+" the FIDO2 PIN is now available on the left-hand side of the ``SETTINGS``"
+" tab, including a short description."
+msgstr ""
+"Haara, jossa on ``FIDO2 PIN SETTINGS``, avautuu ``FIDO2`` alapuolelle. FIDO2 "
+"PIN-koodin tila on nyt saatavilla ``SETTINGS`` -välilehden vasemmalla "
+"puolella, mukaan lukien lyhyt kuvaus."
+
+#: ../software/nk-app2/pin.rst:30
+msgid "Select ``FIDO2 PIN SETTINGS`` to set or change the PIN."
+msgstr ""
+"Valitse ``FIDO2 PIN SETTINGS`` asettaaksesi tai vaihtaaksesi PIN-koodin."
+
+#: ../software/nk-app2/pin.rst:31
+msgid ""
+"Depending on the status of the Fido2 PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr ""
+"Fido2:n PIN-koodin tilasta riippuen PIN-koodin asettamista tai muuttamista "
+"koskeva syöttömaski tulee nyt näkyviin."
+
+#: ../software/nk-app2/pin.rst:33
+msgid ""
+"To set the FIDO2 PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr ""
+"Jos haluat asettaa FIDO2 PIN-koodin, kirjoita uusi PIN-koodi ja toista se "
+"sille varattuihin kenttiin. Jos haluat muuttaa PIN-koodia, syötä nykyinen "
+"PIN-koodi sille varattuun kenttään."
+
+#: ../software/nk-app2/pin.rst:33 ../software/nk-app2/pin.rst:49
+msgid "PIN length minimum 4 characters"
+msgstr "PIN-koodin pituus vähintään 4 merkkiä"
+
+#: ../software/nk-app2/pin.rst:34 ../software/nk-app2/pin.rst:50
+msgid "If the repetition of the new PIN is not correct, it will not be accepted."
+msgstr "Jos uusi PIN-koodi ei ole oikein, sitä ei hyväksytä."
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:53
+msgid "Select the ``SAVE`` button."
+msgstr "Valitse ``SAVE`` -painike."
+
+#: ../software/nk-app2/pin.rst:36 ../software/nk-app2/pin.rst:52
+msgid "If the ``SAVE`` button is greyed out, the entries are not correct."
+msgstr "Jos ``SAVE`` -painike on harmaana, merkinnät eivät ole oikein."
+
+#: ../software/nk-app2/pin.rst:37 ../software/nk-app2/pin.rst:53
+msgid "When you hover over the ``SAVE`` button, a list of reasons is displayed."
+msgstr ""
+"Kun viet hiiren hiirellä ``SAVE`` -painiketta, näyttöön tulee luettelo "
+"syistä."
+
+#: ../software/nk-app2/pin.rst:38 ../software/nk-app2/pin.rst:54
+msgid ""
+"The ``PIN_INVALID`` error message, when changing the PIN, indicates that "
+"the current PIN is incorrect."
+msgstr ""
+"``PIN_INVALID`` -virheilmoitus PIN-koodia vaihdettaessa osoittaa, että "
+"nykyinen PIN-koodi on virheellinen."
+
+#: ../software/nk-app2/pin.rst:41
+msgid "OTP PIN Settings"
+msgstr "OTP PIN-asetukset"
+
+#: ../software/nk-app2/pin.rst:44
+msgid "Select ``OTP``."
+msgstr "Valitse ``OTP``."
+
+#: ../software/nk-app2/pin.rst:44
+msgid ""
+"A branch with ``OTP PIN SETTINGS`` opens below ``OTP``. The status of the"
+" OTP PIN is now available on the left-hand side of the ``SETTINGS`` tab, "
+"including a short description."
+msgstr ""
+"Haara, jossa on ``OTP PIN SETTINGS``, avautuu ``OTP`` alapuolelle. OTP PIN-"
+"koodin tila on nyt nähtävissä ``SETTINGS`` -välilehden vasemmalla puolella, "
+"mukaan lukien lyhyt kuvaus."
+
+#: ../software/nk-app2/pin.rst:45
+msgid ""
+"Information about the version, serial number and PIN attempt counter is "
+"also available."
+msgstr ""
+"Saatavilla on myös tietoja versiosta, sarjanumerosta ja PIN-koodiyritysten "
+"laskurista."
+
+#: ../software/nk-app2/pin.rst:46
+msgid "Select ``OTP PIN SETTINGS`` to set or change the PIN."
+msgstr "Valitse ``OTP PIN SETTINGS`` asettaaksesi tai vaihtaaksesi PIN-koodin."
+
+#: ../software/nk-app2/pin.rst:47
+msgid ""
+"Depending on the status of the OTP PIN, the input mask for setting or "
+"changing the PIN is now displayed."
+msgstr ""
+"OTP PIN-koodin tilasta riippuen PIN-koodin asettamiseen tai muuttamiseen "
+"tarkoitettu syöttömaski tulee nyt näkyviin."
+
+#: ../software/nk-app2/pin.rst:49
+msgid ""
+"To set the OTP PIN, enter the new PIN and repeat it in the provided "
+"boxes. To change the PIN, enter the current PIN in the box provided."
+msgstr ""
+"Jos haluat asettaa OTP PIN-koodin, kirjoita uusi PIN-koodi ja toista se "
+"sille varattuihin kenttiin. Jos haluat muuttaa PIN-koodia, syötä nykyinen "
+"PIN-koodi sille varattuun kenttään."
 
 #: ../start/factory-reset.rst:5 ../start/multiple-identities.rst.inc:6
 msgid ""
