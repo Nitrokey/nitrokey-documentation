@@ -3,7 +3,11 @@ NitroPC Pro 2 With External GPU
 
 
 .. note::
-   This guide is only working if you use the Qubes OS OEM image from Nitrokey.
+   This guide is only working if you use the Qubes OS OEM GPU image from Nitrokey that you can build `here`_.
+
+
+.. _here: https://github.com/Nitrokey/qubes-oem
+
 
 
 This guide explains how to use your NitroPC with an external graphic card (GPU) with Qubes OS.
