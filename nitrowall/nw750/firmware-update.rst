@@ -21,7 +21,7 @@ For the general firmware update follow `this guide <https://docs.gl-inet.com/rou
 
         .. image:: /nitrowall/images/750_5.png
 
-5. click "upload packackge" and upload `blue-merle_2.0.1-101_mips_24kc.ipk <https://www.nitrokey.com/files/ci/nitrowall/blue-merle_2.0.1-101_mips_24kc.ipk>`_
+5. click "upload packackge" and upload `blue-merle <https://www.nitrokey.com/files/ci/nitrowall/blue-merle_2.0.2-101_mips_24kc.ipk>`_
 
         .. image:: /nitrowall/images/750_6.png
 
