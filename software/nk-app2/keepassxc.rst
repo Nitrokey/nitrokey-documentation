@@ -85,3 +85,21 @@ Second Option: Creating a KeePassXC Database, Protected by Nitrokey 3
 .. tip::
 
     If the Nitrokey 3 is not recognized, close KeePassXC completely. Then connect the Nitrokey 3 to your computer before restarting KeePassXC.
+
+Troubleshooting for Linux
+-------------------------
+If the Nirokey 3 device is not recognised by `KeePassXC <https://keepassxc.org/>`__ on a Linux system:
+
+* Provided that the udev rules have been set as described `here <../nitropy/linux/udev.html>`__.
+* Provided that the ``pcscd service`` are has been started with: 
+
+.. code-block:: bash
+
+   sudo systemctl start pcscd.service
+
+* Install the latest version of KeePassXC with flatpak:
+
+.. code-block:: bash
+
+   flatpak install flathub org.keepassxc.KeePassXC
+
