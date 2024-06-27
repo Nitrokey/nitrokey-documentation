@@ -1,9 +1,6 @@
 Frequently Asked Questions (FAQ)
 ================================
 
-**Q:** Scalability, High Availability: How to synchronize a cluster of multiple instances?
-   NetHSM is stateless, so that several NetHSM devices can be used to enable extremely high throughput and high availability. The PKCS#11 module supports round-robin schedule for a cluster of NetHSM instances. Multiple instances of NetHSM can be synchronized via encrypted backups. For this a separate system downloads and uploads backup files between the instances. This can be a scripted system utilizing pynitrokey. This separate system doesn't have access to the backup data in clear text because the backup files are encrypted.
-
 **Q:** Is NetHSM FIPS or Common Criteria certified?
    Not yet but we are aiming for certifications in the future. Please contact us if you are interested in supporting these efforts.
 
