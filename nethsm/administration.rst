@@ -940,7 +940,7 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
 
-See `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
+See `Namespaces <administration.html#namespaces>`__ and `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
 
 .. note::
    In a future release, additional *Roles* may be introduced.
@@ -951,6 +951,9 @@ Add User
 Add a user account to the NetHSM.
 Each user account has a *Role*, which needs to be specified.
 Please refer to chapter `Roles <administration.html#roles>`__ to learn more about *Roles*.
+
+Optionally, a user can be assigned to a *Namespace*.
+See the chapter `Namespaces <administration.html#namespaces>`__ for more information.
 
 .. note::
    The NetHSM assigns a random user ID if none is specified.
@@ -965,6 +968,8 @@ A user account can be added as follows.
       | Option                                                         | Description                      |
       +================================================================+==================================+
       | ``-n``, ``--real-name`` ``TEXT``                               | The real name of the user        |
+      +----------------------------------------------------------------+----------------------------------+
+      | ``-N``, ``--namespace`` ``TEXT``                               | The Namespace of the new user    |
       +----------------------------------------------------------------+----------------------------------+
       | ``-r``, ``--role`` ``[Administrator|Operator|Metrics|Backup]`` | The *Role* of the new user       |
       +----------------------------------------------------------------+----------------------------------+
@@ -994,6 +999,9 @@ A user account can be added as follows.
       Information about the `/users` endpoint, to create a user without specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users>`__.
 
       Information about the `/users/{UserID}` endpoint, to create a user with specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID>`__.
+
+By default, the Namespace is inherited from the user that adds the new user.
+Only users without a Namespace can choose a different Namespace for new users.
 
 Delete User
 ~~~~~~~~~~~
@@ -1063,6 +1071,8 @@ The list can be retrieved as follows.
 
       Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users-UserID>`__.
 
+Users within a Namespace can only see users in the same Namespace.
+
 User Passphrase
 ~~~~~~~~~~~~~~~
 
@@ -1099,6 +1109,119 @@ The user passphrase can be set as follows.
          Updated the passphrase for user operator1 on NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/users/{UserID}/passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_users-UserID-passphrase>`__.
+
+Namespaces
+~~~~~~~~~~
+
+*Namespaces* were introduced in software version 1.1. When migrating from an earlier version of the software, all existing users and keys will be without a Namespace.
+
+*Namespaces* group keys and users on a NetHSM into subsets.
+Users can only see and use keys in the same Namespace and can only see users in the same Namespace.
+It is not possible to see users and to see and use keys of other Namespaces.
+When a new user is created, it inherits the Namespace of the user that created it.
+
+Users with the *Administrator* `Role <administration.html#roles>`__ are also referred to as *R-Administrator* if they are not in a Namespace, or *N-Administrator* if they are in a Namespace.
+
+Special rules apply to *R-Administrator* users:
+They can set the Namespace for new users, list all users and query the Namespace of a user.
+Also, the NetHSM configuration can only be accessed by *R-Administrator* users.
+
+To be able to generate keys and users in a Namespace, the Namespace needs to be created by an *R-Administrator* user.
+Once the Namespace has been created, *R-Administrator* users can no longer create new users in that Namespace.
+Therefore, it is necessary to create an *N-Administrator* user for the Namespace before creating the Namespace.
+*R-Administrator* users can also delete a Namespace with all contained keys.
+
+List Namespaces
+^^^^^^^^^^^^^^^
+
+List the Namespaces on the NetHSM.
+
+The list can be retrieved as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST list-namespaces
+
+      .. code-block::
+
+         Namespaces on NetHSM localhost:8843:
+         - ns1
+         - ns2
+   .. tab:: REST API
+      Information about the `/namespaces` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_namespaces>`__.
+
+Add Namespace
+^^^^^^^^^^^^^
+
+Add a Namespace to the NetHSM.
+
+*R-Administrator* users can already create new accounts in the Namespace before it is created.
+After the creation, only *N-Administrator* users can manage the users in the Namespace.
+The creation and usage of keys in the Namespace is only possible after it has been added.
+
+.. note::
+   The NetHSM assigns a random user ID if none is specified.
+
+A Namespace can be added as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Arguments**
+
+      +---------------+------------------------+
+      | Argument      | Description            |
+      +===============+========================+
+      | ``NAMESPACE`` | The new Namespace.     |
+      +-------------+--------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST add-namespace ns1
+
+      .. code-block::
+
+         Namespace ns1 added to NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/namespaces/{NamespaceID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_namespaces-NamespaceID>`__.
+
+
+Delete Namespace
+^^^^^^^^^^^^^^^^
+
+Delete a Namespace from the NetHSM.
+
+Deleting a Namespace also deletes all keys of that Namespace.
+Remaining users in the Namespace cannot add keys until the Namespace has been added again.
+
+A Namespace can be deleted as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Arguments**
+
+      +---------------+--------------------------+
+      | Argument      | Description              |
+      +===============+==========================+
+      | ``NAMESPACE`` | The Namespace to delete. |
+      +---------------+--------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST delete-namespace ns1
+
+      .. code-block::
+
+         Namespace ns1 deleted on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/namespaces/{NamespaceID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/DELETE_namespaces-NamespaceID>`__.
 
 Tags for Users
 ~~~~~~~~~~~~~~
