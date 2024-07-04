@@ -9,7 +9,7 @@ In the future, this manual provisioning may be automated through a Windows MiniD
    The PIV application of the Nitrokey 3 is currently considered unstable and is not available on the stable firmware releases.
    To obtain that functionality it is required to install a test firmware.
    Subsequent firmware updates may lead to loss of data and cryptographic keys.
-   Please refer to `the firmware update documentation <firmware-update.html#firmware-release-types>`__ for more information.
+   Please refer to `the firmware update documentation </nitrokey3/windows/firmware-update.html#firmware-release-types>`__ for more information.
 
 Prerequisites
 -------------

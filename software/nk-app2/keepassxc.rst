@@ -90,7 +90,7 @@ Troubleshooting for Linux
 -------------------------
 If the Nirokey 3 device is not recognised by `KeePassXC <https://keepassxc.org/>`__ on a Linux system:
 
-* Provided that the udev rules have been set as described `here <../nitropy/linux/udev.html>`__.
+* Provided that the udev rules have been set as described `here </software/nitropy/linux/udev.html>`__.
 * Provided that the ``pcscd service`` are has been started with: 
 
 .. code-block:: bash
