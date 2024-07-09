@@ -18,14 +18,14 @@ Frequently Asked Questions (FAQ)
 **Q:** Roadmap: Which features are planned?
    We plan the following developments in the loose order. Changes to this prioritization based on customer requests are possible.
 
-   * Performance improvements
-   * Quorum: m-of-n access scheme and security domain management
+   * Productive usable software container
    * Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool
+   * Quorum: m-of-n access scheme and security domain management
+   * Performance improvements
    * Direct, dynamic cluster capability, possibly support for external database
    * Remote attestation and cloud service
    * User authentication via mTLS certificates or FIDO
    * More user rights management (e.g. additional roles, groups)
-   * Productive usable software container
    * Further separations and hardenings
    * FIPS and/or Common Criteria certifications
    * Redundant power supplies
