@@ -10,6 +10,13 @@ NetHSM's primary interface is a modern REST-API that guarantees best performance
 The API specification is available in `OpenAPI format <https://nethsmdemo.nitrokey.com/api_docs/nethsm-api.yaml>`_,
 and can be inspected and tested in the `API browser <https://nethsmdemo.nitrokey.com/api_docs/index.html>`_.
 
+Command-line interface
+----------------------
+
+Users may administrate and use a NetHSM using a dedicated command-line interface (CLI).
+Nitrokey offers ``nitropy``, which is distributed in the Python based `pynitrokey <https://pypi.org/project/pynitrokey/>`_.
+With ``nethsm`` an alternative third-party application exists, which is developed in the Rust crate `nethsm-cli <https://crates.io/crates/nethsm-cli/>`_.
+
 PKCS#11
 -------
 
