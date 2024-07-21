@@ -1127,7 +1127,7 @@ They can set the Namespace for new users, list all users and query the Namespace
 Also, the NetHSM configuration can only be accessed by *R-Administrator* users.
 
 To be able to generate keys and users in a Namespace, the Namespace needs to be created by an *R-Administrator* user.
-Once the Namespace has been created, *R-Administrator* users can no longer create new users in that Namespace.
+Once the Namespace has been created, *R-Administrator* users can no longer create, delete or modify users in that Namespace.  This allows to protect Namespaces' keys being accessed by R-Administrator (also indirectly by adding a new user on behalf).
 Therefore, it is necessary to create an *N-Administrator* user for the Namespace before creating the Namespace.
 *R-Administrator* users can also delete a Namespace with all contained keys.
 
