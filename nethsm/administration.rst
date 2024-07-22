@@ -2,7 +2,7 @@ Administration
 ==============
 
 This chapter describes administrative tasks for users with the *Administrator* role.
-Please refer to chapter `Roles <administration.html#roles>`__ to learn more about the role.
+Please refer to chapter `Roles <administration#roles>`__ to learn more about the role.
 
 .. important::
    Please make sure you read the information in the beginning of `this document <index.html>`__ before starting to work.
@@ -142,7 +142,7 @@ The current state of the NetHSM can be retrieved as follows.
       Information about the `/health/state` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_health-state>`__.
 
 A new NetHSM has an *Unprovisioned* state and after provisioning enters the *Operational* state.
-The provisioning of a NetHSM is described in the chapter `Provisioning <getting-started.html#provisioning>`__.
+The provisioning of a NetHSM is described in the chapter `Provisioning <getting-started#provisioning>`__.
 
 A NetHSM in *Operational* state can be locked again to protect it as follows.
 
@@ -496,9 +496,9 @@ The NetHSM logs metrics of system parameters.
 
 .. note::
    This command requires the authentication of a user with the *Metrics* role.
-   Please refer to chapter `Roles <administration.html#roles>`__ to learn more about the role.
+   Please refer to chapter `Roles <administration#roles>`__ to learn more about the role.
 
-Please refer to `Metrics <metrics.html>`__ to learn more about each metric.
+Please refer to `Metrics <metrics>`__ to learn more about each metric.
 
 The metrics can be retrieved as follows.
 
@@ -650,7 +650,7 @@ namely *Configuration Store*, *Authentication Store*, *Domain Key Store* and *Ke
 
 .. important::
    A NetHSM system software in *Unattended Boot* mode will require the *Unlock Passphrase* if restored on a different NetHSM hardware.
-   Please refer to chapter `Unlock Passphrase <administration.html#unlock-passphrase>`__ to learn more.
+   Please refer to chapter `Unlock Passphrase <administration#unlock-passphrase>`__ to learn more.
 
 .. important::
    A NetHSM in *Unattended Boot* mode will be in the same mode after a restore.
@@ -699,7 +699,7 @@ The backup passphrase can be set as follows.
 
 .. note::
    This command requires the authentication of a user with the *Backup* role.
-   Please refer to chapter `Roles <administration.html#roles>`__ to learn more.
+   Please refer to chapter `Roles <administratio#roles>`__ to learn more.
 
 The backup can be executed as follows.
 
@@ -940,7 +940,7 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
 
-See `Namespaces <administration.html#namespaces>`__ and `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
+See `Namespaces <administration#namespaces>`__ and `Tags <administration#tags-for-users>`__ for more fine-grained access restricions.
 
 .. note::
    In a future release, additional *Roles* may be introduced.
@@ -950,10 +950,9 @@ Add User
 
 Add a user account to the NetHSM.
 Each user account has a *Role*, which needs to be specified.
-Please refer to chapter `Roles <administration.html#roles>`__ to learn more about *Roles*.
+Please refer to chapter `Roles <administration#roles>`__ to learn more about *Roles*.
 
-Optionally, a user can be assigned to a *Namespace*.
-See the chapter `Namespaces <administration.html#namespaces>`__ for more information.
+Optionally, a user can be assigned to a `*Namespace* <administration#namespaces>`__.
 
 .. note::
    The NetHSM assigns a random user ID if none is specified.
@@ -1115,12 +1114,12 @@ Namespaces
 
 *Namespaces* were introduced in software version 1.1. When migrating from an earlier version of the software, all existing users and keys will be without a Namespace.
 
-*Namespaces* group keys and users on a NetHSM into subsets.
+Similarly to the concept of partitions, NetHSM supports the more flexible *Namespaces* which group keys and users on a NetHSM into subsets.
 Users can only see and use keys in the same Namespace and can only see users in the same Namespace.
 It is not possible to see users and to see and use keys of other Namespaces.
 When a new user is created, it inherits the Namespace of the user that created it.
 
-Users with the *Administrator* `Role <administration.html#roles>`__ are also referred to as *R-Administrator* if they are not in a Namespace, or *N-Administrator* if they are in a Namespace.
+Users with the *Administrator* `Role <administration#roles>`__ are also referred to as *R-Administrator* if they are not in a Namespace, or *N-Administrator* if they are in a Namespace.
 
 Special rules apply to *R-Administrator* users:
 They can set the Namespace for new users, list all users and query the Namespace of a user.
@@ -1228,7 +1227,7 @@ Tags for Users
 
 *Tags* can be used to set fine-grained access restrictions on keys, and are an optional feature. One or more *Tags* can be assigned to user accounts with the *Operator* role only. The *Operators* can see all keys, but only use those with at least one corresponding *Tag*. A key can not be modified by an *Operator* user.
 
-To learn about how to use *Tags* on keys, please refer to `Tags for Keys <operation.html#tags-for-keys>`__.
+To learn about how to use *Tags* on keys, please refer to `Tags for Keys <operation#tags-for-keys>`__.
 
 A *Tag* can be added as follows.
 
