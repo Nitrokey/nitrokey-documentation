@@ -97,3 +97,10 @@ This folder also contains the necessary documentation how to use it.
    The mode of SELinux can be requested with ``sestatus |grep "Current mode"``.
    If the mode is set to ``enforcing``, a change to the context is required.
    In this case the volume mount must be postfixed with ``:z``, resulting in ``-v "${PWD}/out:/out:z"``.
+
+Command-line interface
+----------------------
+
+Users may administrate and use a NetHSM using a dedicated command-line interface (CLI).
+Nitrokey offers ``nitropy``, which is distributed in the Python based `pynitrokey <https://pypi.org/project/pynitrokey/>`_.
+With ``nethsm`` an alternative third-party application exists, which is developed in the Rust crate `nethsm-cli <https://crates.io/crates/nethsm-cli/>`_.

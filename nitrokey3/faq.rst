@@ -41,7 +41,7 @@ Nitrokey 3 FAQ
 
 **Q:** How can I set the PIN for my Nitrokey 3?
    The Nitrokey 3 has distinct PINs for each feature.
-   Please refer to the chapter of your respective operating system (`Linux <linux/set-pins.html>`__, `Mac OS <mac/set-pins.html>`__, `Windows <windows/set-pins.html>`__).
+   Please refer to the chapter of your respective operating system (`Linux <linux/set-pins.html>`__, `macOS <mac/set-pins.html>`__, `Windows <windows/set-pins.html>`__).
 
 **Q:** Is the Nitrokey 3 Common Criteria or FIPS certified?
    The secure element (SE050M) is Common Criteria EAL 6+ security certified up to the OS 
