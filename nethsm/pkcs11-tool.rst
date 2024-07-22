@@ -31,7 +31,7 @@ List Slots
 
 The information about the available slots.
 The listed slots depend on the configuration of the slots array in the `p11nethsm.conf` configuration file.
-To learn more about the configuration of slots, please refer to chapter `Configuration <setup.html#Configuration>`_.
+To learn more about the configuration of slots, please refer to chapter `Configuration <pkcs11-setup.html#Configuration>`_.
 
 .. code-block:: bash
 
