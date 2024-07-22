@@ -58,7 +58,7 @@ The container will expose the REST API, via the HTTPS protocol, on the interface
    Make sure to use the correct connection settings to establish a connection.
    Please refer to chapter `NetHSM introduction <index.html>`__ to learn more.
 
-Integration into Custom Application
+Integration Into Custom Application
 -----------------------------------
 
 To integrate the NetHSM into own custom applications, client libraries are available for almost all programming languages. Here are libraries for `Python <https://github.com/Nitrokey/nethsm-sdk-py>`_ and `Rust <https://github.com/Nitrokey/nethsm-sdk-rs>`_ as well as `this 3rd party Rust crate <https://crates.io/crates/nethsm>`_. For all other programming languages we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_.
@@ -97,3 +97,10 @@ This folder also contains the necessary documentation how to use it.
    The mode of SELinux can be requested with ``sestatus |grep "Current mode"``.
    If the mode is set to ``enforcing``, a change to the context is required.
    In this case the volume mount must be postfixed with ``:z``, resulting in ``-v "${PWD}/out:/out:z"``.
+
+Command-line interface
+----------------------
+
+Users may administrate and use a NetHSM using a dedicated command-line interface (CLI).
+Nitrokey offers ``nitropy``, which is distributed in the Python based `pynitrokey <https://pypi.org/project/pynitrokey/>`_.
+With ``nethsm`` an alternative third-party application exists, which is developed in the Rust crate `nethsm-cli <https://crates.io/crates/nethsm-cli/>`_.

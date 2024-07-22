@@ -74,4 +74,4 @@ Some car sharing apps (such as SHARE NOW) use Bluetooth-based location service t
 Banking Apps
 ############
 
-There is an online archive for banking apps available, which lists many apps and if they are working or not: https://privsec.dev/posts/android/banking-applications-compatibility-with-grapheneos/
+There is a `list of banking apps <https://privsec.dev/posts/android/banking-applications-compatibility-with-grapheneos/>`__ stating which are working or not.

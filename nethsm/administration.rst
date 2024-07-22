@@ -775,6 +775,11 @@ The restore can be applied as follows.
    .. tab:: REST API
       Information about the `/system/restore` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-restore>`__.
 
+Clustering
+~~~~~~~~~~
+
+NetHSM is stateless, so that several NetHSM devices can be used to process extremely high throughput and provide high availability. The PKCS#11 module supports round-robin schedule for a cluster of NetHSM instances. Multiple instances of NetHSM can be synchronized via encrypted backups. For this a separate system downloads and uploads backup files between the instances. This separate system doesn’t have access to the backup data in clear text because the backup files are encrypted. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__.
+
 Software Update
 ~~~~~~~~~~~~~~~
 
@@ -810,7 +815,7 @@ The update file can be uploaded as follows.
 
 Afterwards the update can be applied or aborted. Please refer to the desired option below. If the NetHSM is powered down before the "commit" operation, the update file has to be uploaded again.
 
-The update can be applied (committed) as follows. Any data migration is only performed _after_ the NetHSM has successfully booted the new system software version.
+The update can be applied (committed) as follows. Any data migration is only performed *after* the NetHSM has successfully booted the new system software version.
 
 .. tabs::
    .. tab:: nitropy

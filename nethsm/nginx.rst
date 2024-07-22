@@ -79,7 +79,7 @@ libnethsm_pkcs11 Configuration
         username: "operator"
         password: "opPassphrase"
 
-To secure the password you can provide it via an environment variable (see `Setup <setup>`__) or provide it in the nginx configuration:
+To secure the password you can provide it via an `environment variable <pkcs11-setup.html#passwords>`__) or provide it in the nginx configuration:
 
 .. code-block::
 

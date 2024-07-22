@@ -29,5 +29,5 @@ This is an example of a working key::
 In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitropy.log.*``).
 
 
-.. _installation instructions: ../software/nitropy/all-platforms/installation.html
+.. _installation instructions: ./installation.html
 
