@@ -10,7 +10,7 @@ NitroPhone FAQ
 **Q:** What is and how to activate *PIN Layout Scrambling*
    To make it difficult for strangers to read the PIN when typing it in, you can
    display the PIN layout in a random order. Additionally, we recommend a
-   `privacy screen <https://shop.nitrokey.com/shop/product/privacyscreen-for-nitrophone-1-194>`__.
+   `privacy screen <https://shop.nitrokey.com/shop/category/smartphone-tablet-4>`__.
    To enable, select: *Settings -> Security -> PIN scrambling -> Scramble PIN*
 
 **Q:** What is a *Kill Switch* and how to activate it?

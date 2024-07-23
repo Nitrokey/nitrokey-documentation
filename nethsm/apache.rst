@@ -54,7 +54,7 @@ libnethsm_pkcs11 Configuration
         username: "operator"
         password: "opPassphrase"
 
-To secure the password you can provide it via an environment variable (see `Setup <setup>`__) or provide it in the httpd configuration:
+To secure the password you can provide it via an environment variable (see `Passwords <pkcs11-setup.html#passwords>`__) or provide it in the httpd configuration:
 
 .. code-block::
 
