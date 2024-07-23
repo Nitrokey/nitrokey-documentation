@@ -44,7 +44,7 @@ The system recovery can be performed as follows.
    If DHCP is not available the link-local address can be determined with Nmap.
    The command ``nmap <network-in-cidr-notation> -p 80 --open`` will return a list of hosts with open port 80.
 4. Open the BMC website in a web browser, using the determined IP address from the previous step.
-   To login, the default credentials are username ``bmc_admin``, and password ``abcd1234``.
+   To login, the default credentials are username ``bmc_admin``, and password ``8mCU$3r0nE``.
 
 5. Mount the downloaded installer image by clicking in the menu on the left on *FRU: Hermes CFL (with TPM) Nitrokey Config* followed by *Virtual media* in the submenu.
    In the middle open the tab *usb0*, and click the button *Attach media*.
