@@ -46,6 +46,16 @@ The system recovery can be performed as follows.
 4. Open the BMC website in a web browser, using the determined IP address from the previous step.
    To login, the default credentials are username ``bmc_admin``, and password ``8mCU$3r0nE``.
 
+   .. important::
+      In case you encounter an unauthorized login error on the BMC web interface it can be three of the following issues.
+
+      1. Username or password wrong.
+      2. During factory reset the BMC generates a new TLS certificate.
+         Some web browsers fail with connection errors when the certificate changes while the same window stays open.
+         Close the web browser window and open a new one.
+      3. The BMC software sometimes shows the issue that it doesn't accept an older session cookie which are still in the cache of the web browser.
+         Clear the web browsers cache and try again.
+
 5. Mount the downloaded installer image by clicking in the menu on the left on *FRU: Hermes CFL (with TPM) Nitrokey Config* followed by *Virtual media* in the submenu.
    In the middle open the tab *usb0*, and click the button *Attach media*.
 
