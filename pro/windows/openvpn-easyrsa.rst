@@ -285,19 +285,19 @@ Server side
 
                 $ mv /tmp/{server.crt,chain.crt} /etc/openvpn/server
 
-        .. warning::
+    .. warning::
 
-    CA Certificate and ``chain.crt``
+        CA Certificate and ``chain.crt``
 
-    In the above, the CA returns the signed sever certificate, and
-    includes the CA certificate ``CA.crt`` which is the ``chain.crt``
-    file. This can be done over an insecure channel, though the client is
-    encouraged to confirm if the received ``chain.crt`` is valid, if the
-    transport is untrusted.
+        In the above, the CA returns the signed sever certificate, and
+        includes the CA certificate ``CA.crt`` which is the ``chain.crt``
+        file. This can be done over an insecure channel, though the client is
+        encouraged to confirm if the received ``chain.crt`` is valid, if the
+        transport is untrusted.
 
-    It is possible to rename the file ``chain.crt`` file to ``CA.crt`` on
-    the target machine, however we will use ``chain.crt`` in the next
-    instructions.
+        It is possible to rename the file ``chain.crt`` file to ``CA.crt`` on
+        the target machine, however we will use ``chain.crt`` in the next
+        instructions.
 
 6. Configure the OpenVPN server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
