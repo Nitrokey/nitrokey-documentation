@@ -86,14 +86,14 @@ Server side
         .. code-block:: bash
 
             $ sudo -s 
-            $ wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
+            # wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg | apt-key add -
 
     5. Add the URL of the adequate OpenVPN packages to the ``sources.list`` file
 
         .. code-block:: bash
 
-            $ echo "deb http://build.openvpn.net/debian/openvpn/release/2.5 buster main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
-            $ exit
+            # echo "deb http://build.openvpn.net/debian/openvpn/release/2.5 buster main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
+            # exit
 
         We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN `version
         2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`__ to login.
@@ -107,7 +107,7 @@ Server side
         If you want to check the version, it possible by calling ``--version``
         and print the following:
 
-        .. code-block:: bash
+        ::
 
             $ sudo openvpn --version
             OpenVPN 2.5_beta3 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Sep  1 2020
@@ -244,7 +244,7 @@ Server side
 
         1. Query the list of available devices
 
-            .. code-block:: bash
+            ::
 
                 $ p11tool --list-all
 
@@ -252,7 +252,7 @@ Server side
 
             -  The key’s URI should be in this format:
 
-            .. code-block:: bash
+            ::
 
                 pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private
 
@@ -304,7 +304,7 @@ Server side
 
     A connection that uses TLS requires multiple `certificates and keys for authentication <https://wiki.teltonika-networks.com/view/OpenVPN_configuration_examples>`__. Now that we issued and signed those, we can place them in the right directories. The breakdown of the certificates and keys that must be located at the root directory are the following:
 
-    .. code-block:: bash
+    ::
 
         OpenVPN server 
 
@@ -459,7 +459,7 @@ Client side configuration
 
     Now back on the client machine, we will plug the Nitrokey Pro and use it to establish the VPN connection with the server. In general terms, a connection that uses TLS requires multiple certificates and keys for authentication:
 
-    .. code-block:: bash
+    ::
 
         OpenVPN client 
             - The root certificate file (`chain.crt`)
@@ -654,7 +654,7 @@ Client side configuration
 
         When executing OpenVPN client, Nitrokey’s PIN needs to be entered:
 
-        .. code-block:: bash
+        ::
 
             $ sudo openvpn --client --config client.conf 
             Fri Sep 11 17:42:01 2020 OpenVPN 2.4.9 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Apr 24 2020
@@ -665,7 +665,7 @@ Client side configuration
 
         In some reported cases it does not prompt for a PIN on the terminal. One workaround would be to use to use this command to login with the PIN:
 
-        .. code-block:: bash
+        ::
 
             $ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>
 
