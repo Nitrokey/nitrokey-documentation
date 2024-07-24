@@ -49,9 +49,9 @@ the different connectors and interfaces is given.
 
 4. The **RJ45 - 1GbE Ethernet** connector connects your NextBox with your home network and shall 
    stay connected at all times. 
-5. **Free USB 3 - Type A Slot**, please see :ref:`Hardware FAQ<usb-power-supply>`
+5. **Free USB 3 - Type A Slot**, please see `Hardware FAQ`_
 6. **Reserved USB 3 - Type A Slot**, used for the internal hard-disk. *Never remove this connector!*
-7. **2x Free USB 2 - Type A Slots**, please see :ref:`Hardware FAQ<usb-power-supply>`
+7. **2x Free USB 2 - Type A Slots**, please see `Hardware FAQ`_
 
    .. hint:: Using a hard-drive with an external power supply you can use any of
             the available USB slots. Keep in mind that the data transfer bandwidth for
@@ -75,3 +75,5 @@ the different connectors and interfaces is given.
 
 
 
+
+.. _Hardware FAQ: faq/hardware.html#why-must-i-not-connect-external-hard-drives-without-an-external-power-supply-to-my-nextbox

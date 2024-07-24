@@ -41,7 +41,7 @@ Nextcloud FAQ
 **Q:** Why is my Nextcloud not loading properly, instead I get a white page and a `.htaccess` error?
   This usually is an indication that the OS has unmounted/detached the internal
   hard-drive due to an low-power-incident. Please make sure you read and
-  understood :ref:`USB power<faq-nextbox-hardware-usb-power-supply>`. In most
+  understood `USB power <faq/hardware.html#why-must-i-not-connect-external-hard-drives-without-an-external-power-supply-to-my-nextbox>`_. In most
   cases doing a power-cycle (unplug the USB-C connector, wait 5secs and plug it
   in again) should resolve this. **Make sure no additional USB devices are
   connected during this procedure.**

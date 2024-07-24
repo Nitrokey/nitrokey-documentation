@@ -13,7 +13,7 @@ To enable backup and restore onto a storage device please follow these steps:
    (currently *ext* and *xfs* are supported).
 
 2. Attach the storage device to your NextBox to any of the USB ports and *remember to use an external
-   power supply* (:ref:`more information<usb-power-supply>`)
+   power supply* `more information <faq/hardware.html#why-must-i-not-connect-external-hard-drives-without-an-external-power-supply-to-my-nextbox>`_
 
 3. Once attached you will see the storage(s) inside "Storage Management" below "Available Storages"
 

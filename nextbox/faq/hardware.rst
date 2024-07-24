@@ -2,8 +2,6 @@ Hardware FAQ
 ============
 
 
-.. _usb-power-supply:
-.. _faq-nextbox-hardware-usb-power-supply:
 
 
 **Q:** Why must I not connect external hard-drives without an external power-supply to my NextBox?
