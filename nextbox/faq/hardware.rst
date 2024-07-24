@@ -2,8 +2,6 @@ Hardware FAQ
 ============
 
 
-.. _usb-power-supply:
-.. _faq-nextbox-hardware-usb-power-supply:
 
 **Q:** Why must I not connect external hard-drives without an external power-supply to my NextBox?
   The Raspberry Pi 4 Model B can only supply 1.2A of power through USB (see
@@ -64,11 +62,7 @@ Hardware FAQ
 
 .. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
-.. _nextbox.local: http://nextbox.local
 .. _External storage support: https://docs.nextcloud.com/server/20/admin_manual/configuration_files/external_storage_configuration_gui.html
 .. _RPi Power Supply: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
-.. _typical bare-board power consumption: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
-.. _Putty Documentation: https://www.ssh.com/academy/ssh/putty/public-key-authentication
-.. _Nextcloud WebDAV documentation: https://docs.nextcloud.com/server/20/user_manual/en/files/access_webdav.html
 
 

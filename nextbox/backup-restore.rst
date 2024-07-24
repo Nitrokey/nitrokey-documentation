@@ -65,6 +65,5 @@ the upgrade process for Nextcloud.
    is not identical to the current one.
 
 
-.. _Nextcloud WebDAV documentation: https://docs.nextcloud.com/server/20/user_manual/en/files/access_webdav.html
 
 

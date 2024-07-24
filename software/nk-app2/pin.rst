@@ -1,6 +1,5 @@
 PIN Settings for FIDO2 and OTP in the Nitrokey App 2
 ====================================================
-.. _pinsettings:
 
 These instructions describe how to set or change the PINs for FIDO2 and OTP in the `Nitrokey App 2 </software/nk-app2/>`__. 
 
