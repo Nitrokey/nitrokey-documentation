@@ -38,7 +38,6 @@ Generic FAQ
   and passwords are on a high level, either with long-random passwords or a 
   2-Factor-Authentification supported login method with e.g., a Nitrokey FIDO2.**
 
-.. _faq-nextbox-generic-ssh:
 
 **Q:** What do all the ssh-related "warnings" mean?
   Once you set up your ssh-access, you make yourself technically responsible for

@@ -180,4 +180,3 @@ If you encounter problems, please read the other articles inside the
 .. _TLS: https://en.wikipedia.org/wiki/Transport_Layer_Security
 .. _HTTPS: https://en.wikipedia.org/wiki/HTTPS
 .. _CA: https://en.wikipedia.org/wiki/Certificate_authority
-.. _Let's Encrypt: https://en.wikipedia.org/wiki/Let%27s_Encrypt

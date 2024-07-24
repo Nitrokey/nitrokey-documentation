@@ -1,6 +1,5 @@
 KeePassXC
 =========
-.. _keepassxc:
 
 These instructions describe how to protect and encrypt a `KeePassXC <https://keepassxc.org/>`__ password database with Nitrokey 3.
 
@@ -18,23 +17,23 @@ First Step: Generate a HMAC Secret With the Nitrokey App 2
 4. Click on ``ADD`` to create a new credential
 5. Select ``HMAC`` from the algorithm drop-down menu
 
-.. note::
+    .. note::
 
-    - The credential is automatically named in ``HmacSlot2``.
-    - No extra attributes can be saved for the HMAC credential.
-    - The HMAC secret must be *exactly 20 bytes* long and in *Base32* format. That is exactly 32 characters.
-    - It is possible to save exactly one HMAC secret on a Nitrokey 3.
+        - The credential is automatically named in ``HmacSlot2``.
+        - No extra attributes can be saved for the HMAC credential.
+        - The HMAC secret must be *exactly 20 bytes* long and in *Base32* format. That is exactly 32 characters.
+        - It is possible to save exactly one HMAC secret on a Nitrokey 3.
 
 6. To generate a secret, there is a button in the field on the right-hand. 
    It is also possible to enter your own secret, as long as it is compliant.
 
-.. warning::
+    .. warning::
 
-    The database can no longer be unlocked if the Nitrokey 3 is lost or unavailable! Thus, you may want to set up a second Nitrokey 3 with the same HMAC secret as a backup device.  
+        The database can no longer be unlocked if the Nitrokey 3 is lost or unavailable! Thus, you may want to set up a second Nitrokey 3 with the same HMAC secret as a backup device.  
 
-    .. important::
+        .. important::
 
-        The secret can **only** be seen before saving. If the KeePassXC database is to be used with another Nitrokey 3, the HMAC secret must be copied which is **only** possible **before saving** the credential.
+            The secret can **only** be seen before saving. If the KeePassXC database is to be used with another Nitrokey 3, the HMAC secret must be copied which is **only** possible **before saving** the credential.
 
 7. Click on ``SAVE`` to save the credential
 
