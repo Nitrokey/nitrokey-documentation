@@ -5,7 +5,7 @@ Nitrokey 3 FAQ
    Windows, Linux and macOS. Also some support for Android and iOS.
 
 **Q:** What can I use the Nitrokey for?
-   See the `frontpage`_ for an overview of supported use cases.
+   See the `Overview <https://www.nitrokey.com/products/nitrokeys>`_ for an overview of supported use cases.
 
 **Q:** How can I check if my Nitrokey 3 is working?
    On `WebAuthn.io`_ you can check various high-level functionalities, while
