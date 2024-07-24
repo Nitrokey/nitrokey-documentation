@@ -63,9 +63,8 @@ Hardware FAQ
   No, the Raspberry PI 4B has the RAM component soldered onto the mainboard, thus it cannot be replaced/extended.
 
 
-.. _USB Documentation: https://www.raspberrypi.org/documentation/hardware/raspberrypi/usb/README.md
+.. _USB Documentation: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#universal-serial-bus-usb
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
 .. _External storage support: https://docs.nextcloud.com/server/20/admin_manual/configuration_files/external_storage_configuration_gui.html
-.. _RPi Power Supply: https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md
-
+.. _RPi Power Supply: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#power-supply
 
