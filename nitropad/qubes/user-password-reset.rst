@@ -18,7 +18,7 @@ User Password Reset
     .. figure:: ./images/user-password-reset/step-five.jpg
        :alt: Step 5
 
-2. In the rescue shell, type: `cryptsetup open /dev/sda3 qubes` to unlock the encrypted root drive
+2. In the rescue shell, type: `cryptsetup open /dev/sda3 qubes` or `cryptsetup open /dev/nvme0n1p3 qubes` to unlock the encrypted root drive
 
 3. Mount the root drive `mount /dev/mapper/qubes_dom0-root /mnt`
 
