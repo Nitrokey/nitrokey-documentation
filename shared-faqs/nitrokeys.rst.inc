@@ -2,6 +2,6 @@
    Windows, Linux and macOS.
 
 **Q:** What can I use the Nitrokey for?
-    See the `frontpage`_ for an overview of supported use cases.
+    See the `Overview <https://www.nitrokey.com/products/nitrokeys>`_ for an overview of supported use cases.
 
-.. _frontpage: https://nitrokey.com/
+

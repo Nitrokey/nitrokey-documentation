@@ -1,5 +1,5 @@
 
-.. _frontpage: https://nitrokey.com/
+
 .. _WebAuthn.io: https://webauthn.io/
 .. _webautn.bin.coffee: https://webauthn.bin.coffee/
 .. _chrome://settings/securityKeys: chrome://settings/securityKeys
