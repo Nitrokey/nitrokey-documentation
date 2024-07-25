@@ -21,13 +21,15 @@ The Nitrokey FIDO2 can be used with any current browser.
 Passwordless Authentication
 ---------------------------
 
-1. Open a web page that supports FIDO2 (currently only
-   `Microsoft <https://www.microsoft.com>`__).
-2. Log in to the website and go to “Set up security key” in the security
+1. Open a web page that supports FIDO2 (for example
+   `Google <https://myaccount.google.com/>`__).
+2. Log in to the website and go to “Passkeys and security keys” in the security
    settings of your account.
-3. Now you need to set a PIN for your Nitrokey FIDO2.
-4. Touch the button of your Nitrokey FIDO2 when prompted.
-5. Once you have successfully configured the device, you will need to
+3. Click on Create passkey.
+4. Click on Use a different device.
+5. Follow the prompts to set a PIN for your Nitrokey FIDO2.
+6. Touch the button of your Nitrokey FIDO2 when prompted.
+7. Once you have successfully configured the device, you will need to
    activate your Nitrokey FIDO2 this way each time you log in, after
    entering your PIN.
 
