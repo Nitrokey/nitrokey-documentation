@@ -29,7 +29,7 @@ Operating System Reinstallation
 
 4. Connect the USB drive to your NitroPC and start it.
     
-    If you are using a NitroPC with TitanCore and Heads:
+    If you are using a NitroPC with Heads:
         Go to the Heads menu and select Boot Options -> USB Boot.
     
     If you are using a NitroPC with TitanCore only:
