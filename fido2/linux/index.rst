@@ -23,4 +23,4 @@ If the Nitrokey is not detected, proceed the following:
    the `older
    version <https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__
    of this file.
-2. Restart udev via ``sudo service udev restart``.
+2. Restart udev via ``sudo service udev restart`` or ``udevadm control --reload-rules && udevadm trigger`` if you are using Fedora.

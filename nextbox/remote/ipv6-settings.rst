@@ -38,6 +38,6 @@ instead of the default, which is the 1st radio button.
 
 
 
-.. _IPv6 Test: https://www.ipv6-test.com/validate.php
+.. _IPv6 Test: https://ready.chair6.net/
 
 

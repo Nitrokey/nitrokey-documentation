@@ -194,7 +194,7 @@ CLI Method
       $ cd /etc/pam.d
       $ sudo $editor common-auth
 
-   And add the following lines:
+   And add the following lines at the top of the file:
 
    .. code-block:: bash
 

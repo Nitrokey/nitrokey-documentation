@@ -102,7 +102,7 @@ Nitrokey HSM FAQ
 .. _Smart Card Shell: https://www.openscdp.org/scsh3/
 .. _NitroKeyWrapper: https://git.bubu1.eu/Bubu/nitrokeywrapper
 .. _this thread: https://support.nitrokey.com/t/comparison-between-nitrokey-hsm-2-and-hsm-1/2977
-.. _banzaicloud.com: https://banzaicloud.com/blog/vault-hsm/#nitrokey-hsm-support-opensc
+.. _banzaicloud.com: https://bank-vaults.dev/docs/operator/hsm/nitrokey-opensc/
 .. _program : http://smartbtc.eu/index.html
 .. _Tezos: https://tezos.com/
 .. _reported: https://twitter.com/thomas_quinlan/status/1222492762760716288
