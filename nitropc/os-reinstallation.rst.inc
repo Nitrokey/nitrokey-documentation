@@ -27,8 +27,13 @@ Operating System Reinstallation
    -  Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;
    -  macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__.
 
-4. Connect the USB drive to your NitroPC and start it. Press ESC to
-   enter the BIOS to select USB boot.
+4. Connect the USB drive to your NitroPC and start it.
+    
+    If you are using a NitroPC with TitanCore and Heads:
+        Go to the Heads menu and select Boot Options -> USB Boot.
+    
+    If you are using a NitroPC with TitanCore only:
+        Press ESC to enter the BIOS to select USB Boot.
 
 5. Depending on the operating system you may need to confirm its
    reinstallation.
