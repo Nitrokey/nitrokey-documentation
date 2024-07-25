@@ -6,11 +6,13 @@ jobs:
   syntax-check:
     name: Check syntax
     runs-on: ubuntu-latest
-    container: python:3.11-slim
+    container: python:3.11
     continue-on-error: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          submodules: true
       - name: Create virtual environment
         run: |
           python -m venv venv
@@ -23,15 +25,18 @@ jobs:
   build-error-check:
     name: Check build error
     runs-on: ubuntu-latest
-    container: python:3.11-slim
+    container: python:3.11
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          submodules: true
       - name: Create virtual environment
         run: |
           python -m venv venv
           . venv/bin/activate
           pip install -r requirements.txt
+          pip install ./nitrokey-sdk-py
       - name: Build documentation
         run: |
           . venv/bin/activate
