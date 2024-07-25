@@ -40,6 +40,7 @@ release = ""
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "sphinx.ext.autodoc",
     "sphinx.ext.todo",
     "sphinx.ext.coverage",
     #'sphinx_copybutton',
@@ -413,3 +414,9 @@ todo_include_todos = True
 
 # Disables the closing of tabs if clicked on the currently active tab
 sphinx_tabs_disable_tab_closing = True
+
+# -- Options for autodoc extension -------------------------------------------
+
+autodoc_class_signature = 'separated'
+autodoc_member_order = 'groupwise'
+autodoc_typehints = 'description'
