@@ -955,6 +955,7 @@ Please refer to chapter `Roles <administration#roles>`__ to learn more about *Ro
 Optionally, a user can be assigned to a `*Namespace* <administration#namespaces>`__.
 
 .. note::
+   The user ID must be alphanumeric.
    The NetHSM assigns a random user ID if none is specified.
 
 A user account can be added as follows.
@@ -1001,6 +1002,7 @@ A user account can be added as follows.
 
 By default, the Namespace is inherited from the user that adds the new user.
 Only users without a Namespace can choose a different Namespace for new users.
+The Namespace is used as a prefix for the user name, for example `namespace~user`.
 
 Delete User
 ~~~~~~~~~~~
@@ -1163,6 +1165,7 @@ After the creation, only *N-Administrator* users can manage the users in the Nam
 The creation and usage of keys in the Namespace is only possible after it has been added.
 
 .. note::
+   The Namespace ID must be alphanumeric.
    The NetHSM assigns a random user ID if none is specified.
 
 A Namespace can be added as follows.
