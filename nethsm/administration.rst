@@ -1002,7 +1002,7 @@ A user account can be added as follows.
 
 By default, the Namespace is inherited from the user that adds the new user.
 Only users without a Namespace can choose a different Namespace for new users.
-The Namespace is used as a prefix for the user name, for example `namespace~user`.
+The Namespace is used as a prefix for the user name, for example `namespace~user`. Therefore, the same user name can be used in several Namespaces.
 
 Delete User
 ~~~~~~~~~~~
