@@ -1114,7 +1114,7 @@ The user passphrase can be set as follows.
 Namespaces
 ~~~~~~~~~~
 
-*Namespaces* were introduced in software version 1.1. When migrating from an earlier version of the software, all existing users and keys will be without a Namespace.
+*Namespaces* were introduced in software version 2.0. When migrating from an earlier version of the software, all existing users and keys will be without a Namespace.
 
 Similarly to the concept of partitions, NetHSM supports the more flexible *Namespaces* which group keys and users on a NetHSM into subsets.
 Users can only see and use keys in the same Namespace and can only see users in the same Namespace.
