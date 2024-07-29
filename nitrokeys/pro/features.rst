@@ -7,5 +7,6 @@ The Nitrokey Pro 2 currently supports the following features:
     :maxdepth: 1
     :glob:
 
-    Two-Factor Authentication (2FA) <../features/2fa>
-    OpenPGP <../features/openpgp>
+    Two-Factor Authentication (2FA) <../features/2fa/index>
+    OpenPGP <../features/openpgp/index>
+    TOTP <../features/totp/index>

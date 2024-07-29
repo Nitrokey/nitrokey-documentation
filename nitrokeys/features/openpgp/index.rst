@@ -1,3 +1,6 @@
+OpenPGP Email Encryption
+========================
+
 There are two widely used standards for email encryption.
 
 -  OpenPGP/GnuPG is popular among individuals,

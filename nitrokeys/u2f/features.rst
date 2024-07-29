@@ -7,4 +7,4 @@ The Nitrokey FIDO U2F currently supports the following features:
     :maxdepth: 1
     :glob:
 
-    Two-Factor Authentication (2FA) <../../features/2fa/index>
+    Two-Factor Authentication (2FA) <../features/2fa/index>
