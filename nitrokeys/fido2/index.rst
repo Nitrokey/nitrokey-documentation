@@ -11,13 +11,11 @@ First check the:
 
    Frequently Asked Questions <faq>
 
-or choose your operating system:
+or check out the features:
 
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Windows <windows/index>
-   macOS <mac/index>
-   Linux <linux/index>
+   Features <features>
    
