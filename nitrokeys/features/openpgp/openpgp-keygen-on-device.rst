@@ -10,7 +10,7 @@ The following instructions explain the generation of OpenPGP keys directly on th
    These instructions are based on GnuPG version 2.2.6 or higher. Some
    Linux Distributions have an older version installed. In this case
    please choose a different method as listed
-   `here <openpgp.html>`_
+   `here <index.html>`_
    or install a newer version if possible.
 
 Key Generation

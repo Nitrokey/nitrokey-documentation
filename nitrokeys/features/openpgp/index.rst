@@ -7,7 +7,7 @@ There are two widely used standards for email encryption.
 
 -  S/MIME/X.509 is mostly used by enterprises.
 
-If you are in doubt which one to choose, you should use OpenPGP. While this page describes the usage of OpenPGP, S/MIME is described `here <smime.html>`_.
+If you are in doubt which one to choose, you should use OpenPGP. While this page describes the usage of OpenPGP, S/MIME is described `here <../smime/index.html>`_.
 
 Please familiarize yourself with the general concept behind the OpenPGP standard first, for example by reading `this info graphic <https://emailselfdefense.fsf.org/en/infographic.html>`__ of the Free Software Foundation.
 

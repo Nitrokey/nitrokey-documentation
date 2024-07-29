@@ -12,14 +12,14 @@ Key Generation
 
 At first, open the GNU Privacy Assistant (GPA). You may are asked to generate a key, you can skip this step for now by clicking “Do it later”. In the main window, please click on “Card” or “Card Manager”.
 
-.. figure:: /pro/images/openpgp-keygen-gpa/1.png
+.. figure:: images/gpa/1.png
    :alt: img1
 
 
 
 Another windows opens. Please go to “Card” -> “Generate key” to start the key generation process.
 
-.. figure:: /pro/images/openpgp-keygen-gpa/2.png
+.. figure:: images/gpa/2.png
    :alt: img2
 
 
@@ -28,21 +28,21 @@ Now you can put in your name and the email address you want to use for the key t
 
 **Please do not use the backup checkbox**. This “backup” does only save the encryption key. In case of a loss of the device, you will not be able to restore the whole key set. So on the one hand it is no full backup (use `these instructions <openpgp-keygen-backup.html>`_ instead, if you need one) and on the other hand you risk that someone else can get in possession of your encryption key. The advantage of generating keys on-device is to make sure that keys are stored securely. Therefore, we recommend to skip this half-backup.
 
-.. figure:: /pro/images/openpgp-keygen-gpa/3.png
+.. figure:: images/gpa/3.png
    :alt: img3
 
 
 
 You will be asked for the admin PIN (default: 12345678) and the user PIN (default: 123456). When the key generation is finished, you can see the fingerprints of the keys on the bottom of the window. You may fill up the fields shown above, which are saved on your Nitrokey as well.
 
-.. figure:: /pro/images/openpgp-keygen-gpa/4.png
+.. figure:: images/gpa/4.png
    :alt: img4
 
 
 
 Now you can close the window and go back to the main window. Your key will be visible in the key manager after refreshing. Every application which makes use of GnuPG will work with your Nitrokey as well, because GnuPG is fully aware of the fact, that the keys are stored on your Nitrokey.
 
-.. figure:: /pro/images/openpgp-keygen-gpa/5.png
+.. figure:: images/gpa/5.png
    :alt: img5
 
 
@@ -52,7 +52,7 @@ Exporting Public Key and Keyserver Usage
 
 Although you can start to use your Nitrokey right away after generating the keys on your system, you need to import your public key on every system, you want to use the Nitrokey on. So to be prepared you have two options: You either save the public key anywhere you like and use it on another system or you save the public key on a webpage/keyserver.
 
-.. figure:: /pro/images/openpgp-keygen-gpa/6.png
+.. figure:: images/gpa/6.png
    :alt: img6
 
 
@@ -66,6 +66,6 @@ If you do not want to carry a public keyfile with you, you can upload it to keys
 
 Another possibility is to change the URL setting on your card. Open the card manager again and fill in the URL where the key is situated (e.g. on the keyserver or on your webpage etc.). From now on you can import the key on another system by right-clicking on the URL and click on “Fetch Key”.
 
-.. figure:: /pro/images/openpgp-keygen-gpa/7.png
+.. figure:: images/gpa/7.png
    :alt: img7
 
