@@ -29,3 +29,7 @@ or check out the features:
     ECC <../features/ecc/index>
     GPA <../features/gpa/index>
     EID <../features/eid/index>
+    Automatic Screen Lock (Linux) <../features/automatic-screen-lock/index>
+    Certificate authority <../features/certificate-authority/index>
+    Desktop Login <../features/desktop-login/index>
+    Hard Disk Encryption <../features/hard-disk-encryption/index>
