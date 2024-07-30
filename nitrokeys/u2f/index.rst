@@ -9,5 +9,5 @@ Check out the features:
     :maxdepth: 1
     :glob:
 
-    Two-Factor Authentication (2FA) <../features/2fa/index>
+    FIDO <../features/fido/index>
 

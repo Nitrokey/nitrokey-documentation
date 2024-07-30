@@ -22,7 +22,7 @@ or check out the features:
     Update <firmware-update>
     Factory Reset <factory-reset>
     Change PIN <../features/change-pins/index>
-    Two-Factor Authentication (2FA) <../features/2fa/index>
+    FIDO <../features/2fa/index>
     OpenPGP <../features/openpgp/index>
     TOTP <../features/totp/index>
     SMIME <../features/smime/index>

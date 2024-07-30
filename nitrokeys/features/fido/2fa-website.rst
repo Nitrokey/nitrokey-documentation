@@ -3,12 +3,6 @@
 
 .. contents:: :local:
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :hidden:
-
-   *
 
 The Nitrokey FIDO2 supports two-factor authentication (2FA) and
 passwordless authentication:
