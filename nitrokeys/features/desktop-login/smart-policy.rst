@@ -57,41 +57,41 @@ Login to Windows Domain Computers With MS Active Directory
    and install Smart Policy.
 6. Select “Read a smart card”
 
-.. figure:: /pro/images/smart-policy/1.png
+.. figure:: images/smart-policy/1.png
    :alt: img1
 
 
 
 7. Select the certificate, mapping, and user.
 
-.. figure:: /pro/images/smart-policy/2.png
+.. figure:: images/smart-policy/2.png
    :alt: img2
 
 
 
 8. Verify the device status via CRL.
 
-.. figure:: /pro/images/smart-policy/3.png
+.. figure:: images/smart-policy/3.png
    :alt: img3
 
 
 
 9. Choose a Group Policy Object (GPO).
 
-.. figure:: /pro/images/smart-policy/4.png
+.. figure:: images/smart-policy/4.png
    :alt: img4
 
 
 
 10. Confirm applying the mapping.
 
-.. figure:: /pro/images/smart-policy/5.png
+.. figure:: images/smart-policy/5.png
    :alt: img5
 
 
 
 From now on, when logging on to your Windows computer you need to connect the Nitrokey and enter your PIN.
 
-.. figure:: /pro/images/smart-policy/6.png
+.. figure:: images/smart-policy/6.png
    :alt: img6
 

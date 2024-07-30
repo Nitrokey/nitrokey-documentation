@@ -11,6 +11,7 @@ First check the:
    :glob:
 
    Frequently Asked Questions <faq>
+   Getting Started <getting-started>
 
 or check out the features:
 
@@ -18,7 +19,9 @@ or check out the features:
     :maxdepth: 1
     :glob:
 
-    Change PIN <change-pin>
+    Update <firmware-update>
+    Factory Reset <factory-reset>
+    Change PIN <../features/change-pins/index>
     Two-Factor Authentication (2FA) <../features/2fa/index>
     OpenPGP <../features/openpgp/index>
     TOTP <../features/totp/index>
@@ -33,3 +36,5 @@ or check out the features:
     Certificate authority <../features/certificate-authority/index>
     Desktop Login <../features/desktop-login/index>
     Hard Disk Encryption <../features/hard-disk-encryption/index>
+    Stunnel (Linux) <../features/stunnel/index>
+    Ipsec (Linux) <../features/ipsec/index>
