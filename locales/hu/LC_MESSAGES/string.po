@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 10:59+0200\n"
+"POT-Creation-Date: 2024-07-30 14:58+0200\n"
 "PO-Revision-Date: 2024-07-26 10:51+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Hungarian <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/hu/>\n"
 "Language: hu\n"
+"Language-Team: Hungarian <https://translate.nitrokey.com/projects"
+"/nitrokey-documentation/documentation-string/hu/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6801,7 +6800,12 @@ msgstr ""
 msgid "Development and Testing"
 msgstr "Fejlesztés és tesztelés"
 
-#: ../nethsm/integration.rst:24
+#: ../nethsm/integration.rst:25
+#, fuzzy
+msgid "Demo Instance"
+msgstr "Instances"
+
+#: ../nethsm/integration.rst:27
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every "
@@ -6813,29 +6817,58 @@ msgstr ""
 "(CET 6:00, 14:00, 22:00) újraindul. Felhasználó \"admin\", jelszó "
 "\"adminadmin\", feloldási jelszó \"unlockunlock\"."
 
-#: ../nethsm/integration.rst:26
-msgid ""
-"Alternatively, you can run the NetHSM as a `Docker container "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
-msgstr ""
-"Alternatívaként a NetHSM-et futtathatja a `Docker konténerként is "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ helyben."
+#: ../nethsm/integration.rst:31
+#, fuzzy
+msgid "Container Image"
+msgstr "tartalmaznak"
 
-#: ../nethsm/integration.rst:28 ../nethsm/integration.rst:45
+#: ../nethsm/integration.rst:33
+msgid ""
+"The container image is distributed as an OCI image and can be obtained "
+"from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_. It can be "
+"run locally with a compatible executor, e.g. Docker or Podman."
+msgstr ""
+
+#: ../nethsm/integration.rst:36
+msgid ""
+"Compared to the NetHSM hardware the following functions are not "
+"implemented at software container's REST API:"
+msgstr ""
+
+#: ../nethsm/integration.rst:38
+#, fuzzy
+msgid "network configuration"
+msgstr "A hálózati konfiguráció lekérdezése"
+
+#: ../nethsm/integration.rst:39
+#, fuzzy
+msgid "factory reset"
+msgstr "Gyári visszaállítás futtatása"
+
+#: ../nethsm/integration.rst:40 ../nitropad/factory-reset-heads2.rst.inc:-1
+msgid "reboot"
+msgstr "újraindítás"
+
+#: ../nethsm/integration.rst:41
+#, fuzzy
+msgid "software update"
+msgstr "Szoftverfrissítés"
+
+#: ../nethsm/integration.rst:43 ../nethsm/integration.rst:60
 msgid "The container can be executed as follows."
 msgstr "A konténer a következőképpen hajtható végre."
 
-#: ../nethsm/integration.rst:31 ../nethsm/integration.rst:48
-#: ../nethsm/integration.rst:69 ../nethsm/integration.rst:82
+#: ../nethsm/integration.rst:46 ../nethsm/integration.rst:63
+#: ../nethsm/integration.rst:84 ../nethsm/integration.rst:97
 msgid "Docker"
 msgstr "Docker"
 
-#: ../nethsm/integration.rst:36 ../nethsm/integration.rst:74
-#: ../nethsm/integration.rst:87
+#: ../nethsm/integration.rst:51 ../nethsm/integration.rst:89
+#: ../nethsm/integration.rst:102
 msgid "Podman"
 msgstr "Podman"
 
-#: ../nethsm/integration.rst:41
+#: ../nethsm/integration.rst:56
 msgid ""
 "This will run NetHSM as a Unix process inside the container and expose "
 "the REST API on the port `8443` via the HTTPS protocol."
@@ -6844,7 +6877,7 @@ msgstr ""
 "a 8443-as porton keresztül a HTTPS protokollon keresztül teszi "
 "elérhetővé."
 
-#: ../nethsm/integration.rst:43
+#: ../nethsm/integration.rst:58
 msgid ""
 "Additionaly to running the NetHSM as a Unix process it can be run as a "
 "unikernel supported by KVM."
@@ -6852,7 +6885,7 @@ msgstr ""
 "A NetHSM Unix-folyamatként való futtatása mellett a KVM által támogatott "
 "unikernelként is futtatható."
 
-#: ../nethsm/integration.rst:53
+#: ../nethsm/integration.rst:68
 msgid ""
 "This will run NetHSM as a unikernel inside a KVM virtual machine. The "
 "container will expose the REST API, via the HTTPS protocol, on the "
@@ -6863,7 +6896,7 @@ msgstr ""
 "interfészen teszi közzé a \"192.168.1.100\" IP-címmel és a \"8443\" "
 "porttal."
 
-#: ../nethsm/integration.rst:57
+#: ../nethsm/integration.rst:72
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
 "correct connection settings to establish a connection. Please refer to "
@@ -6874,11 +6907,11 @@ msgstr ""
 "használja. További információkért olvassa el a `NetHSM bevezetés "
 "<index.html>`__ fejezetet."
 
-#: ../nethsm/integration.rst:62
+#: ../nethsm/integration.rst:77
 msgid "Integration Into Custom Application"
 msgstr "Egyedi alkalmazásba való integráció"
 
-#: ../nethsm/integration.rst:64
+#: ../nethsm/integration.rst:79
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Here are libraries "
@@ -6897,17 +6930,17 @@ msgstr ""
 "<https://github.com/OpenAPITools/openapi-generator>`_ használatát "
 "javasoljuk."
 
-#: ../nethsm/integration.rst:66
+#: ../nethsm/integration.rst:81
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "A rendelkezésre álló nyelvek listája a következőképpen hívható le."
 
-#: ../nethsm/integration.rst:79
+#: ../nethsm/integration.rst:94
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
 msgstr "A NetHSM kliens a következőképpen generálható a programozási nyelvhez."
 
-#: ../nethsm/integration.rst:92
+#: ../nethsm/integration.rst:107
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -6917,7 +6950,7 @@ msgstr ""
 "könyvtárban lesz létrehozva. Ez a mappa tartalmazza a használatához "
 "szükséges dokumentációt is."
 
-#: ../nethsm/integration.rst:96
+#: ../nethsm/integration.rst:111
 msgid ""
 "If Podman is used with enforcing SELinux, a labeling to the volume mount "
 "might be required. The mode of SELinux can be requested with ``sestatus "
@@ -6932,11 +6965,11 @@ msgstr ""
 "kötetcsatlakoztatást a ``:z`` utólagos rögzítéssel kell elvégezni, ami a "
 "``-v \"${PWD}/out:/out:z\"`` eredményezi."
 
-#: ../nethsm/integration.rst:102
+#: ../nethsm/integration.rst:117
 msgid "Command-line interface"
 msgstr "Parancssori interfész"
 
-#: ../nethsm/integration.rst:104
+#: ../nethsm/integration.rst:119
 msgid ""
 "Users may administrate and use a NetHSM using a dedicated command-line "
 "interface (CLI). Nitrokey offers ``nitropy``, which is distributed in the"
@@ -17476,8 +17509,8 @@ msgid ""
 msgstr ""
 "Ha a készüléket a \"lezárt csavarok és lezárt zacskó\" opcióval rendelte "
 "meg, kérjük, hogy a kicsomagolás előtt ellenőrizze a `oldalon a <sealed-"
-"hardware.html>`_ pecsétet. Ha nem tudja, hogy ez mit jelent, ugorja át ezt a "
-"részt."
+"hardware.html>`_ pecsétet. Ha nem tudja, hogy ez mit jelent, ugorja át "
+"ezt a részt."
 
 #: ../nitropad/content/shared-index-content1.rst:26
 msgid "Secure Starting Procedure"
@@ -18156,10 +18189,6 @@ msgstr "defaults"
 #: ../nitropad/factory-reset-heads2.rst.inc:96
 msgid "confirm the subsequent restart."
 msgstr "megerősíti az ezt követő újraindítást."
-
-#: ../nitropad/factory-reset-heads2.rst.inc:-1
-msgid "reboot"
-msgstr "újraindítás"
 
 #: ../nitropad/factory-reset-heads2.rst.inc:-1
 msgid "otp secrets generate confirm 1"
@@ -35244,3 +35273,13 @@ msgstr ""
 #~ "NitroPC-hez, és indítsa el. A Fej "
 #~ "menüben válassza a Boot Options -> "
 #~ "USB Boot menüpontot."
+
+#~ msgid ""
+#~ "Alternatively, you can run the NetHSM"
+#~ " as a `Docker container "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
+#~ msgstr ""
+#~ "Alternatívaként a NetHSM-et futtathatja "
+#~ "a `Docker konténerként is "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ helyben."
+

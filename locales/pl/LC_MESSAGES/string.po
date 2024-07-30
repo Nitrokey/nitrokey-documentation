@@ -8,18 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 10:59+0200\n"
+"POT-Creation-Date: 2024-07-30 14:58+0200\n"
 "PO-Revision-Date: 2024-07-26 10:51+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Polish <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/pl/>\n"
 "Language: pl\n"
+"Language-Team: Polish <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/pl/>\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6775,7 +6774,12 @@ msgstr ""
 msgid "Development and Testing"
 msgstr "Rozwój i testowanie"
 
-#: ../nethsm/integration.rst:24
+#: ../nethsm/integration.rst:25
+#, fuzzy
+msgid "Demo Instance"
+msgstr "Wystąpienia"
+
+#: ../nethsm/integration.rst:27
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every "
@@ -6788,29 +6792,58 @@ msgstr ""
 "Użytkownik \"admin\", hasło \"adminadmin\", hasło odblokowujące "
 "\"unlockunlock\"."
 
-#: ../nethsm/integration.rst:26
-msgid ""
-"Alternatively, you can run the NetHSM as a `Docker container "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
-msgstr ""
-"Alternatywnie można uruchomić NetHSM jako kontener Docker ` "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ lokalnie."
+#: ../nethsm/integration.rst:31
+#, fuzzy
+msgid "Container Image"
+msgstr "zawierają"
 
-#: ../nethsm/integration.rst:28 ../nethsm/integration.rst:45
+#: ../nethsm/integration.rst:33
+msgid ""
+"The container image is distributed as an OCI image and can be obtained "
+"from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_. It can be "
+"run locally with a compatible executor, e.g. Docker or Podman."
+msgstr ""
+
+#: ../nethsm/integration.rst:36
+msgid ""
+"Compared to the NetHSM hardware the following functions are not "
+"implemented at software container's REST API:"
+msgstr ""
+
+#: ../nethsm/integration.rst:38
+#, fuzzy
+msgid "network configuration"
+msgstr "Zapytanie o konfigurację sieci"
+
+#: ../nethsm/integration.rst:39
+#, fuzzy
+msgid "factory reset"
+msgstr "Uruchom przywracanie ustawień fabrycznych"
+
+#: ../nethsm/integration.rst:40 ../nitropad/factory-reset-heads2.rst.inc:-1
+msgid "reboot"
+msgstr "restart"
+
+#: ../nethsm/integration.rst:41
+#, fuzzy
+msgid "software update"
+msgstr "Aktualizacja oprogramowania"
+
+#: ../nethsm/integration.rst:43 ../nethsm/integration.rst:60
 msgid "The container can be executed as follows."
 msgstr "Kontener może być wykonany w następujący sposób."
 
-#: ../nethsm/integration.rst:31 ../nethsm/integration.rst:48
-#: ../nethsm/integration.rst:69 ../nethsm/integration.rst:82
+#: ../nethsm/integration.rst:46 ../nethsm/integration.rst:63
+#: ../nethsm/integration.rst:84 ../nethsm/integration.rst:97
 msgid "Docker"
 msgstr "Docker"
 
-#: ../nethsm/integration.rst:36 ../nethsm/integration.rst:74
-#: ../nethsm/integration.rst:87
+#: ../nethsm/integration.rst:51 ../nethsm/integration.rst:89
+#: ../nethsm/integration.rst:102
 msgid "Podman"
 msgstr "Podman"
 
-#: ../nethsm/integration.rst:41
+#: ../nethsm/integration.rst:56
 msgid ""
 "This will run NetHSM as a Unix process inside the container and expose "
 "the REST API on the port `8443` via the HTTPS protocol."
@@ -6819,7 +6852,7 @@ msgstr ""
 "kontenera i udostępnienie interfejsu API REST na porcie `8443` za "
 "pośrednictwem protokołu HTTPS."
 
-#: ../nethsm/integration.rst:43
+#: ../nethsm/integration.rst:58
 msgid ""
 "Additionaly to running the NetHSM as a Unix process it can be run as a "
 "unikernel supported by KVM."
@@ -6827,7 +6860,7 @@ msgstr ""
 "Oprócz uruchamiania NetHSM jako procesu uniksowego, można go uruchomić "
 "jako unikernel obsługiwany przez KVM."
 
-#: ../nethsm/integration.rst:53
+#: ../nethsm/integration.rst:68
 msgid ""
 "This will run NetHSM as a unikernel inside a KVM virtual machine. The "
 "container will expose the REST API, via the HTTPS protocol, on the "
@@ -6838,7 +6871,7 @@ msgstr ""
 "HTTPS, na interfejsie `tap200` z adresem IP `192.168.1.100` i portem "
 "`8443`."
 
-#: ../nethsm/integration.rst:57
+#: ../nethsm/integration.rst:72
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
 "correct connection settings to establish a connection. Please refer to "
@@ -6848,11 +6881,11 @@ msgstr ""
 "należy użyć odpowiednich ustawień połączenia. Więcej informacji można "
 "znaleźć w rozdziale `NetHSM introduction <index.html>`__."
 
-#: ../nethsm/integration.rst:62
+#: ../nethsm/integration.rst:77
 msgid "Integration Into Custom Application"
 msgstr "Integracja z aplikacją niestandardową"
 
-#: ../nethsm/integration.rst:64
+#: ../nethsm/integration.rst:79
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Here are libraries "
@@ -6870,11 +6903,11 @@ msgstr ""
 "innych języków programowania zalecamy użycie `OpenAPI Generator "
 "<https://github.com/OpenAPITools/openapi-generator>`_."
 
-#: ../nethsm/integration.rst:66
+#: ../nethsm/integration.rst:81
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "Listę wszystkich dostępnych języków można wyszukać w następujący sposób."
 
-#: ../nethsm/integration.rst:79
+#: ../nethsm/integration.rst:94
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
@@ -6882,7 +6915,7 @@ msgstr ""
 "Klient NetHSM może zostać wygenerowany dla danego języka programowania w "
 "następujący sposób."
 
-#: ../nethsm/integration.rst:92
+#: ../nethsm/integration.rst:107
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -6892,7 +6925,7 @@ msgstr ""
 "utworzony w katalogu ``./out/``. Katalog ten zawiera również niezbędną "
 "dokumentację jak go używać."
 
-#: ../nethsm/integration.rst:96
+#: ../nethsm/integration.rst:111
 msgid ""
 "If Podman is used with enforcing SELinux, a labeling to the volume mount "
 "might be required. The mode of SELinux can be requested with ``sestatus "
@@ -6907,11 +6940,11 @@ msgstr ""
 "woluminu musi być postfiksowany z ``:z``, co daje ``-v "
 "\"${PWD}/out:/out:z\"``."
 
-#: ../nethsm/integration.rst:102
+#: ../nethsm/integration.rst:117
 msgid "Command-line interface"
 msgstr "Interfejs wiersza poleceń"
 
-#: ../nethsm/integration.rst:104
+#: ../nethsm/integration.rst:119
 msgid ""
 "Users may administrate and use a NetHSM using a dedicated command-line "
 "interface (CLI). Nitrokey offers ``nitropy``, which is distributed in the"
@@ -17356,8 +17389,9 @@ msgid ""
 "unpacking. If you do not know what this means, skip this section."
 msgstr ""
 "Jeśli urządzenie zostało zamówione z opcją \"zaplombowane śruby i "
-"zaplombowana torba\", przed rozpakowaniem należy `sprawdzić plombę <sealed-"
-"hardware.html>`_. Jeśli nie wiesz, co to oznacza, pomiń tę sekcję."
+"zaplombowana torba\", przed rozpakowaniem należy `sprawdzić plombę "
+"<sealed-hardware.html>`_. Jeśli nie wiesz, co to oznacza, pomiń tę "
+"sekcję."
 
 #: ../nitropad/content/shared-index-content1.rst:26
 msgid "Secure Starting Procedure"
@@ -18029,10 +18063,6 @@ msgstr "domyślne"
 #: ../nitropad/factory-reset-heads2.rst.inc:96
 msgid "confirm the subsequent restart."
 msgstr "potwierdzić kolejne ponowne uruchomienie."
-
-#: ../nitropad/factory-reset-heads2.rst.inc:-1
-msgid "reboot"
-msgstr "restart"
 
 #: ../nitropad/factory-reset-heads2.rst.inc:-1
 msgid "otp secrets generate confirm 1"
@@ -34999,3 +35029,13 @@ msgstr ""
 #~ "Podłącz napęd USB do NitroPC i "
 #~ "uruchom go. W menu nagłówkowym wybierz"
 #~ " Opcje rozruchu -> Rozruch USB."
+
+#~ msgid ""
+#~ "Alternatively, you can run the NetHSM"
+#~ " as a `Docker container "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
+#~ msgstr ""
+#~ "Alternatywnie można uruchomić NetHSM jako "
+#~ "kontener Docker ` "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ lokalnie."
+

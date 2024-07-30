@@ -8,17 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 10:59+0200\n"
+"POT-Creation-Date: 2024-07-30 14:58+0200\n"
 "PO-Revision-Date: 2024-07-26 10:51+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Greek <https://translate.nitrokey.com/projects/"
-"nitrokey-documentation/documentation-string/el/>\n"
 "Language: el\n"
+"Language-Team: Greek <https://translate.nitrokey.com/projects/nitrokey-"
+"documentation/documentation-string/el/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.2\n"
 "Generated-By: Babel 2.6.0\n"
 
 #: ../fido2/2fa-nextcloud.rst:2
@@ -6920,7 +6919,12 @@ msgstr ""
 msgid "Development and Testing"
 msgstr "Ανάπτυξη και δοκιμή"
 
-#: ../nethsm/integration.rst:24
+#: ../nethsm/integration.rst:25
+#, fuzzy
+msgid "Demo Instance"
+msgstr "Περιπτώσεις"
+
+#: ../nethsm/integration.rst:27
 msgid ""
 "A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com "
 "<https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every "
@@ -6933,29 +6937,58 @@ msgstr ""
 "\"admin\", κωδικός πρόσβασης \"adminadmin\", κωδικός πρόσβασης "
 "ξεκλειδώματος \"unlockunlock\"."
 
-#: ../nethsm/integration.rst:26
-msgid ""
-"Alternatively, you can run the NetHSM as a `Docker container "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
-msgstr ""
-"Εναλλακτικά, μπορείτε να εκτελέσετε το NetHSM ως δοχείο `Docker "
-"<https://hub.docker.com/r/nitrokey/nethsm>`_ τοπικά."
+#: ../nethsm/integration.rst:31
+#, fuzzy
+msgid "Container Image"
+msgstr "περιέχουν"
 
-#: ../nethsm/integration.rst:28 ../nethsm/integration.rst:45
+#: ../nethsm/integration.rst:33
+msgid ""
+"The container image is distributed as an OCI image and can be obtained "
+"from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_. It can be "
+"run locally with a compatible executor, e.g. Docker or Podman."
+msgstr ""
+
+#: ../nethsm/integration.rst:36
+msgid ""
+"Compared to the NetHSM hardware the following functions are not "
+"implemented at software container's REST API:"
+msgstr ""
+
+#: ../nethsm/integration.rst:38
+#, fuzzy
+msgid "network configuration"
+msgstr "Ερώτηση για τη διαμόρφωση του δικτύου"
+
+#: ../nethsm/integration.rst:39
+#, fuzzy
+msgid "factory reset"
+msgstr "Εκτελέστε επαναφορά εργοστασιακών ρυθμίσεων"
+
+#: ../nethsm/integration.rst:40 ../nitropad/factory-reset-heads2.rst.inc:-1
+msgid "reboot"
+msgstr "επανεκκίνηση"
+
+#: ../nethsm/integration.rst:41
+#, fuzzy
+msgid "software update"
+msgstr "Ενημέρωση λογισμικού"
+
+#: ../nethsm/integration.rst:43 ../nethsm/integration.rst:60
 msgid "The container can be executed as follows."
 msgstr "Το δοχείο μπορεί να εκτελεστεί ως εξής."
 
-#: ../nethsm/integration.rst:31 ../nethsm/integration.rst:48
-#: ../nethsm/integration.rst:69 ../nethsm/integration.rst:82
+#: ../nethsm/integration.rst:46 ../nethsm/integration.rst:63
+#: ../nethsm/integration.rst:84 ../nethsm/integration.rst:97
 msgid "Docker"
 msgstr "Docker"
 
-#: ../nethsm/integration.rst:36 ../nethsm/integration.rst:74
-#: ../nethsm/integration.rst:87
+#: ../nethsm/integration.rst:51 ../nethsm/integration.rst:89
+#: ../nethsm/integration.rst:102
 msgid "Podman"
 msgstr "Podman"
 
-#: ../nethsm/integration.rst:41
+#: ../nethsm/integration.rst:56
 msgid ""
 "This will run NetHSM as a Unix process inside the container and expose "
 "the REST API on the port `8443` via the HTTPS protocol."
@@ -6963,7 +6996,7 @@ msgstr ""
 "Αυτό θα εκτελέσει το NetHSM ως διεργασία Unix μέσα στο δοχείο και θα "
 "εκθέσει το REST API στη θύρα \"8443\" μέσω του πρωτοκόλλου HTTPS."
 
-#: ../nethsm/integration.rst:43
+#: ../nethsm/integration.rst:58
 msgid ""
 "Additionaly to running the NetHSM as a Unix process it can be run as a "
 "unikernel supported by KVM."
@@ -6971,7 +7004,7 @@ msgstr ""
 "Εκτός από την εκτέλεση του NetHSM ως διεργασία Unix, μπορεί να εκτελεστεί"
 " και ως unikernel που υποστηρίζεται από το KVM."
 
-#: ../nethsm/integration.rst:53
+#: ../nethsm/integration.rst:68
 msgid ""
 "This will run NetHSM as a unikernel inside a KVM virtual machine. The "
 "container will expose the REST API, via the HTTPS protocol, on the "
@@ -6981,7 +7014,7 @@ msgstr ""
 "KVM. Το δοχείο θα εκθέσει το REST API, μέσω του πρωτοκόλλου HTTPS, στη "
 "διεπαφή `tap200` με τη διεύθυνση IP `192.168.1.100` και τη θύρα `8443`."
 
-#: ../nethsm/integration.rst:57
+#: ../nethsm/integration.rst:72
 msgid ""
 "The container uses a self-signed TLS certificate. Make sure to use the "
 "correct connection settings to establish a connection. Please refer to "
@@ -6992,11 +7025,11 @@ msgstr ""
 "δημιουργήσετε μια σύνδεση. Ανατρέξτε στο κεφάλαιο `Εισαγωγή στο NetHSM "
 "<index.html>`__ για να μάθετε περισσότερα."
 
-#: ../nethsm/integration.rst:62
+#: ../nethsm/integration.rst:77
 msgid "Integration Into Custom Application"
 msgstr "Ενσωμάτωση σε προσαρμοσμένη εφαρμογή"
 
-#: ../nethsm/integration.rst:64
+#: ../nethsm/integration.rst:79
 msgid ""
 "To integrate the NetHSM into own custom applications, client libraries "
 "are available for almost all programming languages. Here are libraries "
@@ -7015,11 +7048,11 @@ msgstr ""
 "γλώσσες προγραμματισμού συνιστούμε τη χρήση του `OpenAPI Generator "
 "<https://github.com/OpenAPITools/openapi-generator>`_."
 
-#: ../nethsm/integration.rst:66
+#: ../nethsm/integration.rst:81
 msgid "The list of all available languages can be retrieved as follows."
 msgstr "Ο κατάλογος όλων των διαθέσιμων γλωσσών μπορεί να ανακτηθεί ως εξής."
 
-#: ../nethsm/integration.rst:79
+#: ../nethsm/integration.rst:94
 msgid ""
 "The NetHSM client can be generated for your programming language as "
 "follows."
@@ -7027,7 +7060,7 @@ msgstr ""
 "Ο πελάτης NetHSM μπορεί να δημιουργηθεί για τη γλώσσα προγραμματισμού σας"
 " ως εξής."
 
-#: ../nethsm/integration.rst:92
+#: ../nethsm/integration.rst:107
 msgid ""
 "The generated client code, in this example JavaScript, will be created in"
 " the ``./out/`` directory. This folder also contains the necessary "
@@ -7037,7 +7070,7 @@ msgstr ""
 "δημιουργηθεί στον κατάλογο ``./out/``. Αυτός ο φάκελος περιέχει επίσης "
 "την απαραίτητη τεκμηρίωση για τον τρόπο χρήσης."
 
-#: ../nethsm/integration.rst:96
+#: ../nethsm/integration.rst:111
 msgid ""
 "If Podman is used with enforcing SELinux, a labeling to the volume mount "
 "might be required. The mode of SELinux can be requested with ``sestatus "
@@ -7052,11 +7085,11 @@ msgstr ""
 "πλαίσιο. Σε αυτή την περίπτωση, η προσάρτηση τόμου πρέπει να "
 "μεταπροσδιοριστεί με ``:z``, με αποτέλεσμα ``-v \"${PWD}/out:/out:z\"``."
 
-#: ../nethsm/integration.rst:102
+#: ../nethsm/integration.rst:117
 msgid "Command-line interface"
 msgstr "Διεπαφή γραμμής εντολών"
 
-#: ../nethsm/integration.rst:104
+#: ../nethsm/integration.rst:119
 msgid ""
 "Users may administrate and use a NetHSM using a dedicated command-line "
 "interface (CLI). Nitrokey offers ``nitropy``, which is distributed in the"
@@ -17807,9 +17840,9 @@ msgid ""
 "unpacking. If you do not know what this means, skip this section."
 msgstr ""
 "Εάν έχετε παραγγείλει τη μονάδα με την επιλογή \"σφραγισμένες βίδες και "
-"σφραγισμένη σακούλα\", παρακαλούμε `να ελέγξετε τη σφράγιση <sealed-hardware."
-"html>`_ πριν από την αποσυσκευασία. Εάν δεν γνωρίζετε τι σημαίνει αυτό, "
-"παραλείψτε αυτή την ενότητα."
+"σφραγισμένη σακούλα\", παρακαλούμε `να ελέγξετε τη σφράγιση <sealed-"
+"hardware.html>`_ πριν από την αποσυσκευασία. Εάν δεν γνωρίζετε τι "
+"σημαίνει αυτό, παραλείψτε αυτή την ενότητα."
 
 #: ../nitropad/content/shared-index-content1.rst:26
 msgid "Secure Starting Procedure"
@@ -18500,10 +18533,6 @@ msgstr "προεπιλογές"
 #: ../nitropad/factory-reset-heads2.rst.inc:96
 msgid "confirm the subsequent restart."
 msgstr "επιβεβαιώστε την επακόλουθη επανεκκίνηση."
-
-#: ../nitropad/factory-reset-heads2.rst.inc:-1
-msgid "reboot"
-msgstr "επανεκκίνηση"
 
 #: ../nitropad/factory-reset-heads2.rst.inc:-1
 msgid "otp secrets generate confirm 1"
@@ -36107,3 +36136,13 @@ msgstr ""
 #~ "Συνδέστε τη μονάδα USB στο NitroPC "
 #~ "και εκκινήστε το. Στο μενού Heads "
 #~ "επιλέξτε Boot Options -> USB Boot."
+
+#~ msgid ""
+#~ "Alternatively, you can run the NetHSM"
+#~ " as a `Docker container "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ locally."
+#~ msgstr ""
+#~ "Εναλλακτικά, μπορείτε να εκτελέσετε το "
+#~ "NetHSM ως δοχείο `Docker "
+#~ "<https://hub.docker.com/r/nitrokey/nethsm>`_ τοπικά."
+
