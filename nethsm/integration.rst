@@ -30,16 +30,15 @@ It will be reset every eight hours (CET 6:00, 14:00, 22:00). User "admin", passw
 Container Image
 ^^^^^^^^^^^^^^^
 
-The container image is distributed as an OCI image.
+The container image is distributed as an OCI image and can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_.
 It can be run locally with a compatible executor, e.g. Docker or Podman.
-The image can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_.
 
-The container image has the following restrictions in comparison to a system on the hardware.
+Compared to the NetHSM hardware the following functions are not implemented at software container's REST API:
 
-* You can't set the network configuration through the REST-API.
-* You can't initiate a factory reset of the system through the REST-API.
-* You can't initiate a reboot of the system through the REST-API.
-* You can't initiate an update of the system through the REST-API.
+* network configuration
+* factory reset
+* reboot
+* software update
 
 The container can be executed as follows.
 
