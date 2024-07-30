@@ -21,9 +21,24 @@ The `PKCS#11 guide <pkcs11-setup.html>`_ describes the usage in detail.
 Development and Testing
 -----------------------
 
-A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com/api/v1/info>`_. It will be reset every eight hours (CET 6:00, 14:00, 22:00). User "admin", password "adminadmin", unlock password "unlockunlock".
+Demo Instance
+^^^^^^^^^^^^^
 
-Alternatively, you can run the NetHSM as a `Docker container <https://hub.docker.com/r/nitrokey/nethsm>`_ locally.
+A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com/api/v1/info>`_.
+It will be reset every eight hours (CET 6:00, 14:00, 22:00). User "admin", password "adminadmin", unlock password "unlockunlock".
+
+Container Image
+^^^^^^^^^^^^^^^
+
+The container image is distributed as an OCI image and can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_.
+It can be run locally with a compatible executor, e.g. Docker or Podman.
+
+Compared to the NetHSM hardware the following functions are not implemented at software container's REST API:
+
+* network configuration
+* factory reset
+* reboot
+* software update
 
 The container can be executed as follows.
 
