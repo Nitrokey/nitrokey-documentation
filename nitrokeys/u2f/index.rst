@@ -5,9 +5,9 @@ Nitrokey FIDO U2F
 
 Check out the features:
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
+.. toctree:: 
+    :maxdepth: 1
+    :glob:
 
-   Features <features>
+    Two-Factor Authentication (2FA) <../features/2fa/index>
 

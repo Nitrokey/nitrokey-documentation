@@ -126,7 +126,7 @@ To build the PKI, we will download the latest version of Easy-RSA on the server 
         .. code-block:: bash
 
             $ cd ~
-            wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-3.0.7.tgz
+            $ wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-3.0.7.tgz
 
     2. Extract the tarball
 
@@ -605,7 +605,31 @@ Client side configuration
             # key client.key
             # tls-auth ta.key 1
 
-    4. Known issues
+
+     4. Configure OpenVPN (Windows only)
+
+        In order to establish a handshake, you must configure OpenSSL included in OpenVPN.
+
+        Create the directory ``ssl`` in ``C:\Program Files\OpenVPN`` and create file ``openssl.cnf`` with the following content : 
+
+            openssl_conf = default_conf
+                
+            [ default_conf ]
+            ssl_conf = ssl_sect
+
+            [ ssl_sect ]
+            system_default = ssl_default_sect
+
+            [ ssl_default_sect ]
+            SignatureAlgorithms = RSA+SHA512:ECDSA+SHA512:RSA+SHA384:ECDSA+SHA384:RSA+SHA256:ECDSA+SHA256
+            MaxProtocol = TLSv1.2
+            MinProtocol = TLSv1.2
+
+
+        With this modification, you will not have error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
+
+
+    5. Known issues
 
         There are some known issues related to OpenVPN login with OpenSC. Please consult these issues `here <https://github.com/Nitrokey/wiki/wiki/3rd-Party-Issues>`__.
 
@@ -641,7 +665,7 @@ Client side configuration
 
         .. warning::
         
-            Unfortunately OpenVPN doesn’t seem to be able to establish a handshake and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
+            Unfortunately OpenVPN doesn’t seem to be able to establish a handshake on some operating systems and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
 
         ::
         
