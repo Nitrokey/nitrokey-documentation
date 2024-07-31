@@ -10,6 +10,7 @@ First check the:
    :glob:
 
    Frequently Asked Questions <faq>
+   Getting Started <getting-started>
 
 or check out the features:
 
