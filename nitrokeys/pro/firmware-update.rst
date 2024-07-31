@@ -21,8 +21,8 @@ How to Update
 1. Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions <../../software/nitropy/all-platforms/installation.html>`__ for your OS.
 2. Download the latest stable `firmware image <https://github.com/Nitrokey/nitrokey-pro-firmware/releases>`__.
 
-.. important:: 
-   For production use you should choose the latest stable version (so only versions, that don’t contain i.e. “pre-release” or “RC”).
+    .. important:: 
+        For production use you should choose the latest stable version (so only versions, that don’t contain i.e. “pre-release” or “RC”).
 
 3. To apply the update run:
 
@@ -39,25 +39,25 @@ Alternatively `dfu-util` can be used for the firmware update:
 
 1. Install dfu-util
 
-Binaries for Windows are available at:
- * http://dfu-util.sourceforge.net/releases/
+    Binaries for Windows are available at:
+    * http://dfu-util.sourceforge.net/releases/
 
-For macOS binaries are available via Homebrew:
- * https://formulae.brew.sh/formula/dfu-util
+    For macOS binaries are available via Homebrew:
+    * https://formulae.brew.sh/formula/dfu-util
 
-*macOS only:* Install `dfu-util` via Homebrew
+    *macOS only:* Install `dfu-util` via Homebrew
 
-.. code-block:: bash
+    .. code-block:: bash
 
- brew install dfu-util
+        brew install dfu-util
 
 2. Use Nitrokey App v1.5-RC7 or higher to change the boot mode of the Nitrokey Pro to update mode.
 
 3. Now the following command to apply the update
 
-.. code-block:: bash
+    .. code-block:: bash
 
- $ dfu-util -D update_binary.bin
+        $ dfu-util -D update_binary.bin
 
 4. The boot mode can now be changed back again with the Nitrokey App.
 

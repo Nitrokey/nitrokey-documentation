@@ -35,3 +35,8 @@ or check out the features:
     TOTP <../features/totp/index>
     SSH <../features/ssh/index>
     Putty <../features/ssh/putty>
+    Hidden-Storage <hidden>
+    Firmware-Update <firmware-update>
+    Manual Firmware-Update <firmware-update-manually>
+    Factory Reset <factory-reset>
+    Encrypted Mobile Storage <encrpyted-mobile-storage>
