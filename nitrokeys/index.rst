@@ -8,3 +8,4 @@ Nitrokeys
     U2F <u2f/index>
     Pro <pro/index>
     Storage <storage/index>
+    Start <start/index>

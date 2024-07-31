@@ -1,17 +1,22 @@
-Nitrokey Start, Mac
-===================
+Getting Started
+===============
 
-.. contents:: :local:
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :hidden:
+1. 
+    .. tabs::
+        .. tab:: Linux
+            Install ``scdaemon`` and GnuPG 2.1 or higher by using your package
+            manager (e.g. ``apt update && apt install scdaemon gnupg2`` on Ubuntu).
+            Install ``scdaemon`` and GnuPG 2.1 or higher by using your package
+            manager (e.g. ``apt update && apt install scdaemon gnupg2`` on Ubuntu).
 
-   *
+        .. tab:: MacOS
+            Install `GnuPG 2.1 <https://gpgtools.org/>`__ or higher.
 
-1. Install `GnuPG 2.1 <https://gpgtools.org/>`__ or higher.
-2. Connect your Nitrokey to your computer and confirm all dialogs so
+        .. tab:: Windows
+            Install `Gpg4win <https://www.gpg4win.org/>`__ on your Computer.
+
+2. Connect your Nitrokey to your computer and confirm all dialogs (if there are any) so
    that the USB smart card device driver gets installed almost
    automatically.
 3. Use GnuPG to `generate new keys or import existing
@@ -56,3 +61,23 @@ To learn more about how to use S/MIME for email encryption with the Nitrokey,
 please refer to chapter `S/MIME Email Encryption <smime.html>`_.
 
 Please note that the Nitrokey App can not be used for this device!
+
+Troubleshooting
+---------------
+
+On some GNU/Linux systems it is necessary to insert the UDEV rules for
+the Nitrokey device manually. If you followed the above instructions and
+get the message:
+
+.. code-block:: bash
+
+   gpg: OpenPGP card not available: No such device
+
+please install the `Nitrokey App <https://www.nitrokey.com/download>`__
+or type the following commands in the terminal to download and install
+the UDEV rules:
+
+.. code-block:: bash
+
+   wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
+   sudo mv 41-nitrokey.rules /etc/udev/rules.d/

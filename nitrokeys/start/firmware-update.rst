@@ -14,19 +14,10 @@ Firmware Update
 
 To update the firmware of your Nitrokey Start, proceed as follows.
 
-1. Install pip3.
 
-   .. code-block:: bash
+1. First `install pynitrokey <../../software/nitropy/all-platforms/installation.html>`_. For this you need an Internet connection.
 
-      $ sudo apt install python3-pip 
-
-2. Install pynitrokey. For this you need an Internet connection.
-
-   .. code-block:: bash
-
-      $ pip3 install --user pynitrokey 
-
-3. Connect your Nitrokey Start and verify its recognition.
+2. Connect your Nitrokey Start and verify its recognition.
 
    .. rstcheck: ignore-next-code-block
    .. code-block:: bash
@@ -36,13 +27,13 @@ To update the firmware of your Nitrokey Start, proceed as follows.
             :: 'Nitrokey Start' keys:
             FSIJ-1.2.15-87042524: Nitrokey Nitrokey Start (RTM.8) 
 
-4. Start the update process. For this you need an Internet connection.
+3. Start the update process. For this you need an Internet connection.
 
    .. code-block:: bash
 
       $ nitropy start update 
 
-5. You will then be asked to enter the Admin PIN of your Nitrokey Start.
+4. You will then be asked to enter the Admin PIN of your Nitrokey Start.
    (Default PIN: 12345678)
 
    .. code-block:: bash
@@ -55,7 +46,7 @@ To update the firmware of your Nitrokey Start, proceed as follows.
       Saving run log to: /tmp/nitropy.log.d4erqux4
       Admin password: "your admin PIN"
 
-6. Under “Device” you will find information about the current version of
+5. Under “Device” you will find information about the current version of
    your Nitrokey Start. In the first item under “Please note” you can
    see the latest firmware version available. Now you have to confirm
    the update with “yes”.
@@ -88,7 +79,7 @@ To update the firmware of your Nitrokey Start, proceed as follows.
       - Whole process should not take more than 1 minute
       Do you want to continue? [yes/no]: yes
 
-7. You can check the firmware version after the upgrade process has
+6. You can check the firmware version after the upgrade process has
    completed.
 
    .. rstcheck: ignore-next-code-block
