@@ -27,6 +27,11 @@ features are realized.
      - USB
      - yes
 
+   * - `SMIME`_
+     - Asymmetric cryptography; keep your private key(s) secure; email encryption
+     - USB
+     - yes
+
    * - `Password Safe`_
      - (One-Time-)Passwords securely stored on your Nitrokey 3
      - USB
@@ -70,15 +75,16 @@ data migrations from test to stable firmwares will not be implemented.**
      - no
 
 
-.. _FIDO2: https://github.com/Nitrokey/fido-authenticator
-.. _OpenPGP Card: https://github.com/Nitrokey/opcard-rs
+.. _FIDO2: ../features/fido/index.html
+.. _OpenPGP Card: ../features/openpgp/index.html
 .. _Password Safe: https://github.com/Nitrokey/trussed-secrets-app
 .. _Admin App: https://github.com/Nitrokey/admin-app
-.. _PIV: https://github.com/Nitrokey/piv-authenticator
+.. _PIV: ../features/piv/index
 .. _WebSmartCard: https://github.com/Nitrokey/nitrokey-websmartcard
+.. _SMIME: ../features/smime/index.html
 
-.. _pynitrokey: ../software/nitropy
-.. _NitrokeyApp2: ../software/nk-app2
+.. _pynitrokey: ../software/nitropy/index.html
+.. _NitrokeyApp2: ../software/nk-app2/index.html
 
 .. _Test Firmware: linux/firmware-update#firmware-release-types
 

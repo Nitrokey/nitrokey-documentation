@@ -54,8 +54,8 @@ Setting PIN with the Chrom(e|ium) webbrowser
 
 .. start-fido2-windows-settings-application
 
-Settings PIN with Windows Settings application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Settings PIN with Windows Settings application (Windows only)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Open the Windows "Settings" application.
 2. Open the "Accounts" menu.

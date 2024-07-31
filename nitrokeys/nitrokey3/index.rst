@@ -3,18 +3,6 @@ Nitrokey 3
 
 .. contents:: :local:
 
-
-The Nitrokey 3 currently supports:
-
-* FIDO2
-* Password-Safe & One-Time Passwords (OTP)
-* OpenPGP Card (`Secure Element Backend or Software Backend`_)
- 
-Additional features like PIV are available in test firmware releases. See the `release notes`_ on GitHub for more information.
-
-.. _Secure Element Backend or Software Backend: faq#how-can-I-use-the-se050-secure-element
-.. _release notes: https://github.com/Nitrokey/nitrokey-3-firmware/releases
-
 First check the:
 
 .. toctree::
@@ -22,9 +10,8 @@ First check the:
    :glob:
 
    Frequently Asked Questions <faq>
-   features
+   Getting Started <getting-started>
    
-Or choose your operating system:
 
 or check out the features:
 
@@ -33,4 +20,15 @@ or check out the features:
    :glob:
 
    Features <features>
+   set pin <set-pins>
+   firmware-update <firmware-update>
+   main <main>
+   nitropy <nitropy>
+   desktop login <../features/desktop-login/index>
+   reset <reset>
+   passwordless microsoft <../features/fido/passwordless-microsoft>
    
+Additional features like PIV (Windows only) are available in test firmware releases. See the `release notes`_ on GitHub for more information.
+
+.. _Secure Element Backend or Software Backend: faq#how-can-I-use-the-se050-secure-element
+.. _release notes: https://github.com/Nitrokey/nitrokey-3-firmware/releases

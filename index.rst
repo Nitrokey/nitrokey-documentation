@@ -8,7 +8,8 @@ Nitrokey Documentation
    nitrokeys/index
    hsm/index
    start/index
-   nitropadpc/index
+   nitropad/index
+   nitropc/index
    nitrophone/index
    nextbox/index
    nethsm/index
