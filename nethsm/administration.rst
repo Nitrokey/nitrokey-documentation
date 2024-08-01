@@ -1116,10 +1116,11 @@ Namespaces
 
 *Namespaces* were introduced in software version 2.0. When migrating from an earlier version of the software, all existing users and keys will be without a Namespace.
 
-Similarly to the concept of partitions, NetHSM supports the more flexible *Namespaces* which group keys and users on a NetHSM into subsets.
+Similarly to the concept of partitions, NetHSM supports the more flexible *Namespaces* which group keys, administrators, and users on a NetHSM into separate subsets.
 Users can only see and use keys in the same Namespace and can only see users in the same Namespace.
 It is not possible to see users and to see and use keys of other Namespaces.
 When a new user is created, it inherits the Namespace of the user that created it.
+The available storage capacity is shared between all Namespaces. 
 
 Users with the *Administrator* `Role <administration#roles>`__ are also referred to as *R-Administrator* if they are not in a Namespace, or *N-Administrator* if they are in a Namespace.
 
@@ -1128,7 +1129,7 @@ They can set the Namespace for new users, list all users and query the Namespace
 Also, the NetHSM configuration can only be accessed by *R-Administrator* users.  R-Administrators can not see keys in a Namespace.
 
 To be able to generate keys and users in a Namespace, the Namespace needs to be created by an *R-Administrator* user.
-Once the Namespace has been created, *R-Administrator* users can no longer create, delete or modify users in that Namespace.  This allows to protect Namespaces' keys being accessed by R-Administrator (also indirectly by adding a new user on behalf).
+Once the Namespace has been created, *R-Administrator* users can no longer create, delete or modify users in that Namespace.  This allows to protect Namespaces' keys being accessed by R-Administrator (also indirectly by adding a new user on behalf or resetting existing user's or administrator's credentials).
 Therefore, it is necessary to create an *N-Administrator* user for the Namespace before creating the Namespace.
 *R-Administrator* users can also delete a Namespace with all contained keys.
 
