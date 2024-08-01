@@ -102,3 +102,4 @@ If the Nirokey 3 device is not recognised by `KeePassXC <https://keepassxc.org/>
 
    flatpak install flathub org.keepassxc.KeePassXC
 
+* Install ``ccid`` on Arch Linux based systems. See also: `Arch wiki: Nitrokey <https://wiki.archlinux.org/title/Nitrokey>`__.
