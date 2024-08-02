@@ -805,11 +805,11 @@ The update file can be uploaded as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST update /tmp/nethsm-update.img.cpio
+         $ nitropy nethsm --host $NETHSM_HOST update /tmp/nethsm-update.img.bin
 
       .. code-block::
 
-         Image /tmp/nethsm-update.img.cpio uploaded to NetHSM localhost:8443
+         Image /tmp/nethsm-update.img.bin uploaded to NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/system/update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-update>`__.
 
@@ -846,6 +846,29 @@ The update can be cancelled as follows.
          Update successfully cancelled on NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/system/cancel-update` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-cancel-update>`__.
+
+System Information
+~~~~~~~~~~~~~~~~~~
+
+System information such as firmware version, software version, and hardware version can be retrieved as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm -h $NETHSM_HOST system-info
+
+      .. code-block::
+
+         Host:             192.168.1.1
+         Firmware version: 1.0-prod
+         Software version: 2.0
+         Hardware version: prodrive-hermes-1.0
+         Build tag:        v2.0-0-g17ad829
+   .. tab:: REST API
+      Information about the `/system/info` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_system_info>`__.
 
 Reboot and Shutdown
 ~~~~~~~~~~~~~~~~~~~
