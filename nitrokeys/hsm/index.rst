@@ -10,14 +10,23 @@ First check the:
    :glob:
 
    Frequently Asked Questions <faq>
+   Getting Started <getting-started>
 
-or choose your operating system:
+or check out the features:
 
 .. toctree::
    :maxdepth: 1
    :glob:
 
-   Windows <windows/index>
-   macOS <mac/index>
-   Linux <linux/index>
-   
+   SMIME <../features/smime/index>
+   Smart <../features/desktop-login/third-party/smart-policy>
+   GPA <../features/gpa/index>
+   DNSSEC (Linux only) <dnssec>
+   Hard Disk Encryption <../features/hard-disk-encryption>
+   Automatic Screen Lock (Linux only) <../features/automatic-screen-lock/index>
+   Import Keys Certs <import-keys-certs>
+   Stunnel (Linux only) <stunnel>
+   Certificate Authority <certificate-authority>
+   Ipsec (Linux only) <ipsec>
+   N of M Schemes (Linux only? ) <n-of-m-schemes>
+   Pkcs11-URL <pkcs11-url>

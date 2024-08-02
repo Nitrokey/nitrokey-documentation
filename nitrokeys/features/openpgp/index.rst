@@ -52,7 +52,7 @@ You can find further information about the usage on these pages:
 -  to use `OpenPGP encryption with
    Outlook <openpgp-outlook.html>`_
 
-- `OpenPGP Touch Confirmation (Nitrokey 3 only) <uif.html>`_
+-  to use `OpenPGP Touch Confirmation (Nitrokey 3 only) <uif.html>`_
 
 -  to use `Claws
    Mail <https://www.claws-mail.org/plugin.php?plugin=gpg>`__, an email

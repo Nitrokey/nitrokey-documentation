@@ -10,3 +10,4 @@ Nitrokeys
     Storage <storage/index>
     Start <start/index>
     Nitrokey3 <nitrokey3/index>
+    FIDO 2 <fido2/index>
