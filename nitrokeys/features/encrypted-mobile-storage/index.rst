@@ -12,5 +12,5 @@ Prior of using the encrypted mobile storage you need to install and initialize t
 6. To remove or lock the encrypted volume you should unmount/eject it first.
 7. Afterwards you can disconnect the Nitrokey or select "lock encrypted volume" from the Nitrokey App menu.
 
-The Nitrokey Storage is able to create hidden volumes as well. Please have a look at the corresponding instructions for `hidden volumes <hidden.html>`_.
+The Nitrokey Storage is able to create hidden volumes as well. Please have a look at the corresponding instructions for `hidden volumes <../hidden-storage/index.html>`_.
 

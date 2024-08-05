@@ -15,8 +15,11 @@ First check the:
 or check out the features:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :glob:
 
    Features <features>
+
+
+   firmware update <firmware-update>
    

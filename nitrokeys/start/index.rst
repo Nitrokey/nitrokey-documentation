@@ -15,17 +15,13 @@ First check the:
 or check out the features:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 4
    :glob:
 
-   GPA <../features/gpa/index>
-   Ipsec (Linux) <../features/ipsec/index>
-   Stunnel (Linux) <../features/stunnel/index>
-   Desktop Login <../features/desktop-login/index>
-   OpenPGP <../features/openpgp/index>
-   SMIME <../features/smime/index>
-   SSH <../features/ssh/index>
-   Putty <../features/ssh/putty>
+   Features <features>
+
+
+
    Multiple Identities <multiple-identities>
    Setting KDF-DO <setting-kdf-do>
    Factory Reset <factory-reset>

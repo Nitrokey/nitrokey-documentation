@@ -7,7 +7,5 @@ The Nitrokey FIDO2 currently supports the following features:
     :maxdepth: 1
     :glob:
 
-    FIDO <../features/2fa/index>
-    passwordless microsoft <../features/fido/passwordless-microsoft>
-    desktop login <../feature/desktop-login/desktop-login>
-    firmware update <firmware-update>
+    FIDO2 <../features/fido2/index>
+    U2F <../features/u2f/index>

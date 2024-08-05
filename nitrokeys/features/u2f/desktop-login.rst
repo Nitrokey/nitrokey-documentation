@@ -28,29 +28,29 @@ GUI Method
 
 1. **In the lower left corner click on** ``Show Applications`` **and type settings in the search bar as following:**
 
-   .. figure:: images/fidou2f-1.png
+   .. figure:: images/desktop-login/fidou2f-1.png
       :alt: img1
 
 2. **Scroll down in the right bar to** ``Users``
 
-   .. figure:: images/fidou2f-2.png
+   .. figure:: images/desktop-login/fidou2f-2.png
       :alt: img2
 
 3. **In the left corner click on** ``Unlock`` **and that would prompt for your
    password**
 
-   .. figure:: images/fidou2f-3.png
+   .. figure:: images/desktop-login/fidou2f-3.png
       :alt: img3
 
 4. **Select** ``Administrator`` **and enter the user name and password of your
    choice**
 
-   .. figure:: images/fidou2f-4.png
+   .. figure:: images/desktop-login/fidou2f-4.png
       :alt: img4
 
 5. **Once you finish Step 4 you should be done**
 
-   .. figure:: images/fidou2f-5.png
+   .. figure:: images/desktop-login/fidou2f-5.png
       :alt: img5
 
 CLI Method
@@ -230,7 +230,7 @@ CLI Method
 
    You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/replug yout Nitrokey FIDO2 and type your password:
 
-   .. figure:: images/u2f-fido-pam-2.png
+   .. figure:: images/desktop-login/u2f-fido-pam-2.png
       :alt: img6
 
 Usage

@@ -10,13 +10,12 @@ PIV (Personal Identity Verification)
 The *Personal Identity Verfication* (PIV) is based on the NIST special publication `SP 800-73 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__.
 
 .. toctree::
-   :hidden:
    :maxdepth: 1
    :glob:
 
-   access_control.rst
-   certificate_management.rst
-   factory_reset.rst
-   key_management.rst
+   Access Control <access_control>
+   Certificate Management <certificate_management>
+   Factory Reset <factory_reset>
+   Key Management <key_management>
 
-   guides/index.rst
+   Guides <guides/index>

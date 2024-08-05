@@ -26,7 +26,7 @@ or check out the features:
    Automatic Screen Lock (Linux only) <../features/automatic-screen-lock/index>
    Import Keys Certs <import-keys-certs>
    Stunnel (Linux only) <stunnel>
-   Certificate Authority <certificate-authority>
+   Certificate Authority <../features/certificate-authority>
    Ipsec (Linux only) <ipsec>
    N of M Schemes (Linux only? ) <n-of-m-schemes>
    Pkcs11-URL <pkcs11-url>

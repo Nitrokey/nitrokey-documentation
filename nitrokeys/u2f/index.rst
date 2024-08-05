@@ -6,8 +6,8 @@ Nitrokey FIDO U2F
 Check out the features:
 
 .. toctree:: 
-    :maxdepth: 1
+    :maxdepth: 3
     :glob:
 
-    FIDO <../features/fido/index>
+    Features <features>
 

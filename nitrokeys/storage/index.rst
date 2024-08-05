@@ -15,28 +15,14 @@ First check the:
 or check out the features:
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 3
     :glob:
 
-    FIDO <../features/fido/index>
-    OpenPGP <../features/openpgp/index>
-    OpenVPN <../features/openvpn/index>
-    Stunnel (Linux) <../features/stunnel/index>
-    Ipsec (Linux) <../features/ipsec/index>
     Automatic Screen Lock (Linux) <../features/automatic-screen-lock/index>
     Certificate authority <../features/certificate-authority/index>
     Change PIN <../features/change-pins/index>
-    Hard Disk Encryption <../features/hard-disk-encryption/index>
-    SMIME <../features/smime/index>
-    Desktop Login <../features/desktop-login/index>
     ECC <../features/ecc/index>
-    GPA <../features/gpa/index>
     EID <../features/eid/index>
-    TOTP <../features/totp/index>
-    SSH <../features/ssh/index>
-    Putty <../features/ssh/putty>
-    Hidden-Storage <hidden>
     Firmware-Update <firmware-update>
     Manual Firmware-Update <firmware-update-manually>
     Factory Reset <factory-reset>
-    Encrypted Mobile Storage <encrpyted-mobile-storage>

@@ -7,7 +7,7 @@ There are two widely used standards for email encryption.
 
 -  S/MIME/X.509 is mostly used by enterprises.
 
-If you are in doubt which one to choose, you should use OpenPGP. While this page describes the usage of OpenPGP, S/MIME is described `here <../smime/index.html>`_.
+If you are in doubt which one to choose, you should use OpenPGP. While this page describes the usage of OpenPGP, S/MIME is described `here <smime/index.html>`_.
 
 Please familiarize yourself with the general concept behind the OpenPGP standard first, for example by reading `this info graphic <https://emailselfdefense.fsf.org/en/infographic.html>`__ of the Free Software Foundation.
 
@@ -46,6 +46,7 @@ Usage
 
 You can find further information about the usage on these pages:
 
+
 -  to use `OpenPGP encryption with
    Thunderbird <openpgp-thunderbird.html>`_
 
@@ -53,6 +54,8 @@ You can find further information about the usage on these pages:
    Outlook <openpgp-outlook.html>`_
 
 -  to use `OpenPGP Touch Confirmation (Nitrokey 3 only) <uif.html>`_
+
+-  to use `OpenVPN <openvpn/index.html>`_
 
 -  to use `Claws
    Mail <https://www.claws-mail.org/plugin.php?plugin=gpg>`__, an email
@@ -63,3 +66,13 @@ You can find further information about the usage on these pages:
    an email client for the Gnome Desktop on Linux systems
 
 -  to use `GPGTools <https://gpgtools.org/>`__ on macOS.
+
+-  to use `Desktop Login <desktop-login/index.html>`_
+
+-  to use `IPSec <ipsec/index.html>`_
+
+-  to use `Hard Disk Encryption <hard-disk-encryption/index.html>`_
+
+-  to use `Stunnel <stunnel/index.html>`_
+
+-  to use `Gnu Privacy Assistant (GPA) <gpa/index.html>`_
