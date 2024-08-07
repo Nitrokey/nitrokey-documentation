@@ -1,5 +1,5 @@
-Nitrokey FIDO U2F
-=================
+Nitrokey U2F
+============
 
 .. contents:: :local:
 

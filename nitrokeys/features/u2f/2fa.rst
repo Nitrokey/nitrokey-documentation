@@ -16,7 +16,7 @@ Two-Factor Authentication (2FA)
 You are now ready to go.
 
 .. important::
-    The Nitrokey App can not be used for the Nitrokey FIDO U2F.
+    The Nitrokey App can not be used for the Nitrokey U2F.
 
 Troubleshooting (Linux)
 -----------------------

@@ -22,6 +22,11 @@ features are realized.
      - USB, NFC
      - no
 
+   * - `U2F`_
+     - Predecessor of FIDO2 mainly used for Two-Factor Authentication
+     - USB, NFC
+     - no
+
    * - `OpenPGP Card`_
      - Asymmetric cryptography; keep your private key(s) secure; email encryption
      - USB
@@ -76,8 +81,9 @@ data migrations from test to stable firmwares will not be implemented.**
 
 
 .. _FIDO2: ../features/fido/index.html
-.. _OpenPGP Card: ../features/openpgp/index.html
-.. _Password Safe: https://github.com/Nitrokey/trussed-secrets-app
+.. _U2F: ../features/u2f/index.html
+.. _OpenPGP Card: ../features/openpgp-card/index.html
+.. _Password Safe: ../features/password-safe/index.html
 .. _Admin App: https://github.com/Nitrokey/admin-app
 .. _PIV: ../features/piv/index
 .. _WebSmartCard: https://github.com/Nitrokey/nitrokey-websmartcard

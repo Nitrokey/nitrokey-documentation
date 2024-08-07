@@ -76,3 +76,9 @@ You can find further information about the usage on these pages:
 -  to use `Stunnel <stunnel/index.html>`_
 
 -  to use `Gnu Privacy Assistant (GPA) <gpa/index.html>`_
+
+-  to use `EID <eid/index.html>`_
+
+-  to use `Certificate-authority <certificate-authority/index.html>`_
+
+-  to use `GnuPG with Fedora <fedora-gnupg-configuration.html>`_

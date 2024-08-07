@@ -9,8 +9,15 @@ First check the:
    :maxdepth: 1
    :glob:
 
-   Frequently Asked Questions <faq>
    Getting Started <getting-started>
+   Frequently Asked Questions <faq>
+
+and the:
+
+.. toctree::
+   :maxdepth: 2
+
+   Product-specific Guides <guides>
 
 or check out the features:
 
@@ -19,7 +26,4 @@ or check out the features:
    :glob:
 
    Features <features>
-
-
-   firmware update <firmware-update>
    

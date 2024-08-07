@@ -12,21 +12,20 @@ First check the:
    Frequently Asked Questions <faq>
    Getting Started <getting-started>
    
+and the:
+
+.. toctree::
+   :maxdepth: 2
+
+   Product-specific Guides <guides>
 
 or check out the features:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 5
    :glob:
 
    Features <features>
-   set pin <set-pins>
-   firmware-update <firmware-update>
-   main <main>
-   nitropy <nitropy>
-   desktop login <../features/desktop-login/index>
-   reset <reset>
-   passwordless microsoft <../features/fido/passwordless-microsoft>
    
 Additional features like PIV (Windows only) are available in test firmware releases. See the `release notes`_ on GitHub for more information.
 

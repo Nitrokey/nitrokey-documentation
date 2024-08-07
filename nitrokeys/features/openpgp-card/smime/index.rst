@@ -12,7 +12,7 @@ There are two widely used standards for email encryption.
 
 -  S/MIME/X.509 is mostly used by enterprises.
 
-If you are in doubt which one to choose, you should use OpenPGP, see `here <../openpgp/index.html>`_. This page describes the usage of S/MIME email encryption.
+If you are in doubt which one to choose, you should use OpenPGP, see `here <../openpgp/index.html>`_ (not applicable for the Nitrokey HSM 2, the Nitrokey HSM 2 currently supports the S/MIME/X.509 standard though, therefore the rest of the guide is applicable for the HSM 2 and other Nitrokeys). This page describes the usage of S/MIME email encryption.
 
 You need to purchase a S/MIME certificate (e.g. at `CERTUM <https://www.certum.eu/en/cert_offer_cert_id/>`__) or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/releases>`__ page.
 

@@ -9,8 +9,15 @@ First check the:
    :maxdepth: 1
    :glob:
 
-   Frequently Asked Questions <faq>
    Getting Started <getting-started>
+   Frequently Asked Questions <faq>
+
+and the:
+
+.. toctree::
+   :maxdepth: 2
+
+   Product-specific Guides <guides>
 
 or check out the features:
 
@@ -18,11 +25,4 @@ or check out the features:
     :maxdepth: 3
     :glob:
 
-    Automatic Screen Lock (Linux) <../features/automatic-screen-lock/index>
-    Certificate authority <../features/certificate-authority/index>
-    Change PIN <../features/change-pins/index>
-    ECC <../features/ecc/index>
-    EID <../features/eid/index>
-    Firmware-Update <firmware-update>
-    Manual Firmware-Update <firmware-update-manually>
-    Factory Reset <factory-reset>
+    Features <features>

@@ -30,11 +30,11 @@ Getting Started
 
 2. Download and start the `Nitrokey
    App <https://www.nitrokey.com/download>`__. Follow the
-   `instructions <../features/change-pins/index.html>`_
+   `instructions <../product-guides/change-pins/index.html>`_
    to change the default User PIN (default: 123456) and Admin PIN
    (default: 12345678) to your own choices.
 
-.. figure:: ../features/change-pins/images/change-pins/App-change-pin.png
+.. figure:: ../product-guides/change-pins/images/change-pins/App-change-pin.png
    :alt: img
 
 

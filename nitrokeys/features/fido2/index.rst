@@ -7,5 +7,5 @@ FIDO2
     :glob:
 
     Website Login <website>
-    Desktop Login <desktop-login>
+    Nextcloud Login <nextcloud>
     Passwordless Microsoft Login (Windows only) <passwordless-microsoft>

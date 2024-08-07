@@ -9,3 +9,5 @@ Features
     OpenPGP Card <../features/openpgp-card/index>
     Hidden Storage <../features/hidden-storage/index>
     Encrypted Mobile Storage <../features/encrpyted-mobile-storage/index>
+    ECC <../features/misc/ecc/index>
+    Automatic Screen Lock (Linux) <../features/misc/automatic-screen-lock/index>

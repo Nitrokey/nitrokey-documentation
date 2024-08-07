@@ -1,3 +1,6 @@
+Stunnel
+=======
+
 .. contents:: :local:
 
 `Stunnel <https://www.stunnel.org/>`__ works as an SSL encryption wrapper between remote client and local (inetd-startable) or remote server. It can be used to add SSL functionality to commonly used inetd daemons like POP2, POP3, and IMAP servers without any changes in the programs' code.
