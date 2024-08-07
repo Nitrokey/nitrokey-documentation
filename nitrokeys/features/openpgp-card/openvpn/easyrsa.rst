@@ -75,18 +75,18 @@ Server side
 
     3. Close after saving it, and enter this command
 
-        .. code-block:: bash
+		.. code-block:: bash
 
-            $ sysctl -p
+			$ sysctl -p
 
-        Once IP forwarding is done, we will need to download the latest release of OpenvPN for our Debian 10 server, according to `these instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`__:
+		Once IP forwarding is done, we will need to download the latest release of OpenvPN for our Debian 10 server, according to `these instructions <https://community.openvpn.net/openvpn/wiki/OpenvpnSoftwareRepos>`__:
 
     4. Change to root and download the GPG key that signed the package
 
-        .. code-block:: bash
+		.. code-block:: bash
 
-            $ sudo -s 
-            # wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
+			$ sudo -s 
+			# wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
 
     5. Add the URL of the adequate OpenVPN packages to the ``sources.list`` file
 
@@ -139,92 +139,92 @@ To build the PKI, we will download the latest version of Easy-RSA on the server 
 3. Create a PKI for OpenVPN server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Before you can create your OpenVPN server’s private key and certificate, you need to create a local Public Key Infrastructure directory on your OpenVPN server. You will use this directory to manage the server and clients’ certificate requests, instead of making them directly on your CA server.
+	Before you can create your OpenVPN server’s private key and certificate, you need to create a local Public Key Infrastructure directory on your OpenVPN server. You will use this directory to manage the server and clients’ certificate requests, instead of making them directly on your CA server.
 
-To build a PKI directory on your OpenVPN server, you’ll need to populate a file called ``vars`` with some default values.
+	To build a PKI directory on your OpenVPN server, you’ll need to populate a file called ``vars`` with some default values.
 
-    1. Create a ``vars`` file
+		1. Create a ``vars`` file
 
-        .. code-block:: bash
+			.. code-block:: bash
 
-            $ touch ~/easyrsa/vars
-            $ cd easyrsa/
-            $ editor vars
+				$ touch ~/easyrsa/vars
+				$ cd easyrsa/
+				$ editor vars
 
-    2. Once the file is opened, paste in the following two lines
+		2. Once the file is opened, paste in the following two lines
 
-        .. code-block:: bash
+			.. code-block:: bash
 
-            set_var EASYRSA_ALGO "ec"
-            set_var EASYRSA_DIGEST "sha512"
+				set_var EASYRSA_ALGO "ec"
+				set_var EASYRSA_DIGEST "sha512"
 
-        These are the only two lines that you need in this ``vars`` file on your OpenVPN server since it will not be used as a Certificate Authority. They will ensure that your private keys and certificate requests are configured to use Elliptic Curve Cryptography (ECC) to generate keys, and secure signatures for your clients and OpenVPN server.
+			These are the only two lines that you need in this ``vars`` file on your OpenVPN server since it will not be used as a Certificate Authority. They will ensure that your private keys and certificate requests are configured to use Elliptic Curve Cryptography (ECC) to generate keys, and secure signatures for your clients and OpenVPN server.
 
-        In regards to the choice of the cryptographic algorithms, I follow the model in `this tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-centos-8>`__, and you can customize these according to your specific needs.
+			In regards to the choice of the cryptographic algorithms, I follow the model in `this tutorial <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-openvpn-server-on-centos-8>`__, and you can customize these according to your specific needs.
 
-    3. Initialize the PKI
+		3. Initialize the PKI
 
-        Once you have populated the ``vars`` file you can proceed with creating the PKI directory. To do so, run the easyrsa script with the init-pki option:
+			Once you have populated the ``vars`` file you can proceed with creating the PKI directory. To do so, run the easyrsa script with the init-pki option:
 
-            .. code-block:: bash
+				.. code-block:: bash
 
-                $ ./easyrsa init-pki
+					$ ./easyrsa init-pki
 
-        After you’ve initialized your PKI on the OpenVPN server, you are ready to move on to the next step, which is creating an OpenVPN server certificate request and private key.
+			After you’ve initialized your PKI on the OpenVPN server, you are ready to move on to the next step, which is creating an OpenVPN server certificate request and private key.
 
 4. Create ``server.req`` and ``server.key``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    Now that your OpenVPN server has all the prerequisites installed, the next step is to generate a key pair composed of a private key (to keep secret), and a Certificate Signing Request (``.csr``) on your OpenVPN server.
+	Now that your OpenVPN server has all the prerequisites installed, the next step is to generate a key pair composed of a private key (to keep secret), and a Certificate Signing Request (``.csr``) on your OpenVPN server.
 
-    In general terms, on systems where we generate a key and request, these files are left unencrypted by using the ``nopass`` argument, since servers usually need to start up without any password input. This generates an *unencrypted key*, so mind *protect its access and file permissions* carefully.
+	In general terms, on systems where we generate a key and request, these files are left unencrypted by using the ``nopass`` argument, since servers usually need to start up without any password input. This generates an *unencrypted key*, so mind *protect its access and file permissions* carefully.
 
-    .. tip::
+	.. tip::
 
-        Configuration notes from OpenVPN:
+		Configuration notes from OpenVPN:
 
-        1. The server, and each client, must have their own cert and key
-           file. The server and all clients will use the same CA file.
-        2. Server certificate should have the following:
+		1. The server, and each client, must have their own cert and key
+			file. The server and all clients will use the same CA file.
+		2. Server certificate should have the following:
 
-        -  ``keyUsage:  digitalSignature, keyEncipherment``
+		-  ``keyUsage:  digitalSignature, keyEncipherment``
 
-        -  ``extendedKeyUsage: serverAuth``
+		-  ``extendedKeyUsage: serverAuth``
 
-    1. Create the signing request for the server
+	1. Create the signing request for the server
 
-        Navigate to the ``~/easyrsa`` directory on your OpenVPN Server as your non-root user, and enter the following commands:
+		Navigate to the ``~/easyrsa`` directory on your OpenVPN Server as your non-root user, and enter the following commands:
 
-        .. code-block:: bash
+		.. code-block:: bash
 
-            $ cd easyrsa/
-            $ ./easyrsa gen-req server nopass
+			$ cd easyrsa/
+			$ ./easyrsa gen-req server nopass
 
-        This will create a private key for the server and a certificate request file called ``server.req``.
+		This will create a private key for the server and a certificate request file called ``server.req``.
 
-        Once you have a signed certificate, you’ll transfer it back to the OpenVPN server.
+		Once you have a signed certificate, you’ll transfer it back to the OpenVPN server.
 
-    2. Copy the key to the OpenVPN server directory
+	2. Copy the key to the OpenVPN server directory
 
-        .. code-block:: bash
+		.. code-block:: bash
 
-            $ sudo cp /home/admin/EasyRSA/pki/private/server.key /etc/openvpn/server/
+			$ sudo cp /home/admin/EasyRSA/pki/private/server.key /etc/openvpn/server/
 
-    After completing these steps, you have successfully created a private key for your OpenVPN server. You have also generated a Certificate Signing Request for the OpenVPN server.
+	After completing these steps, you have successfully created a private key for your OpenVPN server. You have also generated a Certificate Signing Request for the OpenVPN server.
 
-    .. tip::
+	.. tip::
 
-        File extensions for certificate signing requests
+		File extensions for certificate signing requests
 
-        The file extension that is adopted by the CA and HSM tutorial
-        indicates the creation of a ``.csr`` file, however Easy-RSA creates
-        certificate signing requests with a ``.req`` extension.
+		The file extension that is adopted by the CA and HSM tutorial
+		indicates the creation of a ``.csr`` file, however Easy-RSA creates
+		certificate signing requests with a ``.req`` extension.
 
-        We will use interchangeably both extensions, while making sure that
-        we transfer the right files to the Certificate Authority, and
-        generate a final certificate with a ``.crt`` extension.
+		We will use interchangeably both extensions, while making sure that
+		we transfer the right files to the Certificate Authority, and
+		generate a final certificate with a ``.crt`` extension.
 
-    In the next section of this guide, we will sign a ``.req`` file with our CA on deployed on the HSM 2 device. For this purpose, I will use a dedicated machine to sign the requests.
+	In the next section of this guide, we will sign a ``.req`` file with our CA on deployed on the HSM 2 device. For this purpose, I will use a dedicated machine to sign the requests.
 
 5. Sign and retrieve ``server.crt``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -413,19 +413,19 @@ Client side configuration
 3. Create a ``client.req`` and ``client.key``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    In the same manner we issued the key pair on the sever, we generate a key pair for the client which will be composed of the ``client.req``
-    file and the ``client.key`` file. The latter must be kept secret on the client machine.
+	In the same manner we issued the key pair on the sever, we generate a key pair for the client which will be composed of the ``client.req``
+	file and the ``client.key`` file. The latter must be kept secret on the client machine.
 
 4. Sign ``client.req`` and issue the ``client.crt`` file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    To transfer the ``client.req`` file to the CA machine, we will use the same method as we did for the ``server.req`` file.
+	To transfer the ``client.req`` file to the CA machine, we will use the same method as we did for the ``server.req`` file.
 
-    Once transferred, on the CA machine we sign the certificate signing request file with this command
+	Once transferred, on the CA machine we sign the certificate signing request file with this command
 
-    .. code-block:: bash
+	.. code-block:: bash
 
-        $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in client.req -out /home/user/pki/issued/client.crt 
+		$ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in client.req -out /home/user/pki/issued/client.crt 
 
 5. Import ``client.crt`` on the Nitrokey from the CA machine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -562,71 +562,71 @@ Client side configuration
 
     3. Configure the OpenVPN client
 
-        The final configuration file ``client.conf`` should look like this one:
+		The final configuration file ``client.conf`` should look like this one:
 
-        .. code-block:: bash
+		.. code-block:: bash
 
-            client
-            dev tun
-            proto udp
-            remote <server> 1194
-            resolv-retry infinite
-            nobind
-            user nobody
-            group nobody
-            persist-key
-            persist-tun
-            ca ca.crt
-            remote-cert-tls server
-            cipher AES-256-CBC
-            verb 3
-            redirect-gateway def1
-            tls-version-min 1.2 # Lower boundary for TLS version 
-            tls-version-max 1.2 # Higher boundary for TLS version
-                
-            # nitrokey login
+			client
+			dev tun
+			proto udp
+			remote <server> 1194
+			resolv-retry infinite
+			nobind
+			user nobody
+			group nobody
+			persist-key
+			persist-tun
+			ca ca.crt
+			remote-cert-tls server
+			cipher AES-256-CBC
+			verb 3
+			redirect-gateway def1
+			tls-version-min 1.2 # Lower boundary for TLS version 
+			tls-version-max 1.2 # Higher boundary for TLS version
+				
+			# nitrokey login
 
-            pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
-            pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
-            # pkcs11-pin-cache 300
-            # daemon
-            # auth-retry nointeract
-            # management-hold
-            # management-signal
-            # management 127.0.0.1 8888
-            # management-query-passwords
-            pkcs11-cert-private 1 # Prompt for PIN
-                
-            # OR
+			pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
+			pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
+			# pkcs11-pin-cache 300
+			# daemon
+			# auth-retry nointeract
+			# management-hold
+			# management-signal
+			# management 127.0.0.1 8888
+			# management-query-passwords
+			pkcs11-cert-private 1 # Prompt for PIN
+				
+			# OR
 
-            # non_nitrokey login
+			# non_nitrokey login
 
-            # cert client.crt
-            # key client.key
-            # tls-auth ta.key 1
+			# cert client.crt
+			# key client.key
+			# tls-auth ta.key 1
 
 
      4. Configure OpenVPN (Windows only)
 
-        In order to establish a handshake, you must configure OpenSSL included in OpenVPN.
+		In order to establish a handshake, you must configure OpenSSL included in OpenVPN.
 
-        Create the directory ``ssl`` in ``C:\Program Files\OpenVPN`` and create file ``openssl.cnf`` with the following content : 
+		Create the directory ``ssl`` in ``C:\Program Files\OpenVPN`` and create file ``openssl.cnf`` with the following content : 
 
-            openssl_conf = default_conf
-                
-            [ default_conf ]
-            ssl_conf = ssl_sect
+			openssl_conf = default_conf
+				
+			[ default_conf ]
+			ssl_conf = ssl_sect
 
-            [ ssl_sect ]
-            system_default = ssl_default_sect
+			[ ssl_sect ]
+			system_default = ssl_default_sect
 
-            [ ssl_default_sect ]
-            SignatureAlgorithms = RSA+SHA512:ECDSA+SHA512:RSA+SHA384:ECDSA+SHA384:RSA+SHA256:ECDSA+SHA256
-            MaxProtocol = TLSv1.2
-            MinProtocol = TLSv1.2
+			[ ssl_default_sect ]
+			SignatureAlgorithms = RSA+SHA512:ECDSA+SHA512:RSA+SHA384:ECDSA+SHA384:RSA+SHA256:ECDSA+SHA256
+			MaxProtocol = TLSv1.2
+			MinProtocol = TLSv1.2
 
 
-        With this modification, you will not have error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
+		With this modification, you will not have error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
 
 
     5. Known issues

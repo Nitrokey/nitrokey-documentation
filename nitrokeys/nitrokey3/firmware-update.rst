@@ -32,7 +32,6 @@ How to Update
 
 In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitropy.log.*``).
 
-.. _Nitrokey 3 Firmware - GitHub Releases: https://github.com/Nitrokey/nitrokey-3-firmware/releases
 .. _installation instructions: ../../software/nitropy/all-platforms/installation.html
 
 
@@ -90,7 +89,7 @@ This is mostly relevant for users that rely on a feature from the test releases.
 Users of the stable firmware can always update to the latest available firmware version.
 
 Troubleshooting (Linux):
-----------------
+------------------------
 
 **Issue:** I get ``permission denied for /dev/hidrawX`` during update.
   This likely means your user has not the needed permissions to

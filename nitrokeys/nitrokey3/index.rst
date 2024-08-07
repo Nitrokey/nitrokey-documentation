@@ -29,5 +29,4 @@ or check out the features:
    
 Additional features like PIV (Windows only) are available in test firmware releases. See the `release notes`_ on GitHub for more information.
 
-.. _Secure Element Backend or Software Backend: faq#how-can-I-use-the-se050-secure-element
 .. _release notes: https://github.com/Nitrokey/nitrokey-3-firmware/releases

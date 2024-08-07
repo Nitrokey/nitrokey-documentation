@@ -15,7 +15,7 @@ Main Key and Encryption Subkey
 
 We can use the command ``gpg --full-generate-key --expert`` to start a guided key generation with all possible options. You can choose the key type (usually RSA (1) or ECC (9)), the length of the key and other attributes. The following output is just a simple example, you may choose other values.
 
-.. code-block:: bash
+.. code-block::
 
    > gpg --full-generate-key --expert
    gpg (GnuPG) 2.2.10; Copyright (C) 2018 Free Software Foundation, Inc.
@@ -86,7 +86,7 @@ Subkey for Authentication
 You now have a main key with the capability to sign and certify (marked as [SC]) and a subkey for encryption (marked as [E]). It is necessary to have another subkey for use cases in which authentication is needed. This subkey is generated in the next step. Type in ``gpg --edit-key --expert keyID`` to start the process, whereas “keyID”
 is either the id of the key or the email address used during key generation.
 
-.. code-block:: bash
+.. code-block::
 
    > gpg --edit-key --expert jane@example.com
    gpg (GnuPG) 2.2.10; Copyright (C) 2018 Free Software Foundation, Inc.
@@ -106,7 +106,7 @@ is either the id of the key or the email address used during key generation.
 
 Now you are in the interactive mode of GnuPG and you can add a key by simply typing ``addkey``. You need to choose the key you want to use. It is crucial to choose “set your own capabilities”, because we want to have the “authenticate” capability which is not available otherwise. We toggle sign and encrypt by typing ``s`` and ``e`` and we activate authenticate by typing ``a``.
 
-.. code-block:: bash
+.. code-block::
 
    gpg> addkey
    Please select what kind of key you want:
@@ -164,7 +164,7 @@ Now you are in the interactive mode of GnuPG and you can add a key by simply typ
 
 We quit with ``q``. Afterwards we need to answer the same questions as before. Finally, we have a ready-to-go key set which we can import to our device.
 
-.. code-block:: bash
+.. code-block::
 
    RSA keys may be between 1024 and 4096 bits long.
    What keysize do you want? (2048)
@@ -209,7 +209,7 @@ You have a main key and two subkeys which can be imported to your Nitrokey. Befo
 
 We start the process by accessing the interactive interface of GnuPG again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is either the id of the key or the email address used during key generation.
 
-.. code-block:: bash
+.. code-block::
 
    > gpg --edit-key --expert jane@example.com
    gpg (GnuPG) 2.2.10; Copyright (C) 2018 Free Software Foundation, Inc.
@@ -245,7 +245,7 @@ We start the process by accessing the interactive interface of GnuPG again with 
 
 We just imported the main key to the card. Now we proceed with the two subkeys. We type ``key 1`` to select the encryption subkey and type in ``keytocard`` again and select the slot to use.
 
-.. code-block:: bash
+.. code-block::
 
    gpg> key 1
     
@@ -274,7 +274,7 @@ We just imported the main key to the card. Now we proceed with the two subkeys. 
 
 Now we deselect the first key with ``key 1`` and select the second subkey with ``key 2`` and move it as well with ``keytocard``. Afterwards we quit and save the changes.
 
-.. code-block:: bash
+.. code-block::
 
    gpg> key 1
     

@@ -41,7 +41,7 @@ Use the following command to get a list of available tokens (Nitrokeys):
 
 Choose the token (Nitrokey) URL you want to generate URL tokens for and use it like this:
 
-.. code-block:: bash
+.. code-block::
 
    p11tool --list-all <token-url>
 

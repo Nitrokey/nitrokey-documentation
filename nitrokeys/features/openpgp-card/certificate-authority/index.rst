@@ -57,7 +57,7 @@ Creating The Root Certificate Authority
 
 We start by generating the private key for the certificate authority directly on the Nitrokey HSM. This allows us to use the private key in the future, but not access it.
 
-.. code-block:: bash
+.. code-block::
 
    # Generate private key on HSM
    $ pkcs11-tool -l --keypairgen --key-type EC:secp384r1 --label root
@@ -154,7 +154,7 @@ Fill out the request information in <angle brackets> with information for your C
 
 Generate the self-signed public certificate from the private key. Use the private key id value from earlier.
 
-.. code-block:: bash
+.. code-block::
 
    $ openssl req -config create_root_cert.ini -engine pkcs11 -keyform engine -key e0161cc8b6f5d66ac6835ecdecb623fc0506a675 -new -x509 -days 3650 -sha512 -extensions v3_ca -out ../certs/root.crt
    engine "pkcs11" set.
@@ -162,7 +162,7 @@ Generate the self-signed public certificate from the private key. Use the privat
 
 Verify that the root certificate was generated correctly. Verify that Signature-Algorithm matches above and below. Verify that Issuer and Subject match, all root certificates are self signed. Verify that Key Usage matches what was in the v3_ca information in our config file.
 
-.. code-block:: bash
+.. code-block::
 
    $ openssl x509 -noout -text -in ../certs/root.crt
    Certificate:
@@ -212,7 +212,7 @@ Creating The Intermediate Certificate Authority
 
 We continue by generating the private key for the intermediate certificate authority directly on the Nitrokey HSM. This allows us to use the private key in the future, but not access it.
 
-.. code-block:: bash
+.. code-block::
 
    # Generate private key on HSM
    $ pkcs11-tool -l --keypairgen --key-type EC:secp384r1 --label intermediate
@@ -284,7 +284,7 @@ Generate the certificate signing request for the intermediate CA from the interm
 
 Verify that the CSR was created correctly. Verify that your Subject is correct. Verify that your Public Key and Signature Algorithm are correct.
 
-.. code-block:: bash
+.. code-block::
 
    $ openssl req -text -noout -verify -in ../intermediate/csr/intermediate.csr
    verify OK
@@ -317,7 +317,7 @@ Verify that the CSR was created correctly. Verify that your Subject is correct. 
 
 We need to find out the fully qualified PKCS#11 URI for your private key:
 
-.. code-block:: bash
+.. code-block::
 
    $ p11tool --list-all
    warning: no token URL was provided for this operation; the available tokens are:
@@ -413,7 +413,7 @@ Now, we need to create a config file to use the private key of the root certific
 
 Then sign the intermediate certificate with the root certificate.
 
-.. code-block:: bash
+.. code-block::
 
    $ openssl ca -config sign_intermediate_csr.ini -engine pkcs11 -keyform engine -extensions v3_intermediate_ca -days 1825 -notext -md sha512 -create_serial -in ../intermediate/csr/intermediate.csr -out ../intermediate/certs/intermediate.crt
    engine "pkcs11" set.
@@ -453,7 +453,7 @@ Then sign the intermediate certificate with the root certificate.
 
 Verify that the root certificate was generated correctly. Verify that the Issuer and Subject are different, and correct. Verify that the Key Usage matches the config file. Verify that the signature algorithm are correct above and below.
 
-.. code-block:: bash
+.. code-block::
 
    $ openssl x509 -noout -text -in ../intermediate/certs/intermediate.crt
    Certificate:
@@ -522,7 +522,7 @@ Create a CSR in the normal method for your application. Proper creation of your 
 
 We need to find out the fully qualified PKCS#11 URI for your private key:
 
-.. code-block:: bash
+.. code-block::
 
    $ p11tool --list-all
    warning: no token URL was provided for this operation; the available tokens are:
@@ -621,7 +621,7 @@ Create a config file to use the private key of the intermediate certificate to s
 
 Then run openssl to sign the server’s CSR.
 
-.. code-block:: bash
+.. code-block::
 
    $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -extensions server_cert -days 375 -notext -md sha512 -create_serial -in server_cert.csr -out server_cert.crt
    engine "pkcs11" set.

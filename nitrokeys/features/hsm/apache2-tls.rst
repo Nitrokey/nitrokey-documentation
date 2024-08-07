@@ -70,7 +70,7 @@ Complete Apache2 Config Example
 -------------------------------
 A complete Apache2 (``VirtualHost``) config snippet might look like this:
 
-.. code-block:: bash
+.. code-block::
 
    <IfModule mod_ssl.c>
      SSLPassPhraseDialog     "|/bin/echo 123456"

@@ -55,15 +55,15 @@ Procedure
 3. In Thunderbird, select as shown in the following picture. “OpenPGP” →
    “Manage smart card”
 
-.. figure:: images/thunderbird/1.png
-   :alt: img1
+	.. figure:: images/thunderbird/1.png
+		:alt: img1
 
 
 
 4. In the “SmartCard Details” window, select “SmartCard → Change PIN”
 
-.. figure:: images/thunderbird/2.png
-   :alt: img2
+	.. figure:: images/thunderbird/2.png
+		:alt: img2
 
 
 
@@ -73,15 +73,15 @@ Procedure
    () [] {}% +. The PIN should be at least 6 characters long. Click
    “OK”.
 
-.. figure:: images/thunderbird/3.png
-   :alt: img3
+	.. figure:: images/thunderbird/3.png
+		:alt: img3
 
 
 
 6. Repeat the procedure for the Admin PIN. “SmartCard → Change PIN”
 
-.. figure:: images/thunderbird/4.png
-   :alt: img4
+	.. figure:: images/thunderbird/4.png
+		:alt: img4
 
 
 
@@ -91,8 +91,8 @@ Procedure
    .;;:- !? () [] {}% +. The PIN should be at least 8 characters long.
    Click “OK”.
 
-.. figure:: images/thunderbird/5.png
-   :alt: img5
+	.. figure:: images/thunderbird/5.png
+		:alt: img5
 
 
 
@@ -118,16 +118,16 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
    “User ID” is correct. You can also specify whether a private key
    backup copy should be stored on your computer.
 
-.. figure:: images/thunderbird/6.png
-   :alt: img6
+	.. figure:: images/thunderbird/6.png
+		:alt: img6
 
 
 
 5. If you do not create a backup copy, you have no chance to get your
    encrypted data if the Nitrokey is lost or damaged!
 
-.. figure:: images/thunderbird/7.png
-   :alt: img7
+	.. figure:: images/thunderbird/7.png
+		:alt: img7
 
 
 
@@ -139,39 +139,39 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
    avoid known prose or lyric. Also, no name or known term should be
    used.
 
-**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö or ß)
+	**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö or ß)
 
-**Poor Passwords**: qwerty123, ILoveSusi3, Password, If you can dream it, you can do it.
+	**Poor Passwords**: qwerty123, ILoveSusi3, Password, If you can dream it, you can do it.
 
-**Strong Passwords**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen Earz and fife legs (spelling errors increase security)
+	**Strong Passwords**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen Earz and fife legs (spelling errors increase security)
 
-You do **not** need this password for daily work. It is only necessary for the restoration of the secret key, e.g. if you have lost the Nitrokey. Therefore, keep the password in a safe place.
+	You do **not** need this password for daily work. It is only necessary for the restoration of the secret key, e.g. if you have lost the Nitrokey. Therefore, keep the password in a safe place.
 
-You can also specify whether and when the key should be automatically invalid. This means, from this point onwards, no more e-mails can be encrypted with this key and you have to create a new key pair.
+	You can also specify whether and when the key should be automatically invalid. This means, from this point onwards, no more e-mails can be encrypted with this key and you have to create a new key pair.
 
 1. Finally, click on “Generate key pair”.
 
-.. figure:: images/thunderbird/8.png
-   :alt: img8
+	.. figure:: images/thunderbird/8.png
+		:alt: img8
 
 
 
 2. You are now asked if the key should be generated. Confirm with “Yes”.
 
-.. figure:: images/thunderbird/9.png
-   :alt: img9
+	.. figure:: images/thunderbird/9.png
+		:alt: img9
 
 
 
 3. In order for the program to write your keys to the stick, you must
    enter the admin PIN and the user PIN (changed above).
 
-.. figure:: images/thunderbird/10.png
-   :alt: img10
+	.. figure:: images/thunderbird/10.png
+		:alt: img10
 
 
 
-The key generation can take a few minutes. Do not terminate the program prematurely!
+   The key generation can take a few minutes. Do not terminate the program prematurely!
 
 4. When the key generation is complete, you receive the following
    message. A certificate is now created that allows you to invalidate
@@ -180,34 +180,41 @@ The key generation can take a few minutes. Do not terminate the program prematur
    least one other external medium so that you can revoke the validity
    of the keys if your keys and backups are lost. Click “Yes”
 
-You can now select the directory in which the backup copy is stored. This copy is encrypted with your password entered above. This means that no one can read or use the keys without your password. Do not give your password to anyone. This file with the name of your e-mail address and the suffix “.asc” should be backed up on another medium. After selecting the directory, click “Save”.
+   You can now select the directory in which the backup copy is stored. This copy is encrypted with your password entered above. This means that no one can read or use the keys without your password. Do not give your password to anyone. This file with the name of your e-mail address and the suffix “.asc” should be backed up on another medium. After selecting the directory, click “Save”.
 
-.. figure:: images/thunderbird/11.png
-   :alt: img11
+	.. figure:: images/thunderbird/11.png
+		:alt: img11
 
 
 
 5. Here you must again specify your user PIN or passphrase. Then click
    “OK”
 
-.. figure:: images/thunderbird/12.png
-   :alt: img12
+	.. figure:: images/thunderbird/12.png
+		:alt: img12
+
+
+
+6. Repeat the procedure for the Admin PIN. “SmartCard → Change PIN”
+
+	.. figure:: images/thunderbird/4.png
+		:alt: img4
 
 
 
 7. You will now see the message that the certificate was created and
    saved. Click “OK”
 
-.. figure:: images/thunderbird/13.png
-   :alt: img13
+    .. figure:: images/thunderbird/13.png
+        :alt: img13
 
 
 
 8. Key generation is now complete. You can now exit the program (File -
    Close).
 
-.. figure:: images/thunderbird/14.png
-   :alt: img14
+	.. figure:: images/thunderbird/14.png
+		:alt: img14
 
 
 

@@ -33,7 +33,6 @@ In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitro
 
 
 
-.. _Nitrokey 3 Firmware - GitHub Releases: https://github.com/Nitrokey/nitrokey-3-firmware/releases
 .. _installation instructions: /software/nitropy/all-platforms/installation.html
 
 
