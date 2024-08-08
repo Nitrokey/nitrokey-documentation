@@ -107,13 +107,13 @@ and sets up crypttab, LUKS, initramfs, and GRUB.
 
 First you will be prompted for the ``User PIN``
 
-.. figure:: /pro/linux/images/luks_1.png
+.. figure:: images/luks/luks_1.png
    :alt: img1
 
 Once you unlock the Nitrokey, you will be prompted for your ``OLD passphrase``.
 It is the passphrase you entered to encrypt your volume at installation.
 
-.. figure:: /pro/linux/images/luks_2.png
+.. figure:: images/luks/luks_2.png
    :alt: img2
 
 .. note:: This is a fall-back alternative in case you lose your Nitrokey, or if
@@ -125,7 +125,7 @@ Once you enter the passphrase, the script finishes the setup in about one
 minute. Do not interrupt the script, or you might get locked out of your
 computer after reboot.
 
-.. figure:: /pro/linux/images/luks_3.png
+.. figure:: images/luks/luks_3.png
    :alt: img3
 
 Done!
@@ -138,12 +138,12 @@ Usage
 
 After reboot you should be prompted for your User PIN
 
-.. figure:: /pro/linux/images/luks_5.png
+.. figure:: images/luks/luks_5.png
    :alt: img5
 
 Enter your User PIN to unlock the drive
 
-.. figure:: /pro/linux/images/luks_6.png
+.. figure:: images/luks/luks_6.png
    :alt: img6
 
 

@@ -58,12 +58,11 @@ Usage
 
 You can find further information about the usage on these pages:
 
--  for using `S/MIME encryption on
-   Thunderbird <smime-thunderbird.html>`_
+.. toctree::
+	:maxdepth: 1
 
--  for using `S/MIME encryption on
-   Outlook <smime-outlook.html>`_
+	S/MIME encryption on Thunderbird <smime-thunderbird>
 
--  for using
-   `Evolution <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>`__,
-   an email client for the Gnome Desktop on Linux systems
+	S/MIME encryption on Outlook <smime-outlook>
+
+	Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>

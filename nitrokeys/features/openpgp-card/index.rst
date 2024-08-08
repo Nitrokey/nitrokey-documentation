@@ -7,7 +7,11 @@ There are two widely used standards for email encryption.
 
 -  S/MIME/X.509 is mostly used by enterprises.
 
-If you are in doubt which one to choose, you should use OpenPGP. While this page describes the usage of OpenPGP, S/MIME is described `here <smime/index.html>`_.
+If you are in doubt which one to choose, you should use OpenPGP. While this page describes the usage of OpenPGP, S/MIME is described here: 
+.. toctree::
+	:maxdepth: 1
+		
+		SMIME <smime/index.html>
 
 Please familiarize yourself with the general concept behind the OpenPGP standard first, for example by reading `this info graphic <https://emailselfdefense.fsf.org/en/infographic.html>`__ of the Free Software Foundation.
 
@@ -47,38 +51,37 @@ Usage
 You can find further information about the usage on these pages:
 
 
--  to use `OpenPGP encryption with
-   Thunderbird <openpgp-thunderbird.html>`_
+.. toctree::
+	:maxdepth: 1
 
--  to use `OpenPGP encryption with
-   Outlook <openpgp-outlook.html>`_
+ 	OpenPGP encryption with Thunderbird <openpgp-thunderbird>
 
--  to use `OpenPGP Touch Confirmation (Nitrokey 3 only) <uif.html>`_
+	OpenPGP encryption with Outlook <openpgp-outlook>
 
--  to use `OpenVPN <openvpn/index.html>`_
+	OpenPGP Touch Confirmation (Nitrokey 3 only) <uif>
 
--  to use `Claws
-   Mail <https://www.claws-mail.org/plugin.php?plugin=gpg>`__, an email
-   client (and news reader) for Linux and Windows
+	OpenVPN <openvpn/index>
 
--  to use
-   `Evolution <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>`__,
-   an email client for the Gnome Desktop on Linux systems
+	Claws Mail, an email client (and news reader) for Linux and Windows <https://www.claws-mail.org/plugin.php?plugin=gpg>
 
--  to use `GPGTools <https://gpgtools.org/>`__ on macOS.
+	Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>
 
--  to use `Desktop Login <desktop-login/index.html>`_
+    GPGTools on macOS <https://gpgtools.org>
 
--  to use `IPSec <ipsec/index.html>`_
+	Desktop Login <desktop-login/index>
 
--  to use `Hard Disk Encryption <hard-disk-encryption/index.html>`_
+	SSH <ssh/index>
 
--  to use `Stunnel <stunnel/index.html>`_
+	IPSec <ipsec/index>
 
--  to use `Gnu Privacy Assistant (GPA) <gpa/index.html>`_
+	Hard Disk Encryption <hard-disk-encryption/index>
 
--  to use `EID <eid/index.html>`_
+	Stunnel <stunnel/index>
 
--  to use `Certificate-authority <certificate-authority/index.html>`_
+	Gnu Privacy Assistant (GPA) <gpa/index>
 
--  to use `GnuPG with Fedora <fedora-gnupg-configuration.html>`_
+	EID <eid/index>
+
+	Certificate-authority <certificate-authority/index>
+
+	GnuPG with Fedora <fedora-gnupg-configuration>

@@ -6,8 +6,6 @@ Nitrokey Documentation
    :titlesonly:
 
    nitrokeys/index
-   hsm/index
-   start/index
    nitropad/index
    nitropc/index
    nitrophone/index

@@ -10,7 +10,8 @@ Getting Started
             To access the OpenPGP smart card of the Nitrokey, install the package
             libccid. On Debian/Ubuntu based Distributions type in terminal: 
             .. code-block:: bash
-                $ sudo apt-get update && sudo apt-get install libccid
+				
+				$ sudo apt-get update && sudo apt-get install libccid
 
         .. group-tab:: MacOS
             Important: Once you plug in the Nitrokey, your computer will start

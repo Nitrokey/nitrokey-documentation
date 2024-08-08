@@ -1,3 +1,6 @@
+Getting Started
+===============
+
 The Nitrokey 3 supports two-factor authentication (2FA) and
 passwordless authentication:
 

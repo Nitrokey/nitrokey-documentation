@@ -1,4 +1,14 @@
+SSH
+===
+
 This guide explains how to prepare your SSH server and client for use with the Nitrokey.
+For configuring PuTTY, see this guide:
+
+.. toctree::
+	:maxdepth: 1
+	
+	Putty <putty>
+
 
 The Nitrokey should already have PGP keys installed and the local GnuPG keyring should know the keys.
 

@@ -1,1 +1,1 @@
-.. include:: ../../pro/change-pins.rst.inc 
+.. include:: ../../nitrokeys/product-guides/change-pins.rst

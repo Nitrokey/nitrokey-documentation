@@ -27,9 +27,9 @@ Preparing the Keys
 
 Follow one of these guides to generate the two keys:
 
-- :doc:`openpgp-keygen-backup`
-- :doc:`openpgp-keygen-on-device`
-- :doc:`openpgp-keygen-gpa`
+- :doc:`../features/openpgp-card/openpgp-keygen-backup`
+- :doc:`../features/openpgp-card/openpgp-keygen-on-device`
+- :doc:`../features/openpgp-card/openpgp-keygen-gpa`
 
 Make sure that you can list both keys with ``gpg --list-keys``, for example::
 

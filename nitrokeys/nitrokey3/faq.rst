@@ -37,7 +37,7 @@ Nitrokey 3 FAQ
 **Q:** Why does the Nitrokey 3 not show up in Nitrokey App?
    Nitrokey 3 does only show up and can be managed in "nitropy" and "Nitrokey App 2, not in Nitrokey App 1".
 
-.. include:: ../shared-faqs/algos.rst.inc 
+.. include:: ../../shared-faqs/algos.rst.inc 
 
 **Q:** How can I set the PIN for my Nitrokey 3?
    The Nitrokey 3 has distinct PINs for each feature.
@@ -61,5 +61,5 @@ Nitrokey 3 FAQ
             using the Nitrokey 3 with the SE050 in production environments.
 
 
-.. include:: ../shared-faqs/hyperlinks.rst.inc 
+.. include:: ../../shared-faqs/hyperlinks.rst.inc 
 .. _test: ../software/nitropy/all-platforms/test.html

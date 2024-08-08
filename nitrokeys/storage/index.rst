@@ -22,7 +22,7 @@ and the:
 or check out the features:
 
 .. toctree::
-    :maxdepth: 3
-    :glob:
+   :maxdepth: 3
+   :glob:
 
-    Features <features>
+   Features <features>

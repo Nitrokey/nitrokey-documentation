@@ -41,6 +41,11 @@ Note: `Aloaha Crypt <https://www.aloaha.com/aloaha-crypt-disk/>`__ is based on T
 Hard Disk Encryption on GNU+Linux with LUKS/dm-crypt
 ----------------------------------------------------
 
+.. toctree::
+	:maxdepth: 1
+
+	Full-Disk Encryption With cryptsetup/LUKS <luks>
+
 Here are `excellent instructions <https://blog.kumina.nl/2010/07/two-factor-luks-using-ubuntu/>`__ how to use Nitrokey to encrypt your hard disk under GNU+Linux with LUKS/dm-crypt. `Other instructions <https://wiki.ubuntu.com/SmartCardLUKSDiskEncryption>`__.
 
 Purism has created a `simple script <https://docs.puri.sm/PureBoot/LibremKeyLUKS.html>`__ to add the Nitrokey/LibremKey as a way to unlock LUKS partitions (not tested by Nitrokey yet).

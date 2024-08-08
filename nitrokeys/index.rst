@@ -8,6 +8,8 @@ Nitrokeys
     Features <features/index>
     U2F <u2f/index>
     Pro <pro/index>
+	Passkey <passkey/index>
+	HSM <hsm/index>
     Storage <storage/index>
     Start <start/index>
     Nitrokey 3 <nitrokey3/index>

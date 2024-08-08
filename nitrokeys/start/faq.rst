@@ -1,7 +1,7 @@
 Nitrokey Start FAQ
 ==================
 
-.. include:: ../shared-faqs/nitrokeys.rst.inc 
+.. include:: ../../shared-faqs/nitrokeys.rst.inc 
 
 **Q:** What are the default PINs?
    * **User PIN:** "123456"
@@ -10,7 +10,7 @@ Nitrokey Start FAQ
    We strongly recommend to change these PINs/password to user-chosen values
    before using the Nitrokey.
 
-.. include:: ../shared-faqs/pins.rst.inc 
+.. include:: ../../shared-faqs/pins.rst.inc 
 
 **Q:** Which drivers/tools can be used?
   GnuPG is required for many use cases. It is a command line tool but usually
@@ -26,7 +26,7 @@ Nitrokey Start FAQ
   instructions work Nitrokey as well. In general the official documentation
   is recommended.
 
-.. include:: ../shared-faqs/algos.rst.inc 
+.. include:: ../../shared-faqs/algos.rst.inc 
 
 
 **Q:** Does the Nitrokey Start contain a secure chip or just a normal microcontroller?
@@ -37,6 +37,6 @@ Nitrokey Start FAQ
    only store cryptographic keys and certificates).
 
 
-.. include:: ../shared-faqs/hyperlinks.rst.inc 
+.. include:: ../../shared-faqs/hyperlinks.rst.inc 
 
 

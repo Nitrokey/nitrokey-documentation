@@ -24,4 +24,4 @@ Nitrokey FIDO2 FAQ
    After `disabling Enforce Attestation`_ Nitrokey FIDO2 is supported by Azure Entra ID out of the box.
 
 
-.. include:: ../shared-faqs/hyperlinks.rst.inc 
+.. include:: ../../shared-faqs/hyperlinks.rst.inc 
