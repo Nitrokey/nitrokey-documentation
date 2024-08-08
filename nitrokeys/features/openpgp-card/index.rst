@@ -8,6 +8,7 @@ There are two widely used standards for email encryption.
 -  S/MIME/X.509 is mostly used by enterprises.
 
 If you are in doubt which one to choose, you should use OpenPGP. While this page describes the usage of OpenPGP, S/MIME is described here: 
+
 .. toctree::
 	:maxdepth: 1
 		
@@ -54,7 +55,7 @@ You can find further information about the usage on these pages:
 .. toctree::
 	:maxdepth: 1
 
- 	OpenPGP encryption with Thunderbird <openpgp-thunderbird>
+	OpenPGP encryption with Thunderbird <openpgp-thunderbird>
 
 	OpenPGP encryption with Outlook <openpgp-outlook>
 
@@ -66,7 +67,7 @@ You can find further information about the usage on these pages:
 
 	Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>
 
-    GPGTools on macOS <https://gpgtools.org>
+	GPGTools on macOS <https://gpgtools.org>
 
 	Desktop Login <desktop-login/index>
 
