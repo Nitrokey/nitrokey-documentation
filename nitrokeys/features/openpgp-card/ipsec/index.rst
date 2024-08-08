@@ -35,7 +35,7 @@ IPSec
 
 6. Configure Strongswan to load opensc-pkcs11 module then to load the certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and add the following module:
 
-	.. code-block::
+	::
 
 		modules {
 			Nitrokey {

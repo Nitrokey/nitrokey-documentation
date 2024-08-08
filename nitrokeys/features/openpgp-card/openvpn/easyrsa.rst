@@ -119,7 +119,7 @@ Server side
 2. Install Easy-RSA
 ^^^^^^^^^^^^^^^^^^^
 
-To build the PKI, we will download the latest version of Easy-RSA on the server and client machines. To get the latest release, go to the `Releases page on the official EasyRSA GitHub project <https://github.com/OpenVPN/easy-rsa/releases>`__, copy the download link for the file ending in ``.tgz``, and then paste it into the following command:
+	To build the PKI, we will download the latest version of Easy-RSA on the server and client machines. To get the latest release, go to the `Releases page on the official EasyRSA GitHub project <https://github.com/OpenVPN/easy-rsa/releases>`__, copy the download link for the file ending in ``.tgz``, and then paste it into the following command:
 
     1. Download the latest release
 
@@ -606,7 +606,7 @@ Client side configuration
 			# tls-auth ta.key 1
 
 
-     4. Configure OpenVPN (Windows only)
+    4. Configure OpenVPN (Windows only)
 
 		In order to establish a handshake, you must configure OpenSSL included in OpenVPN.
 

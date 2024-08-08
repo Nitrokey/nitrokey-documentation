@@ -49,7 +49,7 @@ Troubleshooting
 
 If you get an error similar to ``ERR 100663414 Invalid ID <SCD>`` you should try instead
 
-.. code-block::
+::
   
    poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> /etc/poldi/localdb/keys
 

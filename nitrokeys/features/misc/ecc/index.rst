@@ -86,7 +86,7 @@ Now we enter ``gpg2 --card-edit`` and see that brainpoolP256r1 is under
 
 Then we create the key.
 
-.. code-block::
+::
 
    gpg/card> admin
    Admin commands are allowed

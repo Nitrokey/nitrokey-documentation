@@ -8,7 +8,7 @@ Login to Windows Domain Computers With MS Active Directory
 2. Use a text editor to add the following settings to
    ``C:\Program Files:\OpenSC Project\OpenSC\opensc.conf``.
 
-	.. code-block::
+	::
 
 		# Nitrokey Pro 2, OpenPGP Card, Nitrokey Storage 2
 		card_atr 3b:da:18:ff:81:b1:fe:75:1f:03:00:31:f5:73:c0:01:60:00:90:00:1c  {

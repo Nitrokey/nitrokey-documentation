@@ -22,7 +22,7 @@ Open a command line and type ``gpg2 --card-edit``.
 
 To open the Windows command line please push the Windows-key and R-key. Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
 
-.. code-block::
+::
 
    > gpg2 --card-edit
 
@@ -50,7 +50,7 @@ To open the Windows command line please push the Windows-key and R-key. Now type
 
 Now you are in the interactive interface of GnuPG. Activate the admin commands with ``admin`` and use ``generate`` afterwards to start the generation of keys.
 
-.. code-block::
+::
 
    gpg/card> admin                                                                                          
    Admin commands are allowed                                                                               
@@ -102,7 +102,7 @@ This section is about changing the key attributes. If you want to use the defaul
 
 Open a command line and type ``gpg2 --card-edit --expert``.
 
-.. code-block::
+::
 
    > gpg2 --card-edit --expert
 
@@ -129,7 +129,7 @@ Open a command line and type ``gpg2 --card-edit --expert``.
 Now you are in the interactive interface of GnuPG. As you can see in the
 “Key attributes” field above, the default value rsa2048 is set. To change them, activate the admin commands with ``admin`` and use ``key-attr`` afterwards to change the attributes of the keys.
 
-.. code-block::
+::
 
    gpg/card> admin
    Admin commands are allowed

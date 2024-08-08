@@ -16,7 +16,7 @@ Configuration
 
 With GnuPG 2.3 or more recent:
 
-.. code-block::
+::
 
 	$ gpg --card-edit
 	…

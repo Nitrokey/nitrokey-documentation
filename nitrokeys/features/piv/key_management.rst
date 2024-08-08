@@ -55,6 +55,6 @@ The PIV application can generate a new private key on the Nitrokey.
 
 The command below will create private key in key slot ``9a`` for the user with the subject name ``John Doe`` and subject alternative name ``jd@nitrokey.local``.
 
-.. code-block::
+::
 
    nitropy nk3 piv generate-key --key-slot 9a --subject-name "John Doe" --subject-alt-name-upn "jd@nitrokey.local"
