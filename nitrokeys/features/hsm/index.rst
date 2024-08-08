@@ -14,6 +14,6 @@ HSM Features
    Stunnel (Linux only) <../openpgp-card/stunnel/index>
    Certificate Authority <../openpgp-card/certificate-authority/index>
    Ipsec (Linux only) <../openpgp-card/ipsec/index>
-   N-of-m Schemes (Linux only) <n-of-m-schemes>
+   N-of-m Schemes <n-of-m-schemes>
    Pkcs11-URL <pkcs11-url>
    Apache 2 TLS <apache2-tls>
