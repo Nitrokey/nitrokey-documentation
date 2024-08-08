@@ -10,7 +10,7 @@ Features
     TOTP <totp/index>
     OpenPGP card <openpgp-card/index>
     Password Safe <password-safe/index>
-    Encrypted Mobile Storage <encrypted-mobile-storage/index>
+    Encrypted Mobile Storage <encrypted-storage/index>
     Hidden Storage <hidden-storage/index>
     HSM <hsm/index>
     PIV (Windows only) <piv/index>

@@ -12,7 +12,7 @@ If you are in doubt which one to choose, you should use OpenPGP. While this page
 .. toctree::
 	:maxdepth: 1
 		
-		SMIME <smime/index.html>
+		SMIME <smime/index>
 
 Please familiarize yourself with the general concept behind the OpenPGP standard first, for example by reading `this info graphic <https://emailselfdefense.fsf.org/en/infographic.html>`__ of the Free Software Foundation.
 
