@@ -12,12 +12,13 @@ First check the:
    Getting Started <getting-started>
    Frequently Asked Questions <faq>
 
-and the:
+and the product guides:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   Product-specific Guides <guides>
+   Firmware update <firmware-update>
+   Reset <reset>
 
 or check out the features:
 
@@ -25,5 +26,6 @@ or check out the features:
    :maxdepth: 3
    :glob:
 
-   Features <features>
+    FIDO2 <../features/fido2/index>
+    U2F <../features/u2f/index>
    

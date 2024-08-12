@@ -13,12 +13,14 @@ First check the:
    Getting Started <getting-started>
    Frequently Asked Questions <faq>
 
-and the:
+and the product guides:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   Product-specific Guides <guides>
+    Update <firmware-update>
+    Factory Reset <factory-reset>
+    Change PIN <../product-guides/change-pins/index>
 
 or check out the features:
 
@@ -26,6 +28,10 @@ or check out the features:
     :maxdepth: 3
     :glob:
 
-    Features <features>
+    U2F <../features/u2f/index>
+	TOTP <../features/totp/index>
+	OpenPGP Card <../features/openpgp-card/index>
+    Automatic Screen Lock (Linux) <../features/misc/automatic-screen-lock/index>
+    ECC <../features/misc/ecc/index>
 
 

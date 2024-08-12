@@ -13,12 +13,18 @@ First check the:
    Getting Started <getting-started>
    Overview <overview>
    
-and the:
+and the product guides:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
-   Product-specific Guides <guides>
+	Firmware Update <firmware-update>
+    Firmware Update Qubes <firmware-update-qubes>
+    Set Pins <set-pins>
+    nitropy <nitropy>
+    Reset <reset>
+    Troubleshooting <troubleshooting>
+    Additional Decryption Subkeys (ADSK) with GnuPG <adsk>
 
 or check out the features:
 
@@ -26,7 +32,10 @@ or check out the features:
    :maxdepth: 5
    :glob:
 
-   Features <features>
+    FIDO2 <../features/fido2/index>
+	U2F <../features/u2f/index>
+	OpenPGP Card <../features/openpgp-card/index>
+	Password Safe <../features/password-safe/index>
    
 Additional features like PIV (Windows only) are available in test firmware releases. See the `release notes`_ on GitHub for more information.
 

@@ -18,4 +18,4 @@ or check out the features:
    :maxdepth: 1
    :glob:
 
-   Features <features>
+   HSM <../features/hsm/index>

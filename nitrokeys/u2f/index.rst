@@ -9,5 +9,5 @@ Check out the features:
     :maxdepth: 3
     :glob:
 
-    Features <features>
+    U2F <../features/u2f/index>
 
