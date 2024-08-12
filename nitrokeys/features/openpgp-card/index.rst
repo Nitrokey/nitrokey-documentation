@@ -18,10 +18,10 @@ OpenPGP Card
 	GPGTools on macOS <https://gpgtools.org>
 	Desktop Login <desktop-login/index>
 	SSH <ssh/index>
-	IPSec <ipsec/index>
+	IPSec <ipsec>
 	Hard Disk Encryption <hard-disk-encryption/index>
-	Stunnel <stunnel/index>
-	Gnu Privacy Assistant (GPA) <gpa/index>
-	EID <eid/index>
-	Certificate-authority <certificate-authority/index>
+	Stunnel <stunnel>
+	Gnu Privacy Assistant (GPA) <gpa>
+	EID <eid>
+	Certificate-authority <certificate-authority>
 	GnuPG with Fedora <fedora-gnupg-configuration>
