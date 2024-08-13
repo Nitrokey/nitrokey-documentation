@@ -34,7 +34,7 @@ Getting Started
    to change the default User PIN (default: 123456) and Admin PIN
    (default: 12345678) to your own choices.
 
-.. figure:: ../product-guides/change-pins/images/change-pins/App-change-pin.png
+.. figure:: ../features/openpgp-card/images/change-pins/App-change-pin.png
    :alt: img
 
 

@@ -1,1 +1,1 @@
-.. include:: ../../nitrokeys/product-guides/change-pins/index.rst
+.. include:: ../../nitrokeys/features/openpgp-card/change-pins.rst

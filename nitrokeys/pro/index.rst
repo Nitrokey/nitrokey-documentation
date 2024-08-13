@@ -20,7 +20,6 @@ and the product guides:
 
     Update <firmware-update>
     Factory Reset <factory-reset>
-* `Change PIN <../product-guides/change-pins/index.html>`_
 
 or check out the features:
 
