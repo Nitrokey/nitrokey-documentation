@@ -1,6 +1,9 @@
 PAM
 ===
 
+.. include:: ../index.rst
+	:start-after: products-begin
+	:end-before: products-end
 
 .. contents:: :local:
 

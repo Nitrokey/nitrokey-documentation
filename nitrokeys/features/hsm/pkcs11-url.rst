@@ -1,6 +1,10 @@
 PKCS#11 URL Generation
 ======================
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 .. contents:: :local:
 
 

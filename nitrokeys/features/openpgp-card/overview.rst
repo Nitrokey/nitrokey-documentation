@@ -1,6 +1,10 @@
 OpenPGP Email Encryption
 ========================
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 There are two widely used standards for email encryption.
 
 -  OpenPGP/GnuPG is popular among individuals,
@@ -68,16 +72,16 @@ You can find further information about the usage on these pages:
 
 	SSH <ssh/index>
 
-	IPSec <ipsec/index>
+	IPSec <ipsec>
 
 	Hard Disk Encryption <hard-disk-encryption/index>
 
-	Stunnel <stunnel/index>
+	Stunnel <stunnel>
 
-	Gnu Privacy Assistant (GPA) <gpa/index>
+	Gnu Privacy Assistant (GPA) <gpa>
 
-	EID <eid/index>
+	EID <eid>
 
-	Certificate-authority <certificate-authority/index>
+	Certificate-authority <certificate-authority>
 
 	GnuPG with Fedora <fedora-gnupg-configuration>

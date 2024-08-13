@@ -24,8 +24,4 @@ and the product guides:
 
 or check out the features:
 
-.. toctree::
-	:maxdepth: 4
-	:glob:
-
-	OpenPGP Card <../features/openpgp-card/index>
+* `OpenPGP Card <../features/openpgp-card/index.html>`_

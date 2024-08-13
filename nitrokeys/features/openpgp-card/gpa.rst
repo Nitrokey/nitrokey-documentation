@@ -1,6 +1,30 @@
 Setup With Gnu Privacy Assistant (GPA)
 =======================================================
 
+.. section products-begin
+.. list-table::
+   :width: 100%
+   :header-rows: 1
+
+   * - `Nitrokey 3 <https://docs.nitrokey.com/nitrokeys/nitrokey3/index.html>`_
+     - `Passkey <https://docs.nitrokey.com/nitrokeys/passkey/index.html>`_
+     - `FIDO2 <https://docs.nitrokey.com/nitrokeys/fido2/index.html>`_
+     - `U2F <https://docs.nitrokey.com/nitrokeys/u2f/index.html>`_
+     - `HSM 2 <https://docs.nitrokey.com/nitrokeys/hsm/index.html>`_
+     - `Pro 2 <https://docs.nitrokey.com/nitrokeys/pro/index.html>`_
+     - `Start <https://docs.nitrokey.com/nitrokeys/start/index.html>`_
+     - `Storage 2 <https://docs.nitrokey.com/nitrokeys/storage/index.html>`_
+
+   * - ✓
+     - ⨯
+     - ⨯
+     - ⨯
+     - ✓
+     - ✓
+     - ✓
+     - ✓
+.. section products-end
+
 This document describes how to use Gnu Privacy Assistant (GPA) to set up the Nitrokey for its first usage.
 
 1. First you need to install Gnu Privacy Assistant (GPA). For Windows you should download and install the `GPG4Win <https://www.gpg4win.org/>`__ package which contains GPA. For Linux you should install the GPA package of your distribution (e.g. on Ubuntu: sudo apt-get install gpa ).

@@ -1,6 +1,10 @@
 Login With EIDAuthenticate on Stand Alone Windows Computers
 ===========================================================
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 .. contents:: :local:
 
 1. Download and install the latest version of `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. Please install the `OpenPGP-CSP <https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3>`__ driver **instead** if using Nitrokey Storage 2 or Nitrokey Pro 2.

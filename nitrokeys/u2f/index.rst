@@ -5,9 +5,4 @@ Nitrokey U2F
 
 Check out the features:
 
-.. toctree:: 
-    :maxdepth: 3
-    :glob:
-
-    U2F <../features/u2f/index>
-
+* `U2F <../features/u2f/index.html>`_

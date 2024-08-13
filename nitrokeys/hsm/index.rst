@@ -14,8 +14,4 @@ First check the:
 
 or check out the features:
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   HSM <../features/hsm/index>
+* `HSM <../features/hsm/index.html>`_

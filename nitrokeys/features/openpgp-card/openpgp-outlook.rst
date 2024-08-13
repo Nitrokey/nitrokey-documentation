@@ -1,6 +1,10 @@
 OpenPGP Email Encryption with Outlook
 =====================================
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 .. contents:: :local:
 
 .. note::

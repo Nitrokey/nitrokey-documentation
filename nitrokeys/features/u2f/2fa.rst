@@ -1,6 +1,9 @@
-
 Two-Factor Authentication (2FA)
 ===============================
+
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
 
 1. Open one of the `websites that support FIDO
    U2F <https://www.dongleauth.com/>`__.

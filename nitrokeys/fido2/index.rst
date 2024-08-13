@@ -22,10 +22,6 @@ and the product guides:
 
 or check out the features:
 
-.. toctree::
-   :maxdepth: 3
-   :glob:
-
-    FIDO2 <../features/fido2/index>
-    U2F <../features/u2f/index>
+* `FIDO2 <../features/fido2/index.html>`_
+* `U2F <../features/u2f/index.html>`_
    

@@ -1,6 +1,10 @@
 S/MIME Email Encryption with Thunderbird
 ========================================
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 .. contents:: :local:
 
 Prerequisites

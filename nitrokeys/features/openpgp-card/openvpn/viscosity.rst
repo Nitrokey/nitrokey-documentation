@@ -5,6 +5,10 @@
 Viscosity Client Configuration with OpenVPN
 ===========================================
 
+.. include:: ../index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 .. contents:: :local:
 
 This guide will show to configure `Viscosity client <https://www.sparklabs.com/viscosity/>`__ to connect to an OpenVPN instance, using a `Nitrokey Pro

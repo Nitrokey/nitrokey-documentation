@@ -28,15 +28,11 @@ and the product guides:
 
 or check out the features:
 
-.. toctree::
-   :maxdepth: 5
-   :glob:
-
-    FIDO2 <../features/fido2/index>
-	U2F <../features/u2f/index>
-	OpenPGP Card <../features/openpgp-card/index>
-	Password Safe <../features/password-safe/index>
+* `FIDO2 <../features/fido2/index.html>`_
+* `U2F <../features/u2f/index.html>`_
+* `OpenPGP Card <../features/openpgp-card/index.html>`_
+* `Password Safe <../features/password-safe/index.html>`_
    
-Additional features like PIV (Windows only) are available in test firmware releases. See the `release notes`_ on GitHub for more information.
+Additional features like `PIV (Windows only) <../features/piv/index.html>`_ are available in test firmware releases. See the `release notes`_ on GitHub for more information.
 
 .. _release notes: https://github.com/Nitrokey/nitrokey-3-firmware/releases

@@ -1,6 +1,10 @@
 TLS Setup With Apache2 
 ======================
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 .. contents:: :local:
 
 .. hint::

@@ -1,6 +1,10 @@
 OpenVPN Configuration with Easy-RSA
 ===================================
 
+.. include:: ../index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 .. contents:: :local:
    :depth: 2
 

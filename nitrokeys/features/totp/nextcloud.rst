@@ -1,6 +1,10 @@
 Two-factor Authentication for Nextcloud accounts
 ================================================
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 .. contents:: :local:
 
 These are the basic steps for registering the Nitrokey Pro or Nitrokey Storage as a second factor of a Nextcloud account.

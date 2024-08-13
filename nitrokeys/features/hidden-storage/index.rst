@@ -1,6 +1,28 @@
 Hidden Volumes
 ==============
 
+.. list-table::
+   :width: 100%
+   :header-rows: 1
+
+   * - `Nitrokey 3 <https://docs.nitrokey.com/nitrokeys/nitrokey3/index.html>`_
+     - `Passkey <https://docs.nitrokey.com/nitrokeys/passkey/index.html>`_
+     - `FIDO2 <https://docs.nitrokey.com/nitrokeys/fido2/index.html>`_
+     - `U2F <https://docs.nitrokey.com/nitrokeys/u2f/index.html>`_
+     - `HSM 2 <https://docs.nitrokey.com/nitrokeys/hsm/index.html>`_
+     - `Pro 2 <https://docs.nitrokey.com/nitrokeys/pro/index.html>`_
+     - `Start <https://docs.nitrokey.com/nitrokeys/start/index.html>`_
+     - `Storage 2 <https://docs.nitrokey.com/nitrokeys/storage/index.html>`_
+
+   * - ⨯
+     - ⨯
+     - ⨯
+     - ⨯
+     - ⨯
+     - ⨯
+     - ⨯
+     - ✓
+
 Hidden volumes allow hiding data inside of the encrypted volume. This data is protected by an additional passphrase. Without the passphrase, it is impossible to know whether hidden volumes are present.
 They are not configured with a default password so that their existence can be `denied plausibly <https://en.wikipedia.org/wiki/Plausible_deniability>`__.
 The concept is similar to `VeraCrypt's/TrueCrypt's hidden volume <https://veracrypt.eu/en/docs/hidden-volume/>`__ but with Nitrokey Storage the entire functionality of hidden volumes is implemented in hardware.

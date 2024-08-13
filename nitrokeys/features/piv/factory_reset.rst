@@ -1,6 +1,10 @@
 Factory Reset
 =============
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 The PIV application can be reset to factory defaults.
 It can only be reset if the PIN and PUK are blocked.
 

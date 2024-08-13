@@ -1,6 +1,10 @@
 N-of-m Schemes
 ==============
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 The Nitrokey HSM 2 supports two different n-of-m schemes - one for secure sharing of key material/passwords and one for public key authentication to control the access to the device. Please see `this blog post <https://www.smartcard-hsm.com/2015/10/10/Shared_Control_over_Key_Usage.html>`__ for more detailed information.
 
 N-of-m for DKEK Shares

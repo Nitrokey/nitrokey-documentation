@@ -1,6 +1,10 @@
 Access Control
 ==============
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 The following access matrix shows what authentication a certain operation requires.
 
 +-------------------+-----+-----+-----+-------------------------------------------------+

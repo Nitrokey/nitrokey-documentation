@@ -17,21 +17,17 @@ and the product guides:
 .. toctree::
    :maxdepth: 2
 
-   	Change PIN <../product-guides/change-pins/index>
     Firmware-Update <firmware-update>
     Manual Firmware-Update <firmware-update-manually>
     Factory Reset <factory-reset>
+* `Change PIN <../product-guides/change-pins/index.html>`_
 
 or check out the features:
 
-.. toctree::
-   :maxdepth: 3
-   :glob:
-
-   	U2F <../features/u2f/index>
-    TOTP <../features/totp/index>
-    OpenPGP Card <../features/openpgp-card/index>
-	Encrypted Mobile Storage <../features/encrypted-storage/index>
-    Hidden Storage <../features/hidden-storage/index>
-	Automatic Screen Lock (Linux) <../features/misc/automatic-screen-lock/index>
-    ECC <../features/misc/ecc/index>
+* `U2F <../features/u2f/index.html>`_
+* `TOTP <../features/totp/index.html>`_
+* `OpenPGP Card <../features/openpgp-card/index.html>`_
+* `Encrypted Mobile Storage <../features/encrypted-storage/index.html>`_
+* `Hidden Storage <../features/hidden-storage/index.html>`_
+* `Automatic Screen Lock (Linux) <../features/misc/automatic-screen-lock/index.html>`_
+* `ECC <../features/misc/ecc/index.html>`_

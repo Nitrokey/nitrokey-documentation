@@ -1,6 +1,10 @@
 Client Logon with Active Directory
 ==================================
 
+.. include:: ../index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 This document explains how to use the PIV application of a Nitrokey 3 for smartcard logon with Active Directory.
 
 In the future, this manual provisioning may be automated through a Windows MiniDriver.

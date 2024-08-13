@@ -1,6 +1,10 @@
 Importing Keys And Certificates
 ===============================
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 .. contents:: :local:
 
 Generally the concept to import key-pairs and/or certificates

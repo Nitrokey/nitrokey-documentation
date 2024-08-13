@@ -1,6 +1,10 @@
 OpenPGP Key Generation With Backup
 ==================================
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
 .. contents:: :local:
 
 The following instructions explain the generation of OpenPGP keys and how to copy them to the Nitrokey. This method has the advantage of providing a backup of the keys in case of losing or breaking the Nitrokey. The instructions are based on the command line interface of GnuPG. Thus, you need to have GnuPG installed on your system. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org/>`__ and the newest version for MacOS can be found `here <https://gpgtools.org/>`__. Users of Linux systems please install GnuPG with help of the package manager.
