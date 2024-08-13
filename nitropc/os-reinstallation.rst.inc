@@ -11,7 +11,7 @@ Operating System Reinstallation
    drive on any computer which contains data you want to keep. Make sure
    to format the USB drive after the intended use.
 
-1. Download one of the operating system images: `Ubuntu
+1. Download one of the following operating system images: `Ubuntu
    Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/qubes/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropc/debian-oem/>`__,
    `Linux Mint <https://linuxmint.com/download.php>`__
 
