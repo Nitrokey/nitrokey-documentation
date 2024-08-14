@@ -9,8 +9,8 @@ First check the:
    :maxdepth: 1
    :glob:
 
-   Frequently Asked Questions <faq>
    Getting Started <getting-started>
+   Frequently Asked Questions <faq>
 
 or check out the features:
 
