@@ -6,7 +6,7 @@ lang=$1
 	# Remove old lang-temp directory to purge removed content
 	rm -r /var/www/sphinx/sphinx/sphinx_build_temp/$lang-temp
 
-	sphinx-build -a -D language="$lang" /var/www/sphinx/sphinx/nitrokey-documentation/  /var/www/sphinx/sphinx/sphinx_build_temp/$lang-temp
+	sphinx-build -E -a -vvv -D language="$lang" /var/www/sphinx/sphinx/nitrokey-documentation/  /var/www/sphinx/sphinx/sphinx_build_temp/$lang-temp
 	status=$?
 
 	if [ $status -eq 0 ]
