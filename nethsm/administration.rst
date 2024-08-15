@@ -815,6 +815,14 @@ The update file can be uploaded as follows.
 
 Afterwards the update can be applied or aborted. Please refer to the desired option below. If the NetHSM is powered down before the "commit" operation, the update file has to be uploaded again.
 
+.. important::
+
+   If the upload of the update image fails with ``Error: NetHSM request failed: Bad request -- malformed image``, please follow the steps below.
+
+   1. Make sure you have a valid update file by checking with the provided signature.
+   2. Make sure you don't have a high log level, such as ``DEBUG`` enabled. Please refer to chapter `Logging <https://docs.nitrokey.com/nethsm/administration#logging>`__ to learn more about the log level configuration.
+   3. Reboot the appliance to free up used memory.
+
 The update can be applied (committed) as follows. Any data migration is only performed *after* the NetHSM has successfully booted the new system software version.
 
 .. tabs::
