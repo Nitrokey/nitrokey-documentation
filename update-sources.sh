@@ -28,7 +28,4 @@ bash trigger_weblatepull.sh $apikey
 # bash trigger_weblatecommit.sh $apikey
 
 # weblate push
-# bash trigger_weblatepush.sh $apikey
-
-# build docs
-bash build-docs.sh de --full --rebuild
+bash trigger_weblatepush.sh $apikey

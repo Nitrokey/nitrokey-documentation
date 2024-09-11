@@ -23,7 +23,7 @@ fi
 		}' \
 		-H "Content-Type: application/json" \
 		-H "Authorization: Token $token" \
-		"$weblate_api/projects/nitrokey-documentation/repository/"
+		"$weblate_api/projects/nitrokey-test/repository/"
 		echo -e "\n$(date) done"
 
 	

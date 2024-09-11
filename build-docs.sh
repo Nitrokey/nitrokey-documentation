@@ -3,6 +3,9 @@
 # Load default Variables
 source variables.sh
 
+# get updated translation files
+git pull
+
 # Override list of available languages for quicker local testing
 # languages=("en" "de")
 
