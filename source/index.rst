@@ -1,3 +1,8 @@
-.. include:: openpgp-keygen-gpa.rst.inc
+Nitrokey Documentation
+======================
 
-.. include:: os-reinstallation.rst.inc
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+
+   nitropc/index
