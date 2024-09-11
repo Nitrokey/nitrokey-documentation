@@ -2,12 +2,15 @@
 
 # Load default Variables
 source variables.sh
+source environment.sh
+
+# trigger weblate push to ensure having the most up-to-date files
+bash trigger_weblatepush.sh $apikey
 
 # get updated translation files
 git pull
 
-# Override list of available languages for quicker local testing
-# languages=("en" "de")
+bash ./build-container-image.sh
 
 # Default options
 build_all=true
