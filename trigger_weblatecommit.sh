@@ -21,6 +21,6 @@ echo -e "\n $(date) Starting weblate repository commit..."
 		}' \
 		-H "Content-Type: application/json" \
 		-H "Authorization: Token $token" \
-		"$weblate_api/projects/nitrokey-documentation/repository/"
+		"$weblate_api/projects/$weblate_project/repository/"
 		echo -e "\n$(date) done"
 
