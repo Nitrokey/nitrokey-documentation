@@ -6,7 +6,7 @@ Operating System Reinstallation
 
 .. warning::
 
-   TEST Booting this USB drive entirely erases all data on the hard disk or
+   Booting this USB drive entirely erases all data on the hard disk or
    SSD of the NitroPad without further warning. Don’t boot this USB
    drive on any computer which contains data you want to keep. Make sure
    to format the USB drive after the intended use.
@@ -35,7 +35,7 @@ Operating System Reinstallation
     If you are using a NitroPC with TitanCore:
         Press ESC to enter the BIOS to select USB Boot.
 
-5. TEST3 Depending on the operating system you may need to confirm its
+5. Depending on the operating system you may need to confirm its
    reinstallation.
 
 To avoid accidential overwriting of valuable data, format the USB drive afterwards.
