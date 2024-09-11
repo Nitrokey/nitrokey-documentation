@@ -22,10 +22,10 @@ git push
 bash trigger_weblatepull.sh $apikey
 
 # trigger deepl
-# bash trigger_deepl.sh $apikey
+bash trigger_deepl.sh $apikey
 
 # weblate commit (deepl-translated files)
-# bash trigger_weblatecommit.sh $apikey
+bash trigger_weblatecommit.sh $apikey
 
 # weblate push
 bash trigger_weblatepush.sh $apikey

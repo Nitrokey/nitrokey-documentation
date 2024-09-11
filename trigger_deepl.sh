@@ -33,7 +33,7 @@ do
 		}' \
 		-H "Content-Type: application/json" \
 		-H "Authorization: Token $token" \
-		"$weblate_api/translations/nitrokey-documentation/$component/$lang/autotranslate/"
+		"$weblate_api/translations/nitrokey-test/$component/$lang/autotranslate/"
 		echo -e "\n$(date) done"
 	done
 	echo -e "\n$(date) Language $lang passed"
