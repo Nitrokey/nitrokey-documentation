@@ -66,8 +66,9 @@ master_doc = 'index'
 #language = None
 language = 'en'
 locales_dir = ['locales/']
-gettext_compact = False
+#gettext_compact = False
 #gettext_compact = "string"
+gettext_compact = True
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
