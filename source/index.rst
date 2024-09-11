@@ -1,1 +1,1 @@
-.. include:: ../os-reinstallation.rst.inc
+.. include:: os-reinstallation.rst.inc
