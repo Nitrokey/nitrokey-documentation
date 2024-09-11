@@ -1,0 +1,1 @@
+.. include:: ../openpgp.rst.inc
