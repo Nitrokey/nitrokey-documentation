@@ -1,0 +1,15 @@
+<div class="language-switcher mobile">
+
+<select onchange="location = this.options[this.selectedIndex].value;">
+    <option selected>{{ language }}</option>
+    {% for lang in languages: %}
+        {% if language != lang %}
+            {% if lang == 'en' %}
+                <option value="/{{ pagename | replace("index.html", "") | replace("index", "") }}">{{ lang }}</option>
+            {% else %}
+                <option value="/{{lang}}/{{ pagename | replace("index.html", "") | replace("index", "") }}">{{ lang }}</option>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</select>
+</div>

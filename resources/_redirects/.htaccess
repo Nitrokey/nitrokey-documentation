@@ -1,0 +1,18 @@
+# Redirects of deprecated articles to existing ones
+# =================================================
+
+# Usage:
+#	1) Copy the RedirectMatch Line
+#	2) Put the deprecated path between ? and $
+#	3) Put the final path between $1 and "
+#
+#	Use 301 for final redirects and 302 for temporary redirects
+#
+# If the browser shows "Internal Server Error" check the Syntax of the Rule Set:
+
+
+#Rule Set:
+#=========
+
+RedirectMatch 302 "(/[a-z][a-z])?/path/to/old_article.html$" "$1/path/to/new_article.html"
+
