@@ -1,8 +1,12 @@
 #!/bin/bash
 
-# Load Variables
-source variables.sh
-source environment.sh
+# Load environment variables from config.env
+if [ -f ./.env ]; then
+  source ./.env
+else
+  echo "Environment file not found!"
+  exit 1
+fi
 
 # provide access token from https://translate.nitrokey.com/accounts/profile/#api
 token=$1
@@ -16,11 +20,11 @@ fi
 
 
 
-for lang in "${languages[@]}"
+for lang in "${LANGUAGES[@]}"
 
 do
 	echo -e "\n $(date) Starting deepl Translation for language $lang..."
-	for component in "${components[@]}"
+	for component in "${COMPONENTS[@]}"
 	do
 		echo -e "$(date) Starting to translate $lang for component $component"
 		curl \
@@ -33,7 +37,7 @@ do
 		}' \
 		-H "Content-Type: application/json" \
 		-H "Authorization: Token $token" \
-		"$weblate_api/translations/$weblate_project/$component/$lang/autotranslate/"
+		"$WEBLATE_API/translations/$WEBLATE_PROJECT/$component/$lang/autotranslate/"
 		echo -e "\n$(date) done"
 	done
 	echo -e "\n$(date) Language $lang passed"

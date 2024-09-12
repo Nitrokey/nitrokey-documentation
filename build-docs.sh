@@ -1,11 +1,15 @@
 #!/bin/bash
 
-# Load default Variables
-source variables.sh
-source environment.sh
+# Load environment variables from config.env
+if [ -f ./.env ]; then
+  source ./.env
+else
+  echo "Environment file not found!"
+  exit 1
+fi
 
 # trigger weblate push to ensure having the most up-to-date files
-bash trigger_weblatepush.sh $apikey
+bash trigger_weblatepush.sh $WEBLATE_API_KEY
 
 # get updated translation files
 git pull
@@ -76,11 +80,11 @@ fi
 # Execute build based on the parsed options
 if $build_all; then
     echo "Building documentation for all languages..."
-    for lang in "${languages[@]}"; do
+    for lang in "${LANGUAGES[@]}"; do
         build_docs $lang
     done
 else
-    if [[ " ${languages[@]} " =~ " $specific_language " ]]; then
+    if [[ " ${LANGUAGES[@]} " =~ " $specific_language " ]]; then
         build_docs $specific_language
     else
         echo "Error: Language '$specific_language' is not in the list of available languages."
