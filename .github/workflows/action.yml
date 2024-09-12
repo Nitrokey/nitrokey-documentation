@@ -1,18 +1,19 @@
-name: 'Update sources'
-description: 'Udpates sources...'
+name: 'Build sphinx docs'
 
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-    
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+# controls when the workflow will run
+on: 
+  # triggers on git push
+  push:
+    branches: [actions]
+  
+  # allows running this manually from the Actions tab
+  workflow_dispatch:
 
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
+jobs:
+
+  build:
+    runs-on: sphinxdoc-sphinx
+
+    steps:
+      - name: Testing
+        run: echo "Heya!"
