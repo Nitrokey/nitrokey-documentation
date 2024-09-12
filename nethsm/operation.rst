@@ -163,7 +163,7 @@ Import a private key from a PEM file into NetHSM as follows.
       |                                        | Possible values for the ``MECHANISM`` argument can |
       |                                        | be found in the table above.                       |
       +----------------------------------------+----------------------------------------------------+
-      | ``-k``, ``--key-id`` ``TEXT`         ` | The ID of the new key                              |
+      | ``-k``, ``--key-id`` ``TEXT``          | The ID of the new key                              |
       +----------------------------------------+----------------------------------------------------+
       | ``--tags`` ``TEXT``                    | The Tag for the new key                            |
       +----------------------------------------+----------------------------------------------------+
