@@ -138,7 +138,7 @@ The supported key types and their corresponding mechanisms are the following.
 
 Keys are assigned to the `Namespace <administration.html#namespaces>`__ of the user that imports the key.
 
-Import a key pair from a PEM file into NetHSM as follows.
+Import a private key from a PEM file into NetHSM as follows.
 
 .. tabs::
    .. tab:: nitropy
@@ -148,13 +148,13 @@ Import a key pair from a PEM file into NetHSM as follows.
 
       **Arguments**
 
-      +--------------+------------------------+
-      | Argument     | Description            |
-      +==============+========================+
-      | ``FILENAME`` | Key file in PEM format |
-      +--------------+------------------------+
+      +--------------+--------------------------------+
+      | Argument     | Description                    |
+      +==============+================================+
+      | ``FILENAME`` | Private key file in PEM format |
+      +--------------+--------------------------------+
       
-      **Required Options**
+      **Optional Options**
 
       +----------------------------------------+----------------------------------------------------+
       | Option                                 | Description                                        |
@@ -163,16 +163,10 @@ Import a key pair from a PEM file into NetHSM as follows.
       |                                        | Possible values for the ``MECHANISM`` argument can |
       |                                        | be found in the table above.                       |
       +----------------------------------------+----------------------------------------------------+
-
-      **Optional Options**
-
-      +-------------------------------+-------------------------+
-      | Option                        | Description             |
-      +===============================+=========================+
-      | ``-k``, ``--key-id`` ``TEXT`` | The ID of the new key   |
-      +-------------------------------+-------------------------+
-      | ``--tags`` ``TEXT``           | The Tag for the new key |
-      +-------------------------------+-------------------------+
+      | ``-k``, ``--key-id`` ``TEXT`         ` | The ID of the new key                              |
+      +----------------------------------------+----------------------------------------------------+
+      | ``--tags`` ``TEXT``                    | The Tag for the new key                            |
+      +----------------------------------------+----------------------------------------------------+
 
       **Example**
 
