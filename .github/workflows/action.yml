@@ -12,9 +12,11 @@ on:
 jobs:
 
   build:
-    runs-on: sphinxdoc/sphinx
-    #runs-on: ubuntu-latest
+    #runs-on: sphinxdoc/sphinx
+    runs-on: ubuntu-latest
 
     steps:
       - name: Testing
-        run: echo "Heya!"
+        runs:
+          using: 'docker'
+          image: 'Dockerfile'
