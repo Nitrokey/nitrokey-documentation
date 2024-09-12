@@ -138,7 +138,53 @@ The supported key types and their corresponding mechanisms are the following.
 
 Keys are assigned to the `Namespace <administration.html#namespaces>`__ of the user that imports the key.
 
-The import can be initiated as follows.
+Import a private key from a PEM file into NetHSM as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Required Role**
+
+      This operation requires an authentication with the *Administrator* role.
+
+      **Arguments**
+
+      +--------------+--------------------------------+
+      | Argument     | Description                    |
+      +==============+================================+
+      | ``FILENAME`` | Private key file in PEM format |
+      +--------------+--------------------------------+
+      
+      **Optional Options**
+
+      +----------------------------------------+----------------------------------------------------+
+      | Option                                 | Description                                        |
+      +========================================+====================================================+
+      | ``-m``, ``--mechanism`` ``MECHANISM``  | The mechanisms for the generated key.              |
+      |                                        | Possible values for the ``MECHANISM`` argument can |
+      |                                        | be found in the table above.                       |
+      +----------------------------------------+----------------------------------------------------+
+      | ``-k``, ``--key-id`` ``TEXT``          | The ID of the new key                              |
+      +----------------------------------------+----------------------------------------------------+
+      | ``--tags`` ``TEXT``                    | The Tag for the new key                            |
+      +----------------------------------------+----------------------------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST import-key \
+            --mechanism RSA_Signature_PSS_SHA256 \
+            --mechanism RSA_Decryption_PKCS1 \
+            --key-id myFirstKey \
+            mykey.pem
+
+      .. code-block::
+
+         Key myFirstKey added to NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/keys` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys>`__.
+
+Private keys in raw format can be imported as follows.
 
 .. tabs::
    .. tab:: nitropy
