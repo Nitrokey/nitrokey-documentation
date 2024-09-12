@@ -146,6 +146,14 @@ Import a key pair from a PEM file into NetHSM as follows.
 
       This operation requires an authentication with the *Administrator* role.
 
+      **Arguments**
+
+      +--------------+------------------------+
+      | Argument     | Description            |
+      +==============+========================+
+      | ``FILENAME`` | Key file in PEM format |
+      +--------------+------------------------+
+      
       **Required Options**
 
       +----------------------------------------+----------------------------------------------------+
@@ -154,8 +162,6 @@ Import a key pair from a PEM file into NetHSM as follows.
       | ``-m``, ``--mechanism`` ``MECHANISM``  | The mechanisms for the generated key.              |
       |                                        | Possible values for the ``MECHANISM`` argument can |
       |                                        | be found in the table above.                       |
-      +----------------------------------------+----------------------------------------------------+
-      |                                        | Key file in PEM format                             |
       +----------------------------------------+----------------------------------------------------+
 
       **Optional Options**
