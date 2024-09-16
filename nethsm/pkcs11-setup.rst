@@ -111,14 +111,14 @@ The configuration is yaml-formatted:
           # it is possible to configure idle connections to make use of TCP keepalives, preventing the closing of connections by a firewall or detecting such cases
           tcp_keepalive:
             # the number of seconds before keepalives packets start being sent
-            # Corresponds to `TCP_KEEPALIVE` on macOS, `TCP_KEEPIDLE` on Linux, and the keepalivetime field of tcp_keepalive on Windows
+            # Corresponds to `TCP_KEEPIDLE` on Linux, `TCP_KEEPALIVE` on macOS, and the field keepalivetime of tcp_keepalive on Windows
             time_seconds: 600
             # the number of seconds between each keepalive packet
-            # Corresponds to `TCP_KEEPINTVL` on Linux and macOs, and keepaliveinterval field of tcp_keepalive on windows
+            # Corresponds to `TCP_KEEPINTVL` on Linux and macOS, and the field keepaliveinterval of tcp_keepalive on Windows
             interval_seconds: 60
             # the number of keepalive packets being sent without a response before the connection 
             # is considered closed
-            # Corresponds to `TCP_KEEPCNT` on Linux and macOs, and is not used on Windows
+            # Corresponds to `TCP_KEEPCNT` on Linux and macOS, and is not used on Windows
             retries: 3
           # Time a connection can spend idle before being closed
           connections_max_idle_duration: 1800
