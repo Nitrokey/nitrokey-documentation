@@ -8,7 +8,6 @@ else
   exit 1
 fi
 
-# git pull
 git pull
 
 # build container image
