@@ -1,0 +1,1614 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Nitrokey
+# This file is distributed under the same license as the Nitrokey Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nitrokey Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-16 09:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../documentation/hsm/faq.rst:2
+msgid "Nitrokey HSM FAQ"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:17
+msgid "**Q:** What is the maximum length of the PIN?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:9
+msgid "Nitrokey uses PINs instead of passwords. The main difference is that the hardware limits the amount of tries to three while a limit doesn't exist for passwords. Because of this, a short PIN is still secure and there is not need to choose a long and complex PIN."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:14
+msgid "Nitrokey PINs can be up to 16 digits long and can consist of numbers, characters and special characters. Note: When using GnuPG or OpenSC, 32 character long PINs can be used but aren't supported by Nitrokey App."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:27
+msgid "**Q:** What is the User PIN for?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:20
+msgid "The PIN is at least 6-digits long and is used to get access to the content of the Nitrokey. This is the PIN you will use a lot in every day use."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:24
+msgid "The PIN can have up to 16 digits and other characters (e.g. alphabetic and special characters). But as the PIN is blocked as soon three wrong PIN attempts were done, it is sufficiently secure to only have a 6 digits PIN."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:34
+msgid "**Q:** What is the SO PIN for?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:30
+msgid "The SO PIN is used in the Nitrokey HSM only and is something like a \"master\" PIN with special properties. Please read this instructions carefully to understand the SO PIN of the Nitrokey HSM."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:34
+msgid "The SO PIN has to be exactly 16 digits long."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:42
+msgid "**Q:** How many data objects (DF, EF) can be stored?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:37
+msgid "76 KB EEPROM total, that can be used for"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:39
+msgid "max. 150 x ECC-521 keys or"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:40
+msgid "max. 300 x ECC/AES-256 keys or"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:41
+msgid "max. 19 x RSA-4096 keys or"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:42
+msgid "max. 38 x RSA-2048 keys"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:45
+msgid "**Q:** How many keys can I store?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:45
+msgid "Nitrokey HSM can store 20 RSA-2048 and 31 ECC-256 key pairs."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:53
+msgid "**Q:** How fast is encryption and signing?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:48
+msgid "Key generation on-card: RSA 2048: 2 per minute"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:49
+msgid "Key generation on-card: ECC 256: 10 per minute."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:50
+msgid "Signature creation with off-card hash: RSA 2048; 100 per minute"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:51
+msgid "Signature creation with off-card hash: ECDSA 256: 360 per minute"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:52
+msgid "Signature creation with on-card SHA-256 and 1 kb data: RSA 2048; 68 per minute"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:53
+msgid "Signature creation with on-card SHA-256 and 1 kb data: ECDSA 256: 125 per minute"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:57
+msgid "**Q:** How can I distinguish a Nitrokey HSM 1 from an Nitrokey HSM 2?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:56
+msgid "Use ``opensc-tool --list-algorithms`` and compare with the table below. Please also see `this thread`_ for the factsheets and more details."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:64
+msgid "**Q:** How can I use the True Random Number Generator (TRNG) of the Nitrokey HSM for my applications?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:62
+msgid "Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC as a PKCS#11 driver."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:64
+msgid "OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 doesn't contain a mapping for OpenSSL to C_GenerateRandom."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:68
+msgid "**Q:** How good is the Random Number Generator?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:67
+msgid "Nitrokey HSM uses the True Random Number Generator of JCOP 2.4.1r3 which has a quality of DRNG.2 (according to `AIS 31`_ of the German Federal Office for Information Security, BSI)."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:84
+msgid "**Q:** Which API can I use?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:71
+msgid "OpenSC: Comprehensive instructions exist for OpenSC framework. There is nitrotool as a more comfortable frontend to OpenSC."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:74
+msgid "Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11 module is provided by the sc-hsm-embedded project.  This PKCS#11 module is useful for deployments where key generation at the user's workplace is not required. The PKCS#11 module also supports major electronic signature cards available in the German market."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:80
+msgid "OpenSCDP: The SmartCard-HSM is fully integrated with OpenSCDP, the open smart card development platform. See the public support scripts for details. To import existing keys you can use its SCSH or NitroKeyWrapper."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:88
+msgid "**Q:** Is the Nitrokey HSM 2 Common Criteria or FIPS certified?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:87
+msgid "The security controller (NXP JCOP 3 P60) is Common Criteria EAL 5+ certified up to the OS level (`Certificate <https://commoncriteriaportal.org/files/epfiles/NSCIB-certificate%2021-98209.pdf>`__, `Certification Report <https://commoncriteriaportal.org/files/epfiles/Certification%20Report%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__, `Security Target <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-98209_5-STLite.pdf>`__, `Java Card System Protection Profile Open Configuration, Version 3.0 <https://commoncriteriaportal.org/files/ppfiles/ANSSI-CC-profil_PP-2010-03en.pdf>`__)."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:91
+msgid "**Q:** How to import an existing key into the Nitrokey HSM?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:91
+msgid "First, `set up`_ your Nitrokey HSM to use key backup and restore. Then use Smart Card Shell for importing. If your key is stored in a Java key store you can use `NitroKeyWrapper`_  instead."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:94
+msgid "**Q:** How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey HSM?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:94
+msgid "An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey HSM can be found at `banzaicloud.com`_."
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:99
+msgid "**Q:** Can I use Nitrokey HSM with cryptocurrencies?"
+msgstr ""
+
+#: ../documentation/hsm/faq.rst:97
+msgid "J.v.d.Bosch wrote a simple, free python `program`_ to secure the private key of a Bitcoin wallet in a HSM. `Tezos`_ has been `reported`_ to work with Nitrokey HSM."
+msgstr ""
+
+#: ../documentation/hsm/index.rst:8
+#: ../documentation/nitropc/index.rst:9
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../documentation/hsm/index.rst:16
+msgid "Windows"
+msgstr ""
+
+#: ../documentation/hsm/index.rst:16
+msgid "macOS"
+msgstr ""
+
+#: ../documentation/hsm/index.rst:16
+msgid "Linux"
+msgstr ""
+
+#: ../documentation/hsm/index.rst:2
+msgid "Nitrokey HSM 2"
+msgstr ""
+
+#: ../documentation/hsm/index.rst:6
+#: ../documentation/nitropc/index.rst:7
+msgid "First check the:"
+msgstr ""
+
+#: ../documentation/hsm/index.rst:14
+#: ../documentation/nitropc/index.rst:15
+msgid "or choose your operating system:"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:2
+msgid "TLS Setup With Apache2"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:8
+msgid "The very same concept as descriped here can be used for many applications using openssl as crypto-backend. The concept mostly boils down to: replace (secret) key-file with PKCS#11 URL referencing a key on a security token (Nitrokey)"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:15
+#: ../documentation/hsm/import-keys-certs.rst.inc:24
+#: ../documentation/hsm/pkcs11-url.rst.inc:12
+msgid "Preparation"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:17
+msgid "ensure that the `apache2` version is at least 2.4.42 for proper ``mod_ssl`` support"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:19
+msgid "activate ``mod_ssl`` using ``a2enmod ssl``, if not already done"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:21
+msgid "additionally ``openssl`` is needed and ``libengine-pkcs11-openssl`` see :doc:`PKCS#11 URL<pkcs11-url>`"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:27
+msgid "Configure Apache2 to Use a Security Key"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:29
+msgid "Basically the only thing to do is replace ``SSLCertificateFile`` with the proper PKCS#11 URL and delete any other references to keys or certificates. E.g., ``SSLCertificateKeyFile`` is not needed anymore."
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:33
+msgid "An example directive might look like this:"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:39
+msgid "The proper PKCS#11 URL can be extracted as documented in :doc:`PKCS#11 URL Generation<pkcs11-url>`"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:41
+msgid "Be sure to place the directive inside a `VirtualHost` configuration."
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:44
+msgid "Provide PIN During Apache2 Startup"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:46
+msgid "Using the previously described method Apache2 will ask on every startup for the User-PIN, thus basically declining batch startup. Apache2 provides another directive to provide the PIN during startup."
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:54
+msgid "Apache2 expects an executable after ``|``, which will be executed during startup and it's output (trailing newline is expected) will be used as PIN. Obviously arbitrary complex PIN retrieval methods can be implemented using this approach. Although here a trivial example has been chosen to just ``echo`` the PIN during startup."
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:59
+msgid "Further ``SSLPassPhraseDialog`` is a global directive, thus has to be placed in the global configuration scope in Apache2."
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:64
+msgid "This shown example is not a secure mechanism to pass your PIN, as it will be written in plain-text inside your configuration"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:67
+msgid "See the `Apache2 mod_ssl documentation`_ for more details on this feature."
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:70
+msgid "Complete Apache2 Config Example"
+msgstr ""
+
+#: ../documentation/hsm/apache2-tls.rst.inc:71
+msgid "A complete Apache2 (``VirtualHost``) config snippet might look like this:"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:2
+msgid "Creating a Certificate Authority"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:6
+msgid "This article shows you how to setup your own private certificate authority backed by a Nitrokey HSM. This certificate authority has no automation and does not really scale. Other open source projects can be referenced for automation and scalability."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:9
+msgid "Choose Cryptographic Algorithms"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:11
+msgid "I’m going to assume that you’re as paranoid as I am, so I will be using the following command for generating private keys:"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:17
+msgid "But, if you’re less paranoid that I am, you can safely choose the following options:"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:24
+msgid "Likewise, I will be using the sha512 algorithm throughout this article, but sha256 can safely be used."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:27
+msgid "Preparing to Start"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:29
+msgid "To start with, you need to pick a directory to store your CA."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:40
+msgid "Install the necessary tools:"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:50
+msgid "For Windows download the official `OpenSC releases <https://github.com/OpenSC/OpenSC/releases>`__ and make sure you install `p11tool as described <https://github.com/thales-e-security/p11tool>`__. Using the PowerShell most commands should be identical as long as both tools and their binaries are within your ``PATH``."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:56
+msgid "Creating The Root Certificate Authority"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:58
+msgid "We start by generating the private key for the certificate authority directly on the Nitrokey HSM. This allows us to use the private key in the future, but not access it."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:81
+msgid "Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need it later."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:83
+#: ../documentation/hsm/certificate-authority.rst.inc:238
+msgid "If you need the ID in the future, you can list the keys on the Nitrokey HSM:"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:89
+#: ../documentation/hsm/certificate-authority.rst.inc:244
+msgid "We need to create a config file to generate a self-signed public certificate."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:95
+#: ../documentation/hsm/certificate-authority.rst.inc:250
+msgid "Fill out the request information in <angle brackets> with information for your CA."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:155
+msgid "Generate the self-signed public certificate from the private key. Use the private key id value from earlier."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:163
+msgid "Verify that the root certificate was generated correctly. Verify that Signature-Algorithm matches above and below. Verify that Issuer and Subject match, all root certificates are self signed. Verify that Key Usage matches what was in the v3_ca information in our config file."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:211
+msgid "Creating The Intermediate Certificate Authority"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:213
+msgid "We continue by generating the private key for the intermediate certificate authority directly on the Nitrokey HSM. This allows us to use the private key in the future, but not access it."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:236
+msgid "Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need it later."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:277
+msgid "Generate the certificate signing request for the intermediate CA from the intermediate CA’s private key. Use the private key ID value from earlier."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:285
+msgid "Verify that the CSR was created correctly. Verify that your Subject is correct. Verify that your Public Key and Signature Algorithm are correct."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:318
+#: ../documentation/hsm/certificate-authority.rst.inc:523
+msgid "We need to find out the fully qualified PKCS#11 URI for your private key:"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:356
+#: ../documentation/hsm/certificate-authority.rst.inc:561
+msgid "In this instance, the fully qualified PKCS#11 URI is:"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:362
+msgid "Now, we need to create a config file to use the private key of the root certificate to sign the csr of the intermediate certificate."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:414
+msgid "Then sign the intermediate certificate with the root certificate."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:454
+msgid "Verify that the root certificate was generated correctly. Verify that the Issuer and Subject are different, and correct. Verify that the Key Usage matches the config file. Verify that the signature algorithm are correct above and below."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:501
+msgid "Verify that the intermediate certificate verifies against the root certificate."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:508
+msgid "Create a certificate chain file:"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:514
+msgid "You now have a certificate authority backed by an HSM."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:517
+msgid "Sign a Server Certificate"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:519
+msgid "Now that you have a certificate authority, you’d probably like to know how to use it."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:521
+msgid "Create a CSR in the normal method for your application. Proper creation of your certificate, including SAN, for your particular application is outside the scope of this document."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:567
+msgid "Create a config file to use the private key of the intermediate certificate to sign the CSRs of your servers."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:622
+msgid "Then run openssl to sign the server’s CSR."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:671
+msgid "References"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:673
+msgid "I used the following resources to help in compiling this document."
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:675
+msgid "`How to initialize your Nitrokey HSM <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`__"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:676
+msgid "`How to create a root and intermediate CA <https://jamielinux.com/docs/openssl-certificate-authority/create-the-root-pair.html>`__"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:677
+msgid "`How to ensure the serial numbers of your intermediate CA and server certs are up to spec <https://www.phildev.net/ssl/creating_ca.html>`__"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:678
+msgid "`How to generate ECC private keys <https://dev.to/benjaminblack/obtaining-an-elliptic-curve-dsa-certificate-with-lets-encrypt-51bc>`__"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:679
+msgid "`How to find the PCKS11 URI from your HSM <https://www.infradead.org/openconnect/pkcs11.html>`__"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:680
+msgid "`Troubleshooting (forum) <https://support.nitrokey.com/t/pki-ca-nitrokey-hsm-does-not-support-signing/2598/14>`__"
+msgstr ""
+
+#: ../documentation/hsm/certificate-authority.rst.inc:683
+msgid "This document was originally `written by lyntux <https://gist.github.com/lyntux/f02c6c3414ce48bc8ea8ab6dcdba1623>`__"
+msgstr ""
+
+#: ../documentation/hsm/linux/dnssec.rst:2
+msgid "DNSSEC"
+msgstr ""
+
+#: ../documentation/hsm/linux/dnssec.rst:7
+msgid "Protect your domain name resolution using DNSSEC and a Nitrokey HSM as secure key store. It's based on Smartcard-HSM which is why the following resources apply:"
+msgstr ""
+
+#: ../documentation/hsm/linux/dnssec.rst:9
+msgid "Luis D Espinoza Sanchez & Eberhard W Lisse held a `session on using the SmartCard-HSM for DNSSEC <https://singapore52.icann.org/en/schedule/mon-tech/presentation-dnssec-card-signing-09feb15-en.pdf>`__ at the 2015 ICAAN Meeting in Singapore."
+msgstr ""
+
+#: ../documentation/hsm/linux/dnssec.rst:10
+msgid "Jan-Piet Mens wrote a nice article about `integrating the SmartCard-HSM with PowerDNS <https://jpmens.net/2015/03/30/powerdns-with-a-smartcard-hsm-for-dnssec/>`__."
+msgstr ""
+
+#: ../documentation/hsm/linux/dnssec.rst:11
+msgid "Integration with `OpenDNSSEC <https://www.opendnssec.org/>`__ has been successfully tested."
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:2
+msgid "Importing Keys And Certificates"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:6
+msgid "Generally the concept to import key-pairs and/or certificates is the following:"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:9
+msgid "Create a DKEK (Device Key Encryption Key) share"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:10
+msgid "Initialize device and enable DKEK as \"Device Encryption Scheme\""
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:11
+msgid "Import DKEK share into device"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:12
+msgid "Import PKCS#12 container(s) into DKEK"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:14
+msgid "This documentation covers only one specific use-case and should serve as an example for the overall workflow. For further information please read `this thread`_ and `this blog post`_."
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:20
+msgid "This procedure will reset your Nitrokey HSM 2 device and all data on it will be deleted!"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:26
+msgid "make sure all the keys you would like to import are available as PKCS#12 containers (`.p12`) and you know the password, if needed"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:29
+msgid "be sure that nothing on the used Nitrokey HSM 2 is needed, it will be deleted during this procedure"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:32
+msgid "download the latest `Smart Card Shell`_ and unpack it into your work-directory"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:35
+msgid "Importing Via The SCSH3 GUI"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:37
+msgid "Inside the unpacked directory you will find ``scsh3gui``, which can be started using ``bash scsh3gui`` (for windows double-click on: ``scsh3gui.cmd``)."
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:40
+msgid "Once the SCSH3 Tool is open, you should see your Nitrokey HSM 2 inside the tree view. Please follow these steps to import:"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:43
+msgid "Start key-manager (File -> Keymanager)"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:45
+msgid "Right-click \"Smartcard-HSM\" -> create DKEK share"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:47
+msgid "Choose file location"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:49
+msgid "Choose DKEK share password"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:51
+msgid "Right-click \"Smartcard-HSM\" -> Initialize device"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:53
+msgid "Enter SO-PIN"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:55
+msgid "(optional) Enter label and enter URL/Host"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:57
+msgid "Select authentication method: \"User PIN\""
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:59
+msgid "Allow RESET RETRY COUNTER: \"Resetting and unblocking PIN with SO-PIN not allowed\""
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:61
+msgid "Enter and confirm User PIN"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:63
+msgid "\"Select Device Key Encryption scheme\" -> \"DKEK shares\""
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:65
+msgid "Enter number of DKEK shares: 1"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:67
+msgid "Right-click DKEK set-up in progress -> \"Import DKEK share\""
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:69
+msgid "Choose DKEK share file location"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:71
+msgid "Password for DKEK share"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:73
+msgid "Right-click \"SmartCard-HSM\" -> \"Import from PKCS#12\""
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:75
+msgid "Enter number of shares -> 1"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:77
+msgid "Enter file location of DKEK share"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:79
+msgid "Enter Password for DKEK share"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:81
+msgid "Select PKCS#12 container for import (Enter password, if set)"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:83
+msgid "Select Key"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:85
+msgid "Select Name to be used (This is the Label used for the key on the device)"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:87
+msgid "Import more keys, if needed"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:89
+msgid "Once this is done, you can check that the keys have been successfully imported using:"
+msgstr ""
+
+#: ../documentation/hsm/import-keys-certs.rst.inc:96
+msgid "In the resulting output you will find the imported keys labeled by the name you chose previously."
+msgstr ""
+
+#: ../documentation/hsm/linux/index.rst:2
+msgid "Nitrokey HSM with GNU/Linux"
+msgstr ""
+
+#: ../documentation/hsm/linux/index.rst:13
+msgid "Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. You need at least version 0.19. You can find recent builds for debian-based systems like Ubuntu `here <https://github.com/Nitrokey/opensc-build>`__ if your system does not have the newest version of OpenSC. Alternatively, install `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__ driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__)."
+msgstr ""
+
+#: ../documentation/hsm/linux/index.rst:20
+#: ../documentation/hsm/mac/index.rst:17
+#: ../documentation/hsm/windows/index.rst:17
+msgid "Define SO-PIN and PIN of your own choices. See `these instructions <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`__. Afterwards you can begin to `generate new keys <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#generate-key-pair>`__."
+msgstr ""
+
+#: ../documentation/hsm/linux/index.rst:25
+#: ../documentation/hsm/mac/index.rst:22
+#: ../documentation/hsm/windows/index.rst:22
+msgid "Your Nitrokey is now ready to use."
+msgstr ""
+
+#: ../documentation/hsm/linux/index.rst:27
+#: ../documentation/hsm/mac/index.rst:24
+#: ../documentation/hsm/windows/index.rst:24
+msgid "There is `nitrotool <https://github.com/johndoe31415/nitrotool>`__ as a more comfortable frontend to OpenSC. (hsmwiz)"
+msgstr ""
+
+#: ../documentation/hsm/linux/index.rst:28
+#: ../documentation/hsm/mac/index.rst:25
+#: ../documentation/hsm/windows/index.rst:25
+msgid "Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11 module is provided by the `sc-hsm-embedded <https://github.com/CardContact/sc-hsm-embedded>`__ project."
+msgstr ""
+
+#: ../documentation/hsm/linux/index.rst:29
+#: ../documentation/hsm/mac/index.rst:26
+#: ../documentation/hsm/windows/index.rst:26
+msgid "`This PKCS#11 module <https://github.com/CardContact/sc-hsm-embedded/wiki/PKCS11>`__ is useful for deployments where key generation at the user's workplace is not required. The PKCS#11 module also supports major electronic signature cards available in the German market."
+msgstr ""
+
+#: ../documentation/hsm/linux/index.rst:30
+#: ../documentation/hsm/mac/index.rst:27
+#: ../documentation/hsm/windows/index.rst:27
+msgid "OpenSCDP: The SmartCard-HSM is fully integrated with `OpenSCDP <https://www.openscdp.org/>`__, the open smart card development platform. See the `public support scripts <https://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html>`__ for details."
+msgstr ""
+
+#: ../documentation/hsm/linux/ipsec.rst:2
+msgid "IPsec"
+msgstr ""
+
+#: ../documentation/hsm/ipsec.rst.inc:3
+msgid "`Strong Swan <https://www.strongswan.org/>`__ works using the `PKCS#11 driver <https://www.nitrokey.com/documentation/applications#pkcs11>`__. Basically follow these steps:"
+msgstr ""
+
+#: ../documentation/hsm/ipsec.rst.inc:5
+msgid "Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 bit RSA key."
+msgstr ""
+
+#: ../documentation/hsm/ipsec.rst.inc:11
+msgid "Generate a certificate signing request via openssl + pkcs11 module"
+msgstr ""
+
+#: ../documentation/hsm/ipsec.rst.inc:19
+msgid "Sign the certificate with your certificate authority"
+msgstr ""
+
+#: ../documentation/hsm/ipsec.rst.inc:21
+msgid "Convert the certificate to DER"
+msgstr ""
+
+#: ../documentation/hsm/ipsec.rst.inc:27
+msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
+msgstr ""
+
+#: ../documentation/hsm/ipsec.rst.inc:33
+msgid "Configure Strongswan to load opensc-pkcs11 module then to load the certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and add the following module:"
+msgstr ""
+
+#: ../documentation/hsm/ipsec.rst.inc:44
+msgid "Initiate the VPN connection via IPSec/Strongswan, then prompt for Nitrokey PIN"
+msgstr ""
+
+#: ../documentation/hsm/ipsec.rst.inc:46
+msgid "VPN is now connected"
+msgstr ""
+
+#: ../documentation/hsm/linux/n-of-m-schemes.rst:2
+msgid "N-of-m Schemes"
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:1
+#: ../documentation/hsm/n-of-m-schemes.rst:1
+msgid "The Nitrokey HSM 2 supports two different n-of-m schemes - one for secure sharing of key material/passwords and one for public key authentication to control the access to the device. Please see `this blog post <https://www.smartcard-hsm.com/2015/10/10/Shared_Control_over_Key_Usage.html>`__ for more detailed information."
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:4
+#: ../documentation/hsm/n-of-m-schemes.rst:4
+msgid "N-of-m for DKEK Shares"
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:6
+#: ../documentation/hsm/n-of-m-schemes.rst:6
+msgid "This feature can be used with OpenSC as described `here <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#using-key-backup-and-restore>`__. The general approach is seen in the videos below (external links)."
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:8
+#: ../documentation/hsm/n-of-m-schemes.rst:8
+msgid "Nitrokey HSM's Secure Key Backup and Restore:"
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:17
+#: ../documentation/hsm/n-of-m-schemes.rst:17
+msgid "<script id=\"asciicast-152957\" src=\"https://asciinema.org/a/152957.js\" async></script>"
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:20
+#: ../documentation/hsm/n-of-m-schemes.rst:20
+msgid "<iframe width=\"560\" height=\"315\" src=\"https://asciinema.org/a/152957\" frameborder=\"0\" allowfullscreen></iframe>"
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:22
+#: ../documentation/hsm/n-of-m-schemes.rst:22
+msgid "Nitrokey HSM's M-of-N Threshold Scheme:"
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:30
+#: ../documentation/hsm/n-of-m-schemes.rst:30
+msgid "<iframe width=\"560\" height=\"315\" src=\"https://asciinema.org/a/153021\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>"
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:33
+#: ../documentation/hsm/n-of-m-schemes.rst:33
+msgid "N-of-m for public key authentication"
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:35
+#: ../documentation/hsm/n-of-m-schemes.rst:35
+msgid "So far n-of-m authentication is only supported in OpenSCDP. `The blog post <https://www.smartcard-hsm.com/2015/10/10/Shared_Control_over_Key_Usage.html>`__ gives an overview and a how-to `here <https://devnet.cardcontact.de/documents/7>`__ (CDN access required) is shown the process step by step in the Smart Card Shell."
+msgstr ""
+
+#: ../documentation/hsm/n-of-m-schemes.rst:37
+#: ../documentation/hsm/n-of-m-schemes.rst:37
+msgid "N-of-m authentication is also supported in the `PKI-as-a-Service Portal <https://www.smartcard-hsm.com/2018/02/13/pki-as-a-service.html>`__ for locally and remote connected HSMs. The PKI-as-a-Service Portal is based on OpenSCDP."
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:2
+msgid "PKCS#11 URL Generation"
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:7
+msgid "Various applications use openssl to handle e.g., TLS certificates. This concept mostly allows simply replacing a file-path (for the secret) with a so-called **PKCS#11 URL** to use a secret from a e.g., Nitrokey."
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:14
+msgid "ensure ``openssl`` is installed"
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:16
+msgid "ensure ``openssl`` can use the PKCS#11 engine by installing ``libengine-pkcs11-openssl``"
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:25
+msgid "install ``opensc`` and ``gnutls-bin`` for necessary tools"
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:27
+msgid "verify that your needed keys and/or certificates are available on your Nitrokey using ``pkcs15-tool -D``"
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:29
+msgid "if you want to use ECC keys/mechanisms through ``libengine-pkcs11-openssl``, you'll have to ensure its version is at least 0.4.10"
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:33
+msgid "List and Generate PKCS#11 URLs"
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:35
+msgid "Use the following command to get a list of available tokens (Nitrokeys):"
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:42
+msgid "Choose the token (Nitrokey) URL you want to generate URL tokens for and use it like this:"
+msgstr ""
+
+#: ../documentation/hsm/pkcs11-url.rst.inc:51
+msgid "If you inspect the tail of the URL you'll recognize: ``label``, ``id`` and more, these can be partly removed as long as the necessary objects can be uniquely identified using the resulting URL, see :doc:`TLS Apache2 Configuration<apache2-tls>` for an example using ``id`` only."
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:2
+msgid "S/MIME Email Encryption"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:7
+msgid "Prerequisites"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:9
+msgid "There are two widely used standards for email encryption."
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:11
+msgid "OpenPGP/GnuPG is popular among individuals,"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:13
+msgid "S/MIME/X.509 is mostly used by enterprises."
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:15
+msgid "The Nitrokey HSM 2 currently supports the S/MIME/X.509 standard. This page describes the usage of S/MIME email encryption."
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:17
+msgid "You need to purchase a S/MIME certificate (e.g. at `CERTUM <https://www.certum.eu/en/cert_offer_cert_id/>`__) or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/releases>`__ page."
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:20
+msgid "Import Existing Key and Certificate"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:2
+#: ../documentation/hsm/smime.rst.inc:22
+msgid "The following instructions are based on the `wiki of OpenSC <https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__. We will assume, that you already got a key-certificate pair as a .p12 file. Please have a look at the wiki page, if you got a separate key and certificate file."
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:4
+#: ../documentation/hsm/smime.rst.inc:24
+msgid "To open the Windows command line please push the Windows-key and R-key. Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS)."
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:6
+#: ../documentation/hsm/smime.rst.inc:26
+msgid "To make these commands as simple as possible, the .p12 file needs to be in your home folder. On Windows this is usually ``C:\\Users\\yourusername`` and on macOS and GNU/Linux system it will be ``/home/yourusername``. If you do not store the .p12 file there, you have to adapt the path in the commands below. Please plug in the Nitrokey before submitting the commands."
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:8
+#: ../documentation/hsm/smime.rst.inc:28
+msgid "Assuming that your key-certificate file reads ‘myprivate.p12’ the commands for Windows looks like this:"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:15
+#: ../documentation/hsm/smime.rst.inc:35
+msgid "and on macOS and GNU/Linux it will be"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:22
+#: ../documentation/hsm/smime.rst.inc:42
+msgid "The two commands copy the key-certificate pair to the slot 2 (needed for decrypting emails) and slot 3 (needed for signing). The output looks on both systems something like this:"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:-1
+msgid "img1"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:29
+#: ../documentation/hsm/smime.rst.inc:49
+msgid "Please note that there will be error messages that can be safely ignored (see output example above). You now have the key-certificate pair loaded on the Nitrokey."
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:32
+#: ../documentation/hsm/smime.rst.inc:52
+msgid "Usage"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:34
+#: ../documentation/hsm/smime.rst.inc:54
+msgid "You can find further information about the usage on these pages:"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:36
+#: ../documentation/hsm/smime.rst.inc:56
+msgid "for using `S/MIME encryption on Thunderbird <smime-thunderbird.html>`_"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:39
+#: ../documentation/hsm/smime.rst.inc:59
+msgid "for using `S/MIME encryption on Outlook <smime-outlook.html>`_"
+msgstr ""
+
+#: ../documentation/hsm/smime.rst.inc:42
+#: ../documentation/hsm/smime.rst.inc:62
+msgid "for using `Evolution <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>`__, an email client for the Gnome Desktop on Linux systems"
+msgstr ""
+
+#: ../documentation/hsm/linux/stunnel.rst:2
+msgid "Stunnel"
+msgstr ""
+
+#: ../documentation/hsm/stunnel.rst.inc:3
+msgid "`Stunnel <https://www.stunnel.org/>`__ works as an SSL encryption wrapper between remote client and local (inetd-startable) or remote server. It can be used to add SSL functionality to commonly used inetd daemons like POP2, POP3, and IMAP servers without any changes in the programs' code."
+msgstr ""
+
+#: ../documentation/hsm/stunnel.rst.inc:5
+msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
+msgstr ""
+
+#: ../documentation/hsm/mac/hard-disk-encryption.rst:2
+#: ../documentation/hsm/windows/hard-disk-encryption.rst:2
+msgid "Hard Disk Encryption"
+msgstr ""
+
+#: ../documentation/hsm/mac/index.rst:2
+msgid "Nitrokey HSM with macOS"
+msgstr ""
+
+#: ../documentation/hsm/mac/index.rst:13
+#: ../documentation/hsm/windows/index.rst:13
+msgid "Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. Alternatively, install `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__ driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__)."
+msgstr ""
+
+#: ../documentation/hsm/windows/index.rst:2
+msgid "Nitrokey HSM With Windows"
+msgstr ""
+
+#: ../documentation/hsm/windows/smime.rst:5
+msgid "Windows users with 64-bit system (standard) need to install both, the 32-bit and the 64-bit version of OpenSC!"
+msgstr ""
+
+#: ../documentation/nitropc/debian/index.rst:2
+msgid "NitroPC with Debian"
+msgstr ""
+
+#: ../documentation/nitropc/debian/index.rst:14
+#: ../documentation/nitropc/qubes/index.rst:14
+#: ../documentation/nitropc/ubuntu/index.rst:14
+msgid "Getting Started"
+msgstr ""
+
+#: ../documentation/nitropc/debian/index.rst:16
+msgid "During boot, the system will prompt you to enter the passphrase to decrypt the hard disk. Enter the default passphrase “PleaseChangeMe”."
+msgstr ""
+
+#: ../documentation/nitropc/debian/index.rst:19
+msgid "The system has a user account setup already. Choose it and login with the default passphrase \"PleaseChangeMe\". You may keep using the existing user account or create you a new one, as you like."
+msgstr ""
+
+#: ../documentation/nitropc/debian/index.rst:22
+#: ../documentation/nitropc/ubuntu/index.rst:22
+msgid "Change the passphrase for disk encryption by opening a terminal and execute:"
+msgstr ""
+
+#: ../documentation/nitropc/debian/index.rst:30
+msgid "Using WIFI (with RTL8821ce chipset)"
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:2
+msgid "Operating System Reinstallation"
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:9
+msgid "Booting this USB drive entirely erases all data on the hard disk or SSD of the NitroPad without further warning. Don’t boot this USB drive on any computer which contains data you want to keep. Make sure to format the USB drive after the intended use."
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:14
+msgid "Download one of the following operating system images: `Ubuntu Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/qubes/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropc/debian-oem/>`__, `Linux Mint <https://linuxmint.com/download.php>`__"
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:18
+msgid "Optional: Download hash sum and `verify <https://proprivacy.com/guides/how-why-and-when-you-should-hash-check#how-to-hash-check>`__ the downloaded operating system image."
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:22
+msgid "Write the operating system image to any USB drive. Possible applications:"
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:25
+msgid "Windows: `Rufus <https://rufus.ie/>`__, `balenaEtcher <https://www.balena.io/etcher/>`__;"
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:27
+msgid "Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;"
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:28
+msgid "macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__."
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:30
+msgid "Connect the USB drive to your NitroPC and start it."
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:33
+msgid "If you are using a NitroPC with Heads:"
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:33
+msgid "Go to the Heads menu and select Boot Options -> USB Boot."
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:36
+msgid "If you are using a NitroPC with TitanCore:"
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:36
+msgid "Press ESC to enter the BIOS to select USB Boot."
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:38
+msgid "TEST3 Depending on the operating system you may need to confirm its reinstallation."
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:41
+msgid "To avoid accidential overwriting of valuable data, format the USB drive afterwards."
+msgstr ""
+
+#: ../documentation/nitropc/os-reinstallation.rst.inc:45
+msgid "Booting this USB drive entirely erases all data on the hard disk or SSD of the NitroPC without further warning. Don’t boot this USB drive on any computer which contains data you want to keep. Make sure to format the USB drive after the intended use."
+msgstr ""
+
+#: ../documentation/nitropc/sealed-hardware.rst.inc:2
+msgid "Verify Sealed Hardware"
+msgstr ""
+
+#: ../documentation/nitropc/sealed-hardware.rst.inc:7
+msgid "If you ordered your NitroPC with sealed screws and in a sealed bag, it allows you to check if the NitroPC has been tampered with during shipping."
+msgstr ""
+
+#: ../documentation/nitropc/sealed-hardware.rst.inc:9
+msgid "The bag and all screws of the device have been sealed. For the bag and each of these screws you have received a photo by e-mail."
+msgstr ""
+
+#: ../documentation/nitropc/sealed-hardware.rst.inc:11
+msgid "Check each screw individually to see if its individual appearance matches the photo. It is best to use a magnifying glass or macro lens for this purpose."
+msgstr ""
+
+#: ../documentation/nitropc/sealed-hardware.rst.inc:15
+msgid "This example shows a sealed screw whose glitter represents an individual pattern."
+msgstr ""
+
+#: ../documentation/nitropc/sealed-hardware.rst.inc:0
+msgid "img"
+msgstr ""
+
+#: ../documentation/nitropc/sealed-hardware.rst.inc:22
+msgid "If the bag or the screws do not match the photos sent, an unauthorized opening of your NitroPC cannot be excluded. In this case please contact us to arrange further action."
+msgstr ""
+
+#: ../documentation/nitropc/faq.rst:2
+msgid "NitroPC FAQ"
+msgstr ""
+
+#: ../documentation/nitropc/faq.rst:6
+msgid "**Q:** What is the default hard-disk encryption password?"
+msgstr ""
+
+#: ../documentation/nitropc/faq.rst:5
+msgid "The default NitroPC disk encryption password: \"12345678\". This was change on the 15.01.2024 so if \"12345678\" is not working try the old default: \"PleaseChangeMe\""
+msgstr ""
+
+#: ../documentation/nitropc/index.rst:17
+#: ../documentation/nitropc/qubes/gpu-install.rst:85
+msgid "Debian"
+msgstr ""
+
+#: ../documentation/nitropc/index.rst:17
+msgid "Qubes"
+msgstr ""
+
+#: ../documentation/nitropc/index.rst:17
+msgid "Ubuntu"
+msgstr ""
+
+#: ../documentation/nitropc/index.rst:2
+msgid "NitroPC"
+msgstr ""
+
+#: ../documentation/nitropc/index.rst:27
+msgid "Booting from USB drive"
+msgstr ""
+
+#: ../documentation/nitropc/index.rst:28
+msgid "Connect the USB drive to a black USB 2.0 socket (blue USB 3.0 don't work!), start the PC and keep pressing DEL until you see the firmware menu. Choose Boot Menu and select your USB drive."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:2
+msgid "NitroPC Pro 2 With External GPU"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:6
+msgid "This guide is only working if you use the Qubes OS OEM GPU image from Nitrokey that you can build `here`_."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:13
+msgid "This guide explains how to use your NitroPC with an external graphic card (GPU) with Qubes OS."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:16
+msgid "Following this guide may create some security issues within Qubes OS. Follow it at your own risks."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:20
+msgid "Create a Windows Qube"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:23
+msgid "This will install a Windows Qube from the offical trial ISO. If you want a full Windows experience then you will need to add a licence key."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:25
+msgid "This part is using `ElliotKillick project <https://github.com/elliotkillick/qvm-create-windows-qube>`__."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:28
+msgid "Open a terminal in dom0 and make sure that you have the internet connected."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:30
+msgid "Install the Qubes Windows Tools, in dom0 : ``sudo qubes-dom0-update qubes-windows-tools-4.1.69`` when asked press ``y`` and enter."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:33
+msgid "Please see the `security implication <https://github.com/QubesOS/qubes-secpack/blob/master/QSBs/qsb-091-2023.txt>`__ of installing QWT."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:35
+msgid "Make the install script executable, in dom0 : ``sudo chmod +x /install.sh``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:37
+msgid "Launch the install script, in dom0 : ``/install.sh``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:39
+msgid "If you see this message : ``[+] Installation complete!`` then you can continue."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:41
+msgid "At this point the script created a new Qube called windows-mgmt now we will dowload the ISO to create the Windows Qube."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:43
+msgid "To do so we need to copy the ``~/qvm-create-windows-qube/windows/isos/mido.sh`` script from the windows-mgmt Qube inside a disposable Qube with internet connectivity."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:45
+msgid "Start a new DVM (disposable) Qube and give it at least 10 GB of private storage."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:47
+msgid "Start the windows-mgmt Qube and copy the script, in windows-mgmt Qube : ``qvm-copy qvm-create-windows-qube/windows/isos/mido.sh`` then select the DVM Qube (dispXXXX)."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:49
+msgid "Once the script is copied launch it, in dispXXX : ``./QubesIncoming/windows-mgmt/mido.sh win10x64``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:52
+msgid "In this guide we install Windows 10 but other Windows versions are available you can list them by using ``./QubesIncoming/windows-mgmt/mido.sh``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:55
+msgid "If you get a success message then you will need to copy the dowloaded ISO from the DVM to the windows-mgmt Qube, in dispXXXX :  ``qvm-copy QubesIncoming/windows-mgmt/win10x64.iso`` and choose the windows-mgmt Qube."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:57
+msgid "Once copied you can close your DVM Qube."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:59
+msgid "In the windows-mgmt Qube : ``mv QubesIncoming/dispXXXX/win10x64.iso qvm-create-windows-qube/windows/isos/`` (replace 'dispXXXX' with the name of the disposable Qube you created)."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:61
+msgid "Then in dom0 : ``qvm-create-windows-qube -n sys-firewall -oy -i win10x64.iso -a win10x64-pro.xml work-win10``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:64
+msgid "You can pre-install any package from `this site <https://community.chocolatey.org/packages>`__. E.g: ``qvm-create-windows-qube -n sys-firewall -oyp firefox,notepadplusplus,office365proplus -i win10x64.iso -a win10x64-pro.xml work-win10``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:67
+msgid "If the script stops or if it get stuck retry until you see this message: ``[+] Completed successfully!``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:69
+msgid "Now you will need to attach your GPU to the Windows Qube, to do so go to the Qube Manager and the Windows 10 Qube options (make sure that the Qube is shut down), under the Devices tab select your graphic card and pass it to the right then click on the ``Configure strict reset for PCI devices`` then select your card and click ``OK``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:71
+msgid "Now that your graphic card is attached to your Windows Qube you will need to install the drivers of your card. Search for ``Check for updates`` in the search bar then click on ``Check for updates`` (you will need to reboot several times)."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:73
+msgid "Now Windows will install all the drivers you will need to use your external graphic card. If you're experiencing some problems make sure that you have enought space in your Windows Qube while installing updates."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:75
+msgid "Once finished you can connect a secondary display to the graphic card."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:77
+msgid "If you want to use a dedicated mouse or keyboard for the Windows Qube then you need to use sys-usb and attach the desired device to it."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:82
+msgid "Create a Linux Qube"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:88
+msgid "Go to the Qube manager and create a new standalone Qube and launch the settings after creation."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:90
+msgid "In the advenced tab change the mode to HVM and disable memory balancing and choose the amount of RAM you want."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:92
+msgid "In the devices tab select the GPU and pass it to the right then click on the ``Configure strict reset for PCI devices`` then select your card and click ``OK``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:94
+msgid "Close the settings and start the Qube."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:96
+msgid "Add non-free to your source list: ``sudo sed -i '1 s/.*/& non-free/' /etc/apt/sources.list``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:98
+msgid "``sudo apt update``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:100
+msgid "``sudo apt install nvidia-driver dbus-x11``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:102
+msgid "Now you will need to create 3 differents files:"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:105
+msgid "screen.conf::"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:123
+msgid "xorgX1.sh::"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:137
+msgid "xfce.sh::"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:144
+msgid "``sudo chmod +x xorgX1.sh xfce.sh``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:146
+msgid "``sudo ./xorgX1.sh ./xfce.sh``"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:148
+msgid "Now the secondary screen should turn on and show a Debian XFCE desktop."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/gpu-install.rst:150
+msgid "If you want to use a dedicated mouse or keyboard for the Linux Qube then you need to use sys-usb and attach the desired device to it."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/index.rst:2
+msgid "NitroPC with Qubes OS"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/index.rst:16
+msgid "During boot, the system will prompt you to enter the passphrase to decrypt the hard disk. Enter the default passphrase \"12345678\". This was changed on the 15.01.2024 so if \"12345678\" is not working try the old default: \"PleaseChangeMe\" The system will then guide you through the process of creating a user account. After that you should have successfully booted the system and could already use it normally."
+msgstr ""
+
+#: ../documentation/nitropc/qubes/index.rst:22
+msgid "Change the passphrase for disk encryption by searching in the Qubes Menu for \"Change Disk Password\""
+msgstr ""
+
+#: ../documentation/nitropc/qubes/index.rst:0
+msgid "Change Password Qubes Image"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/index.rst:30
+msgid "Failed to start Load Kernel Modules"
+msgstr ""
+
+#: ../documentation/nitropc/qubes/index.rst:32
+msgid "During boot of the system the error \"Failed to start Load Kernel Modules\" is displayed. `This is a known issue <https://github.com/QubesOS/qubes-issues/issues/2638>`__ which is not critical and can be ignored."
+msgstr ""
+
+#: ../documentation/nitropc/ubuntu/index.rst:2
+msgid "NitroPC with Ubuntu"
+msgstr ""
+
+#: ../documentation/nitropc/ubuntu/index.rst:16
+msgid "During boot, the system will prompt you to enter the passphrase to decrypt the hard disk. Enter the default passphrase \"12345678\". This was changed on the 10.04.2024 so if \"12345678\" is not working try the old default: \"PleaseChangeMe\" The system will then guide you through the process of creating a user account. After that you should have successfully booted the system and could already use it normally."
+msgstr ""
+
+#: ../documentation/nitropc/ubuntu/nitrokey-app.rst:2
+msgid "Nitrokey App Installation"
+msgstr ""
+
+#: ../documentation/nitropc/ubuntu/nitrokey-app.rst:4
+msgid "The Nitrokey App is included in Ubuntu's repositories since Ubuntu 18.04 (codename 'bionic') on. You can just install it via Software Center or by typing the following in a terminal:"
+msgstr ""
+
+#: ../documentation/nitropc/ubuntu/nitrokey-app.rst:14
+msgid "Unfortunately, the App versions in the official Ubuntu repositories are often not up-to-date."
+msgstr ""
+
+#: ../documentation/nitropc/ubuntu/nitrokey-app.rst:17
+msgid "More recent App versions"
+msgstr ""
+
+#: ../documentation/nitropc/ubuntu/nitrokey-app.rst:19
+msgid "To get the most recent Nitrokey App you can add a separate repository which is maintained by Nitrokey."
+msgstr ""
+
+#: ../documentation/nitropc/ubuntu/nitrokey-app.rst:21
+msgid "Please execute the following in a terminal to add the repository and install the Nitrokey App:"
+msgstr ""
+
+#: ../documentation/nitropc/ubuntu/nitrokey-app.rst:25
+msgid "The PPA is not necessary for Ubuntu 22.04 and later. The previous versions of Ubuntu could still use it to update the app."
+msgstr ""
+
+#: ../documentation/nitropc/ubuntu/nitrokey-app.rst:36
+msgid "Alternatively, you can use the snap package. Please see `here <https://www.nitrokey.com/download/snap-package>`__ for more information."
+msgstr ""
+
+#: ../documentation/syntax.rst:4
+msgid "Nitrokey Documentation - Syntax"
+msgstr ""
+
+#: ../documentation/syntax.rst:9
+msgid "Code Blocks Syntax Highlighting"
+msgstr ""
+
+#: ../documentation/syntax.rst:11
+msgid "Syntax Highlighting is disabled by default. To enable it for a specific code snippet use the following:"
+msgstr ""
+
+#: ../documentation/syntax.rst:19
+msgid "H2 Heading"
+msgstr ""
+
+#: ../documentation/syntax.rst:22
+msgid "Some text with ``inline.code();``"
+msgstr ""
+
+#: ../documentation/syntax.rst:24
+msgid "This is a bulleted list."
+msgstr ""
+
+#: ../documentation/syntax.rst:25
+msgid "It has two items, the second item uses two lines."
+msgstr ""
+
+#: ../documentation/syntax.rst:28
+#: ../documentation/syntax.rst:33
+msgid "This is a numbered list."
+msgstr ""
+
+#: ../documentation/syntax.rst:29
+#: ../documentation/syntax.rst:34
+msgid "It has two items too."
+msgstr ""
+
+#: ../documentation/syntax.rst:31
+msgid "Normal text again."
+msgstr ""
+
+#: ../documentation/syntax.rst:36
+msgid "this is"
+msgstr ""
+
+#: ../documentation/syntax.rst:37
+msgid "a list"
+msgstr ""
+
+#: ../documentation/syntax.rst:39
+msgid "with a nested list"
+msgstr ""
+
+#: ../documentation/syntax.rst:40
+msgid "and some subitems"
+msgstr ""
+
+#: ../documentation/syntax.rst:42
+msgid "and here the parent list continues"
+msgstr ""
+
+#: ../documentation/syntax.rst:44
+msgid "These lines are"
+msgstr ""
+
+#: ../documentation/syntax.rst:45
+msgid "broken exactly like in"
+msgstr ""
+
+#: ../documentation/syntax.rst:46
+msgid "the source file."
+msgstr ""
+
+#: ../documentation/syntax.rst:49
+msgid "H3 Heading"
+msgstr ""
+
+#: ../documentation/syntax.rst:52
+msgid "Only the following message boxes should be used:"
+msgstr ""
+
+#: ../documentation/syntax.rst:56
+msgid "Warning text."
+msgstr ""
+
+#: ../documentation/syntax.rst:60
+msgid "Note text."
+msgstr ""
+
+#: ../documentation/syntax.rst:64
+msgid "Important text."
+msgstr ""
+
+#: ../documentation/syntax.rst:68
+msgid "Tip text."
+msgstr ""
+
+#: ../documentation/syntax.rst:77
+msgid "Grid Table"
+msgstr ""
+
+#: ../documentation/syntax.rst:80
+msgid "Header 1"
+msgstr ""
+
+#: ../documentation/syntax.rst:80
+msgid "Header 2"
+msgstr ""
+
+#: ../documentation/syntax.rst:80
+msgid "Header 3"
+msgstr ""
+
+#: ../documentation/syntax.rst:82
+msgid "body row 1"
+msgstr ""
+
+#: ../documentation/syntax.rst:82
+msgid "column 2"
+msgstr ""
+
+#: ../documentation/syntax.rst:82
+msgid "column 3"
+msgstr ""
+
+#: ../documentation/syntax.rst:84
+msgid "body row 2"
+msgstr ""
+
+#: ../documentation/syntax.rst:84
+msgid "Cells may span columns."
+msgstr ""
+
+#: ../documentation/syntax.rst:86
+msgid "body row 3"
+msgstr ""
+
+#: ../documentation/syntax.rst:86
+msgid "Cells may span rows."
+msgstr ""
+
+#: ../documentation/syntax.rst:86
+msgid "Cells"
+msgstr ""
+
+#: ../documentation/syntax.rst:87
+msgid "contain"
+msgstr ""
+
+#: ../documentation/syntax.rst:88
+msgid "blocks."
+msgstr ""
+
+#: ../documentation/syntax.rst:88
+msgid "body row 4"
+msgstr ""
+
+#: ../documentation/syntax.rst:92
+msgid "Simple Table"
+msgstr ""
+
+#: ../documentation/syntax.rst:95
+msgid "Inputs"
+msgstr ""
+
+#: ../documentation/syntax.rst:95
+msgid "Output"
+msgstr ""
+
+#: ../documentation/syntax.rst:97
+msgid "A"
+msgstr ""
+
+#: ../documentation/syntax.rst:97
+msgid "B"
+msgstr ""
+
+#: ../documentation/syntax.rst:97
+msgid "A or B"
+msgstr ""
+
+#: ../documentation/syntax.rst:99
+#: ../documentation/syntax.rst:100
+#: ../documentation/syntax.rst:101
+msgid "False"
+msgstr ""
+
+#: ../documentation/syntax.rst:100
+#: ../documentation/syntax.rst:101
+#: ../documentation/syntax.rst:102
+msgid "True"
+msgstr ""
+
+#: ../documentation/syntax.rst:105
+msgid "This is a text that needs to be translated automatically. This is another Line to be translated."
+msgstr ""
+
+#: ../documentation/syntax.rst:108
+msgid "This line is one of the tests for the automated translation workflow with weblate."
+msgstr ""
+
+#: ../documentation/syntax.rst:109
+msgid "Adding this text should trigger the complete workflow of translation."
+msgstr ""
+
+#: ../documentation/syntax.rst:111
+msgid "This is `a Link  <https://f-droid.org/F-Droid.apk>`_ with the definition of the url inline."
+msgstr ""
+
+#: ../documentation/syntax.rst:113
+msgid "This is another thest for `a URL  <https://f-droid.org/F-Droid.apk>`_ to test translation."
+msgstr ""
+
+#: ../documentation/syntax.rst:116
+msgid "This is a plain link https://foobar.bas/slug1/slug2"
+msgstr ""
+
+#: ../documentation/syntax.rst:118
+msgid "This line contains the product name Nitrokey Start an should not be altered by the translation."
+msgstr ""
+
+#: ../documentation/syntax.rst:121
+msgid "This command automatically inserts the title of an internal doc page you link to ::doc:: /link/to/doc"
+msgstr ""
+
+#: ../documentation/syntax.rst:125
+msgid "Mark cropped Output"
+msgstr ""
