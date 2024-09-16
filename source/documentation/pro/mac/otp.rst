@@ -1,1 +1,0 @@
-.. include:: ../otp.rst.inc
