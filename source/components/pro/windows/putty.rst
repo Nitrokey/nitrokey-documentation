@@ -1,0 +1,1 @@
+.. include:: ../putty.rst.inc

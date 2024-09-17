@@ -1,0 +1,7 @@
+**Q:** Which Operating Systems are supported?
+   Windows, Linux and macOS.
+
+**Q:** What can I use the Nitrokey for?
+   See the `overview <https://www.nitrokey.com/products/nitrokeys>`_ of supported use cases.
+
+
