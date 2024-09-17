@@ -148,9 +148,12 @@ It is possible to introduce a delay between retries.
 
 - Failing instances are marked as unreachable and retried in a background thread, so they won't be tried unless all instances are unreachable
 - If no background thread can be spawned (`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), failed instances will be tried during normal operations, slowing down the requests. To minimise this, such "inline" health checks are limited to 1 second timeouts, and only 3 health checks can be attempted per request (this is a worst case situation that can only be reached if a large number of instances failed).
-- The total number of requests is: ``retries.count`` + 1
-- The total timeout for 1 request attempt is: (``retries.count`` + 1) * ``timeout_seconds`` + 3 
-- The total timeout for 1 PKCS#11 function call will vary because some functions will lead to multiple API calls in the NetHSM.
+
+Therefore:
+
+- The maximum number of requests sent for one API call is: ``retries.count`` + 1 + 3
+- The maximum (worst case) duration before reaching the timeout for one API call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3 
+- The maximum timeout for one PKCS#11 function call will vary because some functions will lead to multiple API calls in the NetHSM.
 
 TCP keepalive
 ^^^^^^^^^^^^^
