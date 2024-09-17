@@ -1,0 +1,1 @@
+.. include:: ../eidauthenticate.rst.inc

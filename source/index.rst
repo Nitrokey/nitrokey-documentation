@@ -5,19 +5,19 @@ Nitrokey Documentation
    :maxdepth: 1
    :titlesonly:
 
-   documentation/nitrokey3/index
-   documentation/nkpk/index
-   documentation/fido2/index
-   documentation/u2f/index
-   documentation/hsm/index
-   documentation/pro/index
-   documentation/start/index
-   documentation/storage/index
-   documentation/nitropad/index
-   documentation/nitropc/index
-   documentation/nitrophone/index
-   documentation/nextbox/index
-   documentation/nethsm/index
-   documentation/nitrowall/index
-   documentation/nitrowall/nw750/index
-   documentation/software/index
+   components/nitrokey3/index
+   components/nkpk/index
+   components/fido2/index
+   components/u2f/index
+   components/hsm/index
+   components/pro/index
+   components/start/index
+   components/storage/index
+   components/nitropad/index
+   components/nitropc/index
+   components/nitrophone/index
+   components/nextbox/index
+   components/nethsm/index
+   components/nitrowall/index
+   components/nitrowall/nw750/index
+   components/software/index

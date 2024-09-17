@@ -1,0 +1,1 @@
+.. include:: ../ecc.rst.inc
