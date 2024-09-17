@@ -90,13 +90,13 @@ The certificate is then written to the Nitrokey.
    A creation time of the certificate before the creation time of the user account will lead to a failed logon.
 
 .. important::
-   If the PIV application on the Nitrokey was not used before, perform a initialization with ``nitropy nk3 piv init`` first.
+   If the PIV application on the Nitrokey was not used before, perform a initialization with ``nitropy nk3 piv --experimental init`` first.
 
 1. Generate a private key and write the CSR to file with the command below.
 
    .. code-block::
 
-      nitropy nk3 piv generate-key --key 9A --algo <algorithm> --subject-name <subject-name> --subject-alt-name-upn <subject-alternative-name> --out-file <file>
+      nitropy nk3 piv --experimental generate-key --key 9A --algo <algorithm> --subject-name <subject-name> --subject-alt-name-upn <subject-alternative-name> --out-file <file>
 
    The value of ``<algorithm>`` is the used algorithm with its key length, e.g. ``rsa2048``.
    The values of ``<subject-name>`` and ``<subject-alternative-name>`` corresponds typically to the ``commonName`` and ``userPrincipalName`` attribute of the Active Directory user account.
@@ -114,7 +114,7 @@ The certificate is then written to the Nitrokey.
 
    .. code-block::
 
-      nitropy nk3 piv write-certificate --format PEM --path <file>
+      nitropy nk3 piv --experimental write-certificate --format PEM --path <file>
 
    The value of ``<file>`` is the certificate file.
 
