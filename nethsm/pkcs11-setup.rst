@@ -135,6 +135,30 @@ If multiple NetHSM instances are listed in the same slot, these instances must b
 The module will use the instances in a round-robin fashion, trying another instance if one fails.
 
 
+Network reliability
+~~~~~~~~~~~~~~~~~~~
+
+To improve the reliability of the pkcs11 module, it is possible to configure timeouts, retries, instance redundancy and TCP keepalives.
+
+Retries
+^^^^^^^
+
+If a NetHSM instance is unreachable, the pkcs11 module is capable of retrying sending the request to other instances, or to the same instance (if other instances are also unreachable).
+It is possible to introduce a delay between retries.
+
+- Failing Instances are marked as unreachable and retried in a background thread, so they won't be tried unless all instances are unreachable
+- If no background thread can be spawned (`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), failed instances will be tried during normal operations, slowing down the requests. To minimise this, such "inline" health checks are limited to 1 seconds timeouts, and only 3 health checks can be attempted per request (this is a worst case situation that can only be reached if a large numbe of instances are failed).
+- The total number of requests is: ``retries.count`` + 1
+- The total timeout for 1 request attempt is: (``retries.count`` + 1) * ``timeout_seconds`` + 3 
+- The total timeout for 1 PKCS11 function call will vary because some functions will lead to multiple API calls in the nethsm.
+
+TCP keepalive
+^^^^^^^^^^^^^
+
+To improve performance, connections are kept open with the NetHSM instances to avoid the need for re-opening them.
+It is possible that in a network with a firewall, these idle connection could be closed, leading to the next connection attempt to timeout.
+To prevent slow timeouts from happening, and to detect earlier if it does, it is possible to configure TCP keepalives for these. 
+
 Users
 ~~~~~
 
