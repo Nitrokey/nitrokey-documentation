@@ -1,0 +1,595 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Nitrokey
+# This file is distributed under the same license as the Nitrokey Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nitrokey Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-17 09:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../components/nitropc/faq.rst:2
+msgid "NitroPC FAQ"
+msgstr ""
+
+#: ../components/nitropc/faq.rst:6
+msgid "**Q:** What is the default hard-disk encryption password?"
+msgstr ""
+
+#: ../components/nitropc/faq.rst:5
+msgid "The default NitroPC disk encryption password: \"12345678\". This was change on the 15.01.2024 so if \"12345678\" is not working try the old default: \"PleaseChangeMe\""
+msgstr ""
+
+#: ../components/nitropc/index.rst:9
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../components/nitropc/index.rst:17
+msgid "Qubes"
+msgstr ""
+
+#: ../components/nitropc/index.rst:2
+msgid "NitroPC"
+msgstr ""
+
+#: ../components/nitropc/index.rst:7
+msgid "First check the:"
+msgstr ""
+
+#: ../components/nitropc/index.rst:15
+msgid "or choose your operating system:"
+msgstr ""
+
+#: ../components/nitropc/index.rst:27
+msgid "Booting from USB drive"
+msgstr ""
+
+#: ../components/nitropc/index.rst:28
+msgid "Connect the USB drive to a black USB 2.0 socket (blue USB 3.0 don't work!), start the PC and keep pressing DEL until you see the firmware menu. Choose Boot Menu and select your USB drive."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:2
+msgid "NitroPC Pro 2 With External GPU"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:6
+msgid "This guide is only working if you use the Qubes OS OEM GPU image from Nitrokey that you can build `here`_."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:13
+msgid "This guide explains how to use your NitroPC with an external graphic card (GPU) with Qubes OS."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:16
+msgid "Following this guide may create some security issues within Qubes OS. Follow it at your own risks."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:20
+msgid "Create a Windows Qube"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:23
+msgid "This will install a Windows Qube from the offical trial ISO. If you want a full Windows experience then you will need to add a licence key."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:25
+msgid "This part is using `ElliotKillick project <https://github.com/elliotkillick/qvm-create-windows-qube>`__."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:28
+msgid "Open a terminal in dom0 and make sure that you have the internet connected."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:30
+msgid "Install the Qubes Windows Tools, in dom0 : ``sudo qubes-dom0-update qubes-windows-tools-4.1.69`` when asked press ``y`` and enter."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:33
+msgid "Please see the `security implication <https://github.com/QubesOS/qubes-secpack/blob/master/QSBs/qsb-091-2023.txt>`__ of installing QWT."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:35
+msgid "Make the install script executable, in dom0 : ``sudo chmod +x /install.sh``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:37
+msgid "Launch the install script, in dom0 : ``/install.sh``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:39
+msgid "If you see this message : ``[+] Installation complete!`` then you can continue."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:41
+msgid "At this point the script created a new Qube called windows-mgmt now we will dowload the ISO to create the Windows Qube."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:43
+msgid "To do so we need to copy the ``~/qvm-create-windows-qube/windows/isos/mido.sh`` script from the windows-mgmt Qube inside a disposable Qube with internet connectivity."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:45
+msgid "Start a new DVM (disposable) Qube and give it at least 10 GB of private storage."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:47
+msgid "Start the windows-mgmt Qube and copy the script, in windows-mgmt Qube : ``qvm-copy qvm-create-windows-qube/windows/isos/mido.sh`` then select the DVM Qube (dispXXXX)."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:49
+msgid "Once the script is copied launch it, in dispXXX : ``./QubesIncoming/windows-mgmt/mido.sh win10x64``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:52
+msgid "In this guide we install Windows 10 but other Windows versions are available you can list them by using ``./QubesIncoming/windows-mgmt/mido.sh``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:55
+msgid "If you get a success message then you will need to copy the dowloaded ISO from the DVM to the windows-mgmt Qube, in dispXXXX :  ``qvm-copy QubesIncoming/windows-mgmt/win10x64.iso`` and choose the windows-mgmt Qube."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:57
+msgid "Once copied you can close your DVM Qube."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:59
+msgid "In the windows-mgmt Qube : ``mv QubesIncoming/dispXXXX/win10x64.iso qvm-create-windows-qube/windows/isos/`` (replace 'dispXXXX' with the name of the disposable Qube you created)."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:61
+msgid "Then in dom0 : ``qvm-create-windows-qube -n sys-firewall -oy -i win10x64.iso -a win10x64-pro.xml work-win10``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:64
+msgid "You can pre-install any package from `this site <https://community.chocolatey.org/packages>`__. E.g: ``qvm-create-windows-qube -n sys-firewall -oyp firefox,notepadplusplus,office365proplus -i win10x64.iso -a win10x64-pro.xml work-win10``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:67
+msgid "If the script stops or if it get stuck retry until you see this message: ``[+] Completed successfully!``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:69
+msgid "Now you will need to attach your GPU to the Windows Qube, to do so go to the Qube Manager and the Windows 10 Qube options (make sure that the Qube is shut down), under the Devices tab select your graphic card and pass it to the right then click on the ``Configure strict reset for PCI devices`` then select your card and click ``OK``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:71
+msgid "Now that your graphic card is attached to your Windows Qube you will need to install the drivers of your card. Search for ``Check for updates`` in the search bar then click on ``Check for updates`` (you will need to reboot several times)."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:73
+msgid "Now Windows will install all the drivers you will need to use your external graphic card. If you're experiencing some problems make sure that you have enought space in your Windows Qube while installing updates."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:75
+msgid "Once finished you can connect a secondary display to the graphic card."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:77
+msgid "If you want to use a dedicated mouse or keyboard for the Windows Qube then you need to use sys-usb and attach the desired device to it."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:82
+msgid "Create a Linux Qube"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:85
+msgid "Debian"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:88
+msgid "Go to the Qube manager and create a new standalone Qube and launch the settings after creation."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:90
+msgid "In the advenced tab change the mode to HVM and disable memory balancing and choose the amount of RAM you want."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:92
+msgid "In the devices tab select the GPU and pass it to the right then click on the ``Configure strict reset for PCI devices`` then select your card and click ``OK``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:94
+msgid "Close the settings and start the Qube."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:96
+msgid "Add non-free to your source list: ``sudo sed -i '1 s/.*/& non-free/' /etc/apt/sources.list``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:98
+msgid "``sudo apt update``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:100
+msgid "``sudo apt install nvidia-driver dbus-x11``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:102
+msgid "Now you will need to create 3 differents files:"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:105
+msgid "screen.conf::"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:123
+msgid "xorgX1.sh::"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:137
+msgid "xfce.sh::"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:144
+msgid "``sudo chmod +x xorgX1.sh xfce.sh``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:146
+msgid "``sudo ./xorgX1.sh ./xfce.sh``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:148
+msgid "Now the secondary screen should turn on and show a Debian XFCE desktop."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:150
+msgid "If you want to use a dedicated mouse or keyboard for the Linux Qube then you need to use sys-usb and attach the desired device to it."
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:2
+msgid "NitroPC with Qubes OS"
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:14
+msgid "Getting Started"
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:16
+msgid "During boot, the system will prompt you to enter the passphrase to decrypt the hard disk. Enter the default passphrase \"12345678\". This was changed on the 15.01.2024 so if \"12345678\" is not working try the old default: \"PleaseChangeMe\" The system will then guide you through the process of creating a user account. After that you should have successfully booted the system and could already use it normally."
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:22
+msgid "Change the passphrase for disk encryption by searching in the Qubes Menu for \"Change Disk Password\""
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:0
+msgid "Change Password Qubes Image"
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:30
+msgid "Failed to start Load Kernel Modules"
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:32
+msgid "During boot of the system the error \"Failed to start Load Kernel Modules\" is displayed. `This is a known issue <https://github.com/QubesOS/qubes-issues/issues/2638>`__ which is not critical and can be ignored."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:2
+msgid "Operating System Reinstallation"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:9
+msgid "Booting this USB drive entirely erases all data on the hard disk or SSD of the NitroPad without further warning. Don’t boot this USB drive on any computer which contains data you want to keep. Make sure to format the USB drive after the intended use."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:14
+msgid "Download one of the following operating system images: `Ubuntu Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/qubes/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropc/debian-oem/>`__, `Linux Mint <https://linuxmint.com/download.php>`__"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:18
+msgid "Optional: Download hash sum and `verify <https://proprivacy.com/guides/how-why-and-when-you-should-hash-check#how-to-hash-check>`__ the downloaded operating system image."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:22
+msgid "Write the operating system image to any USB drive. Possible applications:"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:25
+msgid "Windows: `Rufus <https://rufus.ie/>`__, `balenaEtcher <https://www.balena.io/etcher/>`__;"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:27
+msgid "Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:28
+msgid "macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:30
+msgid "Connect the USB drive to your NitroPC and start it."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:33
+msgid "If you are using a NitroPC with Heads:"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:33
+msgid "Go to the Heads menu and select Boot Options -> USB Boot."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:36
+msgid "If you are using a NitroPC with TitanCore:"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:36
+msgid "Press ESC to enter the BIOS to select USB Boot."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:38
+msgid "Depending on the operating system you may need to confirm its reinstallation."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:41
+msgid "To avoid accidential overwriting of valuable data, format the USB drive afterwards."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:45
+msgid "Booting this USB drive entirely erases all data on the hard disk or SSD of the NitroPC without further warning. Don’t boot this USB drive on any computer which contains data you want to keep. Make sure to format the USB drive after the intended use."
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:2
+msgid "Verify Sealed Hardware"
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:7
+msgid "If you ordered your NitroPC with sealed screws and in a sealed bag, it allows you to check if the NitroPC has been tampered with during shipping."
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:9
+msgid "The bag and all screws of the device have been sealed. For the bag and each of these screws you have received a photo by e-mail."
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:11
+msgid "Check each screw individually to see if its individual appearance matches the photo. It is best to use a magnifying glass or macro lens for this purpose."
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:15
+msgid "This example shows a sealed screw whose glitter represents an individual pattern."
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:0
+msgid "img"
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:22
+msgid "If the bag or the screws do not match the photos sent, an unauthorized opening of your NitroPC cannot be excluded. In this case please contact us to arrange further action."
+msgstr ""
+
+#: ../components/syntax.rst:4
+msgid "Nitrokey Documentation - Syntax"
+msgstr ""
+
+#: ../components/syntax.rst:9
+msgid "Code Blocks Syntax Highlighting"
+msgstr ""
+
+#: ../components/syntax.rst:11
+msgid "Syntax Highlighting is disabled by default. To enable it for a specific code snippet use the following:"
+msgstr ""
+
+#: ../components/syntax.rst:19
+msgid "H2 Heading"
+msgstr ""
+
+#: ../components/syntax.rst:22
+msgid "Some text with ``inline.code();``"
+msgstr ""
+
+#: ../components/syntax.rst:24
+msgid "This is a bulleted list."
+msgstr ""
+
+#: ../components/syntax.rst:25
+msgid "It has two items, the second item uses two lines."
+msgstr ""
+
+#: ../components/syntax.rst:28
+#: ../components/syntax.rst:33
+msgid "This is a numbered list."
+msgstr ""
+
+#: ../components/syntax.rst:29
+#: ../components/syntax.rst:34
+msgid "It has two items too."
+msgstr ""
+
+#: ../components/syntax.rst:31
+msgid "Normal text again."
+msgstr ""
+
+#: ../components/syntax.rst:36
+msgid "this is"
+msgstr ""
+
+#: ../components/syntax.rst:37
+msgid "a list"
+msgstr ""
+
+#: ../components/syntax.rst:39
+msgid "with a nested list"
+msgstr ""
+
+#: ../components/syntax.rst:40
+msgid "and some subitems"
+msgstr ""
+
+#: ../components/syntax.rst:42
+msgid "and here the parent list continues"
+msgstr ""
+
+#: ../components/syntax.rst:44
+msgid "These lines are"
+msgstr ""
+
+#: ../components/syntax.rst:45
+msgid "broken exactly like in"
+msgstr ""
+
+#: ../components/syntax.rst:46
+msgid "the source file."
+msgstr ""
+
+#: ../components/syntax.rst:49
+msgid "H3 Heading"
+msgstr ""
+
+#: ../components/syntax.rst:52
+msgid "Only the following message boxes should be used:"
+msgstr ""
+
+#: ../components/syntax.rst:56
+msgid "Warning text."
+msgstr ""
+
+#: ../components/syntax.rst:60
+msgid "Note text."
+msgstr ""
+
+#: ../components/syntax.rst:64
+msgid "Important text."
+msgstr ""
+
+#: ../components/syntax.rst:68
+msgid "Tip text."
+msgstr ""
+
+#: ../components/syntax.rst:77
+msgid "Grid Table"
+msgstr ""
+
+#: ../components/syntax.rst:80
+msgid "Header 1"
+msgstr ""
+
+#: ../components/syntax.rst:80
+msgid "Header 2"
+msgstr ""
+
+#: ../components/syntax.rst:80
+msgid "Header 3"
+msgstr ""
+
+#: ../components/syntax.rst:82
+msgid "body row 1"
+msgstr ""
+
+#: ../components/syntax.rst:82
+msgid "column 2"
+msgstr ""
+
+#: ../components/syntax.rst:82
+msgid "column 3"
+msgstr ""
+
+#: ../components/syntax.rst:84
+msgid "body row 2"
+msgstr ""
+
+#: ../components/syntax.rst:84
+msgid "Cells may span columns."
+msgstr ""
+
+#: ../components/syntax.rst:86
+msgid "body row 3"
+msgstr ""
+
+#: ../components/syntax.rst:86
+msgid "Cells may span rows."
+msgstr ""
+
+#: ../components/syntax.rst:86
+msgid "Cells"
+msgstr ""
+
+#: ../components/syntax.rst:87
+msgid "contain"
+msgstr ""
+
+#: ../components/syntax.rst:88
+msgid "blocks."
+msgstr ""
+
+#: ../components/syntax.rst:88
+msgid "body row 4"
+msgstr ""
+
+#: ../components/syntax.rst:92
+msgid "Simple Table"
+msgstr ""
+
+#: ../components/syntax.rst:95
+msgid "Inputs"
+msgstr ""
+
+#: ../components/syntax.rst:95
+msgid "Output"
+msgstr ""
+
+#: ../components/syntax.rst:97
+msgid "A"
+msgstr ""
+
+#: ../components/syntax.rst:97
+msgid "B"
+msgstr ""
+
+#: ../components/syntax.rst:97
+msgid "A or B"
+msgstr ""
+
+#: ../components/syntax.rst:99
+#: ../components/syntax.rst:100
+#: ../components/syntax.rst:101
+msgid "False"
+msgstr ""
+
+#: ../components/syntax.rst:100
+#: ../components/syntax.rst:101
+#: ../components/syntax.rst:102
+msgid "True"
+msgstr ""
+
+#: ../components/syntax.rst:105
+msgid "This is a text that needs to be translated automatically. This is another Line to be translated."
+msgstr ""
+
+#: ../components/syntax.rst:108
+msgid "This line is one of the tests for the automated translation workflow with weblate."
+msgstr ""
+
+#: ../components/syntax.rst:109
+msgid "Adding this text should trigger the complete workflow of translation."
+msgstr ""
+
+#: ../components/syntax.rst:111
+msgid "This is `a Link  <https://f-droid.org/F-Droid.apk>`_ with the definition of the url inline."
+msgstr ""
+
+#: ../components/syntax.rst:113
+msgid "This is another thest for `a URL  <https://f-droid.org/F-Droid.apk>`_ to test translation."
+msgstr ""
+
+#: ../components/syntax.rst:116
+msgid "This is a plain link https://foobar.bas/slug1/slug2"
+msgstr ""
+
+#: ../components/syntax.rst:118
+msgid "This line contains the product name Nitrokey Start an should not be altered by the translation."
+msgstr ""
+
+#: ../components/syntax.rst:121
+msgid "This command automatically inserts the title of an internal doc page you link to ::doc:: /link/to/doc"
+msgstr ""
+
+#: ../components/syntax.rst:125
+msgid "Mark cropped Output"
+msgstr ""
