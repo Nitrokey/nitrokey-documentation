@@ -10,7 +10,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-17 12:28+0000\n"
 "PO-Revision-Date: 2024-09-17 14:01+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: German <http://localhost/projects/nitrokey-documentation/"
 "components/de/>\n"
 "Language: de\n"
@@ -789,7 +790,7 @@ msgstr "img6"
 #: ../components/start/multiple-identities.rst.inc:13
 #: ../components/to-be-integrated.rst:210
 msgid "Usage"
-msgstr ""
+msgstr "Verwendung"
 
 #: ../components/fido2/linux/desktop-login.rst:239
 msgid ""
@@ -30141,14 +30142,20 @@ msgid ""
 "mono-complete package if plugin is not detected when running Keepass2 "
 "(you can check that in Tools/Plugins):"
 msgstr ""
+"Installiere das OtpKeyProv-Plugin, indem du das Archiv herunterlädst, "
+"entpackst und den Inhalt in das Plugin-Verzeichnis von Keypass kopierst. "
+"Unter Linux: sudo cp OtpKeyProv.plgx /usr/lib/keepass2/Plugins/ Für Linux, "
+"optional: Installiere das mono-complete-Paket, wenn das Plugin bei der "
+"Ausführung von Keepass2 nicht erkannt wird (du kannst das unter Tools/"
+"Plugins überprüfen):"
 
 #: ../components/to-be-integrated.rst:574
 msgid "sudo apt-get install mono-complete"
-msgstr ""
+msgstr "sudo apt-get install mono-complete"
 
 #: ../components/to-be-integrated.rst:576
 msgid "Keepass OTP Configuration Existing Database"
-msgstr ""
+msgstr "Keepass OTP Konfiguration Vorhandene Datenbank"
 
 #: ../components/to-be-integrated.rst:579
 msgid ""
@@ -30157,18 +30164,22 @@ msgid ""
 " your passwords are lost! Open database as usual Select File/Change "
 "Master Key..."
 msgstr ""
+"Mache ein Backup deiner Datenbank und bewahre es auf, bis du dir wirklich "
+"sicher bist, dass alles funktioniert! Vergewissere dich, dass du wirklich "
+"ein Backup gemacht hast. Wenn du Mist baust, sind deine Passwörter verloren! "
+"Öffne die Datenbank wie gewohnt Wähle Datei/Hauptschlüssel ändern..."
 
 #: ../components/to-be-integrated.rst:584
 msgid "New Database"
-msgstr ""
+msgstr "Neue Datenbank"
 
 #: ../components/to-be-integrated.rst:586
 msgid "Create new database as usual"
-msgstr ""
+msgstr "Erstelle wie gewohnt eine neue Datenbank"
 
 #: ../components/to-be-integrated.rst:588
 msgid "Common"
-msgstr ""
+msgstr "Gemeinsame"
 
 #: ../components/to-be-integrated.rst:590
 msgid ""
@@ -30187,10 +30198,27 @@ msgid ""
 " device and in Keepass would be out of sync and OTP codes will not be the"
 " same with expected."
 msgstr ""
+"Master-Passwort einfügen (optional) Schlüsseldatei / Anbieter: auf Einmal-"
+"Passwörter (OATH HOTP) einstellen OK klicken Mit Nitrokey App: HOTP-Slot "
+"auswählen und HOTP-Geheimnis generieren (es wird automatisch in die "
+"Zwischenablage kopiert). Hinweis: Du solltest dieses Geheimnis aufschreiben "
+"und an einem sicheren Ort aufbewahren. Wenn du deinen Nitrokey verlierst "
+"oder er kaputt geht, ist auch deine Passwortdatenbank verloren!!! Füge das "
+"Geheimnis in das Fenster des Keepass OTP-Plugins ein. Achte darauf, dass das "
+"Zählerfeld und die Anzahl der Ziffern in beiden Fenstern gleich eingestellt "
+"sind. Klicke in der Nitrokey App auf OK, um den Slot zu speichern. Wähle den "
+"Geheimnistyp: Base32 Lege die anderen Einstellungen nach deinem Geschmack "
+"fest. Bitte sieh im Handbuch des Plugins nach (sollte sich im "
+"heruntergeladenen Archiv befinden). Ich würde empfehlen, den Wert für die "
+"Vorausschau auf einen Wert ungleich Null zu setzen, um zu verhindern, dass "
+"die Datenbank nach einer versehentlichen Codeabfrage von einem verwendeten "
+"HOTP-Slot gesperrt wird. In diesem Fall wären die Zähler auf dem Gerät und "
+"in Keepass nicht mehr synchron und die OTP-Codes würden nicht mit den "
+"erwarteten übereinstimmen."
 
 #: ../components/to-be-integrated.rst:599
 msgid "Unlocking Database"
-msgstr ""
+msgstr "Datenbank freischalten"
 
 #: ../components/to-be-integrated.rst:601
 msgid ""
@@ -30199,10 +30227,15 @@ msgid ""
 "choosing proper HOTP slot from the Nitrokey App and pasting the clipboard"
 " content to proper field (the order of the codes is important). Press OK"
 msgstr ""
+"Datenbank öffnen Master-Passwort einfügen (falls festgelegt) Schlüsseldatei /"
+" Anbieter: zu One-Time Passwords (OATH HOTP) OK drücken HOTP-Codes einfügen, "
+"indem du wiederholt den richtigen HOTP-Slot in der Nitrokey App auswählst "
+"und den Inhalt der Zwischenablage in das richtige Feld einfügst (die "
+"Reihenfolge der Codes ist wichtig). Drücke OK"
 
 #: ../components/to-be-integrated.rst:608
 msgid "Issues"
-msgstr ""
+msgstr "Themen"
 
 #: ../components/to-be-integrated.rst:610
 msgid ""
@@ -30218,30 +30251,48 @@ msgid ""
 "database and how it is now configured. I have not noticed until I have "
 "watched the movie."
 msgstr ""
+"Aufgrund der Natur der HOTP-Lösung ist es möglich, dass die Zähler "
+"desynchronisiert werden (durch die Auswahl des falschen OTP-Slots während "
+"des täglichen Gebrauchs). Die Einstellung des Look-Ahead-Plugins sollte dies "
+"verhindern (der Wert 10 oder so sollte ausreichen - je nach den gewünschten "
+"Sicherheitsanforderungen - dies würde bis zu 10 versehentliche Anfragen "
+"erlauben). TOTP hat dieses Problem nicht. Die Einstellung des OTP-Schutzes "
+"könnte fehleranfällig sein. Es gibt keine geheime Validierung auf der "
+"OtpKeyProv-Seite. Im Testfilm bei 4:22 habe ich es geschafft, das Base32-"
+"codierte Geheimnis als Hex zu setzen (was kein richtiger Hex-Wert war) und "
+"es hat sich nicht darüber beschwert. Es gibt keine Informationen darüber, "
+"was mit der Datenbank passiert ist und wie sie jetzt konfiguriert ist. Ich "
+"habe es erst bemerkt, als ich mir den Film angesehen habe."
 
 #: ../components/to-be-integrated.rst:613
 msgid "Tested under Ubuntu 16.10, Nitrokey App v0.6.3 and Nitrokey Storage v0.45."
 msgstr ""
+"Getestet unter Ubuntu 16.10, Nitrokey App v0.6.3 und Nitrokey Storage v0.45."
 
 #: ../components/to-be-integrated.rst:622
 msgid "**Q:** How can I use the True Random Number Generator?"
-msgstr ""
+msgstr "**Q:** Wie kann ich den echten Zufallszahlengenerator nutzen?"
 
 #: ../components/to-be-integrated.rst:624
 msgid ""
 "Both devices are compatible to the OpenPGP Card, so that scdrand should "
 "work. This script may be useful. The TRNG provides about 40 kbit/s."
 msgstr ""
+"Beide Geräte sind mit der OpenPGP-Karte kompatibel, so dass scdrand "
+"funktionieren sollte. Dieses Skript kann nützlich sein. Der TRNG bietet etwa "
+"40 kbit/s."
 
 #: ../components/to-be-integrated.rst:626
 msgid ""
 "The user comio created a systemd file to use scdrand and thus the TRNG "
 "more generally. He created a ebuild for Gentoo, too."
 msgstr ""
+"Der Benutzer comio hat eine systemd-Datei erstellt, um scdrand und damit den "
+"TRNG allgemein zu nutzen. Er hat auch ein ebuild für Gentoo erstellt."
 
 #: ../components/to-be-integrated.rst:632
 msgid "**Q:** Do you have resources for development and integration?"
-msgstr ""
+msgstr "**Q:** Haben Sie Ressourcen für Entwicklung und Integration?"
 
 #: ../components/to-be-integrated.rst:635
 msgid ""
@@ -30258,6 +30309,20 @@ msgid ""
 "Safe and OTP entries. A libnitrokey wrapper for Rust providing access to "
 "Nitrokey devices."
 msgstr ""
+"Verwende die Nitrokey-Bibliothek, um Einmalpasswörter und Passwortsafes zu "
+"verwalten. Die Projekte nitrokey-get-totp und nitrokey-get-password sind "
+"gute Beispiele für die Verwendung der Python-Bindungen der Nitrokey-"
+"Bibliothek, um eine benutzerdefinierte Schnittstelle zu erhalten. Um auf die "
+"integrierte Smartcard zuzugreifen, kannst du die Kommandozeilen-Tools von "
+"OpenSC verwenden. Wenn deine Anwendung eine PKCS#11-Schnittstelle hat, "
+"verwende den PKCS#11-Treiber von OpenSC. Um mit der Smartcard auf niedriger "
+"Ebene zu arbeiten, lies die OpenPGP Card Spezifikation. Der Quellcode der "
+"Firmware und das Hardware-Layout sind ebenfalls verfügbar. Für die "
+"Entwicklung spezieller Anwendungen oder für den Kommandozeilenzugriff kann "
+"man das von d-e-s-o erstellte nitrocli verwenden. Gkey ist ein go-basiertes "
+"Kommandozeilentool für den Zugriff auf die Passwort-Safe- und OTP-Einträge. "
+"Ein libnitrokey-Wrapper für Rust, der den Zugriff auf Nitrokey-Geräte "
+"ermöglicht."
 
 #: ../components/to-be-integrated.rst:646
 msgid "# HSM 2"
@@ -30440,7 +30505,7 @@ msgstr "**Q:** DNSSEC"
 
 #: ../components/to-be-integrated.rst:774
 msgid "For: Nitrokey HSM"
-msgstr ""
+msgstr "Für: Nitrokey HSM"
 
 #: ../components/to-be-integrated.rst:776
 msgid ""
@@ -30665,6 +30730,9 @@ msgid ""
 "SmartCardHSMKey.getUseCounter() and confirm with "
 "SmartCardHSMKeySpec.setKeyUseCounter() can be set."
 msgstr ""
+"In OCF und dem JCE Provider kann der Key Use Counter mit SmartCardHSMKey."
+"getUseCounter() abgefragt und mit SmartCardHSMKeySpec.setKeyUseCounter() "
+"bestätigt werden."
 
 #: ../components/u2f/index.rst:2
 msgid "Nitrokey FIDO U2F"
