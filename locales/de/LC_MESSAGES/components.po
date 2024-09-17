@@ -1,0 +1,2420 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) Nitrokey
+# This file is distributed under the same license as the Nitrokey
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Nitrokey Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-17 09:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: de\n"
+"Language-Team: de <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../components/nitropc/faq.rst:2
+msgid "NitroPC FAQ"
+msgstr ""
+
+#: ../components/nitropc/faq.rst:6
+msgid "**Q:** What is the default hard-disk encryption password?"
+msgstr ""
+
+#: ../components/nitropc/faq.rst:5
+msgid ""
+"The default NitroPC disk encryption password: \"12345678\". This was "
+"change on the 15.01.2024 so if \"12345678\" is not working try the old "
+"default: \"PleaseChangeMe\""
+msgstr ""
+
+#: ../components/nitropc/index.rst:9
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../components/nitropc/index.rst:17
+msgid "Qubes"
+msgstr ""
+
+#: ../components/nitropc/index.rst:2
+msgid "NitroPC"
+msgstr ""
+
+#: ../components/nitropc/index.rst:7
+msgid "First check the:"
+msgstr ""
+
+#: ../components/nitropc/index.rst:15
+msgid "or choose your operating system:"
+msgstr ""
+
+#: ../components/nitropc/index.rst:27
+msgid "Booting from USB drive"
+msgstr ""
+
+#: ../components/nitropc/index.rst:28
+msgid ""
+"Connect the USB drive to a black USB 2.0 socket (blue USB 3.0 don't "
+"work!), start the PC and keep pressing DEL until you see the firmware "
+"menu. Choose Boot Menu and select your USB drive."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:2
+msgid "NitroPC Pro 2 With External GPU"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:6
+msgid ""
+"This guide is only working if you use the Qubes OS OEM GPU image from "
+"Nitrokey that you can build `here`_."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:13
+msgid ""
+"This guide explains how to use your NitroPC with an external graphic card"
+" (GPU) with Qubes OS."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:16
+msgid ""
+"Following this guide may create some security issues within Qubes OS. "
+"Follow it at your own risks."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:20
+msgid "Create a Windows Qube"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:23
+msgid ""
+"This will install a Windows Qube from the offical trial ISO. If you want "
+"a full Windows experience then you will need to add a licence key."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:25
+msgid ""
+"This part is using `ElliotKillick project "
+"<https://github.com/elliotkillick/qvm-create-windows-qube>`__."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:28
+msgid ""
+"Open a terminal in dom0 and make sure that you have the internet "
+"connected."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:30
+msgid ""
+"Install the Qubes Windows Tools, in dom0 : ``sudo qubes-dom0-update "
+"qubes-windows-tools-4.1.69`` when asked press ``y`` and enter."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:33
+msgid ""
+"Please see the `security implication <https://github.com/QubesOS/qubes-"
+"secpack/blob/master/QSBs/qsb-091-2023.txt>`__ of installing QWT."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:35
+msgid ""
+"Make the install script executable, in dom0 : ``sudo chmod +x "
+"/install.sh``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:37
+msgid "Launch the install script, in dom0 : ``/install.sh``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:39
+msgid ""
+"If you see this message : ``[+] Installation complete!`` then you can "
+"continue."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:41
+msgid ""
+"At this point the script created a new Qube called windows-mgmt now we "
+"will dowload the ISO to create the Windows Qube."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:43
+msgid ""
+"To do so we need to copy the ``~/qvm-create-windows-"
+"qube/windows/isos/mido.sh`` script from the windows-mgmt Qube inside a "
+"disposable Qube with internet connectivity."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:45
+msgid ""
+"Start a new DVM (disposable) Qube and give it at least 10 GB of private "
+"storage."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:47
+msgid ""
+"Start the windows-mgmt Qube and copy the script, in windows-mgmt Qube : "
+"``qvm-copy qvm-create-windows-qube/windows/isos/mido.sh`` then select the"
+" DVM Qube (dispXXXX)."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:49
+msgid ""
+"Once the script is copied launch it, in dispXXX : ``./QubesIncoming"
+"/windows-mgmt/mido.sh win10x64``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:52
+msgid ""
+"In this guide we install Windows 10 but other Windows versions are "
+"available you can list them by using ``./QubesIncoming/windows-"
+"mgmt/mido.sh``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:55
+msgid ""
+"If you get a success message then you will need to copy the dowloaded ISO"
+" from the DVM to the windows-mgmt Qube, in dispXXXX :  ``qvm-copy "
+"QubesIncoming/windows-mgmt/win10x64.iso`` and choose the windows-mgmt "
+"Qube."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:57
+msgid "Once copied you can close your DVM Qube."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:59
+msgid ""
+"In the windows-mgmt Qube : ``mv QubesIncoming/dispXXXX/win10x64.iso qvm-"
+"create-windows-qube/windows/isos/`` (replace 'dispXXXX' with the name of "
+"the disposable Qube you created)."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:61
+msgid ""
+"Then in dom0 : ``qvm-create-windows-qube -n sys-firewall -oy -i "
+"win10x64.iso -a win10x64-pro.xml work-win10``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:64
+msgid ""
+"You can pre-install any package from `this site "
+"<https://community.chocolatey.org/packages>`__. E.g: ``qvm-create-"
+"windows-qube -n sys-firewall -oyp "
+"firefox,notepadplusplus,office365proplus -i win10x64.iso -a "
+"win10x64-pro.xml work-win10``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:67
+msgid ""
+"If the script stops or if it get stuck retry until you see this message: "
+"``[+] Completed successfully!``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:69
+msgid ""
+"Now you will need to attach your GPU to the Windows Qube, to do so go to "
+"the Qube Manager and the Windows 10 Qube options (make sure that the Qube"
+" is shut down), under the Devices tab select your graphic card and pass "
+"it to the right then click on the ``Configure strict reset for PCI "
+"devices`` then select your card and click ``OK``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:71
+msgid ""
+"Now that your graphic card is attached to your Windows Qube you will need"
+" to install the drivers of your card. Search for ``Check for updates`` in"
+" the search bar then click on ``Check for updates`` (you will need to "
+"reboot several times)."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:73
+msgid ""
+"Now Windows will install all the drivers you will need to use your "
+"external graphic card. If you're experiencing some problems make sure "
+"that you have enought space in your Windows Qube while installing "
+"updates."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:75
+msgid "Once finished you can connect a secondary display to the graphic card."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:77
+msgid ""
+"If you want to use a dedicated mouse or keyboard for the Windows Qube "
+"then you need to use sys-usb and attach the desired device to it."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:82
+msgid "Create a Linux Qube"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:85
+msgid "Debian"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:88
+msgid ""
+"Go to the Qube manager and create a new standalone Qube and launch the "
+"settings after creation."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:90
+msgid ""
+"In the advenced tab change the mode to HVM and disable memory balancing "
+"and choose the amount of RAM you want."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:92
+msgid ""
+"In the devices tab select the GPU and pass it to the right then click on "
+"the ``Configure strict reset for PCI devices`` then select your card and "
+"click ``OK``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:94
+msgid "Close the settings and start the Qube."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:96
+msgid ""
+"Add non-free to your source list: ``sudo sed -i '1 s/.*/& non-free/' "
+"/etc/apt/sources.list``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:98
+msgid "``sudo apt update``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:100
+msgid "``sudo apt install nvidia-driver dbus-x11``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:102
+msgid "Now you will need to create 3 differents files:"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:105
+msgid "screen.conf::"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:123
+msgid "xorgX1.sh::"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:137
+msgid "xfce.sh::"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:144
+msgid "``sudo chmod +x xorgX1.sh xfce.sh``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:146
+msgid "``sudo ./xorgX1.sh ./xfce.sh``"
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:148
+msgid "Now the secondary screen should turn on and show a Debian XFCE desktop."
+msgstr ""
+
+#: ../components/nitropc/qubes/gpu-install.rst:150
+msgid ""
+"If you want to use a dedicated mouse or keyboard for the Linux Qube then "
+"you need to use sys-usb and attach the desired device to it."
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:2
+msgid "NitroPC with Qubes OS"
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:14
+msgid "Getting Started"
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:16
+msgid ""
+"During boot, the system will prompt you to enter the passphrase to "
+"decrypt the hard disk. Enter the default passphrase \"12345678\". This "
+"was changed on the 15.01.2024 so if \"12345678\" is not working try the "
+"old default: \"PleaseChangeMe\" The system will then guide you through "
+"the process of creating a user account. After that you should have "
+"successfully booted the system and could already use it normally."
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:22
+msgid ""
+"Change the passphrase for disk encryption by searching in the Qubes Menu "
+"for \"Change Disk Password\""
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst
+msgid "Change Password Qubes Image"
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:30
+msgid "Failed to start Load Kernel Modules"
+msgstr ""
+
+#: ../components/nitropc/qubes/index.rst:32
+msgid ""
+"During boot of the system the error \"Failed to start Load Kernel "
+"Modules\" is displayed. `This is a known issue "
+"<https://github.com/QubesOS/qubes-issues/issues/2638>`__ which is not "
+"critical and can be ignored."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:2
+msgid "Operating System Reinstallation"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:9
+msgid ""
+"Booting this USB drive entirely erases all data on the hard disk or SSD "
+"of the NitroPad without further warning. Don’t boot this USB drive on any"
+" computer which contains data you want to keep. Make sure to format the "
+"USB drive after the intended use."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:14
+msgid ""
+"Download one of the following operating system images: `Ubuntu Linux "
+"<https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS "
+"<https://www.nitrokey.com/files/ci/qubes/>`__, `Debian "
+"<https://www.nitrokey.com/files/ci/nitropc/debian-oem/>`__, `Linux Mint "
+"<https://linuxmint.com/download.php>`__"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:18
+msgid ""
+"Optional: Download hash sum and `verify <https://proprivacy.com/guides"
+"/how-why-and-when-you-should-hash-check#how-to-hash-check>`__ the "
+"downloaded operating system image."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:22
+msgid "Write the operating system image to any USB drive. Possible applications:"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:25
+msgid ""
+"Windows: `Rufus <https://rufus.ie/>`__, `balenaEtcher "
+"<https://www.balena.io/etcher/>`__;"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:27
+msgid "Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:28
+msgid "macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:30
+msgid "Connect the USB drive to your NitroPC and start it."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:33
+msgid "If you are using a NitroPC with Heads:"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:33
+msgid "Go to the Heads menu and select Boot Options -> USB Boot."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:36
+msgid "If you are using a NitroPC with TitanCore:"
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:36
+msgid "Press ESC to enter the BIOS to select USB Boot."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:38
+msgid ""
+"Depending on the operating system you may need to confirm its "
+"reinstallation."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:41
+msgid ""
+"To avoid accidential overwriting of valuable data, format the USB drive "
+"afterwards."
+msgstr ""
+
+#: ../components/nitropc/os-reinstallation.rst.inc:45
+msgid ""
+"Booting this USB drive entirely erases all data on the hard disk or SSD "
+"of the NitroPC without further warning. Don’t boot this USB drive on any "
+"computer which contains data you want to keep. Make sure to format the "
+"USB drive after the intended use."
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:2
+msgid "Verify Sealed Hardware"
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:7
+msgid ""
+"If you ordered your NitroPC with sealed screws and in a sealed bag, it "
+"allows you to check if the NitroPC has been tampered with during "
+"shipping."
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:9
+msgid ""
+"The bag and all screws of the device have been sealed. For the bag and "
+"each of these screws you have received a photo by e-mail."
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:11
+msgid ""
+"Check each screw individually to see if its individual appearance matches"
+" the photo. It is best to use a magnifying glass or macro lens for this "
+"purpose."
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:15
+msgid ""
+"This example shows a sealed screw whose glitter represents an individual "
+"pattern."
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc
+msgid "img"
+msgstr ""
+
+#: ../components/nitropc/sealed-hardware.rst.inc:22
+msgid ""
+"If the bag or the screws do not match the photos sent, an unauthorized "
+"opening of your NitroPC cannot be excluded. In this case please contact "
+"us to arrange further action."
+msgstr ""
+
+#: ../components/syntax.rst:4
+msgid "Nitrokey Documentation - Syntax"
+msgstr ""
+
+#: ../components/syntax.rst:9
+msgid "Code Blocks Syntax Highlighting"
+msgstr ""
+
+#: ../components/syntax.rst:11
+msgid ""
+"Syntax Highlighting is disabled by default. To enable it for a specific "
+"code snippet use the following:"
+msgstr ""
+
+#: ../components/syntax.rst:19
+msgid "H2 Heading"
+msgstr ""
+
+#: ../components/syntax.rst:22
+msgid "Some text with ``inline.code();``"
+msgstr ""
+
+#: ../components/syntax.rst:24
+msgid "This is a bulleted list."
+msgstr ""
+
+#: ../components/syntax.rst:25
+msgid "It has two items, the second item uses two lines."
+msgstr ""
+
+#: ../components/syntax.rst:28 ../components/syntax.rst:33
+msgid "This is a numbered list."
+msgstr ""
+
+#: ../components/syntax.rst:29 ../components/syntax.rst:34
+msgid "It has two items too."
+msgstr ""
+
+#: ../components/syntax.rst:31
+msgid "Normal text again."
+msgstr ""
+
+#: ../components/syntax.rst:36
+msgid "this is"
+msgstr ""
+
+#: ../components/syntax.rst:37
+msgid "a list"
+msgstr ""
+
+#: ../components/syntax.rst:39
+msgid "with a nested list"
+msgstr ""
+
+#: ../components/syntax.rst:40
+msgid "and some subitems"
+msgstr ""
+
+#: ../components/syntax.rst:42
+msgid "and here the parent list continues"
+msgstr ""
+
+#: ../components/syntax.rst:44
+msgid "These lines are"
+msgstr ""
+
+#: ../components/syntax.rst:45
+msgid "broken exactly like in"
+msgstr ""
+
+#: ../components/syntax.rst:46
+msgid "the source file."
+msgstr ""
+
+#: ../components/syntax.rst:49
+msgid "H3 Heading"
+msgstr ""
+
+#: ../components/syntax.rst:52
+msgid "Only the following message boxes should be used:"
+msgstr ""
+
+#: ../components/syntax.rst:56
+msgid "Warning text."
+msgstr ""
+
+#: ../components/syntax.rst:60
+msgid "Note text."
+msgstr ""
+
+#: ../components/syntax.rst:64
+msgid "Important text."
+msgstr ""
+
+#: ../components/syntax.rst:68
+msgid "Tip text."
+msgstr ""
+
+#: ../components/syntax.rst:77
+msgid "Grid Table"
+msgstr ""
+
+#: ../components/syntax.rst:80
+msgid "Header 1"
+msgstr ""
+
+#: ../components/syntax.rst:80
+msgid "Header 2"
+msgstr ""
+
+#: ../components/syntax.rst:80
+msgid "Header 3"
+msgstr ""
+
+#: ../components/syntax.rst:82
+msgid "body row 1"
+msgstr ""
+
+#: ../components/syntax.rst:82
+msgid "column 2"
+msgstr ""
+
+#: ../components/syntax.rst:82
+msgid "column 3"
+msgstr ""
+
+#: ../components/syntax.rst:84
+msgid "body row 2"
+msgstr ""
+
+#: ../components/syntax.rst:84
+msgid "Cells may span columns."
+msgstr ""
+
+#: ../components/syntax.rst:86
+msgid "body row 3"
+msgstr ""
+
+#: ../components/syntax.rst:86
+msgid "Cells may span rows."
+msgstr ""
+
+#: ../components/syntax.rst:86
+msgid "Cells"
+msgstr ""
+
+#: ../components/syntax.rst:87
+msgid "contain"
+msgstr ""
+
+#: ../components/syntax.rst:88
+msgid "blocks."
+msgstr ""
+
+#: ../components/syntax.rst:88
+msgid "body row 4"
+msgstr ""
+
+#: ../components/syntax.rst:92
+msgid "Simple Table"
+msgstr ""
+
+#: ../components/syntax.rst:95
+msgid "Inputs"
+msgstr ""
+
+#: ../components/syntax.rst:95
+msgid "Output"
+msgstr ""
+
+#: ../components/syntax.rst:97
+msgid "A"
+msgstr ""
+
+#: ../components/syntax.rst:97
+msgid "B"
+msgstr ""
+
+#: ../components/syntax.rst:97
+msgid "A or B"
+msgstr ""
+
+#: ../components/syntax.rst:99 ../components/syntax.rst:100
+#: ../components/syntax.rst:101
+msgid "False"
+msgstr ""
+
+#: ../components/syntax.rst:100 ../components/syntax.rst:101
+#: ../components/syntax.rst:102
+msgid "True"
+msgstr ""
+
+#: ../components/syntax.rst:105
+msgid ""
+"This is a text that needs to be translated automatically. This is another"
+" Line to be translated."
+msgstr ""
+
+#: ../components/syntax.rst:108
+msgid ""
+"This line is one of the tests for the automated translation workflow with"
+" weblate."
+msgstr ""
+
+#: ../components/syntax.rst:109
+msgid "Adding this text should trigger the complete workflow of translation."
+msgstr ""
+
+#: ../components/syntax.rst:111
+msgid ""
+"This is `a Link  <https://f-droid.org/F-Droid.apk>`_ with the definition "
+"of the url inline."
+msgstr ""
+
+#: ../components/syntax.rst:113
+msgid ""
+"This is another thest for `a URL  <https://f-droid.org/F-Droid.apk>`_ to "
+"test translation."
+msgstr ""
+
+#: ../components/syntax.rst:116
+msgid "This is a plain link https://foobar.bas/slug1/slug2"
+msgstr ""
+
+#: ../components/syntax.rst:118
+msgid ""
+"This line contains the product name Nitrokey Start an should not be "
+"altered by the translation."
+msgstr ""
+
+#: ../components/syntax.rst:121
+msgid ""
+"This command automatically inserts the title of an internal doc page you "
+"link to ::doc:: /link/to/doc"
+msgstr ""
+
+#: ../components/syntax.rst:125
+msgid "Mark cropped Output"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:1
+msgid "# pro"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:5
+msgid "PKCS#11 Driver"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:7
+msgid ""
+"If you want to use S/MIME email encryption with Thunderbird, to use "
+"TrueCrypt/VeraCrypt, certificate-based SSL authentication with Firefox, "
+"PuTTY/KiTTY, OpenSSH, OpenSSL, or any other PKCS#11 compatible software, "
+"you should install OpenSC."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:9
+msgid ""
+"Note that a Nitrokey initialized with OpenSC doesn't work with "
+"GnuPG/OpenPGP. But the other way around works fine. If you want to use "
+"Nitrokey with both GnuPG and PKCS#11, generate the keys with GnuPG."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:11
+msgid ""
+"Don't use PKCS#11 in parallel with GnuPG because both may interfere and "
+"unexpected issues may result. (There is another promising project scd-"
+"pkcs11 in development which may overcome this limitation eventually. "
+"Currently it's limit to the authentication certificate and not widely "
+"tested yet.)"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:13
+msgid ""
+"Instructions, how to create a valid X.509 certificate with Nitrokey (1, "
+"2, 3). These are general instructions how to use X.509 certificates. "
+"Alternative PKCS#11 Driver:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:16
+msgid "The recommended PKCS#11 driver is OpenSC."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:18
+msgid "Windows Mini Driver"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:20
+msgid ""
+"This Mini Driver allows to integrate Nitrokey with Window's certificate "
+"store. Subsequently all applications which use this certificate storage "
+"can be used with Nitrokey (e.g. Internet Explorer, Google Chrome web "
+"browser, Windows Login). To install the driver, you may need to allow the"
+" installation of unsigned drivers first. Aloaha"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:23
+msgid ""
+"All applications of Aloaha are working with the Nitrokey. This includes a"
+" middleware to integrate Nitrokey with other PKCS#11 based applications "
+"and with Windows as well as applications to encrypt and sign PDFs and the"
+" hard disk."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:25
+msgid "Alternative PKCS#11 Driver:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:27
+msgid ""
+"The recommended PKCS#11 driver is OpenSC. Alternatively, you could use "
+"Peter Koch's PKCS#11 driver which has the following limitations:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:29
+msgid ""
+"No import of existing X.509 certificates. (Instead, keys have to be "
+"generated on the Nitrokey) The Linux version does not allow to generate "
+"keys. Modification of the password/PIN under Linux is not possible."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:33
+msgid "p11-glue"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:35
+msgid ""
+"P11-glue uses PKCS#11 as glue between crypto libraries and security "
+"applications on the open source desktop. Articles in German"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:38
+msgid ""
+"Eine allgemeine und gut verständliche Einführung bietet der Artikel "
+"Magisches Leuchten im Linux Magazin 2010/12. Eine umfangreiche Anleitung "
+"gibt es auf Pro-Linux. Einen ausfuehrlichen Erfahrungsbericht unter "
+"CentOS."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:44
+msgid "**Q:** How can I login into Windows?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:44
+msgid ""
+"To access Nitrokey devices read-only, download and install this Mini "
+"Driver (CSP). If you are using Windows Server you may need to disable the"
+" driver signature verification before being able to install the driver. "
+"Note that the Mini Driver for Nitrokey Pro may not work yet for write "
+"mode."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:46
+msgid "There exist different ways to use a Nitrokey to logon on Windows:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:48
+msgid ""
+"Login on stand alone Windows computers based on EIDAuthenticate. "
+"Alternatively install OpenSC and use Aloaha Smart Login's PKCS#11 "
+"Credentials. Login on Windows domain computers using MS Active Directory "
+"based OpenPGP-CSP minidriver for Nitrokey Storage 2 Nitrokey Pro 2 Login "
+"on Windows domain computers using MS Active Directory based on Smart "
+"Policy for other Nitrokey devices."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:53
+msgid "**Q:** How can I login into Linux? Linux Login with PAM"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:56
+msgid "You have two options: pam_p11 or Poldi."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:58
+msgid ""
+"The solution with pam_p11 is more difficult to achieve and is based on "
+"S/MIME certificates. Please have a look at the documentation for more "
+"information."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:60
+msgid ""
+"Poldi 0.4.1 works flawlessly with Nitrokey for PAM authentication with "
+"RSA keys (see Troubleshooting for information on ECC keys). Besides the "
+"installation of poldi (e.g. 'sudo apt-get install libpam-poldi' on "
+"Ubuntu) the following steps are needed to get it working."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:62
+msgid ""
+"It is necessary to already have keys generated on the Nitrokey, as the "
+"authentication key is used by PAM."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:64
+msgid ""
+"At first you need to find out the \"Application ID\" of your Nitrokey. "
+"You can use \"gpg --card-status | grep Application\" to find out what's "
+"yours. It looks like 'D00600012401020000000000xxxxxxxx' or similiar. Now "
+"you have to add a line to /etc/poldi/localdb/users which contains the "
+"following information"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:66
+msgid "<YourApplicationID> <YourUsername>"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:68
+msgid ""
+"This could look like 'D00600012401020000000000xxxxxxxx nitrokeyuser'. Now"
+" dump the public key from the Nitrokey into poldi local db:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:70
+msgid ""
+"sudo sh -c 'gpg-connect-agent \"/datafile "
+"/etc/poldi/localdb/keys/<YourApplicationID>\" \"SCD READKEY --advanced "
+"OPENPGP.3\" /bye'"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:72
+msgid ""
+"Please be aware that you have to insert your Application ID in the line "
+"above with the one of your stick!"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:74
+msgid ""
+"Then you have to configure PAM. Just add \"auth sufficient pam_poldi.so\""
+" to pam configuration files according to your needs:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:76
+msgid ""
+"/etc/pam.d/common-auth for graphical user login /etc/pam.d/login for "
+"console login /etc/pam.d/sudo for sudo authentication /etc/pam.d/gnome-"
+"screensaver for login back from a locked screen etc."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:82
+msgid ""
+"Note: Pam is dangerous to play around with, so make sure you have a way "
+"of accessing the machine if you break authentication completely. Remember"
+" that booting into rescue mode from Grub requires a root password, so "
+"keep that or a live CD which can read your filesystems to hand."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:84
+msgid ""
+"Here you find further instructions (in German, partially outdated). "
+"Troubleshooting"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:87
+msgid ""
+"If you get an error similar to 'ERR 100663414 Invalid ID <SCD>' you "
+"should try instead"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:89
+msgid ""
+"poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> "
+"/etc/poldi/localdb/keys"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:91
+msgid ""
+"Please be aware that you have to insert your Application ID in the line "
+"above with the one of your stick! ECC Keys Unfortunately, poldi has no "
+"support for ECC keys yet. But there is a patch for ECC keys used with "
+"Nitrokey Start. This is already included in the master branch of the "
+"poldi development repository and thus will be released in a newer version"
+" eventually. In the meantime the only option is to build poldi from "
+"source."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:97
+msgid "**Q:** How can I login with One Time Passwords?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:97
+msgid ""
+"One-Time-Passwords (OTP) are used for secure login to websites and local "
+"applications."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:99
+msgid "Two OTP modes exist:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:101
+msgid ""
+"Time-based One-time Passwords (TOTP) is widely used for websites. If "
+"unsure, assume you are using this mode. HMAC-based One-time Passwords "
+"(HOTP) is used for local applications and computer logins."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:104
+msgid ""
+"To use One-Time-Passwords with your Nitrokey Pro or Nitrokey Storage, you"
+" need to download and install the latest Nitrokey App. Time-based One-"
+"time Passwords - TOTP"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:107
+msgid ""
+"For login to a Google account. For login to a Microsoft account. For "
+"login to a Nextcloud account. Generic instructions for all other "
+"services."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:112
+msgid "**Q:** How can I use the Nitrokey Pro with Android?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:114
+msgid ""
+"It is possible to use the Nitrokey on an Android devices in combination "
+"with OpenKeychain. This enables one to encrypt/decrypt E-Mails or files "
+"via OpenPGP."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:116
+msgid ""
+"Cotech provides Android software with commercial support. Please have a "
+"look there, if you like. The following instructions are based on "
+"OpenKeychain."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:118
+msgid ""
+"Tested with Nitrokey Start, Pro and Storage in combination with Android "
+"7.1, OpenKeychain 4.5 and K9Mail 5.207. Prerequisites"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:121
+msgid ""
+"Android phone which is capable of USB OTG USB OTG cable to connect the "
+"Nitrokey with your phone OpenKeychain installed on Device Public key "
+"saved on the device or uploaded on a keyserver"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:126
+msgid "First steps"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:128
+msgid ""
+"To import the keys of the Nitrokey you should at first start the "
+"OpenKeychain app. Then insert the Nitrokey with the USB OTG cable. "
+"OpenKeychain starts a dialog to use the Nitrokey (you may have to accept "
+"the usage of the key with OpenKeychain first). Now you can choose between"
+" looking for public key on a keyserver or choosing the public key from "
+"storage. After the public key got imported you have to tap on 'connect "
+"key' to import a reference to the private key of the Nitrokey. That’s "
+"basically it."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:130
+msgid ""
+"In the case that no there are no keys on the Nitrokey yet, OpenKeychain "
+"will help with the creation of a new key pair instead. Usage"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:133
+msgid ""
+"You can use all functions of OpenKeychain and Apps which make use of "
+"OpenKeychain. Therefore you can just encrypt/decrypt messages or files by"
+" hand using the app directly or for example you combine K9Mail with "
+"OpenKeychain to decrypt your mails automatically. It is important to "
+"choose the right key in the K9Mail account settings first."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:135
+msgid ""
+"Note that you may have to enable the on-screen keyboard in the android "
+"settings to type the PIN as the system recognizes the Nitrokey as a "
+"physical keyboard and therefore tries to hide the on-screen keyboard. Go "
+"to 'Language and Input' > 'Current Keyboard' > 'Hardware show input "
+"method'."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:138
+msgid "**Q:** How can I use the Nitrokey Pro with Iphone?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:139
+msgid "Currently it is not possible"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:141
+msgid "**Q:** How can I use the Nitrokey Pro with Ubuntu Phone?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:141
+msgid ""
+"There are instructions on gnupg.org about how to use a OpenPGP Card on a "
+"UbuntuPhone which should work for the Nitrokey Start, Pro and Storage."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:143
+msgid ""
+"**Q:** How can I do Email encryption? There are two widely used standards"
+" for email encryption. While OpenPGP/GnuPG is popular among individuals, "
+"S/MIME/X.509 is mostly used by enterprises. If you are in doubt which one"
+" to choose, you should use OpenPGP."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:146
+msgid ""
+"instructions for using the OpenPGP standard with the Nitrokey "
+"instructions for using S/MIME with the Nitrokey. Note: SMIME certificates"
+" can be purchased cheaply from CERTUM and SSLTrust."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:149
+msgid ""
+"Please note, that it is currently advised to use either OpenPGP or S/MIME"
+" encryption, but not both with the Nitrokey."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:151
+msgid "To use a Nitrokey Storage with Thunderbird 78+, you can try this tutorial."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:153
+msgid "**Q:** How can I do Hard Disk Encryption?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:156
+msgid ""
+"For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start VeraCrypt (formerly "
+"TrueCrypt)"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:159
+msgid ""
+"VeraCrypt is a free and Open Source disk encryption software for Windows,"
+" macOS, and GNU/Linux. It is the successor of TrueCrypt and thus "
+"recommended, although the following instructions should apply to "
+"TrueCrypt as well. Follow these steps to use the program with Nitrokey "
+"Storage or Pro:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:161
+#: ../components/to-be-integrated.rst:673
+msgid ""
+"Install OpenSC Choose the library in VeraCrypt under "
+"Settings>Preferences>Security Token (location depends on system, e.g. "
+"/usr/lib/opensc). Generate a 64 Byte key file via Tools>Keyfile "
+"Generator. Now you should be able to import the generated key file via "
+"Tools>Manage Security Token Keyfiles. You should choose the first Slot "
+"([0] User PIN). The keyfile is then stored on the Nitrokey as 'Private "
+"Data Object 1' (PrivDO1). After this you should wipe the original keyfile"
+" on your Computer securely! Now you can use VeraCrypt with the Nitrokey: "
+"Create a container, choose the keyfile on the device as an alternative to"
+" a password."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:168
+msgid ""
+"Security Consideration: Please note that VeraCrypt doesn't make use of "
+"the full security which Nitrokey (and smart cards in general) offer. "
+"Instead it stores a keyfile on the Nitrokey which theoretically could be "
+"stolen by a computer virus after the user enters the PIN."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:170
+msgid ""
+"Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
+"described security limitation."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:173
+msgid ""
+"Hard Disk Encryption on Linux, Based on LUKS/dm-crypt Here are excellent "
+"instructions how to use Nitrokey to encrypt your hard disk under Linux "
+"with LUKS/dm-crypt. Other instruction."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:176
+msgid ""
+"Purism has created a simple script to add the Nitrokey/LibremKey as a way"
+" to unlock LUKS partitions (not tested by Nitrokey yet)."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:178
+msgid ""
+"This project aims to ease the use of LUKS with the Nitrokey Pro or "
+"Storage based on the Password Safe (not tested by Nitrokey yet). A "
+"description on how to use it on Gentoo can be found here."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:180
+msgid ""
+"For Arch Linux, see initramfs-scencrypt. Storage Encryption on Linux, "
+"Based on EncFS"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:183
+msgid ""
+"Prerequisite: Please ensure that you installed the device driver, changed"
+" the default PINs and generated or imported keys with GnuPG."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:185
+msgid ""
+"An easy to use encrypted file system is EncFS, which is based on FUSE. "
+"You may follow these steps to use it with very long passwords and "
+"Nitrokey:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:187
+msgid "Initialization"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:189
+msgid ""
+"# Create a key file with random data: $ dd bs=64 count=1 if=/dev/urandom "
+"of=keyfile"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:192
+msgid ""
+"# Encrypt the key file and use the User-ID of your Nitrokey $ gpg "
+"--encrypt keyfile"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:195
+msgid ""
+"# Remove the key file in clear text: $ rm keyfile # you may want to use "
+"'wipe' or 'shred' to securely delete the keyfile"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:198
+msgid "# Create mount point: $ mkdir ~/.cryptdir ~/cryptdir"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:201
+msgid ""
+"# Create the actual encryption folder $ gpg -d keyfile.gpg | encfs -S "
+"~/.cryptdir ~/cryptdir"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:204
+msgid ""
+"# There may appears an error message about missing permission of "
+"fusermount # This message can be ignored"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:207
+msgid "# Unmount the new file system: $ fusermount -u ~/cryptdir"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:210
+msgid "Usage"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:212
+msgid ""
+"# Mount encrypted file system and enter PIN of Nitrokey: $ gpg -d "
+"keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:215
+msgid "# After usage, unmount the file system: $ fusermount -u ~/cryptdir"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:219
+msgid "Storage Encryption on Linux, Based on ECryptFS"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:221
+msgid ""
+"eCryptfs is a file based transparent encryption file system for Linux "
+"which can be used with Nitrokey through a PKCS#11 driver. See these "
+"instructions. Alternatively, try ESOSI or follow these steps using OpenSC"
+" and OpenVPN:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:223
+msgid "Warning: This will delete existing keys on your Nitrokey!"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:225
+msgid ""
+"# Import the certificate and key to the Nitrokey $ pkcs15-init --delete-"
+"objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 "
+"--format pkcs12 --auth-id 3 --verify-pin"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:228
+msgid "# Create the file ~/.ecryptfsrc.pkcs11: $ editor ~/.ecryptfsrc.pkcs11"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:231
+msgid ""
+"# Enter this content: $ pkcs11-log-level=5 "
+"pkcs11-provider1,name=name,library=/usr/lib/opensc-pkcs11.so,cert-"
+"private=true $ openvpn --show-pkcs11-ids path to opensc-pkcs11 module "
+"Certificate"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:235
+msgid ""
+"DN: "
+"/description=Iv4IQpLO02Mnix9i/CN=user@example.com/emailAddress=user@example.com"
+" Serial: 066E04 Serialized id: "
+"ZeitControl/PKCS\\x2315\\x20emulated/000500000c7f/OpenPGP\\x20card\\x20\\x28User\\x20PIN\\x29/03"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:239
+msgid "# Copy the serialized id for later usage: $ ecryptfs-manager"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:242
+msgid ""
+"# This will show list option. Choose option \"Add public key to keyring\""
+" # Choose pkcs11-helper # Enter the serialized ID of step 3 to PKCS#11 "
+"ID."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:250
+msgid "**Q:** How can I sign and encrypt Files and PDFs? GnuPG"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:253
+msgid ""
+"Use the gpgsm tool to sign, verify, encrypt and decrypt files. Use a "
+"signature key on a Nitrokey to sign documents using Acrobat Reader, Open "
+"Office / Libre Office or any other PDF reader supporting electronic "
+"signatures."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:256
+msgid "GPA - GNU Privacy Assistant"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:258
+msgid ""
+"The Gnu Privacy Assistant (GPA) recognizes Nitrokey out-of-the-box, has "
+"various features to manage keys and cards. It also allows file operations"
+" such as file encryption, decryption, signing."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:261
+msgid "SOPS - Secrect OPerationS"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:263
+msgid ""
+"SOPS is an editor of encrypted files that supports YAML, JSON and BINARY "
+"formats and encrypts with AWS KMS and PGP. You can find it on github."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:266
+msgid "Aloaha"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:268
+msgid ""
+"Aloaha provides several applications to encrypt and sign PDFs. All of "
+"them, which allow smart card integration, work with Nitrokey. You can for"
+" example import key and certificate by using OpenSC or any other "
+"appropriate variant. After this Windows recognize your certificate and "
+"you can sign the document as it is shown in the screencast below."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:270
+msgid "GpgEx for Windows Explorer"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:272
+msgid ""
+"GpgEx integrates smoothly into Windows Explorer to allow encryption and "
+"decryption of files. Install it as part of the GPG4Win package."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:275
+msgid ""
+"Before you start to use any of these applications with your Nitrokey, "
+"please ensure that you installed the device driver and initialized the "
+"device (e.g. generated keys)."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:277
+msgid ""
+"Certificate-based login with TLS and web browser is a very secure "
+"authentication method but it is only used rarely. If you are unsure what "
+"this means, this approach is most likely not relevant for you."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:279
+msgid ""
+"This page refers to websites and applications which support certificate "
+"authentication, so that users don't need to enter username and password "
+"when login. For instance WebID is a great protocol which makes use of it."
+" Certificate authentication can be used easily with the Nitrokey and also"
+" with any other certificate storages. Mozilla Firefox"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:282
+msgid "You need to install the PKCS#11 driver:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:284
+msgid ""
+"Download the PKCS11 driver and store it on your local hard disk or "
+"install OpenSC. Open the Preferences in Firefox and go to  Privacy & "
+"Security -> Security (just a headline) -> Button 'Security Devices...' "
+"Press the button Load. Enter \"Nitrokey\" as the Module Name and press "
+"the Browse button to select the previously downloaded PKCS11 driver file."
+" Confirm and close all dialogs."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:288
+msgid ""
+"Now you are ready to access websites which provide certificate "
+"authentication. Internet Explorer"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:291
+msgid ""
+"Install this Mini Driver for Windows. Now you are ready to access "
+"websites which provide certificate authentication. Google Chrome"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:294
+msgid ""
+"Under Windows, install this Mini Driver. Under Linux, follow these "
+"instructions. Now you are ready to access websites which provide "
+"certificate authentication. WebID"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:297
+msgid ""
+"WebID is a technology to enable secure and federated social websites. "
+"Here is a video (WebM, Ogg video, H.264) which demonstrates how to use "
+"Nitrokey to create a WebID profile and subsequently to use it in an "
+"Internet cafe in Singapore. Nitrokey protects against computer viruses "
+"which might otherwise steel the username and password. Websites Web Site"
+"        Category CAcert  community-based Certificate Authority "
+"PrivaSphere     Secure messaging HM Revenue & Customs    UK's tax "
+"administration Software Application     Category Roundcube (plugin)      "
+"Webmail Drupal (WebID, Certificate login)       Content management system"
+" Media Wiki (plugin)     Wiki Joomla!         Content management system "
+"Apache + mod_ssl        Web server OpenSSH         SSH (remote secure "
+"shell) client and server Wordpress (plugin)      Blog and CMS Tivoli  "
+"System management framework Globalscape EFT         managed file transfer"
+" (MFT) Oracle Identity Manager         I&AM Fuse Source     Middleware "
+"Liferay         Blog FusionForge     web-based project-management and "
+"collaboration software"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:319
+msgid ""
+"This website is a good read about strong authentication mechanisms, why "
+"client certificate authentication isn't popular and better alternatives "
+"at the horizon."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:321
+msgid "**Q:** How can I use Enterprise Authentication?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:323
+msgid ""
+"LinOTP privacyIDEA RCDevs OpenOTP Usage of Nitrokey HSM as a secure key "
+"store for the Forgerock OpenDJ server and Forgerock Identity Gateway"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:329
+msgid ""
+"**Q:** How can I do SSH for Server Administration on Windows? The "
+"Nitrokey should already have PGP keys installed and the local GnuPG "
+"keyring should be aware of the keys, that is to say GPG4Win should be "
+"installed on the system (only the core application GnuPG is needed). "
+"Furthermore you should install PuTTY. Preparation on client"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:333
+#: ../components/to-be-integrated.rst:705
+msgid ""
+"There are two steps needed to make PuTTY work. At first we need to enable"
+" PuTTY support of GnuPG. To achieve this we use the following command:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:335
+#: ../components/to-be-integrated.rst:707
+msgid "echo enable-putty-support >> AppData\\Roaming\\gnupg\\gpg-agent.conf"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:337
+#: ../components/to-be-integrated.rst:709
+msgid ""
+"Now we want to make sure, that the gpg-agent is starting automatically in"
+" the background (you can start it manually with the command below, if you"
+" prefer). We create a shortcut to gpg-connect-agent.exe. Press and hold "
+"the Windows-key and press 'R'. Type in \"shell:startup\" in the opening "
+"textfield (see picture below). The Windows-Explorer opens and you right-"
+"click on an empty space and choose \"New\" -> \"Shortcut\". Now you "
+"should insert the actual command and proceed:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:339
+#: ../components/to-be-integrated.rst:711
+msgid "\"C:\\Program Files (x86)\\gnupg\\bin\\gpg-connect-agent.exe\" /bye"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:343
+#: ../components/to-be-integrated.rst:715
+msgid ""
+"Reboot your system to make sure the shortcut works. If everything is "
+"alright you now can use PuTTY as usual and PuTTY will make use of the "
+"Nitrokey automatically. Preparation for the server"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:346
+#: ../components/to-be-integrated.rst:718
+msgid "You can generate an authorized_keys file by running"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:348
+#: ../components/to-be-integrated.rst:720
+msgid ""
+"\"C:\\Program Files (x86)\\gnupg\\bin\\gpg.exe\" --export-ssh-key keyID "
+">> authorized_keys"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:350
+#: ../components/to-be-integrated.rst:722
+msgid ""
+"where 'keyID' is either the fingerprint of your key or just the E-Mail "
+"address bind to your key. The Nitrokey must already be known to the local"
+" GnuPG keyring. You can now append that file to a remote server's "
+"authorized_keys and when you ssh to the server you'll be asked for a pin "
+"rather than a passphrase."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:357
+msgid "**Q:** How can I do SSH for Server Administration on Linux?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:359
+#: ../components/to-be-integrated.rst:726
+msgid ""
+"The Nitrokey should already have PGP keys installed and the local GnuPG "
+"keyring should know the keys. Preparation on client"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:362
+#: ../components/to-be-integrated.rst:729
+msgid ""
+"Make sure ~/.gnupg/gpg.conf contains 'use-agent' Add ssh support to "
+"gnupg-agent by adding 'enable-ssh-support' to ~/.gnupg/gpg-agent.conf If "
+"the file does not exist yet, you can just create it. Add the following "
+"code somewhere into your ~/.bashrc (for fish shell, look here)"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:367
+#: ../components/to-be-integrated.rst:734
+msgid ""
+"unset SSH_AGENT_PID if [ \"${gnupg_SSH_AUTH_SOCK_by:-0}\" -ne $$ ]; then "
+"export SSH_AUTH_SOCK=\"$(gpgconf --list-dirs agent-ssh-socket)\" fi"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:372
+#: ../components/to-be-integrated.rst:739
+msgid ""
+"Simply restart your system or try pkill gpg-agent and open a new "
+"commandline to make sure everything is set In case of problems, please "
+"try gpg2 --card-status on first usage to make sure the gpg-agent gets "
+"started"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:375
+#: ../components/to-be-integrated.rst:742
+msgid "Preparation for the server"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:377
+#: ../components/to-be-integrated.rst:744
+msgid "You can generate an authorized_keys file by running either"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:379
+#: ../components/to-be-integrated.rst:746
+msgid ""
+"gpgkey2ssh keyID >> ~/authorized_keys #(for GnuPG version <= 2.1.11) or "
+"gpg2 --export-ssh-key keyID >> ~/authorized_keys #(for newer GnuPG "
+"versions)"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:382
+#: ../components/to-be-integrated.rst:749
+msgid "where"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:384
+#: ../components/to-be-integrated.rst:751
+msgid "keyID"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:386
+#: ../components/to-be-integrated.rst:753
+msgid ""
+"is the subkey id being used for authentication on your Nitrokey. The "
+"Nitrokey must already be known to the local GnuPG keyring. You can now "
+"append that file to a remote server's authorized_keys and when you ssh to"
+" the server you'll be asked for a pin rather than a passphrase."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:389
+#: ../components/to-be-integrated.rst:756
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:391
+#: ../components/to-be-integrated.rst:758
+msgid "If you are still asked for a password please make sure that"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:393
+#: ../components/to-be-integrated.rst:760
+msgid "echo $SSH_AUTH_SOCK"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:395
+#: ../components/to-be-integrated.rst:762
+msgid ""
+"returns something reasonable like '/run/user/1000/gnupg/S.gpg-agent.ssh' "
+"or '/home/username/.gnupg/.S.gpg-agent.ssh'. Unfortunately there were "
+"some changes in GnuPG in the past so that the actual content can differ "
+"from system and GnuPG version. On some systems there may are even "
+"multiple folders in this variable saved. You have to adapt the above "
+"given code in .bashrc so that the variable SSH_AUTH_SOCK is correct. In "
+"doubt look for 'SSH_AUTH_SOCK' in"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:397
+#: ../components/to-be-integrated.rst:764
+msgid "man gpg-agent"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:399
+#: ../components/to-be-integrated.rst:766
+msgid "to find the actual code for your version/system."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:401
+#: ../components/to-be-integrated.rst:768
+msgid ""
+"You may check if you have a 'pinentry' program installed via your package"
+" manager. You may need to set it in the gpg-agent.conf as well. You may "
+"need to point gpg-agent to the correct TTY."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:415
+msgid "**Q:** How can I use the Nitrokey for VPN access?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:418
+#: ../components/to-be-integrated.rst:789
+msgid "For: Nitrokey Pro, Nitrokey Storage, Nitrokey Start, Nitrokey HSM OpenVPN"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:421
+#: ../components/to-be-integrated.rst:792
+msgid "Generate a key on Nitrokey via pkcs11-tool."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:423
+#: ../components/to-be-integrated.rst:794
+msgid "Generate a certificate signing request via openssl + pkcs11 module:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:425
+#: ../components/to-be-integrated.rst:796
+msgid ""
+"$ openssl req -engine pkcs11 -sha256 -new -key id_3 -keyform engine -out "
+"<CSR FILE.CSR> -config <OPENSSL.CNF> -extensions usr_client"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:427
+#: ../components/to-be-integrated.rst:798
+msgid "Sign the certificate with our certificate authority"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:429
+#: ../components/to-be-integrated.rst:800
+msgid ""
+"$ openssl ca -cert <CA.CRT> -keyfile <CA.KEY> -in <FILE.CSR> -out "
+"<FILE.CRT> -config <OPENSSL.CNF> -extensions usr_client"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:431
+#: ../components/to-be-integrated.rst:478
+#: ../components/to-be-integrated.rst:802
+#: ../components/to-be-integrated.rst:849
+msgid "Import  the certificate into the Nitrokey via pkcs11-tool"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:433
+#: ../components/to-be-integrated.rst:804
+msgid "$ pkcs15-init --update-existing --store-certificate <FILE.PEM> --id 3"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:435
+#: ../components/to-be-integrated.rst:806
+msgid "Read the certificate's ID required for openvpn configuration:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:437
+#: ../components/to-be-integrated.rst:808
+msgid "$ openvpn --show-pkcs11-ids /usr/lib64/opensc-pkcs11.so"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:439
+#: ../components/to-be-integrated.rst:810
+msgid ""
+"Modify your openvpn configuration. Add the certificate ID which you "
+"gathered in the previous step: E.g."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:441
+#: ../components/to-be-integrated.rst:812
+msgid ""
+"$ pkcs11-id "
+"'OpenPGP\\x20project/PKCS\\x2315\\x20emulated/fffe43211234/User\\x20PIN\\x20\\x28OpenPGP\\x20card\\x29/03'"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:443
+#: ../components/to-be-integrated.rst:814
+msgid "Add the PKCS#11 driver to the configuration too, e.g.:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:445
+#: ../components/to-be-integrated.rst:816
+msgid "$ pkcs11-providers '/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so'"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:447
+#: ../components/to-be-integrated.rst:818
+msgid "See this link for further information."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:451
+#: ../components/to-be-integrated.rst:822
+msgid ""
+"Now all configurations are done. When executing OpenVPN client, "
+"Nitrokey's PIN needs to be entered. Unfortunately OpenVPN doesn't prompt "
+"to enter the PIN and it has to be entered in the following way:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:453
+#: ../components/to-be-integrated.rst:824
+msgid "$ telnet 8888 password 'User PIN (OpenPGP card) token' <PIN>"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:455
+#: ../components/to-be-integrated.rst:826
+msgid ""
+"Alternatively you could recompile OpenVPN client with systemd support "
+"disabled and it will prompt you for the PIN as expected. Alternatively to"
+" the OpenVPN client you could use the Viscosity client which provides a "
+"better user experience especially for entering the PIN."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:458
+#: ../components/to-be-integrated.rst:829
+msgid "IPsec"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:460
+#: ../components/to-be-integrated.rst:831
+msgid "Strong Swan works using the PKCS#11 driver. Basically follow these steps:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:462
+#: ../components/to-be-integrated.rst:833
+msgid ""
+"Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 "
+"bit RSA key."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:464
+#: ../components/to-be-integrated.rst:835
+msgid ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
+"-l -k --key-type rsa:4096 --id 10 --label 'Staging Access'"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:466
+#: ../components/to-be-integrated.rst:837
+msgid "Generate a certificate signing request via openssl + pkcs11 module"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:468
+#: ../components/to-be-integrated.rst:839
+msgid ""
+"$ openssl OpenSSL> engine dynamic -pre SO_PATH:/usr/lib/x86_64-linux-"
+"gnu/engines-1.1/pkcs11.so -pre ID:pkcs11 -pre LIST_ADD:1 -pre LOAD -pre "
+"MODULE_PATH:/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so OpenSSL> "
+"req -engine pkcs11 -sha256 -new -key id_10 -keyform engine -out "
+"user@email.com-staging-cert.csr -subj "
+"'/C=GB/L=Cambridge/O=Organization/OU=Staging "
+"Access/CN=user@email.com/emailAddress=user@email.com'"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:472
+#: ../components/to-be-integrated.rst:843
+msgid "Sign the certificate with your certificate authority"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:474
+#: ../components/to-be-integrated.rst:845
+msgid "Convert the certificate to DER"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:476
+#: ../components/to-be-integrated.rst:847
+msgid ""
+"$ openssl x509 -in user@email.com-staging-cert.csr -out user@email.com-"
+"staging-cert.der -outform DER"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:480
+#: ../components/to-be-integrated.rst:851
+msgid ""
+"$ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so "
+"-l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging "
+"Access'"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:482
+#: ../components/to-be-integrated.rst:853
+msgid ""
+"Configure Strongswan to load opensc-pkcs11 module then to load the "
+"certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and "
+"add the following module:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:486
+#: ../components/to-be-integrated.rst:857
+msgid "modules {"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:485
+#: ../components/to-be-integrated.rst:856
+msgid "Nitrokey {"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:486
+#: ../components/to-be-integrated.rst:857
+msgid "path = /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:487
+#: ../components/to-be-integrated.rst:488
+#: ../components/to-be-integrated.rst:858
+#: ../components/to-be-integrated.rst:859
+msgid "}"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:490
+#: ../components/to-be-integrated.rst:861
+msgid ""
+"Initiate the VPN connection via IPSec/Strongswan, then prompt for "
+"Nitrokey PIN"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:492
+#: ../components/to-be-integrated.rst:863
+msgid "8. VPN is now connected Stunnel"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:495
+#: ../components/to-be-integrated.rst:866
+msgid ""
+"Stunnel works as an SSL encryption wrapper between remote client and "
+"local (inetd-startable) or remote server. It can be used to add SSL "
+"functionality to commonly used inetd daemons like POP2, POP3, and IMAP "
+"servers without any changes in the programs' code."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:497
+#: ../components/to-be-integrated.rst:868
+msgid "Stunnel is able to load OpenSC PKCS#11 engine using this configuration:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:499
+#: ../components/to-be-integrated.rst:870
+msgid ""
+"engine=dynamic engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so "
+"engineCtrl=ID:pkcs11 engineCtrl=LIST_ADD:1 engineCtrl=LOAD "
+"engineCtrl=MODULE_PATH:/usr/lib/pkcs11/opensc-pkcs11.so engineCtrl=INIT"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:507
+#: ../components/to-be-integrated.rst:878
+msgid "[service] engineNum=1 key=id_45"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:525
+msgid "**Q:** How can I do PKI / Certificate Authority (CA)?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:527
+msgid "CA keys are very sensitive and must not be compromised or lost. GnuPG"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:530
+msgid "Instructions OpenSSL"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:533
+msgid ""
+"Install OpenSC'S engine_pkcs11 Run the command \"pkcs11-tool --list-"
+"slots\" to list the available slots. Run the command \"openssl> req "
+"-engine pkcs11 -new -key slot_X-id_XXXX -keyform engine -x509 -out "
+"cert.pem -text\" where X is the appropriate slot number and XXXX is the "
+"slot ID, e.g. \"... -key "
+"slot_5-id_c6f280080fb0ed1ebff0480a01d00a98a1b3b89a ...\" Test"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:538
+msgid "Other"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:540
+msgid ""
+"Please see this PDF (p. 30) from heinlein-support.de for summarized "
+"instructions in German."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:542
+msgid ""
+"µ-CA-tool is a script based on GnuPG, OpenSC and OpenSSL which helps to "
+"perform basic tasks of a CA. It works with Nitrokey Pro and Nitrokey "
+"Storage."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:550
+msgid "**Q:** How can I use the password manager?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:552
+msgid "You have the following options:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:554
+msgid ""
+"Use Nitrokey's built-in Password Safe to store passwords securely. For "
+"this you need the Nitrokey App. Maximum are 16 passwords. Use Pass "
+"(simple commandline password manager for Unix systems, mainly for "
+"experts). Use KeePass as described below."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:558
+msgid "Protecting KeePass with Nitrokey's One-Time Passwords"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:560
+msgid ""
+"You can also follow this video (It contains a mistake around time 4:22 "
+"which is described later below). Keepass Installation"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:563
+msgid ""
+"Install Keepass 2.3.5. For Ubuntu: Because the main repository contains "
+"the older 2.3.4, you have to use some other source like this private PPA "
+"(please run these commands in terminal):"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:566
+msgid ""
+"sudo add-apt-repository ppa:jtaylor/keepass sudo apt-get update sudo apt-"
+"get install keepass2"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:570
+msgid ""
+"Install the OtpKeyProv plugin by downloading the archive, unzipping and "
+"copying the content to Keypass' Plugin directory. On Linux: sudo cp "
+"OtpKeyProv.plgx /usr/lib/keepass2/Plugins/ For Linux, optional: Install "
+"mono-complete package if plugin is not detected when running Keepass2 "
+"(you can check that in Tools/Plugins):"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:574
+msgid "sudo apt-get install mono-complete"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:576
+msgid "Keepass OTP Configuration Existing Database"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:579
+msgid ""
+"Do a backup of your database and keep it until you are really sure "
+"everything works fine! Make sure you really did a backup. If you mess up,"
+" your passwords are lost! Open database as usual Select File/Change "
+"Master Key..."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:584
+msgid "New Database"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:586
+msgid "Create new database as usual"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:588
+msgid "Common"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:590
+msgid ""
+"Insert Master Password (optional) Set Key file / provider: to One-Time "
+"Passwords (OATH HOTP) Click OK With Nitrokey App: select HOTP slot and "
+"generate HOTP secret (it will be copied to clipboard automatically). "
+"Note: You may want write down this secret and store it anywhere secure. "
+"Otherwise if you lose your Nitrokey or it gets broken your password "
+"database is lost as well!!! Paste the secret to Keepass OTP Plugin window"
+" Make sure the Counter field and digits count are set the same in both "
+"windows. Click OK in Nitrokey App to save the slot. Select secret type: "
+"Base32 Set the other settings as you like. Please consult plugin's manual"
+" (should be in same downloaded archive). I would recommend to set look-"
+"ahead value to non-zero to prevent locking up the database after "
+"accidental code request from used HOTP slot. In that case counters on the"
+" device and in Keepass would be out of sync and OTP codes will not be the"
+" same with expected."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:599
+msgid "Unlocking Database"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:601
+msgid ""
+"Open database Insert Master Password (if set) Key file / provider: to "
+"One-Time Passwords (OATH HOTP) Press OK Insert HOTP codes by repeatedly "
+"choosing proper HOTP slot from the Nitrokey App and pasting the clipboard"
+" content to proper field (the order of the codes is important). Press OK"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:608
+msgid "Issues"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:610
+msgid ""
+"Due to nature of HOTP solution it is possible to get counters "
+"desynchronized (by selecting wrong OTP slot during day-to-day use). Using"
+" look-ahead plugin's setting should prevent that (value 10 or so should "
+"suffice - depends on desired security requirements - this would allow to "
+"10 accidental requests). TOTP is not having that problem. Setting the OTP"
+" protection could be error-prone. There is no secret validation on "
+"OtpKeyProv side. In the test movie at 4:22 I have managed to set the "
+"Base32 coded secret as Hex (which was not a proper hex value) and it has "
+"not complained about it. There is no information what happened to "
+"database and how it is now configured. I have not noticed until I have "
+"watched the movie."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:613
+msgid "Tested under Ubuntu 16.10, Nitrokey App v0.6.3 and Nitrokey Storage v0.45."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:622
+msgid "**Q:** How can I use the True Random Number Generator?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:624
+msgid ""
+"Both devices are compatible to the OpenPGP Card, so that scdrand should "
+"work. This script may be useful. The TRNG provides about 40 kbit/s."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:626
+msgid ""
+"The user comio created a systemd file to use scdrand and thus the TRNG "
+"more generally. He created a ebuild for Gentoo, too."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:632
+msgid "**Q:** Do you have resources for development and integration?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:635
+msgid ""
+"Use Nitrokey library to manage the one-time passwords and password safe "
+"functionality. The project nitrokey-get-totp and nitrokey-get-password "
+"are nice examples for using the python bindings of Nitrokey library to "
+"get a custom interface. In order to access the integrated smart card, you"
+" can use OpenSC's command line tools. If your application has a PKCS#11 "
+"interface, use OpenSC's PKCS#11 driver. To work with the smart card low "
+"level, see the OpenPGP Card specification. The source code of the "
+"firmware and the hardware layout are available too. To develop special "
+"applications or for command line access one can use the nitrocli created "
+"by d-e-s-o. Gkey is a go-based command line tool to access the Password "
+"Safe and OTP entries. A libnitrokey wrapper for Rust providing access to "
+"Nitrokey devices."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:646
+msgid "# HSM 2"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:648
+msgid ""
+"**Nitrokey HSM:** 124 dataobjects (DF, EF) can be created. Each EF can "
+"have a size of up to 256 byte. The total storage capacity of ca. 32 KByte"
+" is shared dynamically among keys and data objects."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:652
+msgid "**Q:** How to use the HSM for Login For: Nitrokey HSM"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:655
+msgid "Select your use case:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:657
+msgid ""
+"Login With Nitrokey HSM on Stand Alone Windows Computers Login With "
+"Nitrokey HSM on Windows Domain Computers Using MS Active Directory For "
+"Unix environments an integration with PAM and OpenSSH is available."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:661
+msgid "**Q:**  How to use the HSM for Email Encryption"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:663
+msgid ""
+"Encrypt your email using the S/MIME industry standard available in all "
+"major e-mail clients."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:665
+msgid ""
+"The Nitrokey HSM has been tested to work with Mozilla Thunderbird and "
+"Microsoft Outlook. Other email clients with support for PKCS#11 or "
+"Microsoft CSP should work as well."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:667
+msgid "Note: A certificate can be purchased cheaply from CERTUM."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:669
+msgid "**Q:**   How to use the Nitrokey for Hard Disk Encryption with VeraCrpt?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:671
+msgid ""
+"VeraCrypt is a free and Open Source disk encryption software for Windows,"
+" macOS, and GNU/Linux. It is the successor of TrueCrypt and thus "
+"recommended, although the following instructions should apply to "
+"TrueCrypt as well. Follow these steps to use the program with Nitrokey:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:680
+msgid ""
+"Security Consideration: Please note that VeraCrypt doesn't make use of "
+"the full security which Nitrokey (and smart cards in general) offer. "
+"Instead it stores a keyfile on the Nitrokey which theoretically could be "
+"stolen by a computer virus after the user enters the password."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:682
+msgid ""
+"Note: Aloaha Crypt is based on TrueCrypt/VeraCrypt but without the "
+"described security limitation. (Not tested with Nitrokey HSM!)"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:685
+msgid "**Q:** How to sign and encrypt files and pdfs?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:687
+msgid "GnuPG"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:689
+msgid ""
+"Starting with version 2.1, GnuPG has build-in but limited support for the"
+" Nitrokey HSM. Use the gpgsm tool to sign, verify, encrypt and decrypt "
+"files or S/MIME messaging using your Nitrokey HSM. Use a signature key on"
+" a Nitrokey HSM to sign documents using Acrobat Reader, Open Office / "
+"Libre Office or any other PDF reader supporting electronic signatures. "
+"ECC HSM Encryptor"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:692
+msgid ""
+"ECC HSM Encryptor is a small application to encrypt and decrypt files "
+"with a Nitrokey HSM."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:694
+msgid ""
+"**Q:** How to do certificat-based Web login Protect access to sensitive "
+"information on your website with 2nd factor authentication."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:697
+msgid ""
+"Use a Nitrokey HSM as authentication token via the build-in device "
+"authentication PKI or use keys and certificates on a Nitrokey HSM for "
+"TLS/SSL client authentication."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:699
+msgid ""
+"**Q:** SSH for Server Administration with windows For: Nitrokey Pro, "
+"Nitrokey Storage, Nitrokey Start, Nitrokey HSM"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:702
+msgid ""
+"The Nitrokey should already have PGP keys installed and the local GnuPG "
+"keyring should be aware of the keys, that is to say GPG4Win should be "
+"installed on the system (only the core application GnuPG is needed). "
+"Furthermore you should install PuTTY. Preparation on client"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:724
+msgid "**Q:** SSH Server administration on linux"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:771
+msgid "**Q:** DNSSEC"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:774
+msgid "For: Nitrokey HSM"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:776
+msgid ""
+"Protect your domain name resolution using DNSSEC and a Nitrokey HSM as "
+"secure key store. It's based on Smartcard-HSM which is why the following "
+"resource apply:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:778
+msgid ""
+"Signing NSD DNSSEC Zones with Nitrokey HSM by Vadim Penzin. Integration "
+"with OpenDNSSEC has been successfully tested in a demo by Richard Lamb. "
+"Luis D Espinoza Sanchez & Eberhard W Lisse held a session on using the "
+"SmartCard-HSM for DNSSEC at the 2015 ICAAN Meeting in Singapore. Jan-Piet"
+" Mens wrote a nice article about integrating the SmartCard-HSM with "
+"PowerDNS."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:784
+msgid ""
+"**Q:** Physical Access Control With it's unique build-in device "
+"authentication PKI, a Nitrokey HSM has a cryptographically protected "
+"unique identity that can be verified in a fast authentication protocol. "
+"An access control terminal can verify authenticity and identity of the "
+"device, create a secure communication channel and perform offline PIN "
+"verification. The coolPACS project has all the details."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:787
+#: ../components/to-be-integrated.rst:883
+msgid "**Q:**"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:885
+msgid "PKI / Certificate Authority (CA)"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:887
+msgid "**Q:** Secret Management and Cloud Infrastructure"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:889
+msgid ""
+"An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey "
+"HSM can be found at banzaicloud.com."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:891
+msgid "**Q:** How to do N-of-m Schemes"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:893
+msgid ""
+"The Nitrokey HSM 2 supports two different n-of-m schemes - one for secure"
+" sharing of key material/passwords and one for public key authentication "
+"to control the access to the device. Please see this blog post for more "
+"detailed information. N-of-m for DKEK Shares"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:896
+msgid ""
+"This feature can be used with OpenSC as described here. The general "
+"approach is seen in the videos below (external links)."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:898
+msgid "Nitrokey HSM's Secure Key Backup and Restore:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:900
+msgid "Screencast"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:902
+msgid "Nitrokey HSM's M-of-N Threshold Scheme:"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:904
+msgid "screencast N-of-m for public key authentication"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:907
+msgid ""
+"So far n-of-m authentication is only supported in OpenSCDP. The blog post"
+" gives an overview and a how-to here (CDN access required) is shown the "
+"process step by step in the Smart Card Shell. For OpenSC there is a "
+"ticket to get that integrated."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:909
+msgid ""
+"n-of-m authentication is also supported in the PKI-as-a-Service Portal "
+"for locally and remote connected HSMs. The PKI-as-a-Service Portal is "
+"based on OpenSCDP."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:911
+msgid "**Q:** How to safe Cryptocurrences in the Nitrokey HSM"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:914
+msgid ""
+"J.v.d.Bosch wrote a simple, free python program to secure the private key"
+" of a Bitcoin wallet in a HSM. See here for further information. Using "
+"the HSM in an Ethereum PoA Chain. Tezos has been reported to work with "
+"Nitrokey HSM."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:918
+msgid ""
+"**Q:** How to use the True Random Number Generator? Nitrokey HSM can be "
+"used with Botan and TokenTools by using OpenSC as a PKCS#11 driver."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:921
+msgid ""
+"OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 "
+"doesn't contain a mapping for OpenSSL to C_GenerateRandom."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:923
+msgid "**Q:** What can I use for development and integration?"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:925
+msgid ""
+"se OpenSC's commandline tools If your application has a PKCS#11 "
+"interface, use OpenSC's PKCS#11 driver. Depending on your Linux "
+"distribution, the PKCS driver may may be located at /usr/lib/x86_64"
+"-linux-gnu/opensc-pkcs11.so for example."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:927
+msgid ""
+"Alternatively to OpenSC, you might use sc-hsm-embedded PKCS#11 and CSP-"
+"Minidriver Module."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:928
+msgid ""
+"In case you use Java, you find a JCE Provider as part of Smart Card "
+"Shell. You can find information about the m-of-n scheme here. Secure "
+"Messaging can be used with the JCE provider. Please register at the "
+"CardContact Developer Network to get access to the user manual and "
+"further tools. You can also request the manual from us. Smart card "
+"forwarding with Fedora A user generated tool on GitHub to provide an easy"
+" frontend to OpenSCs toolset - nitrotool A forum post describes the "
+"procedure to sign executables with a key stored on HSM on Windows."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:936
+msgid "Key Use Counter"
+msgstr ""
+
+#: ../components/to-be-integrated.rst:938
+msgid ""
+"The Key Use Counter is displayed in the Key Manager of the Smart Card "
+"Shell. At the moment you can only set it with a script "
+"(SmartCardHSMKeySpecGenerator.prototype.setKeyUseCounter in the class "
+"scsh/sc-hsm/SmartCardHSM.js)."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:940
+msgid ""
+"In our PKCS#11 module there is a proprietary attribute "
+"CKA_SC_HSM_KEY_USE_COUNTER with the key use of the C_GenerateKeyPair "
+"counter can be set. The attribute can then also be set for a key can be "
+"queried."
+msgstr ""
+
+#: ../components/to-be-integrated.rst:942
+msgid ""
+"In OCF and the JCE Provider, the Key Use Counter can be queried with "
+"SmartCardHSMKey.getUseCounter() and confirm with "
+"SmartCardHSMKeySpec.setKeyUseCounter() can be set."
+msgstr ""
+
