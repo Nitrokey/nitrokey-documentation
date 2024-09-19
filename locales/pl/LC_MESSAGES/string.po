@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-12 09:00+0200\n"
+"POT-Creation-Date: 2024-09-19 11:48+0200\n"
 "PO-Revision-Date: 2024-09-04 13:51+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language: pl\n"
@@ -9019,11 +9019,11 @@ msgstr "Konfiguracja ma format yaml:"
 msgid "All platforms"
 msgstr "Wszystkie platformy"
 
-#: ../nethsm/pkcs11-setup.rst:128
+#: ../nethsm/pkcs11-setup.rst:131
 msgid "Instances"
 msgstr "Wystąpienia"
 
-#: ../nethsm/pkcs11-setup.rst:130
+#: ../nethsm/pkcs11-setup.rst:133
 msgid ""
 "If multiple NetHSM instances are listed in the same slot, these instances"
 " must be configured in a cluster. The credentials of the users and the "
@@ -9033,7 +9033,7 @@ msgstr ""
 "instancje te muszą być skonfigurowane w klastrze. Poświadczenia "
 "użytkowników i klucze muszą być takie same we wszystkich instancjach."
 
-#: ../nethsm/pkcs11-setup.rst:132
+#: ../nethsm/pkcs11-setup.rst:135
 msgid ""
 "The module will use the instances in a round-robin fashion, trying "
 "another instance if one fails."
@@ -9041,11 +9041,87 @@ msgstr ""
 "Moduł będzie korzystał z instancji w trybie round-robin, wypróbowując "
 "kolejną instancję, jeśli jedna zawiedzie."
 
-#: ../nethsm/pkcs11-setup.rst:136
+#: ../nethsm/pkcs11-setup.rst:139
+msgid "Network reliability"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:141
+msgid ""
+"To improve the reliability of the PKCS#11 module, it is possible to "
+"configure timeouts, retries, instance redundancy and TCP keepalives."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:144
+#, fuzzy
+msgid "Retries"
+msgstr "Metryki"
+
+#: ../nethsm/pkcs11-setup.rst:146
+msgid ""
+"If a NetHSM instance is unreachable, the PKCS#11 module is capable of "
+"retrying sending the request to other instances, or to the same instance "
+"(if other instances are also unreachable). It is possible to introduce a "
+"delay between retries."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:149
+msgid ""
+"Failing instances are marked as unreachable and retried in a background "
+"thread, so they won't be tried unless all instances are unreachable"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:150
+msgid ""
+"If no background thread can be spawned "
+"(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), failed instances will be tried "
+"during normal operations, slowing down the requests. To minimise this, "
+"such \"inline\" health checks are limited to 1 second timeouts, and only "
+"3 health checks can be attempted per request (this is a worst case "
+"situation that can only be reached if a large number of instances "
+"failed)."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:152
+msgid "Therefore:"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:154
+msgid ""
+"The maximum number of requests sent for one API call is: "
+"``retries.count`` + 1 + 3"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:155
+msgid ""
+"The maximum (worst case) duration before reaching the timeout for one API"
+" call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:156
+msgid ""
+"The maximum timeout for one PKCS#11 function call will vary because some "
+"functions will lead to multiple API calls in the NetHSM."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:159
+msgid "TCP keepalive"
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:161
+msgid ""
+"To improve performance, connections are kept open with the NetHSM "
+"instances to avoid the need for re-opening them. It is possible that in a"
+" network with a firewall, these idle connection could be closed, leading "
+"to the next connection attempt to timeout. To prevent slow timeouts from "
+"happening, and to detect earlier if it does, it is possible to configure "
+"TCP keepalives for these."
+msgstr ""
+
+#: ../nethsm/pkcs11-setup.rst:166
 msgid "Users"
 msgstr "Użytkownicy"
 
-#: ../nethsm/pkcs11-setup.rst:138
+#: ../nethsm/pkcs11-setup.rst:168
 msgid ""
 "The operator and administrator users are both optional but the module "
 "won't start if no user is configured. This is so you can configure the "
@@ -9058,7 +9134,7 @@ msgstr ""
 "tylko z użytkownikiem operatora lub z obydwoma użytkownikami "
 "jednocześnie."
 
-#: ../nethsm/pkcs11-setup.rst:140
+#: ../nethsm/pkcs11-setup.rst:170
 msgid ""
 "When the two users are set the module will use the operator by default "
 "and only use the administrator user when the action needs it."
@@ -9067,28 +9143,29 @@ msgstr ""
 "operatora i używał użytkownika administratora tylko wtedy, gdy akcja tego"
 " wymaga."
 
-#: ../nethsm/pkcs11-setup.rst:142
+#: ../nethsm/pkcs11-setup.rst:172
+#, fuzzy
 msgid ""
-"The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 "
-"SO is mapped to the NetHSM administrator."
+"The regular PKCS#11 user is mapped to the NetHSM operator and the PKCS#11"
+" SO is mapped to the NetHSM administrator."
 msgstr ""
 "Zwykły użytkownik PKCS11 jest mapowany na operatora NetHSM, a PKCS11 SO "
 "jest mapowany na administratora NetHSM."
 
-#: ../nethsm/pkcs11-setup.rst:145 ../nitrokey3/shared/reset.rst.inc:17
+#: ../nethsm/pkcs11-setup.rst:175 ../nitrokey3/shared/reset.rst.inc:17
 #: ../software/nk-app2/passwords.rst:2
 msgid "Passwords"
 msgstr "Hasła"
 
-#: ../nethsm/pkcs11-setup.rst:147
+#: ../nethsm/pkcs11-setup.rst:177
 msgid "The password can be provided by multiple means:"
 msgstr "Hasło można podać na wiele sposobów:"
 
-#: ../nethsm/pkcs11-setup.rst:149
+#: ../nethsm/pkcs11-setup.rst:179
 msgid "In plain text in the configuration ``password: \"mypassword\"``"
 msgstr "W postaci zwykłego tekstu w konfiguracji ``password: \"mypassword\"``"
 
-#: ../nethsm/pkcs11-setup.rst:150
+#: ../nethsm/pkcs11-setup.rst:180
 msgid ""
 "In an environment variable read by the module with the ``env:`` prefix: "
 "``env:ENV_STORING_THE_PASSWORD``"
@@ -9096,7 +9173,7 @@ msgstr ""
 "W zmiennej środowiskowej odczytywanej przez moduł z prefiksem ``env:``: "
 "``env:ENV_STORING_THE_PASSWORD``"
 
-#: ../nethsm/pkcs11-setup.rst:151
+#: ../nethsm/pkcs11-setup.rst:181
 msgid ""
 "Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool "
 "--module libnethsm_pkcs11.so -p opPassphrase`` To provide the the admin "
@@ -9108,7 +9185,7 @@ msgstr ""
 "administratora należy użyć ``--so-pin`` zamiast: ``pkcs11-tool --module "
 "libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``"
 
-#: ../nethsm/pkcs11-setup.rst:154
+#: ../nethsm/pkcs11-setup.rst:184
 msgid ""
 "If the password of an user is not set in the configuration file a login "
 "will be required to provide the password (3rd method)."
@@ -9116,7 +9193,7 @@ msgstr ""
 "Jeśli hasło użytkownika nie jest ustawione w pliku konfiguracyjnym, "
 "wymagane będzie zalogowanie się w celu podania hasła (trzecia metoda)."
 
-#: ../nethsm/pkcs11-setup.rst:156
+#: ../nethsm/pkcs11-setup.rst:186
 msgid ""
 "A NetHSM that is not operational is considered as a slot with the token "
 "not present."
