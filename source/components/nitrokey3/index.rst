@@ -15,7 +15,7 @@ Additional features like PIV are available in test firmware releases. See the `r
 .. _Secure Element Backend or Software Backend: faq#how-can-I-use-the-se050-secure-element
 .. _release notes: https://github.com/Nitrokey/nitrokey-3-firmware/releases
 
-First check the:
+First please check the:
 
 .. toctree::
    :maxdepth: 1
