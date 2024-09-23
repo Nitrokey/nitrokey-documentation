@@ -493,17 +493,16 @@ Metrics
 ~~~~~~~
 
 The NetHSM logs metrics of system parameters.
-
-.. note::
-   This command requires the authentication of a user with the *Metrics* role.
-   Please refer to chapter `Roles <administration#roles>`__ to learn more about the role.
-
 Please refer to `Metrics <metrics>`__ to learn more about each metric.
 
 The metrics can be retrieved as follows.
 
 .. tabs::
    .. tab:: nitropy
+      **Required Role**
+
+      This operation requires an authentication with the *Metrics* role.
+
       **Example**
 
       .. code-block:: bash
