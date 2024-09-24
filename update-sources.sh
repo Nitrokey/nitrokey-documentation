@@ -1,8 +1,12 @@
 #!/bin/bash
 
+cd /var/www/docs/sphinx/
+
+echo $(date +%s) >> trigger-log.txt
+
 # Load environment variables from config.env
-if [ -f ./.env ]; then
-  source ./.env
+if [ -f /var/www/docs/sphinx/.env ]; then
+  source /var/www/docs/sphinx/.env
 else
   echo "Environment file not found!"
   exit 1
