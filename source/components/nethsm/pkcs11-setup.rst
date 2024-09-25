@@ -108,6 +108,20 @@ The configuration is yaml-formatted:
             count: 3
             # The delay between retries, in integer seconds
             delay_seconds: 1
+          # it is possible to configure idle connections to make use of TCP keepalives, preventing the closing of connections by a firewall or detecting such cases
+          tcp_keepalive:
+            # the number of seconds before keepalives packets start being sent
+            # Corresponds to `TCP_KEEPIDLE` on Linux, `TCP_KEEPALIVE` on macOS, and the field keepalivetime of tcp_keepalive on Windows
+            time_seconds: 600
+            # the number of seconds between each keepalive packet
+            # Corresponds to `TCP_KEEPINTVL` on Linux and macOS, and the field keepaliveinterval of tcp_keepalive on Windows
+            interval_seconds: 60
+            # the number of keepalive packets being sent without a response before the connection 
+            # is considered closed
+            # Corresponds to `TCP_KEEPCNT` on Linux and macOS, and is not used on Windows
+            retries: 3
+          # Time a connection can spend idle before being closed
+          connections_max_idle_duration: 1800
           # Configurable timeout for network operations. If a network operation takes more than, `timeout_seconds`, consider it failed. If `retries` is configured, it will be retried.
           # Defaults to infinite
           timeout_seconds: 10
@@ -121,6 +135,33 @@ If multiple NetHSM instances are listed in the same slot, these instances must b
 The module will use the instances in a round-robin fashion, trying another instance if one fails.
 
 
+Network reliability
+~~~~~~~~~~~~~~~~~~~
+
+To improve the reliability of the PKCS#11 module, it is possible to configure timeouts, retries, instance redundancy and TCP keepalives.
+
+Retries
+^^^^^^^
+
+If a NetHSM instance is unreachable, the PKCS#11 module is capable of retrying sending the request to other instances, or to the same instance (if other instances are also unreachable).
+It is possible to introduce a delay between retries.
+
+- Failing instances are marked as unreachable and retried in a background thread, so they won't be tried unless all instances are unreachable
+- If no background thread can be spawned (`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), failed instances will be tried during normal operations, slowing down the requests. To minimise this, such "inline" health checks are limited to 1 second timeouts, and only 3 health checks can be attempted per request (this is a worst case situation that can only be reached if a large number of instances failed).
+
+Therefore:
+
+- The maximum number of requests sent for one API call is: ``retries.count`` + 1 + 3
+- The maximum (worst case) duration before reaching the timeout for one API call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3 
+- The maximum timeout for one PKCS#11 function call will vary because some functions will lead to multiple API calls in the NetHSM.
+
+TCP keepalive
+^^^^^^^^^^^^^
+
+To improve performance, connections are kept open with the NetHSM instances to avoid the need for re-opening them.
+It is possible that in a network with a firewall, these idle connection could be closed, leading to the next connection attempt to timeout.
+To prevent slow timeouts from happening, and to detect earlier if it does, it is possible to configure TCP keepalives for these. 
+
 Users
 ~~~~~
 
@@ -128,7 +169,7 @@ The operator and administrator users are both optional but the module won't star
 
 When the two users are set the module will use the operator by default and only use the administrator user when the action needs it.
 
-The regular PKCS11 user is mapped to the NetHSM operator and the PKCS11 SO is mapped to the NetHSM administrator.
+The regular PKCS#11 user is mapped to the NetHSM operator and the PKCS#11 SO is mapped to the NetHSM administrator.
 
 Passwords
 ~~~~~~~~~

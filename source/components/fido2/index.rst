@@ -2,7 +2,7 @@ Nitrokey FIDO2
 ==============
 
 .. contents:: :local:
-   
+
 First check the:
 
 .. toctree::
