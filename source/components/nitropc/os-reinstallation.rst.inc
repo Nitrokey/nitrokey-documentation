@@ -1,7 +1,6 @@
 Operating System Reinstallation
 ===============================
 
-
 .. contents:: :local:
 
 .. warning::
