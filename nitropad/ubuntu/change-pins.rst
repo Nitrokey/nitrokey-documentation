@@ -1,1 +1,1 @@
-.. include:: ../../pro/change-pins.rst.inc
+.. include:: ../../nitrokeys/features/openpgp-card/change-pins.rst
