@@ -13,7 +13,7 @@ For security reasons, the German Federal Office for Information Security (Bundes
 Basics of Elliptic-Curve Cryptography
 -------------------------------------
 
-In contrast to RSA, there are many different forms (so-called curves) of elliptic-curve cryptography. Notably, the `NSA was involved <https://www.schneier.com/essays/archives/2007/11/did_nsa_put_a_secret.html>`__ in the development of the NIST curves. Even if there is no evidence of back doors in the curves, using a certain curve can pose a question of trust. Fortunately the new Nitrokey Storage 2 and Pro 2 support two kind of curves, namely NIST and Brainpool. In what follows we will use Brainpool curves. `This article <https://arstechnica.com/information-technology/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/>`__ provides a good entry point for gaining a general understanding of elliptic-curve cryptography.
+In stark contrast to RSA, there are many different forms (so-called curves) of elliptic-curve cryptography. Notably, the `NSA was involved <https://www.schneier.com/essays/archives/2007/11/did_nsa_put_a_secret.html>`__ in the development of the NIST curves. Even if there is no evidence of back doors in the curves, using a certain curve can pose a question of trust. Fortunately the new Nitrokey Storage 2 and Pro 2 support two kind of curves, namely NIST and Brainpool. In what follows we will use Brainpool curves. `This article <https://arstechnica.com/information-technology/2013/10/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/>`__ provides a good entry point for gaining a general understanding of elliptic-curve cryptography.
 
 System Requirements
 -------------------
