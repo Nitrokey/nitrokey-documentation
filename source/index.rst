@@ -1,7 +1,7 @@
 Nitrokey Documentation
 ======================
 
-Another content change.
+Another new content change.
 
 .. toctree::
    :maxdepth: 1
