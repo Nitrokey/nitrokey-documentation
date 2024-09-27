@@ -75,9 +75,9 @@ build_docs() {
 
     # Determine sphinx-build options
     sphinx_options="-j auto -b html -D language=$lang -d /docs/build/$lang/doctrees . /docs/dist/$lang"
-    if $full_build; then
-        sphinx_options="-a $sphinx_options"
-    fi
+    # if $full_build; then
+    #     sphinx_options="-a $sphinx_options"
+    # fi
 
     # Run the Sphinx build command with the determined options
     docker run --rm \
@@ -98,9 +98,12 @@ if $build_all; then
     current_time=$(date +"%Y-%m-%d %H:%M:%S")
     log_message="$current_time [$SCRIPT_NAME] Building documentation for all languages..."
     echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
-    for lang in "${LANGUAGES[@]}"; do
+    for lang in "${PRIORITY_LANGUAGES[@]}"; do
         build_docs $lang
     done
+    # for lang in "${SECONDARY_LANGUAGES[@]}"; do
+    #     build_docs $lang
+    # done
 else
     if [[ " ${LANGUAGES[@]} " =~ " $specific_language " ]]; then
         build_docs $specific_language
