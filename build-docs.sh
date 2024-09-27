@@ -27,7 +27,7 @@ git pull
 bash ./build-container-image.sh
 
 # Default options
-build_all=false
+build_all=true
 build_update=true
 specific_language=""
 full_build=false
@@ -105,7 +105,7 @@ if $build_all; then
     #     build_docs $lang
     # done
 else
-    if [[ " ${LANGUAGES[@]} " =~ " $specific_language " ]]; then
+    if [[ " ${PRIORITY_LANGUAGES[@]} " =~ " $specific_language " ]]; then
         build_docs $specific_language
     else
         current_time=$(date +"%Y-%m-%d %H:%M:%S")
