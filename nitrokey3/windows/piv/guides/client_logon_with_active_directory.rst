@@ -161,7 +161,7 @@ In certain situations this is a required procedure.
 .. tabs::
    .. tab:: MMC (certmgr.msc)
       1. Make sure you are logged on to the user account the certificate corresponds to.
-      2. From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press Enter.
+      2. From the Command Line, PowerShell, or Run, type ``certmgr.msc`` and press Enter.
       3. In the navigation pane expand the **Personal** key store and navigate to **Certificates**.
       4. In the menu bar click **Action → All Tasks → Import**.
       5. Follow the import wizard and provide the user certificate file when requested.
