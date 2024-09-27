@@ -96,7 +96,7 @@ fi
 # Execute build based on the parsed options
 if $build_all; then
     current_time=$(date +"%Y-%m-%d %H:%M:%S")
-    log_message="$current_time [$SCRIPT_NAME] Building documentation for all languages..."
+    log_message="$current_time [$SCRIPT_NAME] Building documentation for priority languages"
     echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
     for lang in "${PRIORITY_LANGUAGES[@]}"; do
         build_docs $lang
