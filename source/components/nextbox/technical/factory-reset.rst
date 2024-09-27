@@ -14,7 +14,7 @@ seconds have passed the color will change to blinking red (see :doc:`LED documen
 Once the LED has finally reached *green* again your NextBox is ready for the initial setup as 
 described in :doc:`Getting Started <../gettingstarted>`
 
-.. figure:: /nextbox/images/technical/nextbox_led_button.jpeg
+.. figure:: /components/nextbox/images/technical/nextbox_led_button.jpeg
    :alt: img1
    :align: center
 

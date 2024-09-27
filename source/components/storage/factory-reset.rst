@@ -17,7 +17,7 @@ Password Safe and the Encrypted Volume without performing a factory reset.
 The factory reset can be triggered in the Nitrokey App with the menu entry
 ``Configure->Special Configure->Factory reset``.
 
-.. figure:: /storage/images/factory-reset-menu-item.png
+.. figure:: /components/storage/images/factory-reset-menu-item.png
    :alt: factory-reset-menu-item
 
 .. note::

@@ -13,29 +13,29 @@ The bag and all screws on the bottom of the device have been sealed. For the bag
    
    Nitropad NV41:
    
-   .. figure:: /nitropad/images/nv41_sealed.jpg
+   .. figure:: /components/nitropad/images/nv41_sealed.jpg
       :alt: NV41
 
    Nitropad NS50:
 
-   .. figure:: /nitropad/images/ns50_sealed.jpg
+   .. figure:: /components/nitropad/images/ns50_sealed.jpg
       :alt: NS50
 
    NitroPad X230:
 
-   .. figure:: /nitropad/images/SchraubenmarkierungX230.jpg
+   .. figure:: /components/nitropad/images/SchraubenmarkierungX230.jpg
       :alt: X230
 
    NitroPad T430:
 
-   .. figure:: /nitropad/images/SchraubenmarkierungT430.jpg
+   .. figure:: /components/nitropad/images/SchraubenmarkierungT430.jpg
       :alt: T430
 
 
    This example shows a sealed screw whose glitter represents an
    individual pattern.
 
-   .. figure:: /nitropad/images/Schraube.jpg
+   .. figure:: /components/nitropad/images/Schraube.jpg
       :alt: img
 
 

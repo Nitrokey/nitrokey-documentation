@@ -31,12 +31,12 @@ steps:
 
 1. Restart your Laptop and go to Options. 
 
-   .. figure:: /nitropad/images/boot-menu.jpg
+   .. figure:: /components/nitropad/images/boot-menu.jpg
       :alt: img1
 
 2. Select “Update Checksums and sign all files on /boot”. 
 
-   .. figure:: /nitropad/images/options.jpg
+   .. figure:: /components/nitropad/images/options.jpg
       :alt: img2
 
 3. After that, please follow `these instructions <system-update.html>`_ from step 3 onwards.
@@ -63,7 +63,7 @@ Each boot the code is generated on the Nitropad and the Nitrokey, if its
 connected. It is allowed to run 10 boots without loosing the
 synchronization between the devices, after which the bad code signal is
 shown, regardless of the rest of the system being in a correct state. If
-you are sure the system was not beign tampered with (e.g. the Nitropad
+you are sure the system was not beign tampered with (e.g. the Nitropad
 was booted more than 10 times without the Nitrokey), you can safely
 reset the system’s warning.
 

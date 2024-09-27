@@ -7,7 +7,7 @@ If you have installed a new operating system, it may be that default boot is not
 
 1. Select “Default boot”.
 
-.. figure:: /nitropad/images/default-boot/1.jpg
+.. figure:: /components/nitropad/images/default-boot/1.jpg
    :alt: img1
 
 
@@ -15,14 +15,14 @@ If you have installed a new operating system, it may be that default boot is not
 2. Heads informs you that it does not yet know any default. First you
    agree to the update of the checksums.
 
-.. figure:: /nitropad/images/default-boot/2.jpg
+.. figure:: /components/nitropad/images/default-boot/2.jpg
    :alt: img2
 
 
 
 3. Confirm the process with Enter.
 
-.. figure:: /nitropad/images/default-boot/3.jpg
+.. figure:: /components/nitropad/images/default-boot/3.jpg
    :alt: img3
 
 
@@ -48,7 +48,7 @@ Now the NitroPad marks the files that changed by the update as verified.
 
 5. Confirm the process with Enter.
 
-.. figure:: /nitropad/images/default-boot/4.jpg
+.. figure:: /components/nitropad/images/default-boot/4.jpg
    :alt: img4
 
 
@@ -56,7 +56,7 @@ Now the NitroPad marks the files that changed by the update as verified.
 6. You will then see a list of all possible boot entries - choose the
    first one here by simply pressing Enter. Boot Options
 
-.. figure:: /nitropad/images/NitroPad-boot-options.jpeg
+.. figure:: /components/nitropad/images/NitroPad-boot-options.jpeg
    :alt: img5
 
 
@@ -64,7 +64,7 @@ Now the NitroPad marks the files that changed by the update as verified.
 7. To save this value as default, select “Make Ubuntu the default” for
    Ubuntu or “Make Qubes the default” for Qubes OS. Confirm Boot Details
 
-.. figure:: /nitropad/images/NitroPad-confirm-boot-details.jpeg
+.. figure:: /components/nitropad/images/NitroPad-confirm-boot-details.jpeg
    :alt: img6
 
 

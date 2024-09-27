@@ -6,7 +6,7 @@ Desktop Login And Linux User Authentication
 Introduction
 ------------
 
-This guide will walk you through the configuration of Linux to use FIDO Universal 2nd Factor, i.e. FIDO U2F with ``libpam-u2f`` and Nitrokey FIDO2.
+This guide will walk you through the configuration of Linux to use FIDO Universal 2nd Factor, i.e. FIDO U2F with ``libpam-u2f`` and Nitrokey FIDO2.
 
 If you want to login to you computer using `Nitrokey Pro
 2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ `Nitrokey Storage
@@ -28,29 +28,29 @@ GUI Method
 
 1. **In the lower left corner click on** ``Show Applications`` **and type settings in the search bar as following:**
 
-   .. figure:: /fido2/linux/images/fidou2f-1.png
+   .. figure:: /components/fido2/linux/images/fidou2f-1.png
       :alt: img1
 
 2. **Scroll down in the right bar to** ``Users``
 
-   .. figure:: /fido2/linux/images/fidou2f-2.png
+   .. figure:: /components/fido2/linux/images/fidou2f-2.png
       :alt: img2
 
 3. **In the left corner click on** ``Unlock`` **and that would prompt for your
    password**
 
-   .. figure:: /fido2/linux/images/fidou2f-3.png
+   .. figure:: /components/fido2/linux/images/fidou2f-3.png
       :alt: img3
 
 4. **Select** ``Administrator`` **and enter the user name and password of your
    choice**
 
-   .. figure:: /fido2/linux/images/fidou2f-4.png
+   .. figure:: /components/fido2/linux/images/fidou2f-4.png
       :alt: img4
 
 5. **Once you finish Step 4 you should be done**
 
-   .. figure:: /fido2/linux/images/fidou2f-5.png
+   .. figure:: /components/fido2/linux/images/fidou2f-5.png
       :alt: img5
 
 CLI Method
@@ -230,7 +230,7 @@ CLI Method
 
    You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/replug yout Nitrokey FIDO2 and type your password:
 
-   .. figure:: /fido2/linux/images/u2f-fido-pam-2.png
+   .. figure:: /components/fido2/linux/images/u2f-fido-pam-2.png
       :alt: img6
 
 Usage

@@ -15,7 +15,7 @@ The bag and all screws of the device have been sealed. For the bag and each of t
    This example shows a sealed screw whose glitter represents an
    individual pattern.
 
-   .. figure:: /nitropad/images/Schraube.jpg
+   .. figure:: /components/nitropad/images/Schraube.jpg
       :alt: img
 
 

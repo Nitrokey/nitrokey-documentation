@@ -20,7 +20,7 @@ Firmware Update
 
 3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ‘12345678’.
 
-   .. figure:: /storage/images/enable-firmware-update.png
+   .. figure:: /components/storage/images/enable-firmware-update.png
       :alt: Enable firmware update
 
    .. note::
@@ -39,6 +39,6 @@ Firmware Update
 
 4. Start the Nitrokey Update Tool and click “Select firmware file”. Select the previously downloaded firmware ".hex" file. Click on “Update firmware” to start the update process. Your device should get detected by the Nitrokey App again as soon as the update is finished.
 
-   .. figure:: /storage/windows/images/nitrokey-update-tool.png
+   .. figure:: /components/storage/windows/images/nitrokey-update-tool.png
       :alt: Nitrokey Update Tool
 

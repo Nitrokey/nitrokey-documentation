@@ -61,7 +61,7 @@ This is the actual update procedure. Usually the first two screens will not be s
 1. (Optional screen) Select “Ignore error and continue to default boot
    menu”.
 
-.. figure:: /nitropad/images/firmware-update/1.jpg
+.. figure:: /components/nitropad/images/firmware-update/1.jpg
    :alt: img1
 
 
@@ -69,56 +69,56 @@ This is the actual update procedure. Usually the first two screens will not be s
 2. (Optional screen) Select “Ignore error and continue to default boot
    menu”.
 
-.. figure:: /nitropad/images/firmware-update/2.jpg
+.. figure:: /components/nitropad/images/firmware-update/2.jpg
    :alt: img2
 
 
 
 3. Go to “Options”.
 
-.. figure:: /nitropad/images/firmware-update/3.jpg
+.. figure:: /components/nitropad/images/firmware-update/3.jpg
    :alt: img3
 
 
 
 4. Select “Flash/Update the BIOS”.
 
-.. figure:: /nitropad/images/firmware-update/4.jpg
+.. figure:: /components/nitropad/images/firmware-update/4.jpg
    :alt: img4
 
 
 
 5. Please confirm the first option.
 
-.. figure:: /nitropad/images/firmware-update/5.jpg
+.. figure:: /components/nitropad/images/firmware-update/5.jpg
    :alt: img5
 
 
 
 6. Confirm the process with Enter.
 
-.. figure:: /nitropad/images/firmware-update/6.jpg
+.. figure:: /components/nitropad/images/firmware-update/6.jpg
    :alt: img6
 
 
 
 7. Select the desired .npf file.
 
-.. figure:: /nitropad/images/firmware-update/7.jpg
+.. figure:: /components/nitropad/images/firmware-update/7.jpg
    :alt: img7
 
 
 
 8. Confirm the process with Enter.
 
-.. figure:: /nitropad/images/firmware-update/8.jpg
+.. figure:: /components/nitropad/images/firmware-update/8.jpg
    :alt: img8
 
 
 
 9. Confirm the restart with Enter.
 
-.. figure:: /nitropad/images/firmware-update/9.jpg
+.. figure:: /components/nitropad/images/firmware-update/9.jpg
    :alt: img9
 
 

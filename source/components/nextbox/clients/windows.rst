@@ -9,7 +9,7 @@ Connect using the Nextcloud App
 
 1. Download the Nextcloud client application: https://nextcloud.com/install/
 
-   .. figure:: /nextbox/images/win_app/1.png
+   .. figure:: /components/nextbox/images/win_app/1.png
       :alt: imgsp1
       :scale: 30 %
 
@@ -18,28 +18,28 @@ Connect using the Nextcloud App
    provide your Nextcloud's domain.
 
 
-   .. figure:: /nextbox/images/win_app/2.png
+   .. figure:: /components/nextbox/images/win_app/2.png
       :alt: imgsp1
       :scale: 50 %
 
 
 3. Provide your username and password and click "Log in".
 
-   .. figure:: /nextbox/images/win_app/nextc-login.png
+   .. figure:: /components/nextbox/images/win_app/nextc-login.png
       :alt: imgsp1
       :scale: 30 %
 
 
    Inside the tray there will be a Nextcloud icon to open the Nextcloud application settings.
 
-   .. figure:: /nextbox/images/win_app/4.png
+   .. figure:: /components/nextbox/images/win_app/4.png
       :alt: imgsp1
       :scale: 50 %
 
 
    Inside the file-explorer you can now find your Nextcloud instance files.
 
-   .. figure:: /nextbox/images/win_app/5.png
+   .. figure:: /components/nextbox/images/win_app/5.png
       :alt: imgsp1
       :scale: 50 %
 
@@ -56,7 +56,7 @@ Connect using WebDAV
 1. Add a WebDAV drive using the file explorer's "Add a network location" icon. (You can also use 
    "Map network drive" to bind your Nextcloud to a drive, like *Z:*).
 
-   .. figure:: /nextbox/images/win_webdav/6.png
+   .. figure:: /components/nextbox/images/win_webdav/6.png
       :alt: imgsp1
       :scale: 50 %
 
@@ -67,7 +67,7 @@ Connect using WebDAV
 3. In the following window insert your full Nextcloud credentials, means your username and password
    you use to login into your Nextcloud.
 
-   .. figure:: /nextbox/images/win_webdav/8.png
+   .. figure:: /components/nextbox/images/win_webdav/8.png
       :alt: imgsp1
       :scale: 50 %
 

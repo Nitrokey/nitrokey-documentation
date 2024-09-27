@@ -12,7 +12,7 @@ This mini-howto assumes that the Nitrokey has been initialized and contains cryp
 
 -  `GPG4Win <https://gpg4win.org/>`__ or
    `pageant.exe <https://smartcard-auth.de/download-de.html>`__ with
-   Smartcard support from Dr. Peter Koch
+   Smartcard support from Dr. Peter Koch
 
 -  Optional: `OpenPGP
    Minidriver <https://wald.intevation.org/frs/?group_id=49&release_id=353>`__
@@ -21,35 +21,35 @@ This mini-howto assumes that the Nitrokey has been initialized and contains cryp
 
 start pageant.exe. That this is running is shown in the notification area of the taskbar.
 
-.. figure:: /pro/images/putty/1.png
+.. figure:: /components/pro/images/putty/1.png
    :alt: img1
 
 
 
 A double click opens the view of the current keys.
 
-.. figure:: /pro/images/putty/2.png
+.. figure:: /components/pro/images/putty/2.png
    :alt: img2
 
 
 
 After inserting the key it looks like this.
 
-.. figure:: /pro/images/putty/3.png
+.. figure:: /components/pro/images/putty/3.png
    :alt: img3
 
 
 
 If nothing is displayed here, pageant may have to be restarted or another application is already using the stick. A possibly running pgp-agent must be terminated! Now we only need the public key we want to store in the ssh configuration of the server. Therefore we press CTRL while inserting the stick…
 
-.. figure:: /pro/images/putty/4.png
+.. figure:: /components/pro/images/putty/4.png
    :alt: img4
 
 
 
 and then view the Pageant-PublicKeys.txt.
 
-.. figure:: /pro/images/putty/5.png
+.. figure:: /components/pro/images/putty/5.png
    :alt: img5
 
 
@@ -60,7 +60,7 @@ I searched for the ssh-rsa entry of the auth key and added the line on the serve
 
 There is surprisingly little to say about PuTTY itself.
 
-.. figure:: /pro/images/putty/6.png
+.. figure:: /components/pro/images/putty/6.png
    :alt: img6
 
 
@@ -73,6 +73,6 @@ That’s it, as soon as you connect to the server while pageant is running and y
 
 If you are annoyed that Windows reports every time you plug in the stick that no driver could be found for “Smartcard”, you can get rid of it. You just have to install the x86 or x64 version of the above mentioned driver and the smartcard looks like this:
 
-.. figure:: /pro/images/putty/7.png
+.. figure:: /components/pro/images/putty/7.png
    :alt: img7
 

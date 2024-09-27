@@ -18,7 +18,7 @@ On top of that you want to make sure that your data (traffic) is not readable by
 anyone else despite you. Nowadays this is accomplished by using `HTTPS`_, which is
 driven by `TLS`_. 
 
-.. figure:: /nextbox/images/walkthrough/padlock.png
+.. figure:: /components/nextbox/images/walkthrough/padlock.png
    :alt: padlock-tls
  
 Right next to the URL (*nitrokey.com*) you see this small padlock, which translates
@@ -28,7 +28,7 @@ readable by anyone between your browser (client) and the Nitrokey server.
 Once your NextBox is set up properly and you see the dashboard the first time your
 URL bar in your browser might look like this:
 
-.. figure:: /nextbox/images/walkthrough/no-padlock.png
+.. figure:: /components/nextbox/images/walkthrough/no-padlock.png
    :alt: no-padlock
  
 In this case the local IP has been used (``192.168.10.50``), this is specific to your
@@ -49,7 +49,7 @@ NextBox from everywhere, the only think to do is to go to *Remote Access* and
 click *Enable Quickstart Remote Access*. From now on you can access your NextBox
 using a URL like this:
 
-.. figure:: /nextbox/images/walkthrough/proxy-url.png
+.. figure:: /components/nextbox/images/walkthrough/proxy-url.png
    :alt: proxy
 
 The padlock is there---your data (if you are using your ``[subdomain].nextbox.link``
@@ -165,7 +165,7 @@ Great from here there is just one step remaining:
 Shortly after you will be automatically redirected to your now encrypted
 NextBox sub-domain, which might look similar to this:
 
-.. figure:: /nextbox/images/walkthrough/dns-url.png
+.. figure:: /components/nextbox/images/walkthrough/dns-url.png
    :alt: dns-url
 
 There we are, your very own sub-domain, certificate and fully end-to-end

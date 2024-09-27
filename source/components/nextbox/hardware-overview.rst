@@ -31,7 +31,7 @@ the different connectors and interfaces is given.
 1. Hardware button for :doc:`Factory-Reset<technical/factory-reset>`
 2. :doc:`Status LED<technical/led-colors>`
 
-   .. figure:: /nextbox/images/hardware-overview/back-side.jpg
+   .. figure:: /components/nextbox/images/hardware-overview/back-side.jpg
       :alt: back view
       :align: center
 
@@ -43,7 +43,7 @@ the different connectors and interfaces is given.
    .. hint:: The right side of the NextBox is designed so that all mandatory
             interfaces can be accessed from this side. 
 
-   .. figure:: /nextbox/images/hardware-overview/right-side.jpg
+   .. figure:: /components/nextbox/images/hardware-overview/right-side.jpg
       :alt: right view
       :align: center
 
@@ -62,7 +62,7 @@ the different connectors and interfaces is given.
 10. **Micro HDMI 2 slot**, usable but not needed.
 11. **Headphone Jack**, usable but not needed.
 
-   .. figure:: /nextbox/images/hardware-overview/front-side.jpg
+   .. figure:: /components/nextbox/images/hardware-overview/front-side.jpg
       :alt: front view
       :align: center
 

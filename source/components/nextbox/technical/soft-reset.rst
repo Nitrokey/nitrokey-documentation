@@ -13,7 +13,7 @@ it will change to blinking blue (see :doc:`LED documentation <led-colors>`).
 Once the LED has finally reached *green* again for at least 20 seconds your NextBox is ready for use again.
 Please do not unplug your NextBox during this process as that might break something.
 
-.. figure:: /nextbox/images/technical/nextbox_led_button.jpeg
+.. figure:: /components/nextbox/images/technical/nextbox_led_button.jpeg
    :alt: img1
    :align: center
 

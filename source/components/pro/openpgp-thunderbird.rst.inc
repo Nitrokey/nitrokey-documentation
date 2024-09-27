@@ -55,14 +55,14 @@ Procedure
 3. In Thunderbird, select as shown in the following picture. “OpenPGP” →
    “Manage smart card”
 
-.. figure:: /pro/images/openpgp-thunderbird/1.png
+.. figure:: /components/pro/images/openpgp-thunderbird/1.png
    :alt: img1
 
 
 
 4. In the “SmartCard Details” window, select “SmartCard → Change PIN”
 
-.. figure:: /pro/images/openpgp-thunderbird/2.png
+.. figure:: /components/pro/images/openpgp-thunderbird/2.png
    :alt: img2
 
 
@@ -73,14 +73,14 @@ Procedure
    () [] {}% +. The PIN should be at least 6 characters long. Click
    “OK”.
 
-.. figure:: /pro/images/openpgp-thunderbird/3.png
+.. figure:: /components/pro/images/openpgp-thunderbird/3.png
    :alt: img3
 
 
 
 6. Repeat the procedure for the Admin PIN. “SmartCard → Change PIN”
 
-.. figure:: /pro/images/openpgp-thunderbird/4.png
+.. figure:: /components/pro/images/openpgp-thunderbird/4.png
    :alt: img4
 
 
@@ -91,7 +91,7 @@ Procedure
    .;;:- !? () [] {}% +. The PIN should be at least 8 characters long.
    Click “OK”.
 
-.. figure:: /pro/images/openpgp-thunderbird/5.png
+.. figure:: /components/pro/images/openpgp-thunderbird/5.png
    :alt: img5
 
 
@@ -118,7 +118,7 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
    “User ID” is correct. You can also specify whether a private key
    backup copy should be stored on your computer.
 
-.. figure:: /pro/images/openpgp-thunderbird/6.png
+.. figure:: /components/pro/images/openpgp-thunderbird/6.png
    :alt: img6
 
 
@@ -126,7 +126,7 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
 5. If you do not create a backup copy, you have no chance to get your
    encrypted data if the Nitrokey is lost or damaged!
 
-.. figure:: /pro/images/openpgp-thunderbird/7.png
+.. figure:: /components/pro/images/openpgp-thunderbird/7.png
    :alt: img7
 
 
@@ -145,20 +145,20 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
 
 **Strong Passwords**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen Earz and fife legs (spelling errors increase security)
 
-You do **not** need this password for daily work. It is only necessary for the restoration of the secret key, e.g. if you have lost the Nitrokey. Therefore, keep the password in a safe place.
+You do **not** need this password for daily work. It is only necessary for the restoration of the secret key, e.g. if you have lost the Nitrokey. Therefore, keep the password in a safe place.
 
 You can also specify whether and when the key should be automatically invalid. This means, from this point onwards, no more e-mails can be encrypted with this key and you have to create a new key pair.
 
 1. Finally, click on “Generate key pair”.
 
-.. figure:: /pro/images/openpgp-thunderbird/8.png
+.. figure:: /components/pro/images/openpgp-thunderbird/8.png
    :alt: img8
 
 
 
 2. You are now asked if the key should be generated. Confirm with “Yes”.
 
-.. figure:: /pro/images/openpgp-thunderbird/9.png
+.. figure:: /components/pro/images/openpgp-thunderbird/9.png
    :alt: img9
 
 
@@ -166,7 +166,7 @@ You can also specify whether and when the key should be automatically invalid. T
 3. In order for the program to write your keys to the stick, you must
    enter the admin PIN and the user PIN (changed above).
 
-.. figure:: /pro/images/openpgp-thunderbird/10.png
+.. figure:: /components/pro/images/openpgp-thunderbird/10.png
    :alt: img10
 
 
@@ -182,7 +182,7 @@ The key generation can take a few minutes. Do not terminate the program prematur
 
 You can now select the directory in which the backup copy is stored. This copy is encrypted with your password entered above. This means that no one can read or use the keys without your password. Do not give your password to anyone. This file with the name of your e-mail address and the suffix “.asc” should be backed up on another medium. After selecting the directory, click “Save”.
 
-.. figure:: /pro/images/openpgp-thunderbird/11.png
+.. figure:: /components/pro/images/openpgp-thunderbird/11.png
    :alt: img11
 
 
@@ -190,7 +190,7 @@ You can now select the directory in which the backup copy is stored. This copy i
 5. Here you must again specify your user PIN or passphrase. Then click
    “OK”
 
-.. figure:: /pro/images/openpgp-thunderbird/12.png
+.. figure:: /components/pro/images/openpgp-thunderbird/12.png
    :alt: img12
 
 
@@ -198,7 +198,7 @@ You can now select the directory in which the backup copy is stored. This copy i
 7. You will now see the message that the certificate was created and
    saved. Click “OK”
 
-.. figure:: /pro/images/openpgp-thunderbird/13.png
+.. figure:: /components/pro/images/openpgp-thunderbird/13.png
    :alt: img13
 
 
@@ -206,7 +206,7 @@ You can now select the directory in which the backup copy is stored. This copy i
 8. Key generation is now complete. You can now exit the program (File -
    Close).
 
-.. figure:: /pro/images/openpgp-thunderbird/14.png
+.. figure:: /components/pro/images/openpgp-thunderbird/14.png
    :alt: img14
 
 

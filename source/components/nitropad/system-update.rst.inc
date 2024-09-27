@@ -14,7 +14,7 @@ Boot Hash Mismatch
 1. If you restart the NitroPad after an update, the startup screen
    should initially appear as usual without an error message.
 
-.. figure:: /nitropad/images/system-update/1.jpeg
+.. figure:: /components/nitropad/images/system-update/1.jpeg
    :alt: img1
 
 
@@ -22,7 +22,7 @@ Boot Hash Mismatch
 2. If you press Enter afterwards, you will get an error message that
    looks like this or similar:
 
-.. figure:: /nitropad/images/system-update/2.jpeg
+.. figure:: /components/nitropad/images/system-update/2.jpeg
    :alt: img2
 
 
@@ -31,7 +31,7 @@ Boot Hash Mismatch
    system update verified. Afterwards you will be asked again for a
    confirmation.
 
-.. figure:: /nitropad/images/system-update/3.jpeg
+.. figure:: /components/nitropad/images/system-update/3.jpeg
    :alt: img3
 
 
@@ -42,7 +42,7 @@ Boot Hash Mismatch
    the screen.
 
    .. warning::
-      Heads expects an English keyboard layout, on which e.g. “y” and “z” are swapped in comparison to the German keyboard layout. If you agree with the default selection (which is written in capital letter) you can also simply confirm by pressing Enter.
+      Heads expects an English keyboard layout, on which e.g. “y” and “z” are swapped in comparison to the German keyboard layout. If you agree with the default selection (which is written in capital letter) you can also simply confirm by pressing Enter.
 
 .. code-block:: bash
 
@@ -67,7 +67,7 @@ Boot Entry Has Changed
    starts. This depends on the system update. If the following error
    message appears, proceeds as described below:
 
-.. figure:: /nitropad/images/system-update/4.jpeg
+.. figure:: /components/nitropad/images/system-update/4.jpeg
    :alt: img4
 
 
@@ -76,7 +76,7 @@ Boot Entry Has Changed
    all possible boat entries - choose the first one by simply pressing
    Enter.
 
-.. figure:: /nitropad/images/system-update/5.jpeg
+.. figure:: /components/nitropad/images/system-update/5.jpeg
    :alt: img5
 
 
@@ -85,7 +85,7 @@ Boot Entry Has Changed
    default” for Ubuntu or “Make Qubes the default” for Qubes OS in the
    next window.
 
-.. figure:: /nitropad/images/system-update/6.jpeg
+.. figure:: /components/nitropad/images/system-update/6.jpeg
    :alt: img6
 
 
@@ -98,7 +98,7 @@ Boot Entry Has Changed
 |   Enter the User PIN of the Nitrokey whenever prompted (default: 123456).
 
    .. warning::
-      Heads expects an English keyboard layout, on which e.g. “y” and “z” are swapped in comparison to the German keyboard layout. If you agree with the default selection (which is written in capital letter) you can also simply confirm by pressing Enter.
+      Heads expects an English keyboard layout, on which e.g. “y” and “z” are swapped in comparison to the German keyboard layout. If you agree with the default selection (which is written in capital letter) you can also simply confirm by pressing Enter.
 
 .. code-block:: bash
 

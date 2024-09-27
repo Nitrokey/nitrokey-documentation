@@ -14,14 +14,14 @@ There are two widely used standards for email encryption.
 
 If you are in doubt which one to choose, you should use OpenPGP, see `here <openpgp.html>`_. This page describes the usage of S/MIME email encryption.
 
-You need to purchase a S/MIME certificate (e.g. at `CERTUM <https://www.certum.eu/en/cert_offer_cert_id/>`__) or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/releases>`__ page.
+You need to purchase a S/MIME certificate (e.g. at `CERTUM <https://www.certum.eu/en/cert_offer_cert_id/>`__) or may already got one by your company. Furthermore, you need to install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from the `OpenSC <https://github.com/OpenSC/OpenSC/releases>`__ page.
 
 Import Existing Key and Certificate
 -----------------------------------
 
 The following instructions are based on the `wiki of OpenSC <https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__. We will assume, that you already got a key-certificate pair as a .p12 file. Please have a look at the wiki page, if you got a separate key and certificate file.
 
-To open the Windows command line please push the Windows-key and R-key. Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
+To open the Windows command line please push the Windows-key and R-key. Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
 
 To make these commands as simple as possible, the .p12 file needs to be in your home folder. On Windows this is usually ``C:\Users\yourusername`` and on macOS and GNU/Linux system it will be ``/home/yourusername``. If you do not store the .p12 file there, you have to adapt the path in the commands below. Please plug in the Nitrokey before submitting the commands.
 
@@ -41,7 +41,7 @@ and on macOS and GNU/Linux it will be
 
 The two commands copy the key-certificate pair to the slot 2 (needed for decrypting emails) and slot 3 (needed for signing). The output looks on both systems something like this:
 
-.. figure:: /pro/images/smime/1.png
+.. figure:: /components/pro/images/smime/1.png
    :alt: img1
 
 

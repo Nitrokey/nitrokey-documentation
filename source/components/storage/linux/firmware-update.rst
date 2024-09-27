@@ -14,13 +14,13 @@ Firmware Update
    this will likely render your device useless
 
 
-1. Download the `Nitrokey App <https://www.nitrokey.com/download>`__ and the program “dfu-programmer” which should be available through your package-manager, e.g. ``apt-get update && apt-get install dfu-programmer`` on Debian-based systems.
+1. Download the `Nitrokey App <https://www.nitrokey.com/download>`__ and the program “dfu-programmer” which should be available through your package-manager, e.g. ``apt-get update && apt-get install dfu-programmer`` on Debian-based systems.
 
 2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/latest>`__ and store it as "firmware.hex" in your home folder. Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__.
 
 3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ‘12345678’.
 
-   .. figure:: /storage/images/enable-firmware-update.png
+   .. figure:: /components/storage/images/enable-firmware-update.png
       :alt: Enable firmware update
 
    .. note::

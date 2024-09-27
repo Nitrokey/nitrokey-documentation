@@ -15,7 +15,7 @@ You can configure up to four hidden volumes. Once unlocked, hidden volumes behav
    There are no mechanisms to prevent accidental overwritting of hidden data, as they would reveal the existence of hidden volumes.
    Data written to the encrypted volume before the creation of the hidden volume can still be read.
 
-.. figure:: /storage/images/hidden-schema.svg
+.. figure:: /components/storage/images/hidden-schema.svg
    :alt: Hidden volume description. The hidden volumes are within the free space of the encrypted volume.
 
 
@@ -32,11 +32,11 @@ Configuring hidden volumes
 1. Unlock the encrypted volume using the Nitrokey App.
 2. In the menu, select "setup hidden volume".
 
-   .. figure:: /storage/images/setup_hidden_volume.png
+   .. figure:: /components/storage/images/setup_hidden_volume.png
       :alt: menu containing the hidden volume setup utility.
 
 3. Enter a strong passphrase twice. Unlike the encrypted volume PIN, there are no limit to the number of attempts at opening hidden volumes, so the strength of the passphrase is extremely important.
 4. Define the storage area to be used. Hidden volumes are stored in the free areas of the encrypted volume. When creating multiple hidden volume, you need to allocate a part of the free area for each volume, making sure they do not overlap.
 
-   .. figure:: /storage/images/hidden-storage-passphrase.png
+   .. figure:: /components/storage/images/hidden-storage-passphrase.png
       :alt: Hidden volume dialog box

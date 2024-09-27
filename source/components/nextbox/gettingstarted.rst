@@ -28,7 +28,7 @@ Create Admin Account
 1. Enter your desired username and password. Remember to choose a strong
    password for your admin account.
 
-   .. figure:: /nextbox/images/gettingstarted/1.png
+   .. figure:: /components/nextbox/images/gettingstarted/1.png
       :alt: img1
    
    .. note:: 
@@ -37,7 +37,7 @@ Create Admin Account
 
 2. Press "Finish Setup". This process may take a few minutes.
 
-   .. figure:: /nextbox/images/gettingstarted/2.png
+   .. figure:: /components/nextbox/images/gettingstarted/2.png
       :alt: img2
 
 Configure NextBox Related Features
@@ -48,7 +48,7 @@ or :doc:`Remote Access<remote/index>`) and operations for your NextBox.
 
 Your can find the NextBox-App in Nextcloud's top level navigation, as shown in this figure:
 
-.. figure:: /nextbox/images/gettingstarted/nextbox-app.png
+.. figure:: /components/nextbox/images/gettingstarted/nextbox-app.png
    :alt: nextbox-app
 
 Ready To Go

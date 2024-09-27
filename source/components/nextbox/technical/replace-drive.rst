@@ -79,14 +79,14 @@ Replacement Guide
 6. Unfold the USB-to-SATA cable and put the NextBox bridge upside down onto a electronics friendly
    surface like a desk as shown in the following image
 
-   .. figure:: /nextbox/images/technical/nextbox_bridge_backside.jpeg
+   .. figure:: /components/nextbox/images/technical/nextbox_bridge_backside.jpeg
       :alt: nextbox-backside
       :align: center
 
 7. Unscrew the Phillips screws holding the hard-disk in position (the amount of screws may differ,
    depending on your hard-disk type) shown in the following image:
 
-   .. figure:: /nextbox/images/technical/nextbox_bridge_backside_screws.jpeg
+   .. figure:: /components/nextbox/images/technical/nextbox_bridge_backside_screws.jpeg
       :alt: nextbox-backside-screws
       :align: center
 
