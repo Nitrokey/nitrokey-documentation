@@ -1,11 +1,21 @@
 #!/bin/bash
+export TZ="Europe/Berlin"
 
-# Load environment variables from config.env
-if [ -f ./.env ]; then
-  source ./.env
+# Get the directory where the script is located
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+SCRIPT_NAME=$(basename "$0")
+
+# Change to the script's directory
+cd "$SCRIPT_DIR" || exit 1
+
+# Load the environment variables
+if [ -f "$SCRIPT_DIR/.env" ]; then
+    source "$SCRIPT_DIR/.env"
 else
-  echo "Environment file not found!"
-  exit 1
+    current_time=$(date +"%Y-%m-%d %H:%M:%S")
+    log_message="$current_time [$SCRIPT_NAME] Environment file not found!"
+    echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
+    exit 1
 fi
 
 # trigger weblate push to ensure having the most up-to-date files
@@ -17,7 +27,8 @@ git pull
 bash ./build-container-image.sh
 
 # Default options
-build_all=true
+build_all=false
+build_update=true
 specific_language=""
 full_build=false
 rebuild=false
@@ -43,7 +54,9 @@ done
 
 # Clean the build directory
 clean_build() {
-    echo "Cleaning build directory..."
+    current_time=$(date +"%Y-%m-%d %H:%M:%S")
+    log_message="$current_time [$SCRIPT_NAME] Cleaning build directory..."
+    echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
     rm -rf build dist
     mkdir -p build
     mkdir -p dist
@@ -52,14 +65,16 @@ clean_build() {
 # Build documentation for a specific language
 build_docs() {
     local lang=$1
-    echo "Building documentation for language: $lang"
+    current_time=$(date +"%Y-%m-%d %H:%M:%S")
+    log_message="$current_time [$SCRIPT_NAME] Building documentation for language: $lang"
+    echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
 
     # Create output and build directories if they don't exist
     mkdir -p dist/$lang
     mkdir -p build/$lang/doctrees
 
     # Determine sphinx-build options
-    sphinx_options="-j auto -b html -D language="$lang" -d /docs/build/$lang/doctrees . /docs/dist/$lang"
+    sphinx_options="-j auto -b html -D language=$lang -d /docs/build/$lang/doctrees . /docs/dist/$lang"
     if $full_build; then
         sphinx_options="-a $sphinx_options"
     fi
@@ -68,6 +83,7 @@ build_docs() {
     docker run --rm \
         -v $(pwd)/dist/$lang:/docs/dist/$lang \
         -v $(pwd)/build/$lang/doctrees:/docs/build/$lang/doctrees \
+        -v $(pwd)/source:/docs/source \
         docker.io/nitrokey/sphinx \
         sphinx-build $sphinx_options
 }
@@ -79,7 +95,9 @@ fi
 
 # Execute build based on the parsed options
 if $build_all; then
-    echo "Building documentation for all languages..."
+    current_time=$(date +"%Y-%m-%d %H:%M:%S")
+    log_message="$current_time [$SCRIPT_NAME] Building documentation for all languages..."
+    echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
     for lang in "${LANGUAGES[@]}"; do
         build_docs $lang
     done
@@ -87,9 +105,13 @@ else
     if [[ " ${LANGUAGES[@]} " =~ " $specific_language " ]]; then
         build_docs $specific_language
     else
-        echo "Error: Language '$specific_language' is not in the list of available languages."
+        current_time=$(date +"%Y-%m-%d %H:%M:%S")
+        log_message="$current_time [$SCRIPT_NAME] Error: Language '$specific_language' is not in the list of available languages."
+        echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
         exit 1
     fi
 fi
 
-echo "Build process completed."
+current_time=$(date +"%Y-%m-%d %H:%M:%S")
+log_message="$current_time [$SCRIPT_NAME] Build process complete."
+echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
