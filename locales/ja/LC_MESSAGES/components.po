@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Nitrokey Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-27 06:13+0000\n"
-"PO-Revision-Date: 2024-09-25 20:20+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2024-09-27 09:54+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Japanese <http://docstest-weblate.nitrokey.com/projects/"
+"nitrokey-documentation/components/ja/>\n"
 "Language: ja\n"
-"Language-Team: Japanese <http://docstest-weblate.nitrokey.com/projects"
-"/nitrokey-documentation/components/ja/>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.7.2\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../components/fido2/2fa-nextcloud.rst:2
@@ -12457,16 +12458,22 @@ msgid ""
 "issues with GnuPG and smartcards. The instructions below only apply to "
 "*Fedora Workstation* and *Fedora Server* editions."
 msgstr ""
+"最新のFedora 38は、インストール後問題なく動作するはずである。Fedoraのアップグ"
+"レード版では、設定が競合する可能性があるので、以下のようにチェックする必要が"
+"ある。Fedora Silverblueは、GnuPGとスマートカードに問題があると報告されている"
+"。以下の手順は、*Fedora Workstation* と *Fedora Server* "
+"エディションにのみ適用される。"
 
 #: ../components/nitrokey3/linux/fedora-gnupg-configuration.rst:37
 msgid ""
 "The correct configuration of a setup can be checked by querying "
 "information about the Nitrokey with ``gpg --card-status``."
-msgstr ""
+msgstr "gpg --card-status`` でNitrokeyに関する情報を照会することで、セットアップの正"
+"しい設定をチェックできる。"
 
 #: ../components/nitrokey3/linux/fedora-gnupg-configuration.rst:40
 msgid "Check recognition"
-msgstr ""
+msgstr "認知度をチェックする"
 
 #: ../components/nitrokey3/linux/fedora-gnupg-configuration.rst:42
 msgid ""
@@ -12474,6 +12481,8 @@ msgid ""
 "output should list the Nitrokey, e.g. `Bus 001 Device 002: ID 20a0:42b2 "
 "Clay Logic Nitrokey 3`."
 msgstr ""
+"lsusb`コマンドでNitrokeyが認識されていることを確認する。例えば、`Bus 001 "
+"Device 002：ID 20a0:42b2 Clay Logic Nitrokey 3`."
 
 #: ../components/nitrokey3/linux/fedora-gnupg-configuration.rst:46
 msgid "Check system configuration"
@@ -12486,6 +12495,10 @@ msgid ""
 "started with ``systemctl enable pcscd.socket pcscd.service && systemctl "
 "start pcscd.socket``."
 msgstr ""
+"dnf install pcsc-lite`` で *pcscd* "
+"パッケージがインストールされていることを確認する。さらに、``systemctl enable "
+"pcscd.socket pcscd.service && systemctl start pcscd.socket`` で *systemd* "
+"サービスとソケットを有効にして起動する必要がある。"
 
 #: ../components/nitrokey3/linux/fedora-gnupg-configuration.rst:51
 msgid ""
@@ -12497,6 +12510,12 @@ msgid ""
 "Make sure the ``~/.gnupg/scdaemon.conf`` file has no conflicting settings"
 " applied."
 msgstr ""
+"scdaemon*は*pcscd*に接続するために*libpcsclite*ライブラリを必要とする。pcsc "
+"ライブラリのパスは ``echo \"pcsc-driver /usr/lib64/libpcsclite.so.1\" >> ~/."
+"gnupg/scdaemon.conf`` で明示的に設定できる。あるいは、"
+"以下のようにシンボリックリンクでライブラリを利用できるようにすることもできる "
+"``ln -s /usr/lib64/libpcsclite.so.1 /usr/lib64/libpcsclite.so``.``~/.gnupg/"
+"scdaemon.conf`` ファイルに競合する設定が適用されていないことを確認する。"
 
 #: ../components/nitrokey3/linux/fedora-gnupg-configuration.rst:56
 msgid ""
@@ -12507,10 +12526,16 @@ msgid ""
 " with ``echo \"pcsc-shared\" >> ~/.gnupg/scdaemon.conf`` (in GnuPG "
 "version 2.2.28 or higher)."
 msgstr ""
+"scdaemon*はデフォルトで、*pcscd*への排他的なアクセスを期待している。これは、"
+"カード上の情報の同時変更に関する潜在的な問題を避けるためである。このため、他"
+"のクライアント（通常はウェブブラウザ）がカードにアクセスした場合、たとえ読み"
+"取りだけであっても、アクセスは失敗する。共有アクセスは、``echo \"pcsc-"
+"shared\" >> ~/.gnupg/scdaemon.conf``（GnuPGバージョン2.2."
+"28以上）で有効にできる。"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:8
 msgid "This guide describes how to update the firmware on the Nitrokey 3."
-msgstr ""
+msgstr "このガイドでは、Nitrokey 3 のファームウェアをアップデートする方法を説明する。"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:11
 msgid ""
@@ -12519,6 +12544,10 @@ msgid ""
 " the Nitrokey 3 is not the only way to authenticate/2FA for your "
 "applications/services."
 msgstr ""
+"**ファームウェアv.1.0.0以下の場合、アップデートはすべてのユーザーデータを削除"
+"する！**適切なバックアップログイン方法を有効にしていること、および/"
+"またはNitrokey "
+"3がアプリケーション/サービスの認証/2FAの唯一の方法ではないことを確認する。"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:17
 msgid ""
@@ -12527,16 +12556,19 @@ msgid ""
 "registered with your service, if for some reason your data is not "
 "retained."
 msgstr ""
+"**ファームウェアv1.0.1以上の場合、ユーザーデータは保持される。いずれにせよ、"
+"何らかの理由でデータが保持されない場合は、常に別のデバイス（またはログイン方"
+"法）をサービスに登録しておくようにしよう。"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:23
 msgid ""
 "Never disconnect the Nitrokey 3 or abort the process while updating, this"
 " will likely render your device useless!"
-msgstr ""
+msgstr "アップデート中にNitrokey 3を切断したり、プロセスを中断したりしてはならない！"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:27
 msgid "Run ``nitropy nk3 update``."
-msgstr ""
+msgstr "nitropy nk3 update``を実行する。"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:30
 msgid ""
@@ -12548,15 +12580,16 @@ msgstr "プロセスが終了するまでお待ちください。(OSによって
 msgid ""
 "*Optional*: run ``nitropy nk3 test`` to check if device is working "
 "properly after flashing."
-msgstr ""
+msgstr "*オプション*: ``nitropy nk3 test`` "
+"を実行し、フラッシュ後にデバイスが正常に動作しているか確認する。"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:40
 msgid "Firmware Release Types"
-msgstr ""
+msgstr "ファームウェア・リリースの種類"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:42
 msgid "There are three types of firmware releases for the Nitrokey 3:"
-msgstr ""
+msgstr "Nitrokey 3には3種類のファームウェアリリースがある："
 
 #: ../components/nitrokey3/firmware-update.rst.inc:44
 msgid ""
@@ -12564,6 +12597,9 @@ msgid ""
 " backward compatible and to retain all user data and are thoroughly "
 "tested. On production devices, only stable releases should be used."
 msgstr ""
+"**安定版リリース**はユーザーにとって最も重要である。後方互換性があり、すべて"
+"のユーザーデータを保持するように設計されており、徹底的にテストされている。プ"
+"ロダクション・デバイスでは、安定リリースのみを使用すべきである。"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:48
 msgid ""
@@ -12571,6 +12607,8 @@ msgid ""
 "should also be backward compatible but is not tested as thoroughly as a "
 "stable release."
 msgstr ""
+"リリース候補**は、近々リリースされる安定版リリースのプレビューである。後方互"
+"換性もあるはずだが、安定版リリースほど徹底的なテストは行われない。"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:51
 msgid ""
@@ -12579,12 +12617,17 @@ msgid ""
 "test release may not be compatible with other releases. These releases "
 "are still being tested and are more likely to contain bugs."
 msgstr ""
+"**テスト・リリース**（以前は*アルファ・リリース*）には、まだ本番に対応できて"
+"いない追加機能が含まれている。テストリリースで作成されたユーザーデータは、他"
+"のリリースと互換性がないかもしれない。これらのリリースはまだテスト中であり、"
+"バグを含む可能性が高い。"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:55
 msgid ""
 "See the `release notes`_ on GitHub for more information on the features "
 "available in a release."
-msgstr ""
+msgstr "リリースで利用可能な機能の詳細については、GitHubの`リリースノート`_を参照のこ"
+"と。"
 
 #: ../components/nitrokey3/firmware-update.rst.inc:59
 msgid "You can identify the type of a firmware release by its version number:"
@@ -26531,4 +26574,3 @@ msgstr "初めてNitrokey FIDO U2Fを接続したとき、Windowsはデバイス
 
 #~ msgid "First please check the:"
 #~ msgstr ""
-
