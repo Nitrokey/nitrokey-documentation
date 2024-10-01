@@ -24,7 +24,7 @@ bash trigger_weblatepush.sh $WEBLATE_API_KEY
 # get updated translation files
 git pull
 
-bash ./build-container-image.sh
+# bash ./build-container-image.sh
 
 # Default options
 build_all=true
@@ -75,17 +75,9 @@ build_docs() {
 
     # Determine sphinx-build options
     sphinx_options="-j auto -b html -D language=$lang -d /docs/build/$lang/doctrees . /docs/dist/$lang"
-    # if $full_build; then
-    #     sphinx_options="-a $sphinx_options"
-    # fi
 
     # Run the Sphinx build command with the determined options
-    docker run --rm \
-        -v $(pwd)/dist/$lang:/docs/dist/$lang \
-        -v $(pwd)/build/$lang/doctrees:/docs/build/$lang/doctrees \
-        -v $(pwd)/source:/docs/source \
-        docker.io/nitrokey/sphinx \
-        sphinx-build $sphinx_options
+    docker compose run --rm sphinx sphinx-build $sphinx_options
 }
 
 # Clean build directory if --rebuild is specified
@@ -101,9 +93,6 @@ if $build_all; then
     for lang in "${PRIORITY_LANGUAGES[@]}"; do
         build_docs $lang
     done
-    # for lang in "${SECONDARY_LANGUAGES[@]}"; do
-    #     build_docs $lang
-    # done
 else
     if [[ " ${PRIORITY_LANGUAGES[@]} " =~ " $specific_language " ]]; then
         build_docs $specific_language

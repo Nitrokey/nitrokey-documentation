@@ -14,7 +14,7 @@ NitroPad FAQ
    key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/nvme0n1p3`` or
    ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that:
 
-      .. figure:: ../images/qubes/ChangeDiskPasswordQubes.png
+      .. figure:: /images/qubes/ChangeDiskPasswordQubes.png
         :alt: Change Password Qubes Image
 
 **Q:** What is re-ownership / re-encryption and why is it important?

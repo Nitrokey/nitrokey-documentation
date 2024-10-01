@@ -25,6 +25,7 @@ echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
 # Builds the container image based on the Dockerfile
 # The resulting image is called: docker.io/nitrokey/sphinx
 docker build -t nitrokey/sphinx .
+
 current_time=$(date +"%Y-%m-%d %H:%M:%S")
 log_message="$current_time [$SCRIPT_NAME] Done"
 echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"

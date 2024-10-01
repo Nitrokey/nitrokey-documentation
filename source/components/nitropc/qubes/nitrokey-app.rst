@@ -1,1 +1,1 @@
-.. include:: /nitropad/qubes/nitrokey-app.rst
+.. include:: /components/nitropad/qubes/nitrokey-app.rst

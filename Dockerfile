@@ -2,6 +2,5 @@ FROM sphinxdoc/sphinx
 
 WORKDIR /docs
 COPY requirements.txt /docs
-COPY locales /docs/locales
-COPY source /docs
+COPY source/conf.py /docs
 RUN pip3 install -r requirements.txt
