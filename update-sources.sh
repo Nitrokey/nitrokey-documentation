@@ -22,15 +22,13 @@ fi
 
 cd $SPHINX_PATH
 
-#git pull
+git pull
 
 # build container image
 # bash ./build-container-image.sh
 
 # build locales
 bash ./build-locales.sh
-
-exit 1
 
 # add language files to git (add, commit and push)
 git add ./source ./locales --all
