@@ -1,1 +1,1 @@
-.. include:: /pro/windows/2fa-microsoft.rst 
+.. include:: /components/pro/windows/2fa-microsoft.rst 

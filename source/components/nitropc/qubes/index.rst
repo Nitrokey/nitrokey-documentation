@@ -21,7 +21,8 @@ Getting Started
 
 2. Change the passphrase for disk encryption by searching in the Qubes Menu for "Change Disk Password"
 
-   .. figure:: ../../images/qubes/ChangeDiskPasswordQubes.png
+               
+   .. figure:: /images/qubes/ChangeDiskPasswordQubes.png
         :alt: Change Password Qubes Image
 
 

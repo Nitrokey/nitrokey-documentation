@@ -22,7 +22,7 @@ NitroPhone FAQ
    *Settings -> Security -> Auto reboot -> select the idle time duration after which the phone should reboot*
 
 **Q:** Why do I get "Warning: Your device is loading a different operating system"?
-   .. image:: /nitrophone/images/boot-screen.jpg
+   .. image:: ./images/boot-screen.jpg
       :alt: Boot screen
       :align: center
 

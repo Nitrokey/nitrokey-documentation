@@ -10,19 +10,19 @@ We recommend updating OpenWrt via the pre-installed `Attended Sysupgrade <https:
 
 1. Go to System -> Attended Sysupgrade -> Configuration and enable the Advanced Mode -> Save & Apply
 
-	.. image:: /nitrowall/images/openwrt_upgrade1.png
+	.. image:: ./images/openwrt_upgrade1.png
 
 2. Go back to overview and search for available updates
 
-	.. image:: /nitrowall/images/openwrt_upgrade2.png
+	.. image:: ./images/openwrt_upgrade2.png
 
 3. Search through the list of installed packages and remove the "nitrowall" package. Then Request Firmware Image
 
-	.. image:: /nitrowall/images/openwrt_upgrade4.png
+	.. image:: ./images/openwrt_upgrade4.png
 
 4. Wait for the image to be build. Then install it. Check if "keep settings and current configuration" is set
 
-	.. image:: /nitrowall/images/openwrt_upgrade5.png
+	.. image:: ./images/openwrt_upgrade5.png
 
 5. The software will be installed and the NitroWall will restart.
 
@@ -30,13 +30,13 @@ We recommend updating OpenWrt via the pre-installed `Attended Sysupgrade <https:
 
 7. Under System -> Software -> Upload Package, upload the package 
 
-	.. image:: /nitrowall/images/openwrt_installnw2.png
-	.. image:: /nitrowall/images/openwrt_installnw1.png
+	.. image:: ./images/openwrt_installnw2.png
+	.. image:: ./images/openwrt_installnw1.png
 
 	
 8. Install it. Afterwards the NitroWall will restart.
 
-	.. image:: /nitrowall/images/openwrt_installnw3.png
+	.. image:: ./images/openwrt_installnw3.png
 
 9. Update OpenWrt via `Attended Sysupgrade <https://openwrt.org/docs/guide-user/installation/attended.sysupgrade>`__.
 

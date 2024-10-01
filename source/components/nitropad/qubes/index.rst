@@ -28,7 +28,7 @@ changed by you:
 
 5. Change the passphrase for the hard disk encryption by searching in the Qubes Menu for "Change Disk Passwort". This passphrase is different from your user acount's passphrase.
 
-   .. figure:: ../../images/qubes/ChangeDiskPasswordQubes.png
+   .. figure:: /images/qubes/ChangeDiskPasswordQubes.png
         :alt: Change Password Qubes Image 
 
 
