@@ -41,8 +41,8 @@ release = ''
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-    'sphinx_copybutton',
-    'sphinxprettysearchresults',
+    #'sphinx_copybutton',
+    #'sphinxprettysearchresults',
     'sphinx_tabs.tabs',
 ]
 
@@ -71,7 +71,7 @@ gettext_compact = True
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['venv/*', 'documentation/nethsm/_*.rst', 'documentation/to-be-integrated.rst']
+exclude_patterns = ['venv/*', 'components/nethsm/_*.rst', 'components/to-be-integrated.rst']
 
 # The name of the Pygments (syntax highlighting) style to use.
 #pygments_style = "solarizeddark"

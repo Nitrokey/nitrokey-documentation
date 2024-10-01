@@ -1,24 +1,36 @@
 #!/bin/bash
+export TZ="Europe/Berlin"
 
-cd /var/www/docs/sphinx/
+mkdir -p ./logs
 
-echo $(date +%s) >> trigger-log.txt
+# Get the directory where the script is located
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+SCRIPT_NAME=$(basename "$0")
 
-# Load environment variables from config.env
-if [ -f /var/www/docs/sphinx/.env ]; then
-  source /var/www/docs/sphinx/.env
+# Change to the script's directory
+cd "$SCRIPT_DIR" || exit 1
+
+# Load the environment variables
+if [ -f "$SCRIPT_DIR/.env" ]; then
+    source "$SCRIPT_DIR/.env"
 else
-  echo "Environment file not found!"
-  exit 1
+    current_time=$(date +"%Y-%m-%d %H:%M:%S")
+    log_message="$current_time [$SCRIPT_NAME] Environment file not found!"
+    echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
+    exit 1
 fi
 
-git pull
+cd $SPHINX_PATH
+
+#git pull
 
 # build container image
-bash ./build-container-image.sh
+# bash ./build-container-image.sh
 
 # build locales
 bash ./build-locales.sh
+
+exit 1
 
 # add language files to git (add, commit and push)
 git add ./source ./locales --all

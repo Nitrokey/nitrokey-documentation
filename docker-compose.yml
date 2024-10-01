@@ -1,0 +1,29 @@
+services:
+
+  # Service for building HTML
+  sphinx:
+    image: docker.io/nitrokey/sphinx
+    container_name: sphinx_build
+    working_dir: /docs/source  # Use source as the working directory
+    volumes:
+      - ./source:/docs/source
+      - ./dist:/docs/dist
+
+  # Service for running sphinx-build to extract gettext files
+  gettext:
+    image: docker.io/nitrokey/sphinx
+    container_name: sphinx_gettext
+    working_dir: /docs
+    volumes:
+      - ./locales:/docs/locales
+      - ./source:/docs
+      - ./source/conf.py:/docs/conf.py
+
+  # Service for updating locales with sphinx-intl
+  intl:
+    image: docker.io/nitrokey/sphinx
+    container_name: sphinx_intl
+    working_dir: /docs
+    volumes:
+      - ./source/conf.py:/docs/conf.py
+      - ./locales:/docs/locales
