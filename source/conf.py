@@ -65,7 +65,7 @@ master_doc = 'index'
 # Usually you set "language" from the command line for these cases.
 #language = None
 language = 'en'
-locales_dir = ['locales/']
+locales_dir = ['../../locales']
 gettext_compact = True
 
 # List of patterns, relative to source directory, that match files and
