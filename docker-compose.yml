@@ -6,7 +6,9 @@ services:
     container_name: sphinx_build
     working_dir: /docs/source  # Use source as the working directory
     volumes:
+      - ./locales:/docs/locales
       - ./source:/docs/source
+      - ./build:/docs/build
       - ./dist:/docs/dist
 
   # Service for running sphinx-build to extract gettext files
@@ -17,6 +19,7 @@ services:
     volumes:
       - ./locales:/docs/locales
       - ./source:/docs
+      - ./build:/docs/build
       - ./source/conf.py:/docs/conf.py
 
   # Service for updating locales with sphinx-intl
@@ -27,3 +30,4 @@ services:
     volumes:
       - ./source/conf.py:/docs/conf.py
       - ./locales:/docs/locales
+      - ./build:/docs/build
