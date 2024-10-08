@@ -139,6 +139,8 @@ if [ -f "$QUEUE_FILE" ]; then
         log_message="$current_time [$SCRIPT_NAME] Re-triggering build with queued payload..."
         echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
 
+        rm $QUEUE_FILE
+
         # Send the payload to the PHP script using a POST request
         curl -X POST -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK_URL"
 
