@@ -4,6 +4,8 @@ export TZ="Europe/Berlin"
 # Get the directory where the script is located
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 SCRIPT_NAME=$(basename "$0")
+QUEUE_FILE="$SCRIPT_DIR/build_queue.json"
+WEBHOOK_URL="https://docstest-hooks.nitrokey.com/github-push-action.php"
 
 # Change to the script's directory
 cd "$SCRIPT_DIR" || exit 1
@@ -107,3 +109,41 @@ fi
 current_time=$(date +"%Y-%m-%d %H:%M:%S")
 log_message="$current_time [$SCRIPT_NAME] Build process complete."
 echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
+
+log_message="$current_time [$SCRIPT_NAME] Checking queued jobs..."
+echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
+
+# Check if the queue has any builds waiting
+if [ -f "$QUEUE_FILE" ]; then
+
+    log_message="$current_time [$SCRIPT_NAME] Queued jobs found. Processing."
+    echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
+
+    QUEUE=$(jq length "$QUEUE_FILE")  # Check if queue has entries
+    if [ "$QUEUE" -gt 0 ]; then
+        # Process the next payload in the queue
+        NEXT_PAYLOAD=$(jq -r '.[0].payload' "$QUEUE_FILE")
+        
+        # Remove the processed payload from the queue
+        jq '.[1:]' "$QUEUE_FILE" > "$QUEUE_FILE.tmp" && mv "$QUEUE_FILE.tmp" "$QUEUE_FILE"
+
+        # Re-trigger the build using the next payload
+        current_time=$(date +"%Y-%m-%d %H:%M:%S")
+        log_message="$current_time [$SCRIPT_NAME] Re-triggering build with queued payload..."
+        echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
+
+        # Send the payload to the PHP script using a POST request
+        curl -X POST -H "Content-Type: application/json" -d "$NEXT_PAYLOAD" "$WEBHOOK_URL"
+
+        # Optionally pass the payload to PHP or use it in the bash script
+        # bash "$SCRIPT_DIR/build-docs.sh"
+
+        current_time=$(date +"%Y-%m-%d %H:%M:%S")
+        if [ $? -eq 0 ]; then
+            log_message="$current_time [$SCRIPT_NAME] Payload successfully sent to webhook script."
+        else
+            log_message="$current_time [$SCRIPT_NAME] Failed to send payload to webhook script."
+        fi
+        echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
+    fi
+fi
