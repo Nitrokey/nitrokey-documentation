@@ -122,10 +122,10 @@ if [ -f "$QUEUE_FILE" ]; then
     QUEUE=$(jq length "$QUEUE_FILE")  # Check if queue has entries
     if [ "$QUEUE" -gt 0 ]; then
         # Process the next payload in the queue
-        NEXT_PAYLOAD=$(jq -r '.[0].payload' "$QUEUE_FILE")
+        PAYLOAD=$(cat "$QUEUE_FILE")
         
         # Remove the processed payload from the queue
-        jq '.[1:]' "$QUEUE_FILE" > "$QUEUE_FILE.tmp" && mv "$QUEUE_FILE.tmp" "$QUEUE_FILE"
+        #jq '.[1:]' "$QUEUE_FILE" > "$QUEUE_FILE.tmp" && mv "$QUEUE_FILE.tmp" "$QUEUE_FILE"
 
         # Re-trigger the build using the next payload
         current_time=$(date +"%Y-%m-%d %H:%M:%S")
@@ -133,7 +133,7 @@ if [ -f "$QUEUE_FILE" ]; then
         echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
 
         # Send the payload to the PHP script using a POST request
-        curl -X POST -H "Content-Type: application/json" -d "$NEXT_PAYLOAD" "$WEBHOOK_URL"
+        curl -X POST -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK_URL"
 
         # Optionally pass the payload to PHP or use it in the bash script
         # bash "$SCRIPT_DIR/build-docs.sh"
