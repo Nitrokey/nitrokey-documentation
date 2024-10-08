@@ -6,7 +6,7 @@ NitroPad with Qubes OS
 Getting Started
 ---------------
 
-TESTING After purchase, the passwords are set to a default value and must be
+After purchase, the passwords are set to a default value and must be
 changed by you:
 
 1. Press Enter (“Default Boot”) after booting the system, provided the
