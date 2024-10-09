@@ -21,34 +21,10 @@ else
     exit 1
 fi
 
-# trigger weblate push to ensure having the most up-to-date files
-bash trigger_weblatepush.sh $WEBLATE_API_KEY
 
-# get updated translation files
-git pull
-
-# Default options
-build_all=false
-specific_language=""
-rebuild=false
-
-# Parse input arguments
-for arg in "$@"; do
-    case $arg in
-    --rebuild)
-        rebuild=true
-        shift
-        ;;
-    --all-languages)
-        build_all=true
-        shift
-        ;;
-    *)
-        specific_language=$arg
-        ;;
-    esac
-done
-
+###################################################################
+### Helper functions
+###################################################################
 
 # Clean the build directory
 clean_build() {
@@ -78,6 +54,38 @@ build_docs() {
     docker compose run --rm sphinx sphinx-build $sphinx_options
 }
 
+###################################################################
+### End of helper functions
+###################################################################
+
+# trigger weblate push to ensure having the most up-to-date files
+bash trigger_weblatepush.sh $WEBLATE_API_KEY
+
+# get updated translation files
+git pull
+
+# Default options
+build_all=false
+specific_language=""
+rebuild=false
+
+# Parse input arguments
+for arg in "$@"; do
+    case $arg in
+    --rebuild)
+        rebuild=true
+        shift
+        ;;
+    --all-languages)
+        build_all=true
+        shift
+        ;;
+    *)
+        specific_language=$arg
+        ;;
+    esac
+done
+
 # Clean build directory if --rebuild is specified
 if $rebuild; then
     clean_build
@@ -87,17 +95,21 @@ fi
 current_time=$(date +"%Y-%m-%d %H:%M:%S")
 
 if $build_all; then
+
     log_message="$current_time [$SCRIPT_NAME] Building documentation for all languages"
     echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
+    
     for lang in "${PRIORITY_LANGUAGES[@]}"; do
         build_docs $lang
     done
+
     for lang in "${OTHER_LANGUAGES[@]}"; do
         build_docs $lang
     done
+
 else
 
-    if [[ -z "$specific_language" ]]; then
+    if [[ "$specific_language" ]]; then
 
         if [[ " ${PRIORITY_LANGUAGES[@]} " =~ " $specific_language " || " ${OTHER_LANGUAGES[@]} " =~ " $specific_language " ]]; then
             log_message="$current_time [$SCRIPT_NAME] Building documentation for language: $specific_language"
