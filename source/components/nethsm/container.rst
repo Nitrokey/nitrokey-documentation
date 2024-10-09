@@ -1,17 +1,47 @@
 Container
-^^^^^^^^^
+=========
 
-For the NetHSM two container images are available for testing and production.
-
-The container image is distributed as an OCI image and can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_.
-It can be run locally with a compatible executor, e.g. Docker or Podman.
+Software container images of NetHSM are available for testing and production. They are distributed as OCI images and can be run locally with a compatible executor such as Docker and Podman.
 
 Compared to the NetHSM hardware the following functions are not implemented at software container's REST API:
 
-* network configuration
-* factory reset
-* reboot
-* software update
+* Network configuration
+* Factory reset
+* Reboot
+* Software update
+
+Refer to the following chapters to learn more about the respective differences.
+
+Test Image
+----------
+
+The image can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_.
+
+.. warning::
+
+   Do not use the test image under any circumstances for production data and use cases.
+
+Tagging Policy
+^^^^^^^^^^^^^^
+
+The images in the repository are tagged with the Git commit hash from the main branch of the `repository <https://github.com/nitrokey/nethsm>`__.
+The latest image is tagged with ``testing``.
+
+.. _test-image-configuration:
+
+Configuration
+^^^^^^^^^^^^^
+
+The image can be configured with the following environment variables.
+
++----------------------+--------------------------------------+
+| Environment variable | Description                          |
++======================+======================================+
+| ``DEBUG_LOG``        | Enables extended logging for NetHSM. |
++----------------------+--------------------------------------+
+
+Usage
+^^^^^
 
 The container can be executed as follows.
 
@@ -19,16 +49,93 @@ The container can be executed as follows.
    .. tab:: Docker
       .. code-block:: bash
 
-         $ sudo docker run --rm -ti -p8443:8443 nitrokey/nethsm:testing
+         $ docker run --rm -ti -p 8443:8443 docker.io/nitrokey/nethsm:testing
 
    .. tab:: Podman
       .. code-block:: bash
 
-         $ podman run --rm -ti -p8443:8443 docker.io/nitrokey/nethsm:testing 
+         $ podman run --rm -ti -p 8443:8443 docker.io/nitrokey/nethsm:testing
 
-This will run NetHSM as a Unix process inside the container and expose the REST API on the port `8443` via the HTTPS protocol.
+This will run NetHSM as a Unix process inside the container and expose the REST API via the HTTPS protocol on port `8443`.
 
-Additionaly to running the NetHSM as a Unix process it can be run as a unikernel supported by KVM.
+.. important::
+   The container uses a self-signed TLS certificate.
+   Make sure to use the correct connection settings to establish a connection.
+   Please refer to chapter `NetHSM introduction <index.html>`__ to learn more.
+
+Production Image
+----------------
+
+The NetHSM production container is a product for paying customers only and can be purchased `here <https://www.nitrokey.com/contact>`__.
+
+The image can be obtained from `Nitrokey NetHSM registry <https://registry.git.nitrokey.com/distribution/nethsm>`_ using the credentials provided after purchase.
+
+.. warning::
+
+   The security of the NetHSM software container strongly depends on the platform's security.
+   A compromised platform could easily compromise a NetHSM software container it executes.
+   In addition the TRNG is not existent so that the entropy used and provided by the NetHSM depends on the platform's entropy. 
+
+Tagging Policy
+^^^^^^^^^^^^^^
+
+The images in the repository are tagged with the Git commit hash and the version of the release.
+The latest image is tagged with ``latest``.
+
+Modes of Operation
+^^^^^^^^^^^^^^^^^^
+
+The image can be run in two modes of operation, i.e. Unix process or unikernel.
+
+The Unix process mode runs NetHSM as a process on top of the operating system.
+
+The unikernel mode runs NetHSM as a guest in a KVM based virtual machine and provides strong separation from the host operating system.
+This mode is only available on Linux and requires access to the ``/dev/tun`` and ``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability.
+
+The mode can be set with the environment variable ``MODE`` (see next chapter `Configuration <container.html#production-image-configuration>`__).
+
+.. _production-image-configuration:
+
+Configuration
+^^^^^^^^^^^^^
+
+The container can be configured with the following environment variables.
+Secrets should be passed in with the secrets feature of Docker or Podman.
+
++----------------------+----------------------------------------------------------------------------------------------------+
+| Environment variable | Description                                                                                        |
++======================+====================================================================================================+
+| ``DEBUG_LOG``        | Enables extended logging for NetHSM.                                                               |
++----------------------+----------------------------------------------------------------------------------------------------+
+| ``UNLOCKPW``         | A set unlock passphrase automatically unlocks the container during start.                          |
++----------------------+----------------------------------------------------------------------------------------------------+
+| ``MODE``             | The mode accepts the values `unix` or `unikernel`, defaults to `unix`.                             |
++----------------------+----------------------------------------------------------------------------------------------------+
+| ``ETCD_HOST``        | The URL/IP address of the host running the etcd service.                                           |
++----------------------+----------------------------------------------------------------------------------------------------+
+| ``ETCD_PORT``        | The port running the etcd service, defaults to `2379`.                                             |
++----------------------+----------------------------------------------------------------------------------------------------+
+| ``ETCD_CA_CERT``     | The path to the certificate of the CA (Certificate Authority) which signed the client certificate. |
++----------------------+----------------------------------------------------------------------------------------------------+
+| ``ETCD_CLIENT_CERT`` | The path to the certificate for the client authentication.                                         |
++----------------------+----------------------------------------------------------------------------------------------------+
+| ``ETCD_CLIENT_KEY``  | The path to the secret key for the client authentication.                                          |
++----------------------+----------------------------------------------------------------------------------------------------+
+
+Usage
+^^^^^
+
+The production container supports two `modes of operation <container.html#Modes of Operation>`__. The following chapters describe how to run the container with the provided compose files or with the _run_ command.
+
+Unix Mode
+~~~~~~~~~
+
+You can obtain a provided compose file `here <https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/compose-unix.yaml>`__.
+Make sure you have the necessary files for the secrets, mentioned in the compose file, available.
+
+To run the container without the compose file you need to provide an external etcd yourself.
+`Here <https://quay.io/coreos/etcd>`__ you find the recommended container image for etcd.
+Make sure to pass the configuration options, as described in chapter `Configuration <container.html#production-image-configuration>`__.
 
 The container can be executed as follows.
 
@@ -36,7 +143,42 @@ The container can be executed as follows.
    .. tab:: Docker
       .. code-block:: bash
 
-         $ docker run -ti --rm -p 8443:8443 --device /dev/net/tun --device /dev/kvm --cap-add=NET_ADMIN nitrokey/nethsm:testing
+         $ docker run -ti --rm -p 8443:8443 registry.git.nitrokey.com/distribution/nethsm:latest
+
+   .. tab:: Podman
+      .. code-block:: bash
+
+         $ podman run -ti --rm -p 8443:8443 registry.git.nitrokey.com/distribution/nethsm:latest
+
+This will run NetHSM as a Unix process inside the container and expose the REST API on the port `8443` via the HTTPS protocol.
+
+.. important::
+   The container uses a self-signed TLS certificate.
+   Make sure to use the correct connection settings to establish a connection.
+   Please refer to chapter `NetHSM introduction <index.html>`__ to learn more.
+
+Unikernel Mode
+~~~~~~~~~~~~~~
+
+You can obtain a provided compose file `here <https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/compose-unikernel.yaml>`__.
+Make sure you have the necessary files for the secrets, mentioned in the compose file, available.
+
+To run the container without the compose file you need to provide an external etcd yourself.
+`Here <https://quay.io/coreos/etcd>`__ you find the recommended container image for etcd.
+Make sure to pass the configuration options, as described in chapter `Configuration <container.html#production-image-configuration>`__.
+
+The container can be executed as follows.
+
+.. tabs::
+   .. tab:: Docker
+      .. code-block:: bash
+
+         $ docker run -ti --rm -p 8443:8443 --device /dev/net/tun --device /dev/kvm --cap-add=NET_ADMIN -e "MODE=unikernel" registry.git.nitrokey.com/distribution/nethsm:latest
+
+   .. tab:: Podman
+      .. code-block:: bash
+
+         $ podman run -ti --rm -p 8443:8443 --device /dev/net/tun --device /dev/kvm --cap-add=NET_ADMIN -e "MODE=unikernel" registry.git.nitrokey.com/distribution/nethsm:latest
 
 This will run NetHSM as a unikernel inside a KVM virtual machine.
 The container will expose the REST API, via the HTTPS protocol, on the interface `tap200` with the IP address `192.168.1.100` and port `8443`.
