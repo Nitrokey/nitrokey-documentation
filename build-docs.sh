@@ -27,8 +27,6 @@ bash trigger_weblatepush.sh $WEBLATE_API_KEY
 # get updated translation files
 git pull
 
-# bash ./build-container-image.sh
-
 # Default options
 build_all=true
 build_update=true
@@ -37,23 +35,23 @@ full_build=false
 rebuild=false
 
 # Parse input arguments
-for arg in "$@"
-do
+for arg in "$@"; do
     case $arg in
-        --full)
+    --full)
         full_build=true
         shift
         ;;
-        --rebuild)
+    --rebuild)
         rebuild=true
         shift
         ;;
-        *)
+    *)
         specific_language=$arg
         build_all=false
         ;;
     esac
 done
+
 
 # Clean the build directory
 clean_build() {
@@ -131,6 +129,9 @@ if [ -f "$QUEUE_FILE" ]; then
         # Process the next payload in the queue
         PAYLOAD=$(cat "$QUEUE_FILE")
         
+        # Remove queue file to prevent infinite loops
+        rm $QUEUE_FILE
+
         # Remove the processed payload from the queue
         #jq '.[1:]' "$QUEUE_FILE" > "$QUEUE_FILE.tmp" && mv "$QUEUE_FILE.tmp" "$QUEUE_FILE"
 
@@ -138,8 +139,6 @@ if [ -f "$QUEUE_FILE" ]; then
         current_time=$(date +"%Y-%m-%d %H:%M:%S")
         log_message="$current_time [$SCRIPT_NAME] Re-triggering build with queued payload..."
         echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
-
-        rm $QUEUE_FILE
 
         # Send the payload to the PHP script using a POST request
         curl -X POST -H "Content-Type: application/json" -d "$PAYLOAD" "$WEBHOOK_URL"
