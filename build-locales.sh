@@ -48,13 +48,16 @@ log_message="$current_time [$SCRIPT_NAME] Done"
 sphinx_args=""
 for lang in "${PRIORITY_LANGUAGES[@]}"
 do
-	sphinx_args=$sphinx_args" -l $lang"
+    if [ "$lang" != "en" ]; then # no need to build locales for English source language
+        sphinx_args="$sphinx_args -l $lang"
+    fi
 done
-if $build_all: then
+
+if [ "$build_all" = true ]; then
     sphinx_args=""
     for lang in "${OTHER_LANGUAGES[@]}"
     do
-        sphinx_args=$sphinx_args" -l $lang"
+        sphinx_args="$sphinx_args -l $lang"
     done
 fi
 
