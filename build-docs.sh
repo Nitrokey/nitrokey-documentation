@@ -28,26 +28,23 @@ bash trigger_weblatepush.sh $WEBLATE_API_KEY
 git pull
 
 # Default options
-build_all=true
-build_update=true
+build_all=false
 specific_language=""
-full_build=false
 rebuild=false
 
 # Parse input arguments
 for arg in "$@"; do
     case $arg in
-    --full)
-        full_build=true
-        shift
-        ;;
     --rebuild)
         rebuild=true
         shift
         ;;
+    --all-languages)
+        build_all=true
+        shift
+        ;;
     *)
         specific_language=$arg
-        build_all=false
         ;;
     esac
 done
@@ -89,12 +86,19 @@ fi
 # Execute build based on the parsed options
 if $build_all; then
     current_time=$(date +"%Y-%m-%d %H:%M:%S")
-    log_message="$current_time [$SCRIPT_NAME] Building documentation for priority languages"
+    log_message="$current_time [$SCRIPT_NAME] Building documentation for all languages"
     echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
     for lang in "${PRIORITY_LANGUAGES[@]}"; do
         build_docs $lang
     done
+    for lang in "${OTHER_LANGUAGES[@]}"; do
+        build_docs $lang
+    done
 else
+    current_time=$(date +"%Y-%m-%d %H:%M:%S")
+    log_message="$current_time [$SCRIPT_NAME] Building documentation for priority languages"
+    echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
+
     if [[ " ${PRIORITY_LANGUAGES[@]} " =~ " $specific_language " ]]; then
         build_docs $specific_language
     else

@@ -20,15 +20,26 @@ else
     exit 1
 fi
 
-cd $SPHINX_PATH
+build_all=false
+# Parse input arguments
+for arg in "$@"; do
+    case $arg in
+    --all-languages)
+        build_all=true
+        shift
+        ;;
+    *) ;;
+    esac
+done
 
+cd $SPHINX_PATH
 git pull
 
-# build container image
-# bash ./build-container-image.sh
-
-# build locales
-bash ./build-locales.sh
+if $build_all; then
+    bash ./build-locales.sh --all-languages
+else
+    bash ./build-locales.sh
+fi
 
 # add language files to git (add, commit and push)
 git add ./source ./locales --all
