@@ -97,7 +97,7 @@ if $build_all; then
     done
 else
 
-    if $specific_language; then
+    if [[ -z "$specific_language" ]]; then
 
         if [[ " ${PRIORITY_LANGUAGES[@]} " =~ " $specific_language " || " ${OTHER_LANGUAGES[@]} " =~ " $specific_language " ]]; then
             log_message="$current_time [$SCRIPT_NAME] Building documentation for language: $specific_language"
