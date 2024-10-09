@@ -99,7 +99,7 @@ else
     log_message="$current_time [$SCRIPT_NAME] Building documentation for priority languages"
     echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
 
-    if [[ " ${PRIORITY_LANGUAGES[@]} " =~ " $specific_language " ]]; then
+    if [[ " ${PRIORITY_LANGUAGES[@]} " =~ " $specific_language " || " ${OTHER_LANGUAGES[@]} " =~ " $specific_language " ]]; then
         build_docs $specific_language
     else
         current_time=$(date +"%Y-%m-%d %H:%M:%S")
