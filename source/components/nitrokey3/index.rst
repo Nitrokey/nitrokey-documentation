@@ -3,7 +3,6 @@ Nitrokey 3
 
 .. contents:: :local:
 
-
 The Nitrokey 3 currently supports:
 
 * FIDO2
