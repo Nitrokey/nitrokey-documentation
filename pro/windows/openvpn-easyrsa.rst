@@ -13,7 +13,7 @@ This guide shows how to configure OpenVPN clients to login using a `Nitrokey Pro
 2 <https://shop.nitrokey.com/de_DE/shop/product/nitrokey-storage-2-56>`__. For software key management we will be using `Easy-RSA <https://github.com/OpenVPN/easy-rsa>`__, a utility that has been evolving alongside OpenVPN.
 
 To sign the certificates, we will use a `Nitrokey HSM
-2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ set up as `Certificate Authority <../../hsm/windows/certificate-authority.html#creating-the-intermediate-certificate-authority>`_, however this guide does not cover the set up of the CA itself (it is clear and `well documented here <../../hsm/windows/certificate-authority.html#sign-a-server-certificate>`_).
+2 <https://shop.nitrokey.com/shop/nkhs2-nitrokey-hsm-2-7>`__ set up as `Certificate Authority <../../hsm/windows/certificate-authority.html#creating-the-intermediate-certificate-authority>`_, however this guide does not cover the set up of the CA itself (it is clear and `well documented here <../../hsm/windows/certificate-authority.html#sign-a-server-certificate>`_).
 
 We will use Easy-RSA, because it seems to provide some flexibility, and allows key management via external PKIs. We will use it on the server to issue the signing request, and repeat the same process on the client. The Certificate Signing Requests will be signed by the CA on the Nitorkey HSM, and re-transmitted to the server and the client.
 
