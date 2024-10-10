@@ -112,8 +112,6 @@ else
     if [[ "$specific_language" ]]; then
 
         if [[ " ${PRIORITY_LANGUAGES[@]} " =~ " $specific_language " || " ${OTHER_LANGUAGES[@]} " =~ " $specific_language " ]]; then
-            log_message="$current_time [$SCRIPT_NAME] Building documentation for language: $specific_language"
-            echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
             build_docs $specific_language
         else
             log_message="$current_time [$SCRIPT_NAME] Error: Language '$specific_language' is not in the list of available languages."
