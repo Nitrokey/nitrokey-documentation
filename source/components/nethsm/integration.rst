@@ -30,7 +30,7 @@ It will be reset every eight hours (CET 6:00, 14:00, 22:00). User "admin", passw
 Container Image
 ^^^^^^^^^^^^^^^
 
-NetHSM `container images <nethsm/container.html>`__ are available for testing and production.
+NetHSM `container images <container/index.html>`__ are available for testing and production.
 
 Integration Into Custom Application
 -----------------------------------

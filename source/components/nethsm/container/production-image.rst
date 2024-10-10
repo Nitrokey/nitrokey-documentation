@@ -1,68 +1,3 @@
-Container
-=========
-
-Software container images of NetHSM are available for testing and production. They are distributed as OCI images and can be run locally with a compatible executor such as Docker and Podman.
-
-Compared to the NetHSM hardware the following functions are not implemented at software container's REST API:
-
-* Network configuration
-* Factory reset
-* Reboot
-* Software update
-
-Refer to the following chapters to learn more about the respective differences.
-
-Test Image
-----------
-
-The image can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_.
-
-.. warning::
-
-   Do not use the test image under any circumstances for production data and use cases.
-
-Tagging Policy
-^^^^^^^^^^^^^^
-
-The images in the repository are tagged with the Git commit hash from the main branch of the `repository <https://github.com/nitrokey/nethsm>`__.
-The latest image is tagged with ``testing``.
-
-.. _test-image-configuration:
-
-Configuration
-^^^^^^^^^^^^^
-
-The image can be configured with the following environment variables.
-
-+----------------------+--------------------------------------+
-| Environment variable | Description                          |
-+======================+======================================+
-| ``DEBUG_LOG``        | Enables extended logging for NetHSM. |
-+----------------------+--------------------------------------+
-
-Usage
-^^^^^
-
-The container can be executed as follows.
-
-.. tabs::
-   .. tab:: Docker
-      .. code-block:: bash
-
-         $ docker run --rm -ti -p 8443:8443 docker.io/nitrokey/nethsm:testing
-
-   .. tab:: Podman
-      .. code-block:: bash
-
-         $ podman run --rm -ti -p 8443:8443 docker.io/nitrokey/nethsm:testing
-
-This will run NetHSM as a Unix process inside the container and expose the REST API via the HTTPS protocol on port `8443`.
-
-.. important::
-   The container uses a self-signed TLS certificate.
-   Make sure to use the correct connection settings to establish a connection.
-   Please refer to chapter `NetHSM introduction <index.html>`__ to learn more.
-
 Production Image
 ----------------
 
@@ -93,8 +28,6 @@ The unikernel mode runs NetHSM as a guest in a KVM based virtual machine and pro
 This mode is only available on Linux and requires access to the ``/dev/tun`` and ``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability.
 
 The mode can be set with the environment variable ``MODE`` (see next chapter `Configuration <container.html#production-image-configuration>`__).
-
-.. _production-image-configuration:
 
 Configuration
 ^^^^^^^^^^^^^
