@@ -6,7 +6,9 @@ Nitrokey FIDO2 FAQ
 
 
 **Q:** What can I use the Nitrokey for?
-   See the `overview <https://www.nitrokey.com/products/nitrokeys>`_ of supported use cases.
+   See the `overview`_ of supported use cases.
+
+.. _overview: https://www.nitrokey.com/products/nitrokeys
 
 **Q:** What happens if I lose my FIDO device?
    When securing accounts using FIDO (two-factor authentication and
