@@ -1,11 +1,16 @@
 Test Image
 ----------
 
+The test image is provided for testing and development purposes.
+It does not offer to run the NetHSM process with hardware-based separation (KVM).
+The connection between the NetHSM process and the integrated key-value store is unencrypted.
+
 The image can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_.
 
 .. warning::
 
    Do not use the test image under any circumstances for production data and use cases.
+   For production environments with high security demands you must use the production image.
 
 Tagging Policy
 ^^^^^^^^^^^^^^

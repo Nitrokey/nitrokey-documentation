@@ -1,8 +1,11 @@
 Production Image
 ----------------
 
-The NetHSM production container is a product for paying customers only and can be purchased `here <https://www.nitrokey.com/contact>`__.
+The production image is provided for production envrionments with high security demands.
+It requires an external etcd key-value store and offers to run the NetHSM process with hardware-based separation (KVM).
+The connection between the NetHSM process and the key-value store is encrypted.
 
+The NetHSM production container is a product for paying customers only and can be purchased `here <https://www.nitrokey.com/contact>`__.
 The image can be obtained from `Nitrokey NetHSM registry <https://registry.git.nitrokey.com/distribution/nethsm>`_ using the credentials provided after purchase.
 
 .. warning::
