@@ -1,10 +1,13 @@
 Production Image
 ----------------
 
-The production image is provided for production envrionments with high security demands.
+The production image is provided for production environments with high security demands.
+The image is distributed as OCI image and can be run locally with a compatible executor such as Docker and Podman.
 It requires an external etcd key-value store and offers to run the NetHSM process with hardware-based separation (KVM).
 The connection between the NetHSM process and the key-value store is encrypted.
 Additionally, the required secrets such as certificates and private keys can be set through the secrets feature of the container executor.
+
+.. include:: container-hardware-restriction.rst.inc
 
 The NetHSM production container is a product for paying customers only and can be purchased `here <https://www.nitrokey.com/contact>`__.
 The image can be obtained from `Nitrokey NetHSM registry <https://registry.git.nitrokey.com/distribution/nethsm>`_ using the credentials provided after purchase.

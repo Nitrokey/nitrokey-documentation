@@ -2,8 +2,11 @@ Test Image
 ----------
 
 The test image is provided for testing and development purposes.
+The image is distributed as OCI image and can be run locally with a compatible executor such as Docker and Podman.
 It does not offer to run the NetHSM process with hardware-based separation (KVM).
 The connection between the NetHSM process and the integrated key-value store is unencrypted.
+
+.. include:: container-hardware-restriction.rst.inc
 
 The image can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_.
 
