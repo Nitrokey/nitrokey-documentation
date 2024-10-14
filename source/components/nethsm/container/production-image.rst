@@ -2,10 +2,9 @@ Production Image
 ----------------
 
 The production image is provided for production environments with high security demands.
+It requires an external etcd key-value store which is connected through an encrypted connection.
+The NetHSM process can be executed with hardware-based separation (KVM) and device-specific encryption.
 The image is distributed as OCI image and can be run locally with a compatible executor such as Docker and Podman.
-It requires an external etcd key-value store and offers to run the NetHSM process with hardware-based separation (KVM).
-The connection between the NetHSM process and the key-value store is encrypted.
-Additionally, the required secrets such as certificates and private keys can be set through the secrets feature of the container executor.
 
 .. include:: container-hardware-restriction.rst.inc
 
