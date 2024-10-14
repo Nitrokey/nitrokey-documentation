@@ -4,6 +4,7 @@ Production Image
 The production image is provided for production envrionments with high security demands.
 It requires an external etcd key-value store and offers to run the NetHSM process with hardware-based separation (KVM).
 The connection between the NetHSM process and the key-value store is encrypted.
+Additionally, the required secrets such as certificates and private keys can be set through the secrets feature of the container executor.
 
 The NetHSM production container is a product for paying customers only and can be purchased `here <https://www.nitrokey.com/contact>`__.
 The image can be obtained from `Nitrokey NetHSM registry <https://registry.git.nitrokey.com/distribution/nethsm>`_ using the credentials provided after purchase.
@@ -36,7 +37,6 @@ Configuration
 ^^^^^^^^^^^^^
 
 The container can be configured with the following environment variables.
-Secrets should be passed in with the secrets feature of Docker or Podman.
 
 +----------------------+----------------------------------------------------------------------------------------------------+
 | Environment variable | Description                                                                                        |
@@ -57,6 +57,26 @@ Secrets should be passed in with the secrets feature of Docker or Podman.
 +----------------------+----------------------------------------------------------------------------------------------------+
 | ``ETCD_CLIENT_KEY``  | The path to the secret key for the client authentication.                                          |
 +----------------------+----------------------------------------------------------------------------------------------------+
+
+The container runtime secrets such as certificates and private keys need to be set with the secrets feature of Docker or Podman.
+
++-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+| Secret variable | Description                                                                                                                      |
++=================+==================================================================================================================================+
+| ``ca_cert``     | CA certificate which signed the client certificate and server certificate.                                                       |
++-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+| ``client_cert`` | Client certificate for authentication of the NetHSM process with the key-value store.                                            |
++-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+| ``client_key``  | Client key for authentication of the NetHSM process with the key-value store.                                                    |
++-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+| ``server_cert`` | Server certificate for the API of the key-value store.                                                                           |
++-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+| ``server_key``  | Server key for the API of the key-value store.                                                                                   |
++-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+| ``device_key``  | Device key of the NetHSM process. To learn more about the device key refer to chapter                                            |
+|                 | `Terminology and Conventions <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#terminology-and-conventions>`__ |
+|                 | in the system design.                                                                                                            |
++-----------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 Usage
 ^^^^^
