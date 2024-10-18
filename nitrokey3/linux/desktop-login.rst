@@ -1,3 +1,0 @@
-  
-.. include:: ../../fido2/linux/desktop-login.rst
-

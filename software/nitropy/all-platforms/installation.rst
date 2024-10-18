@@ -133,8 +133,5 @@ See :doc:`../linux/udev` for more information.
 Next Steps
 ----------
 
-You can find more information on using nitropy in these guides:
+You can find more information on using nitropy in this `guide <../../nitrokeys/nitrokey3/firmware-update>`_.
 
-- For Linux: :doc:`../../../nitrokey3/linux/firmware-update`
-- For Mac: :doc:`../../../nitrokey3/mac/firmware-update`
-- For Windows: :doc:`../../../nitrokey3/windows/firmware-update`
