@@ -14,7 +14,7 @@ The certificate can be retrieved as follows.
 
 .. code-block::
 
-    nitropy nk3 piv read-certificate --key-slot <key-slot>``
+    nitropy nk3 piv --experimental read-certificate --key-slot <key-slot>``
 
 
 Write Certificate
@@ -24,4 +24,4 @@ Certificates can be written to the Nitrokey per key slot.
 
 .. code-block::
 
-    nitropy nk3 piv write-certificate --key-slot <key-slot>
+    nitropy nk3 piv --experimental write-certificate --key-slot <key-slot>

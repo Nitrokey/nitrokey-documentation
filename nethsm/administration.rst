@@ -493,17 +493,16 @@ Metrics
 ~~~~~~~
 
 The NetHSM logs metrics of system parameters.
-
-.. note::
-   This command requires the authentication of a user with the *Metrics* role.
-   Please refer to chapter `Roles <administration#roles>`__ to learn more about the role.
-
 Please refer to `Metrics <metrics>`__ to learn more about each metric.
 
 The metrics can be retrieved as follows.
 
 .. tabs::
    .. tab:: nitropy
+      **Required Role**
+
+      This operation requires an authentication with the *Metrics* role.
+
       **Example**
 
       .. code-block:: bash
@@ -697,14 +696,14 @@ The backup passphrase can be set as follows.
    .. tab:: REST API
       Information about the `/config/backup-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-backup-passphrase>`__.
 
-.. note::
-   This command requires the authentication of a user with the *Backup* role.
-   Please refer to chapter `Roles <administratio#roles>`__ to learn more.
-
 The backup can be executed as follows.
 
 .. tabs::
    .. tab:: nitropy
+      **Required Role**
+
+      This operation requires an authentication with the *Backup* role.
+
       **Arguments**
 
       +--------------+-------------+
@@ -724,9 +723,6 @@ The backup can be executed as follows.
          Backup for localhost:8443 written to /tmp/backup
    .. tab:: REST API
       Information about the `/system/backup` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-backup>`__.
-
-.. note::
-   This backup file can be restored on an unprovisioned NetHSM instance only.
 
 Restore
 ~~~~~~~
