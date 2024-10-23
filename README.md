@@ -17,42 +17,23 @@
 
 ## Tips and Conventions
 
-- See syntax examples in `syntax.rst` and live at https://docs.nitrokey.com/syntax.html 
-
+- See syntax examples in `syntax.rst` and live at https://docs.nitrokey.com/syntax.html
 - Write filenames in lower case and use dashes ("-") instead of spaces.
-
 - If an image is to be used for all languages do not use the Substitution Syntax `|image1|` but directly include the picture with a `figure::` directive.
 - To avoid warnings in Sphinx include images with the full path. e.g. `storage/images/hidden-storage-partition.png`
-
 - If different Image are to be used for different languages use the substitution syntax and translate the substitution names in Weblate e.g. translate |Picture1| with |Bild1| |tableau1| etc. and define all substitutions with files pathes at the end of the document.
-
 - For content which is identical for different models or operating  systems, use `include` to avoid duplication of files. Locate those instructions not in but next to the operating system folders.
-
 - On [include directives](https://docutils.sourceforge.io/docs/ref/rst/directives.html#miscellaneous) you can use ``:start-line:`` and ``:end-line:`` to include different parts of a document. 
-
 - Add a subfolder named the same way as the RST with the numbered image files for each guide.
-
-- Avoid plain URLs in text but use hyperlink syntax instead. (see: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks )
-
+- Avoid plain URLs in text but use [hyperlink syntax](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#hyperlinks) instead.
 - For internal hyperlinks to a different docs.nitrokey.com product create a duplicate rst using `include` for the content and link this document relatively
-
 - Relative paths (also included and double included) are always evaluated from the path of the final including page. Images within pages that are included elsewhere must therefore always be specified with an absolute path starting with `/` which stands for the root directory of the document.
-
 - After each commit, the CI pushes translations automatically. Therefore always do `git pull` before `git commit ...`
-
-- More information about RST:
-
-  https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html
-
-  https://docutils.sourceforge.io/docs/ref/rst/directives.html
+- More information about RST is [here](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html) and [here](https://docutils.sourceforge.io/docs/ref/rst/directives.html).
 
 ## Redirect old articles to existing articles
 
 - Add a line to the redirect list in ./_redirects/.htaccess
-
-## Commits (preventing merge conflicts)
-Before pushing your changes to the Github repository, commit often and test the result locally by building a preview with Sphinx (see below). Only push your changes upstream when you are sure you will not touch it for the next hour. If content is pushed twice within an hour, merge conflicts may occur on the Weblate server that need to be solved manually (see below). If it's necessary to edit and push content within an hour, you have to wait until Weblate translated the new content. Then push the commit button in Weblate's web interface (https://translate.nitrokey.com/projects/nitrokey-documentation/#repository) and pull locally on your device. Only then you can push upstream again and avoid merge conflict.
-
 
 ## Local Preview
 
@@ -111,11 +92,11 @@ git push
 
 ```sphinx@translate: $ bash ~/sphinx/nitrokey-documentation/apply_translated_content.sh```
 
-
 ## Manually trigger deepl Translations for all languages and components
-Get your Weblate Access Token from https://translate.nitrokey.com/accounts/profile/#api
-Update list of components in trigger_deepl.sh
-Run it
+
+1. Get your Weblate Access Token from https://translate.nitrokey.com/accounts/profile/#api
+2. Update list of components in trigger_deepl.sh
+3. Run it
 ```
 bash trigger_deepl.sh YOURWEBLATEACCESSTOKEN
 ```
