@@ -6,7 +6,7 @@ SCRIPT_DIR=$(dirname "$(realpath "$0")")
 SCRIPT_NAME=$(basename "$0")
 LOCK_FILE="$SCRIPT_DIR/build.lock"
 QUEUE_FILE="$SCRIPT_DIR/build_queue.json"
-WEBHOOK_URL="https://docstest-hooks.nitrokey.com/github-push-action.php"
+WEBHOOK_URL="https://sphinx.nitrokey.com/github-push-action.php"
 
 # Change to the script's directory
 cd "$SCRIPT_DIR" || exit 1
