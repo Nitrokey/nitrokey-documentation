@@ -6,7 +6,6 @@ SCRIPT_DIR=$(dirname "$(realpath "$0")")
 SCRIPT_NAME=$(basename "$0")
 LOCK_FILE="$SCRIPT_DIR/build.lock"
 QUEUE_FILE="$SCRIPT_DIR/build_queue.json"
-WEBHOOK_URL="https://docstest-hooks.nitrokey.com/github-push-action.php"
 
 # Change to the script's directory
 cd "$SCRIPT_DIR" || exit 1
@@ -17,7 +16,7 @@ if [ -f "$SCRIPT_DIR/.env" ]; then
 else
     current_time=$(date +"%Y-%m-%d %H:%M:%S")
     log_message="$current_time [$SCRIPT_NAME] Environment file not found!"
-    echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
+    echo -e "$log_message" >> "./webhook.log"
     exit 1
 fi
 
@@ -31,9 +30,8 @@ clean_build() {
     current_time=$(date +"%Y-%m-%d %H:%M:%S")
     log_message="$current_time [$SCRIPT_NAME] Cleaning build directory..."
     echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
-    rm -rf build dist
-    mkdir -p build
-    mkdir -p dist
+
+    rm -rf "$SPHINX_PATH/build/*" "$SPHINX_PATH/dist/*"
 }
 
 # Build documentation for a specific language
@@ -44,11 +42,14 @@ build_docs() {
     echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
 
     # Create output and build directories if they don't exist
-    mkdir -p dist/$lang
-    mkdir -p build/$lang/doctrees
+    mkdir -p "$SPHINX_PATH/dist/$lang"
+    mkdir -p "$SPHINX_PATH/build/$lang/doctrees"
 
     # Determine sphinx-build options
     sphinx_options="-j auto -b html -D language=$lang -d /docs/build/$lang/doctrees . /docs/dist/$lang"
+
+    # Make sure we're in the right directory
+    cd $SPHINX_PATH
 
     # Run the Sphinx build command with the determined options
     docker compose run --rm sphinx sphinx-build $sphinx_options
@@ -58,10 +59,13 @@ build_docs() {
 ### End of helper functions
 ###################################################################
 
-# trigger weblate push to ensure having the most up-to-date files
-bash trigger_weblatepush.sh $WEBLATE_API_KEY
+# Make sure we're in the right directory
+cd "$SPHINX_PATH"
 
-# get updated translation files
+# Trigger weblate push to ensure having the most up-to-date files
+bash "$SPHINX_PATH/trigger_weblatepush.sh" $WEBLATE_API_KEY
+
+# Get updated translation files
 git pull
 
 # Default options
@@ -136,7 +140,7 @@ current_time=$(date +"%Y-%m-%d %H:%M:%S")
 
 log_message="$current_time [$SCRIPT_NAME] Removing lock file."
 echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
-rm $LOCK_FILE
+rm -f $LOCK_FILE
 
 log_message="$current_time [$SCRIPT_NAME] Build process complete."
 echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"

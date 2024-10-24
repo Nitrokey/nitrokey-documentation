@@ -1,8 +1,6 @@
 #!/bin/bash
 export TZ="Europe/Berlin"
 
-mkdir -p ./logs
-
 # Get the directory where the script is located
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 SCRIPT_NAME=$(basename "$0")
