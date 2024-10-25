@@ -109,3 +109,21 @@ Currently the web updater doesn't support the Nitrokey 3. However you can get th
 
 
 .. _nfc.fail: https://nfc.fail/
+
+
+Piv Troubleshooting
+^^^^^^^^^^^^^^^^^^^
+
+Pyscard is not available
+------------------------
+
+If pyscard is not available to nitropy, you might get the following error trying to use the PIV functionality:
+
+    This command requires the pyscard library that is not available on your system. Please consult https://docs.nitrokey.com/nitrokey3/linux/troubleshooting#pyscard-is-not-available for more information
+
+To fix this error, please install nitropy with the `pcsc` extra dependencies:
+
+    pip install pynitrokey[pcsc]
+    pipx install pynitrokey[pcsc]
+
+If you install pynitrokey through another distrubition channel, please install all optional dependencies for this channel.
