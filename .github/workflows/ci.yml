@@ -1,0 +1,42 @@
+name: Continuous integration
+on:
+  push:
+    branches-ignore:
+      - "master"
+  pull_request:
+
+jobs:
+  syntax-check:
+    name: Check syntax
+    runs-on: ubuntu-latest
+    container: python:3.11-slim
+    continue-on-error: true
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Create virtual environment
+        run: |
+          python -m venv venv
+          . venv/bin/activate
+          pip install -r requirements.txt
+      - name: Syntax check
+        run: |
+          . venv/bin/activate
+          rstcheck --recursive --ignore-directives "tabs" source/ #fido2/ hsm/ nethsm/ nextbox/ nitrokey3/ nitropad/ nitropc/ nitrophone/ nitrowall/ pro/ software/ start/ storage/ u2f/
+  build-error-check:
+    name: Check build error
+    runs-on: ubuntu-latest
+    container: python:3.11-slim
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Create virtual environment
+        run: |
+          python -m venv venv
+          . venv/bin/activate
+          pip install -r requirements.txt
+      - name: Build documentation
+        run: |
+          . venv/bin/activate
+          cd source
+          sphinx-build -W -j 1 -a -D language='en' -b html . __preview
