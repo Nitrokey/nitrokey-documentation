@@ -2,7 +2,7 @@ name: Continuous integration
 on:
   push:
     branches-ignore:
-      - "master"
+      - "main"
   pull_request:
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
       - name: Syntax check
         run: |
           . venv/bin/activate
-          rstcheck --recursive --ignore-directives "tabs" source/ #fido2/ hsm/ nethsm/ nextbox/ nitrokey3/ nitropad/ nitropc/ nitrophone/ nitrowall/ pro/ software/ start/ storage/ u2f/
+          rstcheck --recursive --ignore-directives "tabs" source/
   build-error-check:
     name: Check build error
     runs-on: ubuntu-latest
@@ -38,5 +38,4 @@ jobs:
       - name: Build documentation
         run: |
           . venv/bin/activate
-          cd source
-          sphinx-build -W -j 1 -a -D language='en' -b html . __preview
+          sphinx-build -W -j 1 -a -D language='en' -b html source __preview
