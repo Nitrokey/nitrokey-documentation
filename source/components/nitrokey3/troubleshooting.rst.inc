@@ -111,7 +111,7 @@ Currently the web updater doesn't support the Nitrokey 3. However you can get th
 .. _nfc.fail: https://nfc.fail/
 
 
-Piv Troubleshooting
+PIV Troubleshooting
 ^^^^^^^^^^^^^^^^^^^
 
 Pyscard is not available
