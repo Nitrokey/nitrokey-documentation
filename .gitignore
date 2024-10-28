@@ -1,32 +1,28 @@
-# node modules
-node_modules
-
 # MacOS desktop services store
 .DS_Store
 
-# Log files
-*.log
+docker-compose.override.yml
+
+logs/
+trigger-log.txt
+webhook.log
+build_queue.json
+build.lock
+
+*.swp
 
 # Editors
 .vscode
 .idea
 
-# VuePress temp directory
-.temp
-
-# Docs dist directory
-.vuepress/dist
-
-# Typescript build dist
-packages/@vuepress/shared-utils/lib/
-packages/@vuepress/shared-utils/types/
-
 # Local preview builds
-__preview
-_build_txt
+dist/*
+build/*
+deployable/*
 
 # rst backup files
 *.rst~
 
-# Python virtual environment
-venv
+environment.sh
+!environment.sh.example
+.env
