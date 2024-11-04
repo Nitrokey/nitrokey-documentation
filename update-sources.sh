@@ -48,7 +48,7 @@ git push
 bash trigger_weblatepull.sh $WEBLATE_API_KEY
 
 # trigger deepl
-# bash trigger_deepl.sh $WEBLATE_API_KEY
+bash trigger_deepl.sh $WEBLATE_API_KEY
 
 # weblate commit (deepl-translated files)
 bash trigger_weblatecommit.sh $WEBLATE_API_KEY
