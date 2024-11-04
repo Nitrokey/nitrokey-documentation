@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-10 14:01+0000\n"
+"POT-Creation-Date: 2024-11-04 07:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -677,6 +677,8 @@ msgid "img6"
 msgstr ""
 
 #: ../components/fido2/linux/desktop-login.rst:237
+#: ../components/nethsm/container/production-image.rst:88
+#: ../components/nethsm/container/test-image.rst:36
 #: ../components/pro/linux/automatic-screen-lock.rst:81
 #: ../components/pro/linux/disk-encryption-luks.rst:137
 #: ../components/pro/linux/hard-disk-encryption.rst:114
@@ -1845,6 +1847,8 @@ msgstr ""
 msgid "Nitrokey Pro 2, Nitrokey Storage 2, or Nitrokey HSM 2"
 msgstr ""
 
+#: ../components/nethsm/container/production-image.rst:43
+#: ../components/nethsm/container/test-image.rst:25
 #: ../components/nethsm/pkcs11-setup.rst:25
 #: ../components/nextbox/external-storage.rst:18
 #: ../components/pro/linux/automatic-screen-lock.rst:19
@@ -3324,6 +3328,9 @@ msgstr ""
 #: ../components/nethsm/administration.rst:1239
 #: ../components/nethsm/administration.rst:1270
 #: ../components/nethsm/administration.rst:1296
+#: ../components/nethsm/container/production-image.rst:48
+#: ../components/nethsm/container/production-image.rst:70
+#: ../components/nethsm/container/test-image.rst:30
 #: ../components/nethsm/getting-started.rst:130
 #: ../components/nethsm/metrics.rst:7
 #: ../components/nethsm/operation.rst:66
@@ -4771,6 +4778,303 @@ msgstr ""
 msgid "The Apache test page will be available at `https://localhost:9443/ <https://localhost:9443/>`__. Note that your browser, hopefully, will warn you that the websites certificate is self-signed."
 msgstr ""
 
+#: ../components/nethsm/container/index.rst:2
+msgid "Container"
+msgstr ""
+
+#: ../components/nethsm/container/index.rst:4
+msgid "Please refer to the following chapters to learn more about the NetHSM container images."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:2
+msgid "Production Image"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:4
+msgid "The production image is provided for production environments with high security demands. It requires an external etcd key-value store which is connected through an encrypted connection. The NetHSM process can be executed with hardware-based separation (KVM) and device-specific encryption. The image is distributed as OCI image and can be run locally with a compatible executor such as Docker and Podman."
+msgstr ""
+
+#: ../components/nethsm/container/container-hardware-restriction.rst.inc:1
+msgid "Compared to the NetHSM hardware the following functions are not implemented at software container's REST API:"
+msgstr ""
+
+#: ../components/nethsm/container/container-hardware-restriction.rst.inc:3
+msgid "Network configuration"
+msgstr ""
+
+#: ../components/nethsm/container/container-hardware-restriction.rst.inc:4
+msgid "Factory reset"
+msgstr ""
+
+#: ../components/nethsm/container/container-hardware-restriction.rst.inc:5
+msgid "Reboot"
+msgstr ""
+
+#: ../components/nethsm/container/container-hardware-restriction.rst.inc:6
+msgid "Software update"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:11
+msgid "The NetHSM production container is a product for paying customers only and can be purchased `here <https://www.nitrokey.com/contact>`__. The image can be obtained from `Nitrokey NetHSM registry <https://registry.git.nitrokey.com/distribution/nethsm>`_ using the credentials provided after purchase."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:16
+msgid "The security of the NetHSM software container strongly depends on the platform's security. A compromised platform could easily compromise a NetHSM software container it executes. In addition the TRNG is not existent so that the entropy used and provided by the NetHSM depends on the platform's entropy."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:21
+#: ../components/nethsm/container/test-image.rst:19
+msgid "Tagging Policy"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:23
+msgid "The images in the repository are tagged with the Git commit hash and the version of the release. The latest image is tagged with ``latest``."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:27
+msgid "Modes of Operation"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:29
+msgid "The image can be run in two modes of operation, i.e. Unix process or unikernel."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:31
+msgid "The Unix process mode runs NetHSM as a process on top of the operating system."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:33
+msgid "The unikernel mode runs NetHSM as a guest in a KVM based virtual machine and provides strong separation from the host operating system. This mode is only available on Linux and requires access to the ``/dev/tun`` and ``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:38
+msgid "For security choose to run the container in the unikernel mode."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:40
+msgid "The mode can be set with the environment variable ``MODE`` (see next chapter `Configuration <container.html#production-image-configuration>`__)."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:45
+msgid "The container can be configured with the following environment variables."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:48
+#: ../components/nethsm/container/test-image.rst:30
+msgid "Environment variable"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:50
+#: ../components/nethsm/container/test-image.rst:32
+msgid "``DEBUG_LOG``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:50
+#: ../components/nethsm/container/test-image.rst:32
+msgid "Enables extended logging for NetHSM."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:52
+msgid "``UNLOCKPW``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:52
+msgid "A set unlock passphrase automatically unlocks the container during start."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:54
+msgid "``MODE``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:54
+msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:56
+msgid "``ETCD_HOST``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:56
+msgid "The URL/IP address of the host running the etcd service."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:58
+msgid "``ETCD_PORT``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:58
+msgid "The port running the etcd service, defaults to `2379`."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:60
+msgid "``ETCD_CA_CERT``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:60
+msgid "The path to the certificate of the CA (Certificate Authority) which signed the client certificate."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:62
+msgid "``ETCD_CLIENT_CERT``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:62
+msgid "The path to the certificate for the client authentication."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:64
+msgid "``ETCD_CLIENT_KEY``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:64
+msgid "The path to the secret key for the client authentication."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:67
+msgid "The container runtime secrets such as certificates and private keys need to be set with the secrets feature of Docker or Podman."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:70
+msgid "Secret variable"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:72
+msgid "``ca_cert``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:72
+msgid "CA certificate which signed the client certificate and server certificate."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:74
+msgid "``client_cert``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:74
+msgid "Client certificate for authentication of the NetHSM process with the key-value store."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:76
+msgid "``client_key``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:76
+msgid "Client key for authentication of the NetHSM process with the key-value store."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:78
+msgid "``server_cert``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:78
+msgid "Server certificate for the API of the key-value store."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:80
+msgid "``server_key``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:80
+msgid "Server key for the API of the key-value store."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:82
+msgid "``device_key``"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:82
+msgid "Device key of the NetHSM process. To learn more about the device key refer to chapter `Terminology and Conventions <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#terminology-and-conventions>`__ in the system design."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:90
+msgid "The production container supports two `modes of operation <container.html#Modes of Operation>`__. The following chapters describe how to run the container with the provided compose files or with the _run_ command."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:93
+msgid "Unix Mode"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:95
+msgid "You can obtain a provided compose file `here <https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/compose-unix.yaml>`__. Make sure you have the necessary files for the secrets, mentioned in the compose file, available."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:98
+#: ../components/nethsm/container/production-image.rst:128
+msgid "To run the container without the compose file you need to provide an external etcd yourself. `Here <https://quay.io/coreos/etcd>`__ you find the recommended container image for etcd. Make sure to pass the configuration options, as described in chapter `Configuration <container.html#production-image-configuration>`__."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:102
+#: ../components/nethsm/container/production-image.rst:132
+#: ../components/nethsm/container/test-image.rst:38
+msgid "The container can be executed as follows."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:105
+#: ../components/nethsm/container/production-image.rst:135
+#: ../components/nethsm/container/test-image.rst:41
+#: ../components/nethsm/integration.rst:43
+#: ../components/nethsm/integration.rst:56
+msgid "Docker"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:110
+#: ../components/nethsm/container/production-image.rst:140
+#: ../components/nethsm/container/test-image.rst:46
+#: ../components/nethsm/integration.rst:48
+#: ../components/nethsm/integration.rst:61
+msgid "Podman"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:115
+msgid "This will run NetHSM as a Unix process inside the container and expose the REST API on the port `8443` via the HTTPS protocol."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:118
+#: ../components/nethsm/container/production-image.rst:149
+#: ../components/nethsm/container/test-image.rst:54
+msgid "The container uses a self-signed TLS certificate. Make sure to use the correct connection settings to establish a connection. Please refer to chapter `NetHSM introduction <index.html>`__ to learn more."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:123
+msgid "Unikernel Mode"
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:125
+msgid "You can obtain a provided compose file `here <https://raw.githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/compose-unikernel.yaml>`__. Make sure you have the necessary files for the secrets, mentioned in the compose file, available."
+msgstr ""
+
+#: ../components/nethsm/container/production-image.rst:145
+msgid "This will run NetHSM as a unikernel inside a KVM virtual machine. The container will expose the REST API, via the HTTPS protocol, on the interface `tap200` with the IP address `192.168.1.100` and port `8443`."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:2
+msgid "Test Image"
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:4
+msgid "The test image is provided for testing and development purposes. It does not offer to run the NetHSM process with hardware-based separation (KVM), to encrypt the data store, or to use an external etcd. The connection between the NetHSM process and the integrated key-value store is unencrypted. The image is distributed as OCI image and can be run locally with a compatible executor such as Docker and Podman."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:11
+msgid "The image can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:15
+msgid "Do not use the test image under any circumstances for production data and use cases. For production environments with high security demands you must use the production image."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:21
+msgid "The images in the repository are tagged with the Git commit hash from the main branch of the `repository <https://github.com/nitrokey/nethsm>`__. The latest image is tagged with ``testing``."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:27
+msgid "The image can be configured with the following environment variables."
+msgstr ""
+
+#: ../components/nethsm/container/test-image.rst:51
+msgid "This will run NetHSM as a Unix process inside the container and expose the REST API via the HTTPS protocol on port `8443`."
+msgstr ""
+
 #: ../components/nethsm/ejbca.rst:2
 msgid "EJBCA"
 msgstr ""
@@ -5132,93 +5436,38 @@ msgid "Container Image"
 msgstr ""
 
 #: ../components/nethsm/integration.rst:33
-msgid "The container image is distributed as an OCI image and can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_. It can be run locally with a compatible executor, e.g. Docker or Podman."
+msgid "NetHSM `container images <container/index.html>`__ are available for testing and production."
 msgstr ""
 
 #: ../components/nethsm/integration.rst:36
-msgid "Compared to the NetHSM hardware the following functions are not implemented at software container's REST API:"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:38
-msgid "network configuration"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:39
-msgid "factory reset"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:40
-#: ../components/nitropad/factory-reset-heads2.rst.inc:-1
-msgid "reboot"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:41
-msgid "software update"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:43
-#: ../components/nethsm/integration.rst:60
-msgid "The container can be executed as follows."
-msgstr ""
-
-#: ../components/nethsm/integration.rst:46
-#: ../components/nethsm/integration.rst:63
-#: ../components/nethsm/integration.rst:84
-#: ../components/nethsm/integration.rst:97
-msgid "Docker"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:51
-#: ../components/nethsm/integration.rst:89
-#: ../components/nethsm/integration.rst:102
-msgid "Podman"
-msgstr ""
-
-#: ../components/nethsm/integration.rst:56
-msgid "This will run NetHSM as a Unix process inside the container and expose the REST API on the port `8443` via the HTTPS protocol."
-msgstr ""
-
-#: ../components/nethsm/integration.rst:58
-msgid "Additionaly to running the NetHSM as a Unix process it can be run as a unikernel supported by KVM."
-msgstr ""
-
-#: ../components/nethsm/integration.rst:68
-msgid "This will run NetHSM as a unikernel inside a KVM virtual machine. The container will expose the REST API, via the HTTPS protocol, on the interface `tap200` with the IP address `192.168.1.100` and port `8443`."
-msgstr ""
-
-#: ../components/nethsm/integration.rst:72
-msgid "The container uses a self-signed TLS certificate. Make sure to use the correct connection settings to establish a connection. Please refer to chapter `NetHSM introduction <index.html>`__ to learn more."
-msgstr ""
-
-#: ../components/nethsm/integration.rst:77
 msgid "Integration Into Custom Application"
 msgstr ""
 
-#: ../components/nethsm/integration.rst:79
+#: ../components/nethsm/integration.rst:38
 msgid "To integrate the NetHSM into own custom applications, client libraries are available for almost all programming languages. Here are libraries for `Python <https://github.com/Nitrokey/nethsm-sdk-py>`_ and `Rust <https://github.com/Nitrokey/nethsm-sdk-rs>`_ as well as `this 3rd party Rust crate <https://crates.io/crates/nethsm>`_. For all other programming languages we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_."
 msgstr ""
 
-#: ../components/nethsm/integration.rst:81
+#: ../components/nethsm/integration.rst:40
 msgid "The list of all available languages can be retrieved as follows."
 msgstr ""
 
-#: ../components/nethsm/integration.rst:94
+#: ../components/nethsm/integration.rst:53
 msgid "The NetHSM client can be generated for your programming language as follows."
 msgstr ""
 
-#: ../components/nethsm/integration.rst:107
+#: ../components/nethsm/integration.rst:66
 msgid "The generated client code, in this example JavaScript, will be created in the ``./out/`` directory. This folder also contains the necessary documentation how to use it."
 msgstr ""
 
-#: ../components/nethsm/integration.rst:111
+#: ../components/nethsm/integration.rst:70
 msgid "If Podman is used with enforcing SELinux, a labeling to the volume mount might be required. The mode of SELinux can be requested with ``sestatus |grep \"Current mode\"``. If the mode is set to ``enforcing``, a change to the context is required. In this case the volume mount must be postfixed with ``:z``, resulting in ``-v \"${PWD}/out:/out:z\"``."
 msgstr ""
 
-#: ../components/nethsm/integration.rst:117
+#: ../components/nethsm/integration.rst:76
 msgid "Command-line interface"
 msgstr ""
 
-#: ../components/nethsm/integration.rst:119
+#: ../components/nethsm/integration.rst:78
 msgid "Users may administrate and use a NetHSM using a dedicated command-line interface (CLI). Nitrokey offers ``nitropy``, which is distributed in the Python based `pynitrokey <https://pypi.org/project/pynitrokey/>`_. With ``nethsm`` an alternative third-party application exists, which is developed in the Rust crate `nethsm-cli <https://crates.io/crates/nethsm-cli/>`_."
 msgstr ""
 
@@ -11856,6 +12105,10 @@ msgstr ""
 
 #: ../components/nitropad/factory-reset-heads2.rst.inc:96
 msgid "confirm the subsequent restart."
+msgstr ""
+
+#: ../components/nitropad/factory-reset-heads2.rst.inc:-1
+msgid "reboot"
 msgstr ""
 
 #: ../components/nitropad/factory-reset-heads2.rst.inc:-1
