@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-11-04 07:14+0000\n"
-"PO-Revision-Date: 2024-11-04 07:38+0000\n"
+"PO-Revision-Date: 2024-11-06 08:04+0000\n"
 "Last-Translator: Admin <admin@dotplex.com>\n"
 "Language-Team: German <http://translate.nitrokey.com/projects/"
 "nitrokey-documentation/components/de/>\n"
@@ -7023,6 +7023,11 @@ msgid ""
 "existent so that the entropy used and provided by the NetHSM depends on "
 "the platform's entropy."
 msgstr ""
+"Die Sicherheit des NetHSM-Software-Containers hängt stark von der Sicherheit "
+"der Plattform ab. Eine kompromittierte Plattform könnte einen von ihr "
+"ausgeführten NetHSM-Softwarecontainer leicht kompromittieren. Darüber hinaus "
+"ist der TRNG nicht vorhanden, so dass die vom NetHSM verwendete und "
+"bereitgestellte Entropie von der Entropie der Plattform abhängt."
 
 #: ../components/nethsm/container/production-image.rst:21
 #: ../components/nethsm/container/test-image.rst:19
@@ -7034,23 +7039,29 @@ msgid ""
 "The images in the repository are tagged with the Git commit hash and the "
 "version of the release. The latest image is tagged with ``latest``."
 msgstr ""
+"Die Bilder im Repository sind mit dem Git-Commit-Hash und der Version der "
+"Veröffentlichung gekennzeichnet. Das neueste Bild ist mit ``latest`` "
+"gekennzeichnet."
 
 #: ../components/nethsm/container/production-image.rst:27
-#, fuzzy
 msgid "Modes of Operation"
-msgstr "Wichtige Vorgänge"
+msgstr "Betriebsarten"
 
 #: ../components/nethsm/container/production-image.rst:29
 msgid ""
 "The image can be run in two modes of operation, i.e. Unix process or "
 "unikernel."
 msgstr ""
+"Das Image kann in zwei Betriebsarten ausgeführt werden, nämlich als Unix-"
+"Prozess oder Unikernel."
 
 #: ../components/nethsm/container/production-image.rst:31
 msgid ""
 "The Unix process mode runs NetHSM as a process on top of the operating "
 "system."
 msgstr ""
+"Im Unix-Prozessmodus wird NetHSM als Prozess oberhalb des Betriebssystems "
+"ausgeführt."
 
 #: ../components/nethsm/container/production-image.rst:33
 msgid ""
@@ -7059,10 +7070,16 @@ msgid ""
 "is only available on Linux and requires access to the ``/dev/tun`` and "
 "``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability."
 msgstr ""
+"Im Unikernel-Modus wird NetHSM als Gast in einer KVM-basierten virtuellen "
+"Maschine ausgeführt und bietet eine starke Trennung vom Host-Betriebssystem. "
+"Dieser Modus ist nur unter Linux verfügbar und erfordert den Zugriff auf die "
+"Geräteknoten ``/dev/tun`` und ``/dev/kvm`` sowie die Fähigkeit ``NET_ADMIN``."
 
 #: ../components/nethsm/container/production-image.rst:38
 msgid "For security choose to run the container in the unikernel mode."
 msgstr ""
+"Aus Sicherheitsgründen sollten Sie den Container im Unikernel-Modus "
+"betreiben."
 
 #: ../components/nethsm/container/production-image.rst:40
 msgid ""
@@ -7070,11 +7087,14 @@ msgid ""
 "chapter `Configuration <container.html#production-image-"
 "configuration>`__)."
 msgstr ""
+"Der Modus kann mit der Umgebungsvariablen ``MODE`` eingestellt werden (siehe "
+"nächstes Kapitel `Konfiguration <container.html#production-image-"
+"configuration>`__)."
 
 #: ../components/nethsm/container/production-image.rst:45
-#, fuzzy
 msgid "The container can be configured with the following environment variables."
-msgstr "Der Container kann wie folgt ausgeführt werden."
+msgstr ""
+"Der Container kann mit den folgenden Umgebungsvariablen konfiguriert werden."
 
 #: ../components/nethsm/container/production-image.rst:48
 #: ../components/nethsm/container/test-image.rst:30
@@ -7089,7 +7109,7 @@ msgstr ""
 #: ../components/nethsm/container/production-image.rst:50
 #: ../components/nethsm/container/test-image.rst:32
 msgid "Enables extended logging for NetHSM."
-msgstr ""
+msgstr "Aktiviert die erweiterte Protokollierung für NetHSM."
 
 #: ../components/nethsm/container/production-image.rst:52
 #, fuzzy
@@ -7099,6 +7119,8 @@ msgstr "PIN entsperren"
 #: ../components/nethsm/container/production-image.rst:52
 msgid "A set unlock passphrase automatically unlocks the container during start."
 msgstr ""
+"Eine gesetzte Unlock-Passphrase entsperrt den Container automatisch beim "
+"Start."
 
 #: ../components/nethsm/container/production-image.rst:54
 #, fuzzy
@@ -7108,6 +7130,8 @@ msgstr "``time``"
 #: ../components/nethsm/container/production-image.rst:54
 msgid "The mode accepts the values `unix` or `unikernel`, defaults to `unix`."
 msgstr ""
+"Der Modus kann die Werte `unix` oder `unikernel` annehmen, die "
+"Voreinstellung ist `unix`."
 
 #: ../components/nethsm/container/production-image.rst:56
 #, fuzzy
@@ -7116,7 +7140,7 @@ msgstr "``PKCS1``"
 
 #: ../components/nethsm/container/production-image.rst:56
 msgid "The URL/IP address of the host running the etcd service."
-msgstr ""
+msgstr "Die URL/IP-Adresse des Hosts, auf dem der etcd-Dienst läuft."
 
 #: ../components/nethsm/container/production-image.rst:58
 #, fuzzy
@@ -7125,7 +7149,7 @@ msgstr "``USER_ID``"
 
 #: ../components/nethsm/container/production-image.rst:58
 msgid "The port running the etcd service, defaults to `2379`."
-msgstr ""
+msgstr "Der Port, auf dem der etcd-Dienst läuft, ist standardmäßig `2379`."
 
 #: ../components/nethsm/container/production-image.rst:60
 #, fuzzy
@@ -7133,13 +7157,12 @@ msgid "``ETCD_CA_CERT``"
 msgstr "``PKCS1``"
 
 #: ../components/nethsm/container/production-image.rst:60
-#, fuzzy
 msgid ""
 "The path to the certificate of the CA (Certificate Authority) which "
 "signed the client certificate."
 msgstr ""
-"Wählen oder erzeugen Sie eine Zertifizierungsstelle, die das Zertifikat "
-"des Benutzers auf dem Nitrokey ausstellen soll."
+"Der Pfad zum Zertifikat der CA (Certificate Authority), die das Client-"
+"Zertifikat signiert hat."
 
 #: ../components/nethsm/container/production-image.rst:62
 #, fuzzy
@@ -7147,9 +7170,8 @@ msgid "``ETCD_CLIENT_CERT``"
 msgstr "``EdDSA_Signature``"
 
 #: ../components/nethsm/container/production-image.rst:62
-#, fuzzy
 msgid "The path to the certificate for the client authentication."
-msgstr "Einstellen des Zertifikats für die NetHSM TLS-Schnittstelle"
+msgstr "Der Pfad zum Zertifikat für die Client-Authentifizierung."
 
 #: ../components/nethsm/container/production-image.rst:64
 #, fuzzy
@@ -7159,13 +7181,16 @@ msgstr "``EdDSA_Signature``"
 #: ../components/nethsm/container/production-image.rst:64
 #, fuzzy
 msgid "The path to the secret key for the client authentication."
-msgstr "Für diesen Vorgang ist keine Authentifizierung erforderlich."
+msgstr "Der Pfad zum geheimen Schlüssel für die Client-Authentifizierung."
 
 #: ../components/nethsm/container/production-image.rst:67
 msgid ""
 "The container runtime secrets such as certificates and private keys need "
 "to be set with the secrets feature of Docker or Podman."
 msgstr ""
+"Die Geheimnisse der Container-Laufzeit, wie z. B. Zertifikate und private "
+"Schlüssel, müssen mit der Secrets-Funktion von Docker oder Podman festgelegt "
+"werden."
 
 #: ../components/nethsm/container/production-image.rst:70
 msgid "Secret variable"
@@ -7178,7 +7203,7 @@ msgstr "``USER_ID``"
 
 #: ../components/nethsm/container/production-image.rst:72
 msgid "CA certificate which signed the client certificate and server certificate."
-msgstr ""
+msgstr "CA-Zertifikat, welches das Client- und Server-Zertifikat signiert hat."
 
 #: ../components/nethsm/container/production-image.rst:74
 #, fuzzy
@@ -7190,6 +7215,8 @@ msgid ""
 "Client certificate for authentication of the NetHSM process with the key-"
 "value store."
 msgstr ""
+"Client-Zertifikat für die Authentifizierung des NetHSM-Prozesses mit dem "
+"Schlüsselwertspeicher."
 
 #: ../components/nethsm/container/production-image.rst:76
 #, fuzzy
@@ -7201,6 +7228,8 @@ msgid ""
 "Client key for authentication of the NetHSM process with the key-value "
 "store."
 msgstr ""
+"Client-Schlüssel für die Authentifizierung des NetHSM-Prozesses mit dem Key-"
+"Value-Store."
 
 #: ../components/nethsm/container/production-image.rst:78
 #, fuzzy
@@ -7209,7 +7238,7 @@ msgstr "``USER_ID``"
 
 #: ../components/nethsm/container/production-image.rst:78
 msgid "Server certificate for the API of the key-value store."
-msgstr ""
+msgstr "Server-Zertifikat für die API des Key-Value-Stores."
 
 #: ../components/nethsm/container/production-image.rst:80
 #, fuzzy
@@ -7218,7 +7247,7 @@ msgstr "Server-Schlüssel"
 
 #: ../components/nethsm/container/production-image.rst:80
 msgid "Server key for the API of the key-value store."
-msgstr ""
+msgstr "Serverschlüssel für die API des Key-Value-Stores."
 
 #: ../components/nethsm/container/production-image.rst:82
 msgid "``device_key``"
@@ -7231,6 +7260,10 @@ msgid ""
 "<https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md"
 "#terminology-and-conventions>`__ in the system design."
 msgstr ""
+"Geräteschlüssel des NetHSM-Prozesses. Weitere Informationen über den "
+"Geräteschlüssel finden Sie im Kapitel `Terminologie und Konventionen "
+"<https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md"
+"#terminology-and-conventions>`__ im Systementwurf."
 
 #: ../components/nethsm/container/production-image.rst:90
 msgid ""
@@ -7239,11 +7272,14 @@ msgid ""
 "how to run the container with the provided compose files or with the "
 "_run_ command."
 msgstr ""
+"Der Produktionscontainer unterstützt zwei `Betriebsmodi <container.html#"
+"Modes of Operation>`__. In den folgenden Kapiteln wird beschrieben, wie der "
+"Container mit den bereitgestellten Compose-Dateien oder mit dem Befehl _run_ "
+"betrieben werden kann."
 
 #: ../components/nethsm/container/production-image.rst:93
-#, fuzzy
 msgid "Unix Mode"
-msgstr "GUI-Methode"
+msgstr "Unix-Modus"
 
 #: ../components/nethsm/container/production-image.rst:95
 msgid ""
@@ -7252,6 +7288,11 @@ msgid ""
 "/compose-unix.yaml>`__. Make sure you have the necessary files for the "
 "secrets, mentioned in the compose file, available."
 msgstr ""
+"Sie können eine mitgelieferte Kompositionsdatei `hier <https://raw."
+"githubusercontent.com/Nitrokey/nethsm/refs/heads/main/src/container/alpine/"
+"compose-unix.yaml>`__ erhalten. Vergewissern Sie sich, dass Sie die "
+"erforderlichen Dateien für die in der Kompositionsdatei genannten "
+"Geheimnisse zur Verfügung haben."
 
 #: ../components/nethsm/container/production-image.rst:98
 #: ../components/nethsm/container/production-image.rst:128
@@ -7262,6 +7303,11 @@ msgid ""
 "configuration options, as described in chapter `Configuration "
 "<container.html#production-image-configuration>`__."
 msgstr ""
+"Um den Container ohne die Compose-Datei zu betreiben, müssen Sie selbst "
+"einen externen etcd bereitstellen. `Hier <https://quay.io/coreos/etcd>`__ "
+"finden Sie das empfohlene Container-Image für etcd. Stellen Sie sicher, dass "
+"Sie die Konfigurationsoptionen übergeben, wie im Kapitel `Konfiguration "
+"<container.html#production-image-configuration>`__ beschrieben."
 
 #: ../components/nethsm/container/production-image.rst:102
 #: ../components/nethsm/container/production-image.rst:132
@@ -7364,6 +7410,9 @@ msgid ""
 " main branch of the `repository <https://github.com/nitrokey/nethsm>`__. "
 "The latest image is tagged with ``testing``."
 msgstr ""
+"Die Bilder im Repository sind mit dem Git-Commit-Hash aus dem Hauptzweig des "
+"Repositorys ` <https://github.com/nitrokey/nethsm>` __ gekennzeichnet. Das "
+"neueste Bild ist mit ``testing`` getaggt."
 
 #: ../components/nethsm/container/test-image.rst:27
 msgid "The image can be configured with the following environment variables."
