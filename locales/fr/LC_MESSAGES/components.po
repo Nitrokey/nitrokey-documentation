@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-10 14:01+0000\n"
-"PO-Revision-Date: 2024-10-24 16:20+0000\n"
-"Last-Translator: Jan Suhr <jan@nitrokey.com>\n"
+"PO-Revision-Date: 2024-11-07 08:16+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
 "Language-Team: French <http://translate.nitrokey.com/projects/"
 "nitrokey-documentation/components/fr/>\n"
 "Language: fr\n"
@@ -8737,6 +8737,7 @@ msgstr ""
 #: ../components/nethsm/operation.rst:141
 msgid "Import a private key from a PEM file into NetHSM as follows."
 msgstr ""
+"Importez une clé privée d'un fichier PEM dans NetHSM en procédant comme suit."
 
 #: ../components/nethsm/operation.rst:154
 #, fuzzy
@@ -9578,13 +9579,15 @@ msgstr ""
 
 #: ../components/nethsm/pkcs11-setup.rst:139
 msgid "Network reliability"
-msgstr ""
+msgstr "Fiabilité du réseau"
 
 #: ../components/nethsm/pkcs11-setup.rst:141
 msgid ""
 "To improve the reliability of the PKCS#11 module, it is possible to "
 "configure timeouts, retries, instance redundancy and TCP keepalives."
 msgstr ""
+"Pour améliorer la fiabilité du module PKCS#11, il est possible de configurer "
+"des timeouts, des retries, des redondances d'instances et des keepalives TCP."
 
 #: ../components/nethsm/pkcs11-setup.rst:144
 #, fuzzy
@@ -9598,12 +9601,19 @@ msgid ""
 "(if other instances are also unreachable). It is possible to introduce a "
 "delay between retries."
 msgstr ""
+"Si une instance NetHSM est inaccessible, le module PKCS#11 est capable de "
+"réessayer d'envoyer la demande à d'autres instances, ou à la même instance ("
+"si d'autres instances sont également inaccessibles). Il est possible "
+"d'introduire un délai entre les tentatives."
 
 #: ../components/nethsm/pkcs11-setup.rst:149
 msgid ""
 "Failing instances are marked as unreachable and retried in a background "
 "thread, so they won't be tried unless all instances are unreachable"
 msgstr ""
+"Les instances qui échouent sont marquées comme inaccessibles et relancées "
+"dans un thread d'arrière-plan, de sorte qu'elles ne seront pas essayées à "
+"moins que toutes les instances ne soient inaccessibles."
 
 #: ../components/nethsm/pkcs11-setup.rst:150
 msgid ""
@@ -9615,32 +9625,46 @@ msgid ""
 "situation that can only be reached if a large number of instances "
 "failed)."
 msgstr ""
+"Si aucun thread d'arrière-plan ne peut être créé "
+"(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), les instances défaillantes seront "
+"essayées pendant les opérations normales, ce qui ralentira les requêtes. "
+"Pour minimiser ce problème, de tels contrôles de santé \"en ligne\" sont "
+"limités à des délais de 1 seconde, et seulement 3 contrôles de santé peuvent "
+"être tentés par requête (il s'agit d'une situation de pire cas qui ne peut "
+"être atteinte que si un grand nombre d'instances échouent)."
 
 #: ../components/nethsm/pkcs11-setup.rst:152
 msgid "Therefore:"
-msgstr ""
+msgstr "C'est pourquoi :"
 
 #: ../components/nethsm/pkcs11-setup.rst:154
 msgid ""
 "The maximum number of requests sent for one API call is: "
 "``retries.count`` + 1 + 3"
 msgstr ""
+"Le nombre maximum de requêtes envoyées pour un appel API est le suivant : "
+"``retries.count`` + 1 + 3"
 
 #: ../components/nethsm/pkcs11-setup.rst:155
 msgid ""
 "The maximum (worst case) duration before reaching the timeout for one API"
 " call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
 msgstr ""
+"La durée maximale (dans le pire des cas) avant d'atteindre le délai "
+"d'attente pour un appel à l'API est : (``retries.count`` + 1) * "
+"``timeout_seconds`` + 3"
 
 #: ../components/nethsm/pkcs11-setup.rst:156
 msgid ""
 "The maximum timeout for one PKCS#11 function call will vary because some "
 "functions will lead to multiple API calls in the NetHSM."
 msgstr ""
+"Le délai maximum pour un appel de fonction PKCS#11 varie car certaines "
+"fonctions conduisent à plusieurs appels d'API dans le NetHSM."
 
 #: ../components/nethsm/pkcs11-setup.rst:159
 msgid "TCP keepalive"
-msgstr ""
+msgstr "TCP keepalive"
 
 #: ../components/nethsm/pkcs11-setup.rst:161
 msgid ""
@@ -9651,6 +9675,13 @@ msgid ""
 "happening, and to detect earlier if it does, it is possible to configure "
 "TCP keepalives for these."
 msgstr ""
+"Pour améliorer les performances, les connexions sont maintenues ouvertes "
+"avec les instances de NetHSM afin d'éviter de devoir les rouvrir. Il est "
+"possible que, dans un réseau doté d'un pare-feu, ces connexions inactives "
+"soient fermées, ce qui entraîne un dépassement du délai de la prochaine "
+"tentative de connexion. Afin d'éviter les dépassements de délai et de les "
+"détecter plus rapidement, il est possible de configurer des keepalives TCP "
+"pour ces connexions."
 
 #: ../components/nethsm/pkcs11-setup.rst:166
 msgid "Users"
