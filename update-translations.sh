@@ -43,6 +43,7 @@ fi
 # a new commit, because this could lead to an
 # overlap with a new incoming commit from GitHub
 # and unnecessarily block building the docs 
+current_time=$(date +"%Y-%m-%d %H:%M:%S")
 log_message="$current_time [$SCRIPT_NAME] Removing lock file."
 echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
 rm -f $LOCK_FILE
