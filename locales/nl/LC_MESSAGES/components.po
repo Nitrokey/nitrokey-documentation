@@ -30,15 +30,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-10 14:01+0000\n"
-"PO-Revision-Date: 2024-10-10 23:25+0000\n"
-"Last-Translator: dotplex <admin@dotplex.com>\n"
+"PO-Revision-Date: 2024-11-07 08:16+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Dutch <http://translate.nitrokey.com/projects/"
+"nitrokey-documentation/components/nl/>\n"
 "Language: nl\n"
-"Language-Team: Dutch <http://docstest-weblate.nitrokey.com/projects"
-"/nitrokey-documentation/components/nl/>\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.8.1\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../components/fido2/2fa-nextcloud.rst:2
@@ -8639,7 +8640,7 @@ msgstr ""
 
 #: ../components/nethsm/operation.rst:141
 msgid "Import a private key from a PEM file into NetHSM as follows."
-msgstr ""
+msgstr "Importeer als volgt een privésleutel uit een PEM-bestand in NetHSM."
 
 #: ../components/nethsm/operation.rst:154
 #, fuzzy
@@ -9479,13 +9480,15 @@ msgstr ""
 
 #: ../components/nethsm/pkcs11-setup.rst:139
 msgid "Network reliability"
-msgstr ""
+msgstr "Netwerkbetrouwbaarheid"
 
 #: ../components/nethsm/pkcs11-setup.rst:141
 msgid ""
 "To improve the reliability of the PKCS#11 module, it is possible to "
 "configure timeouts, retries, instance redundancy and TCP keepalives."
 msgstr ""
+"Om de betrouwbaarheid van de PKCS#11 module te verbeteren, is het mogelijk "
+"om timeouts, retries, instance redundancy en TCP keepalives te configureren."
 
 #: ../components/nethsm/pkcs11-setup.rst:144
 #, fuzzy
@@ -9499,12 +9502,19 @@ msgid ""
 "(if other instances are also unreachable). It is possible to introduce a "
 "delay between retries."
 msgstr ""
+"Als een NetHSM instantie onbereikbaar is, kan de PKCS#11 module opnieuw "
+"proberen het verzoek naar andere instanties te sturen, of naar dezelfde "
+"instantie (als andere instanties ook onbereikbaar zijn). Het is mogelijk om "
+"een vertraging in te voeren tussen de pogingen."
 
 #: ../components/nethsm/pkcs11-setup.rst:149
 msgid ""
 "Failing instances are marked as unreachable and retried in a background "
 "thread, so they won't be tried unless all instances are unreachable"
 msgstr ""
+"Mislukte instanties worden gemarkeerd als onbereikbaar en opnieuw geprobeerd "
+"in een thread op de achtergrond, dus ze worden niet geprobeerd tenzij alle "
+"instanties onbereikbaar zijn."
 
 #: ../components/nethsm/pkcs11-setup.rst:150
 msgid ""
@@ -9516,32 +9526,45 @@ msgid ""
 "situation that can only be reached if a large number of instances "
 "failed)."
 msgstr ""
+"Als er geen achtergrond thread kan worden gespawned "
+"(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), zullen mislukte instanties worden "
+"geprobeerd tijdens normale operaties, wat de aanvragen vertraagt. Om dit te "
+"minimaliseren zijn dergelijke \"inline\" gezondheidscontroles beperkt tot "
+"timeouts van 1 seconde en kunnen er slechts 3 gezondheidscontroles per "
+"aanvraag worden uitgevoerd (dit is een worst case situatie die alleen kan "
+"worden bereikt als een groot aantal instanties faalt)."
 
 #: ../components/nethsm/pkcs11-setup.rst:152
 msgid "Therefore:"
-msgstr ""
+msgstr "Daarom:"
 
 #: ../components/nethsm/pkcs11-setup.rst:154
 msgid ""
 "The maximum number of requests sent for one API call is: "
 "``retries.count`` + 1 + 3"
 msgstr ""
+"Het maximum aantal verzonden verzoeken voor één API-aanroep is: ``retries."
+"count`` + 1 + 3"
 
 #: ../components/nethsm/pkcs11-setup.rst:155
 msgid ""
 "The maximum (worst case) duration before reaching the timeout for one API"
 " call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
 msgstr ""
+"De maximale (slechtst denkbare) duur voordat de time-out voor een API-"
+"aanroep wordt bereikt is: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
 
 #: ../components/nethsm/pkcs11-setup.rst:156
 msgid ""
 "The maximum timeout for one PKCS#11 function call will vary because some "
 "functions will lead to multiple API calls in the NetHSM."
 msgstr ""
+"De maximale time-out voor één PKCS#11 functie-aanroep varieert omdat sommige "
+"functies leiden tot meerdere API-aanroepen in de NetHSM."
 
 #: ../components/nethsm/pkcs11-setup.rst:159
 msgid "TCP keepalive"
-msgstr ""
+msgstr "TCP keepalive"
 
 #: ../components/nethsm/pkcs11-setup.rst:161
 msgid ""
@@ -9552,6 +9575,12 @@ msgid ""
 "happening, and to detect earlier if it does, it is possible to configure "
 "TCP keepalives for these."
 msgstr ""
+"Om de prestaties te verbeteren worden verbindingen met de NetHSM instanties "
+"open gehouden om te voorkomen dat ze opnieuw geopend moeten worden. Het is "
+"mogelijk dat in een netwerk met een firewall deze inactieve verbindingen "
+"gesloten worden, waardoor de volgende verbindingspoging een timeout krijgt. "
+"Om langzame timeouts te voorkomen, en om ze eerder te detecteren als dat "
+"toch gebeurt, is het mogelijk om TCP keepalives hiervoor te configureren."
 
 #: ../components/nethsm/pkcs11-setup.rst:166
 msgid "Users"
@@ -40702,4 +40731,3 @@ msgstr ""
 #~ "functions will lead to multiple API "
 #~ "calls in the NetHSM."
 #~ msgstr ""
-

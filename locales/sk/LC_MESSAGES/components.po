@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2024-10-10 14:01+0000\n"
-"PO-Revision-Date: 2024-10-10 23:25+0000\n"
-"Last-Translator: dotplex <admin@dotplex.com>\n"
+"PO-Revision-Date: 2024-11-07 08:16+0000\n"
+"Last-Translator: DeepL <noreply-mt-deepl@weblate.org>\n"
+"Language-Team: Slovak <http://translate.nitrokey.com/projects/"
+"nitrokey-documentation/components/sk/>\n"
 "Language: sk\n"
-"Language-Team: Slovak <http://docstest-weblate.nitrokey.com/projects"
-"/nitrokey-documentation/components/sk/>\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 5.8.1\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: ../components/fido2/2fa-nextcloud.rst:2
@@ -8493,7 +8494,7 @@ msgstr ""
 
 #: ../components/nethsm/operation.rst:141
 msgid "Import a private key from a PEM file into NetHSM as follows."
-msgstr ""
+msgstr "Súkromný kľúč zo súboru PEM importujte do NetHSM takto."
 
 #: ../components/nethsm/operation.rst:154
 #, fuzzy
@@ -9307,13 +9308,15 @@ msgstr ""
 
 #: ../components/nethsm/pkcs11-setup.rst:139
 msgid "Network reliability"
-msgstr ""
+msgstr "Spoľahlivosť siete"
 
 #: ../components/nethsm/pkcs11-setup.rst:141
 msgid ""
 "To improve the reliability of the PKCS#11 module, it is possible to "
 "configure timeouts, retries, instance redundancy and TCP keepalives."
 msgstr ""
+"Na zvýšenie spoľahlivosti modulu PKCS#11 je možné nakonfigurovať časové "
+"limity, opakované pokusy, redundanciu inštancií a udržiavacie protokoly TCP."
 
 #: ../components/nethsm/pkcs11-setup.rst:144
 #, fuzzy
@@ -9327,12 +9330,19 @@ msgid ""
 "(if other instances are also unreachable). It is possible to introduce a "
 "delay between retries."
 msgstr ""
+"Ak je inštancia NetHSM nedosiahnuteľná, modul PKCS#11 je schopný opakovať "
+"pokus o odoslanie požiadavky iným inštanciám alebo tej istej inštancii (ak "
+"sú aj ostatné inštancie nedosiahnuteľné). Je možné zaviesť oneskorenie medzi "
+"opakovanými pokusmi."
 
 #: ../components/nethsm/pkcs11-setup.rst:149
 msgid ""
 "Failing instances are marked as unreachable and retried in a background "
 "thread, so they won't be tried unless all instances are unreachable"
 msgstr ""
+"Neúspešné inštancie sú označené ako nedosiahnuteľné a opätovne sa skúšajú vo "
+"vlákne na pozadí, takže sa neskúšajú, pokiaľ nie sú všetky inštancie "
+"nedosiahnuteľné."
 
 #: ../components/nethsm/pkcs11-setup.rst:150
 msgid ""
@@ -9344,32 +9354,45 @@ msgid ""
 "situation that can only be reached if a large number of instances "
 "failed)."
 msgstr ""
+"Ak nie je možné vytvoriť žiadne vlákno na pozadí "
+"(`CKF_LIBRARY_CANT_CREATE_OS_THREADS`), neúspešné inštancie sa budú skúšať "
+"počas bežných operácií, čo spomalí požiadavky. Aby sa to minimalizovalo, "
+"takéto \"inline\" kontroly stavu sú obmedzené na časový limit 1 sekundy a na "
+"jednu požiadavku sa môžu pokúsiť iba 3 kontroly stavu (ide o najhoršiu "
+"situáciu, ktorá sa môže dosiahnuť iba v prípade veľkého počtu zlyhaných "
+"inštancií)."
 
 #: ../components/nethsm/pkcs11-setup.rst:152
 msgid "Therefore:"
-msgstr ""
+msgstr "Preto:"
 
 #: ../components/nethsm/pkcs11-setup.rst:154
 msgid ""
 "The maximum number of requests sent for one API call is: "
 "``retries.count`` + 1 + 3"
 msgstr ""
+"Maximálny počet odoslaných požiadaviek na jedno volanie API je: `retries."
+"count` ` + 1 + 3"
 
 #: ../components/nethsm/pkcs11-setup.rst:155
 msgid ""
 "The maximum (worst case) duration before reaching the timeout for one API"
 " call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
 msgstr ""
+"Maximálna (najhoršia) doba trvania pred dosiahnutím časového limitu pre "
+"jedno volanie API je: (``retries.count`` + 1) * ``timeout_seconds`` + 3"
 
 #: ../components/nethsm/pkcs11-setup.rst:156
 msgid ""
 "The maximum timeout for one PKCS#11 function call will vary because some "
 "functions will lead to multiple API calls in the NetHSM."
 msgstr ""
+"Maximálny časový limit pre jedno volanie funkcie PKCS#11 sa bude líšiť, "
+"pretože niektoré funkcie vedú k viacerým volaniam API v NetHSM."
 
 #: ../components/nethsm/pkcs11-setup.rst:159
 msgid "TCP keepalive"
-msgstr ""
+msgstr "Udržiavanie protokolu TCP"
 
 #: ../components/nethsm/pkcs11-setup.rst:161
 msgid ""
@@ -9380,6 +9403,12 @@ msgid ""
 "happening, and to detect earlier if it does, it is possible to configure "
 "TCP keepalives for these."
 msgstr ""
+"Na zlepšenie výkonu sa udržiavajú otvorené spojenia s inštanciami NetHSM, "
+"aby sa predišlo potrebe ich opätovného otvárania. Je možné, že v sieti s "
+"bránou firewall by sa tieto nečinné spojenia mohli uzavrieť, čo by viedlo k "
+"tomu, že ďalší pokus o spojenie by vypršal. Aby sa predišlo pomalým "
+"timeoutom a aby sa skôr zistilo, ak sa tak stane, je možné pre ne "
+"nakonfigurovať keepalives TCP."
 
 #: ../components/nethsm/pkcs11-setup.rst:166
 msgid "Users"
@@ -39910,4 +39939,3 @@ msgstr ""
 #~ "functions will lead to multiple API "
 #~ "calls in the NetHSM."
 #~ msgstr ""
-
