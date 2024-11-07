@@ -4,8 +4,6 @@ export TZ="Europe/Berlin"
 # Get the directory where the script is located
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
 SCRIPT_NAME=$(basename "$0")
-LOCK_FILE="$SCRIPT_DIR/build.lock"
-QUEUE_FILE="$SCRIPT_DIR/build_queue.json"
 
 # Change to the script's directory
 cd "$SCRIPT_DIR" || exit 1
@@ -137,10 +135,6 @@ else
 fi
 
 current_time=$(date +"%Y-%m-%d %H:%M:%S")
-
-log_message="$current_time [$SCRIPT_NAME] Removing lock file."
-echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
-rm -f $LOCK_FILE
 
 log_message="$current_time [$SCRIPT_NAME] Build process complete."
 echo -e "$log_message" >> "$LOGFILE_PATH/webhook.log"
