@@ -30,5 +30,3 @@ In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitro
 
 
 .. _installation instructions: ./installation.html
-
-This is just a temporary test.
