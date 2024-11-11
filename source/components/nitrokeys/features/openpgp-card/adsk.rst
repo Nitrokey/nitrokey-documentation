@@ -1,6 +1,11 @@
 Additional Decryption Subkeys (ADSK) with GnuPG
 ===============================================
 
+.. include:: index.rst
+	:start-after: products-begin
+	:end-before: products-end
+
+
 .. contents:: :local:
 
 `Additional Decryption Subkeys (ADSK) <https://gnupg.org/blog/20230321-adsk.html>`__ can be used to automatically add recipients when encrypting a message with GnuPG.
@@ -27,9 +32,9 @@ Preparing the Keys
 
 Follow one of these guides to generate the two keys:
 
-- :doc:`../features/openpgp-card/openpgp-keygen-backup`
-- :doc:`../features/openpgp-card/openpgp-keygen-on-device`
-- :doc:`../features/openpgp-card/openpgp-keygen-gpa`
+- :doc:`openpgp-keygen-backup`
+- :doc:`openpgp-keygen-on-device`
+- :doc:`openpgp-keygen-gpa`
 
 Make sure that you can list both keys with ``gpg --list-keys``, for example::
 

@@ -24,7 +24,6 @@ and the product guides:
     nitropy <nitropy>
     Reset <reset>
     Troubleshooting <troubleshooting>
-    Additional Decryption Subkeys (ADSK) with GnuPG <adsk>
 
 or check out the features:
 

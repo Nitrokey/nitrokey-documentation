@@ -51,3 +51,5 @@ OpenPGP Card
 	Certificate-authority <certificate-authority>
 	GnuPG with Fedora <fedora-gnupg-configuration>
 	Change Pins <change-pins>
+	Additional Decryption Subkeys (ADSK) with GnuPG <adsk>
+	
