@@ -16,7 +16,7 @@ Two-factor Authentication with One-Time Passwords (OTP)
      - `Nitrokey Start <https://docs.nitrokey.com/nitrokeys/start/index.html>`_
      - `Nitrokey Storage 2 <https://docs.nitrokey.com/nitrokeys/storage/index.html>`_
 
-   * - ⨯
+   * - ✓
      - ⨯
      - ⨯
      - ⨯

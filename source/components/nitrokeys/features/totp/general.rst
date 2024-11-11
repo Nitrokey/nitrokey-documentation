@@ -9,6 +9,9 @@ Two-factor Authentication with One-Time Passwords (OTP)
 
 The use of One-time Passwords (OTP) is called very differently on the various services supporting it. Sometimes it is referred to as Multi-factor Authentication (MFA), sometimes it is Two-factor Authentication (2FA) or just “authentication via authenticator app” like Google Authenticator. Most of these services are compatible for usage with the Nitrokey Pro and Nitrokey Storage. The following instructions show how to enable OTP on our `support forum <https://support.nitrokey.com/>`__. The procedure is quite similar on most services. For a list of websites supporting OTP have a look at `dongleauth.com <https://www.dongleauth.com/>`__.
 
+.. note::
+   For the Nitrokey 3 the Nitrokey App 2 has to be used to set up TOTP. See :doc:`../../../software/nk-app2/index`.
+
 You need to have the `Nitrokey App <https://www.nitrokey.com/download>`__ installed to use the OTP feature of the Nitrokey Pro and Nitrokey Storage.
 
 Configure a Website/Application to Use OTP
