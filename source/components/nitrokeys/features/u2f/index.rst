@@ -21,7 +21,7 @@ U2F
      - ✓
      - ✓
      - ⨯
-     - ✓
+     - ⨯
      - ⨯
      - ✓
 .. section products-end
