@@ -60,8 +60,12 @@ build_docs() {
 # Make sure we're in the right directory
 cd "$SPHINX_PATH"
 
-# Trigger weblate push to ensure having the most up-to-date files
-bash "$SPHINX_PATH/trigger_weblatepush.sh" $WEBLATE_API_KEY
+# Trigger weblate push to ensure having the most up-to-date files,
+# but skip it if WEBLATE_API_KEY has not been set, because the build
+# should work without the Weblate instance
+if [ -n "$WEBLATE_API_KEY" ]; then
+    bash "$SPHINX_PATH/trigger_weblatepush.sh" $WEBLATE_API_KEY
+fi
 
 # Get updated translation files
 git pull
