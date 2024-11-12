@@ -241,7 +241,7 @@ The TLS certificate can be retrieved as follows.
       +-------------------+--------------------------------------------------+
       | Option            | Description                                      |
       +===================+==================================================+
-      | ``-a``, ``--api`` | Set the certificate for the NetHSM TLS interface |
+      | ``-a``, ``--api`` | Get the certificate for the NetHSM TLS interface |
       +-------------------+--------------------------------------------------+
 
       **Example**
