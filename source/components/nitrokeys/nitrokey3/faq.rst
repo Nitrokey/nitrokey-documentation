@@ -30,7 +30,7 @@ Nitrokey 3 FAQ
    The Nitrokey 3 doesn't contain storage capability for ordinary data (it can
    only store cryptographic keys and certificates).
 
-**Q:** Why does the Nitrokey 3 not show up in GnuPG
+**Q:** Why does the Nitrokey 3 not show up in GnuPG?
    Make sure to install a firmware more recent than version 1.4.0.
    For more information, see the firmware-update page for your operating system.
 
