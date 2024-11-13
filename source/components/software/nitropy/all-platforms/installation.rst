@@ -125,7 +125,7 @@ Linux
 
 On Linux systems, you also need the Nitrokey udev rules. These are shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`__. Alternatively, you can install them manually::
 
-    wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
+    wget https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/refs/heads/main/41-nitrokey.rules
     sudo mv 41-nitrokey.rules /etc/udev/rules.d/
 
 See :doc:`../linux/udev` for more information.
