@@ -117,7 +117,7 @@ PIV Troubleshooting
 Pyscard is not available
 ------------------------
 
-If pyscard is not available to nitropy, you might get the following error trying to use the PIV functionality:
+If pyscard is not available to nitropy, you might get the following error when trying to use the PIV functionality:
 
     This command requires the pyscard library that is not available on your system. Please consult https://docs.nitrokey.com/nitrokey3/linux/troubleshooting#pyscard-is-not-available for more information
 
