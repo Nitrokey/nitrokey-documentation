@@ -31,7 +31,6 @@ NFC is Not Working
 Please make sure FIDO2 is working correctly. Otherwise NFC won't work either.
 
 Also check if you are using the right spot on your smartphone. 
-Find the right spot using: `nfc.fail`_. 
 
 The backside of the Nitrokey has to be held against the smartphone. For the USB-A version it might be helpful to lift the side with the USB connector slightly to reduce the distance to the end part of the stick. 
 
@@ -107,5 +106,19 @@ Update Via update.nitrokey.com Does Not Work
 
 Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware using these `instructions <firmware-update.html>`_. 
 
+PIV Troubleshooting
+^^^^^^^^^^^^^^^^^^^
 
-.. _nfc.fail: https://nfc.fail/
+Pyscard is not available
+------------------------
+
+If pyscard is not available to nitropy, you might get the following error when trying to use the PIV functionality:
+
+    This command requires the pyscard library that is not available on your system. Please consult https://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting#pyscard-is-not-available for more information
+
+To fix this error, please install nitropy with the `pcsc` extra dependencies:
+
+    pip install pynitrokey[pcsc]
+    pipx install pynitrokey[pcsc]
+
+If you install pynitrokey through another distrubition channel, please install all optional dependencies for this channel.
