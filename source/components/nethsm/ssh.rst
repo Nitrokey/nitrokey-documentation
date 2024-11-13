@@ -7,7 +7,7 @@ You can use NetHSM for SSH authentication. You need to pass the PKCS#11 module p
   .. tab:: Command line
     .. code-block:: bash
        
-      ssh -I PKCS11Provider=/usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so user@host
+      ssh -I /usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so user@host
   
   .. tab:: SSH config
     .. code-block:: 
