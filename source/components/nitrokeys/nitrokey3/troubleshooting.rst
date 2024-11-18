@@ -14,7 +14,46 @@ If the Nitrokey is not detected, proceed as follows:
    to ``/etc/udev/rules.d/``.
 2. Restart udev via ``sudo service udev restart`` or ``udevadm control --reload-rules && udevadm trigger`` if you are using Fedora.
 
- 
+Nitrokey Card Reader Driver Can Not be Installed on Windows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On Windows the initialization of the generic smartcard reader driver fails.
+The reported device status is ``This device is not working properly because Windows cannot load the drivers required for this device. (Code 31)``.
+
+Windows has two generic smartcard reader drivers (WUDF and UMDF2).
+By default Windows uses UMDF2, which fails to initialize and therefore is not loaded for the Nitrokey.
+
+To ensure a successful driver initialization, add a retry for the device initialization.
+In the registry add the following registry key.
+
+.. tabs::
+   .. tab:: Regedit
+      | Path: ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\Readers``
+      | Key: ``RetryDeviceInitialize``
+      | Type: ``DWORD (32-bit)``
+      | Data: ``1``
+   .. tab:: PowerShell
+      .. code-block::
+
+         New-ItemProperty -Path 'HKLM:\Software\Microsoft\Cryptography\Calais\Readers' -Name 'RetryDeviceInitialize' -PropertyType 'DWord' -Value 1
+
+.. note::
+   The registry key is available for Windows 10 (version 1903 (19H1) and later) and Windows 11.
+
+If the smartcard reader was before already installed with a failed initialization you may have to remove them from the registry.
+In the registry delete the following registry path.
+
+.. tabs::
+   .. tab:: Regedit
+      | Path: ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\Readers\Nitrokey CCID/ICCD Interface 0``
+      
+      If the smartcard reader was installed multiple times before there may be more than one path with an incremented number at the end.
+   .. tab:: PowerShell
+      .. code-block::
+
+         Get-ChildItem -Path HKLM:\SOFTWARE\Microsoft\Cryptography\Calais\Readers -Include 'Nitrokey CCID/ICCD Interface [0-9]*' -Recurse -Depth 1 | Remove-Item
+
+After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard Reader (WUDF)*.
 
 Google and Microsoft Services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
