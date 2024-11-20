@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Nitrokey Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-18 08:01+0000\n"
+"POT-Creation-Date: 2024-11-20 15:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11318,6 +11318,8 @@ msgid "After the import completed check the detail pane for the imported certifi
 msgstr ""
 
 #: ../components/nitrokeys/features/piv/guides/client_logon_with_active_directory.rst:175
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:35
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:51
 msgid "PowerShell"
 msgstr ""
 
@@ -13424,139 +13426,196 @@ msgstr ""
 msgid "Copy this file `41-nitrokey.rules <https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ to ``/etc/udev/rules.d/``."
 msgstr ""
 
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:18
+msgid "Nitrokey Card Reader Driver Can Not be Installed on Windows"
+msgstr ""
+
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:20
-msgid "Google and Microsoft Services"
+msgid "On Windows the initialization of the generic smartcard reader driver fails. The reported device status is ``This device is not working properly because Windows cannot load the drivers required for this device. (Code 31)``."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:22
-msgid "Currently there seems to be a bug we hope to fix soon which affects the Nitrokey 3 working with some Google and Microsoft Services per FIDO2."
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:23
+msgid "Windows has two generic smartcard reader drivers (WUDF and UMDF2). By default Windows uses UMDF2, which fails to initialize and therefore is not loaded for the Nitrokey."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:25
-msgid "Timeout Bug"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:27
-msgid "There is a bug with the Nitrokey being recognized by the system, where a timeout occurs before the connection succeeds."
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:26
+msgid "To ensure a successful driver initialization, add a retry for the device initialization. In the registry add the following registry key."
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:30
-msgid "NFC is Not Working"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:31
-msgid "Please make sure FIDO2 is working correctly. Otherwise NFC won't work either."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:33
-msgid "Also check if you are using the right spot on your smartphone."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:35
-msgid "The backside of the Nitrokey has to be held against the smartphone. For the USB-A version it might be helpful to lift the side with the USB connector slightly to reduce the distance to the end part of the stick."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:37
-msgid "If you have a phone cover, try to find the right spot first without it. Retry afterwards with the cover."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:39
-msgid "The search of the optimal spot sometimes took up to 20-30 sec. In our experience holding the Nitrokey in an horizontal orientation yields better results.If you still encounter issues please write a mail to our support. For optimal help please include the shipping/order number and your smartphone model."
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:42
-msgid "OpenPGP Troubleshooting"
-msgstr ""
-
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:45
-msgid "GnuPG: OpenPGP Card Not Available"
-msgstr ""
-
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:47
-msgid "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error message like this::"
+msgid "Regedit"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:54
-msgid "**Solution:** There are two common smartcard services on Linux systems: ``scdaemon``, GnuPG’s smartcard daemon, and ``pcscd``, a generic smartcard daemon. ``scdaemon`` has two drivers for accessing smartcards: Its integrated ``ccid`` driver tries to directly access the smartcard. The ``pcsc`` drivers uses the ``pcscd`` daemon instead."
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:0
+msgid "Path: ``HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Calais\\Readers``"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:60
-msgid "A smartcard can only be accessed directly by one daemon. This means that depending on the startup order, ``pcscd`` might lock the card before ``scdaemon`` tries to access it using the internal ``ccid`` driver. Therefore we recommend to use the ``pcscd`` driver for ``scdaemon``. You can activate it by adding ``disable-ccid`` to the ``~/.gnupg/scdaemon.conf`` config file and restarting ``scdaemon``, for example with ``gpg-connect-agent \"SCD KILLSCD\" /bye``. If this does not fix the problem, see the next section for more information."
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:0
+msgid "Key: ``RetryDeviceInitialize``"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:0
+msgid "Type: ``DWORD (32-bit)``"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:0
+msgid "Data: ``1``"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:41
+msgid "The registry key is available for Windows 10 (version 1903 (19H1) and later) and Windows 11."
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:43
+msgid "If the smartcard reader was before already installed with a failed initialization you may have to remove them from the registry. In the registry delete the following registry path."
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:0
+msgid "Path: ``HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Cryptography\\Calais\\Readers\\Nitrokey CCID/ICCD Interface 0``"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:50
+msgid "If the smartcard reader was installed multiple times before there may be more than one path with an incremented number at the end."
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:56
+msgid "After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard Reader (WUDF)*."
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:59
+msgid "Google and Microsoft Services"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:61
+msgid "Currently there seems to be a bug we hope to fix soon which affects the Nitrokey 3 working with some Google and Microsoft Services per FIDO2."
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:64
+msgid "Timeout Bug"
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:66
-msgid "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this conflict."
+msgid "There is a bug with the Nitrokey being recognized by the system, where a timeout occurs before the connection succeeds."
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:69
-msgid "pcscd: Card Not Found"
+msgid "NFC is Not Working"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:71
-msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:70
+msgid "Please make sure FIDO2 is working correctly. Otherwise NFC won't work either."
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:72
+msgid "Also check if you are using the right spot on your smartphone."
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:74
-msgid "**Solution:** First, make sure that ``scdaemon`` is not running (see the previous section)::"
+msgid "The backside of the Nitrokey has to be held against the smartphone. For the USB-A version it might be helpful to lift the side with the USB connector slightly to reduce the distance to the end part of the stick."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:79
-msgid "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. You should see an entry like this one::"
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:76
+msgid "If you have a phone cover, try to find the right spot first without it. Retry afterwards with the cover."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:87
-msgid "If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and there might be an issue with the application that tries to access it. If it does not show up, make sure that your ``libccid`` version is up to date. Support for the Nitrokey 3 was added in ``libccid`` 1.5.0."
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:78
+msgid "The search of the optimal spot sometimes took up to 20-30 sec. In our experience holding the Nitrokey in an horizontal orientation yields better results.If you still encounter issues please write a mail to our support. For optimal help please include the shipping/order number and your smartphone model."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:92
-msgid "Updating The Device Database"
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:81
+msgid "OpenPGP Troubleshooting"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:94
-msgid "If you cannot update ``libccid`` to a supported version, you have to manually update the device database. The path of the database depends on your distribution:"
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:84
+msgid "GnuPG: OpenPGP Card Not Available"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:97
-msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:86
+msgid "**Problem:** GnuPG cannot access the Nitrokey 3 and shows an error message like this::"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:93
+msgid "**Solution:** There are two common smartcard services on Linux systems: ``scdaemon``, GnuPG’s smartcard daemon, and ``pcscd``, a generic smartcard daemon. ``scdaemon`` has two drivers for accessing smartcards: Its integrated ``ccid`` driver tries to directly access the smartcard. The ``pcsc`` drivers uses the ``pcscd`` daemon instead."
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:99
-msgid "Make sure to backup the file before overwriting it. You can download an `updated device database file <https://github.com/Nitrokey/nitrokey-3-firmware/blob/main/Info.plist>`__ from the ``nitrokey-3-firmware`` repository. After updating the file, restart ``pcscd`` and run ``pcsc_scan -r`` again. The Nitrokey 3 should now show up."
+msgid "A smartcard can only be accessed directly by one daemon. This means that depending on the startup order, ``pcscd`` might lock the card before ``scdaemon`` tries to access it using the internal ``ccid`` driver. Therefore we recommend to use the ``pcscd`` driver for ``scdaemon``. You can activate it by adding ``disable-ccid`` to the ``~/.gnupg/scdaemon.conf`` config file and restarting ``scdaemon``, for example with ``gpg-connect-agent \"SCD KILLSCD\" /bye``. If this does not fix the problem, see the next section for more information."
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:105
-msgid "Update Via update.nitrokey.com Does Not Work"
+msgid "Alternatively, you can deactivate or uninstall ``pcscd`` to avoid this conflict."
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:107
-msgid "Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware using these `instructions <firmware-update.html>`_."
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:108
+msgid "pcscd: Card Not Found"
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:110
-msgid "PIV Troubleshooting"
+msgid "**Problem:** An application using ``pcscd`` does not show the Nitrokey 3."
 msgstr ""
 
 #: ../components/nitrokeys/nitrokey3/troubleshooting.rst:113
+msgid "**Solution:** First, make sure that ``scdaemon`` is not running (see the previous section)::"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:118
+msgid "Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``. You should see an entry like this one::"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:126
+msgid "If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and there might be an issue with the application that tries to access it. If it does not show up, make sure that your ``libccid`` version is up to date. Support for the Nitrokey 3 was added in ``libccid`` 1.5.0."
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:131
+msgid "Updating The Device Database"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:133
+msgid "If you cannot update ``libccid`` to a supported version, you have to manually update the device database. The path of the database depends on your distribution:"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:136
+msgid "Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:138
+msgid "Make sure to backup the file before overwriting it. You can download an `updated device database file <https://github.com/Nitrokey/nitrokey-3-firmware/blob/main/Info.plist>`__ from the ``nitrokey-3-firmware`` repository. After updating the file, restart ``pcscd`` and run ``pcsc_scan -r`` again. The Nitrokey 3 should now show up."
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:144
+msgid "Update Via update.nitrokey.com Does Not Work"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:146
+msgid "Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware using these `instructions <firmware-update.html>`_."
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:149
+msgid "PIV Troubleshooting"
+msgstr ""
+
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:152
 msgid "Pyscard is not available"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:115
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:154
 msgid "If pyscard is not available to nitropy, you might get the following error when trying to use the PIV functionality:"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:117
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:156
 msgid "This command requires the pyscard library that is not available on your system. Please consult https://docs.nitrokey.com/nitrokeys/nitrokey3/troubleshooting#pyscard-is-not-available for more information"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:119
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:158
 msgid "To fix this error, please install nitropy with the `pcsc` extra dependencies:"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:121
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:160
 msgid "pip install pynitrokey[pcsc] pipx install pynitrokey[pcsc]"
 msgstr ""
 
-#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:124
+#: ../components/nitrokeys/nitrokey3/troubleshooting.rst:163
 msgid "If you install pynitrokey through another distrubition channel, please install all optional dependencies for this channel."
 msgstr ""
 
