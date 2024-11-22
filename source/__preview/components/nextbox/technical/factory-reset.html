@@ -1,0 +1,1635 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="Soft Reset" href="soft-reset.html" /><link rel="prev" title="LED Colors and Patterns" href="led-colors.html" />
+
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/><!-- Generated with Sphinx 6.2.1 and Furo 2023.03.27 -->
+        <title>Factory Reset - Nitrokey Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #eeffcc;
+  --color-code-foreground: black;
+  --color-logo-text: #181818;
+  --color-brand-primary: #c70336;
+  --color-brand-content: #c70336;
+  --color-brand-content-hover: #ef144d;
+  --color-content-foreground: #131416;
+  --color-definition-list-background: #efecf6;
+  --color-definition-list-text: #000;
+  --color-sidebar-background: #f5f6fb;
+  --color-sidebar-link-text: #131416;
+  --color-sidebar-links-hover: #111;
+  --color-sidebar-link-text--top-level: #000;
+  --color-sidebar-border: #e8e7f1;
+  --color-sidebar-search-background: #fff;
+  --color-sidebar-search-background--focus: #f5f6fb;
+  --color-sidebar-select-background: #fff;
+  --color-sidebar-select-border: #e8e7f1;
+  --font-stack: 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-stack--monospace: 'Operator mono', 'Hack', 'Menlo', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+  --color-admonition-title--todo: #222222;
+  --color-admonition-title-background--todo: #d6e3ed;
+  --color-admonition-title-background--note: #6ab0de;
+  --color-admonition-title-background--tip: #1abc9c;
+  --color-admonition-title-background--hint: #1abc9c;
+  --color-admonition-title-background--important: #1abc9c;
+  --color-admonition-title-background--warning: #C70336;
+  --color-admonition-background: #e7f2fa;
+  --color-admonition-background--note: #e6edf1;
+  --color-admonition-background--tip: #adf8e9;
+  --color-admonition-background--hint: #adf8e9;
+  --color-admonition-background--important: #adf8e9;
+  --color-admonition-background--warning: #f8e2e2;
+  --color-code: #ddd;
+  --color-code-background: #3c4142;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-logo-text: #eee;
+  --color-brand-primary: #c70336;
+  --color-brand-content: #ef144d;
+  --color-brand-content-hover: #c70336;
+  --color-background-primary: #18191d;
+  --color-content-foreground: #eee;
+  --color-definition-list-background: #1c1f28;
+  --color-definition-list-text: #fff;
+  --color-sidebar-background: #141516;
+  --color-sidebar-link-text: #eee;
+  --color-sidebar-links-hover: #141516;
+  --color-sidebar-link-text--top-level: #fff;
+  --color-sidebar-border: #1f1f1f;
+  --color-sidebar-search-background: #141516;
+  --color-sidebar-search-background--focus: #000;
+  --color-sidebar-select-background: #2a2a2a;
+  --color-sidebar-select-border: #666;
+  --font-stack: 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-stack--monospace: 'Operator mono', 'Hack', 'Menlo', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+  --color-admonition-title--todo: #ffffff;
+  --color-admonition-title-background--todo: #0a6150;
+  --color-admonition-title-background--note: #6ab0de;
+  --color-admonition-title-background--tip: #1abc9c;
+  --color-admonition-title-background--hint: #1abc9c;
+  --color-admonition-title-background--important: #1abc9c;
+  --color-admonition-title-background--warning: #c70336;
+  --color-admonition-background: #208571;
+  --color-admonition-background--note: #2a6592;
+  --color-admonition-background--tip: #208571;
+  --color-admonition-background--hint: #208571;
+  --color-admonition-background--important: #208571;
+  --color-admonition-background--warning: #4e1d1d;
+  --color-code: #ddd;
+  --color-code-background: #000;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #272822;
+  --color-code-foreground: #f8f8f2;
+  --color-logo-text: #eee;
+  --color-brand-primary: #c70336;
+  --color-brand-content: #ef144d;
+  --color-brand-content-hover: #c70336;
+  --color-background-primary: #18191d;
+  --color-content-foreground: #eee;
+  --color-definition-list-background: #1c1f28;
+  --color-definition-list-text: #fff;
+  --color-sidebar-background: #141516;
+  --color-sidebar-link-text: #eee;
+  --color-sidebar-links-hover: #141516;
+  --color-sidebar-link-text--top-level: #fff;
+  --color-sidebar-border: #1f1f1f;
+  --color-sidebar-search-background: #141516;
+  --color-sidebar-search-background--focus: #000;
+  --color-sidebar-select-background: #2a2a2a;
+  --color-sidebar-select-border: #666;
+  --font-stack: 'Open Sans', Helvetica, Arial, sans-serif;
+  --font-stack--monospace: 'Operator mono', 'Hack', 'Menlo', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+  --color-admonition-title--todo: #ffffff;
+  --color-admonition-title-background--todo: #0a6150;
+  --color-admonition-title-background--note: #6ab0de;
+  --color-admonition-title-background--tip: #1abc9c;
+  --color-admonition-title-background--hint: #1abc9c;
+  --color-admonition-title-background--important: #1abc9c;
+  --color-admonition-title-background--warning: #c70336;
+  --color-admonition-background: #208571;
+  --color-admonition-background--note: #2a6592;
+  --color-admonition-background--tip: #208571;
+  --color-admonition-background--hint: #208571;
+  --color-admonition-background--important: #208571;
+  --color-admonition-background--warning: #4e1d1d;
+  --color-code: #ddd;
+  --color-code-background: #000;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">Nitrokey Documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="language-switcher mobile">
+
+<select onchange="location = this.options[this.selectedIndex].value;">
+    <option selected>en</option>
+    
+        
+            
+                <option value="/de/components/nextbox/technical/factory-reset">de</option>
+            
+        
+    
+        
+    
+        
+            
+                <option value="/fr/components/nextbox/technical/factory-reset">fr</option>
+            
+        
+    
+        
+            
+                <option value="/es/components/nextbox/technical/factory-reset">es</option>
+            
+        
+    
+        
+            
+                <option value="/nl/components/nextbox/technical/factory-reset">nl</option>
+            
+        
+    
+        
+            
+                <option value="/it/components/nextbox/technical/factory-reset">it</option>
+            
+        
+    
+        
+            
+                <option value="/ja/components/nextbox/technical/factory-reset">ja</option>
+            
+        
+    
+        
+            
+                <option value="/ru/components/nextbox/technical/factory-reset">ru</option>
+            
+        
+    
+        
+            
+                <option value="/zh_CN/components/nextbox/technical/factory-reset">zh_CN</option>
+            
+        
+    
+        
+            
+                <option value="/el/components/nextbox/technical/factory-reset">el</option>
+            
+        
+    
+        
+            
+                <option value="/da/components/nextbox/technical/factory-reset">da</option>
+            
+        
+    
+        
+            
+                <option value="/bg/components/nextbox/technical/factory-reset">bg</option>
+            
+        
+    
+        
+            
+                <option value="/et/components/nextbox/technical/factory-reset">et</option>
+            
+        
+    
+        
+            
+                <option value="/fi/components/nextbox/technical/factory-reset">fi</option>
+            
+        
+    
+        
+            
+                <option value="/lv/components/nextbox/technical/factory-reset">lv</option>
+            
+        
+    
+        
+            
+                <option value="/lt/components/nextbox/technical/factory-reset">lt</option>
+            
+        
+    
+        
+            
+                <option value="/pl/components/nextbox/technical/factory-reset">pl</option>
+            
+        
+    
+        
+            
+                <option value="/pt/components/nextbox/technical/factory-reset">pt</option>
+            
+        
+    
+        
+            
+                <option value="/ro/components/nextbox/technical/factory-reset">ro</option>
+            
+        
+    
+        
+            
+                <option value="/sv/components/nextbox/technical/factory-reset">sv</option>
+            
+        
+    
+        
+            
+                <option value="/sk/components/nextbox/technical/factory-reset">sk</option>
+            
+        
+    
+        
+            
+                <option value="/sl/components/nextbox/technical/factory-reset">sl</option>
+            
+        
+    
+        
+            
+                <option value="/cs/components/nextbox/technical/factory-reset">cs</option>
+            
+        
+    
+        
+            
+                <option value="/hu/components/nextbox/technical/factory-reset">hu</option>
+            
+        
+    
+</select>
+</div>
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../../_static/logo.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../../_static/logo.png" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Nitrokey Documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../nitrokeys/index.html">Nitrokeys</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitrokeys/features/index.html">Features</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../nitrokeys/features/fido2/index.html">FIDO2</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/fido2/website.html">Website Login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/fido2/nextcloud.html">Nextcloud Login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/fido2/passwordless-microsoft.html">Passwordless Microsoft Login (Windows only)</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../nitrokeys/features/u2f/index.html">U2F</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/u2f/desktop-login.html">Desktop Login (Linux only)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/u2f/odoo.html">Odoo Login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/u2f/2fa.html">Two Factor Authentication</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../nitrokeys/features/totp/index.html">TOTP</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/totp/general.html">General Instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/totp/microsoft.html">Microsoft</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/totp/google.html">Google</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/totp/nextcloud.html">Nextcloud</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/index.html">OpenPGP card</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/overview.html">Overview</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openpgp-thunderbird.html">OpenPGP encryption with Thunderbird</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openpgp-outlook.html">OpenPGP encryption with Outlook</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/uif.html">OpenPGP Touch Confirmation (Nitrokey 3 only)</a></li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openvpn/index.html">OpenVPN</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openvpn/easyrsa.html">EasyRSA</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openvpn/viscosity.html">Viscosity</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference external" href="https://www.claws-mail.org/plugin.php?plugin=gpg">Claws Mail, an email client (and news reader) for Linux and Windows</a></li>
+<li class="toctree-l5"><a class="reference external" href="https://help.gnome.org/users/evolution/stable/mail-encryption.html.en">Evolution, an email client for the Gnome Desktop on Linux systems</a></li>
+<li class="toctree-l5"><a class="reference external" href="https://gpgtools.org">GPGTools on macOS</a></li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/desktop-login/index.html">Desktop Login</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/desktop-login/pam.html">Pam (Linux)</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/desktop-login/smart-policy.html">Smart Policy (Windows)</a></li>
+</ul>
+</li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/ssh/index.html">SSH</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/ssh/putty.html">Putty</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/ipsec.html">IPSec</a></li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/hard-disk-encryption/index.html">Hard Disk Encryption</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/hard-disk-encryption/luks.html">Full-Disk Encryption With cryptsetup/LUKS</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/stunnel.html">Stunnel</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/gpa.html">Gnu Privacy Assistant (GPA)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/eid.html">EID</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/certificate-authority.html">Certificate-authority</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/fedora-gnupg-configuration.html">GnuPG with Fedora</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openpgp-keygen-gpa.html">Keygen with GPA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openpgp-keygen-backup.html">Keygen with Backup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openpgp-keygen-on-device.html">Keygen on device</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openpgp-csp.html">Windows Login and S/MIME Email Encryption with Active Directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openpgp-thunderbird.html">OpenPGP encryption with Thunderbird</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openpgp-outlook.html">OpenPGP encryption with Outlook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/uif.html">OpenPGP Touch Confirmation (Nitrokey 3 only)</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openvpn/index.html">OpenVPN</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openvpn/easyrsa.html">EasyRSA</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/openvpn/viscosity.html">Viscosity</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference external" href="https://www.claws-mail.org/plugin.php?plugin=gpg">Claws Mail, an email client (and news reader) for Linux and Windows</a></li>
+<li class="toctree-l4"><a class="reference external" href="https://help.gnome.org/users/evolution/stable/mail-encryption.html.en">Evolution, an email client for the Gnome Desktop on Linux systems</a></li>
+<li class="toctree-l4"><a class="reference external" href="https://gpgtools.org">GPGTools on macOS</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/desktop-login/index.html">Desktop Login</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/desktop-login/pam.html">Pam (Linux)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/desktop-login/smart-policy.html">Smart Policy (Windows)</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/ssh/index.html">SSH</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/ssh/putty.html">Putty</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/ipsec.html">IPSec</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/hard-disk-encryption/index.html">Hard Disk Encryption</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/hard-disk-encryption/luks.html">Full-Disk Encryption With cryptsetup/LUKS</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/stunnel.html">Stunnel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/gpa.html">Gnu Privacy Assistant (GPA)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/eid.html">EID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/certificate-authority.html">Certificate-authority</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/fedora-gnupg-configuration.html">GnuPG with Fedora</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/change-pins.html">Change Pins</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/adsk.html">Additional Decryption Subkeys (ADSK) with GnuPG</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../nitrokeys/features/password-safe/index.html">Password Safe</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../software/nk-app2/keepassxc.html">KeepassXC</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/features/encrypted-storage/index.html">Encrypted Mobile Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/features/hidden-storage/index.html">Hidden Storage</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../nitrokeys/features/hsm/index.html">HSM</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/smime/index.html">SMIME</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/smime/smime-thunderbird.html">S/MIME encryption on Thunderbird</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/smime/smime-outlook.html">S/MIME encryption on Outlook</a></li>
+<li class="toctree-l5"><a class="reference external" href="https://help.gnome.org/users/evolution/stable/mail-encryption.html.en">Evolution, an email client for the Gnome Desktop on Linux systems</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/desktop-login/smart-policy.html">Smart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/gpa.html">GPA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/hsm/dnssec.html">DNSSEC (Linux only)</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/hard-disk-encryption/index.html">Hard Disk Encryption</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/hard-disk-encryption/luks.html">Full-Disk Encryption With cryptsetup/LUKS</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/misc/automatic-screen-lock.html">Automatic Screen Lock (Linux only)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/hsm/import-keys-certs.html">Import Keys Certs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/stunnel.html">Stunnel (Linux only)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/certificate-authority.html">Certificate Authority</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/openpgp-card/ipsec.html">Ipsec (Linux only)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/hsm/n-of-m-schemes.html">N-of-m Schemes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/hsm/pkcs11-url.html">Pkcs11-URL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/hsm/apache2-tls.html">Apache 2 TLS</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../nitrokeys/features/piv/index.html">PIV (Windows only)</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/piv/access_control.html">Access Control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/piv/certificate_management.html">Certificate Management</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/piv/factory_reset.html">Factory Reset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/piv/key_management.html">Key Management</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../nitrokeys/features/piv/guides/index.html">Guides</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../nitrokeys/features/piv/guides/client_logon_with_active_directory.html">Client Logon with Active Directory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../nitrokeys/features/misc/index.html">Miscellaneous</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/misc/automatic-screen-lock.html">Automatic Screen Lock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../nitrokeys/features/misc/ecc.html">Elliptic Curves (ECC) Support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitrokeys/nitrokey3/index.html">Nitrokey 3</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/nitrokey3/getting-started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/nitrokey3/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/nitrokey3/overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/nitrokey3/firmware-update.html">     Firmware Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/nitrokey3/firmware-update-qubes.html"> Firmware Update Qubes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/nitrokey3/set-pins.html"> Set Pins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/nitrokey3/nitropy.html"> nitropy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/nitrokey3/reset.html"> Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/nitrokey3/troubleshooting.html"> Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrokeys/passkey/index.html">    Nitrokey Passkey</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitrokeys/fido2/index.html">    Nitrokey FIDO2</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/fido2/getting-started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/fido2/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/fido2/firmware-update.html">Firmware update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/fido2/reset.html">Reset</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrokeys/u2f/index.html">    Nitrokey U2F</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitrokeys/hsm/index.html">    Nitrokey HSM 2</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/hsm/getting-started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/hsm/faq.html">Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitrokeys/pro/index.html">    Nitrokey Pro 2</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/pro/getting-started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/pro/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/pro/firmware-update.html"> Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/pro/factory-reset.html"> Factory Reset</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitrokeys/start/index.html">Nitrokey Start</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/start/getting-started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/start/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/start/multiple-identities.html">Multiple Identities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/start/setting-kdf-do.html">Setting KDF-DO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/start/factory-reset.html">Factory Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/start/firmware-update.html">Firmware Update</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitrokeys/storage/index.html">    Nitrokey Storage 2</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/storage/getting-started.html">Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/storage/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/storage/firmware-update.html"> Firmware-Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/storage/firmware-update-manually.html"> Manual Firmware-Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitrokeys/storage/factory-reset.html"> Factory Reset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../nitropad/index.html">NitroPad</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../nitropad/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitropad/qubes/index.html">Qubes</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/change-pins.html">Change User and Admin PIN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/default-boot.html">Default Boot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/factory-reset.html">Factory Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/factory-reset-heads2.html">Factory Reset Heads 2.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/firmware-update.html">Firmware Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/firmware-update-1.4.html">Firmware Update v1.4+</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/network-settings.html">Enable Network Settings, e.g. Wifi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/nitrokey-app.html">Nitrokey App Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/os-reinstallation.html">Operating System Reinstallation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/sealed-hardware.html">Verify Sealed Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/system-update.html">System update</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../nitropad/qubes/troubleshooting.html">Troubleshooting</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/qubes/user-password-reset.html">User Password Reset</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitropad/ubuntu/index.html">Ubuntu</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/change-disk-encryption-passphrase.html">Change Disk Encryption Passphrase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/change-pins.html">Change User and Admin PIN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/default-boot.html">Default Boot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/factory-reset.html">Factory Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/factory-reset-heads2.html">Factory Reset Heads 2.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/firmware-update.html">Firmware Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/firmware-update-1.4.html">Firmware Update v1.4+</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/nitrokey-app.html">Nitrokey App Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/os-reinstallation.html">Operating System Reinstallation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/sealed-hardware.html">Verify Sealed Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropad/ubuntu/system-update.html">System update</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../nitropad/ubuntu/troubleshooting.html">Troubleshooting</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../nitropc/index.html">NitroPC</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" role="switch" type="checkbox"/><label for="toctree-checkbox-34"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../nitropc/faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitropc/debian/index.html">Debian</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" role="switch" type="checkbox"/><label for="toctree-checkbox-35"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropc/debian/os-reinstallation.html">Operating System Reinstallation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropc/debian/sealed-hardware.html">Verify Sealed Hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitropc/qubes/index.html">Qubes</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" role="switch" type="checkbox"/><label for="toctree-checkbox-36"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropc/qubes/gpu-install.html">NitroPC Pro 2 With External GPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropc/qubes/nitrokey-app.html">Nitrokey App Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropc/qubes/os-reinstallation.html">Operating System Reinstallation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropc/qubes/sealed-hardware.html">Verify Sealed Hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nitropc/ubuntu/index.html">Ubuntu</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" role="switch" type="checkbox"/><label for="toctree-checkbox-37"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropc/ubuntu/nitrokey-app.html">Nitrokey App Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropc/ubuntu/os-reinstallation.html">Operating System Reinstallation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nitropc/ubuntu/sealed-hardware.html">Verify Sealed Hardware</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../nitrophone/index.html">NitroPhone, NitroTablet</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" role="switch" type="checkbox"/><label for="toctree-checkbox-38"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrophone/apps.html">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrophone/background-images.html">Background Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrophone/faq.html">Frequently Asked Questions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">NextBox</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" role="switch" type="checkbox"/><label for="toctree-checkbox-39"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware-overview.html">Hardware Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../external-storage.html">Connect External Storage</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../clients/index.html">Desktop And Mobile Synchronization</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" role="switch" type="checkbox"/><label for="toctree-checkbox-40"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../clients/android.html">Android/iOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../clients/windows.html">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../clients/macosx.html">Mac OS X</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../clients/linux.html">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../backup-restore.html">Backup and Restore</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../remote/index.html">Managing Remote Access</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" role="switch" type="checkbox"/><label for="toctree-checkbox-41"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../remote/walkthrough.html">Walkthrough</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../remote/method-comparison.html">Method comparison</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../remote/proxy.html">Backwards Proxy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../remote/dynamic-dns.html">Dynamic DNS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../remote/static.html">Static Domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../remote/dns-rebind.html">DNS Rebind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../remote/port-forwarding.html">Port Forwarding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../remote/ipv6-settings.html">IPv6 Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Technical Documentation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" role="switch" type="checkbox"/><label for="toctree-checkbox-42"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="led-colors.html">LED Colors and Patterns</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Factory Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="soft-reset.html">Soft Reset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="replace-drive.html">Replace Internal Hard-Drive</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../faq/index.html">NextBox FAQ</a><input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" role="switch" type="checkbox"/><label for="toctree-checkbox-43"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/generic.html">Generic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/hardware.html">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/software.html">Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/nextcloud.html">Nextcloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/remote-access.html">Remote Access</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../nethsm/index.html">NetHSM</a><input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" role="switch" type="checkbox"/><label for="toctree-checkbox-44"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/getting-started.html">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/administration.html">Administration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/operation.html">Operation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/integration.html">Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/faq.html">Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/pkcs11-setup.html">PKCS#11 Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/pkcs11-tool.html">pkcs11-tool</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/openssl.html">OpenSSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/nginx.html">Nginx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/apache.html">Apache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/ssh.html">SSH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/system_recovery.html">System Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/opendnssec.html">OpenDNSSEC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/ejbca.html">EJBCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nethsm/knotdns.html">Knot DNS</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../nethsm/container/index.html">Container</a><input class="toctree-checkbox" id="toctree-checkbox-45" name="toctree-checkbox-45" role="switch" type="checkbox"/><label for="toctree-checkbox-45"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../nethsm/container/production-image.html">Production Image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../nethsm/container/test-image.html">Test Image</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../nitrowall/index.html">NitroWall NW678, NW4J3</a><input class="toctree-checkbox" id="toctree-checkbox-46" name="toctree-checkbox-46" role="switch" type="checkbox"/><label for="toctree-checkbox-46"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/firmware-update-nw678.html">Update OpenWrt Firmware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/sealed-hardware.html">Verify Sealed Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/backup-restore.html">Backup &amp; Restore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/dhcp.html">Using NitroWall as combined DHCP-Client/DHCP-Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/lan-bridge.html">How to set up a LAN Bridge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/ntp.html">How to Fix NTP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/ids-ips.html">How to set up IDS/IPS with Suricata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/hardware.html">Hardware Compatibility</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../nitrowall/nw750/index.html">Nitrowall NW750</a><input class="toctree-checkbox" id="toctree-checkbox-47" name="toctree-checkbox-47" role="switch" type="checkbox"/><label for="toctree-checkbox-47"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/nw750/factory-reset.html">Factory Reset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/nw750/imei-change.html">Changing IMEI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nitrowall/nw750/firmware-update.html">Firmware Update</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../software/index.html">Software</a><input class="toctree-checkbox" id="toctree-checkbox-48" name="toctree-checkbox-48" role="switch" type="checkbox"/><label for="toctree-checkbox-48"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../software/nk-app2/index.html">Nitrokey App 2</a><input class="toctree-checkbox" id="toctree-checkbox-49" name="toctree-checkbox-49" role="switch" type="checkbox"/><label for="toctree-checkbox-49"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software/nk-app2/installation_linux.html">Linux Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/nk-app2/installation_windows.html">Windows Install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/nk-app2/keepassxc.html">KeePassXC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/nk-app2/passwords.html">Passwords</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/nk-app2/pin.html">PIN Settings for FIDO2 and OTP in the Nitrokey App 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../software/nitropy/index.html">nitropy</a><input class="toctree-checkbox" id="toctree-checkbox-50" name="toctree-checkbox-50" role="switch" type="checkbox"/><label for="toctree-checkbox-50"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../software/nitropy/all-platforms/index.html">All Platforms</a><input class="toctree-checkbox" id="toctree-checkbox-51" name="toctree-checkbox-51" role="switch" type="checkbox"/><label for="toctree-checkbox-51"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../software/nitropy/all-platforms/installation.html">Installing nitropy With pipx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../software/nitropy/all-platforms/test.html">Test Nitrokey 3</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../software/nitropy/windows/index.html">Windows</a><input class="toctree-checkbox" id="toctree-checkbox-52" name="toctree-checkbox-52" role="switch" type="checkbox"/><label for="toctree-checkbox-52"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../software/nitropy/windows/installation.html">Installing nitropy on Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../software/nitropy/linux/index.html">Linux</a><input class="toctree-checkbox" id="toctree-checkbox-53" name="toctree-checkbox-53" role="switch" type="checkbox"/><label for="toctree-checkbox-53"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../software/nitropy/linux/udev.html">Setting up The udev Rules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div></div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+
+        <div class="tablet-header-actions">
+
+            <a class="logo-link" href="https://nitrokey.com" title="Nitrokey website">
+                <svg class="logo" width="652" height="189" viewBox="0 0 652 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M551.591 156.726C552.576 158.109 553.069 159.849 553.069 161.942V163.02H541.373C541.419 160.66 542.01 158.677 543.142 157.068C544.275 155.459 545.725 154.654 547.49 154.654C549.239 154.654 550.607 155.345 551.591 156.726ZM552.259 177.614C553.47 177.031 554.459 176.249 555.224 175.268L554.077 173.284C553.358 174.184 552.494 174.876 551.486 175.366C550.478 175.855 549.279 176.099 547.888 176.099C545.888 176.099 544.303 175.281 543.131 173.652C541.959 172.02 541.373 169.975 541.373 167.516V165.411H555.88V162.632C555.88 159.438 555.146 156.899 553.678 155.005C552.208 153.115 550.146 152.168 547.49 152.168C545.037 152.168 542.939 153.226 541.196 155.345C539.455 157.462 538.585 160.123 538.585 163.324V167.543C538.585 170.732 539.451 173.354 541.186 175.408C542.919 177.462 545.154 178.488 547.888 178.488C549.591 178.488 551.049 178.197 552.259 177.614V177.614ZM532.022 177.996V155.028H536.824V152.637H532.022V148.981C532.022 147.215 532.337 145.857 532.97 144.904C533.602 143.95 534.537 143.473 535.77 143.473C536.161 143.473 536.517 143.5 536.837 143.555C537.157 143.609 537.474 143.685 537.786 143.777L538.139 141.411C537.685 141.269 537.235 141.156 536.79 141.072C536.344 140.985 535.903 140.942 535.467 140.942C533.497 140.942 531.962 141.642 530.862 143.04C529.759 144.437 529.209 146.419 529.209 148.981V152.637H525.786V155.028H529.209V177.996H532.022ZM521.801 141.433H518.964V145.419H521.801V141.433V141.433ZM521.801 152.637H518.964V177.996H521.801V152.637ZM512.987 141.433H510.151V177.996H512.987V141.433ZM494.985 141.433H492.149V177.996H494.985V141.433V141.433ZM473.843 174.668C473.125 173.809 472.765 172.7 472.765 171.342C472.765 169.747 473.339 168.408 474.487 167.321C475.636 166.236 477.171 165.692 479.094 165.692H483.594V171.177C483.092 172.568 482.238 173.711 481.027 174.609C479.815 175.508 478.429 175.959 476.867 175.959C475.57 175.959 474.562 175.528 473.843 174.668V174.668ZM486.945 177.996C486.743 177.185 486.6 176.356 486.524 175.513C486.444 174.668 486.406 173.795 486.406 172.887V160.442C486.406 157.787 485.689 155.743 484.251 154.313C482.811 152.883 480.922 152.168 478.579 152.168C476.202 152.168 474.254 152.916 472.73 154.408C471.206 155.899 470.483 157.599 470.562 159.505L470.609 159.645L473.234 159.668C473.234 158.262 473.722 157.076 474.699 156.105C475.675 155.137 476.921 154.654 478.437 154.654C480.062 154.654 481.327 155.16 482.234 156.177C483.139 157.193 483.594 158.599 483.594 160.396V163.513H479.163C476.335 163.513 474.093 164.211 472.437 165.609C470.781 167.008 469.952 168.887 469.952 171.247C469.952 173.467 470.525 175.226 471.663 176.532C472.806 177.836 474.421 178.488 476.515 178.488C478.015 178.488 479.378 178.079 480.605 177.259C481.831 176.437 482.827 175.396 483.594 174.131C483.594 174.708 483.629 175.277 483.699 175.842C483.769 176.404 483.874 177.123 484.015 177.996H486.945V177.996ZM459.24 146.168V152.637H455.724V155.028H459.24V171.465C459.24 173.899 459.666 175.68 460.518 176.804C461.37 177.928 462.546 178.488 464.046 178.488C464.655 178.488 465.261 178.431 465.863 178.313C466.463 178.196 466.951 178.043 467.327 177.856L466.951 175.7C466.498 175.795 466.093 175.864 465.733 175.911C465.374 175.959 465.006 175.981 464.631 175.981C463.866 175.981 463.249 175.638 462.779 174.95C462.311 174.265 462.077 173.101 462.077 171.462V155.028H466.483V152.637H462.077V146.168H459.24ZM452.232 141.433H449.396V145.419H452.232V141.433V141.433ZM452.232 152.637H449.396V177.996H452.232V152.637ZM429.286 164.075C429.286 161.295 429.786 159.036 430.786 157.301C431.786 155.568 433.278 154.7 435.262 154.7C436.652 154.7 437.807 155.117 438.719 155.954C439.634 156.791 440.358 157.879 440.887 159.223V171.787C440.34 173.099 439.598 174.126 438.66 174.868C437.723 175.609 436.575 175.981 435.215 175.981C433.231 175.981 431.748 175.214 430.762 173.685C429.778 172.154 429.286 170.105 429.286 167.543V164.075ZM426.45 167.543C426.45 170.857 427.173 173.508 428.618 175.5C430.063 177.492 432.059 178.488 434.606 178.488C435.98 178.488 437.191 178.185 438.239 177.575C439.286 176.966 440.168 176.091 440.887 174.95V178.02C440.887 180.52 440.403 182.419 439.434 183.714C438.464 185.013 436.974 185.66 434.958 185.66C433.958 185.66 432.989 185.524 432.051 185.25C431.114 184.977 430.262 184.599 429.496 184.114L428.723 186.575C429.614 187.075 430.634 187.477 431.782 187.781C432.93 188.087 434.004 188.24 435.004 188.24C437.786 188.24 439.934 187.349 441.45 185.568C442.965 183.787 443.723 181.269 443.723 178.02V152.637H441.332L441.051 156.177C440.349 154.896 439.462 153.908 438.391 153.211C437.32 152.517 436.075 152.168 434.652 152.168C432.09 152.168 430.084 153.255 428.63 155.426C427.176 157.599 426.45 160.481 426.45 164.075V167.543V167.543ZM421.667 141.433H418.831V145.419H421.667V141.433V141.433ZM421.667 152.637H418.831V177.996H421.667V152.637ZM398.746 165.55C398.746 162.317 399.228 159.7 400.198 157.7C401.167 155.7 402.643 154.7 404.627 154.7C406.018 154.7 407.174 155.126 408.096 155.977C409.018 156.828 409.736 157.933 410.252 159.295V171.715C409.706 173.06 408.967 174.105 408.038 174.856C407.108 175.605 405.955 175.981 404.582 175.981C402.613 175.981 401.147 175.087 400.186 173.297C399.226 171.508 398.746 169.091 398.746 166.043V165.55V165.55ZM395.886 166.043C395.886 169.824 396.6 172.845 398.03 175.101C399.459 177.361 401.44 178.488 403.972 178.488C405.392 178.488 406.636 178.164 407.698 177.517C408.76 176.868 409.643 175.933 410.346 174.715L410.582 177.996H413.064V141.433H410.252V155.942C409.55 154.74 408.678 153.809 407.639 153.154C406.6 152.496 405.386 152.168 403.995 152.168C401.432 152.168 399.439 153.383 398.018 155.813C396.597 158.244 395.886 161.488 395.886 165.55V166.043V166.043ZM384.679 152.426C384.507 152.364 384.274 152.307 383.977 152.25C383.679 152.196 383.383 152.168 383.086 152.168C381.774 152.168 380.628 152.579 379.652 153.399C378.675 154.219 377.891 155.364 377.296 156.832L376.97 152.637H374.485V177.996H377.296V159.996C377.703 158.45 378.336 157.236 379.196 156.354C380.055 155.471 381.14 155.028 382.454 155.028L384.306 155.168L384.679 152.426V152.426ZM366.562 177.996H369.092V152.637H366.281V171.105C365.843 172.623 365.121 173.813 364.113 174.681C363.105 175.547 361.795 175.981 360.188 175.981C358.655 175.981 357.487 175.321 356.683 174C355.878 172.681 355.475 170.481 355.475 167.404V152.637H352.663V167.356C352.663 171.168 353.293 173.977 354.55 175.781C355.807 177.587 357.562 178.488 359.811 178.488C361.297 178.488 362.592 178.101 363.702 177.328C364.811 176.555 365.702 175.459 366.374 174.036L366.562 177.996V177.996ZM332.647 163.485C332.647 160.995 333.208 158.901 334.334 157.201C335.459 155.501 337.061 154.654 339.139 154.654C341.202 154.654 342.803 155.501 343.943 157.201C345.086 158.901 345.654 160.995 345.654 163.485V167.219C345.654 169.742 345.086 171.852 343.943 173.549C342.803 175.249 341.208 176.099 339.162 176.099C337.068 176.099 335.459 175.254 334.334 173.563C333.208 171.871 332.647 169.757 332.647 167.219V163.485V163.485ZM329.811 167.192C329.811 170.52 330.654 173.236 332.342 175.336C334.03 177.437 336.303 178.488 339.162 178.488C342.006 178.488 344.271 177.437 345.959 175.336C347.647 173.236 348.49 170.52 348.49 167.192V163.465C348.49 160.168 347.643 157.462 345.947 155.345C344.253 153.226 341.982 152.168 339.139 152.168C336.295 152.168 334.03 153.232 332.342 155.356C330.654 157.481 329.811 160.185 329.811 163.465V167.192ZM313.005 152.637H309.888L317.903 177.668L316.849 181.02C316.49 182.332 316.012 183.433 315.419 184.324C314.824 185.214 314.051 185.66 313.099 185.66C312.927 185.66 312.662 185.642 312.302 185.601C311.942 185.563 311.684 185.528 311.528 185.496L311.223 187.911C311.427 187.973 311.739 188.043 312.162 188.123C312.583 188.2 312.935 188.24 313.217 188.24C314.887 188.24 316.173 187.631 317.071 186.411C317.97 185.192 318.693 183.74 319.239 182.05L328.286 152.637H325.146L319.146 173.568H319.005L318.349 171.013L313.005 152.637ZM294.791 156.726C295.776 158.109 296.268 159.849 296.268 161.942V163.02H284.573C284.619 160.66 285.21 158.677 286.342 157.068C287.475 155.459 288.924 154.654 290.69 154.654C292.439 154.654 293.807 155.345 294.791 156.726V156.726ZM295.459 177.614C296.67 177.031 297.659 176.249 298.424 175.268L297.277 173.284C296.557 174.184 295.694 174.876 294.686 175.366C293.678 175.855 292.479 176.099 291.088 176.099C289.088 176.099 287.503 175.281 286.331 173.652C285.159 172.02 284.573 169.975 284.573 167.516V165.411H299.081V162.632C299.081 159.438 298.346 156.899 296.878 155.005C295.409 153.115 293.346 152.168 290.69 152.168C288.236 152.168 286.139 153.226 284.396 155.345C282.655 157.462 281.783 160.123 281.783 163.324V167.543C281.783 170.732 282.651 173.354 284.386 175.408C286.119 177.462 288.354 178.488 291.088 178.488C292.791 178.488 294.248 178.197 295.459 177.614V177.614ZM280.423 152.426C280.251 152.364 280.016 152.307 279.72 152.25C279.423 152.196 279.126 152.168 278.83 152.168C277.518 152.168 276.372 152.579 275.396 153.399C274.419 154.219 273.634 155.364 273.041 156.832L272.712 152.637H270.228V177.996H273.041V159.996C273.447 158.45 274.079 157.236 274.939 156.354C275.798 155.471 276.884 155.028 278.196 155.028L280.049 155.168L280.423 152.426V152.426ZM262.306 177.996H264.837V152.637H262.025V171.105C261.587 172.623 260.865 173.813 259.857 174.681C258.849 175.547 257.539 175.981 255.93 175.981C254.399 175.981 253.231 175.321 252.426 174C251.622 172.681 251.219 170.481 251.219 167.404V152.637H248.407V167.356C248.407 171.168 249.035 173.977 250.294 175.781C251.551 177.587 253.306 178.488 255.555 178.488C257.039 178.488 258.336 178.101 259.446 177.328C260.555 176.555 261.446 175.459 262.118 174.036L262.306 177.996V177.996ZM231.485 173.633C230.485 171.988 229.985 169.889 229.985 167.336V163.389C229.985 160.871 230.485 158.784 231.485 157.132C232.485 155.48 234.078 154.654 236.266 154.654C237.843 154.654 239.161 155.25 240.215 156.445C241.27 157.642 241.797 159.247 241.797 161.262H244.305L244.351 161.145C244.398 158.459 243.653 156.291 242.113 154.642C240.574 152.992 238.625 152.168 236.266 152.168C233.343 152.168 231.098 153.219 229.527 155.321C227.956 157.423 227.171 160.105 227.171 163.372V167.309C227.171 170.591 227.956 173.273 229.527 175.36C231.098 177.445 233.343 178.488 236.266 178.488C238.453 178.488 240.359 177.7 241.985 176.123C243.609 174.543 244.398 172.583 244.351 170.24L244.281 170.099H241.797C241.797 171.973 241.242 173.44 240.133 174.503C239.023 175.568 237.734 176.099 236.266 176.099C234.078 176.099 232.485 175.276 231.485 173.633V173.633ZM219.999 156.726C220.983 158.109 221.475 159.849 221.475 161.942V163.02H209.781C209.827 160.66 210.417 158.677 211.55 157.068C212.682 155.459 214.131 154.654 215.898 154.654C217.647 154.654 219.014 155.345 219.999 156.726V156.726ZM220.667 177.614C221.878 177.031 222.866 176.249 223.631 175.268L222.483 173.284C221.765 174.184 220.902 174.876 219.894 175.366C218.886 175.855 217.686 176.099 216.295 176.099C214.295 176.099 212.71 175.281 211.538 173.652C210.366 172.02 209.781 169.975 209.781 167.516V165.411H224.289V162.632C224.289 159.438 223.554 156.899 222.085 155.005C220.617 153.115 218.554 152.168 215.898 152.168C213.445 152.168 211.346 153.226 209.605 155.345C207.862 157.462 206.991 160.123 206.991 163.324V167.543C206.991 170.732 207.858 173.354 209.593 175.408C211.327 177.462 213.562 178.488 216.295 178.488C217.999 178.488 219.455 178.197 220.667 177.614V177.614ZM199.631 174.896C198.725 175.699 197.482 176.099 195.905 176.099C194.451 176.099 193.186 175.687 192.107 174.862C191.029 174.038 190.443 172.715 190.35 170.893H187.725L187.678 171.035C187.599 173.06 188.299 174.809 189.775 176.281C191.251 177.754 193.295 178.488 195.905 178.488C198.279 178.488 200.19 177.872 201.635 176.637C203.079 175.404 203.803 173.777 203.803 171.762C203.803 169.933 203.178 168.423 201.927 167.226C200.678 166.032 198.787 164.926 196.255 163.911C194.099 162.879 192.694 162.024 192.037 161.345C191.381 160.664 191.053 159.762 191.053 158.637C191.053 157.576 191.466 156.645 192.295 155.849C193.123 155.05 194.326 154.654 195.905 154.654C197.451 154.654 198.678 155.16 199.583 156.177C200.49 157.193 200.943 158.387 200.943 159.762H203.591L203.639 159.623C203.701 157.496 203.029 155.723 201.623 154.301C200.217 152.879 198.31 152.168 195.905 152.168C193.638 152.168 191.795 152.809 190.373 154.091C188.951 155.372 188.241 156.919 188.241 158.732C188.241 160.513 188.838 161.954 190.033 163.055C191.229 164.156 193.115 165.24 195.694 166.301C197.709 167.226 199.095 168.111 199.854 168.95C200.611 169.792 200.99 170.792 200.99 171.954C200.99 173.115 200.537 174.097 199.631 174.896" fill="currentColor"/>
+<path d="M199.631 174.896C198.725 175.699 197.482 176.099 195.905 176.099C194.451 176.099 193.186 175.687 192.107 174.862C191.029 174.038 190.443 172.715 190.35 170.893H187.725L187.678 171.035C187.599 173.06 188.299 174.809 189.775 176.281C191.251 177.754 193.295 178.488 195.905 178.488C198.279 178.488 200.19 177.872 201.635 176.637C203.079 175.404 203.803 173.777 203.803 171.762C203.803 169.933 203.178 168.423 201.927 167.226C200.678 166.032 198.787 164.926 196.255 163.911C194.099 162.879 192.694 162.024 192.037 161.345C191.381 160.664 191.053 159.762 191.053 158.637C191.053 157.576 191.466 156.645 192.295 155.849C193.123 155.05 194.326 154.654 195.905 154.654C197.451 154.654 198.678 155.16 199.583 156.177C200.49 157.193 200.943 158.387 200.943 159.762H203.591L203.639 159.623C203.701 157.496 203.029 155.723 201.623 154.301C200.217 152.879 198.31 152.168 195.905 152.168C193.638 152.168 191.795 152.809 190.373 154.091C188.951 155.372 188.241 156.919 188.241 158.732C188.241 160.513 188.838 161.954 190.033 163.055C191.229 164.156 193.115 165.24 195.694 166.301C197.709 167.226 199.095 168.111 199.854 168.95C200.611 169.792 200.99 170.792 200.99 171.954C200.99 173.115 200.537 174.097 199.631 174.896M551.591 156.726C552.576 158.109 553.069 159.849 553.069 161.942V163.02H541.373C541.419 160.66 542.01 158.677 543.142 157.068C544.275 155.459 545.725 154.654 547.49 154.654C549.239 154.654 550.607 155.345 551.591 156.726ZM552.259 177.614C553.47 177.031 554.459 176.249 555.224 175.268L554.077 173.284C553.358 174.184 552.494 174.876 551.486 175.366C550.478 175.855 549.279 176.099 547.888 176.099C545.888 176.099 544.303 175.281 543.131 173.652C541.959 172.02 541.373 169.975 541.373 167.516V165.411H555.88V162.632C555.88 159.438 555.146 156.899 553.678 155.005C552.208 153.115 550.146 152.168 547.49 152.168C545.037 152.168 542.939 153.226 541.196 155.345C539.455 157.462 538.585 160.123 538.585 163.324V167.543C538.585 170.732 539.451 173.354 541.186 175.408C542.919 177.462 545.154 178.488 547.888 178.488C549.591 178.488 551.049 178.197 552.259 177.614V177.614ZM532.022 177.996V155.028H536.824V152.637H532.022V148.981C532.022 147.215 532.337 145.857 532.97 144.904C533.602 143.95 534.537 143.473 535.77 143.473C536.161 143.473 536.517 143.5 536.837 143.555C537.157 143.609 537.474 143.685 537.786 143.777L538.139 141.411C537.685 141.269 537.235 141.156 536.79 141.072C536.344 140.985 535.903 140.942 535.467 140.942C533.497 140.942 531.962 141.642 530.862 143.04C529.759 144.437 529.209 146.419 529.209 148.981V152.637H525.786V155.028H529.209V177.996H532.022ZM521.801 141.433H518.964V145.419H521.801V141.433V141.433ZM521.801 152.637H518.964V177.996H521.801V152.637ZM512.987 141.433H510.151V177.996H512.987V141.433ZM494.985 141.433H492.149V177.996H494.985V141.433V141.433ZM473.843 174.668C473.125 173.809 472.765 172.7 472.765 171.342C472.765 169.747 473.339 168.408 474.487 167.321C475.636 166.236 477.171 165.692 479.094 165.692H483.594V171.177C483.092 172.568 482.238 173.711 481.027 174.609C479.815 175.508 478.429 175.959 476.867 175.959C475.57 175.959 474.562 175.528 473.843 174.668V174.668ZM486.945 177.996C486.743 177.185 486.6 176.356 486.524 175.513C486.444 174.668 486.406 173.795 486.406 172.887V160.442C486.406 157.787 485.689 155.743 484.251 154.313C482.811 152.883 480.922 152.168 478.579 152.168C476.202 152.168 474.254 152.916 472.73 154.408C471.206 155.899 470.483 157.599 470.562 159.505L470.609 159.645L473.234 159.668C473.234 158.262 473.722 157.076 474.699 156.105C475.675 155.137 476.921 154.654 478.437 154.654C480.062 154.654 481.327 155.16 482.234 156.177C483.139 157.193 483.594 158.599 483.594 160.396V163.513H479.163C476.335 163.513 474.093 164.211 472.437 165.609C470.781 167.008 469.952 168.887 469.952 171.247C469.952 173.467 470.525 175.226 471.663 176.532C472.806 177.836 474.421 178.488 476.515 178.488C478.015 178.488 479.378 178.079 480.605 177.259C481.831 176.437 482.827 175.396 483.594 174.131C483.594 174.708 483.629 175.277 483.699 175.842C483.769 176.404 483.874 177.123 484.015 177.996H486.945V177.996ZM459.24 146.168V152.637H455.724V155.028H459.24V171.465C459.24 173.899 459.666 175.68 460.518 176.804C461.37 177.928 462.546 178.488 464.046 178.488C464.655 178.488 465.261 178.431 465.863 178.313C466.463 178.196 466.951 178.043 467.327 177.856L466.951 175.7C466.498 175.795 466.093 175.864 465.733 175.911C465.374 175.959 465.006 175.981 464.631 175.981C463.866 175.981 463.249 175.638 462.779 174.95C462.311 174.265 462.077 173.101 462.077 171.462V155.028H466.483V152.637H462.077V146.168H459.24ZM452.232 141.433H449.396V145.419H452.232V141.433V141.433ZM452.232 152.637H449.396V177.996H452.232V152.637ZM429.286 164.075C429.286 161.295 429.786 159.036 430.786 157.301C431.786 155.568 433.278 154.7 435.262 154.7C436.652 154.7 437.807 155.117 438.719 155.954C439.634 156.791 440.358 157.879 440.887 159.223V171.787C440.34 173.099 439.598 174.126 438.66 174.868C437.723 175.609 436.575 175.981 435.215 175.981C433.231 175.981 431.748 175.214 430.762 173.685C429.778 172.154 429.286 170.105 429.286 167.543V164.075ZM426.45 167.543C426.45 170.857 427.173 173.508 428.618 175.5C430.063 177.492 432.059 178.488 434.606 178.488C435.98 178.488 437.191 178.185 438.239 177.575C439.286 176.966 440.168 176.091 440.887 174.95V178.02C440.887 180.52 440.403 182.419 439.434 183.714C438.464 185.013 436.974 185.66 434.958 185.66C433.958 185.66 432.989 185.524 432.051 185.25C431.114 184.977 430.262 184.599 429.496 184.114L428.723 186.575C429.614 187.075 430.634 187.477 431.782 187.781C432.93 188.087 434.004 188.24 435.004 188.24C437.786 188.24 439.934 187.349 441.45 185.568C442.965 183.787 443.723 181.269 443.723 178.02V152.637H441.332L441.051 156.177C440.349 154.896 439.462 153.908 438.391 153.211C437.32 152.517 436.075 152.168 434.652 152.168C432.09 152.168 430.084 153.255 428.63 155.426C427.176 157.599 426.45 160.481 426.45 164.075V167.543V167.543ZM421.667 141.433H418.831V145.419H421.667V141.433V141.433ZM421.667 152.637H418.831V177.996H421.667V152.637ZM398.746 165.55C398.746 162.317 399.228 159.7 400.198 157.7C401.167 155.7 402.643 154.7 404.627 154.7C406.018 154.7 407.174 155.126 408.096 155.977C409.018 156.828 409.736 157.933 410.252 159.295V171.715C409.706 173.06 408.967 174.105 408.038 174.856C407.108 175.605 405.955 175.981 404.582 175.981C402.613 175.981 401.147 175.087 400.186 173.297C399.226 171.508 398.746 169.091 398.746 166.043V165.55V165.55ZM395.886 166.043C395.886 169.824 396.6 172.845 398.03 175.101C399.459 177.361 401.44 178.488 403.972 178.488C405.392 178.488 406.636 178.164 407.698 177.517C408.76 176.868 409.643 175.933 410.346 174.715L410.582 177.996H413.064V141.433H410.252V155.942C409.55 154.74 408.678 153.809 407.639 153.154C406.6 152.496 405.386 152.168 403.995 152.168C401.432 152.168 399.439 153.383 398.018 155.813C396.597 158.244 395.886 161.488 395.886 165.55V166.043V166.043ZM384.679 152.426C384.507 152.364 384.274 152.307 383.977 152.25C383.679 152.196 383.383 152.168 383.086 152.168C381.774 152.168 380.628 152.579 379.652 153.399C378.675 154.219 377.891 155.364 377.296 156.832L376.97 152.637H374.485V177.996H377.296V159.996C377.703 158.45 378.336 157.236 379.196 156.354C380.055 155.471 381.14 155.028 382.454 155.028L384.306 155.168L384.679 152.426V152.426ZM366.562 177.996H369.092V152.637H366.281V171.105C365.843 172.623 365.121 173.813 364.113 174.681C363.105 175.547 361.795 175.981 360.188 175.981C358.655 175.981 357.487 175.321 356.683 174C355.878 172.681 355.475 170.481 355.475 167.404V152.637H352.663V167.356C352.663 171.168 353.293 173.977 354.55 175.781C355.807 177.587 357.562 178.488 359.811 178.488C361.297 178.488 362.592 178.101 363.702 177.328C364.811 176.555 365.702 175.459 366.374 174.036L366.562 177.996V177.996ZM332.647 163.485C332.647 160.995 333.208 158.901 334.334 157.201C335.459 155.501 337.061 154.654 339.139 154.654C341.202 154.654 342.803 155.501 343.943 157.201C345.086 158.901 345.654 160.995 345.654 163.485V167.219C345.654 169.742 345.086 171.852 343.943 173.549C342.803 175.249 341.208 176.099 339.162 176.099C337.068 176.099 335.459 175.254 334.334 173.563C333.208 171.871 332.647 169.757 332.647 167.219V163.485V163.485ZM329.811 167.192C329.811 170.52 330.654 173.236 332.342 175.336C334.03 177.437 336.303 178.488 339.162 178.488C342.006 178.488 344.271 177.437 345.959 175.336C347.647 173.236 348.49 170.52 348.49 167.192V163.465C348.49 160.168 347.643 157.462 345.947 155.345C344.253 153.226 341.982 152.168 339.139 152.168C336.295 152.168 334.03 153.232 332.342 155.356C330.654 157.481 329.811 160.185 329.811 163.465V167.192ZM313.005 152.637H309.888L317.903 177.668L316.849 181.02C316.49 182.332 316.012 183.433 315.419 184.324C314.824 185.214 314.051 185.66 313.099 185.66C312.927 185.66 312.662 185.642 312.302 185.601C311.942 185.563 311.684 185.528 311.528 185.496L311.223 187.911C311.427 187.973 311.739 188.043 312.162 188.123C312.583 188.2 312.935 188.24 313.217 188.24C314.887 188.24 316.173 187.631 317.071 186.411C317.97 185.192 318.693 183.74 319.239 182.05L328.286 152.637H325.146L319.146 173.568H319.005L318.349 171.013L313.005 152.637ZM294.791 156.726C295.776 158.109 296.268 159.849 296.268 161.942V163.02H284.573C284.619 160.66 285.21 158.677 286.342 157.068C287.475 155.459 288.924 154.654 290.69 154.654C292.439 154.654 293.807 155.345 294.791 156.726V156.726ZM295.459 177.614C296.67 177.031 297.659 176.249 298.424 175.268L297.277 173.284C296.557 174.184 295.694 174.876 294.686 175.366C293.678 175.855 292.479 176.099 291.088 176.099C289.088 176.099 287.503 175.281 286.331 173.652C285.159 172.02 284.573 169.975 284.573 167.516V165.411H299.081V162.632C299.081 159.438 298.346 156.899 296.878 155.005C295.409 153.115 293.346 152.168 290.69 152.168C288.236 152.168 286.139 153.226 284.396 155.345C282.655 157.462 281.783 160.123 281.783 163.324V167.543C281.783 170.732 282.651 173.354 284.386 175.408C286.119 177.462 288.354 178.488 291.088 178.488C292.791 178.488 294.248 178.197 295.459 177.614V177.614ZM280.423 152.426C280.251 152.364 280.016 152.307 279.72 152.25C279.423 152.196 279.126 152.168 278.83 152.168C277.518 152.168 276.372 152.579 275.396 153.399C274.419 154.219 273.634 155.364 273.041 156.832L272.712 152.637H270.228V177.996H273.041V159.996C273.447 158.45 274.079 157.236 274.939 156.354C275.798 155.471 276.884 155.028 278.196 155.028L280.049 155.168L280.423 152.426V152.426ZM262.306 177.996H264.837V152.637H262.025V171.105C261.587 172.623 260.865 173.813 259.857 174.681C258.849 175.547 257.539 175.981 255.93 175.981C254.399 175.981 253.231 175.321 252.426 174C251.622 172.681 251.219 170.481 251.219 167.404V152.637H248.407V167.356C248.407 171.168 249.035 173.977 250.294 175.781C251.551 177.587 253.306 178.488 255.555 178.488C257.039 178.488 258.336 178.101 259.446 177.328C260.555 176.555 261.446 175.459 262.118 174.036L262.306 177.996V177.996ZM231.485 173.633C230.485 171.988 229.985 169.889 229.985 167.336V163.389C229.985 160.871 230.485 158.784 231.485 157.132C232.485 155.48 234.078 154.654 236.266 154.654C237.843 154.654 239.161 155.25 240.215 156.445C241.27 157.642 241.797 159.247 241.797 161.262H244.305L244.351 161.145C244.398 158.459 243.653 156.291 242.113 154.642C240.574 152.992 238.625 152.168 236.266 152.168C233.343 152.168 231.098 153.219 229.527 155.321C227.956 157.423 227.171 160.105 227.171 163.372V167.309C227.171 170.591 227.956 173.273 229.527 175.36C231.098 177.445 233.343 178.488 236.266 178.488C238.453 178.488 240.359 177.7 241.985 176.123C243.609 174.543 244.398 172.583 244.351 170.24L244.281 170.099H241.797C241.797 171.973 241.242 173.44 240.133 174.503C239.023 175.568 237.734 176.099 236.266 176.099C234.078 176.099 232.485 175.276 231.485 173.633V173.633ZM219.999 156.726C220.983 158.109 221.475 159.849 221.475 161.942V163.02H209.781C209.827 160.66 210.417 158.677 211.55 157.068C212.682 155.459 214.131 154.654 215.898 154.654C217.647 154.654 219.014 155.345 219.999 156.726V156.726ZM220.667 177.614C221.878 177.031 222.866 176.249 223.631 175.268L222.483 173.284C221.765 174.184 220.902 174.876 219.894 175.366C218.886 175.855 217.686 176.099 216.295 176.099C214.295 176.099 212.71 175.281 211.538 173.652C210.366 172.02 209.781 169.975 209.781 167.516V165.411H224.289V162.632C224.289 159.438 223.554 156.899 222.085 155.005C220.617 153.115 218.554 152.168 215.898 152.168C213.445 152.168 211.346 153.226 209.605 155.345C207.862 157.462 206.991 160.123 206.991 163.324V167.543C206.991 170.732 207.858 173.354 209.593 175.408C211.327 177.462 213.562 178.488 216.295 178.488C217.999 178.488 219.455 178.197 220.667 177.614V177.614Z" stroke="currentColor" stroke-width="1.5"/>
+<path d="M367.497 58.8566H344.238V128.354H367.914V78.7254L376.69 78.7717H384.628V58.876H382.538C378.452 58.876 367.497 58.8566 367.497 58.8566" fill="currentColor"/>
+<path d="M424.178 108.856C424.178 110.899 423.015 111.92 420.697 111.92H416.935C414.614 111.92 413.454 110.899 413.454 108.856V78.355C413.454 76.3134 414.614 75.2905 416.935 75.2905H420.697C423.015 75.2905 424.178 76.3134 424.178 78.355V108.856ZM427.659 58.8566H409.973C402.917 58.8566 397.855 60.3426 394.791 63.3124C391.727 66.2853 390.195 70.555 390.195 76.1254V111.084C390.195 116.655 391.727 120.926 394.791 123.896C397.855 126.87 402.917 128.354 409.973 128.354H427.659C434.715 128.354 439.777 126.87 442.841 123.896C445.905 120.926 447.437 116.655 447.437 111.084V76.1254C447.437 70.555 445.905 66.2853 442.841 63.3124C439.777 60.3426 434.715 58.8566 427.659 58.8566Z" fill="currentColor"/>
+<path d="M263.023 51.8921H287.535V35.1801H263.023V51.8921" fill="currentColor"/>
+<path d="M263.441 128.354H287.117V58.8566H263.441V128.354Z" fill="currentColor"/>
+<path d="M230.036 84.9457L209.825 35.18H188.625V128.327H211.238V79.4321L231.449 128.327H252.649V35.18H230.036V84.9457Z" fill="currentColor"/>
+<path d="M627.311 58.8566L619.791 101.196L610.349 58.8566H586.504L608.607 130.754L599.584 164.99C607.196 164.99 621.063 164.99 621.063 164.99L651.127 58.8566H627.311Z" fill="currentColor"/>
+<path d="M560.991 86.9894H547.899V78.2145C547.899 76.1733 549.059 75.1509 551.382 75.1509H557.51C559.83 75.1509 560.991 76.1733 560.991 78.2145V86.9894ZM562.941 58.8566H545.95C532.302 58.8566 525.477 64.6134 525.477 76.1254V111.084C525.477 122.598 532.302 128.354 545.95 128.354H562.941C576.59 128.354 583.415 122.598 583.415 111.084V104.816H560.991V108.716C560.991 110.944 561.023 112.06 561.023 112.06H551.382C549.059 112.06 547.899 111.038 547.899 108.995V99.8036H583.415V76.1254C583.415 64.6134 576.59 58.8566 562.941 58.8566" fill="currentColor"/>
+<path d="M324.981 35.4333H301.305V59.0389H293.645V76.4482H301.305V128.511C301.305 128.511 308.129 128.537 321.778 128.537H333.615V111.128L324.981 111.125V76.4482H333.755V59.0389H324.981V35.4333Z" fill="currentColor"/>
+<path d="M494.651 58.8566L481.559 90.4712V35.18H457.883V128.354H481.559V95.904L494.511 128.354H519.163L504.26 93.117L519.163 58.8566H494.651Z" fill="currentColor"/>
+<path d="M96.493 113.253L58.2514 135.329C55.6597 136.826 52.3149 135.931 50.8186 133.338L30.3649 97.9144C28.8697 95.3216 29.7649 91.9748 32.3571 90.4789L70.5982 68.3997L96.493 113.253Z" fill="#CC1B3F"/>
+<path d="M114.749 89.4322L110.958 91.6416C110.337 92.0026 109.534 91.789 109.171 91.1692L105.962 85.6588C105.599 85.0364 105.811 84.2332 106.433 83.8723L110.223 81.6646C110.844 81.3031 111.648 81.5146 112.01 82.1364L115.221 87.6468C115.582 88.2682 115.371 89.0712 114.749 89.4322ZM95.7909 68.1952C95.4289 67.5739 95.6404 66.7692 96.2607 66.4088L100.053 64.2004C100.674 63.839 101.476 64.0504 101.839 64.6723L105.049 70.1848C105.41 70.8046 105.198 71.6083 104.578 71.9698L100.786 74.1775C100.166 74.539 99.3617 74.3264 99.0003 73.7067L95.7909 68.1952ZM76.6445 72.2083L96.0221 105.77L134.365 83.6327L114.989 50.0707L76.6445 72.2083Z" fill="#CC1B3F"/>
+<path d="M82.2188 14.6613C82.0495 14.6613 81.8812 14.6972 81.7177 14.7652L15.7307 42.6479C15.1104 42.9119 14.6667 43.6519 14.6667 44.4413V102.426C14.6667 102.707 14.7161 102.977 14.8093 103.206C18.1375 111.529 36.8864 153.648 81.7188 171.589C82.0443 171.719 82.3896 171.72 82.7229 171.588C127.549 153.649 146.299 111.529 149.601 103.267C149.709 102.991 149.771 102.698 149.771 102.426V44.4413C149.771 43.6479 149.345 42.9146 148.735 42.6586L82.7125 14.7626C82.5573 14.6973 82.388 14.6613 82.2188 14.6613V14.6613ZM82.2188 186.354C80.1771 186.354 78.1771 185.968 76.2724 185.208C25.8828 165.043 4.91093 117.948 1.21771 108.712C0.417188 106.766 0 104.631 0 102.426V44.4413C0 37.7333 3.92864 31.7279 10.0063 29.1439L76.0177 1.25192C79.9817 -0.416085 84.4604 -0.414739 88.412 1.24793L154.415 29.1372C160.492 31.6759 164.437 37.6879 164.437 44.4413V102.426C164.437 104.546 164.032 106.651 163.233 108.678C159.525 117.948 138.552 165.043 88.1667 185.207C86.2588 185.968 84.2588 186.354 82.2188 186.354" fill="#CC1B3F"/>
+</svg>
+            </a>
+
+            <div class="tablet-lang-switcher">
+                
+<div class="language-switcher">
+<select onchange="location = this.options[this.selectedIndex].value;">
+    <option selected>English (en)</option>
+    
+        
+            
+                <option value="/de/components/nextbox/technical/factory-reset">de</option>
+            
+        
+    
+        
+    
+        
+            
+                <option value="/fr/components/nextbox/technical/factory-reset">fr</option>
+            
+        
+    
+        
+            
+                <option value="/es/components/nextbox/technical/factory-reset">es</option>
+            
+        
+    
+        
+            
+                <option value="/nl/components/nextbox/technical/factory-reset">nl</option>
+            
+        
+    
+        
+            
+                <option value="/it/components/nextbox/technical/factory-reset">it</option>
+            
+        
+    
+        
+            
+                <option value="/ja/components/nextbox/technical/factory-reset">ja</option>
+            
+        
+    
+        
+            
+                <option value="/ru/components/nextbox/technical/factory-reset">ru</option>
+            
+        
+    
+        
+            
+                <option value="/zh_CN/components/nextbox/technical/factory-reset">zh_CN</option>
+            
+        
+    
+        
+            
+                <option value="/el/components/nextbox/technical/factory-reset">el</option>
+            
+        
+    
+        
+            
+                <option value="/da/components/nextbox/technical/factory-reset">da</option>
+            
+        
+    
+        
+            
+                <option value="/bg/components/nextbox/technical/factory-reset">bg</option>
+            
+        
+    
+        
+            
+                <option value="/et/components/nextbox/technical/factory-reset">et</option>
+            
+        
+    
+        
+            
+                <option value="/fi/components/nextbox/technical/factory-reset">fi</option>
+            
+        
+    
+        
+            
+                <option value="/lv/components/nextbox/technical/factory-reset">lv</option>
+            
+        
+    
+        
+            
+                <option value="/lt/components/nextbox/technical/factory-reset">lt</option>
+            
+        
+    
+        
+            
+                <option value="/pl/components/nextbox/technical/factory-reset">pl</option>
+            
+        
+    
+        
+            
+                <option value="/pt/components/nextbox/technical/factory-reset">pt</option>
+            
+        
+    
+        
+            
+                <option value="/ro/components/nextbox/technical/factory-reset">ro</option>
+            
+        
+    
+        
+            
+                <option value="/sv/components/nextbox/technical/factory-reset">sv</option>
+            
+        
+    
+        
+            
+                <option value="/sk/components/nextbox/technical/factory-reset">sk</option>
+            
+        
+    
+        
+            
+                <option value="/sl/components/nextbox/technical/factory-reset">sl</option>
+            
+        
+    
+        
+            
+                <option value="/cs/components/nextbox/technical/factory-reset">cs</option>
+            
+        
+    
+        
+            
+                <option value="/hu/components/nextbox/technical/factory-reset">hu</option>
+            
+        
+    
+</select>
+</div>
+
+            </div>
+
+            <div class="content-icon-container">
+            
+<div class="theme-toggle-container theme-toggle-content">
+                <button class="theme-toggle">
+                <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+                <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+                <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+                <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+                </button>
+            </div>
+            <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+                <div class="visually-hidden">Toggle table of contents sidebar</div>
+                <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+            </label>
+            </div>
+        </div>
+
+        <article role="main">
+          <div id="breadcrumbs"></div>
+
+          <section id="factory-reset">
+<h1>Factory Reset<a class="headerlink" href="#factory-reset" title="Permalink to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Factory Resetting your NextBox will inevitably <strong>delete all your files</strong> on
+the NextBox and any configuration settings.</p>
+</div>
+<p><strong>To factory reset your NextBox simply press the hardware button for 5 seconds.</strong></p>
+<p>The NextBox LED will change to <em>blue</em> once you press the button, after the 5
+seconds have passed the color will change to blinking red (see <a class="reference internal" href="led-colors.html"><span class="doc">LED documentation</span></a>).
+Once the LED has finally reached <em>green</em> again your NextBox is ready for the initial setup as
+described in <a class="reference internal" href="../gettingstarted.html"><span class="doc">Getting Started</span></a></p>
+<figure class="align-center">
+<img alt="img1" src="../../../_images/nextbox_led_button.jpeg" />
+</figure>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The hardware button is a pinhole-style button similar to other embedded
+devices. In order to press it, it is recommended to use a thin (~1mm)
+needle-like pin. E.g., the pin to remove a sim-card from a smartphone is
+working great. <strong>Further take care to not press the button too hard,
+be careful, there should be a recognizable haptic feedback (button click)
+with minimal applied force.</strong></p>
+</div>
+</section>
+
+        </article>
+
+        <div id="language-banner"
+    class="init-hidden"
+    data-languages="de,en,fr,es,nl,it,ja,ru,zh_CN,el,da,bg,et,fi,lv,lt,pl,pt,ro,sv,sk,sl,cs,hu,"
+    data-current-language="en">
+    <div>
+        
+        
+        
+            <div class="language hidden" data-language="de"><a href="/de/components/nextbox/technical/factory-reset.html">Diese Seite ist auf Deutsch verfügbar.</a></div>
+        
+        
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="fr"><a href="/fr/components/nextbox/technical/factory-reset.html">Cette page est disponible en français</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="es"><a href="/es/components/nextbox/technical/factory-reset.html">Esta página está disponible en español.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="nl"><a href="/nl/components/nextbox/technical/factory-reset.html">Deze pagina is beschikbaar in het Nederlands.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="it"><a href="/it/components/nextbox/technical/factory-reset.html">Questa pagina è disponibile in italiano.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="ja"><a href="/ja/components/nextbox/technical/factory-reset.html">このページは日本語でご覧いただけます。</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="ru"><a href="/ru/components/nextbox/technical/factory-reset.html">Эта страница доступна на русском языке.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="zh_CN"><a href="/zh_CN/components/nextbox/technical/factory-reset.html">本页有中文版本。</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="el"><a href="/el/components/nextbox/technical/factory-reset.html">Αυτή η σελίδα είναι διαθέσιμη στα ελληνικά.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="da"><a href="/da/components/nextbox/technical/factory-reset.html">Denne side er tilgængelig på dansk.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="bg"><a href="/bg/components/nextbox/technical/factory-reset.html">Тази страница е достъпна на български език.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="et"><a href="/et/components/nextbox/technical/factory-reset.html">See lehekülg on saadaval eesti keeles.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="fi"><a href="/fi/components/nextbox/technical/factory-reset.html">Tämä sivu on saatavilla suomeksi.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="lv"><a href="/lv/components/nextbox/technical/factory-reset.html">Šī lapa ir pieejama latviešu valodā.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="lt"><a href="/lt/components/nextbox/technical/factory-reset.html">Šis puslapis pateikiamas lietuvių kalba.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="pl"><a href="/pl/components/nextbox/technical/factory-reset.html">Ta strona jest dostępna w języku polskim.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="pt"><a href="/pt/components/nextbox/technical/factory-reset.html">Esta página está disponível em português.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="ro"><a href="/ro/components/nextbox/technical/factory-reset.html">Această pagină este disponibilă în limba română.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="sv"><a href="/sv/components/nextbox/technical/factory-reset.html">Den här sidan finns på svenska.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="sk"><a href="/sk/components/nextbox/technical/factory-reset.html">Táto stránka je k dispozícii v slovenčine.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="sl"><a href="/sl/components/nextbox/technical/factory-reset.html">Ta stran je na voljo v slovenščini.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="cs"><a href="/cs/components/nextbox/technical/factory-reset.html">Tato stránka je k dispozici v češtině.</a></div>
+        
+        
+        
+        
+        
+            <div class="language hidden" data-language="hu"><a href="/hu/components/nextbox/technical/factory-reset.html">Ez az oldal magyar nyelven érhető el.</a></div>
+        
+        
+        
+    </div>
+
+    <div class="actions">
+        
+        
+            
+                <div class="switch hidden" data-language="de"><a href="/de/components/nextbox/technical/factory-reset.html" onclick="setLanguage('de')">Auf Deutsch ansehen</a></div>
+            
+            <div class="dismiss hidden" data-language="de"><a href="#" onclick="dismissLanguageBanner()">Ausblenden</a></div>
+        
+        
+        
+        
+        
+            
+                <div class="switch hidden" data-language="fr"><a href="/fr/components/nextbox/technical/factory-reset.html" onclick="setLanguage('fr')">Passer au français</a></div>
+            
+            <div class="dismiss hidden" data-language="fr"><a href="#" onclick="dismissLanguageBanner()">Cacher</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="es"><a href="/es/components/nextbox/technical/factory-reset.html" onclick="setLanguage('es')">Cambia al español.</a></div>
+            
+            <div class="dismiss hidden" data-language="es"><a href="#" onclick="dismissLanguageBanner()">Ocultar</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="nl"><a href="/nl/components/nextbox/technical/factory-reset.html" onclick="setLanguage('nl')">Schakel over op Nederlands.</a></div>
+            
+            <div class="dismiss hidden" data-language="nl"><a href="#" onclick="dismissLanguageBanner()">Verberg</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="it"><a href="/it/components/nextbox/technical/factory-reset.html" onclick="setLanguage('it')">Passa all`italiano.</a></div>
+            
+            <div class="dismiss hidden" data-language="it"><a href="#" onclick="dismissLanguageBanner()">Nascondi</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="ja"><a href="/ja/components/nextbox/technical/factory-reset.html" onclick="setLanguage('ja')">日本語に切り替えます。</a></div>
+            
+            <div class="dismiss hidden" data-language="ja"><a href="#" onclick="dismissLanguageBanner()">隠す</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="ru"><a href="/ru/components/nextbox/technical/factory-reset.html" onclick="setLanguage('ru')">Переключитесь на русский язык.</a></div>
+            
+            <div class="dismiss hidden" data-language="ru"><a href="#" onclick="dismissLanguageBanner()">Скрыть</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="zh_CN"><a href="/zh_CN/components/nextbox/technical/factory-reset.html" onclick="setLanguage('zh_CN')">换成中文。</a></div>
+            
+            <div class="dismiss hidden" data-language="zh_CN"><a href="#" onclick="dismissLanguageBanner()">隐藏</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="el"><a href="/el/components/nextbox/technical/factory-reset.html" onclick="setLanguage('el')">Αλλαγή σε ελληνικά.</a></div>
+            
+            <div class="dismiss hidden" data-language="el"><a href="#" onclick="dismissLanguageBanner()">Απόκρυψη</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="da"><a href="/da/components/nextbox/technical/factory-reset.html" onclick="setLanguage('da')">Skift til dansk.</a></div>
+            
+            <div class="dismiss hidden" data-language="da"><a href="#" onclick="dismissLanguageBanner()">Skjul</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="bg"><a href="/bg/components/nextbox/technical/factory-reset.html" onclick="setLanguage('bg')">Преминете на български език.</a></div>
+            
+            <div class="dismiss hidden" data-language="bg"><a href="#" onclick="dismissLanguageBanner()">Скрий</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="et"><a href="/et/components/nextbox/technical/factory-reset.html" onclick="setLanguage('et')">Vahetage eesti keelele.</a></div>
+            
+            <div class="dismiss hidden" data-language="et"><a href="#" onclick="dismissLanguageBanner()">Peida</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="fi"><a href="/fi/components/nextbox/technical/factory-reset.html" onclick="setLanguage('fi')">Vaihda suomeksi.</a></div>
+            
+            <div class="dismiss hidden" data-language="fi"><a href="#" onclick="dismissLanguageBanner()">Piilota</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="lv"><a href="/lv/components/nextbox/technical/factory-reset.html" onclick="setLanguage('lv')">Pārslēgties uz latviešu valodu.</a></div>
+            
+            <div class="dismiss hidden" data-language="lv"><a href="#" onclick="dismissLanguageBanner()">Paslēpt</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="lt"><a href="/lt/components/nextbox/technical/factory-reset.html" onclick="setLanguage('lt')">Perjunkite į lietuvių kalbą.</a></div>
+            
+            <div class="dismiss hidden" data-language="lt"><a href="#" onclick="dismissLanguageBanner()">Paslėpti</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="pl"><a href="/pl/components/nextbox/technical/factory-reset.html" onclick="setLanguage('pl')">Przełącz się na język polski.</a></div>
+            
+            <div class="dismiss hidden" data-language="pl"><a href="#" onclick="dismissLanguageBanner()">Ukryj</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="pt"><a href="/pt/components/nextbox/technical/factory-reset.html" onclick="setLanguage('pt')">Mudar para português.</a></div>
+            
+            <div class="dismiss hidden" data-language="pt"><a href="#" onclick="dismissLanguageBanner()">Esconder</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="ro"><a href="/ro/components/nextbox/technical/factory-reset.html" onclick="setLanguage('ro')">Treceți la limba română.</a></div>
+            
+            <div class="dismiss hidden" data-language="ro"><a href="#" onclick="dismissLanguageBanner()">Ascundeți</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="sv"><a href="/sv/components/nextbox/technical/factory-reset.html" onclick="setLanguage('sv')">Växla till svenska.</a></div>
+            
+            <div class="dismiss hidden" data-language="sv"><a href="#" onclick="dismissLanguageBanner()">Dölj</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="sk"><a href="/sk/components/nextbox/technical/factory-reset.html" onclick="setLanguage('sk')">Prepnite na slovenčinu.</a></div>
+            
+            <div class="dismiss hidden" data-language="sk"><a href="#" onclick="dismissLanguageBanner()">Skryť</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="sl"><a href="/sl/components/nextbox/technical/factory-reset.html" onclick="setLanguage('sl')">Preklopite na slovenščino.</a></div>
+            
+            <div class="dismiss hidden" data-language="sl"><a href="#" onclick="dismissLanguageBanner()">Skrij</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="cs"><a href="/cs/components/nextbox/technical/factory-reset.html" onclick="setLanguage('cs')">Přepněte na češtinu.</a></div>
+            
+            <div class="dismiss hidden" data-language="cs"><a href="#" onclick="dismissLanguageBanner()">Skrýt</a></div>
+        
+        
+        
+            
+                <div class="switch hidden" data-language="hu"><a href="/hu/components/nextbox/technical/factory-reset.html" onclick="setLanguage('hu')">Váltson magyarra.</a></div>
+            
+            <div class="dismiss hidden" data-language="hu"><a href="#" onclick="dismissLanguageBanner()">Rejtsd el</a></div>
+        
+        
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        initLanguageBanner();
+    });
+
+    function setLanguage(lang) {
+      var oneYearFromNow = new Date();
+      oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
+
+      document.cookie =
+        'lang=' +
+        lang +
+        '; path=/; secure; expires=' +
+        oneYearFromNow;
+
+      document.querySelector('#language-banner').classList.add('hidden');
+    }
+
+    function dismissLanguageBanner() {
+      var $banner = document.querySelector('#language-banner');
+      var currentLang = $banner.getAttribute('data-current-language');
+      setLanguage(currentLang);
+      $banner.classList.add('hidden');
+    }
+
+    function initLanguageBanner() {
+        var cookieLanguage = getCookie('lang');
+        var siteLanguage = document.documentElement.lang;
+        var browserLang = window.navigator.userLanguage || window.navigator.language; // de, fr, en-US, en-GB
+        var browserLanguage = browserLang.substring(0, 2);
+        var $banner = document.querySelector('#language-banner');
+
+        if (!$banner) {
+            return;
+        }
+
+        $banner.classList.remove('init-hidden');
+
+        if (!cookieLanguage || (cookieLanguage !== siteLanguage)) {
+            var availableLanguages = $banner.getAttribute('data-languages').split(',').filter(n => n);
+            var targetLanguage = cookieLanguage ? cookieLanguage : browserLanguage;
+            if (availableLanguages.indexOf(targetLanguage) !== -1) {
+              var languageInfo = document.querySelector('#language-banner .language[data-language="'+targetLanguage+'"]');
+              var languageSwitchButton = document.querySelector('#language-banner .switch[data-language="'+targetLanguage+'"]');
+              var dismissButton = document.querySelector('#language-banner .dismiss[data-language="'+targetLanguage+'"]');
+              if (!languageInfo) {
+                  // console.error("Cannot find language switch banner for \"" + targetLanguage + "\"");
+                  return;
+              }
+              languageInfo.classList.remove('hidden');
+              languageSwitchButton.classList.remove('hidden');
+              dismissButton.classList.remove('hidden');
+              setTimeout(function() {
+                  document.querySelector('#language-banner').classList.add('show');
+              }, 500);
+            }
+        }
+    }
+
+    function getCookie(name) {
+      var value = '; ' + document.cookie
+      var parts = value.split('; ' + name + '=')
+      if (parts.length == 2) return parts.pop().split(';').shift()
+    }
+</script>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="soft-reset.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Soft Reset</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="led-colors.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">LED Colors and Patterns</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Nitrokey
+            </div>
+          </div>
+          <div class="right-details">
+            <div>
+            
+                
+                
+                  <a href="https://github.com/Nitrokey/nitrokey-documentation/blob/master/nextbox/technical/factory-reset.rst"> Edit this Page</a> | 
+                  <a href="https://github.com/Nitrokey/nitrokey-documentation/issues/new?body=File:%20[nextbox/technical/factory-reset.rst]%20https://docs.nitrokey.com/nextbox/technical/factory-reset.html"> Request docs change</a>
+                
+                
+            
+            </div>
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+
+    
+    <aside class="toc-drawer">
+      
+      <div class="logo-and-language">
+        <div class="toc-logo">
+            <a href="https://nitrokey.com" title="Nitrokey website">
+                <svg class="logo" width="652" height="189" viewBox="0 0 652 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M551.591 156.726C552.576 158.109 553.069 159.849 553.069 161.942V163.02H541.373C541.419 160.66 542.01 158.677 543.142 157.068C544.275 155.459 545.725 154.654 547.49 154.654C549.239 154.654 550.607 155.345 551.591 156.726ZM552.259 177.614C553.47 177.031 554.459 176.249 555.224 175.268L554.077 173.284C553.358 174.184 552.494 174.876 551.486 175.366C550.478 175.855 549.279 176.099 547.888 176.099C545.888 176.099 544.303 175.281 543.131 173.652C541.959 172.02 541.373 169.975 541.373 167.516V165.411H555.88V162.632C555.88 159.438 555.146 156.899 553.678 155.005C552.208 153.115 550.146 152.168 547.49 152.168C545.037 152.168 542.939 153.226 541.196 155.345C539.455 157.462 538.585 160.123 538.585 163.324V167.543C538.585 170.732 539.451 173.354 541.186 175.408C542.919 177.462 545.154 178.488 547.888 178.488C549.591 178.488 551.049 178.197 552.259 177.614V177.614ZM532.022 177.996V155.028H536.824V152.637H532.022V148.981C532.022 147.215 532.337 145.857 532.97 144.904C533.602 143.95 534.537 143.473 535.77 143.473C536.161 143.473 536.517 143.5 536.837 143.555C537.157 143.609 537.474 143.685 537.786 143.777L538.139 141.411C537.685 141.269 537.235 141.156 536.79 141.072C536.344 140.985 535.903 140.942 535.467 140.942C533.497 140.942 531.962 141.642 530.862 143.04C529.759 144.437 529.209 146.419 529.209 148.981V152.637H525.786V155.028H529.209V177.996H532.022ZM521.801 141.433H518.964V145.419H521.801V141.433V141.433ZM521.801 152.637H518.964V177.996H521.801V152.637ZM512.987 141.433H510.151V177.996H512.987V141.433ZM494.985 141.433H492.149V177.996H494.985V141.433V141.433ZM473.843 174.668C473.125 173.809 472.765 172.7 472.765 171.342C472.765 169.747 473.339 168.408 474.487 167.321C475.636 166.236 477.171 165.692 479.094 165.692H483.594V171.177C483.092 172.568 482.238 173.711 481.027 174.609C479.815 175.508 478.429 175.959 476.867 175.959C475.57 175.959 474.562 175.528 473.843 174.668V174.668ZM486.945 177.996C486.743 177.185 486.6 176.356 486.524 175.513C486.444 174.668 486.406 173.795 486.406 172.887V160.442C486.406 157.787 485.689 155.743 484.251 154.313C482.811 152.883 480.922 152.168 478.579 152.168C476.202 152.168 474.254 152.916 472.73 154.408C471.206 155.899 470.483 157.599 470.562 159.505L470.609 159.645L473.234 159.668C473.234 158.262 473.722 157.076 474.699 156.105C475.675 155.137 476.921 154.654 478.437 154.654C480.062 154.654 481.327 155.16 482.234 156.177C483.139 157.193 483.594 158.599 483.594 160.396V163.513H479.163C476.335 163.513 474.093 164.211 472.437 165.609C470.781 167.008 469.952 168.887 469.952 171.247C469.952 173.467 470.525 175.226 471.663 176.532C472.806 177.836 474.421 178.488 476.515 178.488C478.015 178.488 479.378 178.079 480.605 177.259C481.831 176.437 482.827 175.396 483.594 174.131C483.594 174.708 483.629 175.277 483.699 175.842C483.769 176.404 483.874 177.123 484.015 177.996H486.945V177.996ZM459.24 146.168V152.637H455.724V155.028H459.24V171.465C459.24 173.899 459.666 175.68 460.518 176.804C461.37 177.928 462.546 178.488 464.046 178.488C464.655 178.488 465.261 178.431 465.863 178.313C466.463 178.196 466.951 178.043 467.327 177.856L466.951 175.7C466.498 175.795 466.093 175.864 465.733 175.911C465.374 175.959 465.006 175.981 464.631 175.981C463.866 175.981 463.249 175.638 462.779 174.95C462.311 174.265 462.077 173.101 462.077 171.462V155.028H466.483V152.637H462.077V146.168H459.24ZM452.232 141.433H449.396V145.419H452.232V141.433V141.433ZM452.232 152.637H449.396V177.996H452.232V152.637ZM429.286 164.075C429.286 161.295 429.786 159.036 430.786 157.301C431.786 155.568 433.278 154.7 435.262 154.7C436.652 154.7 437.807 155.117 438.719 155.954C439.634 156.791 440.358 157.879 440.887 159.223V171.787C440.34 173.099 439.598 174.126 438.66 174.868C437.723 175.609 436.575 175.981 435.215 175.981C433.231 175.981 431.748 175.214 430.762 173.685C429.778 172.154 429.286 170.105 429.286 167.543V164.075ZM426.45 167.543C426.45 170.857 427.173 173.508 428.618 175.5C430.063 177.492 432.059 178.488 434.606 178.488C435.98 178.488 437.191 178.185 438.239 177.575C439.286 176.966 440.168 176.091 440.887 174.95V178.02C440.887 180.52 440.403 182.419 439.434 183.714C438.464 185.013 436.974 185.66 434.958 185.66C433.958 185.66 432.989 185.524 432.051 185.25C431.114 184.977 430.262 184.599 429.496 184.114L428.723 186.575C429.614 187.075 430.634 187.477 431.782 187.781C432.93 188.087 434.004 188.24 435.004 188.24C437.786 188.24 439.934 187.349 441.45 185.568C442.965 183.787 443.723 181.269 443.723 178.02V152.637H441.332L441.051 156.177C440.349 154.896 439.462 153.908 438.391 153.211C437.32 152.517 436.075 152.168 434.652 152.168C432.09 152.168 430.084 153.255 428.63 155.426C427.176 157.599 426.45 160.481 426.45 164.075V167.543V167.543ZM421.667 141.433H418.831V145.419H421.667V141.433V141.433ZM421.667 152.637H418.831V177.996H421.667V152.637ZM398.746 165.55C398.746 162.317 399.228 159.7 400.198 157.7C401.167 155.7 402.643 154.7 404.627 154.7C406.018 154.7 407.174 155.126 408.096 155.977C409.018 156.828 409.736 157.933 410.252 159.295V171.715C409.706 173.06 408.967 174.105 408.038 174.856C407.108 175.605 405.955 175.981 404.582 175.981C402.613 175.981 401.147 175.087 400.186 173.297C399.226 171.508 398.746 169.091 398.746 166.043V165.55V165.55ZM395.886 166.043C395.886 169.824 396.6 172.845 398.03 175.101C399.459 177.361 401.44 178.488 403.972 178.488C405.392 178.488 406.636 178.164 407.698 177.517C408.76 176.868 409.643 175.933 410.346 174.715L410.582 177.996H413.064V141.433H410.252V155.942C409.55 154.74 408.678 153.809 407.639 153.154C406.6 152.496 405.386 152.168 403.995 152.168C401.432 152.168 399.439 153.383 398.018 155.813C396.597 158.244 395.886 161.488 395.886 165.55V166.043V166.043ZM384.679 152.426C384.507 152.364 384.274 152.307 383.977 152.25C383.679 152.196 383.383 152.168 383.086 152.168C381.774 152.168 380.628 152.579 379.652 153.399C378.675 154.219 377.891 155.364 377.296 156.832L376.97 152.637H374.485V177.996H377.296V159.996C377.703 158.45 378.336 157.236 379.196 156.354C380.055 155.471 381.14 155.028 382.454 155.028L384.306 155.168L384.679 152.426V152.426ZM366.562 177.996H369.092V152.637H366.281V171.105C365.843 172.623 365.121 173.813 364.113 174.681C363.105 175.547 361.795 175.981 360.188 175.981C358.655 175.981 357.487 175.321 356.683 174C355.878 172.681 355.475 170.481 355.475 167.404V152.637H352.663V167.356C352.663 171.168 353.293 173.977 354.55 175.781C355.807 177.587 357.562 178.488 359.811 178.488C361.297 178.488 362.592 178.101 363.702 177.328C364.811 176.555 365.702 175.459 366.374 174.036L366.562 177.996V177.996ZM332.647 163.485C332.647 160.995 333.208 158.901 334.334 157.201C335.459 155.501 337.061 154.654 339.139 154.654C341.202 154.654 342.803 155.501 343.943 157.201C345.086 158.901 345.654 160.995 345.654 163.485V167.219C345.654 169.742 345.086 171.852 343.943 173.549C342.803 175.249 341.208 176.099 339.162 176.099C337.068 176.099 335.459 175.254 334.334 173.563C333.208 171.871 332.647 169.757 332.647 167.219V163.485V163.485ZM329.811 167.192C329.811 170.52 330.654 173.236 332.342 175.336C334.03 177.437 336.303 178.488 339.162 178.488C342.006 178.488 344.271 177.437 345.959 175.336C347.647 173.236 348.49 170.52 348.49 167.192V163.465C348.49 160.168 347.643 157.462 345.947 155.345C344.253 153.226 341.982 152.168 339.139 152.168C336.295 152.168 334.03 153.232 332.342 155.356C330.654 157.481 329.811 160.185 329.811 163.465V167.192ZM313.005 152.637H309.888L317.903 177.668L316.849 181.02C316.49 182.332 316.012 183.433 315.419 184.324C314.824 185.214 314.051 185.66 313.099 185.66C312.927 185.66 312.662 185.642 312.302 185.601C311.942 185.563 311.684 185.528 311.528 185.496L311.223 187.911C311.427 187.973 311.739 188.043 312.162 188.123C312.583 188.2 312.935 188.24 313.217 188.24C314.887 188.24 316.173 187.631 317.071 186.411C317.97 185.192 318.693 183.74 319.239 182.05L328.286 152.637H325.146L319.146 173.568H319.005L318.349 171.013L313.005 152.637ZM294.791 156.726C295.776 158.109 296.268 159.849 296.268 161.942V163.02H284.573C284.619 160.66 285.21 158.677 286.342 157.068C287.475 155.459 288.924 154.654 290.69 154.654C292.439 154.654 293.807 155.345 294.791 156.726V156.726ZM295.459 177.614C296.67 177.031 297.659 176.249 298.424 175.268L297.277 173.284C296.557 174.184 295.694 174.876 294.686 175.366C293.678 175.855 292.479 176.099 291.088 176.099C289.088 176.099 287.503 175.281 286.331 173.652C285.159 172.02 284.573 169.975 284.573 167.516V165.411H299.081V162.632C299.081 159.438 298.346 156.899 296.878 155.005C295.409 153.115 293.346 152.168 290.69 152.168C288.236 152.168 286.139 153.226 284.396 155.345C282.655 157.462 281.783 160.123 281.783 163.324V167.543C281.783 170.732 282.651 173.354 284.386 175.408C286.119 177.462 288.354 178.488 291.088 178.488C292.791 178.488 294.248 178.197 295.459 177.614V177.614ZM280.423 152.426C280.251 152.364 280.016 152.307 279.72 152.25C279.423 152.196 279.126 152.168 278.83 152.168C277.518 152.168 276.372 152.579 275.396 153.399C274.419 154.219 273.634 155.364 273.041 156.832L272.712 152.637H270.228V177.996H273.041V159.996C273.447 158.45 274.079 157.236 274.939 156.354C275.798 155.471 276.884 155.028 278.196 155.028L280.049 155.168L280.423 152.426V152.426ZM262.306 177.996H264.837V152.637H262.025V171.105C261.587 172.623 260.865 173.813 259.857 174.681C258.849 175.547 257.539 175.981 255.93 175.981C254.399 175.981 253.231 175.321 252.426 174C251.622 172.681 251.219 170.481 251.219 167.404V152.637H248.407V167.356C248.407 171.168 249.035 173.977 250.294 175.781C251.551 177.587 253.306 178.488 255.555 178.488C257.039 178.488 258.336 178.101 259.446 177.328C260.555 176.555 261.446 175.459 262.118 174.036L262.306 177.996V177.996ZM231.485 173.633C230.485 171.988 229.985 169.889 229.985 167.336V163.389C229.985 160.871 230.485 158.784 231.485 157.132C232.485 155.48 234.078 154.654 236.266 154.654C237.843 154.654 239.161 155.25 240.215 156.445C241.27 157.642 241.797 159.247 241.797 161.262H244.305L244.351 161.145C244.398 158.459 243.653 156.291 242.113 154.642C240.574 152.992 238.625 152.168 236.266 152.168C233.343 152.168 231.098 153.219 229.527 155.321C227.956 157.423 227.171 160.105 227.171 163.372V167.309C227.171 170.591 227.956 173.273 229.527 175.36C231.098 177.445 233.343 178.488 236.266 178.488C238.453 178.488 240.359 177.7 241.985 176.123C243.609 174.543 244.398 172.583 244.351 170.24L244.281 170.099H241.797C241.797 171.973 241.242 173.44 240.133 174.503C239.023 175.568 237.734 176.099 236.266 176.099C234.078 176.099 232.485 175.276 231.485 173.633V173.633ZM219.999 156.726C220.983 158.109 221.475 159.849 221.475 161.942V163.02H209.781C209.827 160.66 210.417 158.677 211.55 157.068C212.682 155.459 214.131 154.654 215.898 154.654C217.647 154.654 219.014 155.345 219.999 156.726V156.726ZM220.667 177.614C221.878 177.031 222.866 176.249 223.631 175.268L222.483 173.284C221.765 174.184 220.902 174.876 219.894 175.366C218.886 175.855 217.686 176.099 216.295 176.099C214.295 176.099 212.71 175.281 211.538 173.652C210.366 172.02 209.781 169.975 209.781 167.516V165.411H224.289V162.632C224.289 159.438 223.554 156.899 222.085 155.005C220.617 153.115 218.554 152.168 215.898 152.168C213.445 152.168 211.346 153.226 209.605 155.345C207.862 157.462 206.991 160.123 206.991 163.324V167.543C206.991 170.732 207.858 173.354 209.593 175.408C211.327 177.462 213.562 178.488 216.295 178.488C217.999 178.488 219.455 178.197 220.667 177.614V177.614ZM199.631 174.896C198.725 175.699 197.482 176.099 195.905 176.099C194.451 176.099 193.186 175.687 192.107 174.862C191.029 174.038 190.443 172.715 190.35 170.893H187.725L187.678 171.035C187.599 173.06 188.299 174.809 189.775 176.281C191.251 177.754 193.295 178.488 195.905 178.488C198.279 178.488 200.19 177.872 201.635 176.637C203.079 175.404 203.803 173.777 203.803 171.762C203.803 169.933 203.178 168.423 201.927 167.226C200.678 166.032 198.787 164.926 196.255 163.911C194.099 162.879 192.694 162.024 192.037 161.345C191.381 160.664 191.053 159.762 191.053 158.637C191.053 157.576 191.466 156.645 192.295 155.849C193.123 155.05 194.326 154.654 195.905 154.654C197.451 154.654 198.678 155.16 199.583 156.177C200.49 157.193 200.943 158.387 200.943 159.762H203.591L203.639 159.623C203.701 157.496 203.029 155.723 201.623 154.301C200.217 152.879 198.31 152.168 195.905 152.168C193.638 152.168 191.795 152.809 190.373 154.091C188.951 155.372 188.241 156.919 188.241 158.732C188.241 160.513 188.838 161.954 190.033 163.055C191.229 164.156 193.115 165.24 195.694 166.301C197.709 167.226 199.095 168.111 199.854 168.95C200.611 169.792 200.99 170.792 200.99 171.954C200.99 173.115 200.537 174.097 199.631 174.896" fill="currentColor"/>
+<path d="M199.631 174.896C198.725 175.699 197.482 176.099 195.905 176.099C194.451 176.099 193.186 175.687 192.107 174.862C191.029 174.038 190.443 172.715 190.35 170.893H187.725L187.678 171.035C187.599 173.06 188.299 174.809 189.775 176.281C191.251 177.754 193.295 178.488 195.905 178.488C198.279 178.488 200.19 177.872 201.635 176.637C203.079 175.404 203.803 173.777 203.803 171.762C203.803 169.933 203.178 168.423 201.927 167.226C200.678 166.032 198.787 164.926 196.255 163.911C194.099 162.879 192.694 162.024 192.037 161.345C191.381 160.664 191.053 159.762 191.053 158.637C191.053 157.576 191.466 156.645 192.295 155.849C193.123 155.05 194.326 154.654 195.905 154.654C197.451 154.654 198.678 155.16 199.583 156.177C200.49 157.193 200.943 158.387 200.943 159.762H203.591L203.639 159.623C203.701 157.496 203.029 155.723 201.623 154.301C200.217 152.879 198.31 152.168 195.905 152.168C193.638 152.168 191.795 152.809 190.373 154.091C188.951 155.372 188.241 156.919 188.241 158.732C188.241 160.513 188.838 161.954 190.033 163.055C191.229 164.156 193.115 165.24 195.694 166.301C197.709 167.226 199.095 168.111 199.854 168.95C200.611 169.792 200.99 170.792 200.99 171.954C200.99 173.115 200.537 174.097 199.631 174.896M551.591 156.726C552.576 158.109 553.069 159.849 553.069 161.942V163.02H541.373C541.419 160.66 542.01 158.677 543.142 157.068C544.275 155.459 545.725 154.654 547.49 154.654C549.239 154.654 550.607 155.345 551.591 156.726ZM552.259 177.614C553.47 177.031 554.459 176.249 555.224 175.268L554.077 173.284C553.358 174.184 552.494 174.876 551.486 175.366C550.478 175.855 549.279 176.099 547.888 176.099C545.888 176.099 544.303 175.281 543.131 173.652C541.959 172.02 541.373 169.975 541.373 167.516V165.411H555.88V162.632C555.88 159.438 555.146 156.899 553.678 155.005C552.208 153.115 550.146 152.168 547.49 152.168C545.037 152.168 542.939 153.226 541.196 155.345C539.455 157.462 538.585 160.123 538.585 163.324V167.543C538.585 170.732 539.451 173.354 541.186 175.408C542.919 177.462 545.154 178.488 547.888 178.488C549.591 178.488 551.049 178.197 552.259 177.614V177.614ZM532.022 177.996V155.028H536.824V152.637H532.022V148.981C532.022 147.215 532.337 145.857 532.97 144.904C533.602 143.95 534.537 143.473 535.77 143.473C536.161 143.473 536.517 143.5 536.837 143.555C537.157 143.609 537.474 143.685 537.786 143.777L538.139 141.411C537.685 141.269 537.235 141.156 536.79 141.072C536.344 140.985 535.903 140.942 535.467 140.942C533.497 140.942 531.962 141.642 530.862 143.04C529.759 144.437 529.209 146.419 529.209 148.981V152.637H525.786V155.028H529.209V177.996H532.022ZM521.801 141.433H518.964V145.419H521.801V141.433V141.433ZM521.801 152.637H518.964V177.996H521.801V152.637ZM512.987 141.433H510.151V177.996H512.987V141.433ZM494.985 141.433H492.149V177.996H494.985V141.433V141.433ZM473.843 174.668C473.125 173.809 472.765 172.7 472.765 171.342C472.765 169.747 473.339 168.408 474.487 167.321C475.636 166.236 477.171 165.692 479.094 165.692H483.594V171.177C483.092 172.568 482.238 173.711 481.027 174.609C479.815 175.508 478.429 175.959 476.867 175.959C475.57 175.959 474.562 175.528 473.843 174.668V174.668ZM486.945 177.996C486.743 177.185 486.6 176.356 486.524 175.513C486.444 174.668 486.406 173.795 486.406 172.887V160.442C486.406 157.787 485.689 155.743 484.251 154.313C482.811 152.883 480.922 152.168 478.579 152.168C476.202 152.168 474.254 152.916 472.73 154.408C471.206 155.899 470.483 157.599 470.562 159.505L470.609 159.645L473.234 159.668C473.234 158.262 473.722 157.076 474.699 156.105C475.675 155.137 476.921 154.654 478.437 154.654C480.062 154.654 481.327 155.16 482.234 156.177C483.139 157.193 483.594 158.599 483.594 160.396V163.513H479.163C476.335 163.513 474.093 164.211 472.437 165.609C470.781 167.008 469.952 168.887 469.952 171.247C469.952 173.467 470.525 175.226 471.663 176.532C472.806 177.836 474.421 178.488 476.515 178.488C478.015 178.488 479.378 178.079 480.605 177.259C481.831 176.437 482.827 175.396 483.594 174.131C483.594 174.708 483.629 175.277 483.699 175.842C483.769 176.404 483.874 177.123 484.015 177.996H486.945V177.996ZM459.24 146.168V152.637H455.724V155.028H459.24V171.465C459.24 173.899 459.666 175.68 460.518 176.804C461.37 177.928 462.546 178.488 464.046 178.488C464.655 178.488 465.261 178.431 465.863 178.313C466.463 178.196 466.951 178.043 467.327 177.856L466.951 175.7C466.498 175.795 466.093 175.864 465.733 175.911C465.374 175.959 465.006 175.981 464.631 175.981C463.866 175.981 463.249 175.638 462.779 174.95C462.311 174.265 462.077 173.101 462.077 171.462V155.028H466.483V152.637H462.077V146.168H459.24ZM452.232 141.433H449.396V145.419H452.232V141.433V141.433ZM452.232 152.637H449.396V177.996H452.232V152.637ZM429.286 164.075C429.286 161.295 429.786 159.036 430.786 157.301C431.786 155.568 433.278 154.7 435.262 154.7C436.652 154.7 437.807 155.117 438.719 155.954C439.634 156.791 440.358 157.879 440.887 159.223V171.787C440.34 173.099 439.598 174.126 438.66 174.868C437.723 175.609 436.575 175.981 435.215 175.981C433.231 175.981 431.748 175.214 430.762 173.685C429.778 172.154 429.286 170.105 429.286 167.543V164.075ZM426.45 167.543C426.45 170.857 427.173 173.508 428.618 175.5C430.063 177.492 432.059 178.488 434.606 178.488C435.98 178.488 437.191 178.185 438.239 177.575C439.286 176.966 440.168 176.091 440.887 174.95V178.02C440.887 180.52 440.403 182.419 439.434 183.714C438.464 185.013 436.974 185.66 434.958 185.66C433.958 185.66 432.989 185.524 432.051 185.25C431.114 184.977 430.262 184.599 429.496 184.114L428.723 186.575C429.614 187.075 430.634 187.477 431.782 187.781C432.93 188.087 434.004 188.24 435.004 188.24C437.786 188.24 439.934 187.349 441.45 185.568C442.965 183.787 443.723 181.269 443.723 178.02V152.637H441.332L441.051 156.177C440.349 154.896 439.462 153.908 438.391 153.211C437.32 152.517 436.075 152.168 434.652 152.168C432.09 152.168 430.084 153.255 428.63 155.426C427.176 157.599 426.45 160.481 426.45 164.075V167.543V167.543ZM421.667 141.433H418.831V145.419H421.667V141.433V141.433ZM421.667 152.637H418.831V177.996H421.667V152.637ZM398.746 165.55C398.746 162.317 399.228 159.7 400.198 157.7C401.167 155.7 402.643 154.7 404.627 154.7C406.018 154.7 407.174 155.126 408.096 155.977C409.018 156.828 409.736 157.933 410.252 159.295V171.715C409.706 173.06 408.967 174.105 408.038 174.856C407.108 175.605 405.955 175.981 404.582 175.981C402.613 175.981 401.147 175.087 400.186 173.297C399.226 171.508 398.746 169.091 398.746 166.043V165.55V165.55ZM395.886 166.043C395.886 169.824 396.6 172.845 398.03 175.101C399.459 177.361 401.44 178.488 403.972 178.488C405.392 178.488 406.636 178.164 407.698 177.517C408.76 176.868 409.643 175.933 410.346 174.715L410.582 177.996H413.064V141.433H410.252V155.942C409.55 154.74 408.678 153.809 407.639 153.154C406.6 152.496 405.386 152.168 403.995 152.168C401.432 152.168 399.439 153.383 398.018 155.813C396.597 158.244 395.886 161.488 395.886 165.55V166.043V166.043ZM384.679 152.426C384.507 152.364 384.274 152.307 383.977 152.25C383.679 152.196 383.383 152.168 383.086 152.168C381.774 152.168 380.628 152.579 379.652 153.399C378.675 154.219 377.891 155.364 377.296 156.832L376.97 152.637H374.485V177.996H377.296V159.996C377.703 158.45 378.336 157.236 379.196 156.354C380.055 155.471 381.14 155.028 382.454 155.028L384.306 155.168L384.679 152.426V152.426ZM366.562 177.996H369.092V152.637H366.281V171.105C365.843 172.623 365.121 173.813 364.113 174.681C363.105 175.547 361.795 175.981 360.188 175.981C358.655 175.981 357.487 175.321 356.683 174C355.878 172.681 355.475 170.481 355.475 167.404V152.637H352.663V167.356C352.663 171.168 353.293 173.977 354.55 175.781C355.807 177.587 357.562 178.488 359.811 178.488C361.297 178.488 362.592 178.101 363.702 177.328C364.811 176.555 365.702 175.459 366.374 174.036L366.562 177.996V177.996ZM332.647 163.485C332.647 160.995 333.208 158.901 334.334 157.201C335.459 155.501 337.061 154.654 339.139 154.654C341.202 154.654 342.803 155.501 343.943 157.201C345.086 158.901 345.654 160.995 345.654 163.485V167.219C345.654 169.742 345.086 171.852 343.943 173.549C342.803 175.249 341.208 176.099 339.162 176.099C337.068 176.099 335.459 175.254 334.334 173.563C333.208 171.871 332.647 169.757 332.647 167.219V163.485V163.485ZM329.811 167.192C329.811 170.52 330.654 173.236 332.342 175.336C334.03 177.437 336.303 178.488 339.162 178.488C342.006 178.488 344.271 177.437 345.959 175.336C347.647 173.236 348.49 170.52 348.49 167.192V163.465C348.49 160.168 347.643 157.462 345.947 155.345C344.253 153.226 341.982 152.168 339.139 152.168C336.295 152.168 334.03 153.232 332.342 155.356C330.654 157.481 329.811 160.185 329.811 163.465V167.192ZM313.005 152.637H309.888L317.903 177.668L316.849 181.02C316.49 182.332 316.012 183.433 315.419 184.324C314.824 185.214 314.051 185.66 313.099 185.66C312.927 185.66 312.662 185.642 312.302 185.601C311.942 185.563 311.684 185.528 311.528 185.496L311.223 187.911C311.427 187.973 311.739 188.043 312.162 188.123C312.583 188.2 312.935 188.24 313.217 188.24C314.887 188.24 316.173 187.631 317.071 186.411C317.97 185.192 318.693 183.74 319.239 182.05L328.286 152.637H325.146L319.146 173.568H319.005L318.349 171.013L313.005 152.637ZM294.791 156.726C295.776 158.109 296.268 159.849 296.268 161.942V163.02H284.573C284.619 160.66 285.21 158.677 286.342 157.068C287.475 155.459 288.924 154.654 290.69 154.654C292.439 154.654 293.807 155.345 294.791 156.726V156.726ZM295.459 177.614C296.67 177.031 297.659 176.249 298.424 175.268L297.277 173.284C296.557 174.184 295.694 174.876 294.686 175.366C293.678 175.855 292.479 176.099 291.088 176.099C289.088 176.099 287.503 175.281 286.331 173.652C285.159 172.02 284.573 169.975 284.573 167.516V165.411H299.081V162.632C299.081 159.438 298.346 156.899 296.878 155.005C295.409 153.115 293.346 152.168 290.69 152.168C288.236 152.168 286.139 153.226 284.396 155.345C282.655 157.462 281.783 160.123 281.783 163.324V167.543C281.783 170.732 282.651 173.354 284.386 175.408C286.119 177.462 288.354 178.488 291.088 178.488C292.791 178.488 294.248 178.197 295.459 177.614V177.614ZM280.423 152.426C280.251 152.364 280.016 152.307 279.72 152.25C279.423 152.196 279.126 152.168 278.83 152.168C277.518 152.168 276.372 152.579 275.396 153.399C274.419 154.219 273.634 155.364 273.041 156.832L272.712 152.637H270.228V177.996H273.041V159.996C273.447 158.45 274.079 157.236 274.939 156.354C275.798 155.471 276.884 155.028 278.196 155.028L280.049 155.168L280.423 152.426V152.426ZM262.306 177.996H264.837V152.637H262.025V171.105C261.587 172.623 260.865 173.813 259.857 174.681C258.849 175.547 257.539 175.981 255.93 175.981C254.399 175.981 253.231 175.321 252.426 174C251.622 172.681 251.219 170.481 251.219 167.404V152.637H248.407V167.356C248.407 171.168 249.035 173.977 250.294 175.781C251.551 177.587 253.306 178.488 255.555 178.488C257.039 178.488 258.336 178.101 259.446 177.328C260.555 176.555 261.446 175.459 262.118 174.036L262.306 177.996V177.996ZM231.485 173.633C230.485 171.988 229.985 169.889 229.985 167.336V163.389C229.985 160.871 230.485 158.784 231.485 157.132C232.485 155.48 234.078 154.654 236.266 154.654C237.843 154.654 239.161 155.25 240.215 156.445C241.27 157.642 241.797 159.247 241.797 161.262H244.305L244.351 161.145C244.398 158.459 243.653 156.291 242.113 154.642C240.574 152.992 238.625 152.168 236.266 152.168C233.343 152.168 231.098 153.219 229.527 155.321C227.956 157.423 227.171 160.105 227.171 163.372V167.309C227.171 170.591 227.956 173.273 229.527 175.36C231.098 177.445 233.343 178.488 236.266 178.488C238.453 178.488 240.359 177.7 241.985 176.123C243.609 174.543 244.398 172.583 244.351 170.24L244.281 170.099H241.797C241.797 171.973 241.242 173.44 240.133 174.503C239.023 175.568 237.734 176.099 236.266 176.099C234.078 176.099 232.485 175.276 231.485 173.633V173.633ZM219.999 156.726C220.983 158.109 221.475 159.849 221.475 161.942V163.02H209.781C209.827 160.66 210.417 158.677 211.55 157.068C212.682 155.459 214.131 154.654 215.898 154.654C217.647 154.654 219.014 155.345 219.999 156.726V156.726ZM220.667 177.614C221.878 177.031 222.866 176.249 223.631 175.268L222.483 173.284C221.765 174.184 220.902 174.876 219.894 175.366C218.886 175.855 217.686 176.099 216.295 176.099C214.295 176.099 212.71 175.281 211.538 173.652C210.366 172.02 209.781 169.975 209.781 167.516V165.411H224.289V162.632C224.289 159.438 223.554 156.899 222.085 155.005C220.617 153.115 218.554 152.168 215.898 152.168C213.445 152.168 211.346 153.226 209.605 155.345C207.862 157.462 206.991 160.123 206.991 163.324V167.543C206.991 170.732 207.858 173.354 209.593 175.408C211.327 177.462 213.562 178.488 216.295 178.488C217.999 178.488 219.455 178.197 220.667 177.614V177.614Z" stroke="currentColor" stroke-width="1.5"/>
+<path d="M367.497 58.8566H344.238V128.354H367.914V78.7254L376.69 78.7717H384.628V58.876H382.538C378.452 58.876 367.497 58.8566 367.497 58.8566" fill="currentColor"/>
+<path d="M424.178 108.856C424.178 110.899 423.015 111.92 420.697 111.92H416.935C414.614 111.92 413.454 110.899 413.454 108.856V78.355C413.454 76.3134 414.614 75.2905 416.935 75.2905H420.697C423.015 75.2905 424.178 76.3134 424.178 78.355V108.856ZM427.659 58.8566H409.973C402.917 58.8566 397.855 60.3426 394.791 63.3124C391.727 66.2853 390.195 70.555 390.195 76.1254V111.084C390.195 116.655 391.727 120.926 394.791 123.896C397.855 126.87 402.917 128.354 409.973 128.354H427.659C434.715 128.354 439.777 126.87 442.841 123.896C445.905 120.926 447.437 116.655 447.437 111.084V76.1254C447.437 70.555 445.905 66.2853 442.841 63.3124C439.777 60.3426 434.715 58.8566 427.659 58.8566Z" fill="currentColor"/>
+<path d="M263.023 51.8921H287.535V35.1801H263.023V51.8921" fill="currentColor"/>
+<path d="M263.441 128.354H287.117V58.8566H263.441V128.354Z" fill="currentColor"/>
+<path d="M230.036 84.9457L209.825 35.18H188.625V128.327H211.238V79.4321L231.449 128.327H252.649V35.18H230.036V84.9457Z" fill="currentColor"/>
+<path d="M627.311 58.8566L619.791 101.196L610.349 58.8566H586.504L608.607 130.754L599.584 164.99C607.196 164.99 621.063 164.99 621.063 164.99L651.127 58.8566H627.311Z" fill="currentColor"/>
+<path d="M560.991 86.9894H547.899V78.2145C547.899 76.1733 549.059 75.1509 551.382 75.1509H557.51C559.83 75.1509 560.991 76.1733 560.991 78.2145V86.9894ZM562.941 58.8566H545.95C532.302 58.8566 525.477 64.6134 525.477 76.1254V111.084C525.477 122.598 532.302 128.354 545.95 128.354H562.941C576.59 128.354 583.415 122.598 583.415 111.084V104.816H560.991V108.716C560.991 110.944 561.023 112.06 561.023 112.06H551.382C549.059 112.06 547.899 111.038 547.899 108.995V99.8036H583.415V76.1254C583.415 64.6134 576.59 58.8566 562.941 58.8566" fill="currentColor"/>
+<path d="M324.981 35.4333H301.305V59.0389H293.645V76.4482H301.305V128.511C301.305 128.511 308.129 128.537 321.778 128.537H333.615V111.128L324.981 111.125V76.4482H333.755V59.0389H324.981V35.4333Z" fill="currentColor"/>
+<path d="M494.651 58.8566L481.559 90.4712V35.18H457.883V128.354H481.559V95.904L494.511 128.354H519.163L504.26 93.117L519.163 58.8566H494.651Z" fill="currentColor"/>
+<path d="M96.493 113.253L58.2514 135.329C55.6597 136.826 52.3149 135.931 50.8186 133.338L30.3649 97.9144C28.8697 95.3216 29.7649 91.9748 32.3571 90.4789L70.5982 68.3997L96.493 113.253Z" fill="#CC1B3F"/>
+<path d="M114.749 89.4322L110.958 91.6416C110.337 92.0026 109.534 91.789 109.171 91.1692L105.962 85.6588C105.599 85.0364 105.811 84.2332 106.433 83.8723L110.223 81.6646C110.844 81.3031 111.648 81.5146 112.01 82.1364L115.221 87.6468C115.582 88.2682 115.371 89.0712 114.749 89.4322ZM95.7909 68.1952C95.4289 67.5739 95.6404 66.7692 96.2607 66.4088L100.053 64.2004C100.674 63.839 101.476 64.0504 101.839 64.6723L105.049 70.1848C105.41 70.8046 105.198 71.6083 104.578 71.9698L100.786 74.1775C100.166 74.539 99.3617 74.3264 99.0003 73.7067L95.7909 68.1952ZM76.6445 72.2083L96.0221 105.77L134.365 83.6327L114.989 50.0707L76.6445 72.2083Z" fill="#CC1B3F"/>
+<path d="M82.2188 14.6613C82.0495 14.6613 81.8812 14.6972 81.7177 14.7652L15.7307 42.6479C15.1104 42.9119 14.6667 43.6519 14.6667 44.4413V102.426C14.6667 102.707 14.7161 102.977 14.8093 103.206C18.1375 111.529 36.8864 153.648 81.7188 171.589C82.0443 171.719 82.3896 171.72 82.7229 171.588C127.549 153.649 146.299 111.529 149.601 103.267C149.709 102.991 149.771 102.698 149.771 102.426V44.4413C149.771 43.6479 149.345 42.9146 148.735 42.6586L82.7125 14.7626C82.5573 14.6973 82.388 14.6613 82.2188 14.6613V14.6613ZM82.2188 186.354C80.1771 186.354 78.1771 185.968 76.2724 185.208C25.8828 165.043 4.91093 117.948 1.21771 108.712C0.417188 106.766 0 104.631 0 102.426V44.4413C0 37.7333 3.92864 31.7279 10.0063 29.1439L76.0177 1.25192C79.9817 -0.416085 84.4604 -0.414739 88.412 1.24793L154.415 29.1372C160.492 31.6759 164.437 37.6879 164.437 44.4413V102.426C164.437 104.546 164.032 106.651 163.233 108.678C159.525 117.948 138.552 165.043 88.1667 185.207C86.2588 185.968 84.2588 186.354 82.2188 186.354" fill="#CC1B3F"/>
+</svg>
+            </a>
+        </div>
+
+        
+<div class="language-switcher">
+<select onchange="location = this.options[this.selectedIndex].value;">
+    <option selected>English (en)</option>
+    
+        
+            
+                <option value="/de/components/nextbox/technical/factory-reset">de</option>
+            
+        
+    
+        
+    
+        
+            
+                <option value="/fr/components/nextbox/technical/factory-reset">fr</option>
+            
+        
+    
+        
+            
+                <option value="/es/components/nextbox/technical/factory-reset">es</option>
+            
+        
+    
+        
+            
+                <option value="/nl/components/nextbox/technical/factory-reset">nl</option>
+            
+        
+    
+        
+            
+                <option value="/it/components/nextbox/technical/factory-reset">it</option>
+            
+        
+    
+        
+            
+                <option value="/ja/components/nextbox/technical/factory-reset">ja</option>
+            
+        
+    
+        
+            
+                <option value="/ru/components/nextbox/technical/factory-reset">ru</option>
+            
+        
+    
+        
+            
+                <option value="/zh_CN/components/nextbox/technical/factory-reset">zh_CN</option>
+            
+        
+    
+        
+            
+                <option value="/el/components/nextbox/technical/factory-reset">el</option>
+            
+        
+    
+        
+            
+                <option value="/da/components/nextbox/technical/factory-reset">da</option>
+            
+        
+    
+        
+            
+                <option value="/bg/components/nextbox/technical/factory-reset">bg</option>
+            
+        
+    
+        
+            
+                <option value="/et/components/nextbox/technical/factory-reset">et</option>
+            
+        
+    
+        
+            
+                <option value="/fi/components/nextbox/technical/factory-reset">fi</option>
+            
+        
+    
+        
+            
+                <option value="/lv/components/nextbox/technical/factory-reset">lv</option>
+            
+        
+    
+        
+            
+                <option value="/lt/components/nextbox/technical/factory-reset">lt</option>
+            
+        
+    
+        
+            
+                <option value="/pl/components/nextbox/technical/factory-reset">pl</option>
+            
+        
+    
+        
+            
+                <option value="/pt/components/nextbox/technical/factory-reset">pt</option>
+            
+        
+    
+        
+            
+                <option value="/ro/components/nextbox/technical/factory-reset">ro</option>
+            
+        
+    
+        
+            
+                <option value="/sv/components/nextbox/technical/factory-reset">sv</option>
+            
+        
+    
+        
+            
+                <option value="/sk/components/nextbox/technical/factory-reset">sk</option>
+            
+        
+    
+        
+            
+                <option value="/sl/components/nextbox/technical/factory-reset">sl</option>
+            
+        
+    
+        
+            
+                <option value="/cs/components/nextbox/technical/factory-reset">cs</option>
+            
+        
+    
+        
+            
+                <option value="/hu/components/nextbox/technical/factory-reset">hu</option>
+            
+        
+    
+</select>
+</div>
+
+      </div>
+      
+      
+    </aside>
+
+  </div>
+</div>
+<script src="/_static/js/theme-switcher.js"></script>
+<script src="/_static/js/toc-fixer.js"></script>
+<script src="/_static/js/quick-links.js"></script><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
+    </body>
+</html>
