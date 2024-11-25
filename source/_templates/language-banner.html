@@ -1,0 +1,95 @@
+<div id="language-banner"
+    class="init-hidden"
+    data-languages="{% for lang in languages: %}{{ lang }},{% endfor %}"
+    data-current-language="{{ language }}">
+    <div>
+        {% for lang in languages: %}
+        {% if language != lang %}
+        {% if lang == 'en' %}
+            <div class="language hidden" data-language="{{ lang }}"><a href="/{{ pagename }}.html">This page is available in {{ languages[lang] }}</a></div>
+        {% else %}
+            <div class="language hidden" data-language="{{ lang }}"><a href="/{{lang}}/{{ pagename }}.html">{{ lang_switch_info[lang] }}</a></div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="actions">
+        {% for lang in languages: %}
+        {% if language != lang %}
+            {% if lang == 'en' %}
+                <div class="switch hidden" data-language="{{ lang }}"><a href="/{{ pagename }}.html" onclick="setLanguage('{{ lang }}')">{{ lang_switch_label[lang] }}</a></div>
+            {% else %}
+                <div class="switch hidden" data-language="{{ lang }}"><a href="/{{lang}}/{{ pagename }}.html" onclick="setLanguage('{{ lang }}')">{{ lang_switch_label[lang] }}</a></div>
+            {% endif %}
+            <div class="dismiss hidden" data-language="{{ lang }}"><a href="#" onclick="dismissLanguageBanner()">{{ dismiss_label[lang] }}</a></div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        initLanguageBanner();
+    });
+
+    function setLanguage(lang) {
+      var oneYearFromNow = new Date();
+      oneYearFromNow.setFullYear(oneYearFromNow.getFullYear() + 1);
+
+      document.cookie =
+        'lang=' +
+        lang +
+        '; path=/; secure; expires=' +
+        oneYearFromNow;
+
+      document.querySelector('#language-banner').classList.add('hidden');
+    }
+
+    function dismissLanguageBanner() {
+      var $banner = document.querySelector('#language-banner');
+      var currentLang = $banner.getAttribute('data-current-language');
+      setLanguage(currentLang);
+      $banner.classList.add('hidden');
+    }
+
+    function initLanguageBanner() {
+        var cookieLanguage = getCookie('lang');
+        var siteLanguage = document.documentElement.lang;
+        var browserLang = window.navigator.userLanguage || window.navigator.language; // de, fr, en-US, en-GB
+        var browserLanguage = browserLang.substring(0, 2);
+        var $banner = document.querySelector('#language-banner');
+
+        if (!$banner) {
+            return;
+        }
+
+        $banner.classList.remove('init-hidden');
+
+        if (!cookieLanguage || (cookieLanguage !== siteLanguage)) {
+            var availableLanguages = $banner.getAttribute('data-languages').split(',').filter(n => n);
+            var targetLanguage = cookieLanguage ? cookieLanguage : browserLanguage;
+            if (availableLanguages.indexOf(targetLanguage) !== -1) {
+              var languageInfo = document.querySelector('#language-banner .language[data-language="'+targetLanguage+'"]');
+              var languageSwitchButton = document.querySelector('#language-banner .switch[data-language="'+targetLanguage+'"]');
+              var dismissButton = document.querySelector('#language-banner .dismiss[data-language="'+targetLanguage+'"]');
+              if (!languageInfo) {
+                  // console.error("Cannot find language switch banner for \"" + targetLanguage + "\"");
+                  return;
+              }
+              languageInfo.classList.remove('hidden');
+              languageSwitchButton.classList.remove('hidden');
+              dismissButton.classList.remove('hidden');
+              setTimeout(function() {
+                  document.querySelector('#language-banner').classList.add('show');
+              }, 500);
+            }
+        }
+    }
+
+    function getCookie(name) {
+      var value = '; ' + document.cookie
+      var parts = value.split('; ' + name + '=')
+      if (parts.length == 2) return parts.pop().split(';').shift()
+    }
+</script>
