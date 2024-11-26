@@ -6,15 +6,13 @@ jobs:
   syntax-check:
     name: Check syntax
     runs-on: ubuntu-latest
-    container: python:3.11-slim
+    container: python:3.11
     continue-on-error: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Create virtual environment
-        run: |
-          python -m venv venv
-          venv/bin/pip3 install -r requirements.txt
+        run: make venv
       - name: Syntax check
         run: |
           . venv/bin/activate
@@ -23,14 +21,12 @@ jobs:
   build-error-check:
     name: Check build error
     runs-on: ubuntu-latest
-    container: python:3.11-slim
+    container: python:3.11
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Create virtual environment
-        run: |
-          python -m venv venv
-          venv/bin/pip3 install -r requirements.txt
+        run: make venv
       - name: Build documentation
         run: |
           . venv/bin/activate
