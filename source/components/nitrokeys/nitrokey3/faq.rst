@@ -62,4 +62,4 @@ Nitrokey 3 FAQ
 
 
 .. include:: ../../shared-faqs/hyperlinks.rst.inc 
-.. _test: ../software/nitropy/all-platforms/test.html
+.. _test: ../../software/nitropy/all-platforms/test.html
