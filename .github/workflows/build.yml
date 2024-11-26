@@ -27,14 +27,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install additional python packages
-        run: pip3 install -r requirements.txt
+      - name: Create virtual environment
+        run: make venv
           
       - name: Quick build docs
         run: |
           mkdir -p dist/en
           mkdir -p build/en/doctrees
-          sphinx-build -j auto -b html -D language=en -d build/en/doctrees source dist/en
+          venv/bin/sphinx-build -j auto -b html -D language=en -d build/en/doctrees source dist/en
           rm -rf dist/en/_sources
 
       - name: Upload quick build artifact 
@@ -62,13 +62,13 @@ jobs:
           path: data.git
      
       - name: Build pot files
-        run: sphinx-build -b gettext source data.git/locales/
+        run: venv/bin/sphinx-build -b gettext source data.git/locales/
 
       - name: Build po files from pot files
         shell: bash
         run: |
           lang=($OTHER_LANGS)
-          sphinx-intl update -p data.git/locales/ ${lang[@]/*/'-l '&' '}
+          venv/bin/sphinx-intl update -p data.git/locales/ ${lang[@]/*/'-l '&' '}
           rm -rf data.git/locales/.doctrees 
 
       # this one looks like a upstream bug for the auto-translation 
