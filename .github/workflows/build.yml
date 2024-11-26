@@ -3,21 +3,8 @@ on:
   push:
     branches: [ main ]
 
-#permissions:
-#  contents: write
-
 jobs:
-  # runs on weblate commit
-  #weblate-commit-build:
-  #  if: ${{ contains(github.event.head_commit.message, 'Translated using Weblate') }}
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - name: TODO - start full build (delayed)
-  #      run: echo "TODO - start delayed full build, maybe 15mins?"
-
-  # on regular commit (auto excludes self-commited pot/po files)       
   full-build:
-    #if: ${{ ! contains(github.event.head_commit.message, 'Translated using Weblate') }}
     concurrency:
       group: ${{ github.ref }}
       cancel-in-progress: true
@@ -40,24 +27,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: additional python packages
+      - name: Install additional python packages
         run: pip3 install -r requirements.txt
           
-      - name: quick build docs
+      - name: Quick build docs
         run: |
           mkdir -p dist/en
           mkdir -p build/en/doctrees
           sphinx-build -j auto -b html -D language=en -d build/en/doctrees source dist/en
           rm -rf dist/en/_sources
 
-      - name: upload quick build artifact 
+      - name: Upload quick build artifact 
         id: upload-quick
         uses: actions/upload-artifact@v4
         with:
           name: generated documentation (en)
           path: dist
 
-      - name: trigger docs server to download artifact
+      - name: Trigger docs server to download artifact
         uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.DOCS_HOST }}
@@ -66,7 +53,7 @@ jobs:
           key: ${{ secrets.DEPLOY_AUTH_KEY }}
           script: /var/www/docs/deploy/github-trigger.sh en ${{ steps.upload-quick.outputs.artifact-id }} ${{ secrets.DOWNLOAD_TOKEN }}
 
-      - name: checkout data repository
+      - name: Checkout data repository
         uses: actions/checkout@v4
         with:
           repository: nitrokey/nitrokey-documentation-data
@@ -74,10 +61,10 @@ jobs:
           ssh-key: ${{ secrets.DEPLOY_AUTH_KEY }}
           path: data.git
      
-      - name: build pot files
+      - name: Build pot files
         run: sphinx-build -b gettext source data.git/locales/
 
-      - name: build po files from pot files
+      - name: Build po files from pot files
         shell: bash
         run: |
           lang=($OTHER_LANGS)
@@ -93,15 +80,9 @@ jobs:
         run: |
           sed -ie 's@\\\\@/bs/@g' $(find data.git/locales -name "*.po" | xargs)
 
-      # - name: prepare commit data repository
-      #   run: |
-      #     cp -r locales locales.full
-      #     rm -rf locales/.doctrees
-
       - name: commit `locales` into data repository (on changes)
         shell: bash
         run: |
-          #rm -rf data.git/locales
           cd data.git
           # not needed if run on --user 1001
           git config --global --add safe.directory $(pwd)
@@ -110,60 +91,3 @@ jobs:
           if (git commit -m "Automated .pot generation" locales); then
             git push          
           fi
-
-      # - name: put original `locales` back
-      #   run: |
-      #     rm -rf locales
-      #     cp -r locales.full locales
-          
-      # - name: TODO - weblate
-      #   shell: bash
-      #   run: |
-      #     # have some time for commit/push before to propagate
-      #     sleep 30
-      #     bash trigger_weblate.sh ${{ secrets.WEBLATE_API_URL }} none ${{ secrets.WEBLATE_TOKEN }} pull
-          
-      #     for lang in $OTHER_LANGS
-      #     do
-      #       bash trigger_weblate.sh ${{ secrets.WEBLATE_API_URL }} $lang ${{ secrets.WEBLATE_TOKEN }} translate
-      #     done
-
-      #     bash trigger_weblate.sh ${{ secrets.WEBLATE_API_URL }} none ${{ secrets.WEBLATE_TOKEN }} push
-
-      # - name: WORKAROUND - revert replace double backslashes in .po files
-      #   shell: bash
-      #   run: |
-      #     sed -ie 's@/bs/@\\\\@g' $(find locales -name "*.po" | xargs)
-
-      # - name: build full docs
-      #   run: |
-      #     # one _images is enough
-      #     mv dist/en/_images dist         
-          
-      #     cp -r locales source/locales
-      #     for lang in $MAIN_LANGS $OTHER_LANGS
-      #     do
-      #       mkdir -p dist/$lang
-      #       mkdir -p build/$lang/doctrees
-      #       sphinx-build -j auto -b html -D language=$lang -d build/$lang/doctrees source dist/$lang
-      #       rm -rf dist/$lang/_sources dist/$lang/_images
-      #     done
-
-      # - name: upload full build artifact
-      #   id: upload-full
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: generated documentation (all)
-      #     path: dist
-
-      # - name: trigger docs server to download (FULL) artifact
-      #   uses: appleboy/ssh-action@v1.2.0
-      #   with:
-      #     host: ${{ secrets.DOCS_HOST }}
-      #     username: docs
-      #     port: ${{ secrets.DOCS_PORT }}
-      #     key: ${{ secrets.DEPLOY_AUTH_KEY }}
-      #     script: /var/www/docs/deploy/github-trigger.sh all ${{ steps.upload-full.outputs.artifact-id }} ${{ secrets.DOWNLOAD_TOKEN }}
-          
-
- 
