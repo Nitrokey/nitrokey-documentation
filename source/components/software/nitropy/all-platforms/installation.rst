@@ -93,11 +93,6 @@ nitropy requires Python 3.9 or 3.10.  If your default Python installation is old
 
     $ pipx install --python python3.9 pynitrokey
     
-Arm Not Supported
-~~~~~~~~~~~~~~~~~
-
-Currently, recent nitropy versions cannot be installed on Arm platforms due to a dependency issue (`GitHub issue <https://github.com/Nitrokey/pynitrokey/issues/265>`__).  As a workaround, you can use an x86 Python installation in a Rosetta terminal as described in `this discussion <https://stackoverflow.com/questions/71691598/how-to-run-python-as-x86-with-rosetta2-on-arm-macos-machine>`_).
-
 libusb-1.0.dylib not found
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
