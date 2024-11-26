@@ -12,7 +12,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Create virtual environment
-        run: make venv
+        run: |
+          python -m venv venv
+          venv/bin/pip3 install -r requirements.txt
       - name: Syntax check
         run: |
           . venv/bin/activate
@@ -26,7 +28,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
       - name: Create virtual environment
-        run: make venv
+        run: |
+          python -m venv venv
+          venv/bin/pip3 install -r requirements.txt
       - name: Build documentation
         run: |
           . venv/bin/activate
