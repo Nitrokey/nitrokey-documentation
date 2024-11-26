@@ -1,0 +1,33 @@
+name: Pull Request Checker
+on:
+  pull_request:
+
+jobs:
+  syntax-check:
+    name: Check syntax
+    runs-on: ubuntu-latest
+    container: python:3.11-slim
+    continue-on-error: true
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Create virtual environment
+        run: make venv
+      - name: Syntax check
+        run: |
+          . venv/bin/activate
+          rstcheck --recursive --ignore-directives "tabs" source/
+
+  build-error-check:
+    name: Check build error
+    runs-on: ubuntu-latest
+    container: python:3.11-slim
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Create virtual environment
+        run: make venv
+      - name: Build documentation
+        run: |
+          . venv/bin/activate
+          sphinx-build -W -j 1 -a -D language='en' -b html source dist/en
