@@ -11,7 +11,7 @@ Quickstart
 2. Connect the power cable to the NextBox, you can use any of the two USB-C ports.
 3. Once powered the NextBox will start
 4. Wait approx. 5 minutes and open "http://nextbox.local" in your web browser -
-   this duration may vary. The NextBox is ready once the LED is constantly
+   this duration may vary, during this time the LED will blink. After the User Creation is finished the LED will be constantly
    green (see :doc:`LEDs <technical/led-colors>`).
    
 
