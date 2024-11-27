@@ -6,6 +6,9 @@ This guide describes how to update the firmware on the Nitrokey Pro.
 .. warning::
   This guide is still in an experimental state!
 
+.. note::
+  Updates are only possible with firmware version 0.11 and newer.
+
 .. important::
    Updating could lead to data loss, so make sure you have proper backup login methods enabled and/or ensure that
    the Nitrokey Pro is not the only way to authenticate/2FA for your 
