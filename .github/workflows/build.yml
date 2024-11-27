@@ -68,7 +68,7 @@ jobs:
         shell: bash
         run: |
           lang=($OTHER_LANGS)
-          venv/bin/sphinx-intl update -p data.git/locales/ ${lang[@]/*/'-l '&' '}
+          venv/bin/sphinx-intl update -p data.git/locales/ -d data.git/locales/ ${lang[@]/*/'-l '&' '}
           rm -rf data.git/locales/.doctrees 
 
       # this one looks like a upstream bug for the auto-translation 
@@ -88,6 +88,6 @@ jobs:
           git config --global --add safe.directory $(pwd)
           git config --global user.name "GitHub Action"
           git config --global user.email "gh-action@noreply.gh.com"
-          if (git commit -m "Automated .pot generation" locales); then
+          if (git commit -m "Automated .pot/.po generation" locales); then
             git push          
           fi
