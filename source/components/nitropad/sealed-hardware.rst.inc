@@ -21,6 +21,11 @@ The bag and all screws on the bottom of the device have been sealed. For the bag
    .. figure:: /components/nitropad/images/ns50_sealed.jpg
       :alt: NS50
 
+   Nitropad V54:
+
+   .. figure:: /components/nitropad/images/V54_sealed.jpg
+      :alt: V54
+
    NitroPad X230:
 
    .. figure:: /components/nitropad/images/SchraubenmarkierungX230.jpg
