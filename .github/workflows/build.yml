@@ -36,6 +36,7 @@ jobs:
           mkdir -p build/en/doctrees
           venv/bin/sphinx-build -j auto -b html -D language=en -d build/en/doctrees source dist/en
           rm -rf dist/en/_sources
+          cp -r redirects/.htaccess dist
 
       - name: Upload quick build artifact 
         id: upload-quick
