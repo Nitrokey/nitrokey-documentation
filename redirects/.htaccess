@@ -1,0 +1,199 @@
+# Redirects of deprecated articles to existing ones
+# =================================================
+
+# Usage:
+#	1) Copy the RedirectMatch Line
+#	2) Put the deprecated path between ? and $
+#	3) Put the final path between $1 and "
+#
+#	Use 301 for final redirects and 302 for temporary redirects
+#
+# If the browser shows "Internal Server Error" check the Syntax of the Rule Set:
+
+
+#Rule Set:
+#=========
+
+#RedirectMatch 302 "^(/[a-z][a-z])?/path/to/old_article$" "$1/path/to/new_article"
+#RedirectMatch 301 "^(/[a-z][a-z])?/(fido2|nitrokey3|hsm|u2f|storage|start|pro|passkey)(/linux|/windows|/mac)?$" "$1/nitrokeys/$2"
+
+# FIDO2
+RedirectMatch 301 "^(/[a-z][a-z])?/fido2/(mac/|windows/|linux/)?2fa-nextcloud$" "$1/nitrokeys/features/fido2/nextcloud"
+RedirectMatch 301 "^(/[a-z][a-z])?/fido2/(mac/|windows/|linux/)?2fa-odoo$" "$1/nitrokeys/features/u2f/odoo"
+RedirectMatch 301 "^(/[a-z][a-z])?/fido2/(mac/|windows/|linux/)?firmware-update$" "$1/nitrokeys/fido2/firmware-update"
+RedirectMatch 301 "^(/[a-z][a-z])?/fido2/(mac/|windows/|linux/)$" "$1/nitrokeys/fido2/getting-started"
+RedirectMatch 301 "^(/[a-z][a-z])?/fido2/(mac/|windows/|linux/)reset$" "$1/nitrokeys/fido2/reset"
+RedirectMatch 301 "^(/[a-z][a-z])?/fido2/linux/desktop-login$" "$1/nitrokeys/features/u2f/desktop-login"
+RedirectMatch 301 "^(/[a-z][a-z])?/fido2/windows/passwordless-microsoft$" "$1/nitrokeys/features/fido2/passwordless-microsoft"
+
+# Nitrokey Passkey
+
+# Nitrokey U2F
+RedirectMatch 301 "^(/[a-z][a-z])?/u2f/(mac/|windows/|linux/)index$" "$1/nitrokeys/u2f/getting-started"
+RedirectMatch 301 "^(/[a-z][a-z])?/u2f/(mac/|windows/|linux/)?2fa-nextcloud$" "$1/nitrokeys/features/fido2/nextcloud"
+RedirectMatch 301 "^(/[a-z][a-z])?/u2f/(mac/|windows/|linux/)?2fa-odoo$" "$1/nitrokeys/features/u2f/odoo"
+RedirectMatch 301 "^(/[a-z][a-z])?/fido2/linux/desktop-login$" "$1/nitrokeys/features/u2f/desktop-login"
+
+# Nitrokey Storage
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)?factory-reset$" "$1/nitrokeys/storage/factory-reset"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/encrypted-mobile-storage$" "$1/nitrokeys/features/encrypted-storage/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/hidden$" "$1/nitrokeys/features/hidden-storage/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)?firmware-update-manually$" "$1/nitrokeys/storage/firmware-update-manually"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)?firmware-update$" "$1/nitrokeys/storage/firmware-update"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)?2fa-nextcloud$" "$1/nitrokeys/features/totp/nextcloud"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)?2fa-odoo$" "$1/nitrokeys/features/u2f/odoo"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/linux/desktop-login$" "$1/nitrokeys/features/u2f/desktop-login"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)index$" "$1/nitrokeys/storage/getting-started"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)smime-thunderbird$" "$1/nitrokeys/features/openpgp-card/smime/smime-thunderbird"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)smime-outlook$" "$1/nitrokeys/features/openpgp-card/smime/smime-outlook"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)smime$" "$1/nitrokeys/features/openpgp-card/smime/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)openpgp$" "$1/nitrokeys/features/openpgp-card/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)openpgp-thunderbird$" "$1/nitrokeys/features/openpgp-card/openpgp-thunderbird"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)openpgp-outlook$" "$1/nitrokeys/features/openpgp-card/openpgp-outlook"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)openpgp-keygen-on-device$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-on-device"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)openpgp-keygen-gpa$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-gpa"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)openpgp-keygen-backup$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-backup"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)openpgp-csp$" "$1/nitrokeys/features/openpgp-card/openpgp-csp"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/windows/smart-policy$" "$1/nitrokeys/features/openpgp-card/desktop-login/smart-policy"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/windows/putty$" "$1/nitrokeys/features/openpgp-card/ssh/putty"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)ssh$" "$1/nitrokeys/features/openpgp-card/ssh/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)otp$" "$1/nitrokeys/features/totp/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)hidden$" "$1/nitrokeys/features/hidden-storage/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)hard-disk-encryption$" "$1/nitrokeys/features/openpgp-card/hard-disk-encryption/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)disk-encryption-luks$" "$1/nitrokeys/features/openpgp-card/hard-disk-encryption/luks"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)gpa$" "$1/nitrokeys/features/openpgp-card/gpa"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)encrypted-mobile-storage$" "$1/nitrokeys/features/encrypted-storage/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)eid-authenticate$" "$1/nitrokeys/features/openpgp-card/eid"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)ecc$" "$1/nitrokeys/features/misc/ecc"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)change-pins$" "$1/nitrokeys/features/openpgp-card/change-pins"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)2fa-microsoft$" "$1/nitrokeys/features/totp/microsoft"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)2fa-google$" "$1/nitrokeys/features/totp/google"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)automatic-screen-lock$" "$1/nitrokeys/features/misc/automatic-screen-lock"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)certificate-authority$" "$1/nitrokeys/features/openpgp-card/certificate-authority"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)openvpn-easyrsa$" "$1/nitrokeys/features/openpgp-card/openvpn/easyrsa"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)stunnel$" "$1/nitrokeys/features/openpgp-card/stunnel"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)ipsec$" "$1/nitrokeys/features/openpgp-card/ipsec"
+RedirectMatch 301 "^(/[a-z][a-z])?/storage/(mac/|windows/|linux/)login-with-pam$" "$1/nitrokeys/features/openpgp-card/desktop-login/pam"
+
+# Nitrokey Start
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)index$" "$1/nitrokeys/start/getting-started"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)?factory-reset$" "$1/nitrokeys/start/factory-reset"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)smime-thunderbird$" "$1/nitrokeys/features/openpgp-card/smime/smime-thunderbird"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)smime-outlook$" "$1/nitrokeys/features/openpgp-card/smime/smime-outlook"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)smime$" "$1/nitrokeys/features/openpgp-card/smime/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)openpgp$" "$1/nitrokeys/features/openpgp-card/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)openpgp-thunderbird$" "$1/nitrokeys/features/openpgp-card/openpgp-thunderbird"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)openpgp-outlook$" "$1/nitrokeys/features/openpgp-card/openpgp-outlook"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)openpgp-keygen-on-device$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-on-device"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)openpgp-keygen-gpa$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-gpa"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)openpgp-keygen-backup$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-backup"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)openpgp-csp$" "$1/nitrokeys/features/openpgp-card/openpgp-csp"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/windows/putty$" "$1/nitrokeys/features/openpgp-card/ssh/putty"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)ssh$" "$1/nitrokeys/features/openpgp-card/ssh/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)gpa$" "$1/nitrokeys/features/openpgp-card/gpa"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)stunnel$" "$1/nitrokeys/features/openpgp-card/stunnel"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)ipsec$" "$1/nitrokeys/features/openpgp-card/ipsec"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)login-with-pam$" "$1/nitrokeys/features/openpgp-card/desktop-login/pam"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/linux/firmware-update$" "$1/nitrokeys/start/firmware-update"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)?setting-kdf-do$" "$1/nitrokeys/start/setting-kdf-do"
+RedirectMatch 301 "^(/[a-z][a-z])?/start/(mac/|windows/|linux/)?multiple-identities$" "$1/nitrokeys/start/multiple-identities"
+
+# Nitrokey Pro
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)index$" "$1/nitrokeys/pro/getting-started"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)?factory-reset$" "$1/nitrokeys/pro/factory-reset"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)?firmware-update$" "$1/nitrokeys/pro/firmware-update"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)smime-thunderbird$" "$1/nitrokeys/features/openpgp-card/smime/smime-thunderbird"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)smime-outlook$" "$1/nitrokeys/features/openpgp-card/smime/smime-outlook"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)smime$" "$1/nitrokeys/features/openpgp-card/smime/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)openpgp$" "$1/nitrokeys/features/openpgp-card/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)openpgp-thunderbird$" "$1/nitrokeys/features/openpgp-card/openpgp-thunderbird"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)openpgp-outlook$" "$1/nitrokeys/features/openpgp-card/openpgp-outlook"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)openpgp-keygen-on-device$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-on-device"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)openpgp-keygen-gpa$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-gpa"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)openpgp-keygen-backup$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-backup"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)openpgp-csp$" "$1/nitrokeys/features/openpgp-card/openpgp-csp"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/windows/putty$" "$1/nitrokeys/features/openpgp-card/ssh/putty"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)?ssh$" "$1/nitrokeys/features/openpgp-card/ssh/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)?gpa$" "$1/nitrokeys/features/openpgp-card/gpa"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)stunnel$" "$1/nitrokeys/features/openpgp-card/stunnel"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)ipsec$" "$1/nitrokeys/features/openpgp-card/ipsec"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)login-with-pam$" "$1/nitrokeys/features/openpgp-card/desktop-login/pam"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)openvpn-easyrsa$" "$1/nitrokeys/features/openpgp-card/openvpn/easyrsa"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)openvpn-viscosity$" "$1/nitrokeys/features/openpgp-card/openvpn/viscosity"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)change-pins$" "$1/nitrokeys/features/openpgp-card/change-pins"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)certificate-authority$" "$1/nitrokeys/features/openpgp-card/certificate-authority"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)ecc$" "$1/nitrokeys/features/misc/ecc"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)eid-authenticate$" "$1/nitrokeys/features/openpgp-card/eid"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/windows/smart-policy$" "$1/nitrokeys/features/openpgp-card/desktop-login/smart-policy"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)hard-disk-encryption$" "$1/nitrokeys/features/openpgp-card/hard-disk-encryption/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)disk-encryption-luks$" "$1/nitrokeys/features/openpgp-card/hard-disk-encryption/luks"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)otp$" "$1/nitrokeys/features/totp/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)2fa-microsoft$" "$1/nitrokeys/features/totp/microsoft"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)2fa-google$" "$1/nitrokeys/features/totp/google"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)?2fa-nextcloud$" "$1/nitrokeys/features/fido2/nextcloud"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)?2fa-odoo$" "$1/nitrokeys/features/u2f/odoo"
+RedirectMatch 301 "^(/[a-z][a-z])?/pro/(mac/|windows/|linux/)automatic-screen-lock$" "$1/nitrokeys/features/misc/automatic-screen-lock"
+
+# Nitrokey 3
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)index$" "$1/nitrokeys/nitrokey3/getting-started"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/features$" "$1/nitrokeys/nitrokey3/overview"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)?firmware-update$" "$1/nitrokeys/nitrokey3/firmware-update"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)?adsk$" "$1/nitrokeys/nitrokey3/adsk"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)?reset$" "$1/nitrokeys/nitrokey3/reset"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)?set-pins$" "$1/nitrokeys/nitrokey3/set-pins"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)?troubleshooting$" "$1/nitrokeys/nitrokey3/troubleshooting"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)?nitropy$" "$1/nitrokeys/nitrokey3/nitropy"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/shared/main$" "$1/nitrokeys/nitrokey3/getting-started"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/linux/firmware-update-qubes$" "$1/nitrokeys/nitrokey3/firmware-update-qubes"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)?2fa-odoo$" "$1/nitrokeys/features/u2f/odoo"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/linux/desktop-login$" "$1/nitrokeys/features/u2f/desktop-login"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/linux/fedora-gnupg-configuration$" "$1/nitrokeys/features/openpgp-card/fedora-gnupg-configuration"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/windows/passwordless-microsoft$" "$1/nitrokeys/features/fido2/passwordless-microsoft"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)keepassxc$" "$1/nitrokeys/features/password-safe/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)smime-thunderbird$" "$1/nitrokeys/features/openpgp-card/smime/smime-thunderbird"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)smime-outlook$" "$1/nitrokeys/features/openpgp-card/smime/smime-outlook"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)smime$" "$1/nitrokeys/features/openpgp-card/smime/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)openpgp$" "$1/nitrokeys/features/openpgp-card/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)openpgp-thunderbird$" "$1/nitrokeys/features/openpgp-card/openpgp-thunderbird"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)openpgp-outlook$" "$1/nitrokeys/features/openpgp-card/openpgp-outlook"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)openpgp-keygen-on-device$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-on-device"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)openpgp-keygen-gpa$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-gpa"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)openpgp-keygen-backup$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-backup"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)openpgp-csp$" "$1/nitrokeys/features/openpgp-card/openpgp-csp"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/(mac/|windows/|linux/)openpgp-uif$" "$1/nitrokeys/features/openpgp-card/uif"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/windows/piv/index$" "$1/nitrokeys/features/piv/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/windows/piv/access_control$" "$1/nitrokeys/features/piv/access_control"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/windows/piv/certificate-management$" "$1/nitrokeys/features/piv/certificate-management"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/windows/piv/factory_reset$" "$1/nitrokeys/features/piv/factory_reset"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/windows/piv/key_management$" "$1/nitrokeys/features/piv/key_management"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/windows/piv/guides/index$" "$1/nitrokeys/features/piv/guides/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokey3/windows/piv/guides/client_logon_with_active_directory$" "$1/nitrokeys/features/piv/guides/client_logon_with_active_directory"
+
+# Nitrokey HSM
+
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)index$" "$1/nitrokeys/hsm/getting-started"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)smime$" "$1/nitrokeys/features/openpgp-card/smime/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)smime-thunderbird$" "$1/nitrokeys/features/openpgp-card/smime/smime-thunderbird"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)smime-outlook$" "$1/nitrokeys/features/openpgp-card/smime/smime-outlook"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)pkcs11-url$" "$1/nitrokeys/features/hsm/pkcs11-url"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)import-keys-certs$" "$1/nitrokeys/features/hsm/import-keys-certs"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)certificate-authority$" "$1/nitrokeys/features/openpgp-card/certificate-authority"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)apache2-tls$" "$1/nitrokeys/features/hsm/apache2-tls"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/windows/smart-policy$" "$1/nitrokeys/features/openpgp-card/desktop-login/smart-policy"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)?n-of-m-schemes$" "$1/nitrokeys/features/hsm/n-of-m-schemes"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)hard-disk-encryption$" "$1/nitrokeys/features/openpgp-card/hard-disk-encryption/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)ipsec$" "$1/nitrokeys/features/openpgp-card/ipsec"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)gpa$" "$1/nitrokeys/features/openpgp-card/gpa"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)stunnel$" "$1/nitrokeys/features/openpgp-card/stunnel"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)automatic-screen-lock$" "$1/nitrokeys/features/misc/automatic-screen-lock"
+RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)dnssec$" "$1/nitrokeys/features/hsm/dnssec"
+
+
+
+
+
+RedirectMatch 301 "^(/[a-z][a-z])?/(fido2|nitrokey3|hsm|u2f|storage|start|pro|passkey)(/linux|/windows|/mac)?(.*)$" "$1/nitrokeys/$2$4"
+
+
+
+
