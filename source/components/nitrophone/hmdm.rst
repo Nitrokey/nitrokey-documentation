@@ -33,7 +33,7 @@ How to install Headwind MDM on NitroPhone
 
 6. Connect the smartphone to a PC and change the charging connection to "File transfer".
 
-7. Test if adb can find your Nitrophone: 
+7. Test if ``adb`` can find your Nitrophone: 
 
 .. code-block:: bash
    
@@ -47,7 +47,7 @@ You need to see your device listed in the output.
   
   ./adb install <name of your downloaded file>.apk
 
-When the MDM install was sucessful, the output of adb is "Success".
+When the MDM install was sucessful, the output of ``adb`` is "Success".
 
 9. Now give the app device owner rights: 
 
