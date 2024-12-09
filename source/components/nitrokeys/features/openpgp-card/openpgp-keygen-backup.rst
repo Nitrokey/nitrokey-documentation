@@ -337,7 +337,11 @@ and then types ``gpg --card-status`` so that the system knows where to look for 
 Uploading the Public Key
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you do not want to carry a public keyfile with you, you can upload it to keyserver. You can do this by typing ``gpg --keyserver search.keyserver.net --send-key keyID``. If you are using another machine you can just import it by using ``gpg --keyserver search.keyserver.net --recv-key keyID``.
+
+If you don't want to carry a public key file, you can upload it to keyserver. For the common SKS federated keyservers, for example, keyserver.ubuntu.com. Type ``gpg --keyserver keyserver.ubuntu.com --send-key keyID``. If you are using another machine, you can just import it by using ``gpg --keyserver keyserver.ubuntu.com --recv-key keyID``.
+
+You can also use openpgp.keys.org. The recommended way is to do this by ``gpg --export your_address@example.net``. If you are using another machine, you can just import it by using ``gpg --auto-key-locate hkps://keys.openpgp.org``.
+
 
 Another possibility is to change the URL setting on your card. Start ``gpg --card-edit`` again and first set the URL where the key is situated (e.g. on the keyserver or on your webpage etc.) via the ``url``
 command. From now on you can import the key on another system by just using the ``fetch`` command within the ``gpg --card-edit environment``.
