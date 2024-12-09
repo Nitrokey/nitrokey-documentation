@@ -771,10 +771,10 @@ The restore can be applied as follows.
    .. tab:: REST API
       Information about the `/system/restore` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_system-restore>`__.
 
-Clustering
-~~~~~~~~~~
+Replication
+~~~~~~~~~~~
 
-NetHSM is stateless, so that several NetHSM devices can be used to process extremely high throughput and provide high availability. The PKCS#11 module supports round-robin schedule for a cluster of NetHSM instances. Multiple instances of NetHSM can be synchronized via encrypted backups. For this a separate system downloads and uploads backup files between the instances. This separate system doesn’t have access to the backup data in clear text because the backup files are encrypted. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__.
+NetHSM is stateless, so that several NetHSM devices can be used to process extremely high throughput and provide high availability. The PKCS#11 module supports round-robin schedule for a cluster of NetHSM instances. Multiple instances of NetHSM can be synchronized via encrypted backups. For this a separate system downloads and uploads backup files between the instances. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__. This separate system doesn’t have access to the backed up data in clear text because the backup files are encrypted twice. The separate system is in possession of the backup passphrase only but not of the Domain Key resp. Unlock Passphrase which is the second layer of encryption. See the `system design <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#backup-and-restore>`__ for further details.
 
 Software Update
 ~~~~~~~~~~~~~~~
