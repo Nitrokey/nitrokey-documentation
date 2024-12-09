@@ -12,7 +12,6 @@ Here you will find a collection of common issues.
 
 
 
-
 Starting in recovery shell
 --------------------------
 
@@ -44,7 +43,7 @@ steps:
 NitroPad doesn’t start
 ----------------------
 
-If the Laptop does not start and only flashes briefly when switched on, please try the following
+If the laptop does not start and only flashes briefly when switched on, please try the following
 steps:
 
 1. Try a hard reboot:
@@ -59,11 +58,11 @@ steps:
 Invalid Code
 ------------
 
-Each boot the code is generated on the Nitropad and the Nitrokey, if its
+Each boot the code is generated on the NitroPad and the Nitrokey, if its
 connected. It is allowed to run 10 boots without loosing the
 synchronization between the devices, after which the bad code signal is
 shown, regardless of the rest of the system being in a correct state. If
-you are sure the system was not beign tampered with (e.g. the Nitropad
+you are sure the system was not beign tampered with (e.g. the NitroPad
 was booted more than 10 times without the Nitrokey), you can safely
 reset the system’s warning.
 
