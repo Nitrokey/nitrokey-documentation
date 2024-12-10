@@ -19,6 +19,33 @@ How to install Headwind MDM on NitroPhone
    
    Your Nitrophone needs to be connected to the internet during the configuration.
 
+
+Method 1: regular APK installation
+##################################
+
+1. On your Nitrophone donwload and install MDM Agent. 
+   You can donwload it on `F-Droid <https://f-droid.org/en/packages/com.hmdm.launcher/>`__ or directly on `HMDM website <https://h-mdm.com/download/>`__
+
+2. Open MDM Agent and select "CONTINUE" and allow to install unknown apps (no need to allow access to Android/obb folder).
+
+3. Go back to the MDM Agent application and select again "CONTINUE" and activate the device admin app.
+
+4. Also allow the application to manage storage (Allow in Settings > Allow access to manage all files).
+
+5. Go back and allow MDM Agent to access the device location while using the app and also to make and manage phone calls.
+
+6. Before finishing the configuration go to: (Settings > Apps) and choose MDM Agent here in the top right corner select the 3 dots and choose "Allow restricted settings".
+
+7. In the same page select "Home app" and choose MDM Agent instead of Launcher.
+
+8. Go back two times at the Apps setting and select "Special app access" and "Display over other apps", here select MDM Agent and allow display over other apps.
+
+Your HMDM app is ready to use, now refer to server configuration.
+
+
+Method 2: ADB (Android Debug Bridge) install
+############################################
+
 1. `Here <https://h-mdm.com/download/>`__ you can download the latest HMDM Android app. 
    It is important that this version matches your HMDM server version and configuration.
    You can also download the desired version here: https://h-mdm.com/files/hmdm-<version>-master.apk
@@ -62,25 +89,21 @@ If it was successful it says:
    Success: Device owner set to package com.hmdm.launcher/.AdminReceiver 
    Active admin set to component com.hmdm.launcher/.AdminReceiver
 
-10. Log to your web server panel and go to Configurations and edit the config.
-    For testing purposes you can try the demo server `here <https://app.h-mdm.com/#/login>`__.
+Your HMDM app is ready to use, now refer to server configuration.
 
-11. Make sure that "Use with default launcher" is not selected.  
-    Click "Save and close".
+Add your NitroPhone to your HMDM server
+#######################################
 
-12. Now go to Devices and click on the QR code on the right hand side. Note: The QR code contains the configuration for your mobile device.
+1. Log into your server web panel and go to the "Configurations" tab and edit or create one configuration.
+   For testing purposes you can try the demo server `here <https://app.h-mdm.com/#/login>`__.
 
-13. Open the app on the device, give MDM its required permissions.
+2. Make sure that "Use with default launcher" is not selected.  
+   Click "Save and close".
 
-14. Type in the server URL (e.g. https://app.h-mdm.com/) and click "Scan QR code".
+3. Now go to Devices and click on the QR code on the right hand side. Note: The QR code contains the configuration for your mobile device.
 
-You are now ready to go.
+4. Type in the server URL (e.g. https://app.h-mdm.com/) and click "Scan QR code".
 
-How to uninstall HMDM
-#####################
+5. In you server web panel, go to your device "Detailed information" by clicking into the 3 dots and verify that there is no red fields on this page.
 
-.. important::
-   
-   Make sure to backup the data on your device.
-
-1. Execute a factory reset on the device: (Settings > System > Reset options > Erase all data).
+Your NitroPhone is now properly registered in your HMDM server
