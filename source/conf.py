@@ -103,7 +103,7 @@ html_context = {
     "github_user": "Nitrokey",  # Username
     "github_repo": "nitrokey-documentation",
     "github_version": "",  # Version
-    "conf_py_path": "master/",  # Path in the checkout to the docs root
+    "conf_py_path": "main/source/components/",  # Path in the checkout to the docs root
     "suffix": ".rst",
     "copyrightlink": "https://www.nitrokey.com",
     "languages": {
