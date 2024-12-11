@@ -1,8 +1,8 @@
 Mac Install
-=============
+===========
 
 Pipenv
------------------
+------
 
 This is the simplest way for now to install the Nitrokey App 2 on Mac. Further methods are being worked on.
 
@@ -16,5 +16,4 @@ The app cam be updated the following way
 1. Enter the work directory ``cd nitrokeyapp``
 2. pipenv update
 
-To start the app run enter the workdirectory ``cd nitrokeyapp`` and run  ``pipenv run nitrokeyapp``
-
+To run the application, go into the workdirectory ``cd nitrokeyapp`` and run ``pipenv run nitrokeyapp``.
