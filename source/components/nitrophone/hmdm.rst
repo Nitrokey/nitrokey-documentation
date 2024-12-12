@@ -18,47 +18,27 @@ How to install Headwind MDM on NitroPhone
 .. note::
    
    Your Nitrophone needs to be connected to the internet during the configuration.
+   And you also need a PC.
 
 
-Method 1: regular APK installation
-##################################
-
-1. On your Nitrophone donwload and install MDM Agent. 
-   You can donwload it on `F-Droid <https://f-droid.org/en/packages/com.hmdm.launcher/>`__ or directly on `HMDM website <https://h-mdm.com/download/>`__
-
-2. Open MDM Agent and select "CONTINUE" and allow to install unknown apps (no need to allow access to Android/obb folder).
-
-3. Go back to the MDM Agent application and select again "CONTINUE" and activate the device admin app.
-
-4. Also allow the application to manage storage (Allow in Settings > Allow access to manage all files).
-
-5. Go back and allow MDM Agent to access the device location while using the app and also to make and manage phone calls.
-
-6. Before finishing the configuration go to: (Settings > Apps) and choose MDM Agent here in the top right corner select the 3 dots and choose "Allow restricted settings".
-
-7. In the same page select "Home app" and choose MDM Agent instead of Launcher.
-
-8. Go back two times at the Apps setting and select "Special app access" and "Display over other apps", here select MDM Agent and allow display over other apps.
-
-Your HMDM app is ready to use, now refer to server configuration.
 
 
-Method 2: ADB (Android Debug Bridge) install
+Installation with ADB (Android Debug Bridge)
 ############################################
 
-1. `Here <https://h-mdm.com/download/>`__ you can download the latest HMDM Android app. 
-   It is important that this version matches your HMDM server version and configuration.
+1. `Download <https://h-mdm.com/download/>`__ locally on your PC the latest HMDM Android app (launcher). 
+   It is important that this version matches your HMDM server configuration.
    You can also download the desired version here: https://h-mdm.com/files/hmdm-<version>-master.apk
 
-2. Enable developer options (Settings > About Phone > Click 6 times on "Build number").
+2. On your NitroPhone, enable the developer options (Settings > About Phone > Click 6 times on "Build number").
 
 3. Enable USB debugging (Settings > System > Developer Options > USB debugging).
 
-4. You will need to use Android Debug Bridge (adb), you can download it `here <https://developer.android.com/tools/releases/platform-tools#downloads>`__. 
+4. On your PC, `download <https://developer.android.com/tools/releases/platform-tools#downloads>`__ ADB.
 
 5. Unzip the downloaded achive and open a terminal in this folder.
 
-6. Connect the smartphone to a PC and change the charging connection to "File transfer".
+6. Connect the smartphone to the PC and change the charging connection to "File transfer".
 
 7. Test if ``adb`` can find your Nitrophone: 
 
@@ -89,7 +69,50 @@ If it was successful it says:
    Success: Device owner set to package com.hmdm.launcher/.AdminReceiver 
    Active admin set to component com.hmdm.launcher/.AdminReceiver
 
+Now you can open "MDM agent" on your NitroPhone. If any permissions are asked, allow them.
 Your HMDM app is ready to use, now refer to server configuration.
+
+Installation with WebADB
+########################
+
+1. `Download <https://h-mdm.com/download/>`__ locally on your PC the latest HMDM Android app (launcher). 
+   It is important that this version matches your HMDM server configuration.
+   You can also download the desired version here: https://h-mdm.com/files/hmdm-<version>-master.apk
+
+2. On your NitroPhone, enable the developer options (Settings > About Phone > Click 6 times on "Build number").
+
+3. Enable USB debugging (Settings > System > Developer Options > USB debugging).
+
+4. Connect the smartphone to the PC and change the charging connection to "File transfer".
+
+5. On your PC go to `WebADB <https://app.webadb.com/>`__.
+
+6. At the top left of the page click on "Add" select your NitroPhone and click on "Connect" and click again on "Connect" next to "Add"
+
+7. On your NitroPhone allow the connection.
+
+8. In the WebADB menu choose "Install APK" and click on "Open" and choose the previouslly downloaded APK.
+
+9. Once completed, in the WebADB menu choose "Interactive Shell".
+   If you have this error: "Application errorl: a client-side exeption has occurred" refresh the page or click to "File Manager" and go back to "Interactive Shell".
+   If you see ``<your android version name>:/ $`` then you are properly connected.
+
+10. In the shell type: 
+
+.. code-block:: bash
+ 
+   dpm set-device-owner com.hmdm.launcher/.AdminReceiver
+
+If it was successful it says:
+
+.. code-block:: bash
+   
+   Success: Device owner set to package com.hmdm.launcher/.AdminReceiver 
+   Active admin set to component com.hmdm.launcher/.AdminReceiver
+
+Now you can open "MDM agent" on your NitroPhone. If any permissions are asked, allow them.
+Your HMDM app is ready to use, now refer to server configuration.
+
 
 Add your NitroPhone to your HMDM server
 #######################################
