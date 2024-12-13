@@ -90,7 +90,7 @@ Installation with ADB
       
       ./adb devices
 
-You need to see your device listed in the output.
+   You need to see your device listed in the output.
 
 8. Install the HMDM app via:
 
@@ -99,7 +99,7 @@ You need to see your device listed in the output.
    
       ./adb install <name of your downloaded file>.apk
 
-When the MDM install was sucessful, the output of ``adb`` is "Success".
+   When the MDM install was sucessful, the output of ``adb`` is "Success".
 
 9. Now give the app device owner rights: 
 
