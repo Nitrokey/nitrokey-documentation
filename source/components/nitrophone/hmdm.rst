@@ -85,19 +85,19 @@ Installation with ADB
 
 7. Test if ``adb`` can find your Nitrophone: 
 
-.. rstcheck: ignore-next-code-block
-.. code-block:: bash
-   
-   ./adb devices
+   .. rstcheck: ignore-next-code-block
+   .. code-block:: bash
+      
+      ./adb devices
 
 You need to see your device listed in the output.
 
 8. Install the HMDM app via:
 
-.. rstcheck: ignore-next-code-block
-.. code-block:: bash 
-  
-  ./adb install <name of your downloaded file>.apk
+   .. rstcheck: ignore-next-code-block
+   .. code-block:: bash 
+   
+      ./adb install <name of your downloaded file>.apk
 
 When the MDM install was sucessful, the output of ``adb`` is "Success".
 
