@@ -23,6 +23,7 @@ and the product guides:
     Set Pins <set-pins>
     nitropy <nitropy>
     Reset <reset>
+    The Secure Element <secure-element>
     Troubleshooting <troubleshooting>
 
 or check out the features:
