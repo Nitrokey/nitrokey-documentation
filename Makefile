@@ -22,7 +22,10 @@ pkg: venv docs
 	cp redirects/.htaccess dist
 	
 
-clean:
-	rm -rf dist build venv
+clean: 
+	rm -rf dist build
+
+cleaner: clean
+	rm -rf venv
 	
 .PHONY: docs check pkg
