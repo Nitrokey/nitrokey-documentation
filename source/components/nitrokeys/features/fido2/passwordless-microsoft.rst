@@ -1,9 +1,7 @@
 Passwordless Authentication With Microsoft
 ==========================================
 
-.. include:: index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: nk3 passkey fido2
 
 .. contents:: :local:
 

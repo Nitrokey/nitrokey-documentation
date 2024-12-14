@@ -1,9 +1,7 @@
 S/MIME Email Encryption with Thunderbird
 ========================================
 
-.. include:: index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: nk3 pro start storage
 
 .. contents:: :local:
 
