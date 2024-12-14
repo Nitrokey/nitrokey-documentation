@@ -1,14 +1,18 @@
 from docutils import nodes
-from docutils.parsers.rst import Directive, directives
+
+from docutils.parsers.rst import directives
+from sphinx.util.docutils import SphinxDirective
+from sphinx.util.typing import ExtensionMetadata
+from sphinx.application import Sphinx
 
 
-class NitrokeyProductTable(Directive):
+class NitrokeyProductTable(SphinxDirective):
     """
     Directive for the Nitrokey Variants Header Table
     """
 
     KEYS = {
-        "nk3": "Nitrokey 3",
+        "nitrokey3": "Nitrokey 3",
         "passkey": "Nitrokey Passkey",
         "fido2": "Nitrokey FIDO2",
         "u2f": "Nitrokey U2F",
@@ -18,6 +22,8 @@ class NitrokeyProductTable(Directive):
         "start": "Nitrokey Start",
     }
 
+    ALIASES = {"nk3": "nitrokey3", "nkpk": "passkey", "pk": "passkey"}
+
     has_content = False
     required_arguments = 1
     optional_arguments = len(KEYS) - 1
@@ -26,7 +32,7 @@ class NitrokeyProductTable(Directive):
         "class": directives.class_option,
     }
 
-    def run(self):
+    def run(self) -> list[nodes.Node]:
         table = nodes.table()
 
         if "class" in self.options:
@@ -48,8 +54,8 @@ class NitrokeyProductTable(Directive):
             entry = nodes.entry()
 
             # TODO: use relative !!
-            url = f"docs.nitrokey.com/nitrokeys/{key}"
-
+            url = f"https://docs.nitrokey.com/nitrokeys/{key}"
+            # url = f"/nitrokeys/{key}"
             entry += nodes.paragraph(
                 "",
                 "",
@@ -62,6 +68,7 @@ class NitrokeyProductTable(Directive):
         tgroup += thead
 
         used_products = list(self.arguments)
+        used_products = [self.ALIASES.get(x, x) for x in used_products]
 
         ok_keys = list(self.KEYS.keys()) + ["all"]
 
@@ -92,7 +99,7 @@ class NitrokeyProductTable(Directive):
         return [table]
 
 
-def setup(app):
+def setup(app: Sphinx) -> ExtensionMetadata:
     app.add_directive("product-table", NitrokeyProductTable)
 
     return {
