@@ -23,12 +23,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        
       - name: Create virtual environment
         run: make venv
+        
       - name: Build documentation
         run: |
           make
           cp -r redirects/.htaccess dist
+          
       - name: Upload quick build artifact 
         id: upload-quick
         uses: actions/upload-artifact@v4
@@ -36,6 +39,7 @@ jobs:
           name: generated documentation (en)
           path: dist
           include-hidden-files: true
+          
       - name: Trigger docs server to download artifact
         uses: appleboy/ssh-action@v1.2.0
         with:
@@ -45,4 +49,10 @@ jobs:
           key: ${{ secrets.DEPLOY_AUTH_KEY }}
           script: /var/www/docs/deploy/gh-trigger.sh preview+${{ github.event.number }} ${{ steps.upload-quick.outputs.artifact-id }} ${{ secrets.DOWNLOAD_TOKEN }}
 
+      - name: Confirm Deployment with PR Comment
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: |
+            The successful documentation build was deployed for preview:
+            * https://docspreview.nitrokey.com/PR-${{ github.event.number }}
     
