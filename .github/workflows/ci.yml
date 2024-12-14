@@ -26,7 +26,9 @@ jobs:
       - name: Create virtual environment
         run: make venv
       - name: Build documentation
-        run: make
+        run: |
+          make
+          cp -r redirects/.htaccess dist
       - name: Upload quick build artifact 
         id: upload-quick
         uses: actions/upload-artifact@v4
