@@ -17,12 +17,12 @@ class NitrokeyProductTable(SphinxDirective):
         **{
             "nitrokey3": "3A/C/Mini",
             "passkey": "Passkey",
-            "fido2": "FIDO2",
-            "u2f": "U2F",
             "hsm": "HSM 2",
             "pro": "Pro 2",
+            "fido2": "FIDO2",
             "storage": "Storage 2",
             "start": "Start",
+            "u2f": "U2F",
         }
     )
 
