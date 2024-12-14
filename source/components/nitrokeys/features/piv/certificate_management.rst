@@ -1,9 +1,7 @@
 Certificate Management
 ======================
 
-.. include:: index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: nk3
 
 Every private key has a certificate associated. The certificates can be read and written.
 The size of a certificate is limited by the transport layer and about 6kB.

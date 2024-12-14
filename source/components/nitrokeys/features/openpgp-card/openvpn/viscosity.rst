@@ -1,13 +1,7 @@
-
-
-
-
 Viscosity Client Configuration with OpenVPN
 ===========================================
 
-.. include:: ../index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: nk3 start pro storage
 
 .. contents:: :local:
 

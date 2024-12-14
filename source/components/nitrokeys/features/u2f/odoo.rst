@@ -1,9 +1,7 @@
 Two-Factor Authentication For ERP Software Odoo
 ===============================================
 
-.. include:: index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: u2f fido2 nk3 passkey
 
 .. only:: comment 
 

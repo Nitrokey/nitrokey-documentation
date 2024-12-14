@@ -1,9 +1,7 @@
 OpenPGP Key Generation On-Device
 ================================
 
-.. include:: index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: pro nk3 start storage
 
 .. contents:: :local:
 

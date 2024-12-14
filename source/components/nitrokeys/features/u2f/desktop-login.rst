@@ -1,9 +1,7 @@
 Desktop Login And Linux User Authentication
 ===========================================
 
-.. include:: index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: nk3 u2f fido2 passkey
 
 .. contents:: :local:
 

@@ -1,9 +1,7 @@
 Login With EIDAuthenticate on Stand Alone Windows Computers
 ===========================================================
 
-.. include:: index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: nk3 storage pro
 
 .. contents:: :local:
 
