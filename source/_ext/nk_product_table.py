@@ -56,7 +56,7 @@ class NitrokeyProductTable(SphinxDirective):
         row0 = nodes.row()
         # title header
         entry = nodes.entry(morecols=len(self.KEYS) - 1)
-        entry += nodes.paragraph(text="Supported Nitrokeys")
+        entry += nodes.paragraph(text="Compatible Nitrokeys")
         entry["classes"] += ["products-table-head"]
 
         row0 += entry
@@ -107,8 +107,22 @@ class NitrokeyProductTable(SphinxDirective):
             else:
                 val = yes if key in used_products else no
             entry = nodes.entry()
-            entry += nodes.paragraph(text=val)
-            entry["classes"] += ["active" if val == yes else "inactive"]
+            icon = nodes.paragraph(text=val)
+            entry += icon
+            entry["classes"] += ["tooltip"]
+
+            if val == yes:
+                entry["classes"] += ["active"]
+                tooltip = nodes.paragraph(text="active")
+                tooltip["classes"] += ["tooltiptext"]
+            else:
+                entry["classes"] += ["inactive"]
+                tooltip = nodes.paragraph(text="inactive")
+                tooltip["classes"] += ["tooltiptext"]
+
+            # entry += tooltip
+            icon += tooltip
+
             row2 += entry
 
         tbody = nodes.tbody()
