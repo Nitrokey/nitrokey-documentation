@@ -1,6 +1,7 @@
 
-**Q:** Which algorithms and maximum key length are supported?
-    See the following table:
+.. faq:: Which algorithms and maximum key length are supported?
+
+   See the following table:
 
 +-------------------+-------+---------------+-------------------+-------------------+-----+-------+
 |                   | Start | Pro + Storage | Pro 2 + Storage 2 | Nitrokey 3        | HSM | HSM 2 |
