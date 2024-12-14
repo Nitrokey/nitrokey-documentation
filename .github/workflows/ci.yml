@@ -16,8 +16,8 @@ jobs:
       - name: Syntax check
         run: make check
 
-  build-error-check:
-    name: Check build error
+  build-check-and-preview-upload:
+    name: Check Build and Upload to Preview
     runs-on: ubuntu-latest
     container: python:3.11
     steps:
@@ -27,3 +27,19 @@ jobs:
         run: make venv
       - name: Build documentation
         run: make
+      - name: Upload quick build artifact 
+        id: upload-quick
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated documentation (en)
+          path: dist
+      - name: Trigger docs server to download artifact
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.DOCS_HOST }}
+          username: docs
+          port: ${{ secrets.DOCS_PORT }}
+          key: ${{ secrets.DEPLOY_AUTH_KEY }}
+          script: /var/www/docs/deploy/gh-trigger.sh preview+${{ github.event.number }} ${{ steps.upload-quick.outputs.artifact-id }} ${{ secrets.DOWNLOAD_TOKEN }}
+
+    
