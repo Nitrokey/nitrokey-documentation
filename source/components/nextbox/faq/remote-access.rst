@@ -1,14 +1,16 @@
 Remote Access FAQ
 =================
 
-**Q:** What is the correct WebDAV URL?
+.. faq:: What is the correct WebDAV URL?
+
   The full URL to use for WebDAV is:
   ``https://my.domain.tld/remote.php/webdav/``, there have been reports that
   for native Windows WebDAV you might need:
   ``https://my.domain.tld/remote.php/dav/files/USERNAME`` with *USERNAME* being
   the username you would like to use.
 
-**Q:** Can I access my Nextcloud instance using WebDAV?
+.. faq:: Can I access my Nextcloud instance using WebDAV?
+
   Yes, please see `Nextcloud WebDAV documentation`_ for a complete overview. A
   simple mount for unix-like systems might look like this: ``mount -t davfs
   https://my.domain.tld/remote.php/webdav/ /mnt/target/path`` while making sure
@@ -37,7 +39,8 @@ Remote Access FAQ
   your router and thus blocking the traffic on port(s) 80 and/or 443. Switch
   them off and retry acquiring your TLS certificate.
 
-**Q:** Why is my reachability with IPv4 not working? 
+.. faq:: Why is my reachability with IPv4 not working? 
+
   If you have properly set up :doc:`port forwarding <../remote/port-forwarding>`
   and IPv4 connections (reachability test) are still not working there are good
   chances that your Internet-Service-Provider (ISP) does not provide a proper
@@ -50,7 +53,8 @@ Remote Access FAQ
   connections**, which should enable full bi-directional traffic for IPv4 and
   IPv6.
 
-**Q:** Why do some devices fail to connect for my IPv6 configured NextBox?
+.. faq:: Why do some devices fail to connect for my IPv6 configured NextBox?
+
   Sadly, still not all ISPs and mobile-network providers (smartphones) do have
   full IPv6 support activated. This means, if your NextBox is configured for IPv6
   only access, devices inside these networks will not be able to connect. The
