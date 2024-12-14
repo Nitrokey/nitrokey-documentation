@@ -724,9 +724,20 @@ article ul li {
     horizontal-alignment: center;
 }
 
-.products-table-head {
-    font-weight: normal;
-    font-size: 0.8em !important;
+.products-table .products-table-head p {
+    font-size: 1.2em !important;
+    font-family: Teko, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.1em;
+    font-variant: all-small-caps;
+    color: var(--color-brand-content);
+}
+
+.products-table th {
+    /*font-weight: 700;
+    line-height: 1.1em;
+    font-variant: all-small-caps;
+    font-family: Teko, Helvetica, Arial, sans-serif;*/
 }
 
 .products-table td p {
@@ -736,6 +747,7 @@ article ul li {
 }
 .products-table td {
     padding: 0 !important;
+    cursor: default;
 }
 
 .products-table .inactive {
@@ -744,5 +756,38 @@ article ul li {
 .products-table .active {
     color: var(--color-logo-text);
     font-weight: bold;
+}
+
+/* tooltips */
+
+/* use class to show tooltip for element */
+.tooltip {
+  /*position: relative;
+  display: inline-block;
+  border-bottom: 0px dotted black; */
+    
+}
+
+/* use this class to denote tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  /*background-color: var(--color-background-primary);*/
+  /*background-color: #18191d;*/
+  background-color: #999999;
+  color: var(--color-content-foreground);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  border-width: 0px;
+  position: absolute;
+  z-index: 100;
+  
+}
+
+/* trigger visibility on hover */
+.tooltip:hover .tooltiptext {
+  /*visibility: visible;*/
 }
 
