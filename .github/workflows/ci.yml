@@ -14,9 +14,7 @@ jobs:
       - name: Create virtual environment
         run: make venv
       - name: Syntax check
-        run: |
-          . venv/bin/activate
-          rstcheck --recursive --ignore-directives tabs,faq,product-table source/
+        run: make check
 
   build-error-check:
     name: Check build error
@@ -28,6 +26,4 @@ jobs:
       - name: Create virtual environment
         run: make venv
       - name: Build documentation
-        run: |
-          . venv/bin/activate
-          sphinx-build -W -j 1 -a -D language='en' -b html source dist/en
+        run: make
