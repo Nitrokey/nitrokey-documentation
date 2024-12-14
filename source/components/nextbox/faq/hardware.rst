@@ -66,7 +66,8 @@ Hardware FAQ
   the outputs are not controlled yet by the NextBox daemon, so this is also something you would have
   to do by yourself.
 
-**Q:**: Can I upgrade the NextBox' RAM size?
+.. faq:: Can I upgrade the NextBox' RAM size?
+
   No, the Raspberry PI 4B has the RAM component soldered onto the mainboard, thus it cannot be replaced/extended.
 
 
