@@ -64,7 +64,14 @@ class NitrokeyProductTable(Directive):
         used_products = list(self.arguments)
 
         ok_keys = list(self.KEYS.keys()) + ["all"]
-        assert all(x in ok_keys for x in used_products)
+
+        check = all(x in ok_keys for x in used_products)
+        if not check:
+            print()
+            print("ERROR in product-table (_ext/nk_product_table.py)")
+            print("ERROR found invalid product-table arguments")
+            print()
+            assert check
 
         row2 = nodes.row()
         for key, name in sorted(self.KEYS.items()):
