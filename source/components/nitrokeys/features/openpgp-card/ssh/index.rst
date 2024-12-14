@@ -1,9 +1,7 @@
 SSH
 ===
 
-.. include:: ../index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: nk3 pro start storage
 
 This guide explains how to prepare your SSH server and client for use with the Nitrokey.
 For configuring PuTTY, see this guide:

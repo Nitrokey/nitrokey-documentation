@@ -1,9 +1,7 @@
 Client Logon with Active Directory
 ==================================
 
-.. include:: ../index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: nk3
 
 This document explains how to use the PIV application of a Nitrokey 3 for smartcard logon with Active Directory.
 

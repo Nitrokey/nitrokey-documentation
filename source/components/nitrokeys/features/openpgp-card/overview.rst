@@ -1,9 +1,7 @@
 OpenPGP Email Encryption
 ========================
 
-.. include:: index.rst
-	:start-after: products-begin
-	:end-before: products-end
+.. product-table:: nk3 start pro storage
 
 There are two widely used standards for email encryption.
 

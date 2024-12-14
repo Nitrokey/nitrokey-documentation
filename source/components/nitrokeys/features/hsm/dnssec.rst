@@ -1,9 +1,8 @@
 DNSSEC
 ======================
 
-.. include:: index.rst
-	:start-after: products-begin
-	:end-before: products-end
+
+.. product-table:: hsm
 
 .. contents:: :local:
 
