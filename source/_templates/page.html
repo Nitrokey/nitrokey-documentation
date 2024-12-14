@@ -243,7 +243,8 @@
 
   </div>
 </div>
-<script src="/_static/js/theme-switcher.js"></script>
-<script src="/_static/js/toc-fixer.js"></script>
-<script src="/_static/js/quick-links.js"></script>
+{% set base_path = "/".join(pathto('index').split("/")[:-1]) %}
+{% set path_prefix = base_path + "/" if base_path else "" %}
+<script src="{{ path_prefix }}_static/js/theme-switcher.js"></script>
+<script src="{{ path_prefix }}_static/js/toc-fixer.js"></script>
 {%- endblock %}
