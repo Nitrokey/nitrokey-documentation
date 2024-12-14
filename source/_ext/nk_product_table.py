@@ -1,6 +1,8 @@
-from docutils import nodes
+from collections import OrderedDict
 
+from docutils import nodes
 from docutils.parsers.rst import directives
+
 from sphinx.util.docutils import SphinxDirective
 from sphinx.util.typing import ExtensionMetadata
 from sphinx.application import Sphinx
@@ -11,16 +13,18 @@ class NitrokeyProductTable(SphinxDirective):
     Directive for the Nitrokey Variants Header Table
     """
 
-    KEYS = {
-        "nitrokey3": "Nitrokey 3",
-        "passkey": "Nitrokey Passkey",
-        "fido2": "Nitrokey FIDO2",
-        "u2f": "Nitrokey U2F",
-        "hsm": "Nitrokey HSM 2",
-        "pro": "Nitrokey Pro 2",
-        "storage": "Nitrokey Storage 2",
-        "start": "Nitrokey Start",
-    }
+    KEYS = OrderedDict(
+        **{
+            "nitrokey3": "3A/C/Mini",
+            "passkey": "Passkey",
+            "fido2": "FIDO2",
+            "u2f": "U2F",
+            "hsm": "HSM 2",
+            "pro": "Pro 2",
+            "storage": "Storage 2",
+            "start": "Start",
+        }
+    )
 
     ALIASES = {"nk3": "nitrokey3", "nkpk": "passkey", "pk": "passkey"}
 
@@ -40,19 +44,28 @@ class NitrokeyProductTable(SphinxDirective):
             table["classes"] += self.options["class"]
         table["classes"] += ["products-table"]
 
-        tgroup = nodes.tgroup(cols=4)
+        tgroup = nodes.tgroup(cols=len(self.KEYS))
         table += tgroup
 
         # col specs
         for _ in enumerate(self.KEYS):
-            colspec = nodes.colspec(colwidth=1)
+            colspec = nodes.colspec(colwidth=100)
             tgroup += colspec
 
         thead = nodes.thead()
+        row0 = nodes.row()
+        # title header
+        entry = nodes.entry(morecols=len(self.KEYS) - 1)
+        entry += nodes.paragraph(text="Supported Nitrokeys")
+        entry["classes"] += ["products-table-head"]
+
+        row0 += entry
+        thead += row0
+
         row1 = nodes.row()
 
         # headers (product names / links)
-        for key, name in sorted(self.KEYS.items()):
+        for key, name in self.KEYS.items():
             entry = nodes.entry()
 
             # TODO: use relative !!
@@ -86,13 +99,16 @@ class NitrokeyProductTable(SphinxDirective):
 
         # checkmark row creation
         row2 = nodes.row()
-        for key, name in sorted(self.KEYS.items()):
+        yes = "✓"
+        no = "⨯"
+        for key, name in self.KEYS.items():
             if "all" in used_products:
-                val = "✓"
+                val = yes
             else:
-                val = "✓" if key in used_products else "⨯"
+                val = yes if key in used_products else no
             entry = nodes.entry()
             entry += nodes.paragraph(text=val)
+            entry["classes"] += ["active" if val == yes else "inactive"]
             row2 += entry
 
         tbody = nodes.tbody()
