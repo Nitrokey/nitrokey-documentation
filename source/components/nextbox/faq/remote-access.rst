@@ -17,19 +17,22 @@ Remote Access FAQ
   that the ``davfs2`` package is installed. For Windows please additionally
   read these :doc:`docs <../clients/windows>`.
 
-**Q:**: Why does my Android smartphone's browser not open: ``http://nextbox.local`` 
+.. faq:: Why does my Android smartphone's browser not open: ``http://nextbox.local`` 
+
   As of today the technology needed to use ``.local`` URLs is not supported by various (stock)
   Android browser(s). The mechanism is based on ``mDNS``. One possible workaround is to use a
   3rd party app like BonjourBrowser to discover all mDNS services in your network.
 
-**Q:**: Why does accessing my NextBox using: ``http://nextbox.local`` not work?
+.. faq:: Why does accessing my NextBox using: ``http://nextbox.local`` not work?
+
   There are several other reasons why the access using ``http://nextbox.local`` may not work, 
   further known scenarios are: 
   
   * Using a Fritz!Box with the NextBox being connected via a LAN port and the client/browser is
     connected to the network via WiFI (WLAN), the Fritz!Box will block mDNS.
 
-**Q:**: I followed all guides and still cannot acquire the TLS certificate, what can I do? 
+.. faq:: I followed all guides and still cannot acquire the TLS certificate, what can I do? 
+
   The reason a TLS certificate cannot be acquired is nearly always the fact that
   your NextBox is not reachable from the internet. Make sure you have followed
   the :doc:`../remote/walkthrough`. If you followed the step-by-step
