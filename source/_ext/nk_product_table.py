@@ -35,14 +35,15 @@ class NitrokeyProductTable(SphinxDirective):
     def run(self) -> list[nodes.Node]:
         table = nodes.table()
 
+        # set table class
         if "class" in self.options:
             table["classes"] += self.options["class"]
-
         table["classes"] += ["products-table"]
 
         tgroup = nodes.tgroup(cols=4)
         table += tgroup
 
+        # col specs
         for _ in enumerate(self.KEYS):
             colspec = nodes.colspec(colwidth=1)
             tgroup += colspec
@@ -50,6 +51,7 @@ class NitrokeyProductTable(SphinxDirective):
         thead = nodes.thead()
         row1 = nodes.row()
 
+        # headers (product names / links)
         for key, name in sorted(self.KEYS.items()):
             entry = nodes.entry()
 
@@ -67,11 +69,13 @@ class NitrokeyProductTable(SphinxDirective):
         thead += row1
         tgroup += thead
 
+        # get used_products from arguments
         used_products = list(self.arguments)
+        # apply aliases
         used_products = [self.ALIASES.get(x, x) for x in used_products]
-
+        # accepted keys (include "all")
         ok_keys = list(self.KEYS.keys()) + ["all"]
-
+        # check if all keys exist
         check = all(x in ok_keys for x in used_products)
         if not check:
             print()
@@ -80,6 +84,7 @@ class NitrokeyProductTable(SphinxDirective):
             print()
             assert check
 
+        # checkmark row creation
         row2 = nodes.row()
         for key, name in sorted(self.KEYS.items()):
             if "all" in used_products:
@@ -91,8 +96,6 @@ class NitrokeyProductTable(SphinxDirective):
             row2 += entry
 
         tbody = nodes.tbody()
-
-        # tbody += row1
         tbody += row2
         tgroup += tbody
 
