@@ -46,6 +46,7 @@ extensions = [
     #'sphinxprettysearchresults',
     "sphinx_tabs.tabs",
     "nk_product_table",
+    "faq_item",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
