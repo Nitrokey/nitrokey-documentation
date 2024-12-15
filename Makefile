@@ -6,9 +6,11 @@ NITROKEY_SDK_PY := nitrokey-sdk-py-$(NITROKEY_SDK_PY_VERSION)
 NITROKEY_SDK_PY_ARCHIVE := $(NITROKEY_SDK_PY).tar.gz
 NITROKEY_SDK_PY_LINK := source/components/software/nitrokey-sdk-py
 
+FMT ?= html
+
 .PHONY: docs
 docs: venv
-	venv/bin/sphinx-build -j auto -b html -D language=en -d build/en/doctrees source dist/en
+	venv/bin/sphinx-build -j auto -b $(FMT) -D language=en -d build/en/doctrees source dist/en
 
 .PHONY: venv
 venv: $(NITROKEY_SDK_PY)
