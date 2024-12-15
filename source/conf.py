@@ -47,6 +47,7 @@ extensions = [
     #'sphinx_copybutton',
     #'sphinxprettysearchresults',
     "sphinx_tabs.tabs",
+    "sphinx_design",
     "nk_product_table",
     "faq_item",
 ]
