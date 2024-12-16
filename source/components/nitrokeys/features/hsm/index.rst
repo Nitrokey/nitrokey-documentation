@@ -7,7 +7,7 @@ HSM Features
    :maxdepth: 1
 
    SMIME <../openpgp-card/smime/index>
-   Smart <../openpgp-card/desktop-login/smart-policy>
+   Windows login <../openpgp-card/desktop-login/smart-policy>
    GPA <../openpgp-card/gpa>
    DNSSEC (Linux only) <dnssec>
    Hard Disk Encryption <../openpgp-card/hard-disk-encryption/index>
