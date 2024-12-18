@@ -30,9 +30,9 @@ How to Update
 
 1. Run ``nitropy nk3 reboot --bootloader`` in app VM.
 2. Once instructed by ``nitropy`` touch the device to activate the bootloader.
-3. This will detach the nitrokey from the app VM, and the bootloader will apear in sys-usb 
-4. Attach the bootloader to the app VM 
-5. Run ``nitropy nk3 update`` and follow the instructions. This will reboot the Nitrokey to finalice the update eventually.
-6. Re-attach the Nitrokey back to th app VM
+3. This will detach the Nitrokey from the app VM, and the bootloader will apear in sys-usb.
+4. Attach the bootloader to the app VM.
+5. Run ``nitropy nk3 update`` and follow the instructions.
+6. During the finalization the Nitrokey will be detached, re-attach the Nitrokey back to th app VM to finish the update.
 
 In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitropy.log.*``).
