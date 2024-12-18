@@ -1,17 +1,11 @@
 NetHSM
 ======
 
-This documentation describes the NetHSM software and hardware.
+This documentation describes the NetHSM software and hardware. The NetHSM software can be either used on the NetHSM hardware, or as a `software container<container>`__ (e.g. Docker).
 
-The NetHSM software can be either used on the NetHSM hardware, or as a Docker container.
-This documentation only covers the Docker container in the `Integration <integration.html>`__ chapter.
+The NetHSM software features a REST API to perform installation, administration and operational tasks. The recommended way to use a NetHSM is through the tool `nitropy <../software/nitropy/index.html>`_. Alternatively `curl <https://curl.se>`_ can be used to send HTTP requests to the REST API.
 
-The NetHSM software features a REST API to perform installation, administration and operational tasks.
-The recommended way to use the REST API is through the `nitropy <../software/nitropy/index.html>`_ tool.
-Alternatively `curl <https://curl.se>`_ can be used to send HTTP requests to the REST API.
-
-If you obtained a new NetHSM hardware, please refer to the chapter `Getting Started <getting-started.html#getting-started>`__ first.
-In case you want to restore a backup of a NetHSM, please refer to the chapter `Restore <administration.html#restore>`__.
+If you obtained a new NetHSM hardware, please refer to the chapter `Getting Started <getting-started.html#getting-started>`__ first. In case you want to restore a backup of a NetHSM, please refer to the chapter `Restore <administration.html#restore>`__.
 
 .. important::
 
@@ -20,8 +14,7 @@ In case you want to restore a backup of a NetHSM, please refer to the chapter `R
 
 .. note::
 
-   The examples in this documentation use the environment variable ``NETHSM_HOST``, which contains the IP address or URL of the NetHSM.
-   On a Unix shell the variable can be set with the following command.
+   The examples in this documentation use the environment variable ``NETHSM_HOST``, which contains the IP address or URL of the NetHSM.    On a Unix shell the variable can be set with the following command.
 
    .. code-block:: bash
 
