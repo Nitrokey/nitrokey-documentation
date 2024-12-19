@@ -1,0 +1,45 @@
+SE50 Secure Element
+===================
+
+.. contents:: :local:
+
+The secure element has been certified up to operating system level according to Common Criteria EAL 6+ and therefore meets high security requirements. It usage is optional and provides faster performance and some additional features.
+
+Activation and Deactivation
+---------------------------
+The SE550 is enabled by default if no key is already saved on the device. This is automatically the case after reset of the opcard or the whole device. Activating the SE50 will delete all current keys.
+
+To check whether the SE50 is activated run
+
+* nitropy nk3 get-config opcard.use_se050_backend
+
+To enable the SE50 
+
+* nitropy nk3 set-config opcard.use_se050_backend true
+
+To disable the SE50 
+
+* nitropy nk3 set-config opcard.use_se050_backend false
+
+Additional Features
+-------------------
+
+The following features are exclusively usable with the SE50 being enabled:
+
+Secure key storage: 
+
+* RSA4096
+* RSA3072
+
+
+The following Elliptic Curve algorithms can only be used with the SE50 enabled:
+
+* NIST P-384
+* NIST P-521 (secp256r1/prime256v1, secp384r1/prime384v1, secp521r1/prime521v1)
+* brainpoolp256r1
+* brainpoolp384r1
+* brainpoolp512r1
+* SECP256K1 (Test release)
+
+
+
