@@ -5,15 +5,9 @@ Client Logon with Active Directory
 	:start-after: products-begin
 	:end-before: products-end
 
-This document explains how to use the PIV application of a Nitrokey 3 for smartcard logon with Active Directory.
+This document explains how to use the PIV application of a Nitrokey 3 for smartcard logon with Active Directory. It is available as of firmware version 1.8 and higher.
 
 In the future, this manual provisioning may be automated through a Windows MiniDriver.
-
-.. warning::
-   The PIV application of the Nitrokey 3 is currently considered unstable and is not available on the stable firmware releases.
-   To obtain that functionality it is required to install a test firmware.
-   Subsequent firmware updates may lead to loss of data and cryptographic keys.
-   Please refer to `the firmware update documentation </nitrokey3/windows/firmware-update.html#firmware-release-types>`__ for more information.
 
 Prerequisites
 -------------
