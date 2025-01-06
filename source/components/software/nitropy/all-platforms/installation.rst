@@ -37,9 +37,11 @@ Installation on other distributions/operating systems
 Preparation
 ~~~~~~~~~~~
 
-Python 3.9, 3.10 or 3.11
-""""""""""""""""""""""""
-Python is already installed on most macOS and Linux systems or can be downloaded from `python.org <https://python.org>`__. See the `Downloading Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`__ for more information.
+Python
+""""""
+Python is already installed on most macOS and Linux systems or can be downloaded from `python.org <https://python.org>`__.
+Currently the supported Python versions are 3.9, 3.10, 3.11, 3.12 and 3.13.
+See the `Downloading Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`__ for more information.
 
 pip
 """
