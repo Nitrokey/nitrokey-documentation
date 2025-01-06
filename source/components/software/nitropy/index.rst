@@ -1,7 +1,7 @@
 nitropy
 =======
 
-**nitropy** is a command-line interface for the Nitrokey FIDO2, Nitrokey Start, Nitrokey 3 and NetHSM. 
+**nitropy** is a command-line interface for the Nitrokey FIDO2, Nitrokey Start, Nitrokey 3, Nitrokey Passkey and NetHSM. 
 
 .. toctree::
    :maxdepth: 2

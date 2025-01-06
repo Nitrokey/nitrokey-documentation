@@ -14,7 +14,7 @@ Ubuntu, Debian
 ~~~~~~~~~~~~~~
 You can install nitropy along with all other required dependencies by using::
 
-    sudo apt install pipx && pipx ensurepath && pipx install pynitrokey
+    $ sudo apt install pipx && pipx ensurepath && pipx install pynitrokey
 
 After logging out or restarting your system, nitropy will now be available.
 
@@ -22,14 +22,39 @@ Arch
 ~~~~
 You can install nitropy along with all other required dependencies by using::
 
-    sudo pacman -S python python-pipx && pipx ensurepath && pipx install pynitrokey
+    $ sudo pacman -S python python-pipx && pipx ensurepath && pipx install pynitrokey
 
 If you have already installed Python on your system, you can simply run::
     
-    sudo pacman -S python-pipx && pipx ensurepath && pipx install pynitrokey
+    $ sudo pacman -S python-pipx && pipx ensurepath && pipx install pynitrokey
 
 After logging out or restarting your system, nitropy will now be available.
 
+Fedora
+~~~~~~
+
+You can install nitropy along with all other required dependencies by using::
+
+    $ sudo dnf install python pipx && pipx ensurepath && pipx install pynitrokey
+
+If you have already installed Python on your system, you can simply run::
+
+    $ sudo dnf install pipx && pipx ensurepath && pipx install pynitrokey
+
+After logging our or restarting your system, nitropy will now be available.
+
+Mageia
+~~~~~~
+
+You can install nitropy along with all other required dependencies by using::
+
+    $ sudo dnf install python python3-pip && pip install --user pipx && pipx ensurepath && pipx install pynitrokey
+
+If you have already installed Python on your system, you can simply run::
+
+    $ sudo dnf install python3-pip && pip install --user pipx && pipx ensurepath && pipx install pynitrokey
+
+After logging our or restarting your system, nitropy will now be available.
 
 Installation on other distributions/operating systems
 -----------------------------------------------------
@@ -37,9 +62,11 @@ Installation on other distributions/operating systems
 Preparation
 ~~~~~~~~~~~
 
-Python 3.9, 3.10 or 3.11
-""""""""""""""""""""""""
-Python is already installed on most macOS and Linux systems or can be downloaded from `python.org <https://python.org>`__. See the `Downloading Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`__ for more information.
+Python
+""""""
+Python is already installed on most macOS and Linux systems or can be downloaded from `python.org <https://python.org>`__.
+Currently the supported Python versions are 3.9, 3.10, 3.11, 3.12 and 3.13.
+See the `Downloading Python Guide <https://wiki.python.org/moin/BeginnersGuide/Download>`__ for more information.
 
 pip
 """
@@ -49,37 +76,29 @@ pipx
 """"
 Before installing nitropy, you have to install and configure pipx::
 
-    python3 -m pip install --user pipx
-    python3 -m pipx ensurepath
+    $ python3 -m pip install --user pipx
+    $ python3 -m pipx ensurepath
 
 See the `pipx Installation Guide <https://pipx.pypa.io/stable/>`__ for more information.
-
-.. note::
-   **For Linux Users** - currently a transient dependency (``oscrypto``) is generating issues on some Linux distrubutions. 
-   The respective `GitHub issue <https://github.com/Nitrokey/pynitrokey/issues/431#issuecomment-1937704327>`__ documents the 
-   currently needed workaround::
-   
-       pipx inject --pip-args="--upgrade --force" pynitrokey "oscrypto @ git+https://github.com/wbond/oscrypto.git@1547f535001ba568b239b8797465536759c742a3"
-   
 
 Installation
 ~~~~~~~~~~~~
 
 Now you can install nitropy from the pynitrokey package::
 
-    pipx install pynitrokey
+    $ pipx install pynitrokey
 
 
 nitropy is now available in your path::
 
-    nitropy --help
+    $ nitropy --help
 
 Upgrade 
 -------
 
 You can upgrade the package with the following command::
 
-    pipx upgrade pynitrokey
+    $ pipx upgrade pynitrokey
     
 Troubleshooting
 ---------------
@@ -89,7 +108,8 @@ If you encounter problems, please make sure that you use the latest version by c
 Wrong Python Version
 ~~~~~~~~~~~~~~~~~~~~
 
-nitropy requires Python 3.9 or 3.10.  If your default Python installation is older or newer than that and cannot be updated, you have to additionally install Python 3.9 and specify the name of its Python executable when calling pipx, for example::
+If your default Python installation is not in the supported versions list above, you need to specify an alternative to pipx.
+Install a supported version of Python and specify the name of its Python executable when calling pipx, for example::
 
     $ pipx install --python python3.9 pynitrokey
     
@@ -120,17 +140,17 @@ Linux
 
 On Linux systems, you also need the Nitrokey udev rules. These are shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`__. Alternatively, you can install them manually::
 
-    wget https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/refs/heads/main/41-nitrokey.rules
-    sudo mv 41-nitrokey.rules /etc/udev/rules.d/
+    $ wget https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/refs/heads/main/41-nitrokey.rules
+    $ sudo mv 41-nitrokey.rules /etc/udev/rules.d/
 
 See :doc:`../linux/udev` for more information.
 
 Usage of PIV features
 ---------------------
 
-To be able to use the PIV functionality of nitropy (``nitropy nk3 piv``), you need to install the ``pyscard`` dependency too:
+To be able to use the PIV functionality of nitropy (``nitropy nk3 piv``), you need to install the ``pyscard`` dependency too::
 
-    pipx install pynitrokey[pcsc]
+    $ pipx install pynitrokey[pcsc]
 
 Next Steps
 ----------
