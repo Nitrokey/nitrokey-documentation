@@ -56,14 +56,6 @@ Before installing nitropy, you have to install and configure pipx::
 
 See the `pipx Installation Guide <https://pipx.pypa.io/stable/>`__ for more information.
 
-.. note::
-   **For Linux Users** - currently a transient dependency (``oscrypto``) is generating issues on some Linux distrubutions. 
-   The respective `GitHub issue <https://github.com/Nitrokey/pynitrokey/issues/431#issuecomment-1937704327>`__ documents the 
-   currently needed workaround::
-   
-       pipx inject --pip-args="--upgrade --force" pynitrokey "oscrypto @ git+https://github.com/wbond/oscrypto.git@1547f535001ba568b239b8797465536759c742a3"
-   
-
 Installation
 ~~~~~~~~~~~~
 
