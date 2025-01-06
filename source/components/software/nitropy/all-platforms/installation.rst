@@ -30,6 +30,31 @@ If you have already installed Python on your system, you can simply run::
 
 After logging out or restarting your system, nitropy will now be available.
 
+Fedora
+~~~~~~
+
+You can install nitropy along with all other required dependencies by using::
+
+    sudo dnf install python pipx && pipx ensurepath && pipx install pynitrokey
+
+If you have already installed Python on your system, you can simply run::
+
+    sudo dnf install pipx && pipx ensurepath && pipx install pynitrokey
+
+After logging our or restarting your system, nitropy will now be available.
+
+Mageia
+~~~~~~
+
+You can install nitropy along with all other required dependencies by using::
+
+    sudo dnf install python python3-pip && pip install --user pipx && pipx ensurepath && pipx install pynitrokey
+
+If you have already installed Python on your system, you can simply run::
+
+    sudo dnf install python3-pip && pip install --user pipx && pipx ensurepath && pipx install pynitrokey
+
+After logging our or restarting your system, nitropy will now be available.
 
 Installation on other distributions/operating systems
 -----------------------------------------------------
