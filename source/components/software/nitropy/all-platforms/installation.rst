@@ -83,7 +83,8 @@ If you encounter problems, please make sure that you use the latest version by c
 Wrong Python Version
 ~~~~~~~~~~~~~~~~~~~~
 
-nitropy requires Python 3.9 or 3.10.  If your default Python installation is older or newer than that and cannot be updated, you have to additionally install Python 3.9 and specify the name of its Python executable when calling pipx, for example::
+If your default Python installation is not in the supported versions list above, you need to specify an alternative to pipx.
+Install a supported version of Python and specify the name of its Python executable when calling pipx, for example::
 
     $ pipx install --python python3.9 pynitrokey
     
