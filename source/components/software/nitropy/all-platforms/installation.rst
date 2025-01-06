@@ -148,7 +148,7 @@ See :doc:`../linux/udev` for more information.
 Usage of PIV features
 ---------------------
 
-To be able to use the PIV functionality of nitropy (``nitropy nk3 piv``), you need to install the ``pyscard`` dependency too:
+To be able to use the PIV functionality of nitropy (``nitropy nk3 piv``), you need to install the ``pyscard`` dependency too::
 
     pipx install pynitrokey[pcsc]
 
