@@ -99,7 +99,7 @@ Installation with ADB
    .. rstcheck: ignore-next-code-block
    .. code-block:: bash
    
-   ./adb shell dpm set-device-owner com.hmdm.launcher/.AdminReceiver
+      ./adb shell dpm set-device-owner com.hmdm.launcher/.AdminReceiver
 
    If it was successful it says:
 
