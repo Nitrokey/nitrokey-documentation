@@ -19,6 +19,10 @@ FIDO2
 
 The PIN for FIDO2 can be set with `Nitropy <../../software/nitropy/index.html>`__, operating system native apps, or a webbrowser such as Chrom(e|ium).
 
+.. warning::
+    The PIN has retry counter of 8 attempts. After 8 attempts, it is locked and the FIDO feature needs to be reset change the PIN.
+    To prevent accidental lock of the PIN, the device needs to be unplugged and replugged every 3 attempts.
+
 .. end-fido2-header
 
 .. start-fido2-nitropy
@@ -75,6 +79,9 @@ The PIN for passwords and OTP secrets can be set with the `Nitropy <../../softwa
 
 1. Connect the Nitrokey 3 with your computer.
 2. On the terminal enter ``nitropy nk3 secrets set-pin`` and follow the instructions.
+
+.. warning::
+    The PIN has retry counter of 8 attempts. After 8 attempts, it is locked and the secrets feature needs to be reset change the PIN.
 
 .. end-passwords-otp-secrets
 
