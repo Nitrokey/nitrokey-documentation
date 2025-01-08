@@ -1,28 +1,20 @@
-Headwind MDM
-************
+Mobile Device Management (MDM)
+******************************
 
-How to install Headwind MDM on NitroPhone
-#########################################
+NitroPhones can be centraly managed by using open source Headwind MDM.
 
-.. note::
-   
-   Depending on whether you are using the paid or gratis license, some features might be available or not.
+Depending on whether you are using the paid or gratis license, some features might be available or not.
+
+How to install MDM on NitroPhone
+################################
 
 .. important::
    
-   We recommand to backup your data.
+   We recommand to backup your data before installing MDM.
 
-.. note::
-   
-   Your Nitrophone needs to be connected to the internet during the configuration.
-   And you also need a PC.
+Your Nitrophone needs to be connected to the internet during the configuration and you also need a PC.
 
-To grant special permissions you need to use ADB (Android Debug Bridge).
-You can use ADB directly from your Browser with WebADB (1st method), or you can install the tool on your computer (2nd method).
-
-.. note::
-   
-   WebADB is currently only compatible with Chromium-based browsers (Chrome, Microsoft Edge, Opera, ...).
+To grant special permissions you need to use ADB (Android Debug Bridge). You can use ADB directly from your Browser with WebADB (easier, recommended), or you can install the CLI tool on your computer (alternative). WebADB is currently only compatible with Chromium-based browsers (Chrome, Microsoft Edge, Opera, ...).
 
 Installation with WebADB
 ########################
