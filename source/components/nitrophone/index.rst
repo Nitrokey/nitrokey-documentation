@@ -23,6 +23,6 @@ For more details, see the following pages:
    Apps <apps>
    Background Images <background-images>
    Frequently Asked Questions <faq>
-   Headwind MDM <hmdm>
+   Mobile Device Management <mdm>
 
 

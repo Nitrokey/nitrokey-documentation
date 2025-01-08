@@ -17,15 +17,15 @@ Your Nitrophone needs to be connected to the internet during the configuration a
 To grant special permissions you need to use ADB (Android Debug Bridge). You can use ADB directly from your Browser with WebADB (easier, recommended), or you can install the CLI tool on your computer (alternative). WebADB is currently only compatible with Chromium-based browsers (Chrome, Microsoft Edge, Opera, ...).
 
 Installation with WebADB
-########################
+========================
 
 1. `Download <https://h-mdm.com/download/>`__ locally on your PC the latest HMDM Android app (launcher). 
    It is important that this version matches your HMDM server configuration.
    You can also download the desired version here: https://h-mdm.com/files/hmdm-<version>-master.apk
 
-2. On your NitroPhone, enable the developer options (Settings > About Phone > Click 6 times on "Build number").
+2. On your NitroPhone, enable the developer options: Settings -> About Phone -> Press 6 times on "Build number".
 
-3. Enable USB debugging (Settings > System > Developer Options > USB debugging).
+3. Enable USB debugging: Settings -> System -> Developer Options -> USB debugging.
 
 4. Connect the smartphone to the PC and change the charging connection to "File transfer".
 
@@ -35,43 +35,44 @@ Installation with WebADB
 
 7. On your NitroPhone allow the connection.
 
-8. In the WebADB menu choose "Install APK" and click on "Open" and choose the previouslly downloaded APK.
+8. In the WebADB menu choose "Install APK" and click on "Open" and choose the previously downloaded APK.
 
 9. Once completed, in the WebADB menu choose "Interactive Shell".
-   If you have this error: "Application errorl: a client-side exeption has occurred" refresh the page or click to "File Manager" and go back to "Interactive Shell".
+   If you have this error: "Application error: a client-side exeption has occurred" refresh the page or click to "File Manager" and go back to "Interactive Shell".
    If you see ``<your android version name>:/ $`` then you are properly connected.
 
 10. In the shell type: 
 
-.. code-block:: bash
- 
-   dpm set-device-owner com.hmdm.launcher/.AdminReceiver
-
-If it was successful it says:
-
-.. code-block:: bash
+   .. rstcheck: ignore-next-code-block
+   .. code-block:: bash
    
-   Success: Device owner set to package com.hmdm.launcher/.AdminReceiver 
-   Active admin set to component com.hmdm.launcher/.AdminReceiver
+      dpm set-device-owner com.hmdm.launcher/.AdminReceiver
 
-Now you can open "MDM agent" on your NitroPhone. If any permissions are asked, allow them.
-Your HMDM app is ready to use, now refer to server configuration.
+   If it was successful it says:
 
+   .. rstcheck: ignore-next-code-block
+   .. code-block:: bash
+      
+      Success: Device owner set to package com.hmdm.launcher/.AdminReceiver 
+      Active admin set to component com.hmdm.launcher/.AdminReceiver
+
+   Now you can open "MDM agent" on your NitroPhone. If any permissions are asked, allow them.
+   Your HMDM app is ready to use, now refer to server configuration.
 
 Installation with ADB 
-#####################
+=====================
 
 1. `Download <https://h-mdm.com/download/>`__ locally on your PC the latest HMDM Android app (launcher). 
    It is important that this version matches your HMDM server configuration.
    You can also download the desired version here: https://h-mdm.com/files/hmdm-<version>-master.apk
 
-2. On your NitroPhone, enable the developer options (Settings > About Phone > Click 6 times on "Build number").
+2. On your NitroPhone, enable the developer options: Settings -> About Phone -> Press 6 times on "Build number".
 
-3. Enable USB debugging (Settings > System > Developer Options > USB debugging).
+3. Enable USB debugging: Settings -> System -> Developer Options -> USB debugging.
 
 4. On your PC, `download <https://developer.android.com/tools/releases/platform-tools#downloads>`__ ADB.
 
-5. Unzip the downloaded achive and open a terminal in this folder.
+5. Unzip the downloaded archive and open a terminal in this folder.
 
 6. Connect the smartphone to the PC and change the charging connection to "File transfer".
 
@@ -95,19 +96,21 @@ Installation with ADB
 
 9. Now give the app device owner rights: 
 
-.. code-block:: bash
- 
- ./adb shell dpm set-device-owner com.hmdm.launcher/.AdminReceiver
-
-If it was successful it says:
-
-.. code-block:: bash
+   .. rstcheck: ignore-next-code-block
+   .. code-block:: bash
    
-   Success: Device owner set to package com.hmdm.launcher/.AdminReceiver 
-   Active admin set to component com.hmdm.launcher/.AdminReceiver
+   ./adb shell dpm set-device-owner com.hmdm.launcher/.AdminReceiver
 
-Now you can open "MDM agent" on your NitroPhone. If any permissions are asked, allow them.
-Your HMDM app is ready to use, now refer to server configuration.
+   If it was successful it says:
+
+   .. rstcheck: ignore-next-code-block
+   .. code-block:: bash
+      
+      Success: Device owner set to package com.hmdm.launcher/.AdminReceiver 
+      Active admin set to component com.hmdm.launcher/.AdminReceiver
+
+   Now you can open "MDM agent" on your NitroPhone. If any permissions are asked, allow them.
+   Your HMDM app is ready to use, now refer to server configuration.
 
 Add your NitroPhone to your HMDM server
 #######################################
