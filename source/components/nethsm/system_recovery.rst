@@ -34,7 +34,7 @@ The system recovery can be performed as follows.
 
    See the image below to identify the BMC network port.
 
-   .. figure:: ./images/server-back-with-labels.png
+   .. figure:: ./images/nethsm1-back-with-labels.png
       :scale: 100
       :alt: 
 
