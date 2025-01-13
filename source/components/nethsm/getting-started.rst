@@ -98,6 +98,11 @@ Please follow the two step process closely to install the NetHSM hardware.
 
          Back side of the server
 
+         .. important::
+
+            The NetHSM 2 has redundant power supplies, which both need to be supplied with power.
+            Undersupply causes the power supply to emit a beep sound.
+
       .. tab:: NetHSM 1
 
          .. figure:: ./images/nethsm1-back-with-labels.png
