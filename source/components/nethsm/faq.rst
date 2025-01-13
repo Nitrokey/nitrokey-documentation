@@ -32,5 +32,3 @@ Frequently Asked Questions (FAQ)
    * More user rights management (e.g. additional roles, groups)
    * Further separations and hardenings
    * FIPS and/or Common Criteria certifications
-   * Redundant power supplies
-
