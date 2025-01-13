@@ -366,7 +366,7 @@ Network
 The network configuration defines the settings used for the *Network Port*.
 
 .. note::
-   This settings do not configure the *BMC Network Port*.
+   This settings do not configure the *BMC Network Port* on the NetHSM 1.
 
 
 The network configuration can be retrieved as follows.
