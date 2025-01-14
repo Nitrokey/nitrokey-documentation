@@ -57,4 +57,9 @@ NitroPhone FAQ
 
    Microphones are usually used to convert mechanical vibrations into electrical signals. The mechanical construction of loudspeakers is essentially the same as that of microphones, so that loudspeakers can also be used as microphones. In loudspeakers, electrical signals cause the diaphragm to vibrate, thus generating sound. Conversely, this process can be used to transmit the electrical signal from the diaphragm to the device, as with a microphone. However, this method is not possible if an amplifier is installed, as this does not allow the signal to be transmitted from the loudspeaker to the device. All Nitrophones only have speakers with built-in amplifiers and are therefore harmless.
 
+.. faq:: How to use FIDO2 with Android / NitroPhone?
+
+   Please refer to our guide :doc:`../nitrokeys/features/fido2/nitrophone`.
+
+
 .. _all major carriers: https://support.google.com/pixelphone/answer/7107188?hl=en
