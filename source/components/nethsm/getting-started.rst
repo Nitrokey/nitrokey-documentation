@@ -64,7 +64,7 @@ Please follow the three step process closely to verify that it has arrived safel
 3. After verifying that the sealing of the wrapping paper is not broken, remove the wrapping paper.
    Finally, check the four seals on the side of the NetHSM hardware.
 
-   .. figure:: ./images/server-top-with-seal-positions.jpg
+   .. figure:: ./images/nethsm1-top-with-seal-positions.jpg
       :scale: 100
       :alt: Positions of the four seals
 
@@ -72,7 +72,7 @@ Please follow the three step process closely to verify that it has arrived safel
 
       |
 
-   .. figure:: ./images/server-side-with-seal.jpg
+   .. figure:: ./images/nethsm1-side-with-seal.jpg
       :scale: 100
       :alt: Seal on the side of the chassis
 
@@ -89,11 +89,27 @@ Please follow the two step process closely to install the NetHSM hardware.
 1. Connect the power cable with the *Power Port*, and the network cable with the *Network Port*.
    Further, press the *Power Switch* to turn on power.
 
-   .. figure:: ./images/server-back-with-labels.png
-      :scale: 100
-      :alt: Back side of the server
+   .. tabs::
+      .. tab:: NetHSM 2
 
-      Back side of the server
+         .. figure:: ./images/nethsm2-back-with-labels.png
+            :scale: 100
+            :alt: Back side of the server
+
+         Back side of the server
+
+         .. important::
+
+            The NetHSM 2 has redundant power supplies, which both need to be supplied with power.
+            Undersupply causes the power supply to emit a beep sound.
+
+      .. tab:: NetHSM 1
+
+         .. figure:: ./images/nethsm1-back-with-labels.png
+            :scale: 100
+            :alt: Back side of the server
+
+         Back side of the server
 
 2. Press the *Power Button* to turn on the NetHSM hardware.
    The *Reset Button* is only for a forced reboot of the NetHSM hardware.
@@ -103,11 +119,22 @@ Please follow the two step process closely to install the NetHSM hardware.
 
       Do not use the *BMC Network Port* because it allows wider system access.
 
-   .. figure:: ./images/server-front-with-labels.png
-      :scale: 100
-      :alt: Front side of the server
+   .. tabs::
+      .. tab:: NetHSM 2
 
-      Front side of the server
+         .. figure:: ./images/nethsm2-front-with-labels.png
+            :scale: 100
+            :alt: Front side of the server
+
+            Front side of the server
+
+      .. tab:: NetHSM 1
+
+         .. figure:: ./images/nethsm1-front-with-labels.png
+            :scale: 100
+            :alt: Front side of the server
+
+            Front side of the server
 
 In an unprovisioned state the NetHSM hardware factory default IP address is ``192.168.1.1``.
 
