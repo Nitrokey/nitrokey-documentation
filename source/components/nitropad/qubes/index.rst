@@ -14,7 +14,7 @@ changed by you:
    above).
 
 2. Next, the system will prompt you to enter the passphrase to decrypt
-   the hard disk. The passphrase is initially "12345678". This was changed on the 15.01.2024 so if "12345678" is not working try the old default: "PleaseChangeMe"
+   the hard disk. The passphrase is initially "12345678".
 
    .. figure:: ./images/QubesDiskPassword.jpg
       :alt: img3
@@ -31,5 +31,10 @@ changed by you:
    .. figure:: /images/qubes/ChangeDiskPasswordQubes.png
         :alt: Change Password Qubes Image 
 
+6. We use the latest Install image offert bei Qubes, this needs to updated after install since it does not contain all the security fixes since the release of this Image. User the Update Manager for that see `Qubes Documentation <https://www.qubes-os.org/doc/how-to-update/>`__
 
+.. note::
+
+   Specialy for the nitropad v54 the Qubes 4.2.3 install image contains a bug that just allows the highest screen resoultion. This is fixed after you update dom0 and reboot. 
+   
 .. include:: ../content/shared-index-content2.rst
