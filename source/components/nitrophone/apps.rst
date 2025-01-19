@@ -69,7 +69,7 @@ To check or change the permissions on network access and sensors for a specific 
 Car Sharing Apps
 ################
 
-Some car sharing apps (such as SHARE NOW) use Bluetooth-based location service to unlock a car in the proximity. To enable this choose: Settings -> Location -> Location Services -> Bluetooth scanning -> on
+Some car sharing apps (such as Free2move) use Bluetooth-based location service to unlock a car in the proximity. To enable this choose: Settings -> Location -> Location Services -> Bluetooth scanning -> on
 
 Banking Apps
 ############
