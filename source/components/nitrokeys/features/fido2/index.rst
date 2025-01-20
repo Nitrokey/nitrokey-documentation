@@ -10,3 +10,4 @@ FIDO2
     Website Login <website>
     Nextcloud Login <nextcloud>
     Passwordless Microsoft Login (Windows only) <passwordless-microsoft>
+    Android / NitroPhone <nitrophone>
