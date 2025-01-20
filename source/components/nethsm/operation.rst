@@ -69,7 +69,7 @@ The key can be generated as follows.
       |                                       | Possible values for the ``KEYTYPE`` argument can   |
       |                                       | be found in the table above.                       |
       +---------------------------------------+----------------------------------------------------+
-      | ``-m``, ``--mechanism`` ``MECHANISM`` | The mechanisms for the generated key.              |
+      | ``-m``, ``--mechanism`` ``MECHANISM`` | One or multiple mechanisms for the generated key.  |
       |                                       | Possible values for the ``MECHANISM`` argument can |
       |                                       | be found in the table above.                       |
       +---------------------------------------+----------------------------------------------------+
@@ -159,7 +159,7 @@ Import a private key from a PEM file into NetHSM as follows.
       +----------------------------------------+----------------------------------------------------+
       | Option                                 | Description                                        |
       +========================================+====================================================+
-      | ``-m``, ``--mechanism`` ``MECHANISM``  | The mechanisms for the generated key.              |
+      | ``-m``, ``--mechanism`` ``MECHANISM``  | One or multiple mechanisms for the key.            |
       |                                        | Possible values for the ``MECHANISM`` argument can |
       |                                        | be found in the table above.                       |
       +----------------------------------------+----------------------------------------------------+
@@ -201,7 +201,7 @@ Private keys in raw format can be imported as follows.
       |                                        | Possible values for the ``KEYTYPE`` argument can   |
       |                                        | be found in the table above.                       |
       +----------------------------------------+----------------------------------------------------+
-      | ``-m``, ``--mechanism`` ``MECHANISM``  | The mechanisms for the generated key.              |
+      | ``-m``, ``--mechanism`` ``MECHANISM``  | One or multiple mechanisms for the key.            |
       |                                        | Possible values for the ``MECHANISM`` argument can |
       |                                        | be found in the table above.                       |
       +----------------------------------------+----------------------------------------------------+
