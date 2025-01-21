@@ -88,7 +88,12 @@ The key can be generated as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST generate-key --type RSA --mechanism RSA_Signature_PSS_SHA256 --mechanism RSA_Decryption_PKCS1 --length 2048 --key-id myFirstKey
+         $ nitropy nethsm --host $NETHSM_HOST generate-key \
+            --type RSA \
+            --mechanism RSA_Signature_PSS_SHA256 \
+            --mechanism RSA_Decryption_PKCS1 \
+            --length 2048 \
+            --key-id myFirstKey
 
       .. code-block::
 
@@ -385,7 +390,8 @@ The public key can be inspected for example with OpenSSL as follows.
 
       .. code-block::
 
-         nitropy nethsm --host= $NETHSM_HOST get-key myFirstKey --public-key | openssl rsa -pubin -text
+         nitropy nethsm --host= $NETHSM_HOST get-key myFirstKey \
+          --public-key | openssl rsa -pubin -text
 
       .. code-block::
 
@@ -542,7 +548,9 @@ The certificate can be set as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST set-certificate --key-id myFirstKey --mime-type application/x-pem-file /tmp/cert.pem
+         $ nitropy nethsm --host $NETHSM_HOST set-certificate \
+            --key-id myFirstKey \
+            --mime-type application/x-pem-file /tmp/cert.pem
 
       .. code-block::
 
@@ -630,7 +638,15 @@ The NetHSM supports generating CSR (Certificate Signing Requests) for the stored
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST csr --key-id myFirstKey --country="DE" --state-or-province="Berlin" --locality="Berlin" --organization="Nitrokey" --organizational-unit="" --common-name=nitrokey.com --email-address="info@nitrokey.com"
+         $ nitropy nethsm --host $NETHSM_HOST csr \
+            --key-id myFirstKey \
+            --country="DE" \
+            --state-or-province="Berlin" \
+            --locality="Berlin" \
+            --organization="Nitrokey" \
+            --organizational-unit="" \
+            --common-name=nitrokey.com \
+            --email-address="info@nitrokey.com"
 
       .. code-block::
 
@@ -685,7 +701,11 @@ Data can be encrypted for a symmetric key as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST encrypt -k myFirstKey -d "TmV0SFNNIHJ1bGV6enp6enp6enp6enp6enp6enp6IQo=" -m AES_CBC -iv "aYlwUI4A9zL9tts4dMAq+A=="
+         $ nitropy nethsm --host $NETHSM_HOST encrypt \
+            -k myFirstKey \
+            -d "TmV0SFNNIHJ1bGV6enp6enp6enp6enp6enp6enp6IQo=" \
+            -m AES_CBC \
+            -iv "aYlwUI4A9zL9tts4dMAq+A=="
       
       .. code-block::
 
@@ -701,7 +721,10 @@ Data can be encrypted for asymmetric keys with OpenSSL as follows.
 
 .. code-block:: bash
 
-   $ echo 'NetHSM rulez!' | openssl pkeyutl -encrypt -pubin -inkey public.pem | base64 > data.crypt
+   $ echo 'NetHSM rulez!' | openssl pkeyutl \
+      -encrypt \
+      -pubin \
+      -inkey public.pem | base64 > data.crypt
 
 This writes the encrypted and base64 encoded message ``NetHSM rulez!`` into the file ``data.crypt``, using the public key from ``public.pem``.
 
@@ -747,7 +770,10 @@ The data can be decrypted as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm -h $NETHSM_HOST decrypt -k myFirstKey -d "$(cat data.crypt)" -m PKCS1 | base64 -d
+         $ nitropy nethsm -h $NETHSM_HOST decrypt \
+            -k myFirstKey \
+            -d "$(cat data.crypt)" \
+            -m PKCS1 | base64 -d
 
       .. code-block::
 
@@ -809,7 +835,10 @@ From the digest a signature can be created as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm -h $NETHSM_HOST sign -k myFirstKey -m PKCS1 -d "$(cat data.digest)" | base64 -d > data.sig
+         $ nitropy nethsm -h $NETHSM_HOST sign \
+            -k myFirstKey \
+            -m PKCS1 \
+            -d "$(cat data.digest)" | base64 -d > data.sig
    .. tab:: REST API
       Information about the `/keys/{KeyID}/sign` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__sign>`__.
 
@@ -817,7 +846,12 @@ The created signature can be verified with OpenSSL as follows.
 
 .. code-block:: bash
 
-   $ openssl dgst -sha256 -verify public.pem -signature data.sig -sigopt rsa_padding_mode:pss -sigopt rsa_pss_saltlen:-1 data
+   $ openssl dgst \
+      -sha256 \
+      -verify public.pem \
+      -signature data.sig \
+      -sigopt rsa_padding_mode:pss \
+      -sigopt rsa_pss_saltlen:-1 data
 
 .. code-block::
 
