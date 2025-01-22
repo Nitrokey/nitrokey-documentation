@@ -14,7 +14,7 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Getting Star
 
 .. note::
 
-   The examples in this documentation use the environment variable ``NETHSM_HOST``, which contains the IP address or URL of the NetHSM.    On a Unix shell the variable can be set with the following command.
+   The examples in this documentation use the environment variable ``NETHSM_HOST``, which contains the IP address or URL of the NetHSM. A NetHSM's default IP address is 192.168.1.1. On a Unix shell the variable can be set with the following command.
 
    .. code-block:: bash
 
