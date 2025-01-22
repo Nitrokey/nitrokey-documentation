@@ -164,6 +164,8 @@ The initial provisioning is executed as follows.
 
       **Example**
 
+      This example contains the parameter `--no-verify-tls` because typically at this stage the NetHSM uses a self-signed certificate.
+
       .. code-block:: bash
 
          $ nitropy nethsm --host $NETHSM_HOST provision
