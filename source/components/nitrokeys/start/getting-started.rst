@@ -20,7 +20,7 @@ Getting Started
    that the USB smart card device driver gets installed almost
    automatically.
 3. Use GnuPG to `generate new keys or import existing
-   ones <openpgp.html>`_.
+   ones <../features/openpgp-card/overview.html>`_.
 
    .. note::
       It is indeed necessary to first import or create new keys and
