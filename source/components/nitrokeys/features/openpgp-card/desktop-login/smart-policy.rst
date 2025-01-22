@@ -1,7 +1,7 @@
 Login to Windows Domain Computers With MS Active Directory
 ==========================================================
 
-.. product-table:: pro storage nk3  
+.. product-table:: pro storage nk3 hsm
 
 .. contents:: :local:
 
