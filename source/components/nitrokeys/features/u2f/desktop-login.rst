@@ -90,7 +90,7 @@ CLI Method
    .. code-block:: bash
 
       $ cd /etc/udev/rules.d/
-      $ sudo wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
+      $ sudo wget https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/main/41-nitrokey.rules
 
    And restart ``udev`` service
 

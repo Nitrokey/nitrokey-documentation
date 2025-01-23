@@ -79,5 +79,5 @@ the UDEV rules:
 
 .. code-block:: bash
 
-   wget https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
+   wget https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/main/41-nitrokey.rules
    sudo mv 41-nitrokey.rules /etc/udev/rules.d/

@@ -93,4 +93,4 @@ Linux Permission error
   your machine. Afterwards the update should work without the 
   permission issue.
 
-.. _udev-rules: https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey.rules
+.. _udev-rules: https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/main/41-nitrokey.rules
