@@ -14,7 +14,7 @@ Install MDM on NitroPhone
 
 Your NitroPhone needs to be connected to the internet during the configuration and you also need a PC.
 
-To grant special permissions you need to use ADB (Android Debug Bridge). You can use ADB directly from your Browser with WebADB (easier, recommended), or you can install the CLI tool on your computer (alternative). WebADB is currently only compatible with Chromium-based browsers (e.g. Chrome, Microsoft Edge, Opera).
+To grant special permissions you need to use ADB (Android Debug Bridge). You can use ADB directly from your web browser with WebADB (easier, recommended), or you can install the CLI tool on your computer (alternative). WebADB is currently only compatible with Chromium-based browsers (e.g. Chrome, Microsoft Edge, Opera).
 
 Installation With WebADB
 ========================
@@ -35,7 +35,7 @@ Installation With WebADB
 
 7. On your NitroPhone allow the connection.
 
-8. In the WebADB menu choose "Install APK" and click on "Open" and choose the previously downloaded APK.
+8. In the WebADB menu choose "Install APK", click on "Open", and choose the previously downloaded APK.
 
 9. Once completed, in the WebADB menu choose "Interactive Shell".
    If you have this error: "Application error: a client-side exeption has occurred" refresh the page or click to "File Manager" and go back to "Interactive Shell".
