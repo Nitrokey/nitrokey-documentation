@@ -44,7 +44,7 @@ Use The Nitrokey Backwards Proxy
 --------------------------------
 
 This method is by far the easiest to set up and use to get an encrypted to your
-NextBox from everywhere, the only think to do is to go to *Remote Access* and 
+NextBox from everywhere, the only thing to do is to go to *Remote Access* and 
 *Backwards Proxy* inside the NextBox-App, insert a sub-domain you want to use and
 click *Enable Quickstart Remote Access*. From now on you can access your NextBox
 using a URL like this:
