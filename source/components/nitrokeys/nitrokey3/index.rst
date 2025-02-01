@@ -21,6 +21,7 @@ and the product guides:
 	Firmware Update <firmware-update>
     Firmware Update Qubes <firmware-update-qubes>
     Set Pins <set-pins>
+    LED and Touch Button <led>
     nitropy <nitropy>
     Reset <reset>
     Troubleshooting <troubleshooting>
