@@ -4,7 +4,7 @@ LED and Touch Button
 +----------------+------------------------------------+
 | LED Color      | Event                              |
 +================+====================================+
-| White blinking | Waiting for touch event            |
+| White blinking | Waiting for button touch           |
 +----------------+------------------------------------+
 | Red blinking   | HEADS: HOTP verification failed    |
 +----------------+------------------------------------+
