@@ -51,6 +51,15 @@ Supported symmetric key algorithms:
 .. warning::
    It is not recommended to use the 3DES (TDES) algorithm.
 
+Default management key
+----------------------
+
+The default management key is the following 3DES (TDES) key (24 bytes in hexadecimal):
+
+::
+
+    0102030405060708 0102030405060708 0102030405060708 
+
 Generate Key
 ------------
 
