@@ -7,7 +7,7 @@ Key Management
 Key Slots
 ---------
 
-The PIV application can hold certificates for different purposes.
+The PIV smart card can hold certificates for different purposes.
 For each purpose the private key and its corresponding certificate are stored in a key slot.
 
 +-------+------------------------+-------------------------------------------------------+
@@ -35,8 +35,7 @@ For each purpose the private key and its corresponding certificate are stored in
 Algorithms
 ----------
 
-The PIV application uses asymmetric and symmetric algorithms.
-The asymmetric algorithms are used for the user private keys and the symmetric algorithms for the management key.
+PIV uses asymmetric and symmetric algorithms. The asymmetric algorithms are used for the user private keys and the symmetric algorithms for the management key.
 
 Supported asymmetric key algorithms:
 
@@ -51,8 +50,8 @@ Supported symmetric key algorithms:
 .. warning::
    It is not recommended to use the 3DES (TDES) algorithm.
 
-Default management key
-----------------------
+Management Key
+--------------
 
 The default management key is the following 3DES (TDES) key (24 bytes in hexadecimal):
 
@@ -60,12 +59,12 @@ The default management key is the following 3DES (TDES) key (24 bytes in hexadec
 
     0102030405060708 0102030405060708 0102030405060708 
 
-Generate Key
-------------
+Key Generation
+--------------
 
-The PIV application can generate a new private key on the Nitrokey.
+The PIV smart card can generate a new private key on the Nitrokey.
 
-The command below will create private key in key slot ``9a`` for the user with the subject name ``John Doe`` and subject alternative name ``jd@nitrokey.local``.
+The command below will create a private key in key slot ``9a`` for the user with the subject name ``John Doe`` and subject alternative name ``jd@nitrokey.local``.
 
 ::
 
