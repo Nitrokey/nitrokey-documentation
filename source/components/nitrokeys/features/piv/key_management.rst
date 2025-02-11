@@ -53,7 +53,7 @@ Supported symmetric key algorithms:
 Management Key
 --------------
 
-The default management key is the following 3DES (TDES) key (24 bytes in hexadecimal):
+For compatibility reasons, the default management key is the following 3DES (TDES) key (24 bytes in hexadecimal):
 
 ::
 
