@@ -30,6 +30,8 @@ You can find the locales for this repository here: https://github.com/Nitrokey/n
 
 Follow these guidlines to write uniform and comprehensive documentation.
 
+* Use dashes to separate words in file names (e.g. `file-name.rst`).
+
 ### Headlines
 
 When writing title case headlines, major words are capitalized while minor words are lowercase.
