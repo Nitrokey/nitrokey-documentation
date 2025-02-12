@@ -42,7 +42,7 @@ Nitrokey Start FAQ
 
 .. faq:: How many keys can I store? 
 
-    The Nitrokey Start can store nine RSA key pairs. 
+    The Nitrokey Start can store nine RSA key pairs for three identities. 
     For one identity you need three key pairs for authentication, encryption and
     signing.
 
