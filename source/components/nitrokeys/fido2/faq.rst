@@ -25,7 +25,7 @@ Nitrokey FIDO2 FAQ
 
 .. faq:: How many keys can my Nitrokey FIDO2 store?
 
-   It can store up to 10 resident keys (RK) or discoverable credentials or an unlimited number of non resident keys.
+   It can store up to 10 resident keys also known as discoverable credentials or an unlimited number of non resident keys.
 
 .. faq:: How to use Nitrokey FIDO2 with Azure Entra ID (Active Directory)?
 
