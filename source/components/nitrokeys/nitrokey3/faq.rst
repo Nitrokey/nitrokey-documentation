@@ -42,6 +42,7 @@ Nitrokey 3 FAQ
    identity but are used for different purposes: authentication, encryption and
    signing.
    For FIDO2 it can store up to 10 resident keys also known as discoverable credentials or an unlimited number of non resident keys.
+   The PIV feature can store up to 24 keys.
    
 .. faq:: Why does the Nitrokey 3 not show up in GnuPG?
 
