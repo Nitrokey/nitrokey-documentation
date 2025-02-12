@@ -57,7 +57,7 @@ Nitrokey 3 FAQ
    See the following table:
 
    +-----------------+-------------------+----------------------+-----+
-   | key type        | OpenPGP (with SE) | OpenPGP (without SE) | PIV |
+   | Key Type        | OpenPGP (with SE) | OpenPGP (without SE) | PIV |
    +-----------------+-------------------+----------------------+-----+
    | Brainpool P-256 | ✓                 |                      |     |
    +-----------------+-------------------+----------------------+-----+
