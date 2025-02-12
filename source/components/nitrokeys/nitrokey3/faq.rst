@@ -36,6 +36,13 @@ Nitrokey 3 FAQ
    The Nitrokey 3 doesn't contain storage capability for ordinary data (it can
    only store cryptographic keys and certificates).
 
+.. faq:: How many keys can my Nitrokey 3 store?
+
+   With the OpenPGP Card feature you can store three key pairs. All keys use the same
+   identity but are used for different purposes: authentication, encryption and signing.
+   For FIDO2 it can store up to 10 passkeys also known as discoverable credentials and an unlimited number of non-discoverable credentials.
+   The PIV feature can store up to 24 key pairs.
+   
 .. faq:: Why does the Nitrokey 3 not show up in GnuPG?
 
    Make sure to install a firmware more recent than version 1.4.0.

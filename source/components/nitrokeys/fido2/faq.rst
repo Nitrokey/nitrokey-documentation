@@ -20,8 +20,11 @@ Nitrokey FIDO2 FAQ
 
 .. faq:: How large is the storage capacity?
 
-   The Nitrokey FIDO2 doesn't contain storage capability for ordinary data (it can
-   only store cryptographic keys and certificates).
+   The Nitrokey FIDO2 doesn't contain storage capability for ordinary data (it can only store cryptographic keys).
+
+.. faq:: How many keys can my Nitrokey FIDO2 store?
+
+   It can store up to 50 passkeys also known as discoverable credentials and an unlimited number of non-discoverable credentials.
 
 .. faq:: How to use Nitrokey FIDO2 with Azure Entra ID (Active Directory)?
 

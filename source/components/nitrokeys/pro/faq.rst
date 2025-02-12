@@ -77,4 +77,11 @@ Nitrokey Pro 2 FAQ
     The Nitrokey Pro doesn't contain storage capability for ordinary data (it can
     only store cryptographic keys and certificates).
 
+.. faq:: How many keys can I store? 
+
+    The Nitrokey Pro can store three RSA key pairs. All keys use the same
+    identity but are used for different purposes: authentication, encryption and
+    signing.
+
+
 .. include:: ../../shared-faqs/hyperlinks.rst.inc 

@@ -40,6 +40,11 @@ Nitrokey Start FAQ
    The Nitrokey Start doesn't contain storage capability for ordinary data (it can
    only store cryptographic keys and certificates).
 
+.. faq:: How many keys can I store? 
+
+    The Nitrokey Start can store nine RSA key pairs for three identities. 
+    For one identity you need three key pairs for authentication, encryption and
+    signing.
 
 .. include:: ../../shared-faqs/hyperlinks.rst.inc 
 
