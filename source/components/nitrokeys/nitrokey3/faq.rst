@@ -52,7 +52,36 @@ Nitrokey 3 FAQ
 
    Nitrokey 3 does only show up and can be managed in "nitropy" and "Nitrokey App 2, not in Nitrokey App 1".
 
-.. include:: ../../shared-faqs/algos.rst.inc 
+.. faq:: Which algorithms and maximum key length are supported?
+
+   See the following table:
+
+   +-----------------+-------------------+----------------------+-----+
+   | key type        | OpenPGP (with SE) | OpenPGP (without SE) | PIV |
+   +-----------------+-------------------+----------------------+-----+
+   | Brainpool P-256 | ✓                 |                      |     |
+   +-----------------+-------------------+----------------------+-----+
+   | Brainpool P-384 | ✓                 |                      |     |
+   +-----------------+-------------------+----------------------+-----+
+   | Brainpool P-512 | ✓                 |                      |     |
+   +-----------------+-------------------+----------------------+-----+
+   | Curve25519      | ✓                 | ✓                    |     |
+   +-----------------+-------------------+----------------------+-----+
+   | NIST P-256      | ✓                 | ✓                    | ✓   |
+   +-----------------+-------------------+----------------------+-----+
+   | NIST P-384      | ✓                 |                      |     |
+   +-----------------+-------------------+----------------------+-----+
+   | NIST P-521      | ✓                 |                      |     |
+   +-----------------+-------------------+----------------------+-----+
+   | RSA-2048        | ✓                 | ✓                    | ✓   |
+   +-----------------+-------------------+----------------------+-----+
+   | RSA-3072        | ✓                 | ✓ (import)           |     |
+   +-----------------+-------------------+----------------------+-----+
+   | RSA-4096        | ✓                 | ✓ (import)           |     |
+   +-----------------+-------------------+----------------------+-----+
+   
+   Since firmware release v1.7.0, OpenPGP uses a secure element (SE) by default.
+   If the secure element is disabled, some key types can only be imported but not generated on the device.
 
 .. faq:: How can I set the PIN for my Nitrokey 3?
 
