@@ -42,6 +42,18 @@ The app can be updated the following way:
       pipenv update
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 To run the application:
 
 1. Enter the work directory:
