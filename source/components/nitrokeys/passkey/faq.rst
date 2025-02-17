@@ -2,7 +2,7 @@ Nitrokey Passkey FAQ
 ====================
 
 **Q:** Which Operating Systems are supported?
-   Windows, Linux, and Mac OS X. Also some support (FIDO2) for Android.
+   Windows, Linux, macOS and BSD. Also FIDO2 is supported on Android and iOS.
 
 
 **Q:** What can I use the Nitrokey for?
@@ -20,8 +20,8 @@ Nitrokey Passkey FAQ
    The Nitrokey FIDO2 doesn't contain storage capability for ordinary data (it can
    only store cryptographic keys and certificates). It can hold over 100 Passkeys/FIDO2 keys.
 
-**Q:** How to use Nitrokey Passkey with Azure Entra ID (Active Directory)?
-   After `disabling Enforce Attestation`_ Nitrokey Passkey is supported by Azure Entra ID out of the box.
+**Q:** How to use Nitrokey Passkey with Microsoft Entra ID?
+   After `disabling Enforce Attestation`_ Nitrokey Passkey is supported by Entra ID out of the box.
 
 
 .. include:: ../../shared-faqs/hyperlinks.rst.inc 
