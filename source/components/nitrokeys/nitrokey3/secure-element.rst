@@ -5,12 +5,16 @@ Secure Element SE05x
 
 The Secure Element `SE050 <https://www.nxp.com/products/SE050>`__ is a tamper-resistant chip by NXP Semiconductors that provides advanced security features. It offers hardware-based security functions including cryptographic operations, secure key storage, and protection against physical and logical attacks. The SE05X Secure Element is certified to Common Criteria EAL 6+ security level and implements algorithms like RSA, ECC, AES, and SHA, making it ideal for the Nitrokey 3.
 
-PIV uses the Secure Element. OpenPGP Card can be configured to use the Secure Element or not in which case a software-only implementation is used. Passwords and FIDO2 don't use the Secure Element, but it is used for specific use cases, like additional randomness.
+PIV uses the Secure Element. OpenPGP Card can be configured to use the Secure Element or not in which case a software-only implementation is used. Passwords and FIDO2 don't use the Secure Element but for additional randomness.
+
 
 Activation/Deactivation for OpenPGP
 -----------------------------------
 The Secure Element is enabled by default if no cryptographic key in OpenPGP Card and PIV is already saved on the device. 
-This is automatically the case after resetting the OpenPGP Card or the whole Nitrokey. Manually activating the Secure Element for the OpenPGP Card will delete all existing keys.
+This is automatically the case after resetting the OpenPGP Card or the whole Nitrokey.
+
+.. warning::
+   Manually activating the Secure Element for the OpenPGP Card will delete all existing keys.
 
 To check whether the Secure Element for OpenPGP is activated run:
 
@@ -35,8 +39,6 @@ Algorithms
 | RSA 3072 bit                            | ✓                   | ⨯                      |
 +-----------------------------------------+---------------------+------------------------+
 | RSA 4096 bit                            | ✓                   | ⨯                      |
-+-----------------------------------------+---------------------+------------------------+
-| ECC 256-521 bit                         | ✓                   | ✓                      |
 +-----------------------------------------+---------------------+------------------------+
 | AES 128/256 bit                         | ✓                   | ✓                      |
 +-----------------------------------------+---------------------+------------------------+
