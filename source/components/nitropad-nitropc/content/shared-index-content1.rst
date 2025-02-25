@@ -1,13 +1,6 @@
 
 .. contents:: :local:
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :hidden:
-
-   *
-
 Verification of Sealed Hardware
 -------------------------------
 
