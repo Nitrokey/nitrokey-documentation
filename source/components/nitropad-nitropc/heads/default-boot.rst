@@ -7,88 +7,88 @@ If you have installed a new operating system, it may be that default boot is not
 
 1. Select “Default boot”.
 
-.. figure:: /components/nitropad-nitropc/images/default-boot/1.jpg
-   :alt: img1
+   .. figure:: /components/nitropad-nitropc/images/default-boot/1.jpg
+      :alt: img1
 
 
 
 2. Heads informs you that it does not yet know any default. First you
    agree to the update of the checksums.
 
-.. figure:: /components/nitropad-nitropc/images/default-boot/2.jpg
-   :alt: img2
+   .. figure:: /components/nitropad-nitropc/images/default-boot/2.jpg
+      :alt: img2
 
 
 
 3. Confirm the process with Enter.
 
-.. figure:: /components/nitropad-nitropc/images/default-boot/3.jpg
-   :alt: img3
+   .. figure:: /components/nitropad-nitropc/images/default-boot/3.jpg
+      :alt: img3
 
 
 
 4. Now insert the Nitrokey if this is not already the case and confirm
    with Enter. Then you have to enter the User PIN of the Nitrokey.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-       Please confirm that your GPG card is inserted [Y/n]:
+         Please confirm that your GPG card is inserted [Y/n]:
 
-       Verifying presence of GPG card...
+         Verifying presence of GPG card...
 
-       XXXXXXX: XXXXXXXXXX
-       Please unlock the card
+         XXXXXXX: XXXXXXXXXX
+         Please unlock the card
 
-       Number: XXXX XXXXXX
-       Holder: 
-       Counter: X
-       PIN: 
+         Number: XXXX XXXXXX
+         Holder: 
+         Counter: X
+         PIN: 
 
-Now the NitroPad marks the files that changed by the update as verified.
+   Now the NitroPad marks the files that changed by the update as verified.
 
 5. Confirm the process with Enter.
 
-.. figure:: /components/nitropad-nitropc/images/default-boot/4.jpg
-   :alt: img4
+   .. figure:: /components/nitropad-nitropc/images/default-boot/4.jpg
+      :alt: img4
 
 
 
 6. You will then see a list of all possible boot entries - choose the
    first one here by simply pressing Enter. Boot Options
 
-.. figure:: /components/nitropad-nitropc/images/NitroPad-boot-options.jpeg
-   :alt: img5
+   .. figure:: /components/nitropad-nitropc/images/NitroPad-boot-options.jpeg
+      :alt: img5
 
 
 
 7. To save this value as default, select “Make Ubuntu the default” for
    Ubuntu or “Make Qubes the default” for Qubes OS. Confirm Boot Details
 
-.. figure:: /components/nitropad-nitropc/images/NitroPad-confirm-boot-details.jpeg
-   :alt: img6
+   .. figure:: /components/nitropad-nitropc/images/NitroPad-confirm-boot-details.jpeg
+      :alt: img6
 
 
 
 8. Confirm the next three questions with Enter and enter the PIN of the
    Nitrokey if you are prompted to do so.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-       Saving a default will modify the disk. Proceed? [Y/n]:
+         Saving a default will modify the disk. Proceed? [Y/n]:
 
-       Do you wish to add a disk encryption to the TPM [Y/n]:
+         Do you wish to add a disk encryption to the TPM [Y/n]:
 
-       Please confirm that your GPG card is inserted [Y/n]:
+         Please confirm that your GPG card is inserted [Y/n]:
 
-       Verifying presence of GPG card...
+         Verifying presence of GPG card...
 
-       XXXXXXX: XXXXXXXXXX
-       Please unlock the card
+         XXXXXXX: XXXXXXXXXX
+         Please unlock the card
 
-       Number: XXXX XXXXXX
-       Holder: 
-       Counter: X
-       PIN:
+         Number: XXXX XXXXXX
+         Holder: 
+         Counter: X
+         PIN:
 
 9. Your system will then boot.
 
@@ -103,16 +103,16 @@ Usual way would be to go to ``Options -> Boot Options -> Show OS boot menu``, se
    sure the correct files are removed. Here 2 default files were
    available:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ cd /
-   $ mount -o remount,rw /boot
-   $ ls /boot/kexec_default.*.txt
-   kexec_default.1.txt kexec_default.2.txt
-   $ rm /boot/kexec_default.*.txt -v
-   removed '/boot/kexec_default.1.txt'
-   removed '/boot/kexec_default.2.txt'
-   $ reboot
+      $ cd /
+      $ mount -o remount,rw /boot
+      $ ls /boot/kexec_default.*.txt
+      kexec_default.1.txt kexec_default.2.txt
+      $ rm /boot/kexec_default.*.txt -v
+      removed '/boot/kexec_default.1.txt'
+      removed '/boot/kexec_default.2.txt'
+      $ reboot
 
 2. Sign all current boot files with:
    ``Options --> Update checksums and sign all files in /boot``
@@ -125,13 +125,13 @@ Usual way would be to go to ``Options -> Boot Options -> Show OS boot menu``, se
 7. Save the kernel with accepting default options (proceed, do not agree
    for TPM encryption, confirm GPG card):
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   Saving... Proceed (Y/n): Y
-   Do you wish... to the TPM (y/N): N
-   Please confirm... inserted (Y/n): Y
+      Saving... Proceed (Y/n): Y
+      Do you wish... to the TPM (y/N): N
+      Please confirm... inserted (Y/n): Y
 
-6. Enter PIN for the Nitrokey Pro/Storage device to execute signing
+8. Enter PIN for the Nitrokey Pro/Storage device to execute signing
    process
-7. The selected kernel will boot and it will be the default one the next
+9. The selected kernel will boot and it will be the default one the next
    time when selecting ``Default Boot`` option from the menu.

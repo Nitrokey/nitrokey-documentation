@@ -10,10 +10,6 @@ QubesOS
 
    *
 
-
-NitroPad
-********
-
 .. include:: ../content/shared-index-content1.rst
 
 
@@ -53,27 +49,6 @@ changed by you:
    
 
 .. include:: ../content/shared-index-content2.rst
-
-
-NitroPC
-*******
-
-
-Getting Started
----------------
-
-1. During boot, the system will prompt you to enter the passphrase to decrypt
-   the hard disk. Enter the default passphrase "12345678". This was changed on the 15.01.2024 so if "12345678" is not working try the old default: "PleaseChangeMe"
-   The system will then guide you through the process of creating a user
-   account. After that you should have successfully booted the system
-   and could already use it normally.
-
-2. Change the passphrase for disk encryption by searching in the Qubes Menu for "Change Disk Password"
-
-               
-   .. figure:: /images/qubes/ChangeDiskPasswordQubes.png
-        :alt: Change Password Qubes Image
-
 
 
 Failed to start Load Kernel Modules

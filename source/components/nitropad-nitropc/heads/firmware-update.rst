@@ -61,65 +61,65 @@ This is the actual update procedure. Usually the first two screens will not be s
 1. (Optional screen) Select “Ignore error and continue to default boot
    menu”.
 
-.. figure:: /components/nitropad-nitropc/images/firmware-update/1.jpg
-   :alt: img1
+   .. figure:: /components/nitropad-nitropc/images/firmware-update/1.jpg
+      :alt: img1
 
 
 
 2. (Optional screen) Select “Ignore error and continue to default boot
    menu”.
 
-.. figure:: /components/nitropad-nitropc/images/firmware-update/2.jpg
-   :alt: img2
+   .. figure:: /components/nitropad-nitropc/images/firmware-update/2.jpg
+      :alt: img2
 
 
 
 3. Go to “Options”.
 
-.. figure:: /components/nitropad-nitropc/images/firmware-update/3.jpg
-   :alt: img3
+   .. figure:: /components/nitropad-nitropc/images/firmware-update/3.jpg
+      :alt: img3
 
 
 
 4. Select “Flash/Update the BIOS”.
 
-.. figure:: /components/nitropad-nitropc/images/firmware-update/4.jpg
-   :alt: img4
+   .. figure:: /components/nitropad-nitropc/images/firmware-update/4.jpg
+      :alt: img4
 
 
 
 5. Please confirm the first option.
 
-.. figure:: /components/nitropad-nitropc/images/firmware-update/5.jpg
-   :alt: img5
+   .. figure:: /components/nitropad-nitropc/images/firmware-update/5.jpg
+      :alt: img5
 
 
 
 6. Confirm the process with Enter.
 
-.. figure:: /components/nitropad-nitropc/images/firmware-update/6.jpg
-   :alt: img6
+   .. figure:: /components/nitropad-nitropc/images/firmware-update/6.jpg
+      :alt: img6
 
 
 
 7. Select the desired .npf file.
 
-.. figure:: /components/nitropad-nitropc/images/firmware-update/7.jpg
-   :alt: img7
+   .. figure:: /components/nitropad-nitropc/images/firmware-update/7.jpg
+      :alt: img7
 
 
 
 8. Confirm the process with Enter.
 
-.. figure:: /components/nitropad-nitropc/images/firmware-update/8.jpg
-   :alt: img8
+   .. figure:: /components/nitropad-nitropc/images/firmware-update/8.jpg
+      :alt: img8
 
 
 
 9. Confirm the restart with Enter.
 
-.. figure:: /components/nitropad-nitropc/images/firmware-update/9.jpg
-   :alt: img9
+   .. figure:: /components/nitropad-nitropc/images/firmware-update/9.jpg
+      :alt: img9
 
 
 

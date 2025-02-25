@@ -12,5 +12,5 @@ Heads
    Factory Reset Heads 2.0 <factory-reset-heads2>
    Firmware Update <firmware-update>
    Firmware Update v1.4+ <firmware-update-1.4>
-   System update <system-update>
+   System Update <system-update>
 
