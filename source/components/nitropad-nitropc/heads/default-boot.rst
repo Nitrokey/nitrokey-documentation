@@ -72,6 +72,7 @@ If you have installed a new operating system, it may be that default boot is not
 8. Confirm the next three questions with Enter and enter the PIN of the
    Nitrokey if you are prompted to do so.
 
+   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
          Saving a default will modify the disk. Proceed? [Y/n]:

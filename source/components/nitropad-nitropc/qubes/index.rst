@@ -51,7 +51,7 @@ changed by you:
 .. include:: ../content/shared-index-content2.rst
 
 
-Failed to start Load Kernel Modules
+Failed to Start Load Kernel Modules
 -----------------------------------
 
 During boot of the system the error "Failed to start Load Kernel Modules" is displayed. `This is a known issue <https://github.com/QubesOS/qubes-issues/issues/2638>`__ which is not critical and can be ignored.
