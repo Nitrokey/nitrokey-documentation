@@ -72,7 +72,6 @@ If you have installed a new operating system, it may be that default boot is not
 8. Confirm the next three questions with Enter and enter the PIN of the
    Nitrokey if you are prompted to do so.
 
-   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
          Saving a default will modify the disk. Proceed? [Y/n]:
@@ -126,6 +125,7 @@ Usual way would be to go to ``Options -> Boot Options -> Show OS boot menu``, se
 7. Save the kernel with accepting default options (proceed, do not agree
    for TPM encryption, confirm GPG card):
 
+   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       Saving... Proceed (Y/n): Y
