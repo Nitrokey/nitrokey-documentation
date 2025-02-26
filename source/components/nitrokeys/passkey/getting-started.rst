@@ -1,10 +1,23 @@
 Getting Started
 ===============
 
-Hardware
---------
 
-TODO Image with focus on touch button
+Passkeys are a modern way to log into websites and apps without the need for traditional passwords, making it easier and safer for everyone. 
+Here’s a simple breakdown of what passkeys are, how they work, and how to use the Nitrokey Passkey.
+ 
+How do Passkeys work?
+--------------------- 
+
+Passkeys are a modern form of authentication that replaces passwords. 
+First you register your Nitrokey Passkey to a website. This way a secret is stored on your Nitrokey Passkey.
+The magic happens when you log in:
+
+When you want to access the service, the website will send a challenge to your device.
+If you haven't already done so, you plug in your Nitrokey and authenticate it (often via a button press or PIN). 
+Your device uses the private key to respond securely to a challenge from the website, confirming your identity without sending your information across.
+
+
+
 
 First steps
 -----------
@@ -54,40 +67,3 @@ Two-Factor Authentication (2FA)
    each time you log in.
 
 You are now ready to go.
-
-Touch Button And LED Behavior
------------------------------
-
-The first FIDO operation is automatically accepted within two seconds
-after connecting Nitrokey Passkey. In this case touching the touch button
-is not required.
-
-Multiple operations can be accepted by a single touch. For this, keep
-the touch button touched for up to 10 seconds.
-
-
-+------------------+-----------------------------+------------+
-| LED Color        | Event                       | Comments   |
-+==================+=============================+============+
-| White (blinking) | waiting for touch event     |            |
-+------------------+-----------------------------+------------+
-| Teal (constant)  | processing                  |            |
-+------------------+-----------------------------+------------+
-| Red (Constant)   | Crash                       |            |
-+------------------+-----------------------------+------------+
-
-
-
-Troubleshooting (Linux)
------------------------
-
-If the Nitrokey is not detected, proceed the following:
-
-1. Copy this file
-   `41-nitrokey.rules <https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__
-   to ``/etc/udev/rules.d/``. In very rare cases, the system will need
-   the `older
-   version <https://raw.githubusercontent.com/Nitrokey/libnitrokey/master/data/41-nitrokey_old.rules>`__
-   of this file.
-2. Restart udev via ``sudo service udev restart`` or ``udevadm control --reload-rules && udevadm trigger`` if you are using Fedora.
-

@@ -33,6 +33,9 @@ First check the:
 
    Getting Started <getting-started>
    Frequently Asked Questions <faq>
+   Troubleshooting <troubleshooting>
+   Hardware <hardware>
+   Management <management>
 
 and the product guides:
 
