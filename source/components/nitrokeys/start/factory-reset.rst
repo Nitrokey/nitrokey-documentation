@@ -14,7 +14,7 @@ Usage
 
 To change the identity it suffices to send a custom CCID command. This could be achieved with ``pynitrokey`` tool:
 
-1. `Install pynitrokey <../../software/nitropy/all-platforms/installation.html>`.
+1. `Install pynitrokey <../../software/nitropy/all-platforms/installation.html>`__.
 
 2. Connect your Nitrokey Start and verify that it got recognized.
 
