@@ -3,12 +3,7 @@ NitroPad, NitroPC
 
 .. contents:: :local:
 
-First check the:
-
-* `Ubuntu Getting Started <./ubuntu/index.html#getting-started>`__
-* `QubesOS Getting Started <./qubes/index.html#getting-started>`__
-
-Or choose your operating system or BIOS:
+Gettings started and choose your operating system:
 
 .. toctree::
    :maxdepth: 1
@@ -16,7 +11,6 @@ Or choose your operating system or BIOS:
 
    Ubuntu <ubuntu/index>
    QubesOS <qubes/index>
-   Heads <heads/index>
 
 General topics:
 
@@ -24,6 +18,7 @@ General topics:
    :maxdepth: 1
    :glob:
    
+   Heads <heads/index>
    Frequently Asked Questions <faq>
    Operating System Reinstallation <os-reinstallation>
    Verify Sealed Hardware <sealed-hardware>
