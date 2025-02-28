@@ -35,7 +35,7 @@ NetHSM `container images <container/index.html>`__ are available for testing and
 Integration Into Custom Application
 -----------------------------------
 
-To integrate the NetHSM into own custom applications, client libraries are available for almost all programming languages. Here are libraries for `Python <https://github.com/Nitrokey/nethsm-sdk-py>`_ and `Rust <https://github.com/Nitrokey/nethsm-sdk-rs>`_ as well as `this 3rd party Rust crate <https://crates.io/crates/nethsm>`_. For all other programming languages we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_.
+To integrate the NetHSM into own custom applications, client libraries are available for almost all programming languages. Here are our libraries for `Python <https://github.com/Nitrokey/nethsm-sdk-py>`_ and `Rust <https://github.com/Nitrokey/nethsm-sdk-rs>`_ as well as 3rd party `Rust crate <https://crates.io/crates/nethsm>`_ and `Go library <https://github.com/borud/nethsm>`__. For all other programming languages we recommend using `OpenAPI Generator <https://github.com/OpenAPITools/openapi-generator>`_.
 
 The list of all available languages can be retrieved as follows.
 
