@@ -3,10 +3,12 @@ NitroPad, NitroPC
 
 .. contents:: :local:
 
-Getting Started
----------------
+First check the:
 
-Choose your operating system or BIOS:
+* `Ubuntu Getting Started <./ubuntu/index.html#getting-started>`__
+* `QubesOS Getting Started <./qubes/index.html#getting-started>`__
+
+Or choose your operating system or BIOS:
 
 .. toctree::
    :maxdepth: 1
