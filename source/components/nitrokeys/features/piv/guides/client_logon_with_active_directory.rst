@@ -167,5 +167,5 @@ In certain situations this is a required procedure.
    .. tab:: PowerShell
       1. Make sure you are logged on to the user account the certificate corresponds to.
       2. Open PowerShell.
-      3. Change to the personal certficate store of the user with ``Set-Location -Path cert:\CurrentUser\My``.
-      4. Import the certificate to the store with ``Import-Certificate -Filepath '<path>'``, replacing ``<path>`` with the certificate file path.
+      3. Import the certificate with ``Import-Certificate -CertStoreLocation Cert:\CurrentUser\My -FilePath <path>``, replacing ``<file>`` with the certificate file path.
+      4. After the import completed check for the certificate with ``Get-ChildItem Cert:\CurrentUser\My``.
