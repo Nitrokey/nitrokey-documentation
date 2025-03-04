@@ -1,6 +1,12 @@
 Hardware
 ========
 
+.. figure:: images/passkey.webp
+   :alt: img1
+
+
+
+
 
 Touch Button And LED Behavior
 -----------------------------
