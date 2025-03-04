@@ -1,7 +1,7 @@
 Hardware
 ========
 
-.. figure:: images/passkey.webp
+.. figure:: images/Passkey.webp
    :alt: img1
 
 
