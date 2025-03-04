@@ -24,10 +24,11 @@ To check whether the Nitrokey Passkey is correctly recognized, open the System R
 
 Otherwise you can use the commandline with the following command:
 
- If you want to check if your system recognizes the Nitrokey Passkey 
+If you want to check if your system recognizes the Nitrokey Passkey 
 
- .. code-block:: bash
-  system_profiler SPUSBDataType | grep Nitrokey
+.. code-block:: bash
+
+   system_profiler SPUSBDataType | grep Nitrokey
 
 
 Linux
