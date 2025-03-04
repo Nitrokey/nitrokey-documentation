@@ -20,11 +20,9 @@ To check whether the Nitrokey Passkey is correctly recognized, open the Device M
 
 macOS
 ----- 
+
 To check whether the Nitrokey Passkey is correctly recognized, open the System Report and check for the Nitrokey Passkey appearing as a USB device.
-
-Otherwise you can use the commandline with the following command:
-
-If you want to check if your system recognizes the Nitrokey Passkey 
+Otherwise you can use the commandline with the following command to check if your system recognizes the Nitrokey Passkey. 
 
 .. code-block:: bash
 
@@ -47,8 +45,4 @@ If the Nitrokey is not detected, proceed the following:
 2. Restart udev via ``sudo service udev restart`` or ``udevadm control --reload-rules && udevadm trigger`` if you are using Fedora.
 
 
-
-
-
-i
 
