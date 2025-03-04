@@ -26,7 +26,7 @@ Otherwise you can use the commandline with the following command:
 
  If you want to check if your system recognizes the Nitrokey Passkey 
 
- ..bash
+ .. code-block:: bash
   system_profiler SPUSBDataType | grep Nitrokey
 
 
