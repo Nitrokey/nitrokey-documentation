@@ -35,6 +35,12 @@ The bag and all screws on the bottom of the device have been sealed. For the bag
 
    .. figure:: /components/nitropad-nitropc/images/SchraubenmarkierungT430.jpg
       :alt: T430
+   
+   NitroPC Pro 2:
+
+      For the NitroPC Pro 2 we use tamper evident tape on the casing.
+      After receiving your computer check that no tape have been removed.
+      Then you can remove the tape and use rubbing alcohol to remove the tamper marks.
 
 
    This example shows a sealed screw whose glitter represents an
