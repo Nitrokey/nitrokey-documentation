@@ -7,5 +7,5 @@ Desktop Login
    :maxdepth: 1
    :glob:
 
-   Pam (Linux) <pam>
+   PAM (Linux) <pam>
    Smart Policy (Windows) <smart-policy>

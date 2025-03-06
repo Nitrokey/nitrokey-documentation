@@ -32,7 +32,7 @@ features are realized.
      - USB
      - yes
 
-   * - `SMIME`_
+   * - `S/MIME`_
      - Asymmetric cryptography; keep your private key(s) secure; email encryption
      - USB
      - yes
@@ -87,7 +87,7 @@ data migrations from test to stable firmwares will not be implemented.**
 .. _Admin App: https://github.com/Nitrokey/admin-app
 .. _PIV: ../features/piv/index
 .. _WebSmartCard: https://github.com/Nitrokey/nitrokey-websmartcard
-.. _SMIME: ../features/smime/index.html
+.. _S/MIME: ../features/smime/index.html
 
 .. _pynitrokey: ../software/nitropy/index.html
 .. _NitrokeyApp2: ../software/nk-app2/index.html
