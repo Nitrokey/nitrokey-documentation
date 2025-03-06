@@ -24,9 +24,10 @@ Frequently Asked Questions (FAQ)
 
    * Productive usable software container
    * Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool
+   * Direct, dynamic cluster capability, possibly support for external database
+   * BIP32 key derivation function
    * Quorum: m-of-n access scheme and security domain management
    * Performance improvements
-   * Direct, dynamic cluster capability, possibly support for external database
    * Remote attestation and cloud service
    * User authentication via mTLS certificates or FIDO
    * More user rights management (e.g. additional roles, groups)
