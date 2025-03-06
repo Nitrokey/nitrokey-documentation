@@ -6,16 +6,16 @@ HSM Features
 .. toctree::
    :maxdepth: 1
 
-   SMIME <../openpgp-card/smime/index>
+   S/MIME <../openpgp-card/smime/index>
    Windows login <../openpgp-card/desktop-login/smart-policy>
    GPA <../openpgp-card/gpa>
    DNSSEC (Linux only) <dnssec>
    Hard Disk Encryption <../openpgp-card/hard-disk-encryption/index>
    Automatic Screen Lock (Linux only) <../misc/automatic-screen-lock>
    Import Keys Certs <import-keys-certs>
-   Stunnel (Linux only) <../openpgp-card/stunnel>
+   stunnel (Linux only) <../openpgp-card/stunnel>
    Certificate Authority <../openpgp-card/certificate-authority>
-   Ipsec (Linux only) <../openpgp-card/ipsec>
+   IPSec (Linux only) <../openpgp-card/ipsec>
    N-of-m Schemes <n-of-m-schemes>
-   Pkcs11-URL <pkcs11-url>
+   PKCS11-URL <pkcs11-url>
    Apache 2 TLS <apache2-tls>
