@@ -56,3 +56,11 @@ Title case headline examples:
 
 Boxes like note, warning, and important should only contain added information.
 The author has to make sure, that if one would imaging removing all boxes in a certain article, it should still make sense and lead to the expected goal.
+
+### Redirects
+
+If you change the structure of the documentation (e.g. you change the name of a folder) you will need to create a redirect in order that old links with the old structure will still be able to find the desired documentation and will not be a dead link.
+
+To do this you will need to add a rule in this file: `redirects/.htaccess`
+
+You can find instructions and examples at the beginning of the file.
