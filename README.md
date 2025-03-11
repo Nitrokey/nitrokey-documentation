@@ -59,7 +59,7 @@ The author has to make sure, that if one would imaging removing all boxes in a c
 
 ### Redirects
 
-If you change the structure of the documentation (e.g. you change the name of a folder) you will need to create a redirect in order that old links with the old structure will still be able to find the desired documentation and will not be a dead link.
+If you rename files or change the structure of the documentation (e.g. you change the name of a folder) you will need to create a redirect in order that old links with the old structure will still be able to find the desired documentation and will not be a dead link.
 
 To do this you will need to add a rule in this file: `redirects/.htaccess`
 
