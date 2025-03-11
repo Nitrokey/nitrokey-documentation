@@ -8,6 +8,8 @@
 #
 #	Use 301 for final redirects and 302 for temporary redirects
 #
+# Order of rules matters, put most generic ones at the end to avoid overwriting other rules
+#
 # If the browser shows "Internal Server Error" check the Syntax of the Rule Set:
 
 
@@ -193,23 +195,40 @@ RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)automatic-screen-lo
 RedirectMatch 301 "^(/[a-z][a-z])?/hsm/(mac/|windows/|linux/)dnssec$" "$1/nitrokeys/features/hsm/dnssec"
 
 #NitroPad
-RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/(.*)$" "$1/nitropad-nitropc/$2"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/default-boot$" "$1/nitropad-nitropc/heads/default-boot"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/factory-reset$" "$1/nitropad-nitropc/heads/factory-reset"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/factory-reset-heads2$" "$1/nitropad-nitropc/heads/factory-reset-heads2"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/firmware-update-1.4$" "$1/nitropad-nitropc/heads/firmware-update-1.4"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/system-update$" "$1/nitropad-nitropc/heads/system-update"
-RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/$" "$1/nitropad-nitropc/heads/firmware-update"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/firmware-update$" "$1/nitropad-nitropc/heads/firmware-update"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/change-pins$" "$1/nitropad-nitropc/change-pins"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/os-reinstallation$" "$1/nitropad-nitropc/os-reinstallation"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/sealed-hardware$" "$1/nitropad-nitropc/sealed-hardware"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/ubuntu/troubleshooting$" "$1/nitropad-nitropc/troubleshooting"
+
 
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/default-boot$" "$1/nitropad-nitropc/heads/default-boot"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/factory-reset$" "$1/nitropad-nitropc/heads/factory-reset"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/factory-reset-heads2$" "$1/nitropad-nitropc/heads/factory-reset-heads2"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/firmware-update-1.4$" "$1/nitropad-nitropc/heads/firmware-update-1.4"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/system-update$" "$1/nitropad-nitropc/heads/system-update"
-RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/$" "$1/nitropad-nitropc/heads/firmware-update"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/firmware-update$" "$1/nitropad-nitropc/heads/firmware-update"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/change-pins$" "$1/nitropad-nitropc/change-pins"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/os-reinstallation$" "$1/nitropad-nitropc/os-reinstallation"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/sealed-hardware$" "$1/nitropad-nitropc/sealed-hardware"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/qubes/troubleshooting$" "$1/nitropad-nitropc/troubleshooting"
 
+
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropad/(.*)$" "$1/nitropad-nitropc/$2"
 
 #NitroPC
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropc/qubes/os-reinstallation$" "$1/nitropad-nitropc/os-reinstallation"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropc/debian/os-reinstallation$" "$1/nitropad-nitropc/os-reinstallation"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropc/debian/sealed-hardware$" "$1/nitropad-nitropc/sealed-hardware"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropc/qubes/sealed-hardware$" "$1/nitropad-nitropc/sealed-hardware"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropc/ubuntu/os-reinstallation$" "$1/nitropad-nitropc/os-reinstallation"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitropc/ubuntu/sealed-hardware$" "$1/nitropad-nitropc/sealed-hardware"
+
 RedirectMatch 301 "^(/[a-z][a-z])?/nitropc/(.*)$" "$1/nitropad-nitropc/$2"
 
 
