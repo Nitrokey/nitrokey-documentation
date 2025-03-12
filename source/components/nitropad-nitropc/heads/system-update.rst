@@ -92,13 +92,14 @@ Boot Entry Has Changed
 
 4. Now the Nitrokey has to be plugged in, if this is not yet the case.
 
-.. code-block:: bash
+   .. rstcheck: ignore-next-code-block
+   .. code-block:: bash
 
 
-   Confirm the question "Saving a default will modify the disk" with Y. 
-   Confirm the question "Do you wish to add a disk encryption to the TPM" with N.
-   Confirm the question "Please confirm that your GPG card is inserted" with Y.
-   Enter the User PIN of the Nitrokey whenever prompted (default: 123456).
+      Confirm the question "Saving a default will modify the disk" with Y. 
+      Confirm the question "Do you wish to add a disk encryption to the TPM" with N.
+      Confirm the question "Please confirm that your GPG card is inserted" with Y.
+      Enter the User PIN of the Nitrokey whenever prompted (default: 123456).
 
 .. warning::
    Heads expects an English keyboard layout, on which e.g. “y” and “z” are swapped in comparison to the German keyboard layout. If you agree with the default selection (which is written in capital letter) you can also simply confirm by pressing Enter.
