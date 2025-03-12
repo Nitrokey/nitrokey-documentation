@@ -38,7 +38,7 @@ Operating System Reinstallation
    reinstallation.
 
 6. `Sign the boot
-   partition. <system-update.html>`_
+   partition. <heads/system-update.html>`_
 
 To avoid accidential overwriting of valuable data, format the USB drive afterwards.
 
