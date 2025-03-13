@@ -871,6 +871,12 @@ System information such as firmware version, software version, and hardware vers
          Software version: 2.0
          Hardware version: prodrive-hermes-1.0
          Build tag:        v2.0-0-g17ad829
+         Attestation keys
+           P256:           MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEup7z8QYvkzkBuLryG1SgVQjlPhSFW3PzYn1l3uLNd+pSBxX0OBpslcbnmPFr5wSs/iP46+H8MFlEAYUkYv6uuQ==
+           P384:           MHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEfQiurLvEmjsAmumRtIqu70HKehRo8A/nVrqQGiR8Rcr+SUujwgtQByORX5BoRtv4sZNJW4FyLGqvXCIF9IV1puob2+9Qq5oEjz4x4malLbFdyXDmQK8o2NpvcbgOr215
+         Platform Configuration Registers
+           0:              0f6064779fba55b102a6ecc20498c2020deaf2aebef23716ec293b25873647f8
+           2:              2b0d25a4a92b4df5205742954243db9d306a4c3277a6b6958bcbaf3d47def26f
    .. tab:: REST API
       Information about the `/system/info` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_system_info>`__.
 
