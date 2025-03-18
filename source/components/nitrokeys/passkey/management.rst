@@ -15,6 +15,7 @@ nitropy
 You can use the command line tool nitropy to manage the Nitrokey Passkey. 
 
 .. code-block:: bash
+
    ~ nitropy nkpk
 
    Command line tool to interact with Nitrokey devices 0.7.4
