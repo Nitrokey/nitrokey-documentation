@@ -5,9 +5,6 @@ Hardware
    :alt: img1
 
 
-
-
-
 Touch Button And LED Behavior
 -----------------------------
 
