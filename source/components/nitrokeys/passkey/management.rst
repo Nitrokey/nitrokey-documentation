@@ -2,6 +2,11 @@ Manage the Nitrokey Passkey
 ===========================
 
 
+Browser
+-------
+
+This works with all chromium based browsers. Sometimes the options are missing in Windows.
+
 
 
 
@@ -36,4 +41,7 @@ You can use the command line tool nitropy to manage the Nitrokey Passkey.
     test             Run some tests on all connected devices.
     validate-update  Validates the given firmware image and prints the...
     version          Query the firmware version of the device.
+
+Windows
+-------
 
