@@ -7,29 +7,25 @@ Installation
 Install dependencies on your computer. For a host running Debian 12,
 you’ll need:
 
--  a desktop environment (like ``gnome-shell``)
--  a java runtime ``openjdk-17-jre``
+* A desktop environment (like ``gnome-shell``)
+* A Java runtime ``openjdk-17-jre``
 
-Visit the `Smart Card Shell project
-page <https://www.openscdp.org/scsh3/download.html>`__ and grab the file
-archive.
+#. Visit the `Smart Card Shell project page <https://www.openscdp.org/scsh3/download.html>`__ and grab the file archive.
+#. Extract it wherever you want.
+#. Launch ``scsh3gui``.
 
-Extract it wherever you want.
+Prepare Personal HSM
+--------------------
 
-Launch ``scsh3gui``.
+Personal HSM will be used for authentication.
 
-Prepare personnal HSM
----------------------
+Initialize the Personal HSM
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Personnal HSM will be used for authentication.
-
-Initialize the personnal HSM
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Plug the device in. In Smart Card Shell, click on File / Key Manager.
+Plug the device in. In the Smart Card Shell, click on File / Key Manager.
 
 Our HSM should appear in the left pane, as well as in the text shell in
-the middle of the windows.
+the middle of the window.
 
 Note: if you encounter a “GPError” instead of seeing the HSM, restart
 the program.
@@ -40,7 +36,7 @@ in the following:
 ::
 
    Enter Initialization Code (SO-PIN): <SO-PIN of 16 digits>
-   Define a label: hsm_<personnal id>
+   Define a label: hsm_<personal id>
    Define a provisioning URL (Optional): <keep this empty>
 
    Select authentication mechanism: User PIN
@@ -55,7 +51,7 @@ in the following:
 
    keep a profile on disk to save the PINs ?: No
 
-Generate and export authentication keys
+Generate and Export Authentication Keys
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now that our device has been initialized, we can generate the key pair
@@ -67,13 +63,13 @@ ECC key”. Fill in the following:
 ::
 
    Curve: brainpoolP256r1 (beware! signature must not exceed 256 bits or authentication will fail)
-   key label: key_<personnal id>
+   key label: key_<personal id>
    possible algorithms for ECC key: <empty>
 
-Once the key pair has been generated, find the left pane again and :
+Once the key pair has been generated, find the left pane again and:
 
--  unfold the key object
--  right click on the certificate and “export publick key”
+#. Unfold the key object
+#. Right click on the certificate and “export publick key”
 
 We obtain a file whose extension is ``.pka``. We will later upload it to
 the CA HSM as part of our authorized keys for our m-of-n authentication.
@@ -87,7 +83,7 @@ exported.
 Prepare CA HSM
 --------------
 
-CA HSM will have very different settings than personnal HSM.
+CA HSM will have very different settings than personal HSM.
 
 Initialize the CA HSM
 ~~~~~~~~~~~~~~~~~~~~~
@@ -115,7 +111,7 @@ device”. Fill in the following:
 
 Our HSM has been initialized.
 
-Register authorized keys
+Register Authorized Keys
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the left pane, right click on the number of missing keys, then left
@@ -129,14 +125,14 @@ Reiterate until all pubkeys have been added to the authorized keys.
 Our HSM will now require 3 out of 5 key custodians to sign in before
 letting us use our root CA.
 
-Pubkey authentication
+Pubkey Authentication
 ~~~~~~~~~~~~~~~~~~~~~
 
 Beware not to unplug the CA HSM during this procedure. It is ok (and
-probably necessary, unless you have many USB ports) to un/plug personnal
+probably necessary, unless you have many USB ports) to un/plug personal
 HSM one after the other.
 
-While the CA HSM is still plugged in, plug one personnal HSM in a free
+While the CA HSM is still plugged in, plug one personal HSM in a free
 port.
 
 In the left pane, right click on the number of public keys
@@ -158,7 +154,7 @@ very sensitive, the DKEK will be protected by Shamirs’s Secret Sharing.
 For convenience, we will split the DKEK with the same m-of-n scheme, and
 distribute a part of the secret to each custodian. You might distribute
 the secrets to very different people than the key custodians though, as
-no personnal HSM will not be involved here.
+no personal HSM will not be involved here.
 
 Left pane, right click on the HSM, left click on “Create DKEK share”.
 Then fill in:
