@@ -7,8 +7,20 @@ Installing nitropy on Windows
 .. note::
    If you already use Python on your system and are familiar with the command prompt, you can alternatively install nitropy with pipx, see :doc:`../all-platforms/installation`.
 
-How to Install
---------------
+Using Winget
+------------
+
+If you don't have Winget installed on your system you can download and install it from `here <https://github.com/microsoft/winget-cli/releases>`__.
+
+1. Open PowerShell and run this command: ``winget install --id=NitrokeyGmbH.Nitropy  -e``
+
+2. Close PowerShell and relaunch it.
+
+You can find our package informations `here <https://winstall.app/apps/NitrokeyGmbH.Nitropy>`__.
+
+
+Using our release
+-----------------
 
 1. Download the latest ``.exe`` file from `releases <https://github.com/Nitrokey/pynitrokey/releases/>`__.
 2. Open the command console in the administrator mode (Windows 10: press the right mouse button on the Menu Start and select "Windows PowerShell (Admin)" from the menu).
