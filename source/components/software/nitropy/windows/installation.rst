@@ -19,7 +19,7 @@ If you don't have Winget installed on your system you can download and install i
 You can find our package informations `here <https://winstall.app/apps/NitrokeyGmbH.Nitropy>`__.
 
 
-Using our release
+Using our Release
 -----------------
 
 1. Download the latest ``.exe`` file from `releases <https://github.com/Nitrokey/pynitrokey/releases/>`__.

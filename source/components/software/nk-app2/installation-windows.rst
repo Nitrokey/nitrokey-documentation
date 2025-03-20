@@ -21,7 +21,7 @@ If you don't have Chocolatey installed on your system you can find instructions 
 You can find our package informations `here <https://community.chocolatey.org/packages/nitrokey-app2>`__.
 
 
-Using our MSI file
+Using our MSI File
 ------------------
 
 1. `Download <https://github.com/Nitrokey/nitrokey-app2/releases>`__ the Windows installer (MSI file).
