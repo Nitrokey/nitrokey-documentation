@@ -1,6 +1,29 @@
 Windows Install
 ===============
 
+Using Winget
+------------
+
+If you don't have Winget installed on your system you can download and install it from `here <https://github.com/microsoft/winget-cli/releases>`__.
+
+1. Open PowerShell and run this command: ``winget install --id=NitrokeyGmbH.Nitrokey-App  -e``
+
+You can find our package informations `here <https://winstall.app/apps/NitrokeyGmbH.Nitrokey-App>`__.
+
+
+Using Chocolatey
+----------------
+
+If you don't have Chocolatey installed on your system you can find instructions `here <https://chocolatey.org/install>`__.
+
+1. Open PowerShell and run this command: ``choco install nitrokey-app2``
+
+You can find our package informations `here <https://community.chocolatey.org/packages/nitrokey-app2>`__.
+
+
+Using our MSI file
+------------------
+
 1. `Download <https://github.com/Nitrokey/nitrokey-app2/releases>`__ the Windows installer (MSI file).
 
    .. note::
