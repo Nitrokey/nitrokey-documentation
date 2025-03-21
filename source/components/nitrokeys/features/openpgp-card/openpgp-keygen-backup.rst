@@ -204,6 +204,18 @@ Now is good time to backup your key. Please keep this backup very secure. It is 
 
    > gpg --export-secret-keys jane@example.com > sec-key.asc
 
+Optionally user can chose to export an 'encrypted backup' of the secret key ,to avoid accidental leakage of secret key (This is not a full-proof method or replacement for offline computers but should still provide good security against leakeges)
+
+.. code-block:: bash
+
+   > gpg --export-secret-keys --armor jane@example.com | gpg --symmetric --cipher-algo AES256 -o sec-key.gpg
+
+On linux following command can be used to secure wipe and delete the unencrypted backup of key from the disk.
+
+.. code-block:: bash
+
+   > shred -u sec-key.asc
+
 Key Import
 ----------
 
