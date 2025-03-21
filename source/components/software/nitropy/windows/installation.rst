@@ -27,12 +27,6 @@ Using our Release
 .. note::
    Without administrator privileges nitropy might not be able to communicate to the device.
 
-Known Issues
-------------
-
-- Support for Nitrokey Start under Windows 10 is not working without installing libusb libraries (to be described)
-- The installer does not remove a previous installation (manually remove it using settings -> programs and apps)
-
 Using Winget
 ------------
 
@@ -43,3 +37,10 @@ If you don't have Winget installed on your system you can download and install i
 2. Close PowerShell and relaunch it.
 
 You can find our package informations `here <https://winstall.app/apps/NitrokeyGmbH.Nitropy>`__.
+
+Known Issues
+------------
+
+- Support for Nitrokey Start under Windows 10 is not working without installing libusb libraries (to be described)
+- The installer does not remove a previous installation (manually remove it using settings -> programs and apps)
+
