@@ -14,7 +14,7 @@ Ubuntu, Debian
 ~~~~~~~~~~~~~~
 You can install nitropy along with all other required dependencies by using::
 
-    $ sudo apt install pipx && pipx ensurepath && pipx install pynitrokey
+    $ sudo apt install pipx libpython3-dev libudev-dev && pipx ensurepath && pipx install pynitrokey
 
 After logging out or restarting your system, nitropy will now be available.
 
