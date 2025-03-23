@@ -210,6 +210,8 @@ Optionally user can chose to export an 'encrypted backup' of the secret key ,to 
 
    > gpg --export-secret-keys --armor jane@example.com | gpg --symmetric --cipher-algo AES256 -o sec-key.gpg
 
+A passphrase prompt will be shown to you on running the above command. You must need to keep this passphrase safely for successful decryption of your private key.
+
 On linux following command can be used to secure wipe and delete the unencrypted backup of key from the disk.
 
 .. code-block:: bash
