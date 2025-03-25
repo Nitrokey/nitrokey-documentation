@@ -13,6 +13,7 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 
+import importlib.metadata
 import os
 import sys
 
@@ -420,3 +421,6 @@ sphinx_tabs_disable_tab_closing = True
 autodoc_class_signature = 'separated'
 autodoc_member_order = 'groupwise'
 autodoc_typehints = 'description'
+
+nitrokey_sdk_version = importlib.metadata.version("nitrokey")
+rst_epilog = f".. |nitrokey_sdk_version| replace:: v{nitrokey_sdk_version}"
