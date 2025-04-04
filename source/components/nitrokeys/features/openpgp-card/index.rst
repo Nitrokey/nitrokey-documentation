@@ -11,9 +11,9 @@ OpenPGP Card
 	Keygen with Backup <openpgp-keygen-backup>
 	Keygen on device <openpgp-keygen-on-device>
 	Windows Login and S/MIME Email Encryption with Active Directory <openpgp-csp>
-	OpenPGP encryption with Thunderbird <openpgp-thunderbird>
-	OpenPGP encryption with Outlook <openpgp-outlook>
-	OpenPGP Touch Confirmation (Nitrokey 3 only) <uif>
+	Thunderbird <openpgp-thunderbird>
+	Outlook <openpgp-outlook>
+	Touch Confirmation (Nitrokey 3 only) <uif>
 	OpenVPN <openvpn/index>
 	Claws Mail, an email client (and news reader) for Linux and Windows <https://www.claws-mail.org/plugin.php?plugin=gpg>
 	Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>

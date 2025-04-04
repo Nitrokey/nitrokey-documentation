@@ -1,5 +1,5 @@
-OpenPGP Email Encryption with Outlook
-=====================================
+Outlook
+=======
 
 .. product-table:: nk3 pro storage start
 
