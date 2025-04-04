@@ -10,7 +10,7 @@ The following instructions explain the generation of OpenPGP keys and how to cop
 Key Generation
 --------------
 
-At first, you need to generate a key locally. You can decide, which key attributes to use and - most importantly - you can export the key and keep it somewhere save in case you need to restore the key.
+At first, you need to generate a key locally. You can decide, which key attributes to use and - most importantly - you can export the key and keep it somewhere safe in case you need to restore the key.
 
 Main Key and Encryption Subkey
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
