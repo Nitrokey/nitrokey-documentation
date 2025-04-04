@@ -1,5 +1,5 @@
-OpenPGP Touch Confirmation (UIF)
-================================
+Touch Confirmation (UIF)
+========================
 
 .. product-table:: nk3
 

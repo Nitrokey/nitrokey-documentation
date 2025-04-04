@@ -1,5 +1,5 @@
-OpenPGP Email Encryption With Thunderbird
-=========================================
+Thunderbird
+===========
 
 .. product-table:: nk3 pro storage start
 
