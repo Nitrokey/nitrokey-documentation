@@ -168,7 +168,7 @@ It is useful in situations when the user of the Nitrokey should be able to unblo
 PIV
 ---
 
-The *PIN* and *PUK* for PIV (Personal Identity Verification) Card can be set with `pivy-tool <https://github.com/arekinath/pivy>`__.
+The *PIN* and *PUK* for PIV (Personal Identity Verification) card can be set with `nitropy <https://github.com/nitrokey/pynitrokey>`__.
 
 PIN
 ^^^
@@ -185,7 +185,7 @@ The factory default for the *PIN* is ``123456``.
     If this attempts are used up, the *PIN* must be unlocked with the *PUK*.
 
 1. Connect the Nitrokey 3 with your computer.
-2. On the terminal enter ``pivy-tool change-pin``.
+2. On the terminal enter ``nitropy nk3 piv --experimental change-pin``.
 
 PUK
 ^^^
@@ -202,6 +202,6 @@ The factory default for the *PUK* is ``123456``.
     If this attempts are used up, the PIV Card can not be used anymore and must be reset to factory defaults.
 
 1. Connect the Nitrokey 3 with your computer.
-2. On the terminal enter ``pivy-tool change-puk``.
+2. On the terminal enter ``nitropy nk3 piv --experimental change-puk``.
 
 .. end-piv-card
