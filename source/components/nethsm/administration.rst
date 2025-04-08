@@ -729,7 +729,7 @@ Restore
 
 The NetHSM can be restored from a backup file.
 
-* If the NetHSM is *Unprovisioned* it will restore all *User Data* including system configuration and reboot. Therefore the system may get different network settings, TLS certificate and *Unlock Passphrase* afterwards.
+* If the NetHSM is *Unprovisioned* it will restore all *User Data* including system configuration and reboot. Therefore the system may get different network settings, TLS certificate and *Unlock Passphrase* afterwards. The NetHSM ends in a *Locked* state.
 * If the NetHSM is *Provisioned* it will restore users and user keys but not system configuration. In this case all previously existing users and user keys will be deleted. The NetHSM ends in an *Operational* state.
 
 The restore can be applied as follows.
