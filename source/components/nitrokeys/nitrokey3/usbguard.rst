@@ -13,7 +13,7 @@ Especially thunderbolt (which can be blocked globally, see `this config as to ho
 
     Fedora:
 
-    ``sudo dnf install -y usbguard usbguard-notifier usbguard-selinux ``
+    ``sudo dnf install -y usbguard usbguard-notifier usbguard-selinux``
 
 2. Set it up
 
