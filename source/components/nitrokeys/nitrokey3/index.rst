@@ -25,6 +25,7 @@ and the product guides:
     nitropy <nitropy>
     Reset <reset>
     Troubleshooting <troubleshooting>
+    USBGuard <usbguard>
 
 or check out the features:
 
