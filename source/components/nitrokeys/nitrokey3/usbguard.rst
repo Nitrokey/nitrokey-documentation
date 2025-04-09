@@ -7,13 +7,13 @@ Especially thunderbolt (which can be blocked globally, see `this config as to ho
 
 1. Install USBGuard
 
-Debian/Ubuntu or Linux mint:
+    Debian/Ubuntu or Linux mint:
 
-``sudo apt install usbguard usbutils udisks2 usbguard-notifier``
+    ``sudo apt install usbguard usbutils udisks2 usbguard-notifier``
 
-Fedora:
+    Fedora:
 
-``sudo dnf install -y usbguard usbguard-notifier usbguard-selinux ``
+    ``sudo dnf install -y usbguard usbguard-notifier usbguard-selinux ``
 
 2. Set it up
 
