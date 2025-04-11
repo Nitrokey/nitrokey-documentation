@@ -1,6 +1,9 @@
 Passwords
 =========
 
+.. note::
+    You can store up to 50 passwords.
+
 Password entries may consist of:
 
 * Login
