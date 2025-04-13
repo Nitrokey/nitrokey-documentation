@@ -352,7 +352,7 @@ Uploading the Public Key
 
 If you don't want to carry a public key file, you can upload it to keyserver. For the common SKS federated keyservers, for example, keyserver.ubuntu.com. Type ``gpg --keyserver keyserver.ubuntu.com --send-key keyID``. If you are using another machine, you can just import it by using ``gpg --keyserver keyserver.ubuntu.com --recv-key keyID``.
 
-You can also use openpgp.keys.org. The recommended way is to do this by ``gpg --export your_address@example.net``. If you are using another machine, you can just import it by using ``gpg --auto-key-locate hkps://keys.openpgp.org``.
+You can also use keys.openpgp.org. The recommended way is to do this by ``gpg --export your_address@example.net``. If you are using another machine, you can just import it by using ``gpg --auto-key-locate hkps://keys.openpgp.org``.
 
 
 Another possibility is to change the URL setting on your card. Start ``gpg --card-edit`` again and first set the URL where the key is situated (e.g. on the keyserver or on your webpage etc.) via the ``url``
