@@ -3,7 +3,7 @@ NetHSM
 
 This documentation describes the NetHSM software and hardware. The NetHSM software can be either used on the NetHSM hardware, or as a `software container <container>`__ (e.g. Docker).
 
-The NetHSM software features a REST API to perform installation, administration and operational tasks. The recommended way to use a NetHSM is through the tool `nitropy <../software/nitropy/index.html>`_. Alternatively `curl <https://curl.se>`_ can be used to send HTTP requests to the REST API.
+The NetHSM software features a `REST API <https://nethsmdemo.nitrokey.com/api_docs/index.html>`_ to perform installation, administration and operational tasks. The recommended way to use a NetHSM is through the tool `nitropy <../software/nitropy/index.html>`_. Alternatively `curl <https://curl.se>`_ can be used to send HTTP requests to the REST API.
 
 If you obtained a new NetHSM hardware, please refer to the chapter `Getting Started <getting-started.html#getting-started>`__ first. In case you want to restore a backup of a NetHSM, please refer to the chapter `Restore <administration.html#restore>`__.
 
