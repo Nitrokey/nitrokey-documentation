@@ -87,44 +87,44 @@ Procedure
 
 10. The rest of the configuration will be done automatically. You confirm the subsequent restart.
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset/6.jpg
-         :alt: img6
+    .. figure:: /components/nitropad-nitropc/images/factory-reset/6.jpg
+       :alt: img6
 
 
 11. After the restart the OTP secret must be created. Confirm the process with Enter.
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset/7.jpg
-         :alt: img7
+    .. figure:: /components/nitropad-nitropc/images/factory-reset/7.jpg
+       :alt: img7
 
 
 12. Confirm that new OTP Secrets should be created.
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset/8.jpg
-         :alt: img8
+    .. figure:: /components/nitropad-nitropc/images/factory-reset/8.jpg
+       :alt: img8
 
 
 13. When prompted, enter the Admin PIN and TPM password. Both are by default: “12345678”.
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset/9.jpg
-         :alt: img9
+    .. figure:: /components/nitropad-nitropc/images/factory-reset/9.jpg
+       :alt: img9
 
 
 14. You should then reach the Start menu.
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset/10.jpg
-         :alt: img10
+    .. figure:: /components/nitropad-nitropc/images/factory-reset/10.jpg
+       :alt: img10
 
 
 15. Press Enter to start the “Default Boot”.
 
-      .. note::
+    .. note::
 
-         If you see the message that no default exists yet, please follow the procedure described in “Troubleshooting: Default Boot Menu”.
+       If you see the message that no default exists yet, please follow the procedure described in “Troubleshooting: Default Boot Menu”.
 
 16. Once the operating system starts until the encryption password is requested, you are done.
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset/11.jpg
-         :alt: img11
+    .. figure:: /components/nitropad-nitropc/images/factory-reset/11.jpg
+       :alt: img11
 
 
 17. Finally, copy the public PGP key from the data stick to your computer, e.g. to use it for e-mail encryption.
