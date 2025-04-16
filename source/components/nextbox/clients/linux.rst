@@ -30,8 +30,8 @@ Connect using WebDAV
 
 * To mount use: 
   
-   .. code-block:: bash
+  .. code-block:: bash
 
-      mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path
+     mount -t davfs https://my.domain.tld/remote.php/webdav/ /mnt/target/path
 
 
