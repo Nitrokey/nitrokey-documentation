@@ -100,32 +100,32 @@ Procedure
 
 10. After the restart the OTP secret must be created. Confirm the process with Enter.
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec1.jpg
-         :alt: otp secrets generate confirm 1
+    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec1.jpg
+       :alt: otp secrets generate confirm 1
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec2.jpg
-         :alt: otp secrets generate confirm 2
+    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec2.jpg
+       :alt: otp secrets generate confirm 2
 
 11. Enter TPM Password (Default: 12345678)
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
-         :alt: tpm password enter
+    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
+       :alt: tpm password enter
 
 12. Scan QR COde with Phone to inport TOTP Seceret (Optional) and hit Enter 
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
-         :alt: qr code totp
+    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
+       :alt: qr code totp
 
 
 13. When prompted, enter the Admin PIN of your Nitrokey (Default: 12345678) and hit Enter
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/admin-pin.jpg
-         :alt: admin pin nitrokey input
+    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/admin-pin.jpg
+       :alt: admin pin nitrokey input
 
 14. You should then reach the Start menu.
 
-      .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/start-menu.jpg
-         :alt: start menu
+    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/start-menu.jpg
+       :alt: start menu
 
 15. Press Enter to start the “Default Boot”.
 
