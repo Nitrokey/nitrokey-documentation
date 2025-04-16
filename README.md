@@ -52,6 +52,28 @@ Title case headline examples:
     7 Reasons Your Content Needs a Great Headline
     Local Pizza Shop Claims 'Best Pie in Town'
 
+### Indents
+
+Make sure to always compile locally and look out for bad indentations. The most common issue is that
+bad indentations will lead to a quoted block. E.g., this is bad:
+
+.. code-block: rst
+    text before code-block
+    
+    .. code-block: bash
+
+        blabla
+
+The following is bad, mind the bad indentations between the text and the code-block.
+
+.. code-block: rst
+    text before code-block
+
+     .. code-block: bash
+
+         blabla
+
+
 ### Boxes
 
 Boxes like note, warning, and important should only contain added information.
