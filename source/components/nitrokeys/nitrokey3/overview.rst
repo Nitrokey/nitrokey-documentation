@@ -42,7 +42,7 @@ features are realized.
      - USB
      - no
 
-   * - `Admin App`_
+   * - Admin App
      - Administration functions used by `pynitrokey`_ and `NitrokeyApp2`_
      - USB
      - no
@@ -84,7 +84,6 @@ data migrations from test to stable firmwares will not be implemented.**
 .. _U2F: ../features/u2f/index.html
 .. _OpenPGP Card: ../features/openpgp-card/index.html
 .. _Password Safe: ../features/password-safe/index.html
-.. _Admin App: https://github.com/Nitrokey/admin-app
 .. _PIV: ../features/piv/index
 .. _WebSmartCard: https://github.com/Nitrokey/nitrokey-websmartcard
 .. _S/MIME: ../features/smime/index.html
