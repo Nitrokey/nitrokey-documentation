@@ -68,7 +68,7 @@ It is used to sign the Certificate Request (CSR) during provisioning of the Nitr
 
    .. tabs::
       .. tab:: MMC
-         1. From the Command Line, PowerShell, or Run, type ``certsrv.msc`` and press Enter.
+         1. From the Command Line, PowerShell, or Run, type ``certmgr.msc`` and press Enter.
          2. In the navigation pane expand the Certificate Authority (CA) and navigate to **Certificate Templates**.
          3. In the menu bar click **Action → New → Certificate Template to Issue**.
          4. Select the certificate template you want to issue and confirm with **OK**.
