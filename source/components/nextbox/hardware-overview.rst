@@ -62,9 +62,9 @@ the different connectors and interfaces is given.
 10. **Micro HDMI 2 slot**, usable but not needed.
 11. **Headphone Jack**, usable but not needed.
 
-   .. figure:: /components/nextbox/images/hardware-overview/front-side.jpg
-      :alt: front view
-      :align: center
+    .. figure:: /components/nextbox/images/hardware-overview/front-side.jpg
+       :alt: front view
+       :align: center
 
 .. hint:: The front interfaces are all optional and not necessary for NextBox
           usage in general. While the **USB Type-C/Power Supply** may be used, the

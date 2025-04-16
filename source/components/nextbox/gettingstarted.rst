@@ -63,8 +63,8 @@ continue on:
   private cloud from the internet. Our :doc:`guide <remote/index>` covers
   various approaches.
 
-   .. hint:: We prepared a *one-click* remote access method, allowing you
-      to set up basic remote access in seconds. 
+  .. hint:: We prepared a *one-click* remote access method, allowing you
+     to set up basic remote access in seconds. 
 
 * **Connect your devices to your NextBox.** For smartphones the official
   `Android App`_ and `iOS App`_ are both great additions for your personal
