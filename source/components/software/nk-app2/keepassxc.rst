@@ -103,3 +103,40 @@ If the Nirokey 3 device is not recognised by `KeePassXC <https://keepassxc.org/>
    flatpak install flathub org.keepassxc.KeePassXC
 
 * Install ``ccid`` on Arch Linux based systems. See also: `Arch wiki: Nitrokey <https://wiki.archlinux.org/title/Nitrokey>`__.
+
+
+pcscd: Card Not Found
+*********************
+
+**Problem:**
+An application using ``pcscd`` does not show the Nitrokey 3.
+
+**Solution:**
+First, make sure that ``scdaemon`` is not running (see the previous section)::
+
+    $ gpg-connect-agent "SCD KILLSCD" /bye
+
+Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``.
+You should see an entry like this one::
+
+    $ pcsc_scan -r
+    Using reader plug'n play mechanism
+    Scanning present readers..
+    0: Nitrokey 3 [CCID/ICCD Interface] 00 00
+
+If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and there might be an issue with the application that tries to access it.
+If it does not show up, make sure that your ``libccid`` version is up to date.
+Support for the Nitrokey 3 was added in ``libccid`` 1.5.0.
+
+Updating The Device Database
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you cannot update ``libccid`` to a supported version, you have to manually update the device database.
+The path of the database depends on your distribution:
+
+- Arch, Debian, Ubuntu: ``/etc/libccid_Info.plist``
+
+Make sure to backup the file before overwriting it.
+You can download an `updated device database file <https://github.com/Nitrokey/nitrokey-3-firmware/blob/main/Info.plist>`__ from the ``nitrokey-3-firmware`` repository.
+After updating the file, restart ``pcscd`` and run ``pcsc_scan -r`` again.
+The Nitrokey 3 should now show up.
