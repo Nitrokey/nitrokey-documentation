@@ -17,28 +17,27 @@ First Step: Generate a HMAC Secret With the Nitrokey App 2
 4. Click on ``ADD`` to create a new credential
 5. Select ``HMAC`` from the algorithm drop-down menu
 
-    .. note::
+.. note::
 
-        - The credential is automatically named in ``HmacSlot2``.
-        - No extra attributes can be saved for the HMAC credential.
-        - The HMAC secret must be *exactly 20 bytes* long and in *Base32* format. That is exactly 32 characters.
-        - It is possible to save exactly one HMAC secret on a Nitrokey 3.
+    - The credential is automatically named in ``HmacSlot2``.
+    - No extra attributes can be saved for the HMAC credential.
+    - The HMAC secret must be *exactly 20 bytes* long and in *Base32* format. That is exactly 32 characters.
+    - It is possible to save exactly one HMAC secret on a Nitrokey 3.
 
 6. To generate a secret, there is a button in the field on the right-hand. 
    It is also possible to enter your own secret, as long as it is compliant.
 
-    .. warning::
+.. warning::
 
-        The database can no longer be unlocked if the Nitrokey 3 is lost or unavailable! Thus, you may want to set up a second Nitrokey 3 with the same HMAC secret as a backup device.  
-
-        .. important::
-
-            The secret can **only** be seen before saving. If the KeePassXC database is to be used with another Nitrokey 3, the HMAC secret must be copied which is **only** possible **before saving** the credential.
+    The database can no longer be unlocked if the Nitrokey 3 is lost or unavailable! Thus, you may want to set up a second Nitrokey 3 with the same HMAC secret as a backup device.  
+    
+    .. important::
+        The secret can **only** be seen before saving. If the KeePassXC database is to be used with another Nitrokey 3, the HMAC secret must be copied which is **only** possible **before saving** the credential.
 
 7. Click on ``SAVE`` to save the credential
 
 First Option: Protect an Existing KeePassXC Database With a Nitrokey 3
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**********************************************************************
 
 1. Open KeePassXC 
 2. Open the existing KeePassXC database that is to be protected with a Nitrokey 3.
@@ -61,7 +60,8 @@ First Option: Protect an Existing KeePassXC Database With a Nitrokey 3
 
 
 Second Option: Creating a KeePassXC Database, Protected by Nitrokey 3
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*********************************************************************
+
 1. Open KeePassXC 
 2. Select ``Database`` -> ``New Database...`` from the menu bar to create a new KeePassXC database.
 3. Fill in the display name and an optional description for your new database and click on ``Continue``
@@ -86,7 +86,7 @@ Second Option: Creating a KeePassXC Database, Protected by Nitrokey 3
     If the Nitrokey 3 is not recognized, close KeePassXC completely. Then connect the Nitrokey 3 to your computer before restarting KeePassXC.
 
 Troubleshooting for Linux
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 If the Nirokey 3 device is not recognised by `KeePassXC <https://keepassxc.org/>`__ on a Linux system:
 
 * Provided that the udev rules have been set as described `here </software/nitropy/linux/udev.html>`__.
@@ -129,7 +129,7 @@ If it does not show up, make sure that your ``libccid`` version is up to date.
 Support for the Nitrokey 3 was added in ``libccid`` 1.5.0.
 
 Updating The Device Database
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+****************************
 
 If you cannot update ``libccid`` to a supported version, you have to manually update the device database.
 The path of the database depends on your distribution:
