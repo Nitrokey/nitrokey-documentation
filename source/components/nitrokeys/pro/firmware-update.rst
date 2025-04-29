@@ -24,15 +24,15 @@ How to Update
 1. Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions <../../software/nitropy/all-platforms/installation.html>`__ for your OS.
 2. Download the latest stable `firmware image <https://github.com/Nitrokey/nitrokey-pro-firmware/releases>`__.
 
-.. important:: 
-	For production use you should choose the latest stable version (so only versions, that don’t contain i.e. “pre-release” or “RC”).
+   .. important:: 
+      For production use you should choose the latest stable version (so only versions, that don’t contain i.e. “pre-release” or “RC”).
 
 3. To apply the update run:
 
-.. code-block:: bash
+   .. code-block:: bash
 
- $ nitropy pro enable-update
- $ nitropy pro update nitrokey-pro-firmware-<version>.bin
+      $ nitropy pro enable-update
+      $ nitropy pro update nitrokey-pro-firmware-<version>.bin
 
 
 Alternative Update Method
@@ -42,11 +42,10 @@ Alternatively `dfu-util` can be used for the firmware update:
 
 1. Install dfu-util
 
-* Binaries for Windows are available at: http://dfu-util.sourceforge.net/releases/
-* For macOS binaries are available via Homebrew: https://formulae.brew.sh/formula/dfu-util
-* Install `dfu-util` via Homebrew
+   * Binaries for Windows are available `here <http://dfu-util.sourceforge.net/releases/>`__
+   * For macOS `binaries <https://formulae.brew.sh/formula/dfu-util>`__ are available via Homebrew and can be installed by executing:
 
-.. code-block:: bash
+   .. code-block:: bash
 
 	brew install dfu-util
 
@@ -54,9 +53,9 @@ Alternatively `dfu-util` can be used for the firmware update:
 
 3. Now the following command to apply the update
 
-.. code-block:: bash
+   .. code-block:: bash
 
-	$ dfu-util -D update_binary.bin
+      $ dfu-util -D update_binary.bin
 
 4. The boot mode can now be changed back again with the Nitrokey App.
 
