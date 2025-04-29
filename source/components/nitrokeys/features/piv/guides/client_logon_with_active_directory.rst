@@ -92,7 +92,7 @@ The certificate is then written to the Nitrokey.
 
    ::
 
-      nitropy nk3 piv generate-key --key 9A --algo <algorithm> --subject-name <subject-name> --subject-alt-name-upn <subject-alternative-name> --path <file>
+      nitropy nk3 piv --experimental generate-key --key 9A --algo <algorithm> --subject-name <subject-name> --subject-alt-name-upn <subject-alternative-name> --path <file>
 
    The value of ``<algorithm>`` is the used algorithm with its key length, e.g. ``rsa2048``.
    The value of ``<subject-name>`` corresponds to the value of the ``distinguishedName`` attribute of the Active Directory user account.
@@ -112,7 +112,7 @@ The certificate is then written to the Nitrokey.
 
    ::
 
-      nitropy nk3 piv write-certificate --key 9A --format PEM --path <file>
+      nitropy nk3 piv --experimental write-certificate --key 9A --format PEM --path <file>
 
    The value of ``<file>`` is the certificate file.
 
