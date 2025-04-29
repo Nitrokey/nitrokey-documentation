@@ -92,10 +92,12 @@ The certificate is then written to the Nitrokey.
 
    ::
 
-      nitropy nk3 piv generate-key --key 9A --algo <algorithm> --subject-name <subject-name> --subject-alt-name-upn <subject-alternative-name> --out-file <file>
+      nitropy nk3 piv generate-key --key 9A --algo <algorithm> --subject-name <subject-name> --subject-alt-name-upn <subject-alternative-name> --path <file>
 
    The value of ``<algorithm>`` is the used algorithm with its key length, e.g. ``rsa2048``.
-   The values of ``<subject-name>`` and ``<subject-alternative-name>`` corresponds typically to the ``commonName`` and ``userPrincipalName`` attribute of the Active Directory user account.
+   The value of ``<subject-name>`` corresponds to the value of the ``distinguishedName`` attribute of the Active Directory user account.
+   In most cases it is only necessary to include the common name part of the distinguished name, e.g. ``CN=John Doe``.
+   The value of ``<subject-alternative-name>`` corresponds to the value of the ``userPrincipalName`` attribute of the Active Directory user account.
 
 2. Sign the CSR with the certificate authority (CA) of the domain with the command below.
 
@@ -110,7 +112,7 @@ The certificate is then written to the Nitrokey.
 
    ::
 
-      nitropy nk3 piv write-certificate --format PEM --path <file>
+      nitropy nk3 piv write-certificate --key 9A --format PEM --path <file>
 
    The value of ``<file>`` is the certificate file.
 
