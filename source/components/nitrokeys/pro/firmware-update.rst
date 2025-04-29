@@ -42,9 +42,8 @@ Alternatively `dfu-util` can be used for the firmware update:
 
 1. Install dfu-util
 
-   * Binaries for Windows are available at: http://dfu-util.sourceforge.net/releases/
-   * For macOS binaries are available via Homebrew: https://formulae.brew.sh/formula/dfu-util
-   * Install `dfu-util` via Homebrew
+   * Binaries for Windows are available `here <http://dfu-util.sourceforge.net/releases/>`__
+   * For macOS `binaries <https://formulae.brew.sh/formula/dfu-util>`__ are available via Homebrew and can be installed by executing:
 
    .. code-block:: bash
 
