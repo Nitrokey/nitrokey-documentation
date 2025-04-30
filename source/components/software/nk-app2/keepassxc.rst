@@ -17,22 +17,20 @@ First Step: Generate a HMAC Secret With the Nitrokey App 2
 4. Click on ``ADD`` to create a new credential
 5. Select ``HMAC`` from the algorithm drop-down menu
 
-.. note::
-
-    - The credential is automatically named in ``HmacSlot2``.
-    - No extra attributes can be saved for the HMAC credential.
-    - The HMAC secret must be *exactly 20 bytes* long and in *Base32* format. That is exactly 32 characters.
-    - It is possible to save exactly one HMAC secret on a Nitrokey 3.
+   .. note::
+      - The credential is automatically named in ``HmacSlot2``.
+      - No extra attributes can be saved for the HMAC credential.
+      - The HMAC secret must be *exactly 20 bytes* long and in *Base32* format. That is exactly 32 characters.
+      - It is possible to save exactly one HMAC secret on a Nitrokey 3.
 
 6. To generate a secret, there is a button in the field on the right-hand. 
    It is also possible to enter your own secret, as long as it is compliant.
 
-.. warning::
+   .. warning::
+      The database can no longer be unlocked if the Nitrokey 3 is lost or unavailable! Thus, you may want to set up a second Nitrokey 3 with the same HMAC secret as a backup device.  
 
-    The database can no longer be unlocked if the Nitrokey 3 is lost or unavailable! Thus, you may want to set up a second Nitrokey 3 with the same HMAC secret as a backup device.  
-    
-    .. important::
-        The secret can **only** be seen before saving. If the KeePassXC database is to be used with another Nitrokey 3, the HMAC secret must be copied which is **only** possible **before saving** the credential.
+   .. important::
+      The secret can **only** be seen before saving. If the KeePassXC database is to be used with another Nitrokey 3, the HMAC secret must be copied which is **only** possible **before saving** the credential.
 
 7. Click on ``SAVE`` to save the credential
 
@@ -50,11 +48,9 @@ First Option: Protect an Existing KeePassXC Database With a Nitrokey 3
    Click on ``OK`` to add the Nitrokey 3 to the existing KeePassXC database
 
 .. note::
-   
     By default the Nitrokey 3 is used as a second factor in addition to the passphrase. To protect the database by the Nitrokey 3 exclusively, delete the passphrase by clicking the button ``Remove Password``.
 
 .. tip::
-
     If the Nirokey 3 is not recognized, close KeePassXC completely. Then connect the Nitrokey 3 to your computer before restarting KeePassXC.
 
 
@@ -78,11 +74,9 @@ Second Option: Creating a KeePassXC Database, Protected by Nitrokey 3
    Click on ``Continue`` to complete the creation of the new KeePassXC database.
 
 .. note::
-
     If the passphrase is left empty, the database will be protected by the Nitrokey 3 exclusively. If a passphrase is entered, the database will be protected by the passphrase **and** the Nitrokey 3.
 
 .. tip::
-
     If the Nitrokey 3 is not recognized, close KeePassXC completely. Then connect the Nitrokey 3 to your computer before restarting KeePassXC.
 
 Troubleshooting for Linux
@@ -92,15 +86,15 @@ If the Nirokey 3 device is not recognised by `KeePassXC <https://keepassxc.org/>
 * Provided that the udev rules have been set as described `here </software/nitropy/linux/udev.html>`__.
 * Provided that the ``pcscd service`` are has been started with: 
 
-.. code-block:: bash
+  .. code-block:: bash
 
-   sudo systemctl start pcscd.service
+     sudo systemctl start pcscd.service
 
 * Install the latest version of KeePassXC with flatpak:
 
-.. code-block:: bash
+  .. code-block:: bash
 
-   flatpak install flathub org.keepassxc.KeePassXC
+     flatpak install flathub org.keepassxc.KeePassXC
 
 * Install ``ccid`` on Arch Linux based systems. See also: `Arch wiki: Nitrokey <https://wiki.archlinux.org/title/Nitrokey>`__.
 
@@ -114,15 +108,19 @@ An application using ``pcscd`` does not show the Nitrokey 3.
 **Solution:**
 First, make sure that ``scdaemon`` is not running (see the previous section)::
 
-    $ gpg-connect-agent "SCD KILLSCD" /bye
+.. code-block:: bash
+
+   $ gpg-connect-agent "SCD KILLSCD" /bye
 
 Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``.
 You should see an entry like this one::
 
-    $ pcsc_scan -r
-    Using reader plug'n play mechanism
-    Scanning present readers..
-    0: Nitrokey 3 [CCID/ICCD Interface] 00 00
+.. code-block: bash
+
+   $ pcsc_scan -r
+   Using reader plug'n play mechanism
+   Scanning present readers..
+   0: Nitrokey 3 [CCID/ICCD Interface] 00 00
 
 If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and there might be an issue with the application that tries to access it.
 If it does not show up, make sure that your ``libccid`` version is up to date.
