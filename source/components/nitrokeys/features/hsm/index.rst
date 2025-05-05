@@ -10,7 +10,6 @@ HSM Features
    Windows login <../openpgp-card/desktop-login/smart-policy>
    GPA <../openpgp-card/gpa>
    DNSSEC (Linux only) <dnssec>
-   Hard Disk Encryption <../openpgp-card/hard-disk-encryption/index>
    Automatic Screen Lock (Linux only) <../misc/automatic-screen-lock>
    Import Keys Certs <import-keys-certs>
    stunnel (Linux only) <../openpgp-card/stunnel>
@@ -19,3 +18,6 @@ HSM Features
    N-of-m Schemes <n-of-m-schemes>
    PKCS11-URL <pkcs11-url>
    Apache 2 TLS <apache2-tls>
+
+* `Hard Disk Encryption <../openpgp-card/hard-disk-encryption/index.html>`_
+
