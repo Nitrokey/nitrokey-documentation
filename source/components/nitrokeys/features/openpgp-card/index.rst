@@ -21,7 +21,7 @@ OpenPGP Card
 	Desktop Login <desktop-login/index>
 	SSH <ssh/index>
 	IPSec <ipsec>
-	Hard Disk Encryption <hard-disk-encryption/index>
+	Hard Disk Encryption <hard-disk-encryption>
 	Stunnel <stunnel>
 	Gnu Privacy Assistant (GPA) <gpa>
 	EID <eid>
