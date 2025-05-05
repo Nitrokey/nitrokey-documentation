@@ -6,7 +6,7 @@ Installing the Nitrokey App 2 via Pipenv
 
 This is the simplest way for now to install the Nitrokey App 2 on macOS. Further methods are being worked on.
 
-1. `Install <https://pipenv.pypa.io/en/latest/installation.htm>`__ pipenv if it is not already installed.
+1. `Install <https://pipenv.pypa.io/en/latest/installation.html>`__ pipenv if it is not already installed.
 
 2. Create a work directory:
 
