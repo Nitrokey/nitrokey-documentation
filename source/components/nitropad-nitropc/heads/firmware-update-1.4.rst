@@ -65,7 +65,7 @@ we document this here for the curios.
 
 3. Using ``flashrom`` read out the **bottom** flash (the 8MB image)
 
-4. Using ``ifdtool`` (`coreboot ifdtool docs <https://doc.coreboot.org/ifdtool/index.html>`__) extract the ``GbE`` flashregion from the 
+4. Using ``ifdtool`` (`coreboot ifdtool docs <https://doc.coreboot.org/util/ifdtool/index.html>`__) extract the ``GbE`` flashregion from the 
    image and replace the ``GbE``-region inside your ``-maximized`` image.
 
 5. Split the modified firmware image using ``dd`` (as described in the coreboot documentation) into ``-top`` and ``-bottom``
