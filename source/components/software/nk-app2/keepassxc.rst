@@ -108,14 +108,10 @@ An application using ``pcscd`` does not show the Nitrokey 3.
 **Solution:**
 First, make sure that ``scdaemon`` is not running (see the previous section)::
 
-.. code-block:: bash
-
    $ gpg-connect-agent "SCD KILLSCD" /bye
 
 Now list the smartcards recognized by ``pcscd`` with ``pcsc_scan -r``.
 You should see an entry like this one::
-
-.. code-block: bash
 
    $ pcsc_scan -r
    Using reader plug'n play mechanism
