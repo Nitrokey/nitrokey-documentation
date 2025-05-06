@@ -31,11 +31,11 @@ How can I update my NitroPad?
 -----------------------------
 
 Updating from ``v1.3.1`` onwards has two different ways:
-    
-    * Legacy update using either ``nitropad-t430-v1.4.npf`` or ``nitropad-x230-v1.4.npf`` 
-      from the Heads menu, see: :doc:`firmware-update`
-    * When using an external flasher device you can use the ``-maximized`` images. This keeps graphical HEADS dialogues working. Read
-      about the external flashing below.
+
+* Legacy update using either ``nitropad-t430-v1.4.npf`` or ``nitropad-x230-v1.4.npf`` 
+  from the Heads menu, see: :doc:`firmware-update`
+* When using an external flasher device you can use the ``-maximized`` images. This keeps graphical HEADS dialogues working. Read
+  about the external flashing below.
 
 .. warning::
     Never try updating your NitroPad using the `-maximized` image, if you do not 
@@ -48,7 +48,7 @@ How can I update to *-maximized*?
 
 .. hint::
     We highly recommend to NOT DO THIS ON YOUR OWN, as long as 
-    you are not exactly know what you are doing!
+    you are not exactly knowing what you are doing!
 
     We have a service to do this upgrade on your NitroPad, please
     write an e-mail to "shop at nitrokey.com" together with your sales order number (SOxxxxxx).
