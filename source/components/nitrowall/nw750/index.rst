@@ -18,3 +18,5 @@ Getting Started
    factory-reset.rst  
    imei-change.rst
    firmware-update.rst
+   faq.rst
+
