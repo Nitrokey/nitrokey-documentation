@@ -873,7 +873,7 @@ System information such as firmware version, software version, and hardware vers
          Host:             192.168.1.1
          Firmware version: 1.0-prod
          Software version: 2.0
-         Hardware version: prodrive-hermes-1.0
+         Hardware version: prodrive-hermes-1
          Build tag:        v2.0-0-g17ad829
          Attestation keys
            P256:           MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEup7z8QYvkzkBuLryG1SgVQjlPhSFW3PzYn1l3uLNd+pSBxX0OBpslcbnmPFr5wSs/iP46+H8MFlEAYUkYv6uuQ==
