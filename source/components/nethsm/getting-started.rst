@@ -138,6 +138,8 @@ Please follow the two step process closely to install the NetHSM hardware.
 
 In an unprovisioned state the NetHSM hardware factory default IP address is ``192.168.1.1``.
 
+You can test the connection to a new NetHSM either by ``ping 192.168.1.1`` or by opening ``192.168.1.1`` in a web browser which requires allowing a security exception because of an invalid, self-signed certificate.
+
 Provisioning
 ------------
 
@@ -168,7 +170,7 @@ The initial provisioning is executed as follows.
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST provision
+         $ nitropy nethsm --host $NETHSM_HOST --no-verify-tls provision
 
       .. code-block::
 
