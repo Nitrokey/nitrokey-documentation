@@ -884,7 +884,7 @@ System information such as firmware version, software version, and hardware vers
    .. tab:: REST API
       Information about the `/system/info` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_system_info>`__.
 
-A NetHSM 1 identifies as hardware version prodrive-hermes-1.0 and a NetHSM 2 as msi-z790-1.0.
+A NetHSM 1 identifies as hardware version *prodrive-hermes-1* and a NetHSM 2 as *msi-z790-1*.
 
 Reboot and Shutdown
 ~~~~~~~~~~~~~~~~~~~
@@ -991,7 +991,7 @@ Add a user account to the NetHSM.
 Each user account has a *Role*, which needs to be specified.
 Please refer to chapter `Roles <administration#roles>`__ to learn more about *Roles*.
 
-Optionally, a user can be assigned to a `*Namespace* <administration#namespaces>`__.
+Optionally, a user can be assigned to a `Namespace <administration#namespaces>`__.
 
 .. note::
    The user ID must be alphanumeric.
