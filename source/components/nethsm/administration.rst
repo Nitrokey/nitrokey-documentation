@@ -785,6 +785,10 @@ Software updates can be installed in a two-step process. First the update image 
 
    Data loss may occur due to the installation of a beta update! Stable versions should not cause data loss. However, it's recommended to create a backup before updating.
 
+.. warning::
+
+   Ensure you install the correct update file for your hardware model NetHSM 1 or NetHSM 2. You can check your model in the `system information <administration#system-information>`__.
+
 The update file can be uploaded as follows.
 
 .. tabs::
@@ -879,6 +883,8 @@ System information such as firmware version, software version, and hardware vers
            2:              2b0d25a4a92b4df5205742954243db9d306a4c3277a6b6958bcbaf3d47def26f
    .. tab:: REST API
       Information about the `/system/info` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_system_info>`__.
+
+A NetHSM 1 identifies as hardware version prodrive-hermes-1.0 and a NetHSM 2 as msi-z790-1.0.
 
 Reboot and Shutdown
 ~~~~~~~~~~~~~~~~~~~
