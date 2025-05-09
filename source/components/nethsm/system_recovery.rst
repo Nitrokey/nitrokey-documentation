@@ -27,17 +27,20 @@ The system recovery can be performed as follows.
 
    .. tab:: NetHSM 2
 
-      1. Download the installer image from the `releases page <https://github.com/nitrokey/nethsm/releases>`__.
+      1. Download the installer image ending with *...installer.img.zip* from the provided private download page.
 
          .. warning::
             Download the installer image of the same version which was installed at the time of corruption.
             A downgrade, or upgrade skipping versions, is not supported.
-      2. Write the installer image to a flash drive.
-         On Linux you can use the `dd` utility to perform the write operation.
-      3. Connect a keyboard, monitor and the flash drive with the NetHSM.
-      4. Make sure the system is turned off, but connected to power.
-      5. Turn on the NetHSM with the power button on the front.
-      6. When you see the boot menu on the monitor, select *NetHSM automatic boot (USB or primary system)* in the first menu
+      2. Unpack the installer image.
+      3. Write the installer image to a USB flash drive.
+         For this you could use the graphical tool `balenaEtcher <https://etcher.balena.io/>`__. On Linux you could also use the command line tool `dd`.
+      4. Connect the USB flash drive with a USB port at the front panel of the NetHSM.
+      5. Optionally: Connect a keyboard and monitor with the NetHSM.
+      6. Make sure the system is turned off, but connected to power.
+      7. Turn the NetHSM on by pressing the power button on the front.
+      8. Now the software is going to be installed. Wait for ca. one minute until the NetHSM shuts down.
+         Optionally, if you have a monitor connected: When you see the boot menu, select *NetHSM automatic boot (USB or primary system)* in the first menu
          and then *NetHSM Software Installer* in the second menu.
 
          .. warning::
@@ -46,7 +49,7 @@ The system recovery can be performed as follows.
 
    .. tab:: NetHSM 1
 
-      1. Download the installer image from the `releases page <https://github.com/nitrokey/nethsm/releases>`__.
+      1. Download the installer image ending with from the provided private download page.
 
          .. warning::
             Download the installer image of the same version which was installed at the time of corruption.
