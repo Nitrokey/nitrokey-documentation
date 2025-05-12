@@ -1,12 +1,5 @@
-Mobile Device Management (MDM)
-******************************
-
-NitroPhones can be centrally managed by using open source Headwind MDM.
-
-Depending on whether you are using the paid or gratis license, some features might be available or not.
-
-Install MDM on NitroPhone
-#########################
+App Installation
+################
 
 .. important::
    
@@ -115,7 +108,7 @@ Installation With ADB
 Your HMDM app is ready to use. Refer to "Register NitroPhone on HMDM Server" at the end of this page.
 
 Register NitroPhone on HMDM Server
-##################################
+==================================
 
 1. Log into your server web panel and go to the "Configurations" tab and edit or create one configuration.
    For testing purposes you can try the `demo server <https://app.h-mdm.com/#/login>`__.
