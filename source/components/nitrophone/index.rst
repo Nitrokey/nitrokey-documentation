@@ -24,5 +24,5 @@ For more details, see the following pages:
    Background Images <background-images>
    Frequently Asked Questions <faq>
    Mobile Device Management <mdm>
-
+   Headwind MDM (HMDM) <headwind-mdm/index>
 
