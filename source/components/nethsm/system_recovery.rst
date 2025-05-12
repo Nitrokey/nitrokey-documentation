@@ -35,6 +35,7 @@ The system recovery can be performed as follows.
       2. Unpack the installer image.
       3. Write the installer image to a USB flash drive.
          For this you could use the graphical tool `balenaEtcher <https://etcher.balena.io/>`__. On Linux you could also use the command line tool `dd`.
+         Ignore any warning that a partition table is missing.
       4. Connect the USB flash drive with a USB port at the front panel of the NetHSM.
       5. Optionally: Connect a keyboard and monitor with the NetHSM.
       6. Make sure the system is turned off, but connected to power.
@@ -49,7 +50,7 @@ The system recovery can be performed as follows.
 
    .. tab:: NetHSM 1
 
-      1. Download the installer image ending with from the provided private download page.
+      1. Download the installer image ending  with *...installer.img.zip* from the provided private download page.
 
          .. warning::
             Download the installer image of the same version which was installed at the time of corruption.
