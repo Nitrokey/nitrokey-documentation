@@ -87,7 +87,7 @@ The container runtime secrets such as certificates and private keys need to be s
 Usage
 ^^^^^
 
-The production container supports two `modes of operation <container.html#Modes of Operation>`__. The following chapters describe how to run the container with the provided compose files or with the _run_ command.
+The production container supports two `modes of operation <container.html#Modes of Operation>`__. The following chapters describe how to run the container with the provided compose files or with the *run* command.
 
 Unix Mode
 ~~~~~~~~~
