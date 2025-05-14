@@ -66,23 +66,23 @@ The container can be configured with the following environment variables.
 
 The container runtime secrets such as certificates and private keys need to be set with the secrets feature of Docker or Podman.
 
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Secret variable | Description                                                                                                                      |
-+=================+==================================================================================================================================+
-| ``ca_cert``     | CA certificate which signed the client certificate and server certificate.                                                       |
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| ``client_cert`` | Client certificate for authentication of the NetHSM process with the key-value store.                                            |
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| ``client_key``  | Client key for authentication of the NetHSM process with the key-value store.                                                    |
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| ``server_cert`` | Server certificate for the API of the key-value store.                                                                           |
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| ``server_key``  | Server key for the API of the key-value store.                                                                                   |
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| ``device_key``  | Device key of the NetHSM process. To learn more about the device key refer to chapter                                            |
-|                 | `Terminology and Conventions <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#terminology-and-conventions>`__ |
-|                 | in the system design.                                                                                                            |
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
++----------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| Secret variable      | Description                                                                                                                      |
++======================+==================================================================================================================================+
+| ``ca_cert``          | CA certificate which signed the client certificate and server certificate.                                                       |
++----------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| ``etcd_client_cert`` | Client certificate for authentication of the NetHSM process with the key-value store.                                            |
++----------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| ``etcd_client_key``  | Client key for authentication of the NetHSM process with the key-value store.                                                    |
++----------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| ``etcd_server_cert`` | Server certificate for the API of the key-value store.                                                                           |
++----------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| ``etcd_server_key``  | Server key for the API of the key-value store.                                                                                   |
++----------------------+----------------------------------------------------------------------------------------------------------------------------------+
+| ``device_key``       | Device key of the NetHSM process. To learn more about the device key refer to chapter                                            |
+|                      | `Terminology and Conventions <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#terminology-and-conventions>`__ |
+|                      | in the system design.                                                                                                            |
++----------------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 Usage
 ^^^^^
