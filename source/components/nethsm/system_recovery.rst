@@ -36,11 +36,10 @@ The system recovery can be performed as follows.
       3. Write the installer image to a USB flash drive.
          For this you could use the graphical tool `balenaEtcher <https://etcher.balena.io/>`__. On Linux you could also use the command line tool `dd`.
          Ignore any warning that a partition table is missing.
-      4. Connect the USB flash drive with a USB port of the NetHSM.
-         The NetHSM can boot from any USB-A port of the machine.
+      4. Connect the USB flash drive with any USB port of the NetHSM.
 
          .. important::
-            Some USB drives are incompatible with the firmware of the NetHSM.
+            Some USB drives are incompatible with the NetHSM.
             This results in the NetHSM not recognizing them as a boot media.
             In case the NetHSM does not boot from the connected USB drive, try a different USB drive model.
 
