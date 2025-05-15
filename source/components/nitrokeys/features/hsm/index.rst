@@ -21,7 +21,7 @@ HSM Features
 OpenPGP Card Features 
 #####################
 
-The Nitrokey HSM is essentially a more potent OpenPGPCard, thus some of the OpenPGPCard features are also applicable for the HSM - although might need some adjustments.
+The Nitrokey HSM is essentially a more potent OpenPGP Card, thus some of the OpenPGP Card features are also applicable for the HSM - although might need some adjustments.
 
 * `Hard Disk Encryption <../openpgp-card/hard-disk-encryption/index.html>`_
-*   `Windows login <../openpgp-card/desktop-login/smart-policy.html>`__
+*  `Windows login <../openpgp-card/desktop-login/smart-policy.html>`__
