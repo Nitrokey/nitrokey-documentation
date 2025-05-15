@@ -29,7 +29,7 @@ The system recovery can be performed as follows.
 
       1. Download the installer image ending with *...installer.img.zip* from the provided private download page.
 
-         .. warning::
+         .. important::
             Download the installer image of the same version which was installed at the time of corruption.
             A downgrade, or upgrade skipping versions, is not supported.
       2. Unpack the installer image.
@@ -38,7 +38,7 @@ The system recovery can be performed as follows.
          Ignore any warning that a partition table is missing.
       4. Connect the USB flash drive with any USB port of the NetHSM.
 
-         .. important::
+         .. note::
             Some USB drives are incompatible with the NetHSM.
             This results in the NetHSM not recognizing them as a boot media.
             In case the NetHSM does not boot from the connected USB drive, try a different USB drive model.
