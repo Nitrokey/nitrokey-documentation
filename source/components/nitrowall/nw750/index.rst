@@ -1,4 +1,4 @@
-Nitrowall NW750
+NitroWall NW750
 ===============
 
 Getting Started
@@ -18,3 +18,5 @@ Getting Started
    factory-reset.rst  
    imei-change.rst
    firmware-update.rst
+   Frequently Asked Questions <faq>
+
