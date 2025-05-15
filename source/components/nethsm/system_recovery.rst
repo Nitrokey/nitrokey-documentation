@@ -38,7 +38,7 @@ The system recovery can be performed as follows.
          Ignore any warning that a partition table is missing.
       4. Connect the USB flash drive with any USB port of the NetHSM.
 
-         .. information::
+         .. note::
             Some USB drives are incompatible with the NetHSM.
             This results in the NetHSM not recognizing them as a boot media.
             In case the NetHSM does not boot from the connected USB drive, try a different USB drive model.
