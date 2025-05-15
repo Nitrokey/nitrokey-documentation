@@ -116,6 +116,52 @@ The certificate is then written to the Nitrokey.
 
    The value of ``<file>`` is the certificate file.
 
+4. Map the certificate with the Active Directory user account.
+   Create the certificate mappings with the command below.
+
+   ::
+
+      nitropy nk3 piv --experimental get-windows-auth-mapping
+
+   Choose one of the offered certificate mappings.
+
+   .. tip::
+      Microsoft recommends the use of the ``X509IssuerSerialNumber`` mapping.
+
+   Write the choosen mapping to the ``altSecurityIdentities`` attribute of the Active Directory user object.
+   You can use the *Active Directory Users and Computers* application or PowerShell for this operation.
+
+   .. tabs::
+      .. tab:: Active Directory Users and Computers
+         1. From the Command Line, PowerShell, or Run, type ``dsa.msc`` and press Enter.
+         2. In the menu bar click **View → Advanced Features**.
+         3. Select the respective user object.
+         4. In the menu bar click **Action → Properties**.
+         5. Open the tab **Attribute Editor**.
+         6. Select the attribute ``altSecurityIdentities``.
+         7. Click on **Edit**.
+         8. Insert the certificate mapping in the text field and click **Add**.
+         9. Apply the change with a click on **OK**.
+
+      .. tab:: PowerShell
+         1. Open PowerShell.
+         2. Add the value with ``Set-ADUser -Identity "<sAMAccountName>" -Add @{altSecurityIdentities="<certificate-mapping>"}``, replacing ``<sAMAccountName>`` with the value of the user logon name and ``<certificate-mapping>`` with the choosen certficate mapping from above.
+
+   .. important::
+      If the certificate mapping is not correctly set you will receive the error message ``Logon screen message: Your credentials could not be verified.`` when attempting to logon.
+      Additionally, you will see the event message below in the Windows system event log.
+
+      **Source**
+
+      ::
+
+         Kerberos-Key-Distribution-Center
+
+      **Message**
+
+      ::
+
+         The Key Distribution Center (KDC) encountered a user certificate that was valid but could not be mapped to a user in a secure way (such as via explicit mapping, key trust mapping, or a SID). Such certificates should either be replaced or mapped directly to the user via explicit mapping. See https://go.microsoft.com/fwlink/?linkid=2189925 to learn more.
 
 Revoke smartcard logon for use with Active Directory (AD)
 ---------------------------------------------------------
