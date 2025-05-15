@@ -28,14 +28,10 @@ Modes of Operation
 
 The image can be run in two modes of operation, i.e. Unix process or unikernel.
 
-The Unix process mode runs NetHSM as a process on top of the operating system.
-
-The unikernel mode runs NetHSM as a guest in a KVM based virtual machine and provides strong separation from the host operating system.
+* The Unix process mode runs NetHSM as a process on top of the operating system.
+* The unikernel mode runs NetHSM as a guest in a KVM based virtual machine and provides strong separation from the host operating system.
 This mode is only available on Linux and requires access to the ``/dev/tun`` and ``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability.
-
-.. important::
-
-   For security choose to run the container in the unikernel mode.
+For security reasons we recommend the unikernel mode.
 
 The mode can be set with the environment variable ``MODE`` (see next chapter `Configuration <container.html#production-image-configuration>`__).
 
