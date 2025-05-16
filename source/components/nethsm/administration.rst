@@ -1153,13 +1153,14 @@ The user passphrase can be set as follows.
 Namespaces
 ~~~~~~~~~~
 
-*Namespaces* were introduced in software version 2.0. When migrating from an earlier version of the software, all existing users and keys will be without a Namespace.
-
 Similarly to the concept of partitions, NetHSM supports the more flexible *Namespaces* which group keys, administrators, and users on a NetHSM into separate subsets.
 Users can only see and use keys in the same Namespace and can only see users in the same Namespace.
 It is not possible to see users and to see and use keys of other Namespaces.
 When a new user is created, it inherits the Namespace of the user that created it.
-The available storage capacity is shared between all Namespaces. 
+The available storage capacity is shared between all Namespaces.
+An practically unlimited amount of Namespaces can be used without requiring additional licenses.
+
+*Namespaces* were introduced in software version 2.0. When migrating from an earlier version of the software, all existing users and keys will be without a Namespace.
 
 Users with the *Administrator* `Role <administration#roles>`__ are also referred to as *R-Administrator* if they are not in a Namespace, or *N-Administrator* if they are in a Namespace.
 
