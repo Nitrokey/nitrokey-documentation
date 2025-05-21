@@ -11,6 +11,6 @@ It can only be reset if the PIN and PUK are blocked.
 
 The reset to factory defaults can be performed as follows.
 
-::
+.. code-block::
 
     nitropy nk3 piv --experimental factory-reset

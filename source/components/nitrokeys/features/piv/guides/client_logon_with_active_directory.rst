@@ -90,7 +90,7 @@ The certificate is then written to the Nitrokey.
 
 1. Generate a private key and write the CSR to file with the command below.
 
-   ::
+   .. code-block::
 
       nitropy nk3 piv --experimental generate-key --key 9A --algo <algorithm> --subject-name <subject-name> --subject-alt-name-upn <subject-alternative-name> --path <file>
 
@@ -101,7 +101,7 @@ The certificate is then written to the Nitrokey.
 
 2. Sign the CSR with the certificate authority (CA) of the domain with the command below.
 
-   ::
+   .. code-block::
 
       certreq -attrib CertificateTemplate:<template-name> -submit <file>
    
@@ -110,7 +110,7 @@ The certificate is then written to the Nitrokey.
 
 3. Write the signed certificate to the Nitrokey with the command below.
 
-   ::
+   .. code-block::
 
       nitropy nk3 piv --experimental write-certificate --key 9A --format PEM --path <file>
 
@@ -119,7 +119,7 @@ The certificate is then written to the Nitrokey.
 4. Map the certificate with the Active Directory user account.
    Create the certificate mappings with the command below.
 
-   ::
+   .. code-block::
 
       nitropy nk3 piv --experimental get-windows-auth-mapping
 

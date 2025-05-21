@@ -66,6 +66,6 @@ The PIV smart card can generate a new private key on the Nitrokey.
 
 The command below will create a private key in key slot ``9a`` for the user with the subject name ``John Doe`` and subject alternative name ``jd@nitrokey.local``.
 
-::
+.. code-block::
 
    nitropy nk3 piv --experimental generate-key --key 9a --subject-name "John Doe" --subject-alt-name-upn "jd@nitrokey.local"
