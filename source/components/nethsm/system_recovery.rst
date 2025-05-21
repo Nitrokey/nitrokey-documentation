@@ -58,7 +58,7 @@ The system recovery can be performed as follows.
 
       1. Download the installer image ending  with *...installer.img.zip* from the provided private download page.
 
-         .. warning::
+         .. important::
             Download the installer image of the same version which was installed at the time of corruption.
             A downgrade, or upgrade skipping versions, is not supported.
       2. Make sure the system is turned off, but connected to power, and the power button on the back turned on.
