@@ -35,7 +35,7 @@ For each purpose the private key and its corresponding certificate are stored in
 Algorithms
 ----------
 
-PIV uses asymmetric and symmetric algorithms. The asymmetric algorithms are used for the user private keys and the symmetric algorithms for the management key.
+The PIV smart card uses asymmetric and symmetric algorithms. The asymmetric algorithms are used for the user private keys and the symmetric algorithms for the management key.
 
 Supported asymmetric key algorithms:
 

@@ -74,7 +74,7 @@ To unblock the *PIN*, use the command ``nitropy nk3 piv --experimental reset-ret
 This command requires the *PUK*.
 
 The *PUK* has a retry counter of 3 attempts.
-If these attempts are used up, the PIV Card can not be used anymore and must be reset to factory defaults.
+If these attempts are used up, the PIV smart card can not be used anymore and must be reset to factory defaults.
 Please refer to the chapter `Factory Reset <factory_reset.html>`__ to learn more.
 
 

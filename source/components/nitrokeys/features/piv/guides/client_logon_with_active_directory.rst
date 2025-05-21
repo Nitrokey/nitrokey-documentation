@@ -3,7 +3,7 @@ Client Logon with Active Directory
 
 .. product-table:: nk3
 
-This document explains how to use the PIV application of a Nitrokey 3 for smartcard logon with Active Directory. It is available as of firmware version 1.8 and higher.
+This document explains how to use the PIV smart card of a Nitrokey 3 for logon with Active Directory. It is available as of firmware version 1.8 and higher.
 
 In the future, this manual provisioning may be automated through a Windows MiniDriver.
 
@@ -20,7 +20,7 @@ On the client machine only access to the respective user account used for logon 
       * If you have clients leaving the company network, make sure the published full and delta certificate revocation lists (CRL) are retrievable from external networks.
 * Windows client (supported versions are Windows 10, 11 in editions *Professional* and *Enterprise*)
    * Client must be a domain member of the Active Directory (AD) domain.
-* Nitrokey 3 with PIV application.
+* Nitrokey 3 with PIV smart card.
 
 Configure smartcard logon for use with Active Directory (AD)
 ------------------------------------------------------------

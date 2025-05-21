@@ -3,7 +3,7 @@ PIV (Personal Identity Verification)
 
 .. product-table:: nk3
 
-The *Personal Identity Verfication* (PIV) is based on the NIST special publication `SP 800-73 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__.
+The *Personal Identity Verfication* (PIV) smart card is based on the NIST special publication `SP 800-73 <https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-73-4.pdf>`__.
 It is available as of firmware version 1.8 and higher.
 
 .. toctree::
