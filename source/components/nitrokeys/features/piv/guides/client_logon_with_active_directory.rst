@@ -58,7 +58,7 @@ It is used to sign the Certificate Request (CSR) during provisioning of the Nitr
 
                   .. important::
                      Microsoft recommends to use the RSA algorithm with a key length of ``2048`` Bit.
-                     If you choose to use Eliptic Curve (EC) keys you need to make additional changes on your client computers.
+                     If you choose to use Elliptic Curve (EC) keys you need to make additional changes on your client computers.
 
             **Subject Name**
                * Set **Supply in the request**.
