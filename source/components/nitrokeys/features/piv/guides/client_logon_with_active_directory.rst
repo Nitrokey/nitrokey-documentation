@@ -13,7 +13,7 @@ Prerequisites
 The setup requires administrative access to the machines running Active Directory Directory Services (ADDS) and Active Directory Certificate Services (ADCS).
 On the client machine only access to the respective user account used for logon is required.
 
-* Windows server (supported versions are Windows Server 2016, 2019, 2022 in all editions)
+* Windows server (supported versions are Windows Server 2016, 2019, 2022, 2025 in Standard and Enterprise editions)
    * ADDS role installed and configured.
    * ADCS role installed and *Enterprise-CA* with root certificate configured.
       * Each Domain Controller (DC) must have a *Domain Controller*, *Domain Controller Authentication*, and *Kerberos Authentication* certificate issued.
@@ -77,16 +77,13 @@ It is used to sign the Certificate Request (CSR) during provisioning of the Nitr
 Provision Nitrokey 3 for smartcard logon with Active Directory
 --------------------------------------------------------------
 
-The smartcard logon requires to provision a Nitrokey for an user in Active Directory.
-The provisiong contains the private key and Certificate Singing Request (CSR) generation.
+The smartcard logon requires to provision a Nitrokey for a user in Active Directory.
+The provisioning contains the private key and Certificate Singing Request (CSR) generation.
 The certificate is then written to the Nitrokey.
 
 .. warning::
    Before following the steps below make sure the Active Directory user account you want to use for smartcard logon exists.
    A creation time of the certificate before the creation time of the user account will lead to a failed logon.
-
-.. important::
-   If the PIV application on the Nitrokey was not used before, perform a initialization with ``nitropy nk3 piv --experimental init`` first.
 
 1. Generate a private key and write the CSR to file with the command below.
 
