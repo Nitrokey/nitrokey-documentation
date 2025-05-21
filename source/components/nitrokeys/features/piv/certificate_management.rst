@@ -16,7 +16,7 @@ The certificate can be retrieved as follows.
 
 .. code-block::
 
-    nitropy nk3 piv --experimental read-certificate --key <key-slot>``
+    nitropy nk3 piv --experimental read-certificate --key <key-slot>
 
 
 Write Certificate
