@@ -35,7 +35,7 @@ For each purpose the private key and its corresponding certificate are stored in
 Algorithms
 ----------
 
-PIV uses asymmetric and symmetric algorithms. The asymmetric algorithms are used for the user private keys and the symmetric algorithms for the management key.
+The PIV smart card uses asymmetric and symmetric algorithms. The asymmetric algorithms are used for the user private keys and the symmetric algorithms for the management key.
 
 Supported asymmetric key algorithms:
 
@@ -57,15 +57,15 @@ For compatibility reasons, the default management key is the following 3DES (TDE
 
 ::
 
-    0102030405060708 0102030405060708 0102030405060708 
+   0102030405060708 0102030405060708 0102030405060708 
 
 Key Generation
 --------------
 
 The PIV smart card can generate a new private key on the Nitrokey.
 
-The command below will create a private key in key slot ``9a`` for the user with the subject name ``John Doe`` and subject alternative name ``jd@nitrokey.local``.
+The command below will create a private key in key slot ``9a`` with the RSA algorithm and a key length of 2048 bit, for the user with the subject name ``CN=John Doe`` and subject alternative name ``jd@nitrokey.local``.
 
-::
+.. code-block::
 
-   nitropy nk3 piv generate-key --key-slot 9a --subject-name "John Doe" --subject-alt-name-upn "jd@nitrokey.local"
+   nitropy nk3 piv --experimental generate-key --key 9a --algo rsa2048 --subject-name "CN=John Doe" --subject-alt-name-upn "jd@nitrokey.local" --path jd.csr
