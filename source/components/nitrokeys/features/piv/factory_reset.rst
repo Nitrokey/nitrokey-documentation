@@ -13,4 +13,4 @@ The reset to factory defaults can be performed as follows.
 
 ::
 
-    nitropy nk3 piv factory-reset
+    nitropy nk3 piv --experimental factory-reset

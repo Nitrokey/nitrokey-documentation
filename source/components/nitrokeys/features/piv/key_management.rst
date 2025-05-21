@@ -68,4 +68,4 @@ The command below will create a private key in key slot ``9a`` for the user with
 
 ::
 
-   nitropy nk3 piv generate-key --key-slot 9a --subject-name "John Doe" --subject-alt-name-upn "jd@nitrokey.local"
+   nitropy nk3 piv --experimental generate-key --key-slot 9a --subject-name "John Doe" --subject-alt-name-upn "jd@nitrokey.local"

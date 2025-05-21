@@ -86,7 +86,7 @@ The certificate is then written to the Nitrokey.
    A creation time of the certificate before the creation time of the user account will lead to a failed logon.
 
 .. important::
-   If the PIV application on the Nitrokey was not used before, perform a initialization with ``nitropy nk3 piv init`` first.
+   If the PIV application on the Nitrokey was not used before, perform a initialization with ``nitropy nk3 piv --experimental init`` first.
 
 1. Generate a private key and write the CSR to file with the command below.
 
