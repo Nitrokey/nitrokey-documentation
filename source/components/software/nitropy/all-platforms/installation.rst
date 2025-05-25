@@ -35,11 +35,11 @@ Fedora
 
 You can install nitropy along with all other required dependencies by using::
 
-    $ sudo dnf install python pipx && pipx ensurepath && pipx install pynitrokey
+    $ sudo dnf install python pipx python3-devel libudev-devel && pipx ensurepath && pipx install pynitrokey
 
 If you have already installed Python on your system, you can simply run::
 
-    $ sudo dnf install pipx && pipx ensurepath && pipx install pynitrokey
+    $ sudo dnf install pipx python3-devel libudev-devel && pipx ensurepath && pipx install pynitrokey
 
 After logging our or restarting your system, nitropy will now be available.
 
