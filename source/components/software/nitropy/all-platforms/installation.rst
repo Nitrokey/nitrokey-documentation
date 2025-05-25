@@ -41,7 +41,7 @@ If you have already installed Python on your system, you can simply run::
 
     $ sudo dnf install pipx python3-devel libudev-devel && pipx ensurepath && pipx install pynitrokey
 
-After logging our or restarting your system, nitropy will now be available.
+After logging out or restarting your system, nitropy will now be available.
 
 Mageia
 ~~~~~~
