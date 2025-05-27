@@ -191,7 +191,7 @@ PUK
 ^^^
 
 The *PUK* is used for management operations, such as unblocking the PIN.
-The factory default for the *PUK* is ``123456``.
+The factory default for the *PUK* is ``12345678``.
 
 .. note::
     The *PUK* must have a maximal length of 8 characters.
