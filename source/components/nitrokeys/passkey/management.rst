@@ -1,23 +1,44 @@
-Manage the Nitrokey Passkey
-===========================
+Manage Your Nitrokey Passkey
+============================
 
 
 Browser
 -------
 
-This works with all chromium based browsers. Sometimes the options are missing in Windows.
+.. note::
+
+    This works with all chromium based browsers and with all OSes.
+
+In your chromium based browser settings, go to "Privacy and security" → "Security" and "Manage security keys".
+
+From this point you will have access to theses management options:
+
+.. figure:: images/chromium_key_managment.png
+   :alt: img1
+
+.. note::
+
+    Some option may be shown but will not work with your Nitrokey eg. Fingerprints.
 
 
-
-
-
-
-
-
-nitropy
+Windows
 -------
 
-You can use the command line tool nitropy to manage the Nitrokey Passkey. 
+In order to manage your Nitrokey Passkey in Windows, go to "Settings" → "Accounts" → "Sign-in options" → "Security Key" and click "Manage".
+
+.. figure:: images/w10_passkey_manage.png
+   :alt: img2
+
+After touching your Nitrokey you will have two management options:
+
+.. figure:: images/manage_options_w10.PNG
+   :alt: img3
+
+
+Nitropy
+-------
+
+You can use the command line tool `nitropy`_ to manage the Nitrokey Passkey:
 
 .. code-block:: bash
 
@@ -42,6 +63,4 @@ You can use the command line tool nitropy to manage the Nitrokey Passkey.
     validate-update  Validates the given firmware image and prints the...
     version          Query the firmware version of the device.
 
-Windows
--------
-
+.. _nitropy: ../../software/nitropy/index.html

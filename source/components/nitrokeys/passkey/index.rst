@@ -21,8 +21,6 @@ Currently there is only one firmware version, so no firmware update is necessary
 .. _release notes: https://github.com/Nitrokey/nitrokey-passkey-firmware/releases
 
 
-TODO: why and what. brief introduction for first time users of hw keys
-
 .. contents:: :local:
 
 First check the:
@@ -36,13 +34,6 @@ First check the:
    Troubleshooting <troubleshooting>
    Hardware <hardware>
    Management <management>
-
-and the product guides:
-
-.. toctree::
-   :maxdepth: 1
-
-   Reset and Recovery <reset>
 
 or check out the features:
 

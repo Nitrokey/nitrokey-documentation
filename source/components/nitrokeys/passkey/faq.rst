@@ -14,9 +14,7 @@ Nitrokey Passkey FAQ
    On `WebAuthn.io`_ you can check various high-level functionalities, while
    `webautn.bin.coffee`_ provides good developer level details (technical)
    details.
-   You can also `test`_ your Nitrokey.
-
-
+   You can also test your Nitrokey with `nitropy`_.
 
 **Q:** What happens if I lose my Nitrokey Passkey device?
    When securing accounts using FIDO2 (two-factor authentication and
@@ -43,3 +41,4 @@ Nitrokey Passkey FAQ
 
 
 .. include:: ../../shared-faqs/hyperlinks.rst.inc 
+.. _nitropy: ../../software/nitropy/index.html

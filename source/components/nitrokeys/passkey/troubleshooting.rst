@@ -5,11 +5,11 @@ Troubleshooting
 General
 -------
 
-* On WebAuthn.io you can check various high-level functionalities, while webautn.bin.coffee provides good developer level details (technical) details.
+* On `WebAuthn.io`_ you can check various high-level functionalities, while `webautn.bin.coffee`_ provides good developer level details (technical) details.
 
-* Check if the LED is working as expected "link to led* You can test the Nitrokey Passkey using nitropy with. 
+* Check if the LED is working as `expected`_.
 
-* You can test the Nitrokey Passkey using nitropy with  "nitropy nkpk test".
+* You can test the Nitrokey Passkey using `nitropy`_ with  ``nitropy nkpk test``.
 
 
 Windows
@@ -18,8 +18,8 @@ Windows
 To check whether the Nitrokey Passkey is correctly recognized, open the Device Manager and check for the Nitrokey Passkey appearing as a USB device.
 
 
-macOS
------ 
+MacOS
+-----
 
 To check whether the Nitrokey Passkey is correctly recognized, open the System Report and check for the Nitrokey Passkey appearing as a USB device.
 Otherwise you can use the commandline with the following command to check if your system recognizes the Nitrokey Passkey. 
@@ -45,4 +45,6 @@ If the Nitrokey is not detected, proceed the following:
 2. Restart udev via ``sudo service udev restart`` or ``udevadm control --reload-rules && udevadm trigger`` if you are using Fedora.
 
 
-
+.. include:: ../../shared-faqs/hyperlinks.rst.inc 
+.. _nitropy: ../../software/nitropy/index.html
+.. _expected: ./hardware.html#touch-button-and-led-behavior
