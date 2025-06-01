@@ -53,4 +53,4 @@ This will run NetHSM as a Unix process inside the container and expose the REST 
 .. important::
    The container uses a self-signed TLS certificate.
    Make sure to use the correct connection settings to establish a connection.
-   Please refer to chapter `NetHSM introduction <index.html>`__ to learn more.
+   Please refer to chapter `NetHSM introduction <../getting-started#provisioning>`__ to learn more.
