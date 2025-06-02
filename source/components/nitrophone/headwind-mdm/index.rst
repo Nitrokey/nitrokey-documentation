@@ -11,5 +11,6 @@ The software consists of a central interface (web panel) on a server and an app 
    :glob:
 
    Server Installation <server-installation>
+   Server Update <server-update>
    Launcher App Installation <launcher-app-installation>
 
