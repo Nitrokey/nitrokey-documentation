@@ -622,7 +622,36 @@ The syslog server configuration can be set as follows.
    .. tab:: REST API
       Information about the `/config/logging` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-logging>`__.
 
-The serial console works right from the start of the NetHSM hardware. It includes events from the NetHSM firmware and the NetHSM software.
+The serial console works right from the start of the NetHSM hardware. It includes events from the NetHSM firmware and the NetHSM software. The serial console is typically only necessary when debugging issues for which the syslog does not provide sufficient information.
+
+The location of the serial port depends on the model of the device. Please refer to the chapter `Getting started <getting-started>`__ to locate the port on your model.
+
+The serial console port differences of each model are as follows.
+
+.. tabs::
+   .. tab:: NetHSM 2
+      The NetHSM 2 uses a D-sub female *DE-9* port with a total of 9 pins (pin layout: 5-4).
+      The port only supports transfer (TX), no receive (RX).
+
+      USB-to-Serial adapters can be directly connected to the machine, no null modem cable is required.
+
+      .. figure:: ./images/nethsm2-sub-d-port.svg
+         :scale: 100
+         :alt: D-sub female *DE-9* port.
+
+         D-sub female *DE-9* port.
+
+   .. tab:: NetHSM 1
+      The NetHSM 1 uses a D-sub male *DE-9* port with a total of 9 pins (pin layout: 5-4).
+      The port supports transfer (TX) and receive (RX).
+
+      USB-to-Serial adapters require the use of a null modem cable to be connected to the machine.
+
+      .. figure:: ./images/nethsm1-sub-d-port.svg
+         :scale: 100
+         :alt: D-sub male *DE-9* port.
+
+         D-sub male *DE-9* port.
 
 The serial console connection settings are as follows.
 
