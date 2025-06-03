@@ -622,9 +622,9 @@ The syslog server configuration can be set as follows.
    .. tab:: REST API
       Information about the `/config/logging` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-logging>`__.
 
-The serial console works right from the start of the NetHSM hardware. It includes events from the NetHSM firmware and the NetHSM software.
-The location of the serial port depends on the model of the device.
-Please refer to the chapter `Getting started <getting-started>`__ to locate the port on your model.
+The serial console works right from the start of the NetHSM hardware. It includes events from the NetHSM firmware and the NetHSM software. The serial console is typically only necessary when debugging issues for which the syslog does not provide sufficient information.
+
+The location of the serial port depends on the model of the device. Please refer to the chapter `Getting started <getting-started>`__ to locate the port on your model.
 
 The serial console port differences of each model are as follows.
 
