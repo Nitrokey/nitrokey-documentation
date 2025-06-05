@@ -18,7 +18,7 @@ Windows
 To check whether the Nitrokey Passkey is correctly recognized, open the Device Manager and check for the Nitrokey Passkey appearing as a USB device.
 
 
-MacOS
+macOS
 -----
 
 To check whether the Nitrokey Passkey is correctly recognized, open the System Report and check for the Nitrokey Passkey appearing as a USB device.
