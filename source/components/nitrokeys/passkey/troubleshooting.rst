@@ -47,4 +47,4 @@ If the Nitrokey is not detected, proceed the following:
 
 .. include:: ../../shared-faqs/hyperlinks.rst.inc 
 .. _nitropy: ../../software/nitropy/index.html
-.. _expected: ./hardware.html#touch-button-and-led-behavior
+.. _expected: ./led.html

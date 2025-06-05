@@ -32,7 +32,7 @@ First check the:
    Getting Started <getting-started>
    Frequently Asked Questions <faq>
    Troubleshooting <troubleshooting>
-   Hardware <hardware>
+   LED and Touch Button <led>
    Management <management>
 
 or check out the features:

@@ -1,12 +1,5 @@
-Hardware
-========
-
-.. figure:: images/Passkey.webp
-   :alt: img1
-
-
-Touch Button And LED Behavior
------------------------------
+LED and Touch Button
+====================
 
 The first FIDO operation is automatically accepted within two seconds
 after connecting Nitrokey Passkey. In this case touching the touch button
@@ -26,5 +19,6 @@ the touch button touched for up to 10 seconds.
 | Red (Constant)   | Crash                       |
 +------------------+-----------------------------+
 
-
+.. figure:: images/Passkey.webp
+   :alt: img1
 
