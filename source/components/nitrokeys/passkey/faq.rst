@@ -26,7 +26,7 @@ Nitrokey Passkey FAQ
 
 **Q:** How large is the storage capacity?
    The Nitrokey Passkey doesn't contain storage capability for ordinary data (it can
-   only store cryptographic keys). It can hold over 100 Passkeys/FIDO2 keys.
+   only store cryptographic keys). It can hold over 100 passkeys resp. FIDO2 keys.
 
 **Q:** How to use Nitrokey Passkey with Azure Entra ID (Active Directory)?
    After `disabling Enforce Attestation`_ Nitrokey Passkey is supported by Azure Entra ID out of the box.
