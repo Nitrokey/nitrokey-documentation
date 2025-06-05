@@ -1,5 +1,5 @@
-App Installation
-################
+Launcher App Installation
+#########################
 
 .. important::
    
@@ -12,9 +12,8 @@ To grant special permissions you need to use ADB (Android Debug Bridge). You can
 Installation With WebADB
 ========================
 
-1. `Download <https://h-mdm.com/download/>`__ locally on your PC the latest HMDM Android app (launcher). 
+1. Download the latest launcher app, provided by Nitrokey.
    It is important that this version matches your HMDM server configuration.
-   You can also download the desired version here: `https://h-mdm.com/files/hmdm-<version>-master.apk`
 
 2. On your NitroPhone, enable the developer options: Settings -> About Phone -> Press 6 times on "Build number".
 
@@ -56,9 +55,8 @@ Your HMDM app is ready to use. Refer to "Register NitroPhone on HMDM Server" at 
 Installation With ADB 
 =====================
 
-1. `Download <https://h-mdm.com/download/>`__ locally on your PC the latest HMDM Android app (launcher). 
+1. Download the latest launcher app, provided by Nitrokey. 
    It is important that this version matches your HMDM server configuration.
-   You can also download the desired version here: https://h-mdm.com/files/hmdm-<version>-master.apk
 
 2. On your NitroPhone, enable the developer options: Settings -> About Phone -> Press 6 times on "Build number".
 
