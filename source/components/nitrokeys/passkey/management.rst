@@ -7,9 +7,9 @@ Browser
 
 .. note::
 
-    This works with all chromium based browsers and with all OSes.
+    This works with all Chromium based web browsers and with all OSes.
 
-In your chromium based browser settings, go to "Privacy and security" → "Security" and "Manage security keys".
+In your Chromium based browser settings, go to "Privacy and security" → "Security" and "Manage security keys".
 
 From this point you will have access to theses management options:
 
@@ -35,7 +35,7 @@ After touching your Nitrokey you will have two management options:
    :alt: img3
 
 
-Nitropy
+nitropy
 -------
 
 You can use the command line tool `nitropy`_ to manage the Nitrokey Passkey:
