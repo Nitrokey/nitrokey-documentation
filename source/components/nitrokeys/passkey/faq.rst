@@ -4,11 +4,9 @@ Nitrokey Passkey FAQ
 **Q:** Which Operating Systems are supported?
    Windows, Linux, macOS and BSD. Also FIDO2 is supported on Android and iOS.
 
-
 **Q:** What can I use the Nitrokey Passkey for?
    Second or first factor authentication for services which support Webauthn/Passkey/FIDO2/FIDO U2F. 
    See the `overview <https://www.nitrokey.com/products/nitrokeys>`_  of supported use cases.
-
 
 **Q:** How can I check if my Nitrokey Passkey is working?
    On `WebAuthn.io`_ you can check various high-level functionalities, while
@@ -31,14 +29,11 @@ Nitrokey Passkey FAQ
 **Q:** How to use Nitrokey Passkey with Azure Entra ID (Active Directory)?
    After `disabling Enforce Attestation`_ Nitrokey Passkey is supported by Azure Entra ID out of the box.
 
-
 **Q:** Why does the Nitrokey Passkey not show up in GnuPG?
   The Nitrokey Passkey has no support for OpenPGP. 
 
-
 **Q:** Why does the Nitrokey Passkey not show up in Nitrokey App?
   The Nitrokey Passkey is not supported by the Nitrokey App 1 and 2.
-
 
 .. include:: ../../shared-faqs/hyperlinks.rst.inc 
 .. _nitropy: ../../software/nitropy/index.html

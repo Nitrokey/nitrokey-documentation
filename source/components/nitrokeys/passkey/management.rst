@@ -1,7 +1,6 @@
 Manage Your Nitrokey Passkey
 ============================
 
-
 Browser
 -------
 
@@ -20,7 +19,6 @@ From this point you will have access to theses management options:
 
     Some option may be shown but will not work with your Nitrokey eg. Fingerprints.
 
-
 Windows
 -------
 
@@ -33,7 +31,6 @@ After touching your Nitrokey you will have two management options:
 
 .. figure:: images/manage_options_w10.PNG
    :alt: img3
-
 
 nitropy
 -------

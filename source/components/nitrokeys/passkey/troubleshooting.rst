@@ -11,12 +11,10 @@ General
 
 * You can test the Nitrokey Passkey using `nitropy`_ with  ``nitropy nkpk test``.
 
-
 Windows
 -------
 
 To check whether the Nitrokey Passkey is correctly recognized, open the Device Manager and check for the Nitrokey Passkey appearing as a USB device.
-
 
 macOS
 -----
@@ -27,7 +25,6 @@ Otherwise you can use the commandline with the following command to check if you
 .. code-block:: bash
 
    system_profiler SPUSBDataType | grep Nitrokey
-
 
 Linux
 -----

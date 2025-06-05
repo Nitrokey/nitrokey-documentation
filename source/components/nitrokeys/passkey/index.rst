@@ -1,10 +1,8 @@
 Nitrokey Passkey
 ================
 
-
 Introduction
 ------------
-
 
 The Nitrokey Passkey is a secure authentication device designed to enhance two-factor authentication (2FA) and passwordless login using the FIDO2/WebAuthn standard. 
 It provides a convenient way to protect digital identities by securely storing cryptographic keys within the hardware, ensuring sensitive information never leaves the device. 
@@ -19,7 +17,6 @@ Please see the :doc:`FIDO2 <../fido2/index>` pages for more FIDO2 related docume
 Currently there is only one firmware version, so no firmware update is necessary.
 
 .. _release notes: https://github.com/Nitrokey/nitrokey-passkey-firmware/releases
-
 
 .. contents:: :local:
 
@@ -39,8 +36,3 @@ or check out the features:
 
 * `FIDO2 <../features/fido2/index.html>`_
 * `U2F <../features/u2f/index.html>`_
- 
-
-
-
-

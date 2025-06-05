@@ -8,7 +8,6 @@ is not required.
 Multiple operations can be accepted by a single touch. For this, keep
 the touch button touched for up to 10 seconds.
 
-
 +------------------+-----------------------------+
 | LED Color        | Event                       |
 +==================+=============================+
