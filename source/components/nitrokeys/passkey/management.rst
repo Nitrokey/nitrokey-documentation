@@ -35,7 +35,7 @@ After touching your Nitrokey you will have two management options:
 nitropy
 -------
 
-You can use the command line tool `nitropy`_ to manage the Nitrokey Passkey:
+You can use the command line tool `nitropy <../../software/nitropy/index.html>`__ to manage the Nitrokey Passkey:
 
 .. code-block:: bash
 
@@ -60,4 +60,3 @@ You can use the command line tool `nitropy`_ to manage the Nitrokey Passkey:
     validate-update  Validates the given firmware image and prints the...
     version          Query the firmware version of the device.
 
-.. _nitropy: ../../software/nitropy/index.html
