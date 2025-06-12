@@ -56,7 +56,7 @@ The configuration is yaml-formatted:
       # A custom socket can be configured:
       syslog_socket: /var/nethsm/log
       # Instead of a socket, a custom UDP or TCP syslog can be configured:
-      # syslog_udp: 
+      # syslog_udp:
       #    to_addr: 127.0.0:1:514
       #    from_addr: 127.0.0:1:4789
       # syslog_tcp: 127.0.0.1:601
@@ -83,9 +83,18 @@ The configuration is yaml-formatted:
             username: "operator"
             # If the password starts with `env:`, it will obtain the password from an environment variable:
             # password: "env:LOCALHSMPASS"
+            #
+            # If the field is not provided, it is expected to be given through `C_Login` function with the
+            # `CKU_USER` userType
             password: "localpass"
           administrator:
             username: "admin"
+            # If the password starts with `env:`, it will obtain the password from an environment variable:
+            # password: "env:LOCALADMINHSMPASS"
+            #
+            # If the field is not provided, it is expected to be given through `C_Login` function with the
+            # `CKU_SO` userType
+            password: "adminpass"
 
           # List the NetHSM instances
           instances:
@@ -102,6 +111,13 @@ The configuration is yaml-formatted:
               # Alternatively certificate checks can be skipped entirely with danger_insecure_cert option.
               # This should be avoided if possible and certainly not used with a productive NetHSM.
               # danger_insecure_cert: true
+          # Configure whether the certificates stored in the nethsm are stored in PEM or DER
+          # The nethsm itself supports both, but some tooling may only support one of the encodings.
+          # Valid values are PEM or DER. Defaults to PEM
+          #
+          # Values exchanged over the PKCS#11 interface will always be DER encoded.
+          # This config only changes the format they are stored in on the Nethsm itself for compatibility with other tooling.
+          certificate_format: PEM
           # Configure the network retry mechanism. If absent, no retries are attempted on a network error
           retries:
             # The number of retries after a network error
@@ -116,12 +132,13 @@ The configuration is yaml-formatted:
             # the number of seconds between each keepalive packet
             # Corresponds to `TCP_KEEPINTVL` on Linux and macOS, and the field keepaliveinterval of tcp_keepalive on Windows
             interval_seconds: 60
-            # the number of keepalive packets being sent without a response before the connection 
+            # the number of keepalive packets being sent without a response before the connection
             # is considered closed
             # Corresponds to `TCP_KEEPCNT` on Linux and macOS, and is not used on Windows
             retries: 3
           # Time a connection can spend idle before being closed
           connections_max_idle_duration: 1800
+
           # Configurable timeout for network operations. If a network operation takes more than, `timeout_seconds`, consider it failed. If `retries` is configured, it will be retried.
           # Defaults to infinite
           timeout_seconds: 10
