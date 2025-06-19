@@ -20,9 +20,13 @@ You can find some HMDM plugins `here <https://github.com/h-mdm?tab=repositories>
 
 4. In this new window click on browse and select the plugin APK you wish to install.
 
-5. Click on Save and it will ask you if you want to add this plugin in your current configurations.
+5. Click on Save.
+
+6. A new window will ask you if you want to add this plugin in your available configurations if you wish then you need to check the desired box and change the option to "Install".
 
 The plugin is now added.
+
+You can manage some installed plugins in the "Settings" tab of your web panel in the "Plugins" section.
 
 Update Plugins
 --------------
@@ -34,11 +38,11 @@ Update Plugins
 
 2. In your HMDM web panel go to the Applications tab.
 
-3. Search for the application name you wish to update and click on the most left button (verison) on the action collumn.
+3. Search for the application name you wish to update and click on the most left button (version) on the action collumn.
 
 4. In the version menu click on Add and browse the previously downloaded APK and add it.
 
-5. In the last step it will ask you if you want to add this plugin in all configurations or not.
+5. In the last step it will ask you if you want to add this plugin in your available configurations or not if you wish then you need to check the desired box and change the option to "Install".
 
 If you choose to add it to the configuration then it will be automatically updated.
 
