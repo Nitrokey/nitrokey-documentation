@@ -14,4 +14,4 @@ The software consists of a central interface (web panel) on a server and an app 
    Server Update <server-update>
    Launcher App Installation <launcher-app-installation>
    Launcher App Update <launcher-app-update>
-   Installation and Update of Plugins <plugin>
+   Installation and Update of Plugins <plugins>
