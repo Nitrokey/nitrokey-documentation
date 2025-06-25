@@ -20,10 +20,13 @@ Frequently Asked Questions (FAQ)
 
 .. faq:: Roadmap: Which features are planned?
 
-   We plan the following developments in the loose order. Changes to this prioritization based on customer requests are possible.
+Work in progress:
+
+   * Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool
+
+We plan the following developments in the loose order. Changes to this prioritization based on customer requests are possible.
 
    * Productive usable software container
-   * Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool
    * Direct, dynamic cluster capability, possibly support for external database
    * BIP32 key derivation function
    * Quorum: m-of-n access scheme and security domain management
@@ -33,3 +36,4 @@ Frequently Asked Questions (FAQ)
    * More user rights management (e.g. additional roles, groups)
    * Further separations and hardenings
    * FIPS and/or Common Criteria certifications
+   * Post-quantum cryptography (PQC)
