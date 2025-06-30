@@ -77,7 +77,11 @@ Generic FAQ
   NextBox App. If you know what you are doing you can configure and use it, if
   works although being inside the NextBox casing. 
 
+.. faq:: How can I access my NextBox, if I get forwarded to the wrong URL?
 
+  You should open an incognito window and use: ``https://<your-local-ip>`` or ``http://<your-local-ip>`` 
+  keep in mind that using HTTPS once in this browser session will not allow you to use HTTP again in this session,
+  you can always open a new incognito window to avoid that.
 
 .. _nextbox.local: http://nextbox.local
 
