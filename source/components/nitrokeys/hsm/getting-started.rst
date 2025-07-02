@@ -15,11 +15,16 @@ Getting Started
             `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__
             driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__).
 
-        .. tab:: MacOS
+        .. tab:: macOS
             Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
             Alternatively, install
             `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__
             driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__).
+
+            On some macOS versions, OpenSC fails to find the CCID library of the operating system.
+            In this case OpenSC tools will show ``Unresponsive Card`` errors.
+            The problem can be fixed by either copying or symlinking the directory ``/usr/libexec/SmartCardServices`` to ``/usr/local/libexec/SmartCardServices``.
+            A reboot after this change is mandatory to make the new library to be recognized.
 
         .. tab:: Windows
             Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
