@@ -31,7 +31,7 @@ Nitrokey HSM FAQ
 .. faq:: What is the SO PIN for?
 
   The SO PIN is used in the Nitrokey HSM only and is something like a
-  "master" PIN with special properties. Please read this instructions carefully
+  "master" PIN with special properties. Please read `these instructions <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`__ carefully
   to understand the SO PIN of the Nitrokey HSM.
 
   The SO PIN has to be exactly 16 digits long.
