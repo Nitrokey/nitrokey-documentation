@@ -26,6 +26,10 @@ check-syntax: venv
 		--ignore-messages "faq(.*)Hyperlink target(.*)is not referenced" \
 		source
 
+.PHONY: check-hyperlinks
+check-hyperlinks: venv docs
+	venv/bin/linkchecker -f linkcheckerrc dist/en/index.html
+
 .PHONY: pkg
 pkg: venv docs
 	mv dist/en/_images dist/_images

@@ -15,7 +15,17 @@ jobs:
         run: make venv
       - name: Syntax check
         run: make check-syntax
-
+  check-hyperlinks:
+    name: Check hyperlinks
+    runs-on: ubuntu-latest
+    container: python:3.11
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Create virtual environment
+        run: make venv
+      - name: Check hyperlinks
+        run: make check-hyperlinks
   build-check-and-preview-upload:
     name: Check Build and Upload to Preview
     runs-on: ubuntu-latest
