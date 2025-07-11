@@ -26,6 +26,7 @@ check: venv
 		--ignore-messages "faq(.*)Hyperlink target(.*)is not referenced" \
 		source
 
+.PHONY: pkg
 pkg: venv docs
 	mv dist/en/_images dist/_images
 	rm -rf dist/*/_sources dist/*/_images
@@ -37,8 +38,6 @@ clean:
 
 cleaner: clean
 	rm -rf venv
-	
-.PHONY: docs check pkg
 
 $(NITROKEY_SDK_PY): $(NITROKEY_SDK_PY_ARCHIVE)
 	mkdir "$@"
