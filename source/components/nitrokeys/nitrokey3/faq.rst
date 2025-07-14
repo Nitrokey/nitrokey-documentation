@@ -1,5 +1,5 @@
 Nitrokey 3 FAQ
-==================
+==============
 
 .. faq:: Which Operating Systems are supported?
 
@@ -109,9 +109,10 @@ Nitrokey 3 FAQ
   it accordingly by passing ``false``. **Changing the backend from one to the other will always wipe all your data 
   inside the OpenPGP Card**
 
-  .. note:: If you are updating from a test version firmware, we recommend factory resetting the device before
-            using the Nitrokey 3 with the SE050 in production environments.
+  .. note::
+     If you are updating from a test version firmware, we recommend factory resetting the device before
+     using the Nitrokey 3 with the SE050 in production environments.
 
 
-.. include:: ../../shared-faqs/hyperlinks.rst.inc 
+.. include:: ../../shared-faqs/hyperlinks.rst.inc
 .. _test: ../../software/nitropy/all-platforms/test.html
