@@ -1,4 +1,3 @@
-
 Troubleshooting
 ===============
 
@@ -22,14 +21,14 @@ macOS
 To check whether the Nitrokey Passkey is correctly recognized, open the System Report and check for the Nitrokey Passkey appearing as a USB device.
 Otherwise you can use the commandline with the following command to check if your system recognizes the Nitrokey Passkey. 
 
-.. code-block:: bash
+.. code-block:: shell-session
 
    system_profiler SPUSBDataType | grep Nitrokey
 
 Linux
 -----
 
-To check whether the Nitrokey Passkey is correctly recognized, check if it is shown with `lsusb`.
+To check whether the Nitrokey Passkey is correctly recognized, check if it is shown with ``lsusb``.
 
 If the Nitrokey is not detected, proceed the following:
 
@@ -42,6 +41,6 @@ If the Nitrokey is not detected, proceed the following:
 2. Restart udev via ``sudo service udev restart`` or ``udevadm control --reload-rules && udevadm trigger`` if you are using Fedora.
 
 
-.. include:: ../../shared-faqs/hyperlinks.rst.inc 
+.. include:: ../../shared-faqs/hyperlinks.rst.inc
 .. _nitropy: ../../software/nitropy/index.html
 .. _expected: ./led.html
