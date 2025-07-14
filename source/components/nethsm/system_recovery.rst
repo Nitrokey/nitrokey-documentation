@@ -10,7 +10,7 @@ Follow the instructions precicsely to prevent any accidential deletion of data.
    The system recovery only works if the GUID partition table (GPT) and the partitions itself on the disk are not corrupted.
    A corruption could be indicated by the following message during boot.
 
-   .. code-block::
+   .. code-block:: text
 
       Booting 'NetHSM automatic boot (USB or primary system)'
 
@@ -56,7 +56,7 @@ The system recovery can be performed as follows.
 
    .. tab:: NetHSM 1
 
-      1. Download the installer image ending  with *...installer.img.zip* from the provided private download page.
+      1. Download the installer image ending with ``installer.img.zip`` from the provided private download page.
 
          .. important::
             Download the installer image of the same version which was installed at the time of corruption.
@@ -123,31 +123,31 @@ The system recovery can be performed as follows.
 
             BMC boot device setting
 
-      10.   In the box with the title *FRU: Hermes CFL (with TPM) Nitrokey Config*, select *On* from the drop-down menu next to *Power*.
-            Confirm with the *Apply* button.
+      10. In the box with the title *FRU: Hermes CFL (with TPM) Nitrokey Config*, select *On* from the drop-down menu next to *Power*.
+          Confirm with the *Apply* button.
 
-            .. figure:: ./images/bmc-power-on.png
-               :alt: BMC power up setting
+          .. figure:: ./images/bmc-power-on.png
+             :alt: BMC power up setting
 
-               BMC power up setting
+             BMC power up setting
 
-            In the previously opened *Remote KVM* window you can now see the installation wizard.
-      11.   The KVM window now shows the boot dialog.
-            Confirm the selection of ``NetHSM automatic boot (USB or primary system)`` with the *Enter* key.
+          In the previously opened *Remote KVM* window you can now see the installation wizard.
+      11. The KVM window now shows the boot dialog.
+          Confirm the selection of ``NetHSM automatic boot (USB or primary system)`` with the *Enter* key.
 
-            .. figure:: ./images/bmc-kvm-system-software-boot-selection.png
-               :alt: NetHSM boot selection in the BMC KVM console
+          .. figure:: ./images/bmc-kvm-system-software-boot-selection.png
+             :alt: NetHSM boot selection in the BMC KVM console
 
-               NetHSM boot selection in the BMC KVM console
+             NetHSM boot selection in the BMC KVM console
 
-            In the following dialog confirm the selection of ``NetHSM Software Installer`` with the *Enter* key.
+          In the following dialog confirm the selection of ``NetHSM Software Installer`` with the *Enter* key.
 
-            .. figure:: ./images/bmc-kvm-system-software-installation-selection.png
-               :alt: NetHSM installer selection in the BMC KVM console
+          .. figure:: ./images/bmc-kvm-system-software-installation-selection.png
+             :alt: NetHSM installer selection in the BMC KVM console
 
-               NetHSM installer selection in the BMC KVM console
+             NetHSM installer selection in the BMC KVM console
 
-            .. warning::
-               Do NOT select ``NetHSM Factory Reset - DELETES ALL DATA!`` from the menu. This will unrecoverable wipe the data on the disk.
+          .. warning::
+             Do NOT select ``NetHSM Factory Reset - DELETES ALL DATA!`` from the menu. This will unrecoverable wipe the data on the disk.
 
 The NetHSM Installer will install the system software and shutdown.

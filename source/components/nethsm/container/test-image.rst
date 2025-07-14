@@ -11,7 +11,6 @@ The image is distributed as OCI image and can be run locally with a compatible e
 The image can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_.
 
 .. warning::
-
    Do not use the test image under any circumstances for production data and use cases.
    For production environments with high security demands you must use the production image.
 
