@@ -22,13 +22,13 @@ Follow these Steps:
 
 2. After a while, you will see a black screen with white writing on the last lines:         
 
-.. code-block::
+   .. code-block:: shell-session
 
-   Locking TPM2 platform hierarchy...  
-   Starting the new kernel
+      Locking TPM2 platform hierarchy...  
+      Starting the new kernel
 
 
-These lines indicate that Ubuntu is starting.
+   These lines indicate that Ubuntu is starting.
 
 3. Wait **5 seconds** and then enter your **password** ("12345678" if you are starting it for the first time) followed by **Enter**.
 
