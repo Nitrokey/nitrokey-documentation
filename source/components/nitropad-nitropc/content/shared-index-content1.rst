@@ -46,7 +46,6 @@ example after an update) and what error messages may otherwise occur is
 described further below.
 
 .. tip::
-
    The NitroPad and NitroPC can also be started without the Nitrokey. If you
    don’t have the Nitrokey with you, but are sure that the hardware has
    not been manipulated, you can boot your system without checking.
