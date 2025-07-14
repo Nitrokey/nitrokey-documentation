@@ -16,10 +16,10 @@ Alternatively, you can download and execute the portable Windows binary without 
 
 Silent installations are possible with the parameter **/qn**.
 
-.. code-block::
+.. code-block:: powershell
    :caption: Example for a silent/mass installation
 
-       msiexec.exe /qn /i nitrokey-app-v2.2.2-x64-windows-installer.msi
+   msiexec.exe /qn /i nitrokey-app-v2.2.2-x64-windows-installer.msi
 
 
 Using Winget
