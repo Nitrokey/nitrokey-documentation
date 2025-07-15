@@ -29,9 +29,9 @@ Getting Started
 
 
 2. Download and start the `Nitrokey
-   App <https://www.nitrokey.com/download>`__. Follow the
-   `instructions <../product-guides/change-pins/index.html>`_
-   to change the default User PIN (default: 123456) and Admin PIN
+   App <https://www.nitrokey.com/download>`__. 
+
+3. Use the Nitrokey-App to change the default User PIN (default: 123456) and Admin PIN 
    (default: 12345678) to your own choices.
 
 .. figure:: ../features/openpgp-card/images/change-pins/App-change-pin.png
@@ -67,7 +67,7 @@ by enterprises. If you are in doubt which one to choose, you should use
 OpenPGP.
 
 To learn more about how to use OpenPGP for email encryption with the Nitrokey,
-please refer to chapter `OpenPGP Email Encryption <../features/openpgp/index.html>`_.
+please refer to chapter `OpenPGP Email Encryption <../features/openpgp-card/index.html>`_.
 
 To learn more about how to use S/MIME for email encryption with the Nitrokey,
-please refer to chapter `S/MIME Email Encryption <../features/smime/index.html>`_.
+please refer to chapter `S/MIME Email Encryption <../features/openpgp-card/smime/index.html>`_.

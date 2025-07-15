@@ -26,7 +26,7 @@ or check out the features:
 * `U2F <../features/u2f/index.html>`_
 * `TOTP <../features/totp/index.html>`_
 * `OpenPGP Card <../features/openpgp-card/index.html>`_
-* `Automatic Screen Lock (Linux) <../features/misc/automatic-screen-lock/index.html>`_
-* `ECC <../features/misc/ecc/index.html>`_
+* `Automatic Screen Lock (Linux) <../features/misc/automatic-screen-lock.html>`_
+* `ECC <../features/misc/ecc.html>`_
 
 

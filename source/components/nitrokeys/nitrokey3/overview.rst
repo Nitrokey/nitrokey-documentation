@@ -43,14 +43,14 @@ features are realized.
      - no
 
    * - Admin App
-     - Administration functions used by `pynitrokey`_ and `NitrokeyApp2`_
+     - Administration functions used by `pynitrokey`_ and `Nitrokey-App2`_
      - USB
      - no
 
 .. note::
    Secure element support for OpenPGP Card is available since stable firmware v1.7.0. Any new 
    devices will have this automatically activated. For devices already in use, the
-   user has to `manually switch`_ as described in the FAQ.
+   user has to `manually switch <secure-element.html>`__ as described in the FAQ.
 
 
 On top of the stable firmware for the Nitrokey 3, we also provide a `Test Firmware`_, which
@@ -80,18 +80,18 @@ data migrations from test to stable firmwares will not be implemented.**
      - no
 
 
-.. _FIDO2: ../features/fido/index.html
+.. _FIDO2: ../features/fido2/index.html
 .. _U2F: ../features/u2f/index.html
 .. _OpenPGP Card: ../features/openpgp-card/index.html
 .. _Password Safe: ../features/password-safe/index.html
-.. _PIV: ../features/piv/index
+.. _PIV: ../features/piv/index.html
 .. _WebSmartCard: https://github.com/Nitrokey/nitrokey-websmartcard
-.. _S/MIME: ../features/smime/index.html
+.. _S/MIME: ../features/openpgp-card/smime/index.html
 
-.. _pynitrokey: ../software/nitropy/index.html
-.. _NitrokeyApp2: ../software/nk-app2/index.html
+.. _pynitrokey: ../../software/nitropy/index.html
+.. _Nitrokey-App2: ../../software/nk-app2/index.html
 
-.. _Test Firmware: linux/firmware-update#firmware-release-types
+.. _Test Firmware: firmware-update.html#firmware-release-types
 
 
 .. _manually switch: faq#how-can-I-use-the-se050-secure-element

@@ -71,8 +71,8 @@ by enterprises. If you are in doubt which one to choose, you should use
 OpenPGP.
 
 To learn more about how to use OpenPGP for email encryption with the Nitrokey,
-please refer to chapter `OpenPGP Email Encryption <../features/openpgp/index.html>`_.
+please refer to chapter `OpenPGP Email Encryption <../features/openpgp-card/index.html>`_.
 
 To learn more about how to use S/MIME for email encryption with the Nitrokey,
-please refer to chapter `S/MIME Email Encryption <../features/smime/index.html>`_.
+please refer to chapter `S/MIME Email Encryption <../features/openpgp-card/smime/index.html>`_.
 
