@@ -7,7 +7,7 @@ Before you perform the update on the server, make sure your mobile devices run a
 .. important::
    An incompatible launcher app version can cause a loose of communication between the server and the mobile devices.
    To prevent this, update the launcher app on the mobile devices first.
-   Please refer to chapter `Verify Update on Mobile Devices <launcher-app-update#Verify Update on Mobile Devices>`__ to learn more.
+   Please refer to chapter `Verify Update on Mobile Devices <launcher-app-update.html#Verify Update on Mobile Devices>`__ to learn more.
 
 The installation files you can request from our support team.
 In case of an update only the WAR file for the application server is required.
