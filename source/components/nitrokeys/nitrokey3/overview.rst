@@ -43,7 +43,7 @@ features are realized.
      - no
 
    * - Admin App
-     - Administration functions used by `pynitrokey`_ and `Nitrokey-App2`_
+     - Administration functions used by `pynitrokey`_ and `Nitrokey App 2`_
      - USB
      - no
 
@@ -89,7 +89,7 @@ data migrations from test to stable firmwares will not be implemented.**
 .. _S/MIME: ../features/openpgp-card/smime/index.html
 
 .. _pynitrokey: ../../software/nitropy/index.html
-.. _Nitrokey-App2: ../../software/nk-app2/index.html
+.. _Nitrokey App 2: ../../software/nk-app2/index.html
 
 .. _Test Firmware: firmware-update.html#firmware-release-types
 
