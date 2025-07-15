@@ -1,7 +1,7 @@
 Automatic Screen Lock at Removal
 ================================
 
-.. product-table:: all
+.. product-table:: nk3 hsm pro storage
 
 .. contents:: :local:
 
@@ -14,8 +14,6 @@ Requirements
 
 -  Ubuntu 20.04 or Debian 10 (Buster), both with `Gnome Display
    Manager <https://wiki.gnome.org/Projects/GDM>`__ installed.
-
--  Nitrokey Pro 2, Nitrokey Storage 2, or Nitrokey HSM 2
 
 Configuration
 ~~~~~~~~~~~~~
@@ -33,7 +31,7 @@ Add the following line to the file
 
 .. code-block:: bash
 
-   ACTION=="remove", ENV{PRODUCT}=="20a0/4108/101" RUN+="/usr/local/bin/gnome-screensaver-lock"
+   ACTION=="remove", ENV{PRODUCT}=="20a0/4108/101" RUN+="/bin/bash -c '/usr/local/bin/gnome-screensaver-lock'"
 
 Save the file and quit the editor.
 
@@ -41,6 +39,7 @@ This file sets up a new hardware rule that executes the ``gnome-screensaver-lock
 
 You should change the configuration according to the device you are using as following:
 
+-  Nitrokey 3: ``ENV{PRODUCT}=="20a0/42b2/107"``
 -  Nitrokey Pro: ``ENV{PRODUCT}=="20a0/4108/101"``
 -  Nitrokey HSM: ``ENV{PRODUCT}=="20a0/4230/101"``
 -  Nitrokey Storage: ``ENV{PRODUCT}=="20a0/4109/101"``
@@ -64,10 +63,10 @@ Add the following text
 
 .. code-block:: bash
 
-   user=`ps axo user:30,comm | egrep "gdm-(wayland|x)" | awk '{print $1}'`
+   user=`ps axo user:30,comm | grep -E "gdm-(wayland|x)" | awk '{print $1}'`
 
    if [ -n $user ]; then
-           su $user -c "/usr/bin/dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock"
+           su $user -c "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /usr/bin/dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock"
    fi
 
 In the first step, this script looks for the user-name of the gnome session, i.e. ``user``.
