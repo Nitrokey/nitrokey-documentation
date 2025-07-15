@@ -27,7 +27,7 @@ Executing The Example
 
 If you want to experiment with the given example you can use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and run the following commands:
 
-- Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started>`__ for more information.
+- Configure a NetHSM, either a real one or a container. Refer to chapter `Getting Started <getting-started.html>`__ to learn more.
 - Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/ejbca/p11nethsm.conf``.
 - Build the container.
   

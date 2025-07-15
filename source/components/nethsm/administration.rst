@@ -2,7 +2,7 @@ Administration
 ==============
 
 This chapter describes administrative tasks for users with the *Administrator* role.
-Please refer to chapter `Roles <administration#roles>`__ to learn more about the role.
+Please refer to chapter `Roles <administration.html#roles>`__ to learn more about the role.
 
 .. important::
    Please make sure you read the information in the beginning of `this document <index.html>`__ before starting to work.
@@ -142,7 +142,7 @@ The current state of the NetHSM can be retrieved as follows.
       Information about the `/health/state` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_health-state>`__.
 
 A new NetHSM has an *Unprovisioned* state and after provisioning enters the *Operational* state.
-The provisioning of a NetHSM is described in the chapter `Provisioning <getting-started#provisioning>`__.
+The provisioning of a NetHSM is described in the chapter `Provisioning <getting-started.html#provisioning>`__.
 
 A NetHSM in *Operational* state can be locked again to protect it as follows.
 
@@ -493,7 +493,7 @@ Metrics
 ~~~~~~~
 
 The NetHSM logs metrics of system parameters.
-Please refer to `Metrics <metrics>`__ to learn more about each metric.
+Please refer to `Metrics <metrics.html>`__ to learn more about each metric.
 
 The metrics can be retrieved as follows.
 
@@ -624,7 +624,7 @@ The syslog server configuration can be set as follows.
 
 The serial console works right from the start of the NetHSM hardware. It includes events from the NetHSM firmware and the NetHSM software. The serial console is typically only necessary when debugging issues for which the syslog does not provide sufficient information.
 
-The location of the serial port depends on the model of the device. Please refer to the chapter `Getting started <getting-started>`__ to locate the port on your model.
+The location of the serial port depends on the model of the device. Please refer to the chapter `Getting started <getting-started.html>`__ to locate the port on your model.
 
 The serial console port differences of each model are as follows.
 
@@ -678,7 +678,7 @@ namely *Configuration Store*, *Authentication Store*, *Domain Key Store* and *Ke
 
 .. important::
    A NetHSM system software in *Unattended Boot* mode will require the *Unlock Passphrase* if restored on a different NetHSM hardware.
-   Please refer to chapter `Unlock Passphrase <administration#unlock-passphrase>`__ to learn more.
+   Please refer to chapter `Unlock Passphrase <administration.html#unlock-passphrase>`__ to learn more.
 
 .. important::
    A NetHSM in *Unattended Boot* mode will be in the same mode after a restore.
@@ -816,7 +816,7 @@ Software updates can be installed in a two-step process. First the update image 
 
 .. warning::
 
-   Ensure you install the correct update file for your hardware model NetHSM 1 or NetHSM 2. You can check your model in the `system information <administration#system-information>`__.
+   Ensure you install the correct update file for your hardware model NetHSM 1 or NetHSM 2. You can check your model in the `system information <administration.html#system-information>`__.
 
 The update file can be uploaded as follows.
 
@@ -849,7 +849,7 @@ Afterwards the update can be applied or aborted. Please refer to the desired opt
    If the upload of the update image fails with ``Error: NetHSM request failed: Bad request -- malformed image``, please follow the steps below.
 
    1. Make sure you have a valid update file by checking with the provided signature.
-   2. Make sure you don't have a high log level, such as ``DEBUG`` enabled. Please refer to chapter `Logging <https://docs.nitrokey.com/nethsm/administration#logging>`__ to learn more about the log level configuration.
+   2. Make sure you don't have a high log level, such as ``DEBUG`` enabled. Please refer to chapter `Logging <https://docs.nitrokey.com/nethsm/administration.html#logging>`__ to learn more about the log level configuration.
    3. Reboot the appliance to free up used memory.
 
 The update can be applied (committed) as follows. Any data migration is only performed *after* the NetHSM has successfully booted the new system software version.
@@ -959,7 +959,7 @@ The remote shutdown can be initiated as follows.
 Reset to Factory Defaults
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A *Provisioned* NetHSM can be reset to factory defaults. In this case all user data is securely deleted and the NetHSM boots into an *Unprovisioned* state. Afterwards, you may want to `provision <getting-started#provisioning>`__ the NetHSM.
+A *Provisioned* NetHSM can be reset to factory defaults. In this case all user data is securely deleted and the NetHSM boots into an *Unprovisioned* state. Afterwards, you may want to `provision <getting-started.html#provisioning>`__ the NetHSM.
 
 The reset to factory defaults can be performed as follows.
 
@@ -1008,7 +1008,7 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
 
-See `Namespaces <administration#namespaces>`__ and `Tags <administration#tags-for-users>`__ for more fine-grained access restricions.
+See `Namespaces <administration.html#namespaces>`__ and `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
 
 .. note::
    In a future release, additional *Roles* may be introduced.
@@ -1018,9 +1018,9 @@ Add User
 
 Add a user account to the NetHSM.
 Each user account has a *Role*, which needs to be specified.
-Please refer to chapter `Roles <administration#roles>`__ to learn more about *Roles*.
+Please refer to chapter `Roles <administration.html#roles>`__ to learn more about *Roles*.
 
-Optionally, a user can be assigned to a `Namespace <administration#namespaces>`__.
+Optionally, a user can be assigned to a `Namespace <administration.html#namespaces>`__.
 
 .. note::
    The user ID must be alphanumeric.
@@ -1191,7 +1191,7 @@ An practically unlimited amount of Namespaces can be used without requiring addi
 
 *Namespaces* were introduced in software version 2.0. When migrating from an earlier version of the software, all existing users and keys will be without a Namespace.
 
-Users with the *Administrator* `Role <administration#roles>`__ are also referred to as *R-Administrator* if they are not in a Namespace, or *N-Administrator* if they are in a Namespace.
+Users with the *Administrator* `Role <administration.html#roles>`__ are also referred to as *R-Administrator* if they are not in a Namespace, or *N-Administrator* if they are in a Namespace.
 
 Special rules apply to *R-Administrator* users:
 They can set the Namespace for new users, list all users and query the Namespace of a user.
@@ -1300,7 +1300,7 @@ Tags for Users
 
 *Tags* can be used to set fine-grained access restrictions on keys, and are an optional feature. One or more *Tags* can be assigned to user accounts with the *Operator* role only. The *Operators* can see all keys, but only use those with at least one corresponding *Tag*. A key can not be modified by an *Operator* user.
 
-To learn about how to use *Tags* on keys, please refer to `Tags for Keys <operation#tags-for-keys>`__.
+To learn about how to use *Tags* on keys, please refer to `Tags for Keys <operation.html#tags-for-keys>`__.
 
 A *Tag* can be added as follows.
 

@@ -31,7 +31,7 @@ The image can be run in two modes of operation, i.e. Unix process or unikernel.
 * The Unix process mode runs NetHSM as a process on top of the operating system.
 * The unikernel mode runs NetHSM as a guest in a KVM based virtual machine and provides strong separation from the host operating system. This mode is only available on Linux and requires access to the ``/dev/tun`` and ``/dev/kvm`` device nodes and the ``NET_ADMIN`` capability. For security reasons we recommend the unikernel mode.
 
-The mode can be set with the environment variable ``MODE`` (see next chapter `Configuration <container.html#production-image-configuration>`__).
+The mode can be set with the environment variable ``MODE`` (see next chapter `Configuration <production-image.html#Configuration>`__).
 
 Configuration
 ^^^^^^^^^^^^^
@@ -81,7 +81,7 @@ The container runtime secrets such as certificates and private keys need to be s
 Usage
 ^^^^^
 
-The production container supports two `modes of operation <container.html#Modes of Operation>`__. The following chapters describe how to run the container with the provided compose files or with the *run* command.
+The production container supports two `modes of operation <production-image.html#Modes of Operation>`__. The following chapters describe how to run the container with the provided compose files or with the *run* command.
 
 Unix Mode
 ~~~~~~~~~
@@ -91,7 +91,7 @@ Make sure you have the necessary files for the secrets, mentioned in the compose
 
 To run the container without the compose file you need to provide an external etcd yourself.
 `Here <https://quay.io/coreos/etcd>`__ you find the recommended container image for etcd.
-Make sure to pass the configuration options, as described in chapter `Configuration <container.html#production-image-configuration>`__.
+Make sure to pass the configuration options, as described in chapter `Configuration <production-image.html#Configuration>`__.
 
 The container can be executed as follows.
 
@@ -121,7 +121,7 @@ Make sure you have the necessary files for the secrets, mentioned in the compose
 
 To run the container without the compose file you need to provide an external etcd yourself.
 `Here <https://quay.io/coreos/etcd>`__ you find the recommended container image for etcd.
-Make sure to pass the configuration options, as described in chapter `Configuration <container.html#production-image-configuration>`__.
+Make sure to pass the configuration options, as described in chapter `Configuration <production-image.html#Configuration>`__.
 
 The container can be executed as follows.
 
