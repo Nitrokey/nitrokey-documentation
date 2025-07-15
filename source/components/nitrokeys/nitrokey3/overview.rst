@@ -93,8 +93,3 @@ data migrations from test to stable firmwares will not be implemented.**
 
 .. _Test Firmware: firmware-update.html#firmware-release-types
 
-
-.. _manually switch: faq#how-can-I-use-the-se050-secure-element
-
-
-
