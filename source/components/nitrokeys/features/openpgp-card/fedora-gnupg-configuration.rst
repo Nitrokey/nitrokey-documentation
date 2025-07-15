@@ -5,7 +5,7 @@ OpenPGP smartcard with GnuPG on Fedora
 
 .. note::
    The following instructions require the Nitrokey 3 to have at least firmware version ``1.4.0`` installed.
-   Please refer to `firmware update <./firmware-update.html>`__ to learn how to update it.
+   Please refer to `firmware update <../../nitrokey3/firmware-update.html>`__ to learn how to update it.
 
 The GnuPG smartcard support requires *scdaemon*.
 In Fedora the *scdaemon* is part of the GnuPG package.

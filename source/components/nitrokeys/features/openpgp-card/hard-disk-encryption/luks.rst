@@ -29,9 +29,7 @@ Requirements
 
 See the section below to determine which method is compatible with this guide.
 
--  A Nitrokey Pro 2 or Nitrokey Storage 2
-   `initialized <openpgp.html>`_
-   with keys.
+-  A Nitrokey Pro 2 or Nitrokey Storage 2 initialized with keys.
 
 Known Issues
 ------------

@@ -15,7 +15,7 @@ This guide shows how to configure OpenVPN clients to login using a `Nitrokey Pro
 2 <https://shop.nitrokey.com/de_DE/shop/product/nitrokey-storage-2-56>`__. For software key management we will be using `Easy-RSA <https://github.com/OpenVPN/easy-rsa>`__, a utility that has been evolving alongside OpenVPN.
 
 To sign the certificates, we will use a `Nitrokey HSM
-2 <https://shop.nitrokey.com/shop/nkhs2-nitrokey-hsm-2-7>`__ set up as `Certificate Authority <certificate-authority.html#creating-the-intermediate-certificate-authority>`_, however this guide does not cover the set up of the CA itself (it is clear and `well documented here <certificate-authority.html#sign-a-server-certificate>`_).
+2 <https://shop.nitrokey.com/shop/nkhs2-nitrokey-hsm-2-7>`__ set up as `Certificate Authority <../certificate-authority.html#creating-the-intermediate-certificate-authority>`_, however this guide does not cover the set up of the CA itself (it is clear and `well documented here <../certificate-authority.html#sign-a-server-certificate>`_).
 
 We will use Easy-RSA, because it seems to provide some flexibility, and allows key management via external PKIs. We will use it on the server to issue the signing request, and repeat the same process on the client. The Certificate Signing Requests will be signed by the CA on the Nitorkey HSM, and re-transmitted to the server and the client.
 
@@ -51,7 +51,7 @@ We will use the following Nitrokeys for physical key management:
 -  A Certificate Authority (CA) using the `Nitrokey HSM 2
    (pdf) <https://www.nitrokey.com/files/doc/Nitrokey_HSM_factsheet.pdf>`__
 
-As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you may follow the instructions available `in the documentation <certificate-authority.html#sign-a-server-certificate>`_.
+As a reminder, to build a Certificate Authority on Nitrokey HSM 2, you may follow the instructions available `in the documentation <../certificate-authority.html#sign-a-server-certificate>`_.
 
 Alternatively you may set up your own CA on a `on a separate machine <https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-a-certificate-authority-ca-on-ubuntu-20-04>`__, or use the OpenVPN tutorial which also relies on `Easy-RSA <https://openvpn.net/community-resources/setting-up-your-own-certificate-authority-ca/>`__. The last 2 options rely on software solutions for key management.
 
@@ -236,7 +236,7 @@ Server side
 
     The transfer itself is not security sensitive, though it is wise to verify if the received file matches the sender’s copy, if the transport is untrusted.
 
-    In order to go through these steps, I will extensively rely on `these instructions <certificate-authority.html#creating-the-intermediate-certificate-authority>`_, to sign the certificate signing requests, once we generated them with Easy-RSA.
+    In order to go through these steps, I will extensively rely on `these instructions <../certificate-authority.html#creating-the-intermediate-certificate-authority>`_, to sign the certificate signing requests, once we generated them with Easy-RSA.
 
     1. Sign the ``server.req`` file
 

@@ -79,7 +79,7 @@ We can use the command ``gpg --full-generate-key --expert`` to start a guided ke
    sub   rsa2048 2018-09-17 [E]
 
 .. note::
-     For information regarding the supported algorithms, please refer to the `faq <../faq.html>`_
+     For information regarding the supported algorithms, refer to the FAQ of the respective Nitrokey model.
 
 
 Subkey for Authentication

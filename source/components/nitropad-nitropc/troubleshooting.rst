@@ -34,7 +34,7 @@ steps:
    .. figure:: /components/nitropad-nitropc/images/options.jpg
       :alt: img2
 
-3. After that, please follow `these instructions <system-update.html>`_ from step 3 onwards.
+3. After that, please follow `these instructions <heads/system-update.html>`_ from step 3 onwards.
 
 NitroPad doesn’t start
 ----------------------

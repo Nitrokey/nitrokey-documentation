@@ -28,5 +28,5 @@ or check out the features:
 * `OpenPGP Card <../features/openpgp-card/index.html>`_
 * `Encrypted Mobile Storage <../features/encrypted-storage/index.html>`_
 * `Hidden Storage <../features/hidden-storage/index.html>`_
-* `Automatic Screen Lock (Linux) <../features/misc/automatic-screen-lock/index.html>`_
-* `ECC <../features/misc/ecc/index.html>`_
+* `Automatic Screen Lock (Linux) <../features/misc/automatic-screen-lock.html>`_
+* `ECC <../features/misc/ecc.html>`_

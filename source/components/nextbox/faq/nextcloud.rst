@@ -50,7 +50,7 @@ Nextcloud FAQ
 
   This usually is an indication that the OS has unmounted/detached the internal
   hard-drive due to an low-power-incident. Please make sure you read and
-  understood `USB power <faq/hardware.html#why-must-i-not-connect-external-hard-drives-without-an-external-power-supply-to-my-nextbox>`_. In most
+  understood `USB power <hardware.html#why-must-i-not-connect-external-hard-drives-without-an-external-power-supply-to-my-nextbox>`__. In most
   cases doing a power-cycle (unplug the USB-C connector, wait 5secs and plug it
   in again) should resolve this. **Make sure no additional USB devices are
   connected during this procedure.**
