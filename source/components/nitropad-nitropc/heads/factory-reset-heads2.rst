@@ -43,7 +43,7 @@ Procedure
 
 7. The following Question can all be answered with the Default. Just hit enter if you only want to reset your device.  
 
-   .. code-block::
+   .. code-block:: shell
 
       Would you like to change the current LUKS Disk Recovery Key passphrase?
       (Highly recommended if you didn't install the Operating System yourself, so that past provisioned passphrase would not permit to access content.

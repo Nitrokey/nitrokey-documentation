@@ -16,7 +16,7 @@ In case of an update only the WAR file for the application server is required.
 
 2. Create a directory for backups of the HMDM server configuration and application.
 
-   .. code-block::
+   .. code-block:: bash
 
       mkdir /root/hmdm_backup_$(date --iso-8601)
 
@@ -25,19 +25,19 @@ In case of an update only the WAR file for the application server is required.
 
 3. Create a backup of the HMDM database.
 
-   .. code-block::
+   .. code-block:: bash
 
       pg_dump -h 127.0.0.1 -U hmdm -W hmdm > /root/hmdm_backup_$(date --iso-8601)/db.sql
 
 4. Create a backup of the HMDM server configuration.
 
-   .. code-block::
+   .. code-block:: bash
 
       cp /var/lib/tomcat9/conf/Catalina/localhost/ROOT.xml /root/hmdm_backup_$(date --iso-8601)/ROOT.xml
 
 5. Create a backup of the HMDM application.
 
-   .. code-block::
+   .. code-block:: bash
 
       cp /var/lib/tomcat9/webapps/ROOT.war /root/hmdm_backup_$(date --iso-8601)/ROOT.war
 
