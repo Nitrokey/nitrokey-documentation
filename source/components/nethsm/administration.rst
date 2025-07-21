@@ -1020,7 +1020,9 @@ Add a user account to the NetHSM.
 Each user account has a *Role*, which needs to be specified.
 Please refer to chapter `Roles <administration.html#roles>`__ to learn more about *Roles*.
 
-Optionally, a user can be assigned to a `Namespace <administration.html#namespaces>`__.
+Optionally, a user can be assigned to a `Namespace <administration.html#namespaces>`__. By default, the Namespace is inherited from the user that adds the new user.
+Only users without a Namespace can choose a different Namespace for new users.
+The Namespace is used as a prefix for the user name, for example `namespace~user`. Therefore, the same user name can be used in several Namespaces.
 
 .. note::
    The user ID must be alphanumeric.
@@ -1068,10 +1070,6 @@ A user account can be added as follows.
 
       Information about the `/users/{UserID}` endpoint, to create a user with specifying the user ID, can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_users-UserID>`__.
 
-By default, the Namespace is inherited from the user that adds the new user.
-Only users without a Namespace can choose a different Namespace for new users.
-The Namespace is used as a prefix for the user name, for example `namespace~user`. Therefore, the same user name can be used in several Namespaces.
-
 Delete User
 ~~~~~~~~~~~
 
@@ -1109,6 +1107,8 @@ List Users
 
 List the users on the NetHSM.
 
+Users within a Namespace can only see users in the same Namespace.
+
 The list can be retrieved as follows.
 
 .. tabs::
@@ -1139,8 +1139,6 @@ The list can be retrieved as follows.
       Information about the `/users` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users>`__.
 
       Information about the `/users/{UserID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users-UserID>`__.
-
-Users within a Namespace can only see users in the same Namespace.
 
 User Passphrase
 ~~~~~~~~~~~~~~~
@@ -1185,7 +1183,7 @@ Namespaces
 Similarly to the concept of partitions, NetHSM supports the more flexible *Namespaces* which group keys, administrators, and users on a NetHSM into separate subsets.
 Users can only see and use keys in the same Namespace and can only see users in the same Namespace.
 It is not possible to see users and to see and use keys of other Namespaces.
-When a new user is created, it inherits the Namespace of the user that created it.
+When a new user is created, it inherits the Namespace of the user that created it. Users can belong to one Namespace only but not to more.
 The available storage capacity is shared between all Namespaces.
 An practically unlimited amount of Namespaces can be used without requiring additional licenses.
 
