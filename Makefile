@@ -26,6 +26,10 @@ check-syntax: venv
 check-hyperlinks: venv docs
 	venv/bin/linkchecker -f linkcheckerrc dist/en/index.html
 
+.PHONE: check-hyperlinks-nightly
+check-hyperlinks-nightly: venv docs
+	venv/bin/linkchecker -f linkcheckerrc_nightly dist/en/index.html
+
 .PHONY: pkg
 pkg: venv docs
 	mv dist/en/_images dist/_images
