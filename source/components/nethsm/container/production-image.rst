@@ -6,7 +6,8 @@ It requires an external etcd key-value store which is connected through an encry
 The NetHSM process can be executed with hardware-based separation (KVM) and device-specific encryption.
 The image is distributed as OCI image and can be run locally with a compatible executor such as Docker and Podman.
 
-.. include:: container-hardware-restriction.rst.inc
+The image is subject to some feature restrictions in comparison to the NetHSM hardware.
+Please refer to chapter `Image Feature Restrictions <image-feature-restrictions.html>`__ to learn more.
 
 The NetHSM production container is a product for paying customers only and can be purchased `here <https://www.nitrokey.com/contact>`__.
 The image can be obtained from `Nitrokey NetHSM registry <https://registry.git.nitrokey.com/distribution/nethsm>`_ using the credentials provided after purchase.

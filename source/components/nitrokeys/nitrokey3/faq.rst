@@ -14,7 +14,7 @@ Nitrokey 3 FAQ
    On `WebAuthn.io`_ you can check various high-level functionalities, while
    `webautn.bin.coffee`_ provides good developer level details (technical)
    details.
-   You can also `test`_ your Nitrokey.
+   You can also `test <../../software/nitropy/all-platforms/test.html>`__ your Nitrokey.
 
 .. faq:: Where is the right spot for NFC on my smartphone?
 
@@ -95,7 +95,12 @@ Nitrokey 3 FAQ
 .. faq:: Is the Nitrokey 3 Common Criteria or FIPS certified?
 
    The secure element (SE050M) is Common Criteria EAL 6+ security certified up to the OS 
-   level (`Certificate <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-23-0075446_2-Cert.pdf>`__, `Certification Report <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-0075446-CR2-1.pdf>`__, `Security Target <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-0075446_2-STLite.pdf>`__, `Java Card Protection Profile - Open Configuration <https://commoncriteriaportal.org/files/ppfiles/pp0099b_pdf.pdf>`__).
+   level.
+
+   * `Certificate <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-23-0075446_2-Cert.pdf>`__
+   * `Certification Report <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-0075446-CR2-1.pdf>`__
+   * `Security Target <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-0075446_2-STLite.pdf>`__
+   * `Java Card Protection Profile - Open Configuration <https://commoncriteriaportal.org/files/ppfiles/pp0099b_pdf.pdf>`__
 
 .. faq:: How to use Nitrokey 3 with Azure Entra ID (Active Directory)?
 
@@ -103,16 +108,13 @@ Nitrokey 3 FAQ
 
 .. faq:: How can I use the SE050 Secure Element?
 
-  Starting with version 1.7.0 the Secure Element should be automatically activated, if the OpenPGP Card
-  was not used before. To check its activation state you can use: ``nitropy nk3 get-config opcard.use_se050_backend``.
-  To activate it, if it isn't activated use: ``nitropy nk3 set-config opcard.use_se050_backend true`` or disable
-  it accordingly by passing ``false``. **Changing the backend from one to the other will always wipe all your data 
-  inside the OpenPGP Card**
+   Starting with version 1.7.0 the Secure Element should be automatically activated, if the OpenPGP Card
+   was not used before. To check its activation state you can use: ``nitropy nk3 get-config opcard.use_se050_backend``.
+   To activate it, if it isn't activated use: ``nitropy nk3 set-config opcard.use_se050_backend true`` or disable
+   it accordingly by passing ``false``. **Changing the backend from one to the other will always wipe all your data 
+   inside the OpenPGP Card**
 
-  .. note::
-     If you are updating from a test version firmware, we recommend factory resetting the device before
-     using the Nitrokey 3 with the SE050 in production environments.
+   .. note::
+      If you are updating from a test version firmware, we recommend factory resetting the device before
+      using the Nitrokey 3 with the SE050 in production environments.
 
-
-.. include:: ../../shared-faqs/hyperlinks.rst.inc
-.. _test: ../../software/nitropy/all-platforms/test.html
