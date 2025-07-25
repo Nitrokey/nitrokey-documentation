@@ -55,7 +55,7 @@ Management Key
 
 For compatibility reasons, the default management key is the following 3DES (TDES) key (24 bytes in hexadecimal):
 
-::
+.. code-block:: text
 
    0102030405060708 0102030405060708 0102030405060708 
 
@@ -66,6 +66,6 @@ The PIV smart card can generate a new private key on the Nitrokey.
 
 The command below will create a private key in key slot ``9a`` with the RSA algorithm and a key length of 2048 bit, for the user with the subject name ``CN=John Doe`` and subject alternative name ``jd@nitrokey.local``.
 
-.. code-block::
+.. code-block:: shell-session
 
    nitropy nk3 piv --experimental generate-key --key 9a --algo rsa2048 --subject-name "CN=John Doe" --subject-alt-name-upn "jd@nitrokey.local" --path jd.csr

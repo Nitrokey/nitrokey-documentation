@@ -28,7 +28,5 @@ Nitrokey FIDO2 FAQ
 
 .. faq:: How to use Nitrokey FIDO2 with Azure Entra ID (Active Directory)?
 
-   After `disabling Enforce Attestation`_ Nitrokey FIDO2 is supported by Azure Entra ID out of the box.
+   After `disabling Enforce Attestation <https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-passwordless-security-key#fido-security-key-optional-settings`__ Nitrokey FIDO2 is supported by Azure Entra ID out of the box.
 
-
-.. include:: ../../shared-faqs/hyperlinks.rst.inc 

@@ -8,7 +8,6 @@ OpenPGP Key Generation On-Device
 The following instructions explain the generation of OpenPGP keys directly on the Nitrokey. This is done by using the command line interface of GnuPG. Thus, you need to have GnuPG installed on your system. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org/>`__ and the newest version for MacOS can be found `here <https://gpgtools.org/>`__. Users of Linux systems please install GnuPG with help of the package manager.
 
 .. note::
-
    These instructions are based on GnuPG version 2.2.6 or higher. Some
    Linux Distributions have an older version installed. In this case
    please choose a different method as listed
@@ -24,7 +23,7 @@ Open a command line and type ``gpg2 --card-edit``.
 
 To open the Windows command line please push the Windows-key and R-key. Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
 
-::
+.. code-block:: shell-session
 
    > gpg2 --card-edit
 
@@ -52,7 +51,7 @@ To open the Windows command line please push the Windows-key and R-key. Now type
 
 Now you are in the interactive interface of GnuPG. Activate the admin commands with ``admin`` and use ``generate`` afterwards to start the generation of keys.
 
-::
+.. code-block:: shell-session
 
    gpg/card> admin                                                                                          
    Admin commands are allowed                                                                               
@@ -104,7 +103,7 @@ This section is about changing the key attributes. If you want to use the defaul
 
 Open a command line and type ``gpg2 --card-edit --expert``.
 
-::
+.. code-block:: shell-session
 
    > gpg2 --card-edit --expert
 
@@ -131,7 +130,7 @@ Open a command line and type ``gpg2 --card-edit --expert``.
 Now you are in the interactive interface of GnuPG. As you can see in the
 “Key attributes” field above, the default value rsa2048 is set. To change them, activate the admin commands with ``admin`` and use ``key-attr`` afterwards to change the attributes of the keys.
 
-::
+.. code-block:: shell-session
 
    gpg/card> admin
    Admin commands are allowed
@@ -161,7 +160,7 @@ Now you are in the interactive interface of GnuPG. As you can see in the
 
 You can choose the attribute for each key (that is, signature, encryption and authentication key). Most people will use the same attributes for every key. Type ``list`` to see the results (have look at the “Key attributes” field, which now reads rsa4096).
 
-.. code-block::
+.. code-block:: shell-session
 
    gpg/card> list
     
@@ -189,18 +188,21 @@ Type ``quit`` and hit enter to exit or proceed directly with the previous sectio
 
 The following table illustrates which algorithm can be used on which device.
 
-================ ===== ============= =================
-\                Start Pro + Storage Pro 2 + Storage 2
-================ ===== ============= =================
-rsa1024          ✓     ✓             
-rsa2048          ✓     ✓             ✓
-rsa3072                ✓             ✓
-rsa4096                ✓             ✓
-curve25519 (ECC) ✓                   
-NIST (ECC)       ✓                   ✓
-Brainpool (ECC)                      ✓
-secp256k1        ✓                   
-================ ===== ============= =================
+.. table:: Supported algorithms per device
+   :widths: auto
+
+   ================  =====  =============  =================
+                     Start  Pro + Storage  Pro 2 + Storage 2
+   ================  =====  =============  =================
+   rsa1024           ✓      ✓
+   rsa2048           ✓      ✓              ✓
+   rsa3072                  ✓              ✓
+   rsa4096                  ✓              ✓
+   curve25519 (ECC)  ✓
+   NIST (ECC)        ✓                     ✓
+   Brainpool (ECC)                         ✓
+   secp256k1         ✓
+   ================  =====  =============  =================
 
 Exporting Public Key and Keyserver Usage
 ----------------------------------------

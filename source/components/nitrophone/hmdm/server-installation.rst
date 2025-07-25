@@ -20,7 +20,7 @@ Install Web Panel
    Make sure the database password does not contain any characters interpreted by the shell, such as ``@`` or ``&``.
    In the example below replace ``supersafepassword`` with your own password.
 
-   .. code-block::
+   .. code-block:: shell-session
 
       root@mdm:~# su - postgres
       postgres@mdm:~$ psql
@@ -63,7 +63,7 @@ Activate Multi-Tenant Mode (optional)
 3. Open a connection to the Postgres service and select the *hmdm* database with ``psql hmdm``.
 4. In the Postgres shell *psql>* run the following statements one after another.
 
-   .. code-block::
+   .. code-block:: sql
 
       UPDATE customers SET master=true WHERE id=1;
       UPDATE users SET userroleid=1 WHERE id=1;
@@ -87,17 +87,20 @@ This chapter describes how to do this if it wasn't done during installation.
 3. Open the file ``ROOT.xml`` in an editor.
 4. Towards the end of the file you can find the following configuration keys.
 
-   .. code-block::
+   .. code-block:: xml
 
-      <Parameter name="smtp.host" value="mail.example.net"/>
-      <Parameter name="smtp.port" value="465"/>
-      <Parameter name="smtp.ssl" value="1"/>
-      <Parameter name="smtp.starttls" value="0"/>
-      <Parameter name="smtp.username" value="noreply@example.net"/>
-      <Parameter name="smtp.password" value="supersafepassword"/>
-      <Parameter name="smtp.from" value="noreply@example.net"/>
-      <!-- Uncomment this line if you get 'Could not convert socket to TLS' -->
-      <!-- <Parameter name="smtp.ssl.protocols"value="TLSv1.2"/> -->
+      <?xml version="1.0" encoding="UTF-8"?>
+      <Context>
+          <Parameter name="smtp.host" value="mail.example.net"/>
+          <Parameter name="smtp.port" value="465"/>
+          <Parameter name="smtp.ssl" value="1"/>
+          <Parameter name="smtp.starttls" value="0"/>
+          <Parameter name="smtp.username" value="noreply@example.net"/>
+          <Parameter name="smtp.password" value="supersafepassword"/>
+          <Parameter name="smtp.from" value="noreply@example.net"/>
+          <!-- Uncomment this line if you get 'Could not convert socket to TLS' -->
+          <!-- <Parameter name="smtp.ssl.protocols"value="TLSv1.2"/> -->
+      </Context>
 
 5. After changing the configuration, make again a backup of your configuration file with ``cp /var/lib/tomcat9/conf/Catalina/localhost/ROOT.xml /var/lib/tomcat9/conf/Catalina/localhost/ROOT.xml~``.
 

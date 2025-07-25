@@ -1,13 +1,3 @@
-
-.. contents:: :local:
-
-Verification of Sealed Hardware
--------------------------------
-
-If you have ordered the unit with the option “sealed screws and sealed
-bag”, please `verify the sealing <../sealed-hardware.html>`_ before
-unpacking. If you do not know what this means, skip this section.
-
 Secure Starting Procedure
 -------------------------
 
@@ -23,7 +13,7 @@ your Nitrokey. If the Nitrokey is plugged in and the system has not been
 modified, the following screen will appear when it is turned
 on.
 
-.. figure:: ../images/NitroPad-boot-process_0.jpeg
+.. figure:: images/NitroPad-boot-process_0.jpeg
    :alt: img1
 
 The box marked in red contains the information that the BIOS has not
@@ -38,7 +28,7 @@ If the information on the NitroPad or NitroPC does not match the information on 
 Nitrokey, the background would turn red and the message “Invalid Code”
 would appear. This could indicate that manipulation has taken place.
 
-.. figure:: ../images/NitroPad-boot-process-bad.jpeg
+.. figure:: images/NitroPad-boot-process-bad.jpeg
    :alt: img2
 
 How the boot process may look like if the system has been changed (for
@@ -46,7 +36,7 @@ example after an update) and what error messages may otherwise occur is
 described further below.
 
 .. tip::
-
    The NitroPad and NitroPC can also be started without the Nitrokey. If you
    don’t have the Nitrokey with you, but are sure that the hardware has
    not been manipulated, you can boot your system without checking.
+
