@@ -12,10 +12,10 @@ Nitrokey Passkey FAQ
 
 .. faq:: How can I check if my Nitrokey Passkey is working?
 
-   On `WebAuthn.io`_ you can check various high-level functionalities, while
-   `webautn.bin.coffee`_ provides good developer level details (technical)
+   On `WebAuthn.io <https://webauthn.io/>`_ you can check various high-level functionalities, while
+   `webautn.bin.coffee <https://webauthn.bin.coffee/>`_ provides good developer level details (technical)
    details.
-   You can also test your Nitrokey with `nitropy`_.
+   You can also test your Nitrokey with `nitropy <../../software/nitropy/index.html>`_.
 
 .. faq:: What happens if I lose my Nitrokey Passkey device?
 
@@ -33,7 +33,7 @@ Nitrokey Passkey FAQ
 
 .. faq:: How to use Nitrokey Passkey with Azure Entra ID (Active Directory)?
 
-   After `disabling Enforce Attestation`_ Nitrokey Passkey is supported by Azure Entra ID out of the box.
+   After `disabling Enforce Attestation <https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-passwordless-security-key#fido-security-key-optional-settings>`_ Nitrokey Passkey is supported by Azure Entra ID out of the box.
 
 .. faq:: Why does the Nitrokey Passkey not show up in GnuPG?
 
@@ -43,5 +43,3 @@ Nitrokey Passkey FAQ
 
    The Nitrokey Passkey is not supported by the Nitrokey App 1 and 2.
 
-.. include:: ../../shared-faqs/hyperlinks.rst.inc 
-.. _nitropy: ../../software/nitropy/index.html

@@ -6,7 +6,8 @@ It does not offer to run the NetHSM process with hardware-based separation (KVM)
 The connection between the NetHSM process and the integrated key-value store is unencrypted.
 The image is distributed as OCI image and can be run locally with a compatible executor such as Docker and Podman.
 
-.. include:: container-hardware-restriction.rst.inc
+The image is subject to some feature restrictions in comparison to the NetHSM hardware.
+Please refer to chapter `Image Feature Restrictions <image-feature-restrictions.html>`__ to learn more.
 
 The image can be obtained from `Docker Hub <https://hub.docker.com/r/nitrokey/nethsm>`_.
 

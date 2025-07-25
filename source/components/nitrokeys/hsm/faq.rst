@@ -1,9 +1,13 @@
 Nitrokey HSM FAQ
 ================
 
+.. faq:: Which Operating Systems are supported?
 
-.. include:: ../../shared-faqs/nitrokeys.rst.inc 
+   Windows, Linux and macOS.
 
+.. faq:: What can I use the Nitrokey for?
+
+   See the `overview <https://www.nitrokey.com/products/nitrokeys>`__ of supported use cases.
 
 .. faq:: What is the maximum length of the PIN?
 
@@ -63,7 +67,41 @@ Nitrokey HSM FAQ
    Use ``opensc-tool --list-algorithms`` and compare with the table below. Please 
    also see `this thread`_ for the factsheets and more details.
 
-.. include:: ../../shared-faqs/algos.rst.inc 
+.. faq:: Which algorithms and maximum key length are supported?
+
+   See the following table:
+
+   +-------------------+-----+-------+
+   |                   | HSM | HSM 2 |
+   +-------------------+-----+-------+
+   | RSA 1024          | ✓   | ✓     |
+   +-------------------+-----+-------+
+   | RSA 2048          | ✓   | ✓     |
+   +-------------------+-----+-------+
+   | RSA 3072          |     | ✓     |
+   +-------------------+-----+-------+
+   | RSA 4096          |     | ✓     |
+   +-------------------+-----+-------+
+   | Curve25519        |     |       |
+   +-------------------+-----+-------+
+   | NIST-P 192        |     | ✓     |
+   +-------------------+-----+-------+
+   | NIST-P 256        |     | ✓     |
+   +-------------------+-----+-------+
+   | NIST-P 384-521    |     | ✓     |
+   +-------------------+-----+-------+
+   | Brainpool 192     | ✓   | ✓     |
+   +-------------------+-----+-------+
+   | Brainpool 256-320 | ✓   | ✓     |
+   +-------------------+-----+-------+
+   | Brainpool 384-521 |     | ✓     |
+   +-------------------+-----+-------+
+   | secp192k1         | ✓   | ✓     |
+   +-------------------+-----+-------+
+   | secp256k1         | ✓   | ✓     |
+   +-------------------+-----+-------+
+   | secp521k1         |     | ✓     |
+   +-------------------+-----+-------+
 
 .. faq:: How can I use the True Random Number Generator (TRNG) of the Nitrokey HSM for my applications?
 
@@ -130,4 +168,3 @@ Nitrokey HSM FAQ
 .. _TokenTools: https://github.com/infincia/TokenTools
 .. _AIS 31: https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Zertifizierung/Interpretationen/AIS_31_pdf
 
-.. include:: ../../shared-faqs/hyperlinks.rst.inc 

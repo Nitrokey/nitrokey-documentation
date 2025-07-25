@@ -43,4 +43,3 @@ The admin PIN can have up to 20 digits and other characters (e.g. alphabetic an
 .. figure:: /components/nitrokeys/features/openpgp-card/images/change-pins/4.png
    :alt: img4
 
-
