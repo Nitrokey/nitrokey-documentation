@@ -3,15 +3,16 @@ KeePassXC
 
 These instructions describe how to protect and encrypt a `KeePassXC <https://keepassxc.org/>`__ password database with Nitrokey 3.
 
-.. note::
+Prerequisits
+^^^^^^^^^^^^
 
-    - KeePassXC version 2.7.6 or newer is required.
-    - `Nitrokey App 2 </software/nk-app2/>`__ version 2.2.2 or newer is required.
+- KeePassXC version 2.7.6 or newer is required.
+- `Nitrokey App 2 <index.html>`__ version 2.2.2 or newer is required.
 
 First Step: Generate a HMAC Secret With the Nitrokey App 2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Open `Nitrokey App 2 </software/nk-app2/>`__
+1. Open Nitrokey App 2
 2. Select the Nitrokey 3
 3. Select the ``PASSWORDS`` tab
 4. Click on ``ADD`` to create a new credential
@@ -83,7 +84,7 @@ Troubleshooting for Linux
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 If the Nirokey 3 device is not recognised by `KeePassXC <https://keepassxc.org/>`__ on a Linux system:
 
-* Provided that the udev rules have been set as described `here </software/nitropy/linux/udev.html>`__.
+* Provided that the udev rules have been set as described `here <../nitropy/linux/udev.html>`__.
 * Provided that the ``pcscd service`` are has been started with: 
 
   .. code-block:: bash
