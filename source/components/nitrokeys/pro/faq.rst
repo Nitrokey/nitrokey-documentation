@@ -160,7 +160,7 @@ Nitrokey Pro 2 FAQ
    signing.
 
 .. _scdrand: http://www.incenp.org/dvlpt/scdrand.html
-.. _This script: https://lists.gt.net/gnupg/users/80681#80681
+.. _This script: https://lists.gnupg.org/pipermail/gnupg-users/2017-June/058456.html
 .. _created a systemd file: https://support.nitrokey.com/t/scdrand-systemd-service-and-gentoo-ebuild/1164
 .. _ebuild for Gentoo: https://github.com/comio/comio-overlay/tree/master/app-crypt/scdtools
 .. _BSI TR-03116: https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Technische-Richtlinien/TR-nach-Thema-sortiert/tr03116/TR-03116_node.html
