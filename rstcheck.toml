@@ -5,7 +5,11 @@ ignore_directives = [
     "faq",
     "product-table",
 ]
-# ignore-messages is needed due to links being used in directives, which
-# are not visible by rstcheck as these directives are ignored (mostly faq)
-ignore_messages = "faq(.*)Hyperlink target(.*)is not referenced"
+ignore_messages = [
+    # Hyperlinks are not visible by rstcheck as there directives are ignored (mostly faq).
+    "faq(.*)Hyperlink target(.*)is not referenced",
+    # Docutils raises this warning even when an explicit target link is set.
+    # In case it is linked to, it will concert to an error.
+    "Duplicate implicit target name: .*",
+]
 

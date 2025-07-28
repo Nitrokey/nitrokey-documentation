@@ -3,7 +3,7 @@ Replace Internal Hard-Drive
 
 .. contents:: :local:
 
-.. Warning::
+.. warning::
    Please do this only, if you know what you are doing. By modifying the NextBox you void
    your warranty for at least the hardware of the NextBox. These steps are generally not
    covered by the support, you are modifying your NextBox at your own risk!
@@ -52,11 +52,11 @@ Prepare New Hard-Disk
 7. Run the script using the device name you have determined. Once prompted for
    your sudo-password please provide it to allow r/w access to the hard-drive:
 
-   .. code::
+   .. code:: shell-session
 
       $ ./simple_prepare_harddrive.sh <device-name> 
       
-      # example: ./simple_prepare_harddrive.sh /dev/sdb  
+   Replace ``<device-name>`` with the respective device name, for example ``/dev/sdb``.
    
 
 8. Watch the script's output for any errors, there should be none

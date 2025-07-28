@@ -10,19 +10,19 @@ This is the simplest way for now to install the Nitrokey App 2 on macOS. Further
 
 2. Create a work directory:
 
-   .. code-block::
+   .. code-block:: zsh
 
       mkdir nitrokeyapp
 
 3. Enter the directory:
 
-   .. code-block::
+   .. code-block:: zsh
 
       cd nitrokeyapp
 
 4. Install the app via pipenv:
 
-   .. code-block::
+   .. code-block:: zsh
 
       pipenv install nitrokeyapp
 
@@ -35,15 +35,15 @@ Updating
 
 1. Enter the work directory:
 
-   .. code-block::
+   .. code-block:: zsh
    
-    cd nitrokeyapp
+      cd nitrokeyapp
    
 2. Update the app:
 
-   .. code-block::
+   .. code-block:: zsh
 
-    pipenv update
+      pipenv update
 
 
 Starting
@@ -53,12 +53,12 @@ To run the application:
 
 1. Enter the work directory:
 
-   .. code-block::
+   .. code-block:: zsh
 
-    cd nitrokeyapp
+      cd nitrokeyapp
    
 2. Update the app:
 
-   .. code-block::
+   .. code-block:: zsh
 
-    pipenv run nitrokeyapp
+      pipenv run nitrokeyapp

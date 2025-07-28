@@ -86,7 +86,7 @@ The key can be generated as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST generate-key \
             --type RSA \
@@ -95,7 +95,7 @@ The key can be generated as follows.
             --length 2048 \
             --key-id myFirstKey
 
-      .. code-block::
+      .. code-block:: shell-session
 
          Key myFirstKey generated on NetHSM localhost:8443
    .. tab:: REST API
@@ -175,7 +175,7 @@ Import a private key from a PEM file into NetHSM as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST import-key \
             --mechanism RSA_Signature_PSS_SHA256 \
@@ -183,7 +183,7 @@ Import a private key from a PEM file into NetHSM as follows.
             --key-id myFirstKey \
             mykey.pem
 
-      .. code-block::
+      .. code-block:: shell-session
 
          Key myFirstKey added to NetHSM localhost:8443
    .. tab:: REST API
@@ -233,7 +233,7 @@ Private keys in raw format can be imported as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST add-key \
             --type RSA \
@@ -244,7 +244,7 @@ Private keys in raw format can be imported as follows.
             --prime-p "AOnWFZ+JrI/xOXJU04uYCZOiPVUWd6CSbVseEYrYQYxc7dVroePshz29tc+VEOUP5T0O8lXMEkjFAwjW6C9QTAsPyl6jwyOQluMRIkdN4/7BAg3HAMuGd7VmkGyYrnZWW54sLWp1JD6XJG33kF+9OSar9ETPoVyBgK5punfiUFEL" \
             --prime-q "ANT1kWDdP9hZoFKT49dwdM/S+3ZDnxQa7kZk9p+JKU5RaU9e8pS2GOJljHwkES1FH6CUGeIaUi81tRKe2XZhe/163sEyMcxkaaRbBbTc1v6ZDKILFKKt4eX7LAQfhL/iFlgi6pcyUM8QDrm1QeFgGz11ChM0JuQw1WwkX06lg8iv"
 
-      .. code-block::
+      .. code-block:: shell-session
 
          Key myFirstKey added to NetHSM localhost:8443
    .. tab:: REST API
@@ -272,11 +272,11 @@ Users can only delete keys in their `Namespace <administration.html#namespaces>`
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST delete-key myFirstKey
       
-      .. code-block::
+      .. code-block:: shell-session
 
          Key myFirstKey deleted on NetHSM localhost:8443
    .. tab:: REST API
@@ -305,11 +305,11 @@ The list can be retrieved as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST list-keys
 
-      .. code-block::
+      .. code-block:: shell-session
 
          Keys on NetHSM localhost:8443:
 
@@ -335,11 +335,11 @@ The detailed information can be retrieved as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST get-key myFirstKey
 
-      .. code-block::
+      .. code-block:: shell-session
 
          Key myFirstKey on NetHSM localhost:8443:
          Type:            RSA
@@ -360,11 +360,11 @@ The public key of a key can be retrieved as follows. It's in PKCS#8 format.
 
       **Example**
 
-      .. code-block::
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST get-key myFirstKey --public-key
 
-      .. code-block::
+      .. code-block:: pem
 
          -----BEGIN PUBLIC KEY-----
          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr62XHPWMDdEf2I1WEpSx
@@ -388,12 +388,12 @@ The public key can be inspected for example with OpenSSL as follows.
 
       **Example**
 
-      .. code-block::
+      .. code-block:: shell-session
 
          nitropy nethsm --host= $NETHSM_HOST get-key myFirstKey \
           --public-key | openssl rsa -pubin -text
 
-      .. code-block::
+      .. code-block:: shell-session
 
          Public-Key: (2048 bit)
          Modulus:
@@ -460,11 +460,11 @@ The *Tag* can be added as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST add-key-tag myFirstKey berlin
 
-      .. code-block::
+      .. code-block:: shell-session
 
          Added tag berlin for key myFirstKey on the NetHSM localhost:8443
    .. tab:: REST API
@@ -490,11 +490,11 @@ The *Tag* can be deleted as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST delete-key-tag myFirstKey berlin
 
-      .. code-block::
+      .. code-block:: shell-session
 
          Deleted tag berlin for key myFirstKey on the NetHSM localhost:8443
    .. tab:: REST API
@@ -546,13 +546,13 @@ The certificate can be set as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST set-certificate \
             --key-id myFirstKey \
             --mime-type application/x-pem-file /tmp/cert.pem
 
-      .. code-block::
+      .. code-block:: shell-session
 
          Updated the certificate for key myFirstKey on NetHSM localhost:8443
    .. tab:: REST API
@@ -576,11 +576,11 @@ The certificate can be retrieved as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST get-certificate --key-id myFirstKey
 
-      .. code-block::
+      .. code-block:: pem
 
          -----BEGIN CERTIFICATE-----
          MIICeTCCAWECFCbuzdkAvc3Zx3W53IoSnmhUen42MA0GCSqGSIb3DQEBCwUAMHsx
@@ -636,7 +636,7 @@ The NetHSM supports generating CSR (Certificate Signing Requests) for the stored
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST csr \
             --key-id myFirstKey \
@@ -648,7 +648,7 @@ The NetHSM supports generating CSR (Certificate Signing Requests) for the stored
             --common-name=nitrokey.com \
             --email-address="info@nitrokey.com"
 
-      .. code-block::
+      .. code-block:: pem
 
          -----BEGIN CERTIFICATE REQUEST-----
          MIHxMIGkAgEAMHExbzAJBgNVBAYTAkRFMA0GA1UEBwwGQmVybGluMA0GA1UECAwG
@@ -699,7 +699,7 @@ Data can be encrypted for a symmetric key as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST encrypt \
             -k myFirstKey \
@@ -707,7 +707,7 @@ Data can be encrypted for a symmetric key as follows.
             -m AES_CBC \
             -iv "aYlwUI4A9zL9tts4dMAq+A=="
       
-      .. code-block::
+      .. code-block:: shell-session
 
          Encrypted: Uk+9pgucdxTnbyIb/6+BDJef+HfRWhw+Eg3RcCvyHaU=
          Initialization vector: aYlwUI4A9zL9tts4dMAq+A==
@@ -719,7 +719,7 @@ This prints the encrypted and base64 encoded message ``NetHSM rulezzzzzzzzzzzzzz
 
 Data can be encrypted for asymmetric keys with OpenSSL as follows.
 
-.. code-block:: bash
+.. code-block:: shell-session
 
    $ echo 'NetHSM rulez!' | openssl pkeyutl \
       -encrypt \
@@ -768,14 +768,14 @@ The data can be decrypted as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm -h $NETHSM_HOST decrypt \
             -k myFirstKey \
             -d "$(cat data.crypt)" \
             -m PKCS1 | base64 -d
 
-      .. code-block::
+      .. code-block:: shell-session
 
          NetHSM rulez!
    .. tab:: REST API
@@ -789,13 +789,13 @@ For signatures with a RSA and ECDSA key, a digest must be calculate first.
 
 To calculate a digest the data is required first. A message is created as follows.
 
-.. code-block:: bash
+.. code-block:: shell-session
 
    $ echo 'NetHSM rulez!' > data
 
 The digest is calculated with OpenSSL as follows.
 
-.. code-block:: bash
+.. code-block:: shell-session
 
    $ openssl dgst -sha256 -binary data | base64 > data.digest
 
@@ -833,7 +833,7 @@ From the digest a signature can be created as follows.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          $ nitropy nethsm -h $NETHSM_HOST sign \
             -k myFirstKey \
@@ -844,7 +844,7 @@ From the digest a signature can be created as follows.
 
 The created signature can be verified with OpenSSL as follows.
 
-.. code-block:: bash
+.. code-block:: shell-session
 
    $ openssl dgst \
       -sha256 \
@@ -853,7 +853,7 @@ The created signature can be verified with OpenSSL as follows.
       -sigopt rsa_padding_mode:pss \
       -sigopt rsa_pss_saltlen:-1 data
 
-.. code-block::
+.. code-block:: shell-session
 
    Verified OK
 
@@ -878,11 +878,11 @@ The NetHSM can provide random bytes as a Base64 string.
 
       **Example**
 
-      .. code-block:: bash
+      .. code-block:: shell-session
 
          nitropy nethsm --host $NETHSM_HOST random 4
 
-      .. code-block::
+      .. code-block:: shell-session
 
          94A2rg==
    .. tab:: REST API

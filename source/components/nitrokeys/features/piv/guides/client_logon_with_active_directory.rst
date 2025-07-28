@@ -14,12 +14,17 @@ The setup requires administrative access to the machines running Active Director
 On the client machine only access to the respective user account used for logon is required.
 
 * Windows server (supported versions are Windows Server 2016, 2019, 2022, 2025 in Standard and Enterprise editions)
-   * ADDS role installed and configured.
-   * ADCS role installed and *Enterprise-CA* with root certificate configured.
-      * Each Domain Controller (DC) must have a *Domain Controller*, *Domain Controller Authentication*, and *Kerberos Authentication* certificate issued.
-      * If you have clients leaving the company network, make sure the published full and delta certificate revocation lists (CRL) are retrievable from external networks.
+
+  * ADDS role installed and configured.
+  * ADCS role installed and *Enterprise-CA* with root certificate configured.
+
+    * Each Domain Controller (DC) must have a *Domain Controller*, *Domain Controller Authentication*, and *Kerberos Authentication* certificate issued.
+    * If you have clients leaving the company network, make sure the published full and delta certificate revocation lists (CRL) are retrievable from external networks.
+
 * Windows client (supported versions are Windows 10, 11 in editions *Professional* and *Enterprise*)
-   * Client must be a domain member of the Active Directory (AD) domain.
+
+  * Client must be a domain member of the Active Directory (AD) domain.
+
 * Nitrokey 3 with PIV smart card.
 
 Configure smartcard logon for use with Active Directory (AD)
@@ -39,29 +44,29 @@ It is used to sign the Certificate Request (CSR) during provisioning of the Nitr
          4. Set the settings below on the template, according to the mentioned tab.
 
             **Compatibility**
-               * Disable **Show resulting changes**
-               * Set **Certificate Authority** and **Certificate recipient** to the oldest clients in the domain which are supposed to use smartcard logon.
+            * Disable **Show resulting changes**
+            * Set **Certificate Authority** and **Certificate recipient** to the oldest clients in the domain which are supposed to use smartcard logon.
 
-                  .. important::
-                     If you want to use Elliptic Curve (EC) keys your clients must be not older than Windows Server 2008 and Windows Vista.
+              .. important::
+                 If you want to use Elliptic Curve (EC) keys your clients must be not older than Windows Server 2008 and Windows Vista.
 
             **General**
-               * Set a **Template display name**.
-               * Set the **Validity period** and **Renewal period**.
+            * Set a **Template display name**.
+            * Set the **Validity period** and **Renewal period**.
 
             **Request handling**
-               * Set a purpose of **Signature and smartcard logon**.
+            * Set a purpose of **Signature and smartcard logon**.
 
             **Cryptography**
-               * Set a provider category of **Key Storage Provider**.
-               * Set a algorithm name and minimum key size.
+            * Set a provider category of **Key Storage Provider**.
+            * Set a algorithm name and minimum key size.
 
-                  .. important::
-                     Microsoft recommends to use the RSA algorithm with a key length of ``2048`` Bit.
-                     If you choose to use Elliptic Curve (EC) keys you need to make additional changes on your client computers.
+              .. important::
+                 Microsoft recommends to use the RSA algorithm with a key length of ``2048`` Bit.
+                 If you choose to use Elliptic Curve (EC) keys you need to make additional changes on your client computers.
 
             **Subject Name**
-               * Set **Supply in the request**.
+            * Set **Supply in the request**.
          5. Confirm the template creation with **OK**.
 
 2. After the creation of a certificate template, the template must be issued to be used by the clients.
@@ -87,7 +92,7 @@ The certificate is then written to the Nitrokey.
 
 1. Generate a private key and write the CSR to file with the command below.
 
-   .. code-block::
+   .. code-block:: pwsh-session
 
       nitropy nk3 piv --experimental generate-key --key 9A --algo <algorithm> --subject-name <subject-name> --subject-alt-name-upn <subject-alternative-name> --path <file>
 
@@ -98,7 +103,7 @@ The certificate is then written to the Nitrokey.
 
 2. Sign the CSR with the certificate authority (CA) of the domain with the command below.
 
-   .. code-block::
+   .. code-block:: pwsh-session
 
       certreq -attrib CertificateTemplate:<template-name> -submit <file>
    
@@ -107,7 +112,7 @@ The certificate is then written to the Nitrokey.
 
 3. Write the signed certificate to the Nitrokey with the command below.
 
-   .. code-block::
+   .. code-block:: pwsh-session
 
       nitropy nk3 piv --experimental write-certificate --key 9A --format PEM --path <file>
 
@@ -116,7 +121,7 @@ The certificate is then written to the Nitrokey.
 4. Map the certificate with the Active Directory user account.
    Create the certificate mappings with the command below.
 
-   .. code-block::
+   .. code-block:: pwsh-session
 
       nitropy nk3 piv --experimental get-windows-auth-mapping
 
@@ -150,13 +155,13 @@ The certificate is then written to the Nitrokey.
 
       **Source**
 
-      ::
+      .. code-block:: text
 
          Kerberos-Key-Distribution-Center
 
       **Message**
 
-      ::
+      .. code-block:: text
 
          The Key Distribution Center (KDC) encountered a user certificate that was valid but could not be mapped to a user in a secure way (such as via explicit mapping, key trust mapping, or a SID). Such certificates should either be replaced or mapped directly to the user via explicit mapping. See https://go.microsoft.com/fwlink/?linkid=2189925 to learn more.
 
