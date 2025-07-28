@@ -83,6 +83,25 @@ exclude_patterns = [
     "components/to-be-integrated.rst",
 ]
 
+# List of page names to exclude from adding a
+# "Edit this Page" and "Request docs change" link in the page footer
+github_edit_excludes = [
+    "search",
+    "genindex",
+    "components/software/nitrokey-sdk-py/index",
+    "components/software/nitrokey-sdk-py/guides/index",
+    "components/software/nitrokey-sdk-py/guides/usage",
+    "components/software/nitrokey-sdk-py/api/index",
+    "components/software/nitrokey-sdk-py/api/nitrokey.nk3",
+    "components/software/nitrokey-sdk-py/api/nitrokey.nk3.secrets_app",
+    "components/software/nitrokey-sdk-py/api/nitrokey.nk3.updates",
+    "components/software/nitrokey-sdk-py/api/nitrokey.nkpk",
+    "components/software/nitrokey-sdk-py/api/nitrokey.trussed",
+    "components/software/nitrokey-sdk-py/api/nitrokey.trussed.admin_app",
+    "components/software/nitrokey-sdk-py/api/nitrokey.trussed.provisioner_app",
+    "components/software/nitrokey-sdk-py/api/nitrokey.updates",
+]
+
 # The name of the Pygments (syntax highlighting) style to use.
 # pygments_style = "solarizeddark"
 # pygments_style = "cheerfully_dark"
@@ -109,6 +128,7 @@ html_context = {
     "github_user": "Nitrokey",  # Username
     "github_repo": "nitrokey-documentation",
     "github_version": "main",  # Version
+    "github_edit_excludes": github_edit_excludes,
     "conf_py_path": "source",  # Path in the checkout to the docs root
     "suffix": ".rst",
     "copyrightlink": "https://www.nitrokey.com",
