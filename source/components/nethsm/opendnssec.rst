@@ -3,7 +3,7 @@ OpenDNSSEC
 
 `OpenDNSSEC <https://www.opendnssec.org/>`__ is a tool suite for managing the security of domain names. It can directly load a PKCS#11 module and manage the keys.
 
-To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick Start Guide <https://wiki.opendnssec.org/display/DOCS20/Quick+start+guide>`__. You don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be used instead.
+To install and setup OpenDNSSEC, you can follow the `OpenDNSSEC Quick Start Guide <https://opendnssec.readthedocs.io/en/latest/quickstart/>`__. You don't need to install ``SoftHSM``, the NetHSM PKCS#11 module will be used instead.
 
 As OpenDNSSEC needs access to manage the keys and then use them, you will need to configure both administrator and operator account in the PKCS#11 module configuration file.
 
