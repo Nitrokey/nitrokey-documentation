@@ -79,8 +79,6 @@ gettext_compact = True
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = [
     "venv/*",
-    "components/nethsm/_*.rst",
-    "components/to-be-integrated.rst",
 ]
 
 # List of page names to exclude from adding a
