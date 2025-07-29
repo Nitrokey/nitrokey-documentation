@@ -7,7 +7,8 @@ Hardware FAQ
 .. faq:: Why must I not connect external hard-drives without an external power-supply to my NextBox?
 
   The Raspberry Pi 4 Model B can only supply 1.2A of power through USB (see
-  `RPi Power Supply`_). The internal hard-drive is already connected and powered
+  `RPi Power Supply <https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#typical-power-requirements>`__).
+  The internal hard-drive is already connected and powered
   via USB and pulls ~1.0A. Thus connecting another hard-drive without an
   external power supply can lead to an unreliable power supply for the internal
   hard-drive, thus potential data loss.
@@ -74,5 +75,4 @@ Hardware FAQ
 .. _USB Documentation: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#universal-serial-bus-usb
 .. _NextBox' GitHub: https://github.com/Nitrokey/nextbox-board
 .. _External storage support: https://docs.nextcloud.com/server/20/admin_manual/configuration_files/external_storage_configuration_gui.html
-.. _RPi Power Supply: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#power-supply
 

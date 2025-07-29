@@ -1,7 +1,7 @@
 Installing nitropy With pipx
 ============================
 
-This guide explains how to install nitropy with `pipx <https://pypa.github.io/pipx/>`__. pipx creates a virtual environment for nitropy. This means that nitropy and its dependencies don’t conflict with other packages installed on your system.
+This guide explains how to install nitropy with `pipx <https://pipx.pypa.io/stable/>`__. pipx creates a virtual environment for nitropy. This means that nitropy and its dependencies don’t conflict with other packages installed on your system.
 
 .. note::
 

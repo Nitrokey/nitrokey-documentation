@@ -1,12 +1,12 @@
 PIN Settings for FIDO2 and OTP in the Nitrokey App 2
 ====================================================
 
-These instructions describe how to set or change the PINs for FIDO2 and OTP in the `Nitrokey App 2 </software/nk-app2/>`__. 
+These instructions describe how to set or change the PINs for FIDO2 and OTP in the Nitrokey App 2. 
 
-.. important::
+Prerequisite
+^^^^^^^^^^^^
 
-    - This function is not yet available in the current release of the `Nitrokey App 2 </software/nk-app2/>`__ version 2.3.0 
-    - The function is expected to be available in the release of the `Nitrokey App 2 </software/nk-app2/>`__  version 2.3.1 
+- Nitrokey App 2 in version 2.3.1 or later.
 
 .. important::
 
@@ -15,11 +15,10 @@ These instructions describe how to set or change the PINs for FIDO2 and OTP in t
 First Steps:
 ^^^^^^^^^^^^
 
-1. Open the `Nitrokey App 2 </software/nk-app2/>`__.
+1. Open the Nitrokey App 2.
 2. Select the Nitrokey 3.
 3. Select the ``SETTINGS`` tab.
 4. On the left-hand side of the ``SETTINGS`` tab, a tree structure with various options is available. 
-
 
 FIDO2 PIN Settings
 ^^^^^^^^^^^^^^^^^^

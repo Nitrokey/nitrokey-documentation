@@ -1,0 +1,21 @@
+[filtering]
+checkextern=1
+ignore=
+  (?m)/(de|fr|es|nl|it|ja|ru|el|da|bg|et|fi|lv|lt|pl|pt|ro|sv|sk|sl|cs|hu|zh_CN)+/
+
+[checking]
+threads=1
+
+[output]
+warnings=0
+ignoreerrors=
+  ^http://nextbox\.local$
+  ^http[s]{0,1}://localhost
+  ^http[s]{0,1}://localhost:[1-9][0-9]*
+  ^http[s]{0,1}://192\.168\.[0-9]+\.[1-9]+
+  # expects the HTTP header "Accept: text/html", otherwise returns an HTTP error 404
+  # https://github.com/rust-lang/crates.io/issues/788
+  ^https://crates.io/
+  # return a HTTP error 403 for cli access, browser works
+  ^https://www.raspberrypi.com/documentation
+

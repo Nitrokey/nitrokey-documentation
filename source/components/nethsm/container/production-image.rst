@@ -10,7 +10,7 @@ The image is subject to some feature restrictions in comparison to the NetHSM ha
 Please refer to chapter `Image Feature Restrictions <image-feature-restrictions.html>`__ to learn more.
 
 The NetHSM production container is a product for paying customers only and can be purchased `here <https://www.nitrokey.com/contact>`__.
-The image can be obtained from `Nitrokey NetHSM registry <https://registry.git.nitrokey.com/distribution/nethsm>`_ using the credentials provided after purchase.
+The image can be obtained from Nitrokey NetHSM registry ``https://registry.git.nitrokey.com/distribution/nethsm>`` using the credentials provided after purchase.
 
 .. warning::
    The security of the NetHSM software container strongly depends on the platform's security.

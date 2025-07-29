@@ -33,6 +33,5 @@ In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitro
 
 
 
-.. _installation instructions: /software/nitropy/all-platforms/installation.html
-
+.. _installation instructions: ../../software/nitropy/all-platforms/installation.html
 

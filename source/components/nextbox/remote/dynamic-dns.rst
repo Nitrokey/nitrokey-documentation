@@ -49,9 +49,8 @@ using `ddclient`_, which can be directly configured here or via the *Guided
 DNS* method described before.
 
 In this configuration you need the provide the *domain* this configuration is
-enabling and the contents of the `ddclient.conf` used by `ddclient`_. Various
-examples can be found at the `official documentation`_, the one used for the
-guided DNS configuration uses the following template:
+enabling and the contents of the `ddclient.conf` used by `ddclient`_.
+The one used for the guided DNS configuration uses the following template:
 
 .. code-block:: none
 
@@ -84,7 +83,6 @@ just click **Enable TLS** to acquire your TLS certificate.
 .. _reset password: https://desec.io/reset-password
 .. _token management: https://desec.io/tokens
 .. _ddclient: https://ddclient.net/
-.. _official documentation: https://ddclient.net/usage.html
 
 
 .. There are several ways to enable remote access to the NextBox. The easiest way is to use the "Quickstart Configuration".
