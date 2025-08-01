@@ -147,7 +147,7 @@ CLI Method
 
       $ pamu2fcfg > ~/.config/Nitrokey/u2f_keys
 
-   Once you run the command above, you will need to touch the key while it flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys`` in the following format:
+   Once you run the command above, you will need to touch the device while it flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys`` in the following format:
 
    .. code-block:: bash
 
