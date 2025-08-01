@@ -5,7 +5,7 @@ This guide describes how to test the Nitrokey 3.
 
 1. Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions`_ for your OS.
 2. Run ``nitropy nk3 test`` this will launch several tests over your key.
-3. During the test, when asked touch the key.
+3. During the test, when asked touch the device.
 
 This is an example of a working key::
 
