@@ -129,6 +129,6 @@ Further steps
 ~~~~~~~~~~~~~
 
 .. hint::
-	There is a known issue with the NV41 that it can get stuck after the update in the boot splash(heads takes longer then 30s to get up). This solves it self after max 5 restarts (pressing the power button short). If not please contact support@nitrokey.com 
+	There is a known issue with the NV41 that it can get stuck after the update in the boot splash(heads takes longer then 30s to get up). This solves it self after max 5 restarts (pressing the power button short). If not please `contact <https://www.nitrokey.com/contact>`_ our technical support.
 
 1. In case ``ERROR: TOTP Generation Failed!`` screen will show up, please follow the instructions for Factory Reset (on the left side menu), starting from step
