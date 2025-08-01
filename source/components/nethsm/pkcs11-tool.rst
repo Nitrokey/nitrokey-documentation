@@ -52,11 +52,18 @@ To learn more about the configuration of slots, please refer to chapter `Configu
 .. note::
    If your configuration supports more than one slot, you may have to add the ``--slot <arg>`` option in pkcs11-tool commands to use the right one.
 
-Key IDs
--------
+Key IDs and Labels
+------------------
 
-pkcs11-tool uses an hexadecimal key ID to identify keys. NetHSM uses alphanumerical strings as key ID. NetHSM's PKCS#11 module uses the raw byte values of the string to form the PKCS#11 ID.
-You can get the hexadecimal version of a NetHSM key with ``xxd``:
+NetHSM uses alphanumerical strings as key IDs.
+The NetHSM PKCS#11 module shows the key ID on the NetHSM as the PKCS#11 label of the key and a hexadecimal representation of it as PKCS#11 ID.
+The *pkcs11-tool* uses a hexadecimal key ID to identify keys, thus can use the generated PKCS#11 ID.
+
+.. important::
+   The key IDs on the NetHSM are alphanumerical strings, thus only the characters ``A-Z``, ``a-z``, and ``0-9`` are allowed.
+   Invalid characters passed through PKCS#11 labels will result in a ``PKCS11 function C_GenerateKeyPair failed: rv = CKR_FUNCTION_FAILED (0x6)`` error.
+
+You can get the hexadecimal version of a NetHSM key ID with ``xxd``:
 
 .. code-block:: bash
   
