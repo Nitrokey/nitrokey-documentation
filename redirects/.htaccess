@@ -20,7 +20,6 @@
 #RedirectMatch 301 "^(/[a-z][a-z])?/(fido2|nitrokey3|hsm|u2f|storage|start|pro|passkey)(/linux|/windows|/mac)?$" "$1/nitrokeys/$2"
 
 
-
 # FIDO2
 RedirectMatch 301 "^(/[a-z][a-z])?/fido2/(mac/|windows/|linux/)?2fa-nextcloud$" "$1/nitrokeys/features/fido2/nextcloud"
 RedirectMatch 301 "^(/[a-z][a-z])?/fido2/(mac/|windows/|linux/)?2fa-odoo$" "$1/nitrokeys/features/u2f/odoo"
@@ -235,11 +234,11 @@ RedirectMatch 301 "^(/[a-z][a-z])?/nitropc/(.*)$" "$1/nitropad-nitropc/$2"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitrophone/mdm$" "$1/nitrophone/headwind-mdm/$2"
 RedirectMatch 301 "^(/[a-z][a-z])?/nitrophone/headwind-mdm/(.*)$" "$1/nitrophone/hmdm/$2"
 
-
 # found in the wild
 RedirectMatch 301 "^(/[a-z][a-z])?/nitrokeys/nitrokey3/openpgp-keygen-backup$" "$1/nitrokeys/features/openpgp-card/openpgp-keygen-backup"
 
 # generics and fallbacks
 RedirectMatch 301 "^(/[a-z][a-z])?/(fido2|nitrokey3|hsm|u2f|storage|start|pro|passkey)(/linux|/windows|/mac)?(.*)$" "$1/nitrokeys/$2$4"
 
-
+# NetHSM
+RedirectMatch 301 "^(/[a-z][a-z])?/nethsm/container/image-feature-restrictions$" "$1/index"
