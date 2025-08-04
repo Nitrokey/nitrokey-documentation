@@ -23,11 +23,11 @@ Frequently Asked Questions (FAQ)
    Work in progress:
 
    * Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool
+   * Direct, dynamic cluster capability, possibly support for external database
 
    We plan the following developments in the loose order. Changes to this prioritization based on customer requests are possible.
 
    * Productive usable software container
-   * Direct, dynamic cluster capability, possibly support for external database
    * BIP32 key derivation function
    * Quorum: m-of-n access scheme and security domain management
    * Performance improvements
