@@ -1020,9 +1020,12 @@ Add a user account to the NetHSM.
 Each user account has a *Role*, which needs to be specified.
 Please refer to chapter `Roles <administration.html#roles>`__ to learn more about *Roles*.
 
-Optionally, a user can be assigned to a `Namespace <administration.html#namespaces>`__. By default, the Namespace is inherited from the user that adds the new user.
+Optionally, a user can be assigned to a `Namespace <administration.html#namespaces>`__.
+By default, the Namespace is inherited from the user that adds the new user.
 Only users without a Namespace can choose a different Namespace for new users.
-The Namespace is used as a prefix for the user name, for example `namespace~user`. Therefore, the same user name can be used in several Namespaces.
+The Namespace is used as a prefix for the user name, for example
+``namespace~user`` (``<namespace><tilde><username>``). Therefore, the same user name
+can be used in several Namespaces.
 
 .. note::
    The user ID must be alphanumeric.
