@@ -20,11 +20,11 @@ Frequently Asked Questions (FAQ)
 
 .. faq:: Roadmap: Which features are planned?
 
-Work in progress:
+   Work in progress:
 
    * Additional ECC: ECDH (X25519, NIST), secpXk (Koblitz) , Brainpool
 
-We plan the following developments in the loose order. Changes to this prioritization based on customer requests are possible.
+   We plan the following developments in the loose order. Changes to this prioritization based on customer requests are possible.
 
    * Productive usable software container
    * Direct, dynamic cluster capability, possibly support for external database
