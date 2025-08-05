@@ -31,8 +31,7 @@ The *PIN* is used for key operations, such as signing and authentication.
 The factory default for the *PIN* is ``123456``.
 
 .. note::
-   The *PIN* must have maximal length of 8 characters.
-   It can contain alphanumeric characters, including special characters such as punctations.
+   The *PIN* must be from 6 to 8 decimal digits (0-9).
 
 .. warning::
    The *PIN* is subject to the restriction of a retry counter.
