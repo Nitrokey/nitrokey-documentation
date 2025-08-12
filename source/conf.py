@@ -97,6 +97,7 @@ github_edit_excludes = [
     "components/software/nitrokey-sdk-py/api/nitrokey.trussed",
     "components/software/nitrokey-sdk-py/api/nitrokey.trussed.admin_app",
     "components/software/nitrokey-sdk-py/api/nitrokey.trussed.provisioner_app",
+    "components/software/nitrokey-sdk-py/api/nitrokey.trussed.updates",
     "components/software/nitrokey-sdk-py/api/nitrokey.updates",
 ]
 
