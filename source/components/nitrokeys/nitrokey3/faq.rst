@@ -19,8 +19,9 @@ Nitrokey 3 FAQ
 .. faq:: Where is the right spot for NFC on my smartphone?
 
    This is different for every smartphone model, you should find your 
-   brand's respective hardware description to find this out. A quite
-   extensive list can be found `here <https://support.bagtag.com/hc/en-us/articles/4417056455185-Where-to-the-find-NFC-location-per-phone-brand>`_. 
+   brand's respective hardware description to find this out.
+
+   For the NitroPhones you can find the information `here <https://support.google.com/pixelphone/answer/7157629>`_.
 
 .. faq:: What happens if I lose my device?
 
