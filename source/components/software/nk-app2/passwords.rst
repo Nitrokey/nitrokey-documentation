@@ -1,5 +1,5 @@
-Passwords
-=========
+Password Safe
+=============
 
 .. note::
     You can store up to 50 passwords.

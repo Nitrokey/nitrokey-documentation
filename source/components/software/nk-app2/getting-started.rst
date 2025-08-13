@@ -1,8 +1,8 @@
 Getting Started
 ===============
 
-Home Page
-*********
+Overview
+********
 
 The home page allows quick access to essential functions, including checking the current app version, saving log files, and getting support.
 
@@ -15,7 +15,7 @@ To ensure you are using the latest version of the application, click “Check fo
 
 .. figure:: ./images/app-version.png
 
-if no updates are available, the button will display “App is up to date.”
+If no updates are available, the button will display “App is up to date.”
 
 Log File
 ********

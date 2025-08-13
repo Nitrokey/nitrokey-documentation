@@ -1,7 +1,7 @@
 PIN Managment
 =============
 
-To enhance security, PINs can be created to restrict access to FIDO2 features and password storage.
+To enhance security, PINs can be created to restrict access to FIDO2 features and Password Safe.
 Click the “settings” tab to create, edit, or reset your PINs. 
 
 Prerequisite
@@ -47,7 +47,7 @@ Click the “FIDO2” drop down menu to change your PIN or remove any previous s
 Passwords
 ^^^^^^^^^
 
-Store various credentials and OTPs within passwords.
+Store various credentials and OTPs within Passwords.
 
 .. figure:: ./images/password-menu.png
 
