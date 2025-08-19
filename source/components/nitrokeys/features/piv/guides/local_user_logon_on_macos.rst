@@ -12,7 +12,7 @@ The following setup was used at the time of writing this guide:
 
 - MacOS 15.6 (Sequoia)
 - nitropy 0.10.0
-- Nitrokey 3 with PIV smart card.
+- Nitrokey 3 with PIV smart card, firmware version 1.8.1
 
 Configure smartcard logon for local use
 ------------------------------------------------------------
