@@ -50,7 +50,7 @@ This should print something like this:
 ::
 
    SmartCard: com.apple.pivtoken:<nitrokey serial number>
-   Paired identities which are used for authentication:
+   Unpaired identities:
    someId	<username> - Zertifikat zur PIV-Authentifizierung (<CN>)
 
 5. Now unplug the Nitrokey and plug it in again. The operating system should recognize the Nitrokey as a PIV smartcard and suggest to pair with the user that is currently logged in.
