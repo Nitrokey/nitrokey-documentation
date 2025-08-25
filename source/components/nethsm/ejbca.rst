@@ -1,6 +1,11 @@
 EJBCA
 =====
 
+.. warning::
+   Because of some integration problems with the Sun PKCS11 provider, keys generated from EJBCA will have a random name instead of the name given in the interface.
+   Therefor this documentation is only a Proof-of-Concept and we don't currently support EJBCA.
+
+
 `EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority software available as open source.
 
 To be able to use NetHSM with EJBCA you need to `setup <pkcs11-setup.html>`__ the NetHSM PKCS#11 module first.
@@ -17,9 +22,6 @@ Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry in the 
    The ``418`` in the name is an index that must be unique for each PKCS#11 module in the configuration file.
 
 To be able to generate keys from the interface you need to set the ``enable_set_attribute_value`` option to true in the ``p11nethsm.conf`` file.
-
-.. warning::
-   Because of some integration problems with the Sun PKCS11 provider, keys generated from EJBCA will have a random name instead of the name given in the interface.
 
 After restarting EJBCA you can add a new Crypto Token in the EJBCA Admin GUI ``https://mycahostname/ejbca/adminweb/cryptotoken/cryptotokens.xhtml``.
 The Crypto Token type is ``PKCS#11 Crypto Token`` and the Crypto Token name is ``NetHSM``.
