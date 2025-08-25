@@ -24,3 +24,13 @@ Manual Installation
 2. Extract the archive and set the binary as executable
 3. :doc:`Set up the udev rules for nitropy <../nitropy/linux/udev>`
 4. Execute the binary
+
+
+Installation from Source
+------------------------
+
+To install Nitrokey App 2 from source, you need Python 3.10 or later and `pipx <https://pipx.pypa.io/stable/installation/>`__.
+
+1. Execute ``pipx install nitrokeyapp`` to install Nitrokey App 2.
+2. :doc:`Set up the udev rules for nitropy <../nitropy/linux/udev>`
+3. Run ``nitrokeyapp``.
