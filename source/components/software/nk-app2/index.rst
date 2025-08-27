@@ -1,7 +1,7 @@
 Nitrokey App 2
 ==============
 
-The Nitrokey App 2 is a graphical application designed to manage Nitrokey 3 devices. It provides a user-friendly interface for configuring FIDO2 authentication, Password Safe, firmware updates, and PIN management.
+The Nitrokey App 2 is a graphical application designed to manage Nitrokey 3 devices. It provides a user-friendly interface for configuring FIDO2 authentication, Passwords, firmware updates, and PIN management.
 Available languages: English, German, French, Italian, Polish, and Arabic. Language change requires application restart.
 
 .. note::
@@ -18,13 +18,7 @@ Supported Features
 
 - Updating the firmware
 - One-Time Passwords (OTP)
-- Password Safe
-
-Planned Features
-----------------
-
-- PIN management
-- macOS support
+- Passwords
 
 .. toctree::
    :maxdepth: 1

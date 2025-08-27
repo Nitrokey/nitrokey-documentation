@@ -1,5 +1,5 @@
-Password Safe
-=============
+Password
+========
 
 .. note::
     You can store up to 50 passwords.
@@ -24,8 +24,8 @@ You can choose to create a protected entry by checking the "Protect with PIN" bo
 
 You also have the option to require user presence in the form of a required touch on the Nitrokey 3 to access the entry by checking the "Require User Presence" box.
 
-Store and Manage Various Credentials
-------------------------------------
+Store and Manage Credentials
+----------------------------
 
 When adding credentials in the Passwords tab, select an algorithm from the drop down menu. Plain usernames using a password, HOTPs, TOTPs, and HMAC are all supported.
 
@@ -38,12 +38,12 @@ Password Algorithms
 
 To use a password algorithm, go to security settings of the application you want to secure and enable two-factor authentication. Choose the “Authenticator App” or “Manual Setup” option if available. 
 
-The service will show a secret key. Copy this secret key to enter into your credential setup. Open the password manager app and add a new credential. Choose the algorithm you want to use and paste the secret key. Save the credential.
+The service will show a secret key or a QR code. Copy this secret key to enter into your credential setup. Go to the Passwords tab of the Nitrokey App 2 and add a new credential. Choose the algorithm you want to use and paste the secret key. Save the credential.
 
 TOTP
 ++++
 
-A two-factor authentication code that changes at regular time intervals. Enter the shared secret key into the field provided.
+TOTP or Time-based One-Time Password is a two-factor authentication code that changes at regular time intervals. Enter the shared secret key into the field provided.
 
 .. figure:: ./images/TOTP-secret.png
 
@@ -54,7 +54,7 @@ After the credential is saved, click the “OTP” button to generate a 6 digit 
 HOTP
 ++++
 
-A two factor authentication code that changes each time you trigger it. Enter the shared secret key into the field provided.
+HOTP or HMAC-based One-Time Password is a two factor authentication code that changes each time you trigger it. Enter the shared secret key into the field provided.
 
 .. figure:: ./images/HOTP-secret.png
 
@@ -65,7 +65,7 @@ Once the credential is saved, click the “OTP” button to generate a 6 digit c
 HMAC
 ++++
 
-A security method used to confirm that data is authentic and has not been altered by combining a secret key with a message. Enter the shared secret key in the field provided or click the refresh button to have the app generate a secret key for you.
+HMAC or Hash-Based Message Authentication Code is a security method used to confirm that data is authentic and has not been altered by combining a secret key with a message. Enter the shared secret key in the field provided or click the refresh button to have the app generate a secret key for you.
 
 .. figure:: ./images/HMAC-secret.png
 
@@ -74,7 +74,7 @@ Once the credential is saved, the app will use a hash function to generate a cod
 Verification Requirements
 *************************
 
-If a PIN has been set, it must be entered before making any changes. You are allowed only 8 attempts before lockout.
+If a PIN has been set, it must be entered before making any changes. You are allowed only 8 attempts otherwise you will not be able to access or create new credentials and you will need to perform a factory reset in order to use this feature again.
 
 For certain actions, you will be prompted to press your Nitrokey to continue. Watch for a flashing green light on your Nitrokey device and icon.
 
