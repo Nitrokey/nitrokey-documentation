@@ -6,10 +6,10 @@ Password
 
 Password entries may consist of:
 
-* Login
+* Login name
 * Password
 * Comment (for e.g. a website reference)
-* OTP (HOTP or TOTP)
+* One-time password (HOTP or TOTP)
 
 All fields are optional and can be edited and added at any time using the "Edit" button.
 
@@ -31,7 +31,7 @@ When adding credentials in the Passwords tab, select an algorithm from the drop 
 
 .. figure:: ./images/credential-example.png
 
-Select the “None” option to skip two-factor authentication and use a standard username and password combination. Enter a username and a password that only you know, as shown in the example above. The method relies solely on your password for authentication.
+Select the option “None” to skip two-factor authentication and use a standard username and password combination. Enter a username and a password that only you know, as shown in the example above. The method relies solely on your password for authentication.
 
 Password Algorithms
 *******************
