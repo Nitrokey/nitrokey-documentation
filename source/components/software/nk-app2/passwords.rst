@@ -1,5 +1,5 @@
-Password
-========
+Passwords
+=========
 
 .. note::
     You can store up to 50 passwords.
