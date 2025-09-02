@@ -29,6 +29,13 @@ The image can be configured with the following environment variables.
 | ``DEBUG_LOG``        | Enables extended logging for NetHSM. |
 +----------------------+--------------------------------------+
 
+Data Storage
+~~~~~~~~~~~~
+
+The system configuration, keys and certificates are stored in an etcd database.
+The etcd service stores the database in the ``/data`` path of the container.
+Container executors allow to volume or bind mount this path.
+
 Usage
 ^^^^^
 

@@ -75,6 +75,13 @@ The container runtime secrets such as certificates and private keys need to be s
 |                      | in the system design.                                                                                                            |
 +----------------------+----------------------------------------------------------------------------------------------------------------------------------+
 
+Data Storage
+~~~~~~~~~~~~
+
+The system configuration, keys and certificates are stored in an etcd database.
+The etcd service stores the database in the ``/data`` path of the container.
+Container executors allow to volume or bind mount this path.
+
 Usage
 ^^^^^
 
