@@ -3,7 +3,7 @@ EJBCA
 
 .. warning::
    Because of some integration problems with the Sun PKCS11 provider, keys generated from EJBCA will have a random name instead of the name given in the interface.
-   Therefor this documentation is only a Proof-of-Concept and we don't currently support EJBCA.
+   Therefor this documentation is only a Proof-of-Concept. Support for EJBCA will be introduced by NetHSM software 3.0.
 
 
 `EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority software available as open source.
