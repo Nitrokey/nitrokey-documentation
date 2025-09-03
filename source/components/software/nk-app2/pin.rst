@@ -1,7 +1,7 @@
 PIN Managment
 =============
 
-To enhance security, PINs can be created to restrict access to FIDO2 features and Password Safe.
+To enhance security, PINs can be created to restrict access to FIDO2 features and passwords.
 Click the “settings” tab to create, edit, or reset your PINs. 
 
 Prerequisite
@@ -11,7 +11,7 @@ Prerequisite
 
 .. important::
 
-    Each function FIDO2, OTP or OpenPGP Card is assigned a separate PIN, which is managed separately.
+    Each function FIDO2, passwords, PIV or OpenPGP Card is assigned a separate PIN, which is managed separately.
 
 First Steps:
 ^^^^^^^^^^^^
@@ -35,7 +35,7 @@ Click the “FIDO2” drop down menu to change your PIN or remove any previous s
     Factory reset for FIDO2 can only be done within 10 seconds of plugging in your device.
 
 1. Select ``Pin Change`` to set or change the PIN. 
-    * Depending on the status of the Fido2 PIN, the input mask for setting or changing the PIN is now displayed. 
+    * Depending on the status of the FIDO2 PIN, the input mask for setting or changing the PIN is now displayed. 
 2. To set the FIDO2 PIN, enter the new PIN and repeat it in the provided boxes. To change the PIN, enter the current PIN in the box provided.
     * PIN length minimum 4 characters
     * If the repetition of the new PIN is not correct, it will not be accepted.
@@ -47,11 +47,11 @@ Click the “FIDO2” drop down menu to change your PIN or remove any previous s
 Passwords
 ^^^^^^^^^
 
-Store various credentials and OTPs within Passwords.
+Store various credentials and OTPs within passwords.
 
 .. figure:: ./images/password-menu.png
 
-Click the “Passwords” drop down menu to change your PIN or factory reset and remove all your credentials in Passwords.
+Click the “Passwords” drop down menu to change your PIN or factory reset and remove all your credentials in passwords.
 
 .. Note:: 
     

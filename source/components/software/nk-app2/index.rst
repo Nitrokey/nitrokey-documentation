@@ -1,7 +1,7 @@
 Nitrokey App 2
 ==============
 
-The Nitrokey App 2 is a graphical application designed to manage Nitrokey 3 devices. It provides a user-friendly interface for configuring FIDO2 authentication, Passwords, firmware updates, and PIN management.
+The Nitrokey App 2 is a graphical application designed to manage Nitrokey 3 devices. It provides a user-friendly interface for configuring FIDO2 authentication, passwords, firmware updates, and PIN management.
 Available languages: English, German, French, Italian, Polish, and Arabic. Language change requires application restart.
 
 .. note::
@@ -10,15 +10,18 @@ Available languages: English, German, French, Italian, Polish, and Arabic. Langu
 
 Installation
 ------------
-Download it for `Linux <installation-linux.html>`__ , `Windows <installation-windows.html>`__ or `macOS <installation-mac.html>`__ (pipenv only).
+
+Download it for `Linux <installation-linux.html>`__ , `Windows <installation-windows.html>`__ or `macOS <installation-mac.html>`__.
 
 
-Supported Features
-------------------
+Getting Started
+---------------
 
-- Updating the firmware
-- One-Time Passwords (OTP)
-- Passwords
+- `Passwords <./passwords.html>`__
+- `PIN Managment <./pin.html>`__
+- `KeePassXC <./keepassxc.html>`__
+- `Firmware Updates <./update.html>`__
+
 
 .. toctree::
    :maxdepth: 1
@@ -27,32 +30,31 @@ Supported Features
 
    *
  
-Getting Started
----------------
+Home Page
+---------
 
-Overview
-********
+This is the home page that you can find when the app is launched:
+
+.. figure:: ./images/home-page.png
+
 
 The home page allows quick access to essential functions, including checking the current app version, saving log files, and getting support.
 
-.. figure:: ./images/home-page.png
 
 App Version
 ***********
 
 To ensure you are using the latest version of the application, click “Check for App Update.”
 
-.. figure:: ./images/app-version.png
-
 If no updates are available, the button will display “App is up to date.”
+
+If an update is available it will change the button text to "update available"
+
+And by clicking once more it will open the release GitHub page where the latest one is on top. From here you will be able to download the binary if you want to do perfom a manual install
 
 Log File
 ********
 
 The “Save Log File” option lets you export a record of the application’s recent activity, including actions, errors, and system messages. This log file can help diagnose and resolve issues with the application.
 
-Need Help?
-**********
-
-Click the “?” icon or "Instructions and help" link on the home page for quick access to help content and troubleshooting.
 
