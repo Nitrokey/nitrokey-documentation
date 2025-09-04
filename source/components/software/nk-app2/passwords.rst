@@ -82,7 +82,7 @@ You can test TOTP with `this <https://authenticationtest.com/totpChallenge/>`__ 
 
 
 Login With OTP
-____________
+______________
 
 During login with TOTP or HOTP you will need to generate the OTP.
 
