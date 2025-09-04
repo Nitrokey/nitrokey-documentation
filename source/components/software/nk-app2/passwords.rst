@@ -31,7 +31,7 @@ If your credential don't use two-factor authentication let "None" in the algorit
 
 You can choose to add more security by checking the "Require PIN" or "Require Touch" boxes.
 
-The password PIN can be set or changed in the settings.
+The password PIN can be set or changed in the settings (see our documentation about it `here <./pin.html#passwords>`__).
 
 If a PIN has been set, it must be entered before making any changes. 
 
