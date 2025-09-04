@@ -20,7 +20,7 @@ Getting Started
 - `Passwords <./passwords.html>`__
 - `PIN Managment <./pin.html>`__
 - `KeePassXC <./keepassxc.html>`__
-- `Firmware Updates <./update.html>`__
+- `Firmware Update <./update.html>`__
 
 
 .. toctree::
@@ -30,15 +30,13 @@ Getting Started
 
    *
  
-Home Page
----------
-
-This is the home page that you can find when the app is launched:
+Overview
+--------
 
 .. figure:: ./images/home-page.png
 
 
-The home page allows quick access to essential functions, including checking the current app version, saving log files, and getting support.
+The overview allows quick access to check the current app version, saving log files, and getting support.
 
 
 App Version
