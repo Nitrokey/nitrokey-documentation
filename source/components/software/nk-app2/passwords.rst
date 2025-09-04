@@ -1,7 +1,5 @@
 Passwords
 =========
-Store and Manage Credentials
-****************************
 
 Password entries may consist of:
 
@@ -17,31 +15,45 @@ Password entries may consist of:
 
     You can store up to 100 passwords.
 
-To add a new entry click on the "Add" button:
+Store and Manage Credentials
+****************************
+Overview
+--------
 
 .. figure:: ./images/credential-example.png
 
-Entries are divided into two categories: unprotected (shown as an open lock) and protected (shown as a closed lock). 
-    
+Entries are divided into two categories: unprotected (shown as an open lock) and protected (shown as a closed lock).     
+
 Unprotected entries can be accessed directly. 
 
-Protected entries can only be accessed with the PIN by clicking on "Show Protected Passwords". 
+Protected entries can only be accessed with the PIN by clicking on "Show Protected Passwords".
 
-If your credential don't use two-factor authentication let "None" in the algorithm field.
+Add a Regular Credentials
+-------------------------
+
+To add a new entry click on the "Add" button.
+
+While creating a new entry, if your credential don't use two-factor authentication let "None" in the algorithm field.
+
+Once all desired fields are filled click on "Save". 
 
 You can choose to add more security by checking the "Require PIN" or "Require Touch" boxes.
 
-The password PIN can be set or changed in the settings (see our documentation about it `here <./pin.html#passwords>`__).
+.. Note::
 
-If a PIN has been set, it must be entered before making any changes. 
+    The "Require PIN" feature will ask you for your password PIN when saving your credentials, if it's not set it will show an error.
+    
+    So you need first to set a PIN before using this feature.
+
+    The password PIN can be set or changed in the settings (see our documentation about it `here <./pin.html#passwords>`__).
 
 .. important::
     
     You are allowed only 8 attempts otherwise you will not be able to access or create new credentials and you will need to perform a factory reset in order to use this feature again.
 
 
-Password Algorithms
--------------------
+Overview of Password Algorithms
+-------------------------------
 
 .. Note::
 
@@ -57,7 +69,10 @@ With the Nitrokey App 2 and your Nitrokey you can use two different MFA:
 
 HMAC or Hash-Based Message Authentication Code is a cryptographic technique used in both TOTP and HOTP used to confirm that data is authentic and has not been altered by combining a secret key with a message. 
 
-While creating a credential that uses TOTP or HOTP you will need to copy the MFA secret or QR code that is given by the website in the algorithm field.
+Add OTPs Credentials
+--------------------
+
+While creating a credential that uses TOTP or HOTP you will need choose the corresponding one in the algorithm field and then copy the MFA secret or QR code that is given by the website (you want to login to) in the same field.
 
 .. figure:: ./images/TOTP-secret.png
 
@@ -66,8 +81,8 @@ While creating a credential that uses TOTP or HOTP you will need to copy the MFA
 You can test TOTP with `this <https://authenticationtest.com/totpChallenge/>`__ website.
 
 
-Login
-_____
+Login With OTP
+____________
 
 During login with TOTP or HOTP you will need to generate the OTP.
 
