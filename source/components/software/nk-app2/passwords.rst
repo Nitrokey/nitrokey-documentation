@@ -44,6 +44,17 @@ Adding Credentials
     
     You are allowed only 8 attempts to enter a device PIN otherwise you will not be able to access or create new credentials and you will need to perform a factory reset in order to use this feature again.
 
+Login
+*****
+
+Once your credential is stored you can login to your account with these steps:
+
+1. Select on the left side your Nitrokey on which your credential is stored.
+2. Click on the "Passwords" tab.
+3. Click on your desired credential, if your credential is protected click on "Show Protected Passwords" first.
+4. Then you can copy the username and the password to login.
+
+
 OTP Algorithms
 **************
 
