@@ -52,8 +52,9 @@ Once your credential is stored you can login to your account with these steps:
 1. Select on the left side your Nitrokey on which your credential is stored.
 2. Click on the "Passwords" tab.
 3. Click on your desired credential, if your credential is protected click on "Show Protected Passwords" first.
-4. Then you can copy the username and the password to login.
+4. If it's a regular password, copy the username and the password into the login prompt. If it's a OTP credential, click the “OTP” icon to generate the OTP and enter the OTP code into the appropriate field in the login prompt. (For HOTP, press the button again to generate a new code.)
 
+    .. figure:: ./images/TOTP-code.png
 
 OTP Algorithms
 **************
@@ -68,17 +69,5 @@ With the Nitrokey App 2 and your Nitrokey you can use two different MFA:
 .. Note::
 
     For a list of websites supporting OTPs have a look at `dongleauth.com <https://www.dongleauth.com/>`__.
-
-Login With OTP
-**************
-
-During login with TOTP or HOTP you will need to generate the OTP or code.
-
-1. Select in the password list the desired saved credential.
-2. In the TOTP or HOTP line click the “OTP” icon to generate the OTP. (For HOTP, press the button again to generate a new code.)
-
-    .. figure:: ./images/TOTP-code.png
-
-3. Enter the OTP code into the appropriate field in the login prompt.
 
 You can test TOTP with `this <https://authenticationtest.com/totpChallenge/>`__ website.
