@@ -68,6 +68,6 @@ During login with TOTP or HOTP you will need to generate the OTP or code.
 
 .. figure:: ./images/TOTP-code.png
 
-3. Enter the OTP code into the appropriate field in the login prompot.
+3. Enter the OTP code into the appropriate field in the login prompt.
 
 You can test TOTP with `this <https://authenticationtest.com/totpChallenge/>`__ website.
