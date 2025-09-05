@@ -33,7 +33,7 @@ Getting Started
 Overview
 --------
 
-.. figure:: ./images/home-page.png
+.. figure:: ./images/overview.png
 
 
 The overview allows quick access to check the current app version, saving log files, and getting support.
