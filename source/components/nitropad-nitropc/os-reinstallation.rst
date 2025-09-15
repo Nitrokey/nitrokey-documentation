@@ -15,7 +15,7 @@ Operating System Reinstallation
    Due to a bug Linux Mint 21 is currently not supported. The latest supported version is Linux Mint 20.1
 
 1. Download the latest Stable Release of the operating system images: `Ubuntu
-   Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS https://www.qubes-os.org/downloads/`__,
+   Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS <https://www.qubes-os.org/downloads/>`__,
    `Linux Mint <https://linuxmint.com/download.php>`__
 
 
