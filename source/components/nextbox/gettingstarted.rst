@@ -53,6 +53,10 @@ Your can find the NextBox-App in Nextcloud's top level navigation, as shown in t
 
 Ready To Go
 -----------
+    
+   .. note:: Please make sure your Nextbox is always on and connected to the internet.
+        A downtime can lead to it missing an update, and that can in the worstcase
+        break the device, since some Nextcloud updates don't support updates from to old versions.
 
 This is all it takes to get started with your NextBox. From this point you are
 free to choose how you would like to make the best use of your personal
