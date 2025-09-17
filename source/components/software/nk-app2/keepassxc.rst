@@ -3,8 +3,8 @@ KeePassXC
 
 These instructions describe how to protect and encrypt a `KeePassXC <https://keepassxc.org/>`__ password database with Nitrokey 3.
 
-Prerequisits
-^^^^^^^^^^^^
+Prerequisites
+^^^^^^^^^^^^^
 
 - KeePassXC version 2.7.6 or newer is required.
 - `Nitrokey App 2 <index.html>`__ version 2.2.2 or newer is required.
