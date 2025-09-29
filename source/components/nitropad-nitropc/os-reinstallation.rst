@@ -14,8 +14,8 @@ Operating System Reinstallation
 
    Due to a bug Linux Mint 21 is currently not supported. The latest supported version is Linux Mint 20.1
 
-1. Download one of the operating system images: `Ubuntu
-   Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS <https://www.nitrokey.com/files/ci/qubes/>`__, `Debian <https://www.nitrokey.com/files/ci/nitropad/debian-oem/>`__,
+1. Download the latest Stable Release of the operating system images: `Ubuntu
+   Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS <https://www.qubes-os.org/downloads/>`__,
    `Linux Mint <https://linuxmint.com/download.php>`__
 
 
@@ -34,10 +34,12 @@ Operating System Reinstallation
 4. Connect the USB drive to your NitroPad and start it. In Heads menu
    select Boot Options -> USB Boot.
 
-5. Depending on the operating system you may need to confirm its
+5. On Qubes use the "latest Kernel" version of the install options
+
+6. Depending on the operating system you may need to confirm its
    reinstallation.
 
-6. `Sign the boot
+7. `Sign the boot
    partition <heads/system-update.html>`_ (Heads only).
 
 To avoid accidential overwriting of valuable data, format the USB drive afterwards.
