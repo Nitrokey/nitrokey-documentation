@@ -42,8 +42,8 @@ If you want to experiment with the given example you can use git to clone the `n
 
 4. Run the container.
   
-  .. code-block:: shell-session
-    
-     docker run --rm -it -p 9443:8443 -p 9080:8080 -h mycahostname -e TLS_SETUP_ENABLED="simple" pkcs-ejbca
+   .. code-block:: shell-session 
+      
+      docker run --rm -it -p 9443:8443 -p 9080:8080 -h mycahostname -e TLS_SETUP_ENABLED="simple" pkcs-ejbca
   
 The container will be available at `https://localhost:9443/ <https://localhost:9443/>`__.
