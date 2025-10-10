@@ -25,25 +25,25 @@ It is easier to use ``nitropy nk3 piv`` commands when PIN, PUK and management ke
 
    .. code-block:: bash
 
-   nitropy nk3 piv --experimental generate-key --key 9a --algo nistp256 --subject-name "CN=Foo Bar" --subject-alt-name-upn "foo@bar.com"
+      nitropy nk3 piv --experimental generate-key --key 9a --algo nistp256 --subject-name "CN=Foo Bar" --subject-alt-name-upn "foo@bar.com"
 
 2. Generate a key and a certificate in PIV slot 9d:
 
    .. code-block:: bash
 
-   nitropy nk3 piv --experimental generate-key --key 9d --algo nistp256 --subject-name "CN=Foo Bar" --subject-alt-name-upn "foo@bar.com"
+      nitropy nk3 piv --experimental generate-key --key 9d --algo nistp256 --subject-name "CN=Foo Bar" --subject-alt-name-upn "foo@bar.com"
 
 3. Verify that the Nitrokey now has certificates in slots 9a and 9d:
 
    .. code-block:: bash
 
-   nitropy nk3 piv --experimental list-certificates
+      nitropy nk3 piv --experimental list-certificates
 
 4. Verify that the Nitrokey is recognized by the system and that identities are found:
 
       .. code-block:: bash
 
-      sc_auth identities
+         sc_auth identities
 
    This should print something like this:
 
@@ -59,7 +59,7 @@ It is easier to use ``nitropy nk3 piv`` commands when PIN, PUK and management ke
 
    .. code-block:: bash
 
-   sc_auth list
+      sc_auth list
 
    This should print something like this:
 
