@@ -41,17 +41,17 @@ It is easier to use ``nitropy nk3 piv`` commands when PIN, PUK and management ke
 
 4. Verify that the Nitrokey is recognized by the system and that identities are found:
 
-   .. code-block:: bash
+      .. code-block:: bash
 
-   sc_auth identities
+      sc_auth identities
 
-This should print something like this:
+   This should print something like this:
 
-::
+   ::
 
-   SmartCard: com.apple.pivtoken:<nitrokey serial number>
-   Unpaired identities:
-   someId	<username> - Zertifikat zur PIV-Authentifizierung (<CN>)
+      SmartCard: com.apple.pivtoken:<nitrokey serial number>
+      Unpaired identities:
+      someId	<username> - Zertifikat zur PIV-Authentifizierung (<CN>)
 
 5. Now unplug the Nitrokey and plug it in again. The operating system should recognize the Nitrokey as a PIV smartcard and suggest to pair with the user that is currently logged in.
 6. Confirm, you may need to enter the PIV PIN for some initial signing and you may also need to enter you password to allow the PIV certificate to be imported into MacOS keychain.
@@ -61,10 +61,10 @@ This should print something like this:
 
    sc_auth list
 
-This should print something like this:
+   This should print something like this:
 
-::
+   ::
 
-   Hash: someId
+      Hash: someId
 
 8. Done. You should now be able to log into your Mac with your Nitrokey by using the PIV PIN.
