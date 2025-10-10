@@ -36,10 +36,9 @@ If you want to experiment with the given example you can use git to clone the `n
 2. Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/ejbca/p11nethsm.conf``.
 3. Build the container.
 
-  .. rstcheck: ignore-next-code-block
-  .. code-block:: shell-session
-   
-    docker build -f container/ejbca/Dockerfile . -t pkcs-ejbca
+   .. code-block:: shell-session
+      
+      docker build -f container/ejbca/Dockerfile . -t pkcs-ejbca
 
 4. Run the container.
   
