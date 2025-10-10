@@ -37,8 +37,8 @@ If you want to experiment with the given example you can use git to clone the `n
 3. Build the container.
 
   .. code-block:: shell-session
-    
-    docker build -f container/ejbca/Dockerfile . -t pkcs-ejbca
+   
+  docker build -f container/ejbca/Dockerfile . -t pkcs-ejbca
 
 4. Run the container.
   
