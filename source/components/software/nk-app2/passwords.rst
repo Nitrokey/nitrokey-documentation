@@ -13,7 +13,7 @@ Password entries may consist of:
 
     All fields are optional and can be edited and added at any time using the "Edit" button.
 
-    You can store up to 100 passwords.
+    You can store up to 50 passwords.
 
 .. figure:: ./images/credential-example.png
 
