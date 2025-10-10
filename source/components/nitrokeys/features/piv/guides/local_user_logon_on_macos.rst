@@ -41,9 +41,9 @@ It is easier to use ``nitropy nk3 piv`` commands when PIN, PUK and management ke
 
 4. Verify that the Nitrokey is recognized by the system and that identities are found:
 
-      .. code-block:: bash
+   .. code-block:: bash
 
-         sc_auth identities
+      sc_auth identities
 
    This should print something like this:
 
