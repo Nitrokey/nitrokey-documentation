@@ -35,9 +35,8 @@ If you want to experiment with the given example you can use git to clone the `n
 1. Configure a NetHSM, either a real one or a container. Refer to chapter `Getting Started <getting-started.html>`__ to learn more.
 2. Change the libnethsm_pkcs11 configuration to match your NetHSM in ``container/ejbca/p11nethsm.conf``.
 3. Build the container.
-  
-  .. code-block:: shell-session
-    
+
+  .. code-block:: shell-session    
      docker build -f container/ejbca/Dockerfile . -t pkcs-ejbca
 
 4. Run the container.
