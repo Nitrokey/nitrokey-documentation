@@ -6,7 +6,7 @@ OpenPGP Email Encryption
 .. note::
 	The Nitrokey 3 is using the OpenPGP smart card application version 3.4.1
 
-	You can find the detailed specifications if all versions `here <https://gnupg.org/ftp/specs/>`__.
+	You can find the detailed specifications of all versions `here <https://gnupg.org/ftp/specs/>`__.
 
 There are two widely used standards for email encryption.
 
