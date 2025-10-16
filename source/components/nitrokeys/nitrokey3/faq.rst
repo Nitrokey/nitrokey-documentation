@@ -53,6 +53,10 @@ Nitrokey 3 FAQ
    Make sure to install a firmware more recent than version 1.4.0.
    For more information, see the firmware-update page for your operating system.
 
+.. faq:: Which version of OpenPGP smart card application do the Nitrokey 3 support?
+
+   The Nitrokey 3 is compliant with the `OpenPGP smart card application <https://gnupg.org/ftp/specs/>`__ version 3.4.1.
+
 .. faq:: Why does the Nitrokey 3 not show up in Nitrokey App?
 
    Nitrokey 3 does only show up and can be managed in "nitropy" and "Nitrokey App 2, not in Nitrokey App 1".
@@ -118,4 +122,3 @@ Nitrokey 3 FAQ
    .. note::
       If you are updating from a test version firmware, we recommend factory resetting the device before
       using the Nitrokey 3 with the SE050 in production environments.
-
