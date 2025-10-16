@@ -10,45 +10,55 @@ Please refer to chapter `Roles <administration.html#roles>`__ to learn more abou
 Key Management
 --------------
 
+Key Types and Mechanisms
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The supported key types and their corresponding mechanisms are the following.
+
++-------------------+--------------------------------+
+| Key Type          | Mechanisms                     |
++===================+================================+
+| ``RSA``           | ``RSA_Decryption_RAW``         |
+|                   | ``RSA_Decryption_PKCS1``       |
+|                   | ``RSA_Decryption_OAEP_MD5``    |
+|                   | ``RSA_Decryption_OAEP_SHA1``   |
+|                   | ``RSA_Decryption_OAEP_SHA224`` |
+|                   | ``RSA_Decryption_OAEP_SHA256`` |
+|                   | ``RSA_Decryption_OAEP_SHA384`` |
+|                   | ``RSA_Decryption_OAEP_SHA512`` |
+|                   | ``RSA_Signature_PKCS1``        |
+|                   | ``RSA_Signature_PSS_MD5``      |
+|                   | ``RSA_Signature_PSS_SHA1``     |
+|                   | ``RSA_Signature_PSS_SHA224``   |
+|                   | ``RSA_Signature_PSS_SHA256``   |
+|                   | ``RSA_Signature_PSS_SHA384``   |
+|                   | ``RSA_Signature_PSS_SHA512``   |
++-------------------+--------------------------------+
+| ``Curve25519``    | ``EdDSA_Signature``            |
++-------------------+--------------------------------+
+| ``EC_P256``       | ``ECDSA_Signature``            |
++-------------------+--------------------------------+
+| ``EC_P384``       | ``ECDSA_Signature``            |
++-------------------+--------------------------------+
+| ``EC_P521``       | ``ECDSA_Signature``            |
++-------------------+--------------------------------+
+| ``EC_P256K1``     | ``ECDSA_Signature``            |
+|                   | ``BIP340_Signature``           |
++-------------------+--------------------------------+
+| ``BrainpoolP256`` | ``ECDSA_Signature``            |
++-------------------+--------------------------------+
+| ``BrainpoolP384`` | ``ECDSA_Signature``            |
++-------------------+--------------------------------+
+| ``BrainpoolP512`` | ``ECDSA_Signature``            |
++-------------------+--------------------------------+
+| ``Generic``       | ``AES_Encryption_CBC``         |
+|                   | ``AES_Decryption_CBC``         |
++-------------------+--------------------------------+
+
 Generate Key
 ~~~~~~~~~~~~
 
 The NetHSM can generate key pairs. It is recommended to specify the key ID option to give it an expressive name.
-
-The supported key types and their corresponding mechanisms are the following.
-
-+----------------+--------------------------------+
-| Key Type       | Mechanisms                     |
-+================+================================+
-| ``RSA``        | ``RSA_Decryption_RAW``         |
-|                | ``RSA_Decryption_PKCS1``       |
-|                | ``RSA_Decryption_OAEP_MD5``    |
-|                | ``RSA_Decryption_OAEP_SHA1``   |
-|                | ``RSA_Decryption_OAEP_SHA224`` |
-|                | ``RSA_Decryption_OAEP_SHA256`` |
-|                | ``RSA_Decryption_OAEP_SHA384`` |
-|                | ``RSA_Decryption_OAEP_SHA512`` |
-|                | ``RSA_Signature_PKCS1``        |
-|                | ``RSA_Signature_PSS_MD5``      |
-|                | ``RSA_Signature_PSS_SHA1``     |
-|                | ``RSA_Signature_PSS_SHA224``   |
-|                | ``RSA_Signature_PSS_SHA256``   |
-|                | ``RSA_Signature_PSS_SHA384``   |
-|                | ``RSA_Signature_PSS_SHA512``   |
-+----------------+--------------------------------+
-| ``Curve25519`` | ``EdDSA_Signature``            |
-+----------------+--------------------------------+
-| ``EC_P224``    | ``ECDSA_Signature``            |
-+----------------+--------------------------------+
-| ``EC_P256``    | ``ECDSA_Signature``            |
-+----------------+--------------------------------+
-| ``EC_P384``    | ``ECDSA_Signature``            |
-+----------------+--------------------------------+
-| ``EC_P521``    | ``ECDSA_Signature``            |
-+----------------+--------------------------------+
-| ``Generic``    | ``AES_Encryption_CBC``         |
-|                | ``AES_Decryption_CBC``         |
-+----------------+--------------------------------+
 
 Keys are assigned to the `Namespace <administration.html#namespaces>`__ of the user that generates the key.
 
@@ -62,19 +72,17 @@ The key can be generated as follows.
 
       **Required Options**
 
-      +---------------------------------------+----------------------------------------------------+
-      | Option                                | Description                                        |
-      +=======================================+====================================================+
-      | ``-t``, ``--type`` ``KEYTYPE``        | The type for the generated key.                    |
-      |                                       | Possible values for the ``KEYTYPE`` argument can   |
-      |                                       | be found in the table above.                       |
-      +---------------------------------------+----------------------------------------------------+
-      | ``-m``, ``--mechanism`` ``MECHANISM`` | One or multiple mechanisms for the generated key.  |
-      |                                       | Possible values for the ``MECHANISM`` argument can |
-      |                                       | be found in the table above.                       |
-      +---------------------------------------+----------------------------------------------------+
-      | ``-l``, ``--length`` ``INTEGER``      | The length of the generated key                    |
-      +---------------------------------------+----------------------------------------------------+
+      +---------------------------------------+----------------------------------------------------------+
+      | Option                                | Description                                              |
+      +=======================================+==========================================================+
+      | ``-t``, ``--type`` ``KEYTYPE``        | The type for the generated key, see                      |
+      |                                       | `Key Types and Mechanisms <#key-types-and-mechanisms>`__ |
+      +---------------------------------------+----------------------------------------------------------+
+      | ``-m``, ``--mechanism`` ``MECHANISM`` | One or multiple mechanisms for the generated key, see    |
+      |                                       | `Key Types and Mechanisms <#key-types-and-mechanisms>`__ |
+      +---------------------------------------+----------------------------------------------------------+
+      | ``-l``, ``--length`` ``INTEGER``      | The length of the generated key                          |
+      +---------------------------------------+----------------------------------------------------------+
 
       **Optional Options**
 
@@ -106,41 +114,6 @@ Import Key
 
 The NetHSM can import existing private keys to the *Key Store*.
 
-The supported key types and their corresponding mechanisms are the following.
-
-+----------------+--------------------------------+
-| Key Type       | Mechanisms                     |
-+================+================================+
-| ``RSA``        | ``RSA_Decryption_RAW``         |
-|                | ``RSA_Decryption_PKCS1``       |
-|                | ``RSA_Decryption_OAEP_MD5``    |
-|                | ``RSA_Decryption_OAEP_SHA1``   |
-|                | ``RSA_Decryption_OAEP_SHA224`` |
-|                | ``RSA_Decryption_OAEP_SHA256`` |
-|                | ``RSA_Decryption_OAEP_SHA384`` |
-|                | ``RSA_Decryption_OAEP_SHA512`` |
-|                | ``RSA_Signature_PKCS1``        |
-|                | ``RSA_Signature_PSS_MD5``      |
-|                | ``RSA_Signature_PSS_SHA1``     |
-|                | ``RSA_Signature_PSS_SHA224``   |
-|                | ``RSA_Signature_PSS_SHA256``   |
-|                | ``RSA_Signature_PSS_SHA384``   |
-|                | ``RSA_Signature_PSS_SHA512``   |
-+----------------+--------------------------------+
-| ``Curve25519`` | ``EdDSA_Signature``            |
-+----------------+--------------------------------+
-| ``EC_P224``    | ``ECDSA_Signature``            |
-+----------------+--------------------------------+
-| ``EC_P256``    | ``ECDSA_Signature``            |
-+----------------+--------------------------------+
-| ``EC_P384``    | ``ECDSA_Signature``            |
-+----------------+--------------------------------+
-| ``EC_P521``    | ``ECDSA_Signature``            |
-+----------------+--------------------------------+
-| ``Generic``    | ``AES_Encryption_CBC``         |
-|                | ``AES_Decryption_CBC``         |
-+----------------+--------------------------------+
-
 Keys are assigned to the `Namespace <administration.html#namespaces>`__ of the user that imports the key.
 
 Import a private key from a PEM file into NetHSM as follows.
@@ -161,17 +134,16 @@ Import a private key from a PEM file into NetHSM as follows.
       
       **Optional Options**
 
-      +----------------------------------------+----------------------------------------------------+
-      | Option                                 | Description                                        |
-      +========================================+====================================================+
-      | ``-m``, ``--mechanism`` ``MECHANISM``  | One or multiple mechanisms for the key.            |
-      |                                        | Possible values for the ``MECHANISM`` argument can |
-      |                                        | be found in the table above.                       |
-      +----------------------------------------+----------------------------------------------------+
-      | ``-k``, ``--key-id`` ``TEXT``          | The ID of the new key                              |
-      +----------------------------------------+----------------------------------------------------+
-      | ``--tags`` ``TEXT``                    | The Tag for the new key                            |
-      +----------------------------------------+----------------------------------------------------+
+      +----------------------------------------+---------------------------------------------------------+
+      | Option                                 | Description                                             |
+      +========================================+==========================================================+
+      | ``-m``, ``--mechanism`` ``MECHANISM``  | One or multiple mechanisms for the key, see              |
+      |                                        | `Key Types and Mechanisms <#key-types-and-mechanisms>`__ |
+      +----------------------------------------+----------------------------------------------------------+
+      | ``-k``, ``--key-id`` ``TEXT``          | The ID of the new key                                    |
+      +----------------------------------------+----------------------------------------------------------+
+      | ``--tags`` ``TEXT``                    | The Tag for the new key                                  |
+      +----------------------------------------+----------------------------------------------------------+
 
       **Example**
 
@@ -199,27 +171,25 @@ Private keys in raw format can be imported as follows.
 
       **Required Options**
 
-      +----------------------------------------+----------------------------------------------------+
-      | Option                                 | Description                                        |
-      +========================================+====================================================+
-      | ``-t``, ``--type`` ``KEYTYPE``         | The type for the generated key.                    |
-      |                                        | Possible values for the ``KEYTYPE`` argument can   |
-      |                                        | be found in the table above.                       |
-      +----------------------------------------+----------------------------------------------------+
-      | ``-m``, ``--mechanism`` ``MECHANISM``  | One or multiple mechanisms for the key.            |
-      |                                        | Possible values for the ``MECHANISM`` argument can |
-      |                                        | be found in the table above.                       |
-      +----------------------------------------+----------------------------------------------------+
-      | ``-p``, ``--prime-p`` ``TEXT``         | The prime p for RSA keys, base64-encoded           |
-      +----------------------------------------+----------------------------------------------------+
-      | ``-q``, ``--prime-q`` ``TEXT``         | The prime q for RSA keys, base64-encoded           |
-      +----------------------------------------+----------------------------------------------------+
-      | ``-e``, ``--public-exponent`` ``TEXT`` | The public exponent for RSA keys,                  |
-      |                                        | base64 encoded                                     |
-      +----------------------------------------+----------------------------------------------------+
-      | ``-d``, ``--data`` ``TEXT``            | The key data for ED25519 or ECDSA_* keys,          |
-      |                                        | base64-encoded                                     |
-      +----------------------------------------+----------------------------------------------------+
+      +----------------------------------------+----------------------------------------------------------+
+      | Option                                 | Description                                              |
+      +========================================+==========================================================+
+      | ``-t``, ``--type`` ``KEYTYPE``         | The type for the generated key, see                      |
+      |                                        | `Key Types and Mechanisms <#key-types-and-mechanisms>`__ |
+      +----------------------------------------+----------------------------------------------------------+
+      | ``-m``, ``--mechanism`` ``MECHANISM``  | One or multiple mechanisms for the key, see              |
+      |                                        | `Key Types and Mechanisms <#key-types-and-mechanisms>`__ |
+      +----------------------------------------+----------------------------------------------------------+
+      | ``-p``, ``--prime-p`` ``TEXT``         | The prime p for RSA keys, base64-encoded                 |
+      +----------------------------------------+----------------------------------------------------------+
+      | ``-q``, ``--prime-q`` ``TEXT``         | The prime q for RSA keys, base64-encoded                 |
+      +----------------------------------------+----------------------------------------------------------+
+      | ``-e``, ``--public-exponent`` ``TEXT`` | The public exponent for RSA keys,                        |
+      |                                        | base64 encoded                                           |
+      +----------------------------------------+----------------------------------------------------------+
+      | ``-d``, ``--data`` ``TEXT``            | The key data for ED25519 or ECDSA_* keys,                |
+      |                                        | base64-encoded                                           |
+      +----------------------------------------+----------------------------------------------------------+
 
       **Optional Options**
 
@@ -282,6 +252,40 @@ Users can only delete keys in their `Namespace <administration.html#namespaces>`
    .. tab:: REST API
       Information about the `/keys/{KeyID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/delete_keys__KeyID_>`__.
 
+Move Key
+~~~~~~~~
+
+The NetHSM can move (rename) keys in the *Key Store* to a new key ID.
+Users can only move keys in their `Namespace <administration.html#namespaces>`__.
+
+.. tabs::
+   .. tab:: nitropy
+      **Required Role**
+
+      This operation requires an authentication with the *Administrator* role.
+
+      **Arguments**
+
+      +----------------+-------------------------------+
+      | Argument       | Description                   |
+      +================+===============================+
+      | ``OLD_KEY_ID`` | The key ID of the key to move |
+      +----------------+-------------------------------+
+      | ``NEW_KEY_ID`` | The new key ID                |
+      +----------------+-------------------------------+
+
+      **Example**
+
+      .. code-block:: shell-session
+
+         $ nitropy nethsm --host $NETHSM_HOST move-key myFirstKey mySecondKey
+      
+      .. code-block:: shell-session
+
+         Key myFirstKey moved to mySecondKey on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/keys/{KeyID}/move` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__move>`__.
+
 List Keys
 ~~~~~~~~~
 
@@ -297,11 +301,13 @@ The list can be retrieved as follows.
 
       **Optional Options**
 
-      +-------------------------------+-----------------------+
-      | Option                        | Description           |
-      +===============================+=======================+
-      | ``-f``, ``--filter`` ``TEXT`` | The Tag to search for |
-      +-------------------------------+-----------------------+
+      +-------------------------------+----------------------------------------------+
+      | Option                        | Description                                  |
+      +===============================+==============================================+
+      | ``-f``, ``--filter`` ``TEXT`` | The Tag to search for                        |
+      +-------------------------------+----------------------------------------------+
+      | ``-p``, ``--prefix`` ``TEXT`` | Only shows keys with the given key ID prefix |
+      +-------------------------------+----------------------------------------------+
 
       **Example**
 
@@ -810,6 +816,7 @@ The supported signing modes are as follows.
 - ``PSS_SHA512``
 - ``EdDSA``
 - ``ECDSA``
+- ``BIP340``
 
 From the digest a signature can be created as follows.
 
