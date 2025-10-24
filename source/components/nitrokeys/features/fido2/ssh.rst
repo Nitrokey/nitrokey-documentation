@@ -55,37 +55,34 @@ Generating SSH Key
 Adding Your Public Key
 ----------------------
 
-Once your SSH key pair is generated, the public key must be added to the service or server you want to access.
+1. Once your SSH key pair is generated, the public key must be added to the service or server you want to access.
 
-**For Git Services (GitLab, GitHub, etc.)**  
-1. Display your public key:
+1.For Git Services (GitLab, GitHub, etc.) 
+   1. Display your public key:
+
+      .. code-block:: shell-session
+
+         cat ~/.ssh/id_ed25519_sk.pub
+
+      Example output (do not use this key)::
+      
+         sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG7wZW4zc2guY29tAAAAILeZl6r07HV4i1rK07OfLqD3J4IzX2q0lB6Ok0pdxoG5AAAABHNzaDo= your_comment
+
+   2. Copy the output and add it to your account’s SSH key settings.  
+      See `GitLab <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-account>` or `GitHub <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>` for detailed steps.
+
+
+2. To allow SSH access to the remote servers, the same public key must be listed in the server’s ``~/.ssh/authorized_keys`` file. During authentication, the server checks for a matching key and verifies your identity through a challenge signed by your Nitrokey’s private key.
+   To add your key:
 
    .. code-block:: shell-session
 
-      cat ~/.ssh/id_ed25519_sk.pub
+      mkdir -p ~/.ssh
+      chmod 700 ~/.ssh
+      cat ~/.ssh/id_ed25519_sk.pub >> ~/.ssh/authorized_keys
+      chmod 600 ~/.ssh/authorized_keys
 
-   Example output (do not use this key)::
+   Each line in ``authorized_keys`` represents one trusted key. 
    
-      sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG7wZW4zc2guY29tAAAAILeZl6r07HV4i1rK07OfLqD3J4IzX2q0lB6Ok0pdxoG5AAAABHNzaDo= your_comment
-
-2. Copy the output and add it to your account’s SSH key settings.  
-   See `GitLab <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-account>` or `GitHub <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>` for detailed steps.
-
-
-**For Remote Servers**  
-To allow SSH access, the same public key must be listed in the server’s ``~/.ssh/authorized_keys`` file.  
-During authentication, the server checks for a matching key and verifies your identity through a challenge signed by your Nitrokey’s private key.
-
-To add your key:
-
-.. code-block:: shell-session
-
-   mkdir -p ~/.ssh
-   chmod 700 ~/.ssh
-   cat ~/.ssh/id_ed25519_sk.pub >> ~/.ssh/authorized_keys
-   chmod 600 ~/.ssh/authorized_keys
-
-Each line in ``authorized_keys`` represents one trusted key. 
- 
-You can add multiple keys or restrict usage, for example to a specific IP range and command:
-   from="192.168.0.*" command="/usr/local/bin/backup.sh" sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG7wZW4zc2guY29tAAAAILeZl6r07HV4i1rK07OfLqD3J4IzX2q0lB6Ok0pdxoG5AAAABHNzaDo= your_comment
+   You can add multiple keys or restrict usage, for example to a specific IP range and command:
+      from="192.168.0.*" command="/usr/local/bin/backup.sh" sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG7wZW4zc2guY29tAAAAILeZl6r07HV4i1rK07OfLqD3J4IzX2q0lB6Ok0pdxoG5AAAABHNzaDo= your_comment
