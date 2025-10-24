@@ -3,7 +3,7 @@ SSH Authentication with FIDO2
 
 .. product-table:: nk3 passkey fido2
 
-Use your Nitrokey 3A NFC for secure SSH login to servers, GitLab, or GitHub.  
+Use your Nitrokey for secure SSH login to servers, GitLab, or GitHub.  
 The private key is generated and safely stored inside the device, ensuring it never leaves the hardware.  
 Authentication requires a physical touch of the Nitrokey, providing strong protection against phishing and unauthorized access.
 
@@ -13,16 +13,10 @@ What is SSH?
 **SSH (Secure Shell)** is a network protocol used to securely access and manage remote systems, such as servers or code repositories.  
 It uses cryptographic key pairs for authentication, allowing passwordless logins while maintaining strong security.
 
-Requirements
-------------
-
-1. Nitrokey 3A NFC set up (FIDO2 enabled, optional PIN set)
-2. OpenSSH 8.2+ on your computer (adds FIDO2 ``*-sk`` key support)
-
 Generating SSH Key
 ------------------
 
-1. Insert the Nitrokey 3A NFC into your computer.
+1. Insert the Nitrokey into your computer.
 
 2. Open a terminal and execute the following command, replacing "your_comment" with a note to identify your key (e.g., "Nitrokey GitLab"). The -C "your_comment" parameter is optional — it only adds a label for identification (e.g., in GitLab or GitHub), and the command will work normally without it.
 
