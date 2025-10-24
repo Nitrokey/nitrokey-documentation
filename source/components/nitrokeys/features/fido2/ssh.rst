@@ -24,49 +24,19 @@ Generating SSH Key
 
 1. Insert the Nitrokey 3A NFC into your computer.
 
-2. Open a terminal and execute the following command.  
-   Replace `"your_comment"` with a note to identify your key (e.g., "Nitrokey GitLab").
-
-   .. note::
-
-      The ``-C "your_comment"`` parameter is **optional** — it only adds a comment to help identify your key (e.g., in GitLab or GitHub), 
-      and the command will run normally without it.
+2. Open a terminal and execute the following command, replacing "your_comment" with a note to identify your key (e.g., "Nitrokey GitLab"). The -C "your_comment" parameter is optional — it only adds a label for identification (e.g., in GitLab or GitHub), and the command will work normally without it.
 
    .. code-block:: shell-session
 
       ssh-keygen -t ed25519-sk -C "your_comment"
 
-   .. tip::
+3. Optionally you can also turn your key into a resident key, allowing it to be used on other computers without copying files. By default, SSH FIDO2 keys created with ``-t ed25519-sk`` are non-resident keys, meaning a local key handle is stored in ``~/.ssh/`` while the private key remains securely on the Nitrokey. Using ``-O resident`` is optional and provides portability across systems. For single-system use, the standard ``ssh-keygen -t ed25519-sk`` command is sufficient.Optionally you can also turn your key into a resident key, allowing it to be used on other computers without copying files. By default, SSH FIDO2 keys created with ``-t ed25519-sk`` are non-resident keys, meaning a local key handle is stored in ``~/.ssh/`` while the private key remains securely on the Nitrokey. Using ``-O resident`` is optional and provides portability across systems. For single-system use, the standard ssh-keygen ``-t ed25519-sk`` command is sufficient.
+         
+   .. code-block:: shell-session
 
-      During key generation, you may also be asked to set a **passphrase**.  
-      This passphrase encrypts the local key handle stored in ``~/.ssh/`` (not the private key on the Nitrokey, which always stays securely inside the device).  
-      The passphrase is **different from the FIDO2 device PIN**: the PIN protects the physical key itself, while the passphrase protects your local SSH key files.  
-      Using both increases overall security.
-
-3. When asked for a file path, accept the default option (``~/.ssh/id_ed25519_sk``) or choose a custom name like ``id_ed25519_sk_gitlab``.
-
-4. If the Nitrokey blinks, confirm the operation by touching it.
-
-5. Optionally you can also set a passphrase (it is usually recommended for security reasons but not mandatory).
+      ssh-keygen -t ed25519-sk -O resident -C "your_comment"
 
    .. note::
-
-      By executing the command, the following files will be created:
-
-      ``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on the Nitrokey)
-
-      ``~/.ssh/id_ed25519_sk.pub`` → public key file
-
-   .. note::
-   
-      Resident keys (optional)
-      
-      By default, SSH FIDO2 keys created with ``-t ed25519-sk`` are **non-resident**, meaning a local key handle is stored in ``~/.ssh/`` while the private key remains on the Nitrokey.  
-      If you prefer the key handle to be stored on the Nitrokey itself (so you can plug the device into another computer without copying files), add the ``-O resident`` option when generating the key:
-
-      .. code-block:: shell-session
-
-         ssh-keygen -t ed25519-sk -O resident -C "your_comment"
 
       On a new system you can list and load resident keys from the device with:
 
@@ -74,10 +44,26 @@ Generating SSH Key
 
          ssh-keygen -K
 
-      Using ``-O resident`` is optional — it provides portability across systems. For single-system use the standard ``ssh-keygen -t ed25519-sk`` is sufficient.
+4. During key generation, you may also be asked to set a **passphrase**. This passphrase encrypts the local key handle stored in ``~/.ssh/`` (not the private key on the Nitrokey, which always stays securely inside the device). The passphrase is **different from the FIDO2 device PIN**: the PIN protects the physical key itself, while the passphrase protects your local SSH key files. Using both increases overall security.
 
-   .. figure:: images/ssh/terminal.png
-      :alt: img0
+5. When asked for a file path, accept the default option (``~/.ssh/id_ed25519_sk``) or choose a custom name like ``id_ed25519_sk_gitlab``.
+
+6. If the Nitrokey blinks, confirm the operation by touching it.
+
+7. Optionally you can also set a passphrase (it is usually recommended for security reasons but not mandatory).
+
+8. By executing the command, the following files will be created:
+
+   ``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on the Nitrokey)
+
+   ``~/.ssh/id_ed25519_sk.pub`` → public key file
+
+   .. note::
+
+      The file names may differ if you specified a custom name when generating the key.
+
+.. figure:: images/ssh/terminal.png
+   :alt: img0
 
 
 Adding your Public Key to GitLab or GitHub
@@ -92,9 +78,6 @@ Adding your Public Key to GitLab or GitHub
    
       sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG7wZW4zc2guY29tAAAAILeZl6r07HV4i1rK07OfLqD3J4IzX2q0lB6Ok0pdxoG5AAAABHNzaDo= your_comment #. Copy the key to your account...
 
-2. Then paste the entire line into your account's SSH keys page.
+2. Add the copied SSH key to your accounts designated SSH Key Field.
 
-To do this refer to the official documentation for detailed instructions:
-
-The following link will tell you how to add SSH key to your `GitLab account <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-account>`.
-The following link will tell you how to add SSH key to your `GitHub account <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`.
+   See instructions for `GitLab <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-account>` or `GitHub <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`.
