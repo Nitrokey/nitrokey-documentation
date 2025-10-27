@@ -26,10 +26,12 @@ The OpenPGP Card can be reset with GnuPG: ``gpg --card-edit``, then ``admin`` an
 PIV Smartcard
 -------------
 
-The PIV smartcard can be reset using the following command: 
+The PIV smartcard can be reset using the following command:
 
 ::
 
-    opensc-tool -s 00:A4:04:00:0B:A000000308000010000100 -s 00:20:00:80:08:FFFFFFFFFFFFFFFF -s 00:20:00:80:08:FFFFFFFFFFFFFFFF -s 00:20:00:80:08:FFFFFFFFFFFFFFFF -s 00:FB:00:00
+    opensc-tool -s 00:A4:04:00:0B:A000000308000010000100 -s 00:20:00:80:08:3333333333333333 -s 00:20:00:80:08:3333333333333333 -s 00:20:00:80:08:3333333333333333 -s 00:FB:00:00
 
+
+Or, using ``nitropy nk3 piv --experimental factory-reset``, after 3 failed attempts at logging in
 
