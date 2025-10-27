@@ -34,4 +34,4 @@ or check out the features:
 * `U2F <../features/u2f/index.html>`_
 * `OpenPGP Card <../features/openpgp-card/index.html>`_
 * `Password Safe <../features/password-safe/index.html>`_
-* `PIV (Windows only) <../features/piv/index.html>`_
+* `PIV <../features/piv/index.html>`_
