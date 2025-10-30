@@ -4,7 +4,7 @@ EJBCA
 .. note::
    EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2.
 
-`EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority software available as open source.
+`EJBCA <https://www.ejbca.org/>`__ Community is a PKI Certificate Authority software available as open source.
 
 To be able to use NetHSM with EJBCA you need to `setup <pkcs11-setup.html>`__ the NetHSM PKCS#11 module first.
 
@@ -28,4 +28,4 @@ Docker Example
 ---------------
 
 We provide an example setup using docker for testing.
-If you want to experiment with it you can use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps described in the `container/ejbca/README.md <https://github.com/Nitrokey/nethsm-pkcs11/blob/main/container/ejbca/README.md>`__ file.
+If you want to experiment with it you can use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps described in the file `container/ejbca/README.md <https://github.com/Nitrokey/nethsm-pkcs11/blob/main/container/ejbca/README.md>`__.

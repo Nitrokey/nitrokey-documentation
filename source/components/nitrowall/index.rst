@@ -1,5 +1,5 @@
-NitroWall NW678, NW4J3
-======================
+NitroWall
+=========
 
 Getting Started
 ---------------
@@ -54,11 +54,6 @@ Getting Started
    :maxdepth: 1
    :glob:
 
-   firmware-update-nw678.rst
    sealed-hardware.rst
-   backup-restore.rst
-   dhcp.rst
-   lan-bridge.rst
-   ntp.rst
-   ids-ips.rst
-   hardware.rst
+   firmware-update-nw678.rst
+   faq-opnsense.rst
