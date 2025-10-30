@@ -39,15 +39,11 @@ Generating SSH Key
 
 5. If the Nitrokey blinks, confirm the operation by touching it.
 
-Eventually the following files will be created:
+Eventually the following files will be created. The file names may differ if you specified a custom name when generating the key.
 
    ``~/.ssh/id_ed25519_sk`` → handle to the private key (stored securely on the Nitrokey)
 
    ``~/.ssh/id_ed25519_sk.pub`` → public key file
-
-   .. note::
-
-      The file names may differ if you specified a custom name when generating the key.
 
 .. figure:: images/ssh/terminal.png
    :alt: img0
