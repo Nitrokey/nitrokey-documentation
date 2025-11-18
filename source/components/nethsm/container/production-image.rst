@@ -75,6 +75,10 @@ The container runtime secrets such as certificates and private keys need to be s
 |                      | in the system design.                                                                                                            |
 +----------------------+----------------------------------------------------------------------------------------------------------------------------------+
 
+.. important::
+   The TLS certificates used for the *etcd* service, web API and the client authentication certificate, must both contain a valid Subject Alternative Name (SAN).
+   Otherwise the *etcd* service will reject them as invalid.
+
 Data Storage
 ~~~~~~~~~~~~
 

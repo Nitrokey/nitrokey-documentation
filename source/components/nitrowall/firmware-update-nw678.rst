@@ -1,8 +1,5 @@
-Update OpenWrt Firmware
-=======================
-
-.. note:: 
-   OpenWrt is currently only available for the NitroWall NW678
+Update OpenWrt NW678
+====================
 
 .. contents:: :local:
 

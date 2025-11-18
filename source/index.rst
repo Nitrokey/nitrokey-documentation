@@ -31,13 +31,13 @@ Nitrokey Documentation
 
     The trustworthy, open hardware security module that just works
 
-.. card:: Nitrowall NW678, NW4J3
+.. card:: NitroWall
     :link: components/nitrowall/index
     :link-type: doc
 
     Network PCs for firwalls, routing and a more secure home network
 
-.. card:: Nitrowall NW750
+.. card:: NitroWall NW750
     :link: components/nitrowall/nw750/index
     :link-type: doc
 
