@@ -11,3 +11,4 @@ FIDO2
     Nextcloud Login <nextcloud>
     Passwordless Microsoft Login (Windows only) <passwordless-microsoft>
     Android / NitroPhone <nitrophone>
+    SSH Keys <ssh>
