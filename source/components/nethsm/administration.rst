@@ -223,13 +223,13 @@ The *Unlock Passphrase* can be set as follows.
 TLS Certificate
 ~~~~~~~~~~~~~~~
 
-The TLS certificate is used for the HTTPS based REST API, and thus also used by *nitropy*.
+The TLS certificate is used for the HTTPS based REST API, and is thus also used by *nitropy*.
 During provisioning a self-signed certificate is created.
 The certificate can be replaced, for example with a signed certificate from a certificate authority (CA).
 In this case a Certificate Signing Request (CSR) must be generated.
 After signing the certificate must be imported to the NetHSM.
 
-A change is only necessary when the certificate is to be replace.
+A change is only necessary when the certificate is to be replaced.
 Such change may be to replace it with a signed certificate from a certificate authority (CA).
 
 The TLS certificate can be retrieved as follows.
