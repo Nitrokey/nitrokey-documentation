@@ -192,7 +192,7 @@ The following table illustrates which algorithm can be used on which device.
    :widths: auto
 
    ================  =====  =============  =================
-                     Start  Pro + Storage  Pro 2 + Storage 2
+   Algorithm         Start  Pro + Storage  Pro 2 + Storage 2
    ================  =====  =============  =================
    rsa1024           ✓      ✓
    rsa2048           ✓      ✓              ✓
