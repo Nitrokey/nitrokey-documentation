@@ -95,4 +95,4 @@ For Git Services (GitLab, GitHub, etc.)
 
 2. Copy the output and add it to your account’s SSH key settings.  
 
-   See `GitLab <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-account>` or `GitHub <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>` for detailed steps.
+   See `GitLab  <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-account>`_ or `GitHub  <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`_ for detailed steps.
