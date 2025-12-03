@@ -67,4 +67,4 @@ You can find further information about the usage on these pages:
 
 	S/MIME encryption on Outlook <smime-outlook>
 
-	Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>
+	Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/evolution/mail-encryption.html>
