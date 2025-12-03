@@ -54,7 +54,7 @@ You can find further information about the usage on these pages:
    client (and news reader) for Linux and Windows
 
 -  to use
-   `Evolution <https://help.gnome.org/users/evolution/stable/mail-encryption.html.en>`__,
+   `Evolution <https://help.gnome.org/evolution/mail-encryption.html>`__,
    an email client for the Gnome Desktop on Linux systems
 
 -  to use `GPGTools <https://gpgtools.org/>`__ on macOS.
