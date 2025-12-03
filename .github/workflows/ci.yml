@@ -26,7 +26,21 @@ jobs:
         run: make venv
       - name: Check hyperlinks
         run: make check-hyperlinks
+  build-check-foreign:
+    if: ${{ github.event.pull_request.head.repo.owner.login != 'nitrokey' }}
+    name: Check Build for Foreign Repository
+    runs-on: ubuntu-latest
+    container: python:3.11
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Create virtual environment
+        run: make venv
+      - name: Build documentation
+        run: make
+    
   build-check-and-preview-upload:
+    if: ${{ github.event.pull_request.head.repo.owner.login == 'nitrokey' }}
     name: Check Build and Upload to Preview
     runs-on: ubuntu-latest
     container: python:3.11
