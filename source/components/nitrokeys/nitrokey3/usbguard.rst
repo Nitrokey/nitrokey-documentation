@@ -3,7 +3,7 @@ USBGuard
 
 Using usbguard is pretty essential to protect against common attacks like malicious devices, rubber duckies, OMG cables or the “governmental 3 letter agency equivalents”.
 
-Especially thunderbolt (which can be blocked globally, see `this config as to how <https://github.com/secureblue/secureblue/tree/live/files/system/etc/modprobe.d>`__ can grant attackers access to your RAM, which means encryption keys and more.
+Especially thunderbolt (which can be blocked globally, see `this config as to how <https://github.com/secureblue/secureblue/tree/live/files/system/usr/lib/modprobe.d>`__ can grant attackers access to your RAM, which means encryption keys and more.
 
 1. Install USBGuard
 

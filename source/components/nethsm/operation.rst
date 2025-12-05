@@ -134,8 +134,8 @@ Import a private key from a PEM file into NetHSM as follows.
       
       **Optional Options**
 
-      +----------------------------------------+---------------------------------------------------------+
-      | Option                                 | Description                                             |
+      +----------------------------------------+----------------------------------------------------------+
+      | Option                                 | Description                                              |
       +========================================+==========================================================+
       | ``-m``, ``--mechanism`` ``MECHANISM``  | One or multiple mechanisms for the key, see              |
       |                                        | `Key Types and Mechanisms <#key-types-and-mechanisms>`__ |
