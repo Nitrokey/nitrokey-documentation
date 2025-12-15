@@ -42,6 +42,11 @@ Supported asymmetric key algorithms:
 * RSA 2048
 * nistp256
 
+Supported asymmetric key algorithms with non-standard identifiers (might have limited compatibility with third-party software)
+
+* RSA 3072 (Algorithm ID ``0x05``)
+* RSA 4096 (Algorithm ID ``0x16``)
+
 Supported symmetric key algorithms:
 
 * AES 256
