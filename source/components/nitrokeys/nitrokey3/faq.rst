@@ -124,6 +124,15 @@ Nitrokey 3 FAQ
 
    After `disabling Enforce Attestation <https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-passwordless-security-key#fido-security-key-optional-settings>`__ Nitrokey 3 is supported by Azure Entra ID out of the box.
 
+.. faq:: How is the data on the Nitrokey 3 protected?
+
+   All data on the Nitrokey 3 is protected from external attacks.
+
+   * FIDO credentials are protected by the microcontroller's security mechanisms.
+   * OpenPGP and PIV data is protected through PIN encryption and the microcontroller's security mechanisms.
+     Additionally, if the `SE050 secure element <secure-element.html>`__ is used, the data is bound to it.
+   * Password Safe data is protected by PIN encryption and the microcontroller's security mechanisms.
+
 .. faq:: How can I use the SE050 Secure Element?
 
    Starting with version 1.7.0 the Secure Element should be automatically activated, if the OpenPGP Card
