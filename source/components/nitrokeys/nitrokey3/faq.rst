@@ -32,18 +32,18 @@ Nitrokey 3 FAQ
    can still log in with the second Nitrokey (or with another second
    factor).
 
-.. faq:: What makes the Nitrokey 3 better than other secure keys?
+.. faq:: What makes Nitrokey better than other security keys?
 
-   - All our developments are open source and open hardware, reducing
-     vendor lock-in, enabling customizations and 3rd party security audits for
-     higher security.
-   - We are a German/European-based company, free of Government pressure to implement backdoors.
+   - Nitrokeys are fully open source and open hardware, reducing vendor lock-in,
+     enabling customizations, and 3rd party security audits for higher security.
+   - Nitrokeys are made in Germany.
+   - Nitrokeys have a standard-compliant USB plug which works reliably on any USB port with thousands of plug in cycles and prevent user confusion, thus reducing support requests.
+   - Nitrokey is also available with an encrypted mass storage.
+   - Nitrokeys support Measured Boot for secure computer usage.
+   - We are a German/European-based company, free of government pressure to implement backdoors.
    - We offer free, fast and efficient support in German, English and French.
-   - We have a standard-compliant USB plug which works reliably on any USB port with thousands of plug in cycles and no user confusion.
-   - We offer better volume discounts
+   - We offer attractive volume discounts.
    - We offer customizations and fulfillment services for small quantities.
-   - We support Measured Boot for secure computers usage.
-   - We provide an encrypted mass storage.
 
 .. faq:: How large is the storage capacity?
 
