@@ -24,4 +24,5 @@ General topics:
    Verify Sealed Hardware <sealed-hardware>
    Secure Starting Procedure <secure-starting-procedure>
    Change User and Admin PIN <change-pins>
+   Disabling Intel Management Engine <intel-me>
    Troubleshooting <troubleshooting>
