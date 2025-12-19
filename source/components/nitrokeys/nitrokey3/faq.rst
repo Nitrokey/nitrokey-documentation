@@ -115,9 +115,9 @@ Nitrokey 3 FAQ
 
    All data on the Nitrokey 3 is protected from external attacks.
 
-   * FIDO data is protected by the microcontroller's security mechanisms.
-   * OpenPGP and PIV data is protected through PIN encryption, the microcontroller's security mechanisms and bound to the `SE050 secure element <secure-element.html>`__.
-   * Secrets app data is protected by PIN encryption and the microcontroller's security mechanisms.
+   * FIDO credentials are protected by the microcontroller's security mechanisms.
+   * OpenPGP and PIV data is protected through PIN encryption, the microcontroller's security mechanisms, and bound to the `secure element <secure-element.html>`__.
+   * Password Safe data is protected by PIN encryption and the microcontroller's security mechanisms.
 
 .. faq:: How can I use the SE050 Secure Element?
 
