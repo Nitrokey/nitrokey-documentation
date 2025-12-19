@@ -41,7 +41,7 @@ Nitrokey 3 FAQ
    - Nitrokey is also available with an encrypted mass storage.
    - Nitrokeys support Measured Boot for secure computer usage.
    - We are a German/European-based company, free of government pressure to implement backdoors.
-   - We offer free, fast and efficient support in German, English and French.
+   - We offer a large quantity of guides in our documentation as well as a free, fast and efficient email support in German, English and French.
    - We offer attractive volume discounts.
    - We offer customizations and fulfillment services for small quantities.
 
