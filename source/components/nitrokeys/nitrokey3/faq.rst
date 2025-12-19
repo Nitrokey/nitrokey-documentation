@@ -39,7 +39,7 @@ Nitrokey 3 FAQ
    - Nitrokeys are made in Germany.
    - Nitrokeys have a standard-compliant USB plug which works reliably on any USB port with thousands of plug in cycles and prevent user confusion, thus reducing support requests.
    - Nitrokey is also available with an encrypted mass storage.
-   - Nitrokeys support Measured Boot to secure your NitroPad with tamper detection.
+   - Nitrokeys support Measured Boot to secure your computer with tamper detection.
    - We are a German/European-based company, free of government pressure to implement backdoors.
    - We offer a large quantity of guides in our documentation as well as a free, fast and efficient email support in German, English and French.
    - We offer attractive volume discounts.
