@@ -10,20 +10,27 @@ This article shows you how to setup your own private certificate authority backe
 Choose Cryptographic Algorithms
 -------------------------------
 
-I’m going to assume that you’re as paranoid as I am, so I will be using the following command for generating private keys:
+Prior generating your private key you can use this command in order to list all compatible algorithms:
+
+.. code-block:: bash
+
+   pkcs11-tool -M
+
+When you will need to generate your private key, you can use this command:
+
+.. code-block:: bash
+
+   pkcs11-tool -l --keypairgen --key-type <algorithm> --label root
+
+Some examples here:
 
 .. code-block:: bash
 
    pkcs11-tool -l --keypairgen --key-type EC:secp384r1 --label root
-
-But, if you’re less paranoid that I am, you can safely choose the following options:
-
-.. code-block:: bash
-
    pkcs11-tool -l --keypairgen --key-type EC:secp256r1 --label root
    pkcs11-tool -l --keypairgen --key-type rsa:4096 --label root
 
-Likewise, I will be using the sha512 algorithm throughout this article, but sha256 can safely be used.
+`NIST P-384` and `sha512` algorithms will be used throughout this article, but `NIST P-256` or `RSA-4096` and `sha256` can safely be used.
 
 Preparing to Start
 ------------------
