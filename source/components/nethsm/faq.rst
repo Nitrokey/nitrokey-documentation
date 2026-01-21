@@ -23,16 +23,19 @@ Frequently Asked Questions (FAQ)
    Work in progress:
 
    * Direct, dynamic cluster capability, possibly support for external database
+   * NetHSM as a service offering
 
-   We plan the following developments in the loose order. Changes to this prioritization based on customer requests are possible.
+   We plan the following developments in the loose order. Changes to this prioritization based on customer requests are common.
 
+   * cryptographic enhancements: KDF, HMAC, AES GCM
+   * Quorum: m-of-n access scheme and security domain management
+   * Post-quantum cryptography (PQC) algorithms such as ML-DSA
+   * Windows Key Storage Provider (KSP)
    * Productive usable software container
    * BIP32 key derivation function
-   * Quorum: m-of-n access scheme and security domain management
-   * Performance improvements
-   * Remote attestation and cloud service
    * User authentication via mTLS certificates or FIDO
    * More user rights management (e.g. additional roles, groups)
-   * Further separations and hardenings
    * FIPS and/or Common Criteria certifications
-   * Post-quantum cryptography (PQC)
+   * Further separations and hardenings
+   * Performance improvements
+   * Remote attestation
