@@ -47,6 +47,11 @@ features are realized.
      - USB
      - no
 
+   * - `PIV`_
+     - Asymmetric cryptography; more business focussed smartcard realization
+     - USB
+     - yes
+
 .. note::
    Secure element support for OpenPGP Card is available since stable firmware v1.7.0. Any new 
    devices will have this automatically activated. For devices already in use, the
@@ -68,11 +73,6 @@ data migrations from test to stable firmwares will not be implemented.**
      - **Description**
      - **Transport(s)**
      - **Secure element support**
-
-   * - `PIV`_
-     - Asymmetric cryptography; more business focussed smartcard realization
-     - USB
-     - no
 
    * - `WebSmartCard`_
      - Provides smartcard-functionalities through the web & FIDO2
