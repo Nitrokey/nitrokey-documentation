@@ -9,6 +9,10 @@ Ubuntu
    :hidden:
 
    *
+.. Note::
+   The jack port on the NitroPad T480s is not working automatically you can install 
+   the `pavucontrol` program. Under Output Devices, you can select the headphones
+   you've inserted manually.
 
 Verification of Sealed Hardware
 -------------------------------
