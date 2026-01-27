@@ -1,15 +1,18 @@
 Nitrokey Start FAQ
 ==================
 
-.. faq:: Which Operating Systems are supported?
+.. faq::
+   Which Operating Systems are supported?
 
    Windows, Linux and macOS.
 
-.. faq:: What can I use the Nitrokey for?
+.. faq::
+   What can I use the Nitrokey for?
 
    See the `overview <https://www.nitrokey.com/products/nitrokeys>`__ of supported use cases.
 
-.. faq:: What are the default PINs?
+.. faq::
+   What are the default PINs?
 
    * User PIN: ``123456``
    * Administrator PIN: ``12345678``
@@ -17,7 +20,8 @@ Nitrokey Start FAQ
    We strongly recommend to change these PINs/password to user-chosen values
    before using the Nitrokey.
 
-.. faq:: What is the maximum length of the PIN?
+.. faq::
+   What is the maximum length of the PIN?
 
    Nitrokey uses PINs instead of passwords. The main difference is that the
    hardware limits the amount of tries to three while a limit doesn't exist for
@@ -29,7 +33,8 @@ Nitrokey Start FAQ
    OpenSC, 32 character long PINs can be used but aren't supported by Nitrokey
    App.
 
-.. faq:: What is the User PIN for?
+.. faq::
+   What is the User PIN for?
 
    The user PIN is at least 6-digits long and is used to get
    access to the contect of the Nitrokey. This is the PIN you will use a lot in
@@ -41,7 +46,8 @@ Nitrokey Start FAQ
    PIN attempts were done, it is sufficiently secure to only have a 6 digits
    PIN. The default PIN is ``123456``.
 
-.. faq:: What is the Admin PIN for?
+.. faq::
+   What is the Admin PIN for?
 
    The admin PIN is at least 8-digits long and is used to change
    contents/settings of the Nitrokey. That is to say after initializing the
@@ -54,7 +60,8 @@ Nitrokey Start FAQ
    PIN attempts were done, it is sufficiently secure to only have 8 digits PIN.
    The default PIN is ``12345678``.
 
-.. faq:: Which drivers/tools can be used?
+.. faq::
+   Which drivers/tools can be used?
 
    GnuPG is required for many use cases. It is a command line tool but usually
    you don't need to invoke it directly but use another application with user
@@ -69,7 +76,8 @@ Nitrokey Start FAQ
    instructions work Nitrokey as well. In general the official documentation
    is recommended.
 
-.. faq:: Which algorithms and maximum key length are supported?
+.. faq::
+   Which algorithms and maximum key length are supported?
 
    See the following table:
 
@@ -105,16 +113,19 @@ Nitrokey Start FAQ
    | secp521k1         |       |
    +-------------------+-------+
 
-.. faq:: Does the Nitrokey Start contain a secure chip or just a normal microcontroller?
+.. faq::
+   Does the Nitrokey Start contain a secure chip or just a normal microcontroller?
 
    Nitrokey Start is implemented in the microprocessor.
 
-.. faq:: How large is the storage capacity?
+.. faq::
+   How large is the storage capacity?
 
    The Nitrokey Start doesn't contain storage capability for ordinary data (it can
    only store cryptographic keys and certificates).
 
-.. faq:: How many keys can I store? 
+.. faq::
+   How many keys can I store?
 
    The Nitrokey Start can store nine RSA key pairs for three identities. 
    For one identity you need three key pairs for authentication, encryption and signing.

@@ -4,15 +4,18 @@ Nitrokey Storage FAQ
 As the Nitrokey Storage 2 is essentially a Nitrokey Pro 2 including a
 non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` also partly applies.
 
-.. faq:: Which Operating Systems are supported?
+.. faq::
+   Which Operating Systems are supported?
 
    Windows, Linux and macOS.
 
-.. faq:: What can I use the Nitrokey for?
+.. faq::
+   What can I use the Nitrokey for?
 
    See the `overview <https://www.nitrokey.com/products/nitrokeys>`__ of supported use cases.
 
-.. faq:: What are the default PINs?
+.. faq::
+   What are the default PINs?
 
    * **User PIN:** "123456"
    * **Administrator PIN:** "12345678"
@@ -21,17 +24,20 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    We strongly recommend to change these PINs/password to user-chosen values
    before using the Nitrokey.
 
-.. faq:: How large is the storage capacity?
+.. faq::
+   How large is the storage capacity?
 
    Nitrokey Storage can store and encrypt 8, 32, or 64 GB of data (depending on
    particular model).
 
-.. faq:: Why can't I access the encrypted storage on a new Nitrokey Storage?
+.. faq::
+   Why can't I access the encrypted storage on a new Nitrokey Storage?
 
    On a new Nitrokey Storage device, before you can access the encrypted volume
    make sure you first "Destroy encrypted data" inside the Nitrokey App.
 
-.. faq:: What is the maximum length of the PIN?
+.. faq::
+   What is the maximum length of the PIN?
 
    Nitrokey uses PINs instead of passwords. The main difference is that the
    hardware limits the amount of tries to three while a limit doesn't exist for
@@ -43,7 +49,8 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    OpenSC, 32 character long PINs can be used but aren't supported by Nitrokey
    App.
 
-.. faq:: What is the User PIN for?
+.. faq::
+   What is the User PIN for?
 
    The user PIN is at least 6-digits long and is used to get
    access to the contect of the Nitrokey. This is the PIN you will use a lot in
@@ -55,7 +62,8 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    PIN attempts were done, it is sufficiently secure to only have a 6 digits
    PIN. The default PIN is ``123456``.
 
-.. faq:: What is the Admin PIN for?
+.. faq::
+   What is the Admin PIN for?
 
    The admin PIN is at least 8-digits long and is used to change
    contents/settings of the Nitrokey. That is to say after initializing the
@@ -68,12 +76,14 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    PIN attempts were done, it is sufficiently secure to only have 8 digits PIN.
    The default PIN is ``12345678``.
 
-.. faq:: Why does my Nitrokey Storage hang when switching between nitrokey-app and GnuPG?
+.. faq::
+   Why does my Nitrokey Storage hang when switching between nitrokey-app and GnuPG?
 
    GnuPG and nitrokey-app sometimes tend to hand each other. This is a known problem
    and it can be fixed by re-inserting the Nitrokey into the USB slot.
 
-.. faq:: What is the firmware PIN for?
+.. faq::
+   What is the firmware PIN for?
 
    The firmware password should meet general password
    recommandations (e.g. use alphabetic characters, digits and special
@@ -85,13 +95,15 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    password and would have unlimited attempts. Therefore you must choose a
    strong password. The default password is 12345678.
 
-.. faq:: How many keys can I store? 
+.. faq::
+   How many keys can I store?
 
    The Nitrokey Storage can store three RSA key pairs. All keys use the same
    identity but are used for different purposes: authentication, encryption and
    signing.
 
-.. faq:: How fast is encryption and signing?
+.. faq::
+   How fast is encryption and signing?
 
    Encryption of 50kiB of data:
 
@@ -100,7 +112,8 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    * 256 bit AES, 240 bytes per command -> 910 bytes per second
    * 128 bit AES, 240 bytes per command -> 930 bytes per second
 
-.. faq:: Which algorithms and maximum key length are supported?
+.. faq::
+   Which algorithms and maximum key length are supported?
 
    See the following table:
 
@@ -136,11 +149,13 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    | secp521k1         |         |           |
    +-------------------+---------+-----------+
 
-.. faq:: Does the Nitrokey Storage contain a secure chip or just a normal microcontroller?
+.. faq::
+   Does the Nitrokey Storage contain a secure chip or just a normal microcontroller?
 
    Nitrokey Storage contains a tamper resistant smart card.
 
-.. faq:: Is the Nitrokey Storage Common Criteria or FIPS certified?
+.. faq::
+   Is the Nitrokey Storage Common Criteria or FIPS certified?
 
    The security controller (NXP Smart Card Controller P5CD081V1A and its major
    configurations P5CC081V1A, P5CN081V1A, P5CD041V1A, P5CD021V1A and P5CD016V1A
@@ -154,12 +169,14 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
 
    Additionally `Cure53 <https://cure53.de>`__ has performed an `independent security audit <https://www.nitrokey.com/news/2015/nitrokey-storage-got-great-results-3rd-party-security-audit>`__ of the hardware, firmware, and Nitrokey App.
 
-.. faq:: How can I use the True Random Number Generator (TRNG) of the Nitrokey Storage for my applications?
+.. faq::
+   How can I use the True Random Number Generator (TRNG) of the Nitrokey Storage for my applications?
 
    Both devices are compatible to the OpenPGP Card, so that `scdrand`_ should work. `This script`_ may be useful.
    The user comio `created a systemd file`_ to use scdrand and thus the TRNG more generally. He created an `ebuild for Gentoo`_, too.
 
-.. faq:: How good is the Random Number Generator?
+.. faq::
+   How good is the Random Number Generator?
 
    Nitrokey Pro and Nitrokey Storage use a True Random Number Generator (TRNG)
    for generating keys on the device. The entropy generated by the TRNG is used
@@ -167,7 +184,8 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
 
    The TRNG provides about 40 kbit/s.
     
-.. faq:: How can I use the encrypted mobile Storage?
+.. faq::
+   How can I use the encrypted mobile Storage?
 
    Prior of using the encrypted mobile storage you need to install and initialize the Nitrokey Storage and download the latest Nitrokey App.
 
@@ -181,7 +199,8 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
 
    The Nitrokey Storage is able to create hidden volumes as well. Please have a look at the corresponding instructions for hidden volumes.
 
-.. faq:: How can I use the hidden volume?
+.. faq::
+   How can I use the hidden volume?
 
    Hidden volumes allow to hide data in the encrypted volume. The data is protected
    with an additional password. Without the password the data existence's can't be

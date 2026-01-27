@@ -1,15 +1,18 @@
 Nitrokey HSM FAQ
 ================
 
-.. faq:: Which Operating Systems are supported?
+.. faq::
+   Which Operating Systems are supported?
 
    Windows, Linux and macOS.
 
-.. faq:: What can I use the Nitrokey for?
+.. faq::
+   What can I use the Nitrokey for?
 
    See the `overview <https://www.nitrokey.com/products/nitrokeys>`__ of supported use cases.
 
-.. faq:: What is the maximum length of the PIN?
+.. faq::
+   What is the maximum length of the PIN?
 
    Nitrokey uses PINs instead of passwords. The main difference is that the
    hardware limits the amount of tries to three while a limit doesn't exist for
@@ -21,7 +24,8 @@ Nitrokey HSM FAQ
    OpenSC, 32 character long PINs can be used but aren't supported by Nitrokey
    App.
 
-.. faq:: What is the User PIN for?
+.. faq::
+   What is the User PIN for?
 
    The PIN is at least 6-digits long and is used to get
    access to the content of the Nitrokey. This is the PIN you will use a lot in
@@ -32,7 +36,8 @@ Nitrokey HSM FAQ
    PIN attempts were done, it is sufficiently secure to only have a 6 digits
    PIN. 
 
-.. faq:: What is the SO PIN for?
+.. faq::
+   What is the SO PIN for?
 
    The SO PIN is used in the Nitrokey HSM only and is something like a
    "master" PIN with special properties. Please read `these instructions <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`__ carefully
@@ -40,7 +45,8 @@ Nitrokey HSM FAQ
 
    The SO PIN has to be exactly 16 digits long.
    
-.. faq:: How many data objects (DF, EF) can be stored?
+.. faq::
+   How many data objects (DF, EF) can be stored?
 
    76 KB EEPROM total, that can be used for 
     
@@ -49,11 +55,13 @@ Nitrokey HSM FAQ
    * max. 19 x RSA-4096 keys or
    * max. 38 x RSA-2048 keys
 
-.. faq:: How many keys can I store? 
+.. faq::
+   How many keys can I store?
 
    Nitrokey HSM can store 20 RSA-2048 and 31 ECC-256 key pairs.
 
-.. faq:: How fast is encryption and signing?
+.. faq::
+   How fast is encryption and signing?
 
    * Key generation on-card: RSA 2048: 2 per minute
    * Key generation on-card: ECC 256: 10 per minute.
@@ -62,12 +70,14 @@ Nitrokey HSM FAQ
    * Signature creation with on-card SHA-256 and 1 kb data: RSA 2048; 68 per minute
    * Signature creation with on-card SHA-256 and 1 kb data: ECDSA 256: 125 per minute
 
-.. faq:: How can I distinguish a Nitrokey HSM 1 from an Nitrokey HSM 2?
+.. faq::
+   How can I distinguish a Nitrokey HSM 1 from an Nitrokey HSM 2?
 
    Use ``opensc-tool --list-algorithms`` and compare with the table below. Please 
    also see `this thread`_ for the factsheets and more details.
 
-.. faq:: Which algorithms and maximum key length are supported?
+.. faq::
+   Which algorithms and maximum key length are supported?
 
    See the following table:
 
@@ -103,18 +113,21 @@ Nitrokey HSM FAQ
    | secp521k1         |     | ✓     |
    +-------------------+-----+-------+
 
-.. faq:: How can I use the True Random Number Generator (TRNG) of the Nitrokey HSM for my applications?
+.. faq::
+   How can I use the True Random Number Generator (TRNG) of the Nitrokey HSM for my applications?
 
    Nitrokey HSM can be used with `Botan`_ and `TokenTools`_ by using OpenSC as a PKCS#11 driver.
 
    OpenSSL can't use Nitrokey HSM's RNG directly because engine-pkcs11 doesn't contain a mapping for OpenSSL to C_GenerateRandom.
 
-.. faq:: How good is the Random Number Generator?
+.. faq::
+   How good is the Random Number Generator?
 
    Nitrokey HSM uses the True Random Number Generator of JCOP 2.4.1r3 which has a quality of DRNG.2
    (according to `AIS 31`_ of the German Federal Office for Information Security, BSI).
 
-.. faq:: Which API can I use?
+.. faq::
+   Which API can I use?
 
    OpenSC: Comprehensive instructions exist for OpenSC framework. There is
    nitrotool as a more comfortable frontend to OpenSC.  
@@ -131,7 +144,8 @@ Nitrokey HSM FAQ
    NitroKeyWrapper.
 
 
-.. faq:: Is the Nitrokey HSM 2 Common Criteria or FIPS certified?
+.. faq::
+   Is the Nitrokey HSM 2 Common Criteria or FIPS certified?
 
    The security controller (NXP JCOP 3 P60) is Common Criteria EAL 5+ certified up to the OS level.
 
@@ -140,17 +154,20 @@ Nitrokey HSM FAQ
    * `Security Target <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-98209_5-STLite.pdf>`__
    * `Java Card System Protection Profile Open Configuration, Version 3.0 <https://commoncriteriaportal.org/files/ppfiles/ANSSI-CC-profil_PP-2010-03en.pdf>`__)
 
-.. faq:: How to import an existing key into the Nitrokey HSM?
+.. faq::
+   How to import an existing key into the Nitrokey HSM?
 
    First, `set up`_ your Nitrokey HSM to use key backup and restore.
    Then use Smart Card Shell for importing.
    If your key is stored in a Java key store you can use `NitroKeyWrapper`_  instead.
 
-.. faq:: How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey HSM? 
+.. faq::
+   How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey HSM?
 
    An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey HSM can be found at `banzaicloud.com`_.
 
-.. faq:: Can I use Nitrokey HSM with cryptocurrencies?
+.. faq::
+   Can I use Nitrokey HSM with cryptocurrencies?
 
    J.v.d.Bosch wrote a simple, free python `program`_ to secure the private key of a Bitcoin wallet in a HSM.
    `Tezos`_ has been `reported`_ to work with Nitrokey HSM.

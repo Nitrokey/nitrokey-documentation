@@ -15,9 +15,8 @@ class FAQItem(SphinxDirective):
     """
 
     has_content = True
-    required_arguments = 1
-    optional_arguments = 30
-    final_argument_whitespace = True
+    required_arguments = 0
+    optional_arguments = 0
     option_spec = {
         "class": directives.class_option,
     }
@@ -33,16 +32,19 @@ class FAQItem(SphinxDirective):
 
     def run(self) -> list[nodes.Node]:
 
+        # question is the first line of the body content
+        question = self.content[0]
+        # remaining content is the answer
+        answer_content = self.content[2:]
+        answer_offset = self.content_offset + 2
+
         # answer (block content)
         content = nodes.container()
         # ... parse
-        self.state.nested_parse(self.content, self.content_offset, content)
+        self.state.nested_parse(answer_content, answer_offset, content)
         answer = nodes.definition("", *content.children)
         # ... assemble
         a_item = nodes.definition_list_item("", answer)
-
-        # question:
-        question = " ".join(self.arguments)
         # ... get slug
         slug = self._make_slug(question)
         # ... get formatted text

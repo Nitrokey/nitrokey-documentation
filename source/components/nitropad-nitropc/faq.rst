@@ -1,17 +1,20 @@
 NitroPad, NitroPC FAQ
 =====================
 
-.. faq:: What is the default hard-disk encryption password?
+.. faq::
+   What is the default hard-disk encryption password?
 
    The default Nitropad disk encryption password: "12345678". This was change on the 15.01.2024 so if "12345678" is not working try the old default: "PleaseChangeMe"
 
-.. faq:: How to change the hard-disk encryption password from within HEADS?
+.. faq::
+   How to change the hard-disk encryption password from within HEADS?
 
    This is the prefered way to change the hard-disk encryption password.
    Inside HEADS choose ``Options -> Change LUKS Disk Recovery Key passphrase``
    and follow the instructions.
 
-.. faq:: How to change the hard-disk encryption password from within the OS?
+.. faq::
+   How to change the hard-disk encryption password from within the OS?
 
    Using default ``cryptsetup`` tools it is important to note that the right
    key slot is used: ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/nvme0n1p3`` or
@@ -20,7 +23,8 @@ NitroPad, NitroPC FAQ
       .. figure:: /images/qubes/ChangeDiskPasswordQubes.png
         :alt: Change Password Qubes Image
 
-.. faq:: What is re-ownership / re-encryption and why is it important?
+.. faq::
+   What is re-ownership / re-encryption and why is it important?
 
    Changing your hard-disk encryption password does not change the encryption
    itself, just the access to the encryption key. This means that in a situation
