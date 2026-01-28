@@ -58,6 +58,26 @@ In the registry delete the following registry path.
 
 After a reboot the Nitrokey is recognized as *Microsoft Usbccid Smartcard Reader (WUDF)*.
 
+Nitrokey 3 is Recognized as "Unknown Smart Card" on Windows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On Windows Server 2025, the initialization of the generic smart card driver fails.
+The device is recognized as "Unknown Smart Card" and no driver is installed.
+
+To install the correct smart card driver, install the correct driver as follows.
+
+1. Open the Windows *Device Manager* (``devmgmt.msc``).
+2. Open the group *Smart cards* from the device tree.
+   If the group doesn't exist, make sure the Nitrokey is properly connected.
+3. Right-click on *Unknown Smart Card* and select *Update driver*.
+4. In the driver update assistant, first select *Browse my computer for drivers* and then *Let me pick from a list of available drivers on my computer*.
+   Deactivate the check box *Show compatible hardware* and select *Identity Device (NIST SP 800-73 [PIV])* from the list.
+   Confirm the selection with a click on the *Next* button and confirm the driver warning dialog with *Yes*.
+   After the driver has been installed, close the driver update assistant with a click on the *Close* button.
+5. The Nitrokey is now recognized in the *Smart cards* group as *Identity Device (NIST SP 800-73 [PIV])*.
+
+Connecting the Nitrokey to a different USB port can require this process to be repeated.
+
 Google and Microsoft Services
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
