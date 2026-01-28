@@ -20,6 +20,9 @@ Nitrokey Card Reader Driver Can Not be Installed on Windows
 On Windows the initialization of the generic smartcard reader driver fails.
 The reported device status is ``This device is not working properly because Windows cannot load the drivers required for this device. (Code 31)``.
 
+This problem exists on Windows 10 and Windows Server 2022 and older.
+From Windows 11 and Windows Server 2025 on the behavior is correct and the solution below isn't needed.
+
 Windows has two generic smartcard reader drivers (WUDF and UMDF2).
 By default Windows uses UMDF2, which fails to initialize and therefore is not loaded for the Nitrokey.
 
