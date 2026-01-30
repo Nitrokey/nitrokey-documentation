@@ -11,6 +11,8 @@ Getting Started
             To access the OpenPGP smart card of the Nitrokey, install the package
             libccid. On Debian/Ubuntu based Distributions type in terminal: *sudo
             apt-get update && sudo apt-get install libccid*
+            For Fedora you might need to look at `this <../features/openpgp-card/fedora-gnupg-configuration.html>`__ guide.
+
         .. tab:: MacOS
             Once you plug in the Nitrokey, your computer will start the Keyboard
             Setup Assistant. **Don’t run through this assistant but exit it right
