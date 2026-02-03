@@ -9,15 +9,15 @@ In order to use FIDO2 with your NitroPhone we recommend using `Authnkey  <https:
 
 Once Authnkey is installed on your NitroPhone you will need to launch it and set it as the default passkey provider with the "Enable" button and switch Authnkey as your preferred service.
 
-When this is done your NitroPhone will be ready to use FIDO2 tokens.
+When this is done your NitroPhone will be ready to use your Nitrokey and FIDO2.
 
 You can test this with `WebAuthn.io  <https://webauthn.io/>`_.
 
-NFC and USB token will work.
+NFC and USB connectivity works.
 
 Authnkey also comes with useful features such as:
 
-- Show the token status with its attributes.
+- Show the Nitrokey status with its attributes.
 
 - List the saved credentials.
 
