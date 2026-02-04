@@ -11,6 +11,6 @@ Once Authnkey is installed on your NitroPhone you will need to launch it and set
 
 Authnkey also comes with useful features such as:
 
-- Show the Nitrokey status with its attributes.
+- Show the Nitrokey's information.
 - List saved credentials.
 - Change the FIDO2 PIN.
