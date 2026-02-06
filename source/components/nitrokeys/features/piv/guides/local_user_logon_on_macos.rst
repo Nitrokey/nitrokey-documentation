@@ -3,6 +3,9 @@ MacOS Login with local user
 
 .. product-table:: nk3
 
+.. Note::
+   This also works with preboot FileVault authentication for macOS Silicon models.
+
 This document explains how to use the PIV smart card of a Nitrokey 3 for local user logon on MacOS. It is available as of firmware version 1.8 and higher.
 
 Prerequisites
