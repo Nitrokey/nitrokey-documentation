@@ -141,7 +141,7 @@ Nitrokey HSM FAQ
    The older security controller (NXP JCOP 3 P60) used in older Nitrokey HSM 2 is Common Criteria EAL 5+ certified up to the OS level.
 
    * `Certificate <https://commoncriteriaportal.org/files/epfiles/NSCIB-certificate%2021-98209.pdf>`__
-   * `Certification Report <https://commoncriteriaportal.org/files/epfiles/Certification%20Report%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__
+   * `Certification Report <https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/NSCIB-2200035-01-CRv1.pdf>`__
    * `Security Target <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-98209_5-STLite.pdf>`__
    * `Java Card System Protection Profile Open Configuration, Version 3.0 <https://commoncriteriaportal.org/files/ppfiles/ANSSI-CC-profil_PP-2010-03en.pdf>`__)
 
