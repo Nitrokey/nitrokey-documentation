@@ -133,7 +133,12 @@ Nitrokey HSM FAQ
 
 .. faq:: Is the Nitrokey HSM 2 Common Criteria or FIPS certified?
 
-   The security controller (NXP JCOP 3 P60) is Common Criteria EAL 5+ certified up to the OS level.
+   The security controller (NXP JCOP 4) is Common Criteria EAL 6+ certified up to the OS level.
+
+   * `Certification Report <https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/NSCIB-CC-2300172-01%20CR.pdf>`__
+   * `Security Target <https://www.commoncriteriaportal.org/nfs/ccpfiles/files/epfiles/NSCIB-CC-2300172-01-ST%20Lite_v4.14.pdf>`__
+
+   The older security controller (NXP JCOP 3 P60) used in older Nitrokey HSM 2 is Common Criteria EAL 5+ certified up to the OS level.
 
    * `Certificate <https://commoncriteriaportal.org/files/epfiles/NSCIB-certificate%2021-98209.pdf>`__
    * `Certification Report <https://commoncriteriaportal.org/files/epfiles/Certification%20Report%20NSCIB-CC-98209-CR5%20-%20version%203.0%20(2022-10-14).pdf>`__
