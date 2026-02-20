@@ -17,6 +17,18 @@ Password Safe without performing a factory reset.
    The Nitrokey App always generates a new AES key after performing a factory
    reset.
 
+The factory reset can be triggered in the Nitrokey App with the menu entry
+``Configure->Special Configure->Factory reset``.
+
+.. figure:: ../storage/images/factory-reset/factory-reset-menu-item.png
+   :alt: factory-reset-menu-item
+
+.. note::
+
+   The factory reset is an administrative function and is only available after
+   starting the Nitrokey App with the parameter ``--admin``.
+
+
 The following table describes the differences between these three operations:
 
 ===========================  =====================  ======================  ================
