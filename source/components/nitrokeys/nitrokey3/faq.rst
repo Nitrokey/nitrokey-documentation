@@ -101,6 +101,8 @@ Nitrokey 3 FAQ
    +-----------------+-------------------+----------------------+-----+
    | RSA-4096        | ✓                 | ✓ (import)           |     |
    +-----------------+-------------------+----------------------+-----+
+   | secp256k1       | ✓                 |                      |     |
+   +-----------------+-------------------+----------------------+-----+
    
    Since firmware release v1.7.0, OpenPGP uses a secure element (SE) by default.
    If the secure element is disabled, some key types can only be imported but not generated on the device.
