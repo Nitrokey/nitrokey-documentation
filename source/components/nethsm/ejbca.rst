@@ -6,8 +6,8 @@ EJBCA
 
 `EJBCA <https://www.ejbca.org/>`__ is a PKI Certificate Authority software available in both Community (CE) and Enterprise Edition (EE).
 
-EJBCA CE
---------
+EJBCA Community
+---------------
 
 EJBCA Community Edition is an open source PKI Certificate Authority software.
 
@@ -35,8 +35,8 @@ Docker Example
 We provide an example setup using docker for testing.
 If you want to experiment with it you can use git to clone the `nethsm-pkcs11 repository <https://github.com/Nitrokey/nethsm-pkcs11>`__ and then follow the steps described in the file `container/ejbca/README.md <https://github.com/Nitrokey/nethsm-pkcs11/blob/main/container/ejbca/README.md>`__.
 
-EJBCA EE
---------
+EJBCA Enterprise
+----------------
 
 EJBCA Enterprise Edition provides advanced features and enterprise support.
 
@@ -71,4 +71,3 @@ experimenting with EJBCA EE and NetHSM integration.
 
 Currently a limitation is that there is no way to select the *Padding Scheme* for a particular
 *Crypto Token*. Therefore RSA will always use PKCS#1 padding (and not PSS).
-
