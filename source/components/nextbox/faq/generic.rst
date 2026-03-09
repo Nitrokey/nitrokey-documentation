@@ -65,16 +65,16 @@ Generic FAQ
   images provided by Nextcloud. Ultimately, if some NextBox/OS configuration is
   blocking an app to run properly we for sure will look into fixing it.
 
-.. faq:: Can I connect/use the NextBox using WiFi? 
+.. faq:: Can I connect/use the NextBox using Wi-Fi?
 
   No, currently this is not (easily) possible, only wired ethernet using RJ-45
   is available.
 
-.. faq:: Is the WiFi on the Raspberry PI 4B physically available and working?
+.. faq:: Is the Wi-Fi on the Raspberry PI 4B physically available and working?
 
-  Yes, physically the WiFi is available and working, but not used/managed by the
+  Yes, physically the Wi-Fi is available and working, but not used/managed by the
   NextBox App. If you know what you are doing you can configure and use it, if
-  works although being inside the NextBox casing. 
+  it works even though it's inside the NextBox casing.
 
 .. faq:: How can I access my NextBox, if I get forwarded to the wrong URL?
 
