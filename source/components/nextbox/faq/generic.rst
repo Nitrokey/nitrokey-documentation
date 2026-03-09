@@ -5,8 +5,7 @@ Generic FAQ
 
   If your NextBox doesn't start correctly or you have some other problem using
   it, chances are a soft reset can fix it:
-  :doc:`../technical/soft-reset`. To press the button use a thin (~1mm) pin
-  like a smartphone sim-card tray removal device.
+  :doc:`../technical/soft-reset`.
   If this doesn't help, please make sure you have connected the NextBox correctly
   as described in Quickstart: :doc:`../gettingstarted`.
   Otherwise you can try a factory reset: :doc:`../technical/factory-reset` as long
@@ -18,8 +17,8 @@ Generic FAQ
 .. faq:: How can I factory-reset my NextBox?
 
   Press the hardware button for 5 seconds, see
-  :doc:`../technical/factory-reset`. To press the button use a thin (~1mm) pin
-  like a smartphone sim-card tray removal device.
+  :doc:`../technical/factory-reset`.
+  This will **delete all your files**!
 
 .. faq:: What do the different LED colors mean?
 
