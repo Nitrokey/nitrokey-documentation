@@ -20,7 +20,7 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Create virtual environment
         run: make venv
@@ -32,7 +32,7 @@ jobs:
 
       - name: Upload quick build artifact 
         id: upload-quick
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: generated documentation (en)
           path: dist
@@ -48,7 +48,7 @@ jobs:
           script: /var/www/docs/deploy/gh-trigger.sh en ${{ steps.upload-quick.outputs.artifact-id }} ${{ secrets.DOWNLOAD_TOKEN }}
 
       - name: Checkout data repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: nitrokey/nitrokey-documentation-data
           ref: main
