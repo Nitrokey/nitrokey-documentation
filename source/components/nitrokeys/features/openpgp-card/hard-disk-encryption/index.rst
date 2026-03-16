@@ -36,7 +36,7 @@ Follow these steps to use the program with `Nitrokey Storage
    Please note that VeraCrypt doesn’t make use of the full security
    which Nitrokey (and smart cards in general) offer. Instead it stores
    a keyfile on the Nitrokey which theoretically could be stolen by a
-   computer virus.
+   compromised host, since the *Private Data Object 1* is not protected by the Nitrokey's PIN.
 
 Note: `Aloaha Crypt <https://www.aloaha.com/aloaha-crypt-disk/>`__ is based on TrueCrypt/VeraCrypt but without the described security limitation.
 
