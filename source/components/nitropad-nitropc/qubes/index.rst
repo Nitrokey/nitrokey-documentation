@@ -46,7 +46,7 @@ changed by you:
    account. After that you should have successfully booted the system
    and could already use it normally.
 
-4. Open the pre-installed Nitrokey App and change the PINs of your
+4. Open the pre-installed Nitrokey App (or follow our `installation guide <./nitrokey-app.html>`_) and change the PINs of your
    Nitrokey as `described here <../change-pins.html>`_.
 
 5. Change the passphrase for the hard disk encryption by searching in the Qubes Menu for "Change Disk Passwort". This passphrase is different from your user acount's passphrase.
