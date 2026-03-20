@@ -3,9 +3,9 @@ Passwords
 
 Password entries may consist of:
 
-* Login name
-* Password
-* Comment (for e.g. a website reference)
+* Login name (maximum length is 127 character)
+* Password (maximum length is 127 character)
+* Comment (for e.g. a website reference, maximum length is 127 character)
 * One-Time Passwords (HOTP and TOTP)
 * Hash-Based Message Authentication Code (HMAC)
 
