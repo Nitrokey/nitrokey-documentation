@@ -804,7 +804,11 @@ The restore can be applied as follows.
 Replication
 ~~~~~~~~~~~
 
-NetHSM is stateless, so that several NetHSM devices can be used to process extremely high throughput and provide high availability. The PKCS#11 module supports round-robin schedule for a cluster of NetHSM instances. Multiple instances of NetHSM can be synchronized via encrypted backups. For this a separate system downloads and uploads backup files between the instances. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__. This separate system doesn’t have access to the backed up data in clear text because the backup files are encrypted twice. The separate system is in possession of the backup passphrase only but not of the Domain Key resp. Unlock Passphrase which is the second layer of encryption. See the `system design <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#backup-and-restore>`__ for further details.
+NetHSM is stateless, so that several NetHSM devices can be used to process extremely high throughput and provide high availability. The PKCS#11 module supports round-robin schedule for a cluster of NetHSM instances.
+
+Multiple instances of NetHSM can be synchronized either via `clustering <clustering.html>`__ or via encrypted backups.
+
+For the later a separate system downloads and uploads backup files between the instances. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__. This separate system doesn’t have access to the backed up data in clear text because the backup files are encrypted twice. The separate system is in possession of the backup passphrase only but not of the Domain Key resp. Unlock Passphrase which is the second layer of encryption. See the `system design <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#backup-and-restore>`__ for further details.
 
 Software Update
 ~~~~~~~~~~~~~~~
@@ -850,7 +854,7 @@ Afterwards the update can be applied or aborted. Please refer to the desired opt
    If the upload of the update image fails with ``Error: NetHSM request failed: Bad request -- malformed image``, please follow the steps below.
 
    1. Make sure you have a valid update file by checking with the provided signature.
-   2. Make sure you don't have a high log level, such as ``DEBUG`` enabled. Please refer to chapter `Logging <https://docs.nitrokey.com/nethsm/administration.html#logging>`__ to learn more about the log level configuration.
+   2. Make sure you don't have a high log level, such as ``DEBUG`` enabled. Please refer to chapter `Logging <administration.html#logging>`__ to learn more about the log level configuration.
    3. Reboot the appliance to free up used memory.
 
 The update can be applied (committed) as follows. Any data migration is only performed *after* the NetHSM has successfully booted the new system software version.
