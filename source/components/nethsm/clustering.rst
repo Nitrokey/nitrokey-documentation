@@ -163,7 +163,7 @@ To do this, first generate a Certificate Signing Request (CSR) from the node wit
 .. note::
    To properly authenticate nodes, the clustering backend (etcd) expects that each node has a certificate with a properly filled Subject Alt Names (SAN) field. In particular, nodes expected to be reached only via their IP need to have a proper IP SAN in their certificate. IP SANs can be requested for the CSR by prefixing "IP:" to the names, as in ``openssl``:
 
-   .. code-block:: json
+   .. code-block::
 
       "subjectAltNames": [ "normalname.org", "IP:192.168.1.1" ]
 
