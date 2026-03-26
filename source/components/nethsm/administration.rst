@@ -410,7 +410,7 @@ Set the network configuration as follows.
 
 .. note::
    IPv6 is optional and not configured by default.
-   To disable IPv6, omit the ``--ipv6-cidr`` and ``--ipv6-gateway`` options or pass empty strings.
+   To disable IPv6, omit the ``--ipv6-cidr`` and ``--ipv6-gateway`` options.
 
 .. tabs::
    .. tab:: nitropy
