@@ -1,10 +1,8 @@
 Clustering
 ==========
 
-This feature is currently a technical preview and may be changed.
-
 .. note::
-   Be aware of the following, temporary limitations:
+   This feature is currently a technical preview with the following temporary limitations:
 
    - If a cluster is lost (quorum is lost), the only means of recovery is factory-reset + restore. Make sure to back up often. Future releases will include means to recover from on-disk data.
    - Active/passive setup to support two-node clusters, either by utilizing etcd Learner or Mirror, is not yet available.
