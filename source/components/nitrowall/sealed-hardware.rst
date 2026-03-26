@@ -9,23 +9,12 @@ please contact us to arrange further action.
 
 .. tabs::
 	.. tab:: NWV1210, NWV1410, NWVP4670
-		.. figure:: ./images/nitrowall-VP4670-seal-back.png
+		.. figure:: ./images/sealed-hardware/nitrowall-VP4670-seal-back.png
 		  :alt: sealing back
 
-		.. figure:: ./images/nitrowall-VP4670-seal-front.png
+		.. figure:: ./images/sealed-hardware/nitrowall-VP4670-seal-front.png
 		  :alt: sealing front
 
-		.. figure:: ./images/nitrowall-VP4670-seal-bottom.png
+		.. figure:: ./images/sealed-hardware/nitrowall-VP4670-seal-bottom.png
 		  :alt: sealing bottom
-
-	.. tab:: NW678, NW4J3
-		.. figure:: ./images/nitrowall-num-one.png
-		  :alt: sealing number one
-
-		.. figure:: ./images/nitrowall-num-two.png
-		  :alt: sealing number two
-
-		.. figure:: ./images/nitrowall-num-three.png
-		  :alt: sealing number three
   
-

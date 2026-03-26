@@ -29,20 +29,19 @@ Generating SSH Key
 1. Insert the Nitrokey into your computer.
 
 2. Open a terminal and create your SSH key. Replace ``"your_comment"`` with a label to identify it (e.g., "Nitrokey GitLab").  
-   By default, the key is a non-discoverable key, meaning a local key handle is stored in ``~/.ssh/`` while the private key remains securely on the Nitrokey.  
-   Use the ``-O resident`` option if you want the key to be a discoverable credential, making it portable across systems.
+   By default, the key is created as a non-discoverable credential. In this case, a local key handle is stored in ~/.ssh/ while the private key remains on the Nitrokey. This means the key is tied to the system where it was generated, since the local key handle file is required for authentication. Use the -O resident option to create a discoverable credential. In this case, the credential is stored on the Nitrokey, making it portable and usable across different systems without copying any local files.
+
+   Non-discoverable credential:
 
    .. code-block:: shell-session
 
       ssh-keygen -t ed25519-sk -C "your_comment"
 
-   or to create a discoverable credential
-   
+   Discoverable credential:
+
    .. code-block:: shell-session
-
+      
       ssh-keygen -t ed25519-sk -O resident -C "your_comment"
-
-   The ``-O resident`` option creates a discoverable credential, storing the key handle directly on the Nitrokey. This means anyone with physical access to the device can list the stored credentials and see which services they were registered with.
 
    .. note::
 
@@ -51,7 +50,6 @@ Generating SSH Key
       .. code-block:: shell-session
 
          ssh-keygen -K
-
 
 3. During key generation, you may also be asked to set a **passphrase**. This passphrase encrypts the local key handle stored in ``~/.ssh/`` (not the private key on the Nitrokey, which always stays securely inside the device). The passphrase is different from the FIDO2 device PIN. The PIN protects the physical key itself, while the passphrase protects your local SSH public key file. We recommend to use a passphrase to protect non-discoverable keys only.
 
@@ -65,21 +63,13 @@ Generating SSH Key
 
    ``~/.ssh/id_ed25519_sk.pub`` → public key file
 
-   .. note::
-
-      The file names may differ if you specified a custom name when generating the key.
-
-.. figure:: images/ssh/terminal.png
-   :alt: img0
-
+   .. figure:: images/ssh/terminal.png
+      :alt: img0
 
 Adding Your Public Key
 ----------------------
 
 Once your SSH key pair is generated, the public key must be added to the service or server you want to access.
-
-For Git Services (GitLab, GitHub, etc.)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Display your public key:
 

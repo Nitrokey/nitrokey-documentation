@@ -20,51 +20,40 @@ The bag and all screws on the bottom of the device have been sealed. For the bag
 This example shows a sealed screw whose glitter represents an
 individual pattern.
 
-.. figure:: /components/nitropad-nitropc/images/Schraube.jpg
+.. figure:: /components/nitropad-nitropc/images/sealed-hardware/Schraube.jpg
    :alt: img
 
 
-Nitropad NV41
-*************
- 
-.. figure:: /components/nitropad-nitropc/images/nv41_sealed.jpg
-   :alt: NV41
+Nitropad V56
+************
+.. figure:: /components/nitropad-nitropc/images/sealed-hardware/V56_sealed.jpg
+   :alt: V56
 
-Nitropad NS50
-*************
-.. figure:: /components/nitropad-nitropc/images/ns50_sealed.jpg
-   :alt: NS50
+Nitropad V56 with GPU
+*********************
+.. figure:: /components/nitropad-nitropc/images/sealed-hardware/V56_sealed_gpu.jpg
+   :alt: V56 with GPU
 
 Nitropad V54
 ************
-.. figure:: /components/nitropad-nitropc/images/V54_sealed.jpg
+.. figure:: /components/nitropad-nitropc/images/sealed-hardware/V54_sealed.jpg
    :alt: V54
 
-NitroPad X230
+NitroPad T480
 *************
-.. figure:: /components/nitropad-nitropc/images/SchraubenmarkierungX230.jpg
-   :alt: X230
 
-NitroPad T430
-*************
-.. figure:: /components/nitropad-nitropc/images/SchraubenmarkierungT430.jpg
-   :alt: T430
- 
+.. figure:: /components/nitropad-nitropc/images/sealed-hardware/T480_sealed.jpg
+    :alt: T480
+
+NitroPad T480s
+**************
+
+.. figure:: /components/nitropad-nitropc/images/sealed-hardware/T480s_sealed.jpg
+    :alt: T480s
+
 NitroPC Pro 2
 *************
 
 For the NitroPC Pro 2 we use tamper evident tape on the casing.
 After receiving your computer check that no tape have been removed.
 Then you can remove the tape and use rubbing alcohol to remove the tamper marks.
-
-NitroPad T480
-*************
-
-.. figure:: /components/nitropad-nitropc/images/T480_sealed.jpg
-    :alt: T480
-
-NitroPad T480s
-**************
-
-.. figure:: /components/nitropad-nitropc/images/T480s_sealed.jpg
-    :alt: T480
