@@ -452,7 +452,7 @@ Set the network configuration as follows.
       Information about the `/config/network` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-network>`__.
 
       To configure IPv6, include the optional ``ipv6`` field with ``cidr`` and ``gateway`` properties.
-      To disable IPv6, pass ``null`` for the ``ipv6`` field.
+      To disable IPv6, omit the ``ipv6`` field.
 
 Time
 ~~~~
