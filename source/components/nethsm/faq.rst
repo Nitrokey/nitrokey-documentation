@@ -22,7 +22,6 @@ Frequently Asked Questions (FAQ)
 
    Work in progress:
 
-   * Direct, dynamic cluster capability, possibly support for external database
    * NetHSM as a service offering
 
    We plan the following developments in the loose order. Changes to this prioritization based on customer requests are common.
