@@ -30,7 +30,10 @@ ports 80 (HTTP-Server) and 443 (HTTPS-Server).**
 
 On a recent *Fritz!Box* you will find this configuration inside: "Internet -> Permit Access -> Port Sharing"
 
+**On some routers it may also be necessary to explicitly state that the Nextbox gets
+assigned the same IP address every time.**
 
+On a recent *Fritz!Box* you will find this configuration inside:
+"Home Network -> Network -> Network Connections -> (Edit) for the Nextbox"
 
-
-
+Then select "Assign permanent IPv4 address".
