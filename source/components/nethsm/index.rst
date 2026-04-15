@@ -29,6 +29,7 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Getting Star
    administration.rst
    operation.rst
    integration.rst
+   clustering.rst
    faq.rst
    pkcs11-setup.rst
    pkcs11-tool.rst

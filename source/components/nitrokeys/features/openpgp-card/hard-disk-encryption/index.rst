@@ -11,7 +11,7 @@ VeraCrypt (formerly TrueCrypt)
 `VeraCrypt <https://www.veracrypt.fr/en/Home.html>`__ is a free and Open Source disk encryption software for Windows, macOS, and GNU+Linux. It is the successor of TrueCrypt and thus recommended, although the following instructions should apply to TrueCrypt as well.
 
 Follow these steps to use the program with `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__ or `Nitrokey Pro
+2 <https://www.nitrokey.com/files/doc/Nitrokey_Storage_factsheet.pdf>`__ or `Nitrokey Pro
 2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__:
 
 1. Install the latest release of
@@ -36,7 +36,7 @@ Follow these steps to use the program with `Nitrokey Storage
    Please note that VeraCrypt doesn’t make use of the full security
    which Nitrokey (and smart cards in general) offer. Instead it stores
    a keyfile on the Nitrokey which theoretically could be stolen by a
-   computer virus after the user enters the PIN.
+   compromised host, since the *Private Data Object 1* is not protected by the Nitrokey's PIN.
 
 Note: `Aloaha Crypt <https://www.aloaha.com/aloaha-crypt-disk/>`__ is based on TrueCrypt/VeraCrypt but without the described security limitation.
 
@@ -51,7 +51,7 @@ For setting up LUKS Disk Encryption follow our guide:
 	Full-Disk Encryption With cryptsetup/LUKS <luks>
 
 
-Purism has created a `simple script <https://docs.puri.sm/Hardware/Librem_Key/LUKS.html>`__ to add the Nitrokey/LibremKey as a way to unlock LUKS partitions (not tested by Nitrokey yet).
+Purism has created a `simple script <https://docs.puri.sm/Hardware/acc/lk/luks.html>`__ to add the Nitrokey/LibremKey as a way to unlock LUKS partitions (not tested by Nitrokey yet).
 
 `This project <https://github.com/artosan/nitroluks/>`__ aims to ease the use of LUKS with the Nitrokey Pro or Storage based on the Password Safe (not tested by Nitrokey yet). A description on how to use it on Gentoo can be found `here <https://amedeos.github.io/gentoo/nitrokey/2019/01/21/gentoo-nitrokey-luks.html>`__.
 

@@ -1,5 +1,5 @@
-Factory Reset Heads 2.0
-=======================
+Factory Reset Heads v2.0+
+=========================
 
 .. contents:: :local:
 
@@ -15,120 +15,234 @@ Reasons for resetting to factory settings
 -  Your operating system does not start
 
 .. warning::
-   All data on the Nitrokey will be lost if you reset your device. Therefore please backup your data before performing the reset.
+   All GPG keys of your Nitrokey will be deleted during this procedure.
 
 Procedure
 ~~~~~~~~~
-1. Connect your Nitrokey to the NitroPad.
-2. Turn on the NitroPad.
-3. Select “Options”.
 
-   .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/options.jpg
-      :alt: heads options menu
+.. tabs::
 
-4. Select “OEM-Factory Reset /Re-Ownership”.
+   .. tab:: Heads v2.5+
+    1. Connect your Nitrokey to the NitroPad.
+    2. Turn on the NitroPad and interupt the automatic boot by pressing any key.
+    3. Select “Options”.
 
-   .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/reset.jpg
-      :alt: reset
+       .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/options.jpg
+          :alt: heads options menu
 
-5. Confirm Reset with “Continue”.
+    4. Select “OEM-Factory Reset /Re-Ownership”.
 
-   .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm.jpg
-      :alt: confirm
+       .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/reset.jpg
+          :alt: reset
 
-6. The integrity of your Setup will be tested, deppending on your reason to perform the reset this can fail continue with ok anyways
+    5. Confirm reset with “Continue”.
 
-   .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm-integrity.jpg
-      :alt: confirm integrity
+       .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm.jpg
+          :alt: confirm
 
-7. The following Question can all be answered with the Default. Just hit enter if you only want to reset your device.  
+    6. The integrity of your setup will be tested, deppending on your reason to perform the reset this can fail continue with ok anyways
 
-   .. code-block:: shell
+       .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm-integrity.jpg
+          :alt: confirm integrity
 
-      Would you like to change the current LUKS Disk Recovery Key passphrase?
-      (Highly recommended if you didn't install the Operating System yourself, so that past provisioned passphrase would not permit to access content.
-      Note that without re-encrypting disk, a backuped header could be restored to access encrypted content with old passphrase) [y/N]: N
+    7. You will be prompted with:
 
-      Would you like to re-encrypt LUKS encrypted container and generate new Disk Recovery key?
-      (Highly recommended if you didn't install the operating system yourself: this would prevent any LUKS backuped header to be restored to access encrypted data) [y/N]: N
+       .. code-block:: 
 
-      The following security components will be provisioned with defaults or chosen PINs/passwords:
+         Would you like to use default configuration option?
+         If N, you will be prompted for each option [Y/n]:
+    
+       You can hit enter for the default option (Y).
 
-      TPM Ownership password
-      GPG Admin PIN
-      GPG User PIN
+       A second prompt will show:
 
-      Would you like to set a single custom password that will be provisioned to previously stated security components? [y/N]: N
-      
-      Would you like to set distinct PINs/passwords to be provisioned to previously stated security components? [y/N]: N
-      
-      Would you like to set custom user Information for the GnPG key?[y/N]: N
+       .. code-block:: 
 
-      Would you like to set custom user information for the GnuPG key? [y/N]: N
+         Would you like to export your public key to an USB drive? [y/N]:
 
-      Checking for USB Security Dongle... 
+       Also choose the default option (N) by hitting enter.
 
-      Detecting and setting boot device... 
+       You will need to touch your Nitrokey during this process when asked.
 
-      Boot device set to /dev/nvme0n1p2
+    8. Now it shows all PINs used by Heads:
 
-      Resetting TPM... 
+       .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/default-sec.jpg
+          :alt: defaults
+    
+       You will need them for certain procedure so make sure to remember them.
+    
+    9. Confirm the subsequent restart.
 
-      Resetting GPG Key... 
-      (this will take around 3 minuts...)
+       .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/reboot.jpg
+          :alt: reboot
 
-      Changing default GPG Admin PIN
+    10. After the restart the OTP secret must be created. Confirm the process with Enter.
 
-      Changing default GPG User PIN
+        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec1.jpg
+           :alt: otp secrets generate confirm 1
 
-      Reading current firmware
-      (this will take a minute or two)
+        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec2.jpg
+           :alt: otp secrets generate confirm 2
 
-      Adding generated key to current firmware and re-flashing...
+    11. Enter TPM Owner Password (Default: 12345678)
 
-      Signing boot files and generating checksums
+        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
+           :alt: tpm password enter
 
-8. It will show the Default GPG PINS and TPM Password
+    12. Scan QR code with Phone to inport TOTP Seceret (Optional) and hit Enter 
 
-   .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/default-sec.jpg
-      :alt: defaults
+        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
+           :alt: qr code totp
+
+        When asked touch your Nitrokey.
+
+
+    13. When prompted, enter the Secret App PIN of your Nitrokey (Default: 12345678) and hit Enter
+
+        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/admin-pin.jpg
+           :alt: admin pin nitrokey input
+
+    14. Hit enter and the automatic boot will start.
+  
+    15. You will now need to select your default boot, pick the first option and make it default.
+
+        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/default-boot.jpg
+           :alt: admin pin nitrokey input
+
+    16. This prompt will appear:
+
+    .. code-block:: 
+
+      Do you wish to add a disk encryption key to the TPM [y/N]:
+
+    Hit enter to choose the default option (N).
+
+    .. code-block:: 
+
+      Please confirm that your GPG card is inserted [Y/n]:
+        
+    Here also hit enter for the default option (Y).
+
+    It will ask for the Admin PIN which is by default (123456).
+
+    The reset is done and you are booting in your installed operating system.
+
+
+
+   .. tab:: Heads v2.0 to v2.5
+    
+        1. Connect your Nitrokey to the NitroPad.
+        2. Turn on the NitroPad.
+        3. Select “Options”.
+
+           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/options.jpg
+              :alt: heads options menu
+
+        4. Select “OEM-Factory Reset /Re-Ownership”.
+
+           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/reset.jpg
+              :alt: reset
+
+        5. Confirm Reset with “Continue”.
+
+           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm.jpg
+              :alt: confirm
+
+        6. The integrity of your Setup will be tested, deppending on your reason to perform the reset this can fail continue with ok anyways
+
+           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm-integrity.jpg
+              :alt: confirm integrity
+
+        7. The following Question can all be answered with the Default. Just hit enter if you only want to reset your device.  
+
+           .. code-block:: shell
+        
+              Would you like to change the current LUKS Disk Recovery Key passphrase?
+              (Highly recommended if you didn't install the Operating System yourself, so that past provisioned passphrase would not permit to access content.
+              Note that without re-encrypting disk, a backuped header could be restored to access encrypted content with old passphrase) [y/N]: N
+
+              Would you like to re-encrypt LUKS encrypted container and generate new Disk Recovery key?
+              (Highly recommended if you didn't install the operating system yourself: this would prevent any LUKS backuped header to be restored to access encrypted data) [y/N]: N
+
+              The following security components will be provisioned with defaults or chosen PINs/passwords:
+
+              TPM Ownership password
+              GPG Admin PIN
+              GPG User PIN
+
+              Would you like to set a single custom password that will be provisioned to previously stated security components? [y/N]: N
+
+              Would you like to set distinct PINs/passwords to be provisioned to previously stated security components? [y/N]: N
+
+              Would you like to set custom user Information for the GnPG key?[y/N]: N
+
+              Would you like to set custom user information for the GnuPG key? [y/N]: N
+
+              Checking for USB Security Dongle... 
+
+              Detecting and setting boot device... 
+
+              Boot device set to /dev/nvme0n1p2
+
+              Resetting TPM... 
+
+              Resetting GPG Key... 
+              (this will take around 3 minuts...)
+
+              Changing default GPG Admin PIN
+
+              Changing default GPG User PIN
+
+              Reading current firmware
+              (this will take a minute or two)
+
+              Adding generated key to current firmware and re-flashing...
+
+              Signing boot files and generating checksums
+
+        8. It will show the Default GPG PINS and TPM Password
+
+           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/default-sec2.jpg
+              :alt: defaults
+
+        9. Confirm the subsequent restart.
+
+           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/reboot.jpg
+              :alt: reboot
+
+        10. After the restart the OTP secret must be created. Confirm the process with Enter.
+
+            .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec1.jpg
+               :alt: otp secrets generate confirm 1
+
+            .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec2.jpg
+               :alt: otp secrets generate confirm 2
+
+        11. Enter TPM Password (Default: 12345678)
+
+            .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
+               :alt: tpm password enter
+
+        12. Scan QR COde with Phone to inport TOTP Seceret (Optional) and hit Enter 
+
+            .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
+               :alt: qr code totp
+
+
+        13. When prompted, enter the Admin PIN of your Nitrokey (Default: 12345678) and hit Enter
+
+            .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/admin-pin.jpg
+               :alt: admin pin nitrokey input
+
+        14. You should then reach the Start menu.
+
+            .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/start-menu.jpg
+               :alt: start menu
+
+        15. Press Enter to start the “Default Boot”.
+
+        .. note::
+        
+           If you see the message that no default exists yet, please follow the procedure described in `default boot <./default-boot.html>`__.
+
    
-9. Confirm the subsequent restart.
-
-   .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/reboot.jpg
-      :alt: reboot
-
-10. After the restart the OTP secret must be created. Confirm the process with Enter.
-
-    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec1.jpg
-       :alt: otp secrets generate confirm 1
-
-    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec2.jpg
-       :alt: otp secrets generate confirm 2
-
-11. Enter TPM Password (Default: 12345678)
-
-    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
-       :alt: tpm password enter
-
-12. Scan QR COde with Phone to inport TOTP Seceret (Optional) and hit Enter 
-
-    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
-       :alt: qr code totp
-
-
-13. When prompted, enter the Admin PIN of your Nitrokey (Default: 12345678) and hit Enter
-
-    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/admin-pin.jpg
-       :alt: admin pin nitrokey input
-
-14. You should then reach the Start menu.
-
-    .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/start-menu.jpg
-       :alt: start menu
-
-15. Press Enter to start the “Default Boot”.
-
-.. note::
-
-   If you see the message that no default exists yet, please follow the procedure described in “Troubleshooting: Default Boot Menu”.

@@ -395,6 +395,11 @@ The network configuration can be retrieved as follows.
                IP address:    192.168.1.1
                Netmask:       255.255.255.0
                Gateway:       0.0.0.0
+               IPv6 CIDR:     de:ad:be:ef::42/64
+               IPv6 Gateway:  de:ad:be:ef::1
+
+      .. note::
+         The IPv6 fields are only shown if IPv6 is configured.
    .. tab:: REST API
       Information about the `/config/network` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-network>`__.
 
@@ -404,7 +409,8 @@ Set the network configuration as follows.
    The NetHSM does not support DHCP (Dynamic Host Configuration Protocol).
 
 .. note::
-   The NetHSM does not support IPv6 (Internet Protocol version 6).
+   IPv6 is optional and not configured by default.
+   To disable IPv6, omit the ``--ipv6-cidr`` and ``--ipv6-gateway`` options.
 
 .. tabs::
    .. tab:: nitropy
@@ -420,17 +426,33 @@ Set the network configuration as follows.
       | ``-g``, ``--gateway``     | The new gateway    |
       +---------------------------+--------------------+
 
+      **Optional Options**
+
+      +---------------------------+-----------------------------------------------+
+      | Option                    | Description                                   |
+      +===========================+===============================================+
+      | ``--ipv6-cidr`` ``TEXT``  | The IPv6 address in CIDR notation (optional)  |
+      +---------------------------+-----------------------------------------------+
+      | ``--ipv6-gateway`` ``TEXT`` | The IPv6 gateway address (optional)          |
+      +---------------------------+-----------------------------------------------+
+
       **Example**
 
       .. code-block:: bash
 
-         $ nitropy nethsm -h $NETHSM_HOST set-network-config -a 192.168.1.1 -n 255.255.255.0 -g 0.0.0.0
+         $ nitropy nethsm -h $NETHSM_HOST set-network-config \
+            -a 192.168.1.1 -n 255.255.255.0 -g 0.0.0.0 \
+            --ipv6-cidr "de:ad:be:ef::42/64" \
+            --ipv6-gateway "de:ad:be:ef::1"
 
       .. code-block::
 
          Updated the network configuration for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/network` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-network>`__.
+
+      To configure IPv6, include the optional ``ipv6`` field with ``cidr`` and ``gateway`` properties.
+      To disable IPv6, omit the ``ipv6`` field.
 
 Time
 ~~~~
@@ -564,6 +586,7 @@ Logging
 ~~~~~~~
 
 The NetHSM can log system events to the serial port or to a syslog server on the network.
+The syslog server IP address can be an IPv4 or IPv6 address.
 
 .. important::
    For any production deployment, the NetHSM log should be monitored continuously to provide immediate notification of any potential security issues.
@@ -804,7 +827,11 @@ The restore can be applied as follows.
 Replication
 ~~~~~~~~~~~
 
-NetHSM is stateless, so that several NetHSM devices can be used to process extremely high throughput and provide high availability. The PKCS#11 module supports round-robin schedule for a cluster of NetHSM instances. Multiple instances of NetHSM can be synchronized via encrypted backups. For this a separate system downloads and uploads backup files between the instances. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__. This separate system doesn’t have access to the backed up data in clear text because the backup files are encrypted twice. The separate system is in possession of the backup passphrase only but not of the Domain Key resp. Unlock Passphrase which is the second layer of encryption. See the `system design <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#backup-and-restore>`__ for further details.
+NetHSM is stateless, so that several NetHSM devices can be used to process extremely high throughput and provide high availability. The PKCS#11 module supports round-robin schedule for a cluster of NetHSM instances.
+
+Multiple instances of NetHSM can be synchronized either via `clustering <clustering.html>`__ or via encrypted backups.
+
+For the later a separate system downloads and uploads backup files between the instances. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__. This separate system doesn’t have access to the backed up data in clear text because the backup files are encrypted twice. The separate system is in possession of the backup passphrase only but not of the Domain Key resp. Unlock Passphrase which is the second layer of encryption. See the `system design <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#backup-and-restore>`__ for further details.
 
 Software Update
 ~~~~~~~~~~~~~~~
@@ -850,7 +877,7 @@ Afterwards the update can be applied or aborted. Please refer to the desired opt
    If the upload of the update image fails with ``Error: NetHSM request failed: Bad request -- malformed image``, please follow the steps below.
 
    1. Make sure you have a valid update file by checking with the provided signature.
-   2. Make sure you don't have a high log level, such as ``DEBUG`` enabled. Please refer to chapter `Logging <https://docs.nitrokey.com/nethsm/administration.html#logging>`__ to learn more about the log level configuration.
+   2. Make sure you don't have a high log level, such as ``DEBUG`` enabled. Please refer to chapter `Logging <administration.html#logging>`__ to learn more about the log level configuration.
    3. Reboot the appliance to free up used memory.
 
 The update can be applied (committed) as follows. Any data migration is only performed *after* the NetHSM has successfully booted the new system software version.
