@@ -20,11 +20,11 @@ Operating System Reinstallation
 
       1. Download the latest LTS image from the `official Ubuntu website <https://ubuntu.com/download/desktop>`__.
 
-      2. `Verify <https://ubuntu.com/tutorials/how-to-verify-ubuntu#1-overview>`__  your dowloaded image.
+      2. `Verify <https://ubuntu.com/tutorials/how-to-verify-ubuntu#1-overview>`__  your downloaded image.
 
-      3. Flash a USB drive with the dowloaded image with `balenaEtcher <https://www.balena.io/etcher/>`__.
+      3. Flash a USB drive with the downloaded image with `balenaEtcher <https://www.balena.io/etcher/>`__.
 
-      4. Once the USB drive ready, plug it to your NitroPad or NitroPC and start it.
+      4. Once the USB drive is flashed, plug it to your NitroPad or NitroPC and start it.
 
       .. tabs::
 
@@ -32,66 +32,66 @@ Operating System Reinstallation
 
             1. For Heads version >= 2.5.0 stop the automatic boot by pressing a key.
 
-            2. Go to the option menu then the "boot option"
+            2. Go to the option menu and "boot option".
 
             3. Select "USB boot" and "Try and install Ubuntu".
 
-            4. Once the installer is started follow the instuctions and when asked choose to encrypt your drive with LVM.
+            4. Once the installer started follow the instuctions and when asked choose to encrypt your drive with LVM.
 
-            5. Once Ubuntu is installed your computer will reboot and Heads will show errors, you will need to perform a `OEM facotry reset <https://www.balena.io/etcher/>`__.
+            5. Once Ubuntu is installed your computer will reboot and Heads will show errors, you will need to perform a `OEM facotry reset <./heads/factory-reset-heads2.html>`__.
 
-            6. When Ubuntu will be successfully installed and Heads reset you will automatically boot on Ubuntu.
+            6. When Ubuntu will be successfully installed and Heads reseted you will automatically boot on Ubuntu.
 
             .. note::
 
-               With Ubuntu 24 you need to type your encryption password blindy as exaplained `here <https://www.balena.io/etcher/>`__.
+               With Ubuntu 24 you need to type your encryption password blindy as exaplained `here <./ubuntu/index.html#workaround-ubuntu-24-04>`__.
 
          .. tab:: Tianocore
-   
 
+            1. Interrupt the boot and access the UEFI menu by pressing "ESC".
+
+            2. Go to "one time boot" and select the USB key with the Ubuntu installer image.
+
+            3. Once the installer started follow the instuctions and when asked choose to encrypt your drive with LVM.
+
+            4. When Ubuntu will be successfully installed you will automatically boot on Ubuntu.
+
+   
    .. tab:: QubesOS
 
-      test
+      1. Download the latest image from the `official QubesOS website <https://www.qubes-os.org/downloads/>`__.
+
+      2. `Verify <https://doc.qubes-os.org/en/latest/project-security/verifying-signatures.html>`__  your downloaded image.
+
+      3. Flash a USB drive with the downloaded image with `balenaEtcher <https://www.balena.io/etcher/>`__.
+
+      4. Once the USB drive is flashed, plug it to your NitroPad or NitroPC and start it.
+
 
       .. tabs::
 
-         .. tab:: Heads      
+         .. tab:: Heads
+
+            1. For Heads version >= 2.5.0 stop the automatic boot by pressing a key.
+
+            2. Go to the option menu and "boot option".
+
+            3. Select "USB boot" and select "Install Qubes OS".
+
+            4. Once the installer started follow the instuctions and when asked choose to encrypt your drive's data.
+
+            5. Once QubesOS is installed your computer will reboot and Heads will show errors, you will need to perform a `OEM facotry reset <./heads/factory-reset-heads2.html>`__.
+
+            6. When QubesOS will be successfully installed and Heads reseted you will automatically boot on QubesOS.
+
 
          .. tab:: Tianocore
 
-1. Download the latest Stable Release of the operating system images: `Ubuntu
-   Linux <https://www.nitrokey.com/files/ci/ubuntu/>`__, `Qubes OS <https://www.qubes-os.org/downloads/>`__,
-   `Linux Mint <https://linuxmint.com/download.php>`__
+            1. Interrupt the boot and access the UEFI menu by pressing "ESC".
 
+            2. Go to "one time boot" and select the USB key with the QubesOS installer image.
 
-2. Optional: Download hash sum and
-   `verify <https://proprivacy.com/guides/how-why-and-when-you-should-hash-check#how-to-hash-check>`__
-   the downloaded operating system image.
+            3. Once the installer started follow the instuctions and when asked choose to encrypt your drive's data.
 
-3. Write the operating system image to any USB drive. Possible
-   applications:
+            4. When QubesOS will be successfully installed you will automatically boot on QubesOS.
 
-   -  Windows: `Rufus <https://rufus.ie/>`__,
-      `balenaEtcher <https://www.balena.io/etcher/>`__;
-   -  Linux: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__;
-   -  macOS: ``dd``, `balenaEtcher <https://www.balena.io/etcher/>`__.
-
-4. Connect the USB drive to your NitroPad and start it. In Heads menu
-   select Boot Options -> USB Boot.
-
-5. On Qubes use the "latest Kernel" version of the install options
-
-6. Depending on the operating system you may need to confirm its
-   reinstallation.
-
-7. `Sign the boot
-   partition <heads/system-update.html>`_ (Heads only).
-
-To avoid accidential overwriting of valuable data, format the USB drive afterwards.
-
-.. warning::
-
-   Booting this USB drive entirely erases all data on the hard disk or
-   SSD of the NitroPad without further warning. Don’t boot this USB
-   drive on any computer which contains data you want to keep. Make sure
-   to format the USB drive after the intended use.
