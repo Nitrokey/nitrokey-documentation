@@ -17,7 +17,7 @@ If you want to login to you computer using `Nitrokey Pro
 Requirements
 ------------
 
--  Ubuntu 20.04 with Gnome Display Manager.
+-  Ubuntu 20.04 with Gnome Display Manager (GDM).
 
 -  A FIDO2 capable Nitrokey: see table ``Compatible Nitrokeys`` at the top of the page for reference.
 
@@ -294,3 +294,23 @@ In step 7 we have used the ``sufficient`` control flag to determine the behavior
    -  You will also lose the ability to use ``sudo`` if you set up
       Central Authentication Mapping *and* used the ``required`` or
       ``requisite`` flags.
+
+   -  You might also lose the ability to log in using Gnome Display manager
+      if smart card login is enforced and you used the ``required`` or. 
+      ``requisite`` flags. See Troubleshooting for further info.
+
+
+Troubleshooting
+---------------
+
+Issues logging into user account using GDM
+''''''''''''''''''''''''''''''''''''''''''
+
+In some cases, for example if you have `opencs-pkcs11` installed, Gnome Display Manager (GDM) can
+default to enforcing smart card login as soon as any smart card (like your Nitrokey) is plugged in, even if no smart card has ever been configured. 
+This can prevent you from logging in to your user account using u2f. If you have set the ``sufficient`` control flag,
+unplug all smart cards and log in using your password. To turn off smart card enforcing run the following command:
+
+.. code-block:: bash
+
+   $ sudo -u gdm env -u XDG_RUNTIME_DIR -u DISPLAY DCONF_PROFILE=gdm dbus-run-session gsettings set org.gnome.login-screen enable-smartcard-authentication false
