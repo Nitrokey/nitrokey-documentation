@@ -200,7 +200,7 @@ CLI Method
    .. code-block:: bash
 
       #Nitrokey FIDO2 config
-      auth    sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue [cue_prompt=Please touch the device.] prompt nouserok
+      auth    sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue [cue_prompt=Please touch the device.] prompt
 
    .. tip::
 
@@ -215,10 +215,6 @@ CLI Method
       -  If you would like to be prompted to touch the Nitrokey, ``cue``
          option will make ``pam_u2f`` print ``Please touch the device.``
          message. You can change the message in ``[cue_prompt=Please touch the device.]``.
-
-      -  `nouserok` will ensure that you can still login using the username and
-         password, you might want to remove this at some point once the setup
-         is working and you don't want regular username & password based logins.
 
    Once we modified the ``common-auth``, we can save and exit the file.
 
