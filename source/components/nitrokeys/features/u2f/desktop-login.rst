@@ -24,39 +24,6 @@ Requirements
 Instructions
 ------------
 
-GUI Method
-''''''''''
-
-1. **In the lower left corner click on** ``Show Applications`` **and type settings in the search bar as following:**
-
-   .. figure:: images/desktop-login/fidou2f-1.png
-      :alt: img1
-
-2. **Scroll down in the right bar to** ``Users``
-
-   .. figure:: images/desktop-login/fidou2f-2.png
-      :alt: img2
-
-3. **In the left corner click on** ``Unlock`` **and that would prompt for your
-   password**
-
-   .. figure:: images/desktop-login/fidou2f-3.png
-      :alt: img3
-
-4. **Select** ``Administrator`` **and enter the user name and password of your
-   choice**
-
-   .. figure:: images/desktop-login/fidou2f-4.png
-      :alt: img4
-
-5. **Once you finish Step 4 you should be done**
-
-   .. figure:: images/desktop-login/fidou2f-5.png
-      :alt: img5
-
-CLI Method
-''''''''''
-
 1. **Create a backup user and give it root privileges**
 
    You can do so by using these commands:
