@@ -41,6 +41,10 @@ NitroPhone FAQ
 
    `Here <https://grapheneos.org/faq>`__ you can find further information on GrapheneOS.
 
+.. faq:: Is Nitrokey supporting the GrapheneOS project?
+
+   Yes we do support the GrapheneOS initiative by donating regularly.
+
 .. faq:: Why is OEM unlocking enabled by default?
 
    The only real purpose of the OEM Unlocking setting is `anti-theft protection <https://grapheneos.org/faq#anti-theft>`__ which is not implemented by GrapheneOS. OEM unlocking controls whether the device can be unlocked via boot loader. In the later case all user data is wiped. If OEM Unlocking is disabled, someone can still boot up in recovery mode, enter the menu, wipe data, then boot the OS and enable OEM unlocking. Therefore it doesn't really increase the security but `disabling it <index.html>`_ reduces the potential physical attack surface.
