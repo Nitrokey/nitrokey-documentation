@@ -118,7 +118,7 @@ Instructions
    
 5. **Securing the config file**
 
-   For better security, after the config file generated, we will move the generated file ``~/u2f_keys`` directory to ``/etc/Nitrokey/`` and change the access permissions with these commands:
+   For better security, after the config file was generated, we will move the generated file ``~/u2f_keys`` to ``/etc/Nitrokey/`` and change the access permissions using these commands:
 
    .. code-block:: bash
 
@@ -128,7 +128,7 @@ Instructions
 
 6. **Modify the Pluggable Authentication Module** ``PAM``
 
-   The final step is configure the PAM module files under ``/etc/pam.d/``. In this guide we will modify the ``common-auth`` file as it handles the authentication settings which are common to all services, but other options are possible. You can modify the file with the following command:
+   The final step is to configure the PAM module files under ``/etc/pam.d/``. In this guide we will modify the ``common-auth`` file as it handles the authentication settings which are common to all services, but other options are possible. You can modify the file with the following command:
 
    .. code-block:: bash
 
@@ -241,7 +241,7 @@ In step 6 we have used the ``sufficient`` control flag to determine the behavior
 Configuring more users
 ----------------------
 
-After you tested the login with the original user and everything worked as expected
+After you tested the login with the original user and everything worked as expected,
 you can, if you wish to, configure u2f login for other users. To do so, ``pamu2fcfg`` takes
 the ``-u <username>`` option, the output can be appended to the ``u2f_keys`` file like this:
 
@@ -249,7 +249,7 @@ the ``-u <username>`` option, the output can be appended to the ``u2f_keys`` fil
 
    $ sudo pamu2fcfg -u <username >> /etc/Nitrokey/u2f_keys
 
-To add a backup key to this user, plug in your backup Nitrokey and do the same you did for the primary user:
+To add a backup Nitrokey to this user, plug in your backup Nitrokey and do the same you did for the primary user:
 
 .. code-block:: bash
 
