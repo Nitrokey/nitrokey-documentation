@@ -5,6 +5,16 @@ Desktop Login And Linux User Authentication
 
 .. contents:: :local:
 
+.. warning::
+
+   The following guide can potentially lock you out of your computer.
+   You should be aware of these risks, as it is recommended to first use
+   the instructions below on a secondary computer, or after a full
+   backup.
+
+   You might lose access to your data after configuring `PAM
+   modules <https://www.man7.org/linux/man-pages/man8/pam.8.html>`__.
+
 Introduction
 ------------
 
@@ -19,14 +29,10 @@ Requirements
 
 -  Ubuntu 24.04 with Gnome Display Manager (GDM).
 
--  A FIDO2 capable Nitrokey: see table ``Compatible Nitrokeys`` at the top of the page for reference.
-
 Instructions
 ------------
 
 1. **Create a backup user and give it root privileges**
-
-   You can do so by using these commands:
 
    .. rstcheck: ignore-next-code-block
    .. code-block:: bash
@@ -38,17 +44,6 @@ Instructions
    user session, you would still be able to login with the ``<backup_user>``, and
    proceed with the maintenance.
 
-   .. warning::
-
-      The following guide can potentially lock you out of your computer.
-      You should be aware of these risks, as it is recommended to first use
-      the instructions below on a secondary computer, or after a full
-      backup.
-
-      You might lose access to your data after configuring `PAM
-      modules <https://www.man7.org/linux/man-pages/man8/pam.8.html>`__.
-
-
 2. **Install** ``libpam-u2f``
 
    On Ubuntu 24.04 it is possible to download directly ``libpam-u2f`` from the official repos
@@ -58,8 +53,6 @@ Instructions
       $ sudo apt install libpam-u2f
 
    .. note::
-
-      Click for more options
 
       -  Alternatively you can build ``libpam-u2f`` from
          `Git <https://github.com/phoeagon/pam-u2f>`__.
@@ -86,26 +79,28 @@ Instructions
 
       $ mkdir ~/.config/Nitrokey
 
-   And plug your Nitrokey.
-
-   Once done with the preparation, we can start to configure the computer to use the Nitrokey for 2nd factor authentication at login and ``sudo``.
-
 4. **Generate the U2F config file**
 
-   To generate the configuration file we will use the ``pamu2fcfg`` utility that comes with the ``libpam-u2f``. For convenience, we will directly write the output of the utility to the ``u2f_keys`` file under ``.config/Nitrokey``. First plug your Nitrokey (if you did not already), and enter the following command:
+   To generate the configuration file we will use the ``pamu2fcfg`` utility. First plug your Nitrokey (if you did not already), and enter the following command:
 
    .. code-block:: bash
 
       $ pamu2fcfg > ~/.config/Nitrokey/u2f_keys
 
-   Once you run the command above, you will need to touch the device while it flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys`` in the following format:
+   Once you run the command above, you will need to touch the device while it flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys`` in the format:
 
    .. code-block:: bash
 
-      <username>:Zx...mw,04...0a
+      <username>:KeyHandle,PublicKey,flags
 
-   Note, the output will be much longer, but sensitive parts have been removed here. For better security, and once the config file generated, we will move the ``.config/Nitrokey`` directory under the ``etc/``
-   directory with this command:
+   This will look something like the following:
+   
+   .. code-block:: bash
+
+      nitrouser:fS6vQ9uWa0VizcczyZ/bvk5kcQJkIJOC/21/e7dXFe/fnONSL705EkeiUpZpL/3seAWL/qW4/mqb0/WtiZoP/NOLTRM4EEAg1ANLsfYgSzRd/AjsW3z8kJwgckbvwDUyB90ByR09XtBhuE41vMsEk6J+9CS0+ZuPSB0KXRG7z2yZpQLldjE/ijsdIdd8Ct2oXSiZ/zTb/t5kRafNJVkp=,Oo4U9XvIhI9r0WNnvoMwG5/pbgwYd4GMCYEinhWcsI2hKUebYj92JOxDsSa3zd2A9OB0ofXgB16FD2naev3YmLch==,es256,+presence
+
+   Note, this output was not generated directly by ``pamu2fcfg`` and contains no sensitive information. It is purely meant to show the expected format and length of the output.
+   For better security, after the config file generated, we will move the ``.config/Nitrokey`` directory under the ``etc/`` directory with this command:
 
    .. code-block:: bash
 
@@ -144,8 +139,7 @@ Instructions
 
    .. code-block:: bash
 
-      $ cd /etc/pam.d
-      $ sudo $editor common-auth
+      $ sudo $EDITOR /etc/pam.d/common-auth
 
    And add the following lines at the top of the file:
 
