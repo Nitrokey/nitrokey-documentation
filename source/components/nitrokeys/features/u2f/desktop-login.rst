@@ -79,7 +79,7 @@ Instructions
 
       $ pamu2fcfg > ~/u2f_keys
 
-   Once you run the command above, you will need to touch the device while it flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys`` in the format:
+   Once you run the command above, you will need to touch the device while it flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys`` file in the format:
 
    .. code-block:: bash
 
@@ -92,13 +92,6 @@ Instructions
       nitrouser:fS6vQ9uWa0VizcczyZ/bvk5kcQJkIJOC/21/e7dXFe/fnONSL705EkeiUpZpL/3seAWL/qW4/mqb0/WtiZoP/NOLTRM4EEAg1ANLsfYgSzRd/AjsW3z8kJwgckbvwDUyB90ByR09XtBhuE41vMsEk6J+9CS0+ZuPSB0KXRG7z2yZpQLldjE/ijsdIdd8Ct2oXSiZ/zTb/t5kRafNJVkp=,Oo4U9XvIhI9r0WNnvoMwG5/pbgwYd4GMCYEinhWcsI2hKUebYj92JOxDsSa3zd2A9OB0ofXgB16FD2naev3YmLch==,es256,+presence
 
    Note, this output was not generated directly by ``pamu2fcfg`` and contains no sensitive information. It is purely meant to show the expected format and length of the output.
-   For better security, after the config file generated, we will move the generated file ``~/u2f_keys`` directory under the ``/etc/Nitrokey/`` directory and change the access permissions with these commands:
-
-   .. code-block:: bash
-
-      $ sudo mkdir /etc/Nitrokey
-      $ sudo mv ~/u2f_keys /etc/Nitrokey/
-      $ sudo chmod 644 /etc/Nitrokey/u2f_keys
 
    .. tip::
 
@@ -121,13 +114,29 @@ Instructions
 
    This step is optional, however it is advised to have a backup Nitrokey in the case of loss, theft or destruction of your primary Nitrokey.
 
-   To set up a backup key, repeat the procedure above, and use ``pamu2fcfg -n``. This will omit the ``<username>`` field, and the output can be appended to the line with your ``<username>`` like this:
+   To set up a backup key, repeat the procedure above, and use ``pamu2fcfg -n`` like this:
 
    .. code-block:: bash
 
-      <username>:Zx...mw,04...0a:xB...fw,04...3f
+      $ pamu2fcfg -n >> ~/u2f_keys
 
-5. **Modify the Pluggable Authentication Module** ``PAM``
+   This will omit the ``<username>`` field, and the output is appended to the line with your ``<username>``, this will look something like this:
+   
+   .. code-block:: bash
+
+      <username>:Zx...mw,04...0a:xB...fw,es256,+presence:04...3f,es256,+presence
+   
+5. **Securing the config file**
+
+   For better security, after the config file generated, we will move the generated file ``~/u2f_keys`` directory to ``/etc/Nitrokey/`` and change the access permissions with these commands:
+
+   .. code-block:: bash
+
+      $ sudo mkdir /etc/Nitrokey
+      $ sudo mv ~/u2f_keys /etc/Nitrokey/
+      $ sudo chmod 644 /etc/Nitrokey/u2f_keys
+
+6. **Modify the Pluggable Authentication Module** ``PAM``
 
    The final step is configure the PAM module files under ``/etc/pam.d/``. In this guide we will modify the ``common-auth`` file as it handles the authentication settings which are common to all services, but other options are possible. You can modify the file with the following command:
 
@@ -201,7 +210,7 @@ There are several PAM modules files that can be modified according to your needs
 Control Flags
 ''''''''''''''''''''''''
 
-In step 5 we have used the ``sufficient`` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
+In step 6 we have used the ``sufficient`` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
 
 -  ``required``: This is the most critical flag. The module result must
    be successful for authentication to continue. This flag can lock you
