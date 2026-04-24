@@ -98,18 +98,8 @@ Instructions
       -  The file must be named ``u2f_keys``
 
       -  It is recommended to first test the instructions with a single
-         user. For this purpose the previous command takes the ``-u``
-         option, to specify a user, like in the example below:
-
-         .. rstcheck: ignore-next-code-block
-         .. code-block:: bash
-
-            $ pamu2fcfg -u <username> > ~/u2f_keys
-
-      -  For individual user configuration you should point to the home
-         directory in the next step, or not include the ``authfile`` option
-         in the PAM configuration.
-
+         user. To configure multiple users, look under `Configuring more users <#configuring-more-users>`_.
+         
 4. **Backup**
 
    This step is optional, however it is advised to have a backup Nitrokey in the case of loss, theft or destruction of your primary Nitrokey.
@@ -248,6 +238,24 @@ In step 6 we have used the ``sufficient`` control flag to determine the behavior
       if smart card login is enforced and you used the ``required`` or. 
       ``requisite`` flags. See Troubleshooting for further info.
 
+Configuring more users
+----------------------
+
+After you tested the login with the original user and everything worked as expected
+you can, if you wish to, configure u2f login for other users. To do so, ``pamu2fcfg`` takes
+the ``-u <username>`` option, the output can be appended to the ``u2f_keys`` file like this:
+
+.. code-block:: bash
+
+   $ sudo pamu2fcfg -u <username >> /etc/Nitrokey/u2f_keys
+
+To add a backup key to this user, plug in your backup Nitrokey and do the same you did for the primary user:
+
+.. code-block:: bash
+
+   $ sudo pamu2fcfg -n >> /etc/Nitrokey/u2f_keys
+
+After that repeat this process for all the users you want to.
 
 Troubleshooting
 ---------------
