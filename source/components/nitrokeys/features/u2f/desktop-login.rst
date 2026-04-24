@@ -71,21 +71,13 @@ Instructions
 
          /lib/x86_64-linux-gnu/security/pam_u2f.so: \ ELF 64-bit LSB shared object, x86-64, version 1 (SYSV),\ dynamically linked, BuildID[sha1]=1d55e1b11a97be2038c6a139579f6c0d91caedb1, stripped
 
-3. **Prepare the Directory**
-
-   Create ``.config/Nitrokey/`` under your home directory
-
-   .. code-block:: bash
-
-      $ mkdir ~/.config/Nitrokey
-
-4. **Generate the U2F config file**
+3. **Generate the U2F config file**
 
    To generate the configuration file we will use the ``pamu2fcfg`` utility. First plug your Nitrokey (if you did not already), and enter the following command:
 
    .. code-block:: bash
 
-      $ pamu2fcfg > ~/.config/Nitrokey/u2f_keys
+      $ pamu2fcfg > ~/u2f_keys
 
    Once you run the command above, you will need to touch the device while it flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys`` in the format:
 
@@ -100,15 +92,17 @@ Instructions
       nitrouser:fS6vQ9uWa0VizcczyZ/bvk5kcQJkIJOC/21/e7dXFe/fnONSL705EkeiUpZpL/3seAWL/qW4/mqb0/WtiZoP/NOLTRM4EEAg1ANLsfYgSzRd/AjsW3z8kJwgckbvwDUyB90ByR09XtBhuE41vMsEk6J+9CS0+ZuPSB0KXRG7z2yZpQLldjE/ijsdIdd8Ct2oXSiZ/zTb/t5kRafNJVkp=,Oo4U9XvIhI9r0WNnvoMwG5/pbgwYd4GMCYEinhWcsI2hKUebYj92JOxDsSa3zd2A9OB0ofXgB16FD2naev3YmLch==,es256,+presence
 
    Note, this output was not generated directly by ``pamu2fcfg`` and contains no sensitive information. It is purely meant to show the expected format and length of the output.
-   For better security, after the config file generated, we will move the ``.config/Nitrokey`` directory under the ``etc/`` directory with this command:
+   For better security, after the config file generated, we will move the generated file ``~/u2f_keys`` directory under the ``/etc/Nitrokey/`` directory and change the access permissions with these commands:
 
    .. code-block:: bash
 
-      $ sudo mv ~/.config/Nitrokey /etc
+      $ sudo mkdir /etc/Nitrokey
+      $ sudo mv ~/u2f_keys /etc/Nitrokey/
+      $ sudo chmod 644 /etc/Nitrokey/u2f_keys
 
    .. tip::
 
-      -  The file under ``.config/Nitrokey`` must be named ``u2f_keys``
+      -  The file must be named ``u2f_keys``
 
       -  It is recommended to first test the instructions with a single
          user. For this purpose the previous command takes the ``-u``
@@ -117,13 +111,13 @@ Instructions
          .. rstcheck: ignore-next-code-block
          .. code-block:: bash
 
-            $ pamu2fcfg -u <username> > ~/.config/Nitrokey/u2f_keys
+            $ pamu2fcfg -u <username> > ~/u2f_keys
 
       -  For individual user configuration you should point to the home
          directory in the next step, or not include the ``authfile`` option
          in the PAM configuration.
 
-5. **Backup**
+4. **Backup**
 
    This step is optional, however it is advised to have a backup Nitrokey in the case of loss, theft or destruction of your primary Nitrokey.
 
@@ -133,7 +127,7 @@ Instructions
 
       <username>:Zx...mw,04...0a:xB...fw,04...3f
 
-6. **Modify the Pluggable Authentication Module** ``PAM``
+5. **Modify the Pluggable Authentication Module** ``PAM``
 
    The final step is configure the PAM module files under ``/etc/pam.d/``. In this guide we will modify the ``common-auth`` file as it handles the authentication settings which are common to all services, but other options are possible. You can modify the file with the following command:
 
@@ -207,7 +201,7 @@ There are several PAM modules files that can be modified according to your needs
 Control Flags
 ''''''''''''''''''''''''
 
-In step 6 we have used the ``sufficient`` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
+In step 5 we have used the ``sufficient`` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
 
 -  ``required``: This is the most critical flag. The module result must
    be successful for authentication to continue. This flag can lock you
