@@ -42,3 +42,4 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Getting Star
    ejbca.rst
    knotdns.rst
    container/index.rst
+   pkiproxy-windows-ca.rst
