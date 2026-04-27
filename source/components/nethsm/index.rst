@@ -41,4 +41,5 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Getting Star
    opendnssec.rst
    ejbca.rst
    knotdns.rst
+   pkiproxy.rst
    container/index.rst
