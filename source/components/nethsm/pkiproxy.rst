@@ -4,8 +4,7 @@ Windows KSP and PKCS#11 with PKI Proxy
 This document explains the usage of PKI Proxy with NetHSM.
 PKI Proxy enables the usage of NetHSM through the native Microsoft Windows APIs.
 For this purpose, PKI Proxy includes a KSP (Key Storage Provider) that enables its use via the CNG (Cryptography API: Next Generation) interface.
-Additionally it provides PKCS#11 access to the NetHSM, but this should only be used if your setup requires it.
-Possible requirements are that you need the additional authentication features of PKI Proxy, or you don't want to expose the NetHSM to clients directly, i.e. PKI Proxy acts as a gateway.
+Additionally it provides PKCS#11 access to the NetHSM, but this should only be used if your setup requires it for example if you need the additional authentication features of PKI Proxy, or you want to use PKI Proxy as a gateway to avoid exposing the NetHSM to clients directly.
 In all other cases use the `NetHSM PKCS#11 driver <pkcs11-setup.html>`__ directly.
 
 The deployment of NetHSM with PKI Proxy looks like this.
@@ -18,7 +17,7 @@ The NetHSM provides the REST API which is used by the NetHSM PKCS#11 driver.
 PKI Proxy uses this driver to connect to the NetHSM and access its keys and certificates.
 Clients to the PKI Proxy use the REST API of the PKI Proxy server to access the keys and certificates.
 Applications on the client can either use the native Windows API or a PKCS#11 driver.
-The communication between the NetHSM and PKI Proxy server and PKI Proxy clients is encrypted.
+The communication between the NetHSM and PKI Proxy server and PKI Proxy clients is encrypted. PKI Proxy server and client can be executed on the same computer.
 
 Possible use cases of this setup are:
 
