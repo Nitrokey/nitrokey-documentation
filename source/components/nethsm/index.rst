@@ -43,3 +43,4 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Getting Star
    knotdns.rst
    pkiproxy.rst
    container/index.rst
+   pkiproxy-windows-ca.rst
