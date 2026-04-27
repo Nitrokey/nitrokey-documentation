@@ -5,10 +5,20 @@ Desktop Login And Linux User Authentication
 
 .. contents:: :local:
 
+.. warning::
+
+   The following guide can potentially lock you out of your computer.
+   You should be aware of these risks, as it is recommended to first use
+   the instructions below on a secondary computer, or after a full
+   backup.
+
+   You might lose access to your data after configuring `PAM
+   modules <https://www.man7.org/linux/man-pages/man8/pam.8.html>`__.
+
 Introduction
 ------------
 
-This guide will walk you through the configuration of Linux to use FIDO Universal 2nd Factor, i.e. FIDO U2F with ``libpam-u2f`` and Nitrokey FIDO2.
+This guide will walk you through the configuration of Linux to use FIDO Universal 2nd Factor, i.e. FIDO U2F with ``libpam-u2f`` and compatible Nitrokeys.
 
 If you want to login to you computer using `Nitrokey Pro
 2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ `Nitrokey Storage
@@ -17,49 +27,12 @@ If you want to login to you computer using `Nitrokey Pro
 Requirements
 ------------
 
--  Ubuntu 20.04 with Gnome Display Manager.
-
--  A FIDO2 capable Nitrokey: see table ``Compatible Nitrokeys`` at the top of the page for reference.
+-  Ubuntu 24.04 with Gnome Display Manager (GDM).
 
 Instructions
 ------------
 
-GUI Method
-''''''''''
-
-1. **In the lower left corner click on** ``Show Applications`` **and type settings in the search bar as following:**
-
-   .. figure:: images/desktop-login/fidou2f-1.png
-      :alt: img1
-
-2. **Scroll down in the right bar to** ``Users``
-
-   .. figure:: images/desktop-login/fidou2f-2.png
-      :alt: img2
-
-3. **In the left corner click on** ``Unlock`` **and that would prompt for your
-   password**
-
-   .. figure:: images/desktop-login/fidou2f-3.png
-      :alt: img3
-
-4. **Select** ``Administrator`` **and enter the user name and password of your
-   choice**
-
-   .. figure:: images/desktop-login/fidou2f-4.png
-      :alt: img4
-
-5. **Once you finish Step 4 you should be done**
-
-   .. figure:: images/desktop-login/fidou2f-5.png
-      :alt: img5
-
-CLI Method
-''''''''''
-
 1. **Create a backup user and give it root privileges**
-
-   You can do so by using these commands:
 
    .. rstcheck: ignore-next-code-block
    .. code-block:: bash
@@ -71,43 +44,15 @@ CLI Method
    user session, you would still be able to login with the ``<backup_user>``, and
    proceed with the maintenance.
 
-   .. warning::
+2. **Install** ``libpam-u2f``
 
-      The following guide can potentially lock you out of your computer.
-      You should be aware of these risks, as it is recommended to first use
-      the instructions below on a secondary computer, or after a full
-      backup.
-
-      You might lose access to your data after configuring `PAM
-      modules <https://www.man7.org/linux/man-pages/man8/pam.8.html>`__.
-
-
-2. **Set up the** ``rules`` **to recognize the Nitrokey FIDO2**
-
-   Under ``/etc/udev/rules.d`` download ``41-nitrokey.rules``
-
-   .. code-block:: bash
-
-      $ cd /etc/udev/rules.d/
-      $ sudo wget https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/main/41-nitrokey.rules
-
-   And restart ``udev`` service
-
-   .. code-block:: bash
-
-      $ sudo systemctl restart udev
-
-3. **Install** ``libpam-u2f``
-
-   On Ubuntu 20.04 it is possible to download directly ``libpam-u2f`` from the official repos
+   On Ubuntu 24.04 it is possible to download directly ``libpam-u2f`` from the official repos
 
    .. code-block:: bash
 
       $ sudo apt install libpam-u2f
 
    .. note::
-
-      Click for more options
 
       -  Alternatively you can build ``libpam-u2f`` from
          `Git <https://github.com/phoeagon/pam-u2f>`__.
@@ -126,81 +71,75 @@ CLI Method
 
          /lib/x86_64-linux-gnu/security/pam_u2f.so: \ ELF 64-bit LSB shared object, x86-64, version 1 (SYSV),\ dynamically linked, BuildID[sha1]=1d55e1b11a97be2038c6a139579f6c0d91caedb1, stripped
 
-4. **Prepare the Directory**
+3. **Generate the U2F config file**
 
-   Create ``.config/Nitrokey/`` under your home directory
-
-   .. code-block:: bash
-
-      $ mkdir ~/.config/Nitrokey
-
-   And plug your Nitrokey FIDO2.
-
-   Once done with the preparation, we can start to configure the computer to use the Nitrokey FIDO2 for 2nd factor authentication at login and ``sudo``.
-
-5. **Generate the U2F config file**
-
-   To generate the configuration file we will use the ``pamu2fcfg`` utility that comes with the ``libpam-u2f``. For convenience, we will directly write the output of the utility to the ``u2f_keys`` file under ``.config/Nitrokey``. First plug your Nitrokey FIDO2 (if you did not already), and enter the following command:
+   To generate the configuration file we will use the ``pamu2fcfg`` utility. First plug your Nitrokey (if you did not already), and enter the following command:
 
    .. code-block:: bash
 
-      $ pamu2fcfg > ~/.config/Nitrokey/u2f_keys
+      $ pamu2fcfg > ~/u2f_keys
 
-   Once you run the command above, you will need to touch the device while it flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys`` in the following format:
-
-   .. code-block:: bash
-
-      <username>:Zx...mw,04...0a
-
-   Note, the output will be much longer, but sensitive parts have been removed here. For better security, and once the config file generated, we will move the ``.config/Nitrokey`` directory under the ``etc/``
-   directory with this command:
+   Once you run the command above, you will need to touch the device while it flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys`` file in the format:
 
    .. code-block:: bash
 
-      $ sudo mv ~/.config/Nitrokey /etc
+      <username>:KeyHandle,PublicKey,flags
+
+   This will look something like the following:
+   
+   .. code-block:: bash
+
+      nitrouser:fS6vQ9uWa0VizcczyZ/bvk5kcQJkIJOC/21/e7dXFe/fnONSL705EkeiUpZpL/3seAWL/qW4/mqb0/WtiZoP/NOLTRM4EEAg1ANLsfYgSzRd/AjsW3z8kJwgckbvwDUyB90ByR09XtBhuE41vMsEk6J+9CS0+ZuPSB0KXRG7z2yZpQLldjE/ijsdIdd8Ct2oXSiZ/zTb/t5kRafNJVkp=,Oo4U9XvIhI9r0WNnvoMwG5/pbgwYd4GMCYEinhWcsI2hKUebYj92JOxDsSa3zd2A9OB0ofXgB16FD2naev3YmLch==,es256,+presence
+
+   Note, this output was not generated directly by ``pamu2fcfg`` and contains no sensitive information. It is purely meant to show the expected format and length of the output.
 
    .. tip::
 
-      -  The file under ``.config/Nitrokey`` must be named ``u2f_keys``
+      -  The file must be named ``u2f_keys``
 
       -  It is recommended to first test the instructions with a single
-         user. For this purpose the previous command takes the ``-u``
-         option, to specify a user, like in the example below:
+         user. To configure multiple users, look under `Configuring more users <#configuring-more-users>`_.
+         
+4. **Backup**
 
-         .. rstcheck: ignore-next-code-block
-         .. code-block:: bash
+   This step is optional, however it is advised to have a backup Nitrokey in the case of loss, theft or destruction of your primary Nitrokey.
 
-            $ pamu2fcfg -u <username> > ~/.config/Nitrokey/u2f_keys
-
-      -  For individual user configuration you should point to the home
-         directory in the next step, or not include the ``authfile`` option
-         in the PAM configuration.
-
-6. **Backup**
-
-   This step is optional, however it is advised to have a backup Nitrokey in the case of loss, theft or destruction of your Nitrokey FIDO.
-
-   To set up a backup key, repeat the procedure above, and use ``pamu2fcfg -n``. This will omit the ``<username>`` field, and the output can be appended to the line with your ``<username>`` like this:
+   To set up a backup key, repeat the procedure above, and use ``pamu2fcfg -n`` like this:
 
    .. code-block:: bash
 
-      <username>:Zx...mw,04...0a:xB...fw,04...3f
+      $ pamu2fcfg -n >> ~/u2f_keys
 
-7. **Modify the Pluggable Authentication Module** ``PAM``
+   This will omit the ``<username>`` field, and the output is appended to the line with your ``<username>``, this will look something like this:
+   
+   .. code-block:: bash
 
-   The final step is configure the PAM module files under ``/etc/pam.d/``. In this guide we will modify the ``common-auth`` file as it handles the authentication settings which are common to all services, but other options are possible. You can modify the file with the following command:
+      <username>:Zx...mw,04...0a:xB...fw,es256,+presence:04...3f,es256,+presence
+   
+5. **Securing the config file**
+
+   For better security, after the config file was generated, we will move the generated file ``~/u2f_keys`` to ``/etc/Nitrokey/`` and change the access permissions using these commands:
 
    .. code-block:: bash
 
-      $ cd /etc/pam.d
-      $ sudo $editor common-auth
+      $ sudo mkdir /etc/Nitrokey
+      $ sudo mv ~/u2f_keys /etc/Nitrokey/
+      $ sudo chmod 644 /etc/Nitrokey/u2f_keys
+
+6. **Modify the Pluggable Authentication Module** ``PAM``
+
+   The final step is to configure the PAM module files under ``/etc/pam.d/``. In this guide we will modify the ``common-auth`` file as it handles the authentication settings which are common to all services, but other options are possible. You can modify the file with the following command:
+
+   .. code-block:: bash
+
+      $ sudo $EDITOR /etc/pam.d/common-auth
 
    And add the following lines at the top of the file:
 
    .. code-block:: bash
 
-      #Nitrokey FIDO2 config
-      auth    sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue [cue_prompt=Please touch the device.] prompt nouserok
+      #Nitrokey config
+      auth    sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue [cue_prompt=Please touch the device.] prompt
 
    .. tip::
 
@@ -216,10 +155,6 @@ CLI Method
          option will make ``pam_u2f`` print ``Please touch the device.``
          message. You can change the message in ``[cue_prompt=Please touch the device.]``.
 
-      -  `nouserok` will ensure that you can still login using the username and
-         password, you might want to remove this at some point once the setup
-         is working and you don't want regular username & password based logins.
-
    Once we modified the ``common-auth``, we can save and exit the file.
 
    You can test the configuration by typing ``sudo ls`` in the terminal. You should be prompted the message ``Please touch the device.`` and have a similar output on the terminal:
@@ -229,7 +164,7 @@ CLI Method
       nitrouser@nitrouser:~$ sudo ls
       [sudo] password for nitrouser:  Please touch the device.
 
-   You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/replug yout Nitrokey FIDO2 and type your password:
+   You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/replug yout Nitrokey and type your password:
 
    .. figure:: images/desktop-login/u2f-fido-pam-2.png
       :alt: img6
@@ -237,11 +172,11 @@ CLI Method
 Usage
 -----
 
-After the PAM module modification, you will be able to test your configuration right away, but it is recommended to reboot your computer, and unplug/replug the Nitrokey FIDO2.
+After the PAM module modification, you will be able to test your configuration right away, but it is recommended to reboot your computer, and unplug/replug the Nitrokey.
 
 Once you have properly tested the instructions in this guide (and set up a backup), it is recommended to use either the ``required`` or the ``requisite`` control flag instead of ``sufficient``.
 
-The flags ``required`` and ``requisite`` provide a tighter access control, and will make the Nitrokey FIDO2 necessary to login, and/or use the configured service.
+The flags ``required`` and ``requisite`` provide a tighter access control, and will make the Nitrokey necessary to login, and/or use the configured service.
 
 If you need more information about Control Flags in the ``PAM``
 configuration line, you may see the last section of this guide to understand the difference, and the implications of using each of them.
@@ -252,7 +187,7 @@ PAM Modules
 There are several PAM modules files that can be modified according to your needs:
 
 -  By modifying ``/etc/pam.d/common-auth`` file, you will be able to use
-   you Nitrokey FIDO for 2nd factor authentication for graphic login and
+   you Nitrokey for 2nd factor authentication for graphic login and
    ``sudo``. Note: ``common-auth`` should be modified by adding the
    additional configuration line at the end of the file.
 
@@ -265,7 +200,7 @@ There are several PAM modules files that can be modified according to your needs
 Control Flags
 ''''''''''''''''''''''''
 
-In step 7 we have used the ``sufficient`` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
+In step 6 we have used the ``sufficient`` control flag to determine the behavior of the PAM module when the Nitrokey is plugged or not. However it is possible to change this behavior by using the following control flags:
 
 -  ``required``: This is the most critical flag. The module result must
    be successful for authentication to continue. This flag can lock you
@@ -289,7 +224,7 @@ In step 7 we have used the ``sufficient`` control flag to determine the behavior
 
    -  If ``required`` or ``requisite`` is set, the failure of U2F
       authentication will cause a failure of the overall authentication.
-      Failure will occur when the configured Nitrokey FIDO is not
+      Failure will occur when the configured Nitrokey is not
       plugged, lost or destroyed.
 
    -  You will lose access to your computer if you mis-configured the
@@ -298,3 +233,41 @@ In step 7 we have used the ``sufficient`` control flag to determine the behavior
    -  You will also lose the ability to use ``sudo`` if you set up
       Central Authentication Mapping *and* used the ``required`` or
       ``requisite`` flags.
+
+   -  You might also lose the ability to log in using Gnome Display manager
+      if smart card login is enforced and you used the ``required`` or. 
+      ``requisite`` flags. See Troubleshooting for further info.
+
+Configuring more users
+----------------------
+
+After you tested the login with the original user and everything worked as expected,
+you can, if you wish to, configure u2f login for other users. To do so, ``pamu2fcfg`` takes
+the ``-u <username>`` option, the output can be appended to the ``u2f_keys`` file like this:
+
+.. code-block:: bash
+
+   $ sudo pamu2fcfg -u <username >> /etc/Nitrokey/u2f_keys
+
+To add a backup Nitrokey to this user, plug in your backup Nitrokey and do the same you did for the primary user:
+
+.. code-block:: bash
+
+   $ sudo pamu2fcfg -n >> /etc/Nitrokey/u2f_keys
+
+After that repeat this process for all the users you want to.
+
+Troubleshooting
+---------------
+
+Issues logging into user account using GDM
+''''''''''''''''''''''''''''''''''''''''''
+
+In some cases, for example if you have `opencs-pkcs11` installed, Gnome Display Manager (GDM) can
+default to enforcing smart card login as soon as any smart card (like your Nitrokey) is plugged in, even if no smart card has ever been configured. 
+This can prevent you from logging in to your user account using u2f. If you have set the ``sufficient`` control flag,
+unplug all smart cards and log in using your password. To turn off smart card enforcing run the following command:
+
+.. code-block:: bash
+
+   $ sudo -u gdm env -u XDG_RUNTIME_DIR -u DISPLAY DCONF_PROFILE=gdm dbus-run-session gsettings set org.gnome.login-screen enable-smartcard-authentication false
