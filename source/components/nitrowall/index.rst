@@ -25,7 +25,7 @@ Getting Started
 
 7. Start the system wizard via the menu of the left-hand side: system →  system wizard → setup. The wizard is going through the configuration with you step-by-step.
 
-   .. figure:: ./images/nitrowall-index/nitrowall_back.jpg
+   .. figure:: ./images/nitrowall-index/nitrowall_back.png
       :alt: NitroWall backside
 
    NitroWall back side
