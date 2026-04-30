@@ -54,7 +54,7 @@ Nitrokey 3 FAQ
 
    With the OpenPGP Card feature you can store three key pairs. All keys use the same
    identity but are used for different purposes: authentication, encryption and signing.
-   For FIDO2 depending on the other features usage, it can store up to 100 passkeys for the Nitrokey 3A Mini and up to 35 passkeys for the Nitrokey 3 NFC, also known as discoverable credentials and an unlimited number of non-discoverable credentials.
+   For FIDO2 depending on the other features usage, it can store up to 100 passkeys for the Nitrokey 3A Mini and up to 30 passkeys for the Nitrokey 3 NFC **(this is an estimation and this may vary, some passkeys can take a different amount of space)** , also known as discoverable credentials and an unlimited number of non-discoverable credentials.
    The PIV feature can store up to 24 key pairs.
 
 .. faq:: How many password can my Nitrokey 3 store?
