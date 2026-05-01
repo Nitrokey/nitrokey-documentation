@@ -1,6 +1,10 @@
 Apache
 ======
 
+.. spelling:word-list::
+
+   libnethsm_pkcs11
+
 You can configure `Apache httpd <https://httpd.apache.org/>`__ to use NetHSM via the OpenSSL engine which then uses NetHSM's PKCS#11 module.
 
 The certificate file has to be on the disk but the private key can be used from the NetHSM.

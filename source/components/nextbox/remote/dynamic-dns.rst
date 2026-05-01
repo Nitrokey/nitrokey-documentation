@@ -33,7 +33,7 @@ these steps to configure your NextBox using the Guided Dynamic DNS method:
    allow you to login into your account.
 
 * In step two the just acquired secret token shall be inserted into the input
-  field to complete your guided dynamic dns configuration.
+  field to complete your guided dynamic DNS configuration.
 
 .. hint:: Your token will only be presented once to you (after the verification
    process).  If you need a new token, you need to create a new one inside the
@@ -63,7 +63,7 @@ The one used for the guided DNS configuration uses the following template:
     password='[token]'
     [domain]
 
-* Once you actiavted this configuration, you can *Continue to TLS activation* -
+* Once you activated this configuration, you can *Continue to TLS activation* -
   see below
 
 
@@ -74,7 +74,7 @@ On this page first wait for the status-bars to settle and mainly ensure that
 *reachability* of your NextBox is tested successfully. If this is the case,
 just click **Enable TLS** to acquire your TLS certificate.
 
-.. note:: If the reachibility test fails, make sure your :doc:`port forwarding <port-forwarding>` is configured properly.
+.. note:: If the reachability test fails, make sure your :doc:`port forwarding <port-forwarding>` is configured properly.
 
 
 

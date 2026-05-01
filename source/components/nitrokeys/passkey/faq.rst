@@ -7,7 +7,7 @@ Nitrokey Passkey FAQ
 
 .. faq:: What can I use the Nitrokey Passkey for?
 
-   Second or first factor authentication for services which support Webauthn/Passkey/FIDO2/FIDO U2F. 
+   Second or first factor authentication for services which support WebAuthn/Passkey/FIDO2/FIDO U2F. 
    See the `overview <https://www.nitrokey.com/products/nitrokeys>`_  of supported use cases.
 
 .. faq:: How can I check if my Nitrokey Passkey is working?

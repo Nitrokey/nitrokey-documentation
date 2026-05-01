@@ -428,13 +428,13 @@ Set the network configuration as follows.
 
       **Optional Options**
 
-      +---------------------------+-----------------------------------------------+
-      | Option                    | Description                                   |
-      +===========================+===============================================+
-      | ``--ipv6-cidr`` ``TEXT``  | The IPv6 address in CIDR notation (optional)  |
-      +---------------------------+-----------------------------------------------+
-      | ``--ipv6-gateway`` ``TEXT`` | The IPv6 gateway address (optional)          |
-      +---------------------------+-----------------------------------------------+
+      +-----------------------------+-----------------------------------------------+
+      | Option                      | Description                                   |
+      +=============================+===============================================+
+      | ``--ipv6-cidr`` ``TEXT``    | The IPv6 address in CIDR notation (optional)  |
+      +-----------------------------+-----------------------------------------------+
+      | ``--ipv6-gateway`` ``TEXT`` | The IPv6 gateway address (optional)           |
+      +-----------------------------+-----------------------------------------------+
 
       **Example**
 
@@ -1036,7 +1036,7 @@ Each user account configured on the NetHSM has one of the following *Roles* assi
 |                 | required to initiate a system backup only.                  |
 +-----------------+-------------------------------------------------------------+
 
-See `Namespaces <administration.html#namespaces>`__ and `Tags <administration.html#tags-for-users>`__ for more fine-grained access restricions.
+See `Namespaces <administration.html#namespaces>`__ and `Tags <administration.html#tags-for-users>`__ for more fine-grained access restrictions.
 
 .. note::
    In a future release, additional *Roles* may be introduced.

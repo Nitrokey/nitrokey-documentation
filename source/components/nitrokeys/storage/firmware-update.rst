@@ -1,6 +1,9 @@
 Firmware Update
 ===============
 
+.. spelling:word-list::
+   dfu
+
 .. contents:: :local:
 
 .. warning::

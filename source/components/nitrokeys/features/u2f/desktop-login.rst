@@ -229,7 +229,7 @@ CLI Method
       nitrouser@nitrouser:~$ sudo ls
       [sudo] password for nitrouser:  Please touch the device.
 
-   You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/replug yout Nitrokey FIDO2 and type your password:
+   You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/re-plug your Nitrokey FIDO2 and type your password:
 
    .. figure:: images/desktop-login/u2f-fido-pam-2.png
       :alt: img6
@@ -237,7 +237,7 @@ CLI Method
 Usage
 -----
 
-After the PAM module modification, you will be able to test your configuration right away, but it is recommended to reboot your computer, and unplug/replug the Nitrokey FIDO2.
+After the PAM module modification, you will be able to test your configuration right away, but it is recommended to reboot your computer, and unplug/re-plug the Nitrokey FIDO2.
 
 Once you have properly tested the instructions in this guide (and set up a backup), it is recommended to use either the ``required`` or the ``requisite`` control flag instead of ``sufficient``.
 
@@ -292,7 +292,7 @@ In step 7 we have used the ``sufficient`` control flag to determine the behavior
       Failure will occur when the configured Nitrokey FIDO is not
       plugged, lost or destroyed.
 
-   -  You will lose access to your computer if you mis-configured the
+   -  You will lose access to your computer if you misconfigured the
       PAM module *and* used the ``required`` or ``requisite`` flags.
 
    -  You will also lose the ability to use ``sudo`` if you set up

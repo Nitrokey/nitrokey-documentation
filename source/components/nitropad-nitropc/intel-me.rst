@@ -1,10 +1,16 @@
 Disabling Intel Management Engine
 ---------------------------------
 
-.. Note::
-    With Heads Intel ME is already disabled and also NitroPC 1 & 2 with Tianocore.
+.. spelling:word-list::
+   Dasharo
+   TianoCore
+   MEI
+   HECI
 
-By default Intel ME is not disabled with Dasharo Tianocore UEFI.
+.. Note::
+    With Heads Intel ME is already disabled and also NitroPC 1 & 2 with TianoCore.
+
+By default Intel ME is not disabled with Dasharo TianoCore UEFI.
 
 In order to disable it follow theses steps:
 
@@ -14,7 +20,7 @@ In order to disable it follow theses steps:
 
 3. Then "Intel Management Engine Options".
 
-4. From this menu you will have two diffrent ways to disable Intel ME:
+4. From this menu you will have two different ways to disable Intel ME:
 
    * Disabled (Soft) - when set, causes the Dasharo firmware to send ME_DISABLE command via MEI/HECI. MEI/HECI interface is being hidden from OS when ME is disabled.
    * Disabled (HAP) - when set, causes the Dasharo firmware to set HAP bit in the flash descriptor. MEI/HECI interface is being hidden from OS when ME is disabled. HAP method is much more efficient as it halts the ME firmware execution even earlier than Soft Disable described above.

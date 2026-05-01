@@ -21,6 +21,6 @@ After installing the rules, you need to reload them::
     sudo udevadm control --reload-rules && sudo udevadm trigger
 
 If you still cannot access your device, try again after rebooting your system.
-If you encouter issues, look at this `github comment <https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__
+If you encounter issues, look at this `github comment <https://github.com/Nitrokey/pynitrokey/issues/167#issuecomment-1024921046>`__
 for some debugging hints.
 

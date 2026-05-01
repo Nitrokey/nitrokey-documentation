@@ -48,7 +48,7 @@ features are realized.
      - no
 
    * - `PIV`_
-     - Asymmetric cryptography; more business focussed smartcard realization
+     - Asymmetric cryptography; more business-focussed smartcard realization
      - USB
      - yes
 

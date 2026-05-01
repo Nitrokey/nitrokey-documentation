@@ -1,6 +1,11 @@
 Importing Keys And Certificates
 ===============================
 
+.. spelling:word-list::
+   DKEK
+   SCSH
+   Keymanager
+
 .. product-table:: hsm
 
 .. contents:: :local:

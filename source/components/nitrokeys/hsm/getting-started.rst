@@ -1,6 +1,9 @@
 Getting Started
 ===============
 
+.. spelling:word-list::
+   hsmwiz
+
 .. contents:: :local:
 
 
@@ -8,7 +11,7 @@ Getting Started
     .. tabs::
         .. tab:: Linux
             Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. You need
-            at least version 0.19. You can find recent builds for debian-based
+            at least version 0.19. You can find recent builds for Debian-based
             systems like Ubuntu
             `here <https://github.com/Nitrokey/opensc-build>`__ if your system
             does not have the newest version of OpenSC. Alternatively, install

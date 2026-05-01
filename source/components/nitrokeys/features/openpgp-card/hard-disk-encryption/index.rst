@@ -1,6 +1,10 @@
 Hard Disk Encryption
 ====================
 
+.. spelling:word-list::
+   VeraCrypt
+   TrueCrypt
+
 .. product-table:: nk3 hsm pro start storage
 
 .. contents:: :local:
@@ -68,7 +72,7 @@ Storage Encryption on GNU+Linux with EncFS
    default PINs and generated or imported keys with
    GnuPG <https://www.nitrokey.com/start>`__.
 
-`EncFS <https://github.com/vgough/encfs>`__ is an easy to utlity for encrypted file systems and it is based on `FUSE <https://de.wikipedia.org/wiki/Filesystem_in_Userspace>`__. You may follow these steps to use it with very long passwords and Nitrokey Pro
+`EncFS <https://github.com/vgough/encfs>`__ is an easy to utility for encrypted file systems and it is based on `FUSE <https://de.wikipedia.org/wiki/Filesystem_in_Userspace>`__. You may follow these steps to use it with very long passwords and Nitrokey Pro
 2:
 
 Initialization
@@ -150,7 +154,7 @@ See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
         # Warning: This will delete existing keys on your Nitrokey!
         $ pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 --format pkcs12 --auth-id 3 --verify-pin
 
-2. Create the file ~/.ecryptfsrc.pkcs11:
+2. Create the file ``~/.ecryptfsrc.pkcs11``:
                                         
 
     .. code-block:: bash

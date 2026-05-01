@@ -12,7 +12,7 @@ Login With EIDAuthenticate on Stand Alone Windows Computers
     	
 		The free community edition is disabled. You may test the enterprise edition instead.
 
-3. Start EIDConfigurationWizard.exe
+3. Start ``EIDConfigurationWizard.exe``
 4. Select “Associate a new certificate”
 
 	.. figure:: images/eidauthenticate/1.png
@@ -30,8 +30,8 @@ Login With EIDAuthenticate on Stand Alone Windows Computers
 
 6. Enter the user PIN which you defined previously in step 4. Wait a
    moment until a new keypair and certificate are generated. In case
-   your Nitrokey is not detected you may want to execute “certutil
-   -scinfo” for troubleshooting.
+   your Nitrokey is not detected you may want to execute ``certutil -scinfo``
+   for troubleshooting.
 
 	.. figure:: images/eidauthenticate/3.png
 		:alt: img3

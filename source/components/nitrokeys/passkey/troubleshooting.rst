@@ -19,7 +19,7 @@ macOS
 -----
 
 To check whether the Nitrokey Passkey is correctly recognized, open the System Report and check for the Nitrokey Passkey appearing as a USB device.
-Otherwise you can use the commandline with the following command to check if your system recognizes the Nitrokey Passkey. 
+Otherwise you can run the following command in the terminal to check if your system recognizes the Nitrokey Passkey. 
 
 .. code-block:: shell-session
 

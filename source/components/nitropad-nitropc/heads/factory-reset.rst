@@ -1,6 +1,11 @@
 Factory Reset
 =============
 
+.. spelling:word-list::
+   sdb
+   sdc
+   sdd
+
 .. contents:: :local:
 
 Reasons for resetting to factory settings

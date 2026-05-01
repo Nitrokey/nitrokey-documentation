@@ -207,7 +207,7 @@ Re-run setup above.
 Unlocking LUKS2 with X509 certificate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-SystemD supports unlocking a LUKS2 partition using a X509 certificate, find a
+systemd supports unlocking a LUKS2 partition using a X509 certificate, find a
 great blog entry on how to realize this at the `Personal blog of Vladimir Timofeenko`_ 
 
 

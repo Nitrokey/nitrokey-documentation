@@ -32,12 +32,12 @@ By default the module searches for configuration files in:
 
 If multiple files are present the configurations will be merged so that the slots of all the config files will be used by the module.
 
-You can manually set the config file location (only this one will be read) with the env variable ``P11NETHSM_CONFIG_FILE`` (e.g. ``P11NETHSM_CONFIG_FILE=./p11nethsm.conf``).
+You can manually set the config file location (only this one will be read) with the environment variable ``P11NETHSM_CONFIG_FILE`` (e.g. ``P11NETHSM_CONFIG_FILE=./p11nethsm.conf``).
 
 Configuration File Format
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The configuration is yaml-formatted:
+The configuration is YAML-formatted:
 
 .. tabs::
   .. tab:: All platforms
@@ -196,7 +196,7 @@ The password can be provided by multiple means:
 - In plain text in the configuration ``password: "mypassword"``
 - In an environment variable read by the module with the ``env:`` prefix: ``env:ENV_STORING_THE_PASSWORD``
 - Via the login function of pkcs11, example for pcks11-tool: ``pkcs11-tool --module libnethsm_pkcs11.so -p opPassphrase``
-  To provide the the admin password you need to use ``--so-pin`` instead: ``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``
+  To provide the admin password you need to use ``--so-pin`` instead: ``pkcs11-tool --module libnethsm_pkcs11.so --login --login-type so --so-pin Administrator``
 
 If the password of an user is not set in the configuration file a login will be required to provide the password (3rd method).
 

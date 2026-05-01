@@ -3,6 +3,11 @@
 Set PINs
 ========
 
+.. spelling:word-list::
+   Chrom
+   ium
+   PUK
+
 The Nitrokey 3 has distinct PINs for each feature.
 
 - FIDO2
@@ -17,11 +22,11 @@ The Nitrokey 3 has distinct PINs for each feature.
 FIDO2
 -----
 
-The PIN for FIDO2 can be set with `Nitropy <../../software/nitropy/index.html>`__, operating system native apps, or a webbrowser such as Chrom(e|ium).
+The PIN for FIDO2 can be set with `Nitropy <../../software/nitropy/index.html>`__, operating system native apps, or a web browser such as Chrom(e|ium).
 
 .. warning::
     The PIN has retry counter of 8 attempts. After 8 attempts, it is locked and the FIDO feature needs to be reset change the PIN.
-    To prevent accidental lock of the PIN, the device needs to be unplugged and replugged every 3 attempts.
+    To prevent accidental lock of the PIN, the device needs to be unplugged and re-plugged every 3 attempts.
 
 .. end-fido2-header
 
@@ -40,12 +45,12 @@ The PIN for FIDO2 can be set with the `Nitropy <../../software/nitropy/index.htm
 
 .. start-fido2-chromeium
 
-Setting PIN with the Chrom(e|ium) webbrowser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setting PIN with the Chrom(e|ium) web browser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-# Chrome(e|ium) - Linux, Mac OS, and Windows
+# Chrom(e|ium) - Linux, Mac OS, and Windows
 
-1. Open Chrome(e|ium).
+1. Open Chrom(e|ium).
 2. Open the menu with the three dots in the top right of the menubar.
 3. Click on "Settings".
 4. In the menubar on the left click on "Privacy and security".
@@ -101,7 +106,7 @@ The factory default for the *User PIN* is ``123456``.
 
 .. note::
     The *User PIN* must have a minimal length of 6 characters and maximal length of 127 characters.
-    It can contain alphanumeric characters, including special characters such as punctations.
+    It can contain alphanumeric characters, including special characters such as punctuation.
 
 .. warning::
     The *User PIN* has a PIN retry counter of 3 attempts.
@@ -110,7 +115,7 @@ The factory default for the *User PIN* is ``123456``.
 
 1. Connect the Nitrokey 3 with your computer.
 2. On the terminal enter ``gpg --card-edit``.
-3. In the promt enter ``passwd``.
+3. In the prompt enter ``passwd``.
 4. GnuPG will now ask for the current *User PIN*, and the new *User PIN*.
    Please note that if you provision a new Nitrokey the factory default PIN from above must be entered as the current *User PIN*.
 
@@ -122,7 +127,7 @@ The factory default for the *Admin PIN* is ``12345678``.
 
 .. note::
     The *Admin PIN* must have a minimal length of 8 characters and maximal length of 127 characters.
-    It can contain alphanumeric characters, including special characters such as punctations.
+    It can contain alphanumeric characters, including special characters such as punctuation.
 
 .. warning::
     The *Admin PIN* has a PIN retry counter of 3 attempts.
@@ -146,7 +151,7 @@ It is useful in situations when the user of the Nitrokey should be able to unblo
 
 .. note::
     The *Reset Code* must have a minimal length of 8 characters and maximal length of 127 characters.
-    It can contain alphanumeric characters, including special characters such as punctations.
+    It can contain alphanumeric characters, including special characters such as punctuation.
 
 .. note::
     Once the *Reset Code* is set it can not be disabled anymore. Disabling would require a reset of the OpenPGP Card application.
@@ -178,7 +183,7 @@ The factory default for the *PIN* is ``123456``.
 
 .. note::
     The *PIN* must have maximal length of 8 characters.
-    It can contain alphanumeric characters, including special characters such as punctations.
+    It can contain alphanumeric characters, including special characters such as punctuation.
 
 .. warning::
     The *PIN* has a PIN retry counter of 3 attempts.
@@ -195,7 +200,7 @@ The factory default for the *PUK* is ``12345678``.
 
 .. note::
     The *PUK* must have a maximal length of 8 characters.
-    It can contain alphanumeric characters, including special characters such as punctations.
+    It can contain alphanumeric characters, including special characters such as punctuation.
 
 .. warning::
     The *PUK* has a retry counter of 3 attempts.

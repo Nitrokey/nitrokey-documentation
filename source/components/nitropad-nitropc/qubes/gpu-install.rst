@@ -1,13 +1,19 @@
 NitroPC Pro 2 With External GPU
 ===============================
 
+.. spelling:word-list::
+   mgmt
+   DVM
+   dispXXXX
+   HVM
+   xorgX
+   sys
+   usb
 
 .. note::
    This guide is only working if you use the Qubes OS OEM GPU image from Nitrokey that you can build `here`_.
 
-
 .. _here: https://github.com/Nitrokey/qubes-oem
-
 
 
 This guide explains how to use your NitroPC with an external graphic card (GPU) with Qubes OS.
@@ -20,7 +26,7 @@ Create a Windows Qube
 ---------------------
 
 .. note::
-   This will install a Windows Qube from the offical trial ISO. If you want a full Windows experience then you will need to add a licence key.
+   This will install a Windows Qube from the official trial ISO. If you want a full Windows experience then you will need to add a license key.
 
    This part is using `ElliotKillick project <https://github.com/elliotkillick/qvm-create-windows-qube>`__.
 
@@ -38,7 +44,7 @@ Create a Windows Qube
 
     If you see this message : ``[+] Installation complete!`` then you can continue.
 
-    At this point the script created a new Qube called windows-mgmt now we will dowload the ISO to create the Windows Qube.
+    At this point the script created a new Qube called windows-mgmt now we will download the ISO to create the Windows Qube.
 
     To do so we need to copy the ``~/qvm-create-windows-qube/windows/isos/mido.sh`` script from the windows-mgmt Qube inside a disposable Qube with internet connectivity.
 
@@ -46,13 +52,13 @@ Create a Windows Qube
 
 6. Start the windows-mgmt Qube and copy the script, in windows-mgmt Qube : ``qvm-copy qvm-create-windows-qube/windows/isos/mido.sh`` then select the DVM Qube (dispXXXX).
 
-7. Once the script is copied launch it, in dispXXX : ``./QubesIncoming/windows-mgmt/mido.sh win10x64``
+7. Once the script is copied launch it, in dispXXXX : ``./QubesIncoming/windows-mgmt/mido.sh win10x64``
 
     .. note::
         In this guide we install Windows 10 but other Windows versions are available you can list them by using ``./QubesIncoming/windows-mgmt/mido.sh``
 
 
-8. If you get a success message then you will need to copy the dowloaded ISO from the DVM to the windows-mgmt Qube, in dispXXXX :  ``qvm-copy QubesIncoming/windows-mgmt/win10x64.iso`` and choose the windows-mgmt Qube.
+8. If you get a success message then you will need to copy the downloaded ISO from the DVM to the windows-mgmt Qube, in dispXXXX :  ``qvm-copy QubesIncoming/windows-mgmt/win10x64.iso`` and choose the windows-mgmt Qube.
 
     Once copied you can close your DVM Qube.
 
@@ -70,7 +76,7 @@ Create a Windows Qube
 
 12. Now that your graphic card is attached to your Windows Qube you will need to install the drivers of your card. Search for ``Check for updates`` in the search bar then click on ``Check for updates`` (you will need to reboot several times).
 
-Now Windows will install all the drivers you will need to use your external graphic card. If you're experiencing some problems make sure that you have enought space in your Windows Qube while installing updates.
+Now Windows will install all the drivers you will need to use your external graphic card. If you're experiencing some problems make sure that you have enough space in your Windows Qube while installing updates.
 
 Once finished you can connect a secondary display to the graphic card.
 
@@ -87,7 +93,7 @@ Debian
 
 1. Go to the Qube manager and create a new standalone Qube and launch the settings after creation.
 
-2. In the advenced tab change the mode to HVM and disable memory balancing and choose the amount of RAM you want. 
+2. In the "Advanced" tab change the mode to HVM and disable memory balancing and choose the amount of RAM you want. 
 
 3. In the devices tab select the GPU and pass it to the right then click on the ``Configure strict reset for PCI devices`` then select your card and click ``OK``
 
@@ -99,7 +105,7 @@ Debian
 
 7. ``sudo apt install nvidia-driver dbus-x11``
 
-    Now you will need to create 3 differents files:
+    Now you will need to create 3 different files:
 
 
     screen.conf::

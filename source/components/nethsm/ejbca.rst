@@ -1,6 +1,10 @@
 EJBCA
 =====
 
+.. spelling:word-list::
+   EJBCA
+   ng
+
 .. note::
    EJBCA requires at least NetHSM v3 and nethsm-pkcs11 v2.
 

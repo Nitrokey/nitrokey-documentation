@@ -58,7 +58,7 @@ Each boot the code is generated on the NitroPad and the Nitrokey, if its
 connected. It is allowed to run 10 boots without loosing the
 synchronization between the devices, after which the bad code signal is
 shown, regardless of the rest of the system being in a correct state. If
-you are sure the system was not beign tampered with (e.g. the NitroPad
+you are sure the system was not tampered with (e.g. the NitroPad
 was booted more than 10 times without the Nitrokey), you can safely
 reset the system’s warning.
 
