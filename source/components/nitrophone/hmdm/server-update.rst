@@ -1,6 +1,9 @@
 Server Update
 -------------
 
+.. spelling:word-list::
+   HMDM
+
 This document describes the update of an Headwind MDM (HMDM) server installation.
 Before you perform the update on the server, make sure your mobile devices run a compatible version of the HMDM launcher app.
 
@@ -41,7 +44,7 @@ In case of an update only the WAR file for the application server is required.
 
       cp /var/lib/tomcat9/webapps/ROOT.war /root/hmdm_backup_$(date --iso-8601)/ROOT.war
 
-6. Copy the received application archive to the the application server's webapps directory ``/var/lib/tomcat9/webapps/ROOT.war``.
+6. Copy the received application archive to the application server's ``webapps`` directory ``/var/lib/tomcat9/webapps/ROOT.war``.
 
 7. Restart the application server with ``systemctl restart tomcat9.service``.
 

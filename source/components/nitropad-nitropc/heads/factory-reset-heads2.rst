@@ -39,7 +39,8 @@ Procedure
          .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm.jpg
             :alt: confirm
 
-      6. The integrity of your setup will be tested, deppending on your reason to perform the reset this can fail continue with ok anyways
+      6. The integrity of your setup will be tested.
+         Deppending on your reason to perform the reset this can fail; continue with "Ok" anyway.
 
          .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm-integrity.jpg
             :alt: confirm integrity
@@ -83,12 +84,12 @@ Procedure
           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/otp-sec2.jpg
              :alt: otp secrets generate confirm 2
 
-      11. Enter TPM Owner Password (Default: 12345678)
+      11. Enter TPM Owner Password (Default: ``12345678``)
 
           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
              :alt: tpm password enter
 
-      12. Scan QR code with Phone to inport TOTP Seceret (Optional) and hit Enter
+      12. Scan QR code with Phone to inport TOTP Seceret (optional) and hit Enter
 
           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
              :alt: qr code totp
@@ -147,7 +148,7 @@ Procedure
          .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm.jpg
             :alt: confirm
 
-      6. The integrity of your Setup will be tested, deppending on your reason to perform the reset this can fail continue with ok anyways
+      6. The integrity of your setup will be tested. Depending on your reason to perform the reset this can fail; continue with "OK" anyway.
 
          .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm-integrity.jpg
             :alt: confirm integrity
@@ -222,12 +223,12 @@ Procedure
           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
              :alt: tpm password enter
 
-      12. Scan QR COde with Phone to inport TOTP Seceret (Optional) and hit Enter
+      12. Scan the QR code with your phone to import the TOTP secret (optional) and hit Enter.
 
           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
              :alt: qr code totp
 
-      13. When prompted, enter the Admin PIN of your Nitrokey (Default: 12345678) and hit Enter
+      13. When prompted, enter the Admin PIN of your Nitrokey (Default: ``12345678``) and hit Enter.
 
           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/admin-pin.jpg
              :alt: admin pin nitrokey input

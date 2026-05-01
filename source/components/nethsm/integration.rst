@@ -27,7 +27,7 @@ Demo Instance
 ^^^^^^^^^^^^^
 
 A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com/api/v1/info>`_.
-It will be reset every eight hours (CET 6:00, 14:00, 22:00). User "admin", password "adminadmin", unlock password "unlockunlock".
+It will be reset every eight hours (CET 6:00, 14:00, 22:00). User ``admin``, password ``adminadmin``, unlock password ``unlockunlock``.
 
 Container Image
 ^^^^^^^^^^^^^^^
@@ -72,7 +72,7 @@ This folder also contains the necessary documentation how to use it.
    If Podman is used with enforcing SELinux, a labeling to the volume mount might be required.
    The mode of SELinux can be requested with ``sestatus |grep "Current mode"``.
    If the mode is set to ``enforcing``, a change to the context is required.
-   In this case the volume mount must be postfixed with ``:z``, resulting in ``-v "${PWD}/out:/out:z"``.
+   In this case the volume mount must be suffixed with ``:z``, resulting in ``-v "${PWD}/out:/out:z"``.
 
 Command-line interface
 ----------------------

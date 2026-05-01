@@ -18,7 +18,6 @@ To enable it for a specific code snippet use the following:
 H2 Heading
 ----------
 
-
 Some text with ``inline.code();``
 
 * This is a bulleted list.
@@ -37,7 +36,7 @@ Normal text again.
 * a list
 
   * with a nested list
-  * and some subitems
+  * and some sub-items
 
 * and here the parent list continues
 
@@ -108,9 +107,9 @@ This is another Line to be translated.
 * This line is one of the tests for the automated translation workflow with weblate.
 * Adding this text should trigger the complete workflow of translation.
 
-This is `a Link  <https://f-droid.org/F-Droid.apk>`_ with the definition of the url inline.
+This is `a Link  <https://f-droid.org/F-Droid.apk>`_ with the definition of the URL inline.
 
-This is another thest for `a URL  <https://f-droid.org/F-Droid.apk>`_ to test translation.
+This is another test for `a URL  <https://f-droid.org/F-Droid.apk>`_ to test translation.
 
 
 This is a plain link https://foobar.bas/slug1/slug2

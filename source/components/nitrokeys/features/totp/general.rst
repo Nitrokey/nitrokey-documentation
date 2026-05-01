@@ -1,6 +1,9 @@
 Two-factor Authentication with One-Time Passwords (OTP)
 =======================================================
 
+.. spelling:word-list::
+   YourSlotName
+
 .. product-table:: nk3 pro storage
 
 .. contents:: :local:
@@ -45,7 +48,7 @@ Now start the Nitrokey App and open the “OTP Slot Configuration”.
 
 
 
-Paste in the secret key in the corresponding field and choose an appropiate slot name. Click on “Save” and type in your admin PIN if requested.
+Paste in the secret key in the corresponding field and choose an appropriate slot name. Click on “Save” and type in your admin PIN if requested.
 
 .. figure:: images/otp/5.png
    :alt: img5
@@ -70,7 +73,7 @@ The one-time password is copied to your clipboard automatically. You just need t
 Securely Login to Website/Application
 -------------------------------------
 
-From now on you will get asked for a one-time password additionally to your other credentials if you try to login the the website. You just need to open the Nitrokey App and go to “Menu” -> “Passwords” ->
+From now on you will get asked for a one-time password additionally to your other credentials if you try to login the website. You just need to open the Nitrokey App and go to “Menu” -> “Passwords” ->
 YourSlotName again to get the one-time password.
 
 .. figure:: images/otp/8.png

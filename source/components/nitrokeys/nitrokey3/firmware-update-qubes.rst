@@ -1,6 +1,10 @@
 Firmware Update With Qubes OS
 =============================
 
+.. spelling:word-list::
+   sys
+   usb
+
 .. only:: comment
 
  .. contents:: :local:
@@ -31,7 +35,7 @@ How to Update
 
 1. Run ``nitropy nk3 reboot --bootloader`` in app VM.
 2. Once instructed by ``nitropy`` touch the device to activate the bootloader.
-3. This will detach the Nitrokey from the app VM, and the bootloader will apear in sys-usb.
+3. This will detach the Nitrokey from the app VM, and the bootloader will appear in sys-usb.
 4. Attach the bootloader to the app VM.
 5. Run ``nitropy nk3 update`` and follow the instructions.
 6. During the finalization the Nitrokey will be detached. Re-attach the Nitrokey back to th app VM to finish the update.

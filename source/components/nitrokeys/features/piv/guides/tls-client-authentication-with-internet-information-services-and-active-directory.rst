@@ -1,6 +1,9 @@
 TLS Client Authentication with Windows Internet Information Services (IIS) and Active Directory
 -----------------------------------------------------------------------------------------------
 
+.. spelling:word-list::
+   IIS
+
 .. product-table:: nk3
 
 This guide describes the configuration of Windows Internet Information Services (IIS) for TLS client authentication that maps users to Active Directory accounts.
@@ -8,8 +11,8 @@ This guide describes the configuration of Windows Internet Information Services 
 It shows the configuration as an example with the *Default Web Site* of IIS.
 The configuration can also be used for other sites, including or excluding the default site, but the configuration of TLS support is server-wide.
 
-Prerequisits
-============
+Prerequisites
+=============
 
 - Successful setup of smart card client logon, refer to chapter `Client logon with Active Directory <client_logon_with_active_directory.html>`__.
   Users must have a valid authentication certificate on a Nitrokey.

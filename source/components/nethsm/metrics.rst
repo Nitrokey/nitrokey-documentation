@@ -1,3 +1,10 @@
+.. spelling:word-list::
+
+    kv
+    gc
+    compactions
+    rcvd
+
 :orphan:
 
 Metrics

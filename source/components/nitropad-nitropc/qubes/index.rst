@@ -1,6 +1,9 @@
 QubesOS
 =======
 
+.. spelling:word-list::
+   dom
+
 .. contents:: :local:
 
 .. toctree::
@@ -49,15 +52,18 @@ changed by you:
 4. Open the pre-installed Nitrokey App and change the PINs of your
    Nitrokey as `described here <../change-pins.html>`_.
 
-5. Change the passphrase for the hard disk encryption by searching in the Qubes Menu for "Change Disk Password". This passphrase is different from your user acount's passphrase.
+5. Change the passphrase for the hard disk encryption by searching in the Qubes Menu for "Change Disk Password".
+   This passphrase is different from your user account's passphrase.
 
    .. figure:: /images/qubes/ChangeDiskPasswordQubes.png
       :alt: Change Password Qubes Image
 
-6. NitroPads are shipped with the latest installation image by Qubes OS which needs to updated after installation because it does not contain all latest security fixes. To update use the Update Manager as described in the `Qubes Documentation <https://www.qubes-os.org/doc/how-to-update/>`__.
+6. NitroPads are shipped with the latest installation image by Qubes OS which needs to updated after installation because it does not contain all latest security fixes.
+   To update use the Update Manager as described in the `Qubes Documentation <https://www.qubes-os.org/doc/how-to-update/>`__.
 
 .. note::
-   Specifically for NitroPad V54 the Qubes 4.2.3 installation image contains a bug that limits to use the highest screen resoultion only. This is fixed after you update dom0 and reboot.
+   Specifically for NitroPad V54 the Qubes 4.2.3 installation image contains a bug that limits to use the highest screen resoultion only.
+   This is fixed after you update dom0 and reboot.
 
 Behavior After a System Update
 ------------------------------
@@ -79,5 +85,5 @@ Detailed instructions for a system update can be `found here <../heads/system-up
 Failed to Start Load Kernel Modules
 -----------------------------------
 
-During boot of the system the error "Failed to start Load Kernel Modules" is displayed. `This is a known issue <https://github.com/QubesOS/qubes-issues/issues/2638>`__ which is not critical and can be ignored.
-
+During boot of the system the error "Failed to start Load Kernel Modules" is displayed.
+`This is a known issue <https://github.com/QubesOS/qubes-issues/issues/2638>`__ which is not critical and can be ignored.

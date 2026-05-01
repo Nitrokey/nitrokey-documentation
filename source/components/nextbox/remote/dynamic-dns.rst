@@ -34,7 +34,7 @@ these steps to configure your NextBox using the Guided Dynamic DNS method:
    allow you to login into your account.
 
 * In step two the just acquired secret token shall be inserted into the input
-  field to complete your guided dynamic dns configuration.
+  field to complete your guided dynamic DNS configuration.
 
 .. hint::
    Your token will only be presented once to you (after the verification
@@ -65,7 +65,7 @@ The one used for the guided DNS configuration uses the following template:
    password='[token]'
    [domain]
 
-* Once you actiavted this configuration, you can *Continue to TLS activation* -
+* Once you activated this configuration, you can *Continue to TLS activation* -
   see below
 
 
@@ -77,9 +77,7 @@ On this page first wait for the status-bars to settle and mainly ensure that
 just click **Enable TLS** to acquire your TLS certificate.
 
 .. note::
-   If the reachibility test fails, make sure your :doc:`port forwarding <port-forwarding>` is configured properly.
-
-
+   If the reachability test fails, make sure your :doc:`port forwarding <port-forwarding>` is configured properly.
 
 .. _Let's Encrypt: https://letsencrypt.org
 .. _desec.io: https://desec.io
@@ -90,37 +88,37 @@ just click **Enable TLS** to acquire your TLS certificate.
 
 .. There are several ways to enable remote access to the NextBox. The easiest way is to use the "Quickstart Configuration".
 
-   Quickstart Configuration (recommended)
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Quickstart Configuration (recommended)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   1. Go to "Remote Access" in the NextBox app.
+1. Go to "Remote Access" in the NextBox app.
 
    .. figure:: /components/nextbox/images/gettingstarted/5.png
       :alt: img5
 
-   2. Click on "Quickstart Configuration (recommended)".
+2. Click on "Quickstart Configuration (recommended)".
 
    .. figure:: /components/nextbox/images/gettingstarted/6.png
       :alt: img6
 
-   3. Enter your desired domain name consisting of at least 4 characters and ending with ".nextbox.link".
+3. Enter your desired domain name consisting of at least 4 characters and ending with ``.nextbox.link``.
 
-   4. Specify your token received with the NextBox.
+4. Specify your token received with the NextBox.
 
    .. figure:: /components/nextbox/images/gettingstarted/7.png
       :alt: img7
 
-   5. Click on "Activate Quickstart Remote Access". This process may take a few seconds.
+5. Click on "Activate Quickstart Remote Access". This process may take a few seconds.
 
    .. figure:: /components/nextbox/images/gettingstarted/9.png
       :alt: img9
 
-   6. Go back to Remote Access to check the status about the accessibility of the address.
+6. Go back to Remote Access to check the status about the accessibility of the address.
 
    .. figure:: /components/nextbox/images/gettingstarted/9.5.png
       :alt: img9.5
 
-   7. Now your NextBox is reachable via the selected address!
+7. Now your NextBox is reachable via the selected address!
 
    .. figure:: /components/nextbox/images/gettingstarted/10.png
       :alt: img10
