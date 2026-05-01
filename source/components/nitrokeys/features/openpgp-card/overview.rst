@@ -20,7 +20,7 @@ If you do not have OpenPGP keys yet, you need to generate them first.
 
 -  `Generate keys on
    your Nitrokey device <openpgp-keygen-gpa.html>`_
-   - this is the best option if you are unexperienced, but you won’t
+   - this is the best option if you are inexperienced, but you won’t
    have a backup of your keys and therefore won’t be able to mitigate
    the loss of the Nitrokey
 

@@ -13,7 +13,7 @@ recommended, please be aware that this method also comes with some drawbacks:
   end-to-end encrypted.  *In particular, if this server is compromised, your
   traffic might be readable.*
 
-* The same reason also introduces a bandwith bottleneck, if you are connecting
+* The same reason also introduces a bandwidth bottleneck, if you are connecting
   to your NextBox from within your local area network (LAN). As all traffic has
   to be send to our proxy server and from there to your NextBox, the available
   bandwidth is limited to roughly 50% of your upload or download bandwidth
@@ -30,8 +30,6 @@ If your NextBox is only available through IPv6 (e.g., DS-Lite internet
 connection) the backwards proxy might be the only way to access your NextBox
 using a non-IPv6 enabled device. As of today e.g., various mobile network
 providers do not support IPv6 yet.
-
-
 
 
 .. There are several ways to enable remote access to the NextBox. The easiest way is to use the "Quickstart Configuration".
@@ -70,5 +68,3 @@ providers do not support IPv6 yet.
    
    .. figure:: /components/nextbox/images/gettingstarted/10.png
       :alt: img10
-    
-

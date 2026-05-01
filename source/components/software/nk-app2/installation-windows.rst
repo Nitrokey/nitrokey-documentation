@@ -1,13 +1,13 @@
 Windows Install
 ===============
 
-Using our MSI File
+Using our MSI file
 ------------------
 
 1. `Download <https://github.com/Nitrokey/nitrokey-app2/releases>`__ the Windows installer (MSI file).
 
    .. note::
-      If you're using Microsoft Edge, the downloaded ``.msi`` might be marked as "untrused" by Windows. To mark it as trusted anyway, click the three dot on the right of the warning, then "keep", then "show more" and finally "keep anyway".
+      If you're using Microsoft Edge, the downloaded ``.msi`` might be marked as "untrusted" by Windows. To mark it as trusted anyway, click the three dot on the right of the warning, then "keep", then "show more" and finally "keep anyway".
 
 2. Execute the Windows installer to install Nitrokey App 2 to your system.
 3. Start Nitrokey App 2 from your applications.
@@ -22,14 +22,14 @@ Silent installations are possible with the parameter **/qn**.
    msiexec.exe /qn /i nitrokey-app-v2.2.2-x64-windows-installer.msi
 
 
-Using Winget
+Using WinGet
 ------------
 
-If you don't have Winget installed on your system you can download and install it from `here <https://github.com/microsoft/winget-cli/releases>`__.
+If you don't have `WinGet <https://learn.microsoft.com/en-us/windows/package-manager>`__ installed on your system, you can download and install it from `here <https://github.com/microsoft/winget-cli/releases>`__.
 
 1. Open PowerShell and run this command: ``winget install --id=NitrokeyGmbH.Nitrokey-App  -e``
 
-You can find our package informations `here <https://winstall.app/apps/NitrokeyGmbH.Nitrokey-App>`__.
+You can find information about our package `here <https://winstall.app/apps/NitrokeyGmbH.Nitrokey-App>`__.
 
 
 Using Chocolatey
@@ -39,5 +39,5 @@ If you don't have Chocolatey installed on your system you can find instructions 
 
 1. Open PowerShell and run this command: ``choco install nitrokey-app2``
 
-You can find our package informations `here <https://community.chocolatey.org/packages/nitrokey-app2>`__.
+You can find information about our package `here <https://community.chocolatey.org/packages/nitrokey-app2>`__.
 

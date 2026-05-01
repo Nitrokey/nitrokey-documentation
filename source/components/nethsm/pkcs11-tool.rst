@@ -81,7 +81,7 @@ Generate a Key
 Generate a key-pair and store it on the NetHSM.
 
 .. note:: 
-   The slot you want to use needs to have an andministrator user in the configuration file. Otherwise you will get a `CKR_USER_NOT_LOGGED_IN` error.
+   The slot you want to use needs to have an administrator user in the configuration file. Otherwise you will get a `CKR_USER_NOT_LOGGED_IN` error.
 
 RSA
 ~~~

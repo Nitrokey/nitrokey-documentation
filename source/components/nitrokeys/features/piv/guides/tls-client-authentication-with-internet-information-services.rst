@@ -1,6 +1,9 @@
 TLS Client Authentication with Internet Information Services (IIS)
 ------------------------------------------------------------------
 
+.. spelling:word-list::
+   IIS
+
 .. product-table:: nk3
 
 This guide describes the configuration of Windows Internet Information Services (IIS) for TLS client authentication that maps users to local user accounts.
@@ -8,8 +11,8 @@ This guide describes the configuration of Windows Internet Information Services 
 It shows the configuration as an example with the *Default Web Site* of IIS.
 The configuration can also be used for other sites, including or excluding the default site.
 
-Prerequisits
-============
+Prerequisites
+=============
 
 - Nitrokey 3 with PIV client authentication certificate.
 - Windows Server (web server)
@@ -112,7 +115,7 @@ Configuration
        
     B. **One to One mapping**
 
-       Fill in the fields as in the tablebelow.
+       Fill in the fields as in the table below.
        
        +-----------------+----------------------------------+
        | Key             | Value                            |

@@ -1,6 +1,10 @@
 Outlook
 =======
 
+.. spelling:word-list::
+   GPG4Win
+   GpgOL
+
 .. product-table:: nk3 pro storage start
 
 .. contents:: :local:

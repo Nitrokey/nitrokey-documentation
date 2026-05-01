@@ -3,7 +3,7 @@ NitroPad, NitroPC
 
 .. contents:: :local:
 
-Gettings started and choose your operating system:
+Getting started and choosing your operating system:
 
 .. toctree::
    :maxdepth: 1

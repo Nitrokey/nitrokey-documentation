@@ -1,6 +1,9 @@
 Server Installation
 ###################
 
+.. spelling:word-list::
+   HMDM
+
 The recommended operating system for the installation is Ubuntu 22.04 LTS.
 The instructions below use this operating system.
 
@@ -15,7 +18,7 @@ Install Web Panel
 3. Extract the archive with ``unzip hmdm-<VERSION>-install-ubuntu.zip``, while replacing ``<VERSION>`` with the respective value.
    Afterwards, change to the directory with the extracted files with ``cd hmdm-install/``.
 4. Update repository data and install dependencies with ``apt update && apt install -y aapt tomcat9 postgresql vim certbot unzip net-tools iptables``.
-   Iptables is required by the installer to set firewall rules to redirect the ports *80* and *443* to the default Tomcat ports *8080* and *8443*.
+   iptables is required by the installer to set firewall rules to redirect the ports *80* and *443* to the default Tomcat ports *8080* and *8443*.
 5. Create role and database in Postgres.
    Make sure the database password does not contain any characters interpreted by the shell, such as ``@`` or ``&``.
    In the example below replace ``supersafepassword`` with your own password.

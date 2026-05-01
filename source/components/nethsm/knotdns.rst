@@ -1,6 +1,10 @@
 Knot DNS
 ========
 
+.. spelling:word-list::
+
+   KnotDNS
+
 `Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative DNS server that can be used for DNSSEC. To use KnotDNS with the NetHSM please install and configure the PKCS#11 module as `described here <./pkcs11-setup.html>`__.
 
 Manual Mode

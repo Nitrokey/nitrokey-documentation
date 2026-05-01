@@ -1,6 +1,13 @@
 Troubleshooting
 ===============
 
+.. spelling:word-list::
+   WUDF
+   UMDF2
+   pcscd
+   PIV
+   pyscard
+
 Here you will find a collection of common issues.
 
 
@@ -171,7 +178,7 @@ Currently the web updater doesn't support the Nitrokey 3. However you can get th
 PIV Troubleshooting
 ^^^^^^^^^^^^^^^^^^^
 
-Pyscard is not available
+pyscard is not available
 ------------------------
 
 If pyscard is not available to nitropy, you might get the following error when trying to use the PIV functionality::
@@ -183,4 +190,4 @@ To fix this error, please install nitropy with the `pcsc` extra dependencies::
     pip install pynitrokey[pcsc]
     pipx install pynitrokey[pcsc]
 
-If you install pynitrokey through another distrubition channel, please install all optional dependencies for this channel.
+If you install pynitrokey through another distribution channel, please install all optional dependencies for this channel.

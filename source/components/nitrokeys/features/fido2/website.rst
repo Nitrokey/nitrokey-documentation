@@ -142,8 +142,8 @@ seconds until the green or blue LED lights up.
 |                 |                 |                 | registration    |
 |                 |                 |                 | signal (user    |
 |                 |                 |                 | presence); the  |
-|                 |                 |                 | conf            |
-|                 |                 |                 | iguration/reset |
+|                 |                 |                 | configuration / |
+|                 |                 |                 | reset           |
 |                 |                 |                 | operations are  |
 |                 |                 |                 | not accepted    |
 +-----------------+-----------------+-----------------+-----------------+

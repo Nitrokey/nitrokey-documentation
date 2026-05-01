@@ -8,7 +8,7 @@ OpenVPN Configuration with Easy-RSA
 
 .. note::
 
-  This guide is work-in-progress, and will be updated accordinlgy. Please take this status into consideration.
+  This guide is work-in-progress, and will be updated accordingly. Please take this status into consideration.
 
 This guide shows how to configure OpenVPN clients to login using a `Nitrokey Pro
 2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ or a `Nitrokey Storage
@@ -17,7 +17,7 @@ This guide shows how to configure OpenVPN clients to login using a `Nitrokey Pro
 To sign the certificates, we will use a `Nitrokey HSM
 2 <https://shop.nitrokey.com/shop/nkhs2-nitrokey-hsm-2-7>`__ set up as `Certificate Authority <../certificate-authority.html#creating-the-intermediate-certificate-authority>`_, however this guide does not cover the set up of the CA itself (it is clear and `well documented here <../certificate-authority.html#sign-a-server-certificate>`_).
 
-We will use Easy-RSA, because it seems to provide some flexibility, and allows key management via external PKIs. We will use it on the server to issue the signing request, and repeat the same process on the client. The Certificate Signing Requests will be signed by the CA on the Nitorkey HSM, and re-transmitted to the server and the client.
+We will use Easy-RSA, because it seems to provide some flexibility, and allows key management via external PKIs. We will use it on the server to issue the signing request, and repeat the same process on the client. The Certificate Signing Requests will be signed by the CA on the Nitrokey HSM, and re-transmitted to the server and the client.
 
 
 Prerequisites
@@ -166,13 +166,13 @@ Server side
 
 		3. Initialize the PKI
 
-			Once you have populated the ``vars`` file you can proceed with creating the PKI directory. To do so, run the easyrsa script with the init-pki option:
+			Once you have populated the ``vars`` file you can proceed with creating the PKI directory. To do so, run the ``easyrsa`` script with the init-pki option:
 
 				.. code-block:: bash
 
 					$ ./easyrsa init-pki
 
-			After you’ve initialized your PKI on the OpenVPN server, you are ready to move on to the next step, which is creating an OpenVPN server certificate request and private key.
+			After you've initialized your PKI on the OpenVPN server, you are ready to move on to the next step, which is creating an OpenVPN server certificate request and private key.
 
 4. Create ``server.req`` and ``server.key``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -240,7 +240,7 @@ Server side
 
     1. Sign the ``server.req`` file
 
-        On the local machine dedicated to access the HSM, we will use the tools provided by Opensc 0.20 in order to sign the ``.req`` file, and send it back to the OpenVPN server. We assume we have transferred the file from the server machine to the CA machine.
+        On the local machine dedicated to access the HSM, we will use the tools provided by OpenSC 0.20 in order to sign the ``.req`` file, and send it back to the OpenVPN server. We assume we have transferred the file from the server machine to the CA machine.
 
         First we start by plugging the HSM Nitrokey, and enter this instruction for listing the keys available.
 
@@ -524,7 +524,7 @@ Client side configuration
             pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
             pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
 
-        For additional `settings related to OpenVPN <https://openvpn.net/community-resources/how-to/>`__ authentication, you may also add few lines to handle key maganagement, although it is optional.
+        For additional `settings related to OpenVPN <https://openvpn.net/community-resources/how-to/>`__ authentication, you may also add few lines to handle key management, although it is optional.
 
         .. note::
 
@@ -614,18 +614,20 @@ Client side configuration
 
 		Create the directory ``ssl`` in ``C:\Program Files\OpenVPN`` and create file ``openssl.cnf`` with the following content : 
 
-			openssl_conf = default_conf
-				
-			[ default_conf ]
-			ssl_conf = ssl_sect
+            .. code-block:: ini
 
-			[ ssl_sect ]
-			system_default = ssl_default_sect
+                openssl_conf = default_conf
 
-			[ ssl_default_sect ]
-			SignatureAlgorithms = RSA+SHA512:ECDSA+SHA512:RSA+SHA384:ECDSA+SHA384:RSA+SHA256:ECDSA+SHA256
-			MaxProtocol = TLSv1.2
-			MinProtocol = TLSv1.2
+                [ default_conf ]
+                ssl_conf = ssl_sect
+
+                [ ssl_sect ]
+                system_default = ssl_default_sect
+
+                [ ssl_default_sect ]
+                SignatureAlgorithms = RSA+SHA512:ECDSA+SHA512:RSA+SHA384:ECDSA+SHA384:RSA+SHA256:ECDSA+SHA256
+                MaxProtocol = TLSv1.2
+                MinProtocol = TLSv1.2
 
 
 		With this modification, you will not have error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__

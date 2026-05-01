@@ -1,6 +1,13 @@
 Apps
 ****
 
+.. spelling:word-list::
+   K9
+   DAVx5
+   Free2move
+   Seedvault
+   FairEmail
+
 App Store
 #########
 
@@ -19,9 +26,9 @@ everyday smartphone with more apps we recommend:
 3. Many apps work without Google Play Services. However, if you want to use apps
    that require Google Play Services, you can install `Google Play Services in a sandbox <https://grapheneos.org/usage#sandboxed-google-play>`__ as follows.
 
-   1. Open Graphenes app repository client: *Home screen -> Apps*
+   1. Open Graphene's app repository client: *Home screen -> Apps*
    2. Install the 3 core Google Play Apps ("Google Play store", "Google Play Services", "Google Services Framework").
-   3. Disable batterie optimization for Google Play Services (for Push to work properly). From the home screen, select: *Settings -> Apps -> Google Play services > Battery > Unrestricted*
+   3. Disable battery optimization for Google Play Services (for Push to work properly). From the home screen, select: *Settings -> Apps -> Google Play services > Battery > Unrestricted*
    4. Open the Google Play Store once and press "Sign in" to start the
       initialization. You don't have to finish the sign in and a real login is not
       necessary. This is solely to initialize the software.
@@ -50,7 +57,7 @@ Recommended Apps
    * `Signal <https://signal.org/android/apk/>`__ is secure and now widely used. It can also be downloaded without an app store.
    * `Element <https://element.io/>`__ does not require a central infrastructure and allows the use of own servers. An own account can be registered for free at `NitroChat <https://nitro.chat>`__ for example.
    * `Briar <https://briarproject.org/>`__ is a peer-to-peer messenger without any server at all, which can be used without internet with contacts nearby.
-* Contacts and calendar synchronization: DAVx5 supports CalDAV, CardDAV and WebCAL.
+* Contacts and calendar synchronization: DAVx5 supports CalDAV, CardDAV and Webcal.
 * One-time password generator (2FA, OTP): `Aegis Authenticator <https://github.com/beemdevelopment/Aegis>`__.
 * Regarding camera app, see `here <https://grapheneos.org/usage#camera>`__.
 

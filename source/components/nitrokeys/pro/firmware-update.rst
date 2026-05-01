@@ -1,6 +1,9 @@
 Firmware Update
 ===============
 
+.. spelling:word-list::
+   dfu
+
 This guide describes how to update the firmware on the Nitrokey Pro.
 
 .. warning::
@@ -63,7 +66,7 @@ Troubleshooting
 ---------------
 
 **Issue:** ``libnitrokey`` could not be found.
- In case the libnitrokey could not be found automatically, the path to it can be provided with env. variable:
+ In case the libnitrokey could not be found automatically, the path to it can be provided with an environment variable:
 
 .. code-block:: bash
  

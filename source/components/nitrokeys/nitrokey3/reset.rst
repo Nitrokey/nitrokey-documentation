@@ -1,6 +1,9 @@
 Factory Reset
 =============
 
+.. spelling:word-list::
+   PIV
+
 .. contents:: :local:
 
 Each functionality of the Nitrokey 3 can be reset individually. 

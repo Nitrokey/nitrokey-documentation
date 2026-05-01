@@ -85,8 +85,8 @@ We can use the command ``gpg --full-generate-key --expert`` to start a guided ke
 Subkey for Authentication
 -------------------------
 
-You now have a main key with the capability to sign and certify (marked as [SC]) and a subkey for encryption (marked as [E]). It is necessary to have another subkey for use cases in which authentication is needed. This subkey is generated in the next step. Type in ``gpg --edit-key --expert keyID`` to start the process, whereas “keyID”
-is either the id of the key or the email address used during key generation.
+You now have a main key with the capability to sign and certify (marked as [SC]) and a subkey for encryption (marked as [E]). It is necessary to have another subkey for use cases in which authentication is needed. This subkey is generated in the next step. Type in ``gpg --edit-key --expert keyID`` to start the process, whereas ``keyID``
+is either the ID of the key or the email address used during key generation.
 
 ::
 
@@ -204,7 +204,7 @@ Now is good time to backup your key. Please keep this backup very secure. It is 
 
    > gpg --export-secret-keys jane@example.com > sec-key.asc
 
-Optionally user can chose to export an 'encrypted backup' of the secret key ,to avoid accidental leakage of secret key (This is not a full-proof method or replacement for offline computers but should still provide good security against leakeges)
+Optionally user can chose to export an 'encrypted backup' of the secret key ,to avoid accidental leakage of secret key (This is not a foolproof method or replacement for offline computers but should still provide good security against leakage).
 
 .. code-block:: bash
 
@@ -223,7 +223,7 @@ Key Import
 
 You have a main key and two subkeys which can be imported to your Nitrokey. Before proceeding please make sure that you really have a backup of the key, if you need one. The ``keytocard`` command used in the next steps will **delete** your key from your disk!
 
-We start the process by accessing the interactive interface of GnuPG again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is either the id of the key or the email address used during key generation.
+We start the process by accessing the interactive interface of GnuPG again with ``gpg --edit-key --expert keyID``, whereas ``keyID`` is either the ID of the key or the email address used during key generation.
 
 ::
 
@@ -341,7 +341,7 @@ Although you can start to use your Nitrokey right away after generating the keys
 Generating a Public Key File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To get a simple file of your public key, you can just use ``gpg --armor --export keyID > pubkey.asc``. Use either the fingerprint as “keyID” (look at ``gpg -K`` to get it) or just use your email address as an identifier.
+To get a simple file of your public key, you can just use ``gpg --armor --export keyID > pubkey.asc``. Use either the fingerprint as ``keyID`` (look at ``gpg -K`` to get it) or just use your email address as an identifier.
 
 You can carry this file with you or send it to anyone who you like. This file is not secret at all. If you want to use the Nitrokey on another system, you first import this public key via ``gpg --import pubkey.asc``
 and then types ``gpg --card-status`` so that the system knows where to look for this key. That’s all.

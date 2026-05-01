@@ -1,6 +1,9 @@
 Access Control
 ==============
 
+.. spelling:word-list::
+   PUK
+
 .. product-table:: nk3
 
 The following access matrix shows what authentication a certain operation requires.
@@ -18,7 +21,7 @@ The following access matrix shows what authentication a certain operation requir
 +-------------------+-----+-----+-----+-------------------------------------------------+
 | Generate key      |  x  |     |  x  |                                                 |
 +-------------------+-----+-----+-----+-------------------------------------------------+
-| Read certificate  |     |     |     | This operatain does not require authentication. |
+| Read certificate  |     |     |     | This operation does not require authentication. |
 +-------------------+-----+-----+-----+-------------------------------------------------+
 | Write certificate |  x  |     |  x  |                                                 |
 +-------------------+-----+-----+-----+-------------------------------------------------+
@@ -49,7 +52,7 @@ The factory default for the *PUK* is ``12345678``.
 
 .. note::
    The *PUK* must be 8 characters long.
-   It can contain alphanumeric characters, including special characters such as punctations.
+   It can contain alphanumeric characters, including special characters such as punctuation.
 
 .. warning::
    The *PUK* is subject to the restriction of a retry counter.

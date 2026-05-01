@@ -134,7 +134,7 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
 
 
 6. It is recommended to store this safety device. Select “Save key copy
-   of the key outside the Smard Card”. Then enter your personal password
+   of the key outside the Smart Card”. Then enter your personal password
    for the backup copy under “Passphrase”. This password should not be
    less than 8 characters, and should contain both uppercase and
    lowercase letters and numbers. You can also use a long sentence, but
@@ -143,9 +143,9 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
 
 	**Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö or ß)
 
-	**Poor Passwords**: qwerty123, ILoveSusi3, Password, If you can dream it, you can do it.
+	**Poor Passwords**: ``qwerty123``, ``ILoveSusi3``, ``Password``
 
-	**Strong Passwords**: g(Ak?2Pn7Yn or Ki.stg2bLqzp%d or A dog with greeen Earz and fife legs (spelling errors increase security)
+	**Strong Passwords**: ``g(Ak?2Pn7Yn`` or ``Ki.stg2bLqzp%d`` or ``A dog with greeen Earz and fife legs`` (spelling errors increase security)
 
 	You do **not** need this password for daily work. It is only necessary for the restoration of the secret key, e.g. if you have lost the Nitrokey. Therefore, keep the password in a safe place.
 
@@ -182,7 +182,7 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
    least one other external medium so that you can revoke the validity
    of the keys if your keys and backups are lost. Click “Yes”
 
-   You can now select the directory in which the backup copy is stored. This copy is encrypted with your password entered above. This means that no one can read or use the keys without your password. Do not give your password to anyone. This file with the name of your e-mail address and the suffix “.asc” should be backed up on another medium. After selecting the directory, click “Save”.
+   You can now select the directory in which the backup copy is stored. This copy is encrypted with your password entered above. This means that no one can read or use the keys without your password. Do not give your password to anyone. This file with the name of your e-mail address and the suffix ``.asc`` should be backed up on another medium. After selecting the directory, click “Save”.
 
 	.. figure:: images/thunderbird/11.png
 		:alt: img11

@@ -29,7 +29,7 @@ Preparation on client
     export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
     fi
 
-* Simply restart your system or try ``pkill gpg-agent`` and open a new commandline to make sure everything is set
+* Simply restart your system or try ``pkill gpg-agent`` and open a new terminal to make sure everything is set
 * In case of problems, please try ``gpg2 --card-status`` on first usage to make sure the gpg-agent gets started
 
 Preparation for the server

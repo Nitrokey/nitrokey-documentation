@@ -35,13 +35,13 @@ Nitrokey Documentation
     :link: components/nitrowall/index
     :link-type: doc
 
-    Network PCs for firwalls, routing and a more secure home network
+    Network PCs for firewalls, routing and a more secure home network
 
 .. card:: NitroWall NW750
     :link: components/nitrowall/nw750/index
     :link-type: doc
 
-    Never use open WiFis again, just get your own mobile Wifi
+    Never use open WiFis again, just get your own mobile WiFi
 
 .. card:: Software
     :link: components/software/index

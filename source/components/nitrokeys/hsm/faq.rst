@@ -1,6 +1,11 @@
 Nitrokey HSM FAQ
 ================
 
+.. spelling:word-list::
+    sc
+    OpenSC
+    OpenSCDP
+
 .. faq:: Which Operating Systems are supported?
 
    Windows, Linux and macOS.

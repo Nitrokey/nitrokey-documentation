@@ -1,4 +1,4 @@
-Connect your Mac Commputer
+Connect your Mac Computer
 ==========================
 
 .. contents:: :local:
@@ -15,7 +15,7 @@ Connect using the Nextcloud App
 
 
 2. After installation, click "Log in to your Nextcloud". Afterwards please
-   provide your Nextcloud's domain.
+   provide your Nextcloud domain.
 
 
    .. figure:: /components/nextbox/images/win_app/2.png
