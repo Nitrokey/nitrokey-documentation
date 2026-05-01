@@ -1,13 +1,17 @@
 Changing IMEI
 =============
 
+.. spelling:word-list::
+   merle
+   NW750
+
 To be able to change the IMEI of your device, the software `blue merle <https://github.com/srlabs/blue-merle>`_ is pre-installed.
 
 .. note:: After performing a factory reset, you need to `reinstall <https://github.com/srlabs/blue-merle#installation>`_ blue-merle.
 
 .. contents:: :local:
 
-There a different ways to change the IMEI. The simplest is to use the toogle on the side of the NW750:
+There a different ways to change the IMEI. The simplest is to use the toggle on the side of the NW750:
 
 1. Switch the hardware toggle.
 2. Follow the instructions on the display, which will prompt you to replace the SIM card eventually.

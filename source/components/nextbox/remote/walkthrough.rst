@@ -1,6 +1,9 @@
 Remote Access Walkthrough 
 =========================
 
+.. spelling:word-list::
+   deSEC
+
 .. contents:: :local:
 
 This documentation aims to give you a thorough introduction into the Remote

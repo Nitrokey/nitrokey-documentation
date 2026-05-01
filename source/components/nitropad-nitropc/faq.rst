@@ -7,7 +7,7 @@ NitroPad, NitroPC FAQ
 
 .. faq:: How to change the hard-disk encryption password from within HEADS?
 
-   This is the prefered way to change the hard-disk encryption password.
+   This is the preferred way to change the hard-disk encryption password.
    Inside HEADS choose ``Options -> Change LUKS Disk Recovery Key passphrase``
    and follow the instructions.
 
@@ -24,11 +24,11 @@ NitroPad, NitroPC FAQ
 
    Changing your hard-disk encryption password does not change the encryption
    itself, just the access to the encryption key. This means that in a situation
-   where somebody had phyisical access to the device (e.g., during shipment)
+   where somebody had physical access to the device (e.g., during shipment)
    they may have copied the LUKS header, i.e., the encryption key. Using this
    copy one might decrypt the hard-disk even with a new password being set. 
    This is why the re-ownership wizard proposes to re-encrypt the hard-disk, 
-   which reencrypts in place ensuring the previously described scenario 
+   which re-encrypts in place ensuring the previously described scenario 
    cannot be applied.
 
    

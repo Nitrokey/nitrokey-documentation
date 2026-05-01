@@ -1,7 +1,11 @@
 USBGuard
 ========
 
-Using usbguard is pretty essential to protect against common attacks like malicious devices, rubber duckies, OMG cables or the “governmental 3 letter agency equivalents”.
+.. spelling:word-list::
+   usbguard
+   USBGuard
+
+Using usbguard is pretty essential to protect against common attacks like malicious devices, USB Rubber Duckies, O.MG cables or the “governmental 3 letter agency equivalents”.
 
 Especially thunderbolt (which can be blocked globally, see `this config as to how <https://github.com/secureblue/secureblue/tree/live/files/system/usr/lib/modprobe.d>`__ can grant attackers access to your RAM, which means encryption keys and more.
 

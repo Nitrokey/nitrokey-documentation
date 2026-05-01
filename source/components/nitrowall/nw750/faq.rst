@@ -1,6 +1,12 @@
 NitroWall NW750 FAQ
 ===================
 
+.. spelling:word-list::
+   merle
+   eUICCID
+   NitroWall
+   NW750
+
 .. faq:: Does the NitroWall NW750 support eSIM?
 
    Yes, but when using an eSIM it's not possible to use blue-merle to change the eUICCID.

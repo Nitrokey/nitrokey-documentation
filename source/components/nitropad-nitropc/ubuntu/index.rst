@@ -60,7 +60,7 @@ changed by you:
    above).
 
 2. Next, the system will prompt you to enter the passphrase to decrypt
-   the hard disk. The passphrase is initially "12345678". This was changed on the 10.04.2024 so if "12345678" is not working try the old default: "PleaseChangeMe" 
+   the hard disk. The passphrase is initially ``12345678``. This was changed on the 10.04.2024 so if ``12345678`` is not working try the old default: ``PleaseChangeMe``
 
    .. figure:: ./images/UbuntuDiskPassword.png
       :alt: img3
@@ -74,7 +74,7 @@ changed by you:
 
 5. Change the passphrase for disk encryption.
    To learn more about how to change the passphrase for disk encryption, please refer to chapter `Change Disk Encryption Passphrase <change-disk-encryption-passphrase.html>`_.
-   This passphrase is different from your user acount's passphrase.
+   This passphrase is different from your user account's passphrase.
 
 Behavior After a System Update
 ------------------------------

@@ -1,6 +1,9 @@
 macOS Install
 =============
 
+.. spelling:word-list::
+   uv
+
 Installing the Nitrokey App 2 via uv
 -------------------------------------
 

@@ -21,7 +21,7 @@ This mini-howto assumes that the Nitrokey has been initialized and contains cryp
 
 **1) Pageant**
 
-start pageant.exe. That this is running is shown in the notification area of the taskbar.
+Start ``pageant.exe``. That this is running is shown in the notification area of the taskbar.
 
 .. figure:: images/putty/1.png
    :alt: img1
@@ -49,14 +49,14 @@ If nothing is displayed here, pageant may have to be restarted or another applic
 
 
 
-and then view the Pageant-PublicKeys.txt.
+and then view the ``Pageant-PublicKeys.txt``.
 
 .. figure:: images/putty/5.png
    :alt: img5
 
 
 
-I searched for the ssh-rsa entry of the auth key and added the line on the server to the authorized_keys.
+I searched for the ``ssh-rsa`` entry of the auth key and added the line on the server to the authorized_keys.
 
 **2) PuTTY**
 

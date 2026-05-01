@@ -21,7 +21,7 @@ The following descriptions explain the basic key generation on-device via GnuPG�
 
 Open a command line and type ``gpg2 --card-edit``.
 
-To open the Windows command line please push the Windows-key and R-key. Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
+To open the Windows command line please push the Windows-key and R-key. Now type ``cmd.exe`` in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
 
 .. code-block:: shell-session
 
@@ -212,7 +212,7 @@ Although you can start to use your Nitrokey right away after generating the keys
 Generating a Public Key File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To get a simple file of your public key, you can just use ``gpg2 --armor --export keyID > pubkey.asc``. Use either the fingerprint as “keyID” (look at ``gpg -K`` to get it) or just use your email address as an identifier.
+To get a simple file of your public key, you can just use ``gpg2 --armor --export keyID > pubkey.asc``. Use either the fingerprint as ``keyID`` (look at ``gpg -K`` to get it) or just use your email address as an identifier.
 
 You can carry this file with you or send it to anyone who you like. This file is not secret at all. If you want to use the Nitrokey on another system, you first import this public key via ``gpg2 --import pubkey.asc`` and then types ``gpg2 --card-status`` so that the system knows where to look for this key. That’s all.
 

@@ -1,6 +1,11 @@
 Secure Element SE05x
 ====================
 
+.. spelling:word-list::
+   NXP
+   SE050X
+   EAL
+
 .. contents:: :local:
 
 The Secure Element `SE050 <https://www.nxp.com/products/SE050>`__ is a tamper-resistant chip by NXP Semiconductors that provides advanced security features. It offers hardware-based security functions including cryptographic operations, secure key storage, and protection against physical and logical attacks. The SE05X Secure Element is certified to Common Criteria EAL 6+ security level and implements algorithms like RSA, ECC, AES, and SHA, making it ideal for the Nitrokey 3.
@@ -18,15 +23,22 @@ This is automatically the case after resetting the OpenPGP Card or the entire Ni
 
 To check whether the Secure Element for OpenPGP is activated run:
 
-* nitropy nk3 get-config opcard.use_se050_backend
+.. code-block:: bash
+
+    nitropy nk3 get-config opcard.use_se050_backend
 
 To enable the Secure Element:
 
-* nitropy nk3 set-config opcard.use_se050_backend true
+.. code-block:: bash
+
+    nitropy nk3 set-config opcard.use_se050_backend true
 
 To disable the Secure Element: 
 
-* nitropy nk3 set-config opcard.use_se050_backend false
+.. code-block:: bash
+
+    nitropy nk3 set-config opcard.use_se050_backend false
+
 
 Algorithms
 ----------

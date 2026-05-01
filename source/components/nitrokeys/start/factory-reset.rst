@@ -1,12 +1,16 @@
 Factory Reset
 =============
+
+.. spelling:word-list::
+   CCID
+
 .. contents:: :local:
 
-The multiple identites feature allows to use 3 virtual smart cards in place of one, giving bigger flexibility in the every day use, as well as separation between user identities (business, personal etc.) or even allowing usage of it for more than one user (PINs are separate).
+The multiple identities feature allows to use 3 virtual smart cards in place of one, giving bigger flexibility in the every day use, as well as separation between user identities (business, personal etc.) or even allowing usage of it for more than one user (PINs are separate).
 
-All of the smart cards have separate data objects, meaning they all could have different keys, certificates stored, and PINs set. Identities do not intereact between each other.
+All of the smart cards have separate data objects, meaning they all could have different keys, certificates stored, and PINs set. Identities do not interact between each other.
 
-This means each identity needs to be resetted on its own.
+This means each identity needs to be reset on its own.
 
 Old versions (below 1.2.5) of the firmware might need special treatment (see below). 
 Usage
@@ -45,7 +49,7 @@ Reset
 
 In the menu enter `admin` and then `factory-reset`
 
-This will reset the current identity. To reset  all identitites the following needs to be done:
+This will reset the current identity. To reset all identities the following needs to be done:
 
 .. code-block:: bash
 

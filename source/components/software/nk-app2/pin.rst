@@ -1,5 +1,5 @@
-PIN Managment
-=============
+PIN Management
+==============
 
 To enhance security, PINs can be created to restrict access to FIDO2 credentials and stored passwords.
 
@@ -29,7 +29,7 @@ PIN Management
 Factory Reset
 -------------
 
-A factory reset witll reset the entire ``Passwords`` or ``FIDO2`` feature including all stored credentials. To do so proceed as follows:
+A factory reset will reset the entire ``Passwords`` or ``FIDO2`` feature including all stored credentials. To do so proceed as follows:
 
 1. Open the Nitrokey App 2.
 2. Select your Nitrokey device.

@@ -1,6 +1,9 @@
 Touch Confirmation (UIF)
 ========================
 
+.. spelling:word-list::
+   UIF
+
 .. product-table:: nk3
 
 .. contents:: :local:
@@ -11,7 +14,7 @@ UIF supports 3 modes:
 
 - Disabled: The device never prompts for user presence, which is the default behaviour
 - Enabled: The device always prompts for user presence
-- Permanentaly Enabled: Behaves like Enabled, but can only be reverted to Disabled through a factory-reset
+- Permanently Enabled: Behaves like Enabled, but can only be reverted to Disabled through a factory-reset
 
 Configuration
 -------------

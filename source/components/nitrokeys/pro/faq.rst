@@ -1,6 +1,10 @@
 Nitrokey Pro 2 FAQ
 ==================
 
+.. spelling:word-list::
+   comio
+   scdrand
+
 .. faq:: Which Operating Systems are supported?
 
    Windows, Linux and macOS.
@@ -32,7 +36,7 @@ Nitrokey Pro 2 FAQ
 .. faq:: What is the User PIN for?
 
    The user PIN is at least 6-digits long and is used to get
-   access to the contect of the Nitrokey. This is the PIN you will use a lot in
+   access to the content of the Nitrokey. This is the PIN you will use a lot in
    every day use e.g. for decrypting messages, for unlocking your encrypted
    storage (NK Storage only) etc.
   

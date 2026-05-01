@@ -1,7 +1,6 @@
 Manual Firmware Update
 ======================
 
-
 .. contents:: :local:
 
 .. note::
@@ -21,7 +20,7 @@ To put the Nitrokey Storage manually into Update Mode (without using the Nitroke
 -  The `USB
    Image <https://github.com/Nitrokey/nitrokey-storage-update-boot/releases/latest>`__
    we created for this purpose. Please download only the file ending
-   with “.img.zip”.
+   with ``.img.zip``.
 
 Install Balena Etcher
 ---------------------
@@ -41,7 +40,7 @@ Balena Etcher helps us to install the USB image on the USB stick. Please double 
 Installing the USB image with Balena Etcher
 -------------------------------------------
 
-The program usually opens immediately after installation. If not, you will find a shortcut on the desktop. Using the application, select the `previously downloaded image file <https://github.com/Nitrokey/nitrokey-storage-update-boot/releases>`__, which ends with “.img.zip”. Now insert the USB stick. It should be recognized automatically. Press “Flash!” to proceed.
+The program usually opens immediately after installation. If not, you will find a shortcut on the desktop. Using the application, select the `previously downloaded image file <https://github.com/Nitrokey/nitrokey-storage-update-boot/releases>`__, which ends with ``.img.zip``. Now insert the USB stick. It should be recognized automatically. Press “Flash!” to proceed.
 
 .. figure:: images/firmware-update-manually/3.png
    :alt: img3

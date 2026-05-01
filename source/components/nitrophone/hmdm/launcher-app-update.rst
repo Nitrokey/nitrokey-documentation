@@ -1,13 +1,17 @@
 Launcher App Update
 -------------------
 
+.. spelling:word-list::
+   MDM
+   HMDM
+
 This document describes the update of the Headwind MDM (HMDM) launcher app on the mobile devices.
 
 .. note::
    I you use the HMDM installation hosted by Nitrokey, you can skip to the chapter `Test the new launcher <#test-the-new-launcher>`__.
 
-Prerequisits
-============
+Prerequisites
+=======-=====
 
 - Launcher installation files, provided by Nitrokey.
 - Administrative access to the web panel.

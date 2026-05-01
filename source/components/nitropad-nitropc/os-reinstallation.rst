@@ -36,7 +36,7 @@ Operating System Reinstallation
 7. `Sign the boot
    partition <heads/system-update.html>`_ (Heads only).
 
-To avoid accidential overwriting of valuable data, format the USB drive afterwards.
+To avoid accidental overwriting of valuable data, format the USB drive afterwards.
 
 .. warning::
 

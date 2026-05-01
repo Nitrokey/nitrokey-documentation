@@ -1,6 +1,11 @@
 Firmware Update v1.4+
 =======================
 
+.. spelling:word-list::
+   X230
+   T430
+   SOIC
+
 .. contents:: :local:
 
 Starting with v1.4 due to elementary changes inside Heads and the firmware
@@ -14,7 +19,7 @@ When updating your firmware to 1.4 (without using an external flasher device)
 the graphical HEADS dialogues will be replaced with a less convenient text-only
 version.
 
-If you use Ubuntu, Debian, LinuxMint, or Qubes 4.0 updating the firmware beyond
+If you use Ubuntu, Debian, Linux Mint, or Qubes 4.0 updating the firmware beyond
 v1.3.1 is (as of today) not needed. If you use Qubes 4.1 *without* the
 integrated Ethernet port, you don't need to update the firmware either.
 
@@ -51,7 +56,7 @@ How can I update to *-maximized*?
     you are not exactly knowing what you are doing!
 
     We have a service to do this upgrade on your NitroPad, please
-    write an e-mail to "shop at nitrokey.com" together with your sales order number (SOxxxxxx).
+    write an e-mail to "shop at nitrokey.com" together with your sales order number (``SOxxxxxx``).
 
 The following procedure describes roughly how to flash your NitroPad using
 an external flasher - it is intentionally on a high level as we do not
@@ -65,7 +70,7 @@ we document this here for the curios.
 
 3. Using ``flashrom`` read out the **bottom** flash (the 8MB image)
 
-4. Using ``ifdtool`` (`coreboot ifdtool docs <https://doc.coreboot.org/util/ifdtool/index.html>`__) extract the ``GbE`` flashregion from the 
+4. Using ``ifdtool`` (`coreboot ifdtool docs <https://doc.coreboot.org/util/ifdtool/index.html>`__) extract the ``GbE`` flash region from the 
    image and replace the ``GbE``-region inside your ``-maximized`` image.
 
 5. Split the modified firmware image using ``dd`` (as described in the coreboot documentation) into ``-top`` and ``-bottom``

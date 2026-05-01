@@ -1,6 +1,9 @@
 NitroWall
 =========
 
+.. spelling:word-list::
+   NitroWall
+
 Getting Started
 ---------------
 
@@ -20,8 +23,8 @@ Getting Started
 5. Confirm browser security warning
 6. After logging in you are at the admin dashboard of the NitroWall
 
-   - Login: root
-   - Password: opnsense
+   - Login: ``root``
+   - Password: ``opnsense``
 
 7. Start the system wizard via the menu of the left-hand side: system →  system wizard → setup. The wizard is going through the configuration with you step-by-step.
 
