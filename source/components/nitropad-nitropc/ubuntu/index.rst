@@ -27,8 +27,8 @@ Secure Starting Procedure
 
 Before the first start you should get familiar with the `Secure Starting Procedure <../secure-starting-procedure.html>`__.
 
-Workaround Ubuntu 24.04.
-------------------------
+Workaround Ubuntu 26.04 & 24.04.
+--------------------------------
 
 There is an (`issue <https://github.com/linuxboot/heads/issues/1641>`__)that prevents Ubuntu to show the luks decryption screen if started with heads. Its there and you can type in your password blindly, after that Ubuntu starts normal. 
 Follow these Steps: 
