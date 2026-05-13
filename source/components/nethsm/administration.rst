@@ -99,7 +99,7 @@ The boot mode can be changed as follows. At next boot, the NetHSM will behave ac
 State
 ~~~~~
 
-The NetHSM software has four states: *Unprovisioned*, *Provisioned*, *Locked*, and *Operational*.
+The NetHSM software has five states: *Unprovisioned*, *Provisioned*, *Locked*, *Operational* and *Failed*.
 
 +-----------------+-------------------------------------------------------------------------+
 | State           | Description                                                             |
@@ -115,6 +115,9 @@ The NetHSM software has four states: *Unprovisioned*, *Provisioned*, *Locked*, a
 | *Locked*        | NetHSM with configuration but encrypted and inaccessible data stores.   |
 |                 | Typically, the next step is to unlock the system. The *Locked* state    |
 |                 | implies the *Provisioned* state.                                        |
++-----------------+-------------------------------------------------------------------------+
+| *Failed*        | NetHSM with a currently unavailable database                            |
+|                 | (see :ref:`recovering-a-failed-node`).                                  |
 +-----------------+-------------------------------------------------------------------------+
 
 .. figure:: ./images/states.svg

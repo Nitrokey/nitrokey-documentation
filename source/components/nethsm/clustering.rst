@@ -4,7 +4,6 @@ Clustering
 .. note::
    This feature is currently a technical preview with the following temporary limitations:
 
-   - If a cluster is lost (quorum is lost), the only means of recovery is factory-reset + restore. Make sure to back up often. Future releases will include means to recover from on-disk data.
    - Active/passive setup to support two-node clusters, either by utilizing etcd Learner or Mirror, is not yet available.
    - System time between nodes must be manually synchronized for now. A future release will include automatic clock sync.
 
@@ -25,11 +24,11 @@ One Node Goes Down and Quorum is Still Reached
 
 In a 3-node cluster, if one node fails (crashes or becomes unreachable due to network conditions), the two other nodes will continue to work and serve requests.
 
-If the failed node is still healthy (e.g. it was just a network problem), it will be inoperable while isolated (not even read-only).
+If the failed node is still healthy (e.g. it was just a network problem), it will be in the _Failed_ state while isolated, refusing normal operations (not even read-only).
 
-However if the node recovers, it will cleanly resynchronize with the rest of the cluster and becomes operable again, without losing data.
+However if the node recovers, it will cleanly resynchronize with the rest of the cluster and become operable again, without losing data.
 
-If it never recovers, it has to be removed from the cluster (see next section), factory reset, and go through the join process again from scratch.
+If it never recovers, it has to be removed from the cluster (see :ref:`removing-a-node-cleanly`) and either undergo recovery (see :ref:`recovering-a-failed-node`) to access its data (but it will not be part of the cluster anymore), or be factory reset and go through the join process again from scratch.
 
 A Network Partition Happens and Quorum is Still Reached
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -37,13 +36,15 @@ A Network Partition Happens and Quorum is Still Reached
 This is just a generalization of the previous scenario. In a 5-node cluster where e.g. 3 nodes are in one physical location A and 2 nodes are in another location B, a network problem isolating A and B would mean the following:
 
 - The 3 nodes in location A are meeting the quorum (3 in this case), so they continue to operate.
-- The 2 nodes in location B are **not** meeting the quorum (still 3), so they will stop operating (even read-only).
+- The 2 nodes in location B are **not** meeting the quorum (still 3), so they will enter the _Failed_ state and stop operating (even read-only).
 - If the network issue is resolved, the 2 nodes will cleanly join back the 3 others.
+
+.. _lost-quorum:
 
 The Quorum is Durably Lost
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A failure causing all subsets of the cluster to lose quorum will render the cluster and its data completely lost, unless the failure is resolved. In this case, nodes must be factory-reset and a backup must be restored.
+A failure causing all subsets of the cluster to lose quorum will render the cluster completely inoperable (all remaining nodes will be in the _Failed_ state), unless the failure is resolved. In this case, manual recovery must be performed (see :ref:`recovering-a-failed-node`).
 
 This can happen for example if a single node fails in a 2-node cluster (where the quorum is 2). In this situation, the failed node cannot be cleanly removed from the cluster after the fact, because the remaining healthy node is already inoperable since it has lost quorum.
 
@@ -249,7 +250,7 @@ Depending on the networking and cluster conditions, this operation may take a fe
 If this join is successful, the node will end up in a ``Locked`` state, and has to be unlocked with the unlock passphrase of the node that was used for registration. Afterwards the unlock passphrase can be changed (unlock passphrases remain node-specific and are not shared across nodes).
 
 .. note::
-   Even after the join has succeeded, if the cluster's database is large or if the cluster is busy, it may take some time for the new joiner to synchronize its state fully. During that time, all nodes (including in particular the new joiner) may be less responsive or unresponsive. The new joiner in particular may initially return errors when trying to unlock it for example. In that case, give it some time and try again.
+   Even after the join has succeeded, if the cluster's database is large or if the cluster is busy, it may take some time for the new joiner to synchronize its state fully. During that time, all nodes (including in particular the new joiner) may be less responsive or unresponsive (in the _Failed_ state). The new joiner in particular may initially return errors when trying to unlock it for example. In that case, give it some time and try again. You can use the `/health/diagnose` endpoint to understand the current status of the database.
 
 Adding a Witness Node
 ---------------------
@@ -387,6 +388,8 @@ This operation remains compatible with backups made on previous versions of the 
 
    In other words, only perform a restore in a cluster with backups done in the same cluster (though again nodes may have been removed or added since). If you want to restore a foreign backup on a node, first safely remove it from its cluster, then factory reset it and restore the backup.
 
+.. _removing-a-node-cleanly:
+
 Removing a Node Cleanly
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -394,7 +397,54 @@ As long as some part of the cluster is still meeting quorum, any of its members 
 
 You first have to know the ID of the node you want to remove, by listing all nodes through ``GET /cluster/members`` and looking for the right one.
 
-Then it can be removed by calling ``DELETE /cluster/members/<id>``. If the node in question was still healthy, this will isolate it from the rest of the cluster and render it inoperable.
+Then it can be removed by calling ``DELETE /cluster/members/<id>``. If the node in question was still healthy, this will isolate it from the rest of the cluster and transition it to the _Failed_ state.
+
+.. _recovering-a-failed-node:
+
+Recovering a Failed Node
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+A node reporting a _Failed_ state will refuse to answer most normal operations.
+It can still be shut-down, rebooted, reset, *diagnosed* or *isolated*.
+
+.. warning::
+   The existence of the _Failed_ state, ``diagnose`` and ``force-new`` operations
+   only applies to version 4.1 and onward. In version 4.0, a node with a
+   lost quorum will stop responding to *all* requests. It *must* be factory-reset.
+
+Common causes for a node to be in the _Failed_ state include:
+- a durably lost quorum (see :ref:`lost-quorum`)
+- a temporarily lost quorum (e.g. when adding a second node to the cluster, and
+  the second node has not joined yet)
+- ``etcd`` is currently restarting (e.g. because the certificates have changed, or
+  the network has been re-configured)
+- the cluster is under a very high load (e.g. during the restoration of a very
+  large backup)
+
+To help you understand which case your node is in, the ``GET /health/diagnose``
+endpoint remains available and returns information about the current status of
+``etcd`` and its database, including logs (refer to the API documentation).
+
+.. note::
+   If and when ``etcd`` becomes available again (e.g. the quorum is restored
+   because the network issue has been solved), the NetHSM will automatically
+   transition out of the _Failed_ state to the state it was in before (or resume
+   the normal boot sequence if it was booting), without any manual action
+   needed.
+
+If you conclude that the failure is durable (e.g. lost quorum with no hope of
+resolving the underlying condition), you can either:
+- *factory-reset* the node, which will erase all data, and restore a backup.
+- *isolate* the node with the ``POST /cluster/force-new`` endpoint, which will
+  irreversibly forget all other cluster members and restart ``etcd`` with the
+  data present on disk. If the underlying failure was cluster-related, the node
+  will transition out of the _Failed_ state.
+
+.. note::
+   If a node is isolated with ``force-new``, it will now be desynchronized with
+   the cluster: any new writes on it or the cluster cannot be reconciled. The
+   node can still re-join the cluster, but will lose all its local
+   modifications.
 
 Software Updates in Clusters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
