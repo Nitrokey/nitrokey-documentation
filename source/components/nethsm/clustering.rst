@@ -421,6 +421,11 @@ Common causes for a node to be in the _Failed_ state include:
 - the cluster is under a very high load (e.g. during the restoration of a very
   large backup)
 
+No matter the cause, the NetHSM will only transition to the _Failed_ state after
+a number of unsuccessful attempts to interact with ``etcd``, which can take a
+few dozens of seconds. This is to avoid spurious transitions caused by very
+short instabilities.
+
 To help you understand which case your node is in, the ``GET /health/diagnose``
 endpoint remains available and returns information about the current status of
 ``etcd`` and its database, including logs (refer to the API documentation).
@@ -430,15 +435,17 @@ endpoint remains available and returns information about the current status of
    because the network issue has been solved), the NetHSM will automatically
    transition out of the _Failed_ state to the state it was in before (or resume
    the normal boot sequence if it was booting), without any manual action
-   needed.
+   needed. It may take a dozen of seconds after the issue has been resolved to
+   detect the resolution and change state.
 
 If you conclude that the failure is durable (e.g. lost quorum with no hope of
 resolving the underlying condition), you can either:
 - *factory-reset* the node, which will erase all data, and restore a backup.
 - *isolate* the node with the ``POST /cluster/force-new`` endpoint, which will
-  irreversibly forget all other cluster members and restart ``etcd`` with the
-  data present on disk. If the underlying failure was cluster-related, the node
-  will transition out of the _Failed_ state.
+  irreversibly forget all other cluster members, recover the ``etcd`` data
+  present on disk and reboot. If the underlying failure was cluster-related, the
+  node will follow the normal boot sequence and end up in either _Locked_ or
+  _Operational_ depending on the unattended boot setting.
 
 .. note::
    If a node is isolated with ``force-new``, it will now be desynchronized with
