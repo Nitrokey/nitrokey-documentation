@@ -28,7 +28,7 @@ If the failed node is still healthy (e.g. it was just a network problem), it wil
 
 However if the node recovers, it will cleanly resynchronize with the rest of the cluster and exit the _Failed_ state, resuming normal operation without losing data.
 
-If it never recovers, it has to be removed from the cluster (see :ref:`removing`) and either undergo recovery (see :ref:`recovering`) to access its data (but it will not be part of the cluster anymore), or be factory reset and go through the join process again from scratch.
+If it never recovers, it has to be :ref:`removed <removing>` from the cluster and either undergo :ref:`recovery <recovering>` to access its data (but it will not be part of the cluster anymore), or be factory reset and go through the join process again from scratch.
 
 A Network Partition Happens and Quorum is Still Reached
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,7 +44,7 @@ This is just a generalization of the previous scenario. In a 5-node cluster wher
 The Quorum is Durably Lost
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A failure causing all subsets of the cluster to lose quorum will render the cluster completely inoperable (all remaining nodes will be in the _Failed_ state), unless the failure is resolved. In this case, manual recovery must be performed (see :ref:`recovering`).
+A failure causing all subsets of the cluster to lose quorum will render the cluster completely inoperable (all remaining nodes will be in the _Failed_ state), unless the failure is resolved. In this case, manual :ref:`recovery <recovering>` must be performed.
 
 This can happen for example if a single node fails in a 2-node cluster (where the quorum is 2). In this situation, the failed node cannot be cleanly removed from the cluster after the fact, because the remaining healthy node is already inoperable since it has lost quorum.
 
@@ -413,7 +413,7 @@ It can still be shut-down, rebooted, reset, *diagnosed* or *isolated*.
    lost quorum will stop responding to *all* requests. It *must* be factory-reset.
 
 Common causes for a node to be in the _Failed_ state include:
-- A durably lost quorum (see :ref:`lost-quorum`).
+- A durably :ref:`lost quorum <lost-quorum>`.
 - A temporarily lost quorum (e.g. when adding a second node to the cluster, and
   the second node has not joined yet).
 - ``etcd`` is currently restarting (e.g. because the certificates have changed, or
