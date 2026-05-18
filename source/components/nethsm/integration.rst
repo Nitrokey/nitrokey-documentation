@@ -1,7 +1,9 @@
 Integration
 ===========
 
-The chapter describes processes for various tasks and aims at all user groups.
+This chapter describes how to integrate NetHSM into applications and how to test that integration.
+If you are searching for software, which already integrates well with NetHSM, here is a
+`list of compatible software. <compatible/index.html>`__
 
 REST-API
 ~~~~~~~~
