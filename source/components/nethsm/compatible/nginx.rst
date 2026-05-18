@@ -81,7 +81,7 @@ libnethsm_pkcs11 Configuration
          username: "operator"
          password: "opPassphrase"
 
-To secure the password you can provide it via an `environment variable <pkcs11-setup.html#passwords>`__) or provide it in the nginx configuration:
+To secure the password you can provide it via an `environment variable <../pkcs11-setup.html#passwords>`__) or provide it in the nginx configuration:
 
 .. code-block:: nginx
 
@@ -96,11 +96,11 @@ If you want to experiment with the `given example <https://github.com/Nitrokey/n
 .. warning::
    Running the generate script deletes the ``webserver`` key and replaces it.
 
-1. Configure a NetHSM, either a real one or a container. See the `getting-started guide <getting-started.html>`__ for more information. Besides an administrator, you are going to need an operator account.
+1. Configure a NetHSM, either a real one or a container. See the `getting-started guide <../getting-started.html>`__ for more information. Besides an administrator, you are going to need an operator account.
 2. Download and install the latest version of the nethsm-pkcs11 driver `available from here <https://github.com/Nitrokey/nethsm-pkcs11/releases>`__.
 3. Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual <openssl.html>`__. You do not need to create a configuration file.
 4. Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and ``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that ``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the corresponding password. Further configure the absolute path of the OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``.
-5. Create a NetHSM PKCS11 configuration file in one of the `known locations <pkcs11-setup.html#configuration>`__, e.g., ``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator account and use the same NetHSM instance specified in the generate script before.
+5. Create a NetHSM PKCS11 configuration file in one of the `known locations <../pkcs11-setup.html#configuration>`__, e.g., ``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator account and use the same NetHSM instance specified in the generate script before.
 6. Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` with your NetHSMs URL and valid operator credentials. 
 7. Generate the certificate and key.
   

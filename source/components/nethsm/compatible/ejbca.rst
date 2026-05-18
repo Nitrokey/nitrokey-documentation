@@ -11,7 +11,7 @@ EJBCA Community
 
 EJBCA Community Edition is an open source PKI Certificate Authority software.
 
-To be able to use NetHSM with EJBCA CE you need to `setup <pkcs11-setup.html>`__ the NetHSM PKCS#11 module first.
+To be able to use NetHSM with EJBCA CE you need to `setup <../pkcs11-setup.html>`__ the NetHSM PKCS#11 module first.
 
 Then configure EJBCA to use the NetHSM PKCS#11 module by adding an entry in the ``/etc/ejbca/conf/web.properties`` file:
 

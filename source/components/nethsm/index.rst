@@ -33,13 +33,7 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Getting Star
    faq.rst
    pkcs11-setup.rst
    pkcs11-tool.rst
-   openssl.rst
-   nginx.rst
-   apache.rst
-   ssh.rst
    system_recovery.rst
-   opendnssec.rst
-   ejbca.rst
-   knotdns.rst
    pkiproxy.rst
    container/index.rst
+   compatible/index.rst

@@ -16,7 +16,7 @@ Engine
 
 The OpenSSL engine interface is the old way to implement custom backends for OpenSSL and it is deprecated in OpenSSL 3. This is still the most stable way to use the NetHSM with OpenSSL.
 
-You will need to setup the PKCS#11 module, following `these instructions <pkcs11-setup.html>`__.
+You will need to setup the PKCS#11 module, following `these instructions <../pkcs11-setup.html>`__.
 
 Install the engine:
 
@@ -98,7 +98,7 @@ Provider
 
 The OpenSSL provider interface is the new way to implement custom backends for OpenSSL. The `pkcs11-provider backend <https://github.com/latchset/pkcs11-provider>`__ is still in an early stage of development.
 
-You will need to setup the PKCS#11 module, following `these instructions <pkcs11-setup.html>`__.
+You will need to setup the PKCS#11 module, following `these instructions <../pkcs11-setup.html>`__.
 
 Install the provider. For Fedora a package named ``pkcs11-provider`` exists. For other Linux distributions you will need to `build it from source <https://github.com/latchset/pkcs11-provider/blob/main/BUILD.md>`__.
 
