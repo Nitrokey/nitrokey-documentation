@@ -17,7 +17,9 @@ Operational Redundancy
 We will call "node" a NetHSM that is expected to be part of a cluster.
 **A cluster of** ``N`` **nodes will continue to operate as long as at least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal amount of healthy, reachable nodes is called the **quorum**.
 
-This implies the following scenarios.
+On a cluster that goes below this threshold (e.g. because of a network issue),
+no leader can be elected and the local instance of ``etcd`` on each node becomes
+unable to perform reads and writes. This implies the following scenarios.
 
 One Node Goes Down and Quorum is Still Reached
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
