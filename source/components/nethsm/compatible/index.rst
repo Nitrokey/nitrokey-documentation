@@ -10,9 +10,11 @@ However, NetHSM can be integrated into almost any software via the `API or the P
    :glob:
 
    apache.rst
+   cascade.rst
    ejbca.rst
    knotdns.rst
    nginx.rst
+   openbao.rst
    opendnssec.rst
    openssl.rst
    ssh.rst
