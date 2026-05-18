@@ -26,9 +26,9 @@ In a 3-node cluster, if one node fails (crashes or becomes unreachable due to ne
 
 If the failed node is still healthy (e.g. it was just a network problem), it will be in the _Failed_ state while isolated, refusing normal operations (not even read-only).
 
-However if the node recovers, it will cleanly resynchronize with the rest of the cluster and become operable again, without losing data.
+However if the node recovers, it will cleanly resynchronize with the rest of the cluster and exit the _Failed_ state, resuming normal operation without losing data.
 
-If it never recovers, it has to be removed from the cluster (see :ref:`removing-a-node-cleanly`) and either undergo recovery (see :ref:`recovering-a-failed-node`) to access its data (but it will not be part of the cluster anymore), or be factory reset and go through the join process again from scratch.
+If it never recovers, it has to be removed from the cluster (see :ref:`removing`) and either undergo recovery (see :ref:`recovering`) to access its data (but it will not be part of the cluster anymore), or be factory reset and go through the join process again from scratch.
 
 A Network Partition Happens and Quorum is Still Reached
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -44,7 +44,7 @@ This is just a generalization of the previous scenario. In a 5-node cluster wher
 The Quorum is Durably Lost
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A failure causing all subsets of the cluster to lose quorum will render the cluster completely inoperable (all remaining nodes will be in the _Failed_ state), unless the failure is resolved. In this case, manual recovery must be performed (see :ref:`recovering-a-failed-node`).
+A failure causing all subsets of the cluster to lose quorum will render the cluster completely inoperable (all remaining nodes will be in the _Failed_ state), unless the failure is resolved. In this case, manual recovery must be performed (see :ref:`recovering`).
 
 This can happen for example if a single node fails in a 2-node cluster (where the quorum is 2). In this situation, the failed node cannot be cleanly removed from the cluster after the fact, because the remaining healthy node is already inoperable since it has lost quorum.
 
@@ -388,7 +388,7 @@ This operation remains compatible with backups made on previous versions of the 
 
    In other words, only perform a restore in a cluster with backups done in the same cluster (though again nodes may have been removed or added since). If you want to restore a foreign backup on a node, first safely remove it from its cluster, then factory reset it and restore the backup.
 
-.. _removing-a-node-cleanly:
+.. _removing:
 
 Removing a Node Cleanly
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -399,7 +399,7 @@ You first have to know the ID of the node you want to remove, by listing all nod
 
 Then it can be removed by calling ``DELETE /cluster/members/<id>``. If the node in question was still healthy, this will isolate it from the rest of the cluster and transition it to the _Failed_ state.
 
-.. _recovering-a-failed-node:
+.. _recovering:
 
 Recovering a Failed Node
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -413,30 +413,30 @@ It can still be shut-down, rebooted, reset, *diagnosed* or *isolated*.
    lost quorum will stop responding to *all* requests. It *must* be factory-reset.
 
 Common causes for a node to be in the _Failed_ state include:
-- a durably lost quorum (see :ref:`lost-quorum`)
-- a temporarily lost quorum (e.g. when adding a second node to the cluster, and
-  the second node has not joined yet)
+- A durably lost quorum (see :ref:`lost-quorum`).
+- A temporarily lost quorum (e.g. when adding a second node to the cluster, and
+  the second node has not joined yet).
 - ``etcd`` is currently restarting (e.g. because the certificates have changed, or
-  the network has been re-configured)
-- the cluster is under a very high load (e.g. during the restoration of a very
-  large backup)
+  the network has been re-configured).
+- The cluster is under a very high load (e.g. during the restoration of a very
+  large backup).
 
 No matter the cause, the NetHSM will only transition to the _Failed_ state after
-a number of unsuccessful attempts to interact with ``etcd``, which can take a
-few dozens of seconds. This is to avoid spurious transitions caused by very
-short instabilities.
+no less than a full minute of unsuccessful attempts to interact with its
+database. This is to avoid spurious transitions caused by very short
+instabilities.
 
 To help you understand which case your node is in, the ``GET /health/diagnose``
 endpoint remains available and returns information about the current status of
 ``etcd`` and its database, including logs (refer to the API documentation).
 
 .. note::
-   If and when ``etcd`` becomes available again (e.g. the quorum is restored
+   If and when the database becomes available again (e.g. the quorum is restored
    because the network issue has been solved), the NetHSM will automatically
    transition out of the _Failed_ state to the state it was in before (or resume
    the normal boot sequence if it was booting), without any manual action
-   needed. It may take a dozen of seconds after the issue has been resolved to
-   detect the resolution and change state.
+   needed. It will take up to a minute after the issue has been resolved for the
+   cluster to stabilize, the HSM to detect the resolution and to change state.
 
 If you conclude that the failure is durable (e.g. lost quorum with no hope of
 resolving the underlying condition), you can either:
