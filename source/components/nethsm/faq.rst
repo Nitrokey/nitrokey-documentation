@@ -38,3 +38,8 @@ Frequently Asked Questions (FAQ)
    * Further separations and hardenings
    * Performance improvements
    * Remote attestation
+
+.. faq:: Does NetHSM work with Software X?
+
+   If the software supports `PKCS#11 or can talk to a REST API <integration.html>`__ the answer is most likely yes.
+   There is also already a list of `compatible and tested software <compatible/index.html>`__.
