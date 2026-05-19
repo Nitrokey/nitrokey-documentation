@@ -23,7 +23,7 @@ The PIN for FIDO2 can be set with `Nitropy <../../software/nitropy/index.html>`_
     The PIN has retry counter of 8 attempts. After 8 attempts, it is locked and the FIDO feature needs to be reset change the PIN.
     To prevent accidental lock of the PIN, the device needs to be unplugged and replugged every 3 attempts.
 
-. note::
+.. note::
     The *FIDO2 PIN* must have a minimal length of 4 characters and maximal length of 63 characters.
     It can contain alphanumeric characters.
 
