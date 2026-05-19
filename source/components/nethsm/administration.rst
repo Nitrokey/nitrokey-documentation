@@ -117,7 +117,7 @@ The NetHSM software has five states: *Unprovisioned*, *Provisioned*, *Locked*, *
 |                 | implies the *Provisioned* state.                                        |
 +-----------------+-------------------------------------------------------------------------+
 | *Failed*        | NetHSM with a currently unavailable database                            |
-|                 | (see :ref:`recovering-a-failed-node`).                                  |
+|                 | (see :ref:`recovering`).                                                |
 +-----------------+-------------------------------------------------------------------------+
 
 .. figure:: ./images/states.svg

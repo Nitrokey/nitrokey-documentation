@@ -41,6 +41,10 @@ This is just a generalization of the previous scenario. In a 5-node cluster wher
 - The 2 nodes in location B are **not** meeting the quorum (still 3), so they will enter the _Failed_ state and stop operating (even read-only).
 - If the network issue is resolved, the 2 nodes will cleanly join back the 3 others.
 
+In other words, a worst-case network partition (in a cluster with an odd number of
+nodes) will leave the bigger half of the cluster healthy, and the smaller half
+inoperable until the partition is resolved.
+
 .. _lost-quorum:
 
 The Quorum is Durably Lost
@@ -411,7 +415,7 @@ It can still be shut-down, rebooted, reset, *diagnosed* or *isolated*.
 
 .. warning::
    The existence of the _Failed_ state, ``diagnose`` and ``force-new`` operations
-   only applies to version 4.1 and onward. In version 4.0, a node with a
+   only applies to version 5.0 and onward. In version 4.0, a node with a
    lost quorum will stop responding to *all* requests. It *must* be factory-reset.
 
 Common causes for a node to be in the _Failed_ state include:
@@ -442,12 +446,12 @@ endpoint remains available and returns information about the current status of
 
 If you conclude that the failure is durable (e.g. lost quorum with no hope of
 resolving the underlying condition), you can either:
-- *factory-reset* the node, which will erase all data, and restore a backup.
-- *isolate* the node with the ``POST /cluster/force-new`` endpoint, which will
+- *Factory-reset* the node, which will erase all data, and restore a backup.
+- *Isolate* the node with the ``POST /cluster/force-new`` endpoint, which will
   irreversibly forget all other cluster members, recover the ``etcd`` data
   present on disk and reboot. If the underlying failure was cluster-related, the
-  node will follow the normal boot sequence and end up in either _Locked_ or
-  _Operational_ depending on the unattended boot setting.
+  node will follow the normal boot sequence and end up in either the _Locked_ or
+  _Operational_ state depending on the unattended boot setting.
 
 .. note::
    If a node is isolated with ``force-new``, it will now be desynchronized with
