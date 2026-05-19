@@ -21,7 +21,7 @@ PIN Management
 4. On the left-hand side of the ``SETTINGS`` tab, a tree structure with various options is available.
 5. Select ``Passwords`` or ``FIDO2``
 6. Select ``Pin Change``
-7. To set the PIN, enter the new PIN and repeat it in the provided boxes. To change an existing PIN, enter the current PIN in the box provided. The minimum PIN length is 4 characters.
+7. To set the PIN, enter the new PIN and repeat it in the provided boxes. To change an existing PIN, enter the current PIN in the box provided. The minimum PIN length is 4 characters and the maximum is 63.
 8. Select the ``SAVE`` button. If the ``SAVE`` button is greyed out, the entries are not correct. When you hover over the ``SAVE`` button, the reasons are displayed. The ``PIN_INVALID`` error message, when changing the PIN, indicates that the current PIN is incorrect. 
 
 .. figure:: ./images/FIDO2-menu.png
