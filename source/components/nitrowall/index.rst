@@ -55,5 +55,4 @@ Getting Started
    :glob:
 
    sealed-hardware.rst
-   firmware-update-nw678.rst
    faq-opnsense.rst
