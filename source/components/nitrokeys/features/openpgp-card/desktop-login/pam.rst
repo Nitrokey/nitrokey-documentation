@@ -58,4 +58,5 @@ Please be aware that you have to insert your Application ID in the line above wi
 
 ECC Keys
 ''''''''
-Unfortunately, Poldi has no support for ECC keys yet. But there is a `patch for ECC keys used with Nitrokey Start <https://dev.gnupg.org/T4009>`__. This is already included in the master branch of the Poldi development repository and thus will be released in a newer version eventually. In the meantime the only option is to build Poldi from source.
+
+The use of ECC keys requires at least Poldi version `0.4.2`.

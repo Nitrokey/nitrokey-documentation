@@ -34,7 +34,7 @@ URL bar in your browser might look like this:
 In this case the local IP has been used (``192.168.10.50``), this is specific to your
 local network and equal to ``nextbox.local``. The *not secure* and the warning sign
 transports the information that your connection is **not encrypted**, thus using 
-*http* instead of *https*. For more you can read: `HTTP vs. HTTPS`_.
+*http* instead of *https*.
 
 Obviously, access to the NextBox should be secure, thus encrypted using *https*.
 This guide covers the different approaches to reach this goal, depending on 
@@ -175,7 +175,6 @@ If you encounter problems, please read the other articles inside the
 
 
 .. _deSEC: https://desec.io/
-.. _HTTP vs. HTTPS: https://www.guru99.com/difference-http-vs-https.html
 .. _TLS: https://en.wikipedia.org/wiki/Transport_Layer_Security
 .. _HTTPS: https://en.wikipedia.org/wiki/HTTPS
 .. _CA: https://en.wikipedia.org/wiki/Certificate_authority
