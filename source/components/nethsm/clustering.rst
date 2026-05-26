@@ -4,9 +4,9 @@ Clustering
 .. note::
    This feature is currently a technical preview with the following temporary limitations:
 
-   - If a cluster is lost (quorum is lost), the only means of recovery is factory-reset + restore. Make sure to back up often. Future releases will include means to recover from on-disk data.
-   - Active/passive setup to support two-node clusters, either by utilizing etcd Learner or Mirror, is not yet available.
-   - System time between nodes must be manually synchronized for now. A future release will include automatic clock sync.
+   * If a cluster is lost (quorum is lost), the only means of recovery is factory-reset + restore. Make sure to back up often. Future releases will include means to recover from on-disk data.
+   * Active/passive setup to support two-node clusters, either by utilizing etcd Learner or Mirror, is not yet available.
+   * System time between nodes must be manually synchronized for now. A future release will include automatic clock sync.
 
 NetHSM 4.0 onwards supports clustering to synchronize data between several NetHSMs directly. This supports high frequency of key generations, realizes high-availability and load balancing. A NetHSM cluster is based on `etcd <https://etcd.io>`__ which uses the `Raft consensus algorithm <https://raft.github.io/>`__ for strong consistency. This ensures that the data (e.g. keys) is correct in all NetHSMs at all times.
 
@@ -36,9 +36,9 @@ A Network Partition Happens and Quorum is Still Reached
 
 This is just a generalization of the previous scenario. In a 5-node cluster where e.g. 3 nodes are in one physical location A and 2 nodes are in another location B, a network problem isolating A and B would mean the following:
 
-- The 3 nodes in location A are meeting the quorum (3 in this case), so they continue to operate.
-- The 2 nodes in location B are **not** meeting the quorum (still 3), so they will stop operating (even read-only).
-- If the network issue is resolved, the 2 nodes will cleanly join back the 3 others.
+* The 3 nodes in location A are meeting the quorum (3 in this case), so they continue to operate.
+* The 2 nodes in location B are **not** meeting the quorum (still 3), so they will stop operating (even read*only).
+* If the network issue is resolved, the 2 nodes will cleanly join back the 3 others.
 
 The Quorum is Durably Lost
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,8 +74,8 @@ However, with the exception of the config version (``/config/version``, which sh
 
 Note however that a malicious node can:
 
-- write garbage as the value for any entry in the store, which will cause nodes to fail decrypting it (which may lead to crashes for some system entries).
-- list entry names such as users, namespaces and keys, which you may consider sensitive.
+* Write garbage as the value for any entry in the store, which will cause nodes to fail decrypting it (which may lead to crashes for some system entries).
+* List entry names such as users, namespaces and keys, which you may consider sensitive.
 
 What is Shared Between Nodes
 ----------------------------
@@ -96,13 +96,13 @@ The following data is stored in ``etcd`` in different scopes for each node. It i
 
 Configuration:
 
-- TLS certificates
-- clock configuration
-- network configuration
-- logging configuration
-- unattended boot configuration
-- unlock salt (so each node has its own unlock passphrase)
-- locked domain key
+* TLS certificates
+* Clock configuration
+* Network configuration
+* Logging configuration
+* Unattended boot configuration
+* Unlock salt (so each node has its own unlock passphrase)
+* Locked domain key
 
 Note that while each node has its own version of the locked domain key (because each node locks it with its own device key or unlock passphrase), the underlying domain key is **shared** across nodes (to access their shared HSM data, such as keys).
 
@@ -113,15 +113,15 @@ All the following data is stored in ``etcd`` in the global scope, so it is unifo
 
 HSM data:
 
-- keys
-- users
-- namespaces
+* Keys
+* Users
+* Namespaces
 
 Configuration:
 
-- config/domain store version
-- cluster CA (used to authenticate nodes across cluster)
-- backup passphrase and backup salt
+* Config/domain store version
+* Cluster CA (used to authenticate nodes across cluster)
+* Backup passphrase and backup salt
 
 Note that for now the config/domain store version can only be version 1 (if your software version supports clustering, then that is what you have). Refer to the `Software Updates in Clusters`_ section for more details on the safety of installing software updates within a cluster.
 
@@ -163,7 +163,7 @@ To do this, first generate a Certificate Signing Request (CSR) from the node wit
 .. note::
    To properly authenticate nodes, the clustering backend (etcd) expects that each node has a certificate with a properly filled Subject Alt Names (SAN) field. In particular, nodes expected to be reached only via their IP need to have a proper IP SAN in their certificate. IP SANs can be requested for the CSR by prefixing "IP:" to the names, as in ``openssl``:
 
-   .. code-block::
+   .. code-block:: text
 
       "subjectAltNames": [ "normalname.org", "IP:192.168.1.1" ]
 
@@ -191,8 +191,8 @@ Adding a New Node
 
 Adding a node to a cluster is done in two steps:
 
-- register the addition to the cluster (through any one of its members)
-- tell the new node to join
+* Register the addition to the cluster (through any one of its members)
+* Tell the new node to join
 
 Configure a Backup Passphrase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
