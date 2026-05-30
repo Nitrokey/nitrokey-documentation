@@ -5,7 +5,7 @@ Full-Disk Encryption With cryptsetup/LUKS
 
 .. contents:: :local:
 
-.. warning::
+.. note::
 
    This guide is currently deprecated.
 
