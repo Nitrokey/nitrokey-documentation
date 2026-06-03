@@ -518,6 +518,10 @@ Metrics
 The NetHSM logs metrics of system parameters.
 Please refer to `Metrics <metrics.html>`__ to learn more about each metric.
 
+.. note::
+   The availability of metrics depends on the platform.
+   Some metrics are only available on hardware or in the software container.
+
 The metrics can be retrieved as follows.
 
 .. tabs::
