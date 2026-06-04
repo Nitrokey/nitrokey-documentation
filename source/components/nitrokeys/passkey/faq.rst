@@ -41,5 +41,5 @@ Nitrokey Passkey FAQ
 
 .. faq:: Why does the Nitrokey Passkey not show up in Nitrokey App?
 
-   The Nitrokey Passkey is not supported by the Nitrokey App 1 and 2.
+   The Nitrokey Passkey is not supported by the Nitrokey App 1.
 
