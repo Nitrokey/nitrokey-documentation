@@ -20,7 +20,7 @@ FIDO2
 The PIN for FIDO2 can be set with `Nitropy <../../software/nitropy/index.html>`__, operating system native apps, or a webbrowser such as Chrom(e|ium).
 
 .. warning::
-    The PIN has retry counter of 8 attempts. After 8 attempts, it is locked and the FIDO feature needs to be reset which will delete all the saved FIDO2 credentials.
+    The PIN has a retry counter of eight attempts. After eight attempts, the PIN is locked and the FIDO feature must be reset, which deletes all saved FIDO2 credentials.
     To prevent accidental lock of the PIN, the device needs to be unplugged and replugged every 3 attempts.
 
 .. note::
