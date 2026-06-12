@@ -4,8 +4,8 @@ Set PINs
 ========
 
 .. spelling:word-list::
-   Chrom
-   ium
+   Chrome
+   Chromium
    PUK
 
 The Nitrokey 3 has distinct PINs for each feature.
@@ -22,7 +22,7 @@ The Nitrokey 3 has distinct PINs for each feature.
 FIDO2
 -----
 
-The PIN for FIDO2 can be set with `Nitropy <../../software/nitropy/index.html>`__, operating system native apps, or a web browser such as Chrom(e|ium).
+The PIN for FIDO2 can be set with `Nitropy <../../software/nitropy/index.html>`__, operating system native apps, or a web browser such as Chrome/Chromium.
 
 .. warning::
     The PIN has a retry counter of eight attempts. After eight attempts, the PIN is locked and the FIDO feature must be reset, which deletes all saved FIDO2 credentials.
@@ -49,12 +49,12 @@ The PIN for FIDO2 can be set with the `Nitropy <../../software/nitropy/index.htm
 
 .. start-fido2-chromeium
 
-Setting PIN with the Chrom(e|ium) web browser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setting PIN with the Chrome/Chromium web browser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-# Chrom(e|ium) - Linux, Mac OS, and Windows
+# Chrome/Chromium - Linux, Mac OS, and Windows
 
-1. Open Chrom(e|ium).
+1. Open Chrome/Chromium.
 2. Open the menu with the three dots in the top right of the menubar.
 3. Click on "Settings".
 4. In the menubar on the left click on "Privacy and security".

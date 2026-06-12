@@ -26,7 +26,7 @@ everyday smartphone with more apps we recommend:
 3. Many apps work without Google Play Services. However, if you want to use apps
    that require Google Play Services, you can install `Google Play Services in a sandbox <https://grapheneos.org/usage#sandboxed-google-play>`__ as follows.
 
-   1. Open Graphene's app repository client: *Home screen -> Apps*
+   1. Open GrapheneOS's app repository client: *Home screen -> Apps*
    2. Install the 2 core Google Play Apps ("Google Play store" and the "Google Play Services").
    3. Disable battery optimization for Google Play Services (for Push to work properly). From the home screen, select: *Settings -> Apps -> Google Play services > Battery > Unrestricted*
    4. Open the Google Play Store once and press "Sign in" to start the

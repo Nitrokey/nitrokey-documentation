@@ -2,7 +2,6 @@ Nitrokey Pro 2 FAQ
 ==================
 
 .. spelling:word-list::
-   comio
    scdrand
 
 .. faq:: Which Operating Systems are supported?
@@ -142,7 +141,7 @@ Nitrokey Pro 2 FAQ
 .. faq:: How can I use the True Random Number Generator (TRNG) of the Nitrokey Pro for my applications?
 
    Both devices are compatible to the OpenPGP Card, so that `scdrand`_ should work. `This script`_ may be useful.
-   The user comio `created a systemd file`_ to use scdrand and thus the TRNG more generally. He created an `ebuild for Gentoo`_, too.
+   A user `created a systemd file`_ to use scdrand and thus the TRNG more generally. He created an `ebuild for Gentoo`_, too.
 
 .. faq:: How good is the Random Number Generator?
 
