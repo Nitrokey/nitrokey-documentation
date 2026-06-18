@@ -19,6 +19,8 @@ If you struggle with the overall topic, please read:
    to maintain the best security level for your NextBox. *In most usage
    scenarios the latter will also provide a better data bandwidth and user 
    experience*
+
+.. warning:: In order to sucessfully setup the remote access you need a full stack IPV4. For example if you use a LTE/5G router it won't be possible.
    
 Before you set up a remote access method you might want to read the 
 :doc:`comparison<method-comparison>` in order to understand
