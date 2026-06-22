@@ -10,7 +10,7 @@ FIDO2
 
 The Factory Reset operation deletes all secret FIDO2 credentials stored in the Nitrokey:
 
-* nitropy tool: ``nitropy fido2 reset`` (execution requires Administrator rights)
+* nitropy tool: ``nitropy fido2 reset`` (For Windows operating systems: execution requires Administrator rights)
 * Google Chrome: `Manage security keys` via the direct link: `chrome://settings/securityKeys`
 
 Passwords
