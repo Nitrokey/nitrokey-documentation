@@ -1,9 +1,14 @@
 Launcher App Installation
 #########################
 
+.. spelling:word-list::
+   ADB
+   WebADB
+   HMDM
+
 .. important::
    
-   We recommand to backup your data before installing MDM.
+   We recommend to backup your data before installing MDM.
 
 Your NitroPhone needs to be connected to the internet during the configuration and you also need a PC.
 
@@ -30,7 +35,7 @@ Installation With WebADB
 8. In the WebADB menu choose "Install APK", click on "Open", and choose the previously downloaded APK.
 
 9. Once completed, in the WebADB menu choose "Interactive Shell".
-   If you have this error: "Application error: a client-side exeption has occurred" refresh the page or click to "File Manager" and go back to "Interactive Shell".
+   If you have this error: "Application error: a client-side exception has occurred" refresh the page or click to "File Manager" and go back to "Interactive Shell".
    If you see ``<your android version name>:/ $`` then you are properly connected.
 
 10. In the shell type: 
@@ -84,7 +89,7 @@ Installation With ADB
    
       ./adb install <name of your downloaded file>.apk
 
-   When the MDM installation was sucessful, the output of ``adb`` is "Success".
+   When the MDM installation was successful, the output of ``adb`` is "Success".
 
 9. Now give the app device owner rights: 
 

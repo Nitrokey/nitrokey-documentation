@@ -1,7 +1,11 @@
 Knot DNS
 ========
 
-`Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative DNS server that can be used for DNSSEC. To use KnotDNS with the NetHSM please install and configure the PKCS#11 module as `described here <../pkcs11-setup.html>`__.
+.. spelling:word-list::
+
+   Knot
+
+`Knot DNS <https://www.knot-dns.cz/>`__ is an open source authoritative DNS server that can be used for DNSSEC. To use Knot DNS with the NetHSM please install and configure the PKCS#11 module as `described here <../pkcs11-setup.html>`__.
 
 Manual Mode
 -----------
@@ -10,7 +14,7 @@ In manual mode the keys have to be generated and managed manually.
 
 Only the Operator user is needed in the PKCS#11 module configuration file. The password can be specified using the ``pin-value`` in the `PKCS#11 URI <https://www.rfc-editor.org/rfc/rfc7512>`__ in knot.conf.
 
-Add the following lines to the KnotDNS configuration file ``/etc/knot/knot.conf``:
+Add the following lines to the Knot DNS configuration file ``/etc/knot/knot.conf``:
 
 .. code-block:: ini
 

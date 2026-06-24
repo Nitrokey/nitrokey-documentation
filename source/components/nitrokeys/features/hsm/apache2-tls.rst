@@ -7,7 +7,7 @@ TLS Setup With Apache2
 
 .. hint::
 
-   The very same concept as descriped here can be used for many
+   The very same concept as described here can be used for many
    applications using openssl as crypto-backend. The concept
    mostly boils down to: replace (secret) key-file with PKCS#11
    URL referencing a key on a security token (Nitrokey)

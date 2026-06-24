@@ -1,6 +1,9 @@
 Login to Windows Domain Computers With MS Active Directory
 ==========================================================
 
+.. spelling:word-list::
+   regedit
+
 .. product-table:: pro storage nk3 hsm
 
 .. contents:: :local:
@@ -46,7 +49,7 @@ Login to Windows Domain Computers With MS Active Directory
 		}
 
 
-3. Open a command terminal and enter “regedit”. Use regedit to import
+3. Open a command terminal and enter ``regedit``. Use regedit to import
    `this
    file <https://www.nitrokey.com/sites/default/files/nk-hsm.reg>`__.
 4. Now you can enroll Nitrokeys for your users managed in Microsoft

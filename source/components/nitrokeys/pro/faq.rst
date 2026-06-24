@@ -1,6 +1,9 @@
 Nitrokey Pro 2 FAQ
 ==================
 
+.. spelling:word-list::
+   scdrand
+
 .. faq:: Which Operating Systems are supported?
 
    Windows, Linux and macOS.
@@ -32,7 +35,7 @@ Nitrokey Pro 2 FAQ
 .. faq:: What is the User PIN for?
 
    The user PIN is at least 6-digits long and is used to get
-   access to the contect of the Nitrokey. This is the PIN you will use a lot in
+   access to the content of the Nitrokey. This is the PIN you will use a lot in
    every day use e.g. for decrypting messages, for unlocking your encrypted
    storage (NK Storage only) etc.
   
@@ -138,7 +141,7 @@ Nitrokey Pro 2 FAQ
 .. faq:: How can I use the True Random Number Generator (TRNG) of the Nitrokey Pro for my applications?
 
    Both devices are compatible to the OpenPGP Card, so that `scdrand`_ should work. `This script`_ may be useful.
-   The user comio `created a systemd file`_ to use scdrand and thus the TRNG more generally. He created an `ebuild for Gentoo`_, too.
+   A user `created a systemd file`_ to use scdrand and thus the TRNG more generally. He created an `ebuild for Gentoo`_, too.
 
 .. faq:: How good is the Random Number Generator?
 

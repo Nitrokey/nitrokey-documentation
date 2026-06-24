@@ -1,6 +1,14 @@
 Firmware Update
 ===============
 
+.. spelling:word-list::
+   T430
+   X230
+   NV41
+   NS50
+   npf
+   Meissner
+
 .. contents:: :local:
 
 This guide describes how to update the Heads firmware of the NitroPad.
@@ -32,7 +40,7 @@ To verify the firmware follow these steps:
 
 1. Download  `sha256sum.sig <https://github.com/Nitrokey/heads/releases/latest>`__ and store it
 
-2. Download and import Markus Meissners `gpg key <https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__ 
+2. Download and import Markus Meissner's `gpg key <https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__ 
 
 3. Verify the signature: 
 
@@ -51,7 +59,7 @@ You expect an output like this one:
 	gpg:                 aka "Markus Meissner <coder@safemailbox.de>" [ultimate]
 
 
-This verifys the file. 
+This verifies the file. 
 
 Procedure
 ~~~~~~~~~

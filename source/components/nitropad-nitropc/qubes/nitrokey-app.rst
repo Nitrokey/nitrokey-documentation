@@ -1,6 +1,10 @@
 Nitrokey App Installation
 =========================
 
+.. spelling:word-list::
+   sys
+   usb
+
 .. note::
    Most of the time the app is already pre installed. You simply need to press the button "refresh applications" under the sys-usb
    settings (see picture point 7), if the app don't show up in the menu.

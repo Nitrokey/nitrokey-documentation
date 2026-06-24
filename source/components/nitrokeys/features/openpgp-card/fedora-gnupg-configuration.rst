@@ -1,6 +1,10 @@
 OpenPGP smartcard with GnuPG on Fedora
 ======================================
 
+.. spelling:word-list::
+   pcsc
+   pcscd
+
 .. product-table:: nk3 storage pro start
 
 .. note::

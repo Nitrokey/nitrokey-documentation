@@ -1,6 +1,10 @@
 Nitrokey Storage FAQ
 ====================
 
+.. spelling:word-list::
+   comio
+   scdrand
+
 As the Nitrokey Storage 2 is essentially a Nitrokey Pro 2 including a
 non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` also partly applies.
 
@@ -46,7 +50,7 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
 .. faq:: What is the User PIN for?
 
    The user PIN is at least 6-digits long and is used to get
-   access to the contect of the Nitrokey. This is the PIN you will use a lot in
+   access to the content of the Nitrokey. This is the PIN you will use a lot in
    every day use e.g. for decrypting messages, for unlocking your encrypted
    storage (NK Storage only) etc.
   
@@ -76,8 +80,8 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
 .. faq:: What is the firmware PIN for?
 
    The firmware password should meet general password
-   recommandations (e.g. use alphabetic characters, digits and special
-   characters or use a usfficiently long password). The firmware password is
+   recommendations (e.g. use alphabetic characters, digits and special
+   characters or use a sufficiently long password). The firmware password is
    needed to update the firmware of the Nitrokey Storage. See further
    instructions for update process here.
 

@@ -1,6 +1,10 @@
 Client Logon with Active Directory
 ==================================
 
+.. spelling:word-list::
+   MiniDriver
+   ADCS
+
 .. product-table:: nk3
 
 This document explains how to use the PIV smart card of a Nitrokey 3 for logon with Active Directory. It is available as of firmware version 1.8 and higher.
@@ -30,7 +34,7 @@ On the client machine only access to the respective user account used for logon 
 Configure smartcard logon for use with Active Directory (AD)
 ------------------------------------------------------------
 
-The smartcard logon requires a certificate template in the certificate authority (CA) of the the domain.
+The smartcard logon requires a certificate template in the certificate authority (CA) of the domain.
 This template defines the values and constraints of the user certificates.
 It is used to sign the Certificate Request (CSR) during provisioning of the Nitrokey.
 
@@ -130,7 +134,7 @@ The certificate is then written to the Nitrokey.
    .. tip::
       Microsoft recommends the use of the ``X509IssuerSerialNumber`` mapping.
 
-   Write the choosen mapping to the ``altSecurityIdentities`` attribute of the Active Directory user object.
+   Write the chosen mapping to the ``altSecurityIdentities`` attribute of the Active Directory user object.
    You can use the *Active Directory Users and Computers* application or PowerShell for this operation.
 
    .. tabs::
@@ -147,7 +151,7 @@ The certificate is then written to the Nitrokey.
 
       .. tab:: PowerShell
          1. Open PowerShell.
-         2. Add the value with ``Set-ADUser -Identity "<sAMAccountName>" -Add @{altSecurityIdentities="<certificate-mapping>"}``, replacing ``<sAMAccountName>`` with the value of the user logon name and ``<certificate-mapping>`` with the choosen certficate mapping from above.
+         2. Add the value with ``Set-ADUser -Identity "<sAMAccountName>" -Add @{altSecurityIdentities="<certificate-mapping>"}``, replacing ``<sAMAccountName>`` with the value of the user logon name and ``<certificate-mapping>`` with the chosen certificate mapping from above.
 
    .. important::
       If the certificate mapping is not correctly set you will receive the error message ``Logon screen message: Your credentials could not be verified.`` when attempting to logon.
@@ -185,7 +189,7 @@ This is required in case of a lost or broken Nitrokey.
       2. In the navigation pane expand the certificate authority (CA) and navigate to **Issued Certificates**.
       3. In the detail pane select the user certificate you want to revoke.
       4. In the menu bar click **Action → All Tasks → Revoke Certificate**.
-      5. Specifiy a reason for the revocation, date and time, and confirm with **Yes**.
+      5. Specify a reason for the revocation, date and time, and confirm with **Yes**.
       6. In the navigation pane navigate to **Revoked Certificates**.
       7. In the menu bar click **Action → All Tasks → Publish**.
       8. Select the revocation list you want to publish and confirm with **OK**.

@@ -183,7 +183,7 @@ Instructions
       nitrouser@nitrouser:~$ sudo ls
       [sudo] password for nitrouser:  Please touch the device.
 
-   You can also test your configuration by logging out of the user session and logging back. A similar screen should be displayed once you you unplug/replug yout Nitrokey and type your password:
+   You can also test your configuration by logging out of the user session and logging back in. A similar screen should be displayed once you you unplug/re-plug your Nitrokey and type your password:
 
    .. figure:: images/desktop-login/u2f-fido-pam-2.png
       :alt: img6
@@ -243,7 +243,7 @@ Instructions
       #Nitrokey config
       auth    required pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue [cue_prompt=Please touch the device.] prompt
 
-After completing the setup, it is recommended to reboot your computer and unplug/replug the Nitrokey.
+After completing the setup, it is recommended to reboot your computer and unplug/re-plug the Nitrokey.
 
 Alternative Authentication Method
 ---------------------------------
@@ -347,7 +347,7 @@ The available control flags are:
       Failure will occur when the configured Nitrokey is not
       plugged, lost or destroyed.
 
-   -  You will lose access to your computer if you mis-configured the
+   -  You will lose access to your computer if you misconfigured the
       PAM module *and* used the ``required`` or ``requisite`` flags.
 
    -  You will also lose the ability to use ``sudo`` if you set up

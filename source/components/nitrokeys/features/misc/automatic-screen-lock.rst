@@ -44,7 +44,7 @@ You should change the configuration according to the device you are using as fol
 -  Nitrokey HSM: ``ENV{PRODUCT}=="20a0/4230/101"``
 -  Nitrokey Storage: ``ENV{PRODUCT}=="20a0/4109/101"``
 
-If you have a different device and need to find out the ``ENV{PRODUCT}`` string you can use the following command to find out the infos when plugging in:
+If you have a different device and need to find out the ``ENV{PRODUCT}`` string you can use the following command to find this information when plugging the device in:
 
 .. code-block:: bash
 

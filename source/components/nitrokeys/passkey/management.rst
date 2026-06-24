@@ -17,7 +17,7 @@ From this point you will have access to theses management options:
 
 .. note::
 
-    Some option may be shown but will not work with your Nitrokey eg. Fingerprints.
+    Some option may be shown but will not work with your Nitrokey, e.g. Fingerprints.
 
 Windows
 -------

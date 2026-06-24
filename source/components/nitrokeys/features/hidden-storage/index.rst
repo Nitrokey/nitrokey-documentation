@@ -10,11 +10,11 @@ The concept is similar to `VeraCrypt's/TrueCrypt's hidden volume <https://veracr
 You can configure up to four hidden volumes. Once unlocked, hidden volumes behave like ordinary storage where you can create various partitions, filesystems and store files as you like.
 
 .. warning::
-   If you chose to use hidden volumes, you must not write any data to the encrypted volume, or you risk loosing data in the hidden volume. 
+   If you chose to use hidden volumes, you must not write any data to the encrypted volume, or you risk losing data in the hidden volume. 
 
 .. note::
    Hidden volumes are hidden within the free space of the encrypted volume, which will be overwritten when writing data to the encrypted volume.
-   There are no mechanisms to prevent accidental overwritting of hidden data, as they would reveal the existence of hidden volumes.
+   There are no mechanisms to prevent accidental overwriting of hidden data, as they would reveal the existence of hidden volumes.
    Data written to the encrypted volume before the creation of the hidden volume can still be read.
 
 .. figure:: images/hidden/hidden-schema.svg
@@ -28,7 +28,7 @@ Configuring hidden volumes
   Copy some files to the encrypted volume prior to creating the hidden volume.
  
 .. note::
-  Using a journaling filesystem may risk overwriting the hidden data. The encrypted filesystem is formated to FAT32 by default, and it is recommended to leave it that way when using hidden volumes.
+  Using a journaling filesystem may risk overwriting the hidden data. The encrypted filesystem is formatted to FAT32 by default, and it is recommended to leave it that way when using hidden volumes.
 
 
 1. Unlock the encrypted volume using the Nitrokey App.
