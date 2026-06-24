@@ -15,14 +15,14 @@ This guide assumes that an Active Directory server with role ‘Active Directory
 Installing OpenPGP-CSP
 ----------------------
 
-This step is needed for clients to use the OpenPGP-CSP driver. Download and install the `latest version <https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3>`__ of the installer file ‘SetupOpenPGPCsp’ for your system architecture, for ‘SetupOpenPGPCsp_x64.msi’ for 64-bit systems.
+This step is needed for clients to use the OpenPGP-CSP driver. Download and install the `latest version <https://github.com/vletoux/OpenPGP-CSP/releases/tag/1.3>`__ of the installer file ``SetupOpenPGPCsp`` for your system architecture; for example, ``SetupOpenPGPCsp_x64.msi`` for 64-bit systems.
 
 You may want to install the driver on the server as well for being able to enforce the use of this driver in the template (see below).
 
 Creating Certificate Template on Server Side
 --------------------------------------------
 
-On Active Directory Server open certsrv.msc to manage your certificate templates. Right click on ‘Certificate Templates’ and choose ‘Manage’
+On Active Directory Server open ``certsrv.msc`` to manage your certificate templates. Right click on ‘Certificate Templates’ and choose ‘Manage’
 
 .. figure:: images/openpgp-csp/1.png
    :alt: img1
@@ -70,7 +70,7 @@ Then go to ‘Extensions’, there you edit the applications guideline and add �
 Request Certificate on Client (Domain Member)
 ---------------------------------------------
 
-To request a certificate for a domain member, you have to open certmgr.msc. Right click on folder ‘Personal->Certificates’ and click
+To request a certificate for a domain member, you have to open ``certmgr.msc``. Right click on folder ‘Personal->Certificates’ and click
 ’All Tasks->Request New Certificate and choose the template you created on the AD.
 
 .. figure:: images/openpgp-csp/8.png

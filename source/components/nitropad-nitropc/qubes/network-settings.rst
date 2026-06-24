@@ -1,7 +1,10 @@
-Enable Network Settings, e.g. Wifi
+Enable Network Settings, e.g. WiFi
 ==================================
 
-To be able to use Wifi, Bluetooth and other functionalities, "Settings" must be activated in "sys-net".
+.. spelling:word-list::
+   sys
+
+To be able to use WiFi, Bluetooth and other functionalities, "Settings" must be activated in "sys-net".
 
 
 1. Click on the top left Qubes Icon and select Qubes:Settings under sys-net.
@@ -10,7 +13,7 @@ To be able to use Wifi, Bluetooth and other functionalities, "Settings" must be 
       :alt: img1
 
 2. Go to Applications, select "Settings" and click ">" to move it to the right side.
-3. Click "Apply" and after wards "Ok".
+3. Click "Apply" and afterwards "OK".
 4. Now you should have "Settings" visible under sys-net.
 
    .. Note::

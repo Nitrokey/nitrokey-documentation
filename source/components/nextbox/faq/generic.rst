@@ -38,7 +38,7 @@ Generic FAQ
 .. faq:: How secure is the NextBox?
 
   Debian with frequent `unattended-upgrades` based security updates, a minimal
-  attack surface by ensuring that not a single unneccessary port is open 
+  attack surface by ensuring that not a single unnecessary port is open 
   are the main contributors to system security. **Make sure your Nextcloud users 
   and passwords are on a high level, either with long-random passwords or a 
   2-Factor-Authentification supported login method with e.g., a Nitrokey FIDO2.**
@@ -65,14 +65,14 @@ Generic FAQ
   images provided by Nextcloud. Ultimately, if some NextBox/OS configuration is
   blocking an app to run properly we for sure will look into fixing it.
 
-.. faq:: Can I connect/use the NextBox using Wi-Fi?
+.. faq:: Can I connect/use the NextBox using WiFi?
 
-  No, currently this is not (easily) possible, only wired ethernet using RJ-45
+  No, currently this is not (easily) possible, only wired Ethernet using RJ-45
   is available.
 
-.. faq:: Is the Wi-Fi on the Raspberry PI 4B physically available and working?
+.. faq:: Is the WiFi on the Raspberry PI 4B physically available and working?
 
-  Yes, physically the Wi-Fi is available and working, but not used/managed by the
+  Yes, physically the WiFi is available and working, but not used/managed by the
   NextBox App. If you know what you are doing you can configure and use it, if
   it works even though it's inside the NextBox casing.
 

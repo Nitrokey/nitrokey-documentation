@@ -1,6 +1,9 @@
 DNSSEC
 ======================
 
+.. spelling:word-list::
+   Lisse
+   Piet
 
 .. product-table:: hsm
 

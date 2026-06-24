@@ -1,8 +1,15 @@
 Elliptic Curves (ECC) Support
 =============================
 
-.. product-table:: nk3 pro storage hsm
+.. spelling:word-list::
+   Bundesamt
+   für
+   Sicherheit
+   der
+   Informationstechnik
+   BSI
 
+.. product-table:: nk3 pro storage hsm
 
 .. contents:: :local:
 
@@ -41,7 +48,7 @@ You can learn about the installed version of GnuPG via ``gpg2  --version``. At l
 .. important::
 
    GnuPG 2.0 is still being used, but support for it has been
-   discontinuied in 2017. All communication partners must use GnuPG 2.1
+   discontinued in 2017. All communication partners must use GnuPG 2.1
    or newer for email encryption by means of ECC, otherwise
    incompatibility issues might arise. Therefore you should only use ECC
    if you are sure you will be able to circumvent this problem.
@@ -136,7 +143,7 @@ Update of GnuPG on Ubuntu
 -------------------------
 
 The following steps are needed only if you are running a Ubuntu version older than 18.04. You can install GnuPG 2.1.18 on such system with the commands below. This involves newer Debian packages, which is the easiest option. This approach has been tested successfully on Ubuntu
-17.10 and propbably works on 16.04 as well. However, the occurence of problems during usage can‘t be excluded.
+17.10 and probably works on 16.04 as well. However, the occurrence of problems during usage can‘t be excluded.
 
 .. code-block:: bash
 

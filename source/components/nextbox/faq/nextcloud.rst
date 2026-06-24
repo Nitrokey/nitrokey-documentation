@@ -31,7 +31,7 @@ Nextcloud FAQ
 .. faq:: Why am I getting a permission warning for ``/var/www/html/custom_apps/nextbox`` inside the Nextcloud settings overview?
 
   This is a "feature". The NextBox Nextcloud App is installed on the system
-  with the Debian nextbox package. To avoid an accidental deletion of the NextBox 
+  with the Debian ``nextbox`` package. To avoid an accidental deletion of the NextBox 
   Nextcloud App from within the Nextcloud app management, the stated directory 
   can not be written by Nextcloud, this is what Nextcloud is complaining about here.
 

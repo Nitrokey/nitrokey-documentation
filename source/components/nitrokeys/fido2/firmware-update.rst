@@ -13,15 +13,15 @@ How to Update
    Never disconnect the Nitrokey FIDO2 or abort the process while updating,
    this will likely render your device useless!
 
-Webupdate
-^^^^^^^^^
+Web-based update
+^^^^^^^^^^^^^^^^
 
 The easiest way to update a Nitrokey FIDO2 is to open `update.nitrokey.com <https://update.nitrokey.com>`_ in your browser and follow the instructions on the web page.
 
 Using the command line
 ^^^^^^^^^^^^^^^^^^^^^^
 
-If the webupdate doesn't work for you, you can also use our command line tool.
+If the web-based update doesn't work for you, you can also use our command line tool.
 
 1. Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions`_ for your OS.
 2. Run ``nitropy fido2 update``.

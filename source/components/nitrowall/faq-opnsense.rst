@@ -1,6 +1,9 @@
 FAQ OPNSense
 ============
 
+.. spelling:word-list::
+   Suricata
+
 .. faq:: How to set up a LAN bridge?:
 
 	Details on how to set up a LAN bridge you can find `here <https://docs.opnsense.org/manual/how-tos/lan_bridge.html>`__.

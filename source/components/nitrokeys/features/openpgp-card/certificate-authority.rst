@@ -87,7 +87,7 @@ We start by generating the private key for the certificate authority directly on
      Usage:      verify, derive
      Access:     none
 
-Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need it later.
+Note the ID number (``e0161cc8b6f5d66ac6835ecdecb623fc0506a675``), we’ll need it later.
 
 If you need the ID in the future, you can list the keys on the Nitrokey HSM:
 
@@ -242,7 +242,7 @@ We continue by generating the private key for the intermediate certificate autho
      Usage:      verify, derive
      Access:     none
 
-Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need it later.
+Note the ID number (``bcb48fe9b566ae61891aabbfde6a23d4ff3ab639``), we’ll need it later.
 
 If you need the ID in the future, you can list the keys on the Nitrokey HSM:
 
@@ -368,7 +368,7 @@ In this instance, the fully qualified PKCS#11 URI is:
 
    pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private
 
-Now, we need to create a config file to use the private key of the root certificate to sign the csr of the intermediate certificate.
+Now, we need to create a config file to use the private key of the root certificate to sign the CSR of the intermediate certificate.
 
 .. code-block:: bash
 

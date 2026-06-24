@@ -24,7 +24,7 @@ Procedure
 
    .. tab:: Heads v2.5+
     1. Connect your Nitrokey to the NitroPad.
-    2. Turn on the NitroPad and interupt the automatic boot by pressing any key.
+    2. Turn on the NitroPad and interrupt the automatic boot by pressing any key.
     3. Select “Options”.
 
        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/options.jpg
@@ -40,7 +40,7 @@ Procedure
        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm.jpg
           :alt: confirm
 
-    6. The integrity of your setup will be tested, deppending on your reason to perform the reset this can fail continue with ok anyways
+    6. The integrity of your setup will be tested. Depending on your reason to perform the reset this can fail; continue with "OK" anyway.
 
        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm-integrity.jpg
           :alt: confirm integrity
@@ -89,7 +89,7 @@ Procedure
         .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
            :alt: tpm password enter
 
-    12. Scan QR code with Phone to inport TOTP Seceret (Optional) and hit Enter 
+    12. Scan QR code with phone to import TOTP secret (optional) and hit Enter 
 
         .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
            :alt: qr code totp
@@ -148,7 +148,7 @@ Procedure
            .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm.jpg
               :alt: confirm
 
-        6. The integrity of your Setup will be tested, deppending on your reason to perform the reset this can fail continue with ok anyways
+        6. The integrity of your setup will be tested. Depending on your reason to perform the reset this can fail; continue with "OK" anyway.
 
            .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm-integrity.jpg
               :alt: confirm integrity
@@ -223,7 +223,7 @@ Procedure
             .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
                :alt: tpm password enter
 
-        12. Scan QR COde with Phone to inport TOTP Seceret (Optional) and hit Enter 
+        12. Scan QR code with phone to import TOTP secret (optional) and hit Enter 
 
             .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
                :alt: qr code totp

@@ -1,11 +1,17 @@
 Firmware Update
 ===============
+
+.. spelling:word-list::
+   NW750
+   merle
+   OpenWrt
+
 .. contents:: :local:
 
 For the general firmware update follow `this guide <https://docs.gl-inet.com/router/en/4/interface_guide/firmware_upgrade/>`_ . Afterwards we need to reinstall blue-merle:
 
 1. Make sure the NW750 has a working Internet connection 
-2. Connect with the WiFi and login to the alternativ OpenWrt at https://192.168.8.1/cgi-bin/luci/ using username root and the same password used for the other web interface
+2. Connect with the WiFi and login to the alternative OpenWrt web interface at https://192.168.8.1/cgi-bin/luci/ using username ``root`` and the same password used for the other web interface
 
         .. image:: /components/nitrowall/images/firmware-update/750_1.png
 
@@ -21,7 +27,7 @@ For the general firmware update follow `this guide <https://docs.gl-inet.com/rou
 
         .. image:: /components/nitrowall/images/firmware-update/750_5.png
 
-5. click "upload packackge" and upload `blue-merle <https://www.nitrokey.com/files/ci/nitrowall/latest_blue-merle.ipk>`_
+5. click "upload package" and upload `blue-merle <https://www.nitrokey.com/files/ci/nitrowall/latest_blue-merle.ipk>`_
 
         .. image:: /components/nitrowall/images/firmware-update/750_6.png
 

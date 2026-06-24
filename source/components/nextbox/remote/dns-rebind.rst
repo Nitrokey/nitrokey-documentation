@@ -15,7 +15,7 @@ on `DNS-Rebinding`_. Home routers include a protection mechanism for this attack
 by never returning a local IP (v4 & v6) address. 
 
 In the context of the NextBox this means that, if you are using IPv6, the IPv6 address
-of your NextBox is considered local by your router and thus wiull not be returned 
+of your NextBox is considered local by your router and thus will not be returned 
 during DNS resolving of your designated domain.
 
 .. note:: For IPv4 this is also applies, but not a problem. In the IPv4 

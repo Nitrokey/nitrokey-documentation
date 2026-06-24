@@ -6,7 +6,6 @@ Getting Started
 Quickstart
 ----------
 
-
 1. Connect NextBox to your Internet router via network cable.
 2. Connect the power cable to the NextBox, you can use any of the two USB-C ports.
 3. Once powered the NextBox will start
@@ -54,8 +53,8 @@ Your can find the NextBox-App in Nextcloud's top level navigation, as shown in t
 Ready To Go
 -----------
     
-   .. note:: Please make sure your Nextbox is always on and connected to the internet.
-        A downtime can lead to it missing an update, and that can in the worstcase
+   .. note:: Please make sure your NextBox is always on and connected to the internet.
+        A downtime can lead to it missing an update, and that can in the worst case
         break the device, since some Nextcloud updates don't support updates from older versions.
 
 This is all it takes to get started with your NextBox. From this point you are

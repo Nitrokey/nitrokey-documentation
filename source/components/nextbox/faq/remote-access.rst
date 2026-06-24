@@ -51,7 +51,7 @@ Remote Access FAQ
   technologies, which do not allow incoming traffic for the IPv4, which was
   assigned to you. An incomplete list is: *private IPv4 address*, *DS-Lite
   connection* or *CarrierGrade-NAT (CG-NAT)*. All these essentially share one
-  IPv4 address accross multiple users, thus block (incoming) traffic from the
+  IPv4 address across multiple users, thus block (incoming) traffic from the
   internet to you. Some ISPs allow upgrading to so-called **full-stack
   connections**, which should enable full bi-directional traffic for IPv4 and
   IPv6.
@@ -62,7 +62,7 @@ Remote Access FAQ
   full IPv6 support activated. This means, if your NextBox is configured for IPv6
   only access, devices inside these networks will not be able to connect. The
   **backwards-proxy does work as a workaround here**, as it provides an IPv4
-  entrypoint to your NextBox independant of your other remote access
+  entrypoint to your NextBox independent of your other remote access
   configuration.
 
 

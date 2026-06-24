@@ -50,6 +50,7 @@ extensions = [
     "sphinx_design",
     "nk_product_table",
     "faq_item",
+    "sphinxcontrib.spelling",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -425,6 +426,11 @@ epub_exclude_files = ["search.html"]
 
 
 # -- Extension configuration -------------------------------------------------
+
+spelling_word_list_filename = '../wordlist.txt'
+#spelling_show_suggestions = True
+spelling_exclude_patterns = ['**/api/*']
+
 
 # -- Options for todo extension ----------------------------------------------
 
