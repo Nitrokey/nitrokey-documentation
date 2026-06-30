@@ -72,6 +72,11 @@ Nitrokey App `is part <https://koji.fedoraproject.org/koji/packageinfo?packageID
 
    $ sudo dnf install nitrokey-app
 
+SUSE
+****
+
+Nitrokey App `is part <https://software.opensuse.org/download.html?project=security&package=nitrokey-app>`__ of SUSE's package repository. You can just install it `like every other software <https://en.opensuse.org/YaST_Software_Management>`__.
+
 Arch Linux
 **********
 
@@ -80,11 +85,6 @@ The Nitrokey App is included in the official extra repo. You can install the App
 .. code-block:: bash
 
    $ pacman -S nitrokey-app
-
-SUSE
-****
-
-Nitrokey App `is part <https://software.opensuse.org/download.html?project=security&package=nitrokey-app>`__ of SUSE's package repository. You can just install it `like every other software <https://en.opensuse.org/YaST_Software_Management>`__.
 
 NixOS
 *****
@@ -151,6 +151,31 @@ For Debian 9 and newer, the Nitrokey App is included in the Debian repository. Y
    $ sudo apt install nitrokey-app
 
 Unfortunately, the App versions in the official Debian repositories are often not up-to-date.
+
+Ubuntu
+******
+
+The Nitrokey App is included in Ubuntu's repositories since Ubuntu 18.04 (codename 'bionic') on. You can just install it via Software Center or by typing the following in a terminal:
+
+.. code-block:: bash
+
+   $ sudo apt update
+   $ sudo apt install nitrokey-app
+
+Unfortunately, the App versions in the official Ubuntu repositories are often not up-to-date.
+
+**More recent App versions**
+
+To get the most recent Nitrokey App you can add a separate repository which is maintained by Nitrokey.
+
+Please execute the following in a terminal to add the repository and install the Nitrokey App:
+
+.. code-block:: bash
+
+   $ sudo add-apt-repository ppa:nitrokey/nitrokey
+   $ sudo apt install nitrokey-app
+
+**Alternatively**, you can use the snap package. Please see the `Snap`_ section for more information.
 
 Slackware
 *********
