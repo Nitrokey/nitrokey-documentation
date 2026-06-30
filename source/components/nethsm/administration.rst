@@ -117,7 +117,7 @@ The NetHSM software has four states: *Unprovisioned*, *Provisioned*, *Locked*, a
 |                 | implies the *Provisioned* state.                                        |
 +-----------------+-------------------------------------------------------------------------+
 
-.. figure:: ./images/states.svg
+.. figure:: ./images/administration/states.svg
       :scale: 100
       :alt: States and transitions of the NetHSM
 
@@ -433,7 +433,7 @@ Set the network configuration as follows.
       +=============================+===============================================+
       | ``--ipv6-cidr`` ``TEXT``    | The IPv6 address in CIDR notation (optional)  |
       +-----------------------------+-----------------------------------------------+
-      | ``--ipv6-gateway`` ``TEXT`` | The IPv6 gateway address (optional)          |
+      | ``--ipv6-gateway`` ``TEXT`` | The IPv6 gateway address (optional)           |
       +-----------------------------+-----------------------------------------------+
 
       **Example**
@@ -663,7 +663,7 @@ The serial console port differences of each model are as follows.
 
       USB-to-Serial adapters can be directly connected to the machine, no null modem cable is required.
 
-      .. figure:: ./images/nethsm2-sub-d-port.svg
+      .. figure:: ./images/administration/nethsm2-sub-d-port.svg
          :scale: 100
          :alt: D-sub female *DE-9* port.
 
@@ -675,7 +675,7 @@ The serial console port differences of each model are as follows.
 
       USB-to-Serial adapters require the use of a null modem cable to be connected to the machine.
 
-      .. figure:: ./images/nethsm1-sub-d-port.svg
+      .. figure:: ./images/administration/nethsm1-sub-d-port.svg
          :scale: 100
          :alt: D-sub male *DE-9* port.
 

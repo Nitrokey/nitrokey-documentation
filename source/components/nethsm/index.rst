@@ -21,7 +21,6 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Getting Star
       $ export NETHSM_HOST="<URL-or-IP-address>"
 
 .. toctree::
-   :hidden:
    :maxdepth: 1
    :glob:
 

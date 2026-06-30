@@ -102,7 +102,7 @@ The configuration is yaml-formatted:
               # To avoid having to re-open connections on each requests, the module keeps a connection pool to each instance. If the module is used by a multithreaded application, multiple connections can be opened at the same time.
               # This configures the maximum number of connections in the pool at the same time.
               # Note that this does not limit the total number of open connections.
-              # Having a degree of parrallelism that is higher than the max number of idle connection can lead overhead as those connections will be closed an re-opened frenquently
+              # Having a degree of parallelism that is higher than the max number of idle connection can lead overhead as those connections will be closed an re-opened frenquently
               max_idle_connections: 10
               # By default, the certificate of the HSM will be validated using the system's root certificate authority.
               # When the NetHSM uses a self-signed certificate, it can be verified against an allowed list of sha256 fingerprint of the NetHSM's certificate:
