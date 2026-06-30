@@ -35,5 +35,6 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Getting Star
    pkcs11-tool.rst
    system_recovery.rst
    pkiproxy.rst
+   pkiproxy-windows-ca.rst
    container/index.rst
    compatible/index.rst

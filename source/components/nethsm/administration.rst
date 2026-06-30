@@ -428,13 +428,13 @@ Set the network configuration as follows.
 
       **Optional Options**
 
-      +---------------------------+-----------------------------------------------+
-      | Option                    | Description                                   |
-      +===========================+===============================================+
-      | ``--ipv6-cidr`` ``TEXT``  | The IPv6 address in CIDR notation (optional)  |
-      +---------------------------+-----------------------------------------------+
+      +-----------------------------+-----------------------------------------------+
+      | Option                      | Description                                   |
+      +=============================+===============================================+
+      | ``--ipv6-cidr`` ``TEXT``    | The IPv6 address in CIDR notation (optional)  |
+      +-----------------------------+-----------------------------------------------+
       | ``--ipv6-gateway`` ``TEXT`` | The IPv6 gateway address (optional)          |
-      +---------------------------+-----------------------------------------------+
+      +-----------------------------+-----------------------------------------------+
 
       **Example**
 
@@ -517,6 +517,10 @@ Metrics
 
 The NetHSM logs metrics of system parameters.
 Please refer to `Metrics <metrics.html>`__ to learn more about each metric.
+
+.. note::
+   The availability of metrics depends on the platform.
+   Some metrics are only available on hardware or in the software container.
 
 The metrics can be retrieved as follows.
 
