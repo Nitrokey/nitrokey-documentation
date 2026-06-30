@@ -27,8 +27,8 @@ Possible use cases of this setup are:
 .. tip::
    Please also refer to the official `PKI Proxy documentation <https://cdn.nsoftware.com/help/PK1/app/default.htm>`__ for more information.
 
-Prerequisits
-============
+Prerequisites
+=============
 
 - NetHSM (hardware or containerized)
   - Provisioned
@@ -69,7 +69,7 @@ The instructions below configure the PKI Proxy.
 
 1. Open the PKI Proxy main window.
 2. Change to the **Settings** tab.
-3. Make sure the checkbox **Enable TLS** is checked and an apropriate certificate is used.
+3. Make sure the checkbox **Enable TLS** is checked and an appropriate certificate is used.
 4. Change to the **Users** tab.
 5. Create a new user by clicking on the **New...** button.
    Choose an authentication type which is supported by all clients.
