@@ -433,7 +433,7 @@ Set the network configuration as follows.
       +=============================+===============================================+
       | ``--ipv6-cidr`` ``TEXT``    | The IPv6 address in CIDR notation (optional)  |
       +-----------------------------+-----------------------------------------------+
-      | ``--ipv6-gateway`` ``TEXT`` | The IPv6 gateway address (optional)          |
+      | ``--ipv6-gateway`` ``TEXT`` | The IPv6 gateway address (optional)           |
       +-----------------------------+-----------------------------------------------+
 
       **Example**
