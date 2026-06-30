@@ -27,24 +27,69 @@ Alpine Linux
 
 Nitrokey App isn't an official package to Alpine Linux but this `inofficial package <https://git.alpinelinux.org/aports/tree/community/nitrokey-app/APKBUILD?id=d80ddaa597091157e11b96586ecc8c955920b2a1>`__ can be used.
 
-FreeBSD
+AppImage
+********
+
+AppImage provide everything that is needed to get executed. It works like a .exe on Windows and does not need to be installed.
+See `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__ for our latest Nitrokey-App.AppImage file. After downloading the file, you need to make the file executable.
+You can do this by right-clicking on the file and choosing "Properties". Look for the option to make the file executable there.
+
+Arch Linux
+**********
+
+The Nitrokey App is included in the official extra repo.
+
+.. code-block:: bash
+
+   $ pacman -S nitrokey-app
+
+Debian
+******
+
+For Debian 9 and newer, the Nitrokey App is included in the Debian repository.
+
+.. code-block:: bash
+
+   $ sudo apt update
+   $ sudo apt install nitrokey-app
+
+Unfortunately, the App versions in the official Debian repositories are often not up-to-date.
+
+Fedora
+******
+
+Nitrokey App `is part <https://koji.fedoraproject.org/koji/packageinfo?packageID=23317>`__ of Fedora's package repositories.
+
+.. code-block:: bash
+
+   $ sudo dnf install nitrokey-app
+
+Flatpak
 *******
 
-Install by executing:
+.. code-block:: bash
+
+   $ flatpak install flathub com.nitrokey.nitrokey-app
+   $ flatpak run com.nitrokey.nitrokey-app
+
+For more information visit `Flathub <https://flathub.org/apps/details/com.nitrokey.nitrokey-app>`__.
+
+FreeBSD
+*******
 
 .. code-block:: bash
 
    $ pkg install nitrokey-app
 
+Gentoo
+******
+
+Nitrokey App `is part <https://github.com/gentoo/gentoo/tree/master/app-crypt/nitrokey-app>`__ of Gentoo's package repositories.
+
 Guix
 ****
 
 Further information `here <https://guix.gnu.org/packages/nitrokey-app-1.4.2/>`__.
-
-Windows
-*******
-
-Download .exe file from `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
 
 macOS
 *****
@@ -63,69 +108,27 @@ Users of `Homebrew <https://brew.sh/>`__ can install this `cask <https://github.
    $ brew tap homebrew/cask-drivers
    $ brew install --cask nitrokey
 
-Fedora
-******
-
-Nitrokey App `is part <https://koji.fedoraproject.org/koji/packageinfo?packageID=23317>`__ of Fedora's package repositories. Install it by executing:
-
-.. code-block:: bash
-
-   $ sudo dnf install nitrokey-app
-
-SUSE
-****
-
-Nitrokey App `is part <https://software.opensuse.org/download.html?project=security&package=nitrokey-app>`__ of SUSE's package repository. You can just install it `like every other software <https://en.opensuse.org/YaST_Software_Management>`__.
-
-Arch Linux
-**********
-
-The Nitrokey App is included in the official extra repo. You can install the App by executing:
-
-.. code-block:: bash
-
-   $ pacman -S nitrokey-app
-
 NixOS
 *****
 
 Nitrokey App `is part <https://github.com/NixOS/nixpkgs/tree/master/pkgs/tools/security/nitrokey-app>`__ of NixOS's package repository.
 
-Gentoo
-******
+Slackware
+*********
 
-Nitrokey App `is part <https://github.com/gentoo/gentoo/tree/master/app-crypt/nitrokey-app>`__ of Gentoo's package repositories.
-
-AppImage
-********
-
-AppImage provide everything that is needed to get executed. It works like a .exe on Windows and does not need to be installed.
-See `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__ for our latest Nitrokey-App.AppImage file. After downloading the file, you need to make the file executable.
-You can do this by right-clicking on the file and choosing "Properties". Look for the option to make the file executable there.
-
-Flatpak
-*******
-
-Execute the following commands:
-
-.. code-block:: bash
-
-   $ flatpak install flathub com.nitrokey.nitrokey-app
-   $ flatpak run com.nitrokey.nitrokey-app
-
-For more information visit `Flathub <https://flathub.org/apps/details/com.nitrokey.nitrokey-app>`__.
+Available at `Slackbuilds <http://slackbuilds.org/repository/14.2/desktop/nitrokey-app/?search=nitrokey>`__.
 
 Snap
 ****
 
 .. note::
 
-   There is a problem with the current Snap package. Please make sure that scdaemon is installed by typing 
-   
+   There is a problem with the current Snap package. Please make sure that scdaemon is installed by typing
+
    .. code-block:: bash
 
       $ apt-get update && apt-get install scdaemon
-      
+
    in a terminal and follow the instruction below.
 
 The latest Nitrokey App is available as Snap package which is available for many Linux distributions and which ensures that you always have the latest version installed.
@@ -140,22 +143,15 @@ to install Nitrokey App. You now can use it as usual, e.g. by pressing Alt + F2 
 **Troubleshooting**
 In case you get the error "failed to create user data directory. errmsg: Permission denied" during starting the Nitrokey App, it may is because your home directory is encrypted. In this case, apply one of these fixes `[1] <https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/7>`__ `[2] <https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/8>`__.
 
-Debian
-******
+SUSE
+****
 
-For Debian 9 and newer, the Nitrokey App is included in the Debian repository. You can just install it via Software Center or by typing the following in a terminal:
-
-.. code-block:: bash
-
-   $ sudo apt update
-   $ sudo apt install nitrokey-app
-
-Unfortunately, the App versions in the official Debian repositories are often not up-to-date.
+Nitrokey App `is part <https://software.opensuse.org/download.html?project=security&package=nitrokey-app>`__ of SUSE's package repository. You can just install it `like every other software <https://en.opensuse.org/YaST_Software_Management>`__.
 
 Ubuntu
 ******
 
-The Nitrokey App is included in Ubuntu's repositories since Ubuntu 18.04 (codename 'bionic') on. You can just install it via Software Center or by typing the following in a terminal:
+The Nitrokey App is included in Ubuntu's repositories since Ubuntu 18.04 (codename 'bionic') on.
 
 .. code-block:: bash
 
@@ -168,8 +164,6 @@ Unfortunately, the App versions in the official Ubuntu repositories are often no
 
 To get the most recent Nitrokey App you can add a separate repository which is maintained by Nitrokey.
 
-Please execute the following in a terminal to add the repository and install the Nitrokey App:
-
 .. code-block:: bash
 
    $ sudo add-apt-repository ppa:nitrokey/nitrokey
@@ -177,13 +171,12 @@ Please execute the following in a terminal to add the repository and install the
 
 **Alternatively**, you can use the snap package. Please see the `Snap`_ section for more information.
 
-Slackware
-*********
+Windows
+*******
 
-Available at `Slackbuilds <http://slackbuilds.org/repository/14.2/desktop/nitrokey-app/?search=nitrokey>`__.
+Download .exe file from `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
 
 Source
 ******
 
 You can download and compile the source code from `here <https://github.com/Nitrokey/nitrokey-app/>`__. In this case you may need to install `these UDEV rules <https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ manually.
-
