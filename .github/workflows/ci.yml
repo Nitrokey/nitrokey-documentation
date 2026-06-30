@@ -22,6 +22,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+      - name: Install required packages
+        run: |
+          apt update
+          apt install -y libenchant-2-2
       - name: Create virtual environment
         run: make venv
       - name: Check hyperlinks
@@ -34,6 +38,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+      - name: Install required packages
+        run: |
+          apt update
+          apt install -y libenchant-2-2
       - name: Create virtual environment
         run: make venv
       - name: Build documentation
@@ -47,7 +55,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
-        
+      - name: Install required packages
+        run: |
+          apt update
+          apt install -y libenchant-2-2
       - name: Create virtual environment
         run: make venv
         
