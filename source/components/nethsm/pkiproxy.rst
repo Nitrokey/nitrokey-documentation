@@ -9,7 +9,7 @@ In all other cases use the `NetHSM PKCS#11 driver <pkcs11-setup.html>`__ directl
 
 The deployment of NetHSM with PKI Proxy looks like this.
 
-.. figure:: ./images/nethsm-pki-proxy.svg
+.. figure:: ./images/pkiproxy/nethsm-pki-proxy.svg
    :scale: 100
    :alt: Connection between NetHSM and PKI Proxy Server, Client and exposed client interfaces.
 
