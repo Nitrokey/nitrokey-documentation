@@ -30,7 +30,7 @@ The Nitrokey Passkey can be used with any current browser.
 
 .. important::
 
-   The Nitrokey App can not be used for the Nitrokey Passkey.
+   The Nitrokey App 1 can not be used for the Nitrokey Passkey.
 
 Passwordless Authentication
 ---------------------------
