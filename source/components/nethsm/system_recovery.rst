@@ -66,7 +66,7 @@ The system recovery can be performed as follows.
 
          See the image below to identify the BMC network port.
 
-         .. figure:: ./images/nethsm1-back-with-labels.png
+         .. figure:: ./images/used_in_multiple_files/nethsm1-back-with-labels.png
             :scale: 100
             :alt: 
 
@@ -91,7 +91,7 @@ The system recovery can be performed as follows.
       5. Mount the downloaded installer image by clicking in the menu on the left on *FRU: Hermes CFL (with TPM) Nitrokey Config* followed by *Virtual media* in the submenu.
          In the middle open the tab *usb0*, and click the button *Attach media*.
 
-         .. figure:: ./images/bmc-usb-attach.png
+         .. figure:: ./images/system-recovery/bmc-usb-attach.png
             :alt: BMC menu to attach USB device
 
             BMC menu to attach USB device
@@ -100,7 +100,7 @@ The system recovery can be performed as follows.
          Click the button *Browse...* and choose the downloaded installer image.
          Confirm the operation with the *Submit* button.
 
-         .. figure:: ./images/bmc-usb-attach-image-selection.png
+         .. figure:: ./images/system-recovery/bmc-usb-attach-image-selection.png
             :alt: BMC menu to select USB image
 
             BMC menu to select USB image
@@ -108,7 +108,7 @@ The system recovery can be performed as follows.
       6. In the menu on the left select *FRU: Hermes CFL (with TPM) Nitrokey Config*, and then *Remote KVM*.
       7. In the middle click the *Open a floating Remote KVM window* button, in the top right corner of the VGA output box.
 
-         .. figure:: ./images/bmc-kvm-console.png
+         .. figure:: ./images/system-recovery/bmc-kvm-console.png
             :alt: BMC KVM console view
 
             BMC KVM console view
@@ -118,7 +118,7 @@ The system recovery can be performed as follows.
       8. Change to the view *Overview* from the top of the menu on the left.
       9. In the box *Override Boot Device*, select *USB_BMC-virtual_media* from the drop-down next to *Select a Boot Device*.
 
-         .. figure:: ./images/bmc-boot-device-override.png
+         .. figure:: ./images/system-recovery/bmc-boot-device-override.png
             :alt: BMC boot device setting
 
             BMC boot device setting
@@ -126,7 +126,7 @@ The system recovery can be performed as follows.
       10. In the box with the title *FRU: Hermes CFL (with TPM) Nitrokey Config*, select *On* from the drop-down menu next to *Power*.
           Confirm with the *Apply* button.
 
-          .. figure:: ./images/bmc-power-on.png
+          .. figure:: ./images/system-recovery/bmc-power-on.png
              :alt: BMC power up setting
 
              BMC power up setting
@@ -135,14 +135,14 @@ The system recovery can be performed as follows.
       11. The KVM window now shows the boot dialog.
           Confirm the selection of ``NetHSM automatic boot (USB or primary system)`` with the *Enter* key.
 
-          .. figure:: ./images/bmc-kvm-system-software-boot-selection.png
+          .. figure:: ./images/system-recovery/bmc-kvm-system-software-boot-selection.png
              :alt: NetHSM boot selection in the BMC KVM console
 
              NetHSM boot selection in the BMC KVM console
 
           In the following dialog confirm the selection of ``NetHSM Software Installer`` with the *Enter* key.
 
-          .. figure:: ./images/bmc-kvm-system-software-installation-selection.png
+          .. figure:: ./images/system-recovery/bmc-kvm-system-software-installation-selection.png
              :alt: NetHSM installer selection in the BMC KVM console
 
              NetHSM installer selection in the BMC KVM console

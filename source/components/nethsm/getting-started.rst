@@ -12,7 +12,7 @@ Please follow the three step process closely to verify that it has arrived safel
 
 1. Check the wrapping paper for any tears, cuts, holes or broken sealing.
 
-   .. figure:: ./images/package-front.jpg
+   .. figure:: ./images/getting-started/package-front.jpg
       :scale: 100
       :alt: Package front side
 
@@ -20,7 +20,7 @@ Please follow the three step process closely to verify that it has arrived safel
 
       |
 
-   .. figure:: ./images/package-back.jpg
+   .. figure:: ./images/getting-started/package-back.jpg
       :scale: 100
       :alt: Package back side
 
@@ -28,7 +28,7 @@ Please follow the three step process closely to verify that it has arrived safel
 
       |
 
-   .. figure:: ./images/package-bottom.jpg
+   .. figure:: ./images/getting-started/package-bottom.jpg
       :scale: 100
       :alt: Package bottom side
 
@@ -36,7 +36,7 @@ Please follow the three step process closely to verify that it has arrived safel
 
       |
 
-   .. figure:: ./images/package-top.jpg
+   .. figure:: ./images/getting-started/package-top.jpg
       :scale: 100
       :alt: Package top side
 
@@ -44,7 +44,7 @@ Please follow the three step process closely to verify that it has arrived safel
 
       |
 
-   .. figure:: ./images/package-left.jpg
+   .. figure:: ./images/getting-started/package-left.jpg
       :scale: 100
       :alt: Package left side
 
@@ -55,7 +55,7 @@ Please follow the three step process closely to verify that it has arrived safel
    Compare the received picture with the seal.
    If you notice any changes, please contact us to arrange further action.
 
-   .. figure:: ./images/package-top-seal.jpg
+   .. figure:: ./images/getting-started/package-top-seal.jpg
       :scale: 100
       :alt: Package sealing
 
@@ -64,7 +64,7 @@ Please follow the three step process closely to verify that it has arrived safel
 3. After verifying that the sealing of the wrapping paper is not broken, remove the wrapping paper.
    Finally, check the four seals on the side of the NetHSM hardware.
 
-   .. figure:: ./images/nethsm1-top-with-seal-positions.jpg
+   .. figure:: ./images/getting-started/nethsm1-top-with-seal-positions.jpg
       :scale: 100
       :alt: Positions of the four seals
 
@@ -72,7 +72,7 @@ Please follow the three step process closely to verify that it has arrived safel
 
       |
 
-   .. figure:: ./images/nethsm1-side-with-seal.jpg
+   .. figure:: ./images/getting-started/nethsm1-side-with-seal.jpg
       :scale: 100
       :alt: Seal on the side of the chassis
 
@@ -92,7 +92,7 @@ Please follow the two step process closely to install the NetHSM hardware.
    .. tabs::
       .. tab:: NetHSM 2
 
-         .. figure:: ./images/nethsm2-back-with-labels.png
+         .. figure:: ./images/getting-started/nethsm2-back-with-labels.png
             :scale: 100
             :alt: Back side of the server
 
@@ -105,7 +105,7 @@ Please follow the two step process closely to install the NetHSM hardware.
 
       .. tab:: NetHSM 1
 
-         .. figure:: ./images/nethsm1-back-with-labels.png
+         .. figure:: ./images/used_in_multiple_files/nethsm1-back-with-labels.png
             :scale: 100
             :alt: Back side of the server
 
@@ -122,7 +122,7 @@ Please follow the two step process closely to install the NetHSM hardware.
    .. tabs::
       .. tab:: NetHSM 2
 
-         .. figure:: ./images/nethsm2-front-with-labels.png
+         .. figure:: ./images/getting-started/nethsm2-front-with-labels.png
             :scale: 100
             :alt: Front side of the server
 
@@ -130,7 +130,7 @@ Please follow the two step process closely to install the NetHSM hardware.
 
       .. tab:: NetHSM 1
 
-         .. figure:: ./images/nethsm1-front-with-labels.png
+         .. figure:: ./images/getting-started/nethsm1-front-with-labels.png
             :scale: 100
             :alt: Front side of the server
 
