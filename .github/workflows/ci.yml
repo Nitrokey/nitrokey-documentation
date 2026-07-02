@@ -30,6 +30,23 @@ jobs:
         run: make venv
       - name: Check hyperlinks
         run: make check-hyperlinks
+  check-spelling:
+    name: Check spelling
+    runs-on: ubuntu-latest
+    container: python:3.11
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Install required packages
+        run: |
+          apt update
+          apt install -y libenchant-2-2
+      - name: Create virtual environment
+        run: make venv
+      - name: Check spelling
+        run: |
+          make check-spelling SKIP_ADD_SPELLINGS=1
+          if [ -z "$(find . -name '*.spelling')" ]; then echo "0"; else echo "1"; fi
   build-check-foreign:
     if: ${{ github.event.pull_request.head.repo.owner.login != 'nitrokey' }}
     name: Check Build for Foreign Repository
