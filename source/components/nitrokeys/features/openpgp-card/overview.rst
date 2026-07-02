@@ -62,5 +62,4 @@ You can find further information about the usage on these pages:
 * :doc:`Stunnel <stunnel>`
 * :doc:`Gnu Privacy Assistant (GPA) <gpa>`
 * :doc:`EID <eid>`
-* :doc:`Certificate-authority <certificate-authority>`
 * :doc:`GnuPG with Fedora <fedora-gnupg-configuration>`

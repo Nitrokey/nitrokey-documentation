@@ -25,7 +25,6 @@ OpenPGP Card
 	Stunnel <stunnel>
 	Gnu Privacy Assistant (GPA) <gpa>
 	EID <eid>
-	Certificate-authority <certificate-authority>
 	GnuPG with Fedora <fedora-gnupg-configuration>
 	Change Pins <change-pins>
 	Additional Decryption Subkeys (ADSK) with GnuPG <adsk>
