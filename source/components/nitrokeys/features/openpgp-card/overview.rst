@@ -48,38 +48,19 @@ Usage
 
 You can find further information about the usage on these pages:
 
-
-.. toctree::
-	:maxdepth: 1
-
-	OpenPGP encryption with Thunderbird <openpgp-thunderbird>
-
-	OpenPGP encryption with Outlook <openpgp-outlook>
-
-	OpenPGP Touch Confirmation (Nitrokey 3 only) <uif>
-
-	OpenVPN <openvpn/index>
-
-	Claws Mail, an email client (and news reader) for Linux and Windows <https://www.claws-mail.org/plugin.php?plugin=gpg>
-
-	Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/evolution/mail-encryption.html>
-
-	GPGTools on macOS <https://gpgtools.org>
-
-	Desktop Login <desktop-login/index>
-
-	SSH <ssh/index>
-
-	IPSec <ipsec>
-
-	Hard Disk Encryption <hard-disk-encryption/index>
-
-	Stunnel <stunnel>
-
-	Gnu Privacy Assistant (GPA) <gpa>
-
-	EID <eid>
-
-	Certificate-authority <certificate-authority>
-
-	GnuPG with Fedora <fedora-gnupg-configuration>
+* :doc:`OpenPGP encryption with Thunderbird <openpgp-thunderbird>`
+* :doc:`OpenPGP encryption with Outlook <openpgp-outlook>`
+* :doc:`OpenPGP Touch Confirmation (Nitrokey 3 only) <uif>`
+* :doc:`OpenVPN <openvpn/index>`
+* `Claws Mail, an email client (and news reader) for Linux and Windows <https://www.claws-mail.org/plugin.php?plugin=gpg>`__
+* `Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/evolution/mail-encryption.html>`__
+* `GPGTools on macOS <https://gpgtools.org>`__
+* :doc:`Desktop Login <desktop-login/index>`
+* :doc:`SSH <ssh/index>`
+* :doc:`IPSec <ipsec>`
+* :doc:`Hard Disk Encryption <hard-disk-encryption/index>`
+* :doc:`Stunnel <stunnel>`
+* :doc:`Gnu Privacy Assistant (GPA) <gpa>`
+* :doc:`EID <eid>`
+* :doc:`Certificate-authority <certificate-authority>`
+* :doc:`GnuPG with Fedora <fedora-gnupg-configuration>`
