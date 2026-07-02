@@ -9,7 +9,6 @@ HSM Features
    S/MIME <../openpgp-card/smime/index>
    GPA <../openpgp-card/gpa>
    DNSSEC (Linux only) <dnssec>
-   Automatic Screen Lock (Linux only) <../misc/automatic-screen-lock>
    Import Keys Certs <import-keys-certs>
    stunnel (Linux only) <../openpgp-card/stunnel>
    Certificate Authority <certificate-authority>
@@ -23,5 +22,6 @@ OpenPGP Card Features
 
 The Nitrokey HSM is essentially a more potent OpenPGP Card, thus some of the OpenPGP Card features are also applicable for the HSM - although might need some adjustments.
 
+* :doc:`Automatic Screen Lock (Linux only) <../misc/automatic-screen-lock>`
 * `Hard Disk Encryption <../openpgp-card/hard-disk-encryption/index.html>`_
 * `Windows login <../openpgp-card/desktop-login/smart-policy.html>`__
