@@ -7,7 +7,6 @@ HSM Features
    :maxdepth: 1
 
    S/MIME <../openpgp-card/smime/index>
-   GPA <../openpgp-card/gpa>
    DNSSEC (Linux only) <dnssec>
    Import Keys Certs <import-keys-certs>
    stunnel (Linux only) <../openpgp-card/stunnel>
