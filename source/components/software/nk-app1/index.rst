@@ -1,11 +1,7 @@
 Nitrokey App 1
 ==============
 
-The Nitrokey App 1 is a graphical application designed to manage Nitrokey Pro and Nitrokey Storage devices.
-
-.. note::
-
-   This application is compatible only with Nitrokey Pro and Nitrokey Storage devices. For Nitrokey 3 devices, please use `Nitrokey App 2 <../nk-app2>`__.
+The Nitrokey App 1 is a graphical application designed to manage Nitrokey Pro and Nitrokey Storage devices. For Nitrokey 3 devices, please use `Nitrokey App 2 <../nk-app2>`__.
 
 .. toctree::
    :maxdepth: 1
@@ -22,8 +18,8 @@ The latest Nitrokey App is version 1.4.2 (`Release notes <https://github.com/Nit
 Released binaries are signed by PGP key:
 `868184069239FF65DE0BCD7DD9BAE35991DE5B22 <https://keys.openpgp.org/vks/v1/by-fingerprint/868184069239FF65DE0BCD7DD9BAE35991DE5B22>`__ `szczepan@nitrokey.com <szczepan@nitrokey.com>`__.
 
-Linux Distributions
-*******************
+Linux
+*****
 
 .. dropdown:: Alpine Linux
 
@@ -92,28 +88,7 @@ Linux Distributions
       $ sudo add-apt-repository ppa:nitrokey/nitrokey
       $ sudo apt install nitrokey-app
 
-   **Alternatively**, you can use the snap package. Please see the :ref:`Snap <nk-app1-snap>` entry under `Cross-Platform Packages`_ for more information.
-
-Non-Linux Systems
-*****************
-
-.. dropdown:: FreeBSD
-
-   .. code-block:: bash
-
-      $ pkg install nitrokey-app
-
-.. dropdown:: macOS
-
-   Download latest Nitrokey App (DMG file) `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
-   **Note:** The Nitrokey App was not notarized by Apple yet, which is required by macOS 10.15. See this `forum post <https://support.nitrokey.com/t/failed-install-on-macos-catalina/2047>`__ for more information.
-
-.. dropdown:: Windows
-
-   Download .exe file from `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
-
-Cross-Platform Packages
-***********************
+   **Alternatively**, you can use the snap package. Please see the **Snap** entry for more information.
 
 .. dropdown:: AppImage
 
@@ -131,7 +106,6 @@ Cross-Platform Packages
    For more information visit `Flathub <https://flathub.org/apps/details/com.nitrokey.nitrokey-app>`__.
 
 .. dropdown:: Snap
-   :name: nk-app1-snap
 
    .. note::
 
@@ -154,6 +128,33 @@ Cross-Platform Packages
 
    **Troubleshooting**
    In case you get the error "failed to create user data directory. errmsg: Permission denied" during starting the Nitrokey App, it may is because your home directory is encrypted. In this case, apply one of these fixes `[1] <https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/7>`__ `[2] <https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/8>`__.
+
+Windows
+*******
+
+.. dropdown:: Windows
+
+   Download .exe file from `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
+
+macOS
+*****
+
+.. dropdown:: macOS
+
+   Download latest Nitrokey App (DMG file) `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
+   **Note:** The Nitrokey App was not notarized by Apple yet, which is required by macOS 10.15. See this `forum post <https://support.nitrokey.com/t/failed-install-on-macos-catalina/2047>`__ for more information.
+
+FreeBSD
+*******
+
+.. dropdown:: FreeBSD
+
+   .. code-block:: bash
+
+      $ pkg install nitrokey-app
+
+Source
+******
 
 .. dropdown:: Source
 
