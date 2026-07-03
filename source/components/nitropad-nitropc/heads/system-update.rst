@@ -92,9 +92,7 @@ Boot Entry Has Changed
 
 4. Now the Nitrokey has to be plugged in, if this is not yet the case.
 
-   .. rstcheck: ignore-next-code-block
-   .. code-block:: bash
-
+   .. code-block:: text
 
       Confirm the question "Saving a default will modify the disk" with Y.
       Confirm the question "Do you wish to add a disk encryption to the TPM" with N.

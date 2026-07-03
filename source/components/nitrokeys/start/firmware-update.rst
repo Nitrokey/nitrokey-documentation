@@ -19,7 +19,6 @@ To update the firmware of your Nitrokey Start, proceed as follows.
 
 2. Connect your Nitrokey Start and verify its recognition.
 
-   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       $ nitropy start list
@@ -51,8 +50,7 @@ To update the firmware of your Nitrokey Start, proceed as follows.
    see the latest firmware version available. Now you have to confirm
    the update with “yes”.
 
-   .. rstcheck: ignore-next-code-block
-   .. code-block:: bash
+   .. code-block:: text
 
       Firmware data to be used:
 
@@ -82,7 +80,6 @@ To update the firmware of your Nitrokey Start, proceed as follows.
 6. You can check the firmware version after the upgrade process has
    completed.
 
-   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       $ nitropy start list

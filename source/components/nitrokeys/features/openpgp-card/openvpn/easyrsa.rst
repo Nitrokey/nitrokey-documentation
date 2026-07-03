@@ -64,15 +64,15 @@ Server side
 
     1. First we need to enable IP Forwarding by editing ``/etc/sysctl.conf`` file
 
-        .. code-block:: bash
+       .. code-block:: bash
 
-            $ editor /etc/sysctl.conf
+          $ editor /etc/sysctl.conf
 
     2. Uncomment or edit accordingly the following line
 
-        .. code-block:: bash
+       .. code-block:: bash
 
-            net.ipv4.ip_forward=1
+          net.ipv4.ip_forward=1
 
     3. Close after saving it, and enter this command
 
@@ -91,19 +91,19 @@ Server side
 
     5. Add the URL of the adequate OpenVPN packages to the ``sources.list`` file
 
-        .. code-block:: bash
+       .. code-block:: bash
 
-            # echo "deb http://build.openvpn.net/debian/openvpn/release/2.5 buster main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
-            # exit
+          # echo "deb http://build.openvpn.net/debian/openvpn/release/2.5 buster main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
+          # exit
 
         We downloaded OpenVPN 2.5 as “password prompt” requires at least OpenVPN `version
         2.4.8 <https://community.openvpn.net/openvpn/ticket/1215>`__ to login.
 
     6. Next we download OpenVPN
 
-        .. code-block:: bash
+       .. code-block:: bash
 
-            $ sudo apt install openvpn
+          $ sudo apt install openvpn
 
         If you want to check the version, it possible by calling ``--version``
         and print the following:
@@ -124,18 +124,18 @@ Server side
 
     1. Download the latest release
 
-        .. code-block:: bash
+       .. code-block:: bash
 
-            $ cd ~
-            $ wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-3.0.7.tgz
+          $ cd ~
+          $ wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.7/EasyRSA-3.0.7.tgz
 
     2. Extract the tarball
 
-        .. code-block:: bash
+       .. code-block:: bash
 
-            $ cd ~
-            $ tar xvf EasyRSA-3.0.7.tgz
-            $ mv EasyRSA-3.0.7/ easyrsa/ # rename folder
+          $ cd ~
+          $ tar xvf EasyRSA-3.0.7.tgz
+          $ mv EasyRSA-3.0.7/ easyrsa/ # rename folder
 
 3. Create a PKI for OpenVPN server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -244,7 +244,7 @@ In the next section of this guide, we will sign a ``.req`` file with our CA on d
 
             .. code-block:: bash
 
-                $ p11tool --list-all
+               $ p11tool --list-all
 
             **(Required step)** If this is the first time you sign a certificate with the CA, you might want to retrieve the URI of the CA's private key from the HSM, and include it in the config file.
 
@@ -259,14 +259,14 @@ In the next section of this guide, we will sign a ``.req`` file with our CA on d
 
             .. code-block:: bash
 
-                $ mkdir/opt/certificate-authority/
-                $ cd /opt/certificate-authority/
+               $ mkdir/opt/certificate-authority/
+               $ cd /opt/certificate-authority/
 
         3. Sign the ``server.req``
 
             .. code-block:: bash
 
-                $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in server.req -out /home/user/pki/issued/server.crt
+               $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in server.req -out /home/user/pki/issued/server.crt
 
     2. Retrieve the ``server.crt`` file to the server machine
 
@@ -276,13 +276,13 @@ In the next section of this guide, we will sign a ``.req`` file with our CA on d
 
             .. code-block:: bash
 
-                $ scp openvpn/{server.crt,chain.crt} admin@your_openvpnserver_ip:/tmp
+               $ scp openvpn/{server.crt,chain.crt} admin@your_openvpnserver_ip:/tmp
 
         2. Place the certificates on the server's directory
 
             .. code-block:: bash
 
-                $ mv /tmp/{server.crt,chain.crt} /etc/openvpn/server
+               $ mv /tmp/{server.crt,chain.crt} /etc/openvpn/server
 
             .. warning::
 
@@ -316,46 +316,46 @@ In the next section of this guide, we will sign a ``.req`` file with our CA on d
 
     .. code-block:: bash
 
-        # OpenVPN Server Certificate - CA, server key and certificate
-        ca chain.crt
-        cert server.crt
-        key server.key
+       # OpenVPN Server Certificate - CA, server key and certificate
+       ca chain.crt
+       cert server.crt
+       key server.key
 
     Here is the configuration file we can use for testing these instructions:
 
     .. code-block:: bash
 
-        port 1194
-        proto udp
-        dev tun
-        ca ca.crt
-        cert server.crt
-        key server.key  # This file should be kept secret
-        dh dh.pem
-        server 10.8.0.0 255.255.255.0
-        push "redirect-gateway def1 bypass-dhcp"
-        push "dhcp-option DNS 208.67.222.222"
-        push "dhcp-option DNS 208.67.220.220"
-        keepalive 10 120
-        tls-auth ta.key 0 # This file is secret
-        cipher AES-256-CBC
-        user nobody
-        group nogroup
-        persist-key
-        persist-tun
-        status /var/log/openvpn/openvpn-status.log
-        log         /var/log/openvpn/openvpn.log
-        log-append  /var/log/openvpn/openvpn.log
-        verb 3
-        explicit-exit-notify 1
-        tls-version-min 1.2 # Lower boundary for TLS version
-        tls-version-max 1.2 # Higher boundary for TLS version
+       port 1194
+       proto udp
+       dev tun
+       ca ca.crt
+       cert server.crt
+       key server.key  # This file should be kept secret
+       dh dh.pem
+       server 10.8.0.0 255.255.255.0
+       push "redirect-gateway def1 bypass-dhcp"
+       push "dhcp-option DNS 208.67.222.222"
+       push "dhcp-option DNS 208.67.220.220"
+       keepalive 10 120
+       tls-auth ta.key 0 # This file is secret
+       cipher AES-256-CBC
+       user nobody
+       group nogroup
+       persist-key
+       persist-tun
+       status /var/log/openvpn/openvpn-status.log
+       log         /var/log/openvpn/openvpn.log
+       log-append  /var/log/openvpn/openvpn.log
+       verb 3
+       explicit-exit-notify 1
+       tls-version-min 1.2 # Lower boundary for TLS version
+       tls-version-max 1.2 # Higher boundary for TLS version
 
     To test if the configuration functions properly, we can use this command:
 
     .. code-block:: bash
 
-        $ sudo openvpn --server --config server.conf
+       $ sudo openvpn --server --config server.conf
 
 7. Start the OpenVPN service on the server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -364,14 +364,14 @@ In the next section of this guide, we will sign a ``.req`` file with our CA on d
 
     .. code-block:: bash
 
-        $ sudo systemctl -f enable openvpn@server
-        $ sudo systemctl start openvpn@server
+       $ sudo systemctl -f enable openvpn@server
+       $ sudo systemctl start openvpn@server
 
     To Double check if the OpenVPN service is active use this command:
 
     .. code-block:: bash
 
-        $ sudo systemctl status openvpn@server
+       $ sudo systemctl status openvpn@server
 
     The OpenVPN should be running at this point.
 
@@ -389,19 +389,19 @@ Client side configuration
 
         .. code-block:: bash
 
-            $ sudo dnf install openvpn easy-rsa
+           $ sudo dnf install openvpn easy-rsa
 
     2. Then we create as non-root a directory for Easy RSA called ``Easy-RSA``
 
         .. code-block:: bash
 
-            $ mkdir ~/easyrsa
+           $ mkdir ~/easyrsa
 
     3. And link it to the Easy RSA package we just installed
 
         .. code-block:: bash
 
-            $ ln -s /usr/share/easy-rsa/3/* ~/easyrsa/
+           $ ln -s /usr/share/easy-rsa/3/* ~/easyrsa/
 
 2. Create a PKI for the OpenVPN client
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -432,19 +432,19 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
     .. code-block:: bash
 
-        $ pkcs15-init --store-certificate client.crt --id 3
+       $ pkcs15-init --store-certificate client.crt --id 3
 
     You can see if the key is effectively stored on the Nitrokey using this command:
 
     .. code-block:: bash
 
-        $ pkcs15-tool -c
+       $ pkcs15-tool -c
 
     Or alternatively
 
     .. code-block:: bash
 
-        $ pkcs11-tool --list-objects
+       $ pkcs11-tool --list-objects
 
     Fore more commands you can refer to the `OpenSC wiki <https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__.
 
@@ -469,23 +469,23 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
     .. code-block:: bash
 
-        client
-        dev tun
-        proto udp
-        remote <server> 1194
-        resolv-retry infinite
-        nobind
-        user nobody
-        group nobody
-        persist-key
-        persist-tun
-        ca ca.crt
-        remote-cert-tls server
-        cipher AES-256-CBC
-        verb 3
-        redirect-gateway def1
-        tls-version-min 1.2 # Lower boundary for TLS version
-        tls-version-max 1.2 # Higher boundary for TLS version
+       client
+       dev tun
+       proto udp
+       remote <server> 1194
+       resolv-retry infinite
+       nobind
+       user nobody
+       group nobody
+       persist-key
+       persist-tun
+       ca ca.crt
+       remote-cert-tls server
+       cipher AES-256-CBC
+       verb 3
+       redirect-gateway def1
+       tls-version-min 1.2 # Lower boundary for TLS version
+       tls-version-max 1.2 # Higher boundary for TLS version
 
     1. Determine the correct object
 
@@ -493,23 +493,23 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
         .. code-block:: bash
 
-            $ openvpn --show-pkcs11-ids /usr/lib64/pkcs11/opensc-pkcs11.so
+           $ openvpn --show-pkcs11-ids /usr/lib64/pkcs11/opensc-pkcs11.so
 
-            The following objects are available for use.
-            Each object shown below may be used as parameter to
+           The following objects are available for use.
+           Each object shown below may be used as parameter to
 
-            --pkcs11-id option please remember to use single quote mark.
+           --pkcs11-id option please remember to use single quote mark.
 
-            Certificate
-                    DN:             CN=client
-                    Serial:         E53DA75C5B8F1518F520BCEF0128C09F
-                    Serialized id:  pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03
+           Certificate
+                   DN:             CN=client
+                   Serial:         E53DA75C5B8F1518F520BCEF0128C09F
+                   Serialized id:  pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03
 
         Each certificate/private key pair have unique ``Serialized id`` string. The serialized id string of the requested certificate should be specified, in the configuration file. We can do this by adding the ``pkcs11-id`` option using single quote marks.
 
         .. code-block:: bash
 
-            pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
+           pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
 
     2. Add retrieved Serialized ID to the configuration file
 
@@ -517,8 +517,8 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
         .. code-block:: bash
 
-            pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
-            pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
+           pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
+           pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
 
         For additional `settings related to OpenVPN <https://openvpn.net/community-resources/how-to/>`__ authentication, you may also add few lines to handle key maganagement, although it is optional.
 
@@ -639,14 +639,14 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
         .. code-block:: bash
 
-            $ sudo systemctl -f enable openvpn-server@server.service
-            $ sudo systemctl start openvpn-server@server.service
+           $ sudo systemctl -f enable openvpn-server@server.service
+           $ sudo systemctl start openvpn-server@server.service
 
         To double check if the OpenVPN service is active use this command:
 
         .. code-block:: bash
 
-            $ sudo systemctl status openvpn-server@server.service
+           $ sudo systemctl status openvpn-server@server.service
 
     2. Enter your User PIN
 

@@ -11,25 +11,25 @@ You can configure OpenDNSSEC to load the libnethsm_pkcs11.so module by editing t
 
 .. code-block:: xml
 
-      <?xml version="1.0" encoding="UTF-8"?>
+   <?xml version="1.0" encoding="UTF-8"?>
 
-      <Configuration>
+   <Configuration>
 
-      ...
+   ...
 
-          <RepositoryList>
-                <Repository name="NetHSM">
-                        <Module>/root/libnethsm_pkcs11.so</Module>
-                        <PIN>opPassphrase</PIN>
-                        <TokenLabel>LocalHSM</TokenLabel>
-                </Repository>
-          ...
+       <RepositoryList>
+             <Repository name="NetHSM">
+                     <Module>/root/libnethsm_pkcs11.so</Module>
+                     <PIN>opPassphrase</PIN>
+                     <TokenLabel>LocalHSM</TokenLabel>
+             </Repository>
+       ...
 
-          </RepositoryList>
+       </RepositoryList>
 
-      ...
+   ...
 
-      </Configuration>
+   </Configuration>
 
 
 Replace ``/root/libnethsm_pkcs11.so`` with the path to the libnethsm_pkcs11.so module.
@@ -40,29 +40,29 @@ You also need to update the ``<Repository>`` fields in ``/etc/opendnssec/kasp.xm
 
 .. code-block:: xml
 
-      <KASP>
-            <Policy name="...">
+   <KASP>
+         <Policy name="...">
 
-                  ...
+               ...
 
-                  <Keys>
+               <Keys>
 
-                        ...
+                     ...
 
-                        <KSK>
-                                ...
-                                <Repository>NetHSM</Repository>
-                        </KSK>
-                        <ZSK>
-                                ...
-                                <Repository>NetHSM</Repository>
-                        </ZSK>
-                </Keys>
+                     <KSK>
+                             ...
+                             <Repository>NetHSM</Repository>
+                     </KSK>
+                     <ZSK>
+                             ...
+                             <Repository>NetHSM</Repository>
+                     </ZSK>
+             </Keys>
 
-                ...
+             ...
 
-            </Policy>
+         </Policy>
 
-            ...
+         ...
 
-      </KASP>
+   </KASP>

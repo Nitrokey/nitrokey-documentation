@@ -35,13 +35,13 @@ Setting KDF-DO using GnuPG
 4. Enter Admin PIN
 5. Verify current state state by looking at the card details (``gpg2 --card-status``), where ``KDF setting ......: on`` should be visible, e.g.:
 
-.. code-block:: bash
+.. code-block:: text
 
-    Max. PIN lengths .: 127 127 127
-    PIN retry counter : 3 3 3
-    Signature counter : 0
-    KDF setting ......: on
-    Signature key ....: [none]
+   Max. PIN lengths .: 127 127 127
+   PIN retry counter : 3 3 3
+   Signature counter : 0
+   KDF setting ......: on
+   Signature key ....: [none]
 
 
 Tested with

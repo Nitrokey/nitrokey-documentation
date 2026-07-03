@@ -35,15 +35,13 @@ Installation With WebADB
 
 10. In the shell type:
 
-    .. rstcheck: ignore-next-code-block
     .. code-block:: bash
 
        dpm set-device-owner com.hmdm.launcher/.AdminReceiver
 
     If it was successful it says:
 
-    .. rscheck: ignore-next-code-block
-    .. code-block:: bash
+    .. code-block:: text
 
        Success: Device owner set to package com.hmdm.launcher/.AdminReceiver
        Active admin set to component com.hmdm.launcher/.AdminReceiver
@@ -70,7 +68,6 @@ Installation With ADB
 
 7. Test if ``adb`` can find your NitroPhone:
 
-   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       ./adb devices
@@ -79,7 +76,6 @@ Installation With ADB
 
 8. Install the HMDM app via:
 
-   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       ./adb install <name of your downloaded file>.apk
@@ -88,14 +84,12 @@ Installation With ADB
 
 9. Now give the app device owner rights:
 
-   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       ./adb shell dpm set-device-owner com.hmdm.launcher/.AdminReceiver
 
    If it was successful it says:
 
-   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       Success: Device owner set to package com.hmdm.launcher/.AdminReceiver

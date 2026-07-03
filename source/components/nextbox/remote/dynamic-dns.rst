@@ -56,14 +56,14 @@ The one used for the guided DNS configuration uses the following template:
 
 .. code-block:: none
 
-    daemon=300
-    protocol=dyndns2
-    use=cmd, cmd='curl https://checkipv4.dedyn.io'
-    ssl=yes
-    server=update.dedyn.io
-    login=[domain]
-    password='[token]'
-    [domain]
+   daemon=300
+   protocol=dyndns2
+   use=cmd, cmd='curl https://checkipv4.dedyn.io'
+   ssl=yes
+   server=update.dedyn.io
+   login=[domain]
+   password='[token]'
+   [domain]
 
 * Once you actiavted this configuration, you can *Continue to TLS activation* -
   see below

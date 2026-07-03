@@ -37,7 +37,6 @@ Instructions
 
 1. **Create a backup user and give it root privileges**
 
-   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       $ sudo adduser <backup_user>
@@ -69,8 +68,7 @@ Instructions
 
       The Output should be something like the following:
 
-      .. rstcheck: ignore-next-code-block
-      .. code-block:: bash
+      .. code-block:: text
 
          /lib/x86_64-linux-gnu/security/pam_u2f.so: \ ELF 64-bit LSB shared object, x86-64, version 1 (SYSV),\ dynamically linked, BuildID[sha1]=1d55e1b11a97be2038c6a139579f6c0d91caedb1, stripped
 
@@ -84,13 +82,13 @@ Instructions
 
    Once you run the command above, you will need to touch the device while it flashes. Once done, ``pamu2fcfg`` will append its output the ``u2f_keys`` file in the format:
 
-   .. code-block:: bash
+   .. code-block:: text
 
       <username>:KeyHandle,PublicKey,flags
 
    This will look something like the following:
 
-   .. code-block:: bash
+   .. code-block:: text
 
       nitrouser:fS6vQ9uWa0VizcczyZ/bvk5kcQJkIJOC/21/e7dXFe/fnONSL705EkeiUpZpL/3seAWL/qW4/mqb0/WtiZoP/NOLTRM4EEAg1ANLsfYgSzRd/AjsW3z8kJwgckbvwDUyB90ByR09XtBhuE41vMsEk6J+9CS0+ZuPSB0KXRG7z2yZpQLldjE/ijsdIdd8Ct2oXSiZ/zTb/t5kRafNJVkp=,Oo4U9XvIhI9r0WNnvoMwG5/pbgwYd4GMCYEinhWcsI2hKUebYj92JOxDsSa3zd2A9OB0ofXgB16FD2naev3YmLch==,es256,+presence
 
@@ -143,7 +141,7 @@ Instructions
 
    Add the following line at the **bottom** of the file:
 
-   .. code-block:: bash
+   .. code-block:: text
 
       #Nitrokey config
       auth    sufficient pam_u2f.so authfile=/etc/Nitrokey/u2f_keys cue [cue_prompt=Please touch the device.] prompt
@@ -200,7 +198,6 @@ Instructions
    To configure u2f for multiple users, ``pamu2fcfg`` takes
    the ``-u <username>`` option, the output can be appended to the ``u2f_keys`` file like this:
 
-   .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
       $ sudo pamu2fcfg -u <username> >> /etc/Nitrokey/u2f_keys

@@ -11,7 +11,7 @@ IPSec
 
     .. code-block:: bash
 
-      $ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'
+       $ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -k --key-type rsa:4096 --id 10 --label 'Staging Access'
 
 2. Generate a certificate signing request via openssl + pkcs11 module
 
