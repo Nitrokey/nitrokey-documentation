@@ -10,7 +10,7 @@ The concept is similar to `VeraCrypt's/TrueCrypt's hidden volume <https://veracr
 You can configure up to four hidden volumes. Once unlocked, hidden volumes behave like ordinary storage where you can create various partitions, filesystems and store files as you like.
 
 .. warning::
-   If you chose to use hidden volumes, you must not write any data to the encrypted volume, or you risk loosing data in the hidden volume. 
+   If you chose to use hidden volumes, you must not write any data to the encrypted volume, or you risk loosing data in the hidden volume.
 
 .. note::
    Hidden volumes are hidden within the free space of the encrypted volume, which will be overwritten when writing data to the encrypted volume.
@@ -26,7 +26,7 @@ Configuring hidden volumes
 
 .. tip::
    Copy some files to the encrypted volume prior to creating the hidden volume.
- 
+
 .. note::
    Using a journaling filesystem may risk overwriting the hidden data. The encrypted filesystem is formated to FAT32 by default, and it is recommended to leave it that way when using hidden volumes.
 
@@ -54,7 +54,7 @@ Using hidden volumes
 
     .. tabs::
         .. tab:: Linux
-            
+
             If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. You will need to open a partition manager such as `GParted <https://gparted.org/>`__ and create one or more partitions manually. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.
 
             .. figure:: images/hidden/hidden-storage-partition.png

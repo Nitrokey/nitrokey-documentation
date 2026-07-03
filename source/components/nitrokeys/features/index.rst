@@ -13,9 +13,9 @@ Features
     :link: totp/index
     :link-type: doc
 
-.. card:: OpenPGP Card 
+.. card:: OpenPGP Card
     :link: openpgp-card/index
-    :link-type: doc    
+    :link-type: doc
 
 .. card:: Password Safe
     :link: password-safe/index
@@ -42,7 +42,7 @@ Features
     :link-type: doc
 
 
-.. toctree:: 
+.. toctree::
     :maxdepth: 1
     :glob:
     :hidden:

@@ -13,7 +13,7 @@ Nitrokey Pro 2 FAQ
 
    * User PIN: ``123456``
    * Administrator PIN: ``12345678``
-   
+
    We strongly recommend to change these PINs/password to user-chosen values
    before using the Nitrokey.
 
@@ -35,7 +35,7 @@ Nitrokey Pro 2 FAQ
    access to the contect of the Nitrokey. This is the PIN you will use a lot in
    every day use e.g. for decrypting messages, for unlocking your encrypted
    storage (NK Storage only) etc.
-  
+
    The user PIN can have up to 20 digits and other characters (e.g. alphabetic
    and special characters). But as the user PIN is blocked as soon three wrong
    PIN attempts were done, it is sufficiently secure to only have a 6 digits
@@ -48,7 +48,7 @@ Nitrokey Pro 2 FAQ
    Nitrokey you probably won't need this PIN too often (e.g. if you want to add
    another password to the password safe of the Nitrokey Pro or Nitrokey
    Storage).
-  
+
    The admin PIN can have up to 20 digits and other characters (e.g. alphabetic
    and special characters). But as the admin PIN is blocked as soon three wrong
    PIN attempts were done, it is sufficiently secure to only have 8 digits PIN.
@@ -77,7 +77,7 @@ Nitrokey Pro 2 FAQ
 .. faq:: How fast is encryption and signing?
 
    Encryption of 50kiB of data:
-  
+
    * 256 bit AES, 2048 bytes per command -> 880 bytes per second
    * 128 bit AES, 2048 bytes per command -> 893 bytes per second
    * 256 bit AES, 240 bytes per command -> 910 bytes per second
@@ -153,7 +153,7 @@ Nitrokey Pro 2 FAQ
    The Nitrokey Pro doesn't contain storage capability for ordinary data (it can
    only store cryptographic keys and certificates).
 
-.. faq:: How many keys can I store? 
+.. faq:: How many keys can I store?
 
    The Nitrokey Pro can store three RSA key pairs. All keys use the same
    identity but are used for different purposes: authentication, encryption and

@@ -211,9 +211,9 @@ The *Unlock Passphrase* can be set as follows.
 
       .. code-block::
 
-         New passphrase: 
-         Repeat for confirmation: 
-         Current passphrase: 
+         New passphrase:
+         Repeat for confirmation:
+         Current passphrase:
          Warning: The unlock passphrase cannot be reset without knowing the current value. If the unlock passphrase is lost, neither can it be reset to a new value nor can the NetHSM be unlocked.
          Do you want to continue? [y/N]: y
          Updated the unlock passphrase for NetHSM localhost:8443
@@ -249,7 +249,7 @@ The TLS certificate can be retrieved as follows.
       .. code-block:: bash
 
          $ nitropy nethsm --host $NETHSM_HOST get-certificate --api
-        
+
       .. code-block::
 
          -----BEGIN CERTIFICATE-----
@@ -344,7 +344,7 @@ The certificate can be replaced as follows.
       +===================+==================================================+
       | ``-a``, ``--api`` | Set the certificate for the NetHSM TLS interface |
       +-------------------+--------------------------------------------------+
-      
+
       **Arguments**
 
       +--------------+------------------+
@@ -354,7 +354,7 @@ The certificate can be replaced as follows.
       +--------------+------------------+
 
       **Example**
-      
+
       .. code-block:: bash
 
          nitropy nethsm --host $NETHSM_HOST set-certificate --api /tmp/nethsm-certificate
@@ -383,7 +383,7 @@ The network configuration can be retrieved as follows.
       +---------------+---------------------------------+
 
       **Example**
-      
+
       .. code-block:: bash
 
          $ nitropy nethsm -h $NETHSM_HOST get-config --network
@@ -748,7 +748,7 @@ The backup passphrase can be set as follows.
          Repeat for confirmation:
          Warning: The backup passphrase cannot be reset without knowing the current value. If the backup passphrase is lost, neither can it be reset to a new value nor can the created backups be restored.
          Do you want to continue? [y/N]: y
-         The current backup passphrase (or an empty string if not set) []: 
+         The current backup passphrase (or an empty string if not set) []:
          Updated the backup passphrase for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/backup-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-backup-passphrase>`__.
@@ -806,7 +806,7 @@ The restore can be applied as follows.
       .. important::
          Make sure the time of your local computer is correctly set.
          To set a different time, please provide it manually.
-      
+
       **Arguments**
 
       +--------------+--------------+
@@ -1097,7 +1097,7 @@ A user account can be added as follows.
 
       .. code-block::
 
-         Passphrase: 
+         Passphrase:
          Repeat for confirmation:
          User operator1 added to NetHSM localhost:8443
    .. tab:: REST API
@@ -1203,7 +1203,7 @@ The user passphrase can be set as follows.
       .. code-block:: bash
 
          $ nitropy nethsm --host $NETHSM_HOST set-passphrase --user-id operator1
-      
+
       .. code-block::
 
          Passphrase:

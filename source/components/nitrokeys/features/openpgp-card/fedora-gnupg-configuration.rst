@@ -20,7 +20,7 @@ The GnuPG project supports two setups of interfacing with a OpenPGP smartcard.
 
    In this setup the *scdaemon* communicates directly to the Nitrokey with its internal CCID driver and *libusb*.
    It requires the Udev rules to be set, because the *scdaemon* runs in userspace with the permissions of the logged in user.
-   
+
 2. **GnuPG (scdaemon with PCSC library) → pcscd → Smartcard (e.g. Nitrokey)**
 
    In this setup the *scdaemon* communicates with *pcscd*, which then communicates with the Nitrokey.

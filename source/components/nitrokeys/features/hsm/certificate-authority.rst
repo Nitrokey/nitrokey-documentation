@@ -56,7 +56,7 @@ Install the necessary tools:
    # Ubuntu
    sudo apt-get install opensc gnutls-bin
 
-For Windows download the official `OpenSC releases <https://github.com/OpenSC/OpenSC/releases>`__  
+For Windows download the official `OpenSC releases <https://github.com/OpenSC/OpenSC/releases>`__
 and make sure you install `p11tool as described <https://github.com/thales-e-security/p11tool>`__.
 Using the PowerShell most commands should be identical as long as both tools and their binaries
 are within your ``PATH``.

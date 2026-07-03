@@ -69,7 +69,7 @@ Instructions
     .. code-block:: bash
 
 
-        $ wget https://raw.githubusercontent.com/daringer/smartcard-key-luks/main/smartcard-key-luks 
+        $ wget https://raw.githubusercontent.com/daringer/smartcard-key-luks/main/smartcard-key-luks
         $ sudo chmod +x smartcard-key-luks
 
 4. Export the public key
@@ -89,7 +89,7 @@ Instructions
 
     .. code-block:: bash
 
-        $ cat /etc/crypttab  
+        $ cat /etc/crypttab
         # if there is only one entry, you want the 1st column of this entry
 
     .. hint::
@@ -155,7 +155,7 @@ Enter your User PIN to unlock the drive
 Further Hints
 -------------
 
-Change Passphrase 
+Change Passphrase
 ^^^^^^^^^^^^^^^^^
 
 Once this setup is done, you should not use the (gnome) *disks* utility anymore
@@ -166,18 +166,18 @@ directly like this:
 
   $ sudo cryptsetup luksChangeKey /dev/nvme0n1p3
 
-With `nvme0n1p3` being the partition you set up the keys for. 
+With `nvme0n1p3` being the partition you set up the keys for.
 
 Use Multiple Keys
 ^^^^^^^^^^^^^^^^^
 
-It is easy to use multiple (hardware) security keys so that each of them is able to unlock the 
-LUKS drive independently. Just export multiple public keys and also *pass multiple keys* to the 
+It is easy to use multiple (hardware) security keys so that each of them is able to unlock the
+LUKS drive independently. Just export multiple public keys and also *pass multiple keys* to the
 setup script like this:
 
 .. code-block:: bash
 
-   $ sudo ./smartcard-key-luks nvme0n1p3_crypt pubkey-1.asc pubkey-2.asc 
+   $ sudo ./smartcard-key-luks nvme0n1p3_crypt pubkey-1.asc pubkey-2.asc
 
 
 Set Cardholder Name
@@ -191,7 +191,7 @@ to the user, to set this please use ``$ gpg --edit-card`` and inside the prompt 
 Replace/Delete Keys
 ^^^^^^^^^^^^^^^^^^^
 
-It is not possible to add/remove keys directly. Therefore you need to delete/remove the old 
+It is not possible to add/remove keys directly. Therefore you need to delete/remove the old
 setup and re-run the setup with the designated key(s):
 
 
@@ -213,7 +213,7 @@ Unlocking LUKS2 with X509 certificate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 SystemD supports unlocking a LUKS2 partition using a X509 certificate, find a
-great blog entry on how to realize this at the `Personal blog of Vladimir Timofeenko`_ 
+great blog entry on how to realize this at the `Personal blog of Vladimir Timofeenko`_
 
 
 .. _Personal blog of Vladimir Timofeenko: https://vtimofeenko.com/posts/unlocking-luks2-with-x509-certificate-on-nitrokey-storage/

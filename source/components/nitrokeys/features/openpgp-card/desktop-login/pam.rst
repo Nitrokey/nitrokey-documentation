@@ -1,7 +1,7 @@
 PAM
 ===
 
-.. product-table:: nk3 pro storage start 
+.. product-table:: nk3 pro storage start
 
 .. contents:: :local:
 
@@ -16,14 +16,14 @@ PAM Poldi 0.4.1 works flawlessly with Nitrokey for PAM authentication with RSA k
 
 It is necessary to already have keys generated on the Nitrokey, as the authentication key is used by PAM.
 
-1. At first you need to find out the Application ID of your Nitrokey. It looks like or similar to ``D00600012401020000000000xxxxxxxx``. 
+1. At first you need to find out the Application ID of your Nitrokey. It looks like or similar to ``D00600012401020000000000xxxxxxxx``.
 
-   .. code-block:: bash 
+   .. code-block:: bash
 
       gpg --card-status | grep Application
 
 2. Now you have to add a line to ``/etc/poldi/localdb/users`` which contains the following information ``<YourApplicationID> <YourUsername>``.
-   
+
    This could look like ``D00600012401020000000000xxxxxxxx nitrokeyuser``. Now dump the public key from the Nitrokey into Poldis local db:
 
    .. code-block:: bash
@@ -38,7 +38,7 @@ It is necessary to already have keys generated on the Nitrokey, as the authentic
    * ``/etc/pam.d/common-auth`` for graphical user login
    * ``/etc/pam.d/login`` for console login
    * ``/etc/pam.d/sudo`` for sudo authentication
-   * ``/etc/pam.d/gnome-screensaver`` for login back from a locked screen 
+   * ``/etc/pam.d/gnome-screensaver`` for login back from a locked screen
    * and other files in ``/etc/pam.d``
 
    .. note::
@@ -52,7 +52,7 @@ Troubleshooting
 If you get an error similar to ``ERR 100663414 Invalid ID <SCD>`` you should try instead
 
 ::
-  
+
    poldi-ctrl -k > <YourApplicationID>; sudo mv <YourApplicationID> /etc/poldi/localdb/keys
 
 Please be aware that you have to insert your Application ID in the line above with the one of your stick!

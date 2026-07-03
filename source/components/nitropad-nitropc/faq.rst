@@ -26,10 +26,7 @@ NitroPad, NitroPC FAQ
    itself, just the access to the encryption key. This means that in a situation
    where somebody had phyisical access to the device (e.g., during shipment)
    they may have copied the LUKS header, i.e., the encryption key. Using this
-   copy one might decrypt the hard-disk even with a new password being set. 
-   This is why the re-ownership wizard proposes to re-encrypt the hard-disk, 
-   which reencrypts in place ensuring the previously described scenario 
+   copy one might decrypt the hard-disk even with a new password being set.
+   This is why the re-ownership wizard proposes to re-encrypt the hard-disk,
+   which reencrypts in place ensuring the previously described scenario
    cannot be applied.
-
-   
- 

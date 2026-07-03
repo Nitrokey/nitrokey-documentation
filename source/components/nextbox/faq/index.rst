@@ -4,7 +4,7 @@ NextBox FAQ
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+
    Generic <generic>
    Hardware <hardware>
    Software <software>

@@ -29,7 +29,7 @@ Getting Started
    :hidden:
 
    *
- 
+
 Overview
 --------
 
@@ -42,7 +42,7 @@ The overview allows quick access to check the current app version, saving log fi
 App Version
 ***********
 
-To ensure you are using the latest version of the application, click “Check for App Update.” 
+To ensure you are using the latest version of the application, click “Check for App Update.”
 If no updates are available, the button will display “App is up to date.”
 If an update is available it will change the button text to "update available"
 And by clicking once more it will open the release GitHub page where the latest one is on top. From here you will be able to download the binary if you want to do perfom a manual install

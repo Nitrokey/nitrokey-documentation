@@ -6,12 +6,12 @@ You can use NetHSM for SSH authentication. You need to pass the PKCS#11 module p
 .. tabs::
    .. tab:: Command line
       .. code-block:: shell-session
-       
+
          ssh -I /usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so user@host
-  
+
   .. tab:: SSH config
      .. code-block:: shell-session
-       
+
         Host example.com
           PKCS11Provider /usr/lib/x86_64-linux-gnu/pkcs11/libnethsm_pkcs11.so
 

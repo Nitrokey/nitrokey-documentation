@@ -17,4 +17,3 @@ please contact us to arrange further action.
 
       .. figure:: ./images/sealed-hardware/nitrowall-V1410-seal-bottom.jpg
          :alt: sealing bottom
-  

@@ -3,7 +3,7 @@ Firmware Update
 
 .. important::
    Updating could lead to data loss, so make sure you have proper backup login methods enabled and/or ensure that
-   the Nitrokey Start is not the only way to authenticate/2FA for your 
+   the Nitrokey Start is not the only way to authenticate/2FA for your
    applications/services.
 
 .. important::
@@ -25,13 +25,13 @@ To update the firmware of your Nitrokey Start, proceed as follows.
       $ nitropy start list
             *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
             :: 'Nitrokey Start' keys:
-            FSIJ-1.2.15-87042524: Nitrokey Nitrokey Start (RTM.8) 
+            FSIJ-1.2.15-87042524: Nitrokey Nitrokey Start (RTM.8)
 
 3. Start the update process. For this you need an Internet connection.
 
    .. code-block:: bash
 
-      $ nitropy start update 
+      $ nitropy start update
 
 4. You will then be asked to enter the Admin PIN of your Nitrokey Start.
    (Default PIN: 12345678)
@@ -85,7 +85,7 @@ To update the firmware of your Nitrokey Start, proceed as follows.
    .. rstcheck: ignore-next-code-block
    .. code-block:: bash
 
-      $ nitropy start list 
+      $ nitropy start list
       *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
       :: 'Nitrokey Start' keys:
       FSIJ-1.2.15-87042524: Nitrokey Nitrokey Start (RTM.10)

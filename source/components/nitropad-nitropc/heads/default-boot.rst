@@ -40,9 +40,9 @@ If you have installed a new operating system, it may be that default boot is not
          Please unlock the card
 
          Number: XXXX XXXXXX
-         Holder: 
+         Holder:
          Counter: X
-         PIN: 
+         PIN:
 
    Now the NitroPad marks the files that changed by the update as verified.
 
@@ -86,7 +86,7 @@ If you have installed a new operating system, it may be that default boot is not
          Please unlock the card
 
          Number: XXXX XXXXXX
-         Holder: 
+         Holder:
          Counter: X
          PIN:
 

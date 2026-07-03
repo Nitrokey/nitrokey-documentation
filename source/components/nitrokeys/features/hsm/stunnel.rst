@@ -11,7 +11,7 @@ Stunnel is able to load OpenSC PKCS#11 engine using this configuration:
 
 .. code-block:: bash
 
-  engine=dynamic 
+  engine=dynamic
   engineCtrl=SO_PATH:/usr/lib/opensc/engine_pkcs11.so
   engineCtrl=ID:pkcs11
   engineCtrl=LIST_ADD:1

@@ -86,7 +86,7 @@ Server side
 
        .. code-block:: bash
 
-          $ sudo -s 
+          $ sudo -s
           # wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
 
     5. Add the URL of the adequate OpenVPN packages to the ``sources.list`` file
@@ -248,7 +248,7 @@ In the next section of this guide, we will sign a ``.req`` file with our CA on d
 
             **(Required step)** If this is the first time you sign a certificate with the CA, you might want to retrieve the URI of the CA's private key from the HSM, and include it in the config file.
 
-            .. note:: 
+            .. note::
                The key's URI should be in this format:
 
                .. code-block:: bash
@@ -266,7 +266,7 @@ In the next section of this guide, we will sign a ``.req`` file with our CA on d
 
             .. code-block:: bash
 
-                $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in server.req -out /home/user/pki/issued/server.crt 
+                $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in server.req -out /home/user/pki/issued/server.crt
 
     2. Retrieve the ``server.crt`` file to the server machine
 
@@ -305,7 +305,7 @@ In the next section of this guide, we will sign a ``.req`` file with our CA on d
 
     ::
 
-        OpenVPN server 
+        OpenVPN server
 
             - The root certificate file (CA.crt or chain.crt in our setup)
             - Server certificate
@@ -348,7 +348,7 @@ In the next section of this guide, we will sign a ``.req`` file with our CA on d
         log-append  /var/log/openvpn/openvpn.log
         verb 3
         explicit-exit-notify 1
-        tls-version-min 1.2 # Lower boundary for TLS version 
+        tls-version-min 1.2 # Lower boundary for TLS version
         tls-version-max 1.2 # Higher boundary for TLS version
 
     To test if the configuration functions properly, we can use this command:
@@ -423,7 +423,7 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
 .. code-block:: bash
 
-   $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in client.req -out /home/user/pki/issued/client.crt 
+   $ openssl ca -config sign_server_csrs.ini -engine pkcs11 -keyform engine -days 375 -notext -md sha512 -create_serial -in client.req -out /home/user/pki/issued/client.crt
 
 5. Import ``client.crt`` on the Nitrokey from the CA machine
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -444,7 +444,7 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
     .. code-block:: bash
 
-        $ pkcs11-tool --list-objects 
+        $ pkcs11-tool --list-objects
 
     Fore more commands you can refer to the `OpenSC wiki <https://github.com/OpenSC/OpenSC/wiki/OpenPGP-card>`__.
 
@@ -460,7 +460,7 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
     ::
 
-        OpenVPN client 
+        OpenVPN client
             - The root certificate file (`chain.crt`)
             - Client certificate
             - Client key
@@ -484,7 +484,7 @@ Once transferred, on the CA machine we sign the certificate signing request file
         cipher AES-256-CBC
         verb 3
         redirect-gateway def1
-        tls-version-min 1.2 # Lower boundary for TLS version 
+        tls-version-min 1.2 # Lower boundary for TLS version
         tls-version-max 1.2 # Higher boundary for TLS version
 
     1. Determine the correct object
@@ -493,7 +493,7 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
         .. code-block:: bash
 
-            $ openvpn --show-pkcs11-ids /usr/lib64/pkcs11/opensc-pkcs11.so 
+            $ openvpn --show-pkcs11-ids /usr/lib64/pkcs11/opensc-pkcs11.so
 
             The following objects are available for use.
             Each object shown below may be used as parameter to
@@ -528,7 +528,7 @@ Once transferred, on the CA machine we sign the certificate signing request file
            .. code-block:: bash
 
               # nitrokey config
-                    
+
               pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
               pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
               # pkcs11-pin-cache 300
@@ -541,7 +541,6 @@ Once transferred, on the CA machine we sign the certificate signing request file
               pkcs11-cert-private 1 # Prompt for PIN
 
         Optional step
-                    
 
         If you need to test the configuration, with and without the token on the Nitrokey, you may add lines to the same ``client.conf`` and comment/uncomment the relevant lines according to your needs:
 
@@ -551,7 +550,7 @@ Once transferred, on the CA machine we sign the certificate signing request file
            .. code-block:: bash
 
               # non_nitrokey login
-                
+
               # cert client.crt
               # key client.key
               # tls-auth ta.key 1
@@ -577,7 +576,7 @@ Once transferred, on the CA machine we sign the certificate signing request file
           cipher AES-256-CBC
           verb 3
           redirect-gateway def1
-          tls-version-min 1.2 # Lower boundary for TLS version 
+          tls-version-min 1.2 # Lower boundary for TLS version
           tls-version-max 1.2 # Higher boundary for TLS version
 
           # nitrokey login
@@ -655,18 +654,18 @@ Once transferred, on the CA machine we sign the certificate signing request file
 
         ::
 
-            $ sudo openvpn --client --config client.conf 
+            $ sudo openvpn --client --config client.conf
             Fri Sep 11 17:42:01 2020 OpenVPN 2.4.9 x86_64-redhat-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Apr 24 2020
             Fri Sep 11 17:42:01 2020 library versions: OpenSSL 1.1.1g FIPS  21 Apr 2020, LZO 2.08
             Fri Sep 11 17:42:01 2020 PKCS#11: Adding PKCS#11 provider '/usr/lib64/pkcs11/opensc-pkcs11.so'
             Enter User PIN (OpenPGP card) token Password: ******
 
         .. warning::
-        
+
            Unfortunately OpenVPN doesn't seem to be able to establish a handshake on some operating systems and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
 
         ::
-        
+
             This is what the error output looks like:
 
             $ sudo openvpn --client --config client.conf

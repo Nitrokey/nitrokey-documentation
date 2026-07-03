@@ -38,18 +38,18 @@ Preparation for the server
 You can generate an authorized_keys file by running either
 
 .. code-block:: bash
- 
+
  gpg2 --export-ssh-key keyID >> ~/authorized_keys
 
 where
 
 .. code-block:: bash
- 
+
  keyID
 
 is the subkey id being used for authentication on your Nitrokey. The Nitrokey must already be known to the local GnuPG keyring. You can now append that file to a remote server's authorized_keys and when you ssh to the server you'll be asked for a pin rather than a passphrase.
 
- 
+
 Troubleshooting
 '''''''''''''''
 

@@ -22,9 +22,9 @@ If you want to use Qubes 4.1 or newer *and* the integrated Ethernet port you
 need to update the firmware to 1.4.
 
 .. hint::
-   If the `.npf` file is not accepted by HEADS, likely you do not run the latest HEADS version. 
+   If the `.npf` file is not accepted by HEADS, likely you do not run the latest HEADS version.
    So either 1st update to version 1.3.1 or `unzip` the `.npf` file and use the resulting `.rom`
-   file instead.    
+   file instead.
 
 
 How can I update my NitroPad?
@@ -32,13 +32,13 @@ How can I update my NitroPad?
 
 Updating from ``v1.3.1`` onwards has two different ways:
 
-* Legacy update using either ``nitropad-t430-v1.4.npf`` or ``nitropad-x230-v1.4.npf`` 
+* Legacy update using either ``nitropad-t430-v1.4.npf`` or ``nitropad-x230-v1.4.npf``
   from the Heads menu, see: :doc:`firmware-update`
 * When using an external flasher device you can use the ``-maximized`` images. This keeps graphical HEADS dialogues working. Read
   about the external flashing below.
 
 .. warning::
-   Never try updating your NitroPad using the `-maximized` image, if you do not 
+   Never try updating your NitroPad using the `-maximized` image, if you do not
    know exactly what you are doing! You will brick your NitroPad and
    it can only be repaired using an external flasher!
 
@@ -47,7 +47,7 @@ How can I update to *-maximized*?
 ---------------------------------
 
 .. hint::
-   We highly recommend to NOT DO THIS ON YOUR OWN, as long as 
+   We highly recommend to NOT DO THIS ON YOUR OWN, as long as
    you are not exactly knowing what you are doing!
 
    We have a service to do this upgrade on your NitroPad, please
@@ -60,12 +60,12 @@ we document this here for the curios.
 
 1. Make sure you have a (``flashrom``) compatible flasher like ``ch341a_spi`` with a SOIC-8 clamp.
 
-2. Open the device (`see coreboot docs <https://doc.coreboot.org/mainboard/lenovo/Ivy_Bridge_series.html>`__) 
+2. Open the device (`see coreboot docs <https://doc.coreboot.org/mainboard/lenovo/Ivy_Bridge_series.html>`__)
    and make sure you can access both flash chips.
 
 3. Using ``flashrom`` read out the **bottom** flash (the 8MB image)
 
-4. Using ``ifdtool`` (`coreboot ifdtool docs <https://doc.coreboot.org/util/ifdtool/index.html>`__) extract the ``GbE`` flashregion from the 
+4. Using ``ifdtool`` (`coreboot ifdtool docs <https://doc.coreboot.org/util/ifdtool/index.html>`__) extract the ``GbE`` flashregion from the
    image and replace the ``GbE``-region inside your ``-maximized`` image.
 
 5. Split the modified firmware image using ``dd`` (as described in the coreboot documentation) into ``-top`` and ``-bottom``
@@ -83,9 +83,9 @@ layout in a way that it is incompatible with Heads' internal firmware
 upgrade feature on the NitroPads.
 
 This change mainly originates from a reduces *Management Engine* size
-inside the firmware image. Furthermore the ``-maximized`` images do 
+inside the firmware image. Furthermore the ``-maximized`` images do
 contain all flash regions inside the firmware, this also includes ``GbE``,
-which contains the Ethernet MAC address. 
+which contains the Ethernet MAC address.
 
 The non ``-maximized`` images have no **functional** differences compared
 to the ``-maximized`` images except of the reduced Heads GUI.

@@ -109,11 +109,11 @@ Configuration
        +--------------------------+--------------------------------------------------------+
 
        Close the *Collection Editor* windows.
-       
+
     B. **One to One mapping**
 
        Fill in the fields as in the tablebelow.
-       
+
        +-----------------+----------------------------------+
        | Key             | Value                            |
        +=================+==================================+

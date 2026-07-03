@@ -2,7 +2,7 @@ Getting Started
 ===============
 
 
-1. 
+1.
     .. tabs::
         .. tab:: Linux
             Install ``scdaemon`` and GnuPG 2.1 or higher by using your package

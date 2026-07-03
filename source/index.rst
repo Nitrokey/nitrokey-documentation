@@ -11,7 +11,7 @@ Nitrokey Documentation
     :link: components/nitropad-nitropc/index
     :link-type: doc
 
-    Wide range of coreboot firmware based laptops and desktops 
+    Wide range of coreboot firmware based laptops and desktops
 
 .. card:: NitroPhone / NitroTablet
     :link: components/nitrophone/index

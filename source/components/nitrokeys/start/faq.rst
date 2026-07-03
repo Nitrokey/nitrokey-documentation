@@ -13,7 +13,7 @@ Nitrokey Start FAQ
 
    * User PIN: ``123456``
    * Administrator PIN: ``12345678``
-   
+
    We strongly recommend to change these PINs/password to user-chosen values
    before using the Nitrokey.
 
@@ -35,7 +35,7 @@ Nitrokey Start FAQ
    access to the contect of the Nitrokey. This is the PIN you will use a lot in
    every day use e.g. for decrypting messages, for unlocking your encrypted
    storage (NK Storage only) etc.
-  
+
    The user PIN can have up to 20 digits and other characters (e.g. alphabetic
    and special characters). But as the user PIN is blocked as soon three wrong
    PIN attempts were done, it is sufficiently secure to only have a 6 digits
@@ -48,7 +48,7 @@ Nitrokey Start FAQ
    Nitrokey you probably won't need this PIN too often (e.g. if you want to add
    another password to the password safe of the Nitrokey Pro or Nitrokey
    Storage).
-  
+
    The admin PIN can have up to 20 digits and other characters (e.g. alphabetic
    and special characters). But as the admin PIN is blocked as soon three wrong
    PIN attempts were done, it is sufficiently secure to only have 8 digits PIN.
@@ -114,8 +114,8 @@ Nitrokey Start FAQ
    The Nitrokey Start doesn't contain storage capability for ordinary data (it can
    only store cryptographic keys and certificates).
 
-.. faq:: How many keys can I store? 
+.. faq:: How many keys can I store?
 
-   The Nitrokey Start can store nine RSA key pairs for three identities. 
+   The Nitrokey Start can store nine RSA key pairs for three identities.
    For one identity you need three key pairs for authentication, encryption and signing.
 

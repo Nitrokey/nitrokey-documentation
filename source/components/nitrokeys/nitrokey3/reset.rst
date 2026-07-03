@@ -3,7 +3,7 @@ Factory Reset
 
 .. contents:: :local:
 
-Each functionality of the Nitrokey 3 can be reset individually. 
+Each functionality of the Nitrokey 3 can be reset individually.
 
 FIDO2
 -----

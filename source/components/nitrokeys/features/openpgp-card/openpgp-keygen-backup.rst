@@ -51,15 +51,15 @@ We can use the command ``gpg --full-generate-key --expert`` to start a guided ke
    Key is valid for? (0)
    Key does not expire at all
    Is this correct? (y/N) y
-    
+
    GnuPG needs to construct a user ID to identify your key.
-    
+
    Real name: Jane Doe
    Email address: jane@example.com
    Comment:
    You selected this USER-ID:
        "Jane Doe "
-    
+
    Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
    We need to generate a lot of random bytes. It is a good idea to perform
    some other action (type on the keyboard, move the mouse, utilize the
@@ -72,10 +72,10 @@ We can use the command ``gpg --full-generate-key --expert`` to start a guided ke
    gpg: key 0EFFB0704391497C marked as ultimately trusted
    gpg: revocation certificate stored as '/home/nitrokey//.gnupg/openpgp-revocs.d/9D12C91F6FC4CD6E10A1727A0EFFB0704391497C.rev'
    public and secret key created and signed.
-    
+
    pub   rsa2048 2018-09-17 [SC]
          9D12C91F6FC4CD6E10A1727A0EFFB0704391497C
-   uid                      Jane Doe 
+   uid                      Jane Doe
    sub   rsa2048 2018-09-17 [E]
 
 .. note::
@@ -94,16 +94,16 @@ is either the id of the key or the email address used during key generation.
    gpg (GnuPG) 2.2.10; Copyright (C) 2018 Free Software Foundation, Inc.
    This is free software: you are free to change and redistribute it.
    There is NO WARRANTY, to the extent permitted by law.
-    
+
    Secret key is available.
-    
+
    sec  rsa2048/0EFFB0704391497C
         created: 2018-09-17  expires: never       usage: SC
         trust: ultimate      validity: ultimate
    ssb  rsa2048/A9A814C210F16700
         created: 2018-09-17  expires: never       usage: E
-   [ultimate] (1). Jane Doe 
-    
+   [ultimate] (1). Jane Doe
+
    gpg>
 
 Now you are in the interactive mode of GnuPG and you can add a key by simply typing ``addkey``. You need to choose the key you want to use. It is crucial to choose “set your own capabilities”, because we want to have the “authenticate” capability which is not available otherwise. We toggle sign and encrypt by typing ``s`` and ``e`` and we activate authenticate by typing ``a``.
@@ -123,45 +123,45 @@ Now you are in the interactive mode of GnuPG and you can add a key by simply typ
      (12) ECC (encrypt only)
      (13) Existing key
    Your selection? 8
-    
+
    Possible actions for a RSA key: Sign Encrypt Authenticate
    Current allowed actions: Sign Encrypt
-    
+
       (S) Toggle the sign capability
       (E) Toggle the encrypt capability
       (A) Toggle the authenticate capability
       (Q) Finished
-    
+
    Your selection? s
-    
+
    Possible actions for a RSA key: Sign Encrypt Authenticate
    Current allowed actions: Encrypt
-    
+
       (S) Toggle the sign capability
       (E) Toggle the encrypt capability
       (A) Toggle the authenticate capability
       (Q) Finished
-    
+
    Your selection? e
-    
+
    Possible actions for a RSA key: Sign Encrypt Authenticate
    Current allowed actions:
-    
+
       (S) Toggle the sign capability
       (E) Toggle the encrypt capability
       (A) Toggle the authenticate capability
       (Q) Finished
-    
+
    Your selection? a
-    
+
    Possible actions for a RSA key: Sign Encrypt Authenticate
    Current allowed actions: Authenticate
-    
+
       (S) Toggle the sign capability
       (E) Toggle the encrypt capability
       (A) Toggle the authenticate capability
       (Q) Finished
-    
+
    Your selection? q
 
 We quit with ``q``. Afterwards we need to answer the same questions as before. Finally, we have a ready-to-go key set which we can import to our device.
@@ -185,7 +185,7 @@ We quit with ``q``. Afterwards we need to answer the same questions as before. F
    some other action (type on the keyboard, move the mouse, utilize the
    disks) during the prime generation; this gives the random number
    generator a better chance to gain enough entropy.
-    
+
    sec  rsa2048/0EFFB0704391497C
         created: 2018-09-17  expires: never       usage: SC
         trust: ultimate      validity: ultimate
@@ -193,8 +193,8 @@ We quit with ``q``. Afterwards we need to answer the same questions as before. F
         created: 2018-09-17  expires: never       usage: E
    ssb  rsa2048/61F186B8B0BBD5D5
         created: 2018-09-17  expires: never       usage: A
-   [ultimate] (1). Jane Doe 
-    
+   [ultimate] (1). Jane Doe
+
    gpg> quit
    Save changes? (y/N) y
 
@@ -231,9 +231,9 @@ We start the process by accessing the interactive interface of GnuPG again with 
    gpg (GnuPG) 2.2.10; Copyright (C) 2018 Free Software Foundation, Inc.
    This is free software: you are free to change and redistribute it.
    There is NO WARRANTY, to the extent permitted by law.
-    
+
    Secret key is available.
-    
+
    sec  rsa2048/0EFFB0704391497C
         created: 2018-09-17  expires: never       usage: SC
         trust: ultimate      validity: ultimate
@@ -241,15 +241,15 @@ We start the process by accessing the interactive interface of GnuPG again with 
         created: 2018-09-17  expires: never       usage: E
    ssb  rsa2048/61F186B8B0BBD5D5
         created: 2018-09-17  expires: never       usage: A
-   [ultimate] (1). Jane Doe 
-    
+   [ultimate] (1). Jane Doe
+
    gpg> keytocard
    Really move the primary key? (y/N) y
    Please select where to store the key:
       (1) Signature key
       (3) Authentication key
    Your selection? 1
-    
+
    sec  rsa2048/0EFFB0704391497C
         created: 2018-09-17  expires: never       usage: SC
         trust: ultimate      validity: ultimate
@@ -257,14 +257,14 @@ We start the process by accessing the interactive interface of GnuPG again with 
         created: 2018-09-17  expires: never       usage: E
    ssb  rsa2048/61F186B8B0BBD5D5
         created: 2018-09-17  expires: never       usage: A
-   [ultimate] (1). Jane Doe 
+   [ultimate] (1). Jane Doe
 
 We just imported the main key to the card. Now we proceed with the two subkeys. We type ``key 1`` to select the encryption subkey and type in ``keytocard`` again and select the slot to use.
 
 ::
 
    gpg> key 1
-    
+
    sec  rsa2048/0EFFB0704391497C
         created: 2018-09-17  expires: never       usage: SC
         trust: ultimate      validity: ultimate
@@ -272,13 +272,13 @@ We just imported the main key to the card. Now we proceed with the two subkeys. 
         created: 2018-09-17  expires: never       usage: E
    ssb  rsa2048/61F186B8B0BBD5D5
         created: 2018-09-17  expires: never       usage: A
-   [ultimate] (1). Jane Doe 
+   [ultimate] (1). Jane Doe
 
    gpg> keytocard
    Please select where to store the key:
       (2) Encryption key
    Your selection? 2
-    
+
    sec  rsa2048/0EFFB0704391497C
         created: 2018-09-17  expires: never       usage: SC
         trust: ultimate      validity: ultimate
@@ -286,14 +286,14 @@ We just imported the main key to the card. Now we proceed with the two subkeys. 
         created: 2018-09-17  expires: never       usage: E
    ssb  rsa2048/61F186B8B0BBD5D5
         created: 2018-09-17  expires: never       usage: A
-   [ultimate] (1). Jane Doe 
+   [ultimate] (1). Jane Doe
 
 Now we deselect the first key with ``key 1`` and select the second subkey with ``key 2`` and move it as well with ``keytocard``. Afterwards we quit and save the changes.
 
 ::
 
    gpg> key 1
-    
+
    sec  rsa2048/0EFFB0704391497C
         created: 2018-09-17  expires: never       usage: SC
         trust: ultimate      validity: ultimate
@@ -301,10 +301,10 @@ Now we deselect the first key with ``key 1`` and select the second subkey with `
         created: 2018-09-17  expires: never       usage: E
    ssb  rsa2048/61F186B8B0BBD5D5
         created: 2018-09-17  expires: never       usage: A
-   [ultimate] (1). Jane Doe 
-    
+   [ultimate] (1). Jane Doe
+
    gpg> key 2
-    
+
    sec  rsa2048/0EFFB0704391497C
         created: 2018-09-17  expires: never       usage: SC
         trust: ultimate      validity: ultimate
@@ -312,13 +312,13 @@ Now we deselect the first key with ``key 1`` and select the second subkey with `
         created: 2018-09-17  expires: never       usage: E
    ssb* rsa2048/61F186B8B0BBD5D5
         created: 2018-09-17  expires: never       usage: A
-   [ultimate] (1). Jane Doe 
-    
+   [ultimate] (1). Jane Doe
+
    gpg> keytocard
    Please select where to store the key:
       (3) Authentication key
    Your selection? 3
-    
+
    sec  rsa2048/0EFFB0704391497C
         created: 2018-09-17  expires: never       usage: SC
         trust: ultimate      validity: ultimate
@@ -326,8 +326,8 @@ Now we deselect the first key with ``key 1`` and select the second subkey with `
         created: 2018-09-17  expires: never       usage: E
    ssb* rsa2048/61F186B8B0BBD5D5
         created: 2018-09-17  expires: never       usage: A
-   [ultimate] (1). Jane Doe 
-    
+   [ultimate] (1). Jane Doe
+
    gpg> quit
    Save changes? (y/N) y
 

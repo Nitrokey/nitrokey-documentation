@@ -87,7 +87,7 @@ Debian
 
 1. Go to the Qube manager and create a new standalone Qube and launch the settings after creation.
 
-2. In the advenced tab change the mode to HVM and disable memory balancing and choose the amount of RAM you want. 
+2. In the advenced tab change the mode to HVM and disable memory balancing and choose the amount of RAM you want.
 
 3. In the devices tab select the GPU and pass it to the right then click on the ``Configure strict reset for PCI devices`` then select your card and click ``OK``
 
@@ -110,9 +110,9 @@ Debian
         # name of the driver to use. Can be "amdgpu", "nvidia", or something else
         Driver      "nvidia"
 
-        # The BusID value will change after each qube reboot. 
+        # The BusID value will change after each qube reboot.
         BusID       "PCI:0:8:0"
-        EndSection    
+        EndSection
 
         Section "Screen"
         Identifier "GPU screen"
@@ -137,7 +137,7 @@ Debian
     xfce.sh::
 
         #!/bin/bash
-        sleep 5 && sudo setxkbmap -display :1 fr & 
+        sleep 5 && sudo setxkbmap -display :1 fr &
         /bin/sudo -u user PULSE_SERVER=unix:/run/user/1000/pulse/native bash -c 'sudo xhost + local:;/usr/bin/startxfce4'
 
 

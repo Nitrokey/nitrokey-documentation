@@ -42,7 +42,7 @@ Firmware Update
                 # versions <0.7 of dfu-programmer use "start" instead of "launch"
 
             whereas “firmware.hex” needs to be the path and file name of the firmware which you downloaded in step 2.
-    
+
     .. tab:: MacOS
         1. Download the `Nitrokey App <https://www.nitrokey.com/download>`__ and the `Nitrokey Update Tool <https://github.com/Nitrokey/nitrokey-update-tool/releases/latest>`__. The Nitrokey Update Tool is currently available for macOS and Windows only.
 

@@ -3,7 +3,7 @@ pkcs11-tool
 
 `pkcs11-tool <https://github.com/OpenSC/OpenSC/wiki/Using-pkcs11-tool-and-OpenSSL>`__ is a tool part of the `OpenSC <https://github.com/OpenSC/OpenSC>`__ project that can be used to manage keys on a PKCS#11 device.
 
-You need to pass the location of the PKCS#11 module to use with the ``--module`` option: 
+You need to pass the location of the PKCS#11 module to use with the ``--module`` option:
 
 .. code-block:: bash
 
@@ -66,7 +66,7 @@ The *pkcs11-tool* uses a hexadecimal key ID to identify keys, thus can use the g
 You can get the hexadecimal version of a NetHSM key ID with ``xxd``:
 
 .. code-block:: bash
-  
+
    echo -n "MyKey" | xxd -p
 
 .. code-block:: text
@@ -80,7 +80,7 @@ Generate a Key
 
 Generate a key-pair and store it on the NetHSM.
 
-.. note:: 
+.. note::
    The slot you want to use needs to have an andministrator user in the configuration file. Otherwise you will get a `CKR_USER_NOT_LOGGED_IN` error.
 
 RSA
@@ -122,7 +122,7 @@ List the keys stored on the NetHSM.
      ID:         7273616b6579
      Usage:      none
      Access:     none
-   Private Key Object; RSA 
+   Private Key Object; RSA
      label:      rsakey
      ID:         7273616b6579
      Usage:      decrypt, sign
@@ -141,7 +141,7 @@ It is not possible to read private keys from the NetHSM.
 The certificate of the key-pair can be read with the same command by changing the ``--type`` option to ``cert``.
 
 
-.. note:: 
+.. note::
    The output is in DER format.
 
 Write Keys
@@ -170,7 +170,7 @@ Encryption of data is only supported for AES keys.
    echo "NetHSM rulez!  " | pkcs11-tool --module /usr/lib/nitrokey/libnethsm_pkcs11.so --encrypt --id 6165736b6579 --mechanism AES_CBC --output-file encrypted.txt
 
 .. note::
-   You have to manually pad the input data to the block size of the AES key. 
+   You have to manually pad the input data to the block size of the AES key.
 
 Decrypt
 -------

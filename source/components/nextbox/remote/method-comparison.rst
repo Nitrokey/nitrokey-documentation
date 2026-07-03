@@ -1,4 +1,4 @@
-Comparing Methods For (Remote) Access 
+Comparing Methods For (Remote) Access
 ========================================
 
 .. contents:: :local:
@@ -24,7 +24,7 @@ This denotes the :doc:`dynamic-dns` and the :doc:`static` approach.
 
 
 
-Non-encrypted 
+Non-encrypted
 ^^^^^^^^^^^^^
 
 .. warning::
@@ -32,8 +32,8 @@ Non-encrypted
    NextBox available outside of your local area network.
 
 * simple (``http``) using either ``nextbox.local`` or your local IP (e.g.: ``192.168.178.123``)
-* Generally a bad idea, this will not encrypt the transported data in any way and is only useful 
-  in a setup where you do not want remote access to your NextBox (having non-encrypted traffic 
+* Generally a bad idea, this will not encrypt the transported data in any way and is only useful
+  in a setup where you do not want remote access to your NextBox (having non-encrypted traffic
   inside your LAN might be no problem, as long as you know what you are doing)
 * Data path: [NextBox] ⟷   [Router] ⟷  [Client]
 * **Pro:** fast, no configuration
@@ -46,7 +46,7 @@ Reverse Proxy as a problem with the proxy would then lock you out of your
 NextBox.
 
 
-Nitrokey's Reverse Proxy  
+Nitrokey's Reverse Proxy
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 This refers to the :doc:`proxy` method.
@@ -56,7 +56,7 @@ This refers to the :doc:`proxy` method.
   with the drawback that it is not End-To-End encrypted, means the traffic will
   be decrypted at the Nitrokey Proxy Server and passed onward with another
   encryption. Thus a compromised proxy server might allow access to your
-  traffic to the potential attacker. 
+  traffic to the potential attacker.
 * The proxy server is a bottleneck and all traffic has to go through the proxy
   server, even if you are in a local network together with the NextBox the
   traffic has to go through the proxy server.

@@ -12,7 +12,7 @@ First check the:
    Getting Started <getting-started>
    Frequently Asked Questions <faq>
    Overview <overview>
-   
+
 and the product guides:
 
 .. toctree::

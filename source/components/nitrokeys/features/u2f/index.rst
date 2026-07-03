@@ -8,4 +8,4 @@ U2F
 
     Desktop Login (Linux only) <desktop-login>
     Odoo Login <odoo>
-    Two Factor Authentication <2fa> 
+    Two Factor Authentication <2fa>

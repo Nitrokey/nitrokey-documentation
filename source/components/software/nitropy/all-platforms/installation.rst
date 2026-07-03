@@ -25,7 +25,7 @@ You can install nitropy along with all other required dependencies by using::
     $ sudo pacman -S python python-pipx && pipx ensurepath && pipx install pynitrokey
 
 If you have already installed Python on your system, you can simply run::
-    
+
     $ sudo pacman -S python-pipx && pipx ensurepath && pipx install pynitrokey
 
 After logging out or restarting your system, nitropy will now be available.
@@ -93,13 +93,13 @@ nitropy is now available in your path::
 
     $ nitropy --help
 
-Upgrade 
+Upgrade
 -------
 
 You can upgrade the package with the following command::
 
     $ pipx upgrade pynitrokey
-    
+
 Troubleshooting
 ---------------
 
@@ -112,7 +112,7 @@ If your default Python installation is not in the supported versions list above,
 Install a supported version of Python and specify the name of its Python executable when calling pipx, for example::
 
     $ pipx install --python python3.9 pynitrokey
-    
+
 libusb-1.0.dylib not found
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

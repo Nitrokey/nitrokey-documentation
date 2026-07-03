@@ -46,48 +46,48 @@ To open the Windows command line please push the Windows-key and R-key. Now type
    Encryption key....: [none]
    Authentication key: [none]
    General key info..: [none]
-    
+
    gpg/card>
 
 Now you are in the interactive interface of GnuPG. Activate the admin commands with ``admin`` and use ``generate`` afterwards to start the generation of keys.
 
 .. code-block:: shell-session
 
-   gpg/card> admin                                                                                          
-   Admin commands are allowed                                                                               
-    
-   gpg/card> generate                                                                                       
-   Make off-card backup of encryption key? (Y/n) n                                                          
-    
-   Please note that the factory settings of the PINs are                                                    
-      PIN = '123456'     Admin PIN = '12345678'                                                             
-   You should change them using the command --change-pin                                                    
-    
-   Please specify how long the key should be valid.                                                         
-            0 = key does not expire                                                                         
-         <n>  = key expires in n days                                                                       
-         <n>w = key expires in n weeks                                                                      
-         <n>m = key expires in n months                                                                     
-         <n>y = key expires in n years                                                                      
-   Key is valid for? (0)                                                                                    
-   Key does not expire at all                                                                               
-   Is this correct? (y/N) y                                                                                 
-    
-   GnuPG needs to construct a user ID to identify your key.                                                 
-    
-   Real name: Jane Doe                                                                                      
-   Email address: jane@example.com                                                                              
-   Comment:                                                                                                 
-   You selected this USER-ID:                                                                               
-   "Jane Doe <jane@doecom>"                                                                            
-    
-   Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O                                                    
-   gpg: key 817E149CA002B92F marked as ultimately trusted                                                   
+   gpg/card> admin
+   Admin commands are allowed
+
+   gpg/card> generate
+   Make off-card backup of encryption key? (Y/n) n
+
+   Please note that the factory settings of the PINs are
+      PIN = '123456'     Admin PIN = '12345678'
+   You should change them using the command --change-pin
+
+   Please specify how long the key should be valid.
+            0 = key does not expire
+         <n>  = key expires in n days
+         <n>w = key expires in n weeks
+         <n>m = key expires in n months
+         <n>y = key expires in n years
+   Key is valid for? (0)
+   Key does not expire at all
+   Is this correct? (y/N) y
+
+   GnuPG needs to construct a user ID to identify your key.
+
+   Real name: Jane Doe
+   Email address: jane@example.com
+   Comment:
+   You selected this USER-ID:
+   "Jane Doe <jane@doecom>"
+
+   Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+   gpg: key 817E149CA002B92F marked as ultimately trusted
    gpg: revocation certificate stored as '/home/nitrokey//.gnupg/openpgp-revocs.d/E62F445E8BB4B5085C031F5381
-   7E149CA002B92F.rev'                                                                                      
-   public and secret key created and signed.                                                                
-    
-    
+   7E149CA002B92F.rev'
+   public and secret key created and signed.
+
+
    gpg/card>
    </jane@doe.com></n></n></n></n>
 
@@ -134,7 +134,7 @@ Now you are in the interactive interface of GnuPG. As you can see in the
 
    gpg/card> admin
    Admin commands are allowed
-    
+
    gpg/card> key-attr
    Changing card key attribute for: Signature key
    Please select what kind of key you want:
@@ -163,7 +163,7 @@ You can choose the attribute for each key (that is, signature, encryption and au
 .. code-block:: shell-session
 
    gpg/card> list
-    
+
    Reader ...........: 20A0:4108:0000320E0000000000000000:0
    Application ID ...: D27600012401020100050000320E0000
    Version ..........: 2.1

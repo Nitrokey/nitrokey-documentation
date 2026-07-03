@@ -47,16 +47,16 @@ Boot Hash Mismatch
 .. code-block:: bash
 
    Please confirm that your GPG card is inserted [Y/n]:
-    
+
    Verifying presence of GPG card...
-    
+
    XXXXXXX: XXXXXXXXXX
    Please unlock the card
-    
+
    Number: XXXX XXXXXX
-   Holder: 
+   Holder:
    Counter: X
-   PIN: 
+   PIN:
 
 Now the NitroPad marks the files changed by the update as verified.
 
@@ -96,7 +96,7 @@ Boot Entry Has Changed
    .. code-block:: bash
 
 
-      Confirm the question "Saving a default will modify the disk" with Y. 
+      Confirm the question "Saving a default will modify the disk" with Y.
       Confirm the question "Do you wish to add a disk encryption to the TPM" with N.
       Confirm the question "Please confirm that your GPG card is inserted" with Y.
       Enter the User PIN of the Nitrokey whenever prompted (default: 123456).
@@ -107,19 +107,19 @@ Boot Entry Has Changed
 .. code-block:: bash
 
    Saving a default will modify the disk. Proceed? [Y/n]:
-    
+
    Do you wish to add a disk encryption to the TPM [y/N]:
-    
+
    Please confirm that your GPG card is inserted [Y/n]:
-    
+
    Verifying presence of GPG card...
-    
+
    XXXXXXX: XXXXXXXXXX
    Please unlock the card
-    
+
    Number: XXXX XXXXXX
-   Holder: 
+   Holder:
    Counter: X
-   PIN: 
+   PIN:
 
 Your system will then boot.

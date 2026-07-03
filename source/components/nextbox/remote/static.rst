@@ -1,4 +1,4 @@
-Static DNS Configuration 
+Static DNS Configuration
 =============================================
 
 This configuration shall be used, if you configured DNS and thus a domain
@@ -8,11 +8,11 @@ In contrast to the :doc:`backwards proxy <proxy>` remote access method, this app
 will ensure full end-to-end encryption using your very own TLS certificate acquired from
 `Let's Encrypt`_.
 
-In order to use the configured domain with your NextBox and its Nextcloud 
-instance you must provide the full domain here to trust this domain inside 
+In order to use the configured domain with your NextBox and its Nextcloud
+instance you must provide the full domain here to trust this domain inside
 your Nextcloud instance.
 
-For instance inside a "Fritz!Box" this can be done by navigating to: 
+For instance inside a "Fritz!Box" this can be done by navigating to:
 "Internet -> Permit Access -> DynDNS" and configuring a dynamic DNS provider
 of your choice.
 

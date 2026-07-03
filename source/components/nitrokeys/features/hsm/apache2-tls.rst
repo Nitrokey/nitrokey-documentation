@@ -1,4 +1,4 @@
-TLS Setup With Apache2 
+TLS Setup With Apache2
 ======================
 
 .. product-table:: hsm
@@ -25,10 +25,10 @@ Preparation
 
 
 
-Configure Apache2 to Use a Security Key 
+Configure Apache2 to Use a Security Key
 ---------------------------------------
 
-Basically the only thing to do is replace ``SSLCertificateFile`` with the proper PKCS#11 URL 
+Basically the only thing to do is replace ``SSLCertificateFile`` with the proper PKCS#11 URL
 and delete any other references to keys or certificates. E.g., ``SSLCertificateKeyFile`` is not
 needed anymore.
 
@@ -56,7 +56,7 @@ PIN during startup.
 Apache2 expects an executable after ``|``, which will be executed during startup
 and it's output (trailing newline is expected) will be used as PIN. Obviously arbitrary
 complex PIN retrieval methods can be implemented using this approach. Although here
-a trivial example has been chosen to just ``echo`` the PIN during startup. 
+a trivial example has been chosen to just ``echo`` the PIN during startup.
 
 Further ``SSLPassPhraseDialog`` is a global directive, thus has to be placed in the global
 configuration scope in Apache2.
@@ -78,18 +78,18 @@ A complete Apache2 (``VirtualHost``) config snippet might look like this:
      SSLPassPhraseDialog     "|/bin/echo 123456"
      <VirtualHost _default_:443>
        ServerAdmin webmaster@localhost
-     
+
        DocumentRoot /var/www/html
-     
+
        ErrorLog ${APACHE_LOG_DIR}/error.log
        CustomLog ${APACHE_LOG_DIR}/access.log combined
-     
+
        SSLEngine on
-     
+
        SSLCertificateFile  "pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0105076;token=UserPIN%20%28SmartCard-HSM%29"
-     
+
        #SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
-     
+
        <FilesMatch "\.(cgi|shtml|phtml|php)$">
          SSLOptions +StdEnvVars
        </FilesMatch>

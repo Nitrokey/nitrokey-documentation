@@ -16,7 +16,7 @@ Nitrokeys
 .. card:: Nitrokey 3
     :link: nitrokey3/index
     :link-type: doc
-    
+
     Deep dive into the Nitrokey 3 and its endless applications
 
 .. card:: Nitrokey Passkey
@@ -27,7 +27,7 @@ Nitrokeys
 
 .. card:: Nitrokey Pro 2
     :link: pro/index
-    :link-type: doc    
+    :link-type: doc
 
     Smartcard-based OpenPGPCard security token
 
@@ -55,11 +55,11 @@ Nitrokeys
 
     Secure 2FA token for to increase your web security
 
-.. toctree:: 
+.. toctree::
    :maxdepth: 1
-   :glob:   
+   :glob:
    :hidden:
-     
+
    Features <features/index>
    Nitrokey 3 <nitrokey3/index>
    Nitrokey Passkey <passkey/index>

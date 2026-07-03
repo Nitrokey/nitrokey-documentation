@@ -93,7 +93,7 @@ Then we create the key.
 
    gpg/card> admin
    Admin commands are allowed
-    
+
    gpg/card> generate
    Make off-card backup of encryption key? (Y/n) n
    Please note that the factory settings of the PINs are

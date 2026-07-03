@@ -4,7 +4,7 @@ Getting Started
 .. contents:: :local:
 
 
-1. 
+1.
     .. tabs::
         .. tab:: Linux
             Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. You need
@@ -40,6 +40,6 @@ Getting Started
 Your Nitrokey is now ready to use.
 
 * There is `nitrotool <https://github.com/johndoe31415/nitrotool>`__ as a more comfortable frontend to OpenSC. (hsmwiz)
-* Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11 module is provided by the `sc-hsm-embedded <https://github.com/CardContact/sc-hsm-embedded>`__ project. 
+* Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11 module is provided by the `sc-hsm-embedded <https://github.com/CardContact/sc-hsm-embedded>`__ project.
 * `This PKCS#11 module <https://github.com/CardContact/sc-hsm-embedded/wiki/PKCS11>`__ is useful for deployments where key generation at the user's workplace is not required. The PKCS#11 module also supports major electronic signature cards available in the German market.
-* OpenSCDP: The SmartCard-HSM is fully integrated with `OpenSCDP <https://www.openscdp.org/>`__, the open smart card development platform. See the `public support scripts <https://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html>`__ for details. 
+* OpenSCDP: The SmartCard-HSM is fully integrated with `OpenSCDP <https://www.openscdp.org/>`__, the open smart card development platform. See the `public support scripts <https://www.openscdp.org/scripts/sc-hsm/jsdoc/index.html>`__ for details.

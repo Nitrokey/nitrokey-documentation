@@ -74,35 +74,30 @@ Initialization
 ''''''''''''''
 
 1. Create a key file with random data:
-                                      
 
     .. code-block:: bash
 
         $ dd bs=64 count=1 if=/dev/urandom of=keyfile
 
 2. Encrypt the key file and use the User-ID of your Nitrokey
-                                                            
 
     .. code-block:: bash
 
         $ gpg --encrypt keyfile
 
 3. Remove the key file in clear text:
-                                     
 
     .. code-block:: bash
 
         $ rm keyfile # you may want to use 'wipe' or 'shred' to securely delete the keyfile
 
 4. Create mount point:
-                      
 
     .. code-block:: bash
 
-        $ mkdir ~/.cryptdir ~/cryptdir 
+        $ mkdir ~/.cryptdir ~/cryptdir
 
 5. Create the actual encryption folder
-                                      
 
     .. code-block:: bash
 
@@ -111,7 +106,6 @@ Initialization
         # This message can be ignored
 
 6. Unmount the new file system:
-                               
 
     .. code-block:: bash
 
@@ -121,14 +115,12 @@ Usage
 '''''
 
 1. Mount encrypted file system and enter PIN of Nitrokey:
-                                                         
 
     .. code-block:: bash
 
-        $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir 
+        $ gpg -d keyfile.gpg | encfs -S ~/.cryptdir ~/cryptdir
 
 2. After usage, unmount the file system:
-                                        
 
     .. code-block:: bash
 
@@ -142,7 +134,6 @@ Storage Encryption on GNU+Linux with ECryptFS
 See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
 
 1. Import the certificate and key to the Nitrokey
-                                                 
 
     .. code-block:: bash
 
@@ -150,14 +141,12 @@ See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
         $ pkcs15-init --delete-objects privkey,pubkey --id 3 --store-private-key user@example.com.p12 --format pkcs12 --auth-id 3 --verify-pin
 
 2. Create the file ~/.ecryptfsrc.pkcs11:
-                                        
 
     .. code-block:: bash
 
         $ editor ~/.ecryptfsrc.pkcs11
 
 3. Enter this content:
-                      
 
     .. code-block:: bash
 
@@ -169,12 +158,11 @@ See `these <http://tkxuyen.com/blog/?p=293>`__ instructions:
             Serialized id: ZeitControl/PKCS\x2315\x20emulated/000500000c7f/OpenPGP\x20card\x20\x28User\x20PIN\x29/03
 
 4. Copy the serialized id for later usage:
-                                          
 
     .. code-block:: bash
 
         $ ecryptfs-manager
-        # This will show list option. Choose option "Add public key to keyring" 
+        # This will show list option. Choose option "Add public key to keyring"
         # Choose pkcs11-helper
         # Enter the serialized ID of step 3 to PKCS#11 ID.
 

@@ -4,11 +4,11 @@ Getting Started
 .. contents:: :local:
 
 
-1. 
+1.
     .. tabs::
         .. group-tab:: Linux
             To access the OpenPGP smart card of the Nitrokey, install the package
-            libccid. On Debian/Ubuntu based Distributions type in terminal: 
+            libccid. On Debian/Ubuntu based Distributions type in terminal:
             .. code-block:: bash
 
                $ sudo apt-get update && sudo apt-get install libccid
@@ -25,7 +25,7 @@ Getting Started
 
               Windows may fail to install an additional device driver for the smart card. Its safe to ignore this warning.
 
-2. 
+2.
     .. tabs::
         .. group-tab:: Linux
             Download and start the `Nitrokey App <https://www.nitrokey.com/download>`__.

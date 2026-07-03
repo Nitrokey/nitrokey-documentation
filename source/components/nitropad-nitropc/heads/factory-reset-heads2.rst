@@ -47,16 +47,16 @@ Procedure
 
     7. You will be prompted with:
 
-       .. code-block:: 
+       .. code-block::
 
          Would you like to use default configuration option?
          If N, you will be prompted for each option [Y/n]:
-    
+
        You can hit enter for the default option (Y).
 
        A second prompt will show:
 
-       .. code-block:: 
+       .. code-block::
 
          Would you like to export your public key to an USB drive? [y/N]:
 
@@ -68,9 +68,9 @@ Procedure
 
        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/default-sec.jpg
           :alt: defaults
-    
+
        You will need them for certain procedure so make sure to remember them.
-    
+
     9. Confirm the subsequent restart.
 
        .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/reboot.jpg
@@ -89,7 +89,7 @@ Procedure
         .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
            :alt: tpm password enter
 
-    12. Scan QR code with Phone to inport TOTP Seceret (Optional) and hit Enter 
+    12. Scan QR code with Phone to inport TOTP Seceret (Optional) and hit Enter
 
         .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
            :alt: qr code totp
@@ -103,7 +103,7 @@ Procedure
            :alt: admin pin nitrokey input
 
     14. Hit enter and the automatic boot will start.
-  
+
     15. You will now need to select your default boot, pick the first option and make it default.
 
         .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/default-boot.jpg
@@ -111,16 +111,16 @@ Procedure
 
     16. This prompt will appear:
 
-    .. code-block:: 
+    .. code-block::
 
       Do you wish to add a disk encryption key to the TPM [y/N]:
 
     Hit enter to choose the default option (N).
 
-    .. code-block:: 
+    .. code-block::
 
       Please confirm that your GPG card is inserted [Y/n]:
-        
+
     Here also hit enter for the default option (Y).
 
     It will ask for the Admin PIN which is by default (123456).
@@ -130,7 +130,7 @@ Procedure
 
 
    .. tab:: Heads v2.0 to v2.5
-    
+
         1. Connect your Nitrokey to the NitroPad.
         2. Turn on the NitroPad.
         3. Select “Options”.
@@ -153,10 +153,10 @@ Procedure
            .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm-integrity.jpg
               :alt: confirm integrity
 
-        7. The following Question can all be answered with the Default. Just hit enter if you only want to reset your device.  
+        7. The following Question can all be answered with the Default. Just hit enter if you only want to reset your device.
 
            .. code-block:: shell
-        
+
               Would you like to change the current LUKS Disk Recovery Key passphrase?
               (Highly recommended if you didn't install the Operating System yourself, so that past provisioned passphrase would not permit to access content.
               Note that without re-encrypting disk, a backuped header could be restored to access encrypted content with old passphrase) [y/N]: N
@@ -178,15 +178,15 @@ Procedure
 
               Would you like to set custom user information for the GnuPG key? [y/N]: N
 
-              Checking for USB Security Dongle... 
+              Checking for USB Security Dongle...
 
-              Detecting and setting boot device... 
+              Detecting and setting boot device...
 
               Boot device set to /dev/nvme0n1p2
 
-              Resetting TPM... 
+              Resetting TPM...
 
-              Resetting GPG Key... 
+              Resetting GPG Key...
               (this will take around 3 minuts...)
 
               Changing default GPG Admin PIN
@@ -223,7 +223,7 @@ Procedure
             .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
                :alt: tpm password enter
 
-        12. Scan QR COde with Phone to inport TOTP Seceret (Optional) and hit Enter 
+        12. Scan QR COde with Phone to inport TOTP Seceret (Optional) and hit Enter
 
             .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
                :alt: qr code totp
@@ -242,7 +242,5 @@ Procedure
         15. Press Enter to start the “Default Boot”.
 
         .. note::
-        
-           If you see the message that no default exists yet, please follow the procedure described in `default boot <./default-boot.html>`__.
 
-   
+           If you see the message that no default exists yet, please follow the procedure described in `default boot <./default-boot.html>`__.

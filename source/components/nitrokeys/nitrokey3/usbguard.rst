@@ -17,7 +17,7 @@ Especially thunderbolt (which can be blocked globally, see `this config as to ho
 
 2. Set it up
 
-Make sure to have your keyboard and mouse plugged in. 
+Make sure to have your keyboard and mouse plugged in.
 
 These commands will permanently allow all currently connected devices:
 

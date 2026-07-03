@@ -19,7 +19,7 @@ Login to Windows Domain Computers With MS Active Directory
          # name = "Nitrokey Pro 2";
          md_read_only = false;
          md_supports_X509_enrollment = true;
-      }     
+      }
       # Nitrokey Pro, OpenPGP Card
       card_atr 3B:DA:18:FF:81:B1:FE:75:1F:03:00:31:C5:73:C0:01:40:00:90:00:0C {
          type = 9002;

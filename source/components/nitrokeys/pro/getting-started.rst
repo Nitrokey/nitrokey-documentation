@@ -25,9 +25,9 @@ Getting Started
 
 
 2. Download and start the `Nitrokey
-   App <https://www.nitrokey.com/download>`__. 
+   App <https://www.nitrokey.com/download>`__.
 
-3. Use the Nitrokey-App to change the default User PIN (default: 123456) and Admin PIN 
+3. Use the Nitrokey-App to change the default User PIN (default: 123456) and Admin PIN
    (default: 12345678) to your own choices.
 
 .. figure:: ../features/openpgp-card/images/change-pins/App-change-pin.png

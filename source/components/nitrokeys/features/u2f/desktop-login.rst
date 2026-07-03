@@ -89,7 +89,7 @@ Instructions
       <username>:KeyHandle,PublicKey,flags
 
    This will look something like the following:
-   
+
    .. code-block:: bash
 
       nitrouser:fS6vQ9uWa0VizcczyZ/bvk5kcQJkIJOC/21/e7dXFe/fnONSL705EkeiUpZpL/3seAWL/qW4/mqb0/WtiZoP/NOLTRM4EEAg1ANLsfYgSzRd/AjsW3z8kJwgckbvwDUyB90ByR09XtBhuE41vMsEk6J+9CS0+ZuPSB0KXRG7z2yZpQLldjE/ijsdIdd8Ct2oXSiZ/zTb/t5kRafNJVkp=,Oo4U9XvIhI9r0WNnvoMwG5/pbgwYd4GMCYEinhWcsI2hKUebYj92JOxDsSa3zd2A9OB0ofXgB16FD2naev3YmLch==,es256,+presence
@@ -102,7 +102,7 @@ Instructions
 
       -  It is recommended to first test the instructions with a single
          user. Other users configuration will be added it section 7.
-         
+
 4. **Setting up a backup Nitrokey**
 
    This step is optional, however it is advised to have a second Nitrokey as backup in the case of loss, theft or destruction of your primary Nitrokey.
@@ -114,11 +114,11 @@ Instructions
       $ pamu2fcfg -n >> ~/u2f_keys
 
    This will omit the ``<username>`` field, and the output is appended to the line with your ``<username>``, this will look something like this:
-   
+
    .. code-block:: bash
 
       <username>:Zx...mw,04...0a:xB...fw,es256,+presence:04...3f,es256,+presence
-   
+
 5. **Securing the config file**
 
    For better security, after the config file was generated, we will move the generated file ``~/u2f_keys`` to ``/etc/Nitrokey/`` and change the access permissions using these commands:
@@ -165,13 +165,13 @@ Instructions
          message. You can change the message in ``[cue_prompt=Please touch the device.]``.
 
    .. note::
-      
-      **Why bottom placement?** PAM processes modules from top to bottom. Placing the U2F 
-      configuration at the bottom ensures password authentication is checked first, creating 
+
+      **Why bottom placement?** PAM processes modules from top to bottom. Placing the U2F
+      configuration at the bottom ensures password authentication is checked first, creating
       a second-factor workflow (password + U2F).
-      
-      For alternative authentication options (password OR Nitrokey) and detailed explanations 
-      of how line position and control flags affect authentication, see 
+
+      For alternative authentication options (password OR Nitrokey) and detailed explanations
+      of how line position and control flags affect authentication, see
       `Alternative Authentication Method <#alternative-authentication-method>`__.
 
    Once we modified the ``common-auth``, we can save and exit the file.
@@ -215,7 +215,7 @@ Instructions
 
 8. **Enforcing Nitrokey second factor authentication**
 
-   You may have noticed that authenticating with the Nitrokey was not enforced yet. After confirming that authentication using the Nitrokey does work, we can enforce 
+   You may have noticed that authenticating with the Nitrokey was not enforced yet. After confirming that authentication using the Nitrokey does work, we can enforce
    it by changing the ``sufficient`` flag to ``required``.
 
    .. warning::
@@ -287,7 +287,7 @@ The combination of line position and control flag determines your authentication
 
 **How PAM Works:**
 
-PAM processes modules sequentially from top to bottom. The control flag determines how 
+PAM processes modules sequentially from top to bottom. The control flag determines how
 success or failure affects the overall authentication:
 
 - ``sufficient``: Success completes authentication; failure is ignored if other modules succeed
@@ -365,7 +365,7 @@ Issues logging into user account using GDM
 ''''''''''''''''''''''''''''''''''''''''''
 
 In some cases, for example if you have `opencs-pkcs11` installed, Gnome Display Manager (GDM) can
-default to enforcing smart card login as soon as any smart card (like your Nitrokey) is plugged in, even if no smart card has ever been configured. 
+default to enforcing smart card login as soon as any smart card (like your Nitrokey) is plugged in, even if no smart card has ever been configured.
 This can prevent you from logging in to your user account using u2f. If you have set the ``sufficient`` control flag,
 unplug all smart cards and log in using your password. To turn off smart card enforcing run the following command:
 

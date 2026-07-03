@@ -20,7 +20,7 @@ Preparation
 
 2. Download the `latest firmware <https://github.com/Nitrokey/heads/releases/latest>`__ and store it on a USB drive. For the:
 
-   - NitroPad T430: ``firmware-nitropad-t430-[version].npf`` 
+   - NitroPad T430: ``firmware-nitropad-t430-[version].npf``
    - NitroPad X230: ``firmware-nitropad-x230-[version].npf``
    - NitroPad NV41: ``firmware-nitropad-nv41-[version].npf``
    - NitroPad NS50: ``firmware-nitropad-ns50-[version].npf``
@@ -32,9 +32,9 @@ To verify the firmware follow these steps:
 
 1. Download  `sha256sum.sig <https://github.com/Nitrokey/heads/releases/latest>`__ and store it
 
-2. Download and import Markus Meissners `gpg key <https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__ 
+2. Download and import Markus Meissners `gpg key <https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__
 
-3. Verify the signature: 
+3. Verify the signature:
 
 .. code-block:: bash
 
@@ -51,7 +51,7 @@ You expect an output like this one:
    gpg:                 aka "Markus Meissner <coder@safemailbox.de>" [ultimate]
 
 
-This verifys the file. 
+This verifys the file.
 
 Procedure
 ~~~~~~~~~

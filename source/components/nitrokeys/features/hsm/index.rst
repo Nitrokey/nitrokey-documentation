@@ -16,7 +16,7 @@ HSM Features
    PKCS11-URL <pkcs11-url>
    Apache 2 TLS <apache2-tls>
 
-OpenPGP Card Features 
+OpenPGP Card Features
 #####################
 
 The Nitrokey HSM is essentially a more potent OpenPGP Card, thus some of the OpenPGP Card features are also applicable for the HSM - although might need some adjustments.

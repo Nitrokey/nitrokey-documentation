@@ -42,7 +42,7 @@ The configuration is yaml-formatted:
 .. tabs::
   .. tab:: All platforms
     .. code-block:: yaml
-      
+
       # Set this option to true to enable the compatibility option for the C_SetAttributeValue() function.
       # This allows the applications using the Java Sun PKCS11 module (like EJBCA) to generate keys.
       # When using this, the names given to the keys will be ignored and the keys will have random names.
@@ -169,7 +169,7 @@ It is possible to introduce a delay between retries.
 Therefore:
 
 - The maximum number of requests sent for one API call is: ``retries.count`` + 1 + 3
-- The maximum (worst case) duration before reaching the timeout for one API call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3 
+- The maximum (worst case) duration before reaching the timeout for one API call is: (``retries.count`` + 1) * ``timeout_seconds`` + 3
 - The maximum timeout for one PKCS#11 function call will vary because some functions will lead to multiple API calls in the NetHSM.
 
 TCP keepalive
@@ -177,7 +177,7 @@ TCP keepalive
 
 To improve performance, connections are kept open with the NetHSM instances to avoid the need for re-opening them.
 It is possible that in a network with a firewall, these idle connection could be closed, leading to the next connection attempt to timeout.
-To prevent slow timeouts from happening, and to detect earlier if it does, it is possible to configure TCP keepalives for these. 
+To prevent slow timeouts from happening, and to detect earlier if it does, it is possible to configure TCP keepalives for these.
 
 Users
 ~~~~~

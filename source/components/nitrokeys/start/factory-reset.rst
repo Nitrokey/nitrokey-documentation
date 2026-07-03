@@ -8,7 +8,7 @@ All of the smart cards have separate data objects, meaning they all could have d
 
 This means each identity needs to be resetted on its own.
 
-Old versions (below 1.2.5) of the firmware might need special treatment (see below). 
+Old versions (below 1.2.5) of the firmware might need special treatment (see below).
 Usage
 -----
 
@@ -24,7 +24,7 @@ To change the identity it suffices to send a custom CCID command. This could be 
       $ nitropy start list
          *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
          :: 'Nitrokey Start' keys:
-         FSIJ-1.2.15-87042524: Nitrokey Nitrokey Start (RTM.10) 
+         FSIJ-1.2.15-87042524: Nitrokey Nitrokey Start (RTM.10)
 
 3. Change the identity, by replacing ``<ID>`` with ``0``, ``1``, or ``2``.
 

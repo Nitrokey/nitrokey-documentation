@@ -12,7 +12,7 @@ There a different ways to change the IMEI. The simplest is to use the toogle on 
 
 1. Switch the hardware toggle.
 2. Follow the instructions on the display, which will prompt you to replace the SIM card eventually.
-3. After replacing the SIM card, flip the toggle again. This changes the IMEI and powers off your device. 
+3. After replacing the SIM card, flip the toggle again. This changes the IMEI and powers off your device.
 4. You should change your geographical location before booting again.
 
 For more details see `this documentation <https://github.com/srlabs/blue-merle/blob/main/Documentation.pdf>`_.
