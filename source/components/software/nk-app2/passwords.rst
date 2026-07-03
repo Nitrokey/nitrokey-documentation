@@ -27,9 +27,9 @@ Adding Credentials
 4. You can enter the web address to the field Comment.
 5. If you want to store a regular password, let "None" in the algorithm field. If you want to store a OTP or HMAC, choose the appropriate algorithm (see below) and copy the OTP secret or QR code that is given by the website (you want to login to) into the field next to it.
 
-    .. figure:: ./images/TOTP-secret.png
+   .. figure:: ./images/TOTP-secret.png
 
-    .. figure:: ./images/HOTP-secret.png
+   .. figure:: ./images/HOTP-secret.png
 
 6. You can choose to add more security by checking the "Require PIN" or "Require Touch" boxes. Credentials with "Require PIN" (shown as a closed lock) can only be accessed by entering a device the PIN when clicking on "Show Protected Passwords". Unprotected credentials (shown as an open lock) can be accessed without entering a device PIN.
 
@@ -53,7 +53,7 @@ Once your credential is stored you can login to your account with these steps:
 3. Click on your desired credential, if your credential is protected click on "Show Protected Passwords" first.
 4. If it's a regular password, copy the username and the password into the login prompt. If it's a OTP credential, click the “OTP” icon to generate the OTP and enter the OTP code into the appropriate field in the login prompt. (For HOTP, press the button again to generate a new code.)
 
-    .. figure:: ./images/TOTP-code.png
+   .. figure:: ./images/TOTP-code.png
 
 OTP Algorithms
 **************

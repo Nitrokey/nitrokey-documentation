@@ -10,11 +10,11 @@ please contact us to arrange further action.
 .. tabs::
 	.. tab:: NWV1210, NWV1410, NWVP4670
 		.. figure:: ./images/sealed-hardware/nitrowall-V1410-seal-back.png
-		  :alt: sealing back
+		   :alt: sealing back
 
 		.. figure:: ./images/sealed-hardware/nitrowall-V1410-seal-front.png
-		  :alt: sealing front
+		   :alt: sealing front
 
 		.. figure:: ./images/sealed-hardware/nitrowall-V1410-seal-bottom.jpg
-		  :alt: sealing bottom
+		   :alt: sealing bottom
   

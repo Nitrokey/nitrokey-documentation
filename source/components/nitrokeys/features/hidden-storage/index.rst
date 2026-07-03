@@ -58,7 +58,7 @@ Using hidden volumes
             If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. You will need to open a partition manager such as `GParted <https://gparted.org/>`__ and create one or more partitions manually. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.
 
             .. figure:: images/hidden/hidden-storage-partition.png
-                :alt: Hidden volume partitioning
+               :alt: Hidden volume partitioning
 
         .. tab:: MacOS
 
@@ -70,9 +70,9 @@ Using hidden volumes
 
 
             .. figure:: images/hidden/format-dialog.png
-                :alt: Windows formating prompt
+               :alt: Windows formating prompt
 
             .. figure:: images/hidden/format-tool.png
-                :alt: Windows formating tool
+               :alt: Windows formating tool
 
 4. Make sure to unmount/eject all partitions on the hidden volumes before locking or disconnecting the Nitrokey.

@@ -18,7 +18,7 @@ NitroPad, NitroPC FAQ
    ``sudo cryptsetup luksChangeKey --key-slot=0 /dev/sda3``. In Qubes 4.2 exist also now a GUI tool for that:
 
       .. figure:: /images/qubes/ChangeDiskPasswordQubes.png
-        :alt: Change Password Qubes Image
+         :alt: Change Password Qubes Image
 
 .. faq:: What is re-ownership / re-encryption and why is it important?
 

@@ -38,7 +38,7 @@ Getting Started
             Download and start the `Nitrokey App <https://www.nitrokey.com/download>`__. Perhaps you want to store it on the unencrypted partition of your Nitrokey Storage. There won't open a window, but an icon appears in the system tray (see screenshot below). Please right-click on this icon to use all the options of the App.
 
             .. figure:: images/getting-started/Windows10-Systemtray.png
-                :alt: img1
+               :alt: img1
 
 3. Open the About window from Nitrokey App's menu and check if you have
    the `latest

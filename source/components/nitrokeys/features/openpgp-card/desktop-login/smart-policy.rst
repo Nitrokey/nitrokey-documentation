@@ -59,29 +59,29 @@ Login to Windows Domain Computers With MS Active Directory
    and install Smart Policy.
 6. Select “Read a smart card”
 
-	.. figure:: images/smart-policy/1.png
-		:alt: img1
+   .. figure:: images/smart-policy/1.png
+      :alt: img1
 
 
 
 7. Select the certificate, mapping, and user.
 
-	.. figure:: images/smart-policy/2.png
-		:alt: img2
+   .. figure:: images/smart-policy/2.png
+	  :alt: img2
 
 
 
 8. Verify the device status via CRL.
 
-	.. figure:: images/smart-policy/3.png
-		:alt: img3
+   .. figure:: images/smart-policy/3.png
+      :alt: img3
 
 
 
 9. Choose a Group Policy Object (GPO).
 
-	.. figure:: images/smart-policy/4.png
-		:alt: img4
+   .. figure:: images/smart-policy/4.png
+      :alt: img4
 
 
 

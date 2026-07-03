@@ -31,7 +31,7 @@ Configuration
    :alt: Storage Configuration
 
 .. figure:: ./images/storage-two.png
-    :alt: Storage Mount
+   :alt: Storage Mount
 
 
 Allow Access From Files App

@@ -14,16 +14,16 @@ Login With EIDAuthenticate on Stand Alone Windows Computers
 3. Start EIDConfigurationWizard.exe
 4. Select “Associate a new certificate”
 
-	.. figure:: images/eidauthenticate/1.png
-		:alt: img1
+   .. figure:: images/eidauthenticate/1.png
+      :alt: img1
 
 
 
 5. Select or generate a Certificate Authority which should issue the
    user's certificate on the Nitrokey.
 
-	.. figure:: images/eidauthenticate/2.png
-		:alt: img2
+   .. figure:: images/eidauthenticate/2.png
+      :alt: img2
 
 
 
@@ -31,43 +31,43 @@ Login With EIDAuthenticate on Stand Alone Windows Computers
    moment until a new keypair and certificate are generated. In case
    your Nitrokey is not detected you may want to execute ``certutil -scinfo`` for troubleshooting.
 
-	.. figure:: images/eidauthenticate/3.png
-		:alt: img3
+   .. figure:: images/eidauthenticate/3.png
+      :alt: img3
 
 
 
 7. Select the newly generated certificate and press continue.
 
-	.. figure:: images/eidauthenticate/4.png
-		:alt: img4
+   .. figure:: images/eidauthenticate/4.png
+      :alt: img4
 
 
 
 8. All checks should succeed. Press continue.
 
-	.. figure:: images/eidauthenticate/5.png
-		:alt: img5
+   .. figure:: images/eidauthenticate/5.png
+      :alt: img5
 
 
 
 9. Enter the password of your user account.
 
-	.. figure:: images/eidauthenticate/6.png
-		:alt: img6
+   .. figure:: images/eidauthenticate/6.png
+      :alt: img6
 
 
 
 10. Enter the user PIN which you defined previously in step 4.
 
-	.. figure:: images/eidauthenticate/7.png
-		:alt: img7
+    .. figure:: images/eidauthenticate/7.png
+       :alt: img7
 
 
 
 11. The final screen may look like this.
 
-	.. figure:: images/eidauthenticate/8.png
-		:alt: img8
+    .. figure:: images/eidauthenticate/8.png
+       :alt: img8
 
 
 

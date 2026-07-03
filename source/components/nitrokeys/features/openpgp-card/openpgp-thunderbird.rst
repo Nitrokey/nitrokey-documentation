@@ -208,7 +208,7 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
    saved. Click “OK”
 
     .. figure:: images/thunderbird/13.png
-        :alt: img13
+       :alt: img13
 
 
 

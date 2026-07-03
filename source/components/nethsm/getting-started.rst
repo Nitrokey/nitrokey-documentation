@@ -50,7 +50,7 @@ Please follow this process closely to verify that it has arrived safely.
       :scale: 15
       :alt: Security seal on the end side of the NetHSM hardware
 
-       Security seal on the end side of the NetHSM hardware
+      Security seal on the end side of the NetHSM hardware
 
 If you notice that a seal has been altered, please contact us to arrange further action.
 
@@ -72,7 +72,7 @@ Please follow the two step process closely to install the NetHSM hardware.
             :scale: 100
             :alt: Back side of the server
 
-         Back side of the server
+            Back side of the server
 
          .. important::
 
@@ -85,7 +85,7 @@ Please follow the two step process closely to install the NetHSM hardware.
             :scale: 100
             :alt: Back side of the server
 
-         Back side of the server
+            Back side of the server
 
 2. Press the *Power Button* to turn on the NetHSM hardware.
    The *Reset Button* is only for a forced reboot of the NetHSM hardware.
