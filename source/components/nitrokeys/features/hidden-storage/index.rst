@@ -28,7 +28,7 @@ Configuring hidden volumes
   Copy some files to the encrypted volume prior to creating the hidden volume.
  
 .. note::
-  Using a journaling filesystem may risk overwriting the hidden data. The encrypted filesystem is formated to FAT32 by default, and it is recommended to leave it that way when using hidden volumes.
+   Using a journaling filesystem may risk overwriting the hidden data. The encrypted filesystem is formated to FAT32 by default, and it is recommended to leave it that way when using hidden volumes.
 
 
 1. Unlock the encrypted volume using the Nitrokey App.

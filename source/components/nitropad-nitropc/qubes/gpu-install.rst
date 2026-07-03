@@ -30,7 +30,7 @@ Create a Windows Qube
 2. Install the Qubes Windows Tools, in dom0 : ``sudo qubes-dom0-update qubes-windows-tools-4.1.69`` when asked press ``y`` and enter.
 
     .. note::
-        Please see the `security implication <https://github.com/QubesOS/qubes-secpack/blob/master/QSBs/qsb-091-2023.txt>`__ of installing QWT.
+       Please see the `security implication <https://github.com/QubesOS/qubes-secpack/blob/master/QSBs/qsb-091-2023.txt>`__ of installing QWT.
 
 3. Make the install script executable, in dom0 : ``sudo chmod +x /install.sh``
 
@@ -49,7 +49,7 @@ Create a Windows Qube
 7. Once the script is copied launch it, in dispXXX : ``./QubesIncoming/windows-mgmt/mido.sh win10x64``
 
     .. note::
-        In this guide we install Windows 10 but other Windows versions are available you can list them by using ``./QubesIncoming/windows-mgmt/mido.sh``
+       In this guide we install Windows 10 but other Windows versions are available you can list them by using ``./QubesIncoming/windows-mgmt/mido.sh``
 
 
 8. If you get a success message then you will need to copy the dowloaded ISO from the DVM to the windows-mgmt Qube, in dispXXXX :  ``qvm-copy QubesIncoming/windows-mgmt/win10x64.iso`` and choose the windows-mgmt Qube.
@@ -61,10 +61,10 @@ Create a Windows Qube
 10. Then in dom0 : ``qvm-create-windows-qube -n sys-firewall -oy -i win10x64.iso -a win10x64-pro.xml work-win10``
 
     .. note::
-        You can pre-install any package from `this site <https://community.chocolatey.org/packages>`__.
-        E.g: ``qvm-create-windows-qube -n sys-firewall -oyp firefox,notepadplusplus,office365proplus -i win10x64.iso -a win10x64-pro.xml work-win10``
+       You can pre-install any package from `this site <https://community.chocolatey.org/packages>`__.
+       E.g: ``qvm-create-windows-qube -n sys-firewall -oyp firefox,notepadplusplus,office365proplus -i win10x64.iso -a win10x64-pro.xml work-win10``
 
-        If the script stops or if it get stuck retry until you see this message: ``[+] Completed successfully!``
+       If the script stops or if it get stuck retry until you see this message: ``[+] Completed successfully!``
 
 11. Now you will need to attach your GPU to the Windows Qube, to do so go to the Qube Manager and the Windows 10 Qube options (make sure that the Qube is shut down), under the Devices tab select your graphic card and pass it to the right then click on the ``Configure strict reset for PCI devices`` then select your card and click ``OK``
 

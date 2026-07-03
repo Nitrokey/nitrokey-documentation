@@ -11,9 +11,9 @@ Password entries may consist of:
 
 .. note::
 
-    All fields are optional and can be edited and added at any time using the "Edit" button.
+   All fields are optional and can be edited and added at any time using the "Edit" button.
 
-    You can store up to 50 passwords.
+   You can store up to 50 passwords.
 
 .. figure:: ./images/credential-example.png
 
@@ -35,10 +35,10 @@ Adding Credentials
 
 7. Once all desired fields are filled click on "Save".
 
-.. Note::
+.. note::
 
-    You need first to set a device PIN before using "Require PIN". Otherwise it will show an error.
-    The device PIN can be set or changed in the `settings <./pin.html#passwords>`__).
+   You need first to set a device PIN before using "Require PIN". Otherwise it will show an error.
+   The device PIN can be set or changed in the `settings <./pin.html#passwords>`__).
 
 .. important::
     
@@ -66,8 +66,8 @@ With the Nitrokey App 2 and your Nitrokey you can use two different MFA:
 * HOTP or HMAC-based One-Time Password is a two factor authentication code that changes each time it's requested and validated. It is rarely used today.
 * HMAC is primarily used with KeePassXC.
 
-.. Note::
+.. note::
 
-    For a list of websites supporting OTPs have a look at `dongleauth.com <https://www.dongleauth.com/>`__.
+   For a list of websites supporting OTPs have a look at `dongleauth.com <https://www.dongleauth.com/>`__.
 
 You can test TOTP with `this <https://authenticationtest.com/totpChallenge/>`__ website.

@@ -2,12 +2,12 @@ FIDO2 on Android / NitroPhone
 *****************************
 
 .. Note::
-    For more information about FIDO2, FIDO2 U2F and Passkeys, check our `blog article  <https://www.nitrokey.com/blog/2022/fido2-webauthn-passkeys-2022-and-2023>`_.
+   For more information about FIDO2, FIDO2 U2F and Passkeys, check our `blog article  <https://www.nitrokey.com/blog/2022/fido2-webauthn-passkeys-2022-and-2023>`_.
 
 In order to use FIDO2 on GrapheneOS you need to install the Google Play services via GrapheneOS App Store.
 
 .. Note::
-    You don't have to grant Play services the network permission in order for FIDO2 to work.
+   You don't have to grant Play services the network permission in order for FIDO2 to work.
 
 .. important::
    Play services do not support PIN functionality over NFC.

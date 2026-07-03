@@ -41,7 +41,8 @@ It is necessary to already have keys generated on the Nitrokey, as the authentic
 	* ``/etc/pam.d/gnome-screensaver`` for login back from a locked screen 
 	* and other files in ``/etc/pam.d``
 
-	.. note:: PAM is dangerous to play around with, so make sure you have a way of accessing the machine if you break authentication completely. Remember that booting into rescue mode from GRUB requires a root password, so keep that or a live CD which can read your filesystems to hand.
+	.. note::
+	   PAM is dangerous to play around with, so make sure you have a way of accessing the machine if you break authentication completely. Remember that booting into rescue mode from GRUB requires a root password, so keep that or a live CD which can read your filesystems to hand.
 
 Here you find `further instructions <https://wiki.ubuntuusers.de/Archiv/Authentifizierung_OpenPGP_SmartCard>`__ (in German, partially outdated).
 

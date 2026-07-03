@@ -18,7 +18,8 @@ In the context of the NextBox this means that, if you are using IPv6, the IPv6 a
 of your NextBox is considered local by your router and thus wiull not be returned 
 during DNS resolving of your designated domain.
 
-.. note:: For IPv4 this is also applies, but not a problem. In the IPv4 
+.. note::
+   For IPv4 this is also applies, but not a problem. In the IPv4 
    world (dynamic) DNS resolves to the router (WAN-IP) itself and the router will forward
    the traffic to your NextBox. In contrast IPv6 will not resolve to your router but
    to the IPv6 address of your NextBox directly and the router just has to open its

@@ -7,8 +7,7 @@ OpenVPN Configuration with Easy-RSA
    :depth: 2
 
 .. note::
-
-  This guide is work-in-progress, and will be updated accordinlgy. Please take this status into consideration.
+   This guide is work-in-progress, and will be updated accordinlgy. Please take this status into consideration.
 
 This guide shows how to configure OpenVPN clients to login using a `Nitrokey Pro
 2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ or a `Nitrokey Storage
@@ -253,11 +252,11 @@ Server side
             **(Required step)** If this is the first time you sign a certificate with the CA, you might want to retrieve the URI of the CA's private key from the HSM, and include it in the config file.
 
             .. note:: 
-                The key's URI should be in this format:
+               The key's URI should be in this format:
 
-                .. code-block:: bash
+               .. code-block:: bash
 
-                    pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private
+                  pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0104068;token=SmartCard-HSM%20%28UserPIN%29%00%00%00%00%00%00%00%00%00;id=%E0%16%1C%C8%B6%F5%D6%6A%C6%83%5E%CD%EC%B6%23%FC%05%06%A6%75;object=root;type=private
 
         2. Create ``openvpn/`` directory under ``certificate-authority/``
 
@@ -527,23 +526,22 @@ Client side configuration
         For additional `settings related to OpenVPN <https://openvpn.net/community-resources/how-to/>`__ authentication, you may also add few lines to handle key maganagement, although it is optional.
 
         .. note::
+           Click to view the code
 
-            Click to view the code
+           .. code-block:: bash
 
-            .. code-block:: bash
-
-                # nitrokey config
+              # nitrokey config
                     
-                pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
-                pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
-                # pkcs11-pin-cache 300
-                # daemon
-                # auth-retry nointeract
-                # management-hold
-                # management-signal
-                # management 127.0.0.1 8888
-                # management-query-passwords
-                pkcs11-cert-private 1 # Prompt for PIN
+              pkcs11-providers /usr/lib64/pkcs11/opensc-pkcs11.so
+              pkcs11-id 'pkcs11:model=pkcs11:model=PKCS%NNNN%20emulated;token=User%20PIN%20%28OpenPGP%20card%29;manufacturer=ZeitControl;serial=000NNNNNN;id=%03'
+              # pkcs11-pin-cache 300
+              # daemon
+              # auth-retry nointeract
+              # management-hold
+              # management-signal
+              # management 127.0.0.1 8888
+              # management-query-passwords
+              pkcs11-cert-private 1 # Prompt for PIN
 
         Optional step
                     
@@ -551,16 +549,15 @@ Client side configuration
         If you need to test the configuration, with and without the token on the Nitrokey, you may add lines to the same ``client.conf`` and comment/uncomment the relevant lines according to your needs:
 
         .. note::
+           Click to view the code
 
-            Click to view the code
+           .. code-block:: bash
 
-            .. code-block:: bash
-
-                # non_nitrokey login
+              # non_nitrokey login
                 
-                # cert client.crt
-                # key client.key
-                # tls-auth ta.key 1
+              # cert client.crt
+              # key client.key
+              # tls-auth ta.key 1
 
     3. Configure the OpenVPN client
 

@@ -9,7 +9,7 @@ Ubuntu
    :hidden:
 
    *
-.. Note::
+.. note::
    The audio (jack) port on the NitroPad T480s is not working automatically. To select a 
    connected headphone manually, install the program `pavucontrol` and select the connected
    headphone under Output Devices.

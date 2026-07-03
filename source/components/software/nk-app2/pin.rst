@@ -40,8 +40,8 @@ A factory reset witll reset the entire ``Passwords`` or ``FIDO2`` feature includ
 7. Press the button Reset.
 8. Touch your Nitrokey for confirmation.
 
-.. Note::
+.. note::
 
-    Factory reset for FIDO2 can only be done within 10 seconds of plugging in your device.
+   Factory reset for FIDO2 can only be done within 10 seconds of plugging in your device.
 
 .. figure:: ./images/password-menu.png

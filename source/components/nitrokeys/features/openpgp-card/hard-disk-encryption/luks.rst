@@ -120,10 +120,11 @@ It is the passphrase you entered to encrypt your volume at installation.
 .. figure:: images/luks/luks_2.png
    :alt: img2
 
-.. note:: This is a fall-back alternative in case you lose your Nitrokey, or if
-  it's unavailable. So far, it was not tested, and users must be aware of the
-  risk of getting locked out of their computer, if the fall-back method does not
-  work.
+.. note::
+   This is a fall-back alternative in case you lose your Nitrokey, or if
+   it's unavailable. So far, it was not tested, and users must be aware of the
+   risk of getting locked out of their computer, if the fall-back method does not
+   work.
 
 Once you enter the passphrase, the script finishes the setup in about one
 minute. Do not interrupt the script, or you might get locked out of your

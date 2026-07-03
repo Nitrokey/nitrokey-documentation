@@ -23,7 +23,7 @@ Getting Started
 
            .. note::
 
-            Windows may fail to install an additional device driver for the smart card. Its safe to ignore this warning.
+              Windows may fail to install an additional device driver for the smart card. Its safe to ignore this warning.
 
 2. 
     .. tabs::
