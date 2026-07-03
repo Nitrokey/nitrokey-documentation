@@ -105,17 +105,17 @@ Server side
 
           $ sudo apt install openvpn
 
-        If you want to check the version, it possible by calling ``--version``
-        and print the following:
+       If you want to check the version, it possible by calling ``--version``
+       and print the following:
 
-        ::
+       .. code-block:: shell-session
 
-            $ sudo openvpn --version
-            OpenVPN 2.5_beta3 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Sep  1 2020
-            library versions: OpenSSL 1.1.1d 10 Sep 2019, LZO 2.10
-            Originally developed by James Yonan
-            Copyright (C) 2002-2018 OpenVPN Inc <sales@openvpn.net>
-            Compile time defines: enable_async_push=no enable_comp_stub=no enable_crypto_ofb_cfb=yes enable_debug=yes enable_def_auth=yes enable_dependency_tracking=no \ enable_dlopen=unknown enable_dlopen_self=unknown enable_dlopen_self_static=unknown enable_fast_install=needless enable_fragment=yes enable_iproute2=yes \ enable_libtool_lock=yes enable_lz4=yes enable_lzo=yes enable_maintainer_mode=no enable_management=yes enable_multihome=yes enable_pam_dlopen=no enable_pedantic=no \ enable_pf=yes enable_pkcs11=yes enable_plugin_auth_pam=yes enable_plugin_down_root=yes enable_plugins=yes enable_port_share=yes enable_selinux=no \ enable_shared=yes enable_shared_with_static_runtimes=no enable_silent_rules=no enable_small=no enable_static=yes enable_strict=no enable_strict_options=no \ enable_systemd=yes enable_werror=no enable_win32_dll=yes enable_x509_alt_username=yes with_aix_soname=aix with_crypto_library=openssl with_gnu_ld=yes \ with_mem_check=no with_sysroot=no
+          $ sudo openvpn --version
+          OpenVPN 2.5_beta3 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Sep  1 2020
+          library versions: OpenSSL 1.1.1d 10 Sep 2019, LZO 2.10
+          Originally developed by James Yonan
+          Copyright (C) 2002-2018 OpenVPN Inc <sales@openvpn.net>
+          Compile time defines: enable_async_push=no enable_comp_stub=no enable_crypto_ofb_cfb=yes enable_debug=yes enable_def_auth=yes enable_dependency_tracking=no \ enable_dlopen=unknown enable_dlopen_self=unknown enable_dlopen_self_static=unknown enable_fast_install=needless enable_fragment=yes enable_iproute2=yes \ enable_libtool_lock=yes enable_lz4=yes enable_lzo=yes enable_maintainer_mode=no enable_management=yes enable_multihome=yes enable_pam_dlopen=no enable_pedantic=no \ enable_pf=yes enable_pkcs11=yes enable_plugin_auth_pam=yes enable_plugin_down_root=yes enable_plugins=yes enable_port_share=yes enable_selinux=no \ enable_shared=yes enable_shared_with_static_runtimes=no enable_silent_rules=no enable_small=no enable_static=yes enable_strict=no enable_strict_options=no \ enable_systemd=yes enable_werror=no enable_win32_dll=yes enable_x509_alt_username=yes with_aix_soname=aix with_crypto_library=openssl with_gnu_ld=yes \ with_mem_check=no with_sysroot=no
 
 2. Install Easy-RSA
 ^^^^^^^^^^^^^^^^^^^

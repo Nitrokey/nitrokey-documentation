@@ -37,7 +37,7 @@ Instructions
 
 1. **Create a backup user and give it root privileges**
 
-   .. code-block:: bash
+   .. code-block:: shell-session
 
       $ sudo adduser <backup_user>
       $ sudo usermod -aG sudo <backup_user>
@@ -198,7 +198,7 @@ Instructions
    To configure u2f for multiple users, ``pamu2fcfg`` takes
    the ``-u <username>`` option, the output can be appended to the ``u2f_keys`` file like this:
 
-   .. code-block:: bash
+   .. code-block:: shell-session
 
       $ sudo pamu2fcfg -u <username> >> /etc/Nitrokey/u2f_keys
 

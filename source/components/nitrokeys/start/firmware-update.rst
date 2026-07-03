@@ -19,7 +19,7 @@ To update the firmware of your Nitrokey Start, proceed as follows.
 
 2. Connect your Nitrokey Start and verify its recognition.
 
-   .. code-block:: bash
+   .. code-block:: shell-session
 
       $ nitropy start list
             *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
@@ -35,7 +35,7 @@ To update the firmware of your Nitrokey Start, proceed as follows.
 4. You will then be asked to enter the Admin PIN of your Nitrokey Start.
    (Default PIN: 12345678)
 
-   .. code-block:: bash
+   .. code-block:: shell-session
 
       *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
       Nitrokey Start firmware update tool
@@ -80,7 +80,7 @@ To update the firmware of your Nitrokey Start, proceed as follows.
 6. You can check the firmware version after the upgrade process has
    completed.
 
-   .. code-block:: bash
+   .. code-block:: shell-session
 
       $ nitropy start list
       *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
