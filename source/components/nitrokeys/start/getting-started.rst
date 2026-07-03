@@ -6,9 +6,9 @@ Getting Started
     .. tabs::
         .. tab:: Linux
             Install ``scdaemon`` and GnuPG 2.1 or higher by using your package
-            manager (e.g. ``apt update && apt install scdaemon gnupg2`` on Ubuntu).
+            manager (e.g. ``apt update && apt install scdaemon gnupg2`` on Ubuntu).
             Install ``scdaemon`` and GnuPG 2.1 or higher by using your package
-            manager (e.g. ``apt update && apt install scdaemon gnupg2`` on Ubuntu).
+            manager (e.g. ``apt update && apt install scdaemon gnupg2`` on Ubuntu).
 
         .. tab:: MacOS
             Install `GnuPG 2.1 <https://gpgtools.org/>`__ or higher.

@@ -24,10 +24,10 @@ You will also need the following:
 
 -  Client’s certificate ``client.crt`` loaded on the Nitrokey
 
--  The Certificate Authority file, i.e. ``CA.crt`` file used for your
+-  The Certificate Authority file, i.e. ``CA.crt`` file used for your
    OpenVPN setup
 
--  Optional: The shared secret key file, i.e. ``ta.key``
+-  Optional: The shared secret key file, i.e. ``ta.key``
 
 For more information on ``PKCS#11`` key management with OpenVPN, please consult OpenVPN’s `documentation. <https://openvpn.net/community-resources/how-to/>`__
 
@@ -81,7 +81,7 @@ Usage
        to automatically fill in the Name field. Otherwise this field can be
        completed manually.
 
-    -  If in doubt, or if more than one Nitrokey may be used (i.e. multiple
+    -  If in doubt, or if more than one Nitrokey may be used (i.e. multiple
        users), then select ``Prompt for certificate name``.
 
     If ``Prompt for certificate name`` was selected, Viscosity will automatically detect the required key on the Nitrokey, using the specified PKCS#11 module/s. Select from any of the found devices, or enter the name of the ``serialized id`` to use manually. Again, the user should be prompted for a password/PIN if required.

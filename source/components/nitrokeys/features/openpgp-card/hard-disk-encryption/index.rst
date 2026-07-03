@@ -18,7 +18,7 @@ Follow these steps to use the program with `Nitrokey Storage
    `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__, or download the
    `PKCS#11 library <https://smartcard-auth.de/download-en.html>`__.
 2. Choose the library in VeraCrypt under Settings>Preferences>Security
-   Token (location depends on system, e.g. ``/usr/lib/opensc``).
+   Token (location depends on system, e.g. ``/usr/lib/opensc``).
 3. Generate a 64 Byte key file via Tools>Keyfile Generator.
 4. Now you should be able to import the generated key file via
    Tools>Manage Security Token Keyfiles. You should choose the first
