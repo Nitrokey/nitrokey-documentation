@@ -2,7 +2,7 @@ Firmware Update
 ===============
 
 .. important:: 
-    When updating your device, remove all other Nitrokey 3 devices except the one being updated.
+   When updating your device, remove all other Nitrokey 3 devices except the one being updated.
 
 Automatic Update
 ----------------

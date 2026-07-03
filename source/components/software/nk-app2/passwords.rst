@@ -41,8 +41,7 @@ Adding Credentials
    The device PIN can be set or changed in the `settings <./pin.html#passwords>`__).
 
 .. important::
-    
-    You are allowed only 8 attempts to enter a device PIN otherwise you will not be able to access or create new credentials and you will need to perform a factory reset in order to use this feature again.
+   You are allowed only 8 attempts to enter a device PIN otherwise you will not be able to access or create new credentials and you will need to perform a factory reset in order to use this feature again.
 
 Login
 *****

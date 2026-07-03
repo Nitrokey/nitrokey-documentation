@@ -4,8 +4,7 @@ PIN Managment
 To enhance security, PINs can be created to restrict access to FIDO2 credentials and stored passwords.
 
 .. important::
-
-    FIDO2, Passwords, PIV, and OpenPGP Card use separate PINs, which are managed individually.
+   FIDO2, Passwords, PIV, and OpenPGP Card use separate PINs, which are managed individually.
 
 Prerequisite
 ------------
