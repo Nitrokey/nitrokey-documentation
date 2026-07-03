@@ -11,7 +11,7 @@ Nitrokeys
    Browse and learn about all the different features available on your Nitrokeys
 
 .. rubric:: Choose a Nitrokey Model
-    :class: not-header
+   :class: not-header
 
 .. card:: Nitrokey 3
    :link: nitrokey3/index
