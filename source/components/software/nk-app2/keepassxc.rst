@@ -52,7 +52,7 @@ First Option: Protect an Existing KeePassXC Database With a Nitrokey 3
    By default the Nitrokey 3 is used as a second factor in addition to the passphrase. To protect the database by the Nitrokey 3 exclusively, delete the passphrase by clicking the button ``Remove Password``.
 
 .. tip::
-    If the Nirokey 3 is not recognized, close KeePassXC completely. Then connect the Nitrokey 3 to your computer before restarting KeePassXC.
+   If the Nirokey 3 is not recognized, close KeePassXC completely. Then connect the Nitrokey 3 to your computer before restarting KeePassXC.
 
 
 
@@ -78,7 +78,7 @@ Second Option: Creating a KeePassXC Database, Protected by Nitrokey 3
    If the passphrase is left empty, the database will be protected by the Nitrokey 3 exclusively. If a passphrase is entered, the database will be protected by the passphrase **and** the Nitrokey 3.
 
 .. tip::
-    If the Nitrokey 3 is not recognized, close KeePassXC completely. Then connect the Nitrokey 3 to your computer before restarting KeePassXC.
+   If the Nitrokey 3 is not recognized, close KeePassXC completely. Then connect the Nitrokey 3 to your computer before restarting KeePassXC.
 
 Troubleshooting for Linux
 ^^^^^^^^^^^^^^^^^^^^^^^^^

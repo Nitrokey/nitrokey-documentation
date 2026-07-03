@@ -180,17 +180,15 @@ Server side
 
 	In general terms, on systems where we generate a key and request, these files are left unencrypted by using the ``nopass`` argument, since servers usually need to start up without any password input. This generates an *unencrypted key*, so mind *protect its access and file permissions* carefully.
 
-	.. tip::
+    .. tip::
+       Configuration notes from OpenVPN:
 
-		Configuration notes from OpenVPN:
+       1. The server, and each client, must have their own cert and key
+          file. The server and all clients will use the same CA file.
+       2. Server certificate should have the following:
 
-		1. The server, and each client, must have their own cert and key
-			file. The server and all clients will use the same CA file.
-		2. Server certificate should have the following:
-
-		-  ``keyUsage:  digitalSignature, keyEncipherment``
-
-		-  ``extendedKeyUsage: serverAuth``
+          -  ``keyUsage:  digitalSignature, keyEncipherment``
+          -  ``extendedKeyUsage: serverAuth``
 
 	1. Create the signing request for the server
 
@@ -213,17 +211,16 @@ Server side
 
 	After completing these steps, you have successfully created a private key for your OpenVPN server. You have also generated a Certificate Signing Request for the OpenVPN server.
 
-	.. tip::
+    .. tip::
+       File extensions for certificate signing requests
 
-		File extensions for certificate signing requests
+       The file extension that is adopted by the CA and HSM tutorial
+       indicates the creation of a ``.csr`` file, however Easy-RSA creates
+       certificate signing requests with a ``.req`` extension.
 
-		The file extension that is adopted by the CA and HSM tutorial
-		indicates the creation of a ``.csr`` file, however Easy-RSA creates
-		certificate signing requests with a ``.req`` extension.
-
-		We will use interchangeably both extensions, while making sure that
-		we transfer the right files to the Certificate Authority, and
-		generate a final certificate with a ``.crt`` extension.
+       We will use interchangeably both extensions, while making sure that
+       we transfer the right files to the Certificate Authority, and
+       generate a final certificate with a ``.crt`` extension.
 
 	In the next section of this guide, we will sign a ``.req`` file with our CA on deployed on the HSM 2 device. For this purpose, I will use a dedicated machine to sign the requests.
 
