@@ -4,26 +4,25 @@ OpenPGP Card
 .. product-table:: nk3 pro start storage
 
 .. toctree::
-	:maxdepth: 1
+   :maxdepth: 1
 
-	Overview <overview>
-	Keygen with GPA <openpgp-keygen-gpa>
-	Keygen with Backup <openpgp-keygen-backup>
-	Keygen on device <openpgp-keygen-on-device>
-	Windows Login and S/MIME Email Encryption with Active Directory <openpgp-csp>
-	Thunderbird <openpgp-thunderbird>
-	Outlook <openpgp-outlook>
-	Touch Confirmation (Nitrokey 3 only) <uif>
-	OpenVPN <openvpn/index>
-	Claws Mail, an email client (and news reader) for Linux and Windows <https://www.claws-mail.org/plugin.php?plugin=gpg>
-	Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/evolution/mail-encryption.html>
-	GPGTools on macOS <https://gpgtools.org>
-	Desktop Login <desktop-login/index>
-	SSH <ssh/index>
-	Hard Disk Encryption <hard-disk-encryption/index>
-	Gnu Privacy Assistant (GPA) <gpa>
-	EID <eid>
-	GnuPG with Fedora <fedora-gnupg-configuration>
-	Change Pins <change-pins>
-	Additional Decryption Subkeys (ADSK) with GnuPG <adsk>
-	
+   Overview <overview>
+   Keygen with GPA <openpgp-keygen-gpa>
+   Keygen with Backup <openpgp-keygen-backup>
+   Keygen on device <openpgp-keygen-on-device>
+   Windows Login and S/MIME Email Encryption with Active Directory <openpgp-csp>
+   Thunderbird <openpgp-thunderbird>
+   Outlook <openpgp-outlook>
+   Touch Confirmation (Nitrokey 3 only) <uif>
+   OpenVPN <openvpn/index>
+   Claws Mail, an email client (and news reader) for Linux and Windows <https://www.claws-mail.org/plugin.php?plugin=gpg>
+   Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/evolution/mail-encryption.html>
+   GPGTools on macOS <https://gpgtools.org>
+   Desktop Login <desktop-login/index>
+   SSH <ssh/index>
+   Hard Disk Encryption <hard-disk-encryption/index>
+   Gnu Privacy Assistant (GPA) <gpa>
+   EID <eid>
+   GnuPG with Fedora <fedora-gnupg-configuration>
+   Change Pins <change-pins>
+   Additional Decryption Subkeys (ADSK) with GnuPG <adsk>

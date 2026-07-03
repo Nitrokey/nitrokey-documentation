@@ -46,9 +46,9 @@ Hard Disk Encryption on GNU+Linux with LUKS/dm-crypt
 For setting up LUKS Disk Encryption follow our guide:
 
 .. toctree::
-	:maxdepth: 1
+   :maxdepth: 1
 
-	Full-Disk Encryption With cryptsetup/LUKS <luks>
+   Full-Disk Encryption With cryptsetup/LUKS <luks>
 
 
 Purism has created a `simple script <https://docs.puri.sm/Hardware/acc/lk/luks.html>`__ to add the Nitrokey/LibremKey as a way to unlock LUKS partitions (not tested by Nitrokey yet).

@@ -538,51 +538,51 @@ The metrics can be retrieved as follows.
 
       .. code-block::
 
-         Metric                      	Value
-         ----------------------------	--------
-         client connections          	0
-         established state           	6
-         external.received bytes     	989931
-         external.received packets   	13239
-         external.transmitted bytes  	25908953
-         external.transmitted packets	22037
-         free chunk count            	322
-         gc compactions              	0
-         gc major bytes              	21348352
-         gc major collections        	35
-         gc minor collections        	2652
-         http response 200           	28
-         http response 201           	1
-         http response 204           	1
-         http response 400           	1
-         http response 403           	1
-         http response 404           	145
-         http response 412           	1
-         http response time          	0.084998
-         http response total         	178
-         internal.received bytes     	66541
-         internal.received packets   	1130
-         internal.transmitted bytes  	63802
-         internal.transmitted packets	1133
-         kv write                    	2
-         log errors                  	3
-         log warnings                	3
-         maximum allocated space     	64528384
-         maximum releasable bytes    	1216
-         mmapped region count        	0
-         new sleeper size            	1
-         non-mmapped allocated bytes 	64528384
-         sleep queue size            	11
-         syn-rcvd state              	0
-         timers                      	2
-         total allocated space       	43940832
-         total client                	1
-         total established           	515
-         total free space            	20587552
-         total sleeper size          	12
-         total syn-rcvd              	514
-         total timers                	526
-         uptime                      	17626
+         Metric                         Value
+         ----------------------------   --------
+         client connections             0
+         established state              6
+         external.received bytes        989931
+         external.received packets      13239
+         external.transmitted bytes     25908953
+         external.transmitted packets   22037
+         free chunk count               322
+         gc compactions                 0
+         gc major bytes                 21348352
+         gc major collections           35
+         gc minor collections           2652
+         http response 200              28
+         http response 201              1
+         http response 204              1
+         http response 400              1
+         http response 403              1
+         http response 404              145
+         http response 412              1
+         http response time             0.084998
+         http response total            178
+         internal.received bytes        66541
+         internal.received packets      1130
+         internal.transmitted bytes     63802
+         internal.transmitted packets   1133
+         kv write                       2
+         log errors                     3
+         log warnings                   3
+         maximum allocated space        64528384
+         maximum releasable bytes       1216
+         mmapped region count           0
+         new sleeper size               1
+         non-mmapped allocated bytes    64528384
+         sleep queue size               11
+         syn-rcvd state                 0
+         timers                         2
+         total allocated space          43940832
+         total client                   1
+         total established              515
+         total free space               20587552
+         total sleeper size             12
+         total syn-rcvd                 514
+         total timers                   526
+         uptime                         17626
    .. tab:: REST API
       Information about the `/metrics` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_metrics>`__.
 
@@ -1166,10 +1166,10 @@ The list can be retrieved as follows.
 
          Users on NetHSM localhost:8843:
 
-         User ID  	Real name        	Role
-         ---------	-----------------	-------------
-         operator1	Nitrokey Operator	Operator
-         admin    	admin            	Administrator
+         User ID     Real name           Role
+         ---------   -----------------   -------------
+         operator1   Nitrokey Operator   Operator
+         admin       admin               Administrator
    .. tab:: REST API
       Information about the `/users` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users>`__.
 

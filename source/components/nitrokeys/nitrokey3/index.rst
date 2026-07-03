@@ -18,15 +18,15 @@ and the product guides:
 .. toctree::
    :maxdepth: 1
 
-	Firmware Update <firmware-update>
-    Firmware Update Qubes <firmware-update-qubes>
-    Set Pins <set-pins>
-    LED and Touch Button <led>
-    nitropy <nitropy>
-    Reset <reset>
-    Secure Element <secure-element>
-    Troubleshooting <troubleshooting>
-    USBGuard <usbguard>
+   Firmware Update <firmware-update>
+   Firmware Update Qubes <firmware-update-qubes>
+   Set Pins <set-pins>
+   LED and Touch Button <led>
+   nitropy <nitropy>
+   Reset <reset>
+   Secure Element <secure-element>
+   Troubleshooting <troubleshooting>
+   USBGuard <usbguard>
 
 or check out the features:
 

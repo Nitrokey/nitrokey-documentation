@@ -60,10 +60,10 @@ Usage
 You can find further information about the usage on these pages:
 
 .. toctree::
-	:maxdepth: 1
+   :maxdepth: 1
 
-	S/MIME encryption on Thunderbird <smime-thunderbird>
+   S/MIME encryption on Thunderbird <smime-thunderbird>
 
-	S/MIME encryption on Outlook <smime-outlook>
+   S/MIME encryption on Outlook <smime-outlook>
 
-	Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/evolution/mail-encryption.html>
+   Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/evolution/mail-encryption.html>

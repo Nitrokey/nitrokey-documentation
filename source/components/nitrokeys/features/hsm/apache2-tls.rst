@@ -36,7 +36,7 @@ An example directive might look like this:
 
 .. code-block:: bash
 
-   SSLCertificateFile	"pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0123123;token=UserPIN%20%28SmartCard-HSM%29;id%01"
+   SSLCertificateFile   "pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0123123;token=UserPIN%20%28SmartCard-HSM%29;id%01"
 
 The proper PKCS#11 URL can be extracted as documented in :doc:`PKCS#11 URL Generation<pkcs11-url>`
 
@@ -77,26 +77,25 @@ A complete Apache2 (``VirtualHost``) config snippet might look like this:
    <IfModule mod_ssl.c>
      SSLPassPhraseDialog     "|/bin/echo 123456"
      <VirtualHost _default_:443>
-     	ServerAdmin webmaster@localhost
+       ServerAdmin webmaster@localhost
      
-     	DocumentRoot /var/www/html
+       DocumentRoot /var/www/html
      
-     	ErrorLog ${APACHE_LOG_DIR}/error.log
-     	CustomLog ${APACHE_LOG_DIR}/access.log combined
+       ErrorLog ${APACHE_LOG_DIR}/error.log
+       CustomLog ${APACHE_LOG_DIR}/access.log combined
      
-     	SSLEngine on
+       SSLEngine on
      
-     	SSLCertificateFile	"pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0105076;token=UserPIN%20%28SmartCard-HSM%29"
+       SSLCertificateFile  "pkcs11:model=PKCS%2315%20emulated;manufacturer=www.CardContact.de;serial=DENK0105076;token=UserPIN%20%28SmartCard-HSM%29"
      
-     	#SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+       #SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
      
-     	<FilesMatch "\.(cgi|shtml|phtml|php)$">
-     			SSLOptions +StdEnvVars
-     	</FilesMatch>
-     	<Directory /usr/lib/cgi-bin>
-     			SSLOptions +StdEnvVars
-     	</Directory>
-     
+       <FilesMatch "\.(cgi|shtml|phtml|php)$">
+         SSLOptions +StdEnvVars
+       </FilesMatch>
+       <Directory /usr/lib/cgi-bin>
+         SSLOptions +StdEnvVars
+       </Directory>
      </VirtualHost>
    </IfModule>
 

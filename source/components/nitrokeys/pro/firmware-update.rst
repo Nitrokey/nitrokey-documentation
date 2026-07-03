@@ -47,7 +47,7 @@ Alternatively `dfu-util` can be used for the firmware update:
 
    .. code-block:: bash
 
-	brew install dfu-util
+      brew install dfu-util
 
 2. Use Nitrokey App v1.5-RC7 or higher to change the boot mode of the Nitrokey Pro to update mode.
 
@@ -67,13 +67,13 @@ Troubleshooting
 
 .. code-block:: bash
  
-	$ env LIBNK_PATH=/libnk/path/libnitrokey.so nitropy pro enable-update
+   $ env LIBNK_PATH=/libnk/path/libnitrokey.so nitropy pro enable-update
 
 To find libnitrokey on your system use:
 
 .. code-block:: bash
 
-	$ locate libnitrokey.so
+   $ locate libnitrokey.so
 
 Linux Permission error
 ^^^^^^^^^^^^^^^^^^^^^^
