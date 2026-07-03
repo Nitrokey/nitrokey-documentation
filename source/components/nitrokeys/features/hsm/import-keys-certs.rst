@@ -17,7 +17,7 @@ This documentation covers only one specific use-case and should
 serve as an example for the overall workflow. For further information
 please read `this thread`_ and `this blog post`_.
 
-.. Warning::
+.. warning::
 
    This procedure will reset your Nitrokey HSM 2 device and
    all data on it will be deleted!

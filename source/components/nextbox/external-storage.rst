@@ -1,7 +1,7 @@
 Connect External Storage
 ========================
 
-.. Warning::
+.. warning::
 
    External storage drives without an external power supply must NOT be
    connected to the USB sockets. Otherwise, this can lead to data loss on the

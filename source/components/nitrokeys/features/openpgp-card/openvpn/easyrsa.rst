@@ -286,17 +286,17 @@ Server side
 
             .. warning::
 
-                CA Certificate and ``chain.crt``
+               CA Certificate and ``chain.crt``
 
-                In the above, the CA returns the signed sever certificate, and
-                includes the CA certificate ``CA.crt`` which is the ``chain.crt``
-                file. This can be done over an insecure channel, though the client is
-                encouraged to confirm if the received ``chain.crt`` is valid, if the
-                transport is untrusted.
+               In the above, the CA returns the signed sever certificate, and
+               includes the CA certificate ``CA.crt`` which is the ``chain.crt``
+               file. This can be done over an insecure channel, though the client is
+               encouraged to confirm if the received ``chain.crt`` is valid, if the
+               transport is untrusted.
 
-                It is possible to rename the file ``chain.crt`` file to ``CA.crt`` on
-                the target machine, however we will use ``chain.crt`` in the next
-                instructions.
+               It is possible to rename the file ``chain.crt`` file to ``CA.crt`` on
+               the target machine, however we will use ``chain.crt`` in the next
+               instructions.
 
 6. Configure the OpenVPN server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -661,7 +661,7 @@ Client side configuration
 
         .. warning::
         
-            Unfortunately OpenVPN doesn't seem to be able to establish a handshake on some operating systems and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
+           Unfortunately OpenVPN doesn't seem to be able to establish a handshake on some operating systems and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
 
         ::
         

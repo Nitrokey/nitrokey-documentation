@@ -47,7 +47,7 @@ Connect using the Nextcloud App
 Connect using WebDAV
 ^^^^^^^^^^^^^^^^^^^^
 
-.. Warning::
+.. warning::
 
    There have been reports that the native WebDAV support in Windows is not performing well. We 
    recommend using the Nextcloud App (as described above) for the best user experience. Additionally

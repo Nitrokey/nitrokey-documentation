@@ -61,7 +61,7 @@ a trivial example has been chosen to just ``echo`` the PIN during startup.
 Further ``SSLPassPhraseDialog`` is a global directive, thus has to be placed in the global
 configuration scope in Apache2.
 
-.. Warning::
+.. warning::
 
    This shown example is not a secure mechanism to pass your PIN, as it will be
    written in plain-text inside your configuration

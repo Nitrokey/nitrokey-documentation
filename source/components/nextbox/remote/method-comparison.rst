@@ -26,7 +26,8 @@ This denotes the :doc:`dynamic-dns` and the :doc:`static` approach.
 Non-encrypted 
 ^^^^^^^^^^^^^
 
-.. warning:: We strongly recommend to not use the non-encrypted setup, if you plan to make your
+.. warning::
+   We strongly recommend to not use the non-encrypted setup, if you plan to make your
    NextBox available outside of your local area network.
 
 * simple (``http``) using either ``nextbox.local`` or your local IP (e.g.: ``192.168.178.123``)

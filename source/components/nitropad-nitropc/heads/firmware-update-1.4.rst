@@ -38,9 +38,9 @@ Updating from ``v1.3.1`` onwards has two different ways:
   about the external flashing below.
 
 .. warning::
-    Never try updating your NitroPad using the `-maximized` image, if you do not 
-    know exactly what you are doing! You will brick your NitroPad and
-    it can only be repaired using an external flasher!
+   Never try updating your NitroPad using the `-maximized` image, if you do not 
+   know exactly what you are doing! You will brick your NitroPad and
+   it can only be repaired using an external flasher!
 
 
 How can I update to *-maximized*?

@@ -2,7 +2,7 @@ Factory Reset
 =======================
 
 
-.. Warning::
+.. warning::
 
    Factory Resetting your NextBox will inevitably **delete all your files** on
    the NextBox and any configuration settings.
