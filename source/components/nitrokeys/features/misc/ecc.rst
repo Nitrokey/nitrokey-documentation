@@ -136,7 +136,7 @@ Update of GnuPG on Ubuntu
 -------------------------
 
 The following steps are needed only if you are running a Ubuntu version older than 18.04. You can install GnuPG 2.1.18 on such system with the commands below. This involves newer Debian packages, which is the easiest option. This approach has been tested successfully on Ubuntu
-17.10 and propbably works on 16.04 as well. However, the occurence of problems during usage can‘t be excluded.
+17.10 and propbably works on 16.04 as well. However, the occurence of problems during usage can't be excluded.
 
 .. code-block:: bash
 
