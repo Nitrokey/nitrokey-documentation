@@ -53,26 +53,26 @@ Using hidden volumes
 3.
 
     .. tabs::
-        .. tab:: Linux
+       .. tab:: Linux
 
-            If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. You will need to open a partition manager such as `GParted <https://gparted.org/>`__ and create one or more partitions manually. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.
+          If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. You will need to open a partition manager such as `GParted <https://gparted.org/>`__ and create one or more partitions manually. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.
 
-            .. figure:: images/hidden/hidden-storage-partition.png
-               :alt: Hidden volume partitioning
+          .. figure:: images/hidden/hidden-storage-partition.png
+             :alt: Hidden volume partitioning
 
-        .. tab:: MacOS
+       .. tab:: MacOS
 
-            If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. You will need to use `Disk Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`__. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.
+          If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. You will need to use `Disk Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`__. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.
 
-        .. tab:: Windows
+       .. tab:: Windows
 
-            If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. In this case, Windows will prompt you to do so. You can then format the hidden volume using FAT32, for compatibility with most operating systems.
+          If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. In this case, Windows will prompt you to do so. You can then format the hidden volume using FAT32, for compatibility with most operating systems.
 
 
-            .. figure:: images/hidden/format-dialog.png
-               :alt: Windows formating prompt
+          .. figure:: images/hidden/format-dialog.png
+             :alt: Windows formating prompt
 
-            .. figure:: images/hidden/format-tool.png
-               :alt: Windows formating tool
+          .. figure:: images/hidden/format-tool.png
+             :alt: Windows formating tool
 
 4. Make sure to unmount/eject all partitions on the hidden volumes before locking or disconnecting the Nitrokey.

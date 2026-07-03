@@ -6,31 +6,31 @@ Getting Started
 
 1.
     .. tabs::
-        .. tab:: Linux
-            Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. You need
-            at least version 0.19. You can find recent builds for debian-based
-            systems like Ubuntu
-            `here <https://github.com/Nitrokey/opensc-build>`__ if your system
-            does not have the newest version of OpenSC. Alternatively, install
-            `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__
-            driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__).
+       .. tab:: Linux
+          Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__. You need
+          at least version 0.19. You can find recent builds for debian-based
+          systems like Ubuntu
+          `here <https://github.com/Nitrokey/opensc-build>`__ if your system
+          does not have the newest version of OpenSC. Alternatively, install
+          `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__
+          driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__).
 
-        .. tab:: macOS
-            Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
-            Alternatively, install
-            `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__
-            driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__).
+       .. tab:: macOS
+          Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
+          Alternatively, install
+          `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__
+          driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__).
 
-            On some macOS versions, OpenSC fails to find the CCID library of the operating system.
-            In this case OpenSC tools will show ``Unresponsive Card`` errors.
-            The problem can be fixed by either copying or symlinking the directory ``/usr/libexec/SmartCardServices`` to ``/usr/local/libexec/SmartCardServices``.
-            A reboot after this change is mandatory to make the new library to be recognized.
+          On some macOS versions, OpenSC fails to find the CCID library of the operating system.
+          In this case OpenSC tools will show ``Unresponsive Card`` errors.
+          The problem can be fixed by either copying or symlinking the directory ``/usr/libexec/SmartCardServices`` to ``/usr/local/libexec/SmartCardServices``.
+          A reboot after this change is mandatory to make the new library to be recognized.
 
-        .. tab:: Windows
-            Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
-            Alternatively, install
-            `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__
-            driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__).
+       .. tab:: Windows
+          Install `OpenSC <https://github.com/OpenSC/OpenSC/wiki>`__.
+          Alternatively, install
+          `this <https://www.cardcontact.de/download/sc-hsm-starterkit.zip>`__
+          driver (`source <https://github.com/CardContact/sc-hsm-embedded>`__).
 
 2. Define SO-PIN and PIN of your own choices. See `these
    instructions <https://github.com/OpenSC/OpenSC/wiki/SmartCardHSM#initialize-the-device>`__.
