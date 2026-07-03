@@ -93,10 +93,10 @@ Instructions
         # if there is only one entry, you want the 1st column of this entry
 
     .. hint::
-        Usually this should be something like `nvme0n1p3_crypt` (for NitroPC) or
-        `sda3_crypt` (for NitroPads).  You can and should crosscheck that the UUID
-        referred inside `/etc/crypttab` is the designated partition by checking the
-        symbolic link inside `/dev/disks/by-uuid/`.
+       Usually this should be something like `nvme0n1p3_crypt` (for NitroPC) or
+       `sda3_crypt` (for NitroPads).  You can and should crosscheck that the UUID
+       referred inside `/etc/crypttab` is the designated partition by checking the
+       symbolic link inside `/dev/disks/by-uuid/`.
 
 6. Execute the script with the luks device name (e.g., `nvme0n1p3_crypt`) and
    `pubkey.asc` as arguments.

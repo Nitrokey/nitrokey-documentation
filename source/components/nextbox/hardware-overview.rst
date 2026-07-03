@@ -40,8 +40,8 @@ the different connectors and interfaces is given.
    transfer data.
 
 
-   .. hint:: The right side of the NextBox is designed so that all mandatory
-            interfaces can be accessed from this side. 
+   .. hint::
+      The right side of the NextBox is designed so that all mandatory interfaces can be accessed from this side. 
 
    .. figure:: /components/nextbox/images/hardware-overview/right-side.jpg
       :alt: right view
@@ -53,9 +53,9 @@ the different connectors and interfaces is given.
 6. **Reserved USB 3 - Type A Slot**, used for the internal hard-disk. *Never remove this connector!*
 7. **2x Free USB 2 - Type A Slots**, please see `Hardware FAQ`_
 
-   .. hint:: Using a hard-drive with an external power supply you can use any of
-            the available USB slots. Keep in mind that the data transfer bandwidth for
-            the USB 2 slots is less compared to the USB 3 slot. 
+   .. hint::
+      Using a hard-drive with an external power supply you can use any of the available USB slots.
+      Keep in mind that the data transfer bandwidth for the USB 2 slots is less compared to the USB 3 slot. 
 
 8. **USB Type-C / Power Supply** (stock) connector, can be used as **[3]**
 9. **Micro HDMI 1 slot**, usable but not needed.
@@ -66,14 +66,8 @@ the different connectors and interfaces is given.
        :alt: front view
        :align: center
 
-.. hint:: The front interfaces are all optional and not necessary for NextBox
-          usage in general. While the **USB Type-C/Power Supply** may be used, the
-          alternative on the right side of the NextBox can be used to have all wiring
-          convenient on one side.
-
-
-
-
-
+.. hint::
+   The front interfaces are all optional and not necessary for NextBox usage in general.
+   While the **USB Type-C/Power Supply** may be used, the alternative on the right side of the NextBox can be used to have all wiring convenient on one side.
 
 .. _Hardware FAQ: faq/hardware.html#why-must-i-not-connect-external-hard-drives-without-an-external-power-supply-to-my-nextbox

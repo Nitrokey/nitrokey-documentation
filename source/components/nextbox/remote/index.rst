@@ -13,7 +13,8 @@ If you struggle with the overall topic, please read:
 
    Walkthrough <walkthrough>
 
-.. hint:: Even though the *Backwards Proxy* remote access method is a quick
+.. hint::
+   Even though the *Backwards Proxy* remote access method is a quick
    way to realize remote access, we **strongly recommend** to use a 
    :doc:`dynamic DNS setup<dynamic-dns>` or :doc:`static DNS setup<static>` 
    to maintain the best security level for your NextBox. *In most usage

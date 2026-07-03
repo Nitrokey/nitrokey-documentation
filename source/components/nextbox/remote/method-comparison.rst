@@ -6,9 +6,10 @@ Comparing Methods For (Remote) Access
 DNS-based
 ^^^^^^^^^
 
-.. hint:: This is clearly the best and most secure approach and we recommend using a
+.. hint::
+   This is clearly the best and most secure approach and we recommend using a
    DNS-based remote-access method including your own TLS certificate for the best
-   security
+   security.
 
 This denotes the :doc:`dynamic-dns` and the :doc:`static` approach.
 
@@ -65,8 +66,9 @@ This refers to the :doc:`proxy` method.
 * **Contra:** not strictly end-to-end encrypted, potentially slow (all traffic through the proxy)
 
 
-.. hint:: Non end-to-end encrypted does still mean all your traffic is indeed
+.. hint::
+   Non end-to-end encrypted does still mean all your traffic is indeed
    encrypted, but within the proxy server, in order to be forwarded the traffic
    will be decrypted once and encrypted again before being passed to the client
-   or NextBox
+   or NextBox.
 

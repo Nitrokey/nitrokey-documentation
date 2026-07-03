@@ -47,11 +47,11 @@ How can I update to *-maximized*?
 ---------------------------------
 
 .. hint::
-    We highly recommend to NOT DO THIS ON YOUR OWN, as long as 
-    you are not exactly knowing what you are doing!
+   We highly recommend to NOT DO THIS ON YOUR OWN, as long as 
+   you are not exactly knowing what you are doing!
 
-    We have a service to do this upgrade on your NitroPad, please
-    write an e-mail to "shop at nitrokey.com" together with your sales order number (SOxxxxxx).
+   We have a service to do this upgrade on your NitroPad, please
+   write an e-mail to "shop at nitrokey.com" together with your sales order number (SOxxxxxx).
 
 The following procedure describes roughly how to flash your NitroPad using
 an external flasher - it is intentionally on a high level as we do not

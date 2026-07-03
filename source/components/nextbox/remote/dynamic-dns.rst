@@ -28,14 +28,16 @@ these steps to configure your NextBox using the Guided Dynamic DNS method:
   completed you will be presented with a secret token, which is needed in step
   two.
 
-.. hint:: If you do not receive a verification e-mail try `reset password`_
+.. hint::
+   If you do not receive a verification e-mail try `reset password`_
    (using the same e-mail address) at `desec.io`_ to set a password, which will
    allow you to login into your account.
 
 * In step two the just acquired secret token shall be inserted into the input
   field to complete your guided dynamic dns configuration.
 
-.. hint:: Your token will only be presented once to you (after the verification
+.. hint::
+   Your token will only be presented once to you (after the verification
    process).  If you need a new token, you need to create a new one inside the
    `token management`_ inside your `desec.io`_ account settings.
 

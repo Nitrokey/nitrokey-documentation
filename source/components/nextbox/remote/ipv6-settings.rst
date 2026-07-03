@@ -8,9 +8,7 @@ You have properly set up one of the DNS configurations, :doc:`port-forwarding`
 and :doc:`dns-rebind` and still your NextBox is not available / reachable.
 
 .. hint::
-   This is in particular important for Fritz!Box owners and/or DS-Lite internet 
-   connections. 
-
+   This is in particular important for Fritz!Box owners and/or DS-Lite internet connections. 
 
 Details
 -------
