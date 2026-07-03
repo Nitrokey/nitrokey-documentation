@@ -69,7 +69,7 @@ There is surprisingly little to say about PuTTY itself.
 
 “Attempt authentication using Pageant” must be set, which is the default anyway.
 
-That’s it, as soon as you connect to the server while pageant is running and you have the keys, you will be asked for the password of the Crypto-Stick and can log in.
+That's it, as soon as you connect to the server while pageant is running and you have the keys, you will be asked for the password of the Crypto-Stick and can log in.
 
 **3) openpgp-minidriver (optional)**
 

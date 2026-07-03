@@ -17,11 +17,11 @@ The following instructions explain the generation of OpenPGP keys directly on th
 Key Generation
 --------------
 
-The following descriptions explain the basic key generation on-device via GnuPG’s command line interface. The default behaviour is to generate RSA keys of 2048 bit size. If you want to change the key algorithm and length, have a look at the next section first.
+The following descriptions explain the basic key generation on-device via GnuPG's command line interface. The default behaviour is to generate RSA keys of 2048 bit size. If you want to change the key algorithm and length, have a look at the next section first.
 
 Open a command line and type ``gpg2 --card-edit``.
 
-To open the Windows command line please push the Windows-key and R-key. Now type ‘cmd.exe’ in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
+To open the Windows command line please push the Windows-key and R-key. Now type ``cmd.exe`` in the text field and hit enter. To open a Terminal on macOS or GNU/Linux please use the application search (e.g. spotlight on macOS).
 
 .. code-block:: shell-session
 
@@ -214,7 +214,7 @@ Generating a Public Key File
 
 To get a simple file of your public key, you can just use ``gpg2 --armor --export keyID > pubkey.asc``. Use either the fingerprint as “keyID” (look at ``gpg -K`` to get it) or just use your email address as an identifier.
 
-You can carry this file with you or send it to anyone who you like. This file is not secret at all. If you want to use the Nitrokey on another system, you first import this public key via ``gpg2 --import pubkey.asc`` and then types ``gpg2 --card-status`` so that the system knows where to look for this key. That’s all.
+You can carry this file with you or send it to anyone who you like. This file is not secret at all. If you want to use the Nitrokey on another system, you first import this public key via ``gpg2 --import pubkey.asc`` and then types ``gpg2 --card-status`` so that the system knows where to look for this key. That's all.
 
 Uploading the Public Key
 ~~~~~~~~~~~~~~~~~~~~~~~~

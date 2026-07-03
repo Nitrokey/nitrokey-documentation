@@ -2,7 +2,7 @@ Getting Started
 ===============
 
 Passkeys are a modern way to log into websites and apps without the need for traditional passwords, making it easier and safer for everyone. 
-Here’s a simple breakdown of what passkeys are, how they work, and how to use the Nitrokey Passkey.
+Here's a simple breakdown of what passkeys are, how they work, and how to use the Nitrokey Passkey.
  
 How do Passkeys Work?
 --------------------- 

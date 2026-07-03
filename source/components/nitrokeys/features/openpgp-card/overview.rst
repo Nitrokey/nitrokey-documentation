@@ -20,13 +20,13 @@ If you do not have OpenPGP keys yet, you need to generate them first.
 
 -  `Generate keys on
    your Nitrokey device <openpgp-keygen-gpa.html>`_
-   - this is the best option if you are unexperienced, but you won’t
-   have a backup of your keys and therefore won’t be able to mitigate
+   - this is the best option if you are unexperienced, but you won't
+   have a backup of your keys and therefore won't be able to mitigate
    the loss of the Nitrokey
 
 -  `Generate keys on your Nitrokey device with different algorithm or key
    size <openpgp-keygen-on-device.html>`_
-   - this is as secure as the previous option and thus you won’t have a
+   - this is as secure as the previous option and thus you won't have a
    backup as well, but you can change the key attributes (that is the
    algorithm and key size)
 

@@ -20,7 +20,7 @@ Firmware Update
 
         2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/latest>`__ and store it as "firmware.hex" in your home folder. Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__.
 
-        3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ‘12345678’.
+        3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ``12345678``.
 
             .. figure:: images/firmware-update/enable-firmware-update.png
                 :alt: Enable firmware update
@@ -48,7 +48,7 @@ Firmware Update
 
         2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/latest>`__. Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__.
 
-        3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ‘12345678’.
+        3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ``12345678``.
 
             .. figure:: images/firmware-update/enable-firmware-update.png
                 :alt: Enable firmware update
@@ -78,7 +78,7 @@ Firmware Update
 
         2. Download the latest firmware ".hex" file from `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases/latest>`__. Older releases are `here <https://github.com/Nitrokey/nitrokey-storage-firmware/releases>`__.
 
-        3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ‘12345678’.
+        3. Right click on the icon of the Nitrokey App and go to “Configure” -> “Enable Firmware Update”. The default firmware password is ``12345678``.
 
             .. figure:: images/firmware-update/enable-firmware-update.png
                 :alt: Enable firmware update

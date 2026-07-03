@@ -25,7 +25,7 @@ How to Update
 2. Download the latest stable `firmware image <https://github.com/Nitrokey/nitrokey-pro-firmware/releases>`__.
 
    .. important:: 
-      For production use you should choose the latest stable version (so only versions, that don’t contain i.e. “pre-release” or “RC”).
+      For production use you should choose the latest stable version (so only versions, that don't contain i.e. “pre-release” or “RC”).
 
 3. To apply the update run:
 

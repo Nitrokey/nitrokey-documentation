@@ -74,7 +74,7 @@ Instructions
 
 4. Export the public key
 
-    To export your public key from GnuPG’s keyring:
+    To export your public key from GnuPG's keyring:
 
     .. code-block:: bash
 
@@ -121,7 +121,7 @@ It is the passphrase you entered to encrypt your volume at installation.
    :alt: img2
 
 .. note:: This is a fall-back alternative in case you lose your Nitrokey, or if
-  it’s unavailable. So far, it was not tested, and users must be aware of the
+  it's unavailable. So far, it was not tested, and users must be aware of the
   risk of getting locked out of their computer, if the fall-back method does not
   work.
 

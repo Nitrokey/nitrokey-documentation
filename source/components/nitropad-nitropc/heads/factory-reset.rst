@@ -50,7 +50,7 @@ Procedure
 
 7. You will be asked if you want to set the User and Admin/TPM PIN yourself. You press Enter to continue without changing the PINs.
 
-8. You will then be asked if manual user information should be added. You confirm with ‘y’ and enter your name and then the email address.
+8. You will then be asked if manual user information should be added. You confirm with ``y`` and enter your name and then the email address.
 
    .. code-block:: bash
 

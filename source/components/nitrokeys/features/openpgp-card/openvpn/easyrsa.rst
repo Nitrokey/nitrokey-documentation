@@ -141,9 +141,9 @@ Server side
 3. Create a PKI for OpenVPN server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-	Before you can create your OpenVPN server’s private key and certificate, you need to create a local Public Key Infrastructure directory on your OpenVPN server. You will use this directory to manage the server and clients’ certificate requests, instead of making them directly on your CA server.
+	Before you can create your OpenVPN server's private key and certificate, you need to create a local Public Key Infrastructure directory on your OpenVPN server. You will use this directory to manage the server and clients' certificate requests, instead of making them directly on your CA server.
 
-	To build a PKI directory on your OpenVPN server, you’ll need to populate a file called ``vars`` with some default values.
+	To build a PKI directory on your OpenVPN server, you'll need to populate a file called ``vars`` with some default values.
 
 		1. Create a ``vars`` file
 
@@ -172,7 +172,7 @@ Server side
 
 					$ ./easyrsa init-pki
 
-			After you’ve initialized your PKI on the OpenVPN server, you are ready to move on to the next step, which is creating an OpenVPN server certificate request and private key.
+			After you've initialized your PKI on the OpenVPN server, you are ready to move on to the next step, which is creating an OpenVPN server certificate request and private key.
 
 4. Create ``server.req`` and ``server.key``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -204,7 +204,7 @@ Server side
 
 		This will create a private key for the server and a certificate request file called ``server.req``.
 
-		Once you have a signed certificate, you’ll transfer it back to the OpenVPN server.
+		Once you have a signed certificate, you'll transfer it back to the OpenVPN server.
 
 	2. Copy the key to the OpenVPN server directory
 
@@ -234,7 +234,7 @@ Server side
     The following instructions require the transfer of the ``server.req``
     (or ``server.csr``) file to the CA system.
 
-    The transfer itself is not security sensitive, though it is wise to verify if the received file matches the sender’s copy, if the transport is untrusted.
+    The transfer itself is not security sensitive, though it is wise to verify if the received file matches the sender's copy, if the transport is untrusted.
 
     In order to go through these steps, I will extensively rely on :doc:`these instructions <../../hsm/certificate-authority>`, to sign the certificate signing requests, once we generated them with Easy-RSA.
 
@@ -250,10 +250,10 @@ Server side
 
                 $ p11tool --list-all
 
-            **(Required step)** If this is the first time you sign a certificate with the CA, you might want to retrieve the URI of the CA’s private key from the HSM, and include it in the config file.
+            **(Required step)** If this is the first time you sign a certificate with the CA, you might want to retrieve the URI of the CA's private key from the HSM, and include it in the config file.
 
             .. note:: 
-                The key’s URI should be in this format:
+                The key's URI should be in this format:
 
                 .. code-block:: bash
 
@@ -282,7 +282,7 @@ Server side
 
                 $ scp openvpn/{server.crt,chain.crt} admin@your_openvpnserver_ip:/tmp
 
-        2. Place the certificates on the server’s directory
+        2. Place the certificates on the server's directory
 
             .. code-block:: bash
 
@@ -655,7 +655,7 @@ Client side configuration
 
     2. Enter your User PIN
 
-        When executing OpenVPN client, Nitrokey’s PIN needs to be entered:
+        When executing OpenVPN client, Nitrokey's PIN needs to be entered:
 
         ::
 
@@ -667,7 +667,7 @@ Client side configuration
 
         .. warning::
         
-            Unfortunately OpenVPN doesn’t seem to be able to establish a handshake on some operating systems and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
+            Unfortunately OpenVPN doesn't seem to be able to establish a handshake on some operating systems and stops at an error as reported `here <https://support.nitrokey.com/t/nitrokey-pro-with-openssl-1-1-1-tls-1-3-and-rsa-based-certificates/2180/2>`__, `here <https://support.nitrokey.com/t/openvpn-openssl-error-141f0006/2637>`__ and `here <https://community.openvpn.net/openvpn/ticket/1215>`__
 
         ::
         

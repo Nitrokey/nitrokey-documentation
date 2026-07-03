@@ -20,16 +20,16 @@ You will also need the following:
 
 -  A Nitrokey Pro 2 or Nitrokey Storage 2
 
--  Client’s private key ``client.key`` loaded on the Nitrokey
+-  Client's private key ``client.key`` loaded on the Nitrokey
 
--  Client’s certificate ``client.crt`` loaded on the Nitrokey
+-  Client's certificate ``client.crt`` loaded on the Nitrokey
 
 -  The Certificate Authority file, i.e. ``CA.crt`` file used for your
    OpenVPN setup
 
 -  Optional: The shared secret key file, i.e. ``ta.key``
 
-For more information on ``PKCS#11`` key management with OpenVPN, please consult OpenVPN’s `documentation. <https://openvpn.net/community-resources/how-to/>`__
+For more information on ``PKCS#11`` key management with OpenVPN, please consult OpenVPN's `documentation. <https://openvpn.net/community-resources/how-to/>`__
 
 Usage
 -----
@@ -47,7 +47,7 @@ Usage
         :alt: img2
         :scale: 75
 
-3. Add your server’s IP address and configure the port according to your
+3. Add your server's IP address and configure the port according to your
    configuration.
 
 4. Under authentication, In ``Type`` scroll down to
@@ -66,7 +66,7 @@ Usage
    specified, and for instance we will use ``OpenSC``.
 
     On macOS, the most common location for modules to be found is in the
-    /usr/lib directory. Please refer to the documentation included with your driver software for the location to use. OpenSC’s module can be found at ``/Library/OpenSC/lib/opensc-pkcs11.so``
+    /usr/lib directory. Please refer to the documentation included with your driver software for the location to use. OpenSC's module can be found at ``/Library/OpenSC/lib/opensc-pkcs11.so``
 
     On Windows, the most common location for libraries is either in ``C:\Program Files`` or ``C:\Windows\System32``. OpenSC libraries are generally located at ``C:\Program Files\OpenSC Project\OpenSC\pkcs11``. There may be more than one library available here, you can try each one or simply add both.
 

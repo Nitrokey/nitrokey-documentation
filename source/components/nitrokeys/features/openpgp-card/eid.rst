@@ -21,7 +21,7 @@ Login With EIDAuthenticate on Stand Alone Windows Computers
 
 
 5. Select or generate a Certificate Authority which should issue the
-   user’s certificate on the Nitrokey.
+   user's certificate on the Nitrokey.
 
 	.. figure:: images/eidauthenticate/2.png
 		:alt: img2
@@ -30,8 +30,7 @@ Login With EIDAuthenticate on Stand Alone Windows Computers
 
 6. Enter the user PIN which you defined previously in step 4. Wait a
    moment until a new keypair and certificate are generated. In case
-   your Nitrokey is not detected you may want to execute “certutil
-   -scinfo” for troubleshooting.
+   your Nitrokey is not detected you may want to execute ``certutil -scinfo`` for troubleshooting.
 
 	.. figure:: images/eidauthenticate/3.png
 		:alt: img3

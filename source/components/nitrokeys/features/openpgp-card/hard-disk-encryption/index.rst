@@ -23,7 +23,7 @@ Follow these steps to use the program with `Nitrokey Storage
 4. Now you should be able to import the generated key file via
    Tools>Manage Security Token Keyfiles. You should choose the first
    Slot (``[0] User PIN``). The keyfile is then stored on the Nitrokey
-   as ‘Private Data Object 1’ (``PrivDO1``).
+   as *Private Data Object 1* (``PrivDO1``).
 5. After this you should wipe the original keyfile on your Computer
    securely!
 6. Now you can use VeraCrypt with the Nitrokey: Create a container,
@@ -33,7 +33,7 @@ Follow these steps to use the program with `Nitrokey Storage
 
    Security Consideration
 
-   Please note that VeraCrypt doesn’t make use of the full security
+   Please note that VeraCrypt doesn't make use of the full security
    which Nitrokey (and smart cards in general) offer. Instead it stores
    a keyfile on the Nitrokey which theoretically could be stolen by a
    compromised host, since the *Private Data Object 1* is not protected by the Nitrokey's PIN.

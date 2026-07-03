@@ -50,4 +50,4 @@ And by clicking once more it will open the release GitHub page where the latest 
 Log File
 ********
 
-The “Save Log File” option lets you export a record of the application’s recent activity, including actions, errors, and system messages. This log file can help diagnose and resolve issues with the application.
+The “Save Log File” option lets you export a record of the application's recent activity, including actions, errors, and system messages. This log file can help diagnose and resolve issues with the application.

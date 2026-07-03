@@ -11,7 +11,7 @@ Here you will find a collection of common issues.
 Starting in recovery shell
 --------------------------
 
-If your OS doesn’t boot as shown below, please execute the following
+If your OS doesn't boot as shown below, please execute the following
 steps:
 
 .. code-block:: bash
@@ -36,7 +36,7 @@ steps:
 
 3. After that, please follow `these instructions <heads/system-update.html>`_ from step 3 onwards.
 
-NitroPad doesn’t start
+NitroPad does not start
 ----------------------
 
 If the laptop does not start and only flashes briefly when switched on, please try the following
@@ -60,7 +60,7 @@ synchronization between the devices, after which the bad code signal is
 shown, regardless of the rest of the system being in a correct state. If
 you are sure the system was not beign tampered with (e.g. the NitroPad
 was booted more than 10 times without the Nitrokey), you can safely
-reset the system’s warning.
+reset the system's warning.
 
 Please connect the Nitrokey and execute the following from the main boot
 screen:

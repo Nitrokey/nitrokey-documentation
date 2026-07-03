@@ -26,7 +26,7 @@ The user PIN can have up to 20 digits and other characters (e.g. alphabetic and 
 Admin PIN
 ---------
 
-The admin PIN is at least 8-digits long and is used to change contents/settings of the Nitrokey. That is to say after initializing the Nitrokey you probably won’t need this PIN too often (e.g. if you want to add another password to the password safe of the Nitrokey Pro or Nitrokey Storage).
+The admin PIN is at least 8-digits long and is used to change contents/settings of the Nitrokey. That is to say after initializing the Nitrokey you probably won't need this PIN too often (e.g. if you want to add another password to the password safe of the Nitrokey Pro or Nitrokey Storage).
 
 You can change the admin PIN with the Nitrokey App if using a Nitrokey Pro or Nitrokey Storage. In the `Nitrokey App <https://www.nitrokey.com/download>`__ open ``Menu -> Configure ->
 Change Admin PIN`` to open the dialog to change the PIN.

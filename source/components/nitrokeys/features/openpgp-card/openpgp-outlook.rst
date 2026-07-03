@@ -32,7 +32,7 @@ After installing GPG4Win along with GpgOL, you will see a new icon labeled “Se
 
 
 
-GnuPG will start signing and encrypting the mail as soon as you click on ‘send’. You are requested to choose the identity you want to sign with and encrypt for.
+GnuPG will start signing and encrypting the mail as soon as you click on **Send**. You are requested to choose the identity you want to sign with and encrypt for.
 
 .. figure:: images/outlook/3.png
    :alt: img3

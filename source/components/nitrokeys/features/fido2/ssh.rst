@@ -81,7 +81,7 @@ Once your SSH key pair is generated, the public key must be added to the service
       
       sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG7wZW4zc2guY29tAAAAILeZl6r07HV4i1rK07OfLqD3J4IzX2q0lB6Ok0pdxoG5AAAABHNzaDo= your_comment
 
-2. Copy the output and add it to your account’s SSH key settings.  
+2. Copy the output and add it to your account's SSH key settings.  
 
    See `GitLab  <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-account>`_ or `GitHub  <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`_ for detailed steps.
 

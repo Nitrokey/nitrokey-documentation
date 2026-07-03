@@ -344,7 +344,7 @@ Generating a Public Key File
 To get a simple file of your public key, you can just use ``gpg --armor --export keyID > pubkey.asc``. Use either the fingerprint as “keyID” (look at ``gpg -K`` to get it) or just use your email address as an identifier.
 
 You can carry this file with you or send it to anyone who you like. This file is not secret at all. If you want to use the Nitrokey on another system, you first import this public key via ``gpg --import pubkey.asc``
-and then types ``gpg --card-status`` so that the system knows where to look for this key. That’s all.
+and then types ``gpg --card-status`` so that the system knows where to look for this key. That's all.
 
 Uploading the Public Key
 ~~~~~~~~~~~~~~~~~~~~~~~~

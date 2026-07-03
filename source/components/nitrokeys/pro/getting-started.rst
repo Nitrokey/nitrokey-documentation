@@ -15,7 +15,7 @@ Getting Started
 
         .. tab:: MacOS
             Once you plug in the Nitrokey, your computer will start the Keyboard
-            Setup Assistant. **Don’t run through this assistant but exit it right
+            Setup Assistant. **Don't run through this assistant but exit it right
             away.**
         .. tab:: Windows
             Connect your Nitrokey to your computer and confirm all dialogs so

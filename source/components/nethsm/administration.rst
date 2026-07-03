@@ -835,7 +835,7 @@ NetHSM is stateless, so that several NetHSM devices can be used to process extre
 
 Multiple instances of NetHSM can be synchronized either via `clustering <clustering.html>`__ or via encrypted backups.
 
-For the later a separate system downloads and uploads backup files between the instances. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__. This separate system doesn’t have access to the backed up data in clear text because the backup files are encrypted twice. The separate system is in possession of the backup passphrase only but not of the Domain Key resp. Unlock Passphrase which is the second layer of encryption. See the `system design <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#backup-and-restore>`__ for further details.
+For the later a separate system downloads and uploads backup files between the instances. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__. This separate system doesn't have access to the backed up data in clear text because the backup files are encrypted twice. The separate system is in possession of the backup passphrase only but not of the Domain Key resp. Unlock Passphrase which is the second layer of encryption. See the `system design <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#backup-and-restore>`__ for further details.
 
 Software Update
 ~~~~~~~~~~~~~~~

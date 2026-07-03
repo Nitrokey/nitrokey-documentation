@@ -114,7 +114,7 @@ GnuPG cannot access the Nitrokey 3 and shows an error message like this::
     gpg: OpenPGP card not available: No such device
 
 **Solution:**
-There are two common smartcard services on Linux systems: ``scdaemon``, GnuPG’s smartcard daemon, and ``pcscd``, a generic smartcard daemon.
+There are two common smartcard services on Linux systems: ``scdaemon``, GnuPG's smartcard daemon, and ``pcscd``, a generic smartcard daemon.
 ``scdaemon`` has two drivers for accessing smartcards:
 Its integrated ``ccid`` driver tries to directly access the smartcard.
 The ``pcsc`` drivers uses the ``pcscd`` daemon instead.

@@ -6,7 +6,7 @@ Operating System Reinstallation
 .. warning::
 
    Booting this USB drive entirely erases all data on the hard disk or
-   SSD of the NitroPad without further warning. Don’t boot this USB
+   SSD of the NitroPad without further warning. Don't boot this USB
    drive on any computer which contains data you want to keep. Make sure
    to format the USB drive after the intended use.
 
@@ -41,6 +41,6 @@ To avoid accidential overwriting of valuable data, format the USB drive afterwar
 .. warning::
 
    Booting this USB drive entirely erases all data on the hard disk or
-   SSD of the NitroPad without further warning. Don’t boot this USB
+   SSD of the NitroPad without further warning. Don't boot this USB
    drive on any computer which contains data you want to keep. Make sure
    to format the USB drive after the intended use.
