@@ -37,7 +37,7 @@ steps:
 3. After that, please follow `these instructions <heads/system-update.html>`_ from step 3 onwards.
 
 NitroPad does not start
-----------------------
+-----------------------
 
 If the laptop does not start and only flashes briefly when switched on, please try the following
 steps:
