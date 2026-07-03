@@ -57,9 +57,9 @@ You can find further information about the usage on these pages:
 * `GPGTools on macOS <https://gpgtools.org>`__
 * :doc:`Desktop Login <desktop-login/index>`
 * :doc:`SSH <ssh/index>`
-* :doc:`IPSec <ipsec>`
+* :doc:`IPSec <../hsm/ipsec>`
 * :doc:`Hard Disk Encryption <hard-disk-encryption/index>`
-* :doc:`Stunnel <stunnel>`
+* :doc:`Stunnel <../hsm/stunnel>`
 * :doc:`Gnu Privacy Assistant (GPA) <gpa>`
 * :doc:`EID <eid>`
 * :doc:`GnuPG with Fedora <fedora-gnupg-configuration>`

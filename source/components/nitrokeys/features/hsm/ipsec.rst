@@ -1,7 +1,7 @@
 IPSec
 =====
 
-.. product-table:: nk3 storage start pro
+.. product-table:: nk3 storage start pro hsm
 
 .. contents:: :local:
 

@@ -9,9 +9,9 @@ HSM Features
    S/MIME <../openpgp-card/smime/index>
    DNSSEC (Linux only) <dnssec>
    Import Keys Certs <import-keys-certs>
-   stunnel (Linux only) <../openpgp-card/stunnel>
+   stunnel (Linux only) <stunnel>
    Certificate Authority <certificate-authority>
-   IPSec (Linux only) <../openpgp-card/ipsec>
+   IPSec (Linux only) <ipsec>
    N-of-m Schemes <n-of-m-schemes>
    PKCS11-URL <pkcs11-url>
    Apache 2 TLS <apache2-tls>
