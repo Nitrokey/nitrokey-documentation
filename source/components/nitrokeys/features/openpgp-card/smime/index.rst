@@ -62,7 +62,5 @@ You can find further information about the usage on these pages:
    :maxdepth: 1
 
    S/MIME encryption on Thunderbird <smime-thunderbird>
-
    S/MIME encryption on Outlook <smime-outlook>
-
    Evolution, an email client for the Gnome Desktop on Linux systems <https://help.gnome.org/evolution/mail-encryption.html>

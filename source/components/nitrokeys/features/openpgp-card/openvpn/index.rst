@@ -4,7 +4,7 @@ OpenVPN
 .. product-table:: nk3 storage pro start
 
 .. toctree::
-    :maxdepth: 1
+   :maxdepth: 1
 
-    EasyRSA <easyrsa>
-    Viscosity <viscosity>
+   EasyRSA <easyrsa>
+   Viscosity <viscosity>

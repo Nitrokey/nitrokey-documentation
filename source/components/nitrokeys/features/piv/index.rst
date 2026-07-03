@@ -14,5 +14,4 @@ It is available as of firmware version 1.8 and higher.
    Certificate Management <certificate_management>
    Factory Reset <factory_reset>
    Key Management <key_management>
-
    Guides <guides/index>
