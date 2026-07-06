@@ -15,25 +15,13 @@ Nitrokey HSM's Secure Key Backup and Restore:
 
 .. raw:: html
 
- <a href="https://asciinema.org/a/152957" target="_blank"><img src="https://asciinema.org/a/152957.svg" /></a>
-
-
-.. only:: comment
-
-   <script id="asciicast-152957" src="https://asciinema.org/a/152957.js" async></script>
-.. only:: comment
-
- <iframe width="560" height="315" src="https://asciinema.org/a/152957" frameborder="0" allowfullscreen></iframe>
+   <a href="https://asciinema.org/a/152957" target="_blank"><img src="https://asciinema.org/a/152957.svg" /></a>
 
 Nitrokey HSM's M-of-N Threshold Scheme:
 
 .. raw:: html
 
- <a href="https://asciinema.org/a/153021" target="_blank"><img src="https://asciinema.org/a/153021.svg" /></a>
-
-.. only:: comment
-
-   <iframe width="560" height="315" src="https://asciinema.org/a/153021" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+   <a href="https://asciinema.org/a/153021" target="_blank"><img src="https://asciinema.org/a/153021.svg" /></a>
 
 N-of-m for public key authentication
 ''''''''''''''''''''''''''''''''''''
