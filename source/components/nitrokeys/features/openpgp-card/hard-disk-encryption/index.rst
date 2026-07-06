@@ -38,8 +38,6 @@ Follow these steps to use the program with `Nitrokey Storage
    a keyfile on the Nitrokey which theoretically could be stolen by a
    compromised host, since the *Private Data Object 1* is not protected by the Nitrokey's PIN.
 
-Note: `Aloaha Crypt <https://www.aloaha.com/aloaha-crypt-disk/>`__ is based on TrueCrypt/VeraCrypt but without the described security limitation.
-
 Hard Disk Encryption on GNU+Linux with LUKS/dm-crypt
 ----------------------------------------------------
 
