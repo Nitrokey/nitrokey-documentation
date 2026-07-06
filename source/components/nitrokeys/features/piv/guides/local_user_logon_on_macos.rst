@@ -3,7 +3,7 @@ MacOS Login with local user
 
 .. product-table:: nk3
 
-.. Note::
+.. note::
    This also works with preboot FileVault authentication for macOS Silicon models.
 
 This document explains how to use the PIV smart card of a Nitrokey 3 for local user logon on MacOS. It is available as of firmware version 1.8 and higher.
@@ -54,7 +54,7 @@ It is easier to use ``nitropy nk3 piv`` commands when PIN, PUK and management ke
 
       SmartCard: com.apple.pivtoken:<nitrokey serial number>
       Unpaired identities:
-      someId	<username> - Zertifikat zur PIV-Authentifizierung (<CN>)
+      someId   <username> - Zertifikat zur PIV-Authentifizierung (<CN>)
 
 5. Now unplug the Nitrokey and plug it in again. The operating system should recognize the Nitrokey as a PIV smartcard and suggest to pair with the user that is currently logged in.
 6. Confirm, you may need to enter the PIV PIN for some initial signing and you may also need to enter you password to allow the PIV certificate to be imported into MacOS keychain.

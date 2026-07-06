@@ -14,7 +14,7 @@ Set up the OpenSSL engine by following the `OpenSSL Engine  setup guide <openssl
 
 Providers aren't supported yet by Nginx.
 
-.. note:: 
+.. note::
    Using the libp11 OpenSSL engine version 0.4.12 or older and a NetHSM with a lot of key will make the initial loading of Nginx slow (more than a minute for 1 thousand keys). It is recommended to use version 0.4.13 or newer or to build the engine from `source <https://github.com/OpenSC/libp11>`__.
 
 Nginx Configuration
@@ -50,7 +50,7 @@ Nginx Configuration
            root   /usr/share/nginx/html;
            index  index.html index.htm;
        }
-     
+
        error_page   500 502 503 504  /50x.html;
        location = /50x.html {
            root   /usr/share/nginx/html;
@@ -65,7 +65,7 @@ The ``ssl_certificate_key`` can be an OpenSSL configuration. Here we use the Ope
 
    ssl_certificate_key "engine:pkcs11:pkcs11:object=webserver;type=private";
 
-.. note:: 
+.. note::
    You must generate the certificate separately and then upload it to the NetHSM. If the certificate on disk and the key in the NetHSM don't match nginx won't start.
 
 libnethsm_pkcs11 Configuration
@@ -101,24 +101,24 @@ If you want to experiment with the `given example <https://github.com/Nitrokey/n
 3. Install the OpenSSL PKCS11 engine as described in the `OpenSSL Manual <openssl.html>`__. You do not need to create a configuration file.
 4. Adjust the variables ``HOST``, ``ADMIN_ACCOUNT`` and ``ADMIN_ACCOUNT_PWD`` in ``container/nginx/generate.sh`` such that ``HOST`` contains your NetHSMs URL and port, ``ADMIN_ACCOUNT`` contains an administrator accounts username and ``ADMIN_ACCOUNT_PWD`` the corresponding password. Further configure the absolute path of the OpenSSL PKCS11 engine in ``OPENSSL_PKCS11_ENGINE_PATH`` and the absolute path of the NetHSM PKCS11 library in ``NETHSM_PKCS11_LIBRARY_PATH``.
 5. Create a NetHSM PKCS11 configuration file in one of the `known locations <../pkcs11-setup.html#configuration>`__, e.g., ``/etc/nitrokey/p11nethsm.conf``. It must have configured an operator account and use the same NetHSM instance specified in the generate script before.
-6. Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` with your NetHSMs URL and valid operator credentials. 
+6. Update the PKCS11 configuration in ``container/nginx/p11nethsm.conf`` with your NetHSMs URL and valid operator credentials.
 7. Generate the certificate and key.
-  
+
    .. code-block:: shell-session
-   
+
       ./container/nginx/generate.sh
 
 8. Build the container.
-  
+
    .. code-block:: shell-session
-    
-      docker build -f container/nginx/Dockerfile . -t pkcs-nginx 
+
+      docker build -f container/nginx/Dockerfile . -t pkcs-nginx
 
 9. Run the container.
-  
+
    .. code-block:: shell-session
-    
+
       docker run -p 9443:443 -p 9080:80 pkcs-nginx
-  
+
 The NGINX test page will be available at `https://localhost:9443/ <https://localhost:9443/>`__.
 Note that your browser, will warn you that the websites certificate is self-signed.

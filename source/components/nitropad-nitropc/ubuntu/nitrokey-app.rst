@@ -21,8 +21,7 @@ To get the most recent Nitrokey App you can add a separate repository which is m
 Please execute the following in a terminal to add the repository and install the Nitrokey App:
 
 .. hint::
-
- The PPA is not necessary for Ubuntu 22.04 and later. The previous versions of Ubuntu could still use it to update the app.
+   The PPA is not necessary for Ubuntu 22.04 and later. The previous versions of Ubuntu could still use it to update the app.
 
 ::
 

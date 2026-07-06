@@ -46,7 +46,7 @@ The list of all available languages can be retrieved as follows.
       .. code-block:: bash
 
          $ docker run --rm -ti openapitools/openapi-generator-cli list -i stable
-   
+
    .. tab:: Podman
       .. code-block:: bash
 

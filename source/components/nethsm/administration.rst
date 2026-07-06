@@ -211,9 +211,9 @@ The *Unlock Passphrase* can be set as follows.
 
       .. code-block::
 
-         New passphrase: 
-         Repeat for confirmation: 
-         Current passphrase: 
+         New passphrase:
+         Repeat for confirmation:
+         Current passphrase:
          Warning: The unlock passphrase cannot be reset without knowing the current value. If the unlock passphrase is lost, neither can it be reset to a new value nor can the NetHSM be unlocked.
          Do you want to continue? [y/N]: y
          Updated the unlock passphrase for NetHSM localhost:8443
@@ -249,7 +249,7 @@ The TLS certificate can be retrieved as follows.
       .. code-block:: bash
 
          $ nitropy nethsm --host $NETHSM_HOST get-certificate --api
-        
+
       .. code-block::
 
          -----BEGIN CERTIFICATE-----
@@ -344,7 +344,7 @@ The certificate can be replaced as follows.
       +===================+==================================================+
       | ``-a``, ``--api`` | Set the certificate for the NetHSM TLS interface |
       +-------------------+--------------------------------------------------+
-      
+
       **Arguments**
 
       +--------------+------------------+
@@ -354,7 +354,7 @@ The certificate can be replaced as follows.
       +--------------+------------------+
 
       **Example**
-      
+
       .. code-block:: bash
 
          nitropy nethsm --host $NETHSM_HOST set-certificate --api /tmp/nethsm-certificate
@@ -383,7 +383,7 @@ The network configuration can be retrieved as follows.
       +---------------+---------------------------------+
 
       **Example**
-      
+
       .. code-block:: bash
 
          $ nitropy nethsm -h $NETHSM_HOST get-config --network
@@ -433,7 +433,7 @@ Set the network configuration as follows.
       +=============================+===============================================+
       | ``--ipv6-cidr`` ``TEXT``    | The IPv6 address in CIDR notation (optional)  |
       +-----------------------------+-----------------------------------------------+
-      | ``--ipv6-gateway`` ``TEXT`` | The IPv6 gateway address (optional)          |
+      | ``--ipv6-gateway`` ``TEXT`` | The IPv6 gateway address (optional)           |
       +-----------------------------+-----------------------------------------------+
 
       **Example**
@@ -538,51 +538,51 @@ The metrics can be retrieved as follows.
 
       .. code-block::
 
-         Metric                      	Value
-         ----------------------------	--------
-         client connections          	0
-         established state           	6
-         external.received bytes     	989931
-         external.received packets   	13239
-         external.transmitted bytes  	25908953
-         external.transmitted packets	22037
-         free chunk count            	322
-         gc compactions              	0
-         gc major bytes              	21348352
-         gc major collections        	35
-         gc minor collections        	2652
-         http response 200           	28
-         http response 201           	1
-         http response 204           	1
-         http response 400           	1
-         http response 403           	1
-         http response 404           	145
-         http response 412           	1
-         http response time          	0.084998
-         http response total         	178
-         internal.received bytes     	66541
-         internal.received packets   	1130
-         internal.transmitted bytes  	63802
-         internal.transmitted packets	1133
-         kv write                    	2
-         log errors                  	3
-         log warnings                	3
-         maximum allocated space     	64528384
-         maximum releasable bytes    	1216
-         mmapped region count        	0
-         new sleeper size            	1
-         non-mmapped allocated bytes 	64528384
-         sleep queue size            	11
-         syn-rcvd state              	0
-         timers                      	2
-         total allocated space       	43940832
-         total client                	1
-         total established           	515
-         total free space            	20587552
-         total sleeper size          	12
-         total syn-rcvd              	514
-         total timers                	526
-         uptime                      	17626
+         Metric                         Value
+         ----------------------------   --------
+         client connections             0
+         established state              6
+         external.received bytes        989931
+         external.received packets      13239
+         external.transmitted bytes     25908953
+         external.transmitted packets   22037
+         free chunk count               322
+         gc compactions                 0
+         gc major bytes                 21348352
+         gc major collections           35
+         gc minor collections           2652
+         http response 200              28
+         http response 201              1
+         http response 204              1
+         http response 400              1
+         http response 403              1
+         http response 404              145
+         http response 412              1
+         http response time             0.084998
+         http response total            178
+         internal.received bytes        66541
+         internal.received packets      1130
+         internal.transmitted bytes     63802
+         internal.transmitted packets   1133
+         kv write                       2
+         log errors                     3
+         log warnings                   3
+         maximum allocated space        64528384
+         maximum releasable bytes       1216
+         mmapped region count           0
+         new sleeper size               1
+         non-mmapped allocated bytes    64528384
+         sleep queue size               11
+         syn-rcvd state                 0
+         timers                         2
+         total allocated space          43940832
+         total client                   1
+         total established              515
+         total free space               20587552
+         total sleeper size             12
+         total syn-rcvd                 514
+         total timers                   526
+         uptime                         17626
    .. tab:: REST API
       Information about the `/metrics` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_metrics>`__.
 
@@ -748,7 +748,7 @@ The backup passphrase can be set as follows.
          Repeat for confirmation:
          Warning: The backup passphrase cannot be reset without knowing the current value. If the backup passphrase is lost, neither can it be reset to a new value nor can the created backups be restored.
          Do you want to continue? [y/N]: y
-         The current backup passphrase (or an empty string if not set) []: 
+         The current backup passphrase (or an empty string if not set) []:
          Updated the backup passphrase for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/backup-passphrase` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-backup-passphrase>`__.
@@ -806,7 +806,7 @@ The restore can be applied as follows.
       .. important::
          Make sure the time of your local computer is correctly set.
          To set a different time, please provide it manually.
-      
+
       **Arguments**
 
       +--------------+--------------+
@@ -835,7 +835,7 @@ NetHSM is stateless, so that several NetHSM devices can be used to process extre
 
 Multiple instances of NetHSM can be synchronized either via `clustering <clustering.html>`__ or via encrypted backups.
 
-For the later a separate system downloads and uploads backup files between the instances. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__. This separate system doesn’t have access to the backed up data in clear text because the backup files are encrypted twice. The separate system is in possession of the backup passphrase only but not of the Domain Key resp. Unlock Passphrase which is the second layer of encryption. See the `system design <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#backup-and-restore>`__ for further details.
+For the later a separate system downloads and uploads backup files between the instances. The synchronization can be easily scripted by using `pynitrokey <https://docs.nitrokey.com/software/nitropy/>`__ as shown in `this example <https://github.com/Nitrokey/nitrokey-snippets/tree/main/nethsm/sync>`__. This separate system doesn't have access to the backed up data in clear text because the backup files are encrypted twice. The separate system is in possession of the backup passphrase only but not of the Domain Key resp. Unlock Passphrase which is the second layer of encryption. See the `system design <https://github.com/Nitrokey/nethsm/blob/main/docs/system-design.md#backup-and-restore>`__ for further details.
 
 Software Update
 ~~~~~~~~~~~~~~~
@@ -1097,7 +1097,7 @@ A user account can be added as follows.
 
       .. code-block::
 
-         Passphrase: 
+         Passphrase:
          Repeat for confirmation:
          User operator1 added to NetHSM localhost:8443
    .. tab:: REST API
@@ -1166,10 +1166,10 @@ The list can be retrieved as follows.
 
          Users on NetHSM localhost:8843:
 
-         User ID  	Real name        	Role
-         ---------	-----------------	-------------
-         operator1	Nitrokey Operator	Operator
-         admin    	admin            	Administrator
+         User ID     Real name           Role
+         ---------   -----------------   -------------
+         operator1   Nitrokey Operator   Operator
+         admin       admin               Administrator
    .. tab:: REST API
       Information about the `/users` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_users>`__.
 
@@ -1203,7 +1203,7 @@ The user passphrase can be set as follows.
       .. code-block:: bash
 
          $ nitropy nethsm --host $NETHSM_HOST set-passphrase --user-id operator1
-      
+
       .. code-block::
 
          Passphrase:

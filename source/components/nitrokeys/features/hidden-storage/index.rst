@@ -10,7 +10,7 @@ The concept is similar to `VeraCrypt's/TrueCrypt's hidden volume <https://veracr
 You can configure up to four hidden volumes. Once unlocked, hidden volumes behave like ordinary storage where you can create various partitions, filesystems and store files as you like.
 
 .. warning::
-   If you chose to use hidden volumes, you must not write any data to the encrypted volume, or you risk loosing data in the hidden volume. 
+   If you chose to use hidden volumes, you must not write any data to the encrypted volume, or you risk loosing data in the hidden volume.
 
 .. note::
    Hidden volumes are hidden within the free space of the encrypted volume, which will be overwritten when writing data to the encrypted volume.
@@ -25,10 +25,10 @@ Configuring hidden volumes
 --------------------------
 
 .. tip::
-  Copy some files to the encrypted volume prior to creating the hidden volume.
- 
+   Copy some files to the encrypted volume prior to creating the hidden volume.
+
 .. note::
-  Using a journaling filesystem may risk overwriting the hidden data. The encrypted filesystem is formated to FAT32 by default, and it is recommended to leave it that way when using hidden volumes.
+   Using a journaling filesystem may risk overwriting the hidden data. The encrypted filesystem is formated to FAT32 by default, and it is recommended to leave it that way when using hidden volumes.
 
 
 1. Unlock the encrypted volume using the Nitrokey App.
@@ -53,26 +53,26 @@ Using hidden volumes
 3.
 
     .. tabs::
-        .. tab:: Linux
-            
-            If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. You will need to open a partition manager such as `GParted <https://gparted.org/>`__ and create one or more partitions manually. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.
+       .. tab:: Linux
 
-            .. figure:: images/hidden/hidden-storage-partition.png
-                :alt: Hidden volume partitioning
+          If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. You will need to open a partition manager such as `GParted <https://gparted.org/>`__ and create one or more partitions manually. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.
 
-        .. tab:: MacOS
+          .. figure:: images/hidden/hidden-storage-partition.png
+             :alt: Hidden volume partitioning
 
-            If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. You will need to use `Disk Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`__. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.
+       .. tab:: MacOS
 
-        .. tab:: Windows
+          If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. You will need to use `Disk Utility <https://support.apple.com/en-gb/guide/disk-utility/dskutl14027/mac>`__. Make sure to create the partitions on the device that appeared when unlocking the hidden volume.
 
-            If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. In this case, Windows will prompt you to do so. You can then format the hidden volume using FAT32, for compatibility with most operating systems.
+       .. tab:: Windows
+
+          If this is the first time you unlock the hidden volume, you may need to create a partition on the hidden volume. In this case, Windows will prompt you to do so. You can then format the hidden volume using FAT32, for compatibility with most operating systems.
 
 
-            .. figure:: images/hidden/format-dialog.png
-                :alt: Windows formating prompt
+          .. figure:: images/hidden/format-dialog.png
+             :alt: Windows formating prompt
 
-            .. figure:: images/hidden/format-tool.png
-                :alt: Windows formating tool
+          .. figure:: images/hidden/format-tool.png
+             :alt: Windows formating tool
 
 4. Make sure to unmount/eject all partitions on the hidden volumes before locking or disconnecting the Nitrokey.

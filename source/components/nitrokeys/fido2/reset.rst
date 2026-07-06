@@ -22,12 +22,12 @@ Windows 10
 ~~~~~~~~~~
 
 Make sure you use at least version 2004. Please follow
-Windows’ reset wizard.
+Windows' reset wizard.
 
 If the total taken time for execution will be more than 10 seconds, the
-Windows OS’ user interface will report failure. Reset operation is
+Windows OS' user interface will report failure. Reset operation is
 executed on the Nitrokey even after the latter is reported failing, as
-long as the user’s touch will be registered before the Nitrokey’s
+long as the user's touch will be registered before the Nitrokey's
 internal operation timeout (touch confirmation is shown with the blue
 color).
 

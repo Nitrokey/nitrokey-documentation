@@ -6,7 +6,7 @@ Flathub / Flatpak
 
 The preferred installation method for Linux is through `Flathub <https://flathub.org/>`_:
 
-1. `Setup <https://flathub.org/setup>`_  flathub / flatpak 
+1. `Setup <https://flathub.org/setup>`_  flathub / flatpak
 2. Execute ``flatpak install flathub com.nitrokey.nitrokey-app2`` to install (or use the native Flathub integration of your Operating System i.e., "Software" on Ubuntu systems).
 
    .. important::
@@ -18,7 +18,7 @@ The preferred installation method for Linux is through `Flathub <https://flathub
 
 
 .. note::
-   Currently updating a Nitrokey 3 Mini is not supported through the flatpak package. This will be 
+   Currently updating a Nitrokey 3 Mini is not supported through the flatpak package. This will be
    fixed in one of the next releases.
 
 

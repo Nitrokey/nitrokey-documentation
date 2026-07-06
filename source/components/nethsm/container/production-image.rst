@@ -12,7 +12,7 @@ The image can be obtained from Nitrokey NetHSM registry ``https://registry.git.n
 .. warning::
    The security of the NetHSM software container strongly depends on the platform's security.
    A compromised platform could easily compromise a NetHSM software container it executes.
-   In addition the TRNG is not existent so that the entropy used and provided by the NetHSM depends on the platform's entropy. 
+   In addition the TRNG is not existent so that the entropy used and provided by the NetHSM depends on the platform's entropy.
 
 Tagging Policy
 ^^^^^^^^^^^^^^

@@ -8,9 +8,9 @@ Firmware Update
 This guide describes how to update the firmware on the Nitrokey 3.
 
 .. important::
-   **For firmware v.1.0.0 and below the update will delete all user data!**    
+   **For firmware v.1.0.0 and below the update will delete all user data!**
    Make sure you have proper backup login methods enabled and/or ensure that
-   the Nitrokey 3 is not the only way to authenticate/2FA for your 
+   the Nitrokey 3 is not the only way to authenticate/2FA for your
    applications/services.
 
 
@@ -96,9 +96,9 @@ Troubleshooting (Linux):
   read/write the device. Please make sure you have set up the correct
   `udev-rules`_. Download this `udev-rules`_ set and place it in your
   udev rules directory (e.g., ``/etc/udev/rules.d``). Then remove
-  your Nitrokey 3 from the USB slot and run: 
+  your Nitrokey 3 from the USB slot and run:
   ``udevadm control --reload-rules && udevadm trigger`` or reboot
-  your machine. Afterwards the update should work without the 
+  your machine. Afterwards the update should work without the
   permission issue.
 
 .. _udev-rules: https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/main/41-nitrokey.rules

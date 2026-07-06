@@ -69,7 +69,7 @@ Add the following text
            su $user -c "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus /usr/bin/dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock"
    fi
 
-In the first step, this script looks for the user-name of the gnome session, i.e. ``user``.
+In the first step, this script looks for the user-name of the gnome session, i.e. ``user``.
 
 When it is called at Nitrokey removal, the script queries ``user``, switches to its session, and locks the screen by prompting the screen-saver screen.
 

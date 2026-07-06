@@ -26,11 +26,11 @@ Nitrokey HSM FAQ
    The PIN is at least 6-digits long and is used to get
    access to the content of the Nitrokey. This is the PIN you will use a lot in
    every day use.
- 
+
    The PIN can have up to 16 digits and other characters (e.g. alphabetic
    and special characters). But as the PIN is blocked as soon three wrong
    PIN attempts were done, it is sufficiently secure to only have a 6 digits
-   PIN. 
+   PIN.
 
 .. faq:: What is the SO PIN for?
 
@@ -39,17 +39,17 @@ Nitrokey HSM FAQ
    to understand the SO PIN of the Nitrokey HSM.
 
    The SO PIN has to be exactly 16 digits long.
-   
+
 .. faq:: How many data objects (DF, EF) can be stored?
 
-   76 KB EEPROM total, that can be used for 
-    
+   76 KB EEPROM total, that can be used for
+
    * max. 150 x ECC-521 keys or
-   * max. 300 x ECC/AES-256 keys or 
+   * max. 300 x ECC/AES-256 keys or
    * max. 19 x RSA-4096 keys or
    * max. 38 x RSA-2048 keys
 
-.. faq:: How many keys can I store? 
+.. faq:: How many keys can I store?
 
    Nitrokey HSM can store 20 RSA-2048 and 31 ECC-256 key pairs.
 
@@ -64,7 +64,7 @@ Nitrokey HSM FAQ
 
 .. faq:: How can I distinguish a Nitrokey HSM 1 from an Nitrokey HSM 2?
 
-   Use ``opensc-tool --list-algorithms`` and compare with the table below. Please 
+   Use ``opensc-tool --list-algorithms`` and compare with the table below. Please
    also see `this thread`_ for the factsheets and more details.
 
 .. faq:: Which algorithms and maximum key length are supported?
@@ -117,14 +117,14 @@ Nitrokey HSM FAQ
 .. faq:: Which API can I use?
 
    OpenSC: Comprehensive instructions exist for OpenSC framework. There is
-   nitrotool as a more comfortable frontend to OpenSC.  
-    
+   nitrotool as a more comfortable frontend to OpenSC.
+
    Embedded Systems: For systems with minimal memory footprint a read/only PKCS#11
    module is provided by the sc-hsm-embedded project.  This PKCS#11 module is
    useful for deployments where key generation at the user's workplace is not
    required. The PKCS#11 module also supports major electronic signature cards
-   available in the German market.  
-    
+   available in the German market.
+
    OpenSCDP: The SmartCard-HSM is fully integrated with
    OpenSCDP, the open smart card development platform. See the public support
    scripts for details. To import existing keys you can use its SCSH or
@@ -151,7 +151,7 @@ Nitrokey HSM FAQ
    Then use Smart Card Shell for importing.
    If your key is stored in a Java key store you can use `NitroKeyWrapper`_  instead.
 
-.. faq:: How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey HSM? 
+.. faq:: How do I secure my Cloud Infrastructure/Kubernetes with Nitrokey HSM?
 
    An approach to secure keys for Hashicorp Vault/Bank-Vault on a Nitrokey HSM can be found at `banzaicloud.com`_.
 

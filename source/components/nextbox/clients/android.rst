@@ -1,4 +1,4 @@
-Connect Your Android or iOS Smartphone 
+Connect Your Android or iOS Smartphone
 ======================================
 
 
@@ -21,7 +21,7 @@ Connect the NextBox with your smartphone
 
    .. figure:: /components/nextbox/images/gettingstarted/sp_3.jpg
       :alt: imgsp3
-      :scale: 30 % 
+      :scale: 30 %
 
 4. Enter your username and password and click "Log in".
 
@@ -29,7 +29,7 @@ Connect the NextBox with your smartphone
       :alt: imgsp4
       :scale: 30 %
 
-5. Now you have access to your NextBox with your smartphone! 
+5. Now you have access to your NextBox with your smartphone!
 
    .. figure:: /components/nextbox/images/gettingstarted/sp_5.jpg
       :alt: imgsp5

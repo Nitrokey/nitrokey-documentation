@@ -68,7 +68,7 @@ The system recovery can be performed as follows.
 
          .. figure:: ./images/nethsm1-back-with-labels.png
             :scale: 100
-            :alt: 
+            :alt:
 
             Back side of the server
 

@@ -33,7 +33,7 @@ everyday smartphone with more apps we recommend:
    a work profile together with *Shelter* is also possible, but without as
    much isolation.
 
-.. Important::
+.. important::
 
    The Google Play Store cannot install and update apps due to the sandbox.
    Instead, always use F-Droid (for open source apps) or Aurora Store (for apps

@@ -31,7 +31,7 @@ Most of the time, you will get a QR-Code as seen below. There should be an optio
 
 We need to copy the secret code.
 
-This is what the Nitrokey is actually protecting. You may create a backup of it now (in case the Nitrokey get lost or breaks) by writing it down on a sheet of paper and storing it securely. But be aware that anybody who is in possession of this secret code, can create one-time passwords for your account! *Please note that you won’t be able to backup this code, once it is stored in the Nitrokey!*
+This is what the Nitrokey is actually protecting. You may create a backup of it now (in case the Nitrokey get lost or breaks) by writing it down on a sheet of paper and storing it securely. But be aware that anybody who is in possession of this secret code, can create one-time passwords for your account! *Please note that you won't be able to backup this code, once it is stored in the Nitrokey!*
 
 .. figure:: images/otp/3.png
    :alt: img3

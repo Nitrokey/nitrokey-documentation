@@ -55,7 +55,7 @@ features are realized.
 Additionally to the features above, an unreleased `WebSmartCard`_ implementation is in development.
 
 .. note::
-   Secure element support for OpenPGP Card is available since stable firmware v1.7.0. Any new 
+   Secure element support for OpenPGP Card is available since stable firmware v1.7.0. Any new
    devices will have this automatically activated. For devices already in use, the
    user has to `manually switch <secure-element.html>`__ as described in the FAQ.
 

@@ -18,7 +18,7 @@ Reasons for resetting to factory settings
    All your data will be lost if you reset your device. Therefore please backup your data before performing the reset.
 
 .. note::
-   Only for firmware till version 1.4 
+   Only for firmware till version 1.4
 
 Procedure
 ~~~~~~~~~
@@ -50,33 +50,33 @@ Procedure
 
 7. You will be asked if you want to set the User and Admin/TPM PIN yourself. You press Enter to continue without changing the PINs.
 
-8. You will then be asked if manual user information should be added. You confirm with ‘y’ and enter your name and then the email address.
+8. You will then be asked if manual user information should be added. You confirm with ``y`` and enter your name and then the email address.
 
    .. code-block:: bash
 
-      Would you like to set a custom password?[y/N]: 
-      Would you like to set custom user Information for the GnPG key?[y/N]: y 
-      Please enter the following Information... 
+      Would you like to set a custom password?[y/N]:
+      Would you like to set custom user Information for the GnPG key?[y/N]: y
+      Please enter the following Information...
 
-      Real name: "your name" 
-      Email adress: "your email-adress" 
-      Comment: 
+      Real name: "your name"
+      Email adress: "your email-adress"
+      Comment:
 
-      Checking for USB media... 
+      Checking for USB media...
 
-      New value of PCR[5]: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-      [ xx.xxxxxx] sd 6:0:0:0: [sdb] No Caching mode page found 
-      [ xx.xxxxxx] sd 6:0:0:0: [sdb] Assuming drive cache: write through 
+      New value of PCR[5]: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      [ xx.xxxxxx] sd 6:0:0:0: [sdb] No Caching mode page found
+      [ xx.xxxxxx] sd 6:0:0:0: [sdb] Assuming drive cache: write through
 
-      Checking for GPG Key... 
+      Checking for GPG Key...
 
-      Detecting and setting boot device... 
+      Detecting and setting boot device...
 
-      Boot device set to /dev/sda1 
+      Boot device set to /dev/sda1
 
-      Resetting TPM... 
+      Resetting TPM...
 
-      Resetting GPG Key... 
+      Resetting GPG Key...
       (this will take a minute or two)
 
 9. If you are using Nitrokey Storage, you must then select the drive. If the drives /dev/sdb1, /dev/sdc, /dev/sdd1 are displayed, select /dev/sdd1. If the drives /dev/sdb1, /dev/sdc1, /dev/sdd are displayed, select /dev/sdb1.

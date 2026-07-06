@@ -7,27 +7,27 @@ Getting Started
 1.
 
     .. tabs::
-        .. tab:: Linux
-            To access the OpenPGP smart card of the Nitrokey, install the package
-            libccid. On Debian/Ubuntu based Distributions type in terminal: *sudo
-            apt-get update && sudo apt-get install libccid*
-            For Fedora please refer to `this <../features/openpgp-card/fedora-gnupg-configuration.html>`__ guide.
+       .. tab:: Linux
+          To access the OpenPGP smart card of the Nitrokey, install the package
+          libccid. On Debian/Ubuntu based Distributions type in terminal: *sudo
+          apt-get update && sudo apt-get install libccid*
+          For Fedora please refer to `this <../features/openpgp-card/fedora-gnupg-configuration.html>`__ guide.
 
-        .. tab:: MacOS
-            Once you plug in the Nitrokey, your computer will start the Keyboard
-            Setup Assistant. **Don’t run through this assistant but exit it right
-            away.**
-        .. tab:: Windows
-            Connect your Nitrokey to your computer and confirm all dialogs so
-            that the USB smart card device driver gets installed almost
-            automatically. Windows may fail to install an additional device
-            driver for the smart card. Its safe to ignore this warning.
+       .. tab:: MacOS
+          Once you plug in the Nitrokey, your computer will start the Keyboard
+          Setup Assistant. **Don't run through this assistant but exit it right
+          away.**
+       .. tab:: Windows
+          Connect your Nitrokey to your computer and confirm all dialogs so
+          that the USB smart card device driver gets installed almost
+          automatically. Windows may fail to install an additional device
+          driver for the smart card. Its safe to ignore this warning.
 
 
 2. Download and start the `Nitrokey
-   App <https://www.nitrokey.com/download>`__. 
+   App <https://www.nitrokey.com/download>`__.
 
-3. Use the Nitrokey-App to change the default User PIN (default: 123456) and Admin PIN 
+3. Use the Nitrokey-App to change the default User PIN (default: 123456) and Admin PIN
    (default: 12345678) to your own choices.
 
 .. figure:: ../features/openpgp-card/images/change-pins/App-change-pin.png

@@ -71,9 +71,9 @@ Updating
 1. Enter the work directory:
 
    .. code-block:: zsh
-   
+
       cd nitrokeyapp
-   
+
 2. Update the app:
 
    .. code-block:: zsh
@@ -91,7 +91,7 @@ To run the application:
    .. code-block:: zsh
 
       cd nitrokeyapp
-   
+
 2. Run the app:
 
    .. code-block:: zsh

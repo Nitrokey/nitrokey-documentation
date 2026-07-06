@@ -1,4 +1,4 @@
-Remote Access Walkthrough 
+Remote Access Walkthrough
 =========================
 
 .. contents:: :local:
@@ -12,17 +12,17 @@ What? Why?
 ----------
 
 You want to access your NextBox from everywhere, this means you want to access your
-NextBox from the internet through your internet router. 
+NextBox from the internet through your internet router.
 
-On top of that you want to make sure that your data (traffic) is not readable by 
+On top of that you want to make sure that your data (traffic) is not readable by
 anyone else despite you. Nowadays this is accomplished by using `HTTPS`_, which is
-driven by `TLS`_. 
+driven by `TLS`_.
 
 .. figure:: /components/nextbox/images/walkthrough/padlock.png
    :alt: padlock-tls
- 
+
 Right next to the URL (*nitrokey.com*) you see this small padlock, which translates
-to: This website provides an encrypted connection and all your traffic is not 
+to: This website provides an encrypted connection and all your traffic is not
 readable by anyone between your browser (client) and the Nitrokey server.
 
 Once your NextBox is set up properly and you see the dashboard the first time your
@@ -30,14 +30,14 @@ URL bar in your browser might look like this:
 
 .. figure:: /components/nextbox/images/walkthrough/no-padlock.png
    :alt: no-padlock
- 
+
 In this case the local IP has been used (``192.168.10.50``), this is specific to your
 local network and equal to ``nextbox.local``. The *not secure* and the warning sign
-transports the information that your connection is **not encrypted**, thus using 
+transports the information that your connection is **not encrypted**, thus using
 *http* instead of *https*.
 
 Obviously, access to the NextBox should be secure, thus encrypted using *https*.
-This guide covers the different approaches to reach this goal, depending on 
+This guide covers the different approaches to reach this goal, depending on
 your specific needs.
 
 Use The Nitrokey Backwards Proxy
@@ -52,9 +52,9 @@ Access*. From now on you can access your NextBox using a URL like this:
    :alt: proxy
 
 The padlock is there---your data (if you are using your ``[subdomain].nextbox.link``
-URL) is now encrypted! 
+URL) is now encrypted!
 
-So far so good, but wait, this works, but has two major drawbacks: Performance and 
+So far so good, but wait, this works, but has two major drawbacks: Performance and
 a chained end-to-end encryption.
 
 Performance
@@ -62,13 +62,13 @@ Performance
 
 The backwards proxy works like this: Your NextBox connects to the Nitrokey Proxy
 server and opens up a (backwards) channel. So even though your NextBox is maybe
-standing right next to your computer, the traffic goes all the way from your 
+standing right next to your computer, the traffic goes all the way from your
 computer, into the internet, to the Nitrokey server and all the way back to your
-NextBox. 
+NextBox.
 
 Simplified, one could say all the traffic has to travel a long way towards the
 NextBox instead of talking directly to the NextBox. This essentially is a
-drawback of all proxies. The effect for you as a user is that data transfers 
+drawback of all proxies. The effect for you as a user is that data transfers
 will be slower, than a direct connection.
 
 Chained End-to-End Encryption
@@ -108,7 +108,7 @@ verify that your are the **owner of a public internet (sub)domain**. This
 ownership is a very important property as this, despite the encryption,
 additionally allows the client (browser) to verify that the traffic that
 is sent by a certain website is really originating from this (sub)domain
-and no man-in-the-middle has injected some data, which could compromise 
+and no man-in-the-middle has injected some data, which could compromise
 your client.
 
 This being said, obviously it is not possible to acquire an certificate for
@@ -135,10 +135,10 @@ through this process:
 1. Navigate to the Nextcloud NextBox-App
 2. Click on "Remote Access" -> "Guided Dynamic DNS"
 3. Insert a valid e-mail address you have access to into the first input field
-4. Insert the full sub-domain your NextBox shall be available through. As `deSEC`_ is 
-   used here, your sub-domain always has to end with *dedyn.io*, so something like: 
+4. Insert the full sub-domain your NextBox shall be available through. As `deSEC`_ is
+   used here, your sub-domain always has to end with *dedyn.io*, so something like:
    ``mynextbox.dedyn.io``
-5. Click "Register at deSEC" and the NextBox will try to register your domain and 
+5. Click "Register at deSEC" and the NextBox will try to register your domain and
    e-mail at `deSEC`_. This may fail, if the sub-domain you chose is already taken,
    please choose another one in this case.
 6. You will receive an e-mail in which you should verify that this is your e-mail
@@ -147,7 +147,7 @@ through this process:
    clicked the verification link and completed the captcha.
 
 Now you are the owner of your very own sub-domain. You can try and visit this
-subdomain now, but you will see that it will only (best case) end up on your 
+subdomain now, but you will see that it will only (best case) end up on your
 internet router. This is because your router is your door to the internet and
 it has to be made aware that you want specific traffic to be forwarded to your
 NextBox. Please set up :doc:`port-forwarding` on your internet router now, once
@@ -158,7 +158,7 @@ Great from here there is just one step remaining:
 
 1. Navigate to the Nextcloud NextBox-App
 2. Click on "HTTPS / TLS"
-3. Click the button "Enable TLS" 
+3. Click the button "Enable TLS"
 4. Please wait some moments to acquire your certificate
 
 Shortly after you will be automatically redirected to your now encrypted
@@ -170,7 +170,7 @@ NextBox sub-domain, which might look similar to this:
 There we are, your very own sub-domain, certificate and fully end-to-end
 encrypted Nextcloud.
 
-If you encounter problems, please read the other articles inside the 
+If you encounter problems, please read the other articles inside the
 :doc:`Remote Access Section<index>`.
 
 

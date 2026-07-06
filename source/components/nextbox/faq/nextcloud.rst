@@ -3,7 +3,7 @@ Nextcloud FAQ
 
 .. faq:: What to do to run/install/fix Nextcloud App "XYZ"? Why does Nextcloud feature XYZ not work?
 
-  Generally we cannot help in detail for these topics. Nextcloud internals and apps are 
+  Generally we cannot help in detail for these topics. Nextcloud internals and apps are
   out-of-scope for the NextBox development as we use the stock Docker images provided by Nextcloud.
   Ultimately, if some NextBox/OS configuration is blocking an app to run properly we for sure will
   look into fixing it.
@@ -16,7 +16,7 @@ Nextcloud FAQ
 .. faq:: Why does updating Nextcloud from inside Nextcloud not work?
 
   The Nextcloud version is rolled out by us. Thus the option to update from inside Nextcloud
-  is not working. 
+  is not working.
 
 .. faq:: Can I add apps to the Nextcloud instance?
 
@@ -31,8 +31,8 @@ Nextcloud FAQ
 .. faq:: Why am I getting a permission warning for ``/var/www/html/custom_apps/nextbox`` inside the Nextcloud settings overview?
 
   This is a "feature". The NextBox Nextcloud App is installed on the system
-  with the Debian nextbox package. To avoid an accidental deletion of the NextBox 
-  Nextcloud App from within the Nextcloud app management, the stated directory 
+  with the Debian nextbox package. To avoid an accidental deletion of the NextBox
+  Nextcloud App from within the Nextcloud app management, the stated directory
   can not be written by Nextcloud, this is what Nextcloud is complaining about here.
 
 .. faq:: How can I run Nextcloud's `occ`?

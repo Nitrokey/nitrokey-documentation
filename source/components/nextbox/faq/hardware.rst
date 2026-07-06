@@ -26,7 +26,7 @@ Hardware FAQ
 
   There are some devices and especially USB3 hubs that are known to not work properly
   with the Raspberry PI 4B, please see this `USB Documentation`_ from Raspberry.
-  On top of that also make sure the USB device is working in general by connecting it 
+  On top of that also make sure the USB device is working in general by connecting it
   to another computer (best case: Linux) and verify that it works.
 
 .. faq:: Why does my hard-drive not show up after plugging it in?
@@ -37,14 +37,14 @@ Hardware FAQ
 .. faq:: Can I generally extend the NextBox using a USB hard-drive?
 
   Yes, this is possible, please make sure you are using a hard-drive, which has an external
-  power supply. Once connected you can mount the hard-drive using the NextBox *Storage Management* 
+  power supply. Once connected you can mount the hard-drive using the NextBox *Storage Management*
   and include it into Nextcloud file-management using the `External storage support`_ app.
 
 
 .. faq:: What functions does the additional "shield" provide?
 
   As of now the shield does provide a :doc:`status LED <../technical/led-colors>`, a hardware button
-  to :doc:`factory reset <../technical/factory-reset>` and an additional USB Type-C connector on the 
+  to :doc:`factory reset <../technical/factory-reset>` and an additional USB Type-C connector on the
   same side as the Ethernet port for power supply exclusively.
 
 .. faq:: Is the NextBox hardware extendable/replaceable?
@@ -55,12 +55,12 @@ Hardware FAQ
 
 .. faq:: What are the two USB Type-C ports used for?
 
-  Both USB Type-C ports are exclusively for power supply and can not be used for data transfer. 
+  Both USB Type-C ports are exclusively for power supply and can not be used for data transfer.
   Do not connect two power supplies, please just use one of both to power your NextBox.
 
 .. faq:: Which fan should I install?
 
-  **There is absolutely no need for a fan, the NextBox is designed to work without an active 
+  **There is absolutely no need for a fan, the NextBox is designed to work without an active
   cooling**. Although if the NextBox is used for additional tasks (it's still a Linux), we have
   prepared a fan mount for a 30mm x 12mm fan at 5V connected to the shield. More details (connector,
   used pins) can be taken from `NextBox' GitHub`_. Currently we *do not* recommend adding a fan as

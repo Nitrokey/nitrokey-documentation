@@ -47,13 +47,13 @@ Connect using the Nextcloud App
 Connect using WebDAV
 ^^^^^^^^^^^^^^^^^^^^
 
-.. Warning::
+.. warning::
 
-   There have been reports that the native WebDAV support in Windows is not performing well. We 
+   There have been reports that the native WebDAV support in Windows is not performing well. We
    recommend using the Nextcloud App (as described above) for the best user experience. Additionally
    please read `Nextcloud's Windows WebDAV Known Problems`_.
 
-1. Add a WebDAV drive using the file explorer's "Add a network location" icon. (You can also use 
+1. Add a WebDAV drive using the file explorer's "Add a network location" icon. (You can also use
    "Map network drive" to bind your Nextcloud to a drive, like *Z:*).
 
    .. figure:: /components/nextbox/images/win_webdav/6.png

@@ -10,7 +10,7 @@ FMT ?= html
 
 .PHONY: docs
 docs: venv
-	venv/bin/sphinx-build -j auto -b $(FMT) -D language=en -d build/en/doctrees source dist/en
+	venv/bin/sphinx-build -W -j auto -b $(FMT) -D language=en -d build/en/doctrees source dist/en
 
 .PHONY: venv
 venv: $(NITROKEY_SDK_PY)

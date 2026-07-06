@@ -4,8 +4,7 @@ PIN Managment
 To enhance security, PINs can be created to restrict access to FIDO2 credentials and stored passwords.
 
 .. important::
-
-    FIDO2, Passwords, PIV, and OpenPGP Card use separate PINs, which are managed individually.
+   FIDO2, Passwords, PIV, and OpenPGP Card use separate PINs, which are managed individually.
 
 Prerequisite
 ------------
@@ -22,7 +21,7 @@ PIN Management
 5. Select ``Passwords`` or ``FIDO2``
 6. Select ``Pin Change``
 7. To set the PIN, enter the new PIN and repeat it in the provided boxes. To change an existing PIN, enter the current PIN in the box provided. The minimum PIN length is 4 characters and the maximum is 63.
-8. Select the ``SAVE`` button. If the ``SAVE`` button is greyed out, the entries are not correct. When you hover over the ``SAVE`` button, the reasons are displayed. The ``PIN_INVALID`` error message, when changing the PIN, indicates that the current PIN is incorrect. 
+8. Select the ``SAVE`` button. If the ``SAVE`` button is greyed out, the entries are not correct. When you hover over the ``SAVE`` button, the reasons are displayed. The ``PIN_INVALID`` error message, when changing the PIN, indicates that the current PIN is incorrect.
 
 .. figure:: ./images/FIDO2-menu.png
 
@@ -40,8 +39,8 @@ A factory reset witll reset the entire ``Passwords`` or ``FIDO2`` feature includ
 7. Press the button Reset.
 8. Touch your Nitrokey for confirmation.
 
-.. Note::
+.. note::
 
-    Factory reset for FIDO2 can only be done within 10 seconds of plugging in your device.
+   Factory reset for FIDO2 can only be done within 10 seconds of plugging in your device.
 
 .. figure:: ./images/password-menu.png

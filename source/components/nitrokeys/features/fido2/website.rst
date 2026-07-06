@@ -74,7 +74,7 @@ seconds until the green or blue LED lights up.
 | Yellow (blinks) | Touch request   |                 | Requires 5      |
 |                 | for             |                 | seconds touch   |
 |                 | configuration   |                 | to complete;    |
-|                 | operation       |                 | e.g. used for   |
+|                 | operation       |                 | e.g. used for   |
 |                 |                 |                 | activating      |
 |                 |                 |                 | firmware update |
 |                 |                 |                 | mode            |
@@ -82,7 +82,7 @@ seconds until the green or blue LED lights up.
 | Red (blinks)    | Touch request   | Available only  | Requires 5      |
 |                 | for reset       | during the very | seconds touch   |
 |                 | operation       | first 10        | to complete;    |
-|                 |                 | seconds after   | e.g. used for   |
+|                 |                 | seconds after   | e.g. used for   |
 |                 |                 | Nitrokey is     | FIDO2 reset     |
 |                 |                 | powered         | operation       |
 +-----------------+-----------------+-----------------+-----------------+

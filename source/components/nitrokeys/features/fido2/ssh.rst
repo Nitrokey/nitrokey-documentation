@@ -28,7 +28,7 @@ Generating SSH Key
 
 1. Insert the Nitrokey into your computer.
 
-2. Open a terminal and create your SSH key. Replace ``"your_comment"`` with a label to identify it (e.g., "Nitrokey GitLab").  
+2. Open a terminal and create your SSH key. Replace ``"your_comment"`` with a label to identify it (e.g., "Nitrokey GitLab").
    By default, the key is created as a non-discoverable credential. In this case, a local key handle is stored in ~/.ssh/ while the private key remains on the Nitrokey. This means the key is tied to the system where it was generated, since the local key handle file is required for authentication. Use the -O resident option to create a discoverable credential. In this case, the credential is stored on the Nitrokey, making it portable and usable across different systems without copying any local files.
 
    Non-discoverable credential:
@@ -40,13 +40,13 @@ Generating SSH Key
    Discoverable credential:
 
    .. code-block:: shell-session
-      
+
       ssh-keygen -t ed25519-sk -O resident -C "your_comment"
 
    .. note::
 
       Discoverable credentials can later be listed and imported on another system with:
-      
+
       .. code-block:: shell-session
 
          ssh-keygen -K
@@ -78,10 +78,10 @@ Once your SSH key pair is generated, the public key must be added to the service
       cat ~/.ssh/id_ed25519_sk.pub
 
    Example output (do not use this key)::
-      
+
       sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG7wZW4zc2guY29tAAAAILeZl6r07HV4i1rK07OfLqD3J4IzX2q0lB6Ok0pdxoG5AAAABHNzaDo= your_comment
 
-2. Copy the output and add it to your account’s SSH key settings.  
+2. Copy the output and add it to your account's SSH key settings.
 
    See `GitLab  <https://docs.gitlab.com/user/ssh/#add-an-ssh-key-to-your-gitlab-account>`_ or `GitHub  <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>`_ for detailed steps.
 

@@ -62,7 +62,7 @@ For compatibility reasons, the default management key is the following 3DES (TDE
 
 .. code-block:: text
 
-   0102030405060708 0102030405060708 0102030405060708 
+   0102030405060708 0102030405060708 0102030405060708
 
 Key Generation
 --------------

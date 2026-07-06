@@ -10,7 +10,7 @@ Cryptographic keys of PIV are stored in the Secure Element. OpenPGP Card can be 
 
 Activation/Deactivation for OpenPGP
 -----------------------------------
-The Secure Element is enabled by default if no cryptographic key in OpenPGP Card and PIV is already saved on the device. 
+The Secure Element is enabled by default if no cryptographic key in OpenPGP Card and PIV is already saved on the device.
 This is automatically the case after resetting the OpenPGP Card or the entire Nitrokey.
 
 .. warning::
@@ -24,7 +24,7 @@ To enable the Secure Element:
 
 * nitropy nk3 set-config opcard.use_se050_backend true
 
-To disable the Secure Element: 
+To disable the Secure Element:
 
 * nitropy nk3 set-config opcard.use_se050_backend false
 
