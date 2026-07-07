@@ -15,6 +15,24 @@ jobs:
         run: make venv
       - name: Syntax check
         run: make check-syntax
+  check-trailing-whitespaces:
+    name: Check trailing whitespaces
+    runs-on: ubuntu-latest
+    container: python:3.11
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Trailing whitespaces check
+        run: make check-trailing-whitespaces
+  check-trailing-tabs:
+    name: Check trailing tabs
+    runs-on: ubuntu-latest
+    container: python:3.11
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+      - name: Trailing whitespaces check
+        run: make check-trailing-tabs
   check-hyperlinks:
     name: Check hyperlinks
     runs-on: ubuntu-latest

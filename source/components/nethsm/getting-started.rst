@@ -12,7 +12,7 @@ Please follow this process closely to verify that it has arrived safely.
 
 1. Check the two security seals on the box for any damage, peeling, or other alterations.
    One seal is located on the top of the box and one on the bottom.
-   
+
    .. figure:: ./images/sealing/Package_top.jpg
       :scale: 15
       :alt: Seal on the top of the box

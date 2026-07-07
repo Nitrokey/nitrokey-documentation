@@ -22,6 +22,21 @@ venv: $(NITROKEY_SDK_PY)
 check-syntax: venv
 	venv/bin/rstcheck --config rstcheck.toml --recursive source
 
+.PHONY: check-trailing-characters
+check-trailing-characters: check-trailing-whitespaces check-trailing-tabs
+
+.PHONY: check-trailing-whitespaces
+check-trailing-whitespaces:
+	grep -RIn --include='*.rst' -P '\s+$$' source/ ; \
+	rc=$$? ; \
+	if [ "$$rc" = 1 ]; then exit 0; elif [ "$$rc" = 0 ]; then exit 1; else exit "$$rc"; fi
+
+.PHONY: check-trailing-tabs
+check-trailing-tabs:
+	grep -RIn --include='*.rst' -P '\t+$$' source/ ; \
+	rc=$$? ; \
+	if [ "$$rc" = 1 ]; then exit 0; elif [ "$$rc" = 0 ]; then exit 1; else exit "$$rc"; fi
+
 .PHONY: check-hyperlinks
 check-hyperlinks: venv docs
 	venv/bin/linkchecker -f linkcheckerrc dist/en/index.html
