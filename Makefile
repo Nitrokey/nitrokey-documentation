@@ -37,6 +37,12 @@ check-trailing-tabs:
 	rc=$$? ; \
 	if [ "$$rc" = 1 ]; then exit 0; elif [ "$$rc" = 0 ]; then exit 1; else exit "$$rc"; fi
 
+.PHONY: check-mixed-indentation
+check-mixed-indentation:
+	grep -RIn --include='*.rst' -P '^(?:\t|\s+\t)' source/ ; \
+	rc=$$? ; \
+	if [ "$$rc" = 1 ]; then exit 0; elif [ "$$rc" = 0 ]; then exit 1; else exit "$$rc"; fi
+
 .PHONY: check-hyperlinks
 check-hyperlinks: venv docs
 	venv/bin/linkchecker -f linkcheckerrc dist/en/index.html
