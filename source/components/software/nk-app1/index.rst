@@ -3,13 +3,6 @@ Nitrokey App 1
 
 The Nitrokey App 1 is a graphical application designed to manage Nitrokey Pro and Nitrokey Storage devices. For Nitrokey 3 devices, please use `Nitrokey App 2 <../nk-app2>`__.
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :hidden:
-
-   *
-
 Installation
 ------------
 
