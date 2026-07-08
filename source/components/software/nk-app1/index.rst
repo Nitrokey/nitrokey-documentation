@@ -132,30 +132,22 @@ Linux
 Windows
 *******
 
-.. dropdown:: Windows
-
-   Download .exe file from `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
+Download .exe file from `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
 
 macOS
 *****
 
-.. dropdown:: macOS
-
-   Download latest Nitrokey App (DMG file) `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
-   **Note:** The Nitrokey App was not notarized by Apple yet, which is required by macOS 10.15. See this `forum post <https://support.nitrokey.com/t/failed-install-on-macos-catalina/2047>`__ for more information.
+Download latest Nitrokey App (DMG file) `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
+**Note:** The Nitrokey App was not notarized by Apple yet, which is required by macOS 10.15. See this `forum post <https://support.nitrokey.com/t/failed-install-on-macos-catalina/2047>`__ for more information.
 
 FreeBSD
 *******
 
-.. dropdown:: FreeBSD
+.. code-block:: bash
 
-   .. code-block:: bash
-
-      $ pkg install nitrokey-app
+   $ pkg install nitrokey-app
 
 Source
 ******
 
-.. dropdown:: Source
-
-   You can download and compile the source code from `here <https://github.com/Nitrokey/nitrokey-app/>`__. In this case you may need to install `these UDEV rules <https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ manually.
+You can download and compile the source code from `here <https://github.com/Nitrokey/nitrokey-app/>`__. In this case you may need to install `these UDEV rules <https://www.nitrokey.com/sites/default/files/41-nitrokey.rules>`__ manually.
