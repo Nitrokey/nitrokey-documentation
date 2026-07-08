@@ -32,7 +32,7 @@ Nitrokey Pro 2 FAQ
 .. faq:: What is the User PIN for?
 
    The user PIN is at least 6-digits long and is used to get
-   access to the contect of the Nitrokey. This is the PIN you will use a lot in
+   access to the content of the Nitrokey. This is the PIN you will use a lot in
    every day use e.g. for decrypting messages, for unlocking your encrypted
    storage (NK Storage only) etc.
 
@@ -123,6 +123,18 @@ Nitrokey Pro 2 FAQ
 .. faq:: Does the Nitrokey Pro contain a secure chip or just a normal microcontroller?
 
    Nitrokey Pro contains a tamper resistant smart card.
+
+.. faq:: How is the data on the Nitrokey Pro protected?
+
+   * OpenPGP data is protected by PIN and the smart cards security mechanisms.
+   * Password Safe data (and encrypted storage of the Nitrokey Storage)
+     is protected by PIN and smart card backed encryption.
+   * OTP data is protected by PIN authorization through the smart card.
+
+   .. important::
+      Starting with `Nitrokey 3 <../nitrokey3/index.html>`_ OTP data is
+      additionally encrypted. This adds an additional layer of protection to
+      OTP data and should be preferred.
 
 .. faq:: Is the Nitrokey Pro Common Criteria or FIPS certified?
 
