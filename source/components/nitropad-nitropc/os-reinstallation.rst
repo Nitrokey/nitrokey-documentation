@@ -56,7 +56,6 @@ Operating System Reinstallation
 
             4. When Ubuntu will be successfully installed you will automatically boot on Ubuntu.
 
-   
    .. tab:: QubesOS
 
       1. Download the latest image from the `official QubesOS website <https://www.qubes-os.org/downloads/>`__.
@@ -66,7 +65,6 @@ Operating System Reinstallation
       3. Flash a USB drive with the downloaded image with `balenaEtcher <https://www.balena.io/etcher/>`__.
 
       4. Once the USB drive is flashed, plug it to your NitroPad or NitroPC and start it.
-
 
       .. tabs::
 
