@@ -3,8 +3,8 @@ Windows Active Directory Certificate Services (ADCS) with PKI Proxy
 
 This document describes the configuration of Windows Active Directory Certificate Services (ADCS) with PKI Proxy and NetHSM.
 
-Prerequisits
-============
+Prerequisites
+=============
 
 * NetHSM
 
