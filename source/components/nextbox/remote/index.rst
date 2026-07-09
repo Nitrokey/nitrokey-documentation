@@ -22,7 +22,8 @@ If you struggle with the overall topic, please read:
    experience*
 
 .. warning::
-   If you don't have a full stack IPv4 the only possible method is the :doc:`Backwards Proxy <proxy>`. For example LTE/5G routers will require this method.
+   If you don't have a full stack IPv4 the only possible method is the :doc:`Backwards Proxy <proxy>`.
+   For example LTE/5G routers may require this method.
 
 Before you set up a remote access method you might want to read the
 :doc:`comparison<method-comparison>` in order to understand
