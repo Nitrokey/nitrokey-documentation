@@ -6,7 +6,7 @@ Available languages: English, German, French, Italian, Polish, and Arabic. Langu
 
 .. note::
 
-   This application is compatible only with Nitrokey 3 devices. For Nitrokey Pro and Nitrokey Storage devices, please use `Nitrokey App 1 <https://www.nitrokey.com/download>`__.
+   This application is compatible only with Nitrokey 3 devices. For Nitrokey Pro and Nitrokey Storage devices, please use `Nitrokey App 1 <../nk-app1/>`__.
 
 Installation
 ------------
