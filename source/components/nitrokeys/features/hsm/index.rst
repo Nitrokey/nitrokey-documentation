@@ -15,6 +15,7 @@ HSM Features
    N-of-m Schemes <n-of-m-schemes>
    PKCS11-URL <pkcs11-url>
    Apache 2 TLS <apache2-tls>
+   PKI Proxy <pkiproxy>
 
 OpenPGP Card Features
 #####################
