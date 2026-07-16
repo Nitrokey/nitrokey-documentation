@@ -7,7 +7,7 @@ If you have installed a new operating system, it may be that default boot is not
 
 1. Select “Default boot”.
 
-   .. figure:: /components/nitropad-nitropc/images/default-boot/1.jpg
+   .. figure:: /components/nitropad-nitropc/images/heads/default-boot/start_menu.jpg
       :alt: img1
 
 
@@ -15,14 +15,14 @@ If you have installed a new operating system, it may be that default boot is not
 2. Heads informs you that it does not yet know any default. First you
    agree to the update of the checksums.
 
-   .. figure:: /components/nitropad-nitropc/images/default-boot/2.jpg
+   .. figure:: /components/nitropad-nitropc/images/heads/default-boot/missing_hash_file.jpg
       :alt: img2
 
 
 
 3. Confirm the process with Enter.
 
-   .. figure:: /components/nitropad-nitropc/images/default-boot/3.jpg
+   .. figure:: /components/nitropad-nitropc/images/heads/default-boot/update_checksums_yes.jpg
       :alt: img3
 
 
@@ -48,7 +48,7 @@ If you have installed a new operating system, it may be that default boot is not
 
 5. Confirm the process with Enter.
 
-   .. figure:: /components/nitropad-nitropc/images/default-boot/4.jpg
+   .. figure:: /components/nitropad-nitropc/images/heads/default-boot/no_default_boot_option.jpg
       :alt: img4
 
 
@@ -56,7 +56,7 @@ If you have installed a new operating system, it may be that default boot is not
 6. You will then see a list of all possible boot entries - choose the
    first one here by simply pressing Enter. Boot Options
 
-   .. figure:: /components/nitropad-nitropc/images/NitroPad-boot-options.jpeg
+   .. figure:: /components/nitropad-nitropc/images/heads/NitroPad-boot-options.jpeg
       :alt: img5
 
 
@@ -64,7 +64,7 @@ If you have installed a new operating system, it may be that default boot is not
 7. To save this value as default, select “Make Ubuntu the default” for
    Ubuntu or “Make Qubes the default” for Qubes OS. Confirm Boot Details
 
-   .. figure:: /components/nitropad-nitropc/images/NitroPad-confirm-boot-details.jpeg
+   .. figure:: /components/nitropad-nitropc/images/heads/NitroPad-confirm-boot-details.jpeg
       :alt: img6
 
 
