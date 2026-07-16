@@ -31,22 +31,22 @@ Procedure
                     2. Turn on the NitroPad and interupt the automatic boot by pressing any key.
                     3. Select “Options”.
 
-                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/options.jpg
+                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/options_v2-5.jpg
                             :alt: heads options menu
 
                     4. Select “OEM-Factory Reset /Re-Ownership”.
 
-                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/reset.jpg
+                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/reset_v2-5.jpg
                             :alt: reset
 
                     5. Confirm reset with “Continue”.
 
-                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/confirm.jpg
+                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/confirm_v2-5.jpg
                             :alt: confirm
 
                     6. The integrity of your setup will be tested, deppending on your reason to perform the reset this can fail continue with ok anyways
 
-                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/confirm-integrity.jpg
+                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/confirm-integrity_v2-5.jpg
                             :alt: confirm integrity
 
                     7. You will be prompted with:
@@ -108,12 +108,12 @@ Procedure
 
                     14. Hit enter and the automatic boot will start.
 
-                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/start-menu.jpg
+                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/start-menu_v2-5.jpg
                             :alt: start menu with default boot selected
 
                     15. You will now need to select your default boot, pick the first option and make it default.
 
-                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/default.jpg
+                        .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/after-version_2-5/default_v2-5.jpg
                             :alt: default boot selection
 
                     16. This prompt will appear:
@@ -140,22 +140,22 @@ Procedure
                 2. Turn on the NitroPad.
                 3. Select “Options”.
 
-                    .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/before_version_2-5/options.jpg
+                    .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/before_version_2-5/options_v2-0.jpg
                         :alt: heads options menu
 
                 4. Select “OEM-Factory Reset /Re-Ownership”.
 
-                    .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/before_version_2-5/reset.jpg
+                    .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/before_version_2-5/reset_v2-0.jpg
                         :alt: reset
 
                 5. Confirm Reset with “Continue”.
 
-                    .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/before_version_2-5/confirm.jpg
+                    .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/before_version_2-5/confirm_v2-0.jpg
                         :alt: confirm
 
                 6. The integrity of your Setup will be tested, deppending on your reason to perform the reset this can fail continue with ok anyways
 
-                    .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/before_version_2-5/confirm-integrity.jpg
+                    .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/before_version_2-5/confirm-integrity_v2-0.jpg
                         :alt: confirm integrity
 
                 7. The following Question can all be answered with the Default. Just hit enter if you only want to reset your device.
@@ -239,14 +239,14 @@ Procedure
 
                 14. You should then reach the Start menu.
 
-                    .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/before_version_2-5/start-menu.jpg
+                    .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_2-0/before_version_2-5/start-menu_v2-0.jpg
                         :alt: start menu
 
                 15. Press Enter to start the “Default Boot”.
 
                     .. note::
                         If you see the message that no default exists yet, please follow the procedure described in `default boot <./default-boot.html>`__.
-     
+
    .. tab:: Heads ~v1.4
         .. note::
             Only for firmware till version 1.4
@@ -254,18 +254,18 @@ Procedure
         1. Connect any USB flash drive to the NitroPad. (You need that USB flash drive for saving your security key)
         2. Connect your Nitrokey to the NitroPad.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/usb_keys.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/usb_keys_v1-4.jpg
                 :alt: img1
 
         3. Turn on the NitroPad.
         4. Select “Options”.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/options.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/options_v1-4.jpg
                 :alt: img2
 
         5. Select “OEM-Factory Reset”.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/oem_factory_reset.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/oem_factory_reset_v1-4.jpg
                 :alt: img3
 
 
@@ -274,7 +274,7 @@ Procedure
 
         6. Confirm the “OEM Factory Reset” with “Continue”.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/factory_reset_continue.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/factory_reset_continue_v1-4.jpg
                 :alt: img4
 
         7. You will be asked if you want to set the User and Admin/TPM PIN yourself. You press Enter to continue without changing the PINs.
@@ -310,37 +310,37 @@ Procedure
 
         9. If you are using Nitrokey Storage, you must then select the drive. If the drives /dev/sdb1, /dev/sdc, /dev/sdd1 are displayed, select /dev/sdd1. If the drives /dev/sdb1, /dev/sdc1, /dev/sdd are displayed, select /dev/sdb1.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/select_usb_disk.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/select_usb_disk_v1-4.jpg
                 :alt: img5
 
 
         10. The rest of the configuration will be done automatically. You confirm the subsequent restart.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/reset_completed.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/reset_completed_v1-4.jpg
                 :alt: img6
 
 
         11. After the restart the OTP secret must be created. Confirm the process with Enter.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/totp_generation_failed.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/totp_generation_failed_v1-4.jpg
                 :alt: img7
 
 
         12. Confirm that new OTP Secrets should be created.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/generate_new_secret.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/generate_new_secret_v1-4.jpg
                 :alt: img8
 
 
         13. When prompted, enter the Admin PIN and TPM password. Both are by default: “12345678”.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/new_totp_secret.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/new_totp_secret_v1-4.jpg
                 :alt: img9
 
 
         14. You should then reach the Start menu.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/start-menu.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/start-menu_v1-4.jpg
                 :alt: img10
 
 
@@ -352,7 +352,7 @@ Procedure
 
         16. Once the operating system starts until the encryption password is requested, you are done.
 
-            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/ubuntu.jpg
+            .. figure:: /components/nitropad-nitropc/images/heads/factory-reset-heads/factory-reset-heads_1-4/ubuntu_v1-4.jpg
                 :alt: img11
 
 
