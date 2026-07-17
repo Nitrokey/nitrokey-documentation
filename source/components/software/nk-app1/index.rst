@@ -3,6 +3,8 @@ Nitrokey App 1
 
 The Nitrokey App 1 is a graphical application designed to manage Nitrokey Pro and Nitrokey Storage devices. For Nitrokey 3 devices, please use `Nitrokey App 2 <../nk-app2/>`__.
 
+Available languages: English, German, French, Italian, Polish, and Arabic. Language change requires application restart.
+
 Installation
 ------------
 
