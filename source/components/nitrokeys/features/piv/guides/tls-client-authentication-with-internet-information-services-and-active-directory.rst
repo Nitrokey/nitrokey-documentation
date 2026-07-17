@@ -31,7 +31,7 @@ Installation
 6. From the list of role services select **Web Server → Security → Client Certificate Mapping Authentication**.
 7. Follow the wizard to the installation.
    Installation must be finished before you can start configuring it.
-    
+
 Configuration
 =============
 

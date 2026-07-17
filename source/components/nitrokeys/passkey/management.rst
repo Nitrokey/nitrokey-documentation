@@ -6,7 +6,7 @@ Browser
 
 .. note::
 
-    This works with all Chromium based web browsers and with all OSes.
+   This works with all Chromium based web browsers and with all OSes.
 
 In your Chromium based browser settings, go to "Privacy and security" → "Security" and "Manage security keys".
 
@@ -17,7 +17,7 @@ From this point you will have access to theses management options:
 
 .. note::
 
-    Some option may be shown but will not work with your Nitrokey eg. Fingerprints.
+   Some option may be shown but will not work with your Nitrokey eg. Fingerprints.
 
 Windows
 -------

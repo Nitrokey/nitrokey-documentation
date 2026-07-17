@@ -15,7 +15,7 @@ Getting Started
    :maxdepth: 1
    :glob:
 
-   factory-reset.rst  
+   factory-reset.rst
    imei-change.rst
    firmware-update.rst
    Frequently Asked Questions <faq>

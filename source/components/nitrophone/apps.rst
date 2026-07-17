@@ -20,7 +20,7 @@ everyday smartphone with more apps we recommend:
    that require Google Play Services, you can install `Google Play Services in a sandbox <https://grapheneos.org/usage#sandboxed-google-play>`__ as follows.
 
    1. Open Graphenes app repository client: *Home screen -> Apps*
-   2. Install the 3 core Google Play Apps ("Google Play store", "Google Play Services", "Google Services Framework").
+   2. Install the 2 core Google Play Apps ("Google Play store" and the "Google Play Services").
    3. Disable batterie optimization for Google Play Services (for Push to work properly). From the home screen, select: *Settings -> Apps -> Google Play services > Battery > Unrestricted*
    4. Open the Google Play Store once and press "Sign in" to start the
       initialization. You don't have to finish the sign in and a real login is not
@@ -33,7 +33,7 @@ everyday smartphone with more apps we recommend:
    a work profile together with *Shelter* is also possible, but without as
    much isolation.
 
-.. Important::
+.. important::
 
    The Google Play Store cannot install and update apps due to the sandbox.
    Instead, always use F-Droid (for open source apps) or Aurora Store (for apps

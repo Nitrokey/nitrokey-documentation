@@ -5,8 +5,7 @@ Generic FAQ
 
   If your NextBox doesn't start correctly or you have some other problem using
   it, chances are a soft reset can fix it:
-  :doc:`../technical/soft-reset`. To press the button use a thin (~1mm) pin
-  like a smartphone sim-card tray removal device.
+  :doc:`../technical/soft-reset`.
   If this doesn't help, please make sure you have connected the NextBox correctly
   as described in Quickstart: :doc:`../gettingstarted`.
   Otherwise you can try a factory reset: :doc:`../technical/factory-reset` as long
@@ -18,8 +17,8 @@ Generic FAQ
 .. faq:: How can I factory-reset my NextBox?
 
   Press the hardware button for 5 seconds, see
-  :doc:`../technical/factory-reset`. To press the button use a thin (~1mm) pin
-  like a smartphone sim-card tray removal device.
+  :doc:`../technical/factory-reset`.
+  This will **delete all your files**!
 
 .. faq:: What do the different LED colors mean?
 
@@ -34,14 +33,14 @@ Generic FAQ
 .. faq:: What is the typical power consumption?
 
   The minimum of 0,6A (3W) is rarely reached, in idle mostly around 1A (5W) and
-  more than 2A (10W) under higher loads. 
+  more than 2A (10W) under higher loads.
 
 .. faq:: How secure is the NextBox?
 
   Debian with frequent `unattended-upgrades` based security updates, a minimal
-  attack surface by ensuring that not a single unneccessary port is open 
-  are the main contributors to system security. **Make sure your Nextcloud users 
-  and passwords are on a high level, either with long-random passwords or a 
+  attack surface by ensuring that not a single unneccessary port is open
+  are the main contributors to system security. **Make sure your Nextcloud users
+  and passwords are on a high level, either with long-random passwords or a
   2-Factor-Authentification supported login method with e.g., a Nitrokey FIDO2.**
 
 
@@ -66,22 +65,21 @@ Generic FAQ
   images provided by Nextcloud. Ultimately, if some NextBox/OS configuration is
   blocking an app to run properly we for sure will look into fixing it.
 
-.. faq:: Can I connect/use the NextBox using WiFi? 
+.. faq:: Can I connect/use the NextBox using Wi-Fi?
 
   No, currently this is not (easily) possible, only wired ethernet using RJ-45
   is available.
 
-.. faq:: Is the WiFi on the Raspberry PI 4B physically available and working?
+.. faq:: Is the Wi-Fi on the Raspberry PI 4B physically available and working?
 
-  Yes, physically the WiFi is available and working, but not used/managed by the
+  Yes, physically the Wi-Fi is available and working, but not used/managed by the
   NextBox App. If you know what you are doing you can configure and use it, if
-  works although being inside the NextBox casing. 
+  it works even though it's inside the NextBox casing.
 
 .. faq:: How can I access my NextBox, if I get forwarded to the wrong URL?
 
-  You should open an incognito window and use: ``https://<your-local-ip>`` or ``http://<your-local-ip>`` 
+  You should open an incognito window and use: ``https://<your-local-ip>`` or ``http://<your-local-ip>``
   keep in mind that using HTTPS once in this browser session will not allow you to use HTTP again in this session,
   you can always open a new incognito window to avoid that.
 
 .. _nextbox.local: http://nextbox.local
-

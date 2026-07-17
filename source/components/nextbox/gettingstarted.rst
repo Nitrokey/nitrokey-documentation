@@ -13,9 +13,8 @@ Quickstart
 4. Wait approx. 5 minutes and open "http://nextbox.local" in your web browser -
    this duration may vary, during this time the LED will blink. After the user creation is finished the LED will be constantly
    green (see :doc:`LEDs <technical/led-colors>`).
-   
 
-   .. Warning::
+   .. warning::
 
       External storage drives without an external power supply must NOT be
       connected to the USB sockets. Otherwise, this can lead to data loss on the
@@ -30,8 +29,8 @@ Create Admin Account
 
    .. figure:: /components/nextbox/images/gettingstarted/1.png
       :alt: img1
-   
-   .. note:: 
+
+   .. note::
 
       An occurring warning can be ignored since you are on your local network.
 
@@ -43,7 +42,7 @@ Create Admin Account
 Configure NextBox Related Features
 ----------------------------------
 
-The NextBox comes with Nextcloud App to realize various configurations (e.g., :doc:`backup-restore` 
+The NextBox comes with Nextcloud App to realize various configurations (e.g., :doc:`backup-restore`
 or :doc:`Remote Access<remote/index>`) and operations for your NextBox.
 
 Your can find the NextBox-App in Nextcloud's top level navigation, as shown in this figure:
@@ -53,10 +52,11 @@ Your can find the NextBox-App in Nextcloud's top level navigation, as shown in t
 
 Ready To Go
 -----------
-    
-   .. note:: Please make sure your Nextbox is always on and connected to the internet.
-        A downtime can lead to it missing an update, and that can in the worstcase
-        break the device, since some Nextcloud updates don't support updates from older versions.
+
+   .. note::
+      Please make sure your Nextbox is always on and connected to the internet.
+      A downtime can lead to it missing an update, and that can in the worstcase
+      break the device, since some Nextcloud updates don't support updates from older versions.
 
 This is all it takes to get started with your NextBox. From this point you are
 free to choose how you would like to make the best use of your personal
@@ -67,8 +67,8 @@ continue on:
   private cloud from the internet. Our :doc:`guide <remote/index>` covers
   various approaches.
 
-  .. hint:: We prepared a *one-click* remote access method, allowing you
-     to set up basic remote access in seconds. 
+  .. hint::
+     We prepared a *one-click* remote access method, allowing you to set up basic remote access in seconds.
 
 * **Connect your devices to your NextBox.** For smartphones the official
   `Android App`_ and `iOS App`_ are both great additions for your personal
@@ -90,11 +90,11 @@ continue on:
 * **Your communications under your control** - use Nextcloud's powerful
   `groupware apps`_ like *Mail*, *Contacts*, *Calendar* or even *Deck* to have
   all your personal data under your control or to organize and work together
-  with others. 
+  with others.
 
 More interested in :doc:`technical details <technical/index>`? Or in Open-Source in general? Then
 head over to the NextBox `repositories`_ at GitHub, leave a star, contribute or
-discuss latest ideas and plans with us. 
+discuss latest ideas and plans with us.
 
 .. _Android App: https://play.google.com/store/apps/details?id=com.nextcloud.client
 .. _iOS App: https://apps.apple.com/us/app/nextcloud/id1125420102

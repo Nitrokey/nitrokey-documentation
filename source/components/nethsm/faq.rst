@@ -22,7 +22,6 @@ Frequently Asked Questions (FAQ)
 
    Work in progress:
 
-   * Direct, dynamic cluster capability, possibly support for external database
    * NetHSM as a service offering
 
    We plan the following developments in the loose order. Changes to this prioritization based on customer requests are common.
@@ -39,3 +38,8 @@ Frequently Asked Questions (FAQ)
    * Further separations and hardenings
    * Performance improvements
    * Remote attestation
+
+.. faq:: Does NetHSM work with Software X?
+
+   If the software supports `PKCS#11 or can talk to a REST API <integration.html>`__ the answer is most likely yes.
+   There is also already a list of `compatible and tested software <compatible/index.html>`__.

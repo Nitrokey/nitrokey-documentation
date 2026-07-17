@@ -17,9 +17,9 @@ and the product guides:
 .. toctree::
    :maxdepth: 2
 
-    Firmware-Update <firmware-update>
-    Manual Firmware-Update <firmware-update-manually>
-    Factory Reset <factory-reset>
+   Firmware-Update <firmware-update>
+   Manual Firmware-Update <firmware-update-manually>
+   Factory Reset <factory-reset>
 
 or check out the features:
 

@@ -9,8 +9,8 @@ Ubuntu
    :hidden:
 
    *
-.. Note::
-   The audio (jack) port on the NitroPad T480s is not working automatically. To select a 
+.. note::
+   The audio (jack) port on the NitroPad T480s is not working automatically. To select a
    connected headphone manually, install the program `pavucontrol` and select the connected
    headphone under Output Devices.
 
@@ -27,19 +27,19 @@ Secure Starting Procedure
 
 Before the first start you should get familiar with the `Secure Starting Procedure <../secure-starting-procedure.html>`__.
 
-Workaround Ubuntu 24.04.
-------------------------
+Workaround Ubuntu 26.04 & 24.04.
+--------------------------------
 
-There is an (`issue <https://github.com/linuxboot/heads/issues/1641>`__)that prevents Ubuntu to show the luks decryption screen if started with heads. Its there and you can type in your password blindly, after that Ubuntu starts normal. 
-Follow these Steps: 
+There is an `issue <https://github.com/linuxboot/heads/issues/1641>`__ that prevents Ubuntu to show the LUKS decryption screen, if started with heads. It's there and you can type in your password blindly, after that Ubuntu starts normal.
+Follow these steps:
 
-1. Heads starts. If nothing needs to be done, Ubuntu will start automatically
+1. Heads starts. If nothing needs to be done, Ubuntu will start automatically.
 
-2. After a while, you will see a black screen with white writing on the last lines:         
+2. After a while, you will see a black screen with white writing on the last lines:
 
    .. code-block:: shell-session
 
-      Locking TPM2 platform hierarchy...  
+      Locking TPM2 platform hierarchy...
       Starting the new kernel
 
 
@@ -47,7 +47,7 @@ Follow these Steps:
 
 3. Wait **5 seconds** and then enter your **password** ("12345678" if you are starting it for the first time) followed by **Enter**.
 
-4. Now you will see the normal Ubuntu screen. When you start for the first time, you must complete the initial configuration. 
+4. Now you will see the normal Ubuntu screen. When you start for the first time, you must complete the initial configuration.
 
 Getting Started
 ---------------
@@ -60,7 +60,7 @@ changed by you:
    above).
 
 2. Next, the system will prompt you to enter the passphrase to decrypt
-   the hard disk. The passphrase is initially "12345678". This was changed on the 10.04.2024 so if "12345678" is not working try the old default: "PleaseChangeMe" 
+   the hard disk. The passphrase is initially "12345678". This was changed on the 10.04.2024 so if "12345678" is not working try the old default: "PleaseChangeMe"
 
    .. figure:: ./images/UbuntuDiskPassword.png
       :alt: img3
@@ -87,7 +87,7 @@ example:
 .. figure:: ../images/NitroPad-error-mismatch.jpeg
    :alt: img4
 
-That’s why it’s important to restart your NitroPad or your NitroPC under controlled
+That's why it's important to restart your NitroPad or your NitroPC under controlled
 conditions after a system update. Only when the new status has been
 confirmed can you leave the device unattended again. Otherwise, you will
 not be able to distinguish a possible attack from a system update.

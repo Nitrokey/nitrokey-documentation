@@ -106,7 +106,7 @@ The certificate is then written to the Nitrokey.
    .. code-block:: pwsh-session
 
       certreq -attrib CertificateTemplate:<template-name> -submit <file>
-   
+
    The value of ``<template-name>`` is the name of the certificate template for smartcard logon.
    The value of ``<file>`` is the certificate singing request file.
 

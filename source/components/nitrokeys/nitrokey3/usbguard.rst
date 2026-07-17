@@ -17,19 +17,19 @@ Especially thunderbolt (which can be blocked globally, see `this config as to ho
 
 2. Set it up
 
-Make sure to have your keyboard and mouse plugged in. 
+Make sure to have your keyboard and mouse plugged in.
 
 These commands will permanently allow all currently connected devices:
 
 .. code-block:: bash
 
-    pkexec sh -c '
-            mkdir -p /var/log/usbguard
-            mkdir -p /etc/usbguard
-            chmod 755 /etc/usbguard
-            usbguard generate-policy > /etc/usbguard/rules.conf
-            systemctl enable --now usbguard.service
-            usbguard add-user $1
-        ' -- $ACTIVE_USERNAME
-        systemctl enable --user --now usbguard-notifier.service
+   pkexec sh -c '
+           mkdir -p /var/log/usbguard
+           mkdir -p /etc/usbguard
+           chmod 755 /etc/usbguard
+           usbguard generate-policy > /etc/usbguard/rules.conf
+           systemctl enable --now usbguard.service
+           usbguard add-user $1
+       ' -- $ACTIVE_USERNAME
+       systemctl enable --user --now usbguard-notifier.service
 

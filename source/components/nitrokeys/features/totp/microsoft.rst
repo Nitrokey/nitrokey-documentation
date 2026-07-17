@@ -40,7 +40,7 @@ Now it is important to click on “set up a different Authenticator app”.
 
 
 
-Click on “I can’t scan the bar code”.
+Click on “I can't scan the bar code”.
 
 .. figure:: images/microsoft/6.png
    :alt: img6

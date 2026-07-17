@@ -32,17 +32,17 @@ If you have installed a new operating system, it may be that default boot is not
 
    .. code-block:: bash
 
-         Please confirm that your GPG card is inserted [Y/n]:
+      Please confirm that your GPG card is inserted [Y/n]:
 
-         Verifying presence of GPG card...
+      Verifying presence of GPG card...
 
-         XXXXXXX: XXXXXXXXXX
-         Please unlock the card
+      XXXXXXX: XXXXXXXXXX
+      Please unlock the card
 
-         Number: XXXX XXXXXX
-         Holder: 
-         Counter: X
-         PIN: 
+      Number: XXXX XXXXXX
+      Holder:
+      Counter: X
+      PIN:
 
    Now the NitroPad marks the files that changed by the update as verified.
 
@@ -74,21 +74,21 @@ If you have installed a new operating system, it may be that default boot is not
 
    .. code-block:: bash
 
-         Saving a default will modify the disk. Proceed? [Y/n]:
+      Saving a default will modify the disk. Proceed? [Y/n]:
 
-         Do you wish to add a disk encryption to the TPM [Y/n]:
+      Do you wish to add a disk encryption to the TPM [Y/n]:
 
-         Please confirm that your GPG card is inserted [Y/n]:
+      Please confirm that your GPG card is inserted [Y/n]:
 
-         Verifying presence of GPG card...
+      Verifying presence of GPG card...
 
-         XXXXXXX: XXXXXXXXXX
-         Please unlock the card
+      XXXXXXX: XXXXXXXXXX
+      Please unlock the card
 
-         Number: XXXX XXXXXX
-         Holder: 
-         Counter: X
-         PIN:
+      Number: XXXX XXXXXX
+      Holder:
+      Counter: X
+      PIN:
 
 9. Your system will then boot.
 

@@ -5,10 +5,11 @@ Firmware Update With Qubes OS
 
  .. contents:: :local:
 
-This guide describes how to update Nitrokey 3's firmware with nitropy in Qubes OS. 
+This guide describes how to update Nitrokey 3's firmware with nitropy in Qubes OS.
 
-.. important:: 
-   please read the general `firmware update instructions`_ before! Since for specifc versions there are limitations regarding what data is possible to migrate to the new version. 
+.. important::
+   Please read the general `firmware update instructions`_ before!
+   Since for specifc versions there are limitations regarding what data is possible to migrate to the new version.
 
 .. _firmware update instructions: ./firmware-update.html
 

@@ -17,7 +17,7 @@ Remote Access FAQ
   that the ``davfs2`` package is installed. For Windows please additionally
   read these :doc:`docs <../clients/windows>`.
 
-.. faq:: Why does my Android smartphone's browser not open: ``http://nextbox.local`` 
+.. faq:: Why does my Android smartphone's browser not open: ``http://nextbox.local``
 
   As of today the technology needed to use ``.local`` URLs is not supported by various (stock)
   Android browser(s). The mechanism is based on ``mDNS``. One possible workaround is to use a
@@ -25,13 +25,13 @@ Remote Access FAQ
 
 .. faq:: Why does accessing my NextBox using: ``http://nextbox.local`` not work?
 
-  There are several other reasons why the access using ``http://nextbox.local`` may not work, 
-  further known scenarios are: 
-  
+  There are several other reasons why the access using ``http://nextbox.local`` may not work,
+  further known scenarios are:
+
   * Using a Fritz!Box with the NextBox being connected via a LAN port and the client/browser is
     connected to the network via WiFI (WLAN), the Fritz!Box will block mDNS.
 
-.. faq:: I followed all guides and still cannot acquire the TLS certificate, what can I do? 
+.. faq:: I followed all guides and still cannot acquire the TLS certificate, what can I do?
 
   The reason a TLS certificate cannot be acquired is nearly always the fact that
   your NextBox is not reachable from the internet. Make sure you have followed
@@ -42,7 +42,7 @@ Remote Access FAQ
   your router and thus blocking the traffic on port(s) 80 and/or 443. Switch
   them off and retry acquiring your TLS certificate.
 
-.. faq:: Why is my reachability with IPv4 not working? 
+.. faq:: Why is my reachability with IPv4 not working?
 
   If you have properly set up :doc:`port forwarding <../remote/port-forwarding>`
   and IPv4 connections (reachability test) are still not working there are good
@@ -65,9 +65,4 @@ Remote Access FAQ
   entrypoint to your NextBox independant of your other remote access
   configuration.
 
-
-
-
 .. _Nextcloud WebDAV documentation: https://docs.nextcloud.com/server/20/user_manual/en/files/access_webdav.html
-
-

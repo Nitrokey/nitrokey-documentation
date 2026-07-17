@@ -21,9 +21,9 @@ Nitrokey App Installation
    .. figure:: /images/qubes/install-nitrokey-app-images/fedora-terminal.png
       :alt: img3
 
-4. Shut down the template. 
+4. Shut down the template.
 
-5. Restart all qubes based on the template. 
+5. Restart all qubes based on the template.
 
 6. Go to "Application" of sys-usb and select the Nitrokey App.
 

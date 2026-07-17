@@ -7,7 +7,7 @@ Viscosity Client Configuration with OpenVPN
 
 This guide will show to configure `Viscosity client <https://www.sparklabs.com/viscosity/>`__ to connect to an OpenVPN instance, using a `Nitrokey Pro
 2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ (or `Nitrokey Storage
-2 <https://shop.nitrokey.com/shop/product/nitrokey-storage-2-56>`__), and `PKCS#11 authentication <https://openvpn.net/community-resources/how-to/#what-is-pkcs11>`__.
+2 <https://www.nitrokey.com/files/doc/Nitrokey_Storage_factsheet.pdf>`__), and `PKCS#11 authentication <https://openvpn.net/community-resources/how-to/#what-is-pkcs11>`__.
 
 Prerequisites
 -------------
@@ -20,16 +20,16 @@ You will also need the following:
 
 -  A Nitrokey Pro 2 or Nitrokey Storage 2
 
--  Client’s private key ``client.key`` loaded on the Nitrokey
+-  Client's private key ``client.key`` loaded on the Nitrokey
 
--  Client’s certificate ``client.crt`` loaded on the Nitrokey
+-  Client's certificate ``client.crt`` loaded on the Nitrokey
 
--  The Certificate Authority file, i.e. ``CA.crt`` file used for your
+-  The Certificate Authority file, i.e. ``CA.crt`` file used for your
    OpenVPN setup
 
--  Optional: The shared secret key file, i.e. ``ta.key``
+-  Optional: The shared secret key file, i.e. ``ta.key``
 
-For more information on ``PKCS#11`` key management with OpenVPN, please consult OpenVPN’s `documentation. <https://openvpn.net/community-resources/how-to/>`__
+For more information on ``PKCS#11`` key management with OpenVPN, please consult OpenVPN's `documentation. <https://openvpn.net/community-resources/how-to/>`__
 
 Usage
 -----
@@ -38,16 +38,16 @@ Usage
    it as you wish)
 
     .. figure:: images/viscosity/viscosity-1.jpg
-        :alt: img1
-        :scale: 75
+       :alt: img1
+       :scale: 75
 
 2. Right click on the connection and click edit
 
     .. figure:: images/viscosity/viscosity-2.jpg
-        :alt: img2
-        :scale: 75
+       :alt: img2
+       :scale: 75
 
-3. Add your server’s IP address and configure the port according to your
+3. Add your server's IP address and configure the port according to your
    configuration.
 
 4. Under authentication, In ``Type`` scroll down to
@@ -58,22 +58,22 @@ Usage
     Optional: Select the ``ta.key`` in the ``TLS-Auth`` section
 
     .. figure:: images/viscosity/viscosity-3.jpg
-        :alt: img3
-        :scale: 75
+       :alt: img3
+       :scale: 75
 
 6. Click the Add button next to the Providers field and select the
    ``PKCS#11`` module for your Nitrokey. Multiple providers can be
    specified, and for instance we will use ``OpenSC``.
 
     On macOS, the most common location for modules to be found is in the
-    /usr/lib directory. Please refer to the documentation included with your driver software for the location to use. OpenSC’s module can be found at ``/Library/OpenSC/lib/opensc-pkcs11.so``
+    /usr/lib directory. Please refer to the documentation included with your driver software for the location to use. OpenSC's module can be found at ``/Library/OpenSC/lib/opensc-pkcs11.so``
 
     On Windows, the most common location for libraries is either in ``C:\Program Files`` or ``C:\Windows\System32``. OpenSC libraries are generally located at ``C:\Program Files\OpenSC Project\OpenSC\pkcs11``. There may be more than one library available here, you can try each one or simply add both.
 
 7. Choose a retrieval method from the Retrieval drop down menu
 
     .. figure:: images/viscosity/viscosity-4.jpg
-        :alt: img4
+       :alt: img4
 
     -  If only one Nitrokey will ever be used on this computer, select
        ``Use certificate name below``. If the Nitrokey is currently
@@ -81,7 +81,7 @@ Usage
        to automatically fill in the Name field. Otherwise this field can be
        completed manually.
 
-    -  If in doubt, or if more than one Nitrokey may be used (i.e. multiple
+    -  If in doubt, or if more than one Nitrokey may be used (i.e. multiple
        users), then select ``Prompt for certificate name``.
 
     If ``Prompt for certificate name`` was selected, Viscosity will automatically detect the required key on the Nitrokey, using the specified PKCS#11 module/s. Select from any of the found devices, or enter the name of the ``serialized id`` to use manually. Again, the user should be prompted for a password/PIN if required.

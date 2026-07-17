@@ -19,6 +19,9 @@
 #RedirectMatch 302 "^(/[a-z][a-z])?/path/to/old_article$" "$1/path/to/new_article"
 #RedirectMatch 301 "^(/[a-z][a-z])?/(fido2|nitrokey3|hsm|u2f|storage|start|pro|passkey)(/linux|/windows|/mac)?$" "$1/nitrokeys/$2"
 
+# Features
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokeys/features/openpgp-card/stunnel$" "$1/nitrokeys/features/hsm/stunnel"
+RedirectMatch 301 "^(/[a-z][a-z])?/nitrokeys/features/openpgp-card/ipsec$" "$1/nitrokeys/features/hsm/ipsec"
 
 # FIDO2
 RedirectMatch 301 "^(/[a-z][a-z])?/fido2/(mac/|windows/|linux/)?2fa-nextcloud$" "$1/nitrokeys/features/fido2/nextcloud"
@@ -242,6 +245,7 @@ RedirectMatch 301 "^(/[a-z][a-z])?/(fido2|nitrokey3|hsm|u2f|storage|start|pro|pa
 
 # NetHSM
 RedirectMatch 301 "^(/[a-z][a-z])?/nethsm/container/image-feature-restrictions$" "$1/index"
+RedirectMatch 301 "^(/[a-z][a-z])?/nethsm/(apache|ejbca|knotdns|nginx|opendnssec|openssl|ssh)(.*)$" "$1/nethsm/compatible/$2$3"
 
 # NitroWall
 RedirectMatch 301 "^(/[a-z][a-z])?/nitrowall/(backup-restore|dhcp|lan-bridge|ntp|ids-ips)$" "$1/faq-opnsense"

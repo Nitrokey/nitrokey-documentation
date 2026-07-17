@@ -3,14 +3,14 @@ Factory Reset
 
 .. contents:: :local:
 
-Each functionality of the Nitrokey 3 can be reset individually. 
+Each functionality of the Nitrokey 3 can be reset individually.
 
 FIDO2
 -----
 
-The Factory Reset operation deletes all (and generates new) secret FIDO2 keys stored in the Nitrokey:
+The Factory Reset operation deletes all secret FIDO2 credentials stored in the Nitrokey:
 
-* nitropy tool: ``nitropy fido2 reset`` (execution requires Administrator rights)
+* nitropy tool: ``nitropy fido2 reset`` (For Windows operating systems: execution requires Administrator rights)
 * Google Chrome: `Manage security keys` via the direct link: `chrome://settings/securityKeys`
 
 Passwords
@@ -28,10 +28,10 @@ PIV Smartcard
 
 The PIV smartcard can be reset using the following command:
 
-::
+.. code-block:: shell-session
 
-    opensc-tool -s 00:A4:04:00:0B:A000000308000010000100 -s 00:20:00:80:08:3333333333333333 -s 00:20:00:80:08:3333333333333333 -s 00:20:00:80:08:3333333333333333 -s 00:FB:00:00
+   opensc-tool -s 00:A4:04:00:0B:A000000308000010000100 -s 00:20:00:80:08:3333333333333333 -s 00:20:00:80:08:3333333333333333 -s 00:20:00:80:08:3333333333333333 -s 00:FB:00:00
 
 
-Or, using ``nitropy nk3 piv --experimental factory-reset``, after 3 failed attempts at logging in
+Or, using ``nitropy nk3 piv --experimental factory-reset``, after 3 failed attempts at logging in (when the PIN counter is blocked).
 

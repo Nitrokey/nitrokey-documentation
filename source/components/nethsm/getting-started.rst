@@ -6,77 +6,53 @@ This chapter describes the physical installation and provisioning of the NetHSM.
 Verify Sealed Hardware
 ----------------------
 
-Your NetHSM hardware has been delivered in a sealed packaging.
+Your NetHSM hardware is shipped inside a sealed box.
 
-Please follow the three step process closely to verify that it has arrived safely.
+Please follow this process closely to verify that it has arrived safely.
 
-1. Check the wrapping paper for any tears, cuts, holes or broken sealing.
+1. Check the two security seals on the box for any damage, peeling, or other alterations.
+   One seal is located on the top of the box and one on the bottom.
 
-   .. figure:: ./images/package-front.jpg
-      :scale: 100
-      :alt: Package front side
+   .. figure:: ./images/sealing/Package_top.jpg
+      :scale: 15
+      :alt: Seal on the top of the box
 
-      Package front side
-
-      |
-
-   .. figure:: ./images/package-back.jpg
-      :scale: 100
-      :alt: Package back side
-
-      Package back side
+      Seal on the top of the box
 
       |
 
-   .. figure:: ./images/package-bottom.jpg
-      :scale: 100
-      :alt: Package bottom side
+   .. figure:: ./images/sealing/Package_bottom.jpg
+      :scale: 15
+      :alt: Seal on the bottom of the box
 
-      Package bottom side
+      Seal on the bottom of the box
+
+2. After verifying that the seals on the box are intact, open the box and remove the NetHSM hardware.
+   Then check the two security seals on the NetHSM hardware itself.
+
+   .. figure:: ./images/nethsm1-top-with-seal-positions.svg
+      :scale: 100
+      :alt: Positions of the two seals on the NetHSM hardware
+
+      Positions of the two seals on the NetHSM hardware
 
       |
 
-   .. figure:: ./images/package-top.jpg
-      :scale: 100
-      :alt: Package top side
+   .. figure:: ./images/sealing/Right_front_side.jpeg
+      :scale: 15
+      :alt: Security seal on the front side of the NetHSM hardware
 
-      Package top side
-
-      |
-
-   .. figure:: ./images/package-left.jpg
-      :scale: 100
-      :alt: Package left side
-
-      Package left side
-
-2. Check the unique handmade glitter seal on top of the wrapping paper.
-   You will receive a picture of it from us after wrapping via e-mail.
-   Compare the received picture with the seal.
-   If you notice any changes, please contact us to arrange further action.
-
-   .. figure:: ./images/package-top-seal.jpg
-      :scale: 100
-      :alt: Package sealing
-
-      Package sealing
-
-3. After verifying that the sealing of the wrapping paper is not broken, remove the wrapping paper.
-   Finally, check the four seals on the side of the NetHSM hardware.
-
-   .. figure:: ./images/nethsm1-top-with-seal-positions.jpg
-      :scale: 100
-      :alt: Positions of the four seals
-
-      Positions of the four seals
+      Security seal on the front side of the NetHSM hardware
 
       |
 
-   .. figure:: ./images/nethsm1-side-with-seal.jpg
-      :scale: 100
-      :alt: Seal on the side of the chassis
+   .. figure:: ./images/sealing/Left_end_side.jpeg
+      :scale: 15
+      :alt: Security seal on the end side of the NetHSM hardware
 
-      Seal on the side of the chassis
+      Security seal on the end side of the NetHSM hardware
+
+If you notice that a seal has been altered, please contact us to arrange further action.
 
 Hardware Installation
 ---------------------
@@ -92,11 +68,11 @@ Please follow the two step process closely to install the NetHSM hardware.
    .. tabs::
       .. tab:: NetHSM 2
 
-         .. figure:: ./images/nethsm2-back-with-labels.png
+         .. figure:: ./images/getting-started/nethsm2-back-with-labels.png
             :scale: 100
             :alt: Back side of the server
 
-         Back side of the server
+            Back side of the server
 
          .. important::
 
@@ -109,7 +85,7 @@ Please follow the two step process closely to install the NetHSM hardware.
             :scale: 100
             :alt: Back side of the server
 
-         Back side of the server
+            Back side of the server
 
 2. Press the *Power Button* to turn on the NetHSM hardware.
    The *Reset Button* is only for a forced reboot of the NetHSM hardware.
@@ -122,7 +98,7 @@ Please follow the two step process closely to install the NetHSM hardware.
    .. tabs::
       .. tab:: NetHSM 2
 
-         .. figure:: ./images/nethsm2-front-with-labels.png
+         .. figure:: ./images/getting-started/nethsm2-front-with-labels.png
             :scale: 100
             :alt: Front side of the server
 
@@ -130,7 +106,7 @@ Please follow the two step process closely to install the NetHSM hardware.
 
       .. tab:: NetHSM 1
 
-         .. figure:: ./images/nethsm1-front-with-labels.png
+         .. figure:: ./images/getting-started/nethsm1-front-with-labels.png
             :scale: 100
             :alt: Front side of the server
 

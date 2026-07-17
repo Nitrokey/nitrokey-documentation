@@ -6,7 +6,7 @@ Available languages: English, German, French, Italian, Polish, and Arabic. Langu
 
 .. note::
 
-   This application is compatible only with Nitrokey 3 devices. For Nitrokey Pro and Nitrokey Storage devices, please use `Nitrokey App 1 <https://www.nitrokey.com/download>`__.
+   This application is compatible only with Nitrokey 3 devices. For Nitrokey Pro and Nitrokey Storage devices, please use `Nitrokey App 1 <../nk-app1/>`__.
 
 Installation
 ------------
@@ -29,7 +29,7 @@ Getting Started
    :hidden:
 
    *
- 
+
 Overview
 --------
 
@@ -42,7 +42,7 @@ The overview allows quick access to check the current app version, saving log fi
 App Version
 ***********
 
-To ensure you are using the latest version of the application, click “Check for App Update.” 
+To ensure you are using the latest version of the application, click “Check for App Update.”
 If no updates are available, the button will display “App is up to date.”
 If an update is available it will change the button text to "update available"
 And by clicking once more it will open the release GitHub page where the latest one is on top. From here you will be able to download the binary if you want to do perfom a manual install
@@ -50,4 +50,4 @@ And by clicking once more it will open the release GitHub page where the latest 
 Log File
 ********
 
-The “Save Log File” option lets you export a record of the application’s recent activity, including actions, errors, and system messages. This log file can help diagnose and resolve issues with the application.
+The “Save Log File” option lets you export a record of the application's recent activity, including actions, errors, and system messages. This log file can help diagnose and resolve issues with the application.

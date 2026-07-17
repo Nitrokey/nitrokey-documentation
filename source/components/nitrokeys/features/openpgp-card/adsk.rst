@@ -41,7 +41,7 @@ Make sure that you can list both keys with ``gpg --list-keys``, for example::
    uid           [ultimate] Main Key <main@example.com>
    sub   ed25519 2023-07-04 [A]
    sub   cv25519 2023-07-04 [E]
-   
+
    pub   ed25519 2023-07-04 [SC]
          5271152B531F7FFD8787818251FB75800E281241
    uid           [ultimate] Backup Key <backup@example.com>
@@ -143,46 +143,46 @@ If you revoke an ADSK, it will no longer be added as a recipient when encrypting
 To perform a revocation, open the key with ``gpg --edit-key``::
 
    $ gpg --edit-key main@example.com
-   
+
    sec  ed25519/7963A4CD00C947CE
-        created: 2023-07-04  expires: never       usage: SC  
+        created: 2023-07-04  expires: never       usage: SC
         card-no: FFFE 5E0E868D
         trust: ultimate      validity: ultimate
    ssb  ed25519/34E35A6897DFABFD
-        created: 2023-07-04  expires: never       usage: A   
+        created: 2023-07-04  expires: never       usage: A
         card-no: FFFE 5E0E868D
    ssb  cv25519/D75708BAF0CD49C8
-        created: 2023-07-04  expires: never       usage: E   
+        created: 2023-07-04  expires: never       usage: E
         card-no: FFFE 5E0E868D
    ssb  cv25519/C9310F81D77519BC
-        created: 2023-07-04  expires: never       usage: R   
+        created: 2023-07-04  expires: never       usage: R
    [ultimate] (1). Main Key <main@example.com>
 
 
 Select the subkey to revoke with ``key N``.
 The selected subkey is marked with an asterisk::
-   
+
    gpg> key 2
-   
+
    sec  ed25519/7963A4CD00C947CE
-        created: 2023-07-04  expires: never       usage: SC  
+        created: 2023-07-04  expires: never       usage: SC
         card-no: FFFE 5E0E868D
         trust: ultimate      validity: ultimate
    ssb  ed25519/34E35A6897DFABFD
-        created: 2023-07-04  expires: never       usage: A   
+        created: 2023-07-04  expires: never       usage: A
         card-no: FFFE 5E0E868D
    ssb  cv25519/D75708BAF0CD49C8
-        created: 2023-07-04  expires: never       usage: E   
+        created: 2023-07-04  expires: never       usage: E
         card-no: FFFE 5E0E868D
    ssb* cv25519/C9310F81D77519BC
-        created: 2023-07-04  expires: never       usage: R   
+        created: 2023-07-04  expires: never       usage: R
    [ultimate] (1). Main Key <main@example.com>
 
 Revoke the subkey with ``revkey`` and then save the changes with ``save``::
 
    gpg> revkey
    Do you really want to revoke this subkey? (y/N) y
-   Please select the reason for the revocation:     
+   Please select the reason for the revocation:
      0 = No reason specified
      1 = Key has been compromised
      2 = Key is superseded
@@ -190,24 +190,23 @@ Revoke the subkey with ``revkey`` and then save the changes with ``save``::
      Q = Cancel
    Your decision? 0
    Enter an optional description; end it with an empty line:
-   > 
+   >
    Reason for revocation: No reason specified
    (No description given)
    Is this okay? (y/N) y
 
-   
    sec  ed25519/7963A4CD00C947CE
-        created: 2023-07-04  expires: never       usage: SC  
+        created: 2023-07-04  expires: never       usage: SC
         card-no: FFFE 5E0E868D
         trust: ultimate      validity: ultimate
    ssb  ed25519/34E35A6897DFABFD
-        created: 2023-07-04  expires: never       usage: A   
+        created: 2023-07-04  expires: never       usage: A
         card-no: FFFE 5E0E868D
    ssb  cv25519/D75708BAF0CD49C8
-        created: 2023-07-04  expires: never       usage: E   
+        created: 2023-07-04  expires: never       usage: E
         card-no: FFFE 5E0E868D
    ssb  cv25519/C9310F81D77519BC
-        created: 2023-07-04  revoked: 2023-07-04  usage: R   
+        created: 2023-07-04  revoked: 2023-07-04  usage: R
    [ultimate] (1). Main Key <main@example.com>
 
    gpg> save

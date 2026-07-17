@@ -4,7 +4,8 @@ NitroWall
 Getting Started
 ---------------
 
-.. warning:: Do **not** connect the NitroWall directly to your LAN as two DHCP servers will be actively distributing IPs within the network, confusing and disconnecting arbitrary devices in your network.
+.. warning::
+   Do **not** connect the NitroWall directly to your LAN as two DHCP servers will be actively distributing IPs within the network, confusing and disconnecting arbitrary devices in your network.
 
 1. Connect the NitroWalls LAN1 port by a patch cable with the Ethernet port of your laptop or PC
 
@@ -25,23 +26,23 @@ Getting Started
 
 7. Start the system wizard via the menu of the left-hand side: system →  system wizard → setup. The wizard is going through the configuration with you step-by-step.
 
-   .. figure:: ./images/nitrowall_back.jpg
+   .. figure:: ./images/nitrowall-index/nitrowall_back.png
       :alt: NitroWall backside
 
    NitroWall back side
 
-   .. figure:: ./images/nitrowall_front.jpg
+   .. figure:: ./images/nitrowall-index/nitrowall_front.jpg
       :alt: NitroWall frontside
 
    NitroWall front side
 
 
-   .. figure:: ./images/dashboard.png
+   .. figure:: ./images/nitrowall-index/dashboard.png
       :alt: dashboard
 
    NitroWall dashboard
 
-   .. figure:: ./images/reload.png
+   .. figure:: ./images/nitrowall-index/reload.png
       :alt: reload
 
    Reload the NitroWall
@@ -55,5 +56,4 @@ Getting Started
    :glob:
 
    sealed-hardware.rst
-   firmware-update-nw678.rst
    faq-opnsense.rst

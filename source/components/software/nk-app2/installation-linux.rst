@@ -6,14 +6,19 @@ Flathub / Flatpak
 
 The preferred installation method for Linux is through `Flathub <https://flathub.org/>`_:
 
-1. `Setup <https://flathub.org/setup>`_  flathub / flatpak 
-2. Execute ``flatpak install flathub com.nitrokey.nitrokey-app2`` to install (or use the native Flathub integration of your Operating System i.e., "Software" on Ubuntu systems)
+1. `Setup <https://flathub.org/setup>`_  flathub / flatpak
+2. Execute ``flatpak install flathub com.nitrokey.nitrokey-app2`` to install (or use the native Flathub integration of your Operating System i.e., "Software" on Ubuntu systems).
+
+   .. important::
+      If you run the installation on QubesOS, please use the following command: ``flatpak install --user flathub com.nitrokey.nitrokey-app2``
+      This will install the application in your home directory, instead of system-wide.
+
 3. :doc:`Set up the udev rules for nitropy <../nitropy/linux/udev>`
 4. Start Nitrokey App2 using either ``flatpak run com.nitrokey.nitrokey-app2`` or use the created entry in your start-menu
 
 
 .. note::
-   Currently updating a Nitrokey 3 Mini is not supported through the flatpak package. This will be 
+   Currently updating a Nitrokey 3 Mini is not supported through the flatpak package. This will be
    fixed in one of the next releases.
 
 
@@ -29,7 +34,7 @@ Manual Installation
 Installation from Source
 ------------------------
 
-To install Nitrokey App 2 from source, you need Python 3.10 or later and `pipx <https://pipx.pypa.io/stable/installation/>`__.
+To install Nitrokey App 2 from source, you need Python 3.10 or later and `pipx <https://pipx.pypa.io/stable/how-to/install-pipx/>`__.
 
 1. Execute ``pipx install nitrokeyapp`` to install Nitrokey App 2.
 2. :doc:`Set up the udev rules for nitropy <../nitropy/linux/udev>`

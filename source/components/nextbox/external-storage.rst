@@ -1,7 +1,7 @@
 Connect External Storage
 ========================
 
-.. Warning::
+.. warning::
 
    External storage drives without an external power supply must NOT be
    connected to the USB sockets. Otherwise, this can lead to data loss on the
@@ -31,7 +31,7 @@ Configuration
    :alt: Storage Configuration
 
 .. figure:: ./images/storage-two.png
-    :alt: Storage Mount
+   :alt: Storage Mount
 
 
 Allow Access From Files App

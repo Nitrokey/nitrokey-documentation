@@ -10,7 +10,7 @@ FMT ?= html
 
 .PHONY: docs
 docs: venv
-	venv/bin/sphinx-build -j auto -b $(FMT) -D language=en -d build/en/doctrees source dist/en
+	venv/bin/sphinx-build -W -j auto -b $(FMT) -D language=en -d build/en/doctrees source dist/en
 
 .PHONY: venv
 venv: $(NITROKEY_SDK_PY)
@@ -21,6 +21,27 @@ venv: $(NITROKEY_SDK_PY)
 .PHONY: check-syntax
 check-syntax: venv
 	venv/bin/rstcheck --config rstcheck.toml --recursive source
+
+.PHONY: check-trailing-characters
+check-trailing-characters: check-trailing-whitespaces check-trailing-tabs
+
+.PHONY: check-trailing-whitespaces
+check-trailing-whitespaces:
+	grep -RIn --include='*.rst' -P '\s+$$' source/ ; \
+	rc=$$? ; \
+	if [ "$$rc" = 1 ]; then exit 0; elif [ "$$rc" = 0 ]; then exit 1; else exit "$$rc"; fi
+
+.PHONY: check-trailing-tabs
+check-trailing-tabs:
+	grep -RIn --include='*.rst' -P '\t+$$' source/ ; \
+	rc=$$? ; \
+	if [ "$$rc" = 1 ]; then exit 0; elif [ "$$rc" = 0 ]; then exit 1; else exit "$$rc"; fi
+
+.PHONY: check-mixed-indentation
+check-mixed-indentation:
+	grep -RIn --include='*.rst' -P '^(?:\t|\s+\t)' source/ ; \
+	rc=$$? ; \
+	if [ "$$rc" = 1 ]; then exit 0; elif [ "$$rc" = 0 ]; then exit 1; else exit "$$rc"; fi
 
 .PHONY: check-hyperlinks
 check-hyperlinks: venv docs

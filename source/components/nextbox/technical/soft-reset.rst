@@ -17,6 +17,11 @@ Please do not unplug your NextBox during this process as that might break someth
    :alt: img1
    :align: center
 
+.. warning::
+
+   Holding the hardware button for 5 seconds will trigger a
+   :doc:`../technical/factory-reset` and **delete all your files**!
+
 .. hint::
    The hardware button is a pinhole-style button similar to other embedded
    devices. In order to press it, it is recommended to use a thin (~1mm)

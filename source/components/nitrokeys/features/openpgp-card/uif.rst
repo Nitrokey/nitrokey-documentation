@@ -18,17 +18,16 @@ Configuration
 
 With GnuPG 2.3 or more recent:
 
-::
+.. code-block:: bash
 
-	$ gpg --card-edit
-	…
-	UIF setting ......: Sign=off Decrypt=off Auth=off
-	…
-	gpg/card> admin
+   $ gpg --card-edit
+   …
+   UIF setting ......: Sign=off Decrypt=off Auth=off
+   …
+   gpg/card> admin
 
 Then, set the UIF flag accordingly:
 
 - For signature operation: ``uif 1 on`` or ``uif 1 off`` or with ``uif 1 permanent``.
 - For decryption operation: ``uif 2 on`` or ``uif 2 off`` or ``uif 2 permanent``.
 - For authentication operation: ``uif 3 on`` or ``uif 3 off`` or ``uif 3 permanent``.
-	

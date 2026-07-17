@@ -1,7 +1,9 @@
 Integration
 ===========
 
-The chapter describes processes for various tasks and aims at all user groups.
+This chapter describes how to integrate NetHSM into applications and how to test that integration.
+If you are searching for software, which already integrates well with NetHSM, here is a
+`list of compatible software. <compatible/index.html>`__
 
 REST-API
 ~~~~~~~~
@@ -15,7 +17,7 @@ PKCS#11
 
 The NetHSM supports the PKCS#11 standard.
 The required driver is available from the `repository <https://github.com/Nitrokey/nethsm-pkcs11>`__.
-The repository containes the source code and libraries, for different operating systems.
+The repository contains the source code and libraries, for different operating systems.
 The `PKCS#11 guide <pkcs11-setup.html>`_ describes the usage in detail.
 
 Development and Testing
@@ -44,7 +46,7 @@ The list of all available languages can be retrieved as follows.
       .. code-block:: bash
 
          $ docker run --rm -ti openapitools/openapi-generator-cli list -i stable
-   
+
    .. tab:: Podman
       .. code-block:: bash
 

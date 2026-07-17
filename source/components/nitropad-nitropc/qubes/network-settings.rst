@@ -13,7 +13,7 @@ To be able to use Wifi, Bluetooth and other functionalities, "Settings" must be 
 3. Click "Apply" and after wards "Ok".
 4. Now you should have "Settings" visible under sys-net.
 
-   .. Note::
+   .. note::
 
       If it won't open Settings after clicking on it, please follow the instructions below.
 

@@ -2,7 +2,7 @@ FIDO2 on Android / NitroPhone
 *****************************
 
 .. Note::
-    For more information about FIDO2, FIDO2 U2F and Passkeys, check our `blog article  <https://www.nitrokey.com/blog/2022/fido2-webauthn-passkeys-2022-and-2023>`_.
+   For more information about FIDO2, FIDO2 U2F and Passkeys, check our `blog article  <https://www.nitrokey.com/blog/2022/fido2-webauthn-passkeys-2022-and-2023>`_.
 
 
 In order to use passkeys being stored on a Nitrokey with your NitroPhone we recommend using the open source app `Authnkey  <https://f-droid.org/en/packages/pl.lebihan.authnkey/>`_. Alternatively you could use Google Play Services but these do not support PIN usage over NFC.
