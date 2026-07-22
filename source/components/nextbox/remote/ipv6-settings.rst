@@ -36,6 +36,6 @@ instead of the default, which is the 1st radio button.
 
 
 
-.. _IPv6 Test: https://ready.chair6.net/
+.. _IPv6 Test: https://dnschecker.org/ipv6-compatibility-checker.php
 
 
