@@ -14,3 +14,8 @@ Authnkey also comes with useful features such as:
 - Show the Nitrokey's information.
 - List saved credentials.
 - Change the FIDO2 PIN.
+
+Other apps can also be used, such as:
+
+- `Passchain  <https://f-droid.org/packages/s1m.hwfido2provider/>`_
+- `Open Passkey Authenticator   <https://f-droid.org/packages/de.noisruker.openPasskeyAuth/>`_
