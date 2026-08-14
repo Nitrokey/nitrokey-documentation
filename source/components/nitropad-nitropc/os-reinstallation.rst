@@ -74,7 +74,7 @@ Operating System Reinstallation
 
             2. Go to the option menu and "boot option".
 
-            3. Select "USB boot" and select "Install Qubes OS".
+            3. Select "USB boot" and select "Install Qubes OS (latest kernel)".
 
             4. Once the installer started follow the instuctions and when asked choose to encrypt your drive's data.
 
