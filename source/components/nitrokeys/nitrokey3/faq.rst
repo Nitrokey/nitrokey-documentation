@@ -145,3 +145,9 @@ Nitrokey 3 FAQ
    .. note::
       If you are updating from a test version firmware, we recommend factory resetting the device before
       using the Nitrokey 3 with the SE050 in production environments.
+
+
+.. faq:: Which certificates are used?
+
+   You can find certificates used for the Nitrokey 3 `here <https://www.github.com/Nitrokey/nitrokey-3-firmware/tree/main/utils/certificates#nitrokey-certificates>`__.
+
