@@ -43,3 +43,8 @@ Nitrokey Passkey FAQ
 
    The Nitrokey Passkey is not supported by the Nitrokey App 1.
 
+
+.. faq:: Which certificates are used?
+
+   You can find certificates used for the Nitrokey Passkey `here <https://www.github.com/Nitrokey/nitrokey-3-firmware/tree/main/utils/certificates#nitrokey-certificates>`__.
+
