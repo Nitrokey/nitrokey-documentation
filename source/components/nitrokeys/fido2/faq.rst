@@ -32,5 +32,5 @@ Nitrokey FIDO2 FAQ
 
 .. faq:: Which certificates are used?
 
-   - `Root certificates <https://www.nitrokey.com/files/certs/root_cert.pem>`__.
+   - `Root certificate <https://www.nitrokey.com/files/certs/root_cert.pem>`__.
    - Attestation certificate: `2019 <https://www.nitrokey.com/files/certs/device_cert_2019.pem>`__, `2020 <https://www.nitrokey.com/files/certs/device_cert_2020.pem>`__.
