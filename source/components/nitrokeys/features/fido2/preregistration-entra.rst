@@ -149,3 +149,33 @@ The `--create-user` flag directs the tool to create the user if it does not exis
         :alt: App home
 
 Follow :ref:`passwordless-login` for signing in with this newly pre-registered nitrokey.
+
+Verification
+------------
+
+You may verify the pre-registered credential from the Entra admin portal following the steps.
+
+1. Go to the Users option from the left blade on Entra admin center.
+
+    .. figure:: ./images/prereg-entra/entra-home-user.png
+        :alt: alt
+
+2. If the user was created with the `--create-user` flag you may be able to find the entry on the list. If it is a pre-existing user, it would also be there. Click on the user to which the credential was enrolled.
+
+    .. figure:: ./images/prereg-entra/userlist.png
+        :alt: alt
+
+3. Click on Authentication methods on the user blade.
+
+    .. figure:: ./images/prereg-entra/userdetails.png
+        :alt: alt
+
+3. The enrolled credential with first 5 characters of the Nitrokey UUID would be visible. You may click the triple dots and then on View details to see detailed information about the enrolled credential.
+
+    .. figure:: ./images/prereg-entra/userauthmethods.png
+        :alt: alt
+
+4. Additional information about the credential would be visible. You may validate the same.
+
+    .. figure:: ./images/prereg-entra/userpasskey.png
+        :alt: alt
