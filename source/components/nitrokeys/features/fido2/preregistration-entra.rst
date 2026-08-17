@@ -15,14 +15,14 @@ A Microsoft Entra Application is required to allow for programmatic registration
 1. Login to Entra Admin portal at https://entra.microsoft.com/. Take a note of the primary domain. You will need it later. Go to App Registrations on the left blade.
 
     .. figure:: ./images/prereg-entra/entra-home.png
-        :alt: Entra Admin Portal 
+        :alt: Entra Admin Portal
 
 2. Select New registration.
 
     .. figure:: ./images/prereg-entra/entra-appreg.png
         :alt: App registration
 
-3. Create a new app and set a name. Click on 'Register'. 
+3. Create a new app and set a name. Click on 'Register'.
 
     .. figure:: ./images/prereg-entra/entra-appreg-review.png
         :alt: App registration
@@ -53,12 +53,12 @@ A Microsoft Entra Application is required to allow for programmatic registration
 
     .. figure:: ./images/prereg-entra/authmethodrw.png
         :alt: App home
- 
+
 9. Search for `User.ReadWrite.All` and select it (Only if you want to be able to create users from `pynitrokey`). Click on the Add Permissions button.
 
     .. figure:: ./images/prereg-entra/userrw.png
         :alt: App home
-       
+      
 10. Verify the Granted permissions.
 
     .. figure:: ./images/prereg-entra/permsadded.png
@@ -105,17 +105,17 @@ A Microsoft Entra Application is required to allow for programmatic registration
         :alt: App home
 
 19. Click on Default Passkey profile
-    
+   
     .. figure:: ./images/prereg-entra/configfido2.png
         :alt: App home
 
 20. Uncheck Enforce Attestation (Only if you are using a Nitrokey that is not yet on the MDS3 database. At the time of writing this document, only NK3AM is on the database.)
-    
+   
     .. figure:: ./images/prereg-entra/configpasskeyprofile.png
         :alt: App home
 
 21. Click Save.
-    
+   
     .. figure:: ./images/prereg-entra/disableattestation.png
         :alt: App home
 
@@ -136,7 +136,7 @@ A Microsoft Entra Application is required to allow for programmatic registration
 Usage
 -----
 
-You may use the `pynitrokey` utility to pre-register a Nitrokey for an user in your tenant. 
+You may use the `pynitrokey` utility to pre-register a Nitrokey for an user in your tenant.
 
     .. code-block:: shell-session
 
