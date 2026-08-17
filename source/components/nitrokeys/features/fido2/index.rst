@@ -12,3 +12,4 @@ FIDO2
     Passwordless Microsoft Login (Windows only) <passwordless-microsoft>
     Android / NitroPhone <nitrophone>
     SSH Keys <ssh>
+    Pre-registration on Microsoft Entra <preregistration-entra>
