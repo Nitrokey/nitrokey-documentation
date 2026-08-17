@@ -143,6 +143,7 @@ You may use the `pynitrokey` utility to pre-register a Nitrokey for an user in y
         nitropy fido2 preregister entra -c config.json <username> --create-user
 
 Here the `<username>` could be the Email ID of the user (User principal in terms of Microsoft) or a part of it till before the `@` sign.
+The `--create-user` flag directs the tool to create the user if it does not exist in the Entra Tenant.
 
     .. figure:: ./images/prereg-entra/terminal.png
         :alt: App home
