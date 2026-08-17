@@ -109,7 +109,7 @@ A Microsoft Entra Application is required to allow for programmatic registration
     .. figure:: ./images/prereg-entra/configfido2.png
         :alt: App home
 
-20. Uncheck Enforce Attestation (Only if you are using a Nitrokey that is not yet on the MDS3 database. At the time of writing this document, only NK3AM is on the database.)
+20. Uncheck Enforce Attestation (Only if you are using a Nitrokey that does not have a FIDO Alliance certification. At the time of writing this document, only the NK3AM has this certification.)
 
     .. figure:: ./images/prereg-entra/configpasskeyprofile.png
         :alt: App home
