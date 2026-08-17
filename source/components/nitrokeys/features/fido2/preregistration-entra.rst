@@ -5,7 +5,7 @@ Nitrokey Pre-registration with Entra ID
 
 .. contents:: :local:
 
-The Nitrokey FIDO2 supports Pre-registration of credentials to Microsoft Entra for seamless employee onboarding in enterpise scenarios.
+The Nitrokey 3 and Nitrokey Passkey support Pre-registration of credentials to Microsoft Entra for seamless employee onboarding in enterprise scenarios.
 
 Setup
 -----
