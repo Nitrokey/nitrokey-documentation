@@ -148,7 +148,7 @@ The `--create-user` flag directs the tool to create the user if it does not exis
     .. figure:: ./images/prereg-entra/terminal.png
         :alt: App home
 
-Follow `Sample login to Microsoft with Nitrokey <passwordless-microsoft#sample-login-to-microsoft-with-the-nitrokey-fido2>`__ for signing in with this newly pre-registered nitrokey.
+Follow `Sample login to Microsoft with Nitrokey <passwordless-microsoft.html#sample-login-to-microsoft-with-the-nitrokey-fido2>`__ for signing in with this newly pre-registered nitrokey.
 
 Verification
 ------------
