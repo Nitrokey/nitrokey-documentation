@@ -148,7 +148,7 @@ The `--create-user` flag directs the tool to create the user if it does not exis
     .. figure:: ./images/prereg-entra/terminal.png
         :alt: App home
 
-Follow :ref:`passwordless-login` for signing in with this newly pre-registered nitrokey.
+Follow `Sample login to Microsoft with Nitrokey <passwordless-microsoft#sample-login-to-microsoft-with-the-nitrokey-fido2>`__ for signing in with this newly pre-registered nitrokey.
 
 Verification
 ------------
@@ -170,12 +170,12 @@ You may verify the pre-registered credential from the Entra admin portal followi
     .. figure:: ./images/prereg-entra/userdetails.png
         :alt: alt
 
-3. The enrolled credential with first 5 characters of the Nitrokey UUID would be visible. You may click the triple dots and then on View details to see detailed information about the enrolled credential.
+4. The enrolled credential with first 5 characters of the Nitrokey UUID would be visible. You may click the triple dots and then on View details to see detailed information about the enrolled credential.
 
     .. figure:: ./images/prereg-entra/userauthmethods.png
         :alt: alt
 
-4. Additional information about the credential would be visible. You may validate the same.
+5. Additional information about the credential would be visible. You may validate the same.
 
     .. figure:: ./images/prereg-entra/userpasskey.png
         :alt: alt
