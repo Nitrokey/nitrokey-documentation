@@ -459,6 +459,17 @@ resolving the underlying condition), you can either:
    node can still re-join the cluster, but will lose all its local
    modifications.
 
+The ``POST /cluster/force-new`` endpoint, which is only available in the
+_Failed_ state, requires authentication as it is potentially destructive.
+However since users and roles are not available in that state, the endpoint
+expects always the ``unlock`` user, with the latest known unlock passphrase as
+the password.
+
+.. warning::
+   After an update from a version < 4.0, the ``force-new`` endpoint will be
+   always Unauthorized before the HSM is unlocked or the unlock passphrase is
+   changed at least once.
+
 Software Updates in Clusters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
