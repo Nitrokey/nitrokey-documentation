@@ -49,7 +49,7 @@ changed by you:
 4. Open the pre-installed Nitrokey App and change the PINs of your
    Nitrokey as `described here <../change-pins.html>`_.
 
-5. Change the passphrase for the hard disk encryption by searching in the Qubes Menu for "Change Disk Passwort". This passphrase is different from your user acount's passphrase.
+5. Change the passphrase for the hard disk encryption by searching in the Qubes Menu for "Change Disk Password". This passphrase is different from your user acount's passphrase.
 
    .. figure:: /images/qubes/ChangeDiskPasswordQubes.png
       :alt: Change Password Qubes Image
