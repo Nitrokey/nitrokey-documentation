@@ -161,7 +161,9 @@ This CA now has to be installed on every node.
 To do this, first generate a Certificate Signing Request (CSR) from the node with the ``/config/tls/csr.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__).
 
 .. note::
-   To properly authenticate nodes, the clustering backend (etcd) expects that each node has a certificate with a properly filled Subject Alt Names (SAN) field. In particular, nodes expected to be reached only via their IP need to have a proper IP SAN in their certificate. IP SANs can be requested for the CSR by prefixing "IP:" to the names, as in ``openssl``:
+   To properly authenticate nodes, the clustering backend (etcd) expects that each node has a certificate with a properly filled Subject Alt Names (SAN) field.
+   Nodes are expected to be reached only via their IP and need to have a proper IP SAN in their certificate.
+   IP SANs can be requested for the CSR by prefixing "IP:" to the names, as in ``openssl``:
 
    .. code-block:: text
 
