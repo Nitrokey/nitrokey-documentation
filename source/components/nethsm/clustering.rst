@@ -169,6 +169,9 @@ To do this, first generate a Certificate Signing Request (CSR) from the node wit
 
       "subjectAltNames": [ "normalname.org", "IP:192.168.1.1" ]
 
+   If you want to use a public CA for signing your certificates your nodes must use public IP addresses.
+   This is due to a security requirement which forbids a public CA to issue certificates with a private IP address in the IP SAN.
+
 Given the obtained CSR (let's call it ``nethsm.csr``), we can then generate a certificate for it, ready to be installed. For example with ``openssl``:
 
 .. code-block:: bash
