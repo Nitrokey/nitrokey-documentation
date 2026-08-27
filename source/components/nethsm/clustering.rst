@@ -199,8 +199,9 @@ Clock Sync
 ^^^^^^^^^^
 
 Make sure every node has been provisioned with an accurate system time, ideally
-using NTP/NTS rather than manual time setting. This can be done through the
-``/config/time`` and ``/config/ntp`` endpoints.
+using NTP/NTS rather than manual time setting. This can be done through `Time
+<administration.html#time>`__ and `NTS/NTP <administration.html#ntp-nts>`__
+configuration.
 
 Adding a New Node
 ~~~~~~~~~~~~~~~~~

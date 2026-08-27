@@ -490,8 +490,8 @@ The current system time can be retrieved as follows.
 
 The current system time can be manually adjusted as follows. Note that manually
 setting the clock is usually not required to set the system time, as it is set
-during provisioning. If NTP/NTS is configured, this change will be overriden by
-the server's time.
+during provisioning. If NTP/NTS is configured, the manually set time will be
+eventually overriden by the server's time.
 
 .. important::
    Make sure to pass the time in UTC timezone.
