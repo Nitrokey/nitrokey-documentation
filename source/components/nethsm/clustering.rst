@@ -424,12 +424,13 @@ It can still be shut-down, rebooted, reset, *diagnosed* or *isolated*.
    lost quorum will stop responding to *all* requests. It *must* be factory-reset.
 
 Common causes for a node to be in the _Failed_ state include:
-- A durably :ref:`lost quorum <lost-quorum>`.
-- A temporarily lost quorum (e.g. when adding a second node to the cluster, and
+
+* A durably :ref:`lost quorum <lost-quorum>`.
+* A temporarily lost quorum (e.g. when adding a second node to the cluster, and
   the second node has not joined yet).
-- ``etcd`` is currently restarting (e.g. because the certificates have changed, or
+* ``etcd`` is currently restarting (e.g. because the certificates have changed, or
   the network has been re-configured).
-- The cluster is under a very high load (e.g. during the restoration of a very
+* The cluster is under a very high load (e.g. during the restoration of a very
   large backup).
 
 No matter the cause, the NetHSM will only transition to the _Failed_ state after
@@ -451,8 +452,9 @@ endpoint remains available and returns information about the current status of
 
 If you conclude that the failure is durable (e.g. lost quorum with no hope of
 resolving the underlying condition), you can either:
-- *Factory-reset* the node, which will erase all data, and restore a backup.
-- *Isolate* the node with the ``POST /cluster/force-new`` endpoint, which will
+
+* *Factory-reset* the node, which will erase all data, and restore a backup.
+* *Isolate* the node with the ``POST /cluster/force-new`` endpoint, which will
   irreversibly forget all other cluster members, recover the ``etcd`` data
   present on disk and reboot. If the underlying failure was cluster-related, the
   node will follow the normal boot sequence and end up in either the _Locked_ or
