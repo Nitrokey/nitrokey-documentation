@@ -2,10 +2,9 @@ Clustering
 ==========
 
 .. note::
-   This feature is currently a technical preview with the following temporary limitations:
+   This feature is currently a technical preview with the following temporary limitation:
 
    * Active/passive setup to support two-node clusters, either by utilizing etcd Learner or Mirror, is not yet available.
-   * System time between nodes must be manually synchronized for now. A future release will include automatic clock sync.
 
 NetHSM 4.0 onwards supports clustering to synchronize data between several NetHSMs directly. This supports high frequency of key generations, realizes high-availability and load balancing. A NetHSM cluster is based on `etcd <https://etcd.io>`__ which uses the `Raft consensus algorithm <https://raft.github.io/>`__ for strong consistency. This ensures that the data (e.g. keys) is correct in all NetHSMs at all times.
 
@@ -199,7 +198,9 @@ Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls/cluster
 Clock Sync
 ^^^^^^^^^^
 
-Make sure every node has been provisioned with an accurate system time. If not, adjust their clocks with the ``/config/time`` endpoint.
+Make sure every node has been provisioned with an accurate system time, ideally
+using NTP/NTS rather than manual time setting. This can be done through the
+``/config/time`` and ``/config/ntp`` endpoints.
 
 Adding a New Node
 ~~~~~~~~~~~~~~~~~

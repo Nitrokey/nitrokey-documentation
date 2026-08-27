@@ -458,12 +458,12 @@ Set the network configuration as follows.
       To disable IPv6, omit the ``ipv6`` field.
 
 Time
-~~~~
+~~~~~
 
-The time configuration sets the system time of the NetHSM software.
-It is usually not required to set the system time, as it is set during provisioning.
+System time of the NetHSM software can either be set manually or automatically
+by configuring an NTP or NTS server.
 
-The time configuration can be retrieved as follows.
+The current system time can be retrieved as follows.
 
 .. tabs::
    .. tab:: nitropy
@@ -488,7 +488,10 @@ The time configuration can be retrieved as follows.
    .. tab:: REST API
       Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-time>`__.
 
-Set the time of the NetHSM.
+The current system time can be manually adjusted as follows. Note that manually
+setting the clock is usually not required to set the system time, as it is set
+during provisioning. If NTP/NTS is configured, this change will be overriden by
+the server's time.
 
 .. important::
    Make sure to pass the time in UTC timezone.
@@ -514,6 +517,64 @@ Set the time of the NetHSM.
          Updated the system time for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-time>`__.
+
+NTP/NTS
+~~~~~~~~
+
+An NTP server can be configured to automatically adjust NetHSM's system time.
+Optionally, NTS (Network Time Security) can be enabled.
+
+The current NTP configuration can be retrieved as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Required Options**
+
+      +------------+-----------------------+
+      | Option     | Description           |
+      +============+=======================+
+      | ``--TODO`` | TODO                  |
+      +------------+-----------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ TODO
+
+      .. code-block::
+
+         TODO
+   .. tab:: REST API
+      Information about the `/config/ntp` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-ntp>`__.
+
+NTP/NTS can be configured as follows. It can be disabled by leaving empty
+fields.
+
+.. note::
+   The NTP server has to be provided by its IP (either v4 or v6), not hostname.
+
+.. tabs::
+   .. tab:: nitropy
+      **Required Options**
+
+      +------------+-----------------------+
+      | Option     | Description           |
+      +============+=======================+
+      | ``TODO``   | TODO                  |
+      +------------+-----------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ TODO
+
+      .. code-block::
+
+         TODO
+   .. tab:: REST API
+      Information about the `/config/ntp` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-ntp>`__.
 
 Metrics
 ~~~~~~~
