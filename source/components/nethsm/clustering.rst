@@ -207,10 +207,11 @@ configuration.
 Adding a New Node
 ~~~~~~~~~~~~~~~~~
 
-Adding a node to a cluster is done in two steps:
+Adding a node to a cluster is done in three steps:
 
 * Register the addition to the cluster (through any one of its members)
 * Tell the new node to join
+* Once it has caught up, promote the node from learner to full-fledged member
 
 Configure a Backup Passphrase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -220,8 +221,6 @@ First make sure a backup passphrase is configured on the node that will be used 
 Registering a New Node
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. warning::
-   Registering a node immediately introduces a new node in the cluster, modifying the quorum threshold, even if the node has not actually joined yet. This can render the existing nodes inoperable until the new node has actually joined. Refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the `Operational Redundancy`_ section of this document.
 
 Have at hand the IP of the node that will join. The full *URL* (also called *peer URL* in ``etcd`` terminology) of that node will be ``https://<IP_of_node>:2380`` (e.g. ``https://192.168.1.1:2380``). The port **must** be 2380, so ensure any firewall between the nodes will allow TCP traffic on that port.
 
@@ -239,13 +238,15 @@ If successful, this returns a JSON body of the form:
          "name": "",
          "urls": [
            "https://172.22.1.3:2380"
-         ]
+         ],
+         "learner": true
        },
        {
          "name": "9ZVNM2MNWP",
          "urls": [
            "https://172.22.1.2:2380"
-         ]
+         ],
+         "learner": false
        }
      ],
      "joinerKit": "eyJiYWNrdXBfc2FsdCI6IkVlUzNPOEhHSEc5NnlNRktrdG1NZmc9PSIsInVubG9ja19zYWx0IjoiU3phMkEvYW13NlhxVWsrdHZMMmFubm5SZFlWd2ZQUjdpZ3IxK1RSdTdVaU14dmh3d0x2NWIvYVNkY2c9IiwibG9ja2VkX2RvbWFpbl9rZXkiOiIyMnNGVlkyelhQUVZ6S1pQenI3MmkwTk1WM3lmQ2k5dGwzeDhUbGtuOXM0WjFOd3JoZkRQTFZIVHp1WVl0YkQxaVZCMlovV3JHUHJlMXlwN0t4U0w4WkxjY2ZUTmUzcFg0WXE4YXNlY0wwREhXNGlIaXlPMlZnPT0ifQ=="
@@ -253,21 +254,52 @@ If successful, this returns a JSON body of the form:
 
 which contains information necessary for the new node to join the cluster. In particular, it lists all members of the cluster (where the member with an empty name is the new joiner). It also contains the domain key encrypted by both the unlock and backup passphrases — so a backup passphrase must have been configured before.
 
+.. note::
+   Notice in the response above that the new joiner is a "learner": it can now
+   connect to the cluster and receive data from it, but cannot participate until
+   it is promoted, which will be covered below.
+    
+   While this concept of "learner" adds an additional step (promotion), it
+   allows for a safer operation of the cluster, as any issue with the new node
+   cannot cause instability to the whole cluster before its promotion.
+
 Keep that response for the next step.
 
-Actually Joining the Cluster
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Joining the Cluster as a Learner
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase of the node on which the new joiner was registered, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node that is expected to join.
 
-Assuming both the cluster and the node can reach each other, this will enact the actual join, wiping the data on the new joiner to instead sync its state with that of the cluster.
+.. warning::
+   The call to ``POST /cluster/join`` will hang until the new node is manually
+   promoted (see below). This is normal. When the call returns successfully, it
+   indicates that join and promotion have been successful.
 
-Depending on the networking and cluster conditions, this operation may take a few dozen seconds. If this operation fails immediately (e.g. the cluster was not reachable or authentication failed), this node's state will not be wiped and the join will be reverted. However as soon as a first join is successful, this operation is final and can only be reverted by a factory reset.
+Assuming both the cluster and the node can reach each other, this will enact the actual join, wiping the data on the new joiner to instead sync its state with that of the cluster. If this operation fails immediately (e.g. the cluster was not reachable or authentication failed), this node's state will not be wiped and the join will be reverted. However as soon as a first join is successful, this operation is final and can only be reverted by a factory reset.
 
-If this join is successful, the node will end up in a ``Locked`` state, and has to be unlocked with the unlock passphrase of the node that was used for registration. Afterwards the unlock passphrase can be changed (unlock passphrases remain node-specific and are not shared across nodes).
+At this stage the new node has joined as a *learner* node: it is syncing with
+the cluster but is not yet operable. On the other hand, any problem with the
+node at this stage will not cause issues to the cluster, making this operation
+safe.
 
-.. note::
-   Even after the join has succeeded, if the cluster's database is large or if the cluster is busy, it may take some time for the new joiner to synchronize its state fully. During that time, all nodes (including in particular the new joiner) may be less responsive or unresponsive (in the *Failed* state). The new joiner in particular may initially return errors when trying to unlock it for example. In that case, give it some time and try again. You can use the `/health/diagnose` endpoint to understand the current status of the database.
+The final step to complete the join is to promote the new node to a full-fledged
+member.
+
+Promoting the New Learner
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Depending on the networking and cluster conditions, it may take a while for the
+new member to catch up with the cluster. Once this is the case, it can be
+promoted from learner to full member.
+
+.. warning::
+   Promoting a node incrases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the `Operational Redundancy`_ section of this document). Ensure this new node has a stable connection to the cluster before promoting it.
+
+You can attempt to promote the new member with a call to ``POST /cluster/members/{MemberID}/promote``
+(refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__). If the learner hasn't
+caught up yet, then this will fail with HTTP code 412 and promotion should be attempted again later.
+
+If this promotion is successful, the node will now have fully joined the cluster and the earlier call to ``/cluster/join`` return. The node ends up in a *Locked* state and has to be unlocked with the unlock passphrase of the node that was used for registration. Afterwards the unlock passphrase can be changed (unlock passphrases remain node-specific and are not shared across nodes).
 
 Adding a Witness Node
 ---------------------
@@ -374,7 +406,15 @@ Start ``etcd`` in your preferred way (manually, ``systemd`` service, container, 
    $ cd /var/etcd
    $ etcd --config-file witness.conf.yml
 
-You should see it start, join the cluster and catch up with the data. After some time, you should be able to check that it is healthy with the ``etcdctl`` client:
+You should see it start, join the cluster as a learner and catch up with the data.
+
+Promote the Witness
+~~~~~~~~~~~~~~~~~~~~
+
+Finally and after some time, follow the normal instructions from the `Promoting the New Learner`_ section to
+promote the witness. If this fails, try again later.
+
+After a successful promotion, you should be able to check that it is healthy with the ``etcdctl`` client:
 
 .. code-block:: bash
 
@@ -416,6 +456,10 @@ As long as some part of the cluster is still meeting quorum, any of its members 
 You first have to know the ID of the node you want to remove, by listing all nodes through ``GET /cluster/members`` and looking for the right one.
 
 Then it can be removed by calling ``DELETE /cluster/members/<id>``. If the node in question was still healthy, this will isolate it from the rest of the cluster and transition it to the *Failed* state.
+
+.. note::
+   A node that has joined the cluster but not yet been promoted can also be
+   safely removed this way.
 
 .. _clustering-recovering:
 
