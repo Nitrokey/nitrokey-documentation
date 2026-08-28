@@ -458,7 +458,7 @@ Set the network configuration as follows.
       To disable IPv6, omit the ``ipv6`` field.
 
 Time
-~~~~~
+~~~~
 
 System time of the NetHSM software can either be set manually or automatically
 by configuring an NTP or NTS server.

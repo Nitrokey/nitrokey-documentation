@@ -5,6 +5,7 @@ Clustering
    This feature is currently a technical preview with the following temporary limitation:
 
    * Active/passive setup to support two-node clusters, either by utilizing etcd Learner or Mirror, is not yet available.
+     Use a :ref:`Witness <clustering-witness>` node instead.
 
 NetHSM 4.0 onwards supports clustering to synchronize data between several NetHSMs directly. This supports high frequency of key generations, realizes high-availability and load balancing. A NetHSM cluster is based on `etcd <https://etcd.io>`__ which uses the `Raft consensus algorithm <https://raft.github.io/>`__ for strong consistency. This ensures that the data (e.g. keys) is correct in all NetHSMs at all times.
 
@@ -66,6 +67,8 @@ For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq/#why-an-odd
 --------------
 
 A two-node active/passive cluster is not supported yet and will be added in a future version. We recommend introducing a 3rd node, either a 3rd NetHSM or an etcd "witness" which could be operated on any host. See the next section "Witness".
+
+.. _clustering-witness:
 
 Witness
 -------
