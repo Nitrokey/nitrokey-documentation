@@ -209,9 +209,9 @@ Adding a New Node
 
 Adding a node to a cluster is done in three steps:
 
-* Register the addition to the cluster (through any one of its members)
-* Tell the new node to join
-* Once it has caught up, promote the node from learner to full-fledged member
+1. Register the addition to the cluster (through any one of its members)
+2. Tell the new node to join
+3. Once it has caught up, promote the node from learner to full-fledged member
 
 Configure a Backup Passphrase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -275,9 +275,9 @@ Take the response from the last step and append to it a ``backupPassphrase`` fie
    promoted (see below). This is normal. When the call returns successfully, it
    indicates that join and promotion have been successful.
 
-Assuming both the cluster and the node can reach each other, this will enact the actual join, wiping the data on the new joiner to instead sync its state with that of the cluster. If this operation fails immediately (e.g. the cluster was not reachable or authentication failed), this node's state will not be wiped and the join will be reverted. However as soon as a first join is successful, this operation is final and can only be reverted by a factory reset.
+Assuming both the cluster and the node can reach each other, this will enact the actual join, wiping the data on the new joiner to instead synchronize its state with that of the cluster. If this operation fails immediately (e.g. the cluster was not reachable or authentication failed), this node's state will not be wiped and the join will be reverted. However as soon as a first join is successful, this operation is final and can only be reverted by a factory reset.
 
-At this stage the new node has joined as a *learner* node: it is syncing with
+At this stage the new node has joined as a *learner* node: it is synchronizing with
 the cluster but is not yet operable. On the other hand, any problem with the
 node at this stage will not cause issues to the cluster, making this operation
 safe.
@@ -289,7 +289,7 @@ Promoting the New Learner
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Depending on the networking and cluster conditions, it may take a while for the
-new member to catch up with the cluster. Once this is the case, it can be
+new member to catch up with the cluster. Once this is done, it can be
 promoted from learner to full member.
 
 .. warning::
@@ -299,7 +299,7 @@ You can attempt to promote the new member with a call to ``POST /cluster/members
 (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__). If the learner hasn't
 caught up yet, then this will fail with HTTP code 412 and promotion should be attempted again later.
 
-If this promotion is successful, the node will now have fully joined the cluster and the earlier call to ``/cluster/join`` return. The node ends up in a *Locked* state and has to be unlocked with the unlock passphrase of the node that was used for registration. Afterwards the unlock passphrase can be changed (unlock passphrases remain node-specific and are not shared across nodes).
+If this promotion is successful, the node will now have fully joined the cluster and the earlier call to ``/cluster/join`` will have returned. The node ends up in a *Locked* state and has to be unlocked with the unlock passphrase of the node that was used for registration. Afterwards the unlock passphrase can be changed (unlock passphrases remain node-specific and are not shared across nodes).
 
 Adding a Witness Node
 ---------------------
