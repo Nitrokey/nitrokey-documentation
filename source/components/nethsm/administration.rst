@@ -530,21 +530,23 @@ The current NTP configuration can be retrieved as follows.
    .. tab:: nitropy
       **Required Options**
 
-      +------------+-----------------------+
-      | Option     | Description           |
-      +============+=======================+
-      | ``--TODO`` | TODO                  |
-      +------------+-----------------------+
+      +------------+-----------------------------+
+      | Option     | Description                 |
+      +============+=============================+
+      | ``--ntp``  | Query the NTP configuration |
+      +------------+-----------------------------+
 
       **Example**
 
       .. code-block:: bash
 
-         $ TODO
+         $ nitropy nethsm -h $NETHSM_HOST get-config --ntp
 
       .. code-block::
 
-         TODO
+         NTP:
+            NTP Server IP: 1.2.3.4
+            NTS Name:      not configured
    .. tab:: REST API
       Information about the `/config/ntp` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-ntp>`__.
 
@@ -556,23 +558,24 @@ fields.
 
 .. tabs::
    .. tab:: nitropy
-      **Required Options**
+      **Optional Options**
 
-      +------------+-----------------------+
-      | Option     | Description           |
-      +============+=======================+
-      | ``TODO``   | TODO                  |
-      +------------+-----------------------+
+      +-------------------------+------------------------------------------------------------------------------------------------------+
+      | Option                  | Description                                                                                          |
+      +=========================+======================================================================================================+
+      | ``--ntp-ip`` ``TEXT``   |  IP address (v4 or v6) of the NTP server. If absent, means NTP is not configured.                    |
+      | ``--nts-name`` ``TEXT`` |  Hostname of the NTS server (enables Network Time Security). If absent, means NTS is not configured. |
+      +-------------------------+------------------------------------------------------------------------------------------------------+
 
       **Example**
 
       .. code-block:: bash
 
-         $ TODO
+         $ nitropy nethsm -h $NETHSM_HOST set-ntp-config --ntp-ip 1.2.3.4 --nts-name my-nts-server.com
 
       .. code-block::
 
-         TODO
+         Updated the NTP configuration for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/ntp` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-ntp>`__.
 
