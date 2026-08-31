@@ -266,7 +266,7 @@ which contains information necessary for the new node to join the cluster. In pa
 Keep that response for the next step.
 
 Joining the Cluster as a Learner
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase of the node on which the new joiner was registered, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node that is expected to join.
 
@@ -409,7 +409,7 @@ Start ``etcd`` in your preferred way (manually, ``systemd`` service, container, 
 You should see it start, join the cluster as a learner and catch up with the data.
 
 Promote the Witness
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Finally and after some time, follow the normal instructions from the `Promoting the New Learner`_ section to
 promote the witness. If this fails, try again later.
