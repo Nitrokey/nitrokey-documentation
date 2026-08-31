@@ -519,7 +519,7 @@ eventually overriden by the server's time.
       Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-time>`__.
 
 NTP/NTS
-~~~~~~~~
+^^^^^^^
 
 An NTP server can be configured to automatically adjust NetHSM's system time.
 Optionally, NTS (Network Time Security) can be enabled.
@@ -563,8 +563,8 @@ fields.
       +-------------------------+------------------------------------------------------------------------------------------------------+
       | Option                  | Description                                                                                          |
       +=========================+======================================================================================================+
-      | ``--ntp-ip`` ``TEXT``   |  IP address (v4 or v6) of the NTP server. If absent, means NTP is not configured.                    |
-      | ``--nts-name`` ``TEXT`` |  Hostname of the NTS server (enables Network Time Security). If absent, means NTS is not configured. |
+      | ``-a``, ``--ntp-ip`` ``TEXT``   |  IP address (v4 or v6) of the NTP server. If absent, means NTP is not configured.                    |
+      | ``-s``, ``--nts-name`` ``TEXT`` |  Hostname of the NTS server (enables Network Time Security). If absent, means NTS is not configured. |
       +-------------------------+------------------------------------------------------------------------------------------------------+
 
       **Example**
