@@ -30,8 +30,8 @@ If the failed node is still healthy (e.g. it was just a network problem), it wil
 
 However if the node recovers, it will cleanly resynchronize with the rest of the cluster and exit the *Failed* state, resuming normal operation without losing data.
 
-If it never recovers, it has to be :ref:`removed <clustering-removing>` from the
-cluster and either undergo :ref:`recovery <clustering-recovering>` to access its
+If it never recovers, it has to be `removed <clustering.html#removing-a-node-cleanly>`__ from the
+cluster and either undergo `recovery <clustering.html#recovering-a-failed-node>`__ to access its
 data (but it will not be part of the cluster anymore), or be factory reset and
 go through the join process again from scratch.
 
@@ -48,12 +48,10 @@ In other words, a worst-case network partition (in a cluster with an odd number 
 nodes) will leave the bigger half of the cluster healthy, and the smaller half
 inoperable until the partition is resolved.
 
-.. _clustering-lost-quorum:
-
 The Quorum is Durably Lost
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A failure causing all subsets of the cluster to lose quorum will render the cluster completely inoperable (all remaining nodes will be in the *Failed* state), unless the failure is resolved. In this case, manual :ref:`recovery <clustering-recovering>` must be performed.
+A failure causing all subsets of the cluster to lose quorum will render the cluster completely inoperable (all remaining nodes will be in the *Failed* state), unless the failure is resolved. In this case, manual `recovery <clustering.html#recovering-a-failed-node>` must be performed.
 
 This can happen for example if a single node fails in a 2-node cluster (where the quorum is 2). In this situation, the failed node cannot be cleanly removed from the cluster after the fact, because the remaining healthy node is already inoperable since it has lost quorum.
 
@@ -293,7 +291,7 @@ new member to catch up with the cluster. Once this is done, it can be
 promoted from learner to full member.
 
 .. warning::
-   Promoting a node incrases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the `Operational Redundancy`_ section of this document). Ensure this new node has a stable connection to the cluster before promoting it.
+   Promoting a node incrases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the `Operational Redundancy <clustering.html#operational-redundancy>`__ section of this document). Ensure this new node has a stable connection to the cluster before promoting it.
 
 You can attempt to promote the new member with a call to ``POST /cluster/members/{MemberID}/promote``
 (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__). If the learner hasn't
@@ -311,7 +309,10 @@ You will need an environment with ``etcd`` v3.6 available, with an IPv4 address 
 
 Create an empty directory where ``etcd`` will store its data, and write down its path (we will use ``/var/etcd/data``). Ensure the user that will launch the process has permission to read and write to the directory.
 
-Transfer to the machine the CA certificate that is being used to authenticate nodes in the cluster. You should have created one in the `Creating and Installing a CA`_ section. We'll store it in ``/var/etcd/CA.pem``.
+Transfer to the machine the CA certificate that is being used to authenticate
+nodes in the cluster. You should have created one in the
+`Creating and Installing a CA <clustering.html#creating-and-installing-a-ca>`__ section. We'll
+store it in ``/var/etcd/CA.pem``.
 
 You will then need to create a certificate for the witness, and sign it with the CA so it can communicate with its peers. This can be done for example through ``openssl``:
 
@@ -331,7 +332,9 @@ Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` as well
 Register Witness to Cluster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Follow the normal instructions from the `Registering a New Node`_ section to signal the existing cluster the addition of a new member with the given URL(s).
+Follow the normal instructions from the
+`Registering a New Node <clustering.html#registering-a-new-node>`__
+section to signal the existing cluster the addition of a new member with the given URL(s).
 
 Write down the response from the cluster: it should contain the list of cluster members and a joiner kit (you won't need this part).
 
@@ -356,7 +359,9 @@ Assuming the NetHSM response is stored in a ``response.json`` file, you can gene
    export ETCD_INITIAL_CLUSTER=$(jq --raw-output '[.members[] | ["\(if .name == "" then "witness1" else .name end)=\(.urls[])"]] | flatten | join(",")' < response.json)
    export ETCD_INITIAL_ADVERTISE_PEER_URLS=$(jq --raw-output '.members[] | select(.name=="") | .urls | join(",")' < response.json)
 
-For example with the example response provided in the `Registering a New Node`_ section, you will have:
+For example with the example response provided in the
+`Registering a New Node <clustering.html#registering-a-new-node>`__
+section, you will have:
 
 .. code-block:: bash
 
@@ -411,8 +416,9 @@ You should see it start, join the cluster as a learner and catch up with the dat
 Promote the Witness
 ~~~~~~~~~~~~~~~~~~~
 
-Finally and after some time, follow the normal instructions from the `Promoting the New Learner`_ section to
-promote the witness. If this fails, try again later.
+Finally and after some time, follow the normal instructions from the
+`Promoting the New Learner <clustering.html#promoting-the-new-learner>`__
+section to promote the witness. If this fails, try again later.
 
 After a successful promotion, you should be able to check that it is healthy with the ``etcdctl`` client:
 
@@ -423,7 +429,7 @@ After a successful promotion, you should be able to check that it is healthy wit
 This key should exist and contain "1".
 
 Make sure this process keeps running, as it is now a proper member of your cluster. If you need to decommission it, first
-:ref:`properly remove it from the cluster <clustering-removing>`. If its reachable IP changes, update its URL from the cluster.
+`properly remove it from the cluster <clustering.html#removing-a-node-cleanly>`__. If its reachable IP changes, update its URL from the cluster.
 
 Operating a Cluster
 -------------------
@@ -446,8 +452,6 @@ This operation remains compatible with backups made on previous versions of the 
 
    In other words, only perform a restore in a cluster with backups done in the same cluster (though again nodes may have been removed or added since). If you want to restore a foreign backup on a node, first safely remove it from its cluster, then factory reset it and restore the backup.
 
-.. _clustering-removing:
-
 Removing a Node Cleanly
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -460,8 +464,6 @@ Then it can be removed by calling ``DELETE /cluster/members/<id>``. If the node 
 .. note::
    A node that has joined the cluster but not yet been promoted can also be
    safely removed this way.
-
-.. _clustering-recovering:
 
 Recovering a Failed Node
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -476,7 +478,7 @@ It can still be shut-down, rebooted, reset, *diagnosed* or *isolated*.
 
 Common causes for a node to be in the *Failed* state include:
 
-* A durably :ref:`lost quorum <clustering-lost-quorum>`.
+* A durably `lost quorum <clustering.html#the-quorum-is-durably-lost>`__.
 * A temporarily lost quorum (e.g. when adding a second node to the cluster, and
   the second node has not joined yet).
 * ``etcd`` is currently restarting (e.g. because the certificates have changed, or
