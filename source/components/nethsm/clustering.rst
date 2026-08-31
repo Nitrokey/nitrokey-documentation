@@ -68,8 +68,6 @@ For more information, see `etcd's FAQ <https://etcd.io/docs/v3.6/faq/#why-an-odd
 
 A two-node active/passive cluster is not supported yet and will be added in a future version. We recommend introducing a 3rd node, either a 3rd NetHSM or an etcd "witness" which could be operated on any host. See the next section "Witness".
 
-.. _clustering-witness:
-
 Witness
 -------
 
