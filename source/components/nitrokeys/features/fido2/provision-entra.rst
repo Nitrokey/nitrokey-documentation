@@ -12,7 +12,7 @@ Setup
 
 A Microsoft Entra Application is required to allow for programmatic registration of user credentials. Here we offer you the guide to set up the same provided you have appropriate privileges for the same.
 
-1. Login to Entra Admin portal at https://entra.microsoft.com/. Take a note of the primary domain. You will need it later. Go to App Registrations on the left blade.
+1. Login to `Entra Admin portal <https://entra.microsoft.com/>`__. Take a note of the primary domain which you will need later. Go to App Registrations on the left blade.
 
     .. figure:: ./images/provision-entra/entra-home.png
         :alt: Entra Admin Portal
