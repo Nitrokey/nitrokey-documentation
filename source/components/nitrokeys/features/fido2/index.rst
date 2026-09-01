@@ -13,3 +13,4 @@ FIDO2
     Android / NitroPhone <nitrophone>
     SSH Keys <ssh>
     Nitrokey Provisioning for Entra ID <provision-entra>
+    Full-Disk Encryption with cryptsetup/LUKS <hard-disk-encryption>
