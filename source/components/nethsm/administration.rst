@@ -99,7 +99,7 @@ The boot mode can be changed as follows. At next boot, the NetHSM will behave ac
 State
 ~~~~~
 
-The NetHSM software has four states: *Unprovisioned*, *Provisioned*, *Locked*, and *Operational*.
+The NetHSM software has five states: *Unprovisioned*, *Provisioned*, *Locked*, *Operational* and *Failed*.
 
 +-----------------+-------------------------------------------------------------------------+
 | State           | Description                                                             |
@@ -115,6 +115,9 @@ The NetHSM software has four states: *Unprovisioned*, *Provisioned*, *Locked*, a
 | *Locked*        | NetHSM with configuration but encrypted and inaccessible data stores.   |
 |                 | Typically, the next step is to unlock the system. The *Locked* state    |
 |                 | implies the *Provisioned* state.                                        |
++-----------------+-------------------------------------------------------------------------+
+| *Failed*        | NetHSM with a currently unavailable database                            |
+|                 | (see `Recovery <clustering.html#recovering-a-failed-node>`__).          |
 +-----------------+-------------------------------------------------------------------------+
 
 .. figure:: ./images/administration/states.svg
@@ -457,10 +460,10 @@ Set the network configuration as follows.
 Time
 ~~~~
 
-The time configuration sets the system time of the NetHSM software.
-It is usually not required to set the system time, as it is set during provisioning.
+System time of the NetHSM software can either be set manually or automatically
+by configuring an NTP or NTS server.
 
-The time configuration can be retrieved as follows.
+The current system time can be retrieved as follows.
 
 .. tabs::
    .. tab:: nitropy
@@ -485,7 +488,10 @@ The time configuration can be retrieved as follows.
    .. tab:: REST API
       Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-time>`__.
 
-Set the time of the NetHSM.
+The current system time can be manually adjusted as follows. Note that manually
+setting the clock is usually not required to set the system time, as it is set
+during provisioning. If NTP/NTS is configured, the manually set time will be
+eventually overriden by the server's time.
 
 .. important::
    Make sure to pass the time in UTC timezone.
@@ -511,6 +517,67 @@ Set the time of the NetHSM.
          Updated the system time for NetHSM localhost:8443
    .. tab:: REST API
       Information about the `/config/time` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-time>`__.
+
+NTP/NTS
+^^^^^^^
+
+An NTP server can be configured to automatically adjust NetHSM's system time.
+Optionally, NTS (Network Time Security) can be enabled.
+
+The current NTP configuration can be retrieved as follows.
+
+.. tabs::
+   .. tab:: nitropy
+      **Required Options**
+
+      +------------+-----------------------------+
+      | Option     | Description                 |
+      +============+=============================+
+      | ``--ntp``  | Query the NTP configuration |
+      +------------+-----------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm -h $NETHSM_HOST get-config --ntp
+
+      .. code-block::
+
+         NTP:
+            NTP Server IP: 1.2.3.4
+            NTS Name:      not configured
+   .. tab:: REST API
+      Information about the `/config/ntp` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-ntp>`__.
+
+NTP/NTS can be configured as follows. It can be disabled by leaving empty
+fields.
+
+.. note::
+   The NTP server has to be provided by its IP (either v4 or v6), not hostname.
+
+.. tabs::
+   .. tab:: nitropy
+      **Optional Options**
+
+      +---------------------------------+------------------------------------------------------------------------------------------------------+
+      | Option                          | Description                                                                                          |
+      +=================================+======================================================================================================+
+      | ``-a``, ``--ntp-ip`` ``TEXT``   |  IP address (v4 or v6) of the NTP server. If absent, means NTP is not configured.                    |
+      | ``-s``, ``--nts-name`` ``TEXT`` |  Hostname of the NTS server (enables Network Time Security). If absent, means NTS is not configured. |
+      +---------------------------------+------------------------------------------------------------------------------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm -h $NETHSM_HOST set-ntp-config --ntp-ip 1.2.3.4 --nts-name my-nts-server.com
+
+      .. code-block::
+
+         Updated the NTP configuration for NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/config/ntp` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-ntp>`__.
 
 Metrics
 ~~~~~~~
