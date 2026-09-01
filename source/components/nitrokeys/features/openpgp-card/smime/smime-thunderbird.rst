@@ -10,7 +10,7 @@ Prerequisites
 
 If you do not have a S/MIME key-certificate pair installed on your Nitrokey yet or if you did not installed OpenSC, please look at `this page <index.html>`_ first.
 
-You need to have `OpenSC installed <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt update && sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from OpenSC directly.
+You need to have `OpenSC installed <https://github.com/OpenSC/OpenSC/wiki>`__ on your System. While GNU/Linux users usually can install OpenSC over the package manager (e.g. ``sudo apt update && sudo apt install opensc`` on Ubuntu), macOS and Windows users can download the installation files from OpenSC directly.
 
 .. note::
 
@@ -20,7 +20,7 @@ You need to have `OpenSC installed <https://github.com/OpenSC/OpenSC/wiki>`__ on
 Settings in Thunderbird
 -----------------------
 
-Before you can use the Nitrokey in Thunderbird you have to activate S/MIME encryption in the account settings. You can achieve this by clicking on the menu and go to ‘Preferences’ -> ‘Account Settings’ and clicking on ‘Security’ in the account settings window.
+Before you can use the Nitrokey in Thunderbird you have to activate S/MIME encryption in the account settings. You can achieve this by clicking on the menu and go to **Preferences** -> **Account Settings** and clicking on **Security** in the account settings window.
 
 .. figure:: images/smime-thunderbird/1.png
    :alt: img1

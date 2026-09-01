@@ -14,22 +14,22 @@ Add the following lines to the KnotDNS configuration file ``/etc/knot/knot.conf`
 
 .. code-block:: ini
 
-  keystore:
-    - id: nethsm_keystore
-      backend: pkcs11
-      config: "pkcs11:token=localnethsm /usr/local/lib/libnethsm_pkcs11.so"
+   keystore:
+     - id: nethsm_keystore
+       backend: pkcs11
+       config: "pkcs11:token=localnethsm /usr/local/lib/libnethsm_pkcs11.so"
 
-  policy:
-    - id: manual_policy
-      keystore: nethsm_keystore
-      manual: on
+   policy:
+     - id: manual_policy
+       keystore: nethsm_keystore
+       manual: on
 
-  zone:
-    - domain: example.com
-      storage: "/var/lib/knot"
-      file: "example.com.zone"
-      dnssec-signing: on
-      dnssec-policy: manual_policy
+   zone:
+     - domain: example.com
+       storage: "/var/lib/knot"
+       file: "example.com.zone"
+       dnssec-signing: on
+       dnssec-policy: manual_policy
 
 The ``token`` value in the PKCS#11 URI is the ``label`` from the ``p11nethsm.conf``. Adjust the path to the
 ``libnethsm_pkcs11.so`` as needed.
@@ -38,22 +38,22 @@ To generate the keys run the following commands:
 
 .. code-block:: bash
 
-  nitropy nethsm \
-    --host "localhost:8443" --no-verify-tls \
-    --username "admin" \
-    generate-key \
-      --type "EC_P256" --mechanism "ECDSA_Signature" --length "256" --key-id "myKSK"
-  # knot's keymgr expects the binary key id in hex format
-  # myKSK in ascii-binary is 0x6d794b534b, e.g. echo -n "myKSK" | xxd -ps
-  keymgr "example.com" import-pkcs11 "6d794b534b" "algorithm=ECDSAP256SHA256" "ksk=yes"
+   nitropy nethsm \
+     --host "localhost:8443" --no-verify-tls \
+     --username "admin" \
+     generate-key \
+       --type "EC_P256" --mechanism "ECDSA_Signature" --length "256" --key-id "myKSK"
+   # knot's keymgr expects the binary key id in hex format
+   # myKSK in ascii-binary is 0x6d794b534b, e.g. echo -n "myKSK" | xxd -ps
+   keymgr "example.com" import-pkcs11 "6d794b534b" "algorithm=ECDSAP256SHA256" "ksk=yes"
 
-  nitropy nethsm \
-    --host "localhost:8443" --no-verify-tls \
-    --username "admin" \
-    generate-key \
-      --type "EC_P256" --mechanism "ECDSA_Signature" --length "256" --key-id "myZSK"
-  # myZSK in ascii-binary is 0x6d795a534b
-  keymgr "example.com" import-pkcs11 "6d795a534b" "algorithm=ECDSAP256SHA256"
+   nitropy nethsm \
+     --host "localhost:8443" --no-verify-tls \
+     --username "admin" \
+     generate-key \
+       --type "EC_P256" --mechanism "ECDSA_Signature" --length "256" --key-id "myZSK"
+   # myZSK in ascii-binary is 0x6d795a534b
+   keymgr "example.com" import-pkcs11 "6d795a534b" "algorithm=ECDSAP256SHA256"
 
 
 Automatic Mode
@@ -67,27 +67,27 @@ Add the following lines to the Knot DNS configuration file ``/etc/knot/knot.conf
 
 .. code-block:: ini
 
-  keystore:
-    - id: nethsm_keystore
-      backend: pkcs11
-      config: "pkcs11:token=localnethsm /usr/local/lib/libnethsm_pkcs11.so"
-      #key-label: on
+   keystore:
+     - id: nethsm_keystore
+       backend: pkcs11
+       config: "pkcs11:token=localnethsm /usr/local/lib/libnethsm_pkcs11.so"
+       #key-label: on
 
-  policy:
-    - id: auto_policy
-      keystore: nethsm_keystore
-      ksk-lifetime: 5m
-      zsk-lifetime: 2m
-      dnskey-ttl: 10s
-      zone-max-ttl: 15s
-      propagation-delay: 2s
+   policy:
+     - id: auto_policy
+       keystore: nethsm_keystore
+       ksk-lifetime: 5m
+       zsk-lifetime: 2m
+       dnskey-ttl: 10s
+       zone-max-ttl: 15s
+       propagation-delay: 2s
 
-  zone:
-    - domain: example.com
-      storage: "/var/lib/knot"
-      file: "example.com.zone"
-      dnssec-signing: on
-      dnssec-policy: auto_policy
+   zone:
+     - domain: example.com
+       storage: "/var/lib/knot"
+       file: "example.com.zone"
+       dnssec-signing: on
+       dnssec-policy: auto_policy
 
 Setting ``key-label`` to ``on`` doesn't change anything and the pkcs11 module ignores the given label and
 always returns the hexadecimal key id as label. The policy uses very short key lifetimes and TTL's

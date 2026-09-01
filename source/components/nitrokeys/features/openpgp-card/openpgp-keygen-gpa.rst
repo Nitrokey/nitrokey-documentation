@@ -5,9 +5,9 @@ OpenPGP Key Generation Using GPA
 
 .. contents:: :local:
 
-The following instructions explain the generation of OpenPGP keys directly on the Nitrokey with help of the GNU Privacy Assistant (GPA). You won’t be able to create a backup of these keys. Thus, if you lose the Nitrokey or it breaks you can not decrypt mails or use these keys anymore. Please see `here <openpgp-outlook.html>`_ for a comparison of the different methods to generate OpenPGP keys.
+The following instructions explain the generation of OpenPGP keys directly on the Nitrokey with help of the GNU Privacy Assistant (GPA). You won't be able to create a backup of these keys. Thus, if you lose the Nitrokey or it breaks you can not decrypt mails or use these keys anymore. Please see `here <openpgp-outlook.html>`_ for a comparison of the different methods to generate OpenPGP keys.
 
-You need to have GnuPG and GPA installed on your system. The newest version for Windows can be found `here <https://www.gpg4win.org/>`__ (make sure to check “GPA” during the installation!). Users of Linux systems please install GnuPG and GPA with help of the package manager (e.g. using ``sudo apt install gnupg gpa`` on Ubuntu).
+You need to have GnuPG and GPA installed on your system. The newest version for Windows can be found `here <https://www.gpg4win.org/>`__ (make sure to check “GPA” during the installation!). Users of Linux systems please install GnuPG and GPA with help of the package manager (e.g. using ``sudo apt install gnupg gpa`` on Ubuntu).
 
 Key Generation
 --------------
@@ -26,7 +26,7 @@ Another windows opens. Please go to “Card” -> “Generate key” to start th
 
 
 
-Now you can put in your name and the email address you want to use for the key that will be generated next. You may choose an expiration date for your key, but you don’t have to.
+Now you can put in your name and the email address you want to use for the key that will be generated next. You may choose an expiration date for your key, but you don't have to.
 
 **Please do not use the backup checkbox**. This “backup” does only save the encryption key. In case of a loss of the device, you will not be able to restore the whole key set. So on the one hand it is no full backup (use `these instructions <openpgp-keygen-backup.html>`_ instead, if you need one) and on the other hand you risk that someone else can get in possession of your encryption key. The advantage of generating keys on-device is to make sure that keys are stored securely. Therefore, we recommend to skip this half-backup.
 
@@ -66,7 +66,7 @@ You can carry the keyfile with you or send it to anyone who you like. This file 
 
 If you do not want to carry a public keyfile with you, you can upload it to keyserver. If you are using another machine you can just import it by using “Server” -> “Retrieve Keys…” and entering your name or key id.
 
-Another possibility is to change the URL setting on your card. Open the card manager again and fill in the URL where the key is situated (e.g. on the keyserver or on your webpage etc.). From now on you can import the key on another system by right-clicking on the URL and click on “Fetch Key”.
+Another possibility is to change the URL setting on your card. Open the card manager again and fill in the URL where the key is situated (e.g. on the keyserver or on your webpage etc.). From now on you can import the key on another system by right-clicking on the URL and click on “Fetch Key”.
 
 .. figure:: images/gpa-keygen/7.png
    :alt: img7

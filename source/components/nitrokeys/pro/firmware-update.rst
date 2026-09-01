@@ -4,14 +4,14 @@ Firmware Update
 This guide describes how to update the firmware on the Nitrokey Pro.
 
 .. warning::
-  This guide is still in an experimental state!
+   This guide is still in an experimental state!
 
 .. note::
-  Updates are only possible with firmware version 0.11 and newer.
+   Updates are only possible with firmware version 0.11 and newer.
 
 .. important::
    Updating could lead to data loss, so make sure you have proper backup login methods enabled and/or ensure that
-   the Nitrokey Pro is not the only way to authenticate/2FA for your 
+   the Nitrokey Pro is not the only way to authenticate/2FA for your
    applications/services.
 
 How to Update
@@ -24,8 +24,8 @@ How to Update
 1. Make sure you have the latest `pynitrokey` version installed, please check the `installation instructions <../../software/nitropy/all-platforms/installation.html>`__ for your OS.
 2. Download the latest stable `firmware image <https://github.com/Nitrokey/nitrokey-pro-firmware/releases>`__.
 
-   .. important:: 
-      For production use you should choose the latest stable version (so only versions, that don’t contain i.e. “pre-release” or “RC”).
+   .. important::
+      For production use you should choose the latest stable version (so only versions, that don't contain i.e. “pre-release” or “RC”).
 
 3. To apply the update run:
 
@@ -47,7 +47,7 @@ Alternatively `dfu-util` can be used for the firmware update:
 
    .. code-block:: bash
 
-	brew install dfu-util
+      brew install dfu-util
 
 2. Use Nitrokey App v1.5-RC7 or higher to change the boot mode of the Nitrokey Pro to update mode.
 
@@ -66,14 +66,14 @@ Troubleshooting
  In case the libnitrokey could not be found automatically, the path to it can be provided with env. variable:
 
 .. code-block:: bash
- 
-	$ env LIBNK_PATH=/libnk/path/libnitrokey.so nitropy pro enable-update
+
+   $ env LIBNK_PATH=/libnk/path/libnitrokey.so nitropy pro enable-update
 
 To find libnitrokey on your system use:
 
 .. code-block:: bash
 
-	$ locate libnitrokey.so
+   $ locate libnitrokey.so
 
 Linux Permission error
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -83,9 +83,9 @@ Linux Permission error
   read/write the device. Please make sure you have set up the correct
   `udev-rules`_. Download this `udev-rules`_ set and place it in your
   udev rules directory (e.g., ``/etc/udev/rules.d``). Then remove
-  your Nitrokey Pro from the USB slot and run: 
+  your Nitrokey Pro from the USB slot and run:
   ``udevadm control --reload-rules && udevadm trigger`` or reboot
-  your machine. Afterwards the update should work without the 
+  your machine. Afterwards the update should work without the
   permission issue.
 
 .. _udev-rules: https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/main/41-nitrokey.rules

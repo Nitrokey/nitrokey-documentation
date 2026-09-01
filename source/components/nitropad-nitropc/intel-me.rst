@@ -1,8 +1,8 @@
 Disabling Intel Management Engine
 ---------------------------------
 
-.. Note::
-    With Heads Intel ME is already disabled and also NitroPC 1 & 2 with Tianocore.
+.. note::
+   With Heads Intel ME is already disabled and also NitroPC 1 & 2 with Tianocore.
 
 By default Intel ME is not disabled with Dasharo Tianocore UEFI.
 

@@ -3,8 +3,8 @@ Windows Active Directory Certificate Services (ADCS) with PKI Proxy
 
 This document describes the configuration of Windows Active Directory Certificate Services (ADCS) with PKI Proxy and NetHSM.
 
-Prerequisits
-============
+Prerequisites
+=============
 
 * NetHSM
 
@@ -259,4 +259,3 @@ Windows ADCS Configuration
    The availability of the certification authority depends on the availability of the private key and certificate.
    If they aren't available, the certification authority service might fail to start or will stop unexpectedly.
    In case of an error, check the *Windows Event Log* for more information.
-   

@@ -49,7 +49,7 @@ In the registry delete the following registry path.
 .. tabs::
    .. tab:: Regedit
       | Path: ``HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\Readers\Nitrokey CCID/ICCD Interface 0``
-      
+
       If the smartcard reader was installed multiple times before there may be more than one path with an incremented number at the end.
    .. tab:: PowerShell
       .. code-block::
@@ -86,19 +86,19 @@ Currently there seems to be a bug we hope to fix soon which affects the Nitrokey
 Timeout Bug
 ^^^^^^^^^^^
 
-There is a bug with the Nitrokey being recognized by the system, where a timeout occurs before the connection succeeds. 
+There is a bug with the Nitrokey being recognized by the system, where a timeout occurs before the connection succeeds.
 
 NFC is Not Working
 ^^^^^^^^^^^^^^^^^^
 Please make sure FIDO2 is working correctly. Otherwise NFC won't work either.
 
-Also check if you are using the right spot on your smartphone. 
+Also check if you are using the right spot on your smartphone.
 
-The backside of the Nitrokey has to be held against the smartphone. For the USB-A version it might be helpful to lift the side with the USB connector slightly to reduce the distance to the end part of the stick. 
+The backside of the Nitrokey has to be held against the smartphone. For the USB-A version it might be helpful to lift the side with the USB connector slightly to reduce the distance to the end part of the stick.
 
 If you have a phone cover, try to find the right spot first without it. Retry afterwards with the cover.
 
-The search of the optimal spot sometimes took up to 20-30 sec. In our experience holding the Nitrokey in an horizontal orientation yields better results.If you still encounter issues please write a mail to our support. For optimal help please include the shipping/order number and your smartphone model. 
+The search of the optimal spot sometimes took up to 20-30 sec. In our experience holding the Nitrokey in an horizontal orientation yields better results.If you still encounter issues please write a mail to our support. For optimal help please include the shipping/order number and your smartphone model.
 
 OpenPGP Troubleshooting
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -109,12 +109,12 @@ GnuPG: OpenPGP Card Not Available
 **Problem:**
 GnuPG cannot access the Nitrokey 3 and shows an error message like this::
 
-    $ gpg --card-status 
+    $ gpg --card-status
     gpg: selecting openpgp failed: No such device
     gpg: OpenPGP card not available: No such device
 
 **Solution:**
-There are two common smartcard services on Linux systems: ``scdaemon``, GnuPG’s smartcard daemon, and ``pcscd``, a generic smartcard daemon.
+There are two common smartcard services on Linux systems: ``scdaemon``, GnuPG's smartcard daemon, and ``pcscd``, a generic smartcard daemon.
 ``scdaemon`` has two drivers for accessing smartcards:
 Its integrated ``ccid`` driver tries to directly access the smartcard.
 The ``pcsc`` drivers uses the ``pcscd`` daemon instead.
@@ -166,7 +166,7 @@ The Nitrokey 3 should now show up.
 Update Via update.nitrokey.com Does Not Work
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware using these `instructions <firmware-update.html>`_. 
+Currently the web updater doesn't support the Nitrokey 3. However you can get the latest firmware using these `instructions <firmware-update.html>`_.
 
 PIV Troubleshooting
 ^^^^^^^^^^^^^^^^^^^

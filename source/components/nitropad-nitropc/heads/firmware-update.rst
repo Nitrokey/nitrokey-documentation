@@ -20,7 +20,7 @@ Preparation
 
 2. Download the `latest firmware <https://github.com/Nitrokey/heads/releases/latest>`__ and store it on a USB drive. For the:
 
-   - NitroPad T430: ``firmware-nitropad-t430-[version].npf`` 
+   - NitroPad T430: ``firmware-nitropad-t430-[version].npf``
    - NitroPad X230: ``firmware-nitropad-x230-[version].npf``
    - NitroPad NV41: ``firmware-nitropad-nv41-[version].npf``
    - NitroPad NS50: ``firmware-nitropad-ns50-[version].npf``
@@ -32,9 +32,9 @@ To verify the firmware follow these steps:
 
 1. Download  `sha256sum.sig <https://github.com/Nitrokey/heads/releases/latest>`__ and store it
 
-2. Download and import Markus Meissners `gpg key <https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__ 
+2. Download and import Markus Meissners `gpg key <https://keyserver.ubuntu.com/pks/lookup?search=coder%40safemailbox.de&fingerprint=on&op=index>`__
 
-3. Verify the signature: 
+3. Verify the signature:
 
 .. code-block:: bash
 
@@ -45,13 +45,13 @@ You expect an output like this one:
 
 .. code-block:: bash
 
-	gpg: Signature made Wed 05 Jul 2023 04:30:34 PM CEST
-	gpg:                using RSA key C7E32619E2F71736F5910BB144CB2D868DD16BDA
-	gpg: Good signature from "Markus Meissner <meissner@nitrokey.com>" [ultimate]
-	gpg:                 aka "Markus Meissner <coder@safemailbox.de>" [ultimate]
+   gpg: Signature made Wed 05 Jul 2023 04:30:34 PM CEST
+   gpg:                using RSA key C7E32619E2F71736F5910BB144CB2D868DD16BDA
+   gpg: Good signature from "Markus Meissner <meissner@nitrokey.com>" [ultimate]
+   gpg:                 aka "Markus Meissner <coder@safemailbox.de>" [ultimate]
 
 
-This verifys the file. 
+This verifys the file.
 
 Procedure
 ~~~~~~~~~
@@ -129,6 +129,6 @@ Further steps
 ~~~~~~~~~~~~~
 
 .. hint::
-	There is a known issue with the NV41 that it can get stuck after the update in the boot splash(heads takes longer then 30s to get up). This solves it self after max 5 restarts (pressing the power button short). If not please `contact <https://www.nitrokey.com/contact>`_ our technical support.
+   There is a known issue with the NV41 that it can get stuck after the update in the boot splash(heads takes longer then 30s to get up). This solves it self after max 5 restarts (pressing the power button short). If not please `contact <https://www.nitrokey.com/contact>`_ our technical support.
 
 1. In case ``ERROR: TOTP Generation Failed!`` screen will show up, please follow the instructions for Factory Reset (on the left side menu), starting from step

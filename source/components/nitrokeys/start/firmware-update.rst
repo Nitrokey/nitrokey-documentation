@@ -3,7 +3,7 @@ Firmware Update
 
 .. important::
    Updating could lead to data loss, so make sure you have proper backup login methods enabled and/or ensure that
-   the Nitrokey Start is not the only way to authenticate/2FA for your 
+   the Nitrokey Start is not the only way to authenticate/2FA for your
    applications/services.
 
 .. important::
@@ -19,24 +19,23 @@ To update the firmware of your Nitrokey Start, proceed as follows.
 
 2. Connect your Nitrokey Start and verify its recognition.
 
-   .. rstcheck: ignore-next-code-block
-   .. code-block:: bash
+   .. code-block:: shell-session
 
       $ nitropy start list
             *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
             :: 'Nitrokey Start' keys:
-            FSIJ-1.2.15-87042524: Nitrokey Nitrokey Start (RTM.8) 
+            FSIJ-1.2.15-87042524: Nitrokey Nitrokey Start (RTM.8)
 
 3. Start the update process. For this you need an Internet connection.
 
    .. code-block:: bash
 
-      $ nitropy start update 
+      $ nitropy start update
 
 4. You will then be asked to enter the Admin PIN of your Nitrokey Start.
    (Default PIN: 12345678)
 
-   .. code-block:: bash
+   .. code-block:: shell-session
 
       *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
       Nitrokey Start firmware update tool
@@ -51,8 +50,7 @@ To update the firmware of your Nitrokey Start, proceed as follows.
    see the latest firmware version available. Now you have to confirm
    the update with “yes”.
 
-   .. rstcheck: ignore-next-code-block
-   .. code-block:: bash
+   .. code-block:: text
 
       Firmware data to be used:
 
@@ -82,10 +80,9 @@ To update the firmware of your Nitrokey Start, proceed as follows.
 6. You can check the firmware version after the upgrade process has
    completed.
 
-   .. rstcheck: ignore-next-code-block
-   .. code-block:: bash
+   .. code-block:: shell-session
 
-      $ nitropy start list 
+      $ nitropy start list
       *** Nitrokey tool for Nitrokey FIDO2 & Nitrokey Start
       :: 'Nitrokey Start' keys:
       FSIJ-1.2.15-87042524: Nitrokey Nitrokey Start (RTM.10)

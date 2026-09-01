@@ -2,11 +2,10 @@ Clustering
 ==========
 
 .. note::
-   This feature is currently a technical preview with the following temporary limitations:
+   This feature is currently a technical preview with the following temporary limitation:
 
-   * If a cluster is lost (quorum is lost), the only means of recovery is factory-reset + restore. Make sure to back up often. Future releases will include means to recover from on-disk data.
    * Active/passive setup to support two-node clusters, either by utilizing etcd Learner or Mirror, is not yet available.
-   * System time between nodes must be manually synchronized for now. A future release will include automatic clock sync.
+     Use a `Witness <clustering.html#witness>`__ node instead.
 
 NetHSM 4.0 onwards supports clustering to synchronize data between several NetHSMs directly. This supports high frequency of key generations, realizes high-availability and load balancing. A NetHSM cluster is based on `etcd <https://etcd.io>`__ which uses the `Raft consensus algorithm <https://raft.github.io/>`__ for strong consistency. This ensures that the data (e.g. keys) is correct in all NetHSMs at all times.
 
@@ -18,18 +17,23 @@ Operational Redundancy
 We will call "node" a NetHSM that is expected to be part of a cluster.
 **A cluster of** ``N`` **nodes will continue to operate as long as at least** ``(N/2)+1`` **nodes are healthy and reachable.** That minimal amount of healthy, reachable nodes is called the **quorum**.
 
-This implies the following scenarios.
+On a cluster that goes below this threshold (e.g. because of a network issue),
+no leader can be elected and the local instance of ``etcd`` on each node becomes
+unable to perform reads and writes. This implies the following scenarios.
 
 One Node Goes Down and Quorum is Still Reached
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In a 3-node cluster, if one node fails (crashes or becomes unreachable due to network conditions), the two other nodes will continue to work and serve requests.
 
-If the failed node is still healthy (e.g. it was just a network problem), it will be inoperable while isolated (not even read-only).
+If the failed node is still healthy (e.g. it was just a network problem), it will be in the *Failed* state while isolated, refusing normal operations (not even read-only).
 
-However if the node recovers, it will cleanly resynchronize with the rest of the cluster and becomes operable again, without losing data.
+However if the node recovers, it will cleanly resynchronize with the rest of the cluster and exit the *Failed* state, resuming normal operation without losing data.
 
-If it never recovers, it has to be removed from the cluster (see next section), factory reset, and go through the join process again from scratch.
+If it never recovers, it has to be `removed <clustering.html#removing-a-node-cleanly>`__ from the
+cluster and either undergo `recovery <clustering.html#recovering-a-failed-node>`__ to access its
+data (but it will not be part of the cluster anymore), or be factory reset and
+go through the join process again from scratch.
 
 A Network Partition Happens and Quorum is Still Reached
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -37,13 +41,17 @@ A Network Partition Happens and Quorum is Still Reached
 This is just a generalization of the previous scenario. In a 5-node cluster where e.g. 3 nodes are in one physical location A and 2 nodes are in another location B, a network problem isolating A and B would mean the following:
 
 * The 3 nodes in location A are meeting the quorum (3 in this case), so they continue to operate.
-* The 2 nodes in location B are **not** meeting the quorum (still 3), so they will stop operating (even read*only).
+* The 2 nodes in location B are **not** meeting the quorum (still 3), so they will enter the *Failed* state and stop operating (even read-only).
 * If the network issue is resolved, the 2 nodes will cleanly join back the 3 others.
+
+In other words, a worst-case network partition (in a cluster with an odd number of
+nodes) will leave the bigger half of the cluster healthy, and the smaller half
+inoperable until the partition is resolved.
 
 The Quorum is Durably Lost
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A failure causing all subsets of the cluster to lose quorum will render the cluster and its data completely lost, unless the failure is resolved. In this case, nodes must be factory-reset and a backup must be restored.
+A failure causing all subsets of the cluster to lose quorum will render the cluster completely inoperable (all remaining nodes will be in the *Failed* state), unless the failure is resolved. In this case, manual `recovery <clustering.html#recovering-a-failed-node>` must be performed.
 
 This can happen for example if a single node fails in a 2-node cluster (where the quorum is 2). In this situation, the failed node cannot be cleanly removed from the cluster after the fact, because the remaining healthy node is already inoperable since it has lost quorum.
 
@@ -161,11 +169,16 @@ This CA now has to be installed on every node.
 To do this, first generate a Certificate Signing Request (CSR) from the node with the ``/config/tls/csr.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__).
 
 .. note::
-   To properly authenticate nodes, the clustering backend (etcd) expects that each node has a certificate with a properly filled Subject Alt Names (SAN) field. In particular, nodes expected to be reached only via their IP need to have a proper IP SAN in their certificate. IP SANs can be requested for the CSR by prefixing "IP:" to the names, as in ``openssl``:
+   To properly authenticate nodes, the clustering backend (etcd) expects that each node has a certificate with a properly filled Subject Alt Names (SAN) field.
+   Nodes are expected to be reached only via their IP and need to have a proper IP SAN in their certificate.
+   IP SANs can be requested for the CSR by prefixing "IP:" to the names, as in ``openssl``:
 
    .. code-block:: text
 
       "subjectAltNames": [ "normalname.org", "IP:192.168.1.1" ]
+
+   If you want to use a public CA for signing your certificates your nodes must use public IP addresses.
+   This is due to a security requirement which forbids a public CA to issue certificates with a private IP address in the IP SAN.
 
 Given the obtained CSR (let's call it ``nethsm.csr``), we can then generate a certificate for it, ready to be installed. For example with ``openssl``:
 
@@ -184,15 +197,19 @@ Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls/cluster
 Clock Sync
 ^^^^^^^^^^
 
-Make sure every node has been provisioned with an accurate system time. If not, adjust their clocks with the ``/config/time`` endpoint.
+Make sure every node has been provisioned with an accurate system time, ideally
+using NTP/NTS rather than manual time setting. This can be done through `Time
+<administration.html#time>`__ and `NTS/NTP <administration.html#ntp-nts>`__
+configuration.
 
 Adding a New Node
 ~~~~~~~~~~~~~~~~~
 
-Adding a node to a cluster is done in two steps:
+Adding a node to a cluster is done in three steps:
 
-* Register the addition to the cluster (through any one of its members)
-* Tell the new node to join
+1. Register the addition to the cluster (through any one of its members)
+2. Tell the new node to join
+3. Once it has caught up, promote the node from learner to full-fledged member
 
 Configure a Backup Passphrase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -202,8 +219,6 @@ First make sure a backup passphrase is configured on the node that will be used 
 Registering a New Node
 ^^^^^^^^^^^^^^^^^^^^^^
 
-.. warning::
-   Registering a node immediately introduces a new node in the cluster, modifying the quorum threshold, even if the node has not actually joined yet. This can render the existing nodes inoperable until the new node has actually joined. Refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the `Operational Redundancy`_ section of this document.
 
 Have at hand the IP of the node that will join. The full *URL* (also called *peer URL* in ``etcd`` terminology) of that node will be ``https://<IP_of_node>:2380`` (e.g. ``https://192.168.1.1:2380``). The port **must** be 2380, so ensure any firewall between the nodes will allow TCP traffic on that port.
 
@@ -221,13 +236,15 @@ If successful, this returns a JSON body of the form:
          "name": "",
          "urls": [
            "https://172.22.1.3:2380"
-         ]
+         ],
+         "learner": true
        },
        {
          "name": "9ZVNM2MNWP",
          "urls": [
            "https://172.22.1.2:2380"
-         ]
+         ],
+         "learner": false
        }
      ],
      "joinerKit": "eyJiYWNrdXBfc2FsdCI6IkVlUzNPOEhHSEc5NnlNRktrdG1NZmc9PSIsInVubG9ja19zYWx0IjoiU3phMkEvYW13NlhxVWsrdHZMMmFubm5SZFlWd2ZQUjdpZ3IxK1RSdTdVaU14dmh3d0x2NWIvYVNkY2c9IiwibG9ja2VkX2RvbWFpbl9rZXkiOiIyMnNGVlkyelhQUVZ6S1pQenI3MmkwTk1WM3lmQ2k5dGwzeDhUbGtuOXM0WjFOd3JoZkRQTFZIVHp1WVl0YkQxaVZCMlovV3JHUHJlMXlwN0t4U0w4WkxjY2ZUTmUzcFg0WXE4YXNlY0wwREhXNGlIaXlPMlZnPT0ifQ=="
@@ -235,21 +252,52 @@ If successful, this returns a JSON body of the form:
 
 which contains information necessary for the new node to join the cluster. In particular, it lists all members of the cluster (where the member with an empty name is the new joiner). It also contains the domain key encrypted by both the unlock and backup passphrases — so a backup passphrase must have been configured before.
 
+.. note::
+   Notice in the response above that the new joiner is a "learner": it can now
+   connect to the cluster and receive data from it, but cannot participate until
+   it is promoted, which will be covered below.
+
+   While this concept of "learner" adds an additional step (promotion), it
+   allows for a safer operation of the cluster, as any issue with the new node
+   cannot cause instability to the whole cluster before its promotion.
+
 Keep that response for the next step.
 
-Actually Joining the Cluster
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Joining the Cluster as a Learner
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase of the node on which the new joiner was registered, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node that is expected to join.
 
-Assuming both the cluster and the node can reach each other, this will enact the actual join, wiping the data on the new joiner to instead sync its state with that of the cluster.
+.. warning::
+   The call to ``POST /cluster/join`` will hang until the new node is manually
+   promoted (see below). This is normal. When the call returns successfully, it
+   indicates that join and promotion have been successful.
 
-Depending on the networking and cluster conditions, this operation may take a few dozen seconds. If this operation fails immediately (e.g. the cluster was not reachable or authentication failed), this node's state will not be wiped and the join will be reverted. However as soon as a first join is successful, this operation is final and can only be reverted by a factory reset.
+Assuming both the cluster and the node can reach each other, this will enact the actual join, wiping the data on the new joiner to instead synchronize its state with that of the cluster. If this operation fails immediately (e.g. the cluster was not reachable or authentication failed), this node's state will not be wiped and the join will be reverted. However as soon as a first join is successful, this operation is final and can only be reverted by a factory reset.
 
-If this join is successful, the node will end up in a ``Locked`` state, and has to be unlocked with the unlock passphrase of the node that was used for registration. Afterwards the unlock passphrase can be changed (unlock passphrases remain node-specific and are not shared across nodes).
+At this stage the new node has joined as a *learner* node: it is synchronizing with
+the cluster but is not yet operable. On the other hand, any problem with the
+node at this stage will not cause issues to the cluster, making this operation
+safe.
 
-.. note::
-   Even after the join has succeeded, if the cluster's database is large or if the cluster is busy, it may take some time for the new joiner to synchronize its state fully. During that time, all nodes (including in particular the new joiner) may be less responsive or unresponsive. The new joiner in particular may initially return errors when trying to unlock it for example. In that case, give it some time and try again.
+The final step to complete the join is to promote the new node to a full-fledged
+member.
+
+Promoting the New Learner
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Depending on the networking and cluster conditions, it may take a while for the
+new member to catch up with the cluster. Once this is done, it can be
+promoted from learner to full member.
+
+.. warning::
+   Promoting a node incrases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the `Operational Redundancy <clustering.html#operational-redundancy>`__ section of this document). Ensure this new node has a stable connection to the cluster before promoting it.
+
+You can attempt to promote the new member with a call to ``POST /cluster/members/{MemberID}/promote``
+(refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__). If the learner hasn't
+caught up yet, then this will fail with HTTP code 412 and promotion should be attempted again later.
+
+If this promotion is successful, the node will now have fully joined the cluster and the earlier call to ``/cluster/join`` will have returned. The node ends up in a *Locked* state and has to be unlocked with the unlock passphrase of the node that was used for registration. Afterwards the unlock passphrase can be changed (unlock passphrases remain node-specific and are not shared across nodes).
 
 Adding a Witness Node
 ---------------------
@@ -261,7 +309,10 @@ You will need an environment with ``etcd`` v3.6 available, with an IPv4 address 
 
 Create an empty directory where ``etcd`` will store its data, and write down its path (we will use ``/var/etcd/data``). Ensure the user that will launch the process has permission to read and write to the directory.
 
-Transfer to the machine the CA certificate that is being used to authenticate nodes in the cluster. You should have created one in the `Creating and Installing a CA`_ section. We'll store it in ``/var/etcd/CA.pem``.
+Transfer to the machine the CA certificate that is being used to authenticate
+nodes in the cluster. You should have created one in the
+`Creating and Installing a CA <clustering.html#creating-and-installing-a-ca>`__ section. We'll
+store it in ``/var/etcd/CA.pem``.
 
 You will then need to create a certificate for the witness, and sign it with the CA so it can communicate with its peers. This can be done for example through ``openssl``:
 
@@ -281,7 +332,9 @@ Store the resulting ``witness.key`` and ``witness.pem`` in ``/var/etcd`` as well
 Register Witness to Cluster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Follow the normal instructions from the `Registering a New Node`_ section to signal the existing cluster the addition of a new member with the given URL(s).
+Follow the normal instructions from the
+`Registering a New Node <clustering.html#registering-a-new-node>`__
+section to signal the existing cluster the addition of a new member with the given URL(s).
 
 Write down the response from the cluster: it should contain the list of cluster members and a joiner kit (you won't need this part).
 
@@ -306,7 +359,9 @@ Assuming the NetHSM response is stored in a ``response.json`` file, you can gene
    export ETCD_INITIAL_CLUSTER=$(jq --raw-output '[.members[] | ["\(if .name == "" then "witness1" else .name end)=\(.urls[])"]] | flatten | join(",")' < response.json)
    export ETCD_INITIAL_ADVERTISE_PEER_URLS=$(jq --raw-output '.members[] | select(.name=="") | .urls | join(",")' < response.json)
 
-For example with the example response provided in the `Registering a New Node`_ section, you will have:
+For example with the example response provided in the
+`Registering a New Node <clustering.html#registering-a-new-node>`__
+section, you will have:
 
 .. code-block:: bash
 
@@ -356,7 +411,16 @@ Start ``etcd`` in your preferred way (manually, ``systemd`` service, container, 
    $ cd /var/etcd
    $ etcd --config-file witness.conf.yml
 
-You should see it start, join the cluster and catch up with the data. After some time, you should be able to check that it is healthy with the ``etcdctl`` client:
+You should see it start, join the cluster as a learner and catch up with the data.
+
+Promote the Witness
+~~~~~~~~~~~~~~~~~~~
+
+Finally and after some time, follow the normal instructions from the
+`Promoting the New Learner <clustering.html#promoting-the-new-learner>`__
+section to promote the witness. If this fails, try again later.
+
+After a successful promotion, you should be able to check that it is healthy with the ``etcdctl`` client:
 
 .. code-block:: bash
 
@@ -364,7 +428,8 @@ You should see it start, join the cluster and catch up with the data. After some
 
 This key should exist and contain "1".
 
-Make sure this process keeps running, as it is now a proper member of your cluster. If you need to decommission it, first properly remove it from the cluster (see the dedicated section). If its reachable IP changes, update its URL from the cluster.
+Make sure this process keeps running, as it is now a proper member of your cluster. If you need to decommission it, first
+`properly remove it from the cluster <clustering.html#removing-a-node-cleanly>`__. If its reachable IP changes, update its URL from the cluster.
 
 Operating a Cluster
 -------------------
@@ -394,7 +459,76 @@ As long as some part of the cluster is still meeting quorum, any of its members 
 
 You first have to know the ID of the node you want to remove, by listing all nodes through ``GET /cluster/members`` and looking for the right one.
 
-Then it can be removed by calling ``DELETE /cluster/members/<id>``. If the node in question was still healthy, this will isolate it from the rest of the cluster and render it inoperable.
+Then it can be removed by calling ``DELETE /cluster/members/<id>``. If the node in question was still healthy, this will isolate it from the rest of the cluster and transition it to the *Failed* state.
+
+.. note::
+   A node that has joined the cluster but not yet been promoted can also be
+   safely removed this way.
+
+Recovering a Failed Node
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+A node reporting a *Failed* state will refuse to answer most normal operations.
+It can still be shut-down, rebooted, reset, *diagnosed* or *isolated*.
+
+.. warning::
+   The existence of the *Failed* state, ``diagnose`` and ``force-new`` operations
+   only applies to version 5.0 and onward. In version 4.0, a node with a
+   lost quorum will stop responding to *all* requests. It *must* be factory-reset.
+
+Common causes for a node to be in the *Failed* state include:
+
+* A durably `lost quorum <clustering.html#the-quorum-is-durably-lost>`__.
+* A temporarily lost quorum (e.g. when adding a second node to the cluster, and
+  the second node has not joined yet).
+* ``etcd`` is currently restarting (e.g. because the certificates have changed, or
+  the network has been re-configured).
+* The cluster is under a very high load (e.g. during the restoration of a very
+  large backup).
+
+No matter the cause, the NetHSM will only transition to the *Failed* state after
+no less than a full minute of unsuccessful attempts to interact with its
+database. This is to avoid spurious transitions caused by very short
+instabilities.
+
+To help you understand which case your node is in, the ``GET /health/diagnose``
+endpoint remains available and returns information about the current status of
+``etcd`` and its database, including logs (refer to the API documentation).
+
+.. note::
+   If and when the database becomes available again (e.g. the quorum is restored
+   because the network issue has been solved), the NetHSM will automatically
+   transition out of the *Failed* state to the state it was in before (or resume
+   the normal boot sequence if it was booting), without any manual action
+   needed. It will take up to a minute after the issue has been resolved for the
+   cluster to stabilize, the HSM to detect the resolution and to change state.
+
+If you conclude that the failure is durable (e.g. lost quorum with no hope of
+resolving the underlying condition), you can either:
+
+* **Factory-reset** the node, which will erase all data, and restore a backup.
+* **Isolate** the node with the ``POST /cluster/force-new`` endpoint, which will
+  irreversibly forget all other cluster members, recover the ``etcd`` data
+  present on disk and reboot. If the underlying failure was cluster-related, the
+  node will follow the normal boot sequence and end up in either the *Locked* or
+  *Operational* state depending on the unattended boot setting.
+
+.. note::
+   If a node is isolated with ``force-new``, it will now be desynchronized with
+   the cluster: any new writes on it or the cluster cannot be reconciled. The
+   node can still re-join the cluster, but will lose all its local
+   modifications.
+
+The ``POST /cluster/force-new`` endpoint, which is only available in the
+*Failed* state, requires authentication as it is potentially destructive.
+However since HSM users and roles are not available in that state, the endpoint
+expects HTTPS clients to always authenticate with the ``unlock`` fake user, and
+the latest known unlock passphrase as the password.
+
+.. warning::
+   After an update from a version < 5.0, the ``force-new`` endpoint will be
+   always Unauthorized before the HSM is unlocked or the unlock passphrase is
+   changed at least once.
 
 Software Updates in Clusters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

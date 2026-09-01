@@ -1,18 +1,21 @@
 Production Image
 ----------------
 
-The production image is provided for production environments with high security demands.
-It requires an external etcd key-value store which is connected through an encrypted connection.
-The NetHSM process can be executed with hardware-based separation (KVM) and device-specific encryption.
-The image is distributed as OCI image and can be run locally with a compatible executor such as Docker and Podman.
+The production image is designed for environments with high security demands.
+Unlike the test container, the production image provides hardware-based separation (KVM) and device-specific encryption.
+Enterprise support plans are available exclusively for the production image.
+
+The image is distributed as an OCI image and can be run locally with a compatible executor such as Docker and Podman.
+It requires an external etcd key-value store, which is connected through an encrypted connection.
 
 The NetHSM production container is a product for paying customers only and can be purchased `here <https://www.nitrokey.com/contact>`__.
-The image can be obtained from Nitrokey NetHSM registry ``https://registry.git.nitrokey.com/distribution/nethsm>`` using the credentials provided after purchase.
+The image can be obtained from Nitrokey's NetHSM registry ``registry.git.nitrokey.com/distribution/nethsm/production``.
+Login credentials to the registry are provided after purchase and are to be used with `Docker login <https://docs.docker.com/reference/cli/docker/login/>`__ or `Podman login <https://docs.podman.io/en/latest/markdown/podman-login.1.html>`__.
 
 .. warning::
    The security of the NetHSM software container strongly depends on the platform's security.
    A compromised platform could easily compromise a NetHSM software container it executes.
-   In addition the TRNG is not existent so that the entropy used and provided by the NetHSM depends on the platform's entropy. 
+   In addition the TRNG is not existent so that the entropy used and provided by the NetHSM depends on the platform's entropy.
 
 Tagging Policy
 ^^^^^^^^^^^^^^
@@ -107,12 +110,12 @@ The container can be executed as follows.
    .. tab:: Docker
       .. code-block:: bash
 
-         $ docker run -ti --rm -p 8443:8443 registry.git.nitrokey.com/distribution/nethsm:latest
+         $ docker run -ti --rm -p 8443:8443 registry.git.nitrokey.com/distribution/nethsm/production:latest
 
    .. tab:: Podman
       .. code-block:: bash
 
-         $ podman run -ti --rm -p 8443:8443 registry.git.nitrokey.com/distribution/nethsm:latest
+         $ podman run -ti --rm -p 8443:8443 registry.git.nitrokey.com/distribution/nethsm/production:latest
 
 This will run NetHSM as a Unix process inside the container and expose the REST API on the port `8443` via the HTTPS protocol.
 
@@ -137,12 +140,12 @@ The container can be executed as follows.
    .. tab:: Docker
       .. code-block:: bash
 
-         $ docker run -ti --rm -p 8443:8443 --device /dev/net/tun --device /dev/kvm --cap-add=NET_ADMIN -e "MODE=unikernel" registry.git.nitrokey.com/distribution/nethsm:latest
+         $ docker run -ti --rm -p 8443:8443 --device /dev/net/tun --device /dev/kvm --cap-add=NET_ADMIN -e "MODE=unikernel" registry.git.nitrokey.com/distribution/nethsm/production:latest
 
    .. tab:: Podman
       .. code-block:: bash
 
-         $ podman run -ti --rm -p 8443:8443 --device /dev/net/tun --device /dev/kvm --cap-add=NET_ADMIN -e "MODE=unikernel" registry.git.nitrokey.com/distribution/nethsm:latest
+         $ podman run -ti --rm -p 8443:8443 --device /dev/net/tun --device /dev/kvm --cap-add=NET_ADMIN -e "MODE=unikernel" registry.git.nitrokey.com/distribution/nethsm/production:latest
 
 This will run NetHSM as a unikernel inside a KVM virtual machine.
 The container will expose the REST API, via the HTTPS protocol, on the interface `tap200` with the IP address `192.168.1.100` and port `8443`.

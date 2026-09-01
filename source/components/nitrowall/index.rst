@@ -4,7 +4,8 @@ NitroWall
 Getting Started
 ---------------
 
-.. warning:: Do **not** connect the NitroWall directly to your LAN as two DHCP servers will be actively distributing IPs within the network, confusing and disconnecting arbitrary devices in your network.
+.. warning::
+   Do **not** connect the NitroWall directly to your LAN as two DHCP servers will be actively distributing IPs within the network, confusing and disconnecting arbitrary devices in your network.
 
 1. Connect the NitroWalls LAN1 port by a patch cable with the Ethernet port of your laptop or PC
 

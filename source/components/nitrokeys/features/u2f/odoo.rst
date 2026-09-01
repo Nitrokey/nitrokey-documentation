@@ -3,7 +3,7 @@ Two-Factor Authentication For ERP Software Odoo
 
 .. product-table:: u2f fido2 nk3 passkey
 
-.. only:: comment 
+.. only:: comment
 
  .. contents:: :local:
 

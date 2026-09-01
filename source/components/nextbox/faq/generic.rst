@@ -33,14 +33,14 @@ Generic FAQ
 .. faq:: What is the typical power consumption?
 
   The minimum of 0,6A (3W) is rarely reached, in idle mostly around 1A (5W) and
-  more than 2A (10W) under higher loads. 
+  more than 2A (10W) under higher loads.
 
 .. faq:: How secure is the NextBox?
 
   Debian with frequent `unattended-upgrades` based security updates, a minimal
-  attack surface by ensuring that not a single unneccessary port is open 
-  are the main contributors to system security. **Make sure your Nextcloud users 
-  and passwords are on a high level, either with long-random passwords or a 
+  attack surface by ensuring that not a single unneccessary port is open
+  are the main contributors to system security. **Make sure your Nextcloud users
+  and passwords are on a high level, either with long-random passwords or a
   2-Factor-Authentification supported login method with e.g., a Nitrokey FIDO2.**
 
 
@@ -78,9 +78,8 @@ Generic FAQ
 
 .. faq:: How can I access my NextBox, if I get forwarded to the wrong URL?
 
-  You should open an incognito window and use: ``https://<your-local-ip>`` or ``http://<your-local-ip>`` 
+  You should open an incognito window and use: ``https://<your-local-ip>`` or ``http://<your-local-ip>``
   keep in mind that using HTTPS once in this browser session will not allow you to use HTTP again in this session,
   you can always open a new incognito window to avoid that.
 
 .. _nextbox.local: http://nextbox.local
-

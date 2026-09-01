@@ -24,7 +24,7 @@ System Requirements
 In order to create keys based on elliptic curves a Nitrokey Storage 2 /
 Pro 2 and GnuPG version 2.1.17 or higher are required.
 
-You can read Nitrokey’s OpenPGP Card version via ``gpg2 --card-status``:
+You can read Nitrokey's OpenPGP Card version via ``gpg2 --card-status``:
 
 .. code-block:: bash
 
@@ -34,7 +34,7 @@ You can read Nitrokey’s OpenPGP Card version via ``gpg2 --card-status``:
    Version ..........: 3.3
    ...
 
-The ‘Version’ field represents the version of the OpenPGP Card integrated in the Nitrokey — in this case it is 3.3 as needed for Elliptic-curve cryptography. OpenPGP Card version 2.2 doesn’t support ECC.
+The *Version* field represents the version of the OpenPGP Card integrated in the Nitrokey — in this case it is 3.3 as needed for Elliptic-curve cryptography. OpenPGP Card version 2.2 doesn't support ECC.
 
 You can learn about the installed version of GnuPG via ``gpg2  --version``. At least version 2.1.16 is required. The newest GnuPG version for Windows can be found `here <https://www.gpg4win.org/>`__ and the newest version for MacOS can be found `here <https://gpgtools.org/>`__. A suitable version of GnuPG is included in the GNU/Linux distributions Ubuntu (since 18.04), Debian (from Stretch onwards), Arch Linux, Fedora (from Release 26 onwards) and openSUSE Tumbleweed. At the end of this articles are instructions how to manually update GnuPG on older Ubuntu versions.
 
@@ -93,7 +93,7 @@ Then we create the key.
 
    gpg/card> admin
    Admin commands are allowed
-    
+
    gpg/card> generate
    Make off-card backup of encryption key? (Y/n) n
    Please note that the factory settings of the PINs are
@@ -136,7 +136,7 @@ Update of GnuPG on Ubuntu
 -------------------------
 
 The following steps are needed only if you are running a Ubuntu version older than 18.04. You can install GnuPG 2.1.18 on such system with the commands below. This involves newer Debian packages, which is the easiest option. This approach has been tested successfully on Ubuntu
-17.10 and propbably works on 16.04 as well. However, the occurence of problems during usage can‘t be excluded.
+17.10 and propbably works on 16.04 as well. However, the occurence of problems during usage can't be excluded.
 
 .. code-block:: bash
 

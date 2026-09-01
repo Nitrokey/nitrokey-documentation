@@ -37,27 +37,26 @@ Prepare New Hard-Disk
 1. Get your ``nextbox.conf`` file from your original hard-disk using ssh, it is located on your
    NextBox inside the ``/srv/nextbox`` directory
 2. Save your ``nextbox.conf`` on your computer
-3. Get the following script: https://raw.githubusercontent.com/Nitrokey/nextbox/master/assembly/simple_prepare_harddrive.sh 
+3. Get the following script: https://raw.githubusercontent.com/Nitrokey/nextbox/master/assembly/simple_prepare_harddrive.sh
 4. Make the script executable: ``chmod +x simple_prepare_harddrive.sh``
 5. Connect your new hard-disk to your computer
 6. Determine your hard-disk's device name (e.g., ``/dev/sdb``) and make sure
    none of its partitions are mounted
 
    .. warning::
-      **Again: think at least twice about the following step. Make sure you are referring to the 
+      **Again: think at least twice about the following step. Make sure you are referring to the
       correct hard-drive device (and NOT a partition, means** ``/dev/sdb1`` **is wrong).** The script will
-      decline to do the operation on ``/dev/sda`` as there are good chances this might be your 
-      system hard-disk, if you really need this you can comment out lines 23-26 inside the script. 
+      decline to do the operation on ``/dev/sda`` as there are good chances this might be your
+      system hard-disk, if you really need this you can comment out lines 23-26 inside the script.
 
 7. Run the script using the device name you have determined. Once prompted for
    your sudo-password please provide it to allow r/w access to the hard-drive:
 
    .. code:: shell-session
 
-      $ ./simple_prepare_harddrive.sh <device-name> 
-      
+      $ ./simple_prepare_harddrive.sh <device-name>
+
    Replace ``<device-name>`` with the respective device name, for example ``/dev/sdb``.
-   
 
 8. Watch the script's output for any errors, there should be none
 9. At the end of the script you will be asked to mount the created partition
@@ -69,7 +68,7 @@ Prepare New Hard-Disk
 Replacement Guide
 ^^^^^^^^^^^^^^^^^^
 
-1. Inside the NextBox Nextcloud App go to "System Settings" and switch it off your NextBox using 
+1. Inside the NextBox Nextcloud App go to "System Settings" and switch it off your NextBox using
    the "Poweroff" button
 2. Once the Status LED is shortly off (not entirely, thus very dark) and the Ethernet port LEDs are
    off you can unplug all cables from your NextBox
@@ -95,7 +94,7 @@ Replacement Guide
 9. Remove the USB-to-SATA cable from the hard-drive
 
    .. warning::
-      Avoid disconnecting the male-female USB connector to not change the position and bending 
+      Avoid disconnecting the male-female USB connector to not change the position and bending
       of the cable. If you have to: be careful to keep the force as small as possible onto the
       90° part of the USB extension cable.
 
@@ -105,8 +104,8 @@ Replacement Guide
 12. Fold the USB-to-SATA cable (in circles) into the open space behind the hard-disk.
 13. Finally assemble your NextBox again in reverse order using steps 5. to 3.
 
-On first boot after the assembly, give the NextBox enough time to boot and get all necessary 
+On first boot after the assembly, give the NextBox enough time to boot and get all necessary
 packages from the internet. **Make sure you have ethernet connected**. You should expect a changing
-status LED (yellow shall be first) quite fast (less than 2 minutes). If the status LED does not 
-change at all, it is likely that there is something wrong with your hard-drive wiring or 
+status LED (yellow shall be first) quite fast (less than 2 minutes). If the status LED does not
+change at all, it is likely that there is something wrong with your hard-drive wiring or
 contents.

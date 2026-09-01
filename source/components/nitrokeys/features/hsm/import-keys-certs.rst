@@ -17,7 +17,7 @@ This documentation covers only one specific use-case and should
 serve as an example for the overall workflow. For further information
 please read `this thread`_ and `this blog post`_.
 
-.. Warning::
+.. warning::
 
    This procedure will reset your Nitrokey HSM 2 device and
    all data on it will be deleted!
@@ -36,7 +36,7 @@ Preparation
 Importing Via The SCSH3 GUI
 ---------------------------
 
-Inside the unpacked directory you will find ``scsh3gui``, which can be started 
+Inside the unpacked directory you will find ``scsh3gui``, which can be started
 using ``bash scsh3gui`` (for windows double-click on: ``scsh3gui.cmd``).
 
 Once the SCSH3 Tool is open, you should see your Nitrokey HSM 2 inside the tree
@@ -46,7 +46,7 @@ view. Please follow these steps to import:
 
 * Right-click "Smartcard-HSM" -> create DKEK share
 
-  * Choose file location 
+  * Choose file location
 
   * Choose DKEK share password
 
@@ -76,16 +76,16 @@ view. Please follow these steps to import:
 
   * Enter number of shares -> 1
 
-  * Enter file location of DKEK share 
+  * Enter file location of DKEK share
 
   * Enter Password for DKEK share
 
   * Select PKCS#12 container for import (Enter password, if set)
-  
+
   * Select Key
-  
+
   * Select Name to be used (This is the Label used for the key on the device)
-  
+
   * Import more keys, if needed
 
 Once this is done, you can check that the keys have been successfully imported using:

@@ -17,7 +17,7 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    * **User PIN:** "123456"
    * **Administrator PIN:** "12345678"
    * **Firmware Password**: "12345678"
-   
+
    We strongly recommend to change these PINs/password to user-chosen values
    before using the Nitrokey.
 
@@ -49,7 +49,7 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    access to the contect of the Nitrokey. This is the PIN you will use a lot in
    every day use e.g. for decrypting messages, for unlocking your encrypted
    storage (NK Storage only) etc.
-  
+
    The user PIN can have up to 20 digits and other characters (e.g. alphabetic
    and special characters). But as the user PIN is blocked as soon three wrong
    PIN attempts were done, it is sufficiently secure to only have a 6 digits
@@ -62,7 +62,7 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    Nitrokey you probably won't need this PIN too often (e.g. if you want to add
    another password to the password safe of the Nitrokey Pro or Nitrokey
    Storage).
-  
+
    The admin PIN can have up to 20 digits and other characters (e.g. alphabetic
    and special characters). But as the admin PIN is blocked as soon three wrong
    PIN attempts were done, it is sufficiently secure to only have 8 digits PIN.
@@ -85,7 +85,7 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    password and would have unlimited attempts. Therefore you must choose a
    strong password. The default password is 12345678.
 
-.. faq:: How many keys can I store? 
+.. faq:: How many keys can I store?
 
    The Nitrokey Storage can store three RSA key pairs. All keys use the same
    identity but are used for different purposes: authentication, encryption and
@@ -166,7 +166,7 @@ non-volatile (encrypted) storage, the :doc:`Nitrokey Pro 2 FAQ <../pro/faq>` als
    for the entire key length. Therefore the TRNG is compliant to `BSI TR-03116`_.
 
    The TRNG provides about 40 kbit/s.
-    
+
 .. faq:: How can I use the encrypted mobile Storage?
 
    Prior of using the encrypted mobile storage you need to install and initialize the Nitrokey Storage and download the latest Nitrokey App.

@@ -5,7 +5,7 @@ With the NitroPad and NitroPC, malicious changes to the BIOS, operating system,
 and software can be easily detected. For example, if you left your
 NitroPad in a hotel room, you can use your Nitrokey to check if it has
 been tampered with while you were away. If an attacker modifies the
-NitroPad’s firmware or operating system, the Nitrokey will detect this
+NitroPad's firmware or operating system, the Nitrokey will detect this
 (instructions below).
 
 Each time you start the NitroPad or the NitroPC, you should - if possible - connect
@@ -37,6 +37,6 @@ described further below.
 
 .. tip::
    The NitroPad and NitroPC can also be started without the Nitrokey. If you
-   don’t have the Nitrokey with you, but are sure that the hardware has
+   don't have the Nitrokey with you, but are sure that the hardware has
    not been manipulated, you can boot your system without checking.
 

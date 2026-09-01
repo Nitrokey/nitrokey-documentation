@@ -131,7 +131,7 @@ Import a private key from a PEM file into NetHSM as follows.
       +==============+================================+
       | ``FILENAME`` | Private key file in PEM format |
       +--------------+--------------------------------+
-      
+
       **Optional Options**
 
       +----------------------------------------+----------------------------------------------------------+
@@ -245,7 +245,7 @@ Users can only delete keys in their `Namespace <administration.html#namespaces>`
       .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST delete-key myFirstKey
-      
+
       .. code-block:: shell-session
 
          Key myFirstKey deleted on NetHSM localhost:8443
@@ -279,7 +279,7 @@ Users can only move keys in their `Namespace <administration.html#namespaces>`__
       .. code-block:: shell-session
 
          $ nitropy nethsm --host $NETHSM_HOST move-key myFirstKey mySecondKey
-      
+
       .. code-block:: shell-session
 
          Key myFirstKey moved to mySecondKey on NetHSM localhost:8443
@@ -319,8 +319,8 @@ The list can be retrieved as follows.
 
          Keys on NetHSM localhost:8443:
 
-         Key ID          Type       Mechanisms                                      Operations	Tags
-         -----------     ----       ----------------------------------------------  ----------	----
+         Key ID          Type       Mechanisms                                      Operations  Tags
+         -----------     ----       ----------------------------------------------  ----------  ----
          myFirstKey      RSA        RSA_Decryption_PKCS1, RSA_Signature_PSS_SHA256  0
    .. tab:: REST API
       Information about the `/keys` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys>`__.
@@ -712,7 +712,7 @@ Data can be encrypted for a symmetric key as follows.
             -d "TmV0SFNNIHJ1bGV6enp6enp6enp6enp6enp6enp6IQo=" \
             -m AES_CBC \
             -iv "aYlwUI4A9zL9tts4dMAq+A=="
-      
+
       .. code-block:: shell-session
 
          Encrypted: Uk+9pgucdxTnbyIb/6+BDJef+HfRWhw+Eg3RcCvyHaU=

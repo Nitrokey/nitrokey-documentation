@@ -43,13 +43,13 @@ NitroPad T480
 *************
 
 .. figure:: /components/nitropad-nitropc/images/sealed-hardware/T480_sealed.jpg
-    :alt: T480
+   :alt: T480
 
 NitroPad T480s
 **************
 
 .. figure:: /components/nitropad-nitropc/images/sealed-hardware/T480s_sealed.jpg
-    :alt: T480s
+   :alt: T480s
 
 NitroPC Pro 2
 *************

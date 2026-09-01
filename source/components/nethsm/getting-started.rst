@@ -12,7 +12,7 @@ Please follow this process closely to verify that it has arrived safely.
 
 1. Check the two security seals on the box for any damage, peeling, or other alterations.
    One seal is located on the top of the box and one on the bottom.
-   
+
    .. figure:: ./images/sealing/Package_top.jpg
       :scale: 15
       :alt: Seal on the top of the box
@@ -50,7 +50,7 @@ Please follow this process closely to verify that it has arrived safely.
       :scale: 15
       :alt: Security seal on the end side of the NetHSM hardware
 
-       Security seal on the end side of the NetHSM hardware
+      Security seal on the end side of the NetHSM hardware
 
 If you notice that a seal has been altered, please contact us to arrange further action.
 
@@ -68,11 +68,11 @@ Please follow the two step process closely to install the NetHSM hardware.
    .. tabs::
       .. tab:: NetHSM 2
 
-         .. figure:: ./images/nethsm2-back-with-labels.png
+         .. figure:: ./images/getting-started/nethsm2-back-with-labels.png
             :scale: 100
             :alt: Back side of the server
 
-         Back side of the server
+            Back side of the server
 
          .. important::
 
@@ -85,7 +85,7 @@ Please follow the two step process closely to install the NetHSM hardware.
             :scale: 100
             :alt: Back side of the server
 
-         Back side of the server
+            Back side of the server
 
 2. Press the *Power Button* to turn on the NetHSM hardware.
    The *Reset Button* is only for a forced reboot of the NetHSM hardware.
@@ -98,7 +98,7 @@ Please follow the two step process closely to install the NetHSM hardware.
    .. tabs::
       .. tab:: NetHSM 2
 
-         .. figure:: ./images/nethsm2-front-with-labels.png
+         .. figure:: ./images/getting-started/nethsm2-front-with-labels.png
             :scale: 100
             :alt: Front side of the server
 
@@ -106,7 +106,7 @@ Please follow the two step process closely to install the NetHSM hardware.
 
       .. tab:: NetHSM 1
 
-         .. figure:: ./images/nethsm1-front-with-labels.png
+         .. figure:: ./images/getting-started/nethsm1-front-with-labels.png
             :scale: 100
             :alt: Front side of the server
 

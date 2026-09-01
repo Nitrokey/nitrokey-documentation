@@ -18,7 +18,7 @@ Nitrokey 3 FAQ
 
 .. faq:: Where is the right spot for NFC on my smartphone?
 
-   This is different for every smartphone model, you should find your 
+   This is different for every smartphone model, you should find your
    brand's respective hardware description to find this out.
 
    For the NitroPhones you can find the information `here <https://support.google.com/pixelphone/answer/7157629>`_.
@@ -60,7 +60,7 @@ Nitrokey 3 FAQ
 .. faq:: How many password can my Nitrokey 3 store?
 
    You can store up to 50 entries, one entry can contain login, password, comment and OTP.
-   
+
 .. faq:: Why does the Nitrokey 3 not show up in GnuPG?
 
    Make sure to install a firmware more recent than version 1.4.0.
@@ -103,7 +103,7 @@ Nitrokey 3 FAQ
    +-----------------+-------------------+----------------------+-----+
    | secp256k1       | ✓                 |                      |     |
    +-----------------+-------------------+----------------------+-----+
-   
+
    Since firmware release v1.7.0, OpenPGP uses a secure element (SE) by default.
    If the secure element is disabled, some key types can only be imported but not generated on the device.
 
@@ -114,8 +114,7 @@ Nitrokey 3 FAQ
 
 .. faq:: Is the Nitrokey 3 Common Criteria or FIPS certified?
 
-   The secure element (SE050M) is Common Criteria EAL 6+ security certified up to the OS 
-   level.
+   The secure element (SE050M) is Common Criteria EAL 6+ security certified up to the OS level.
 
    * `Certificate <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-23-0075446_2-Cert.pdf>`__
    * `Certification Report <https://commoncriteriaportal.org/files/epfiles/NSCIB-CC-0075446-CR2-1.pdf>`__
@@ -140,9 +139,15 @@ Nitrokey 3 FAQ
    Starting with version 1.7.0 the Secure Element should be automatically activated, if the OpenPGP Card
    was not used before. To check its activation state you can use: ``nitropy nk3 get-config opcard.use_se050_backend``.
    To activate it, if it isn't activated use: ``nitropy nk3 set-config opcard.use_se050_backend true`` or disable
-   it accordingly by passing ``false``. **Changing the backend from one to the other will always wipe all your data 
+   it accordingly by passing ``false``. **Changing the backend from one to the other will always wipe all your data
    inside the OpenPGP Card**
 
    .. note::
       If you are updating from a test version firmware, we recommend factory resetting the device before
       using the Nitrokey 3 with the SE050 in production environments.
+
+
+.. faq:: Which certificates are used?
+
+   You can find certificates used for the Nitrokey 3 `here <https://www.github.com/Nitrokey/nitrokey-3-firmware/tree/main/utils/certificates#nitrokey-certificates>`__.
+

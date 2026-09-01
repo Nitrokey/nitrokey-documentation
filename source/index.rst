@@ -2,52 +2,52 @@ Nitrokey Documentation
 ======================
 
 .. card:: Nitrokeys
-    :link: components/nitrokeys/index
-    :link-type: doc
+   :link: components/nitrokeys/index
+   :link-type: doc
 
-    Open-Source security tokens for your personal and business needs
+   Open-Source security tokens for your personal and business needs
 
 .. card:: Nitropad / NitroPC
-    :link: components/nitropad-nitropc/index
-    :link-type: doc
+   :link: components/nitropad-nitropc/index
+   :link-type: doc
 
-    Wide range of coreboot firmware based laptops and desktops 
+   Wide range of coreboot firmware based laptops and desktops
 
 .. card:: NitroPhone / NitroTablet
-    :link: components/nitrophone/index
-    :link-type: doc
+   :link: components/nitrophone/index
+   :link-type: doc
 
-    Top-tier hardware equipped with the most secure smartphone OS
+   Top-tier hardware equipped with the most secure smartphone OS
 
 .. card:: NextBox
-    :link: components/nextbox/index
-    :link-type: doc
+   :link: components/nextbox/index
+   :link-type: doc
 
-    Private, low-to-no administration home cloud - Nextcloud in your own hands
+   Private, low-to-no administration home cloud - Nextcloud in your own hands
 
 .. card:: NetHSM
-    :link: components/nethsm/index
-    :link-type: doc
+   :link: components/nethsm/index
+   :link-type: doc
 
-    The trustworthy, open hardware security module that just works
+   The trustworthy, open hardware security module that just works
 
 .. card:: NitroWall
-    :link: components/nitrowall/index
-    :link-type: doc
+   :link: components/nitrowall/index
+   :link-type: doc
 
-    Network PCs for firwalls, routing and a more secure home network
+   Network PCs for firwalls, routing and a more secure home network
 
 .. card:: NitroWall NW750
-    :link: components/nitrowall/nw750/index
-    :link-type: doc
+   :link: components/nitrowall/nw750/index
+   :link-type: doc
 
-    Never use open WiFis again, just get your own mobile Wifi
+   Never use open WiFis again, just get your own mobile Wifi
 
 .. card:: Software
-    :link: components/software/index
-    :link-type: doc
+   :link: components/software/index
+   :link-type: doc
 
-    Software and SDK documentation - NitrokeyApp2 is here!
+   Software and SDK documentation - NitrokeyApp2 is here!
 
 .. toctree::
    :maxdepth: 3

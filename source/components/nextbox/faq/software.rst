@@ -4,7 +4,7 @@ Software FAQ
 .. faq:: What kind of public key is expected for SSH access?
 
   An openssh style (public) key is expected. Depending on your operating system there are different
-  ways to determine your public key. One might be ``ssh-add -L``, another might be 
+  ways to determine your public key. One might be ``ssh-add -L``, another might be
   ``cat ~/.ssh/id_rsa.pub``. If you are using Putty, please see the `Putty documentation`_.
 
 .. faq:: Can the operating system be extended or configured manually?
@@ -15,13 +15,13 @@ Software FAQ
 
 .. faq:: Where can I see a changelog for the NextBox versions?
 
-  Currently only here: `Launchpad NextBox`_ 
+  Currently only here: `Launchpad NextBox`_
 
 .. faq:: How can I update the Operating System?
 
   There is no need to update the NextBox OS by hand. This is done using ``unattended-upgrades`` and
-  on top the *nextbox-daemon* will check for upgrades manually (as a redundant fallback solution) 
-  on every start. You are free to update your OS by hand using ``apt``, if you know what you are 
+  on top the *nextbox-daemon* will check for upgrades manually (as a redundant fallback solution)
+  on every start. You are free to update your OS by hand using ``apt``, if you know what you are
   doing.
 
 .. faq:: Is the NextBox running a 32bit or 64bit operating system?

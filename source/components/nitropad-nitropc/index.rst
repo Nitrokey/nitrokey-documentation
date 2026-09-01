@@ -17,7 +17,7 @@ General topics:
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+
    Heads <heads/index>
    Frequently Asked Questions <faq>
    Operating System Reinstallation <os-reinstallation>

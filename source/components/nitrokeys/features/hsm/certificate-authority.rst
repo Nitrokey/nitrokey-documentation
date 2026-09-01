@@ -56,7 +56,7 @@ Install the necessary tools:
    # Ubuntu
    sudo apt-get install opensc gnutls-bin
 
-For Windows download the official `OpenSC releases <https://github.com/OpenSC/OpenSC/releases>`__  
+For Windows download the official `OpenSC releases <https://github.com/OpenSC/OpenSC/releases>`__
 and make sure you install `p11tool as described <https://github.com/thales-e-security/p11tool>`__.
 Using the PowerShell most commands should be identical as long as both tools and their binaries
 are within your ``PATH``.
@@ -87,7 +87,7 @@ We start by generating the private key for the certificate authority directly on
      Usage:      verify, derive
      Access:     none
 
-Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we’ll need it later.
+Note the ID number (e0161cc8b6f5d66ac6835ecdecb623fc0506a675), we'll need it later.
 
 If you need the ID in the future, you can list the keys on the Nitrokey HSM:
 
@@ -242,7 +242,7 @@ We continue by generating the private key for the intermediate certificate autho
      Usage:      verify, derive
      Access:     none
 
-Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we’ll need it later.
+Note the ID number (bcb48fe9b566ae61891aabbfde6a23d4ff3ab639), we'll need it later.
 
 If you need the ID in the future, you can list the keys on the Nitrokey HSM:
 
@@ -283,7 +283,7 @@ Fill out the request information in <angle brackets> with information for your C
    OU                  = <your company> Certificate Authority
    CN                  = <your company> Intermediate CA
 
-Generate the certificate signing request for the intermediate CA from the intermediate CA’s private key. Use the private key ID value from earlier.
+Generate the certificate signing request for the intermediate CA from the intermediate CA's private key. Use the private key ID value from earlier.
 
 ::
 
@@ -525,7 +525,7 @@ You now have a certificate authority backed by an HSM.
 Sign a Server Certificate
 -------------------------
 
-Now that you have a certificate authority, you’d probably like to know how to use it.
+Now that you have a certificate authority, you'd probably like to know how to use it.
 
 Create a CSR in the normal method for your application. Proper creation of your certificate, including SAN, for your particular application is outside the scope of this document.
 
@@ -628,7 +628,7 @@ Create a config file to use the private key of the intermediate certificate to s
    keyUsage = critical, digitalSignature, keyEncipherment
    extendedKeyUsage = serverAuth
 
-Then run openssl to sign the server’s CSR.
+Then run openssl to sign the server's CSR.
 
 ::
 

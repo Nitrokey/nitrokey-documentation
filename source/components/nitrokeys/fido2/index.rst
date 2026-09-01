@@ -24,4 +24,3 @@ or check out the features:
 
 * `FIDO2 <../features/fido2/index.html>`_
 * `U2F <../features/u2f/index.html>`_
-   

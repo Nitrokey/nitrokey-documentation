@@ -14,7 +14,7 @@ This mini-howto assumes that the Nitrokey has been initialized and contains cryp
 
 -  `GPG4Win <https://gpg4win.org/>`__ or
    `pageant.exe <https://smartcard-auth.de/download-de.html>`__ with
-   Smartcard support from Dr. Peter Koch
+   Smartcard support from Dr. Peter Koch
 
 -  Optional: `OpenPGP
    Minidriver <https://wald.intevation.org/frs/?group_id=49&release_id=353>`__
@@ -69,7 +69,7 @@ There is surprisingly little to say about PuTTY itself.
 
 “Attempt authentication using Pageant” must be set, which is the default anyway.
 
-That’s it, as soon as you connect to the server while pageant is running and you have the keys, you will be asked for the password of the Crypto-Stick and can log in.
+That's it, as soon as you connect to the server while pageant is running and you have the keys, you will be asked for the password of the Crypto-Stick and can log in.
 
 **3) openpgp-minidriver (optional)**
 
