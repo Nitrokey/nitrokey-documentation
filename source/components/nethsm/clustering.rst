@@ -256,7 +256,7 @@ which contains information necessary for the new node to join the cluster. In pa
    Notice in the response above that the new joiner is a "learner": it can now
    connect to the cluster and receive data from it, but cannot participate until
    it is promoted, which will be covered below.
-    
+
    While this concept of "learner" adds an additional step (promotion), it
    allows for a safer operation of the cluster, as any issue with the new node
    cannot cause instability to the whole cluster before its promotion.
