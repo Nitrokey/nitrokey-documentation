@@ -14,6 +14,5 @@ Open the “overview” tab to automatically and manually update your device. Cl
 Manual (Local) Update
 ---------------------
 
-If you have the firmware file already on your computer, click “More Options” to manually update the device with your local firmware.
+If you have the firmware file already on your computer, click “Update with local Firmware” in the “overview” tab to update the device with your local firmware.
 
-.. figure:: ./images/local-firmware.png
