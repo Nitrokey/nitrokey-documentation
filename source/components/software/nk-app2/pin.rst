@@ -1,15 +1,15 @@
-PIN Managment
-=============
+PIN Management
+==============
 
 To enhance security, PINs can be created to restrict access to FIDO2 credentials and stored passwords.
 
 .. important::
    FIDO2, Passwords, PIV, and OpenPGP Card use separate PINs, which are managed individually.
 
-Prerequisite
+Requirements
 ------------
 
-- Nitrokey App 2 in version 2.3.1 or later.
+- Nitrokey App 2 in version 2.3.2 or later.
 
 PIN Management
 --------------
@@ -28,7 +28,7 @@ PIN Management
 Factory Reset
 -------------
 
-A factory reset witll reset the entire ``Passwords`` or ``FIDO2`` feature including all stored credentials. To do so proceed as follows:
+A factory reset will reset the entire ``Passwords`` or ``FIDO2`` feature including all stored credentials. To do so proceed as follows:
 
 1. Open the Nitrokey App 2.
 2. Select your Nitrokey device.
