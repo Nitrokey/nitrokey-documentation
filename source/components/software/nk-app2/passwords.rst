@@ -8,7 +8,7 @@ Password entries may consist of:
 * Comment (for e.g. a website reference, maximum length is 127 characters)
 * One-Time Passwords (HOTP and TOTP)
 * Hash-Based Message Authentication Code (HMAC)
-* Reverse HOTP (ReverseHOTP)
+* Reverse HOTP
 
 .. note::
 
@@ -65,11 +65,11 @@ With the Nitrokey App 2 and your Nitrokey you can use two different MFA:
 * TOTP or Time-based One-Time Password is a two-factor authentication code that changes at regular time intervals (e.g. 60 seconds). This is the standard typically used by websites.
 * HOTP or HMAC-based One-Time Password is a two factor authentication code that changes each time it's requested and validated. It is rarely used today.
 * HMAC is primarily used with KeePassXC.
-* ReverseHOTP is used to verify the authenticity of the device instead of authenticating you to a service.
+* Reverse HOTP is used to verify the authenticity of the device instead of authenticating you to a service.
 
 .. note::
 
-   Credentials of the type ReverseHOTP are listed and can be deleted in the "Passwords" tab, but they cannot be created with the Nitrokey App 2. The algorithm selection when adding a credential offers "Password only", "TOTP", "HOTP" and "HMAC" only.
+   Credentials of the type Reverse HOTP are listed and can be deleted in the "Passwords" tab, but they cannot be created with the Nitrokey App 2. The algorithm selection when adding a credential offers "Password only", "TOTP", "HOTP" and "HMAC" only.
 
 .. note::
 
@@ -83,17 +83,13 @@ Export and Import
 Stored credentials can be exported to a file and imported again, for example to move them to another Nitrokey.
 Both buttons are located in the "Passwords" tab: "Export" and "Import".
 
-.. note::
-
-   The buttons are labelled "Export" and "Import", while the dialog that opens still uses the wording "Backup" and "Restore", for example in the window title and in the status messages "Backup complete" and "Restore complete".
-
 Export
 ^^^^^^
 
 1. Insert your Nitrokey and click on the "Passwords" tab.
 2. Click on the "Export" button.
 3. In the dialog, click on "Begin". You are asked for the device PIN, unless it has already been entered earlier in this session. While the operation is running, the status shows "Working... Press your Nitrokey if it blinks."
-4. Choose where to save the file. It is stored in JSON format and named ``credential_backup.json`` by default.
+4. Choose where to save the file. It is stored in JSON format and named ``credential_export.json`` by default.
 5. Copy the passphrase shown in the dialog with the button next to it and keep it in a safe place. It is generated automatically and is required to import the file later.
 
 The dialog lists the results in three columns:
@@ -104,7 +100,7 @@ The dialog lists the results in three columns:
 
 .. important::
 
-   The export is encrypted by default. The "Cleartext" option disables the encryption and stores all credentials unprotected in the file. Only use it for interoperability with other password managers.
+   The export is encrypted by default. The "Cleartext" option disables the encryption and stores all credentials unprotected in the file. Only use it for compatibility with other password managers.
 
 Import
 ^^^^^^
@@ -119,11 +115,3 @@ The dialog lists the results in three columns:
 * **Successful** - credentials that have been imported
 * **Already exists** - credentials that were not imported because a credential with the same label already exists on the device
 * **Skipped** - credentials that were skipped during the import
-
-.. note::
-
-   If the file is encrypted and the passphrase is left empty, "Begin" does nothing and the status shows "The backup is encrypted. Please enter the passphrase." A passphrase entered for a file exported with the "Cleartext" option is ignored, indicated by "The backup is not encrypted. Ignoring passphrase."
-
-.. important::
-
-   If you cancel the PIN entry or enter a wrong PIN, the whole import is aborted and no credential is imported.

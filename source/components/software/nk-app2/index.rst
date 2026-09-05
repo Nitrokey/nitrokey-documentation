@@ -32,13 +32,13 @@ Getting Started
 
    *
 
-Welcome Page
-------------
+Welcome Screen
+--------------
 
-.. figure:: ./images/welcome_page.png
+.. figure:: ./images/welcome_screen.png
 
 
-The welcome page allows quick access to check the current app version, saving log files, and getting support.
+The welcome screen allows quick access to check the current app version, saving log files, and getting support.
 
 
 App Version
