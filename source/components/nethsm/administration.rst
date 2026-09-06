@@ -40,13 +40,13 @@ NetHSM can be used in *Attended Boot* mode and *Unattended Boot* mode.
 +-------------------+----------------------------------------------------------------------+
 | Boot Mode         | Description                                                          |
 +===================+======================================================================+
-| *Attended Boot*   | The NetHSM boots up into a _Locked_ state. The *Unlock Passphrase*   |
+| *Attended Boot*   | The NetHSM boots up into a *Locked* state. The *Unlock Passphrase*   |
 |                   | needs to be entered during each start, which is used to decrypt the  |
 |                   | *User Data*. For security reasons, this mode is recommended and it's |
 |                   | the default mode for a freshly provisioned system.                   |
 +-------------------+----------------------------------------------------------------------+
 | *Unattended Boot* | The system starts unattended without the need to enter the *Unlock*  |
-|                   | *Passphrase* into an _Operational_ state.                            |
+|                   | *Passphrase* into an *Operational* state.                            |
 |                   | Use this mode if your availability requirements can not be fulfilled |
 |                   | with *Attended Boot* mode.                                           |
 +-------------------+----------------------------------------------------------------------+
@@ -163,7 +163,7 @@ A NetHSM in *Operational* state can be locked again to protect it as follows.
    .. tab:: REST API
       Information about the `/lock` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_lock>`__.
 
-A NetHSM in *Locked* state can be unlocked as follows. While the NetHSM is in the _Locked_ state no other operations are possible. Afterwards the NetHSM is in an _Operational_ state.
+A NetHSM in *Locked* state can be unlocked as follows. While the NetHSM is in the *Locked* state no other operations are possible. Afterwards the NetHSM is in an *Operational* state.
 
 .. tabs::
    .. tab:: nitropy
