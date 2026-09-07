@@ -34,7 +34,7 @@ Manual Installation
 Installation from Source
 ------------------------
 
-To install Nitrokey App 2 from source, you need Python 3.10 or later and `pipx <https://pipx.pypa.io/latest/how-to/install-pipx.html#linux>`__.
+To install Nitrokey App 2 from source, you need Python 3.11 or later (up to 3.14) and `pipx <https://pipx.pypa.io/latest/how-to/install-pipx.html#linux>`__. The current release, 2.7.1, still works with Python 3.10.
 
 1. Execute ``pipx install nitrokeyapp`` to install Nitrokey App 2.
 2. :doc:`Set up the udev rules for nitropy <../nitropy/linux/udev>`
