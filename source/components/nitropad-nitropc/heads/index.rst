@@ -8,9 +8,7 @@ Heads
    :glob:
 
    Default Boot <default-boot>
-   Factory Reset Heads v1.4+ <factory-reset>
-   Factory Reset Heads v2.0+ <factory-reset-heads2>
-   Firmware Update v2.0+ <firmware-update>
-   Firmware Update v1.4+ <firmware-update-1.4>
+   Factory Reset <factory-reset-heads>
+   Firmware Update <firmware-update-heads>
    System Update <system-update>
 
