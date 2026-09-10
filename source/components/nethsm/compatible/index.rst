@@ -18,3 +18,4 @@ However, NetHSM can be integrated into almost any software via the `API or the P
    opendnssec.rst
    openssl.rst
    ssh.rst
+   vault.rst
