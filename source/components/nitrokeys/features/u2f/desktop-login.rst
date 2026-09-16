@@ -15,7 +15,7 @@ If you want to use your Nitrokey as an alternative login method instead (passwor
 
 If you want to login to you computer using `Nitrokey Pro
 2, <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ `Nitrokey Storage
-2 <https://www.nitrokey.com/files/doc/Nitrokey_Storage_factsheet.pdf>`__ and `Nitrokey Start <https://shop.nitrokey.com/shop/product/nk-sta-nitrokey-start-6>`__ you can visit the instructions available `here <../openpgp-card/desktop-login/pam.html>`_.
+2 <https://www.nitrokey.com/files/doc/Nitrokey_Storage_factsheet.pdf>`__ and `Nitrokey Start <https://www.nitrokey.com/files/doc/Nitrokey_Start_factsheet.pdf>`__ you can visit the instructions available `here <../openpgp-card/desktop-login/pam.html>`_.
 
 .. warning::
 
