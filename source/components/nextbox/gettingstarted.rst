@@ -53,7 +53,7 @@ Ready To Go
 -----------
 
 .. note::
-   Please make sure your Nextbox is always on and connected to the internet.
+   Please make sure your NextBox is always on and connected to the internet.
    A downtime can lead to it missing an update, and that can in the worst case
    break the device, since some Nextcloud updates don't support updates from older versions.
 

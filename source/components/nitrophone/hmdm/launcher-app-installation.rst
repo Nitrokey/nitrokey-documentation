@@ -8,7 +8,7 @@ Launcher App Installation
 
 .. important::
 
-   We recommand to backup your data before installing MDM.
+   We recommend to backup your data before installing MDM.
 
 Your NitroPhone needs to be connected to the internet during the configuration and you also need a PC.
 

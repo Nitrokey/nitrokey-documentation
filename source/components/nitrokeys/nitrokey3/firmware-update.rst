@@ -14,7 +14,8 @@ This guide describes how to update the firmware on the Nitrokey 3.
    applications/services.
 
 
-   **For firmware v1.0.1 and above user data is retained** during the update. Anyways, be sure to always have another device (or login method) registered with your service, if for some reason your data is not retained.
+   **For firmware v1.0.1 and above user data is retained** during the update.
+   Anyway, be sure to always have another device (or login method) registered with your service, if for some reason your data is not retained.
 
 How to Update
 -------------

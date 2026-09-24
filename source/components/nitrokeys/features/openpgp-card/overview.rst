@@ -32,10 +32,10 @@ If you do not have OpenPGP keys yet, you need to generate them first.
 
 -  `Generate keys locally <openpgp-keygen-backup.html>`_
 
-   Ccopy them to your Nitrokey device - this is the most flexible, expert option,
+   Copy them to your Nitrokey device - this is the most flexible, expert option,
    but only secure if your system is not compromised, because you can
    create a backup key outside your Nitrokey A similar description in
-   french can be found `here <https://xieme-art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-pro/>`__.
+   French can be found `here <https://xieme-art.org/post/importer-des-clefs-gnupg-dans-sa-nitrokey-pro/>`__.
 
 Importing Existing Keys
 -----------------------

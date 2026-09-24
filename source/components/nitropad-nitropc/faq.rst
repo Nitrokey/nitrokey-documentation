@@ -28,5 +28,5 @@ NitroPad, NitroPC FAQ
    they may have copied the LUKS header, i.e., the encryption key. Using this
    copy, one might decrypt the hard-disk even with a new password being set.
    This is why the re-ownership wizard proposes to re-encrypt the hard-disk,
-   which reencrypts in place ensuring the previously described scenario
+   which re-encrypts in place ensuring the previously described scenario
    cannot be applied.

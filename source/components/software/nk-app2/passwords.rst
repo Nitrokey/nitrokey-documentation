@@ -100,14 +100,16 @@ The dialog lists the results in three columns:
 
 .. important::
 
-   The export is encrypted by default. The "Cleartext" option disables the encryption and stores all credentials unprotected in the file. Only use it for compatibility with other password managers.
+   The export is encrypted by default.
+   The clear-text option disables the encryption and stores all credentials unprotected in the file.
+   Only use it for compatibility with other password managers.
 
 Import
 ^^^^^^
 
 1. Insert your Nitrokey and click on the "Passwords" tab.
 2. Click on the "Import" button and select the previously exported file.
-3. Enter the passphrase of the file (This is not needed for a file that was exported with the "Cleartext" option)
+3. Enter the passphrase of the file (This is not needed for a file that was exported with the clear-text option)
 4. Click on "Begin". You are asked for the device PIN, unless it has already been entered earlier in this session. While the operation is running, the status shows "Working... Press your Nitrokey if it blinks."
 
 The dialog lists the results in three columns:

@@ -23,7 +23,7 @@ Procedure
 .. tabs::
    .. tab:: Heads v2.5+
       1. Connect your Nitrokey to the NitroPad.
-      2. Turn on the NitroPad and interupt the automatic boot by pressing any key.
+      2. Turn on the NitroPad and interrupt the automatic boot by pressing any key.
       3. Select “Options”.
 
          .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/options.jpg
@@ -40,7 +40,7 @@ Procedure
             :alt: confirm
 
       6. The integrity of your setup will be tested.
-         Deppending on your reason to perform the reset this can fail; continue with "Ok" anyway.
+         Depending on your reason to perform the reset this can fail; continue with "OK" anyway.
 
          .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/confirm-integrity.jpg
             :alt: confirm integrity
@@ -89,7 +89,7 @@ Procedure
           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/tpm.jpg
              :alt: tpm password enter
 
-      12. Scan QR code with Phone to inport TOTP Seceret (optional) and hit Enter
+      12. Scan QR code with Phone to import TOTP Secret (optional) and hit Enter
 
           .. figure:: /components/nitropad-nitropc/images/factory-reset-heads2/totp.jpg
              :alt: qr code totp

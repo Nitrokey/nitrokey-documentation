@@ -147,7 +147,7 @@ You can install GnuPG 2.1.18 on such system with the commands below.
 This involves newer Debian packages, which is the easiest option.
 This approach has been tested successfully on Ubuntu
 17.10 and probably works on 16.04 as well.
-However, the occurence of problems during usage can't be excluded.
+However, the occurrence of problems during usage can't be excluded.
 
 .. code-block:: bash
 

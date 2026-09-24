@@ -52,5 +52,5 @@ In case of an update only the WAR file for the application server is required.
    If you encounter an HTTP error 404, restore the HMDM configuration file from the backup and restart the application server again.
 
 .. note::
-   If the version number has not been updated in the webpanel "about" section you may need to clear the cache of your browser.
+   If the version number has not been updated in the web panel *About* section you may need to clear the cache of your browser.
 

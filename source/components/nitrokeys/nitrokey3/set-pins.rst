@@ -26,7 +26,7 @@ The PIN for FIDO2 can be set with `Nitropy <../../software/nitropy/index.html>`_
 
 .. warning::
    The PIN has a retry counter of eight attempts. After eight attempts, the PIN is locked and the FIDO feature must be reset, which deletes all saved FIDO2 credentials.
-   To prevent accidental lock of the PIN, the device needs to be unplugged and rei-plugged every 3 attempts.
+   To prevent accidental lock of the PIN, the device needs to be unplugged and re-plugged every 3 attempts.
 
 .. note::
    The *FIDO2 PIN* must have a minimal length of 4 characters and maximal length of 63 characters.
@@ -131,7 +131,7 @@ The factory default for the *Admin PIN* is ``12345678``.
 
 .. note::
    The *Admin PIN* must have a minimal length of 8 characters and maximal length of 127 characters.
-   It can contain alphanumeric characters, including special characters such as punctation.
+   It can contain alphanumeric characters, including special characters such as punctuation.
 
 .. warning::
    The *Admin PIN* has a PIN retry counter of 3 attempts.
@@ -155,7 +155,7 @@ It is useful in situations when the user of the Nitrokey should be able to unblo
 
 .. note::
    The *Reset Code* must have a minimal length of 8 characters and maximal length of 127 characters.
-   It can contain alphanumeric characters, including special characters such as punctation.
+   It can contain alphanumeric characters, including special characters such as punctuation.
 
 .. note::
    Once the *Reset Code* is set it can not be disabled anymore. Disabling would require a reset of the OpenPGP Card application.
@@ -187,7 +187,7 @@ The factory default for the *PIN* is ``123456``.
 
 .. note::
    The *PIN* must have maximal length of 8 characters.
-   It can contain alphanumeric characters, including special characters such as punctation.
+   It can contain alphanumeric characters, including special characters such as punctuation.
 
 .. warning::
    The *PIN* has a PIN retry counter of 3 attempts.
@@ -204,7 +204,7 @@ The factory default for the *PUK* is ``12345678``.
 
 .. note::
    The *PUK* must have a maximal length of 8 characters.
-   It can contain alphanumeric characters, including special characters such as punctation.
+   It can contain alphanumeric characters, including special characters such as punctuation.
 
 .. warning::
    The *PUK* has a retry counter of 3 attempts.

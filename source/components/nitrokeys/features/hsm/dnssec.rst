@@ -4,6 +4,7 @@ DNSSEC
 .. spelling:word-list::
    Lisse
    Piet
+   Mens
 
 .. product-table:: hsm
 

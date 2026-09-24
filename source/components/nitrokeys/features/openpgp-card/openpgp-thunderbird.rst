@@ -141,7 +141,7 @@ To encrypt data and e-mails, a key pair consisting of a public key and a private
    avoid known prose or lyric. Also, no name or known term should be
    used.
 
-   **Allowed characters**: a-z A-Z 0-9 /.,;:-!?( )%+ (no umlauts ä,ü,ö,Ä,Ü,Ö or ß)
+   **Allowed characters**: ``a-z``, ``A-Z``, ``0-9``, ``/.,;:-!?( )%+`` (no umlauts ``ä``, ``ü``, ``ö``, ``Ä``, ``Ü``, ``Ö`` or ``ß``)
 
    **Poor Passwords**: ``qwerty123``, ``ILoveSusi3``, ``Password``
 

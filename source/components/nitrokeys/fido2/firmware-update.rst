@@ -4,7 +4,8 @@ Firmware Update
 This guide describes how to update the firmware on the Nitrokey FIDO2.
 
 .. important::
-   User Data is retained during firmware update. Anyways, be sure to **always** have another device (or login method) registered with your service, if for some reason your data is not retained.
+   User Data is retained during firmware update.
+   Anyway, be sure to **always** have another device (or login method) registered with your service, if for some reason your data is not retained.
 
 How to Update
 -------------
