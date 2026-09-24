@@ -11,7 +11,7 @@ Connect the NextBox with your smartphone
       :alt: imgsp1
       :scale: 30 %
 
-2. Cick on "Sign in".
+2. Click on "Sign in".
 
    .. figure:: /components/nextbox/images/gettingstarted/sp_2.jpg
       :alt: imgsp2

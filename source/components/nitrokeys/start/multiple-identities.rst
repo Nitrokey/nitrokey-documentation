@@ -1,13 +1,16 @@
 Multiple Identities
 ===================
 
+.. spelling:word-list::
+   CCID
+
 .. contents:: :local:
 
-The multiple identites feature allows to use 3 virtual smart cards in place of one, giving bigger flexibility in the every day use, as well as separation between user identities (business, personal etc.) or even allowing usage of it for more than one user (PINs are separate).
+The multiple identities feature allows to use 3 virtual smart cards in place of one, giving bigger flexibility in the every day use, as well as separation between user identities (business, personal etc.) or even allowing usage of it for more than one user (PINs are separate).
 
-All of the smart cards have separate data objects, meaning they all could have different keys, certificates stored, and PINs set. Identities do not intereact between each other.
+All of the smart cards have separate data objects, meaning they all could have different keys, certificates stored, and PINs set. Identities do not interact between each other.
 
-The virtual smart cards are identifyable by the first digit of the serial number, which is replaced by identity number for second (“1”) and third one (“2”). Serial number is not changed for the first identity.
+The virtual smart cards are identifiable by the first digit of the serial number, which is replaced by identity number for second (“1”) and third one (“2”). Serial number is not changed for the first identity.
 
 Usage
 -----

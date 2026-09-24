@@ -16,8 +16,7 @@ From this point you will have access to theses management options:
    :alt: img1
 
 .. note::
-
-   Some option may be shown but will not work with your Nitrokey eg. Fingerprints.
+   Some option may be shown but will not work with your Nitrokey, e.g. fingerprints.
 
 Windows
 -------
@@ -59,4 +58,3 @@ You can use the command line tool `nitropy <../../software/nitropy/index.html>`_
     test             Run some tests on all connected devices.
     validate-update  Validates the given firmware image and prints the...
     version          Query the firmware version of the device.
-

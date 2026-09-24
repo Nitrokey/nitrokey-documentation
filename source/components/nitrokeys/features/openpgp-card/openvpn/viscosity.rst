@@ -34,8 +34,7 @@ For more information on ``PKCS#11`` key management with OpenVPN, please consult 
 Usage
 -----
 
-1. Start Viscosity and create a new connection “openVPN” (you can name
-   it as you wish)
+1. Start Viscosity and create a new connection “OpenVPN” (you can name it as you wish)
 
     .. figure:: images/viscosity/viscosity-1.jpg
        :alt: img1
@@ -50,8 +49,7 @@ Usage
 3. Add your server's IP address and configure the port according to your
    configuration.
 
-4. Under authentication, In ``Type`` scroll down to
-   ``SSL/TLS Client (PKCS11)``
+4. Under authentication, In ``Type`` scroll down to ``SSL/TLS Client (PKCS11)``
 
 5. Select the CA file for your connection
 
@@ -66,7 +64,7 @@ Usage
    specified, and for instance we will use ``OpenSC``.
 
     On macOS, the most common location for modules to be found is in the
-    /usr/lib directory. Please refer to the documentation included with your driver software for the location to use. OpenSC's module can be found at ``/Library/OpenSC/lib/opensc-pkcs11.so``
+    ``/usr/lib`` directory. Please refer to the documentation included with your driver software for the location to use. OpenSC's module can be found at ``/Library/OpenSC/lib/opensc-pkcs11.so``.
 
     On Windows, the most common location for libraries is either in ``C:\Program Files`` or ``C:\Windows\System32``. OpenSC libraries are generally located at ``C:\Program Files\OpenSC Project\OpenSC\pkcs11``. There may be more than one library available here, you can try each one or simply add both.
 

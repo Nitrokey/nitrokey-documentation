@@ -1,6 +1,10 @@
 Nitrokey Pro 2 FAQ
 ==================
 
+.. spelling:word-list::
+   comio
+   scdrand
+
 .. faq:: Which Operating Systems are supported?
 
    Windows, Linux and macOS.

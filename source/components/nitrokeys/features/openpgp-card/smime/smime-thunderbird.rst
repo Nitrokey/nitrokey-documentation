@@ -34,7 +34,7 @@ Click on “Security Devices” to import the right PCKS11 module. Click on “L
 
 
 
-On Windows the right file lays under “C:\Windows\System32\opensc-pkcs11.dll”. On macOS and GNU/Linux the file should be in “/lib/pkcs11/opensc-pkcs11.so” or “/usr/lib/pkcs11/opensc-pkcs11.so” or alike. Press “OK” twice and you are back in security section of the account settings. Now you can actually choose a certificate on the upper part of the window. You should get asked for a PIN to unlock your Nitrokey. Please type in your User PIN.
+On Windows, the correct file is ``C:\Windows\System32\opensc-pkcs11.dll``. On macOS and GNU/Linux the file should be ``/lib/pkcs11/opensc-pkcs11.so`` or ``/usr/lib/pkcs11/opensc-pkcs11.so`` or something similar. Press “OK” twice and you are back in security section of the account settings. Now you can actually choose a certificate on the upper part of the window. You should get asked for a PIN to unlock your Nitrokey. Please type in your User PIN.
 
 .. figure:: images/smime-thunderbird/3.png
    :alt: img3

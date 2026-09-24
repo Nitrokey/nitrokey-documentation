@@ -1,11 +1,14 @@
 Backup and Restore
 ==================
 
+.. spelling:word-list::
+   Storages
+
 .. contents:: :local:
 
 
-The NextBox can be backupped and restored from within the NextBox Nextcloud App. In order to
-execute a backup or restore operation you need to have a storage device attached to your NextBox.
+The NextBox can be backed up and restored from within the NextBox Nextcloud App.
+In order to execute a backup or restore operation you need to have a storage device attached to your NextBox.
 
 To enable backup and restore onto a storage device please follow these steps:
 
@@ -55,15 +58,9 @@ Restore
 
 3. Click "Start Restoring now", the restore process will begin immediately.
 
-Depending on the backupped Nextcloud version after the restore process you will be asked to run
-the upgrade process for Nextcloud.
-
+Depending on the backed up Nextcloud version, after the restore process you will be asked to run the upgrade process for Nextcloud.
 
 .. hint::
    All configurations and settings of the NextBox and the Nextcloud instance will be restored, thus
    there might be changes on how you access your NextBox, if the restored Remote Access configuration
    is not identical to the current one.
-
-
-
-

@@ -52,54 +52,54 @@ Instructions
 
 1. Install dependencies
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-       $ sudo apt install scdaemon opensc gnupg2
+      $ sudo apt install scdaemon opensc gnupg2
 
 2. Create smartcard-luks directory
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-       $ mkdir smartcard-luks && cd smartcard-luks
+      $ mkdir smartcard-luks && cd smartcard-luks
 
 3. Download the smartcard-luks-script
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-       $ wget https://raw.githubusercontent.com/daringer/smartcard-key-luks/main/smartcard-key-luks
-       $ sudo chmod +x smartcard-key-luks
+      $ wget https://raw.githubusercontent.com/daringer/smartcard-key-luks/main/smartcard-key-luks
+      $ sudo chmod +x smartcard-key-luks
 
 4. Export the public key
 
-    To export your public key from GnuPG's keyring:
+   To export your public key from GnuPG's keyring:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-       $ gpg2 --armor --export KeyID > pubkey.asc
+      $ gpg2 --armor --export KeyID > pubkey.asc
 
-    If you already have uploaded a public key to a keyserver (or have it stored
-    somewhere else), you should retrieve it in the way you are most comfortable
-    with, and proceed to step 5.
+   If you already have uploaded a public key to a keyserver (or have it stored
+   somewhere else), you should retrieve it in the way you are most comfortable
+   with, and proceed to step 5.
 
 5. Determine and verify the correct LUKS device name for your root-partition:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-       $ cat /etc/crypttab
-       # if there is only one entry, you want the 1st column of this entry
+      $ cat /etc/crypttab
+      # if there is only one entry, you want the 1st column of this entry
 
-    .. hint::
-       Usually this should be something like `nvme0n1p3_crypt` (for NitroPC) or
-       `sda3_crypt` (for NitroPads).  You can and should crosscheck that the UUID
-       referred inside `/etc/crypttab` is the designated partition by checking the
-       symbolic link inside `/dev/disks/by-uuid/`.
+   .. hint::
+      Usually this should be something like `nvme0n1p3_crypt` (for NitroPC) or
+      `sda3_crypt` (for NitroPads).  You can and should crosscheck that the UUID
+      referred inside `/etc/crypttab` is the designated partition by checking the
+      symbolic link inside `/dev/disks/by-uuid/`.
 
 6. Execute the script with the luks device name (e.g., `nvme0n1p3_crypt`) and
    `pubkey.asc` as arguments.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-       $ sudo ./smartcard-key-luks nvme0n1p3_crypt pubkey.asc
+      $ sudo ./smartcard-key-luks nvme0n1p3_crypt pubkey.asc
 
 Once, you run the script with the OpenPGP public key as argument, it
 automatically sets up a new LUKS secret, encrypts it against that public key,
@@ -208,12 +208,7 @@ Re-run setup above.
 Unlocking LUKS2 with X509 certificate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-SystemD supports unlocking a LUKS2 partition using a X509 certificate, find a
+systemd supports unlocking a LUKS2 partition using a X509 certificate, find a
 great blog entry on how to realize this at the `Personal blog of Vladimir Timofeenko`_
 
-
 .. _Personal blog of Vladimir Timofeenko: https://vtimofeenko.com/posts/unlocking-luks2-with-x509-certificate-on-nitrokey-storage/
-
-
-
-

@@ -27,4 +27,4 @@ User Password Reset
 5. Change the password `passwd user` (where "user" is your Qubes login)
 6. Type in a new password and confirm
 7. Type `exit` to exit the chroot
-8. Type `reboot` and then boot as usal without the installation medium
+8. Type `reboot` and then boot as usual without the installation medium

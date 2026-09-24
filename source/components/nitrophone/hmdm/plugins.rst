@@ -1,7 +1,10 @@
 Installation and Update of Plugins
 ==================================
 
-Plugins are special apps that gives you more fonctionnalities.
+.. spelling:word-list::
+   HMDM
+
+Plugins are special apps that add new functions.
 
 You can install and update plugins the same way you install apps.
 
@@ -34,11 +37,11 @@ Update Plugins
 .. note::
    You need to be an administrator in order to update an existing plugin.
 
-1. Download the new APK version of your desied plugin.
+1. Download the new APK version of your desired plugin.
 
 2. In your HMDM web panel go to the Applications tab.
 
-3. Search for the application name you wish to update and click on the most left button (version) on the action collumn.
+3. Search for the application name you wish to update and click on the most left button (version) on the action column.
 
 4. In the version menu click on Add and browse the previously downloaded APK and add it.
 
