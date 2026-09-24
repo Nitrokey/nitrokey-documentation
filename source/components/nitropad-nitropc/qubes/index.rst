@@ -62,7 +62,7 @@ changed by you:
    To update use the Update Manager as described in the `Qubes Documentation <https://www.qubes-os.org/doc/how-to-update/>`__.
 
 .. note::
-   Specifically for NitroPad V54 the Qubes 4.2.3 installation image contains a bug that limits to use the highest screen resoultion only.
+   Specifically for NitroPad V54 the Qubes 4.2.3 installation image contains a bug that limits to use the highest screen resolution only.
    This is fixed after you update dom0 and reboot.
 
 Behavior After a System Update

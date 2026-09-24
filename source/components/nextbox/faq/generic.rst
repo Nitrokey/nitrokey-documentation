@@ -38,7 +38,7 @@ Generic FAQ
 .. faq:: How secure is the NextBox?
 
    Debian with frequent `unattended-upgrades` based security updates, a minimal
-   attack surface by ensuring that not a single unneccessary port is open
+   attack surface by ensuring that not a single unnecessary port is open
    are the main contributors to system security. **Make sure your Nextcloud users
    and passwords are on a high level, either with long-random passwords or a
    2-Factor-Authentification supported login method with e.g., a Nitrokey FIDO2.**

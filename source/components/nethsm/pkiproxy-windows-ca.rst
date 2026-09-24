@@ -1,6 +1,10 @@
 Windows Active Directory Certificate Services (ADCS) with PKI Proxy
 -------------------------------------------------------------------
 
+.. spelling:word-list::
+
+   SPN
+
 This document describes the configuration of Windows Active Directory Certificate Services (ADCS) with PKI Proxy and NetHSM.
 
 Prerequisites
@@ -253,7 +257,7 @@ Windows ADCS Configuration
        This isn't necessary as the PKI Proxy KSP doesn't require any additional authentication for using the private key.
 
 4. After the configuration wizard has finished, open the **Certification Authority** from the **Start menu** or by pressing **Windows Key + R** on your keyboard and entering ``certsrv.msc``.
-   You can verify that the certificate authority service started correctly when you see a green dot with a white checkmark icon on the name of the certification authority.
+   You can verify that the certificate authority service started correctly when you see a green dot with a white check-mark icon on the name of the certification authority.
 
 .. important::
    The availability of the certification authority depends on the availability of the private key and certificate.

@@ -7,7 +7,7 @@ OpenVPN Configuration with Easy-RSA
    :depth: 2
 
 .. note::
-   This guide is work-in-progress, and will be updated accordinlgy. Please take this status into consideration.
+   This guide is work-in-progress, and will be updated accordingly. Please take this status into consideration.
 
 This guide shows how to configure OpenVPN clients to login using a `Nitrokey Pro
 2 <https://shop.nitrokey.com/shop/product/nk-pro-2-nitrokey-pro-2-3>`__ or a `Nitrokey Storage

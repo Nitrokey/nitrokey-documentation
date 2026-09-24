@@ -1,11 +1,15 @@
 IPSec
 =====
 
+.. spelling:word-list::
+
+   strongSwan
+
 .. product-table:: nk3 storage start pro hsm
 
 .. contents:: :local:
 
-`Strong Swan <https://www.strongswan.org/>`__ works using the `PKCS#11 driver <https://www.nitrokey.com/documentation/applications#pkcs11>`__. Basically follow these steps:
+`strongSwan <https://www.strongswan.org/>`__ works using the `PKCS#11 driver <https://www.nitrokey.com/documentation/applications#pkcs11>`__. Basically follow these steps:
 
 1. Generate a key on Nitrokey via pkcs11-tool. In this example it's a 4096 bit RSA key.
 
@@ -35,7 +39,7 @@ IPSec
 
       $ pkcs11-tool --module /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so -l -y cert -w user@email.com-staging-cert.der --id 10 --label 'Staging Access'
 
-6. Configure Strongswan to load opensc-pkcs11 module then to load the certificate on Nitrokey. Edit /etc/strongswan.d/charon/pkcs11.conf and add the following module:
+6. Configure strongSwan to load OpenSC's PKCS#11 module then to load the certificate on Nitrokey. Edit ``/etc/strongswan.d/charon/pkcs11.conf`` and add the following module:
 
    .. code-block:: text
 
@@ -46,6 +50,6 @@ IPSec
       }
 
 
-7. Initiate the VPN connection via IPSec/Strongswan, then prompt for Nitrokey PIN
+7. Initiate the VPN connection via IPSec/strongSwan, then prompt for Nitrokey PIN
 
 8. VPN is now connected

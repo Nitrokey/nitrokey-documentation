@@ -291,7 +291,7 @@ new member to catch up with the cluster. Once this is done, it can be
 promoted from learner to full member.
 
 .. warning::
-   Promoting a node incrases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the `Operational Redundancy <clustering.html#operational-redundancy>`__ section of this document). Ensure this new node has a stable connection to the cluster before promoting it.
+   Promoting a node increases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the `Operational Redundancy <clustering.html#operational-redundancy>`__ section of this document). Ensure this new node has a stable connection to the cluster before promoting it.
 
 You can attempt to promote the new member with a call to ``POST /cluster/members/{MemberID}/promote``
 (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__). If the learner hasn't
@@ -514,9 +514,9 @@ resolving the underlying condition), you can either:
   *Operational* state depending on the unattended boot setting.
 
 .. note::
-   If a node is isolated with ``force-new``, it will now be desynchronized with
+   If a node is isolated with ``force-new``, it will desynchronized with
    the cluster: any new writes on it or the cluster cannot be reconciled. The
-   node can still re-join the cluster, but will lose all its local
+   node can still rejoin the cluster but will lose all its local
    modifications.
 
 The ``POST /cluster/force-new`` endpoint, which is only available in the

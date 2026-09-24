@@ -1,6 +1,11 @@
 Nitrokey App 1
 ==============
 
+.. spelling:word-list::
+
+   AppImage
+   scdaemon
+
 The Nitrokey App 1 is a graphical application designed to manage Nitrokey Pro and Nitrokey Storage devices. For Nitrokey 3 devices, please use `Nitrokey App 2 <../nk-app2/>`__.
 
 Available languages: English, German, French, Italian, Polish, and Arabic. Language change requires application restart.
@@ -22,7 +27,7 @@ Linux
 
 .. dropdown:: Arch Linux
 
-   The Nitrokey App is included in the official extra repo.
+   The Nitrokey App is included in the official extra repository.
 
    .. code-block:: bash
 
@@ -87,7 +92,7 @@ Linux
 
 .. dropdown:: AppImage
 
-   AppImage provide everything that is needed to get executed. It works like a .exe on Windows and does not need to be installed.
+   AppImage provide everything that is needed for execution and does not need to be installed.
    See `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__ for our latest Nitrokey-App.AppImage file. After downloading the file, you need to make the file executable.
    You can do this by right-clicking on the file and choosing "Properties". Look for the option to make the file executable there.
 
@@ -113,7 +118,7 @@ Linux
       in a terminal and follow the instruction below.
 
    The latest Nitrokey App is available as Snap package which is available for many Linux distributions and which ensures that you always have the latest version installed.
-   Snapd is already installed on Ubuntu, for distros like Arch, Debian, Fedora, or Gentoo you need to `install snapd <https://snapcraft.io/>`__ first. As soon as you have Snap installed you can open a terminal and type
+   Snap is already installed on Ubuntu, for distributions like Arch, Debian, Fedora, or Gentoo you need to `install snapd <https://snapcraft.io/>`__ first. As soon as you have Snap installed you can open a terminal and type
 
    .. code-block:: bash
 
@@ -122,12 +127,12 @@ Linux
    to install Nitrokey App. You now can use it as usual, e.g. by pressing Alt + F2 and entering "nitrokey-app".
 
    **Troubleshooting**
-   In case you get the error "failed to create user data directory. errmsg: Permission denied" during starting the Nitrokey App, it may is because your home directory is encrypted. In this case, apply one of these fixes `[1] <https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/7>`__ `[2] <https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/8>`__.
+   In case you get the error ``failed to create user data directory. errmsg: Permission denied`` during starting the Nitrokey App, it may is because your home directory is encrypted. In this case, apply one of these fixes `[1] <https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/7>`__ `[2] <https://bugs.launchpad.net/ubuntu/+source/snapd/+bug/1592696/comments/8>`__.
 
 Windows
 *******
 
-Download .exe file from `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
+Download the ``.exe`` file from `here <https://github.com/Nitrokey/nitrokey-app/releases/latest>`__.
 
 macOS
 *****

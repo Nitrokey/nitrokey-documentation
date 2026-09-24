@@ -30,7 +30,7 @@ It is necessary to already have keys generated on the Nitrokey, as the authentic
 2. Now you have to add a line to ``/etc/poldi/localdb/users`` which contains the following information ``<YourApplicationID> <YourUsername>``.
    This could look like ``D00600012401020000000000xxxxxxxx nitrokeyuser``. Now dump the public key from the Nitrokey into Poldi's local database:
 
-   This could look like ``D00600012401020000000000xxxxxxxx nitrokeyuser``. Now dump the public key from the Nitrokey into Poldis local db:
+   This could look like ``D00600012401020000000000xxxxxxxx nitrokeyuser``. Now dump the public key from the Nitrokey into Poldi's local db:
 
    .. code-block:: bash
 

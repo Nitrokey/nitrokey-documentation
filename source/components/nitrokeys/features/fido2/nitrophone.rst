@@ -1,6 +1,10 @@
 FIDO2 on Android / NitroPhone
 *****************************
 
+.. spelling:word-list::
+
+   Authnkey
+
 .. Note::
    For more information about FIDO2, FIDO2 U2F and Passkeys, check our `blog article  <https://www.nitrokey.com/blog/2022/fido2-webauthn-passkeys-2022-and-2023>`_.
 

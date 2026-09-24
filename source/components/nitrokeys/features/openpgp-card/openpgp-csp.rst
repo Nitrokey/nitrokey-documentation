@@ -23,7 +23,7 @@ You may want to install the driver on the server as well for being able to enfor
 Creating Certificate Template on Server Side
 --------------------------------------------
 
-On Active Directory Server open certsrv.msc to manage your certificate templates. Right click on **Certificate Templates** and choose **Manage**.
+On Active Directory Server open ``certsrv.msc`` to manage your certificate templates. Right click on **Certificate Templates** and choose **Manage**.
 
 .. figure:: images/openpgp-csp/1.png
    :alt: img1
@@ -57,7 +57,7 @@ Then go to *Extensions*, there you edit the applications guideline and add *Secu
 Request Certificate on Client (Domain Member)
 ---------------------------------------------
 
-To request a certificate for a domain member, you have to open certmgr.msc. Right click on folder **Personal** -> **Certificates** and click
+To request a certificate for a domain member, you have to open ``certmgr.msc``. Right click on folder **Personal** -> **Certificates** and click
 **All Tasks** -> **Request New Certificate** and choose the template you created on the AD.
 
 .. figure:: images/openpgp-csp/8.png

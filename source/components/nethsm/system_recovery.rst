@@ -43,7 +43,7 @@ The system recovery can be performed as follows.
             Some USB drives are incompatible with the NetHSM.
             This results in the NetHSM not recognizing them as a boot media.
             In case the NetHSM does not boot from the connected USB drive, try a different USB drive model.
-            Best results are achieved with drives that have samller capacities and USB 2.0 interface.
+            Best results are achieved with drives that have smaller capacities and USB 2.0 interface.
 
       5. Optionally: Connect a keyboard and monitor with the NetHSM.
       6. Make sure the system is turned off, but connected to power.
