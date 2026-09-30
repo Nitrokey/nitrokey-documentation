@@ -48,13 +48,21 @@ Mageia
 
 You can install nitropy along with all other required dependencies by using::
 
-    $ sudo dnf install python python3-pip && pip install --user pipx && pipx ensurepath && pipx install pynitrokey
+    $ sudo dnf install python  python3-pip && pip install --user pipx && pipx ensurepath && pipx install pynitrokey
 
 If you have already installed Python on your system, you can simply run::
 
     $ sudo dnf install python3-pip && pip install --user pipx && pipx ensurepath && pipx install pynitrokey
 
 After logging our or restarting your system, nitropy will now be available.
+
+For Mageia 10 that comes with python 3.13 you need also to install these packages: 
+
+    $ sudo dnf install python3-devel lib64udev-devel lib64pcsclite-devel
+
+And to be able to use PIV, you also need to use this command:
+
+    $ pipx install pynitrokey[pcsc]
 
 Installation on other distributions/operating systems
 -----------------------------------------------------
