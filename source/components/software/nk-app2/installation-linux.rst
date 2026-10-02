@@ -17,11 +17,6 @@ The preferred installation method for Linux is through `Flathub <https://flathub
 4. Start Nitrokey App2 using either ``flatpak run com.nitrokey.nitrokey-app2`` or use the created entry in your start-menu
 
 
-.. note::
-   Currently updating a Nitrokey 3 Mini is not supported through the flatpak package. This will be
-   fixed in one of the next releases.
-
-
 Manual Installation
 -------------------
 
