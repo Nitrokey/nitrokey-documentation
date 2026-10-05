@@ -577,7 +577,7 @@ fields.
 
          Updated the NTP configuration for NetHSM localhost:8443
    .. tab:: REST API
-      Information about the `/config/ntp` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_config-ntp>`__.
+      Information about the `/config/ntp` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-ntp>`__.
 
 Metrics
 ~~~~~~~

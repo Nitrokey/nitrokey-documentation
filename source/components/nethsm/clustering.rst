@@ -151,7 +151,7 @@ In the following, we assume all nodes are freshly provisioned and operational.
 Networking
 ^^^^^^^^^^
 
-Nodes must first be reconfigured with their expected final network configuration using the ``/config/network`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__).
+Nodes must first be reconfigured with their expected final network configuration using the ``/config/network`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-network>`__).
 
 Creating and Installing a CA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -167,7 +167,7 @@ For example, a minimal CA can be created with ``openssl``:
 
 This CA now has to be installed on every node.
 
-To do this, first generate a Certificate Signing Request (CSR) from the node with the ``/config/tls/csr.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__).
+To do this, first generate a Certificate Signing Request (CSR) from the node with the ``/config/tls/csr.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-csr-pem>`__).
 
 .. note::
    To properly authenticate nodes, the clustering backend (etcd) expects that each node has a certificate with a properly filled Subject Alt Names (SAN) field.
@@ -188,9 +188,9 @@ Given the obtained CSR (let's call it ``nethsm.csr``), we can then generate a ce
    $ openssl x509 -req -days 1825 -in nethsm.csr -CA CA.pem -copy_extensions copy \
        -CAkey CA.key -out new_cert.pem -set_serial 01 -sha256
 
-Then install the obtained ``new_cert.pem`` with the ``/config/tls/cert.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__).
+Then install the obtained ``new_cert.pem`` with the ``/config/tls/cert.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cert-pem>`__).
 
-Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls/cluster-ca.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__). This is only possible once the installed TLS certificate is signed by it. Otherwise, the operation will be rejected.
+Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls/cluster-ca.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cluster-ca-pem>`__). This is only possible once the installed TLS certificate is signed by it. Otherwise, the operation will be rejected.
 
 .. note::
    This process has to be repeated for every node.
@@ -225,7 +225,7 @@ Have at hand the IP of the node that will join. The full *URL* (also called *pee
 
 You can double-check the URL is correct by calling ``GET /cluster/members`` on the node that is expected to join. This should list just one member: itself.
 
-Then register that expected URL on any existing node of the cluster (if you don't have a cluster yet, do this on the NetHSM that will serve as the initial node of the cluster). This is done using the ``POST /cluster/members`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__), passing it a JSON body containing the URL.
+Then register that expected URL on any existing node of the cluster (if you don't have a cluster yet, do this on the NetHSM that will serve as the initial node of the cluster). This is done using the ``POST /cluster/members`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members>`__), passing it a JSON body containing the URL.
 
 If successful, this returns a JSON body of the form:
 
@@ -267,7 +267,7 @@ Keep that response for the next step.
 Joining the Cluster as a Learner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase of the node on which the new joiner was registered, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__) on the node that is expected to join.
+Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase of the node on which the new joiner was registered, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-join>`__) on the node that is expected to join.
 
 .. warning::
    The call to ``POST /cluster/join`` will hang until the new node is manually
@@ -292,10 +292,10 @@ new member to catch up with the cluster. Once this is done, it can be
 promoted from learner to full member.
 
 .. warning::
-   Promoting a node increases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__ and the `Operational Redundancy <clustering.html#operational-redundancy>`__ section of this document). Ensure this new node has a stable connection to the cluster before promoting it.
+   Promoting a node increases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members-MemberID-promote>`__ and the `Operational Redundancy <clustering.html#operational-redundancy>`__ section of this document). Ensure this new node has a stable connection to the cluster before promoting it.
 
 You can attempt to promote the new member with a call to ``POST /cluster/members/{MemberID}/promote``
-(refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html>`__). If the learner hasn't
+(refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members-MemberID-promote>`__). If the learner hasn't
 caught up yet, then this will fail with HTTP code 412 and promotion should be attempted again later.
 
 If this promotion is successful, the node will now have fully joined the cluster and the earlier call to ``/cluster/join`` will have returned. The node ends up in a *Locked* state and has to be unlocked with the unlock passphrase of the node that was used for registration. Afterwards the unlock passphrase can be changed (unlock passphrases remain node-specific and are not shared across nodes).
