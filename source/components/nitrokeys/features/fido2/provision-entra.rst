@@ -130,9 +130,6 @@ A Microsoft Entra Application is required to allow for programmatic registration
             "domain": "Cryptane.onmicrosoft.com"
         }
 
-    .. figure:: ./images/provision-entra/configjson.png
-        :alt: App home
-
 Usage
 -----
 
@@ -145,8 +142,16 @@ You may use the `pynitrokey` utility to provision a Nitrokey for an user in your
 Here the `<username>` could be the Email ID of the user (User principal in terms of Microsoft) or a part of it till before the `@` sign.
 The `--create-user` flag directs the tool to create the user if it does not exist in the Entra Tenant.
 
-    .. figure:: ./images/provision-entra/terminal.png
-        :alt: App home
+    .. code-block:: shell-session
+
+        $ nitropy fido2 provision-credential entra -c config.json aditya --create-user
+        Command line tool to interact with Nitrokey devices 0.12.3
+        Warning: It is recommended to execute nitropy with admin privileges to be able to access Nitrokey 3 and Nitrokey FIDO 2 devices.
+        Waiting 5 secs for Graph API to update
+        User aditya created on Entra
+        Enter PIN:
+        Touch your authenticator device now...
+        Entra credential for aditya pre-registered on NK3 A56F0 with Credential ID owBYLNXsrDZ104I2MyCtuxmXKAd0Um56t3Byx5VfMz-Vs1Azy1re4Rdf-foMsc7vAUw7lJgCoG1VSdl2mBoCUHWGpTH-YkjEJ4UC4YlIEdk1.
 
 Verification
 ------------
