@@ -151,7 +151,7 @@ In the following, we assume all nodes are freshly provisioned and operational.
 Networking
 ^^^^^^^^^^
 
-Nodes must first be reconfigured with their expected final network configuration using the ``/config/network`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-network>`__).
+Nodes must first be reconfigured with their expected final network configuration as described in the section `Network <administration.html#network>`__.
 
 Creating and Installing a CA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -167,7 +167,7 @@ For example, a minimal CA can be created with ``openssl``:
 
 This CA now has to be installed on every node.
 
-To do this, first generate a Certificate Signing Request (CSR) from the node with the ``/config/tls/csr.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_config-tls-csr-pem>`__).
+To do this, first generate a Certificate Signing Request (CSR) from the node as described in the section `TLS Certificate <administration.html#tls-certificate>`__. With *nitropy* this is done with ``nitropy nethsm --host $NETHSM_HOST csr --api``, using the ``--san`` option to set the SAN (see the note below).
 
 .. note::
    To properly authenticate nodes, the clustering backend (etcd) expects that each node has a certificate with a properly filled Subject Alt Names (SAN) field.
@@ -177,6 +177,8 @@ To do this, first generate a Certificate Signing Request (CSR) from the node wit
    .. code-block:: text
 
       "subjectAltNames": [ "normalname.org", "IP:192.168.1.1" ]
+
+   With *nitropy* use the ``--san`` option, e.g. ``--san "IP:192.168.1.1"``.
 
    If you want to use a public CA for signing your certificates your nodes must use public IP addresses.
    This is due to a security requirement which forbids a public CA to issue certificates with a private IP address in the IP SAN.
@@ -188,9 +190,29 @@ Given the obtained CSR (let's call it ``nethsm.csr``), we can then generate a ce
    $ openssl x509 -req -days 1825 -in nethsm.csr -CA CA.pem -copy_extensions copy \
        -CAkey CA.key -out new_cert.pem -set_serial 01 -sha256
 
-Then install the obtained ``new_cert.pem`` with the ``/config/tls/cert.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cert-pem>`__).
+Then install the obtained ``new_cert.pem`` as described in the section `TLS Certificate <administration.html#tls-certificate>`__ (with *nitropy*: ``nitropy nethsm --host $NETHSM_HOST set-certificate --api new_cert.pem``).
 
-Finally, the CA (``CA.pem``) can now be installed with the ``/config/tls/cluster-ca.pem`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cluster-ca-pem>`__). This is only possible once the installed TLS certificate is signed by it. Otherwise, the operation will be rejected.
+Finally, the CA (``CA.pem``) can now be installed. This is only possible once the installed TLS certificate is signed by it. Otherwise, the operation will be rejected.
+
+.. tabs::
+   .. tab:: nitropy
+      **Arguments**
+
+      +----------+-------------------------+
+      | Argument | Description             |
+      +==========+=========================+
+      | Filename | The path of the CA file |
+      +----------+-------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST set-cluster-ca-certificate CA.pem
+
+      The installed cluster CA can be retrieved with ``nitropy nethsm --host $NETHSM_HOST get-cluster-ca-certificate``.
+   .. tab:: REST API
+      Information about the `/config/tls/cluster-ca.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cluster-ca-pem>`__.
 
 .. note::
    This process has to be repeated for every node.
@@ -215,7 +237,7 @@ Adding a node to a cluster is done in three steps:
 Configure a Backup Passphrase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-First make sure a backup passphrase is configured on the node that will be used to register a new joiner (see the API documentation of the ``/config/backup-passphrase`` endpoint).
+First make sure a backup passphrase is configured on the node that will be used to register a new joiner as described in the section `Backup <administration.html#backup>`__.
 
 Registering a New Node
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -223,11 +245,50 @@ Registering a New Node
 
 Have at hand the IP of the node that will join. The full *URL* (also called *peer URL* in ``etcd`` terminology) of that node will be ``https://<IP_of_node>:2380`` (e.g. ``https://192.168.1.1:2380``). The port **must** be 2380, so ensure any firewall between the nodes will allow TCP traffic on that port.
 
-You can double-check the URL is correct by calling ``GET /cluster/members`` on the node that is expected to join. This should list just one member: itself.
+You can double-check the URL is correct by listing the cluster members on the node that is expected to join. This should list just one member: itself.
 
-Then register that expected URL on any existing node of the cluster (if you don't have a cluster yet, do this on the NetHSM that will serve as the initial node of the cluster). This is done using the ``POST /cluster/members`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members>`__), passing it a JSON body containing the URL.
+.. tabs::
+   .. tab:: nitropy
+      **Example**
 
-If successful, this returns a JSON body of the form:
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST list-cluster-members
+   .. tab:: REST API
+      Call ``GET /cluster/members`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/GET_cluster-members>`__).
+
+Then register that expected URL on any existing node of the cluster (if you don't have a cluster yet, do this on the NetHSM that will serve as the initial node of the cluster).
+
+.. tabs::
+   .. tab:: nitropy
+      **Options**
+
+      +--------------------+---------------------------------------------------+
+      | Option             | Description                                       |
+      +====================+===================================================+
+      | ``--url`` ``TEXT`` | The peer URL of the new node (can be set multiple |
+      |                    | times)                                            |
+      +--------------------+---------------------------------------------------+
+
+      **Arguments**
+
+      +----------------+--------------------------------------------------+
+      | Argument       | Description                                      |
+      +================+==================================================+
+      | Join data path | The path of the file the join data is written to |
+      +----------------+--------------------------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST add-cluster-member --url https://192.168.1.1:2380 join-data.json
+
+      The command lists the cluster members and writes the data required by the new node to join the cluster (including the joiner kit) to the file. Keep this file for the next step.
+   .. tab:: REST API
+      Call the ``POST /cluster/members`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members>`__), passing it a JSON body containing the URL.
+
+When using the REST API, a successful call returns a JSON body of the form:
 
 .. code-block:: json
 
@@ -262,15 +323,43 @@ which contains information necessary for the new node to join the cluster. In pa
    allows for a safer operation of the cluster, as any issue with the new node
    cannot cause instability to the whole cluster before its promotion.
 
-Keep that response for the next step.
+Keep the join data file for the next step (or the response, if you used the REST API).
 
 Joining the Cluster as a Learner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase of the node on which the new joiner was registered, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-join>`__) on the node that is expected to join.
+Join the cluster on the node that is expected to join, using the data from the last step and the backup passphrase of the node on which the new joiner was registered.
+
+.. tabs::
+   .. tab:: nitropy
+      **Options**
+
+      +--------------------------------------+--------------------------------------------+
+      | Option                               | Description                                |
+      +======================================+============================================+
+      | ``--backup-passphrase`` ``TEXT``     | The backup passphrase of the node on which |
+      |                                      | the new joiner was registered              |
+      +--------------------------------------+--------------------------------------------+
+
+      **Arguments**
+
+      +----------------+-------------------------------------------------+
+      | Argument       | Description                                     |
+      +================+=================================================+
+      | Join data path | The path of the join data file from the last    |
+      |                | step                                            |
+      +----------------+-------------------------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST join-cluster --backup-passphrase $BACKUP_PASSPHRASE join-data.json
+   .. tab:: REST API
+      Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-join>`__).
 
 .. warning::
-   The call to ``POST /cluster/join`` will hang until the new node is manually
+   The join call (``nitropy nethsm join-cluster`` or ``POST /cluster/join``) will hang until the new node is manually
    promoted (see below). This is normal. When the call returns successfully, it
    indicates that join and promotion have been successful.
 
@@ -294,9 +383,28 @@ promoted from learner to full member.
 .. warning::
    Promoting a node increases the cluster's quorum threshold (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members-MemberID-promote>`__ and the `Operational Redundancy <clustering.html#operational-redundancy>`__ section of this document). Ensure this new node has a stable connection to the cluster before promoting it.
 
-You can attempt to promote the new member with a call to ``POST /cluster/members/{MemberID}/promote``
-(refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members-MemberID-promote>`__). If the learner hasn't
-caught up yet, then this will fail with HTTP code 412 and promotion should be attempted again later.
+You can attempt to promote the new member as follows. The member ID can be found by listing the cluster members.
+
+.. tabs::
+   .. tab:: nitropy
+      **Arguments**
+
+      +-----------+---------------------------------------+
+      | Argument  | Description                           |
+      +===========+=======================================+
+      | Member ID | The ID of the learner to be promoted  |
+      +-----------+---------------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST list-cluster-members
+         $ nitropy nethsm --host $NETHSM_HOST promote-cluster-member $MEMBER_ID
+   .. tab:: REST API
+      Call ``POST /cluster/members/{MemberID}/promote`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members-MemberID-promote>`__).
+
+If the learner hasn't caught up yet, then this will fail (HTTP code 412 in the REST API) and promotion should be attempted again later.
 
 If this promotion is successful, the node will now have fully joined the cluster and the earlier call to ``/cluster/join`` will have returned. The node ends up in a *Locked* state and has to be unlocked with the unlock passphrase of the node that was used for registration. Afterwards the unlock passphrase can be changed (unlock passphrases remain node-specific and are not shared across nodes).
 
@@ -337,7 +445,7 @@ Follow the normal instructions from the
 `Registering a New Node <clustering.html#registering-a-new-node>`__
 section to signal the existing cluster the addition of a new member with the given URL(s).
 
-Write down the response from the cluster: it should contain the list of cluster members and a joiner kit (you won't need this part).
+Keep the join data file written by ``nitropy nethsm add-cluster-member`` (or the response from the cluster, if you used the REST API): it contains the list of cluster members and a joiner kit (you won't need this part).
 
 Configure etcd
 ~~~~~~~~~~~~~~
@@ -353,7 +461,7 @@ With the NetHSM's response to registering the witness, prepare variables of the 
    export ETCD_INITIAL_CLUSTER="peer1=url1,peer1=url2,peer2=url1,peer2=url2,..."
    export ETCD_INITIAL_ADVERTISE_PEER_URLS="my_url1,my_url2,..."
 
-Assuming the NetHSM response is stored in a ``response.json`` file, you can generate these last two variables automatically with the following ``jq`` expressions:
+Assuming the join data file written by *nitropy* (or the NetHSM REST API response) is stored in a ``response.json`` file, you can generate these last two variables automatically with the following ``jq`` expressions:
 
 .. code-block:: bash
 
@@ -458,9 +566,26 @@ Removing a Node Cleanly
 
 As long as some part of the cluster is still meeting quorum, any of its members can be used to remove another node from the cluster, whether this node is already unreachable or is expected to be.
 
-You first have to know the ID of the node you want to remove, by listing all nodes through ``GET /cluster/members`` and looking for the right one.
+You first have to know the ID of the node you want to remove, by listing all nodes and looking for the right one. Then it can be removed. If the node in question was still healthy, this will isolate it from the rest of the cluster and transition it to the *Failed* state.
 
-Then it can be removed by calling ``DELETE /cluster/members/<id>``. If the node in question was still healthy, this will isolate it from the rest of the cluster and transition it to the *Failed* state.
+.. tabs::
+   .. tab:: nitropy
+      **Arguments**
+
+      +-----------+----------------------------------+
+      | Argument  | Description                      |
+      +===========+==================================+
+      | Member ID | The ID of the node to be removed |
+      +-----------+----------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST list-cluster-members
+         $ nitropy nethsm --host $NETHSM_HOST remove-cluster-member $MEMBER_ID
+   .. tab:: REST API
+      List the nodes with ``GET /cluster/members`` and remove one by calling ``DELETE /cluster/members/<id>``.
 
 .. note::
    A node that has joined the cluster but not yet been promoted can also be
@@ -492,9 +617,19 @@ no less than a full minute of unsuccessful attempts to interact with its
 database. This is to avoid spurious transitions caused by very short
 instabilities.
 
-To help you understand which case your node is in, the ``GET /health/diagnose``
-endpoint remains available and returns information about the current status of
-``etcd`` and its database, including logs (refer to the API documentation).
+To help you understand which case your node is in, the diagnose function
+remains available and returns information about the current status of
+``etcd`` and its database, including logs.
+
+.. tabs::
+   .. tab:: nitropy
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST get-cluster-diagnostics
+   .. tab:: REST API
+      Call ``GET /health/diagnose`` (refer to the API documentation).
 
 .. note::
    If and when the database becomes available again (e.g. the quorum is restored
@@ -508,7 +643,7 @@ If you conclude that the failure is durable (e.g. lost quorum with no hope of
 resolving the underlying condition), you can either:
 
 * **Factory-reset** the node, which will erase all data, and restore a backup.
-* **Isolate** the node with the ``POST /cluster/force-new`` endpoint, which will
+* **Isolate** the node with ``nitropy nethsm force-new-cluster`` (REST API: ``POST /cluster/force-new``), which will
   irreversibly forget all other cluster members, recover the ``etcd`` data
   present on disk and reboot. If the underlying failure was cluster-related, the
   node will follow the normal boot sequence and end up in either the *Locked* or
@@ -520,11 +655,16 @@ resolving the underlying condition), you can either:
    node can still rejoin the cluster but will lose all its local
    modifications.
 
-The ``POST /cluster/force-new`` endpoint, which is only available in the
+The ``force-new`` operation, which is only available in the
 *Failed* state, requires authentication as it is potentially destructive.
 However since HSM users and roles are not available in that state, the endpoint
 expects HTTPS clients to always authenticate with the ``unlock`` fake user, and
-the latest known unlock passphrase as the password.
+the latest known unlock passphrase as the password. With *nitropy*, pass them as
+``--username unlock --password $UNLOCK_PASSPHRASE``:
+
+.. code-block:: bash
+
+   $ nitropy nethsm --host $NETHSM_HOST --username unlock --password $UNLOCK_PASSPHRASE force-new-cluster
 
 .. warning::
    After an update from a version < 5.0, the ``force-new`` endpoint will be
