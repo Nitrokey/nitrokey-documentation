@@ -167,7 +167,7 @@ For example, a minimal CA can be created with ``openssl``:
 
 This CA now has to be installed on every node.
 
-To do this, first generate a Certificate Signing Request (CSR) from the node as described in the section `TLS Certificate <administration.html#tls-certificate>`__. With *nitropy* this is done with ``nitropy nethsm --host $NETHSM_HOST csr --api``, using the ``--san`` option to set the SAN (see the note below).
+To do this, first generate a Certificate Signing Request (CSR) from the node as described in the section `TLS Certificate <administration.html#tls-certificate>`__. With *nitropy* this is done with ``nitropy nethsm --host $NETHSM_HOST csr --api``.
 
 .. note::
    To properly authenticate nodes, the clustering backend (etcd) expects that each node has a certificate with a properly filled Subject Alt Names (SAN) field.
@@ -288,34 +288,34 @@ Then register that expected URL on any existing node of the cluster (if you don'
    .. tab:: REST API
       Call the ``POST /cluster/members`` endpoint (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members>`__), passing it a JSON body containing the URL.
 
-When using the REST API, a successful call returns a JSON body of the form:
+      A successful call returns a JSON body of the form:
 
-.. code-block:: json
+      .. code-block:: json
 
-   {
-     "members": [
-       {
-         "name": "",
-         "urls": [
-           "https://172.22.1.3:2380"
-         ],
-         "learner": true
-       },
-       {
-         "name": "9ZVNM2MNWP",
-         "urls": [
-           "https://172.22.1.2:2380"
-         ],
-         "learner": false
-       }
-     ],
-     "joinerKit": "eyJiYWNrdXBfc2FsdCI6IkVlUzNPOEhHSEc5NnlNRktrdG1NZmc9PSIsInVubG9ja19zYWx0IjoiU3phMkEvYW13NlhxVWsrdHZMMmFubm5SZFlWd2ZQUjdpZ3IxK1RSdTdVaU14dmh3d0x2NWIvYVNkY2c9IiwibG9ja2VkX2RvbWFpbl9rZXkiOiIyMnNGVlkyelhQUVZ6S1pQenI3MmkwTk1WM3lmQ2k5dGwzeDhUbGtuOXM0WjFOd3JoZkRQTFZIVHp1WVl0YkQxaVZCMlovV3JHUHJlMXlwN0t4U0w4WkxjY2ZUTmUzcFg0WXE4YXNlY0wwREhXNGlIaXlPMlZnPT0ifQ=="
-   }
+         {
+           "members": [
+             {
+               "name": "",
+               "urls": [
+                 "https://172.22.1.3:2380"
+               ],
+               "learner": true
+             },
+             {
+               "name": "9ZVNM2MNWP",
+               "urls": [
+                 "https://172.22.1.2:2380"
+               ],
+               "learner": false
+             }
+           ],
+           "joinerKit": "eyJiYWNrdXBfc2FsdCI6IkVlUzNPOEhHSEc5NnlNRktrdG1NZmc9PSIsInVubG9ja19zYWx0IjoiU3phMkEvYW13NlhxVWsrdHZMMmFubm5SZFlWd2ZQUjdpZ3IxK1RSdTdVaU14dmh3d0x2NWIvYVNkY2c9IiwibG9ja2VkX2RvbWFpbl9rZXkiOiIyMnNGVlkyelhQUVZ6S1pQenI3MmkwTk1WM3lmQ2k5dGwzeDhUbGtuOXM0WjFOd3JoZkRQTFZIVHp1WVl0YkQxaVZCMlovV3JHUHJlMXlwN0t4U0w4WkxjY2ZUTmUzcFg0WXE4YXNlY0wwREhXNGlIaXlPMlZnPT0ifQ=="
+         }
 
-which contains information necessary for the new node to join the cluster. In particular, it lists all members of the cluster (where the member with an empty name is the new joiner). It also contains the domain key encrypted by both the unlock and backup passphrases — so a backup passphrase must have been configured before.
+      which contains information necessary for the new node to join the cluster. In particular, it lists all members of the cluster (where the member with an empty name is the new joiner). It also contains the domain key encrypted by both the unlock and backup passphrases — so a backup passphrase must have been configured before.
 
 .. note::
-   Notice in the response above that the new joiner is a "learner": it can now
+   Notice in the list of members (``learner: True`` in the *nitropy* output, ``"learner": true`` in the REST API response) that the new joiner is a "learner": it can now
    connect to the cluster and receive data from it, but cannot participate until
    it is promoted, which will be covered below.
 
@@ -361,7 +361,7 @@ Join the cluster on the node that is expected to join, using the data from the l
 .. warning::
    The join call (``nitropy nethsm join-cluster`` or ``POST /cluster/join``) will hang until the new node is manually
    promoted (see below). This is normal. When the call returns successfully, it
-   indicates that join and promotion have been successful.
+   indicates that join and promotion have been successful. Don't cancel this join call.
 
 Assuming both the cluster and the node can reach each other, this will enact the actual join, wiping the data on the new joiner to instead synchronize its state with that of the cluster. If this operation fails immediately (e.g. the cluster was not reachable or authentication failed), this node's state will not be wiped and the join will be reverted. However as soon as a first join is successful, this operation is final and can only be reverted by a factory reset.
 
