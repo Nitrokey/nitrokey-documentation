@@ -198,11 +198,11 @@ Finally, the CA (``CA.pem``) can now be installed. This is only possible once th
    .. tab:: nitropy
       **Arguments**
 
-      +----------+-------------------------+
-      | Argument | Description             |
-      +==========+=========================+
-      | Filename | The path of the CA file |
-      +----------+-------------------------+
+      +--------------+-------------------------+
+      | Argument     | Description             |
+      +==============+=========================+
+      | ``FILENAME`` | The path of the CA file |
+      +--------------+-------------------------+
 
       **Example**
 
@@ -261,7 +261,7 @@ Then register that expected URL on any existing node of the cluster (if you don'
 
 .. tabs::
    .. tab:: nitropy
-      **Options**
+      **Optional Options**
 
       +--------------------+---------------------------------------------------+
       | Option             | Description                                       |
@@ -272,11 +272,11 @@ Then register that expected URL on any existing node of the cluster (if you don'
 
       **Arguments**
 
-      +----------------+--------------------------------------------------+
-      | Argument       | Description                                      |
-      +================+==================================================+
-      | Join data path | The path of the file the join data is written to |
-      +----------------+--------------------------------------------------+
+      +--------------------+--------------------------------------------------+
+      | Argument           | Description                                      |
+      +====================+==================================================+
+      | ``JOIN_DATA_PATH`` | The path of the file the join data is written to |
+      +--------------------+--------------------------------------------------+
 
       **Example**
 
@@ -332,23 +332,22 @@ Join the cluster on the node that is expected to join, using the data from the l
 
 .. tabs::
    .. tab:: nitropy
-      **Options**
+      **Required Options**
 
-      +--------------------------------------+--------------------------------------------+
-      | Option                               | Description                                |
-      +======================================+============================================+
-      | ``--backup-passphrase`` ``TEXT``     | The backup passphrase of the node on which |
-      |                                      | the new joiner was registered              |
-      +--------------------------------------+--------------------------------------------+
+      +----------------------------------+--------------------------------------------+
+      | Option                           | Description                                |
+      +==================================+============================================+
+      | ``--backup-passphrase`` ``TEXT`` | The backup passphrase of the node on which |
+      |                                  | the new joiner was registered              |
+      +----------------------------------+--------------------------------------------+
 
       **Arguments**
 
-      +----------------+-------------------------------------------------+
-      | Argument       | Description                                     |
-      +================+=================================================+
-      | Join data path | The path of the join data file from the last    |
-      |                | step                                            |
-      +----------------+-------------------------------------------------+
+      +--------------------+---------------------------------------------------+
+      | Argument           | Description                                       |
+      +====================+===================================================+
+      | ``JOIN_DATA_PATH`` | The path of the join data file from the last step |
+      +--------------------+---------------------------------------------------+
 
       **Example**
 
@@ -389,17 +388,16 @@ You can attempt to promote the new member as follows. The member ID can be found
    .. tab:: nitropy
       **Arguments**
 
-      +-----------+---------------------------------------+
-      | Argument  | Description                           |
-      +===========+=======================================+
-      | Member ID | The ID of the learner to be promoted  |
-      +-----------+---------------------------------------+
+      +---------------+--------------------------------------+
+      | Argument      | Description                          |
+      +===============+======================================+
+      | ``MEMBER_ID`` | The ID of the learner to be promoted |
+      +---------------+--------------------------------------+
 
       **Example**
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST list-cluster-members
          $ nitropy nethsm --host $NETHSM_HOST promote-cluster-member $MEMBER_ID
    .. tab:: REST API
       Call ``POST /cluster/members/{MemberID}/promote`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-members-MemberID-promote>`__).
@@ -572,17 +570,16 @@ You first have to know the ID of the node you want to remove, by listing all nod
    .. tab:: nitropy
       **Arguments**
 
-      +-----------+----------------------------------+
-      | Argument  | Description                      |
-      +===========+==================================+
-      | Member ID | The ID of the node to be removed |
-      +-----------+----------------------------------+
+      +---------------+----------------------------------+
+      | Argument      | Description                      |
+      +===============+==================================+
+      | ``MEMBER_ID`` | The ID of the node to be removed |
+      +---------------+----------------------------------+
 
       **Example**
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST list-cluster-members
          $ nitropy nethsm --host $NETHSM_HOST remove-cluster-member $MEMBER_ID
    .. tab:: REST API
       List the nodes with ``GET /cluster/members`` and remove one by calling ``DELETE /cluster/members/<id>``.
