@@ -7,9 +7,9 @@ macOS Install
 Installing the Nitrokey App 2 via uv
 -------------------------------------
 
-This is the simplest and fastest way to install the Nitrokey App 2 on macOS using `uv`, an extremely fast Python package manager.
+This is the simplest and fastest way to install the Nitrokey App 2 on macOS using ``uv``, an extremely fast Python package manager.
 
-1. Install `uv` if it is not already installed:
+1. Install ``uv`` if it is not already installed:
 
    .. code-block:: zsh
 
