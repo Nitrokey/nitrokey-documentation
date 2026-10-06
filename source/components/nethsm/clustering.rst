@@ -52,7 +52,7 @@ inoperable until the partition is resolved.
 The Quorum is Durably Lost
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A failure causing all subsets of the cluster to lose quorum will render the cluster completely inoperable (all remaining nodes will be in the *Failed* state), unless the failure is resolved. In this case, manual `recovery <clustering.html#recovering-a-failed-node>` must be performed.
+A failure causing all subsets of the cluster to lose quorum will render the cluster completely inoperable (all remaining nodes will be in the *Failed* state), unless the failure is resolved. In this case, manual `recovery <clustering.html#recovering-a-failed-node>`__ must be performed.
 
 This can happen for example if a single node fails in a 2-node cluster (where the quorum is 2). In this situation, the failed node cannot be cleanly removed from the cluster after the fact, because the remaining healthy node is already inoperable since it has lost quorum.
 
@@ -70,7 +70,7 @@ A two-node active/passive cluster is not supported yet and will be added in a fu
 Witness
 -------
 
-The nature of clustering with ``etcd`` makes it more reliable the more nodes there are in the cluster. As explained in the `Operational Redundancy`_ section, clusters should ideally have at least 3 nodes to have room to fail, since a 2-node cluster will entirely fail if only one fails.
+The nature of clustering with ``etcd`` makes it more reliable the more nodes there are in the cluster. As explained in the `Operational Redundancy <clustering.html#operational-redundancy>`__ section, clusters should ideally have at least 3 nodes to have room to fail, since a 2-node cluster will entirely fail if only one fails.
 
 However the design of the feature is such that you don't need to add a full, real NetHSM device to your cluster to reach a stable number of nodes. Instead, you can deploy and add a "witness" node yourself. Such a node is just an instance of ``etcd`` running on the machine of your choice (or in a container), and connected to the cluster. It will be recognized as a normal node from the real devices in the cluster, and receive all data and updates from devices (but of course you won't be able to perform any HSM operations with it — it only stores data).
 
@@ -132,7 +132,7 @@ Configuration:
 * Cluster CA (used to authenticate nodes across cluster)
 * Backup passphrase and backup salt
 
-Note that for now the config/domain store version can only be version 1 (if your software version supports clustering, then that is what you have). Refer to the `Software Updates in Clusters`_ section for more details on the safety of installing software updates within a cluster.
+Note that for now the config/domain store version can only be version 1 (if your software version supports clustering, then that is what you have). Refer to the `Software Updates in Clusters <clustering.html#software-updates-in-clusters>`__ section for more details on the safety of installing software updates within a cluster.
 
 Creating a Cluster
 ------------------
