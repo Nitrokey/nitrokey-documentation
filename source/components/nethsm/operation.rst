@@ -159,7 +159,7 @@ Import a private key from a PEM file into NetHSM as follows.
 
          Key myFirstKey added to NetHSM localhost:8443
    .. tab:: REST API
-      Information about the `/keys` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys>`__.
+      Information about the ``/keys`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys>`__.
 
 Private keys in raw format can be imported as follows.
 
@@ -218,7 +218,7 @@ Private keys in raw format can be imported as follows.
 
          Key myFirstKey added to NetHSM localhost:8443
    .. tab:: REST API
-      Information about the `/keys` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys>`__.
+      Information about the ``/keys`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys>`__.
 
 Delete Key
 ~~~~~~~~~~
@@ -250,7 +250,7 @@ Users can only delete keys in their `Namespace <administration.html#namespaces>`
 
          Key myFirstKey deleted on NetHSM localhost:8443
    .. tab:: REST API
-      Information about the `/keys/{KeyID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/delete_keys__KeyID_>`__.
+      Information about the ``/keys/{KeyID}`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/delete_keys__KeyID_>`__.
 
 Move Key
 ~~~~~~~~
@@ -284,7 +284,7 @@ Users can only move keys in their `Namespace <administration.html#namespaces>`__
 
          Key myFirstKey moved to mySecondKey on NetHSM localhost:8443
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/move` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__move>`__.
+      Information about the ``/keys/{KeyID}/move`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__move>`__.
 
 List Keys
 ~~~~~~~~~
@@ -323,7 +323,7 @@ The list can be retrieved as follows.
          -----------     ----       ----------------------------------------------  ----------  ----
          myFirstKey      RSA        RSA_Decryption_PKCS1, RSA_Signature_PSS_SHA256  0
    .. tab:: REST API
-      Information about the `/keys` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys>`__.
+      Information about the ``/keys`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys>`__.
 
 Show Key Details
 ~~~~~~~~~~~~~~~~
@@ -354,7 +354,7 @@ The detailed information can be retrieved as follows.
          Modulus:         r62XHPWMDdEf2I1WEpSxGowY/fQF8lMPtv3EUQJE/PLWBvehF8G0QY3AVVZ3etlQWiKreOuGDx4Nr2PFNYAu5f+JP2Jc1lsFNOYF8D82RF41MBySbQR+k+44N/04B0ahTBCxX+ovFH7Sd6SzvxMPa7EKvhaOsLbgyrPlFZxQnhIEqJRCSo5DRRD+CRCPpGXsVXgFbJrNilh21i8OZCct4nC2OS191MeDKmCH4tjrfLMwOKJE8zKlwhdtA1uMY49+JuaC48GUFsLYwbLp1723Uv1PjZjC5jbUhScD0u9I+iNrqznAeka4dWsJ9jgA+h6hblSgCs0I3MWOsMXx/Y5PGQ==
          Public exponent: AQAB
    .. tab:: REST API
-      Information about the `/keys/{KeyID}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys__KeyID_>`__.
+      Information about the ``/keys/{KeyID}`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys__KeyID_>`__.
 
 The public key of a key can be retrieved as follows. It's in PKCS#8 format.
 
@@ -382,7 +382,7 @@ The public key of a key can be retrieved as follows. It's in PKCS#8 format.
          GQIDAQAB
          -----END PUBLIC KEY-----
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/public.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys__KeyID__public_pem>`__.
+      Information about the ``/keys/{KeyID}/public.pem`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys__KeyID__public_pem>`__.
 
 The public key can be inspected for example with OpenSSL as follows.
 
@@ -433,7 +433,7 @@ The public key can be inspected for example with OpenSSL as follows.
          GQIDAQAB
          -----END PUBLIC KEY-----
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/public.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys__KeyID__public_pem>`__.
+      Information about the ``/keys/{KeyID}/public.pem`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys__KeyID__public_pem>`__.
 
 Tags for Keys
 ~~~~~~~~~~~~~
@@ -474,7 +474,7 @@ The *Tag* can be added as follows.
 
          Added tag berlin for key myFirstKey on the NetHSM localhost:8443
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/restrictions/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/put_keys__KeyID__restrictions_tags__Tag_>`__.
+      Information about the ``/keys/{KeyID}/restrictions/tags/{Tag}`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/put_keys__KeyID__restrictions_tags__Tag_>`__.
 
 The *Tag* can be deleted as follows.
 
@@ -504,7 +504,7 @@ The *Tag* can be deleted as follows.
 
          Deleted tag berlin for key myFirstKey on the NetHSM localhost:8443
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/restrictions/tags/{Tag}` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/delete_keys__KeyID__restrictions_tags__Tag_>`__.
+      Information about the ``/keys/{KeyID}/restrictions/tags/{Tag}`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/delete_keys__KeyID__restrictions_tags__Tag_>`__.
 
 Key Certificates
 ----------------
@@ -562,7 +562,7 @@ The certificate can be set as follows.
 
          Updated the certificate for key myFirstKey on NetHSM localhost:8443
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/cert` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/put_keys__KeyID__cert>`__.
+      Information about the ``/keys/{KeyID}/cert`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/put_keys__KeyID__cert>`__.
 
 The certificate can be retrieved as follows.
 
@@ -605,7 +605,7 @@ The certificate can be retrieved as follows.
          3XbJq/1ij3tKsjV6WA==
          -----END CERTIFICATE-----
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/cert` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys__KeyID__cert>`__.
+      Information about the ``/keys/{KeyID}/cert`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/get_keys__KeyID__cert>`__.
 
 Key Certificate Signing Requests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -665,7 +665,7 @@ The NetHSM supports generating CSR (Certificate Signing Requests) for the stored
          gWjEDg==
          -----END CERTIFICATE REQUEST-----
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__csr_pem>`__.
+      Information about the ``/keys/{KeyID}/csr.pem`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__csr_pem>`__.
 
 Key Operations
 --------------
@@ -719,7 +719,7 @@ Data can be encrypted for a symmetric key as follows.
          Initialization vector: aYlwUI4A9zL9tts4dMAq+A==
 
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/encrypt` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__encrypt>`__.
+      Information about the ``/keys/{KeyID}/encrypt`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__encrypt>`__.
 
 This prints the encrypted and base64 encoded message ``NetHSM rulezzzzzzzzzzzzzzzzzzz!``, and the initialization vector.
 
@@ -785,7 +785,7 @@ The data can be decrypted as follows.
 
          NetHSM rulez!
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/decrypt` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__decrypt>`__.
+      Information about the ``/keys/{KeyID}/decrypt`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__decrypt>`__.
 
 Sign
 ~~~~
@@ -847,7 +847,7 @@ From the digest a signature can be created as follows.
             -m PKCS1 \
             -d "$(cat data.digest)" | base64 -d > data.sig
    .. tab:: REST API
-      Information about the `/keys/{KeyID}/sign` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__sign>`__.
+      Information about the ``/keys/{KeyID}/sign`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_keys__KeyID__sign>`__.
 
 The created signature can be verified with OpenSSL as follows.
 
@@ -893,4 +893,4 @@ The NetHSM can provide random bytes as a Base64 string.
 
          94A2rg==
    .. tab:: REST API
-      Information about the `/random` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_random>`__.
+      Information about the ``/random`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_random>`__.
