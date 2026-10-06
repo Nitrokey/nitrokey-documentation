@@ -140,7 +140,7 @@ You may use the `pynitrokey` utility to provision a Nitrokey for an user in your
         nitropy fido2 provision-credential entra -c config.json <username> --create-user
 
 Here the `<username>` could be the Email ID of the user (User principal in terms of Microsoft) or a part of it till before the `@` sign.
-The `--create-user` flag directs the tool to create the user if it does not exist in the Entra Tenant.
+The ``--create-user`` flag directs the tool to create the user if it does not exist in the Entra Tenant.
 
     .. code-block:: shell-session
 
