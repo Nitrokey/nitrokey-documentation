@@ -119,7 +119,7 @@ A Microsoft Entra Application is required to allow for programmatic registration
     .. figure:: ./images/provision-entra/disableattestation.png
         :alt: App home
 
-22. You have taken note of the Tenant ID, Client ID, Client Secret and Primary Domain as a part of the process. Make a `config.json` file with the information. An example is shown below.
+22. You have taken note of the Tenant ID, Client ID, Client Secret and Primary Domain as a part of the process. Make a ``config.json`` file with the information. An example is shown below.
 
     .. code-block:: json
 
