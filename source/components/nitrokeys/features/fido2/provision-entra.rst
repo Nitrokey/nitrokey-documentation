@@ -49,12 +49,12 @@ A Microsoft Entra Application is required to allow for programmatic registration
     .. figure:: ./images/provision-entra/apiperms.png
         :alt: App home
 
-8. Search for `UserAuthenticationMethod.ReadWrite.All` and select it.
+8. Search for ``UserAuthenticationMethod.ReadWrite.All`` and select it.
 
     .. figure:: ./images/provision-entra/authmethodrw.png
         :alt: App home
 
-9. Search for `User.ReadWrite.All` and select it (Only if you want to be able to create users from `pynitrokey`). Click on the Add Permissions button.
+9. Search for ``User.ReadWrite.All`` and select it (Only if you want to be able to create users from ``pynitrokey``). Click on the Add Permissions button.
 
     .. figure:: ./images/provision-entra/userrw.png
         :alt: App home
@@ -133,13 +133,13 @@ A Microsoft Entra Application is required to allow for programmatic registration
 Usage
 -----
 
-You may use the `pynitrokey` utility to provision a Nitrokey for an user in your tenant.
+You may use the ``pynitrokey`` utility to provision a Nitrokey for an user in your tenant.
 
     .. code-block:: shell-session
 
         nitropy fido2 provision-credential entra -c config.json <username> --create-user
 
-Here the `<username>` could be the Email ID of the user (User principal in terms of Microsoft) or a part of it till before the `@` sign.
+Here the ``<username>`` could be the Email ID of the user (User principal in terms of Microsoft) or a part of it till before the ``@`` sign.
 The ``--create-user`` flag directs the tool to create the user if it does not exist in the Entra Tenant.
 
     .. code-block:: shell-session
@@ -165,7 +165,7 @@ You may verify the provisioned credential from the Entra admin portal following 
     .. figure:: ./images/provision-entra/entra-home-user.png
         :alt: alt
 
-2. If the user was created with the `--create-user` flag you may be able to find the entry on the list. If it is a pre-existing user, it would also be there. Click on the user to which the credential was enrolled.
+2. If the user was created with the ``--create-user`` flag you may be able to find the entry on the list. If it is a pre-existing user, it would also be there. Click on the user to which the credential was enrolled.
 
     .. figure:: ./images/provision-entra/userlist.png
         :alt: alt
