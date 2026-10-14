@@ -257,7 +257,7 @@ Power Is Present but the Screen Stays Black
 3. Try the CMOS reset below.
 
 4. If you can safely work inside the NitroPad, disconnect the adapter and main
-   battery before reseating the RAM. With two modules, test one module at a time,
+   battery before reinserting the RAM. With two modules, test one module at a time,
    reconnecting the battery and adapter for each start. With one module, test
    the other slot. Allow time for memory training after each change; the
    hardware troubleshooting guide suggests allowing about 30 minutes for a
