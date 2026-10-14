@@ -98,7 +98,6 @@ Firmware Signature Check
    ``OK``. A valid manifest signature alone does not check the downloaded ZIP.
    Do not flash a file with a failed or missing checksum verification.
 
-.. _heads-boot-time-after-update:
 
 Boot Time After Update
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -175,7 +174,7 @@ differ in newer releases. Follow the ZIP instructions above.
 
 9. When prompted, press Enter to restart. **Keep the power adapter and battery
    connected, and wait for Heads to reappear even if the screen stays black.**
-   Follow :ref:`heads-boot-time-after-update`; do not force a power off.
+   Follow `Boot Time After Update <firmware-update.html#boot-time-after-update>`__; do not force a power off.
 
    .. figure:: /components/nitropad-nitropc/images/firmware-update/9.jpg
       :alt: Heads prompt to restart after flashing.
@@ -211,7 +210,7 @@ models; use the correct model's disassembly instructions.
 .. important::
 
    On the first restart after an update, follow
-   :ref:`heads-boot-time-after-update` before attempting troubleshooting.
+   `Boot Time After Update <firmware-update.html#boot-time-after-update>`__ before attempting troubleshooting.
    The reset and hardware checks below are only for a device whose update has
    finished or which support has confirmed is no longer updating.
 
@@ -280,7 +279,6 @@ Reinstallation is a last resort after backing up recoverable data; it can erase
 the drive. Reinstalling an operating system cannot repair a NitroPad that does
 not power on or cannot reach Heads.
 
-.. _heads-cmos-reset:
 
 CMOS Reset
 ^^^^^^^^^^
