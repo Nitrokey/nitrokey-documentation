@@ -17,6 +17,9 @@ This guide describes how to update the firmware on the Nitrokey 3.
    **For firmware v1.0.1 and above user data is retained** during the update.
    Anyway, be sure to always have another device (or login method) registered with your service, if for some reason your data is not retained.
 
+.. note::
+    The firmware images are signed and validated both by the host-side tooling and by the device before a firmware update and on every boot.
+
 How to Update
 -------------
 
