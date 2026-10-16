@@ -14,12 +14,7 @@ Here you will find a collection of common issues.
 Nitrokey is Not Detected on Linux
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If the Nitrokey is not detected, proceed as follows:
-
-1. Copy this file
-   `41-nitrokey.rules <https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/main/41-nitrokey.rules>`__
-   to ``/etc/udev/rules.d/``.
-2. Restart udev via ``sudo service udev restart`` or ``udevadm control --reload-rules && udevadm trigger`` if you are using Fedora.
+If the Nitrokey is not detected, make sure that you have installed the Nitrokey udev rules, see :doc:`../../software/nitropy/linux/udev`.
 
 Nitrokey Card Reader Driver Can Not be Installed on Windows
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
