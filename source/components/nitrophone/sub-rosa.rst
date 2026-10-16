@@ -4,7 +4,7 @@ sub rosa
 .. product-table:: nk3 pro start storage
 
 
-sub rosa allows you to program a static password onto a hardware security key, which can act as a keyboard when touched. 
+sub rosa allows you to program a static password onto a hardware security key, which can act as a keyboard when touched.
 Plug it into your phone, tablet, or laptop, touch it, and it automatically types out a sequence of characters.
 
 Simple: no need to memorize multiple complex passwords. No need to carry multiple devices either — you can program a hardware security key with a password, use it, and then program it with a different password whenever needed. Nowadays, hardware security keys come in various form factors: from models small enough to remain in your phone's USB-C port to larger, NFC-enabled keys.
@@ -166,7 +166,7 @@ Importing keys from OpenKeychain is a breeze. Share a key backup with sub rosa a
 Use Your Security key for SSH Authentication
 --------------------------------------------
 
-When generating a new OpenPGP key with OpenKeychain, select **Change key configuration** and **add an Authentication subkey**. 
+When generating a new OpenPGP key with OpenKeychain, select **Change key configuration** and **add an Authentication subkey**.
 Then import this OpenPGP key into sub rosa and write it to your security key.
 
 On a clean Debian machine, ensure all required packages are installed:
@@ -216,7 +216,7 @@ Note this path and add it to your ``~/.ssh/config``:
     echo "Host *" > ~/.ssh/config
     echo "  IdentityAgent /run/user/1000/gnupg/S.gpg-agent.ssh" >> ~/.ssh/config
 
-    
+
 .. note::
      Be sure to replace ``/run/user/1000/gnupg/S.gpg-agent.ssh`` with the actual path output on your system.
 
@@ -229,7 +229,7 @@ Now query the security key:
 This displays details of the OpenPGP key written to your security key. The output will look similar to:
 
 .. code-block:: bash
-    
+
     S KEYPAIRINFO 5BBF795A5F93498C2FF6C6CD3ABF896302DC9FA0 OPENPGP.1 sc 1782525925 ed25519
     S KEYPAIRINFO D1B359A6A77A68B1776ABFA085E65AFA1582E6D6 OPENPGP.2 e 1782525925 cv25519
     S KEYPAIRINFO 36F40BE75662CEA929402AAA360A64F448E35ABB OPENPGP.3 a 1782525925 ed25519
