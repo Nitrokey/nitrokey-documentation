@@ -20,11 +20,11 @@ Just like KeePassDroid managing passwords, OpenKeychain or PGPony manage OpenPGP
 Installation
 ------------
 
-sub rosa is available on F-Droid `here <https://apt.izzysoft.de/packages/acab.naiveha.subrosa>`__ if you have the `IzzyOnDroid repository <https://apt.izzysoft.de/fdroid/index/info>`__.
+- sub rosa is available on F-Droid `here <https://apt.izzysoft.de/packages/acab.naiveha.subrosa>`__ if you have the `IzzyOnDroid repository <https://apt.izzysoft.de/fdroid/index/info>`__.
 
-On the Google Play Store `here <https://play.google.com/store/apps/details?id=acab.naiveha.subrosa.by.naiveha>`__.
+- On the Google Play Store `here <https://play.google.com/store/apps/details?id=acab.naiveha.subrosa.by.naiveha>`__.
 
-In the source repository `here <https://github.com/naive-HA/subrosa>`__.
+- In the source repository `here <https://github.com/naive-HA/subrosa>`__.
 
 Features
 --------
