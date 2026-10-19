@@ -26,8 +26,14 @@ Development and Testing
 Demo Instance
 ^^^^^^^^^^^^^
 
-A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com/api/v1/info>`_.
-It will be reset every eight hours (CET 6:00, 14:00, 22:00). User ``admin``, password ``adminadmin``, unlock password ``unlockunlock``.
+A public NetHSM demo instance is available at `nethsmdemo.nitrokey.com <https://nethsmdemo.nitrokey.com>`__.
+It will be factory reset every eight hours (CET 6:00, 14:00, 22:00).
+If you need to provision it after a factory reset, please use the following credentials.
+
+- User ``admin``, password ``adminadmin``
+- Unlock password ``unlockunlock``
+
+Please refer to chapter `Provisioning <getting-started.html#provisioning>`__ to learn more about the provisioning process.
 
 Container Image
 ^^^^^^^^^^^^^^^
