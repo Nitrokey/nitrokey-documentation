@@ -167,7 +167,7 @@ For example, a minimal CA can be created with ``openssl``:
 
 This CA now has to be installed on every node.
 
-To do this, first generate a Certificate Signing Request (CSR) from the node as described in the section `TLS Certificate <administration.html#tls-certificate>`__. With *nitropy* this is done with ``nitropy nethsm --host $NETHSM_HOST csr --api``.
+To do this, first generate a Certificate Signing Request (CSR) from the node as described in the section `TLS Cluster Certificate <administration.html#tls-cluster-certificate>`__. With *nitropy* this is done with ``nitropy nethsm --host $NETHSM_HOST csr --cluster``.
 
 .. note::
    To properly authenticate nodes, the clustering backend (etcd) expects that each node has a certificate with a properly filled Subject Alt Names (SAN) field.
@@ -180,7 +180,7 @@ To do this, first generate a Certificate Signing Request (CSR) from the node as 
 
    With *nitropy* use the ``--san`` option, e.g. ``--san "IP:192.168.1.1"``.
 
-   If you want to use a public CA for signing your certificates your nodes must use public IP addresses.
+   If you want to use a public CA for signing your API certificates then use different certificates for the API and for Clustering.
    This is due to a security requirement which forbids a public CA to issue certificates with a private IP address in the IP SAN.
 
 Given the obtained CSR (let's call it ``nethsm.csr``), we can then generate a certificate for it, ready to be installed. For example with ``openssl``:
@@ -190,7 +190,7 @@ Given the obtained CSR (let's call it ``nethsm.csr``), we can then generate a ce
    $ openssl x509 -req -days 1825 -in nethsm.csr -CA CA.pem -copy_extensions copy \
        -CAkey CA.key -out new_cert.pem -set_serial 01 -sha256
 
-Then install the obtained ``new_cert.pem`` as described in the section `TLS Certificate <administration.html#tls-certificate>`__ (with *nitropy*: ``nitropy nethsm --host $NETHSM_HOST set-certificate --api new_cert.pem``).
+Then install the obtained ``new_cert.pem`` as described in the section `TLS Cluster Certificate <administration.html#tls-cluster-certificate>`__ (with *nitropy*: ``nitropy nethsm --host $NETHSM_HOST set-certificate --cluster new_cert.pem``).
 
 Finally, the CA (``CA.pem``) can now be installed. This is only possible once the installed TLS certificate is signed by it. Otherwise, the operation will be rejected.
 
@@ -212,7 +212,7 @@ Finally, the CA (``CA.pem``) can now be installed. This is only possible once th
 
       The installed cluster CA can be retrieved with ``nitropy nethsm --host $NETHSM_HOST get-cluster-ca-certificate``.
    .. tab:: REST API
-      Information about the `/config/tls/cluster-ca.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cluster-ca-pem>`__.
+      Information about the `/cluster/tls/ca.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_cluster-tls-ca-pem>`__.
 
 .. note::
    This process has to be repeated for every node.
@@ -353,7 +353,7 @@ Join the cluster on the node that is expected to join, using the data from the l
 
       .. code-block:: bash
 
-         $ nitropy nethsm --host $NETHSM_HOST join-cluster --backup-passphrase $BACKUP_PASSPHRASE join-data.json
+         $ nitropy nethsm --host $NETHSM_NEWHOST join-cluster --backup-passphrase $BACKUP_PASSPHRASE join-data.json
    .. tab:: REST API
       Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-join>`__).
 
