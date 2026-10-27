@@ -26,3 +26,4 @@ OpenPGP Card
    GnuPG with Fedora <fedora-gnupg-configuration>
    Change Pins <change-pins>
    Additional Decryption Subkeys (ADSK) with GnuPG <adsk>
+   Android App sub rosa <../../../nitrophone/sub-rosa>
