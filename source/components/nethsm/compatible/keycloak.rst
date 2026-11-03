@@ -106,7 +106,7 @@ See also `all available configuration options <https://github.com/Nitrokey/neths
 Restart Keycloak
 ----------------
 
-The connection profile is only read when the provider factory is initialised. Restart
+The connection profile is only read when the provider factory is initialized. Restart
 Keycloak.
 
 
