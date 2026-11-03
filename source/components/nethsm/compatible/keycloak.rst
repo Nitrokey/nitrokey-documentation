@@ -3,10 +3,10 @@ Keycloak
 
 In order to use `Keycloak <https://www.keycloak.org/>`__ with NetHSM to securely store private keys in NetHSM while enabling Keycloak to sign access tokens and decrypt JWE, you need to install and configure `this key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:
 
-Quality Warning
----------------
+AI Disclosure
+-------------
 
-**This Keycloak provider has been developed and reviewed entirely by an AI. It has been tested successfully by unit tests and integration tests. The code has not been reviewed by a human yet and therefore use it at your own risk.**
+**This provider was developed and reviewed with substantial AI assistance.**
 
 Prepare the NetHSM
 ------------------
