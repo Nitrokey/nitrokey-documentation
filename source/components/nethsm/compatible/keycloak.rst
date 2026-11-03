@@ -1,6 +1,10 @@
 Keycloak
 ========
 
+.. spelling:word-list::
+   Keycloak
+   Kubernetes
+
 In order to use `Keycloak <https://www.keycloak.org/>`__ with NetHSM to securely store private keys in NetHSM while enabling Keycloak to sign access tokens and decrypt JWE, you need to install and configure `this key provider <https://github.com/Nitrokey/nethsm-keycloak>`__ as follows:
 
 AI Disclosure
@@ -102,7 +106,7 @@ See also `all available configuration options <https://github.com/Nitrokey/neths
 Restart Keycloak
 ----------------
 
-The connection profile is read once, when the provider factory initialises. Restart
+The connection profile is only read when the provider factory is initialised. Restart
 Keycloak.
 
 
