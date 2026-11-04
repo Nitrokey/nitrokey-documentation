@@ -7,8 +7,6 @@ sub rosa
 sub rosa is an Android application that allows you to program a static password onto a hardware security key, which can act as a keyboard when touched.
 Plug it into your phone, tablet, or laptop, touch it, and it automatically types out a sequence of characters.
 
-Simple: no need to memorize multiple complex passwords. No need to carry multiple devices either — you can program a Nitrokey with a password, use it, and then program it with a different password whenever needed.
-
 sub rosa can program an OpenPGP key onto your Nitrokey, allowing you to encrypt, decrypt, cryptographically sign documents, or authenticate to remote servers via SSH. An OpenPGP key acts as your digital identity.
 
 Just like KeePassDroid managing passwords, OpenKeychain or PGPony manage OpenPGP keys. You can easily import OpenPGP keys generated or stored by these apps in sub rosa and then program them onto your Nitrokey.
@@ -34,62 +32,53 @@ Features
 
    * - Fonction
      - Action
-     - Nitrokey 3 USB
-     - Nitrokey 3 NFC
-     - Nitrokey Pro USB
+     - Nitrokey 3
+       USB / NFC
+     - Nitrokey Pro
      - Nitrokey Storage
    * - Static password
      - Write
-     - ❌
-     - ❌
+     - ❌ / ❌
      - ❌
      - ❌
    * - Static password
      - Read
-     - ❌
-     - ❌
+     - ❌ / ❌
      - ❌
      - ❌
    * - Static password
      - Wipe
-     - ❌
-     - ❌
+     - ❌ / ❌
      - ❌
      - ❌
    * - OpenPGP
      - Write
-     - ✅
-     - ❌
+     - ✅ / ❌
      - ✅
      - ✅
    * - OpenPGP
      - Read
-     - ✅
-     - ❌
+     - ✅ / ❌
      - ✅
      - ✅
    * - OpenPGP
      - Wipe
-     - ✅
-     - ❌
+     - ✅ / ❌
      - ✅
      - ✅
    * - OpenPGP
      - Change User PIN
-     - ✅
-     - ❌
+     - ✅ / ❌
      - ✅
      - ✅
    * - OpenPGP
      - Reset User PIN
-     - ✅
-     - ❌
+     - ✅ / ❌
      - ✅
      - ✅
    * - OpenPGP
      - Change Admin PIN
-     - ✅
-     - ❌
+     - ✅ / ❌
      - ✅
      - ✅
 
@@ -97,12 +86,10 @@ Features
    :header-rows: 1
 
    * - OpenKeychain supported algorithm
-     - Nitrokey 3 USB
-     - Nitrokey 3 NFC
+     - Nitrokey 3
      - Nitrokey Pro
      - Nitrokey Storage
    * - RSA 2048
-     - ✅
      - ✅
      - ✅
      - ✅
@@ -110,9 +97,7 @@ Features
      - ✅
      - ✅
      - ✅
-     - ✅
    * - RSA 4096
-     - ✅
      - ✅
      - ✅
      - ✅
@@ -120,14 +105,31 @@ Features
      - ✅
      - ✅
      - ✅
+   * - ECC NIST P-384
+     - ✅
+     - ✅
      - ✅
    * - ECC NIST P-521
      - ✅
      - ✅
      - ✅
+   * - ECDSA / brainpoolP256r1
      - ✅
-   * - Ed25519/X25519
      - ✅
+     - ✅
+   * - ECDSA / brainpoolP384r1
+     - ✅
+     - ✅
+     - ✅
+   * - ECDSA / brainpoolP512r1
+     - ✅
+     - ✅
+     - ✅
+   * - EdDSA / Ed25519, ECDH / X25519
+     - ✅
+     - ❌
+     - ❌
+   * - ECDSA / secp256k1
      - ✅
      - ❌
      - ❌
