@@ -34,8 +34,8 @@ Features
      - Action
      - Nitrokey 3
        USB / NFC
-     - Nitrokey Pro
-     - Nitrokey Storage
+     - Nitrokey Pro 2
+     - Nitrokey Storage 2
    * - Static password
      - Write
      - ❌ / ❌
@@ -87,8 +87,8 @@ Features
 
    * - OpenKeychain supported algorithm
      - Nitrokey 3
-     - Nitrokey Pro
-     - Nitrokey Storage
+     - Nitrokey Pro 2
+     - Nitrokey Storage 2
    * - RSA 2048
      - ✅
      - ✅
