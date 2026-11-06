@@ -364,6 +364,155 @@ The certificate can be replaced as follows.
    .. tab:: REST API
       Information about the `/config/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_config-tls-cert-pem>`__.
 
+TLS Cluster Certificate
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Follow the steps in `TLS Certificate <administration.html#tls-certificate>`__, but instead of `--api`, use `--cluster`, and instead of `/config/tls` use `/cluster/tls`.
+
+If desirable regenerate the TLS Cluster key on all NetHSM nodes that you want to be part of the cluster.
+When upgrading from a previous version the TLS Cluster key will be equal to the TLS API key for backward compatibility during a cluster upgrade.
+A newly provisioned NetHSM will have distinct TLS API and Cluster keys.
+
+Regenerating the key can only be done if a Cluster CA has not been installed, so it is recommended to perform this step first:
+
+* Generate new TLS cluster key
+
+.. tabs::
+   .. tab:: nitropy
+      **Required Options**
+
+      +----------------------------------------------------------------------------------------+--------------------------------------------+
+      | Option                                                                                 | Description                                |
+      +========================================================================================+============================================+
+      | ``--cluster``                                                                          | Required to regenerate the cluster key     |
+      +----------------------------------------------------------------------------------------+--------------------------------------------+
+      | ``-t``, ``--type``                                                                     | The type for the generated key             |
+      | ``[RSA|Curve25519|EC_P256|EC_P384|EC_P521|BrainpoolP256|BrainpoolP384|BrainpoolP512]`` |                                            |
+      +----------------------------------------------------------------------------------------+--------------------------------------------+
+      | ``-l``, ``--length`` ``INTEGER``                                                       | The length of the generated key            |
+      +----------------------------------------------------------------------------------------+--------------------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST generate-tls-key --cluster -t Curve25519
+
+      .. code-block::
+
+         Key for TLS interface generated on NetHSM localhost:8443
+   .. tab:: REST API
+      Information about the `/cluster/tls/generate` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-tls-generate>`__.
+
+* Create a Certificate Signing Request (CSR) for the cluster certificate
+
+.. tabs::
+   .. tab:: nitropy
+      **Required Options**
+
+      +------------------------------------+------------------------------------------------------------+
+      | Option                               | Description                                              |
+      +====================================+============================================================+
+      | ``-c``, ``--cluster``                | Generate a CSR for the NetHSM TLS Cluster certificate    |
+      +------------------------------------+------------------------------------------------------------+
+      | ``--country`` ``TEXT``               | The country name                                         |
+      +------------------------------------+------------------------------------------------------------+
+      | ``--state-or-province`` ``TEXT``     | The state or province name                               |
+      +------------------------------------+------------------------------------------------------------+
+      | ``--locality`` ``TEXT``              | The locality name                                        |
+      +------------------------------------+------------------------------------------------------------+
+      | ``--organization`` ``TEXT``          | The organization name                                    |
+      +------------------------------------+------------------------------------------------------------+
+      | ``--organizational-unit`` ``TEXT``   | The organization unit name                               |
+      +------------------------------------+------------------------------------------------------------+
+      | ``--common-name`` ``TEXT``           | The common name (required)                               |
+      +------------------------------------+------------------------------------------------------------+
+      | ``--email-address`` ``TEXT``         | The email address                                        |
+      +------------------------------------+------------------------------------------------------------+
+      | ``--san`` ``IP:A.B.C.D``             | The subject Alternative Names                            |
+      +------------------------------------+------------------------------------------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST csr --cluster --country="DE" --state-or-province="Berlin" --locality="Berlin" --organization="Nitrokey" --organizational-unit="" --common-name="Nitrokey" --email-address="info@nitrokey.com" --san 172.22.1.2 --san 172.22.1.3 --san 172.22.1.4 --san 172.22.1.5
+
+      .. code-block::
+
+        -----BEGIN CERTIFICATE REQUEST-----
+        MIHGMHoCAQAwEzERMA8GA1UEAwwITml0cm9rZXkwKjAFBgMrZXADIQCJkTKg4k0+
+        2dhjasXu46CxSOvDz5XEYryqKgaDn8zt96A0MDIGCSqGSIb3DQEJDjElMCMwIQYD
+        VR0RBBowGIcErBYBAocErBYBA4cErBYBBIcErBYBBTAFBgMrZXADQQDtcPwf6Pj5
+        ZkSB+/p77RZp0yYZCWZP3VYqtnxQ4/UNPwjrkKrQrHBdv0DB1s7F2tZ5nsHeaVnN
+        HlgxmvJOCCEJ
+        -----END CERTIFICATE REQUEST-----
+
+   .. tab:: REST API
+      Information about the `/cluster/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-tls-csr-pem>`__.
+
+* Ask your CA to sign the CSR. 
+  If you are using a self-signed then assuming the CSR is in `nethsm.csr`:
+
+.. code-block:: bash
+
+   $ openssl x509 -req -days 1825 -in nethsm.csr -CA CA.pem -copy_extensions copy \
+       -CAkey CA.key -out new_cert.pem -set_serial 01 -sha256
+
+* install the obtained ``new_cert.pem``
+
+.. tabs::
+   .. tab:: nitropy
+      **Required Options**
+
+      +---------------------+--------------------------------------------------------------+
+      | Option                | Description                                                |
+      +=====================+==============================================================+
+      | ``-c``, ``--cluster`` | Set the certificate for the NetHSM TLS Cluster interface   |
+      +---------------------+--------------------------------------------------------------+
+
+      **Arguments**
+
+      +--------------+------------------+
+      | Argument     | Description      |
+      +==============+==================+
+      | ``FILENAME`` | Certificate file |
+      +--------------+------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         nitropy nethsm --host $NETHSM_HOST set-certificate --cluster /tmp/nethsm-certificate
+   .. tab:: REST API
+      Information about the `/cluster/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_cluster-tls-cert-pem>`__.
+
+* install the CA certificate (must be done after installing the signed certificate, or you'll get an error)
+
+.. tabs::
+   .. tab:: nitropy
+      **Arguments**
+
+      +--------------+-------------------------+
+      | Argument     | Description             |
+      +==============+=========================+
+      | ``FILENAME`` | The path of the CA file |
+      +--------------+-------------------------+
+
+      **Example**
+
+      .. code-block:: bash
+
+         $ nitropy nethsm --host $NETHSM_HOST set-cluster-ca-certificate CA.pem
+
+      The installed cluster CA can be retrieved with ``nitropy nethsm --host $NETHSM_HOST get-cluster-ca-certificate``.
+   .. tab:: REST API
+      Information about the `/cluster/tls/ca.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_cluster-tls-ca-pem>`__.
+
+.. note::
+   This process has to be repeated for every node.
+
+
 Network
 ~~~~~~~
 
