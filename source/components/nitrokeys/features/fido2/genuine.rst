@@ -1,22 +1,24 @@
-Verify whether your Nitrokey is genuine
+Verify Nitrokey Authenticity
 =======================================
 
 .. product-table:: nk3 passkey
 
 .. contents:: :local:
 
-The Nitrokey 3 and Nitrokey Passkey can be verified to be genuine to ensure it matches the security expectations.
+The Nitrokey 3 and Nitrokey Passkey can be verified to be authentic to ensure it matches the security expectations.
+ 
+Defining Authenticity for Nitrokeys
+-----------------------------------
 
-What does genuine mean?
------------------------
+Nitrokeys are provisioned with model-specific attestation keys. These attestation keys can only be provisioned by Nitrokey. If the firmware of the keys are tampered with, this attestation certificate will not be available anymore. The Nitrokey user applications like pynitrokey and Nitrokey App 2 offers a mechanism to cryptographically validate these certificates to ensure the firmware was not tampered with or the device was not replaced with a malicious, non-Nitrokey device.
 
-Nitrokeys are provisioned with model-specific attestation keys. These attestation keys can only be provisioned by Nitrokey. If the firmware of the keys are tampered with, this attestation certificate will not be available anymore. The Nitrokey user applications like pynitrokey and Nitrokey App2 offers a mechanism to cryptographically validate these certificates to ensure the firmware was not tampered with.
+Verifying authenticity
+----------------------
 
-How to check whether the keys are genuine?
-------------------------------------------
-1. With ``nitropy``
+With ``nitropy``
+^^^^^^^^^^^^^^^^
 
-Connect the Nitrokey and run ``nitropy nk3 test`` or ``nitropy nkpk test`` for Nitrokey 3 or Nitrokey Passkey respectively. The FIDO2 test includes the verification test. If the key passes the test, it would imply the key is genuine.
+Connect the Nitrokey and run ``nitropy nk3 test`` or ``nitropy nkpk test`` for Nitrokey 3 or Nitrokey Passkey respectively. The FIDO2 test includes the verification test. If the key passes the test, it would imply the key is authentic.
 
     .. code-block:: shell-session
 
@@ -33,11 +35,12 @@ Connect the Nitrokey and run ``nitropy nk3 test`` or ``nitropy nkpk test`` for N
 
         Summary: 1 device(s) tested, 1 successful, 0 failed
 
-The test ``FIDO2`` here is successful showing the device is genuine.
+The test ``FIDO2`` here is successful showing the device is authentic.
 
-2. With Nitrokey App2
+With Nitrokey App 2
+^^^^^^^^^^^^^^^^^^^
 
-The ``Overview`` tab of Nitrokey App2 offers to check for the authenticity of the device when it is connected.
+The ``Overview`` tab of Nitrokey App 2 offers to check for the authenticity of the device when it is connected.
 
     .. figure:: ./images/genuine/app0.png
         :alt: Overview tab
@@ -50,4 +53,4 @@ Clicking the ``Check for Authenticity`` validates the attestation certificate an
 Note for Hacker Devices
 -----------------------
 
-Nitrokey Hacker devices provisioned with the hacker certificate would fail the authenticity check. However, the failure reason (shown as a tooltip in Nitrokey App2) explicitly mentions when it is so. 
+Nitrokey Hacker devices provisioned with the hacker certificate would fail the authenticity check. However, the failure reason (shown as a tooltip in Nitrokey App 2) explicitly mentions when it is so. 
