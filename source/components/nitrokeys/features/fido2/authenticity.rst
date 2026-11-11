@@ -6,7 +6,7 @@ Verify Nitrokey Authenticity
 .. contents:: :local:
 
 The Nitrokey 3 and Nitrokey Passkey can be verified to be authentic to ensure it matches the security expectations.
- 
+
 Defining Authenticity for Nitrokeys
 -----------------------------------
 
@@ -53,4 +53,4 @@ Clicking the ``Check for Authenticity`` validates the attestation certificate an
 Note for Hacker Devices
 -----------------------
 
-Nitrokey Hacker devices provisioned with the hacker certificate would fail the authenticity check. However, the failure reason (shown as a tooltip in Nitrokey App 2) explicitly mentions when it is so. 
+Nitrokey Hacker devices provisioned with the hacker certificate would fail the authenticity check. However, the failure reason (shown as a tool-tip in Nitrokey App 2) explicitly mentions when it is so. 
