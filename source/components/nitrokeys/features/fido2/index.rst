@@ -13,3 +13,4 @@ FIDO2
     Android / NitroPhone <nitrophone>
     SSH Keys <ssh>
     Nitrokey Provisioning for Entra ID <provision-entra>
+    Authenticity Verification <authenticity>
