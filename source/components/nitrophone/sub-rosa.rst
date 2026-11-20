@@ -87,7 +87,7 @@ Nitrokey 3 firmware update
 
 Since version 3.0.0 sub rosa can update the firmware of Nitrokey 3A and 3C.
 
-Nitrokey 3A mini use nRF52 hardware and are not supported by sub rosa. Yet
+Nitrokey 3A mini use NRF52 hardware and are not supported by sub rosa. Yet
 
 .. list-table::
    :widths: 33 33 33
