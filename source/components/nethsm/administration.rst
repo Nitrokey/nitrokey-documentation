@@ -121,7 +121,7 @@ The NetHSM software has five states: *Unprovisioned*, *Provisioned*, *Locked*, *
 +-----------------+-------------------------------------------------------------------------+
 
 .. figure:: ./images/administration/states.svg
-      :scale: 100
+      :scale: 50
       :alt: States and transitions of the NetHSM
 
       States and transitions of the NetHSM
