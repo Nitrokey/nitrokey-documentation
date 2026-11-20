@@ -370,7 +370,7 @@ TLS Cluster Certificate
 Follow the steps in `TLS Certificate <administration.html#tls-certificate>`__, but instead of `--api`, use `--cluster`, and instead of `/config/tls` use `/cluster/tls`.
 
 If desirable regenerate the TLS Cluster key on all NetHSM nodes that you want to be part of the cluster.
-When upgrading from a previous version the TLS Cluster key will be equal to the TLS API key for backward compatibility during a cluster upgrade.
+When upgrading from software version 5.0 or older, the TLS Cluster key will be equal to the TLS API key for backward compatibility during a cluster upgrade.
 A newly provisioned NetHSM will have distinct TLS API and Cluster keys.
 
 Regenerating the key can only be done if a Cluster CA has not been installed, so it is recommended to perform this step first:
