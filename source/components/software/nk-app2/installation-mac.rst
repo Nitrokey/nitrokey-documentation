@@ -82,7 +82,7 @@ Installing the Nitrokey App 2 Without Terminal
 
 6. The installer will then open. Click through the steps: “Continue”, “Install” and “Quit”. You may need to confirm again with a password or Face ID.
 
-Afterward, the Nitrokey App 2 will be available in Launchpad and in the Finder under “Applications”.
+Afterwards, the Nitrokey App 2 will be available in Launchpad and in the Finder under “Applications”.
 
 
 Updating
