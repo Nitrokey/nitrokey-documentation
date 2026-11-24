@@ -1120,6 +1120,9 @@ The update can be applied (committed) as follows. Any data migration is only per
    .. tab:: REST API
       Information about the ``/system/commit-update`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_system_commit_update>`__.
 
+In case the software update fails to apply, you alternatively can update over USB flash drive.
+Please refer to `System Software Update via USB <system_update_usb.html>`__ to learn more.
+
 The update can be cancelled as follows.
 
 .. tabs::

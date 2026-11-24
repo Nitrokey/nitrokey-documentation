@@ -33,6 +33,7 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Getting Star
    pkcs11-setup.rst
    pkcs11-tool.rst
    system_recovery.rst
+   system_update_usb.rst
    pkiproxy.rst
    pkiproxy-windows-ca.rst
    container/index.rst
