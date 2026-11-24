@@ -158,7 +158,7 @@ The initial provisioning is executed as follows.
          NetHSM localhost:8443 provisioned
 
    .. tab:: REST API
-        Information about the `/provision` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_provision>`__.
+        Information about the ``/provision`` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_provision>`__.
 
 .. warning::
    The default boot mode is *Attended Boot*. Please refer to chapter `Boot Mode <administration.html#boot-mode>`__ to learn more.

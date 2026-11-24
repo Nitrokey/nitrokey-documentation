@@ -55,5 +55,5 @@ Features
     Encrypted Mobile Storage <encrypted-storage/index>
     Hidden Storage <hidden-storage/index>
     HSM <hsm/index>
-    PIV (Windows only) <piv/index>
+    PIV <piv/index>
     Miscellaneous <misc/index>
