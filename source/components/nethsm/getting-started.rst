@@ -79,6 +79,10 @@ Please follow the two step process closely to install the NetHSM hardware.
             The NetHSM 2 has redundant power supplies, which both need to be supplied with power.
             Undersupply causes the power supply to emit a beep sound.
 
+         .. note::
+            The *ATX port* is only available in later revisions of NetHSM 2.
+            Please refer to chapter `Remote Management <remote-management.html>`__ to learn more.
+
       .. tab:: NetHSM 1
 
          .. figure:: ./images/nethsm1-back-with-labels.svg

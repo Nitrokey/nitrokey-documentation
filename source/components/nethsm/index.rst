@@ -36,5 +36,6 @@ If you obtained a new NetHSM hardware, please refer to the chapter `Getting Star
    system_update_usb.rst
    pkiproxy.rst
    pkiproxy-windows-ca.rst
+   remote-management.rst
    container/index.rst
    compatible/index.rst
