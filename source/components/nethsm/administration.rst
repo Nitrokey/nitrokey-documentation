@@ -449,7 +449,7 @@ Regenerating the key can only be done if a Cluster CA has not been installed, so
         -----END CERTIFICATE REQUEST-----
 
    .. tab:: REST API
-      Information about the `/cluster/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-tls-csr-pem>`__.
+      Information about the `/cluster/tls/csr.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_cluster_tls_csr_pem>`__.
 
 * Ask your CA to sign the CSR.
   If you are using a self-signed then assuming the CSR is in `nethsm.csr`:
