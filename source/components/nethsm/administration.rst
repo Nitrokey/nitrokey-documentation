@@ -507,7 +507,7 @@ Regenerating the key can only be done if a Cluster CA has not been installed, so
 
       The installed cluster CA can be retrieved with ``nitropy nethsm --host $NETHSM_HOST get-cluster-ca-certificate``.
    .. tab:: REST API
-      Information about the `/cluster/tls/ca.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/PUT_cluster-tls-ca-pem>`__.
+      Information about the `/cluster/tls/ca.pem` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/put_cluster_tls_ca_pem>`__.
 
 .. note::
    This process has to be repeated for every node.
