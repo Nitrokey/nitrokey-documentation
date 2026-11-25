@@ -355,7 +355,7 @@ Join the cluster on the node that is expected to join, using the data from the l
 
          $ nitropy nethsm --host $NETHSM_NEWHOST join-cluster --backup-passphrase $BACKUP_PASSPHRASE join-data.json
    .. tab:: REST API
-      Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-join>`__).
+      Take the response from the last step and append to it a ``backupPassphrase`` field containing the backup passphrase, and pass that data to a call to ``POST /cluster/join`` (refer to the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_cluster_join>`__).
 
 .. warning::
    The join call (``nitropy nethsm join-cluster`` or ``POST /cluster/join``) will hang until the new node is manually
