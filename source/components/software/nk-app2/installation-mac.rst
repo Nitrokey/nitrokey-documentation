@@ -67,6 +67,23 @@ This is an alternative way to install the Nitrokey App 2 on macOS.
 The app can be updated the following way:
 
 
+Installing the Nitrokey App 2 Without Terminal
+----------------------------------------------
+
+1. Download the installer (``.pkg`` file) from `GitHub <https://github.com/Nitrokey/nitrokey-app2/releases>`__.
+
+2. Open the file. A message will appear; confirm it by clicking “Done”.
+
+3. Open System Preferences and go to “Privacy & Security” in the left-hand menu.
+
+4. The file name should then appear on the right side of the menu under “Security” along with an “Open Anyway” button. Click this button.
+
+5. In the next dialog, click “Open Anyway”. You may need to confirm with a password or Face ID.
+
+6. The installer will then open. Click through the steps: “Continue”, “Install” and “Quit”. You may need to confirm again with a password or Face ID.
+
+Afterwards, the Nitrokey App 2 will be available in Launchpad and in the Finder under “Applications”.
+
 
 Updating
 --------
