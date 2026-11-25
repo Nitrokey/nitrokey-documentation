@@ -152,6 +152,29 @@ If the Nitrokey 3 shows up, it is recognized correctly by ``pcscd`` and there mi
 If it does not show up, make sure that your ``libccid`` version is up to date.
 Support for the Nitrokey 3 was added in ``libccid`` 1.5.0.
 
+GnuPG: OpenPGP Card Not Supported
+---------------------------------
+
+**Problem:**
+GnuPG may access the card for a brief time, but after a few seconds cannot access 
+the Nitrokey 3 and shows an error message like this::
+
+    $ gpg --card-status
+    gpg: OpenPGP card not available: Not supported
+
+**Solution:**
+Nitrokey 3 supports PIV alongside the OpenPGP card, and browsers such as Firefox 
+and Chrome will query the PIV application and block ``scdaemon`` from accessing
+the card. If you are not using the PIV app, disable it, which will prevent 
+browsers and other apps from querying the status and blocking ``scdaemon``::
+
+   $ nitropy nk3 set-config piv-disabled true
+
+Verify that the OpenPGP card is detected by ``gpg``::
+
+   $ gpg --card-status
+
+
 Updating The Device Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
