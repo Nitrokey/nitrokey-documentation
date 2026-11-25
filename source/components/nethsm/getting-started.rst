@@ -68,7 +68,7 @@ Please follow the two step process closely to install the NetHSM hardware.
    .. tabs::
       .. tab:: NetHSM 2
 
-         .. figure:: ./images/getting-started/nethsm2-back-with-labels.png
+         .. figure:: ./images/nethsm2-back-with-labels.svg
             :scale: 100
             :alt: Back side of the server
 
@@ -81,7 +81,7 @@ Please follow the two step process closely to install the NetHSM hardware.
 
       .. tab:: NetHSM 1
 
-         .. figure:: ./images/nethsm1-back-with-labels.png
+         .. figure:: ./images/nethsm1-back-with-labels.svg
             :scale: 100
             :alt: Back side of the server
 
@@ -98,7 +98,7 @@ Please follow the two step process closely to install the NetHSM hardware.
    .. tabs::
       .. tab:: NetHSM 2
 
-         .. figure:: ./images/getting-started/nethsm2-front-with-labels.png
+         .. figure:: ./images//nethsm2-front-with-labels.svg
             :scale: 100
             :alt: Front side of the server
 
@@ -106,7 +106,7 @@ Please follow the two step process closely to install the NetHSM hardware.
 
       .. tab:: NetHSM 1
 
-         .. figure:: ./images/getting-started/nethsm1-front-with-labels.png
+         .. figure:: ./images/nethsm1-front-with-labels.svg
             :scale: 100
             :alt: Front side of the server
 
