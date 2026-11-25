@@ -402,7 +402,7 @@ Regenerating the key can only be done if a Cluster CA has not been installed, so
 
          Key for TLS interface generated on NetHSM localhost:8443
    .. tab:: REST API
-      Information about the `/cluster/tls/generate` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/POST_cluster-tls-generate>`__.
+      Information about the `/cluster/tls/generate` endpoint can be found in the `API documentation <https://nethsmdemo.nitrokey.com/api_docs/index.html#/default/post_cluster_tls_generate>`__.
 
 * Create a Certificate Signing Request (CSR) for the cluster certificate
 
