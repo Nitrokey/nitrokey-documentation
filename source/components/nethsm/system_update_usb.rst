@@ -80,7 +80,7 @@ The system software update can be performed as follows.
 
          See the image below to identify the BMC network port.
 
-         .. figure:: ./images/nethsm1-back-with-labels.png
+         .. figure:: ./images/nethsm1-back-with-labels.svg
             :scale: 100
             :alt: Back side of the server
 
