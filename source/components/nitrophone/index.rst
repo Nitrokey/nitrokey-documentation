@@ -25,3 +25,4 @@ For more details, see the following pages:
    Frequently Asked Questions <faq>
    Headwind MDM (HMDM) <hmdm/index>
    FIDO2 on Android / NitroPhone <../nitrokeys/features/fido2/nitrophone>
+   Android App sub rosa <sub-rosa>
