@@ -19,15 +19,15 @@ The system software update can be performed as follows.
          On Linux you could also use the command line tool ``dd``.
          Ignore any warning that a partition table is missing.
 
-      4. Connect the USB flash drive to any USB port on the front or one of the two USB 2.0 ports located in the center of the back of the machine.
+      4. Turn off the NetHSM and disconnect it from power.
+
+      5. Connect the USB flash drive to any USB port on the front or one of the two USB 2.0 ports located in the center of the back of the machine.
          The USB 2.0 ports have a black insert in the middle of the port.
 
          .. note::
             Some USB drives are incompatible with the NetHSM.
             This results in the NetHSM not recognizing them as a boot media.
             In case the NetHSM does not boot from the connected USB drive, try a different USB drive model.
-
-      5. Turn off the NetHSM and disconnect it from power.
 
       6. Connect a monitor and optionally a keyboard to the NetHSM.
 
@@ -42,13 +42,33 @@ The system software update can be performed as follows.
          This will take about 2 minutes.
          The machine will automatically shutdown after the update.
 
-         Alternatively you can select **NetHSM automatic boot (USB or primary system)** in the first boot menu and then **NetHSM Software Installer** in the second boot menu.
+         Alternatively you can select the entries in the boot menu manually.
+
+         In the first boot menu select **NetHSM automatic boot (USB or primary system)**.
+
+
+         .. figure:: ./images/system-recovery/bmc-kvm-system-software-boot-selection.png
+            :alt: NetHSM boot selection
+
+            NetHSM boot selection
+
+         In the second boot menu select **NetHSM Software Installer**.
+
+         .. figure:: ./images/system-recovery/bmc-kvm-system-software-installation-selection.png
+            :alt: NetHSM installer selection
+
+            NetHSM installer selection
 
          .. warning::
             Do **NOT** select **NetHSM Factory Reset - DELETES ALL DATA!** from the menu.
             This will irrecoverably wipe the data on the disk.
 
-      9. Turn on the NetHSM by pressing the power button on the front.
+         Wait for the installer to finish the update.
+         The machine will automatically shutdown when the update is completed.
+
+      9. Remove the USB flash drive from the NetHSM.
+
+      10. Turn on the NetHSM by pressing the power button on the front.
    .. tab:: NetHSM 1
       1. Download the installer image ending with ``installer.img.zip`` from the provided private download page.
 
