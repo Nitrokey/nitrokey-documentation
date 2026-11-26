@@ -24,7 +24,7 @@ Installation
 Features
 --------
 
-You can use subrosa with any Nitrokey compatible with OpenPGP and manage your OpenPGP identities.
+You can use sub rosa with any Nitrokey compatible with OpenPGP and manage your OpenPGP identities.
 
 - On-the-Go OpenPGP Management: Program OpenPGP keys (RSA, NIST P-curves, Brainpool, Ed25519, X25519).
 

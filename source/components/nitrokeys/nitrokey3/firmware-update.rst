@@ -39,6 +39,14 @@ In case of any errors please take the logs from ``/tmp`` directory (``/tmp/nitro
 .. _installation instructions: ../../software/nitropy/all-platforms/installation.html
 
 
+How to Update With a SmartPhone
+-------------------------------
+
+With `sub rosa`_ you can use your SmartPhone to update your Nitrokey 3A NFC and Nitrokey 3C NFC.
+
+.. _sub rosa: ../../nitrophone/sub-rosa.html
+
+
 Firmware Release Types
 ----------------------
 
