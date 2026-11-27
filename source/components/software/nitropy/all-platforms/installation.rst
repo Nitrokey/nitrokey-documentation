@@ -146,12 +146,7 @@ You might have to run nitropy with administrator rights to be able to connect to
 Linux
 ~~~~~
 
-On Linux systems, you also need the Nitrokey udev rules. These are shipped with `libnitrokey <https://github.com/Nitrokey/libnitrokey>`__. Alternatively, you can install them manually::
-
-    $ wget https://raw.githubusercontent.com/Nitrokey/nitrokey-udev-rules/refs/heads/main/41-nitrokey.rules
-    $ sudo mv 41-nitrokey.rules /etc/udev/rules.d/
-
-See :doc:`../linux/udev` for more information.
+On Linux systems, you also need the Nitrokey udev rules, see :doc:`../linux/udev`.
 
 Usage of PIV features
 ---------------------
